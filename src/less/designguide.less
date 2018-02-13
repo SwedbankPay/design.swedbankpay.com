@@ -1,3 +1,49 @@
-p {
-    color: green;
+@import "_variables";
+@import "_mixins";
+
+.designguide-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &::before,
+    &::after {
+        display: none;
+    }
+
+    .header-links {
+        a {
+            padding: 0 1rem;
+
+            &.active {
+                font-weight: @font-weight-bold;
+            }
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+
+            &:active {
+                outline: none;
+            }
+        }
+    }
+
+    .topbar-info {
+        padding: 5px;
+
+        a {
+            margin: 5px;
+            color: @text-muted;
+
+            &:hover {
+                color: darken(@text-muted, 20%);
+            }
+        }
+    }
+
+    .topbar-info-version {
+        text-align: right;
+    }
 }

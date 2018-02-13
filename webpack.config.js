@@ -6,6 +6,7 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const autoprefixer = require("autoprefixer");
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 
 const isProd = (process.env.NODE_ENV === "production");
 
@@ -14,8 +15,13 @@ const extractPX = new ExtractTextPlugin({
     disable: !isProd
 });
 
+const extractDocumentation = new ExtractTextPlugin({
+    filename: "templates/documentation.css",
+    disable: !isProd
+});
+
 const extractDesignGuide = new ExtractTextPlugin({
-    filename: "templates/DesignGuide.css",
+    filename: "designGuide.css",
     disable: !isProd
 });
 
@@ -26,6 +32,10 @@ const config = {
             "react",
             "react-dom",
             "react-router-dom"
+        ],
+        "core-libraries": [
+            "@fortawesome/fontawesome-free-brands",
+            "@fortawesome/react-fontawesome"
         ]
     },
     output: {
@@ -64,8 +74,30 @@ const config = {
                         {
                             loader: "css-loader",
                             options: {
-                                minimize: isProd,
-                                url: false
+                                minimize: isProd
+                            }
+                        },
+                        {
+                            loader: "postcss-loader",
+                            options: {
+                                plugins: () => autoprefixer({
+                                    browsers: ["last 3 versions", "> 1%"]
+                                })
+                            }
+                        },
+                        { loader: "less-loader" }
+                    ]
+                })
+            },
+            {
+                test: /documentation\.less$/,
+                use: extractDocumentation.extract({
+                    fallback: "style-loader",
+                    use: [
+                        {
+                            loader: "css-loader",
+                            options: {
+                                minimize: isProd
                             }
                         },
                         {
@@ -88,8 +120,7 @@ const config = {
                         {
                             loader: "css-loader",
                             options: {
-                                minimize: isProd,
-                                url: false
+                                minimize: isProd
                             }
                         },
                         {
@@ -103,6 +134,33 @@ const config = {
                         { loader: "less-loader" }
                     ]
                 })
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg)$/i,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            outputPath: "img/",
+                            name: "[name].[ext]?[hash]"
+                        }
+                    },
+                    {
+                        loader: "image-webpack-loader",
+                        options: {
+                            gifsicle: { interlaced: false },
+                            optipng: { optimizationLevel: 7 },
+                            pngquant: {
+                                quality: "65-90",
+                                speed: 4
+                            },
+                            mozjpeg: {
+                                progressive: true,
+                                quality: 65
+                            }
+                        }
+                    }
+                ]
             }
         ]
     },
@@ -114,13 +172,31 @@ const config = {
             hash: true,
             title: "PayEx DesignGuide"
         }),
+        new FaviconsWebpackPlugin({
+            logo: "./src/img/favicon.png",
+            title: "PayEx DesignGuide",
+            prefix: "icons/",
+            icons: {
+                android: false,
+                appleIcon: false,
+                appleStartup: false,
+                coast: false,
+                favicons: true,
+                firefox: false,
+                opengraph: false,
+                twitter: false,
+                yandex: false,
+                windows: false
+            }
+        }),
         new webpack.optimize.CommonsChunkPlugin({
-            name: "react-libraries",
+            names: ["react-libraries", "core-libraries"],
             minChunks: Infinity
         }),
         new webpack.NamedModulesPlugin(),
         new webpack.NamedChunksPlugin(),
         extractPX,
+        extractDocumentation,
         extractDesignGuide
     ]
 };

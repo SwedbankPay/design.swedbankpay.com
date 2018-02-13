@@ -1,0 +1,262 @@
+// ==========================================================================
+//
+// Table of Contents:
+//
+//  1. Colors
+//  2. Global
+//  3. Grid
+//  4. Tables
+//  5. Topbar
+//  6. Typography
+
+// 1. Colors
+// ==========================================================================
+
+@green-base:                            #2da944;
+@green-lighten-1:                       #30b649;
+@green-lighten-2:                       #41f563;
+@green-darken-1:                        #268f3a;
+@green-darken-2:                        #1c692a;
+
+@blue-base:                             #266c9a;
+@blue-lighten-1:                        #2975a7;
+@blue-lighten-2:                        #39a2e6;
+@blue-darken-1:                         #205a80;
+@blue-darken-2:                         #163f5a;
+
+@red-base:                              #cd2e00;
+@red-lighten-1:                         #d42f00;
+@red-lighten-2:                         #f53700;
+@red-darken-1:                          #8d2000;
+@red-darken-2:                          #4d1100;
+
+@black:                                 #000000;
+@white:                                 #ffffff;
+
+/* Grayscale */
+@gray-0:                                #231f20;
+@gray-1:                                #414042;
+@gray-2:                                #58595b;
+@gray-3:                                #6d6e71;
+@gray-4:                                #808285;
+@gray-5:                                #939598;
+@gray-6:                                #a7a9ac;
+@gray-7:                                #bcbec0;
+@gray-8:                                #d1d3d4;
+@gray-9:                                #e6e7e8;
+@gray-10:                               #efefef;
+
+/* Background colors */
+@background-dark:                       #c8c8c8;
+@background-medium:                     #dcdcdc;
+@background-light:                      #f0f0f0;
+@background-white:                      #ffffff;
+@background-body:                       #f7f7f7;
+
+/* Shadows */
+@default-box-shadow:                    0 0 30px rgba(133, 133, 133, 0.2);
+
+
+// 2. Global
+// ==========================================================================
+
+/* Margins */
+@base-margin:                           3px;
+@base-padding:                          3px;
+
+/* Spacing */
+@spacer:                                1rem;
+
+/* Body */
+@body-bg:                               @background-body;
+@text-color:                            @gray-1;
+@link-color:                            @brand-primary;
+@link-hover-color:                      darken(@brand-primary, 10%);
+@link-hover-decoration:                 underline;
+
+/* Media queries breakpoints */
+// Define the breakpoints at which your layout will change, adapting to different screen sizes.
+@screen-xs-min:                         480px;
+@screen-sm-min:                         768px;
+@screen-md-min:                         992px;
+@screen-lg-min:                         1200px;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:                         (@screen-sm-min - 1);
+@screen-sm-max:                         (@screen-md-min - 1);
+@screen-md-max:                         (@screen-lg-min - 1);
+
+/* Cursor */
+@cursor-disabled:                       not-allowed;
+
+@padding-base-vertical:                 8px;
+@padding-base-horizontal:               14px;
+@padding-large-vertical:                12px;
+@padding-large-horizontal:              18px;
+@padding-small-vertical:                5px;
+@padding-small-horizontal:              10px;
+@padding-xs-vertical:                   1px;
+@padding-xs-horizontal:                 5px;
+
+/* Borders */
+@border-width:                          1px;
+@border-color:                          @gray-3;
+
+@border-radius-base:                    .25rem;
+@border-radius-large:                   .3rem;
+@border-radius-small:                   .2rem;
+
+
+// 3. Grid
+// ==========================================================================
+
+@grid-columns:              12;
+
+//** Padding between columns. Gets divided in half for the left and right.
+@grid-gutter-width:                     20px;
+
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+@grid-float-breakpoint:     @screen-sm-min;
+
+//** Point at which the navbar begins collapsing.
+@grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
+
+
+//== Container sizes
+//
+//## Define the maximum width of `.container` for different screen sizes.
+
+// Small screen / tablet
+@container-tablet:             (720px + @grid-gutter-width);
+//** For `@screen-sm-min` and up.
+@container-sm:                 @container-tablet;
+
+// Medium screen / desktop
+@container-desktop:            (940px + @grid-gutter-width);
+//** For `@screen-md-min` and up.
+@container-md:                 @container-desktop;
+
+// Large screen / wide desktop
+@container-large-desktop:      (1140px + @grid-gutter-width);
+//** For `@screen-lg-min` and up.
+@container-lg:                 @container-large-desktop;
+
+
+
+// 4. Tables
+// ==========================================================================
+
+/* Colors */
+@table-background-color:                @white;
+@table-header-color:                    @brand-primary;
+@table-text-color:                      @gray-4;
+@table-border-color:                    @gray-9;
+@table-stripe-color:                    #f9f9f9;
+@table-collapse-content-color:          @gray-10;
+@table-collapse-border-color:           @gray-8;
+
+/* Dimensions */
+@table-cell-padding:                    15px 15px;
+@table-collapse-content-padding:        10px 20px 10px 20px;
+@table-collpase-nested-margin:          -10px -20px -10px -20px;
+@table-margin-bottom:                   10px;
+@table-line-height:                     22px;
+
+/* Animations */
+@table-collapse-duration:               0.25s;
+
+
+// 5. Topbar
+// ==========================================================================
+
+@topbar-height:                         70px;
+@topbar-nav-width:                      300px;
+@topbar-nav-group-margin:               15px;
+@topbar-z-index:                        500;
+
+
+// 6. Typography
+// ==========================================================================
+
+@font-stack:                            "Roboto", sans-serif;
+
+/* Colors */
+@brand-primary:                         @green-base;
+
+@state-success:                         @green-base;
+@state-neutral:                         @blue-base;
+@state-warning:                         @red-base;
+
+@link-color:                            @green-base;
+@small-color:                           @gray-3;
+@footer-small-color:                    @gray-7;
+@mark-background:                       rgba(0,0,0,.1);
+
+@text-muted:                            @gray-5;
+@text-brand:                            @brand-primary;
+@text-light:                            @white;
+
+@blockquote-border-color:               @gray-8;
+@blockquote-small-color:                @gray-5;
+
+/* Font Size */
+@font-size-base:                        1rem;
+@font-size-large:                       (@font-size-base * 1.25);
+@font-size-small:                       (@font-size-base * .875);
+
+/* Font Weight */
+@font-weight-light:                     300;
+@font-weight-normal:                    400;
+@font-weight-bold:                      700;
+
+@font-weight-base:                      @font-weight-normal;
+
+@line-height-base:                      1.5;
+@line-height-large:                     1.5;
+@line-height-small:                     1.5;
+
+
+/* Temporary for backwards compatibility*/
+@line-height-computed:                  @font-size-base * @line-height-base;
+
+
+/* Headings */
+@h1-font-size:                          @font-size-base * 2.5;
+@h2-font-size:                          @font-size-base * 2;
+@h3-font-size:                          @font-size-base * 1.75;
+@h4-font-size:                          @font-size-base * 1.5;
+@h5-font-size:                          @font-size-base * 1.25;
+@h6-font-size:                          @font-size-base;
+
+@headings-margin-bottom:                (@spacer / 4);
+@headings-font-family:                  inherit;
+@headings-font-weight:                  500;
+@headings-line-height:                  1.2;
+@headings-color:                        @gray-1;
+
+// TODO: Add display classes? [EH]
+
+
+/* Paragraphs */
+@paragraph-margin-bottom:               1rem;
+
+@lead-font-size:                        (@font-size-base * 1.25);
+@lead-font-weight:                      300;
+
+/* Etc */
+@small-font-size:                       80%;
+
+@blockquote-font-size:                  (@font-size-base * 1.25);
+
+@hr-border-color:                       rgba(0, 0, 0, .1);
+@hr-border-width:                       @border-width;
+
+@mark-padding:                          .2em;
+
+@dt-font-weight:                        @font-weight-bold;
+
+@list-inline-padding:                   .5rem;
+
+@hr-margin-y:                           @spacer;
+

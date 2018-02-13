@@ -2,6 +2,7 @@ import React from "react";
 import { render } from "react-dom";
 
 import "./less/px.less";
+import "./less/themes/documentation.less";
 import "./less/designguide.less";
 import App from "./App/App";
 
