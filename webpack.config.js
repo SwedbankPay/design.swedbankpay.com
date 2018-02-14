@@ -35,7 +35,10 @@ const config = {
         ],
         "core-libraries": [
             "@fortawesome/fontawesome-free-brands",
-            "@fortawesome/react-fontawesome"
+            "@fortawesome/react-fontawesome",
+            "prismjs",
+            "react-prism",
+            "js-beautify"
         ]
     },
     output: {
@@ -88,6 +91,26 @@ const config = {
                         { loader: "less-loader" }
                     ]
                 })
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    "style-loader",
+                    {
+                        loader: "css-loader",
+                        options: {
+                            minimize: isProd
+                        }
+                    },
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                            plugins: () => autoprefixer({
+                                browsers: ["last 3 versions", "> 1%"]
+                            })
+                        }
+                    }
+                ]
             },
             {
                 test: /documentation\.less$/,

@@ -1,15 +1,15 @@
 import React from "react";
 
-const Introduction = () => {
+const Color = () => {
     return (
         <div className="doc-container">
             <div className="row">
                 <div className="col-md-12">
-                    <p className="lead">Get started with the PayEx DesignGuide...</p>
+                    <p>Here there be colors!</p>
                 </div>
             </div>
         </div>
     );
 };
 
-export default Introduction;
+export default Color;

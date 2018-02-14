@@ -48,9 +48,12 @@
         "@fortawesome/fontawesome": "^1.1.3",
         "@fortawesome/fontawesome-free-brands": "^5.0.6",
         "@fortawesome/react-fontawesome": "0.0.17",
+        "js-beautify": "^1.7.5",
         "normalize.css": "^8.0.0",
+        "prismjs": "^1.11.0",
         "react": "^16.2.0",
         "react-dom": "^16.2.0",
+        "react-prism": "^4.3.2",
         "react-router-dom": "^4.2.2"
     },
     "devDependencies": {

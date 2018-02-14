@@ -1,6 +1,6 @@
 import React from "react";
 
-const Introduction = () => {
+const BrowserSupport = () => {
     return (
         <div className="doc-container">
             <div className="row">
@@ -12,4 +12,4 @@ const Introduction = () => {
     );
 };
 
-export default Introduction;
+export default BrowserSupport;

@@ -13,7 +13,7 @@ const AppHeaderWithRoutes = withRouter(props => <AppHeader {...props} />);
 const App = () => {
     return (
         <BrowserRouter>
-            <div className="doc-container" id="px-designguide">
+            <div id="px-designguide">
                 <AppHeaderWithRoutes />
                 <Switch>
                     <Route exact path="/" render={() => (

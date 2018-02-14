@@ -30,14 +30,6 @@ export default [
                 path: "/docs/core/color"
             },
             {
-                title: "Grid",
-                path: "/docs/core/grid"
-            },
-            {
-                title: "Helpers",
-                path: "/docs/core/helpers"
-            },
-            {
                 title: "Typography",
                 path: "/docs/core/typography"
             }
