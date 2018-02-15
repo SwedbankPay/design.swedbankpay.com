@@ -1,0 +1,48 @@
+//
+// Text
+//
+
+
+// Alignment
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+.text-nowrap         { white-space: nowrap; }
+
+// Transformation
+.text-lowercase      { text-transform: lowercase; }
+.text-uppercase      { text-transform: uppercase; }
+.text-capitalize     { text-transform: capitalize; }
+
+// Contextual colors
+.text-muted {
+    color: @text-muted;
+}
+
+// Text colors
+.text-brand {
+    .text-variant(@text-brand);
+}
+
+.text-success {
+    .text-variant(@text-success);
+}
+.text-neutral {
+    .text-variant(@text-neutral);
+}
+.text-warning {
+    .text-variant(@text-warning);
+}
+
+.text-light {
+    color: @text-light;
+}
+
+.text-dark {
+    color: @text-color;
+}
+
+.text-muted-light {
+    color: @gray-10;
+}

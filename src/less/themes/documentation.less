@@ -16,6 +16,11 @@
     width: 100%;
     border-left: 1px solid rgba(0, 0, 0, .1);
     min-height: calc(~"100vh - 150px");
+
+    @media (max-width: @screen-sm-max) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }
 
 .doc-sidebar {
@@ -122,6 +127,14 @@ nav {
     }
 }
 
+.doc-body {
+    padding-right: 3rem;
+
+    @media (max-width: @screen-sm-max) {
+        padding-right: 10px;
+    }
+}
+
 .doc-search {
     padding: 1rem 15px;
     border-bottom: 1px solid rgba(0, 0, 0, .075);
@@ -132,6 +145,36 @@ nav {
         &:focus {
             outline: 0;
             box-shadow: 0px 0px 2px 2px rgba(45, 169, 68, 0.5);
+        }
+    }
+}
+
+.doc-section-heading {
+    &:before {
+        content: "";
+        display: block;
+        height: 100px;
+        margin: -100px 0 0;
+    }
+}
+
+.doc-toc {
+    position: sticky;
+    top: 100px;
+    margin-top: -2rem;
+    
+    ul {
+        list-style: none;
+        padding-left: 0;
+        
+        li {
+            border-left: 1px solid rgba(0, 0, 0, .1);
+            padding-left: 1rem;
+
+            &.active {
+                border-left: 2px solid rgba(45, 169, 68, 0.7);
+                font-weight: @font-weight-bold;
+            }
         }
     }
 }

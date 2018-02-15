@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
 import RenderCodeFigure from "../../utils/RenderCodeFigure";
+import DocNav from "../../utils/DocNav";
 
 const Fonts = () => {
 
@@ -11,8 +12,8 @@ const Fonts = () => {
                             }`;
 
     return (
-        <div className="col-md-12">
-            <h2>Font</h2>
+        <div>
+            <h2 className="doc-section-heading" id="font">Font</h2>
             <p>The standard font PayEx DesignGuide uses is Roboto. It is included in the stylesheet. The included font weights you can use are: 300, 400, 500, 700 & 900. Both normal and italicized is available.</p>
             <h3>Removing Roboto</h3>
             <p>In case your site is not going to use Roboto, you can modify your font stack by modifying the snippet below to your preferance and add it to your custom stylesheet.</p>
@@ -45,8 +46,8 @@ const Headings = () => {
     );
 
     return (
-        <div className="col-md-12">
-            <h2>Headings</h2>
+        <div>
+            <h2 className="doc-section-heading" id="headings">Headings</h2>
             <p>PayEx DesignGuide provides basic styling on all headings (h1-h6).</p>
             <div className="showcase-panel">
                 <HeadingsCode />
@@ -69,8 +70,8 @@ const Small = () => {
     );
 
     return (
-        <div className="col-md-12">
-            <h2>Small</h2>
+        <div>
+            <h2 className="doc-section-heading" id="small">Small</h2>
             <p>Use the <PrismCode className="language-html">{"<small></small>"}</PrismCode> tags to create a secondary heading within a heading tag or class.</p>
             <div className="showcase-panel">
                 <SmallCode />
@@ -86,8 +87,8 @@ const Lead = () => {
     );
 
     return (
-        <div className="col-md-12">
-            <h2>Lead</h2>
+        <div>
+            <h2 className="doc-section-heading" id="lead">Lead</h2>
             <p>Make a paragraph stand out by using <code className="token property">.lead</code>.</p>
             <div className="showcase-panel">
                 <LeadCode />
@@ -115,8 +116,8 @@ const Inline = () => {
     );
 
     return (
-        <div className="col-md-12">
-            <h2>Inline text elements</h2>
+        <div>
+            <h2 className="doc-section-heading" id="inline-text-elements">Inline text elements</h2>
             <p>Styling for common inline HTML5 elements.</p>
             <div className="showcase-panel">
                 <InlineCode />
@@ -134,26 +135,123 @@ const Inline = () => {
 
 const TextUtilities = () => {
     return (
-        <div className="col-md-12">
-            <h2>Text utilities</h2>
-            <p>Change text alignment, transform, style, weight, and color with our <Link to="/docs/utilities/text">text utilities</Link><b>(NOT YET IMPLEMENTED)</b> and <Link to="/docs/utilities/color">color utilities</Link><b>(NOT YET IMPLEMENTED)</b>.</p>
+        <div>
+            <h2 className="doc-section-heading" id="text-utilities">Text utilities</h2>
+            <p>Change text alignment, transform, style, weight, and color with our <Link to="/docs/utilities/text">text utilities</Link> <b>(NOT YET IMPLEMENTED)</b> and <Link to="/docs/utilities/color">color utilities</Link> <b>(NOT YET IMPLEMENTED)</b>.</p>
         </div>
     );
 };
+
+const Abbreviations = () => {
+    const AbbrCode = () => (
+        <div>
+            <p><abbr title="Laugh Out Loud">LOL</abbr></p>
+            <p><abbr title="HyperText Markup Language" className="initialism">HTML</abbr></p>
+        </div>
+    );
+
+    return (
+        <div>
+            <h2 className="doc-section-heading" id="abbreviations">Abbreviations</h2>
+            <p>Stylized implementation of HTML’s <PrismCode className="language-html">{"<abbr>"}</PrismCode> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.</p>
+            <p>Add <code className="token property">.initialism</code> to an abbreviation for a slightly smaller font-size.</p>
+            <div className="showcase-panel">
+                <AbbrCode />
+            </div>
+            <RenderCodeFigure Component={AbbrCode} language="html" removeOuterTag={true} />
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr" target="_blank" rel="noopener noreferrer">Read more</a> about abbreviations.</p>
+        </div>
+    );
+};
+
+const Blockquotes = () => {
+    const BlockquoteCode = () => (
+        <blockquote className="blockquote">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        </blockquote>
+    );
+
+    const BlockquotesText = () => (
+        <div>
+            <h2 className="doc-section-heading" id="blockquotes">Blockquotes</h2>
+            <p>For quoting blocks of content from another source within your document. Wrap <PrismCode className="language-html">{"<blockquote>"}</PrismCode> or <code className="token property">.blockquote</code> around any HTML as the quote.</p>
+            <div className="showcase-panel">
+                <BlockquoteCode />
+            </div>
+            <RenderCodeFigure Component={BlockquoteCode} language="html" removeOuterTag={false} />
+        </div>
+    );
+
+    const BlockquoteWithSourceCode = () => (
+        <blockquote className="blockquote">
+            <p>
+                Better learn balance. Balance is key. Balance good, karate good. Everything good. Balance bad, better pack up, go home. Understand?
+            </p>
+            <footer><cite title="The Karate Kid (1984)">Mr. Miyagi</cite></footer>
+        </blockquote>
+    );
+
+    const BlockquoteWithSourceText = () => (
+        <div>
+            <h3>Naming a source</h3>
+            <p>Add a <PrismCode className="language-html">{"<footer>"}</PrismCode> for identifying the source. Wrap the name of the source work in <PrismCode className="language-html">{"<cite>"}</PrismCode>.</p>
+            <div className="showcase-panel">
+                <BlockquoteWithSourceCode />
+            </div>
+            <RenderCodeFigure Component={BlockquoteWithSourceCode} language="html" removeOuterTag={false} />
+        </div>
+    );
+
+    const BlockquotesAlignmentCode = () => (
+        <blockquote className="blockquote text-center">
+            <p>
+                It’s the ship that made the Kessel run in less than twelve parsecs. I’ve outrun Imperial starships. Not the local bulk cruisers, mind you. I’m talking about the big Corellian ships, now. She’s fast enough for you, old man.
+            </p>
+            <footer><cite title="Star Wars: Episode IV - A New Hope (1977)">Han Solo</cite></footer>
+        </blockquote>
+    );
+
+    const BlockquotesAlignmentText = () => (
+        <div>
+            <h3>Alignment</h3>
+            <p>Use <Link to="/docs/utilities/text">text utilities</Link> <b>(NOT YET IMPLEMENTED)</b> as needed to change the alignment of your blockquote.</p>
+            <div className="showcase-panel">
+                <BlockquotesAlignmentCode />
+            </div>
+            <RenderCodeFigure Component={BlockquotesAlignmentCode} language="html" removeOuterTag={false} />
+        </div>
+    );
+
+
+    return (
+        <div>
+            <BlockquotesText />
+            <BlockquoteWithSourceText />
+            <BlockquotesAlignmentText />
+        </div>
+    );
+};
+
+const TypographyText = () => (
+    <div className="col-md-12 col-lg-10 doc-body">
+        <p className="lead">Documentation and examples for PayEx DesignGuide typography.</p>
+        <Fonts />
+        <Headings />
+        <Small />
+        <Lead />
+        <Inline />
+        <TextUtilities />
+        <Abbreviations />
+        <Blockquotes />
+    </div>
+);
 
 const Typography = () => {
     return (
         <div className="doc-container">
             <div className="row">
-                <div className="col-md-12">
-                    <p className="lead">Documentation and examples for PayEx DesignGuide typography.</p>
-                </div>
-                <Fonts />
-                <Headings />
-                <Small />
-                <Lead />
-                <Inline />
-                <TextUtilities />
+                <TypographyText />
+                <DocNav component={TypographyText} />
             </div>
         </div>
     );

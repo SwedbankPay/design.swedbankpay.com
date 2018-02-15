@@ -197,13 +197,17 @@
 @text-brand:                            @brand-primary;
 @text-light:                            @white;
 
+@text-success:                         @green-base;
+@text-neutral:                         @blue-base;
+@text-warning:                         @red-base;
+
 @blockquote-border-color:               @gray-8;
 @blockquote-small-color:                @gray-5;
 
 /* Font Size */
-@font-size-base:                        1rem;
-@font-size-large:                       (@font-size-base * 1.25);
-@font-size-small:                       (@font-size-base * .875);
+@base-font-size:                        1rem;
+@font-size-large:                       (@base-font-size * 1.25);
+@font-size-small:                       (@base-font-size * .875);
 
 /* Font Weight */
 @font-weight-light:                     300;
@@ -218,16 +222,16 @@
 
 
 /* Temporary for backwards compatibility*/
-@line-height-computed:                  @font-size-base * @line-height-base;
+@line-height-computed:                  @base-font-size * @line-height-base;
 
 
 /* Headings */
-@h1-font-size:                          @font-size-base * 2.5;
-@h2-font-size:                          @font-size-base * 2;
-@h3-font-size:                          @font-size-base * 1.75;
-@h4-font-size:                          @font-size-base * 1.5;
-@h5-font-size:                          @font-size-base * 1.25;
-@h6-font-size:                          @font-size-base;
+@h1-font-size:                          @base-font-size * 2.5;
+@h2-font-size:                          @base-font-size * 2;
+@h3-font-size:                          @base-font-size * 1.75;
+@h4-font-size:                          @base-font-size * 1.5;
+@h5-font-size:                          @base-font-size * 1.25;
+@h6-font-size:                          @base-font-size;
 
 @headings-margin-top:                   @spacer * 2;
 @headings-margin-bottom:                @spacer / 2;
@@ -242,13 +246,13 @@
 /* Paragraphs */
 @paragraph-margin-bottom:               1rem;
 
-@lead-font-size:                        (@font-size-base * 1.25);
+@lead-font-size:                        (@base-font-size * 1.25);
 @lead-font-weight:                      300;
 
 /* Etc */
 @small-font-size:                       80%;
 
-@blockquote-font-size:                  (@font-size-base * 1.25);
+@blockquote-font-size:                  (@base-font-size * 1.25);
 
 @hr-border-color:                       rgba(0, 0, 0, .1);
 @hr-border-width:                       @border-width;

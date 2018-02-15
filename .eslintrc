@@ -36,7 +36,7 @@
         "no-alert": 1,
         "no-multi-spaces": 1,
         "no-redeclare": 1,
-        "no-undef": 1,
+        "no-undef": 2,
         "no-unused-vars": 1,
         "node/exports-style": ["error", "module.exports"],
         "array-bracket-spacing": 1,
