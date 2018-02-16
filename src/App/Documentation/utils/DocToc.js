@@ -33,7 +33,7 @@ const _findHeadings = (children) => {
     return headings;
 };
 
-class DocNav extends Component {
+class DocToc extends Component {
     constructor (props) {
         super(props);
         this.state = {
@@ -46,30 +46,50 @@ class DocNav extends Component {
         this.setState({ windowTopPosition: window.pageYOffset });
     }
 
+    scrollToElement (e, topPosition, id) {
+        e.preventDefault();
+
+        window.scroll({
+            top: topPosition + 200,
+            left: 0,
+            behavior: "smooth"
+        });
+
+        window.history.pushState(null, null, `#${id}`);
+    }
+
     componentDidMount () {
         this.state.headings.map(heading => {
             heading.top = document.getElementById(heading.id).offsetTop;
         });
 
+        this.state.headings.push({ top: document.body.clientHeight });
         window.addEventListener("scroll", this.updateWindowPosition.bind(this));
+    }
+
+    componentWillUnmount () {
+        window.removeEventListener("scroll", this.updateWindowPosition.bind(this));
     }
 
     render () {
         return (
             <div className="col-lg-2 hidden-md doc-toc">
                 <ul>
-                    {this.state.headings.map((heading, i) => (
-                        // TODO: Crashing on last child, fixing tomorrow [EH]
-                        <li key={i} className={(this.state.windowTopPosition > heading.top && this.state.windowTopPosition < this.state.headings[i + 1].top) ? "active" : ""}>
-                            <a href={`#${heading.id}`}>{heading.title}</a>
-                        </li>
-                    ))}
+                    {this.state.headings.map((heading, i) => {
+                        if (heading.id && heading.title) {
+                            return (
+                                <li key={i} className={(this.state.windowTopPosition >= heading.top && this.state.windowTopPosition < this.state.headings[i + 1].top) ? "active" : ""}>
+                                    <a href={`#${heading.id}`} onClick={e => this.scrollToElement(e, heading.top, heading.id)}>{heading.title}</a>
+                                </li>
+                            );
+                        }
+                    })}
                 </ul>
             </div>
         );
     }
 }
 
-DocNav.propTypes = { component: PropTypes.func.isRequired };
+DocToc.propTypes = { component: PropTypes.func.isRequired };
 
-export default DocNav;
+export default DocToc;
