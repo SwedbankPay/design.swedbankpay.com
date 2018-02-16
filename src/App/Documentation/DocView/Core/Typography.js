@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
 import RenderCodeFigure from "../../utils/RenderCodeFigure";
-import DocNav from "../../utils/DocNav";
+import DocToc from "../../utils/DocToc";
 
 const Fonts = () => {
 
@@ -251,7 +251,7 @@ const Typography = () => {
         <div className="doc-container">
             <div className="row">
                 <TypographyText />
-                <DocNav component={TypographyText} />
+                <DocToc component={TypographyText} />
             </div>
         </div>
     );
