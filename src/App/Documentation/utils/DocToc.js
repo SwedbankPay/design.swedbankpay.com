@@ -77,8 +77,11 @@ class DocToc extends Component {
                 <ul>
                     {this.state.headings.map((heading, i) => {
                         if (heading.id && heading.title) {
+                            const isWithinBoundary = this.state.windowTopPosition >= heading.top &&
+                                this.state.windowTopPosition < this.state.headings[i + 1].top;
+
                             return (
-                                <li key={i} className={(this.state.windowTopPosition >= heading.top && this.state.windowTopPosition < this.state.headings[i + 1].top) ? "active" : ""}>
+                                <li key={i} className={isWithinBoundary ? "active" : ""}>
                                     <a href={`#${heading.id}`} onClick={e => this.scrollToElement(e, heading.top, heading.id)}>{heading.title}</a>
                                 </li>
                             );
