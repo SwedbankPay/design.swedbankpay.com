@@ -39,7 +39,8 @@ const config = {
             "prismjs",
             "react-prism",
             "js-beautify"
-        ]
+        ],
+        polyfills: "./src/polyfills/index.js"
     },
     output: {
         library: "payex",
@@ -213,7 +214,7 @@ const config = {
             }
         }),
         new webpack.optimize.CommonsChunkPlugin({
-            names: ["react-libraries", "core-libraries"],
+            names: ["react-libraries", "core-libraries", "polyfills"],
             minChunks: Infinity
         }),
         new webpack.NamedModulesPlugin(),
