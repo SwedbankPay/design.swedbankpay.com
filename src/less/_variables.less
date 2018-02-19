@@ -2,12 +2,24 @@
 //
 // Table of Contents:
 //
+//  CORE
+// ===============
 //  1. Colors
 //  2. Global
-//  3. Grid
-//  4. Tables
-//  5. Topbar
-//  6. Typography
+//  3. Typography
+//  4. Grid
+//
+//  COMPONENTS
+// ===============
+//  5. Breadcrumb
+//  6. Tables
+//  7. Topbar
+
+// ==========================================================================
+//
+// CORE
+//
+// ==========================================================================
 
 // 1. Colors
 // ==========================================================================
@@ -55,6 +67,10 @@
 
 /* Shadows */
 @default-box-shadow:                    0 0 30px rgba(133, 133, 133, 0.2);
+
+@state-success:                         @green-base;
+@state-neutral:                         @blue-base;
+@state-warning:                         @red-base;
 
 
 // 2. Global
@@ -107,76 +123,7 @@
 @border-radius-small:                   .2rem;
 
 
-// 3. Grid
-// ==========================================================================
-
-@grid-columns:              12;
-
-//** Padding between columns. Gets divided in half for the left and right.
-@grid-gutter-width:                     20px;
-
-// Navbar collapse
-//** Point at which the navbar becomes uncollapsed.
-@grid-float-breakpoint:     @screen-sm-min;
-
-//** Point at which the navbar begins collapsing.
-@grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
-
-
-//== Container sizes
-//
-//## Define the maximum width of `.container` for different screen sizes.
-
-// Small screen / tablet
-@container-tablet:             (720px + @grid-gutter-width);
-//** For `@screen-sm-min` and up.
-@container-sm:                 @container-tablet;
-
-// Medium screen / desktop
-@container-desktop:            (940px + @grid-gutter-width);
-//** For `@screen-md-min` and up.
-@container-md:                 @container-desktop;
-
-// Large screen / wide desktop
-@container-large-desktop:      (1140px + @grid-gutter-width);
-//** For `@screen-lg-min` and up.
-@container-lg:                 @container-large-desktop;
-
-
-
-// 4. Tables
-// ==========================================================================
-
-/* Colors */
-@table-background-color:                @white;
-@table-header-color:                    @brand-primary;
-@table-text-color:                      @gray-4;
-@table-border-color:                    @gray-9;
-@table-stripe-color:                    #f9f9f9;
-@table-collapse-content-color:          @gray-10;
-@table-collapse-border-color:           @gray-8;
-
-/* Dimensions */
-@table-cell-padding:                    15px 15px;
-@table-collapse-content-padding:        10px 20px 10px 20px;
-@table-collpase-nested-margin:          -10px -20px -10px -20px;
-@table-margin-bottom:                   10px;
-@table-line-height:                     22px;
-
-/* Animations */
-@table-collapse-duration:               0.25s;
-
-
-// 5. Topbar
-// ==========================================================================
-
-@topbar-height:                         70px;
-@topbar-nav-width:                      300px;
-@topbar-nav-group-margin:               15px;
-@topbar-z-index:                        500;
-
-
-// 6. Typography
+// 3. Typography
 // ==========================================================================
 
 @font-stack:                            "Roboto", sans-serif;
@@ -184,10 +131,6 @@
 /* Colors */
 @brand-primary:                         @green-base;
 @brand-primary-faded:                   fade(@green-base, 60%);
-
-@state-success:                         @green-base;
-@state-neutral:                         @blue-base;
-@state-warning:                         @red-base;
 
 @link-color:                            @green-base;
 @small-color:                           @gray-3;
@@ -265,4 +208,110 @@
 @list-inline-padding:                   .5rem;
 
 @hr-margin-y:                           @spacer;
+
+
+// 4. Grid
+// ==========================================================================
+
+@grid-columns:              12;
+
+//** Padding between columns. Gets divided in half for the left and right.
+@grid-gutter-width:                     20px;
+
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+@grid-float-breakpoint:     @screen-sm-min;
+
+//** Point at which the navbar begins collapsing.
+@grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
+
+
+//== Container sizes
+//
+//## Define the maximum width of `.container` for different screen sizes.
+
+// Small screen / tablet
+@container-tablet:             (720px + @grid-gutter-width);
+//** For `@screen-sm-min` and up.
+@container-sm:                 @container-tablet;
+
+// Medium screen / desktop
+@container-desktop:            (940px + @grid-gutter-width);
+//** For `@screen-md-min` and up.
+@container-md:                 @container-desktop;
+
+// Large screen / wide desktop
+@container-large-desktop:      (1140px + @grid-gutter-width);
+//** For `@screen-lg-min` and up.
+@container-lg:                 @container-large-desktop;
+
+
+
+// ==========================================================================
+//
+// COMPONENTS
+//
+// ==========================================================================
+
+// 5. Breadcrumb
+// ==========================================================================
+
+@breadcrumb-margin: 1rem 0;
+@breadcrumb-padding: 0.6rem 1.2rem 0.6rem 2rem;
+@breadcrumb-padding-first: 1rem;
+
+@breadcrumb-bg: @white;
+@breadcrumb-border-color: @brand-primary;
+@breadcrumb-disabled-bg: @gray-9;
+@breadcrumb-disabled-color: @gray-3;
+@breadcrumb-active-bg: @brand-primary;
+@breadcrumb-active-color: @white;
+
+
+// Arrow constants
+@breadcrumb-arrow-border-size: 0.1rem;
+@breadcrumb-arrow-border: 1.55rem;
+@breadcrumb-arrow-bg: @breadcrumb-arrow-border - @breadcrumb-arrow-border-size;
+
+
+/* Small */
+@breadcrumb-padding-sm: 0.3rem 0.6rem 0.3rem 1.5rem;
+@breadcrumb-padding-first-sm: 0.5rem;
+
+// Arrow constants
+@breadcrumb-arrow-border-size-sm: 0.05rem;
+@breadcrumb-arrow-border-sm: 1.25rem;
+@breadcrumb-arrow-bg-sm: @breadcrumb-arrow-border-sm - @breadcrumb-arrow-border-size-sm;
+
+
+// 6. Tables
+// ==========================================================================
+
+/* Colors */
+@table-background-color:                @white;
+@table-header-color:                    @brand-primary;
+@table-text-color:                      @gray-4;
+@table-border-color:                    @gray-9;
+@table-stripe-color:                    #f9f9f9;
+@table-collapse-content-color:          @gray-10;
+@table-collapse-border-color:           @gray-8;
+
+/* Dimensions */
+@table-cell-padding:                    15px 15px;
+@table-collapse-content-padding:        10px 20px 10px 20px;
+@table-collpase-nested-margin:          -10px -20px -10px -20px;
+@table-margin-bottom:                   10px;
+@table-line-height:                     22px;
+
+/* Animations */
+@table-collapse-duration:               0.25s;
+
+
+// 7. Topbar
+// ==========================================================================
+
+@topbar-height:                         70px;
+@topbar-nav-width:                      300px;
+@topbar-nav-group-margin:               15px;
+@topbar-z-index:                        500;
 

@@ -44,8 +44,8 @@ export default [
                 path: "/docs/components/alerts"
             },
             {
-                title: "Button",
-                path: "/docs/components/button"
+                title: "Breadcrumb",
+                path: "/docs/components/breadcrumb"
             },
             {
                 title: "Form",

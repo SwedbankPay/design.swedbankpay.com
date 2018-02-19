@@ -4,8 +4,8 @@ import ReactDOMServer from "react-dom/server";
 import PrismCode from "react-prism";
 import jsbeautifier from "js-beautify";
 
-const _generateHtml = (Component, removeOuterTag) => {
-    let code = ReactDOMServer.renderToStaticMarkup(<Component />);
+const _generateHtml = (Component, removeOuterTag, props) => {
+    let code = ReactDOMServer.renderToStaticMarkup(<Component {...props} />);
 
     if (removeOuterTag) {
         // TODO: This is stupid, find a better way to do this [EH]
@@ -45,12 +45,12 @@ const _generateJs = () => {
     );
 };
 
-const RenderCodeFigure = ({ Component, language, removeOuterTag, styleSheet }) => {
+const RenderCodeFigure = ({ Component, props, language, removeOuterTag, styleSheet }) => {
     let code;
 
     switch (language) {
         case "html":
-            code = _generateHtml(Component, removeOuterTag);
+            code = _generateHtml(Component, removeOuterTag, props);
             break;
         case "css":
             code = _generateCss(styleSheet);
@@ -66,6 +66,7 @@ const RenderCodeFigure = ({ Component, language, removeOuterTag, styleSheet }) =
 RenderCodeFigure.propTypes = {
     language: PropTypes.string.isRequired,
     Component: PropTypes.func,
+    props: PropTypes.object,
     styleSheet: PropTypes.string,
     removeOuterTag: PropTypes.bool
 };

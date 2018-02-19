@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, withRouter, Switch, Route, Redirect } from "react-router-dom";
+import { BrowserRouter, withRouter, Switch, Route } from "react-router-dom";
 
 import AppHeader from "./AppHeader/Appheader";
 import Home from "./Home/Home";
@@ -16,10 +16,7 @@ const App = () => {
             <div id="px-designguide">
                 <AppHeaderWithRoutes />
                 <Switch>
-                    <Route exact path="/" render={() => (
-                        <Redirect to="/home" />
-                    )} />
-                    <Route exact path="/home" component={Home} />
+                    <Route exact path="/" component={Home} />
                     <Route path="/docs" component={Documentation} />
                     <Route path="/examples" component={Examples} />
                     <Route path="/templates" component={Templates} />

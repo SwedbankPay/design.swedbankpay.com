@@ -11,7 +11,7 @@ const AppHeader = props => {
         <header className="topbar designguide-header">
             <a className="topbar-logo logo-default" href="#"></a>
             <nav className="header-links">
-                <Link className={(route.startsWith("/home")) ? "active" : ""} to="/home">Home</Link>
+                <Link className={(route === "/") ? "active" : ""} to="/">Home</Link>
                 <Link className={(route.startsWith("/docs")) ? "active" : ""} to="/docs">Documentation</Link>
                 <Link className={(route.startsWith("/examples")) ? "active" : ""} to="/examples">Examples</Link>
                 <Link className={(route.startsWith("/templates")) ? "active" : ""} to="/templates">Templates</Link>

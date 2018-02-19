@@ -11,17 +11,17 @@ const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const isProd = (process.env.NODE_ENV === "production");
 
 const extractPX = new ExtractTextPlugin({
-    filename: "px.css",
+    filename: "styles/px.css",
     disable: !isProd
 });
 
 const extractDocumentation = new ExtractTextPlugin({
-    filename: "templates/documentation.css",
+    filename: "styles/templates/documentation.css",
     disable: !isProd
 });
 
 const extractDesignGuide = new ExtractTextPlugin({
-    filename: "designGuide.css",
+    filename: "styles/designGuide.css",
     disable: !isProd
 });
 
@@ -45,7 +45,7 @@ const config = {
     output: {
         library: "payex",
         path: path.resolve(__dirname, "dist"),
-        filename: "[name].js?[hash]",
+        filename: "scripts/[name].js?[hash]",
         publicPath: "/"
     },
     resolve: {
@@ -221,7 +221,10 @@ const config = {
         new webpack.NamedChunksPlugin(),
         extractPX,
         extractDocumentation,
-        extractDesignGuide
+        extractDesignGuide,
+        new webpack.DefinePlugin({
+            "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)
+        })
     ]
 };
 
