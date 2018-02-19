@@ -5,10 +5,12 @@
     "main": "index.js",
     "scripts": {
         "start": "cross-env NODE_ENV=development webpack-dev-server",
-        "build:dev": "cross-env NODE_ENV=development webpack",
-        "build:prod": "cross-env NODE_ENV=production webpack",
+        "start:prod": "cross-env NODE_ENV=production webpack-dev-server",
+        "build": "npm run lint && cross-env NODE_ENV=development webpack",
+        "build:prod": "npm run lint && cross-env NODE_ENV=production webpack",
         "test": "cross-env NODE_ENV=test jest",
-        "test:update": "npm test -- -u"
+        "test:update": "npm test -- -u",
+        "lint": "eslint src/"
     },
     "repository": {
         "type": "git",
