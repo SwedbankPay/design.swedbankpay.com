@@ -27,17 +27,15 @@ const _generateHtml = (Component, removeOuterTag, props) => {
     );
 };
 
-const _generateCss = (code) => {
-    return (
-        <figure>
-            <pre>
-                <PrismCode className="language-css">
-                    {jsbeautifier.css_beautify(code)}
-                </PrismCode>
-            </pre>
-        </figure>
-    );
-};
+const _generateCss = (code) => (
+    <figure>
+        <pre>
+            <PrismCode className="language-css">
+                {jsbeautifier.css_beautify(code)}
+            </PrismCode>
+        </pre>
+    </figure>
+);
 
 const _generateJs = () => {
     return (

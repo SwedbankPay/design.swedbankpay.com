@@ -2,11 +2,11 @@
 
 ## Installing / Getting started
 
-The installation guides in this file is for further development of the design guide, and is not necessary if you plan to use the design guide in your project.
+The installation guides in this file is for further development of the DesignGuide, and is not necessary if you plan to use the DesignGuide in your project.
 
 ### Prerequisites
 
-Design guide requires [Node.js](https://nodejs.org/en/) (includes npm).
+DesignGuide requires [Node.js](https://nodejs.org/en/) (includes npm).
 
 ### Installing
 
