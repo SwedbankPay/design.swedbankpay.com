@@ -3,9 +3,13 @@ import PropTypes from "prop-types";
 
 const _renderItems = items => {
     return items.map((item, i) => {
-        return (
-            <li key={i} className={item.disabled ? "disabled" : ""}>
-                <a href={item.href || "#"}>{item.title}</a>
+        return item.disabled ? (
+            <li key={i} className="disabled">
+                {item.href ? <a href={item.href}>{item.title}</a> : <span>{item.title}</span>}
+            </li>
+        ) : (
+            <li key={i}>
+                {item.href ? <a href={item.href}>{item.title}</a> : <span>{item.title}</span>}
             </li>
         );
     });
@@ -14,7 +18,7 @@ const _renderItems = items => {
 const DefaultItems = () => (
     <div>
         <li><a href="#">Home</a></li>
-        <li className="disabled"><a href="#">Products</a></li>
+        <li><a href="#">Products</a></li>
         <li><a href="#">Gadgets</a></li>
         <li><a href="#">Gadget #1</a></li>
     </div>

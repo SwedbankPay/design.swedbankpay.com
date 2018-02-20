@@ -59,11 +59,13 @@ class DocToc extends Component {
     }
 
     componentDidMount () {
-        this.state.headings.map(heading => {
-            heading.top = document.getElementById(heading.id).offsetTop;
-        });
+        if (this.state.headings) {
+            this.state.headings.map((heading, i) => {
+                (i === 0) ? heading.top = 0 : heading.top = document.getElementById(heading.id).offsetTop;
+            });
 
-        this.state.headings.push({ top: document.body.clientHeight });
+            this.state.headings.push({ top: document.body.clientHeight });
+        }
         window.addEventListener("scroll", this.updateWindowPosition.bind(this));
     }
 

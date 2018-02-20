@@ -13,7 +13,7 @@ const Fonts = () => {
 
     return (
         <div>
-            <h2 className="doc-section-heading" id="font">Font</h2>
+            <h2 id="font">Font</h2>
             <p>The standard font PayEx DesignGuide uses is Roboto. It is included in the stylesheet. The included font weights you can use are: 300, 400, 500, 700 & 900. Both normal and italicized is available.</p>
             <h3>Removing Roboto</h3>
             <p>In case your site is not going to use Roboto, you can modify your font stack by modifying the snippet below to your preferance and add it to your custom stylesheet.</p>
@@ -47,7 +47,7 @@ const Headings = () => {
 
     return (
         <div>
-            <h2 className="doc-section-heading" id="headings">Headings</h2>
+            <h2 id="headings">Headings</h2>
             <p>PayEx DesignGuide provides basic styling on all headings (h1-h6).</p>
             <div className="showcase-panel">
                 <HeadingsCode />
@@ -71,7 +71,7 @@ const Small = () => {
 
     return (
         <div>
-            <h2 className="doc-section-heading" id="small">Small</h2>
+            <h2 id="small">Small</h2>
             <p>Use the <PrismCode className="language-html">{"<small></small>"}</PrismCode> tags to create a secondary heading within a heading tag or class.</p>
             <div className="showcase-panel">
                 <SmallCode />
@@ -88,7 +88,7 @@ const Lead = () => {
 
     return (
         <div>
-            <h2 className="doc-section-heading" id="lead">Lead</h2>
+            <h2 id="lead">Lead</h2>
             <p>Make a paragraph stand out by using <code className="token property">.lead</code>.</p>
             <div className="showcase-panel">
                 <LeadCode />
@@ -117,7 +117,7 @@ const Inline = () => {
 
     return (
         <div>
-            <h2 className="doc-section-heading" id="inline-text-elements">Inline text elements</h2>
+            <h2 id="inline-text-elements">Inline text elements</h2>
             <p>Styling for common inline HTML5 elements.</p>
             <div className="showcase-panel">
                 <InlineCode />
@@ -136,7 +136,7 @@ const Inline = () => {
 const TextUtilities = () => {
     return (
         <div>
-            <h2 className="doc-section-heading" id="text-utilities">Text utilities</h2>
+            <h2 id="text-utilities">Text utilities</h2>
             <p>Change text alignment, transform, style, weight, and color with our <Link to="/docs/utilities/text">text utilities</Link> <b>(NOT YET IMPLEMENTED)</b> and <Link to="/docs/utilities/color">color utilities</Link> <b>(NOT YET IMPLEMENTED)</b>.</p>
         </div>
     );
@@ -152,7 +152,7 @@ const Abbreviations = () => {
 
     return (
         <div>
-            <h2 className="doc-section-heading" id="abbreviations">Abbreviations</h2>
+            <h2 id="abbreviations">Abbreviations</h2>
             <p>Stylized implementation of HTML’s <PrismCode className="language-html">{"<abbr>"}</PrismCode> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.</p>
             <p>Add <code className="token property">.initialism</code> to an abbreviation for a slightly smaller font-size.</p>
             <div className="showcase-panel">
@@ -173,7 +173,7 @@ const Blockquotes = () => {
 
     const BlockquotesText = () => (
         <div>
-            <h2 className="doc-section-heading" id="blockquotes">Blockquotes</h2>
+            <h2 id="blockquotes">Blockquotes</h2>
             <p>For quoting blocks of content from another source within your document. Wrap <PrismCode className="language-html">{"<blockquote>"}</PrismCode> or <code className="token property">.blockquote</code> around any HTML as the quote.</p>
             <div className="showcase-panel">
                 <BlockquoteCode />

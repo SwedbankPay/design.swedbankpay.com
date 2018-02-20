@@ -41,6 +41,11 @@ ol.breadcrumb {
             text-transform: uppercase;
             margin-bottom: 0.2rem;
 
+            a,
+            span {
+                color: @brand-primary;
+            }
+
             &.disabled {
                 background-color: @breadcrumb-disabled-bg;
                 cursor: not-allowed;
@@ -48,6 +53,8 @@ ol.breadcrumb {
                 a,
                 span {
                     color: @breadcrumb-disabled-color;
+                    pointer-events: none;
+                    cursor: not-allowed;
                 }
 
                 &:before {
