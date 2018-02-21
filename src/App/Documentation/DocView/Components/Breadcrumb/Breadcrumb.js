@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import RenderCodeFigure from "../../../utils/RenderCodeFigure";
+import ComponentPreview from "../../../utils/ComponentPreview";
 import DocToc from "../../../utils/DocToc";
 
 import BreadcrumbComponent from "../../../../components/Breadcrumb/Breadcrumb";
@@ -28,10 +28,9 @@ const BasicBreadCrumb = () => {
         <div>
             <h2 id="basic-usage">Basic Usage</h2>
             <p>Add class <code className="token property">.breadcrumb</code> to a containing <PrismCode className="language-html">{"<ol>"}</PrismCode> element and nest a <PrismCode className="language-html">{"<a>"}</PrismCode> or <PrismCode className="language-html">{"<span>"}</PrismCode> element inside the <PrismCode className="language-html">{"<li>"}</PrismCode> elements.</p>
-            <div className="showcase-panel">
+            <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
                 <BreadcrumbComponent items={items} />
-            </div>
-            <RenderCodeFigure Component={BreadcrumbComponent} props={{ items }} language="html" />
+            </ComponentPreview>
         </div>
     );
 };
@@ -48,13 +47,9 @@ const SmallBreadCrumb = () => {
         <div>
             <h2 id="small-breadcrumb">Small Breadcrumb</h2>
             <p>Add class <code className="token property">.breadcrumb-sm</code> to the containing <PrismCode className="language-html">{"<ol>"}</PrismCode> element for a smaller version of the breadcrumb component.</p>
-            <div className="showcase-panel">
+            <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
                 <BreadcrumbComponent small={true} items={items} />
-            </div>
-            <RenderCodeFigure Component={BreadcrumbComponent} props={{
-                items,
-                small: true
-            }} language="html" />
+            </ComponentPreview>
         </div>
     );
 };
@@ -84,13 +79,9 @@ const DisabledBreadcrumb = () => {
         <div>
             <h2 id="disable-a-breadcrumb">Disable a Breadcrumb</h2>
             <p>To disable a breadcrumb element, add class <code className="token property">.disabled</code> to the <PrismCode className="language-html">{"<li>"}</PrismCode> element.</p>
-            <div className="showcase-panel">
+            <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
                 <BreadcrumbComponent small={true} items={items} />
-            </div>
-            <RenderCodeFigure Component={BreadcrumbComponent} props={{
-                items,
-                small: true
-            }} language="html" />
+            </ComponentPreview>
         </div>
     );
 };
