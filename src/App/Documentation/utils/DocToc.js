@@ -6,25 +6,35 @@ const _findHeadings = (children) => {
     const headings = [];
     children.map(child => {
         if (typeof child.type === "function") {
-            const firstChild = child.type().props.children[0];
-
-            if (firstChild.type === "h2") {
+            if (child.type().props.children.type === "h2") {
                 headings.push(
                     {
-                        title: firstChild.props.children,
-                        id: firstChild.props.id
+                        title: child.type().props.children.props.children,
+                        id: child.type().props.children.props.id
                     }
                 );
 
-            } else if (typeof firstChild.type === "function") {
-                const secondFirstChild = firstChild.type().props.children[0]; // Really clever namegiving
-                if (secondFirstChild.type === "h2") {
+            } else {
+                const firstChild = child.type().props.children[0];
+
+                if (firstChild.type === "h2") {
                     headings.push(
                         {
-                            title: secondFirstChild.props.children,
-                            id: secondFirstChild.props.id
+                            title: firstChild.props.children,
+                            id: firstChild.props.id
                         }
                     );
+
+                } else if (typeof firstChild.type === "function") {
+                    const secondFirstChild = firstChild.type().props.children[0]; // Really clever namegiving
+                    if (secondFirstChild.type === "h2") {
+                        headings.push(
+                            {
+                                title: secondFirstChild.props.children,
+                                id: secondFirstChild.props.id
+                            }
+                        );
+                    }
                 }
             }
         }
