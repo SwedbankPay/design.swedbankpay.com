@@ -7,18 +7,18 @@ export default [
                 title: "Introduction",
                 path: "/docs/getting-started/introduction"
             },
-            {
-                title: "Download",
-                path: "/docs/getting-started/download"
-            },
-            {
-                title: "Browser Support",
-                path: "/docs/getting-started/browser-support"
-            },
-            {
-                title: "Contributing",
-                path: "/docs/getting-started/contributing"
-            }
+            // {
+            //     title: "Download",
+            //     path: "/docs/getting-started/download"
+            // },
+            // {
+            //     title: "Browser Support",
+            //     path: "/docs/getting-started/browser-support"
+            // },
+            // {
+            //     title: "Contributing",
+            //     path: "/docs/getting-started/contributing"
+            // }
         ]
     },
     {
@@ -46,10 +46,6 @@ export default [
             {
                 title: "Breadcrumb",
                 path: "/docs/components/breadcrumb"
-            },
-            {
-                title: "Form",
-                path: "/docs/components/form"
             }
         ]
     },
@@ -58,16 +54,16 @@ export default [
         groupPath: "/docs/utilities",
         groupItems: [
             {
-                title: "Alerts",
-                path: "/docs/utilities/alerts"
+                title: "Alignment",
+                path: "/docs/utilities/alignment"
             },
             {
-                title: "Button",
-                path: "/docs/utilities/button"
+                title: "Color",
+                path: "/docs/utilities/color"
             },
             {
-                title: "Form",
-                path: "/docs/utilities/form"
+                title: "Text",
+                path: "/docs/utilities/text"
             }
         ]
     }

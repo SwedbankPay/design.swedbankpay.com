@@ -25,7 +25,7 @@
         "plugin:jest/recommended"
     ],
     "rules": {
-        "no-console": 1,
+        "no-console": ["warn", {"allow": ["warn", "error"]}],
         "no-extra-semi": 1,
         "no-inner-declarations": 0,
         "no-invalid-regexp": 1,

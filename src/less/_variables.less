@@ -24,23 +24,13 @@
 // 1. Colors
 // ==========================================================================
 
-@green-base:                            #2da944;
-@green-lighten-1:                       #30b649;
-@green-lighten-2:                       #41f563;
-@green-darken-1:                        #268f3a;
-@green-darken-2:                        #1c692a;
+@red:                                   #cd2e00;
+@green:                                 #2da944;
+@blue:                                  #266c9a;
+@yellow:                                #f9a825;
 
-@blue-base:                             #266c9a;
-@blue-lighten-1:                        #2975a7;
-@blue-lighten-2:                        #39a2e6;
-@blue-darken-1:                         #205a80;
-@blue-darken-2:                         #163f5a;
-
-@red-base:                              #cd2e00;
-@red-lighten-1:                         #d42f00;
-@red-lighten-2:                         #f53700;
-@red-darken-1:                          #8d2000;
-@red-darken-2:                          #4d1100;
+@brand-primary:                         #2da944;
+@brand-primary-faded:                   fade(@brand-primary, 60%);
 
 @black:                                 #000000;
 @white:                                 #ffffff;
@@ -68,9 +58,11 @@
 /* Shadows */
 @default-box-shadow:                    0 0 30px rgba(133, 133, 133, 0.2);
 
-@state-success:                         @green-base;
-@state-neutral:                         @blue-base;
-@state-warning:                         @red-base;
+/* State colors */
+@state-success:                         @green;
+@state-neutral:                         @blue;
+@state-warning:                         @yellow;
+@state-error:                           @red;
 
 
 // 2. Global
@@ -129,10 +121,8 @@
 @font-stack:                            "Roboto", sans-serif;
 
 /* Colors */
-@brand-primary:                         @green-base;
-@brand-primary-faded:                   fade(@green-base, 60%);
 
-@link-color:                            @green-base;
+@link-color:                            @green;
 @small-color:                           @gray-3;
 @footer-small-color:                    @gray-7;
 @mark-background:                       rgba(0,0,0,.1);
@@ -141,9 +131,10 @@
 @text-brand:                            @brand-primary;
 @text-light:                            @white;
 
-@text-success:                          @green-base;
-@text-neutral:                          @blue-base;
-@text-warning:                          @red-base;
+@text-success:                          @state-success;
+@text-neutral:                          @state-neutral;
+@text-warning:                          @state-warning;
+@text-error:                            @state-error;
 
 @blockquote-border-color:               @gray-8;
 @blockquote-small-color:                @gray-5;

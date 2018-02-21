@@ -8,7 +8,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, showCasePanel, c
     const CodeFigure = () => {
         let code = "";
 
-        if (typeof children.map === "function") {
+        if (language === "html" && typeof children.map === "function") {
             children.map(child => {
                 if (removeOuterTag) {
                     // TODO: This is stupid, find a better way to do this [EH]
@@ -33,7 +33,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, showCasePanel, c
                 code = jsbeautifier.css_beautify(code);
                 break;
             case "javascript":
-                code;
+                code = jsbeautifier.js_beautify(code);
                 break;
             default:
                 return "update switchcase!";
@@ -72,4 +72,51 @@ ComponentPreview.propTypes = {
     codeFigure: PropTypes.bool
 };
 
+const DataAttribute = ({ name, value }) => (
+    <code>
+        <span className="token attr-name">data-{name}</span>
+        <span className="token attr-value">
+            <span className="token punctuation">{"=\""}</span>
+            {value}
+            <span className="token punctuation">{"\""}</span>
+        </span>
+    </code>
+);
+
+DataAttribute.propTypes = {
+    name: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired
+};
+
+const PxScript = ({ component, func, params }) => {
+    let renderedParams;
+    if (params) {
+        renderedParams = params.map((param, i) => (
+            <span key={i}>{param}
+                {(i < params.length - 1) ? <span className="token punctuation">, </span> : null}
+            </span>
+        ));
+    }
+
+    return (
+        <code>
+            <span>px</span>
+            <span className="token punctuation">.</span>
+            <span>{component}</span>
+            <span className="token punctuation">.</span>
+            <span className="token function">{func}</span>
+            <span className="token punctuation">(</span>
+            {renderedParams}
+            <span className="token punctuation">);</span>
+        </code>);
+};
+
+PxScript.propTypes = {
+    component: PropTypes.string.isRequired,
+    func: PropTypes.string.isRequired,
+    params: PropTypes.array
+};
+
 export default ComponentPreview;
+
+export { DataAttribute, PxScript };
