@@ -1,14 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import AppHeader from "./AppHeader";
+import SelectPanel from "./index";
 
-describe("Main: AppHeader", () => {
+describe("Main: SelectPanel", () => {
     it("is defined", () => {
-        expect(AppHeader).toBeDefined();
+        expect(SelectPanel).toBeDefined();
     });
     // it("renders without crashing", () => {
     //     const div = document.createElement("div");
-    //     ReactDOM.render(<AppHeader />, div);
+
+    //     const location = {
+    //         pathname: "asd"
+    //     };
+
+    //     ReactDOM.render(<SelectPanel location={location} />, div);
     //     ReactDOM.unmountComponentAtNode(div);
     // });
 });

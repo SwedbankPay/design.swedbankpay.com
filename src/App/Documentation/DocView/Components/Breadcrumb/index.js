@@ -5,7 +5,7 @@ import PrismCode from "react-prism";
 import ComponentPreview from "../../../utils/ComponentPreview";
 import DocToc from "../../../utils/DocToc";
 
-import BreadcrumbComponent from "../../../../components/Breadcrumb/Breadcrumb";
+import BreadcrumbComponent from "../../../../components/Breadcrumb";
 
 const BasicBreadCrumb = () => {
     const items = [

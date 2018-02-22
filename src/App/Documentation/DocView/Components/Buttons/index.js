@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import ComponentPreview, { DataAttribute, PxScript } from "../../../utils/ComponentPreview";
 import DocToc from "../../../utils/DocToc";
 
-import ButtonComponent from "../../../../components/Button/Button";
+import ButtonComponent from "../../../../components/Button";
 
 const Examples = () => (
     <div>

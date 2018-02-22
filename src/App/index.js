@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter, withRouter, Switch, Route } from "react-router-dom";
 
-import AppHeader from "./AppHeader/Appheader";
-import Home from "./Home/Home";
-import Documentation from "./Documentation/Documentation";
-import Examples from "./Examples/Examples";
-import Templates from "./Templates/Templates";
-import ErrorPage404 from "./ErrorPage404/ErrorPage404";
+import AppHeader from "./AppHeader";
+import Home from "./Home";
+import Documentation from "./Documentation";
+import Examples from "./Examples";
+import Templates from "./Templates";
+import ErrorPage404 from "./ErrorPage404";
 
 const AppHeaderWithRoutes = withRouter(props => <AppHeader {...props} />);
 

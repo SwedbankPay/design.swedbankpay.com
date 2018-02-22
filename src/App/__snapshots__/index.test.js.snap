@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main: App renders 1`] = `
+<BrowserRouter>
+  <div
+    id="px-designguide"
+  >
+    <withRouter() />
+    <Switch>
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/"
+      />
+      <Route
+        component={[Function]}
+        path="/docs"
+      />
+      <Route
+        component={[Function]}
+        path="/examples"
+      />
+      <Route
+        component={[Function]}
+        path="/templates"
+      />
+      <Route
+        component={[Function]}
+        path="/*"
+      />
+    </Switch>
+  </div>
+</BrowserRouter>
+`;

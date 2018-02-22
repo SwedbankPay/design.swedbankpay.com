@@ -2,8 +2,8 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 
 import DocHeading from "./utils/DocHeading";
-import SelectPanel from "./SelectPanel/SelectPanel";
-import DocView from "./DocView/DocView";
+import SelectPanel from "./SelectPanel";
+import DocView from "./DocView";
 
 const SelectPanelWithRoutes = withRouter(props => <SelectPanel {...props} />);
 const DocViewWithRoutes = withRouter(props => <DocView {...props} />);

@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Documentation: index renders 1`] = `
+<div
+  className="documentation"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="sidebar-heading col-md-3 col-sm-12"
+    >
+      <h1>
+        DesignGuide
+      </h1>
+    </div>
+    <div
+      className="view-heading col-md-9 col-sm-12"
+    >
+      <DocViewHeading />
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <withRouter() />
+    <withRouter() />
+  </div>
+</div>
+`;

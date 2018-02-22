@@ -1,9 +1,9 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 
-import Alerts from "./Alerts/Alerts";
-import Breadcrumb from "./Breadcrumb/Breadcrumb";
-import Buttons from "./Buttons/Buttons";
+import Alerts from "./Alerts";
+import Breadcrumb from "./Breadcrumb";
+import Buttons from "./Buttons";
 
 const GettingStarted = () => {
     return (

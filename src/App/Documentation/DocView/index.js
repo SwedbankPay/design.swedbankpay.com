@@ -1,9 +1,9 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 
-import GettingStarted from "./GettingStarted/GettingStarted";
-import Core from "./Core/Core";
-import Components from "./Components/Components";
+import GettingStarted from "./GettingStarted";
+import Core from "./Core";
+import Components from "./Components";
 
 const DocView = () => {
     return (

@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Breadcrumb renders a disabled breadcrumb when the prop disabled is provided 1`] = `
+<ol
+  className="breadcrumb"
+>
+  <li
+    className="disabled"
+    key="0"
+  >
+    <span>
+      test
+    </span>
+  </li>
+</ol>
+`;
+
+exports[`Component: Breadcrumb renders breadcrumb with the provided items in the items prop 1`] = `
+<ol
+  className="breadcrumb"
+>
+  <li
+    key="0"
+  >
+    <span>
+      test
+    </span>
+  </li>
+</ol>
+`;
+
+exports[`Component: Breadcrumb renders breadcrumb with the provided items wrapped in anchor tags when href is provided in the items prop 1`] = `
+<ol
+  className="breadcrumb"
+>
+  <li
+    key="0"
+  >
+    <a
+      href="www.example.com"
+    >
+      test
+    </a>
+  </li>
+</ol>
+`;
+
+exports[`Component: Breadcrumb renders multiple breadcrumbs when provided in the items prop 1`] = `
+<ol
+  className="breadcrumb"
+>
+  <li
+    key="0"
+  >
+    <span>
+      test #1
+    </span>
+  </li>
+  <li
+    key="1"
+  >
+    <span>
+      test #2
+    </span>
+  </li>
+  <li
+    key="2"
+  >
+    <span>
+      test #3
+    </span>
+  </li>
+  <li
+    key="3"
+  >
+    <span>
+      test #4
+    </span>
+  </li>
+</ol>
+`;
+
+exports[`Component: Breadcrumb renders with class breadcrumb-sm when provided the prop small 1`] = `
+<ol
+  className="breadcrumb breadcrumb-sm"
+>
+  <DefaultItems />
+</ol>
+`;
+
+exports[`Component: Breadcrumb renders with default items when no items is provided through items prop 1`] = `
+<ol
+  className="breadcrumb"
+>
+  <DefaultItems />
+</ol>
+`;

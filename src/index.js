@@ -15,7 +15,7 @@ import "./px-script";
 import "./less/px.less";
 import "./less/themes/documentation.less";
 import "./less/designguide.less";
-import App from "./App/App";
+import App from "./App";
 
 render(
     <App />,

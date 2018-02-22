@@ -1,4 +1,4 @@
-import alert from "./alert/alert";
+import alert from "./alert";
 
 const px = {
     alert

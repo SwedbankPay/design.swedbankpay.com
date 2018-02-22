@@ -4,9 +4,7 @@ const alert = () => {
 
         closeButtons.forEach(button => {
             button.addEventListener("click", () => {
-                if (button.parentElement.classList.contains("in")) {
-                    button.parentElement.classList.remove("in");
-                }
+                button.parentElement.classList.remove("in");
             });
         });
     };

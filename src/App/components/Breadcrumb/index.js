@@ -5,7 +5,7 @@ const _renderItems = items => {
     return items.map((item, i) => {
         return item.disabled ? (
             <li key={i} className="disabled">
-                {item.href ? <a href={item.href}>{item.title}</a> : <span>{item.title}</span>}
+                <span>{item.title}</span>
             </li>
         ) : (
             <li key={i}>
@@ -38,3 +38,6 @@ Breadcrumb.propTypes = {
 };
 
 export default Breadcrumb;
+
+// exporting for testing purposes
+export { DefaultItems };
