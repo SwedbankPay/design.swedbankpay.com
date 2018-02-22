@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import PrismCode from "react-prism";
 
 import ComponentPreview, { DataAttribute, PxScript } from "../../../utils/ComponentPreview";
 import DocToc from "../../../utils/DocToc";
@@ -57,12 +56,12 @@ const ClosingTheAlert = () => (
         <h2 id="closing-the-alert">Closing the alert</h2>
         <p>To add a close-button, add an <Link to="/docs/core/icons">icon</Link> element (<b>close</b> is recommended) with the class <code className="token property">.alert-close</code> and make sure to include the attribute <DataAttribute name="close" value="true" />.</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-            <AlertComponent id="alert-success" type="success" display={true} text="This is a success alert with an icon!" close={true} icon="check_circle" />
-            <AlertComponent id="alert-neutral" type="neutral" display={true} text="This is a neutral alert with an icon!" close={true} icon="info" />
-            <AlertComponent id="alert-warning" type="warning" display={true} text="This is a warning alert with an icon!" close={true} icon="warning" />
-            <AlertComponent id="alert-error" type="error" display={true} text="This is a error alert with an icon!" close={true} icon="error" />
-            <AlertComponent id="alert-light" type="light" display={true} text="This is a light alert with an icon!" close={true} icon="info_outline" />
-            <AlertComponent id="alert-default" type="default" display={true} text="This is a default alert with an icon!" close={true} icon="info_outline" />
+            <AlertComponent id="alert-success-1" type="success" display={true} text="This is a success alert with an icon!" close={true} icon="check_circle" />
+            <AlertComponent id="alert-neutral-1" type="neutral" display={true} text="This is a neutral alert with an icon!" close={true} icon="info" />
+            <AlertComponent id="alert-warning-1" type="warning" display={true} text="This is a warning alert with an icon!" close={true} icon="warning" />
+            <AlertComponent id="alert-error-1" type="error" display={true} text="This is a error alert with an icon!" close={true} icon="error" />
+            <AlertComponent id="alert-light-1" type="light" display={true} text="This is a light alert with an icon!" close={true} icon="info_outline" />
+            <AlertComponent id="alert-default-1" type="default" display={true} text="This is a default alert with an icon!" close={true} icon="info_outline" />
         </ComponentPreview>
     </div>
 );
@@ -112,7 +111,7 @@ const UsageWithJavascript = () => (
             <tbody>
                 <tr>
                     <td><PxScript component="alert" func="init" /></td>
-                    <td>Initializes close-buttons on all alerts (this is done automatically by px-script.</td>
+                    <td>Initializes close-buttons on all alerts (this is done automatically by px-script).</td>
                 </tr>
                 <tr>
                     <td><PxScript component="alert" func="show" params={["id"]} /></td>

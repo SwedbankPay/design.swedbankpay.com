@@ -234,7 +234,7 @@ if (isProd) {
         sourceMap: true,
         compress: {
             dead_code: true,
-            drop_console: true,
+            drop_console: true, // TODO: keep console warnings and errors
             unused: true
         }
     }));
