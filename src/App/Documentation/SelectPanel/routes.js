@@ -46,6 +46,10 @@ export default [
             {
                 title: "Breadcrumb",
                 path: "/docs/components/breadcrumb"
+            },
+            {
+                title: "Buttons",
+                path: "/docs/components/buttons"
             }
         ]
     },

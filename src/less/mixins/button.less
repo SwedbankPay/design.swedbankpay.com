@@ -1,0 +1,94 @@
+.button-variant(@color; @background; @border) {
+    color: @color;
+    background-color: @background;
+    border-color: @border;
+
+    &:focus,
+    &.focus {
+        color: @color;
+        background-color: lighten(@background, 10%);
+    }
+    &:hover {
+        color: @color;
+        background-color: lighten(@background, 10%);
+    }
+    &:active,
+    &.active,
+    .open > .dropdown-toggle& {
+        .button-active-state(darken(@background, 10%), @color);
+
+        &:hover,
+        &:focus,
+        &.focus {
+            color: @color;
+            background-color: darken(@background, 10%);
+        }
+    }
+    &:active,
+    &.active,
+    .open > .dropdown-toggle& {
+        background-image: none;
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            background-color: @gray-8;
+            color: @gray-4;
+        }
+    }
+
+    .badge {
+        color: @background;
+        background-color: @color;
+    }
+}
+
+.button-ghost(@color) {
+    color: @white;
+    background-color: transparent;
+    border: 1px solid @white;
+
+    &:focus,
+    &.focus,
+    &:hover,
+    &:active {
+        .button-active-state(@white, @color);
+
+        .badge {
+            color: @white;
+            background-color: @color;
+        }
+    }
+  
+    .badge {
+        color: @color;
+        background-color: @white;
+    }
+}
+
+.button-link-variant(@color) {
+    color: @color;
+
+    &:hover,
+    &:focus {
+        color: darken(@color, 10%);
+    }
+}
+
+.button-active-state(@background; @color: @white) {
+    color: @color;
+    background-color: @background;
+}
+// Button sizes
+.button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) {
+    padding: @padding-vertical @padding-horizontal;
+    font-size: @font-size;
+    line-height: @line-height;
+    border-radius: @border-radius;
+}

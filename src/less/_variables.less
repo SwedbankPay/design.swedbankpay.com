@@ -12,8 +12,9 @@
 //  COMPONENTS
 // ===============
 //  5. Breadcrumb
-//  6. Tables
-//  7. Topbar
+//  6. Button
+//  7. Tables
+//  8. Topbar
 
 // ==========================================================================
 //
@@ -54,6 +55,7 @@
 @background-light:                      #f0f0f0;
 @background-white:                      #ffffff;
 @background-body:                       #f7f7f7;
+@background-code:                       #f5f2f0;
 
 /* Shadows */
 @default-box-shadow:                    0 0 30px rgba(133, 133, 133, 0.2);
@@ -97,12 +99,12 @@
 /* Cursor */
 @cursor-disabled:                       not-allowed;
 
-@padding-base-vertical:                 8px;
-@padding-base-horizontal:               14px;
-@padding-large-vertical:                12px;
-@padding-large-horizontal:              18px;
-@padding-small-vertical:                5px;
-@padding-small-horizontal:              10px;
+@padding-base-vertical:                 0.5rem;
+@padding-base-horizontal:               0.9rem;
+@padding-large-vertical:                0.75rem;
+@padding-large-horizontal:              1.2rem;
+@padding-small-vertical:                0.25rem;
+@padding-small-horizontal:              0.6rem;
 @padding-xs-vertical:                   1px;
 @padding-xs-horizontal:                 5px;
 
@@ -275,7 +277,17 @@
 @breadcrumb-arrow-bg-sm:                @breadcrumb-arrow-border-sm - @breadcrumb-arrow-border-size-sm;
 
 
-// 6. Tables
+// 6. Button
+// ==========================================================================
+
+@btn-font-weight: normal;
+
+@btn-border-radius-base: 0;
+@btn-border-radius-large: 0;
+@btn-border-radius-small: 0;
+
+
+// 7. Tables
 // ==========================================================================
 
 /* Colors */
@@ -298,7 +310,7 @@
 @table-collapse-duration:               0.25s;
 
 
-// 7. Topbar
+// 8. Topbar
 // ==========================================================================
 
 @topbar-height:                         70px;
