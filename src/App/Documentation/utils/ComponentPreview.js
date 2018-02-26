@@ -72,9 +72,10 @@ ComponentPreview.propTypes = {
     codeFigure: PropTypes.bool
 };
 
-const DataAttribute = ({ name, value }) => (
+const Attribute = ({ data, name, value }) => (
     <code>
-        <span className="token attr-name">data-{name}</span>
+        {data ? <span className="token attr-name">data-</span> : null}
+        <span className="token attr-name">{name}</span>
         <span className="token attr-value">
             <span className="token punctuation">{"=\""}</span>
             {value}
@@ -83,9 +84,10 @@ const DataAttribute = ({ name, value }) => (
     </code>
 );
 
-DataAttribute.propTypes = {
+Attribute.propTypes = {
     name: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired
+    value: PropTypes.string.isRequired,
+    data: PropTypes.bool
 };
 
 const PxScript = ({ component, func, params }) => {
@@ -119,4 +121,4 @@ PxScript.propTypes = {
 
 export default ComponentPreview;
 
-export { DataAttribute, PxScript };
+export { Attribute, PxScript };
