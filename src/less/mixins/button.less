@@ -1,20 +1,21 @@
-.button-variant(@color; @background; @border) {
+.button-variant(@color; @background;) {
     color: @color;
     background-color: @background;
-    border-color: @border;
+    border-color: darken(@background, 5%);
 
     &:focus,
     &.focus {
         color: @color;
-        background-color: lighten(@background, 10%);
+        background-color: darken(@background, 5%);
     }
+
     &:hover {
         color: @color;
-        background-color: lighten(@background, 10%);
+        background-color: darken(@background, 5%);
     }
+
     &:active,
-    &.active,
-    .open > .dropdown-toggle& {
+    &.active {
         .button-active-state(darken(@background, 10%), @color);
 
         &:hover,
@@ -24,11 +25,12 @@
             background-color: darken(@background, 10%);
         }
     }
+
     &:active,
-    &.active,
-    .open > .dropdown-toggle& {
+    &.active {
         background-image: none;
     }
+
     &.disabled,
     &[disabled],
     fieldset[disabled] & {
@@ -40,12 +42,72 @@
         &.active {
             background-color: @gray-8;
             color: @gray-4;
+            border-color: transparent;
+
+            // TODO: Review suggestion below [EH]
+            // background-color: @background;
+            // color: @color;
+            // opacity: .85;
         }
     }
 
     .badge {
         color: @background;
         background-color: @color;
+    }
+}
+
+.button-outline-variant(@color, @background, @hover-color) {
+    background: transparent;
+    color: @color;
+    border-color: darken(@color, 5%);
+
+    &:focus,
+    &.focus {
+        color: @hover-color;
+        background-color: darken(@background, 5%);
+    }
+
+    &:hover {
+        color: @hover-color;
+        background-color: @background;
+    }
+
+    &:active,
+    &.active {
+        .button-active-state(darken(@background, 10%), @color);
+
+        &:hover,
+        &:focus,
+        &.focus {
+            color: @color;
+            background-color: darken(@background, 10%);
+        }
+    }
+
+    &:active,
+    &.active {
+        background-image: none;
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            background-color: @gray-8;
+            color: @gray-4;
+            border-color: transparent;
+        }
+    }
+
+    .badge {
+        color: @background;
+        background-color: @hover-color;
     }
 }
 

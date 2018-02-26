@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import ComponentPreview, { DataAttribute, PxScript } from "../../../utils/ComponentPreview";
+import ComponentPreview, { Attribute, PxScript } from "../../../utils/ComponentPreview";
 import DocToc from "../../../utils/DocToc";
 
 import AlertComponent from "../../../../components/Alert";
@@ -54,7 +54,7 @@ const AlertWithIcon = () => (
 const ClosingTheAlert = () => (
     <div>
         <h2 id="closing-the-alert">Closing the alert</h2>
-        <p>To add a close-button, add an <Link to="/docs/core/icons">icon</Link> element (<b>close</b> is recommended) with the class <code className="token property">.alert-close</code> and make sure to include the attribute <DataAttribute name="close" value="true" />.</p>
+        <p>To add a close-button, add an <Link to="/docs/core/icons">icon</Link> element (<b>close</b> is recommended) with the class <code className="token property">.alert-close</code> and make sure to include the attribute <Attribute data={true} name="close" value="true" />.</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <AlertComponent id="alert-success-1" type="success" display={true} text="This is a success alert with an icon!" close={true} icon="check_circle" />
             <AlertComponent id="alert-neutral-1" type="neutral" display={true} text="This is a neutral alert with an icon!" close={true} icon="info" />
