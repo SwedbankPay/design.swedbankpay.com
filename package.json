@@ -1,6 +1,6 @@
 {
     "name": "design.payex.com",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "PayEx DesignGuide",
     "main": "index.js",
     "scripts": {
@@ -17,7 +17,7 @@
         "url": "git+https://github.com/PayEx/design.payex.com.git"
     },
     "keywords": [],
-    "author": "",
+    "author": "PayEx",
     "license": "No License",
     "bugs": {
         "url": "https://github.com/PayEx/design.payex.com/issues"
