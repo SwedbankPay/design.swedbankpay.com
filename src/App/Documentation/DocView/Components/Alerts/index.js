@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import PrismCode from "react-prism";
 
 import ComponentPreview, { Attribute, PxScript } from "../../../utils/ComponentPreview";
 import DocToc from "../../../utils/DocToc";
@@ -110,16 +111,44 @@ const UsageWithJavascript = () => (
             </thead>
             <tbody>
                 <tr>
-                    <td><PxScript component="alert" func="init" /></td>
-                    <td>Initializes close-buttons on all alerts (this is done automatically by px-script).</td>
+                    <td>
+                        <PxScript component="alert" func="init" />
+                    </td>
+                    <td>
+                        Initializes all rendered close-buttons. This is done automatically when the <code className="token property">px-script.js</code> loads, but might have to be used if you are not rendering your alerts right away. For instance, in react, you might want to call this function within the <PrismCode className="language-javascript">{"componentDidMount()"}</PrismCode> method.
+                    </td>
                 </tr>
                 <tr>
-                    <td><PxScript component="alert" func="show" params={["id"]} /></td>
-                    <td>Show the specified alert, if no id is provided it will show all hidden alerts currently rendered in the DOM.</td>
+                    <td>
+                        <PxScript component="alert" func="show" />
+                    </td>
+                    <td>
+                        Gives all rendered alerts the class <code className="token property">.in</code>, effectively giving them the css property <PrismCode className="language-css">{"display: block;"}</PrismCode>.
+                    </td>
                 </tr>
                 <tr>
-                    <td><PxScript component="alert" func="hide" params={["id"]} /></td>
-                    <td>Hide the specified alert, if no id is provided it will hide all open alerts currently rendered in the DOM.</td>
+                    <td>
+                        <PxScript component="alert" func="show" params={["id"]} />
+                    </td>
+                    <td>
+                        Gives the specified alert the class <code className="token property">.in</code>, giving it the css property <PrismCode className="language-css">{"display: block;"}</PrismCode>. If no alert with the specified id is rendered to the DOM, the method does nothing.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <PxScript component="alert" func="hide" />
+                    </td>
+                    <td>
+                        Removes the class <code className="token property">.in</code> from all rendered alerts, effectively giving them the css property <PrismCode className="language-css">{"display: none;"}</PrismCode>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <PxScript component="alert" func="hide" params={["id"]} />
+                    </td>
+                    <td>
+                        Removes the class <code className="token property">.in</code> from the alert specified by id, giving it the css property <PrismCode className="language-css">{"display: none;"}</PrismCode>. If no alert with the specified id is rendered to the DOM, the method does nothing.
+                    </td>
                 </tr>
             </tbody>
         </table>
