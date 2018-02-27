@@ -55,7 +55,10 @@ const AlertWithIcon = () => (
 const ClosingTheAlert = () => (
     <div>
         <h2 id="closing-the-alert">Closing the alert</h2>
-        <p>To add a close-button, add an <Link to="/docs/core/icons">icon</Link> element (<b>close</b> is recommended) with the class <code className="token property">.alert-close</code> and make sure to include the attribute <Attribute data={true} name="close" value="true" />.</p>
+        <p>
+            To add a close-button, add the following code inside your alert-element:<br/>
+            <PrismCode className="language-html">{"<i className=\"material-icons alert-close\">close</i>"}</PrismCode>
+        </p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <AlertComponent id="alert-success-1" type="success" display={true} text="This is a success alert with an icon!" close={true} icon="check_circle" />
             <AlertComponent id="alert-neutral-1" type="neutral" display={true} text="This is a neutral alert with an icon!" close={true} icon="info" />
@@ -74,7 +77,7 @@ const ExtendedUsage = () => (
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <div className="alert alert-success alert-with-icon in">{"\n"}
                 <i className="material-icons alert-icon">check_circle</i>{"\n"}
-                <i className="material-icons alert-close" data-close="true">close</i>
+                <i className="material-icons alert-close">close</i>
                 <h3 className="alert-heading">Success!</h3>
                 <p className="alert-text">You successfully saw the code example under the Extended usage section.</p>
                 <p className="alert-text">This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>

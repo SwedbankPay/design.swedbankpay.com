@@ -52,7 +52,7 @@ describe("Component: Alert", () => {
         );
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<i className="material-icons alert-close" data-close="true">close</i>)).toEqual(true);
+        expect(wrapper.contains(<i className="material-icons alert-close">close</i>)).toEqual(true);
     });
 
     it("renders an alert without a close-button if no close prop is provided", () => {
@@ -61,7 +61,7 @@ describe("Component: Alert", () => {
         );
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<i className="material-icons alert-close" data-close="true">close</i>)).toEqual(false);
+        expect(wrapper.contains(<i className="material-icons alert-close">close</i>)).toEqual(false);
     });
 
     it("renders an alert with a heading", () => {
