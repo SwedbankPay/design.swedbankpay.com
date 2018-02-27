@@ -13,6 +13,7 @@ DesignGuide requires [Node.js](https://nodejs.org/en/) (includes npm).
 1. Open a terminal and navigate to repo root
 1. `npm install`
 1. `npm start`
+    * If encountering an error, you might need to install [webpack-dev-server](https://github.com/webpack/webpack-dev-server) globally. You can do this by running the command `npm i webpack-dev-server -g`.
 1. Go to <http://localhost:3000>
 1. Works? If not, contact us on Slack ([#dev-design-guide](https://payex.slack.com/messages/C0L3W8B2S/)).
 1. Get to work.
