@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
@@ -142,15 +142,13 @@ const ButtonsText = () => (
 );
 
 
-const Button = () => {
-    return (
-        <div className="doc-container">
-            <div className="row">
-                <ButtonsText />
-                <DocToc component={ButtonsText} />
-            </div>
+const Buttons = () => (
+    <div className="doc-container">
+        <div className="row">
+            <ButtonsText />
+            <DocToc component={ButtonsText} />
         </div>
-    );
-};
+    </div>
+);
 
-export default Button;
+export default Buttons;

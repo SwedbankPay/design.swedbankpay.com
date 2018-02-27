@@ -94,14 +94,12 @@ const Inline = () => (
     </div>
 );
 
-const TextUtilities = () => {
-    return (
-        <div>
-            <h2 id="text-utilities">Text utilities</h2>
-            <p>Change text alignment, transform, style, weight, and color with our <Link to="/docs/utilities/text">text utilities</Link> <b>(NOT YET IMPLEMENTED)</b> and <Link to="/docs/utilities/color">color utilities</Link> <b>(NOT YET IMPLEMENTED)</b>.</p>
-        </div>
-    );
-};
+const TextUtilities = () => (
+    <div>
+        <h2 id="text-utilities">Text utilities</h2>
+        <p>Change text alignment, transform, style, weight, and color with our <Link to="/docs/utilities/text">text utilities</Link> <b>(NOT YET IMPLEMENTED)</b> and <Link to="/docs/utilities/color">color utilities</Link> <b>(NOT YET IMPLEMENTED)</b>.</p>
+    </div>
+);
 
 const Abbreviations = () => (
     <div>
@@ -183,15 +181,13 @@ const TypographyText = () => (
     </div>
 );
 
-const Typography = () => {
-    return (
-        <div className="doc-container">
-            <div className="row">
-                <TypographyText />
-                <DocToc component={TypographyText} />
-            </div>
+const Typography = () => (
+    <div className="doc-container">
+        <div className="row">
+            <TypographyText />
+            <DocToc component={TypographyText} />
         </div>
-    );
-};
+    </div>
+);
 
 export default Typography;

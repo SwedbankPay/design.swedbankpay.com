@@ -5,8 +5,9 @@ import { faSlack, faGithub } from "@fortawesome/fontawesome-free-brands";
 
 import pkg from "../../../package.json";
 
-const AppHeader = props => {
-    const route = props.location.pathname;
+const AppHeader = ({ location }) => {
+    const route = location.pathname;
+
     return (
         <header className="topbar designguide-header">
             <a className="topbar-logo logo-default" href="#"></a>

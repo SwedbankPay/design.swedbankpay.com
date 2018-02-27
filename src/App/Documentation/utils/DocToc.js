@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 // FIXME: This function is really moronic and super fragile, but works for now [EH]
 const _findHeadings = (children) => {
     const headings = [];
+
     children.map(child => {
         if (typeof child.type === "function") {
             if (child.type().props.children.type === "h2") {

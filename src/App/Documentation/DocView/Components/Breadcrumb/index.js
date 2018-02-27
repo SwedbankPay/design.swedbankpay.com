@@ -95,15 +95,13 @@ const BreadcrumbText = () => (
     </div>
 );
 
-const Breadcrumb = () => {
-    return (
-        <div className="doc-container">
-            <div className="row">
-                <BreadcrumbText />
-                <DocToc component={BreadcrumbText} />
-            </div>
+const Breadcrumb = () => (
+    <div className="doc-container">
+        <div className="row">
+            <BreadcrumbText />
+            <DocToc component={BreadcrumbText} />
         </div>
-    );
-};
+    </div>
+);
 
 export default Breadcrumb;

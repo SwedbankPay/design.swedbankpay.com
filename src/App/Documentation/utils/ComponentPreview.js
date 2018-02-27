@@ -21,6 +21,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, showCasePanel, c
                     code += ReactDOMServer.renderToStaticMarkup(child);
                 }
             });
+
         } else {
             code = ReactDOMServer.renderToStaticMarkup(children);
         }
@@ -92,6 +93,7 @@ Attribute.propTypes = {
 
 const PxScript = ({ component, func, params }) => {
     let renderedParams;
+
     if (params) {
         renderedParams = params.map((param, i) => (
             <span key={i}>{param}
@@ -110,7 +112,8 @@ const PxScript = ({ component, func, params }) => {
             <span className="token punctuation">(</span>
             {renderedParams}
             <span className="token punctuation">);</span>
-        </code>);
+        </code>
+    );
 };
 
 PxScript.propTypes = {

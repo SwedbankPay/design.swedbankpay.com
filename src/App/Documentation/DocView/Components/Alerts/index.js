@@ -36,6 +36,7 @@ const AlertWithLink = () => (
         </ComponentPreview>
     </div>
 );
+
 const AlertWithIcon = () => (
     <div>
         <h2 id="icons">Icons</h2>

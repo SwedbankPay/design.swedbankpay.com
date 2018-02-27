@@ -3,13 +3,11 @@ import { Link } from "react-router-dom";
 
 import routes from "./routes";
 
-const SearchBox = () => {
-    return (
-        <div className="input-group doc-search">
-            <input type="text" className="form-control doc-search-input" id="doc-search-input" name="designguide-search" placeholder="Search..." />
-        </div>
-    );
-};
+const SearchBox = () => (
+    <div className="input-group doc-search">
+        <input type="text" className="form-control doc-search-input" id="doc-search-input" name="designguide-search" placeholder="Search..." />
+    </div>
+);
 
 class SelectPanel extends Component {
     constructor (props) {
