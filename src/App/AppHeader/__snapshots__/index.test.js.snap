@@ -126,7 +126,7 @@ exports[`AppHeader: AppHeader renders with provided location prop 1`] = `
         target="b_blank"
       >
         v.
-        0.1.0
+        0.1.1
       </a>
     </div>
   </div>
@@ -259,7 +259,7 @@ exports[`AppHeader: AppHeader sets documentation route to active when locaton is
         target="b_blank"
       >
         v.
-        0.1.0
+        0.1.1
       </a>
     </div>
   </div>
@@ -392,7 +392,7 @@ exports[`AppHeader: AppHeader sets examples route to active when locaton is /exa
         target="b_blank"
       >
         v.
-        0.1.0
+        0.1.1
       </a>
     </div>
   </div>
@@ -525,7 +525,7 @@ exports[`AppHeader: AppHeader sets home route to active when locaton is / 1`] = 
         target="b_blank"
       >
         v.
-        0.1.0
+        0.1.1
       </a>
     </div>
   </div>
@@ -658,7 +658,7 @@ exports[`AppHeader: AppHeader sets templates route to active when locaton is /te
         target="b_blank"
       >
         v.
-        0.1.0
+        0.1.1
       </a>
     </div>
   </div>

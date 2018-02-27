@@ -60,7 +60,7 @@ class DocToc extends Component {
         e.preventDefault();
 
         window.scroll({
-            top: topPosition + 200,
+            top: topPosition + 100,
             left: 0,
             behavior: "smooth"
         });

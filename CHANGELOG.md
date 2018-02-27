@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.2] - 2018-03-
+
+### Added
+
+- ...
+
+### Changed
+
+- The alert component's close button now no longer needs `data-close` attribute to close the alert, only `.alert-close` class is needed.
+
+### Removed
+
+- Ghost buttons removed from base stylesheet. Will probably be included at some point in a dedicated theme.
+- Badges removed from buttons for now, might be included at some point in the future.
+
 ## [0.1.1] - 2018-02-27
 
 ### Added

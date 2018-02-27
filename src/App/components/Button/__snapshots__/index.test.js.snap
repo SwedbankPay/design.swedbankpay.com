@@ -3,5 +3,6 @@
 exports[`Component: Button prop label is marked as required 1`] = `
 <button
   className="btn btn-undefined"
+  type="button"
 />
 `;

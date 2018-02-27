@@ -5,9 +5,14 @@ const px = {
 };
 
 window.px = px;
-for (const key in px) {
-    px[key].init();
-}
+
+const init = () => {
+    for (const key in px) {
+        px[key].init();
+    }
+};
+
+document.addEventListener("DOMContentLoaded", init, false);
 
 export default px;
 export { alert };
