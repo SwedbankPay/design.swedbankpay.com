@@ -92,13 +92,13 @@ const UsageWithJavascript = () => (
     <div>
         <h2 id="usage-with-javascript">Usage with javascript</h2>
         <p>To interact with the alert-component with javascript...</p>
-        <p>To display alerts</p>
+        <h3>Show alerts</h3>
         <ComponentPreview language="javascript" codeFigure={true}>
             {"px.alert.show();"}{"\n"}
             {"// OR"}{"\n"}
             {"px.alert.show(id);"}
         </ComponentPreview>
-        <p>To hide alerts</p>
+        <h3>Hide alerts</h3>
         <ComponentPreview language="javascript" codeFigure={true}>
             {"px.alert.hide();"}{"\n"}
             {"// OR"}{"\n"}

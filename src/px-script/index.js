@@ -1,18 +1,27 @@
 import alert from "./alert";
+import button from "./button";
+import loader from "./loader";
 
 const px = {
-    alert
+    alert,
+    button,
+    loader
 };
-
-window.px = px;
 
 const init = () => {
     for (const key in px) {
-        px[key].init();
+        if (typeof px[key].init === "function") {
+            px[key].init();
+        }
     }
 };
 
 document.addEventListener("DOMContentLoaded", init, false);
 
+window.px = px;
 export default px;
-export { alert };
+export { alert, button, loader };
+
+if (module.hot) {
+    module.hot.accept();
+}

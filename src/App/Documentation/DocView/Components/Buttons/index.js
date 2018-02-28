@@ -128,6 +128,27 @@ const UsageWithIcons = () => (
     </div>
 );
 
+const ButtonLoader = () => (
+    <div>
+        <h2 id="button-loader">Button loader</h2>
+        <p>To use a button with a loader...</p>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={false}>
+            <ButtonComponent id="test" icon="cloud" color="default" label="Default" loader={true} />{"\n"}
+            <ButtonComponent icon="cloud" color="brand" label="Brand" loader={true} />{"\n"}
+        </ComponentPreview>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={false}>
+            <ButtonComponent loader={true} color="default" label="Default" />{"\n"}
+            <ButtonComponent loader={true} color="brand" label="Brand" />{"\n"}
+            <ButtonComponent loader={true} color="neutral" label="Neutral" />{"\n"}
+            <ButtonComponent loader={true} color="success" label="Success" />{"\n"}
+            <ButtonComponent loader={true} color="warning" label="Warning" />{"\n"}
+            <ButtonComponent loader={true} color="danger" label="Danger" />{"\n"}
+            <ButtonComponent loader={true} color="light" label="Light" />{"\n"}
+            <ButtonComponent loader={true} color="link" label="Link" />{"\n"}
+        </ComponentPreview>
+    </div>
+);
+
 const ButtonsText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
         <p className="lead">Use buttons...</p>
@@ -138,6 +159,7 @@ const ButtonsText = () => (
         <ActiveState />
         <DisabledState />
         <UsageWithIcons />
+        <ButtonLoader />
     </div>
 );
 

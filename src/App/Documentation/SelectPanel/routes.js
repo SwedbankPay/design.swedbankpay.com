@@ -50,6 +50,10 @@ export default [
             {
                 title: "Buttons",
                 path: "/docs/components/buttons"
+            },
+            {
+                title: "Loaders",
+                path: "/docs/components/loaders"
             }
         ]
     },

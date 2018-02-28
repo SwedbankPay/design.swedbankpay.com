@@ -4,10 +4,12 @@ import PropTypes from "prop-types";
 const Button = ({ label, id, name, value, href, icon, loading, color, disabled, type, fullWidth, loader, linkButton, ghostButton, pullRight, input, outline, active, size }) => {
     if (href) return (
         <a
-            className={`btn btn-${outline ? "outline-" : ""}${color}${size ? ` btn-${size}` : ""}${loader ? " btn-loader" : ""}${loading ? " loading" : ""}${fullWidth ? " btn-block" : ""}${linkButton ? " btn-link" : ""}${ghostButton ? " btn-ghost" : ""}${pullRight ? " pull-right" : ""}${active ? " active" : "" }`}
+            className={`btn btn-${outline ? "outline-" : ""}${color}${size ? ` btn-${size}` : ""}${loading ? " loading" : ""}${fullWidth ? " btn-block" : ""}${linkButton ? " btn-link" : ""}${ghostButton ? " btn-ghost" : ""}${pullRight ? " pull-right" : ""}${active ? " active" : "" }`}
             href={href}
+            id={id}
             name={name}
             disabled={disabled}
+            data-loader={loader}
             role="button"
             value={value}>
             {loader ? <div></div> : null}
@@ -18,22 +20,24 @@ const Button = ({ label, id, name, value, href, icon, loading, color, disabled, 
 
     if (input) return (
         <input
-            className={`btn btn-${outline ? "outline-" : ""}${color}${size ? ` btn-${size}` : ""}${loader ? " btn-loader" : ""}${loading ? " loading" : ""}${fullWidth ? " btn-block" : ""}${linkButton ? " btn-link" : ""}${ghostButton ? " btn-ghost" : ""}${pullRight ? " pull-right" : ""}${active ? " active" : "" }`}
+            className={`btn btn-${outline ? "outline-" : ""}${color}${size ? ` btn-${size}` : ""}${loading ? " loading" : ""}${fullWidth ? " btn-block" : ""}${linkButton ? " btn-link" : ""}${ghostButton ? " btn-ghost" : ""}${pullRight ? " pull-right" : ""}${active ? " active" : "" }`}
             type={type || "button"}
             id={id}
             name={name}
             disabled={disabled}
+            data-loader={loader}
             value={value}>
         </input>
     );
 
     return (
         <button
-            className={`btn btn-${outline ? "outline-" : ""}${color}${size ? ` btn-${size}` : ""}${loader ? " btn-loader" : ""}${loading ? " loading" : ""}${fullWidth ? " btn-block" : ""}${linkButton ? " btn-link" : ""}${ghostButton ? " btn-ghost" : ""}${pullRight ? " pull-right" : ""}${active ? " active" : "" }`}
+            className={`btn btn-${outline ? "outline-" : ""}${color}${size ? ` btn-${size}` : ""}${loading ? " loading" : ""}${fullWidth ? " btn-block" : ""}${linkButton ? " btn-link" : ""}${ghostButton ? " btn-ghost" : ""}${pullRight ? " pull-right" : ""}${active ? " active" : "" }`}
             type={type || "button"}
             id={id}
             name={name}
             disabled={disabled}
+            data-loader={loader}
             value={value}>
             {loader ? <div></div> : null}{icon ? "\n\t" : null}
             {icon ? <i className="material-icons">{icon}</i> : null}{icon ? "\n\t" : null}
