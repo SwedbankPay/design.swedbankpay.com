@@ -75,7 +75,7 @@ ComponentPreview.propTypes = {
 
 const Attribute = ({ data, name, value }) => (
     <code>
-        {data ? <span className="token attr-name">data-</span> : null}
+        {data ? <span className="token attr-name">data-px-</span> : null}
         <span className="token attr-name">{name}</span>
         <span className="token attr-value">
             <span className="token punctuation">{"=\""}</span>
@@ -91,8 +91,16 @@ Attribute.propTypes = {
     data: PropTypes.bool
 };
 
-const PxScript = ({ component, func, params }) => {
-    let renderedParams;
+const PxScript = ({ component, subComponents, func, params }) => {
+    let renderedParams, renderedSubComponents;
+
+    if (subComponents) {
+        renderedSubComponents = subComponents.map((component, i) => (
+            <span key={i}>{component}
+                <span className="token punctuation">.</span>
+            </span>
+        ));
+    }
 
     if (params) {
         renderedParams = params.map((param, i) => (
@@ -108,6 +116,7 @@ const PxScript = ({ component, func, params }) => {
             <span className="token punctuation">.</span>
             <span>{component}</span>
             <span className="token punctuation">.</span>
+            {renderedSubComponents}
             <span className="token function">{func}</span>
             <span className="token punctuation">(</span>
             {renderedParams}
@@ -118,6 +127,7 @@ const PxScript = ({ component, func, params }) => {
 
 PxScript.propTypes = {
     component: PropTypes.string.isRequired,
+    subComponents: PropTypes.string,
     func: PropTypes.string.isRequired,
     params: PropTypes.array
 };

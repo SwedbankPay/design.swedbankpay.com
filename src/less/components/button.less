@@ -2,6 +2,7 @@
     display: inline-block;
     //margin-right: .3rem;
     margin-bottom: .3rem;
+    position: relative;
     font-weight: normal;
     text-align: center;
     vertical-align: middle;
@@ -76,7 +77,6 @@
     &.pull-right {
         margin-right: 0 !important;
     }
-
 }
 
 
@@ -193,6 +193,7 @@
 .btn-lg {
     // line-height: ensure even-numbered height of button next to large input
     .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @btn-border-radius-large);
+    border-width: 2px;
 }
 
 .btn-sm {
@@ -224,5 +225,165 @@ input[type="reset"],
 input[type="button"] {
     &.btn-block {
         width: 100%;
+    }
+}
+
+
+// Loader button
+// --------------------------------------------------
+
+
+.btn.loading {
+    .btn-loader-label {
+        visibility: hidden;
+        // display: inline-block;
+    }
+
+    .loader {
+        .btn-loader-variant(.875rem; .2rem; .125rem; .125rem; .875rem; .75rem);
+        .loader-color-variant(@white);
+
+        .loader-icon {
+            li:first-child {
+                animation: loadbarsbtn 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) infinite 0s normal;
+            }
+
+            li:nth-child(2) {
+                animation: loadbarsbtn 0.6s ease-in-out infinite -0.2s normal;
+            }
+
+            li:nth-child(3) {
+                animation: loadbarsbtn 0.6s ease-in-out infinite -0.4s normal;
+            }
+        }
+    }
+
+    &.btn-lg {
+        .loader {
+            .btn-loader-variant(1.125rem; .4rem; .250rem; .250rem; 1.125rem; 1rem);
+    
+            .loader-icon {
+                li:first-child {
+                    animation: loadbarsbtnlg 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) infinite 0s normal;
+                }
+    
+                li:nth-child(2) {
+                    animation: loadbarsbtnlg 0.6s ease-in-out infinite -0.2s normal;
+                }
+    
+                li:nth-child(3) {
+                    animation: loadbarsbtnlg 0.6s ease-in-out infinite -0.4s normal;
+                }
+            }
+        }
+    }
+
+    &.btn-sm,
+    &.btn-xs {
+        .loader {
+            .btn-loader-variant(.875rem; .2rem; .125rem; .125rem; .875rem; .5rem);
+    
+            .loader-icon {
+                li:first-child {
+                    animation: loadbarsbtnsm 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) infinite 0s normal;
+                }
+    
+                li:nth-child(2) {
+                    animation: loadbarsbtnsm 0.6s ease-in-out infinite -0.2s normal;
+                }
+    
+                li:nth-child(3) {
+                    animation: loadbarsbtnsm 0.6s ease-in-out infinite -0.4s normal;
+                }
+            }
+        }
+    }
+
+    &.btn-default {
+        .loader {
+            .loader-color-variant(@btn-default-color);
+        }
+    }
+
+    &.btn-light {
+        .loader {
+            .loader-color-variant(@btn-light-color);
+        }
+    }
+
+    &.btn-link {
+        .loader {
+            .loader-color-variant(@link-color);
+        }
+    }
+
+    &.btn-outline-default {
+        .loader {
+            .loader-color-variant(@btn-default-outline-color);
+        }
+
+        &:hover {
+            .loader-color-variant(@btn-default-color);
+        }
+    }
+
+    &.btn-outline-brand {
+        .loader {
+            .loader-color-variant(@btn-brand-outline-color);
+        }
+
+        &:hover {
+            .loader-color-variant(@btn-brand-color);
+        }
+    }
+
+    &.btn-outline-neutral {
+        .loader {
+            .loader-color-variant(@btn-neutral-outline-color);
+        }
+
+        &:hover {
+            .loader-color-variant(@btn-neutral-color);
+        }
+    }
+
+    &.btn-outline-success {
+        .loader {
+            .loader-color-variant(@btn-success-outline-color);
+        }
+
+        &:hover {
+            .loader-color-variant(@btn-success-color);
+        }
+    }
+
+    &.btn-outline-warning {
+        .loader {
+            .loader-color-variant(@btn-warning-outline-color);
+        }
+
+        &:hover {
+            .loader-color-variant(@btn-warning-color);
+        }
+    }
+
+    &.btn-outline-danger {
+        .loader {
+            .loader-color-variant(@btn-danger-outline-color);
+        }
+
+        &:hover {
+            .loader-color-variant(@btn-danger-color);
+        }
+    }
+
+    &.btn-outline-light {
+        .loader {
+            .loader-color-variant(@btn-light-outline-color);
+        }
+
+        &:hover {
+            .loader-color-variant(@btn-light-color);
+        }
     }
 }

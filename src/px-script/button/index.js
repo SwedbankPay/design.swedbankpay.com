@@ -11,7 +11,7 @@ const _appendLoader = button => {
     const div = document.createElement("div");
     const ul = document.createElement("ul");
 
-    div.classList.add("loader", "btn-loader");
+    div.classList.add("loader");
     ul.classList.add("loader-icon");
 
     for (let i = 0; i < 3; i++) {
@@ -25,7 +25,7 @@ const _appendLoader = button => {
 };
 
 const init = () => {
-    const loaderButtons = document.querySelectorAll("[data-loader='true']");
+    const loaderButtons = document.querySelectorAll("[data-px-loader='true']");
 
     loaderButtons.forEach(button => {
         _createBtnLoaderLabel(button);
@@ -33,10 +33,46 @@ const init = () => {
     });
 };
 
-init();
+const hide = id => {
+    if (id) {
+        const alertElement = document.getElementById(id);
+        if (alertElement) {
+            alertElement.classList.remove("loading");
+        } else {
+            console.warn(`No button with id ${id} was found, make sure you provided the correct id.`);
+        }
+    } else {
+        const alertElements = document.querySelectorAll(".btn");
+
+        alertElements.forEach(element => {
+            element.classList.remove("loading");
+        });
+    }
+};
+
+const show = id => {
+    if (id) {
+        const alertElement = document.getElementById(id);
+        if (alertElement) {
+            alertElement.classList.add("loading");
+        } else {
+            console.warn(`No button with id ${id} was found, make sure you provided the correct id.`);
+        }
+    } else {
+        const alertElements = document.querySelectorAll(".btn");
+
+        alertElements.forEach(element => {
+            element.classList.add("loading");
+        });
+    }
+};
 
 const button = {
-    init
+    init,
+    loader: {
+        hide,
+        show
+    }
 };
 
 export default button;

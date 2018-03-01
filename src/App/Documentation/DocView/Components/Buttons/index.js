@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
@@ -6,6 +6,7 @@ import ComponentPreview, { Attribute, PxScript } from "../../../utils/ComponentP
 import DocToc from "../../../utils/DocToc";
 
 import ButtonComponent from "../../../../components/Button";
+import { button } from "../../../../../px-script";
 
 const Examples = () => (
     <div>
@@ -131,21 +132,95 @@ const UsageWithIcons = () => (
 const ButtonLoader = () => (
     <div>
         <h2 id="button-loader">Button loader</h2>
-        <p>To use a button with a loader...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={false}>
-            <ButtonComponent id="test" icon="cloud" color="default" label="Default" loader={true} />{"\n"}
-            <ButtonComponent icon="cloud" color="brand" label="Brand" loader={true} />{"\n"}
+        <p>To use a button with a loader simply add the attribute <Attribute data={true} name="loader" value="true" /> to add the required markup for the loader component. Add class <code className="token property">.loading</code> to display the loader.</p>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+            <ButtonComponent id="test" color="default" label="Default" loader={true} loading={true} />{"\n"}
+            <ButtonComponent color="brand" label="Brand" loader={true} loading={true} />{"\n"}
         </ComponentPreview>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={false}>
-            <ButtonComponent loader={true} color="default" label="Default" />{"\n"}
-            <ButtonComponent loader={true} color="brand" label="Brand" />{"\n"}
-            <ButtonComponent loader={true} color="neutral" label="Neutral" />{"\n"}
-            <ButtonComponent loader={true} color="success" label="Success" />{"\n"}
-            <ButtonComponent loader={true} color="warning" label="Warning" />{"\n"}
-            <ButtonComponent loader={true} color="danger" label="Danger" />{"\n"}
-            <ButtonComponent loader={true} color="light" label="Light" />{"\n"}
-            <ButtonComponent loader={true} color="link" label="Link" />{"\n"}
+        <p>Adding the attribute <Attribute data={true} name="loader" value="true" /> to a button component will produce the following html:</p>
+        <ComponentPreview language="html" showCasePanel={false} codeFigure={true}>
+            <button className="btn btn-default loading" type="button" data-px-loader="true">{"\n\t"}
+                <div className="btn-loader-label">Default</div>{"\n\t"}
+                <div className="loader">{"\n\t\t"}
+                    <ul className="loader-icon">{"\n\t\t\t"}
+                        <li></li>{"\n\t\t\t"}
+                        <li></li>{"\n\t\t\t"}
+                        <li></li>{"\n\t\t"}
+                    </ul>{"\n\t"}
+                </div>{"\n"}
+            </button>
         </ComponentPreview>
+        <p>If you want more control over the loader component you can include the html yourself (e.g. for server-side rendering), just make sure you <b>dont</b> add the attribute <Attribute data={true} name="loader" value="true" />.</p>
+    </div>
+);
+
+const UsageWithJavascript = () => (
+    <div>
+        <h2 id="usage-with-javascript">Usage with javascript</h2>
+        <p>To interact with the alert-component with javascript...</p>
+        <h3>Show loader</h3>
+        <ComponentPreview language="javascript" codeFigure={true}>
+            {"px.button.loader.show();"}{"\n"}
+            {"// OR"}{"\n"}
+            {"px.button.loader.show(id);"}
+        </ComponentPreview>
+        <h3>Hide loader</h3>
+        <ComponentPreview language="javascript" codeFigure={true}>
+            {"px.button.loader.hide();"}{"\n"}
+            {"// OR"}{"\n"}
+            {"px.button.loader.hide(id);"}
+        </ComponentPreview>
+        <h3>Methods</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Method</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <PxScript component="button" func="init" />
+                    </td>
+                    <td>
+                        Renders the HTML for the loader component for buttons that has the attribute <Attribute data={true} name="loader" value="true" />. This is done automatically when the <code className="token property">px-script.js</code> loads, but might have to be used if you are not rendering your alerts right away. For instance, in react, you might want to call this function within the <PrismCode className="language-javascript">{"componentDidMount()"}</PrismCode> method.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <PxScript component="button" subComponents={["loader"]} func="show" />
+                    </td>
+                    <td>
+                        Gives all rendered buttons the class <code className="token property">.loading</code>, displaying the loader component within the buttons (<b>if present</b>).
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <PxScript component="button" subComponents={["loader"]} func="show" params={["id"]} />
+                    </td>
+                    <td>
+                        Gives the specified button the class <code className="token property">.loading</code>. If no alert with the specified id is rendered to the DOM, the method does nothing.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <PxScript component="button" subComponents={["loader"]} func="hide" />
+                    </td>
+                    <td>
+                        Removes the class <code className="token property">.loading</code> from all rendered buttons, hiding the loader component.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <PxScript component="button" subComponents={["loader"]} func="hide" params={["id"]} />
+                    </td>
+                    <td>
+                        Removes the class <code className="token property">.loading</code> from the button specified by id, hiding the loader component within the button. If no button with the specified id is rendered to the DOM, the method does nothing.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 );
 
@@ -160,17 +235,25 @@ const ButtonsText = () => (
         <DisabledState />
         <UsageWithIcons />
         <ButtonLoader />
+        <UsageWithJavascript />
     </div>
 );
 
+class Buttons extends Component {
+    componentDidMount () {
+        button.init();
+    }
 
-const Buttons = () => (
-    <div className="doc-container">
-        <div className="row">
-            <ButtonsText />
-            <DocToc component={ButtonsText} />
-        </div>
-    </div>
-);
+    render () {
+        return (
+            <div className="doc-container">
+                <div className="row">
+                    <ButtonsText />
+                    <DocToc component={ButtonsText} />
+                </div>
+            </div>
+        );
+    }
+}
 
 export default Buttons;

@@ -6,11 +6,13 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
-- ...
+- Added loader component.
+- Added support for loader component within a button component.
 
 ### Changed
 
 - The alert component's close button now no longer needs `data-close` attribute to close the alert, only `.alert-close` class is needed.
+- Data attributes will be prefixed with `data-px-` from now on.
 
 ### Removed
 

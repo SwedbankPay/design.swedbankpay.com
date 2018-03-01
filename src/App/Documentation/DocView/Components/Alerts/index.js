@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
@@ -6,6 +6,7 @@ import ComponentPreview, { PxScript } from "../../../utils/ComponentPreview";
 import DocToc from "../../../utils/DocToc";
 
 import AlertComponent from "../../../../components/Alert";
+import { alert } from "../../../../../px-script";
 
 const BasicUsage = () => (
     <div>
@@ -170,13 +171,21 @@ const AlertsText = () => (
     </div>
 );
 
-const Alerts = () => (
-    <div className="doc-container">
-        <div className="row">
-            <AlertsText />
-            <DocToc component={AlertsText} />
-        </div>
-    </div>
-);
+class Alerts extends Component {
+    componentDidMount () {
+        alert.init();
+    }
+
+    render () {
+        return (
+            <div className="doc-container">
+                <div className="row">
+                    <AlertsText />
+                    <DocToc component={AlertsText} />
+                </div>
+            </div>
+        );
+    }
+}
 
 export default Alerts;

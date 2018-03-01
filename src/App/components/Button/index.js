@@ -9,12 +9,11 @@ const Button = ({ label, id, name, value, href, icon, loading, color, disabled, 
             id={id}
             name={name}
             disabled={disabled}
-            data-loader={loader}
+            data-px-loader={loader}
             role="button"
-            value={value}>
-            {loader ? <div></div> : null}
+            value={value}>{icon ? "\n\t" : null}
             {icon ? <i className="material-icons">{icon}</i> : null}
-            {(icon && label || loader && label) ? <span>{label}</span> : label}
+            {(icon && label) ? <span>{label}</span> : label}
         </a>
     );
 
@@ -25,7 +24,7 @@ const Button = ({ label, id, name, value, href, icon, loading, color, disabled, 
             id={id}
             name={name}
             disabled={disabled}
-            data-loader={loader}
+            data-px-loader={loader}
             value={value}>
         </input>
     );
@@ -37,11 +36,10 @@ const Button = ({ label, id, name, value, href, icon, loading, color, disabled, 
             id={id}
             name={name}
             disabled={disabled}
-            data-loader={loader}
-            value={value}>
-            {loader ? <div></div> : null}{icon ? "\n\t" : null}
+            data-px-loader={loader}
+            value={value}>{icon ? "\n\t" : null}
             {icon ? <i className="material-icons">{icon}</i> : null}{icon ? "\n\t" : null}
-            {(icon && label || loader && label) ? <span>{label}</span> : label}{icon ? "\n" : null}
+            {(icon && label) ? <span>{label}</span> : label}{icon ? "\n" : null}
         </button>
     );
 };
