@@ -2,12 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.1.2] - 2018-03-
+## [0.1.2] - 2018-03-02
 
 ### Added
 
 - Added loader component.
 - Added support for loader component within a button component.
+- Lots of unit tests
 
 ### Changed
 
