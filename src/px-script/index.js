@@ -1,27 +1,22 @@
 import alert from "./alert";
 import button from "./button";
 import loader from "./loader";
+import script from "./script";
 
 const px = {
     alert,
     button,
-    loader
+    loader,
+    script
 };
 
-const init = () => {
-    for (const key in px) {
-        if (typeof px[key].init === "function") {
-            px[key].init();
-        }
-    }
-};
-
-document.addEventListener("DOMContentLoaded", init, false);
+document.addEventListener("DOMContentLoaded", () => { script.initAll(px); }, false);
 
 window.px = px;
 export default px;
-export { alert, button, loader };
+export { alert, button, loader, script };
 
+/* istanbul ignore if|else */
 if (module.hot) {
     module.hot.accept();
 }

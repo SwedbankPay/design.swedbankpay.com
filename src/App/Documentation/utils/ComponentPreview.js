@@ -127,7 +127,7 @@ const PxScript = ({ component, subComponents, func, params }) => {
 
 PxScript.propTypes = {
     component: PropTypes.string.isRequired,
-    subComponents: PropTypes.string,
+    subComponents: PropTypes.array,
     func: PropTypes.string.isRequired,
     params: PropTypes.array
 };

@@ -137,6 +137,15 @@ const ButtonLoader = () => (
             <ButtonComponent id="test" color="default" label="Default" loader={true} loading={true} />{"\n"}
             <ButtonComponent color="brand" label="Brand" loader={true} loading={true} />{"\n"}
         </ComponentPreview>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+            <ButtonComponent loader={true} loading={true} outline={true} color="default" label="Default" />{"\n"}
+            <ButtonComponent loader={true} loading={true} outline={true} color="brand" label="Brand" />{"\n"}
+            <ButtonComponent loader={true} loading={true} outline={true} color="neutral" label="Neutral" />{"\n"}
+            <ButtonComponent loader={true} loading={true} outline={true} color="success" label="Success" />{"\n"}
+            <ButtonComponent loader={true} loading={true} outline={true} color="warning" label="Warning" />{"\n"}
+            <ButtonComponent loader={true} loading={true} outline={true} color="danger" label="Danger" />{"\n"}
+            <ButtonComponent loader={true} loading={true} outline={true} color="light" label="Light" />{"\n"}
+        </ComponentPreview>
         <p>Adding the attribute <Attribute data={true} name="loader" value="true" /> to a button component will produce the following html:</p>
         <ComponentPreview language="html" showCasePanel={false} codeFigure={true}>
             <button className="btn btn-default loading" type="button" data-px-loader="true">{"\n\t"}
@@ -184,7 +193,7 @@ const UsageWithJavascript = () => (
                         <PxScript component="button" func="init" />
                     </td>
                     <td>
-                        Renders the HTML for the loader component for buttons that has the attribute <Attribute data={true} name="loader" value="true" />. This is done automatically when the <code className="token property">px-script.js</code> loads, but might have to be used if you are not rendering your alerts right away. For instance, in react, you might want to call this function within the <PrismCode className="language-javascript">{"componentDidMount()"}</PrismCode> method.
+                        Renders the HTML for the loader component for buttons that has the attribute <Attribute data={true} name="loader" value="true" />. This is done automatically when the <code className="token property">px-script.js</code> loads, but might have to be used if you are not rendering your buttons right away. For instance, in react, you might want to call this function within the <PrismCode className="language-javascript">{"componentDidMount()"}</PrismCode> method.
                     </td>
                 </tr>
                 <tr>

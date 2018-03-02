@@ -21,7 +21,9 @@ describe("px-script: alert", () => {
         );
         ReactDOM.render(<Alerts />, div);
 
-        const renderedButtons = document.querySelectorAll("[data-close]");
+        const renderedButtons = document.querySelectorAll(".alert>.alert-close");
+
+        expect(renderedButtons).toHaveLength(2);
 
         renderedButtons.forEach(button => {
             expect(button.parentElement.classList).toContain("in");
