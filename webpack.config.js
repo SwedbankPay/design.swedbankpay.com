@@ -7,6 +7,10 @@ const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const autoprefixer = require("autoprefixer");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
+const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+
+const smp = new SpeedMeasurePlugin();
 
 const isProd = (process.env.NODE_ENV === "production");
 
@@ -25,20 +29,26 @@ const extractDesignGuide = new ExtractTextPlugin({
     disable: !isProd
 });
 
-const config = {
+const config = smp.wrap({
     entry: {
         app: "./src/index.js",
         "react-libraries": [
             "react",
             "react-dom",
-            "react-router-dom"
+            "react-dom/server",
+            "react-router-dom",
+            "react-prism"
         ],
         "core-libraries": [
             "@fortawesome/fontawesome-free-brands",
             "@fortawesome/react-fontawesome",
             "prismjs",
-            "react-prism",
-            "js-beautify"
+            "prismjs/themes/prism.css",
+            "prismjs/plugins/toolbar/prism-toolbar.css",
+            "prismjs/plugins/toolbar/prism-toolbar.min.js",
+            "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js",
+            "js-beautify",
+            "clipboard"
         ],
         polyfills: "./src/polyfills/index.js",
         "px-script": "./src/px-script/index.js"
@@ -225,9 +235,10 @@ const config = {
         extractDesignGuide,
         new webpack.DefinePlugin({
             "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)
-        })
+        }),
+        new BundleAnalyzerPlugin()
     ]
-};
+});
 
 if (isProd) {
     config.plugins.push(new webpack.optimize.UglifyJsPlugin({
@@ -235,7 +246,7 @@ if (isProd) {
         compress: {
             dead_code: true,
             drop_console: true, // TODO: keep console warnings and errors
-            unused: true
+            unused: false
         }
     }));
 }
