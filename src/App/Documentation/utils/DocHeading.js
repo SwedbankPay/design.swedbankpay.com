@@ -9,7 +9,7 @@ const _generateTitle = path => path.match(/[^/]*$/)[0]
 const DocViewHeading = ({ location }) => {
     const title = _generateTitle(location.pathname);
 
-    document.title = `${title} | PayEx DesignGuide`;
+    // document.title = `${title} | PayEx DesignGuide`;
 
     return (
         <div className="view-heading">

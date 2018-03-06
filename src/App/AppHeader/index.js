@@ -4,18 +4,21 @@ import FontAwesomeIcon from "@fortawesome/react-fontawesome";
 import { faSlack, faGithub } from "@fortawesome/fontawesome-free-brands";
 
 import pkg from "../../../package.json";
+import routes from "../routes/root.js";
 
 const AppHeader = ({ location }) => {
-    const route = location.pathname;
+    const { pathname } = location;
 
     return (
         <header className="topbar designguide-header">
             <a className="topbar-logo logo-default" href="#"></a>
             <nav className="header-links">
-                <Link className={(route === "/") ? "active" : ""} to="/">Home</Link>
-                <Link className={(route.startsWith("/docs")) ? "active" : ""} to="/docs">Documentation</Link>
-                <Link className={(route.startsWith("/examples")) ? "active" : ""} to="/examples">Examples</Link>
-                <Link className={(route.startsWith("/templates")) ? "active" : ""} to="/templates">Templates</Link>
+                {routes.map((route, i) => {
+                    const { title, path, exact } = route;
+                    const active = exact ? (pathname === path) : (pathname.startsWith(path));
+
+                    return <Link key={i} to={path} className={active ? "active" : ""}>{title}</Link>;
+                })}
             </nav>
             <div className="topbar-info">
                 <div className="topbar-info-contact">

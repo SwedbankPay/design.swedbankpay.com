@@ -4,7 +4,7 @@ const BrowserSupport = () => (
     <div className="doc-container">
         <div className="row">
             <div className="col-md-12">
-                <p className="lead">Get started with the PayEx DesignGuide...</p>
+                <p className="lead">Currently supported browsers...</p>
             </div>
         </div>
     </div>

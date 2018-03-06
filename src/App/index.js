@@ -1,11 +1,8 @@
 import React from "react";
 import { BrowserRouter, withRouter, Switch, Route } from "react-router-dom";
 
+import routes from "./routes/root.js";
 import AppHeader from "./AppHeader";
-import Home from "./Home";
-import Documentation from "./Documentation";
-import Examples from "./Examples";
-import Templates from "./Templates";
 import ErrorPage404 from "./ErrorPage404";
 
 const AppHeaderWithRoutes = withRouter(props => <AppHeader {...props} />);
@@ -15,11 +12,15 @@ const App = () => (
         <div id="px-designguide">
             <AppHeaderWithRoutes />
             <Switch>
-                <Route exact path="/" component={Home} />
-                <Route path="/docs" component={Documentation} />
-                <Route path="/examples" component={Examples} />
-                <Route path="/templates" component={Templates} />
-                <Route path="/*" component={ErrorPage404} />
+                {routes.map((route, i) => {
+                    const { path, component, exact } = route;
+                    const RouteComponent = component.default;
+
+                    return (
+                        <Route key={i} exact={exact} path={path} render={() => <RouteComponent />} />
+                    );
+                })}
+                <Route component={ErrorPage404} />
             </Switch>
         </div>
     </BrowserRouter>
