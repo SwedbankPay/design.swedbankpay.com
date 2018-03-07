@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import routes from "./routes";
+import routes from "../../routes/docs";
 
 const SearchBox = () => (
     <div className="input-group doc-search">
@@ -28,17 +28,19 @@ class SelectPanel extends Component {
                 <SearchBox />
                 <nav>
                     {routes.map((route, i) => {
+                        const { path, title, routes } = route;
                         return (
-                            <div key={i} className={`nav-group${this.titleActive(route.groupPath) ? " active" : ""}`}>
+                            <div key={i} className={`nav-group${this.titleActive(path) ? " active" : ""}`}>
                                 <div className="nav-heading">
                                     <i className="material-icons">keyboard_arrow_right</i>
-                                    <Link to={route.groupPath}>{route.groupTitle}</Link>
+                                    <Link to={path}>{title}</Link>
                                 </div>
                                 <ul>
-                                    {route.groupItems.map((item, i) => {
+                                    {routes.map((childRoute, i) => {
+                                        const { title, path } = childRoute;
                                         return (
                                             <li key={i}>
-                                                <Link className={this.subtitleActive(item.path) ? "active" : ""} to={item.path}>{item.title}</Link>
+                                                <Link className={this.subtitleActive(path) ? "active" : ""} to={path}>{title}</Link>
                                             </li>
                                         );
                                     })}
