@@ -39,6 +39,14 @@ const _findHeadings = (children) => {
                         }
                     }
                 }
+
+            } else if (child.type === "h2") {
+                headings.push(
+                    {
+                        title: child.props.children,
+                        id: child.props.id
+                    }
+                );
             }
         });
     }
