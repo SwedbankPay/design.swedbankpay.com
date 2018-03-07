@@ -17,14 +17,129 @@ exports[`Documentation: index renders 1`] = `
     <div
       className="view-heading col-md-9 col-sm-12"
     >
-      <DocViewHeading />
+      <withRouter() />
     </div>
   </div>
   <div
     className="row"
   >
     <withRouter() />
-    <withRouter() />
+    <main
+      className="doc-view col-md-9 col-sm-12"
+    >
+      <Switch>
+        <Route
+          exact={true}
+          path="/docs"
+          render={[Function]}
+        />
+        <RenderRoutes
+          key="0"
+          path="/docs/getting-started"
+          redirect="/docs/getting-started/introduction"
+          routes={
+            Array [
+              Object {
+                "component": Object {
+                  "default": [Function],
+                },
+                "path": "/docs/getting-started/introduction",
+                "title": "Introduction",
+              },
+              Object {
+                "component": Object {
+                  "default": [Function],
+                },
+                "path": "/docs/getting-started/contributing",
+                "title": "Contributing",
+              },
+              Object {
+                "component": Object {
+                  "default": [Function],
+                },
+                "path": "/docs/getting-started/browser-support",
+                "title": "Browser Support",
+              },
+            ]
+          }
+          title="Getting Started"
+        />
+        <RenderRoutes
+          key="1"
+          path="/docs/core"
+          redirect="/docs/core/color"
+          routes={
+            Array [
+              Object {
+                "component": Object {
+                  "default": [Function],
+                },
+                "path": "/docs/core/color",
+                "title": "Color",
+              },
+              Object {
+                "component": Object {
+                  "default": [Function],
+                },
+                "path": "/docs/core/typography",
+                "title": "Typography",
+              },
+            ]
+          }
+          title="Core"
+        />
+        <RenderRoutes
+          key="2"
+          path="/docs/components"
+          redirect="/docs/components/alerts"
+          routes={
+            Array [
+              Object {
+                "component": Object {
+                  "default": [Function],
+                },
+                "path": "/docs/components/alerts",
+                "title": "Alerts",
+              },
+              Object {
+                "component": Object {
+                  "default": [Function],
+                },
+                "path": "/docs/components/breadcrumb",
+                "title": "Breadcrumb",
+              },
+              Object {
+                "component": Object {
+                  "default": [Function],
+                },
+                "path": "/docs/components/buttons",
+                "title": "Buttons",
+              },
+              Object {
+                "component": Object {
+                  "default": [Function],
+                },
+                "path": "/docs/components/loaders",
+                "title": "Loaders",
+              },
+            ]
+          }
+          title="Components"
+        />
+        <RenderRoutes
+          key="3"
+          path="/docs/utilities"
+          redirect="/docs/getting-started/introduction"
+          routes={Array []}
+          title="Utilities"
+        />
+        <Redirect
+          from="/docs/*"
+          push={false}
+          to="/404"
+        />
+      </Switch>
+    </main>
   </div>
 </div>
 `;
