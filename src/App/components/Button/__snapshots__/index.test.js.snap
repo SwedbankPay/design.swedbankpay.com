@@ -2,7 +2,7 @@
 
 exports[`Component: Button -  Anchor tag: renders a button inside an anchor tag when prop href is provided 1`] = `
 <a
-  className="btn btn-test"
+  className="btn btn-default"
   href="test"
   role="button"
 />
@@ -10,7 +10,7 @@ exports[`Component: Button -  Anchor tag: renders a button inside an anchor tag 
 
 exports[`Component: Button -  Anchor tag: renders a button inside an anchor tag with attribute data-px-loader='true' when prop href and loader is provided 1`] = `
 <a
-  className="btn btn-test"
+  className="btn btn-default"
   data-px-loader={true}
   href="test"
   role="button"
@@ -19,7 +19,7 @@ exports[`Component: Button -  Anchor tag: renders a button inside an anchor tag 
 
 exports[`Component: Button -  Anchor tag: renders a button inside an anchor tag with class active when prop href and active is provided 1`] = `
 <a
-  className="btn btn-test active"
+  className="btn btn-default active"
   href="test"
   role="button"
 />
@@ -27,7 +27,7 @@ exports[`Component: Button -  Anchor tag: renders a button inside an anchor tag 
 
 exports[`Component: Button -  Anchor tag: renders a button inside an anchor tag with class pull-right when prop href and pullRight is provided 1`] = `
 <a
-  className="btn btn-test pull-right"
+  className="btn btn-default pull-right"
   href="test"
   role="button"
 />
@@ -35,7 +35,7 @@ exports[`Component: Button -  Anchor tag: renders a button inside an anchor tag 
 
 exports[`Component: Button -  Anchor tag: renders a button inside an anchor tag with id when prop href and id is provided 1`] = `
 <a
-  className="btn btn-test"
+  className="btn btn-default"
   href="test"
   id="test"
   role="button"
@@ -44,7 +44,7 @@ exports[`Component: Button -  Anchor tag: renders a button inside an anchor tag 
 
 exports[`Component: Button -  Anchor tag: renders a button inside an anchor tag with label when prop href and label is provided 1`] = `
 <a
-  className="btn btn-test"
+  className="btn btn-default"
   href="test"
   role="button"
 >
@@ -54,7 +54,7 @@ exports[`Component: Button -  Anchor tag: renders a button inside an anchor tag 
 
 exports[`Component: Button -  Anchor tag: renders a button inside an anchor tag with name when prop href and name is provided 1`] = `
 <a
-  className="btn btn-test"
+  className="btn btn-default"
   href="test"
   name="test"
   role="button"
@@ -63,7 +63,7 @@ exports[`Component: Button -  Anchor tag: renders a button inside an anchor tag 
 
 exports[`Component: Button -  Anchor tag: renders a button with icon and label inside a span inside an anchor tag when prop href, label and icon is provided 1`] = `
 <a
-  className="btn btn-test"
+  className="btn btn-default"
   href="test"
   role="button"
 >
@@ -82,7 +82,7 @@ exports[`Component: Button -  Anchor tag: renders a button with icon and label i
 
 exports[`Component: Button -  Anchor tag: renders a button with icon inside an anchor tag when prop href and icon is provided 1`] = `
 <a
-  className="btn btn-test"
+  className="btn btn-default"
   href="test"
   role="button"
 >
@@ -98,7 +98,7 @@ exports[`Component: Button -  Anchor tag: renders a button with icon inside an a
 
 exports[`Component: Button -  Anchor tag: renders a button with specified size inside an anchor tag when prop href and size is provided 1`] = `
 <a
-  className="btn btn-test btn-size-test"
+  className="btn btn-default btn-size-test"
   href="test"
   role="button"
 />
@@ -106,7 +106,7 @@ exports[`Component: Button -  Anchor tag: renders a button with specified size i
 
 exports[`Component: Button -  Anchor tag: renders a disabled button inside an anchor tag when prop href and disabled is provided 1`] = `
 <a
-  className="btn btn-test"
+  className="btn btn-default"
   disabled={true}
   href="test"
   role="button"
@@ -115,7 +115,7 @@ exports[`Component: Button -  Anchor tag: renders a disabled button inside an an
 
 exports[`Component: Button -  Anchor tag: renders a full width button inside an anchor tag when prop href and fullWidth is provided 1`] = `
 <a
-  className="btn btn-test btn-block"
+  className="btn btn-default btn-block"
   href="test"
   role="button"
 />
@@ -123,7 +123,7 @@ exports[`Component: Button -  Anchor tag: renders a full width button inside an 
 
 exports[`Component: Button -  Anchor tag: renders a loading button inside an anchor tag when prop href and loading is provided 1`] = `
 <a
-  className="btn btn-test loading"
+  className="btn btn-default loading"
   href="test"
   role="button"
 />
@@ -131,7 +131,7 @@ exports[`Component: Button -  Anchor tag: renders a loading button inside an anc
 
 exports[`Component: Button -  Anchor tag: renders a outline button inside an anchor tag when prop href and outline is provided 1`] = `
 <a
-  className="btn btn-outline-test"
+  className="btn btn-outline-default"
   href="test"
   role="button"
 />
@@ -139,7 +139,7 @@ exports[`Component: Button -  Anchor tag: renders a outline button inside an anc
 
 exports[`Component: Button -  Button tag: renders a button with a label when prop label is provided 1`] = `
 <button
-  className="btn btn-test"
+  className="btn btn-default"
   type="button"
 >
   test
@@ -148,7 +148,7 @@ exports[`Component: Button -  Button tag: renders a button with a label when pro
 
 exports[`Component: Button -  Button tag: renders a button with an icon when prop icon is provided 1`] = `
 <button
-  className="btn btn-test"
+  className="btn btn-default"
   type="button"
 >
   
@@ -167,21 +167,21 @@ exports[`Component: Button -  Button tag: renders a button with an icon when pro
 
 exports[`Component: Button -  Button tag: renders a button with class active when prop active is provided 1`] = `
 <button
-  className="btn btn-test active"
+  className="btn btn-default active"
   type="button"
 />
 `;
 
 exports[`Component: Button -  Button tag: renders a button with class pull-right when prop pullRight is provided 1`] = `
 <button
-  className="btn btn-test pull-right"
+  className="btn btn-default pull-right"
   type="button"
 />
 `;
 
 exports[`Component: Button -  Button tag: renders a button with icon and label inside a span when prop icon and label is provided 1`] = `
 <button
-  className="btn btn-test"
+  className="btn btn-default"
   type="button"
 >
   
@@ -203,14 +203,14 @@ exports[`Component: Button -  Button tag: renders a button with icon and label i
 
 exports[`Component: Button -  Button tag: renders a button with specified size when prop size is provided 1`] = `
 <button
-  className="btn btn-test btn-size-test"
+  className="btn btn-default btn-size-test"
   type="button"
 />
 `;
 
 exports[`Component: Button -  Button tag: renders a button with the attribute data-px-loader='true' when prop loader is provided 1`] = `
 <button
-  className="btn btn-test"
+  className="btn btn-default"
   data-px-loader={true}
   type="button"
 />
@@ -218,7 +218,7 @@ exports[`Component: Button -  Button tag: renders a button with the attribute da
 
 exports[`Component: Button -  Button tag: renders a button with the specified id when prop id is provided 1`] = `
 <button
-  className="btn btn-test"
+  className="btn btn-default"
   id="test"
   type="button"
 />
@@ -226,65 +226,65 @@ exports[`Component: Button -  Button tag: renders a button with the specified id
 
 exports[`Component: Button -  Button tag: renders a button with the specified name when prop name is provided 1`] = `
 <button
-  className="btn btn-test"
+  className="btn btn-default"
   name="test"
   type="button"
 />
 `;
 
-exports[`Component: Button -  Button tag: renders a button with the specified type when prop type is provided 1`] = `
+exports[`Component: Button -  Button tag: renders a button with the specified type when prop btnType is provided 1`] = `
 <button
-  className="btn btn-test"
+  className="btn btn-default"
   type="test"
 />
 `;
 
-exports[`Component: Button -  Button tag: renders a default button and defaults to type='button' when no type prop is provided 1`] = `
+exports[`Component: Button -  Button tag: renders a default button and defaults to type='button' when no btnType prop is provided 1`] = `
 <button
-  className="btn btn-test"
+  className="btn btn-default"
   type="button"
 />
 `;
 
 exports[`Component: Button -  Button tag: renders a disabled button when prop disabled is provided 1`] = `
 <button
-  className="btn btn-test"
+  className="btn btn-default"
   disabled={true}
   type="button"
 />
 `;
 
-exports[`Component: Button -  Button tag: renders a full width button with when prop fullWidth is provided 1`] = `
+exports[`Component: Button -  Button tag: renders a full width button when prop fullWidth is provided 1`] = `
 <button
-  className="btn btn-test btn-block"
+  className="btn btn-default btn-block"
   type="button"
 />
 `;
 
-exports[`Component: Button -  Button tag: renders a loading button with when prop loading is provided 1`] = `
+exports[`Component: Button -  Button tag: renders a loading button when prop loading is provided 1`] = `
 <button
-  className="btn btn-test loading"
+  className="btn btn-default loading"
   type="button"
 />
 `;
 
 exports[`Component: Button -  Button tag: renders an outline button when prop outline is provided 1`] = `
 <button
-  className="btn btn-outline-test"
+  className="btn btn-outline-default"
   type="button"
 />
 `;
 
 exports[`Component: Button -  Input tag: renders a button inside an input tag and defaults to type='button' when prop input is provided 1`] = `
 <input
-  className="btn btn-test"
+  className="btn btn-default"
   type="button"
 />
 `;
 
 exports[`Component: Button -  Input tag: renders a button inside an input tag with attribute data-px-loader='true' when prop input and loader is provided 1`] = `
 <input
-  className="btn btn-test"
+  className="btn btn-default"
   data-px-loader={true}
   type="button"
 />
@@ -292,7 +292,7 @@ exports[`Component: Button -  Input tag: renders a button inside an input tag wi
 
 exports[`Component: Button -  Input tag: renders a button inside an input tag with value attribute when prop input and value is provided 1`] = `
 <input
-  className="btn btn-test"
+  className="btn btn-default"
   type="button"
   value="test"
 />
@@ -300,28 +300,28 @@ exports[`Component: Button -  Input tag: renders a button inside an input tag wi
 
 exports[`Component: Button -  Input tag: renders a button with class active inside an input tag when prop input and active is provided 1`] = `
 <input
-  className="btn btn-test active"
+  className="btn btn-default active"
   type="button"
 />
 `;
 
 exports[`Component: Button -  Input tag: renders a button with class pull-right inside an input tag when prop input and pullRight is provided 1`] = `
 <input
-  className="btn btn-test pull-right"
+  className="btn btn-default pull-right"
   type="button"
 />
 `;
 
 exports[`Component: Button -  Input tag: renders a button with specified size inside an input tag when prop input and size is provided 1`] = `
 <input
-  className="btn btn-test btn-size-test"
+  className="btn btn-default btn-size-test"
   type="button"
 />
 `;
 
 exports[`Component: Button -  Input tag: renders a button with the specified id inside an input tag when prop input and id is provided 1`] = `
 <input
-  className="btn btn-test"
+  className="btn btn-default"
   id="test"
   type="button"
 />
@@ -329,22 +329,22 @@ exports[`Component: Button -  Input tag: renders a button with the specified id 
 
 exports[`Component: Button -  Input tag: renders a button with the specified name inside an input tag when prop input and name is provided 1`] = `
 <input
-  className="btn btn-test"
+  className="btn btn-default"
   name="test"
   type="button"
 />
 `;
 
-exports[`Component: Button -  Input tag: renders a button with the specified type inside an input tag when prop input and type is provided 1`] = `
+exports[`Component: Button -  Input tag: renders a button with the specified type inside an input tag when prop input and btnType is provided 1`] = `
 <input
-  className="btn btn-test"
+  className="btn btn-default"
   type="test"
 />
 `;
 
 exports[`Component: Button -  Input tag: renders a disabled button inside an input tag when prop input and disabled is provided 1`] = `
 <input
-  className="btn btn-test"
+  className="btn btn-default"
   disabled={true}
   type="button"
 />
@@ -352,26 +352,26 @@ exports[`Component: Button -  Input tag: renders a disabled button inside an inp
 
 exports[`Component: Button -  Input tag: renders a full width button inside an input tag when prop input and fullWidth is provided 1`] = `
 <input
-  className="btn btn-test btn-block"
+  className="btn btn-default btn-block"
   type="button"
 />
 `;
 
 exports[`Component: Button -  Input tag: renders a loading button inside an input tag when prop input and loading is provided 1`] = `
 <input
-  className="btn btn-test loading"
+  className="btn btn-default loading"
   type="button"
 />
 `;
 
 exports[`Component: Button -  Input tag: renders an outline button inside an input tag when prop input and outline is provided 1`] = `
 <input
-  className="btn btn-outline-test"
+  className="btn btn-outline-default"
   type="button"
 />
 `;
 
-exports[`Component: Button -  prop color is marked as required 1`] = `
+exports[`Component: Button -  prop type is marked as required 1`] = `
 <button
   className="btn btn-undefined"
   type="button"

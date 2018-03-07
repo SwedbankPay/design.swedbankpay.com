@@ -13,7 +13,7 @@ const Alert = ({ id, type, display, icon, close, heading, text, linkText, linkHr
 
 Alert.propTypes = {
     id: PropTypes.string,
-    type: PropTypes.string.isRequired,
+    type: PropTypes.oneOf(["success", "neutral", "warning", "error", "light", "default"]).isRequired,
     display: PropTypes.bool,
     icon: PropTypes.string,
     close: PropTypes.bool,

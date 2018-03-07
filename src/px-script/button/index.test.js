@@ -15,8 +15,8 @@ describe("px-script: button", () => {
     it("method init adds loader markup to buttons with attribute [data-px-loader='true']", () => {
         const Buttons = () => (
             <div>
-                <Button color="default" label="test" loader={true} />
-                <Button color="default" label="test" loader={true} />
+                <Button type="default" label="test" loader={true} />
+                <Button type="default" label="test" loader={true} />
             </div>
         );
         ReactDOM.render(<Buttons />, div);
@@ -46,7 +46,7 @@ describe("px-script: button", () => {
     });
 
     it("hides the loader from button when provided an id to method loader.hide", () => {
-        ReactDOM.render(<Button color="default" id="test" loading={true} />, div);
+        ReactDOM.render(<Button type="default" id="test" loading={true} />, div);
 
         expect(document.getElementById("test").classList).toContain("loading");
         button.loader.hide("test");
@@ -58,8 +58,8 @@ describe("px-script: button", () => {
     it("hides all loaders from buttons when not provided an id to method loader.hide", () => {
         const Buttons = () => (
             <div>
-                <Button color="default" loading={true} />
-                <Button color="default" loading={true} />
+                <Button type="default" loading={true} />
+                <Button type="default" loading={true} />
             </div>
         );
         ReactDOM.render(<Buttons />, div);
@@ -86,7 +86,7 @@ describe("px-script: button", () => {
     });
 
     it("shows the loader in button when provided an id to method loader.hide", () => {
-        ReactDOM.render(<Button color="default" id="test" loading={false} />, div);
+        ReactDOM.render(<Button type="default" id="test" loading={false} />, div);
 
         expect(document.getElementById("test").classList).not.toContain("loading");
         button.loader.show("test");
@@ -98,8 +98,8 @@ describe("px-script: button", () => {
     it("shows all loaders in buttons when not provided an id to method loader.show", () => {
         const Buttons = () => (
             <div>
-                <Button color="default" loading={false} />
-                <Button color="default" loading={false} />
+                <Button type="default" loading={false} />
+                <Button type="default" loading={false} />
             </div>
         );
         ReactDOM.render(<Buttons />, div);

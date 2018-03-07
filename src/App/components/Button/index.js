@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Button = ({ label, id, name, value, href, icon, loading, color, disabled, type, fullWidth, loader, pullRight, input, outline, active, size }) => {
+const Button = ({ label, id, name, value, href, icon, loading, type, disabled, btnType, fullWidth, loader, pullRight, input, outline, active, size }) => {
     if (href) return (
         <a
-            className={`btn btn-${outline ? "outline-" : ""}${color}${size ? ` btn-${size}` : ""}${loading ? " loading" : ""}${fullWidth ? " btn-block" : ""}${pullRight ? " pull-right" : ""}${active ? " active" : "" }`}
+            className={`btn btn-${outline ? "outline-" : ""}${type}${size ? ` btn-${size}` : ""}${loading ? " loading" : ""}${fullWidth ? " btn-block" : ""}${pullRight ? " pull-right" : ""}${active ? " active" : "" }`}
             href={href}
             id={id}
             name={name}
@@ -18,8 +18,8 @@ const Button = ({ label, id, name, value, href, icon, loading, color, disabled, 
 
     if (input) return (
         <input
-            className={`btn btn-${outline ? "outline-" : ""}${color}${size ? ` btn-${size}` : ""}${loading ? " loading" : ""}${fullWidth ? " btn-block" : ""}${pullRight ? " pull-right" : ""}${active ? " active" : "" }`}
-            type={type || "button"}
+            className={`btn btn-${outline ? "outline-" : ""}${type}${size ? ` btn-${size}` : ""}${loading ? " loading" : ""}${fullWidth ? " btn-block" : ""}${pullRight ? " pull-right" : ""}${active ? " active" : "" }`}
+            type={btnType || "button"}
             id={id}
             name={name}
             disabled={disabled}
@@ -30,8 +30,8 @@ const Button = ({ label, id, name, value, href, icon, loading, color, disabled, 
 
     return (
         <button
-            className={`btn btn-${outline ? "outline-" : ""}${color}${size ? ` btn-${size}` : ""}${loading ? " loading" : ""}${fullWidth ? " btn-block" : ""}${pullRight ? " pull-right" : ""}${active ? " active" : "" }`}
-            type={type || "button"}
+            className={`btn btn-${outline ? "outline-" : ""}${type}${size ? ` btn-${size}` : ""}${loading ? " loading" : ""}${fullWidth ? " btn-block" : ""}${pullRight ? " pull-right" : ""}${active ? " active" : "" }`}
+            type={btnType || "button"}
             id={id}
             name={name}
             disabled={disabled}
@@ -43,6 +43,7 @@ const Button = ({ label, id, name, value, href, icon, loading, color, disabled, 
 };
 
 Button.propTypes = {
+    type: PropTypes.oneOf(["default", "brand", "neutral", "success", "warning", "danger", "light", "link"]).isRequired,
     label: PropTypes.string,
     id: PropTypes.string,
     name: PropTypes.string,
@@ -50,9 +51,8 @@ Button.propTypes = {
     href: PropTypes.string,
     icon: PropTypes.string,
     loading: PropTypes.bool,
-    color: PropTypes.string.isRequired,
     disabled: PropTypes.bool,
-    type: PropTypes.string,
+    btnType: PropTypes.string,
     fullWidth: PropTypes.bool,
     loader: PropTypes.bool,
     pullRight: PropTypes.bool,
