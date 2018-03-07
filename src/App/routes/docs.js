@@ -13,6 +13,11 @@ export default [
                 component: require("../Documentation/GettingStarted/Introduction")
             },
             {
+                title: "Contributing",
+                path: "/docs/getting-started/contributing",
+                component: require("../Documentation/GettingStarted/Contributing")
+            },
+            {
                 title: "Browser Support",
                 path: "/docs/getting-started/browser-support",
                 component: require("../Documentation/GettingStarted/BrowserSupport")

@@ -22,8 +22,19 @@ const ComponentPreview = ({ children, language, removeOuterTag, showCasePanel, c
                 }
             });
 
-        } else {
+        } else if (language === "html") {
             code = ReactDOMServer.renderToStaticMarkup(children);
+        } else {
+            switch (typeof children) {
+                case "string":
+                    code = children;
+                    break;
+                case "object":
+                    children.forEach(child => code += child);
+                    break;
+                default:
+                    console.warn("CodeFigure: children needs attention!");
+            }
         }
 
         switch (language) {
@@ -31,10 +42,13 @@ const ComponentPreview = ({ children, language, removeOuterTag, showCasePanel, c
                 code = jsbeautifier.html_beautify(code);
                 break;
             case "css":
-                code = jsbeautifier.css_beautify(code);
+                // code = jsbeautifier.css_beautify(code);
                 break;
             case "javascript":
-                code = jsbeautifier.js_beautify(code);
+                code = jsbeautifier.js_beautify(code, {
+                    brace_style: "preserve-inline", // eslint-disable-line camelcase
+                    e4x: true
+                });
                 break;
             default:
                 return "update switchcase!";
