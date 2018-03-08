@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Core: Color renders 1`] = `
+<div
+  className="doc-container"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-md-12"
+    >
+      <p>
+        Here there be colors!
+      </p>
+    </div>
+  </div>
+</div>
+`;

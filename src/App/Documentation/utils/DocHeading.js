@@ -6,10 +6,10 @@ const _generateTitle = path => path.match(/[^/]*$/)[0]
     .map(word => word.charAt(0).toUpperCase() + word.substr(1))
     .join(" ");
 
-const DocViewHeading = ({ location }) => {
+const DocHeading = ({ location }) => {
     const title = _generateTitle(location.pathname);
 
-    // document.title = `${title} | PayEx DesignGuide`;
+    document.title = `${title} | PayEx DesignGuide`;
 
     return (
         <div className="view-heading">
@@ -18,4 +18,4 @@ const DocViewHeading = ({ location }) => {
     );
 };
 
-export default DocViewHeading;
+export default DocHeading;

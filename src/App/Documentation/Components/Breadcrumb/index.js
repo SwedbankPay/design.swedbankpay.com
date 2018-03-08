@@ -104,3 +104,6 @@ const Breadcrumb = () => (
 );
 
 export default Breadcrumb;
+
+/* for testing */
+export { BasicBreadCrumb, SmallBreadCrumb, DisabledBreadcrumb, BreadcrumbText };

@@ -1,0 +1,517 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Utilities: ComponentPreview Attribute renders 1`] = `
+<code>
+  <span
+    className="token attr-name"
+  >
+    test
+  </span>
+  <span
+    className="token attr-value"
+  >
+    <span
+      className="token punctuation"
+    >
+      ="
+    </span>
+    testValue
+    <span
+      className="token punctuation"
+    >
+      "
+    </span>
+  </span>
+</code>
+`;
+
+exports[`Utilities: ComponentPreview Attribute renders data attribute 1`] = `
+<code>
+  <span
+    className="token attr-name"
+  >
+    data-px-
+  </span>
+  <span
+    className="token attr-name"
+  >
+    test
+  </span>
+  <span
+    className="token attr-value"
+  >
+    <span
+      className="token punctuation"
+    >
+      ="
+    </span>
+    test
+    <span
+      className="token punctuation"
+    >
+      "
+    </span>
+  </span>
+</code>
+`;
+
+exports[`Utilities: ComponentPreview CodeFigure removes outer tags from component 1`] = `
+<ComponentPreview
+  codeFigure={true}
+  language="html"
+  removeOuterTag={true}
+>
+  <div>
+    <CodeFigure>
+      <figure>
+        <pre>
+          <PrismCode
+            className="language-html"
+            component="code"
+          >
+            <code
+              className="language-html"
+            >
+              &lt;h1&gt;test1&lt;/h1&gt;
+&lt;h1&gt;test1&lt;/h1&gt;
+            </code>
+          </PrismCode>
+        </pre>
+      </figure>
+    </CodeFigure>
+  </div>
+</ComponentPreview>
+`;
+
+exports[`Utilities: ComponentPreview CodeFigure renders css string 1`] = `
+<ComponentPreview
+  codeFigure={true}
+  language="css"
+>
+  <div>
+    <CodeFigure>
+      <figure>
+        <pre>
+          <PrismCode
+            className="language-css"
+            component="code"
+          >
+            <code
+              className="language-css"
+            >
+              color: red;
+            </code>
+          </PrismCode>
+        </pre>
+      </figure>
+    </CodeFigure>
+  </div>
+</ComponentPreview>
+`;
+
+exports[`Utilities: ComponentPreview CodeFigure renders multiple html tags 1`] = `
+<ComponentPreview
+  codeFigure={true}
+  language="html"
+>
+  <div>
+    <CodeFigure>
+      <figure>
+        <pre>
+          <PrismCode
+            className="language-html"
+            component="code"
+          >
+            <code
+              className="language-html"
+            >
+              &lt;h1&gt;test1&lt;/h1&gt;
+&lt;h2&gt;test2&lt;/h2&gt;
+            </code>
+          </PrismCode>
+        </pre>
+      </figure>
+    </CodeFigure>
+  </div>
+</ComponentPreview>
+`;
+
+exports[`Utilities: ComponentPreview CodeFigure renders multiple javascript strings 1`] = `
+<ComponentPreview
+  codeFigure={true}
+  language="javascript"
+>
+  <div>
+    <CodeFigure>
+      <figure>
+        <pre>
+          <PrismCode
+            className="language-javascript"
+            component="code"
+          >
+            <code
+              className="language-javascript"
+            >
+              const a = 12;
+const b = 1;
+const c = a + b;
+            </code>
+          </PrismCode>
+        </pre>
+      </figure>
+    </CodeFigure>
+  </div>
+</ComponentPreview>
+`;
+
+exports[`Utilities: ComponentPreview CodeFigure warns about unhandled children 1`] = `
+<ComponentPreview
+  codeFigure={true}
+  language="css"
+>
+  <div>
+    <CodeFigure>
+      <figure>
+        <pre>
+          <PrismCode
+            className="language-css"
+            component="code"
+          >
+            <code
+              className="language-css"
+            />
+          </PrismCode>
+        </pre>
+      </figure>
+    </CodeFigure>
+  </div>
+</ComponentPreview>
+`;
+
+exports[`Utilities: ComponentPreview PxScript renders 1`] = `
+<code>
+  <span>
+    px
+  </span>
+  <span
+    className="token punctuation"
+  >
+    .
+  </span>
+  <span>
+    test
+  </span>
+  <span
+    className="token punctuation"
+  >
+    .
+  </span>
+  <span
+    className="token function"
+  >
+    init
+  </span>
+  <span
+    className="token punctuation"
+  >
+    (
+  </span>
+  <span
+    className="token punctuation"
+  >
+    );
+  </span>
+</code>
+`;
+
+exports[`Utilities: ComponentPreview PxScript renders with multiple params 1`] = `
+<code>
+  <span>
+    px
+  </span>
+  <span
+    className="token punctuation"
+  >
+    .
+  </span>
+  <span>
+    test
+  </span>
+  <span
+    className="token punctuation"
+  >
+    .
+  </span>
+  <span
+    className="token function"
+  >
+    init
+  </span>
+  <span
+    className="token punctuation"
+  >
+    (
+  </span>
+  <span
+    key="0"
+  >
+    param1
+    <span
+      className="token punctuation"
+    >
+      , 
+    </span>
+  </span>
+  <span
+    key="1"
+  >
+    param2
+  </span>
+  <span
+    className="token punctuation"
+  >
+    );
+  </span>
+</code>
+`;
+
+exports[`Utilities: ComponentPreview PxScript renders with multiple subcomponents 1`] = `
+<code>
+  <span>
+    px
+  </span>
+  <span
+    className="token punctuation"
+  >
+    .
+  </span>
+  <span>
+    test
+  </span>
+  <span
+    className="token punctuation"
+  >
+    .
+  </span>
+  <span
+    key="0"
+  >
+    subTest
+    <span
+      className="token punctuation"
+    >
+      .
+    </span>
+  </span>
+  <span
+    key="1"
+  >
+    subTest2
+    <span
+      className="token punctuation"
+    >
+      .
+    </span>
+  </span>
+  <span
+    className="token function"
+  >
+    init
+  </span>
+  <span
+    className="token punctuation"
+  >
+    (
+  </span>
+  <span
+    className="token punctuation"
+  >
+    );
+  </span>
+</code>
+`;
+
+exports[`Utilities: ComponentPreview PxScript renders with params 1`] = `
+<code>
+  <span>
+    px
+  </span>
+  <span
+    className="token punctuation"
+  >
+    .
+  </span>
+  <span>
+    test
+  </span>
+  <span
+    className="token punctuation"
+  >
+    .
+  </span>
+  <span
+    className="token function"
+  >
+    init
+  </span>
+  <span
+    className="token punctuation"
+  >
+    (
+  </span>
+  <span
+    key="0"
+  >
+    param1
+  </span>
+  <span
+    className="token punctuation"
+  >
+    );
+  </span>
+</code>
+`;
+
+exports[`Utilities: ComponentPreview PxScript renders with subcomponents 1`] = `
+<code>
+  <span>
+    px
+  </span>
+  <span
+    className="token punctuation"
+  >
+    .
+  </span>
+  <span>
+    test
+  </span>
+  <span
+    className="token punctuation"
+  >
+    .
+  </span>
+  <span
+    key="0"
+  >
+    subTest
+    <span
+      className="token punctuation"
+    >
+      .
+    </span>
+  </span>
+  <span
+    className="token function"
+  >
+    init
+  </span>
+  <span
+    className="token punctuation"
+  >
+    (
+  </span>
+  <span
+    className="token punctuation"
+  >
+    );
+  </span>
+</code>
+`;
+
+exports[`Utilities: ComponentPreview does not render codeFigure when prop is false/not provided 1`] = `
+<ComponentPreview
+  language="html"
+  showCasePanel={true}
+>
+  <div>
+    <ShowCasePanel>
+      <div
+        className="showcase-panel"
+      >
+        <TestComponentH1>
+          <h1>
+            test1
+          </h1>
+        </TestComponentH1>
+      </div>
+    </ShowCasePanel>
+  </div>
+</ComponentPreview>
+`;
+
+exports[`Utilities: ComponentPreview does not render showCasePanel when prop is false/not provided 1`] = `
+<ComponentPreview
+  codeFigure={true}
+  language="html"
+>
+  <div>
+    <CodeFigure>
+      <figure>
+        <pre>
+          <PrismCode
+            className="language-html"
+            component="code"
+          >
+            <code
+              className="language-html"
+            >
+              &lt;h1&gt;test1&lt;/h1&gt;
+            </code>
+          </PrismCode>
+        </pre>
+      </figure>
+    </CodeFigure>
+  </div>
+</ComponentPreview>
+`;
+
+exports[`Utilities: ComponentPreview prop language other than javascript, css or html returns warning message 1`] = `
+<ComponentPreview
+  codeFigure={true}
+  language="test"
+>
+  <div>
+    <CodeFigure>
+      update switchcase!
+    </CodeFigure>
+  </div>
+</ComponentPreview>
+`;
+
+exports[`Utilities: ComponentPreview renders 1`] = `
+<ComponentPreview
+  codeFigure={true}
+  language="html"
+  showCasePanel={true}
+>
+  <div>
+    <ShowCasePanel>
+      <div
+        className="showcase-panel"
+      >
+        <TestComponentH1>
+          <h1>
+            test1
+          </h1>
+        </TestComponentH1>
+      </div>
+    </ShowCasePanel>
+    <CodeFigure>
+      <figure>
+        <pre>
+          <PrismCode
+            className="language-html"
+            component="code"
+          >
+            <code
+              className="language-html"
+            >
+              &lt;h1&gt;test1&lt;/h1&gt;
+            </code>
+          </PrismCode>
+        </pre>
+      </figure>
+    </CodeFigure>
+  </div>
+</ComponentPreview>
+`;

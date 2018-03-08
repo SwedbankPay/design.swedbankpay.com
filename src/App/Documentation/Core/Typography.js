@@ -6,7 +6,6 @@ import ComponentPreview from "../utils/ComponentPreview";
 import DocToc from "../utils/DocToc";
 
 const Fonts = () => {
-
     const removeRobotoCode = `html {
                                 font-family: GillSans, Calibri, Trebuchet, sans-serif;
                             }`;
@@ -191,3 +190,6 @@ const Typography = () => (
 );
 
 export default Typography;
+
+/* for testing */
+export { Fonts, Headings, Small, Lead, Inline, TextUtilities, Abbreviations, Blockquotes, TypographyText };

@@ -189,3 +189,6 @@ class Alerts extends Component {
 }
 
 export default Alerts;
+
+/* for testing */
+export { BasicUsage, AlertWithLink, AlertWithIcon, ClosingTheAlert, ExtendedUsage, UsageWithJavascript, AlertsText };

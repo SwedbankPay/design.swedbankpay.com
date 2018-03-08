@@ -48,6 +48,12 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "AddComponentToRoutes": [Function],
+                  "AddingJavaScript": [Function],
+                  "AddingStyles": [Function],
+                  "ContributingText": [Function],
+                  "CreateADocumentationPage": [Function],
+                  "CreatingYourComponent": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/getting-started/contributing",
@@ -79,6 +85,15 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "Abbreviations": [Function],
+                  "Blockquotes": [Function],
+                  "Fonts": [Function],
+                  "Headings": [Function],
+                  "Inline": [Function],
+                  "Lead": [Function],
+                  "Small": [Function],
+                  "TextUtilities": [Function],
+                  "TypographyText": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/core/typography",
@@ -96,6 +111,13 @@ exports[`Documentation: index renders 1`] = `
             Array [
               Object {
                 "component": Object {
+                  "AlertWithIcon": [Function],
+                  "AlertWithLink": [Function],
+                  "AlertsText": [Function],
+                  "BasicUsage": [Function],
+                  "ClosingTheAlert": [Function],
+                  "ExtendedUsage": [Function],
+                  "UsageWithJavascript": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/components/alerts",
@@ -103,6 +125,10 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "BasicBreadCrumb": [Function],
+                  "BreadcrumbText": [Function],
+                  "DisabledBreadcrumb": [Function],
+                  "SmallBreadCrumb": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/components/breadcrumb",
@@ -110,6 +136,16 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "ActiveState": [Function],
+                  "ButtonLoader": [Function],
+                  "ButtonsText": [Function],
+                  "DisabledState": [Function],
+                  "Examples": [Function],
+                  "OutlineButtons": [Function],
+                  "Sizes": [Function],
+                  "UsageWithIcons": [Function],
+                  "UsageWithJavascript": [Function],
+                  "UsageWithOtherTags": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/components/buttons",
@@ -117,6 +153,11 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "BasicUsage": [Function],
+                  "LoadersText": [Function],
+                  "MutedLoader": [Function],
+                  "Sizes": [Function],
+                  "UsageWithJavascript": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/components/loaders",

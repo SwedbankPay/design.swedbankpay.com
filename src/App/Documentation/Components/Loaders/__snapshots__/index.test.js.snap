@@ -1,0 +1,308 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Documentation: Loaders Basic Usage renders 1`] = `
+<div>
+  <h2
+    id="basic-usage"
+  >
+    Basic usage
+  </h2>
+  <p>
+    Basic usage...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Loader
+      size="default"
+      visible={true}
+    />
+  </ComponentPreview>
+</div>
+`;
+
+exports[`Documentation: Loaders Loaders Text renders 1`] = `
+<div
+  className="col-md-12 col-lg-10 doc-body"
+>
+  <p
+    className="lead"
+  >
+    Use loaders...
+  </p>
+  <BasicUsage />
+  <Sizes />
+  <MutedLoader />
+  <UsageWithJavascript />
+</div>
+`;
+
+exports[`Documentation: Loaders Muted Loader renders 1`] = `
+<div>
+  <h2
+    id="muted-loader"
+  >
+    Muted loader
+  </h2>
+  <p>
+    Use class 
+    <code
+      className="token property"
+    >
+      .loader-muted
+    </code>
+     to mute the loader...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Loader
+      id="test"
+      muted={true}
+      size="default"
+      visible={true}
+    />
+  </ComponentPreview>
+</div>
+`;
+
+exports[`Documentation: Loaders Sizes renders 1`] = `
+<div>
+  <h2
+    id="sizes"
+  >
+    Sizes
+  </h2>
+  <p>
+    In addition to 
+    <code
+      className="token property"
+    >
+      .loader-default
+    </code>
+     you can use 
+    <code
+      className="token property"
+    >
+      .loader-small
+    </code>
+     and 
+    <code
+      className="token property"
+    >
+      .loader-large
+    </code>
+     to decrease or increase the size of the loader.
+  </p>
+  <h3>
+    Small
+  </h3>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Loader
+      size="small"
+      visible={true}
+    />
+  </ComponentPreview>
+  <h3>
+    Large
+  </h3>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Loader
+      size="large"
+      visible={true}
+    />
+  </ComponentPreview>
+</div>
+`;
+
+exports[`Documentation: Loaders Usage With Javascript renders 1`] = `
+<div>
+  <h2
+    id="usage-with-javascript"
+  >
+    Usage with javascript
+  </h2>
+  <p>
+    To interact with the loader-component with javascript...
+  </p>
+  <h3>
+    Show loaders
+  </h3>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    px.loader.show();
+    
+
+    // OR
+    
+
+    px.loader.show(id);
+  </ComponentPreview>
+  <h3>
+    Hide loaders
+  </h3>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    px.loader.hide();
+    
+
+    // OR
+    
+
+    px.loader.hide(id);
+  </ComponentPreview>
+  <h3>
+    Methods
+  </h3>
+  <table>
+    <thead>
+      <tr>
+        <th>
+          Method
+        </th>
+        <th>
+          Description
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <PxScript
+            component="loader"
+            func="show"
+          />
+        </td>
+        <td>
+          Gives all rendered loaders the class 
+          <code
+            className="token property"
+          >
+            .in
+          </code>
+          , effectively giving them the css property 
+          <PrismCode
+            className="language-css"
+            component="code"
+          >
+            display: inline-block;
+          </PrismCode>
+          .
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <PxScript
+            component="loader"
+            func="show"
+            params={
+              Array [
+                "id",
+              ]
+            }
+          />
+        </td>
+        <td>
+          Gives the specified loader the class 
+          <code
+            className="token property"
+          >
+            .in
+          </code>
+          , giving it the css property 
+          <PrismCode
+            className="language-css"
+            component="code"
+          >
+            display: inline-block;
+          </PrismCode>
+          . If no loader with the specified id is rendered to the DOM, the method does nothing.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <PxScript
+            component="loader"
+            func="hide"
+          />
+        </td>
+        <td>
+          Removes the class 
+          <code
+            className="token property"
+          >
+            .in
+          </code>
+           from all rendered loaders, effectively giving them the css property 
+          <PrismCode
+            className="language-css"
+            component="code"
+          >
+            display: none;
+          </PrismCode>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <PxScript
+            component="loader"
+            func="hide"
+            params={
+              Array [
+                "id",
+              ]
+            }
+          />
+        </td>
+        <td>
+          Removes the class 
+          <code
+            className="token property"
+          >
+            .in
+          </code>
+           from the loader specified by id, giving it the css property 
+          <PrismCode
+            className="language-css"
+            component="code"
+          >
+            display: none;
+          </PrismCode>
+          . If no alert with the specified id is rendered to the DOM, the method does nothing.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Documentation: Loaders renders 1`] = `
+<div
+  className="doc-container"
+>
+  <div
+    className="row"
+  >
+    <LoadersText />
+    <DocToc
+      component={[Function]}
+    />
+  </div>
+</div>
+`;

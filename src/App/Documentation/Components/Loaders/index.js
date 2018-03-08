@@ -126,3 +126,6 @@ const Loaders = () => {
 };
 
 export default Loaders;
+
+/* for testing */
+export { BasicUsage, Sizes, MutedLoader, UsageWithJavascript, LoadersText };

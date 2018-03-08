@@ -55,3 +55,6 @@ class SelectPanel extends Component {
 }
 
 export default SelectPanel;
+
+/* for testing */
+export { SearchBox };

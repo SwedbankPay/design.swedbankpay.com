@@ -1,20 +1,35 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import SelectPanel from "./index";
+import { shallow } from "enzyme";
 
-describe("Main: SelectPanel", () => {
+import SelectPanel from "./index";
+import { SearchBox } from "./index";
+
+describe("Documentation: SelectPanel", () => {
     it("is defined", () => {
         expect(SelectPanel).toBeDefined();
     });
-    // it("renders without crashing", () => {
-    //     const div = document.createElement("div");
 
-    //     const location = {
-    //         pathname: "asd"
-    //     };
+    it("renders", () => {
+        const location = { pathname: "test" };
+        const wrapper = shallow(
+            <SelectPanel location={location} />
+        );
 
-    //     ReactDOM.render(<SelectPanel location={location} />, div);
-    //     ReactDOM.unmountComponentAtNode(div);
-    // });
+        expect(wrapper).toMatchSnapshot();
+    });
+
+    describe("SearchBox", () => {
+        it("is defined", () => {
+            expect(SearchBox).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(
+                <SearchBox />
+            );
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
 });
 

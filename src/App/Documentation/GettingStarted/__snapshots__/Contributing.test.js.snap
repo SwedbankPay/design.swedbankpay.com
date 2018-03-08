@@ -1,0 +1,668 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GettingStarted: Contributing Add Component To Routes renders 1`] = `
+<div>
+  <h2
+    id="add-component-to-routes"
+  >
+    Add component to routes
+  </h2>
+  <p>
+    In 
+    <code
+      className="token property"
+    >
+      ./src/App/routes/docs.js
+    </code>
+     under the components object add the following:
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    /**
+
+     * Components
+
+     */
+
+    {
+
+        title: "Components",
+
+        path: "/docs/components",
+
+        redirect: "/docs/components/alerts",
+
+        routes: [
+
+            ...
+
+            ...
+
+            // ADD THIS
+
+            {
+
+                title: "My Example Documentation Component",
+
+                path: "/docs/components/my-example-documentation-component",
+
+                component: require("../Documentation/Components/MyExampleDocumentationComponent")
+
+            },
+
+            ...
+
+            ...
+
+        ]
+
+    },
+
+  </ComponentPreview>
+  <p>
+    You will now be able to go to the route you provided to preview your component. Run 
+    <code
+      className="token property"
+    >
+      npm start
+    </code>
+     if you haven
+    '
+    t already done so, and navigate to 
+    <code
+      className="token property"
+    >
+      localhost:3000/docs/components/my-example-documentation-component
+    </code>
+     to see your component in action.
+  </p>
+</div>
+`;
+
+exports[`GettingStarted: Contributing Adding JavaScript renders 1`] = `<h2 />`;
+
+exports[`GettingStarted: Contributing Adding JavaScript renders 2`] = `<p />`;
+
+exports[`GettingStarted: Contributing Adding JavaScript renders 3`] = `
+<div>
+  <h3>
+    Create a script file for your component
+  </h3>
+  <p>
+    Create a new file under 
+    <code
+      className="token property"
+    >
+      ./src/px-script/[MyExampleComponent]/
+    </code>
+     for your component, name it 
+    <code
+      className="token property"
+    >
+      index.js
+    </code>
+    :
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    const int = () =&gt; {
+
+    alert("MyExampleComponent was initialized");
+
+    };
+
+
+    const MyExampleComponent = {
+
+    init
+
+    };
+
+
+    export default MyExampleComponent;
+  </ComponentPreview>
+  <p>
+    Note: All essential functionality for your component needs to be called within the 
+    <code
+      className="token property"
+    >
+      init
+    </code>
+     method.
+  </p>
+</div>
+`;
+
+exports[`GettingStarted: Contributing Adding JavaScript renders 4`] = `
+<div>
+  <h3>
+    Add your components script to px-script
+  </h3>
+  <p>
+    Open 
+    <code
+      className="token property"
+    >
+      ./src/px-script/index.js
+    </code>
+     and add your component:
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    ...
+
+    import MyExampleComponent from "./MyExampleComponent";
+
+    ...
+
+    const px = {
+
+    ...
+
+    MyExampleComponent,
+
+    ...
+
+    };
+
+
+    ...
+
+    export { ... MyExampleComponent, ... }
+
+  </ComponentPreview>
+</div>
+`;
+
+exports[`GettingStarted: Contributing Adding JavaScript renders 5`] = `
+<div>
+  <h2>
+    Initializing the script in the documentation
+  </h2>
+  <p>
+    Considering the documentation is built in react your documentation component will load after 
+    <code
+      className="token property"
+    >
+      px-script
+    </code>
+     runs it
+    '
+    s 
+    <code
+      className="token property"
+    >
+      initAll
+    </code>
+     method, you will need to run your component
+    '
+    s init method when the component actually renders.
+  </p>
+  <p>
+    You can do this by slightly modifying the 
+    <code
+      className="token property"
+    >
+      MyExampleDocumentationComponent
+    </code>
+    :
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    //example documentation component
+
+
+    // change this line
+
+    import React, { Component } from "react";
+
+    ...
+
+    // import your components script
+
+    import { MyExampleComponent } from "../../../../px-script";
+
+
+    ...
+
+    ...
+
+    // modify MyExampleDocumentationComponent
+
+    class MyExampleDocumentationComponent extends Component {
+
+    componentDidMount () {
+
+    MyExampleComponent.init();
+
+    }
+
+
+    render() {
+
+    return (
+
+    &lt;div className="doc-container"&gt;
+
+    				&lt;div className="row"&gt;
+
+    					&lt;MyExampleDocumentationComponentText /&gt;
+
+    					&lt;DocToc component={MyExampleDocumentationComponentText} /&gt;
+
+    				&lt;/div&gt;
+
+    			&lt;/div&gt;
+
+    )
+
+    }
+
+    }
+
+  </ComponentPreview>
+</div>
+`;
+
+exports[`GettingStarted: Contributing Adding JavaScript renders 6`] = `
+<div>
+  <h2
+    id="adding-javascript"
+  >
+    Adding javascript
+  </h2>
+  <p>
+    If your component needs javascript to run, you will need to add the javascript to the 
+    <code
+      className="token property"
+    >
+      px-script
+    </code>
+  </p>
+  <CreateAScriptFile />
+  <AddScriptToPX />
+  <InitializingTheScript />
+</div>
+`;
+
+exports[`GettingStarted: Contributing Adding Styles renders 1`] = `<h2 />`;
+
+exports[`GettingStarted: Contributing Adding Styles renders 2`] = `<p />`;
+
+exports[`GettingStarted: Contributing Adding Styles renders 3`] = `
+<div>
+  <h3>
+    Importing the styles
+  </h3>
+  <p>
+    Import it in the appropriate root-file (
+    <code
+      className="token property"
+    >
+      px.less
+    </code>
+     for the core styles, under 
+    <code
+      className="token property"
+    >
+      /themes
+    </code>
+     if the component is going to be part of a specific theme).
+  </p>
+  <p>
+    Assuming you are creating a core component the import would look like this:
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="css"
+  >
+    // px.less
+
+    ...
+
+    ...
+
+
+    // Components
+
+    ...
+
+    ...
+
+    @import "components/my-example-component";
+
+    ...
+  </ComponentPreview>
+</div>
+`;
+
+exports[`GettingStarted: Contributing Adding Styles renders 4`] = `
+<div>
+  <h3>
+    Creating variables
+  </h3>
+  <p>
+    To add custom variables to your component modify 
+    <code
+      className="token property"
+    >
+      ./src/less/_variables.less
+    </code>
+    , and add a section for your component. Add it alphabetically and update the table of contents.
+  </p>
+  <p>
+    Adding a section should look like this:
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="css"
+  >
+    // _variables.less
+
+
+    // [number]. My Example Component
+
+    // ==========================================================================
+
+
+    @my-example-component-color: @gray-3;
+
+    @my-example-component-background: @gray-8;
+
+    @my-example-component-padding: 1rem;
+
+    @my-example-component-font-family: "Arial";
+
+  </ComponentPreview>
+</div>
+`;
+
+exports[`GettingStarted: Contributing Adding Styles renders 5`] = `<p />`;
+
+exports[`GettingStarted: Contributing Adding Styles renders 6`] = `<p />`;
+
+exports[`GettingStarted: Contributing Adding Styles renders 7`] = `
+<div>
+  <h2
+    id="adding-styles"
+  >
+    Adding styles
+  </h2>
+  <p>
+    To add styling for your component create a new file in 
+    <code
+      className="token property"
+    >
+      ./src/less/components/
+    </code>
+    , name it 
+    <code
+      className="token property"
+    >
+      my-example-component.less
+    </code>
+    .
+  </p>
+  <ImportingTheStyles />
+  <CreatingVariables />
+  <p>
+    Your the styles for 
+    <code
+      className="token property"
+    >
+      MyExampleComponent
+    </code>
+     should now be included properly, and you should see changes immediatly while running dev.
+  </p>
+  <p>
+    When writing styles for your component, try to use 
+    <code
+      className="token property"
+    >
+      rem
+    </code>
+     (
+    <code
+      className="token property"
+    >
+      1rem
+    </code>
+     = ~
+    <code
+      className="token property"
+    >
+      16px
+    </code>
+    ) and the predefined variables (only if it makes sense of course) as much as possible. And follow the linting rules set by 
+    <code
+      className="token property"
+    >
+      ./.stylelintrc
+    </code>
+    .
+  </p>
+</div>
+`;
+
+exports[`GettingStarted: Contributing Contributing Text renders 1`] = `
+<div
+  className="col-md-12 col-lg-10"
+>
+  <p
+    className="lead"
+  >
+    To create a new component
+  </p>
+  <CreatingYourComponent />
+  <CreateADocumentationPage />
+  <AddComponentToRoutes />
+  <AddingStyles />
+  <AddingJavaScript />
+</div>
+`;
+
+exports[`GettingStarted: Contributing Create A Documentation Page renders 1`] = `
+<div>
+  <h2
+    id="create-a-documentation-page"
+  >
+    Create a documentation page
+  </h2>
+  <p>
+    Create a new file under 
+    <code
+      className="token property"
+    >
+      ./src/App/Documentation/Components/[MyExampleDocumentationComponent]/
+    </code>
+     for your component, call it 
+    <code
+      className="token property"
+    >
+      index.js
+    </code>
+    :
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    //example documentation component
+
+
+    import React from "react";
+
+
+    import ComponentPreview from "../../utils/ComponentPreview";
+    import ComponentPreview from "../../utils/DocToc";
+    import MyExampleComponent from "../../../components/MyExampleComponent";
+
+
+    const MyExampleDocumentationComponentText = () =&gt; (
+
+        &lt;div className="col-md-12 col-lg-10 doc-body"&gt;
+
+            &lt;p className="lead"&gt;This is the documentation for My Example Component.&lt;/p&gt;
+
+            &lt;h2 id="example-usage"&gt;Example usage&lt;/h2&gt;
+
+            &lt;ComponentPreview language="html" showCasePanel={true} codeFigure={true}&gt;
+
+                &lt;MyExampleComponent type="dark" title="My Example Component" separator={true} /&gt;
+
+            &lt;/ComponentPreview&gt;
+
+        &lt;/div&gt;
+
+    );
+
+
+    const MyExampleDocumentationComponent = () =&gt; (
+
+        &lt;div className="doc-container"&gt;
+
+            &lt;div className="row"&gt;
+
+                &lt;MyExampleDocumentationComponentText /&gt;
+
+                &lt;DocToc component={MyExampleDocumentationComponentText} /&gt;
+
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+    );
+
+
+    export default MyExampleDocumentationComponent;
+  </ComponentPreview>
+  <p>
+    Use the custom 
+    <code
+      className="token property"
+    >
+      ComponentPreview
+    </code>
+     component to preview your component. It has three props, 
+    <code
+      className="token property"
+    >
+      language
+    </code>
+    , 
+    <code
+      className="token property"
+    >
+      showCasePanel
+    </code>
+     and 
+    <code
+      className="token property"
+    >
+      codeFigure
+    </code>
+    , for this example we are goin to be using all three.
+  </p>
+  <p>
+    We are also using the \`DocToc\` component to add a dynamic table of contents to the documentation of your component. This component scans the provided component for 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;h2&gt;
+    </PrismCode>
+    -tags and creates anchors for easier navigation. Just remember to add an id to the 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;h2&gt;
+    </PrismCode>
+    -tag.
+  </p>
+</div>
+`;
+
+exports[`GettingStarted: Contributing Creating Your Component renders 1`] = `
+<div>
+  <h2
+    id="creating-your-component"
+  >
+    Creating your component
+  </h2>
+  <p>
+    Create a new file under 
+    <code
+      className="token property"
+    >
+      ./src/App/components/[MyExampleComponent]/
+    </code>
+     for your component, name it 
+    <code
+      className="token property"
+    >
+      index.js
+    </code>
+    :
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    //example component
+
+
+    import React from "react";
+    import PropTypes from "prop-types";
+
+
+    const MyExampleComponent = ({ type, title, separator }) =&gt; (
+
+    &lt;div className={\`well well-\${type}\`}&gt;
+
+            &lt;h3&gt;{title}&lt;/h3&gt;
+
+            {separator ? &lt;hr /&gt; : null}
+
+            This is my example component in a well.
+
+        &lt;/div&gt;
+
+    );
+
+
+    MyExampleComponent.propTypes = {
+
+    type: PropTypes.oneOf(["light", "dark"]).isRequired,
+    title: PropTypes.string.isRequired,
+    separator: PropTypes.bool
+    };
+
+
+    export default MyExampleComponent;
+  </ComponentPreview>
+</div>
+`;
+
+exports[`GettingStarted: Contributing renders 1`] = `
+<div
+  className="doc-container"
+>
+  <div
+    className="row"
+  >
+    <ContributingText />
+    <DocToc
+      component={[Function]}
+    />
+  </div>
+</div>
+`;

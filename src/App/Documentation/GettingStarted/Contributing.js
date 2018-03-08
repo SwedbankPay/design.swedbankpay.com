@@ -245,3 +245,6 @@ const Contributing = () => (
 );
 
 export default Contributing;
+
+/* for testing */
+export { CreatingYourComponent, CreateADocumentationPage, AddComponentToRoutes, AddingStyles, AddingJavaScript, ContributingText };
