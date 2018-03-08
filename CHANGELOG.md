@@ -2,13 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.1.3] - 2018-03-??
+## [0.1.3] - 2018-03-08
 
 ### Added
 
 - Added central configuration for routes, routes are now added dynamically when configured in `./src/App/routes/`.
 - Added `CONTRIBUTING.MD`.
 - Added Contributing documentation component under `GettingStarted`.
+- Added stylelint to project.
+- Added configuration files for stylelint (`.stylelintrc` and `.stylelintignore`).
 
 ### Changed
 
@@ -16,6 +18,7 @@ All notable changes to this project will be documented in this file.
 - Changed `SelectPanel` so that is now updated with the routes from `/routes/docs.js` and not from the separate adjacent `routes.js`.
 - Changed Button component: Renamed prop `color` to `type`, the previous prop `type` has been renamed `btnType`.
 - Changed prop `type` on Alert and Button component from `PropTypes.string` to `PropTypes.oneOf` (enum).
+- Changed `npm` scripts to contain linting by stylelint
 
 ### Removed
 
