@@ -11,8 +11,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    .clearfix();
     z-index: @topbar-z-index;
+    .clearfix();
 }
 
 .topbar-logo {
@@ -20,13 +20,13 @@ body {
     float: left;
     margin-top: 20px;
     margin-left: 20px;
-    
+
     &.logo-default {
         background: url("../../img/px-logo.svg") no-repeat;
         background-size: contain;
         width: 125px;
     }
-    
+
     &.logo-mypayex {
         background: url("../../img/my-px-logo.svg") no-repeat;
         background-size: contain;
@@ -80,8 +80,8 @@ body {
 }
 
 .topbar-nav-right {
-    -webkit-transition: right .3s ease;
-    transition: right .3s ease;
+    -webkit-transition: right 0.3s ease;
+    transition: right 0.3s ease;
     right: -@topbar-nav-width;
 
     &.topbar-nav-active {
@@ -90,8 +90,8 @@ body {
 }
 
 .topbar-nav-left {
-    -webkit-transition: left .3s ease;
-    transition: left .3s ease;
+    -webkit-transition: left 0.3s ease;
+    transition: left 0.3s ease;
     left: -@topbar-nav-width;
 
     &.topbar-nav-active {
@@ -100,14 +100,14 @@ body {
 }
 
 .topbar-nav-slider {
-    .reset-list();
     margin: 15px 0 0;
-    .clearfix(); // TODO: This should be in javascript
     width: @topbar-nav-width * 3;
-    -webkit-transition: margin-left .3s ease;
-    transition: margin-left .3s ease;
+    -webkit-transition: margin-left 0.3s ease;
+    transition: margin-left 0.3s ease;
+    .reset-list();
+    .clearfix(); // TODO: This should be in javascript
 
-    >li {
+    > li {
         display: block;
         float: left;
         width: @topbar-nav-width;
@@ -120,7 +120,7 @@ body {
     padding: 20px;
     border-bottom: 1px solid @gray-2;
 
-    >li {
+    > li {
         display: inline-block;
         padding-left: 20px;
         position: relative;
@@ -140,7 +140,7 @@ body {
             color: @gray-7;
         }
 
-        >a {
+        > a {
             color: @gray-7;
             font-size: @font-size-small;
             text-transform: uppercase;
@@ -190,7 +190,7 @@ body {
             padding-bottom: 5px;
         }
 
-        >ul {
+        > ul {
             list-style: none;
             padding: 0;
         }

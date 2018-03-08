@@ -9,11 +9,13 @@
         @item: ~".col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}";
         .col((@index + 1), @item);
     }
+
     .col(@index, @list) when (@index =< @grid-columns) {
         // general; "=<" isn't a typo
         @item: ~".col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}";
         .col((@index + 1), ~"@{list}, @{item}");
     }
+
     .col(@index, @list) when (@index > @grid-columns) {
         // terminal
         @{list} {
@@ -23,6 +25,7 @@
             padding-right: (@grid-gutter-width / 2);
         }
     }
+
     .col(1); // kickstart it
 }
 
@@ -32,17 +35,20 @@
         @item: ~".col-@{class}-@{index}";
         .col((@index + 1), @item);
     }
+
     .col(@index, @list) when (@index =< @grid-columns) {
         // general
         @item: ~".col-@{class}-@{index}";
         .col((@index + 1), ~"@{list}, @{item}");
     }
+
     .col(@index, @list) when (@index > @grid-columns) {
         // terminal
         @{list} {
             float: left;
         }
     }
+
     .col(1); // kickstart it
 }
 

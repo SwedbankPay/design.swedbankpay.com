@@ -49,9 +49,9 @@ We can maybe use [SemVer](http://semver.org/) for versioning.
 
 ## Code style
 
-Coding style rules set in `./.eslintrc`.
+Coding style rules set in `./.eslintrc` & `./.stylelintrc`.
 
-__*Make sure to follow the syntax rules enforced by eslint.*__
+__*Make sure to follow the syntax rules enforced by eslint & stylelint.*__
 
 ## Places to find information
 
@@ -79,5 +79,6 @@ __*Make sure to follow the syntax rules enforced by eslint.*__
 
 * `.babelrc` - [Babel](https://babeljs.io/) configuration.
 * `.eslintrc` - [Eslint](https://eslint.org/) configuration.
+* `.stylelintrc` - [Stylelint](https://stylelint.io/) configuration.
 * `.eslintignore` - List of files/directories eslint will ignore (similar to .gitignore).
 * `webpack.config.js` - [Webpack](https://webpack.js.org/) configuration.

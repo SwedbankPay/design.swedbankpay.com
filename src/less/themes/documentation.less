@@ -31,7 +31,7 @@
 
 .sidebar-heading {
     background: darken(@brand-primary, 5%);
-    box-shadow: 1px 0px 0px 0px darken(@brand-primary, 5%);
+    box-shadow: 1px 0 0 0 darken(@brand-primary, 5%);
     text-align: center;
     height: 80px;
 
@@ -50,7 +50,7 @@ nav {
         margin-bottom: 1rem;
 
         a {
-            padding: .25rem 2.25rem;
+            padding: 0.25rem 2.25rem;
 
             &.active {
                 outline: none;
@@ -63,6 +63,7 @@ nav {
                 color: @brand-primary;
             }
         }
+
         .nav-heading {
             font-size: 1.15rem;
             display: flex;
@@ -86,6 +87,7 @@ nav {
             overflow: hidden;
             transition: max-height 0.2s;
         }
+
         &.active {
             .nav-heading {
                 a {
@@ -112,8 +114,9 @@ nav {
     padding-right: 0;
     background: @background-white;
     min-height: calc(~"100vh - 150px");
-    border-left: 1px solid rgba(0, 0, 0, .1);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 .view-heading {
     background: @brand-primary;
     height: 80px;
@@ -137,14 +140,14 @@ nav {
 
 .doc-search {
     padding: 1rem 15px;
-    border-bottom: 1px solid rgba(0, 0, 0, .075);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.075);
 
     .doc-search-input {
-        border-radius: .25rem;
+        border-radius: 0.25rem;
 
         &:focus {
             outline: 0;
-            box-shadow: 0px 0px 2px 2px rgba(45, 169, 68, 0.5);
+            box-shadow: 0 0 2px 2px rgba(45, 169, 68, 0.5);
         }
     }
 }
@@ -162,13 +165,13 @@ nav {
     position: sticky;
     top: 100px;
     margin-top: -2rem;
-    
+
     ul {
         list-style: none;
         padding-left: 0;
-        
+
         li {
-            border-left: 1px solid rgba(0, 0, 0, .1);
+            border-left: 1px solid rgba(0, 0, 0, 0.1);
             padding-left: 1rem;
 
             &.active {
@@ -182,14 +185,14 @@ nav {
 .showcase-panel {
     background-color: @white;
     padding: 24px;
-    margin: .5rem 0 1rem 0;
+    margin: 0.5rem 0 1rem 0;
     border-radius: 2px;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 }
 
 code {
-    padding: .1rem;
-    border-radius: .3rem;
+    padding: 0.1rem;
+    border-radius: 0.3rem;
     white-space: normal;
     background: @background-code;
 }

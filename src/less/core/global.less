@@ -9,11 +9,12 @@
 // For recommendations on resolving such conflicts, see
 // http://getbootstrap.com/getting-started/#third-box-sizing
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
+
 *:before,
 *:after {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 
@@ -21,7 +22,7 @@
 
 html {
     // font-size: 10px;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     min-height: 100%;
 }
 
@@ -53,16 +54,17 @@ a {
 
     &:hover,
     &:focus {
-    color: darken(@brand-primary, 10%);
-    text-decoration: underline;
+        color: darken(@brand-primary, 10%);
+        text-decoration: underline;
     }
 
-    &:active, &:hover {
-    outline: 0;
+    &:active,
+    &:hover {
+        outline: 0;
     }
 
     &:focus {
-    .tab-focus();
+        .tab-focus();
     }
 }
 
@@ -113,9 +115,10 @@ ul,
 ol {
     margin-top: 0;
     margin-bottom: @base-margin;
+
     ul,
     ol {
-    margin-bottom: 0;
+        margin-bottom: 0;
     }
 }
 
@@ -129,13 +132,13 @@ ol {
 
 // Inline turns list items into inline-block
 .list-inline {
-    .list-unstyled();
     margin-left: -5px;
+    .list-unstyled();
 
     > li {
-    display: inline-block;
-    padding-left: 5px;
-    padding-right: 5px;
+        display: inline-block;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 }
 
@@ -150,7 +153,7 @@ ol {
     margin: -1px;
     padding: 0;
     overflow: hidden;
-    clip: rect(0,0,0,0);
+    clip: rect(0, 0, 0, 0);
     border: 0;
 }
 
@@ -161,12 +164,12 @@ ol {
 .sr-only-focusable {
     &:active,
     &:focus {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    clip: auto;
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        clip: auto;
     }
 }
 

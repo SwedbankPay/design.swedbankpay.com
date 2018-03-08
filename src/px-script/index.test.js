@@ -10,9 +10,9 @@ describe("px-script: index", () => {
         // to prevent console warning in console
         console.warn = jest.fn();
 
-        const DOMContentLoaded_event = document.createEvent("Event");
-        DOMContentLoaded_event.initEvent("DOMContentLoaded", true, true);
-        window.document.dispatchEvent(DOMContentLoaded_event);
+        const DOMContentLoadedEvent = document.createEvent("Event");
+        DOMContentLoadedEvent.initEvent("DOMContentLoaded", true, true);
+        window.document.dispatchEvent(DOMContentLoadedEvent);
 
         // TODO: Add expect statement here to make sure script.initAll is being run on "DOMContentLoaded"
     });

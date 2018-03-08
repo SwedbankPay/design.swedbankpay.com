@@ -3,16 +3,16 @@
     background-color: @background;
     border-color: darken(@background, 5%);
 
-    .alert-heading{
+    .alert-heading {
         // margin-top: 0;
         color: @color;
     }
 
-    .alert-text{
+    .alert-text {
         color: @color;
     }
 
-    .alert-link{
+    .alert-link {
         color: darken(@color, 20%);
     }
 
@@ -28,10 +28,10 @@
     margin-top: 0;
     margin-bottom: 1rem;
     border: 1px solid transparent;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     display: none;
 
-    &.in{
+    &.in {
         display: block;
     }
 
@@ -55,15 +55,15 @@
         .alert-variant(@state-error, lighten(@state-error, 50%));
     }
 
-    &.alert-light{
+    &.alert-light {
         .alert-variant(@gray-5, @gray-10)
     }
 
-    &.alert-default{
+    &.alert-default {
         .alert-variant(@gray-2, @gray-8)
     }
 
-    .alert-heading{
+    .alert-heading {
         margin: 0;
     }
 
@@ -71,13 +71,13 @@
         margin-bottom: 0;
     }
 
-    .alert-icon{
+    .alert-icon {
         position: absolute;
         left: 15px;
         top: 17px;
     }
 
-    .alert-close{
+    .alert-close {
         position: absolute;
         cursor: pointer;
         right: 15px;
