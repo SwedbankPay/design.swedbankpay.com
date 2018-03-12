@@ -5,25 +5,34 @@ import PrismCode from "react-prism";
 import jsbeautifier from "js-beautify";
 
 const ComponentPreview = ({ children, language, removeOuterTag, showCasePanel, codeFigure }) => {
+    // TODO: This is stupid, find a better way to do this [EH]
+    // should be possible with React 16.2
+    // https://stackoverflow.com/questions/33766085/how-to-avoid-extra-wrapping-div-in-react
+    const _removeOuterTag = element => {
+        const div = document.createElement("div");
+        div.innerHTML = ReactDOMServer.renderToStaticMarkup(element);
+        return div.firstElementChild.innerHTML;
+
+    };
+
     const CodeFigure = () => {
         let code = "";
 
         if (language === "html" && typeof children.map === "function") {
             children.map(child => {
                 if (removeOuterTag) {
-                    // TODO: This is stupid, find a better way to do this [EH]
-                    // should be possible with React 16.2
-                    // https://stackoverflow.com/questions/33766085/how-to-avoid-extra-wrapping-div-in-react
-                    const div = document.createElement("div");
-                    div.innerHTML = ReactDOMServer.renderToStaticMarkup(child);
-                    code += div.firstElementChild.innerHTML;
+                    code += _removeOuterTag(child);
                 } else {
                     code += ReactDOMServer.renderToStaticMarkup(child);
                 }
             });
 
         } else if (language === "html") {
-            code = ReactDOMServer.renderToStaticMarkup(children);
+            if (removeOuterTag) {
+                code += _removeOuterTag(children);
+            } else {
+                code += ReactDOMServer.renderToStaticMarkup(children);
+            }
         } else {
             switch (typeof children) {
                 case "string":
@@ -42,7 +51,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, showCasePanel, c
                 code = jsbeautifier.html_beautify(code);
                 break;
             case "css":
-                // code = jsbeautifier.css_beautify(code);
+                code = jsbeautifier.css_beautify(code);
                 break;
             case "javascript":
                 code = jsbeautifier.js_beautify(code, {

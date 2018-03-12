@@ -123,7 +123,7 @@ const UsageWithIcons = () => (
         <h2 id="usage-with-icons">Usage with icons</h2>
         <p>To use a button with an icon... Read more about icon usage here <Link to="/docs/core/icons">here</Link>.</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-            <ButtonComponent icon="cloud" type="default" label="Default" />{"\n"}
+            <ButtonComponent icon="cloud" type="default" label="Default" />{"\n\n"}
             <ButtonComponent icon="cloud" type="brand" label="Brand" />{"\n"}
         </ComponentPreview>
     </div>

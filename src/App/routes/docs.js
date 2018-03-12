@@ -73,6 +73,11 @@ export default [
                 title: "Loaders",
                 path: "/docs/components/loaders",
                 component: require("../Documentation/Components/Loaders")
+            },
+            {
+                title: "Modal",
+                path: "/docs/components/modal",
+                component: require("../Documentation/Components/Modal")
             }
         ]
     },

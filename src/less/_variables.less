@@ -13,8 +13,9 @@
 // ===============
 //  5. Breadcrumb
 //  6. Button
-//  7. Tables
-//  8. Topbar
+//  7. Modal
+//  8. Tables
+//  9. Topbar
 
 // ==========================================================================
 //
@@ -115,6 +116,13 @@
 @border-radius-base:                    0.25rem;
 @border-radius-large:                   0.3rem;
 @border-radius-small:                   0.2rem;
+
+
+/* Z-index master list */
+
+@zindex-topbar:                         500;
+@zindex-modal-backdrop:                 1040;
+@zindex-modal:                          1050;
 
 
 // 3. Typography
@@ -317,7 +325,31 @@
 @btn-link-disabled-color: @gray-6;
 
 
-// 7. Tables
+// 7. Modal
+// ==========================================================================
+
+/* Colors */
+@modal-background-color: transparent;
+@modal-content-bg: @white;
+@modal-default-color: @gray-8;
+@modal-default-border-color: @gray-9;
+@modal-box-shadow: 0 0 30px rgba(133, 133, 133, 0.2);
+@modal-backdrop-bg: @black;
+@modal-backdrop-opacity: 0.5;
+
+@modal-margin: 2rem;
+
+@modal-heading-padding: 1rem 2rem;
+@modal-body-padding: 2rem 2rem 1rem 2rem;
+@modal-footer-margin: 0;
+@modal-footer-padding: 1rem 2rem 0.6rem 2rem;
+
+@modal-size-sm: 500px;
+@modal-size-md: 750px;
+@modal-size-lg: 1000px;
+
+
+// 8. Tables
 // ==========================================================================
 
 /* Colors */
@@ -340,11 +372,10 @@
 @table-collapse-duration:               0.25s;
 
 
-// 8. Topbar
+// 9. Topbar
 // ==========================================================================
 
 @topbar-height:                         70px;
 @topbar-nav-width:                      300px;
 @topbar-nav-group-margin:               15px;
-@topbar-z-index:                        500;
 

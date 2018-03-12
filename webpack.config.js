@@ -7,10 +7,7 @@ const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const autoprefixer = require("autoprefixer");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
-const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
-
-const smp = new SpeedMeasurePlugin();
 
 const isProd = (process.env.NODE_ENV === "production");
 
@@ -29,7 +26,7 @@ const extractDesignGuide = new ExtractTextPlugin({
     disable: !isProd
 });
 
-const config = smp.wrap({
+const config = {
     entry: {
         app: "./src/index.js",
         "react-libraries": [
@@ -238,7 +235,7 @@ const config = smp.wrap({
         }),
         new BundleAnalyzerPlugin()
     ]
-});
+};
 
 if (isProd) {
     config.plugins.push(new webpack.optimize.UglifyJsPlugin({

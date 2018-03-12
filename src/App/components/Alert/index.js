@@ -6,8 +6,8 @@ const Alert = ({ id, type, display, icon, close, heading, text, linkText, linkHr
         {icon ? <i className="material-icons alert-icon">{icon}</i> : null}{close ? "\n" : ""}
         {close ? <i className="material-icons alert-close">close</i> : null}
         {heading ? <h3 className="alert-heading">{heading}</h3> : null}
-        {(text && !linkText) ? <p className="alert-text">{text}</p> : null}
-        {linkText ? <p className="alert-text">{text || ""}<a className="alert-link" href={linkHref || "#"}>{linkText}</a></p> : null}
+        {(text && !linkText) ? <p className="alert-text">{text}</p> : null}{linkText ? "\n" : ""}
+        {linkText ? <p className="alert-text">{text || ""}{"\n"}<a className="alert-link" href={linkHref || "#"}>{linkText}</a>{"\n"}</p> : null}
     </div>
 );
 

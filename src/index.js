@@ -9,6 +9,7 @@ import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js";
 
 // Polyfills
 import "./polyfills";
+window.stopPx = true;
 
 // px-script
 import "./px-script";
