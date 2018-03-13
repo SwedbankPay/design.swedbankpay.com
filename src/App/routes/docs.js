@@ -83,6 +83,11 @@ export default [
                 title: "Modal",
                 path: "/docs/components/modal",
                 component: require("../Documentation/Components/Modal")
+            },
+            {
+                title: "Panel",
+                path: "/docs/components/panel",
+                component: require("../Documentation/Components/Panel")
             }
         ]
     },

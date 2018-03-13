@@ -1,0 +1,98 @@
+// Base classes
+.panel {
+    margin-top: @panel-margin-bottom;
+    margin-bottom: @panel-margin-bottom;
+    background-color: @panel-background-color;
+    box-shadow: @panel-box-shadow;
+}
+
+.panel-bottomless {
+    .panel-body {
+        margin-bottom: 0;
+    }
+}
+
+.panel-dark-mode {
+    .panel-body {
+        background-color: @gray-2;
+        color: white;
+    }
+
+    nav ul.nav-tabs .active a {
+        background-color: @gray-2;
+        color: white;
+
+        &:hover {
+            background-color: @gray-3;
+        }
+    }
+}
+
+.panel-no-padding {
+    .panel-body {
+        margin: 0;
+        padding: 0;
+
+        > .panel-heading {
+            margin: 0;
+        }
+    }
+}
+
+.panel-half-padding {
+    .panel-body {
+        margin: 0;
+        padding: 7px 15px;
+
+        > .panel-heading {
+            margin: -7px -15px 7px -15px;
+        }
+    }
+}
+
+// Panel contents
+.panel-body {
+    background-color: @white;
+    padding: @panel-body-padding;
+    &:extend(.clearfix all);
+
+    > .panel-heading {
+        margin: -15px -30px 15px -30px;
+    }
+}
+
+// Optional heading
+.panel-heading {
+    padding: @panel-heading-padding;
+    border-bottom: 1px solid @panel-default-border-color;
+}
+
+.panel-title {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    > a,
+    > small,
+    > .small,
+    > small > a,
+    > .small > a {
+        color: inherit;
+    }
+}
+
+.panel-sub-title {
+    font-weight: normal;
+    font-style: italic;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    > a,
+    > small,
+    > .small,
+    > small > a,
+    > .small > a {
+        color: inherit;
+    }
+}

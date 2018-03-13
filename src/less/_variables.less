@@ -15,7 +15,8 @@
 //  6. Breadcrumb
 //  7. Button
 //  8. Modal
-//  9. Topbar
+//  9. Panel
+// 10. Topbar
 
 // ==========================================================================
 //
@@ -177,7 +178,7 @@
 @table-cell-padding: 1rem;
 @table-collapse-content-padding: 10px 20px 10px 20px;
 @table-collpase-nested-margin: -10px -20px -10px -20px;
-@table-margin-bottom: 10px;
+@table-margin-bottom: 0.6rem;
 @table-line-height: 1.4rem;
 
 /* Animations */
@@ -372,7 +373,41 @@
 @modal-size-lg: 1000px;
 
 
-// 9. Topbar
+// 9. Panel
+// ==========================================================================
+
+/* Colors */
+@panel-background-color: transparent;
+@panel-footer-background-color: transparent;
+@panel-inner-border-color: @gray-8;
+@panel-table-border-color: @gray-8;
+@panel-footer-table-border-color: @gray-8;
+@panel-box-shadow: @default-box-shadow;
+
+/* Default colors */
+@panel-default-border-color: @gray-9;
+@panel-default-text-color: @gray-2;
+@panel-default-heading-background-color: @white;
+
+/* Contextual colors */
+@panel-default-color: @gray-8;
+@panel-brand-color: @brand-primary;
+
+@panel-border-radius: 0;
+@panel-margin-bottom: 14px;
+
+@panel-body-padding: 15px 30px;
+@panel-table-margin: 0;
+@panel-banner-padding: 15px;
+@panel-heading-padding: 15px 30px;
+@panel-footer-padding: 15px 30px 12px 30px;
+@panel-footer-margin: 10px -30px -15px -30px;
+
+@panel-font-size-base: @base-font-size;
+@panel-collapse-duration: 0.25s;
+
+
+// 10. Topbar
 // ==========================================================================
 
 @topbar-height:                         70px;
