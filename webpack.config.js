@@ -1,5 +1,5 @@
 /* eslint camelcase: 0, object-curly-newline: 0 */
-
+const pkg = require("./package.json");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
@@ -10,14 +10,15 @@ const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 const isProd = (process.env.NODE_ENV === "production");
+const version = pkg.version;
 
 const extractPX = new ExtractTextPlugin({
-    filename: "styles/px.css",
+    filename: `styles/px-${version}.css`,
     disable: !isProd
 });
 
 const extractDocumentation = new ExtractTextPlugin({
-    filename: "styles/templates/documentation.css",
+    filename: `styles/templates/documentation-${version}.css`,
     disable: !isProd
 });
 
@@ -53,7 +54,7 @@ const config = {
     output: {
         library: "payex",
         path: path.resolve(__dirname, "dist"),
-        filename: "scripts/[name].js?[hash]",
+        filename: `scripts/[name]-${version}.js?[hash]`,
         publicPath: "/"
     },
     resolve: {

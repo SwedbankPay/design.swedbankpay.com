@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.4] - 2018-03-13
+
+### Added
+
+- Added modal component
+- Added tables
+- Added `/dist` dir to repo for github pages
+
+### Changed
+
+- Changed some of the styling on typography and modal
+
 ## [0.1.3] - 2018-03-08
 
 ### Added
