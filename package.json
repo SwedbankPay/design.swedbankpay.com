@@ -4,7 +4,7 @@
     "description": "PayEx DesignGuide",
     "main": "index.js",
     "scripts": {
-        "start": "cross-env NODE_ENV=development webpack-dev-server",
+        "start": "cross-env NODE_ENV=development WEBPACK=devserver webpack-dev-server",
         "start:prod": "cross-env NODE_ENV=production webpack-dev-server",
         "build": "npm run lint && cross-env NODE_ENV=development webpack",
         "build:prod": "npm run lint && cross-env NODE_ENV=production webpack",

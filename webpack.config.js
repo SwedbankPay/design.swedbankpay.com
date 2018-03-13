@@ -10,6 +10,7 @@ const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 const isProd = (process.env.NODE_ENV === "production");
+const devServer = (process.env.WEBPACK === "devserver");
 const version = pkg.version;
 
 const extractPX = new ExtractTextPlugin({
@@ -199,7 +200,6 @@ const config = {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-        new CleanWebpackPlugin(["dist"]),
         new HtmlWebpackPlugin({
             template: "./src/index.html",
             hash: true,
@@ -237,6 +237,10 @@ const config = {
         new BundleAnalyzerPlugin()
     ]
 };
+
+if (!devServer) {
+    config.plugins.push(new CleanWebpackPlugin(["dist"]));
+}
 
 if (isProd) {
     config.plugins.push(new webpack.optimize.UglifyJsPlugin({
