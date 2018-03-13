@@ -55,7 +55,7 @@ const config = {
         library: "payex",
         path: path.resolve(__dirname, "dist"),
         filename: `scripts/[name]-${version}.js?[hash]`,
-        publicPath: "/"
+        publicPath: ""
     },
     resolve: {
         extensions: [".js", ".jsx", ".json"]
@@ -64,7 +64,7 @@ const config = {
     devtool: "source-map",
     devServer: {
         contentBase: path.resolve(__dirname, "dist"),
-        publicPath: "/",
+        publicPath: "",
         compress: true,
         port: 3000,
         hotOnly: true,
