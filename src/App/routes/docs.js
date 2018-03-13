@@ -39,6 +39,11 @@ export default [
                 component: require("../Documentation/Core/Color")
             },
             {
+                title: "Tables",
+                path: "/docs/core/Tables",
+                component: require("../Documentation/Core/Tables")
+            },
+            {
                 title: "Typography",
                 path: "/docs/core/typography",
                 component: require("../Documentation/Core/Typography")

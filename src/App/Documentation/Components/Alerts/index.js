@@ -106,7 +106,7 @@ const UsageWithJavascript = () => (
             {"px.alert.hide(id);"}
         </ComponentPreview>
         <h3>Methods</h3>
-        <table>
+        <table className="table table-striped">
             <thead>
                 <tr>
                     <th>Method</th>
