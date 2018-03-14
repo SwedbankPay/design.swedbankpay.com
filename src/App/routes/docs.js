@@ -80,6 +80,11 @@ export default [
             //     component: require("../Documentation/Components/Cards")
             // },
             {
+                title: "Forms",
+                path: "/docs/components/Form",
+                component: require("../Documentation/Components/Forms")
+            },
+            {
                 title: "Loaders",
                 path: "/docs/components/loaders",
                 component: require("../Documentation/Components/Loaders")

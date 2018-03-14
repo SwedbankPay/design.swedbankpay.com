@@ -56,7 +56,7 @@ const config = {
         library: "payex",
         path: path.resolve(__dirname, "dist"),
         filename: `scripts/[name]-${version}.js?[hash]`,
-        publicPath: devServer ? "/" : ""
+        publicPath: ""
     },
     resolve: {
         extensions: [".js", ".jsx", ".json"]
@@ -65,7 +65,7 @@ const config = {
     devtool: "source-map",
     devServer: {
         contentBase: path.resolve(__dirname, "dist"),
-        publicPath: devServer ? "/" : "",
+        publicPath: "",
         compress: true,
         port: 3000,
         hotOnly: true,
@@ -175,7 +175,7 @@ const config = {
                     {
                         loader: "file-loader",
                         options: {
-                            outputPath: (isProd ? "/design.payex.com/" : "") + "img/",
+                            outputPath: (isProd ? "/design.payex.com" : "") + "/img/",
                             name: "[name].[ext]?[hash]"
                         }
                     },
@@ -208,7 +208,7 @@ const config = {
         new FaviconsWebpackPlugin({
             logo: "./src/img/favicon.png",
             title: "PayEx DesignGuide",
-            prefix: (isProd ? "/design.payex.com/" : "/") + "icons/",
+            prefix: (isProd ? "/design.payex.com" : "") + "/icons/",
             icons: {
                 android: false,
                 appleIcon: false,
