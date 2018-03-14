@@ -175,7 +175,7 @@ const config = {
                     {
                         loader: "file-loader",
                         options: {
-                            outputPath: (isProd ? "/design.payex.com/" : "") + "/img/",
+                            outputPath: (isProd ? "/design.payex.com" : "") + "/img/",
                             name: "[name].[ext]?[hash]"
                         }
                     },
@@ -208,7 +208,7 @@ const config = {
         new FaviconsWebpackPlugin({
             logo: "./src/img/favicon.png",
             title: "PayEx DesignGuide",
-            // prefix: "icons/",
+            prefix: (isProd ? "design.payex.com/" : "") + "icons/",
             icons: {
                 android: false,
                 appleIcon: false,
@@ -232,7 +232,8 @@ const config = {
         extractDocumentation,
         extractDesignGuide,
         new webpack.DefinePlugin({
-            "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)
+            "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
+            "process.env.PUBLIC_URL": JSON.stringify(process.env.PUBLIC_URL)
         })
     ]
 };

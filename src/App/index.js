@@ -8,9 +8,7 @@ import ErrorPage404 from "./ErrorPage404";
 const AppHeaderWithRoutes = withRouter(props => <AppHeader {...props} />);
 
 const App = () => (
-    // TODO: https://github.com/facebook/create-react-app/issues/1765
-    // <BrowserRouter basename={process.env.PUBLIC_URL}>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
         <div id="px-designguide">
             <AppHeaderWithRoutes />
             <Switch>
