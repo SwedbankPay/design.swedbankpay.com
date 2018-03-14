@@ -7,11 +7,13 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - Added panel component
+- Added panel muted, this will work as a replacement for the old card component.
 
 ### Changed
 
 - Changed webpack config to not delete `/dist` when running webpack-dev-server (`npm start`).
-- Changed child-elements of panel from `<div class="panel-header">` and `<div class="panel-header">` to `<header>` and `<footer>` (utility-classes, like `.panel-heading-right`, still apply).
+- Changed child-elements of panel from `<div class="panel-header">` and `<div class="panel-footer">` to `<header>` and `<footer>` (utility-classes, like `.panel-heading-right`, still apply).
+- Changed child-elements of modal from `<div class="modal-header">` and `<div class="panel-footer">` to `<header>` and `<footer>` (utility-classes, like `.panel-heading-right`, still apply).
 
 ## [0.1.4] - 2018-03-13
 

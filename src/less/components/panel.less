@@ -15,6 +15,15 @@
         .panel-variant(@brand-primary, @white, @brand-primary);
     }
 
+    &.panel-muted {
+        background-color: @background-body;
+
+        .panel-body,
+        > footer {
+            background-color: @background-body;
+        }
+    }
+
     &.panel-bottomless {
         .panel-body {
             margin-bottom: 0;
@@ -117,7 +126,7 @@
 
     // Optional footer (stays gray in every modifier class)
     > footer {
-        background-color: @white;
+        background-color: @background-body;
         // background-color: @gray-10;
         padding: @panel-footer-padding;
         border-top: 1px solid @panel-default-border-color;

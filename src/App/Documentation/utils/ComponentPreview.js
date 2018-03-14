@@ -18,7 +18,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, showCasePanel, c
     const CodeFigure = () => {
         let code = "";
 
-        if (language === "html" && typeof children.map === "function") {
+        if (language === "html" && children && typeof children.map === "function") {
             children.map(child => {
                 if (removeOuterTag) {
                     code += _removeOuterTag(child);

@@ -28,7 +28,7 @@ Panel.propTypes = {
     title: PropTypes.string,
     subTitle: PropTypes.string,
     id: PropTypes.string,
-    type: PropTypes.oneOf(["brand", "default"]),
+    type: PropTypes.oneOf(["brand", "default", "muted", ""]),
     halfPadding: PropTypes.bool,
     removeAllPadding: PropTypes.bool,
     removeBottomPadding: PropTypes.bool,

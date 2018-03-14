@@ -74,6 +74,11 @@ export default [
                 path: "/docs/components/buttons",
                 component: require("../Documentation/Components/Buttons")
             },
+            // {
+            //     title: "Cards",
+            //     path: "/docs/components/cards",
+            //     component: require("../Documentation/Components/Cards")
+            // },
             {
                 title: "Loaders",
                 path: "/docs/components/loaders",

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const ModalHeading = ({ title, subTitle }) => (
-    <header className="modal-heading">
+    <header>
         {title ? <h2 className="modal-title">{title}</h2> : null}
         {subTitle ? <p className="modal-sub-title">{subTitle}</p> : null}
     </header>
@@ -24,11 +24,11 @@ const Modal = ({ title, subTitle, id, footerText, footerAlignment, type, size, v
                             {children}
                         </div>
                         {footerText ? (
-                            <div className={`modal-footer${footerAlignment ? ` modal-footer-${footerAlignment}` : ""}`}>{"\n"}
+                            <footer className={`${footerAlignment ? `modal-footer-${footerAlignment}` : ""}`}>{"\n"}
                                 <button type="button" className="btn btn-default" data-px-modal-close={id}>Close</button>{"\n"}
                                 <button type="submit" className="btn btn-brand">Submit</button>
                                 {/* <p className="text-muted">{footerText}</p> */}
-                            </div>
+                            </footer>
                         ) : null}
                     </div>
                 </div>

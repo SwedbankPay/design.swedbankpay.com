@@ -15,9 +15,10 @@ const Overview = () => (
                 subTitle="Panel subtitle"
                 footerText="Footer content goes here."
                 footerBtnText="Footer button"
-                footerCentered={true}
             >
-                <p>Content here.</p>
+                <p>Your main panel content is put here.</p>
+                <p>Some more content over here.</p>
+                <p>And one more line, just to be safe.</p>
             </PanelComponent>
         </ComponentPreview>
     </div>
@@ -34,11 +35,56 @@ const PanelHeaders = () => (
     </div>
 );
 
+const DarkMode = () => (
+    <div>
+        <h2 id="panel-dark-mode">Panel dark mode</h2>
+        <p>Dark body with <code className="token property">.panel-dark-mode</code>...</p>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={false}>
+            <PanelComponent
+                type="brand"
+                title="Panel title"
+                subTitle="Panel subtitle"
+                footerText="Footer content goes here."
+                footerBtnText="Footer button"
+                darkMode={true}
+            >
+                <p className="lead">This is a panel with dark mode.</p>
+                <p>Your main panel content is put here.</p>
+                <p>Some more content over here.</p>
+                <p>And one more line, just to be safe.</p>
+            </PanelComponent>
+        </ComponentPreview>
+    </div>
+);
+
+const PanelMuted = () => (
+    <div>
+        <h2 id="muted-panel">Muted panel</h2>
+        <p>Muted panel with <code className="token property">.panel-muted</code>...</p>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={false}>
+            <PanelComponent
+                type="muted"
+                title="Panel title"
+                subTitle="Panel subtitle"
+                footerText="Footer content goes here."
+                footerBtnText="Footer button"
+            >
+                <p className="lead">This is a muted panel.</p>
+                <p>Your main panel content is put here.</p>
+                <p>Some more content over here.</p>
+                <p>And one more line, just to be safe.</p>
+            </PanelComponent>
+        </ComponentPreview>
+    </div>
+);
+
 const PanelText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
         <p className="lead">Panels...</p>
         <Overview />
         <PanelHeaders />
+        <DarkMode />
+        <PanelMuted />
     </div>
 );
 
