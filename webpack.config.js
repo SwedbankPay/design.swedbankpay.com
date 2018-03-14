@@ -175,7 +175,7 @@ const config = {
                     {
                         loader: "file-loader",
                         options: {
-                            outputPath: "img/",
+                            outputPath: "/img/",
                             name: "[name].[ext]?[hash]"
                         }
                     },
