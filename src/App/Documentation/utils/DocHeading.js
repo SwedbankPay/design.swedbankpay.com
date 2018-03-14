@@ -11,11 +11,7 @@ const DocHeading = ({ location }) => {
 
     document.title = `${title} | PayEx DesignGuide`;
 
-    return (
-        <div className="view-heading">
-            <h1>{title}</h1>
-        </div>
-    );
+    return <h1>{title}</h1>;
 };
 
 export default DocHeading;

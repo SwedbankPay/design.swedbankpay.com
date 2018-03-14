@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.5] - 2018-03-??
+
+### Added
+
+- Added panel component
+
+### Changed
+
+- Changed webpack config to not delete `/dist` when running webpack-dev-server (`npm start`).
+- Changed child-elements of panel from `<div class="panel-header">` and `<div class="panel-header">` to `<header>` and `<footer>` (utility-classes, like `.panel-heading-right`, still apply).
+
 ## [0.1.4] - 2018-03-13
 
 ### Added

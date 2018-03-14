@@ -56,7 +56,7 @@ const config = {
         library: "payex",
         path: path.resolve(__dirname, "dist"),
         filename: `scripts/[name]-${version}.js?[hash]`,
-        publicPath: ""
+        publicPath: devServer ? "/" : ""
     },
     resolve: {
         extensions: [".js", ".jsx", ".json"]
@@ -65,7 +65,7 @@ const config = {
     devtool: "source-map",
     devServer: {
         contentBase: path.resolve(__dirname, "dist"),
-        publicPath: "",
+        publicPath: devServer ? "/" : "",
         compress: true,
         port: 3000,
         hotOnly: true,
@@ -208,7 +208,7 @@ const config = {
         new FaviconsWebpackPlugin({
             logo: "./src/img/favicon.png",
             title: "PayEx DesignGuide",
-            prefix: "icons/",
+            // prefix: "icons/",
             icons: {
                 android: false,
                 appleIcon: false,
@@ -233,13 +233,15 @@ const config = {
         extractDesignGuide,
         new webpack.DefinePlugin({
             "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)
-        }),
-        new BundleAnalyzerPlugin()
+        })
     ]
 };
 
 if (!devServer) {
-    config.plugins.push(new CleanWebpackPlugin(["dist"]));
+    config.plugins.push(
+        new CleanWebpackPlugin(["dist"]),
+        new BundleAnalyzerPlugin()
+    );
 }
 
 if (isProd) {
