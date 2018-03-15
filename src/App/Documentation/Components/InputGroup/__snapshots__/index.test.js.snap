@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Documentation: InputGroup BasicExample renders 1`] = `
+<div>
+  <h2
+    id="basic-example"
+  >
+    Basic example
+  </h2>
+  <p />
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={false}
+    showCasePanel={true}
+  >
+    <InputGroup />
+  </ComponentPreview>
+</div>
+`;
+
+exports[`Documentation: InputGroup Demo renders 1`] = `
+<div>
+  <h2
+    id="demo"
+  >
+    Demo
+  </h2>
+  <p>
+    Live Forms
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={false}
+    showCasePanel={true}
+  />
+</div>
+`;
+
+exports[`Documentation: InputGroup InputGroupText renders 1`] = `
+<div
+  className="col-md-12 col-lg-10 doc-body"
+>
+  <p
+    className="lead"
+  >
+    Input groups...
+  </p>
+  <BasicExample />
+</div>
+`;
+
+exports[`Documentation: InputGroup renders 1`] = `
+<div
+  className="doc-container"
+>
+  <div
+    className="row"
+  >
+    <InputGroupText />
+    <DocToc
+      component={[Function]}
+    />
+  </div>
+</div>
+`;

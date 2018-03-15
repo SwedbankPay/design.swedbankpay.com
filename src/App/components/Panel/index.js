@@ -17,7 +17,7 @@ const Panel = ({ title, subTitle, id, type, removeBottomPadding, removeAllPaddin
                 : null}
             {footerText ?
                 <footer>
-                    {footerText ? <p>{footerText}</p> : null}
+                    <p>{footerText}</p>
                 </footer>
                 : null}
         </section>

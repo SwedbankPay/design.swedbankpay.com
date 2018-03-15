@@ -1,5 +1,5 @@
 import React from "react";
-import { mount, shallow } from "enzyme";
+import { shallow } from "enzyme";
 import { MemoryRouter } from "react-router-dom";
 
 import RenderRoutes from "./RenderRoutes";
@@ -13,19 +13,17 @@ describe("Utilities: RenderRoutes", () => {
     it("renders a basic route structure", () => {
         const props = {
             path: "test",
-            redirect:"test",
+            redirect: "test",
             routes: [
                 {
                     path: "test-2",
-                    component: {
-                        default: "test-2"
-                    }
+                    component: { default: "test-2" }
                 }
             ]
         };
 
-        const wrapper = mount(
-            <MemoryRouter>
+        const wrapper = shallow(
+            <MemoryRouter initialEntries={[{ key: "testKey" }]}>
                 <RenderRoutes {...props} />
             </MemoryRouter>
         );

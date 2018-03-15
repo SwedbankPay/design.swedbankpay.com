@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Documentation: Modal Demo renders 1`] = `
+<div>
+  <h2
+    id="demo"
+  >
+    Demo
+  </h2>
+  <p>
+    Live modal
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <Modal
+      button={true}
+      fade={true}
+      footerAlignment="right"
+      footerText="Footer text"
+      id="live-modal"
+      isStatic={false}
+      size="large"
+      subTitle="Not as important as the title"
+      title="Modal title"
+      type="brand"
+      visible={false}
+    >
+      <p>
+        Modal body text goes here.
+      </p>
+    </Modal>
+  </ComponentPreview>
+</div>
+`;
+
+exports[`Documentation: Modal ModalText renders 1`] = `
+<div
+  className="col-md-12 col-lg-10 doc-body"
+>
+  <p
+    className="lead"
+  >
+    Modals...
+  </p>
+  <Usage />
+  <Demo />
+</div>
+`;
+
+exports[`Documentation: Modal Usage renders 1`] = `
+<div>
+  <h2
+    id="usage"
+  >
+    Usage
+  </h2>
+  <p>
+    Static modal
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <Modal
+      footerAlignment="right"
+      footerText="Footer text"
+      id="static-modal"
+      isStatic={true}
+      size="large"
+      subTitle="Not as important as the title"
+      title="Modal title"
+      type="brand"
+      visible={true}
+    >
+      <p>
+        Modal body text goes here.
+      </p>
+    </Modal>
+  </ComponentPreview>
+</div>
+`;
+
+exports[`Documentation: Modal renders 1`] = `
+<div
+  className="doc-container"
+>
+  <div
+    className="row"
+  >
+    <ModalText />
+    <DocToc
+      component={[Function]}
+    />
+  </div>
+</div>
+`;

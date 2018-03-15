@@ -51,3 +51,6 @@ class Forms extends Component {
 }
 
 export default Forms;
+
+/* for testing */
+export { Usage, Demo, FormsText };

@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Documentation: Cards CardsText renders 1`] = `
+<div
+  className="col-md-12 col-lg-10 doc-body"
+>
+  <p
+    className="lead"
+  >
+    Cards...
+  </p>
+  <Overview />
+</div>
+`;
+
+exports[`Documentation: Cards Overview renders 1`] = `
+<div>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <p>
+    Cards...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={false}
+    showCasePanel={true}
+  >
+    <Card />
+  </ComponentPreview>
+</div>
+`;
+
+exports[`Documentation: Cards renders 1`] = `
+<div
+  className="doc-container"
+>
+  <div
+    className="row"
+  >
+    <CardsText />
+    <DocToc
+      component={[Function]}
+    />
+  </div>
+</div>
+`;

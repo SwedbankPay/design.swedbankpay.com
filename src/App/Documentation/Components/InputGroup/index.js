@@ -50,3 +50,6 @@ class InputGroup extends Component {
 }
 
 export default InputGroup;
+
+/* for testing */
+export { BasicExample, Demo, InputGroupText };

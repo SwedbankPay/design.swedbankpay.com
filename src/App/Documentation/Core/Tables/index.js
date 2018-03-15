@@ -261,3 +261,6 @@ const Table = () => {
 };
 
 export default Table;
+
+/* for testing */
+export { BasicTable, StripedTable, HoverTable, HoverStripedTable, DescriptionTable, TablesText };

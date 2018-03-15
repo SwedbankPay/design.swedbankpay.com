@@ -105,3 +105,6 @@ class Panel extends Component {
 }
 
 export default Panel;
+
+/* for testing */
+export { Overview, PanelHeaders, DarkMode, PanelMuted, PanelText };

@@ -39,3 +39,6 @@ class Cards extends Component {
 }
 
 export default Cards;
+
+/* for testing */
+export { Overview, CardsText };

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Input = props => {
+const InputGroup = props => {
     return (
         <div className="input-group">
             <span className="input-group-addon">Mr.</span>
@@ -13,6 +13,6 @@ const Input = props => {
     );
 };
 
-Input.propTypes = {};
+InputGroup.propTypes = {};
 
-export default Input;
+export default InputGroup;

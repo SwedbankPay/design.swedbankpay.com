@@ -85,6 +85,12 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "BasicTable": [Function],
+                  "DescriptionTable": [Function],
+                  "HoverStripedTable": [Function],
+                  "HoverTable": [Function],
+                  "StripedTable": [Function],
+                  "TablesText": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/core/Tables",
@@ -160,6 +166,9 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "BasicExample": [Function],
+                  "Demo": [Function],
+                  "InputGroupText": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/components/input-group",
@@ -179,6 +188,9 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "Demo": [Function],
+                  "ModalText": [Function],
+                  "Usage": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/components/modal",
@@ -186,6 +198,11 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "DarkMode": [Function],
+                  "Overview": [Function],
+                  "PanelHeaders": [Function],
+                  "PanelMuted": [Function],
+                  "PanelText": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/components/panel",
