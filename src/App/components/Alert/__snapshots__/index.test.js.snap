@@ -36,15 +36,21 @@ exports[`Component: Alert renders an alert with a link with href='#' when no lin
 <div
   className="alert alert-test"
 >
+  
+
   <p
     className="alert-text"
   >
+    
+
     <a
       className="alert-link"
       href="#"
     >
       test
     </a>
+    
+
   </p>
 </div>
 `;
@@ -53,15 +59,21 @@ exports[`Component: Alert renders an alert with a link with provided href 1`] = 
 <div
   className="alert alert-test"
 >
+  
+
   <p
     className="alert-text"
   >
+    
+
     <a
       className="alert-link"
       href="www.example.com"
     >
       test
     </a>
+    
+
   </p>
 </div>
 `;

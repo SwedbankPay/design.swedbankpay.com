@@ -112,6 +112,17 @@ exports[`Documentation: SelectPanel renders 1`] = `
           <Link
             className=""
             replace={false}
+            to="/docs/core/Tables"
+          >
+            Tables
+          </Link>
+        </li>
+        <li
+          key="2"
+        >
+          <Link
+            className=""
+            replace={false}
             to="/docs/core/typography"
           >
             Typography
@@ -178,9 +189,42 @@ exports[`Documentation: SelectPanel renders 1`] = `
           <Link
             className=""
             replace={false}
+            to="/docs/components/input-group"
+          >
+            Input Group
+          </Link>
+        </li>
+        <li
+          key="4"
+        >
+          <Link
+            className=""
+            replace={false}
             to="/docs/components/loaders"
           >
             Loaders
+          </Link>
+        </li>
+        <li
+          key="5"
+        >
+          <Link
+            className=""
+            replace={false}
+            to="/docs/components/modal"
+          >
+            Modal
+          </Link>
+        </li>
+        <li
+          key="6"
+        >
+          <Link
+            className=""
+            replace={false}
+            to="/docs/components/panel"
+          >
+            Panel
           </Link>
         </li>
       </ul>

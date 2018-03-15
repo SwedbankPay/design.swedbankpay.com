@@ -28,30 +28,45 @@ exports[`Documentation: Alerts Alert With Icon renders 1`] = `
       text="This is a success alert with an icon!"
       type="success"
     />
+    
+
+
     <Alert
       display={true}
       icon="info"
       text="This is a neutral alert with an icon!"
       type="neutral"
     />
+    
+
+
     <Alert
       display={true}
       icon="warning"
       text="This is a warning alert with an icon!"
       type="warning"
     />
+    
+
+
     <Alert
       display={true}
       icon="error"
       text="This is a error alert with an icon!"
       type="error"
     />
+    
+
+
     <Alert
       display={true}
       icon="info_outline"
       text="This is a light alert with an icon!"
       type="light"
     />
+    
+
+
     <Alert
       display={true}
       icon="info_outline"
@@ -83,30 +98,45 @@ exports[`Documentation: Alerts Alert With Link renders 1`] = `
       text="This is a success alert, "
       type="success"
     />
+    
+
+
     <Alert
       display={true}
       linkText="with a link!"
       text="This is a neutral alert, "
       type="neutral"
     />
+    
+
+
     <Alert
       display={true}
       linkText="with a link!"
       text="This is a warning alert, "
       type="warning"
     />
+    
+
+
     <Alert
       display={true}
       linkText="with a link!"
       text="This is a error alert, "
       type="error"
     />
+    
+
+
     <Alert
       display={true}
       linkText="with a link!"
       text="This is a light alert, "
       type="light"
     />
+    
+
+
     <Alert
       display={true}
       linkText="with a link!"
@@ -155,26 +185,41 @@ exports[`Documentation: Alerts Basic Usage renders 1`] = `
       text="This is a success alert!"
       type="success"
     />
+    
+
+
     <Alert
       display={true}
       text="This is a neutral alert!"
       type="neutral"
     />
+    
+
+
     <Alert
       display={true}
       text="This is a warning alert!"
       type="warning"
     />
+    
+
+
     <Alert
       display={true}
       text="This is a error alert!"
       type="error"
     />
+    
+
+
     <Alert
       display={true}
       text="This is a light alert!"
       type="light"
     />
+    
+
+
     <Alert
       display={true}
       text="This is a default alert!"
@@ -214,6 +259,9 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
       text="This is a success alert with an icon!"
       type="success"
     />
+    
+
+
     <Alert
       close={true}
       display={true}
@@ -222,6 +270,9 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
       text="This is a neutral alert with an icon!"
       type="neutral"
     />
+    
+
+
     <Alert
       close={true}
       display={true}
@@ -230,6 +281,9 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
       text="This is a warning alert with an icon!"
       type="warning"
     />
+    
+
+
     <Alert
       close={true}
       display={true}
@@ -238,6 +292,9 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
       text="This is a error alert with an icon!"
       type="error"
     />
+    
+
+
     <Alert
       close={true}
       display={true}
@@ -246,6 +303,9 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
       text="This is a light alert with an icon!"
       type="light"
     />
+    
+
+
     <Alert
       close={true}
       display={true}
@@ -359,7 +419,9 @@ exports[`Documentation: Alerts Usage With Javascript renders 1`] = `
   <h3>
     Methods
   </h3>
-  <table>
+  <table
+    className="table table-striped"
+  >
     <thead>
       <tr>
         <th>
