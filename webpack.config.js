@@ -208,7 +208,7 @@ const config = {
         new FaviconsWebpackPlugin({
             logo: "./src/img/favicon.png",
             title: "PayEx DesignGuide",
-            prefix: "icons/",
+            prefix: isProd ? "icons/" : "",
             icons: {
                 android: false,
                 appleIcon: false,

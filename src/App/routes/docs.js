@@ -85,6 +85,11 @@ export default [
             //     component: require("../Documentation/Components/Forms")
             // },
             {
+                title: "Input Group",
+                path: "/docs/components/input-group",
+                component: require("../Documentation/Components/InputGroup")
+            },
+            {
                 title: "Loaders",
                 path: "/docs/components/loaders",
                 component: require("../Documentation/Components/Loaders")
