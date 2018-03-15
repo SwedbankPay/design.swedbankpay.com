@@ -654,6 +654,7 @@ exports[`Documentation: Buttons Usage With Icons renders 1`] = `
     />
     
 
+
     <Button
       icon="cloud"
       label="Brand"
@@ -708,7 +709,9 @@ exports[`Documentation: Buttons Usage With Javascript renders 1`] = `
   <h3>
     Methods
   </h3>
-  <table>
+  <table
+    className="table table-striped"
+  >
     <thead>
       <tr>
         <th>

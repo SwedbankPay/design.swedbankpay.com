@@ -170,7 +170,9 @@ exports[`Documentation: Loaders Usage With Javascript renders 1`] = `
   <h3>
     Methods
   </h3>
-  <table>
+  <table
+    className="table table-striped"
+  >
     <thead>
       <tr>
         <th>

@@ -85,6 +85,13 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "default": [Function],
+                },
+                "path": "/docs/core/Tables",
+                "title": "Tables",
+              },
+              Object {
+                "component": Object {
                   "Abbreviations": [Function],
                   "Blockquotes": [Function],
                   "Fonts": [Function],
@@ -153,6 +160,13 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "default": [Function],
+                },
+                "path": "/docs/components/input-group",
+                "title": "Input Group",
+              },
+              Object {
+                "component": Object {
                   "BasicUsage": [Function],
                   "LoadersText": [Function],
                   "MutedLoader": [Function],
@@ -162,6 +176,20 @@ exports[`Documentation: index renders 1`] = `
                 },
                 "path": "/docs/components/loaders",
                 "title": "Loaders",
+              },
+              Object {
+                "component": Object {
+                  "default": [Function],
+                },
+                "path": "/docs/components/modal",
+                "title": "Modal",
+              },
+              Object {
+                "component": Object {
+                  "default": [Function],
+                },
+                "path": "/docs/components/panel",
+                "title": "Panel",
               },
             ]
           }
