@@ -5,11 +5,11 @@ import "prismjs";
 import ComponentPreview from "./ComponentPreview";
 import { Attribute, PxScript } from "./ComponentPreview";
 
-const htmlEncodeString = str => String(str)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
+// const htmlEncodeString = str => String(str)
+//     .replace(/&/g, "&amp;")
+//     .replace(/</g, "&lt;")
+//     .replace(/>/g, "&gt;")
+//     .replace(/"/g, "&quot;");
 
 describe("Utilities: ComponentPreview", () => {
     const TestComponentH1 = () => (<h1>test1</h1>);

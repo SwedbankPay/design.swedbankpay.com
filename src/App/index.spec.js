@@ -18,6 +18,6 @@ describe("Browser ", function () {
             return browser.getTitle().includes("What browser");
         }, 5000, "Expected title to include 'What browser'", 500);
 
-        console.log("Current browser being tested: " + browser.getText(".string-major"));
+        // console.log("Current browser being tested: " + browser.getText(".string-major"));
     });
 });

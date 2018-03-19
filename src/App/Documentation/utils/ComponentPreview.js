@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ReactDOMServer from "react-dom/server";
+import { renderToStaticMarkup } from "react-dom/server";
 import PrismCode from "react-prism";
 import jsbeautifier from "js-beautify";
 
@@ -10,9 +10,14 @@ const ComponentPreview = ({ children, language, removeOuterTag, showCasePanel, c
     // https://stackoverflow.com/questions/33766085/how-to-avoid-extra-wrapping-div-in-react
     const _removeOuterTag = element => {
         const div = document.createElement("div");
-        div.innerHTML = ReactDOMServer.renderToStaticMarkup(element);
-        return div.firstElementChild.innerHTML;
+        div.innerHTML = renderToStaticMarkup(element);
 
+        if (div.firstElementChild) {
+            return div.firstElementChild.innerHTML;
+        } else if (div.firstChild) {
+            return div.firstChild.nodeValue;
+        }
+        return "Check ComponentPreview _removeOuterTag!";
     };
 
     const CodeFigure = () => {
@@ -23,7 +28,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, showCasePanel, c
                 if (removeOuterTag) {
                     code += _removeOuterTag(child);
                 } else {
-                    code += ReactDOMServer.renderToStaticMarkup(child);
+                    code += renderToStaticMarkup(child);
                 }
             });
 
@@ -31,7 +36,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, showCasePanel, c
             if (removeOuterTag) {
                 code += _removeOuterTag(children);
             } else {
-                code += ReactDOMServer.renderToStaticMarkup(children);
+                code += renderToStaticMarkup(children);
             }
         } else {
             switch (typeof children) {

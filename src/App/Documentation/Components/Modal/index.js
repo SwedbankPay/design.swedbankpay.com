@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import PrismCode from "react-prism";
 
-import ComponentPreview, { PxScript } from "../../utils/ComponentPreview";
+import ComponentPreview from "../../utils/ComponentPreview";
 import DocToc from "../../utils/DocToc";
 
 import { modal } from "../../../../px-script";

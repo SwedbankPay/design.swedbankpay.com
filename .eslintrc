@@ -41,7 +41,7 @@
         "key-spacing":                      ["warn"],
         "keyword-spacing":                  ["warn"],
         "linebreak-style":                  ["warn", "windows"],
-        "new-cap":                          ["warn"],
+        "new-cap":                          0,
         "newline-per-chained-call":         ["warn"],
         "no-alert":                         ["warn"],
         "no-console":                       ["warn", {"allow": ["warn", "error"]}],
