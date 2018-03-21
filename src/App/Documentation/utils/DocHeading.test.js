@@ -28,8 +28,8 @@ describe("Utilities: DocHeading", () => {
         );
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<h1>Test Test</h1>)).toEqual(true);
-        expect(document.title).toEqual("Test Test | PayEx DesignGuide");
+        expect(wrapper.contains(<h1>Test test</h1>)).toEqual(true);
+        expect(document.title).toEqual("Test test | PayEx DesignGuide");
     });
 });
 

@@ -189,13 +189,24 @@ exports[`Documentation: SelectPanel renders 1`] = `
           <Link
             className=""
             replace={false}
+            to="/docs/components/Forms"
+          >
+            Forms
+          </Link>
+        </li>
+        <li
+          key="4"
+        >
+          <Link
+            className=""
+            replace={false}
             to="/docs/components/input-group"
           >
             Input Group
           </Link>
         </li>
         <li
-          key="4"
+          key="5"
         >
           <Link
             className=""
@@ -206,7 +217,7 @@ exports[`Documentation: SelectPanel renders 1`] = `
           </Link>
         </li>
         <li
-          key="5"
+          key="6"
         >
           <Link
             className=""
@@ -217,7 +228,7 @@ exports[`Documentation: SelectPanel renders 1`] = `
           </Link>
         </li>
         <li
-          key="6"
+          key="7"
         >
           <Link
             className=""

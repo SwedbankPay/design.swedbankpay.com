@@ -166,8 +166,15 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "default": [Function],
+                },
+                "path": "/docs/components/Forms",
+                "title": "Forms",
+              },
+              Object {
+                "component": Object {
                   "BasicExample": [Function],
-                  "Demo": [Function],
+                  "CheckboxesAndRadios": [Function],
                   "InputGroupText": [Function],
                   "default": [Function],
                 },

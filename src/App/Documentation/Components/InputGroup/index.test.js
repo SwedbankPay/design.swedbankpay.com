@@ -2,7 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 
 import InputGroup from "./index";
-import { BasicExample, Demo, InputGroupText } from "./index";
+import { BasicExample, CheckboxesAndRadios, InputGroupText } from "./index";
 
 describe("Documentation: InputGroup", () => {
     it("is defined", () => {
@@ -31,14 +31,14 @@ describe("Documentation: InputGroup", () => {
         });
     });
 
-    describe("Demo", () => {
+    describe("CheckboxesAndRadios", () => {
         it("is defined", () => {
-            expect(Demo).toBeDefined();
+            expect(CheckboxesAndRadios).toBeDefined();
         });
 
         it("renders", () => {
             const wrapper = shallow(
-                <Demo />
+                <CheckboxesAndRadios />
             );
 
             expect(wrapper).toMatchSnapshot();

@@ -2,7 +2,7 @@
 
 exports[`Utilities: DocHeading correctly formats title 1`] = `
 <h1>
-  Test Test
+  Test test
 </h1>
 `;
 

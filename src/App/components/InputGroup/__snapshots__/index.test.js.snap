@@ -1,19 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: InputGroup -  renders 1`] = `
-<div>
+<div
+  className="form-group"
+>
+  
+
   <div
-    className="input-group mb-md"
+    className="input-group"
   >
     
 
     <input
+      autoComplete={null}
       className="form-control"
       data-px-required={null}
       data-px-validate={null}
     />
     
 
+     
   </div>
 </div>
 `;

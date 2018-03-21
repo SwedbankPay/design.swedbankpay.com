@@ -16,43 +16,130 @@ exports[`Documentation: InputGroup BasicExample renders 1`] = `
   >
     <InputGroup
       id="input-id-1"
-      label="asd"
+      label="Name"
       placeholder="Name"
-      prefixValue="Mr"
+      prefixValue="Mr."
       type="text"
     />
      
     
 
 
-    <div />
     <InputGroup
       id="input-id-2"
+      label="Email"
       placeholder="Email"
-      postfixType="icon"
-      postfixValue="email"
+      prefixType="icon"
+      prefixValue="email"
       type="text"
+    />
+     
+    
+
+
+    <InputGroup
+      id="input-id-3"
+      label="Amount"
+      placeholder="Rounded to nearest $"
+      postfixValue=".00"
+      prefixType="icon"
+      prefixValue="attach_money"
+      type="number"
+    />
+     
+    
+
+
+    <InputGroup
+      id="input-id-4"
+      label="Notes"
+      placeholder="Special requests"
+      prefixType="icon"
+      prefixValue="format_quote"
+      type="textarea"
     />
   </ComponentPreview>
 </div>
 `;
 
-exports[`Documentation: InputGroup Demo renders 1`] = `
+exports[`Documentation: InputGroup CheckboxesAndRadios renders 1`] = `
 <div>
   <h2
-    id="demo"
+    id="checkboxes-and-radios"
   >
-    Demo
+    Checkboxes and radios
   </h2>
   <p>
-    Live Forms
+    Place any checkbox or radio option within an input group’s addon instead of text.
   </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={false}
+    removeOuterTag={true}
     showCasePanel={true}
-  />
+  >
+    <div
+      className="form-group"
+    >
+      <div
+        className="input-group"
+      >
+        
+
+        <span
+          className="input-group-addon"
+        >
+          
+		
+          <input
+            type="checkbox"
+          />
+          
+	
+        </span>
+        
+
+        <input
+          className="form-control"
+          type="text"
+        />
+        
+
+      </div>
+    </div>
+    
+
+
+    <div
+      className="form-group"
+    >
+      <div
+        className="input-group"
+      >
+        
+
+        <span
+          className="input-group-addon"
+        >
+          
+		
+          <input
+            type="radio"
+          />
+          
+	
+        </span>
+        
+
+        <input
+          className="form-control"
+          type="text"
+        />
+        
+
+      </div>
+    </div>
+  </ComponentPreview>
 </div>
 `;
 
@@ -66,6 +153,10 @@ exports[`Documentation: InputGroup InputGroupText renders 1`] = `
     Input groups...
   </p>
   <BasicExample />
+  <ButtonAddons />
+  <WithSelect />
+  <WithFeedbackIcon />
+  <ValidationStates />
 </div>
 `;
 

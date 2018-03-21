@@ -1,57 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Documentation: Forms Demo renders 1`] = `
-<div>
-  <h2
-    id="demo"
-  >
-    Demo
-  </h2>
-  <p>
-    Live Forms
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-  />
-</div>
-`;
-
-exports[`Documentation: Forms FormsText renders 1`] = `
-<div
-  className="col-md-12 col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Forms...
-  </p>
-  <Usage />
-  <Demo />
-</div>
-`;
-
-exports[`Documentation: Forms Usage renders 1`] = `
-<div>
-  <h2
-    id="usage"
-  >
-    Usage
-  </h2>
-  <p>
-    Static Forms
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-  />
-</div>
-`;
-
 exports[`Documentation: Forms renders 1`] = `
 <div
   className="doc-container"
