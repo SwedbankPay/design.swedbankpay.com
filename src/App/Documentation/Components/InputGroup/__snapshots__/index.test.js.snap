@@ -11,10 +11,28 @@ exports[`Documentation: InputGroup BasicExample renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={false}
+    removeOuterTag={true}
     showCasePanel={true}
   >
-    <InputGroup />
+    <InputGroup
+      id="input-id-1"
+      label="asd"
+      placeholder="Name"
+      prefixValue="Mr"
+      type="text"
+    />
+     
+    
+
+
+    <div />
+    <InputGroup
+      id="input-id-2"
+      placeholder="Email"
+      postfixType="icon"
+      postfixValue="email"
+      type="text"
+    />
   </ComponentPreview>
 </div>
 `;

@@ -1,27 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: InputGroup -  renders 1`] = `
-<div
-  className="input-group"
->
-  <span
-    className="input-group-addon"
+<div>
+  <div
+    className="input-group mb-md"
   >
-    Mr.
-  </span>
-  <input
-    className="form-control"
-    placeholder="Name"
-    type="text"
-  />
-  <span
-    className="input-group-addon"
-  >
-    <i
-      className="material-icons"
-    >
-      face
-    </i>
-  </span>
+    
+
+    <input
+      className="form-control"
+      data-px-required={null}
+      data-px-validate={null}
+    />
+    
+
+  </div>
 </div>
 `;

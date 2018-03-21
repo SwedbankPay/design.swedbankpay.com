@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.6] - 2018-03-??
+
+### Added
+
+- Added utility classes for spacing.
+- Added input groups.
+- Added forms.
+- Added webdriverio for functional testing.
+- Added form components:
+    - Checkbox
+    - Radio button,
+    - Togglebox
+    - Help block
+- Added validation styles for input group.
+
+### Changed
+
+- Changed checkbox, radio button and togglebox to no longer require being a child of their label.
+- Changed togglebox to no longer require a `<span class="toggle">`-element, the styling is applied to `:before` and `:after` on the `<input>` element.
+
 ## [0.1.5] - 2018-03-14
 
 ### Added

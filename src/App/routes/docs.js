@@ -79,11 +79,11 @@ export default [
             //     path: "/docs/components/cards",
             //     component: require("../Documentation/Components/Cards")
             // },
-            // {
-            //     title: "Forms",
-            //     path: "/docs/components/Form",
-            //     component: require("../Documentation/Components/Forms")
-            // },
+            {
+                title: "Forms",
+                path: "/docs/components/Forms",
+                component: require("../Documentation/Components/Forms")
+            },
             {
                 title: "Input Group",
                 path: "/docs/components/input-group",
