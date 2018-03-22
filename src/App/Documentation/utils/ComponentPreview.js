@@ -54,6 +54,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, showCasePanel, c
         switch (language) {
             case "html":
                 code = jsbeautifier.html_beautify(code);
+                code = code.replace(/=""/g, "");
                 break;
             case "css":
                 code = jsbeautifier.css_beautify(code);
