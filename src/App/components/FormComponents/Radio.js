@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Radio = ({ id, checked, disabled, label }) => {
+const Radio = ({ id, checked, disabled, label, name }) => {
     return (
         <div className="radio">{"\n"}
-            <input type="radio" id={id || null} disabled={disabled || null} checked={checked || null} />{"\n"}
+            <input type="radio" id={id || null} name={name || null} disabled={disabled || null} checked={checked || null}  />{"\n"}
             {label ? <label htmlFor={id || null}>{label}</label> : null}{label ? "\n" : null}
         </div>
     );
@@ -12,6 +12,7 @@ const Radio = ({ id, checked, disabled, label }) => {
 
 Radio.propTypes = {
     id: PropTypes.string,
+    name: PropTypes.string,
     checked: PropTypes.bool,
     disabled: PropTypes.bool,
     label: PropTypes.string

@@ -9,13 +9,101 @@ label {
     line-height: 1.5;
 }
 
+
+fieldset {
+    padding: 0;
+    margin: 0;
+    border: 0; // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+    // so we reset that to ensure it behaves more like a standard block element.
+    // See https://github.com/twbs/bootstrap/issues/12359.
+    min-width: 0;
+    margin-bottom: 1rem;
+
+    &:disabled {
+        .checkbox input[type=checkbox] {
+            &:after {
+                background-color: @input-bg-disabled;
+                border-color: @input-checked-bg-disabled;
+            }
+
+            &:checked:after {
+                background-color: @input-checked-bg-disabled;
+            }
+
+            + label,
+            &:after,
+            &:checked:after {
+                cursor: not-allowed;
+            }
+        }
+
+        .radio input[type=radio] {
+            &:after {
+                background-color: @input-bg-disabled;
+                border-color: @input-checked-bg-disabled;
+            }
+
+            &:checked:after {
+                background-color: @input-checked-bg-disabled;
+            }
+
+            + label,
+            &:after,
+            &:checked:after {
+                cursor: not-allowed;
+            }
+        }
+
+        .togglebox input[type=checkbox] {
+            &:before,
+            &:after {
+                background-color: @input-bg-disabled;
+                border-color: @input-checked-bg-disabled;
+            }
+
+            &:checked:before {
+                background-color: @input-checked-bg-disabled;
+            }
+
+            + label,
+            &:before,
+            &:after,
+            &:checked:before,
+            &:checked:after {
+                cursor: not-allowed;
+            }
+        }
+    }
+}
+
+legend {
+    display: block;
+    width: 100%;
+    margin-bottom: @legend-bottom-margin;
+    line-height: @base-font-size * 2.8;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: @base-font-size * 0.9;
+    color: @legend-color;
+    border: 0;
+    border-bottom: 1px solid @legend-border-color;
+}
+
+.form-control-text,
 .form-control {
     display: block;
     width: 100%;
-    padding: @input-padding-y @input-padding-x;
     font-size: @base-font-size;
     line-height: @input-line-height;
     color: @input-color;
+}
+
+.form-control-text {
+    padding: @input-padding-y 0;
+}
+
+.form-control {
+    padding: @input-padding-y @input-padding-x;
     background-color: @input-bg;
     background-clip: padding-box;
     border: @input-border-width solid @input-border-color;

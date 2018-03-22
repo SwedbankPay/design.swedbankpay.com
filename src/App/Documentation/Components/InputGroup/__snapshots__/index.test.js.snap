@@ -7,7 +7,9 @@ exports[`Documentation: InputGroup BasicExample renders 1`] = `
   >
     Basic example
   </h2>
-  <p />
+  <p>
+    Basic input group...
+  </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
@@ -155,8 +157,8 @@ exports[`Documentation: InputGroup InputGroupText renders 1`] = `
   <BasicExample />
   <ButtonAddons />
   <WithSelect />
-  <WithFeedbackIcon />
   <ValidationStates />
+  <Disabled />
 </div>
 `;
 

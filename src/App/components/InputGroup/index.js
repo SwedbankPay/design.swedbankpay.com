@@ -24,7 +24,10 @@ const InputGroup = ({
     pattern,
     required,
     value,
+    defaultValue,
     autoComplete,
+    disabled,
+    readOnly,
     label,
     validationState,
     selectOptions,
@@ -50,11 +53,13 @@ const InputGroup = ({
                         pattern={pattern}
                         required={required}
                         value={value}
+                        disabled={disabled}
+                        readOnly={readOnly}
                         data-px-validate={pattern ? true : null}
                         data-px-required={required ? true : null}>
                     </textarea>
                     : type === "select" ?
-                        <select className="form-control">{"\n\t\t"}
+                        <select className="form-control" disabled={disabled} readOnly={readOnly}>{"\n\t\t"}
                             {selectOptions.map((opt, i) => <option key={opt + i}>{opt}</option>)}{"\n\t"}
                         </select>
                         :
@@ -66,7 +71,10 @@ const InputGroup = ({
                             pattern={pattern}
                             required={required}
                             value={value}
+                            defaultValue={defaultValue}
                             autoComplete={autoComplete || null}
+                            disabled={disabled}
+                            readOnly={readOnly}
                             data-px-validate={pattern ? true : null}
                             data-px-required={required ? true : null}
                         />}
@@ -86,7 +94,10 @@ InputGroup.propTypes = {
     pattern: PropTypes.string,
     required: PropTypes.bool,
     value: PropTypes.string,
+    defaultValue: PropTypes.string,
     autoComplete: PropTypes.string,
+    disabled: PropTypes.bool,
+    readOnly: PropTypes.bool,
     label: PropTypes.string,
     validationState: PropTypes.oneOf(["success", "error", ""]),
     selectOptions: PropTypes.array,

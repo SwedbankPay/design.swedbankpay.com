@@ -6,7 +6,7 @@ import DocToc from "../../utils/DocToc";
 
 import InputGroup from "../../../components/InputGroup";
 import Button from "../../../components/Button";
-import { Checkbox, Radio, Togglebox } from "../../../components/FormComponents";
+import { Checkbox, FormControlText, Radio, Togglebox } from "../../../components/FormComponents";
 
 const Overview = () => (
     <div>
@@ -61,7 +61,7 @@ const FormGrid = () => (
                             autoComplete="given-name"
                             label="First name"
                             placeholder="Enter your first name"
-                            helpBlock="The first word of your full name"
+                            helpBlock="Hope it is something cool"
                         />
                     </div>
                     <div className="col-md-6">
@@ -71,7 +71,7 @@ const FormGrid = () => (
                             label="Last name"
                             autoComplete="family-name"
                             placeholder="Enter your last name"
-                            helpBlock="The very last collection of letters in your name"
+                            helpBlock="Most likely in your passport"
                         />
                     </div>
                 </div>
@@ -112,6 +112,72 @@ const FormGrid = () => (
     </div>
 );
 
+const UsageWithFieldsets = () => (
+    <div>
+        <h2 id="usage-with-fieldsets">Usage with fieldsets</h2>
+        <p>Usage with fieldsets...</p>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={false}>
+            <form>
+                <fieldset>
+                    <legend>Log in</legend>
+                    <InputGroup
+                        id="fieldset-username"
+                        type="text"
+                        autoComplete="username"
+                        label="Username"
+                        placeholder="Enter your username"
+                    />
+                    <InputGroup
+                        id="fieldset-password"
+                        type="password"
+                        label="Password"
+                        autoComplete="current-password"
+                        placeholder="Enter your password"
+                    />
+                    <Checkbox label="Remember me" id="fieldset-checkbox" />
+                </fieldset>{"\n"}
+                <Button type="neutral" label="Log in" btnType="submit" />{"\n"}
+            </form>
+        </ComponentPreview>
+        <h3>Disable a fieldset</h3>
+        <p>Disable entire fieldsets with <span className="token attr-name">disabled</span> attribute...</p>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={false}>
+            <form>
+                <fieldset disabled>
+                    <legend>Log in</legend>
+                    <InputGroup
+                        id="fieldset-disabled-username"
+                        type="text"
+                        autoComplete="username"
+                        label="Username"
+                        placeholder="Enter your username"
+                    />
+                    <InputGroup
+                        id="fieldset-disabled-password"
+                        type="password"
+                        label="Password"
+                        autoComplete="current-password"
+                        placeholder="Enter your password"
+                    />
+                    <Checkbox label="Remember me" id="fieldset-disabled-checkbox" />
+                </fieldset>{"\n"}
+                <Button type="neutral" label="Log in" btnType="submit" />{"\n"}
+            </form>
+        </ComponentPreview>
+    </div>
+);
+
+const StaticText = () => (
+    <div>
+        <h2 id="static-text">Static text</h2>
+        <p>Static text...</p>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={false}>
+            <FormControlText label="Company" text="PayEx" />
+            <FormControlText label="Employee" text="Bob Corlsan" />
+        </ComponentPreview>
+    </div>
+);
+
 const Checkboxes = () => (
     <div>
         <h2 id="checkboxes">Checkboxes</h2>
@@ -139,8 +205,8 @@ const RadioButtons = () => (
         <h2 id="radio-buttons">Radio buttons</h2>
         <p>Radio buttons...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={false}>
-            <Radio label="Hamburgers" id="radio-example-1" />
-            <Radio label="Pizza" id="radio-example-2" />
+            <Radio label="Hamburgers" id="radio-example-1" name="radio-example" />
+            <Radio label="Pizza" id="radio-example-2" name="radio-example" />
         </ComponentPreview>
     </div>
 );
@@ -150,8 +216,8 @@ const DisabledRadioButtons = () => (
         <h2 id="disabled-radio-buttons">Disabled radio buttons</h2>
         <p>Disabled radio buttons...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={false}>
-            <Radio label="Hamburgers" id="radio-disabled-example-1" disabled={true} />
-            <Radio label="Pizza" id="radio-disabled-example-2" disabled={true} checked={true} />
+            <Radio label="Hamburgers" id="radio-disabled-example-1" name="radio-disabled-example" disabled={true} />
+            <Radio label="Pizza" id="radio-disabled-example-2" name="radio-disabled-example" disabled={true} checked={true} />
         </ComponentPreview>
     </div>
 );
@@ -183,6 +249,8 @@ const FormsText = () => (
         <p className="lead">Forms...</p>
         <Overview />
         <FormGrid />
+        <UsageWithFieldsets />
+        <StaticText />
         <Checkboxes />
         <DisabledCheckboxes />
         <RadioButtons />

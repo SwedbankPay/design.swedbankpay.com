@@ -9,7 +9,7 @@ import InputGroupComponent from "../../../components/InputGroup";
 const BasicExample = () => (
     <div>
         <h2 id="basic-example">Basic example</h2>
-        <p></p>
+        <p>Basic input group...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={true}>
             <InputGroupComponent
                 id="input-id-1"
@@ -75,6 +75,7 @@ const CheckboxesAndRadios = () => (
 const ButtonAddons = () => (
     <div>
         <h2 id="button-addons">Button addons</h2>
+        <p>Addons...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={true}>
             <InputGroupComponent
                 type="text"
@@ -104,11 +105,12 @@ const ButtonAddons = () => (
 const WithSelect = () => (
     <div>
         <h2 id="with-select">With select</h2>
+        <p>Select...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={true}>
             <InputGroupComponent
                 type="select"
-                selectOptions={["Option one", "Option two", "Option three"]}
-                prefixValue="Options"
+                selectOptions={["Bounty hunter", "Smuggler", "Jedi"]}
+                prefixValue="Profession"
             />
         </ComponentPreview>
     </div>
@@ -133,22 +135,53 @@ const WithFeedbackIcon = () => (
 const ValidationStates = () => (
     <div>
         <h2 id="validation-states">Validation states</h2>
+        <p>Validation...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={true}>
             <InputGroupComponent
                 type="text"
                 validationState="success"
                 placeholder="Name"
                 prefixValue="Mr."
-                value="Anderson"
-                feedbackIcon="check_circle"
+                defaultValue="Anderson"
             /> {"\n\n"}
             <InputGroupComponent
                 type="text"
                 validationState="error"
                 placeholder="Name"
                 prefixValue="Agent"
-                value="Smith"
-                feedbackIcon="cancel"
+                defaultValue="Smith"
+            />
+        </ComponentPreview>
+    </div>
+);
+
+const Disabled = () => (
+    <div>
+        <h2 id="disabled">Disabled</h2>
+        <p>Disabled blabla...</p>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={true}>
+            <InputGroupComponent
+                id="input-id-3"
+                type="number"
+                placeholder="Rounded to nearest $"
+                disabled={true}
+                prefixType="icon"
+                prefixValue="attach_money"
+                postfixValue=".00"
+            />
+            <InputGroupComponent
+                id="input-id-4"
+                type="textarea"
+                placeholder="Special requests"
+                disabled={true}
+                prefixType="icon"
+                prefixValue="format_quote"
+            />
+            <InputGroupComponent
+                type="select"
+                selectOptions={["Option one", "Option two", "Option three"]}
+                prefixValue="Options"
+                disabled={true}
             />
         </ComponentPreview>
     </div>
@@ -161,8 +194,9 @@ const InputGroupText = () => (
         {/* <CheckboxesAndRadios /> */}
         <ButtonAddons />
         <WithSelect />
-        <WithFeedbackIcon />
+        {/* <WithFeedbackIcon /> */}
         <ValidationStates />
+        <Disabled />
     </div>
 );
 
