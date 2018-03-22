@@ -1,8 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import InputGroup from "./index";
-import { BasicExample, CheckboxesAndRadios, InputGroupText } from "./index";
+import InputGroup, { BasicExample, CheckboxesAndRadios, ButtonAddons, WithSelect, WithFeedbackIcon, ValidationStates, Disabled, InputGroupText } from "./index";
 
 describe("Documentation: InputGroup", () => {
     it("is defined", () => {
@@ -39,6 +38,76 @@ describe("Documentation: InputGroup", () => {
         it("renders", () => {
             const wrapper = shallow(
                 <CheckboxesAndRadios />
+            );
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("ButtonAddons", () => {
+        it("is defined", () => {
+            expect(ButtonAddons).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(
+                <ButtonAddons />
+            );
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("WithSelect", () => {
+        it("is defined", () => {
+            expect(WithSelect).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(
+                <WithSelect />
+            );
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("WithFeedbackIcon", () => {
+        it("is defined", () => {
+            expect(WithFeedbackIcon).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(
+                <WithFeedbackIcon />
+            );
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("ValidationStates", () => {
+        it("is defined", () => {
+            expect(ValidationStates).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(
+                <ValidationStates />
+            );
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("Disabled", () => {
+        it("is defined", () => {
+            expect(Disabled).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(
+                <Disabled />
             );
 
             expect(wrapper).toMatchSnapshot();

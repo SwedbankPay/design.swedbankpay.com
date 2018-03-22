@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Checkbox -  renders 1`] = `
+<div
+  className="checkbox"
+>
+  
+
+  <input
+    type="checkbox"
+  />
+  
+
+</div>
+`;
+
+exports[`Component: Checkbox -  renders with the checked attribute 1`] = `
+<div
+  className="checkbox"
+>
+  
+
+  <input
+    checked={true}
+    type="checkbox"
+  />
+  
+
+</div>
+`;
+
+exports[`Component: Checkbox -  renders with the disabled attribute 1`] = `
+<div
+  className="checkbox"
+>
+  
+
+  <input
+    disabled={true}
+    type="checkbox"
+  />
+  
+
+</div>
+`;
+
+exports[`Component: Checkbox -  renders with the specified id and label 1`] = `
+<div
+  className="checkbox"
+>
+  
+
+  <input
+    id="test"
+    type="checkbox"
+  />
+  
+
+  <label
+    htmlFor="test"
+  >
+    test
+  </label>
+  
+
+</div>
+`;
+
+exports[`Component: Checkbox -  renders with the specified id but without label 1`] = `
+<div
+  className="checkbox"
+>
+  
+
+  <input
+    id="test"
+    type="checkbox"
+  />
+  
+
+</div>
+`;

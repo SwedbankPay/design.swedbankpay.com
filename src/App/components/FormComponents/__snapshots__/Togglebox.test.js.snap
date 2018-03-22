@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Togglebox -  renders checked 1`] = `
+<div
+  className="togglebox"
+>
+  
+
+  <input
+    checked={true}
+    type="checkbox"
+  />
+  
+
+</div>
+`;
+
+exports[`Component: Togglebox -  renders disabled 1`] = `
+<div
+  className="togglebox"
+>
+  
+
+  <input
+    disabled={true}
+    type="checkbox"
+  />
+  
+
+</div>
+`;
+
+exports[`Component: Togglebox -  renders with id and label 1`] = `
+<div
+  className="togglebox"
+>
+  
+
+  <input
+    id="test"
+    type="checkbox"
+  />
+  
+
+  <label
+    htmlFor="test"
+  >
+    test
+  </label>
+  
+
+</div>
+`;
+
+exports[`Component: Togglebox -  renders without label 1`] = `
+<div
+  className="togglebox"
+>
+  
+
+  <input
+    type="checkbox"
+  />
+  
+
+</div>
+`;

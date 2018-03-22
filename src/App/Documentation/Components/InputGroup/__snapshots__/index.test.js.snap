@@ -64,6 +64,55 @@ exports[`Documentation: InputGroup BasicExample renders 1`] = `
 </div>
 `;
 
+exports[`Documentation: InputGroup ButtonAddons renders 1`] = `
+<div>
+  <h2
+    id="button-addons"
+  >
+    Button addons
+  </h2>
+  <p>
+    Addons...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <InputGroup
+      prefixBtnColor="default"
+      prefixType="button"
+      prefixValue="Button"
+      type="text"
+    />
+     
+    
+
+
+    <InputGroup
+      postfixBtnColor="brand"
+      postfixType="button"
+      postfixValue="Button"
+      type="text"
+    />
+     
+    
+
+
+    <InputGroup
+      postfixBtnColor="neutral"
+      postfixType="button"
+      postfixValue="Button"
+      prefixBtnColor="default"
+      prefixType="button"
+      prefixValue="Button"
+      type="text"
+    />
+  </ComponentPreview>
+</div>
+`;
+
 exports[`Documentation: InputGroup CheckboxesAndRadios renders 1`] = `
 <div>
   <h2
@@ -145,6 +194,55 @@ exports[`Documentation: InputGroup CheckboxesAndRadios renders 1`] = `
 </div>
 `;
 
+exports[`Documentation: InputGroup Disabled renders 1`] = `
+<div>
+  <h2
+    id="disabled"
+  >
+    Disabled
+  </h2>
+  <p>
+    Disabled blabla...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <InputGroup
+      disabled={true}
+      id="input-id-3"
+      placeholder="Rounded to nearest $"
+      postfixValue=".00"
+      prefixType="icon"
+      prefixValue="attach_money"
+      type="number"
+    />
+    <InputGroup
+      disabled={true}
+      id="input-id-4"
+      placeholder="Special requests"
+      prefixType="icon"
+      prefixValue="format_quote"
+      type="textarea"
+    />
+    <InputGroup
+      disabled={true}
+      prefixValue="Options"
+      selectOptions={
+        Array [
+          "Option one",
+          "Option two",
+          "Option three",
+        ]
+      }
+      type="select"
+    />
+  </ComponentPreview>
+</div>
+`;
+
 exports[`Documentation: InputGroup InputGroupText renders 1`] = `
 <div
   className="col-md-12 col-lg-10 doc-body"
@@ -159,6 +257,100 @@ exports[`Documentation: InputGroup InputGroupText renders 1`] = `
   <WithSelect />
   <ValidationStates />
   <Disabled />
+</div>
+`;
+
+exports[`Documentation: InputGroup ValidationStates renders 1`] = `
+<div>
+  <h2
+    id="validation-states"
+  >
+    Validation states
+  </h2>
+  <p>
+    Validation...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <InputGroup
+      defaultValue="Anderson"
+      placeholder="Name"
+      prefixValue="Mr."
+      type="text"
+      validationState="success"
+    />
+     
+    
+
+
+    <InputGroup
+      defaultValue="Smith"
+      placeholder="Name"
+      prefixValue="Agent"
+      type="text"
+      validationState="error"
+    />
+  </ComponentPreview>
+</div>
+`;
+
+exports[`Documentation: InputGroup WithFeedbackIcon renders 1`] = `
+<div>
+  <h2
+    id="with-feedback"
+  >
+    With feedback
+  </h2>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <InputGroup
+      feedbackIcon="cancel"
+      id="input-with-feedback-1"
+      label="Name"
+      placeholder="Name"
+      prefixValue="Mr."
+      type="text"
+    />
+  </ComponentPreview>
+</div>
+`;
+
+exports[`Documentation: InputGroup WithSelect renders 1`] = `
+<div>
+  <h2
+    id="with-select"
+  >
+    With select
+  </h2>
+  <p>
+    Select...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <InputGroup
+      prefixValue="Profession"
+      selectOptions={
+        Array [
+          "Bounty hunter",
+          "Smuggler",
+          "Jedi",
+        ]
+      }
+      type="select"
+    />
+  </ComponentPreview>
 </div>
 `;
 

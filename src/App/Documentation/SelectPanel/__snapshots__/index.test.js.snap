@@ -112,7 +112,7 @@ exports[`Documentation: SelectPanel renders 1`] = `
           <Link
             className=""
             replace={false}
-            to="/docs/core/Tables"
+            to="/docs/core/tables"
           >
             Tables
           </Link>
@@ -189,7 +189,7 @@ exports[`Documentation: SelectPanel renders 1`] = `
           <Link
             className=""
             replace={false}
-            to="/docs/components/Forms"
+            to="/docs/components/forms"
           >
             Forms
           </Link>

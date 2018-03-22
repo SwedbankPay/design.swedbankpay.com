@@ -40,7 +40,7 @@ export default [
             },
             {
                 title: "Tables",
-                path: "/docs/core/Tables",
+                path: "/docs/core/tables",
                 component: require("../Documentation/Core/Tables")
             },
             {
@@ -81,7 +81,7 @@ export default [
             // },
             {
                 title: "Forms",
-                path: "/docs/components/Forms",
+                path: "/docs/components/forms",
                 component: require("../Documentation/Components/Forms")
             },
             {

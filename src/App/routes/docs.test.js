@@ -1,6 +1,8 @@
 import docsRoutes from "./docs";
 
 describe("Routes: docs", () => {
+    const pathFormat = new RegExp("^(\\/[a-z]+(-[a-z]+)?)+$");
+
     it("is defined", () => {
         expect(docsRoutes).toBeDefined();
     });
@@ -10,8 +12,7 @@ describe("Routes: docs", () => {
     });
 
     it("all top routes has a title, path redirect and routes of type array", () => {
-        docsRoutes.forEach(route => {
-            const { title, path, redirect, routes } = route;
+        docsRoutes.forEach(({ title, path, redirect, routes }) => {
 
             expect(title).toBeDefined();
             expect(path).toBeDefined();
@@ -20,14 +21,28 @@ describe("Routes: docs", () => {
         });
     });
 
+    it("all top path and redirect routes is formatted correctly", () => {
+        docsRoutes.forEach(({ path, redirect }) => {
+            expect(path).toMatch(pathFormat);
+            expect(redirect).toMatch(pathFormat);
+        });
+    });
+
     it("all child routes has a title, path and component", () => {
         docsRoutes.forEach(route => {
-            route.routes.forEach(childRoute => {
-                const { title, path, component } = childRoute;
+            route.routes.forEach(({ title, path, component }) => {
 
                 expect(title).toBeDefined();
                 expect(path).toBeDefined();
                 expect(component).toBeDefined();
+            });
+        });
+    });
+
+    it("all child path routes is formatted correctly", () => {
+        docsRoutes.forEach(route => {
+            route.routes.forEach(({ path }) => {
+                expect(path).toMatch(pathFormat);
             });
         });
     });

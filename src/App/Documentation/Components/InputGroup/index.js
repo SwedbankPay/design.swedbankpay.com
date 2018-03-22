@@ -220,4 +220,4 @@ class InputGroup extends Component {
 export default InputGroup;
 
 /* for testing */
-export { BasicExample, CheckboxesAndRadios, InputGroupText };
+export { BasicExample, CheckboxesAndRadios, ButtonAddons, WithSelect, WithFeedbackIcon, ValidationStates, Disabled, InputGroupText };

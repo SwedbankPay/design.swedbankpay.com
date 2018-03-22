@@ -2,10 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Checkbox = ({ id, checked, disabled, label }) => {
+    const attrs = { type: "checkbox" };
+    if (id) attrs.id = id;
+    if (disabled) attrs.disabled = disabled;
+    if (checked) attrs.checked = checked;
+
     return (
         <div className="checkbox">{"\n"}
-            <input type="checkbox" id={id || null} disabled={disabled || null} checked={checked || null} />{"\n"}
-            {label ? <label htmlFor={id || null}>{label}</label> : null}{label ? "\n" : null}
+            <input {...attrs} />{"\n"}
+            {label ? <label htmlFor={id}>{label}</label> : null}{label ? "\n" : null}
         </div>
     );
 };

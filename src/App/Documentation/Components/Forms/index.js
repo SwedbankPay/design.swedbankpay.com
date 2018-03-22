@@ -40,7 +40,7 @@ const Overview = () => (
                 />
                 <div className="form-group">
                     <Checkbox label={"Subscribe to our Shovels and Tapestry catalogue"} id="subscribe-checkbox" />
-                </div>
+                </div>{"\n"}
                 <Button type="brand" label="Submit" btnType="submit" />{"\n"}
             </form>
         </ComponentPreview>
@@ -280,4 +280,4 @@ class Forms extends Component {
 export default Forms;
 
 /* for testing */
-export { };
+export { Overview, FormGrid, UsageWithFieldsets, StaticText, Checkboxes, DisabledCheckboxes, RadioButtons, DisabledRadioButtons, Toggleboxes, DisabledToggleboxes, FormsText };

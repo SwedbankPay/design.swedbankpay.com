@@ -1,5 +1,498 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Documentation: Forms Checkboxes renders 1`] = `
+<div>
+  <h2
+    id="checkboxes"
+  >
+    Checkboxes
+  </h2>
+  <p>
+    Checkboxes...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={false}
+    showCasePanel={true}
+  >
+    <Checkbox
+      id="checkbox-example-1"
+      label="Bread"
+    />
+    <Checkbox
+      id="checkbox-example-2"
+      label="Milk"
+    />
+  </ComponentPreview>
+</div>
+`;
+
+exports[`Documentation: Forms DisabledCheckboxes renders 1`] = `
+<div>
+  <h2
+    id="disabled-checkboxes"
+  >
+    Disabled checkboxes
+  </h2>
+  <p>
+    Disabled checkboxes...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={false}
+    showCasePanel={true}
+  >
+    <Checkbox
+      disabled={true}
+      id="checkbox-disabled-example-1"
+      label="Bread"
+    />
+    <Checkbox
+      checked={true}
+      disabled={true}
+      id="checkbox-disabled-example-2"
+      label="Milk"
+    />
+  </ComponentPreview>
+</div>
+`;
+
+exports[`Documentation: Forms DisabledRadioButtons renders 1`] = `
+<div>
+  <h2
+    id="disabled-radio-buttons"
+  >
+    Disabled radio buttons
+  </h2>
+  <p>
+    Disabled radio buttons...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={false}
+    showCasePanel={true}
+  >
+    <Radio
+      disabled={true}
+      id="radio-disabled-example-1"
+      label="Hamburgers"
+      name="radio-disabled-example"
+    />
+    <Radio
+      checked={true}
+      disabled={true}
+      id="radio-disabled-example-2"
+      label="Pizza"
+      name="radio-disabled-example"
+    />
+  </ComponentPreview>
+</div>
+`;
+
+exports[`Documentation: Forms DisabledToggleboxes renders 1`] = `
+<div>
+  <h2
+    id="disabled-toggleboxes"
+  >
+    Disabled toggleboxes
+  </h2>
+  <p>
+    Disabled toggleboxes...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={false}
+    showCasePanel={true}
+  >
+    <Togglebox
+      disabled={true}
+      id="togglebox-disabled-example-1"
+      label="Enable overdrive"
+    />
+    <Togglebox
+      checked={true}
+      disabled={true}
+      id="togglebox-disabled-example-2"
+      label="Enable superpowers"
+    />
+  </ComponentPreview>
+</div>
+`;
+
+exports[`Documentation: Forms FormGrid renders 1`] = `
+<div>
+  <h2
+    id="form-grid"
+  >
+    Form grid
+  </h2>
+  <p>
+    Form grid...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={false}
+    showCasePanel={true}
+  >
+    <form>
+      <div
+        className="row"
+      >
+        <div
+          className="col-md-6"
+        >
+          <InputGroup
+            autoComplete="given-name"
+            helpBlock="Hope it is something cool"
+            id="grid-first-name"
+            label="First name"
+            placeholder="Enter your first name"
+            type="text"
+          />
+        </div>
+        <div
+          className="col-md-6"
+        >
+          <InputGroup
+            autoComplete="family-name"
+            helpBlock="Most likely in your passport"
+            id="grid-last-name"
+            label="Last name"
+            placeholder="Enter your last name"
+            type="text"
+          />
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col-md-4"
+        >
+          <InputGroup
+            autoComplete="email"
+            helpBlock="Usually contains an @"
+            id="grid-email"
+            label="Email"
+            placeholder="Enter email"
+            type="email"
+          />
+        </div>
+        <div
+          className="col-md-4"
+        >
+          <InputGroup
+            autoComplete="new-password"
+            helpBlock="It is safe with us"
+            id="grid-new-password"
+            label="Password"
+            placeholder="Enter your desired password"
+            type="password"
+          />
+        </div>
+        <div
+          className="col-md-4"
+        >
+          <InputGroup
+            autoComplete="new-password"
+            helpBlock="Definately not looking over your shoulder"
+            id="grid-repeat-password"
+            label="Repeat password"
+            placeholder="Repeat your desired password"
+            type="password"
+          />
+        </div>
+      </div>
+    </form>
+  </ComponentPreview>
+</div>
+`;
+
+exports[`Documentation: Forms FormsText renders 1`] = `
+<div
+  className="col-md-12 col-lg-10 doc-body"
+>
+  <p
+    className="lead"
+  >
+    Forms...
+  </p>
+  <Overview />
+  <FormGrid />
+  <UsageWithFieldsets />
+  <StaticText />
+  <Checkboxes />
+  <DisabledCheckboxes />
+  <RadioButtons />
+  <DisabledRadioButtons />
+  <Toggleboxes />
+  <DisabledToggleboxes />
+</div>
+`;
+
+exports[`Documentation: Forms Overview renders 1`] = `
+<div>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <p>
+    Forms overview...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={false}
+    showCasePanel={true}
+  >
+    <form>
+      <InputGroup
+        autoComplete="given-name"
+        helpBlock="The first word of your full name"
+        id="first-name"
+        label="First name"
+        placeholder="Enter your first name"
+        type="text"
+      />
+      <InputGroup
+        autoComplete="family-name"
+        helpBlock="The very last collection of letters in your name"
+        id="last-name"
+        label="Last name"
+        placeholder="Enter your last name"
+        type="text"
+      />
+      <InputGroup
+        autoComplete="email"
+        helpBlock="The last part is probably @payex.com"
+        id="email-address"
+        label="Email"
+        placeholder="Enter your email"
+        type="text"
+      />
+      <div
+        className="form-group"
+      >
+        <Checkbox
+          id="subscribe-checkbox"
+          label="Subscribe to our Shovels and Tapestry catalogue"
+        />
+      </div>
+      
+
+      <Button
+        btnType="submit"
+        label="Submit"
+        type="brand"
+      />
+      
+
+    </form>
+  </ComponentPreview>
+</div>
+`;
+
+exports[`Documentation: Forms RadioButtons renders 1`] = `
+<div>
+  <h2
+    id="radio-buttons"
+  >
+    Radio buttons
+  </h2>
+  <p>
+    Radio buttons...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={false}
+    showCasePanel={true}
+  >
+    <Radio
+      id="radio-example-1"
+      label="Hamburgers"
+      name="radio-example"
+    />
+    <Radio
+      id="radio-example-2"
+      label="Pizza"
+      name="radio-example"
+    />
+  </ComponentPreview>
+</div>
+`;
+
+exports[`Documentation: Forms StaticText renders 1`] = `
+<div>
+  <h2
+    id="static-text"
+  >
+    Static text
+  </h2>
+  <p>
+    Static text...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={false}
+    showCasePanel={true}
+  >
+    <FormControlText
+      label="Company"
+      text="PayEx"
+    />
+    <FormControlText
+      label="Employee"
+      text="Bob Corlsan"
+    />
+  </ComponentPreview>
+</div>
+`;
+
+exports[`Documentation: Forms Toggleboxes renders 1`] = `
+<div>
+  <h2
+    id="toggleboxes"
+  >
+    Toggleboxes
+  </h2>
+  <p>
+    Toggleboxes...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={false}
+    showCasePanel={true}
+  >
+    <Togglebox
+      id="togglebox-example-1"
+      label="Enable overdrive"
+    />
+    <Togglebox
+      id="togglebox-example-2"
+      label="Enable superpowers"
+    />
+  </ComponentPreview>
+</div>
+`;
+
+exports[`Documentation: Forms UsageWithFieldsets renders 1`] = `
+<div>
+  <h2
+    id="usage-with-fieldsets"
+  >
+    Usage with fieldsets
+  </h2>
+  <p>
+    Usage with fieldsets...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={false}
+    showCasePanel={true}
+  >
+    <form>
+      <fieldset>
+        <legend>
+          Log in
+        </legend>
+        <InputGroup
+          autoComplete="username"
+          id="fieldset-username"
+          label="Username"
+          placeholder="Enter your username"
+          type="text"
+        />
+        <InputGroup
+          autoComplete="current-password"
+          id="fieldset-password"
+          label="Password"
+          placeholder="Enter your password"
+          type="password"
+        />
+        <Checkbox
+          id="fieldset-checkbox"
+          label="Remember me"
+        />
+      </fieldset>
+      
+
+      <Button
+        btnType="submit"
+        label="Log in"
+        type="neutral"
+      />
+      
+
+    </form>
+  </ComponentPreview>
+  <h3>
+    Disable a fieldset
+  </h3>
+  <p>
+    Disable entire fieldsets with 
+    <span
+      className="token attr-name"
+    >
+      disabled
+    </span>
+     attribute...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={false}
+    showCasePanel={true}
+  >
+    <form>
+      <fieldset
+        disabled={true}
+      >
+        <legend>
+          Log in
+        </legend>
+        <InputGroup
+          autoComplete="username"
+          id="fieldset-disabled-username"
+          label="Username"
+          placeholder="Enter your username"
+          type="text"
+        />
+        <InputGroup
+          autoComplete="current-password"
+          id="fieldset-disabled-password"
+          label="Password"
+          placeholder="Enter your password"
+          type="password"
+        />
+        <Checkbox
+          id="fieldset-disabled-checkbox"
+          label="Remember me"
+        />
+      </fieldset>
+      
+
+      <Button
+        btnType="submit"
+        label="Log in"
+        type="neutral"
+      />
+      
+
+    </form>
+  </ComponentPreview>
+</div>
+`;
+
 exports[`Documentation: Forms renders 1`] = `
 <div
   className="doc-container"
