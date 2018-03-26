@@ -21,7 +21,7 @@ exports[`Component: Checkbox -  renders with the checked attribute 1`] = `
   
 
   <input
-    checked={true}
+    defaultChecked={true}
     type="checkbox"
   />
   

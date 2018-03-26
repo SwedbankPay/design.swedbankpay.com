@@ -5,7 +5,7 @@ const Togglebox = ({ id, checked, disabled, label }) => {
     const attrs = { type: "checkbox" };
     if (id) attrs.id = id;
     if (disabled) attrs.disabled = disabled;
-    if (checked) attrs.checked = checked;
+    if (checked) attrs.defaultChecked = checked;
     return (
         <div className="togglebox">{"\n"}
             <input {...attrs} />{"\n"}

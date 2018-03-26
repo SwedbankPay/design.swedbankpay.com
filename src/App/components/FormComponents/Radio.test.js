@@ -52,6 +52,6 @@ describe("Component: Radio - ", () => {
         );
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<input type="radio" checked={true} />)).toEqual(true);
+        expect(wrapper.contains(<input type="radio" defaultChecked={true} />)).toEqual(true);
     });
 });

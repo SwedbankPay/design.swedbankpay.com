@@ -43,6 +43,6 @@ describe("Component: Togglebox - ", () => {
         );
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<input type="checkbox" checked={true} />)).toEqual(true);
+        expect(wrapper.contains(<input type="checkbox" defaultChecked={true} />)).toEqual(true);
     });
 });

@@ -6,7 +6,7 @@ const Radio = ({ id, checked, disabled, label, name }) => {
     if (id) attrs.id = id;
     if (name) attrs.name = name;
     if (disabled) attrs.disabled = disabled;
-    if (checked) attrs.checked = checked;
+    if (checked) attrs.defaultChecked = checked;
 
     return (
         <div className="radio">{"\n"}

@@ -184,7 +184,7 @@ const Checkboxes = () => (
         <p>Checkboxes...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={false}>
             <Checkbox label="Bread" id="checkbox-example-1" />
-            <Checkbox label="Milk" id="checkbox-example-2" />
+            <Checkbox label="Milk" id="checkbox-example-2" checked />
         </ComponentPreview>
     </div>
 );
@@ -194,8 +194,8 @@ const DisabledCheckboxes = () => (
         <h2 id="disabled-checkboxes">Disabled checkboxes</h2>
         <p>Disabled checkboxes...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={false}>
-            <Checkbox label="Bread" id="checkbox-disabled-example-1" disabled={true} />
-            <Checkbox label="Milk" id="checkbox-disabled-example-2" disabled={true} checked={true} />
+            <Checkbox label="Bread" id="checkbox-disabled-example-1" disabled />
+            <Checkbox label="Milk" id="checkbox-disabled-example-2" disabled checked />
         </ComponentPreview>
     </div>
 );
@@ -206,7 +206,7 @@ const RadioButtons = () => (
         <p>Radio buttons...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={false}>
             <Radio label="Hamburgers" id="radio-example-1" name="radio-example" />
-            <Radio label="Pizza" id="radio-example-2" name="radio-example" />
+            <Radio label="Pizza" id="radio-example-2" name="radio-example" checked />
         </ComponentPreview>
     </div>
 );
@@ -216,8 +216,8 @@ const DisabledRadioButtons = () => (
         <h2 id="disabled-radio-buttons">Disabled radio buttons</h2>
         <p>Disabled radio buttons...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={false}>
-            <Radio label="Hamburgers" id="radio-disabled-example-1" name="radio-disabled-example" disabled={true} />
-            <Radio label="Pizza" id="radio-disabled-example-2" name="radio-disabled-example" disabled={true} checked={true} />
+            <Radio label="Hamburgers" id="radio-disabled-example-1" name="radio-disabled-example" disabled />
+            <Radio label="Pizza" id="radio-disabled-example-2" name="radio-disabled-example" disabled checked />
         </ComponentPreview>
     </div>
 );
@@ -228,7 +228,7 @@ const Toggleboxes = () => (
         <p>Toggleboxes...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={false}>
             <Togglebox id="togglebox-example-1" label="Enable overdrive" />
-            <Togglebox id="togglebox-example-2" label="Enable superpowers" />
+            <Togglebox id="togglebox-example-2" label="Enable superpowers" checked />
         </ComponentPreview>
     </div>
 );
