@@ -1,0 +1,64 @@
+.status {
+    position: relative;
+    padding-left: 1.5rem;
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        display: block;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        .status-default& {
+            background-color: @gray-8;
+        }
+
+        .status-brand& {
+            background-color: @brand-primary;
+        }
+
+        .status-neutral& {
+            background-color: @state-neutral;
+        }
+
+        .status-success& {
+            background-color: @state-success;
+        }
+
+        .status-warning& {
+            background-color: @state-warning;
+        }
+
+        .status-danger& {
+            background-color: @state-error;
+        }
+    }
+
+    h1& {
+        .status-size(@h1-font-size);
+    }
+
+    h2& {
+        .status-size(@h2-font-size);
+    }
+
+    h3& {
+        .status-size(@h3-font-size);
+    }
+
+    h4& {
+        .status-size(@h4-font-size);
+    }
+
+    h5& {
+        .status-size(@h5-font-size);
+    }
+
+    h6& {
+        .status-size(@h6-font-size);
+    }
+}

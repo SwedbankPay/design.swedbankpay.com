@@ -231,6 +231,16 @@ exports[`Documentation: index renders 1`] = `
                 "path": "/docs/components/panel",
                 "title": "Panel",
               },
+              Object {
+                "component": Object {
+                  "ExtendedUsage": [Function],
+                  "Overview": [Function],
+                  "StatusText": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/components/status",
+                "title": "Status",
+              },
             ]
           }
           title="Components"

@@ -103,6 +103,11 @@ export default [
                 title: "Panel",
                 path: "/docs/components/panel",
                 component: require("../Documentation/Components/Panel")
+            },
+            {
+                title: "Status",
+                path: "/docs/components/status",
+                component: require("../Documentation/Components/Status")
             }
         ]
     },
