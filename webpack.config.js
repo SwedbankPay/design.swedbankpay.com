@@ -39,8 +39,6 @@ const config = {
             "react-prism"
         ],
         "core-libraries": [
-            "@fortawesome/fontawesome-free-brands",
-            "@fortawesome/react-fontawesome",
             "prismjs",
             "prismjs/themes/prism.css",
             "prismjs/plugins/toolbar/prism-toolbar.css",

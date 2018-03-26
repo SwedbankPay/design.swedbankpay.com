@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import FontAwesomeIcon from "@fortawesome/react-fontawesome";
-import { faSlack, faGithub } from "@fortawesome/fontawesome-free-brands";
+
+import { GithubLogo, SlackLogo } from "./HeaderIcons";
 
 import pkg from "../../../package.json";
 import routes from "../routes/root.js";
@@ -23,10 +23,10 @@ const AppHeader = ({ location }) => {
             <div className="topbar-info">
                 <div className="topbar-info-contact">
                     <a href="https://github.com/PayEx/design.payex.com" target="b_blank" rel="noopener">
-                        <FontAwesomeIcon icon={faGithub} size="2x"/>
+                        <GithubLogo />
                     </a>
                     <a href="https://payex.slack.com/messages/C0L3W8B2S/" target="b_blank" rel="noopener">
-                        <FontAwesomeIcon icon={faSlack} size="2x"/>
+                        <SlackLogo />
                     </a>
                 </div>
                 <div className="topbar-info-version">

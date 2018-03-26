@@ -36,14 +36,26 @@
     }
 
     .topbar-info {
-        padding: 5px;
+        .topbar-info-contact {
+            margin: 5px 0;
+        }
 
         a {
             margin: 5px;
             color: @text-muted;
+            fill: @text-muted;
+
+            svg {
+                overflow: visible;
+                width: 2rem;
+                height: 2rem;
+                display: inline-block;
+                vertical-align: top;
+            }
 
             &:hover {
                 color: darken(@text-muted, 20%);
+                fill: darken(@text-muted, 20%);
             }
         }
     }
