@@ -1,2 +1,2 @@
 var payex=webpackJsonppayex(["polyfills"],{"./src/polyfills/String.includes.js":function(t,s,i){"use strict";String.prototype.includes||(String.prototype.includes=function(t,s){return"number"!=typeof s&&(s=0),!(s+t.length>this.length)&&-1!==this.indexOf(t,s)})},"./src/polyfills/String.startsWith.js":function(t,s,i){"use strict";String.prototype.startsWith||(String.prototype.startsWith=function(t,s){return this.substr(!s||s<0?0:+s,t.length)===t})},"./src/polyfills/index.js":function(t,s,i){"use strict";i("./src/polyfills/String.startsWith.js"),i("./src/polyfills/String.includes.js")}},["./src/polyfills/index.js"]);
-//# sourceMappingURL=polyfills-0.1.6.js.map?8555c9fc63677818c239
+//# sourceMappingURL=polyfills-0.1.6.js.map?06eccdf9221615f2bc8c
