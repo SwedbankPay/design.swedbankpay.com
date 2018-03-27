@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.7] - 2018-03-??
+
+### Added
+
+- Added status component.
+- Added rangeslider component and added documentation for it in forms.
+
+### Changed
+
+
 ## [0.1.6] - 2018-03-22
 
 ### Added
