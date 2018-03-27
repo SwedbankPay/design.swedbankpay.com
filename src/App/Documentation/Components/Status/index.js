@@ -7,8 +7,8 @@ const Overview = () => (
     <div>
         <h2 id="overview">Overview</h2>
         <p>Overview... <code className="token property">.status</code>...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={true}>
-            <ul>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeList={true}>
+            <ul className="list-unstyled">
                 <li>
                     <span className="status status-default">Default</span>
                 </li>

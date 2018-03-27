@@ -4,7 +4,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import PrismCode from "react-prism";
 import jsbeautifier from "js-beautify";
 
-const ComponentPreview = ({ children, language, removeOuterTag, showCasePanel, codeFigure }) => {
+const ComponentPreview = ({ children, language, removeOuterTag, removeList, showCasePanel, codeFigure }) => {
     // TODO: This is stupid, find a better way to do this [EH]
     // should be possible with React 16.2
     // https://stackoverflow.com/questions/33766085/how-to-avoid-extra-wrapping-div-in-react
@@ -20,6 +20,20 @@ const ComponentPreview = ({ children, language, removeOuterTag, showCasePanel, c
         return "Check ComponentPreview _removeOuterTag!";
     };
 
+    const _removeList = element => {
+        const div = document.createElement("div");
+        div.innerHTML = renderToStaticMarkup(element);
+
+        const listElements = div.querySelectorAll("li");
+        let htmlString = "";
+
+        listElements.forEach(el => {
+            htmlString += `${el.innerHTML} \n`;
+        });
+
+        return htmlString;
+    };
+
     const CodeFigure = () => {
         let code = "";
 
@@ -27,6 +41,8 @@ const ComponentPreview = ({ children, language, removeOuterTag, showCasePanel, c
             children.map(child => {
                 if (removeOuterTag) {
                     code += _removeOuterTag(child);
+                } else if (removeList) {
+                    code += _removeList(child);
                 } else {
                     code += renderToStaticMarkup(child);
                 }
@@ -35,6 +51,8 @@ const ComponentPreview = ({ children, language, removeOuterTag, showCasePanel, c
         } else if (language === "html") {
             if (removeOuterTag) {
                 code += _removeOuterTag(children);
+            } else if (removeList) {
+                code += _removeList(children);
             } else {
                 code += renderToStaticMarkup(children);
             }
@@ -98,6 +116,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, showCasePanel, c
 ComponentPreview.propTypes = {
     language: PropTypes.string.isRequired,
     removeOuterTag: PropTypes.bool,
+    removeList: PropTypes.bool,
     showCasePanel: PropTypes.bool,
     codeFigure: PropTypes.bool
 };
