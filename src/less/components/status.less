@@ -1,17 +1,20 @@
+@status-size: 13px;
+@status-padding: 10;
+
 .status {
     position: relative;
-    padding-left: 1.5rem;
+    padding-left: @status-size + @status-padding;
 
     &:before {
         content: "";
         position: absolute;
-        width: 1rem;
-        height: 1rem;
+        width: @status-size;
+        height: @status-size;
         border-radius: 50%;
         display: block;
         left: 0;
         top: 50%;
-        transform: translateY(-50%);
+        transform: translateY(-55%);
 
         .status-default& {
             background-color: @gray-8;
@@ -39,26 +42,26 @@
     }
 
     h1& {
-        .status-size(@h1-font-size);
+        .status-size(@status-size * 2.5, @status-padding);
     }
 
     h2& {
-        .status-size(@h2-font-size);
+        .status-size(@status-size * 2, @status-padding);
     }
 
     h3& {
-        .status-size(@h3-font-size);
+        .status-size(@status-size * 1.75, @status-padding);
     }
 
     h4& {
-        .status-size(@h4-font-size);
+        .status-size(@status-size * 1.5, @status-padding);
     }
 
     h5& {
-        .status-size(@h5-font-size);
+        .status-size(@status-size * 1.25, @status-padding);
     }
 
     h6& {
-        .status-size(@h6-font-size);
+        .status-size(@status-size, @status-padding);
     }
 }

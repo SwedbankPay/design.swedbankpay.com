@@ -1,5 +1,5 @@
-.status-size(@size) {
-    padding-left: @size * 1.5;
+.status-size(@size, @padding) {
+    padding-left: @size + @padding;
 
     &:before {
         height: @size;
