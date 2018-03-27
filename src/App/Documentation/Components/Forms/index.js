@@ -3,10 +3,10 @@ import React, { Component } from "react";
 import ComponentPreview from "../../utils/ComponentPreview";
 import DocToc from "../../utils/DocToc";
 
-
+import { rangeslider } from "../../../../px-script";
 import InputGroup from "../../../components/InputGroup";
 import Button from "../../../components/Button";
-import { Checkbox, FormControlText, Radio, Togglebox } from "../../../components/FormComponents";
+import { Checkbox, FormControlText, Radio, Rangeslider, Togglebox } from "../../../components/FormComponents";
 
 const Overview = () => (
     <div>
@@ -244,6 +244,16 @@ const DisabledToggleboxes = () => (
     </div>
 );
 
+const RangeSlider = () => (
+    <div>
+        <h2 id="rangeslider">Rangeslider</h2>
+        <p>Rangeslider...</p>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={false}>
+            <Rangeslider min={0} max={200} step={1} value={100} valueLabel={true} valueLabelPrefix="$" valueLabelPostfix="%" />
+        </ComponentPreview>
+    </div>
+);
+
 const FormsText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
         <p className="lead">Forms...</p>
@@ -257,12 +267,13 @@ const FormsText = () => (
         <DisabledRadioButtons />
         <Toggleboxes />
         <DisabledToggleboxes />
+        <RangeSlider />
     </div>
 );
 
 class Forms extends Component {
     componentDidMount () {
-        // forms.init();
+        rangeslider.init();
     }
 
     render () {

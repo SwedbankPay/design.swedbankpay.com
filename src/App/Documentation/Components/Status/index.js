@@ -7,13 +7,27 @@ const Overview = () => (
     <div>
         <h2 id="overview">Overview</h2>
         <p>Overview... <code className="token property">.status</code>...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={false}>
-            <p className="status status-default">Default</p>
-            <p className="status status-brand">Brand</p>
-            <p className="status status-neutral">Neutral</p>
-            <p className="status status-success">Success</p>
-            <p className="status status-warning">Warning</p>
-            <p className="status status-danger">Danger</p>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={true}>
+            <ul>
+                <li>
+                    <span className="status status-default">Default</span>
+                </li>
+                <li>
+                    <span className="status status-brand">Brand</span>
+                </li>
+                <li>
+                    <span className="status status-neutral">Neutral</span>
+                </li>
+                <li>
+                    <span className="status status-success">Success</span>
+                </li>
+                <li>
+                    <span className="status status-warning">Warning</span>
+                </li>
+                <li>
+                    <span className="status status-danger">Danger</span>
+                </li>
+            </ul>
         </ComponentPreview>
     </div>
 );

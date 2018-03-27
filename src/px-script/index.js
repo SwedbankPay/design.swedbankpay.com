@@ -2,6 +2,7 @@ import alert from "./alert";
 import button from "./button";
 import loader from "./loader";
 import modal from "./modal";
+import rangeslider from "./rangeslider";
 import utils from "./utils";
 import script from "./script";
 
@@ -10,6 +11,7 @@ const px = {
     button,
     loader,
     modal,
+    rangeslider,
     utils,
     script
 };
@@ -25,6 +27,7 @@ export {
     button,
     loader,
     modal,
+    rangeslider,
     utils,
     script
 };

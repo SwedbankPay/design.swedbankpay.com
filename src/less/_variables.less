@@ -382,9 +382,17 @@
 @legend-bottom-margin:                      1.25rem;
 
 // Checkbox
-@checkbox-bg: @brand-primary;
-@checkbox-height: 22px;
-@checkbox-width: @checkbox-height; // This also controls radio and togglebox
+@checkbox-bg:                               @brand-primary;
+@checkbox-height:                           1.4rem;
+@checkbox-width:                            @checkbox-height; // This also controls radio and togglebox
+
+// Rangeslider
+@range-height:                              @checkbox-height / 2;
+@thumb-size:                                @checkbox-height;
+
+@range-bg:                                  @input-bg;
+// This needs to be gradient for some reason
+@range-webkit-bg:                           linear-gradient(90deg, @brand-primary, @brand-primary) 0 100% no-repeat content-box;
 
 
 // 9. Modal

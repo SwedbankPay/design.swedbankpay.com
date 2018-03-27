@@ -324,7 +324,7 @@ legend {
             width: @checkbox-width * 2;
             background-color: @white;
             border: 1px solid @checkbox-bg;
-            border-radius: @checkbox-height / 2;
+            border-radius: @range-height;
             color: @white;
             cursor: pointer;
         }
@@ -372,6 +372,146 @@ legend {
             &:checked:after {
                 cursor: not-allowed;
             }
+        }
+    }
+}
+
+// Range slider
+// ==========================================================================
+
+.slider-range(@background) {
+    box-sizing: border-box;
+    background: @background;
+    border-radius: @range-height;
+    width: @range-height;
+    height: @range-height;
+    border: 1px solid @brand-primary;
+}
+
+.slider-thumb() {
+    box-sizing: border-box;
+    width: @thumb-size;
+    height: @thumb-size;
+    border-radius: 50%;
+    background: @white;
+    border: 1px solid @brand-primary;
+}
+
+.rangeslider {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: @thumb-size;
+
+    .value-label {
+        background-color: lighten(@state-neutral, 50%);
+        color: @state-neutral;
+        font-size: @small-font-size;
+        margin-left: 1rem;
+        vertical-align: middle;
+        padding: 0.2rem;
+        white-space: nowrap;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &:before {
+            content: "";
+            position: absolute;
+            border: solid @range-height transparent;
+            top: 0;
+            right: 100%;
+            border-right-color: lighten(@state-neutral, 50%);
+        }
+
+
+        p {
+            margin: 0;
+            vertical-align: middle;
+
+            span {
+                margin: 0 1.5px;
+            }
+        }
+    }
+
+    input[type=range] {
+        -webkit-appearance: none;
+        width: 90%;
+        cursor: move;
+        cursor: grab;
+
+        &:active {
+            cursor: grabbing;
+        }
+
+        &:focus {
+            outline: none;
+
+            &::-webkit-slider-thumb {
+                .tab-focus();
+            }
+        }
+
+        /*** BROWSER SPECIFIC STYLES ***/
+
+        /* CHROME, OPERA & SAFARI */
+        &::-webkit-slider-runnable-track {
+            -webkit-appearance: none;
+            .slider-range(@range-webkit-bg);
+        }
+
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            transform: translateY(-(@range-height + 0.1) / 2);
+            .slider-thumb();
+        }
+
+        /* FIREFOX */
+        &::-moz-range-track {
+            .slider-range(@range-bg);
+        }
+
+        &::-moz-range-thumb {
+            .slider-thumb();
+        }
+
+        &::-moz-range-progress {
+            background: @brand-primary;
+            height: @range-height;
+            border-radius: (@checkbox-height / 2);
+        }
+
+        /* INTERNET EXPLORER & EDGE */
+        &::-ms-track {
+            height: @range-height + 1px;
+            color: transparent;
+            background: transparent;
+            .slider-range(transparent);
+        }
+
+        &::-ms-thumb {
+            margin-top: @thumb-size / 2; // Offset for Edge
+            .slider-thumb();
+
+            /* Reset offset for correct placement in IE */
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                margin: 0;
+            }
+        }
+
+        &::-ms-fill-upper {
+            background: @range-bg;
+            border-radius: (@checkbox-height / 2);
+        }
+
+        &::-ms-fill-lower {
+            background: @brand-primary;
+            border-radius: (@checkbox-height / 2);
+        }
+
+        &::-ms-tooltip {
+            display: none;
         }
     }
 }
