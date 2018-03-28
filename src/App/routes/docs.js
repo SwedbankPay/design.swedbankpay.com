@@ -39,6 +39,11 @@ export default [
                 component: require("../Documentation/Core/Color")
             },
             {
+                title: "Lists",
+                path: "/docs/core/lists",
+                component: require("../Documentation/Core/Lists")
+            },
+            {
                 title: "Tables",
                 path: "/docs/core/tables",
                 component: require("../Documentation/Core/Tables")

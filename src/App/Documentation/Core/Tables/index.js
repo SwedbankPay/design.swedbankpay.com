@@ -249,7 +249,7 @@ const TablesText = () => (
     </div>
 );
 
-const Table = () => {
+const Tables = () => {
     return (
         <div className="doc-container">
             <div className="row">
@@ -260,7 +260,7 @@ const Table = () => {
     );
 };
 
-export default Table;
+export default Tables;
 
 /* for testing */
 export { BasicTable, StripedTable, HoverTable, HoverStripedTable, DescriptionTable, TablesText };
