@@ -24,7 +24,7 @@ const extractDocumentation = new ExtractTextPlugin({
 });
 
 const extractDesignGuide = new ExtractTextPlugin({
-    filename: "styles/designGuide.css",
+    filename: "styles/designguide.css",
     disable: !isProd
 });
 
