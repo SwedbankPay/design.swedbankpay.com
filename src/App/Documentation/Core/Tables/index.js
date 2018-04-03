@@ -4,7 +4,7 @@ import ComponentPreview from "../../utils/ComponentPreview";
 import DocToc from "../../utils/DocToc";
 
 const BasicTable = () => (
-    <div>
+    <>
         <h2 id="basic-table">Basic table</h2>
         <p>Basic tables info...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
@@ -51,11 +51,11 @@ const BasicTable = () => (
                 </tbody>
             </table>
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const StripedTable = () => (
-    <div>
+    <>
         <h2 id="striped-table">Striped table</h2>
         <p>Striped tables info...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
@@ -102,11 +102,11 @@ const StripedTable = () => (
                 </tbody>
             </table>
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const HoverTable = () => (
-    <div>
+    <>
         <h2 id="hover-table">Hover table</h2>
         <p>Hover tables info...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
@@ -153,11 +153,11 @@ const HoverTable = () => (
                 </tbody>
             </table>
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const HoverStripedTable = () => (
-    <div>
+    <>
         <h2 id="hover-striped-table">Hover striped table</h2>
         <p>Hover striped tables info...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
@@ -204,11 +204,11 @@ const HoverStripedTable = () => (
                 </tbody>
             </table>
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const DescriptionTable = () => (
-    <div>
+    <>
         <h2 id="description-table">Description table</h2>
         <p>Description tables info...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
@@ -235,7 +235,7 @@ const DescriptionTable = () => (
                 </tbody>
             </table>
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const TablesText = () => (

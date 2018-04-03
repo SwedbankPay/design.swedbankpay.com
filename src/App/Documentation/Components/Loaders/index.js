@@ -7,17 +7,17 @@ import DocToc from "../../utils/DocToc";
 import LoaderComponent from "../../../components/Loader";
 
 const BasicUsage = () => (
-    <div>
+    <>
         <h2 id="basic-usage">Basic usage</h2>
         <p>Basic usage...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <LoaderComponent size="default" visible={true} />
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const Sizes = () => (
-    <div>
+    <dv>
         <h2 id="sizes">Sizes</h2>
         <p>In addition to <code className="token property">.loader-default</code> you can use <code className="token property">.loader-small</code> and <code className="token property">.loader-large</code> to decrease or increase the size of the loader.</p>
         <h3>Small</h3>
@@ -28,21 +28,21 @@ const Sizes = () => (
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <LoaderComponent size="large" visible={true} />
         </ComponentPreview>
-    </div>
+    </dv>
 );
 
 const MutedLoader = () => (
-    <div>
+    <>
         <h2 id="muted-loader">Muted loader</h2>
         <p>Use class <code className="token property">.loader-muted</code> to mute the loader...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <LoaderComponent id="test" size="default" visible={true} muted={true} />
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const UsageWithJavascript = () => (
-    <div>
+    <>
         <h2 id="usage-with-javascript">Usage with javascript</h2>
         <p>To interact with the loader-component with javascript...</p>
         <h3>Show loaders</h3>
@@ -100,7 +100,7 @@ const UsageWithJavascript = () => (
                 </tr>
             </tbody>
         </table>
-    </div>
+    </>
 );
 
 const LoadersText = () => (

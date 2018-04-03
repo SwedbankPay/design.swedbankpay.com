@@ -5,7 +5,7 @@ import ComponentPreview from "../utils/ComponentPreview";
 import DocToc from "../utils/DocToc";
 
 const CreatingYourComponent = () => (
-    <div>
+    <>
         <h2 id="creating-your-component">Creating your component</h2>
         <p>Create a new file under <code className="token property">./src/App/components/[MyExampleComponent]/</code> for your component, name it <code className="token property">index.js</code>:</p>
         <ComponentPreview language="javascript" codeFigure={true}>
@@ -26,11 +26,11 @@ const CreatingYourComponent = () => (
             {"};\n\n"}
             {"export default MyExampleComponent;"}
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const CreateADocumentationPage = () => (
-    <div>
+    <>
         <h2 id="create-a-documentation-page">Create a documentation page</h2>
         <p>Create a new file under <code className="token property">./src/App/Documentation/Components/[MyExampleDocumentationComponent]/</code> for your component, call it <code className="token property">index.js</code>:</p>
         <ComponentPreview language="javascript" codeFigure={true}>
@@ -60,11 +60,11 @@ const CreateADocumentationPage = () => (
         </ComponentPreview>
         <p>Use the custom <code className="token property">ComponentPreview</code> component to preview your component. It has three props, <code className="token property">language</code>, <code className="token property">showCasePanel</code> and <code className="token property">codeFigure</code>, for this example we are goin to be using all three.</p>
         <p>We are also using the `DocToc` component to add a dynamic table of contents to the documentation of your component. This component scans the provided component for <PrismCode className="language-html">{"<h2>"}</PrismCode>-tags and creates anchors for easier navigation. Just remember to add an id to the <PrismCode className="language-html">{"<h2>"}</PrismCode>-tag.</p>
-    </div>
+    </>
 );
 
 const AddComponentToRoutes = () => (
-    <div>
+    <>
         <h2 id="add-component-to-routes">Add component to routes</h2>
         <p>In <code className="token property">./src/App/routes/docs.js</code> under the components object add the following:</p>
         <ComponentPreview language="javascript" codeFigure={true}>
@@ -90,12 +90,12 @@ const AddComponentToRoutes = () => (
             {"},\n"}
         </ComponentPreview>
         <p>You will now be able to go to the route you provided to preview your component. Run <code className="token property">npm start</code> if you haven{"'"}t already done so, and navigate to <code className="token property">localhost:3000/docs/components/my-example-documentation-component</code> to see your component in action.</p>
-    </div>
+    </>
 );
 
 const AddingStyles = () => {
     const ImportingTheStyles = () => (
-        <div>
+        <>
             <h3>Importing the styles</h3>
             <p>Import it in the appropriate root-file (<code className="token property">px.less</code> for the core styles, under <code className="token property">/themes</code> if the component is going to be part of a specific theme).</p>
             <p>Assuming you are creating a core component the import would look like this:</p>
@@ -110,11 +110,11 @@ const AddingStyles = () => {
                 {"@import \"components/my-example-component\";\n"}
                 {"..."}
             </ComponentPreview>
-        </div>
+        </>
     );
 
     const CreatingVariables = () => (
-        <div>
+        <>
             <h3>Creating variables</h3>
             <p>To add custom variables to your component modify <code className="token property">./src/less/_variables.less</code>, and add a section for your component. Add it alphabetically and update the table of contents.</p>
             <p>Adding a section should look like this:</p>
@@ -127,7 +127,7 @@ const AddingStyles = () => {
                 {"@my-example-component-padding: 1rem;\n"}
                 {"@my-example-component-font-family: \"Arial\";\n"}
             </ComponentPreview>
-        </div>
+        </>
     );
 
 

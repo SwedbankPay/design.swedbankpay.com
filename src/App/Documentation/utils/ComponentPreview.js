@@ -108,10 +108,10 @@ const ComponentPreview = ({ children, language, removeOuterTag, removeList, show
     );
 
     return (
-        <div>
+        <>
             {showCasePanel ? <ShowCasePanel /> : null}
             {codeFigure ? <CodeFigure /> : null}
-        </div>
+        </>
     );
 };
 

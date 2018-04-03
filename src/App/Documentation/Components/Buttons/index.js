@@ -9,7 +9,7 @@ import ButtonComponent from "../../../components/Button";
 import { button } from "../../../../px-script";
 
 const Examples = () => (
-    <div>
+    <>
         <h2 id="examples">Examples</h2>
         <p>Several button styles etc...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
@@ -22,11 +22,11 @@ const Examples = () => (
             <ButtonComponent type="light" label="Light" />{"\n"}
             <ButtonComponent type="link" label="Link" />{"\n"}
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const UsageWithOtherTags = () => (
-    <div>
+    <>
         <h2 id="usage-with-other-tags">Usage with other tags</h2>
         <p>The <code className="token property">.btn</code> class can also be used with other html-tags like <PrismCode className="language-html">{"<a>"}</PrismCode> or <PrismCode className="language-html">{"<input>"}</PrismCode>.</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
@@ -36,11 +36,11 @@ const UsageWithOtherTags = () => (
             <ButtonComponent type="brand" input={true} value="Submit" btnType="submit" />{"\n"}
             <ButtonComponent type="brand" input={true} value="Reset" btnType="reset" />{"\n"}
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const OutlineButtons = () => (
-    <div>
+    <>
         <h2 id="outline-buttons">Outline buttons</h2>
         <p>Several button styles etc...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
@@ -52,11 +52,11 @@ const OutlineButtons = () => (
             <ButtonComponent outline={true} type="danger" label="Danger" />{"\n"}
             <ButtonComponent outline={true} type="light" label="Light" />{"\n"}
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const Sizes = () => (
-    <div>
+    <>
         <h2 id="sizes">Sizes</h2>
         <p>Several button sizes etc...</p>
         <h3>Large buttons</h3>
@@ -83,11 +83,11 @@ const Sizes = () => (
             <ButtonComponent fullWidth={true} type="default" label="Block level button" />{"\n"}
             <ButtonComponent fullWidth={true} type="brand" label="Block level button" />{"\n"}
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const ActiveState = () => (
-    <div>
+    <>
         <h2 id="active-state">Active state</h2>
         <p>Active state with <code className="token property">.active</code>...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
@@ -99,11 +99,11 @@ const ActiveState = () => (
             <ButtonComponent active={true} type="danger" label="Danger" />{"\n"}
             <ButtonComponent active={true} type="light" label="Light" />{"\n"}
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const DisabledState = () => (
-    <div>
+    <>
         <h2 id="disabled-state">Disabled state</h2>
         <p>Disabled state with <Attribute name="disabled" value="true" />...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
@@ -115,22 +115,22 @@ const DisabledState = () => (
             <ButtonComponent disabled={true} type="danger" label="Danger" />{"\n"}
             <ButtonComponent disabled={true} type="light" label="Light" />{"\n"}
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const UsageWithIcons = () => (
-    <div>
+    <>
         <h2 id="usage-with-icons">Usage with icons</h2>
         <p>To use a button with an icon... Read more about icon usage here <Link to="/docs/core/icons">here</Link>.</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <ButtonComponent icon="cloud" type="default" label="Default" />{"\n\n"}
             <ButtonComponent icon="cloud" type="brand" label="Brand" />{"\n"}
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const ButtonLoader = () => (
-    <div>
+    <>
         <h2 id="button-loader">Button loader</h2>
         <p>To use a button with a loader simply add the attribute <Attribute data={true} name="loader" value="true" /> to add the required markup for the loader component. Add class <code className="token property">.loading</code> to display the loader.</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
@@ -160,11 +160,11 @@ const ButtonLoader = () => (
             </button>
         </ComponentPreview>
         <p>If you want more control over the loader component you can include the html yourself (e.g. for server-side rendering), just make sure you <b>dont</b> add the attribute <Attribute data={true} name="loader" value="true" />.</p>
-    </div>
+    </>
 );
 
 const UsageWithJavascript = () => (
-    <div>
+    <>
         <h2 id="usage-with-javascript">Usage with javascript</h2>
         <p>To interact with the alert-component with javascript...</p>
         <h3>Show loader</h3>
@@ -230,7 +230,7 @@ const UsageWithJavascript = () => (
                 </tr>
             </tbody>
         </table>
-    </div>
+    </>
 );
 
 const ButtonsText = () => (

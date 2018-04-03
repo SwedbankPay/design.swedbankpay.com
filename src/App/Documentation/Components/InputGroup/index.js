@@ -7,7 +7,7 @@ import DocToc from "../../utils/DocToc";
 import InputGroupComponent from "../../../components/InputGroup";
 
 const BasicExample = () => (
-    <div>
+    <>
         <h2 id="basic-example">Basic example</h2>
         <p>Basic input group...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={true}>
@@ -44,11 +44,11 @@ const BasicExample = () => (
                 prefixValue="format_quote"
             />
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const CheckboxesAndRadios = () => (
-    <div>
+    <>
         <h2 id="checkboxes-and-radios">Checkboxes and radios</h2>
         <p>Place any checkbox or radio option within an input group’s addon instead of text.</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={true}>
@@ -69,11 +69,11 @@ const CheckboxesAndRadios = () => (
                 </div>
             </div>
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const ButtonAddons = () => (
-    <div>
+    <>
         <h2 id="button-addons">Button addons</h2>
         <p>Addons...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={true}>
@@ -99,11 +99,11 @@ const ButtonAddons = () => (
                 postfixBtnColor="neutral"
             />
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const WithSelect = () => (
-    <div>
+    <>
         <h2 id="with-select">With select</h2>
         <p>Select...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={true}>
@@ -113,11 +113,11 @@ const WithSelect = () => (
                 prefixValue="Profession"
             />
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const WithFeedbackIcon = () => (
-    <div>
+    <>
         <h2 id="with-feedback">With feedback</h2>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={true}>
             <InputGroupComponent
@@ -129,11 +129,11 @@ const WithFeedbackIcon = () => (
                 feedbackIcon="cancel"
             />
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const ValidationStates = () => (
-    <div>
+    <>
         <h2 id="validation-states">Validation states</h2>
         <p>Validation...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={true}>
@@ -152,11 +152,11 @@ const ValidationStates = () => (
                 defaultValue="Smith"
             />
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const Disabled = () => (
-    <div>
+    <>
         <h2 id="disabled">Disabled</h2>
         <p>Disabled blabla...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={true}>
@@ -184,7 +184,7 @@ const Disabled = () => (
                 disabled={true}
             />
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const InputGroupText = () => (

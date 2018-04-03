@@ -9,7 +9,7 @@ import AlertComponent from "../../../components/Alert";
 import { alert } from "../../../../px-script";
 
 const BasicUsage = () => (
-    <div>
+    <>
         <h2 id="basic-usage">Basic usage</h2>
         <p>Alerts</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
@@ -20,11 +20,11 @@ const BasicUsage = () => (
             <AlertComponent type="light" display={true} text="This is a light alert!" />{"\n\n"}
             <AlertComponent type="default" display={true} text="This is a default alert!" />
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const AlertWithLink = () => (
-    <div>
+    <>
         <h2 id="links">Links</h2>
         <p>Alerts with links</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
@@ -35,11 +35,11 @@ const AlertWithLink = () => (
             <AlertComponent type="light" display={true} text="This is a light alert, " linkText="with a link!" />{"\n\n"}
             <AlertComponent type="default" display={true} text="This is a default alert, " linkText="with a link!" />
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const AlertWithIcon = () => (
-    <div>
+    <>
         <h2 id="icons">Icons</h2>
         <p>To use an alert with an icon... Read more about icon usage here <Link to="/docs/core/icons">here</Link>.</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
@@ -50,11 +50,11 @@ const AlertWithIcon = () => (
             <AlertComponent type="light" display={true} text="This is a light alert with an icon!" icon="info_outline" />{"\n\n"}
             <AlertComponent type="default" display={true} text="This is a default alert with an icon!" icon="info_outline" />
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const ClosingTheAlert = () => (
-    <div>
+    <>
         <h2 id="closing-the-alert">Closing the alert</h2>
         <p>
             To add a close-button, add the following code inside your alert-element:<br/>
@@ -68,11 +68,11 @@ const ClosingTheAlert = () => (
             <AlertComponent id="alert-light-1" type="light" display={true} text="This is a light alert with an icon!" close={true} icon="info_outline" />{"\n\n"}
             <AlertComponent id="alert-default-1" type="default" display={true} text="This is a default alert with an icon!" close={true} icon="info_outline" />
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const ExtendedUsage = () => (
-    <div>
+    <>
         <h2 id="extended-usage">Extended usage</h2>
         <p>Alerts can also contain additional HTML elements like headings, paragraphs and dividers.</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
@@ -86,11 +86,11 @@ const ExtendedUsage = () => (
                 <p className="alert-text">By the way, great job!</p>
             </div>
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const UsageWithJavascript = () => (
-    <div>
+    <>
         <h2 id="usage-with-javascript">Usage with javascript</h2>
         <p>To interact with the alert-component with javascript...</p>
         <h3>Show alerts</h3>
@@ -156,7 +156,7 @@ const UsageWithJavascript = () => (
                 </tr>
             </tbody>
         </table>
-    </div>
+    </>
 );
 
 const AlertsText = () => (

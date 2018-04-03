@@ -112,13 +112,24 @@ exports[`Documentation: SelectPanel renders 1`] = `
           <Link
             className=""
             replace={false}
+            to="/docs/core/lists"
+          >
+            Lists
+          </Link>
+        </li>
+        <li
+          key="2"
+        >
+          <Link
+            className=""
+            replace={false}
             to="/docs/core/tables"
           >
             Tables
           </Link>
         </li>
         <li
-          key="2"
+          key="3"
         >
           <Link
             className=""
@@ -233,13 +244,24 @@ exports[`Documentation: SelectPanel renders 1`] = `
           <Link
             className=""
             replace={false}
+            to="/docs/components/pagination"
+          >
+            Pagination
+          </Link>
+        </li>
+        <li
+          key="8"
+        >
+          <Link
+            className=""
+            replace={false}
             to="/docs/components/panel"
           >
             Panel
           </Link>
         </li>
         <li
-          key="8"
+          key="9"
         >
           <Link
             className=""

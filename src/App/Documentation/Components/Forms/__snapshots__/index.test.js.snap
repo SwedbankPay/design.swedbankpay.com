@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Documentation: Forms Checkboxes renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="checkboxes"
   >
@@ -13,7 +13,6 @@ exports[`Documentation: Forms Checkboxes renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={false}
     showCasePanel={true}
   >
     <Checkbox
@@ -26,11 +25,11 @@ exports[`Documentation: Forms Checkboxes renders 1`] = `
       label="Milk"
     />
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Documentation: Forms DisabledCheckboxes renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="disabled-checkboxes"
   >
@@ -42,7 +41,6 @@ exports[`Documentation: Forms DisabledCheckboxes renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={false}
     showCasePanel={true}
   >
     <Checkbox
@@ -57,11 +55,11 @@ exports[`Documentation: Forms DisabledCheckboxes renders 1`] = `
       label="Milk"
     />
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Documentation: Forms DisabledRadioButtons renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="disabled-radio-buttons"
   >
@@ -73,7 +71,6 @@ exports[`Documentation: Forms DisabledRadioButtons renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={false}
     showCasePanel={true}
   >
     <Radio
@@ -90,11 +87,11 @@ exports[`Documentation: Forms DisabledRadioButtons renders 1`] = `
       name="radio-disabled-example"
     />
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Documentation: Forms DisabledToggleboxes renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="disabled-toggleboxes"
   >
@@ -106,7 +103,6 @@ exports[`Documentation: Forms DisabledToggleboxes renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={false}
     showCasePanel={true}
   >
     <Togglebox
@@ -121,11 +117,11 @@ exports[`Documentation: Forms DisabledToggleboxes renders 1`] = `
       label="Enable superpowers"
     />
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Documentation: Forms FormGrid renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="form-grid"
   >
@@ -137,7 +133,6 @@ exports[`Documentation: Forms FormGrid renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={false}
     showCasePanel={true}
   >
     <form>
@@ -211,7 +206,7 @@ exports[`Documentation: Forms FormGrid renders 1`] = `
       </div>
     </form>
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Documentation: Forms FormsText renders 1`] = `
@@ -233,11 +228,12 @@ exports[`Documentation: Forms FormsText renders 1`] = `
   <DisabledRadioButtons />
   <Toggleboxes />
   <DisabledToggleboxes />
+  <RangeSlider />
 </div>
 `;
 
 exports[`Documentation: Forms Overview renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="overview"
   >
@@ -249,7 +245,6 @@ exports[`Documentation: Forms Overview renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={false}
     showCasePanel={true}
   >
     <form>
@@ -296,11 +291,11 @@ exports[`Documentation: Forms Overview renders 1`] = `
 
     </form>
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Documentation: Forms RadioButtons renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="radio-buttons"
   >
@@ -312,7 +307,6 @@ exports[`Documentation: Forms RadioButtons renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={false}
     showCasePanel={true}
   >
     <Radio
@@ -327,11 +321,11 @@ exports[`Documentation: Forms RadioButtons renders 1`] = `
       name="radio-example"
     />
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Documentation: Forms StaticText renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="static-text"
   >
@@ -343,7 +337,6 @@ exports[`Documentation: Forms StaticText renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={false}
     showCasePanel={true}
   >
     <FormControlText
@@ -355,11 +348,11 @@ exports[`Documentation: Forms StaticText renders 1`] = `
       text="Bob Corlsan"
     />
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Documentation: Forms Toggleboxes renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="toggleboxes"
   >
@@ -371,7 +364,6 @@ exports[`Documentation: Forms Toggleboxes renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={false}
     showCasePanel={true}
   >
     <Togglebox
@@ -384,11 +376,11 @@ exports[`Documentation: Forms Toggleboxes renders 1`] = `
       label="Enable superpowers"
     />
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Documentation: Forms UsageWithFieldsets renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="usage-with-fieldsets"
   >
@@ -400,7 +392,6 @@ exports[`Documentation: Forms UsageWithFieldsets renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={false}
     showCasePanel={true}
   >
     <form>
@@ -453,7 +444,6 @@ exports[`Documentation: Forms UsageWithFieldsets renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={false}
     showCasePanel={true}
   >
     <form>
@@ -493,7 +483,7 @@ exports[`Documentation: Forms UsageWithFieldsets renders 1`] = `
 
     </form>
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Documentation: Forms renders 1`] = `

@@ -14,7 +14,7 @@ exports[`Documentation: Cards CardsText renders 1`] = `
 `;
 
 exports[`Documentation: Cards Overview renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="overview"
   >
@@ -26,12 +26,11 @@ exports[`Documentation: Cards Overview renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={false}
     showCasePanel={true}
   >
     <Card />
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Documentation: Cards renders 1`] = `

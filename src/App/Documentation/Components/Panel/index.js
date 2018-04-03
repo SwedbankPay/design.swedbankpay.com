@@ -5,10 +5,10 @@ import DocToc from "../../utils/DocToc";
 import PanelComponent from "../../../components/Panel";
 
 const Overview = () => (
-    <div>
+    <>
         <h2 id="overview">Overview</h2>
         <p>Panel...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={false}>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <PanelComponent
                 title="Panel title"
                 subTitle="Panel subtitle"
@@ -20,25 +20,25 @@ const Overview = () => (
                 <p>And one more line, just to be safe.</p>
             </PanelComponent>
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const PanelHeaders = () => (
-    <div>
+    <>
         <h2 id="panel-headers">Panel headers</h2>
         <p>Two types of headers... <code className="token property">.panel-default</code> and <code className="token property">.panel-brand</code>...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={false}>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <PanelComponent title="Default panel" />{"\n\n"}
             <PanelComponent type="brand" title="Panel brand" />
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const DarkMode = () => (
-    <div>
+    <>
         <h2 id="panel-dark-mode">Panel dark mode</h2>
         <p>Dark body with <code className="token property">.panel-dark-mode</code>...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={false}>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <PanelComponent
                 type="brand"
                 title="Panel title"
@@ -53,14 +53,14 @@ const DarkMode = () => (
                 <p>And one more line, just to be safe.</p>
             </PanelComponent>
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const PanelMuted = () => (
-    <div>
+    <>
         <h2 id="muted-panel">Muted panel</h2>
         <p>Muted panel with <code className="token property">.panel-muted</code>...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={false}>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <PanelComponent
                 type="muted"
                 title="Panel title"
@@ -74,7 +74,7 @@ const PanelMuted = () => (
                 <p>And one more line, just to be safe.</p>
             </PanelComponent>
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const PanelText = () => (

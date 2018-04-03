@@ -4,7 +4,7 @@ import ComponentPreview from "../../utils/ComponentPreview";
 import DocToc from "../../utils/DocToc";
 
 const Overview = () => (
-    <div>
+    <>
         <h2 id="overview">Overview</h2>
         <p>Overview... <code className="token property">.status</code>...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeList={true}>
@@ -29,14 +29,14 @@ const Overview = () => (
                 </li>
             </ul>
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const ExtendedUsage = () => (
-    <div>
+    <>
         <h2 id="extended-usage">Extended usage</h2>
         <p>Extended usage... <code className="token property">.status</code>...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={false}>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <h1 className="status status-default">Default</h1>
             <h2 className="status status-brand">Brand</h2>
             <h3 className="status status-neutral">Neutral</h3>
@@ -44,7 +44,7 @@ const ExtendedUsage = () => (
             <h5 className="status status-warning">Warning</h5>
             <h6 className="status status-danger">Danger</h6>
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const StatusText = () => (

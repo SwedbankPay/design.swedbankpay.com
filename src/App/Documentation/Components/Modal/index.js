@@ -7,10 +7,10 @@ import { modal } from "../../../../px-script";
 import ModalComponent from "../../../components/Modal";
 
 const Usage = () => (
-    <div>
+    <>
         <h2 id="usage">Usage</h2>
         <p>Static modal</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={true}>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <ModalComponent
                 id="static-modal"
                 title="Modal title"
@@ -25,14 +25,14 @@ const Usage = () => (
                 <p>Modal body text goes here.</p>
             </ModalComponent>
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const Demo = () => (
-    <div>
+    <>
         <h2 id="demo">Demo</h2>
         <p>Live modal</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={true}>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <ModalComponent
                 id="live-modal"
                 title="Modal title"
@@ -49,7 +49,7 @@ const Demo = () => (
                 <p>Modal body text goes here.</p>
             </ModalComponent>
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const ModalText = () => (

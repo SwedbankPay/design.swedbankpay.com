@@ -5,13 +5,13 @@ import DocToc from "../../utils/DocToc";
 import CardComponent from "../../../components/Card";
 
 const Overview = () => (
-    <div>
+    <>
         <h2 id="overview">Overview</h2>
         <p>Cards...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={false}>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <CardComponent />
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const CardsText = () => (

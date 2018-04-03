@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Core: Typography Abbreviations renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="abbreviations"
   >
@@ -57,11 +57,11 @@ exports[`Core: Typography Abbreviations renders 1`] = `
     </a>
      about abbreviations.
   </p>
-</div>
+</React.Fragment>
 `;
 
 exports[`Core: Typography Blockquotes renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="blockquotes"
   >
@@ -96,11 +96,11 @@ exports[`Core: Typography Blockquotes renders 1`] = `
       </p>
     </blockquote>
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Core: Typography Blockquotes renders 2`] = `
-<div>
+<React.Fragment>
   <h3>
     Naming a source
   </h3>
@@ -141,11 +141,11 @@ exports[`Core: Typography Blockquotes renders 2`] = `
       </footer>
     </blockquote>
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Core: Typography Blockquotes renders 3`] = `
-<div>
+<React.Fragment>
   <h3>
     Alignment
   </h3>
@@ -183,19 +183,19 @@ exports[`Core: Typography Blockquotes renders 3`] = `
       </footer>
     </blockquote>
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Core: Typography Blockquotes renders 4`] = `
-<div>
+<React.Fragment>
   <BlockquotesText />
   <BlockquoteWithSourceText />
   <BlockquotesAlignmentText />
-</div>
+</React.Fragment>
 `;
 
 exports[`Core: Typography Fonts renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="font"
   >
@@ -218,11 +218,11 @@ exports[`Core: Typography Fonts renders 1`] = `
                                 font-family: GillSans, Calibri, Trebuchet, sans-serif;
                             }
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Core: Typography Headings renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="headings"
   >
@@ -306,11 +306,11 @@ exports[`Core: Typography Headings renders 1`] = `
       .h6 heading
     </p>
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Core: Typography Inline renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="inline-text-elements"
   >
@@ -437,11 +437,11 @@ exports[`Core: Typography Inline renders 1`] = `
     </PrismCode>
      is mostly for voice, technical terms, etc.
   </p>
-</div>
+</React.Fragment>
 `;
 
 exports[`Core: Typography Lead renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="lead"
   >
@@ -467,11 +467,11 @@ exports[`Core: Typography Lead renders 1`] = `
       This is a leading paragraph which for instance can be used as an introduction.
     </p>
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Core: Typography Small renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="small"
   >
@@ -499,11 +499,11 @@ exports[`Core: Typography Small renders 1`] = `
       </small>
     </h2>
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Core: Typography Text Utilities renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="text-utilities"
   >
@@ -534,7 +534,7 @@ exports[`Core: Typography Text Utilities renders 1`] = `
     </b>
     .
   </p>
-</div>
+</React.Fragment>
 `;
 
 exports[`Core: Typography Typography Text renders 1`] = `

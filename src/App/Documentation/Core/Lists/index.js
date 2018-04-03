@@ -4,7 +4,7 @@ import ComponentPreview from "../../utils/ComponentPreview";
 import DocToc from "../../utils/DocToc";
 
 const BasicList = () => (
-    <div>
+    <>
         <h2 id="basic-list">Basic list</h2>
         <p>Basic lists info...<code className="token property">.list</code></p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
@@ -15,11 +15,11 @@ const BasicList = () => (
                 <li>Butter</li>
             </ul>
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const InlineList = () => (
-    <div>
+    <>
         <h2 id="inline-list">Inline list</h2>
         <p>Inline lists info...<code className="token property">.list-inline</code></p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
@@ -29,11 +29,11 @@ const InlineList = () => (
                 <li>Milk</li>
             </ul>
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const DescriptionList = () => (
-    <div>
+    <>
         <h2 id="description-list">Description list</h2>
         <p>Description lists info...<code className="token property">.description-list</code></p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
@@ -46,11 +46,11 @@ const DescriptionList = () => (
                 <dd>Any hue except white or black.</dd>{"\n"}
             </dl>
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const SettingsList = () => (
-    <div>
+    <>
         <h2 id="settings-list">Settings list</h2>
         <p>Settings lists info...<code className="token property">.settings-list</code></p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
@@ -69,7 +69,7 @@ const SettingsList = () => (
                 </li>
             </ul>
         </ComponentPreview>
-    </div>
+    </>
 );
 
 const ListsText = () => (

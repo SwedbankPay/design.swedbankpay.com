@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Documentation: Table BasicTable renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="basic-table"
   >
@@ -126,11 +126,11 @@ exports[`Documentation: Table BasicTable renders 1`] = `
       </tbody>
     </table>
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Documentation: Table DescriptionTable renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="description-table"
   >
@@ -189,11 +189,11 @@ exports[`Documentation: Table DescriptionTable renders 1`] = `
       </tbody>
     </table>
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Documentation: Table HoverStripedTable renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="hover-striped-table"
   >
@@ -318,11 +318,11 @@ exports[`Documentation: Table HoverStripedTable renders 1`] = `
       </tbody>
     </table>
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Documentation: Table HoverTable renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="hover-table"
   >
@@ -447,11 +447,11 @@ exports[`Documentation: Table HoverTable renders 1`] = `
       </tbody>
     </table>
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Documentation: Table StripedTable renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="striped-table"
   >
@@ -576,7 +576,7 @@ exports[`Documentation: Table StripedTable renders 1`] = `
       </tbody>
     </table>
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Documentation: Table TablesText renders 1`] = `

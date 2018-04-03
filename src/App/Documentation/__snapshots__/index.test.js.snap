@@ -85,6 +85,15 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "BasicList": [Function],
+                  "ListsText": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/core/lists",
+                "title": "Lists",
+              },
+              Object {
+                "component": Object {
                   "BasicTable": [Function],
                   "DescriptionTable": [Function],
                   "HoverStripedTable": [Function],
@@ -218,6 +227,16 @@ exports[`Documentation: index renders 1`] = `
                 },
                 "path": "/docs/components/modal",
                 "title": "Modal",
+              },
+              Object {
+                "component": Object {
+                  "DefaultPagination": [Function],
+                  "PaginationBullets": [Function],
+                  "PaginationText": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/components/pagination",
+                "title": "Pagination",
               },
               Object {
                 "component": Object {

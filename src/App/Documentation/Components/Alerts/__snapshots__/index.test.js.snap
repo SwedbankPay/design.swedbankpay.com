@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Documentation: Alerts Alert With Icon renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="icons"
   >
@@ -74,11 +74,11 @@ exports[`Documentation: Alerts Alert With Icon renders 1`] = `
       type="default"
     />
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Documentation: Alerts Alert With Link renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="links"
   >
@@ -144,7 +144,7 @@ exports[`Documentation: Alerts Alert With Link renders 1`] = `
       type="default"
     />
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Documentation: Alerts Alerts Text renders 1`] = `
@@ -166,7 +166,7 @@ exports[`Documentation: Alerts Alerts Text renders 1`] = `
 `;
 
 exports[`Documentation: Alerts Basic Usage renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="basic-usage"
   >
@@ -226,11 +226,11 @@ exports[`Documentation: Alerts Basic Usage renders 1`] = `
       type="default"
     />
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Documentation: Alerts Closing The Alert renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="closing-the-alert"
   >
@@ -315,11 +315,11 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
       type="default"
     />
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Documentation: Alerts Extended Usage renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="extended-usage"
   >
@@ -373,11 +373,11 @@ exports[`Documentation: Alerts Extended Usage renders 1`] = `
       </p>
     </div>
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Documentation: Alerts Usage With Javascript renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="usage-with-javascript"
   >
@@ -564,7 +564,7 @@ exports[`Documentation: Alerts Usage With Javascript renders 1`] = `
       </tr>
     </tbody>
   </table>
-</div>
+</React.Fragment>
 `;
 
 exports[`Documentation: Alerts renders 1`] = `

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Documentation: Panel DarkMode renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="panel-dark-mode"
   >
@@ -19,7 +19,6 @@ exports[`Documentation: Panel DarkMode renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={false}
     showCasePanel={true}
   >
     <Panel
@@ -46,11 +45,11 @@ exports[`Documentation: Panel DarkMode renders 1`] = `
       </p>
     </Panel>
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Documentation: Panel Overview renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="overview"
   >
@@ -62,7 +61,6 @@ exports[`Documentation: Panel Overview renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={false}
     showCasePanel={true}
   >
     <Panel
@@ -82,11 +80,11 @@ exports[`Documentation: Panel Overview renders 1`] = `
       </p>
     </Panel>
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Documentation: Panel PanelHeaders renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="panel-headers"
   >
@@ -110,7 +108,6 @@ exports[`Documentation: Panel PanelHeaders renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={false}
     showCasePanel={true}
   >
     <Panel
@@ -124,11 +121,11 @@ exports[`Documentation: Panel PanelHeaders renders 1`] = `
       type="brand"
     />
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Documentation: Panel PanelMuted renders 1`] = `
-<div>
+<React.Fragment>
   <h2
     id="muted-panel"
   >
@@ -146,7 +143,6 @@ exports[`Documentation: Panel PanelMuted renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={false}
     showCasePanel={true}
   >
     <Panel
@@ -172,7 +168,7 @@ exports[`Documentation: Panel PanelMuted renders 1`] = `
       </p>
     </Panel>
   </ComponentPreview>
-</div>
+</React.Fragment>
 `;
 
 exports[`Documentation: Panel PanelText renders 1`] = `

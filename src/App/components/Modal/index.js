@@ -14,7 +14,7 @@ const OpenModalButton = ({ id }) => (
 
 const Modal = ({ title, subTitle, id, footerText, footerAlignment, type, size, visible, isStatic, fade, button, children }) => {
     return (
-        <div>
+        <>
             <section className={`modal modal-${type} modal-${size}${isStatic ? " static" : ""}${fade ? " fade" : ""}${visible ? " in" : ""}`} id={id} tabIndex="-1" role="dialog">
                 <div className="modal-dialog" role="document">
                     <div className="modal-container">{"\n"}
@@ -34,7 +34,7 @@ const Modal = ({ title, subTitle, id, footerText, footerAlignment, type, size, v
                 </div>
             </section>{button ? "\n\n" : null}
             {button ? <OpenModalButton id={id} /> : null}
-        </div>
+        </>
     );
 };
 

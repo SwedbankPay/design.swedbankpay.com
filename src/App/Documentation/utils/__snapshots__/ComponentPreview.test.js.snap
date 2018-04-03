@@ -61,25 +61,23 @@ exports[`Utilities: ComponentPreview CodeFigure removes outer tags from componen
   language="html"
   removeOuterTag={true}
 >
-  <div>
-    <CodeFigure>
-      <figure>
-        <pre>
-          <PrismCode
+  <CodeFigure>
+    <figure>
+      <pre>
+        <PrismCode
+          className="language-html"
+          component="code"
+        >
+          <code
             className="language-html"
-            component="code"
           >
-            <code
-              className="language-html"
-            >
-              &lt;h1&gt;test1&lt;/h1&gt;
+            &lt;h1&gt;test1&lt;/h1&gt;
 &lt;h1&gt;test1&lt;/h1&gt;
-            </code>
-          </PrismCode>
-        </pre>
-      </figure>
-    </CodeFigure>
-  </div>
+          </code>
+        </PrismCode>
+      </pre>
+    </figure>
+  </CodeFigure>
 </ComponentPreview>
 `;
 
@@ -88,24 +86,22 @@ exports[`Utilities: ComponentPreview CodeFigure renders css string 1`] = `
   codeFigure={true}
   language="css"
 >
-  <div>
-    <CodeFigure>
-      <figure>
-        <pre>
-          <PrismCode
+  <CodeFigure>
+    <figure>
+      <pre>
+        <PrismCode
+          className="language-css"
+          component="code"
+        >
+          <code
             className="language-css"
-            component="code"
           >
-            <code
-              className="language-css"
-            >
-              color: red;
-            </code>
-          </PrismCode>
-        </pre>
-      </figure>
-    </CodeFigure>
-  </div>
+            color: red;
+          </code>
+        </PrismCode>
+      </pre>
+    </figure>
+  </CodeFigure>
 </ComponentPreview>
 `;
 
@@ -114,25 +110,23 @@ exports[`Utilities: ComponentPreview CodeFigure renders multiple html tags 1`] =
   codeFigure={true}
   language="html"
 >
-  <div>
-    <CodeFigure>
-      <figure>
-        <pre>
-          <PrismCode
+  <CodeFigure>
+    <figure>
+      <pre>
+        <PrismCode
+          className="language-html"
+          component="code"
+        >
+          <code
             className="language-html"
-            component="code"
           >
-            <code
-              className="language-html"
-            >
-              &lt;h1&gt;test1&lt;/h1&gt;
+            &lt;h1&gt;test1&lt;/h1&gt;
 &lt;h2&gt;test2&lt;/h2&gt;
-            </code>
-          </PrismCode>
-        </pre>
-      </figure>
-    </CodeFigure>
-  </div>
+          </code>
+        </PrismCode>
+      </pre>
+    </figure>
+  </CodeFigure>
 </ComponentPreview>
 `;
 
@@ -141,26 +135,24 @@ exports[`Utilities: ComponentPreview CodeFigure renders multiple javascript stri
   codeFigure={true}
   language="javascript"
 >
-  <div>
-    <CodeFigure>
-      <figure>
-        <pre>
-          <PrismCode
+  <CodeFigure>
+    <figure>
+      <pre>
+        <PrismCode
+          className="language-javascript"
+          component="code"
+        >
+          <code
             className="language-javascript"
-            component="code"
           >
-            <code
-              className="language-javascript"
-            >
-              const a = 12;
+            const a = 12;
 const b = 1;
 const c = a + b;
-            </code>
-          </PrismCode>
-        </pre>
-      </figure>
-    </CodeFigure>
-  </div>
+          </code>
+        </PrismCode>
+      </pre>
+    </figure>
+  </CodeFigure>
 </ComponentPreview>
 `;
 
@@ -169,22 +161,20 @@ exports[`Utilities: ComponentPreview CodeFigure warns about unhandled children 1
   codeFigure={true}
   language="css"
 >
-  <div>
-    <CodeFigure>
-      <figure>
-        <pre>
-          <PrismCode
+  <CodeFigure>
+    <figure>
+      <pre>
+        <PrismCode
+          className="language-css"
+          component="code"
+        >
+          <code
             className="language-css"
-            component="code"
-          >
-            <code
-              className="language-css"
-            />
-          </PrismCode>
-        </pre>
-      </figure>
-    </CodeFigure>
-  </div>
+          />
+        </PrismCode>
+      </pre>
+    </figure>
+  </CodeFigure>
 </ComponentPreview>
 `;
 
@@ -423,19 +413,17 @@ exports[`Utilities: ComponentPreview does not render codeFigure when prop is fal
   language="html"
   showCasePanel={true}
 >
-  <div>
-    <ShowCasePanel>
-      <div
-        className="showcase-panel"
-      >
-        <TestComponentH1>
-          <h1>
-            test1
-          </h1>
-        </TestComponentH1>
-      </div>
-    </ShowCasePanel>
-  </div>
+  <ShowCasePanel>
+    <div
+      className="showcase-panel"
+    >
+      <TestComponentH1>
+        <h1>
+          test1
+        </h1>
+      </TestComponentH1>
+    </div>
+  </ShowCasePanel>
 </ComponentPreview>
 `;
 
@@ -444,74 +432,21 @@ exports[`Utilities: ComponentPreview does not render showCasePanel when prop is 
   codeFigure={true}
   language="html"
 >
-  <div>
-    <CodeFigure>
-      <figure>
-        <pre>
-          <PrismCode
+  <CodeFigure>
+    <figure>
+      <pre>
+        <PrismCode
+          className="language-html"
+          component="code"
+        >
+          <code
             className="language-html"
-            component="code"
           >
-            <code
-              className="language-html"
-            >
-              &lt;h1&gt;test1&lt;/h1&gt;
-            </code>
-          </PrismCode>
-        </pre>
-      </figure>
-    </CodeFigure>
-  </div>
-</ComponentPreview>
-`;
-
-exports[`Utilities: ComponentPreview prop language other than javascript, css or html returns warning message 1`] = `
-<ComponentPreview
-  codeFigure={true}
-  language="test"
->
-  <div>
-    <CodeFigure>
-      update switchcase!
-    </CodeFigure>
-  </div>
-</ComponentPreview>
-`;
-
-exports[`Utilities: ComponentPreview renders 1`] = `
-<ComponentPreview
-  codeFigure={true}
-  language="html"
-  showCasePanel={true}
->
-  <div>
-    <ShowCasePanel>
-      <div
-        className="showcase-panel"
-      >
-        <TestComponentH1>
-          <h1>
-            test1
-          </h1>
-        </TestComponentH1>
-      </div>
-    </ShowCasePanel>
-    <CodeFigure>
-      <figure>
-        <pre>
-          <PrismCode
-            className="language-html"
-            component="code"
-          >
-            <code
-              className="language-html"
-            >
-              &lt;h1&gt;test1&lt;/h1&gt;
-            </code>
-          </PrismCode>
-        </pre>
-      </figure>
-    </CodeFigure>
-  </div>
+            &lt;h1&gt;test1&lt;/h1&gt;
+          </code>
+        </PrismCode>
+      </pre>
+    </figure>
+  </CodeFigure>
 </ComponentPreview>
 `;
