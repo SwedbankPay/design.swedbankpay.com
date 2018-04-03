@@ -105,6 +105,11 @@ export default [
                 component: require("../Documentation/Components/Modal")
             },
             {
+                title: "Pagination",
+                path: "/docs/components/pagination",
+                component: require("../Documentation/Components/Pagination")
+            },
+            {
                 title: "Panel",
                 path: "/docs/components/panel",
                 component: require("../Documentation/Components/Panel")

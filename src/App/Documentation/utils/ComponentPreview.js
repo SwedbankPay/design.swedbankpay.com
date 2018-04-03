@@ -73,6 +73,8 @@ const ComponentPreview = ({ children, language, removeOuterTag, removeList, show
             case "html":
                 code = jsbeautifier.html_beautify(code);
                 code = code.replace(/=""/g, "");
+                code = code.replace(/ class>/g, ">");
+                code = code.replace(/ class /g, " ");
                 break;
             case "css":
                 code = jsbeautifier.css_beautify(code);
