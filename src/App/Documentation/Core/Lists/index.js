@@ -15,6 +15,21 @@ const BasicList = () => (
                 <li>Butter</li>
             </ul>
         </ComponentPreview>
+        <h3>Nested list</h3>
+        <p>Nested lists are also pretty sweet...</p>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+            <ul className="list">
+                <li>Coffee</li>
+                <li>Tea
+                    <ul>
+                        <li>Black tea</li>
+                        <li>Green tea</li>
+                        <li>Ice tea</li>
+                    </ul>
+                </li>
+                <li>Milk</li>
+            </ul>
+        </ComponentPreview>
     </>
 );
 
@@ -23,7 +38,7 @@ const InlineList = () => (
         <h2 id="inline-list">Inline list</h2>
         <p>Inline lists info...<code className="token property">.list-inline</code></p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-            <ul className="list-inline">
+            <ul className="list list-inline">
                 <li>Coffee</li>
                 <li>Tea</li>
                 <li>Milk</li>

@@ -1,17 +1,18 @@
-// Unstyled keeps list items block level, just removes default browser padding and list-style
-.list-unstyled {
+// List keeps list items block level, just removes default browser padding and list-style
+.list {
     padding-left: 0;
     list-style: none;
-}
 
-.list {
-    .list-unstyled();
+    ul,
+    ol {
+        padding-left: 1.5rem;
+        list-style: none;
+    }
 }
 
 // Inline turns list items into inline-block
 .list-inline {
     margin-left: -5px;
-    .list-unstyled();
 
     > li {
         display: inline-block;
