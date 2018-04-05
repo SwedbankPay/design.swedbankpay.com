@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import routes from "../../routes/docs";
+import routes from "../routes/docs";
 
 const SearchBox = () => (
     <div className="input-group doc-search">

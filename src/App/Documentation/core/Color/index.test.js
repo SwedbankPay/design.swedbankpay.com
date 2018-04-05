@@ -1,16 +1,16 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import BrowserSupport from "./BrowserSupport";
+import Color from "./index";
 
-describe("GettingStarted: BrowserSupport", () => {
+describe("Core: Color", () => {
     it("is defined", () => {
-        expect(BrowserSupport).toBeDefined();
+        expect(Color).toBeDefined();
     });
 
     it("renders", () => {
         const wrapper = shallow(
-            <BrowserSupport />
+            <Color />
         );
 
         expect(wrapper).toMatchSnapshot();

@@ -1,8 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Contributing from "./Contributing";
-import { CreatingYourComponent, CreateADocumentationPage, AddComponentToRoutes, AddingStyles, AddingJavaScript, ContributingText } from "./Contributing";
+import Contributing, { CreatingYourComponent, CreateADocumentationPage, AddComponentToRoutes, AddingStyles, AddingJavaScript, ContributingText } from "./index";
 
 describe("GettingStarted: Contributing", () => {
     it("is defined", () => {

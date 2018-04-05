@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import ComponentPreview from "../utils/ComponentPreview";
-import DocToc from "../utils/DocToc";
+import ComponentPreview from "../../utils/ComponentPreview";
+import DocToc from "../../utils/DocToc";
 
 const Fonts = () => {
     const removeRobotoCode = `html {

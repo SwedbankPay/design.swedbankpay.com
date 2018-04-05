@@ -1,8 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Typography from "./Typography";
-import { Fonts, Headings, Small, Lead, Inline, TextUtilities, Abbreviations, Blockquotes, TypographyText } from "./Typography";
+import Typography, { Fonts, Headings, Small, Lead, Inline, TextUtilities, Abbreviations, Blockquotes, TypographyText } from "./index";
 
 describe("Core: Typography", () => {
     it("is defined", () => {

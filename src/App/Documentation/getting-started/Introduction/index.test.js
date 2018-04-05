@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Introduction from "./Introduction";
+import Introduction from "./index";
 
 describe("GettingStarted: Introduction", () => {
     it("is defined", () => {
