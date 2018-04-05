@@ -23,31 +23,6 @@
         "url": "https://github.com/PayEx/design.payex.com/issues"
     },
     "homepage": "https://github.com/PayEx/design.payex.com#readme",
-    "jest": {
-        "verbose": false,
-        "collectCoverage": true,
-        "collectCoverageFrom": [
-            "src/**/*.{js,jsx}",
-            "!src/index.js",
-            "!src/polyfills/**/*.js"
-        ],
-        "coverageDirectory": "coverage",
-        "coverageReporters": [
-            "json",
-            "lcov"
-        ],
-        "setupFiles": [
-            "./test/shim.js",
-            "./test/jest.config.js"
-        ],
-        "snapshotSerializers": [
-            "enzyme-to-json/serializer"
-        ],
-        "testPathIgnorePatterns": [
-            "/node_modules/",
-            "\\.spec\\.js"
-        ]
-    },
     "dependencies": {
         "classnames": "^2.2.5",
         "clipboard": "^2.0.0",
@@ -84,7 +59,7 @@
         "file-loader": "^1.1.6",
         "html-webpack-plugin": "^2.30.1",
         "image-webpack-loader": "^4.0.0",
-        "jest": "^22.2.1",
+        "jest": "^22.4.3",
         "less": "^2.7.3",
         "less-loader": "^4.0.5",
         "postcss-loader": "^2.1.0",
