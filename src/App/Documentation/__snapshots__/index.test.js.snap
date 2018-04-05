@@ -86,7 +86,10 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "component": Object {
                   "BasicList": [Function],
+                  "DescriptionList": [Function],
+                  "InlineList": [Function],
                   "ListsText": [Function],
+                  "SettingsList": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/core/lists",
@@ -183,6 +186,7 @@ exports[`Documentation: index renders 1`] = `
                   "FormsText": [Function],
                   "Overview": [Function],
                   "RadioButtons": [Function],
+                  "RangeSlider": [Function],
                   "StaticText": [Function],
                   "Toggleboxes": [Function],
                   "UsageWithFieldsets": [Function],
@@ -233,6 +237,7 @@ exports[`Documentation: index renders 1`] = `
                   "DefaultPagination": [Function],
                   "PaginationBullets": [Function],
                   "PaginationText": [Function],
+                  "SimplePagination": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/components/pagination",

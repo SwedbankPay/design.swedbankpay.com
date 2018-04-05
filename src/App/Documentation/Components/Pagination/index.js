@@ -72,4 +72,4 @@ class Pagination extends Component {
 export default Pagination;
 
 /* for testing */
-export { DefaultPagination, PaginationBullets, PaginationText };
+export { DefaultPagination, SimplePagination, PaginationBullets, PaginationText };

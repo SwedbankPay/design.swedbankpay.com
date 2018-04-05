@@ -111,4 +111,4 @@ const Lists = () => {
 export default Lists;
 
 /* for testing */
-export { BasicList, ListsText };
+export { BasicList, InlineList, DescriptionList, SettingsList, ListsText };

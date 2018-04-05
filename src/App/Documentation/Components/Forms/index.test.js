@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Forms, { Overview, FormGrid, UsageWithFieldsets, StaticText, Checkboxes, DisabledCheckboxes, RadioButtons, DisabledRadioButtons, Toggleboxes, DisabledToggleboxes, FormsText } from "./index";
+import Forms, { Overview, FormGrid, UsageWithFieldsets, StaticText, Checkboxes, DisabledCheckboxes, RadioButtons, DisabledRadioButtons, Toggleboxes, DisabledToggleboxes, RangeSlider, FormsText } from "./index";
 
 describe("Documentation: Forms", () => {
     it("is defined", () => {
@@ -150,6 +150,20 @@ describe("Documentation: Forms", () => {
         it("renders", () => {
             const wrapper = shallow(
                 <DisabledToggleboxes />
+            );
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("RangeSlider", () => {
+        it("is defined", () => {
+            expect(RangeSlider).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(
+                <RangeSlider />
             );
 
             expect(wrapper).toMatchSnapshot();

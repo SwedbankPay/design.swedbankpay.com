@@ -324,6 +324,34 @@ exports[`Documentation: Forms RadioButtons renders 1`] = `
 </React.Fragment>
 `;
 
+exports[`Documentation: Forms RangeSlider renders 1`] = `
+<React.Fragment>
+  <h2
+    id="rangeslider"
+  >
+    Rangeslider
+  </h2>
+  <p>
+    Rangeslider...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Rangeslider
+      max={200}
+      min={0}
+      step={1}
+      value={100}
+      valueLabel={true}
+      valueLabelPostfix="%"
+      valueLabelPrefix="$"
+    />
+  </ComponentPreview>
+</React.Fragment>
+`;
+
 exports[`Documentation: Forms StaticText renders 1`] = `
 <React.Fragment>
   <h2

@@ -1,0 +1,269 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Documentation: Lists BasicList renders 1`] = `
+<React.Fragment>
+  <h2
+    id="basic-list"
+  >
+    Basic list
+  </h2>
+  <p>
+    Basic lists info...
+    <code
+      className="token property"
+    >
+      .list
+    </code>
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ul
+      className="list"
+    >
+      <li>
+        Bread
+      </li>
+      <li>
+        Coffee beans
+      </li>
+      <li>
+        Milk
+      </li>
+      <li>
+        Butter
+      </li>
+    </ul>
+  </ComponentPreview>
+  <h3>
+    Nested list
+  </h3>
+  <p>
+    Nested lists are also pretty sweet...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ul
+      className="list"
+    >
+      <li>
+        Coffee
+      </li>
+      <li>
+        Tea
+        <ul>
+          <li>
+            Black tea
+          </li>
+          <li>
+            Green tea
+          </li>
+          <li>
+            Ice tea
+          </li>
+        </ul>
+      </li>
+      <li>
+        Milk
+      </li>
+    </ul>
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Documentation: Lists DescriptionList renders 1`] = `
+<React.Fragment>
+  <h2
+    id="description-list"
+  >
+    Description list
+  </h2>
+  <p>
+    Description lists info...
+    <code
+      className="token property"
+    >
+      .description-list
+    </code>
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <dl
+      className="description-list"
+    >
+      
+
+      <dt>
+        Frog
+      </dt>
+      <dd>
+        Wet green thing that croaks.
+      </dd>
+      
+
+      <dt>
+        Rabbit
+      </dt>
+      <dd>
+        Warm fluffy thing that jumps.
+      </dd>
+      
+
+      <dt>
+        Color
+      </dt>
+      <dd>
+        Any hue except white or black.
+      </dd>
+      
+
+    </dl>
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Documentation: Lists InlineList renders 1`] = `
+<React.Fragment>
+  <h2
+    id="inline-list"
+  >
+    Inline list
+  </h2>
+  <p>
+    Inline lists info...
+    <code
+      className="token property"
+    >
+      .list-inline
+    </code>
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ul
+      className="list list-inline"
+    >
+      <li>
+        Coffee
+      </li>
+      <li>
+        Tea
+      </li>
+      <li>
+        Milk
+      </li>
+    </ul>
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Documentation: Lists ListsText renders 1`] = `
+<div
+  className="col-md-12 col-lg-10 doc-body"
+>
+  <p
+    className="lead"
+  >
+    Lots of cool info about lists will be here...
+  </p>
+  <BasicList />
+  <InlineList />
+  <DescriptionList />
+  <SettingsList />
+</div>
+`;
+
+exports[`Documentation: Lists SettingsList renders 1`] = `
+<React.Fragment>
+  <h2
+    id="settings-list"
+  >
+    Settings list
+  </h2>
+  <p>
+    Settings lists info...
+    <code
+      className="token property"
+    >
+      .settings-list
+    </code>
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ul
+      className="settings-list"
+    >
+      <li
+        className="settings-item settings-item-checked"
+      >
+        
+
+        <i
+          className="material-icons"
+        >
+          check
+        </i>
+        Shovels and tapestry newsletter
+        
+
+      </li>
+      <li
+        className="settings-item settings-item-checked"
+      >
+        
+
+        <i
+          className="material-icons"
+        >
+          check
+        </i>
+        Spoon collectors weekly newsletter
+        
+
+      </li>
+      <li
+        className="settings-item"
+      >
+        
+
+        <i
+          className="material-icons"
+        >
+          clear
+        </i>
+        Energetic squirrels newsletter
+        
+
+      </li>
+    </ul>
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Documentation: Lists renders 1`] = `
+<div
+  className="doc-container"
+>
+  <div
+    className="row"
+  >
+    <ListsText />
+    <DocToc
+      component={[Function]}
+    />
+  </div>
+</div>
+`;
