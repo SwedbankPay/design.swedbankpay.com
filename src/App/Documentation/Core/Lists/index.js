@@ -70,16 +70,16 @@ const SettingsList = () => (
         <p>Settings lists info...<code className="token property">.settings-list</code></p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <ul className="settings-list">
-                <li className="settings-item settings-item-checked">{"\n"}
-                    <i className="material-icons">check</i>
+                <li>{"\n"}
+                    <i className="material-icons color-success">check</i>
                     Shovels and tapestry newsletter{"\n"}
                 </li>
-                <li className="settings-item settings-item-checked">{"\n"}
-                    <i className="material-icons">check</i>
+                <li>{"\n"}
+                    <i className="material-icons color-warning">remove</i>
                     Spoon collectors weekly newsletter{"\n"}
                 </li>
-                <li className="settings-item">{"\n"}
-                    <i className="material-icons">clear</i>
+                <li>{"\n"}
+                    <i className="material-icons color-danger">clear</i>
                     Energetic squirrels newsletter{"\n"}
                 </li>
             </ul>

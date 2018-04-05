@@ -39,23 +39,14 @@
 
 .settings-list {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    // margin: 0;
+    padding-left: 0;
 
-    .settings-item {
-        position: relative;
-        padding: 2px 0 2px 29px;
-        line-height: 26px;
-
-        &.settings-item-checked .material-icons {
-            color: @state-success;
-        }
+    li {
+        display: flex;
 
         .material-icons {
-            color: @state-error;
-            position: absolute;
-            top: 2px;
-            left: 0;
+            margin-right: 0.5rem;
         }
     }
 }
