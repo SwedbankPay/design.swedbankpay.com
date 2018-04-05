@@ -9,8 +9,8 @@ const paginationItems = [
     { name: "1", href: "#", active: false },
     { name: "2", href: "#", active: false },
     { name: "3", href: "#", active: false },
-    { name: "4", href: "#", active: true },
-    { name: "5", href: "#", active: false }
+    { name: "4", href: "#", active: false },
+    { name: "5", href: "#", active: true }
     /* eslint-enable object-property-newline */
 ];
 

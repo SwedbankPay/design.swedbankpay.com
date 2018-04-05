@@ -315,6 +315,42 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
       type="default"
     />
   </ComponentPreview>
+  <h3>
+    External close button
+  </h3>
+  <p>
+    To add an external close-button for your alert add the attribute 
+    <Attribute
+      arg="close"
+      data={true}
+      name="alert"
+      value="[alert ID]"
+    />
+     to the button element.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Alert
+      display={true}
+      icon="check_circle"
+      id="alert-success-2"
+      text="Press the button below to close me"
+      type="success"
+    />
+    
+
+
+    <button
+      className="btn btn-neutral"
+      data-px-alert-close="alert-success-2"
+      type="button"
+    >
+      Close alert
+    </button>
+  </ComponentPreview>
 </React.Fragment>
 `;
 

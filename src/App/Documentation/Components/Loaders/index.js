@@ -17,7 +17,7 @@ const BasicUsage = () => (
 );
 
 const Sizes = () => (
-    <dv>
+    <>
         <h2 id="sizes">Sizes</h2>
         <p>In addition to <code className="token property">.loader-default</code> you can use <code className="token property">.loader-small</code> and <code className="token property">.loader-large</code> to decrease or increase the size of the loader.</p>
         <h3>Small</h3>
@@ -28,7 +28,7 @@ const Sizes = () => (
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <LoaderComponent size="large" visible={true} />
         </ComponentPreview>
-    </dv>
+    </>
 );
 
 const MutedLoader = () => (

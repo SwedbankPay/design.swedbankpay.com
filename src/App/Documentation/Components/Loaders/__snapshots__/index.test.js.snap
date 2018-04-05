@@ -71,7 +71,7 @@ exports[`Documentation: Loaders Muted Loader renders 1`] = `
 `;
 
 exports[`Documentation: Loaders Sizes renders 1`] = `
-<dv>
+<React.Fragment>
   <h2
     id="sizes"
   >
@@ -124,7 +124,7 @@ exports[`Documentation: Loaders Sizes renders 1`] = `
       visible={true}
     />
   </ComponentPreview>
-</dv>
+</React.Fragment>
 `;
 
 exports[`Documentation: Loaders Usage With Javascript renders 1`] = `

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import ComponentPreview, { PxScript } from "../../utils/ComponentPreview";
+import ComponentPreview, { Attribute, PxScript } from "../../utils/ComponentPreview";
 import DocToc from "../../utils/DocToc";
 
 import AlertComponent from "../../../components/Alert";
@@ -67,6 +67,12 @@ const ClosingTheAlert = () => (
             <AlertComponent id="alert-error-1" type="error" display={true} text="This is a error alert with an icon!" close={true} icon="error" />{"\n\n"}
             <AlertComponent id="alert-light-1" type="light" display={true} text="This is a light alert with an icon!" close={true} icon="info_outline" />{"\n\n"}
             <AlertComponent id="alert-default-1" type="default" display={true} text="This is a default alert with an icon!" close={true} icon="info_outline" />
+        </ComponentPreview>
+        <h3>External close button</h3>
+        <p>To add an external close-button for your alert add the attribute <Attribute data={true} name="alert" arg="close" value="[alert ID]" /> to the button element.</p>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+            <AlertComponent id="alert-success-2" type="success" display={true} text="Press the button below to close me" icon="check_circle" />{"\n\n"}
+            <button type="button" className="btn btn-neutral" data-px-alert-close="alert-success-2">Close alert</button>
         </ComponentPreview>
     </>
 );
@@ -173,7 +179,7 @@ const AlertsText = () => (
 
 class Alerts extends Component {
     componentDidMount () {
-        alert.init();
+        // alert.init();
     }
 
     render () {
