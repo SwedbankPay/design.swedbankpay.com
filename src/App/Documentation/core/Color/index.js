@@ -7,14 +7,29 @@ import ColorPreview from "./ColorPreview";
 const ColorPalette = () => (
     <>
         <h2 id="color-palette">Color palette</h2>
+        {/* <a href="#" className=""><i className="material-icons color-warning icon-link">check</i></a> */}
         <p>The PayEx DesignGuide color palette...</p>
         <ComponentPreview language="html" showCasePanel={true}>
-            <ColorPreview name="brand" hex="#2da944" />
-            <ColorPreview name="default" hex="#414042" />
-            <ColorPreview name="neutral" hex="#266c9a" />
-            <ColorPreview name="success" hex="#2da944" />
-            <ColorPreview name="warning" hex="#f9a825" />
-            <ColorPreview name="danger" hex="#cd2e00" />
+            <div className="row">
+                <div className="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+                    <ColorPreview name="brand" hex="#2da944" />
+                </div>
+                <div className="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+                    <ColorPreview name="default" hex="#414042" />
+                </div>
+                <div className="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+                    <ColorPreview name="neutral" hex="#266c9a" />
+                </div>
+                <div className="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+                    <ColorPreview name="success" hex="#2da944" />
+                </div>
+                <div className="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+                    <ColorPreview name="warning" hex="#f9a825" />
+                </div>
+                <div className="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+                    <ColorPreview name="danger" hex="#cd2e00" />
+                </div>
+            </div>
         </ComponentPreview>
     </>
 );

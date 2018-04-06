@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const ColorPreview = ({ name, hex }) => {
     return (
         <div className={`color-preview background-${name}`}>
-            <p className="lead">{name}</p>
+            <p>{name}</p>
             <p>{hex}</p>
         </div>
     );
