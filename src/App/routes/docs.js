@@ -118,6 +118,11 @@ export default [
                 title: "Status",
                 path: "/docs/components/status",
                 component: require("../Documentation/components/Status")
+            },
+            {
+                title: "Tabs",
+                path: "/docs/components/tabs",
+                component: require("../Documentation/components/Tabs")
             }
         ]
     },

@@ -271,6 +271,17 @@ exports[`Documentation: SelectPanel renders 1`] = `
             Status
           </Link>
         </li>
+        <li
+          key="10"
+        >
+          <Link
+            className=""
+            replace={false}
+            to="/docs/components/tabs"
+          >
+            Tabs
+          </Link>
+        </li>
       </ul>
     </div>
     <div

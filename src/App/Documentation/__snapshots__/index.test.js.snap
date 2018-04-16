@@ -265,6 +265,15 @@ exports[`Documentation: index renders 1`] = `
                 "path": "/docs/components/status",
                 "title": "Status",
               },
+              Object {
+                "component": Object {
+                  "Overview": [Function],
+                  "TabsText": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/components/tabs",
+                "title": "Tabs",
+              },
             ]
           }
           title="Components"

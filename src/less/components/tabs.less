@@ -1,0 +1,159 @@
+.nav {
+    position: relative;
+    min-height: 58px;
+
+    ul.nav-tabs {
+        margin: 0;
+        padding: 0;
+
+        li {
+            list-style-type: none;
+            display: table-cell;
+            width: 1%;
+            border-right: 3px solid @white;
+            border-top: 3px solid @white;
+            border-radius: 0 5px 0 0;
+
+            &.active {
+                span,
+                a,
+                a:hover {
+                    background-color: @white;
+                }
+            }
+
+            a,
+            span {
+                display: block;
+                font-weight: bold;
+                background-color: @background-body;
+                padding: 15px 30px;
+                font-size: 1.3em;
+            }
+        }
+
+        &.nav-stacked {
+            li {
+                border: none;
+                display: block;
+                width: 100%;
+            }
+        }
+
+        &.nav-collapsed {
+            position: absolute;
+            width: 100%;
+            background-color: @white;
+            border-bottom: 1px solid @gray-10;
+
+            &:after {
+                content: "";
+                border: 2px solid @gray-8;
+                border-top: none;
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                top: 18px;
+                right: 27px;
+                cursor: pointer;
+                transform: rotate(45deg);
+                border-left: none;
+            }
+
+            li {
+                border: none;
+                display: none;
+                width: 100%;
+
+                &.active {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.tabs {
+    position: relative;
+    min-height: 58px;
+
+    ul.nav-tabs {
+        margin: 0;
+        padding: 0;
+
+        li {
+            list-style-type: none;
+            display: inline-block;
+            // width: 1%;
+            // border-right: 3px solid @white;
+            // border-top: 3px solid @white;
+            border-radius: 0 5px 0 0;
+            margin: 0;
+
+            &:first-child {
+                margin-right: 1.5px;
+            }
+
+            &:last-child {
+                margin-left: 1.5px;
+            }
+
+            &.active {
+                span,
+                a,
+                a:hover {
+                    background-color: blue; //@white;
+                }
+            }
+
+            a,
+            span {
+                display: block;
+                font-weight: bold;
+                background-color: red; //@background-body;
+                padding: 15px 30px;
+                font-size: 1.3em;
+            }
+        }
+
+        &.nav-stacked {
+            li {
+                border: none;
+                display: block;
+                width: 100%;
+            }
+        }
+
+        &.nav-collapsed {
+            position: absolute;
+            width: 100%;
+            background-color: @white;
+            border-bottom: 1px solid @gray-10;
+
+            &:after {
+                content: "";
+                border: 2px solid @gray-8;
+                border-top: none;
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                top: 18px;
+                right: 27px;
+                cursor: pointer;
+                transform: rotate(45deg);
+                border-left: none;
+            }
+
+            li {
+                border: none;
+                display: none;
+                width: 100%;
+
+                &.active {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
