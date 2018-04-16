@@ -78,7 +78,7 @@ exports[`Documentation: Status Overview renders 1`] = `
     showCasePanel={true}
   >
     <ul
-      className="list-unstyled"
+      className="list"
     >
       <li>
         <span
