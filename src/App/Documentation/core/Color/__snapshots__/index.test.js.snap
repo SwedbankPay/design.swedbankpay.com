@@ -7,13 +7,10 @@ exports[`Core: Color renders 1`] = `
   <div
     className="row"
   >
-    <div
-      className="col-md-12"
-    >
-      <p>
-        Here there be colors!
-      </p>
-    </div>
+    <ColorText />
+    <DocToc
+      component={[Function]}
+    />
   </div>
 </div>
 `;

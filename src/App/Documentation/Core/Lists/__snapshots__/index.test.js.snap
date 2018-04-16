@@ -206,13 +206,11 @@ exports[`Documentation: Lists SettingsList renders 1`] = `
     <ul
       className="settings-list"
     >
-      <li
-        className="settings-item settings-item-checked"
-      >
+      <li>
         
 
         <i
-          className="material-icons"
+          className="material-icons color-success"
         >
           check
         </i>
@@ -220,27 +218,23 @@ exports[`Documentation: Lists SettingsList renders 1`] = `
         
 
       </li>
-      <li
-        className="settings-item settings-item-checked"
-      >
+      <li>
         
 
         <i
-          className="material-icons"
+          className="material-icons color-warning"
         >
-          check
+          remove
         </i>
         Spoon collectors weekly newsletter
         
 
       </li>
-      <li
-        className="settings-item"
-      >
+      <li>
         
 
         <i
-          className="material-icons"
+          className="material-icons color-danger"
         >
           clear
         </i>
