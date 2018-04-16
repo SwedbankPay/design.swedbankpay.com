@@ -158,7 +158,7 @@ describe("Utilities: ComponentPreview", () => {
             );
 
             expect(wrapper).toMatchSnapshot();
-            expect(wrapper.html()).toContain("data-px");
+            expect(wrapper.html()).toContain("data");
         });
     });
 

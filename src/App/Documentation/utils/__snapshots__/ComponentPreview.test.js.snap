@@ -30,7 +30,7 @@ exports[`Utilities: ComponentPreview Attribute renders data attribute 1`] = `
   <span
     className="token attr-name"
   >
-    data-px-
+    data-
   </span>
   <span
     className="token attr-name"

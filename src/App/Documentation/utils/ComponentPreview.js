@@ -125,7 +125,7 @@ ComponentPreview.propTypes = {
 
 const Attribute = ({ data, name, arg, value }) => (
     <code>
-        {data ? <span className="token attr-name">data-px-</span> : null}
+        {data ? <span className="token attr-name">data-</span> : null}
         <span className="token attr-name">{name}</span>
         {arg ? <span className="token attr-name">-{arg}</span> : null}
         <span className="token attr-value">
