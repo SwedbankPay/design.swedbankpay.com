@@ -24,7 +24,7 @@ const ColorPalette = () => (
                     <ColorPreview name="success" hex="#2da944" />
                 </div>
                 <div className="col-xs-12 col-sm-6 col-md-4 col-lg-2">
-                    <ColorPreview name="warning" hex="#f9a825" />
+                    <ColorPreview name="warning" hex="#ff9f00" />
                 </div>
                 <div className="col-xs-12 col-sm-6 col-md-4 col-lg-2">
                     <ColorPreview name="danger" hex="#cd2e00" />
