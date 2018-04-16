@@ -10,6 +10,7 @@ const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 const isProd = (process.env.NODE_ENV === "production");
+const isDeploy = (process.env.WEBPACK === "deploy");
 const devServer = (process.env.WEBPACK === "devserver");
 const version = pkg.version;
 
@@ -235,7 +236,7 @@ const config = {
     ]
 };
 
-if (!devServer) {
+if (!devServer && !isDeploy) {
     config.plugins.push(
         new CleanWebpackPlugin(["dist"]),
         new BundleAnalyzerPlugin()

@@ -8,6 +8,7 @@
         "start:prod": "cross-env NODE_ENV=production WEBPACK=devserver webpack-dev-server",
         "build": "npm run lint && cross-env NODE_ENV=development webpack",
         "build:prod": "npm run lint && cross-env NODE_ENV=production webpack",
+        "deploy": "cross-env NODE_ENV=production WEBPACK=deploy webpack",
         "test": "cross-env NODE_ENV=test jest",
         "test:update": "npm test -- -u",
         "lint": "eslint src/ && stylelint src/less/"
