@@ -119,13 +119,13 @@ describe("Component: Button - ", () => {
             expect(wrapper.contains(<a className="btn btn-default" href="test" disabled={true} role="button"/>)).toEqual(true);
         });
 
-        it("renders a button inside an anchor tag with attribute data-px-loader='true' when prop href and loader is provided", () => {
+        it("renders a button inside an anchor tag with attribute data-button-loader='true' when prop href and loader is provided", () => {
             const wrapper = shallow(
                 <Button type="default" href="test" loader={true} />
             );
 
             expect(wrapper).toMatchSnapshot();
-            expect(wrapper.contains(<a className="btn btn-default" href="test" data-px-loader={true} role="button"/>)).toEqual(true);
+            expect(wrapper.contains(<a className="btn btn-default" href="test" data-button-loader={true} role="button"/>)).toEqual(true);
         });
 
         it("renders a button with icon inside an anchor tag when prop href and icon is provided", () => {
@@ -248,13 +248,13 @@ describe("Component: Button - ", () => {
             expect(wrapper.contains(<input type="button" disabled={true} className="btn btn-default" />)).toEqual(true);
         });
 
-        it("renders a button inside an input tag with attribute data-px-loader='true' when prop input and loader is provided", () => {
+        it("renders a button inside an input tag with attribute data-button-loader='true' when prop input and loader is provided", () => {
             const wrapper = shallow(
                 <Button type="default" input={true} loader={true} />
             );
 
             expect(wrapper).toMatchSnapshot();
-            expect(wrapper.contains(<input type="button" data-px-loader={true} className="btn btn-default" />)).toEqual(true);
+            expect(wrapper.contains(<input type="button" data-button-loader={true} className="btn btn-default" />)).toEqual(true);
         });
 
         it("renders a button inside an input tag with value attribute when prop input and value is provided", () => {
@@ -376,13 +376,13 @@ describe("Component: Button - ", () => {
             expect(wrapper.contains(<button type="button" disabled={true} className="btn btn-default"></button>)).toEqual(true);
         });
 
-        it("renders a button with the attribute data-px-loader='true' when prop loader is provided", () => {
+        it("renders a button with the attribute data-button-loader='true' when prop loader is provided", () => {
             const wrapper = shallow(
                 <Button type="default" loader={true} />
             );
 
             expect(wrapper).toMatchSnapshot();
-            expect(wrapper.contains(<button type="button" data-px-loader={true} className="btn btn-default"></button>)).toEqual(true);
+            expect(wrapper.contains(<button type="button" data-button-loader={true} className="btn btn-default"></button>)).toEqual(true);
         });
 
         it("renders a button with an icon when prop icon is provided", () => {

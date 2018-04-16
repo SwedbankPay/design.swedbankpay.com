@@ -8,10 +8,10 @@ exports[`Component: Button -  Anchor tag: renders a button inside an anchor tag 
 />
 `;
 
-exports[`Component: Button -  Anchor tag: renders a button inside an anchor tag with attribute data-px-loader='true' when prop href and loader is provided 1`] = `
+exports[`Component: Button -  Anchor tag: renders a button inside an anchor tag with attribute data-button-loader='true' when prop href and loader is provided 1`] = `
 <a
   className="btn btn-default"
-  data-px-loader={true}
+  data-button-loader={true}
   href="test"
   role="button"
 />
@@ -208,10 +208,10 @@ exports[`Component: Button -  Button tag: renders a button with specified size w
 />
 `;
 
-exports[`Component: Button -  Button tag: renders a button with the attribute data-px-loader='true' when prop loader is provided 1`] = `
+exports[`Component: Button -  Button tag: renders a button with the attribute data-button-loader='true' when prop loader is provided 1`] = `
 <button
   className="btn btn-default"
-  data-px-loader={true}
+  data-button-loader={true}
   type="button"
 />
 `;
@@ -282,10 +282,10 @@ exports[`Component: Button -  Input tag: renders a button inside an input tag an
 />
 `;
 
-exports[`Component: Button -  Input tag: renders a button inside an input tag with attribute data-px-loader='true' when prop input and loader is provided 1`] = `
+exports[`Component: Button -  Input tag: renders a button inside an input tag with attribute data-button-loader='true' when prop input and loader is provided 1`] = `
 <input
   className="btn btn-default"
-  data-px-loader={true}
+  data-button-loader={true}
   type="button"
 />
 `;

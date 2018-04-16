@@ -169,6 +169,6 @@ describe("Component: Modal - ", () => {
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("button");
-        expect(wrapper.html()).toContain("data-px-modal-open");
+        expect(wrapper.html()).toContain("data-modal-open");
     });
 });

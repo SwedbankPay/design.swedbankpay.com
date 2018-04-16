@@ -1,7 +1,13 @@
 import alert from "./alert";
+import button from "./button";
+import rangeslider from "./rangeslider";
+import modal from "./modal";
 
 const px = {
-    alert
+    alert,
+    button,
+    rangeslider,
+    modal
 };
 
 // for (const key in px) {
@@ -10,12 +16,11 @@ const px = {
 
 if (!window.stopPx) {
     // document.addEventListener("DOMContentLoaded", () => { script.initAll(px); }, false);
-    console.log("stopPX is false");
 }
 
 window.px = px;
 export default px;
-export { alert };
+export { alert, button, rangeslider, modal };
 
 /* istanbul ignore if|else */
 if (module.hot) {

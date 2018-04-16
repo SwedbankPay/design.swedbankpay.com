@@ -9,7 +9,7 @@ const Button = ({ label, id, name, value, href, icon, loading, type, disabled, b
             id={id}
             name={name}
             disabled={disabled}
-            data-px-loader={loader}
+            data-button-loader={loader}
             role="button">{icon ? "\n\t" : null}
             {icon ? <i className="material-icons">{icon}</i> : null}
             {(icon && label) ? <span>{label}</span> : label}
@@ -23,7 +23,7 @@ const Button = ({ label, id, name, value, href, icon, loading, type, disabled, b
             id={id}
             name={name}
             disabled={disabled}
-            data-px-loader={loader}
+            data-button-loader={loader}
             value={value}
         />
     );
@@ -35,7 +35,7 @@ const Button = ({ label, id, name, value, href, icon, loading, type, disabled, b
             id={id}
             name={name}
             disabled={disabled}
-            data-px-loader={loader}>{icon ? "\n\t" : null}
+            data-button-loader={loader}>{icon ? "\n\t" : null}
             {icon ? <i className="material-icons">{icon}</i> : null}{icon ? "\n\t" : null}
             {(icon && label) ? <span>{label}</span> : label}{icon ? "\n" : null}
         </button>

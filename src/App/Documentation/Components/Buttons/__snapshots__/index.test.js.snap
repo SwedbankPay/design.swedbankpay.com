@@ -85,7 +85,7 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
     To use a button with a loader simply add the attribute 
     <Attribute
       data={true}
-      name="loader"
+      name="button-loader"
       value="true"
     />
      to add the required markup for the loader component. Add class 
@@ -276,7 +276,6 @@ exports[`Documentation: Buttons Buttons Text renders 1`] = `
   <DisabledState />
   <UsageWithIcons />
   <ButtonLoader />
-  <UsageWithJavascript />
 </div>
 `;
 

@@ -109,7 +109,7 @@ const LoadersText = () => (
         <BasicUsage />
         <Sizes />
         <MutedLoader />
-        <UsageWithJavascript />
+        {/* <UsageWithJavascript /> */}
     </div>
 );
 

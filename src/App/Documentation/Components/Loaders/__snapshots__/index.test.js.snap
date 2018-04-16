@@ -35,7 +35,6 @@ exports[`Documentation: Loaders Loaders Text renders 1`] = `
   <BasicUsage />
   <Sizes />
   <MutedLoader />
-  <UsageWithJavascript />
 </div>
 `;
 

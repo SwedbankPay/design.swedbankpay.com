@@ -1,3 +1,5 @@
+import { findAncestor } from "../utils";
+
 const SELECTORS = {
     ALERT: ".alert",
     CLOSE: "[data-alert-close]"
@@ -18,12 +20,16 @@ export default {
             if (dataVal) {
                 const alert = document.getElementById(dataVal);
 
-                btn.addEventListener("click", () => {
-                    _hideAlert(alert);
-                });
+                if (alert) {
+                    btn.addEventListener("click", () => {
+                        _hideAlert(alert);
+                    });
+                } else {
+                    console.warn(`No modal with with id ${dataVal} was found, make sure the attribute data-alert-close contains the correct id.`);
+                }
 
             } else {
-                const alert = btn.closest(SELECTORS.ALERT);
+                const alert = findAncestor(btn, "alert");
 
                 btn.addEventListener("click", () => {
                     _hideAlert(alert);

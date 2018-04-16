@@ -132,7 +132,7 @@ const UsageWithIcons = () => (
 const ButtonLoader = () => (
     <>
         <h2 id="button-loader">Button loader</h2>
-        <p>To use a button with a loader simply add the attribute <Attribute data={true} name="loader" value="true" /> to add the required markup for the loader component. Add class <code className="token property">.loading</code> to display the loader.</p>
+        <p>To use a button with a loader simply add the attribute <Attribute data={true} name="button-loader" value="true" /> to add the required markup for the loader component. Add class <code className="token property">.loading</code> to display the loader.</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <ButtonComponent id="test" type="default" label="Default" loader={true} loading={true} />{"\n"}
             <ButtonComponent type="brand" label="Brand" loader={true} loading={true} />{"\n"}
@@ -244,7 +244,7 @@ const ButtonsText = () => (
         <DisabledState />
         <UsageWithIcons />
         <ButtonLoader />
-        <UsageWithJavascript />
+        {/* <UsageWithJavascript /> */}
     </div>
 );
 
