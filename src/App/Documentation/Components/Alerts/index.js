@@ -58,21 +58,21 @@ const ClosingTheAlert = () => (
         <h2 id="closing-the-alert">Closing the alert</h2>
         <p>
             To add a close-button, add the following code inside your alert-element:<br/>
-            <PrismCode className="language-html">{"<i className=\"material-icons alert-close\">close</i>"}</PrismCode>
+            <PrismCode className="language-html">{"<i className=\"material-icons\" data-alert-close>close</i>"}</PrismCode>
         </p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-            <AlertComponent id="alert-success-1" type="success" display={true} text="This is a success alert with an icon!" close={true} icon="check_circle" />{"\n\n"}
-            <AlertComponent id="alert-neutral-1" type="neutral" display={true} text="This is a neutral alert with an icon!" close={true} icon="info" />{"\n\n"}
-            <AlertComponent id="alert-warning-1" type="warning" display={true} text="This is a warning alert with an icon!" close={true} icon="warning" />{"\n\n"}
-            <AlertComponent id="alert-error-1" type="error" display={true} text="This is a error alert with an icon!" close={true} icon="error" />{"\n\n"}
-            <AlertComponent id="alert-light-1" type="light" display={true} text="This is a light alert with an icon!" close={true} icon="info_outline" />{"\n\n"}
-            <AlertComponent id="alert-default-1" type="default" display={true} text="This is a default alert with an icon!" close={true} icon="info_outline" />
+            <AlertComponent type="success" display={true} text="This is a success alert with an icon!" close={true} icon="check_circle" />{"\n\n"}
+            <AlertComponent type="neutral" display={true} text="This is a neutral alert with an icon!" close={true} icon="info" />{"\n\n"}
+            <AlertComponent type="warning" display={true} text="This is a warning alert with an icon!" close={true} icon="warning" />{"\n\n"}
+            <AlertComponent type="error" display={true} text="This is a error alert with an icon!" close={true} icon="error" />{"\n\n"}
+            <AlertComponent type="light" display={true} text="This is a light alert with an icon!" close={true} icon="info_outline" />{"\n\n"}
+            <AlertComponent type="default" display={true} text="This is a default alert with an icon!" close={true} icon="info_outline" />
         </ComponentPreview>
         <h3>External close button</h3>
         <p>To add an external close-button for your alert add the attribute <Attribute data={true} name="alert" arg="close" value="[alert ID]" /> to the button element.</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-            <AlertComponent id="alert-success-2" type="success" display={true} text="Press the button below to close me" icon="check_circle" />{"\n\n"}
-            <button type="button" className="btn btn-neutral" data-px-alert-close="alert-success-2">Close alert</button>
+            <AlertComponent id="alert-success-1" type="success" display={true} text="Press the button below to close me" icon="check_circle" />{"\n\n"}
+            <button type="button" className="btn btn-neutral" data-alert-close="alert-success-1">Close alert</button>
         </ComponentPreview>
     </>
 );
@@ -173,13 +173,13 @@ const AlertsText = () => (
         <AlertWithIcon />
         <ClosingTheAlert />
         <ExtendedUsage />
-        <UsageWithJavascript />
+        {/* <UsageWithJavascript /> */}
     </div>
 );
 
 class Alerts extends Component {
     componentDidMount () {
-        // alert.init();
+        alert.init();
     }
 
     render () {

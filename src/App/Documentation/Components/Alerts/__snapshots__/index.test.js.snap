@@ -161,7 +161,6 @@ exports[`Documentation: Alerts Alerts Text renders 1`] = `
   <AlertWithIcon />
   <ClosingTheAlert />
   <ExtendedUsage />
-  <UsageWithJavascript />
 </div>
 `;
 
@@ -243,7 +242,7 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
       className="language-html"
       component="code"
     >
-      &lt;i className="material-icons alert-close"&gt;close&lt;/i&gt;
+      &lt;i className="material-icons" data-alert-close&gt;close&lt;/i&gt;
     </PrismCode>
   </p>
   <ComponentPreview
@@ -255,7 +254,6 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
       close={true}
       display={true}
       icon="check_circle"
-      id="alert-success-1"
       text="This is a success alert with an icon!"
       type="success"
     />
@@ -266,7 +264,6 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
       close={true}
       display={true}
       icon="info"
-      id="alert-neutral-1"
       text="This is a neutral alert with an icon!"
       type="neutral"
     />
@@ -277,7 +274,6 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
       close={true}
       display={true}
       icon="warning"
-      id="alert-warning-1"
       text="This is a warning alert with an icon!"
       type="warning"
     />
@@ -288,7 +284,6 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
       close={true}
       display={true}
       icon="error"
-      id="alert-error-1"
       text="This is a error alert with an icon!"
       type="error"
     />
@@ -299,7 +294,6 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
       close={true}
       display={true}
       icon="info_outline"
-      id="alert-light-1"
       text="This is a light alert with an icon!"
       type="light"
     />
@@ -310,7 +304,6 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
       close={true}
       display={true}
       icon="info_outline"
-      id="alert-default-1"
       text="This is a default alert with an icon!"
       type="default"
     />
@@ -336,7 +329,7 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
     <Alert
       display={true}
       icon="check_circle"
-      id="alert-success-2"
+      id="alert-success-1"
       text="Press the button below to close me"
       type="success"
     />
@@ -345,7 +338,7 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
 
     <button
       className="btn btn-neutral"
-      data-px-alert-close="alert-success-2"
+      data-alert-close="alert-success-1"
       type="button"
     >
       Close alert

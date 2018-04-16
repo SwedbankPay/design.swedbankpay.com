@@ -15,6 +15,7 @@ if (!window.stopPx) {
 
 window.px = px;
 export default px;
+export { alert };
 
 /* istanbul ignore if|else */
 if (module.hot) {

@@ -10,13 +10,14 @@ exports[`Component: Alert renders an alert with a close-button 1`] = `
 <div
   className="alert alert-test"
 >
-  
-
   <i
-    className="material-icons alert-close"
+    className="material-icons"
+    data-alert-close=""
   >
     close
   </i>
+  
+
 </div>
 `;
 
