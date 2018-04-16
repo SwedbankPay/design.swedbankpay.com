@@ -123,11 +123,10 @@ ComponentPreview.propTypes = {
     codeFigure: PropTypes.bool
 };
 
-const Attribute = ({ data, name, arg, value }) => (
+const Attribute = ({ data, name, value }) => (
     <code>
         {data ? <span className="token attr-name">data-</span> : null}
         <span className="token attr-name">{name}</span>
-        {arg ? <span className="token attr-name">-{arg}</span> : null}
         <span className="token attr-value">
             <span className="token punctuation">{"=\""}</span>
             {value}
@@ -138,7 +137,6 @@ const Attribute = ({ data, name, arg, value }) => (
 
 Attribute.propTypes = {
     name: PropTypes.string.isRequired,
-    arg: PropTypes.string,
     value: PropTypes.string.isRequired,
     data: PropTypes.bool
 };

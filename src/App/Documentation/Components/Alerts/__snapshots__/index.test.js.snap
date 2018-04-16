@@ -314,9 +314,8 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
   <p>
     To add an external close-button for your alert add the attribute 
     <Attribute
-      arg="close"
       data={true}
-      name="alert"
+      name="alert-close"
       value="[alert ID]"
     />
      to the button element.
