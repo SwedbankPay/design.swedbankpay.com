@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.0] - 2018-04-??
+
+### Added
+
+- Added tabs component.
+
+### Changed
+
+- Refactored px-script.
+- px-script no longer contains methods to manipulate components, only init methods remains for now.
+- Changed base colors to properly reflect colors specified in the PayEx Graphic Manual.
+
 ## [0.1.7] - 2018-04-03
 
 ### Added
