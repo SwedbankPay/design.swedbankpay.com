@@ -47,7 +47,7 @@
         "jsx-quotes":                       ["error", "prefer-double"],
         "key-spacing":                      ["warn"],
         "keyword-spacing":                  ["warn"],
-        "linebreak-style":                  ["warn", "windows"],
+        "linebreak-style":                  0,
         "new-cap":                          0,
         "newline-per-chained-call":         ["warn"],
         "no-alert":                         ["warn"],

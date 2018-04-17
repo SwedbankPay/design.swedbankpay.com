@@ -178,21 +178,21 @@ const config = {
                             name: "[name].[ext]?[hash]"
                         }
                     },
-                    {
-                        loader: "image-webpack-loader",
-                        options: {
-                            gifsicle: { interlaced: false },
-                            optipng: { optimizationLevel: 7 },
-                            pngquant: {
-                                quality: "65-90",
-                                speed: 4
-                            },
-                            mozjpeg: {
-                                progressive: true,
-                                quality: 65
-                            }
-                        }
-                    }
+                    // {
+                    //     loader: "image-webpack-loader",
+                    //     options: {
+                    //         gifsicle: { interlaced: false },
+                    //         optipng: { optimizationLevel: 7 },
+                    //         pngquant: {
+                    //             quality: "65-90",
+                    //             speed: 4
+                    //         },
+                    //         mozjpeg: {
+                    //             progressive: true,
+                    //             quality: 65
+                    //         }
+                    //     }
+                    // }
                 ]
             }
         ]

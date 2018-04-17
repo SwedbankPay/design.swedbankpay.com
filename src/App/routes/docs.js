@@ -10,17 +10,17 @@ export default [
             {
                 title: "Introduction",
                 path: "/docs/getting-started/introduction",
-                component: require("../Documentation/getting-started/Introduction")
+                component: require("../Documentation/getting-started/Introduction/index.js")
             },
             {
                 title: "Contributing",
                 path: "/docs/getting-started/contributing",
-                component: require("../Documentation/getting-started/Contributing")
+                component: require("../Documentation/getting-started/Contributing/index.js")
             },
             {
                 title: "Browser Support",
                 path: "/docs/getting-started/browser-support",
-                component: require("../Documentation/getting-started/BrowserSupport")
+                component: require("../Documentation/getting-started/BrowserSupport/index.js")
             }
         ]
     },
@@ -36,22 +36,22 @@ export default [
             {
                 title: "Color",
                 path: "/docs/core/color",
-                component: require("../Documentation/core/Color")
+                component: require("../Documentation/core/Color/index.js")
             },
             {
                 title: "Lists",
                 path: "/docs/core/lists",
-                component: require("../Documentation/core/Lists")
+                component: require("../Documentation/core/Lists/index.js")
             },
             {
                 title: "Tables",
                 path: "/docs/core/tables",
-                component: require("../Documentation/core/Tables")
+                component: require("../Documentation/core/Tables/index.js")
             },
             {
                 title: "Typography",
                 path: "/docs/core/typography",
-                component: require("../Documentation/core/Typography")
+                component: require("../Documentation/core/Typography/index.js")
             }
         ]
     },
@@ -67,62 +67,62 @@ export default [
             {
                 title: "Alerts",
                 path: "/docs/components/alerts",
-                component: require("../Documentation/components/Alerts")
+                component: require("../Documentation/components/Alerts/index.js")
             },
             {
                 title: "Breadcrumb",
                 path: "/docs/components/breadcrumb",
-                component: require("../Documentation/components/Breadcrumb")
+                component: require("../Documentation/components/Breadcrumb/index.js")
             },
             {
                 title: "Buttons",
                 path: "/docs/components/buttons",
-                component: require("../Documentation/components/Buttons")
+                component: require("../Documentation/components/Buttons/index.js")
             },
             // {
             //     title: "Cards",
             //     path: "/docs/components/cards",
-            //     component: require("../Documentation/components/Cards")
+            //     component: require("../Documentation/components/Cards/index.js")
             // },
             {
                 title: "Forms",
                 path: "/docs/components/forms",
-                component: require("../Documentation/components/Forms")
+                component: require("../Documentation/components/Forms/index.js")
             },
             {
                 title: "Input Group",
                 path: "/docs/components/input-group",
-                component: require("../Documentation/components/InputGroup")
+                component: require("../Documentation/components/InputGroup/index.js")
             },
             {
                 title: "Loaders",
                 path: "/docs/components/loaders",
-                component: require("../Documentation/components/Loaders")
+                component: require("../Documentation/components/Loaders/index.js")
             },
             {
                 title: "Modal",
                 path: "/docs/components/modal",
-                component: require("../Documentation/components/Modal")
+                component: require("../Documentation/components/Modal/index.js")
             },
             {
                 title: "Pagination",
                 path: "/docs/components/pagination",
-                component: require("../Documentation/components/Pagination")
+                component: require("../Documentation/components/Pagination/index.js")
             },
             {
                 title: "Panel",
                 path: "/docs/components/panel",
-                component: require("../Documentation/components/Panel")
+                component: require("../Documentation/components/Panel/index.js")
             },
             {
                 title: "Status",
                 path: "/docs/components/status",
-                component: require("../Documentation/components/Status")
+                component: require("../Documentation/components/Status/index.js")
             },
             {
                 title: "Tabs",
                 path: "/docs/components/tabs",
-                component: require("../Documentation/components/Tabs")
+                component: require("../Documentation/components/Tabs/index.js")
             }
         ]
     },

@@ -4,7 +4,8 @@ module.exports = {
     collectCoverageFrom: [
         "src/**/*.{js,jsx}",
         "!src/index.js",
-        "!src/polyfills/**/*.js"
+        "!src/polyfills/**/*.js",
+        "!src/_px-script/**/*.js"
     ],
     coverageDirectory: "coverage",
     coverageReporters: [
@@ -19,6 +20,7 @@ module.exports = {
     ],
     testPathIgnorePatterns: [
         "/node_modules/",
+        "/_px-script/",
         "\\.spec\\.js"
     ]
 };

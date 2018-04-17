@@ -25,7 +25,7 @@ export default {
                         _hideAlert(alert);
                     });
                 } else {
-                    console.warn(`No modal with with id ${dataVal} was found, make sure the attribute data-alert-close contains the correct id.`);
+                    console.warn(`No alert with with id ${dataVal} was found, make sure the attribute data-alert-close contains the correct id.`);
                 }
 
             } else {

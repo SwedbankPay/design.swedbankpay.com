@@ -14,10 +14,10 @@ describe("px-script: alert", () => {
 
     it("method init adds eventlisteners on all close buttons", () => {
         const Alerts = () => (
-            <div>
-                <Alert id={"asd"} type="success" close={true} display={true} />
+            <>
+                <Alert id="asd" type="success" close={true} display={true} />
                 <Alert type="success" close={true} display={true} />
-            </div>
+            </>
         );
         ReactDOM.render(<Alerts />, div);
 
@@ -37,6 +37,45 @@ describe("px-script: alert", () => {
         });
 
         ReactDOM.unmountComponentAtNode(div);
+    });
 
+    it("method init adds eventlisteners on all button with data attributes", () => {
+        const AlertTest = () => (
+            <>
+                <Alert id="test" type="success" display={true} />
+                <button data-alert-close="test"></button>
+            </>
+        );
+
+        ReactDOM.render(<AlertTest />, div);
+
+        const renderedButton = document.querySelector("[data-alert-close]");
+        expect(renderedButton).toBeDefined();
+
+        const targetAlert = document.getElementById(renderedButton.dataset.alertClose);
+        expect(targetAlert.classList).toContain("in");
+
+        alert.init();
+
+        renderedButton.click();
+        expect(targetAlert.classList).not.toContain("in");
+
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
+    it("method init warns about possible wrong id", () => {
+        const AlertTest = () => (
+            <>
+                <button data-alert-close="test"></button>
+            </>
+        );
+
+        ReactDOM.render(<AlertTest />, div);
+        console.warn = jest.fn();
+
+        alert.init();
+        expect(console.warn).toHaveBeenCalled();
+
+        ReactDOM.unmountComponentAtNode(div);
     });
 });
