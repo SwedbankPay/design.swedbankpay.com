@@ -1,17 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Tabs = ({ mode, items, test }) => {
+const Tabs = ({ mode, items }) => {
     return (
-        <nav className={test ? "tabs" : "nav"}>
-            <ul className={`nav-tabs nav-${mode}`}>
+        <div className="tabs">
+            <ul className={`tabs-${mode}`}>
                 {items.map(({ name, active }, i) => (
                     <li key={`tab-item-${name}-${i}`} className={active ? "active" : ""}>{"\n"}
                         <a href="#">{name}</a>{"\n"}
                     </li>
                 ))}
             </ul>
-        </nav>
+        </div>
     );
 };
 

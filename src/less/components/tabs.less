@@ -1,18 +1,25 @@
-.nav {
+.tabs {
     position: relative;
-    min-height: 58px;
+    margin: 1rem auto;
+    min-height: 60px;
 
-    ul.nav-tabs {
-        margin: 0;
+    ul {
+        margin: 0 auto;
         padding: 0;
+        display: flex;
 
         li {
-            list-style-type: none;
-            display: table-cell;
-            width: 1%;
-            border-right: 3px solid @white;
-            border-top: 3px solid @white;
-            border-radius: 0 5px 0 0;
+            list-style: none;
+            width: 100%;
+
+            a,
+            span {
+                background-color: @background-body;
+                display: block;
+                font-weight: bold;
+                padding: 1rem 2rem;
+                font-size: 1.3rem;
+            }
 
             &.active {
                 span,
@@ -21,139 +28,132 @@
                     background-color: @white;
                 }
             }
-
-            a,
-            span {
-                display: block;
-                font-weight: bold;
-                background-color: @background-body;
-                padding: 15px 30px;
-                font-size: 1.3em;
-            }
         }
 
-        &.nav-stacked {
-            li {
-                border: none;
-                display: block;
-                width: 100%;
-            }
+        &.tabs-stacked {
+            flex-direction: column;
         }
 
-        &.nav-collapsed {
+        &.tabs-collapsed {
+            border-bottom: 1px solid @gray-10;
+            flex-direction: column;
             position: absolute;
             width: 100%;
-            background-color: @white;
-            border-bottom: 1px solid @gray-10;
 
             &:after {
                 content: "";
+                top: 1rem;
+                right: 2rem;
                 border: 2px solid @gray-8;
                 border-top: none;
-                width: 15px;
-                height: 15px;
-                position: absolute;
-                top: 18px;
-                right: 27px;
-                cursor: pointer;
-                transform: rotate(45deg);
                 border-left: none;
+                width: 1rem;
+                height: 1rem;
+                position: absolute;
+                transform: rotate(45deg);
+                cursor: pointer;
             }
 
             li {
-                border: none;
                 display: none;
-                width: 100%;
 
                 &.active {
                     display: block;
                 }
             }
         }
-    }
-}
 
-.tabs {
-    position: relative;
-    min-height: 58px;
-
-    ul.nav-tabs {
-        margin: 0;
-        padding: 0;
-
-        li {
-            list-style-type: none;
-            display: inline-block;
-            // width: 1%;
-            // border-right: 3px solid @white;
-            // border-top: 3px solid @white;
-            border-radius: 0 5px 0 0;
-            margin: 0;
-
-            &:first-child {
-                margin-right: 1.5px;
-            }
-
-            &:last-child {
-                margin-left: 1.5px;
-            }
-
-            &.active {
-                span,
-                a,
-                a:hover {
-                    background-color: blue; //@white;
-                }
-            }
-
-            a,
-            span {
-                display: block;
-                font-weight: bold;
-                background-color: red; //@background-body;
-                padding: 15px 30px;
-                font-size: 1.3em;
-            }
-        }
-
-        &.nav-stacked {
-            li {
-                border: none;
-                display: block;
-                width: 100%;
-            }
-        }
-
-        &.nav-collapsed {
-            position: absolute;
-            width: 100%;
-            background-color: @white;
-            border-bottom: 1px solid @gray-10;
-
+        &:hover {
             &:after {
-                content: "";
-                border: 2px solid @gray-8;
-                border-top: none;
-                width: 15px;
-                height: 15px;
-                position: absolute;
-                top: 18px;
-                right: 27px;
-                cursor: pointer;
-                transform: rotate(45deg);
-                border-left: none;
+                z-index: @zindex-tabs-arrow;
             }
 
             li {
-                border: none;
-                display: none;
-                width: 100%;
-
-                &.active {
-                    display: block;
-                }
+                display: block;
+                z-index: @zindex-tabs;
             }
         }
     }
 }
 
+// .nav {
+//     position: relative;
+//     min-height: 58px;
+
+//     ul.nav-tabs {
+//         margin: 0;
+//         padding: 0;
+
+//         li {
+//             list-style-type: none;
+//             display: table-cell;
+//             width: 1%;
+//             border-right: 3px solid @white;
+//             border-top: 3px solid @white;
+//             border-radius: 0 5px 0 0;
+
+//             &.active {
+//                 span,
+//                 a,
+//                 a:hover {
+//                     background-color: @white;
+//                 }
+//             }
+
+//             a,
+//             span {
+//                 display: block;
+//                 font-weight: bold;
+//                 background-color: @background-body;
+//                 padding: 15px 30px;
+//                 font-size: 1.3em;
+//             }
+//         }
+
+//         &.nav-stacked {
+//             li {
+//                 border: none;
+//                 display: block;
+//                 width: 100%;
+//             }
+//         }
+
+//         &.nav-collapsed {
+//             position: absolute;
+//             width: 100%;
+//             background-color: @white;
+//             border-bottom: 1px solid @gray-10;
+
+//             &:after {
+//                 content: "";
+//                 border: 2px solid @gray-8;
+//                 border-top: none;
+//                 width: 15px;
+//                 height: 15px;
+//                 position: absolute;
+//                 top: 18px;
+//                 right: 27px;
+//                 cursor: pointer;
+//                 transform: rotate(45deg);
+//                 border-left: none;
+//             }
+
+//             li {
+//                 border: none;
+//                 display: none;
+//                 width: 100%;
+
+//                 &.active {
+//                     display: block;
+//                 }
+//             }
+
+//             &:hover,
+//             &.in {
+//                 li {
+//                     display: block;
+//                 }
+//             }
+//         }
+//     }
+// }

@@ -2,12 +2,14 @@ import alert from "./alert";
 import button from "./button";
 import rangeslider from "./rangeslider";
 import modal from "./modal";
+import tabs from "./tabs";
 
 const px = {
     alert,
     button,
     rangeslider,
-    modal
+    modal,
+    tabs
 };
 
 // for (const key in px) {
@@ -20,7 +22,7 @@ if (!window.stopPx) {
 
 window.px = px;
 export default px;
-export { alert, button, rangeslider, modal };
+export { alert, button, rangeslider, modal, tabs };
 
 /* istanbul ignore if|else */
 if (module.hot) {

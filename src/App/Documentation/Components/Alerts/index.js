@@ -83,8 +83,8 @@ const ExtendedUsage = () => (
         <p>Alerts can also contain additional HTML elements like headings, paragraphs and dividers.</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <div className="alert alert-success alert-with-icon in">{"\n"}
-                <i className="material-icons alert-icon">check_circle</i>{"\n"}
-                <i className="material-icons alert-close">close</i>
+                <i className="material-icons" data-alert-close="">close</i>{"\n"}
+                <i className="material-icons alert-icon">check_circle</i>
                 <h3 className="alert-heading">Success!</h3>
                 <p className="alert-text">You successfully saw the code example under the Extended usage section.</p>
                 <p className="alert-text">This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>

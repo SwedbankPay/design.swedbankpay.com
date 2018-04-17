@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import ComponentPreview from "../../utils/ComponentPreview";
 import DocToc from "../../utils/DocToc";
 import TabsComponent from "../../../components/Tabs";
+import { tabs } from "../../../../px-script";
 
 const tabItems = [
     {
@@ -22,23 +23,29 @@ const tabItems = [
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
-        <p>Overview... <code className="token property">.nav-tabs</code>...</p>
+        <p>Overview... <code className="token property">.tabs</code>...<code className="token property">.tabs-auto</code></p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <TabsComponent mode="auto" items={tabItems} />
-            <TabsComponent mode="stacked" items={tabItems} />
-            <TabsComponent mode="collapsed" items={tabItems} />
         </ComponentPreview>
     </>
 );
 
-const New = () => (
+const Stacked = () => (
     <>
-        <h2 id="new">New</h2>
-        <p>New... <code className="token property">.tabs</code>...</p>
+        <h2 id="stacked">Stacked</h2>
+        <p>Stacked... <code className="token property">.tabs</code>...<code className="token property">.tabs-stacked</code></p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-            <TabsComponent test={true} mode="auto" items={tabItems} />
-            <TabsComponent test={true} mode="stacked" items={tabItems} />
-            <TabsComponent test={true} mode="collapsed" items={tabItems} />
+            <TabsComponent mode="stacked" items={tabItems} />
+        </ComponentPreview>
+    </>
+);
+
+const Collapsed = () => (
+    <>
+        <h2 id="collapsed">Collapsed</h2>
+        <p>Collapsed... <code className="token property">.tabs</code>...<code className="token property">.tabs-collapsed</code></p>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+            <TabsComponent mode="collapsed" items={tabItems} />
         </ComponentPreview>
     </>
 );
@@ -47,12 +54,14 @@ const TabsText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
         <p className="lead">Tabs...</p>
         <Overview />
-        <New />
+        <Stacked />
+        <Collapsed />
     </div>
 );
 
 class Tabs extends Component {
     componentDidMount () {
+        tabs.init();
     }
 
     render () {
