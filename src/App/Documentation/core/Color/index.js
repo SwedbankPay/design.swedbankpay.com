@@ -15,7 +15,7 @@ const ColorPalette = () => (
                     <ColorPreview name="brand" hex="#2da944" />
                 </div>
                 <div className="col-xs-12 col-sm-6 col-md-4 col-lg-2">
-                    <ColorPreview name="default" hex="#414042" />
+                    <ColorPreview name="default" hex="#3c3c3c" />
                 </div>
                 <div className="col-xs-12 col-sm-6 col-md-4 col-lg-2">
                     <ColorPreview name="neutral" hex="#266c9a" />

@@ -32,18 +32,19 @@
 // 1. Colors
 // ==========================================================================
 
-@red:                                       #cd2e00;
+/* Base colors */
 @green:                                     #2da944;
+@purple:                                    #7d55aa;
 @blue:                                      #266c9a;
 @orange:                                    #ff9f00;
-
-@brand-primary:                             #2da944;
-@brand-primary-faded:                       fade(@brand-primary, 60%);
+@red:                                       #cd2e00; // Not in the graphic manual
 
 @black:                                     #000000;
 @white:                                     #ffffff;
+@dark-gray:                                 #3c3c3c;
+@mid-gray:                                  #828282;
+@light-gray:                                #c8c8c8;
 
-@text-gray:                                 #3c3c3c;
 
 /* Grayscale */
 @gray-0:                                    #231f20;
@@ -60,11 +61,12 @@
 
 @input-gray:                                #f9fafa;
 
+/* Brand colors */
+@brand-primary:                             @green;
+@brand-primary-faded:                       fade(@brand-primary, 60%);
+
 /* Background colors */
-@background-dark:                           #c8c8c8;
-@background-medium:                         #dcdcdc;
-@background-light:                          #f0f0f0;
-@background-white:                          #ffffff;
+@background-white:                          @white;
 @background-body:                           #f7f7f7;
 @background-code:                           #f5f2f0;
 
@@ -90,7 +92,7 @@
 
 /* Body */
 @body-bg:                                   @background-body;
-@text-color:                                @text-gray;
+@text-color:                                @dark-gray;
 @link-color:                                @brand-primary;
 @link-hover-color:                          darken(@brand-primary, 10%);
 @link-hover-decoration:                     underline;
