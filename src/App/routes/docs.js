@@ -1,3 +1,5 @@
+import ListComponent from "../Documentation/core/Lists/index.js";
+
 export default [
     /**
      * Getting Started
@@ -38,11 +40,11 @@ export default [
                 path: "/docs/core/color",
                 component: require("../Documentation/core/Color/index.js")
             },
-            // {
-            //     title: "Lists",
-            //     path: "/docs/core/lists",
-            //     component: require("../Documentation/core/Lists/index.js")
-            // },
+            {
+                title: "Lists",
+                path: "/docs/core/lists",
+                component: ListComponent
+            },
             {
                 title: "Tables",
                 path: "/docs/core/tables",
