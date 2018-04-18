@@ -85,6 +85,11 @@ export default [
             //     component: require("../Documentation/components/Cards")
             // },
             {
+                title: "Dropdowns",
+                path: "/docs/components/dropdowns",
+                component: require("../Documentation/components/Dropdowns")
+            },
+            {
                 title: "Forms",
                 path: "/docs/components/forms",
                 component: require("../Documentation/components/Forms")

@@ -1,17 +1,19 @@
 import alert from "./alert";
 import button from "./button";
-import rangeslider from "./rangeslider";
+import dropdown from "./dropdown";
 import modal from "./modal";
-import tabs from "./tabs";
+import rangeslider from "./rangeslider";
 import script from "./script";
+import tabs from "./tabs";
 
 const px = {
     alert,
     button,
-    rangeslider,
+    dropdown,
     modal,
-    tabs,
-    script
+    rangeslider,
+    script,
+    tabs
 };
 
 window.px = px;
@@ -23,7 +25,7 @@ if (!window.stopPx) {
 }
 
 export default px;
-export { alert, button, rangeslider, modal, tabs, script };
+export { alert, button, dropdown, modal, rangeslider, script, tabs };
 
 /* istanbul ignore if|else */
 if (module.hot) {
