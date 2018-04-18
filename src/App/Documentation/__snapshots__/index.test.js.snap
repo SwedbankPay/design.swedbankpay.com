@@ -178,6 +178,15 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "BasicUsage": [Function],
+                  "DropdownsText": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/components/dropdowns",
+                "title": "Dropdowns",
+              },
+              Object {
+                "component": Object {
                   "Checkboxes": [Function],
                   "DisabledCheckboxes": [Function],
                   "DisabledRadioButtons": [Function],

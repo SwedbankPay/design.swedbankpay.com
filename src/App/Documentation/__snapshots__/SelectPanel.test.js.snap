@@ -200,13 +200,24 @@ exports[`Documentation: SelectPanel renders 1`] = `
           <Link
             className=""
             replace={false}
+            to="/docs/components/dropdowns"
+          >
+            Dropdowns
+          </Link>
+        </li>
+        <li
+          key="4"
+        >
+          <Link
+            className=""
+            replace={false}
             to="/docs/components/forms"
           >
             Forms
           </Link>
         </li>
         <li
-          key="4"
+          key="5"
         >
           <Link
             className=""
@@ -217,7 +228,7 @@ exports[`Documentation: SelectPanel renders 1`] = `
           </Link>
         </li>
         <li
-          key="5"
+          key="6"
         >
           <Link
             className=""
@@ -228,7 +239,7 @@ exports[`Documentation: SelectPanel renders 1`] = `
           </Link>
         </li>
         <li
-          key="6"
+          key="7"
         >
           <Link
             className=""
@@ -239,7 +250,7 @@ exports[`Documentation: SelectPanel renders 1`] = `
           </Link>
         </li>
         <li
-          key="7"
+          key="8"
         >
           <Link
             className=""
@@ -250,7 +261,7 @@ exports[`Documentation: SelectPanel renders 1`] = `
           </Link>
         </li>
         <li
-          key="8"
+          key="9"
         >
           <Link
             className=""
@@ -261,7 +272,7 @@ exports[`Documentation: SelectPanel renders 1`] = `
           </Link>
         </li>
         <li
-          key="9"
+          key="10"
         >
           <Link
             className=""
@@ -272,7 +283,7 @@ exports[`Documentation: SelectPanel renders 1`] = `
           </Link>
         </li>
         <li
-          key="10"
+          key="11"
         >
           <Link
             className=""
