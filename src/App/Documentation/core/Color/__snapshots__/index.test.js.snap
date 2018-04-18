@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Core: Color renders 1`] = `
+<div
+  className="doc-container"
+>
+  <div
+    className="row"
+  >
+    <ColorText />
+    <DocToc
+      component={[Function]}
+    />
+  </div>
+</div>
+`;
