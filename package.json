@@ -1,6 +1,6 @@
 {
     "name": "design.payex.com",
-    "version": "0.2.0-TC.test.3",
+    "version": "0.2.0",
     "description": "PayEx DesignGuide",
     "main": "index.js",
     "scripts": {
@@ -60,6 +60,7 @@
         "file-loader": "^1.1.6",
         "html-webpack-plugin": "^2.30.1",
         "jest": "^22.4.3",
+        "jest-teamcity-reporter": "^0.9.0",
         "less": "^2.7.3",
         "less-loader": "^4.0.5",
         "postcss-loader": "^2.1.0",

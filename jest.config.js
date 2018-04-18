@@ -22,5 +22,6 @@ module.exports = {
         "/node_modules/",
         "/_px-script/",
         "\\.spec\\.js"
-    ]
+    ],
+    testResultsProcessor: "jest-teamcity-reporter"
 };
