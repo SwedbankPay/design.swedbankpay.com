@@ -11,7 +11,8 @@
         "deploy": "cross-env NODE_ENV=production WEBPACK=deploy webpack",
         "test": "cross-env NODE_ENV=test jest",
         "test:update": "npm test -- -u",
-        "lint": "eslint src/ && stylelint src/less/"
+        "lint": "eslint src/ && stylelint src/less/",
+        "lint:tc": "eslint --format ./node_modules/eslint-teamcity/index.js src/ && stylelint src/less/ --custom-formatter node_modules/stylelint-teamcity-formatter"
     },
     "repository": {
         "type": "git",
@@ -55,6 +56,7 @@
         "eslint-plugin-jest": "^21.7.0",
         "eslint-plugin-node": "^6.0.0",
         "eslint-plugin-react": "^7.6.1",
+        "eslint-teamcity": "^2.0.0",
         "extract-text-webpack-plugin": "^3.0.2",
         "favicons-webpack-plugin": "0.0.7",
         "file-loader": "^1.1.6",
@@ -70,6 +72,7 @@
         "stylelint": "^9.1.1",
         "stylelint-config-recommended": "^2.1.0",
         "stylelint-config-standard": "^18.2.0",
+        "stylelint-teamcity-formatter": "0.0.3",
         "wdio-mocha-framework": "^0.5.13",
         "wdio-selenium-standalone-service": "0.0.10",
         "webdriverio": "^4.12.0",
