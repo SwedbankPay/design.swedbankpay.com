@@ -3,26 +3,27 @@ import button from "./button";
 import rangeslider from "./rangeslider";
 import modal from "./modal";
 import tabs from "./tabs";
+import script from "./script";
 
 const px = {
     alert,
     button,
     rangeslider,
     modal,
-    tabs
+    tabs,
+    script
 };
 
-// for (const key in px) {
-//     console.log(px[key]());
-// }
+window.px = px;
 
 if (!window.stopPx) {
-    // document.addEventListener("DOMContentLoaded", () => { script.initAll(px); }, false);
+    document.addEventListener("DOMContentLoaded", () => {
+        px.script.initAll();
+    });
 }
 
-window.px = px;
 export default px;
-export { alert, button, rangeslider, modal, tabs };
+export { alert, button, rangeslider, modal, tabs, script };
 
 /* istanbul ignore if|else */
 if (module.hot) {
