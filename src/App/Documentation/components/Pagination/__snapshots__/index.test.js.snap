@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Documentation: Pagination DefaultPagination renders 1`] = `
+<React.Fragment>
+  <h2
+    id="default-pagination"
+  >
+    Default pagination
+  </h2>
+  <p>
+    Default pagination... 
+    <code
+      className="token property"
+    >
+      .pagination
+    </code>
+    ...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Pagination
+      arrows={true}
+      farArrows={true}
+      items={
+        Array [
+          Object {
+            "active": false,
+            "href": "#",
+            "name": "1",
+          },
+          Object {
+            "active": false,
+            "href": "#",
+            "name": "2",
+          },
+          Object {
+            "active": false,
+            "href": "#",
+            "name": "3",
+          },
+          Object {
+            "active": false,
+            "href": "#",
+            "name": "4",
+          },
+          Object {
+            "active": true,
+            "href": "#",
+            "name": "5",
+          },
+        ]
+      }
+    />
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Documentation: Pagination PaginationBullets renders 1`] = `
+<React.Fragment>
+  <h2
+    id="pagination-bullets"
+  >
+    Pagination bullets
+  </h2>
+  <p>
+    Pagination bullets... 
+    <code
+      className="token property"
+    >
+      .pagination-bullets
+    </code>
+    ...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Pagination
+      arrows={true}
+      farArrows={true}
+      items={
+        Array [
+          Object {
+            "active": false,
+            "href": "#",
+            "name": "1",
+          },
+          Object {
+            "active": false,
+            "href": "#",
+            "name": "2",
+          },
+          Object {
+            "active": false,
+            "href": "#",
+            "name": "3",
+          },
+          Object {
+            "active": false,
+            "href": "#",
+            "name": "4",
+          },
+          Object {
+            "active": true,
+            "href": "#",
+            "name": "5",
+          },
+        ]
+      }
+      type="bullets"
+    />
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Documentation: Pagination PaginationText renders 1`] = `
+<div
+  className="col-md-12 col-lg-10 doc-body"
+>
+  <p
+    className="lead"
+  >
+    Pagination...
+  </p>
+  <DefaultPagination />
+  <PaginationBullets />
+  <SimplePagination />
+</div>
+`;
+
+exports[`Documentation: Pagination SimplePagination renders 1`] = `
+<React.Fragment>
+  <h2
+    id="simple-pagination"
+  >
+    Simple pagination
+  </h2>
+  <p>
+    Simple pagination... 
+    <code
+      className="token property"
+    >
+      .pagination
+    </code>
+    ...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Pagination
+      arrows={true}
+      farArrows={true}
+      text="16 of 256"
+    />
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Documentation: Pagination renders 1`] = `
+<div
+  className="doc-container"
+>
+  <div
+    className="row"
+  >
+    <PaginationText />
+    <DocToc
+      component={[Function]}
+    />
+  </div>
+</div>
+`;

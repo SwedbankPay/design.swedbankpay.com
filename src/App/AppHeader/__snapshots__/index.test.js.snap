@@ -1,0 +1,406 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppHeader: AppHeader renders with provided location prop 1`] = `
+<header
+  className="topbar designguide-header"
+>
+  <a
+    className="topbar-logo logo-default"
+    href="#"
+  />
+  <nav
+    className="header-links"
+  >
+    <Link
+      className=""
+      key="0"
+      replace={false}
+      to="/"
+    >
+      Home
+    </Link>
+    <Link
+      className=""
+      key="1"
+      replace={false}
+      to="/docs"
+    >
+      Documentation
+    </Link>
+    <Link
+      className=""
+      key="2"
+      replace={false}
+      to="/examples"
+    >
+      Examples
+    </Link>
+    <Link
+      className=""
+      key="3"
+      replace={false}
+      to="/templates"
+    >
+      Templates
+    </Link>
+  </nav>
+  <div
+    className="topbar-info"
+  >
+    <div
+      className="topbar-info-contact"
+    >
+      <a
+        href="https://github.com/PayEx/design.payex.com"
+        rel="noopener"
+        target="b_blank"
+      >
+        <GithubLogo />
+      </a>
+      <a
+        href="https://payex.slack.com/messages/C0L3W8B2S/"
+        rel="noopener"
+        target="b_blank"
+      >
+        <SlackLogo />
+      </a>
+    </div>
+    <div
+      className="topbar-info-version"
+    >
+      <a
+        href="https://github.com/PayEx/design.payex.com/blob/master/CHANGELOG.md"
+        rel="noopener"
+        target="b_blank"
+      >
+        v.
+        0.2.0
+      </a>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`AppHeader: AppHeader sets documentation route to active when locaton is /docs 1`] = `
+<header
+  className="topbar designguide-header"
+>
+  <a
+    className="topbar-logo logo-default"
+    href="#"
+  />
+  <nav
+    className="header-links"
+  >
+    <Link
+      className=""
+      key="0"
+      replace={false}
+      to="/"
+    >
+      Home
+    </Link>
+    <Link
+      className="active"
+      key="1"
+      replace={false}
+      to="/docs"
+    >
+      Documentation
+    </Link>
+    <Link
+      className=""
+      key="2"
+      replace={false}
+      to="/examples"
+    >
+      Examples
+    </Link>
+    <Link
+      className=""
+      key="3"
+      replace={false}
+      to="/templates"
+    >
+      Templates
+    </Link>
+  </nav>
+  <div
+    className="topbar-info"
+  >
+    <div
+      className="topbar-info-contact"
+    >
+      <a
+        href="https://github.com/PayEx/design.payex.com"
+        rel="noopener"
+        target="b_blank"
+      >
+        <GithubLogo />
+      </a>
+      <a
+        href="https://payex.slack.com/messages/C0L3W8B2S/"
+        rel="noopener"
+        target="b_blank"
+      >
+        <SlackLogo />
+      </a>
+    </div>
+    <div
+      className="topbar-info-version"
+    >
+      <a
+        href="https://github.com/PayEx/design.payex.com/blob/master/CHANGELOG.md"
+        rel="noopener"
+        target="b_blank"
+      >
+        v.
+        0.2.0
+      </a>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`AppHeader: AppHeader sets examples route to active when locaton is /examples 1`] = `
+<header
+  className="topbar designguide-header"
+>
+  <a
+    className="topbar-logo logo-default"
+    href="#"
+  />
+  <nav
+    className="header-links"
+  >
+    <Link
+      className=""
+      key="0"
+      replace={false}
+      to="/"
+    >
+      Home
+    </Link>
+    <Link
+      className=""
+      key="1"
+      replace={false}
+      to="/docs"
+    >
+      Documentation
+    </Link>
+    <Link
+      className="active"
+      key="2"
+      replace={false}
+      to="/examples"
+    >
+      Examples
+    </Link>
+    <Link
+      className=""
+      key="3"
+      replace={false}
+      to="/templates"
+    >
+      Templates
+    </Link>
+  </nav>
+  <div
+    className="topbar-info"
+  >
+    <div
+      className="topbar-info-contact"
+    >
+      <a
+        href="https://github.com/PayEx/design.payex.com"
+        rel="noopener"
+        target="b_blank"
+      >
+        <GithubLogo />
+      </a>
+      <a
+        href="https://payex.slack.com/messages/C0L3W8B2S/"
+        rel="noopener"
+        target="b_blank"
+      >
+        <SlackLogo />
+      </a>
+    </div>
+    <div
+      className="topbar-info-version"
+    >
+      <a
+        href="https://github.com/PayEx/design.payex.com/blob/master/CHANGELOG.md"
+        rel="noopener"
+        target="b_blank"
+      >
+        v.
+        0.2.0
+      </a>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`AppHeader: AppHeader sets home route to active when locaton is / 1`] = `
+<header
+  className="topbar designguide-header"
+>
+  <a
+    className="topbar-logo logo-default"
+    href="#"
+  />
+  <nav
+    className="header-links"
+  >
+    <Link
+      className="active"
+      key="0"
+      replace={false}
+      to="/"
+    >
+      Home
+    </Link>
+    <Link
+      className=""
+      key="1"
+      replace={false}
+      to="/docs"
+    >
+      Documentation
+    </Link>
+    <Link
+      className=""
+      key="2"
+      replace={false}
+      to="/examples"
+    >
+      Examples
+    </Link>
+    <Link
+      className=""
+      key="3"
+      replace={false}
+      to="/templates"
+    >
+      Templates
+    </Link>
+  </nav>
+  <div
+    className="topbar-info"
+  >
+    <div
+      className="topbar-info-contact"
+    >
+      <a
+        href="https://github.com/PayEx/design.payex.com"
+        rel="noopener"
+        target="b_blank"
+      >
+        <GithubLogo />
+      </a>
+      <a
+        href="https://payex.slack.com/messages/C0L3W8B2S/"
+        rel="noopener"
+        target="b_blank"
+      >
+        <SlackLogo />
+      </a>
+    </div>
+    <div
+      className="topbar-info-version"
+    >
+      <a
+        href="https://github.com/PayEx/design.payex.com/blob/master/CHANGELOG.md"
+        rel="noopener"
+        target="b_blank"
+      >
+        v.
+        0.2.0
+      </a>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`AppHeader: AppHeader sets templates route to active when locaton is /templates 1`] = `
+<header
+  className="topbar designguide-header"
+>
+  <a
+    className="topbar-logo logo-default"
+    href="#"
+  />
+  <nav
+    className="header-links"
+  >
+    <Link
+      className=""
+      key="0"
+      replace={false}
+      to="/"
+    >
+      Home
+    </Link>
+    <Link
+      className=""
+      key="1"
+      replace={false}
+      to="/docs"
+    >
+      Documentation
+    </Link>
+    <Link
+      className=""
+      key="2"
+      replace={false}
+      to="/examples"
+    >
+      Examples
+    </Link>
+    <Link
+      className="active"
+      key="3"
+      replace={false}
+      to="/templates"
+    >
+      Templates
+    </Link>
+  </nav>
+  <div
+    className="topbar-info"
+  >
+    <div
+      className="topbar-info-contact"
+    >
+      <a
+        href="https://github.com/PayEx/design.payex.com"
+        rel="noopener"
+        target="b_blank"
+      >
+        <GithubLogo />
+      </a>
+      <a
+        href="https://payex.slack.com/messages/C0L3W8B2S/"
+        rel="noopener"
+        target="b_blank"
+      >
+        <SlackLogo />
+      </a>
+    </div>
+    <div
+      className="topbar-info-version"
+    >
+      <a
+        href="https://github.com/PayEx/design.payex.com/blob/master/CHANGELOG.md"
+        rel="noopener"
+        target="b_blank"
+      >
+        v.
+        0.2.0
+      </a>
+    </div>
+  </div>
+</header>
+`;

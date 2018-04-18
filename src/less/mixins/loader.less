@@ -1,0 +1,66 @@
+.loader-size-keyframes(@name; @max-height; @min-height; @width; @margin; @font-size) {
+    @keyframes @name {
+        from {
+            height: @min-height;
+            margin-top: (@max-height - @min-height) / 2;
+        }
+
+        50% {
+            height: @max-height;
+            margin-top: 0;
+        }
+
+        to {
+            height: @min-height;
+            margin-top: (@max-height - @min-height) / 2;
+        }
+    }
+}
+
+.loader-size-variant(@max-height; @min-height; @width; @margin; @font-size) {
+    &.loader {
+        max-height: @max-height;
+        // margin-top: @max-height / 2;
+        // margin-bottom: @max-height / 2;
+
+        &.ng-hide {
+            top: -@max-height;
+            max-height: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    .loader-title {
+        margin-left: @margin;
+        line-height: @line-height-computed;
+        font-size: @font-size;
+    }
+
+    .loader-icon {
+        bottom: (@font-size / 2) - (@font-size / 8);
+        width: (@width * 3) + (@margin * 2);
+        height: @max-height / 2;
+
+        li {
+            width: @width;
+            height: @min-height;
+            margin-right: @margin;
+            margin-top: (@max-height - @min-height) / 2;
+        }
+
+        li:first-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.loader-color-variant(@color) {
+    .loader-title {
+        color: @color;
+    }
+
+    .loader-icon li {
+        background-color: @color;
+    }
+}

@@ -1,0 +1,203 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Documentation: Panel DarkMode renders 1`] = `
+<React.Fragment>
+  <h2
+    id="panel-dark-mode"
+  >
+    Panel dark mode
+  </h2>
+  <p>
+    Dark body with 
+    <code
+      className="token property"
+    >
+      .panel-dark-mode
+    </code>
+    ...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Panel
+      darkMode={true}
+      footerBtnText="Footer button"
+      footerText="Footer content goes here."
+      subTitle="Panel subtitle"
+      title="Panel title"
+      type="brand"
+    >
+      <p
+        className="lead"
+      >
+        This is a panel with dark mode.
+      </p>
+      <p>
+        Your main panel content is put here.
+      </p>
+      <p>
+        Some more content over here.
+      </p>
+      <p>
+        And one more line, just to be safe.
+      </p>
+    </Panel>
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Documentation: Panel Overview renders 1`] = `
+<React.Fragment>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <p>
+    Panel...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Panel
+      footerBtnText="Footer button"
+      footerText="Footer content goes here."
+      subTitle="Panel subtitle"
+      title="Panel title"
+    >
+      <p>
+        Your main panel content is put here.
+      </p>
+      <p>
+        Some more content over here.
+      </p>
+      <p>
+        And one more line, just to be safe.
+      </p>
+    </Panel>
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Documentation: Panel PanelHeaders renders 1`] = `
+<React.Fragment>
+  <h2
+    id="panel-headers"
+  >
+    Panel headers
+  </h2>
+  <p>
+    Two types of headers... 
+    <code
+      className="token property"
+    >
+      .panel-default
+    </code>
+     and 
+    <code
+      className="token property"
+    >
+      .panel-brand
+    </code>
+    ...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Panel
+      title="Default panel"
+    />
+    
+
+
+    <Panel
+      title="Panel brand"
+      type="brand"
+    />
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Documentation: Panel PanelMuted renders 1`] = `
+<React.Fragment>
+  <h2
+    id="muted-panel"
+  >
+    Muted panel
+  </h2>
+  <p>
+    Muted panel with 
+    <code
+      className="token property"
+    >
+      .panel-muted
+    </code>
+    ...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Panel
+      footerBtnText="Footer button"
+      footerText="Footer content goes here."
+      subTitle="Panel subtitle"
+      title="Panel title"
+      type="muted"
+    >
+      <p
+        className="lead"
+      >
+        This is a muted panel.
+      </p>
+      <p>
+        Your main panel content is put here.
+      </p>
+      <p>
+        Some more content over here.
+      </p>
+      <p>
+        And one more line, just to be safe.
+      </p>
+    </Panel>
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Documentation: Panel PanelText renders 1`] = `
+<div
+  className="col-md-12 col-lg-10 doc-body"
+>
+  <p
+    className="lead"
+  >
+    Panels...
+  </p>
+  <Overview />
+  <PanelHeaders />
+  <DarkMode />
+  <PanelMuted />
+</div>
+`;
+
+exports[`Documentation: Panel renders 1`] = `
+<div
+  className="doc-container"
+>
+  <div
+    className="row"
+  >
+    <PanelText />
+    <DocToc
+      component={[Function]}
+    />
+  </div>
+</div>
+`;

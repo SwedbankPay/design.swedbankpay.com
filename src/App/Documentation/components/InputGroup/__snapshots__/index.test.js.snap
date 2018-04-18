@@ -1,0 +1,370 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Documentation: InputGroup BasicExample renders 1`] = `
+<React.Fragment>
+  <h2
+    id="basic-example"
+  >
+    Basic example
+  </h2>
+  <p>
+    Basic input group...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <InputGroup
+      id="input-id-1"
+      label="Name"
+      placeholder="Name"
+      prefixValue="Mr."
+      type="text"
+    />
+     
+    
+
+
+    <InputGroup
+      id="input-id-2"
+      label="Email"
+      placeholder="Email"
+      prefixType="icon"
+      prefixValue="email"
+      type="text"
+    />
+     
+    
+
+
+    <InputGroup
+      id="input-id-3"
+      label="Amount"
+      placeholder="Rounded to nearest $"
+      postfixValue=".00"
+      prefixType="icon"
+      prefixValue="attach_money"
+      type="number"
+    />
+     
+    
+
+
+    <InputGroup
+      id="input-id-4"
+      label="Notes"
+      placeholder="Special requests"
+      prefixType="icon"
+      prefixValue="format_quote"
+      type="textarea"
+    />
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Documentation: InputGroup ButtonAddons renders 1`] = `
+<React.Fragment>
+  <h2
+    id="button-addons"
+  >
+    Button addons
+  </h2>
+  <p>
+    Addons...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <InputGroup
+      prefixBtnColor="default"
+      prefixType="button"
+      prefixValue="Button"
+      type="text"
+    />
+     
+    
+
+
+    <InputGroup
+      postfixBtnColor="brand"
+      postfixType="button"
+      postfixValue="Button"
+      type="text"
+    />
+     
+    
+
+
+    <InputGroup
+      postfixBtnColor="neutral"
+      postfixType="button"
+      postfixValue="Button"
+      prefixBtnColor="default"
+      prefixType="button"
+      prefixValue="Button"
+      type="text"
+    />
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Documentation: InputGroup CheckboxesAndRadios renders 1`] = `
+<React.Fragment>
+  <h2
+    id="checkboxes-and-radios"
+  >
+    Checkboxes and radios
+  </h2>
+  <p>
+    Place any checkbox or radio option within an input group’s addon instead of text.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="form-group"
+    >
+      <div
+        className="input-group"
+      >
+        
+
+        <span
+          className="input-group-addon"
+        >
+          
+		
+          <input
+            type="checkbox"
+          />
+          
+	
+        </span>
+        
+
+        <input
+          className="form-control"
+          type="text"
+        />
+        
+
+      </div>
+    </div>
+    
+
+
+    <div
+      className="form-group"
+    >
+      <div
+        className="input-group"
+      >
+        
+
+        <span
+          className="input-group-addon"
+        >
+          
+		
+          <input
+            type="radio"
+          />
+          
+	
+        </span>
+        
+
+        <input
+          className="form-control"
+          type="text"
+        />
+        
+
+      </div>
+    </div>
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Documentation: InputGroup Disabled renders 1`] = `
+<React.Fragment>
+  <h2
+    id="disabled"
+  >
+    Disabled
+  </h2>
+  <p>
+    Disabled blabla...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <InputGroup
+      disabled={true}
+      id="input-id-3"
+      placeholder="Rounded to nearest $"
+      postfixValue=".00"
+      prefixType="icon"
+      prefixValue="attach_money"
+      type="number"
+    />
+    <InputGroup
+      disabled={true}
+      id="input-id-4"
+      placeholder="Special requests"
+      prefixType="icon"
+      prefixValue="format_quote"
+      type="textarea"
+    />
+    <InputGroup
+      disabled={true}
+      prefixValue="Options"
+      selectOptions={
+        Array [
+          "Option one",
+          "Option two",
+          "Option three",
+        ]
+      }
+      type="select"
+    />
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Documentation: InputGroup InputGroupText renders 1`] = `
+<div
+  className="col-md-12 col-lg-10 doc-body"
+>
+  <p
+    className="lead"
+  >
+    Input groups...
+  </p>
+  <BasicExample />
+  <ButtonAddons />
+  <WithSelect />
+  <ValidationStates />
+  <Disabled />
+</div>
+`;
+
+exports[`Documentation: InputGroup ValidationStates renders 1`] = `
+<React.Fragment>
+  <h2
+    id="validation-states"
+  >
+    Validation states
+  </h2>
+  <p>
+    Validation...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <InputGroup
+      defaultValue="Anderson"
+      placeholder="Name"
+      prefixValue="Mr."
+      type="text"
+      validationState="success"
+    />
+     
+    
+
+
+    <InputGroup
+      defaultValue="Smith"
+      placeholder="Name"
+      prefixValue="Agent"
+      type="text"
+      validationState="error"
+    />
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Documentation: InputGroup WithFeedbackIcon renders 1`] = `
+<React.Fragment>
+  <h2
+    id="with-feedback"
+  >
+    With feedback
+  </h2>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <InputGroup
+      feedbackIcon="cancel"
+      id="input-with-feedback-1"
+      label="Name"
+      placeholder="Name"
+      prefixValue="Mr."
+      type="text"
+    />
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Documentation: InputGroup WithSelect renders 1`] = `
+<React.Fragment>
+  <h2
+    id="with-select"
+  >
+    With select
+  </h2>
+  <p>
+    Select...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <InputGroup
+      prefixValue="Profession"
+      selectOptions={
+        Array [
+          "Bounty hunter",
+          "Smuggler",
+          "Jedi",
+        ]
+      }
+      type="select"
+    />
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Documentation: InputGroup renders 1`] = `
+<div
+  className="doc-container"
+>
+  <div
+    className="row"
+  >
+    <InputGroupText />
+    <DocToc
+      component={[Function]}
+    />
+  </div>
+</div>
+`;

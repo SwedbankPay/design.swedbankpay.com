@@ -1,0 +1,155 @@
+//
+// Headings
+//
+
+/* stylelint-disable selector-list-comma-newline-after */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-top: @headings-margin-top;
+    font-family: @headings-font-family;
+    margin-bottom: @headings-margin-bottom;
+    font-weight: @headings-font-weight;
+    line-height: @headings-line-height;
+    color: @headings-color;
+}
+/* stylelint-enable selector-list-comma-newline-after */
+
+h1,
+.h1 {
+    font-size: @h1-font-size;
+    letter-spacing: -2px;
+}
+
+h2,
+.h2 {
+    font-size: @h2-font-size;
+    letter-spacing: -2px;
+}
+
+h3,
+.h3 {
+    font-size: @h3-font-size;
+    letter-spacing: -1px;
+}
+
+h4,
+.h4 {
+    font-size: @h4-font-size;
+    letter-spacing: -1px;
+}
+
+h5,
+.h5 {
+    font-size: @h5-font-size;
+    letter-spacing: -1px;
+}
+
+h6,
+.h6 {
+    font-size: @h6-font-size;
+}
+
+//
+// Paragraphs
+//
+
+.lead {
+    font-size: @lead-font-size;
+    font-weight: @lead-font-weight;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: @paragraph-margin-bottom;
+}
+
+
+//
+// Horizontal Rules
+//
+
+hr {
+    margin-top: @hr-margin-y;
+    margin-bottom: @hr-margin-y;
+    border: 0;
+    border-top: 1px solid @gray-1;
+}
+
+//
+// Emphasis
+//
+
+small,
+.small {
+    color: @small-color;
+    font-size: @small-font-size;
+    font-weight: @font-weight-normal;
+}
+
+mark,
+.mark {
+    padding: @mark-padding;
+    background-color: @mark-background;
+}
+
+//
+// Abbreviations and acronyms
+//
+
+abbr[title] {
+    cursor: help;
+}
+
+.initialism {
+    font-size: 90%;
+    .text-uppercase();
+}
+
+//
+// Blockquotes
+//
+
+blockquote,
+.blockquote {
+    padding: @base-padding;
+    padding-left: @base-padding * 5;
+    margin: 0 0 @base-margin;
+    font-size: @base-font-size * 1.1;
+    border-left: 5px solid @blockquote-border-color;
+
+    // TODO: Decide on this [EH]
+    &.brand {
+        border-color: @brand-primary-faded;
+    }
+
+    p,
+    ul,
+    ol {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    footer {
+        display: block;
+        font-size: 80%; // back to default font-size
+        color: @footer-small-color;
+
+        &:before {
+            content: "\2014 \00A0"; // em dash, nbsp
+        }
+    }
+}
+
+// figure {
+//     pre[class*="language-"] {
+//         code {
+//             white-space: pre-wrap;
+//             word-wrap: break-word;
+//             text-align: justify;
+
+//         }
+
+//     }
+// }
+

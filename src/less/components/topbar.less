@@ -1,0 +1,242 @@
+body {
+    padding-top: @topbar-height;
+}
+
+.topbar {
+    background: @white;
+    margin-left: auto;
+    margin-right: auto;
+    height: @topbar-height;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: @zindex-topbar;
+    .clearfix();
+}
+
+.topbar-logo {
+    height: 50px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+
+    &.logo-default {
+        background: url("../../img/px-logo.svg") no-repeat;
+        background-size: contain;
+        width: 125px;
+    }
+
+    &.logo-mypayex {
+        background: url("../../img/my-px-logo.svg") no-repeat;
+        background-size: contain;
+        width: 180px;
+    }
+}
+
+.topbar-btn-left,
+.topbar-btn-right {
+    margin: 0;
+    border: 0;
+    background: none;
+    height: 100%;
+    padding: 0 20px;
+    font-size: 17px;
+    font-weight: bold;
+    outline: 0;
+
+    &:hover,
+    &:focus {
+        background-color: @gray-9;
+    }
+}
+
+.topbar-btn-icon {
+    line-height: 17px;
+    vertical-align: middle;
+    margin-right: 5px; // icon alignment
+    margin-top: -2px;
+}
+
+.topbar-btn-left {
+    float: left;
+    border-right: 1px solid @gray-8;
+}
+
+.topbar-btn-right {
+    float: right;
+    border-left: 1px solid @gray-8;
+}
+
+.topbar-nav {
+    display: block;
+    width: @topbar-nav-width;
+    position: fixed;
+    top: 70px;
+    bottom: 0;
+    background-color: @gray-1;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.topbar-nav-right {
+    -webkit-transition: right 0.3s ease;
+    transition: right 0.3s ease;
+    right: -@topbar-nav-width;
+
+    &.topbar-nav-active {
+        right: 0;
+    }
+}
+
+.topbar-nav-left {
+    -webkit-transition: left 0.3s ease;
+    transition: left 0.3s ease;
+    left: -@topbar-nav-width;
+
+    &.topbar-nav-active {
+        left: 0;
+    }
+}
+
+.topbar-nav-slider {
+    margin: 15px 0 0;
+    width: @topbar-nav-width * 3;
+    -webkit-transition: margin-left 0.3s ease;
+    transition: margin-left 0.3s ease;
+    .reset-list();
+    .clearfix(); // TODO: This should be in javascript
+
+    > li {
+        display: block;
+        float: left;
+        width: @topbar-nav-width;
+    }
+}
+
+.topbar-nav-breadcrumbs {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    border-bottom: 1px solid @gray-2;
+
+    > li {
+        display: inline-block;
+        padding-left: 20px;
+        position: relative;
+
+        &:first-child {
+            padding-left: 0;
+
+            &:before {
+                content: "";
+            }
+        }
+
+        &:before {
+            content: "/";
+            position: absolute;
+            left: 8px;
+            color: @gray-7;
+        }
+
+        > a {
+            color: @gray-7;
+            font-size: @font-size-small;
+            text-transform: uppercase;
+            font-weight: 300;
+            cursor: pointer;
+            outline: 0;
+
+            &:hover,
+            &:focus {
+                color: white;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.topbar-nav-back {
+    background: none;
+    border: 0;
+    margin: 10px 0 10px 10px;
+    padding: 5px;
+    line-height: 1em;
+    color: @gray-7;
+    outline: 0;
+
+    &:hover,
+    &:focus {
+        // TODO: Add a gray border
+        color: @white;
+    }
+}
+
+.topbar-nav-items {
+    .reset-list();
+
+    .topbar-nav-group {
+        color: @white;
+        color: @gray-7;
+        font-size: @font-size-small;
+        text-transform: uppercase;
+        font-weight: 300;
+        padding: 0 15px;
+        margin: 15px 0;
+
+        .topbar-nav-group-heading {
+            border-bottom: 1px solid #58595b;
+            padding-bottom: 5px;
+        }
+
+        > ul {
+            list-style: none;
+            padding: 0;
+        }
+    }
+
+    li a {
+        color: @gray-7;
+        font-size: @font-size-large;
+        padding: 15px 20px;
+        display: block;
+        cursor: pointer;
+        font-weight: normal;
+        text-transform: none;
+        .clearfix();
+
+        &:hover {
+            background-color: @gray-2;
+            color: @white;
+            text-decoration: none;
+        }
+    }
+}
+
+.topbar-nav-icon {
+    vertical-align: middle;
+    line-height: 17px;
+    margin-right: 10px;
+    margin-top: -2px;
+}
+
+.topbar-nav-icon-next {
+    float: right;
+}
+
+@media (max-width: @screen-xs-max) {
+    .topbar-btn-text {
+        display: none;
+    }
+
+    .topbar-px-logo {
+        position: absolute;
+        left: 50%;
+        margin-left: -55px;
+
+        &.mypayex {
+            margin-left: -78px;
+        }
+    }
+}

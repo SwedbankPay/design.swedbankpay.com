@@ -1,0 +1,188 @@
+//
+// Scaffolding
+// --------------------------------------------------
+
+
+// Reset the box-sizing
+//
+// Heads up! This reset may cause conflicts with some third-party widgets.
+// For recommendations on resolving such conflicts, see
+// http://getbootstrap.com/getting-started/#third-box-sizing
+* {
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+// Body reset
+
+html {
+    // font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    min-height: 100%;
+}
+
+body {
+    font-family: @font-stack;
+    font-size: @base-font-size;
+    line-height: 1.75rem;
+    color: @text-color;
+    background-color: @body-bg;
+    min-height: 100%;
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+
+// Links
+
+a {
+    color: @brand-primary;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: darken(@brand-primary, 10%);
+        text-decoration: underline;
+    }
+
+    &:active,
+    &:hover {
+        outline: 0;
+    }
+
+    &:focus {
+        .tab-focus();
+    }
+}
+
+
+// Figures
+//
+// We reset this here because previously Normalize had no `figure` margins. This
+// ensures we don't break anyone's use of the element.
+
+figure {
+    margin: 0;
+}
+
+
+// Images
+
+img {
+    vertical-align: middle;
+}
+
+// Responsive images (ensure images don't scale beyond their parents)
+.img-responsive {
+    .img-responsive();
+}
+
+// Rounded corners
+.img-rounded {
+    border-radius: @border-radius-base;
+}
+
+// Perfect circle
+.img-circle {
+    border-radius: 50%; // set radius in percents
+}
+
+
+// Horizontal rules
+
+hr {
+    margin-top: @base-margin;
+    margin-bottom: @base-margin;
+    border: 0;
+    border-top: 1px solid @gray-1;
+}
+
+// Unordered and Ordered lists
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: @base-margin;
+
+    ul,
+    ol {
+        margin-bottom: 0;
+    }
+}
+
+// Only display content to screen readers
+//
+// See: http://a11yproject.com/posts/how-to-hide-content/
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+// Use in conjunction with .sr-only to only display content when it's focused.
+// Useful for "Skip to main content" links; see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+// Credit: HTML5 Boilerplate
+
+.sr-only-focusable {
+    &:active,
+    &:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        clip: auto;
+    }
+}
+
+
+// iOS "clickable elements" fix for role="button"
+//
+// Fixes "clickability" issue (and more generally, the firing of events such as focus as well)
+// for traditionally non-focusable elements with role="button"
+// see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+// Upstream patch for normalize.css submitted: https://github.com/necolas/normalize.css/pull/379 - remove this fix once that is merged
+
+[role="button"] {
+    cursor: pointer;
+}
+
+// Tables
+
+//
+// Remove most spacing between table cells.
+//
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+// Disable horizontal resizing of textareas
+
+textarea {
+    resize: vertical;
+}

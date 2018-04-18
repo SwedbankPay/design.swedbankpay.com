@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Documentation: Status ExtendedUsage renders 1`] = `
+<React.Fragment>
+  <h2
+    id="extended-usage"
+  >
+    Extended usage
+  </h2>
+  <p>
+    Extended usage... 
+    <code
+      className="token property"
+    >
+      .status
+    </code>
+    ...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <h1
+      className="status status-default"
+    >
+      Default
+    </h1>
+    <h2
+      className="status status-brand"
+    >
+      Brand
+    </h2>
+    <h3
+      className="status status-neutral"
+    >
+      Neutral
+    </h3>
+    <h4
+      className="status status-success"
+    >
+      Success
+    </h4>
+    <h5
+      className="status status-warning"
+    >
+      Warning
+    </h5>
+    <h6
+      className="status status-danger"
+    >
+      Danger
+    </h6>
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Documentation: Status Overview renders 1`] = `
+<React.Fragment>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <p>
+    Overview... 
+    <code
+      className="token property"
+    >
+      .status
+    </code>
+    ...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeList={true}
+    showCasePanel={true}
+  >
+    <ul
+      className="list"
+    >
+      <li>
+        <span
+          className="status status-default"
+        >
+          Default
+        </span>
+      </li>
+      <li>
+        <span
+          className="status status-brand"
+        >
+          Brand
+        </span>
+      </li>
+      <li>
+        <span
+          className="status status-neutral"
+        >
+          Neutral
+        </span>
+      </li>
+      <li>
+        <span
+          className="status status-success"
+        >
+          Success
+        </span>
+      </li>
+      <li>
+        <span
+          className="status status-warning"
+        >
+          Warning
+        </span>
+      </li>
+      <li>
+        <span
+          className="status status-danger"
+        >
+          Danger
+        </span>
+      </li>
+    </ul>
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Documentation: Status StatusText renders 1`] = `
+<div
+  className="col-md-12 col-lg-10 doc-body"
+>
+  <p
+    className="lead"
+  >
+    Status...
+  </p>
+  <Overview />
+  <ExtendedUsage />
+</div>
+`;
+
+exports[`Documentation: Status renders 1`] = `
+<div
+  className="doc-container"
+>
+  <div
+    className="row"
+  >
+    <StatusText />
+    <DocToc
+      component={[Function]}
+    />
+  </div>
+</div>
+`;

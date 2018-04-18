@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Card -  renders 1`] = `
+<section
+  className="card"
+>
+  asd
+</section>
+`;
