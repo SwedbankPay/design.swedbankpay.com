@@ -12,7 +12,7 @@
         "test": "cross-env NODE_ENV=test jest",
         "test:update": "npm test -- -u",
         "lint": "eslint src/ && stylelint src/less/",
-        "lint:tc": "eslint --format ./node_modules/eslint-teamcity/index.js src/ && stylelint src/less/ --custom-formatter node_modules/stylelint-teamcity-formatter"
+        "lint:tc": "node node_modules/.bin/eslint app/src -f './node_modules/eslint-teamcity/index.js' && stylelint src/less/ --custom-formatter node_modules/stylelint-teamcity-formatter"
     },
     "repository": {
         "type": "git",
@@ -25,6 +25,9 @@
         "url": "https://github.com/PayEx/design.payex.com/issues"
     },
     "homepage": "https://github.com/PayEx/design.payex.com#readme",
+    "eslint-teamcity": {
+        "reporter": "inspections"
+    },
     "dependencies": {
         "classnames": "^2.2.5",
         "clipboard": "^2.0.0",
