@@ -12,8 +12,8 @@
         "test": "cross-env NODE_ENV=test jest",
         "test:update": "npm test -- -u",
         "lint": "eslint src/ && stylelint src/less/",
-        "eslint:tc": "eslint src/",
-        "stylelint:tc": ""
+        "eslint:tc": "eslint src/ -f './node_modules/eslint-teamcity/index.js'",
+        "stylelint:tc": "stylelint src/less/ --custom-formatter node_modules/stylelint-teamcity-formatter"
     },
     "repository": {
         "type": "git",
