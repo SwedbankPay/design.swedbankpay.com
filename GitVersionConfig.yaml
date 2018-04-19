@@ -4,8 +4,8 @@ tag-prefix: '[vV]'
 continuous-delivery-fallback-tag: ci
 branches:
   master:
-    tag: 
-    increment: Patch
+    tag:
+    increment:
     prevent-increment-of-merged-branch-version: true
   release[/-]:
     tag: beta
@@ -13,15 +13,15 @@ branches:
     tag: useBranchName
     increment: Inherit
   hotfix[/-]:
-    tag: beta
+    tag: hotfix
   support[/-]:
-    tag: 
-    increment: Patch
+    tag:
+    increment:
     prevent-increment-of-merged-branch-version: true
   develop:
     mode: ContinuousDeployment
     tag: unstable
-    increment: Minor
+    increment:
     track-merge-target: true
   (pull|pull\-requests|pr)[/-]:
     tag: PullRequest
