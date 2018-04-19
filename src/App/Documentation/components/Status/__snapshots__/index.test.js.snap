@@ -27,30 +27,25 @@ exports[`Documentation: Status ExtendedUsage renders 1`] = `
       Default
     </h1>
     <h2
-      className="status status-brand"
-    >
-      Brand
-    </h2>
-    <h3
       className="status status-neutral"
     >
       Neutral
-    </h3>
-    <h4
+    </h2>
+    <h3
       className="status status-success"
     >
       Success
-    </h4>
-    <h5
+    </h3>
+    <h4
       className="status status-warning"
     >
       Warning
-    </h5>
-    <h6
+    </h4>
+    <h5
       className="status status-danger"
     >
       Danger
-    </h6>
+    </h5>
   </ComponentPreview>
 </React.Fragment>
 `;
@@ -85,13 +80,6 @@ exports[`Documentation: Status Overview renders 1`] = `
           className="status status-default"
         >
           Default
-        </span>
-      </li>
-      <li>
-        <span
-          className="status status-brand"
-        >
-          Brand
         </span>
       </li>
       <li>
