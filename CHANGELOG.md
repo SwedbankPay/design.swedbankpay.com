@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.1] - 2018-04-19
+
+- Mainly changes to local dev environment and setup for teamcity, no significant changes to the documentation itself
+
 ## [0.2.0] - 2018-04-17
 
 ### Added
