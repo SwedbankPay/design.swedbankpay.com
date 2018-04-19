@@ -84,11 +84,11 @@ export default [
             //     path: "/docs/components/cards",
             //     component: require("../Documentation/components/Cards")
             // },
-            {
-                title: "Dropdowns",
-                path: "/docs/components/dropdowns",
-                component: require("../Documentation/components/Dropdowns")
-            },
+            // {
+            //     title: "Dropdowns",
+            //     path: "/docs/components/dropdowns",
+            //     component: require("../Documentation/components/Dropdowns")
+            // },
             {
                 title: "Forms",
                 path: "/docs/components/forms",
