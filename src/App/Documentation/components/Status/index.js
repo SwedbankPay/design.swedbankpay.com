@@ -13,9 +13,6 @@ const Overview = () => (
                     <span className="status status-default">Default</span>
                 </li>
                 <li>
-                    <span className="status status-brand">Brand</span>
-                </li>
-                <li>
                     <span className="status status-neutral">Neutral</span>
                 </li>
                 <li>
@@ -38,11 +35,10 @@ const ExtendedUsage = () => (
         <p>Extended usage... <code className="token property">.status</code>...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <h1 className="status status-default">Default</h1>
-            <h2 className="status status-brand">Brand</h2>
-            <h3 className="status status-neutral">Neutral</h3>
-            <h4 className="status status-success">Success</h4>
-            <h5 className="status status-warning">Warning</h5>
-            <h6 className="status status-danger">Danger</h6>
+            <h2 className="status status-neutral">Neutral</h2>
+            <h3 className="status status-success">Success</h3>
+            <h4 className="status status-warning">Warning</h4>
+            <h5 className="status status-danger">Danger</h5>
         </ComponentPreview>
     </>
 );
