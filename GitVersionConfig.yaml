@@ -21,7 +21,7 @@ branches:
   develop:
     mode: ContinuousDeployment
     tag: unstable
-    increment:
+    increment: minor
     track-merge-target: true
   (pull|pull\-requests|pr)[/-]:
     tag: PullRequest
