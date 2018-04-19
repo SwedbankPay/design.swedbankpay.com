@@ -13,7 +13,7 @@
         "test:update": "npm test -- -u",
         "lint": "eslint src/ && stylelint src/less/",
         "eslint:tc": "eslint src/",
-        "stylelint:tc": "stylelint src/less/ --custom-formatter node_modules/stylelint-teamcity-formatter"
+        "stylelint:tc": ""
     },
     "repository": {
         "type": "git",
