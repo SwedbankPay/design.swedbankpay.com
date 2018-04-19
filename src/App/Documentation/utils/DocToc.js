@@ -87,11 +87,13 @@ class DocToc extends Component {
 
             this.state.headings.push({ top: document.body.clientHeight });
         }
-        window.addEventListener("scroll", this.updateWindowPosition.bind(this));
+
+        this.scrollListener = this.updateWindowPosition.bind(this);
+        window.addEventListener("scroll", this.scrollListener);
     }
 
     componentWillUnmount () {
-        window.removeEventListener("scroll", this.updateWindowPosition.bind(this));
+        window.removeEventListener("scroll", this.scrollListener);
     }
 
     render () {
