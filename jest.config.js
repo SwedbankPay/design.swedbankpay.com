@@ -4,8 +4,7 @@ module.exports = {
     collectCoverageFrom: [
         "src/**/*.{js,jsx}",
         "!src/index.js",
-        "!src/polyfills/**/*.js",
-        "!src/_px-script/**/*.js"
+        "!src/polyfills/**/*.js"
     ],
     coverageDirectory: "coverage",
     coverageReporters: [
@@ -20,7 +19,6 @@ module.exports = {
     ],
     testPathIgnorePatterns: [
         "/node_modules/",
-        "/_px-script/",
         "\\.spec\\.js"
     ],
     testResultsProcessor: "jest-teamcity-reporter"
