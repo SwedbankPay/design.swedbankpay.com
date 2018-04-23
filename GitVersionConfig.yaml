@@ -11,7 +11,7 @@ branches:
     tag: beta
   feature[/-]:
     tag: useBranchName
-    increment: Inherit
+    increment: patch
   hotfix[/-]:
     tag: hotfix
   support[/-]:
