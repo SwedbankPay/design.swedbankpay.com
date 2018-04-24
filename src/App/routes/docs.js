@@ -79,16 +79,6 @@ export default [
                 path: "/docs/components/buttons",
                 component: require("../Documentation/components/Buttons")
             },
-            // {
-            //     title: "Cards",
-            //     path: "/docs/components/cards",
-            //     component: require("../Documentation/components/Cards")
-            // },
-            // {
-            //     title: "Dropdowns",
-            //     path: "/docs/components/dropdowns",
-            //     component: require("../Documentation/components/Dropdowns")
-            // },
             {
                 title: "Forms",
                 path: "/docs/components/forms",
