@@ -5,7 +5,7 @@ exports[`Main: App renders 1`] = `
   <div
     id="px-designguide"
   >
-    <withRouter() />
+    <withRouter(AppHeader) />
     <Switch>
       <Route
         exact={true}

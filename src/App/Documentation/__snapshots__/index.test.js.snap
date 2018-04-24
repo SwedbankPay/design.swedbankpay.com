@@ -17,13 +17,13 @@ exports[`Documentation: index renders 1`] = `
     <div
       className="view-heading col-md-9 col-sm-12"
     >
-      <withRouter() />
+      <withRouter(DocHeading) />
     </div>
   </div>
   <div
     className="row"
   >
-    <withRouter() />
+    <withRouter(SelectPanel) />
     <main
       className="doc-view col-md-9 col-sm-12"
     >
