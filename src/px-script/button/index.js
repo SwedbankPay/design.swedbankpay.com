@@ -1,6 +1,4 @@
-const SELECTORS = {
-    LOADER: "[data-button-loader]"
-};
+const SELECTORS = { LOADER: "[data-button-loader]" };
 
 const _createBtnLoaderLabel = button => {
     const div = document.createElement("div");
