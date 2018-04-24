@@ -1,5 +1,5 @@
-export default {
-    initAll: () => {
+const script = (() => {
+    const initAll = () => {
         const { px } = window;
 
         for (const key in px) {
@@ -11,5 +11,9 @@ export default {
         }
 
         return px;
-    }
-};
+    };
+
+    return { initAll };
+})();
+
+export default script;
