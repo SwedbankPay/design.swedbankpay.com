@@ -1,9 +1,19 @@
-import React from "react";
+import React, { Component } from "react";
 
-const Templates = () => (
-    <>
-        <h1>Here there might be templates</h1>
-    </>
-);
+import { setTitle } from "../utils";
+
+class Templates extends Component {
+    componentWillMount () {
+        setTitle("Templates");
+    }
+
+    render () {
+        return (
+            <>
+                <h1>Here there might be templates</h1>
+            </>
+        );
+    }
+}
 
 export default Templates;

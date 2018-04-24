@@ -1,5 +1,7 @@
 import React from "react";
 
+import { setTitle } from "../../utils";
+
 // TODO: overkill? [EH]
 const _generateTitle = path => path.match(/[^/]*$/)[0]
     .split("-")
@@ -8,8 +10,7 @@ const _generateTitle = path => path.match(/[^/]*$/)[0]
 
 const DocHeading = ({ location }) => {
     const title = _generateTitle(location.pathname);
-
-    document.title = `${title} | PayEx DesignGuide`;
+    setTitle(title);
 
     return <h1>{title}</h1>;
 };
