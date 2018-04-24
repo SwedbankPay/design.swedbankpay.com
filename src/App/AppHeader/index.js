@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 import { GithubLogo, SlackLogo } from "./HeaderIcons";
 
@@ -37,4 +37,4 @@ const AppHeader = ({ location }) => {
     );
 };
 
-export default AppHeader;
+export default withRouter(AppHeader);

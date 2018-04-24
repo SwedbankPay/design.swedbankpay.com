@@ -1,4 +1,5 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 
 import { setTitle } from "../../utils";
 
@@ -15,4 +16,4 @@ const DocHeading = ({ location }) => {
     return <h1>{title}</h1>;
 };
 
-export default DocHeading;
+export default withRouter(DocHeading);

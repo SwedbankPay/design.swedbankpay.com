@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 import routes from "../routes/docs";
 
@@ -54,7 +54,7 @@ class SelectPanel extends Component {
     }
 }
 
-export default SelectPanel;
+export default withRouter(SelectPanel);
 
 /* for testing */
 export { SearchBox };
