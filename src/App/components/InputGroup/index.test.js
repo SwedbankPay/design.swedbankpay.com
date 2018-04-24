@@ -8,11 +8,11 @@ describe("Component: InputGroup - ", () => {
         expect(InputGroup).toBeDefined();
     });
 
-    // it("renders", () => {
-    //     const wrapper = shallow(
-    //         <InputGroup />
-    //     );
+    it("renders", () => {
+        const wrapper = shallow(
+            <InputGroup type="test" />
+        );
 
-    //     expect(wrapper).toMatchSnapshot();
-    // });
+        expect(wrapper).toMatchSnapshot();
+    });
 });
