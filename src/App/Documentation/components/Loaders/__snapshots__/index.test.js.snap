@@ -19,6 +19,10 @@ exports[`Documentation: Loaders Basic Usage renders 1`] = `
       size="default"
       visible={true}
     />
+    <div
+      className="loader loader-default in"
+      data-loader="true"
+    />
   </ComponentPreview>
 </React.Fragment>
 `;
@@ -65,6 +69,10 @@ exports[`Documentation: Loaders Muted Loader renders 1`] = `
       size="default"
       visible={true}
     />
+    <div
+      className="loader loader-default loader-muted in"
+      data-loader="true"
+    />
   </ComponentPreview>
 </React.Fragment>
 `;
@@ -109,6 +117,10 @@ exports[`Documentation: Loaders Sizes renders 1`] = `
       size="small"
       visible={true}
     />
+    <div
+      className="loader loader-small in"
+      data-loader="true"
+    />
   </ComponentPreview>
   <h3>
     Large
@@ -121,6 +133,10 @@ exports[`Documentation: Loaders Sizes renders 1`] = `
     <Loader
       size="large"
       visible={true}
+    />
+    <div
+      className="loader loader-large in"
+      data-loader="true"
     />
   </ComponentPreview>
 </React.Fragment>

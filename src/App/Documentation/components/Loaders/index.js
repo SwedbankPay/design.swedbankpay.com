@@ -1,10 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
 import PrismCode from "react-prism";
 
 import ComponentPreview, { PxScript } from "../../utils/ComponentPreview";
 import DocToc from "../../utils/DocToc";
 
 import LoaderComponent from "../../../components/Loader";
+import { loader } from "../../../../px-script";
 
 const BasicUsage = () => (
     <>
@@ -12,6 +13,7 @@ const BasicUsage = () => (
         <p>Basic usage...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <LoaderComponent size="default" visible={true} />
+            <div className="loader loader-default in" data-loader="true"></div>
         </ComponentPreview>
     </>
 );
@@ -23,10 +25,12 @@ const Sizes = () => (
         <h3>Small</h3>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <LoaderComponent size="small" visible={true} />
+            <div className="loader loader-small in" data-loader="true"></div>
         </ComponentPreview>
         <h3>Large</h3>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <LoaderComponent size="large" visible={true} />
+            <div className="loader loader-large in" data-loader="true"></div>
         </ComponentPreview>
     </>
 );
@@ -37,6 +41,7 @@ const MutedLoader = () => (
         <p>Use class <code className="token property">.loader-muted</code> to mute the loader...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <LoaderComponent id="test" size="default" visible={true} muted={true} />
+            <div className="loader loader-default loader-muted in" data-loader="true"></div>
         </ComponentPreview>
     </>
 );
@@ -113,17 +118,22 @@ const LoadersText = () => (
     </div>
 );
 
+class Loaders extends Component {
+    componentDidMount () {
+        loader.init();
+    }
 
-const Loaders = () => {
-    return (
-        <div className="doc-container">
-            <div className="row">
-                <LoadersText />
-                <DocToc component={LoadersText} />
+    render () {
+        return (
+            <div className="doc-container">
+                <div className="row">
+                    <LoadersText />
+                    <DocToc component={LoadersText} />
+                </div>
             </div>
-        </div>
-    );
-};
+        );
+    }
+}
 
 export default Loaders;
 
