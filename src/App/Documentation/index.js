@@ -1,5 +1,5 @@
 import React from "react";
-import { withRouter, Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 
 import SelectPanel from "./SelectPanel";
 import DocHeading from "./utils/DocHeading";

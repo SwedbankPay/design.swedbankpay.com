@@ -6,7 +6,7 @@ import DocToc from "../../utils/DocToc";
 import { rangeslider } from "../../../../px-script";
 import InputGroup from "../../../components/InputGroup";
 import Button from "../../../components/Button";
-import { Checkbox, Datepicker as DatepickerComponent, FormControlText, Radio, Rangeslider, Togglebox } from "../../../components/FormComponents";
+import { Checkbox, FormControlText, Radio, Rangeslider, Togglebox } from "../../../components/FormComponents";
 
 const Overview = () => (
     <>
@@ -178,16 +178,6 @@ const StaticText = () => (
     </>
 );
 
-const Datepicker = () => (
-    <>
-        <h2 id="datepicker">Datepicker</h2>
-        <p>Datepicker...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-            <DatepickerComponent />
-        </ComponentPreview>
-    </>
-);
-
 const Checkboxes = () => (
     <>
         <h2 id="checkboxes">Checkboxes</h2>
@@ -271,7 +261,6 @@ const FormsText = () => (
         <FormGrid />
         <UsageWithFieldsets />
         <StaticText />
-        <Datepicker />
         <Checkboxes />
         <DisabledCheckboxes />
         <RadioButtons />

@@ -4,7 +4,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import PrismCode from "react-prism";
 import jsbeautifier from "js-beautify";
 
-const ComponentPreview = ({ children, language, removeOuterTag, removeList, showCasePanel, codeFigure }) => {
+const ComponentPreview = ({ children, language, removeOuterTag, hideValue, removeList, showCasePanel, codeFigure }) => {
     // TODO: This is stupid, find a better way to do this [EH]
     // should be possible with React 16.2
     // https://stackoverflow.com/questions/33766085/how-to-avoid-extra-wrapping-div-in-react
@@ -32,6 +32,18 @@ const ComponentPreview = ({ children, language, removeOuterTag, removeList, show
         });
 
         return htmlString;
+    };
+
+    const _removeEmpty = val => {
+        val = val.replace(/=""/g, "");
+        val = val.replace(/ class>/g, ">");
+        val = val.replace(/ class /g, " ");
+
+        return val;
+    };
+
+    const _removeValue = val => {
+        return val.replace(/ value="(.*)"/g, "");
     };
 
     const CodeFigure = () => {
@@ -72,9 +84,10 @@ const ComponentPreview = ({ children, language, removeOuterTag, removeList, show
         switch (language) {
             case "html":
                 code = jsbeautifier.html_beautify(code);
-                code = code.replace(/=""/g, "");
-                code = code.replace(/ class>/g, ">");
-                code = code.replace(/ class /g, " ");
+                code = _removeEmpty(code);
+                if (hideValue) {
+                    code = _removeValue(code);
+                }
                 break;
             case "css":
                 code = jsbeautifier.css_beautify(code);

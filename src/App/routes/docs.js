@@ -80,6 +80,11 @@ export default [
                 component: require("../Documentation/components/Buttons")
             },
             {
+                title: "Datepickers",
+                path: "/docs/components/datepickers",
+                component: require("../Documentation/components/Datepickers")
+            },
+            {
                 title: "Forms",
                 path: "/docs/components/forms",
                 component: require("../Documentation/components/Forms")
