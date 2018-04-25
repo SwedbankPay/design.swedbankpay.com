@@ -222,7 +222,6 @@ exports[`Documentation: Forms FormsText renders 1`] = `
   <FormGrid />
   <UsageWithFieldsets />
   <StaticText />
-  <Datepicker />
   <Checkboxes />
   <DisabledCheckboxes />
   <RadioButtons />

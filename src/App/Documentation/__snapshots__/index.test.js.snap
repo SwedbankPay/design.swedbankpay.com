@@ -178,6 +178,14 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "SimpleDatepicker": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/components/datepickers",
+                "title": "Datepickers",
+              },
+              Object {
+                "component": Object {
                   "Checkboxes": [Function],
                   "DisabledCheckboxes": [Function],
                   "DisabledRadioButtons": [Function],
