@@ -217,7 +217,8 @@ const config = {
         extractDesignGuide,
         new webpack.DefinePlugin({
             "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)
-        })
+        }),
+        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/) // For now this ignores moment's locale folder, which doubles moment's size..
     ]
 };
 
