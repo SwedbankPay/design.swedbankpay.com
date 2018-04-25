@@ -224,6 +224,7 @@ exports[`Documentation: index renders 1`] = `
                   "LoadersText": [Function],
                   "MutedLoader": [Function],
                   "Sizes": [Function],
+                  "StaticHtml": [Function],
                   "UsageWithJavascript": [Function],
                   "default": [Function],
                 },
