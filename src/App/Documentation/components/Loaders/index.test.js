@@ -2,7 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 
 import Loaders from "./index";
-import { BasicUsage, Sizes, MutedLoader, UsageWithJavascript, LoadersText } from "./index";
+import { BasicUsage, Sizes, MutedLoader, StaticHtml, UsageWithJavascript, LoadersText } from "./index";
 
 describe("Documentation: Loaders", () => {
     it("is defined", () => {
@@ -81,6 +81,21 @@ describe("Documentation: Loaders", () => {
         it("renders", () => {
             const wrapper = shallow(
                 <LoadersText />
+            );
+
+            expect(wrapper).toMatchSnapshot();
+        });
+
+    });
+
+    describe("Static Html", () => {
+        it("is defined", () => {
+            expect(StaticHtml).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(
+                <StaticHtml />
             );
 
             expect(wrapper).toMatchSnapshot();

@@ -78,6 +78,9 @@ exports[`Documentation: index renders 1`] = `
             Array [
               Object {
                 "component": Object {
+                  "ColorPalette": [Function],
+                  "ColorText": [Function],
+                  "Usage": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/core/color",
