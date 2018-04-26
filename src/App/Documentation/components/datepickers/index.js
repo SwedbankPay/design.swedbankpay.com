@@ -10,18 +10,34 @@ const SimpleDatepicker = () => (
     <>
         <h2 id="simple-datepicker">Simple datepicker</h2>
         <p>Simple datepicker..<Attribute data={true} name="datepicker" value="true" />.</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} hideValue={true}>
-            <DatepickerComponent value="20.04.2018" />
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+            <DatepickerComponent />
         </ComponentPreview>
+    </>
+);
+
+const InitialValue = () => (
+    <>
+        <h2 id="initial-value">Initial value</h2>
+        <p>Initial value..<Attribute data={true} name="datepicker-init-value" />.</p>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+            <DatepickerComponent value="2018-04-20" />
+        </ComponentPreview>
+        <p>Keep in mind that the datepicker will not format the initial value based on the format you pass, so if you want it to match the format, you will need to pass in the correctly formatted date.</p>
     </>
 );
 
 const CustomFormat = () => (
     <>
         <h2 id="custom-format">Custom format</h2>
-        <p>Custom format..<Attribute data={true} name="datepicker-format" value="[FORMAT]" />.</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} hideValue={true}>
-            <DatepickerComponent value="2018-04-20" format="YYYY-MM-DD" />
+        <p>Custom format..<Attribute data={true} name="datepicker-format" value="[nb|sv|da|en|iso8601(default)]" />.</p>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeList={true}>
+            <ul className="list">
+                <li className="mb-md"><DatepickerComponent value="20.04.2018" format="nb" /></li>
+                <li className="mb-md"><DatepickerComponent value="2018-04-20" format="sv" /></li>
+                <li className="mb-md"><DatepickerComponent value="20-04-2018" format="da" /></li>
+                <li className="mb-md"><DatepickerComponent value="2018-04-20" format="en" /></li>
+            </ul>
         </ComponentPreview>
     </>
 );
@@ -30,8 +46,13 @@ const IncludeTime = () => (
     <>
         <h2 id="include-time">Include time</h2>
         <p>Include time.. <Attribute data={true} name="datepicker-time" value="true" />.</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} hideValue={true}>
-            <DatepickerComponent value="13:37 05.05.2018" format="HH:mm DD.MM.YYYY" time={true} />
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeList={true}>
+            <ul className="list">
+                <li className="mb-md"><DatepickerComponent time={true} value="13:37 20.04.2018" format="nb" /></li>
+                <li className="mb-md"><DatepickerComponent time={true} value="13:37 2018-04-20" format="sv" /></li>
+                <li className="mb-md"><DatepickerComponent time={true} value="13:37 20-04-2018" format="da" /></li>
+                <li className="mb-md"><DatepickerComponent time={true} value="13:37 2018-04-20" format="en" /></li>
+            </ul>
         </ComponentPreview>
     </>
 );
@@ -39,9 +60,9 @@ const IncludeTime = () => (
 const DateRange = () => (
     <>
         <h2 id="date-range">Date range</h2>
-        <p>Date range with <code><span className="token attr-name">data-datepicker-min</span></code> and <code><span className="token attr-name">data-datepicker-max</span></code>...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} hideValue={true}>
-            <DatepickerComponent value="18.04.2018" min="17.04.2018" max="24.04.2018" />
+        <p>Date range with <Attribute data={true} name="datepicker-min" /> and <Attribute data={true} name="datepicker-max" />...</p>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+            <DatepickerComponent value="18.04.2018" min="17.04.2018" max="24.04.2018" format="nb" />
         </ComponentPreview>
     </>
 );
@@ -49,7 +70,7 @@ const DateRange = () => (
 const Options = () => (
     <>
         <h2 id="available-options">Available options</h2>
-        <p>Options available through <code><span className="token attr-name">data-datepicker</span></code>...</p>
+        <p>Options available through <Attribute data={true} name="datepicker" />...</p>
         <table className="table table-striped">
             <thead>
                 <tr>
@@ -61,21 +82,42 @@ const Options = () => (
             <tbody>
                 <tr>
                     <td>
-                        <code><span className="token attr-name">data-datepicker-format</span></code>
+                        <Attribute data={true} name="datepicker-init-value" />
                     </td>
                     <td>
-                        DD.MM.YYYY
+                        <Attribute value="null" />
                     </td>
                     <td>
-                        Format string used for the input field. H for hour, m for minute, D for day, M for month and Y for year.
+                        Value used to initialize calendar.
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <code><span className="token attr-name">data-datepicker-time</span></code>
+                        <Attribute data={true} name="datepicker-format" />
                     </td>
                     <td>
-                        false
+                        <Attribute value="iso8601" />
+                    </td>
+                    <td>
+                        <p>
+                            Format string used for the input field. All have the same time format (HH:mm), and starts the week on monday (1), except <Attribute value="en" />, which starts on sunday (0).
+                        </p>
+                            The following options are available:
+                        <ul className="list">
+                            <li className="mb-sm"><Attribute value="nb" />: DD.MM.YYYY</li>
+                            <li className="mb-sm"><Attribute value="sv" />: YYYY-MM-DD</li>
+                            <li className="mb-sm"><Attribute value="da" />: DD-MM-YYYY</li>
+                            <li className="mb-sm"><Attribute value="en" />: YYYY-MM-DD</li>
+                            <li className="mb-sm"><Attribute value="iso8601" />: YYYY-MM-DD (default)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <Attribute data={true} name="datepicker-time" />
+                    </td>
+                    <td>
+                        <Attribute value="false" />
                     </td>
                     <td>
                         If the calendar shows the current time and allows you to change it using a dropdown.
@@ -83,10 +125,10 @@ const Options = () => (
                 </tr>
                 <tr>
                     <td>
-                        <code><span className="token attr-name">data-datepicker-min</span></code>
+                        <Attribute data={true} name="datepicker-min" />
                     </td>
                     <td>
-                        false
+                        <Attribute value="false" />
                     </td>
                     <td>
                         Disallow dates before min.
@@ -94,10 +136,10 @@ const Options = () => (
                 </tr>
                 <tr>
                     <td>
-                        <code><span className="token attr-name">data-datepicker-max</span></code>
+                        <Attribute data={true} name="datepicker-max" />
                     </td>
                     <td>
-                        false
+                        <Attribute value="false" />
                     </td>
                     <td>
                         Disallow dates past max.
@@ -112,6 +154,7 @@ const DatepickersText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
         <p className="lead">Datepickers...</p>
         <SimpleDatepicker />
+        <InitialValue />
         <CustomFormat />
         <IncludeTime />
         <DateRange />

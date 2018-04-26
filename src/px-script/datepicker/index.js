@@ -1,23 +1,30 @@
 import rome from "rome";
 
+import formats from "./formats";
+
 // 080989◢◤200418
 const datepicker = (() => {
+    window.moment = rome.moment;
+
     const _createDatepicker = datepicker => {
-        const { datepickerFormat, datepickerTime, datepickerMin, datepickerMax } = datepicker.dataset;
+        const { datepickerFormat, datepickerTime, datepickerMin, datepickerMax, datepickerInitValue } = datepicker.dataset;
+        const { weekStart, dateFormat, hourFormat } = formats[datepickerFormat] || formats.iso8601;
+
+        if (datepickerFormat && !formats[datepickerFormat]) {
+            console.warn(`${datepickerFormat} is not a recognised date format, using default date format instead.`);
+        }
 
         const options = {
-            weekStart: 1,
-            inputFormat: datepickerFormat || "DD.MM.YYYY",
+            weekStart,
+            inputFormat: `${datepickerTime ? `${hourFormat} ` : ""}${dateFormat}`,
             time: !!datepickerTime || false,
             min: datepickerMin || null,
-            max: datepickerMax || null
+            max: datepickerMax || null,
+            initialValue: datepickerInitValue || null,
+            required: true
         };
 
         rome(datepicker, options);
-
-        datepicker.addEventListener("click", () => {
-            console.log(datepicker.value);
-        });
     };
 
     const init = () => {
@@ -31,11 +38,3 @@ const datepicker = (() => {
 })();
 
 export default datepicker;
-
-const OPTIONS = {
-    weekStart: 1,
-    inputFormat: "DD.MM.YYYY",
-    time: false,
-    min: "01.01.2001",
-    max: "02.01.2001"
-};
