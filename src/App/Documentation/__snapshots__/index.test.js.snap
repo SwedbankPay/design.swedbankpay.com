@@ -187,6 +187,8 @@ exports[`Documentation: index renders 1`] = `
                   "IncludeTime": [Function],
                   "InitialValue": [Function],
                   "Options": [Function],
+                  "Required": [Function],
+                  "ShowingMultipleMonths": [Function],
                   "SimpleDatepicker": [Function],
                   "default": [Function],
                 },

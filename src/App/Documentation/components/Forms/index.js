@@ -123,21 +123,21 @@ const Validation = () => (
                     type="text"
                     label="First name"
                     placeholder="Enter your first name"
-                    helpBlock="The first word of your full name"
+                    helpBlock="Comes before your last name"
                 />
                 <InputGroup
                     id="validate-last-name"
                     type="text"
                     label="Last name"
                     placeholder="Enter your last name"
-                    helpBlock="The very last collection of letters in your name"
+                    helpBlock="Probably the same as at least one of your parents"
                 />
                 <InputGroup
                     id="validate-email-address"
                     type="text"
                     label="Email"
                     placeholder="Enter your email"
-                    helpBlock="The last part is probably @payex.com"
+                    helpBlock="You know, electronic mail?"
                 />
             </form>
         </ComponentPreview>
