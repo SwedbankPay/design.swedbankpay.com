@@ -112,6 +112,38 @@ const FormGrid = () => (
     </>
 );
 
+const Validation = () => (
+    <>
+        <h2 id="validation">Validation</h2>
+        <p>Forms validation...</p>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+            <form>
+                <InputGroup
+                    id="validate-first-name"
+                    type="text"
+                    label="First name"
+                    placeholder="Enter your first name"
+                    helpBlock="The first word of your full name"
+                />
+                <InputGroup
+                    id="validate-last-name"
+                    type="text"
+                    label="Last name"
+                    placeholder="Enter your last name"
+                    helpBlock="The very last collection of letters in your name"
+                />
+                <InputGroup
+                    id="validate-email-address"
+                    type="text"
+                    label="Email"
+                    placeholder="Enter your email"
+                    helpBlock="The last part is probably @payex.com"
+                />
+            </form>
+        </ComponentPreview>
+    </>
+);
+
 const UsageWithFieldsets = () => (
     <>
         <h2 id="usage-with-fieldsets">Usage with fieldsets</h2>
@@ -259,6 +291,7 @@ const FormsText = () => (
         <p className="lead">Forms...</p>
         <Overview />
         <FormGrid />
+        <Validation />
         <UsageWithFieldsets />
         <StaticText />
         <Checkboxes />
@@ -291,4 +324,4 @@ class Forms extends Component {
 export default Forms;
 
 /* for testing */
-export { Overview, FormGrid, UsageWithFieldsets, StaticText, Checkboxes, DisabledCheckboxes, RadioButtons, DisabledRadioButtons, Toggleboxes, DisabledToggleboxes, RangeSlider, FormsText };
+export { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, Checkboxes, DisabledCheckboxes, RadioButtons, DisabledRadioButtons, Toggleboxes, DisabledToggleboxes, RangeSlider, FormsText };

@@ -220,6 +220,7 @@ exports[`Documentation: Forms FormsText renders 1`] = `
   </p>
   <Overview />
   <FormGrid />
+  <Validation />
   <UsageWithFieldsets />
   <StaticText />
   <Checkboxes />

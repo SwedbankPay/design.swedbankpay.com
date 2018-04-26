@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 
 const Addon = ({ type, value, color }) => (
@@ -23,7 +23,6 @@ const InputGroup = ({
     placeholder,
     pattern,
     required,
-    value,
     defaultValue,
     autoComplete,
     disabled,
@@ -40,44 +39,37 @@ const InputGroup = ({
     feedbackIcon,
     helpBlock
 }) => {
+    const attrs = {
+        type: type || null,
+        className: "form-control",
+        id: id || null,
+        placeholder: placeholder || null,
+        pattern: pattern || null,
+        required: required || null,
+        defaultValue: defaultValue || "",
+        disabled: disabled || null,
+        readOnly: readOnly || null,
+        autoComplete: autoComplete || null,
+        "data-validate": pattern || null,
+        "data-required": required || null
+    };
     return (
         <div className="form-group">{"\n"}
             {label ? <label htmlFor={id}>{label}</label> : null}{label ? "\n" : null}
             <div className={`input-group${validationState ? ` has-${validationState}` : ""}${feedbackIcon ? " has-feedback" : ""}`}>{"\n"}
                 {prefixValue ? <Addon type={prefixType} value={prefixValue} color={prefixBtnColor} /> : null }{prefixValue ? "\n" : null}
                 {type === "textarea" ?
-                    <textarea
-                        id={id}
-                        className="form-control"
-                        placeholder={placeholder}
-                        pattern={pattern}
-                        required={required}
-                        value={value}
-                        disabled={disabled}
-                        readOnly={readOnly}
-                        data-px-validate={pattern ? true : null}
-                        data-px-required={required ? true : null}>
-                    </textarea>
+                    <textarea {...attrs} ></textarea>
                     : type === "select" ?
                         <select className="form-control" disabled={disabled} readOnly={readOnly}>{"\n\t\t"}
-                            {selectOptions.map((opt, i) => <option key={opt + i}>{opt}</option>)}{"\n\t"}
+                            {selectOptions.map((opt, i) => (
+                                <Fragment key={opt + i}>
+                                    <option>{opt}</option>{(i !== selectOptions.length - 1) ? "\n\t\t" : ""}
+                                </Fragment>
+                            ))}{"\n\t"}
                         </select>
                         :
-                        <input
-                            type={type}
-                            id={id}
-                            className="form-control"
-                            placeholder={placeholder}
-                            pattern={pattern}
-                            required={required}
-                            value={value}
-                            defaultValue={defaultValue}
-                            autoComplete={autoComplete || null}
-                            disabled={disabled}
-                            readOnly={readOnly}
-                            data-px-validate={pattern ? true : null}
-                            data-px-required={required ? true : null}
-                        />}
+                        <input {...attrs} />}
                 {"\n"}
                 {feedbackIcon ? <Feedback icon={feedbackIcon} /> : null} {feedbackIcon ? "\n" : null}
                 {postfixValue ? <Addon type={postfixType} value={postfixValue} color={postfixBtnColor} /> : null }{postfixValue ? "\n" : null}
@@ -93,7 +85,6 @@ InputGroup.propTypes = {
     placeholder: PropTypes.string,
     pattern: PropTypes.string,
     required: PropTypes.bool,
-    value: PropTypes.string,
     defaultValue: PropTypes.string,
     autoComplete: PropTypes.string,
     disabled: PropTypes.bool,
