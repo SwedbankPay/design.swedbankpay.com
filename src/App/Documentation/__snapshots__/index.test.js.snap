@@ -181,6 +181,12 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "CustomFormat": [Function],
+                  "DateRange": [Function],
+                  "DatepickersText": [Function],
+                  "IncludeTime": [Function],
+                  "InitialValue": [Function],
+                  "Options": [Function],
                   "SimpleDatepicker": [Function],
                   "default": [Function],
                 },
