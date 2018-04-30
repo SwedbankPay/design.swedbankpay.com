@@ -15,12 +15,12 @@ const devServer = (process.env.WEBPACK === "devserver");
 const version = pkg.version;
 
 const extractPX = new ExtractTextPlugin({
-    filename: `styles/px-${version}.css`,
+    filename: `${version}/styles/px.css`,
     disable: !isProd
 });
 
 const extractDocumentation = new ExtractTextPlugin({
-    filename: `styles/templates/documentation-${version}.css`,
+    filename: `${version}/styles/templates/documentation.css`,
     disable: !isProd
 });
 
@@ -54,7 +54,7 @@ const config = {
     output: {
         library: "payex",
         path: path.resolve(__dirname, "dist"),
-        filename: `scripts/[name]-${version}.js?[hash]`,
+        filename: `${version}/scripts/[name].js?[hash]`,
         publicPath: (isProd ? "/design.payex.com/" : "/")
     },
     resolve: {

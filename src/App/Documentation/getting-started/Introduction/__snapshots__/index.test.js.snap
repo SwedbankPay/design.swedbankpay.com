@@ -7,15 +7,10 @@ exports[`GettingStarted: Introduction renders 1`] = `
   <div
     className="row"
   >
-    <div
-      className="col-md-12"
-    >
-      <p
-        className="lead"
-      >
-        Get started with the PayEx DesignGuide...
-      </p>
-    </div>
+    <IntroductionText />
+    <DocToc
+      component={[Function]}
+    />
   </div>
 </div>
 `;

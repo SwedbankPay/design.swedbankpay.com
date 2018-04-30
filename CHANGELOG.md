@@ -6,13 +6,15 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
-- Datepicker component.
+- Added datepicker component.
+- Added introduction.
 
 ### Changed
 
 - Loader component now generates needed html for the loader itself with the attribute `data-loader`. Static html still works, but is not recommended to use with the new attribute.
 - Optimized configuration for react router.
 - Updated files for px-script to be self-contained, even tough webpack already does this, we might not be using webpack forever.
+- Changed destination for script and styles. They are no longer named after version, but instead put in a folder with the current version (ex `/0.4.0/scripts/px.js`).
 
 ## [0.3.1] - 2018-04-19
 
