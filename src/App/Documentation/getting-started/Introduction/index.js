@@ -34,12 +34,36 @@ const JavaScript = () => (
     </>
 );
 
+const StarterTemplate = () => (
+    <>
+        <h2 id="starter-template">Starter template</h2>
+        <p>As a starting point you can use the following template</p>
+        <ComponentPreview language="html" codeFigure={true}>
+            <html lang="en">
+                <head>
+                    <meta charSet="utf-8" />
+                    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+                    <link rel="stylesheet" href={`https://payex.github.io/design.payex.com/${version}/styles/px.css`} />
+
+                    <title>Hello, PayEx!</title>
+                </head>
+                <body>
+                    <h1>Hello, PayEx!</h1>
+                    <script src={`https://payex.github.io/design.payex.com/${version}/scripts/px.js`}></script>
+                </body>
+            </html>
+        </ComponentPreview>
+    </>
+);
+
 const IntroductionText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
         <p className="lead">Get started with the PayEx DesignGuide.</p>
         <QuickStart />
         <Css />
         <JavaScript />
+        {/* <StarterTemplate /> */}
     </div>
 );
 
