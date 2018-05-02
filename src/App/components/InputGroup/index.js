@@ -22,6 +22,7 @@ const InputGroup = ({
     type,
     placeholder,
     pattern,
+    validate,
     required,
     defaultValue,
     autoComplete,
@@ -44,13 +45,12 @@ const InputGroup = ({
         className: "form-control",
         id: id || null,
         placeholder: placeholder || null,
-        pattern: pattern || null,
-        required: required || null,
         defaultValue: defaultValue || "",
         disabled: disabled || null,
         readOnly: readOnly || null,
         autoComplete: autoComplete || null,
-        "data-validate": pattern || null,
+        "data-validate": validate || null,
+        "data-pattern": pattern || null,
         "data-required": required || null
     };
     return (
@@ -84,6 +84,7 @@ InputGroup.propTypes = {
     id: PropTypes.string,
     placeholder: PropTypes.string,
     pattern: PropTypes.string,
+    validate: PropTypes.bool,
     required: PropTypes.bool,
     defaultValue: PropTypes.string,
     autoComplete: PropTypes.string,

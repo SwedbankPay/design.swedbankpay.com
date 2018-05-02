@@ -6,6 +6,7 @@ import modal from "./modal";
 import rangeslider from "./rangeslider";
 import script from "./script";
 import tabs from "./tabs";
+import validation from "./validation";
 
 const px = {
     alert,
@@ -15,7 +16,8 @@ const px = {
     modal,
     rangeslider,
     script,
-    tabs
+    tabs,
+    validation
 };
 
 window.px = px;
@@ -27,7 +29,7 @@ if (!window.stopPx) {
 }
 
 export default px;
-export { alert, button, datepicker, loader, modal, rangeslider, script, tabs };
+export { alert, button, datepicker, loader, modal, rangeslider, script, tabs, validation };
 
 /* istanbul ignore if|else */
 if (module.hot) {

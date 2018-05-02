@@ -38,6 +38,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
         val = val.replace(/=""/g, "");
         val = val.replace(/ class>/g, ">");
         val = val.replace(/ class /g, " ");
+        val = val.replace(/value /g, "");
 
         return val;
     };
