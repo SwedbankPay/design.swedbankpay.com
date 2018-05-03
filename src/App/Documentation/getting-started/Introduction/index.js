@@ -77,3 +77,6 @@ const Introduction = () => (
 );
 
 export default Introduction;
+
+/* for testing */
+export { QuickStart, Css, JavaScript, StarterTemplate, IntroductionText };

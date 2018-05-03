@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Tabs -  Prop mode is required 1`] = `
+<div
+  className="tabs"
+>
+  <ul
+    className="tabs-undefined"
+  >
+    <li
+      className=""
+      key="tab-item-test-0"
+    >
+      
+
+      <a
+        href="#"
+      >
+        test
+      </a>
+      
+
+    </li>
+    <li
+      className="active"
+      key="tab-item-test 2-1"
+    >
+      
+
+      <a
+        href="#"
+      >
+        test 2
+      </a>
+      
+
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Component: Tabs -  renders 1`] = `
+<div
+  className="tabs"
+>
+  <ul
+    className="tabs-auto"
+  >
+    <li
+      className=""
+      key="tab-item-test-0"
+    >
+      
+
+      <a
+        href="#"
+      >
+        test
+      </a>
+      
+
+    </li>
+    <li
+      className="active"
+      key="tab-item-test 2-1"
+    >
+      
+
+      <a
+        href="#"
+      >
+        test 2
+      </a>
+      
+
+    </li>
+  </ul>
+</div>
+`;

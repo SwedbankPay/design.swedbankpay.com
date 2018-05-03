@@ -1,5 +1,150 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`GettingStarted: Introduction Css renders 1`] = `
+<React.Fragment>
+  <h2
+    id="css"
+  >
+    CSS
+  </h2>
+  <p>
+    Copy-paste the stylesheet 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;link&gt;
+    </PrismCode>
+     into your 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;head&gt;
+    </PrismCode>
+     before all other stylesheets to load our CSS.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+  >
+    <link
+      href="https://payex.github.io/design.payex.com/0.3.1/styles/px.css"
+      rel="stylesheet"
+    />
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`GettingStarted: Introduction IntroductionText renders 1`] = `
+<div
+  className="col-md-12 col-lg-10 doc-body"
+>
+  <p
+    className="lead"
+  >
+    Get started with the PayEx DesignGuide.
+  </p>
+  <QuickStart />
+  <Css />
+  <JavaScript />
+</div>
+`;
+
+exports[`GettingStarted: Introduction JavaScript renders 1`] = `
+<React.Fragment>
+  <h2
+    id="javascript"
+  >
+    JavaScript
+  </h2>
+  <p>
+    Many of our components require the use of JavaScript to function. Place the following 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;script&gt;
+    </PrismCode>
+     tag near the end of your pages, right before the closing 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;/body&gt;
+    </PrismCode>
+     tag, to enable them.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+  >
+    <script
+      src="https://payex.github.io/design.payex.com/0.3.1/scripts/px.js"
+    />
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`GettingStarted: Introduction QuickStart renders 1`] = `
+<React.Fragment>
+  <h2
+    id="quick-start"
+  >
+    Quick start
+  </h2>
+  <p>
+    To quickly add the designguide to your project, include the snippets below in your project.
+  </p>
+</React.Fragment>
+`;
+
+exports[`GettingStarted: Introduction StarterTemplate renders 1`] = `
+<React.Fragment>
+  <h2
+    id="starter-template"
+  >
+    Starter template
+  </h2>
+  <p>
+    As a starting point you can use the following template
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+  >
+    <html
+      lang="en"
+    >
+      <head>
+        <meta
+          charSet="utf-8"
+        />
+        <meta
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          name="viewport"
+        />
+        <link
+          href="https://payex.github.io/design.payex.com/0.3.1/styles/px.css"
+          rel="stylesheet"
+        />
+        <title>
+          Hello, PayEx!
+        </title>
+      </head>
+      <body>
+        <h1>
+          Hello, PayEx!
+        </h1>
+        <script
+          src="https://payex.github.io/design.payex.com/0.3.1/scripts/px.js"
+        />
+      </body>
+    </html>
+  </ComponentPreview>
+</React.Fragment>
+`;
+
 exports[`GettingStarted: Introduction renders 1`] = `
 <div
   className="doc-container"

@@ -41,6 +41,11 @@ exports[`Documentation: index renders 1`] = `
             Array [
               Object {
                 "component": Object {
+                  "Css": [Function],
+                  "IntroductionText": [Function],
+                  "JavaScript": [Function],
+                  "QuickStart": [Function],
+                  "StarterTemplate": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/getting-started/introduction",
@@ -288,12 +293,23 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "Collapsed": [Function],
                   "Overview": [Function],
+                  "Stacked": [Function],
                   "TabsText": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/components/tabs",
                 "title": "Tabs",
+              },
+              Object {
+                "component": Object {
+                  "Overview": [Function],
+                  "TopbarText": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/components/topbar",
+                "title": "Topbar",
               },
             ]
           }

@@ -1,85 +1,71 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Introduction, { QuickStart, Css, JavaScript, StarterTemplate, IntroductionText } from "./index";
+import Tabs, { Overview, Stacked, Collapsed, TabsText } from "./index";
 
-describe("GettingStarted: Introduction", () => {
+describe("Components: Tabs", () => {
     it("is defined", () => {
-        expect(Introduction).toBeDefined();
+        expect(Tabs).toBeDefined();
     });
 
     it("renders", () => {
         const wrapper = shallow(
-            <Introduction />
+            <Tabs />
         );
 
         expect(wrapper).toMatchSnapshot();
     });
 
-    describe("QuickStart", () => {
+    describe("Overview", () => {
         it("is defined", () => {
-            expect(QuickStart).toBeDefined();
+            expect(Overview).toBeDefined();
         });
 
         it("renders", () => {
             const wrapper = shallow(
-                <QuickStart />
+                <Overview />
             );
 
             expect(wrapper).toMatchSnapshot();
         });
     });
 
-    describe("Css", () => {
+    describe("Stacked", () => {
         it("is defined", () => {
-            expect(Css).toBeDefined();
+            expect(Stacked).toBeDefined();
         });
 
         it("renders", () => {
             const wrapper = shallow(
-                <Css />
+                <Stacked />
             );
 
             expect(wrapper).toMatchSnapshot();
         });
     });
 
-    describe("JavaScript", () => {
+    describe("Collapsed", () => {
         it("is defined", () => {
-            expect(JavaScript).toBeDefined();
+            expect(Collapsed).toBeDefined();
         });
 
         it("renders", () => {
             const wrapper = shallow(
-                <JavaScript />
+                <Collapsed />
             );
 
             expect(wrapper).toMatchSnapshot();
         });
     });
 
-    describe("StarterTemplate", () => {
+    describe("TabsText", () => {
         it("is defined", () => {
-            expect(StarterTemplate).toBeDefined();
+            expect(TabsText).toBeDefined();
         });
 
         it("renders", () => {
             const wrapper = shallow(
-                <StarterTemplate />
-            );
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("IntroductionText", () => {
-        it("is defined", () => {
-            expect(IntroductionText).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(
-                <IntroductionText />
+                <TabsText />
             );
 
             expect(wrapper).toMatchSnapshot();

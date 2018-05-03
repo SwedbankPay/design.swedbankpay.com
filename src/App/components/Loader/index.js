@@ -7,7 +7,7 @@ const Loader = ({ id, size, muted, visible }) => {
 
 Loader.propTypes = {
     id: PropTypes.string,
-    size: PropTypes.string.isRequired,
+    size: PropTypes.oneOf(["small", "default", "large"]).isRequired,
     muted: PropTypes.bool,
     visible: PropTypes.bool
 };
