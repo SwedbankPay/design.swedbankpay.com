@@ -1,18 +1,21 @@
-body {
-    padding-top: @topbar-height;
-}
-
 .topbar {
     background: @white;
     margin-left: auto;
     margin-right: auto;
     height: @topbar-height;
     width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
     z-index: @zindex-topbar;
     .clearfix();
+
+    &.topbar-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        + * {
+            margin-top: @topbar-height;
+        }
+    }
 }
 
 .topbar-logo {
@@ -44,6 +47,10 @@ body {
     font-size: 17px;
     font-weight: bold;
     outline: 0;
+
+    &:hover {
+        cursor: pointer;
+    }
 
     &:hover,
     &:focus {
@@ -84,7 +91,7 @@ body {
     transition: right 0.3s ease;
     right: -@topbar-nav-width;
 
-    &.topbar-nav-active {
+    &.in {
         right: 0;
     }
 }
@@ -94,7 +101,7 @@ body {
     transition: left 0.3s ease;
     left: -@topbar-nav-width;
 
-    &.topbar-nav-active {
+    &.in {
         left: 0;
     }
 }

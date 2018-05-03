@@ -79,4 +79,4 @@ class Tabs extends Component {
 export default Tabs;
 
 /* for testing */
-export { Overview, TabsText };
+export { Overview, Stacked, Collapsed, TabsText };

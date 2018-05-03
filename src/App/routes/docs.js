@@ -123,6 +123,11 @@ export default [
                 title: "Tabs",
                 path: "/docs/components/tabs",
                 component: require("../Documentation/components/Tabs")
+            },
+            {
+                title: "Topbar",
+                path: "/docs/components/topbar",
+                component: require("../Documentation/components/Topbar")
             }
         ]
     },

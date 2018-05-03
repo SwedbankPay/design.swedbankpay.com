@@ -10,7 +10,7 @@ const AppHeader = ({ location }) => {
     const { pathname } = location;
 
     return (
-        <header className="topbar designguide-header">
+        <header className="topbar topbar-fixed designguide-header">
             <a className="topbar-logo logo-default" href="#"></a>
             <nav className="header-links">
                 {routes.map((route, i) => {

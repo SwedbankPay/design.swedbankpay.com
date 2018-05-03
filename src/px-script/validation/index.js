@@ -43,7 +43,7 @@ const validation = (() => {
                 }
             });
 
-        if (!validForm) {
+        if (!validForm && event) {
             event.preventDefault();
         }
     };
@@ -68,7 +68,11 @@ const validation = (() => {
         });
     };
 
-    return { init };
+    return {
+        init,
+        validateForm
+    };
+
 })();
 
 export default validation;
