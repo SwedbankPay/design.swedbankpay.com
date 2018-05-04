@@ -10,11 +10,11 @@ describe("px-script: tabs", () => {
     const items = [
         {
             name: "test",
-            active: false
+            active: true
         },
         {
             name: "test 2",
-            active: true
+            active: false
         }
     ];
 
@@ -26,6 +26,19 @@ describe("px-script: tabs", () => {
         expect(tabs.init).toBeDefined();
 
         ReactDOM.render(<Tabs items={items} mode="auto" />, div);
+
+        const initialActiveTab = div.querySelectorAll("li")[0];
+        const initialInActiveTab = div.querySelectorAll("li")[1];
+
+        expect(initialActiveTab.classList.contains("active")).toEqual(true);
+        expect(initialInActiveTab.classList.contains("active")).toEqual(false);
+
+        tabs.init();
+
+        initialInActiveTab.click();
+
+        expect(initialActiveTab.classList.contains("active")).toEqual(false);
+        expect(initialInActiveTab.classList.contains("active")).toEqual(true);
 
         ReactDOM.unmountComponentAtNode(div);
     });

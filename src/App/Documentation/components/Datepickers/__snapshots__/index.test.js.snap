@@ -24,32 +24,32 @@ exports[`Documentation: Datepickers CustomFormat renders 1`] = `
     <Datepicker
       format="nb"
       label="nb (norwegian):"
-      value="03.05.2018"
+      value="04.05.2018"
     />
     <Datepicker
       format="sv"
       label="sv (swedish):"
-      value="2018-05-03"
+      value="2018-05-04"
     />
     <Datepicker
       format="da"
       label="da (danish):"
-      value="03.05.2018"
+      value="04.05.2018"
     />
     <Datepicker
       format="fi"
       label="fi (finnish):"
-      value="03.05.2018"
+      value="04.05.2018"
     />
     <Datepicker
       format="en"
       label="en (english):"
-      value="03/05/2018"
+      value="04/05/2018"
     />
     <Datepicker
       format="iso8601"
       label="iso8601 (robotic):"
-      value="2018-05-03"
+      value="2018-05-04"
     />
   </ComponentPreview>
 </React.Fragment>
@@ -82,10 +82,10 @@ exports[`Documentation: Datepickers DateRange renders 1`] = `
   >
     <Datepicker
       format="nb"
-      max="08.05.2018"
-      min="28.04.2018"
+      max="09.05.2018"
+      min="29.04.2018"
       months="2"
-      value="03.05.2018"
+      value="04.05.2018"
     />
   </ComponentPreview>
   <p>
@@ -141,7 +141,7 @@ exports[`Documentation: Datepickers IncludeTime renders 1`] = `
     <Datepicker
       format="nb"
       time={true}
-      value="18:14 03.05.2018"
+      value="15:29 04.05.2018"
     />
   </ComponentPreview>
 </React.Fragment>
@@ -168,7 +168,7 @@ exports[`Documentation: Datepickers InitialValue renders 1`] = `
     showCasePanel={true}
   >
     <Datepicker
-      value="2018-05-03"
+      value="2018-05-04"
     />
   </ComponentPreview>
   <p>
