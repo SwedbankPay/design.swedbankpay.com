@@ -39,7 +39,7 @@ To start building, run the command `npm run build` to start in dev-mode, or `npm
 
 ## Versioning
 
-We can maybe use [SemVer](http://semver.org/) for versioning.
+Design Guide uses [semantic versioning](http://semver.org/). This means that internally, Design Guide will use a `major.minor.patch` version number to signal what the changes in each release surmount to. Since `minor` and `patch` version increments means backwards compatibility will be upheld, only the `major` version number will be a part of the URL of CSS and JavaScript files. This also means both CSS and JavaScript files are versioned in lockstep, so whenever a new `major` version of the CSS is released, a new `major` version of the JavaScript will be as well.
 
 ## Tests
 
@@ -84,3 +84,8 @@ __*Make sure to follow the syntax rules enforced by eslint & stylelint.*__
 * `.stylelintrc` - [Stylelint](https://stylelint.io/) configuration.
 * `.eslintignore` - List of files/directories eslint will ignore (similar to .gitignore).
 * `webpack.config.js` - [Webpack](https://webpack.js.org/) configuration.
+
+## Copyright, license and credits
+
+Code and documentation © PayEx and contributors, released under the [MIT License](LICENSE).
+Inspired by [Bootstrap](http://getbootstrap.com/) and [Materialize](https://materializecss.com/).
