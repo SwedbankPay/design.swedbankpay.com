@@ -82,3 +82,8 @@ __*Make sure to follow the syntax rules enforced by eslint & stylelint.*__
 * `.stylelintrc` - [Stylelint](https://stylelint.io/) configuration.
 * `.eslintignore` - List of files/directories eslint will ignore (similar to .gitignore).
 * `webpack.config.js` - [Webpack](https://webpack.js.org/) configuration.
+
+## Copyright, license and credits
+
+Code and documentation © PayEx and contributors, released under the [MIT License](LICENSE).
+Inspired by [Bootstrap](http://getbootstrap.com/) and [Materialize](https://materializecss.com/).
