@@ -5,28 +5,83 @@ import DocToc from "../../utils/DocToc";
 import TopbarComponent from "../../../components/Topbar";
 import { topbar } from "../../../../px-script";
 
-const leftMenu = {
-    id: "topbar-nav-left",
+const menu = {
     btn: {
         icon: "menu",
         text: "Menu"
     },
-    hierarchy: {}
+    hierarchy: [
+        {
+            id: "1",
+            items: [
+                {
+                    groupTitle: "Group 1",
+                    items: [
+                        {
+                            title: "Item 1",
+                            target: "2"
+                        },
+                        {
+                            title: "Link 1",
+                            target: "2"
+                        }
+                    ]
+                },
+                {
+                    groupTitle: "Group 2",
+                    items: [
+                        {
+                            title: "Item 2",
+                            target: "3"
+                        }
+                    ]
+                },
+                {
+                    title: "Link 2",
+                    href: "#"
+                },
+                {
+                    title: "Link 2",
+                    href: "#"
+                },
+                {
+                    title: "Link 2",
+                    href: "#"
+                },
+                {
+                    title: "Link 3",
+                    href: "#"
+                }
+            ]
+        },
+        {
+            id: "2",
+            items: [
+                {
+                    title: "Link 4",
+                    href: "#"
+                }
+            ]
+        },
+        {
+            id: "3",
+            items: [
+                {
+                    title: "Link 5",
+                    href: "#"
+                }
+            ]
+        }
+    ]
 };
 
-const rightMenu = {
-    id: "topbar-nav-right",
-    btn: {
-        icon: "menu",
-        text: "Menu"
-    },
-    hierarchy: {}
-};
+const leftMenu = Object.assign({ id: "topbar-nav-left" }, menu);
+const rightMenu = Object.assign({ id: "topbar-nav-right" }, menu);
 
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
-        <p>Overview... <code className="token property">.topbar</code>...</p>
+        <p>Overviews... <code className="token property">.topbar</code>...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <TopbarComponent logo="default" leftMenu={leftMenu} rightMenu={rightMenu} />
         </ComponentPreview>

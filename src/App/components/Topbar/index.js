@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 
 const TopbarBtn = ({ align, icon, text, target }) => (
@@ -8,46 +8,58 @@ const TopbarBtn = ({ align, icon, text, target }) => (
     </button>
 );
 
-const TopbarMenu = () => (
-    <nav className="topbar-nav topbar-nav-right" data-topbar-nav="true" id="topbar-nav-right">
-        <ul className="topbar-nav-breadcrumbs" data-topbar-breadcrumbs="true">
-            <li>
-                <a href="#">Home</a>
-            </li>
-        </ul>
-        <div className="topbar-nav-slider">
-            <ul className="topbar-nav-items-container">
-                <li className="topbar-nav-group">
-                    <div className="topbar-nav-group-heading">group #1</div>
-                    <ul>
-                        <li className="topbar-nav-item" data-has-children="true">
-                            <span>asd</span>
-                            <ul className="topbar-nav-items-container">
-                                <li className="topbar-nav-group">
-                                    <div className="topbar-nav-group-heading">group #1</div>
-                                    <ul>
-                                        <li className="topbar-nav-item" data-has-children="false">
-                                            <a href="#">asd</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </nav>
-);
+const TopbarMenu = ({ align, menu }) => {
+    const { id, hierarchy } = menu;
+
+    const Slide = ({ slide }) => {
+        const { id, items } = slide;
+
+        const MenuItem = ({ item, last }) => {
+            const { title, target, href } = item;
+
+            return (
+                <Fragment>
+                    {href ? <a href={href}>{title}</a> : <span data-target={`nav-${align}-slide-${target}`}>{title}</span>}{!href || last ? "\n" : null}
+                </Fragment>
+            );
+        };
+
+        const GroupItem = ({ groupItem }) => {
+            const { groupTitle, items } = groupItem;
+            return (
+                <div className="topbar-nav-group">
+                    <div className="topbar-nav-group-heading">{groupTitle}</div>{"\n"}
+                    {items.map((item, i) => <MenuItem key={i} item={item} last={i === items.length - 1} />)}
+                </div>
+            );
+        };
+
+        return (
+            <div id={`nav-${align}-slide-${id}`} className="slide">
+                {items.map((item, i) => (
+                    <Fragment key={i}>{"\n"}
+                        {item.groupTitle ? <GroupItem groupItem={item} /> : <MenuItem item={item} last={i === items.length - 1} />}
+                    </Fragment>
+                ))}
+            </div>
+        );
+    };
+
+    return (
+        <nav id={id} className={`topbar-nav topbar-nav-${align}`}>
+            {hierarchy.map(slide => <Slide key={slide.id} slide={slide}></Slide>)}
+        </nav>
+    );
+};
 
 const Topbar = ({ logo, leftMenu, rightMenu }) => {
     return (
         <div className="topbar">{"\n"}
-            {/* {leftMenu ? <TopbarBtn align="left" icon={leftMenu.btn.icon} text={leftMenu.btn.text} target={leftMenu.id} /> : null}{leftMenu ? "\n" : null} */}
+            {leftMenu ? <TopbarBtn align="left" icon={leftMenu.btn.icon} text={leftMenu.btn.text} target={leftMenu.id} /> : null}{leftMenu ? "\n" : null}
             {logo ? <a href="#" className={`topbar-logo logo-${logo}`}></a> : null}{logo ? "\n" : null}
-            {rightMenu ? <TopbarBtn align="right" icon={rightMenu.btn.icon} text={rightMenu.btn.text} target={rightMenu.id} /> : null}{rightMenu ? "\n" : null}
-            {/* {leftMenu ? <TopbarMenu /> : null}{leftMenu ? "\n" : null} */}
-            {rightMenu ? <TopbarMenu /> : null}{rightMenu ? "\n" : null}
+            {/* {rightMenu ? <TopbarBtn align="right" icon={rightMenu.btn.icon} text={rightMenu.btn.text} target={rightMenu.id} /> : null}{rightMenu ? "\n" : null} */}
+            {leftMenu ? <TopbarMenu align="left" menu={leftMenu} /> : null}{leftMenu ? "\n" : null}
+            {/* {rightMenu ? <TopbarMenu align="right" menu={rightMenu} /> : null}{rightMenu ? "\n" : null} */}
         </div>
     );
 };

@@ -67,10 +67,9 @@ const config = {
         publicPath: "/",
         compress: true,
         port: 3000,
-        hotOnly: true,
+        hot: true,
         clientLogLevel: "warning",
-        historyApiFallback: true,
-        progress: true
+        historyApiFallback: true
     },
     module: {
         rules: [

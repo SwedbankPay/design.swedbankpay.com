@@ -34,6 +34,6 @@ export default px;
 export { alert, button, datepicker, loader, modal, rangeslider, script, tabs, topbar, validation };
 
 /* istanbul ignore if|else */
-if (module.hot) {
-    module.hot.accept();
-}
+// if (module.hot) {
+//     module.hot.accept();
+// }
