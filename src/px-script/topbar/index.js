@@ -1,21 +1,33 @@
 const topbar = (() => {
+    const initNavMenu = btnElement => {
+        const targetNav = btnElement.dataset.toggleNav;
+        const navMenu = document.querySelector(targetNav);
+
+        navMenu.firstChild.classList.add("active");
+        btnElement.addEventListener("click", () => {
+            navMenu.classList.toggle("in");
+        });
+    };
 
     const init = () => {
         const menu = document.querySelectorAll(".topbar")[1];
-        console.log(menu);
 
-        let leftNavMenu,
-            rightNavMenu;
+        // let leftNavMenu,
+        //     rightNavMenu;
 
         if (menu) {
             const leftMenuBtnElement = menu.querySelector(".topbar-btn-left");
             const rightMenuBtnElement = menu.querySelector(".topbar-btn-right");
 
             if (leftMenuBtnElement) {
+                initNavMenu(leftMenuBtnElement);
+
                 // leftNavMenu = new NavMenu(menu, leftMenuBtnElement);
             }
 
             if (rightMenuBtnElement) {
+                initNavMenu(rightMenuBtnElement);
+
                 // rightNavMenu = new NavMenu(menu, rightMenuBtnElement);
             }
         }

@@ -11,7 +11,7 @@ const TopbarBtn = ({ align, icon, text, target }) => (
 const TopbarMenu = ({ align, menu }) => {
     const { id, hierarchy } = menu;
 
-    const Slide = ({ slide, active }) => {
+    const Slide = ({ slide }) => {
         const { id, items } = slide;
 
         const MenuItem = ({ item, last }) => {
@@ -35,7 +35,7 @@ const TopbarMenu = ({ align, menu }) => {
         };
 
         return (
-            <div id={`nav-${align}-slide-${id}`} className={`topbar-nav-slide${active ? " active" : ""}`}>
+            <div id={`nav-${align}-slide-${id}`} className="topbar-nav-slide">
                 {items.map((item, i) => (
                     <Fragment key={i}>{"\n"}
                         {item.groupTitle ? <GroupItem groupItem={item} /> : <MenuItem item={item} last={i === items.length - 1} />}
@@ -46,8 +46,8 @@ const TopbarMenu = ({ align, menu }) => {
     };
 
     return (
-        <nav id={id} className={`topbar-nav topbar-nav-${align} in`}>
-            {hierarchy.map((slide, i) => <Slide key={slide.id} active={i === 0} slide={slide}></Slide>)}
+        <nav id={id} className={`topbar-nav topbar-nav-${align}`}>
+            {hierarchy.map(slide => <Slide key={slide.id} slide={slide}></Slide>)}
         </nav>
     );
 };
