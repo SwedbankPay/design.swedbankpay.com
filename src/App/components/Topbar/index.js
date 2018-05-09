@@ -11,7 +11,7 @@ const TopbarBtn = ({ align, icon, text, target }) => (
 const TopbarMenu = ({ align, menu }) => {
     const { id, hierarchy } = menu;
 
-    const Slide = ({ slide }) => {
+    const Slide = ({ slide, active }) => {
         const { id, items } = slide;
 
         const MenuItem = ({ item, last }) => {
@@ -35,7 +35,7 @@ const TopbarMenu = ({ align, menu }) => {
         };
 
         return (
-            <div id={`nav-${align}-slide-${id}`} className="slide">
+            <div id={`nav-${align}-slide-${id}`} className={`topbar-nav-slide${active ? " active" : ""}`}>
                 {items.map((item, i) => (
                     <Fragment key={i}>{"\n"}
                         {item.groupTitle ? <GroupItem groupItem={item} /> : <MenuItem item={item} last={i === items.length - 1} />}
@@ -46,8 +46,8 @@ const TopbarMenu = ({ align, menu }) => {
     };
 
     return (
-        <nav id={id} className={`topbar-nav topbar-nav-${align}`}>
-            {hierarchy.map(slide => <Slide key={slide.id} slide={slide}></Slide>)}
+        <nav id={id} className={`topbar-nav topbar-nav-${align} in`}>
+            {hierarchy.map((slide, i) => <Slide key={slide.id} active={i === 0} slide={slide}></Slide>)}
         </nav>
     );
 };
@@ -57,9 +57,9 @@ const Topbar = ({ logo, leftMenu, rightMenu }) => {
         <div className="topbar">{"\n"}
             {leftMenu ? <TopbarBtn align="left" icon={leftMenu.btn.icon} text={leftMenu.btn.text} target={leftMenu.id} /> : null}{leftMenu ? "\n" : null}
             {logo ? <a href="#" className={`topbar-logo logo-${logo}`}></a> : null}{logo ? "\n" : null}
-            {/* {rightMenu ? <TopbarBtn align="right" icon={rightMenu.btn.icon} text={rightMenu.btn.text} target={rightMenu.id} /> : null}{rightMenu ? "\n" : null} */}
+            {rightMenu ? <TopbarBtn align="right" icon={rightMenu.btn.icon} text={rightMenu.btn.text} target={rightMenu.id} /> : null}{rightMenu ? "\n" : null}
             {leftMenu ? <TopbarMenu align="left" menu={leftMenu} /> : null}{leftMenu ? "\n" : null}
-            {/* {rightMenu ? <TopbarMenu align="right" menu={rightMenu} /> : null}{rightMenu ? "\n" : null} */}
+            {rightMenu ? <TopbarMenu align="right" menu={rightMenu} /> : null}{rightMenu ? "\n" : null}
         </div>
     );
 };

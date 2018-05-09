@@ -75,15 +75,18 @@
     border-left: 1px solid @gray-8;
 }
 
+// TODO: Refactor above [EH]
+
 .topbar-nav {
     display: block;
     width: @topbar-nav-width;
     position: fixed;
-    top: 70px;
+    top: @topbar-height;
     bottom: 0;
     background-color: @gray-1;
     overflow-x: hidden;
     overflow-y: auto;
+    z-index: @zindex-topbar-nav;
 }
 
 .topbar-nav-right {
@@ -93,6 +96,18 @@
 
     &.in {
         right: 0;
+    }
+
+    .topbar-nav-slide {
+        right: @topbar-nav-width;
+
+        &.active {
+            right: 0;
+        }
+
+        &.inactive {
+            right: -@topbar-nav-width;
+        }
     }
 }
 
@@ -104,62 +119,63 @@
     &.in {
         left: 0;
     }
+
+    .topbar-nav-slide {
+        left: @topbar-nav-width;
+
+        &.active {
+            left: 0;
+        }
+
+        &.inactive {
+            left: -@topbar-nav-width;
+        }
+    }
 }
 
-.topbar-nav-slider {
+.topbar-nav-slide {
+    position: fixed;
+    width: inherit;
+    top: @topbar-height;
     margin: 15px 0 0;
-    width: @topbar-nav-width * 3;
+    // width: @topbar-nav-width * 3;
     -webkit-transition: margin-left 0.3s ease;
     transition: margin-left 0.3s ease;
     .reset-list();
     .clearfix(); // TODO: This should be in javascript
 
-    > li {
+    > a,
+    > span,
+    .topbar-nav-group > a,
+    .topbar-nav-group > span,
+    .topbar-nav-group-heading {
         display: block;
-        float: left;
-        width: @topbar-nav-width;
+        color: @gray-7;
+        font-size: @font-size-small;
+        padding: 15px 20px;
+        cursor: pointer;
+        font-weight: normal;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: @gray-2;
+            color: @white;
+            text-decoration: none;
+        }
     }
-}
 
-.topbar-nav-breadcrumbs {
-    list-style: none;
-    margin: 0;
-    padding: 20px;
-    border-bottom: 1px solid @gray-2;
+    > a,
+    > span {
+        margin-left: 15px;
+    }
 
-    > li {
-        display: inline-block;
-        padding-left: 20px;
-        position: relative;
+    .topbar-nav-group {
+        padding: 0 15px;
+        margin: 15px 0;
 
-        &:first-child {
-            padding-left: 0;
-
-            &:before {
-                content: "";
-            }
-        }
-
-        &:before {
-            content: "/";
-            position: absolute;
-            left: 8px;
-            color: @gray-7;
-        }
-
-        > a {
-            color: @gray-7;
-            font-size: @font-size-small;
-            text-transform: uppercase;
-            font-weight: 300;
-            cursor: pointer;
-            outline: 0;
-
-            &:hover,
-            &:focus {
-                color: white;
-                text-decoration: underline;
-            }
+        .topbar-nav-group-heading {
+            border-bottom: 1px solid #58595b;
+            padding-bottom: 5px;
         }
     }
 }

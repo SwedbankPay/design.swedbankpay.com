@@ -1,26 +1,24 @@
-import NavMenu from "./nav-menu";
-
 const topbar = (() => {
 
     const init = () => {
         const menu = document.querySelectorAll(".topbar")[1];
         console.log(menu);
 
-        // let leftNavMenu,
-        //     rightNavMenu;
+        let leftNavMenu,
+            rightNavMenu;
 
-        // if (menu) {
-        //     const leftMenuBtnElement = menu.querySelector(".topbar-btn-left");
-        //     const rightMenuBtnElement = menu.querySelector(".topbar-btn-right");
+        if (menu) {
+            const leftMenuBtnElement = menu.querySelector(".topbar-btn-left");
+            const rightMenuBtnElement = menu.querySelector(".topbar-btn-right");
 
-        //     if (leftMenuBtnElement) {
-        //         leftNavMenu = new NavMenu(menu, leftMenuBtnElement);
-        //     }
+            if (leftMenuBtnElement) {
+                // leftNavMenu = new NavMenu(menu, leftMenuBtnElement);
+            }
 
-        //     if (rightMenuBtnElement) {
-        //         rightNavMenu = new NavMenu(menu, rightMenuBtnElement);
-        //     }
-        // }
+            if (rightMenuBtnElement) {
+                // rightNavMenu = new NavMenu(menu, rightMenuBtnElement);
+            }
+        }
 
         // window.onload = () => {
         //     document.querySelector("html").addEventListener("mousedown", event => {

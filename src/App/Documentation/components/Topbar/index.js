@@ -42,7 +42,7 @@ const menu = {
                 },
                 {
                     title: "Link 2",
-                    href: "#"
+                    target: "#"
                 },
                 {
                     title: "Link 2",
@@ -59,6 +59,14 @@ const menu = {
             items: [
                 {
                     title: "Link 4",
+                    target: "#"
+                },
+                {
+                    title: "Link 4",
+                    target: "#"
+                },
+                {
+                    title: "Link 4",
                     href: "#"
                 }
             ]
@@ -66,6 +74,14 @@ const menu = {
         {
             id: "3",
             items: [
+                {
+                    title: "Link 5",
+                    target: "#"
+                },
+                {
+                    title: "Link 5",
+                    href: "#"
+                },
                 {
                     title: "Link 5",
                     href: "#"
