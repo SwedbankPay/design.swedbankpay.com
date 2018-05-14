@@ -1,59 +1,34 @@
+import NavMenu from "./NavMenu";
+
 const topbar = (() => {
-    const initNavMenu = btnElement => {
-        const targetNav = btnElement.dataset.toggleNav;
-        const navMenu = document.querySelector(targetNav);
-
-        navMenu.firstChild.classList.add("active");
-        btnElement.addEventListener("click", () => {
-            navMenu.classList.toggle("in");
-        });
-    };
-
     const init = () => {
         const menu = document.querySelectorAll(".topbar")[1];
 
-        // let leftNavMenu,
-        //     rightNavMenu;
+        let leftNavMenu,
+            rightNavMenu;
 
         if (menu) {
             const leftMenuBtnElement = menu.querySelector(".topbar-btn-left");
             const rightMenuBtnElement = menu.querySelector(".topbar-btn-right");
 
             if (leftMenuBtnElement) {
-                initNavMenu(leftMenuBtnElement);
-
-                // leftNavMenu = new NavMenu(menu, leftMenuBtnElement);
+                leftNavMenu = new NavMenu(menu, leftMenuBtnElement);
             }
 
             if (rightMenuBtnElement) {
-                initNavMenu(rightMenuBtnElement);
-
-                // rightNavMenu = new NavMenu(menu, rightMenuBtnElement);
+                rightNavMenu = new NavMenu(menu, rightMenuBtnElement);
             }
         }
 
-        // window.onload = () => {
-        //     document.querySelector("html").addEventListener("mousedown", event => {
-        //         const itemContainers = document.body.querySelectorAll(".topbar-nav-items-container");
-        //         const x = event.clientX;
-        //         const y = event.clientY;
+        document.querySelector("html").addEventListener("mousedown", e => {
+            if (leftNavMenu && leftNavMenu.isOpen && !leftNavMenu.containsPoint(e.clientX, e.clientY)) {
+                leftNavMenu.close();
+            }
 
-        //         if (leftNavMenu && leftNavMenu.isOpen && !leftNavMenu.containsPoint(x, y)) {
-        //             leftNavMenu.close();
-        //         }
-
-        //         if (rightNavMenu && rightNavMenu.isOpen && !rightNavMenu.containsPoint(x, y)) {
-        //             rightNavMenu.close();
-        //         }
-
-        //         if ((leftNavMenu && !leftNavMenu.containsPoint(x, y)) || (rightNavMenu && !rightNavMenu.containsPoint(x, y))) {
-        //             itemContainers.forEach(container => {
-        //                 container.classList.remove("active", "inactive");
-        //             });
-        //         }
-
-        //     });
-        // };
+            if (rightNavMenu && rightNavMenu.isOpen && !rightNavMenu.containsPoint(e.clientX, e.clientY)) {
+                rightNavMenu.close();
+            }
+        });
     };
 
     return { init: init };

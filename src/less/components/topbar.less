@@ -144,14 +144,19 @@
     .reset-list();
     .clearfix(); // TODO: This should be in javascript
 
+    .topbar-nav-group-heading {
+        color: @gray-7;
+        text-transform: uppercase;
+        font-size: @font-size-small;
+        font-weight: normal;
+    }
+
     > a,
     > span,
     .topbar-nav-group > a,
-    .topbar-nav-group > span,
-    .topbar-nav-group-heading {
+    .topbar-nav-group > span {
         display: block;
         color: @gray-7;
-        font-size: @font-size-small;
         padding: 15px 20px;
         cursor: pointer;
         font-weight: normal;
