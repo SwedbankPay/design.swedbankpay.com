@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file.
 - Added topbar component.
 - Added license.
 - Added versioning description to readme.
+- Added Google tag manager.
 
 ### Changed
 
