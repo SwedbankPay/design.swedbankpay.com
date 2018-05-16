@@ -4,8 +4,10 @@ const closeIcon = "&#xE5CD;";
 export default class NavMenu {
     constructor (menu, btnElement) {
         this.isOpen = false;
+        this.backBtn = false;
+        this.headerText = "";
         this.btnElement = btnElement;
-        this.navMenuElement = _initNav(menu, btnElement);
+        this.navMenuElement = this._initNav(menu);
         this.iconElement = btnElement.querySelector(".topbar-btn-icon");
         this.userIcon = this.iconElement.innerHTML || defaultIcon;
         this.slideContainers = this.navMenuElement.querySelectorAll(".topbar-nav-slide");
@@ -14,6 +16,34 @@ export default class NavMenu {
         this.btnElement.addEventListener("click", e => {
             e.preventDefault();
             this.handleClick();
+        });
+
+        this._initSlideLinks();
+    }
+
+    _initNav () {
+        const navMenu = document.querySelector(this.btnElement.dataset.toggleNav);
+        navMenu.querySelector(".topbar-nav-slide").classList.add("active");
+        return navMenu;
+    }
+
+    _initSlideLinks () {
+        const slideLinks = this.navMenuElement.querySelectorAll("[data-target]");
+
+        slideLinks.forEach(link => {
+            const targetSlide = document.getElementById(link.dataset.target);
+            const parent = link.closest(".topbar-nav-slide");
+
+            link.addEventListener("click", e => {
+                e.preventDefault();
+                targetSlide.classList.add("active");
+                parent.classList.remove("active");
+                parent.classList.add("inactive");
+
+                if (!this.backBtn) {
+                    this.navMenuElement.prepend(_createNavHeader(link.innerText));
+                }
+            });
         });
     }
 
@@ -35,7 +65,7 @@ export default class NavMenu {
             slide.classList.remove("active", "inactive");
         });
 
-        this.navMenuElement.firstChild.classList.add("active");
+        this.navMenuElement.querySelector(".topbar-nav-slide").classList.add("active");
         this.slideHistory = [];
     }
 
@@ -48,27 +78,21 @@ export default class NavMenu {
     }
 }
 
-const _initNav = (menu, btn) => {
-    const navMenu = document.querySelector(btn.dataset.toggleNav);
-    navMenu.firstChild.classList.add("active");
-    _initSlideLinks(navMenu);
-    return navMenu;
-};
+const _createNavHeader = text => {
+    const container = document.createElement("div");
+    container.classList.add("nav-header");
 
-const _initSlideLinks = navMenu => {
-    const slideLinks = navMenu.querySelectorAll("[data-target]");
+    const backBtn = document.createElement("i");
+    backBtn.classList.add("material-icons");
+    backBtn.innerHTML = "&#xE5C4";
 
-    slideLinks.forEach(link => {
-        const targetSlide = document.getElementById(link.dataset.target);
-        const parent = link.closest(".topbar-nav-slide");
+    const header = document.createElement("span");
+    header.innerText = text;
 
-        link.addEventListener("click", e => {
-            e.preventDefault();
-            targetSlide.classList.add("active");
-            parent.classList.remove("active");
-            parent.classList.add("inactive");
-        });
-    });
+    container.appendChild(backBtn);
+    container.appendChild(header);
+
+    return container;
 };
 
 const _isWithinBoundingBox = (x, y, element) => {

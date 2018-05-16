@@ -11,7 +11,7 @@ const TopbarBtn = ({ align, icon, text, target }) => (
 const TopbarMenu = ({ align, menu }) => {
     const { id, hierarchy } = menu;
 
-    const Slide = ({ slide }) => {
+    const Slide = ({ slide, active }) => {
         const { id, items } = slide;
 
         const MenuItem = ({ item, last }) => {
@@ -19,7 +19,7 @@ const TopbarMenu = ({ align, menu }) => {
 
             return (
                 <Fragment>
-                    {href ? <a href={href}>{title}</a> : <span data-target={`nav-${align}-slide-${target}`}>{title}</span>}{!href || last ? "\n" : null}
+                    {href ? <a href={href}>{title}</a> : <span data-target={`nav-${align}-slide-${target}`}>{title}<i className="material-icons">arrow_forward</i></span>}{!href || last ? "\n" : null}
                 </Fragment>
             );
         };
@@ -35,19 +35,24 @@ const TopbarMenu = ({ align, menu }) => {
         };
 
         return (
-            <div id={`nav-${align}-slide-${id}`} className="topbar-nav-slide">
-                {items.map((item, i) => (
-                    <Fragment key={i}>{"\n"}
-                        {item.groupTitle ? <GroupItem groupItem={item} /> : <MenuItem item={item} last={i === items.length - 1} />}
-                    </Fragment>
-                ))}
+            <div id={`nav-${align}-slide-${id}`} className={`topbar-nav-slide${active ? " active" : ""}`}>
+                <div className="right-bar">
+                    <i className="material-icons">arrow_back</i>
+                </div>
+                <div className="slides-container">
+                    {items.map((item, i) => (
+                        <Fragment key={i}>{"\n"}
+                            {item.groupTitle ? <GroupItem groupItem={item} /> : <MenuItem item={item} last={i === items.length - 1} />}
+                        </Fragment>
+                    ))}
+                </div>
             </div>
         );
     };
 
     return (
-        <nav id={id} className={`topbar-nav topbar-nav-${align}`}>
-            {hierarchy.map(slide => <Slide key={slide.id} slide={slide}></Slide>)}
+        <nav id={id} className={`topbar-nav topbar-nav-${align} in`}>
+            {hierarchy.map((slide, i) => <Slide key={slide.id} slide={slide} active={i === 0}></Slide>)}
         </nav>
     );
 };
@@ -59,7 +64,7 @@ const Topbar = ({ logo, leftMenu, rightMenu }) => {
             {logo ? <a href="#" className={`topbar-logo logo-${logo}`}></a> : null}{logo ? "\n" : null}
             {rightMenu ? <TopbarBtn align="right" icon={rightMenu.btn.icon} text={rightMenu.btn.text} target={rightMenu.id} /> : null}{rightMenu ? "\n" : null}
             {leftMenu ? <TopbarMenu align="left" menu={leftMenu} /> : null}{leftMenu ? "\n" : null}
-            {rightMenu ? <TopbarMenu align="right" menu={rightMenu} /> : null}{rightMenu ? "\n" : null}
+            {/* {rightMenu ? <TopbarMenu align="right" menu={rightMenu} /> : null}{rightMenu ? "\n" : null} */}
         </div>
     );
 };

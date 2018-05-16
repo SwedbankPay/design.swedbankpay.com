@@ -1,4 +1,4 @@
-import NavMenu from "./NavMenu";
+import NavMenu from "./NavMenu_re";
 
 const topbar = (() => {
     const init = () => {
@@ -12,11 +12,11 @@ const topbar = (() => {
             const rightMenuBtnElement = menu.querySelector(".topbar-btn-right");
 
             if (leftMenuBtnElement) {
-                leftNavMenu = new NavMenu(menu, leftMenuBtnElement);
+                leftNavMenu = new NavMenu(leftMenuBtnElement);
             }
 
             if (rightMenuBtnElement) {
-                rightNavMenu = new NavMenu(menu, rightMenuBtnElement);
+                // rightNavMenu = new NavMenu(menu, rightMenuBtnElement);
             }
         }
 
