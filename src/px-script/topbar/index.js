@@ -1,4 +1,4 @@
-import NavMenu from "./NavMenu_re";
+import NavMenu from "./NavMenu";
 
 const topbar = (() => {
     const init = () => {

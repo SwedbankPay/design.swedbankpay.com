@@ -1,47 +1,63 @@
-const defaultIcon = "&#xE5D2;";
-const closeIcon = "&#xE5CD;";
+import TargetLink from "./TargetLink";
+
+const icons = {
+    default: "menu", // "&#xE5D2;"
+    close: "close", // "&#xE5CD;"
+    back: "arrow_back", // "&#xE5C4;"
+    forward: "chevron_right" // "&#xe5cc;"
+};
 
 export default class NavMenu {
-    constructor (menu, btnElement) {
+    constructor (btnElement) {
         this.isOpen = false;
-        this.backBtn = false;
-        this.headerText = "";
         this.btnElement = btnElement;
-        this.navMenuElement = this._initNav(menu);
         this.iconElement = btnElement.querySelector(".topbar-btn-icon");
-        this.userIcon = this.iconElement.innerHTML || defaultIcon;
-        this.slideContainers = this.navMenuElement.querySelectorAll(".topbar-nav-slide");
-        this.slideHistory = [];
+        this.userIcon = this.iconElement.innerHTML || icons.default;
+        this.navMenuElement = document.querySelector(btnElement.dataset.toggleNav);
+        this.navSlides = this.navMenuElement.querySelectorAll(".topbar-nav-slide");
+        this.history = [];
 
-        this.btnElement.addEventListener("click", e => {
+        btnElement.addEventListener("click", e => {
             e.preventDefault();
             this.handleClick();
         });
 
-        this._initSlideLinks();
+        this._initNavSlides();
+        this._initTargetLinks();
     }
 
-    _initNav () {
-        const navMenu = document.querySelector(this.btnElement.dataset.toggleNav);
-        navMenu.querySelector(".topbar-nav-slide").classList.add("active");
-        return navMenu;
+    _initNavSlides () {
+        const prependBackBtn = element => {
+            const div = document.createElement("div");
+            div.classList.add("left-bar");
+
+            const i = document.createElement("i");
+            i.classList.add("material-icons");
+            i.innerHTML = icons.back;
+            i.addEventListener("click", () => {
+                this.goBack(element);
+            });
+
+            div.appendChild(i);
+
+            element.insertBefore(div, element.firstChild);
+        };
+
+        for (let i = 1; i < this.navSlides.length; i++) {
+            prependBackBtn(this.navSlides[i]);
+        }
+
+        this.navSlides[0].classList.add("active");
     }
 
-    _initSlideLinks () {
-        const slideLinks = this.navMenuElement.querySelectorAll("[data-target]");
+    _initTargetLinks () {
+        this.navMenuElement.querySelectorAll("[data-target]").forEach(link => {
+            const targetLink = new TargetLink(link, icons.forward);
 
-        slideLinks.forEach(link => {
-            const targetSlide = document.getElementById(link.dataset.target);
-            const parent = link.closest(".topbar-nav-slide");
-
-            link.addEventListener("click", e => {
-                e.preventDefault();
-                targetSlide.classList.add("active");
-                parent.classList.remove("active");
-                parent.classList.add("inactive");
-
-                if (!this.backBtn) {
-                    this.navMenuElement.prepend(_createNavHeader(link.innerText));
+            targetLink.element.addEventListener("click", () => {
+                if (targetLink.targetElement) {
+                    this.history.push(targetLink.parentSlide);
+                    targetLink.navigateToTarget();
                 }
             });
         });
@@ -50,7 +66,7 @@ export default class NavMenu {
     open () {
         this.navMenuElement.classList.add("in");
         this.isOpen = true;
-        this.iconElement.innerHTML = closeIcon;
+        this.iconElement.innerHTML = icons.close;
     }
 
     close () {
@@ -60,40 +76,31 @@ export default class NavMenu {
         this.reset();
     }
 
-    reset () {
-        this.slideContainers.forEach(slide => {
-            slide.classList.remove("active", "inactive");
-        });
-
-        this.navMenuElement.querySelector(".topbar-nav-slide").classList.add("active");
-        this.slideHistory = [];
+    goBack (currentActive) {
+        const lastActive = this.history.pop();
+        currentActive.classList.remove("active");
+        lastActive.classList.remove("inactive");
+        lastActive.classList.add("active");
     }
 
-    containsPoint (x, y) {
-        return _isWithinBoundingBox(x, y, this.navMenuElement) || _isWithinBoundingBox(x, y, this.btnElement);
+    reset () {
+        this.history = [];
+        this.navSlides.forEach((slide, i) => {
+            slide.classList.remove("active", "inactive");
+            if (i === 0) {
+                slide.classList.add("active");
+            }
+        });
     }
 
     handleClick () {
         this.isOpen ? this.close() : this.open();
     }
+
+    containsPoint (x, y) {
+        return _isWithinBoundingBox(x, y, this.navMenuElement) || _isWithinBoundingBox(x, y, this.btnElement);
+    }
 }
-
-const _createNavHeader = text => {
-    const container = document.createElement("div");
-    container.classList.add("nav-header");
-
-    const backBtn = document.createElement("i");
-    backBtn.classList.add("material-icons");
-    backBtn.innerHTML = "&#xE5C4";
-
-    const header = document.createElement("span");
-    header.innerText = text;
-
-    container.appendChild(backBtn);
-    container.appendChild(header);
-
-    return container;
-};
 
 const _isWithinBoundingBox = (x, y, element) => {
     const rect = element.getBoundingClientRect();

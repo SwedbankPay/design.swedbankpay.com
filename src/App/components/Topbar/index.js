@@ -19,7 +19,7 @@ const TopbarMenu = ({ align, menu }) => {
 
             return (
                 <Fragment>
-                    {href ? <a href={href}>{title}</a> : <span data-target={`nav-${align}-slide-${target}`}>{title}<i className="material-icons">arrow_forward</i></span>}{!href || last ? "\n" : null}
+                    {href ? <a href={href}>{title}</a> : <span data-target={`#nav-${align}-slide-${target}`}>{title}</span>}{!href || last ? "\n" : null}
                 </Fragment>
             );
         };
@@ -36,9 +36,6 @@ const TopbarMenu = ({ align, menu }) => {
 
         return (
             <div id={`nav-${align}-slide-${id}`} className={`topbar-nav-slide${active ? " active" : ""}`}>
-                <div className="right-bar">
-                    <i className="material-icons">arrow_back</i>
-                </div>
                 <div className="slides-container">
                     {items.map((item, i) => (
                         <Fragment key={i}>{"\n"}
@@ -51,7 +48,7 @@ const TopbarMenu = ({ align, menu }) => {
     };
 
     return (
-        <nav id={id} className={`topbar-nav topbar-nav-${align} in`}>
+        <nav id={id} className={`topbar-nav topbar-nav-${align}`}>
             {hierarchy.map((slide, i) => <Slide key={slide.id} slide={slide} active={i === 0}></Slide>)}
         </nav>
     );

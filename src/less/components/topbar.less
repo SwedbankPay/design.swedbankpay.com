@@ -137,14 +137,15 @@
             flex-grow: 1;
 
             .topbar-nav-group {
-                padding: 0 1rem;
-                margin: 0 0 1rem;
+                // padding: 0 0 0 1rem;
+                margin: 0.5rem 0 1rem;
 
                 .topbar-nav-group-heading {
                     text-transform: uppercase;
-                    font-size: @font-size-small;
+                    // font-size: @font-size-small;
                     border-bottom: 1px solid @gray-2;
                     padding-bottom: 0.25rem;
+                    opacity: 0.65;
                 }
             }
 
@@ -152,7 +153,8 @@
             span {
                 display: block;
                 color: @gray-7;
-                padding: 1rem 1.2rem;
+                padding: 0.5rem 0 0.5rem 0.6rem;
+                // margin: 0.5rem 0 0.5rem 0.6rem;
                 cursor: pointer;
                 text-transform: uppercase;
 
@@ -166,14 +168,29 @@
                     display: flex;
                     justify-content: space-between;
                 }
+
+                .material-icons {
+                    opacity: 0.65;
+                    margin-top: 1px; //TODO: this might backfire, rem and stuff.. [STA]
+                }
             }
         }
 
-        .right-bar {
+        .left-bar {
             padding: 0.5rem;
             background-color: rgba(0, 0, 0, 0.2);
             border-right: 1px solid rgba(0, 0, 0, 0.2);
             border-left: 1px solid rgba(0, 0, 0, 0.2);
+
+            .material-icons {
+                opacity: 0.65;
+                margin-top: 0.5rem;
+
+                &:hover {
+                    color: @white;
+                    cursor: pointer;
+                }
+            }
         }
     }
 }
