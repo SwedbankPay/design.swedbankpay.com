@@ -1,6 +1,6 @@
 {
     "extends": ["stylelint-config-standard"],
-    "ignoreFiles": "*.md",
+    "ignoreFiles": ["**/*.md", "**/*.js", "**/*.js.snap", "**/*.css"],
     "rules": {
         "indentation": 4,
         "selector-pseudo-element-colon-notation": "single",
