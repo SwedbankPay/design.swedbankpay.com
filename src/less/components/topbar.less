@@ -83,7 +83,7 @@
     z-index: @zindex-topbar-nav;
 
     &.topbar-nav-right {
-        transition: right 0.3s ease;
+        transition: right 0.5s ease;
         right: -@topbar-nav-width;
 
         &.in {
@@ -92,19 +92,20 @@
 
         .topbar-nav-slide {
             right: @topbar-nav-width;
+            transition: right 0.5s ease;
 
-            &.active {
+            &.current {
                 right: 0;
             }
 
-            &.inactive {
+            &.prev {
                 right: -@topbar-nav-width;
             }
         }
     }
 
     &.topbar-nav-left {
-        transition: left 0.3s ease;
+        transition: left 0.5s ease;
         left: -@topbar-nav-width;
 
         &.in {
@@ -112,25 +113,68 @@
         }
 
         .topbar-nav-slide {
-            left: @topbar-nav-width;
+            left: @topbar-nav-width + 40px;
+            transition: left 0.5s ease, background-color 0.5s ease-in;
 
-            &.active {
+            &.current {
                 left: 0;
             }
 
-            &.inactive {
-                left: -@topbar-nav-width;
+            &.prev {
+                left: -@topbar-nav-width + 40px;
+                background-color: @gray-0;
+
+                &.inactive {
+                    left: -520px;
+                }
+
+                .slides-container {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+
+                .slide-back-btn {
+                    left: @topbar-nav-width - 40px;
+                    visibility: visible;
+                }
             }
         }
     }
 
     .topbar-nav-slide {
         position: absolute;
-        width: inherit;
+        width: @topbar-nav-width;
         height: 100%;
-        display: flex;
         color: @gray-7;
-        transition: margin-left 0.3s ease;
+        transition: margin-left 0.5s ease;
+
+        .slide-back-btn {
+            visibility: hidden;
+            padding: 0.5rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &:not(:first-child) {
+            &.current {
+                left: 40px;
+            }
+
+            &.prev {
+                left: -@topbar-nav-width + 40px;
+            }
+
+            .slides-container {
+                width: 240px;
+                margin: 0.5rem;
+                padding: 0 0.5rem;
+            }
+        }
 
         .slides-container {
             margin: 0.5rem 1rem;
@@ -176,22 +220,24 @@
             }
         }
 
-        .left-bar {
-            padding: 0.5rem;
-            background-color: rgba(0, 0, 0, 0.2);
-            border-right: 1px solid rgba(0, 0, 0, 0.2);
-            border-left: 1px solid rgba(0, 0, 0, 0.2);
+        // .right-bar {
+        //     visibility: hidden;
+        //     opacity: 0;
+        //     padding: 0.5rem;
+        //     background-color: rgba(0, 0, 0, 0.2);
+        //     border-right: 1px solid rgba(0, 0, 0, 0.2);
+        //     border-left: 1px solid rgba(0, 0, 0, 0.2);
 
-            .material-icons {
-                opacity: 0.65;
-                margin-top: 0.5rem;
+        //     .material-icons {
+        //         opacity: 0.65;
+        //         margin-top: 0.5rem;
 
-                &:hover {
-                    color: @white;
-                    cursor: pointer;
-                }
-            }
-        }
+        //         &:hover {
+        //             color: @white;
+        //             cursor: pointer;
+        //         }
+        //     }
+        // }
     }
 }
 

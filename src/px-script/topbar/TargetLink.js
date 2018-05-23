@@ -16,8 +16,8 @@ export default class TargetLink {
     }
 
     navigateToTarget () {
-        this.parentSlide.classList.remove("active");
-        this.parentSlide.classList.add("inactive");
-        this.targetElement.classList.add("active");
+        this.parentSlide.classList.remove("current");
+        this.parentSlide.classList.add("prev");
+        this.targetElement.classList.add("current");
     }
 }

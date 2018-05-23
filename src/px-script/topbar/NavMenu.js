@@ -15,6 +15,7 @@ export default class NavMenu {
         this.userIcon = this.iconElement.innerHTML || icons.default;
         this.navMenuElement = document.querySelector(btnElement.dataset.toggleNav);
         this.navSlides = this.navMenuElement.querySelectorAll(".topbar-nav-slide");
+        this.currentActive = this.navSlides[0];
         this.history = [];
 
         btnElement.addEventListener("click", e => {
@@ -27,27 +28,22 @@ export default class NavMenu {
     }
 
     _initNavSlides () {
-        const prependBackBtn = element => {
-            const div = document.createElement("div");
-            div.classList.add("left-bar");
-
+        const appendBackBtn = element => {
             const i = document.createElement("i");
-            i.classList.add("material-icons");
+            i.classList.add("material-icons", "slide-back-btn");
             i.innerHTML = icons.back;
             i.addEventListener("click", () => {
-                this.goBack(element);
+                this.goBack();
             });
 
-            div.appendChild(i);
-
-            element.insertBefore(div, element.firstChild);
+            element.appendChild(i);
         };
 
-        for (let i = 1; i < this.navSlides.length; i++) {
-            prependBackBtn(this.navSlides[i]);
+        for (let i = 0; i < this.navSlides.length; i++) {
+            appendBackBtn(this.navSlides[i]);
         }
 
-        this.navSlides[0].classList.add("active");
+        this.navSlides[0].classList.add("current");
     }
 
     _initTargetLinks () {
@@ -56,8 +52,15 @@ export default class NavMenu {
 
             targetLink.element.addEventListener("click", () => {
                 if (targetLink.targetElement) {
+                    this.currentActive = targetLink.targetElement;
                     this.history.push(targetLink.parentSlide);
                     targetLink.navigateToTarget();
+                    if (this.history.length > 1) {
+                        const index = this.history.length - 2;
+                        this.history[index].classList.add("inactive");
+                    }
+                } else {
+                    console.warn(`There is no element with the selector "${link.dataset.target}" present in the DOM.`);
                 }
             });
         });
@@ -73,22 +76,30 @@ export default class NavMenu {
         this.navMenuElement.classList.remove("in");
         this.isOpen = false;
         this.iconElement.innerHTML = this.userIcon;
-        this.reset();
+        setTimeout(() => {
+            this.reset();
+        }, 500);
     }
 
-    goBack (currentActive) {
+    goBack () {
+        if (this.history.length > 1) {
+            const index = this.history.length - 2;
+            this.history[index].classList.remove("inactive");
+        }
+
         const lastActive = this.history.pop();
-        currentActive.classList.remove("active");
-        lastActive.classList.remove("inactive");
-        lastActive.classList.add("active");
+        this.currentActive.classList.remove("current");
+        this.currentActive = lastActive;
+        lastActive.classList.remove("prev");
+        lastActive.classList.add("current");
     }
 
     reset () {
         this.history = [];
         this.navSlides.forEach((slide, i) => {
-            slide.classList.remove("active", "inactive");
+            slide.classList.remove("current", "prev", "inactive");
             if (i === 0) {
-                slide.classList.add("active");
+                slide.classList.add("current");
             }
         });
     }
