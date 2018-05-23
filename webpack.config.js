@@ -55,7 +55,7 @@ const config = {
         library: "payex",
         path: path.resolve(__dirname, "dist"),
         filename: `${version}/scripts/[name].js?[hash]`,
-        publicPath: (isProd ? "/design.payex.com/" : "/")
+        publicPath: "/" // (isProd ? "/design.payex.com/" : "/")
     },
     resolve: {
         extensions: [".js", ".jsx", ".json"]

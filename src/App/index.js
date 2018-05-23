@@ -7,7 +7,8 @@ import AppHeader from "./AppHeader";
 import ErrorPage404 from "./ErrorPage404";
 
 // const isProd = process.env.NODE_ENV === "production";
-const history = createBrowserHistory({ basename: "/design.payex.com" });
+// const history = createBrowserHistory({ basename: "/design.payex.com" });
+const history = createBrowserHistory();
 
 const App = () => (
     <Router history={history}>

@@ -6,8 +6,8 @@ import DocToc from "../../utils/DocToc";
 import pkg from "../../../../../package.json";
 
 const version = pkg.version;
-const scriptUrl = `https://payex.github.io/design.payex.com/${version}/scripts/px-script.js`;
-const styleUrl = `https://payex.github.io/design.payex.com/${version}/styles/px.css`;
+const scriptUrl = `https://design.payex.com/${version}/scripts/px-script.js`;
+const styleUrl = `https://design.payex.com/${version}/styles/px.css`;
 
 const QuickStart = () => (
     <>
