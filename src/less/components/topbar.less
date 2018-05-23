@@ -83,29 +83,16 @@
     z-index: @zindex-topbar-nav;
 
     &.topbar-nav-right {
-        transition: right 0.5s ease;
+        transition: right @topbar-slide-transition;
         right: -@topbar-nav-width;
 
         &.in {
             right: 0;
         }
-
-        .topbar-nav-slide {
-            right: @topbar-nav-width;
-            transition: right 0.5s ease;
-
-            &.current {
-                right: 0;
-            }
-
-            &.prev {
-                right: -@topbar-nav-width;
-            }
-        }
     }
 
     &.topbar-nav-left {
-        transition: left 0.5s ease;
+        transition: left @topbar-slide-transition;
         left: -@topbar-nav-width;
 
         &.in {
@@ -113,19 +100,23 @@
         }
 
         .topbar-nav-slide {
-            left: @topbar-nav-width + 40px;
-            transition: left 0.5s ease, background-color 0.5s ease-in;
+            position: absolute;
+            width: @topbar-nav-width;
+            height: 100%;
+            color: @gray-7;
+            left: @topbar-nav-width + @topbar-back-btn-width;
+            transition: left @topbar-slide-transition, @topbar-background-transition;
 
             &.current {
                 left: 0;
             }
 
             &.prev {
-                left: -@topbar-nav-width + 40px;
+                left: -@topbar-slide-prev-pos;
                 background-color: @gray-0;
 
                 &.inactive {
-                    left: -520px;
+                    left: -@topbar-slide-prev-pos - @topbar-slide-prev-pos;
                 }
 
                 .slides-container {
@@ -134,110 +125,76 @@
                 }
 
                 .slide-back-btn {
-                    left: @topbar-nav-width - 40px;
+                    left: @topbar-slide-prev-pos;
                     visibility: visible;
                 }
             }
-        }
-    }
 
-    .topbar-nav-slide {
-        position: absolute;
-        width: @topbar-nav-width;
-        height: 100%;
-        color: @gray-7;
-        transition: margin-left 0.5s ease;
+            &:not(:first-child) {
+                &.current {
+                    left: @topbar-back-btn-width;
+                }
 
-        .slide-back-btn {
-            visibility: hidden;
-            padding: 0.5rem;
-            position: absolute;
-            top: 0;
-            left: 0;
-
-            &:hover {
-                cursor: pointer;
-            }
-        }
-
-        &:not(:first-child) {
-            &.current {
-                left: 40px;
+                .slides-container {
+                    width: @topbar-nav-slide-width;
+                    margin: 0.5rem;
+                    padding: 0 0.5rem;
+                }
             }
 
-            &.prev {
-                left: -@topbar-nav-width + 40px;
+            .slide-back-btn {
+                visibility: hidden;
+                padding: 0.5rem;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
 
             .slides-container {
-                width: 240px;
-                margin: 0.5rem;
-                padding: 0 0.5rem;
-            }
-        }
+                margin: 0.5rem 1rem;
+                flex-grow: 1;
 
-        .slides-container {
-            margin: 0.5rem 1rem;
-            flex-grow: 1;
+                .topbar-nav-group {
+                    margin: 0.5rem 0 1rem;
 
-            .topbar-nav-group {
-                // padding: 0 0 0 1rem;
-                margin: 0.5rem 0 1rem;
+                    .topbar-nav-group-heading {
+                        text-transform: uppercase;
+                        border-bottom: 1px solid @gray-2;
+                        padding-bottom: 0.25rem;
+                        opacity: 0.65;
+                    }
+                }
 
-                .topbar-nav-group-heading {
+                a,
+                span {
+                    display: block;
+                    color: @gray-7;
+                    padding: 0.5rem 0 0.5rem 0.6rem;
+                    cursor: pointer;
                     text-transform: uppercase;
-                    // font-size: @font-size-small;
-                    border-bottom: 1px solid @gray-2;
-                    padding-bottom: 0.25rem;
-                    opacity: 0.65;
-                }
-            }
 
-            a,
-            span {
-                display: block;
-                color: @gray-7;
-                padding: 0.5rem 0 0.5rem 0.6rem;
-                // margin: 0.5rem 0 0.5rem 0.6rem;
-                cursor: pointer;
-                text-transform: uppercase;
+                    &:hover {
+                        background-color: @gray-2;
+                        color: @white;
+                        text-decoration: none;
+                    }
 
-                &:hover {
-                    background-color: @gray-2;
-                    color: @white;
-                    text-decoration: none;
-                }
+                    &[data-target] {
+                        display: flex;
+                        justify-content: space-between;
+                    }
 
-                &[data-target] {
-                    display: flex;
-                    justify-content: space-between;
-                }
-
-                .material-icons {
-                    opacity: 0.65;
-                    margin-top: 1px; //TODO: this might backfire, rem and stuff.. [STA]
+                    .material-icons {
+                        opacity: 0.65;
+                        margin-top: 1px; //TODO: this might backfire, rem and stuff.. [STA]
+                    }
                 }
             }
         }
-
-        // .right-bar {
-        //     visibility: hidden;
-        //     opacity: 0;
-        //     padding: 0.5rem;
-        //     background-color: rgba(0, 0, 0, 0.2);
-        //     border-right: 1px solid rgba(0, 0, 0, 0.2);
-        //     border-left: 1px solid rgba(0, 0, 0, 0.2);
-
-        //     .material-icons {
-        //         opacity: 0.65;
-        //         margin-top: 0.5rem;
-
-        //         &:hover {
-        //             color: @white;
-        //             cursor: pointer;
-        //         }
-        //     }
-        // }
     }
 }
 
