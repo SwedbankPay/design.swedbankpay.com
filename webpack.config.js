@@ -8,6 +8,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const autoprefixer = require("autoprefixer");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const isProd = (process.env.NODE_ENV === "production");
 const isDeploy = (process.env.WEBPACK === "deploy");
@@ -217,7 +218,10 @@ const config = {
         new webpack.DefinePlugin({
             "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)
         }),
-        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/) // For now this ignores moment's locale folder, which doubles moment's size..
+        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/), // For now this ignores moment's locale folder, which doubles moment's size..
+        new CopyWebpackPlugin([
+            { from: "static" }
+        ])
     ]
 };
 
