@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.4.0] - 2018-04-
+## [0.4.0] - 2018-05-23
 
 ### Added
 
@@ -20,6 +20,7 @@ All notable changes to this project will be documented in this file.
 - Updated files for px-script to be self-contained, even tough webpack already does this, we might not be using webpack forever.
 - Changed destination for script and styles. They are no longer named after version, but instead put in a folder with the current version (ex `/0.4.0/scripts/px.js`).
 - Updated readme.
+- Changed routing, so the path no longer starts with `/design.payex.com/`.
 
 ## [0.3.1] - 2018-04-19
 
