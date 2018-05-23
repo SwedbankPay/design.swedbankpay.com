@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Core: Color renders 1`] = `
+<div
+  className="color-preview background-test"
+>
+  <p>
+    test
+  </p>
+  <p>
+    #test
+  </p>
+</div>
+`;

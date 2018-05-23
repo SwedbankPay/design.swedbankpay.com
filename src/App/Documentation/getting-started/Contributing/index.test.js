@@ -1,3 +1,4 @@
+/* eslint-disable babel/new-cap */
 import React from "react";
 import { shallow } from "enzyme";
 

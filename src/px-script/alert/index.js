@@ -1,17 +1,16 @@
 import { findAncestor } from "../utils";
 
-const SELECTORS = {
-    ALERT: ".alert",
-    CLOSE: "[data-alert-close]"
-};
+const alert = (() => {
+    const SELECTORS = {
+        ALERT: ".alert",
+        CLOSE: "[data-alert-close]"
+    };
 
-const _hideAlert = alertElement => {
-    alertElement.classList.remove("in");
-};
+    const _hideAlert = alertElement => {
+        alertElement.classList.remove("in");
+    };
 
-
-export default {
-    init: () => {
+    const init = () => {
         const closeButtons = document.querySelectorAll(SELECTORS.CLOSE);
 
         closeButtons.forEach(btn => {
@@ -36,5 +35,9 @@ export default {
                 });
             }
         });
-    }
-};
+    };
+
+    return { init };
+})();
+
+export default alert;

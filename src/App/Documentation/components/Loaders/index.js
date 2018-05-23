@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PrismCode from "react-prism";
 
-import ComponentPreview, { PxScript } from "../../utils/ComponentPreview";
+import ComponentPreview, { PxScript, Attribute } from "../../utils/ComponentPreview";
 import DocToc from "../../utils/DocToc";
 
 import LoaderComponent from "../../../components/Loader";
@@ -13,7 +13,6 @@ const BasicUsage = () => (
         <p>Basic usage...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <LoaderComponent size="default" visible={true} />
-            <div className="loader loader-default in" data-loader="true"></div>
         </ComponentPreview>
     </>
 );
@@ -25,12 +24,10 @@ const Sizes = () => (
         <h3>Small</h3>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <LoaderComponent size="small" visible={true} />
-            <div className="loader loader-small in" data-loader="true"></div>
         </ComponentPreview>
         <h3>Large</h3>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <LoaderComponent size="large" visible={true} />
-            <div className="loader loader-large in" data-loader="true"></div>
         </ComponentPreview>
     </>
 );
@@ -41,8 +38,22 @@ const MutedLoader = () => (
         <p>Use class <code className="token property">.loader-muted</code> to mute the loader...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <LoaderComponent id="test" size="default" visible={true} muted={true} />
-            <div className="loader loader-default loader-muted in" data-loader="true"></div>
         </ComponentPreview>
+    </>
+);
+
+const StaticHtml = () => (
+    <>
+        <h2 id="static-html">Static HTML</h2>
+        <p>Using the attribute <Attribute data={true} name="loader" value="true" /> will append the following HTML to the element:</p>
+        <ComponentPreview language="html" codeFigure={true}>
+            <ul className="loader-icon">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </ComponentPreview>
+        <p>If you want to use the static HTML instead of the data-attribute, make sure to <b>NOT</b> include the attribute <Attribute data={true} name="loader" value="true" />.</p>
     </>
 );
 
@@ -114,6 +125,7 @@ const LoadersText = () => (
         <BasicUsage />
         <Sizes />
         <MutedLoader />
+        <StaticHtml />
         {/* <UsageWithJavascript /> */}
     </div>
 );
@@ -138,4 +150,4 @@ class Loaders extends Component {
 export default Loaders;
 
 /* for testing */
-export { BasicUsage, Sizes, MutedLoader, UsageWithJavascript, LoadersText };
+export { BasicUsage, Sizes, MutedLoader, StaticHtml, UsageWithJavascript, LoadersText };

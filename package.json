@@ -1,6 +1,6 @@
 {
     "name": "design.payex.com",
-    "version": "0.3.1",
+    "version": "0.4.0",
     "description": "PayEx DesignGuide",
     "main": "index.js",
     "scripts": {
@@ -13,7 +13,8 @@
         "test:update": "npm test -- -u",
         "lint": "eslint src/ && stylelint src/less/",
         "eslint:tc": "eslint src/ -f './node_modules/eslint-teamcity/index.js'",
-        "stylelint:tc": "stylelint src/less/ --custom-formatter node_modules/stylelint-teamcity-formatter"
+        "stylelint:tc": "stylelint src/less/ --custom-formatter node_modules/stylelint-teamcity-formatter",
+        "e2e:chrome": "npm start && testcafe chrome src/**/*.spec.js"
     },
     "repository": {
         "type": "git",
@@ -21,7 +22,7 @@
     },
     "keywords": [],
     "author": "PayEx",
-    "license": "UNLICENSED",
+    "license": "MIT",
     "bugs": {
         "url": "https://github.com/PayEx/design.payex.com/issues"
     },
@@ -35,10 +36,11 @@
         "js-beautify": "^1.7.5",
         "normalize.css": "^8.0.0",
         "prismjs": "^1.11.0",
-        "react": "^16.3.0",
-        "react-dom": "^16.3.0",
+        "react": "^16.3.2",
+        "react-dom": "^16.3.2",
         "react-prism": "^4.3.2",
-        "react-router-dom": "^4.2.2"
+        "react-router-dom": "^4.2.2",
+        "rome": "^2.1.22"
     },
     "devDependencies": {
         "@babel/core": "^7.0.0-beta.44",
@@ -50,6 +52,7 @@
         "babel-jest": "^22.2.0",
         "babel-loader": "^8.0.0-beta.2",
         "clean-webpack-plugin": "^0.1.18",
+        "copy-webpack-plugin": "^4.5.1",
         "cross-env": "^5.1.3",
         "css-loader": "^0.28.9",
         "enzyme": "^3.3.0",
@@ -60,6 +63,7 @@
         "eslint-plugin-jest": "^21.7.0",
         "eslint-plugin-node": "^6.0.0",
         "eslint-plugin-react": "^7.6.1",
+        "eslint-plugin-testcafe": "^0.2.1",
         "eslint-teamcity": "^2.0.0",
         "extract-text-webpack-plugin": "^3.0.2",
         "favicons-webpack-plugin": "0.0.7",
@@ -71,15 +75,13 @@
         "less-loader": "^4.0.5",
         "postcss-loader": "^2.1.0",
         "react-test-renderer": "^16.2.0",
-        "selenium-standalone": "^6.13.0",
         "style-loader": "^0.20.1",
         "stylelint": "^9.1.1",
         "stylelint-config-recommended": "^2.1.0",
         "stylelint-config-standard": "^18.2.0",
         "stylelint-teamcity-formatter": "0.0.3",
-        "wdio-mocha-framework": "^0.5.13",
-        "wdio-selenium-standalone-service": "0.0.10",
-        "webdriverio": "^4.12.0",
+        "testcafe": "^0.19.2",
+        "testcafe-reporter-teamcity": "^1.0.9",
         "webpack": "^3.10.0",
         "webpack-bundle-analyzer": "^2.11.1",
         "webpack-dev-server": "^2.11.1"

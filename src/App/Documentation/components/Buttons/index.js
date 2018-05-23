@@ -146,7 +146,7 @@ const ButtonLoader = () => (
             <ButtonComponent loader={true} loading={true} outline={true} type="danger" label="Danger" />{"\n"}
             <ButtonComponent loader={true} loading={true} outline={true} type="light" label="Light" />{"\n"}
         </ComponentPreview>
-        <p>Adding the attribute <Attribute data={true} name="loader" value="true" /> to a button component will produce the following html:</p>
+        <p>Adding the attribute <Attribute data={true} name="button-loader" value="true" /> to a button component will produce the following html:</p>
         <ComponentPreview language="html" showCasePanel={false} codeFigure={true}>
             <button className="btn btn-default loading" type="button" data-px-loader="true">{"\n\t"}
                 <div className="btn-loader-label">Default</div>{"\n\t"}
@@ -159,7 +159,7 @@ const ButtonLoader = () => (
                 </div>{"\n"}
             </button>
         </ComponentPreview>
-        <p>If you want more control over the loader component you can include the html yourself (e.g. for server-side rendering), just make sure you <b>dont</b> add the attribute <Attribute data={true} name="loader" value="true" />.</p>
+        <p>If you want more control over the loader component you can include the html yourself (e.g. for server-side rendering), just make sure you <b>don{"'"}t</b> add the attribute <Attribute data={true} name="button-loader" value="true" />.</p>
     </>
 );
 

@@ -1,19 +1,25 @@
 import alert from "./alert";
 import button from "./button";
+import datepicker from "./datepicker";
 import loader from "./loader";
 import modal from "./modal";
 import rangeslider from "./rangeslider";
 import script from "./script";
 import tabs from "./tabs";
+import topbar from "./topbar";
+import validation from "./validation";
 
 const px = {
     alert,
     button,
+    datepicker,
     loader,
     modal,
     rangeslider,
     script,
-    tabs
+    tabs,
+    topbar,
+    validation
 };
 
 window.px = px;
@@ -25,9 +31,9 @@ if (!window.stopPx) {
 }
 
 export default px;
-export { alert, button, loader, modal, rangeslider, script, tabs };
+export { alert, button, datepicker, loader, modal, rangeslider, script, tabs, topbar, validation };
 
 /* istanbul ignore if|else */
-if (module.hot) {
-    module.hot.accept();
-}
+// if (module.hot) {
+//     module.hot.accept();
+// }

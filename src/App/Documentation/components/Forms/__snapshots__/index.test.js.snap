@@ -220,6 +220,7 @@ exports[`Documentation: Forms FormsText renders 1`] = `
   </p>
   <Overview />
   <FormGrid />
+  <Validation />
   <UsageWithFieldsets />
   <StaticText />
   <Checkboxes />
@@ -507,6 +508,65 @@ exports[`Documentation: Forms UsageWithFieldsets renders 1`] = `
         label="Log in"
         type="neutral"
       />
+      
+
+    </form>
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Documentation: Forms Validation renders 1`] = `
+<React.Fragment>
+  <h2
+    id="validation"
+  >
+    Validation
+  </h2>
+  <p>
+    Forms validation...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <form
+      data-validate="true"
+    >
+      <InputGroup
+        helpBlock="Comes before your last name"
+        id="validate-first-name"
+        label="First name"
+        pattern="asd"
+        placeholder="Enter your first name"
+        required={true}
+        type="text"
+        validate={true}
+      />
+      <InputGroup
+        helpBlock="Probably the same as at least one of your parents"
+        id="validate-last-name"
+        label="Last name"
+        placeholder="Enter your last name"
+        type="text"
+        validate={true}
+      />
+      <InputGroup
+        helpBlock="You know, electronic mail?"
+        id="validate-email-address"
+        label="Email"
+        placeholder="Enter your email"
+        type="text"
+        validate={true}
+      />
+      
+
+      <button
+        className="btn btn-brand"
+        type="submit"
+      >
+        Submit
+      </button>
       
 
     </form>

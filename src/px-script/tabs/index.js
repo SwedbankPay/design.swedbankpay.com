@@ -1,5 +1,5 @@
-export default {
-    init: () => {
+const tabs = (() => {
+    const init = () => {
         const tabContainers = document.querySelectorAll(".tabs");
 
         tabContainers.forEach(tabContainer => {
@@ -13,5 +13,9 @@ export default {
                 });
             });
         });
-    }
-};
+    };
+
+    return { init };
+})();
+
+export default tabs;

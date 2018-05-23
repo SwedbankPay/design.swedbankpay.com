@@ -19,10 +19,6 @@ exports[`Documentation: Loaders Basic Usage renders 1`] = `
       size="default"
       visible={true}
     />
-    <div
-      className="loader loader-default in"
-      data-loader="true"
-    />
   </ComponentPreview>
 </React.Fragment>
 `;
@@ -39,6 +35,7 @@ exports[`Documentation: Loaders Loaders Text renders 1`] = `
   <BasicUsage />
   <Sizes />
   <MutedLoader />
+  <StaticHtml />
 </div>
 `;
 
@@ -68,10 +65,6 @@ exports[`Documentation: Loaders Muted Loader renders 1`] = `
       muted={true}
       size="default"
       visible={true}
-    />
-    <div
-      className="loader loader-default loader-muted in"
-      data-loader="true"
     />
   </ComponentPreview>
 </React.Fragment>
@@ -117,10 +110,6 @@ exports[`Documentation: Loaders Sizes renders 1`] = `
       size="small"
       visible={true}
     />
-    <div
-      className="loader loader-small in"
-      data-loader="true"
-    />
   </ComponentPreview>
   <h3>
     Large
@@ -134,11 +123,51 @@ exports[`Documentation: Loaders Sizes renders 1`] = `
       size="large"
       visible={true}
     />
-    <div
-      className="loader loader-large in"
-      data-loader="true"
-    />
   </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Documentation: Loaders Static Html renders 1`] = `
+<React.Fragment>
+  <h2
+    id="static-html"
+  >
+    Static HTML
+  </h2>
+  <p>
+    Using the attribute 
+    <Attribute
+      data={true}
+      name="loader"
+      value="true"
+    />
+     will append the following HTML to the element:
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+  >
+    <ul
+      className="loader-icon"
+    >
+      <li />
+      <li />
+      <li />
+    </ul>
+  </ComponentPreview>
+  <p>
+    If you want to use the static HTML instead of the data-attribute, make sure to 
+    <b>
+      NOT
+    </b>
+     include the attribute 
+    <Attribute
+      data={true}
+      name="loader"
+      value="true"
+    />
+    .
+  </p>
 </React.Fragment>
 `;
 

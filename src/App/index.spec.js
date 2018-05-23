@@ -1,23 +1,13 @@
-const webdriverio = require("webdriverio");
-const browser = webdriverio
-    // setup your selenium server address.
-    // If you are using default settings, leave it empty
-    .remote()
-    // run browser that we want to test
-    .init({
-        browserName: "chrome",
-        version: "45"
-    });
+// import { Selector } from "testcafe";
 
-// stolen shamelessly from srm
-describe("Browser ", function () {
-    it("should log our browsername", function () {
-        browser.url("https://www.whatismybrowser.com/");
+fixture `Getting Started`
+    .page `http://localhost:3000`;
 
-        browser.waitUntil(function () {
-            return browser.getTitle().includes("What browser");
-        }, 5000, "Expected title to include 'What browser'", 500);
+test("Test uno", async t => {
+    // Test code
+    // const articleHeader = await Selector(".panel-body").find("h2");
+    await t
+        .click("a[href='/docs']");
 
-        // console.log("Current browser being tested: " + browser.getText(".string-major"));
-    });
+
 });

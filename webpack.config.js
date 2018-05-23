@@ -8,6 +8,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const autoprefixer = require("autoprefixer");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const isProd = (process.env.NODE_ENV === "production");
 const isDeploy = (process.env.WEBPACK === "deploy");
@@ -15,12 +16,12 @@ const devServer = (process.env.WEBPACK === "devserver");
 const version = pkg.version;
 
 const extractPX = new ExtractTextPlugin({
-    filename: `styles/px-${version}.css`,
+    filename: `${version}/styles/px.css`,
     disable: !isProd
 });
 
 const extractDocumentation = new ExtractTextPlugin({
-    filename: `styles/templates/documentation-${version}.css`,
+    filename: `${version}/styles/templates/documentation.css`,
     disable: !isProd
 });
 
@@ -54,8 +55,8 @@ const config = {
     output: {
         library: "payex",
         path: path.resolve(__dirname, "dist"),
-        filename: `scripts/[name]-${version}.js?[hash]`,
-        publicPath: (isProd ? "/design.payex.com/" : "/")
+        filename: `${version}/scripts/[name].js?[hash]`,
+        publicPath: "/" // (isProd ? "/design.payex.com/" : "/")
     },
     resolve: {
         extensions: [".js", ".jsx", ".json"]
@@ -67,10 +68,9 @@ const config = {
         publicPath: "/",
         compress: true,
         port: 3000,
-        hotOnly: true,
+        hot: true,
         clientLogLevel: "warning",
-        historyApiFallback: true,
-        progress: true
+        historyApiFallback: true
     },
     module: {
         rules: [
@@ -217,7 +217,11 @@ const config = {
         extractDesignGuide,
         new webpack.DefinePlugin({
             "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)
-        })
+        }),
+        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/), // For now this ignores moment's locale folder, which doubles moment's size..
+        new CopyWebpackPlugin([
+            { from: "static" }
+        ])
     ]
 };
 

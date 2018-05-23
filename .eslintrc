@@ -19,16 +19,18 @@
         "babel",
         "react",
         "node",
-        "jest"
+        "jest",
+        "testcafe"
     ],
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
-        "plugin:jest/recommended"
+        "plugin:jest/recommended",
+        "plugin:testcafe/recommended"
     ],
     "rules": {
         "array-bracket-spacing":            ["warn"],
-        "babel/new-cap":                    1,
+        "babel/new-cap":                    0,
         "babel/no-invalid-this":            1,
         "babel/object-curly-spacing":       ["warn", "always"],
         "babel/quotes":                     ["error", "double"],
