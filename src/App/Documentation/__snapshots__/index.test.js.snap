@@ -17,13 +17,13 @@ exports[`Documentation: index renders 1`] = `
     <div
       className="view-heading col-md-9 col-sm-12"
     >
-      <withRouter() />
+      <withRouter(DocHeading) />
     </div>
   </div>
   <div
     className="row"
   >
-    <withRouter() />
+    <withRouter(SelectPanel) />
     <main
       className="doc-view col-md-9 col-sm-12"
     >
@@ -41,6 +41,11 @@ exports[`Documentation: index renders 1`] = `
             Array [
               Object {
                 "component": Object {
+                  "Css": [Function],
+                  "IntroductionText": [Function],
+                  "JavaScript": [Function],
+                  "QuickStart": [Function],
+                  "StarterTemplate": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/getting-started/introduction",
@@ -78,6 +83,9 @@ exports[`Documentation: index renders 1`] = `
             Array [
               Object {
                 "component": Object {
+                  "ColorPalette": [Function],
+                  "ColorText": [Function],
+                  "Usage": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/core/color",
@@ -178,6 +186,22 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "CustomFormat": [Function],
+                  "DateRange": [Function],
+                  "DatepickersText": [Function],
+                  "IncludeTime": [Function],
+                  "InitialValue": [Function],
+                  "Options": [Function],
+                  "Required": [Function],
+                  "ShowingMultipleMonths": [Function],
+                  "SimpleDatepicker": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/components/datepickers",
+                "title": "Datepickers",
+              },
+              Object {
+                "component": Object {
                   "Checkboxes": [Function],
                   "DisabledCheckboxes": [Function],
                   "DisabledRadioButtons": [Function],
@@ -190,6 +214,7 @@ exports[`Documentation: index renders 1`] = `
                   "StaticText": [Function],
                   "Toggleboxes": [Function],
                   "UsageWithFieldsets": [Function],
+                  "Validation": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/components/forms",
@@ -216,6 +241,7 @@ exports[`Documentation: index renders 1`] = `
                   "LoadersText": [Function],
                   "MutedLoader": [Function],
                   "Sizes": [Function],
+                  "StaticHtml": [Function],
                   "UsageWithJavascript": [Function],
                   "default": [Function],
                 },
@@ -267,12 +293,23 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "Collapsed": [Function],
                   "Overview": [Function],
+                  "Stacked": [Function],
                   "TabsText": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/components/tabs",
                 "title": "Tabs",
+              },
+              Object {
+                "component": Object {
+                  "Overview": [Function],
+                  "TopbarText": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/components/topbar",
+                "title": "Topbar",
               },
             ]
           }

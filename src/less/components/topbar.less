@@ -1,228 +1,202 @@
-body {
-    padding-top: @topbar-height;
-}
-
 .topbar {
-    background: @white;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: @white;
+    margin: 0 auto;
     height: @topbar-height;
     width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
     z-index: @zindex-topbar;
-    .clearfix();
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-.topbar-logo {
-    height: 50px;
-    float: left;
-    margin-top: 20px;
-    margin-left: 20px;
+    &.topbar-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
 
-    &.logo-default {
-        background: url("../../img/px-logo.svg") no-repeat;
-        background-size: contain;
-        width: 125px;
+        + * {
+            margin-top: @topbar-height;
+        }
     }
 
-    &.logo-mypayex {
-        background: url("../../img/my-px-logo.svg") no-repeat;
-        background-size: contain;
-        width: 180px;
+    .topbar-logo {
+        height: 50px;
+        margin-left: 1rem;
+        margin-right: auto;
+
+        &.logo-default {
+            background: url("../../img/px-logo.svg") no-repeat;
+            background-size: cover;
+            width: 156px;
+        }
+
+        &.logo-mypayex {
+            background: url("../../img/my-px-logo.svg") no-repeat;
+            background-size: contain;
+            width: 180px;
+        }
     }
-}
 
-.topbar-btn-left,
-.topbar-btn-right {
-    margin: 0;
-    border: 0;
-    background: none;
-    height: 100%;
-    padding: 0 20px;
-    font-size: 17px;
-    font-weight: bold;
-    outline: 0;
+    .topbar-btn-left,
+    .topbar-btn-right {
+        margin: 0;
+        border: 0;
+        background: none;
+        height: 100%;
+        padding: 0 1.25rem;
+        font-weight: bold;
+        outline: 0;
+        display: flex;
+        align-items: center;
 
-    &:hover,
-    &:focus {
-        background-color: @gray-9;
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: @gray-9;
+        }
+
+        .topbar-btn-icon {
+            margin-right: 5px; // icon alignment
+            margin-top: -2px;
+        }
     }
-}
 
-.topbar-btn-icon {
-    line-height: 17px;
-    vertical-align: middle;
-    margin-right: 5px; // icon alignment
-    margin-top: -2px;
-}
+    .topbar-btn-left {
+        border-right: 1px solid @gray-8;
+    }
 
-.topbar-btn-left {
-    float: left;
-    border-right: 1px solid @gray-8;
-}
-
-.topbar-btn-right {
-    float: right;
-    border-left: 1px solid @gray-8;
+    .topbar-btn-right {
+        border-left: 1px solid @gray-8;
+    }
 }
 
 .topbar-nav {
-    display: block;
     width: @topbar-nav-width;
     position: fixed;
-    top: 70px;
+    top: @topbar-height;
     bottom: 0;
     background-color: @gray-1;
     overflow-x: hidden;
     overflow-y: auto;
-}
+    z-index: @zindex-topbar-nav;
 
-.topbar-nav-right {
-    -webkit-transition: right 0.3s ease;
-    transition: right 0.3s ease;
-    right: -@topbar-nav-width;
+    &.topbar-nav-right {
+        transition: right @topbar-slide-transition;
+        right: -@topbar-nav-width;
+        padding: 1rem;
 
-    &.topbar-nav-active {
-        right: 0;
+        &.in {
+            right: 0;
+        }
     }
-}
 
-.topbar-nav-left {
-    -webkit-transition: left 0.3s ease;
-    transition: left 0.3s ease;
-    left: -@topbar-nav-width;
+    &.topbar-nav-left {
+        transition: left @topbar-slide-transition;
+        left: -@topbar-nav-width;
 
-    &.topbar-nav-active {
-        left: 0;
-    }
-}
-
-.topbar-nav-slider {
-    margin: 15px 0 0;
-    width: @topbar-nav-width * 3;
-    -webkit-transition: margin-left 0.3s ease;
-    transition: margin-left 0.3s ease;
-    .reset-list();
-    .clearfix(); // TODO: This should be in javascript
-
-    > li {
-        display: block;
-        float: left;
-        width: @topbar-nav-width;
-    }
-}
-
-.topbar-nav-breadcrumbs {
-    list-style: none;
-    margin: 0;
-    padding: 20px;
-    border-bottom: 1px solid @gray-2;
-
-    > li {
-        display: inline-block;
-        padding-left: 20px;
-        position: relative;
-
-        &:first-child {
-            padding-left: 0;
-
-            &:before {
-                content: "";
-            }
+        &.in {
+            left: 0;
         }
 
-        &:before {
-            content: "/";
+        .topbar-nav-slide {
             position: absolute;
-            left: 8px;
+            width: @topbar-nav-width;
+            height: 100%;
             color: @gray-7;
-        }
+            left: @topbar-nav-width + @topbar-back-btn-width;
+            transition: left @topbar-slide-transition, @topbar-background-transition;
 
-        > a {
-            color: @gray-7;
-            font-size: @font-size-small;
-            text-transform: uppercase;
-            font-weight: 300;
-            cursor: pointer;
-            outline: 0;
+            &.current {
+                left: 0;
+            }
 
-            &:hover,
-            &:focus {
-                color: white;
-                text-decoration: underline;
+            &.prev {
+                left: -@topbar-slide-prev-pos;
+                background-color: @gray-0;
+
+                &.inactive {
+                    left: -@topbar-slide-prev-pos - @topbar-slide-prev-pos;
+                }
+
+                .slides-container {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+
+                .slide-back-btn {
+                    left: @topbar-slide-prev-pos;
+                    visibility: visible;
+                }
+            }
+
+            &:not(:first-child) {
+                &.current {
+                    left: @topbar-back-btn-width;
+                }
+
+                .slides-container {
+                    width: @topbar-nav-slide-width;
+                    margin: 0.5rem;
+                    padding: 0 0.5rem;
+                }
+            }
+
+            .slide-back-btn {
+                visibility: hidden;
+                padding: 0.5rem;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .slides-container {
+                margin: 0.5rem 1rem;
+                flex-grow: 1;
+
+                .topbar-nav-group {
+                    margin: 0.5rem 0 1rem;
+
+                    .topbar-nav-group-heading {
+                        text-transform: uppercase;
+                        border-bottom: 1px solid @gray-2;
+                        padding-bottom: 0.25rem;
+                        opacity: 0.65;
+                    }
+                }
             }
         }
     }
-}
 
-.topbar-nav-back {
-    background: none;
-    border: 0;
-    margin: 10px 0 10px 10px;
-    padding: 5px;
-    line-height: 1em;
-    color: @gray-7;
-    outline: 0;
-
-    &:hover,
-    &:focus {
-        // TODO: Add a gray border
-        color: @white;
-    }
-}
-
-.topbar-nav-items {
-    .reset-list();
-
-    .topbar-nav-group {
-        color: @white;
-        color: @gray-7;
-        font-size: @font-size-small;
-        text-transform: uppercase;
-        font-weight: 300;
-        padding: 0 15px;
-        margin: 15px 0;
-
-        .topbar-nav-group-heading {
-            border-bottom: 1px solid #58595b;
-            padding-bottom: 5px;
-        }
-
-        > ul {
-            list-style: none;
-            padding: 0;
-        }
-    }
-
-    li a {
-        color: @gray-7;
-        font-size: @font-size-large;
-        padding: 15px 20px;
+    a,
+    span {
         display: block;
+        color: @gray-7;
+        padding: 0.5rem 0 0.5rem 0.6rem;
         cursor: pointer;
-        font-weight: normal;
-        text-transform: none;
-        .clearfix();
+        text-transform: uppercase;
 
         &:hover {
             background-color: @gray-2;
             color: @white;
             text-decoration: none;
         }
+
+        &[data-target] {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .material-icons {
+            opacity: 0.65;
+            margin-top: 1px; //TODO: this might backfire, rem and stuff.. [STA]
+        }
     }
-}
-
-.topbar-nav-icon {
-    vertical-align: middle;
-    line-height: 17px;
-    margin-right: 10px;
-    margin-top: -2px;
-}
-
-.topbar-nav-icon-next {
-    float: right;
 }
 
 @media (max-width: @screen-xs-max) {

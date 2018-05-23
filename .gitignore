@@ -1,6 +1,9 @@
 # Build directories
 # dist
 
+# Local vs code settings
+.vscode/
+
 # Logs
 logs
 *.log

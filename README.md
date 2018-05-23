@@ -1,5 +1,7 @@
 # design.payex.com
 
+![PayEx logo](./src/img/px-logo.svg)
+
 ## Installing / Getting started
 
 The installation guides in this file is for further development of the DesignGuide, and is not necessary if you plan to use the DesignGuide in your project.
@@ -22,8 +24,8 @@ DesignGuide requires [Node.js](https://nodejs.org/en/) (includes npm).
 
 ### Built with
 
-* [React 16.2](https://reactjs.org/)
-* [Less 2.7.3](http://lesscss.org/)
+* [React 16.3](https://reactjs.org/)
+* [Less 2.7](http://lesscss.org/)
 
 ### Setting up Dev
 

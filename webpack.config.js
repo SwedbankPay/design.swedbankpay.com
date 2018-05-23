@@ -67,10 +67,9 @@ const config = {
         publicPath: "/",
         compress: true,
         port: 3000,
-        hotOnly: true,
+        hot: true,
         clientLogLevel: "warning",
-        historyApiFallback: true,
-        progress: true
+        historyApiFallback: true
     },
     module: {
         rules: [
@@ -217,7 +216,8 @@ const config = {
         extractDesignGuide,
         new webpack.DefinePlugin({
             "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)
-        })
+        }),
+        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/) // For now this ignores moment's locale folder, which doubles moment's size..
     ]
 };
 

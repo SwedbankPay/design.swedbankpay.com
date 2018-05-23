@@ -192,7 +192,7 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
     Adding the attribute 
     <Attribute
       data={true}
-      name="loader"
+      name="button-loader"
       value="true"
     />
      to a button component will produce the following html:
@@ -246,12 +246,14 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
   <p>
     If you want more control over the loader component you can include the html yourself (e.g. for server-side rendering), just make sure you 
     <b>
-      dont
+      don
+      '
+      t
     </b>
      add the attribute 
     <Attribute
       data={true}
-      name="loader"
+      name="button-loader"
       value="true"
     />
     .

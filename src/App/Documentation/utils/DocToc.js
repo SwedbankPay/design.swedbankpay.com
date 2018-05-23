@@ -76,7 +76,9 @@ class DocToc extends Component {
             behavior: "smooth"
         });
 
-        // window.history.pushState(null, null, `#${id}`);
+        if (process.env.NODE_ENV !== "production") {
+            window.history.pushState(null, null, `#${id}`);
+        }
     }
 
     componentDidMount () {

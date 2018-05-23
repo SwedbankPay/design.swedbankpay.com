@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import ComponentPreview from "../../utils/ComponentPreview";
 import DocToc from "../../utils/DocToc";
 
-import { rangeslider } from "../../../../px-script";
+import { rangeslider, validation } from "../../../../px-script";
 import InputGroup from "../../../components/InputGroup";
 import Button from "../../../components/Button";
 import { Checkbox, FormControlText, Radio, Rangeslider, Togglebox } from "../../../components/FormComponents";
@@ -107,6 +107,44 @@ const FormGrid = () => (
                         />
                     </div>
                 </div>
+            </form>
+        </ComponentPreview>
+    </>
+);
+
+const Validation = () => (
+    <>
+        <h2 id="validation">Validation</h2>
+        <p>Forms validation...</p>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+            <form data-validate="true">
+                <InputGroup
+                    id="validate-first-name"
+                    type="text"
+                    label="First name"
+                    placeholder="Enter your first name"
+                    helpBlock="Comes before your last name"
+                    validate={true}
+                    pattern="asd"
+                    required
+                />
+                <InputGroup
+                    id="validate-last-name"
+                    type="text"
+                    label="Last name"
+                    placeholder="Enter your last name"
+                    helpBlock="Probably the same as at least one of your parents"
+                    validate={true}
+                />
+                <InputGroup
+                    id="validate-email-address"
+                    type="text"
+                    label="Email"
+                    placeholder="Enter your email"
+                    helpBlock="You know, electronic mail?"
+                    validate={true}
+                />{"\n"}
+                <button className="btn btn-brand" type="submit">Submit</button>{"\n"}
             </form>
         </ComponentPreview>
     </>
@@ -259,6 +297,7 @@ const FormsText = () => (
         <p className="lead">Forms...</p>
         <Overview />
         <FormGrid />
+        <Validation />
         <UsageWithFieldsets />
         <StaticText />
         <Checkboxes />
@@ -274,6 +313,7 @@ const FormsText = () => (
 class Forms extends Component {
     componentDidMount () {
         rangeslider.init();
+        validation.init();
     }
 
     render () {
@@ -291,4 +331,4 @@ class Forms extends Component {
 export default Forms;
 
 /* for testing */
-export { Overview, FormGrid, UsageWithFieldsets, StaticText, Checkboxes, DisabledCheckboxes, RadioButtons, DisabledRadioButtons, Toggleboxes, DisabledToggleboxes, RangeSlider, FormsText };
+export { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, Checkboxes, DisabledCheckboxes, RadioButtons, DisabledRadioButtons, Toggleboxes, DisabledToggleboxes, RangeSlider, FormsText };

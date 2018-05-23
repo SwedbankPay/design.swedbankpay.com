@@ -143,6 +143,48 @@ legend {
 
 .form-group {
     margin-bottom: @form-margin;
+
+    .validation-success,
+    .validation-warning,
+    .validation-error {
+        display: none;
+    }
+
+    .validation-default {
+        display: inline-block;
+    }
+
+    &.has-success {
+        .form-control-validation(@state-success);
+
+        .validation-default {
+            display: none;
+        }
+
+        .validation-success {
+            display: inline-block;
+        }
+
+        .success-feedback {
+            display: block;
+        }
+    }
+
+    &.has-error {
+        .form-control-validation(@state-error);
+
+        .validation-default {
+            display: none;
+        }
+
+        .validation-error {
+            display: inline-block;
+        }
+
+        .error-feedback {
+            display: block;
+        }
+    }
 }
 
 .checkbox,

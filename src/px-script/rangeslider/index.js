@@ -1,7 +1,7 @@
 import { applyToEachElement } from "../utils";
 
-export default {
-    init: () => {
+const rangeslider = (() => {
+    const init = () => {
         const rangeContainers = document.querySelectorAll(".rangeslider");
 
         applyToEachElement(rangeContainers, function (rangeContainer, i) {
@@ -15,7 +15,7 @@ export default {
             input.id = "px-rs-" + i;
 
             function handleInputChange () {
-            /* Filling slider background for webkit */
+                /* Filling slider background for webkit */
                 const max = input.attributes.max ? Number(input.attributes.max.value) : 100;
                 const min = input.attributes.min ? Number(input.attributes.min.value) : 0;
                 const value = Number(input.value);
@@ -51,5 +51,9 @@ export default {
             /* Update filler on startup */
             handleInputChange();
         });
-    }
-};
+    };
+
+    return { init };
+})();
+
+export default rangeslider;

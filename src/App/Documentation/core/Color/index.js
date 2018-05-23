@@ -69,3 +69,6 @@ const Color = () => {
 };
 
 export default Color;
+
+/* for testing */
+export { ColorPalette, Usage, ColorText };

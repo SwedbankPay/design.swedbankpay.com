@@ -79,16 +79,11 @@ export default [
                 path: "/docs/components/buttons",
                 component: require("../Documentation/components/Buttons")
             },
-            // {
-            //     title: "Cards",
-            //     path: "/docs/components/cards",
-            //     component: require("../Documentation/components/Cards")
-            // },
-            // {
-            //     title: "Dropdowns",
-            //     path: "/docs/components/dropdowns",
-            //     component: require("../Documentation/components/Dropdowns")
-            // },
+            {
+                title: "Datepickers",
+                path: "/docs/components/datepickers",
+                component: require("../Documentation/components/Datepickers")
+            },
             {
                 title: "Forms",
                 path: "/docs/components/forms",
@@ -128,6 +123,11 @@ export default [
                 title: "Tabs",
                 path: "/docs/components/tabs",
                 component: require("../Documentation/components/Tabs")
+            },
+            {
+                title: "Topbar",
+                path: "/docs/components/topbar",
+                component: require("../Documentation/components/Topbar")
             }
         ]
     },

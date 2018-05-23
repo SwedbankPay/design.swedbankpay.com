@@ -26,7 +26,6 @@ describe("Component: Loader - ", () => {
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("loader loader-test");
-        expect(wrapper.html()).toContain("loader-icon");
     });
 
     it("renders a muted loader with the specified size when prop size and muted is provided", () => {
@@ -36,7 +35,6 @@ describe("Component: Loader - ", () => {
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("loader loader-test loader-muted");
-        expect(wrapper.html()).toContain("loader-icon");
     });
 
     it("renders a loader with the specified size and class in when prop size and visible is provided", () => {
@@ -46,6 +44,5 @@ describe("Component: Loader - ", () => {
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("loader loader-test in");
-        expect(wrapper.html()).toContain("loader-icon");
     });
 });
