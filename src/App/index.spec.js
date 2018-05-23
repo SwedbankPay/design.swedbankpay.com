@@ -1,4 +1,4 @@
-import { Selector } from "testcafe";
+// import { Selector } from "testcafe";
 
 fixture `Getting Started`
     .page `http://localhost:3000`;

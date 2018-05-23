@@ -2,7 +2,7 @@ import NavMenu from "./NavMenu";
 
 const topbar = (() => {
     const init = () => {
-        const menu = document.querySelectorAll(".topbar")[1];
+        const menu = document.querySelector(".topbar");
 
         let leftNavMenu,
             rightNavMenu;
@@ -16,7 +16,7 @@ const topbar = (() => {
             }
 
             if (rightMenuBtnElement) {
-                // rightNavMenu = new NavMenu(menu, rightMenuBtnElement);
+                rightNavMenu = new NavMenu(rightMenuBtnElement);
             }
         }
 

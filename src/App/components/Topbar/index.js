@@ -8,7 +8,7 @@ const TopbarBtn = ({ align, icon, text, target }) => (
     </button>
 );
 
-const TopbarMenu = ({ align, menu }) => {
+const LeftMenu = ({ align, menu }) => {
     const { id, hierarchy } = menu;
 
     const Slide = ({ slide }) => {
@@ -54,14 +54,28 @@ const TopbarMenu = ({ align, menu }) => {
     );
 };
 
+const RightMenu = ({ align, menu }) => {
+    const { id, items } = menu;
+
+    return (
+        <nav id={id} className={`topbar-nav topbar-nav-${align}`}>
+            {items.map((item, i) => (
+                <Fragment key={i}>{"\n"}
+                    <a href={item.href}>{item.title}</a>
+                </Fragment>
+            ))}{"\n"}
+        </nav>
+    );
+};
+
 const Topbar = ({ logo, leftMenu, rightMenu }) => {
     return (
         <div className="topbar">{"\n"}
             {leftMenu ? <TopbarBtn align="left" icon={leftMenu.btn.icon} text={leftMenu.btn.text} target={leftMenu.id} /> : null}{leftMenu ? "\n" : null}
             {logo ? <a href="#" className={`topbar-logo logo-${logo}`}></a> : null}{logo ? "\n" : null}
             {rightMenu ? <TopbarBtn align="right" icon={rightMenu.btn.icon} text={rightMenu.btn.text} target={rightMenu.id} /> : null}{rightMenu ? "\n" : null}
-            {leftMenu ? <TopbarMenu align="left" menu={leftMenu} /> : null}{leftMenu ? "\n" : null}
-            {/* {rightMenu ? <TopbarMenu align="right" menu={rightMenu} /> : null}{rightMenu ? "\n" : null} */}
+            {leftMenu ? <LeftMenu align="left" menu={leftMenu} /> : null}{leftMenu ? "\n" : null}
+            {rightMenu ? <RightMenu align="right" menu={rightMenu} /> : null}{rightMenu ? "\n" : null}
         </div>
     );
 };

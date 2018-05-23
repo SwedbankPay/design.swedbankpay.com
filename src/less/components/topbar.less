@@ -85,6 +85,7 @@
     &.topbar-nav-right {
         transition: right @topbar-slide-transition;
         right: -@topbar-nav-width;
+        padding: 1rem;
 
         &.in {
             right: 0;
@@ -168,32 +169,32 @@
                         opacity: 0.65;
                     }
                 }
-
-                a,
-                span {
-                    display: block;
-                    color: @gray-7;
-                    padding: 0.5rem 0 0.5rem 0.6rem;
-                    cursor: pointer;
-                    text-transform: uppercase;
-
-                    &:hover {
-                        background-color: @gray-2;
-                        color: @white;
-                        text-decoration: none;
-                    }
-
-                    &[data-target] {
-                        display: flex;
-                        justify-content: space-between;
-                    }
-
-                    .material-icons {
-                        opacity: 0.65;
-                        margin-top: 1px; //TODO: this might backfire, rem and stuff.. [STA]
-                    }
-                }
             }
+        }
+    }
+
+    a,
+    span {
+        display: block;
+        color: @gray-7;
+        padding: 0.5rem 0 0.5rem 0.6rem;
+        cursor: pointer;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: @gray-2;
+            color: @white;
+            text-decoration: none;
+        }
+
+        &[data-target] {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .material-icons {
+            opacity: 0.65;
+            margin-top: 1px; //TODO: this might backfire, rem and stuff.. [STA]
         }
     }
 }

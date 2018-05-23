@@ -23,7 +23,9 @@ export default class NavMenu {
             this.handleClick();
         });
 
-        this._initNavSlides();
+        if (this.navSlides.length) {
+            this._initNavSlides();
+        }
         this._initTargetLinks();
     }
 
