@@ -14,7 +14,7 @@
         "lint": "eslint src/ && stylelint src/less/",
         "eslint:tc": "eslint src/ -f './node_modules/eslint-teamcity/index.js'",
         "stylelint:tc": "stylelint src/less/ --custom-formatter node_modules/stylelint-teamcity-formatter",
-        "e2e:chrome": "npm start && testcafe chrome src/**/*.spec.js"
+        "e2e:chrome": "testcafe chrome src/**/*.spec.js"
     },
     "repository": {
         "type": "git",
