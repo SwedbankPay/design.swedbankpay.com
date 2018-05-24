@@ -124,7 +124,7 @@ const Options = () => (
                     </td>
                     <td>
                         <p>
-                            Format string used for the input field and names for days and months. All have the same time format (HH:mm), and starts the week on monday (1), except <Attribute value="en" />, which starts on sunday (0).
+                            Format string used for the input field and names for days and months. All have the same time format (HH:mm), and starts the week on monday (1).
                         </p>
                         <p>
                             The following options are available:
