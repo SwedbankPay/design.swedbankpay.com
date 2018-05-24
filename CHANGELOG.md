@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.4.1] - 2018-05-24
+
+### Fixed
+
+- Fixed a bug with modals not closing when clicking the close-icon in the top right corner.
+
 ## [0.4.0] - 2018-05-23
 
 ### Added

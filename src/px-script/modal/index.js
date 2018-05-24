@@ -2,7 +2,8 @@ const modal = (() => {
     const SELECTORS = {
         MODAL: ".modal",
         CLOSE: "[data-modal-close]",
-        OPEN: "[data-modal-open]"
+        OPEN: "[data-modal-open]",
+        CLOSEICON: "i.modal-close"
     };
 
     const _openModal = modal => {
@@ -22,8 +23,13 @@ const modal = (() => {
 
         modals.forEach(modal => {
             const closeBtn = modal.querySelector(SELECTORS.CLOSE);
+            const closeIcon = modal.querySelector(SELECTORS.CLOSEICON);
 
             closeBtn.addEventListener("click", () => {
+                _closeModal(modal);
+            });
+
+            closeIcon.addEventListener("click", () => {
                 _closeModal(modal);
             });
 

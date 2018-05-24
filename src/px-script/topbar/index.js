@@ -31,7 +31,7 @@ const topbar = (() => {
         });
     };
 
-    return { init: init };
+    return { init };
 })();
 
 export default topbar;
