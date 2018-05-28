@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.0] - 2018-05-
+
+### Added
+
+- Added section about icons.
+
 ## [0.4.1] - 2018-05-24
 
 ### Fixed
