@@ -93,6 +93,15 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "IconsText": [Function],
+                  "Usage": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/core/icons",
+                "title": "Icons",
+              },
+              Object {
+                "component": Object {
                   "BasicList": [Function],
                   "DescriptionList": [Function],
                   "InlineList": [Function],

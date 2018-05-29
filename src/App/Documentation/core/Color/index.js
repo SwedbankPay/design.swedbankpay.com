@@ -7,7 +7,6 @@ import ColorPreview from "./ColorPreview";
 const ColorPalette = () => (
     <>
         <h2 id="color-palette">Color palette</h2>
-        {/* <a href="#" className=""><i className="material-icons color-warning icon-link">check</i></a> */}
         <p>The PayEx DesignGuide color palette...</p>
         <ComponentPreview language="html" showCasePanel={true}>
             <div className="row">
