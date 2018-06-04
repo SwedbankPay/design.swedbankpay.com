@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { setTitle } from "../utils";
 
 class Examples extends Component {
-    componentWillMount () {
+    componentDidMount () {
         setTitle("Examples");
     }
 

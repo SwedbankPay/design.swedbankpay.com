@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { setTitle } from "../utils";
 
 class Home extends Component {
-    componentWillMount () {
+    componentDidMount () {
         setTitle("Home");
     }
 
