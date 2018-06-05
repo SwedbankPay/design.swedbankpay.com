@@ -1,0 +1,9 @@
+.breakpoint-min(@name, @breakpoints: @grid-breakpoints) {}
+
+.media-breakpoint-up(@name, @breakpoint, @ruleset) when (@name = extract(@breakpoint, 1)) {
+    @min: extract(@breakpoint, 2);
+
+    @media (min-width: @min) {
+        @ruleset();
+    }
+}

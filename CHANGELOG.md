@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.0] - 2018-06-
+
+### Added
+
+- Added polyfill for `Nodelist.forEach`.
+
+### Changed
+
+- Reworked grid to resemble Bootstrap v4.
+
+### Fixed
+
 ## [0.5.0] - 2018-05-29
 
 ### Added
