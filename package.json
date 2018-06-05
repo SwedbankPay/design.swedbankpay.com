@@ -74,6 +74,7 @@
         "jest-teamcity-reporter": "^0.9.0",
         "less": "^2.7.3",
         "less-loader": "^4.0.5",
+        "less-plugin-lists": "^1.1.1",
         "postcss-loader": "^2.1.0",
         "react-test-renderer": "^16.2.0",
         "style-loader": "^0.20.1",
