@@ -53,6 +53,12 @@ exports[`Main: App renders 1`] = `
         render={[Function]}
       />
       <Route
+        exact={false}
+        key="4"
+        path="/grid"
+        render={[Function]}
+      />
+      <Route
         component={[Function]}
       />
     </Switch>
