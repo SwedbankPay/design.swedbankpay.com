@@ -80,6 +80,11 @@ export default [
                 component: require("../Documentation/components/Alerts")
             },
             {
+                title: "Badge",
+                path: "/docs/components/badge",
+                component: require("../Documentation/components/Badge")
+            },
+            {
                 title: "Breadcrumb",
                 path: "/docs/components/breadcrumb",
                 component: require("../Documentation/components/Breadcrumb")

@@ -7,12 +7,15 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - Added polyfill for `Nodelist.forEach`.
+- Added badge component.
 
 ### Changed
 
 - Reworked grid to resemble Bootstrap v4.
 
 ### Fixed
+
+- Fixed issue with documentation not being viewable in the edge browser.
 
 ## [0.5.0] - 2018-05-29
 
