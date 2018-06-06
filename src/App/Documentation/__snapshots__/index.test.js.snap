@@ -93,6 +93,13 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "default": [Function],
+                },
+                "path": "/docs/core/grid",
+                "title": "Grid",
+              },
+              Object {
+                "component": Object {
                   "IconsText": [Function],
                   "Usage": [Function],
                   "default": [Function],
