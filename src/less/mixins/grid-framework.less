@@ -7,6 +7,50 @@
         padding-left: (@gutter / 2);
     }
 
+    .for(@i, @end: @columns) {
+        .col-@{i} {
+            .grid-column();
+            .make-col(@i, @columns);
+        }
+    }
+
+    .col,
+    .col-auto {
+        .grid-column();
+    }
+
+    .col {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+    }
+
+    .col-auto {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: none; // Reset earlier grid tiers
+    }
+
+    .order-first {
+        order: -1;
+    }
+
+    .order-last {
+        order: @columns + 1;
+    }
+
+    .for(@i: 0, @end: @columns) {
+        .order-@{i} {
+            order: @i;
+        }
+    }
+
+    .for(@i: 0, @end: (@columns - 1)) {
+        .offset-@{i} {
+            .make-col-offset(@i, @columns);
+        }
+    }
+
     .for-each(@breakpoint in @breakpoints) {
         @infix: extract(@breakpoint, 1);
 
@@ -64,3 +108,4 @@
         .media-breakpoint-up(@infix, @breakpoint, { .ruleset(); });
     }
 }
+

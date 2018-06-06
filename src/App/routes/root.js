@@ -22,13 +22,5 @@ export default [
         path: "/templates",
         component: require("../Templates"),
         exact: false
-    },
-
-    // TODO: Remove
-    {
-        title: "Grid",
-        path: "/grid",
-        component: require("../Grid"),
-        exact: false
     }
 ];

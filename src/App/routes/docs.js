@@ -39,6 +39,11 @@ export default [
                 component: require("../Documentation/core/Color")
             },
             {
+                title: "Grid",
+                path: "/docs/core/grid",
+                component: require("../Documentation/core/Grid")
+            },
+            {
                 title: "Icons",
                 path: "/docs/core/icons",
                 component: require("../Documentation/core/Icons")
