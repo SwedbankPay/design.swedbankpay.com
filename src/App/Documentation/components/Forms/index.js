@@ -287,7 +287,7 @@ const RangeSlider = () => (
         <h2 id="rangeslider">Rangeslider</h2>
         <p>Rangeslider...</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-            <Rangeslider min={0} max={200} step={1} value={100} valueLabel={true} valueLabelPrefix="$" valueLabelPostfix="%" />
+            <Rangeslider min={0} max={200} step={1} value={100} color="neutral" valueLabel={true} valueLabelPrefix="$" valueLabelPostfix="%" valueLabelPosition="right" />
         </ComponentPreview>
     </>
 );
