@@ -153,7 +153,13 @@ export default [
     {
         title: "Utilities",
         path: "/docs/utilities",
-        redirect: "/docs/getting-started/introduction",
-        routes: []
+        redirect: "/docs/utilities/visibility",
+        routes: [
+            {
+                title: "Visibility",
+                path: "/docs/utilities/visibility",
+                component: require("../Documentation/utilities/Visibility")
+            }
+        ]
     }
 ];

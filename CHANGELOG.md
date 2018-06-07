@@ -2,16 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.5.0] - 2018-06-
+## [0.6.0] - 2018-06-
 
 ### Added
 
 - Added polyfill for `Nodelist.forEach`.
 - Added badge component.
+- Added utility classes for visibility.
 
 ### Changed
 
-- Reworked grid to resemble Bootstrap v4.
+- Reworked grid to resemble that of Bootstrap v4.
 
 ### Fixed
 
