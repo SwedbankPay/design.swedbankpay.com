@@ -9,7 +9,6 @@ label {
     line-height: 1.5;
 }
 
-
 fieldset {
     padding: 0;
     margin: 0;
@@ -18,54 +17,45 @@ fieldset {
     // See https://github.com/twbs/bootstrap/issues/12359.
     min-width: 0;
     margin-bottom: 1rem;
-
     &:disabled {
         .checkbox input[type=checkbox] {
             &:after {
                 background-color: @input-bg-disabled;
                 border-color: @input-checked-bg-disabled;
             }
-
             &:checked:after {
                 background-color: @input-checked-bg-disabled;
             }
-
-            + label,
+            +label,
             &:after,
             &:checked:after {
                 cursor: not-allowed;
             }
         }
-
         .radio input[type=radio] {
             &:after {
                 background-color: @input-bg-disabled;
                 border-color: @input-checked-bg-disabled;
             }
-
             &:checked:after {
                 background-color: @input-checked-bg-disabled;
             }
-
-            + label,
+            +label,
             &:after,
             &:checked:after {
                 cursor: not-allowed;
             }
         }
-
         .togglebox input[type=checkbox] {
             &:before,
             &:after {
                 background-color: @input-bg-disabled;
                 border-color: @input-checked-bg-disabled;
             }
-
             &:checked:before {
                 background-color: @input-checked-bg-disabled;
             }
-
-            + label,
+            +label,
             &:before,
             &:after,
             &:checked:before,
@@ -110,32 +100,24 @@ legend {
     border-radius: @input-border-radius;
     box-shadow: none;
     transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-
     .form-control-focus();
     .placeholder();
-
     &::placeholder {
-        color: @gray-6;
-        // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+        color: @gray-6; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
         opacity: 1;
-    }
-
-    // HTML5 says that controls under a fieldset > legend:first-child won't be
+    } // HTML5 says that controls under a fieldset > legend:first-child won't be
     // disabled if the fieldset is disabled. Due to implementation difficulty, we
     // don't honor that edge case; we style them as disabled anyway.
     &[disabled],
     &[readonly],
     fieldset[disabled] & {
-        background-color: @input-bg-disabled !important;
+        background-color: @input-bg-disabled  !important;
         opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
     }
-
     &[disabled],
     fieldset[disabled] & {
         cursor: @cursor-disabled;
-    }
-
-    // Reset height for `textarea`s
+    } // Reset height for `textarea`s
     textarea& {
         height: auto;
     }
@@ -143,44 +125,34 @@ legend {
 
 .form-group {
     margin-bottom: @form-margin;
-
     .validation-success,
     .validation-warning,
     .validation-error {
         display: none;
     }
-
     .validation-default {
         display: inline-block;
     }
-
     &.has-success {
         .form-control-validation(@state-success);
-
         .validation-default {
             display: none;
         }
-
         .validation-success {
             display: inline-block;
         }
-
         .success-feedback {
             display: block;
         }
     }
-
     &.has-error {
         .form-control-validation(@state-error);
-
         .validation-default {
             display: none;
         }
-
         .validation-error {
             display: inline-block;
         }
-
         .error-feedback {
             display: block;
         }
@@ -207,29 +179,24 @@ legend {
 
 // Checkbox
 // ==========================================================================
-
 .checkbox {
     position: relative;
     display: flex;
     align-items: center;
-
     &:not(:last-child) {
         margin-bottom: 0.5rem;
     }
-
     label {
         position: relative;
         display: flex;
         align-items: center;
         margin: 0;
     }
-
     input[type=checkbox] {
         position: relative;
         height: @checkbox-height;
         width: @checkbox-width;
         margin-right: 0.5rem;
-
         &:after {
             content: "";
             display: block;
@@ -243,25 +210,21 @@ legend {
             border: 1px solid @checkbox-bg;
             cursor: pointer;
         }
-
         &:checked:after {
             background-color: @checkbox-bg;
             background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAJCAYAAAALpr0TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNWWFMmUAAACOSURBVChTfc+xDYJAFIdxCktLCwoLBmAESwoGMLF1BFomYAjHcABdxcrCwoKSmOP7LncJRuI/+cHLuwc8ihDCPzvU1muH2QY3jGjWBrILzBNVbu5RplodzIQD4qcbvHG1gRYOmDPiw15c+AXTw53MgDikXBxhPunu2/2Zn0HdYR7YYnn2NegKJ1SLXhKKGZDpJWzFmbqTAAAAAElFTkSuQmCC);
             background-position: 50% 50%;
             background-repeat: no-repeat;
         }
-
         &[disabled] {
             &:after {
                 background-color: @input-bg-disabled;
                 border-color: @input-checked-bg-disabled;
             }
-
             &:checked:after {
                 background-color: @input-checked-bg-disabled;
             }
-
-            + label,
+            +label,
             &:after,
             &:checked:after {
                 cursor: not-allowed;
@@ -272,29 +235,24 @@ legend {
 
 // Radio
 // ==========================================================================
-
 .radio {
     position: relative;
     display: flex;
     align-items: center;
-
     &:not(:last-child) {
         margin-bottom: 0.5rem;
     }
-
     label {
         position: relative;
         display: flex;
         align-items: center;
         margin: 0;
     }
-
     input[type=radio] {
         position: relative;
         height: @checkbox-height;
         width: @checkbox-width;
         margin-right: 0.5rem;
-
         &:after {
             content: "";
             display: block;
@@ -309,25 +267,21 @@ legend {
             cursor: pointer;
             border-radius: 50%;
         }
-
         &:checked:after {
             background-color: @checkbox-bg;
             background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNWWFMmUAAABMSURBVChTjY8xCgAgDMT6GEf/7uDTHBzrBe0iFjwIlDOUau4ORTQxD8x0Fo9D3KErCNhZGgIrs8wvoe/5mY5QRXZkRQiJTfFNZnVuC4bS8W24IBKtAAAAAElFTkSuQmCC);
             background-position: 50% 50%;
             background-repeat: no-repeat;
         }
-
         &[disabled] {
             &:after {
                 background-color: @input-bg-disabled;
                 border-color: @input-checked-bg-disabled;
             }
-
             &:checked:after {
                 background-color: @input-checked-bg-disabled;
             }
-
-            + label,
+            +label,
             &:after,
             &:checked:after {
                 cursor: not-allowed;
@@ -342,20 +296,16 @@ legend {
     position: relative;
     display: flex;
     align-items: center;
-
     &:not(:last-child) {
         margin-bottom: 0.5rem;
     }
-
     label {
         margin: 0;
     }
-
     input[type=checkbox] {
         margin-right: 0.5rem;
         height: @checkbox-height;
         width: @checkbox-width * 2;
-
         &:before {
             transition: background-color 0.2s ease 0.22s;
             content: "";
@@ -370,7 +320,6 @@ legend {
             color: @white;
             cursor: pointer;
         }
-
         &:after {
             transition: transform 0.2s;
             content: "";
@@ -386,28 +335,23 @@ legend {
             color: @white;
             cursor: pointer;
         }
-
         &:checked:before {
             background-color: @checkbox-bg;
         }
-
         &:checked:after {
             transform: translateX(@checkbox-width);
             left: auto;
         }
-
         &[disabled] {
             &:before,
             &:after {
                 background-color: @input-bg-disabled;
                 border-color: @input-checked-bg-disabled;
             }
-
             &:checked:before {
                 background-color: @input-checked-bg-disabled;
             }
-
-            + label,
+            +label,
             &:before,
             &:after,
             &:checked:before,
@@ -420,140 +364,287 @@ legend {
 
 // Range slider
 // ==========================================================================
-
-.slider-range(@background) {
+.slider-range(@background, @border) {
     box-sizing: border-box;
     background: @background;
     border-radius: @range-height;
-    width: @range-height;
     height: @range-height;
-    border: 1px solid @brand-primary;
+    border: 1px solid @border;
 }
 
-.slider-thumb() {
+.slider-thumb(@color) {
     box-sizing: border-box;
     width: @thumb-size;
     height: @thumb-size;
     border-radius: 50%;
     background: @white;
-    border: 1px solid @brand-primary;
+    border: 1px solid @color;
+}
+
+.slider-color(@color) {
+    .value-label {
+        background: @color;
+        &:before {
+            border-right-color: @color;
+        }
+        &:after {
+            border-top: 10px solid @color;
+        }
+
+    }
+    input[type="range"] {
+        &::-webkit-slider-thumb {
+            .slider-thumb(@color);
+        }
+        &::-moz-range-thumb {
+            .slider-thumb(@color);
+        }
+        &::-ms-thumb {
+            .slider-thumb(@color);
+        }
+        &::-webkit-slider-runnable-track {
+            .slider-range(linear-gradient(90deg, @color, @color) 0 100% no-repeat content-box, @color);
+        }
+        /* FIREFOX */
+        &::-moz-range-track {
+            .slider-range(#f9fafa, @color);
+        }
+        /* INTERNET EXPLORER & EDGE */
+        &::-ms-track {
+            .slider-range(transparent, @color);
+        }
+        &::-moz-range-progress {
+            background: @color;
+        }
+        &::-ms-fill-upper {
+            background: #f9fafa;
+            border: 1px solid @color;
+        }
+        &::-ms-fill-lower {
+            background: @color;
+            border: 1px solid @color;
+        }
+    }
 }
 
 .rangeslider {
-    width: 100%;
+    position: relative;
+    width: 100%;    
     display: flex;
-    justify-content: space-between;
     height: @thumb-size;
-
+    box-sizing: border-box;
+    background: transparent;
+    margin-top: 2rem;
+    &.rangeslider-brand {
+        .slider-color(@brand-primary);
+    }
+    &.rangeslider-neutral {
+        .slider-color(@state-neutral);
+    }
+    &.rangeslider-default {
+        .slider-color(@dark-gray);
+    }
     .value-label {
-        background-color: lighten(@state-neutral, 50%);
-        color: @state-neutral;
-        font-size: @small-font-size;
-        margin-left: 1rem;
-        vertical-align: middle;
-        padding: 0.2rem;
-        white-space: nowrap;
-        position: relative;
+        
+        box-sizing: border-box;
         display: flex;
-        align-items: center;
+        color: #fff;
+        padding: 0.2rem;
+        font-size: @small-font-size;        
+        text-align: center;
+        vertical-align: middle;
+        white-space: nowrap;
 
-        &:before {
-            content: "";
+        &-position-right {
+            margin-left: 1rem;
+            position: relative;
+            height: @thumb-size;
+            &:before {
+                content: "";
+                position: absolute;
+                border: solid @range-height transparent;
+                top: 0;
+                right: 100%;
+            }
+        }       
+
+        &-position-top {
             position: absolute;
-            border: solid @range-height transparent;
-            top: 0;
-            right: 100%;
-            border-right-color: lighten(@state-neutral, 50%);
+            top: -45px;
+            left: 0;
+            right: 10%;
+            justify-content: center;            
+            margin: 0 auto;
+            padding: 0;
+            width: 80px;
+
+            &:after {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+                top: 100%;
+                left: 2rem;
+            }
         }
-
-
+        
         p {
+            display: flex;
             margin: 0;
-            vertical-align: middle;
-
+            align-items: center;
             span {
                 margin: 0 1.5px;
             }
         }
     }
-
-    input[type=range] {
+    input[type="range"] {
         -webkit-appearance: none;
-        width: 90%;
-        cursor: move;
+        box-sizing: border-box;
+        display: table-cell;
+        width: 90%; // Explicitly set to 90% and not 100% for padding between slider and text-box to work on IE ( No need for this if text-box position is top though -THN )
+        height: @thumb-size;
+        background: transparent;
+        padding: 0;
+        vertical-align: middle;
         cursor: grab;
-
+        cursor: -webkit-grab;
+        cursor: -moz-grab;
         &:active {
             cursor: grabbing;
+            cursor: -webkit-grabbing;
+            cursor: -moz-grabbing;
         }
-
         &:focus {
             outline: none;
-
-            &::-webkit-slider-thumb {
-                .tab-focus();
-            }
         }
-
         /*** BROWSER SPECIFIC STYLES ***/
-
         /* CHROME, OPERA & SAFARI */
         &::-webkit-slider-runnable-track {
             -webkit-appearance: none;
-            .slider-range(@range-webkit-bg);
         }
-
         &::-webkit-slider-thumb {
             -webkit-appearance: none;
             transform: translateY(-(@range-height + 0.1) / 2);
-            .slider-thumb();
         }
-
-        /* FIREFOX */
-        &::-moz-range-track {
-            .slider-range(@range-bg);
-        }
-
-        &::-moz-range-thumb {
-            .slider-thumb();
-        }
-
         &::-moz-range-progress {
-            background: @brand-primary;
             height: @range-height;
             border-radius: (@checkbox-height / 2);
         }
-
         /* INTERNET EXPLORER & EDGE */
         &::-ms-track {
-            height: @range-height + 1px;
             color: transparent;
             background: transparent;
-            .slider-range(transparent);
         }
-
         &::-ms-thumb {
             margin-top: @thumb-size / 2; // Offset for Edge
-            .slider-thumb();
-
             /* Reset offset for correct placement in IE */
             @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
                 margin: 0;
             }
         }
-
         &::-ms-fill-upper {
-            background: @range-bg;
             border-radius: (@checkbox-height / 2);
         }
-
         &::-ms-fill-lower {
-            background: @brand-primary;
             border-radius: (@checkbox-height / 2);
         }
-
         &::-ms-tooltip {
             display: none;
         }
     }
 }
+
+//  .rangeslider {
+//     width: 100%;
+//     display: flex;
+//     justify-content: space-between;
+//     height: @thumb-size;
+//     .value-label {
+//         background-color: lighten(@state-neutral, 50%);
+//         color: @state-neutral;
+//         font-size: @small-font-size;
+//         margin-left: 1rem;
+//         vertical-align: middle;
+//         padding: 0.2rem;
+//         white-space: nowrap;
+//         position: relative;
+//         display: flex;
+//         align-items: center;
+//         &:before {
+//             content: "";
+//             position: absolute;
+//             border: solid @range-height transparent;
+//             top: 0;
+//             right: 100%;
+//             border-right-color: lighten(@state-neutral, 50%);
+//         }
+//         p {
+//             margin: 0;
+//             vertical-align: middle;
+//             span {
+//                 margin: 0 1.5px;
+//             }
+//         }
+//     }
+//     input[type=range] {
+//         -webkit-appearance: none;
+//         width: 90%;
+//         cursor: move;
+//         cursor: grab;
+//         &:active {
+//             cursor: grabbing;
+//         }
+//         &:focus {
+//             outline: none;
+//             &::-webkit-slider-thumb {
+//                 .tab-focus();
+//             }
+//         }
+//         &::-webkit-slider-runnable-track {
+//             -webkit-appearance: none;
+//             .slider-range(@range-webkit-bg);
+//         }
+//         &::-webkit-slider-thumb {
+//             -webkit-appearance: none;
+//             transform: translateY(-(@range-height + 0.1) / 2);
+//             .slider-thumb();
+//         }
+//         &::-moz-range-track {
+//             .slider-range(@range-bg);
+//         }
+//         &::-moz-range-thumb {
+//             .slider-thumb();
+//         }
+//         &::-moz-range-progress {
+//             background: @brand-primary;
+//             height: @range-height;
+//             border-radius: (@checkbox-height / 2);
+//         }
+//         &::-ms-track {
+//             height: @range-height + 1px;
+//             color: transparent;
+//             background: transparent;
+//             .slider-range(transparent);
+//         }
+//         &::-ms-thumb {
+//             margin-top: @thumb-size / 2; // Offset for Edge
+//             .slider-thumb();
+//             @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+//                 margin: 0;
+//             }
+//         }
+//         &::-ms-fill-upper {
+//             background: @range-bg;
+//             border-radius: (@checkbox-height / 2);
+//         }
+//         &::-ms-fill-lower {
+//             background: @brand-primary;
+//             border-radius: (@checkbox-height / 2);
+//         }
+//         &::-ms-tooltip {
+//             display: none;
+//         }
+//     }
+// }
