@@ -4,8 +4,10 @@ about: Create a report to help us improve
 
 ---
 
+<!--- Provide a general summary of the issue in the Title above -->
+
 **Describe the bug**
-A clear and concise description of what the bug is.
+Provide a more detailed introduction to the issue itself, and why you consider it to be a bug.
 
 **To Reproduce**
 Steps to reproduce the behavior:
@@ -16,6 +18,12 @@ Steps to reproduce the behavior:
 
 **Expected behavior**
 A clear and concise description of what you expected to happen.
+
+**Actual behavior**
+A clear and concise description of what actually happened.
+
+**Possible fix**
+Not obligatory, but suggest a fix or reason for the bug.
 
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
