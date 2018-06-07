@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 - Added polyfill for `Object.assign`.
 - Added badge component.
 - Added utility classes for visibility.
+- Added utility classes for display properties.
 
 ### Changed
 
@@ -17,7 +18,7 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
-- Fixed issue with documentation not being viewable in the edge browser.
+- Fixed issue with documentation not being viewable in the edge and ie browsers.
 
 ## [0.5.0] - 2018-05-29
 
