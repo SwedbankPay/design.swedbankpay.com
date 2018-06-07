@@ -349,7 +349,7 @@ exports[`Documentation: index renders 1`] = `
             Array [
               Object {
                 "component": Object {
-                  "BasicUsage": [Function],
+                  "Intro": [Function],
                   "VisibilityText": [Function],
                   "default": [Function],
                 },
