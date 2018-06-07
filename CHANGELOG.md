@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - Added polyfill for `Nodelist.forEach`.
+- Added polyfill for `Object.assign`.
 - Added badge component.
 - Added utility classes for visibility.
 
