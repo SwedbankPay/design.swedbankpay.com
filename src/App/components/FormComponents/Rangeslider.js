@@ -12,19 +12,19 @@ const Rangeslider = ({ name, min, max, step, color, value, valueLabel, valueLabe
     };
 
     const ValueLabel = () => (
-        <output className={`value-label${valueLabelPosition ? ` value-label-position-${valueLabelPosition}` : " value-label-position-right" }`} >{"\n"}
-            <p>{"\n"}
-                {valueLabelPrefix ? <span>{valueLabelPrefix}</span> : null}{valueLabelPrefix ? "\n" : null}
-                <span data-px-rangeslider-value>{value}</span>{"\n"}
-                {valueLabelPostfix ? <span>{valueLabelPostfix}</span> : null}{valueLabelPostfix ? "\n" : null}
-            </p>{"\n"}
+        <output className="value-label" >{"\n\t\t"}
+            <p>{"\n\t\t\t"}
+                {valueLabelPrefix ? <span>{valueLabelPrefix}</span> : null}{valueLabelPrefix ? "\n\t\t\t" : null}
+                <span data-px-rangeslider-value>{value}</span>{"\n\t\t\t"}
+                {valueLabelPostfix ? <span>{valueLabelPostfix}</span> : null}{valueLabelPostfix ? "\n\t\t" : null}
+            </p>{"\n\t"}
         </output>
     );
 
     return (
-        <div className={`rangeslider rangeslider-${color ? color : "brand"}`}>{"\n"}
-            <input {...attrs}/>{"\n"}
-            {valueLabel ? <ValueLabel /> : null}
+        <div className={`rangeslider rangeslider-${color ? color : "brand"} label-${valueLabelPosition ? valueLabelPosition : "right"}`}>{"\n"}
+            <input {...attrs}/>{valueLabel ? "\n" : null}
+            {valueLabel ? <ValueLabel /> : null}{valueLabel ? "\n" : null}
         </div>
     );
 };

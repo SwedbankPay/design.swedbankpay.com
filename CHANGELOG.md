@@ -11,10 +11,13 @@ All notable changes to this project will be documented in this file.
 - Added badge component.
 - Added utility classes for visibility.
 - Added utility classes for display properties.
+- Added more variants of the rangeslider.
 
 ### Changed
 
 - Reworked grid to resemble that of Bootstrap v4.
+- Refactored the rangeslider.
+- Updated documentation for rangeslider.
 
 ### Fixed
 
