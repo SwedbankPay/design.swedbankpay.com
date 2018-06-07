@@ -13,9 +13,3 @@ exports[`Documentation: SelectPanel SearchBox renders 1`] = `
   />
 </div>
 `;
-
-exports[`Documentation: SelectPanel renders 1`] = `
-<Route
-  render={[Function]}
-/>
-`;
