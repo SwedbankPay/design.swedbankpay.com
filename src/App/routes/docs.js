@@ -143,6 +143,11 @@ export default [
                 title: "Topbar",
                 path: "/docs/components/topbar",
                 component: require("../Documentation/components/Topbar")
+            },
+            {
+                title: "Well",
+                path: "/docs/components/well",
+                component: require("../Documentation/components/Well")
             }
         ]
     },

@@ -337,6 +337,16 @@ exports[`Documentation: index renders 1`] = `
                 "path": "/docs/components/topbar",
                 "title": "Topbar",
               },
+              Object {
+                "component": Object {
+                  "DefaultWell": [Function],
+                  "WellSizes": [Function],
+                  "WellText": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/components/well",
+                "title": "Well",
+              },
             ]
           }
           title="Components"
