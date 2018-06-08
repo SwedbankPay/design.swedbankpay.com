@@ -9,11 +9,11 @@ label {
     line-height: 1.5;
 }
 
-
 fieldset {
     padding: 0;
     margin: 0;
-    border: 0; // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+    border: 0;
+    // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
     // so we reset that to ensure it behaves more like a standard block element.
     // See https://github.com/twbs/bootstrap/issues/12359.
     min-width: 0;
@@ -110,13 +110,11 @@ legend {
     border-radius: @input-border-radius;
     box-shadow: none;
     transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-
     .form-control-focus();
     .placeholder();
 
     &::placeholder {
-        color: @gray-6;
-        // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+        color: @gray-6; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
         opacity: 1;
     }
 
@@ -207,7 +205,6 @@ legend {
 
 // Checkbox
 // ==========================================================================
-
 .checkbox {
     position: relative;
     display: flex;
@@ -272,7 +269,6 @@ legend {
 
 // Radio
 // ==========================================================================
-
 .radio {
     position: relative;
     display: flex;
@@ -421,55 +417,154 @@ legend {
 // Range slider
 // ==========================================================================
 
-.slider-range(@background) {
+.slider-range(@background, @border) {
     box-sizing: border-box;
     background: @background;
     border-radius: @range-height;
-    width: @range-height;
     height: @range-height;
-    border: 1px solid @brand-primary;
+    border: 1px solid @border;
 }
 
-.slider-thumb() {
+.slider-thumb(@color) {
     box-sizing: border-box;
     width: @thumb-size;
     height: @thumb-size;
     border-radius: 50%;
     background: @white;
-    border: 1px solid @brand-primary;
+    border: 1px solid @color;
+}
+
+.slider-color(@color) {
+    .value-label {
+        background: @color;
+
+        &:before {
+            border-right-color: @color !important;
+        }
+
+        &:after {
+            border-top: 10px solid @color;
+        }
+    }
+
+    input[type="range"] {
+        &::-webkit-slider-thumb {
+            .slider-thumb(@color);
+        }
+
+        &::-moz-range-thumb {
+            .slider-thumb(@color);
+        }
+
+        &::-ms-thumb {
+            .slider-thumb(@color);
+        }
+
+        &::-webkit-slider-runnable-track {
+            .slider-range(linear-gradient(90deg, @color, @color) 0 100% no-repeat content-box, @color);
+        }
+
+        /* FIREFOX */
+        &::-moz-range-track {
+            .slider-range(#f9fafa, @color);
+        }
+
+        /* INTERNET EXPLORER & EDGE */
+        &::-ms-track {
+            .slider-range(transparent, @color);
+        }
+
+        &::-moz-range-progress {
+            background: @color;
+        }
+
+        &::-ms-fill-upper {
+            background: #f9fafa;
+            border: 1px solid @color;
+        }
+
+        &::-ms-fill-lower {
+            background: @color;
+            border: 1px solid @color;
+        }
+    }
 }
 
 .rangeslider {
+    position: relative;
     width: 100%;
     display: flex;
-    justify-content: space-between;
     height: @thumb-size;
+    box-sizing: border-box;
+    background: transparent;
+    margin-top: 2rem;
+
+    &.rangeslider-brand {
+        .slider-color(@brand-primary);
+    }
+
+    &.rangeslider-neutral {
+        .slider-color(@state-neutral);
+    }
+
+    &.rangeslider-default {
+        .slider-color(@dark-gray);
+    }
+
+    &.label-right {
+        .value-label {
+            margin-left: 1rem;
+            position: relative;
+            height: @thumb-size;
+
+            &:before {
+                content: "";
+                position: absolute;
+                border: solid @range-height transparent;
+                top: 0;
+                right: 100%;
+            }
+        }
+    }
+
+    &.label-top {
+        .value-label {
+            position: absolute;
+            top: -45px;
+            left: 0; // <- to please ie
+            right: 0; // <- to please ie
+            justify-content: center;
+            margin: 0 auto;
+            padding: 0;
+            width: 80px;
+
+            &:after {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+                top: 100%;
+                left: 2rem;
+            }
+        }
+    }
 
     .value-label {
-        background-color: lighten(@state-neutral, 50%);
-        color: @state-neutral;
-        font-size: @small-font-size;
-        margin-left: 1rem;
-        vertical-align: middle;
-        padding: 0.2rem;
-        white-space: nowrap;
-        position: relative;
+        box-sizing: border-box;
         display: flex;
-        align-items: center;
-
-        &:before {
-            content: "";
-            position: absolute;
-            border: solid @range-height transparent;
-            top: 0;
-            right: 100%;
-            border-right-color: lighten(@state-neutral, 50%);
-        }
-
+        color: @white;
+        padding: 0.2rem;
+        font-size: @small-font-size;
+        text-align: center;
+        vertical-align: middle;
+        white-space: nowrap;
 
         p {
+            display: flex;
             margin: 0;
-            vertical-align: middle;
+            align-items: center;
 
             span {
                 margin: 0 1.5px;
@@ -477,22 +572,27 @@ legend {
         }
     }
 
-    input[type=range] {
+    input[type="range"] {
         -webkit-appearance: none;
-        width: 90%;
-        cursor: move;
+        width: 100%;
+        box-sizing: border-box;
+        display: table-cell;
+        height: @thumb-size;
+        background: transparent;
+        padding: 0;
+        vertical-align: middle;
         cursor: grab;
+        cursor: -webkit-grab;
+        cursor: -moz-grab;
 
         &:active {
             cursor: grabbing;
+            cursor: -webkit-grabbing;
+            cursor: -moz-grabbing;
         }
 
         &:focus {
             outline: none;
-
-            &::-webkit-slider-thumb {
-                .tab-focus();
-            }
         }
 
         /*** BROWSER SPECIFIC STYLES ***/
@@ -500,41 +600,26 @@ legend {
         /* CHROME, OPERA & SAFARI */
         &::-webkit-slider-runnable-track {
             -webkit-appearance: none;
-            .slider-range(@range-webkit-bg);
         }
 
         &::-webkit-slider-thumb {
             -webkit-appearance: none;
             transform: translateY(-(@range-height + 0.1) / 2);
-            .slider-thumb();
-        }
-
-        /* FIREFOX */
-        &::-moz-range-track {
-            .slider-range(@range-bg);
-        }
-
-        &::-moz-range-thumb {
-            .slider-thumb();
         }
 
         &::-moz-range-progress {
-            background: @brand-primary;
             height: @range-height;
             border-radius: (@checkbox-height / 2);
         }
 
         /* INTERNET EXPLORER & EDGE */
         &::-ms-track {
-            height: @range-height + 1px;
             color: transparent;
             background: transparent;
-            .slider-range(transparent);
         }
 
         &::-ms-thumb {
             margin-top: @thumb-size / 2; // Offset for Edge
-            .slider-thumb();
 
             /* Reset offset for correct placement in IE */
             @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -543,12 +628,10 @@ legend {
         }
 
         &::-ms-fill-upper {
-            background: @range-bg;
             border-radius: (@checkbox-height / 2);
         }
 
         &::-ms-fill-lower {
-            background: @brand-primary;
             border-radius: (@checkbox-height / 2);
         }
 

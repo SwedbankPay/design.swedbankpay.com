@@ -1,6 +1,8 @@
+![PayEx logo](./src/img/px-logo.svg)
+
 # design.payex.com
 
-![PayEx logo](./src/img/px-logo.svg)
+[![Build status](https://ci.appveyor.com/api/projects/status/u04ft9aha1uwiex4/branch/master?svg=true)](https://ci.appveyor.com/project/erikhallaraaker/design-payex-com/branch/master)
 
 ## Installing / Getting started
 
@@ -17,7 +19,7 @@ DesignGuide requires [Node.js](https://nodejs.org/en/) (includes npm).
 1. `npm start`
     * If encountering an error, you might need to install [webpack-dev-server](https://github.com/webpack/webpack-dev-server) globally. You can do this by running the command `npm i webpack-dev-server -g`.
 1. Go to <http://localhost:3000>
-1. Works? If not, contact us on Slack ([#dev-design-guide](https://payex.slack.com/messages/C0L3W8B2S/)).
+1. Works? If not, contact us on Slack ([#design-guide-general](https://payex.slack.com/messages/C0L3W8B2S/)).
 1. Get to work.
 
 ## Developing
@@ -45,7 +47,7 @@ Design Guide uses [semantic versioning](http://semver.org/). This means that int
 
 1. Open a terminal and navigate to repo root
 1. Run the command `npm test`
-    * Many of the tests are snapshot based, and runs against already created snapshots. If you need to update the snapshots due to changes run the command `npm test:update`.
+    * Many of the tests are snapshot based, and runs against already created snapshots. If you need to update the snapshots due to changes run the command `npm run test:update`.
     * A test coverage report is generated after running the tests. This can be found in `./coverage` or.
 > Note: Snapshot testing is pretty unforgiving, so if you make __ANY__ changes to a component which already has a snapshot, the tests __WILL__ crash! So make sure to run `npm test:update` before committing.
 
@@ -80,12 +82,15 @@ __*Make sure to follow the syntax rules enforced by eslint & stylelint.*__
 ## Notable files
 
 * `.babelrc` - [Babel](https://babeljs.io/) configuration.
+* `.eslintignore` - List of files/directories eslint will ignore (similar to .gitignore).
 * `.eslintrc` - [Eslint](https://eslint.org/) configuration.
 * `.stylelintrc` - [Stylelint](https://stylelint.io/) configuration.
-* `.eslintignore` - List of files/directories eslint will ignore (similar to .gitignore).
+* `jest.config.js` - [jest](https://facebook.github.io/jest/) configuration.
+* `jest.setup.js` - Script file that will run before jest executes the tests, this includes [enzyme](http://airbnb.io/enzyme/) setup, polyfills and other useful snippets.
 * `webpack.config.js` - [Webpack](https://webpack.js.org/) configuration.
 
 ## Copyright, license and credits
 
 Code and documentation © PayEx and contributors, released under the [MIT License](LICENSE).
+
 Inspired by [Bootstrap](http://getbootstrap.com/) and [Materialize](https://materializecss.com/).

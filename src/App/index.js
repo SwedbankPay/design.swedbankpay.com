@@ -6,7 +6,7 @@ import routes from "./routes/root.js";
 import AppHeader from "./AppHeader";
 import ErrorPage404 from "./ErrorPage404";
 
-// const isProd = process.env.NODE_ENV === "production";
+const isProd = process.env.NODE_ENV === "production";
 // const history = createBrowserHistory({ basename: "/design.payex.com" });
 const history = createBrowserHistory();
 
@@ -21,12 +21,14 @@ const App = () => (
 
                     return (
                         <Route key={i} exact={exact} path={path} render={() => {
-                            history.listen(location => {
-                                window.gtag("config", "UA-3440932-20", {
-                                    "page_location": window.location.href,
-                                    "page_path": location.pathname
+                            if (isProd) {
+                                history.listen(location => {
+                                    window.gtag("config", "UA-3440932-20", {
+                                        "page_location": window.location.href,
+                                        "page_path": location.pathname
+                                    });
                                 });
-                            });
+                            }
                             return <RouteComponent />;
                         }} />
                     );

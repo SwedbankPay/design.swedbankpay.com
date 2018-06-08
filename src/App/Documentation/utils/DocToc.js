@@ -76,9 +76,7 @@ class DocToc extends Component {
             behavior: "smooth"
         });
 
-        if (process.env.NODE_ENV !== "production") {
-            window.history.pushState(null, null, `#${id}`);
-        }
+        window.history.pushState(null, null, `#${id}`);
     }
 
     componentDidMount () {
@@ -100,21 +98,23 @@ class DocToc extends Component {
 
     render () {
         return (
-            <div className="col-lg-2 hidden-md doc-toc">
-                <ul>
-                    {this.state.headings.map((heading, i) => {
-                        if (heading.id && heading.title) {
-                            const isWithinBoundary = this.state.windowTopPosition >= heading.top &&
-                                this.state.windowTopPosition < this.state.headings[i + 1].top;
+            <div className="col-lg-2 hidden-md">
+                <div className="doc-toc">
+                    <ul>
+                        {this.state.headings.map((heading, i) => {
+                            if (heading.id && heading.title) {
+                                const isWithinBoundary = this.state.windowTopPosition >= heading.top &&
+                            this.state.windowTopPosition < this.state.headings[i + 1].top;
 
-                            return (
-                                <li key={i} className={isWithinBoundary ? "active" : ""}>
-                                    <a href={`#${heading.id}`} onClick={e => this.scrollToElement(e, heading.top, heading.id)}>{heading.title}</a>
-                                </li>
-                            );
-                        }
-                    })}
-                </ul>
+                                return (
+                                    <li key={i} className={isWithinBoundary ? "active" : ""}>
+                                        <a href={`#${heading.id}`} onClick={e => this.scrollToElement(e, heading.top, heading.id)}>{heading.title}</a>
+                                    </li>
+                                );
+                            }
+                        })}
+                    </ul>
+                </div>
             </div>
         );
     }

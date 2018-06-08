@@ -39,6 +39,11 @@ export default [
                 component: require("../Documentation/core/Color")
             },
             {
+                title: "Grid",
+                path: "/docs/core/grid",
+                component: require("../Documentation/core/Grid")
+            },
+            {
                 title: "Icons",
                 path: "/docs/core/icons",
                 component: require("../Documentation/core/Icons")
@@ -73,6 +78,11 @@ export default [
                 title: "Alerts",
                 path: "/docs/components/alerts",
                 component: require("../Documentation/components/Alerts")
+            },
+            {
+                title: "Badge",
+                path: "/docs/components/badge",
+                component: require("../Documentation/components/Badge")
             },
             {
                 title: "Breadcrumb",
@@ -143,7 +153,13 @@ export default [
     {
         title: "Utilities",
         path: "/docs/utilities",
-        redirect: "/docs/getting-started/introduction",
-        routes: []
+        redirect: "/docs/utilities/visibility",
+        routes: [
+            {
+                title: "Visibility",
+                path: "/docs/utilities/visibility",
+                component: require("../Documentation/utilities/Visibility")
+            }
+        ]
     }
 ];

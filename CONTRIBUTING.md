@@ -10,6 +10,7 @@
 * create tests for your contribution.
 * run all tests.
 * run build scripts.
+* add changes to changelog.
 * if everything works, create a pull request.
 
 ## Creating a new component
