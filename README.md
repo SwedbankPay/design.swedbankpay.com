@@ -2,7 +2,7 @@
 
 # design.payex.com
 
-[![Build status](https://ci.appveyor.com/api/projects/status/u04ft9aha1uwiex4?svg=true)](https://ci.appveyor.com/project/erikhallaraaker/design-payex-com)
+[![Build status](https://ci.appveyor.com/api/projects/status/u04ft9aha1uwiex4/branch/master?svg=true)](https://ci.appveyor.com/project/erikhallaraaker/design-payex-com/branch/master)
 
 ## Installing / Getting started
 
