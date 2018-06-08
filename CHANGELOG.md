@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.6.0] - 2018-06-
+
+### Added
+
+- Added polyfill for `Nodelist.forEach`.
+- Added polyfill for `Object.assign`.
+- Added badge component.
+- Added utility classes for visibility.
+- Added utility classes for display properties.
+- Added more variants of the rangeslider.
+
+### Changed
+
+- Reworked grid to resemble that of Bootstrap v4.
+- Refactored the rangeslider.
+- Updated documentation for rangeslider.
+
+### Fixed
+
+- Fixed issue with documentation not being viewable in the edge and ie browsers.
+
 ## [0.5.0] - 2018-05-29
 
 ### Added

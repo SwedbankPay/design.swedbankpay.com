@@ -8,14 +8,14 @@ exports[`Documentation: index renders 1`] = `
     className="row"
   >
     <div
-      className="sidebar-heading col-md-3 col-sm-12"
+      className="sidebar-heading col-xxl-2 col-md-3 col-sm-12"
     >
       <h1>
         DesignGuide
       </h1>
     </div>
     <div
-      className="view-heading col-md-9 col-sm-12"
+      className="view-heading col-xxl-10 col-md-9 col-sm-12"
     >
       <withRouter(DocHeading) />
     </div>
@@ -25,7 +25,7 @@ exports[`Documentation: index renders 1`] = `
   >
     <withRouter(SelectPanel) />
     <main
-      className="doc-view col-md-9 col-sm-12"
+      className="doc-view col-xxl-10 col-md-9 col-sm-12"
     >
       <Switch>
         <Route
@@ -90,6 +90,13 @@ exports[`Documentation: index renders 1`] = `
                 },
                 "path": "/docs/core/color",
                 "title": "Color",
+              },
+              Object {
+                "component": Object {
+                  "default": [Function],
+                },
+                "path": "/docs/core/grid",
+                "title": "Grid",
               },
               Object {
                 "component": Object {
@@ -164,6 +171,16 @@ exports[`Documentation: index renders 1`] = `
                 },
                 "path": "/docs/components/alerts",
                 "title": "Alerts",
+              },
+              Object {
+                "component": Object {
+                  "BadgeText": [Function],
+                  "FurtherUsage": [Function],
+                  "Overview": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/components/badge",
+                "title": "Badge",
               },
               Object {
                 "component": Object {
@@ -327,8 +344,20 @@ exports[`Documentation: index renders 1`] = `
         <RenderRoutes
           key="3"
           path="/docs/utilities"
-          redirect="/docs/getting-started/introduction"
-          routes={Array []}
+          redirect="/docs/utilities/visibility"
+          routes={
+            Array [
+              Object {
+                "component": Object {
+                  "Intro": [Function],
+                  "VisibilityText": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/utilities/visibility",
+                "title": "Visibility",
+              },
+            ]
+          }
           title="Utilities"
         />
         <Redirect
