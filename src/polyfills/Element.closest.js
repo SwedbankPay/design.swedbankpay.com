@@ -1,7 +1,8 @@
-if (!Element.prototype.matches)
+if (!Element.prototype.matches) {
     Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
+}
 
-if (!Element.prototype.closest)
+if (!Element.prototype.closest) {
     Element.prototype.closest = function (s) {
         let el = this;
         if (!document.documentElement.contains(el)) return null;
@@ -11,3 +12,4 @@ if (!Element.prototype.closest)
         } while (el !== null && el.nodeType === 1);
         return null;
     };
+}

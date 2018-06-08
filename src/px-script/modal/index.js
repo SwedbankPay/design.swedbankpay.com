@@ -1,21 +1,21 @@
+const SELECTORS = {
+    MODAL: ".modal",
+    CLOSE: "[data-modal-close]",
+    OPEN: "[data-modal-open]",
+    CLOSEICON: "i.modal-close"
+};
+
+const _openModal = modal => {
+    modal.classList.add("in");
+    document.body.classList.add("modal-open");
+};
+
+const _closeModal = modal => {
+    modal.classList.remove("in");
+    document.body.classList.remove("modal-open");
+};
+
 const modal = (() => {
-    const SELECTORS = {
-        MODAL: ".modal",
-        CLOSE: "[data-modal-close]",
-        OPEN: "[data-modal-open]",
-        CLOSEICON: "i.modal-close"
-    };
-
-    const _openModal = modal => {
-        modal.classList.add("in");
-        document.body.classList.add("modal-open");
-    };
-
-    const _closeModal = modal => {
-        modal.classList.remove("in");
-        document.body.classList.remove("modal-open");
-    };
-
     const init = () => {
         const modals = document.querySelectorAll(SELECTORS.MODAL);
         const closeButtons = document.querySelectorAll(SELECTORS.CLOSE);

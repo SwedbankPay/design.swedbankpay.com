@@ -1,15 +1,15 @@
 import { findAncestor } from "../utils";
 
+const SELECTORS = {
+    ALERT: ".alert",
+    CLOSE: "[data-alert-close]"
+};
+
+const _hideAlert = alertElement => {
+    alertElement.classList.remove("in");
+};
+
 const alert = (() => {
-    const SELECTORS = {
-        ALERT: ".alert",
-        CLOSE: "[data-alert-close]"
-    };
-
-    const _hideAlert = alertElement => {
-        alertElement.classList.remove("in");
-    };
-
     const init = () => {
         const closeButtons = document.querySelectorAll(SELECTORS.CLOSE);
 

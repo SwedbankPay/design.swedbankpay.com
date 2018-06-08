@@ -14,23 +14,25 @@ const rangeslider = (() => {
             document.body.appendChild(inlineStyle);
             input.id = "px-rs-" + i;
 
-            function handleInputChange () {
-                /* Filling slider background for webkit */
-                const max = input.attributes.max ? Number(input.attributes.max.value) : 100;
-                const min = input.attributes.min ? Number(input.attributes.min.value) : 0;
-                const value = Number(input.value);
-                const rangePercent = (value + Math.abs(min)) / (max - min) * 100;
-
-                writeStyle({
-                    id: input.id,
-                    percent: rangePercent
-                });
-
+            const handleInputChange = () => {
                 /* Changing value of span */
                 if (valueSpan) valueSpan.innerHTML = input.value;
-            }
 
-            function writeStyle (obj) {
+                /* Filling slider background for chrome */
+                if (navigator.userAgent.indexOf("Chrome") > -1){
+                    const max = input.attributes.max ? Number(input.attributes.max.value) : 100;
+                    const min = input.attributes.min ? Number(input.attributes.min.value) : 0;
+                    const value = Number(input.value);
+                    const rangePercent = (value + Math.abs(min)) / (max - min) * 100;
+
+                    writeStyle({
+                        id: input.id,
+                        percent: rangePercent
+                    });
+                }
+            };
+
+            const writeStyle = obj => {
                 const index = inlineStyleContent.map(({ id }) => id).indexOf(obj.id);
                 let styleText = "";
 
@@ -41,7 +43,7 @@ const rangeslider = (() => {
                 });
 
                 inlineStyle.textContent = styleText;
-            }
+            };
 
             input.addEventListener("change", handleInputChange);
             input.addEventListener("keyup", handleInputChange);
