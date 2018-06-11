@@ -34,7 +34,7 @@ exports[`Core: Icons Usage renders 1`] = `
       className="language-html"
       component="code"
     >
-      &lt;i class='material-icons'&gt;[ICON NAME]&lt;/i&gt;
+      &lt;i class="material-icons"&gt;[ICON NAME]&lt;/i&gt;
     </PrismCode>
     .
   </p>
