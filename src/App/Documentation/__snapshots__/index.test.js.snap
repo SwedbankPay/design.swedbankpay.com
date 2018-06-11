@@ -93,6 +93,9 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "AutoLayoutColumns": [Function],
+                  "GridText": [Function],
+                  "HowItWorks": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/core/grid",
@@ -345,7 +348,7 @@ exports[`Documentation: index renders 1`] = `
                   "default": [Function],
                 },
                 "path": "/docs/components/well",
-                "title": "Well",
+                "title": "Well (experimental)",
               },
             ]
           }
@@ -354,9 +357,18 @@ exports[`Documentation: index renders 1`] = `
         <RenderRoutes
           key="3"
           path="/docs/utilities"
-          redirect="/docs/utilities/visibility"
+          redirect="/docs/utilities/display"
           routes={
             Array [
+              Object {
+                "component": Object {
+                  "DisplayText": [Function],
+                  "HowItWorks": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/utilities/display",
+                "title": "Display",
+              },
               Object {
                 "component": Object {
                   "Intro": [Function],
