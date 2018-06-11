@@ -145,7 +145,7 @@ export default [
                 component: require("../Documentation/components/Topbar")
             },
             {
-                title: "Well",
+                title: "Well (experimental)",
                 path: "/docs/components/well",
                 component: require("../Documentation/components/Well")
             }
@@ -158,8 +158,13 @@ export default [
     {
         title: "Utilities",
         path: "/docs/utilities",
-        redirect: "/docs/utilities/visibility",
+        redirect: "/docs/utilities/display",
         routes: [
+            {
+                title: "Display",
+                path: "/docs/utilities/display",
+                component: require("../Documentation/utilities/Display")
+            },
             {
                 title: "Visibility",
                 path: "/docs/utilities/visibility",

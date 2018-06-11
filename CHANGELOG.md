@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.7.0] - 2018-06-?
+
+### Added
+
+- Added well component.
+- Added a styling for using `text-muted` within a text-color modifyer class (i.e. `color-brand`).
+
+### Changed
+
+- Changed the name of the alert class `alert-error` to `alert-danger` to match the other components.
+
 ## [0.6.0] - 2018-06-08
 
 ### Added
