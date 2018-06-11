@@ -78,9 +78,18 @@ exports[`Documentation: index renders 1`] = `
         <RenderRoutes
           key="1"
           path="/docs/core"
-          redirect="/docs/core/color"
+          redirect="/docs/core/breakpoints"
           routes={
             Array [
+              Object {
+                "component": Object {
+                  "BreakpointsText": [Function],
+                  "Overview": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/core/breakpoints",
+                "title": "Breakpoints",
+              },
               Object {
                 "component": Object {
                   "ColorPalette": [Function],

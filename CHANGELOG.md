@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 
 - Added well component.
 - Added a styling for using `text-muted` within a text-color modifyer class (i.e. `color-brand`).
+- Added section about breakpoints.
 
 ### Changed
 

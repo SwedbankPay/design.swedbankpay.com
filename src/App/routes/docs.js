@@ -31,8 +31,13 @@ export default [
     {
         title: "Core",
         path: "/docs/core",
-        redirect: "/docs/core/color",
+        redirect: "/docs/core/breakpoints",
         routes: [
+            {
+                title: "Breakpoints",
+                path: "/docs/core/breakpoints",
+                component: require("../Documentation/core/Breakpoints")
+            },
             {
                 title: "Color",
                 path: "/docs/core/color",
