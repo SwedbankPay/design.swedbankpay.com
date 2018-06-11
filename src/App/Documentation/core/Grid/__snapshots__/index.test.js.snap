@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Core: Grid AutoLayoutColumns renders 1`] = `
+<React.Fragment>
+  <h2
+    id="auto-layout-columns"
+  >
+    Auto-layout columns
+  </h2>
+  <p>
+    Utilize breakpoint-specific column classes for easy column sizing without an explicit numbered class like 
+    <code
+      className="token property"
+    >
+      .col-sm-6
+    </code>
+    .
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="showcase-grid"
+    >
+      <div
+        className="container"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="col"
+          >
+            1 of 2
+          </div>
+          <div
+            className="col"
+          >
+            2 of 2
+          </div>
+        </div>
+        <div
+          className="row"
+        >
+          <div
+            className="col"
+          >
+            1 of 3
+          </div>
+          <div
+            className="col"
+          >
+            2 of 3
+          </div>
+          <div
+            className="col"
+          >
+            3 of 3
+          </div>
+        </div>
+      </div>
+    </div>
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Core: Grid GridText renders 1`] = `
+<div
+  className="col-md-12 col-lg-10 doc-body"
+>
+  <p
+    className="lead"
+  >
+    Use our grid system...
+  </p>
+  <HowItWorks />
+  <AutoLayoutColumns />
+</div>
+`;
+
+exports[`Core: Grid HowItWorks renders 1`] = `
+<React.Fragment>
+  <h2
+    id="how-it-works"
+  >
+    How it works
+  </h2>
+  <p>
+    The grid system is heavily based on Bootstrap
+    '
+    s grid from v.4.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="showcase-grid"
+    >
+      <div
+        className="container"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="col-sm"
+          >
+            One of three columns
+          </div>
+          <div
+            className="col-sm"
+          >
+            One of three columns
+          </div>
+          <div
+            className="col-sm"
+          >
+            One of three columns
+          </div>
+        </div>
+      </div>
+    </div>
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Core: Grid renders 1`] = `
+<div
+  className="doc-container"
+>
+  <div
+    className="row"
+  >
+    <GridText />
+    <DocToc
+      component={[Function]}
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Core: Icons IconsText renders 1`] = `
+<div
+  className="col-md-12 col-lg-10 doc-body"
+>
+  <p
+    className="lead"
+  >
+    The PayEx DesignGuide includes Google
+    '
+    s material icons. For a full overview of the available icons please visit 
+    <a
+      href="https://material.io/tools/icons/"
+    >
+      this site
+    </a>
+    .
+  </p>
+  <Usage />
+</div>
+`;
+
+exports[`Core: Icons Usage renders 1`] = `
+<React.Fragment>
+  <h2
+    id="usage"
+  >
+    Usage
+  </h2>
+  <p>
+    To use an icon, provide the following markup: 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;i class='material-icons'&gt;[ICON NAME]&lt;/i&gt;
+    </PrismCode>
+    .
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <i
+      className="material-icons"
+    >
+      android
+    </i>
+    
+
+    <i
+      className="material-icons"
+    >
+      contact_support
+    </i>
+    
+
+    <i
+      className="material-icons"
+    >
+      face
+    </i>
+    
+
+    <i
+      className="material-icons"
+    >
+      star
+    </i>
+    
+
+    <i
+      className="material-icons"
+    >
+      warning
+    </i>
+    
+
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Core: Icons renders 1`] = `
+<div
+  className="doc-container"
+>
+  <div
+    className="row"
+  >
+    <IconsText />
+    <DocToc
+      component={[Function]}
+    />
+  </div>
+</div>
+`;

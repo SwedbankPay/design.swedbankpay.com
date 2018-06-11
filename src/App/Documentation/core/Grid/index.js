@@ -79,3 +79,6 @@ const Grid = () => {
 };
 
 export default Grid;
+
+/* for testing */
+export { HowItWorks, AutoLayoutColumns, GridText };

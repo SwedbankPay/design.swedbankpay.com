@@ -34,7 +34,10 @@ const WellSizes = () => (
 
 const WellText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
-        <p className="lead">Well well, look what the cat dragged in...</p>
+        <div className="alert alert-danger in">
+            This component is under development and will probably change.
+        </div>
+        <p className="lead">Well well well, look what the cat dragged in...</p>
         <DefaultWell />
         <WellSizes />
     </div>
