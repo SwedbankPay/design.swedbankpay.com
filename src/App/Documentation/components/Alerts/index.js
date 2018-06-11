@@ -16,7 +16,7 @@ const BasicUsage = () => (
             <AlertComponent type="success" display={true} text="This is a success alert!" />{"\n\n"}
             <AlertComponent type="neutral" display={true} text="This is a neutral alert!" />{"\n\n"}
             <AlertComponent type="warning" display={true} text="This is a warning alert!" />{"\n\n"}
-            <AlertComponent type="error" display={true} text="This is a error alert!" />{"\n\n"}
+            <AlertComponent type="danger" display={true} text="This is a danger alert!" />{"\n\n"}
             <AlertComponent type="light" display={true} text="This is a light alert!" />{"\n\n"}
             <AlertComponent type="default" display={true} text="This is a default alert!" />
         </ComponentPreview>
@@ -31,7 +31,7 @@ const AlertWithLink = () => (
             <AlertComponent type="success" display={true} text="This is a success alert, " linkText="with a link!" />{"\n\n"}
             <AlertComponent type="neutral" display={true} text="This is a neutral alert, " linkText="with a link!" />{"\n\n"}
             <AlertComponent type="warning" display={true} text="This is a warning alert, " linkText="with a link!" />{"\n\n"}
-            <AlertComponent type="error" display={true} text="This is a error alert, " linkText="with a link!" />{"\n\n"}
+            <AlertComponent type="danger" display={true} text="This is a danger alert, " linkText="with a link!" />{"\n\n"}
             <AlertComponent type="light" display={true} text="This is a light alert, " linkText="with a link!" />{"\n\n"}
             <AlertComponent type="default" display={true} text="This is a default alert, " linkText="with a link!" />
         </ComponentPreview>
@@ -46,7 +46,7 @@ const AlertWithIcon = () => (
             <AlertComponent type="success" display={true} text="This is a success alert with an icon!" icon="check_circle" />{"\n\n"}
             <AlertComponent type="neutral" display={true} text="This is a neutral alert with an icon!" icon="info" />{"\n\n"}
             <AlertComponent type="warning" display={true} text="This is a warning alert with an icon!" icon="warning" />{"\n\n"}
-            <AlertComponent type="error" display={true} text="This is a error alert with an icon!" icon="error" />{"\n\n"}
+            <AlertComponent type="danger" display={true} text="This is a danger alert with an icon!" icon="error" />{"\n\n"}
             <AlertComponent type="light" display={true} text="This is a light alert with an icon!" icon="info_outline" />{"\n\n"}
             <AlertComponent type="default" display={true} text="This is a default alert with an icon!" icon="info_outline" />
         </ComponentPreview>
@@ -58,13 +58,13 @@ const ClosingTheAlert = () => (
         <h2 id="closing-the-alert">Closing the alert</h2>
         <p>
             To add a close-button, add the following code inside your alert-element:<br/>
-            <PrismCode className="language-html">{"<i className=\"material-icons\" data-alert-close>close</i>"}</PrismCode>
+            <PrismCode className="language-html">{"<i class=\"material-icons\" data-alert-close>close</i>"}</PrismCode>
         </p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <AlertComponent type="success" display={true} text="This is a success alert with an icon!" close={true} icon="check_circle" />{"\n\n"}
             <AlertComponent type="neutral" display={true} text="This is a neutral alert with an icon!" close={true} icon="info" />{"\n\n"}
             <AlertComponent type="warning" display={true} text="This is a warning alert with an icon!" close={true} icon="warning" />{"\n\n"}
-            <AlertComponent type="error" display={true} text="This is a error alert with an icon!" close={true} icon="error" />{"\n\n"}
+            <AlertComponent type="danger" display={true} text="This is a danger alert with an icon!" close={true} icon="error" />{"\n\n"}
             <AlertComponent type="light" display={true} text="This is a light alert with an icon!" close={true} icon="info_outline" />{"\n\n"}
             <AlertComponent type="default" display={true} text="This is a default alert with an icon!" close={true} icon="info_outline" />
         </ComponentPreview>

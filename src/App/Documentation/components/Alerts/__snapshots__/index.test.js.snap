@@ -52,8 +52,8 @@ exports[`Documentation: Alerts Alert With Icon renders 1`] = `
     <Alert
       display={true}
       icon="error"
-      text="This is a error alert with an icon!"
-      type="error"
+      text="This is a danger alert with an icon!"
+      type="danger"
     />
     
 
@@ -122,8 +122,8 @@ exports[`Documentation: Alerts Alert With Link renders 1`] = `
     <Alert
       display={true}
       linkText="with a link!"
-      text="This is a error alert, "
-      type="error"
+      text="This is a danger alert, "
+      type="danger"
     />
     
 
@@ -205,8 +205,8 @@ exports[`Documentation: Alerts Basic Usage renders 1`] = `
 
     <Alert
       display={true}
-      text="This is a error alert!"
-      type="error"
+      text="This is a danger alert!"
+      type="danger"
     />
     
 
@@ -242,7 +242,7 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
       className="language-html"
       component="code"
     >
-      &lt;i className="material-icons" data-alert-close&gt;close&lt;/i&gt;
+      &lt;i class="material-icons" data-alert-close&gt;close&lt;/i&gt;
     </PrismCode>
   </p>
   <ComponentPreview
@@ -284,8 +284,8 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
       close={true}
       display={true}
       icon="error"
-      text="This is a error alert with an icon!"
-      type="error"
+      text="This is a danger alert with an icon!"
+      type="danger"
     />
     
 
