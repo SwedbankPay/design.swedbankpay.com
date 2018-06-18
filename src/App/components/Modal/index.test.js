@@ -82,22 +82,13 @@ describe("Component: Modal - ", () => {
         expect(wrapper.html()).toContain("static");
     });
 
-    it("renders with class 'fade' when prop fade is true", () => {
-        const wrapper = shallow(
-            <Modal fade={true} />
-        );
-
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("fade");
-    });
-
-    it("renders with class 'in' when prop visible is true", () => {
+    it("renders with class 'd-block' when prop visible is true", () => {
         const wrapper = shallow(
             <Modal visible={true} />
         );
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("in");
+        expect(wrapper.html()).toContain("d-block");
     });
 
     it("renders without header when prop title is missing", () => {

@@ -23,7 +23,6 @@ exports[`Documentation: Alerts Alert With Icon renders 1`] = `
     showCasePanel={true}
   >
     <Alert
-      display={true}
       icon="check_circle"
       text="This is a success alert with an icon!"
       type="success"
@@ -32,7 +31,6 @@ exports[`Documentation: Alerts Alert With Icon renders 1`] = `
 
 
     <Alert
-      display={true}
       icon="info"
       text="This is a neutral alert with an icon!"
       type="neutral"
@@ -41,7 +39,6 @@ exports[`Documentation: Alerts Alert With Icon renders 1`] = `
 
 
     <Alert
-      display={true}
       icon="warning"
       text="This is a warning alert with an icon!"
       type="warning"
@@ -50,7 +47,6 @@ exports[`Documentation: Alerts Alert With Icon renders 1`] = `
 
 
     <Alert
-      display={true}
       icon="error"
       text="This is a danger alert with an icon!"
       type="danger"
@@ -59,7 +55,6 @@ exports[`Documentation: Alerts Alert With Icon renders 1`] = `
 
 
     <Alert
-      display={true}
       icon="info_outline"
       text="This is a light alert with an icon!"
       type="light"
@@ -68,7 +63,6 @@ exports[`Documentation: Alerts Alert With Icon renders 1`] = `
 
 
     <Alert
-      display={true}
       icon="info_outline"
       text="This is a default alert with an icon!"
       type="default"
@@ -93,7 +87,6 @@ exports[`Documentation: Alerts Alert With Link renders 1`] = `
     showCasePanel={true}
   >
     <Alert
-      display={true}
       linkText="with a link!"
       text="This is a success alert, "
       type="success"
@@ -102,7 +95,6 @@ exports[`Documentation: Alerts Alert With Link renders 1`] = `
 
 
     <Alert
-      display={true}
       linkText="with a link!"
       text="This is a neutral alert, "
       type="neutral"
@@ -111,7 +103,6 @@ exports[`Documentation: Alerts Alert With Link renders 1`] = `
 
 
     <Alert
-      display={true}
       linkText="with a link!"
       text="This is a warning alert, "
       type="warning"
@@ -120,7 +111,6 @@ exports[`Documentation: Alerts Alert With Link renders 1`] = `
 
 
     <Alert
-      display={true}
       linkText="with a link!"
       text="This is a danger alert, "
       type="danger"
@@ -129,7 +119,6 @@ exports[`Documentation: Alerts Alert With Link renders 1`] = `
 
 
     <Alert
-      display={true}
       linkText="with a link!"
       text="This is a light alert, "
       type="light"
@@ -138,7 +127,6 @@ exports[`Documentation: Alerts Alert With Link renders 1`] = `
 
 
     <Alert
-      display={true}
       linkText="with a link!"
       text="This is a default alert, "
       type="default"
@@ -180,7 +168,6 @@ exports[`Documentation: Alerts Basic Usage renders 1`] = `
     showCasePanel={true}
   >
     <Alert
-      display={true}
       text="This is a success alert!"
       type="success"
     />
@@ -188,7 +175,6 @@ exports[`Documentation: Alerts Basic Usage renders 1`] = `
 
 
     <Alert
-      display={true}
       text="This is a neutral alert!"
       type="neutral"
     />
@@ -196,7 +182,6 @@ exports[`Documentation: Alerts Basic Usage renders 1`] = `
 
 
     <Alert
-      display={true}
       text="This is a warning alert!"
       type="warning"
     />
@@ -204,7 +189,6 @@ exports[`Documentation: Alerts Basic Usage renders 1`] = `
 
 
     <Alert
-      display={true}
       text="This is a danger alert!"
       type="danger"
     />
@@ -212,7 +196,6 @@ exports[`Documentation: Alerts Basic Usage renders 1`] = `
 
 
     <Alert
-      display={true}
       text="This is a light alert!"
       type="light"
     />
@@ -220,7 +203,6 @@ exports[`Documentation: Alerts Basic Usage renders 1`] = `
 
 
     <Alert
-      display={true}
       text="This is a default alert!"
       type="default"
     />
@@ -252,7 +234,6 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
   >
     <Alert
       close={true}
-      display={true}
       icon="check_circle"
       text="This is a success alert with an icon!"
       type="success"
@@ -262,7 +243,6 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
 
     <Alert
       close={true}
-      display={true}
       icon="info"
       text="This is a neutral alert with an icon!"
       type="neutral"
@@ -272,7 +252,6 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
 
     <Alert
       close={true}
-      display={true}
       icon="warning"
       text="This is a warning alert with an icon!"
       type="warning"
@@ -282,7 +261,6 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
 
     <Alert
       close={true}
-      display={true}
       icon="error"
       text="This is a danger alert with an icon!"
       type="danger"
@@ -292,7 +270,6 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
 
     <Alert
       close={true}
-      display={true}
       icon="info_outline"
       text="This is a light alert with an icon!"
       type="light"
@@ -302,7 +279,6 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
 
     <Alert
       close={true}
-      display={true}
       icon="info_outline"
       text="This is a default alert with an icon!"
       type="default"
@@ -326,7 +302,6 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
     showCasePanel={true}
   >
     <Alert
-      display={true}
       icon="check_circle"
       id="alert-success-1"
       text="Press the button below to close me"

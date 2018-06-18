@@ -417,40 +417,10 @@ exports[`Component: Modal -  renders with a header without subtitle when prop ti
 </React.Fragment>
 `;
 
-exports[`Component: Modal -  renders with class 'fade' when prop fade is true 1`] = `
+exports[`Component: Modal -  renders with class 'd-block' when prop visible is true 1`] = `
 <React.Fragment>
   <section
-    className="modal modal-undefined modal-undefined fade"
-    role="dialog"
-    tabIndex="-1"
-  >
-    <div
-      className="modal-dialog"
-      role="document"
-    >
-      <div
-        className="modal-container"
-      >
-        
-
-        <i
-          className="material-icons modal-close"
-        >
-          close
-        </i>
-        <div
-          className="modal-body"
-        />
-      </div>
-    </div>
-  </section>
-</React.Fragment>
-`;
-
-exports[`Component: Modal -  renders with class 'in' when prop visible is true 1`] = `
-<React.Fragment>
-  <section
-    className="modal modal-undefined modal-undefined in"
+    className="modal modal-undefined modal-undefined d-block"
     role="dialog"
     tabIndex="-1"
   >
