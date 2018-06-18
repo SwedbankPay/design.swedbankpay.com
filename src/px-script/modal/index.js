@@ -6,12 +6,12 @@ const SELECTORS = {
 };
 
 const _openModal = modal => {
-    modal.classList.add("in");
+    modal.classList.add("d-block");
     document.body.classList.add("modal-open");
 };
 
 const _closeModal = modal => {
-    modal.classList.remove("in");
+    modal.classList.remove("d-block");
     document.body.classList.remove("modal-open");
 };
 
@@ -35,7 +35,7 @@ const modal = (() => {
 
             // close the modal when clicking outside
             modal.addEventListener("click", e => {
-                if (e.target.classList.contains("in")) {
+                if (e.target.classList.contains("d-block")) {
                     _closeModal(modal);
                 }
             });
@@ -70,7 +70,7 @@ const modal = (() => {
         // Close modals on esc
         document.addEventListener("keydown", e => {
             if (e.keyCode === 27) {
-                const modal = document.querySelector(".modal.in");
+                const modal = document.querySelector(".modal.d-block");
                 _closeModal(modal);
             }
         });

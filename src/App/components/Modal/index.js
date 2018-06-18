@@ -12,10 +12,10 @@ const OpenModalButton = ({ id }) => (
     <button data-modal-open={id} className="btn btn-brand">Open modal</button>
 );
 
-const Modal = ({ title, subTitle, id, footerText, footerAlignment, type, size, visible, isStatic, fade, button, children }) => {
+const Modal = ({ title, subTitle, id, footerText, footerAlignment, type, size, visible, isStatic, button, children }) => {
     return (
         <>
-            <section className={`modal modal-${type} modal-${size}${isStatic ? " static" : ""}${fade ? " fade" : ""}${visible ? " in" : ""}`} id={id} tabIndex="-1" role="dialog">
+            <section className={`modal modal-${type} modal-${size}${isStatic ? " static" : ""}${visible ? " d-block" : ""}`} id={id} tabIndex="-1" role="dialog">
                 <div className="modal-dialog" role="document">
                     <div className="modal-container">{"\n"}
                         <i className="material-icons modal-close">close</i>
@@ -47,7 +47,6 @@ Modal.propTypes = {
     type: PropTypes.oneOf(["brand", "default"]).isRequired,
     size: PropTypes.oneOf(["small", "medium", "large"]).isRequired,
     visible: PropTypes.bool,
-    fade: PropTypes.bool,
     isStatic: PropTypes.bool,
     button: PropTypes.bool
 };
