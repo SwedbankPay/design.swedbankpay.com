@@ -98,18 +98,6 @@
 @link-hover-color:                          darken(@brand-primary, 10%);
 @link-hover-decoration:                     underline;
 
-/* Media queries breakpoints */
-// Define the breakpoints at which your layout will change, adapting to different screen sizes.
-@screen-xs-min:                             480px;
-@screen-sm-min:                             768px;
-@screen-md-min:                             992px;
-@screen-lg-min:                             1200px;
-
-// So media queries don't overlap when required, provide a maximum
-@screen-xs-max:                             (@screen-sm-min - 1);
-@screen-sm-max:                             (@screen-md-min - 1);
-@screen-md-max:                             (@screen-lg-min - 1);
-
 /* Cursor */
 @cursor-disabled:                           not-allowed;
 
@@ -152,6 +140,20 @@
 @grid-breakpoints:                          xs 0, sm 576px, md 768px, lg 992px, xl 1200px, xxl 1600px;
 
 @container-max-widths:                      540px, 720px, 960px, 1140px, 1460px;
+
+/* Media queries breakpoints */
+// Define the breakpoints at which your layout will change, adapting to different screen sizes.
+@screen-xs-min:                             extract(extract(@grid-breakpoints, 2), 2);
+@screen-sm-min:                             extract(extract(@grid-breakpoints, 3), 2);
+@screen-md-min:                             extract(extract(@grid-breakpoints, 4), 2);
+@screen-lg-min:                             extract(extract(@grid-breakpoints, 5), 2);
+@screen-xl-min:                             extract(extract(@grid-breakpoints, 6), 2);
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:                             (@screen-sm-min - 1);
+@screen-sm-max:                             (@screen-md-min - 1);
+@screen-md-max:                             (@screen-lg-min - 1);
+@screen-lg-max:                             (@screen-xl-min - 1);
 
 
 // 4. Tables

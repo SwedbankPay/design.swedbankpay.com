@@ -2,11 +2,7 @@
 @import "../_mixins.less";
 
 .documentation {
-    width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-right: auto;
-    margin-left: auto;
+    .make-container()
 }
 
 .doc-container {
@@ -15,7 +11,7 @@
     padding: 3rem;
     width: 100%;
 
-    @media (max-width: @screen-sm-max) {
+    @media (max-width: @screen-md-max) {
         padding-left: 1rem;
         padding-right: 1rem;
     }
