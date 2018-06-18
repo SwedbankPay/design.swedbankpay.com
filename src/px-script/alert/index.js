@@ -6,7 +6,7 @@ const SELECTORS = {
 };
 
 const _hideAlert = alertElement => {
-    alertElement.classList.remove("in");
+    alertElement.classList.add("d-none");
 };
 
 const alert = (() => {

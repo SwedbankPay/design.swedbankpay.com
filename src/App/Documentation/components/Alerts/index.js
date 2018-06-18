@@ -13,12 +13,12 @@ const BasicUsage = () => (
         <h2 id="basic-usage">Basic usage</h2>
         <p>Alerts</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-            <AlertComponent type="success" display={true} text="This is a success alert!" />{"\n\n"}
-            <AlertComponent type="neutral" display={true} text="This is a neutral alert!" />{"\n\n"}
-            <AlertComponent type="warning" display={true} text="This is a warning alert!" />{"\n\n"}
-            <AlertComponent type="danger" display={true} text="This is a danger alert!" />{"\n\n"}
-            <AlertComponent type="light" display={true} text="This is a light alert!" />{"\n\n"}
-            <AlertComponent type="default" display={true} text="This is a default alert!" />
+            <AlertComponent type="success" text="This is a success alert!" />{"\n\n"}
+            <AlertComponent type="neutral" text="This is a neutral alert!" />{"\n\n"}
+            <AlertComponent type="warning" text="This is a warning alert!" />{"\n\n"}
+            <AlertComponent type="danger" text="This is a danger alert!" />{"\n\n"}
+            <AlertComponent type="light" text="This is a light alert!" />{"\n\n"}
+            <AlertComponent type="default" text="This is a default alert!" />
         </ComponentPreview>
     </>
 );
@@ -28,12 +28,12 @@ const AlertWithLink = () => (
         <h2 id="links">Links</h2>
         <p>Alerts with links</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-            <AlertComponent type="success" display={true} text="This is a success alert, " linkText="with a link!" />{"\n\n"}
-            <AlertComponent type="neutral" display={true} text="This is a neutral alert, " linkText="with a link!" />{"\n\n"}
-            <AlertComponent type="warning" display={true} text="This is a warning alert, " linkText="with a link!" />{"\n\n"}
-            <AlertComponent type="danger" display={true} text="This is a danger alert, " linkText="with a link!" />{"\n\n"}
-            <AlertComponent type="light" display={true} text="This is a light alert, " linkText="with a link!" />{"\n\n"}
-            <AlertComponent type="default" display={true} text="This is a default alert, " linkText="with a link!" />
+            <AlertComponent type="success" text="This is a success alert, " linkText="with a link!" />{"\n\n"}
+            <AlertComponent type="neutral" text="This is a neutral alert, " linkText="with a link!" />{"\n\n"}
+            <AlertComponent type="warning" text="This is a warning alert, " linkText="with a link!" />{"\n\n"}
+            <AlertComponent type="danger" text="This is a danger alert, " linkText="with a link!" />{"\n\n"}
+            <AlertComponent type="light" text="This is a light alert, " linkText="with a link!" />{"\n\n"}
+            <AlertComponent type="default" text="This is a default alert, " linkText="with a link!" />
         </ComponentPreview>
     </>
 );
@@ -43,12 +43,12 @@ const AlertWithIcon = () => (
         <h2 id="icons">Icons</h2>
         <p>To use an alert with an icon... Read more about icon usage here <Link to="/docs/core/icons">here</Link>.</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-            <AlertComponent type="success" display={true} text="This is a success alert with an icon!" icon="check_circle" />{"\n\n"}
-            <AlertComponent type="neutral" display={true} text="This is a neutral alert with an icon!" icon="info" />{"\n\n"}
-            <AlertComponent type="warning" display={true} text="This is a warning alert with an icon!" icon="warning" />{"\n\n"}
-            <AlertComponent type="danger" display={true} text="This is a danger alert with an icon!" icon="error" />{"\n\n"}
-            <AlertComponent type="light" display={true} text="This is a light alert with an icon!" icon="info_outline" />{"\n\n"}
-            <AlertComponent type="default" display={true} text="This is a default alert with an icon!" icon="info_outline" />
+            <AlertComponent type="success" text="This is a success alert with an icon!" icon="check_circle" />{"\n\n"}
+            <AlertComponent type="neutral" text="This is a neutral alert with an icon!" icon="info" />{"\n\n"}
+            <AlertComponent type="warning" text="This is a warning alert with an icon!" icon="warning" />{"\n\n"}
+            <AlertComponent type="danger" text="This is a danger alert with an icon!" icon="error" />{"\n\n"}
+            <AlertComponent type="light" text="This is a light alert with an icon!" icon="info_outline" />{"\n\n"}
+            <AlertComponent type="default" text="This is a default alert with an icon!" icon="info_outline" />
         </ComponentPreview>
     </>
 );
@@ -61,17 +61,17 @@ const ClosingTheAlert = () => (
             <PrismCode className="language-html">{"<i class=\"material-icons\" data-alert-close>close</i>"}</PrismCode>
         </p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-            <AlertComponent type="success" display={true} text="This is a success alert with an icon!" close={true} icon="check_circle" />{"\n\n"}
-            <AlertComponent type="neutral" display={true} text="This is a neutral alert with an icon!" close={true} icon="info" />{"\n\n"}
-            <AlertComponent type="warning" display={true} text="This is a warning alert with an icon!" close={true} icon="warning" />{"\n\n"}
-            <AlertComponent type="danger" display={true} text="This is a danger alert with an icon!" close={true} icon="error" />{"\n\n"}
-            <AlertComponent type="light" display={true} text="This is a light alert with an icon!" close={true} icon="info_outline" />{"\n\n"}
-            <AlertComponent type="default" display={true} text="This is a default alert with an icon!" close={true} icon="info_outline" />
+            <AlertComponent type="success" text="This is a success alert with an icon!" close={true} icon="check_circle" />{"\n\n"}
+            <AlertComponent type="neutral" text="This is a neutral alert with an icon!" close={true} icon="info" />{"\n\n"}
+            <AlertComponent type="warning" text="This is a warning alert with an icon!" close={true} icon="warning" />{"\n\n"}
+            <AlertComponent type="danger" text="This is a danger alert with an icon!" close={true} icon="error" />{"\n\n"}
+            <AlertComponent type="light" text="This is a light alert with an icon!" close={true} icon="info_outline" />{"\n\n"}
+            <AlertComponent type="default" text="This is a default alert with an icon!" close={true} icon="info_outline" />
         </ComponentPreview>
         <h3>External close button</h3>
         <p>To add an external close-button for your alert add the attribute <Attribute data={true} name="alert-close" value="[alert ID]" /> to the button element.</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-            <AlertComponent id="alert-success-1" type="success" display={true} text="Press the button below to close me" icon="check_circle" />{"\n\n"}
+            <AlertComponent id="alert-success-1" type="success" text="Press the button below to close me" icon="check_circle" />{"\n\n"}
             <button type="button" className="btn btn-neutral" data-alert-close="alert-success-1">Close alert</button>
         </ComponentPreview>
     </>

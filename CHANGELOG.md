@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - Changed the name of the alert class `alert-error` to `alert-danger` to match the other components.
+- Changed alert component to `display: block` by default, no longer requiring class `in`. Close-buttons for the alert component now adds class `d-none` instead.
 
 ## [0.6.0] - 2018-06-08
 
