@@ -377,7 +377,7 @@ exports[`Documentation: Forms RangeSlider renders 1`] = `
     >
       right
     </code>
-     is default.
+     is defaulted.
   </p>
   <ComponentPreview
     codeFigure={true}

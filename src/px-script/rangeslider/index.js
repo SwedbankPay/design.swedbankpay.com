@@ -1,57 +1,61 @@
-import { applyToEachElement } from "../utils";
+const _writeStyle = obj => {
+    const { inlineStyleContent, inlineStyle } = obj;
+    const index = inlineStyleContent.map(({ id }) => id).indexOf(obj.id);
+    let styleText = "";
+
+    (index === -1) ? inlineStyleContent.push(obj) : inlineStyleContent[index] = obj;
+
+    inlineStyleContent.forEach(({ id, percent }) => {
+        styleText += `#${id}::-webkit-slider-runnable-track{background-size: ${percent}% 100%}`;
+    });
+
+    inlineStyle.textContent = styleText;
+};
 
 const rangeslider = (() => {
     const init = () => {
         const rangeContainers = document.querySelectorAll(".rangeslider");
 
-        applyToEachElement(rangeContainers, function (rangeContainer, i) {
+        rangeContainers.forEach((rangeContainer, i) => {
             const input = rangeContainer.querySelector("input[type=range]");
             const valueSpan = rangeContainer.querySelector("span[data-px-rangeslider-value]");
 
-            const inlineStyle = document.createElement("style");
-            const inlineStyleContent = new Array;
+            /* Changing value of span */
+            if (valueSpan) {
+                input.addEventListener("change", () => {
+                    valueSpan.innerHTML = input.value;
+                });
+                input.addEventListener("input", () => {
+                    valueSpan.innerHTML = input.value;
+                });
+            }
 
-            document.body.appendChild(inlineStyle);
-            input.id = "px-rs-" + i;
+            /* Filling slider background for chrome */
+            if (navigator.userAgent.indexOf("Chrome") > -1){
+                const inlineStyle = document.createElement("style");
+                const inlineStyleContent = [];
+                document.body.appendChild(inlineStyle);
+                input.id = `px-rs-${i}`;
 
-            const handleInputChange = () => {
-                /* Changing value of span */
-                if (valueSpan) valueSpan.innerHTML = input.value;
-
-                /* Filling slider background for chrome */
-                if (navigator.userAgent.indexOf("Chrome") > -1){
+                const updateStyle = () => {
                     const max = input.attributes.max ? Number(input.attributes.max.value) : 100;
                     const min = input.attributes.min ? Number(input.attributes.min.value) : 0;
                     const value = Number(input.value);
                     const rangePercent = (value + Math.abs(min)) / (max - min) * 100;
 
-                    writeStyle({
+                    _writeStyle({
                         id: input.id,
-                        percent: rangePercent
+                        percent: rangePercent,
+                        inlineStyleContent,
+                        inlineStyle
                     });
-                }
-            };
+                };
 
-            const writeStyle = obj => {
-                const index = inlineStyleContent.map(({ id }) => id).indexOf(obj.id);
-                let styleText = "";
+                input.addEventListener("change", updateStyle);
+                input.addEventListener("input", updateStyle);
+                updateStyle();
+            }
 
-                (index === -1) ? inlineStyleContent.push(obj) : inlineStyleContent[index] = obj;
-
-                inlineStyleContent.forEach(({ id, percent }) => {
-                    styleText += `#${id}::-webkit-slider-runnable-track{background-size: ${percent}% 100%}`;
-                });
-
-                inlineStyle.textContent = styleText;
-            };
-
-            input.addEventListener("change", handleInputChange);
-            input.addEventListener("keyup", handleInputChange);
-            input.addEventListener("keydown", handleInputChange);
-            input.addEventListener("input", handleInputChange);
-
-            /* Update filler on startup */
-            handleInputChange();
         });
     };
 
