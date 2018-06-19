@@ -103,6 +103,7 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "component": Object {
                   "AutoLayoutColumns": [Function],
+                  "GridOptions": [Function],
                   "GridText": [Function],
                   "HowItWorks": [Function],
                   "default": [Function],

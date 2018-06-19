@@ -77,6 +77,7 @@ exports[`Core: Grid GridText renders 1`] = `
     Use our grid system...
   </p>
   <HowItWorks />
+  <GridOptions />
   <AutoLayoutColumns />
 </div>
 `;
@@ -92,6 +93,15 @@ exports[`Core: Grid HowItWorks renders 1`] = `
     The grid system is heavily based on Bootstrap
     '
     s grid from v.4.
+  </p>
+  <p>
+    Most classes from Bootstrap is available. Click 
+    <a
+      href="http://getbootstrap.com/docs/4.1/layout/grid/"
+    >
+      here
+    </a>
+     to read more about it.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -127,6 +137,15 @@ exports[`Core: Grid HowItWorks renders 1`] = `
       </div>
     </div>
   </ComponentPreview>
+  <p>
+    The above example creates three equal-width columns on small, medium, large, extra large, and extra extra large devices using our predefined grid classes. Those columns are centered in the page with the parent 
+    <code
+      className="token property"
+    >
+      .container
+    </code>
+    .
+  </p>
 </React.Fragment>
 `;
 
