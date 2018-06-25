@@ -227,13 +227,13 @@ legend {
         width: @checkbox-width;
         margin-right: 0.5rem;
 
-        &:after {
+        + label:before {
             content: "";
             display: block;
             position: absolute;
             visibility: visible;
-            top: 0;
-            left: 0;
+            top: -1px;
+            left: -31px;
             height: @checkbox-height;
             width: @checkbox-width;
             background-color: @white;
@@ -241,7 +241,7 @@ legend {
             cursor: pointer;
         }
 
-        &:checked:after {
+        &:checked + label:before {
             background-color: @checkbox-bg;
             background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAJCAYAAAALpr0TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNWWFMmUAAACOSURBVChTfc+xDYJAFIdxCktLCwoLBmAESwoGMLF1BFomYAjHcABdxcrCwoKSmOP7LncJRuI/+cHLuwc8ihDCPzvU1muH2QY3jGjWBrILzBNVbu5RplodzIQD4qcbvHG1gRYOmDPiw15c+AXTw53MgDikXBxhPunu2/2Zn0HdYR7YYnn2NegKJ1SLXhKKGZDpJWzFmbqTAAAAAElFTkSuQmCC);
             background-position: 50% 50%;
@@ -249,18 +249,18 @@ legend {
         }
 
         &[disabled] {
-            &:after {
+            + label:before {
                 background-color: @input-bg-disabled;
                 border-color: @input-checked-bg-disabled;
             }
 
-            &:checked:after {
+            &:checked + label:before {
                 background-color: @input-checked-bg-disabled;
             }
 
             + label,
             &:after,
-            &:checked:after {
+            &:checked + label:before {
                 cursor: not-allowed;
             }
         }
@@ -291,13 +291,13 @@ legend {
         width: @checkbox-width;
         margin-right: 0.5rem;
 
-        &:after {
+        + label:before {
             content: "";
             display: block;
             position: absolute;
             visibility: visible;
-            top: 0;
-            left: 0;
+            top: -1px;
+            left: -31px;
             height: @checkbox-height;
             width: @checkbox-width;
             background-color: @white;
@@ -306,7 +306,7 @@ legend {
             border-radius: 50%;
         }
 
-        &:checked:after {
+        &:checked + label:before {
             background-color: @checkbox-bg;
             background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNWWFMmUAAABMSURBVChTjY8xCgAgDMT6GEf/7uDTHBzrBe0iFjwIlDOUau4ORTQxD8x0Fo9D3KErCNhZGgIrs8wvoe/5mY5QRXZkRQiJTfFNZnVuC4bS8W24IBKtAAAAAElFTkSuQmCC);
             background-position: 50% 50%;
@@ -314,18 +314,18 @@ legend {
         }
 
         &[disabled] {
-            &:after {
+            + label:before {
                 background-color: @input-bg-disabled;
                 border-color: @input-checked-bg-disabled;
             }
 
-            &:checked:after {
+            &:checked + label:before {
                 background-color: @input-checked-bg-disabled;
             }
 
             + label,
             &:after,
-            &:checked:after {
+            &:checked + label:before {
                 cursor: not-allowed;
             }
         }
@@ -352,7 +352,7 @@ legend {
         height: @checkbox-height;
         width: @checkbox-width * 2;
 
-        &:before {
+        + label:before {
             transition: background-color 0.2s ease 0.22s;
             content: "";
             position: absolute;
@@ -367,8 +367,8 @@ legend {
             cursor: pointer;
         }
 
-        &:after {
-            transition: transform 0.2s;
+        + label:after {
+            transition: left 0.2s;
             content: "";
             position: absolute;
             visibility: visible;
@@ -383,31 +383,30 @@ legend {
             cursor: pointer;
         }
 
-        &:checked:before {
+        &:checked + label:before {
             background-color: @checkbox-bg;
         }
 
-        &:checked:after {
-            transform: translateX(@checkbox-width);
-            left: auto;
+        &:checked + label:after {
+            left: @checkbox-width;
         }
 
         &[disabled] {
-            &:before,
-            &:after {
+            + label:before,
+            + label:after {
                 background-color: @input-bg-disabled;
                 border-color: @input-checked-bg-disabled;
             }
 
-            &:checked:before {
+            &:checked + label:before {
                 background-color: @input-checked-bg-disabled;
             }
 
             + label,
-            &:before,
-            &:after,
-            &:checked:before,
-            &:checked:after {
+            + label:before,
+            + label:after,
+            &:checked + label:before,
+            &:checked + label:after {
                 cursor: not-allowed;
             }
         }

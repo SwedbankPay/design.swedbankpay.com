@@ -18,6 +18,7 @@ All notable changes to this project will be documented in this file.
 - Changed alert component to `display: block` by default, no longer requiring class `in`. Close-buttons for the alert component now adds class `d-none` instead.
 - Changed modal component to use class `d-block` instead of class `in`. Open/close-buttons for the modal component now toggles class `d-block` instead.
 - Optimized `px-script` code for rangeslider component. It no longer triggers eventlistener for chrome-related styling in other browsers.
+- Fixed form components for other browsers than chrome.
 
 ### Removed
 
