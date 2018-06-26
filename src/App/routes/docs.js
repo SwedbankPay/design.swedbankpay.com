@@ -100,6 +100,11 @@ export default [
                 component: require("../Documentation/components/Buttons")
             },
             {
+                title: "Card",
+                path: "/docs/components/card",
+                component: require("../Documentation/components/Card")
+            },
+            {
                 title: "Datepickers",
                 path: "/docs/components/datepickers",
                 component: require("../Documentation/components/Datepickers")
