@@ -52,6 +52,9 @@ const Overview = () => (
 
 const CardText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
+        <div className="alert alert-danger in">
+            This component is under development and will probably change.
+        </div>
         <p className="lead">Card...</p>
         <Overview />
     </div>

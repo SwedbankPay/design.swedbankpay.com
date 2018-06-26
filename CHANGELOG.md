@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file.
 - Added section about breakpoints.
 - Added section about display classes.
 - Added table with supported browsers in browser-support section.
+- Added card component.
 
 ### Changed
 

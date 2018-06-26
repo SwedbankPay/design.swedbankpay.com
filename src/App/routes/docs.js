@@ -100,7 +100,7 @@ export default [
                 component: require("../Documentation/components/Buttons")
             },
             {
-                title: "Card",
+                title: "Card (experimental)",
                 path: "/docs/components/card",
                 component: require("../Documentation/components/Card")
             },

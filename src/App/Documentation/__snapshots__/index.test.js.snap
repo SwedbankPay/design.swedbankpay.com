@@ -230,7 +230,7 @@ exports[`Documentation: index renders 1`] = `
                   "default": [Function],
                 },
                 "path": "/docs/components/card",
-                "title": "Card",
+                "title": "Card (experimental)",
               },
               Object {
                 "component": Object {
