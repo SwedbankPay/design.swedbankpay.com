@@ -225,6 +225,15 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "CardText": [Function],
+                  "Overview": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/components/card",
+                "title": "Card",
+              },
+              Object {
+                "component": Object {
                   "CustomFormat": [Function],
                   "DateRange": [Function],
                   "DatepickersText": [Function],
