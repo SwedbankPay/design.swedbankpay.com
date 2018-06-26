@@ -22,11 +22,11 @@ const Card = ({ type, title, imgSrc, icon, text, smallText, btnTxt, footerTxt, f
             <p>{text}</p>
             <small>{smallText}</small>
         </div>
-        <div className="footer">
+        <footer>
             <button type="button" className="btn btn-success btn-block">{btnTxt}</button>
             {footerTxt ? <div className="footer-text"><p>{footerTxt}</p></div> : null}
             {footerLinkTxt ? <div className="footer-link"><a href={footerLink || "#"}>{footerLinkTxt}</a></div> : null}
-        </div>
+        </footer>
     </li>
 );
 
