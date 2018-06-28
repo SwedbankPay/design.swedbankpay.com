@@ -25,13 +25,17 @@ const modal = (() => {
             const closeBtn = modal.querySelector(SELECTORS.CLOSE);
             const closeIcon = modal.querySelector(SELECTORS.CLOSEICON);
 
-            closeBtn.addEventListener("click", () => {
-                _closeModal(modal);
-            });
+            if (closeBtn) {
+                closeBtn.addEventListener("click", () => {
+                    _closeModal(modal);
+                });
+            }
 
-            closeIcon.addEventListener("click", () => {
-                _closeModal(modal);
-            });
+            if (closeIcon) {
+                closeIcon.addEventListener("click", () => {
+                    _closeModal(modal);
+                });
+            }
 
             // close the modal when clicking outside
             modal.addEventListener("click", e => {
