@@ -98,13 +98,13 @@ class DocToc extends Component {
 
     render () {
         return (
-            <div className="col-lg-2 hidden-md">
+            <div className="col-2 d-md-none d-lg-block">
                 <div className="doc-toc">
                     <ul>
                         {this.state.headings.map((heading, i) => {
                             if (heading.id && heading.title) {
                                 const isWithinBoundary = this.state.windowTopPosition >= heading.top &&
-                            this.state.windowTopPosition < this.state.headings[i + 1].top;
+                                    this.state.windowTopPosition < this.state.headings[i + 1].top;
 
                                 return (
                                     <li key={i} className={isWithinBoundary ? "active" : ""}>

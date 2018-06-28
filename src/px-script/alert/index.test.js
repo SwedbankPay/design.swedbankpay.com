@@ -26,14 +26,14 @@ describe("px-script: alert", () => {
         expect(renderedButtons).toHaveLength(2);
 
         renderedButtons.forEach(button => {
-            expect(button.parentElement.classList).toContain("in");
+            expect(button.parentElement.classList).not.toContain("d-none");
         });
 
         alert.init();
 
         renderedButtons.forEach(button => {
             button.click();
-            expect(button.parentElement.classList).not.toContain("in");
+            expect(button.parentElement.classList).toContain("d-none");
         });
 
         ReactDOM.unmountComponentAtNode(div);
@@ -53,12 +53,12 @@ describe("px-script: alert", () => {
         expect(renderedButton).toBeDefined();
 
         const targetAlert = document.getElementById(renderedButton.dataset.alertClose);
-        expect(targetAlert.classList).toContain("in");
+        expect(targetAlert.classList).not.toContain("d-none");
 
         alert.init();
 
         renderedButton.click();
-        expect(targetAlert.classList).not.toContain("in");
+        expect(targetAlert.classList).toContain("d-none");
 
         ReactDOM.unmountComponentAtNode(div);
     });

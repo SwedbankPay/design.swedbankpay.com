@@ -31,8 +31,13 @@ export default [
     {
         title: "Core",
         path: "/docs/core",
-        redirect: "/docs/core/color",
+        redirect: "/docs/core/breakpoints",
         routes: [
+            {
+                title: "Breakpoints",
+                path: "/docs/core/breakpoints",
+                component: require("../Documentation/core/Breakpoints")
+            },
             {
                 title: "Color",
                 path: "/docs/core/color",
@@ -95,6 +100,11 @@ export default [
                 component: require("../Documentation/components/Buttons")
             },
             {
+                title: "Card (experimental)",
+                path: "/docs/components/card",
+                component: require("../Documentation/components/Card")
+            },
+            {
                 title: "Datepickers",
                 path: "/docs/components/datepickers",
                 component: require("../Documentation/components/Datepickers")
@@ -143,6 +153,11 @@ export default [
                 title: "Topbar",
                 path: "/docs/components/topbar",
                 component: require("../Documentation/components/Topbar")
+            },
+            {
+                title: "Well (experimental)",
+                path: "/docs/components/well",
+                component: require("../Documentation/components/Well")
             }
         ]
     },
@@ -153,8 +168,13 @@ export default [
     {
         title: "Utilities",
         path: "/docs/utilities",
-        redirect: "/docs/utilities/visibility",
+        redirect: "/docs/utilities/display",
         routes: [
+            {
+                title: "Display",
+                path: "/docs/utilities/display",
+                component: require("../Documentation/utilities/Display")
+            },
             {
                 title: "Visibility",
                 path: "/docs/utilities/visibility",

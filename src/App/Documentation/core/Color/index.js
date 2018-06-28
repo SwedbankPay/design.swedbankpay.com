@@ -1,4 +1,5 @@
 import React from "react";
+import PrismCode from "react-prism";
 
 import ComponentPreview from "../../utils/ComponentPreview";
 import DocToc from "../../utils/DocToc";
@@ -44,6 +45,16 @@ const Usage = () => (
             <p className="color-success">This text is color-success.</p>
             <p className="color-warning">This text is color-warning.</p>
             <p className="color-danger">This text is color-danger.</p>
+        </ComponentPreview>
+        <h3>With <code className="token property">.text-muted</code></h3>
+        <p>To get a muted effect on the color you are using, append a <PrismCode className="language-html">{"<span>"}</PrismCode>-element with the class <code className="token property">.text-muted</code> to the desired element.</p>
+        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+            <p className="color-brand">This text is color-brand, <span className="text-muted">with a muted ending.</span></p>
+            <p className="color-default">This text is color-default, <span className="text-muted">with a muted ending.</span></p>
+            <p className="color-neutral">This text is color-neutral, <span className="text-muted">with a muted ending.</span></p>
+            <p className="color-success">This text is color-success, <span className="text-muted">with a muted ending.</span></p>
+            <p className="color-warning">This text is color-warning, <span className="text-muted">with a muted ending.</span></p>
+            <p className="color-danger">This text is color-danger, <span className="text-muted">with a muted ending.</span></p>
         </ComponentPreview>
     </>
 );

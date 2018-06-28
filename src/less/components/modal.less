@@ -18,27 +18,6 @@
         .modal-variant(@brand-primary, @white, @brand-primary);
     }
 
-    &.fade {
-        opacity: 0;
-        transition: opacity 0.15s linear;
-
-        .modal-dialog {
-            transition: transform 0.3s ease-out;
-        }
-    }
-
-    &.in {
-        display: block;
-
-        .modal-dialog {
-            transform: translate(0, 0);
-        }
-    }
-
-    &.fade.in {
-        opacity: 1;
-    }
-
     &.static {
         position: relative;
         background-color: transparent;

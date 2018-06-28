@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Documentation: Card CardText renders 1`] = `
+<div
+  className="col-md-12 col-lg-10 doc-body"
+>
+  <div
+    className="alert alert-danger in"
+  >
+    This component is under development and will probably change.
+  </div>
+  <p
+    className="lead"
+  >
+    Card...
+  </p>
+  <Overview />
+</div>
+`;
+
+exports[`Documentation: Card Overview renders 1`] = `
+<React.Fragment>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <p>
+    Overview... 
+    <code
+      className="token property"
+    >
+      .card
+    </code>
+    ...
+  </p>
+  <p>
+    ... 
+    <code
+      className="token property"
+    >
+      .card-default
+    </code>
+    ...
+  </p>
+  <p>
+    ... 
+    <code
+      className="token property"
+    >
+      .card-brand
+    </code>
+    ...
+  </p>
+  <p>
+    ... 
+    <code
+      className="token property"
+    >
+      .card-light
+    </code>
+    ...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="cards"
+    >
+      <ul>
+        <Card
+          btnTxt="Button"
+          footerLinkTxt="Come see what we're all about."
+          footerTxt="This is some text that goes in the footer."
+          imgSrc="https://picsum.photos/300"
+          smallText="And the small text"
+          text="This is the cards text"
+          title="Card default"
+          type="default"
+        />
+        <Card
+          btnTxt="Button"
+          footerLinkTxt="Come see what we're all about."
+          footerTxt="This is some text that goes in the footer."
+          imgSrc="https://picsum.photos/300"
+          smallText="And the small text"
+          text="This is the cards text"
+          title="Card brand"
+          type="brand"
+        />
+        <Card
+          btnTxt="Button"
+          footerLinkTxt="Come see what we're all about."
+          footerTxt="This is some text that goes in the footer."
+          imgSrc="https://picsum.photos/300"
+          smallText="And the small text"
+          text="This is the cards text"
+          title="Card light"
+          type="light"
+        />
+      </ul>
+    </div>
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Documentation: Card renders 1`] = `
+<div
+  className="doc-container"
+>
+  <div
+    className="row"
+  >
+    <CardText />
+    <DocToc
+      component={[Function]}
+    />
+  </div>
+</div>
+`;

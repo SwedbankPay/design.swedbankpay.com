@@ -29,11 +29,6 @@
     margin-bottom: 1rem;
     border: 1px solid transparent;
     border-radius: 0.25rem;
-    display: none;
-
-    &.in {
-        display: block;
-    }
 
     &.alert-with-icon {
         padding-left: 50px;
@@ -51,7 +46,7 @@
         .alert-variant(@state-warning, lighten(@state-warning, 30%));
     }
 
-    &.alert-error {
+    &.alert-danger {
         .alert-variant(@state-error, lighten(@state-error, 50%));
     }
 
