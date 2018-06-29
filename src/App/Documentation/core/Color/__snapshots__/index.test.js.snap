@@ -136,6 +136,96 @@ exports[`Core: Color Usage renders 1`] = `
       This text is color-danger.
     </p>
   </ComponentPreview>
+  <h3>
+    With 
+    <code
+      className="token property"
+    >
+      .text-muted
+    </code>
+  </h3>
+  <p>
+    To get a muted effect on the color you are using, append a 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;span&gt;
+    </PrismCode>
+    -element with the class 
+    <code
+      className="token property"
+    >
+      .text-muted
+    </code>
+     to the desired element.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <p
+      className="color-brand"
+    >
+      This text is color-brand, 
+      <span
+        className="text-muted"
+      >
+        with a muted ending.
+      </span>
+    </p>
+    <p
+      className="color-default"
+    >
+      This text is color-default, 
+      <span
+        className="text-muted"
+      >
+        with a muted ending.
+      </span>
+    </p>
+    <p
+      className="color-neutral"
+    >
+      This text is color-neutral, 
+      <span
+        className="text-muted"
+      >
+        with a muted ending.
+      </span>
+    </p>
+    <p
+      className="color-success"
+    >
+      This text is color-success, 
+      <span
+        className="text-muted"
+      >
+        with a muted ending.
+      </span>
+    </p>
+    <p
+      className="color-warning"
+    >
+      This text is color-warning, 
+      <span
+        className="text-muted"
+      >
+        with a muted ending.
+      </span>
+    </p>
+    <p
+      className="color-danger"
+    >
+      This text is color-danger, 
+      <span
+        className="text-muted"
+      >
+        with a muted ending.
+      </span>
+    </p>
+  </ComponentPreview>
 </React.Fragment>
 `;
 

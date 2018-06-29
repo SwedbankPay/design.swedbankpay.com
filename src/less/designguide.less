@@ -90,6 +90,13 @@ pre {
     }
 }
 
+.showcase-panel {
+    div.d-block,
+    div.d-inline {
+        padding: 0.5rem;
+    }
+}
+
 .showcase-grid {
     .row {
         > [class*="col"] {
@@ -98,5 +105,19 @@ pre {
             background: @gray-10;
             border: 1px solid @gray-8;
         }
+    }
+}
+
+.browser-support-table {
+    th,
+    tr {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        display: inline-block;
     }
 }

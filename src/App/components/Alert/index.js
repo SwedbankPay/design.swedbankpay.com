@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Alert = ({ id, type, display, icon, close, heading, text, linkText, linkHref }) => (
-    <div id={id} className={`alert alert-${type}${icon ? " alert-with-icon" : ""}${display ? " in" : ""}`}>{icon ? "\n" : ""}
+const Alert = ({ id, type, icon, close, heading, text, linkText, linkHref }) => (
+    <div id={id} className={`alert alert-${type}${icon ? " alert-with-icon" : ""}`}>{icon ? "\n" : ""}
         {close ? <i className="material-icons" data-alert-close="">close</i> : null}{close ? "\n" : ""}
         {icon ? <i className="material-icons alert-icon">{icon}</i> : null}
         {heading ? <h3 className="alert-heading">{heading}</h3> : null}
@@ -13,8 +13,7 @@ const Alert = ({ id, type, display, icon, close, heading, text, linkText, linkHr
 
 Alert.propTypes = {
     id: PropTypes.string,
-    type: PropTypes.oneOf(["success", "neutral", "warning", "error", "light", "default"]).isRequired,
-    display: PropTypes.bool,
+    type: PropTypes.oneOf(["success", "neutral", "warning", "danger", "light", "default"]).isRequired,
     icon: PropTypes.string,
     close: PropTypes.bool,
     heading: PropTypes.string,

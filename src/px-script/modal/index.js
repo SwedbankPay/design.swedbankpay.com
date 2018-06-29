@@ -1,21 +1,21 @@
+const SELECTORS = {
+    MODAL: ".modal",
+    CLOSE: "[data-modal-close]",
+    OPEN: "[data-modal-open]",
+    CLOSEICON: "i.modal-close"
+};
+
+const _openModal = modal => {
+    modal.classList.add("d-block");
+    document.body.classList.add("modal-open");
+};
+
+const _closeModal = modal => {
+    modal.classList.remove("d-block");
+    document.body.classList.remove("modal-open");
+};
+
 const modal = (() => {
-    const SELECTORS = {
-        MODAL: ".modal",
-        CLOSE: "[data-modal-close]",
-        OPEN: "[data-modal-open]",
-        CLOSEICON: "i.modal-close"
-    };
-
-    const _openModal = modal => {
-        modal.classList.add("in");
-        document.body.classList.add("modal-open");
-    };
-
-    const _closeModal = modal => {
-        modal.classList.remove("in");
-        document.body.classList.remove("modal-open");
-    };
-
     const init = () => {
         const modals = document.querySelectorAll(SELECTORS.MODAL);
         const closeButtons = document.querySelectorAll(SELECTORS.CLOSE);
@@ -25,17 +25,21 @@ const modal = (() => {
             const closeBtn = modal.querySelector(SELECTORS.CLOSE);
             const closeIcon = modal.querySelector(SELECTORS.CLOSEICON);
 
-            closeBtn.addEventListener("click", () => {
-                _closeModal(modal);
-            });
+            if (closeBtn) {
+                closeBtn.addEventListener("click", () => {
+                    _closeModal(modal);
+                });
+            }
 
-            closeIcon.addEventListener("click", () => {
-                _closeModal(modal);
-            });
+            if (closeIcon) {
+                closeIcon.addEventListener("click", () => {
+                    _closeModal(modal);
+                });
+            }
 
             // close the modal when clicking outside
             modal.addEventListener("click", e => {
-                if (e.target.classList.contains("in")) {
+                if (e.target.classList.contains("d-block")) {
                     _closeModal(modal);
                 }
             });
@@ -70,7 +74,7 @@ const modal = (() => {
         // Close modals on esc
         document.addEventListener("keydown", e => {
             if (e.keyCode === 27) {
-                const modal = document.querySelector(".modal.in");
+                const modal = document.querySelector(".modal.d-block");
                 _closeModal(modal);
             }
         });

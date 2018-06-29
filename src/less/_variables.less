@@ -98,18 +98,6 @@
 @link-hover-color:                          darken(@brand-primary, 10%);
 @link-hover-decoration:                     underline;
 
-/* Media queries breakpoints */
-// Define the breakpoints at which your layout will change, adapting to different screen sizes.
-@screen-xs-min:                             480px;
-@screen-sm-min:                             768px;
-@screen-md-min:                             992px;
-@screen-lg-min:                             1200px;
-
-// So media queries don't overlap when required, provide a maximum
-@screen-xs-max:                             (@screen-sm-min - 1);
-@screen-sm-max:                             (@screen-md-min - 1);
-@screen-md-max:                             (@screen-lg-min - 1);
-
 /* Cursor */
 @cursor-disabled:                           not-allowed;
 
@@ -153,6 +141,20 @@
 
 @container-max-widths:                      540px, 720px, 960px, 1140px, 1460px;
 
+/* Media queries breakpoints */
+// Define the breakpoints at which your layout will change, adapting to different screen sizes.
+@screen-xs-min:                             extract(extract(@grid-breakpoints, 2), 2);
+@screen-sm-min:                             extract(extract(@grid-breakpoints, 3), 2);
+@screen-md-min:                             extract(extract(@grid-breakpoints, 4), 2);
+@screen-lg-min:                             extract(extract(@grid-breakpoints, 5), 2);
+@screen-xl-min:                             extract(extract(@grid-breakpoints, 6), 2);
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:                             (@screen-sm-min - 1);
+@screen-sm-max:                             (@screen-md-min - 1);
+@screen-md-max:                             (@screen-lg-min - 1);
+@screen-lg-max:                             (@screen-xl-min - 1);
+
 
 // 4. Tables
 // ==========================================================================
@@ -162,7 +164,7 @@
 @table-header-color:                        @brand-primary;
 @table-text-color:                          @gray-4;
 @table-border-color:                        @gray-9;
-@table-stripe-color:                        #f9f9f9;//#eeecec;
+@table-stripe-color:                        #f9f9f9; // #eeecec;
 @table-collapse-content-color:              @gray-10;
 @table-collapse-border-color:               @gray-8;
 
@@ -189,7 +191,7 @@
 @footer-small-color:                        @gray-7;
 @mark-background:                           rgba(0, 0, 0, 0.1);
 
-@text-muted:                                @gray-5;
+@text-muted:                                fade(@text-color, 75%);
 @text-brand:                                @brand-primary;
 @text-light:                                @white;
 
@@ -443,7 +445,7 @@
 @panel-body-padding:                        15px 30px;
 @panel-table-margin:                        0;
 @panel-banner-padding:                      15px;
-@panel-heading-padding:                     15px 30px;
+@panel-heading-padding:                     15px 15px 15px 30px;
 @panel-footer-padding:                      15px 30px 12px 30px;
 @panel-footer-margin:                       10px -30px -15px -30px;
 

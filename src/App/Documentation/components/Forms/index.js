@@ -288,7 +288,7 @@ const RangeSlider = () => (
         <p>Asides from the default behavior of a range input, the Rangeslider{"'"}s colors and label positioning can be customized.</p>
         <p>Currently there are three different supported colors for the slider:  <code className="token property">rangeslider-brand</code>, <code className="token property">rangeslider-default</code> and <code className="token property">rangeslider-neutral</code>.</p>
 
-        <p>The Rangeslider currently supports two positions: <code className="token property">label-right</code> and <code className="token property">label-top</code>. If no position is given, <code className="token property">right</code> is default.</p>
+        <p>The Rangeslider currently supports two positions: <code className="token property">label-right</code> and <code className="token property">label-top</code>. If no position is given, <code className="token property">right</code> is defaulted.</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <Rangeslider min={0} max={200} step={1} value={100} valueLabel={true} valueLabelPrefix="$" valueLabelPostfix="%" />
         </ComponentPreview>

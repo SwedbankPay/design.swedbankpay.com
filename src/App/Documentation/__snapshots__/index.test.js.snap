@@ -78,9 +78,18 @@ exports[`Documentation: index renders 1`] = `
         <RenderRoutes
           key="1"
           path="/docs/core"
-          redirect="/docs/core/color"
+          redirect="/docs/core/breakpoints"
           routes={
             Array [
+              Object {
+                "component": Object {
+                  "BreakpointsText": [Function],
+                  "Overview": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/core/breakpoints",
+                "title": "Breakpoints",
+              },
               Object {
                 "component": Object {
                   "ColorPalette": [Function],
@@ -93,6 +102,10 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "AutoLayoutColumns": [Function],
+                  "GridOptions": [Function],
+                  "GridText": [Function],
+                  "HowItWorks": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/core/grid",
@@ -209,6 +222,15 @@ exports[`Documentation: index renders 1`] = `
                 },
                 "path": "/docs/components/buttons",
                 "title": "Buttons",
+              },
+              Object {
+                "component": Object {
+                  "CardText": [Function],
+                  "Overview": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/components/card",
+                "title": "Card (experimental)",
               },
               Object {
                 "component": Object {
@@ -337,6 +359,16 @@ exports[`Documentation: index renders 1`] = `
                 "path": "/docs/components/topbar",
                 "title": "Topbar",
               },
+              Object {
+                "component": Object {
+                  "DefaultWell": [Function],
+                  "WellSizes": [Function],
+                  "WellText": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/components/well",
+                "title": "Well (experimental)",
+              },
             ]
           }
           title="Components"
@@ -344,9 +376,21 @@ exports[`Documentation: index renders 1`] = `
         <RenderRoutes
           key="3"
           path="/docs/utilities"
-          redirect="/docs/utilities/visibility"
+          redirect="/docs/utilities/display"
           routes={
             Array [
+              Object {
+                "component": Object {
+                  "DisplayText": [Function],
+                  "Examples": [Function],
+                  "HidingElements": [Function],
+                  "HowItWorks": [Function],
+                  "Notation": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/utilities/display",
+                "title": "Display",
+              },
               Object {
                 "component": Object {
                   "Intro": [Function],

@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components: Badge BadgeText renders 1`] = `
+<div
+  className="col-md-12 col-lg-10 doc-body"
+>
+  <p
+    className="lead"
+  >
+    Badge...
+  </p>
+  <Overview />
+  <FurtherUsage />
+</div>
+`;
+
+exports[`Components: Badge FurtherUsage renders 1`] = `
+<React.Fragment>
+  <h2
+    id="further-usage"
+  >
+    Further usage
+  </h2>
+  <p>
+    Further usage... 
+    <code
+      className="token property"
+    >
+      .badge
+    </code>
+    ...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <h1>
+      Badge 
+      <small
+        className="badge badge-default"
+      >
+        default
+      </small>
+    </h1>
+    <h2>
+      Badge 
+      <small
+        className="badge badge-brand"
+      >
+        brand
+      </small>
+    </h2>
+    <h3>
+      Badge 
+      <small
+        className="badge badge-blue"
+      >
+        blue
+      </small>
+    </h3>
+    <h4>
+      Badge 
+      <small
+        className="badge badge-purple"
+      >
+        purple
+      </small>
+    </h4>
+    <h5>
+      Badge 
+      <small
+        className="badge badge-yellow"
+      >
+        yellow
+      </small>
+    </h5>
+    <h6>
+      Badge 
+      <small
+        className="badge badge-red"
+      >
+        red
+      </small>
+    </h6>
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Components: Badge Overview renders 1`] = `
+<React.Fragment>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <p>
+    Overview... 
+    <code
+      className="token property"
+    >
+      .badge
+    </code>
+    ...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <p>
+      Badge 
+      <span
+        className="badge badge-default"
+      >
+        default
+      </span>
+    </p>
+    <p>
+      Badge 
+      <span
+        className="badge badge-brand"
+      >
+        brand
+      </span>
+    </p>
+    <p>
+      Badge 
+      <span
+        className="badge badge-blue"
+      >
+        blue
+      </span>
+    </p>
+    <p>
+      Badge 
+      <span
+        className="badge badge-purple"
+      >
+        purple
+      </span>
+    </p>
+    <p>
+      Badge 
+      <span
+        className="badge badge-yellow"
+      >
+        yellow
+      </span>
+    </p>
+    <p>
+      Badge 
+      <span
+        className="badge badge-red"
+      >
+        red
+      </span>
+    </p>
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Components: Badge renders 1`] = `
+<div
+  className="doc-container"
+>
+  <div
+    className="row"
+  >
+    <BadgeText />
+    <DocToc
+      component={[Function]}
+    />
+  </div>
+</div>
+`;

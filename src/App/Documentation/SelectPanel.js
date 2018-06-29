@@ -25,7 +25,7 @@ class SelectPanel extends Component {
     render () {
         return (
             <div className="doc-sidebar col-xxl-2 col-md-3 col-sm-12">
-                <SearchBox />
+                {/* <SearchBox /> */}
                 <nav className="documentation-nav">
                     {routes.map((route, i) => {
                         const { path, title, routes } = route;

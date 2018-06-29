@@ -2,11 +2,7 @@
 @import "../_mixins.less";
 
 .documentation {
-    width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-right: auto;
-    margin-left: auto;
+    .make-container()
 }
 
 .doc-container {
@@ -15,7 +11,7 @@
     padding: 3rem;
     width: 100%;
 
-    @media (max-width: @screen-sm-max) {
+    @media (max-width: @screen-md-max) {
         padding-left: 1rem;
         padding-right: 1rem;
     }
@@ -184,8 +180,9 @@
 }
 
 .showcase-panel {
+    position: relative;
     background-color: @white;
-    padding: 24px;
+    padding: 1.5rem;
     margin: 0.5rem 0 1rem 0;
     border-radius: 2px;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
