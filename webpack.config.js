@@ -95,7 +95,8 @@ const config = {
                             loader: "postcss-loader",
                             options: {
                                 plugins: () => autoprefixer({
-                                    browsers: ["last 3 versions", "> 1%"]
+                                    browsers: ["last 3 versions", "> 1%", "ie >= 11"],
+                                    grid: true
                                 })
                             }
                         },
