@@ -1,10 +1,10 @@
 export default [
-    // {
-    //     title: "Home",
-    //     path: "/",
-    //     component: require("../Home"),
-    //     exact: true
-    // },
+    {
+        title: "Home",
+        path: "/",
+        component: require("../Home"),
+        exact: true
+    },
     {
         title: "Documentation",
         path: "/docs",

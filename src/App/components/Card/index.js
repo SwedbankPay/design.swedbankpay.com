@@ -1,24 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Card = ({ type, title, imgSrc, icon, text, smallText, btnTxt, footerTxt, footerLink, footerLinkTxt }) => (
+const Card = ({ type, title, imgSrc, icon, highlightTitle, highlightSubTitle, text, smallText, btnTxt, footerTxt, footerLink, footerLinkTxt }) => (
     <li className={`card${type ? ` card-${type}` : ""}`}>
         {title ? <header>
             <h3>
                 <a href="#">{title}</a>
             </h3>
         </header> : null}
-        {imgSrc ? <div className="img">{"\n"}
+        {imgSrc ? <div className="card-img">{"\n"}
             <img src={imgSrc} alt=""/>{"\n"}
         </div> : null}
         <div className="highlight">
-            <i className="material-icons">account_balance</i>
+            {icon ? <i className="material-icons">{icon}</i> : null}
             <div className="highlight-wrapper">
-                <h4 className="highlight-title">725 NOK</h4>
-                <p className="highlight-subtitle">Utestående balanse</p>
+                {highlightTitle ? <h4 className="highlight-title">{highlightTitle}</h4> : null}
+                {highlightSubTitle ? <p className="highlight-subtitle">{highlightSubTitle}</p> : null}
             </div>
         </div>
-        <div className="body">
+        <div className="card-body">
             <p>{text}</p>
             <small>{smallText}</small>
         </div>
@@ -35,6 +35,8 @@ Card.propTypes = {
     title: PropTypes.string,
     imgSrc: PropTypes.string,
     icon: PropTypes.string,
+    highlightTitle: PropTypes.string,
+    highlightSubTitle: PropTypes.string,
     text: PropTypes.string,
     smallText: PropTypes.string,
     btnTxt: PropTypes.string,

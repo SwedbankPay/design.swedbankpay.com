@@ -18,11 +18,11 @@ describe("Routes: root", () => {
         });
     });
 
-    // it("first route is home, has path '/' and is exact", () => {
-    //     const { title, path, exact } = rootRoutes[0];
+    it("first route is home, has path '/' and is exact", () => {
+        const { title, path, exact } = rootRoutes[0];
 
-    //     expect(title).toEqual("Home");
-    //     expect(path).toEqual("/");
-    //     expect(exact).toEqual(true);
-    // });
+        expect(title).toEqual("Home");
+        expect(path).toEqual("/");
+        expect(exact).toEqual(true);
+    });
 });

@@ -72,8 +72,11 @@ exports[`Documentation: Card Overview renders 1`] = `
       <ul>
         <Card
           btnTxt="Button"
-          footerLinkTxt="Come see what we're all about."
+          footerLinkTxt="You wanna click this link?"
           footerTxt="This is some text that goes in the footer."
+          highlightSubTitle="Outstanding balance"
+          highlightTitle="725 NOK"
+          icon="account_balance"
           imgSrc="https://picsum.photos/300"
           smallText="And the small text"
           text="This is the cards text"
@@ -82,8 +85,11 @@ exports[`Documentation: Card Overview renders 1`] = `
         />
         <Card
           btnTxt="Button"
-          footerLinkTxt="Come see what we're all about."
+          footerLinkTxt="You wanna click this link?"
           footerTxt="This is some text that goes in the footer."
+          highlightSubTitle="bob.corlsan@payex.com"
+          highlightTitle="Bob Corlsan"
+          icon="face"
           imgSrc="https://picsum.photos/300"
           smallText="And the small text"
           text="This is the cards text"
@@ -92,8 +98,11 @@ exports[`Documentation: Card Overview renders 1`] = `
         />
         <Card
           btnTxt="Button"
-          footerLinkTxt="Come see what we're all about."
+          footerLinkTxt="You wanna click this link?"
           footerTxt="This is some text that goes in the footer."
+          highlightSubTitle="Complete"
+          highlightTitle="75%"
+          icon="verified_user"
           imgSrc="https://picsum.photos/300"
           smallText="And the small text"
           text="This is the cards text"

@@ -18,31 +18,40 @@ const Overview = () => (
                         type="default"
                         title="Card default"
                         imgSrc="https://picsum.photos/300"
+                        icon="account_balance"
+                        highlightTitle="725 NOK"
+                        highlightSubTitle="Outstanding balance"
                         text="This is the cards text"
                         smallText="And the small text"
                         btnTxt="Button"
                         footerTxt="This is some text that goes in the footer."
-                        footerLinkTxt="Come see what we're all about."
+                        footerLinkTxt="You wanna click this link?"
                     />
                     <CardComponent
                         type="brand"
                         title="Card brand"
                         imgSrc="https://picsum.photos/300"
+                        icon="face"
+                        highlightTitle="Bob Corlsan"
+                        highlightSubTitle="bob.corlsan@payex.com"
                         text="This is the cards text"
                         smallText="And the small text"
                         btnTxt="Button"
                         footerTxt="This is some text that goes in the footer."
-                        footerLinkTxt="Come see what we're all about."
+                        footerLinkTxt="You wanna click this link?"
                     />
                     <CardComponent
                         type="light"
                         title="Card light"
                         imgSrc="https://picsum.photos/300"
+                        icon="verified_user"
+                        highlightTitle="75%"
+                        highlightSubTitle="Complete"
                         text="This is the cards text"
                         smallText="And the small text"
                         btnTxt="Button"
                         footerTxt="This is some text that goes in the footer."
-                        footerLinkTxt="Come see what we're all about."
+                        footerLinkTxt="You wanna click this link?"
                     />
                 </ul>
             </div>
