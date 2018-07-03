@@ -9,16 +9,16 @@ const icons = {
 
 export default class NavMenu {
     constructor (btnElement) {
+        this.navMenuElement = document.querySelector(btnElement.dataset.toggleNav);
         this.isOpen = false;
         this.btnElement = btnElement;
         this.iconElement = btnElement.querySelector(".topbar-btn-icon");
         this.userIcon = this.iconElement.innerHTML || icons.default;
-        this.navSlides = this.navMenuElement.querySelectorAll(".topbar-nav-slide");
-        this.currentActive = this.navSlides[0];
         this.history = [];
 
-        if (btnElement.dataset.toggleNav) {
-            this.navMenuElement = document.querySelector(btnElement.dataset.toggleNav);
+        if (this.navMenuElement) {
+            this.navSlides = this.navMenuElement.querySelectorAll(".topbar-nav-slide");
+            this.currentActive = this.navSlides[0];
             btnElement.addEventListener("click", e => {
                 e.preventDefault();
                 this.handleClick();
