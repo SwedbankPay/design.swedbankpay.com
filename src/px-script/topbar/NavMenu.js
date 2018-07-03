@@ -19,20 +19,20 @@ export default class NavMenu {
 
         if (btnElement.dataset.toggleNav) {
             this.navMenuElement = document.querySelector(btnElement.dataset.toggleNav);
+            btnElement.addEventListener("click", e => {
+                e.preventDefault();
+                this.handleClick();
+            });
+
+            if (this.navSlides.length) {
+                this._initNavSlides();
+            }
+
+            if (this.navMenuElement) {
+                this._initTargetLinks();
+            }
         }
 
-        btnElement.addEventListener("click", e => {
-            e.preventDefault();
-            this.handleClick();
-        });
-
-        if (this.navSlides.length) {
-            this._initNavSlides();
-        }
-
-        if (this.navMenuElement) {
-            this._initTargetLinks();
-        }
     }
 
     _initNavSlides () {
