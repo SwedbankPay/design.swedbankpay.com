@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.7.1] - 2018-07-03
+
+### Fixed
+
+- Fixed issue with modal script crashing when not havng a tag with the attribute `data-modal-close`.
+- Fixed issue with topbar, also added optional parameter to init function to better preview topbar component in documentation.
+- Fixed issue with radio and checkbox components not displaying properly when using longer chunks of text in the label tag.
+
 ## [0.7.0] - 2018-07-03
 
 ### Added
