@@ -1,8 +1,8 @@
 import NavMenu from "./NavMenu";
 
 const topbar = (() => {
-    const init = () => {
-        const menu = document.querySelector(".topbar");
+    const init = index => {
+        const menu = document.querySelectorAll(".topbar")[index || 0];
 
         let leftNavMenu,
             rightNavMenu;

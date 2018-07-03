@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import ComponentPreview from "../../utils/ComponentPreview";
 import DocToc from "../../utils/DocToc";
 import TopbarComponent from "../../../components/Topbar";
+import { topbar } from "../../../../px-script";
 
 const menu = {
     btn: {
@@ -125,6 +126,9 @@ const TopbarText = () => (
 );
 
 class Topbar extends Component {
+    componentDidMount () {
+        topbar.init(1);
+    }
     render () {
         return (
             <div className="doc-container">
