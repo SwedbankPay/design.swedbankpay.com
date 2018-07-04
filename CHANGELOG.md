@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.8.0] - 2018-07-
+
+### Changed
+
+- Removed mypayex logo option from topbar. Logo is now defaulted to standard payex logo, class `.logo-default` is no longer needed.
+
 ## [0.7.1] - 2018-07-03
 
 ### Fixed
