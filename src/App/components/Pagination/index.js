@@ -23,7 +23,7 @@ const Pagination = ({ type, items, text, arrows, farArrows }) => {
 
         return (
             <li className={`arrow-${type}`}>{"\n"}
-                <a href="#" className={disabled ? "disabled" : ""}></a>{"\n"}
+                {disabled ? <span></span> : <a href="#"></a>}{"\n"}
             </li>
         );
     };
