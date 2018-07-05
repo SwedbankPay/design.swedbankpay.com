@@ -94,7 +94,6 @@ exports[`Documentation: index renders 1`] = `
                 "component": Object {
                   "ColorPalette": [Function],
                   "ColorText": [Function],
-                  "Usage": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/core/color",
@@ -376,9 +375,19 @@ exports[`Documentation: index renders 1`] = `
         <RenderRoutes
           key="3"
           path="/docs/utilities"
-          redirect="/docs/utilities/display"
+          redirect="/docs/utilities/colors"
           routes={
             Array [
+              Object {
+                "component": Object {
+                  "BackgroundColors": [Function],
+                  "ColorsText": [Function],
+                  "TextColors": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/utilities/colors",
+                "title": "Colors",
+              },
               Object {
                 "component": Object {
                   "DisplayText": [Function],

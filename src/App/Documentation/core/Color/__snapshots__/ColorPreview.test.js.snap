@@ -2,7 +2,7 @@
 
 exports[`Core: Color renders 1`] = `
 <div
-  className="color-preview background-test"
+  className="color-preview bg-test"
 >
   <p>
     test

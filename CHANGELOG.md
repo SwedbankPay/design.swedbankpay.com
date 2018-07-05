@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ## [0.8.0] - 2018-07-
 
+### Added
+
+- Added section for colors in utilities.
+
+### Changed
+
+- Changed `.background-color` utility class to `.bg-color`.
+
 ### Removed
 
 - Removed mypayex logo option from topbar. Logo is now defaulted to standard payex logo, class `.logo-default` is no longer needed.

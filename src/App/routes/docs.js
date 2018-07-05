@@ -168,8 +168,13 @@ export default [
     {
         title: "Utilities",
         path: "/docs/utilities",
-        redirect: "/docs/utilities/display",
+        redirect: "/docs/utilities/colors",
         routes: [
+            {
+                title: "Colors",
+                path: "/docs/utilities/colors",
+                component: require("../Documentation/utilities/Colors")
+            },
             {
                 title: "Display",
                 path: "/docs/utilities/display",
