@@ -36,13 +36,13 @@ const BackgroundColors = () => (
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <div className="container">
                 <div className="row">
-                    <div className="col-12 bg-brand">.bg-brand.</div>
-                    <div className="col-12 bg-default">.bg-default.</div>
-                    <div className="col-12 bg-neutral">.bg-neutral.</div>
-                    <div className="col-12 bg-success">.bg-success.</div>
-                    <div className="col-12 bg-warning">.bg-warning.</div>
-                    <div className="col-12 bg-danger">.bg-danger.</div>
-                    <div className="col-12 bg-white">.bg-white.</div>
+                    <div className="col-12 bg-brand">.bg-brand</div>
+                    <div className="col-12 bg-default">.bg-default</div>
+                    <div className="col-12 bg-neutral">.bg-neutral</div>
+                    <div className="col-12 bg-success">.bg-success</div>
+                    <div className="col-12 bg-warning">.bg-warning</div>
+                    <div className="col-12 bg-danger">.bg-danger</div>
+                    <div className="col-12 bg-white">.bg-white</div>
                 </div>
             </div>
         </ComponentPreview>
