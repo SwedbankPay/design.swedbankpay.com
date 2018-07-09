@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - Changed `.background-color` utility class to `.bg-color`.
+- Changed breadcrumb component to disable span elements by default, provided they are not within last-child li element.
 
 ### Removed
 

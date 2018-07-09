@@ -54,22 +54,6 @@ describe("Component: Breadcrumb", () => {
         expect(wrapper.contains(<ol className="breadcrumb"><li><a href="www.example.com">test</a></li></ol>)).toEqual(true);
     });
 
-    it("renders a disabled breadcrumb when the prop disabled is provided", () => {
-        const items = [
-            {
-                title: "test",
-                disabled: true
-            }
-        ];
-
-        const wrapper = shallow(
-            <Breadcrumb items={items} />
-        );
-
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<ol className="breadcrumb"><li className="disabled"><span>test</span></li></ol>)).toEqual(true);
-    });
-
     it("renders multiple breadcrumbs when provided in the items prop", () => {
         const items = [
             { title: "test #1" },

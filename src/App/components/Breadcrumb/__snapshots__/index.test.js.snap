@@ -1,20 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Breadcrumb renders a disabled breadcrumb when the prop disabled is provided 1`] = `
-<ol
-  className="breadcrumb"
->
-  <li
-    className="disabled"
-    key="0"
-  >
-    <span>
-      test
-    </span>
-  </li>
-</ol>
-`;
-
 exports[`Component: Breadcrumb renders breadcrumb with the provided items in the items prop 1`] = `
 <ol
   className="breadcrumb"

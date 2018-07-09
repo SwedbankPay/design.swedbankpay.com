@@ -20,7 +20,7 @@ const BasicBreadCrumb = () => {
             title: "Gadgets",
             href: "#"
         },
-        { title: "Gadgets #1" }
+        { title: "Gadget #1" }
     ];
 
     return (
@@ -36,10 +36,19 @@ const BasicBreadCrumb = () => {
 
 const SmallBreadCrumb = () => {
     const items = [
-        { title: "Home" },
-        { title: "Products" },
-        { title: "Gadgets" },
-        { title: "Gadgets #1" }
+        {
+            title: "Home",
+            href: "#"
+        },
+        {
+            title: "Products",
+            href: "#"
+        },
+        {
+            title: "Gadgets",
+            href: "#"
+        },
+        { title: "Gadget #1" }
     ];
 
     return (
@@ -59,25 +68,18 @@ const DisabledBreadcrumb = () => {
             title: "Home",
             href: "#"
         },
-        {
-            title: "Products",
-            href: "#",
-            disabled: true
-        },
+        { title: "Products" },
         {
             title: "Gadgets",
             href: "#"
         },
-        {
-            title: "Gadgets #1",
-            href: "#"
-        }
+        { title: "Gadget #1" }
     ];
 
     return (
         <>
             <h2 id="disable-a-breadcrumb">Disable a breadcrumb</h2>
-            <p>To disable a breadcrumb element, add class <code className="token property">.disabled</code> to the <PrismCode className="language-html">{"<li>"}</PrismCode> element.</p>
+            <p>To disable a breadcrumb element, simply use a <PrismCode className="language-html">{"<span>"}</PrismCode> element within the <PrismCode className="language-html">{"<li>"}</PrismCode> element (will not work for last-child).</p>
             <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
                 <BreadcrumbComponent small={true} items={items} />
             </ComponentPreview>

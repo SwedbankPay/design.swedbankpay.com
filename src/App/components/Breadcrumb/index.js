@@ -2,15 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const _renderItems = items => items.map((item, i) => (
-    item.disabled ? (
-        <li key={i} className="disabled">
-            <span>{item.title}</span>
-        </li>
-    ) : (
-        <li key={i}>
-            {item.href ? <a href={item.href}>{item.title}</a> : <span>{item.title}</span>}
-        </li>
-    )
+    <li key={i}>
+        {item.href ? <a href={item.href}>{item.title}</a> : <span>{item.title}</span>}
+    </li>
 ));
 
 const DefaultItems = () => (
