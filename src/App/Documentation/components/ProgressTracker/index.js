@@ -4,7 +4,7 @@ import PrismCode from "react-prism";
 import ComponentPreview from "../../utils/ComponentPreview";
 import DocToc from "../../utils/DocToc";
 
-import ProgressTrackerComponent from "../../../components/ProgressTracker";
+import ProgressTrackerComponent from "~/src/App/components/ProgressTracker";
 
 const BasicProgressTracker = () => {
     const items = [
