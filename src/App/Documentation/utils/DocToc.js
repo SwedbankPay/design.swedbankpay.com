@@ -98,7 +98,7 @@ class DocToc extends Component {
 
     render () {
         return (
-            <div className="col-2 d-md-none d-lg-block">
+            <div className="col-2 d-none d-lg-block">
                 <div className="doc-toc">
                     <ul>
                         {this.state.headings.map((heading, i) => {
