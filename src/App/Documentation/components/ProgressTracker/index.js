@@ -82,9 +82,7 @@ const DisabledProgressTracker = () => {
             title: "Payment",
             active: true
         },
-        {
-            title: "Receipt"
-        }
+        { title: "Receipt" }
     ];
 
     return (
