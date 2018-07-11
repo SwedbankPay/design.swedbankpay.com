@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
-import ComponentPreview from "../../utils/ComponentPreview";
-import DocToc from "../../utils/DocToc";
-import CardComponent from "../../../components/Card";
+import ComponentPreview from "#/ComponentPreview";
+import DocToc from "#/DocToc";
+import CardComponent from "@/Card";
 
 const Overview = () => (
     <>

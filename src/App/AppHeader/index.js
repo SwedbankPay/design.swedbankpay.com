@@ -3,7 +3,7 @@ import { Link, withRouter } from "react-router-dom";
 
 import { GithubLogo, SlackLogo } from "./HeaderIcons";
 
-import pkg from "../../../package.json";
+import pkg from "~/package.json";
 import routes from "../routes/root.js";
 
 const AppHeader = ({ location }) => {

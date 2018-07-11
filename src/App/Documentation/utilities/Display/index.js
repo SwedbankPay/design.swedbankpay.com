@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import ComponentPreview from "../../utils/ComponentPreview";
-import DocToc from "../../utils/DocToc";
+import ComponentPreview from "#/ComponentPreview";
+import DocToc from "#/DocToc";
 
 const HowItWorks = () => (
     <>

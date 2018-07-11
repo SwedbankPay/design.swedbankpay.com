@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-import ComponentPreview from "../../utils/ComponentPreview";
-import DocToc from "../../utils/DocToc";
-import TopbarComponent from "../../../components/Topbar";
-import { topbar } from "../../../../px-script";
+import ComponentPreview from "#/ComponentPreview";
+import DocToc from "#/DocToc";
+import TopbarComponent from "@/Topbar";
+import { topbar } from "$/px-script";
 
 const menu = {
     btn: {

@@ -1,10 +1,10 @@
 import React from "react";
 import PrismCode from "react-prism";
 
-import ComponentPreview from "../../utils/ComponentPreview";
-import DocToc from "../../utils/DocToc";
+import ComponentPreview from "#/ComponentPreview";
+import DocToc from "#/DocToc";
 
-import ProgressTrackerComponent from "~/src/App/components/ProgressTracker";
+import ProgressTrackerComponent from "@/ProgressTracker";
 
 const BasicProgressTracker = () => {
     const items = [

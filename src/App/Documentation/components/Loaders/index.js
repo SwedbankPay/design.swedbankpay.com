@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import PrismCode from "react-prism";
 
-import ComponentPreview, { PxScript, Attribute } from "../../utils/ComponentPreview";
-import DocToc from "../../utils/DocToc";
+import ComponentPreview, { PxScript, Attribute } from "#/ComponentPreview";
+import DocToc from "#/DocToc";
 
-import LoaderComponent from "../../../components/Loader";
-import { loader } from "../../../../px-script";
+import LoaderComponent from "@/Loader";
+import { loader } from "$/px-script";
 
 const BasicUsage = () => (
     <>

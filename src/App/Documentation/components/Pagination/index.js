@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
-import ComponentPreview from "../../utils/ComponentPreview";
-import DocToc from "../../utils/DocToc";
-import PaginationComponent from "../../../components/Pagination";
+import ComponentPreview from "#/ComponentPreview";
+import DocToc from "#/DocToc";
+import PaginationComponent from "@/Pagination";
 
 const paginationItems = [
     /* eslint-disable object-property-newline */

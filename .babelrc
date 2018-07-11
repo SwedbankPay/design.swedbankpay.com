@@ -4,6 +4,26 @@
         "@babel/preset-react"
     ],
     "plugins": [
-        ["babel-plugin-root-import"]
+        ["babel-plugin-root-import", {
+            "paths": [
+                {
+                    "rootPathPrefix": "~",
+                    "rootPathSuffix": "./"
+                },
+                {
+                    "rootPathPrefix": "$",
+                    "rootPathSuffix": "./src"
+                },
+                {
+                    "rootPathPrefix": "@",
+                    "rootPathSuffix": "./src/App/components"
+                },
+                {
+                    "rootPathPrefix": "#",
+                    "rootPathSuffix": "./src/App/Documentation/utils"
+
+                }
+            ]
+        }]
     ]
 }

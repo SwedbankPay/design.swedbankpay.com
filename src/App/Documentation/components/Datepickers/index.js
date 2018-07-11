@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
-import ComponentPreview, { Attribute } from "../../utils/ComponentPreview";
-import DocToc from "../../utils/DocToc";
+import ComponentPreview, { Attribute } from "#/ComponentPreview";
+import DocToc from "#/DocToc";
 
-import { datepicker } from "../../../../px-script";
-import { Datepicker as DatepickerComponent } from "../../../components/FormComponents";
+import { Datepicker as DatepickerComponent } from "@/FormComponents";
+import { datepicker } from "$/px-script";
 
 const moment = window.moment;
 

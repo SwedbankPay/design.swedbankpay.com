@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
-import ComponentPreview from "../../utils/ComponentPreview";
-import DocToc from "../../utils/DocToc";
+import ComponentPreview from "#/ComponentPreview";
+import DocToc from "#/DocToc";
 
-import { modal } from "../../../../px-script";
-import ModalComponent from "../../../components/Modal";
+import { modal } from "$/px-script";
+import ModalComponent from "@/Modal";
 
 const Usage = () => (
     <>
