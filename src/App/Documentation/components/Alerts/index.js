@@ -2,11 +2,10 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import ComponentPreview, { Attribute, PxScript } from "../../utils/ComponentPreview";
-import DocToc from "../../utils/DocToc";
+import { ComponentPreview, Attribute, PxScript, DocToc } from "#";
 
-import AlertComponent from "../../../components/Alert";
-import { alert } from "../../../../px-script";
+import AlertComponent from "@/Alert";
+import { alert } from "$/px-script";
 
 const BasicUsage = () => (
     <>

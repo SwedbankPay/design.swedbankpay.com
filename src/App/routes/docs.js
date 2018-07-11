@@ -140,6 +140,11 @@ export default [
                 component: require("../Documentation/components/Panel")
             },
             {
+                title: "Progress Tracker",
+                path: "/docs/components/progress-tracker",
+                component: require("../Documentation/components/ProgressTracker")
+            },
+            {
                 title: "Status",
                 path: "/docs/components/status",
                 component: require("../Documentation/components/Status")

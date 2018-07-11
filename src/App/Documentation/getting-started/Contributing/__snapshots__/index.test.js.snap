@@ -501,9 +501,8 @@ exports[`GettingStarted: Contributing Create A Documentation Page renders 1`] = 
     import React from "react";
 
 
-    import ComponentPreview from "../../utils/ComponentPreview";
-    import ComponentPreview from "../../utils/DocToc";
-    import MyExampleComponent from "../../../components/MyExampleComponent";
+    import { ComponentPreview, DocToc } from "#";
+    import MyExampleComponent from "@/MyExampleComponent";
 
 
     const MyExampleDocumentationComponentText = () =&gt; (

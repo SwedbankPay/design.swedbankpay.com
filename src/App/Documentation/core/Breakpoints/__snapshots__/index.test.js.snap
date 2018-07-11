@@ -275,9 +275,6 @@ exports[`Core: Breakpoints renders 1`] = `
       className="row"
     >
       <BreakpointsText />
-      <DocToc
-        component={[Function]}
-      />
     </div>
   </div>
 </React.Fragment>

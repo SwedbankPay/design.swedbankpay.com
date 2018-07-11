@@ -330,6 +330,17 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "BasicProgressTracker": [Function],
+                  "DisabledProgressTracker": [Function],
+                  "ProgressTrackerText": [Function],
+                  "SmallProgressTracker": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/components/progress-tracker",
+                "title": "Progress Tracker",
+              },
+              Object {
+                "component": Object {
                   "ExtendedUsage": [Function],
                   "Overview": [Function],
                   "StatusText": [Function],

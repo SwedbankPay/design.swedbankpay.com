@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 
-import ComponentPreview from "../../utils/ComponentPreview";
-import DocToc from "../../utils/DocToc";
-import TabsComponent from "../../../components/Tabs";
-import { tabs } from "../../../../px-script";
+import { ComponentPreview, DocToc } from "#";
+import TabsComponent from "@/Tabs";
+import { tabs } from "$/px-script";
 
 const tabItems = [
     {

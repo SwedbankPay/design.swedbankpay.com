@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 
-import ComponentPreview from "../../utils/ComponentPreview";
-import DocToc from "../../utils/DocToc";
-
-import InputGroupComponent from "../../../components/InputGroup";
+import { ComponentPreview, DocToc } from "#";
+import InputGroupComponent from "@/InputGroup";
 
 const BasicExample = () => (
     <>
