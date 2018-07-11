@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import ComponentPreview, { Attribute, PxScript } from "#/ComponentPreview";
-import DocToc from "#/DocToc";
-
+import { ComponentPreview, Attribute, PxScript, DocToc } from "#";
 import ButtonComponent from "@/Button";
 import { button } from "$/px-script";
 

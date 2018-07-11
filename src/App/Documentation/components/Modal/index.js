@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 
-import ComponentPreview from "#/ComponentPreview";
-import DocToc from "#/DocToc";
-
+import { ComponentPreview, DocToc } from "#";
 import { modal } from "$/px-script";
 import ModalComponent from "@/Modal";
 

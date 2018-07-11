@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 
-import ComponentPreview from "#/ComponentPreview";
-import DocToc from "#/DocToc";
-
+import { ComponentPreview, DocToc } from "#";
 import { rangeslider, validation } from "$/px-script";
 import InputGroup from "@/InputGroup";
 import Button from "@/Button";

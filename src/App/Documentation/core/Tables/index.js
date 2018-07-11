@@ -1,7 +1,6 @@
 import React from "react";
 
-import ComponentPreview from "#/ComponentPreview";
-import DocToc from "#/DocToc";
+import { ComponentPreview, DocToc } from "#";
 
 const BasicTable = () => (
     <>

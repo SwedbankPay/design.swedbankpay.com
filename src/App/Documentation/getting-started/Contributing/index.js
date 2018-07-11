@@ -1,8 +1,7 @@
 import React from "react";
 import PrismCode from "react-prism";
 
-import ComponentPreview from "#/ComponentPreview";
-import DocToc from "#/DocToc";
+import { ComponentPreview, DocToc } from "#";
 
 const CreatingYourComponent = () => (
     <>
@@ -36,8 +35,7 @@ const CreateADocumentationPage = () => (
         <ComponentPreview language="javascript" codeFigure={true}>
             {"//example documentation component\n\n"}
             {"import React from \"react\";\n\n"}
-            {"import ComponentPreview from \"#/ComponentPreview\";"}
-            {"import ComponentPreview from \"#/DocToc\";"}
+            {"import { ComponentPreview, DocToc } from \"#\";"}
             {"import MyExampleComponent from \"@/MyExampleComponent\";\n\n"}
             {"const MyExampleDocumentationComponentText = () => (\n"}
             {"    <div className=\"col-md-12 col-lg-10 doc-body\">\n"}

@@ -1,8 +1,7 @@
 import React from "react";
 import PrismCode from "react-prism";
 
-import ComponentPreview from "#/ComponentPreview";
-import DocToc from "#/DocToc";
+import { ComponentPreview, DocToc } from "#";
 import pkg from "~/package.json";
 
 const version = pkg.version;

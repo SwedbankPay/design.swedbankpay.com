@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
 import ComponentPreview, { Attribute, PxScript } from "#/ComponentPreview";
-import DocToc from "#/DocToc";
+import { DocToc } from "#";
 
 import AlertComponent from "@/Alert";
 import { alert } from "$/px-script";
