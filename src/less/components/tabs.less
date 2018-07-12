@@ -14,18 +14,32 @@
 
             a,
             span {
-                background-color: @background-body;
+                color: fade(@brand-primary, 80%);
+                background-color: @white;
                 display: block;
                 font-weight: bold;
                 padding: 1rem 2rem;
                 font-size: 1.3rem;
+                border-bottom: 3px solid @white;
+                transition: border-bottom 0.2s ease-in-out;
+            }
+
+            a {
+                &:focus,
+                &:active,
+                &:hover {
+                    text-decoration: none;
+                    color: @brand-primary;
+                }
             }
 
             &.active {
                 span,
                 a,
                 a:hover {
+                    color: @brand-primary;
                     background-color: @white;
+                    border-bottom: 3px solid @brand-primary;
                 }
             }
         }

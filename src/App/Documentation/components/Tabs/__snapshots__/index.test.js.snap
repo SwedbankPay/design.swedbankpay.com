@@ -31,15 +31,15 @@ exports[`Components: Tabs Collapsed renders 1`] = `
         Array [
           Object {
             "active": false,
-            "name": "Tab1",
+            "name": "Tab #1",
           },
           Object {
             "active": true,
-            "name": "Tab2",
+            "name": "Tab #2",
           },
           Object {
             "active": false,
-            "name": "Tab3",
+            "name": "Tab #3",
           },
         ]
       }
@@ -80,15 +80,15 @@ exports[`Components: Tabs Overview renders 1`] = `
         Array [
           Object {
             "active": false,
-            "name": "Tab1",
+            "name": "Tab #1",
           },
           Object {
             "active": true,
-            "name": "Tab2",
+            "name": "Tab #2",
           },
           Object {
             "active": false,
-            "name": "Tab3",
+            "name": "Tab #3",
           },
         ]
       }
@@ -129,15 +129,15 @@ exports[`Components: Tabs Stacked renders 1`] = `
         Array [
           Object {
             "active": false,
-            "name": "Tab1",
+            "name": "Tab #1",
           },
           Object {
             "active": true,
-            "name": "Tab2",
+            "name": "Tab #2",
           },
           Object {
             "active": false,
-            "name": "Tab3",
+            "name": "Tab #3",
           },
         ]
       }
