@@ -1,6 +1,6 @@
 import React from "react";
 
-import DocToc from "#";
+import { DocToc } from "#";
 
 const Overview = () => (
     <>
