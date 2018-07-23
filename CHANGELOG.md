@@ -15,6 +15,10 @@ All notable changes to this project will be documented in this file.
 - Changed breadcrumb component to disable span elements by default, provided they are not within last-child li element.
 - Reworked styling of tabs component.
 
+### Fixed
+
+- Fixed issue with hover table.
+
 ### Removed
 
 - Removed mypayex logo option from topbar. Logo is now defaulted to standard payex logo, class `.logo-default` is no longer needed.
