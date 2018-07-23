@@ -155,6 +155,11 @@ export default [
                 component: require("../Documentation/components/Tabs")
             },
             {
+                title: "Tooltips",
+                path: "/docs/components/tooltips",
+                component: require("../Documentation/components/Tooltips")
+            },
+            {
                 title: "Topbar",
                 path: "/docs/components/topbar",
                 component: require("../Documentation/components/Topbar")

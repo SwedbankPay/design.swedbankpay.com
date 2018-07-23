@@ -7,6 +7,7 @@ import rangeslider from "./rangeslider";
 import script from "./script";
 import tabs from "./tabs";
 import topbar from "./topbar";
+import tooltip from "./tooltip";
 import validation from "./validation";
 
 const px = {
@@ -18,6 +19,7 @@ const px = {
     rangeslider,
     script,
     tabs,
+    tooltip,
     topbar,
     validation
 };
@@ -31,4 +33,4 @@ if (!window.stopPx) {
 }
 
 export default px;
-export { alert, button, datepicker, loader, modal, rangeslider, script, tabs, topbar, validation };
+export { alert, button, datepicker, loader, modal, rangeslider, script, tabs, topbar, tooltip, validation };
