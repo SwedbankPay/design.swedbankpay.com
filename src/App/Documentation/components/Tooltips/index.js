@@ -1,30 +1,57 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc } from "#";
-import { tooltip } from "$/px-script";
+import { ComponentPreview, DocToc, Attribute } from "#";
 
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
-        <p>Overview... <code className="token property">.tooltip</code>...</p>
+        <p>Add the attribute <Attribute data name="tooltip" /> to the desired element to create the tooltip and add your content to the attribute <Attribute data name="tooltip-text" />.</p>
+        <p>You can use the attribute <Attribute data name="tooltip-position" /> to position the tooltip relative to the containing element, use the values <Attribute value="top" />, <Attribute value="right" />, <Attribute value="bottom" /> or <Attribute value="left" />. If no the attribute is not provided, it will default to top.</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-            <p data-tooltip="" data-tooltip-placement="top" data-tooltip-text="this is a tooltip test">TEST</p>
+            <button
+                className="btn btn-brand"
+                type="button"
+                data-tooltip=""
+                data-tooltip-position="left"
+                data-tooltip-text="This is a tooltip!"
+            >Tooltip to the left
+            </button>{"\n"}
+            <button
+                className="btn btn-brand"
+                type="button"
+                data-tooltip=""
+                data-tooltip-position="top"
+                data-tooltip-text="This is a tooltip!"
+            >Tooltip on top
+            </button>{"\n"}
+            <button
+                className="btn btn-brand"
+                type="button"
+                data-tooltip=""
+                data-tooltip-position="right"
+                data-tooltip-text="This is a tooltip!"
+            >Tooltip to the right
+            </button>{"\n"}
+            <button
+                className="btn btn-brand"
+                type="button"
+                data-tooltip=""
+                data-tooltip-position="bottom"
+                data-tooltip-text="This is a tooltip!"
+            >Tooltip to the bottom
+            </button>
         </ComponentPreview>
     </>
 );
 
 const TooltipText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
-        <p className="lead">Tooltips...</p>
+        <p className="lead">Tooltips are small, interactive, textual hints for mainly graphical elements. When using icons for actions you can use a tooltip to give people clarification on its function.</p>
         <Overview />
     </div>
 );
 
 class Tooltip extends Component {
-    componentDidMount () {
-        tooltip.init();
-    }
-
     render () {
         return (
             <div className="doc-container">
