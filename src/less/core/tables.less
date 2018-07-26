@@ -3,7 +3,6 @@
     max-width: 100%;
     margin-bottom: @spacer;
     background-color: @table-bg;
-    // border-spacing: 0;
 
     th {
         text-align: left;
@@ -50,8 +49,6 @@
 
     tbody {
         tr {
-            margin-bottom: 0;
-
             th,
             td {
                 position: relative;
@@ -67,13 +64,14 @@
                 background-color: @table-stripe-color;
                 font-weight: bold;
             }
-        }
-    }
 
-    // Account for multiple tbody instances
-    tbody,
-    tbody + tbody {
-        border-top: 1px solid @table-border-color;
+            &:first-child {
+                td,
+                th {
+                    border-top: 1px solid #e6e7e8;
+                }
+            }
+        }
     }
 
     // Striped table
@@ -94,60 +92,28 @@
         tbody {
             border-top: 0;
 
-            tr:first-child {
-                border-top: 1px solid @table-border-color;
+            th,
+            td {
+                border-top: 1px solid transparent;
+                border-bottom: 1px solid transparent;
             }
         }
 
         tbody > tr:hover {
-            // &:first-child { border-top-color: transparent; }
-
-            &:first-child {
-                height: 10px;
-            }
-
-            th:before,
-            td:before {
-                content: " ";
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                height: 1px;
-                background-color: rgba(0, 0, 0, 0.04);
+            th,
+            td {
                 border-top: 1px solid @table-border-color;
-            }
+                border-bottom: 1px solid @table-border-color;
 
-            th:after,
-            td:after {
-                content: " ";
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                height: 2px;
-                background-color: rgba(0, 0, 0, 0.06);
-                border-top: 1px solid @table-border-color;
-            }
-
-            th:first-child,
-            td:first-child {
-                border-left: 6px solid @brand-primary;
-                padding-left: 13px;
-            }
-        }
-    }
-
-    &.table-hover.table-striped {
-        tbody > tr:hover:nth-child(even) {
-            th:before,
-            td:before {
-                background-color: rgba(0, 0, 0, 0.1);
-            }
-
-            th:after,
-            td:after {
-                background-color: rgba(0, 0, 0, 0.12);
+                &:first-child:before {
+                    content: "";
+                    top: -1px;
+                    left: 0;
+                    bottom: -1px;
+                    position: absolute;
+                    width: 6px;
+                    background-color: @brand-primary;
+                }
             }
         }
     }
