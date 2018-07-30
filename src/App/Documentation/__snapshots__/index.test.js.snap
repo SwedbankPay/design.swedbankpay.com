@@ -167,9 +167,18 @@ exports[`Documentation: index renders 1`] = `
         <RenderRoutes
           key="2"
           path="/docs/components"
-          redirect="/docs/components/alerts"
+          redirect="/docs/components/action-list"
           routes={
             Array [
+              Object {
+                "component": Object {
+                  "Overview": [Function],
+                  "TooltipText": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/components/action-list",
+                "title": "Action List",
+              },
               Object {
                 "component": Object {
                   "AlertWithIcon": [Function],

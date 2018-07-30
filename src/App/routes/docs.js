@@ -77,8 +77,13 @@ export default [
     {
         title: "Components",
         path: "/docs/components",
-        redirect: "/docs/components/alerts",
+        redirect: "/docs/components/action-list",
         routes: [
+            {
+                title: "Action List",
+                path: "/docs/components/action-list",
+                component: require("../Documentation/components/ActionList")
+            },
             {
                 title: "Alerts",
                 path: "/docs/components/alerts",
