@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc, Attribute, Icon } from "#";
+import { ComponentPreview, DocToc, Icon } from "#";
 import actionList from "$/px-script/action-list";
 
 const Overview = () => (

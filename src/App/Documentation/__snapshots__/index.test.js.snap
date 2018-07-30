@@ -172,8 +172,8 @@ exports[`Documentation: index renders 1`] = `
             Array [
               Object {
                 "component": Object {
+                  "ActionListText": [Function],
                   "Overview": [Function],
-                  "TooltipText": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/components/action-list",
