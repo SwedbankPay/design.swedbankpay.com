@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import { ComponentPreview, DocToc, Attribute, Icon } from "#";
+import actionList from "$/px-script/action-list";
 
 const Overview = () => (
     <>
@@ -10,36 +11,40 @@ const Overview = () => (
             <div className="action-list">{"\n"}
                 <Icon icon="more_vert" />{"\n"}
                 <div className="action-menu">{"\n"}
-                    <a href="#"><Icon icon="account_circle"/>Action #1</a>{"\n"}
-                    <a href="#"><Icon icon="account_circle"/>Action #2</a>{"\n"}
-                    <a href="#"><Icon icon="account_circle"/>Action #3</a>{"\n"}
+                    <a href="#" onClick={e => e.preventDefault()}><Icon icon="bookmark"/>Add bookmark</a>{"\n"}
+                    <a href="#" onClick={e => e.preventDefault()}><Icon icon="business_center"/>Add client</a>{"\n"}
+                    <a href="#" onClick={e => e.preventDefault()}><Icon icon="add_circle"/>Add document</a>{"\n"}
+                    <a href="#" onClick={e => e.preventDefault()}><Icon icon="person_add"/>Add user</a>{"\n"}
                 </div>
             </div>
         </ComponentPreview>
     </>
 );
 
-const TooltipText = () => (
+const ActionListText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
         <p className="lead">Action lists...</p>
         <Overview />
     </div>
 );
 
-class Tooltip extends Component {
+class ActionList extends Component {
+    componentDidMount () {
+        actionList.init();
+    }
     render () {
         return (
             <div className="doc-container">
                 <div className="row">
-                    <TooltipText />
-                    <DocToc component={TooltipText} />
+                    <ActionListText />
+                    <DocToc component={ActionListText} />
                 </div>
             </div>
         );
     }
 }
 
-export default Tooltip;
+export default ActionList;
 
 /* for testing */
-export { Overview, TooltipText };
+export { Overview, ActionListText };
