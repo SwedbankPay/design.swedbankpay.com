@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Documentation: MediaObject MediaAlignment renders 1`] = `
+<React.Fragment>
+  <h2
+    id="media-alignment"
+  >
+    Media alignment
+  </h2>
+  <p>
+    Use the 
+    <code
+      className="token property"
+    >
+      .media-right
+    </code>
+     class to align the media content to the right.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <MediaObject
+      heading="Bob Corlsan"
+      imgUrl="http://via.placeholder.com/64x64"
+      mediaRight={true}
+      text="bob.corlsan@payex.com"
+    />
+    <MediaObject
+      heading="Bob Corlsan"
+      icon="account_circle"
+      mediaRight={true}
+      text="bob.corlsan@payex.com"
+    />
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Documentation: MediaObject MediaObjectText renders 1`] = `
+<div
+  className="col-md-12 col-lg-10 doc-body"
+>
+  <div
+    className="alert alert-danger in"
+  >
+    This component is under development and will probably change.
+  </div>
+  <p
+    className="lead"
+  >
+    Media objects...
+  </p>
+  <Overview />
+  <MediaAlignment />
+</div>
+`;
+
+exports[`Documentation: MediaObject Overview renders 1`] = `
+<React.Fragment>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <p>
+    Use the 
+    <code
+      className="token property"
+    >
+      .media
+    </code>
+     class on an object to style it as a small container that feature a left- or right-aligned image/icon alongside textual content.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <MediaObject
+      heading="Bob Corlsan"
+      imgUrl="http://via.placeholder.com/64x64"
+      text="bob.corlsan@payex.com"
+    />
+    <MediaObject
+      heading="Bob Corlsan"
+      icon="account_circle"
+      text="bob.corlsan@payex.com"
+    />
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Documentation: MediaObject renders 1`] = `
+<div
+  className="doc-container"
+>
+  <div
+    className="row"
+  >
+    <MediaObjectText />
+    <DocToc
+      component={[Function]}
+    />
+  </div>
+</div>
+`;

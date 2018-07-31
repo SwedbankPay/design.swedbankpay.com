@@ -1,0 +1,35 @@
+.media {
+    display: flex;
+    margin-bottom: 1rem;
+
+    .media-img {
+        > img,
+        > .material-icons {
+            width: 64px;
+            height: 64px;
+            font-size: 4rem;
+        }
+    }
+
+    &.media-right {
+        .media-img {
+            order: 1;
+        }
+    }
+
+    .media-body {
+        padding: 0 1rem;
+
+        /* stylelint-disable selector-list-comma-newline-after */
+        h1, h2, h3, h4, h5, h6,
+        .h1, .h2, .h3, .h4, .h5, .h6,
+        p {
+            margin-bottom: 0;
+        }
+        /* stylelint-enable selector-list-comma-newline-after */
+
+        p {
+            margin-top: -0.5rem;
+        }
+    }
+}
