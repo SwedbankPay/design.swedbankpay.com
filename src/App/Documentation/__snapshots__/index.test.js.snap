@@ -173,6 +173,7 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "component": Object {
                   "ActionListText": [Function],
+                  "Anchorpoints": [Function],
                   "Overview": [Function],
                   "default": [Function],
                 },
