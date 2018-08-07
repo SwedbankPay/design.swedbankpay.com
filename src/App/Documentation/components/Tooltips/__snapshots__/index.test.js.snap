@@ -13,12 +13,7 @@ exports[`Components: Tooltip Overview renders 1`] = `
       data={true}
       name="tooltip"
     />
-     to the desired element to create the tooltip and add your content to the attribute 
-    <Attribute
-      data={true}
-      name="tooltip-text"
-    />
-    .
+     to the desired element and add your content in its value to create a tooltip.
   </p>
   <p>
     You can use the attribute 
@@ -51,9 +46,8 @@ exports[`Components: Tooltip Overview renders 1`] = `
   >
     <button
       className="btn btn-brand"
-      data-tooltip=""
+      data-tooltip="This is a tooltip!"
       data-tooltip-position="left"
-      data-tooltip-text="This is a tooltip!"
       type="button"
     >
       Tooltip to the left
@@ -62,9 +56,8 @@ exports[`Components: Tooltip Overview renders 1`] = `
 
     <button
       className="btn btn-brand"
-      data-tooltip=""
+      data-tooltip="This is a tooltip!"
       data-tooltip-position="top"
-      data-tooltip-text="This is a tooltip!"
       type="button"
     >
       Tooltip on top
@@ -73,9 +66,8 @@ exports[`Components: Tooltip Overview renders 1`] = `
 
     <button
       className="btn btn-brand"
-      data-tooltip=""
+      data-tooltip="This is a tooltip!"
       data-tooltip-position="right"
-      data-tooltip-text="This is a tooltip!"
       type="button"
     >
       Tooltip to the right
@@ -84,9 +76,8 @@ exports[`Components: Tooltip Overview renders 1`] = `
 
     <button
       className="btn btn-brand"
-      data-tooltip=""
+      data-tooltip="This is a tooltip!"
       data-tooltip-position="bottom"
-      data-tooltip-text="This is a tooltip!"
       type="button"
     >
       Tooltip to the bottom

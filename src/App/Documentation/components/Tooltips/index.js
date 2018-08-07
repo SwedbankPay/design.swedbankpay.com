@@ -5,39 +5,35 @@ import { ComponentPreview, DocToc, Attribute } from "#";
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
-        <p>Add the attribute <Attribute data name="tooltip" /> to the desired element to create the tooltip and add your content to the attribute <Attribute data name="tooltip-text" />.</p>
+        <p>Add the attribute <Attribute data name="tooltip" /> to the desired element and add your content in its value to create a tooltip.</p>
         <p>You can use the attribute <Attribute data name="tooltip-position" /> to position the tooltip relative to the containing element, use the values <Attribute value="top" />, <Attribute value="right" />, <Attribute value="bottom" /> or <Attribute value="left" />. If no the attribute is not provided, it will default to top.</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <button
                 className="btn btn-brand"
                 type="button"
-                data-tooltip=""
+                data-tooltip="This is a tooltip!"
                 data-tooltip-position="left"
-                data-tooltip-text="This is a tooltip!"
             >Tooltip to the left
             </button>{"\n"}
             <button
                 className="btn btn-brand"
                 type="button"
-                data-tooltip=""
+                data-tooltip="This is a tooltip!"
                 data-tooltip-position="top"
-                data-tooltip-text="This is a tooltip!"
             >Tooltip on top
             </button>{"\n"}
             <button
                 className="btn btn-brand"
                 type="button"
-                data-tooltip=""
+                data-tooltip="This is a tooltip!"
                 data-tooltip-position="right"
-                data-tooltip-text="This is a tooltip!"
             >Tooltip to the right
             </button>{"\n"}
             <button
                 className="btn btn-brand"
                 type="button"
-                data-tooltip=""
+                data-tooltip="This is a tooltip!"
                 data-tooltip-position="bottom"
-                data-tooltip-text="This is a tooltip!"
             >Tooltip to the bottom
             </button>
         </ComponentPreview>
