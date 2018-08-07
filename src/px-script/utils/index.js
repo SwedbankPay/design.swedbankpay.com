@@ -9,7 +9,22 @@ export const findAncestor = (el, cls) => {
     return el;
 };
 
+export const extendObj = (overWrite, obj, ext) => {
+    for (const key in ext) {
+        if (overWrite) {
+            obj[key] = ext[key];
+        } else {
+            if (!obj[key]) {
+                obj[key] = ext[key];
+            }
+        }
+    }
+
+    return obj;
+};
+
 export default {
     applyToEachElement,
-    findAncestor
+    findAncestor,
+    extendObj
 };

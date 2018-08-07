@@ -155,6 +155,11 @@ export default [
                 component: require("../Documentation/components/Tabs")
             },
             {
+                title: "Toast",
+                path: "/docs/components/toast",
+                component: require("../Documentation/components/Toast")
+            },
+            {
                 title: "Topbar",
                 path: "/docs/components/topbar",
                 component: require("../Documentation/components/Topbar")
