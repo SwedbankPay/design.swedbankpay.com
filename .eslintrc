@@ -20,13 +20,15 @@
         "react",
         "node",
         "jest",
-        "testcafe"
+        "testcafe",
+        "security"
     ],
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
         "plugin:jest/recommended",
-        "plugin:testcafe/recommended"
+        "plugin:testcafe/recommended",
+        "plugin:security/recommended"
     ],
     "rules": {
         "array-bracket-spacing":            ["warn"],
