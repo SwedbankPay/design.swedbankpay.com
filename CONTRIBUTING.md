@@ -52,8 +52,7 @@ Create a new file under `./src/App/Documentation/Components/[MyExampleDocumentat
 import React from "react";
 
 //Read more about the import shortcuts in the readme (#, @, $ etc.)
-import ComponentPreview from "#/ComponentPreview";
-import ComponentPreview from "#/DocToc";
+import { ComponentPreview, DocToc } from "#";
 import MyExampleComponent from "@/MyExampleComponent";
 
 const MyExampleDocumentationComponentText = () => (

@@ -59,8 +59,8 @@ Design Guide uses [semantic versioning](http://semver.org/). This means that int
 1. Open a terminal and navigate to repo root
 1. Run the command `npm test`
     * Many of the tests are snapshot based, and runs against already created snapshots. If you need to update the snapshots due to changes run the command `npm run test:update`.
-    * A test coverage report is generated after running the tests. This can be found in `./coverage` or.
-> Note: Snapshot testing is pretty unforgiving, so if you make __ANY__ changes to a component which already has a snapshot, the tests __WILL__ crash! So make sure to run `npm run test:update` before committing.
+    * A test coverage report is generated after running the tests. This can be found in `./coverage`.
+> Note: Snapshot testing is pretty unforgiving, so if you make __ANY__ changes to how a component is rendered, which already has a snapshot, the tests __WILL__ crash! So make sure to run `npm run test:update` before committing.
 
 ## Code style
 
