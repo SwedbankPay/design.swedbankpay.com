@@ -23,11 +23,7 @@ exports[`Documentation: MediaObject MediaAlignment renders 1`] = `
   >
     <MediaObject
       heading="Bob Corlsan"
-<<<<<<< HEAD
       imgUrl="https://via.placeholder.com/48x48"
-=======
-      imgUrl="http://via.placeholder.com/48x48"
->>>>>>> 4217b8700845f9e2cd419bacd87c9a42b69c101d
       mediaRight={true}
       text="bob.corlsan@payex.com"
     />
@@ -79,11 +75,7 @@ exports[`Documentation: MediaObject Overview renders 1`] = `
   >
     <MediaObject
       heading="Bob Corlsan"
-<<<<<<< HEAD
       imgUrl="https://via.placeholder.com/48x48"
-=======
-      imgUrl="http://via.placeholder.com/48x48"
->>>>>>> 4217b8700845f9e2cd419bacd87c9a42b69c101d
       text="bob.corlsan@payex.com"
     />
     <MediaObject
