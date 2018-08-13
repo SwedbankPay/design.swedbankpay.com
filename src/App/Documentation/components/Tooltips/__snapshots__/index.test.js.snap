@@ -37,7 +37,7 @@ exports[`Components: Tooltip Overview renders 1`] = `
     <Attribute
       value="left"
     />
-    . If no the attribute is not provided, it will default to top.
+    . If the attribute is not provided, it will default to top.
   </p>
   <ComponentPreview
     codeFigure={true}
