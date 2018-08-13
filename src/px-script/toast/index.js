@@ -33,11 +33,7 @@ class Toast {
         const container = document.createElement("div");
         container.setAttribute("id", "toast-container");
 
-<<<<<<< HEAD
         // TODO: Add event handlers
-=======
-        // TODO: Create event handlers
->>>>>>> a82754fa1c2e31668c512b15559ac105f8b1cce1
 
         document.body.appendChild(container);
         this._container = container;

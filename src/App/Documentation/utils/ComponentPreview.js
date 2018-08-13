@@ -130,7 +130,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
 };
 
 ComponentPreview.propTypes = {
-    language: PropTypes.string.isRequired,
+    language: PropTypes.oneOf(["html", "javascript", "css"]).isRequired,
     removeOuterTag: PropTypes.bool,
     removeList: PropTypes.bool,
     showCasePanel: PropTypes.bool,
