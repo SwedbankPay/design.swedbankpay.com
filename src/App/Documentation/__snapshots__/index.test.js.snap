@@ -363,6 +363,15 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "component": Object {
                   "Overview": [Function],
+                  "ToastText": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/components/toast",
+                "title": "Toast (experimental)",
+              },
+              Object {
+                "component": Object {
+                  "Overview": [Function],
                   "TopbarText": [Function],
                   "default": [Function],
                 },
