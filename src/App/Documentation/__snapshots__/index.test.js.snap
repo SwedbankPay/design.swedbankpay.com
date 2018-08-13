@@ -297,6 +297,16 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "MediaObjectText": [Function],
+                  "MediaPosition": [Function],
+                  "Overview": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/components/media-object",
+                "title": "Media Object",
+              },
+              Object {
+                "component": Object {
                   "Demo": [Function],
                   "ModalText": [Function],
                   "Usage": [Function],
