@@ -130,6 +130,11 @@ export default [
                 component: require("../Documentation/components/Loaders")
             },
             {
+                title: "Media Object",
+                path: "/docs/components/media-object",
+                component: require("../Documentation/components/MediaObject")
+            },
+            {
                 title: "Modal",
                 path: "/docs/components/modal",
                 component: require("../Documentation/components/Modal")
