@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 
 - Added section for colors in utilities.
 - Added progress tracker component and documentation.
+- Added media object component.
 
 ### Changed
 
