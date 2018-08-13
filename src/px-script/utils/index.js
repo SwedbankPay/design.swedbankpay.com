@@ -9,7 +9,18 @@ export const findAncestor = (el, cls) => {
     return el;
 };
 
+export const isWithinBoundingBox = (x, y, element) => {
+    const rect = element.getBoundingClientRect();
+    const xMin = rect.left;
+    const xMax = rect.right;
+    const yMin = rect.top;
+    const yMax = rect.bottom;
+
+    return ((xMin < x) && (xMax > x)) && ((yMin < y) && (yMax > y));
+};
+
 export default {
     applyToEachElement,
-    findAncestor
+    findAncestor,
+    isWithinBoundingBox
 };
