@@ -33,9 +33,9 @@ const Sizes = () => (
     </>
 );
 
-const MediaAlignment = () => (
+const MediaPosition = () => (
     <>
-        <h2 id="media-alignment">Media alignment</h2>
+        <h2 id="media-position">Media position</h2>
         <p>Use the <code className="token property">.media-right</code> class to align the media content to the right.</p>
         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
             <MediaObjectComponent mediaRight imgUrl="https://via.placeholder.com/48x48" heading="Bob Corlsan" text="bob.corlsan@payex.com" />
@@ -49,7 +49,7 @@ const MediaObjectText = () => (
         <p className="lead">Media objects...</p>
         <Overview />
         <Sizes />
-        <MediaAlignment />
+        <MediaPosition />
     </div>
 );
 
@@ -65,4 +65,4 @@ const MediaObject = () => (
 export default MediaObject;
 
 /* for testing */
-export { Overview, MediaAlignment, MediaObjectText };
+export { Overview, MediaPosition, MediaObjectText };

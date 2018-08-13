@@ -1,11 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Documentation: MediaObject MediaAlignment renders 1`] = `
+exports[`Documentation: MediaObject MediaObjectText renders 1`] = `
+<div
+  className="col-md-12 col-lg-10 doc-body"
+>
+  <p
+    className="lead"
+  >
+    Media objects...
+  </p>
+  <Overview />
+  <Sizes />
+  <MediaPosition />
+</div>
+`;
+
+exports[`Documentation: MediaObject MediaPosition renders 1`] = `
 <React.Fragment>
   <h2
-    id="media-alignment"
+    id="media-position"
   >
-    Media alignment
+    Media position
   </h2>
   <p>
     Use the 
@@ -35,21 +50,6 @@ exports[`Documentation: MediaObject MediaAlignment renders 1`] = `
     />
   </ComponentPreview>
 </React.Fragment>
-`;
-
-exports[`Documentation: MediaObject MediaObjectText renders 1`] = `
-<div
-  className="col-md-12 col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Media objects...
-  </p>
-  <Overview />
-  <Sizes />
-  <MediaAlignment />
-</div>
 `;
 
 exports[`Documentation: MediaObject Overview renders 1`] = `

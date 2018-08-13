@@ -297,8 +297,8 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
-                  "MediaAlignment": [Function],
                   "MediaObjectText": [Function],
+                  "MediaPosition": [Function],
                   "Overview": [Function],
                   "default": [Function],
                 },

@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import MediaObject, { Overview, MediaAlignment, MediaObjectText } from "./index";
+import MediaObject, { Overview, MediaPosition, MediaObjectText } from "./index";
 
 describe("Documentation: MediaObject", () => {
     it("is defined", () => {
@@ -30,14 +30,14 @@ describe("Documentation: MediaObject", () => {
         });
     });
 
-    describe("MediaAlignment", () => {
+    describe("MediaPosition", () => {
         it("is defined", () => {
-            expect(MediaAlignment).toBeDefined();
+            expect(MediaPosition).toBeDefined();
         });
 
         it("renders", () => {
             const wrapper = shallow(
-                <MediaAlignment />
+                <MediaPosition />
             );
 
             expect(wrapper).toMatchSnapshot();
