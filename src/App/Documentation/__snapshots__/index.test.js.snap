@@ -383,6 +383,15 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "component": Object {
                   "Overview": [Function],
+                  "TooltipText": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/components/tooltips",
+                "title": "Tooltips",
+              },
+              Object {
+                "component": Object {
+                  "Overview": [Function],
                   "TopbarText": [Function],
                   "default": [Function],
                 },
