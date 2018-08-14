@@ -7,7 +7,7 @@ const _findHeadings = (children) => {
 
     if (typeof children.map === "function") {
         children.map(child => {
-            if (typeof child.type === "function") {
+            if (child.type.name !== "ExperimentalComponentAlert" && typeof child.type === "function") {
                 if (child.type().props.children.type === "h2") {
                     headings.push(
                         {
