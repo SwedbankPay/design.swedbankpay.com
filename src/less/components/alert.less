@@ -1,81 +1,68 @@
-.alert-variant(@color; @background;) {
-    color: @color;
-    background-color: @background;
-    border-color: darken(@background, 5%);
+.alert-variant(@color;) {
+    background-color: @white;
+    border: 1px solid @gray-8;
+    border-left: 3px solid @color;
 
-    .alert-heading {
-        // margin-top: 0;
+    .alert-icon {
         color: @color;
-    }
-
-    .alert-text {
-        color: @color;
-    }
-
-    .alert-link {
-        color: darken(@color, 20%);
-    }
-
-    hr {
-        border-color: darken(@background, 15%);
     }
 }
 
 
 .alert {
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     position: relative;
     margin-top: 0;
     margin-bottom: 1rem;
     border: 1px solid transparent;
-    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
 
-    &.alert-with-icon {
-        padding-left: 50px;
+    &.alert-default {
+        .alert-variant(@gray-8);
+
+        border-left-width: 1px;
+
+        .alert-icon {
+            color: @text-color;
+        }
     }
 
     &.alert-success {
-        .alert-variant(@state-success, lighten(@state-success, 50%));
+        .alert-variant(@state-success);
     }
 
     &.alert-neutral {
-        .alert-variant(@state-neutral, lighten(@state-neutral, 50%));
+        .alert-variant(@state-neutral);
     }
 
     &.alert-warning {
-        .alert-variant(@state-warning, lighten(@state-warning, 30%));
+        .alert-variant(@state-warning);
     }
 
     &.alert-danger {
-        .alert-variant(@state-error, lighten(@state-error, 50%));
-    }
-
-    &.alert-light {
-        .alert-variant(@gray-5, @gray-10)
-    }
-
-    &.alert-default {
-        .alert-variant(@gray-2, @gray-8)
+        .alert-variant(@state-error);
     }
 
     .alert-heading {
         margin: 0;
     }
 
-    .alert-text {
+    > p {
         margin-bottom: 0;
     }
 
     .alert-icon {
-        position: absolute;
-        left: 15px;
-        top: 17px;
+        margin-right: 1rem;
     }
 
     [data-alert-close] {
-        position: absolute;
         cursor: pointer;
-        right: 15px;
-        top: 15px;
+        margin-left: auto;
+        color: lighten(@text-color, 20%);
+
+        &:hover {
+            color: @text-color;
+        }
     }
 }

@@ -10,72 +10,14 @@ exports[`Component: Alert renders an alert with a close-button 1`] = `
 <div
   className="alert alert-test"
 >
+  
+
   <i
     className="material-icons"
     data-alert-close=""
   >
     close
   </i>
-  
-
-</div>
-`;
-
-exports[`Component: Alert renders an alert with a heading 1`] = `
-<div
-  className="alert alert-test"
->
-  <h3
-    className="alert-heading"
-  >
-    test
-  </h3>
-</div>
-`;
-
-exports[`Component: Alert renders an alert with a link with href='#' when no linkHref prop is provided 1`] = `
-<div
-  className="alert alert-test"
->
-  
-
-  <p
-    className="alert-text"
-  >
-    
-
-    <a
-      className="alert-link"
-      href="#"
-    >
-      test
-    </a>
-    
-
-  </p>
-</div>
-`;
-
-exports[`Component: Alert renders an alert with a link with provided href 1`] = `
-<div
-  className="alert alert-test"
->
-  
-
-  <p
-    className="alert-text"
-  >
-    
-
-    <a
-      className="alert-link"
-      href="www.example.com"
-    >
-      test
-    </a>
-    
-
-  </p>
 </div>
 `;
 
@@ -97,9 +39,9 @@ exports[`Component: Alert renders an alert with text 1`] = `
 <div
   className="alert alert-test"
 >
-  <p
-    className="alert-text"
-  >
+  
+
+  <p>
     test
   </p>
 </div>
@@ -112,18 +54,6 @@ exports[`Component: Alert renders an alert with the correct type recieved from i
 `;
 
 exports[`Component: Alert renders an alert without a close-button if no close prop is provided 1`] = `
-<div
-  className="alert alert-test"
-/>
-`;
-
-exports[`Component: Alert renders an alert without a heading if no heading prop is provided 1`] = `
-<div
-  className="alert alert-test"
-/>
-`;
-
-exports[`Component: Alert renders an alert without a link with provided href when no linkText prop is provided 1`] = `
 <div
   className="alert alert-test"
 />
