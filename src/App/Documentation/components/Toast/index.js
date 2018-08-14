@@ -8,7 +8,10 @@ const Overview = () => (
         <h2 id="overview">Overview</h2>
         <p>You want jam on that toast?</p>
         <ComponentPreview language="javascript" codeFigure>
-            {"px.toast({ html: \"I'm a toast!\" });"}
+            {"px.toast({ html: \"I am a toast!\" });"}
+        </ComponentPreview>
+        <ComponentPreview language="html" codeFigure dangerousHTML>
+            {"<button onclick=\"px.toast({ html: 'I am a toast' })\" class=\"btn\">Toast!</button>"}
         </ComponentPreview>
         <ComponentPreview language="html" showCasePanel>
             <button className="btn btn-brand" type="button" onClick={() => toast({ html: "I'm a toast!" })}>Click for toast!</button>
@@ -76,14 +79,33 @@ const Options = () => (
     </>
 );
 
+const CustomHtml = () => {
+    const toastHtml = "<span><p>I am toast content.</p><p>You can put me on several lines.</p></span><button class=\"btn toast-action\">Undo</button>";
+
+    return (
+        <>
+            <h2 id="custom-html">Custom HTML</h2>
+            <p>You can pass in an HTML String as the first argument as well. Take a look at the example below, where we pass in text as well as a flat button. If you call an external function instead of in-line JavaScript, you will not need to escape quotation marks.</p>
+            <ComponentPreview language="javascript" codeFigure>
+                {"const toastHtml = \"<span><p>I am toast content.</p><p>You can put me on several lines.</p></span><button class='btn toast-action'>Undo</button>\";"}
+                {"px.toast({ html: toastHtml });"}
+            </ComponentPreview>
+            <ComponentPreview language="html" showCasePanel>
+                <button className="btn btn-brand" type="button" onClick={() => toast({ html: toastHtml })}>Toast with action</button>
+            </ComponentPreview>
+        </>
+    );
+};
+
 const ToastText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
         <div className="alert alert-danger in">
-            This component is under development and will probably change.
+            <p>This component is under development and will probably change.</p>
         </div>
         <p className="lead">Toast...</p>
         <Overview />
         <Options />
+        <CustomHtml />
     </div>
 );
 
