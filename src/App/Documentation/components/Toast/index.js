@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc } from "#";
+import { ComponentPreview, DocToc, ExperimentalComponentAlert } from "#";
 import { toast } from "$/px-script";
 
 const Overview = () => (
@@ -99,9 +99,7 @@ const CustomHtml = () => {
 
 const ToastText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
-        <div className="alert alert-danger in">
-            <p>This component is under development and will probably change.</p>
-        </div>
+        <ExperimentalComponentAlert />
         <p className="lead">Toast...</p>
         <Overview />
         <Options />
