@@ -14,7 +14,7 @@ const Overview = () => (
             {"<button onclick=\"px.toast({ html: 'I am a toast' })\" class=\"btn\">Toast!</button>"}
         </ComponentPreview>
         <ComponentPreview language="html" showCasePanel>
-            <button className="btn btn-brand" type="button" onClick={() => toast({ html: "I'm a toast!" })}>Click for toast!</button>
+            <button className="btn btn-brand" type="button" onClick={() => toast({ html: "I am a toast!" })}>Click for toast!</button>
         </ComponentPreview>
     </>
 );
@@ -37,6 +37,18 @@ const Options = () => (
                     <td>String</td>
                     <td>{"\" \""}</td>
                     <td>The HTML content of the Toast.</td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>String</td>
+                    <td>{"\" \""}</td>
+                    <td>Premade alert types; success, neutral, warning and danger are available.</td>
+                </tr>
+                <tr>
+                    <td>dismissable</td>
+                    <td>Boolean</td>
+                    <td>true</td>
+                    <td>Wether or not the alert should be dismissable by the user (close button).</td>
                 </tr>
                 <tr>
                     <td>displayLength</td>

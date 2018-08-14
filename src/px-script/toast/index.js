@@ -2,6 +2,8 @@ import { extendObj } from "../utils";
 
 const _defaults = {
     html: "",
+    type: "",
+    dismissable: true,
     displayLength: 4000,
     inDuration: 300,
     outDuration: 375,
@@ -54,6 +56,40 @@ class Toast {
             this.options.classes.forEach(c => toast.classList.add(c));
         }
 
+        const _createIcon = (iconType, dismiss) => {
+            const icon = document.createElement("i");
+            icon.classList.add("material-icons");
+            icon.innerHTML = iconType;
+
+            if (dismiss) {
+                icon.addEventListener("click", () => {
+                    this.dismiss();
+                });
+            }
+            return icon;
+        };
+
+        switch (this.options.type) {
+            case "success":
+                toast.classList.add("toast-success");
+                toast.appendChild(_createIcon("check_circle"));
+                break;
+            case "neutral":
+                toast.classList.add("toast-neutral");
+                toast.appendChild(_createIcon("info"));
+                break;
+            case "warning":
+                toast.classList.add("toast-warning");
+                toast.appendChild(_createIcon("warning"));
+                break;
+            case "danger":
+                toast.classList.add("toast-danger");
+                toast.appendChild(_createIcon("error"));
+                break;
+            default:
+                break;
+        }
+
         // Set content
         if (typeof HTMLElement === "object"
             ? this.message instanceof HTMLElement
@@ -62,11 +98,20 @@ class Toast {
                 this.message !== null &&
                 this.message.nodeType === 1 &&
                 typeof this.message.nodeName === "string") {
-            toast.appendChild(this.message);
+            const toastContent = document.createElement("div");
+            toastContent.classList.add("toast-content");
+            toastContent.appendChild(this.message);
+            toast.appendChild(toastContent);
 
             // Insert as html
         } else {
-            toast.innerHTML = this.message;
+            const toastP = document.createElement("p");
+            toastP.innerHTML = this.message;
+            toast.appendChild(toastP);
+        }
+
+        if (this.options.dismissable) {
+            toast.appendChild(_createIcon("close", true));
         }
 
         toast.addEventListener("mouseenter", () => {
