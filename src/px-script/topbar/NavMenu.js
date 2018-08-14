@@ -1,4 +1,5 @@
 import TargetLink from "./TargetLink";
+import { isWithinBoundingBox } from "../utils";
 
 const icons = {
     default: "menu", // "&#xE5D2;"
@@ -117,16 +118,6 @@ export default class NavMenu {
     }
 
     containsPoint (x, y) {
-        return _isWithinBoundingBox(x, y, this.navMenuElement) || _isWithinBoundingBox(x, y, this.btnElement);
+        return isWithinBoundingBox(x, y, this.navMenuElement) || isWithinBoundingBox(x, y, this.btnElement);
     }
 }
-
-const _isWithinBoundingBox = (x, y, element) => {
-    const rect = element.getBoundingClientRect();
-    const xMin = rect.left;
-    const xMax = rect.right;
-    const yMin = rect.top;
-    const yMax = rect.bottom;
-
-    return ((xMin < x) && (xMax > x)) && ((yMin < y) && (yMax > y));
-};

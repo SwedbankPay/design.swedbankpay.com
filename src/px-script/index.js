@@ -1,3 +1,4 @@
+import actionList from "./action-list";
 import alert from "./alert";
 import button from "./button";
 import datepicker from "./datepicker";
@@ -11,6 +12,7 @@ import topbar from "./topbar";
 import validation from "./validation";
 
 const px = {
+    actionList,
     alert,
     button,
     datepicker,
@@ -33,4 +35,4 @@ if (!window.stopPx) {
 }
 
 export default px;
-export { alert, button, datepicker, loader, modal, rangeslider, script, tabs, toast, topbar, validation };
+export { actionList, alert, button, datepicker, loader, modal, rangeslider, script, tabs, toast, topbar, validation };

@@ -23,8 +23,19 @@ export const extendObj = (overWrite, obj, ext) => {
     return obj;
 };
 
+export const isWithinBoundingBox = (x, y, element) => {
+    const rect = element.getBoundingClientRect();
+    const xMin = rect.left;
+    const xMax = rect.right;
+    const yMin = rect.top;
+    const yMax = rect.bottom;
+
+    return ((xMin < x) && (xMax > x)) && ((yMin < y) && (yMax > y));
+};
+
 export default {
     applyToEachElement,
     findAncestor,
-    extendObj
+    extendObj,
+    isWithinBoundingBox
 };

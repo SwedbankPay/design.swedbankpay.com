@@ -77,8 +77,13 @@ export default [
     {
         title: "Components",
         path: "/docs/components",
-        redirect: "/docs/components/alerts",
+        redirect: "/docs/components/action-list",
         routes: [
+            {
+                title: "Action List",
+                path: "/docs/components/action-list",
+                component: require("../Documentation/components/ActionList")
+            },
             {
                 title: "Alerts",
                 path: "/docs/components/alerts",
@@ -125,6 +130,11 @@ export default [
                 component: require("../Documentation/components/Loaders")
             },
             {
+                title: "Media Object",
+                path: "/docs/components/media-object",
+                component: require("../Documentation/components/MediaObject")
+            },
+            {
                 title: "Modal",
                 path: "/docs/components/modal",
                 component: require("../Documentation/components/Modal")
@@ -158,6 +168,11 @@ export default [
                 title: "Toast (experimental)",
                 path: "/docs/components/toast",
                 component: require("../Documentation/components/Toast")
+            },
+            {
+                title: "Tooltips",
+                path: "/docs/components/tooltips",
+                component: require("../Documentation/components/Tooltips")
             },
             {
                 title: "Topbar",
