@@ -183,12 +183,10 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "component": Object {
                   "AlertWithIcon": [Function],
-                  "AlertWithLink": [Function],
                   "AlertsText": [Function],
                   "BasicUsage": [Function],
                   "ClosingTheAlert": [Function],
                   "ExtendedUsage": [Function],
-                  "UsageWithJavascript": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/components/alerts",
@@ -379,6 +377,17 @@ exports[`Documentation: index renders 1`] = `
                 },
                 "path": "/docs/components/tabs",
                 "title": "Tabs",
+              },
+              Object {
+                "component": Object {
+                  "Options": [Function],
+                  "Overview": [Function],
+                  "PremadeToasts": [Function],
+                  "ToastText": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/components/toast",
+                "title": "Toast (experimental)",
               },
               Object {
                 "component": Object {

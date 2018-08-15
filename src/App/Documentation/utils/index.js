@@ -3,6 +3,7 @@ import DocHeading from "./DocHeading";
 import DocToc from "./DocToc";
 import RenderRoutes from "./RenderRoutes";
 import Icon from "./Icon";
+import ExperimentalComponentAlert from "./ExperimentalComponentAlert";
 
 export {
     ComponentPreview,
@@ -11,5 +12,6 @@ export {
     DocHeading,
     DocToc,
     RenderRoutes,
-    Icon
+    Icon,
+    ExperimentalComponentAlert
 };

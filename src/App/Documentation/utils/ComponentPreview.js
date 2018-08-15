@@ -4,7 +4,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import PrismCode from "react-prism";
 import jsbeautifier from "js-beautify";
 
-const ComponentPreview = ({ children, language, removeOuterTag, hideValue, removeList, showCasePanel, codeFigure }) => {
+const ComponentPreview = ({ children, language, removeOuterTag, hideValue, removeList, showCasePanel, codeFigure, dangerousHTML }) => {
     // TODO: This is stupid, find a better way to do this [EH]
     // should be possible with React 16.2
     // https://stackoverflow.com/questions/33766085/how-to-avoid-extra-wrapping-div-in-react
@@ -47,10 +47,22 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
         return val.replace(/ value="(.*)"/g, "");
     };
 
+    const setDangerousHtml = val => {
+        let code = "";
+        if (typeof val.forEach === "function") {
+            val.forEach(v => code += `${v}\n`);
+        } else {
+            code = val;
+        }
+        return code;
+    };
+
     const CodeFigure = () => {
         let code = "";
 
-        if (language === "html" && children && typeof children.map === "function") {
+        if (language === "html" && dangerousHTML) {
+            code = setDangerousHtml(children);
+        } else if (language === "html" && children && typeof children.map === "function") {
             children.map(child => {
                 if (removeOuterTag) {
                     code += _removeOuterTag(child);
@@ -130,10 +142,11 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
 };
 
 ComponentPreview.propTypes = {
-    language: PropTypes.string.isRequired,
+    language: PropTypes.oneOf(["html", "javascript", "css"]).isRequired,
     removeOuterTag: PropTypes.bool,
     removeList: PropTypes.bool,
     showCasePanel: PropTypes.bool,
+    dangerousHTML: PropTypes.bool,
     codeFigure: PropTypes.bool
 };
 

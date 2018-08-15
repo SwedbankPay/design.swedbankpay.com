@@ -165,6 +165,11 @@ export default [
                 component: require("../Documentation/components/Tabs")
             },
             {
+                title: "Toast (experimental)",
+                path: "/docs/components/toast",
+                component: require("../Documentation/components/Toast")
+            },
+            {
                 title: "Tooltips",
                 path: "/docs/components/tooltips",
                 component: require("../Documentation/components/Tooltips")
