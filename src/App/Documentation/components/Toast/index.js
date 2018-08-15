@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocToc, ExperimentalComponentAlert } from "#";
 import { toast } from "$/px-script";
@@ -11,7 +12,7 @@ const Overview = () => (
             {"px.toast({ html: \"I am a toast!\" });"}
         </ComponentPreview>
         <ComponentPreview language="html" codeFigure dangerousHTML>
-            {"<button onclick=\"px.toast({ html: 'I am a toast' })\" class=\"btn\">Toast!</button>"}
+            {"<button onclick=\"px.toast({ html: 'I am a toast!' })\" class=\"btn\">Toast!</button>"}
         </ComponentPreview>
         <ComponentPreview language="html" showCasePanel>
             <button className="btn btn-brand" type="button" onClick={() => toast({ html: "I am a toast!" })}>Click for toast!</button>
@@ -51,12 +52,18 @@ const Options = () => (
                     <td>Wether or not the alert should be dismissable by the user (close button).</td>
                 </tr>
                 <tr>
+                    <td>icon</td>
+                    <td>String</td>
+                    <td>{"\" \""}</td>
+                    <td>Custom icon for the toast. See <Link to="/docs/core/icons">icons</Link> for more info.</td>
+                </tr>
+                <tr>
                     <td>displayLength</td>
                     <td>Number</td>
                     <td>4000</td>
                     <td>Length in ms the Toast stays before dismissal.</td>
                 </tr>
-                <tr>
+                {/* <tr>
                     <td>inDuration</td>
                     <td>Number</td>
                     <td>300</td>
@@ -67,7 +74,7 @@ const Options = () => (
                     <td>Number</td>
                     <td>375</td>
                     <td>Transition out duration in milliseconds.</td>
-                </tr>
+                </tr> */}
                 <tr>
                     <td>classes</td>
                     <td>Array of strings</td>
@@ -80,14 +87,69 @@ const Options = () => (
                     <td>null</td>
                     <td>Callback function called when toast is dismissed.</td>
                 </tr>
-                <tr>
+                {/* <tr>
                     <td>activationPercent</td>
                     <td>Number</td>
                     <td>0.8</td>
                     <td>The percentage of the toast{"'"}s width it takes for a drag to dismiss a Toast.</td>
-                </tr>
+                </tr> */}
             </tbody>
         </table>
+    </>
+);
+
+const PremadeToasts = () => (
+    <>
+        <h2 id="premade-toasts">Premade toasts</h2>
+        <p>There are four premade toast styles other than the default one; <span className="token attr-value">neutral</span>, <span className="token attr-value">success</span>, <span className="token attr-value">warning</span> and <span className="token attr-value">danger</span>. Apply the desired one to the options object and be amazed!</p>
+        <ComponentPreview language="html" codeFigure dangerousHTML>
+            {"<button onclick=\"px.toast({ html: 'I am a neutral toast!', type: 'neutral' })\" class=\"btn\">Neutral toast</button>"}
+            {"<button onclick=\"px.toast({ html: 'I am a success toast!', type: 'success' })\" class=\"btn\">Success toast</button>"}
+            {"<button onclick=\"px.toast({ html: 'I am a warning toast!', type: 'warning' })\" class=\"btn\">Warning toast</button>"}
+            {"<button onclick=\"px.toast({ html: 'I am a danger toast!', type: 'danger' })\" class=\"btn\">Danger toast</button>"}
+        </ComponentPreview>
+        <ComponentPreview language="html" showCasePanel>
+            <button
+                className="btn btn-neutral"
+                type="button"
+                onClick={() => toast({
+                    html: "I am a toast!",
+                    type: "neutral"
+                })}
+            >
+                Neutral toast
+            </button>{"\n"}
+            <button
+                className="btn btn-success"
+                type="button"
+                onClick={() => toast({
+                    html: "I am a toast!",
+                    type: "success"
+                })}
+            >
+                Success toast
+            </button>{"\n"}
+            <button
+                className="btn btn-warning"
+                type="button"
+                onClick={() => toast({
+                    html: "I am a toast!",
+                    type: "warning"
+                })}
+            >
+                Warning toast
+            </button>{"\n"}
+            <button
+                className="btn btn-danger"
+                type="button"
+                onClick={() => toast({
+                    html: "I am a toast!",
+                    type: "danger"
+                })}
+            >
+                Danger toast
+            </button>
+        </ComponentPreview>
     </>
 );
 
@@ -115,6 +177,7 @@ const ToastText = () => (
         <p className="lead">Toast...</p>
         <Overview />
         <Options />
+        <PremadeToasts />
         <CustomHtml />
     </div>
 );
@@ -135,4 +198,4 @@ class Toast extends Component {
 export default Toast;
 
 /* for testing */
-export { Overview, Options, ToastText };
+export { Overview, Options, PremadeToasts, ToastText };

@@ -3,6 +3,7 @@ import { extendObj } from "../utils";
 const _defaults = {
     html: "",
     type: "",
+    icon: "",
     dismissable: true,
     displayLength: 4000,
     inDuration: 300,
@@ -52,8 +53,8 @@ class Toast {
         const toast = document.createElement("div");
         toast.classList.add("toast");
 
-        if (this.options.classes.length && typeof this.options.classes === "object") {
-            this.options.classes.forEach(c => toast.classList.add(c));
+        if (this.options.classes.length) {
+            toast.classList.add(...this.options.classes);
         }
 
         const _createIcon = (iconType, dismiss) => {
@@ -88,6 +89,10 @@ class Toast {
                 break;
             default:
                 break;
+        }
+
+        if (!!this.options.icon && !this.options.type) {
+            toast.appendChild(_createIcon(this.options.icon));
         }
 
         // Set content

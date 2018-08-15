@@ -382,6 +382,7 @@ exports[`Documentation: index renders 1`] = `
                 "component": Object {
                   "Options": [Function],
                   "Overview": [Function],
+                  "PremadeToasts": [Function],
                   "ToastText": [Function],
                   "default": [Function],
                 },
