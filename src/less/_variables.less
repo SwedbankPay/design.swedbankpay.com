@@ -22,7 +22,8 @@
 // 11. Pagination
 // 12. Panel
 // 13. Status
-// 14. Topbar
+// 14. Toast
+// 15. Topbar
 
 // ==========================================================================
 //
@@ -123,10 +124,14 @@
 @zindex-tabs:                               100;
 @zindex-tabs-arrow:                         101;
 @zindex-topbar:                             500;
+@zindex-action-list:                        549;
+@zindex-action-list-anchor:                 550;
 @zindex-modal-backdrop:                     1040;
 @zindex-modal:                              1050;
 @zindex-datepicker:                         2000;
 @zindex-topbar-nav:                         2100;
+@zindex-tooltip:                            9001;
+@zindex-toast:                              10000;
 
 
 // 3. Grid
@@ -292,18 +297,18 @@
 
 
 // Arrow constants
-@breadcrumb-arrow-border-size:              0.1rem;
-@breadcrumb-arrow-border:                   1.55rem;
+@breadcrumb-arrow-border-size:              0.075rem;
+@breadcrumb-arrow-border:                   1.3rem;
 @breadcrumb-arrow-bg:                       @breadcrumb-arrow-border - @breadcrumb-arrow-border-size;
 
 
 /* Small */
-@breadcrumb-padding-sm:                     0.3rem 0.6rem 0.3rem 1.5rem;
+@breadcrumb-padding-sm:                     0.3rem 0.6rem 0.3rem 1.25rem;
 @breadcrumb-padding-first-sm:               0.5rem;
 
 // Arrow constants
 @breadcrumb-arrow-border-size-sm:           0.05rem;
-@breadcrumb-arrow-border-sm:                1.25rem;
+@breadcrumb-arrow-border-sm:                0.85rem;
 @breadcrumb-arrow-bg-sm:                    @breadcrumb-arrow-border-sm - @breadcrumb-arrow-border-size-sm;
 
 
@@ -460,7 +465,16 @@
 @status-padding:                            10;
 
 
-// 14. Topbar
+// 14. Toast
+// ==========================================================================
+
+@toast-height:                              48px;
+@toast-color:                               @white;
+@toast-text-color:                          @text-color;
+@toast-action-color:                        @yellow;
+
+
+// 15. Topbar
 // ==========================================================================
 
 @topbar-height:                             70px;

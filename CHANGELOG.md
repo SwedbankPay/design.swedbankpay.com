@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.8.0] - 2018-08-15
+
+### Added
+
+- Added section for colors in utilities.
+- Added progress tracker component and documentation.
+- Added tooltip component.
+- Added media object component.
+- Added action list component.
+- Added toast component prototype.
+
+### Changed
+
+- Changed `.background-color` utility class to `.bg-color`.
+- Changed breadcrumb component to disable span elements by default, provided they are not within last-child li element.
+- Reworked styling of tabs component.
+- Reworked alert component.
+
+### Fixed
+
+- Fixed issue with hover table.
+
+### Removed
+
+- Removed mypayex logo option from topbar. Logo is now defaulted to standard payex logo, class `.logo-default` is no longer needed.
+- Removed `.disabled` class styling for pagination component arrows. `span` elements will now act as disabled arrows.
+
 ## [0.7.1] - 2018-07-03
 
 ### Fixed

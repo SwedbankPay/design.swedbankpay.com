@@ -7,43 +7,61 @@
     .color-variant(@text-color);
 }
 
-.color-success {
+.color-success,
+.color-green {
     .color-variant(@state-success);
 }
 
-.color-neutral {
+.color-neutral,
+.color-blue {
     .color-variant(@state-neutral);
 }
 
-.color-warning {
+.color-warning,
+.color-yellow {
     .color-variant(@state-warning);
 }
 
-.color-danger {
+.color-danger,
+.color-red {
     .color-variant(@state-error);
 }
 
+.color-purple {
+    .color-variant(@purple);
+}
+
 // Background classes
-.background-brand {
+.bg-brand {
     .background-variant(@brand-primary);
 }
 
-.background-default {
+.bg-default {
     .background-variant(@text-color);
 }
 
-.background-success {
+.bg-success,
+.bg-green {
     .background-variant(@state-success);
 }
 
-.background-neutral {
+.bg-neutral,
+.bg-blue {
     .background-variant(@state-neutral);
 }
 
-.background-warning {
+.bg-warning,
+.bg-yellow {
     .background-variant(@state-warning);
 }
 
-.background-danger {
+.bg-danger,
+.bg-red {
     .background-variant(@state-error);
+}
+
+.bg-white {
+    .background-variant(@white);
+
+    color: @text-color;
 }

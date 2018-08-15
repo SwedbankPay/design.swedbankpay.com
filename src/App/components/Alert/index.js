@@ -1,25 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Alert = ({ id, type, icon, close, heading, text, linkText, linkHref }) => (
-    <div id={id} className={`alert alert-${type}${icon ? " alert-with-icon" : ""}`}>{icon ? "\n" : ""}
-        {close ? <i className="material-icons" data-alert-close="">close</i> : null}{close ? "\n" : ""}
-        {icon ? <i className="material-icons alert-icon">{icon}</i> : null}
-        {heading ? <h3 className="alert-heading">{heading}</h3> : null}
-        {(text && !linkText) ? <p className="alert-text">{text}</p> : null}{linkText ? "\n" : ""}
-        {linkText ? <p className="alert-text">{text || ""}{"\n"}<a className="alert-link" href={linkHref || "#"}>{linkText}</a>{"\n"}</p> : null}
+const Alert = ({ id, type, icon, close, text, children }) => (
+    <div id={id} className={`alert alert-${type}`}>{icon ? "\n" : ""}
+        {icon ? <i className="material-icons alert-icon">{icon}</i> : null}{text ? "\n" : ""}
+        {text ? <p>{text}</p> : null}{children ? "\n" : ""}
+        {children ? <div className="alert-body">{children}</div> : null}{close ? "\n" : ""}
+        {close ? <i className="material-icons" data-alert-close="">close</i> : null}{"\n"}
     </div>
 );
 
 Alert.propTypes = {
     id: PropTypes.string,
-    type: PropTypes.oneOf(["success", "neutral", "warning", "danger", "light", "default"]).isRequired,
+    type: PropTypes.oneOf(["success", "neutral", "warning", "danger", "default"]).isRequired,
     icon: PropTypes.string,
     close: PropTypes.bool,
-    heading: PropTypes.string,
-    text: PropTypes.string,
-    linkText: PropTypes.string,
-    linkHref: PropTypes.string
+    text: PropTypes.string
 };
 
 export default Alert;

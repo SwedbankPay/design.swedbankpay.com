@@ -39,7 +39,6 @@ exports[`Component: Pagination -  renders arrows when prop arrows is provided 1`
         
 
         <a
-          className=""
           href="#"
         />
         
@@ -55,7 +54,6 @@ exports[`Component: Pagination -  renders arrows when prop arrows is provided 1`
         
 
         <a
-          className=""
           href="#"
         />
         
@@ -117,7 +115,6 @@ exports[`Component: Pagination -  renders outermost arrows when prop farArrows i
         
 
         <a
-          className=""
           href="#"
         />
         
@@ -133,7 +130,6 @@ exports[`Component: Pagination -  renders outermost arrows when prop farArrows i
         
 
         <a
-          className=""
           href="#"
         />
         

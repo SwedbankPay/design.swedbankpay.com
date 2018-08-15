@@ -14,18 +14,32 @@
 
             a,
             span {
-                background-color: @background-body;
+                color: fade(@brand-primary, 80%);
+                background-color: @white;
                 display: block;
                 font-weight: bold;
-                padding: 1rem 2rem;
+                padding: 0.5rem 1rem;
                 font-size: 1.3rem;
+                border-bottom: 3px solid @white;
+                transition: border-bottom 0.2s ease-in-out;
+            }
+
+            a {
+                &:focus,
+                &:active,
+                &:hover {
+                    text-decoration: none;
+                    color: @brand-primary;
+                }
             }
 
             &.active {
                 span,
                 a,
                 a:hover {
+                    color: @brand-primary;
                     background-color: @white;
+                    border-bottom: 3px solid @brand-primary;
                 }
             }
         }
@@ -74,86 +88,10 @@
             }
         }
     }
+
+    .material-icons {
+        font-size: 1.3rem;
+        line-height: 1.75rem;
+        vertical-align: text-top;
+    }
 }
-
-// .nav {
-//     position: relative;
-//     min-height: 58px;
-
-//     ul.nav-tabs {
-//         margin: 0;
-//         padding: 0;
-
-//         li {
-//             list-style-type: none;
-//             display: table-cell;
-//             width: 1%;
-//             border-right: 3px solid @white;
-//             border-top: 3px solid @white;
-//             border-radius: 0 5px 0 0;
-
-//             &.active {
-//                 span,
-//                 a,
-//                 a:hover {
-//                     background-color: @white;
-//                 }
-//             }
-
-//             a,
-//             span {
-//                 display: block;
-//                 font-weight: bold;
-//                 background-color: @background-body;
-//                 padding: 15px 30px;
-//                 font-size: 1.3em;
-//             }
-//         }
-
-//         &.nav-stacked {
-//             li {
-//                 border: none;
-//                 display: block;
-//                 width: 100%;
-//             }
-//         }
-
-//         &.nav-collapsed {
-//             position: absolute;
-//             width: 100%;
-//             background-color: @white;
-//             border-bottom: 1px solid @gray-10;
-
-//             &:after {
-//                 content: "";
-//                 border: 2px solid @gray-8;
-//                 border-top: none;
-//                 width: 15px;
-//                 height: 15px;
-//                 position: absolute;
-//                 top: 18px;
-//                 right: 27px;
-//                 cursor: pointer;
-//                 transform: rotate(45deg);
-//                 border-left: none;
-//             }
-
-//             li {
-//                 border: none;
-//                 display: none;
-//                 width: 100%;
-
-//                 &.active {
-//                     display: block;
-//                 }
-//             }
-
-//             &:hover,
-//             &.in {
-//                 li {
-//                     display: block;
-//                 }
-//             }
-//         }
-//     }
-// }

@@ -16,6 +16,6 @@ describe("Core: Color", () => {
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<p>test</p>)).toBeTruthy();
         expect(wrapper.contains(<p>#test</p>)).toBeTruthy();
-        expect(wrapper.html()).toContain("background-test");
+        expect(wrapper.html()).toContain("bg-test");
     });
 });

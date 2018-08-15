@@ -1,6 +1,6 @@
 import React from "react";
 
-import ComponentPreview from "../../utils/ComponentPreview";
+import { ComponentPreview } from "#";
 
 const Intro = () => (
     <>

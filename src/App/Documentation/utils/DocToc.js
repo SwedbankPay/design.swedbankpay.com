@@ -7,7 +7,7 @@ const _findHeadings = (children) => {
 
     if (typeof children.map === "function") {
         children.map(child => {
-            if (typeof child.type === "function") {
+            if (child.type.name !== "ExperimentalComponentAlert" && typeof child.type === "function") {
                 if (child.type().props.children.type === "h2") {
                     headings.push(
                         {
@@ -98,7 +98,7 @@ class DocToc extends Component {
 
     render () {
         return (
-            <div className="col-2 d-md-none d-lg-block">
+            <div className="col-2 d-none d-lg-block">
                 <div className="doc-toc">
                     <ul>
                         {this.state.headings.map((heading, i) => {

@@ -51,9 +51,9 @@ Create a new file under `./src/App/Documentation/Components/[MyExampleDocumentat
 
 import React from "react";
 
-import ComponentPreview from "../../utils/ComponentPreview";
-import ComponentPreview from "../../utils/DocToc";
-import MyExampleComponent from "../../../components/MyExampleComponent";
+//Read more about the import shortcuts in the readme (#, @, $ etc.)
+import { ComponentPreview, DocToc } from "#";
+import MyExampleComponent from "@/MyExampleComponent";
 
 const MyExampleDocumentationComponentText = () => (
     <div className="col-md-12 col-lg-10 doc-body">

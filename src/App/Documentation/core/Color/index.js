@@ -1,8 +1,6 @@
 import React from "react";
-import PrismCode from "react-prism";
 
-import ComponentPreview from "../../utils/ComponentPreview";
-import DocToc from "../../utils/DocToc";
+import { ComponentPreview, DocToc } from "#";
 import ColorPreview from "./ColorPreview";
 
 const ColorPalette = () => (
@@ -34,36 +32,10 @@ const ColorPalette = () => (
     </>
 );
 
-const Usage = () => (
-    <>
-        <h2 id="usage">Usage</h2>
-        <p>To use a color simply prepend <code className="token property">color-</code> to the desired color and add it to the element class attribute.</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-            <p className="color-brand">This text is color-brand.</p>
-            <p className="color-default">This text is color-default.</p>
-            <p className="color-neutral">This text is color-neutral.</p>
-            <p className="color-success">This text is color-success.</p>
-            <p className="color-warning">This text is color-warning.</p>
-            <p className="color-danger">This text is color-danger.</p>
-        </ComponentPreview>
-        <h3>With <code className="token property">.text-muted</code></h3>
-        <p>To get a muted effect on the color you are using, append a <PrismCode className="language-html">{"<span>"}</PrismCode>-element with the class <code className="token property">.text-muted</code> to the desired element.</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-            <p className="color-brand">This text is color-brand, <span className="text-muted">with a muted ending.</span></p>
-            <p className="color-default">This text is color-default, <span className="text-muted">with a muted ending.</span></p>
-            <p className="color-neutral">This text is color-neutral, <span className="text-muted">with a muted ending.</span></p>
-            <p className="color-success">This text is color-success, <span className="text-muted">with a muted ending.</span></p>
-            <p className="color-warning">This text is color-warning, <span className="text-muted">with a muted ending.</span></p>
-            <p className="color-danger">This text is color-danger, <span className="text-muted">with a muted ending.</span></p>
-        </ComponentPreview>
-    </>
-);
-
 const ColorText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
         <p className="lead">Here there be colors...</p>
         <ColorPalette />
-        <Usage />
     </div>
 );
 
@@ -81,4 +53,4 @@ const Color = () => {
 export default Color;
 
 /* for testing */
-export { ColorPalette, Usage, ColorText };
+export { ColorPalette, ColorText };

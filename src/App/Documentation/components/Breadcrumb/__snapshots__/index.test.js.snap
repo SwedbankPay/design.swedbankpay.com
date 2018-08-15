@@ -65,7 +65,7 @@ exports[`Documentation: Breadcrumb Basic BreadCrumb renders 1`] = `
             "title": "Gadgets",
           },
           Object {
-            "title": "Gadgets #1",
+            "title": "Gadget #1",
           },
         ]
       }
@@ -97,20 +97,21 @@ exports[`Documentation: Breadcrumb Disabled BreadCrumb renders 1`] = `
     Disable a breadcrumb
   </h2>
   <p>
-    To disable a breadcrumb element, add class 
-    <code
-      className="token property"
+    To disable a breadcrumb element, simply use a 
+    <PrismCode
+      className="language-html"
+      component="code"
     >
-      .disabled
-    </code>
-     to the 
+      &lt;span&gt;
+    </PrismCode>
+     element within the 
     <PrismCode
       className="language-html"
       component="code"
     >
       &lt;li&gt;
     </PrismCode>
-     element.
+     element (will not work for last-child).
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -125,8 +126,6 @@ exports[`Documentation: Breadcrumb Disabled BreadCrumb renders 1`] = `
             "title": "Home",
           },
           Object {
-            "disabled": true,
-            "href": "#",
             "title": "Products",
           },
           Object {
@@ -134,8 +133,7 @@ exports[`Documentation: Breadcrumb Disabled BreadCrumb renders 1`] = `
             "title": "Gadgets",
           },
           Object {
-            "href": "#",
-            "title": "Gadgets #1",
+            "title": "Gadget #1",
           },
         ]
       }
@@ -177,16 +175,19 @@ exports[`Documentation: Breadcrumb Small BreadCrumb renders 1`] = `
       items={
         Array [
           Object {
+            "href": "#",
             "title": "Home",
           },
           Object {
+            "href": "#",
             "title": "Products",
           },
           Object {
+            "href": "#",
             "title": "Gadgets",
           },
           Object {
-            "title": "Gadgets #1",
+            "title": "Gadget #1",
           },
         ]
       }

@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 
-import ComponentPreview from "../../utils/ComponentPreview";
-import DocToc from "../../utils/DocToc";
-import PanelComponent from "../../../components/Panel";
+import { ComponentPreview, DocToc } from "#";
+import PanelComponent from "@/Panel";
 
 const Overview = () => (
     <>

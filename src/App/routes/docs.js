@@ -77,8 +77,13 @@ export default [
     {
         title: "Components",
         path: "/docs/components",
-        redirect: "/docs/components/alerts",
+        redirect: "/docs/components/action-list",
         routes: [
+            {
+                title: "Action List",
+                path: "/docs/components/action-list",
+                component: require("../Documentation/components/ActionList")
+            },
             {
                 title: "Alerts",
                 path: "/docs/components/alerts",
@@ -125,6 +130,11 @@ export default [
                 component: require("../Documentation/components/Loaders")
             },
             {
+                title: "Media Object",
+                path: "/docs/components/media-object",
+                component: require("../Documentation/components/MediaObject")
+            },
+            {
                 title: "Modal",
                 path: "/docs/components/modal",
                 component: require("../Documentation/components/Modal")
@@ -140,6 +150,11 @@ export default [
                 component: require("../Documentation/components/Panel")
             },
             {
+                title: "Progress Tracker",
+                path: "/docs/components/progress-tracker",
+                component: require("../Documentation/components/ProgressTracker")
+            },
+            {
                 title: "Status",
                 path: "/docs/components/status",
                 component: require("../Documentation/components/Status")
@@ -148,6 +163,16 @@ export default [
                 title: "Tabs",
                 path: "/docs/components/tabs",
                 component: require("../Documentation/components/Tabs")
+            },
+            {
+                title: "Toast (experimental)",
+                path: "/docs/components/toast",
+                component: require("../Documentation/components/Toast")
+            },
+            {
+                title: "Tooltips",
+                path: "/docs/components/tooltips",
+                component: require("../Documentation/components/Tooltips")
             },
             {
                 title: "Topbar",
@@ -168,8 +193,13 @@ export default [
     {
         title: "Utilities",
         path: "/docs/utilities",
-        redirect: "/docs/utilities/display",
+        redirect: "/docs/utilities/colors",
         routes: [
+            {
+                title: "Colors",
+                path: "/docs/utilities/colors",
+                component: require("../Documentation/utilities/Colors")
+            },
             {
                 title: "Display",
                 path: "/docs/utilities/display",

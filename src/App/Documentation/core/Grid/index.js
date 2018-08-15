@@ -1,7 +1,6 @@
 import React from "react";
 
-import ComponentPreview from "../../utils/ComponentPreview";
-import DocToc from "../../utils/DocToc";
+import { ComponentPreview, DocToc } from "#";
 
 const HowItWorks = () => (
     <>

@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 
-import ComponentPreview from "../../utils/ComponentPreview";
-import DocToc from "../../utils/DocToc";
-
-import { rangeslider, validation } from "../../../../px-script";
-import InputGroup from "../../../components/InputGroup";
-import Button from "../../../components/Button";
-import { Checkbox, FormControlText, Radio, Rangeslider, Togglebox } from "../../../components/FormComponents";
+import { ComponentPreview, DocToc } from "#";
+import { rangeslider, validation } from "$/px-script";
+import InputGroup from "@/InputGroup";
+import Button from "@/Button";
+import { Checkbox, FormControlText, Radio, Rangeslider, Togglebox } from "@/FormComponents";
 
 const Overview = () => (
     <>

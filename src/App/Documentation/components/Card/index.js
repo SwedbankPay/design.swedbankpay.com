@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 
-import ComponentPreview from "../../utils/ComponentPreview";
-import DocToc from "../../utils/DocToc";
-import CardComponent from "../../../components/Card";
+import { ComponentPreview, DocToc, ExperimentalComponentAlert } from "#";
+import CardComponent from "@/Card";
 
 const Overview = () => (
     <>
@@ -61,9 +60,7 @@ const Overview = () => (
 
 const CardText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
-        <div className="alert alert-danger in">
-            This component is under development and will probably change.
-        </div>
+        <ExperimentalComponentAlert />
         <p className="lead">Card...</p>
         <Overview />
     </div>

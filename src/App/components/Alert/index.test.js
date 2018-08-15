@@ -64,31 +64,13 @@ describe("Component: Alert", () => {
         expect(wrapper.contains(<i className="material-icons" data-alert-close="">close</i>)).toEqual(false);
     });
 
-    it("renders an alert with a heading", () => {
-        const wrapper = shallow(
-            <Alert type="test" heading="test" />
-        );
-
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<h3 className="alert-heading">test</h3>)).toEqual(true);
-    });
-
-    it("renders an alert without a heading if no heading prop is provided", () => {
-        const wrapper = shallow(
-            <Alert type="test" />
-        );
-
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<h3 className="alert-heading">test</h3>)).toEqual(false);
-    });
-
     it("renders an alert with text", () => {
         const wrapper = shallow(
             <Alert type="test" text="test" />
         );
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<p className="alert-text">test</p>)).toEqual(true);
+        expect(wrapper.contains(<p>test</p>)).toEqual(true);
     });
 
     it("renders an alert without text if no text prop is provided", () => {
@@ -97,33 +79,6 @@ describe("Component: Alert", () => {
         );
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<p className="alert-text">test</p>)).toEqual(false);
-    });
-
-    it("renders an alert with a link with href='#' when no linkHref prop is provided", () => {
-        const wrapper = shallow(
-            <Alert type="test" linkText="test" />
-        );
-
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<a className="alert-link" href="#">test</a>)).toEqual(true);
-    });
-
-    it("renders an alert with a link with provided href", () => {
-        const wrapper = shallow(
-            <Alert type="test" linkText="test" linkHref="www.example.com" />
-        );
-
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<a className="alert-link" href="www.example.com">test</a>)).toEqual(true);
-    });
-
-    it("renders an alert without a link with provided href when no linkText prop is provided", () => {
-        const wrapper = shallow(
-            <Alert type="test" linkHref="www.example.com" />
-        );
-
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<a className="alert-link" href="www.example.com">test</a>)).toEqual(false);
+        expect(wrapper.contains(<p>test</p>)).toEqual(false);
     });
 });

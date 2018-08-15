@@ -68,11 +68,11 @@ const RightMenu = ({ align, menu }) => {
     );
 };
 
-const Topbar = ({ logo, leftMenu, rightMenu }) => {
+const Topbar = ({ leftMenu, rightMenu }) => {
     return (
         <div className="topbar">{"\n"}
             {leftMenu ? <TopbarBtn align="left" icon={leftMenu.btn.icon} text={leftMenu.btn.text} target={leftMenu.id} /> : null}{leftMenu ? "\n" : null}
-            {logo ? <a href="#" className={`topbar-logo logo-${logo}`}></a> : null}{logo ? "\n" : null}
+            <a href="#" className={"topbar-logo"}></a>{"\n"}
             {rightMenu ? <TopbarBtn align="right" icon={rightMenu.btn.icon} text={rightMenu.btn.text} target={rightMenu.id} /> : null}{rightMenu ? "\n" : null}
             {leftMenu ? <LeftMenu align="left" menu={leftMenu} /> : null}{leftMenu ? "\n" : null}
             {rightMenu ? <RightMenu align="right" menu={rightMenu} /> : null}{rightMenu ? "\n" : null}
@@ -81,7 +81,6 @@ const Topbar = ({ logo, leftMenu, rightMenu }) => {
 };
 
 Topbar.propTypes = {
-    logo: PropTypes.oneOf(["default", "mypayex"]),
     leftMenu: PropTypes.object,
     rightMenu: PropTypes.object
 };

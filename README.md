@@ -34,6 +34,17 @@ DesignGuide requires [Node.js](https://nodejs.org/en/) (includes npm).
 * Running the command `npm start` starts the webpack dev server, (which is configured in `./webpack.config.js`). If any changes is made to this file, or any files directly influencing this file (i.e. any loaders or plugins) you need to restart the server.
 * The script `npm start` will set the *NODE_ENV* variable to __development__, and start the dev server in development mode. If you wish to run the dev server in production-like environment run the command `npm run start:prod`.
 
+#### Importing components
+
+When importing different components in the files you create, you can use shortcuts for common paths. The shortcuts are as following:
+
+* `~` - root of the project (example `import package from "~/package";`).
+* `$` - `./src`-folder (example `import px from "$/px-script";`).
+* `@` - `./src/App/components`-folder (example `import Alert from "@/Alert";`).
+* `#` - `./src/App/Documentation/utils`-folder (example `import { DocToc } from "#";`).
+
+The shortcuts are specified in the `./.babelrc`-file. Specifying the prefix-shortcuts in the `./jsconfig.json`-file enables path intellisense for the shortcuts (at least in VSCode).
+
 ### Building
 
 To start building, run the command `npm run build` to start in dev-mode, or `npm run build:prod` for production-mode. This will make webpack start bundling everything and make static files in the `./dist/`-folder. It will also run through all files in `./src/` with eslint making sure all files are without errors before building. Also make sure all tests pass, or make changes to them accordingly.
@@ -48,8 +59,8 @@ Design Guide uses [semantic versioning](http://semver.org/). This means that int
 1. Open a terminal and navigate to repo root
 1. Run the command `npm test`
     * Many of the tests are snapshot based, and runs against already created snapshots. If you need to update the snapshots due to changes run the command `npm run test:update`.
-    * A test coverage report is generated after running the tests. This can be found in `./coverage` or.
-> Note: Snapshot testing is pretty unforgiving, so if you make __ANY__ changes to a component which already has a snapshot, the tests __WILL__ crash! So make sure to run `npm test:update` before committing.
+    * A test coverage report is generated after running the tests. This can be found in `./coverage`.
+> Note: Snapshot testing is pretty unforgiving, so if you make __ANY__ changes to how a component is rendered, which already has a snapshot, the tests __WILL__ crash! So make sure to run `npm run test:update` before committing.
 
 ## Code style
 

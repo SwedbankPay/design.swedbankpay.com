@@ -1,21 +1,20 @@
 import React, { Component } from "react";
 
-import ComponentPreview from "../../utils/ComponentPreview";
-import DocToc from "../../utils/DocToc";
-import TabsComponent from "../../../components/Tabs";
-import { tabs } from "../../../../px-script";
+import { ComponentPreview, DocToc } from "#";
+import TabsComponent from "@/Tabs";
+import { tabs } from "$/px-script";
 
 const tabItems = [
     {
-        name: "Tab1",
+        name: "Tab #1",
         active: false
     },
     {
-        name: "Tab2",
+        name: "Tab #2",
         active: true
     },
     {
-        name: "Tab3",
+        name: "Tab #3",
         active: false
     }
 ];

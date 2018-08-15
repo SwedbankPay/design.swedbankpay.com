@@ -2,7 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 
 import Alerts from "./index";
-import { BasicUsage, AlertWithLink, AlertWithIcon, ClosingTheAlert, ExtendedUsage, UsageWithJavascript, AlertsText } from "./index";
+import { BasicUsage, AlertWithIcon, ClosingTheAlert, ExtendedUsage, AlertsText } from "./index";
 
 describe("Documentation: Alerts", () => {
     it("is defined", () => {
@@ -25,20 +25,6 @@ describe("Documentation: Alerts", () => {
         it("renders", () => {
             const wrapper = shallow(
                 <BasicUsage />
-            );
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("Alert With Link", () => {
-        it("is defined", () => {
-            expect(AlertWithLink).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(
-                <AlertWithLink />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -81,20 +67,6 @@ describe("Documentation: Alerts", () => {
         it("renders", () => {
             const wrapper = shallow(
                 <ExtendedUsage />
-            );
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("Usage With Javascript", () => {
-        it("is defined", () => {
-            expect(UsageWithJavascript).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(
-                <UsageWithJavascript />
             );
 
             expect(wrapper).toMatchSnapshot();

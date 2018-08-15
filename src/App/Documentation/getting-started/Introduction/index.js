@@ -1,9 +1,8 @@
 import React from "react";
 import PrismCode from "react-prism";
 
-import ComponentPreview from "../../utils/ComponentPreview";
-import DocToc from "../../utils/DocToc";
-import pkg from "../../../../../package.json";
+import { ComponentPreview, DocToc } from "#";
+import pkg from "~/package.json";
 
 const version = pkg.version;
 const scriptUrl = `https://design.payex.com/${version}/scripts/px-script.js`;
