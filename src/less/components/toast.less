@@ -74,6 +74,8 @@
         }
 
         .material-icons {
+            user-select: none;
+
             &:first-child {
                 margin-right: 0.5rem;
                 margin-left: -0.5rem;
@@ -96,7 +98,6 @@
         .h1, .h2, .h3, .h4, .h5, .h6,
         p, .material-icons {
             color: @toast-text-color;
-            // margin: 0 auto;
             margin-bottom: 0;
         }
         /* stylelint-enable selector-list-comma-newline-after */
@@ -104,18 +105,12 @@
         .toast-action {
             color: @toast-action-color;
             font-weight: 500;
-            margin-right: -25px;
-            margin-left: 3rem;
 
             &.btn {
                 background-color: @toast-color;
                 margin-bottom: 0;
-                padding: 0 0.75rem;
+                padding: 0;
             }
-        }
-
-        &.rounded {
-            border-radius: 24px;
         }
 
         @media screen and (max-width: @screen-sm-max) {

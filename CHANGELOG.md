@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file.
 - Added tooltip component.
 - Added media object component.
 - Added action list component.
+- Added toast component prototype.
 
 ### Changed
 

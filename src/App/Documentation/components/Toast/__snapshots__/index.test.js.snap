@@ -1,0 +1,294 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components: Toast Options renders 1`] = `
+<React.Fragment>
+  <h2
+    id="options"
+  >
+    Options
+  </h2>
+  <table
+    className="table table-striped"
+  >
+    <thead>
+      <tr>
+        <th>
+          Name
+        </th>
+        <th>
+          Type
+        </th>
+        <th>
+          Default
+        </th>
+        <th>
+          Description
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          html
+        </td>
+        <td>
+          String
+        </td>
+        <td>
+          " "
+        </td>
+        <td>
+          The HTML content of the Toast.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          type
+        </td>
+        <td>
+          String
+        </td>
+        <td>
+          " "
+        </td>
+        <td>
+          Premade alert types; success, neutral, warning and danger are available.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          dismissable
+        </td>
+        <td>
+          Boolean
+        </td>
+        <td>
+          true
+        </td>
+        <td>
+          Wether or not the alert should be dismissable by the user (close button).
+        </td>
+      </tr>
+      <tr>
+        <td>
+          icon
+        </td>
+        <td>
+          String
+        </td>
+        <td>
+          " "
+        </td>
+        <td>
+          Custom icon for the toast. See 
+          <Link
+            replace={false}
+            to="/docs/core/icons"
+          >
+            icons
+          </Link>
+           for more info.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          displayLength
+        </td>
+        <td>
+          Number
+        </td>
+        <td>
+          4000
+        </td>
+        <td>
+          Length in ms the Toast stays before dismissal.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          classes
+        </td>
+        <td>
+          Array of strings
+        </td>
+        <td>
+          [ ]
+        </td>
+        <td>
+          Classes to be added to the toast element.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          completeCallback
+        </td>
+        <td>
+          Function
+        </td>
+        <td>
+          null
+        </td>
+        <td>
+          Callback function called when toast is dismissed.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</React.Fragment>
+`;
+
+exports[`Components: Toast Overview renders 1`] = `
+<React.Fragment>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <p>
+    You want jam on that toast?
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    px.toast({ html: "I am a toast!" });
+  </ComponentPreview>
+  <ComponentPreview
+    codeFigure={true}
+    dangerousHTML={true}
+    language="html"
+  >
+    &lt;button onclick="px.toast({ html: 'I am a toast!' })" class="btn"&gt;Toast!&lt;/button&gt;
+  </ComponentPreview>
+  <ComponentPreview
+    language="html"
+    showCasePanel={true}
+  >
+    <button
+      className="btn btn-brand"
+      onClick={[Function]}
+      type="button"
+    >
+      Click for toast!
+    </button>
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Components: Toast PremadeToasts renders 1`] = `
+<React.Fragment>
+  <h2
+    id="premade-toasts"
+  >
+    Premade toasts
+  </h2>
+  <p>
+    There are four premade toast styles other than the default one; 
+    <span
+      className="token attr-value"
+    >
+      neutral
+    </span>
+    , 
+    <span
+      className="token attr-value"
+    >
+      success
+    </span>
+    , 
+    <span
+      className="token attr-value"
+    >
+      warning
+    </span>
+     and 
+    <span
+      className="token attr-value"
+    >
+      danger
+    </span>
+    . Apply the desired one to the options object and be amazed!
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    dangerousHTML={true}
+    language="html"
+  >
+    &lt;button onclick="px.toast({ html: 'I am a neutral toast!', type: 'neutral' })" class="btn"&gt;Neutral toast&lt;/button&gt;
+    &lt;button onclick="px.toast({ html: 'I am a success toast!', type: 'success' })" class="btn"&gt;Success toast&lt;/button&gt;
+    &lt;button onclick="px.toast({ html: 'I am a warning toast!', type: 'warning' })" class="btn"&gt;Warning toast&lt;/button&gt;
+    &lt;button onclick="px.toast({ html: 'I am a danger toast!', type: 'danger' })" class="btn"&gt;Danger toast&lt;/button&gt;
+  </ComponentPreview>
+  <ComponentPreview
+    language="html"
+    showCasePanel={true}
+  >
+    <button
+      className="btn btn-neutral"
+      onClick={[Function]}
+      type="button"
+    >
+      Neutral toast
+    </button>
+    
+
+    <button
+      className="btn btn-success"
+      onClick={[Function]}
+      type="button"
+    >
+      Success toast
+    </button>
+    
+
+    <button
+      className="btn btn-warning"
+      onClick={[Function]}
+      type="button"
+    >
+      Warning toast
+    </button>
+    
+
+    <button
+      className="btn btn-danger"
+      onClick={[Function]}
+      type="button"
+    >
+      Danger toast
+    </button>
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Components: Toast ToastText renders 1`] = `
+<div
+  className="col-md-12 col-lg-10 doc-body"
+>
+  <ExperimentalComponentAlert />
+  <p
+    className="lead"
+  >
+    Toast...
+  </p>
+  <Overview />
+  <Options />
+  <PremadeToasts />
+  <CustomHtml />
+</div>
+`;
+
+exports[`Components: Toast renders 1`] = `
+<div
+  className="doc-container"
+>
+  <div
+    className="row"
+  >
+    <ToastText />
+    <DocToc
+      component={[Function]}
+    />
+  </div>
+</div>
+`;
