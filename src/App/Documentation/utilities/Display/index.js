@@ -46,11 +46,11 @@ const Notation = () => (
 const Examples = () => (
     <>
         <h2 id="examples">Examples</h2>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="d-inline background-brand">d-inline</div>
             <div className="d-inline background-default">d-inline</div>
         </ComponentPreview>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="d-block background-brand">d-block</div>
             <div className="d-block background-default">d-block</div>
         </ComponentPreview>
@@ -137,7 +137,7 @@ const HidingElements = () => (
         </table>
 
 
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="d-lg-none">Hidden on screens wider than lg</div>
             <div className="d-none d-lg-block">Hidden on screens smaller than lg</div>
         </ComponentPreview>

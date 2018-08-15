@@ -7,7 +7,7 @@ const BasicExample = () => (
     <>
         <h2 id="basic-example">Basic example</h2>
         <p>Basic input group...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <InputGroupComponent
                 id="input-id-1"
                 type="text"
@@ -48,7 +48,7 @@ const CheckboxesAndRadios = () => (
     <>
         <h2 id="checkboxes-and-radios">Checkboxes and radios</h2>
         <p>Place any checkbox or radio option within an input group’s addon instead of text.</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="form-group">
                 <div className="input-group">{"\n"}
                     <span className="input-group-addon">{"\n\t\t"}
@@ -73,7 +73,7 @@ const ButtonAddons = () => (
     <>
         <h2 id="button-addons">Button addons</h2>
         <p>Addons...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <InputGroupComponent
                 type="text"
                 prefixType="button"
@@ -103,7 +103,7 @@ const WithSelect = () => (
     <>
         <h2 id="with-select">With select</h2>
         <p>Select...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <InputGroupComponent
                 type="select"
                 selectOptions={["Bounty hunter", "Smuggler", "Jedi"]}
@@ -116,7 +116,7 @@ const WithSelect = () => (
 const WithFeedbackIcon = () => (
     <>
         <h2 id="with-feedback">With feedback</h2>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <InputGroupComponent
                 id="input-with-feedback-1"
                 type="text"
@@ -133,7 +133,7 @@ const ValidationStates = () => (
     <>
         <h2 id="validation-states">Validation states</h2>
         <p>Validation...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <InputGroupComponent
                 type="text"
                 validationState="success"
@@ -156,12 +156,12 @@ const Disabled = () => (
     <>
         <h2 id="disabled">Disabled</h2>
         <p>Disabled blabla...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <InputGroupComponent
                 id="input-id-3"
                 type="number"
                 placeholder="Rounded to nearest $"
-                disabled={true}
+                disabled
                 prefixType="icon"
                 prefixValue="attach_money"
                 postfixValue=".00"
@@ -170,7 +170,7 @@ const Disabled = () => (
                 id="input-id-4"
                 type="textarea"
                 placeholder="Special requests"
-                disabled={true}
+                disabled
                 prefixType="icon"
                 prefixValue="format_quote"
             />
@@ -178,7 +178,7 @@ const Disabled = () => (
                 type="select"
                 selectOptions={["Option one", "Option two", "Option three"]}
                 prefixValue="Options"
-                disabled={true}
+                disabled
             />
         </ComponentPreview>
     </>

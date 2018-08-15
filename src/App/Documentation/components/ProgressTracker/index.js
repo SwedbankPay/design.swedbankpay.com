@@ -28,7 +28,7 @@ const BasicProgressTracker = () => {
     <>
         <h2 id="basic-usage">Basic usage</h2>
         <p>Add class <code className="token property">.progress-tracker</code> to a containing <PrismCode className="language-html">{"<ol>"}</PrismCode> element and nest a <PrismCode className="language-html">{"<a>"}</PrismCode> or <PrismCode className="language-html">{"<span>"}</PrismCode> element inside the <PrismCode className="language-html">{"<li>"}</PrismCode> elements.</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <ProgressTrackerComponent items={items} />
         </ComponentPreview>
     </>
@@ -59,8 +59,8 @@ const SmallProgressTracker = () => {
         <>
             <h2 id="small-progress-tracker">Small progress tracker</h2>
             <p>Add class <code className="token property">.progress-tracker-sm</code> to the containing <PrismCode className="language-html">{"<ol>"}</PrismCode> element for a smaller version of the progress tracker component.</p>
-            <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-                <ProgressTrackerComponent small={true} items={items} />
+            <ComponentPreview language="html" showCasePanel codeFigure>
+                <ProgressTrackerComponent small items={items} />
             </ComponentPreview>
         </>
     );
@@ -87,7 +87,7 @@ const DisabledProgressTracker = () => {
         <>
             <h2 id="disable-a-step">Disable a step</h2>
             <p>To disable a step in the progress tracker, simply use a <PrismCode className="language-html">{"<span>"}</PrismCode> element within the <PrismCode className="language-html">{"<li>"}</PrismCode> element (will not work with <code className="token property">.active</code>).</p>
-            <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+            <ComponentPreview language="html" showCasePanel codeFigure>
                 <ProgressTrackerComponent items={items} />
             </ComponentPreview>
         </>

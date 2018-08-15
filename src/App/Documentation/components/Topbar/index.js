@@ -111,7 +111,7 @@ const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
         <p>This will only show the code for the <code className="token property">.topbar</code> component, at least for now. For a demonstration of the usage check the example app (coming soon), or implement it in your own project!</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <TopbarComponent logo="default" leftMenu={leftMenu} rightMenu={rightMenu} />
         </ComponentPreview>
     </>

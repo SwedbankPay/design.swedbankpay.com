@@ -17,8 +17,8 @@ const DefaultPagination = () => (
         <>
             <h2 id="default-pagination">Default pagination</h2>
             <p>Default pagination... <code className="token property">.pagination</code>...</p>
-            <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-                <PaginationComponent items={paginationItems} arrows={true} farArrows={true} />
+            <ComponentPreview language="html" showCasePanel codeFigure>
+                <PaginationComponent items={paginationItems} arrows farArrows />
             </ComponentPreview>
         </>
 );
@@ -27,8 +27,8 @@ const PaginationBullets = () => (
         <>
             <h2 id="pagination-bullets">Pagination bullets</h2>
             <p>Pagination bullets... <code className="token property">.pagination-bullets</code>...</p>
-            <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-                <PaginationComponent type="bullets" items={paginationItems} arrows={true} farArrows={true} />
+            <ComponentPreview language="html" showCasePanel codeFigure>
+                <PaginationComponent type="bullets" items={paginationItems} arrows farArrows />
             </ComponentPreview>
         </>
 );
@@ -37,8 +37,8 @@ const SimplePagination = () => (
     <>
         <h2 id="simple-pagination">Simple pagination</h2>
         <p>Simple pagination... <code className="token property">.pagination</code>...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-            <PaginationComponent text="16 of 256" arrows={true} farArrows={true} />
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <PaginationComponent text="16 of 256" arrows farArrows />
         </ComponentPreview>
     </>
 );

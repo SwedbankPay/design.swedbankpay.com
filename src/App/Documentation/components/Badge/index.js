@@ -6,7 +6,7 @@ const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
         <p>Overview... <code className="token property">.badge</code>...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <p>Badge <span className="badge badge-default">default</span></p>
             <p>Badge <span className="badge badge-brand">brand</span></p>
             <p>Badge <span className="badge badge-blue">blue</span></p>
@@ -21,7 +21,7 @@ const FurtherUsage = () => (
     <>
         <h2 id="further-usage">Further usage</h2>
         <p>Further usage... <code className="token property">.badge</code>...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <h1>Badge <small className="badge badge-default">default</small></h1>
             <h2>Badge <small className="badge badge-brand">brand</small></h2>
             <h3>Badge <small className="badge badge-blue">blue</small></h3>

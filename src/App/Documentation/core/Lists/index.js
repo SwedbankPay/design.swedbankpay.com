@@ -6,7 +6,7 @@ const BasicList = () => (
     <>
         <h2 id="basic-list">Basic list</h2>
         <p>Basic lists info...<code className="token property">.list</code></p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="list">
                 <li>Bread</li>
                 <li>Coffee beans</li>
@@ -16,7 +16,7 @@ const BasicList = () => (
         </ComponentPreview>
         <h3>Nested list</h3>
         <p>Nested lists are also pretty sweet...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="list">
                 <li>Coffee</li>
                 <li>Tea
@@ -36,7 +36,7 @@ const InlineList = () => (
     <>
         <h2 id="inline-list">Inline list</h2>
         <p>Inline lists info...<code className="token property">.list-inline</code></p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="list list-inline">
                 <li>Coffee</li>
                 <li>Tea</li>
@@ -50,7 +50,7 @@ const DescriptionList = () => (
     <>
         <h2 id="description-list">Description list</h2>
         <p>Description lists info...<code className="token property">.description-list</code></p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <dl className="description-list">{"\n"}
                 <dt>Frog</dt>
                 <dd>Wet green thing that croaks.</dd>{"\n"}
@@ -67,7 +67,7 @@ const SettingsList = () => (
     <>
         <h2 id="settings-list">Settings list</h2>
         <p>Settings lists info...<code className="token property">.settings-list</code></p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="settings-list">
                 <li>{"\n"}
                     <i className="material-icons color-success">check</i>

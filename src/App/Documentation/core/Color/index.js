@@ -7,7 +7,7 @@ const ColorPalette = () => (
     <>
         <h2 id="color-palette">Color palette</h2>
         <p>The PayEx DesignGuide color palette...</p>
-        <ComponentPreview language="html" showCasePanel={true}>
+        <ComponentPreview language="html" showCasePanel>
             <div className="row">
                 <div className="col-xs-12 col-sm-6 col-md-4 col-lg-2">
                     <ColorPreview name="brand" hex="#2da944" />

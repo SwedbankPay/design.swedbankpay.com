@@ -8,15 +8,15 @@ const Usage = () => (
     <>
         <h2 id="usage">Usage</h2>
         <p>Static modal</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <ModalComponent
                 id="static-modal"
                 title="Modal title"
                 subTitle="Not as important as the title"
                 type="brand"
                 size="large"
-                isStatic={true}
-                visible={true}
+                isStatic
+                visible
                 footerAlignment="right"
                 footerText="Footer text"
             >
@@ -30,7 +30,7 @@ const Demo = () => (
     <>
         <h2 id="demo">Demo</h2>
         <p>Live modal</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <ModalComponent
                 id="live-modal"
                 title="Modal title"
@@ -39,8 +39,8 @@ const Demo = () => (
                 size="large"
                 isStatic={false}
                 visible={false}
-                button={true}
-                fade={true}
+                button
+                fade
                 footerAlignment="right"
                 footerText="Footer text"
             >

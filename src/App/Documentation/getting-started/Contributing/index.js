@@ -7,7 +7,7 @@ const CreatingYourComponent = () => (
     <>
         <h2 id="creating-your-component">Creating your component</h2>
         <p>Create a new file under <code className="token property">./src/App/components/[MyExampleComponent]/</code> for your component, name it <code className="token property">index.js</code>:</p>
-        <ComponentPreview language="javascript" codeFigure={true}>
+        <ComponentPreview language="javascript" codeFigure>
             {"//example component\n\n"}
             {"import React from \"react\";"}
             {"import PropTypes from \"prop-types\";\n\n"}
@@ -32,7 +32,7 @@ const CreateADocumentationPage = () => (
     <>
         <h2 id="create-a-documentation-page">Create a documentation page</h2>
         <p>Create a new file under <code className="token property">./src/App/Documentation/Components/[MyExampleDocumentationComponent]/</code> for your component, call it <code className="token property">index.js</code>:</p>
-        <ComponentPreview language="javascript" codeFigure={true}>
+        <ComponentPreview language="javascript" codeFigure>
             {"//example documentation component\n\n"}
             {"import React from \"react\";\n\n"}
             {"import { ComponentPreview, DocToc } from \"#\";"}
@@ -41,8 +41,8 @@ const CreateADocumentationPage = () => (
             {"    <div className=\"col-md-12 col-lg-10 doc-body\">\n"}
             {"        <p className=\"lead\">This is the documentation for My Example Component.</p>\n"}
             {"        <h2 id=\"example-usage\">Example usage</h2>\n"}
-            {"        <ComponentPreview language=\"html\" showCasePanel={true} codeFigure={true}>\n"}
-            {"            <MyExampleComponent type=\"dark\" title=\"My Example Component\" separator={true} />\n"}
+            {"        <ComponentPreview language=\"html\" showCasePanel codeFigure>\n"}
+            {"            <MyExampleComponent type=\"dark\" title=\"My Example Component\" separator />\n"}
             {"        </ComponentPreview>\n"}
             {"    </div>\n"}
             {");\n\n"}
@@ -65,7 +65,7 @@ const AddComponentToRoutes = () => (
     <>
         <h2 id="add-component-to-routes">Add component to routes</h2>
         <p>In <code className="token property">./src/App/routes/docs.js</code> under the components object add the following:</p>
-        <ComponentPreview language="javascript" codeFigure={true}>
+        <ComponentPreview language="javascript" codeFigure>
             {"/**\n"}
             {" * Components\n"}
             {" */\n"}
@@ -97,7 +97,7 @@ const AddingStyles = () => {
             <h3>Importing the styles</h3>
             <p>Import it in the appropriate root-file (<code className="token property">px.less</code> for the core styles, under <code className="token property">/themes</code> if the component is going to be part of a specific theme).</p>
             <p>Assuming you are creating a core component the import would look like this:</p>
-            <ComponentPreview language="css" codeFigure={true}>
+            <ComponentPreview language="css" codeFigure>
                 {"// px.less\n"}
                 {"...\n"}
                 {"...\n\n"}
@@ -116,7 +116,7 @@ const AddingStyles = () => {
             <h3>Creating variables</h3>
             <p>To add custom variables to your component modify <code className="token property">./src/less/_variables.less</code>, and add a section for your component. Add it alphabetically and update the table of contents.</p>
             <p>Adding a section should look like this:</p>
-            <ComponentPreview language="css" codeFigure={true}>
+            <ComponentPreview language="css" codeFigure>
                 {"// _variables.less\n\n"}
                 {"// [number]. My Example Component\n"}
                 {"// ==========================================================================\n\n"}
@@ -146,7 +146,7 @@ const AddingJavaScript = () => {
         <div>
             <h3>Create a script file for your component</h3>
             <p>Create a new file under <code className="token property">./src/px-script/[MyExampleComponent]/</code> for your component, name it <code className="token property">index.js</code>:</p>
-            <ComponentPreview language="javascript" codeFigure={true}>
+            <ComponentPreview language="javascript" codeFigure>
                 {"const int = () => {\n"}
                 {"alert(\"MyExampleComponent was initialized\");\n"}
                 {"};\n\n"}
@@ -163,7 +163,7 @@ const AddingJavaScript = () => {
         <div>
             <h3>Add your components script to px-script</h3>
             <p>Open <code className="token property">./src/px-script/index.js</code> and add your component:</p>
-            <ComponentPreview language="javascript" codeFigure={true}>
+            <ComponentPreview language="javascript" codeFigure>
                 {"...\n"}
                 {"import MyExampleComponent from \"./MyExampleComponent\";\n"}
                 {"...\n"}
@@ -183,7 +183,7 @@ const AddingJavaScript = () => {
             <h2>Initializing the script in the documentation</h2>
             <p>Considering the documentation is built in react your documentation component will load after <code className="token property">px-script</code> runs it{"'"}s <code className="token property">initAll</code> method, you will need to run your component{"'"}s init method when the component actually renders.</p>
             <p>You can do this by slightly modifying the <code className="token property">MyExampleDocumentationComponent</code>:</p>
-            <ComponentPreview language="javascript" codeFigure={true}>
+            <ComponentPreview language="javascript" codeFigure>
                 {"//example documentation component\n\n"}
                 {"// change this line\n"}
                 {"import React, { Component } from \"react\";\n"}

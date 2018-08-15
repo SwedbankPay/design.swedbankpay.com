@@ -6,7 +6,7 @@ const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
         <p>Overview... <code className="token property">.status</code>...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeList={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure removeList>
             <ul className="list">
                 <li>
                     <span className="status status-default">Default</span>
@@ -32,7 +32,7 @@ const ExtendedUsage = () => (
     <>
         <h2 id="extended-usage">Extended usage</h2>
         <p>Extended usage... <code className="token property">.status</code>...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <h1 className="status status-default">Default</h1>
             <h2 className="status status-neutral">Neutral</h2>
             <h3 className="status status-success">Success</h3>

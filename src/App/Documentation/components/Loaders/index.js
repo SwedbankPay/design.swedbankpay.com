@@ -9,8 +9,8 @@ const BasicUsage = () => (
     <>
         <h2 id="basic-usage">Basic usage</h2>
         <p>Basic usage...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-            <LoaderComponent size="default" visible={true} />
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <LoaderComponent size="default" visible />
         </ComponentPreview>
     </>
 );
@@ -20,12 +20,12 @@ const Sizes = () => (
         <h2 id="sizes">Sizes</h2>
         <p>In addition to <code className="token property">.loader-default</code> you can use <code className="token property">.loader-small</code> and <code className="token property">.loader-large</code> to decrease or increase the size of the loader.</p>
         <h3>Small</h3>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-            <LoaderComponent size="small" visible={true} />
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <LoaderComponent size="small" visible />
         </ComponentPreview>
         <h3>Large</h3>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-            <LoaderComponent size="large" visible={true} />
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <LoaderComponent size="large" visible />
         </ComponentPreview>
     </>
 );
@@ -34,8 +34,8 @@ const MutedLoader = () => (
     <>
         <h2 id="muted-loader">Muted loader</h2>
         <p>Use class <code className="token property">.loader-muted</code> to mute the loader...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-            <LoaderComponent id="test" size="default" visible={true} muted={true} />
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <LoaderComponent id="test" size="default" visible muted />
         </ComponentPreview>
     </>
 );
@@ -43,15 +43,15 @@ const MutedLoader = () => (
 const StaticHtml = () => (
     <>
         <h2 id="static-html">Static HTML</h2>
-        <p>Using the attribute <Attribute data={true} name="loader" value="true" /> will append the following HTML to the element:</p>
-        <ComponentPreview language="html" codeFigure={true}>
+        <p>Using the attribute <Attribute data name="loader" value="true" /> will append the following HTML to the element:</p>
+        <ComponentPreview language="html" codeFigure>
             <ul className="loader-icon">
                 <li></li>
                 <li></li>
                 <li></li>
             </ul>
         </ComponentPreview>
-        <p>If you want to use the static HTML instead of the data-attribute, make sure to <b>NOT</b> include the attribute <Attribute data={true} name="loader" value="true" />.</p>
+        <p>If you want to use the static HTML instead of the data-attribute, make sure to <b>NOT</b> include the attribute <Attribute data name="loader" value="true" />.</p>
     </>
 );
 
@@ -60,13 +60,13 @@ const UsageWithJavascript = () => (
         <h2 id="usage-with-javascript">Usage with javascript</h2>
         <p>To interact with the loader-component with javascript...</p>
         <h3>Show loaders</h3>
-        <ComponentPreview language="javascript" codeFigure={true}>
+        <ComponentPreview language="javascript" codeFigure>
             {"px.loader.show();"}{"\n"}
             {"// OR"}{"\n"}
             {"px.loader.show(id);"}
         </ComponentPreview>
         <h3>Hide loaders</h3>
-        <ComponentPreview language="javascript" codeFigure={true}>
+        <ComponentPreview language="javascript" codeFigure>
             {"px.loader.hide();"}{"\n"}
             {"// OR"}{"\n"}
             {"px.loader.hide(id);"}

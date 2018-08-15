@@ -25,7 +25,7 @@ const BasicBreadCrumb = () => {
         <>
             <h2 id="basic-usage">Basic usage</h2>
             <p>Add class <code className="token property">.breadcrumb</code> to a containing <PrismCode className="language-html">{"<ol>"}</PrismCode> element and nest a <PrismCode className="language-html">{"<a>"}</PrismCode> or <PrismCode className="language-html">{"<span>"}</PrismCode> element inside the <PrismCode className="language-html">{"<li>"}</PrismCode> elements.</p>
-            <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+            <ComponentPreview language="html" showCasePanel codeFigure>
                 <BreadcrumbComponent items={items} />
             </ComponentPreview>
         </>
@@ -53,8 +53,8 @@ const SmallBreadCrumb = () => {
         <>
             <h2 id="small-breadcrumb">Small breadcrumb</h2>
             <p>Add class <code className="token property">.breadcrumb-sm</code> to the containing <PrismCode className="language-html">{"<ol>"}</PrismCode> element for a smaller version of the breadcrumb component.</p>
-            <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-                <BreadcrumbComponent small={true} items={items} />
+            <ComponentPreview language="html" showCasePanel codeFigure>
+                <BreadcrumbComponent small items={items} />
             </ComponentPreview>
         </>
     );
@@ -78,8 +78,8 @@ const DisabledBreadcrumb = () => {
         <>
             <h2 id="disable-a-breadcrumb">Disable a breadcrumb</h2>
             <p>To disable a breadcrumb element, simply use a <PrismCode className="language-html">{"<span>"}</PrismCode> element within the <PrismCode className="language-html">{"<li>"}</PrismCode> element (will not work for last-child).</p>
-            <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-                <BreadcrumbComponent small={true} items={items} />
+            <ComponentPreview language="html" showCasePanel codeFigure>
+                <BreadcrumbComponent small items={items} />
             </ComponentPreview>
         </>
     );

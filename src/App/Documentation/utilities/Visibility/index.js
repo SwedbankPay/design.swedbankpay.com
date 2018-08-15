@@ -6,11 +6,11 @@ const Intro = () => (
     <>
         <p>Set the <code className="token property">visibility</code> of elements with our visibility utilities. These do not modify the <code className="token property">display</code> value at all and are helpful for hiding content from most users, but still keeping them for screen readers.</p>
         <p>Apply <code className="token property">.visible</code> or <code className="token property">.invisible</code> as needed.</p>
-        <ComponentPreview language="html" codeFigure={true}>
+        <ComponentPreview language="html" codeFigure>
             <div className="visible">...</div>
             <div className="invisible">...</div>
         </ComponentPreview>
-        <ComponentPreview language="css" codeFigure={true}>
+        <ComponentPreview language="css" codeFigure>
             {`
                 // Class
                 .visible {

@@ -7,7 +7,7 @@ const HowItWorks = () => (
         <h2 id="how-it-works">How it works</h2>
         <p>The grid system is heavily based on Bootstrap{"'"}s grid from v.4.</p>
         <p>Most classes from Bootstrap is available. Click <a href="http://getbootstrap.com/docs/4.1/layout/grid/">here</a> to read more about it.</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="showcase-grid">
                 <div className="container">
                     <div className="row">
@@ -106,7 +106,7 @@ const AutoLayoutColumns = () => (
     <>
         <h2 id="auto-layout-columns">Auto-layout columns</h2>
         <p>Utilize breakpoint-specific column classes for easy column sizing without an explicit numbered class like <code className="token property">.col-sm-6</code>.</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true} removeOuterTag={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="showcase-grid">
                 <div className="container">
                     <div className="row">

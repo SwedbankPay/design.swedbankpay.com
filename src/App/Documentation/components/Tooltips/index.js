@@ -7,7 +7,7 @@ const Overview = () => (
         <h2 id="overview">Overview</h2>
         <p>Add the attribute <Attribute data name="tooltip" /> to the desired element and add your content in its value to create a tooltip.</p>
         <p>You can use the attribute <Attribute data name="tooltip-position" /> to position the tooltip relative to the containing element, use the values <Attribute value="top" />, <Attribute value="right" />, <Attribute value="bottom" /> or <Attribute value="left" />. If the attribute is not provided, it will default to top.</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <button
                 className="btn btn-brand"
                 type="button"

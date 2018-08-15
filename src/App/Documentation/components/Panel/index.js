@@ -7,7 +7,7 @@ const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
         <p>Panel...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <PanelComponent
                 title="Panel title"
                 subTitle="Panel subtitle"
@@ -26,7 +26,7 @@ const PanelHeaders = () => (
     <>
         <h2 id="panel-headers">Panel headers</h2>
         <p>Two types of headers... <code className="token property">.panel-default</code> and <code className="token property">.panel-brand</code>...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <PanelComponent title="Default panel" />{"\n\n"}
             <PanelComponent type="brand" title="Panel brand" />
         </ComponentPreview>
@@ -37,14 +37,14 @@ const DarkMode = () => (
     <>
         <h2 id="panel-dark-mode">Panel dark mode</h2>
         <p>Dark body with <code className="token property">.panel-dark-mode</code>...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <PanelComponent
                 type="brand"
                 title="Panel title"
                 subTitle="Panel subtitle"
                 footerText="Footer content goes here."
                 footerBtnText="Footer button"
-                darkMode={true}
+                darkMode
             >
                 <p className="lead">This is a panel with dark mode.</p>
                 <p>Your main panel content is put here.</p>
@@ -59,7 +59,7 @@ const PanelMuted = () => (
     <>
         <h2 id="muted-panel">Muted panel</h2>
         <p>Muted panel with <code className="token property">.panel-muted</code>...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <PanelComponent
                 type="muted"
                 title="Panel title"

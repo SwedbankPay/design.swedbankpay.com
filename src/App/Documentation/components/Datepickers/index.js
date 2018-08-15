@@ -9,8 +9,8 @@ const moment = window.moment;
 const SimpleDatepicker = () => (
     <>
         <h2 id="simple-datepicker">Simple datepicker</h2>
-        <p>Simple datepicker..<Attribute data={true} name="datepicker" value="true" />.</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <p>Simple datepicker..<Attribute data name="datepicker" value="true" />.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent />
         </ComponentPreview>
     </>
@@ -19,8 +19,8 @@ const SimpleDatepicker = () => (
 const InitialValue = () => (
     <>
         <h2 id="initial-value">Initial value</h2>
-        <p>Initial value..<Attribute data={true} name="datepicker-init-value" />.</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <p>Initial value..<Attribute data name="datepicker-init-value" />.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent value={moment().format("YYYY-MM-DD")} />
         </ComponentPreview>
         <p>Keep in mind that the datepicker will not insert the initial value if it does not correctly match the set format (iso8601 if you have not specified a format).</p>
@@ -30,8 +30,8 @@ const InitialValue = () => (
 const CustomFormat = () => (
     <>
         <h2 id="custom-format">Custom format</h2>
-        <p>Custom format..<Attribute data={true} name="datepicker-format" value="[nb|sv|da|fi|en|iso8601(default)]" />.</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <p>Custom format..<Attribute data name="datepicker-format" value="[nb|sv|da|fi|en|iso8601(default)]" />.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent label="nb (norwegian):" value={moment().format("DD.MM.YYYY")} format="nb" />
             <DatepickerComponent label="sv (swedish):" value={moment().format("YYYY-MM-DD")} format="sv" />
             <DatepickerComponent label="da (danish):" value={moment().format("DD.MM.YYYY")} format="da" />
@@ -45,9 +45,9 @@ const CustomFormat = () => (
 const IncludeTime = () => (
     <>
         <h2 id="include-time">Include time</h2>
-        <p>Include time.. <Attribute data={true} name="datepicker-time" value="true" />.</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-            <DatepickerComponent time={true} value={moment().format("HH:mm DD.MM.YYYY")} format="nb" />
+        <p>Include time.. <Attribute data name="datepicker-time" value="true" />.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <DatepickerComponent time value={moment().format("HH:mm DD.MM.YYYY")} format="nb" />
         </ComponentPreview>
     </>
 );
@@ -55,9 +55,9 @@ const IncludeTime = () => (
 const Required = () => (
     <>
         <h2 id="required">Required</h2>
-        <p>Required.. <Attribute data={true} name="required" value="true" /> will autopopulate the input after clicking it if no date is selected. Keep in mind that if you do not pass a value to the datepicker it will remain blank if the user does not click the input.</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-            <DatepickerComponent required={true} />
+        <p>Required.. <Attribute data name="required" value="true" /> will autopopulate the input after clicking it if no date is selected. Keep in mind that if you do not pass a value to the datepicker it will remain blank if the user does not click the input.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <DatepickerComponent required />
         </ComponentPreview>
     </>
 );
@@ -65,8 +65,8 @@ const Required = () => (
 const ShowingMultipleMonths = () => (
     <>
         <h2 id="showing-multiple-months">Showing multiple months</h2>
-        <p>Showing multiple months.. <Attribute data={true} name="datepicker-months" value="[number]" />.</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <p>Showing multiple months.. <Attribute data name="datepicker-months" value="[number]" />.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent months="2" />
         </ComponentPreview>
     </>
@@ -75,8 +75,8 @@ const ShowingMultipleMonths = () => (
 const DateRange = () => (
     <>
         <h2 id="date-range">Date range</h2>
-        <p>Date range with <Attribute data={true} name="datepicker-min" /> and <Attribute data={true} name="datepicker-max" />...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <p>Date range with <Attribute data name="datepicker-min" /> and <Attribute data name="datepicker-max" />...</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             {/* eslint-disable newline-per-chained-call*/}
             <DatepickerComponent
                 value={moment().format("DD.MM.YYYY")}
@@ -94,7 +94,7 @@ const DateRange = () => (
 const Options = () => (
     <>
         <h2 id="available-options">Available options</h2>
-        <p>Options available through <Attribute data={true} name="datepicker" />...</p> Keep in mind that setting any of these values will render them true, so setting an attribute to <Attribute value="false" /> will still render it true.
+        <p>Options available through <Attribute data name="datepicker" />...</p> Keep in mind that setting any of these values will render them true, so setting an attribute to <Attribute value="false" /> will still render it true.
         <table className="table table-striped">
             <thead>
                 <tr>
@@ -106,7 +106,7 @@ const Options = () => (
             <tbody>
                 <tr>
                     <td>
-                        <Attribute data={true} name="datepicker-value" />
+                        <Attribute data name="datepicker-value" />
                     </td>
                     <td></td>
                     <td>
@@ -115,7 +115,7 @@ const Options = () => (
                 </tr>
                 <tr>
                     <td>
-                        <Attribute data={true} name="datepicker-format" />
+                        <Attribute data name="datepicker-format" />
                     </td>
                     <td>
                         <Attribute value="iso8601" />
@@ -139,7 +139,7 @@ const Options = () => (
                 </tr>
                 <tr>
                     <td>
-                        <Attribute data={true} name="datepicker-time" />
+                        <Attribute data name="datepicker-time" />
                     </td>
                     <td></td>
                     <td>
@@ -148,7 +148,7 @@ const Options = () => (
                 </tr>
                 <tr>
                     <td>
-                        <Attribute data={true} name="datepicker-months" />
+                        <Attribute data name="datepicker-months" />
                     </td>
                     <td>
                         <Attribute value="1" />
@@ -159,7 +159,7 @@ const Options = () => (
                 </tr>
                 <tr>
                     <td>
-                        <Attribute data={true} name="datepicker-min" />
+                        <Attribute data name="datepicker-min" />
                     </td>
                     <td></td>
                     <td>
@@ -168,7 +168,7 @@ const Options = () => (
                 </tr>
                 <tr>
                     <td>
-                        <Attribute data={true} name="datepicker-max" />
+                        <Attribute data name="datepicker-max" />
                     </td>
                     <td></td>
                     <td>
@@ -177,7 +177,7 @@ const Options = () => (
                 </tr>
                 <tr>
                     <td>
-                        <Attribute data={true} name="required" />
+                        <Attribute data name="required" />
                     </td>
                     <td></td>
                     <td>
