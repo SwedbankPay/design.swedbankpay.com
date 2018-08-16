@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 
 - Fixed issue select elements being smaller than other input elements.
+- Fixed issue with some components not aligning vertically in forms.
 
 ## [0.8.0] - 2018-08-15
 
