@@ -198,6 +198,12 @@ const config = {
             hash: true,
             title: "PayEx DesignGuide"
         }),
+        new HtmlWebpackPlugin({
+            filename: "404.html",
+            template: "./src/index.html",
+            hash: true,
+            title: "PayEx DesignGuide"
+        }),
         new FaviconsWebpackPlugin({
             logo: "./src/img/favicon.png",
             title: "PayEx DesignGuide",
