@@ -160,6 +160,7 @@ const Disabled = () => (
             <InputGroupComponent
                 id="input-id-3"
                 type="number"
+                label="Amount"
                 placeholder="Rounded to nearest $"
                 disabled
                 prefixType="icon"
@@ -169,7 +170,8 @@ const Disabled = () => (
             <InputGroupComponent
                 id="input-id-4"
                 type="textarea"
-                placeholder="Special requests"
+                label="Special requests"
+                placeholder="Extra frosting, no pineapple..."
                 disabled
                 prefixType="icon"
                 prefixValue="format_quote"
@@ -177,6 +179,7 @@ const Disabled = () => (
             <InputGroupComponent
                 type="select"
                 selectOptions={["Option one", "Option two", "Option three"]}
+                label="Flavor"
                 prefixValue="Options"
                 disabled
             />

@@ -213,6 +213,7 @@ exports[`Documentation: InputGroup Disabled renders 1`] = `
     <InputGroup
       disabled={true}
       id="input-id-3"
+      label="Amount"
       placeholder="Rounded to nearest $"
       postfixValue=".00"
       prefixType="icon"
@@ -222,13 +223,15 @@ exports[`Documentation: InputGroup Disabled renders 1`] = `
     <InputGroup
       disabled={true}
       id="input-id-4"
-      placeholder="Special requests"
+      label="Special requests"
+      placeholder="Extra frosting, no pineapple..."
       prefixType="icon"
       prefixValue="format_quote"
       type="textarea"
     />
     <InputGroup
       disabled={true}
+      label="Flavor"
       prefixValue="Options"
       selectOptions={
         Array [
