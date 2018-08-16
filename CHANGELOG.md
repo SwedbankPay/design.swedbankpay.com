@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.8.1] - 2018-08-
+
+### Fixed
+
+- Fixed issue select elements being smaller than other input elements.
+
 ## [0.8.0] - 2018-08-15
 
 ### Added
