@@ -23,7 +23,7 @@ const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
         <p>Overview... <code className="token property">.tabs</code>...<code className="token property">.tabs-auto</code></p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <TabsComponent mode="auto" items={tabItems} />
         </ComponentPreview>
     </>
@@ -33,7 +33,7 @@ const Stacked = () => (
     <>
         <h2 id="stacked">Stacked</h2>
         <p>Stacked... <code className="token property">.tabs</code>...<code className="token property">.tabs-stacked</code></p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <TabsComponent mode="stacked" items={tabItems} />
         </ComponentPreview>
     </>
@@ -43,7 +43,7 @@ const Collapsed = () => (
     <>
         <h2 id="collapsed">Collapsed</h2>
         <p>Collapsed... <code className="token property">.tabs</code>...<code className="token property">.tabs-collapsed</code></p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <TabsComponent mode="collapsed" items={tabItems} />
         </ComponentPreview>
     </>

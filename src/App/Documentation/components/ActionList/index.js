@@ -7,7 +7,7 @@ const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
         <p>Action lists.</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="action-list">{"\n"}
                 <Icon icon="more_vert" />{"\n"}
                 <div className="action-menu">{"\n"}
@@ -27,7 +27,7 @@ const Anchorpoints = () => (
         <p>Customize anchorpoint... Top right is default.</p>
         <h3>Top left</h3>
         <p>Use class <code className="token property">.anchor-top-left</code> to anchor action-list button to the top left corner of the menu.</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="action-list anchor-top-left">{"\n"}
                 <Icon icon="more_vert" />{"\n"}
                 <div className="action-menu">{"\n"}
@@ -40,7 +40,7 @@ const Anchorpoints = () => (
         </ComponentPreview>
         <h3>Bottom right</h3>
         <p>Use class <code className="token property">.anchor-bottom-right</code> to anchor action-list button to the bottom right corner of the menu.</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="action-list anchor-bottom-right">{"\n"}
                 <Icon icon="more_vert" />{"\n"}
                 <div className="action-menu">{"\n"}
@@ -53,7 +53,7 @@ const Anchorpoints = () => (
         </ComponentPreview>
         <h3>Bottom left</h3>
         <p>Use class <code className="token property">.anchor-bottom-left</code> to anchor action-list button to the bottom left corner of the menu.</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="action-list anchor-bottom-left">{"\n"}
                 <Icon icon="more_vert" />{"\n"}
                 <div className="action-menu">{"\n"}

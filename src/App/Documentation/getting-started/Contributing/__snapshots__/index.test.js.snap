@@ -513,9 +513,9 @@ exports[`GettingStarted: Contributing Create A Documentation Page renders 1`] = 
 
             &lt;h2 id="example-usage"&gt;Example usage&lt;/h2&gt;
 
-            &lt;ComponentPreview language="html" showCasePanel={true} codeFigure={true}&gt;
+            &lt;ComponentPreview language="html" showCasePanel codeFigure&gt;
 
-                &lt;MyExampleComponent type="dark" title="My Example Component" separator={true} /&gt;
+                &lt;MyExampleComponent type="dark" title="My Example Component" separator /&gt;
 
             &lt;/ComponentPreview&gt;
 

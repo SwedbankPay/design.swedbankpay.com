@@ -598,7 +598,6 @@ exports[`Documentation: Forms Validation renders 1`] = `
         helpBlock="Comes before your last name"
         id="validate-first-name"
         label="First name"
-        pattern="asd"
         placeholder="Enter your first name"
         required={true}
         type="text"
@@ -617,7 +616,7 @@ exports[`Documentation: Forms Validation renders 1`] = `
         id="validate-email-address"
         label="Email"
         placeholder="Enter your email"
-        type="text"
+        type="email"
         validate={true}
       />
       

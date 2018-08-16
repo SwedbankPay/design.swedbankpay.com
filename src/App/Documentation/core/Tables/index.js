@@ -6,7 +6,7 @@ const BasicTable = () => (
     <>
         <h2 id="basic-table">Basic table</h2>
         <p>Basic tables info...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <table className="table">
                 <thead>
                     <tr>
@@ -57,7 +57,7 @@ const StripedTable = () => (
     <>
         <h2 id="striped-table">Striped table</h2>
         <p>Striped tables info...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <table className="table table-striped">
                 <thead>
                     <tr>
@@ -108,7 +108,7 @@ const HoverTable = () => (
     <>
         <h2 id="hover-table">Hover table</h2>
         <p>Hover tables info...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <table className="table table-hover">
                 <thead>
                     <tr>
@@ -159,7 +159,7 @@ const HoverStripedTable = () => (
     <>
         <h2 id="hover-striped-table">Hover striped table</h2>
         <p>Hover striped tables info...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <table className="table table-hover table-striped">
                 <thead>
                     <tr>
@@ -210,7 +210,7 @@ const DescriptionTable = () => (
     <>
         <h2 id="description-table">Description table</h2>
         <p>Description tables info...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <table className="table table-description table-striped">
                 <thead>
                     <tr>

@@ -7,7 +7,7 @@ const Usage = () => (
     <>
         <h2 id="usage">Usage</h2>
         <p>To use an icon, provide the following markup: <PrismCode className="language-html">{"<i class=\"material-icons\">[ICON NAME]</i>"}</PrismCode>.</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <i className="material-icons">android</i>{"\n"}
             <i className="material-icons">contact_support</i>{"\n"}
             <i className="material-icons">face</i>{"\n"}
@@ -16,7 +16,7 @@ const Usage = () => (
         </ComponentPreview>
         {/* <h3>Sizes</h3>
         <p>Material icons also come in different sizes, the available ones are <code className="token property">.tiny</code>, <code className="token property">.small</code>, <code className="token property">.medium</code> and <code className="token property">.large</code>.</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <i className="material-icons tiny">android</i>{"\n"}
             <i className="material-icons small">android</i>{"\n"}
             <i className="material-icons">android</i>{"\n"}

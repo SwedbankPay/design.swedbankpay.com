@@ -6,7 +6,7 @@ const DefaultWell = () => (
     <>
         <h2 id="default-well">Default well</h2>
         <p>Use the <code className="token property">.well</code> as a simple effect on an element to give it an inset effect.</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="well">
                 Look ma, im in a well!
             </div>
@@ -18,12 +18,12 @@ const WellSizes = () => (
     <>
         <h2 id="well-sizes">Well sizes</h2>
         <p>Use the two optional <code className="token property">.well-sm</code> and <code className="token property">.well-lg</code> classes to control padding and rounded corners.</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="well well-sm">
                 Look ma, im in a small well!
             </div>
         </ComponentPreview>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="well well-lg">
                 Look ma, im in a large well!
             </div>

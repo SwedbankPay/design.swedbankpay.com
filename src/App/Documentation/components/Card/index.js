@@ -10,7 +10,7 @@ const Overview = () => (
         <p>... <code className="token property">.card-default</code>...</p>
         <p>... <code className="token property">.card-brand</code>...</p>
         <p>... <code className="token property">.card-light</code>...</p>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="cards">
                 <ul>
                     <CardComponent
