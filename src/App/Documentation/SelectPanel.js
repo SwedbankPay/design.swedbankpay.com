@@ -9,50 +9,53 @@ const SearchBox = () => (
     </div>
 );
 
-class SelectPanel extends Component {
+const NavLink = ({ childRoute, pathname }) => {
+    const { title, path } = childRoute;
+    return (
+        <li>
+            <Link className={pathname === path ? "active" : ""} to={path}>{title}</Link>
+        </li>
+    );
+};
+
+class NavGroup extends Component {
     constructor (props) {
         super(props);
+        this.state = { isActive: props.location.pathname.includes(props.route.path) };
     }
 
-    titleActive (title) {
-        return this.props.location.pathname.includes(title);
-    }
-
-    subtitleActive (title) {
-        return this.props.location.pathname === title;
+    toggleActive () {
+        this.setState({ isActive: !this.state.isActive });
     }
 
     render () {
+        const { path, title, routes } = this.props.route;
+        const { pathname } = this.props.location;
         return (
-            <div className="doc-sidebar col-xxl-2 col-md-3 col-sm-12">
-                {/* <SearchBox /> */}
-                <nav className="documentation-nav">
-                    {routes.map((route, i) => {
-                        const { path, title, routes } = route;
-                        return (
-                            <div key={i} className={`nav-group${this.titleActive(path) ? " active" : ""}`}>
-                                <div className="nav-heading">
-                                    <i className="material-icons">keyboard_arrow_right</i>
-                                    <Link to={path}>{title}</Link>
-                                </div>
-                                <ul>
-                                    {routes.map((childRoute, i) => {
-                                        const { title, path } = childRoute;
-                                        return (
-                                            <li key={i}>
-                                                <Link className={this.subtitleActive(path) ? "active" : ""} to={path}>{title}</Link>
-                                            </li>
-                                        );
-                                    })}
-                                </ul>
-                            </div>
-                        );
-                    })}
-                </nav>
+            <div className={`nav-group${this.state.isActive ? " active" : ""}`}>
+                <div className="nav-heading">
+                    <i className="material-icons">keyboard_arrow_right</i>
+                    <span onClick={() => this.toggleActive()}>{title}</span>
+                </div>
+                <ul>
+                    {routes.map((childRoute, i) => <NavLink key={i} childRoute={childRoute} pathname={pathname} />)}
+                </ul>
             </div>
         );
     }
 }
+
+const SelectPanel = () => (
+    <div className="doc-sidebar col-xxl-2 col-md-3 col-sm-12">
+        {/* <SearchBox /> */}
+        <nav className="documentation-nav">
+            {routes.map((route, i) => {
+                const NavGroupWithRouter = withRouter(NavGroup);
+                return <NavGroupWithRouter key={i} route={route} />;
+            })}
+        </nav>
+    </div>
+);
 
 export default withRouter(SelectPanel);
 
