@@ -65,8 +65,25 @@
             display: flex;
             align-items: center;
 
-            a {
+            > span {
                 padding: 0;
+                cursor: pointer;
+                color: @brand-primary;
+
+                &:hover,
+                &:focus {
+                    color: darken(@brand-primary, 10%);
+                    text-decoration: underline;
+                }
+
+                &:active,
+                &:hover {
+                    outline: 0;
+                }
+
+                &:focus {
+                    .tab-focus();
+                }
             }
 
             i {
@@ -86,9 +103,8 @@
 
         &.active {
             .nav-heading {
-                a {
+                > span {
                     font-weight: @font-weight-bold;
-                    text-decoration: none;
                 }
 
                 i {
