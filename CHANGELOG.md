@@ -9,6 +9,10 @@ All notable changes to this project will be documented in this file.
 - Added utility classes for flex layout.
 - Added section for alignment in the grid documentation.
 
+### Changed
+
+- Changed class `.panel-dark-mode` to `.panel-dark`.
+
 ## [0.8.1] - 2018-08-16
 
 ### Fixed

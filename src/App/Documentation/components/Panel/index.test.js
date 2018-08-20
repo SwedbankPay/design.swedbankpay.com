@@ -2,7 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 
 import Panel from "./index";
-import { Overview, PanelHeaders, DarkMode, PanelMuted, PanelText } from "./index";
+import { Overview, PanelHeaders, PanelDark, PanelMuted, PanelText } from "./index";
 
 describe("Documentation: Panel", () => {
     it("is defined", () => {
@@ -45,14 +45,14 @@ describe("Documentation: Panel", () => {
         });
     });
 
-    describe("DarkMode", () => {
+    describe("PanelDark", () => {
         it("is defined", () => {
-            expect(DarkMode).toBeDefined();
+            expect(PanelDark).toBeDefined();
         });
 
         it("renders", () => {
             const wrapper = shallow(
-                <DarkMode />
+                <PanelDark />
             );
 
             expect(wrapper).toMatchSnapshot();

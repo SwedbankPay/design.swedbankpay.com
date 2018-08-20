@@ -1,53 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Documentation: Panel DarkMode renders 1`] = `
-<React.Fragment>
-  <h2
-    id="panel-dark-mode"
-  >
-    Panel dark mode
-  </h2>
-  <p>
-    Dark body with 
-    <code
-      className="token property"
-    >
-      .panel-dark-mode
-    </code>
-    ...
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Panel
-      darkMode={true}
-      footerBtnText="Footer button"
-      footerText="Footer content goes here."
-      subTitle="Panel subtitle"
-      title="Panel title"
-      type="brand"
-    >
-      <p
-        className="lead"
-      >
-        This is a panel with dark mode.
-      </p>
-      <p>
-        Your main panel content is put here.
-      </p>
-      <p>
-        Some more content over here.
-      </p>
-      <p>
-        And one more line, just to be safe.
-      </p>
-    </Panel>
-  </ComponentPreview>
-</React.Fragment>
-`;
-
 exports[`Documentation: Panel Overview renders 1`] = `
 <React.Fragment>
   <h2
@@ -69,6 +21,54 @@ exports[`Documentation: Panel Overview renders 1`] = `
       subTitle="Panel subtitle"
       title="Panel title"
     >
+      <p>
+        Your main panel content is put here.
+      </p>
+      <p>
+        Some more content over here.
+      </p>
+      <p>
+        And one more line, just to be safe.
+      </p>
+    </Panel>
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Documentation: Panel PanelDark renders 1`] = `
+<React.Fragment>
+  <h2
+    id="panel-dark-mode"
+  >
+    Panel dark mode
+  </h2>
+  <p>
+    Dark body with 
+    <code
+      className="token property"
+    >
+      .panel-dark
+    </code>
+    ...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Panel
+      darkMode={true}
+      footerBtnText="Footer button"
+      footerText="Footer content goes here."
+      subTitle="Panel subtitle"
+      title="Panel title"
+      type="brand"
+    >
+      <p
+        className="lead"
+      >
+        This is a dark panel.
+      </p>
       <p>
         Your main panel content is put here.
       </p>
@@ -182,7 +182,7 @@ exports[`Documentation: Panel PanelText renders 1`] = `
   </p>
   <Overview />
   <PanelHeaders />
-  <DarkMode />
+  <PanelDark />
   <PanelMuted />
 </div>
 `;
