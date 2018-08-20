@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.x.x] - 2018-0x-xx
+
+### Added
+
+- Added utility classes for flex layout.
+- Added section for alignment in the grid documentation.
+
 ## [0.8.1] - 2018-08-16
 
 ### Fixed

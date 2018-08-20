@@ -13,7 +13,7 @@ const NavLink = ({ childRoute, pathname }) => {
     const { title, path } = childRoute;
     return (
         <li>
-            <Link className={pathname === path ? "active" : ""} to={path}>{title}</Link>
+            <Link className={pathname === path ? "active" : null} to={path}>{title}</Link>
         </li>
     );
 };
@@ -28,8 +28,12 @@ class NavGroup extends Component {
         this.setState({ isActive: !this.state.isActive });
     }
 
+    shouldComponentUpdate (nextProps, nextState) {
+        return this.state !== nextState;
+    }
+
     render () {
-        const { path, title, routes } = this.props.route;
+        const { title, routes } = this.props.route;
         const { pathname } = this.props.location;
         return (
             <div className={`nav-group${this.state.isActive ? " active" : ""}`}>
