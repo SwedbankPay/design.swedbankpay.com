@@ -289,9 +289,15 @@ legend {
         position: relative;
         margin-right: 0.6rem;
 
+        //Remove native radio button for IE
+        &::-ms-check {
+            visibility: hidden;
+            height: 0;
+            width: 0;
+        }
+
         + label:before {
             content: "";
-            display: inline-block;
             position: absolute;
             visibility: visible;
             left: -28px;
@@ -300,7 +306,7 @@ legend {
             background-color: @white;
             border: 1px solid @checkbox-bg;
             cursor: pointer;
-            border-radius: 50%;      
+            border-radius: 50%;
         }
 
         &:checked + label:before {
