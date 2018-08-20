@@ -233,7 +233,7 @@ legend {
             display: block;
             position: absolute;
             visibility: visible;
-            left: -31px;
+            left: -30px;
             height: @checkbox-height;
             width: @checkbox-width;
             background-color: @white;
@@ -287,22 +287,20 @@ legend {
 
     input[type=radio] {
         position: relative;
-        height: @checkbox-height;
-        width: @checkbox-width;
-        margin-right: 0.5rem;
+        margin-right: 0.6rem;
 
         + label:before {
             content: "";
-            display: block;
+            display: inline-block;
             position: absolute;
             visibility: visible;
-            left: -31px;
+            left: -28px;
             height: @checkbox-height;
             width: @checkbox-width;
             background-color: @white;
             border: 1px solid @checkbox-bg;
             cursor: pointer;
-            border-radius: 50%;
+            border-radius: 50%;      
         }
 
         &:checked + label:before {
