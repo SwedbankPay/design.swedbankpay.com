@@ -36,13 +36,4 @@ describe("Component: Loader - ", () => {
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("loader loader-test loader-muted");
     });
-
-    it("renders a loader with the specified size and class in when prop size and visible is provided", () => {
-        const wrapper = shallow(
-            <Loader size="test" visible={true} />
-        );
-
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("loader loader-test in");
-    });
 });
