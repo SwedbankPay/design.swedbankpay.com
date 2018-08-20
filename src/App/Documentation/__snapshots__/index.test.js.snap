@@ -337,8 +337,8 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
-                  "DarkMode": [Function],
                   "Overview": [Function],
+                  "PanelDark": [Function],
                   "PanelHeaders": [Function],
                   "PanelMuted": [Function],
                   "PanelText": [Function],

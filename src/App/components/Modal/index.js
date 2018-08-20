@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classnames from "classnames";
 
 const ModalHeading = ({ title, subTitle }) => (
     <header>
@@ -13,9 +14,17 @@ const OpenModalButton = ({ id }) => (
 );
 
 const Modal = ({ title, subTitle, id, footerText, footerAlignment, type, size, visible, isStatic, button, children }) => {
+    const modalClasses = classnames(
+        "modal",
+        type ? `modal-${type}` : null,
+        size ? `modal-${size}` : null,
+        isStatic ? "static" : null,
+        visible ? "d-block" : null
+    );
+
     return (
         <>
-            <section className={`modal modal-${type} modal-${size}${isStatic ? " static" : ""}${visible ? " d-block" : ""}`} id={id} tabIndex="-1" role="dialog">
+            <section className={modalClasses} id={id} tabIndex="-1" role="dialog">
                 <div className="modal-dialog" role="document">
                     <div className="modal-container">{"\n"}
                         <i className="material-icons modal-close">close</i>

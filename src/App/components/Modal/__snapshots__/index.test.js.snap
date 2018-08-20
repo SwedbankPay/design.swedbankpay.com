@@ -3,7 +3,7 @@
 exports[`Component: Modal -  prop footerAlignment is an enum requires value 'centered' or 'right' 1`] = `
 <React.Fragment>
   <section
-    className="modal modal-undefined modal-undefined"
+    className="modal"
     role="dialog"
     tabIndex="-1"
   >
@@ -63,7 +63,7 @@ exports[`Component: Modal -  prop size is is an enum which requires value 'small
 exports[`Component: Modal -  prop size is marked as required 1`] = `
 <React.Fragment>
   <section
-    className="modal modal-default modal-undefined"
+    className="modal modal-default"
     role="dialog"
     tabIndex="-1"
   >
@@ -123,7 +123,7 @@ exports[`Component: Modal -  prop type is is an enum which requires value 'brand
 exports[`Component: Modal -  prop type is marked as required 1`] = `
 <React.Fragment>
   <section
-    className="modal modal-undefined modal-large"
+    className="modal modal-large"
     role="dialog"
     tabIndex="-1"
   >
@@ -183,7 +183,7 @@ exports[`Component: Modal -  renders 1`] = `
 exports[`Component: Modal -  renders a button component when prop button is true 1`] = `
 <React.Fragment>
   <section
-    className="modal modal-undefined modal-undefined"
+    className="modal"
     id="test"
     role="dialog"
     tabIndex="-1"
@@ -220,7 +220,7 @@ exports[`Component: Modal -  renders a button component when prop button is true
 exports[`Component: Modal -  renders a footer when prop footerText is provided 1`] = `
 <React.Fragment>
   <section
-    className="modal modal-undefined modal-undefined"
+    className="modal"
     role="dialog"
     tabIndex="-1"
   >
@@ -270,7 +270,7 @@ exports[`Component: Modal -  renders a footer when prop footerText is provided 1
 exports[`Component: Modal -  renders a footer with alignment when prop footerText and footerAlignment is provided 1`] = `
 <React.Fragment>
   <section
-    className="modal modal-undefined modal-undefined"
+    className="modal"
     role="dialog"
     tabIndex="-1"
   >
@@ -320,7 +320,7 @@ exports[`Component: Modal -  renders a footer with alignment when prop footerTex
 exports[`Component: Modal -  renders a header tag with subtitle but without title when prop subTitle is provided but title is not 1`] = `
 <React.Fragment>
   <section
-    className="modal modal-undefined modal-undefined"
+    className="modal"
     role="dialog"
     tabIndex="-1"
   >
@@ -353,7 +353,7 @@ exports[`Component: Modal -  renders a header tag with subtitle but without titl
 exports[`Component: Modal -  renders with a header and subtitle when prop title and subTitle is provided 1`] = `
 <React.Fragment>
   <section
-    className="modal modal-undefined modal-undefined"
+    className="modal"
     role="dialog"
     tabIndex="-1"
   >
@@ -387,7 +387,7 @@ exports[`Component: Modal -  renders with a header and subtitle when prop title 
 exports[`Component: Modal -  renders with a header without subtitle when prop title is provided and prop subTitle is missing 1`] = `
 <React.Fragment>
   <section
-    className="modal modal-undefined modal-undefined"
+    className="modal"
     role="dialog"
     tabIndex="-1"
   >
@@ -420,7 +420,7 @@ exports[`Component: Modal -  renders with a header without subtitle when prop ti
 exports[`Component: Modal -  renders with class 'd-block' when prop visible is true 1`] = `
 <React.Fragment>
   <section
-    className="modal modal-undefined modal-undefined d-block"
+    className="modal d-block"
     role="dialog"
     tabIndex="-1"
   >
@@ -450,7 +450,7 @@ exports[`Component: Modal -  renders with class 'd-block' when prop visible is t
 exports[`Component: Modal -  renders with class 'static' when prop isStatic is true 1`] = `
 <React.Fragment>
   <section
-    className="modal modal-undefined modal-undefined static"
+    className="modal static"
     role="dialog"
     tabIndex="-1"
   >
@@ -480,7 +480,7 @@ exports[`Component: Modal -  renders with class 'static' when prop isStatic is t
 exports[`Component: Modal -  renders without header when prop title is missing 1`] = `
 <React.Fragment>
   <section
-    className="modal modal-undefined modal-undefined"
+    className="modal"
     role="dialog"
     tabIndex="-1"
   >

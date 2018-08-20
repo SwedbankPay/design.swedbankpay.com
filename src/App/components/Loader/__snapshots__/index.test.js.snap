@@ -2,7 +2,7 @@
 
 exports[`Component: Loader -  prop size is marked as required 1`] = `
 <div
-  className="loader loader-undefined"
+  className="loader"
   data-loader="true"
 />
 `;

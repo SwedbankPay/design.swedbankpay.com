@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
+import classnames from "classnames";
 
 const Addon = ({ type, value, color }) => (
     (type === "button") ?
@@ -53,10 +54,17 @@ const InputGroup = ({
         "data-pattern": pattern || null,
         "data-required": required || null
     };
+
+    const inputGrpClasses = classnames(
+        "input-group",
+        validationState ? `has-${validationState}` : null,
+        feedbackIcon ? "has-feedback" : null
+    );
+
     return (
         <div className="form-group">{"\n"}
             {label ? <label htmlFor={id}>{label}</label> : null}{label ? "\n" : null}
-            <div className={`input-group${validationState ? ` has-${validationState}` : ""}${feedbackIcon ? " has-feedback" : ""}`}>{"\n"}
+            <div className={inputGrpClasses}>{"\n"}
                 {prefixValue ? <Addon type={prefixType} value={prefixValue} color={prefixBtnColor} /> : null }{prefixValue ? "\n" : null}
                 {type === "textarea" ?
                     <textarea {...attrs} ></textarea>
