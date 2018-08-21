@@ -80,9 +80,15 @@ exports[`Documentation: Forms DisabledRadioButtons renders 1`] = `
       name="radio-disabled-example"
     />
     <Radio
-      checked={true}
       disabled={true}
       id="radio-disabled-example-2"
+      label="Not the one above because I'm not really fond of hamburgers. What I would really like, however, is a nice piece of steak. Perhaps that could be the second option. These thoughts are written here simply to show you how radio buttons align themselves when label text is fairly long."
+      name="radio-disabled-example"
+    />
+    <Radio
+      checked={true}
+      disabled={true}
+      id="radio-disabled-example-3"
       label="Pizza"
       name="radio-disabled-example"
     />
@@ -316,8 +322,13 @@ exports[`Documentation: Forms RadioButtons renders 1`] = `
       name="radio-example"
     />
     <Radio
-      checked={true}
       id="radio-example-2"
+      label="Not the one above because I'm not really fond of hamburgers. What I would really like, however, is a nice piece of steak. Perhaps that could be the second option. These thoughts are written here simply to show you how radio buttons align themselves when label text is fairly long."
+      name="radio-example"
+    />
+    <Radio
+      checked={true}
+      id="radio-example-3"
       label="Pizza"
       name="radio-example"
     />
