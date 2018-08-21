@@ -1,7 +1,7 @@
 // import React from "react";
 // import { shallow } from "enzyme";
 
-import DocHeading from "./DocHeading";
+import DocHeading from "./index";
 
 describe("Utilities: DocHeading", () => {
     it("is defined", () => {
