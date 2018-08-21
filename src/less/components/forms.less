@@ -286,15 +286,8 @@ legend {
     }
 
     input[type=radio] {
-        position: relative;
         margin-right: 0.6rem;
-
-        //Remove native radio button for IE
-        &::-ms-check {
-            visibility: hidden;
-            height: 0;
-            width: 0;
-        }
+        opacity: 0;
 
         + label:before {
             content: "";
@@ -314,6 +307,10 @@ legend {
             background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNWWFMmUAAABMSURBVChTjY8xCgAgDMT6GEf/7uDTHBzrBe0iFjwIlDOUau4ORTQxD8x0Fo9D3KErCNhZGgIrs8wvoe/5mY5QRXZkRQiJTfFNZnVuC4bS8W24IBKtAAAAAElFTkSuQmCC);
             background-position: 50% 50%;
             background-repeat: no-repeat;
+        }
+
+        &:focus + label:before {
+            .tab-focus();
         }
 
         &[disabled] {
