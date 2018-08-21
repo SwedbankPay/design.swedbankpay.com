@@ -241,7 +241,8 @@ const RadioButtons = () => (
         <p>Radio buttons...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <Radio label="Hamburgers" id="radio-example-1" name="radio-example" />
-            <Radio label="Pizza" id="radio-example-2" name="radio-example" checked />
+            <Radio label="Not the one above because I'm not really fond of hamburgers. What I would really like, however, is a nice piece of steak. Perhaps that could be the second option. These thoughts are written here simply to show you how radio buttons align themselves when label text is fairly long." id="radio-example-2" name="radio-example" />
+            <Radio label="Pizza" id="radio-example-3" name="radio-example" checked />
         </ComponentPreview>
     </>
 );
@@ -252,7 +253,8 @@ const DisabledRadioButtons = () => (
         <p>Disabled radio buttons...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <Radio label="Hamburgers" id="radio-disabled-example-1" name="radio-disabled-example" disabled />
-            <Radio label="Pizza" id="radio-disabled-example-2" name="radio-disabled-example" disabled checked />
+            <Radio label="Not the one above because I'm not really fond of hamburgers. What I would really like, however, is a nice piece of steak. Perhaps that could be the second option. These thoughts are written here simply to show you how radio buttons align themselves when label text is fairly long." id="radio-disabled-example-2" name="radio-disabled-example" disabled />
+            <Radio label="Pizza" id="radio-disabled-example-3" name="radio-disabled-example" disabled checked />
         </ComponentPreview>
     </>
 );
