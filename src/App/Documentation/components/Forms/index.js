@@ -219,7 +219,8 @@ const Checkboxes = () => (
         <p>Checkboxes...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <Checkbox label="Bread" id="checkbox-example-1" />
-            <Checkbox label="Milk" id="checkbox-example-2" checked />
+            <Checkbox label="Not bread. I'm not really fond of it. What I would really like, however, is one single piece of cracker with some nutella on it. Perhaps this could be the second checkbox. These thoughts are written here simply to show you how the checkboxes align themselves when label text is fairly long." id="checkbox-example-2" />
+            <Checkbox label="Milk" id="checkbox-example-3" checked />
         </ComponentPreview>
     </>
 );
@@ -230,7 +231,8 @@ const DisabledCheckboxes = () => (
         <p>Disabled checkboxes...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <Checkbox label="Bread" id="checkbox-disabled-example-1" disabled />
-            <Checkbox label="Milk" id="checkbox-disabled-example-2" disabled checked />
+            <Checkbox label="Not bread. I'm not really fond of it. What I would really like, however, is one single piece of cracker with some nutella on it. Perhaps this could be the second checkbox. These thoughts are written here simply to show you how the checkboxes align themselves when label text is fairly long." id="checkbox-example-2" disabled />
+            <Checkbox label="Milk" id="checkbox-disabled-example-3" disabled checked />
         </ComponentPreview>
     </>
 );
