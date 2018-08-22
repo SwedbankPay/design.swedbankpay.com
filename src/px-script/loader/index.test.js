@@ -12,7 +12,7 @@ describe("px-script: loader", () => {
         expect(loader).toBeDefined();
     });
 
-    it("method init is defined and adds loader markup to tags with the attribute [data-loader='true']", () => {
+    it("method init is defined and adds loader markup to tags with the attribute [data-loader]", () => {
         expect(loader.init).toBeDefined();
 
         const Loaders = () => (
@@ -25,7 +25,7 @@ describe("px-script: loader", () => {
 
         ReactDOM.render(<Loaders />, div);
 
-        const renderedLoaders = document.querySelectorAll("[data-loader='true']");
+        const renderedLoaders = document.querySelectorAll("[data-loader]");
 
         expect(renderedLoaders).toHaveLength(3);
 

@@ -63,9 +63,9 @@ exports[`Component: Panel -  renders with class 'panel-bottomless when prop remo
 />
 `;
 
-exports[`Component: Panel -  renders with class 'panel-dark-mode' when prop darkMode is true 1`] = `
+exports[`Component: Panel -  renders with class 'panel-dark' when prop darkMode is true 1`] = `
 <section
-  className="panel panel-default panel-dark-mode"
+  className="panel panel-default panel-dark"
 />
 `;
 

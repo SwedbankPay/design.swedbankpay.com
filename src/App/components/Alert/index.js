@@ -6,7 +6,9 @@ const Alert = ({ id, type, icon, close, text, children }) => (
         {icon ? <i className="material-icons alert-icon">{icon}</i> : null}{text ? "\n" : ""}
         {text ? <p>{text}</p> : null}{children ? "\n" : ""}
         {children ? <div className="alert-body">{children}</div> : null}{close ? "\n" : ""}
-        {close ? <i className="material-icons" data-alert-close="">close</i> : null}{"\n"}
+        {close ? <a href="#" data-alert-close="" onClick={e => e.preventDefault()}>{"\n\t\t"}
+            <i className="material-icons">close</i>{"\n\t"}
+        </a> : null}{"\n"}
     </div>
 );
 

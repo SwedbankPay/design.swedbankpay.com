@@ -102,8 +102,19 @@ pre {
         > [class*="col"] {
             padding-top: 0.5rem;
             padding-bottom: 0.5rem;
+            background: @gray-9;
+            border: 1px solid fade(@gray-8, 80%);
+        }
+
+        + .row {
+            margin-top: 1rem;
+        }
+    }
+
+    &.showcase-vertical-space {
+        .row {
             background: @gray-10;
-            border: 1px solid @gray-8;
+            height: 10rem;
         }
     }
 }

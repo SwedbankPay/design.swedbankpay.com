@@ -163,25 +163,31 @@ exports[`Documentation: Table DescriptionTable renders 1`] = `
       </thead>
       <tbody>
         <tr>
-          <td>
+          <th
+            scope="row"
+          >
             Name
-          </td>
+          </th>
           <td>
             John Doe
           </td>
         </tr>
         <tr>
-          <td>
+          <th
+            scope="row"
+          >
             Occupation
-          </td>
+          </th>
           <td>
             Unknown
           </td>
         </tr>
         <tr>
-          <td>
+          <th
+            scope="row"
+          >
             Skills
-          </td>
+          </th>
           <td>
             Unknown
           </td>

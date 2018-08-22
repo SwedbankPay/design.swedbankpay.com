@@ -1,9 +1,8 @@
 import React from "react";
-import { mount, shallow } from "enzyme";
+import { mount } from "enzyme";
 import "prismjs";
 
-import ComponentPreview from "./ComponentPreview";
-import { Attribute, PxScript } from "./ComponentPreview";
+import ComponentPreview from "./index";
 
 // const htmlEncodeString = str => String(str)
 //     .replace(/&/g, "&amp;")
@@ -12,8 +11,8 @@ import { Attribute, PxScript } from "./ComponentPreview";
 //     .replace(/"/g, "&quot;");
 
 describe("Utilities: ComponentPreview", () => {
-    const TestComponentH1 = () => (<h1>test1</h1>);
-    const TestComponentH2 = () => (<h2>test2</h2>);
+    const TestComponentH1 = () => <h1>test1</h1>;
+    const TestComponentH2 = () => <h2>test2</h2>;
     const TestComponentH1WithOuterTags = () => (
         <div>
             <h1>test1</h1>
@@ -137,91 +136,5 @@ describe("Utilities: ComponentPreview", () => {
     //     expect(wrapper).toMatchSnapshot();
     //     expect(wrapper.html()).toContain("update switchcase!");
     // });
-
-    describe("Attribute", () => {
-        it("is defined", () => {
-            expect(Attribute).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(
-                <Attribute name="test" value="testValue" />
-            );
-
-            expect(wrapper).toMatchSnapshot();
-            expect(wrapper.contains(<span className="token attr-name">test</span>)).toEqual(true);
-        });
-
-        it("renders data attribute", () => {
-            const wrapper = shallow(
-                <Attribute name="test" value="test" data={true} />
-            );
-
-            expect(wrapper).toMatchSnapshot();
-            expect(wrapper.html()).toContain("data");
-        });
-    });
-
-    describe("PxScript", () => {
-        it("is defined", () => {
-            expect(PxScript).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(
-                <PxScript component="test" func="init" />
-            );
-
-            expect(wrapper).toMatchSnapshot();
-            expect(wrapper.contains(<span>test</span>)).toEqual(true);
-            expect(wrapper.contains(<span className="token function">init</span>)).toEqual(true);
-        });
-
-        it("renders with subcomponents", () => {
-            const wrapper = shallow(
-                <PxScript component="test" func="init" subComponents={["subTest"]} />
-            );
-
-            expect(wrapper).toMatchSnapshot();
-            expect(wrapper.contains(<span>test</span>)).toEqual(true);
-            expect(wrapper.contains(<span className="token function">init</span>)).toEqual(true);
-            expect(wrapper.contains(<span>subTest<span className="token punctuation">.</span></span>)).toEqual(true);
-        });
-
-        it("renders with multiple subcomponents", () => {
-            const wrapper = shallow(
-                <PxScript component="test" func="init" subComponents={["subTest", "subTest2"]} />
-            );
-
-            expect(wrapper).toMatchSnapshot();
-            expect(wrapper.contains(<span>test</span>)).toEqual(true);
-            expect(wrapper.contains(<span className="token function">init</span>)).toEqual(true);
-            expect(wrapper.contains(<span>subTest<span className="token punctuation">.</span></span>)).toEqual(true);
-            expect(wrapper.contains(<span>subTest2<span className="token punctuation">.</span></span>)).toEqual(true);
-        });
-
-        it("renders with params", () => {
-            const wrapper = shallow(
-                <PxScript component="test" func="init" params={["param1"]} />
-            );
-
-            expect(wrapper).toMatchSnapshot();
-            expect(wrapper.contains(<span>test</span>)).toEqual(true);
-            expect(wrapper.contains(<span className="token function">init</span>)).toEqual(true);
-            expect(wrapper.contains(<span>param1</span>)).toEqual(true);
-        });
-
-        it("renders with multiple params", () => {
-            const wrapper = shallow(
-                <PxScript component="test" func="init" params={["param1", "param2"]} />
-            );
-
-            expect(wrapper).toMatchSnapshot();
-            expect(wrapper.contains(<span>test</span>)).toEqual(true);
-            expect(wrapper.contains(<span className="token function">init</span>)).toEqual(true);
-            expect(wrapper.contains(<span>param1<span className="token punctuation">, </span></span>)).toEqual(true);
-            expect(wrapper.contains(<span>param2</span>)).toEqual(true);
-        });
-    });
 });
 

@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.x.x] - 2018-0x-xx
+
+### Added
+
+- Added utility classes for flex layout.
+- Added section for alignment in the grid documentation.
+
+### Changed
+
+- Changed class `.panel-dark-mode` to `.panel-dark`.
+- Changed loader component to be visible by default, use `.d-none` when needed.
+- Changed modal close button to be wrapped by an anchor tag to help keyboard navigation.
+- Changed alert close button to be wrapped by an anchor tag to help keyboard navigation.
+- Slightly changed the documentation example and styling for desctiption-table.
+
 ## [0.8.1] - 2018-08-16
 
 ### Fixed
@@ -49,7 +64,7 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - Added well component.
-- Added a styling for using `text-muted` within a text-color modifyer class (i.e. `color-brand`).
+- Added a styling for using `.text-muted` within a text-color modifyer class (i.e. `.color-brand`).
 - Added section about breakpoints.
 - Added section about display classes.
 - Added table with supported browsers in browser-support section.
@@ -57,14 +72,14 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
-- Changed the name of the alert class `alert-error` to `alert-danger` to match the other components.
-- Changed alert component to `display: block` by default, no longer requiring class `in`. Close-buttons for the alert component now adds class `d-none` instead.
-- Changed modal component to use class `d-block` instead of class `in`. Open/close-buttons for the modal component now toggles class `d-block` instead.
+- Changed the name of the alert class `.alert-error` to `.alert-danger` to match the other components.
+- Changed alert component to `display: block` by default, no longer requiring class `.in`. Close-buttons for the alert component now adds class `.d-none` instead.
+- Changed modal component to use class `.d-block` instead of class `.in`. Open/close-buttons for the modal component now toggles class `.d-block` instead.
 - Optimized `px-script` code for rangeslider component. It no longer triggers eventlistener for chrome-related styling in other browsers.
 
 ### Removed
 
-- Removed class `fade` from modal for now.
+- Removed class `.fade` from modal for now.
 
 ### Fixed
 

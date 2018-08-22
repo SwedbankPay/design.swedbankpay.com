@@ -1,7 +1,9 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 
-import { setTitle } from "../../utils";
+const _setTitle = title => {
+    document.title = `${title} | PayEx DesignGuide`;
+};
 
 // TODO: overkill? [EH]
 const _generateTitle = path => path.match(/[^/]*$/)[0]
@@ -11,7 +13,7 @@ const _generateTitle = path => path.match(/[^/]*$/)[0]
 
 const DocHeading = ({ location }) => {
     const title = _generateTitle(location.pathname);
-    setTitle(title);
+    _setTitle(title);
 
     return <h1>{title}</h1>;
 };

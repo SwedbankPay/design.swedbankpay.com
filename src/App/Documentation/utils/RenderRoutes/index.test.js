@@ -2,7 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 import { MemoryRouter } from "react-router-dom";
 
-import RenderRoutes from "./RenderRoutes";
+import RenderRoutes from "./index";
 
 // TODO: Refactor and clean this up, write proper tests!! [EH]
 describe("Utilities: RenderRoutes", () => {

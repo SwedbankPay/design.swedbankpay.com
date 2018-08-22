@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classnames from "classnames";
 
 const MediaObject = ({ size, imgUrl, icon, heading, text, mediaRight }) => {
     const mediaHeading = () => {
@@ -13,8 +14,14 @@ const MediaObject = ({ size, imgUrl, icon, heading, text, mediaRight }) => {
         }
     };
 
+    const mediaClasses = classnames(
+        "media",
+        mediaRight ? "media-right" : null,
+        size ? `media-${size}` : null
+    );
+
     return (
-        <div className={`media${mediaRight ? " media-right" : ""}${size ? ` media-${size}` : ""}`}>
+        <div className={mediaClasses}>
             {(imgUrl || icon) ?
                 <div className="media-img">{"\n"}
                     {imgUrl ? <img src={imgUrl} /> : null}{imgUrl ? "\n" : null}

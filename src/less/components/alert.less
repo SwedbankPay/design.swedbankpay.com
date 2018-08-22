@@ -63,12 +63,16 @@
     }
 
     [data-alert-close] {
-        cursor: pointer;
         margin-left: auto;
         color: lighten(@text-color, 20%);
+        line-height: 1;
 
         &:hover {
             color: @text-color;
+        }
+
+        &:focus {
+            .tab-focus();
         }
     }
 }
