@@ -2,28 +2,21 @@
 
 exports[`Component: Loader -  prop size is marked as required 1`] = `
 <div
-  className="loader loader-undefined"
-  data-loader="true"
+  className="loader"
+  data-loader=""
 />
 `;
 
 exports[`Component: Loader -  renders a default loader with the specified size when prop size is provided 1`] = `
 <div
   className="loader loader-test"
-  data-loader="true"
-/>
-`;
-
-exports[`Component: Loader -  renders a loader with the specified size and class in when prop size and visible is provided 1`] = `
-<div
-  className="loader loader-test in"
-  data-loader="true"
+  data-loader=""
 />
 `;
 
 exports[`Component: Loader -  renders a muted loader with the specified size when prop size and muted is provided 1`] = `
 <div
   className="loader loader-test loader-muted"
-  data-loader="true"
+  data-loader=""
 />
 `;

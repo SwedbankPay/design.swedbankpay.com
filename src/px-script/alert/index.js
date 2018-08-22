@@ -20,7 +20,8 @@ const alert = (() => {
                 const alert = document.getElementById(dataVal);
 
                 if (alert) {
-                    btn.addEventListener("click", () => {
+                    btn.addEventListener("click", e => {
+                        e.preventDefault();
                         _hideAlert(alert);
                     });
                 } else {

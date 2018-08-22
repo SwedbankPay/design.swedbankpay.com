@@ -134,12 +134,124 @@ const AutoLayoutColumns = () => (
     </>
 );
 
+const Alignment = () => (
+    <>
+        <h2 id="alignment">Alignment</h2>
+        <p>Use flexbox alignment utilities to vertically and horizontally align columns.</p>
+        <h3>Vertical alignment</h3>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+            <div className="showcase-grid showcase-vertical-space">
+                <div className="container">
+                    <div className="row align-items-start">
+                        <div className="col">
+                        1 of 3
+                        </div>
+                        <div className="col">
+                        2 of 3
+                        </div>
+                        <div className="col">
+                        3 of 3
+                        </div>
+                    </div>
+                    <div className="row align-items-center">
+                        <div className="col">
+                        1 of 3
+                        </div>
+                        <div className="col">
+                        2 of 3
+                        </div>
+                        <div className="col">
+                        3 of 3
+                        </div>
+                    </div>
+                    <div className="row align-items-end">
+                        <div className="col">
+                        1 of 3
+                        </div>
+                        <div className="col">
+                        2 of 3
+                        </div>
+                        <div className="col">
+                        3 of 3
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ComponentPreview>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+            <div className="showcase-grid showcase-vertical-space">
+                <div className="container">
+                    <div className="row">
+                        <div className="col align-self-start">
+                            1 of 3
+                        </div>
+                        <div className="col align-self-center">
+                            1 of 3
+                        </div>
+                        <div className="col align-self-end">
+                            1 of 3
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ComponentPreview>
+        <h3>Horizontal alignment</h3>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+            <div className="showcase-grid">
+                <div className="container">
+                    <div className="row justify-content-start">
+                        <div className="col-4">
+                            One of two columns
+                        </div>
+                        <div className="col-4">
+                            One of two columns
+                        </div>
+                    </div>
+                    <div className="row justify-content-center">
+                        <div className="col-4">
+                            One of two columns
+                        </div>
+                        <div className="col-4">
+                            One of two columns
+                        </div>
+                    </div>
+                    <div className="row justify-content-end">
+                        <div className="col-4">
+                            One of two columns
+                        </div>
+                        <div className="col-4">
+                            One of two columns
+                        </div>
+                    </div>
+                    <div className="row justify-content-around">
+                        <div className="col-4">
+                            One of two columns
+                        </div>
+                        <div className="col-4">
+                            One of two columns
+                        </div>
+                    </div>
+                    <div className="row justify-content-between">
+                        <div className="col-4">
+                            One of two columns
+                        </div>
+                        <div className="col-4">
+                            One of two columns
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ComponentPreview>
+    </>
+);
+
 const GridText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
         <p className="lead">Use our grid system...</p>
         <HowItWorks />
         <GridOptions />
         <AutoLayoutColumns />
+        <Alignment />
     </div>
 );
 
@@ -157,4 +269,4 @@ const Grid = () => {
 export default Grid;
 
 /* for testing */
-export { HowItWorks, GridOptions, AutoLayoutColumns, GridText };
+export { HowItWorks, GridOptions, AutoLayoutColumns, Alignment, GridText };

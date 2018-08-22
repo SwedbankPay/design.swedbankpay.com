@@ -1,10 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classnames from "classnames";
 
 const Button = ({ label, id, name, value, href, icon, loading, type, disabled, btnType, fullWidth, loader, pullRight, input, outline, active, size }) => {
+    const btnClasses = classnames(
+        "btn",
+        `btn-${outline ? "outline-" : ""}${type}`,
+        size ? `btn-${size}` : null,
+        loading ? "loading" : null,
+        fullWidth ? "btn-block" : null,
+        pullRight ? "pull-right" : null,
+        active ? "active" : null
+    );
+
     if (href) return (
         <a
-            className={`btn btn-${outline ? "outline-" : ""}${type}${size ? ` btn-${size}` : ""}${loading ? " loading" : ""}${fullWidth ? " btn-block" : ""}${pullRight ? " pull-right" : ""}${active ? " active" : "" }`}
+            className={btnClasses}
             href={href}
             id={id}
             name={name}
@@ -18,7 +29,7 @@ const Button = ({ label, id, name, value, href, icon, loading, type, disabled, b
 
     if (input) return (
         <input
-            className={`btn btn-${outline ? "outline-" : ""}${type}${size ? ` btn-${size}` : ""}${loading ? " loading" : ""}${fullWidth ? " btn-block" : ""}${pullRight ? " pull-right" : ""}${active ? " active" : "" }`}
+            className={btnClasses}
             type={btnType || "button"}
             id={id}
             name={name}
@@ -30,7 +41,7 @@ const Button = ({ label, id, name, value, href, icon, loading, type, disabled, b
 
     return (
         <button
-            className={`btn btn-${outline ? "outline-" : ""}${type}${size ? ` btn-${size}` : ""}${loading ? " loading" : ""}${fullWidth ? " btn-block" : ""}${pullRight ? " pull-right" : ""}${active ? " active" : "" }`}
+            className={btnClasses}
             type={btnType || "button"}
             id={id}
             name={name}

@@ -33,10 +33,10 @@ const PanelHeaders = () => (
     </>
 );
 
-const DarkMode = () => (
+const PanelDark = () => (
     <>
         <h2 id="panel-dark-mode">Panel dark mode</h2>
-        <p>Dark body with <code className="token property">.panel-dark-mode</code>...</p>
+        <p>Dark body with <code className="token property">.panel-dark</code>...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <PanelComponent
                 type="brand"
@@ -46,7 +46,7 @@ const DarkMode = () => (
                 footerBtnText="Footer button"
                 darkMode
             >
-                <p className="lead">This is a panel with dark mode.</p>
+                <p className="lead">This is a dark panel.</p>
                 <p>Your main panel content is put here.</p>
                 <p>Some more content over here.</p>
                 <p>And one more line, just to be safe.</p>
@@ -81,7 +81,7 @@ const PanelText = () => (
         <p className="lead">Panels...</p>
         <Overview />
         <PanelHeaders />
-        <DarkMode />
+        <PanelDark />
         <PanelMuted />
     </div>
 );
@@ -105,4 +105,4 @@ class Panel extends Component {
 export default Panel;
 
 /* for testing */
-export { Overview, PanelHeaders, DarkMode, PanelMuted, PanelText };
+export { Overview, PanelHeaders, PanelDark, PanelMuted, PanelText };

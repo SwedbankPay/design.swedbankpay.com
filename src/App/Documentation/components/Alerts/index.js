@@ -40,7 +40,7 @@ const ClosingTheAlert = () => (
         <h2 id="closing-the-alert">Closing the alert</h2>
         <p>
             To add a close-button, add the following code inside your alert-element:<br/>
-            <PrismCode className="language-html">{"<i class=\"material-icons\" data-alert-close>close</i>"}</PrismCode>
+            <PrismCode className="language-html">{"<a href=\"#\" data-alert-close><i class=\"material-icons\">close</i></a>"}</PrismCode>
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <AlertComponent type="default" text="This is a default alert with an icon!" close icon="info_outline" />{"\n\n"}

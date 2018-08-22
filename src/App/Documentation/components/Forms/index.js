@@ -219,7 +219,8 @@ const Checkboxes = () => (
         <p>Checkboxes...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <Checkbox label="Bread" id="checkbox-example-1" />
-            <Checkbox label="Milk" id="checkbox-example-2" checked />
+            <Checkbox label="Not bread. I'm not really fond of it. What I would really like, however, is one single piece of cracker with some nutella on it. Perhaps this could be the second checkbox. These thoughts are written here simply to show you how the checkboxes align themselves when label text is fairly long." id="checkbox-example-2" />
+            <Checkbox label="Milk" id="checkbox-example-3" checked />
         </ComponentPreview>
     </>
 );
@@ -230,7 +231,8 @@ const DisabledCheckboxes = () => (
         <p>Disabled checkboxes...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <Checkbox label="Bread" id="checkbox-disabled-example-1" disabled />
-            <Checkbox label="Milk" id="checkbox-disabled-example-2" disabled checked />
+            <Checkbox label="Not bread. I'm not really fond of it. What I would really like, however, is one single piece of cracker with some nutella on it. Perhaps this could be the second checkbox. These thoughts are written here simply to show you how the checkboxes align themselves when label text is fairly long." id="checkbox-disabled-example-2" disabled />
+            <Checkbox label="Milk" id="checkbox-disabled-example-3" disabled checked />
         </ComponentPreview>
     </>
 );
@@ -241,7 +243,8 @@ const RadioButtons = () => (
         <p>Radio buttons...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <Radio label="Hamburgers" id="radio-example-1" name="radio-example" />
-            <Radio label="Pizza" id="radio-example-2" name="radio-example" checked />
+            <Radio label="Not the one above because I'm not really fond of hamburgers. What I would really like, however, is a nice piece of steak. Perhaps that could be the second option. These thoughts are written here simply to show you how radio buttons align themselves when label text is fairly long." id="radio-example-2" name="radio-example" />
+            <Radio label="Pizza" id="radio-example-3" name="radio-example" checked />
         </ComponentPreview>
     </>
 );
@@ -252,7 +255,8 @@ const DisabledRadioButtons = () => (
         <p>Disabled radio buttons...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <Radio label="Hamburgers" id="radio-disabled-example-1" name="radio-disabled-example" disabled />
-            <Radio label="Pizza" id="radio-disabled-example-2" name="radio-disabled-example" disabled checked />
+            <Radio label="Not the one above because I'm not really fond of hamburgers. What I would really like, however, is a nice piece of steak. Perhaps that could be the second option. These thoughts are written here simply to show you how radio buttons align themselves when label text is fairly long." id="radio-disabled-example-2" name="radio-disabled-example" disabled />
+            <Radio label="Pizza" id="radio-disabled-example-3" name="radio-disabled-example" disabled checked />
         </ComponentPreview>
     </>
 );
@@ -296,6 +300,16 @@ const RangeSlider = () => (
     </>
 );
 
+const DisabledRangeSlider = () => (
+    <>
+        <h2 id="disabled-rangeslider">Disabled rangeslider</h2>
+        <p>Disabled rangeslider...</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <Rangeslider min={0} max={200} step={1} value={100} valueLabel valueLabelPrefix="$" valueLabelPostfix="%" disabled />
+        </ComponentPreview>
+    </>
+);
+
 const FormsText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
         <p className="lead">Forms...</p>
@@ -311,6 +325,7 @@ const FormsText = () => (
         <Toggleboxes />
         <DisabledToggleboxes />
         <RangeSlider />
+        <DisabledRangeSlider />
     </div>
 );
 
@@ -335,4 +350,4 @@ class Forms extends Component {
 export default Forms;
 
 /* for testing */
-export { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, Checkboxes, DisabledCheckboxes, RadioButtons, DisabledRadioButtons, Toggleboxes, DisabledToggleboxes, RangeSlider, FormsText };
+export { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, Checkboxes, DisabledCheckboxes, RadioButtons, DisabledRadioButtons, Toggleboxes, DisabledToggleboxes, RangeSlider, DisabledRangeSlider, FormsText };

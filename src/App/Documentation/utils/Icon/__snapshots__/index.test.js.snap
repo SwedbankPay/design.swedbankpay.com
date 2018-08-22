@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Utilities: Icon renders correct icon 1`] = `
+<i
+  className="material-icons"
+>
+  test
+</i>
+`;

@@ -20,8 +20,12 @@ exports[`Documentation: Forms Checkboxes renders 1`] = `
       label="Bread"
     />
     <Checkbox
-      checked={true}
       id="checkbox-example-2"
+      label="Not bread. I'm not really fond of it. What I would really like, however, is one single piece of cracker with some nutella on it. Perhaps this could be the second checkbox. These thoughts are written here simply to show you how the checkboxes align themselves when label text is fairly long."
+    />
+    <Checkbox
+      checked={true}
+      id="checkbox-example-3"
       label="Milk"
     />
   </ComponentPreview>
@@ -49,9 +53,14 @@ exports[`Documentation: Forms DisabledCheckboxes renders 1`] = `
       label="Bread"
     />
     <Checkbox
-      checked={true}
       disabled={true}
       id="checkbox-disabled-example-2"
+      label="Not bread. I'm not really fond of it. What I would really like, however, is one single piece of cracker with some nutella on it. Perhaps this could be the second checkbox. These thoughts are written here simply to show you how the checkboxes align themselves when label text is fairly long."
+    />
+    <Checkbox
+      checked={true}
+      disabled={true}
+      id="checkbox-disabled-example-3"
       label="Milk"
     />
   </ComponentPreview>
@@ -80,11 +89,46 @@ exports[`Documentation: Forms DisabledRadioButtons renders 1`] = `
       name="radio-disabled-example"
     />
     <Radio
-      checked={true}
       disabled={true}
       id="radio-disabled-example-2"
+      label="Not the one above because I'm not really fond of hamburgers. What I would really like, however, is a nice piece of steak. Perhaps that could be the second option. These thoughts are written here simply to show you how radio buttons align themselves when label text is fairly long."
+      name="radio-disabled-example"
+    />
+    <Radio
+      checked={true}
+      disabled={true}
+      id="radio-disabled-example-3"
       label="Pizza"
       name="radio-disabled-example"
+    />
+  </ComponentPreview>
+</React.Fragment>
+`;
+
+exports[`Documentation: Forms DisabledRangeSlider renders 1`] = `
+<React.Fragment>
+  <h2
+    id="disabled-rangeslider"
+  >
+    Disabled rangeslider
+  </h2>
+  <p>
+    Disabled rangeslider...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Rangeslider
+      disabled={true}
+      max={200}
+      min={0}
+      step={1}
+      value={100}
+      valueLabel={true}
+      valueLabelPostfix="%"
+      valueLabelPrefix="$"
     />
   </ComponentPreview>
 </React.Fragment>
@@ -230,6 +274,7 @@ exports[`Documentation: Forms FormsText renders 1`] = `
   <Toggleboxes />
   <DisabledToggleboxes />
   <RangeSlider />
+  <DisabledRangeSlider />
 </div>
 `;
 
@@ -316,8 +361,13 @@ exports[`Documentation: Forms RadioButtons renders 1`] = `
       name="radio-example"
     />
     <Radio
-      checked={true}
       id="radio-example-2"
+      label="Not the one above because I'm not really fond of hamburgers. What I would really like, however, is a nice piece of steak. Perhaps that could be the second option. These thoughts are written here simply to show you how radio buttons align themselves when label text is fairly long."
+      name="radio-example"
+    />
+    <Radio
+      checked={true}
+      id="radio-example-3"
       label="Pizza"
       name="radio-example"
     />

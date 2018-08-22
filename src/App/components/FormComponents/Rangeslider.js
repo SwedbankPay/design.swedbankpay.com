@@ -1,14 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Rangeslider = ({ name, min, max, step, color, value, valueLabel, valueLabelPrefix, valueLabelPostfix, valueLabelPosition }) => {
+const Rangeslider = ({ name, min, max, step, color, value, disabled, valueLabel, valueLabelPrefix, valueLabelPostfix, valueLabelPosition }) => {
     const attrs = {
         type: "range",
-        name: name,
-        min: min,
-        max: max,
-        step: step,
-        defaultValue: value
+        name,
+        min,
+        max,
+        step,
+        defaultValue: value,
+        disabled
     };
 
     const ValueLabel = () => (
@@ -36,6 +37,7 @@ Rangeslider.propTypes = {
     step: PropTypes.number,
     color: PropTypes.oneOf(["brand", "neutral", "default"]),
     value: PropTypes.number,
+    disabled: PropTypes.bool,
     valueLabel: PropTypes.bool,
     valueLabelPrefix: PropTypes.string,
     valueLabelPostfix: PropTypes.string,

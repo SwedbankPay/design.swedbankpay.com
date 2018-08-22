@@ -2,7 +2,7 @@ const SELECTORS = {
     MODAL: ".modal",
     CLOSE: "[data-modal-close]",
     OPEN: "[data-modal-open]",
-    CLOSEICON: "i.modal-close"
+    CLOSEICON: ".modal-close"
 };
 
 const _openModal = modal => {
@@ -32,7 +32,8 @@ const modal = (() => {
             }
 
             if (closeIcon) {
-                closeIcon.addEventListener("click", () => {
+                closeIcon.addEventListener("click", e => {
+                    e.preventDefault();
                     _closeModal(modal);
                 });
             }

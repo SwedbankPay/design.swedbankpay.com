@@ -101,6 +101,7 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "Alignment": [Function],
                   "AutoLayoutColumns": [Function],
                   "GridOptions": [Function],
                   "GridText": [Function],
@@ -260,6 +261,7 @@ exports[`Documentation: index renders 1`] = `
                   "Checkboxes": [Function],
                   "DisabledCheckboxes": [Function],
                   "DisabledRadioButtons": [Function],
+                  "DisabledRangeSlider": [Function],
                   "DisabledToggleboxes": [Function],
                   "FormGrid": [Function],
                   "FormsText": [Function],
@@ -336,8 +338,8 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
-                  "DarkMode": [Function],
                   "Overview": [Function],
+                  "PanelDark": [Function],
                   "PanelHeaders": [Function],
                   "PanelMuted": [Function],
                   "PanelText": [Function],

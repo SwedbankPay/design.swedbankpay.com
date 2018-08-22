@@ -1,0 +1,231 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Utilities: PxScript renders 1`] = `
+<code>
+  <span>
+    px
+  </span>
+  <span
+    className="token punctuation"
+  >
+    .
+  </span>
+  <span>
+    test
+  </span>
+  <span
+    className="token punctuation"
+  >
+    .
+  </span>
+  <span
+    className="token function"
+  >
+    init
+  </span>
+  <span
+    className="token punctuation"
+  >
+    (
+  </span>
+  <span
+    className="token punctuation"
+  >
+    );
+  </span>
+</code>
+`;
+
+exports[`Utilities: PxScript renders with multiple params 1`] = `
+<code>
+  <span>
+    px
+  </span>
+  <span
+    className="token punctuation"
+  >
+    .
+  </span>
+  <span>
+    test
+  </span>
+  <span
+    className="token punctuation"
+  >
+    .
+  </span>
+  <span
+    className="token function"
+  >
+    init
+  </span>
+  <span
+    className="token punctuation"
+  >
+    (
+  </span>
+  <span
+    key="0"
+  >
+    param1
+    <span
+      className="token punctuation"
+    >
+      , 
+    </span>
+  </span>
+  <span
+    key="1"
+  >
+    param2
+  </span>
+  <span
+    className="token punctuation"
+  >
+    );
+  </span>
+</code>
+`;
+
+exports[`Utilities: PxScript renders with multiple subcomponents 1`] = `
+<code>
+  <span>
+    px
+  </span>
+  <span
+    className="token punctuation"
+  >
+    .
+  </span>
+  <span>
+    test
+  </span>
+  <span
+    className="token punctuation"
+  >
+    .
+  </span>
+  <span
+    key="0"
+  >
+    subTest
+    <span
+      className="token punctuation"
+    >
+      .
+    </span>
+  </span>
+  <span
+    key="1"
+  >
+    subTest2
+    <span
+      className="token punctuation"
+    >
+      .
+    </span>
+  </span>
+  <span
+    className="token function"
+  >
+    init
+  </span>
+  <span
+    className="token punctuation"
+  >
+    (
+  </span>
+  <span
+    className="token punctuation"
+  >
+    );
+  </span>
+</code>
+`;
+
+exports[`Utilities: PxScript renders with params 1`] = `
+<code>
+  <span>
+    px
+  </span>
+  <span
+    className="token punctuation"
+  >
+    .
+  </span>
+  <span>
+    test
+  </span>
+  <span
+    className="token punctuation"
+  >
+    .
+  </span>
+  <span
+    className="token function"
+  >
+    init
+  </span>
+  <span
+    className="token punctuation"
+  >
+    (
+  </span>
+  <span
+    key="0"
+  >
+    param1
+  </span>
+  <span
+    className="token punctuation"
+  >
+    );
+  </span>
+</code>
+`;
+
+exports[`Utilities: PxScript renders with subcomponents 1`] = `
+<code>
+  <span>
+    px
+  </span>
+  <span
+    className="token punctuation"
+  >
+    .
+  </span>
+  <span>
+    test
+  </span>
+  <span
+    className="token punctuation"
+  >
+    .
+  </span>
+  <span
+    key="0"
+  >
+    subTest
+    <span
+      className="token punctuation"
+    >
+      .
+    </span>
+  </span>
+  <span
+    className="token function"
+  >
+    init
+  </span>
+  <span
+    className="token punctuation"
+  >
+    (
+  </span>
+  <span
+    className="token punctuation"
+  >
+    );
+  </span>
+</code>
+`;
