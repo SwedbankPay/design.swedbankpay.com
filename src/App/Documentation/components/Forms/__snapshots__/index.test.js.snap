@@ -105,6 +105,35 @@ exports[`Documentation: Forms DisabledRadioButtons renders 1`] = `
 </React.Fragment>
 `;
 
+exports[`Documentation: Forms DisabledRangeSlider renders 1`] = `
+<React.Fragment>
+  <h2
+    id="disabled-rangeslider"
+  >
+    Disabled rangeslider
+  </h2>
+  <p>
+    Disabled rangeslider...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Rangeslider
+      disabled={true}
+      max={200}
+      min={0}
+      step={1}
+      value={100}
+      valueLabel={true}
+      valueLabelPostfix="%"
+      valueLabelPrefix="$"
+    />
+  </ComponentPreview>
+</React.Fragment>
+`;
+
 exports[`Documentation: Forms DisabledToggleboxes renders 1`] = `
 <React.Fragment>
   <h2
@@ -245,6 +274,7 @@ exports[`Documentation: Forms FormsText renders 1`] = `
   <Toggleboxes />
   <DisabledToggleboxes />
   <RangeSlider />
+  <DisabledRangeSlider />
 </div>
 `;
 

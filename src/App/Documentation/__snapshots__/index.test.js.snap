@@ -261,6 +261,7 @@ exports[`Documentation: index renders 1`] = `
                   "Checkboxes": [Function],
                   "DisabledCheckboxes": [Function],
                   "DisabledRadioButtons": [Function],
+                  "DisabledRangeSlider": [Function],
                   "DisabledToggleboxes": [Function],
                   "FormGrid": [Function],
                   "FormsText": [Function],

@@ -75,6 +75,60 @@ fieldset {
                 cursor: not-allowed;
             }
         }
+
+        .rangeslider {
+            input[type=range] {
+                cursor: not-allowed;
+
+                &::-webkit-slider-thumb {
+                    .slider-thumb(@input-checked-bg-disabled, @input-bg-disabled);
+                }
+
+                &::-moz-range-thumb {
+                    .slider-thumb(@input-checked-bg-disabled, @input-bg-disabled);
+                }
+
+                &::-ms-thumb {
+                    .slider-thumb(@input-checked-bg-disabled, @input-bg-disabled);
+                }
+
+                &::-webkit-slider-runnable-track {
+                    .slider-range(linear-gradient(90deg, @input-checked-bg-disabled, @input-checked-bg-disabled) 0 100% no-repeat content-box, @input-checked-bg-disabled);
+                }
+
+                /* FIREFOX */
+                &::-moz-range-track {
+                    .slider-range(#f9fafa, @input-checked-bg-disabled);
+                }
+
+                /* INTERNET EXPLORER & EDGE */
+                &::-ms-track {
+                    .slider-range(transparent, @input-checked-bg-disabled);
+                }
+
+                &::-moz-range-progress {
+                    background: @input-checked-bg-disabled;
+                }
+
+                &::-ms-fill-upper {
+                    background: #f9fafa;
+                    border: 1px solid @input-checked-bg-disabled;
+                }
+
+                &::-ms-fill-lower {
+                    background: @input-checked-bg-disabled;
+                    border: 1px solid @input-checked-bg-disabled;
+                }
+
+                + .value-label {
+                    background: @input-checked-bg-disabled;
+
+                    &:before {
+                        border-right-color: @input-checked-bg-disabled !important;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -428,7 +482,7 @@ legend {
     border: 1px solid @border;
 }
 
-.slider-thumb(@color) {
+.slider-thumb(@color, @bg) {
     box-sizing: border-box;
     width: @thumb-size;
     height: @thumb-size;
@@ -452,15 +506,15 @@ legend {
 
     input[type="range"] {
         &::-webkit-slider-thumb {
-            .slider-thumb(@color);
+            .slider-thumb(@color, @white);
         }
 
         &::-moz-range-thumb {
-            .slider-thumb(@color);
+            .slider-thumb(@color, @white);
         }
 
         &::-ms-thumb {
-            .slider-thumb(@color);
+            .slider-thumb(@color, @white);
         }
 
         &::-webkit-slider-runnable-track {
@@ -489,6 +543,58 @@ legend {
         &::-ms-fill-lower {
             background: @color;
             border: 1px solid @color;
+        }
+
+        &[disabled] {
+            cursor: not-allowed;
+
+            &::-webkit-slider-thumb {
+                .slider-thumb(@input-checked-bg-disabled, @input-bg-disabled);
+            }
+
+            &::-moz-range-thumb {
+                .slider-thumb(@input-checked-bg-disabled, @input-bg-disabled);
+            }
+
+            &::-ms-thumb {
+                .slider-thumb(@input-checked-bg-disabled, @input-bg-disabled);
+            }
+
+            &::-webkit-slider-runnable-track {
+                .slider-range(linear-gradient(90deg, @input-checked-bg-disabled, @input-checked-bg-disabled) 0 100% no-repeat content-box, @input-checked-bg-disabled);
+            }
+
+            /* FIREFOX */
+            &::-moz-range-track {
+                .slider-range(#f9fafa, @input-checked-bg-disabled);
+            }
+
+            /* INTERNET EXPLORER & EDGE */
+            &::-ms-track {
+                .slider-range(transparent, @input-checked-bg-disabled);
+            }
+
+            &::-moz-range-progress {
+                background: @input-checked-bg-disabled;
+            }
+
+            &::-ms-fill-upper {
+                background: #f9fafa;
+                border: 1px solid @input-checked-bg-disabled;
+            }
+
+            &::-ms-fill-lower {
+                background: @input-checked-bg-disabled;
+                border: 1px solid @input-checked-bg-disabled;
+            }
+
+            + .value-label {
+                background: @input-checked-bg-disabled;
+
+                &:before {
+                    border-right-color: @input-checked-bg-disabled !important;
+                }
+            }
         }
     }
 }

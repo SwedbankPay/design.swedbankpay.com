@@ -300,6 +300,16 @@ const RangeSlider = () => (
     </>
 );
 
+const DisabledRangeSlider = () => (
+    <>
+        <h2 id="disabled-rangeslider">Disabled rangeslider</h2>
+        <p>Disabled rangeslider...</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <Rangeslider min={0} max={200} step={1} value={100} valueLabel valueLabelPrefix="$" valueLabelPostfix="%" disabled />
+        </ComponentPreview>
+    </>
+);
+
 const FormsText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
         <p className="lead">Forms...</p>
@@ -315,6 +325,7 @@ const FormsText = () => (
         <Toggleboxes />
         <DisabledToggleboxes />
         <RangeSlider />
+        <DisabledRangeSlider />
     </div>
 );
 
@@ -339,4 +350,4 @@ class Forms extends Component {
 export default Forms;
 
 /* for testing */
-export { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, Checkboxes, DisabledCheckboxes, RadioButtons, DisabledRadioButtons, Toggleboxes, DisabledToggleboxes, RangeSlider, FormsText };
+export { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, Checkboxes, DisabledCheckboxes, RadioButtons, DisabledRadioButtons, Toggleboxes, DisabledToggleboxes, RangeSlider, DisabledRangeSlider, FormsText };

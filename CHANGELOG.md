@@ -8,14 +8,20 @@ All notable changes to this project will be documented in this file.
 
 - Added utility classes for flex layout.
 - Added section for alignment in the grid documentation.
+- Added styling for disabled rangeslider.
 
 ### Changed
 
 - Changed class `.panel-dark-mode` to `.panel-dark`.
-- Changed loader component to be visible by default, use `.d-none` when needed.
+- Changed loader component to be visible by default (class `.in` no longer required), use `.d-none` when needed.
 - Changed modal close button to be wrapped by an anchor tag to help keyboard navigation.
 - Changed alert close button to be wrapped by an anchor tag to help keyboard navigation.
 - Slightly changed the documentation example and styling for desctiption-table.
+
+### Fixed
+
+- Fixed alignment for checkboxes and radio buttons when label extends to multiple lines.
+- Fixed disabled styling not being applied for some form components within a disabled fieldset.
 
 ## [0.8.1] - 2018-08-16
 
