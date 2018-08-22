@@ -40,38 +40,38 @@ fieldset {
         }
 
         .radio input[type=radio] {
-            &:after {
+            + label:before {
                 background-color: @input-bg-disabled;
                 border-color: @input-checked-bg-disabled;
             }
 
-            &:checked:after {
+            &:checked + label:before {
                 background-color: @input-checked-bg-disabled;
             }
 
             + label,
-            &:after,
-            &:checked:after {
+            + label:before,
+            &:checked + label:before {
                 cursor: not-allowed;
             }
         }
 
         .togglebox input[type=checkbox] {
-            &:before,
-            &:after {
+            + label:before,
+            + label:after {
                 background-color: @input-bg-disabled;
                 border-color: @input-checked-bg-disabled;
             }
 
-            &:checked:before {
+            &:checked + label:before {
                 background-color: @input-checked-bg-disabled;
             }
 
             + label,
-            &:before,
-            &:after,
-            &:checked:before,
-            &:checked:after {
+            + label:before,
+            + label:after,
+            &:checked + label:before,
+            &:checked + label:after {
                 cursor: not-allowed;
             }
         }
