@@ -21,18 +21,20 @@ fieldset {
 
     &:disabled {
         .checkbox input[type=checkbox] {
-            &:after {
+            + label:before {
                 background-color: @input-bg-disabled;
                 border-color: @input-checked-bg-disabled;
+                cursor: not-allowed;
             }
 
-            &:checked:after {
+            &:checked + label:before {
                 background-color: @input-checked-bg-disabled;
             }
 
             + label,
+            + label:before,
             &:after,
-            &:checked:after {
+            &:checked + label:before {
                 cursor: not-allowed;
             }
         }
@@ -212,7 +214,7 @@ legend {
     align-items: center;
 
     &:not(:last-child) {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.6rem;
     }
 
     label {
@@ -223,17 +225,15 @@ legend {
     }
 
     input[type=checkbox] {
-        position: relative;
-        height: @checkbox-height;
-        width: @checkbox-width;
-        margin-right: 0.5rem;
+        margin-right: 1rem;
+        opacity: 0;
 
         + label:before {
             content: "";
             display: block;
             position: absolute;
             visibility: visible;
-            left: -30px;
+            left: -28px;
             height: @checkbox-height;
             width: @checkbox-width;
             background-color: @white;
@@ -246,6 +246,10 @@ legend {
             background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAJCAYAAAALpr0TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNWWFMmUAAACOSURBVChTfc+xDYJAFIdxCktLCwoLBmAESwoGMLF1BFomYAjHcABdxcrCwoKSmOP7LncJRuI/+cHLuwc8ihDCPzvU1muH2QY3jGjWBrILzBNVbu5RplodzIQD4qcbvHG1gRYOmDPiw15c+AXTw53MgDikXBxhPunu2/2Zn0HdYR7YYnn2NegKJ1SLXhKKGZDpJWzFmbqTAAAAAElFTkSuQmCC);
             background-position: 50% 50%;
             background-repeat: no-repeat;
+        }
+
+        &:focus + label:before {
+            .tab-focus();
         }
 
         &[disabled] {
@@ -275,7 +279,7 @@ legend {
     align-items: center;
 
     &:not(:last-child) {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.6rem;
     }
 
     label {
@@ -286,7 +290,7 @@ legend {
     }
 
     input[type=radio] {
-        margin-right: 0.6rem;
+        margin-right: 1rem;
         opacity: 0;
 
         + label:before {
