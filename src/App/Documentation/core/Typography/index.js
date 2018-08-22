@@ -95,7 +95,7 @@ const Inline = () => (
 const TextUtilities = () => (
     <>
         <h2 id="text-utilities">Text utilities</h2>
-        <p>Change text alignment, transform, style, weight, and color with our <Link to="/docs/utilities/text">text utilities</Link> <b>(NOT YET IMPLEMENTED)</b> and <Link to="/docs/utilities/color">color utilities</Link> <b>(NOT YET IMPLEMENTED)</b>.</p>
+        <p>Change text color with our <Link to="/docs/utilities/colors">color utilities</Link>.</p>
     </>
 );
 
