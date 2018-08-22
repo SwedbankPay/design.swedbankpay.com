@@ -220,15 +220,15 @@ const DescriptionTable = () => (
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Name</td>
+                        <th scope="row">Name</th>
                         <td>John Doe</td>
                     </tr>
                     <tr>
-                        <td>Occupation</td>
+                        <th scope="row">Occupation</th>
                         <td>Unknown</td>
                     </tr>
                     <tr>
-                        <td>Skills</td>
+                        <th scope="row">Skills</th>
                         <td>Unknown</td>
                     </tr>
                 </tbody>
