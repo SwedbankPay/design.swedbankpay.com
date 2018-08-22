@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file.
 
 - Changed class `.panel-dark-mode` to `.panel-dark`.
 - Changed loader component to be visible by default, use `.d-none` when needed.
+- Changed modal close button to be wrapped by an anchor tag to help keyboard navigation.
 
 ## [0.8.1] - 2018-08-16
 

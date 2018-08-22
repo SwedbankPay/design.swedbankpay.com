@@ -16,11 +16,21 @@ exports[`Component: Modal -  prop footerAlignment is an enum requires value 'cen
       >
         
 
-        <i
-          className="material-icons modal-close"
+        <a
+          className="modal-close"
+          href="#"
+          onClick={[Function]}
         >
-          close
-        </i>
+          
+				
+          <i
+            className="material-icons"
+          >
+            close
+          </i>
+          
+			
+        </a>
         <div
           className="modal-body"
         />
@@ -46,11 +56,21 @@ exports[`Component: Modal -  prop size is is an enum which requires value 'small
       >
         
 
-        <i
-          className="material-icons modal-close"
+        <a
+          className="modal-close"
+          href="#"
+          onClick={[Function]}
         >
-          close
-        </i>
+          
+				
+          <i
+            className="material-icons"
+          >
+            close
+          </i>
+          
+			
+        </a>
         <div
           className="modal-body"
         />
@@ -76,11 +96,21 @@ exports[`Component: Modal -  prop size is marked as required 1`] = `
       >
         
 
-        <i
-          className="material-icons modal-close"
+        <a
+          className="modal-close"
+          href="#"
+          onClick={[Function]}
         >
-          close
-        </i>
+          
+				
+          <i
+            className="material-icons"
+          >
+            close
+          </i>
+          
+			
+        </a>
         <div
           className="modal-body"
         />
@@ -106,11 +136,21 @@ exports[`Component: Modal -  prop type is is an enum which requires value 'brand
       >
         
 
-        <i
-          className="material-icons modal-close"
+        <a
+          className="modal-close"
+          href="#"
+          onClick={[Function]}
         >
-          close
-        </i>
+          
+				
+          <i
+            className="material-icons"
+          >
+            close
+          </i>
+          
+			
+        </a>
         <div
           className="modal-body"
         />
@@ -136,11 +176,21 @@ exports[`Component: Modal -  prop type is marked as required 1`] = `
       >
         
 
-        <i
-          className="material-icons modal-close"
+        <a
+          className="modal-close"
+          href="#"
+          onClick={[Function]}
         >
-          close
-        </i>
+          
+				
+          <i
+            className="material-icons"
+          >
+            close
+          </i>
+          
+			
+        </a>
         <div
           className="modal-body"
         />
@@ -166,11 +216,21 @@ exports[`Component: Modal -  renders 1`] = `
       >
         
 
-        <i
-          className="material-icons modal-close"
+        <a
+          className="modal-close"
+          href="#"
+          onClick={[Function]}
         >
-          close
-        </i>
+          
+				
+          <i
+            className="material-icons"
+          >
+            close
+          </i>
+          
+			
+        </a>
         <div
           className="modal-body"
         />
@@ -197,11 +257,21 @@ exports[`Component: Modal -  renders a button component when prop button is true
       >
         
 
-        <i
-          className="material-icons modal-close"
+        <a
+          className="modal-close"
+          href="#"
+          onClick={[Function]}
         >
-          close
-        </i>
+          
+				
+          <i
+            className="material-icons"
+          >
+            close
+          </i>
+          
+			
+        </a>
         <div
           className="modal-body"
         />
@@ -233,11 +303,21 @@ exports[`Component: Modal -  renders a footer when prop footerText is provided 1
       >
         
 
-        <i
-          className="material-icons modal-close"
+        <a
+          className="modal-close"
+          href="#"
+          onClick={[Function]}
         >
-          close
-        </i>
+          
+				
+          <i
+            className="material-icons"
+          >
+            close
+          </i>
+          
+			
+        </a>
         <div
           className="modal-body"
         />
@@ -283,11 +363,21 @@ exports[`Component: Modal -  renders a footer with alignment when prop footerTex
       >
         
 
-        <i
-          className="material-icons modal-close"
+        <a
+          className="modal-close"
+          href="#"
+          onClick={[Function]}
         >
-          close
-        </i>
+          
+				
+          <i
+            className="material-icons"
+          >
+            close
+          </i>
+          
+			
+        </a>
         <div
           className="modal-body"
         />
@@ -333,11 +423,21 @@ exports[`Component: Modal -  renders a header tag with subtitle but without titl
       >
         
 
-        <i
-          className="material-icons modal-close"
+        <a
+          className="modal-close"
+          href="#"
+          onClick={[Function]}
         >
-          close
-        </i>
+          
+				
+          <i
+            className="material-icons"
+          >
+            close
+          </i>
+          
+			
+        </a>
         <ModalHeading
           subTitle="test"
         />
@@ -366,11 +466,21 @@ exports[`Component: Modal -  renders with a header and subtitle when prop title 
       >
         
 
-        <i
-          className="material-icons modal-close"
+        <a
+          className="modal-close"
+          href="#"
+          onClick={[Function]}
         >
-          close
-        </i>
+          
+				
+          <i
+            className="material-icons"
+          >
+            close
+          </i>
+          
+			
+        </a>
         <ModalHeading
           subTitle="test"
           title="test"
@@ -400,11 +510,21 @@ exports[`Component: Modal -  renders with a header without subtitle when prop ti
       >
         
 
-        <i
-          className="material-icons modal-close"
+        <a
+          className="modal-close"
+          href="#"
+          onClick={[Function]}
         >
-          close
-        </i>
+          
+				
+          <i
+            className="material-icons"
+          >
+            close
+          </i>
+          
+			
+        </a>
         <ModalHeading
           title="test"
         />
@@ -433,11 +553,21 @@ exports[`Component: Modal -  renders with class 'd-block' when prop visible is t
       >
         
 
-        <i
-          className="material-icons modal-close"
+        <a
+          className="modal-close"
+          href="#"
+          onClick={[Function]}
         >
-          close
-        </i>
+          
+				
+          <i
+            className="material-icons"
+          >
+            close
+          </i>
+          
+			
+        </a>
         <div
           className="modal-body"
         />
@@ -463,11 +593,21 @@ exports[`Component: Modal -  renders with class 'static' when prop isStatic is t
       >
         
 
-        <i
-          className="material-icons modal-close"
+        <a
+          className="modal-close"
+          href="#"
+          onClick={[Function]}
         >
-          close
-        </i>
+          
+				
+          <i
+            className="material-icons"
+          >
+            close
+          </i>
+          
+			
+        </a>
         <div
           className="modal-body"
         />
@@ -493,11 +633,21 @@ exports[`Component: Modal -  renders without header when prop title is missing 1
       >
         
 
-        <i
-          className="material-icons modal-close"
+        <a
+          className="modal-close"
+          href="#"
+          onClick={[Function]}
         >
-          close
-        </i>
+          
+				
+          <i
+            className="material-icons"
+          >
+            close
+          </i>
+          
+			
+        </a>
         <div
           className="modal-body"
         />

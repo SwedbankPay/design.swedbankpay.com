@@ -27,7 +27,9 @@ const Modal = ({ title, subTitle, id, footerText, footerAlignment, type, size, v
             <section className={modalClasses} id={id} tabIndex="-1" role="dialog">
                 <div className="modal-dialog" role="document">
                     <div className="modal-container">{"\n"}
-                        <i className="material-icons modal-close">close</i>
+                        <a href="#" className="modal-close" onClick={e => e.preventDefault()}>{"\n\t\t\t\t"}
+                            <i className="material-icons">close</i>{"\n\t\t\t"}
+                        </a>
                         {title || subTitle ? <ModalHeading title={title} subTitle={subTitle} /> : null}
                         <div className="modal-body">
                             {children}
