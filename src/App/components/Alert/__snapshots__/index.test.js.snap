@@ -15,12 +15,21 @@ exports[`Component: Alert renders an alert with a close-button 1`] = `
 >
   
 
-  <i
-    className="material-icons"
+  <a
     data-alert-close=""
+    href="#"
+    onClick={[Function]}
   >
-    close
-  </i>
+    
+		
+    <i
+      className="material-icons"
+    >
+      close
+    </i>
+    
+	
+  </a>
   
 
 </div>
