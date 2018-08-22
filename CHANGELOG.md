@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.x.x] - 2018-0x-xx
+## [0.9.0] - 2018-08-22
 
 ### Added
 
@@ -22,6 +22,7 @@ All notable changes to this project will be documented in this file.
 
 - Fixed alignment for checkboxes and radio buttons when label extends to multiple lines.
 - Fixed disabled styling not being applied for some form components within a disabled fieldset.
+- Optimized some internal code.
 
 ## [0.8.1] - 2018-08-16
 
