@@ -1,5 +1,5 @@
 import React from "react";
-import { mount, shallow } from "enzyme";
+import { mount } from "enzyme";
 import "prismjs";
 
 import ComponentPreview from "./index";
@@ -11,8 +11,8 @@ import ComponentPreview from "./index";
 //     .replace(/"/g, "&quot;");
 
 describe("Utilities: ComponentPreview", () => {
-    const TestComponentH1 = () => (<h1>test1</h1>);
-    const TestComponentH2 = () => (<h2>test2</h2>);
+    const TestComponentH1 = () => <h1>test1</h1>;
+    const TestComponentH2 = () => <h2>test2</h2>;
     const TestComponentH1WithOuterTags = () => (
         <div>
             <h1>test1</h1>

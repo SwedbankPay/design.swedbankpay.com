@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 // FIXME: This function is really moronic and super fragile, but works for now [EH]
-const _findHeadings = (children) => {
+const _findHeadings = children => {
     const headings = [];
 
     if (typeof children.map === "function") {
@@ -90,6 +90,7 @@ class DocToc extends Component {
 
         this.scrollListener = this.updateWindowPosition.bind(this);
         window.addEventListener("scroll", this.scrollListener);
+        this.updateWindowPosition();
     }
 
     componentWillUnmount () {

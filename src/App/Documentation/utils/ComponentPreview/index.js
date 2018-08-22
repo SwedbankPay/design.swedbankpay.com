@@ -4,10 +4,9 @@ import { renderToStaticMarkup } from "react-dom/server";
 import PrismCode from "react-prism";
 import jsbeautifier from "js-beautify";
 
+// NOTE: dangerousHTML prop is used when wanting to show html in the codefigure without encoding.
+
 const ComponentPreview = ({ children, language, removeOuterTag, hideValue, removeList, showCasePanel, codeFigure, dangerousHTML }) => {
-    // TODO: This is stupid, find a better way to do this [EH]
-    // should be possible with React 16.2
-    // https://stackoverflow.com/questions/33766085/how-to-avoid-extra-wrapping-div-in-react
     const _removeOuterTag = element => {
         const div = document.createElement("div");
         div.innerHTML = renderToStaticMarkup(element);
@@ -41,10 +40,6 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
         val = val.replace(/value /g, "");
 
         return val;
-    };
-
-    const _removeValue = val => {
-        return val.replace(/ value="(.*)"/g, "");
     };
 
     const setDangerousHtml = val => {
@@ -99,7 +94,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                 code = jsbeautifier.html_beautify(code);
                 code = _removeEmpty(code);
                 if (hideValue) {
-                    code = _removeValue(code);
+                    code = code.replace(/ value="(.*)"/g, "");
                 }
                 break;
             case "css":
@@ -144,10 +139,11 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
 ComponentPreview.propTypes = {
     language: PropTypes.oneOf(["html", "javascript", "css"]).isRequired,
     removeOuterTag: PropTypes.bool,
+    hideValue: PropTypes.bool,
     removeList: PropTypes.bool,
     showCasePanel: PropTypes.bool,
-    dangerousHTML: PropTypes.bool,
-    codeFigure: PropTypes.bool
+    codeFigure: PropTypes.bool,
+    dangerousHTML: PropTypes.bool
 };
 
 export default ComponentPreview;
