@@ -12,7 +12,7 @@ describe("px-script: button", () => {
         expect(button).toBeDefined();
     });
 
-    it("method init is defined and adds loader markup to buttons with attribute [data-button-loader='true']", () => {
+    it("method init is defined and adds loader markup to buttons with attribute [data-button-loader]", () => {
         expect(button.init).toBeDefined();
 
         const Buttons = () => (
@@ -24,7 +24,7 @@ describe("px-script: button", () => {
 
         ReactDOM.render(<Buttons />, div);
 
-        const renderedButtons = document.querySelectorAll("[data-button-loader='true']");
+        const renderedButtons = document.querySelectorAll("[data-button-loader]");
 
         expect(renderedButtons).toHaveLength(2);
 
