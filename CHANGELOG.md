@@ -2,13 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.9.1] - 2018-08-22
+## [0.9.1] - 2018-08-24
 
 ### Fixed
 
 - Fixed issue with links not taking browser window to the top within the documentation.
 - Fixed issue with loader element in button loaders.
-
+- Fixed issue with the Progress tracker component responsiveness.
 
 ## [0.9.0] - 2018-08-22
 
