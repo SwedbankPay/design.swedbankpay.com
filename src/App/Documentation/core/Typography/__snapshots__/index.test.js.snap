@@ -510,28 +510,13 @@ exports[`Core: Typography Text Utilities renders 1`] = `
     Text utilities
   </h2>
   <p>
-    Change text alignment, transform, style, weight, and color with our 
+    Change text color with our 
     <Link
       replace={false}
-      to="/docs/utilities/text"
-    >
-      text utilities
-    </Link>
-     
-    <b>
-      (NOT YET IMPLEMENTED)
-    </b>
-     and 
-    <Link
-      replace={false}
-      to="/docs/utilities/color"
+      to="/docs/utilities/colors"
     >
       color utilities
     </Link>
-     
-    <b>
-      (NOT YET IMPLEMENTED)
-    </b>
     .
   </p>
 </React.Fragment>

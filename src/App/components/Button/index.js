@@ -13,40 +13,28 @@ const Button = ({ label, id, name, value, href, icon, loading, type, disabled, b
         active ? "active" : null
     );
 
+    const attrs = {
+        href,
+        id,
+        name,
+        disabled,
+        "data-button-loader": loader ? "" : null,
+        defaultValue: value
+    };
+
+    href ? attrs.role = "button" : attrs.type = btnType || "button";
+
     if (href) return (
-        <a
-            className={btnClasses}
-            href={href}
-            id={id}
-            name={name}
-            disabled={disabled}
-            data-button-loader={loader}
-            role="button">{icon ? "\n\t" : null}
+        <a className={btnClasses} {...attrs}>{icon ? "\n\t" : null}
             {icon ? <i className="material-icons">{icon}</i> : null}
             {(icon && label) ? <span>{label}</span> : label}
         </a>
     );
 
-    if (input) return (
-        <input
-            className={btnClasses}
-            type={btnType || "button"}
-            id={id}
-            name={name}
-            disabled={disabled}
-            data-button-loader={loader}
-            value={value}
-        />
-    );
+    if (input) return <input className={btnClasses} {...attrs}/>;
 
     return (
-        <button
-            className={btnClasses}
-            type={btnType || "button"}
-            id={id}
-            name={name}
-            disabled={disabled}
-            data-button-loader={loader}>{icon ? "\n\t" : null}
+        <button className={btnClasses} {...attrs}>{icon ? "\n\t" : null}
             {icon ? <i className="material-icons">{icon}</i> : null}{icon ? "\n\t" : null}
             {(icon && label) ? <span>{label}</span> : label}{icon ? "\n" : null}
         </button>
@@ -70,7 +58,7 @@ Button.propTypes = {
     input: PropTypes.bool,
     outline: PropTypes.bool,
     active: PropTypes.bool,
-    size: PropTypes.string
+    size: PropTypes.oneOf(["lg", "sm", "xs"])
 };
 
 export default Button;
