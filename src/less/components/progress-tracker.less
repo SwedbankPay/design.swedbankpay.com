@@ -12,8 +12,10 @@ ol.progress-tracker {
 @media screen and (max-width: @screen-xs-max) {
     ul.progress-tracker,
     ol.progress-tracker {
+        display: block;
+
         li {
-            text-transform: uppercase;
+            display: inline-block;
 
             &.active {
                 font-weight: bold;
