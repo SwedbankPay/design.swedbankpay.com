@@ -10,7 +10,6 @@ All notable changes to this project will be documented in this file.
 - Fixed issue with loader element in button loaders.
 - Fixed issue with the Progress tracker component responsiveness.
 
-
 ## [0.9.0] - 2018-08-22
 
 ### Added
