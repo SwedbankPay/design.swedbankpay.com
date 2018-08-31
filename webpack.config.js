@@ -4,93 +4,62 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const webpack = require("webpack");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const autoprefixer = require("autoprefixer");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const lessListPlugin = require("less-plugin-lists");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
-const isProd = (process.env.NODE_ENV === "production");
-const isDeploy = (process.env.WEBPACK === "deploy");
-const devServer = (process.env.WEBPACK === "devserver");
-const version = pkg.version;
+module.exports = (env, argv) => {
+    const version = pkg.version;
+    const isProd = argv.mode === "production";
+    const isDevServer = !!argv.host;
 
-const extractPX = new ExtractTextPlugin({
-    filename: `${version}/styles/px.css`,
-    disable: !isProd
-});
-
-const extractDocumentation = new ExtractTextPlugin({
-    filename: `${version}/styles/templates/documentation.css`,
-    disable: !isProd
-});
-
-const extractDesignGuide = new ExtractTextPlugin({
-    filename: "styles/designguide.css",
-    disable: !isProd
-});
-
-const config = {
-    entry: {
-        app: "./src/index.js",
-        "react-libraries": [
-            "react",
-            "react-dom",
-            "react-dom/server",
-            "react-router-dom",
-            "react-prism"
-        ],
-        "core-libraries": [
-            "prismjs",
-            "prismjs/themes/prism.css",
-            "prismjs/plugins/toolbar/prism-toolbar.css",
-            "prismjs/plugins/toolbar/prism-toolbar.min.js",
-            "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js",
-            "js-beautify",
-            "clipboard"
-        ],
-        polyfills: "./src/polyfills/index.js",
-        "px-script": "./src/px-script/index.js"
-    },
-    output: {
-        library: "payex",
-        path: path.resolve(__dirname, "dist"),
-        filename: `${version}/scripts/[name].js?[hash]`,
-        publicPath: "/" // (isProd ? "/design.payex.com/" : "/")
-    },
-    resolve: {
-        extensions: [".js", ".jsx", ".json"]
-    },
-    cache: true,
-    devtool: "source-map",
-    devServer: {
-        contentBase: path.resolve(__dirname, "dist"),
-        publicPath: "/",
-        compress: true,
-        port: 3000,
-        hot: true,
-        clientLogLevel: "warning",
-        historyApiFallback: true
-    },
-    module: {
-        rules: [
-            {
-                test: /\.jsx?$/,
-                exclude: /node_modules/,
-                loader: "babel-loader"
-            },
-            {
-                test: /px\.less$/,
-                use: extractPX.extract({
-                    fallback: "style-loader",
+    const config = {
+        entry: {
+            polyfills: "./src/polyfills/index.js",
+            app: "./src/index.js",
+            "px-script": "./src/px-script/index.js"
+        },
+        resolve: {
+            extensions: [".js", ".jsx", ".json"]
+        },
+        output: {
+            library: "payex",
+            path: path.resolve(__dirname, "dist"),
+            filename: `${version}/scripts/[name].js?[hash]`,
+            publicPath: "/"
+        },
+        devtool: "source-map",
+        devServer: {
+            contentBase: path.resolve(__dirname, "dist"),
+            publicPath: "/",
+            compress: true,
+            port: 3000,
+            hot: true,
+            clientLogLevel: "warning",
+            historyApiFallback: true
+        },
+        module: {
+            rules: [
+                {
+                    test: /\.jsx?$/,
+                    exclude: /node_modules/,
+                    loader: "babel-loader"
+                },
+                {
+                    test: /\.less$/,
+                    resolve: { extensions: [".less"] },
                     use: [
+                        {
+                            loader: isProd ? MiniCssExtractPlugin.loader : "style-loader"
+                        },
                         {
                             loader: "css-loader",
                             options: {
                                 minimize: isProd
-                            }
-                        },
+                            } },
                         {
                             loader: "postcss-loader",
                             options: {
@@ -103,160 +72,135 @@ const config = {
                         {
                             loader: "less-loader",
                             options: {
+                                javascriptEnabled: true,
                                 plugins: [
                                     new lessListPlugin()
                                 ]
                             }
                         }
                     ]
-                })
-            },
-            {
-                test: /\.css$/,
-                use: [
-                    "style-loader",
-                    {
-                        loader: "css-loader",
-                        options: {
-                            minimize: isProd
+                },
+                {
+                    test: /\.css$/,
+                    use: [
+                        "style-loader",
+                        {
+                            loader: "css-loader",
+                            options: {
+                                minimize: isProd
+                            }
+                        },
+                        {
+                            loader: "postcss-loader",
+                            options: {
+                                plugins: () => autoprefixer({
+                                    browsers: ["last 3 versions", "> 1%"]
+                                })
+                            }
                         }
+                    ]
+                },
+                {
+                    test: /\.(png|jpe?g|gif|svg)$/i,
+                    use: [
+                        {
+                            loader: "file-loader",
+                            options: {
+                                outputPath: "img/",
+                                name: "[name].[ext]?[hash]"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        optimization: {
+            splitChunks: {
+                cacheGroups: {
+                    vendors: {
+                        test: /[\\/]node_modules[\\/]/,
+                        priority: -10
                     },
-                    {
-                        loader: "postcss-loader",
-                        options: {
-                            plugins: () => autoprefixer({
-                                browsers: ["last 3 versions", "> 1%"]
-                            })
+                    pxStyles: {
+                        name: "px",
+                        test: /px\.less$/,
+                        chunks: "all",
+                        enforce: true
+                    },
+                    docStyles: {
+                        name: "documentation",
+                        test: /documentation\.less$/,
+                        chunks: "all",
+                        enforce: true
+                    },
+                    dgStyles: {
+                        name: "designguide",
+                        test: /designguide\.less$/,
+                        chunks: "all",
+                        enforce: true
+                    }
+                }
+            },
+            minimize: isProd,
+            minimizer: [
+                new UglifyJsPlugin({
+                    sourceMap: true,
+                    uglifyOptions: {
+                        ecma: 8,
+                        compress: {
+                            dead_code: true,
+                            drop_console: true, // TODO: keep console warnings and errors
+                            unused: false
                         }
                     }
-                ]
-            },
-            {
-                test: /documentation\.less$/,
-                use: extractDocumentation.extract({
-                    fallback: "style-loader",
-                    use: [
-                        {
-                            loader: "css-loader",
-                            options: {
-                                minimize: isProd
-                            }
-                        },
-                        {
-                            loader: "postcss-loader",
-                            options: {
-                                plugins: () => autoprefixer({
-                                    browsers: ["last 3 versions", "> 1%"]
-                                })
-                            }
-                        },
-                        { loader: "less-loader" }
-                    ]
                 })
-            },
-            {
-                test: /designguide\.less$/,
-                use: extractDesignGuide.extract({
-                    fallback: "style-loader",
-                    use: [
-                        {
-                            loader: "css-loader",
-                            options: {
-                                minimize: isProd
-                            }
-                        },
-                        {
-                            loader: "postcss-loader",
-                            options: {
-                                plugins: () => autoprefixer({
-                                    browsers: ["last 3 versions", "> 1%"]
-                                })
-                            }
-                        },
-                        { loader: "less-loader" }
-                    ]
-                })
-            },
-            {
-                test: /\.(png|jpe?g|gif|svg)$/i,
-                use: [
-                    {
-                        loader: "file-loader",
-                        options: {
-                            outputPath: "img/",
-                            name: "[name].[ext]?[hash]"
-                        }
-                    }
-                ]
-            }
+            ],
+            mergeDuplicateChunks: !isProd
+        },
+        plugins: [
+            new HtmlWebpackPlugin({
+                template: "./src/index.html",
+                hash: true,
+                title: "PayEx DesignGuide"
+            }),
+            new HtmlWebpackPlugin({
+                filename: "404.html",
+                template: "./src/index.html",
+                hash: true,
+                title: "PayEx DesignGuide"
+            }),
+            new FaviconsWebpackPlugin({
+                logo: "./src/img/favicon.png",
+                title: "PayEx DesignGuide",
+                prefix: "icons/",
+                icons: {
+                    android: isProd,
+                    appleIcon: isProd,
+                    appleStartup: isProd,
+                    coast: isProd,
+                    favicons: true,
+                    firefox: false,
+                    opengraph: isProd,
+                    twitter: isProd,
+                    yandex: false,
+                    windows: isProd
+                }
+            }),
+            new MiniCssExtractPlugin({
+                filename: `${version}/styles/[name].css`
+            }),
+            new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/), // For now this ignores moment's locale folder, which doubles moment's size..
+            new CopyWebpackPlugin([
+                { from: "static" }
+            ])
         ]
-    },
-    plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-        new HtmlWebpackPlugin({
-            template: "./src/index.html",
-            hash: true,
-            title: "PayEx DesignGuide"
-        }),
-        new HtmlWebpackPlugin({
-            filename: "404.html",
-            template: "./src/index.html",
-            hash: true,
-            title: "PayEx DesignGuide"
-        }),
-        new FaviconsWebpackPlugin({
-            logo: "./src/img/favicon.png",
-            title: "PayEx DesignGuide",
-            prefix: isProd ? "icons/" : "",
-            icons: {
-                android: false,
-                appleIcon: false,
-                appleStartup: false,
-                coast: false,
-                favicons: true,
-                firefox: false,
-                opengraph: false,
-                twitter: false,
-                yandex: false,
-                windows: false
-            }
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-            names: ["react-libraries", "core-libraries", "polyfills", "px-script"],
-            minChunks: Infinity
-        }),
-        new webpack.NamedModulesPlugin(),
-        new webpack.NamedChunksPlugin(),
-        extractPX,
-        extractDocumentation,
-        extractDesignGuide,
-        new webpack.DefinePlugin({
-            "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)
-        }),
-        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/), // For now this ignores moment's locale folder, which doubles moment's size..
-        new CopyWebpackPlugin([
-            { from: "static" }
-        ])
-    ]
+    };
+
+    if (!isDevServer) {
+        config.plugins.push(
+            new CleanWebpackPlugin(["dist"])
+        );
+    }
+
+    return config;
 };
-
-if (!devServer && !isDeploy) {
-    config.plugins.push(
-        new CleanWebpackPlugin(["dist"]),
-        new BundleAnalyzerPlugin()
-    );
-}
-
-if (isProd) {
-    config.plugins.push(new webpack.optimize.UglifyJsPlugin({
-        sourceMap: true,
-        compress: {
-            dead_code: true,
-            drop_console: true, // TODO: keep console warnings and errors
-            unused: false
-        }
-    }));
-}
-
-
-module.exports = config;
