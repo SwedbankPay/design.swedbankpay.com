@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.10.0] - 2018-09-
+
+### Changed
+
+- Migrated from webpack v.3 to v.4.
+
 ## [0.9.1] - 2018-08-24
 
 ### Fixed
