@@ -173,17 +173,18 @@ module.exports = (env, argv) => {
                 logo: "./src/img/favicon.png",
                 title: "PayEx DesignGuide",
                 prefix: "icons/",
+                background: "#000",
                 icons: {
-                    android: isProd,
-                    appleIcon: isProd,
-                    appleStartup: isProd,
-                    coast: isProd,
+                    android: true,
+                    appleIcon: true,
+                    appleStartup: true,
+                    coast: true,
                     favicons: true,
                     firefox: false,
-                    opengraph: isProd,
-                    twitter: isProd,
+                    opengraph: true,
+                    twitter: true,
                     yandex: false,
-                    windows: isProd
+                    windows: true
                 }
             }),
             new MiniCssExtractPlugin({
