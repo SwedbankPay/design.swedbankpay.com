@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## [0.10.0] - 2018-09-
 
+### Added
+
+- Added section about favicons.
+- Added zip file with favicons, manifest.json and browserconfig.xml available for download.
+
 ### Changed
 
 - Migrated from webpack v.3 to v.4.
