@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const webpack = require("webpack");
 const autoprefixer = require("autoprefixer");
-const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
+const AppManifestWebpackPlugin = require("app-manifest-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const lessListPlugin = require("less-plugin-lists");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -169,22 +169,28 @@ module.exports = (env, argv) => {
                 hash: true,
                 title: "PayEx DesignGuide"
             }),
-            new FaviconsWebpackPlugin({
+            new AppManifestWebpackPlugin({
                 logo: "./src/img/favicon.png",
-                title: "PayEx DesignGuide",
-                prefix: "icons/",
-                background: "#000",
-                icons: {
-                    android: true,
-                    appleIcon: true,
-                    appleStartup: true,
-                    coast: true,
-                    favicons: true,
-                    firefox: false,
-                    opengraph: true,
-                    twitter: true,
-                    yandex: false,
-                    windows: true
+                output: "/icons/",
+                config: {
+                    appName: "PayEx DesignGuide",
+                    developerName: "PayEx",
+                    developerURL: "https://payex.com",
+                    background: "#000",
+                    theme_color: "#000",
+                    version: version,
+                    icons: {
+                        android: true,
+                        appleIcon: true,
+                        appleStartup: true,
+                        coast: true,
+                        favicons: true,
+                        firefox: false,
+                        opengraph: true,
+                        twitter: true,
+                        yandex: false,
+                        windows: true
+                    }
                 }
             }),
             new MiniCssExtractPlugin({
