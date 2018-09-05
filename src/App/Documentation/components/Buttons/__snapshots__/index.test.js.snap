@@ -23,36 +23,15 @@ exports[`Documentation: Buttons Active State renders 1`] = `
   >
     <Button
       active={true}
-      label="Default"
-      type="default"
+      label="Primary"
+      type="primary"
     />
     
 
     <Button
       active={true}
-      label="Brand"
-      type="brand"
-    />
-    
-
-    <Button
-      active={true}
-      label="Neutral"
-      type="neutral"
-    />
-    
-
-    <Button
-      active={true}
-      label="Success"
-      type="success"
-    />
-    
-
-    <Button
-      active={true}
-      label="Warning"
-      type="warning"
+      label="Secondary"
+      type="secondary"
     />
     
 
@@ -60,13 +39,6 @@ exports[`Documentation: Buttons Active State renders 1`] = `
       active={true}
       label="Danger"
       type="danger"
-    />
-    
-
-    <Button
-      active={true}
-      label="Light"
-      type="light"
     />
     
 
@@ -102,19 +74,26 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
     showCasePanel={true}
   >
     <Button
-      id="test"
-      label="Default"
+      label="Primary"
       loader={true}
       loading={true}
-      type="default"
+      type="primary"
     />
     
 
     <Button
-      label="Brand"
+      label="Secondary"
       loader={true}
       loading={true}
-      type="brand"
+      type="secondary"
+    />
+    
+
+    <Button
+      label="Danger"
+      loader={true}
+      loading={true}
+      type="danger"
     />
     
 
@@ -125,47 +104,20 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
     showCasePanel={true}
   >
     <Button
-      label="Default"
+      label="Primary"
       loader={true}
       loading={true}
       outline={true}
-      type="default"
+      type="primary"
     />
     
 
     <Button
-      label="Brand"
+      label="Secondary"
       loader={true}
       loading={true}
       outline={true}
-      type="brand"
-    />
-    
-
-    <Button
-      label="Neutral"
-      loader={true}
-      loading={true}
-      outline={true}
-      type="neutral"
-    />
-    
-
-    <Button
-      label="Success"
-      loader={true}
-      loading={true}
-      outline={true}
-      type="success"
-    />
-    
-
-    <Button
-      label="Warning"
-      loader={true}
-      loading={true}
-      outline={true}
-      type="warning"
+      type="secondary"
     />
     
 
@@ -175,15 +127,6 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
       loading={true}
       outline={true}
       type="danger"
-    />
-    
-
-    <Button
-      label="Light"
-      loader={true}
-      loading={true}
-      outline={true}
-      type="light"
     />
     
 
@@ -303,36 +246,15 @@ exports[`Documentation: Buttons Disabled State renders 1`] = `
   >
     <Button
       disabled={true}
-      label="Default"
-      type="default"
+      label="Primary"
+      type="primary"
     />
     
 
     <Button
       disabled={true}
-      label="Brand"
-      type="brand"
-    />
-    
-
-    <Button
-      disabled={true}
-      label="Neutral"
-      type="neutral"
-    />
-    
-
-    <Button
-      disabled={true}
-      label="Success"
-      type="success"
-    />
-    
-
-    <Button
-      disabled={true}
-      label="Warning"
-      type="warning"
+      label="Secondary"
+      type="secondary"
     />
     
 
@@ -340,13 +262,6 @@ exports[`Documentation: Buttons Disabled State renders 1`] = `
       disabled={true}
       label="Danger"
       type="danger"
-    />
-    
-
-    <Button
-      disabled={true}
-      label="Light"
-      type="light"
     />
     
 
@@ -370,44 +285,20 @@ exports[`Documentation: Buttons Examples renders 1`] = `
     showCasePanel={true}
   >
     <Button
-      label="Default"
-      type="default"
+      label="Primary"
+      type="primary"
     />
     
 
     <Button
-      label="Brand"
-      type="brand"
-    />
-    
-
-    <Button
-      label="Neutral"
-      type="neutral"
-    />
-    
-
-    <Button
-      label="Success"
-      type="success"
-    />
-    
-
-    <Button
-      label="Warning"
-      type="warning"
+      label="Secondary"
+      type="secondary"
     />
     
 
     <Button
       label="Danger"
       type="danger"
-    />
-    
-
-    <Button
-      label="Light"
-      type="light"
     />
     
 
@@ -437,37 +328,16 @@ exports[`Documentation: Buttons Outline Buttons renders 1`] = `
     showCasePanel={true}
   >
     <Button
-      label="Default"
+      label="Primary"
       outline={true}
-      type="default"
+      type="primary"
     />
     
 
     <Button
-      label="Brand"
+      label="Secondary"
       outline={true}
-      type="brand"
-    />
-    
-
-    <Button
-      label="Neutral"
-      outline={true}
-      type="neutral"
-    />
-    
-
-    <Button
-      label="Success"
-      outline={true}
-      type="success"
-    />
-    
-
-    <Button
-      label="Warning"
-      outline={true}
-      type="warning"
+      type="secondary"
     />
     
 
@@ -475,13 +345,6 @@ exports[`Documentation: Buttons Outline Buttons renders 1`] = `
       label="Danger"
       outline={true}
       type="danger"
-    />
-    
-
-    <Button
-      label="Light"
-      outline={true}
-      type="light"
     />
     
 
@@ -518,14 +381,14 @@ exports[`Documentation: Buttons Sizes renders 1`] = `
     <Button
       label="Large button"
       size="lg"
-      type="default"
+      type="primary"
     />
     
 
     <Button
       label="Large button"
       size="lg"
-      type="brand"
+      type="secondary"
     />
     
 
@@ -549,14 +412,14 @@ exports[`Documentation: Buttons Sizes renders 1`] = `
     <Button
       label="Small button"
       size="sm"
-      type="default"
+      type="primary"
     />
     
 
     <Button
       label="Small button"
       size="sm"
-      type="brand"
+      type="secondary"
     />
     
 
@@ -580,14 +443,14 @@ exports[`Documentation: Buttons Sizes renders 1`] = `
     <Button
       label="Extra small button"
       size="xs"
-      type="default"
+      type="primary"
     />
     
 
     <Button
       label="Extra small button"
       size="xs"
-      type="brand"
+      type="secondary"
     />
     
 
@@ -611,14 +474,14 @@ exports[`Documentation: Buttons Sizes renders 1`] = `
     <Button
       fullWidth={true}
       label="Block level button"
-      type="default"
+      type="primary"
     />
     
 
     <Button
       fullWidth={true}
       label="Block level button"
-      type="brand"
+      type="secondary"
     />
     
 
@@ -650,16 +513,16 @@ exports[`Documentation: Buttons Usage With Icons renders 1`] = `
   >
     <Button
       icon="cloud"
-      label="Default"
-      type="default"
+      label="Primary"
+      type="primary"
     />
     
 
 
     <Button
       icon="cloud"
-      label="Brand"
-      type="brand"
+      label="Secondary"
+      type="secondary"
     />
     
 
@@ -899,20 +762,20 @@ exports[`Documentation: Buttons Usage With Other Tags renders 1`] = `
     <Button
       href="#"
       label="Anchor"
-      type="brand"
+      type="primary"
     />
     
 
     <Button
       label="Button"
-      type="brand"
+      type="primary"
     />
     
 
     <Button
       btnType="button"
       input={true}
-      type="brand"
+      type="primary"
       value="Input"
     />
     
@@ -920,7 +783,7 @@ exports[`Documentation: Buttons Usage With Other Tags renders 1`] = `
     <Button
       btnType="submit"
       input={true}
-      type="brand"
+      type="primary"
       value="Submit"
     />
     
@@ -928,7 +791,7 @@ exports[`Documentation: Buttons Usage With Other Tags renders 1`] = `
     <Button
       btnType="reset"
       input={true}
-      type="brand"
+      type="primary"
       value="Reset"
     />
     

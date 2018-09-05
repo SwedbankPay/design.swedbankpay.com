@@ -42,7 +42,7 @@ const Button = ({ label, id, name, value, href, icon, loading, type, disabled, b
 };
 
 Button.propTypes = {
-    type: PropTypes.oneOf(["default", "brand", "neutral", "success", "warning", "danger", "light", "link"]).isRequired,
+    type: PropTypes.oneOf(["primary", "secondary", "danger", "link"]).isRequired,
     label: PropTypes.string,
     id: PropTypes.string,
     name: PropTypes.string,

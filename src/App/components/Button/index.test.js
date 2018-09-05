@@ -22,7 +22,7 @@ describe("Component: Button - ", () => {
     describe("Anchor tag:", () => {
         it("renders a button inside an anchor tag when prop href is provided", () => {
             const wrapper = shallow(
-                <Button type="default" href="test" />
+                <Button type="primary" href="test" />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -31,25 +31,25 @@ describe("Component: Button - ", () => {
 
         it("renders a button inside an anchor tag with label when prop href and label is provided", () => {
             const wrapper = shallow(
-                <Button type="default" href="test" label="test" />
+                <Button type="primary" href="test" label="test" />
             );
 
             expect(wrapper).toMatchSnapshot();
-            expect(wrapper.html()).toContain("<a class=\"btn btn-default\" href=\"test\" role=\"button\">test</a>");
+            expect(wrapper.html()).toContain("<a class=\"btn btn-primary\" href=\"test\" role=\"button\">test</a>");
         });
 
         it("renders a outline button inside an anchor tag when prop href and outline is provided", () => {
             const wrapper = shallow(
-                <Button type="default" href="test" outline />
+                <Button type="primary" href="test" outline />
             );
 
             expect(wrapper).toMatchSnapshot();
-            expect(wrapper.html()).toContain("btn-outline-default");
+            expect(wrapper.html()).toContain("btn-outline-primary");
         });
 
         it("renders a button with specified size inside an anchor tag when prop href and size is provided", () => {
             const wrapper = shallow(
-                <Button type="default" href="test" size="size-test" />
+                <Button type="primary" href="test" size="size-test" />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -58,7 +58,7 @@ describe("Component: Button - ", () => {
 
         it("renders a loading button inside an anchor tag when prop href and loading is provided", () => {
             const wrapper = shallow(
-                <Button type="default" href="test" loading />
+                <Button type="primary" href="test" loading />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -67,7 +67,7 @@ describe("Component: Button - ", () => {
 
         it("renders a full width button inside an anchor tag when prop href and fullWidth is provided", () => {
             const wrapper = shallow(
-                <Button type="default" href="test" fullWidth />
+                <Button type="primary" href="test" fullWidth />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -76,7 +76,7 @@ describe("Component: Button - ", () => {
 
         it("renders a button inside an anchor tag with class pull-right when prop href and pullRight is provided", () => {
             const wrapper = shallow(
-                <Button type="default" href="test" pullRight />
+                <Button type="primary" href="test" pullRight />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -85,7 +85,7 @@ describe("Component: Button - ", () => {
 
         it("renders a button inside an anchor tag with class active when prop href and active is provided", () => {
             const wrapper = shallow(
-                <Button type="default" href="test" active />
+                <Button type="primary" href="test" active />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -94,7 +94,7 @@ describe("Component: Button - ", () => {
 
         it("renders a button inside an anchor tag with id when prop href and id is provided", () => {
             const wrapper = shallow(
-                <Button type="default" href="test" id="test" />
+                <Button type="primary" href="test" id="test" />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -103,7 +103,7 @@ describe("Component: Button - ", () => {
 
         it("renders a button inside an anchor tag with name when prop href and name is provided", () => {
             const wrapper = shallow(
-                <Button type="default" href="test" name="test" />
+                <Button type="primary" href="test" name="test" />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -112,7 +112,7 @@ describe("Component: Button - ", () => {
 
         it("renders a disabled button inside an anchor tag when prop href and disabled is provided", () => {
             const wrapper = shallow(
-                <Button type="default" href="test" disabled />
+                <Button type="primary" href="test" disabled />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -121,7 +121,7 @@ describe("Component: Button - ", () => {
 
         it("renders a button inside an anchor tag with attribute data-button-loader when prop href and loader is provided", () => {
             const wrapper = shallow(
-                <Button type="default" href="test" loader />
+                <Button type="primary" href="test" loader />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -130,7 +130,7 @@ describe("Component: Button - ", () => {
 
         it("renders a button with icon inside an anchor tag when prop href and icon is provided", () => {
             const wrapper = shallow(
-                <Button type="default" href="test" icon="test" />
+                <Button type="primary" href="test" icon="test" />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -139,7 +139,7 @@ describe("Component: Button - ", () => {
 
         it("renders a button with icon and label inside a span inside an anchor tag when prop href, label and icon is provided", () => {
             const wrapper = shallow(
-                <Button type="default" href="test" icon="test" label="test" />
+                <Button type="primary" href="test" icon="test" label="test" />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -151,7 +151,7 @@ describe("Component: Button - ", () => {
     describe("Input tag:", () => {
         it("renders a button inside an input tag and defaults to type='button' when prop input is provided", () => {
             const wrapper = shallow(
-                <Button type="default" input />
+                <Button type="primary" input />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -160,16 +160,16 @@ describe("Component: Button - ", () => {
 
         it("renders an outline button inside an input tag when prop input and outline is provided", () => {
             const wrapper = shallow(
-                <Button type="default" input outline />
+                <Button type="primary" input outline />
             );
 
             expect(wrapper).toMatchSnapshot();
-            expect(wrapper.html()).toContain("btn-outline-default");
+            expect(wrapper.html()).toContain("btn-outline-primary");
         });
 
         it("renders a button with specified size inside an input tag when prop input and size is provided", () => {
             const wrapper = shallow(
-                <Button type="default" input size="size-test" />
+                <Button type="primary" input size="size-test" />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -178,7 +178,7 @@ describe("Component: Button - ", () => {
 
         it("renders a loading button inside an input tag when prop input and loading is provided", () => {
             const wrapper = shallow(
-                <Button type="default" input loading />
+                <Button type="primary" input loading />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -187,7 +187,7 @@ describe("Component: Button - ", () => {
 
         it("renders a full width button inside an input tag when prop input and fullWidth is provided", () => {
             const wrapper = shallow(
-                <Button type="default" input fullWidth />
+                <Button type="primary" input fullWidth />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -196,7 +196,7 @@ describe("Component: Button - ", () => {
 
         it("renders a button with class pull-right inside an input tag when prop input and pullRight is provided", () => {
             const wrapper = shallow(
-                <Button type="default" input pullRight />
+                <Button type="primary" input pullRight />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -205,7 +205,7 @@ describe("Component: Button - ", () => {
 
         it("renders a button with class active inside an input tag when prop input and active is provided", () => {
             const wrapper = shallow(
-                <Button type="default" input active />
+                <Button type="primary" input active />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -214,7 +214,7 @@ describe("Component: Button - ", () => {
 
         it("renders a button with the specified type inside an input tag when prop input and btnType is provided", () => {
             const wrapper = shallow(
-                <Button type="default" input btnType="test" />
+                <Button type="primary" input btnType="test" />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -223,7 +223,7 @@ describe("Component: Button - ", () => {
 
         it("renders a button with the specified id inside an input tag when prop input and id is provided", () => {
             const wrapper = shallow(
-                <Button type="default" input id="test" />
+                <Button type="primary" input id="test" />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -232,7 +232,7 @@ describe("Component: Button - ", () => {
 
         it("renders a button with the specified name inside an input tag when prop input and name is provided", () => {
             const wrapper = shallow(
-                <Button type="default" input name="test" />
+                <Button type="primary" input name="test" />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -241,7 +241,7 @@ describe("Component: Button - ", () => {
 
         it("renders a disabled button inside an input tag when prop input and disabled is provided", () => {
             const wrapper = shallow(
-                <Button type="default" input disabled />
+                <Button type="primary" input disabled />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -250,7 +250,7 @@ describe("Component: Button - ", () => {
 
         it("renders a button inside an input tag with attribute data-button-loader when prop input and loader is provided", () => {
             const wrapper = shallow(
-                <Button type="default" input loader />
+                <Button type="primary" input loader />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -259,7 +259,7 @@ describe("Component: Button - ", () => {
 
         it("renders a button inside an input tag with value attribute when prop input and value is provided", () => {
             const wrapper = shallow(
-                <Button type="default" input value="test" />
+                <Button type="primary" input value="test" />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -268,9 +268,9 @@ describe("Component: Button - ", () => {
     });
 
     describe("Button tag:", () => {
-        it("renders a default button and defaults to type='button' when no btnType prop is provided", () => {
+        it("renders a primary button and defaults to type='button' when no btnType prop is provided", () => {
             const wrapper = shallow(
-                <Button type="default" />
+                <Button type="primary" />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -279,7 +279,7 @@ describe("Component: Button - ", () => {
 
         it("renders a button with a label when prop label is provided", () => {
             const wrapper = shallow(
-                <Button type="default" label="test" />
+                <Button type="primary" label="test" />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -288,17 +288,17 @@ describe("Component: Button - ", () => {
 
         it("renders an outline button when prop outline is provided", () => {
             const wrapper = shallow(
-                <Button type="default" outline />
+                <Button type="primary" outline />
             );
 
             expect(wrapper).toMatchSnapshot();
-            expect(wrapper.html()).toContain("btn-outline-default");
+            expect(wrapper.html()).toContain("btn-outline-primary");
         });
 
         it("renders a button with specified size when prop size is provided", () => {
             console.error = jest.fn();
             const wrapper = shallow(
-                <Button type="default" size="size-test" />
+                <Button type="primary" size="size-test" />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -307,7 +307,7 @@ describe("Component: Button - ", () => {
 
         it("renders a loading button when prop loading is provided", () => {
             const wrapper = shallow(
-                <Button type="default" loading />
+                <Button type="primary" loading />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -316,7 +316,7 @@ describe("Component: Button - ", () => {
 
         it("renders a full width button when prop fullWidth is provided", () => {
             const wrapper = shallow(
-                <Button type="default" fullWidth />
+                <Button type="primary" fullWidth />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -325,7 +325,7 @@ describe("Component: Button - ", () => {
 
         it("renders a button with class pull-right when prop pullRight is provided", () => {
             const wrapper = shallow(
-                <Button type="default" pullRight />
+                <Button type="primary" pullRight />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -334,7 +334,7 @@ describe("Component: Button - ", () => {
 
         it("renders a button with class active when prop active is provided", () => {
             const wrapper = shallow(
-                <Button type="default" active />
+                <Button type="primary" active />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -343,7 +343,7 @@ describe("Component: Button - ", () => {
 
         it("renders a button with the specified type when prop btnType is provided", () => {
             const wrapper = shallow(
-                <Button type="default" btnType="test" />
+                <Button type="primary" btnType="test" />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -352,7 +352,7 @@ describe("Component: Button - ", () => {
 
         it("renders a button with the specified id when prop id is provided", () => {
             const wrapper = shallow(
-                <Button type="default" id="test" />
+                <Button type="primary" id="test" />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -361,7 +361,7 @@ describe("Component: Button - ", () => {
 
         it("renders a button with the specified name when prop name is provided", () => {
             const wrapper = shallow(
-                <Button type="default" name="test" />
+                <Button type="primary" name="test" />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -370,7 +370,7 @@ describe("Component: Button - ", () => {
 
         it("renders a disabled button when prop disabled is provided", () => {
             const wrapper = shallow(
-                <Button type="default" disabled />
+                <Button type="primary" disabled />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -379,16 +379,16 @@ describe("Component: Button - ", () => {
 
         it("renders a button with the attribute data-button-loader when prop loader is provided", () => {
             const wrapper = shallow(
-                <Button type="default" loader />
+                <Button type="primary" loader />
             );
 
             expect(wrapper).toMatchSnapshot();
-            expect(wrapper.contains(<button className="btn btn-default" data-button-loader="" type="button"></button>)).toEqual(true);
+            expect(wrapper.contains(<button className="btn btn-primary" data-button-loader="" type="button"></button>)).toEqual(true);
         });
 
         it("renders a button with an icon when prop icon is provided", () => {
             const wrapper = shallow(
-                <Button type="default" icon="test" />
+                <Button type="primary" icon="test" />
             );
 
             expect(wrapper).toMatchSnapshot();
@@ -397,7 +397,7 @@ describe("Component: Button - ", () => {
 
         it("renders a button with icon and label inside a span when prop icon and label is provided", () => {
             const wrapper = shallow(
-                <Button type="default" icon="test" label="test" />
+                <Button type="primary" icon="test" label="test" />
             );
 
             expect(wrapper).toMatchSnapshot();
