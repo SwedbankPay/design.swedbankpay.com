@@ -148,7 +148,7 @@ var payex =
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push(["./src/index.js","designguide","px","documentation"]);
+/******/ 	deferredModules.push(["./src/index.js","px","designguide","documentation"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
@@ -1824,33 +1824,6 @@ function toComment(sourceMap) {
 	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
 
 	return '/*# ' + data + ' */';
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/lib/url/escape.js":
-/*!***************************************************!*\
-  !*** ./node_modules/css-loader/lib/url/escape.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = function escape(url) {
-    if (typeof url !== 'string') {
-        return url
-    }
-    // If url is already wrapped in quotes, remove them
-    if (/^['"].*['"]$/.test(url)) {
-        url = url.slice(1, -1);
-    }
-    // Should url be wrapped?
-    // See https://drafts.csswg.org/css-values-3/#urls
-    if (/["'() \t\n]/.test(url)) {
-        return '"' + url.replace(/"/g, '\\"').replace(/\n/g, '\\n') + '"'
-    }
-
-    return url
 }
 
 
@@ -44265,7 +44238,7 @@ module.exports = function(module) {
 /*! exports provided: name, version, description, main, scripts, repository, keywords, author, license, bugs, homepage, eslint-teamcity, dependencies, devDependencies, default */
 /***/ (function(module) {
 
-module.exports = {"name":"design.payex.com","version":"0.9.1","description":"PayEx DesignGuide","main":"index.js","scripts":{"start":"webpack-dev-server --hot --mode development","start:prod":"webpack-dev-server --hot --mode production","build":"npm run lint && webpack --mode development","build:prod":"npm run lint && webpack --mode production","deploy":"webpack --mode production","test":"jest","test:update":"npm test -- -u","lint":"eslint src/ && stylelint src/less/","eslint:tc":"eslint src/ -f './node_modules/eslint-teamcity/index.js'","stylelint:tc":"stylelint src/less/ --custom-formatter node_modules/stylelint-teamcity-formatter","e2e:chrome":"testcafe chrome src/**/*.spec.js"},"repository":{"type":"git","url":"git+https://github.com/PayEx/design.payex.com.git"},"keywords":[],"author":"PayEx","license":"MIT","bugs":{"url":"https://github.com/PayEx/design.payex.com/issues"},"homepage":"https://github.com/PayEx/design.payex.com#readme","eslint-teamcity":{"reporter":"inspections"},"dependencies":{"classnames":"^2.2.5","clipboard":"^2.0.0","js-beautify":"^1.7.5","normalize.css":"^8.0.0","prismjs":"^1.11.0","react":"^16.3.2","react-dom":"^16.3.2","react-prism":"^4.3.2","react-router-dom":"^4.2.2","rome":"^2.1.22"},"devDependencies":{"@babel/cli":"^7.0.0-beta.49","@babel/core":"^7.0.0-beta.49","@babel/preset-env":"^7.0.0-beta.49","@babel/preset-react":"^7.0.0-beta.49","app-manifest-webpack-plugin":"^1.1.3","autoprefixer":"^7.2.5","babel-core":"^7.0.0-bridge.0","babel-eslint":"^8.2.2","babel-jest":"^23.0.1","babel-loader":"^8.0.0-beta.3","babel-plugin-root-import":"^6.1.0","clean-webpack-plugin":"^0.1.19","copy-webpack-plugin":"^4.5.1","core-js":"^2.5.7","css-loader":"^0.28.9","enzyme":"^3.3.0","enzyme-adapter-react-16":"^1.1.1","enzyme-to-json":"^3.3.1","eslint":"^4.17.0","eslint-plugin-babel":"^5.0.0","eslint-plugin-jest":"^21.7.0","eslint-plugin-node":"^6.0.0","eslint-plugin-react":"^7.6.1","eslint-plugin-security":"^1.4.0","eslint-plugin-testcafe":"^0.2.1","eslint-teamcity":"^2.0.0","file-loader":"^1.1.6","html-webpack-plugin":"^3.2.0","jest":"^23.1.0","jest-teamcity-reporter":"^0.9.0","less":"^3.6.0","less-loader":"^4.1.0","less-plugin-lists":"^1.1.2","mini-css-extract-plugin":"^0.4.2","postcss-loader":"^2.1.0","react-test-renderer":"^16.2.0","style-loader":"^0.20.1","stylelint":"^9.1.1","stylelint-config-recommended":"^2.1.0","stylelint-config-standard":"^18.2.0","stylelint-teamcity-formatter":"0.0.3","testcafe":"^0.21.1","testcafe-reporter-teamcity":"^1.0.9","uglifyjs-webpack-plugin":"^1.3.0","webpack":"^4.17.1","webpack-cli":"^3.1.0","webpack-dev-server":"^3.1.5"}};
+module.exports = {"name":"design.payex.com","version":"0.9.1","description":"PayEx DesignGuide","main":"index.js","scripts":{"start":"webpack-dev-server --hot --mode development","start:prod":"webpack-dev-server --hot --mode production","build":"webpack --mode development","build:prod":"npm run lint && webpack --mode production","deploy":"webpack --mode production","test":"jest","test:update":"npm test -- -u","lint":"eslint src/ && stylelint src/less/","eslint:tc":"eslint src/ -f './node_modules/eslint-teamcity/index.js'","stylelint:tc":"stylelint src/less/ --custom-formatter node_modules/stylelint-teamcity-formatter","e2e:chrome":"testcafe chrome src/**/*.spec.js"},"repository":{"type":"git","url":"git+https://github.com/PayEx/design.payex.com.git"},"keywords":[],"author":"PayEx","license":"MIT","bugs":{"url":"https://github.com/PayEx/design.payex.com/issues"},"homepage":"https://github.com/PayEx/design.payex.com#readme","eslint-teamcity":{"reporter":"inspections"},"dependencies":{"classnames":"^2.2.5","clipboard":"^2.0.0","js-beautify":"^1.7.5","normalize.css":"^8.0.0","prismjs":"^1.11.0","react":"^16.3.2","react-dom":"^16.3.2","react-prism":"^4.3.2","react-router-dom":"^4.2.2","rome":"^2.1.22"},"devDependencies":{"@babel/cli":"^7.0.0-beta.49","@babel/core":"^7.0.0-beta.49","@babel/preset-env":"^7.0.0-beta.49","@babel/preset-react":"^7.0.0-beta.49","app-manifest-webpack-plugin":"^1.1.3","autoprefixer":"^7.2.5","babel-core":"^7.0.0-bridge.0","babel-eslint":"^8.2.2","babel-jest":"^23.0.1","babel-loader":"^8.0.0-beta.3","babel-plugin-root-import":"^6.1.0","core-js":"^2.5.7","css-loader":"^0.28.9","enzyme":"^3.3.0","enzyme-adapter-react-16":"^1.1.1","enzyme-to-json":"^3.3.1","eslint":"^4.17.0","eslint-plugin-babel":"^5.0.0","eslint-plugin-jest":"^21.7.0","eslint-plugin-node":"^6.0.0","eslint-plugin-react":"^7.6.1","eslint-plugin-security":"^1.4.0","eslint-plugin-testcafe":"^0.2.1","eslint-teamcity":"^2.0.0","file-loader":"^1.1.6","filemanager-webpack-plugin":"^2.0.4","html-webpack-plugin":"^3.2.0","jest":"^23.1.0","jest-teamcity-reporter":"^0.9.0","less":"^3.6.0","less-loader":"^4.1.0","less-plugin-lists":"^1.1.2","mini-css-extract-plugin":"^0.4.2","postcss-loader":"^2.1.0","react-test-renderer":"^16.2.0","style-loader":"^0.20.1","stylelint":"^9.1.1","stylelint-config-recommended":"^2.1.0","stylelint-config-standard":"^18.2.0","stylelint-teamcity-formatter":"0.0.3","testcafe":"^0.21.1","testcafe-reporter-teamcity":"^1.0.9","uglifyjs-webpack-plugin":"^1.3.0","webpack":"^4.17.1","webpack-cli":"^3.1.0","webpack-dev-server":"^3.1.5"}};
 
 /***/ }),
 
@@ -49278,18 +49251,22 @@ exports.default = _default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.FaviconsText = exports.OurFavicon = exports.default = void 0;
+exports.FaviconsText = exports.Usage = exports.OurFavicon = exports.default = void 0;
 
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
+var _reactPrism = _interopRequireDefault(__webpack_require__(/*! react-prism */ "./node_modules/react-prism/lib/index.js"));
+
 var _utils = __webpack_require__(/*! ../../utils */ "./src/App/Documentation/utils/index.js");
+
+var _Button = _interopRequireDefault(__webpack_require__(/*! ../../../components/Button */ "./src/App/components/Button/index.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var OurFavicon = function OurFavicon() {
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("h2", {
     id: "our-favicon"
-  }, "Our favicon"), _react.default.createElement("p", null, "Our favicons..."), _react.default.createElement(_utils.ComponentPreview, {
+  }, "Our favicon"), _react.default.createElement("p", null, "Our favicon..."), _react.default.createElement(_utils.ComponentPreview, {
     language: "html",
     showCasePanel: true
   }, _react.default.createElement("img", {
@@ -49300,12 +49277,162 @@ var OurFavicon = function OurFavicon() {
 
 exports.OurFavicon = OurFavicon;
 
+var Usage = function Usage() {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("h2", {
+    id: "usage"
+  }, "Usage"), _react.default.createElement("p", null, "To use our favicons download the zip-file below and extract it to the root of your build-folder. Insert the code below in the ", _react.default.createElement(_reactPrism.default, {
+    className: "language-html"
+  }, "<head>"), " tag of your html documents and you are ready to go."), _react.default.createElement("p", null, "You should also rename the ", _react.default.createElement(_utils.Attribute, {
+    name: "content"
+  }), " of the ", _react.default.createElement(_utils.Attribute, {
+    value: "apple-mobile-web-app-title"
+  }), " and ", _react.default.createElement(_utils.Attribute, {
+    value: "application-name"
+  }), " ", _react.default.createElement(_reactPrism.default, {
+    className: "language-html"
+  }, "<meta>"), " tags to reflect the title of your project."), _react.default.createElement(_Button.default, {
+    type: "brand",
+    icon: "file_download",
+    href: "/icons.zip",
+    label: "Download Favicons"
+  }), _react.default.createElement(_utils.ComponentPreview, {
+    language: "html",
+    codeFigure: true
+  }, _react.default.createElement("link", {
+    rel: "apple-touch-icon",
+    sizes: "114x114",
+    href: "/icons/apple-touch-icon-114x114.png"
+  }), _react.default.createElement("link", {
+    rel: "apple-touch-icon",
+    sizes: "120x120",
+    href: "/icons/apple-touch-icon-120x120.png"
+  }), _react.default.createElement("link", {
+    rel: "apple-touch-icon",
+    sizes: "144x144",
+    href: "/icons/apple-touch-icon-144x144.png"
+  }), _react.default.createElement("link", {
+    rel: "apple-touch-icon",
+    sizes: "152x152",
+    href: "/icons/apple-touch-icon-152x152.png"
+  }), _react.default.createElement("link", {
+    rel: "apple-touch-icon",
+    sizes: "180x180",
+    href: "/icons/apple-touch-icon-180x180.png"
+  }), _react.default.createElement("link", {
+    rel: "apple-touch-icon",
+    sizes: "57x57",
+    href: "/icons/apple-touch-icon-57x57.png"
+  }), _react.default.createElement("link", {
+    rel: "apple-touch-icon",
+    sizes: "60x60",
+    href: "/icons/apple-touch-icon-60x60.png"
+  }), _react.default.createElement("link", {
+    rel: "apple-touch-icon",
+    sizes: "72x72",
+    href: "/icons/apple-touch-icon-72x72.png"
+  }), _react.default.createElement("link", {
+    rel: "apple-touch-icon",
+    sizes: "76x76",
+    href: "/icons/apple-touch-icon-76x76.png"
+  }), _react.default.createElement("link", {
+    rel: "apple-touch-startup-image",
+    media: "(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)",
+    href: "/icons/apple-touch-startup-image-320x460.png"
+  }), _react.default.createElement("link", {
+    rel: "apple-touch-startup-image",
+    media: "(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)",
+    href: "/icons/apple-touch-startup-image-640x920.png"
+  }), _react.default.createElement("link", {
+    rel: "apple-touch-startup-image",
+    media: "(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)",
+    href: "/icons/apple-touch-startup-image-640x1096.png"
+  }), _react.default.createElement("link", {
+    rel: "apple-touch-startup-image",
+    media: "(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)",
+    href: "/icons/apple-touch-startup-image-750x1294.png"
+  }), _react.default.createElement("link", {
+    rel: "apple-touch-startup-image",
+    media: "(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)",
+    href: "/icons/apple-touch-startup-image-1182x2208.png"
+  }), _react.default.createElement("link", {
+    rel: "apple-touch-startup-image",
+    media: "(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)",
+    href: "/icons/apple-touch-startup-image-1242x2148.png"
+  }), _react.default.createElement("link", {
+    rel: "apple-touch-startup-image",
+    media: "(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)",
+    href: "/icons/apple-touch-startup-image-748x1024.png"
+  }), _react.default.createElement("link", {
+    rel: "apple-touch-startup-image",
+    media: "(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)",
+    href: "/icons/apple-touch-startup-image-1496x2048.png"
+  }), _react.default.createElement("link", {
+    rel: "apple-touch-startup-image",
+    media: "(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)",
+    href: "/icons/apple-touch-startup-image-768x1004.png"
+  }), _react.default.createElement("link", {
+    rel: "apple-touch-startup-image",
+    media: "(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)",
+    href: "/icons/apple-touch-startup-image-1536x2008.png"
+  }), _react.default.createElement("link", {
+    rel: "icon",
+    type: "image/png",
+    sizes: "16x16",
+    href: "/icons/favicon-16x16.png"
+  }), _react.default.createElement("link", {
+    rel: "icon",
+    type: "image/png",
+    sizes: "228x228",
+    href: "/icons/coast-228x228.png"
+  }), _react.default.createElement("link", {
+    rel: "icon",
+    type: "image/png",
+    sizes: "32x32",
+    href: "/icons/favicon-32x32.png"
+  }), _react.default.createElement("link", {
+    rel: "manifest",
+    href: "/icons/manifest.json"
+  }), _react.default.createElement("link", {
+    rel: "shortcut icon",
+    href: "/icons/favicon.ico"
+  }), _react.default.createElement("meta", {
+    name: "apple-mobile-web-app-capable",
+    content: "yes"
+  }), _react.default.createElement("meta", {
+    name: "apple-mobile-web-app-status-bar-style",
+    content: "black-translucent"
+  }), _react.default.createElement("meta", {
+    name: "apple-mobile-web-app-title",
+    content: "PayEx App"
+  }), _react.default.createElement("meta", {
+    name: "application-name",
+    content: "PayEx App"
+  }), _react.default.createElement("meta", {
+    name: "mobile-web-app-capable",
+    content: "yes"
+  }), _react.default.createElement("meta", {
+    name: "msapplication-TileColor",
+    content: "#000"
+  }), _react.default.createElement("meta", {
+    name: "msapplication-TileImage",
+    content: "/icons/mstile-144x144.png"
+  }), _react.default.createElement("meta", {
+    name: "msapplication-config",
+    content: "/icons/browserconfig.xml"
+  }), _react.default.createElement("meta", {
+    name: "theme-color",
+    content: "#000"
+  })));
+};
+
+exports.Usage = Usage;
+
 var FaviconsText = function FaviconsText() {
   return _react.default.createElement("div", {
     className: "col-md-12 col-lg-10 doc-body"
   }, _react.default.createElement("p", {
     className: "lead"
-  }, "The PayEx favicon..."), _react.default.createElement(OurFavicon, null));
+  }, "The PayEx favicon..."), _react.default.createElement(OurFavicon, null), _react.default.createElement(Usage, null));
 };
 
 exports.FaviconsText = FaviconsText;
@@ -53927,28 +54054,6 @@ exports.setTitle = setTitle;
 
 /***/ }),
 
-/***/ "./src/img/payexmail.png":
-/*!*******************************!*\
-  !*** ./src/img/payexmail.png ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "img/payexmail.png?e7c2d6cf7099ce951f568b2053f09c51";
-
-/***/ }),
-
-/***/ "./src/img/px-logo.svg":
-/*!*****************************!*\
-  !*** ./src/img/px-logo.svg ***!
-  \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "img/px-logo.svg?467d541679b8f5b7ec3bcfdc39af22a5";
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -55724,4 +55829,4 @@ exports.default = _default;
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.js.map?f12f9c3d6dd18665492b
+//# sourceMappingURL=app.js.map?2f393ddd23bd4adddeb1

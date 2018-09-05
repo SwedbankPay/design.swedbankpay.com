@@ -2,19 +2,17 @@
 const pkg = require("./package.json");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
 const webpack = require("webpack");
 const autoprefixer = require("autoprefixer");
 const AppManifestWebpackPlugin = require("app-manifest-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
 const lessListPlugin = require("less-plugin-lists");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const FileManagerPlugin = require("filemanager-webpack-plugin");
 
 module.exports = (env, argv) => {
     const version = pkg.version;
     const isProd = argv.mode === "production";
-    const isDevServer = !!argv.host;
 
     const config = {
         entry: {
@@ -28,7 +26,7 @@ module.exports = (env, argv) => {
         output: {
             library: "payex",
             path: path.resolve(__dirname, "dist"),
-            filename: `${version}/scripts/[name].js?[hash]`,
+            filename: `v/${version}/scripts/[name].js?[hash]`,
             publicPath: "/"
         },
         devtool: "source-map",
@@ -177,7 +175,7 @@ module.exports = (env, argv) => {
                     developerName: "PayEx",
                     developerURL: "https://payex.com",
                     background: "#000",
-                    theme_color: "#000",
+                    theme_color: "#2da944",
                     version: version,
                     icons: {
                         android: true,
@@ -194,18 +192,54 @@ module.exports = (env, argv) => {
                 }
             }),
             new MiniCssExtractPlugin({
-                filename: `${version}/styles/[name].css`
+                filename: `v/${version}/styles/[name].css`
             }),
-            new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/), // For now this ignores moment's locale folder, which doubles moment's size..
-            new CopyWebpackPlugin([
-                { from: "static" }
-            ])
+            new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/) // For now this ignores moment's locale folder, which doubles moment's size..
         ]
     };
 
-    if (!isDevServer) {
+    if (isProd) {
         config.plugins.push(
-            new CleanWebpackPlugin(["dist"])
+            new FileManagerPlugin({
+                onStart: [
+                    {
+                        delete: [
+                            "./dist"
+                        ],
+                        copy: [
+                            {
+                                source: "./static",
+                                destination: "./dist"
+                            }
+                        ]
+                    }
+                ],
+                onEnd: [
+                    {
+                        copy: [
+                            {
+                                source: "./dist/icons",
+                                destination: "./dist/temp/icons"
+                            },
+                            {
+                                source: `./dist/v/${version}`,
+                                destination: `./static/v/${version}`
+                            }
+                        ],
+                        archive: [
+                            {
+                                source: "./dist/temp",
+                                destination: "./dist/icons.zip"
+                            }
+                        ]
+                    },
+                    {
+                        delete: [
+                            "./dist/temp"
+                        ]
+                    }
+                ]
+            })
         );
     }
 

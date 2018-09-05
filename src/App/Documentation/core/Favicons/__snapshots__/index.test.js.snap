@@ -73,7 +73,11 @@ exports[`Core: Favicons Usage renders 1`] = `
     >
       &lt;meta&gt;
     </PrismCode>
-     tags to reflect the title of your project.
+     tags to reflect the title of your project. Make sure to also do this in the 
+    <code>
+      manifest.json
+    </code>
+     file in the icons folder.
   </p>
   <Button
     href="/icons.zip"
@@ -199,7 +203,7 @@ exports[`Core: Favicons Usage renders 1`] = `
       type="image/png"
     />
     <link
-      href="/manifest.json"
+      href="/icons/manifest.json"
       rel="manifest"
     />
     <link
@@ -235,7 +239,7 @@ exports[`Core: Favicons Usage renders 1`] = `
       name="msapplication-TileImage"
     />
     <meta
-      content="/browserconfig.xml"
+      content="/icons/browserconfig.xml"
       name="msapplication-config"
     />
     <meta

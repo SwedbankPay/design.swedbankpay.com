@@ -18,7 +18,7 @@ const Usage = () => (
     <>
         <h2 id="usage">Usage</h2>
         <p>To use our favicons download the zip-file below and extract it to the root of your build-folder. Insert the code below in the <PrismCode className="language-html">{"<head>"}</PrismCode> tag of your html documents and you are ready to go.</p>
-        <p>You should also rename the <Attribute name="content" /> of the <Attribute value="apple-mobile-web-app-title" /> and <Attribute value="application-name" /> <PrismCode className="language-html">{"<meta>"}</PrismCode> tags to reflect the title of your project.</p>
+        <p>You should also rename the <Attribute name="content" /> of the <Attribute value="apple-mobile-web-app-title" /> and <Attribute value="application-name" /> <PrismCode className="language-html">{"<meta>"}</PrismCode> tags to reflect the title of your project. Make sure to also do this in the <code>manifest.json</code> file in the icons folder.</p>
         <Button type="brand" icon="file_download" href="/icons.zip" label="Download Favicons" />
         <ComponentPreview language="html" codeFigure>
             <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-touch-icon-114x114.png" />
@@ -43,7 +43,7 @@ const Usage = () => (
             <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
             <link rel="icon" type="image/png" sizes="228x228" href="/icons/coast-228x228.png" />
             <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
-            <link rel="manifest" href="/manifest.json" />
+            <link rel="manifest" href="/icons/manifest.json" />
             <link rel="shortcut icon" href="/icons/favicon.ico" />
             <meta name="apple-mobile-web-app-capable" content="yes" />
             <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -52,7 +52,7 @@ const Usage = () => (
             <meta name="mobile-web-app-capable" content="yes" />
             <meta name="msapplication-TileColor" content="#000" />
             <meta name="msapplication-TileImage" content="/icons/mstile-144x144.png" />
-            <meta name="msapplication-config" content="/browserconfig.xml" />
+            <meta name="msapplication-config" content="/icons/browserconfig.xml" />
             <meta name="theme-color" content="#000" />
         </ComponentPreview>
     </>
