@@ -255,4 +255,4 @@ __webpack_require__(/*! ./Object.assign */ "./src/polyfills/Object.assign.js");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=polyfills.js.map?f12f9c3d6dd18665492b
+//# sourceMappingURL=polyfills.js.map?9726597cccc1aa01d870

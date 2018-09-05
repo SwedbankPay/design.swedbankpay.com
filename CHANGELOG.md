@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 
 - Added section about favicons.
 - Added zip file with favicons, manifest.json and browserconfig.xml available for download.
+- Added functionality to support older versions of the designguide.
 
 ### Changed
 
