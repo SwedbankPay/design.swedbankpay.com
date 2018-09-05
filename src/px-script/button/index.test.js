@@ -17,8 +17,8 @@ describe("px-script: button", () => {
 
         const Buttons = () => (
             <div>
-                <Button type="default" label="test" loader={true} />
-                <Button type="default" label="test" loader={true} />
+                <Button type="primary" label="test" loader={true} />
+                <Button type="primary" label="test" loader={true} />
             </div>
         );
 

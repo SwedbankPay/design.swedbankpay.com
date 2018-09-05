@@ -13,6 +13,11 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - Migrated from webpack v.3 to v.4.
+- Renamed button default to secondary, and joined button brand and success under the new name primary.
+
+### Removed
+
+- Removed button light, warning and neutral.
 
 ## [0.9.1] - 2018-08-24
 

@@ -331,7 +331,7 @@ exports[`Documentation: Forms Overview renders 1`] = `
       <Button
         btnType="submit"
         label="Submit"
-        type="brand"
+        type="primary"
       />
       
 
@@ -563,7 +563,7 @@ exports[`Documentation: Forms UsageWithFieldsets renders 1`] = `
       <Button
         btnType="submit"
         label="Log in"
-        type="neutral"
+        type="primary"
       />
       
 
@@ -617,7 +617,7 @@ exports[`Documentation: Forms UsageWithFieldsets renders 1`] = `
       <Button
         btnType="submit"
         label="Log in"
-        type="neutral"
+        type="primary"
       />
       
 
@@ -671,12 +671,11 @@ exports[`Documentation: Forms Validation renders 1`] = `
       />
       
 
-      <button
-        className="btn btn-brand"
-        type="submit"
-      >
-        Submit
-      </button>
+      <Button
+        btnType="submit"
+        label="Submit"
+        type="primary"
+      />
       
 
     </form>
