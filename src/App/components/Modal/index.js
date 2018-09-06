@@ -10,7 +10,7 @@ const ModalHeading = ({ title, subTitle }) => (
 );
 
 const OpenModalButton = ({ id }) => (
-    <button data-modal-open={id} className="btn btn-brand">Open modal</button>
+    <button data-modal-open={id} className="btn btn-primary">Open modal</button>
 );
 
 const Modal = ({ title, subTitle, id, footerText, footerAlignment, type, size, visible, isStatic, button, children }) => {
@@ -36,8 +36,8 @@ const Modal = ({ title, subTitle, id, footerText, footerAlignment, type, size, v
                         </div>
                         {footerText ? (
                             <footer className={`${footerAlignment ? `modal-footer-${footerAlignment}` : ""}`}>{"\n"}
-                                <button type="button" className="btn btn-default" data-modal-close={id}>Close</button>{"\n"}
-                                <button type="submit" className="btn btn-brand">Submit</button>
+                                <button type="button" className="btn btn-secondary" data-modal-close={id}>Close</button>{"\n"}
+                                <button type="submit" className="btn btn-primary">Submit</button>
                                 {/* <p className="text-muted">{footerText}</p> */}
                             </footer>
                         ) : null}

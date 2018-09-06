@@ -78,22 +78,22 @@ const ButtonAddons = () => (
                 type="text"
                 prefixType="button"
                 prefixValue="Button"
-                prefixBtnColor="default"
+                prefixBtnColor="secondary"
             /> {"\n\n"}
             <InputGroupComponent
                 type="text"
                 postfixType="button"
                 postfixValue="Button"
-                postfixBtnColor="brand"
+                postfixBtnColor="primary"
             /> {"\n\n"}
             <InputGroupComponent
                 type="text"
                 prefixType="button"
                 prefixValue="Button"
-                prefixBtnColor="default"
+                prefixBtnColor="secondary"
                 postfixType="button"
                 postfixValue="Button"
-                postfixBtnColor="neutral"
+                postfixBtnColor="danger"
             />
         </ComponentPreview>
     </>
