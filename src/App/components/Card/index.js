@@ -23,7 +23,7 @@ const Card = ({ type, title, imgSrc, icon, highlightTitle, highlightSubTitle, te
             <small>{smallText}</small>
         </div>
         <footer>
-            <button type="button" className="btn btn-success btn-block">{btnTxt}</button>
+            <button type="button" className="btn btn-primary btn-block">{btnTxt}</button>
             {footerTxt ? <div className="footer-text"><p>{footerTxt}</p></div> : null}
             {footerLinkTxt ? <div className="footer-link"><a href={footerLink || "#"}>{footerLinkTxt}</a></div> : null}
         </footer>

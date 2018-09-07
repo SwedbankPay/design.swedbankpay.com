@@ -327,7 +327,7 @@ exports[`Component: Modal -  renders a footer when prop footerText is provided 1
           
 
           <button
-            className="btn btn-default"
+            className="btn btn-secondary"
             type="button"
           >
             Close
@@ -335,7 +335,7 @@ exports[`Component: Modal -  renders a footer when prop footerText is provided 1
           
 
           <button
-            className="btn btn-brand"
+            className="btn btn-primary"
             type="submit"
           >
             Submit
@@ -387,7 +387,7 @@ exports[`Component: Modal -  renders a footer with alignment when prop footerTex
           
 
           <button
-            className="btn btn-default"
+            className="btn btn-secondary"
             type="button"
           >
             Close
@@ -395,7 +395,7 @@ exports[`Component: Modal -  renders a footer with alignment when prop footerTex
           
 
           <button
-            className="btn btn-brand"
+            className="btn btn-primary"
             type="submit"
           >
             Submit

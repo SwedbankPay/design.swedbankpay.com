@@ -39,7 +39,7 @@ const Overview = () => (
                 <div className="form-group">
                     <Checkbox label={"Subscribe to our Shovels and Tapestry catalogue"} id="subscribe-checkbox" />
                 </div>{"\n"}
-                <Button type="brand" label="Submit" btnType="submit" />{"\n"}
+                <Button type="primary" label="Submit" btnType="submit" />{"\n"}
             </form>
         </ComponentPreview>
     </>
@@ -141,7 +141,7 @@ const Validation = () => (
                     helpBlock="You know, electronic mail?"
                     validate
                 />{"\n"}
-                <button className="btn btn-brand" type="submit">Submit</button>{"\n"}
+                <Button type="primary" label="Submit" btnType="submit" />{"\n"}
             </form>
         </ComponentPreview>
     </>
@@ -171,7 +171,7 @@ const UsageWithFieldsets = () => (
                     />
                     <Checkbox label="Remember me" id="fieldset-checkbox" />
                 </fieldset>{"\n"}
-                <Button type="neutral" label="Log in" btnType="submit" />{"\n"}
+                <Button type="primary" label="Log in" btnType="submit" />{"\n"}
             </form>
         </ComponentPreview>
         <h3>Disable a fieldset</h3>
@@ -196,7 +196,7 @@ const UsageWithFieldsets = () => (
                     />
                     <Checkbox label="Remember me" id="fieldset-disabled-checkbox" />
                 </fieldset>{"\n"}
-                <Button type="neutral" label="Log in" btnType="submit" />{"\n"}
+                <Button type="primary" label="Log in" btnType="submit" />{"\n"}
             </form>
         </ComponentPreview>
     </>
