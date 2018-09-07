@@ -9,10 +9,12 @@ const lessListPlugin = require("less-plugin-lists");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const FileManagerPlugin = require("filemanager-webpack-plugin");
+const SentryCliPlugin = require("@sentry/webpack-plugin");
 
 module.exports = (env, argv) => {
     const version = pkg.version;
     const isProd = argv.mode === "production";
+    const isDevServer = !!argv.host;
 
     const config = {
         entry: {
@@ -198,7 +200,7 @@ module.exports = (env, argv) => {
         ]
     };
 
-    if (isProd) {
+    if (isProd && !isDevServer) {
         config.plugins.push(
             new FileManagerPlugin({
                 onStart: [
@@ -239,6 +241,11 @@ module.exports = (env, argv) => {
                         ]
                     }
                 ]
+            }),
+            new SentryCliPlugin({
+                release: version,
+                include: ".",
+                ignore: ["node_modules", "webpack.config.js"]
             })
         );
     }
