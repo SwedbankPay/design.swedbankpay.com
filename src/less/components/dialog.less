@@ -1,0 +1,137 @@
+.dialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: @zindex-dialog;
+    overflow-y: scroll;
+    outline: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+
+    .dialog-default {
+        .dialog-variant(@white, @brand-primary, @dialog-default-color);
+    }
+
+    &.dialog-brand {
+        .dialog-variant(@brand-primary, @white, @brand-primary);
+    }
+
+    &.static {
+        position: relative;
+        background-color: transparent;
+        overflow: initial;
+        z-index: inherit;
+
+        .dialog-dialog {
+            margin: (@dialog-margin / 2) auto;
+        }
+    }
+
+    &.dialog-small {
+        .dialog-dialog {
+            max-width: @dialog-size-sm;
+        }
+    }
+
+    &.dialog-medium {
+        .dialog-dialog {
+            max-width: @dialog-size-md;
+        }
+    }
+
+    &.dialog-large {
+        .dialog-dialog {
+            max-width: @dialog-size-lg;
+        }
+    }
+
+    .dialog-container {
+        position: relative;
+    }
+
+    .dialog-dialog {
+        margin: @dialog-margin auto;
+        background-color: @dialog-background-color;
+        box-shadow: @dialog-box-shadow;
+    }
+
+    header {
+        padding: @dialog-heading-padding;
+        border-bottom: 1px solid @dialog-default-border-color;
+    }
+
+    .dialog-close {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        opacity: 0.8;
+        line-height: 1;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &:focus {
+            .tab-focus();
+        }
+    }
+
+    .dialog-title {
+        display: inline-block;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        > a,
+        > small,
+        > .small,
+        > small > a,
+        > .small > a {
+            color: inherit;
+        }
+    }
+
+    .dialog-sub-title {
+        font-weight: normal;
+        font-style: italic;
+        display: block;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        > a,
+        > small,
+        > .small,
+        > small > a,
+        > .small > a {
+            color: inherit;
+        }
+    }
+
+    .dialog-body {
+        background-color: @white;
+        padding: @dialog-body-padding;
+        &:extend(.clearfix all);
+    }
+
+    footer {
+        text-align: left;
+        background-color: @background-body;
+        padding: @dialog-footer-padding;
+        margin: @dialog-footer-margin;
+
+        &:extend(.clearfix all);
+
+        &.dialog-footer-centered {
+            text-align: center;
+        }
+
+        &.dialog-footer-right {
+            text-align: right;
+        }
+
+        p {
+            margin-bottom: 0.5rem;
+        }
+    }
+}

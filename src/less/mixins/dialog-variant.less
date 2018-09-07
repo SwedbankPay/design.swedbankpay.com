@@ -1,0 +1,22 @@
+.dialog-variant(@bg-color, @color, @border-color) {
+    & header {
+        background-color: @bg-color;
+        color: @color;
+        border-color: @border-color;
+
+        /* stylelint-disable selector-list-comma-newline-after */
+        h1, h2, h3, h4, h5, h6,
+        .h1, .h2, .h3, .h4, .h5, .h6 {
+            color: @color;
+        }
+        /* stylelint-enable selector-list-comma-newline-after */
+    }
+
+    .modal-close {
+        color: @color;
+    }
+
+    & footer {
+        border-bottom-color: @border-color;
+    }
+}
