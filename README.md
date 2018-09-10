@@ -3,6 +3,8 @@
 # design.payex.com
 
 [![Build status](https://ci.appveyor.com/api/projects/status/u04ft9aha1uwiex4/branch/master?svg=true)](https://ci.appveyor.com/project/erikhallaraaker/design-payex-com/branch/master)
+[![dependencies Status](https://david-dm.org/payex/design.payex.com/status.svg)](https://david-dm.org/payex/design.payex.com)
+[![devDependencies Status](https://david-dm.org/payex/design.payex.com/dev-status.svg)](https://david-dm.org/payex/design.payex.com?type=dev)
 
 ## Installing / Getting started
 
