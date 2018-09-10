@@ -44,6 +44,11 @@ export default [
                 component: require("../Documentation/core/Color")
             },
             {
+                title: "Favicons",
+                path: "/docs/core/favicons",
+                component: require("../Documentation/core/Favicons")
+            },
+            {
                 title: "Grid",
                 path: "/docs/core/grid",
                 component: require("../Documentation/core/Grid")
