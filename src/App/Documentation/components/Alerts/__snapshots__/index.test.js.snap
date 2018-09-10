@@ -222,7 +222,7 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
 
 
     <button
-      className="btn btn-neutral"
+      className="btn btn-primary"
       data-alert-close="alert-success-1"
       type="button"
     >

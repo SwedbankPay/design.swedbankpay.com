@@ -12,10 +12,10 @@ const Overview = () => (
             {"px.toast({ html: \"I am a toast!\" });"}
         </ComponentPreview>
         <ComponentPreview language="html" codeFigure dangerousHTML>
-            {"<button onclick=\"px.toast({ html: 'I am a toast!' })\" class=\"btn\">Toast!</button>"}
+            {"<button onclick=\"px.toast({ html: 'I am a toast!' })\" class=\"btn btn-primary\">Toast!</button>"}
         </ComponentPreview>
         <ComponentPreview language="html" showCasePanel>
-            <button className="btn btn-brand" type="button" onClick={() => toast({ html: "I am a toast!" })}>Click for toast!</button>
+            <button className="btn btn-primary" type="button" onClick={() => toast({ html: "I am a toast!" })}>Click for toast!</button>
         </ComponentPreview>
     </>
 );
@@ -103,14 +103,14 @@ const PremadeToasts = () => (
         <h2 id="premade-toasts">Premade toasts</h2>
         <p>There are four premade toast styles other than the default one; <span className="token attr-value">neutral</span>, <span className="token attr-value">success</span>, <span className="token attr-value">warning</span> and <span className="token attr-value">danger</span>. Apply the desired one to the options object and be amazed!</p>
         <ComponentPreview language="html" codeFigure dangerousHTML>
-            {"<button onclick=\"px.toast({ html: 'I am a neutral toast!', type: 'neutral' })\" class=\"btn\">Neutral toast</button>"}
-            {"<button onclick=\"px.toast({ html: 'I am a success toast!', type: 'success' })\" class=\"btn\">Success toast</button>"}
-            {"<button onclick=\"px.toast({ html: 'I am a warning toast!', type: 'warning' })\" class=\"btn\">Warning toast</button>"}
-            {"<button onclick=\"px.toast({ html: 'I am a danger toast!', type: 'danger' })\" class=\"btn\">Danger toast</button>"}
+            {"<button type=\"button\" onclick=\"px.toast({ html: 'I am a neutral toast!', type: 'neutral' })\" class=\"btn btn-primary\">Neutral toast</button>"}
+            {"<button type=\"button\" onclick=\"px.toast({ html: 'I am a success toast!', type: 'success' })\" class=\"btn btn-primary\">Success toast</button>"}
+            {"<button type=\"button\" onclick=\"px.toast({ html: 'I am a warning toast!', type: 'warning' })\" class=\"btn btn-primary\">Warning toast</button>"}
+            {"<button type=\"button\" onclick=\"px.toast({ html: 'I am a danger toast!', type: 'danger' })\" class=\"btn btn-primary\">Danger toast</button>"}
         </ComponentPreview>
         <ComponentPreview language="html" showCasePanel>
             <button
-                className="btn btn-neutral"
+                className="btn btn-primary"
                 type="button"
                 onClick={() => toast({
                     html: "I am a toast!",
@@ -120,7 +120,7 @@ const PremadeToasts = () => (
                 Neutral toast
             </button>{"\n"}
             <button
-                className="btn btn-success"
+                className="btn btn-primary"
                 type="button"
                 onClick={() => toast({
                     html: "I am a toast!",
@@ -130,7 +130,7 @@ const PremadeToasts = () => (
                 Success toast
             </button>{"\n"}
             <button
-                className="btn btn-warning"
+                className="btn btn-primary"
                 type="button"
                 onClick={() => toast({
                     html: "I am a toast!",
@@ -140,7 +140,7 @@ const PremadeToasts = () => (
                 Warning toast
             </button>{"\n"}
             <button
-                className="btn btn-danger"
+                className="btn btn-primary"
                 type="button"
                 onClick={() => toast({
                     html: "I am a toast!",
@@ -165,7 +165,7 @@ const CustomHtml = () => {
                 {"px.toast({ html: toastHtml });"}
             </ComponentPreview>
             <ComponentPreview language="html" showCasePanel>
-                <button className="btn btn-brand" type="button" onClick={() => toast({ html: toastHtml })}>Toast with action</button>
+                <button className="btn btn-primary" type="button" onClick={() => toast({ html: toastHtml })}>Toast with action</button>
             </ComponentPreview>
         </>
     );
