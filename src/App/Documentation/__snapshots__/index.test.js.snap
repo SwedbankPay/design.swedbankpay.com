@@ -101,6 +101,16 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "FaviconsText": [Function],
+                  "OurFavicon": [Function],
+                  "Usage": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/core/favicons",
+                "title": "Favicons",
+              },
+              Object {
+                "component": Object {
                   "Alignment": [Function],
                   "AutoLayoutColumns": [Function],
                   "GridOptions": [Function],
