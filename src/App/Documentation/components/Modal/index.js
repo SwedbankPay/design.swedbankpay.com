@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc } from "#";
+import { ComponentPreview, DocToc, DeprecatedComponentAlert } from "#";
 import { modal } from "$/px-script";
 import ModalComponent from "@/Modal";
 
@@ -50,6 +50,7 @@ const Demo = () => (
 
 const ModalText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
+        <DeprecatedComponentAlert />
         <p className="lead">Modals...</p>
         <Usage />
         <Demo />

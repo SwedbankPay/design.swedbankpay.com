@@ -145,7 +145,7 @@ export default [
                 component: require("../Documentation/components/MediaObject")
             },
             {
-                title: "Modal",
+                title: "Modal (deprecated)",
                 path: "/docs/components/modal",
                 component: require("../Documentation/components/Modal")
             },

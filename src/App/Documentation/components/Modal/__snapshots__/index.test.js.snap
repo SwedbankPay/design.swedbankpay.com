@@ -38,6 +38,7 @@ exports[`Documentation: Modal ModalText renders 1`] = `
 <div
   className="col-md-12 col-lg-10 doc-body"
 >
+  <DeprecatedComponentAlert />
   <p
     className="lead"
   >

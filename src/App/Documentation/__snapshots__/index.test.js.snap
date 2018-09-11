@@ -342,7 +342,7 @@ exports[`Documentation: index renders 1`] = `
                   "default": [Function],
                 },
                 "path": "/docs/components/modal",
-                "title": "Modal",
+                "title": "Modal (deprecated)",
               },
               Object {
                 "component": Object {

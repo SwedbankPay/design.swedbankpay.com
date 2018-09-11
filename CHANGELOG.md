@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 - Added section about favicons.
 - Added zip file with favicons, manifest.json and browserconfig.xml available for download.
 - Added functionality to support older versions of the designguide.
+- Added dialog component.
 
 ### Changed
 
@@ -18,6 +19,7 @@ All notable changes to this project will be documented in this file.
 ### Removed
 
 - Removed button light, warning and neutral.
+- Deprecated modal component.
 
 ## [0.9.1] - 2018-08-24
 
