@@ -120,6 +120,11 @@ export default [
                 component: require("../Documentation/components/Datepickers")
             },
             {
+                title: "Dialog",
+                path: "/docs/components/dialog",
+                component: require("../Documentation/components/Dialog")
+            },
+            {
                 title: "Forms",
                 path: "/docs/components/forms",
                 component: require("../Documentation/components/Forms")

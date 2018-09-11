@@ -2,6 +2,7 @@ import actionList from "./action-list";
 import alert from "./alert";
 import button from "./button";
 import datepicker from "./datepicker";
+import dialog from "./dialog";
 import loader from "./loader";
 import modal from "./modal";
 import rangeslider from "./rangeslider";
@@ -16,6 +17,7 @@ const px = {
     alert,
     button,
     datepicker,
+    dialog,
     loader,
     modal,
     rangeslider,
@@ -35,4 +37,4 @@ if (!window.stopPx) {
 }
 
 export default px;
-export { actionList, alert, button, datepicker, loader, modal, rangeslider, script, tabs, toast, topbar, validation };
+export { actionList, alert, button, datepicker, dialog, loader, modal, rangeslider, script, tabs, toast, topbar, validation };

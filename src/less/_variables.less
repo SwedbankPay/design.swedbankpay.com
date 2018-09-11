@@ -362,22 +362,17 @@
 /* Colors */
 @dialog-background-color:                   transparent;
 @dialog-content-bg:                         @white;
-@dialog-default-color:                      @gray-8;
-@dialog-default-border-color:               @gray-9;
+@dialog-border-color:                       @gray-9;
+@dialog-border:                             1px solid @gray-9;
 @dialog-box-shadow:                         0 0 30px rgba(133, 133, 133, 0.2);
-@dialog-backdrop-bg:                        @black;
-@dialog-backdrop-opacity:                   0.5;
-
-@dialog-margin:                             2rem;
+@dialog-backdrop-bg:                        fade(@black, 50%);
 
 @dialog-heading-padding:                    1rem 2rem;
 @dialog-body-padding:                       2rem 2rem 1rem 2rem;
 @dialog-footer-margin:                      0;
 @dialog-footer-padding:                     1rem 2rem 0.6rem 2rem;
 
-@dialog-size-sm:                            500px;
-@dialog-size-md:                            750px;
-@dialog-size-lg:                            1000px;
+@dialog-size:                               500px;
 
 
 // 10. Form
