@@ -21,12 +21,10 @@ exports[`Documentation: Modal Demo renders 1`] = `
       footerAlignment="right"
       footerText="Footer text"
       id="live-modal"
-      isStatic={false}
       size="large"
       subTitle="Not as important as the title"
       title="Modal title"
       type="brand"
-      visible={false}
     >
       <p>
         Modal body text goes here.

@@ -37,8 +37,6 @@ const Demo = () => (
                 subTitle="Not as important as the title"
                 type="brand"
                 size="large"
-                isStatic={false}
-                visible={false}
                 button
                 fade
                 footerAlignment="right"

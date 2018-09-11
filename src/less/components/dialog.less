@@ -1,0 +1,78 @@
+.dialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: @zindex-dialog-backdrop;
+    background: @dialog-backdrop-bg;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    > section {
+        position: relative;
+        max-width: @dialog-size;
+
+        header {
+            background: @background-body;
+            border-bottom: @dialog-border;
+            padding: @dialog-heading-padding;
+
+            /* stylelint-disable selector-list-comma-newline-after */
+            h1, h2, h3, h4, h5, h6,
+            .h1, .h2, .h3, .h4, .h5, .h6 {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            /* stylelint-enable selector-list-comma-newline-after */
+
+            .dialog-close {
+                position: absolute;
+                color: @text-color;
+                top: 1rem;
+                right: 1rem;
+                opacity: 0.8;
+                line-height: 1;
+                transition: opacity 0.3s ease-in-out;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                &:focus {
+                    .tab-focus();
+                }
+            }
+        }
+
+        .dialog-body {
+            background: @dialog-content-bg;
+            padding: @dialog-body-padding;
+        }
+
+        footer {
+            background: @background-body;
+            border-top: @dialog-border;
+            padding: @dialog-footer-padding;
+            margin: @dialog-footer-margin;
+            display: flex;
+            justify-content: flex-end;
+
+            * {
+                margin: 0 0.25rem;
+            }
+        }
+    }
+}
+
+.dialog-open {
+    overflow: hidden;
+    padding-right: 17px;
+
+    .dialog {
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding-right: 17px;
+    }
+}
