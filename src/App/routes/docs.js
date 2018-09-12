@@ -165,6 +165,11 @@ export default [
                 component: require("../Documentation/components/ProgressTracker")
             },
             {
+                title: "Sheet",
+                path: "/docs/components/sheet",
+                component: require("../Documentation/components/Sheet")
+            },
+            {
                 title: "Status",
                 path: "/docs/components/status",
                 component: require("../Documentation/components/Status")

@@ -380,6 +380,15 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "Example": [Function],
+                  "SheetText": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/components/sheet",
+                "title": "Sheet",
+              },
+              Object {
+                "component": Object {
                   "ExtendedUsage": [Function],
                   "Overview": [Function],
                   "StatusText": [Function],

@@ -47,12 +47,12 @@ const Examples = () => (
     <>
         <h2 id="examples">Examples</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="d-inline background-brand">d-inline</div>
-            <div className="d-inline background-default">d-inline</div>
+            <div className="d-inline bg-brand">d-inline</div>
+            <div className="d-inline bg-default">d-inline</div>
         </ComponentPreview>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="d-block background-brand">d-block</div>
-            <div className="d-block background-default">d-block</div>
+            <div className="d-block bg-brand">d-block</div>
+            <div className="d-block bg-default">d-block</div>
         </ComponentPreview>
     </>
 );

@@ -12,10 +12,12 @@ class Dialog {
         this.closeIcon = el.querySelector(SELECTORS.CLOSEICON);
         this.isOpen = el.classList.contains("d-flex");
 
-        this.closeIcon.addEventListener("click", e => {
-            e.preventDefault();
-            this.close();
-        });
+        if (this.closeIcon) {
+            this.closeIcon.addEventListener("click", e => {
+                e.preventDefault();
+                this.close();
+            });
+        }
 
         // Close dialog on esc
         document.addEventListener("keydown", e => {
