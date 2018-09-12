@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.10.0] - 2018-09-
+## [0.10.0] - 2018-09-12
 
 ### Added
 
@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 - Added zip file with favicons, manifest.json and browserconfig.xml available for download.
 - Added functionality to support older versions of the designguide.
 - Added dialog component.
+- Added sheet component.
 
 ### Changed
 
