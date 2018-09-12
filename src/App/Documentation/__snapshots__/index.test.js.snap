@@ -101,6 +101,16 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "FaviconsText": [Function],
+                  "OurFavicon": [Function],
+                  "Usage": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/core/favicons",
+                "title": "Favicons",
+              },
+              Object {
+                "component": Object {
                   "Alignment": [Function],
                   "AutoLayoutColumns": [Function],
                   "GridOptions": [Function],
@@ -258,6 +268,15 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "DialogText": [Function],
+                  "Example": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/components/dialog",
+                "title": "Dialog",
+              },
+              Object {
+                "component": Object {
                   "Checkboxes": [Function],
                   "DisabledCheckboxes": [Function],
                   "DisabledRadioButtons": [Function],
@@ -323,7 +342,7 @@ exports[`Documentation: index renders 1`] = `
                   "default": [Function],
                 },
                 "path": "/docs/components/modal",
-                "title": "Modal",
+                "title": "Modal (deprecated)",
               },
               Object {
                 "component": Object {
@@ -358,6 +377,15 @@ exports[`Documentation: index renders 1`] = `
                 },
                 "path": "/docs/components/progress-tracker",
                 "title": "Progress Tracker",
+              },
+              Object {
+                "component": Object {
+                  "Example": [Function],
+                  "SheetText": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/components/sheet",
+                "title": "Sheet",
               },
               Object {
                 "component": Object {

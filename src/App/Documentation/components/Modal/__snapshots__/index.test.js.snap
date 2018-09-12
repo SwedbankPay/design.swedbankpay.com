@@ -21,12 +21,10 @@ exports[`Documentation: Modal Demo renders 1`] = `
       footerAlignment="right"
       footerText="Footer text"
       id="live-modal"
-      isStatic={false}
       size="large"
       subTitle="Not as important as the title"
       title="Modal title"
       type="brand"
-      visible={false}
     >
       <p>
         Modal body text goes here.
@@ -40,6 +38,7 @@ exports[`Documentation: Modal ModalText renders 1`] = `
 <div
   className="col-md-12 col-lg-10 doc-body"
 >
+  <DeprecatedComponentAlert />
   <p
     className="lead"
   >

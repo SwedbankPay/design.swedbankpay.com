@@ -17,13 +17,15 @@
 //  6. Badge
 //  7. Breadcrumb
 //  8. Button
-//  9. Form
-// 10. Modal
-// 11. Pagination
-// 12. Panel
-// 13. Status
-// 14. Toast
-// 15. Topbar
+//  9. Dialog
+// 10. Form
+// 11. Modal
+// 12. Pagination
+// 13. Panel
+// 14. Sheet
+// 15. Status
+// 16. Toast
+// 17. Topbar
 
 // ==========================================================================
 //
@@ -126,10 +128,14 @@
 @zindex-topbar:                             500;
 @zindex-action-list:                        549;
 @zindex-action-list-anchor:                 550;
-@zindex-modal-backdrop:                     1040;
-@zindex-modal:                              1050;
+@zindex-dialog-backdrop:                    1040;
+@zindex-dialog:                             1050;
+@zindex-modal-backdrop:                     1060;
+@zindex-modal:                              1070;
 @zindex-datepicker:                         2000;
 @zindex-topbar-nav:                         2100;
+@zindex-sheet-backdrop:                     3000;
+@zindex-sheet:                              3100;
 @zindex-tooltip:                            9001;
 @zindex-toast:                              10000;
 
@@ -353,7 +359,26 @@
 @btn-link-disabled-color:                   @gray-6;
 
 
-// 9. Form
+// 9. Dialog
+// ==========================================================================
+
+/* Colors */
+@dialog-background-color:                   transparent;
+@dialog-content-bg:                         @white;
+@dialog-border-color:                       @gray-9;
+@dialog-border:                             1px solid @gray-9;
+@dialog-box-shadow:                         0 0 30px rgba(133, 133, 133, 0.2);
+@dialog-backdrop-bg:                        fade(@black, 50%);
+
+@dialog-heading-padding:                    1rem 2rem;
+@dialog-body-padding:                       2rem 2rem 1rem 2rem;
+@dialog-footer-margin:                      0;
+@dialog-footer-padding:                     1rem 2rem 0.6rem 2rem;
+
+@dialog-size:                               500px;
+
+
+// 10. Form
 // ==========================================================================
 
 @form-margin:                               1rem;
@@ -393,7 +418,7 @@
 @range-webkit-bg:                           linear-gradient(90deg, @brand-primary, @brand-primary) 0 100% no-repeat content-box;
 
 
-// 10. Modal
+// 11. Modal
 // ==========================================================================
 
 /* Colors */
@@ -417,7 +442,7 @@
 @modal-size-lg:                             1000px;
 
 
-// 11. Pagination
+// 12. Pagination
 // ==========================================================================
 
 @pagination-active-color:                   @brand-primary;
@@ -425,7 +450,7 @@
 
 @pagination-bullet-size:                    @status-size;
 
-// 12. Panel
+// 13. Panel
 // ==========================================================================
 
 /* Colors */
@@ -458,14 +483,26 @@
 @panel-collapse-duration:                   0.25s;
 
 
-// 13. Status
+// 14. Sheet
+// ==========================================================================
+
+@sheet-backdrop-bg:                         fade(@black, 50%);
+@sheet-section-bg:                          @white;
+@sheet-section-padding:                     5rem 4rem 4rem;
+
+@sheet-width-xs:                            95%;
+@sheet-width-sm:                            75%;
+@sheet-width:                               580px;
+
+
+// 15. Status
 // ==========================================================================
 
 @status-size:                               13px;
 @status-padding:                            10;
 
 
-// 14. Toast
+// 16. Toast
 // ==========================================================================
 
 @toast-height:                              48px;
@@ -474,7 +511,7 @@
 @toast-action-color:                        @yellow;
 
 
-// 15. Topbar
+// 17. Topbar
 // ==========================================================================
 
 @topbar-height:                             70px;
