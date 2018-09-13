@@ -29,12 +29,12 @@ exports[`Utilities: Display Examples renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="d-inline background-brand"
+      className="d-inline bg-brand"
     >
       d-inline
     </div>
     <div
-      className="d-inline background-default"
+      className="d-inline bg-default"
     >
       d-inline
     </div>
@@ -45,12 +45,12 @@ exports[`Utilities: Display Examples renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="d-block background-brand"
+      className="d-block bg-brand"
     >
       d-block
     </div>
     <div
-      className="d-block background-default"
+      className="d-block bg-default"
     >
       d-block
     </div>

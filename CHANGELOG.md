@@ -2,13 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.10.0] - 2018-09-
+## [0.10.1] - 2018-09-13
+
+### Fixed
+
+- Fixed typo in the cdn url for script and style documents in the documentation.
+
+## [0.10.0] - 2018-09-12
 
 ### Added
 
 - Added section about favicons.
 - Added zip file with favicons, manifest.json and browserconfig.xml available for download.
 - Added functionality to support older versions of the designguide.
+- Added dialog component.
+- Added sheet component.
 
 ### Changed
 
@@ -18,6 +26,7 @@ All notable changes to this project will be documented in this file.
 ### Removed
 
 - Removed button light, warning and neutral.
+- Deprecated modal component.
 
 ## [0.9.1] - 2018-08-24
 

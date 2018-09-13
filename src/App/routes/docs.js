@@ -120,6 +120,11 @@ export default [
                 component: require("../Documentation/components/Datepickers")
             },
             {
+                title: "Dialog",
+                path: "/docs/components/dialog",
+                component: require("../Documentation/components/Dialog")
+            },
+            {
                 title: "Forms",
                 path: "/docs/components/forms",
                 component: require("../Documentation/components/Forms")
@@ -140,7 +145,7 @@ export default [
                 component: require("../Documentation/components/MediaObject")
             },
             {
-                title: "Modal",
+                title: "Modal (deprecated)",
                 path: "/docs/components/modal",
                 component: require("../Documentation/components/Modal")
             },
@@ -158,6 +163,11 @@ export default [
                 title: "Progress Tracker",
                 path: "/docs/components/progress-tracker",
                 component: require("../Documentation/components/ProgressTracker")
+            },
+            {
+                title: "Sheet",
+                path: "/docs/components/sheet",
+                component: require("../Documentation/components/Sheet")
             },
             {
                 title: "Status",

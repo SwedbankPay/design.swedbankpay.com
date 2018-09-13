@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc } from "#";
+import { ComponentPreview, DocToc, DeprecatedComponentAlert } from "#";
 import { modal } from "$/px-script";
 import ModalComponent from "@/Modal";
 
@@ -37,8 +37,6 @@ const Demo = () => (
                 subTitle="Not as important as the title"
                 type="brand"
                 size="large"
-                isStatic={false}
-                visible={false}
                 button
                 fade
                 footerAlignment="right"
@@ -52,6 +50,7 @@ const Demo = () => (
 
 const ModalText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
+        <DeprecatedComponentAlert />
         <p className="lead">Modals...</p>
         <Usage />
         <Demo />
