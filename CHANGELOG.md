@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.10.1] - 2018-09-13
+
+### Fixed
+
+- Fixed typo in the cdn url for script and style documents in the documentation.
+
 ## [0.10.0] - 2018-09-12
 
 ### Added
