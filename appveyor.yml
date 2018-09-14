@@ -65,10 +65,15 @@ test_script:
 
 deploy_script:
 - ps: |
-    if ($Env:APPVEYOR_REPO_TAG -eq "true") {
+    if (($Env:APPVEYOR_REPO_TAG -eq "true") -and ($Env:APPVEYOR_REPO_BRANCH -eq "master")) {
       git add --ignore-removal dist
       git commit -m "GitHub release"
       git subtree push --prefix dist origin gh-pages
+    } else if ($Env:APPVEYOR_REPO_BRANCH -eq "master") {
+      Write-Host "Skipping deploy, master does not have a tag."
+      $LastExitCode = 1
+    } else {
+      Write-Host "Branch not master, skipping deploy."
     }
 
 # to disable deployment
