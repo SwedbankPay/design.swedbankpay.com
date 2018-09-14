@@ -1,3 +1,5 @@
+# https://www.appveyor.com/docs/appveyor-yml/
+
 #---------------------------------#
 #      general configuration      #
 #---------------------------------#
@@ -31,7 +33,7 @@ build_script:
 - cmd: npm run build:prod
 
 # to disable automatic builds
-#build: off
+# build: off
 
 #---------------------------------#
 #       tests configuration       #
@@ -44,7 +46,7 @@ test_script:
     npm test
 
 # to disable automatic tests
-#test: off
+# test: off
 
 #---------------------------------#
 #     deployment configuration    #
