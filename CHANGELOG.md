@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.10.1] - 2018-09-13
+## [0.10.2] - 2018-09-14
 
 ### Testing deploy script on AppVeyor
 
