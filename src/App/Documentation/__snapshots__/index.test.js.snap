@@ -218,7 +218,6 @@ exports[`Documentation: index renders 1`] = `
                   "BasicBreadCrumb": [Function],
                   "BreadcrumbText": [Function],
                   "DisabledBreadcrumb": [Function],
-                  "SmallBreadCrumb": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/components/breadcrumb",

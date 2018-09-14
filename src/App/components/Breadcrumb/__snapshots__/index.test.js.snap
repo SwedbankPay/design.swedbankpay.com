@@ -65,14 +65,6 @@ exports[`Component: Breadcrumb renders multiple breadcrumbs when provided in the
 </ol>
 `;
 
-exports[`Component: Breadcrumb renders with class breadcrumb-sm when provided the prop small 1`] = `
-<ol
-  className="breadcrumb breadcrumb-sm"
->
-  <DefaultItems />
-</ol>
-`;
-
 exports[`Component: Breadcrumb renders with default items when no items is provided through items prop 1`] = `
 <ol
   className="breadcrumb"
