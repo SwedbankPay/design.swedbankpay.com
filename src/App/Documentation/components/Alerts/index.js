@@ -61,8 +61,7 @@ const ClosingTheAlert = () => (
 const ExtendedUsage = () => (
     <>
         <h2 id="extended-usage">Extended usage</h2>
-        <p>Alerts can also contain additional HTML elements like headings, paragraphs and dividers.</p>
-        <p>Just make sure to wrap the content in a container with the class <span className="token attr-value">.alert-body</span>.</p>
+        <p>Alerts can also contain additional HTML elements like headings, paragraphs and dividers. <br /> Just make sure to wrap the content in a container with the class <span className="token attr-value">.alert-body</span>.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <AlertComponent type="success" close icon="check_circle">
                 <h3 className="color-success">Success!</h3>
