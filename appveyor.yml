@@ -69,7 +69,7 @@ deploy_script:
       git add --ignore-removal dist
       git commit -m "GitHub release"
       git subtree push --prefix dist origin gh-pages
-    } else if ($Env:APPVEYOR_REPO_BRANCH -eq "master") {
+    } elseif ($Env:APPVEYOR_REPO_BRANCH -eq "master") {
       Write-Host "Skipping deploy, master does not have a tag."
       $LastExitCode = 1
     } else {
