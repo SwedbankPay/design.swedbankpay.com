@@ -65,9 +65,9 @@ test_script:
 
 deploy_script:
 - ps: |
-    -ps: If ($Env:APPVEYOR_REPO_TAG -eq "true") {
-      git add --ignore-removal
-      git commit -m "asd"
+    if ($Env:APPVEYOR_REPO_TAG -eq "true") {
+      git add --ignore-removal dist
+      git commit -m "GitHub release"
       git subtree push --prefix dist origin gh-pages
     }
 
