@@ -1,0 +1,80 @@
+# https://www.appveyor.com/docs/appveyor-yml/
+
+#---------------------------------#
+#      general configuration      #
+#---------------------------------#
+
+# branches to build
+branches:
+  # blacklist
+  except:
+    - gh-pages
+
+# Maximum number of concurrent jobs for the project
+max_jobs: 1
+
+# environment variables
+# environment:
+#   my_var1: value1
+#   my_var2: value2
+#   # this is how to set encrypted variable. Go to "Encrypt data" page in account menu to encrypt data.
+#   my_secure_var1:
+#     secure: FW3tJ3fMncxvs58/ifSP7w==
+
+# scripts that run after cloning repository
+install:
+- cmd: npm install
+
+#---------------------------------#
+#       build configuration       #
+#---------------------------------#
+
+build_script:
+- cmd: npm run build:prod
+
+# to disable automatic builds
+# build: off
+
+#---------------------------------#
+#       tests configuration       #
+#---------------------------------#
+
+test_script:
+- cmd: >-
+    npm run lint
+
+    npm test
+
+# to disable automatic tests
+# test: off
+
+#---------------------------------#
+#     deployment configuration    #
+#---------------------------------#
+
+# deploy:
+
+  # Deploy to GitHub Releases
+  # - provider: GitHub
+  #   artifact: /.*\.nupkg/           # upload all NuGet packages to release assets
+  #   draft: false
+  #   prerelease: false
+  #   on:
+  #     branch: master                # release from master branch only
+  #     appveyor_repo_tag: true       # deploy on tag push only
+
+deploy_script:
+- ps: |
+    if (($Env:APPVEYOR_REPO_TAG -eq "true") -and ($Env:APPVEYOR_REPO_BRANCH -eq "master")) {
+      git add --ignore-removal dist
+      git commit -m "GitHub release"
+      git subtree push --prefix dist origin gh-pages
+    } else if ($Env:APPVEYOR_REPO_BRANCH -eq "master") {
+      Write-Host "Skipping deploy, master does not have a tag."
+      $LastExitCode = 1
+    } else {
+      Write-Host "Branch not master, skipping deploy."
+    }
+
+# to disable deployment
+# deploy: off
