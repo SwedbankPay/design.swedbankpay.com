@@ -208,12 +208,12 @@ module.exports = (env, argv) => {
                         delete: [
                             "./dist"
                         ],
-                        copy: [
-                            {
-                                source: "./static",
-                                destination: "./dist"
-                            }
-                        ]
+                        // copy: [
+                        //     {
+                        //         source: "./static",
+                        //         destination: "./dist"
+                        //     }
+                        // ]
                     }
                 ],
                 onEnd: [
@@ -223,10 +223,10 @@ module.exports = (env, argv) => {
                                 source: "./dist/icons",
                                 destination: "./dist/temp/icons"
                             },
-                            {
-                                source: `./dist/v/${version}`,
-                                destination: `./static/v/${version}`
-                            }
+                            // {
+                            //     source: `./dist/v/${version}`,
+                            //     destination: `./static/v/${version}`
+                            // }
                         ],
                         archive: [
                             {
