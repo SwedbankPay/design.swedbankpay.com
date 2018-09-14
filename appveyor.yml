@@ -52,7 +52,7 @@ test_script:
 #     deployment configuration    #
 #---------------------------------#
 
-deploy:
+# deploy:
 
   # Deploy to GitHub Releases
   # - provider: GitHub
