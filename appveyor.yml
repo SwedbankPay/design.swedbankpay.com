@@ -63,6 +63,7 @@ test_script:
   #     branch: master                # release from master branch only
   #     appveyor_repo_tag: true       # deploy on tag push only
 
+# MASTER BRANCH ONLY
 -
   branches:
     only:
@@ -78,6 +79,7 @@ test_script:
         Write-Host "Skipping deploy, master does not have a tag."
         $LastExitCode = 1
       }
+# END MASTER BRANCH ONLY
 
 # to disable deployment
 # deploy: off
