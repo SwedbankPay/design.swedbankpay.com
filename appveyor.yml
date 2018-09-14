@@ -1,0 +1,70 @@
+#---------------------------------#
+#      general configuration      #
+#---------------------------------#
+
+version: 1.0.{build}-{branch}
+
+# branches to build
+branches:
+  # blacklist
+  except:
+    - gh-pages
+
+# Maximum number of concurrent jobs for the project
+max_jobs: 1
+
+# environment variables
+# environment:
+#   my_var1: value1
+#   my_var2: value2
+#   # this is how to set encrypted variable. Go to "Encrypt data" page in account menu to encrypt data.
+#   my_secure_var1:
+#     secure: FW3tJ3fMncxvs58/ifSP7w==
+
+# scripts that run after cloning repository
+install:
+- cmd: npm install
+
+#---------------------------------#
+#       build configuration       #
+#---------------------------------#
+
+build_script:
+- cmd: npm run build:prod
+
+# to disable automatic builds
+#build: off
+
+#---------------------------------#
+#       tests configuration       #
+#---------------------------------#
+
+test_script:
+- cmd: >-
+    npm run lint
+
+    npm test
+
+# to disable automatic tests
+#test: off
+
+#---------------------------------#
+#     deployment configuration    #
+#---------------------------------#
+
+deploy:
+
+  # Deploy to GitHub Releases
+  # - provider: GitHub
+  #   artifact: /.*\.nupkg/           # upload all NuGet packages to release assets
+  #   draft: false
+  #   prerelease: false
+  #   on:
+  #     branch: master                # release from master branch only
+  #     appveyor_repo_tag: true       # deploy on tag push only
+
+deploy_script:
+- cmd: git subtree push --prefix dist origin gh-pages
+
+# to disable deployment
+deploy: off
