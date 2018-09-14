@@ -2,8 +2,6 @@
 #      general configuration      #
 #---------------------------------#
 
-version: 1.0.{build}-{branch}
-
 # branches to build
 branches:
   # blacklist
@@ -64,7 +62,12 @@ test_script:
   #     appveyor_repo_tag: true       # deploy on tag push only
 
 deploy_script:
-- cmd: git subtree push --prefix dist origin gh-pages
+- ps: |
+    -ps: If ($Env:APPVEYOR_REPO_TAG -eq "true") {
+      git add --ignore-removal
+      git commit -m "asd"
+      git subtree push --prefix dist origin gh-pages
+    }
 
 # to disable deployment
-deploy: off
+# deploy: off
