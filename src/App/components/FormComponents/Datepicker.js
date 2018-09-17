@@ -5,7 +5,7 @@ const Datepicker = ({ format, time, min, max, months, value, label, required }) 
     const attrs = {
         className: "form-control",
         type: "text",
-        "data-datepicker": true,
+        "data-datepicker": "",
         "data-datepicker-format": format || null,
         "data-datepicker-time": time || null,
         "data-datepicker-min": min || null,

@@ -9,9 +9,9 @@ const moment = window.moment;
 const SimpleDatepicker = () => (
     <>
         <h2 id="simple-datepicker">Simple datepicker</h2>
-        <p>Simple datepicker..<Attribute data name="datepicker" value="true" />.</p>
+        <p>Simple datepicker..<Attribute data name="datepicker" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <DatepickerComponent />
+            <DatepickerComponent label="Date" />
         </ComponentPreview>
     </>
 );
@@ -21,7 +21,7 @@ const InitialValue = () => (
         <h2 id="initial-value">Initial value</h2>
         <p>Initial value..<Attribute data name="datepicker-init-value" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <DatepickerComponent value={moment().format("YYYY-MM-DD")} />
+            <DatepickerComponent value={moment().format("YYYY-MM-DD")} label="Date" />
         </ComponentPreview>
         <p>Keep in mind that the datepicker will not insert the initial value if it does not correctly match the set format (iso8601 if you have not specified a format).</p>
     </>
@@ -47,7 +47,7 @@ const IncludeTime = () => (
         <h2 id="include-time">Include time</h2>
         <p>Include time.. <Attribute data name="datepicker-time" value="true" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <DatepickerComponent time value={moment().format("HH:mm DD.MM.YYYY")} format="nb" />
+            <DatepickerComponent time value={moment().format("HH:mm DD.MM.YYYY")} format="nb" label="Date" />
         </ComponentPreview>
     </>
 );
@@ -57,7 +57,7 @@ const Required = () => (
         <h2 id="required">Required</h2>
         <p>Required.. <Attribute data name="required" value="true" /> will autopopulate the input after clicking it if no date is selected. Keep in mind that if you do not pass a value to the datepicker it will remain blank if the user does not click the input.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <DatepickerComponent required />
+            <DatepickerComponent required label="Date" />
         </ComponentPreview>
     </>
 );
@@ -67,7 +67,7 @@ const ShowingMultipleMonths = () => (
         <h2 id="showing-multiple-months">Showing multiple months</h2>
         <p>Showing multiple months.. <Attribute data name="datepicker-months" value="[number]" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <DatepickerComponent months="2" />
+            <DatepickerComponent months="2" label="Date" />
         </ComponentPreview>
     </>
 );
@@ -84,6 +84,7 @@ const DateRange = () => (
                 max={moment().add(5, "d").format("DD.MM.YYYY")}
                 months="2"
                 format="nb"
+                label="Date"
             />
             {/* eslint-enable newline-per-chained-call*/}
         </ComponentPreview>
