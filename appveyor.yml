@@ -1,7 +1,5 @@
 # https://www.appveyor.com/docs/appveyor-yml/
 
-# test 9;
-
 #---------------------------------#
 #      general configuration      #
 #---------------------------------#
@@ -15,18 +13,12 @@ branches:
 # Maximum number of concurrent jobs for the project
 max_jobs: 1
 
-# environment variables
-# environment:
-#   my_var1: value1
-#   my_var2: value2
-#   # this is how to set encrypted variable. Go to "Encrypt data" page in account menu to encrypt data.
-#   my_secure_var1:
-#     secure: FW3tJ3fMncxvs58/ifSP7w==
-
 environment:
+  # Github
   access_token:
-    # Github access token
-    secure: U0VBux6UVwlrFl3AnZrVValeccfzslMkPz4Yz5ukyp4GzLpWJuYT2si951UuQiZw
+    secure: IGs25EMrhe0au+uVDbOck6akDzC9ykvJeR0zJjhrT6idNuYOr/JpyGdefQxSlWXk
+  github_email:
+    secure: U3oByHGtWDiIy9psThpxwg==
 
 # scripts that run after cloning repository
 install:
@@ -85,11 +77,14 @@ deploy_script:
     Write-Host $Env:APPVEYOR_REPO_BRANCH
     Write-Host $Env:GitVersion_FullSemVer
     if (($Env:APPVEYOR_REPO_TAG -eq "true") -and ($Env:GitVersion_BranchName -eq "master")) {
-      git add --ignore-removal dist
-      git commit -m "GitHub release"
+      git config --global credential.helper store
+      git config --global user.email $Env:github_email
+      git config --global user.name "payex-dev"
+      Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+      git add --ignore-removal dist -f
+      git commit -m "GitHub release $Env:GitVersion_FullSemVer"
       git subtree push --prefix dist origin gh-pages
     } elseif ($Env:APPVEYOR_REPO_BRANCH -eq "master") {
-      $host.SetShouldExit(1)
       Write-Host "Skipping deploy, master does not have a tag."
     } else {
       Write-Host "Branch not master, skipping deploy."
