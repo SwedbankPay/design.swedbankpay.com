@@ -25,11 +25,18 @@ max_jobs: 1
 
 # scripts that run after cloning repository
 install:
-- cmd: npm install
+- cmd: >-
+  choco install gitversion.portable --pre
+  npm install
 
 #---------------------------------#
 #       build configuration       #
 #---------------------------------#
+
+before_build:
+- cmd: >-
+  gitversion /output BuildServer
+  gitversion /output json
 
 build_script:
 - cmd: npm run build:prod
@@ -69,13 +76,14 @@ deploy_script:
 - ps: |
     Write-Host $Env:APPVEYOR_REPO_TAG
     Write-Host $Env:APPVEYOR_REPO_BRANCH
+    Write-Host $Env:FullSemVer
     if (($Env:APPVEYOR_REPO_TAG -eq "true") -and ($Env:APPVEYOR_REPO_BRANCH -eq "master")) {
       git add --ignore-removal dist
       git commit -m "GitHub release"
       git subtree push --prefix dist origin gh-pages
     } elseif ($Env:APPVEYOR_REPO_BRANCH -eq "master") {
+      $host.SetShouldExit(1)
       Write-Host "Skipping deploy, master does not have a tag."
-      $LastExitCode = 1
     } else {
       Write-Host "Branch not master, skipping deploy."
     }
