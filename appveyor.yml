@@ -81,7 +81,8 @@ deploy_script:
       git add --ignore-removal dist -f
       git commit -m "GitHub release $Env:GitVersion_FullSemVer"
       # git subtree push --prefix dist origin gh-pages
-      git subtree split --prefix dist master
+      $split_token = git subtree split --prefix dist master
+      Write-Host "TOKEN -- $split_token"
       # git push origin TOKEN:gh-pages --foce
       # git push origin `git subtree split --prefix dist master`:gh-pages --force
     } elseif ($Env:APPVEYOR_REPO_BRANCH -eq "master") {
