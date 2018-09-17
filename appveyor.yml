@@ -78,8 +78,8 @@ deploy_script:
 - ps: |
     Write-Host $Env:APPVEYOR_REPO_TAG
     Write-Host $Env:APPVEYOR_REPO_BRANCH
-    Write-Host $Env:FullSemVer
-    if (($Env:APPVEYOR_REPO_TAG -eq "true") -and ($Env:APPVEYOR_REPO_BRANCH -eq "master")) {
+    Write-Host $Env:GitVersion_FullSemVer
+    if (($Env:APPVEYOR_REPO_TAG -eq "true") -and ($Env:GitVersion_BranchName -eq "master")) {
       git add --ignore-removal dist
       git commit -m "GitHub release"
       git subtree push --prefix dist origin gh-pages
