@@ -78,6 +78,7 @@ deploy_script:
       git config --global user.email $Env:github_email
       git config --global user.name "payex-dev"
       Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+      git pull
       git add --ignore-removal dist -f
       git commit -m "GitHub release $Env:GitVersion_FullSemVer"
       git subtree push --prefix dist origin gh-pages
