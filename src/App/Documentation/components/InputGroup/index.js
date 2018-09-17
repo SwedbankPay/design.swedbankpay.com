@@ -7,7 +7,7 @@ const BasicExample = () => (
     <>
         <h2 id="basic-example">Basic example</h2>
         <p>Basic input group...</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+        <ComponentPreview language="html" showCasePanel codeFigure >
             <InputGroupComponent
                 id="input-id-1"
                 type="text"

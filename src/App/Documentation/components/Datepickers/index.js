@@ -11,7 +11,7 @@ const SimpleDatepicker = () => (
         <h2 id="simple-datepicker">Simple datepicker</h2>
         <p>Simple datepicker..<Attribute data name="datepicker" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <DatepickerComponent label="Date" />
+            <DatepickerComponent label="Date" prefixType="icon" prefixValue="event" />
         </ComponentPreview>
     </>
 );
@@ -21,7 +21,7 @@ const InitialValue = () => (
         <h2 id="initial-value">Initial value</h2>
         <p>Initial value..<Attribute data name="datepicker-init-value" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <DatepickerComponent value={moment().format("YYYY-MM-DD")} label="Date" />
+            <DatepickerComponent value={moment().format("YYYY-MM-DD")} label="Date" prefixType="icon" prefixValue="event" />
         </ComponentPreview>
         <p>Keep in mind that the datepicker will not insert the initial value if it does not correctly match the set format (iso8601 if you have not specified a format).</p>
     </>
@@ -32,12 +32,12 @@ const CustomFormat = () => (
         <h2 id="custom-format">Custom format</h2>
         <p>Custom format..<Attribute data name="datepicker-format" value="[nb|sv|da|fi|en|iso8601(default)]" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <DatepickerComponent label="nb (norwegian):" value={moment().format("DD.MM.YYYY")} format="nb" />
-            <DatepickerComponent label="sv (swedish):" value={moment().format("YYYY-MM-DD")} format="sv" />
-            <DatepickerComponent label="da (danish):" value={moment().format("DD.MM.YYYY")} format="da" />
-            <DatepickerComponent label="fi (finnish):" value={moment().format("DD.MM.YYYY")} format="fi" />
-            <DatepickerComponent label="en (english):" value={moment().format("DD/MM/YYYY")} format="en" />
-            <DatepickerComponent label="iso8601 (robotic):" value={moment().format("YYYY-MM-DD")} format="iso8601" />
+            <DatepickerComponent label="nb (norwegian):" value={moment().format("DD.MM.YYYY")} format="nb" prefixType="icon" prefixValue="event" />
+            <DatepickerComponent label="sv (swedish):" value={moment().format("YYYY-MM-DD")} format="sv" prefixType="icon" prefixValue="event" />
+            <DatepickerComponent label="da (danish):" value={moment().format("DD.MM.YYYY")} format="da" prefixType="icon" prefixValue="event" />
+            <DatepickerComponent label="fi (finnish):" value={moment().format("DD.MM.YYYY")} format="fi" prefixType="icon" prefixValue="event" />
+            <DatepickerComponent label="en (english):" value={moment().format("DD/MM/YYYY")} format="en" prefixType="icon" prefixValue="event" />
+            <DatepickerComponent label="iso8601 (robotic):" value={moment().format("YYYY-MM-DD")} format="iso8601" prefixType="icon" prefixValue="event" />
         </ComponentPreview>
     </>
 );
@@ -47,7 +47,7 @@ const IncludeTime = () => (
         <h2 id="include-time">Include time</h2>
         <p>Include time.. <Attribute data name="datepicker-time" value="true" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <DatepickerComponent time value={moment().format("HH:mm DD.MM.YYYY")} format="nb" label="Date" />
+            <DatepickerComponent time value={moment().format("HH:mm DD.MM.YYYY")} format="nb" label="Date" prefixType="icon" prefixValue="event" />
         </ComponentPreview>
     </>
 );
@@ -57,7 +57,7 @@ const Required = () => (
         <h2 id="required">Required</h2>
         <p>Required.. <Attribute data name="required" value="true" /> will autopopulate the input after clicking it if no date is selected. Keep in mind that if you do not pass a value to the datepicker it will remain blank if the user does not click the input.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <DatepickerComponent required label="Date" />
+            <DatepickerComponent required label="Date" prefixType="icon" prefixValue="event" />
         </ComponentPreview>
     </>
 );
@@ -67,7 +67,7 @@ const ShowingMultipleMonths = () => (
         <h2 id="showing-multiple-months">Showing multiple months</h2>
         <p>Showing multiple months.. <Attribute data name="datepicker-months" value="[number]" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <DatepickerComponent months="2" label="Date" />
+            <DatepickerComponent months="2" label="Date" prefixType="icon" prefixValue="event" />
         </ComponentPreview>
     </>
 );
@@ -85,6 +85,8 @@ const DateRange = () => (
                 months="2"
                 format="nb"
                 label="Date"
+                prefixType="icon" 
+                prefixValue="event"
             />
             {/* eslint-enable newline-per-chained-call*/}
         </ComponentPreview>

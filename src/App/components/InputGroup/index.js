@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-const Addon = ({ type, value, color }) => (
+export const Addon = ({ type, value, color }) => (
     (type === "button") ?
         <div className="input-group-btn">{"\n"}
             <button type="button" className={`btn btn-${color}`}>{value}</button>{"\n"}
