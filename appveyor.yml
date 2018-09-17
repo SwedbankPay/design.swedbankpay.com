@@ -47,7 +47,7 @@ build_script:
 #       tests configuration       #
 #---------------------------------#
 
-# test_script:
+## test_script:
 # - cmd: >-
 #     npm run lint
 
