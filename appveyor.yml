@@ -47,11 +47,11 @@ build_script:
 #       tests configuration       #
 #---------------------------------#
 
-test_script:
-- cmd: >-
-    npm run lint
+# test_script:
+# - cmd: >-
+#     npm run lint
 
-    npm test
+#     npm test
 
 # to disable automatic tests
 # test: off
@@ -73,9 +73,6 @@ test_script:
 
 deploy_script:
 - ps: |
-    Write-Host $Env:APPVEYOR_REPO_TAG
-    Write-Host $Env:APPVEYOR_REPO_BRANCH
-    Write-Host $Env:GitVersion_FullSemVer
     if (($Env:APPVEYOR_REPO_TAG -eq "true") -and ($Env:GitVersion_BranchName -eq "master")) {
       git config --global credential.helper store
       git config --global user.email $Env:github_email
@@ -84,7 +81,7 @@ deploy_script:
       git add --ignore-removal dist -f
       git commit -m "GitHub release $Env:GitVersion_FullSemVer"
       # git subtree push --prefix dist origin gh-pages
-      git push origin `git subtree split --prefix dist`:gh-pages --force
+      git push origin `git subtree split --prefix dist master`:gh-pages --force
     } elseif ($Env:APPVEYOR_REPO_BRANCH -eq "master") {
       Write-Host "Skipping deploy, master does not have a tag."
     } else {
