@@ -78,11 +78,14 @@ deploy_script:
       git config --global user.email $Env:github_email
       git config --global user.name "payex-dev"
       Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
-      git pull
-      git add --ignore-removal dist -f
-      git commit -m "GitHub release $Env:GitVersion_FullSemVer"
-      git log -n 5
-      git subtree push --prefix dist origin gh-pages
+      # # # # # # #
+      # git add --ignore-removal dist -f
+      # git commit -m "GitHub release $Env:GitVersion_FullSemVer"
+      # git log -n 5
+      # git subtree push --prefix dist origin gh-pages
+      git subtree split --prefix dist -b gh-pages
+      git push -f origin gh-pages:gh-pages
+      git branch -D gh-pages
     } elseif ($Env:APPVEYOR_REPO_BRANCH -eq "master") {
       Write-Host "Skipping deploy, master does not have a tag."
     } else {
