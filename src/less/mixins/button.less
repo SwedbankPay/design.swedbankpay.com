@@ -1,17 +1,17 @@
 .button-variant(@color; @background;) {
     color: @color;
-    background-color: @background;
+    background: linear-gradient(to bottom, @background, darken(@background, 5%));
     border-color: darken(@background, 5%);
 
     &:focus,
     &.focus {
         color: @color;
-        background-color: darken(@background, 5%);
+        background: darken(@background, 5%);
     }
 
     &:hover {
         color: @color;
-        background-color: darken(@background, 5%);
+        background: darken(@background, 5%);
     }
 
     &:active,
@@ -23,7 +23,7 @@
         &:focus,
         &.focus {
             color: @color;
-            background-color: darken(@background, 10%);
+            background: darken(@background, 10%);
         }
     }
 
@@ -36,7 +36,7 @@
         &.focus,
         &:active,
         &.active {
-            background-color: @gray-8;
+            background: @gray-8;
             color: @gray-4;
             border-color: darken(@gray-8, 5%); //transparent;
 
@@ -66,12 +66,12 @@
     &:focus,
     &.focus {
         color: @hover-color;
-        background-color: darken(@background, 5%);
+        background: darken(@background, 5%);
     }
 
     &:hover {
         color: @hover-color;
-        background-color: @background;
+        background: @background;
     }
 
     &:active,
@@ -83,7 +83,7 @@
         &:focus,
         &.focus {
             color: @color;
-            background-color: darken(@background, 10%);
+            background: darken(@background, 10%);
         }
     }
 
@@ -96,7 +96,7 @@
         &.focus,
         &:active,
         &.active {
-            background-color: @gray-8;
+            background: @gray-8;
             color: @gray-4;
             border-color: transparent;
         }
@@ -110,7 +110,7 @@
 
 .button-ghost(@color) {
     color: @white;
-    background-color: transparent;
+    background: transparent;
     border: 1px solid @white;
 
     &:focus,
@@ -142,7 +142,7 @@
 
 .button-active-state(@background; @color: @white) {
     color: @color;
-    background-color: @background;
+    background: @background;
 }
 
 // Button sizes
