@@ -81,7 +81,8 @@ deploy_script:
       git add --ignore-removal dist -f
       git commit -m "GitHub release $Env:GitVersion_FullSemVer"
       $id = git subtree split --prefix dist master
-      Invoke-Expression "git push origin $id`:gh-pages --force"
+      # Invoke-Expression "git push origin $id`:gh-pages --force"
+      Invoke-Expression "git merge --squash -s recursive --allow-unrelated-histories origin $id`:gh-pages --force"
     } elseif ($Env:APPVEYOR_REPO_BRANCH -eq "master") {
       Write-Host "Skipping deploy, master does not have a tag."
     } else {
