@@ -83,9 +83,12 @@ deploy_script:
       # git commit -m "GitHub release $Env:GitVersion_FullSemVer"
       # git log -n 5
       # git subtree push --prefix dist origin gh-pages
-      git subtree split --prefix dist -b gh-pages
-      git push -f origin gh-pages:gh-pages
-      git branch -D gh-pages
+      # git subtree split --prefix dist -b gh-pages
+      # git push -f origin gh-pages:gh-pages
+      # git branch -D gh-pages
+      $id = git subtree split --prefix dist master
+      Write-Host "Id is $id"
+      Invoke-Expression "git push origin gh-pages $id`:master --force"
     } elseif ($Env:APPVEYOR_REPO_BRANCH -eq "master") {
       Write-Host "Skipping deploy, master does not have a tag."
     } else {
