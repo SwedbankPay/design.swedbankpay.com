@@ -85,7 +85,7 @@ const DateRange = () => (
                 months="2"
                 format="nb"
                 label="Date"
-                prefixType="icon" 
+                prefixType="icon"
                 prefixValue="event"
             />
             {/* eslint-enable newline-per-chained-call*/}

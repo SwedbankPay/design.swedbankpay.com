@@ -50,3 +50,35 @@
     }
 }
 
+.item-list {
+    list-style: none;
+    padding-left: 0;
+    border: @border-width solid @gray-9;
+
+    li {
+        display: flex;
+        padding: 1rem;
+        border-bottom: @border-width solid @gray-9;
+
+        > * {
+            margin-left: 0.5rem;
+        }
+
+        > :first-child {
+            flex: 1 1 auto;
+            margin-left: 0;
+        }
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    &-striped {
+        li {
+            &:nth-child(odd) {
+                background-color: @gray-10;
+            }
+        }
+    }
+}
