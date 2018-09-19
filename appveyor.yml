@@ -52,6 +52,13 @@ build_script:
 test: off
 
 #---------------------------------#
+#      artifacts configuration    #
+#---------------------------------#
+
+artifacts:
+  - path: dist\temp\PayEx.DesignGuide.v$(Env:GitVersion_FullSemVer).zip
+
+#---------------------------------#
 #     deployment configuration    #
 #---------------------------------#
 
