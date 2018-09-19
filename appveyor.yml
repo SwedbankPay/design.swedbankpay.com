@@ -39,6 +39,9 @@ before_build:
 build_script:
 - cmd: npm run build:prod
 
+after_build:
+- cmd: tree /f dist
+
 #---------------------------------#
 #       tests configuration       #
 #---------------------------------#
@@ -56,7 +59,7 @@ test: off
 #---------------------------------#
 
 artifacts:
-  - path: dist\temp\PayEx.DesignGuide.v$(Env:GitVersion_FullSemVer).zip
+  - path: dist/temp/PayEx.DesignGuide.v$(Env:GitVersion_FullSemVer).zip
 
 #---------------------------------#
 #     deployment configuration    #
