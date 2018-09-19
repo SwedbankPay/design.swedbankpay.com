@@ -3,7 +3,9 @@ if (($Env:APPVEYOR_REPO_TAG -eq "true") -and ($Env:GitVersion_BranchName -eq "ma
     git config --global user.email $Env:github_email
     git config --global user.name "payex-dev"
     Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+    dir /f dist
     git checkout -f gh-pages
+    dir /f dist
     if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode )  }
     xcopy dist\* . /sy
     if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode )  }
