@@ -1,8 +1,13 @@
 if (($Env:APPVEYOR_REPO_TAG -eq "true") -and ($Env:GitVersion_BranchName -eq "master")) {
+    # Store content of CHANGELOG.md in env variable
+    $Env:changelog = [IO.File]::ReadAllText(".\CHANGELOG.md")
+    Write-Host "Changelog - $Env:changelog"
+
+    # Deploy to gh-pages
     git config --global credential.helper store
     git config --global user.email $Env:github_email
     git config --global user.name "payex-dev"
-    Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+    Add-Content "$Env:USERPROFILE\.git-credentials" "https://$($Env:access_token):x-oauth-basic@github.com`n"
     dir /f dist
     git checkout -f gh-pages
     dir /f dist
