@@ -31,16 +31,10 @@ install:
 #---------------------------------#
 
 before_build:
-- cmd: >-
-    gitversion /output BuildServer
-
-    gitversion /output json
+- cmd: gitversion /output BuildServer
 
 build_script:
 - cmd: npm run build:prod
-
-after_build:
-- cmd: tree /f dist
 
 #---------------------------------#
 #       tests configuration       #
