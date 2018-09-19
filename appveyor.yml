@@ -36,6 +36,9 @@ before_build:
 build_script:
 - cmd: npm run build:prod
 
+after_build:
+- cmd: tree /f dist
+
 #---------------------------------#
 #       tests configuration       #
 #---------------------------------#
@@ -53,7 +56,7 @@ test: off
 #---------------------------------#
 
 artifacts:
-  - path: PayEx.DesignGuide.v$(GitVersion_SemVer).zip
+  - path: "**\PayEx.DesignGuide.v$(GitVersion_SemVer).zip"
 
 #---------------------------------#
 #     deployment configuration    #
@@ -66,7 +69,7 @@ before_deploy:
 
 #   # Deploy to GitHub Releases
 #   - provider: GitHub
-#     release: "DesignGuide v$(Env:GitVersion_FullSemVer)"
+#     release: "DesignGuide v$(Env:GitVersion_SemVer)"
 #     description: "ENV VAR THIS"
 #     artifact: /PayEx.DesignGuide.*\.zip/
 #     draft: false
