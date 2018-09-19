@@ -59,7 +59,7 @@ test: off
 #---------------------------------#
 
 artifacts:
-  - path: dist/temp/PayEx.DesignGuide.v$(GitVersion_FullSemVer).zip
+  - path: dist/temp/PayEx.DesignGuide.v$(GitVersion_SemVer).zip
 
 #---------------------------------#
 #     deployment configuration    #
