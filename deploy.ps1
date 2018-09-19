@@ -3,7 +3,7 @@ if (($Env:APPVEYOR_REPO_TAG -eq "true") -and ($Env:GitVersion_BranchName -eq "ma
     git config --global user.email $Env:github_email
     git config --global user.name "payex-dev"
     Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
-    git checkout gh-pages
+    git checkout -f gh-pages
     xcopy dist\* . /sy
     git add .
     git commit -m "GitHub release $Env:GitVersion_FullSemVer"
