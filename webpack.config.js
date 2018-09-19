@@ -206,12 +206,6 @@ module.exports = (env, argv) => {
                         delete: [
                             "./dist"
                         ]
-                        // copy: [
-                        //     {
-                        //         source: "./static",
-                        //         destination: "./dist"
-                        //     }
-                        // ]
                     }
                 ],
                 onEnd: [
@@ -221,23 +215,23 @@ module.exports = (env, argv) => {
                                 source: "./dist/icons",
                                 destination: "./dist/temp/icons"
                             }
-                            // {
-                            //     source: `./dist/v/${version}`,
-                            //     destination: `./static/v/${version}`
-                            // }
                         ],
                         archive: [
                             {
                                 source: "./dist/temp",
                                 destination: "./dist/icons.zip"
+                            },
+                            {
+                                source: `./dist/v/${version}`,
+                                destination: `./dist/temp/PayEx.DesignGuide.v${version}.zip`
                             }
                         ]
                     },
-                    {
-                        delete: [
-                            "./dist/temp"
-                        ]
-                    }
+                    // {
+                    //     delete: [
+                    //         "./dist/temp"
+                    //     ]
+                    // }
                 ]
             }),
             // new SentryCliPlugin({

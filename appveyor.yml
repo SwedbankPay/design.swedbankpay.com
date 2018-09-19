@@ -4,13 +4,10 @@
 #      general configuration      #
 #---------------------------------#
 
-# branches to build
 branches:
-  # blacklist
   except:
     - gh-pages
 
-# Maximum number of concurrent jobs for the project
 max_jobs: 1
 
 environment:
@@ -20,7 +17,9 @@ environment:
   github_email:
     secure: U3oByHGtWDiIy9psThpxwg==
 
-# scripts that run after cloning repository
+cache:
+  - node_modules 
+
 install:
 - cmd: >-
     choco install gitversion.portable --pre
@@ -40,9 +39,6 @@ before_build:
 build_script:
 - cmd: npm run build:prod
 
-# to disable automatic builds
-# build: off
-
 #---------------------------------#
 #       tests configuration       #
 #---------------------------------#
@@ -53,26 +49,42 @@ build_script:
 
 #     npm test
 
-# to disable automatic tests
 test: off
 
 #---------------------------------#
 #     deployment configuration    #
 #---------------------------------#
 
-# deploy:
-
-  # Deploy to GitHub Releases
-  # - provider: GitHub
-  #   artifact: /.*\.nupkg/           # upload all NuGet packages to release assets
-  #   draft: false
-  #   prerelease: false
-  #   on:
-  #     branch: master                # release from master branch only
-  #     appveyor_repo_tag: true       # deploy on tag push only
-
-deploy_script:
+before_deploy:
 - ps: ./deploy.ps1
 
-# to disable deployment
-# deploy: off
+# deploy:
+
+#   # Deploy to GitHub Releases
+#   - provider: GitHub
+#     release: "DesignGuide v$(Env:GitVersion_FullSemVer)"
+#     description: "ENV VAR THIS"
+#     artifact: /PayEx.DesignGuide.*\.zip/
+#     draft: false
+#     prerelease: false
+#     on:
+#       branch: master
+#       appveyor_repo_tag: true
+
+#---------------------------------#
+#         notifications           #
+#---------------------------------#
+
+# notifications:
+
+  # # Slack
+  # - provider: Slack
+  #   incoming_webhook: http://incoming-webhook-url
+
+  # # ...or using auth token
+
+  # - provider: Slack
+  #   auth_token:
+  #     secure: kBl9BlxvRMr9liHmnBs14A==
+  #   channel: development
+  #   template: "{message}, {commitId}, ..."
