@@ -1,6 +1,6 @@
 if (($Env:APPVEYOR_REPO_TAG -eq "true") -and ($Env:GitVersion_BranchName -eq "master")) {
     # Store content of CHANGELOG.md in env variable
-    $Env:changelog = [IO.File]::ReadAllText("%APPVEYOR_BUILD_FOLDER%\CHANGELOG.md")
+    $Env:changelog = [IO.File]::ReadAllText("C:\projects\design-payex-com\CHANGELOG.md")
     Write-Host "Changelog - $Env:changelog"
 
     # Deploy to gh-pages

@@ -21,10 +21,6 @@ environment:
 #   - node_modules
 
 install:
-- ps: |
-    $changelog = [IO.File]::ReadAllText("%APPVEYOR_BUILD_FOLDER%\CHANGELOG.md")
-    Write-Host "Changelog - $changelog"
-    $host.SetShouldExit(1)
 - cmd: >-
     choco install gitversion.portable --pre
 
