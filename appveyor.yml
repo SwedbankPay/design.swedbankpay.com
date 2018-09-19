@@ -52,13 +52,6 @@ after_build:
 test: off
 
 #---------------------------------#
-#      artifacts configuration    #
-#---------------------------------#
-
-artifacts:
-  - path: PayEx.DesignGuide.v$(GitVersion_SemVer).zip
-
-#---------------------------------#
 #     deployment configuration    #
 #---------------------------------#
 
@@ -73,9 +66,8 @@ deploy:
     description: "$(Env:changelog)"
     artifact: /PayEx.DesignGuide.*\.zip/
     draft: true
-    prerelease: false
+    prerelease: true
     on:
-      branch: master
       appveyor_repo_tag: true
 
 #---------------------------------#
