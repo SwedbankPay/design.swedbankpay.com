@@ -1,3 +1,3 @@
-# [0.10.13] - 2018-09-19
+# [0.10.14] - 2018-09-20
 
 ## Testing AppVeyor build/deploy config
