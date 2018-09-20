@@ -19,7 +19,7 @@ const SimpleDatepicker = () => (
 const InitialValue = () => (
     <>
         <h2 id="initial-value">Initial value</h2>
-        <p>Initial value..<Attribute data name="datepicker-init-value" />.</p>
+        <p>Initial value..<Attribute data name="datepicker-value" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent value={moment().format("YYYY-MM-DD")} label="Date" prefixType="icon" prefixValue="event" />
         </ComponentPreview>
