@@ -1,5 +1,5 @@
 # Changelog
 
-## [0.10.16] - 2018-09-20
+## [0.10.17] - 2018-09-20
 
-### Testing AppVeyor build/deploy config
+### Finalized AppVeyor build config

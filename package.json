@@ -1,6 +1,6 @@
 {
     "name": "design.payex.com",
-    "version": "0.10.16",
+    "version": "0.10.17",
     "description": "PayEx DesignGuide",
     "main": "index.js",
     "scripts": {

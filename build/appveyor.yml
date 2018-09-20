@@ -51,7 +51,7 @@ test_script:
 #---------------------------------#
 
 before_deploy:
-- ps: ./deploy.ps1
+- ps: ./deploy-github-pages.ps1
 
 deploy:
 
