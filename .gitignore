@@ -4,3 +4,4 @@ dist
 .cache
 src
 temp
+build
