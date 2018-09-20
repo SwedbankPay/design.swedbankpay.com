@@ -43,11 +43,11 @@ after_build:
 #       tests configuration       #
 #---------------------------------#
 
-## test_script:
-# - cmd: >-
-#     npm run lint
+# test_script:
+- cmd: >-
+    npm run lint
 
-#     npm test
+    npm test
 
 test: off
 
@@ -64,8 +64,8 @@ deploy:
   - provider: GitHub
     auth_token:
       secure: IGs25EMrhe0au+uVDbOck6akDzC9ykvJeR0zJjhrT6idNuYOr/JpyGdefQxSlWXk
-    release: "DesignGuide v$(Env:GitVersion_SemVer)"
-    description: "$(Env:changelog)"
+    release: DesignGuide v$(GitVersion_SemVer)
+    description: $(changelog)
     artifact: /PayEx.DesignGuide.*\.zip/
     draft: true
     prerelease: true
