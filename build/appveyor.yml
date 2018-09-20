@@ -23,6 +23,7 @@ environment:
 install:
 - cmd: >-
     choco install gitversion.portable --pre
+
     gitversion /output BuildServer
 
     npm install
