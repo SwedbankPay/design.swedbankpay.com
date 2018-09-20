@@ -62,6 +62,8 @@ deploy:
 
   # Deploy to GitHub Releases
   - provider: GitHub
+    auth_token:
+      secure: IGs25EMrhe0au+uVDbOck6akDzC9ykvJeR0zJjhrT6idNuYOr/JpyGdefQxSlWXk
     release: "DesignGuide v$(Env:GitVersion_SemVer)"
     description: "$(Env:changelog)"
     artifact: /PayEx.DesignGuide.*\.zip/
