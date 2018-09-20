@@ -20,6 +20,5 @@ module.exports = {
     testPathIgnorePatterns: [
         "/node_modules/",
         "\\.spec\\.js"
-    ],
-    testResultsProcessor: "jest-teamcity-reporter"
+    ]
 };
