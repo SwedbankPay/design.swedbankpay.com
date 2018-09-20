@@ -71,10 +71,6 @@ Coding style rules set in `./.eslintrc` & `./.stylelintrc`.
 
 __*Make sure to follow the syntax rules enforced by eslint & stylelint.*__
 
-## Places to find information
-
-* [XWiki](https://wiki.payex.com/xwiki/bin/view/Team%20Area/team-ux/Designguide/)
-
 ## Contributing
 
 * Bug reports: File bugs as Github [issues](https://github.com/PayEx/design.payex.com/issues).
