@@ -1,8 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Table from "./index";
-import { BasicTable, StripedTable, HoverTable, HoverStripedTable, DescriptionTable, TablesText } from "./index";
+import Table, { BasicTable, StripedTable, HoverTable, HoverStripedTable, DescriptionTable, TablesText } from "./index";
 
 describe("Documentation: Table", () => {
     it("is defined", () => {

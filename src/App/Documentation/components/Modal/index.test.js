@@ -1,8 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Modal from "./index";
-import { Usage, Demo, ModalText } from "./index";
+import Modal, { Usage, Demo, ModalText } from "./index";
 
 describe("Documentation: Modal", () => {
     it("is defined", () => {

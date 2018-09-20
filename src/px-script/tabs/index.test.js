@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import tabs from "./index";
-import Tabs from "../../App/components/Tabs";
+import Tabs from "@/Tabs";
 
 describe("px-script: tabs", () => {
     const div = document.createElement("div");

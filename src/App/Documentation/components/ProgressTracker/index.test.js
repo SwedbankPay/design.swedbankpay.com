@@ -1,8 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import ProgressTracker from "./index";
-import { BasicProgressTracker, SmallProgressTracker, DisabledProgressTracker, ProgressTrackerText } from "./index";
+import ProgressTracker, { BasicProgressTracker, SmallProgressTracker, DisabledProgressTracker, ProgressTrackerText } from "./index";
 
 describe("Documentation: ProgressTracker", () => {
     it("is defined", () => {

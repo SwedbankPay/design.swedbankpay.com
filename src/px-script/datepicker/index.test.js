@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import datepicker from "./index";
-import Datepicker from "../../App/components/FormComponents/Datepicker";
+import Datepicker from "@/FormComponents/Datepicker";
 
 describe("px-script: datepicker", () => {
     const div = document.createElement("div");

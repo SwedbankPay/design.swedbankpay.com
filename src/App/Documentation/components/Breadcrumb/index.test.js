@@ -1,8 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Breadcrumb from "./index";
-import { BasicBreadCrumb, DisabledBreadcrumb, BreadcrumbText } from "./index";
+import Breadcrumb, { BasicBreadCrumb, DisabledBreadcrumb, BreadcrumbText } from "./index";
 
 describe("Documentation: Breadcrumb", () => {
     it("is defined", () => {
