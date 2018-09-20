@@ -13,7 +13,6 @@ exports[`Documentation: InputGroup BasicExample renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
   >
     <InputGroup

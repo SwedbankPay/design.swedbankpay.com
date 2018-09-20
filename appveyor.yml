@@ -36,9 +36,6 @@ before_build:
 build_script:
 - cmd: npm run build:prod
 
-after_build:
-- ps: Push-AppveyorArtifact "dist/temp/PayEx.DesignGuide.v$($Env:GitVersion_SemVer).zip"
-
 #---------------------------------#
 #       tests configuration       #
 #---------------------------------#
@@ -65,6 +62,7 @@ deploy:
     auth_token:
       secure: IGs25EMrhe0au+uVDbOck6akDzC9ykvJeR0zJjhrT6idNuYOr/JpyGdefQxSlWXk
     release: DesignGuide v$(GitVersion_SemVer)
+    tag: $(APPVEYOR_REPO_TAG_NAME)
     description: $(changelog)
     artifact: /PayEx.DesignGuide.*\.zip/
     draft: true
