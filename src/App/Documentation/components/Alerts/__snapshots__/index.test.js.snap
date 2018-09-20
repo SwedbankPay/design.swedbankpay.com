@@ -267,10 +267,9 @@ exports[`Documentation: Alerts Extended Usage renders 1`] = `
         Success!
       </h3>
       <p>
-        You successfully saw the code example under the Extended usage section.
-      </p>
-      <p>
-        This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
+        PDF was successfully uploaded. 
+        <br />
+         Some additional information.
       </p>
       <hr />
       <p>

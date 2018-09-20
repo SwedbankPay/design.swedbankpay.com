@@ -29,8 +29,8 @@ DesignGuide requires [Node.js](https://nodejs.org/en/) (includes npm).
 
 ### Built with
 
-* [React 16.3](https://reactjs.org/)
-* [Less 2.7](http://lesscss.org/)
+* [React](https://reactjs.org/)
+* [Less](http://lesscss.org/)
 
 ### Setting up Dev
 

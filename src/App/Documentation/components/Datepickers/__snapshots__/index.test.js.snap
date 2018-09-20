@@ -233,6 +233,9 @@ exports[`Documentation: Datepickers Required renders 1`] = `
     showCasePanel={true}
   >
     <Datepicker
+      label="Date"
+      prefixType="icon"
+      prefixValue="event"
       required={true}
     />
   </ComponentPreview>
@@ -261,7 +264,10 @@ exports[`Documentation: Datepickers ShowingMultipleMonths renders 1`] = `
     showCasePanel={true}
   >
     <Datepicker
+      label="Date"
       months="2"
+      prefixType="icon"
+      prefixValue="event"
     />
   </ComponentPreview>
 </React.Fragment>
@@ -279,7 +285,6 @@ exports[`Documentation: Datepickers SimpleDatepicker renders 1`] = `
     <Attribute
       data={true}
       name="datepicker"
-      value="true"
     />
     .
   </p>
@@ -288,7 +293,11 @@ exports[`Documentation: Datepickers SimpleDatepicker renders 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <Datepicker />
+    <Datepicker
+      label="Date"
+      prefixType="icon"
+      prefixValue="event"
+    />
   </ComponentPreview>
 </React.Fragment>
 `;

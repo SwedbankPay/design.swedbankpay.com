@@ -180,6 +180,9 @@ exports[`Documentation: Lists ListsText renders 1`] = `
   <InlineList />
   <DescriptionList />
   <SettingsList />
+  <ItemList />
+  <StatusItemList />
+  <StripedItemList />
 </div>
 `;
 

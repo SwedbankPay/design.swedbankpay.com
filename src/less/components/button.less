@@ -1,7 +1,6 @@
 .btn {
     display: inline-flex;
     align-items: center;
-    margin-bottom: 0.3rem;
     position: relative;
     font-weight: normal;
     text-align: center;
@@ -12,7 +11,6 @@
     background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
     border: 1px solid transparent;
     white-space: nowrap;
-    transition: all 100ms linear; // TODO: Look into fine tuning this one, or perhaps even match it with other elements with bg transition
     user-select: none;
     .button-size(@padding-base-vertical; @padding-base-horizontal; @base-font-size; @line-height-base; @btn-border-radius-base;);
 
@@ -43,7 +41,7 @@
     &:hover,
     &:focus,
     &.focus {
-        color: @btn-default-color;
+        color: @btn-secondary-color;
         text-decoration: none;
     }
 
@@ -77,11 +75,11 @@
     // --------------------------------------------------
 
     &.btn-primary {
-        .button-variant(@btn-brand-color, @btn-brand-bg);
+        .button-variant(@btn-primary-color, @btn-primary-bg);
     }
 
     &.btn-secondary {
-        .button-variant(@btn-default-color, @btn-default-bg);
+        .button-variant(@btn-secondary-color, @btn-secondary-bg);
     }
 
     &.btn-danger {
@@ -135,11 +133,11 @@
     // --------------------------------------------------
 
     &.btn-outline-primary {
-        .button-outline-variant(@btn-brand-outline-color, @btn-brand-bg, @btn-brand-color);
+        .button-outline-variant(@btn-primary-outline-color, @btn-primary-bg, @btn-primary-color);
     }
 
     &.btn-outline-secondary {
-        .button-outline-variant(@btn-default-outline-color, @btn-default-bg, @btn-default-color);
+        .button-outline-variant(@btn-secondary-outline-color, @btn-secondary-bg, @btn-secondary-color);
     }
 
     &.btn-outline-danger {
@@ -261,7 +259,7 @@
 
         &.btn-secondary {
             .loader {
-                .loader-color-variant(@btn-default-color);
+                .loader-color-variant(@btn-secondary-color);
             }
         }
 
@@ -273,21 +271,21 @@
 
         &.btn-outline-primary {
             .loader {
-                .loader-color-variant(@btn-brand-outline-color);
+                .loader-color-variant(@btn-primary-outline-color);
             }
 
             &:hover {
-                .loader-color-variant(@btn-brand-color);
+                .loader-color-variant(@btn-primary-color);
             }
         }
 
         &.btn-outline-secondary {
             .loader {
-                .loader-color-variant(@btn-default-outline-color);
+                .loader-color-variant(@btn-secondary-outline-color);
             }
 
             &:hover {
-                .loader-color-variant(@btn-default-color);
+                .loader-color-variant(@btn-secondary-color);
             }
         }
 

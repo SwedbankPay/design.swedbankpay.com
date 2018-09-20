@@ -66,8 +66,7 @@ const ExtendedUsage = () => (
         <ComponentPreview language="html" showCasePanel codeFigure>
             <AlertComponent type="success" close icon="check_circle">
                 <h3 className="color-success">Success!</h3>
-                <p>You successfully saw the code example under the Extended usage section.</p>
-                <p>This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+                <p>PDF was successfully uploaded. <br /> Some additional information.</p>
                 <hr/>
                 <p>By the way, great job!</p>
             </AlertComponent>

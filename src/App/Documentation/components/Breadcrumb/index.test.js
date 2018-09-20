@@ -2,7 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 
 import Breadcrumb from "./index";
-import { BasicBreadCrumb, SmallBreadCrumb, DisabledBreadcrumb, BreadcrumbText } from "./index";
+import { BasicBreadCrumb, DisabledBreadcrumb, BreadcrumbText } from "./index";
 
 describe("Documentation: Breadcrumb", () => {
     it("is defined", () => {
@@ -25,20 +25,6 @@ describe("Documentation: Breadcrumb", () => {
         it("renders", () => {
             const wrapper = shallow(
                 <BasicBreadCrumb />
-            );
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("Small BreadCrumb", () => {
-        it("is defined", () => {
-            expect(SmallBreadCrumb).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(
-                <SmallBreadCrumb />
             );
 
             expect(wrapper).toMatchSnapshot();

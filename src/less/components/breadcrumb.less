@@ -6,6 +6,20 @@ ol.breadcrumb {
 
     li {
         list-style: none;
+
+        &:last-child {
+            font-weight: bold;
+
+            &:after {
+                display: none;
+            }
+        }
+
+        &:after {
+            content: ">";
+            color: @brand-primary;
+            margin: 0 0.5rem;
+        }
     }
 
     .material-icons {
@@ -14,133 +28,14 @@ ol.breadcrumb {
     }
 }
 
+
 @media screen and (max-width: @screen-xs-max) {
     ul.breadcrumb,
     ol.breadcrumb {
+        display: block;
+
         li {
-            text-transform: uppercase;
-
-            &:last-child {
-                font-weight: bold;
-
-                &:after {
-                    display: none;
-                }
-            }
-
-            &:after {
-                content: ">";
-                color: @brand-primary;
-                margin: 0 0.5rem;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: @screen-sm-min) {
-    ul.breadcrumb,
-    ol.breadcrumb {
-        li {
-            a,
-            span {
-                color: @brand-primary;
-                padding: @breadcrumb-padding;
-                background-color: @breadcrumb-bg;
-                border: 1px solid @breadcrumb-border-color;
-                border-right: none;
-                position: relative;
-                text-transform: uppercase;
-                margin-bottom: 0.2rem;
-
-                &:before,
-                &:after {
-                    left: 100%;
-                    top: 50%;
-                    border: solid transparent;
-                    content: "";
-                    height: 0;
-                    width: 0;
-                    position: absolute;
-                    pointer-events: none;
-                }
-
-                &:after {
-                    border-left-color: @breadcrumb-border-color;
-                    border-width: @breadcrumb-arrow-border;
-                    margin-top: -@breadcrumb-arrow-border;
-                    z-index: 1;
-                }
-
-                &:before {
-                    border-left-color: @breadcrumb-bg;
-                    border-width: @breadcrumb-arrow-bg;
-                    margin-top: -@breadcrumb-arrow-bg;
-                    z-index: 2;
-                }
-            }
-
-            &:first-child {
-                a,
-                span {
-                    padding-left: @breadcrumb-padding-first;
-                }
-            }
-
-            &:last-child {
-                a,
-                span {
-                    color: @breadcrumb-active-color;
-                    background-color: @breadcrumb-active-bg;
-
-                    &:before {
-                        border: none;
-                    }
-                }
-            }
-
-            &:not(:last-child) {
-                span {
-                    color: @breadcrumb-disabled-color;
-                    pointer-events: none;
-                    background-color: @breadcrumb-disabled-bg;
-
-                    &:before {
-                        border-left-color: @breadcrumb-disabled-bg;
-                    }
-                }
-            }
-        }
-
-        &.breadcrumb-sm {
-            li {
-                a,
-                span {
-                    padding: @breadcrumb-padding-sm;
-                    font-size: 80%;
-
-                    &:after {
-                        border-width: @breadcrumb-arrow-border-sm;
-                        margin-top: -@breadcrumb-arrow-border-sm;
-                    }
-
-                    &:before {
-                        border-width: @breadcrumb-arrow-bg-sm;
-                        margin-top: -@breadcrumb-arrow-bg-sm;
-                    }
-                }
-
-                &:first-child {
-                    a,
-                    span {
-                        padding-left: @breadcrumb-padding-first-sm;
-                    }
-                }
-            }
-
-            .material-icons {
-                font-size: 0.8rem;
-                line-height: 1.2;
-            }
+            display: inline-block;
         }
     }
 }

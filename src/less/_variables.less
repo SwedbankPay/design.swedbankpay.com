@@ -289,6 +289,8 @@
 
 // 7. Breadcrumb
 // ==========================================================================
+// Todo: clean this up when progress tracker is remade
+
 
 @breadcrumb-margin:                         1rem 0;
 @breadcrumb-padding:                        0.6rem 1.2rem 0.6rem 2rem;
@@ -323,38 +325,22 @@
 
 @btn-font-weight:                           normal;
 
-@btn-border-radius-base:                    0;
-@btn-border-radius-large:                   0;
-@btn-border-radius-small:                   0;
+@btn-border-radius-base:                    3px;
+@btn-border-radius-large:                   3px;
+@btn-border-radius-small:                   3px;
 
-@btn-default-color:                         @gray-0;
-@btn-default-outline-color:                 @gray-8;
-@btn-default-bg:                            @gray-8;
-@btn-default-ghost-color:                   @gray-3;
+@btn-primary-color:                         @white;
+@btn-primary-outline-color:                 @brand-primary;
+@btn-primary-bg:                            @brand-primary;
 
-@btn-brand-color:                           @white;
-@btn-brand-outline-color:                   @brand-primary;
-@btn-brand-bg:                              @brand-primary;
-
-@btn-neutral-color:                         @white;
-@btn-neutral-outline-color:                 @state-neutral;
-@btn-neutral-bg:                            @state-neutral;
-
-@btn-success-color:                         @white;
-@btn-success-outline-color:                 @state-success;
-@btn-success-bg:                            @state-success;
-
-@btn-warning-color:                         @white;
-@btn-warning-outline-color:                 @state-warning;
-@btn-warning-bg:                            @state-warning;
+@btn-secondary-color:                       @gray-0;
+@btn-secondary-outline-color:               @gray-8;
+@btn-secondary-bg:                          @gray-8;
+@btn-secondary-ghost-color:                 @gray-3;
 
 @btn-danger-color:                          @white;
 @btn-danger-outline-color:                  @state-error;
 @btn-danger-bg:                             @state-error;
-
-@btn-light-color:                           @gray-5;
-@btn-light-outline-color:                   @gray-10;
-@btn-light-bg:                              @gray-10;
 
 @btn-link-disabled-color:                   @gray-6;
 
@@ -373,7 +359,7 @@
 @dialog-heading-padding:                    1rem 2rem;
 @dialog-body-padding:                       2rem 2rem 1rem 2rem;
 @dialog-footer-margin:                      0;
-@dialog-footer-padding:                     1rem 2rem 0.6rem 2rem;
+@dialog-footer-padding:                     1rem 2rem 1rem 2rem;
 
 @dialog-size:                               500px;
 
