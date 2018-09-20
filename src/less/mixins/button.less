@@ -6,12 +6,12 @@
     &:focus,
     &.focus {
         color: @color;
-        background: darken(@background, 5%);
+        background-color: darken(@background, 5%);
     }
 
     &:hover {
         color: @color;
-        background: darken(@background, 5%);
+        background-color: darken(@background, 5%);
         background-image: none;
     }
 
@@ -24,7 +24,7 @@
         &:focus,
         &.focus {
             color: @color;
-            background: darken(@background, 10%);
+            background-color: darken(@background, 10%);
         }
     }
 
@@ -67,12 +67,12 @@
     &:focus,
     &.focus {
         color: @hover-color;
-        background: darken(@background, 5%);
+        background-color: darken(@background, 5%);
     }
 
     &:hover {
         color: @hover-color;
-        background: @background;
+        background-color: @background;
     }
 
     &:active,
@@ -84,7 +84,7 @@
         &:focus,
         &.focus {
             color: @color;
-            background: darken(@background, 10%);
+            background-color: darken(@background, 10%);
         }
     }
 
@@ -97,7 +97,7 @@
         &.focus,
         &:active,
         &.active {
-            background: @gray-8;
+            background-color: @gray-8;
             color: @gray-4;
             border-color: transparent;
         }
@@ -143,7 +143,7 @@
 
 .button-active-state(@background; @color: @white) {
     color: @color;
-    background: @background;
+    background-color: @background;
 }
 
 // Button sizes
