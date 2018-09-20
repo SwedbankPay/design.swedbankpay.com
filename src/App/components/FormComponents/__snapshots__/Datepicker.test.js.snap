@@ -3,7 +3,7 @@
 exports[`Component: Datepicker -  renders 1`] = `
 <input
   className="form-control"
-  data-datepicker={true}
+  data-datepicker=""
   data-datepicker-format={null}
   data-datepicker-max={null}
   data-datepicker-min={null}
@@ -26,19 +26,27 @@ exports[`Component: Datepicker -  renders with the form-group and label 1`] = `
   </label>
   
 
-  <input
-    className="form-control"
-    data-datepicker={true}
-    data-datepicker-format={null}
-    data-datepicker-max={null}
-    data-datepicker-min={null}
-    data-datepicker-months={null}
-    data-datepicker-time={null}
-    data-datepicker-value={null}
-    data-required={null}
-    type="text"
-  />
-  
+  <div
+    className="input-group"
+  >
+    
 
+    
+
+    <input
+      className="form-control"
+      data-datepicker=""
+      data-datepicker-format={null}
+      data-datepicker-max={null}
+      data-datepicker-min={null}
+      data-datepicker-months={null}
+      data-datepicker-time={null}
+      data-datepicker-value={null}
+      data-required={null}
+      type="text"
+    />
+    
+
+  </div>
 </div>
 `;
