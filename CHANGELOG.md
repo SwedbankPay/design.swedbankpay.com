@@ -1,5 +1,16 @@
 # Changelog
 
-## [0.10.15] - 2018-09-20
+## [0.11.x] - 2018-09-xx
 
-### Testing AppVeyor build/deploy config
+### Added
+
+- Added new list component, item-list, and updated documentation.
+- Added icon to datepicker.
+
+### Changed
+
+- Made some minor styling changes to button component.
+- Changed breadcrumb component to only display text, removed most of the styling.
+- Made some minor styling changes to description table.
+- Made some slight changes to checkbox/radio button positioning.
+- Made some minor style changes to alert component.
