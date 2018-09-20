@@ -29,7 +29,7 @@ exports[`GettingStarted: Introduction Css renders 1`] = `
     language="html"
   >
     <link
-      href="https://design.payex.com/v/0.10.17/styles/px.css"
+      href="https://design.payex.com/v/0.10.18/styles/px.css"
       rel="stylesheet"
     />
   </ComponentPreview>
@@ -80,7 +80,7 @@ exports[`GettingStarted: Introduction JavaScript renders 1`] = `
     language="html"
   >
     <script
-      src="https://design.payex.com/v/0.10.17/scripts/px-script.js"
+      src="https://design.payex.com/v/0.10.18/scripts/px-script.js"
     />
   </ComponentPreview>
 </React.Fragment>
@@ -125,7 +125,7 @@ exports[`GettingStarted: Introduction StarterTemplate renders 1`] = `
           name="viewport"
         />
         <link
-          href="https://design.payex.com/v/0.10.17/styles/px.css"
+          href="https://design.payex.com/v/0.10.18/styles/px.css"
           rel="stylesheet"
         />
         <title>
@@ -137,7 +137,7 @@ exports[`GettingStarted: Introduction StarterTemplate renders 1`] = `
           Hello, PayEx!
         </h1>
         <script
-          src="https://design.payex.com/v/0.10.17/scripts/px-script.js"
+          src="https://design.payex.com/v/0.10.18/scripts/px-script.js"
         />
       </body>
     </html>

@@ -23,15 +23,13 @@ environment:
 install:
 - cmd: >-
     choco install gitversion.portable --pre
+    gitversion /output BuildServer
 
     npm install
 
 #---------------------------------#
 #       build configuration       #
 #---------------------------------#
-
-before_build:
-- cmd: gitversion /output BuildServer
 
 build_script:
 - cmd: npm run build:prod
@@ -51,7 +49,7 @@ test_script:
 #---------------------------------#
 
 before_deploy:
-- ps: ./deploy-github-pages.ps1
+- ps: ./build/deploy-github-pages.ps1
 
 deploy:
 
