@@ -24,14 +24,13 @@ install:
 - cmd: >-
     choco install gitversion.portable --pre
 
+    gitversion /output BuildServer
+
     npm install
 
 #---------------------------------#
 #       build configuration       #
 #---------------------------------#
-
-before_build:
-- cmd: gitversion /output BuildServer
 
 build_script:
 - cmd: npm run build:prod
@@ -40,20 +39,18 @@ build_script:
 #       tests configuration       #
 #---------------------------------#
 
-# test_script:
+test_script:
 - cmd: >-
     npm run lint
 
     npm test
-
-test: off
 
 #---------------------------------#
 #     deployment configuration    #
 #---------------------------------#
 
 before_deploy:
-- ps: ./deploy.ps1
+- ps: ./build/deploy-github-pages.ps1
 
 deploy:
 
@@ -65,7 +62,7 @@ deploy:
     tag: $(APPVEYOR_REPO_TAG_NAME)
     description: $(changelog)
     artifact: /PayEx.DesignGuide.*\.zip/
-    draft: true
+    draft: false
     prerelease: true
     on:
       appveyor_repo_tag: true
@@ -74,16 +71,14 @@ deploy:
 #         notifications           #
 #---------------------------------#
 
-# notifications:
+notifications:
 
-  # # Slack
-  # - provider: Slack
-  #   incoming_webhook: http://incoming-webhook-url
-
-  # # ...or using auth token
-
-  # - provider: Slack
-  #   auth_token:
-  #     secure: kBl9BlxvRMr9liHmnBs14A==
-  #   channel: development
-  #   template: "{message}, {commitId}, ..."
+  # Slack
+  - provider: Slack
+    incoming_webhook:
+      secure: gxWz5+nY3Ctg2JTqo5RQVwHA+UNxiB/H1u72IC71b3pk+Am9g0ghP5Jh8WXoUf3gnscGiY2UwQboWJCcqPLEqHkn1PxM+PdJ43ZRRQBQbyE=
+    channel: design-guide-dev
+    on_build_success: true
+    on_build_failure: true
+    on_build_status_changed: true
+    # template: "{message}, {commitId}, ..."

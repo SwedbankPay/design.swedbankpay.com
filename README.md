@@ -2,7 +2,7 @@
 
 # design.payex.com
 
-[![Version](https://img.shields.io/badge/Version-0.10.16-blue.svg)](https://ci.appveyor.com/project/erikhallaraaker/design-payex-com/branch/master)
+[![Version](https://img.shields.io/badge/Version-0.10.20-blue.svg)](https://ci.appveyor.com/project/erikhallaraaker/design-payex-com/branch/master)
 [![Build status](https://ci.appveyor.com/api/projects/status/1dii19sqw1m7xtsn/branch/master?svg=true)](https://ci.appveyor.com/project/PayEx/design-payex-com/branch/master)
 [![dependencies Status](https://david-dm.org/payex/design.payex.com/status.svg)](https://david-dm.org/payex/design.payex.com)
 [![devDependencies Status](https://david-dm.org/payex/design.payex.com/dev-status.svg)](https://david-dm.org/payex/design.payex.com?type=dev)

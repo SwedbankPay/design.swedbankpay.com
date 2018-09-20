@@ -1,6 +1,6 @@
 {
     "name": "design.payex.com",
-    "version": "0.10.16",
+    "version": "0.10.20",
     "description": "PayEx DesignGuide",
     "main": "index.js",
     "scripts": {
@@ -9,7 +9,7 @@
         "build": "webpack --mode development",
         "build:prod": "webpack --mode production",
         "test": "jest",
-        "test:update": "npm test -- -u",
+        "test:update": "jest --updateSnapshot",
         "lint": "eslint src/ && stylelint src/less/",
         "e2e:chrome": "testcafe chrome src/**/*.spec.js"
     },
