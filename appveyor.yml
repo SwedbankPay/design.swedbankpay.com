@@ -43,11 +43,11 @@ after_build:
 #       tests configuration       #
 #---------------------------------#
 
-## test_script:
-# - cmd: >-
-#     npm run lint
+# test_script:
+- cmd: >-
+    npm run lint
 
-#     npm test
+    npm test
 
 test: off
 
