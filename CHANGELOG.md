@@ -14,3 +14,8 @@
 - Made some minor styling changes to description table.
 - Made some slight changes to checkbox/radio button positioning.
 - Made some minor style changes to alert component.
+
+### Fixed
+
+- Fixed issue with datepicker not displaying within sheet.
+- Fixed issue with sheet not being scrollable.
