@@ -1,4 +1,7 @@
 if (($Env:APPVEYOR_REPO_TAG -eq "true") -and ($Env:GitVersion_BranchName -eq "master")) {
+    # Push artifact to appveyor
+    Push-AppveyorArtifact "dist/temp/PayEx.DesignGuide.v$($Env:GitVersion_SemVer).zip"
+
     # Store content of CHANGELOG.md in env variable
     $Env:changelog = [IO.File]::ReadAllText("C:\projects\design-payex-com\CHANGELOG.md")
 
