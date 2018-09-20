@@ -226,12 +226,7 @@ module.exports = (env, argv) => {
                                 destination: `./dist/temp/PayEx.DesignGuide.v${version}.zip`
                             }
                         ]
-                    },
-                    // {
-                    //     delete: [
-                    //         "./dist/temp"
-                    //     ]
-                    // }
+                    }
                 ]
             }),
             // new SentryCliPlugin({
