@@ -30,6 +30,11 @@
         "plugin:testcafe/recommended",
         "plugin:security/recommended"
     ],
+    "settings": {
+        "react": {
+            "version": "16.3"
+        }
+    },
     "rules": {
         "array-bracket-spacing":                ["warn"],
         "babel/new-cap":                        0,

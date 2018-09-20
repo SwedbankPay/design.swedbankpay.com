@@ -8,11 +8,14 @@ const AppManifestWebpackPlugin = require("app-manifest-webpack-plugin");
 const lessListPlugin = require("less-plugin-lists");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const FileManagerPlugin = require("filemanager-webpack-plugin");
+const SentryCliPlugin = require("@sentry/webpack-plugin");
 
 module.exports = (env, argv) => {
     const version = pkg.version;
     const isProd = argv.mode === "production";
+    const isDevServer = !!argv.host;
 
     const config = {
         entry: {
@@ -53,11 +56,7 @@ module.exports = (env, argv) => {
                         {
                             loader: isProd ? MiniCssExtractPlugin.loader : "style-loader"
                         },
-                        {
-                            loader: "css-loader",
-                            options: {
-                                minimize: isProd
-                            } },
+                        { loader: "css-loader" },
                         {
                             loader: "postcss-loader",
                             options: {
@@ -151,7 +150,8 @@ module.exports = (env, argv) => {
                             unused: false
                         }
                     }
-                })
+                }),
+                new OptimizeCSSAssetsPlugin({})
             ],
             mergeDuplicateChunks: !isProd
         },
@@ -198,19 +198,13 @@ module.exports = (env, argv) => {
         ]
     };
 
-    if (isProd) {
+    if (isProd && !isDevServer) {
         config.plugins.push(
             new FileManagerPlugin({
                 onStart: [
                     {
                         delete: [
                             "./dist"
-                        ],
-                        copy: [
-                            {
-                                source: "./static",
-                                destination: "./dist"
-                            }
                         ]
                     }
                 ],
@@ -220,26 +214,31 @@ module.exports = (env, argv) => {
                             {
                                 source: "./dist/icons",
                                 destination: "./dist/temp/icons"
-                            },
-                            {
-                                source: `./dist/v/${version}`,
-                                destination: `./static/v/${version}`
                             }
                         ],
                         archive: [
                             {
                                 source: "./dist/temp",
                                 destination: "./dist/icons.zip"
+                            },
+                            {
+                                source: `./dist/v/${version}`,
+                                destination: `./dist/temp/PayEx.DesignGuide.v${version}.zip`
                             }
                         ]
                     },
-                    {
-                        delete: [
-                            "./dist/temp"
-                        ]
-                    }
+                    // {
+                    //     delete: [
+                    //         "./dist/temp"
+                    //     ]
+                    // }
                 ]
-            })
+            }),
+            // new SentryCliPlugin({
+            //     release: version,
+            //     include: ".",
+            //     ignore: ["node_modules", "webpack.config.js"]
+            // })
         );
     }
 

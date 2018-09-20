@@ -2,8 +2,8 @@
 
 # design.payex.com
 
-[![Version](https://img.shields.io/badge/Version-0.10.1-blue.svg)](https://ci.appveyor.com/project/erikhallaraaker/design-payex-com/branch/master)
-[![Build status](https://ci.appveyor.com/api/projects/status/u04ft9aha1uwiex4/branch/master?svg=true)](https://ci.appveyor.com/project/erikhallaraaker/design-payex-com/branch/master)
+[![Version](https://img.shields.io/badge/Version-0.10.15-blue.svg)](https://ci.appveyor.com/project/erikhallaraaker/design-payex-com/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/1dii19sqw1m7xtsn/branch/master?svg=true)](https://ci.appveyor.com/project/PayEx/design-payex-com/branch/master)
 [![dependencies Status](https://david-dm.org/payex/design.payex.com/status.svg)](https://david-dm.org/payex/design.payex.com)
 [![devDependencies Status](https://david-dm.org/payex/design.payex.com/dev-status.svg)](https://david-dm.org/payex/design.payex.com?type=dev)
 
@@ -63,7 +63,7 @@ Design Guide uses [semantic versioning](http://semver.org/). This means that int
 1. Run the command `npm test`
     * Many of the tests are snapshot based, and runs against already created snapshots. If you need to update the snapshots due to changes run the command `npm run test:update`.
     * A test coverage report is generated after running the tests. This can be found in `./coverage`.
-> Note: Snapshot testing is pretty unforgiving, so if you make __ANY__ changes to how a component is rendered, which already has a snapshot, the tests __WILL__ crash! So make sure to run `npm run test:update` before committing.
+> Note: Snapshot testing is pretty unforgiving, so if you make __ANY__ changes to how a component, which already has a snapshot, is rendered, the tests __WILL__ crash! So make sure to run `npm run test:update` before committing.
 
 ## Code style
 
