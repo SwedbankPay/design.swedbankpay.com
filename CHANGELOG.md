@@ -22,3 +22,4 @@
 - Fixed an issue with datepicker not displaying within sheet.
 - Fixed an issue with sheet not being scrollable.
 - Fixed an issue with loader button not displaying properly when inside a dialog footer.
+- Fixed an issue with sheet that made it appear instantaneous on the initial open.

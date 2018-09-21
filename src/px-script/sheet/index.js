@@ -33,18 +33,16 @@ class Sheet {
     open () {
         if (!this.isOpen) {
             this.isOpen = true;
-            document.body.classList.add("sheet-open");
             this._el.classList.add("d-block");
             setTimeout(() => {
                 this._el.classList.add("sheet-open");
-            }, 1);
+            }, 10); // If set lower than 10, the initial open will be instant.
         }
     }
 
     close () {
         if (this.isOpen) {
             this.isOpen = false;
-            document.body.classList.remove("sheet-open");
             this._el.classList.remove("sheet-open");
             setTimeout(() => {
                 this._el.classList.remove("d-block");
