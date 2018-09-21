@@ -14,6 +14,7 @@
 - Made some minor styling changes to description table.
 - Made some slight changes to checkbox/radio button positioning.
 - Made some minor style changes to alert component.
+- Marked Action List and Tabs components as experimental.
 
 ### Fixed
 

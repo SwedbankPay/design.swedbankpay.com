@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc } from "#";
+import { ComponentPreview, DocToc, ExperimentalComponentAlert } from "#";
 import TabsComponent from "@/Tabs";
 import { tabs } from "$/px-script";
 
@@ -51,6 +51,7 @@ const Collapsed = () => (
 
 const TabsText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
+        <ExperimentalComponentAlert />
         <p className="lead">Tabs...</p>
         <Overview />
         <Stacked />
