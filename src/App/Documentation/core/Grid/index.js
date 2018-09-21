@@ -6,7 +6,7 @@ const HowItWorks = () => (
     <>
         <h2 id="how-it-works">How it works</h2>
         <p>The grid system is heavily based on Bootstrap{"'"}s grid from v.4.</p>
-        <p>Most classes from Bootstrap is available. Click <a href="http://getbootstrap.com/docs/4.1/layout/grid/">here</a> to read more about it.</p>
+        <p>Most classes from Bootstrap is available. Click <a href="http://getbootstrap.com/docs/4.1/layout/grid/" target="_blank" rel="noopener noreferrer">here</a> to read more about it.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="showcase-grid">
                 <div className="container">

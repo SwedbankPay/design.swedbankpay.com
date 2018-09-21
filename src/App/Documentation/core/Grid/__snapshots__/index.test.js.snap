@@ -309,6 +309,8 @@ exports[`Core: Grid HowItWorks renders 1`] = `
     Most classes from Bootstrap is available. Click 
     <a
       href="http://getbootstrap.com/docs/4.1/layout/grid/"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       here
     </a>
