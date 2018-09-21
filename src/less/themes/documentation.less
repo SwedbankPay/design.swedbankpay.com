@@ -47,6 +47,7 @@
 
         a {
             padding: 0.25rem 2.25rem;
+            .brand-link();
 
             &.active {
                 outline: none;
@@ -191,6 +192,10 @@
                 border-left: 2px solid rgba(45, 169, 68, 0.7);
                 font-weight: @font-weight-bold;
                 padding-left: calc(1rem - 1px);
+            }
+
+            a {
+                .brand-link();
             }
         }
     }

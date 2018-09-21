@@ -15,6 +15,7 @@
 - Made some slight changes to checkbox/radio button positioning.
 - Made some minor style changes to alert component.
 - Marked Action List and Tabs components as experimental.
+- Changed default anchor color from green to blue, also added a border bottom of 2px that disappears on hover.
 
 ### Fixed
 

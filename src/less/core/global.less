@@ -49,13 +49,15 @@ textarea {
 // Links
 
 a {
-    color: @brand-primary;
+    color: @blue;
     text-decoration: none;
+    border-bottom: 2px solid @blue;
 
     &:hover,
     &:focus {
-        color: darken(@brand-primary, 10%);
-        text-decoration: underline;
+        color: darken(@blue, 10%);
+        text-decoration: none;
+        border-bottom-color: transparent;
     }
 
     &:active,
