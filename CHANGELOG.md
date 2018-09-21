@@ -19,5 +19,6 @@
 
 ### Fixed
 
-- Fixed issue with datepicker not displaying within sheet.
-- Fixed issue with sheet not being scrollable.
+- Fixed an issue with datepicker not displaying within sheet.
+- Fixed an issue with sheet not being scrollable.
+- Fixed an issue with loader button not displaying properly when inside a dialog footer.
