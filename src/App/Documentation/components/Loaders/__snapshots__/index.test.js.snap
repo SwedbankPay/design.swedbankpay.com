@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Documentation: Loaders Basic Usage renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="basic-usage"
   >
@@ -20,7 +20,7 @@ exports[`Documentation: Loaders Basic Usage renders 1`] = `
       visible={true}
     />
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Loaders Loaders Text renders 1`] = `
@@ -40,7 +40,7 @@ exports[`Documentation: Loaders Loaders Text renders 1`] = `
 `;
 
 exports[`Documentation: Loaders Muted Loader renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="muted-loader"
   >
@@ -67,11 +67,11 @@ exports[`Documentation: Loaders Muted Loader renders 1`] = `
       visible={true}
     />
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Loaders Sizes renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="sizes"
   >
@@ -124,11 +124,11 @@ exports[`Documentation: Loaders Sizes renders 1`] = `
       visible={true}
     />
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Loaders Static Html renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="static-html"
   >
@@ -168,11 +168,11 @@ exports[`Documentation: Loaders Static Html renders 1`] = `
     />
     .
   </p>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Loaders Usage With Javascript renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="usage-with-javascript"
   >
@@ -335,7 +335,7 @@ exports[`Documentation: Loaders Usage With Javascript renders 1`] = `
       </tr>
     </tbody>
   </table>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Loaders renders 1`] = `

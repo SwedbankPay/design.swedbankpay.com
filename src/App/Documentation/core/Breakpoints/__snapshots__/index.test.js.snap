@@ -22,7 +22,7 @@ exports[`Core: Breakpoints BreakpointsText renders 1`] = `
 `;
 
 exports[`Core: Breakpoints Overview renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="overview"
   >
@@ -263,11 +263,11 @@ exports[`Core: Breakpoints Overview renders 1`] = `
       </tr>
     </tbody>
   </table>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Core: Breakpoints renders 1`] = `
-<React.Fragment>
+<Fragment>
   <div
     className="doc-container"
   >
@@ -280,5 +280,5 @@ exports[`Core: Breakpoints renders 1`] = `
       />
     </div>
   </div>
-</React.Fragment>
+</Fragment>
 `;
