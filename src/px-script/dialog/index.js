@@ -42,7 +42,7 @@ class Dialog {
         if (this.isOpen) {
             this.isOpen = false;
             this._el.classList.remove("d-flex");
-            document.body.classList.remove("dialog-open")
+            document.body.classList.remove("dialog-open");
         }
     }
 
