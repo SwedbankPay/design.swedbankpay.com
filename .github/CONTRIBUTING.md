@@ -59,8 +59,8 @@ const MyExampleDocumentationComponentText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
         <p className="lead">This is the documentation for My Example Component.</p>
         <h2 id="example-usage">Example usage</h2>
-        <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
-            <MyExampleComponent type="dark" title="My Example Component" separator={true} />
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <MyExampleComponent type="dark" title="My Example Component" separator />
         </ComponentPreview>
     </div>
 );

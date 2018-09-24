@@ -126,7 +126,7 @@ const ButtonLoader = () => (
             <ButtonComponent outline type="danger" label="Danger" loader loading />{"\n"}
         </ComponentPreview>
         <p>Adding the attribute <Attribute data name="button-loader" value="true" /> to a button component will produce the following html:</p>
-        <ComponentPreview language="html" showCasePanel={false} codeFigure>
+        <ComponentPreview language="html" codeFigure>
             <button className="btn btn-default loading" type="button" data-px-loader="true">{"\n\t"}
                 <div className="btn-loader-label">Default</div>{"\n\t"}
                 <div className="loader">{"\n\t\t"}

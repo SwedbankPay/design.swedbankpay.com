@@ -20,7 +20,7 @@ describe("Component: ProgressTracker", () => {
 
     it("renders with class progress-tracker-sm when provided the prop small", () => {
         const wrapper = shallow(
-            <ProgressTracker small={true} />
+            <ProgressTracker small />
         );
 
         expect(wrapper).toMatchSnapshot();

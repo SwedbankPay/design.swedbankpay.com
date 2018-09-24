@@ -143,7 +143,6 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    showCasePanel={false}
   >
     <button
       className="btn btn-default loading"

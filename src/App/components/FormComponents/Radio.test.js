@@ -39,19 +39,19 @@ describe("Component: Radio - ", () => {
 
     it("renders disabled", () => {
         const wrapper = shallow(
-            <Radio disabled={true} />
+            <Radio disabled />
         );
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<input type="radio" disabled={true} />)).toEqual(true);
+        expect(wrapper.contains(<input type="radio" disabled />)).toEqual(true);
     });
 
     it("renders checked", () => {
         const wrapper = shallow(
-            <Radio checked={true} />
+            <Radio checked />
         );
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<input type="radio" defaultChecked={true} />)).toEqual(true);
+        expect(wrapper.contains(<input type="radio" defaultChecked />)).toEqual(true);
     });
 });

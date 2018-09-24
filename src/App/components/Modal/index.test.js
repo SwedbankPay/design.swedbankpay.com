@@ -75,7 +75,7 @@ describe("Component: Modal - ", () => {
 
     it("renders with class 'static' when prop isStatic is true", () => {
         const wrapper = shallow(
-            <Modal isStatic={true} />
+            <Modal isStatic />
         );
 
         expect(wrapper).toMatchSnapshot();
@@ -84,7 +84,7 @@ describe("Component: Modal - ", () => {
 
     it("renders with class 'd-block' when prop visible is true", () => {
         const wrapper = shallow(
-            <Modal visible={true} />
+            <Modal visible />
         );
 
         expect(wrapper).toMatchSnapshot();
@@ -155,7 +155,7 @@ describe("Component: Modal - ", () => {
 
     it("renders a button component when prop button is true", () => {
         const wrapper = shallow(
-            <Modal button={true} id="test" />
+            <Modal button id="test" />
         );
 
         expect(wrapper).toMatchSnapshot();

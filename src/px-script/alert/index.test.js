@@ -15,8 +15,8 @@ describe("px-script: alert", () => {
     it("method init adds eventlisteners on all close buttons", () => {
         const Alerts = () => (
             <>
-                <Alert id="asd" type="success" close={true} display={true} />
-                <Alert type="success" close={true} display={true} />
+                <Alert id="asd" type="success" close display />
+                <Alert type="success" close display />
             </>
         );
         ReactDOM.render(<Alerts />, div);
@@ -42,7 +42,7 @@ describe("px-script: alert", () => {
     it("method init adds eventlisteners on all button with data attributes", () => {
         const AlertTest = () => (
             <>
-                <Alert id="test" type="success" display={true} />
+                <Alert id="test" type="success" display />
                 <button data-alert-close="test"></button>
             </>
         );
