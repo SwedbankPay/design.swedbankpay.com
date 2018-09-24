@@ -24,3 +24,4 @@
 - Fixed an issue with loader button not displaying properly when inside a dialog footer.
 - Fixed an issue with sheet that made it appear instantaneous on the initial open.
 - Fixed a minor styling issue with action list within table.
+- Fixed issue with selects appearing "glossy" on safari.
