@@ -80,16 +80,6 @@ exports[`Documentation: InputGroup ButtonAddons renders 1`] = `
     showCasePanel={true}
   >
     <InputGroup
-      prefixBtnColor="secondary"
-      prefixType="button"
-      prefixValue="Button"
-      type="text"
-    />
-     
-    
-
-
-    <InputGroup
       postfixBtnColor="primary"
       postfixType="button"
       postfixValue="Button"

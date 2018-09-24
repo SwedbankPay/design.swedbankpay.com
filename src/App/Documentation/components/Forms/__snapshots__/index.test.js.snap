@@ -179,12 +179,14 @@ exports[`Documentation: Forms FormGrid renders 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <form>
+    <form
+      onSubmit={[Function]}
+    >
       <div
         className="row"
       >
         <div
-          className="col-md-6"
+          className="col-5"
         >
           <InputGroup
             autoComplete="given-name"
@@ -196,7 +198,7 @@ exports[`Documentation: Forms FormGrid renders 1`] = `
           />
         </div>
         <div
-          className="col-md-6"
+          className="col-5"
         >
           <InputGroup
             autoComplete="family-name"
@@ -207,45 +209,26 @@ exports[`Documentation: Forms FormGrid renders 1`] = `
             type="text"
           />
         </div>
-      </div>
-      <div
-        className="row"
-      >
         <div
-          className="col-md-4"
+          className="col-2"
         >
-          <InputGroup
-            autoComplete="email"
-            helpBlock="Usually contains an @"
-            id="grid-email"
-            label="Email"
-            placeholder="Enter email"
-            type="email"
-          />
-        </div>
-        <div
-          className="col-md-4"
-        >
-          <InputGroup
-            autoComplete="new-password"
-            helpBlock="It is safe with us"
-            id="grid-new-password"
-            label="Password"
-            placeholder="Enter your desired password"
-            type="password"
-          />
-        </div>
-        <div
-          className="col-md-4"
-        >
-          <InputGroup
-            autoComplete="new-password"
-            helpBlock="Definately not looking over your shoulder"
-            id="grid-repeat-password"
-            label="Repeat password"
-            placeholder="Repeat your desired password"
-            type="password"
-          />
+          <div
+            className="form-group"
+          >
+            
+
+            <br />
+            
+
+            <button
+              className="btn btn-primary"
+              type="submit"
+            >
+              Search
+            </button>
+            
+
+          </div>
         </div>
       </div>
     </form>
@@ -293,7 +276,9 @@ exports[`Documentation: Forms Overview renders 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <form>
+    <form
+      onSubmit={[Function]}
+    >
       <InputGroup
         autoComplete="given-name"
         helpBlock="The first word of your full name"
@@ -534,7 +519,9 @@ exports[`Documentation: Forms UsageWithFieldsets renders 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <form>
+    <form
+      onSubmit={[Function]}
+    >
       <fieldset>
         <legend>
           Log in
@@ -616,6 +603,7 @@ exports[`Documentation: Forms UsageWithFieldsets renders 1`] = `
 
       <Button
         btnType="submit"
+        disabled={true}
         label="Log in"
         type="primary"
       />
@@ -642,7 +630,8 @@ exports[`Documentation: Forms Validation renders 1`] = `
     showCasePanel={true}
   >
     <form
-      data-validate="true"
+      data-validate=""
+      onSubmit={[Function]}
     >
       <InputGroup
         helpBlock="Comes before your last name"
