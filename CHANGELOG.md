@@ -25,3 +25,4 @@
 - Fixed an issue with sheet that made it appear instantaneous on the initial open.
 - Fixed a minor styling issue with action list within table.
 - Fixed issue with selects appearing "glossy" on safari.
+- Fixed issue with select tag with attribute `multiple` not being rendered properly.
