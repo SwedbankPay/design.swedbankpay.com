@@ -16,6 +16,7 @@
 - Made some minor style changes to alert component.
 - Marked Action List and Tabs components as experimental.
 - Changed default anchor color from green to blue, also added a border bottom of 2px that disappears on hover.
+- Changed markup produced by `data-button-loader`.
 
 ### Fixed
 
@@ -26,6 +27,7 @@
 - Fixed a minor styling issue with action list within table.
 - Fixed issue with selects appearing "glossy" on safari.
 - Fixed issue with select tag with attribute `multiple` not being rendered properly.
+- Fixed issue with click event on loader-button.
 
 ### Removed
 

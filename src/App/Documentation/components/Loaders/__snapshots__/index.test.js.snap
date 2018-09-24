@@ -139,7 +139,6 @@ exports[`Documentation: Loaders Static Html renders 1`] = `
     <Attribute
       data={true}
       name="loader"
-      value="true"
     />
      will append the following HTML to the element:
   </p>
@@ -164,7 +163,6 @@ exports[`Documentation: Loaders Static Html renders 1`] = `
     <Attribute
       data={true}
       name="loader"
-      value="true"
     />
     .
   </p>

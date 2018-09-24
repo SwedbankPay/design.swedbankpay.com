@@ -91,7 +91,7 @@ const ActiveState = () => (
 const DisabledState = () => (
     <>
         <h2 id="disabled-state">Disabled state</h2>
-        <p>Disabled state with <Attribute name="disabled" value="true" />...</p>
+        <p>Disabled state with <Attribute name="disabled" />...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ButtonComponent disabled type="primary" label="Primary" />{"\n"}
             <ButtonComponent disabled type="secondary" label="Secondary" />{"\n"}
@@ -114,7 +114,7 @@ const UsageWithIcons = () => (
 const ButtonLoader = () => (
     <>
         <h2 id="button-loader">Button loader</h2>
-        <p>To use a button with a loader simply add the attribute <Attribute data name="button-loader" value="true" /> to add the required markup for the loader component. Add class <code className="token property">.loading</code> to display the loader.</p>
+        <p>To use a button with a loader simply add the attribute <Attribute data name="button-loader" /> to add the required markup for the loader component. Add class <code className="token property">.loading</code> to display the loader.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ButtonComponent type="primary" label="Primary" loader loading />{"\n"}
             <ButtonComponent type="secondary" label="Secondary" loader loading />{"\n"}
@@ -125,10 +125,10 @@ const ButtonLoader = () => (
             <ButtonComponent outline type="secondary" label="Secondary" loader loading />{"\n"}
             <ButtonComponent outline type="danger" label="Danger" loader loading />{"\n"}
         </ComponentPreview>
-        <p>Adding the attribute <Attribute data name="button-loader" value="true" /> to a button component will produce the following html:</p>
+        <p>Adding the attribute <Attribute data name="button-loader" /> to a button component will produce the following html:</p>
         <ComponentPreview language="html" codeFigure>
-            <button className="btn btn-default loading" type="button" data-px-loader="true">{"\n\t"}
-                <div className="btn-loader-label">Default</div>{"\n\t"}
+            <button className="btn btn-default loading" type="button" data-button-loader>{"\n\t"}
+                Default{"\n\t"}
                 <div className="loader">{"\n\t\t"}
                     <ul className="loader-icon">{"\n\t\t\t"}
                         <li></li>{"\n\t\t\t"}
@@ -138,7 +138,7 @@ const ButtonLoader = () => (
                 </div>{"\n"}
             </button>
         </ComponentPreview>
-        <p>If you want more control over the loader component you can include the html yourself (e.g. for server-side rendering), just make sure you <b>don{"'"}t</b> add the attribute <Attribute data name="button-loader" value="true" />.</p>
+        <p>If you want more control over the loader component you can include the html yourself (e.g. for server-side rendering), just make sure you <b>don{"'"}t</b> add the attribute <Attribute data name="button-loader" />.</p>
     </>
 );
 
@@ -172,7 +172,7 @@ const UsageWithJavascript = () => (
                         <PxScript component="button" func="init" />
                     </td>
                     <td>
-                        Renders the HTML for the loader component for buttons that has the attribute <Attribute data name="loader" value="true" />. This is done automatically when the <code className="token property">px-script.js</code> loads, but might have to be used if you are not rendering your buttons right away. For instance, in react, you might want to call this function within the <PrismCode className="language-javascript">{"componentDidMount()"}</PrismCode> method.
+                        Renders the HTML for the loader component for buttons that has the attribute <Attribute data name="loader" />. This is done automatically when the <code className="token property">px-script.js</code> loads, but might have to be used if you are not rendering your buttons right away. For instance, in react, you might want to call this function within the <PrismCode className="language-javascript">{"componentDidMount()"}</PrismCode> method.
                     </td>
                 </tr>
                 <tr>

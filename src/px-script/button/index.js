@@ -1,13 +1,4 @@
-const SELECTORS = { LOADER: "[data-button-loader]" };
-
-const _createBtnLoaderLabel = button => {
-    const div = document.createElement("div");
-
-    div.classList.add("btn-loader-label");
-    div.innerHTML = button.innerHTML;
-    button.innerHTML = "";
-    button.appendChild(div);
-};
+const SELECTORS = { LOADER: "button[data-button-loader]" };
 
 const _appendLoader = button => {
     const div = document.createElement("div");
@@ -31,7 +22,6 @@ const button = (() => {
         const loaderButtons = document.querySelectorAll(SELECTORS.LOADER);
 
         loaderButtons.forEach(button => {
-            _createBtnLoaderLabel(button);
             _appendLoader(button);
         });
     };

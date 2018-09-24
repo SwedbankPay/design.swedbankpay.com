@@ -58,7 +58,6 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
     <Attribute
       data={true}
       name="button-loader"
-      value="true"
     />
      to add the required markup for the loader component. Add class 
     <code
@@ -136,7 +135,6 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
     <Attribute
       data={true}
       name="button-loader"
-      value="true"
     />
      to a button component will produce the following html:
   </p>
@@ -146,16 +144,12 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
   >
     <button
       className="btn btn-default loading"
-      data-px-loader="true"
+      data-button-loader={true}
       type="button"
     >
       
 	
-      <div
-        className="btn-loader-label"
-      >
-        Default
-      </div>
+      Default
       
 	
       <div
@@ -196,7 +190,6 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
     <Attribute
       data={true}
       name="button-loader"
-      value="true"
     />
     .
   </p>
@@ -234,7 +227,6 @@ exports[`Documentation: Buttons Disabled State renders 1`] = `
     Disabled state with 
     <Attribute
       name="disabled"
-      value="true"
     />
     ...
   </p>
@@ -598,7 +590,6 @@ exports[`Documentation: Buttons Usage With Javascript renders 1`] = `
           <Attribute
             data={true}
             name="loader"
-            value="true"
           />
           . This is done automatically when the 
           <code

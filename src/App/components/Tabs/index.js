@@ -11,7 +11,7 @@ class Tabs extends Component {
 
     setActive (e, i) {
         e.preventDefault();
-        this.setState({ active: i })
+        this.setState({ active: i });
     }
 
     render () {
