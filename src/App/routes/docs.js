@@ -170,7 +170,12 @@ export default [
                 component: require("../Documentation/components/Status")
             },
             {
-                title: "Tabs (experimental)",
+                title: "Step Bar",
+                path: "/docs/components/step-bar",
+                component: require("../Documentation/components/StepBar")
+            },
+            {
+                title: "Tabs",
                 path: "/docs/components/tabs",
                 component: require("../Documentation/components/Tabs")
             },

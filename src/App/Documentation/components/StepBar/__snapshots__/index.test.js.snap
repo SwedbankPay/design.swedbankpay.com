@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Documentation: StepBar Basic StepBar renders 1`] = `
+<Fragment>
+  <h2
+    id="basic-usage"
+  >
+    Basic usage
+  </h2>
+  <p>
+    Add class 
+    <code
+      className="token property"
+    >
+      .step-bar
+    </code>
+     to a containing 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;ol&gt;
+    </PrismCode>
+     element and nest a 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;a&gt;
+    </PrismCode>
+     or 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;span&gt;
+    </PrismCode>
+     element inside the 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;li&gt;
+    </PrismCode>
+     elements.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <StepBar
+      items={
+        Array [
+          Object {
+            "title": "Step one",
+          },
+          Object {
+            "active": true,
+            "title": "Step two",
+          },
+          Object {
+            "title": "Step three",
+          },
+          Object {
+            "title": "Step four",
+          },
+        ]
+      }
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: StepBar StepBar Text renders 1`] = `
+<div
+  className="col-12 col-lg-10 doc-body"
+>
+  <p
+    className="lead"
+  >
+    Step Bar.
+  </p>
+  <BasicStepBar />
+</div>
+`;
+
+exports[`Documentation: StepBar renders 1`] = `
+<div
+  className="doc-container"
+>
+  <div
+    className="row"
+  >
+    <StepBar />
+    <DocToc
+      component={[Function]}
+    />
+  </div>
+</div>
+`;
