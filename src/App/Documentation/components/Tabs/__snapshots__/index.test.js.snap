@@ -29,18 +29,9 @@ exports[`Components: Tabs Collapsed renders 1`] = `
     <Tabs
       items={
         Array [
-          Object {
-            "active": false,
-            "name": "Tab #1",
-          },
-          Object {
-            "active": true,
-            "name": "Tab #2",
-          },
-          Object {
-            "active": false,
-            "name": "Tab #3",
-          },
+          "Tab #1",
+          "Tab #2",
+          "Tab #3",
         ]
       }
       mode="collapsed"
@@ -78,18 +69,9 @@ exports[`Components: Tabs Overview renders 1`] = `
     <Tabs
       items={
         Array [
-          Object {
-            "active": false,
-            "name": "Tab #1",
-          },
-          Object {
-            "active": true,
-            "name": "Tab #2",
-          },
-          Object {
-            "active": false,
-            "name": "Tab #3",
-          },
+          "Tab #1",
+          "Tab #2",
+          "Tab #3",
         ]
       }
       mode="auto"
@@ -127,18 +109,9 @@ exports[`Components: Tabs Stacked renders 1`] = `
     <Tabs
       items={
         Array [
-          Object {
-            "active": false,
-            "name": "Tab #1",
-          },
-          Object {
-            "active": true,
-            "name": "Tab #2",
-          },
-          Object {
-            "active": false,
-            "name": "Tab #3",
-          },
+          "Tab #1",
+          "Tab #2",
+          "Tab #3",
         ]
       }
       mode="stacked"

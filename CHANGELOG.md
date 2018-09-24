@@ -26,3 +26,7 @@
 - Fixed a minor styling issue with action list within table.
 - Fixed issue with selects appearing "glossy" on safari.
 - Fixed issue with select tag with attribute `multiple` not being rendered properly.
+
+### Removed
+
+- Removed tabs component from px-script, users will now have to add/remove class `active` manually. (This is to better handle redirects).
