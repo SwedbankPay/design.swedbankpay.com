@@ -1,0 +1,84 @@
+# https://www.appveyor.com/docs/appveyor-yml/
+
+#---------------------------------#
+#      general configuration      #
+#---------------------------------#
+
+branches:
+  except:
+    - gh-pages
+
+max_jobs: 1
+
+environment:
+  # Github
+  access_token:
+    secure: IGs25EMrhe0au+uVDbOck6akDzC9ykvJeR0zJjhrT6idNuYOr/JpyGdefQxSlWXk
+  github_email:
+    secure: U3oByHGtWDiIy9psThpxwg==
+
+# cache:
+#   - node_modules
+
+install:
+- cmd: >-
+    choco install gitversion.portable --pre
+
+    gitversion /output BuildServer
+
+    npm install
+
+#---------------------------------#
+#       build configuration       #
+#---------------------------------#
+
+build_script:
+- cmd: npm run build:prod
+
+#---------------------------------#
+#       tests configuration       #
+#---------------------------------#
+
+test_script:
+- cmd: >-
+    npm run lint
+
+    npm test
+
+#---------------------------------#
+#     deployment configuration    #
+#---------------------------------#
+
+before_deploy:
+- ps: ./build/deploy-github-pages.ps1
+
+deploy:
+
+  # Deploy to GitHub Releases
+  - provider: GitHub
+    auth_token:
+      secure: IGs25EMrhe0au+uVDbOck6akDzC9ykvJeR0zJjhrT6idNuYOr/JpyGdefQxSlWXk
+    release: DesignGuide v$(GitVersion_SemVer)
+    tag: $(APPVEYOR_REPO_TAG_NAME)
+    description: $(changelog)
+    artifact: /PayEx.DesignGuide.*\.zip/
+    draft: false
+    prerelease: true
+    on:
+      appveyor_repo_tag: true
+
+#---------------------------------#
+#         notifications           #
+#---------------------------------#
+
+notifications:
+
+  # Slack
+  - provider: Slack
+    incoming_webhook:
+      secure: gxWz5+nY3Ctg2JTqo5RQVwHA+UNxiB/H1u72IC71b3pk+Am9g0ghP5Jh8WXoUf3gnscGiY2UwQboWJCcqPLEqHkn1PxM+PdJ43ZRRQBQbyE=
+    channel: design-guide-dev
+    on_build_success: true
+    on_build_failure: true
+    on_build_status_changed: true
+    # template: "{message}, {commitId}, ..."

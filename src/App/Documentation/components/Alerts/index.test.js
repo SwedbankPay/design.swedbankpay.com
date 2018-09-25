@@ -1,8 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Alerts from "./index";
-import { BasicUsage, AlertWithIcon, ClosingTheAlert, ExtendedUsage, AlertsText } from "./index";
+import Alerts, { BasicUsage, AlertWithIcon, ClosingTheAlert, ExtendedUsage, AlertsText } from "./index";
 
 describe("Documentation: Alerts", () => {
     it("is defined", () => {

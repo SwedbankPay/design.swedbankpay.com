@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import loader from "./index";
-import Loader from "../../App/components/Loader";
+import Loader from "@/Loader";
 
 describe("px-script: loader", () => {
     const div = document.createElement("div");

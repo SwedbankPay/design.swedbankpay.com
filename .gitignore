@@ -1,5 +1,5 @@
 # Build directories
-# dist
+dist
 
 # Local vs code settings
 .vscode/

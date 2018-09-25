@@ -1,6 +1,8 @@
-import React from "react";
+import React, { Component } from "react";
 
-import { ComponentPreview, DocToc } from "#";
+import { ComponentPreview, DocToc, Icon } from "#";
+import actionList from "$/px-script/action-list";
+
 
 const BasicList = () => (
     <>
@@ -86,6 +88,87 @@ const SettingsList = () => (
     </>
 );
 
+const ItemList = () => (
+    <>
+        <h2 id="item-list">Item list </h2>
+        <p> Item list info...<code className="token property">.item-list</code></p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <ul className="item-list">
+                <li>
+                    4925*********004
+                </li>
+                <li>
+                    4925*********004
+                </li>
+                <li>
+                    4925*********004
+                </li>
+            </ul>
+        </ComponentPreview>
+    </>
+);
+
+const StatusItemList = () => (
+    <>
+        <h2 id="status-item-list">Status item list </h2>
+        <p> Status item list info...<code className="token property">.item-list</code></p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <ul className="item-list">
+                <li>{"\n"}
+                    <span>4925*********004</span>{"\n"}
+                    <span className="status status-success">Active</span>{"\n"}
+                </li>
+                <li>{"\n"}
+                    <span>4925*********004</span>{"\n"}
+                    <span className="status status-warning">Expires soon</span>{"\n"}
+                </li>
+                <li>{"\n"}
+                    <span>4925*********004</span>{"\n"}
+                    <span className="status status-danger">Expired</span>{"\n"}
+                </li>
+            </ul>
+        </ComponentPreview>
+    </>
+);
+
+const StripedItemList = () => (
+    <>
+        <h2 id="item-list-striped">Striped item list</h2>
+        <p> Striped item list info...<code className="token property">.item-list-striped</code></p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <ul className="item-list item-list-striped">
+                <li>
+                    <span>4925*********004</span>
+                    <div className="action-list">{"\n"}
+                        <Icon icon="more_vert" />{"\n"}
+                        <div className="action-menu">{"\n"}
+                            <a href="#" onClick={e => e.preventDefault()}><Icon icon="bookmark"/>Add bookmark</a>{"\n"}
+                            <a href="#" onClick={e => e.preventDefault()}><Icon icon="business_center"/>Add client</a>{"\n"}
+                            <a href="#" onClick={e => e.preventDefault()}><Icon icon="add_circle"/>Add document</a>{"\n"}
+                            <a href="#" onClick={e => e.preventDefault()}><Icon icon="person_add"/>Add user</a>{"\n"}
+                        </div>
+                    </div>
+                </li>
+                <li>{"\n"}
+                    <span>{"\n\t\t\t"}4925*********004{"\n\t\t\t"}
+                        <span className="badge badge-blue">new</span>{"\n"}
+                    </span>{"\n"}
+                    <a href="https://developer.payex.com">developer.payex.com</a>{"\n"}
+                </li>
+                <li>{"\n"}
+                    <span>4925*********004</span>{"\n"}
+                    <i className="material-icons">star</i>{"\n"}
+                </li>
+                <li>{"\n"}
+                    <span>4925*********004</span>{"\n"}
+                    <span className="status status-success">Active</span>{"\n"}
+                    <button type="button" className="btn btn-danger btn-xs"><i className="material-icons">delete</i></button>{"\n"}
+                </li>
+            </ul>
+        </ComponentPreview>
+    </>
+);
+
 const ListsText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
         <p className="lead">Lots of cool info about lists will be here...</p>
@@ -93,21 +176,28 @@ const ListsText = () => (
         <InlineList />
         <DescriptionList />
         <SettingsList />
+        <ItemList />
+        <StatusItemList />
+        <StripedItemList />
     </div>
 );
 
-const Lists = () => {
-    return (
-        <div className="doc-container">
-            <div className="row">
-                <ListsText />
-                <DocToc component={ListsText} />
+class Lists extends Component {
+    componentDidMount () {
+        actionList.init();
+    }
+    render (){
+        return (
+            <div className="doc-container">
+                <div className="row">
+                    <ListsText />
+                    <DocToc component={ListsText} />
+                </div>
             </div>
-        </div>
-    );
-};
-
+        );
+    }
+}
 export default Lists;
 
 /* for testing */
-export { BasicList, InlineList, DescriptionList, SettingsList, ListsText };
+export { BasicList, InlineList, DescriptionList, SettingsList, ItemList, StatusItemList, StripedItemList, ListsText };

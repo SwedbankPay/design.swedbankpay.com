@@ -30,7 +30,7 @@ describe("Component: Loader - ", () => {
 
     it("renders a muted loader with the specified size when prop size and muted is provided", () => {
         const wrapper = shallow(
-            <Loader size="test" muted={true} />
+            <Loader size="test" muted />
         );
 
         expect(wrapper).toMatchSnapshot();

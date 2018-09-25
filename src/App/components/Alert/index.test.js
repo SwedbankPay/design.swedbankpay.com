@@ -48,7 +48,7 @@ describe("Component: Alert", () => {
 
     it("renders an alert with a close-button", () => {
         const wrapper = shallow(
-            <Alert type="test" close={true} />
+            <Alert type="test" close />
         );
 
         expect(wrapper).toMatchSnapshot();

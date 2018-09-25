@@ -21,7 +21,7 @@ exports[`Documentation: Datepickers DatepickersText renders 1`] = `
 `;
 
 exports[`Documentation: Datepickers Options renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="available-options"
   >
@@ -208,11 +208,11 @@ exports[`Documentation: Datepickers Options renders 1`] = `
       </tr>
     </tbody>
   </table>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Datepickers Required renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="required"
   >
@@ -233,14 +233,17 @@ exports[`Documentation: Datepickers Required renders 1`] = `
     showCasePanel={true}
   >
     <Datepicker
+      label="Date"
+      prefixType="icon"
+      prefixValue="event"
       required={true}
     />
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Datepickers ShowingMultipleMonths renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="showing-multiple-months"
   >
@@ -261,14 +264,17 @@ exports[`Documentation: Datepickers ShowingMultipleMonths renders 1`] = `
     showCasePanel={true}
   >
     <Datepicker
+      label="Date"
       months="2"
+      prefixType="icon"
+      prefixValue="event"
     />
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Datepickers SimpleDatepicker renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="simple-datepicker"
   >
@@ -279,7 +285,6 @@ exports[`Documentation: Datepickers SimpleDatepicker renders 1`] = `
     <Attribute
       data={true}
       name="datepicker"
-      value="true"
     />
     .
   </p>
@@ -288,9 +293,13 @@ exports[`Documentation: Datepickers SimpleDatepicker renders 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <Datepicker />
+    <Datepicker
+      label="Date"
+      prefixType="icon"
+      prefixValue="event"
+    />
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Datepickers renders 1`] = `

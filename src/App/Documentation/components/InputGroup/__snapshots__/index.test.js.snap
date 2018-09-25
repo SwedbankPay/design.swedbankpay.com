@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Documentation: InputGroup BasicExample renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="basic-example"
   >
@@ -13,7 +13,6 @@ exports[`Documentation: InputGroup BasicExample renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
   >
     <InputGroup
@@ -61,11 +60,11 @@ exports[`Documentation: InputGroup BasicExample renders 1`] = `
       type="textarea"
     />
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: InputGroup ButtonAddons renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="button-addons"
   >
@@ -80,16 +79,6 @@ exports[`Documentation: InputGroup ButtonAddons renders 1`] = `
     removeOuterTag={true}
     showCasePanel={true}
   >
-    <InputGroup
-      prefixBtnColor="secondary"
-      prefixType="button"
-      prefixValue="Button"
-      type="text"
-    />
-     
-    
-
-
     <InputGroup
       postfixBtnColor="primary"
       postfixType="button"
@@ -110,11 +99,11 @@ exports[`Documentation: InputGroup ButtonAddons renders 1`] = `
       type="text"
     />
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: InputGroup CheckboxesAndRadios renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="checkboxes-and-radios"
   >
@@ -191,11 +180,11 @@ exports[`Documentation: InputGroup CheckboxesAndRadios renders 1`] = `
       </div>
     </div>
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: InputGroup Disabled renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="disabled"
   >
@@ -243,7 +232,7 @@ exports[`Documentation: InputGroup Disabled renders 1`] = `
       type="select"
     />
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: InputGroup InputGroupText renders 1`] = `
@@ -264,7 +253,7 @@ exports[`Documentation: InputGroup InputGroupText renders 1`] = `
 `;
 
 exports[`Documentation: InputGroup ValidationStates renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="validation-states"
   >
@@ -298,11 +287,11 @@ exports[`Documentation: InputGroup ValidationStates renders 1`] = `
       validationState="error"
     />
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: InputGroup WithFeedbackIcon renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="with-feedback"
   >
@@ -323,11 +312,11 @@ exports[`Documentation: InputGroup WithFeedbackIcon renders 1`] = `
       type="text"
     />
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: InputGroup WithSelect renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="with-select"
   >
@@ -354,7 +343,7 @@ exports[`Documentation: InputGroup WithSelect renders 1`] = `
       type="select"
     />
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: InputGroup renders 1`] = `

@@ -16,7 +16,7 @@ exports[`Documentation: MediaObject MediaObjectText renders 1`] = `
 `;
 
 exports[`Documentation: MediaObject MediaPosition renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="media-position"
   >
@@ -49,11 +49,11 @@ exports[`Documentation: MediaObject MediaPosition renders 1`] = `
       text="bob.corlsan@payex.com"
     />
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: MediaObject Overview renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="overview"
   >
@@ -84,7 +84,7 @@ exports[`Documentation: MediaObject Overview renders 1`] = `
       text="bob.corlsan@payex.com"
     />
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: MediaObject renders 1`] = `

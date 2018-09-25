@@ -2,7 +2,7 @@
 
 # design.payex.com
 
-[![Version](https://img.shields.io/badge/Version-0.10.1-blue.svg)](https://ci.appveyor.com/project/erikhallaraaker/design-payex-com/branch/master)
+[![Version](https://img.shields.io/badge/Version-0.10.20-blue.svg)](https://ci.appveyor.com/project/erikhallaraaker/design-payex-com/branch/master)
 [![Build status](https://ci.appveyor.com/api/projects/status/1dii19sqw1m7xtsn/branch/master?svg=true)](https://ci.appveyor.com/project/PayEx/design-payex-com/branch/master)
 [![dependencies Status](https://david-dm.org/payex/design.payex.com/status.svg)](https://david-dm.org/payex/design.payex.com)
 [![devDependencies Status](https://david-dm.org/payex/design.payex.com/dev-status.svg)](https://david-dm.org/payex/design.payex.com?type=dev)
@@ -29,8 +29,8 @@ DesignGuide requires [Node.js](https://nodejs.org/en/) (includes npm).
 
 ### Built with
 
-* [React 16.3](https://reactjs.org/)
-* [Less 2.7](http://lesscss.org/)
+* [React](https://reactjs.org/)
+* [Less](http://lesscss.org/)
 
 ### Setting up Dev
 
@@ -70,10 +70,6 @@ Design Guide uses [semantic versioning](http://semver.org/). This means that int
 Coding style rules set in `./.eslintrc` & `./.stylelintrc`.
 
 __*Make sure to follow the syntax rules enforced by eslint & stylelint.*__
-
-## Places to find information
-
-* [XWiki](https://wiki.payex.com/xwiki/bin/view/Team%20Area/team-ux/Designguide/)
 
 ## Contributing
 

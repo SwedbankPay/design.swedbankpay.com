@@ -1,6 +1,6 @@
 .button-variant(@color; @background;) {
     color: @color;
-    background-color: @background;
+    background-image: linear-gradient(to bottom, @background 0%, darken(@background, 5%) 100%);
     border-color: darken(@background, 5%);
 
     &:focus,
@@ -12,6 +12,7 @@
     &:hover {
         color: @color;
         background-color: darken(@background, 5%);
+        background-image: none;
     }
 
     &:active,
@@ -36,26 +37,11 @@
         &.focus,
         &:active,
         &.active {
-            background-color: @gray-8;
+            background: @gray-8;
             color: @gray-4;
-            border-color: darken(@gray-8, 5%); //transparent;
-
-            // TODO: Review suggestion below [EH]
-            // background-color: @background;
-            // color: @color;
-            // border-color: darken(@background, 5%);
-            // opacity: .65;
+            border-color: darken(@gray-8, 5%);
         }
     }
-
-    // .badge {
-    //     color: fade(@background,95%);
-    //     background-color: rgba(255,255,255,1);
-    //     border-radius: 10px;
-    //     margin-left: 10px;
-    //     padding: 3px 5px;
-    //     font-size: 13px;
-    // }
 }
 
 .button-outline-variant(@color, @background, @hover-color) {
@@ -101,16 +87,11 @@
             border-color: transparent;
         }
     }
-
-    // .badge {
-    //     color: @background;
-    //     background-color: @hover-color;
-    // }
 }
 
 .button-ghost(@color) {
     color: @white;
-    background-color: transparent;
+    background: transparent;
     border: 1px solid @white;
 
     &:focus,
@@ -118,17 +99,7 @@
     &:hover,
     &:active {
         .button-active-state(@white, @color);
-
-        // .badge {
-        //     color: @white;
-        //     background-color: @color;
-        // }
     }
-
-    // .badge {
-    //     color: @color;
-    //     background-color: @white;
-    // }
 }
 
 .button-link-variant(@color) {

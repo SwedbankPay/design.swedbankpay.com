@@ -7,7 +7,7 @@ const BasicExample = () => (
     <>
         <h2 id="basic-example">Basic example</h2>
         <p>Basic input group...</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+        <ComponentPreview language="html" showCasePanel codeFigure >
             <InputGroupComponent
                 id="input-id-1"
                 type="text"
@@ -74,12 +74,6 @@ const ButtonAddons = () => (
         <h2 id="button-addons">Button addons</h2>
         <p>Addons...</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
-            <InputGroupComponent
-                type="text"
-                prefixType="button"
-                prefixValue="Button"
-                prefixBtnColor="secondary"
-            /> {"\n\n"}
             <InputGroupComponent
                 type="text"
                 postfixType="button"

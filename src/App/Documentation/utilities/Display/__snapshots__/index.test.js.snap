@@ -17,7 +17,7 @@ exports[`Utilities: Display DisplayText renders 1`] = `
 `;
 
 exports[`Utilities: Display Examples renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="examples"
   >
@@ -55,11 +55,11 @@ exports[`Utilities: Display Examples renders 1`] = `
       d-block
     </div>
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Utilities: Display HidingElements renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="hiding-elements"
   >
@@ -304,11 +304,11 @@ exports[`Utilities: Display HidingElements renders 1`] = `
       Hidden on screens smaller than lg
     </div>
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Utilities: Display HowItWorks renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="how-it-works"
   >
@@ -329,11 +329,11 @@ exports[`Utilities: Display HowItWorks renders 1`] = `
     </code>
     . Classes can be combined for various effects as you need.
   </p>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Utilities: Display Notation renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="notation"
   >
@@ -526,11 +526,11 @@ exports[`Utilities: Display Notation renders 1`] = `
     </code>
      screens.
   </p>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Utilities: Display renders 1`] = `
-<React.Fragment>
+<Fragment>
   <div
     className="doc-container"
   >
@@ -543,5 +543,5 @@ exports[`Utilities: Display renders 1`] = `
       />
     </div>
   </div>
-</React.Fragment>
+</Fragment>
 `;

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Documentation: Buttons Active State renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="active-state"
   >
@@ -43,11 +43,11 @@ exports[`Documentation: Buttons Active State renders 1`] = `
     
 
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Buttons Button Loader renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="button-loader"
   >
@@ -58,7 +58,6 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
     <Attribute
       data={true}
       name="button-loader"
-      value="true"
     />
      to add the required markup for the loader component. Add class 
     <code
@@ -136,27 +135,21 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
     <Attribute
       data={true}
       name="button-loader"
-      value="true"
     />
      to a button component will produce the following html:
   </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
-    showCasePanel={false}
   >
     <button
       className="btn btn-default loading"
-      data-px-loader="true"
+      data-button-loader={true}
       type="button"
     >
       
 	
-      <div
-        className="btn-loader-label"
-      >
-        Default
-      </div>
+      Default
       
 	
       <div
@@ -197,11 +190,10 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
     <Attribute
       data={true}
       name="button-loader"
-      value="true"
     />
     .
   </p>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Buttons Buttons Text renders 1`] = `
@@ -225,7 +217,7 @@ exports[`Documentation: Buttons Buttons Text renders 1`] = `
 `;
 
 exports[`Documentation: Buttons Disabled State renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="disabled-state"
   >
@@ -235,7 +227,6 @@ exports[`Documentation: Buttons Disabled State renders 1`] = `
     Disabled state with 
     <Attribute
       name="disabled"
-      value="true"
     />
     ...
   </p>
@@ -266,11 +257,11 @@ exports[`Documentation: Buttons Disabled State renders 1`] = `
     
 
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Buttons Examples renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="examples"
   >
@@ -309,11 +300,11 @@ exports[`Documentation: Buttons Examples renders 1`] = `
     
 
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Buttons Outline Buttons renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="outline-buttons"
   >
@@ -349,11 +340,11 @@ exports[`Documentation: Buttons Outline Buttons renders 1`] = `
     
 
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Buttons Sizes renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="sizes"
   >
@@ -486,11 +477,11 @@ exports[`Documentation: Buttons Sizes renders 1`] = `
     
 
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Buttons Usage With Icons renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="usage-with-icons"
   >
@@ -527,11 +518,11 @@ exports[`Documentation: Buttons Usage With Icons renders 1`] = `
     
 
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Buttons Usage With Javascript renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="usage-with-javascript"
   >
@@ -599,7 +590,6 @@ exports[`Documentation: Buttons Usage With Javascript renders 1`] = `
           <Attribute
             data={true}
             name="loader"
-            value="true"
           />
           . This is done automatically when the 
           <code
@@ -721,11 +711,11 @@ exports[`Documentation: Buttons Usage With Javascript renders 1`] = `
       </tr>
     </tbody>
   </table>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Buttons Usage With Other Tags renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="usage-with-other-tags"
   >
@@ -797,7 +787,7 @@ exports[`Documentation: Buttons Usage With Other Tags renders 1`] = `
     
 
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Buttons renders 1`] = `

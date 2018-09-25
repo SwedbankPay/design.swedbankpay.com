@@ -90,7 +90,7 @@ describe("Component: Panel - ", () => {
 
     it("renders with class 'panel-bottomless when prop removeBottomPadding is true", () => {
         const wrapper = shallow(
-            <Panel removeBottomPadding={true} />
+            <Panel removeBottomPadding />
         );
 
         expect(wrapper).toMatchSnapshot();
@@ -99,7 +99,7 @@ describe("Component: Panel - ", () => {
 
     it("renders with class 'panel-no-padding' when prop removeAllPadding  is true", () => {
         const wrapper = shallow(
-            <Panel removeAllPadding={true} />
+            <Panel removeAllPadding />
         );
 
         expect(wrapper).toMatchSnapshot();
@@ -108,7 +108,7 @@ describe("Component: Panel - ", () => {
 
     it("renders with class 'panel-half-padding' when prop halfPadding is true", () => {
         const wrapper = shallow(
-            <Panel halfPadding={true} />
+            <Panel halfPadding />
         );
 
         expect(wrapper).toMatchSnapshot();
@@ -117,7 +117,7 @@ describe("Component: Panel - ", () => {
 
     it("renders with class 'panel-dark' when prop darkMode is true", () => {
         const wrapper = shallow(
-            <Panel darkMode={true} />
+            <Panel darkMode />
         );
 
         expect(wrapper).toMatchSnapshot();

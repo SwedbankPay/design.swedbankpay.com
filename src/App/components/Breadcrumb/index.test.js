@@ -18,15 +18,6 @@ describe("Component: Breadcrumb", () => {
         expect(wrapper.contains(<DefaultItems />)).toEqual(true);
     });
 
-    it("renders with class breadcrumb-sm when provided the prop small", () => {
-        const wrapper = shallow(
-            <Breadcrumb small={true} />
-        );
-
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("breadcrumb-sm");
-    });
-
     it("renders breadcrumb with the provided items in the items prop", () => {
         const items = [{ title: "test" }];
 

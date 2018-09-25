@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Documentation: Modal Demo renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="demo"
   >
@@ -31,7 +31,7 @@ exports[`Documentation: Modal Demo renders 1`] = `
       </p>
     </Modal>
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Modal ModalText renders 1`] = `
@@ -50,7 +50,7 @@ exports[`Documentation: Modal ModalText renders 1`] = `
 `;
 
 exports[`Documentation: Modal Usage renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="usage"
   >
@@ -80,7 +80,7 @@ exports[`Documentation: Modal Usage renders 1`] = `
       </p>
     </Modal>
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Modal renders 1`] = `

@@ -15,7 +15,7 @@ exports[`Documentation: Card CardText renders 1`] = `
 `;
 
 exports[`Documentation: Card Overview renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="overview"
   >
@@ -108,7 +108,7 @@ exports[`Documentation: Card Overview renders 1`] = `
       </ul>
     </div>
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Card renders 1`] = `

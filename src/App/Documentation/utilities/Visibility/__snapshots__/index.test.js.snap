@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Utilities: Visibility Intro renders 1`] = `
-<React.Fragment>
+<Fragment>
   <p>
     Set the 
     <code
@@ -61,7 +61,7 @@ exports[`Utilities: Visibility Intro renders 1`] = `
                 }
             
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Utilities: Visibility VisibilityText renders 1`] = `
@@ -78,7 +78,7 @@ exports[`Utilities: Visibility VisibilityText renders 1`] = `
 `;
 
 exports[`Utilities: Visibility renders 1`] = `
-<React.Fragment>
+<Fragment>
   <div
     className="doc-container"
   >
@@ -88,5 +88,5 @@ exports[`Utilities: Visibility renders 1`] = `
       <VisibilityText />
     </div>
   </div>
-</React.Fragment>
+</Fragment>
 `;

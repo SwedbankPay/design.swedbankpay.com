@@ -66,8 +66,7 @@
         position: absolute;
         top: 0.5rem;
         right: 0.5rem;
-        opacity: 0.8;
-        line-height: 1;
+        .close-button();
 
         &:hover {
             opacity: 1;
@@ -111,6 +110,7 @@
     .modal-body {
         background-color: @white;
         padding: @modal-body-padding;
+        border-bottom: 1px solid @modal-default-border-color;
         &:extend(.clearfix all);
     }
 

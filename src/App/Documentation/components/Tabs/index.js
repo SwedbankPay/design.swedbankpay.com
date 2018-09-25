@@ -1,23 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 
-import { ComponentPreview, DocToc } from "#";
+import { ComponentPreview, DocToc, ExperimentalComponentAlert } from "#";
 import TabsComponent from "@/Tabs";
-import { tabs } from "$/px-script";
 
-const tabItems = [
-    {
-        name: "Tab #1",
-        active: false
-    },
-    {
-        name: "Tab #2",
-        active: true
-    },
-    {
-        name: "Tab #3",
-        active: false
-    }
-];
+const tabItems = ["Tab #1", "Tab #2", "Tab #3"];
 
 const Overview = () => (
     <>
@@ -51,6 +37,7 @@ const Collapsed = () => (
 
 const TabsText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
+        <ExperimentalComponentAlert />
         <p className="lead">Tabs...</p>
         <Overview />
         <Stacked />
@@ -58,22 +45,14 @@ const TabsText = () => (
     </div>
 );
 
-class Tabs extends Component {
-    componentDidMount () {
-        tabs.init();
-    }
-
-    render () {
-        return (
-            <div className="doc-container">
-                <div className="row">
-                    <TabsText />
-                    <DocToc component={TabsText} />
-                </div>
-            </div>
-        );
-    }
-}
+const Tabs = () => (
+    <div className="doc-container">
+        <div className="row">
+            <TabsText />
+            <DocToc component={TabsText} />
+        </div>
+    </div>
+);
 
 export default Tabs;
 

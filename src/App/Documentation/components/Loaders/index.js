@@ -43,7 +43,7 @@ const MutedLoader = () => (
 const StaticHtml = () => (
     <>
         <h2 id="static-html">Static HTML</h2>
-        <p>Using the attribute <Attribute data name="loader" value="true" /> will append the following HTML to the element:</p>
+        <p>Using the attribute <Attribute data name="loader" /> will append the following HTML to the element:</p>
         <ComponentPreview language="html" codeFigure>
             <ul className="loader-icon">
                 <li></li>
@@ -51,7 +51,7 @@ const StaticHtml = () => (
                 <li></li>
             </ul>
         </ComponentPreview>
-        <p>If you want to use the static HTML instead of the data-attribute, make sure to <b>NOT</b> include the attribute <Attribute data name="loader" value="true" />.</p>
+        <p>If you want to use the static HTML instead of the data-attribute, make sure to <b>NOT</b> include the attribute <Attribute data name="loader" />.</p>
     </>
 );
 

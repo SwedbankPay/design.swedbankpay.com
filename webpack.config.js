@@ -8,6 +8,7 @@ const AppManifestWebpackPlugin = require("app-manifest-webpack-plugin");
 const lessListPlugin = require("less-plugin-lists");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const FileManagerPlugin = require("filemanager-webpack-plugin");
 const SentryCliPlugin = require("@sentry/webpack-plugin");
 
@@ -45,7 +46,7 @@ module.exports = (env, argv) => {
             rules: [
                 {
                     test: /\.jsx?$/,
-                    exclude: /node_modules/,
+                    exclude: modulePath => (/node_modules/).test(modulePath) && !(/node_modules\/*/).test(modulePath),
                     loader: "babel-loader"
                 },
                 {
@@ -55,11 +56,7 @@ module.exports = (env, argv) => {
                         {
                             loader: isProd ? MiniCssExtractPlugin.loader : "style-loader"
                         },
-                        {
-                            loader: "css-loader",
-                            options: {
-                                minimize: isProd
-                            } },
+                        { loader: "css-loader" },
                         {
                             loader: "postcss-loader",
                             options: {
@@ -153,7 +150,8 @@ module.exports = (env, argv) => {
                             unused: false
                         }
                     }
-                })
+                }),
+                new OptimizeCSSAssetsPlugin({})
             ],
             mergeDuplicateChunks: !isProd
         },
@@ -207,13 +205,7 @@ module.exports = (env, argv) => {
                     {
                         delete: [
                             "./dist"
-                        ],
-                        // copy: [
-                        //     {
-                        //         source: "./static",
-                        //         destination: "./dist"
-                        //     }
-                        // ]
+                        ]
                     }
                 ],
                 onEnd: [
@@ -222,22 +214,17 @@ module.exports = (env, argv) => {
                             {
                                 source: "./dist/icons",
                                 destination: "./dist/temp/icons"
-                            },
-                            // {
-                            //     source: `./dist/v/${version}`,
-                            //     destination: `./static/v/${version}`
-                            // }
+                            }
                         ],
                         archive: [
                             {
                                 source: "./dist/temp",
                                 destination: "./dist/icons.zip"
+                            },
+                            {
+                                source: `./dist/v/${version}`,
+                                destination: `./dist/temp/PayEx.DesignGuide.v${version}.zip`
                             }
-                        ]
-                    },
-                    {
-                        delete: [
-                            "./dist/temp"
                         ]
                     }
                 ]

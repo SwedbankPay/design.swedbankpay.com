@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import button from "./index";
-import Button from "../../App/components/Button";
+import Button from "@/Button";
 
 describe("px-script: button", () => {
     const div = document.createElement("div");
@@ -17,8 +17,8 @@ describe("px-script: button", () => {
 
         const Buttons = () => (
             <div>
-                <Button type="primary" label="test" loader={true} />
-                <Button type="primary" label="test" loader={true} />
+                <Button type="primary" label="test" loader />
+                <Button type="primary" label="test" loader />
             </div>
         );
 

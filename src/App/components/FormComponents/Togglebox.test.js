@@ -30,19 +30,19 @@ describe("Component: Togglebox - ", () => {
 
     it("renders disabled", () => {
         const wrapper = shallow(
-            <Togglebox disabled={true} />
+            <Togglebox disabled />
         );
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<input type="checkbox" disabled={true} />)).toEqual(true);
+        expect(wrapper.contains(<input type="checkbox" disabled />)).toEqual(true);
     });
 
     it("renders checked", () => {
         const wrapper = shallow(
-            <Togglebox checked={true} />
+            <Togglebox checked />
         );
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<input type="checkbox" defaultChecked={true} />)).toEqual(true);
+        expect(wrapper.contains(<input type="checkbox" defaultChecked />)).toEqual(true);
     });
 });
