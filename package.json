@@ -8,6 +8,7 @@
         "start:prod": "webpack-dev-server --hot --mode production",
         "build": "webpack --mode development",
         "build:prod": "webpack --mode production",
+        "deploy": "webpack --mode production --env.deploy=true",
         "test": "jest",
         "test:update": "jest --updateSnapshot",
         "lint": "eslint src/ && stylelint src/less/",
