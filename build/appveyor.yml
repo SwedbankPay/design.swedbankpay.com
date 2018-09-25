@@ -36,10 +36,10 @@ install:
 #---------------------------------#
 
 before_build:
-- ps: (Get-Content C:\projects\design-payex-com\.sentryclirc).replace("<token>", $Env:sentry_token) | Set-Content C:\projects\design-payex-com\.sentryclirc
+- ps: ./build/prepare-release-build.ps1
 
 build_script:
-- cmd: npm run deploy
+- cmd: npm run build:prod --env.release=%release%
 
 #---------------------------------#
 #       tests configuration       #
