@@ -7,7 +7,7 @@
     box-shadow: 0 0 15px hsla(0, 0%, 0%, 0.1);
 }
 
-.step-bar > li > a {
+.step-bar > li {
     display: block;
     position: relative;
     padding: 35px 20px 35px 89px;
@@ -18,7 +18,7 @@
 }
 
 /* Circle */
-.step-bar > li > a:before {
+.step-bar > li:before {
     content: "";
     position: absolute;
     box-sizing: border-box;
@@ -34,7 +34,7 @@
 }
 
 /* Line */
-.step-bar > li > a:after {
+.step-bar > li:after {
     content: "";
     position: absolute;
     left: 50.5px;
@@ -45,39 +45,43 @@
     z-index: 5;
 }
 
-.step-bar > li:first-child > a:after {
-    height: 50%;
-    top: auto;
-    bottom: 0;
+.step-bar > li:first-child {
+    &:after {
+        height: 50%;
+        top: auto;
+        bottom: 0;
+    }
 }
 
-.step-bar > li:last-child > a:after {
-    height: 50%;
+.step-bar > li:last-child {
+    &:after {
+        height: 50%;
+    }
 }
 
-.step-bar > .step-bar-item-complete > a:before {
+.step-bar > .step-bar-item-complete:before {
     border-color: @brand-primary;
     background-color: @brand-primary;
 }
 
-.step-bar > .step-bar-item-complete > a:after {
+.step-bar > .step-bar-item-complete:after {
     background-color: @brand-primary;
 }
 
-.step-bar > .step-bar-item-active > a,
-.step-bar > li > a:hover {
+.step-bar > .step-bar-item-active,
+.step-bar > li:hover {
     background-color: #f9f9f9;
 }
 
-.step-bar > .step-bar-item-active > a {
+.step-bar > .step-bar-item-active {
     border-color: #e6e7e8;
 }
 
-.step-bar > .step-bar-item-active > a:before {
+.step-bar > .step-bar-item-active:before {
     border-color: @brand-primary;
 }
 
-.step-bar > .step-bar-item-active > a:after {
+.step-bar > .step-bar-item-active:after {
     background: linear-gradient(@brand-primary 50%, #e2e2e2 50%);
 }
 
@@ -158,12 +162,12 @@
     }
 }
 
-.step-bar-circle {
-    height: 2rem;
-    width: 2rem;
-    margin: 0 auto;
-    text-align: center;
-    border: 5px solid #e2e2e2;
-    border-radius: 30px;
-    background-color: white;
-}
+// .step-bar-circle {
+//     height: 2rem;
+//     width: 2rem;
+//     margin: 0 auto;
+//     text-align: center;
+//     border: 5px solid #e2e2e2;
+//     border-radius: 30px;
+//     background-color: white;
+// }
