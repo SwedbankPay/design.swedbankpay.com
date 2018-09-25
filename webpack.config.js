@@ -15,6 +15,7 @@ const SentryCliPlugin = require("@sentry/webpack-plugin");
 module.exports = (env, argv) => {
     const version = pkg.version;
     const isProd = argv.mode === "production";
+    const isDeploy = !!env.deploy;
     const isDevServer = !!argv.host;
 
     const config = {
@@ -228,12 +229,22 @@ module.exports = (env, argv) => {
                         ]
                     }
                 ]
+            })
+        );
+    }
+
+    if (isDeploy) {
+        config.plugins.push(
+            new SentryCliPlugin({
+                release: version,
+                include: ".",
+                ignore: ["node_modules", "webpack.config.js"]
             }),
-            // new SentryCliPlugin({
-            //     release: version,
-            //     include: ".",
-            //     ignore: ["node_modules", "webpack.config.js"]
-            // })
+            new webpack.DefinePlugin({
+                "process.env": {
+                    sentry: true
+                }
+            })
         );
     }
 

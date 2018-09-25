@@ -15,7 +15,9 @@ import topbar from "./topbar";
 import validation from "./validation";
 
 // sentry reporter
-init({ dsn: "https://832de6a6953642bea1d70c41c12a5ccd@sentry.io/80077" });
+if (process.env.sentry) {
+    init({ dsn: "https://832de6a6953642bea1d70c41c12a5ccd@sentry.io/80077" });
+}
 
 const px = {
     actionList,
