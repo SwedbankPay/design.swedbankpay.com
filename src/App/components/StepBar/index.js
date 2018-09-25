@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 const _renderItems = items => items.map(({ title, completed, active }, i) => (
     <li key={i} className={`${completed ? "step-bar-item-complete" : ""}${active ? " step-bar-item-active" : ""}`}>
+        {completed ? <div className="material-icons step-bar-icon" >check</div> : null}
         {title}
     </li>
 ));
