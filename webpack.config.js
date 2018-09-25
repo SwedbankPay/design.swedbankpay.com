@@ -18,8 +18,6 @@ module.exports = (env, argv) => {
     const isDeploy = !!env.deploy;
     const isDevServer = !!argv.host;
 
-    process.deploy = isDeploy;
-
     const config = {
         entry: {
             polyfills: "./src/polyfills/index.js",
