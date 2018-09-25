@@ -13,8 +13,6 @@ const FileManagerPlugin = require("filemanager-webpack-plugin");
 const SentryCliPlugin = require("@sentry/webpack-plugin");
 
 module.exports = (env, argv) => {
-    console.log("ENV: ", env);
-    console.log("ARGV: ", argv);
     const version = pkg.version;
     const isProd = argv.mode === "production";
     const isRelease = env.release === "true";
