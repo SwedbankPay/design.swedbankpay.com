@@ -2,11 +2,11 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-const Addon = ({ type, value, color }) => (
+export const Addon = ({ type, value, color }) => (
     (type === "button") ?
-        <div className="input-group-btn">{"\n"}
-            <button type="button" className={`btn btn-${color}`}>{value}</button>{"\n"}
-        </div>
+        <button type="button" className={`btn btn-${color}`}>
+            {value}
+        </button>
         : <span className="input-group-addon">{(type === "icon") ? <i className="material-icons">{value}</i> : value}</span>
 );
 
@@ -50,9 +50,9 @@ const InputGroup = ({
         disabled: disabled || null,
         readOnly: readOnly || null,
         autoComplete: autoComplete || null,
-        "data-validate": validate || null,
-        "data-pattern": pattern || null,
-        "data-required": required || null
+        "data-validate": validate ? "" : null,
+        "data-pattern": pattern ? "" : null,
+        "data-required": required ? "" : null
     };
 
     const inputGrpClasses = classnames(

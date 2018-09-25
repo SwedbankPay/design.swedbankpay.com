@@ -21,7 +21,7 @@ describe("Component: Rangeslider - ", () => {
 
     it("renders with a value label", () => {
         const wrapper = mount(
-            <Rangeslider valueLabel={true} />
+            <Rangeslider valueLabel />
         );
 
         expect(wrapper).toMatchSnapshot();
@@ -32,7 +32,7 @@ describe("Component: Rangeslider - ", () => {
 
     it("renders with a value label and a value label prefix", () => {
         const wrapper = mount(
-            <Rangeslider valueLabel={true} valueLabelPrefix="test" />
+            <Rangeslider valueLabel valueLabelPrefix="test" />
         );
 
         expect(wrapper).toMatchSnapshot();
@@ -43,7 +43,7 @@ describe("Component: Rangeslider - ", () => {
 
     it("renders with a value label and a value label postfix", () => {
         const wrapper = mount(
-            <Rangeslider valueLabel={true} valueLabelPostfix="test" />
+            <Rangeslider valueLabel valueLabelPostfix="test" />
         );
 
         expect(wrapper).toMatchSnapshot();

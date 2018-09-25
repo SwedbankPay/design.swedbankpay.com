@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Components: Toast Options renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="options"
   >
@@ -134,11 +134,11 @@ exports[`Components: Toast Options renders 1`] = `
       </tr>
     </tbody>
   </table>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Components: Toast Overview renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="overview"
   >
@@ -172,11 +172,11 @@ exports[`Components: Toast Overview renders 1`] = `
       Click for toast!
     </button>
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Components: Toast PremadeToasts renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="premade-toasts"
   >
@@ -258,7 +258,7 @@ exports[`Components: Toast PremadeToasts renders 1`] = `
       Danger toast
     </button>
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Components: Toast ToastText renders 1`] = `

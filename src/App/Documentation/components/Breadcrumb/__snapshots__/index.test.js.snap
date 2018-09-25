@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Documentation: Breadcrumb Basic BreadCrumb renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="basic-usage"
   >
@@ -71,7 +71,7 @@ exports[`Documentation: Breadcrumb Basic BreadCrumb renders 1`] = `
       }
     />
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Breadcrumb BreadCrumb Text renders 1`] = `
@@ -84,13 +84,12 @@ exports[`Documentation: Breadcrumb BreadCrumb Text renders 1`] = `
     Breadcrumbs are a good way to display your current location. This is usually used when you have multiple layers of content.
   </p>
   <BasicBreadCrumb />
-  <SmallBreadCrumb />
   <DisabledBreadcrumb />
 </div>
 `;
 
 exports[`Documentation: Breadcrumb Disabled BreadCrumb renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="disable-a-breadcrumb"
   >
@@ -137,64 +136,9 @@ exports[`Documentation: Breadcrumb Disabled BreadCrumb renders 1`] = `
           },
         ]
       }
-      small={true}
     />
   </ComponentPreview>
-</React.Fragment>
-`;
-
-exports[`Documentation: Breadcrumb Small BreadCrumb renders 1`] = `
-<React.Fragment>
-  <h2
-    id="small-breadcrumb"
-  >
-    Small breadcrumb
-  </h2>
-  <p>
-    Add class 
-    <code
-      className="token property"
-    >
-      .breadcrumb-sm
-    </code>
-     to the containing 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;ol&gt;
-    </PrismCode>
-     element for a smaller version of the breadcrumb component.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Breadcrumb
-      items={
-        Array [
-          Object {
-            "href": "#",
-            "title": "Home",
-          },
-          Object {
-            "href": "#",
-            "title": "Products",
-          },
-          Object {
-            "href": "#",
-            "title": "Gadgets",
-          },
-          Object {
-            "title": "Gadget #1",
-          },
-        ]
-      }
-      small={true}
-    />
-  </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Breadcrumb renders 1`] = `

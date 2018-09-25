@@ -14,7 +14,7 @@ exports[`Documentation: Dialog DialogText renders 1`] = `
 `;
 
 exports[`Documentation: Dialog Example renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="example"
   >
@@ -97,7 +97,7 @@ exports[`Documentation: Dialog Example renders 1`] = `
       Open dialog
     </button>
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Dialog renders 1`] = `

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Documentation: Pagination DefaultPagination renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="default-pagination"
   >
@@ -55,11 +55,11 @@ exports[`Documentation: Pagination DefaultPagination renders 1`] = `
       }
     />
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Pagination PaginationBullets renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="pagination-bullets"
   >
@@ -114,7 +114,7 @@ exports[`Documentation: Pagination PaginationBullets renders 1`] = `
       type="bullets"
     />
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Pagination PaginationText renders 1`] = `
@@ -133,7 +133,7 @@ exports[`Documentation: Pagination PaginationText renders 1`] = `
 `;
 
 exports[`Documentation: Pagination SimplePagination renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="simple-pagination"
   >
@@ -159,7 +159,7 @@ exports[`Documentation: Pagination SimplePagination renders 1`] = `
       text="16 of 256"
     />
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Pagination renders 1`] = `

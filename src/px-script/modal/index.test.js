@@ -2,7 +2,7 @@
 // import ReactDOM from "react-dom";
 
 import modal from "./index";
-// import Modal from "../../App/components/Modal";
+// import Modal from "@/Modal";
 
 describe("px-script: modal", () => {
     const div = document.createElement("div");

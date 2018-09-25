@@ -15,7 +15,7 @@ exports[`Components: Badge BadgeText renders 1`] = `
 `;
 
 exports[`Components: Badge FurtherUsage renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="further-usage"
   >
@@ -84,11 +84,11 @@ exports[`Components: Badge FurtherUsage renders 1`] = `
       </small>
     </h6>
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Components: Badge Overview renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="overview"
   >
@@ -157,7 +157,7 @@ exports[`Components: Badge Overview renders 1`] = `
       </span>
     </p>
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Components: Badge renders 1`] = `

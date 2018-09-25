@@ -16,15 +16,14 @@ const DefaultItems = () => (
     </div>
 );
 
-const Breadcrumb = ({ items, small }) => (
-    <ol className={`breadcrumb${small ? " breadcrumb-sm" : ""}`}>
+const Breadcrumb = ({ items }) => (
+    <ol className="breadcrumb">
         {items ? _renderItems(items) : <DefaultItems />}
     </ol>
 );
 
 Breadcrumb.propTypes = {
-    items: PropTypes.array,
-    small: PropTypes.bool
+    items: PropTypes.array
 };
 
 export default Breadcrumb;

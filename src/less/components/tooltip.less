@@ -1,7 +1,5 @@
 [data-tooltip] {
     position: relative;
-    // margin: 20px;
-    display: inline-block;
 
     &:before {
         content: "";
@@ -97,6 +95,19 @@
         &:after,
         &:before {
             opacity: 1;
+        }
+    }
+
+    &:focus {
+        &:not(:hover) {
+            &:before,
+            &:after {
+                width: 0;
+                height: 0;
+                padding: 0;
+                border: none;
+                content: "";
+            }
         }
     }
 }

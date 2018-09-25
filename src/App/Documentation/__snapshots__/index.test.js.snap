@@ -135,8 +135,11 @@ exports[`Documentation: index renders 1`] = `
                   "BasicList": [Function],
                   "DescriptionList": [Function],
                   "InlineList": [Function],
+                  "ItemList": [Function],
                   "ListsText": [Function],
                   "SettingsList": [Function],
+                  "StatusItemList": [Function],
+                  "StripedItemList": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/core/lists",
@@ -189,7 +192,7 @@ exports[`Documentation: index renders 1`] = `
                   "default": [Function],
                 },
                 "path": "/docs/components/action-list",
-                "title": "Action List",
+                "title": "Action List (experimental)",
               },
               Object {
                 "component": Object {
@@ -218,7 +221,6 @@ exports[`Documentation: index renders 1`] = `
                   "BasicBreadCrumb": [Function],
                   "BreadcrumbText": [Function],
                   "DisabledBreadcrumb": [Function],
-                  "SmallBreadCrumb": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/components/breadcrumb",
@@ -406,7 +408,7 @@ exports[`Documentation: index renders 1`] = `
                   "default": [Function],
                 },
                 "path": "/docs/components/tabs",
-                "title": "Tabs",
+                "title": "Tabs (experimental)",
               },
               Object {
                 "component": Object {

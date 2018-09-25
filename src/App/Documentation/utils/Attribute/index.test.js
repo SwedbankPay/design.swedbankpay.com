@@ -20,7 +20,7 @@ describe("Utilities: Attribute", () => {
 
     it("renders data attribute", () => {
         const wrapper = shallow(
-            <Attribute name="test" value="test" data={true} />
+            <Attribute name="test" value="test" data />
         );
 
         expect(wrapper).toMatchSnapshot();

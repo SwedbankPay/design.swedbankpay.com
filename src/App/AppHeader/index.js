@@ -8,6 +8,7 @@ import routes from "../routes/root.js";
 
 const AppHeader = ({ location }) => {
     const { pathname } = location;
+    const { version } = pkg;
 
     return (
         <header className="topbar topbar-fixed designguide-header">
@@ -30,7 +31,7 @@ const AppHeader = ({ location }) => {
                     </a>
                 </div>
                 <div className="topbar-info-version">
-                    <a href="https://github.com/PayEx/design.payex.com/blob/master/CHANGELOG.md" target="b_blank" rel="noopener">v.{pkg.version}</a>
+                    <a href={`https://github.com/PayEx/design.payex.com/releases/tag/${version}`} target="b_blank" rel="noopener">v.{version}</a>
                 </div>
             </div>
         </header>

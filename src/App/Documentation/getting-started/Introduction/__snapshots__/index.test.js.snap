@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`GettingStarted: Introduction Css renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="css"
   >
@@ -29,11 +29,11 @@ exports[`GettingStarted: Introduction Css renders 1`] = `
     language="html"
   >
     <link
-      href="https://design.payex.com/v/0.10.20/styles/px.css"
+      href="https://design.payex.com/v/0.11.0/styles/px.css"
       rel="stylesheet"
     />
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`GettingStarted: Introduction IntroductionText renders 1`] = `
@@ -52,7 +52,7 @@ exports[`GettingStarted: Introduction IntroductionText renders 1`] = `
 `;
 
 exports[`GettingStarted: Introduction JavaScript renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="javascript"
   >
@@ -80,14 +80,14 @@ exports[`GettingStarted: Introduction JavaScript renders 1`] = `
     language="html"
   >
     <script
-      src="https://design.payex.com/v/0.10.20/scripts/px-script.js"
+      src="https://design.payex.com/v/0.11.0/scripts/px-script.js"
     />
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`GettingStarted: Introduction QuickStart renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="quick-start"
   >
@@ -96,11 +96,11 @@ exports[`GettingStarted: Introduction QuickStart renders 1`] = `
   <p>
     To quickly add the designguide to your project, include the snippets below in your project.
   </p>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`GettingStarted: Introduction StarterTemplate renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="starter-template"
   >
@@ -125,7 +125,7 @@ exports[`GettingStarted: Introduction StarterTemplate renders 1`] = `
           name="viewport"
         />
         <link
-          href="https://design.payex.com/v/0.10.20/styles/px.css"
+          href="https://design.payex.com/v/0.11.0/styles/px.css"
           rel="stylesheet"
         />
         <title>
@@ -137,12 +137,12 @@ exports[`GettingStarted: Introduction StarterTemplate renders 1`] = `
           Hello, PayEx!
         </h1>
         <script
-          src="https://design.payex.com/v/0.10.20/scripts/px-script.js"
+          src="https://design.payex.com/v/0.11.0/scripts/px-script.js"
         />
       </body>
     </html>
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`GettingStarted: Introduction renders 1`] = `
