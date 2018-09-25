@@ -18,8 +18,6 @@ module.exports = (env, argv) => {
     const isRelease = env.release === "true";
     const isDevServer = !!argv.host;
 
-    console.log("ENV: ", env);
-    console.log("ARGV: ", argv);
 
     const config = {
         entry: {

@@ -39,7 +39,7 @@ before_build:
 - ps: ./build/prepare-release-build.ps1
 
 build_script:
-- cmd: npm run build:prod --env.release=%release%
+- cmd: npm run build:prod -- --env.release=%release%
 
 #---------------------------------#
 #       tests configuration       #
