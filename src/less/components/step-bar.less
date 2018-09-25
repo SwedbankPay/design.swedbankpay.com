@@ -121,15 +121,6 @@
         position: relative;
         text-align: center;
 
-        a {
-            padding: 8px;
-            text-align: center;
-        }
-
-        & a:before {
-            content: none;
-        }
-
         & a:after {
             content: "";
             position: absolute;
@@ -139,35 +130,5 @@
             background-color: #e2e2e2;
             z-index: 5;
         }
-
-        & .step-bar-circle:after {
-            content: "";
-            position: absolute;
-            top: 50% !important;
-            height: 4px !important;
-            width: 100%;
-            background-color: #e2e2e2;
-            z-index: 5;
-        }
-    }
-
-    & .step-bar-icon {
-        position: initial;
-        width: initial;
-        height: initial;
-        left: initial;
-        top: initial;
-        margin-top: initial;
-        line-height: initial;
     }
 }
-
-// .step-bar-circle {
-//     height: 2rem;
-//     width: 2rem;
-//     margin: 0 auto;
-//     text-align: center;
-//     border: 5px solid #e2e2e2;
-//     border-radius: 30px;
-//     background-color: white;
-// }

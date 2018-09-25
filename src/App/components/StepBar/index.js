@@ -15,7 +15,7 @@ const DefaultItems = () => (
             Some title
             <div className="step-bar-item-sub-title">Some subtitle</div>
         </li>
-        <li>
+        <li className="step-bar-item-active">
             Some title
             <div className="step-bar-item-sub-title">Some subtitle</div>
         </li>
