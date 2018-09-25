@@ -8,13 +8,14 @@ exports[`Component: Tabs -  Prop mode is required 1`] = `
     className="tabs-undefined"
   >
     <li
-      className=""
+      className={null}
       key="tab-item-test-0"
     >
       
 
       <a
         href="#"
+        onClick={[Function]}
       >
         test
       </a>
@@ -29,6 +30,7 @@ exports[`Component: Tabs -  Prop mode is required 1`] = `
 
       <a
         href="#"
+        onClick={[Function]}
       >
         test 2
       </a>
@@ -47,13 +49,14 @@ exports[`Component: Tabs -  renders 1`] = `
     className="tabs-auto"
   >
     <li
-      className=""
+      className={null}
       key="tab-item-test-0"
     >
       
 
       <a
         href="#"
+        onClick={[Function]}
       >
         test
       </a>
@@ -68,6 +71,7 @@ exports[`Component: Tabs -  renders 1`] = `
 
       <a
         href="#"
+        onClick={[Function]}
       >
         test 2
       </a>

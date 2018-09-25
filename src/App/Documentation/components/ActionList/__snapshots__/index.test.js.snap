@@ -4,6 +4,7 @@ exports[`Components: ActionList ActionListText renders 1`] = `
 <div
   className="col-md-12 col-lg-10 doc-body"
 >
+  <ExperimentalComponentAlert />
   <p
     className="lead"
   >
@@ -15,7 +16,7 @@ exports[`Components: ActionList ActionListText renders 1`] = `
 `;
 
 exports[`Components: ActionList Overview renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="overview"
   >
@@ -91,7 +92,7 @@ exports[`Components: ActionList Overview renders 1`] = `
       </div>
     </div>
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Components: ActionList renders 1`] = `

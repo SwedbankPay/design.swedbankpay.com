@@ -40,19 +40,19 @@ describe("Component: Checkbox - ", () => {
 
     it("renders with the disabled attribute", () => {
         const wrapper = shallow(
-            <Checkbox disabled={true} />
+            <Checkbox disabled />
         );
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<input type="checkbox" disabled={true} />)).toEqual(true);
+        expect(wrapper.contains(<input type="checkbox" disabled />)).toEqual(true);
     });
 
     it("renders with the checked attribute", () => {
         const wrapper = shallow(
-            <Checkbox checked={true} />
+            <Checkbox checked />
         );
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<input type="checkbox" defaultChecked={true} />)).toEqual(true);
+        expect(wrapper.contains(<input type="checkbox" defaultChecked />)).toEqual(true);
     });
 });

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Documentation: ProgressTracker Basic ProgressTracker renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="basic-usage"
   >
@@ -72,11 +72,11 @@ exports[`Documentation: ProgressTracker Basic ProgressTracker renders 1`] = `
       }
     />
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: ProgressTracker Disabled ProgressTracker renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="disable-a-step"
   >
@@ -132,7 +132,7 @@ exports[`Documentation: ProgressTracker Disabled ProgressTracker renders 1`] = `
       }
     />
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: ProgressTracker ProgressTracker Text renders 1`] = `
@@ -151,7 +151,7 @@ exports[`Documentation: ProgressTracker ProgressTracker Text renders 1`] = `
 `;
 
 exports[`Documentation: ProgressTracker Small ProgressTracker renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="small-progress-tracker"
   >
@@ -202,7 +202,7 @@ exports[`Documentation: ProgressTracker Small ProgressTracker renders 1`] = `
       small={true}
     />
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: ProgressTracker renders 1`] = `

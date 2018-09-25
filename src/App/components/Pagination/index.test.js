@@ -68,7 +68,7 @@ describe("Component: Pagination - ", () => {
 
     it("renders arrows when prop arrows is provided", () => {
         const wrapper = mount(
-            <Pagination arrows={true} />
+            <Pagination arrows />
         );
 
         expect(wrapper).toMatchSnapshot();
@@ -78,7 +78,7 @@ describe("Component: Pagination - ", () => {
 
     it("renders outermost arrows when prop farArrows is provided", () => {
         const wrapper = mount(
-            <Pagination farArrows={true} />
+            <Pagination farArrows />
         );
 
         expect(wrapper).toMatchSnapshot();

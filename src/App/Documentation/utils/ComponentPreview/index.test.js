@@ -25,7 +25,7 @@ describe("Utilities: ComponentPreview", () => {
 
     // it("renders", () => {
     //     const wrapper = mount(
-    //         <ComponentPreview language="html" showCasePanel={true} codeFigure={true}>
+    //         <ComponentPreview language="html" showCasePanel codeFigure>
     //             <TestComponentH1 />
     //         </ComponentPreview>
     //     );
@@ -38,7 +38,7 @@ describe("Utilities: ComponentPreview", () => {
 
     it("does not render codeFigure when prop is false/not provided", () => {
         const wrapper = mount(
-            <ComponentPreview language="html" showCasePanel={true}>
+            <ComponentPreview language="html" showCasePanel>
                 <TestComponentH1 />
             </ComponentPreview>
         );
@@ -49,7 +49,7 @@ describe("Utilities: ComponentPreview", () => {
 
     it("does not render showCasePanel when prop is false/not provided", () => {
         const wrapper = mount(
-            <ComponentPreview language="html" codeFigure={true}>
+            <ComponentPreview language="html" codeFigure>
                 <TestComponentH1 />
             </ComponentPreview>
         );
@@ -60,7 +60,7 @@ describe("Utilities: ComponentPreview", () => {
 
     it("CodeFigure renders multiple html tags", () => {
         const wrapper = mount(
-            <ComponentPreview language="html" codeFigure={true}>
+            <ComponentPreview language="html" codeFigure>
                 <TestComponentH1 />
                 <TestComponentH2 />
             </ComponentPreview>
@@ -76,7 +76,7 @@ describe("Utilities: ComponentPreview", () => {
 
     it("CodeFigure removes outer tags from component", () => {
         const wrapper = mount(
-            <ComponentPreview language="html" codeFigure={true} removeOuterTag={true}>
+            <ComponentPreview language="html" codeFigure removeOuterTag>
                 <TestComponentH1WithOuterTags />
                 <TestComponentH1WithOuterTags />
             </ComponentPreview>
@@ -92,7 +92,7 @@ describe("Utilities: ComponentPreview", () => {
         console.warn = jest.fn();
 
         const wrapper = mount(
-            <ComponentPreview language="css" codeFigure={true}>
+            <ComponentPreview language="css" codeFigure>
                 {() => []}
             </ComponentPreview>
         );
@@ -103,7 +103,7 @@ describe("Utilities: ComponentPreview", () => {
 
     it("CodeFigure renders css string", () => {
         const wrapper = mount(
-            <ComponentPreview language="css" codeFigure={true}>
+            <ComponentPreview language="css" codeFigure>
                 {"color: red;"}
             </ComponentPreview>
         );
@@ -114,7 +114,7 @@ describe("Utilities: ComponentPreview", () => {
 
     it("CodeFigure renders multiple javascript strings", () => {
         const wrapper = mount(
-            <ComponentPreview language="javascript" codeFigure={true}>
+            <ComponentPreview language="javascript" codeFigure>
                 {"const a = 12;"}
                 {"const b = 1;"}
                 {"const c = a + b;"}
@@ -127,7 +127,7 @@ describe("Utilities: ComponentPreview", () => {
 
     // it("prop language other than javascript, css or html returns warning message", () => {
     //     const wrapper = mount(
-    //         <ComponentPreview language="test" codeFigure={true}>
+    //         <ComponentPreview language="test" codeFigure>
     //             {"test"}
     //         </ComponentPreview>
     //     );

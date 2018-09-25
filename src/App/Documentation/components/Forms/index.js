@@ -11,7 +11,7 @@ const Overview = () => (
         <h2 id="overview">Overview</h2>
         <p>Forms overview...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <form>
+            <form onSubmit={e => e.preventDefault()}>
                 <InputGroup
                     id="first-name"
                     type="text"
@@ -50,9 +50,9 @@ const FormGrid = () => (
         <h2 id="form-grid">Form grid</h2>
         <p>Form grid...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <form>
+            <form onSubmit={e => e.preventDefault()}>
                 <div className="row">
-                    <div className="col-md-6">
+                    <div className="col-5">
                         <InputGroup
                             id="grid-first-name"
                             type="text"
@@ -62,7 +62,7 @@ const FormGrid = () => (
                             helpBlock="Hope it is something cool"
                         />
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-5">
                         <InputGroup
                             id="grid-last-name"
                             type="text"
@@ -72,37 +72,11 @@ const FormGrid = () => (
                             helpBlock="Most likely in your passport"
                         />
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col-md-4">
-                        <InputGroup
-                            id="grid-email"
-                            type="email"
-                            autoComplete="email"
-                            label="Email"
-                            placeholder="Enter email"
-                            helpBlock="Usually contains an @"
-                        />
-                    </div>
-                    <div className="col-md-4">
-                        <InputGroup
-                            id="grid-new-password"
-                            type="password"
-                            label="Password"
-                            autoComplete="new-password"
-                            placeholder="Enter your desired password"
-                            helpBlock="It is safe with us"
-                        />
-                    </div>
-                    <div className="col-md-4">
-                        <InputGroup
-                            id="grid-repeat-password"
-                            type="password"
-                            label="Repeat password"
-                            autoComplete="new-password"
-                            placeholder="Repeat your desired password"
-                            helpBlock="Definately not looking over your shoulder"
-                        />
+                    <div className="col-2">
+                        <div className="form-group">{"\n"}
+                            <br />{"\n"}
+                            <button type="submit" className="btn btn-primary">Search</button>{"\n"}
+                        </div>
                     </div>
                 </div>
             </form>
@@ -115,7 +89,7 @@ const Validation = () => (
         <h2 id="validation">Validation</h2>
         <p>Forms validation...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <form data-validate="true">
+            <form data-validate="" onSubmit={e => e.preventDefault()}>
                 <InputGroup
                     id="validate-first-name"
                     type="text"
@@ -152,7 +126,7 @@ const UsageWithFieldsets = () => (
         <h2 id="usage-with-fieldsets">Usage with fieldsets</h2>
         <p>Usage with fieldsets...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <form>
+            <form onSubmit={e => e.preventDefault()}>
                 <fieldset>
                     <legend>Log in</legend>
                     <InputGroup
@@ -196,7 +170,7 @@ const UsageWithFieldsets = () => (
                     />
                     <Checkbox label="Remember me" id="fieldset-disabled-checkbox" />
                 </fieldset>{"\n"}
-                <Button type="primary" label="Log in" btnType="submit" />{"\n"}
+                <Button type="primary" label="Log in" btnType="submit" disabled />{"\n"}
             </form>
         </ComponentPreview>
     </>

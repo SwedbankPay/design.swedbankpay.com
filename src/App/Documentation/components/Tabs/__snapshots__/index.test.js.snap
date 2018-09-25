@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Components: Tabs Collapsed renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="collapsed"
   >
@@ -29,28 +29,19 @@ exports[`Components: Tabs Collapsed renders 1`] = `
     <Tabs
       items={
         Array [
-          Object {
-            "active": false,
-            "name": "Tab #1",
-          },
-          Object {
-            "active": true,
-            "name": "Tab #2",
-          },
-          Object {
-            "active": false,
-            "name": "Tab #3",
-          },
+          "Tab #1",
+          "Tab #2",
+          "Tab #3",
         ]
       }
       mode="collapsed"
     />
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Components: Tabs Overview renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="overview"
   >
@@ -78,28 +69,19 @@ exports[`Components: Tabs Overview renders 1`] = `
     <Tabs
       items={
         Array [
-          Object {
-            "active": false,
-            "name": "Tab #1",
-          },
-          Object {
-            "active": true,
-            "name": "Tab #2",
-          },
-          Object {
-            "active": false,
-            "name": "Tab #3",
-          },
+          "Tab #1",
+          "Tab #2",
+          "Tab #3",
         ]
       }
       mode="auto"
     />
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Components: Tabs Stacked renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="stacked"
   >
@@ -127,30 +109,22 @@ exports[`Components: Tabs Stacked renders 1`] = `
     <Tabs
       items={
         Array [
-          Object {
-            "active": false,
-            "name": "Tab #1",
-          },
-          Object {
-            "active": true,
-            "name": "Tab #2",
-          },
-          Object {
-            "active": false,
-            "name": "Tab #3",
-          },
+          "Tab #1",
+          "Tab #2",
+          "Tab #3",
         ]
       }
       mode="stacked"
     />
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Components: Tabs TabsText renders 1`] = `
 <div
   className="col-md-12 col-lg-10 doc-body"
 >
+  <ExperimentalComponentAlert />
   <p
     className="lead"
   >

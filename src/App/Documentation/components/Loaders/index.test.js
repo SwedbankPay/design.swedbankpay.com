@@ -1,8 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Loaders from "./index";
-import { BasicUsage, Sizes, MutedLoader, StaticHtml, UsageWithJavascript, LoadersText } from "./index";
+import Loaders, { BasicUsage, Sizes, MutedLoader, StaticHtml, UsageWithJavascript, LoadersText } from "./index";
 
 describe("Documentation: Loaders", () => {
     it("is defined", () => {

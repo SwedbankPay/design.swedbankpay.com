@@ -46,13 +46,13 @@ const InputGroup = ({
         className: "form-control",
         id: id || null,
         placeholder: placeholder || null,
-        defaultValue: defaultValue || "",
+        defaultValue: defaultValue || null,
         disabled: disabled || null,
         readOnly: readOnly || null,
         autoComplete: autoComplete || null,
-        "data-validate": validate || null,
-        "data-pattern": pattern || null,
-        "data-required": required || null
+        "data-validate": validate ? "" : null,
+        "data-pattern": pattern ? "" : null,
+        "data-required": required ? "" : null
     };
 
     const inputGrpClasses = classnames(

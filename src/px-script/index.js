@@ -10,7 +10,6 @@ import modal from "./modal";
 import rangeslider from "./rangeslider";
 import sheet from "./sheet";
 import script from "./script";
-import tabs from "./tabs";
 import toast from "./toast";
 import topbar from "./topbar";
 import validation from "./validation";
@@ -29,7 +28,6 @@ const px = {
     rangeslider,
     sheet,
     script,
-    tabs,
     toast,
     topbar,
     validation
@@ -44,4 +42,4 @@ if (!window.stopPx) {
 }
 
 export default px;
-export { actionList, alert, button, datepicker, dialog, loader, modal, rangeslider, sheet, script, tabs, toast, topbar, validation };
+export { actionList, alert, button, datepicker, dialog, loader, modal, rangeslider, sheet, script, toast, topbar, validation };

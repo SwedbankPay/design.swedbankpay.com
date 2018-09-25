@@ -85,7 +85,7 @@ export default [
         redirect: "/docs/components/action-list",
         routes: [
             {
-                title: "Action List",
+                title: "Action List (experimental)",
                 path: "/docs/components/action-list",
                 component: require("../Documentation/components/ActionList")
             },
@@ -175,7 +175,7 @@ export default [
                 component: require("../Documentation/components/Status")
             },
             {
-                title: "Tabs",
+                title: "Tabs (experimental)",
                 path: "/docs/components/tabs",
                 component: require("../Documentation/components/Tabs")
             },

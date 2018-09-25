@@ -20,6 +20,10 @@ fieldset {
     margin-bottom: 1rem;
 
     &:disabled {
+        textarea {
+            resize: none;
+        }
+
         .checkbox input[type=checkbox] {
             + label:before {
                 background-color: @input-bg-disabled;
@@ -258,6 +262,19 @@ legend {
     text-transform: uppercase;
     font-size: @base-font-size * 0.8;
     line-height: 1rem;
+}
+
+textarea[disabled] {
+    resize: none;
+}
+
+select[multiple] {
+    height: auto;
+    padding: 0;
+
+    option {
+        padding: 0.187rem 0.375rem;
+    }
 }
 
 // Checkbox

@@ -46,7 +46,7 @@ module.exports = (env, argv) => {
             rules: [
                 {
                     test: /\.jsx?$/,
-                    exclude: /node_modules/,
+                    exclude: modulePath => (/node_modules/).test(modulePath) && !(/node_modules\/*/).test(modulePath),
                     loader: "babel-loader"
                 },
                 {

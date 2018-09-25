@@ -39,24 +39,9 @@
         &.active {
             background: @gray-8;
             color: @gray-4;
-            border-color: darken(@gray-8, 5%); //transparent;
-
-            // TODO: Review suggestion below [EH]
-            // background-color: @background;
-            // color: @color;
-            // border-color: darken(@background, 5%);
-            // opacity: .65;
+            border-color: darken(@gray-8, 5%);
         }
     }
-
-    // .badge {
-    //     color: fade(@background,95%);
-    //     background-color: rgba(255,255,255,1);
-    //     border-radius: 10px;
-    //     margin-left: 10px;
-    //     padding: 3px 5px;
-    //     font-size: 13px;
-    // }
 }
 
 .button-outline-variant(@color, @background, @hover-color) {
@@ -102,11 +87,6 @@
             border-color: transparent;
         }
     }
-
-    // .badge {
-    //     color: @background;
-    //     background-color: @hover-color;
-    // }
 }
 
 .button-ghost(@color) {
@@ -119,17 +99,7 @@
     &:hover,
     &:active {
         .button-active-state(@white, @color);
-
-        // .badge {
-        //     color: @white;
-        //     background-color: @color;
-        // }
     }
-
-    // .badge {
-    //     color: @color;
-    //     background-color: @white;
-    // }
 }
 
 .button-link-variant(@color) {

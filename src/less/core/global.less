@@ -49,13 +49,15 @@ textarea {
 // Links
 
 a {
-    color: @brand-primary;
+    color: @blue;
     text-decoration: none;
+    border-bottom: 2px solid @blue;
 
     &:hover,
     &:focus {
-        color: darken(@brand-primary, 10%);
-        text-decoration: underline;
+        color: darken(@blue, 10%);
+        text-decoration: none;
+        border-bottom-color: transparent;
     }
 
     &:active,
@@ -184,4 +186,11 @@ th {
 
 textarea {
     resize: vertical;
+}
+
+// Fix issue with select tags in safari
+select {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAY0lEQVQokdXSwQmAMAyF4T/iNOJkIq7ikD25hM+DFlusNNSTCYG8w5dTTIiW6prUF9jHxbDqEaE9DQABkGNWcXaEkwNtwJDBC88VNIq7yQIsHvSABVxERZjg8IaEsP98TjM8AFoueJdPecmTAAAAAElFTkSuQmCC) no-repeat right 3px center;
+    -moz-appearance: none;
+    -webkit-appearance: none;
 }

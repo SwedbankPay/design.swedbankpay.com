@@ -76,12 +76,6 @@ const ButtonAddons = () => (
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <InputGroupComponent
                 type="text"
-                prefixType="button"
-                prefixValue="Button"
-                prefixBtnColor="secondary"
-            /> {"\n\n"}
-            <InputGroupComponent
-                type="text"
                 postfixType="button"
                 postfixValue="Button"
                 postfixBtnColor="primary"
