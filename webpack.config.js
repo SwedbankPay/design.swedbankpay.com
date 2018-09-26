@@ -145,15 +145,10 @@ module.exports = (env, argv) => {
                 new UglifyJsPlugin({
                     sourceMap: true,
                     uglifyOptions: {
-                        ecma: 8,
-                        compress: {
-                            dead_code: true,
-                            drop_console: true, // TODO: keep console warnings and errors
-                            unused: false
-                        }
+                        compress: { pure_funcs: ["console.log"] }
                     }
                 }),
-                new OptimizeCSSAssetsPlugin({})
+                new OptimizeCSSAssetsPlugin()
             ],
             mergeDuplicateChunks: !isProd
         },
