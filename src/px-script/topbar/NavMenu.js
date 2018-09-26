@@ -14,7 +14,7 @@ export default class NavMenu {
         this.isOpen = false;
         this.btnElement = btnElement;
         this.iconElement = btnElement.querySelector(".topbar-btn-icon");
-        this.userIcon = this.iconElement.innerHTML || icons.default;
+        this.userIcon = this.iconElement ? this.iconElement.innerHTML : icons.default;
         this.history = [];
 
         if (this.navMenuElement) {
@@ -33,7 +33,6 @@ export default class NavMenu {
                 this._initTargetLinks();
             }
         }
-
     }
 
     _initNavSlides () {
@@ -78,13 +77,18 @@ export default class NavMenu {
     open () {
         this.navMenuElement.classList.add("in");
         this.isOpen = true;
-        this.iconElement.innerHTML = icons.close;
+        if (this.iconElement) {
+            this.iconElement.innerHTML = icons.close;
+        }
     }
 
     close () {
         this.navMenuElement.classList.remove("in");
         this.isOpen = false;
-        this.iconElement.innerHTML = this.userIcon;
+        if (this.iconElement) {
+            this.iconElement.innerHTML = this.userIcon;
+        }
+
         setTimeout(() => {
             this.reset();
         }, 500);
