@@ -46,7 +46,7 @@ const InputGroup = ({
         className: "form-control",
         id: id || null,
         placeholder: placeholder || null,
-        defaultValue: defaultValue || null,
+        defaultValue: defaultValue || "",
         disabled: disabled || null,
         readOnly: readOnly || null,
         autoComplete: autoComplete || null,
