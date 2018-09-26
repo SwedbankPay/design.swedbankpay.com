@@ -1,6 +1,6 @@
 .media {
     display: flex;
-    margin-bottom: 1rem;
+    margin-bottom: @base-margin; //Can't name a variable "@media" in _variables.less
 
     .media-img {
         display: flex;
@@ -43,7 +43,7 @@
     }
 
     .media-body {
-        padding: 0 1rem;
+        padding: 0 @base-margin;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -57,7 +57,7 @@
         /* stylelint-enable selector-list-comma-newline-after */
 
         p {
-            margin-top: -0.5rem;
+            margin-top: -@base-margin-s;
         }
     }
 }

@@ -466,7 +466,7 @@
 @range-webkit-bg:                           linear-gradient(90deg, @brand-primary, @brand-primary) 0 100% no-repeat content-box;
 
 
-// 11. Modal
+// 11. Modal (deprecated)
 // ==========================================================================
 
 /* Colors */
@@ -478,12 +478,16 @@
 @modal-backdrop-bg:                         @black;
 @modal-backdrop-opacity:                    0.5;
 
-@modal-margin:                              2rem;
+@modal-margin:                              @base-margin;
+@modal-margin-s:                            @base-margin-s;
+@modal-margin-l:                            @base-margin-l;
 
-@modal-heading-padding:                     1rem 2rem;
-@modal-body-padding:                        2rem 2rem 1rem 2rem;
-@modal-footer-margin:                       0;
-@modal-footer-padding:                      1rem 2rem 0.6rem 2rem;
+@modal-padding:                             @base-padding;
+@modal-padding-l:                           @base-padding-l;
+
+@modal-heading-padding:                     @modal-padding @modal-padding-l;
+@modal-body-padding:                        @modal-padding-l @modal-padding-l @modal-padding @modal-padding-l;
+@modal-footer-padding:                      1rem 2rem 0.6rem 2rem; //Todo cleanup
 
 @modal-size-sm:                             500px;
 @modal-size-md:                             750px;
