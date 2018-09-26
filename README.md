@@ -1,4 +1,4 @@
-![PayEx logo](~/src/img/px-logo.svg)
+![PayEx logo](./src/img/px-logo.svg)
 
 # PayEx DesignGuide
 
