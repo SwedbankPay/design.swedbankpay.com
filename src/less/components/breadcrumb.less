@@ -1,6 +1,6 @@
 ul.breadcrumb,
 ol.breadcrumb {
-    margin: @breadcrumb-margin;
+    margin: @breadcrumb-margin, 0;
     padding-left: 0;
     display: flex;
 
@@ -22,7 +22,7 @@ ol.breadcrumb {
         &:after {
             content: ">";
             color: @brand-primary;
-            margin: 0 0.5rem;
+            margin: 0 @breadcrumb-margin/2;
         }
     }
 

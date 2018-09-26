@@ -14,6 +14,7 @@
 //
 //  COMPONENTS
 // ===============
+//  x. Action List
 //  6. Badge
 //  7. Breadcrumb
 //  8. Button
@@ -87,9 +88,13 @@
 // 2. Global
 // ==========================================================================
 
+/* Aksels global heaven */
+@base-margin:                               1rem;
+@base-padding:                              1rem;
+
 /* Margins */
-@base-margin:                               3px;
-@base-padding:                              3px;
+@old-base-margin:                           3px; //where are you used?
+@old-base-padding:                              3px; // ---||---
 
 /* Spacing */
 @spacer:                                    1rem;
@@ -278,6 +283,23 @@
 //
 // ==========================================================================
 
+// x. Action List
+// ==========================================================================
+
+@actionlist-padding:                        @base-padding;
+
+// x. Alert
+// ==========================================================================
+
+@alert-margin:                              @base-margin;
+@alert-padding:                             @base-padding;
+
+// x. Card
+// ==========================================================================
+
+@card-padding:                              @base-padding;
+@card-margin:                               @base-margin;
+
 // 6. Badge
 // ==========================================================================
 
@@ -288,7 +310,7 @@
 // Todo: clean this up when progress tracker is remade
 
 
-@breadcrumb-margin:                         1rem 0;
+@breadcrumb-margin:                         @base-margin;
 @breadcrumb-padding:                        0.6rem 1.2rem 0.6rem 2rem;
 @breadcrumb-padding-first:                  1rem;
 
@@ -320,6 +342,8 @@
 // ==========================================================================
 
 @btn-font-weight:                           normal;
+
+@btn-margin:                                @base-margin;
 
 @btn-border-radius-base:                    3px;
 @btn-border-radius-large:                   3px;

@@ -24,7 +24,8 @@
 
         > a {
             display: flex;
-            padding: 0.3rem 3rem 0.3rem 0.5rem;
+            padding: round(@actionlist-padding/3, 1);
+            padding-right: @actionlist-padding*3;
             color: @gray-5;
             visibility: hidden;
             position: relative;
@@ -65,7 +66,9 @@
             left: -0.35rem;
 
             > a {
-                padding: 0.3rem 1rem 0.3rem 2rem;
+                padding: round(@actionlist-padding/3, 1);
+                padding-left: @actionlist-padding*2;
+                padding-right: @actionlist-padding;
             }
         }
     }
@@ -85,7 +88,9 @@
             bottom: 0;
 
             > a {
-                padding: 0.3rem 1rem 0.3rem 2rem;
+                padding: round(@actionlist-padding/3, 1);
+                padding-left: @actionlist-padding*2;
+                padding-right: @actionlist-padding;
             }
         }
     }

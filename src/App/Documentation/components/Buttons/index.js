@@ -10,7 +10,7 @@ const Examples = () => (
     <>
         <h2 id="examples">Examples</h2>
         <p>Several button styles etc...</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <ButtonComponent type="primary" label="Primary" />{"\n"}
                 <ButtonComponent type="secondary" label="Secondary" />{"\n"}
@@ -25,7 +25,7 @@ const UsageWithOtherTags = () => (
     <>
         <h2 id="usage-with-other-tags">Usage with other tags</h2>
         <p>The <code className="token property">.btn</code> class can also be used with other html-tags like <PrismCode className="language-html">{"<a>"}</PrismCode> or <PrismCode className="language-html">{"<input>"}</PrismCode>.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <ButtonComponent type="primary" label="Anchor" href="#" />{"\n"}
                 <ButtonComponent type="primary" label="Button" />{"\n"}
@@ -41,7 +41,7 @@ const OutlineButtons = () => (
     <>
         <h2 id="outline-buttons">Outline buttons</h2>
         <p>Several button styles etc...</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <ButtonComponent outline type="primary" label="Primary" />{"\n"}
                 <ButtonComponent outline type="secondary" label="Secondary" />{"\n"}
@@ -57,7 +57,7 @@ const Sizes = () => (
         <p>Several button sizes etc...</p>
         <h3>Large buttons</h3>
         <p>...<code className="token property">.btn-lg</code></p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <ButtonComponent size="lg" type="primary" label="Large button" />{"\n"}
                 <ButtonComponent size="lg" type="secondary" label="Large button" />{"\n"}
@@ -65,7 +65,7 @@ const Sizes = () => (
         </ComponentPreview>
         <h3>Small buttons</h3>
         <p>...<code className="token property">.btn-sm</code></p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <ButtonComponent size="sm" type="primary" label="Small button" />{"\n"}
                 <ButtonComponent size="sm" type="secondary" label="Small button" />{"\n"}
@@ -73,7 +73,7 @@ const Sizes = () => (
         </ComponentPreview>
         <h3>Extra small buttons</h3>
         <p>...<code className="token property">.btn-xs</code></p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <ButtonComponent size="xs" type="primary" label="Extra small button" />{"\n"}
                 <ButtonComponent size="xs" type="secondary" label="Extra small button" />{"\n"}
@@ -81,7 +81,7 @@ const Sizes = () => (
         </ComponentPreview>
         <h3>Block level</h3>
         <p>...<code className="token property">.btn-block</code></p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <ButtonComponent fullWidth type="primary" label="Block level button" />{"\n"}
                 <ButtonComponent fullWidth type="secondary" label="Block level button" />{"\n"}
@@ -94,7 +94,7 @@ const ActiveState = () => (
     <>
         <h2 id="active-state">Active state</h2>
         <p>Active state with <code className="token property">.active</code>...</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <ButtonComponent active type="primary" label="Primary" />{"\n"}
                 <ButtonComponent active type="secondary" label="Secondary" />{"\n"}
@@ -108,7 +108,7 @@ const DisabledState = () => (
     <>
         <h2 id="disabled-state">Disabled state</h2>
         <p>Disabled state with <Attribute name="disabled" />...</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <ButtonComponent disabled type="primary" label="Primary" />{"\n"}
                 <ButtonComponent disabled type="secondary" label="Secondary" />{"\n"}
@@ -122,7 +122,7 @@ const UsageWithIcons = () => (
     <>
         <h2 id="usage-with-icons">Usage with icons</h2>
         <p>To use a button with an icon... Read more about icon usage here <Link to="/docs/core/icons">here</Link>.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <ButtonComponent icon="cloud" type="primary" label="Primary" />{"\n\n"}
                 <ButtonComponent icon="cloud" type="secondary" label="Secondary" />{"\n"}
@@ -135,14 +135,14 @@ const ButtonLoader = () => (
     <>
         <h2 id="button-loader">Button loader</h2>
         <p>To use a button with a loader simply add the attribute <Attribute data name="button-loader" /> to add the required markup for the loader component. Add class <code className="token property">.loading</code> to display the loader.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <ButtonComponent type="primary" label="Primary" loader loading />{"\n"}
                 <ButtonComponent type="secondary" label="Secondary" loader loading />{"\n"}
                 <ButtonComponent type="danger" label="Danger" loader loading />{"\n"}
             </div>
         </ComponentPreview>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <ButtonComponent outline type="primary" label="Primary" loader loading />{"\n"}
                 <ButtonComponent outline type="secondary" label="Secondary" loader loading />{"\n"}
@@ -240,7 +240,7 @@ const ButtonsGroup = () => (
     <>
         <h2 id="buttons-group">Using buttons together</h2>
         <p>When you use buttons next to each other you have to wrap them in a <code>button-group</code>.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <ButtonComponent type="primary" label="Activate" />{"\n"}
                 <ButtonComponent type="secondary" label="Disable" />{"\n"}
