@@ -15,7 +15,7 @@ const SentryCliPlugin = require("@sentry/webpack-plugin");
 module.exports = (env, argv) => {
     const version = pkg.version;
     const isProd = argv.mode === "production";
-    const isRelease = env.release === "true";
+    const isRelease = env && env.release === "true";
     const isDevServer = !!argv.host;
 
 
