@@ -24,8 +24,8 @@
 
         > a {
             display: flex;
-            padding: round(@actionlist-padding/3, 1);
-            padding-right: @actionlist-padding*3;
+            padding: @action-list-a-padding;
+            padding-right: @action-list-padding-l;
             color: @gray-5;
             visibility: hidden;
             position: relative;
@@ -66,9 +66,8 @@
             left: -0.35rem;
 
             > a {
-                padding: round(@actionlist-padding/3, 1);
-                padding-left: @actionlist-padding*2;
-                padding-right: @actionlist-padding;
+                padding-left: @action-list-padding-l;
+                padding-right: @action-list-padding;
             }
         }
     }
@@ -88,9 +87,8 @@
             bottom: 0;
 
             > a {
-                padding: round(@actionlist-padding/3, 1);
-                padding-left: @actionlist-padding*2;
-                padding-right: @actionlist-padding;
+                padding-left: @action-list-padding-l;
+                padding-right: @action-list-padding;
             }
         }
     }

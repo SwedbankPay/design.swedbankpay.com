@@ -90,7 +90,17 @@
 
 /* Margin */
 @base-margin:                               1rem;
+
+@base-margin-s:                             @base-margin/2;
+@base-margin-xs:                            @base-margin/4;
+
+/* Padding */
 @base-padding:                              1rem;
+
+@base-padding-s:                            @base-padding/2;
+@base-padding-xs:                           @base-padding/4;
+
+@base-padding-l:                            @base-padding*2;
 
 /* Spacing */
 @spacer:                                    1rem;
@@ -282,7 +292,11 @@
 // x. Action List
 // ==========================================================================
 
-@actionlist-padding:                        @base-padding;
+@action-list-padding:                       @base-padding;
+@action-list-padding-l:                     @base-padding-l;
+
+@action-list-a-padding:                     round(@action-list-padding/3, 1);
+@action-list-a-padding-right:               @action-list-padding*3;
 
 // x. Alert
 // ==========================================================================
