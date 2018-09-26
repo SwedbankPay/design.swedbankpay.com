@@ -1,11 +1,8 @@
 # Changelog
 
-## [0.1x.x] - 2018-xx-xx
-
-### Added
-
-### Changed
+## [0.11.1] - 2018-09-26
 
 ### Fixed
 
-### Removed
+- Fixed issue with documentation page for toast crashing.
+- Fixed bug with topbar script crashing when topbar button does not contain an icon.
