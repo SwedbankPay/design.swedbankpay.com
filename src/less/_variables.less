@@ -93,13 +93,13 @@
 
 @base-margin-s:                             @base-margin/2;
 @base-margin-xs:                            @base-margin/4;
+@base-margin-l:                             @base-margin*2;
 
 /* Padding */
 @base-padding:                              1rem;
 
 @base-padding-s:                            @base-padding/2;
 @base-padding-xs:                           @base-padding/4;
-
 @base-padding-l:                            @base-padding*2;
 
 /* Spacing */
@@ -400,8 +400,9 @@
 
 @dialog-heading-padding:                    1rem 2rem;
 @dialog-body-padding:                       2rem 2rem 1rem;
-@dialog-footer-margin:                      0;
 @dialog-footer-padding:                     1rem 2rem;
+
+@dialog-footer-margin:                      0;
 
 @dialog-size:                               500px;
 
@@ -409,7 +410,7 @@
 // 10. Form
 // ==========================================================================
 
-@form-margin:                               1rem;
+@form-margin:                               @base-margin;
 
 @input-padding-y:                           0.375rem;
 @input-padding-x:                           0.75rem;
@@ -432,14 +433,33 @@
 @legend-color:                              @gray-3;
 @legend-bottom-margin:                      1.25rem;
 
+// Fieldset
+@fieldset-margin:                           @base-margin;
+
 // Checkbox
 @checkbox-bg:                               @brand-primary;
 @checkbox-height:                           1.4rem;
 @checkbox-width:                            @checkbox-height; // This also controls radio and togglebox
 
+@checkbox-padding:                          @base-padding;
+@checkbox-label-padding:                    @checkbox-padding/5;
+
+@checkbox-margin:                           @base-margin;
+@checkbox-margin-s:                         @base-margin-s;
+
+// Radio
+@radio-margin:                              @base-margin;
+@radio-margin-s:                            @base-margin-s;
+
+// Togglebox
+@togglebox-margin-s:                        @base-margin-s;
+
 // Rangeslider
 @range-height:                              @checkbox-height / 2;
 @thumb-size:                                @checkbox-height;
+
+@rangeslider-margin:                        @base-margin;
+@rangeslider-margin-l:                      @base-margin-l;
 
 @range-bg:                                  @input-bg;
 // This needs to be gradient for some reason
