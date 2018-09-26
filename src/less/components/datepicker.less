@@ -8,7 +8,7 @@
 .rd-container {
     display: none;
     background-color: @datepicker-background-color;
-    padding: 1rem 0.6rem;
+    padding: @datepicker-padding @datepicker-padding-s;
     text-align: center;
     box-shadow: @datepicker-box-shadow;
     z-index: @zindex-datepicker;
@@ -18,7 +18,7 @@
     position: absolute;
 }
 
-.rd-month {
+.rd-month { // Todo: cleanup
     display: inline-block;
     margin-right: 1.5rem;
 }
@@ -41,7 +41,7 @@
     border: none;
     outline: none;
     background: none;
-    padding: 0 0.6rem;
+    padding: 0 @datepicker-padding-s;
     margin: 0;
 }
 
@@ -68,7 +68,7 @@
     content: "\E5C8";
 }
 
-.rd-days {
+.rd-days { // Todo: cleanup
     td,
     th {
         padding: 0.35rem 0.7rem;
@@ -110,7 +110,7 @@
     color: #ffcccc;
 }
 
-.rd-time {
+.rd-time { //Todo: cleanup
     position: relative;
     display: inline-block;
     margin-top: 5px;
@@ -129,11 +129,11 @@
 }
 
 .rd-time-selected {
-    padding: 0.3rem;
+    padding: @datepicker-rd-padding;
 }
 
 .rd-time-option {
-    padding: 0.3rem;
+    padding: @datepicker-rd-padding;
 }
 
 .rd-day-concealed {
