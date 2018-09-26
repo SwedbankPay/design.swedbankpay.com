@@ -77,6 +77,28 @@ __*Make sure to follow the syntax rules enforced by eslint & stylelint.*__
 * Feature suggestions: File as Github issue or discuss the feature on Slack ([#design-guide-general](https://payex.slack.com/messages/C0L3W8B2S/)).
 * Code contribtions: Code contribtions are highly encouraged, but discuss the feature/bugfix in an issue or on Slack before you start coding.
 
+## Creating a release
+
+Before merging to master to create a release make sure you follow these steps:
+
+1. Update the version in `~/package.json`
+1. Update snapshots with the new version number by running the command `npm run test:update` in the project root.
+1. Make sure the changelog is correct (date and version) and only contains changes for the current release.
+1. Update the version in the url to the shield image at the top of this `README.md`.
+1. Commit the changes and push to `develop`.
+1. Change branch to `master`.
+1. Merge `master` with `develop`.
+1. Create a tag with the new version.
+1. Push the tagged commit to `master`.
+
+Now AppVeyor will create and deploy a release on both github and [design.payex.com](https://design.payex.com).
+
+After pushing to master, complete the following steps:
+
+1. Change back to `develop`.
+1. Remove the content of changelog (leave the heading).
+1. Commit the file and push it.
+
 ## Maintainers
 
 * [Erik Hallaraaker](https://github.com/erikhallaraaker)
