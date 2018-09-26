@@ -15,6 +15,7 @@ const SentryCliPlugin = require("@sentry/webpack-plugin");
 module.exports = (env, argv) => {
     const version = pkg.version;
     const isProd = argv.mode === "production";
+    const isRelease = env && env.release === "true";
     const isDevServer = !!argv.host;
 
     const config = {
@@ -143,15 +144,10 @@ module.exports = (env, argv) => {
                 new UglifyJsPlugin({
                     sourceMap: true,
                     uglifyOptions: {
-                        ecma: 8,
-                        compress: {
-                            dead_code: true,
-                            drop_console: true, // TODO: keep console warnings and errors
-                            unused: false
-                        }
+                        compress: { pure_funcs: ["console.log"] }
                     }
                 }),
-                new OptimizeCSSAssetsPlugin({})
+                new OptimizeCSSAssetsPlugin()
             ],
             mergeDuplicateChunks: !isProd
         },

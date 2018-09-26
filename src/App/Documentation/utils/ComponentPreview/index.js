@@ -101,10 +101,8 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                 code = jsbeautifier.css_beautify(code);
                 break;
             case "javascript":
-                code = jsbeautifier.js_beautify(code, {
-                    brace_style: "preserve-inline", // eslint-disable-line camelcase
-                    e4x: true
-                });
+                // This is not needed, and for some reason crashes after a prod build [EH]
+                // code = jsbeautifier.js_beautify(code);
                 break;
             default:
                 return "update switchcase!";

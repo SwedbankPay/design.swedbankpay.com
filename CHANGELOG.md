@@ -1,5 +1,6 @@
 # Changelog
 
+<<<<<<< HEAD
 ## [0.11.0] - 2018-09-xx
 
 ### Added
@@ -32,3 +33,11 @@
 ### Removed
 
 - Removed tabs component from px-script, users will now have to add/remove class `active` manually. (This is to better handle redirects).
+=======
+## [0.11.1] - 2018-09-26
+
+### Fixed
+
+- Fixed issue with documentation page for toast crashing.
+- Fixed bug with topbar script crashing when topbar button does not contain an icon.
+>>>>>>> develop
