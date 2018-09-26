@@ -15,7 +15,7 @@ exports[`Core: Favicons FaviconsText renders 1`] = `
 `;
 
 exports[`Core: Favicons OurFavicon renders 1`] = `
-<Fragment>
+<React.Fragment>
   <h2
     id="our-favicon"
   >
@@ -33,11 +33,11 @@ exports[`Core: Favicons OurFavicon renders 1`] = `
       src="/icons/android-chrome-96x96.png"
     />
   </ComponentPreview>
-</Fragment>
+</React.Fragment>
 `;
 
 exports[`Core: Favicons Usage renders 1`] = `
-<Fragment>
+<React.Fragment>
   <h2
     id="usage"
   >
@@ -247,7 +247,7 @@ exports[`Core: Favicons Usage renders 1`] = `
       name="theme-color"
     />
   </ComponentPreview>
-</Fragment>
+</React.Fragment>
 `;
 
 exports[`Core: Favicons renders 1`] = `

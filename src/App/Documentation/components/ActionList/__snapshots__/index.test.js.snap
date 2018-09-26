@@ -16,7 +16,7 @@ exports[`Components: ActionList ActionListText renders 1`] = `
 `;
 
 exports[`Components: ActionList Overview renders 1`] = `
-<Fragment>
+<React.Fragment>
   <h2
     id="overview"
   >
@@ -92,7 +92,7 @@ exports[`Components: ActionList Overview renders 1`] = `
       </div>
     </div>
   </ComponentPreview>
-</Fragment>
+</React.Fragment>
 `;
 
 exports[`Components: ActionList renders 1`] = `

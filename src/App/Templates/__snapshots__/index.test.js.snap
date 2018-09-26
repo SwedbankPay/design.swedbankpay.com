@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Templates: index renders 1`] = `
-<Fragment>
+<React.Fragment>
   <h1>
     Here there might be templates
   </h1>
-</Fragment>
+</React.Fragment>
 `;

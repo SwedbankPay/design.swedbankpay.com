@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Examples: index renders 1`] = `
-<Fragment>
+<React.Fragment>
   <h1>
     Here there be examples
   </h1>
-</Fragment>
+</React.Fragment>
 `;

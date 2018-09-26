@@ -22,7 +22,7 @@ exports[`Core: Icons IconsText renders 1`] = `
 `;
 
 exports[`Core: Icons Usage renders 1`] = `
-<Fragment>
+<React.Fragment>
   <h2
     id="usage"
   >
@@ -79,7 +79,7 @@ exports[`Core: Icons Usage renders 1`] = `
     
 
   </ComponentPreview>
-</Fragment>
+</React.Fragment>
 `;
 
 exports[`Core: Icons renders 1`] = `

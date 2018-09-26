@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Documentation: Lists BasicList renders 1`] = `
-<Fragment>
+<React.Fragment>
   <h2
     id="basic-list"
   >
@@ -73,11 +73,11 @@ exports[`Documentation: Lists BasicList renders 1`] = `
       </li>
     </ul>
   </ComponentPreview>
-</Fragment>
+</React.Fragment>
 `;
 
 exports[`Documentation: Lists DescriptionList renders 1`] = `
-<Fragment>
+<React.Fragment>
   <h2
     id="description-list"
   >
@@ -127,11 +127,11 @@ exports[`Documentation: Lists DescriptionList renders 1`] = `
 
     </dl>
   </ComponentPreview>
-</Fragment>
+</React.Fragment>
 `;
 
 exports[`Documentation: Lists InlineList renders 1`] = `
-<Fragment>
+<React.Fragment>
   <h2
     id="inline-list"
   >
@@ -164,7 +164,7 @@ exports[`Documentation: Lists InlineList renders 1`] = `
       </li>
     </ul>
   </ComponentPreview>
-</Fragment>
+</React.Fragment>
 `;
 
 exports[`Documentation: Lists ListsText renders 1`] = `
@@ -187,7 +187,7 @@ exports[`Documentation: Lists ListsText renders 1`] = `
 `;
 
 exports[`Documentation: Lists SettingsList renders 1`] = `
-<Fragment>
+<React.Fragment>
   <h2
     id="settings-list"
   >
@@ -247,7 +247,7 @@ exports[`Documentation: Lists SettingsList renders 1`] = `
       </li>
     </ul>
   </ComponentPreview>
-</Fragment>
+</React.Fragment>
 `;
 
 exports[`Documentation: Lists renders 1`] = `

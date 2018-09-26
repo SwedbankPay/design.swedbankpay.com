@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Components: Tabs Collapsed renders 1`] = `
-<Fragment>
+<React.Fragment>
   <h2
     id="collapsed"
   >
@@ -37,11 +37,11 @@ exports[`Components: Tabs Collapsed renders 1`] = `
       mode="collapsed"
     />
   </ComponentPreview>
-</Fragment>
+</React.Fragment>
 `;
 
 exports[`Components: Tabs Overview renders 1`] = `
-<Fragment>
+<React.Fragment>
   <h2
     id="overview"
   >
@@ -77,11 +77,11 @@ exports[`Components: Tabs Overview renders 1`] = `
       mode="auto"
     />
   </ComponentPreview>
-</Fragment>
+</React.Fragment>
 `;
 
 exports[`Components: Tabs Stacked renders 1`] = `
-<Fragment>
+<React.Fragment>
   <h2
     id="stacked"
   >
@@ -117,7 +117,7 @@ exports[`Components: Tabs Stacked renders 1`] = `
       mode="stacked"
     />
   </ComponentPreview>
-</Fragment>
+</React.Fragment>
 `;
 
 exports[`Components: Tabs TabsText renders 1`] = `
