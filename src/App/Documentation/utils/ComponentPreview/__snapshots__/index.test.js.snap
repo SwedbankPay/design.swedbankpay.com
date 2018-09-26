@@ -90,9 +90,7 @@ exports[`Utilities: ComponentPreview CodeFigure renders multiple javascript stri
           <code
             className="language-javascript"
           >
-            const a = 12;
-const b = 1;
-const c = a + b;
+            const a = 12;const b = 1;const c = a + b;
           </code>
         </PrismCode>
       </pre>
