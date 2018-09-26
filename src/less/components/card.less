@@ -21,7 +21,7 @@
         min-width: 18rem;
         max-width: 18rem;
         flex: 1;
-        margin: 0 @card-margin*2 @card-margin;
+        margin: 0 @card-margin-l @card-margin;
 
         header {
             padding: 0 @card-padding;
@@ -78,12 +78,12 @@
             justify-content: center;
             align-content: center;
 
-            .material-icons {
+            .material-icons { //Todo: cleanup; will this be removed when icons are fixed?
                 margin-top: -0.2rem;
                 font-size: 2rem;
                 line-height: 2rem;
                 color: @gray-3;
-                margin-right: 0.5rem;
+                margin-right: @card-margin-s;
             }
 
             .highlight-wrapper {
@@ -114,7 +114,7 @@
 
             .footer-text {
                 p {
-                    margin-bottom: @card-margin/4;
+                    margin-bottom: @card-margin-xs;
                 }
             }
 
@@ -138,12 +138,12 @@
             margin-top: 1.5;
         }
 
-        .text {
+        .text { // Todo: clean up these
             flex-grow: 1;
             max-width: 60ch;
 
             > * + * {
-                margin-top: @card-margin*0.75;
+                margin-top: 0.75rem;
             }
 
             &:last-child {
@@ -151,7 +151,7 @@
             }
 
             &:nth-last-child(2) {
-                margin-bottom: @card-margin*0.75;
+                margin-bottom: 0.75rem;
             }
         }
     }
