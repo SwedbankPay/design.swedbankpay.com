@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.11.0] - 2018-09-25
+## [0.11.0] - 2018-09-xx
 
 ### Added
 
@@ -28,7 +28,6 @@
 - Fixed issue with selects appearing "glossy" on safari.
 - Fixed issue with select tag with attribute `multiple` not being rendered properly.
 - Fixed issue with click event on loader-button.
-- Fixed an issue with tooltip outline being visible when not hovering parent element while parent element has focus.
 
 ### Removed
 
