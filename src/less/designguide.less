@@ -134,6 +134,31 @@ pre {
     }
 }
 
+// Override the prism toolbar button rules
+figure {
+    .code-toolbar {
+        > .toolbar {
+            opacity: 1;
+
+            > .toolbar-item {
+                a {
+                    background: transparent;
+                    padding: 0.25rem 0.5rem;
+                    border-radius: 0.25rem;
+                    border: 0;
+                    box-shadow: none;
+
+                    &:hover {
+                        color: @white;
+                        background: @brand-primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// NOTE: This is not used for anything but including the image in the build [EH]
 #mail_icon {
     background: url("../img/payexmail.png");
 }
