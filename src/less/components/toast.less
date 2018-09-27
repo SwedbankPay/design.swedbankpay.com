@@ -22,7 +22,7 @@
         line-height: 1.5em;
         color: @toast-text-color;
         background-color: @toast-color;
-        padding: 0.6rem 1.5rem;
+        padding: @toast-padding-s @toast-margin-m;
         font-size: 1.1rem;
         font-weight: 300;
         display: flex;
@@ -77,8 +77,8 @@
             user-select: none;
 
             &:first-child {
-                margin-right: 0.5rem;
-                margin-left: -0.5rem;
+                margin-right: @toast-margin-s;
+                margin-left: -@toast-margin-s;
             }
 
             &:last-child {
