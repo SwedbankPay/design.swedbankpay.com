@@ -22,7 +22,7 @@
         line-height: 1.5em;
         color: @toast-text-color;
         background-color: @toast-color;
-        padding: @toast-padding-s @toast-margin-m;
+        padding: @toast-padding-s @toast-padding-m;
         font-size: 1.1rem;
         font-weight: 300;
         display: flex;
@@ -83,8 +83,8 @@
 
             &:last-child {
                 cursor: pointer;
-                margin-left: 0.5rem;
-                margin-right: -0.5rem;
+                margin-left: @toast-margin-s;
+                margin-right: -@toast-margin-s;
                 color: lighten(@text-color, 20%);
 
                 &:hover {
