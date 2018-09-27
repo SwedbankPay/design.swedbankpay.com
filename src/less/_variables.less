@@ -14,19 +14,26 @@
 //
 //  COMPONENTS
 // ===============
-//  x. Action List
-//  6. Badge
-//  7. Breadcrumb
-//  8. Button
-//  9. Dialog
-// 10. Form
-// 11. Modal
-// 12. Pagination
-// 13. Panel
-// 14. Sheet
-// 15. Status
-// 16. Toast
-// 17. Topbar
+//  6. Action List
+//  7. Alert
+//  8. Badge
+//  9. Breadcrumb
+// 10. Button
+// 11. Card
+// 12. Datepicker
+// 13. Dialog
+// 14. Form
+// 15. Media object
+// 16. Modal (deprecated)
+// 17. Pagination
+// 18. Panel
+// 19. Sheet
+// 20. Status
+// 21. Tabs
+// 22. Toast
+// 23. Tooltip
+// 24. Topbar
+// 25. Well
 
 // ==========================================================================
 //
@@ -287,7 +294,7 @@
 //
 // ==========================================================================
 
-// x. Action List
+// 6. Action List
 // ==========================================================================
 
 @action-list-padding:                       @base-padding;
@@ -295,18 +302,18 @@
 
 @action-list-a-padding:                     round(@action-list-padding/3, 1);
 
-// x. Alert
+// 7. Alert
 // ==========================================================================
 
 @alert-margin:                              @base-margin;
 @alert-padding:                             @base-padding;
 
-// 6. Badge
+// 8. Badge
 // ==========================================================================
 
 @badge-list: default @gray-8, brand @green, blue @blue, purple @purple, yellow @yellow, red @red;
 
-// 7. Breadcrumb
+// 9. Breadcrumb
 // ==========================================================================
 // Todo: clean this up when progress tracker is remade
 
@@ -339,7 +346,7 @@
 @breadcrumb-arrow-bg-sm:                    @breadcrumb-arrow-border-sm - @breadcrumb-arrow-border-size-sm;
 
 
-// 8. Button
+// 10. Button
 // ==========================================================================
 
 @btn-font-weight:                           normal;
@@ -366,7 +373,7 @@
 
 @btn-link-disabled-color:                   @gray-6;
 
-// x. Card
+// 11. Card
 // ==========================================================================
 
 @card-margin:                               @base-margin;
@@ -376,7 +383,7 @@
 
 @card-padding:                              @base-padding;
 
-// x. Datepicker
+// 12. Datepicker
 // ==========================================================================
 
 @datepicker-padding:                        @base-margin;
@@ -384,7 +391,7 @@
 @datepicker-rd-padding:                     round(@datepicker-padding/3, 1);
 
 
-// 9. Dialog
+// 13. Dialog
 // ==========================================================================
 
 /* Colors */
@@ -404,7 +411,7 @@
 @dialog-size:                               500px;
 
 
-// 10. Form
+// 14. Form
 // ==========================================================================
 
 @form-margin:                               @base-margin;
@@ -463,7 +470,7 @@
 @range-webkit-bg:                           linear-gradient(90deg, @brand-primary, @brand-primary) 0 100% no-repeat content-box;
 
 
-// 11. Media object
+// 15. Media object
 // ==========================================================================
 
 @mobject-margin:                            @base-margin;
@@ -471,7 +478,7 @@
 
 @mobject-padding:                           @base-padding;
 
-// 11. Modal (deprecated)
+// 16. Modal (deprecated)
 // ==========================================================================
 
 /* Colors */
@@ -499,7 +506,7 @@
 @modal-size-lg:                             1000px;
 
 
-// 12. Pagination
+// 17. Pagination
 // ==========================================================================
 
 @pagination-active-color:                   @brand-primary;
@@ -512,7 +519,7 @@
 
 @pagination-bullets-margin:                 @pagination-margin-s/2;
 
-// 13. Panel
+// 18. Panel
 // ==========================================================================
 
 /* Colors */
@@ -545,7 +552,7 @@
 @panel-collapse-duration:                   0.25s;
 
 
-// 14. Sheet
+// 19. Sheet
 // ==========================================================================
 
 @sheet-backdrop-bg:                         fade(@black, 50%);
@@ -557,13 +564,13 @@
 @sheet-width:                               580px;
 
 
-// 15. Status
+// 20. Status
 // ==========================================================================
 
 @status-size:                               13px;
 @status-padding:                            10;
 
-// x. Tabs
+// 21. Tabs
 // ==========================================================================
 
 @tabs-margin:                               @base-margin;
@@ -572,7 +579,7 @@
 @tabs-padding-s:                            @base-padding-s;
 
 
-// 16. Toast
+// 22. Toast
 // ==========================================================================
 
 @toast-height:                              48px;
@@ -588,7 +595,7 @@
 @toast-padding-m:                           @base-padding+@base-padding-s; //Medium, ok naming?
 
 
-// x. Tooltip
+// 23. Tooltip
 // ==========================================================================
 
 @tooltip-margin:                            @base-margin;
@@ -597,7 +604,7 @@
 @tooltip-padding-s:                         @base-padding-s;
 @tooltip-padding-xs:                        @base-padding-xs;
 
-// 17. Topbar
+// 24. Topbar
 // ==========================================================================
 
 @topbar-height:                             70px;
@@ -613,3 +620,9 @@
 
 @topbar-padding:                            @base-padding;
 @topbar-padding-s:                          @base-padding-s;
+
+// 25. Well
+// ==========================================================================
+
+@well-padding:                              @base-padding;
+@well-padding-s:                            @base-padding-s;
