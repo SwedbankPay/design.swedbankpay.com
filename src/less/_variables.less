@@ -117,7 +117,7 @@
 @padding-small-vertical:                    @base-padding-xs;
 @padding-small-horizontal:                  @base-padding-s;
 @padding-xs-vertical:                       0.1rem;
-@padding-xs-horizontal:                     0.25rem;
+@padding-xs-horizontal:                     @base-padding-xs;
 
 /* Borders */
 @border-width:                              1px;
@@ -131,9 +131,9 @@
 /* Z-index master list */
 @zindex-tabs:                               100;
 @zindex-tabs-arrow:                         101;
-@zindex-topbar:                             500;
-@zindex-action-list:                        549;
-@zindex-action-list-anchor:                 550;
+@zindex-action-list:                        500;
+@zindex-action-list-anchor:                 501;
+@zindex-topbar:                             550;
 @zindex-dialog-backdrop:                    1040;
 @zindex-dialog:                             1050;
 @zindex-modal-backdrop:                     1060;
@@ -599,3 +599,9 @@
 @topbar-slide-prev-pos:                     260px; //@topbar-nav-width - @topbar-back-btn-width;
 @topbar-slide-transition:                   0.5s ease;
 @topbar-background-transition:              background-color 0.5s ease-in;
+
+@topbar-margin:                             @base-margin;
+@topbar-margin-s:                           @base-margin-s;
+
+@topbar-padding:                            @base-padding;
+@topbar-padding-s:                          @base-padding-s;

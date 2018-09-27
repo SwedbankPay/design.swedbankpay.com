@@ -37,7 +37,7 @@
         border: 0;
         background: none;
         height: 100%;
-        padding: 0 1.25rem;
+        padding: 0 1.25rem; // Todo: change
         font-weight: bold;
         outline: 0;
         display: flex;
@@ -80,7 +80,7 @@
     &.topbar-nav-right {
         transition: right @topbar-slide-transition;
         right: -@topbar-nav-width;
-        padding: 1rem;
+        padding: @topbar-padding;
 
         &.in {
             right: 0;
@@ -133,14 +133,14 @@
 
                 .slides-container {
                     width: @topbar-nav-slide-width;
-                    margin: 0.5rem;
-                    padding: 0 0.5rem;
+                    margin: @base-margin-s; // This was 3px
+                    padding: 0 @topbar-padding-s;
                 }
             }
 
             .slide-back-btn {
                 visibility: hidden;
-                padding: 0.5rem;
+                padding: @topbar-padding-s;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -151,11 +151,11 @@
             }
 
             .slides-container {
-                margin: 0.5rem 1rem;
+                margin: @base-margin-s @base-margin;
                 flex-grow: 1;
 
                 .topbar-nav-group {
-                    margin: 0.5rem 0 1rem;
+                    margin: @base-margin-s 0 @base-margin;
 
                     .topbar-nav-group-heading {
                         text-transform: uppercase;
@@ -172,7 +172,7 @@
     span {
         display: block;
         color: @gray-7;
-        padding: 0.5rem 0 0.5rem 0.6rem;
+        padding: @topbar-padding-s 0 @topbar-padding-s 0.6rem;
         cursor: pointer;
         text-transform: uppercase;
         border: none;
