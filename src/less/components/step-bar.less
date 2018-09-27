@@ -120,9 +120,44 @@
         flex-grow: 1;
         position: relative;
         text-align: center;
+        padding: 70px 0 10px 0;
+
+        &:before {
+            left: initial;
+            top: 40%;
+        }
 
         &:after {
-            transform: rotate(-90deg);
+            height: 5px;
+            width: 100%;
+            left: initial;
+            top: 40%;
         }
+
+        &:first-child {
+            &:after {
+                width: 50%;
+                height: 5px;
+                top: 40%;
+                right: 0;
+            }
+        } 
+        &:last-child {
+            &:after {
+                width: 50%;
+                height: 5px;
+                top: 40%;
+                left: 0;
+            }
+        }
+    }
+
+    .step-bar-item-active:after {
+        background: linear-gradient(to right, @brand-primary 50%, #e2e2e2 50%);
+    }
+
+    .step-bar-icon {
+        left: initial;
+        top: 40%;
     }
 }

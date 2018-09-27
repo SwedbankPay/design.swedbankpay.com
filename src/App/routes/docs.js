@@ -155,7 +155,7 @@ export default [
                 component: require("../Documentation/components/Panel")
             },
             {
-                title: "Progress Tracker",
+                title: "Progress Tracker (deprecated)",
                 path: "/docs/components/progress-tracker",
                 component: require("../Documentation/components/ProgressTracker")
             },
