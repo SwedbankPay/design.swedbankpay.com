@@ -1,6 +1,5 @@
 [data-tooltip] {
     position: relative;
-    // margin: @base-margin;
     display: inline-block;
 
     &:before {
@@ -30,7 +29,7 @@
         min-width: 5rem;
         border-radius: 5px;
         pointer-events: none;
-        padding: 0.25rem 0.5rem;
+        padding: @tooltip-padding-xs @tooltip-padding-s;
         z-index: @zindex-tooltip;
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
@@ -69,13 +68,13 @@
 
     &[data-tooltip-position="bottom"]:before {
         top: 100%;
-        margin-top: 8px;
+        margin-top: @tooltip-margin-s;
         transform: translateX(-50%) translateY(-100%) rotate(-180deg);
     }
 
     &[data-tooltip-position="bottom"]:after {
         top: 100%;
-        margin-top: 8px;
+        margin-top: @tooltip-margin-s;
         transform: translateX(-50%) translateY(0%);
     }
 
@@ -89,7 +88,7 @@
     &[data-tooltip-position="right"]:after {
         left: 100%;
         top: 50%;
-        margin-left: 8px;
+        margin-left: @tooltip-margin-s;
         transform: translateX(0%) translateY(-50%);
     }
 
