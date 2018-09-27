@@ -367,7 +367,6 @@
 @btn-secondary-color:                       @gray-0;
 @btn-secondary-outline-color:               @gray-8;
 @btn-secondary-bg:                          @gray-8;
-@btn-secondary-ghost-color:                 @gray-3;
 
 @btn-danger-color:                          @white;
 @btn-danger-outline-color:                  @state-error;
@@ -399,16 +398,12 @@
 /* Colors */
 @dialog-background-color:                   transparent;
 @dialog-content-bg:                         @white;
-@dialog-border-color:                       @gray-9;
 @dialog-border:                             1px solid @gray-9;
-@dialog-box-shadow:                         0 0 30px rgba(133, 133, 133, 0.2);
 @dialog-backdrop-bg:                        fade(@black, 50%);
 
 @dialog-heading-padding:                    @base-padding @base-padding-l;
 @dialog-body-padding:                       @base-padding-l @base-padding-l @base-padding;
 @dialog-footer-padding:                     @base-padding @base-padding-l;
-
-@dialog-footer-margin:                      0;
 
 @dialog-size:                               500px;
 
@@ -426,7 +421,6 @@
 @input-bg:                                  @input-gray;
 @input-bg-disabled:                         darken(@input-bg, 10%);
 @input-checked-bg-disabled:                 darken(@input-bg, 40%);
-@input-disabled-border-color:               darken(@gray-8, 40%);
 @input-border-color:                        @gray-8;
 @input-addon-color:                         @gray-3;
 @input-addon-bg:                            @gray-10;
@@ -467,10 +461,6 @@
 @rangeslider-margin:                        @base-margin;
 @rangeslider-margin-l:                      @base-margin-l;
 
-@range-bg:                                  @input-bg;
-// This needs to be gradient for some reason
-@range-webkit-bg:                           linear-gradient(90deg, @brand-primary, @brand-primary) 0 100% no-repeat content-box;
-
 
 // 15. Media object
 // ==========================================================================
@@ -485,12 +475,9 @@
 
 /* Colors */
 @modal-background-color:                    transparent;
-@modal-content-bg:                          @white;
 @modal-default-color:                       @gray-8;
 @modal-default-border-color:                @gray-9;
 @modal-box-shadow:                          0 0 30px rgba(133, 133, 133, 0.2);
-@modal-backdrop-bg:                         @black;
-@modal-backdrop-opacity:                    0.5;
 
 @modal-margin:                              @base-margin;
 @modal-margin-s:                            @base-margin-s;
@@ -549,9 +536,6 @@
 @panel-heading-padding:                     15px 15px 15px 30px;
 @panel-footer-padding:                      15px 30px 12px 30px;
 @panel-footer-margin:                       10px -30px -15px -30px;
-
-@panel-font-size-base:                      @base-font-size;
-@panel-collapse-duration:                   0.25s;
 
 
 // 19. Sheet
