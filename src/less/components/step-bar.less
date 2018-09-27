@@ -121,14 +121,8 @@
         position: relative;
         text-align: center;
 
-        & a:after {
-            content: "";
-            position: absolute;
-            top: 50% !important;
-            height: 4px !important;
-            width: 100%;
-            background-color: #e2e2e2;
-            z-index: 5;
+        &:after {
+            transform: rotate(-90deg);
         }
     }
 }

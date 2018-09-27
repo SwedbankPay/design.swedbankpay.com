@@ -29,7 +29,7 @@ const DefaultItems = () => (
 );
 
 const StepBar = ({ items, horizontal }) => (
-    <ol className={`step-bar${horizontal ? " step-bar-horizontal" : ""}`}>
+    <ol className={`step-bar${horizontal ? " step-bar--horizontal" : ""}`}>
         {items ? _renderItems(items) : <DefaultItems />}
     </ol>
 );
