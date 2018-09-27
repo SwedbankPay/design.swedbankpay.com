@@ -13,6 +13,11 @@ describe("px-script: alert", () => {
         expect(alert).toBeDefined();
     });
 
+    it("has an init method", () => {
+        expect(alert.init).toBeDefined();
+        expect(alert.init).toBeInstanceOf(Function);
+    });
+
     it("method init adds eventlisteners on all close buttons", () => {
         const Alerts = () => (
             <>

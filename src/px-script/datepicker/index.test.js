@@ -11,7 +11,11 @@ describe("px-script: datepicker", () => {
 
     it("is defined", () => {
         expect(datepicker).toBeDefined();
+    });
+
+    it("has an init method", () => {
         expect(datepicker.init).toBeDefined();
+        expect(datepicker.init).toBeInstanceOf(Function);
     });
 
     it("exposes moment globally", () => {

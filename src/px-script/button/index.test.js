@@ -13,6 +13,11 @@ describe("px-script: button", () => {
         expect(button).toBeDefined();
     });
 
+    it("has an init method", () => {
+        expect(button.init).toBeDefined();
+        expect(button.init).toBeInstanceOf(Function);
+    });
+
     it("method init is defined and adds loader markup to buttons with attribute [data-button-loader]", () => {
         expect(button.init).toBeDefined();
 

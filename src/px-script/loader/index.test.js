@@ -13,9 +13,12 @@ describe("px-script: loader", () => {
         expect(loader).toBeDefined();
     });
 
-    it("method init is defined and adds loader markup to tags with the attribute [data-loader]", () => {
+    it("has an init method", () => {
         expect(loader.init).toBeDefined();
+        expect(loader.init).toBeInstanceOf(Function);
+    });
 
+    it("method init is defined and adds loader markup to tags with the attribute [data-loader]", () => {
         const Loaders = () => (
             <div>
                 <Loader size="small" />

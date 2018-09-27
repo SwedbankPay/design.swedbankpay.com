@@ -12,4 +12,9 @@ describe("px-script: modal", () => {
     it("is defined", () => {
         expect(modal).toBeDefined();
     });
+
+    it("has an init method", () => {
+        expect(modal.init).toBeDefined();
+        expect(modal.init).toBeInstanceOf(Function);
+    });
 });
