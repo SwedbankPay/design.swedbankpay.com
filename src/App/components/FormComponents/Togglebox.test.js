@@ -12,29 +12,33 @@ describe("Component: Togglebox - ", () => {
         const wrapper = shallow(<Togglebox />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<input type="checkbox" />)).toEqual(true);
-        expect(wrapper.contains(<label></label>)).toEqual(false);
+        expect(wrapper.html()).toContain("togglebox");
+        expect(wrapper.html()).not.toContain("label");
     });
 
     it("renders with id and label", () => {
         const wrapper = shallow(<Togglebox id="test" label="test" />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<input type="checkbox" id="test" />)).toEqual(true);
-        expect(wrapper.contains(<label htmlFor="test">test</label>)).toEqual(true);
+        expect(wrapper.html()).toContain("togglebox");
+        expect(wrapper.html()).toContain("label");
+        expect(wrapper.html()).toContain("id=\"test\"");
+        expect(wrapper.html()).toContain("for=\"test\"");
     });
 
     it("renders disabled", () => {
         const wrapper = shallow(<Togglebox disabled />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<input type="checkbox" disabled />)).toEqual(true);
+        expect(wrapper.html()).toContain("togglebox");
+        expect(wrapper.html()).toContain("disabled");
     });
 
     it("renders checked", () => {
         const wrapper = shallow(<Togglebox checked />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<input type="checkbox" defaultChecked />)).toEqual(true);
+        expect(wrapper.html()).toContain("togglebox");
+        expect(wrapper.html()).toContain("checked");
     });
 });

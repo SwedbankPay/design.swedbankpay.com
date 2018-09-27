@@ -7,6 +7,9 @@ exports[`Component: Checkbox -  renders 1`] = `
   
 
   <input
+    defaultChecked={null}
+    disabled={null}
+    id={null}
     type="checkbox"
   />
   
@@ -22,6 +25,8 @@ exports[`Component: Checkbox -  renders with the checked attribute 1`] = `
 
   <input
     defaultChecked={true}
+    disabled={null}
+    id={null}
     type="checkbox"
   />
   
@@ -36,7 +41,9 @@ exports[`Component: Checkbox -  renders with the disabled attribute 1`] = `
   
 
   <input
+    defaultChecked={null}
     disabled={true}
+    id={null}
     type="checkbox"
   />
   
@@ -51,6 +58,8 @@ exports[`Component: Checkbox -  renders with the specified id and label 1`] = `
   
 
   <input
+    defaultChecked={null}
+    disabled={null}
     id="test"
     type="checkbox"
   />
@@ -73,6 +82,8 @@ exports[`Component: Checkbox -  renders with the specified id but without label 
   
 
   <input
+    defaultChecked={null}
+    disabled={null}
     id="test"
     type="checkbox"
   />
