@@ -9,9 +9,7 @@ describe("Component: Togglebox - ", () => {
     });
 
     it("renders without label", () => {
-        const wrapper = shallow(
-            <Togglebox />
-        );
+        const wrapper = shallow(<Togglebox />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<input type="checkbox" />)).toEqual(true);
@@ -19,9 +17,7 @@ describe("Component: Togglebox - ", () => {
     });
 
     it("renders with id and label", () => {
-        const wrapper = shallow(
-            <Togglebox id="test" label="test" />
-        );
+        const wrapper = shallow(<Togglebox id="test" label="test" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<input type="checkbox" id="test" />)).toEqual(true);
@@ -29,18 +25,14 @@ describe("Component: Togglebox - ", () => {
     });
 
     it("renders disabled", () => {
-        const wrapper = shallow(
-            <Togglebox disabled />
-        );
+        const wrapper = shallow(<Togglebox disabled />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<input type="checkbox" disabled />)).toEqual(true);
     });
 
     it("renders checked", () => {
-        const wrapper = shallow(
-            <Togglebox checked />
-        );
+        const wrapper = shallow(<Togglebox checked />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<input type="checkbox" defaultChecked />)).toEqual(true);

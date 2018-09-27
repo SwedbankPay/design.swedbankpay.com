@@ -6,7 +6,6 @@ import routes from "./routes/root.js";
 import AppHeader from "./AppHeader";
 import ErrorPage404 from "./ErrorPage404";
 
-const isProd = process.env.NODE_ENV === "production";
 const history = createBrowserHistory();
 
 class ScrollToTop extends Component {
@@ -35,7 +34,7 @@ const App = () => (
 
                         return (
                             <Route key={i} exact={exact} path={path} render={() => {
-                                if (isProd) {
+                                if (process.env.google) {
                                     history.listen(location => {
                                         window.gtag("config", "UA-3440932-20", {
                                             "page_location": window.location.href,
@@ -43,6 +42,7 @@ const App = () => (
                                         });
                                     });
                                 }
+
                                 return <RouteComponent />;
                             }} />
                         );

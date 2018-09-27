@@ -9,9 +9,7 @@ describe("GettingStarted: Introduction", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Introduction />
-        );
+        const wrapper = shallow(<Introduction />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("GettingStarted: Introduction", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <QuickStart />
-            );
+            const wrapper = shallow(<QuickStart />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("GettingStarted: Introduction", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Css />
-            );
+            const wrapper = shallow(<Css />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -50,9 +44,7 @@ describe("GettingStarted: Introduction", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <JavaScript />
-            );
+            const wrapper = shallow(<JavaScript />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -64,9 +56,7 @@ describe("GettingStarted: Introduction", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <StarterTemplate />
-            );
+            const wrapper = shallow(<StarterTemplate />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -78,9 +68,7 @@ describe("GettingStarted: Introduction", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <IntroductionText />
-            );
+            const wrapper = shallow(<IntroductionText />);
 
             expect(wrapper).toMatchSnapshot();
         });

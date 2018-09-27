@@ -9,9 +9,7 @@ describe("Documentation: Breadcrumb", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Breadcrumb />
-        );
+        const wrapper = shallow(<Breadcrumb />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Documentation: Breadcrumb", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <BasicBreadCrumb />
-            );
+            const wrapper = shallow(<BasicBreadCrumb />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("Documentation: Breadcrumb", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <DisabledBreadcrumb />
-            );
+            const wrapper = shallow(<DisabledBreadcrumb />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -50,9 +44,7 @@ describe("Documentation: Breadcrumb", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <BreadcrumbText />
-            );
+            const wrapper = shallow(<BreadcrumbText />);
 
             expect(wrapper).toMatchSnapshot();
         });

@@ -80,6 +80,7 @@ class ActionList extends Component {
     componentDidMount () {
         actionList.init();
     }
+
     render () {
         return (
             <div className="doc-container">

@@ -6,6 +6,7 @@ import Loader from "@/Loader";
 
 describe("px-script: loader", () => {
     const div = document.createElement("div");
+
     document.body.appendChild(div);
 
     it("is defined", () => {

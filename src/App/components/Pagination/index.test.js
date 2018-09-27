@@ -9,9 +9,7 @@ describe("Component: Pagination - ", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Pagination />
-        );
+        const wrapper = shallow(<Pagination />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -19,9 +17,7 @@ describe("Component: Pagination - ", () => {
     it("prop type is enum and requires 'bullets' or 'simple' and produces an error when neither is provided", () => {
         console.error = jest.fn();
 
-        const wrapper = shallow(
-            <Pagination type="test" />
-        );
+        const wrapper = shallow(<Pagination type="test" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(console.error).toHaveBeenCalled();
@@ -49,27 +45,21 @@ describe("Component: Pagination - ", () => {
             /* eslint-enable object-property-newline */
         ];
 
-        const wrapper = shallow(
-            <Pagination items={items} />
-        );
+        const wrapper = shallow(<Pagination items={items} />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<a href="#">test#1</a>)).toEqual(true);
     });
 
     it("renders text element when prop text is provided", () => {
-        const wrapper = mount(
-            <Pagination text="test" />
-        );
+        const wrapper = mount(<Pagination text="test" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<span className="text">test</span>)).toEqual(true);
     });
 
     it("renders arrows when prop arrows is provided", () => {
-        const wrapper = mount(
-            <Pagination arrows />
-        );
+        const wrapper = mount(<Pagination arrows />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("arrow-back");
@@ -77,9 +67,7 @@ describe("Component: Pagination - ", () => {
     });
 
     it("renders outermost arrows when prop farArrows is provided", () => {
-        const wrapper = mount(
-            <Pagination farArrows />
-        );
+        const wrapper = mount(<Pagination farArrows />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("arrow-end");

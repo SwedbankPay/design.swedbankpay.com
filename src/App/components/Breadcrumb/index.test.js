@@ -9,9 +9,7 @@ describe("Component: Breadcrumb", () => {
     });
 
     it("renders with default items when no items is provided through items prop", () => {
-        const wrapper = shallow(
-            <Breadcrumb />
-        );
+        const wrapper = shallow(<Breadcrumb />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("breadcrumb");
@@ -21,9 +19,7 @@ describe("Component: Breadcrumb", () => {
     it("renders breadcrumb with the provided items in the items prop", () => {
         const items = [{ title: "test" }];
 
-        const wrapper = shallow(
-            <Breadcrumb items={items} />
-        );
+        const wrapper = shallow(<Breadcrumb items={items} />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<ol className="breadcrumb"><li><span>test</span></li></ol>)).toEqual(true);
@@ -37,9 +33,7 @@ describe("Component: Breadcrumb", () => {
             }
         ];
 
-        const wrapper = shallow(
-            <Breadcrumb items={items} />
-        );
+        const wrapper = shallow(<Breadcrumb items={items} />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<ol className="breadcrumb"><li><a href="www.example.com">test</a></li></ol>)).toEqual(true);
@@ -53,9 +47,7 @@ describe("Component: Breadcrumb", () => {
             { title: "test #4" }
         ];
 
-        const wrapper = shallow(
-            <Breadcrumb items={items} />
-        );
+        const wrapper = shallow(<Breadcrumb items={items} />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<span>test #1</span>)).toEqual(true);

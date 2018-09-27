@@ -26,6 +26,7 @@ const LeftMenu = ({ align, menu }) => {
 
         const GroupItem = ({ groupItem }) => {
             const { groupTitle, items } = groupItem;
+
             return (
                 <div className="topbar-nav-group">
                     <div className="topbar-nav-group-heading">{groupTitle}</div>{"\n"}

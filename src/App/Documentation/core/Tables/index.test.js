@@ -9,9 +9,7 @@ describe("Documentation: Table", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Table />
-        );
+        const wrapper = shallow(<Table />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Documentation: Table", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <BasicTable />
-            );
+            const wrapper = shallow(<BasicTable />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("Documentation: Table", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <StripedTable />
-            );
+            const wrapper = shallow(<StripedTable />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -50,9 +44,7 @@ describe("Documentation: Table", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <HoverTable />
-            );
+            const wrapper = shallow(<HoverTable />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -64,9 +56,7 @@ describe("Documentation: Table", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <HoverStripedTable />
-            );
+            const wrapper = shallow(<HoverStripedTable />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -78,9 +68,7 @@ describe("Documentation: Table", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <DescriptionTable />
-            );
+            const wrapper = shallow(<DescriptionTable />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -92,9 +80,7 @@ describe("Documentation: Table", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <TablesText />
-            );
+            const wrapper = shallow(<TablesText />);
 
             expect(wrapper).toMatchSnapshot();
         });

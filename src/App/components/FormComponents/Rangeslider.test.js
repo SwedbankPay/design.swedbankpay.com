@@ -9,9 +9,7 @@ describe("Component: Rangeslider - ", () => {
     });
 
     it("renders without label", () => {
-        const wrapper = mount(
-            <Rangeslider />
-        );
+        const wrapper = mount(<Rangeslider />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<input type="range" />)).toEqual(true);
@@ -20,9 +18,7 @@ describe("Component: Rangeslider - ", () => {
     });
 
     it("renders with a value label", () => {
-        const wrapper = mount(
-            <Rangeslider valueLabel />
-        );
+        const wrapper = mount(<Rangeslider valueLabel />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<input type="range" />)).toEqual(true);
@@ -31,9 +27,7 @@ describe("Component: Rangeslider - ", () => {
     });
 
     it("renders with a value label and a value label prefix", () => {
-        const wrapper = mount(
-            <Rangeslider valueLabel valueLabelPrefix="test" />
-        );
+        const wrapper = mount(<Rangeslider valueLabel valueLabelPrefix="test" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<input type="range" />)).toEqual(true);
@@ -42,9 +36,7 @@ describe("Component: Rangeslider - ", () => {
     });
 
     it("renders with a value label and a value label postfix", () => {
-        const wrapper = mount(
-            <Rangeslider valueLabel valueLabelPostfix="test" />
-        );
+        const wrapper = mount(<Rangeslider valueLabel valueLabelPostfix="test" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<input type="range" />)).toEqual(true);

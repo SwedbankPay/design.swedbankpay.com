@@ -37,6 +37,8 @@
     },
     "rules": {
         "array-bracket-spacing":                ["warn"],
+        "arrow-spacing":                        ["error"],
+        "implicit-arrow-linebreak":             ["error", "beside"],
         "babel/new-cap":                        0,
         "babel/no-invalid-this":                1,
         "babel/object-curly-spacing":           ["warn", "always"],
@@ -49,20 +51,26 @@
         "comma-style":                          ["warn"],
         "computed-property-spacing":            ["warn"],
         "constructor-super":                    ["error"],
-        "eol-last":                             ["warn"],
-        "eqeqeq":                               ["warn"],
+        "curly":                                ["error", "all"],
+        "eol-last":                             ["error"],
+        "eqeqeq":                               ["error"],
         "func-call-spacing":                    ["warn"],
+        "func-style":                           ["error", "expression"],
         "indent":                               ["error", 4, { "SwitchCase": 1 }],
         "jsx-quotes":                           ["error", "prefer-double"],
         "key-spacing":                          ["warn"],
         "keyword-spacing":                      ["warn"],
         "linebreak-style":                      0,
+        "lines-between-class-members":          ["error"],
         "new-cap":                              0,
+        "newline-before-return":                ["error"],
         "newline-per-chained-call":             ["warn"],
-        "no-alert":                             ["warn"],
-        "no-console":                           ["warn", {"allow": ["warn", "error"]}],
+        "no-alert":                             ["error"],
+        "no-console":                           ["warn", { "allow": ["warn", "error"] }],
         "no-const-assign":                      ["error"],
+        "no-empty-function":                    ["error"],
         "no-extra-semi":                        ["error"],
+        "no-dupe-class-members":                ["error"],
         "no-inner-declarations":                0,
         "no-invalid-regexp":                    ["error"],
         "no-irregular-whitespace":              ["error"],
@@ -76,12 +84,39 @@
         "no-unneeded-ternary":                  ["warn"],
         "no-unreachable":                       ["error"],
         "no-unused-vars":                       ["warn"],
-        "no-var":                               ["warn"],
+        "no-var":                               ["error"],
         "no-whitespace-before-property":        ["warn"],
         "node/exports-style":                   ["error", "module.exports"],
         "object-curly-newline":                 ["warn"],
-        "object-curly-spacing":                 0,
+        "object-curly-spacing":                 ["warn", "always"],
         "object-property-newline":              ["warn"],
+        "padding-line-between-statements":      ["error",
+            {
+                "blankLine": "always",
+                "prev": "*",
+                "next": ["class", "const", "block", "block-like", "break", "export", "expression", "do", "for", "function", "if", "import", "let", "return", "switch", "try", "while"]
+            },
+            {
+                "blankLine": "always",
+                "prev": ["class", "const", "block", "block-like", "break", "export", "expression", "do", "for", "function", "if", "import", "let", "return", "switch", "try", "while"],
+                "next": "*"
+            },
+            {
+                "blankLine": "any",
+                "prev": "expression",
+                "next": "expression"
+            },
+            {
+                "blankLine": "any",
+                "prev": "import",
+                "next": "import"
+            },
+            {
+                "blankLine": "any",
+                "prev": ["let", "const"],
+                "next": ["let", "const"]
+            }
+        ],
         "prefer-const":                         ["warn"],
         "prefer-spread":                        ["warn"],
         "quotes":                               0,
@@ -92,10 +127,10 @@
         "semi":                                 0,
         "semi-spacing":                         ["warn"],
         "semi-style":                           ["warn"],
-        "space-before-function-paren":          ["warn"],
+        "space-before-function-paren":          ["error"],
         "space-in-parens":                      ["warn"],
         "space-infix-ops":                      ["warn"],
-        "spaced-comment":                       ["warn"],
+        "spaced-comment":                       ["error"],
         "wrap-regex":                           ["error"]
     }
 }

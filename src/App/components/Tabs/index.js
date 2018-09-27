@@ -16,6 +16,7 @@ class Tabs extends Component {
 
     render () {
         const { mode, items } = this.props;
+
         return (
             <div className="tabs">
                 <ul className={`tabs-${mode}`}>

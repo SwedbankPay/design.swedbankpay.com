@@ -9,9 +9,7 @@ describe("Components: ActionList", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <ActionList />
-        );
+        const wrapper = shallow(<ActionList />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Components: ActionList", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Overview />
-            );
+            const wrapper = shallow(<Overview />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("Components: ActionList", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <ActionListText />
-            );
+            const wrapper = shallow(<ActionListText />);
 
             expect(wrapper).toMatchSnapshot();
         });

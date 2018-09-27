@@ -9,9 +9,7 @@ describe("Components: Tabs", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Tabs />
-        );
+        const wrapper = shallow(<Tabs />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Components: Tabs", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Overview />
-            );
+            const wrapper = shallow(<Overview />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("Components: Tabs", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Stacked />
-            );
+            const wrapper = shallow(<Stacked />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -50,9 +44,7 @@ describe("Components: Tabs", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Collapsed />
-            );
+            const wrapper = shallow(<Collapsed />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -64,9 +56,7 @@ describe("Components: Tabs", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <TabsText />
-            );
+            const wrapper = shallow(<TabsText />);
 
             expect(wrapper).toMatchSnapshot();
         });

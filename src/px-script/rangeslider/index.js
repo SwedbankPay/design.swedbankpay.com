@@ -34,6 +34,7 @@ const rangeslider = (() => {
             if (navigator.userAgent.indexOf("Chrome") > -1){
                 const inlineStyle = document.createElement("style");
                 const inlineStyleContent = [];
+
                 document.body.appendChild(inlineStyle);
                 input.id = `px-rs-${i}`;
 

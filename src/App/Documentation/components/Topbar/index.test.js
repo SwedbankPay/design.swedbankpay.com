@@ -9,9 +9,7 @@ describe("Components: Topbar", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Topbar />
-        );
+        const wrapper = shallow(<Topbar />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Components: Topbar", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Overview />
-            );
+            const wrapper = shallow(<Overview />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("Components: Topbar", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <TopbarText />
-            );
+            const wrapper = shallow(<TopbarText />);
 
             expect(wrapper).toMatchSnapshot();
         });

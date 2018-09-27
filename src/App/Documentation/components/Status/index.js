@@ -51,9 +51,6 @@ const StatusText = () => (
 );
 
 class Status extends Component {
-    componentDidMount () {
-    }
-
     render () {
         return (
             <div className="doc-container">

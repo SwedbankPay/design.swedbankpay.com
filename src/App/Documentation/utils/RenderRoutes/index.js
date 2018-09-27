@@ -8,6 +8,7 @@ const RenderRoutes = ({ path, redirect, routes }) => {
             <Route exact path={path} render={() => <Redirect to={redirect} />}/>
             {routes.map((route, i) => {
                 const { path, component } = route;
+
                 return <Route key={i} exact path={path} render={() => <component.default />} />;
             })}
             <Redirect from={`${path}/*`} to="/404" />

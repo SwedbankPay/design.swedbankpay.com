@@ -87,9 +87,6 @@ const PanelText = () => (
 );
 
 class Panel extends Component {
-    componentDidMount () {
-    }
-
     render () {
         return (
             <div className="doc-container">

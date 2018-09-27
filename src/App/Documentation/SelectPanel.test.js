@@ -23,9 +23,7 @@ describe("Documentation: SelectPanel", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <SearchBox />
-            );
+            const wrapper = shallow(<SearchBox />);
 
             expect(wrapper).toMatchSnapshot();
         });

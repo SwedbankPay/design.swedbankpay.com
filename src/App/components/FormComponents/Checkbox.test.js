@@ -9,9 +9,7 @@ describe("Component: Checkbox - ", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Checkbox />
-        );
+        const wrapper = shallow(<Checkbox />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("checkbox");
@@ -19,9 +17,7 @@ describe("Component: Checkbox - ", () => {
     });
 
     it("renders with the specified id but without label", () => {
-        const wrapper = shallow(
-            <Checkbox id="test" />
-        );
+        const wrapper = shallow(<Checkbox id="test" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<input type="checkbox" id="test" />)).toEqual(true);
@@ -29,9 +25,7 @@ describe("Component: Checkbox - ", () => {
     });
 
     it("renders with the specified id and label", () => {
-        const wrapper = shallow(
-            <Checkbox id="test" label="test" />
-        );
+        const wrapper = shallow(<Checkbox id="test" label="test" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<input type="checkbox" id="test" />)).toEqual(true);
@@ -39,18 +33,14 @@ describe("Component: Checkbox - ", () => {
     });
 
     it("renders with the disabled attribute", () => {
-        const wrapper = shallow(
-            <Checkbox disabled />
-        );
+        const wrapper = shallow(<Checkbox disabled />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<input type="checkbox" disabled />)).toEqual(true);
     });
 
     it("renders with the checked attribute", () => {
-        const wrapper = shallow(
-            <Checkbox checked />
-        );
+        const wrapper = shallow(<Checkbox checked />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<input type="checkbox" defaultChecked />)).toEqual(true);

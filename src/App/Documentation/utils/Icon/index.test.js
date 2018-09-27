@@ -9,9 +9,7 @@ describe("Utilities: Icon", () => {
     });
 
     it("renders correct icon", () => {
-        const wrapper = shallow(
-            <Icon icon="test" />
-        );
+        const wrapper = shallow(<Icon icon="test" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<i className="material-icons">test</i>)).toEqual(true);

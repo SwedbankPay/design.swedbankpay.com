@@ -9,9 +9,7 @@ describe("ErrorPage404: index", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <ErrorPage404 />
-        );
+        const wrapper = shallow(<ErrorPage404 />);
 
         expect(wrapper).toMatchSnapshot();
     });

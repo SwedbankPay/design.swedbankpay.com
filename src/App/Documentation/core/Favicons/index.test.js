@@ -9,33 +9,25 @@ describe("Core: Favicons", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Favicons />
-        );
+        const wrapper = shallow(<Favicons />);
 
         expect(wrapper).toMatchSnapshot();
     });
 
     it("OurFavicon renders", () => {
-        const wrapper = shallow(
-            <OurFavicon />
-        );
+        const wrapper = shallow(<OurFavicon />);
 
         expect(wrapper).toMatchSnapshot();
     });
 
     it("Usage renders", () => {
-        const wrapper = shallow(
-            <Usage />
-        );
+        const wrapper = shallow(<Usage />);
 
         expect(wrapper).toMatchSnapshot();
     });
 
     it("FaviconsText renders", () => {
-        const wrapper = shallow(
-            <FaviconsText />
-        );
+        const wrapper = shallow(<FaviconsText />);
 
         expect(wrapper).toMatchSnapshot();
     });

@@ -9,9 +9,7 @@ describe("Documentation: Datepickers", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Datepickers />
-        );
+        const wrapper = shallow(<Datepickers />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Documentation: Datepickers", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <SimpleDatepicker />
-            );
+            const wrapper = shallow(<SimpleDatepicker />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -81,9 +77,7 @@ describe("Documentation: Datepickers", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Required />
-            );
+            const wrapper = shallow(<Required />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -95,9 +89,7 @@ describe("Documentation: Datepickers", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <ShowingMultipleMonths />
-            );
+            const wrapper = shallow(<ShowingMultipleMonths />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -124,9 +116,7 @@ describe("Documentation: Datepickers", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Options />
-            );
+            const wrapper = shallow(<Options />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -138,9 +128,7 @@ describe("Documentation: Datepickers", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <DatepickersText />
-            );
+            const wrapper = shallow(<DatepickersText />);
 
             expect(wrapper).toMatchSnapshot();
         });

@@ -48,11 +48,9 @@ describe("Utilities: ComponentPreview", () => {
     });
 
     it("does not render showCasePanel when prop is false/not provided", () => {
-        const wrapper = mount(
-            <ComponentPreview language="html" codeFigure>
-                <TestComponentH1 />
-            </ComponentPreview>
-        );
+        const wrapper = mount(<ComponentPreview language="html" codeFigure>
+            <TestComponentH1 />
+        </ComponentPreview>);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).not.toContain("showcase-panel");

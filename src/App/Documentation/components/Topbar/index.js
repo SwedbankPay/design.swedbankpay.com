@@ -128,6 +128,7 @@ class Topbar extends Component {
     componentDidMount () {
         topbar.init(1);
     }
+
     render () {
         return (
             <div className="doc-container">

@@ -33,7 +33,7 @@ const Pagination = ({ type, items, text, arrows, farArrows }) => {
             {farArrows ? <Arrow type="start" /> : null}
             {arrows ? <Arrow type="back" /> : null}
             {items ? items.map(({ name, href, active }, i) => {
-                if (active) activeItem = i;
+                if (active) {activeItem = i;}
 
                 return (
                     <li key={i} className={`${active ? "active" : ""}`}>{"\n"}

@@ -9,6 +9,7 @@ import jsbeautifier from "js-beautify";
 const ComponentPreview = ({ children, language, removeOuterTag, hideValue, removeList, showCasePanel, codeFigure, dangerousHTML }) => {
     const _removeOuterTag = element => {
         const div = document.createElement("div");
+
         div.innerHTML = renderToStaticMarkup(element);
 
         if (div.firstElementChild) {
@@ -16,11 +17,14 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
         } else if (div.firstChild) {
             return div.firstChild.nodeValue;
         }
+
+
         return "Check ComponentPreview _removeOuterTag!";
     };
 
     const _removeList = element => {
         const div = document.createElement("div");
+
         div.innerHTML = renderToStaticMarkup(element);
 
         const listElements = div.querySelectorAll("li");
@@ -44,11 +48,14 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
 
     const setDangerousHtml = val => {
         let code = "";
+
         if (typeof val.forEach === "function") {
             val.forEach(v => code += `${v}\n`);
         } else {
             code = val;
         }
+
+
         return code;
     };
 
@@ -80,9 +87,11 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
             switch (typeof children) {
                 case "string":
                     code = children;
+
                     break;
                 case "object":
                     children.forEach(child => code += child);
+
                     break;
                 default:
                     console.warn("CodeFigure: children needs attention!");
@@ -93,12 +102,15 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
             case "html":
                 code = jsbeautifier.html_beautify(code);
                 code = _removeEmpty(code);
+
                 if (hideValue) {
                     code = code.replace(/ value="(.*)"/g, "");
                 }
+
                 break;
             case "css":
                 code = jsbeautifier.css_beautify(code);
+
                 break;
             case "javascript":
                 // This is not needed, and for some reason crashes after a prod build [EH]

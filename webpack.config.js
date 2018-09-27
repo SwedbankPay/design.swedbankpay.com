@@ -238,7 +238,8 @@ module.exports = (env, argv) => {
             }),
             new webpack.DefinePlugin({
                 "process.env": {
-                    sentry: true
+                    sentry: true,
+                    google: true
                 }
             })
         );

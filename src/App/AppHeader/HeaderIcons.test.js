@@ -10,9 +10,7 @@ describe("AppHeader: HeaderIcons", () => {
         });
 
         it("renders as expected", () => {
-            const wrapper = shallow(
-                <GithubLogo />
-            );
+            const wrapper = shallow(<GithubLogo />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -24,9 +22,7 @@ describe("AppHeader: HeaderIcons", () => {
         });
 
         it("renders as expected", () => {
-            const wrapper = shallow(
-                <SlackLogo />
-            );
+            const wrapper = shallow(<SlackLogo />);
 
             expect(wrapper).toMatchSnapshot();
         });

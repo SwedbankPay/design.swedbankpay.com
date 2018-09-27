@@ -6,6 +6,7 @@ import Datepicker from "@/FormComponents/Datepicker";
 
 describe("px-script: datepicker", () => {
     const div = document.createElement("div");
+
     document.body.appendChild(div);
 
     it("is defined", () => {

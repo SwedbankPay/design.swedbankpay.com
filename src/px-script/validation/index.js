@@ -20,10 +20,12 @@ const validation = (() => {
             case "SUCCESS":
                 parentElement.classList.add("has-success");
                 parentElement.classList.remove("has-error");
+
                 break;
             case "ERROR":
                 parentElement.classList.add("has-error");
                 parentElement.classList.remove("has-success");
+
                 break;
             default:
                 parentElement.classList.remove("has-error");
@@ -61,6 +63,7 @@ const validation = (() => {
             switch (element.tagName) {
                 case "FORM":
                     attachFormValidator(element);
+
                     break;
                 default:
                     attachInputValidator(element);

@@ -6,6 +6,7 @@ import modal from "./index";
 
 describe("px-script: modal", () => {
     const div = document.createElement("div");
+
     document.body.appendChild(div);
 
     it("is defined", () => {

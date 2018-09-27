@@ -9,44 +9,37 @@ const _findHeadings = children => {
         children.map(child => {
             if (child.type.name !== "ExperimentalComponentAlert" && typeof child.type === "function") {
                 if (child.type().props.children.type === "h2") {
-                    headings.push(
-                        {
-                            title: child.type().props.children.props.children,
-                            id: child.type().props.children.props.id
-                        }
-                    );
+                    headings.push({
+                        title: child.type().props.children.props.children,
+                        id: child.type().props.children.props.id
+                    });
 
                 } else {
                     const firstChild = child.type().props.children[0];
 
                     if (firstChild.type === "h2") {
-                        headings.push(
-                            {
-                                title: firstChild.props.children,
-                                id: firstChild.props.id
-                            }
-                        );
+                        headings.push({
+                            title: firstChild.props.children,
+                            id: firstChild.props.id
+                        });
 
                     } else if (typeof firstChild.type === "function") {
                         const secondFirstChild = firstChild.type().props.children[0]; // Really clever namegiving
+
                         if (secondFirstChild.type === "h2") {
-                            headings.push(
-                                {
-                                    title: secondFirstChild.props.children,
-                                    id: secondFirstChild.props.id
-                                }
-                            );
+                            headings.push({
+                                title: secondFirstChild.props.children,
+                                id: secondFirstChild.props.id
+                            });
                         }
                     }
                 }
 
             } else if (child.type === "h2") {
-                headings.push(
-                    {
-                        title: child.props.children,
-                        id: child.props.id
-                    }
-                );
+                headings.push({
+                    title: child.props.children,
+                    id: child.props.id
+                });
             }
         });
     }

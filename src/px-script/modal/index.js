@@ -76,6 +76,7 @@ const modal = (() => {
         document.addEventListener("keydown", e => {
             if (e.keyCode === 27) {
                 const modal = document.querySelector(".modal.d-block");
+
                 if (modal) {
                     _closeModal(modal);
                 }

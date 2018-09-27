@@ -6,6 +6,7 @@ import Button from "@/Button";
 
 describe("px-script: button", () => {
     const div = document.createElement("div");
+
     document.body.appendChild(div);
 
     it("is defined", () => {

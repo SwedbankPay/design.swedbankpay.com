@@ -33,7 +33,6 @@ const BasicList = () => (
         </ComponentPreview>
     </>
 );
-
 const InlineList = () => (
     <>
         <h2 id="inline-list">Inline list</h2>
@@ -186,6 +185,7 @@ class Lists extends Component {
     componentDidMount () {
         actionList.init();
     }
+
     render (){
         return (
             <div className="doc-container">
@@ -197,6 +197,7 @@ class Lists extends Component {
         );
     }
 }
+
 export default Lists;
 
 /* for testing */

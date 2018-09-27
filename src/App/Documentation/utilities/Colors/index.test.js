@@ -9,33 +9,25 @@ describe("Utilities: Colors", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Colors />
-        );
+        const wrapper = shallow(<Colors />);
 
         expect(wrapper).toMatchSnapshot();
     });
 
     it("TextColors renders", () => {
-        const wrapper = shallow(
-            <TextColors />
-        );
+        const wrapper = shallow(<TextColors />);
 
         expect(wrapper).toMatchSnapshot();
     });
 
     it("BackgroundColors renders", () => {
-        const wrapper = shallow(
-            <BackgroundColors />
-        );
+        const wrapper = shallow(<BackgroundColors />);
 
         expect(wrapper).toMatchSnapshot();
     });
 
     it("ColorsText renders", () => {
-        const wrapper = shallow(
-            <ColorsText />
-        );
+        const wrapper = shallow(<ColorsText />);
 
         expect(wrapper).toMatchSnapshot();
     });

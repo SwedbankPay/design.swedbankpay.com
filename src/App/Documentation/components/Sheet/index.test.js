@@ -9,9 +9,7 @@ describe("Documentation: Sheet", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Sheet />
-        );
+        const wrapper = shallow(<Sheet />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Documentation: Sheet", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Example />
-            );
+            const wrapper = shallow(<Example />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("Documentation: Sheet", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <SheetText />
-            );
+            const wrapper = shallow(<SheetText />);
 
             expect(wrapper).toMatchSnapshot();
         });
