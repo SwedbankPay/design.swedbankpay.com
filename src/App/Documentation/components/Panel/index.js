@@ -101,5 +101,5 @@ class Panel extends Component {
 
 export default Panel;
 
-/* for testing */
+/* For testing */
 export { Overview, PanelHeaders, PanelDark, PanelMuted, PanelText };

@@ -255,18 +255,16 @@ const GridText = () => (
     </div>
 );
 
-const Grid = () => {
-    return (
-        <div className="doc-container">
-            <div className="row">
-                <GridText />
-                <DocToc component={GridText} />
-            </div>
+const Grid = () => (
+    <div className="doc-container">
+        <div className="row">
+            <GridText />
+            <DocToc component={GridText} />
         </div>
-    );
-};
+    </div>
+);
 
 export default Grid;
 
-/* for testing */
+/* For testing */
 export { HowItWorks, GridOptions, AutoLayoutColumns, Alignment, GridText };

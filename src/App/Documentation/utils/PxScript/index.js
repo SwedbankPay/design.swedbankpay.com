@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const PxScript = ({ component, subComponents, func, params }) => {
-    let renderedParams, renderedSubComponents;
+    let renderedParams;
+    let renderedSubComponents;
 
     if (subComponents) {
         renderedSubComponents = subComponents.map((component, i) => (

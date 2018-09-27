@@ -62,5 +62,5 @@ class Tooltip extends Component {
 
 export default Tooltip;
 
-/* for testing */
+/* For testing */
 export { Overview, TooltipText };

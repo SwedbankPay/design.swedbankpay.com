@@ -56,5 +56,5 @@ class Dialog extends Component {
 
 export default Dialog;
 
-/* for testing */
+/* For testing */
 export { Example, DialogText };

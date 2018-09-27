@@ -65,5 +65,5 @@ class Status extends Component {
 
 export default Status;
 
-/* for testing */
+/* For testing */
 export { Overview, ExtendedUsage, StatusText };

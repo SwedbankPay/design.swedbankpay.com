@@ -246,5 +246,5 @@ class Buttons extends Component {
 
 export default Buttons;
 
-/* for testing */
+/* For testing */
 export { Examples, UsageWithOtherTags, OutlineButtons, Sizes, ActiveState, DisabledState, UsageWithIcons, ButtonLoader, UsageWithJavascript, ButtonsText };

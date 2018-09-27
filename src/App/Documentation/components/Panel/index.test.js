@@ -1,8 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Panel from "./index";
-import { Overview, PanelHeaders, PanelDark, PanelMuted, PanelText } from "./index";
+import Panel, { Overview, PanelHeaders, PanelDark, PanelMuted, PanelText } from "./index";
 
 describe("Documentation: Panel", () => {
     it("is defined", () => {

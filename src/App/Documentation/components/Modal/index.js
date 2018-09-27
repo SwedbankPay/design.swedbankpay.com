@@ -76,5 +76,5 @@ class Modal extends Component {
 
 export default Modal;
 
-/* for testing */
+/* For testing */
 export { Usage, Demo, ModalText };

@@ -18,7 +18,6 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
             return div.firstChild.nodeValue;
         }
 
-
         return "Check ComponentPreview _removeOuterTag!";
     };
 
@@ -54,7 +53,6 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
         } else {
             code = val;
         }
-
 
         return code;
     };
@@ -130,7 +128,6 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
             </figure>
         );
     };
-
 
     const ShowCasePanel = () => (
         <div className="showcase-panel">

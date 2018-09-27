@@ -95,5 +95,5 @@ class ActionList extends Component {
 
 export default ActionList;
 
-/* for testing */
+/* For testing */
 export { Overview, Anchorpoints, ActionListText };

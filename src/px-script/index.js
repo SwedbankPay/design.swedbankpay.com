@@ -14,7 +14,7 @@ import toast from "./toast";
 import topbar from "./topbar";
 import validation from "./validation";
 
-// sentry reporter
+// Sentry reporter
 if (process.env.sentry) {
     init({ dsn: "https://832de6a6953642bea1d70c41c12a5ccd@sentry.io/80077" });
 }

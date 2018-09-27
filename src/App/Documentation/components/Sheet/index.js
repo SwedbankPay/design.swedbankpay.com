@@ -79,5 +79,5 @@ class Sheet extends Component {
 
 export default Sheet;
 
-/* for testing */
+/* For testing */
 export { Example, SheetText };

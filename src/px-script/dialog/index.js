@@ -24,7 +24,7 @@ class Dialog {
             e.keyCode === 27 ? this.close() : null;
         });
 
-        // close the dialog when clicking outside
+        // Close the dialog when clicking outside
         this._el.addEventListener("click", e => {
             e.target.classList.contains("d-flex") ? this.close() : null;
         });
@@ -52,7 +52,7 @@ const dialog = (() => {
     const init = () => {
         const dialogs = [...document.querySelectorAll(SELECTORS.DIALOG)].map(dialog => new Dialog(dialog));
 
-        // init open buttons
+        // Init open buttons
         document.querySelectorAll(SELECTORS.OPEN).forEach(btn => {
             const id = btn.dataset.dialogOpen;
             let dialog;
@@ -69,7 +69,7 @@ const dialog = (() => {
             }
         });
 
-        // init close buttons
+        // Init close buttons
         document.querySelectorAll(SELECTORS.CLOSE).forEach(btn => {
             const id = btn.dataset.dialogClose;
             let dialog;

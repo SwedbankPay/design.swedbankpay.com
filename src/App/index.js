@@ -37,8 +37,10 @@ const App = () => (
                                 if (process.env.google) {
                                     history.listen(location => {
                                         window.gtag("config", "UA-3440932-20", {
-                                            "page_location": window.location.href,
-                                            "page_path": location.pathname
+                                            /* eslint-disable camelcase */
+                                            page_location: window.location.href,
+                                            page_path: location.pathname
+                                            /* eslint-enable camelcase */
                                         });
                                     });
                                 }

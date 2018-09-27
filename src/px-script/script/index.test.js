@@ -25,7 +25,7 @@ describe("px-script: script", () => {
             test2: { init: { test: jest.fn() } }
         };
 
-        console.warn = jest.fn(); // to prevent console warning in console
+        console.warn = jest.fn(); // To prevent console warning in console
 
         script.initAll();
 

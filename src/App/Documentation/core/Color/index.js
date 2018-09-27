@@ -39,18 +39,16 @@ const ColorText = () => (
     </div>
 );
 
-const Color = () => {
-    return (
-        <div className="doc-container">
-            <div className="row">
-                <ColorText />
-                <DocToc component={ColorText} />
-            </div>
+const Color = () => (
+    <div className="doc-container">
+        <div className="row">
+            <ColorText />
+            <DocToc component={ColorText} />
         </div>
-    );
-};
+    </div>
+);
 
 export default Color;
 
-/* for testing */
+/* For testing */
 export { ColorPalette, ColorText };

@@ -38,7 +38,7 @@ const modal = (() => {
                 });
             }
 
-            // close the modal when clicking outside
+            // Close the modal when clicking outside
             modal.addEventListener("click", e => {
                 if (e.target.classList.contains("d-block")) {
                     _closeModal(modal);

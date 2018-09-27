@@ -66,5 +66,5 @@ const SelectPanel = () => (
 
 export default withRouter(SelectPanel);
 
-/* for testing */
+/* For testing */
 export { SearchBox };

@@ -225,5 +225,5 @@ class Datepickers extends Component {
 
 export default Datepickers;
 
-/* for testing */
+/* For testing */
 export { SimpleDatepicker, InitialValue, CustomFormat, IncludeTime, Required, ShowingMultipleMonths, DateRange, Options, DatepickersText };

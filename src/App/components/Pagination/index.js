@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-
 const Pagination = ({ type, items, text, arrows, farArrows }) => {
     let activeItem = -1;
     const itemLength = items ? items.length - 1 : -2;
@@ -33,7 +32,7 @@ const Pagination = ({ type, items, text, arrows, farArrows }) => {
             {farArrows ? <Arrow type="start" /> : null}
             {arrows ? <Arrow type="back" /> : null}
             {items ? items.map(({ name, href, active }, i) => {
-                if (active) {activeItem = i;}
+                if (active) { activeItem = i; }
 
                 return (
                     <li key={i} className={`${active ? "active" : ""}`}>{"\n"}

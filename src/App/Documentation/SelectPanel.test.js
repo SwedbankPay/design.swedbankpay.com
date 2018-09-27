@@ -14,7 +14,7 @@ describe("Documentation: SelectPanel", () => {
     //         <SelectPanel location={location} />
     //     );
 
-    //     expect(wrapper).toMatchSnapshot();
+    //     Expect(wrapper).toMatchSnapshot();
     // });
 
     describe("SearchBox", () => {
