@@ -36,6 +36,17 @@ const datepicker = (() => {
         };
 
         rome(datepicker, options);
+
+        // This is for getting around an issue with rome not displaying the datepicker when clicking label.
+        // https://github.com/bevacqua/rome/issues/102
+        if (datepicker.id) {
+            const label = document.querySelector(`label[for=${datepicker.id}]`);
+
+            label.addEventListener("click", e => {
+                e.preventDefault();
+                setTimeout(() => datepicker.focus(), 10);
+            });
+        }
     };
 
     const init = () => {
