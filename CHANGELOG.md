@@ -16,3 +16,5 @@
 - Fixed an issue with datepicker not displaying properly, or at all, when clicking on label.
 
 ### Removed
+
+- Removed modal from designguide.

@@ -338,16 +338,6 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
-                  "Demo": [Function],
-                  "ModalText": [Function],
-                  "Usage": [Function],
-                  "default": [Function],
-                },
-                "path": "/docs/components/modal",
-                "title": "Modal (deprecated)",
-              },
-              Object {
-                "component": Object {
                   "DefaultPagination": [Function],
                   "PaginationBullets": [Function],
                   "PaginationText": [Function],
