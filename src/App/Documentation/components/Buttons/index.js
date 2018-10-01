@@ -51,6 +51,20 @@ const OutlineButtons = () => (
     </>
 );
 
+const ButtonGroup = () => (
+    <>
+        <h2 id="button-group">Using buttons together</h2>
+        <p>When you use buttons next to each other you have to wrap them in a <code className="token-property">button-group</code>.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <div className="button-group">{"\n"}
+                <ButtonComponent type="primary" label="Activate" />{"\n"}
+                <ButtonComponent type="secondary" label="Disable" />{"\n"}
+                <ButtonComponent type="danger" label="Delete" />{"\n"}
+            </div>
+        </ComponentPreview>
+    </>
+);
+
 const Sizes = () => (
     <>
         <h2 id="sizes">Sizes</h2>
@@ -236,28 +250,14 @@ const UsageWithJavascript = () => (
     </>
 );
 
-const ButtonsGroup = () => (
-    <>
-        <h2 id="buttons-group">Using buttons together</h2>
-        <p>When you use buttons next to each other you have to wrap them in a <code>button-group</code>.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="button-group">{"\n"}
-                <ButtonComponent type="primary" label="Activate" />{"\n"}
-                <ButtonComponent type="secondary" label="Disable" />{"\n"}
-                <ButtonComponent type="danger" label="Delete" />{"\n"}
-            </div>
-        </ComponentPreview>
-    </>
-);
-
 const ButtonsText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
         <p className="lead">Use buttons...</p>
         <Examples />
         <UsageWithOtherTags />
         <OutlineButtons />
+        <ButtonGroup />
         <Sizes />
-        <ButtonsGroup />
         <ActiveState />
         <DisabledState />
         <UsageWithIcons />
@@ -286,4 +286,4 @@ class Buttons extends Component {
 export default Buttons;
 
 /* for testing */
-export { Examples, UsageWithOtherTags, OutlineButtons, Sizes, ActiveState, DisabledState, UsageWithIcons, ButtonLoader, UsageWithJavascript, ButtonsText, ButtonsGroup };
+export { Examples, UsageWithOtherTags, OutlineButtons, Sizes, ActiveState, DisabledState, UsageWithIcons, ButtonLoader, UsageWithJavascript, ButtonsText, ButtonGroup };
