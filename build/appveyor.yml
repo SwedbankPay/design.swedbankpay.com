@@ -16,6 +16,9 @@ environment:
     secure: IGs25EMrhe0au+uVDbOck6akDzC9ykvJeR0zJjhrT6idNuYOr/JpyGdefQxSlWXk
   github_email:
     secure: U3oByHGtWDiIy9psThpxwg==
+  # Sentry
+  sentry_token:
+    secure: a/+7STfY8W8+RTlSDgKIZghq6iIy8K9WL5lICC6wsaoXPvKuBMjCsTE/KBdvP6vauLd9E2zbGHWjGUTI8SrF1bZUluC4VqhmrkWz9edM+10=
 
 # cache:
 #   - node_modules
@@ -32,8 +35,11 @@ install:
 #       build configuration       #
 #---------------------------------#
 
+before_build:
+- ps: ./build/prepare-release-build.ps1
+
 build_script:
-- cmd: npm run build:prod
+- cmd: npm run build:prod -- --env.release=%release%
 
 #---------------------------------#
 #       tests configuration       #
