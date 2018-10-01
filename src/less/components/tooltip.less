@@ -29,7 +29,7 @@
         min-width: 5rem;
         border-radius: 5px;
         pointer-events: none;
-        padding: @tooltip-padding-xs @tooltip-padding-s;
+        padding: @base-padding-xs @base-padding-sm;
         z-index: @zindex-tooltip;
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
@@ -68,13 +68,13 @@
 
     &[data-tooltip-position="bottom"]:before {
         top: 100%;
-        margin-top: @tooltip-margin-s;
+        margin-top: @base-margin-sm;
         transform: translateX(-50%) translateY(-100%) rotate(-180deg);
     }
 
     &[data-tooltip-position="bottom"]:after {
         top: 100%;
-        margin-top: @tooltip-margin-s;
+        margin-top: @base-margin-sm;
         transform: translateX(-50%) translateY(0%);
     }
 
@@ -88,7 +88,7 @@
     &[data-tooltip-position="right"]:after {
         left: 100%;
         top: 50%;
-        margin-left: @tooltip-margin-s;
+        margin-left: @base-margin-sm;
         transform: translateX(0%) translateY(-50%);
     }
 

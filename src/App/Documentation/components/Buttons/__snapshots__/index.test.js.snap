@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Documentation: Buttons Active State renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="active-state"
   >
@@ -50,11 +50,11 @@ exports[`Documentation: Buttons Active State renders 1`] = `
 
     </div>
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Buttons Button Loader renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="button-loader"
   >
@@ -214,7 +214,7 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
     />
     .
   </p>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Buttons Buttons Text renders 1`] = `
@@ -239,7 +239,7 @@ exports[`Documentation: Buttons Buttons Text renders 1`] = `
 `;
 
 exports[`Documentation: Buttons Disabled State renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="disabled-state"
   >
@@ -286,11 +286,11 @@ exports[`Documentation: Buttons Disabled State renders 1`] = `
 
     </div>
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Buttons Examples renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="examples"
   >
@@ -336,11 +336,11 @@ exports[`Documentation: Buttons Examples renders 1`] = `
 
     </div>
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Buttons Outline Buttons renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="outline-buttons"
   >
@@ -383,11 +383,11 @@ exports[`Documentation: Buttons Outline Buttons renders 1`] = `
 
     </div>
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Buttons Sizes renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="sizes"
   >
@@ -548,11 +548,11 @@ exports[`Documentation: Buttons Sizes renders 1`] = `
 
     </div>
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Buttons Usage With Icons renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="usage-with-icons"
   >
@@ -596,11 +596,11 @@ exports[`Documentation: Buttons Usage With Icons renders 1`] = `
 
     </div>
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Buttons Usage With Javascript renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="usage-with-javascript"
   >
@@ -789,11 +789,11 @@ exports[`Documentation: Buttons Usage With Javascript renders 1`] = `
       </tr>
     </tbody>
   </table>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Buttons Usage With Other Tags renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="usage-with-other-tags"
   >
@@ -872,7 +872,7 @@ exports[`Documentation: Buttons Usage With Other Tags renders 1`] = `
 
     </div>
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Documentation: Buttons renders 1`] = `

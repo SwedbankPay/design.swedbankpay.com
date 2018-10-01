@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Components: Tooltip Overview renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="overview"
   >
@@ -73,16 +73,6 @@ exports[`Components: Tooltip Overview renders 1`] = `
       <button
         className="btn btn-primary"
         data-tooltip="This is a tooltip!"
-        data-tooltip-position="right"
-        type="button"
-      >
-        Tooltip to the right
-      </button>
-      
-
-      <button
-        className="btn btn-primary"
-        data-tooltip="This is a tooltip!"
         data-tooltip-position="bottom"
         type="button"
       >
@@ -90,9 +80,19 @@ exports[`Components: Tooltip Overview renders 1`] = `
       </button>
       
 
+      <button
+        className="btn btn-primary"
+        data-tooltip="This is a tooltip!"
+        data-tooltip-position="right"
+        type="button"
+      >
+        Tooltip to the right
+      </button>
+      
+
     </div>
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Components: Tooltip TooltipText renders 1`] = `

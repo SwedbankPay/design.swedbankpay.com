@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Core: Grid Alignment renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="alignment"
   >
@@ -207,11 +207,11 @@ exports[`Core: Grid Alignment renders 1`] = `
       </div>
     </div>
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Core: Grid AutoLayoutColumns renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="auto-layout-columns"
   >
@@ -274,7 +274,7 @@ exports[`Core: Grid AutoLayoutColumns renders 1`] = `
       </div>
     </div>
   </ComponentPreview>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Core: Grid GridText renders 1`] = `
@@ -294,7 +294,7 @@ exports[`Core: Grid GridText renders 1`] = `
 `;
 
 exports[`Core: Grid HowItWorks renders 1`] = `
-<React.Fragment>
+<Fragment>
   <h2
     id="how-it-works"
   >
@@ -359,7 +359,7 @@ exports[`Core: Grid HowItWorks renders 1`] = `
     </code>
     .
   </p>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Core: Grid renders 1`] = `

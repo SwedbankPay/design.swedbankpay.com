@@ -29,9 +29,7 @@
 // 18. Panel
 // 19. Sheet
 // 20. Status
-// 21. Tabs
 // 22. Toast
-// 23. Tooltip
 // 24. Topbar
 
 // ==========================================================================
@@ -528,13 +526,10 @@
 @panel-brand-color:                         @brand-primary;
 
 @panel-border-radius:                       0;
-@panel-margin-bottom:                       14px;
 
-@panel-body-padding:                        15px 30px; //Todo: cleanup, lots of hardcoded px values, maybe ok?
+@panel-body-padding:                        @base-padding @base-padding-xl;
 @panel-table-margin:                        0;
-@panel-banner-padding:                      15px;
-@panel-heading-padding:                     15px 15px 15px 30px;
-@panel-footer-padding:                      15px 30px 12px 30px;
+@panel-footer-padding:                      @base-padding @base-padding-xl @base-padding-sm @base-padding-xl;
 @panel-footer-margin:                       10px -30px -15px -30px;
 
 
@@ -543,7 +538,7 @@
 
 @sheet-backdrop-bg:                         fade(@black, 50%);
 @sheet-section-bg:                          @white;
-@sheet-section-padding:                     5rem 4rem 4rem;
+@sheet-section-padding:                     5rem @base-padding-xs @base-padding-xs;
 
 @sheet-width-xs:                            95%;
 @sheet-width-sm:                            75%;
@@ -556,14 +551,6 @@
 @status-size:                               13px;
 @status-padding:                            10;
 
-// 21. Tabs
-// ==========================================================================
-
-@tabs-margin:                               @base-margin;
-
-@tabs-padding:                              @base-padding;
-@tabs-padding-s:                            @base-padding-sm;
-
 
 // 22. Toast
 // ==========================================================================
@@ -572,23 +559,6 @@
 @toast-color:                               @white;
 @toast-text-color:                          @text-color;
 @toast-action-color:                        @yellow;
-
-@toast-margin:                              @base-margin;
-@toast-margin-s:                            @base-margin-sm;
-
-@toast-padding:                             @base-padding;
-@toast-padding-s:                           @base-padding-sm;
-@toast-padding-m:                           @base-padding+@base-padding-sm; //Medium, ok naming?
-
-
-// 23. Tooltip
-// ==========================================================================
-
-@tooltip-margin:                            @base-margin;
-@tooltip-margin-s:                          @base-margin-sm;
-
-@tooltip-padding-s:                         @base-padding-sm;
-@tooltip-padding-xs:                        @base-padding-xs;
 
 // 24. Topbar
 // ==========================================================================
@@ -603,9 +573,3 @@
 
 @topbar-margin:                             @base-margin+@base-margin-xs;
 @topbar-padding:                            @base-padding+@base-margin-xs;
-
-@topbar-margin:                             @base-margin;
-@topbar-margin-s:                           @base-margin-sm;
-
-@topbar-padding:                            @base-padding;
-@topbar-padding-s:                          @base-padding-sm;
