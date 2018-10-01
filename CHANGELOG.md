@@ -12,5 +12,6 @@
 
 - Fixed issue with item-list alignment.
 - Fixed issue with action list icon being visible through topbar.
+- Fixed an issue with topbar component where clicking anchor links does not close the open menu.
 
 ### Removed
