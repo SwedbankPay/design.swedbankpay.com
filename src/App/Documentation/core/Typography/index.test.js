@@ -10,9 +10,7 @@ describe("Core: Typography", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Typography />
-        );
+        const wrapper = shallow(<Typography />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -23,9 +21,7 @@ describe("Core: Typography", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Fonts />
-            );
+            const wrapper = shallow(<Fonts />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -37,9 +33,7 @@ describe("Core: Typography", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Headings />
-            );
+            const wrapper = shallow(<Headings />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -51,9 +45,7 @@ describe("Core: Typography", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Small />
-            );
+            const wrapper = shallow(<Small />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -65,9 +57,7 @@ describe("Core: Typography", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Lead />
-            );
+            const wrapper = shallow(<Lead />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -79,9 +69,7 @@ describe("Core: Typography", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Inline />
-            );
+            const wrapper = shallow(<Inline />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -93,9 +81,7 @@ describe("Core: Typography", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <TextUtilities />
-            );
+            const wrapper = shallow(<TextUtilities />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -107,9 +93,7 @@ describe("Core: Typography", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Abbreviations />
-            );
+            const wrapper = shallow(<Abbreviations />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -121,15 +105,11 @@ describe("Core: Typography", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Blockquotes />
-            );
+            const wrapper = shallow(<Blockquotes />);
 
             if (Blockquotes().props.children) {
                 Blockquotes().props.children.map(Child => {
-                    const wrapper = shallow(
-                        <Child.type />
-                    );
+                    const wrapper = shallow(<Child.type />);
 
                     expect(wrapper).toMatchSnapshot();
                 });
@@ -145,9 +125,7 @@ describe("Core: Typography", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <TypographyText />
-            );
+            const wrapper = shallow(<TypographyText />);
 
             expect(wrapper).toMatchSnapshot();
         });

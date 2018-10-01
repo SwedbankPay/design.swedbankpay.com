@@ -14,8 +14,10 @@ import toast from "./toast";
 import topbar from "./topbar";
 import validation from "./validation";
 
-// sentry reporter
-init({ dsn: "https://832de6a6953642bea1d70c41c12a5ccd@sentry.io/80077" });
+// Sentry reporter
+if (process.env.sentry) {
+    init({ dsn: "https://832de6a6953642bea1d70c41c12a5ccd@sentry.io/80077" });
+}
 
 const px = {
     actionList,
@@ -42,4 +44,5 @@ if (!window.stopPx) {
 }
 
 export default px;
+
 export { actionList, alert, button, datepicker, dialog, loader, modal, rangeslider, sheet, script, toast, topbar, validation };

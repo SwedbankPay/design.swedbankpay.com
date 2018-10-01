@@ -9,9 +9,7 @@ describe("GettingStarted: BrowserSupport", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <BrowserSupport />
-        );
+        const wrapper = shallow(<BrowserSupport />);
 
         expect(wrapper).toMatchSnapshot();
     });

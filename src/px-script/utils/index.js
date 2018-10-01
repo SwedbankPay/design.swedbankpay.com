@@ -5,7 +5,8 @@ export const applyToEachElement = (elements, fn) => {
 };
 
 export const findAncestor = (el, cls) => {
-    while ((el = el.parentElement) && !el.classList.contains(cls));
+    while ((el = el.parentElement) && !el.classList.contains(cls)); // eslint-disable-line curly
+
     return el;
 };
 
@@ -13,10 +14,8 @@ export const extendObj = (overWrite, obj, ext) => {
     for (const key in ext) {
         if (overWrite) {
             obj[key] = ext[key];
-        } else {
-            if (!obj[key]) {
-                obj[key] = ext[key];
-            }
+        } else if (!obj[key]) {
+            obj[key] = ext[key];
         }
     }
 

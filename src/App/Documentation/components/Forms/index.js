@@ -323,5 +323,5 @@ class Forms extends Component {
 
 export default Forms;
 
-/* for testing */
+/* For testing */
 export { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, Checkboxes, DisabledCheckboxes, RadioButtons, DisabledRadioButtons, Toggleboxes, DisabledToggleboxes, RangeSlider, DisabledRangeSlider, FormsText };

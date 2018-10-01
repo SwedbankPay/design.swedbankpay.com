@@ -10,9 +10,7 @@ describe("Utilities: PxScript", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <PxScript component="test" func="init" />
-        );
+        const wrapper = shallow(<PxScript component="test" func="init" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<span>test</span>)).toEqual(true);
@@ -20,9 +18,7 @@ describe("Utilities: PxScript", () => {
     });
 
     it("renders with subcomponents", () => {
-        const wrapper = shallow(
-            <PxScript component="test" func="init" subComponents={["subTest"]} />
-        );
+        const wrapper = shallow(<PxScript component="test" func="init" subComponents={["subTest"]} />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<span>test</span>)).toEqual(true);
@@ -31,9 +27,7 @@ describe("Utilities: PxScript", () => {
     });
 
     it("renders with multiple subcomponents", () => {
-        const wrapper = shallow(
-            <PxScript component="test" func="init" subComponents={["subTest", "subTest2"]} />
-        );
+        const wrapper = shallow(<PxScript component="test" func="init" subComponents={["subTest", "subTest2"]} />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<span>test</span>)).toEqual(true);
@@ -43,9 +37,7 @@ describe("Utilities: PxScript", () => {
     });
 
     it("renders with params", () => {
-        const wrapper = shallow(
-            <PxScript component="test" func="init" params={["param1"]} />
-        );
+        const wrapper = shallow(<PxScript component="test" func="init" params={["param1"]} />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<span>test</span>)).toEqual(true);
@@ -54,9 +46,7 @@ describe("Utilities: PxScript", () => {
     });
 
     it("renders with multiple params", () => {
-        const wrapper = shallow(
-            <PxScript component="test" func="init" params={["param1", "param2"]} />
-        );
+        const wrapper = shallow(<PxScript component="test" func="init" params={["param1", "param2"]} />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<span>test</span>)).toEqual(true);

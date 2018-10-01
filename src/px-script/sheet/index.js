@@ -24,7 +24,7 @@ class Sheet {
             e.keyCode === 27 ? this.close() : null;
         });
 
-        // close the sheet when clicking outside
+        // Close the sheet when clicking outside
         this._el.addEventListener("click", e => {
             e.target.classList.contains("sheet-open") ? this.close() : null;
         });
@@ -55,7 +55,7 @@ const sheet = (() => {
     const init = () => {
         const sheets = [...document.querySelectorAll(SELECTORS.SHEET)].map(sheet => new Sheet(sheet));
 
-        // init open buttons
+        // Init open buttons
         document.querySelectorAll(SELECTORS.OPEN).forEach(btn => {
             const id = btn.dataset.sheetOpen;
             let sheet;
@@ -72,7 +72,7 @@ const sheet = (() => {
             }
         });
 
-        // init close buttons
+        // Init close buttons
         document.querySelectorAll(SELECTORS.CLOSE).forEach(btn => {
             const id = btn.dataset.sheetClose;
             let sheet;

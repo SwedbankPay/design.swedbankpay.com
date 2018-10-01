@@ -81,5 +81,5 @@ class Card extends Component {
 
 export default Card;
 
-/* for testing */
+/* For testing */
 export { Overview, CardText };

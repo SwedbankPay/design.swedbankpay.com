@@ -9,9 +9,7 @@ describe("Core: Grid", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Grid />
-        );
+        const wrapper = shallow(<Grid />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Core: Grid", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <HowItWorks />
-            );
+            const wrapper = shallow(<HowItWorks />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("Core: Grid", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <AutoLayoutColumns />
-            );
+            const wrapper = shallow(<AutoLayoutColumns />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -50,9 +44,7 @@ describe("Core: Grid", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Alignment />
-            );
+            const wrapper = shallow(<Alignment />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -64,9 +56,7 @@ describe("Core: Grid", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <GridText />
-            );
+            const wrapper = shallow(<GridText />);
 
             expect(wrapper).toMatchSnapshot();
         });

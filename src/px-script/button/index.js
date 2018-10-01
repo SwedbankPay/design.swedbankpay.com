@@ -9,6 +9,7 @@ const _appendLoader = button => {
 
     for (let i = 0; i < 3; i++) {
         const li = document.createElement("li");
+
         ul.appendChild(li);
     }
 

@@ -9,9 +9,7 @@ describe("Documentation: Modal", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Modal />
-        );
+        const wrapper = shallow(<Modal />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Documentation: Modal", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Usage />
-            );
+            const wrapper = shallow(<Usage />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("Documentation: Modal", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Demo />
-            );
+            const wrapper = shallow(<Demo />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -50,9 +44,7 @@ describe("Documentation: Modal", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <ModalText />
-            );
+            const wrapper = shallow(<ModalText />);
 
             expect(wrapper).toMatchSnapshot();
         });

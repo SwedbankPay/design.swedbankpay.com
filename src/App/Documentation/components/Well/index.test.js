@@ -9,9 +9,7 @@ describe("Components: Well", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Well />
-        );
+        const wrapper = shallow(<Well />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Components: Well", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <DefaultWell />
-            );
+            const wrapper = shallow(<DefaultWell />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("Components: Well", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <WellSizes />
-            );
+            const wrapper = shallow(<WellSizes />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -50,9 +44,7 @@ describe("Components: Well", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <WellText />
-            );
+            const wrapper = shallow(<WellText />);
 
             expect(wrapper).toMatchSnapshot();
         });

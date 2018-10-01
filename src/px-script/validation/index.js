@@ -20,10 +20,12 @@ const validation = (() => {
             case "SUCCESS":
                 parentElement.classList.add("has-success");
                 parentElement.classList.remove("has-error");
+
                 break;
             case "ERROR":
                 parentElement.classList.add("has-error");
                 parentElement.classList.remove("has-success");
+
                 break;
             default:
                 parentElement.classList.remove("has-error");
@@ -49,11 +51,10 @@ const validation = (() => {
     };
 
     const attachFormValidator = element => {
-        element.addEventListener("submit", e => {validateForm(element, e);}, false);
+        element.addEventListener("submit", e => { validateForm(element, e); }, false);
     };
-
     const attachInputValidator = element => {
-        element.addEventListener("change", () => {validateField(element);}, false);
+        element.addEventListener("change", () => { validateField(element); }, false);
     };
 
     const init = () => {
@@ -61,6 +62,7 @@ const validation = (() => {
             switch (element.tagName) {
                 case "FORM":
                     attachFormValidator(element);
+
                     break;
                 default:
                     attachInputValidator(element);

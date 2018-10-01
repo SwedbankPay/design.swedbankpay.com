@@ -10,9 +10,7 @@ describe("Component: Modal - ", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Modal type="default" size="large" />
-        );
+        const wrapper = shallow(<Modal type="default" size="large" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("modal");
@@ -22,9 +20,8 @@ describe("Component: Modal - ", () => {
 
     it("prop type is marked as required", () => {
         console.error = jest.fn();
-        const wrapper = shallow(
-            <Modal size="large" />
-        );
+
+        const wrapper = shallow(<Modal size="large" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("modal-large");
@@ -33,9 +30,8 @@ describe("Component: Modal - ", () => {
 
     it("prop size is marked as required", () => {
         console.error = jest.fn();
-        const wrapper = shallow(
-            <Modal type="default" />
-        );
+
+        const wrapper = shallow(<Modal type="default" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("modal-default");
@@ -44,9 +40,8 @@ describe("Component: Modal - ", () => {
 
     it("prop type is is an enum which requires value 'brand' or 'default'", () => {
         console.error = jest.fn();
-        const wrapper = shallow(
-            <Modal type="test" size="large" />
-        );
+
+        const wrapper = shallow(<Modal type="test" size="large" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(console.error).toHaveBeenCalled();
@@ -54,9 +49,8 @@ describe("Component: Modal - ", () => {
 
     it("prop size is is an enum which requires value 'small', 'medium' or 'large'", () => {
         console.error = jest.fn();
-        const wrapper = shallow(
-            <Modal type="default" size="test" />
-        );
+
+        const wrapper = shallow(<Modal type="default" size="test" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(console.error).toHaveBeenCalled();
@@ -65,36 +59,28 @@ describe("Component: Modal - ", () => {
     it("prop footerAlignment is an enum requires value 'centered' or 'right'", () => {
         console.error = jest.fn();
 
-        const wrapper = shallow(
-            <Modal footerAlignment="test" />
-        );
+        const wrapper = shallow(<Modal footerAlignment="test" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(console.error).toHaveBeenCalled();
     });
 
     it("renders with class 'static' when prop isStatic is true", () => {
-        const wrapper = shallow(
-            <Modal isStatic />
-        );
+        const wrapper = shallow(<Modal isStatic />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("static");
     });
 
     it("renders with class 'd-block' when prop visible is true", () => {
-        const wrapper = shallow(
-            <Modal visible />
-        );
+        const wrapper = shallow(<Modal visible />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("d-block");
     });
 
     it("renders without header when prop title is missing", () => {
-        const wrapper = shallow(
-            <Modal />
-        );
+        const wrapper = shallow(<Modal />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).not.toContain("header");
@@ -102,9 +88,7 @@ describe("Component: Modal - ", () => {
     });
 
     it("renders with a header without subtitle when prop title is provided and prop subTitle is missing", () => {
-        const wrapper = shallow(
-            <Modal title="test" />
-        );
+        const wrapper = shallow(<Modal title="test" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("header");
@@ -113,9 +97,7 @@ describe("Component: Modal - ", () => {
     });
 
     it("renders with a header and subtitle when prop title and subTitle is provided", () => {
-        const wrapper = shallow(
-            <Modal title="test" subTitle="test" />
-        );
+        const wrapper = shallow(<Modal title="test" subTitle="test" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("header");
@@ -124,9 +106,7 @@ describe("Component: Modal - ", () => {
     });
 
     it("renders a header tag with subtitle but without title when prop subTitle is provided but title is not", () => {
-        const wrapper = shallow(
-            <Modal subTitle="test" />
-        );
+        const wrapper = shallow(<Modal subTitle="test" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("header");
@@ -135,18 +115,14 @@ describe("Component: Modal - ", () => {
     });
 
     it("renders a footer when prop footerText is provided", () => {
-        const wrapper = shallow(
-            <Modal footerText="test" />
-        );
+        const wrapper = shallow(<Modal footerText="test" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("footer");
     });
 
     it("renders a footer with alignment when prop footerText and footerAlignment is provided", () => {
-        const wrapper = shallow(
-            <Modal footerText="test" footerAlignment="centered" />
-        );
+        const wrapper = shallow(<Modal footerText="test" footerAlignment="centered" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("footer");
@@ -154,9 +130,7 @@ describe("Component: Modal - ", () => {
     });
 
     it("renders a button component when prop button is true", () => {
-        const wrapper = shallow(
-            <Modal button id="test" />
-        );
+        const wrapper = shallow(<Modal button id="test" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("button");

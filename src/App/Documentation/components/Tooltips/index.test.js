@@ -9,9 +9,7 @@ describe("Components: Tooltip", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Tooltip />
-        );
+        const wrapper = shallow(<Tooltip />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Components: Tooltip", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Overview />
-            );
+            const wrapper = shallow(<Overview />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("Components: Tooltip", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <TooltipText />
-            );
+            const wrapper = shallow(<TooltipText />);
 
             expect(wrapper).toMatchSnapshot();
         });

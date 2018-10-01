@@ -9,9 +9,7 @@ describe("Main: App", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <App />
-        );
+        const wrapper = shallow(<App />);
 
         expect(wrapper).toMatchSnapshot();
     });

@@ -3,9 +3,8 @@ import NavMenu from "./NavMenu";
 const topbar = (() => {
     const init = index => {
         const menu = document.querySelectorAll(".topbar")[index || 0];
-
-        let leftNavMenu,
-            rightNavMenu;
+        let leftNavMenu;
+        let rightNavMenu;
 
         if (menu) {
             const leftMenuBtnElement = menu.querySelector(".topbar-btn-left");

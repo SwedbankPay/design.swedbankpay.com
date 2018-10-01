@@ -104,8 +104,15 @@ const smallMenu = {
     ]
 };
 
-const leftMenu = Object.assign({ id: "topbar-nav-left" }, menu);
-const rightMenu = Object.assign({ id: "topbar-nav-right" }, smallMenu);
+const leftMenu = {
+    id: "topbar-nav-left",
+    ...menu
+};
+
+const rightMenu = {
+    id: "topbar-nav-right",
+    ...smallMenu
+};
 
 const Overview = () => (
     <>
@@ -128,6 +135,7 @@ class Topbar extends Component {
     componentDidMount () {
         topbar.init(1);
     }
+
     render () {
         return (
             <div className="doc-container">
@@ -142,5 +150,5 @@ class Topbar extends Component {
 
 export default Topbar;
 
-/* for testing */
+/* For testing */
 export { Overview, TopbarText };

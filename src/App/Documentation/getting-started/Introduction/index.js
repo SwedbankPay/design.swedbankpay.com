@@ -79,5 +79,5 @@ const Introduction = () => (
 
 export default Introduction;
 
-/* for testing */
+/* For testing */
 export { QuickStart, Css, JavaScript, StarterTemplate, IntroductionText };

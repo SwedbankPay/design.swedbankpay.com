@@ -10,13 +10,11 @@ export const Addon = ({ type, value, color }) => (
         : <span className="input-group-addon">{(type === "icon") ? <i className="material-icons">{value}</i> : value}</span>
 );
 
-const Feedback = ({ icon }) => {
-    return (
-        <span className="form-control-feedback">{"\n\t\t"}
-            <i className="material-icons">{icon}</i>{"\n\t"}
-        </span>
-    );
-};
+const Feedback = ({ icon }) => (
+    <span className="form-control-feedback">{"\n\t\t"}
+        <i className="material-icons">{icon}</i>{"\n\t"}
+    </span>
+);
 
 const InputGroup = ({
     id,

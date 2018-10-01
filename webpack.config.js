@@ -172,7 +172,7 @@ module.exports = (env, argv) => {
                     developerURL: "https://payex.com",
                     background: "#000",
                     theme_color: "#2da944",
-                    version: version,
+                    version,
                     icons: {
                         android: true,
                         appleIcon: true,
@@ -225,11 +225,12 @@ module.exports = (env, argv) => {
                     }
                 ]
             }),
-            // new SentryCliPlugin({
-            //     release: version,
-            //     include: ".",
-            //     ignore: ["node_modules", "webpack.config.js"]
-            // })
+            new webpack.DefinePlugin({
+                "process.env": {
+                    sentry: true,
+                    google: true
+                }
+            })
         );
     }
 

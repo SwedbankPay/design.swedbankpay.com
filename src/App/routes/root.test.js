@@ -12,6 +12,7 @@ describe("Routes: root", () => {
     it("all routes has a title, path and component", () => {
         rootRoutes.forEach(route => {
             const { title, path, component } = route;
+
             expect(title).toBeDefined();
             expect(path).toBeDefined();
             expect(component).toBeDefined();

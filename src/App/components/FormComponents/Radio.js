@@ -2,11 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Radio = ({ id, checked, disabled, label, name }) => {
-    const attrs = { type: "radio" };
-    if (id) attrs.id = id;
-    if (name) attrs.name = name;
-    if (disabled) attrs.disabled = disabled;
-    if (checked) attrs.defaultChecked = checked;
+    const attrs = {
+        type: "radio",
+        id: id || null,
+        name: name || null,
+        disabled: disabled || null,
+        defaultChecked: checked || null
+    };
 
     return (
         <div className="radio">{"\n"}

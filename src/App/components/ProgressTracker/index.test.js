@@ -9,9 +9,7 @@ describe("Component: ProgressTracker", () => {
     });
 
     it("renders with default items when no items is provided through items prop", () => {
-        const wrapper = shallow(
-            <ProgressTracker />
-        );
+        const wrapper = shallow(<ProgressTracker />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("progress-tracker");
@@ -19,9 +17,7 @@ describe("Component: ProgressTracker", () => {
     });
 
     it("renders with class progress-tracker-sm when provided the prop small", () => {
-        const wrapper = shallow(
-            <ProgressTracker small />
-        );
+        const wrapper = shallow(<ProgressTracker small />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("progress-tracker-sm");
@@ -30,9 +26,7 @@ describe("Component: ProgressTracker", () => {
     it("renders progress-tracker with the provided items in the items prop", () => {
         const items = [{ title: "test" }];
 
-        const wrapper = shallow(
-            <ProgressTracker items={items} />
-        );
+        const wrapper = shallow(<ProgressTracker items={items} />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toEqual("<ol class=\"progress-tracker\"><li><span>test</span></li></ol>");
@@ -47,9 +41,7 @@ describe("Component: ProgressTracker", () => {
             }
         ];
 
-        const wrapper = shallow(
-            <ProgressTracker items={items} />
-        );
+        const wrapper = shallow(<ProgressTracker items={items} />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("<li><span>test #1</span></li>");
@@ -64,9 +56,7 @@ describe("Component: ProgressTracker", () => {
             }
         ];
 
-        const wrapper = shallow(
-            <ProgressTracker items={items} />
-        );
+        const wrapper = shallow(<ProgressTracker items={items} />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toEqual("<ol class=\"progress-tracker\"><li><a href=\"www.example.com\">test</a></li></ol>");
@@ -83,9 +73,7 @@ describe("Component: ProgressTracker", () => {
             { title: "test #4" }
         ];
 
-        const wrapper = shallow(
-            <ProgressTracker items={items} />
-        );
+        const wrapper = shallow(<ProgressTracker items={items} />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<span>test #1</span>)).toEqual(true);

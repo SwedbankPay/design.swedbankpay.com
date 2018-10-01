@@ -119,5 +119,5 @@ const Breakpoints = () => (
 
 export default Breakpoints;
 
-/* for testing */
+/* For testing */
 export { Overview, BreakpointsText };

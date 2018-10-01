@@ -38,6 +38,7 @@ export default class NavMenu {
     _initNavSlides () {
         const appendBackBtn = element => {
             const i = document.createElement("i");
+
             i.classList.add("material-icons", "slide-back-btn");
             i.innerHTML = icons.back;
             i.addEventListener("click", () => {
@@ -63,8 +64,10 @@ export default class NavMenu {
                     this.currentActive = targetLink.targetElement;
                     this.history.push(targetLink.parentSlide);
                     targetLink.navigateToTarget();
+
                     if (this.history.length > 1) {
                         const index = this.history.length - 2;
+
                         this.history[index].classList.add("inactive");
                     }
                 } else {
@@ -77,6 +80,7 @@ export default class NavMenu {
     open () {
         this.navMenuElement.classList.add("in");
         this.isOpen = true;
+
         if (this.iconElement) {
             this.iconElement.innerHTML = icons.close;
         }
@@ -85,6 +89,7 @@ export default class NavMenu {
     close () {
         this.navMenuElement.classList.remove("in");
         this.isOpen = false;
+
         if (this.iconElement) {
             this.iconElement.innerHTML = this.userIcon;
         }
@@ -97,10 +102,12 @@ export default class NavMenu {
     goBack () {
         if (this.history.length > 1) {
             const index = this.history.length - 2;
+
             this.history[index].classList.remove("inactive");
         }
 
         const lastActive = this.history.pop();
+
         this.currentActive.classList.remove("current");
         this.currentActive = lastActive;
         lastActive.classList.remove("prev");
@@ -111,6 +118,7 @@ export default class NavMenu {
         this.history = [];
         this.navSlides.forEach((slide, i) => {
             slide.classList.remove("current", "prev", "inactive");
+
             if (i === 0) {
                 slide.classList.add("current");
             }

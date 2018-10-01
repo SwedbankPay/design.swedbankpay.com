@@ -9,9 +9,7 @@ describe("Documentation: Status", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Status />
-        );
+        const wrapper = shallow(<Status />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Documentation: Status", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Overview />
-            );
+            const wrapper = shallow(<Overview />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("Documentation: Status", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <ExtendedUsage />
-            );
+            const wrapper = shallow(<ExtendedUsage />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -50,9 +44,7 @@ describe("Documentation: Status", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <StatusText />
-            );
+            const wrapper = shallow(<StatusText />);
 
             expect(wrapper).toMatchSnapshot();
         });

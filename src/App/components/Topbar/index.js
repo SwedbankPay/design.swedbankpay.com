@@ -26,6 +26,7 @@ const LeftMenu = ({ align, menu }) => {
 
         const GroupItem = ({ groupItem }) => {
             const { groupTitle, items } = groupItem;
+
             return (
                 <div className="topbar-nav-group">
                     <div className="topbar-nav-group-heading">{groupTitle}</div>{"\n"}
@@ -68,17 +69,15 @@ const RightMenu = ({ align, menu }) => {
     );
 };
 
-const Topbar = ({ leftMenu, rightMenu }) => {
-    return (
-        <div className="topbar">{"\n"}
-            {leftMenu ? <TopbarBtn align="left" icon={leftMenu.btn.icon} text={leftMenu.btn.text} target={leftMenu.id} /> : null}{leftMenu ? "\n" : null}
-            <a href="#" className={"topbar-logo"}></a>{"\n"}
-            {rightMenu ? <TopbarBtn align="right" icon={rightMenu.btn.icon} text={rightMenu.btn.text} target={rightMenu.id} /> : null}{rightMenu ? "\n" : null}
-            {leftMenu ? <LeftMenu align="left" menu={leftMenu} /> : null}{leftMenu ? "\n" : null}
-            {rightMenu ? <RightMenu align="right" menu={rightMenu} /> : null}{rightMenu ? "\n" : null}
-        </div>
-    );
-};
+const Topbar = ({ leftMenu, rightMenu }) => (
+    <div className="topbar">{"\n"}
+        {leftMenu ? <TopbarBtn align="left" icon={leftMenu.btn.icon} text={leftMenu.btn.text} target={leftMenu.id} /> : null}{leftMenu ? "\n" : null}
+        <a href="#" className={"topbar-logo"}></a>{"\n"}
+        {rightMenu ? <TopbarBtn align="right" icon={rightMenu.btn.icon} text={rightMenu.btn.text} target={rightMenu.id} /> : null}{rightMenu ? "\n" : null}
+        {leftMenu ? <LeftMenu align="left" menu={leftMenu} /> : null}{leftMenu ? "\n" : null}
+        {rightMenu ? <RightMenu align="right" menu={rightMenu} /> : null}{rightMenu ? "\n" : null}
+    </div>
+);
 
 Topbar.propTypes = {
     leftMenu: PropTypes.object,

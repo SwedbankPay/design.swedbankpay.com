@@ -66,7 +66,6 @@ const Lead = () => (
     </>
 );
 
-
 const Inline = () => (
     <>
         <h2 id="inline-text-elements">Inline text elements</h2>
@@ -155,7 +154,6 @@ const Blockquotes = () => {
         </>
     );
 
-
     return (
         <>
             <BlockquotesText />
@@ -190,5 +188,5 @@ const Typography = () => (
 
 export default Typography;
 
-/* for testing */
+/* For testing */
 export { Fonts, Headings, Small, Lead, Inline, TextUtilities, Abbreviations, Blockquotes, TypographyText };

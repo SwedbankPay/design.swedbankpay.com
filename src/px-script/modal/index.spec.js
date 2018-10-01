@@ -5,6 +5,7 @@ fixture `Component: Modal`
 
 test("Modal test", async t => {
     const modal = await Selector("#live-modal");
+
     await t
         .expect(modal.classNames)
         .notContains("in")

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-
 class Tabs extends Component {
     constructor (props) {
         super(props);
@@ -16,6 +15,7 @@ class Tabs extends Component {
 
     render () {
         const { mode, items } = this.props;
+
         return (
             <div className="tabs">
                 <ul className={`tabs-${mode}`}>

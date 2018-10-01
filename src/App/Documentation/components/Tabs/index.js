@@ -56,5 +56,5 @@ const Tabs = () => (
 
 export default Tabs;
 
-/* for testing */
+/* For testing */
 export { Overview, Stacked, Collapsed, TabsText };

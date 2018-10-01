@@ -114,5 +114,5 @@ const ProgressTracker = () => (
 
 export default ProgressTracker;
 
-/* for testing */
+/* For testing */
 export { BasicProgressTracker, SmallProgressTracker, DisabledProgressTracker, ProgressTrackerText };

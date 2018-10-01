@@ -51,9 +51,6 @@ const StatusText = () => (
 );
 
 class Status extends Component {
-    componentDidMount () {
-    }
-
     render () {
         return (
             <div className="doc-container">
@@ -68,5 +65,5 @@ class Status extends Component {
 
 export default Status;
 
-/* for testing */
+/* For testing */
 export { Overview, ExtendedUsage, StatusText };

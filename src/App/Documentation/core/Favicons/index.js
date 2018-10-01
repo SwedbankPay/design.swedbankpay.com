@@ -66,18 +66,16 @@ const FaviconsText = () => (
     </div>
 );
 
-const Favicons = () => {
-    return (
-        <div className="doc-container">
-            <div className="row">
-                <FaviconsText />
-                <DocToc component={FaviconsText} />
-            </div>
+const Favicons = () => (
+    <div className="doc-container">
+        <div className="row">
+            <FaviconsText />
+            <DocToc component={FaviconsText} />
         </div>
-    );
-};
+    </div>
+);
 
 export default Favicons;
 
-/* for testing */
+/* For testing */
 export { OurFavicon, Usage, FaviconsText };

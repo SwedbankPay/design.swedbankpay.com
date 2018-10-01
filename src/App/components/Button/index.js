@@ -24,14 +24,18 @@ const Button = ({ label, id, name, value, href, icon, loading, type, disabled, b
 
     href ? attrs.role = "button" : attrs.type = btnType || "button";
 
-    if (href) return (
-        <a className={btnClasses} {...attrs}>{icon ? "\n\t" : null}
-            {icon ? <i className="material-icons">{icon}</i> : null}
-            {(icon && label) ? <span>{label}</span> : label}
-        </a>
-    );
+    if (href) {
+        return (
+            <a className={btnClasses} {...attrs}>{icon ? "\n\t" : null}
+                {icon ? <i className="material-icons">{icon}</i> : null}
+                {(icon && label) ? <span>{label}</span> : label}
+            </a>
+        );
+    }
 
-    if (input) return <input className={btnClasses} {...attrs}/>;
+    if (input) {
+        return <input className={btnClasses} {...attrs}/>;
+    }
 
     return (
         <button className={btnClasses} {...attrs}>{icon ? "\n\t\t" : null}

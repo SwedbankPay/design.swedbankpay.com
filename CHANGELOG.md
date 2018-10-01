@@ -1,8 +1,16 @@
 # Changelog
 
-## [0.11.1] - 2018-09-26
+## [0.1x.x] - 2018-xx-xx
+
+### Added
+
+### Changed
+
+- Updated readme with deploy/release procedure.
 
 ### Fixed
 
-- Fixed issue with documentation page for toast crashing.
-- Fixed bug with topbar script crashing when topbar button does not contain an icon.
+- Fixed issue with item-list alignment.
+- Fixed issue with action list icon being visible through topbar.
+
+### Removed

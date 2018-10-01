@@ -9,9 +9,7 @@ describe("Documentation: Alerts", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Alerts />
-        );
+        const wrapper = shallow(<Alerts />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Documentation: Alerts", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <BasicUsage />
-            );
+            const wrapper = shallow(<BasicUsage />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("Documentation: Alerts", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <AlertWithIcon />
-            );
+            const wrapper = shallow(<AlertWithIcon />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -50,9 +44,7 @@ describe("Documentation: Alerts", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <ClosingTheAlert />
-            );
+            const wrapper = shallow(<ClosingTheAlert />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -64,9 +56,7 @@ describe("Documentation: Alerts", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <ExtendedUsage />
-            );
+            const wrapper = shallow(<ExtendedUsage />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -78,9 +68,7 @@ describe("Documentation: Alerts", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <AlertsText />
-            );
+            const wrapper = shallow(<AlertsText />);
 
             expect(wrapper).toMatchSnapshot();
         });

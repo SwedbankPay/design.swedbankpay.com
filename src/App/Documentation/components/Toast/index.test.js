@@ -9,9 +9,7 @@ describe("Components: Toast", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Toast />
-        );
+        const wrapper = shallow(<Toast />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Components: Toast", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Overview />
-            );
+            const wrapper = shallow(<Overview />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("Components: Toast", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Options />
-            );
+            const wrapper = shallow(<Options />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -50,9 +44,7 @@ describe("Components: Toast", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <PremadeToasts />
-            );
+            const wrapper = shallow(<PremadeToasts />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -64,9 +56,7 @@ describe("Components: Toast", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <ToastText />
-            );
+            const wrapper = shallow(<ToastText />);
 
             expect(wrapper).toMatchSnapshot();
         });

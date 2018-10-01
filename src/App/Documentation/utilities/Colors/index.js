@@ -69,5 +69,5 @@ const Colors = () => (
 
 export default Colors;
 
-/* for testing */
+/* For testing */
 export { TextColors, BackgroundColors, ColorsText };

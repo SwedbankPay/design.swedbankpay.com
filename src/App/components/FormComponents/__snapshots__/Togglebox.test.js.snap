@@ -8,6 +8,8 @@ exports[`Component: Togglebox -  renders checked 1`] = `
 
   <input
     defaultChecked={true}
+    disabled={null}
+    id={null}
     type="checkbox"
   />
   
@@ -22,7 +24,9 @@ exports[`Component: Togglebox -  renders disabled 1`] = `
   
 
   <input
+    defaultChecked={null}
     disabled={true}
+    id={null}
     type="checkbox"
   />
   
@@ -37,6 +41,8 @@ exports[`Component: Togglebox -  renders with id and label 1`] = `
   
 
   <input
+    defaultChecked={null}
+    disabled={null}
     id="test"
     type="checkbox"
   />
@@ -59,6 +65,9 @@ exports[`Component: Togglebox -  renders without label 1`] = `
   
 
   <input
+    defaultChecked={null}
+    disabled={null}
+    id={null}
     type="checkbox"
   />
   

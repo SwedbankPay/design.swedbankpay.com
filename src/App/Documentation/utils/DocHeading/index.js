@@ -13,6 +13,7 @@ const _generateTitle = path => path.match(/[^/]*$/)[0]
 
 const DocHeading = ({ location }) => {
     const title = _generateTitle(location.pathname);
+
     _setTitle(title);
 
     return <h1>{title}</h1>;

@@ -128,7 +128,6 @@ const AddingStyles = () => {
         </>
     );
 
-
     return (
         <div>
             <h2 id="adding-styles">Adding styles</h2>
@@ -220,7 +219,8 @@ const AddingJavaScript = () => {
             <AddScriptToPX />
             <InitializingTheScript />
         </div>
-    );};
+    );
+};
 
 const ContributingText = () => (
     <div className="col-md-12 col-lg-10">
@@ -244,5 +244,5 @@ const Contributing = () => (
 
 export default Contributing;
 
-/* for testing */
+/* For testing */
 export { CreatingYourComponent, CreateADocumentationPage, AddComponentToRoutes, AddingStyles, AddingJavaScript, ContributingText };

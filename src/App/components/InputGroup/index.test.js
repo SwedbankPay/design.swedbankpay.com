@@ -9,9 +9,7 @@ describe("Component: InputGroup - ", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <InputGroup type="test" />
-        );
+        const wrapper = shallow(<InputGroup type="test" />);
 
         expect(wrapper).toMatchSnapshot();
     });

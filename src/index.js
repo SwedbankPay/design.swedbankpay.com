@@ -10,7 +10,7 @@ import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js";
 // Polyfills
 import "./polyfills";
 
-// px-script
+// Px-script
 import "./px-script";
 
 import "./less/px.less";

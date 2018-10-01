@@ -6,15 +6,19 @@ import Loader from "@/Loader";
 
 describe("px-script: loader", () => {
     const div = document.createElement("div");
+
     document.body.appendChild(div);
 
     it("is defined", () => {
         expect(loader).toBeDefined();
     });
 
-    it("method init is defined and adds loader markup to tags with the attribute [data-loader]", () => {
+    it("has an init method", () => {
         expect(loader.init).toBeDefined();
+        expect(loader.init).toBeInstanceOf(Function);
+    });
 
+    it("method init is defined and adds loader markup to tags with the attribute [data-loader]", () => {
         const Loaders = () => (
             <div>
                 <Loader size="small" />

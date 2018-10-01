@@ -9,9 +9,7 @@ describe("Components: Badge", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Badge />
-        );
+        const wrapper = shallow(<Badge />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Components: Badge", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Overview />
-            );
+            const wrapper = shallow(<Overview />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("Components: Badge", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <FurtherUsage />
-            );
+            const wrapper = shallow(<FurtherUsage />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -50,9 +44,7 @@ describe("Components: Badge", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <BadgeText />
-            );
+            const wrapper = shallow(<BadgeText />);
 
             expect(wrapper).toMatchSnapshot();
         });

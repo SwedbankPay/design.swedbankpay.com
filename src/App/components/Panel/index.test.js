@@ -9,17 +9,13 @@ describe("Component: Panel - ", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Panel />
-        );
+        const wrapper = shallow(<Panel />);
 
         expect(wrapper).toMatchSnapshot();
     });
 
     it("renders without header when prop title is missing", () => {
-        const wrapper = shallow(
-            <Panel />
-        );
+        const wrapper = shallow(<Panel />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).not.toContain("header");
@@ -27,9 +23,7 @@ describe("Component: Panel - ", () => {
     });
 
     it("renders with a header without subtitle when prop title is provided and prop subTitle is missing", () => {
-        const wrapper = shallow(
-            <Panel title="test" />
-        );
+        const wrapper = shallow(<Panel title="test" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("header");
@@ -38,9 +32,7 @@ describe("Component: Panel - ", () => {
     });
 
     it("renders with a header and subtitle when prop title and subTitle is provided", () => {
-        const wrapper = shallow(
-            <Panel title="test" subTitle="test" />
-        );
+        const wrapper = shallow(<Panel title="test" subTitle="test" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("header");
@@ -49,9 +41,7 @@ describe("Component: Panel - ", () => {
     });
 
     it("renders without panel-body when no children is provided", () => {
-        const wrapper = shallow(
-            <Panel />
-        );
+        const wrapper = shallow(<Panel />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).not.toContain("panel-body");
@@ -70,18 +60,14 @@ describe("Component: Panel - ", () => {
     });
 
     it("renders without a footer when prop footerText is not provided", () => {
-        const wrapper = shallow(
-            <Panel />
-        );
+        const wrapper = shallow(<Panel />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).not.toContain("footer");
     });
 
     it("renders with a footer when prop footerText is provided", () => {
-        const wrapper = shallow(
-            <Panel footerText="test" />
-        );
+        const wrapper = shallow(<Panel footerText="test" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("footer");
@@ -89,36 +75,28 @@ describe("Component: Panel - ", () => {
     });
 
     it("renders with class 'panel-bottomless when prop removeBottomPadding is true", () => {
-        const wrapper = shallow(
-            <Panel removeBottomPadding />
-        );
+        const wrapper = shallow(<Panel removeBottomPadding />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("panel-bottomless");
     });
 
     it("renders with class 'panel-no-padding' when prop removeAllPadding  is true", () => {
-        const wrapper = shallow(
-            <Panel removeAllPadding />
-        );
+        const wrapper = shallow(<Panel removeAllPadding />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("panel-no-padding");
     });
 
     it("renders with class 'panel-half-padding' when prop halfPadding is true", () => {
-        const wrapper = shallow(
-            <Panel halfPadding />
-        );
+        const wrapper = shallow(<Panel halfPadding />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("panel-half-padding");
     });
 
     it("renders with class 'panel-dark' when prop darkMode is true", () => {
-        const wrapper = shallow(
-            <Panel darkMode />
-        );
+        const wrapper = shallow(<Panel darkMode />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("panel-dark");
@@ -127,9 +105,7 @@ describe("Component: Panel - ", () => {
     it("prop type is an enum with set values", () => {
         console.error = jest.fn();
 
-        const wrapper = shallow(
-            <Panel type="test" />
-        );
+        const wrapper = shallow(<Panel type="test" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(console.error).toHaveBeenCalled();

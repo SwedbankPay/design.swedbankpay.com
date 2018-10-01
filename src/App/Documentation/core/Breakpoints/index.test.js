@@ -9,9 +9,7 @@ describe("Core: Breakpoints", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Breakpoints />
-        );
+        const wrapper = shallow(<Breakpoints />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Core: Breakpoints", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Overview />
-            );
+            const wrapper = shallow(<Overview />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("Core: Breakpoints", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <BreakpointsText />
-            );
+            const wrapper = shallow(<BreakpointsText />);
 
             expect(wrapper).toMatchSnapshot();
         });

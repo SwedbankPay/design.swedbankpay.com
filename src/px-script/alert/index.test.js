@@ -6,10 +6,16 @@ import Alert from "@/Alert";
 
 describe("px-script: alert", () => {
     const div = document.createElement("div");
+
     document.body.appendChild(div);
 
     it("is defined", () => {
         expect(alert).toBeDefined();
+    });
+
+    it("has an init method", () => {
+        expect(alert.init).toBeDefined();
+        expect(alert.init).toBeInstanceOf(Function);
     });
 
     it("method init adds eventlisteners on all close buttons", () => {
@@ -19,6 +25,7 @@ describe("px-script: alert", () => {
                 <Alert type="success" close display />
             </>
         );
+
         ReactDOM.render(<Alerts />, div);
 
         const renderedButtons = document.querySelectorAll("[data-alert-close]");
@@ -50,9 +57,11 @@ describe("px-script: alert", () => {
         ReactDOM.render(<AlertTest />, div);
 
         const renderedButton = document.querySelector("[data-alert-close]");
+
         expect(renderedButton).toBeDefined();
 
         const targetAlert = document.getElementById(renderedButton.dataset.alertClose);
+
         expect(targetAlert.classList).not.toContain("d-none");
 
         alert.init();

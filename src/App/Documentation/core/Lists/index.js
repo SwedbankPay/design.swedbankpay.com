@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import { ComponentPreview, DocToc, Icon } from "#";
 import actionList from "$/px-script/action-list";
 
-
 const BasicList = () => (
     <>
         <h2 id="basic-list">Basic list</h2>
@@ -33,7 +32,6 @@ const BasicList = () => (
         </ComponentPreview>
     </>
 );
-
 const InlineList = () => (
     <>
         <h2 id="inline-list">Inline list</h2>
@@ -186,7 +184,8 @@ class Lists extends Component {
     componentDidMount () {
         actionList.init();
     }
-    render (){
+
+    render () {
         return (
             <div className="doc-container">
                 <div className="row">
@@ -197,7 +196,8 @@ class Lists extends Component {
         );
     }
 }
+
 export default Lists;
 
-/* for testing */
+/* For testing */
 export { BasicList, InlineList, DescriptionList, SettingsList, ItemList, StatusItemList, StripedItemList, ListsText };
