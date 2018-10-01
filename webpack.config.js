@@ -224,6 +224,16 @@ module.exports = (env, argv) => {
                         ]
                     }
                 ]
+            })
+        );
+    }
+
+    if (isRelease) {
+        config.plugins.push(
+            new SentryCliPlugin({
+                release: version,
+                include: ".",
+                ignore: ["node_modules", "webpack.config.js"]
             }),
             new webpack.DefinePlugin({
                 "process.env": {
