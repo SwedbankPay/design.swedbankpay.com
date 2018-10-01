@@ -29,9 +29,12 @@ exports[`Components: Tabs Collapsed renders 1`] = `
     <Tabs
       items={
         Array [
-          "Tab #1",
-          "Tab #2",
-          "Tab #3",
+          "Kort",
+          "Rabatter",
+          "Transaksjoner",
+          "Faktura",
+          "Instillinger",
+          "Audit trail",
         ]
       }
       mode="collapsed"
@@ -69,9 +72,12 @@ exports[`Components: Tabs Overview renders 1`] = `
     <Tabs
       items={
         Array [
-          "Tab #1",
-          "Tab #2",
-          "Tab #3",
+          "Kort",
+          "Rabatter",
+          "Transaksjoner",
+          "Faktura",
+          "Instillinger",
+          "Audit trail",
         ]
       }
       mode="auto"
@@ -109,9 +115,12 @@ exports[`Components: Tabs Stacked renders 1`] = `
     <Tabs
       items={
         Array [
-          "Tab #1",
-          "Tab #2",
-          "Tab #3",
+          "Kort",
+          "Rabatter",
+          "Transaksjoner",
+          "Faktura",
+          "Instillinger",
+          "Audit trail",
         ]
       }
       mode="stacked"

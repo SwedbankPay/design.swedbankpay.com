@@ -3,7 +3,7 @@ import React from "react";
 import { ComponentPreview, DocToc, ExperimentalComponentAlert } from "#";
 import TabsComponent from "@/Tabs";
 
-const tabItems = ["Tab #1", "Tab #2", "Tab #3"];
+const tabItems = ["Kort", "Rabatter", "Transaksjoner", "Faktura", "Instillinger", "Audit trail"];
 
 const Overview = () => (
     <>
