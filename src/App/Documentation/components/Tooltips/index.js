@@ -27,15 +27,15 @@ const Overview = () => (
                     className="btn btn-primary"
                     type="button"
                     data-tooltip="This is a tooltip!"
-                    data-tooltip-position="right"
-                >Tooltip to the right
+                    data-tooltip-position="bottom"
+                >Tooltip to the bottom
                 </button>{"\n"}
                 <button
                     className="btn btn-primary"
                     type="button"
                     data-tooltip="This is a tooltip!"
-                    data-tooltip-position="bottom"
-                >Tooltip to the bottom
+                    data-tooltip-position="right"
+                >Tooltip to the right
                 </button>{"\n"}
             </div>
         </ComponentPreview>
