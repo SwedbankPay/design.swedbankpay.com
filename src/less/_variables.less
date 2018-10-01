@@ -33,7 +33,6 @@
 // 22. Toast
 // 23. Tooltip
 // 24. Topbar
-// 25. Well
 
 // ==========================================================================
 //
@@ -257,8 +256,6 @@
 @h5-font-size:                              @base-font-size * 1.25;
 @h6-font-size:                              @base-font-size;
 
-@headings-margin-top:                       @base-margin-xl;
-@headings-margin-bottom:                    @base-margin-sm;
 @headings-font-family:                      inherit;
 @headings-font-weight:                      500;
 @headings-line-height:                      1.2;
@@ -491,7 +488,7 @@
 
 @modal-heading-padding:                     @modal-padding @modal-padding-l;
 @modal-body-padding:                        @modal-padding-l @modal-padding-l @modal-padding @modal-padding-l;
-@modal-footer-padding:                      1rem 2rem 0.6rem 2rem; //Todo cleanup
+@modal-footer-padding:                      @base-padding @base-padding-xl;
 
 @modal-size-sm:                             500px;
 @modal-size-md:                             750px;
@@ -604,14 +601,11 @@
 @topbar-slide-transition:                   0.5s ease;
 @topbar-background-transition:              background-color 0.5s ease-in;
 
+@topbar-margin:                             @base-margin+@base-margin-xs;
+@topbar-padding:                            @base-padding+@base-margin-xs;
+
 @topbar-margin:                             @base-margin;
 @topbar-margin-s:                           @base-margin-sm;
 
 @topbar-padding:                            @base-padding;
 @topbar-padding-s:                          @base-padding-sm;
-
-// 25. Well
-// ==========================================================================
-
-@well-padding:                              @base-padding;
-@well-padding-s:                            @base-padding-sm;
