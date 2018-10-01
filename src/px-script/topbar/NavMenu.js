@@ -32,6 +32,8 @@ export default class NavMenu {
             if (this.navMenuElement) {
                 this._initTargetLinks();
             }
+
+            this._initAnchors();
         }
     }
 
@@ -77,26 +79,36 @@ export default class NavMenu {
         });
     }
 
-    open () {
-        this.navMenuElement.classList.add("in");
-        this.isOpen = true;
+    _initAnchors () {
+        // Closing menu for clicking on links in SPA's.
+        this.navMenuElement.querySelectorAll("a")
+            .forEach(anchor => anchor.addEventListener("click", () => this.close()));
+    }
 
-        if (this.iconElement) {
-            this.iconElement.innerHTML = icons.close;
+    open () {
+        if (!this.isOpen) {
+            this.navMenuElement.classList.add("in");
+            this.isOpen = true;
+
+            if (this.iconElement) {
+                this.iconElement.innerHTML = icons.close;
+            }
         }
     }
 
     close () {
-        this.navMenuElement.classList.remove("in");
-        this.isOpen = false;
+        if (this.isOpen) {
+            this.navMenuElement.classList.remove("in");
+            this.isOpen = false;
 
-        if (this.iconElement) {
-            this.iconElement.innerHTML = this.userIcon;
+            if (this.iconElement) {
+                this.iconElement.innerHTML = this.userIcon;
+            }
+
+            setTimeout(() => {
+                this.reset();
+            }, 500);
         }
-
-        setTimeout(() => {
-            this.reset();
-        }, 500);
     }
 
     goBack () {
