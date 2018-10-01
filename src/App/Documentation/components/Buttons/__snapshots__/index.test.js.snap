@@ -229,8 +229,8 @@ exports[`Documentation: Buttons Buttons Text renders 1`] = `
   <Examples />
   <UsageWithOtherTags />
   <OutlineButtons />
+  <ButtonGroup />
   <Sizes />
-  <ButtonsGroup />
   <ActiveState />
   <DisabledState />
   <UsageWithIcons />
