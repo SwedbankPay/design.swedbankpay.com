@@ -17,10 +17,7 @@
                 color: fade(@brand-primary, 80%);
                 background-color: @white;
                 display: block;
-                padding: 0.5rem 0;
-                margin: 0 1rem;
                 border-bottom: 2px solid @white;
-                transition: border-bottom 0.2s ease-in-out;
             }
 
             a {
@@ -38,13 +35,59 @@
                 a:hover {
                     color: @brand-primary;
                     background-color: @white;
-                    border-bottom: 2px solid @brand-primary;
+                }
+            }
+        }
+
+        &.tabs-auto {
+            a {
+                &:focus,
+                &:active,
+                &:hover {
+                    text-decoration: none;
+                    color: @brand-primary;
+                }
+            }
+
+            li {
+                a,
+                span {
+                    margin: 0 1rem;
+                    padding: 0.5rem 0;
+                    transition: border-bottom 0.2s ease-in-out;
+                }
+
+                &.active {
+                    span,
+                    a,
+                    a:hover {
+                        color: @brand-primary;
+                        background-color: @white;
+                        border-bottom: 2px solid @brand-primary;
+                    }
                 }
             }
         }
 
         &.tabs-stacked {
+            border: 0;
+            border-left: 1px solid rgba(0, 0, 0, 0.1);
             flex-direction: column;
+
+            li {
+                a,
+                span {
+                    padding-left: 1rem;
+                }
+
+                &.active {
+                    a,
+                    span {
+                        padding-left: calc(1rem - 2px);
+                        border-left: 2px solid @brand-primary;
+                    }
+                }
+            }
         }
 
         &.tabs-collapsed {
