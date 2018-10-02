@@ -1,8 +1,10 @@
 # Changelog
 
-## [0.1x.x] - 2018-xx-xx
+## [0.12.0] - 2018-xx-xx
 
 ### Added
+
+- Added class `.button-group`.
 
 ### Changed
 
