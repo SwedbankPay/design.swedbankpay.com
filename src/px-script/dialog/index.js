@@ -19,6 +19,10 @@ class Dialog {
             });
         }
 
+        if (this.isOpen) {
+            document.body.classList.add("dialog-open");
+        }
+
         // Close dialog on esc
         document.addEventListener("keydown", e => {
             e.keyCode === 27 ? this.close() : null;
@@ -31,19 +35,15 @@ class Dialog {
     }
 
     open () {
-        if (!this.isOpen) {
-            this.isOpen = true;
-            this._el.classList.add("d-flex");
-            document.body.classList.add("dialog-open");
-        }
+        this.isOpen = true;
+        this._el.classList.add("d-flex");
+        document.body.classList.add("dialog-open");
     }
 
     close () {
-        if (this.isOpen) {
-            this.isOpen = false;
-            this._el.classList.remove("d-flex");
-            document.body.classList.remove("dialog-open");
-        }
+        this.isOpen = false;
+        this._el.classList.remove("d-flex");
+        document.body.classList.remove("dialog-open");
     }
 
 }
