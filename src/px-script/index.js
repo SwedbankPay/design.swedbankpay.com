@@ -11,6 +11,7 @@ import sheet from "./sheet";
 import script from "./script";
 import toast from "./toast";
 import topbar from "./topbar";
+import utils from "./utils";
 import validation from "./validation";
 
 // Sentry reporter
@@ -30,6 +31,7 @@ const px = {
     script,
     toast,
     topbar,
+    utils,
     validation
 };
 
@@ -43,4 +45,4 @@ if (!window.stopPx) {
 
 export default px;
 
-export { actionList, alert, button, datepicker, dialog, loader, rangeslider, sheet, script, toast, topbar, validation };
+export { actionList, alert, button, datepicker, dialog, loader, rangeslider, sheet, script, toast, topbar, utils, validation };
