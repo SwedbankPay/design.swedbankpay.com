@@ -47,4 +47,6 @@ describe("px-script: utils", () => {
             expect(expectedObj).toEqual(extObj);
         });
     });
+
+    // TODO: Write tests for isWithinBoundingBox [EH]
 });
