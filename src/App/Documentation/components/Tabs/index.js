@@ -10,7 +10,7 @@ const Overview = () => (
         <h2 id="overview">Overview</h2>
         <p>Overview... <code className="token property">.tabs</code>...<code className="token property">.tabs-auto</code></p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <TabsComponent mode="auto" items={tabItems} />
+            <TabsComponent mode="responsive" items={tabItems} />
         </ComponentPreview>
     </>
 );
