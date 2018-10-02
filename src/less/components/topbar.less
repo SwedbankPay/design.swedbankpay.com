@@ -22,7 +22,7 @@
 
     .topbar-logo {
         height: 45px;
-        margin-left: 1.25rem;
+        margin-left: @topbar-margin;
         margin-top: 5px;
         margin-right: auto;
         background: url("../../img/px-logo.svg") no-repeat;
@@ -37,7 +37,7 @@
         border: 0;
         background: none;
         height: 100%;
-        padding: 0 1.25rem;
+        padding: 0 @topbar-padding;
         font-weight: bold;
         outline: 0;
         display: flex;
@@ -80,7 +80,7 @@
     &.topbar-nav-right {
         transition: right @topbar-slide-transition;
         right: -@topbar-nav-width;
-        padding: 1rem;
+        padding: @base-padding;
 
         &.in {
             right: 0;
@@ -133,14 +133,14 @@
 
                 .slides-container {
                     width: @topbar-nav-slide-width;
-                    margin: 0.5rem;
-                    padding: 0 0.5rem;
+                    margin: @base-margin-sm;
+                    padding: 0 @base-padding-sm;
                 }
             }
 
             .slide-back-btn {
                 visibility: hidden;
-                padding: 0.5rem;
+                padding: @base-padding-sm;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -151,16 +151,16 @@
             }
 
             .slides-container {
-                margin: 0.5rem 1rem;
+                margin: @base-margin-sm @base-margin;
                 flex-grow: 1;
 
                 .topbar-nav-group {
-                    margin: 0.5rem 0 1rem;
+                    margin: @base-margin-sm 0 @base-margin;
 
                     .topbar-nav-group-heading {
                         text-transform: uppercase;
                         border-bottom: 1px solid @gray-2;
-                        padding-bottom: 0.25rem;
+                        padding-bottom: @base-padding-xs;
                         opacity: 0.65;
                     }
                 }
@@ -172,7 +172,7 @@
     span {
         display: block;
         color: @gray-7;
-        padding: 0.5rem 0 0.5rem 0.6rem;
+        padding: @base-padding-sm 0 @base-padding-sm @base-padding-sm;
         cursor: pointer;
         text-transform: uppercase;
         border: none;

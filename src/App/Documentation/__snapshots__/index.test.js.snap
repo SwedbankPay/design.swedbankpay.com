@@ -229,6 +229,7 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "component": Object {
                   "ActiveState": [Function],
+                  "ButtonGroup": [Function],
                   "ButtonLoader": [Function],
                   "ButtonsText": [Function],
                   "DisabledState": [Function],
