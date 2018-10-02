@@ -1,5 +1,3 @@
-import { findAncestor } from "../utils";
-
 const SELECTORS = {
     ALERT: ".alert",
     CLOSE: "[data-alert-close]"
@@ -29,9 +27,10 @@ const alert = (() => {
                 }
 
             } else {
-                const alert = findAncestor(btn, "alert");
+                const alert = btn.closest(".alert");
 
-                btn.addEventListener("click", () => {
+                btn.addEventListener("click", e => {
+                    e.preventDefault();
                     _hideAlert(alert);
                 });
             }
