@@ -7,35 +7,37 @@ const Overview = () => (
         <h2 id="overview">Overview</h2>
         <p>Add the attribute <Attribute data name="tooltip" /> to the desired element and add your content in its value to create a tooltip.</p>
         <p>You can use the attribute <Attribute data name="tooltip-position" /> to position the tooltip relative to the containing element, use the values <Attribute value="top" />, <Attribute value="right" />, <Attribute value="bottom" /> or <Attribute value="left" />. If the attribute is not provided, it will default to top.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <button
-                className="btn btn-primary"
-                type="button"
-                data-tooltip="This is a tooltip!"
-                data-tooltip-position="left"
-            >Tooltip to the left
-            </button>{"\n"}
-            <button
-                className="btn btn-primary"
-                type="button"
-                data-tooltip="This is a tooltip!"
-                data-tooltip-position="top"
-            >Tooltip on top
-            </button>{"\n"}
-            <button
-                className="btn btn-primary"
-                type="button"
-                data-tooltip="This is a tooltip!"
-                data-tooltip-position="right"
-            >Tooltip to the right
-            </button>{"\n"}
-            <button
-                className="btn btn-primary"
-                type="button"
-                data-tooltip="This is a tooltip!"
-                data-tooltip-position="bottom"
-            >Tooltip to the bottom
-            </button>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+            <div className="button-group">{"\n"}
+                <button
+                    className="btn btn-primary"
+                    type="button"
+                    data-tooltip="This is a tooltip!"
+                    data-tooltip-position="left"
+                >Tooltip to the left
+                </button>{"\n"}
+                <button
+                    className="btn btn-primary"
+                    type="button"
+                    data-tooltip="This is a tooltip!"
+                    data-tooltip-position="top"
+                >Tooltip on top
+                </button>{"\n"}
+                <button
+                    className="btn btn-primary"
+                    type="button"
+                    data-tooltip="This is a tooltip!"
+                    data-tooltip-position="bottom"
+                >Tooltip to the bottom
+                </button>{"\n"}
+                <button
+                    className="btn btn-primary"
+                    type="button"
+                    data-tooltip="This is a tooltip!"
+                    data-tooltip-position="right"
+                >Tooltip to the right
+                </button>{"\n"}
+            </div>
         </ComponentPreview>
     </>
 );

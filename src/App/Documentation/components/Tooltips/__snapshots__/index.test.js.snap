@@ -42,46 +42,55 @@ exports[`Components: Tooltip Overview renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    removeOuterTag={true}
     showCasePanel={true}
   >
-    <button
-      className="btn btn-primary"
-      data-tooltip="This is a tooltip!"
-      data-tooltip-position="left"
-      type="button"
+    <div
+      className="button-group"
     >
-      Tooltip to the left
-    </button>
-    
+      
 
-    <button
-      className="btn btn-primary"
-      data-tooltip="This is a tooltip!"
-      data-tooltip-position="top"
-      type="button"
-    >
-      Tooltip on top
-    </button>
-    
+      <button
+        className="btn btn-primary"
+        data-tooltip="This is a tooltip!"
+        data-tooltip-position="left"
+        type="button"
+      >
+        Tooltip to the left
+      </button>
+      
 
-    <button
-      className="btn btn-primary"
-      data-tooltip="This is a tooltip!"
-      data-tooltip-position="right"
-      type="button"
-    >
-      Tooltip to the right
-    </button>
-    
+      <button
+        className="btn btn-primary"
+        data-tooltip="This is a tooltip!"
+        data-tooltip-position="top"
+        type="button"
+      >
+        Tooltip on top
+      </button>
+      
 
-    <button
-      className="btn btn-primary"
-      data-tooltip="This is a tooltip!"
-      data-tooltip-position="bottom"
-      type="button"
-    >
-      Tooltip to the bottom
-    </button>
+      <button
+        className="btn btn-primary"
+        data-tooltip="This is a tooltip!"
+        data-tooltip-position="bottom"
+        type="button"
+      >
+        Tooltip to the bottom
+      </button>
+      
+
+      <button
+        className="btn btn-primary"
+        data-tooltip="This is a tooltip!"
+        data-tooltip-position="right"
+        type="button"
+      >
+        Tooltip to the right
+      </button>
+      
+
+    </div>
   </ComponentPreview>
 </Fragment>
 `;

@@ -1,7 +1,7 @@
 // Base classes
 .panel {
-    margin-top: @panel-margin-bottom;
-    margin-bottom: @panel-margin-bottom;
+    margin-top: @base-margin;
+    margin-bottom: @base-margin;
     background-color: @panel-background-color;
     // border: 1px solid @gray-9;
     box-shadow: @panel-box-shadow;
@@ -46,7 +46,7 @@
         }
     }
 
-    &.panel-no-padding {
+    &.panel-no-padding { //Is this used anywhere? [AW]
         .panel-body {
             margin: 0;
             padding: 0;
@@ -57,7 +57,7 @@
         }
     }
 
-    &.panel-half-padding {
+    &.panel-half-padding { //Is this used anywhere? [AW]
         .panel-body {
             margin: 0;
             padding: 7px 15px;
@@ -81,7 +81,8 @@
 
     // Optional heading
     > header {
-        padding: @panel-heading-padding;
+        padding: @base-padding;
+        padding-left: @base-padding-xl;
         border-bottom: 1px solid @panel-default-border-color;
     }
 
@@ -127,10 +128,8 @@
     // Optional footer (stays gray in every modifier class)
     > footer {
         background-color: @background-body;
-        // background-color: @gray-10;
         padding: @panel-footer-padding;
         border-top: 1px solid @panel-default-border-color;
-        // margin: @panel-footer-margin;
 
         &.panel-table-footer {
             padding: 0;

@@ -21,15 +21,15 @@
         min-width: 18rem;
         max-width: 18rem;
         flex: 1;
-        margin: 0 2rem 1rem;
+        margin: @card-margin;
 
         header {
-            padding: 0 1rem;
+            padding: 0 @base-padding;
 
             /* stylelint-disable selector-list-comma-newline-after */
             h1, h2, h3, h4, h5, h6,
             .h1, .h2, .h3, .h4, .h5, .h6 {
-                margin: 1rem 0;
+                margin: @base-margin 0;
             }
             /* stylelint-enable selector-list-comma-newline-after */
 
@@ -72,7 +72,7 @@
         }
 
         .highlight {
-            padding: 2rem;
+            padding: @base-padding-xl;
             background-color: @gray-10;
             display: flex;
             justify-content: center;
@@ -83,7 +83,7 @@
                 font-size: 2rem;
                 line-height: 2rem;
                 color: @gray-3;
-                margin-right: 0.5rem;
+                margin-right: @base-margin-sm;
             }
 
             .highlight-wrapper {
@@ -104,17 +104,17 @@
         }
 
         .card-body {
-            padding: 1rem;
+            padding: @base-padding;
         }
 
         footer {
             border-top: 1px solid @gray-9;
-            padding: 1rem 2rem;
+            padding: @base-padding @base-padding-xl;
             margin-top: auto;
 
             .footer-text {
                 p {
-                    margin-bottom: 0.25rem;
+                    margin-bottom: @base-margin-xs;
                 }
             }
 
@@ -138,7 +138,7 @@
             margin-top: 1.5;
         }
 
-        .text {
+        .text { // Todo: clean up these
             flex-grow: 1;
             max-width: 60ch;
 
