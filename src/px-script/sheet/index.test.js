@@ -6,8 +6,8 @@ import sheet from "./index";
 describe("px-script: sheet", () => {
     const div = document.createElement("div");
 
-    jest.useFakeTimers();
     document.body.appendChild(div);
+    jest.useFakeTimers();
 
     const Sheet = () => (
         <>

@@ -31,7 +31,7 @@ const datepicker = (() => {
             min: datepickerMin || null,
             max: datepickerMax || null,
             initialValue: datepickerValue || null,
-            required: required || false,
+            required: !!required || false,
             monthsInCalendar: parseInt(datepickerMonths) || 1
         };
 
