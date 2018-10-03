@@ -5,8 +5,35 @@
     display: flex;
     z-index: @zindex-tabs;
 
-    &:hover {
-        i {
+    &.open {
+        ul {
+            margin: 0 auto;
+            padding-bottom: 1rem;
+            display: flex;
+
+            a {
+                padding-left: 0.7rem;
+            }
+
+            &.tabs-responsive {
+                li {
+                    display: block;
+                    border-left: 1px solid @gray-8;
+                    order: 2;
+
+                    &:not(.active) {
+                        &:hover {
+                            a {
+                                border-left: 2px solid @brand-primary;
+                                // padding-left: calc(0.7rem - 1px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        > i {
             transform: rotate(90deg);
             transition: 0.2s transform ease-in-out;
         }
@@ -20,14 +47,8 @@
     }
 
     ul {
-        margin: 0 auto;
-        padding-left: 0.7rem;
-        padding-bottom: 1rem;
-        display: flex;
-
         li {
             list-style: none;
-            padding-left: 0.5rem;
 
             a,
             span {
@@ -42,14 +63,12 @@
             flex-direction: column;
             position: absolute;
             width: 100%;
-            padding-left: 0.65rem;
+            padding-left: 11px;
             background: white;
             border: none;
 
             li {
                 display: none;
-                border-left: 1px solid @gray-8;
-                order: 2;
 
                 &.active {
                     display: block;
@@ -59,20 +78,6 @@
                     order: 1;
                 }
             }
-
-            &:hover {
-                li {
-                    display: block;
-                    transition: 1s display ease-in-out;
-                    z-index: @zindex-tabs;
-                }
-            }
-        }
-
-        .material-icons {
-            font-size: 1.3rem;
-            line-height: 1.75rem;
-            vertical-align: text-top;
         }
     }
 }

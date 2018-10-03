@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { ComponentPreview, DocToc, ExperimentalComponentAlert } from "#";
-import { tabsOpen } from "$/px-script/tabs";
+import { tabs } from "$/px-script";
 import TabsComponent from "@/Tabs";
 
 const tabItems = ["Kort", "Rabatter", "Transaksjoner", "Faktura", "Instillinger", "Audit trail"];
@@ -48,7 +48,7 @@ const TabsText = () => (
 
 class Tabs extends Component {
     componentDidMount () {
-        tabsOpen.init();
+        tabs.init();
     }
 
     render () {
