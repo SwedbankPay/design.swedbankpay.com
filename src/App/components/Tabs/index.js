@@ -18,7 +18,7 @@ class Tabs extends Component {
 
         return (
             <div className="tabs">{"\n"}
-                <i className="material-icons">keyboard_arrow_right</i>
+                {mode === "responsive" ? <i className="material-icons">keyboard_arrow_right</i> : null}
                 <ul className={`tabs-${mode}`}>
                     {items.map((name, i) => (
                         <li key={`tab-item-${name}-${i}`} className={this.state.active === i ? "active" : null}>{"\n"}

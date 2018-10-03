@@ -5,14 +5,25 @@
     display: flex;
     z-index: @zindex-tabs;
 
+    > i {
+        z-index: @zindex-tabs-arrow;
+        margin-top: 0.15rem;
+        cursor: pointer;
+        transition: 0.2s transform ease-in-out;
+    }
+
     &.open {
         ul {
             margin: 0 auto;
             padding-bottom: 1rem;
             display: flex;
 
-            a {
-                padding-left: 0.7rem;
+            li {
+                &:not(.active) {
+                    a {
+                        padding-left: 0.7rem;
+                    }
+                }
             }
 
             &.tabs-responsive {
@@ -25,9 +36,13 @@
                         &:hover {
                             a {
                                 border-left: 2px solid @brand-primary;
-                                // padding-left: calc(0.7rem - 1px);
+                                padding-left: calc(0.7rem - 2px);
                             }
                         }
+                    }
+
+                    &.active {
+                        font-weight: bold;
                     }
                 }
             }
@@ -39,13 +54,6 @@
         }
     }
 
-    > i {
-        z-index: @zindex-tabs-arrow;
-        margin-top: 0.15rem;
-        cursor: pointer;
-        transition: 0.2s transform ease-in-out;
-    }
-
     ul {
         li {
             list-style: none;
@@ -55,7 +63,7 @@
                 color: fade(@brand-primary, 80%);
                 background-color: @white;
                 display: block;
-                border-bottom: 2px solid @white;
+                border-bottom: 0;
             }
         }
 
@@ -72,10 +80,31 @@
 
                 &.active {
                     display: block;
-                    font-weight: bold;
                     border-left: transparent;
                     padding-left: 1rem;
                     order: 1;
+                }
+            }
+        }
+
+        &.tabs-stacked {
+            padding-left: 0;
+
+            li {
+                border-left: 1px solid @gray-8;
+
+                a {
+                    padding-left: 1rem;
+                }
+
+                &.active {
+                    font-weight: bold;
+                    color: @brand-primary;
+
+                    a {
+                        border-left: 2px solid @brand-primary;
+                        padding-left: calc(1rem - 2px);
+                    }
                 }
             }
         }
