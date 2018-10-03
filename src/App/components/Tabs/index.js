@@ -32,7 +32,7 @@ class Tabs extends Component {
 }
 
 Tabs.propTypes = {
-    mode: PropTypes.oneOf(["auto", "stacked", "collapsed", "responsive"]).isRequired,
+    mode: PropTypes.oneOf(["horizontal", "vertical", "responsive"]).isRequired,
     items: PropTypes.array.isRequired
 };
 
