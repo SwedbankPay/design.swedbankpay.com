@@ -19,6 +19,11 @@ class Sheet {
             });
         }
 
+        if (this.isOpen) {
+            this._el.classList.add("d-block");
+            document.body.classList.add("sheet-open");
+        }
+
         // Close sheet on esc
         document.addEventListener("keydown", e => {
             e.keyCode === 27 ? this.close() : null;
@@ -31,23 +36,21 @@ class Sheet {
     }
 
     open () {
-        if (!this.isOpen) {
-            this.isOpen = true;
-            this._el.classList.add("d-block");
-            setTimeout(() => {
-                this._el.classList.add("sheet-open");
-            }, 10); // If set lower than 10, the initial open will be instant.
-        }
+        this.isOpen = true;
+        this._el.classList.add("d-block");
+        document.body.classList.add("sheet-open");
+        setTimeout(() => {
+            this._el.classList.add("sheet-open");
+        }, 10); // If set lower than 10, the initial open will be instant.
     }
 
     close () {
-        if (this.isOpen) {
-            this.isOpen = false;
-            this._el.classList.remove("sheet-open");
-            setTimeout(() => {
-                this._el.classList.remove("d-block");
-            }, 300);
-        }
+        this.isOpen = false;
+        this._el.classList.remove("sheet-open");
+        document.body.classList.remove("sheet-open");
+        setTimeout(() => {
+            this._el.classList.remove("d-block");
+        }, 300);
     }
 }
 

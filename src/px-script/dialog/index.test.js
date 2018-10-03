@@ -96,6 +96,47 @@ describe("px-script: dialog", () => {
         ReactDOM.unmountComponentAtNode(div);
     });
 
+    it("warns user when there is no dialog with an id matching the value of the attribute 'data-dialog-open'", () => {
+        const TestDialog = () => (
+            <>
+                <div className="dialog" id="test-dialog"></div>
+                <button className="btn btn-primary" type="button" data-dialog-open="tester-dialog">Open dialog</button>
+            </>
+        );
+
+        ReactDOM.render(<TestDialog />, div);
+        console.warn = jest.fn();
+
+        dialog.init();
+        expect(console.warn).toHaveBeenCalled();
+        expect(console.warn).toHaveBeenCalledWith(expect.stringContaining("tester-dialog"));
+
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
+    it("warns user when there is no dialog with an id matching the value of the attribute 'data-dialog-close'", () => {
+        const TestDialog = () => (
+            <>
+                <div className="dialog" id="test-dialog">
+                    <section>
+                        <footer>
+                            <button className="btn btn-primary" type="button" data-dialog-close="tester-dialog">Close dialog</button>
+                        </footer>
+                    </section>
+                </div>
+            </>
+        );
+
+        ReactDOM.render(<TestDialog />, div);
+        console.warn = jest.fn();
+
+        dialog.init();
+        expect(console.warn).toHaveBeenCalled();
+        expect(console.warn).toHaveBeenCalledWith(expect.stringContaining("tester-dialog"));
+
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
     it("closes dialog when clicking outside dialog component", () => {
         ReactDOM.render(<OpenDialog />, div);
 
@@ -173,47 +214,6 @@ describe("px-script: dialog", () => {
 
         expect(renderedDialog.classList).not.toContain("d-flex");
         expect(document.body.classList).not.toContain("dialog-open");
-
-        ReactDOM.unmountComponentAtNode(div);
-    });
-
-    it("warns user when there is no dialog with an id matching the value of the attribute 'data-dialog-open'", () => {
-        const Dialog = () => (
-            <>
-                <div className="dialog" id="test-dialog"></div>
-                <button className="btn btn-primary" type="button" data-dialog-open="tester-dialog">Open dialog</button>
-            </>
-        );
-
-        ReactDOM.render(<Dialog />, div);
-        console.warn = jest.fn();
-
-        dialog.init();
-        expect(console.warn).toHaveBeenCalled();
-        expect(console.warn).toHaveBeenCalledWith(expect.stringContaining("tester-dialog"));
-
-        ReactDOM.unmountComponentAtNode(div);
-    });
-
-    it("warns user when there is no dialog with an id matching the value of the attribute 'data-dialog-close'", () => {
-        const Dialog = () => (
-            <>
-                <div className="dialog" id="test-dialog">
-                    <section>
-                        <footer>
-                            <button className="btn btn-primary" type="button" data-dialog-close="tester-dialog">Close dialog</button>
-                        </footer>
-                    </section>
-                </div>
-            </>
-        );
-
-        ReactDOM.render(<Dialog />, div);
-        console.warn = jest.fn();
-
-        dialog.init();
-        expect(console.warn).toHaveBeenCalled();
-        expect(console.warn).toHaveBeenCalledWith(expect.stringContaining("tester-dialog"));
 
         ReactDOM.unmountComponentAtNode(div);
     });
