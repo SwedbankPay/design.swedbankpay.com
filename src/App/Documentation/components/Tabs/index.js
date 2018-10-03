@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 
 import { ComponentPreview, DocToc, ExperimentalComponentAlert } from "#";
+import { tabsOpen } from "$/px-script/tabs";
 import TabsComponent from "@/Tabs";
 
 const tabItems = ["Kort", "Rabatter", "Transaksjoner", "Faktura", "Instillinger", "Audit trail"];
@@ -45,14 +46,22 @@ const TabsText = () => (
     </div>
 );
 
-const Tabs = () => (
-    <div className="doc-container">
-        <div className="row">
-            <TabsText />
-            <DocToc component={TabsText} />
-        </div>
-    </div>
-);
+class Tabs extends Component {
+    componentDidMount () {
+        tabsOpen.init();
+    }
+
+    render () {
+        return (
+            <div className="doc-container">
+                <div className="row">
+                    <TabsText />
+                    <DocToc component={TabsText} />
+                </div>
+            </div>
+        );
+    }
+}
 
 export default Tabs;
 

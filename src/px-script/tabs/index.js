@@ -1,4 +1,4 @@
-const tabs = (() => {
+const tabsOpen = (() => {
     const init = () => {
         const tabsContainer = document.querySelector(".tabs");
 
@@ -22,4 +22,4 @@ const tabs = (() => {
     return { init };
 })();
 
-export default tabs;
+export default tabsOpen;
