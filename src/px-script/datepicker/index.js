@@ -52,9 +52,11 @@ const datepicker = (() => {
     const init = () => {
         const datepickers = document.querySelectorAll("[data-datepicker]");
 
-        datepickers.forEach(picker => {
-            _createDatepicker(picker);
-        });
+        if (datepickers) {
+            datepickers.forEach(picker => {
+                _createDatepicker(picker);
+            });
+        }
     };
 
     return { init };

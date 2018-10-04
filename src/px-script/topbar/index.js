@@ -17,17 +17,17 @@ const topbar = (() => {
             if (rightMenuBtnElement) {
                 rightNavMenu = new NavMenu(rightMenuBtnElement);
             }
+
+            document.querySelector("html").addEventListener("mousedown", e => {
+                if (leftNavMenu && leftNavMenu.isOpen && !leftNavMenu.containsPoint(e.clientX, e.clientY)) {
+                    leftNavMenu.close();
+                }
+
+                if (rightNavMenu && rightNavMenu.isOpen && !rightNavMenu.containsPoint(e.clientX, e.clientY)) {
+                    rightNavMenu.close();
+                }
+            });
         }
-
-        document.querySelector("html").addEventListener("mousedown", e => {
-            if (leftNavMenu && leftNavMenu.isOpen && !leftNavMenu.containsPoint(e.clientX, e.clientY)) {
-                leftNavMenu.close();
-            }
-
-            if (rightNavMenu && rightNavMenu.isOpen && !rightNavMenu.containsPoint(e.clientX, e.clientY)) {
-                rightNavMenu.close();
-            }
-        });
     };
 
     return { init };

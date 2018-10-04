@@ -58,16 +58,20 @@ const validation = (() => {
     };
 
     const init = () => {
-        document.querySelectorAll("[data-validate]").forEach(element => {
-            switch (element.tagName) {
-                case "FORM":
-                    attachFormValidator(element);
+        const validateEls = document.querySelectorAll("[data-validate]");
 
-                    break;
-                default:
-                    attachInputValidator(element);
-            }
-        });
+        if (validateEls) {
+            validateEls.forEach(element => {
+                switch (element.tagName) {
+                    case "FORM":
+                        attachFormValidator(element);
+
+                        break;
+                    default:
+                        attachInputValidator(element);
+                }
+            });
+        }
     };
 
     return {
