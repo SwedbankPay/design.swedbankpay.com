@@ -369,7 +369,7 @@ exports[`Documentation: index renders 1`] = `
                   "default": [Function],
                 },
                 "path": "/docs/components/progress-tracker",
-                "title": "Progress Tracker",
+                "title": "Progress Tracker (deprecated)",
               },
               Object {
                 "component": Object {
@@ -392,6 +392,16 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "BasicStepBar": [Function],
+                  "HorizontalStepBar": [Function],
+                  "StepBarText": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/components/step-bar",
+                "title": "Step Bar",
+              },
+              Object {
+                "component": Object {
                   "Collapsed": [Function],
                   "Overview": [Function],
                   "Stacked": [Function],
@@ -399,7 +409,7 @@ exports[`Documentation: index renders 1`] = `
                   "default": [Function],
                 },
                 "path": "/docs/components/tabs",
-                "title": "Tabs (experimental)",
+                "title": "Tabs",
               },
               Object {
                 "component": Object {
