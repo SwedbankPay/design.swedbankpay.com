@@ -16,7 +16,7 @@ const Rangeslider = ({ name, min, max, step, color, value, disabled, valueLabel,
         <output className="value-label" >{"\n\t\t"}
             <p>{"\n\t\t\t"}
                 {valueLabelPrefix ? <span>{valueLabelPrefix}</span> : null}{valueLabelPrefix ? "\n\t\t\t" : null}
-                <span data-px-rangeslider-value>{value}</span>{"\n\t\t\t"}
+                <span data-rs-value>{value}</span>{"\n\t\t\t"}
                 {valueLabelPostfix ? <span>{valueLabelPostfix}</span> : null}{valueLabelPostfix ? "\n\t\t" : null}
             </p>{"\n\t"}
         </output>

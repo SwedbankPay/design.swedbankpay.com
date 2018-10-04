@@ -24,7 +24,7 @@ exports[`Component: Rangeslider -  renders with a value label 1`] = `
           
 			
           <span
-            data-px-rangeslider-value={true}
+            data-rs-value={true}
           />
           
 			
@@ -64,7 +64,7 @@ exports[`Component: Rangeslider -  renders with a value label and a value label 
           
 			
           <span
-            data-px-rangeslider-value={true}
+            data-rs-value={true}
           />
           
 			
@@ -114,7 +114,7 @@ exports[`Component: Rangeslider -  renders with a value label and a value label 
           
 			
           <span
-            data-px-rangeslider-value={true}
+            data-rs-value={true}
           />
           
 			
