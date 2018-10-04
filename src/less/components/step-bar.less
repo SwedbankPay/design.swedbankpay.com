@@ -5,104 +5,106 @@
     background-color: white;
     font-size: 1.1rem;
     box-shadow: 0 0 15px hsla(0, 0%, 0%, 0.1);
-}
 
-.step-bar > li {
-    display: block;
-    position: relative;
-    padding: 35px 20px 35px 89px;
-    cursor: pointer;
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
-    line-height: 1em;
-}
+    li {
+        display: block;
+        position: relative;
+        padding: 35px 20px 35px 89px;
+        cursor: pointer;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        line-height: 1em;
 
-/* Circle */
-.step-bar > li:before {
-    content: "";
-    position: absolute;
-    box-sizing: border-box;
-    left: 30px;
-    top: 50%;
-    z-index: 10;
-    margin-top: -22.5px;
-    height: 45px;
-    width: 45px;
-    border-radius: 30px;
-    border: 5px solid #e2e2e2;
-    background-color: white;
-}
+        &:hover {
+            background-color: @gray-10;
+        }
 
-/* Line */
-.step-bar > li:after {
-    content: "";
-    position: absolute;
-    left: 50.5px;
-    top: -2px;
-    bottom: 0;
-    width: 5px;
-    background-color: #e2e2e2;
-    z-index: 5;
-}
+        /* Circle */
+        &:before {
+            content: "";
+            position: absolute;
+            box-sizing: border-box;
+            left: 30px;
+            top: 50%;
+            z-index: 10;
+            margin-top: -22.5px;
+            height: 45px;
+            width: 45px;
+            border-radius: 30px;
+            border: 5px solid @gray-8;
+            background-color: @background-white;
+        }
 
-.step-bar > li:first-child {
-    &:after {
-        height: 50%;
-        top: auto;
-        bottom: 0;
+        /* Line */
+        &:after {
+            content: "";
+            position: absolute;
+            left: 50.5px;
+            top: -2px;
+            bottom: 0;
+            width: 5px;
+            background-color: @gray-8;
+            z-index: 5;
+        }
+
+        &:first-child {
+            &:after {
+                height: 50%;
+                top: auto;
+                bottom: 0;
+            }
+        }
+
+        &:last-child {
+            &:after {
+                height: 50%;
+            }
+        }
     }
-}
 
-.step-bar > li:last-child {
-    &:after {
-        height: 50%;
+    .step-bar-item-complete {
+        &:before {
+            border-color: @brand-primary;
+            background-color: @brand-primary;
+        }
+
+        &:after {
+            background-color: @brand-primary;
+        }
     }
-}
 
-.step-bar > .step-bar-item-complete:before {
-    border-color: @brand-primary;
-    background-color: @brand-primary;
-}
+    .step-bar-item-active {
+        background-color: @gray-10;
+        border-color: @gray-9;
 
-.step-bar > .step-bar-item-complete:after {
-    background-color: @brand-primary;
-}
+        &:before {
+            border-color: @brand-primary;
+        }
 
-.step-bar > .step-bar-item-active,
-.step-bar > li:hover {
-    background-color: #f9f9f9;
-}
+        &:after {
+            background: linear-gradient(@brand-primary 50%, @gray-8 50%);
+        }
+    }
 
-.step-bar > .step-bar-item-active {
-    border-color: #e6e7e8;
-}
+    .step-bar-item-sub-title {
+        line-height: 1em;
+        margin-top: 4px;
+        font-size: 0.8rem;
+        color: @light-gray;
+    }
 
-.step-bar > .step-bar-item-active:before {
-    border-color: @brand-primary;
-}
-
-.step-bar > .step-bar-item-active:after {
-    background: linear-gradient(@brand-primary 50%, #e2e2e2 50%);
-}
-
-.step-bar-item-sub-title {
-    line-height: 1em;
-    margin-top: 4px;
-    font-size: 0.8rem;
-    color: #666666;
-}
-
-.step-bar-icon {
-    color: white;
-    position: absolute;
-    width: 45px;
-    height: 45px;
-    left: 30px;
-    top: 50%;
-    margin-top: -22.5px;
-    z-index: 15;
-    line-height: 45px;
-    text-align: center;
+    .step-bar-icon {
+        color: @background-white;
+        position: absolute;
+        width: 45px;
+        height: 45px;
+        left: 30px;
+        top: 50%;
+        margin-top: -22.5px;
+        z-index: 15;
+        line-height: 45px;
+        text-align: center;
+    }
 }
 
 /* Horizontal extension */
@@ -154,7 +156,7 @@
     }
 
     .step-bar-item-active:after {
-        background: linear-gradient(to right, @brand-primary 50%, #e2e2e2 50%);
+        background: linear-gradient(to right, @brand-primary 50%, @gray-8 50%);
     }
 
     .step-bar-icon {
@@ -162,3 +164,6 @@
         top: 40%;
     }
 }
+
+/* Small size screens */
+@media screen and (max-width: @screen-xs-max) {}
