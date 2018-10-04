@@ -1,21 +1,8 @@
 import { extendObj } from "../utils";
 
-const _defaults = {
-    html: "",
-    type: "",
-    icon: "",
-    dismissable: true,
-    displayLength: 4000,
-    inDuration: 300,
-    outDuration: 375,
-    classes: [],
-    completeCallback: null,
-    activationPercent: 0.8
-};
-
 class Toast {
     constructor (options) {
-        this.options = extendObj(true, _defaults, options);
+        this.options = extendObj(true, this._defaults(), options);
         this.message = this.options.html;
         this.timeRemaining = this.options.displayLength; // Time remaining until the toast is removed.
 
@@ -32,6 +19,21 @@ class Toast {
         this.el = toastElement;
         this._animateIn();
         this._setTimer();
+    }
+
+    _defaults () {
+        return {
+            html: "",
+            type: "",
+            icon: "",
+            dismissable: true,
+            displayLength: 4000,
+            inDuration: 300,
+            outDuration: 375,
+            classes: [],
+            completeCallback: null,
+            activationPercent: 0.8
+        };
     }
 
     static _createContainer () {
