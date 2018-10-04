@@ -1,8 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-
-import StepBar from "./index";
-import { BasicStepBar, StepBarText } from "./index";
+import { StepBar, BasicStepBar, StepBarText } from "./index";
 
 describe("Documentation: StepBar", () => {
     it("is defined", () => {
