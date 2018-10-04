@@ -14,12 +14,12 @@ class Tabs extends Component {
     }
 
     render () {
-        const { mode, items } = this.props;
+        const { mode, items, id } = this.props;
 
         return (
             <div className="tabs">{"\n"}
                 {mode === "responsive" ? <i className="material-icons">keyboard_arrow_right</i> : null}
-                <ul className={`tabs-${mode}`}>
+                <ul id={id} className={`tabs-${mode}`}>
                     {items.map((name, i) => (
                         <li key={`tab-item-${name}-${i}`} className={this.state.active === i ? "active" : null}>{"\n"}
                             <a href="#" onClick={e => this.setActive(e, i)}>{name}</a>{"\n"}
@@ -33,7 +33,8 @@ class Tabs extends Component {
 
 Tabs.propTypes = {
     mode: PropTypes.oneOf(["horizontal", "vertical", "responsive"]).isRequired,
-    items: PropTypes.array.isRequired
+    items: PropTypes.array.isRequired,
+    id: PropTypes.string.isRequired
 };
 
 export default Tabs;
