@@ -6,6 +6,43 @@ describe("px-script: datepicker - formats", () => {
         expect(formats).toBeInstanceOf(Object);
     });
 
+    describe("all formats", () => {
+        it("has dateFormat property of type string", () => {
+            for (const format in formats) {
+                expect(formats[format].dateFormat).toBeDefined();
+                expect(typeof formats[format].dateFormat).toBe("string");
+            }
+        });
+
+        it("has hourFormat property of type string", () => {
+            for (const format in formats) {
+                expect(formats[format].hourFormat).toBeDefined();
+                expect(typeof formats[format].hourFormat).toBe("string");
+            }
+        });
+
+        it("has locale property of right type and content", () => {
+            for (const format in formats) {
+                expect(formats[format].locale).toBeDefined();
+                expect(formats[format].locale).toBeInstanceOf(Object);
+
+                // Months
+                expect(formats[format].locale.months).toBeDefined();
+                expect(formats[format].locale.months).toHaveLength(12);
+                expect(formats[format].locale.monthsShort).toBeDefined();
+                expect(formats[format].locale.monthsShort).toHaveLength(12);
+
+                // Weekdays
+                expect(formats[format].locale.weekdays).toBeDefined();
+                expect(formats[format].locale.weekdays).toHaveLength(7);
+                expect(formats[format].locale.weekdaysShort).toBeDefined();
+                expect(formats[format].locale.weekdaysShort).toHaveLength(7);
+                expect(formats[format].locale.weekdaysMin).toBeDefined();
+                expect(formats[format].locale.weekdaysMin).toHaveLength(7);
+            }
+        });
+    });
+
     describe("norwegian (nb)", () => {
         it("is defined", () => {
             expect(formats.nb).toBeDefined();
@@ -29,18 +66,18 @@ describe("px-script: datepicker - formats", () => {
             expect(formats.nb.locale).toBeInstanceOf(Object);
 
             // Months
-            expect(formats.nb.locale.months).toHaveLength(12);
             expect(formats.nb.locale.months).toBeDefined();
-            expect(formats.nb.locale.monthsShort).toHaveLength(12);
+            expect(formats.nb.locale.months).toHaveLength(12);
             expect(formats.nb.locale.monthsShort).toBeDefined();
+            expect(formats.nb.locale.monthsShort).toHaveLength(12);
 
             // Weekdays
-            expect(formats.nb.locale.weekdays).toHaveLength(7);
             expect(formats.nb.locale.weekdays).toBeDefined();
-            expect(formats.nb.locale.weekdaysShort).toHaveLength(7);
+            expect(formats.nb.locale.weekdays).toHaveLength(7);
             expect(formats.nb.locale.weekdaysShort).toBeDefined();
-            expect(formats.nb.locale.weekdaysMin).toHaveLength(7);
+            expect(formats.nb.locale.weekdaysShort).toHaveLength(7);
             expect(formats.nb.locale.weekdaysMin).toBeDefined();
+            expect(formats.nb.locale.weekdaysMin).toHaveLength(7);
         });
     });
 
@@ -67,18 +104,18 @@ describe("px-script: datepicker - formats", () => {
             expect(formats.sv.locale).toBeInstanceOf(Object);
 
             // Months
-            expect(formats.sv.locale.months).toHaveLength(12);
             expect(formats.sv.locale.months).toBeDefined();
-            expect(formats.sv.locale.monthsShort).toHaveLength(12);
+            expect(formats.sv.locale.months).toHaveLength(12);
             expect(formats.sv.locale.monthsShort).toBeDefined();
+            expect(formats.sv.locale.monthsShort).toHaveLength(12);
 
             // Weekdays
-            expect(formats.sv.locale.weekdays).toHaveLength(7);
             expect(formats.sv.locale.weekdays).toBeDefined();
-            expect(formats.sv.locale.weekdaysShort).toHaveLength(7);
+            expect(formats.sv.locale.weekdays).toHaveLength(7);
             expect(formats.sv.locale.weekdaysShort).toBeDefined();
-            expect(formats.sv.locale.weekdaysMin).toHaveLength(7);
+            expect(formats.sv.locale.weekdaysShort).toHaveLength(7);
             expect(formats.sv.locale.weekdaysMin).toBeDefined();
+            expect(formats.sv.locale.weekdaysMin).toHaveLength(7);
         });
     });
 
@@ -105,18 +142,18 @@ describe("px-script: datepicker - formats", () => {
             expect(formats.da.locale).toBeInstanceOf(Object);
 
             // Months
-            expect(formats.da.locale.months).toHaveLength(12);
             expect(formats.da.locale.months).toBeDefined();
-            expect(formats.da.locale.monthsShort).toHaveLength(12);
+            expect(formats.da.locale.months).toHaveLength(12);
             expect(formats.da.locale.monthsShort).toBeDefined();
+            expect(formats.da.locale.monthsShort).toHaveLength(12);
 
             // Weekdays
-            expect(formats.da.locale.weekdays).toHaveLength(7);
             expect(formats.da.locale.weekdays).toBeDefined();
-            expect(formats.da.locale.weekdaysShort).toHaveLength(7);
+            expect(formats.da.locale.weekdays).toHaveLength(7);
             expect(formats.da.locale.weekdaysShort).toBeDefined();
-            expect(formats.da.locale.weekdaysMin).toHaveLength(7);
+            expect(formats.da.locale.weekdaysShort).toHaveLength(7);
             expect(formats.da.locale.weekdaysMin).toBeDefined();
+            expect(formats.da.locale.weekdaysMin).toHaveLength(7);
         });
     });
 
@@ -143,18 +180,18 @@ describe("px-script: datepicker - formats", () => {
             expect(formats.fi.locale).toBeInstanceOf(Object);
 
             // Months
-            expect(formats.fi.locale.months).toHaveLength(12);
             expect(formats.fi.locale.months).toBeDefined();
-            expect(formats.fi.locale.monthsShort).toHaveLength(12);
+            expect(formats.fi.locale.months).toHaveLength(12);
             expect(formats.fi.locale.monthsShort).toBeDefined();
+            expect(formats.fi.locale.monthsShort).toHaveLength(12);
 
             // Weekdays
-            expect(formats.fi.locale.weekdays).toHaveLength(7);
             expect(formats.fi.locale.weekdays).toBeDefined();
-            expect(formats.fi.locale.weekdaysShort).toHaveLength(7);
+            expect(formats.fi.locale.weekdays).toHaveLength(7);
             expect(formats.fi.locale.weekdaysShort).toBeDefined();
-            expect(formats.fi.locale.weekdaysMin).toHaveLength(7);
+            expect(formats.fi.locale.weekdaysShort).toHaveLength(7);
             expect(formats.fi.locale.weekdaysMin).toBeDefined();
+            expect(formats.fi.locale.weekdaysMin).toHaveLength(7);
         });
     });
 
@@ -181,18 +218,18 @@ describe("px-script: datepicker - formats", () => {
             expect(formats.en.locale).toBeInstanceOf(Object);
 
             // Months
-            expect(formats.en.locale.months).toHaveLength(12);
             expect(formats.en.locale.months).toBeDefined();
-            expect(formats.en.locale.monthsShort).toHaveLength(12);
+            expect(formats.en.locale.months).toHaveLength(12);
             expect(formats.en.locale.monthsShort).toBeDefined();
+            expect(formats.en.locale.monthsShort).toHaveLength(12);
 
             // Weekdays
-            expect(formats.en.locale.weekdays).toHaveLength(7);
             expect(formats.en.locale.weekdays).toBeDefined();
-            expect(formats.en.locale.weekdaysShort).toHaveLength(7);
+            expect(formats.en.locale.weekdays).toHaveLength(7);
             expect(formats.en.locale.weekdaysShort).toBeDefined();
-            expect(formats.en.locale.weekdaysMin).toHaveLength(7);
+            expect(formats.en.locale.weekdaysShort).toHaveLength(7);
             expect(formats.en.locale.weekdaysMin).toBeDefined();
+            expect(formats.en.locale.weekdaysMin).toHaveLength(7);
         });
     });
 
@@ -219,18 +256,18 @@ describe("px-script: datepicker - formats", () => {
             expect(formats.iso8601.locale).toBeInstanceOf(Object);
 
             // Months
-            expect(formats.iso8601.locale.months).toHaveLength(12);
             expect(formats.iso8601.locale.months).toBeDefined();
-            expect(formats.iso8601.locale.monthsShort).toHaveLength(12);
+            expect(formats.iso8601.locale.months).toHaveLength(12);
             expect(formats.iso8601.locale.monthsShort).toBeDefined();
+            expect(formats.iso8601.locale.monthsShort).toHaveLength(12);
 
             // Weekdays
-            expect(formats.iso8601.locale.weekdays).toHaveLength(7);
             expect(formats.iso8601.locale.weekdays).toBeDefined();
-            expect(formats.iso8601.locale.weekdaysShort).toHaveLength(7);
+            expect(formats.iso8601.locale.weekdays).toHaveLength(7);
             expect(formats.iso8601.locale.weekdaysShort).toBeDefined();
-            expect(formats.iso8601.locale.weekdaysMin).toHaveLength(7);
+            expect(formats.iso8601.locale.weekdaysShort).toHaveLength(7);
             expect(formats.iso8601.locale.weekdaysMin).toBeDefined();
+            expect(formats.iso8601.locale.weekdaysMin).toHaveLength(7);
         });
     });
 });
