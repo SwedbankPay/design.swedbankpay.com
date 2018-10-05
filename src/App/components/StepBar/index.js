@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const _renderItems = items => items.map(({ title, completed, active }, i) => (
+const _renderItems = items => items.map(({ title, subtitle, completed, active }, i) => (
     <li key={i} className={`${completed ? "step-bar-item-complete" : ""}${active ? " step-bar-item-active" : ""}`}>
         {completed ? <div className="material-icons step-bar-icon" >check</div> : null}
         {title}
+        {subtitle ? <div className="step-bar-item-sub-title">{subtitle}</div> : null}
     </li>
 ));
 
@@ -12,18 +13,16 @@ const DefaultItems = () => (
     <div>
         <li className="step-bar-item-complete">
             <div className="material-icons step-bar-icon" >check</div>
-            Some title
-            <div className="step-bar-item-sub-title">Some subtitle</div>
+            Step one
         </li>
         <li className="step-bar-item-active">
-            Some title
-            <div className="step-bar-item-sub-title">Some subtitle</div>
+            Step two
         </li>
         <li>
-            Some title
+            Step three
         </li>
         <li>
-            Some title
+            Step four
         </li>
     </div>
 );

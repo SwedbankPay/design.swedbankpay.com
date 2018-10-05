@@ -8,7 +8,9 @@ const BasicStepBar = () => {
     const items = [
         {
             title: "Step one",
+            subtitle: "24.12.17 12:10",
             completed: true
+
         },
         {
             title: "Step two",
