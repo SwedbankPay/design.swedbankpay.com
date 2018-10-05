@@ -3,3 +3,4 @@ dist/styles
 *.md
 **/*.js
 **/*.snap.js
+src/less/core/normalize.less
