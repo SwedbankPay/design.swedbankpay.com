@@ -18,9 +18,11 @@ const loader = (() => {
     const init = () => {
         const loaders = document.querySelectorAll(SELECTORS.LOADER);
 
-        loaders.forEach(loader => {
-            _appendLoader(loader);
-        });
+        if (loaders) {
+            loaders.forEach(loader => {
+                _appendLoader(loader);
+            });
+        }
     };
 
     return { init };

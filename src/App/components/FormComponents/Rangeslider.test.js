@@ -14,7 +14,7 @@ describe("Component: Rangeslider - ", () => {
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<input type="range" />)).toEqual(true);
         expect(wrapper.html()).not.toContain("value-label");
-        expect(wrapper.html()).not.toContain("data-px-rangeslider-value");
+        expect(wrapper.html()).not.toContain("data-rs-value");
     });
 
     it("renders with a value label", () => {
@@ -23,7 +23,7 @@ describe("Component: Rangeslider - ", () => {
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<input type="range" />)).toEqual(true);
         expect(wrapper.html()).toContain("value-label");
-        expect(wrapper.html()).toContain("data-px-rangeslider-value");
+        expect(wrapper.html()).toContain("data-rs-value");
     });
 
     it("renders with a value label and a value label prefix", () => {

@@ -1,21 +1,8 @@
 import { extendObj } from "../utils";
 
-const _defaults = {
-    html: "",
-    type: "",
-    icon: "",
-    dismissable: true,
-    displayLength: 4000,
-    inDuration: 300,
-    outDuration: 375,
-    classes: [],
-    completeCallback: null,
-    activationPercent: 0.8
-};
-
 class Toast {
     constructor (options) {
-        this.options = extendObj(true, _defaults, options);
+        this.options = extendObj(true, this._defaults(), options);
         this.message = this.options.html;
         this.timeRemaining = this.options.displayLength; // Time remaining until the toast is removed.
 
@@ -32,6 +19,21 @@ class Toast {
         this.el = toastElement;
         this._animateIn();
         this._setTimer();
+    }
+
+    _defaults () {
+        return {
+            html: "",
+            type: "",
+            icon: "",
+            dismissable: true,
+            displayLength: 4000,
+            inDuration: 300,
+            outDuration: 375,
+            classes: [],
+            completeCallback: null,
+            activationPercent: 0.8
+        };
     }
 
     static _createContainer () {
@@ -54,6 +56,7 @@ class Toast {
 
     _createToast () {
         const toast = document.createElement("div");
+        const toastContent = document.createElement("div");
 
         toast.classList.add("toast");
 
@@ -76,6 +79,7 @@ class Toast {
             return icon;
         };
 
+        // Set toast type
         switch (this.options.type) {
             case "success":
                 toast.classList.add("toast-success");
@@ -101,30 +105,13 @@ class Toast {
                 break;
         }
 
-        if (!!this.options.icon && !this.options.type) {
-            toast.appendChild(_createIcon(this.options.icon));
-        }
-
         // Set content
-        if (typeof HTMLElement === "object"
-            ? this.message instanceof HTMLElement
-            : this.message &&
-                typeof this.message === "object" &&
-                this.message !== null &&
-                this.message.nodeType === 1 &&
-                typeof this.message.nodeName === "string") {
-            const toastContent = document.createElement("div");
+        toastContent.classList.add("toast-content");
+        toastContent.innerHTML = this.message;
+        toast.appendChild(toastContent);
 
-            toastContent.classList.add("toast-content");
-            toastContent.appendChild(this.message);
-            toast.appendChild(toastContent);
-
-            // Insert as html
-        } else {
-            const toastP = document.createElement("p");
-
-            toastP.innerHTML = this.message;
-            toast.appendChild(toastP);
+        if (this.options.icon && !this.options.type) {
+            toast.appendChild(_createIcon(this.options.icon));
         }
 
         if (this.options.dismissable) {
