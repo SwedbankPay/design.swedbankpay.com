@@ -36,61 +36,61 @@ const Options = () => (
                 <tr>
                     <td>html</td>
                     <td>String</td>
-                    <td>{"\" \""}</td>
+                    <td><code className="token attr-value">{"\"\""}</code></td>
                     <td>The HTML content of the Toast.</td>
                 </tr>
                 <tr>
                     <td>type</td>
                     <td>String</td>
-                    <td>{"\" \""}</td>
-                    <td>Premade alert types; success, neutral, warning and danger are available.</td>
+                    <td><code className="token attr-value">{"\"\""}</code></td>
+                    <td>Premade alert types; <code className="token attr-value">{"success"}</code>, <code className="token attr-value">{"neutral"}</code>, <code className="token attr-value">{"warning"}</code> and <code className="token attr-value">{"danger"}</code> are available.</td>
                 </tr>
                 <tr>
                     <td>dismissable</td>
                     <td>Boolean</td>
-                    <td>true</td>
+                    <td><code className="token attr-value">true</code></td>
                     <td>Wether or not the alert should be dismissable by the user (close button).</td>
                 </tr>
                 <tr>
                     <td>icon</td>
                     <td>String</td>
-                    <td>{"\" \""}</td>
+                    <td><code className="token attr-value">{"\"\""}</code></td>
                     <td>Custom icon for the toast. See <Link to="/docs/core/icons">icons</Link> for more info.</td>
                 </tr>
                 <tr>
                     <td>displayLength</td>
                     <td>Number</td>
-                    <td>4000</td>
+                    <td><code className="token attr-value">4000</code></td>
                     <td>Length in ms the Toast stays before dismissal.</td>
                 </tr>
                 {/* <tr>
                     <td>inDuration</td>
                     <td>Number</td>
-                    <td>300</td>
+                    <td><code className="token attr-value">300</code></td>
                     <td>Transition in duration in milliseconds.</td>
                 </tr>
                 <tr>
                     <td>outDuration</td>
                     <td>Number</td>
-                    <td>375</td>
+                    <td><code className="token attr-value">375</code></td>
                     <td>Transition out duration in milliseconds.</td>
                 </tr> */}
                 <tr>
                     <td>classes</td>
                     <td>Array of strings</td>
-                    <td>[ ]</td>
+                    <td><code className="token attr-value">[]</code></td>
                     <td>Classes to be added to the toast element.</td>
                 </tr>
                 <tr>
                     <td>completeCallback</td>
                     <td>Function</td>
-                    <td>null</td>
+                    <td><code className="token attr-value">null</code></td>
                     <td>Callback function called when toast is dismissed.</td>
                 </tr>
                 {/* <tr>
                     <td>activationPercent</td>
                     <td>Number</td>
-                    <td>0.8</td>
+                    <td><code className="token attr-value">0.8</code></td>
                     <td>The percentage of the toast{"'"}s width it takes for a drag to dismiss a Toast.</td>
                 </tr> */}
             </tbody>
