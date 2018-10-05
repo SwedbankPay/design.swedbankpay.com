@@ -403,7 +403,6 @@ exports[`Documentation: index renders 1`] = `
                 "component": Object {
                   "Collapsed": [Function],
                   "Overview": [Function],
-                  "Stacked": [Function],
                   "TabsText": [Function],
                   "default": [Function],
                 },

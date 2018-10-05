@@ -1,48 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components: Tabs Collapsed renders 1`] = `
-<Fragment>
-  <h2
-    id="collapsed"
-  >
-    Collapsed
-  </h2>
-  <p>
-    Collapsed... 
-    <code
-      className="token property"
-    >
-      .tabs
-    </code>
-    ...
-    <code
-      className="token property"
-    >
-      .tabs-collapsed
-    </code>
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Tabs
-      items={
-        Array [
-          "Kort",
-          "Rabatter",
-          "Transaksjoner",
-          "Faktura",
-          "Instillinger",
-          "Audit trail",
-        ]
-      }
-      mode="collapsed"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
 exports[`Components: Tabs Overview renders 1`] = `
 <Fragment>
   <h2
@@ -70,6 +27,7 @@ exports[`Components: Tabs Overview renders 1`] = `
     showCasePanel={true}
   >
     <Tabs
+      id="default-list-demo"
       items={
         Array [
           "Kort",
@@ -80,69 +38,9 @@ exports[`Components: Tabs Overview renders 1`] = `
           "Audit trail",
         ]
       }
-      mode="auto"
     />
   </ComponentPreview>
 </Fragment>
-`;
-
-exports[`Components: Tabs Stacked renders 1`] = `
-<Fragment>
-  <h2
-    id="stacked"
-  >
-    Stacked
-  </h2>
-  <p>
-    Stacked... 
-    <code
-      className="token property"
-    >
-      .tabs
-    </code>
-    ...
-    <code
-      className="token property"
-    >
-      .tabs-stacked
-    </code>
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Tabs
-      items={
-        Array [
-          "Kort",
-          "Rabatter",
-          "Transaksjoner",
-          "Faktura",
-          "Instillinger",
-          "Audit trail",
-        ]
-      }
-      mode="stacked"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Components: Tabs TabsText renders 1`] = `
-<div
-  className="col-md-12 col-lg-10 doc-body"
->
-  <ExperimentalComponentAlert />
-  <p
-    className="lead"
-  >
-    Tabs...
-  </p>
-  <Overview />
-  <Stacked />
-  <Collapsed />
-</div>
 `;
 
 exports[`Components: Tabs renders 1`] = `

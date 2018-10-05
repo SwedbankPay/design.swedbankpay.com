@@ -12,7 +12,7 @@
         transition: 0.2s transform ease-in-out;
     }
 
-    ul {
+    > ul {
         flex-direction: column;
         position: absolute;
         display: flex;
@@ -43,7 +43,7 @@
     }
 
     &.tabs-open {
-        ul {
+        > ul {
             margin: 0 auto;
 
             li {
@@ -79,34 +79,41 @@
     }
 }
 
-// .tabs-horizontal() {
-//     width: 100%;
-//     padding-left: 0;
-//     border-bottom: 1px solid @gray-8;
-//     flex-direction: row;
+.tabs-horizontal() {
+    padding-left: 0;
 
-//     > li {
-//         display: block;
-//         margin-left: 1.5rem;
+    i {
+        display: none;
+    }
 
-//         &:first-child {
-//             margin-left: 1rem;
-//         }
+    ul {
+        flex-direction: row;
+        padding: 0;
 
-//         a {
-//             padding-bottom: 0.5rem;
-//         }
+        li {
+            display: block;
+            margin-left: 1.5rem;
 
-//         &.active {
-//             font-weight: bold;
+            &:first-child {
+                margin-left: 1rem;
+            }
 
-//             > a {
-//                 border-bottom: 2px solid @brand-primary;
-//                 padding-bottom: calc(0.5rem - 2px);
-//             }
-//         }
-//     }
-// }
+            a {
+                padding-bottom: 0.5rem;
+            }
+
+            &.active {
+                font-weight: bold;
+                padding-left: 0;
+
+                > a {
+                    border-bottom: 2px solid @brand-primary;
+                    padding-bottom: calc(0.5rem - 2px);
+                }
+            }
+        }
+    }
+}
 
 .for-each(@breakpoint in @grid-breakpoints) {
     @infix: extract(@breakpoint, 1);
@@ -114,7 +121,7 @@
 
     .tabs-horizontal-@{infix} {
         @media screen and (min-width: @min-width) {
-            //.tabs-horizontal();
+            .tabs-horizontal();
         }
     }
 }
