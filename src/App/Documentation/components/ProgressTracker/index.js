@@ -1,7 +1,7 @@
 import React from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocToc } from "#";
+import { ComponentPreview, DocToc, ExperimentalComponentAlert } from "#";
 import ProgressTrackerComponent from "@/ProgressTracker";
 
 const BasicProgressTracker = () => {
@@ -96,6 +96,7 @@ const DisabledProgressTracker = () => {
 
 const ProgressTrackerText = () => (
     <div className="col-12 col-lg-10 doc-body">
+        <ExperimentalComponentAlert />
         <p className="lead">Progress trackers are a good way to display the users current progress in a given path, while also showing the user the remaining steps. This is usually used when the user are expected to complete several steps in a process.</p>
         <BasicProgressTracker />
         <SmallProgressTracker />
