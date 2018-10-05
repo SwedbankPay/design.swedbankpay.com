@@ -409,7 +409,7 @@ exports[`Documentation: index renders 1`] = `
                   "default": [Function],
                 },
                 "path": "/docs/components/tabs",
-                "title": "Tabs",
+                "title": "Tabs (experimental)",
               },
               Object {
                 "component": Object {

@@ -33,6 +33,7 @@ exports[`Documentation: StepBar Basic StepBar renders 1`] = `
         Array [
           Object {
             "completed": true,
+            "subtitle": "24.12.17 12:10",
             "title": "Step one",
           },
           Object {

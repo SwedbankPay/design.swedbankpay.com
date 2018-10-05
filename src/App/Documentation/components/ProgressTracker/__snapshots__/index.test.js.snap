@@ -139,6 +139,7 @@ exports[`Documentation: ProgressTracker ProgressTracker Text renders 1`] = `
 <div
   className="col-12 col-lg-10 doc-body"
 >
+  <ExperimentalComponentAlert />
   <p
     className="lead"
   >
