@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 
 const DefaultItems = () => (
-    <div>
+    <>
         <li className="step-bar-item-complete">
             <div className="material-icons step-bar-icon" >check</div>
             Step one
@@ -17,7 +17,7 @@ const DefaultItems = () => (
         <li>
             Step four
         </li>
-    </div>
+    </>
 );
 
 const StepBar = ({ items, horizontal }) => {
