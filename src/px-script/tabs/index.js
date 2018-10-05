@@ -2,7 +2,7 @@ class Tabs {
     constructor (el) {
         this._el = el;
         this.id = el.id;
-        this.isOpen = el.parentElement.classList.contains("tabs-open");
+        this.isOpen = el.classList.contains("tabs-open");
 
         document.addEventListener("click", e => {
             if (!e.target.closest(".tabs") && this.isOpen) {
@@ -14,14 +14,14 @@ class Tabs {
     open () {
         if (!this.isOpen) {
             this.isOpen = true;
-            this._el.parentElement.classList.add("tabs-open");
+            this._el.classList.add("tabs-open");
         }
     }
 
     close () {
         if (this.isOpen) {
             this.isOpen = false;
-            this._el.parentElement.classList.remove("tabs-open");
+            this._el.classList.remove("tabs-open");
         }
     }
 
@@ -29,9 +29,9 @@ class Tabs {
 
 const tabs = (() => {
     const init = () => {
-        const tabsresponsive = [...document.querySelectorAll(".tabs-responsive")].map(tabs => new Tabs(tabs));
+        const tabsresponsive = [...document.querySelectorAll(".tabs")].map(tabs => new Tabs(tabs));
 
-        [...document.querySelectorAll(".tabs-responsive")].forEach(responsive => {
+        [...document.querySelectorAll(".tabs")].forEach(responsive => {
             const listElement = responsive.querySelectorAll("li");
             const id = responsive.id;
 

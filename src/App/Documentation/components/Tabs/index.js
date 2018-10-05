@@ -11,27 +11,17 @@ const Overview = () => (
         <h2 id="overview">Overview</h2>
         <p>Overview... <code className="token property">.tabs</code>...<code className="token property">.tabs-auto</code></p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <TabsComponent mode="responsive" items={tabItems} id="responsive-list-demo"/>
-        </ComponentPreview>
-    </>
-);
-
-const Stacked = () => (
-    <>
-        <h2 id="stacked">Stacked</h2>
-        <p>Stacked... <code className="token property">.tabs</code>...<code className="token property">.tabs-stacked</code></p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <TabsComponent mode="vertical" items={tabItems} id="useless"/>
+            <TabsComponent items={tabItems} id="horizontal-list-demo"/>
         </ComponentPreview>
     </>
 );
 
 const Collapsed = () => (
     <>
-        <h2 id="collapsed">Collapsed</h2>
-        <p>Collapsed... <code className="token property">.tabs</code>...<code className="token property">.tabs-collapsed</code></p>
+        <h2 id="collapsed">Responsive</h2>
+        <p>Responsive... <code className="token property">.tabs</code>...<code className="token property">.tabs-collapsed</code></p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <TabsComponent mode="responsive" items={tabItems} id="responsive-list-demo-2"/>
+            <TabsComponent mode=" tabs-horizontal" items={tabItems} id="responsive-list-demo"/>
         </ComponentPreview>
     </>
 );
@@ -41,7 +31,6 @@ const TabsText = () => (
         <ExperimentalComponentAlert />
         <p className="lead">Tabs...</p>
         <Overview />
-        <Stacked />
         <Collapsed />
     </div>
 );
@@ -66,4 +55,4 @@ class Tabs extends Component {
 export default Tabs;
 
 /* For testing */
-export { Overview, Stacked, Collapsed, TabsText };
+export { Overview, Collapsed, TabsText };

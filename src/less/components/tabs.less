@@ -7,42 +7,67 @@
 
     > i {
         z-index: @zindex-tabs-arrow;
-        margin-top: 0.15rem;
+        margin-top: 0.1rem;
         cursor: pointer;
         transition: 0.2s transform ease-in-out;
+    }
+
+    ul {
+        flex-direction: column;
+        position: absolute;
+        display: flex;
+        width: 100%;
+        padding-left: 11px;
+        padding-bottom: 0.5rem;
+        background-color: white;
+        border-bottom: 1px solid @gray-8;
+
+        li {
+            list-style: none;
+            display: none;
+
+            a,
+            span {
+                color: fade(@brand-primary, 80%);
+                background-color: @white;
+                display: block;
+                border-bottom: transparent;
+            }
+
+            &.active {
+                font-weight: bold;
+                display: block;
+                padding-left: 1rem;
+            }
+        }
     }
 
     &.tabs-open {
         ul {
             margin: 0 auto;
-            padding-bottom: 1rem;
 
             li {
+                display: block;
+                border-left: 1px solid @gray-8;
+                order: 2;
+
                 &:not(.active) {
+                    &:hover {
+                        a {
+                            border-left: 2px solid @brand-primary;
+                            padding-left: calc(0.7rem - 2px);
+                        }
+                    }
+
                     a {
                         padding-left: 0.7rem;
                     }
                 }
-            }
 
-            &.tabs-responsive {
-                li {
-                    display: block;
-                    border-left: 1px solid @gray-8;
-                    order: 2;
-
-                    &:not(.active) {
-                        &:hover {
-                            a {
-                                border-left: 2px solid @brand-primary;
-                                padding-left: calc(0.7rem - 2px);
-                            }
-                        }
-                    }
-
-                    &.active {
-                        font-weight: bold;
-                    }
+                &.active {
+                    font-weight: bold;
+                    border-left: transparent;
+                    order: 1;
                 }
             }
         }
@@ -52,74 +77,67 @@
             transition: 0.2s transform ease-in-out;
         }
     }
+}
 
-    ul {
-        display: flex;
+// .tabs-horizontal() {
+//     width: 100%;
+//     padding-left: 0;
+//     border-bottom: 1px solid @gray-8;
+//     flex-direction: row;
 
-        li {
-            list-style: none;
+//     > li {
+//         display: block;
+//         margin-left: 1.5rem;
 
-            a,
-            span {
-                color: fade(@brand-primary, 80%);
-                background-color: @white;
-                display: block;
-                border-bottom: 0;
-            }
-        }
+//         &:first-child {
+//             margin-left: 1rem;
+//         }
 
-        &.tabs-horizontal {
-            padding-left: 0;
-            margin-left: 1rem;
-            border-bottom: 1px solid @gray-8;
+//         a {
+//             padding-bottom: 0.5rem;
+//         }
 
-            li {
-                flex-direction: row;
-            }
-        }
+//         &.active {
+//             font-weight: bold;
 
-        &.tabs-vertical {
-            padding-left: 0;
-            flex-direction: column;
+//             > a {
+//                 border-bottom: 2px solid @brand-primary;
+//                 padding-bottom: calc(0.5rem - 2px);
+//             }
+//         }
+//     }
+// }
 
-            > li {
-                border-left: 1px solid @gray-8;
+.for-each(@breakpoint in @grid-breakpoints) {
+    @infix: extract(@breakpoint, 1);
+    @min-width: extract(@breakpoint, 2);
 
-                a {
-                    padding-left: 1rem;
-                }
-
-                &.active {
-                    font-weight: bold;
-                    color: @brand-primary;
-
-                    a {
-                        border-left: 2px solid @brand-primary;
-                        padding-left: calc(1rem - 2px);
-                    }
-                }
-            }
-        }
-
-        &.tabs-responsive {
-            flex-direction: column;
-            position: absolute;
-            width: 100%;
-            padding-left: 11px;
-            background: white;
-            border: none;
-
-            > li {
-                display: none;
-
-                &.active {
-                    font-weight: bold;
-                    display: block;
-                    border-left: transparent;
-                    padding-left: 1rem;
-                    order: 1;
-                }
-            }
+    .tabs-horizontal-@{infix} {
+        @media screen and (min-width: @min-width) {
+            //.tabs-horizontal();
         }
     }
 }
+
+// &.tabs-vertical { Not sure if this is going to be kept [AW]
+//     padding-left: 0;
+//     flex-direction: column;
+
+//     > li {
+//         border-left: 1px solid @gray-8;
+
+//         a {
+//             padding-left: 1rem;
+//         }
+
+//         &.active {
+//             font-weight: bold;
+//             color: @brand-primary;
+
+//             a {
+//                 border-left: 2px solid @brand-primary;
+//                 padding-left: calc(1rem - 2px);
+//             }
+//         }
+//     }
+// }
