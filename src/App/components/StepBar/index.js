@@ -1,13 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-
-const _renderItems = items => items.map(({ title, subtitle, completed, active }, i) => (
-    <li key={i} className={`${completed ? "step-bar-item-complete" : ""}${active ? " step-bar-item-active" : ""}`}>
-        {completed ? <div className="material-icons step-bar-icon" >check</div> : null}
-        {title}
-        {subtitle ? <div className="step-bar-item-sub-title">{subtitle}</div> : null}
-    </li>
-));
+import classnames from "classnames";
 
 const DefaultItems = () => (
     <div>
@@ -27,11 +20,25 @@ const DefaultItems = () => (
     </div>
 );
 
-const StepBar = ({ items, horizontal }) => (
-    <ol className={`step-bar${horizontal ? " step-bar--horizontal" : ""}`}>
+const StepBar = ({ items, horizontal }) => {
+    const stepBarClasses = classnames(
+        "step-bar",
+        horizontal ? "step-bar--horizontal" : null
+    );
+
+    const _renderItems = items => items.map(({ title, subtitle, completed, active }, i) => (
+        <li key={i} className={`${completed ? "step-bar-item-complete" : ""}${active ? " step-bar-item-active" : ""}`}>
+            {completed ? <div className="material-icons step-bar-icon" >check</div> : null}
+            {title}
+            {subtitle ? <div className="step-bar-item-sub-title">{subtitle}</div> : null}
+        </li>
+    ));
+
+    return (<ol className={stepBarClasses}>
         {items ? _renderItems(items) : <DefaultItems />}
     </ol>
-);
+    );
+};
 
 StepBar.propTypes = {
     items: PropTypes.array,
