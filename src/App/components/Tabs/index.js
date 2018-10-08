@@ -33,7 +33,6 @@ class Tabs extends Component {
 
 Tabs.propTypes = {
     mode: PropTypes.oneOf([
-        " tabs-responsive",
         " tabs-horizontal-xs",
         " tabs-horizontal-sm",
         " tabs-horizontal-md",

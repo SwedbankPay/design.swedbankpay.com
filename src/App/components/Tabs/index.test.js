@@ -12,17 +12,17 @@ describe("Component: Tabs - ", () => {
         expect(Tabs).toBeDefined();
     });
 
-    // it("Prop mode is required", () => { Temp while building new tabs [AW]
-    //     console.error = jest.fn();
+    it("Prop mode is required", () => {
+        console.error = jest.fn();
 
-    //     const wrapper = shallow(<Tabs items={items} />);
+        const wrapper = shallow(<Tabs mode="auto" items={items} />);
 
-    //     expect(console.error).toHaveBeenCalled();
-    //     expect(wrapper).toMatchSnapshot();
-    // });
+        expect(console.error).toHaveBeenCalled();
+        expect(wrapper).toMatchSnapshot();
+    });
 
     it("renders", () => {
-        const wrapper = shallow(<Tabs mode="auto" items={items} />);
+        const wrapper = shallow(<Tabs items={items} />);
 
         expect(wrapper).toMatchSnapshot();
     });
