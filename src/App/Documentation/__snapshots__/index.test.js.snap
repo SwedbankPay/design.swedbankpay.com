@@ -229,6 +229,7 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "component": Object {
                   "ActiveState": [Function],
+                  "ButtonGroup": [Function],
                   "ButtonLoader": [Function],
                   "ButtonsText": [Function],
                   "DisabledState": [Function],
@@ -335,16 +336,6 @@ exports[`Documentation: index renders 1`] = `
                 },
                 "path": "/docs/components/media-object",
                 "title": "Media Object",
-              },
-              Object {
-                "component": Object {
-                  "Demo": [Function],
-                  "ModalText": [Function],
-                  "Usage": [Function],
-                  "default": [Function],
-                },
-                "path": "/docs/components/modal",
-                "title": "Modal (deprecated)",
               },
               Object {
                 "component": Object {

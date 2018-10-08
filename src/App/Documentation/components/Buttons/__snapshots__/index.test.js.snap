@@ -19,29 +19,36 @@ exports[`Documentation: Buttons Active State renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    removeOuterTag={true}
     showCasePanel={true}
   >
-    <Button
-      active={true}
-      label="Primary"
-      type="primary"
-    />
-    
+    <div
+      className="button-group"
+    >
+      
 
-    <Button
-      active={true}
-      label="Secondary"
-      type="secondary"
-    />
-    
+      <Button
+        active={true}
+        label="Primary"
+        type="primary"
+      />
+      
 
-    <Button
-      active={true}
-      label="Danger"
-      type="danger"
-    />
-    
+      <Button
+        active={true}
+        label="Secondary"
+        type="secondary"
+      />
+      
 
+      <Button
+        active={true}
+        label="Danger"
+        type="danger"
+      />
+      
+
+    </div>
   </ComponentPreview>
 </Fragment>
 `;
@@ -70,65 +77,79 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    removeOuterTag={true}
     showCasePanel={true}
   >
-    <Button
-      label="Primary"
-      loader={true}
-      loading={true}
-      type="primary"
-    />
-    
+    <div
+      className="button-group"
+    >
+      
 
-    <Button
-      label="Secondary"
-      loader={true}
-      loading={true}
-      type="secondary"
-    />
-    
+      <Button
+        label="Primary"
+        loader={true}
+        loading={true}
+        type="primary"
+      />
+      
 
-    <Button
-      label="Danger"
-      loader={true}
-      loading={true}
-      type="danger"
-    />
-    
+      <Button
+        label="Secondary"
+        loader={true}
+        loading={true}
+        type="secondary"
+      />
+      
 
+      <Button
+        label="Danger"
+        loader={true}
+        loading={true}
+        type="danger"
+      />
+      
+
+    </div>
   </ComponentPreview>
   <ComponentPreview
     codeFigure={true}
     language="html"
+    removeOuterTag={true}
     showCasePanel={true}
   >
-    <Button
-      label="Primary"
-      loader={true}
-      loading={true}
-      outline={true}
-      type="primary"
-    />
-    
+    <div
+      className="button-group"
+    >
+      
 
-    <Button
-      label="Secondary"
-      loader={true}
-      loading={true}
-      outline={true}
-      type="secondary"
-    />
-    
+      <Button
+        label="Primary"
+        loader={true}
+        loading={true}
+        outline={true}
+        type="primary"
+      />
+      
 
-    <Button
-      label="Danger"
-      loader={true}
-      loading={true}
-      outline={true}
-      type="danger"
-    />
-    
+      <Button
+        label="Secondary"
+        loader={true}
+        loading={true}
+        outline={true}
+        type="secondary"
+      />
+      
 
+      <Button
+        label="Danger"
+        loader={true}
+        loading={true}
+        outline={true}
+        type="danger"
+      />
+      
+
+    </div>
   </ComponentPreview>
   <p>
     Adding the attribute 
@@ -208,6 +229,7 @@ exports[`Documentation: Buttons Buttons Text renders 1`] = `
   <Examples />
   <UsageWithOtherTags />
   <OutlineButtons />
+  <ButtonGroup />
   <Sizes />
   <ActiveState />
   <DisabledState />
@@ -233,29 +255,36 @@ exports[`Documentation: Buttons Disabled State renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    removeOuterTag={true}
     showCasePanel={true}
   >
-    <Button
-      disabled={true}
-      label="Primary"
-      type="primary"
-    />
-    
+    <div
+      className="button-group"
+    >
+      
 
-    <Button
-      disabled={true}
-      label="Secondary"
-      type="secondary"
-    />
-    
+      <Button
+        disabled={true}
+        label="Primary"
+        type="primary"
+      />
+      
 
-    <Button
-      disabled={true}
-      label="Danger"
-      type="danger"
-    />
-    
+      <Button
+        disabled={true}
+        label="Secondary"
+        type="secondary"
+      />
+      
 
+      <Button
+        disabled={true}
+        label="Danger"
+        type="danger"
+      />
+      
+
+    </div>
   </ComponentPreview>
 </Fragment>
 `;
@@ -273,32 +302,39 @@ exports[`Documentation: Buttons Examples renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    removeOuterTag={true}
     showCasePanel={true}
   >
-    <Button
-      label="Primary"
-      type="primary"
-    />
-    
+    <div
+      className="button-group"
+    >
+      
 
-    <Button
-      label="Secondary"
-      type="secondary"
-    />
-    
+      <Button
+        label="Primary"
+        type="primary"
+      />
+      
 
-    <Button
-      label="Danger"
-      type="danger"
-    />
-    
+      <Button
+        label="Secondary"
+        type="secondary"
+      />
+      
 
-    <Button
-      label="Link"
-      type="link"
-    />
-    
+      <Button
+        label="Danger"
+        type="danger"
+      />
+      
 
+      <Button
+        label="Link"
+        type="link"
+      />
+      
+
+    </div>
   </ComponentPreview>
 </Fragment>
 `;
@@ -316,29 +352,36 @@ exports[`Documentation: Buttons Outline Buttons renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    removeOuterTag={true}
     showCasePanel={true}
   >
-    <Button
-      label="Primary"
-      outline={true}
-      type="primary"
-    />
-    
+    <div
+      className="button-group"
+    >
+      
 
-    <Button
-      label="Secondary"
-      outline={true}
-      type="secondary"
-    />
-    
+      <Button
+        label="Primary"
+        outline={true}
+        type="primary"
+      />
+      
 
-    <Button
-      label="Danger"
-      outline={true}
-      type="danger"
-    />
-    
+      <Button
+        label="Secondary"
+        outline={true}
+        type="secondary"
+      />
+      
 
+      <Button
+        label="Danger"
+        outline={true}
+        type="danger"
+      />
+      
+
+    </div>
   </ComponentPreview>
 </Fragment>
 `;
@@ -367,22 +410,29 @@ exports[`Documentation: Buttons Sizes renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    removeOuterTag={true}
     showCasePanel={true}
   >
-    <Button
-      label="Large button"
-      size="lg"
-      type="primary"
-    />
-    
+    <div
+      className="button-group"
+    >
+      
 
-    <Button
-      label="Large button"
-      size="lg"
-      type="secondary"
-    />
-    
+      <Button
+        label="Large button"
+        size="lg"
+        type="primary"
+      />
+      
 
+      <Button
+        label="Large button"
+        size="lg"
+        type="secondary"
+      />
+      
+
+    </div>
   </ComponentPreview>
   <h3>
     Small buttons
@@ -398,22 +448,29 @@ exports[`Documentation: Buttons Sizes renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    removeOuterTag={true}
     showCasePanel={true}
   >
-    <Button
-      label="Small button"
-      size="sm"
-      type="primary"
-    />
-    
+    <div
+      className="button-group"
+    >
+      
 
-    <Button
-      label="Small button"
-      size="sm"
-      type="secondary"
-    />
-    
+      <Button
+        label="Small button"
+        size="sm"
+        type="primary"
+      />
+      
 
+      <Button
+        label="Small button"
+        size="sm"
+        type="secondary"
+      />
+      
+
+    </div>
   </ComponentPreview>
   <h3>
     Extra small buttons
@@ -429,22 +486,29 @@ exports[`Documentation: Buttons Sizes renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    removeOuterTag={true}
     showCasePanel={true}
   >
-    <Button
-      label="Extra small button"
-      size="xs"
-      type="primary"
-    />
-    
+    <div
+      className="button-group"
+    >
+      
 
-    <Button
-      label="Extra small button"
-      size="xs"
-      type="secondary"
-    />
-    
+      <Button
+        label="Extra small button"
+        size="xs"
+        type="primary"
+      />
+      
 
+      <Button
+        label="Extra small button"
+        size="xs"
+        type="secondary"
+      />
+      
+
+    </div>
   </ComponentPreview>
   <h3>
     Block level
@@ -460,22 +524,29 @@ exports[`Documentation: Buttons Sizes renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    removeOuterTag={true}
     showCasePanel={true}
   >
-    <Button
-      fullWidth={true}
-      label="Block level button"
-      type="primary"
-    />
-    
+    <div
+      className="button-group"
+    >
+      
 
-    <Button
-      fullWidth={true}
-      label="Block level button"
-      type="secondary"
-    />
-    
+      <Button
+        fullWidth={true}
+        label="Block level button"
+        type="primary"
+      />
+      
 
+      <Button
+        fullWidth={true}
+        label="Block level button"
+        type="secondary"
+      />
+      
+
+    </div>
   </ComponentPreview>
 </Fragment>
 `;
@@ -500,23 +571,30 @@ exports[`Documentation: Buttons Usage With Icons renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    removeOuterTag={true}
     showCasePanel={true}
   >
-    <Button
-      icon="cloud"
-      label="Primary"
-      type="primary"
-    />
-    
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        icon="cloud"
+        label="Primary"
+        type="primary"
+      />
+      
 
 
-    <Button
-      icon="cloud"
-      label="Secondary"
-      type="secondary"
-    />
-    
+      <Button
+        icon="cloud"
+        label="Secondary"
+        type="secondary"
+      />
+      
 
+    </div>
   </ComponentPreview>
 </Fragment>
 `;
@@ -747,45 +825,52 @@ exports[`Documentation: Buttons Usage With Other Tags renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    removeOuterTag={true}
     showCasePanel={true}
   >
-    <Button
-      href="#"
-      label="Anchor"
-      type="primary"
-    />
-    
+    <div
+      className="button-group"
+    >
+      
 
-    <Button
-      label="Button"
-      type="primary"
-    />
-    
+      <Button
+        href="#"
+        label="Anchor"
+        type="primary"
+      />
+      
 
-    <Button
-      btnType="button"
-      input={true}
-      type="primary"
-      value="Input"
-    />
-    
+      <Button
+        label="Button"
+        type="primary"
+      />
+      
 
-    <Button
-      btnType="submit"
-      input={true}
-      type="primary"
-      value="Submit"
-    />
-    
+      <Button
+        btnType="button"
+        input={true}
+        type="primary"
+        value="Input"
+      />
+      
 
-    <Button
-      btnType="reset"
-      input={true}
-      type="primary"
-      value="Reset"
-    />
-    
+      <Button
+        btnType="submit"
+        input={true}
+        type="primary"
+        value="Submit"
+      />
+      
 
+      <Button
+        btnType="reset"
+        input={true}
+        type="primary"
+        value="Reset"
+      />
+      
+
+    </div>
   </ComponentPreview>
 </Fragment>
 `;

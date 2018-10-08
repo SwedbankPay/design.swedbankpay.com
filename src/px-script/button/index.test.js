@@ -19,8 +19,6 @@ describe("px-script: button", () => {
     });
 
     it("method init is defined and adds loader markup to buttons with attribute [data-button-loader]", () => {
-        expect(button.init).toBeDefined();
-
         const Buttons = () => (
             <div>
                 <Button type="primary" label="test" loader />

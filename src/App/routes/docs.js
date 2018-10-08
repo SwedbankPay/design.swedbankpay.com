@@ -145,11 +145,6 @@ export default [
                 component: require("../Documentation/components/MediaObject")
             },
             {
-                title: "Modal (deprecated)",
-                path: "/docs/components/modal",
-                component: require("../Documentation/components/Modal")
-            },
-            {
                 title: "Pagination",
                 path: "/docs/components/pagination",
                 component: require("../Documentation/components/Pagination")

@@ -31,7 +31,7 @@ const datepicker = (() => {
             min: datepickerMin || null,
             max: datepickerMax || null,
             initialValue: datepickerValue || null,
-            required: required || false,
+            required: !!required || false,
             monthsInCalendar: parseInt(datepickerMonths) || 1
         };
 
@@ -52,9 +52,11 @@ const datepicker = (() => {
     const init = () => {
         const datepickers = document.querySelectorAll("[data-datepicker]");
 
-        datepickers.forEach(picker => {
-            _createDatepicker(picker);
-        });
+        if (datepickers) {
+            datepickers.forEach(picker => {
+                _createDatepicker(picker);
+            });
+        }
     };
 
     return { init };

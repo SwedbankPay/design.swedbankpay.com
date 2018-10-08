@@ -6,13 +6,13 @@ import button from "./button";
 import datepicker from "./datepicker";
 import dialog from "./dialog";
 import loader from "./loader";
-import modal from "./modal";
 import rangeslider from "./rangeslider";
 import sheet from "./sheet";
 import script from "./script";
 import tabs from "./tabs";
 import toast from "./toast";
 import topbar from "./topbar";
+import utils from "./utils";
 import validation from "./validation";
 
 // Sentry reporter
@@ -27,13 +27,13 @@ const px = {
     datepicker,
     dialog,
     loader,
-    modal,
     rangeslider,
     sheet,
     script,
     tabs,
     toast,
     topbar,
+    utils,
     validation
 };
 
@@ -47,4 +47,4 @@ if (!window.stopPx) {
 
 export default px;
 
-export { actionList, alert, button, datepicker, dialog, loader, modal, rangeslider, sheet, script, tabs, toast, topbar, validation };
+export { actionList, alert, button, datepicker, dialog, loader, rangeslider, sheet, script, tabs, toast, topbar, utils, validation };

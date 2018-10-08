@@ -1,14 +1,7 @@
-@datepicker-box-shadow: @default-box-shadow;
-@datepicker-background-color: @white;
-@datepicker-highlight-background: @brand-primary;
-@datepicker-highlight-color: @white;
-@datepicker-weekday-color: @brand-primary;
-@datepicker-hover-color: @gray-10;
-
 .rd-container {
     display: none;
     background-color: @datepicker-background-color;
-    padding: 1rem 0.6rem;
+    padding: @base-padding @base-padding-sm;
     text-align: center;
     box-shadow: @datepicker-box-shadow;
     z-index: @zindex-datepicker;
@@ -20,7 +13,7 @@
 
 .rd-month {
     display: inline-block;
-    margin-right: 1.5rem;
+    margin-right: @base-margin-lg;
 }
 
 .rd-month-label {
@@ -41,7 +34,7 @@
     border: none;
     outline: none;
     background: none;
-    padding: 0 0.6rem;
+    padding: 0 @base-padding-sm;
     margin: 0;
 }
 
@@ -129,11 +122,11 @@
 }
 
 .rd-time-selected {
-    padding: 0.3rem;
+    padding: @datepicker-rd-padding;
 }
 
 .rd-time-option {
-    padding: 0.3rem;
+    padding: @datepicker-rd-padding;
 }
 
 .rd-day-concealed {

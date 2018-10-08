@@ -6,9 +6,14 @@
         "selector-pseudo-element-colon-notation": "single",
         "no-descending-specificity": null,
         "color-hex-length": "long",
+        "color-hex-case": [ "lower", {
+            "message": "Lowercase letters are easier to distinguish from numbers"
+        }],
         "max-empty-lines": [2, { "ignore": ["comments"] }],
         "string-quotes": "double",
         "font-family-no-missing-generic-family-keyword": null,
-        "at-rule-no-unknown": null
+        "at-rule-no-unknown": null,
+        "number-max-precision": 4,
+        "unit-whitelist": ["%", "px", "rem", "vh", "vw", "s", "deg", "ch"]
     }
 }

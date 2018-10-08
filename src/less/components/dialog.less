@@ -45,11 +45,11 @@
             background: @background-body;
             border-top: @dialog-border;
             padding: @dialog-footer-padding;
-            margin: @dialog-footer-margin;
+            margin: 0;
             display: flex;
             justify-content: flex-end;
 
-            > * {
+            > * { //Todo: cleanup
                 margin: 0 0.25rem;
             }
         }
@@ -58,11 +58,11 @@
 
 .dialog-open {
     overflow: hidden;
-    padding-right: 17px;
+    padding-right: 17px; // Width of the scrollbar (don't change this) [EH]
 
     .dialog {
         overflow-x: hidden;
         overflow-y: auto;
-        padding-right: 17px;
+        padding-right: 17px; // Width of the scrollbar (don't change this) [EH]
     }
 }
