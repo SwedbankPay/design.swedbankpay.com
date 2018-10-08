@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
 class Tabs extends Component {
     constructor (props) {
@@ -15,7 +15,6 @@ class Tabs extends Component {
 
     render () {
         const { mode, items, id } = this.props;
-        // const containsHorizontal = mode.includes("horizontal");
 
         return (
             <div className={`tabs${mode ? mode : ""}`} id={id ? id : ""}>{"\n"}
@@ -32,16 +31,15 @@ class Tabs extends Component {
     }
 }
 
-// Tabs.propTypes = {
-//     mode: PropTypes.oneOf([
-//         "responsive",
-//         "horizontal-xs",
-//         "horizontal-sm",
-//         "horizontal-md",
-//         "horizontal-lg",
-//         "horizontal-xl"]).isRequired,
-//     items: PropTypes.array.isRequired,
-//     id: PropTypes.string.isRequired
-// };
+Tabs.propTypes = {
+    mode: PropTypes.oneOf([
+        " tabs-responsive",
+        " tabs-horizontal-xs",
+        " tabs-horizontal-sm",
+        " tabs-horizontal-md",
+        " tabs-horizontal-lg",
+        " tabs-horizontal-xl"]),
+    items: PropTypes.array.isRequired
+};
 
 export default Tabs;

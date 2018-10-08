@@ -1,25 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components: Tabs Overview renders 1`] = `
+exports[`Components: Tabs BasicUsage renders 1`] = `
 <Fragment>
   <h2
-    id="overview"
+    id="basicusage"
   >
-    Overview
+    Basic usage
   </h2>
   <p>
-    Overview... 
+    Add class 
     <code
       className="token property"
     >
       .tabs
     </code>
-    ...
+     with a 
     <code
       className="token property"
     >
-      .tabs-auto
+      .tabs-horizontal-desired_size
     </code>
+     to a div containing an arrow icon along with 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;ul&gt;
+    </PrismCode>
+     and nest 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;li&gt;
+    </PrismCode>
+     as needed. The 
+    <code
+      className="token property"
+    >
+      .tabs-horizontal-desired_size
+    </code>
+     class determines when your tabs will switch from horizontal to collapsed. The available sizes can be found in our 
+    <Link
+      replace={false}
+      to="/docs/core/breakpoints"
+    >
+      breakpoints documentation
+    </Link>
+    .
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -27,7 +55,44 @@ exports[`Components: Tabs Overview renders 1`] = `
     showCasePanel={true}
   >
     <Tabs
-      id="default-list-demo"
+      items={
+        Array [
+          "Kort",
+          "Rabatter",
+          "Transaksjoner",
+          "Faktura",
+          "Instillinger",
+          "Audit trail",
+        ]
+      }
+      mode=" tabs-horizontal-xl"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Components: Tabs Collapsed renders 1`] = `
+<Fragment>
+  <h2
+    id="collapsed"
+  >
+    Collapsed
+  </h2>
+  <p>
+    If no 
+    <code
+      className="token property"
+    >
+      .tabs-horizontal-desired_size
+    </code>
+     is provided then the tabs will always be in collapsed mode.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Tabs
       items={
         Array [
           "Kort",
@@ -41,6 +106,21 @@ exports[`Components: Tabs Overview renders 1`] = `
     />
   </ComponentPreview>
 </Fragment>
+`;
+
+exports[`Components: Tabs TabsText renders 1`] = `
+<div
+  className="col-md-12 col-lg-10 doc-body"
+>
+  <ExperimentalComponentAlert />
+  <p
+    className="lead"
+  >
+    Tabs...
+  </p>
+  <BasicUsage />
+  <Collapsed />
+</div>
 `;
 
 exports[`Components: Tabs renders 1`] = `
