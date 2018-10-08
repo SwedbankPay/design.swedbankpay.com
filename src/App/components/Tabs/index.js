@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import classnames from "classnames";
 
 class Tabs extends Component {
     constructor (props) {
@@ -15,9 +16,13 @@ class Tabs extends Component {
 
     render () {
         const { mode, items } = this.props;
+        const tabsClassnames = classnames(
+            "tabs",
+            mode ? `tabs-horizontal-${mode}` : null
+        );
 
         return (
-            <div className={`tabs${mode ? ` tabs-horizontal-${mode}` : ""}`}>{"\n"}
+            <div className={tabsClassnames}>{"\n"}
                 <i className="material-icons">keyboard_arrow_right</i>
                 <ul>
                     {items.map((name, i) => (
@@ -32,13 +37,7 @@ class Tabs extends Component {
 }
 
 Tabs.propTypes = {
-    mode: PropTypes.oneOf([
-        "xs",
-        "sm",
-        "md",
-        "lg",
-        "xl",
-        "xxl"]),
+    mode: PropTypes.oneOf(["xs", "sm", "md", "lg", "xl", "xxl"]),
     items: PropTypes.array.isRequired
 };
 
