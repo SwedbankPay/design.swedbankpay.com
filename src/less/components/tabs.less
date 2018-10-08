@@ -1,6 +1,6 @@
 .tabs {
     position: relative;
-    margin: 1rem auto;
+    margin: @base-margin auto;
     min-height: 25px;
     display: flex;
     z-index: @zindex-tabs;
@@ -18,7 +18,7 @@
         display: flex;
         width: 100%;
         padding-left: 11px;
-        padding-bottom: 0.5rem;
+        padding-bottom: @base-padding-sm;
         background-color: white;
         border-bottom: 1px solid @gray-8;
 
@@ -37,7 +37,7 @@
             &.active {
                 font-weight: bold;
                 display: block;
-                padding-left: 1rem;
+                padding-left: @base-padding;
             }
         }
     }
@@ -55,12 +55,12 @@
                     &:hover {
                         a {
                             border-left: 2px solid @brand-primary;
-                            padding-left: calc(1rem - 2px);
+                            padding-left: calc(@base-padding - 2px);
                         }
                     }
 
                     a {
-                        padding-left: 1rem;
+                        padding-left: @base-padding;
                     }
                 }
 
@@ -92,14 +92,14 @@
 
         li {
             display: block;
-            margin-left: 1.5rem;
+            margin-left: @base-margin-lg;
 
             &:first-child {
-                margin-left: 1rem;
+                margin-left: @base-margin;
             }
 
             a {
-                padding-bottom: 0.5rem;
+                padding-bottom: @base-padding-sm;
             }
 
             &.active {
@@ -108,7 +108,7 @@
 
                 > a {
                     border-bottom: 2px solid @brand-primary;
-                    padding-bottom: calc(0.5rem - 2px);
+                    padding-bottom: calc(@base-padding-sm - 2px);
                 }
             }
         }
@@ -126,7 +126,7 @@
     }
 }
 
-// &.tabs-vertical { Not sure if this is going to be kept [AW]
+// &.tabs-vertical { Not sure if this is going to be kept, i suspect this won't work with the newest changes [AW]
 //     padding-left: 0;
 //     flex-direction: column;
 
@@ -134,7 +134,7 @@
 //         border-left: 1px solid @gray-8;
 
 //         a {
-//             padding-left: 1rem;
+//             padding-left: @base-padding;
 //         }
 
 //         &.active {
@@ -143,7 +143,7 @@
 
 //             a {
 //                 border-left: 2px solid @brand-primary;
-//                 padding-left: calc(1rem - 2px);
+//                 padding-left: calc(@base-padding - 2px);
 //             }
 //         }
 //     }
