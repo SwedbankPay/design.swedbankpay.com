@@ -11,7 +11,7 @@ const Overview = () => (
         <h2 id="overview">Overview</h2>
         <p>Overview... <code className="token property">.tabs</code>...<code className="token property">.tabs-auto</code></p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <TabsComponent items={tabItems} id="default-list-demo"/>
+            <TabsComponent mode=" tabs-horizontal-xl" items={tabItems} id="horizontal-list-demo"/>
         </ComponentPreview>
     </>
 );
@@ -21,7 +21,7 @@ const Collapsed = () => (
         <h2 id="collapsed">Responsive</h2>
         <p>Responsive... <code className="token property">.tabs</code>...<code className="token property">.tabs-collapsed</code></p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <TabsComponent mode=" tabs-horizontal-xl" items={tabItems} id="horizontal-list-demo"/>
+            <TabsComponent items={tabItems} id="default-list-demo"/>
         </ComponentPreview>
     </>
 );

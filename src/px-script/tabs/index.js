@@ -4,12 +4,7 @@ class Tabs {
         this.id = el.id;
         this.classList = el.classList;
         this.isOpen = el.classList.contains("tabs-open");
-        // this.sizeCollapse = this.classList.split(" "); // get size from classname
-        this.screenSize;
-
-        window.addEventListener("resize", () => {
-            this.onWindowResize();
-        });
+        this.flexDir;
 
         document.addEventListener("click", e => {
             if (!e.target.closest(".tabs") && this.isOpen) {
@@ -19,46 +14,24 @@ class Tabs {
     }
 
     open () {
-        if (!this.isOpen) {
+        [...this._el.children].forEach(test => {
+            if (test.nodeName === "UL") {
+                this.flexDir = getComputedStyle(test).flexDirection;
+            }
+        });
+
+        if (!this.isOpen && this.flexDir === "column") {
             this.isOpen = true;
             this._el.classList.add("tabs-open");
         }
     }
 
     close () {
-        if (this.isOpen) {
+        if (this.isOpen && this.flexDir === "column") {
             this.isOpen = false;
             this._el.classList.remove("tabs-open");
         }
     }
-
-    // onWindowResize () {
-    //     this.screenSize = window.innerWidth;
-    //     console.log(this.screenSize);
-
-    //     switch (true) {
-    //         case (this.screenSize < 768):
-    //             console.log("case 1");
-
-    //             break;
-    //         case (this.screenSize < 992):
-    //             console.log("case 2");
-
-    //             break;
-    //         case (this.screenSize < 1200):
-    //             console.log("case 3");
-
-    //             break;
-    //         case (this.screenSize < 1600):
-    //             console.log("case 4");
-
-    //             break;
-    //         default:
-    //             console.log("default case");
-
-    //             break;
-    //     }
-    // }
 }
 
 const tabs = (() => {
