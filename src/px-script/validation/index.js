@@ -13,11 +13,10 @@ const validation = (() => {
         }
     };
 
-    return {
-        init
-    };
+    return { init };
 
 })();
 
 export default validation;
 
+// TODO: SET UP TEMP FORM VALIDATION IN DOCUMENTATION
