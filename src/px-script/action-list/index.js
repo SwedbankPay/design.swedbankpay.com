@@ -41,15 +41,18 @@ const actionList = (() => {
     const init = () => {
         const actionLists = document.querySelectorAll(".action-list");
 
-        actionLists.forEach(l => {
-            const list = new ActionList(l);
+        if (actionLists) {
+            actionLists.forEach(l => {
+                const list = new ActionList(l);
 
-            document.querySelector("html").addEventListener("click", e => {
-                if (list.isOpen && !list.containsPoint(e.clientX, e.clientY)) {
-                    list.close();
-                }
+                document.querySelector("html").addEventListener("click", e => {
+                    if (list.isOpen && !list.containsPoint(e.clientX, e.clientY)) {
+                        list.close();
+                    }
+                });
             });
-        });
+        }
+
     };
 
     return { init };

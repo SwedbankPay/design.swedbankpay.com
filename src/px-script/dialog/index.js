@@ -50,41 +50,45 @@ class Dialog {
 
 const dialog = (() => {
     const init = () => {
-        const dialogs = [...document.querySelectorAll(SELECTORS.DIALOG)].map(dialog => new Dialog(dialog));
+        const dialogEls = [...document.querySelectorAll(SELECTORS.DIALOG)];
 
-        // Init open buttons
-        document.querySelectorAll(SELECTORS.OPEN).forEach(btn => {
-            const id = btn.dataset.dialogOpen;
-            let dialog;
+        if (dialogEls) {
+            const dialogs = dialogEls.map(dialog => new Dialog(dialog));
 
-            dialogs.forEach(d => d.id === id ? dialog = d : null);
+            // Init open buttons
+            document.querySelectorAll(SELECTORS.OPEN).forEach(btn => {
+                const id = btn.dataset.dialogOpen;
+                let dialog;
 
-            if (dialog) {
-                btn.addEventListener("click", e => {
-                    e.preventDefault();
-                    dialog.open();
-                });
-            } else {
-                console.warn(`OPEN: No dialog with with id ${id} was found, make sure the attribute data-dialog-open contains the correct id.`);
-            }
-        });
+                dialogs.forEach(d => d.id === id ? dialog = d : null);
 
-        // Init close buttons
-        document.querySelectorAll(SELECTORS.CLOSE).forEach(btn => {
-            const id = btn.dataset.dialogClose;
-            let dialog;
+                if (dialog) {
+                    btn.addEventListener("click", e => {
+                        e.preventDefault();
+                        dialog.open();
+                    });
+                } else {
+                    console.warn(`OPEN: No dialog with with id ${id} was found, make sure the attribute data-dialog-open contains the correct id.`);
+                }
+            });
 
-            dialogs.forEach(d => d.id === id ? dialog = d : null);
+            // Init close buttons
+            document.querySelectorAll(SELECTORS.CLOSE).forEach(btn => {
+                const id = btn.dataset.dialogClose;
+                let dialog;
 
-            if (dialog) {
-                btn.addEventListener("click", e => {
-                    e.preventDefault();
-                    dialog.close();
-                });
-            } else {
-                console.warn(`CLOSE: No dialog with with id ${id} was found, make sure the attribute data-dialog-close contains the correct id.`);
-            }
-        });
+                dialogs.forEach(d => d.id === id ? dialog = d : null);
+
+                if (dialog) {
+                    btn.addEventListener("click", e => {
+                        e.preventDefault();
+                        dialog.close();
+                    });
+                } else {
+                    console.warn(`CLOSE: No dialog with with id ${id} was found, make sure the attribute data-dialog-close contains the correct id.`);
+                }
+            });
+        }
     };
 
     return { init };

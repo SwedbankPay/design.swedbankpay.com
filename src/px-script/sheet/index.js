@@ -56,41 +56,45 @@ class Sheet {
 
 const sheet = (() => {
     const init = () => {
-        const sheets = [...document.querySelectorAll(SELECTORS.SHEET)].map(sheet => new Sheet(sheet));
+        const sheetEls = [...document.querySelectorAll(SELECTORS.SHEET)];
 
-        // Init open buttons
-        document.querySelectorAll(SELECTORS.OPEN).forEach(btn => {
-            const id = btn.dataset.sheetOpen;
-            let sheet;
+        if (sheetEls) {
+            const sheets = sheetEls.map(sheet => new Sheet(sheet));
 
-            sheets.forEach(s => s.id === id ? sheet = s : null);
+            // Init open buttons
+            document.querySelectorAll(SELECTORS.OPEN).forEach(btn => {
+                const id = btn.dataset.sheetOpen;
+                let sheet;
 
-            if (sheet) {
-                btn.addEventListener("click", e => {
-                    e.preventDefault();
-                    sheet.open();
-                });
-            } else {
-                console.warn(`OPEN: No sheet with with id ${id} was found, make sure the attribute data-sheet-open contains the correct id.`);
-            }
-        });
+                sheets.forEach(s => s.id === id ? sheet = s : null);
 
-        // Init close buttons
-        document.querySelectorAll(SELECTORS.CLOSE).forEach(btn => {
-            const id = btn.dataset.sheetClose;
-            let sheet;
+                if (sheet) {
+                    btn.addEventListener("click", e => {
+                        e.preventDefault();
+                        sheet.open();
+                    });
+                } else {
+                    console.warn(`OPEN: No sheet with with id ${id} was found, make sure the attribute data-sheet-open contains the correct id.`);
+                }
+            });
 
-            sheets.forEach(s => s.id === id ? sheet = s : null);
+            // Init close buttons
+            document.querySelectorAll(SELECTORS.CLOSE).forEach(btn => {
+                const id = btn.dataset.sheetClose;
+                let sheet;
 
-            if (sheet) {
-                btn.addEventListener("click", e => {
-                    e.preventDefault();
-                    sheet.close();
-                });
-            } else {
-                console.warn(`CLOSE: No sheet with with id ${id} was found, make sure the attribute data-sheet-close contains the correct id.`);
-            }
-        });
+                sheets.forEach(s => s.id === id ? sheet = s : null);
+
+                if (sheet) {
+                    btn.addEventListener("click", e => {
+                        e.preventDefault();
+                        sheet.close();
+                    });
+                } else {
+                    console.warn(`CLOSE: No sheet with with id ${id} was found, make sure the attribute data-sheet-close contains the correct id.`);
+                }
+            });
+        }
     };
 
     return { init };

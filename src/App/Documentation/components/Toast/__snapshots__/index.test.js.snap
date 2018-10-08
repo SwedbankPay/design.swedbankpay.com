@@ -35,7 +35,11 @@ exports[`Components: Toast Options renders 1`] = `
           String
         </td>
         <td>
-          " "
+          <code
+            className="token attr-value"
+          >
+            ""
+          </code>
         </td>
         <td>
           The HTML content of the Toast.
@@ -49,10 +53,38 @@ exports[`Components: Toast Options renders 1`] = `
           String
         </td>
         <td>
-          " "
+          <code
+            className="token attr-value"
+          >
+            ""
+          </code>
         </td>
         <td>
-          Premade alert types; success, neutral, warning and danger are available.
+          Premade alert types; 
+          <code
+            className="token attr-value"
+          >
+            success
+          </code>
+          , 
+          <code
+            className="token attr-value"
+          >
+            neutral
+          </code>
+          , 
+          <code
+            className="token attr-value"
+          >
+            warning
+          </code>
+           and 
+          <code
+            className="token attr-value"
+          >
+            danger
+          </code>
+           are available.
         </td>
       </tr>
       <tr>
@@ -63,7 +95,11 @@ exports[`Components: Toast Options renders 1`] = `
           Boolean
         </td>
         <td>
-          true
+          <code
+            className="token attr-value"
+          >
+            true
+          </code>
         </td>
         <td>
           Wether or not the alert should be dismissable by the user (close button).
@@ -77,7 +113,11 @@ exports[`Components: Toast Options renders 1`] = `
           String
         </td>
         <td>
-          " "
+          <code
+            className="token attr-value"
+          >
+            ""
+          </code>
         </td>
         <td>
           Custom icon for the toast. See 
@@ -98,7 +138,11 @@ exports[`Components: Toast Options renders 1`] = `
           Number
         </td>
         <td>
-          4000
+          <code
+            className="token attr-value"
+          >
+            4000
+          </code>
         </td>
         <td>
           Length in ms the Toast stays before dismissal.
@@ -112,7 +156,11 @@ exports[`Components: Toast Options renders 1`] = `
           Array of strings
         </td>
         <td>
-          [ ]
+          <code
+            className="token attr-value"
+          >
+            []
+          </code>
         </td>
         <td>
           Classes to be added to the toast element.
@@ -126,7 +174,11 @@ exports[`Components: Toast Options renders 1`] = `
           Function
         </td>
         <td>
-          null
+          <code
+            className="token attr-value"
+          >
+            null
+          </code>
         </td>
         <td>
           Callback function called when toast is dismissed.
