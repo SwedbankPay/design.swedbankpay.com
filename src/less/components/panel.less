@@ -45,7 +45,7 @@
         }
     }
 
-    &.panel-no-padding { //Is this used anywhere? [AW]
+    &.panel-no-padding {
         .panel-body {
             margin: 0;
             padding: 0;
@@ -56,7 +56,7 @@
         }
     }
 
-    &.panel-half-padding { //Is this used anywhere? [AW]
+    &.panel-half-padding {
         .panel-body {
             margin: 0;
             padding: 7px 15px;
@@ -129,23 +129,6 @@
         background-color: @background-body;
         padding: @panel-footer-padding;
         border-top: 1px solid @panel-default-border-color;
-
-        &.panel-table-footer {
-            padding: 0;
-
-            td {
-                padding-left: 20px;
-            }
-        }
-
-        > .table {
-            background-color: @panel-footer-background-color;
-            margin-bottom: 0;
-
-            > tbody > tr > td {
-                border-color: @panel-footer-table-border-color;
-            }
-        }
     }
 
     // List groups in panels
