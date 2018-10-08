@@ -21,7 +21,7 @@ class Tabs {
                 } else {
                     this.close();
                 }
-            })
+            });
         });
     }
 
