@@ -1,0 +1,1 @@
+- If validating the whole form, add attribute `novalidate`.
