@@ -4,15 +4,15 @@
     padding: 0;
     background-color: @background-white;
     font-size: 1.1rem;
-    box-shadow: 0 0 15px hsla(0, 0%, 0%, 0.1);
+    box-shadow: @default-box-shadow;
 
     li {
         display: block;
         position: relative;
-        padding: 35px 20px 35px 89px;
+        padding: 2rem 1.5rem 2rem 5.5rem;
         cursor: pointer;
-        border-top: 1px solid transparent;
-        border-bottom: 1px solid transparent;
+        border-top: @border-width solid transparent;
+        border-bottom: @border-width solid transparent;
         line-height: 1em;
 
         &:hover {
@@ -26,7 +26,7 @@
             box-sizing: border-box;
             left: 30px;
             top: 50%;
-            z-index: 10;
+            z-index: @zindex-step-bar-circle;
             margin-top: -22.5px;
             height: 45px;
             width: 45px;
@@ -44,7 +44,7 @@
             bottom: 0;
             width: 5px;
             background-color: @gray-8;
-            z-index: 5;
+            z-index: @zindex-step-bar-line;
         }
 
         &:first-child {
@@ -108,7 +108,7 @@
         left: 30px;
         top: 50%;
         margin-top: -22.5px;
-        z-index: 15;
+        z-index: @zindex-step-bar-icon;
         line-height: 45px;
         text-align: center;
     }
@@ -129,7 +129,7 @@
         flex-grow: 1;
         position: relative;
         text-align: center;
-        padding: 70px 0 10px 0;
+        padding: 5.5rem 0 1rem 0;
 
         &:before {
             left: initial;
