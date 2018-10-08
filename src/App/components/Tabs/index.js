@@ -17,7 +17,7 @@ class Tabs extends Component {
         const { mode, items } = this.props;
 
         return (
-            <div className={`tabs${mode ? mode : ""}`}>{"\n"}
+            <div className={`tabs${mode ? ` tabs-horizontal-${mode}` : ""}`}>{"\n"}
                 <i className="material-icons">keyboard_arrow_right</i>
                 <ul>
                     {items.map((name, i) => (
@@ -33,11 +33,12 @@ class Tabs extends Component {
 
 Tabs.propTypes = {
     mode: PropTypes.oneOf([
-        " tabs-horizontal-xs",
-        " tabs-horizontal-sm",
-        " tabs-horizontal-md",
-        " tabs-horizontal-lg",
-        " tabs-horizontal-xl"]),
+        "xs",
+        "sm",
+        "md",
+        "lg",
+        "xl",
+        "xxl"]),
     items: PropTypes.array.isRequired
 };
 

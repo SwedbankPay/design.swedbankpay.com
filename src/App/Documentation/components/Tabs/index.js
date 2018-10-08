@@ -10,10 +10,10 @@ const tabItems = ["Kort", "Rabatter", "Transaksjoner", "Faktura", "Instillinger"
 
 const BasicUsage = () => (
     <>
-        <h2 id="basicusage">Basic usage</h2>
+        <h2 id="basic-usage">Basic usage</h2>
         <p>Add class <code className="token property">.tabs</code> with a <code className="token property">.tabs-horizontal-desired_size</code> to a div containing an arrow icon along with <PrismCode className="language-html">{"<ul>"}</PrismCode> and nest <PrismCode className="language-html">{"<li>"}</PrismCode> as needed. The <code className="token property">.tabs-horizontal-desired_size</code> class determines when your tabs will switch from horizontal to collapsed. The available sizes can be found in our <Link to="/docs/core/breakpoints">breakpoints documentation</Link>.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <TabsComponent mode=" tabs-horizontal-xl" items={tabItems}/>
+            <TabsComponent mode="xl" items={tabItems}/>
         </ComponentPreview>
     </>
 );
