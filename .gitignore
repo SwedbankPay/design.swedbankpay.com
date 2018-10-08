@@ -3,6 +3,7 @@ dist
 
 # Local vs code settings
 .vscode/
+.vs/
 
 # Logs
 logs
