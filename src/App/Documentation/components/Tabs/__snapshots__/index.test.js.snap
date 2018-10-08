@@ -3,7 +3,7 @@
 exports[`Components: Tabs BasicUsage renders 1`] = `
 <Fragment>
   <h2
-    id="basicusage"
+    id="basic-usage"
   >
     Basic usage
   </h2>
@@ -65,7 +65,7 @@ exports[`Components: Tabs BasicUsage renders 1`] = `
           "Audit trail",
         ]
       }
-      mode=" tabs-horizontal-xl"
+      mode="xl"
     />
   </ComponentPreview>
 </Fragment>
