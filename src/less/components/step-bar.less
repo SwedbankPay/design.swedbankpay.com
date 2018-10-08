@@ -1,4 +1,15 @@
-.step-bar {
+/* steps -> steps ?
+
+ active -> Ongoing (circle) and selected (Gray)
+
+ border top on li is weird on horizontal version
+
+Documentation for links, "li"'s without a link shouldn't be navigatable perhaps?
+Override default link behavior, take up full parent.
+
+ */
+
+.steps {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -10,14 +21,9 @@
         display: block;
         position: relative;
         padding: 2rem 1.5rem 2rem 5.5rem;
-        cursor: pointer;
         border-top: @border-width solid transparent;
         border-bottom: @border-width solid transparent;
         line-height: 1rem;
-
-        &:hover {
-            background-color: @gray-10;
-        }
 
         /* Circle */
         &:before {
@@ -26,7 +32,7 @@
             box-sizing: border-box;
             left: 30px;
             top: 50%;
-            z-index: @zindex-step-bar-circle;
+            z-index: @zindex-steps-circle;
             margin-top: -22.5px;
             height: 45px;
             width: 45px;
@@ -44,7 +50,7 @@
             bottom: 0;
             width: 5px;
             background-color: @gray-8;
-            z-index: @zindex-step-bar-line;
+            z-index: @zindex-steps-line;
         }
 
         &:first-child {
@@ -62,7 +68,7 @@
         }
     }
 
-    .step-bar-item-complete {
+    .steps-completed {
         &:before {
             border-color: @brand-primary;
             background-color: @brand-primary;
@@ -73,10 +79,7 @@
         }
     }
 
-    .step-bar-item-active {
-        background-color: @gray-10;
-        border-color: @gray-9;
-
+    .steps-ongoing {
         &:before {
             border-color: @brand-primary;
         }
@@ -93,14 +96,19 @@
         }
     }
 
-    .step-bar-item-sub-title {
+    .steps-selected {
+        background-color: @gray-10;
+        border-color: @gray-9;
+    }
+
+    .steps-sub-title {
         line-height: 1rem;
         margin-top: @base-margin-sm;
         font-size: @font-size-small;
         color: @mid-gray;
     }
 
-    .step-bar-icon {
+    .steps-icon {
         color: @background-white;
         position: absolute;
         width: 45px;
@@ -108,14 +116,13 @@
         left: 30px;
         top: 50%;
         margin-top: -22.5px;
-        z-index: @zindex-step-bar-icon;
+        z-index: @zindex-steps-icon;
         line-height: 45px;
         text-align: center;
     }
 }
 
-/* Horizontal extension */
-.step-bar--horizontal {
+.steps-horizontal {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -130,12 +137,16 @@
         position: relative;
         text-align: center;
         padding: 5.5rem 0 1rem 0;
+        border-top: initial;
+        border-bottom: initial;
 
+        /* Circle */
         &:before {
             left: initial;
             top: 40%;
         }
 
+        /* Line */
         &:after {
             height: 5px;
             width: 100%;
@@ -162,23 +173,22 @@
         }
     }
 
-    .step-bar-item-active:after {
+    .steps-ongoing:after {
         background: linear-gradient(to right, @brand-primary 50%, @gray-8 50%);
     }
 
-    .step-bar-icon {
+    .steps-icon {
         left: initial;
         top: 40%;
     }
 }
 
-/* Small size screens */
 @media screen and (max-width: @screen-xs-min) {
-    .step-bar--horizontal {
+    .steps-horizontal {
         li {
             display: none;
 
-            &.step-bar-item-active {
+            &.steps-ongoing {
                 display: flex;
 
                 &:last-child {

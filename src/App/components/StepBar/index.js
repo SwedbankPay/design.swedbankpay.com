@@ -2,50 +2,57 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-const DefaultItems = () => (
+const DefaultSteps = [
+    {
+        title: "Step one",
+        subtitle: "24.12.17 12:10",
+        completed: true
+    },
+    {
+        title: "Step two",
+        ongoing: true
+    },
+    {
+        title: "Step three",
+        selected: true
+    },
+    {
+        title: "Step four"
+    }
+];
+
+const RenderSteps = ({ steps }) => (
     <>
-        <li className="step-bar-item-complete">
-            <div className="material-icons step-bar-icon" >check</div>
-            Step one
-        </li>
-        <li className="step-bar-item-active">
-            Step two
-        </li>
-        <li>
-            Step three
-        </li>
-        <li>
-            Step four
-        </li>
+        {steps.map(({ title, subtitle, completed, ongoing, selected }, i) => (
+            <li key={i} className={classnames(completed ? "steps-completed" : null,
+                ongoing ? "steps-ongoing" : null,
+                selected ? "steps-selected" : null)}>
+                {completed ? <div className="material-icons steps-icon" >check</div> : null}
+                {title}
+                {subtitle ? <div className="steps-sub-title">{subtitle}</div> : null}
+            </li>
+        ))}
     </>
 );
 
-const StepBar = ({ items, horizontal }) => {
-    const stepBarClasses = classnames(
-        "step-bar",
-        horizontal ? "step-bar--horizontal" : null
+const Steps = ({ steps, horizontal }) => {
+    const stepsClasses = classnames(
+        "steps",
+        horizontal ? "steps-horizontal" : null
     );
 
-    const _renderItems = items => items.map(({ title, subtitle, completed, active }, i) => (
-        <li key={i} className={`${completed ? "step-bar-item-complete" : ""}${active ? " step-bar-item-active" : ""}`}>
-            {completed ? <div className="material-icons step-bar-icon" >check</div> : null}
-            {title}
-            {subtitle ? <div className="step-bar-item-sub-title">{subtitle}</div> : null}
-        </li>
-    ));
-
-    return (<ol className={stepBarClasses}>
-        {items ? _renderItems(items) : <DefaultItems />}
+    return (<ol className={stepsClasses}>
+        {steps ? <RenderSteps steps={steps} /> : <RenderSteps steps={DefaultSteps} />}
     </ol>
     );
 };
 
-StepBar.propTypes = {
-    items: PropTypes.array,
+Steps.propTypes = {
+    steps: PropTypes.array,
     horizontal: PropTypes.bool
 };
 
-export default StepBar;
+export default Steps;
 
 // exporting for testing purposes
-export { DefaultItems };
+export { DefaultSteps };
