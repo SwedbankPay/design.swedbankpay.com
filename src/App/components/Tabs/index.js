@@ -14,10 +14,10 @@ class Tabs extends Component {
     }
 
     render () {
-        const { mode, items, id } = this.props;
+        const { mode, items } = this.props;
 
         return (
-            <div className={`tabs${mode ? mode : ""}`} id={id ? id : ""}>{"\n"}
+            <div className={`tabs${mode ? mode : ""}`}>{"\n"}
                 <i className="material-icons">keyboard_arrow_right</i>
                 <ul>
                     {items.map((name, i) => (
