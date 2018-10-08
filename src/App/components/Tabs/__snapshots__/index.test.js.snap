@@ -2,11 +2,16 @@
 
 exports[`Component: Tabs -  Prop mode is required 1`] = `
 <div
-  className="tabs"
+  className="tabs tabs-horizontal-auto"
 >
-  <ul
-    className="tabs-undefined"
+  
+
+  <i
+    className="material-icons"
   >
+    keyboard_arrow_right
+  </i>
+  <ul>
     <li
       className={null}
       key="tab-item-test-0"
@@ -45,9 +50,14 @@ exports[`Component: Tabs -  renders 1`] = `
 <div
   className="tabs"
 >
-  <ul
-    className="tabs-auto"
+  
+
+  <i
+    className="material-icons"
   >
+    keyboard_arrow_right
+  </i>
+  <ul>
     <li
       className={null}
       key="tab-item-test-0"
