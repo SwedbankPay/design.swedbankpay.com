@@ -1,6 +1,6 @@
 .status {
     position: relative;
-    padding-left: @status-size + @status-padding;
+    padding-left: @status-padding-left;
 
     &:before {
         content: "";
@@ -43,18 +43,18 @@
     }
 
     h3& {
-        .status-size(@status-size * 1.75, @status-padding);
+        .status-size(@status-size * 1.75, @status-padding-head);
     }
 
     h4& {
-        .status-size(@status-size * 1.5, @status-padding);
+        .status-size(@status-size * 1.5, @status-padding-head);
     }
 
     h5& {
-        .status-size(@status-size * 1.25, @status-padding);
+        .status-size(@status-size * 1.25, @status-padding-head);
     }
 
     h6& {
-        .status-size(@status-size, @status-padding);
+        .status-size(@status-size, @base-padding);
     }
 }
