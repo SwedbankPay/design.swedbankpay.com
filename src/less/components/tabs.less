@@ -1,97 +1,150 @@
 .tabs {
     position: relative;
     margin: @base-margin auto;
-    min-height: 60px;
+    min-height: 25px;
+    display: flex;
+    z-index: @zindex-tabs;
 
-    ul {
-        margin: 0 auto;
-        padding: 0;
+    > i {
+        z-index: @zindex-tabs-arrow;
+        margin-top: 0.1rem;
+        cursor: pointer;
+        transition: 0.2s transform ease-in-out;
+    }
+
+    > ul {
+        flex-direction: column;
+        position: absolute;
         display: flex;
+        width: 100%;
+        padding-left: 11px;
+        padding-bottom: @base-padding-sm;
+        background-color: white;
+        border-bottom: 1px solid @gray-8;
 
         li {
             list-style: none;
-            width: 100%;
+            display: none;
 
             a,
             span {
                 color: fade(@brand-primary, 80%);
                 background-color: @white;
                 display: block;
-                font-weight: bold;
-                padding: @base-padding-sm @base-padding;
-                font-size: 1.3rem;
-                border-bottom: 3px solid @white;
-                transition: border-bottom 0.2s ease-in-out;
-            }
-
-            a {
-                &:focus,
-                &:active,
-                &:hover {
-                    text-decoration: none;
-                    color: @brand-primary;
-                }
+                border-bottom: transparent;
             }
 
             &.active {
-                span,
-                a,
-                a:hover {
-                    color: @brand-primary;
-                    background-color: @white;
-                    border-bottom: 3px solid @brand-primary;
-                }
+                font-weight: bold;
+                display: block;
+                padding-left: @base-padding;
             }
         }
+    }
 
-        &.tabs-stacked {
-            flex-direction: column;
-        }
-
-        &.tabs-collapsed {
-            border-bottom: 1px solid @gray-10;
-            flex-direction: column;
-            position: absolute;
-            width: 100%;
-
-            &:after {
-                content: "";
-                top: 1rem;
-                right: 2rem;
-                border: 2px solid @gray-8;
-                border-top: none;
-                border-left: none;
-                width: 1rem;
-                height: 1rem;
-                position: absolute;
-                transform: rotate(45deg);
-                cursor: pointer;
-            }
-
-            li {
-                display: none;
-
-                &.active {
-                    display: block;
-                }
-            }
-        }
-
-        &:hover {
-            &:after {
-                z-index: @zindex-tabs-arrow;
-            }
+    &.tabs-open {
+        > ul {
+            margin: 0 auto;
 
             li {
                 display: block;
-                z-index: @zindex-tabs;
+                border-left: 1px solid @gray-8;
+                order: 2;
+
+                &:not(.active) {
+                    &:hover {
+                        a {
+                            border-left: 2px solid @brand-primary;
+                            padding-left: calc(@base-padding - 2px);
+                        }
+                    }
+
+                    a {
+                        padding-left: @base-padding;
+                    }
+                }
+
+                &.active {
+                    font-weight: bold;
+                    border-left: transparent;
+                    order: 1;
+                }
+            }
+        }
+
+        > i {
+            transform: rotate(90deg);
+            transition: 0.2s transform ease-in-out;
+        }
+    }
+}
+
+.tabs-horizontal() {
+    padding-left: 0;
+
+    i {
+        display: none;
+    }
+
+    ul {
+        flex-direction: row;
+        padding: 0;
+
+        li {
+            display: block;
+            margin-left: @base-margin-lg;
+
+            &:first-child {
+                margin-left: @base-margin;
+            }
+
+            a {
+                padding-bottom: @base-padding-sm;
+            }
+
+            &.active {
+                font-weight: bold;
+                padding-left: 0;
+
+                > a {
+                    border-bottom: 2px solid @brand-primary;
+                    padding-bottom: calc(@base-padding-sm - 2px);
+                }
             }
         }
     }
+}
 
-    .material-icons {
-        font-size: 1.3rem;
-        line-height: 1.75rem;
-        vertical-align: text-top;
+.for-each(@breakpoint in @grid-breakpoints) {
+    @infix: extract(@breakpoint, 1);
+    @min-width: extract(@breakpoint, 2);
+
+    .tabs-horizontal-@{infix} {
+        @media screen and (min-width: @min-width) {
+            .tabs-horizontal();
+        }
     }
 }
+
+// &.tabs-vertical { Not sure if this is going to be kept, i suspect this won't work with the newest changes [AW]
+//     padding-left: 0;
+//     flex-direction: column;
+
+//     > li {
+//         border-left: 1px solid @gray-8;
+
+//         a {
+//             padding-left: @base-padding;
+//         }
+
+//         &.active {
+//             font-weight: bold;
+//             color: @brand-primary;
+
+//             a {
+//                 border-left: 2px solid @brand-primary;
+//                 padding-left: calc(@base-padding - 2px);
+//             }
+//         }
+//     }
+// }

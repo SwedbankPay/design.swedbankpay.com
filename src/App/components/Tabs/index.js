@@ -17,8 +17,9 @@ class Tabs extends Component {
         const { mode, items } = this.props;
 
         return (
-            <div className="tabs">
-                <ul className={`tabs-${mode}`}>
+            <div className={`tabs${mode ? ` tabs-horizontal-${mode}` : ""}`}>{"\n"}
+                <i className="material-icons">keyboard_arrow_right</i>
+                <ul>
                     {items.map((name, i) => (
                         <li key={`tab-item-${name}-${i}`} className={this.state.active === i ? "active" : null}>{"\n"}
                             <a href="#" onClick={e => this.setActive(e, i)}>{name}</a>{"\n"}
@@ -31,7 +32,13 @@ class Tabs extends Component {
 }
 
 Tabs.propTypes = {
-    mode: PropTypes.oneOf(["auto", "stacked", "collapsed"]).isRequired,
+    mode: PropTypes.oneOf([
+        "xs",
+        "sm",
+        "md",
+        "lg",
+        "xl",
+        "xxl"]),
     items: PropTypes.array.isRequired
 };
 

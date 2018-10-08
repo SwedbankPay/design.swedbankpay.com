@@ -9,6 +9,7 @@
 ### Changed
 
 - Updated readme with deploy/release procedure.
+- Reworked tabs
 
 ### Fixed
 
