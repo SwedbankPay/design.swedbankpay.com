@@ -2,10 +2,10 @@ import React from "react";
 import PrismCode from "react-prism";
 
 import { ComponentPreview, DocToc } from "#";
-import StepBarComponent from "@/StepBar";
+import StepsComponent from "@/Steps";
 
-const BasicStepBar = () => {
-    const items = [
+const BasicSteps = () => {
+    const steps = [
         {
             title: "Step one",
             subtitle: "24.12.17 12:10",
@@ -28,16 +28,16 @@ const BasicStepBar = () => {
     return (
     <>
         <h2 id="basic-usage">Basic usage</h2>
-        <p>Add class <code className="token property">.step-bar</code> to an <PrismCode className="language-html">{"<ol>"}</PrismCode> element.</p>
+        <p>Add class <code className="token property">.steps</code> to an <PrismCode className="language-html">{"<ol>"}</PrismCode> element.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <StepBarComponent items={items} />
+            <StepsComponent steps={steps} />
         </ComponentPreview>
     </>
     );
 };
 
-const HorizontalStepBar = () => {
-    const items = [
+const HorizontalSteps = () => {
+    const steps = [
         {
             title: "Step one",
             completed: true
@@ -57,33 +57,33 @@ const HorizontalStepBar = () => {
 
     return (
     <>
-        <h2 id="horizontal-step-bar">Horizontal step bar</h2>
-        <p>In addition to class <code className="token property">.step-bar</code>, add the extension class <code className="token property">.step-bar--horizontal</code> to an <PrismCode className="language-html">{"<ol>"}</PrismCode> element.</p>
+        <h2 id="horizontal-steps">Horizontal steps</h2>
+        <p>In addition to class <code className="token property">.steps</code>, add the extension class <code className="token property">.steps-horizontal</code> to an <PrismCode className="language-html">{"<ol>"}</PrismCode> element.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <StepBarComponent items={items} horizontal />
+            <StepsComponent steps={steps} horizontal />
         </ComponentPreview>
     </>
     );
 };
 
-const StepBarText = () => (
+const StepsText = () => (
     <div className="col-12 col-lg-10 doc-body">
-        <p className="lead">Step Bar.</p>
-        <BasicStepBar />
-        <HorizontalStepBar />
+        <p className="lead">Steps.</p>
+        <BasicSteps />
+        <HorizontalSteps />
     </div>
 );
 
-const StepBar = () => (
+const Steps = () => (
     <div className="doc-container">
         <div className="row">
-            <StepBarText />
-            <DocToc component={StepBarText} />
+            <StepsText />
+            <DocToc component={StepsText} />
         </div>
     </div>
 );
 
-export default StepBar;
+export default Steps;
 
 /* for testing */
-export { BasicStepBar, HorizontalStepBar, StepBarText };
+export { BasicSteps, HorizontalSteps, StepsText };

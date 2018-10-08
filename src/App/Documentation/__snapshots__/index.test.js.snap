@@ -392,13 +392,13 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
-                  "BasicStepBar": [Function],
-                  "HorizontalStepBar": [Function],
-                  "StepBarText": [Function],
+                  "BasicSteps": [Function],
+                  "HorizontalSteps": [Function],
+                  "StepsText": [Function],
                   "default": [Function],
                 },
-                "path": "/docs/components/step-bar",
-                "title": "Step Bar",
+                "path": "/docs/components/steps",
+                "title": "Steps",
               },
               Object {
                 "component": Object {
