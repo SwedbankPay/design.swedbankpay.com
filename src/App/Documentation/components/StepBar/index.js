@@ -14,10 +14,11 @@ const BasicStepBar = () => {
         },
         {
             title: "Step two",
-            active: true
+            ongoing: true
         },
         {
-            title: "Step three"
+            title: "Step three",
+            selected: true
         },
         {
             title: "Step four"
@@ -43,10 +44,11 @@ const HorizontalStepBar = () => {
         },
         {
             title: "Step two",
-            active: true
+            ongoing: true
         },
         {
-            title: "Step three"
+            title: "Step three",
+            selected: true
         },
         {
             title: "Step four"
