@@ -1,43 +1,19 @@
 .form-group {
-    .validation-success,
-    .validation-warning,
-    .validation-error {
-        display: none;
-    }
-
-    .validation-default {
-        display: inline-block;
-    }
-
     &.has-success {
-        .form-control-validation(@state-success);
-
-        .validation-default {
-            display: none;
-        }
-
-        .validation-success {
-            display: inline-block;
-        }
-
-        .success-feedback {
-            display: block;
-        }
+        .form-control-validation(@state-success, "success");
     }
 
     &.has-error {
-        .form-control-validation(@state-error);
+        .form-control-validation(@state-error, "error");
+    }
+}
 
-        .validation-default {
-            display: none;
-        }
+.input-group {
+    &.has-success {
+        .form-control-validation(@state-success, "success");
+    }
 
-        .validation-error {
-            display: inline-block;
-        }
-
-        .error-feedback {
-            display: block;
-        }
+    &.has-error {
+        .form-control-validation(@state-error, "error");
     }
 }

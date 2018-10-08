@@ -216,12 +216,20 @@ legend {
 }
 
 .help-block {
+    position: relative;
     display: block;
     margin: @helpblock-margin;
     color: lighten(@text-color, 25%);
     text-transform: uppercase;
     font-size: @base-font-size * 0.8;
     line-height: 1rem;
+
+    &:after {
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 }
 
 textarea[disabled] {
