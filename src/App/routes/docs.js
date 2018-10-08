@@ -155,7 +155,7 @@ export default [
                 component: require("../Documentation/components/Panel")
             },
             {
-                title: "Progress Tracker",
+                title: "Progress Tracker (deprecated)",
                 path: "/docs/components/progress-tracker",
                 component: require("../Documentation/components/ProgressTracker")
             },
@@ -168,6 +168,11 @@ export default [
                 title: "Status",
                 path: "/docs/components/status",
                 component: require("../Documentation/components/Status")
+            },
+            {
+                title: "Step Bar",
+                path: "/docs/components/step-bar",
+                component: require("../Documentation/components/StepBar")
             },
             {
                 title: "Tabs (experimental)",

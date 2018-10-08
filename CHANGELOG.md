@@ -5,6 +5,7 @@
 ### Added
 
 - Added class `.button-group`.
+- Added Step Bar component.
 
 ### Changed
 

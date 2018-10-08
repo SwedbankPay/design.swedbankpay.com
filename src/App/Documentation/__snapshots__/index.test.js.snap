@@ -369,7 +369,7 @@ exports[`Documentation: index renders 1`] = `
                   "default": [Function],
                 },
                 "path": "/docs/components/progress-tracker",
-                "title": "Progress Tracker",
+                "title": "Progress Tracker (deprecated)",
               },
               Object {
                 "component": Object {
@@ -389,6 +389,16 @@ exports[`Documentation: index renders 1`] = `
                 },
                 "path": "/docs/components/status",
                 "title": "Status",
+              },
+              Object {
+                "component": Object {
+                  "BasicStepBar": [Function],
+                  "HorizontalStepBar": [Function],
+                  "StepBarText": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/components/step-bar",
+                "title": "Step Bar",
               },
               Object {
                 "component": Object {
