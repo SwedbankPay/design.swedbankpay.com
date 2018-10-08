@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Component: StepBar renders with default items when no items is provided through items prop 1`] = `
-<ol
-  className="step-bar"
->
-  <DefaultItems />
-</ol>
-`;
