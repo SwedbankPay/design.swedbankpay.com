@@ -382,6 +382,14 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "Overview": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/components/sidebar",
+                "title": "Sidebar",
+              },
+              Object {
+                "component": Object {
                   "ExtendedUsage": [Function],
                   "Overview": [Function],
                   "StatusText": [Function],
