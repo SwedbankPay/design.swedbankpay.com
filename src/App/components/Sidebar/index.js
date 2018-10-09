@@ -1,13 +1,20 @@
-import React, { Component } from "react";
+import React from "react";
 
-class index extends Component {
-    render () {
-        return (
-            <div>
-                Hello World
-            </div>
-        );
-    }
-}
+const Sidebar = ({ items }) => {
+    return (
+        <>
+            <ul className="sidebar">
+                {items.map(({ name, icon }, i) => (
+                    <li key={`sidebar-item-${name}-${i}`}>
+                        <a>
+                            <i className="material-icons">{icon}</i>
+                            <span>{name}</span>
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </>
+    );
+};
 
-export default index;
+export default Sidebar;
