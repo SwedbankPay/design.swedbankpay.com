@@ -1,25 +1,42 @@
 import React, { Component } from "react";
+import PrismCode from "react-prism";
 
-import { ComponentPreview, DocToc } from "#";
+import { ComponentPreview, DocToc, Attribute } from "#";
 import { validation } from "$/px-script";
 
 const ValidationOverview = () => (
     <>
         <h2 id="validation-overview">Validation overview</h2>
-        <p><code className="token attr-name">data-validate</code>..</p>
+        <p>To use our validation, start by adding the attribute <Attribute name="novalidate" /> to your <PrismCode className="language-html">{"<form>"}</PrismCode> element. If you wish to validate your entire form, add the <code className="token attr-name">data-validate</code> attribute to the <PrismCode className="language-html">{"<form>"}</PrismCode> tag, if not add it to the desired <PrismCode className="language-html">{"<input>"}</PrismCode> tags.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <form action="#" noValidate>
-                <div className="form-group has-error">
-                    <label htmlFor="name">Name</label>
-                    <div className="input-group">
-                        <span className="input-group-addon">Mr.</span>
-                        <input type="text" className="form-control" id="name" placeholder="Enter your name" autoComplete="given-name" data-validate="" required />
-                    </div>
-                    <div className="help-block" data-error="Wrong!" data-success="Right!">This one should be easy</div>
-                </div>
-                <button className="btn btn-primary" type="submit" disabled>Submit</button>
+            <form action="#" noValidate data-validate="">
+                <div className="form-group">{"\n"}
+                    <label htmlFor="name-1">Name</label>{"\n"}
+                    <input type="text" className="form-control" id="name-1" placeholder="Enter your name" />{"\n"}
+                    <div className="help-block">This one should be easy</div>
+                </div>{"\n"}
+                <div className="form-group">{"\n"}
+                    <label htmlFor="email-1">Email</label>{"\n"}
+                    <input type="email" className="form-control" id="email-1" placeholder="Enter your email" />{"\n"}
+                    <div className="help-block">This one should be pretty easy too</div>
+                </div>{"\n"}
+                <button className="btn btn-primary" type="submit">Submit</button>
             </form>
         </ComponentPreview>
+
+        {/* <ComponentPreview language="html" showCasePanel codeFigure>
+            <form action="#" noValidate data-validate="">
+                <div className="form-group">{"\n"}
+                    <label htmlFor="name">Name</label>
+                    <div className="input-group">{"\n"}
+                        <span className="input-group-addon">Mr.</span>{"\n"}
+                        <input type="text" className="form-control" id="name" placeholder="Enter your name" autoComplete="given-name" pattern="erik" required />{"\n"}
+                    </div>
+                    <div className="help-block" data-error="Wrong!" data-success="Right!">This one should be easy</div>
+                </div>{"\n"}
+                <button className="btn btn-primary" type="submit" data-disable-invalid="">Submit</button>
+            </form>
+        </ComponentPreview> */}
     </>
 );
 

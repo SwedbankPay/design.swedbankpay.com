@@ -1,58 +1,112 @@
+const FIELDSELECTORS = "input, select, textarea";
+const EMAILREGEX = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
 const validation = (() => {
-    const _checkValidity = input => {
-        if (!input.required && !input.value) {
+    const validateField = field => {
+        if (field.type === "email" && field.pattern && field.value.match(field.pattern)) {
+            return true;
+        } else if (field.type === "email" && field.value.match(EMAILREGEX)) {
+            return true;
+        } else if (field.type === "email") {
+            return false;
+        }
+
+        return field.checkValidity();
+    };
+
+    const validateForm = form => {
+        if (form.tagName === "FORM") {
+            const fieldsToValidate = form.querySelector(FIELDSELECTORS);
+            let formValid = true;
+
+            fieldsToValidate.forEach(field => {
+                if (!validateField(field)) {
+                    formValid = false;
+                }
+            });
+
+            return formValid;
+        } else {
+            try {
+                throw new TypeError("validateForm: Element tagName not form.");
+            } catch (e) {
+                console.error(`${e.name} ${e.message}`);
+
+                return false;
+            }
+        }
+    };
+
+    const _checkFieldState = field => {
+        if (!field.required && !field.value) {
             return "NEUTRAL";
         }
 
-        return input.checkValidity() ? "SUCCESS" : "ERRROR";
+        return validateField(field) ? "SUCCESS" : "ERROR";
     };
 
-    const _validateInput = input => {
-        const parentFormGroup = input.closest(".form-group");
-        const state = _checkValidity(input);
+    const _addFieldState = (field, validationContainer) => {
+        const state = _checkFieldState(field);
 
         switch (state) {
             case "SUCCESS":
-                parentFormGroup.classList.add("has-success");
-                parentFormGroup.classList.remove("has-error");
+                validationContainer.classList.add("has-success");
+                validationContainer.classList.remove("has-error");
 
                 break;
             case "ERROR":
-                parentFormGroup.classList.add("has-error");
-                parentFormGroup.classList.remove("has-success");
+                validationContainer.classList.add("has-error");
+                validationContainer.classList.remove("has-success");
 
                 break;
             default:
-                parentFormGroup.classList.remove("has-error");
-                parentFormGroup.classList.remove("has-success");
+                validationContainer.classList.remove("has-error");
+                validationContainer.classList.remove("has-success");
         }
-
-        return state !== "ERROR";
     };
 
-    const _addInputValidation = input => {
-        input.addEventListener("focus", () => {
-            input.closest(".form-group").classList.remove("has-success");
-            input.closest(".form-group").classList.remove("has-error");
+    const _addFieldValidation = field => {
+        const validationContainer = field.closest(".form-group");
+
+        if (field.required) {
+            const reqLabel = validationContainer.querySelector("label");
+            const asterisk = document.createElement("span");
+
+            asterisk.classList.add("required-asterisk");
+            asterisk.innerHTML = "*";
+            reqLabel.appendChild(asterisk);
+        }
+
+        field.addEventListener("focus", () => {
+            validationContainer.classList.remove("has-success");
+            validationContainer.classList.remove("has-error");
         });
 
-        input.addEventListener("blur", () => _validateInput(input));
+        field.addEventListener("blur", () => _addFieldState(field, validationContainer));
     };
 
     const _addFormValidation = form => {
-        const inputs = form.querySelectorAll("input");
-        const textareas = form.querySelectorAll("textarea");
+        const fields = form.querySelectorAll(FIELDSELECTORS);
+        const submitBtn = form.querySelector("[data-disable-invalid]");
 
-        [...inputs, ...textareas].forEach(input => _addInputValidation(input));
+        if (submitBtn && !validateForm(form)) {
+            submitBtn.disabled = true;
+        }
+
+        fields.forEach(field => _addFieldValidation(field));
+
+        if (submitBtn) {
+            form.addEventListener("change", () => {
+                if (validateForm(form)) {
+                    submitBtn.disabled = false;
+                } else {
+                    submitBtn.disabled = true;
+                }
+            });
+        }
 
         form.addEventListener("submit", e => {
-            let validForm = true;
-
-            [...inputs, ...textareas].forEach(input => {
-                _validateInput(input) ? validForm = false : null;
-            });
-
-            if (!validForm) {
+            if (!validateForm(form)) {
                 e.preventDefault();
             }
         });
@@ -63,16 +117,22 @@ const validation = (() => {
 
         if (validateEls) {
             validateEls.forEach(element => {
-                if (element.tagName === "FORM") {
+                const { tagName } = element;
+
+                if (tagName === "FORM") {
                     _addFormValidation(element);
-                } else if (element.tagName === "INPUT") {
-                    _addInputValidation(element);
+                } else if (tagName === "INPUT" || tagName === "TEXTAREA" || tagName === "SELECT") {
+                    _addFieldValidation(element);
                 }
             });
         }
     };
 
-    return { init };
+    return {
+        init,
+        validateField,
+        validateForm
+    };
 
 })();
 
