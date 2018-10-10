@@ -7,7 +7,8 @@ import { validation } from "$/px-script";
 const ValidationOverview = () => (
     <>
         <h2 id="validation-overview">Validation overview</h2>
-        <p>To use our validation, start by adding the attribute <Attribute name="novalidate" /> to your <PrismCode className="language-html">{"<form>"}</PrismCode> element. If you wish to validate your entire form, add the <code className="token attr-name">data-validate</code> attribute to the <PrismCode className="language-html">{"<form>"}</PrismCode> tag, if not add it to the desired <PrismCode className="language-html">{"<input>"}</PrismCode> tags.</p>
+        <p>To use our validation, start by adding the attribute <Attribute name="novalidate" /> to your <PrismCode className="language-html">{"<form>"}</PrismCode> element. If you wish to validate your entire form, add the <Attribute data name="validate" /> attribute to the <PrismCode className="language-html">{"<form>"}</PrismCode> tag, if not add it to the desired <PrismCode className="language-html">{"<input>"}</PrismCode> tags.</p>
+        <p>Validates against <Attribute name="required" /> and <Attribute name="pattern" />. Using <Attribute name="pattern" /> overrides default patterns.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <form action="#" noValidate data-validate="">
                 <div className="form-group">{"\n"}
@@ -24,19 +25,38 @@ const ValidationOverview = () => (
             </form>
         </ComponentPreview>
 
-        {/* <ComponentPreview language="html" showCasePanel codeFigure>
+        <h3>Feedback</h3>
+        <p>To give users validation feedback on each input insert the message in the attributes <Attribute data name="success" /> and <Attribute data name="error" /> in the <Attribute value=".help-block" /> element.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <form action="#" noValidate data-validate="">
                 <div className="form-group">{"\n"}
-                    <label htmlFor="name">Name</label>
+                    <label htmlFor="email-2">Email</label>
                     <div className="input-group">{"\n"}
-                        <span className="input-group-addon">Mr.</span>{"\n"}
-                        <input type="text" className="form-control" id="name" placeholder="Enter your name" autoComplete="given-name" pattern="erik" required />{"\n"}
+                        <span className="input-group-addon"><i className="material-icons">email</i></span>{"\n"}
+                        <input type="email" className="form-control" id="email-2" placeholder="bob.corlsan@example.com" required />{"\n"}
                     </div>
-                    <div className="help-block" data-error="Wrong!" data-success="Right!">This one should be easy</div>
+                    <div className="help-block" data-error="Wrong!" data-success="Right!">This one might be a little tricky</div>
+                </div>{"\n"}
+                <button className="btn btn-primary" type="submit">Submit</button>
+            </form>
+        </ComponentPreview>
+
+        <h3>Dynamically disabled submit button</h3>
+        <p>You can also dynamically disable the submit button by adding <Attribute data name="disable-invalid" /> to the <PrismCode className="language-html">{"<button type=\"submit\">"}</PrismCode> element.</p>
+        <p><b>NOTE:</b> For this to work you also need the <Attribute data name="validate" /> attribute to be present in the <PrismCode className="language-html">{"<form>"}</PrismCode> tag.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <form action="#" noValidate data-validate="">
+                <div className="form-group">{"\n"}
+                    <label htmlFor="email-2">Email</label>
+                    <div className="input-group">{"\n"}
+                        <span className="input-group-addon"><i className="material-icons">email</i></span>{"\n"}
+                        <input type="email" className="form-control" id="email-2" placeholder="bob.corlsan@example.com" required />{"\n"}
+                    </div>
+                    <div className="help-block" data-error="Wrong!" data-success="Right!">This one might be a little tricky</div>
                 </div>{"\n"}
                 <button className="btn btn-primary" type="submit" data-disable-invalid="">Submit</button>
             </form>
-        </ComponentPreview> */}
+        </ComponentPreview>
     </>
 );
 

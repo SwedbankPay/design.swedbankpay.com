@@ -107,7 +107,7 @@ const validation = (() => {
         fields.forEach(field => _addFieldValidation(field));
 
         if (submitBtn) {
-            form.addEventListener("change", () => {
+            form.addEventListener("input", () => {
                 if (validateForm(form)) {
                     submitBtn.disabled = false;
                 } else {
