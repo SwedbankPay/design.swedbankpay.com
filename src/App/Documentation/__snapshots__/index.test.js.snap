@@ -483,6 +483,17 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "Examples": [Function],
+                  "HowItWorks": [Function],
+                  "Notation": [Function],
+                  "SpacingText": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/utilities/spacing",
+                "title": "Spacing",
+              },
+              Object {
+                "component": Object {
                   "Intro": [Function],
                   "VisibilityText": [Function],
                   "default": [Function],

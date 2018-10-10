@@ -221,6 +221,11 @@ export default [
                 component: require("../Documentation/utilities/Display")
             },
             {
+                title: "Spacing",
+                path: "/docs/utilities/spacing",
+                component: require("../Documentation/utilities/Spacing")
+            },
+            {
                 title: "Visibility",
                 path: "/docs/utilities/visibility",
                 component: require("../Documentation/utilities/Visibility")

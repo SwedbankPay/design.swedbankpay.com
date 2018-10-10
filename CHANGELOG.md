@@ -6,6 +6,7 @@
 
 - Added class `.button-group`.
 - Added Step Bar component.
+- Added basic spacing utility classes with documentation section (spacing classes with breakpoints will be implemented later).
 
 ### Changed
 
