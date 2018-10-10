@@ -398,7 +398,7 @@ exports[`Documentation: index renders 1`] = `
                   "default": [Function],
                 },
                 "path": "/docs/components/step-bar",
-                "title": "Step Bar",
+                "title": "Step Bar (experimental)",
               },
               Object {
                 "component": Object {
