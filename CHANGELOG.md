@@ -12,6 +12,8 @@
 - Updated readme with deploy/release procedure.
 - Reworked tabs.
 - Reworked form validation.
+- Removed `margin-bottom: 3px` from button component.
+- Adjusted spacing between status indicator and text in status component.
 
 ### Fixed
 
@@ -27,3 +29,4 @@
 ### Removed
 
 - Removed modal from designguide.
+- Removed styling for table within panel footer.
