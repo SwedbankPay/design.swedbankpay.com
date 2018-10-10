@@ -195,11 +195,6 @@ export default [
                 component: require("../Documentation/components/Topbar")
             },
             {
-                title: "Validation (Temporary)",
-                path: "/docs/components/validation",
-                component: require("../Documentation/components/Validation")
-            },
-            {
                 title: "Well (experimental)",
                 path: "/docs/components/well",
                 component: require("../Documentation/components/Well")

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import PrismCode from "react-prism";
 
-import { ComponentPreview, DocToc } from "#";
+import { ComponentPreview, DocToc, Attribute } from "#";
 import { rangeslider, validation } from "$/px-script";
 import InputGroup from "@/InputGroup";
 import Button from "@/Button";
@@ -86,36 +87,67 @@ const FormGrid = () => (
 
 const Validation = () => (
     <>
-        <h2 id="validation">Validation</h2>
-        <p>Forms validation...</p>
+        <h2 id="validation">Validation overview</h2>
+        <p>To use our validation, start by adding the attribute <Attribute name="novalidate" /> to your <PrismCode className="language-html">{"<form>"}</PrismCode> element. If you wish to validate your entire form, add the <Attribute data name="validate" /> attribute to the <PrismCode className="language-html">{"<form>"}</PrismCode> tag, if not add it to the desired <PrismCode className="language-html">{"<input>"}</PrismCode> tags.</p>
+        <p>Validates against <Attribute name="required" /> and <Attribute name="pattern" />. Using <Attribute name="pattern" /> overrides default patterns.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <form data-validate="" onSubmit={e => e.preventDefault()}>
+            <form noValidate data-validate="">
                 <InputGroup
-                    id="validate-first-name"
+                    id="validation-name-1"
                     type="text"
-                    label="First name"
-                    placeholder="Enter your first name"
-                    helpBlock="Comes before your last name"
-                    validate
-                    required
+                    label="Name"
+                    placeholder="Enter your name"
+                    helpBlock="This one should be easy"
                 />
                 <InputGroup
-                    id="validate-last-name"
-                    type="text"
-                    label="Last name"
-                    placeholder="Enter your last name"
-                    helpBlock="Probably the same as at least one of your parents"
-                    validate
-                />
-                <InputGroup
-                    id="validate-email-address"
+                    id="validation-email-1"
                     type="email"
                     label="Email"
                     placeholder="Enter your email"
-                    helpBlock="You know, electronic mail?"
-                    validate
+                    helpBlock="This one should be pretty easy too"
                 />{"\n"}
-                <Button type="primary" label="Submit" btnType="submit" />{"\n"}
+                <button className="btn btn-primary" type="submit">Submit</button>
+            </form>
+        </ComponentPreview>
+
+        <h3>Feedback</h3>
+        <p>To give users validation feedback on each input insert the message in the attributes <Attribute data name="success" /> and <Attribute data name="error" /> in the <Attribute value=".help-block" /> element.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <form action="#" noValidate data-validate="">
+                <InputGroup
+                    required
+                    id="validation-email-2"
+                    type="email"
+                    label="Email"
+                    placeholder="bob.corlsan@example.com"
+                    prefixType="icon"
+                    prefixValue="email"
+                    helpBlock="This one might be a little tricky"
+                    successMessage="Right!"
+                    errorMessage="Wrong!"
+                />{"\n"}
+                <button className="btn btn-primary" type="submit">Submit</button>
+            </form>
+        </ComponentPreview>
+
+        <h3>Dynamically disabled submit button</h3>
+        <p>You can also dynamically disable the submit button by adding <Attribute data name="disable-invalid" /> to the <PrismCode className="language-html">{"<button type=\"submit\">"}</PrismCode> element.</p>
+        <p><b>NOTE:</b> For this to work you also need the <Attribute data name="validate" /> attribute to be present in the <PrismCode className="language-html">{"<form>"}</PrismCode> tag.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <form action="#" noValidate data-validate="">
+                <InputGroup
+                    required
+                    id="validation-email-3"
+                    type="email"
+                    label="Email"
+                    placeholder="bob.corlsan@example.com"
+                    prefixType="icon"
+                    prefixValue="email"
+                    helpBlock="Keep your eye on that submit button"
+                    successMessage="Right!"
+                    errorMessage="Wrong!"
+                />{"\n"}
+                <button className="btn btn-primary" type="submit" data-disable-invalid="">Submit</button>
             </form>
         </ComponentPreview>
     </>
