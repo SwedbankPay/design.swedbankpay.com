@@ -9,6 +9,7 @@ const _appendLoader = button => {
 
     for (let i = 0; i < 3; i++) {
         const li = document.createElement("li");
+
         ul.appendChild(li);
     }
 
@@ -21,9 +22,11 @@ const button = (() => {
     const init = () => {
         const loaderButtons = document.querySelectorAll(SELECTORS.LOADER);
 
-        loaderButtons.forEach(button => {
-            _appendLoader(button);
-        });
+        if (loaderButtons) {
+            loaderButtons.forEach(button => {
+                _appendLoader(button);
+            });
+        }
     };
 
     return { init };

@@ -1,78 +1,159 @@
+const SELECTORS = {
+    VALIDATE: "[data-validate]",
+    FIELDS: "input, select, textarea",
+    VALIDATIONCONTAINER: ".form-group",
+    SUBMITBUTTON: "[data-disable-invalid]"
+};
+const EMAILREGEX = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
 const validation = (() => {
-    const _validate = element => {
-        const { required, pattern } = element.dataset;
-        const { value } = element;
-        const requiredPass = required ? !!value : true;
-        const patternPass = (pattern && value) ? !!value.match(new RegExp(pattern)) : true;
-
-        if (!value && required && patternPass) {
-            return "NEUTRAL";
+    const validateField = field => {
+        if (field.type === "email" && field.pattern && field.value.match(field.pattern)) {
+            return true;
+        } else if (field.type === "email" && field.value.match(EMAILREGEX)) {
+            return true;
+        } else if (field.type === "email") {
+            return false;
         }
 
-        return (requiredPass && patternPass) ? "SUCCESS" : "ERROR";
+        return field.checkValidity();
     };
 
-    const validateField = element => {
-        const state = _validate(element);
-        const parentElement = element.closest(".form-group") || element.closest(".input-group");
+    const validateForm = form => {
+        if (form.tagName === "FORM") {
+            const fieldsToValidate = form.querySelectorAll(SELECTORS.FIELDS);
+            let formValid = true;
 
-        switch (state) {
-            case "SUCCESS":
-                parentElement.classList.add("has-success");
-                parentElement.classList.remove("has-error");
-                break;
-            case "ERROR":
-                parentElement.classList.add("has-error");
-                parentElement.classList.remove("has-success");
-                break;
-            default:
-                parentElement.classList.remove("has-error");
-                parentElement.classList.remove("has-success");
-        }
+            fieldsToValidate.forEach(field => {
+                const state = _checkFieldState(field);
 
-        return state !== "ERROR";
-    };
-
-    const validateForm = (form, event) => {
-        let validForm = true;
-
-        form.querySelectorAll("[data-validate]")
-            .forEach(element => {
-                if (!validateField(element)) {
-                    validForm = false;
+                if (state === "ERROR") {
+                    formValid = false;
                 }
             });
 
-        if (!validForm && event) {
-            event.preventDefault();
+            return formValid;
+        } else {
+            try {
+                throw new Error("px.validation.validateForm: Argument not HTMLElement with tagName form.");
+            } catch (e) {
+                console.error(`${e.name} ${e.message}`);
+
+                return false;
+            }
         }
     };
 
-    const attachFormValidator = element => {
-        element.addEventListener("submit", e => {validateForm(element, e);}, false);
+    const _checkFieldState = field => {
+        if (!field.required && !field.value) {
+            return "NEUTRAL";
+        }
+
+        return validateField(field) ? "SUCCESS" : "ERROR";
     };
 
-    const attachInputValidator = element => {
-        element.addEventListener("change", () => {validateField(element);}, false);
+    const _addFieldState = field => {
+        const validationContainer = field.closest(SELECTORS.VALIDATIONCONTAINER);
+        const state = _checkFieldState(field);
+
+        switch (state) {
+            case "SUCCESS":
+                validationContainer.classList.add("has-success");
+                validationContainer.classList.remove("has-error");
+
+                break;
+            case "ERROR":
+                validationContainer.classList.add("has-error");
+                validationContainer.classList.remove("has-success");
+
+                break;
+            default:
+                validationContainer.classList.remove("has-error");
+                validationContainer.classList.remove("has-success");
+        }
+
+        return state;
     };
 
-    const init = () => {
-        document.querySelectorAll("[data-validate]").forEach(element => {
-            switch (element.tagName) {
-                case "FORM":
-                    attachFormValidator(element);
-                    break;
-                default:
-                    attachInputValidator(element);
+    const _addFieldValidation = field => {
+        const validationContainer = field.closest(SELECTORS.VALIDATIONCONTAINER);
+
+        if (field.required) {
+            const reqLabel = validationContainer.querySelector("label");
+            const asterisk = document.createElement("span");
+
+            asterisk.classList.add("required-asterisk");
+            asterisk.innerHTML = "*";
+            reqLabel.appendChild(asterisk);
+        }
+
+        field.addEventListener("input", () => {
+            if (validationContainer.classList.contains("has-success") || validationContainer.classList.contains("has-error")) {
+                _addFieldState(field);
+            }
+        });
+
+        field.addEventListener("blur", () => _addFieldState(field));
+    };
+
+    const _addFormValidation = form => {
+        const fields = form.querySelectorAll(SELECTORS.FIELDS);
+        const submitBtn = form.querySelector(SELECTORS.SUBMITBUTTON);
+
+        if (submitBtn && !validateForm(form)) {
+            submitBtn.disabled = true;
+        }
+
+        fields.forEach(field => _addFieldValidation(field));
+
+        if (submitBtn) {
+            form.addEventListener("input", () => {
+                if (validateForm(form)) {
+                    submitBtn.disabled = false;
+                } else {
+                    submitBtn.disabled = true;
+                }
+            });
+        }
+
+        form.addEventListener("submit", e => {
+            const formFields = form.querySelectorAll(SELECTORS.FIELDS);
+            let formValid = true;
+
+            formFields.forEach(field => {
+                _addFieldState(field) === "ERROR" ? formValid = false : null;
+            });
+
+            if (!formValid) {
+                e.preventDefault();
             }
         });
     };
 
+    const init = () => {
+        const validateEls = document.querySelectorAll(SELECTORS.VALIDATE);
+
+        if (validateEls) {
+            validateEls.forEach(element => {
+                const { tagName } = element;
+
+                if (tagName === "FORM") {
+                    _addFormValidation(element);
+                } else if (tagName === "INPUT" || tagName === "TEXTAREA" || tagName === "SELECT") {
+                    _addFieldValidation(element);
+                }
+            });
+        }
+    };
+
     return {
         init,
+        validateField,
         validateForm
     };
 
 })();
 
 export default validation;
+
+// TODO: SET UP TEMP FORM VALIDATION IN DOCUMENTATION

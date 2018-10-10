@@ -29,5 +29,5 @@ ProgressTracker.propTypes = {
 
 export default ProgressTracker;
 
-// exporting for testing purposes
+// Exporting for testing purposes
 export { DefaultItems };

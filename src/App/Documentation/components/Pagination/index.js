@@ -53,9 +53,6 @@ const PaginationText = () => (
 );
 
 class Pagination extends Component {
-    componentDidMount () {
-    }
-
     render () {
         return (
             <div className="doc-container">
@@ -70,5 +67,5 @@ class Pagination extends Component {
 
 export default Pagination;
 
-/* for testing */
+/* For testing */
 export { DefaultPagination, SimplePagination, PaginationBullets, PaginationText };

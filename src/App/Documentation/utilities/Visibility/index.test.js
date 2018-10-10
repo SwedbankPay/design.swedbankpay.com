@@ -9,9 +9,7 @@ describe("Utilities: Visibility", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Visibility />
-        );
+        const wrapper = shallow(<Visibility />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Utilities: Visibility", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Intro />
-            );
+            const wrapper = shallow(<Intro />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("Utilities: Visibility", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <VisibilityText />
-            );
+            const wrapper = shallow(<VisibilityText />);
 
             expect(wrapper).toMatchSnapshot();
         });

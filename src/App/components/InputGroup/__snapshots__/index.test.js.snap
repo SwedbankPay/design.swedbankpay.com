@@ -14,14 +14,14 @@ exports[`Component: InputGroup -  renders 1`] = `
     <input
       autoComplete={null}
       className="form-control"
-      data-pattern={null}
-      data-required={null}
       data-validate={null}
       defaultValue=""
       disabled={null}
       id={null}
+      pattern={null}
       placeholder={null}
       readOnly={null}
+      required={null}
       type="test"
     />
     

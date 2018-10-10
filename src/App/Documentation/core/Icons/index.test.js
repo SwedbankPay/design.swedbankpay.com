@@ -9,9 +9,7 @@ describe("Core: Icons", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Icons />
-        );
+        const wrapper = shallow(<Icons />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Core: Icons", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Usage />
-            );
+            const wrapper = shallow(<Usage />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("Core: Icons", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <IconsText />
-            );
+            const wrapper = shallow(<IconsText />);
 
             expect(wrapper).toMatchSnapshot();
         });

@@ -14,18 +14,20 @@
 //
 //  COMPONENTS
 // ===============
-//  6. Badge
-//  7. Breadcrumb
-//  8. Button
-//  9. Dialog
-// 10. Form
-// 11. Modal
-// 12. Pagination
-// 13. Panel
-// 14. Sheet
-// 15. Status
-// 16. Toast
-// 17. Topbar
+//  6. Action List
+//  7. Badge
+//  8. Breadcrumb
+//  9. Button
+// 10. Card
+// 11. Datepicker
+// 12. Dialog
+// 13. Form
+// 14. Pagination
+// 15. Panel
+// 16. Sheet
+// 17. Status
+// 18. Toast
+// 19. Topbar
 
 // ==========================================================================
 //
@@ -87,12 +89,21 @@
 // 2. Global
 // ==========================================================================
 
-/* Margins */
-@base-margin:                               3px;
-@base-padding:                              3px;
-
-/* Spacing */
 @spacer:                                    1rem;
+
+/* Margin */
+@base-margin:                               @spacer;
+@base-margin-sm:                            @base-margin / 2;
+@base-margin-xs:                            @base-margin / 4;
+@base-margin-lg:                            @base-margin * 1.5;
+@base-margin-xl:                            @base-margin * 2;
+
+/* Padding */
+@base-padding:                              @spacer;
+@base-padding-sm:                           @base-padding / 2;
+@base-padding-xs:                           @base-padding / 4;
+@base-padding-lg:                           @base-padding * 1.5;
+@base-padding-xl:                           @base-padding * 2;
 
 /* Body */
 @body-bg:                                   @background-body;
@@ -101,14 +112,10 @@
 /* Cursor */
 @cursor-disabled:                           not-allowed;
 
+/* Button */
 @padding-base-vertical:                     0.375rem;
 @padding-base-horizontal:                   0.75rem;
-@padding-large-vertical:                    0.5rem;
-@padding-large-horizontal:                  1rem;
-@padding-small-vertical:                    0.25rem;
-@padding-small-horizontal:                  0.5rem;
 @padding-xs-vertical:                       0.1rem;
-@padding-xs-horizontal:                     0.25rem;
 
 /* Borders */
 @border-width:                              1px;
@@ -120,11 +127,14 @@
 
 
 /* Z-index master list */
+@zindex-step-bar-line:                      5;
+@zindex-step-bar-circle:                    10;
+@zindex-step-bar-icon:                      15;
 @zindex-tabs:                               100;
 @zindex-tabs-arrow:                         101;
-@zindex-topbar:                             500;
-@zindex-action-list:                        549;
-@zindex-action-list-anchor:                 550;
+@zindex-action-list:                        500;
+@zindex-action-list-anchor:                 501;
+@zindex-topbar:                             550;
 @zindex-dialog-backdrop:                    1040;
 @zindex-dialog:                             1050;
 @zindex-modal-backdrop:                     1060;
@@ -145,7 +155,7 @@
 //** Padding between columns. Gets divided in half for the left and right.
 @grid-gutter-width:                         30px;
 
-@grid-breakpoints:                          xs 0, sm 576px, md 768px, lg 992px, xl 1200px, xxl 1600px;
+@grid-breakpoints:                          ~"xs" 0, ~"sm" 576px, ~"md" 768px, ~"lg" 992px, ~"xl" 1200px, ~"xxl" 1600px;
 
 @container-max-widths:                      540px, 720px, 960px, 1140px, 1460px;
 
@@ -177,7 +187,7 @@
 @table-collapse-border-color:               @gray-8;
 
 /* Dimensions */
-@table-cell-padding:                        1rem;
+@table-cell-padding:                        @base-padding;
 @table-collapse-content-padding:            10px 20px 10px 20px;
 @table-collpase-nested-margin:              -10px -20px -10px -20px;
 @table-margin-bottom:                       0.6rem;
@@ -239,8 +249,6 @@
 @h5-font-size:                              @base-font-size * 1.25;
 @h6-font-size:                              @base-font-size;
 
-@headings-margin-top:                       @spacer * 2;
-@headings-margin-bottom:                    @spacer / 2;
 @headings-font-family:                      inherit;
 @headings-font-weight:                      500;
 @headings-line-height:                      1.2;
@@ -250,7 +258,7 @@
 
 
 /* Paragraphs */
-@paragraph-margin-bottom:                   1rem;
+@paragraph-margin-bottom:                   @base-margin;
 
 @lead-font-size:                            (@base-font-size * 1.25);
 @lead-font-weight:                          300;
@@ -263,13 +271,11 @@
 @hr-border-color:                           rgba(0, 0, 0, 0.1);
 @hr-border-width:                           @border-width;
 
-@mark-padding:                              0.2em;
+@mark-padding:                              0.2rem;
 
 @dt-font-weight:                            @font-weight-bold;
 
-@list-inline-padding:                       0.5rem;
-
-@hr-margin-y:                               @spacer;
+@list-inline-padding:                       @base-padding-sm;
 
 
 // ==========================================================================
@@ -278,19 +284,34 @@
 //
 // ==========================================================================
 
-// 6. Badge
+// 6. Action List
 // ==========================================================================
 
-@badge-list: default @gray-8, brand @green, blue @blue, purple @purple, yellow @yellow, red @red;
+@action-menu-anchor-padding:                round(@base-padding / 3, 1);
 
-// 7. Breadcrumb
+// 7. Badge
+// ==========================================================================
+
+/* stylelint-disable indentation */
+@badge-list:                                ~"default" @gray-8,
+                                            ~"brand" @green,
+                                            ~"blue" @blue,
+                                            ~"purple" @purple,
+                                            ~"yellow" @yellow,
+                                            ~"red" @red;
+
+/* stylelint-enable indentation */
+
+@badge-padding:                             @base-margin * 0.125 @base-margin-sm;
+
+// 8. Breadcrumb
 // ==========================================================================
 // Todo: clean this up when progress tracker is remade
 
 
-@breadcrumb-margin:                         1rem 0;
+@breadcrumb-margin:                         @base-margin;
 @breadcrumb-padding:                        0.6rem 1.2rem 0.6rem 2rem;
-@breadcrumb-padding-first:                  1rem;
+@breadcrumb-padding-first:                  @base-padding;
 
 @breadcrumb-bg:                             @white;
 @breadcrumb-border-color:                   @brand-primary;
@@ -308,7 +329,7 @@
 
 /* Small */
 @breadcrumb-padding-sm:                     0.3rem 0.6rem 0.3rem 1.25rem;
-@breadcrumb-padding-first-sm:               0.5rem;
+@breadcrumb-padding-first-sm:               @base-padding-sm;
 
 // Arrow constants
 @breadcrumb-arrow-border-size-sm:           0.05rem;
@@ -316,10 +337,8 @@
 @breadcrumb-arrow-bg-sm:                    @breadcrumb-arrow-border-sm - @breadcrumb-arrow-border-size-sm;
 
 
-// 8. Button
+// 9. Button
 // ==========================================================================
-
-@btn-font-weight:                           normal;
 
 @btn-border-radius-base:                    3px;
 @btn-border-radius-large:                   3px;
@@ -332,7 +351,6 @@
 @btn-secondary-color:                       @gray-0;
 @btn-secondary-outline-color:               @gray-8;
 @btn-secondary-bg:                          @gray-8;
-@btn-secondary-ghost-color:                 @gray-3;
 
 @btn-danger-color:                          @white;
 @btn-danger-outline-color:                  @state-error;
@@ -340,30 +358,40 @@
 
 @btn-link-disabled-color:                   @gray-6;
 
+// 10. Card
+// ==========================================================================
 
-// 9. Dialog
+@card-margin:                               0 @base-margin-xl @base-margin;
+
+// 11. Datepicker
+// ==========================================================================
+@datepicker-box-shadow:                     @default-box-shadow;
+@datepicker-background-color:               @white;
+@datepicker-highlight-background:           @brand-primary;
+@datepicker-highlight-color:                @white;
+@datepicker-weekday-color:                  @brand-primary;
+@datepicker-hover-color:                    @gray-10;
+
+@datepicker-rd-padding:                     round(@base-padding / 3, 1);
+
+// 12. Dialog
 // ==========================================================================
 
 /* Colors */
 @dialog-background-color:                   transparent;
 @dialog-content-bg:                         @white;
-@dialog-border-color:                       @gray-9;
 @dialog-border:                             1px solid @gray-9;
-@dialog-box-shadow:                         0 0 30px rgba(133, 133, 133, 0.2);
 @dialog-backdrop-bg:                        fade(@black, 50%);
 
-@dialog-heading-padding:                    1rem 2rem;
-@dialog-body-padding:                       2rem 2rem 1rem;
-@dialog-footer-margin:                      0;
-@dialog-footer-padding:                     1rem 2rem;
+@dialog-heading-padding:                    @base-padding @base-padding-xl;
+@dialog-body-padding:                       @base-padding-xl @base-padding-xl @base-padding;
+@dialog-footer-padding:                     @base-padding @base-padding-xl;
 
 @dialog-size:                               500px;
 
 
-// 10. Form
+// 13. Form
 // ==========================================================================
-
-@form-margin:                               1rem;
 
 @input-padding-y:                           0.375rem;
 @input-padding-x:                           0.75rem;
@@ -373,7 +401,6 @@
 @input-bg:                                  @input-gray;
 @input-bg-disabled:                         darken(@input-bg, 10%);
 @input-checked-bg-disabled:                 darken(@input-bg, 40%);
-@input-disabled-border-color:               darken(@gray-8, 40%);
 @input-border-color:                        @gray-8;
 @input-addon-color:                         @gray-3;
 @input-addon-bg:                            @gray-10;
@@ -384,47 +411,25 @@
 
 @legend-border-color:                       @gray-9;
 @legend-color:                              @gray-3;
-@legend-bottom-margin:                      1.25rem;
+@legend-bottom-margin:                      @base-margin * 1.25;
+
+@helpblock-margin:                          (@base-margin * 0.325) 0;
+
+@select-option-margin:                      (@base-margin * 0.187) (@base-margin * 0.375);
 
 // Checkbox
 @checkbox-bg:                               @brand-primary;
 @checkbox-height:                           1.4rem;
 @checkbox-width:                            @checkbox-height; // This also controls radio and togglebox
 
+@checkbox-label-padding:                    @base-padding/5;
+
 // Rangeslider
 @range-height:                              @checkbox-height / 2;
 @thumb-size:                                @checkbox-height;
 
-@range-bg:                                  @input-bg;
-// This needs to be gradient for some reason
-@range-webkit-bg:                           linear-gradient(90deg, @brand-primary, @brand-primary) 0 100% no-repeat content-box;
 
-
-// 11. Modal
-// ==========================================================================
-
-/* Colors */
-@modal-background-color:                    transparent;
-@modal-content-bg:                          @white;
-@modal-default-color:                       @gray-8;
-@modal-default-border-color:                @gray-9;
-@modal-box-shadow:                          0 0 30px rgba(133, 133, 133, 0.2);
-@modal-backdrop-bg:                         @black;
-@modal-backdrop-opacity:                    0.5;
-
-@modal-margin:                              2rem;
-
-@modal-heading-padding:                     1rem 2rem;
-@modal-body-padding:                        2rem 2rem 1rem 2rem;
-@modal-footer-margin:                       0;
-@modal-footer-padding:                      1rem 2rem 0.6rem 2rem;
-
-@modal-size-sm:                             500px;
-@modal-size-md:                             750px;
-@modal-size-lg:                             1000px;
-
-
-// 12. Pagination
+// 14. Pagination
 // ==========================================================================
 
 @pagination-active-color:                   @brand-primary;
@@ -432,7 +437,7 @@
 
 @pagination-bullet-size:                    @status-size;
 
-// 13. Panel
+// 15. Panel
 // ==========================================================================
 
 /* Colors */
@@ -452,39 +457,35 @@
 @panel-brand-color:                         @brand-primary;
 
 @panel-border-radius:                       0;
-@panel-margin-bottom:                       14px;
 
-@panel-body-padding:                        15px 30px;
+@panel-body-padding:                        @base-padding @base-padding-xl;
 @panel-table-margin:                        0;
-@panel-banner-padding:                      15px;
-@panel-heading-padding:                     15px 15px 15px 30px;
-@panel-footer-padding:                      15px 30px 12px 30px;
-@panel-footer-margin:                       10px -30px -15px -30px;
-
-@panel-font-size-base:                      @base-font-size;
-@panel-collapse-duration:                   0.25s;
+@panel-footer-padding:                      @base-padding @base-padding-xl @base-padding-sm @base-padding-xl;
 
 
-// 14. Sheet
+// 16. Sheet
 // ==========================================================================
 
 @sheet-backdrop-bg:                         fade(@black, 50%);
 @sheet-section-bg:                          @white;
-@sheet-section-padding:                     5rem 4rem 4rem;
+@sheet-section-padding:                     (@base-padding * 5) (@base-padding * 4) (@base-padding * 4);
 
 @sheet-width-xs:                            95%;
 @sheet-width-sm:                            75%;
 @sheet-width:                               580px;
 
 
-// 15. Status
+// 17. Status
 // ==========================================================================
 
 @status-size:                               13px;
 @status-padding:                            10;
 
+@status-padding-left:                       @base-padding*1.2;
+@status-padding-head:                       @base-padding*8;
 
-// 16. Toast
+
+// 18. Toast
 // ==========================================================================
 
 @toast-height:                              48px;
@@ -492,8 +493,7 @@
 @toast-text-color:                          @text-color;
 @toast-action-color:                        @yellow;
 
-
-// 17. Topbar
+// 19. Topbar
 // ==========================================================================
 
 @topbar-height:                             70px;
@@ -503,3 +503,6 @@
 @topbar-slide-prev-pos:                     260px; //@topbar-nav-width - @topbar-back-btn-width;
 @topbar-slide-transition:                   0.5s ease;
 @topbar-background-transition:              background-color 0.5s ease-in;
+
+@topbar-margin:                             @base-margin+@base-margin-xs;
+@topbar-padding:                            @base-padding+@base-margin-xs;

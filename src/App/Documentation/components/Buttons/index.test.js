@@ -9,9 +9,7 @@ describe("Documentation: Buttons", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Buttons />
-        );
+        const wrapper = shallow(<Buttons />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Documentation: Buttons", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Examples />
-            );
+            const wrapper = shallow(<Examples />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("Documentation: Buttons", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <UsageWithOtherTags />
-            );
+            const wrapper = shallow(<UsageWithOtherTags />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -50,9 +44,7 @@ describe("Documentation: Buttons", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <OutlineButtons />
-            );
+            const wrapper = shallow(<OutlineButtons />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -64,9 +56,7 @@ describe("Documentation: Buttons", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Sizes />
-            );
+            const wrapper = shallow(<Sizes />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -78,9 +68,7 @@ describe("Documentation: Buttons", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <ActiveState />
-            );
+            const wrapper = shallow(<ActiveState />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -92,9 +80,7 @@ describe("Documentation: Buttons", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <DisabledState />
-            );
+            const wrapper = shallow(<DisabledState />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -106,9 +92,7 @@ describe("Documentation: Buttons", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <UsageWithIcons />
-            );
+            const wrapper = shallow(<UsageWithIcons />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -120,9 +104,7 @@ describe("Documentation: Buttons", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <ButtonLoader />
-            );
+            const wrapper = shallow(<ButtonLoader />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -134,9 +116,7 @@ describe("Documentation: Buttons", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <UsageWithJavascript />
-            );
+            const wrapper = shallow(<UsageWithJavascript />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -148,9 +128,7 @@ describe("Documentation: Buttons", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <ButtonsText />
-            );
+            const wrapper = shallow(<ButtonsText />);
 
             expect(wrapper).toMatchSnapshot();
         });

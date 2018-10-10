@@ -136,7 +136,6 @@ const HidingElements = () => (
             </tbody>
         </table>
 
-
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="d-lg-none">Hidden on screens wider than lg</div>
             <div className="d-none d-lg-block">Hidden on screens smaller than lg</div>
@@ -167,5 +166,5 @@ const Display = () => (
 
 export default Display;
 
-/* for testing */
+/* For testing */
 export { HowItWorks, Notation, Examples, HidingElements, DisplayText };

@@ -1,0 +1,9 @@
+.make-badge(@badgelist) {
+    @name: extract(@badgelist, 1);
+    @color: extract(@badgelist, 2);
+
+    &.badge-@{name} {
+        background-color: @color;
+        border: 1px solid @color;
+    }
+}

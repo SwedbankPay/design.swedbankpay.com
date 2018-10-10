@@ -10,18 +10,14 @@ describe("Utilities: Attribute", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Attribute name="test" value="testValue" />
-        );
+        const wrapper = shallow(<Attribute name="test" value="testValue" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<span className="token attr-name">test</span>)).toEqual(true);
     });
 
     it("renders data attribute", () => {
-        const wrapper = shallow(
-            <Attribute name="test" value="test" data />
-        );
+        const wrapper = shallow(<Attribute name="test" value="test" data />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("data");

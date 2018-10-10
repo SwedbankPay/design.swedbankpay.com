@@ -10,9 +10,7 @@ describe("BrowserSupport: BrowserIcons", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Chrome />
-            );
+            const wrapper = shallow(<Chrome />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -24,9 +22,7 @@ describe("BrowserSupport: BrowserIcons", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Edge />
-            );
+            const wrapper = shallow(<Edge />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -38,9 +34,7 @@ describe("BrowserSupport: BrowserIcons", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Firefox />
-            );
+            const wrapper = shallow(<Firefox />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -52,9 +46,7 @@ describe("BrowserSupport: BrowserIcons", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <InternetExplorer />
-            );
+            const wrapper = shallow(<InternetExplorer />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -66,9 +58,7 @@ describe("BrowserSupport: BrowserIcons", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Opera />
-            );
+            const wrapper = shallow(<Opera />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -80,9 +70,7 @@ describe("BrowserSupport: BrowserIcons", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Safari />
-            );
+            const wrapper = shallow(<Safari />);
 
             expect(wrapper).toMatchSnapshot();
         });

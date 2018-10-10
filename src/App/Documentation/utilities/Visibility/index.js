@@ -43,5 +43,5 @@ const Visibility = () => (
 
 export default Visibility;
 
-/* for testing */
+/* For testing */
 export { Intro, VisibilityText };

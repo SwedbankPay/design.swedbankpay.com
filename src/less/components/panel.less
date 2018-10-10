@@ -1,7 +1,6 @@
-// Base classes
 .panel {
-    margin-top: @panel-margin-bottom;
-    margin-bottom: @panel-margin-bottom;
+    margin-top: @base-margin;
+    margin-bottom: @base-margin;
     background-color: @panel-background-color;
     // border: 1px solid @gray-9;
     box-shadow: @panel-box-shadow;
@@ -33,12 +32,12 @@
     &.panel-dark {
         .panel-body {
             background-color: @gray-2;
-            color: white;
+            color: @white;
         }
 
         nav ul.nav-tabs .active a {
             background-color: @gray-2;
-            color: white;
+            color: @white;
 
             &:hover {
                 background-color: @gray-3;
@@ -81,7 +80,8 @@
 
     // Optional heading
     > header {
-        padding: @panel-heading-padding;
+        padding: @base-padding;
+        padding-left: @base-padding-xl;
         border-bottom: 1px solid @panel-default-border-color;
     }
 
@@ -127,27 +127,8 @@
     // Optional footer (stays gray in every modifier class)
     > footer {
         background-color: @background-body;
-        // background-color: @gray-10;
         padding: @panel-footer-padding;
         border-top: 1px solid @panel-default-border-color;
-        // margin: @panel-footer-margin;
-
-        &.panel-table-footer {
-            padding: 0;
-
-            td {
-                padding-left: 20px;
-            }
-        }
-
-        > .table {
-            background-color: @panel-footer-background-color;
-            margin-bottom: 0;
-
-            > tbody > tr > td {
-                border-color: @panel-footer-table-border-color;
-            }
-        }
     }
 
     // List groups in panels

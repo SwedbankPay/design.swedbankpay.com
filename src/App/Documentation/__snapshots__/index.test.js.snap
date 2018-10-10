@@ -229,6 +229,7 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "component": Object {
                   "ActiveState": [Function],
+                  "ButtonGroup": [Function],
                   "ButtonLoader": [Function],
                   "ButtonsText": [Function],
                   "DisabledState": [Function],
@@ -338,16 +339,6 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
-                  "Demo": [Function],
-                  "ModalText": [Function],
-                  "Usage": [Function],
-                  "default": [Function],
-                },
-                "path": "/docs/components/modal",
-                "title": "Modal (deprecated)",
-              },
-              Object {
-                "component": Object {
                   "DefaultPagination": [Function],
                   "PaginationBullets": [Function],
                   "PaginationText": [Function],
@@ -378,7 +369,7 @@ exports[`Documentation: index renders 1`] = `
                   "default": [Function],
                 },
                 "path": "/docs/components/progress-tracker",
-                "title": "Progress Tracker",
+                "title": "Progress Tracker (deprecated)",
               },
               Object {
                 "component": Object {
@@ -401,9 +392,18 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "BasicStepBar": [Function],
+                  "HorizontalStepBar": [Function],
+                  "StepBarText": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/components/step-bar",
+                "title": "Step Bar (experimental)",
+              },
+              Object {
+                "component": Object {
+                  "BasicUsage": [Function],
                   "Collapsed": [Function],
-                  "Overview": [Function],
-                  "Stacked": [Function],
                   "TabsText": [Function],
                   "default": [Function],
                 },
@@ -480,6 +480,17 @@ exports[`Documentation: index renders 1`] = `
                 },
                 "path": "/docs/utilities/display",
                 "title": "Display",
+              },
+              Object {
+                "component": Object {
+                  "Examples": [Function],
+                  "HowItWorks": [Function],
+                  "Notation": [Function],
+                  "SpacingText": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/utilities/spacing",
+                "title": "Spacing",
               },
               Object {
                 "component": Object {

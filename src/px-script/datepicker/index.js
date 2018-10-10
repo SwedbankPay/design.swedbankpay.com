@@ -31,18 +31,32 @@ const datepicker = (() => {
             min: datepickerMin || null,
             max: datepickerMax || null,
             initialValue: datepickerValue || null,
-            required: required || false,
+            required: !!required || false,
             monthsInCalendar: parseInt(datepickerMonths) || 1
         };
 
         rome(datepicker, options);
+
+        // This is for getting around an issue with rome not displaying the datepicker when clicking label.
+        // https://github.com/bevacqua/rome/issues/102
+        if (datepicker.id) {
+            const label = document.querySelector(`label[for=${datepicker.id}]`);
+
+            label.addEventListener("click", e => {
+                e.preventDefault();
+                setTimeout(() => datepicker.focus(), 10);
+            });
+        }
     };
 
     const init = () => {
         const datepickers = document.querySelectorAll("[data-datepicker]");
-        datepickers.forEach(picker => {
-            _createDatepicker(picker);
-        });
+
+        if (datepickers) {
+            datepickers.forEach(picker => {
+                _createDatepicker(picker);
+            });
+        }
     };
 
     return { init };

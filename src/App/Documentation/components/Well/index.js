@@ -51,5 +51,5 @@ const Well = () => (
 
 export default Well;
 
-/* for testing */
+/* For testing */
 export { DefaultWell, WellSizes, WellText };

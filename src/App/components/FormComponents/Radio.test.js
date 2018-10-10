@@ -9,49 +9,44 @@ describe("Component: Radio - ", () => {
     });
 
     it("renders without label", () => {
-        const wrapper = shallow(
-            <Radio />
-        );
+        const wrapper = shallow(<Radio />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<input type="radio" />)).toEqual(true);
-        expect(wrapper.contains(<label></label>)).toEqual(false);
+        expect(wrapper.html()).toContain("radio");
+        expect(wrapper.html()).not.toContain("label");
     });
 
     it("renders with id and label", () => {
-        const wrapper = shallow(
-            <Radio id="test" label="test" />
-        );
+        const wrapper = shallow(<Radio id="test" label="test" />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<input type="radio" id="test" />)).toEqual(true);
-        expect(wrapper.contains(<label htmlFor="test">test</label>)).toEqual(true);
+        expect(wrapper.html()).toContain("radio");
+        expect(wrapper.html()).toContain("id=\"test\"");
+        expect(wrapper.html()).toContain("label");
+        expect(wrapper.html()).toContain("for=\"test\"");
     });
 
     it("renders with name", () => {
-        const wrapper = shallow(
-            <Radio name="test" />
-        );
+        const wrapper = shallow(<Radio name="test" />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<input type="radio" name="test" />)).toEqual(true);
+        expect(wrapper.html()).toContain("radio");
+        expect(wrapper.html()).toContain("name=\"test\"");
     });
 
     it("renders disabled", () => {
-        const wrapper = shallow(
-            <Radio disabled />
-        );
+        const wrapper = shallow(<Radio disabled />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<input type="radio" disabled />)).toEqual(true);
+        expect(wrapper.html()).toContain("radio");
+        expect(wrapper.html()).toContain("disabled");
     });
 
     it("renders checked", () => {
-        const wrapper = shallow(
-            <Radio checked />
-        );
+        const wrapper = shallow(<Radio checked />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<input type="radio" defaultChecked />)).toEqual(true);
+        expect(wrapper.html()).toContain("radio");
+        expect(wrapper.html()).toContain("checked");
     });
 });

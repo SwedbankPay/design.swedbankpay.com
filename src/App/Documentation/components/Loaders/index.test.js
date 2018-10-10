@@ -9,9 +9,7 @@ describe("Documentation: Loaders", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Loaders />
-        );
+        const wrapper = shallow(<Loaders />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Documentation: Loaders", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <BasicUsage />
-            );
+            const wrapper = shallow(<BasicUsage />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("Documentation: Loaders", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Sizes />
-            );
+            const wrapper = shallow(<Sizes />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -50,9 +44,7 @@ describe("Documentation: Loaders", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <MutedLoader />
-            );
+            const wrapper = shallow(<MutedLoader />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -64,9 +56,7 @@ describe("Documentation: Loaders", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <UsageWithJavascript />
-            );
+            const wrapper = shallow(<UsageWithJavascript />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -78,9 +68,7 @@ describe("Documentation: Loaders", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <LoadersText />
-            );
+            const wrapper = shallow(<LoadersText />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -93,9 +81,7 @@ describe("Documentation: Loaders", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <StaticHtml />
-            );
+            const wrapper = shallow(<StaticHtml />);
 
             expect(wrapper).toMatchSnapshot();
         });

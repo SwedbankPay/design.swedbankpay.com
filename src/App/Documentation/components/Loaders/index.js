@@ -147,5 +147,5 @@ class Loaders extends Component {
 
 export default Loaders;
 
-/* for testing */
+/* For testing */
 export { BasicUsage, Sizes, MutedLoader, StaticHtml, UsageWithJavascript, LoadersText };

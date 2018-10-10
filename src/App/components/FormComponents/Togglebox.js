@@ -2,10 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Togglebox = ({ id, checked, disabled, label }) => {
-    const attrs = { type: "checkbox" };
-    if (id) attrs.id = id;
-    if (disabled) attrs.disabled = disabled;
-    if (checked) attrs.defaultChecked = checked;
+    const attrs = {
+        type: "checkbox",
+        id: id || null,
+        disabled: disabled || null,
+        defaultChecked: checked || null
+    };
+
     return (
         <div className="togglebox">{"\n"}
             <input {...attrs} />{"\n"}

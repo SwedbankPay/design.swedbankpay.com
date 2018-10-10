@@ -248,18 +248,16 @@ const TablesText = () => (
     </div>
 );
 
-const Tables = () => {
-    return (
-        <div className="doc-container">
-            <div className="row">
-                <TablesText />
-                <DocToc component={TablesText} />
-            </div>
+const Tables = () => (
+    <div className="doc-container">
+        <div className="row">
+            <TablesText />
+            <DocToc component={TablesText} />
         </div>
-    );
-};
+    </div>
+);
 
 export default Tables;
 
-/* for testing */
+/* For testing */
 export { BasicTable, StripedTable, HoverTable, HoverStripedTable, DescriptionTable, TablesText };

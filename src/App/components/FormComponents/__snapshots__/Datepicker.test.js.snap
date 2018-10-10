@@ -21,7 +21,9 @@ exports[`Component: Datepicker -  renders with the form-group and label 1`] = `
 >
   
 
-  <label>
+  <label
+    htmlFor={null}
+  >
     test
   </label>
   

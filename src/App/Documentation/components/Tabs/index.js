@@ -1,26 +1,19 @@
-import React from "react";
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import PrismCode from "react-prism";
 
 import { ComponentPreview, DocToc, ExperimentalComponentAlert } from "#";
+import { tabs } from "$/px-script";
 import TabsComponent from "@/Tabs";
 
-const tabItems = ["Tab #1", "Tab #2", "Tab #3"];
+const tabItems = ["Kort", "Rabatter", "Transaksjoner", "Faktura", "Instillinger", "Audit trail"];
 
-const Overview = () => (
+const BasicUsage = () => (
     <>
-        <h2 id="overview">Overview</h2>
-        <p>Overview... <code className="token property">.tabs</code>...<code className="token property">.tabs-auto</code></p>
+        <h2 id="basic-usage">Basic usage</h2>
+        <p>Add class <code className="token property">.tabs</code> with a <code className="token property">.tabs-horizontal-desired_size</code> to a div containing an arrow icon along with <PrismCode className="language-html">{"<ul>"}</PrismCode> and nest <PrismCode className="language-html">{"<li>"}</PrismCode> as needed. The <code className="token property">.tabs-horizontal-desired_size</code> class determines when your tabs will switch from horizontal to collapsed. The available sizes can be found in our <Link to="/docs/core/breakpoints">breakpoints documentation</Link>.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <TabsComponent mode="auto" items={tabItems} />
-        </ComponentPreview>
-    </>
-);
-
-const Stacked = () => (
-    <>
-        <h2 id="stacked">Stacked</h2>
-        <p>Stacked... <code className="token property">.tabs</code>...<code className="token property">.tabs-stacked</code></p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <TabsComponent mode="stacked" items={tabItems} />
+            <TabsComponent mode="xl" items={tabItems}/>
         </ComponentPreview>
     </>
 );
@@ -28,9 +21,9 @@ const Stacked = () => (
 const Collapsed = () => (
     <>
         <h2 id="collapsed">Collapsed</h2>
-        <p>Collapsed... <code className="token property">.tabs</code>...<code className="token property">.tabs-collapsed</code></p>
+        <p>If no <code className="token property">.tabs-horizontal-desired_size</code> is provided then the tabs will always be in collapsed mode.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <TabsComponent mode="collapsed" items={tabItems} />
+            <TabsComponent items={tabItems}/>
         </ComponentPreview>
     </>
 );
@@ -39,22 +32,29 @@ const TabsText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
         <ExperimentalComponentAlert />
         <p className="lead">Tabs...</p>
-        <Overview />
-        <Stacked />
+        <BasicUsage />
         <Collapsed />
     </div>
 );
 
-const Tabs = () => (
-    <div className="doc-container">
-        <div className="row">
-            <TabsText />
-            <DocToc component={TabsText} />
-        </div>
-    </div>
-);
+class Tabs extends Component {
+    componentDidMount () {
+        tabs.init();
+    }
+
+    render () {
+        return (
+            <div className="doc-container">
+                <div className="row">
+                    <TabsText />
+                    <DocToc component={TabsText} />
+                </div>
+            </div>
+        );
+    }
+}
 
 export default Tabs;
 
-/* for testing */
-export { Overview, Stacked, Collapsed, TabsText };
+/* For testing */
+export { BasicUsage, Collapsed, TabsText };

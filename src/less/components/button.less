@@ -1,3 +1,11 @@
+.button-group {
+    margin-bottom: -3px;
+
+    .btn {
+        margin-bottom: 3px;
+    }
+}
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -21,7 +29,7 @@
         line-height: 1;
 
         & + * {
-            margin-left: 0.5rem;
+            margin-left: @base-margin-sm;
         }
     }
 
@@ -67,10 +75,6 @@
         }
     }
 
-    &.pull-right {
-        margin-right: 0 !important;
-    }
-
     // Alternate buttons
     // --------------------------------------------------
 
@@ -96,9 +100,10 @@
         background: transparent;
         border-radius: 0;
         border-bottom: 2px solid @blue;
-        padding: 0;
-        padding-top: 0.375rem;
-        margin: 0 0.75rem 0.375rem;
+
+        // Do not change these, or the border will look weird [EH]
+        padding: @padding-base-vertical 0 0;
+        margin: 0 @padding-base-horizontal @padding-base-vertical;
 
         &:active,
         &.active,
@@ -154,16 +159,16 @@
     &.btn-lg {
         // line-height: ensure even-numbered height of button next to large input
         border-width: 2px;
-        .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @btn-border-radius-large);
+        .button-size(@base-padding-sm; @base-padding; @font-size-large; @line-height-large; @btn-border-radius-large);
     }
 
     &.btn-sm {
         // line-height: ensure proper height of button next to small input
-        .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @btn-border-radius-small);
+        .button-size(@base-padding-xs; @base-padding-sm; @font-size-small; @line-height-small; @btn-border-radius-small);
     }
 
     &.btn-xs {
-        .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-small; @line-height-small; @btn-border-radius-small);
+        .button-size(@padding-xs-vertical; @base-padding-xs; @font-size-small; @line-height-small; @btn-border-radius-small);
     }
 
     // Block button
@@ -176,7 +181,7 @@
 
     // Vertically space out multiple block buttons
     &.btn-block + .btn-block {
-        margin-top: 0.5rem;
+        margin-top: @base-margin-sm;
     }
 
     // Specificity overrides

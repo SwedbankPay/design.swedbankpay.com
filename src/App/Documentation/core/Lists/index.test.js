@@ -9,9 +9,7 @@ describe("Documentation: Lists", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Lists />
-        );
+        const wrapper = shallow(<Lists />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Documentation: Lists", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <BasicList />
-            );
+            const wrapper = shallow(<BasicList />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("Documentation: Lists", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <InlineList />
-            );
+            const wrapper = shallow(<InlineList />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -50,9 +44,7 @@ describe("Documentation: Lists", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <DescriptionList />
-            );
+            const wrapper = shallow(<DescriptionList />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -64,9 +56,7 @@ describe("Documentation: Lists", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <SettingsList />
-            );
+            const wrapper = shallow(<SettingsList />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -78,9 +68,7 @@ describe("Documentation: Lists", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <ListsText />
-            );
+            const wrapper = shallow(<ListsText />);
 
             expect(wrapper).toMatchSnapshot();
         });

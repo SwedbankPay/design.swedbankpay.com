@@ -9,9 +9,7 @@ describe("Documentation: InputGroup", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <InputGroup />
-        );
+        const wrapper = shallow(<InputGroup />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Documentation: InputGroup", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <BasicExample />
-            );
+            const wrapper = shallow(<BasicExample />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("Documentation: InputGroup", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <CheckboxesAndRadios />
-            );
+            const wrapper = shallow(<CheckboxesAndRadios />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -50,9 +44,7 @@ describe("Documentation: InputGroup", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <ButtonAddons />
-            );
+            const wrapper = shallow(<ButtonAddons />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -64,9 +56,7 @@ describe("Documentation: InputGroup", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <WithSelect />
-            );
+            const wrapper = shallow(<WithSelect />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -78,9 +68,7 @@ describe("Documentation: InputGroup", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <WithFeedbackIcon />
-            );
+            const wrapper = shallow(<WithFeedbackIcon />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -92,9 +80,7 @@ describe("Documentation: InputGroup", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <ValidationStates />
-            );
+            const wrapper = shallow(<ValidationStates />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -106,9 +92,7 @@ describe("Documentation: InputGroup", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Disabled />
-            );
+            const wrapper = shallow(<Disabled />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -120,9 +104,7 @@ describe("Documentation: InputGroup", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <InputGroupText />
-            );
+            const wrapper = shallow(<InputGroupText />);
 
             expect(wrapper).toMatchSnapshot();
         });

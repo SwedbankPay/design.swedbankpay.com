@@ -8,7 +8,7 @@
     @media screen and (min-width: @screen-sm-min) {
         min-width: initial;
         bottom: initial;
-        top: 1%;
+        top: 5rem;
         right: 1%;
         max-width: 86%;
     }
@@ -19,10 +19,10 @@
         height: auto;
         max-width: 100%;
         min-height: @toast-height;
-        line-height: 1.5em;
+        line-height: 1.5;
         color: @toast-text-color;
         background-color: @toast-color;
-        padding: 0.6rem 1.5rem;
+        padding: @base-padding-sm @base-padding-lg;
         font-size: 1.1rem;
         font-weight: 300;
         display: flex;
@@ -77,14 +77,14 @@
             user-select: none;
 
             &:first-child {
-                margin-right: 0.5rem;
-                margin-left: -0.5rem;
+                margin-right: @base-margin-sm;
+                margin-left: -@base-margin-sm;
             }
 
             &:last-child {
                 cursor: pointer;
-                margin-left: 0.5rem;
-                margin-right: -0.5rem;
+                margin-left: @base-margin-sm;
+                margin-right: -@base-margin-sm;
                 color: lighten(@text-color, 20%);
 
                 &:hover {

@@ -33,18 +33,16 @@ const IconsText = () => (
     </div>
 );
 
-const Icons = () => {
-    return (
-        <div className="doc-container">
-            <div className="row">
-                <IconsText />
-                <DocToc component={IconsText} />
-            </div>
+const Icons = () => (
+    <div className="doc-container">
+        <div className="row">
+            <IconsText />
+            <DocToc component={IconsText} />
         </div>
-    );
-};
+    </div>
+);
 
 export default Icons;
 
-/* for testing */
+/* For testing */
 export { Usage, IconsText };

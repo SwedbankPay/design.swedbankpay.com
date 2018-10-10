@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Tabs, { Overview, Stacked, Collapsed, TabsText } from "./index";
+import Tabs, { BasicUsage, Collapsed, TabsText } from "./index";
 
 describe("Components: Tabs", () => {
     it("is defined", () => {
@@ -9,36 +9,18 @@ describe("Components: Tabs", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Tabs />
-        );
+        const wrapper = shallow(<Tabs />);
 
         expect(wrapper).toMatchSnapshot();
     });
 
-    describe("Overview", () => {
+    describe("BasicUsage", () => {
         it("is defined", () => {
-            expect(Overview).toBeDefined();
+            expect(BasicUsage).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Overview />
-            );
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("Stacked", () => {
-        it("is defined", () => {
-            expect(Stacked).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(
-                <Stacked />
-            );
+            const wrapper = shallow(<BasicUsage />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -50,9 +32,7 @@ describe("Components: Tabs", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Collapsed />
-            );
+            const wrapper = shallow(<Collapsed />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -64,9 +44,7 @@ describe("Components: Tabs", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <TabsText />
-            );
+            const wrapper = shallow(<TabsText />);
 
             expect(wrapper).toMatchSnapshot();
         });

@@ -9,9 +9,7 @@ describe("Documentation: ProgressTracker", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <ProgressTracker />
-        );
+        const wrapper = shallow(<ProgressTracker />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Documentation: ProgressTracker", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <BasicProgressTracker />
-            );
+            const wrapper = shallow(<BasicProgressTracker />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("Documentation: ProgressTracker", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <SmallProgressTracker />
-            );
+            const wrapper = shallow(<SmallProgressTracker />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -50,9 +44,7 @@ describe("Documentation: ProgressTracker", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <DisabledProgressTracker />
-            );
+            const wrapper = shallow(<DisabledProgressTracker />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -64,9 +56,7 @@ describe("Documentation: ProgressTracker", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <ProgressTrackerText />
-            );
+            const wrapper = shallow(<ProgressTrackerText />);
 
             expect(wrapper).toMatchSnapshot();
         });

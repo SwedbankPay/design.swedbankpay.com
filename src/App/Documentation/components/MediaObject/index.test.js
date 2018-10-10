@@ -9,9 +9,7 @@ describe("Documentation: MediaObject", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <MediaObject />
-        );
+        const wrapper = shallow(<MediaObject />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Documentation: MediaObject", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Overview />
-            );
+            const wrapper = shallow(<Overview />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("Documentation: MediaObject", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <MediaPosition />
-            );
+            const wrapper = shallow(<MediaPosition />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -50,9 +44,7 @@ describe("Documentation: MediaObject", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <MediaObjectText />
-            );
+            const wrapper = shallow(<MediaObjectText />);
 
             expect(wrapper).toMatchSnapshot();
         });

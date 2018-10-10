@@ -51,5 +51,5 @@ const Badge = () => (
 
 export default Badge;
 
-/* for testing */
+/* For testing */
 export { Overview, FurtherUsage, BadgeText };

@@ -145,11 +145,6 @@ export default [
                 component: require("../Documentation/components/MediaObject")
             },
             {
-                title: "Modal (deprecated)",
-                path: "/docs/components/modal",
-                component: require("../Documentation/components/Modal")
-            },
-            {
                 title: "Pagination",
                 path: "/docs/components/pagination",
                 component: require("../Documentation/components/Pagination")
@@ -160,7 +155,7 @@ export default [
                 component: require("../Documentation/components/Panel")
             },
             {
-                title: "Progress Tracker",
+                title: "Progress Tracker (deprecated)",
                 path: "/docs/components/progress-tracker",
                 component: require("../Documentation/components/ProgressTracker")
             },
@@ -173,6 +168,11 @@ export default [
                 title: "Status",
                 path: "/docs/components/status",
                 component: require("../Documentation/components/Status")
+            },
+            {
+                title: "Step Bar (experimental)",
+                path: "/docs/components/step-bar",
+                component: require("../Documentation/components/StepBar")
             },
             {
                 title: "Tabs (experimental)",
@@ -219,6 +219,11 @@ export default [
                 title: "Display",
                 path: "/docs/utilities/display",
                 component: require("../Documentation/utilities/Display")
+            },
+            {
+                title: "Spacing",
+                path: "/docs/utilities/spacing",
+                component: require("../Documentation/utilities/Spacing")
             },
             {
                 title: "Visibility",

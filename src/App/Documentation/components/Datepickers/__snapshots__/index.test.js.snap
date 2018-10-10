@@ -233,6 +233,7 @@ exports[`Documentation: Datepickers Required renders 1`] = `
     showCasePanel={true}
   >
     <Datepicker
+      id="required-datepicker"
       label="Date"
       prefixType="icon"
       prefixValue="event"
@@ -264,6 +265,7 @@ exports[`Documentation: Datepickers ShowingMultipleMonths renders 1`] = `
     showCasePanel={true}
   >
     <Datepicker
+      id="multiple-months-datepicker"
       label="Date"
       months="2"
       prefixType="icon"
@@ -294,6 +296,7 @@ exports[`Documentation: Datepickers SimpleDatepicker renders 1`] = `
     showCasePanel={true}
   >
     <Datepicker
+      id="simle-datepicker"
       label="Date"
       prefixType="icon"
       prefixValue="event"

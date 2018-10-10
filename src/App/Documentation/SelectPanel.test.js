@@ -14,7 +14,7 @@ describe("Documentation: SelectPanel", () => {
     //         <SelectPanel location={location} />
     //     );
 
-    //     expect(wrapper).toMatchSnapshot();
+    //     Expect(wrapper).toMatchSnapshot();
     // });
 
     describe("SearchBox", () => {
@@ -23,9 +23,7 @@ describe("Documentation: SelectPanel", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <SearchBox />
-            );
+            const wrapper = shallow(<SearchBox />);
 
             expect(wrapper).toMatchSnapshot();
         });

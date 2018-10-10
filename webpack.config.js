@@ -18,7 +18,6 @@ module.exports = (env, argv) => {
     const isRelease = env && env.release === "true";
     const isDevServer = !!argv.host;
 
-
     const config = {
         entry: {
             polyfills: "./src/polyfills/index.js",
@@ -173,7 +172,7 @@ module.exports = (env, argv) => {
                     developerURL: "https://payex.com",
                     background: "#000",
                     theme_color: "#2da944",
-                    version: version,
+                    version,
                     icons: {
                         android: true,
                         appleIcon: true,
@@ -238,7 +237,8 @@ module.exports = (env, argv) => {
             }),
             new webpack.DefinePlugin({
                 "process.env": {
-                    sentry: true
+                    sentry: true,
+                    google: true
                 }
             })
         );

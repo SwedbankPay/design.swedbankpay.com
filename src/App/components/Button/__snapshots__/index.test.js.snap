@@ -167,16 +167,16 @@ exports[`Component: Button -  Button tag: renders a button with an icon when pro
   type="button"
 >
   
-	
+		
   <i
     className="material-icons"
   >
     test
   </i>
   
-	
+		
   
-
+	
 </button>
 `;
 
@@ -203,19 +203,19 @@ exports[`Component: Button -  Button tag: renders a button with icon and label i
   type="button"
 >
   
-	
+		
   <i
     className="material-icons"
   >
     test
   </i>
   
-	
+		
   <span>
     test
   </span>
   
-
+	
 </button>
 `;
 

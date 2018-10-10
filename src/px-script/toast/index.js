@@ -1,21 +1,8 @@
 import { extendObj } from "../utils";
 
-const _defaults = {
-    html: "",
-    type: "",
-    icon: "",
-    dismissable: true,
-    displayLength: 4000,
-    inDuration: 300,
-    outDuration: 375,
-    classes: [],
-    completeCallback: null,
-    activationPercent: 0.8
-};
-
 class Toast {
     constructor (options) {
-        this.options = extendObj(true, _defaults, options);
+        this.options = extendObj(true, this._defaults(), options);
         this.message = this.options.html;
         this.timeRemaining = this.options.displayLength; // Time remaining until the toast is removed.
 
@@ -25,15 +12,33 @@ class Toast {
 
         // Create new toast
         Toast._toasts.push(this);
+
         const toastElement = this._createToast();
+
         toastElement.pxToast = this;
         this.el = toastElement;
         this._animateIn();
         this._setTimer();
     }
 
+    _defaults () {
+        return {
+            html: "",
+            type: "",
+            icon: "",
+            dismissable: true,
+            displayLength: 4000,
+            inDuration: 300,
+            outDuration: 375,
+            classes: [],
+            completeCallback: null,
+            activationPercent: 0.8
+        };
+    }
+
     static _createContainer () {
         const container = document.createElement("div");
+
         container.setAttribute("id", "toast-container");
 
         // TODO: Add event handlers
@@ -51,6 +56,8 @@ class Toast {
 
     _createToast () {
         const toast = document.createElement("div");
+        const toastContent = document.createElement("div");
+
         toast.classList.add("toast");
 
         if (this.options.classes.length) {
@@ -59,6 +66,7 @@ class Toast {
 
         const _createIcon = (iconType, dismiss) => {
             const icon = document.createElement("i");
+
             icon.classList.add("material-icons");
             icon.innerHTML = iconType;
 
@@ -67,52 +75,43 @@ class Toast {
                     this.dismiss();
                 });
             }
+
             return icon;
         };
 
+        // Set toast type
         switch (this.options.type) {
             case "success":
                 toast.classList.add("toast-success");
                 toast.appendChild(_createIcon("check_circle"));
+
                 break;
             case "neutral":
                 toast.classList.add("toast-neutral");
                 toast.appendChild(_createIcon("info"));
+
                 break;
             case "warning":
                 toast.classList.add("toast-warning");
                 toast.appendChild(_createIcon("warning"));
+
                 break;
             case "danger":
                 toast.classList.add("toast-danger");
                 toast.appendChild(_createIcon("error"));
+
                 break;
             default:
                 break;
         }
 
-        if (!!this.options.icon && !this.options.type) {
-            toast.appendChild(_createIcon(this.options.icon));
-        }
-
         // Set content
-        if (typeof HTMLElement === "object"
-            ? this.message instanceof HTMLElement
-            : this.message &&
-                typeof this.message === "object" &&
-                this.message !== null &&
-                this.message.nodeType === 1 &&
-                typeof this.message.nodeName === "string") {
-            const toastContent = document.createElement("div");
-            toastContent.classList.add("toast-content");
-            toastContent.appendChild(this.message);
-            toast.appendChild(toastContent);
+        toastContent.classList.add("toast-content");
+        toastContent.innerHTML = this.message;
+        toast.appendChild(toastContent);
 
-            // Insert as html
-        } else {
-            const toastP = document.createElement("p");
-            toastP.innerHTML = this.message;
-            toast.appendChild(toastP);
+        if (this.options.icon && !this.options.type) {
+            toast.appendChild(_createIcon(this.options.icon));
         }
 
         if (this.options.dismissable) {
@@ -129,6 +128,7 @@ class Toast {
 
         // Append toast
         Toast._container.appendChild(toast);
+
         return toast;
     }
 
@@ -161,6 +161,7 @@ class Toast {
 
     dismiss () {
         window.clearInterval(this.counterInterval);
+
         const activationDistance = this.el.offsetWidth * this.options.activationPercent;
 
         if (this.wasSwiped) {
@@ -176,6 +177,7 @@ class Toast {
 
         this.el.parentNode.removeChild(this.el);
         Toast._toasts.splice(Toast._toasts.indexOf(this), 1);
+
         if (Toast._toasts.length === 0) {
             Toast._removeContainer();
         }

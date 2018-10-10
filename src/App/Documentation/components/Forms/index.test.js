@@ -9,9 +9,7 @@ describe("Documentation: Forms", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Forms />
-        );
+        const wrapper = shallow(<Forms />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Documentation: Forms", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Overview />
-            );
+            const wrapper = shallow(<Overview />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("Documentation: Forms", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <FormGrid />
-            );
+            const wrapper = shallow(<FormGrid />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -50,9 +44,7 @@ describe("Documentation: Forms", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Validation />
-            );
+            const wrapper = shallow(<Validation />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -64,9 +56,7 @@ describe("Documentation: Forms", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <UsageWithFieldsets />
-            );
+            const wrapper = shallow(<UsageWithFieldsets />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -78,9 +68,7 @@ describe("Documentation: Forms", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <StaticText />
-            );
+            const wrapper = shallow(<StaticText />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -92,9 +80,7 @@ describe("Documentation: Forms", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Checkboxes />
-            );
+            const wrapper = shallow(<Checkboxes />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -106,9 +92,7 @@ describe("Documentation: Forms", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <DisabledCheckboxes />
-            );
+            const wrapper = shallow(<DisabledCheckboxes />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -120,9 +104,7 @@ describe("Documentation: Forms", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <RadioButtons />
-            );
+            const wrapper = shallow(<RadioButtons />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -134,9 +116,7 @@ describe("Documentation: Forms", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <DisabledRadioButtons />
-            );
+            const wrapper = shallow(<DisabledRadioButtons />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -148,9 +128,7 @@ describe("Documentation: Forms", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Toggleboxes />
-            );
+            const wrapper = shallow(<Toggleboxes />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -162,9 +140,7 @@ describe("Documentation: Forms", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <DisabledToggleboxes />
-            );
+            const wrapper = shallow(<DisabledToggleboxes />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -176,9 +152,7 @@ describe("Documentation: Forms", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <RangeSlider />
-            );
+            const wrapper = shallow(<RangeSlider />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -190,9 +164,7 @@ describe("Documentation: Forms", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <DisabledRangeSlider />
-            );
+            const wrapper = shallow(<DisabledRangeSlider />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -204,9 +176,7 @@ describe("Documentation: Forms", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <FormsText />
-            );
+            const wrapper = shallow(<FormsText />);
 
             expect(wrapper).toMatchSnapshot();
         });

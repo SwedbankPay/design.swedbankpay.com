@@ -9,25 +9,19 @@ describe("Core: Color", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Color />
-        );
+        const wrapper = shallow(<Color />);
 
         expect(wrapper).toMatchSnapshot();
     });
 
     it("ColorPalette renders", () => {
-        const wrapper = shallow(
-            <ColorPalette />
-        );
+        const wrapper = shallow(<ColorPalette />);
 
         expect(wrapper).toMatchSnapshot();
     });
 
     it("ColorText renders", () => {
-        const wrapper = shallow(
-            <ColorText />
-        );
+        const wrapper = shallow(<ColorText />);
 
         expect(wrapper).toMatchSnapshot();
     });

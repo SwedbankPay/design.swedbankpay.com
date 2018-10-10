@@ -5,6 +5,11 @@ describe("px-script: script", () => {
         expect(script).toBeDefined();
     });
 
+    it("has an initAll method", () => {
+        expect(script.initAll).toBeDefined();
+        expect(script.initAll).toBeInstanceOf(Function);
+    });
+
     it("method initAll runs all init functions provided in the object argument", () => {
         window.px = {
             test1: { init: jest.fn() },
@@ -25,7 +30,7 @@ describe("px-script: script", () => {
             test2: { init: { test: jest.fn() } }
         };
 
-        console.warn = jest.fn(); // to prevent console warning in console
+        console.warn = jest.fn(); // To prevent console warning in console
 
         script.initAll();
 

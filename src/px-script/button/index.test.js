@@ -6,15 +6,19 @@ import Button from "@/Button";
 
 describe("px-script: button", () => {
     const div = document.createElement("div");
+
     document.body.appendChild(div);
 
     it("is defined", () => {
         expect(button).toBeDefined();
     });
 
-    it("method init is defined and adds loader markup to buttons with attribute [data-button-loader]", () => {
+    it("has an init method", () => {
         expect(button.init).toBeDefined();
+        expect(button.init).toBeInstanceOf(Function);
+    });
 
+    it("method init is defined and adds loader markup to buttons with attribute [data-button-loader]", () => {
         const Buttons = () => (
             <div>
                 <Button type="primary" label="test" loader />

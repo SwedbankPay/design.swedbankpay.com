@@ -9,9 +9,7 @@ describe("Documentation: Card", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Card />
-        );
+        const wrapper = shallow(<Card />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Documentation: Card", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Overview />
-            );
+            const wrapper = shallow(<Overview />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("Documentation: Card", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <CardText />
-            );
+            const wrapper = shallow(<CardText />);
 
             expect(wrapper).toMatchSnapshot();
         });

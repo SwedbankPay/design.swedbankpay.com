@@ -1,19 +1,8 @@
-.alert-variant(@color;) {
-    background-color: @white;
-    border: 1px solid @gray-8;
-    border-left: 3px solid @color;
-
-    .alert-icon {
-        color: @color;
-    }
-}
-
-
 .alert {
-    padding: 1rem;
+    padding: @base-padding;
     position: relative;
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: @base-margin;
     border: 1px solid transparent;
     display: flex;
     align-items: start;
@@ -59,20 +48,11 @@
     }
 
     .alert-icon {
-        margin-right: 1rem;
+        margin-right: @base-margin;
     }
 
     [data-alert-close] {
         margin-left: auto;
-        color: lighten(@text-color, 20%);
-        line-height: 1;
-
-        &:hover {
-            color: @text-color;
-        }
-
-        &:focus {
-            .tab-focus();
-        }
+        .close-button();
     }
 }

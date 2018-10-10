@@ -11,6 +11,7 @@ const SearchBox = () => (
 
 const NavLink = ({ childRoute, pathname }) => {
     const { title, path } = childRoute;
+
     return (
         <li>
             <Link className={pathname === path ? "active" : null} to={path}>{title}</Link>
@@ -35,6 +36,7 @@ class NavGroup extends Component {
     render () {
         const { title, routes } = this.props.route;
         const { pathname } = this.props.location;
+
         return (
             <div className={`nav-group${this.state.isActive ? " active" : ""}`}>
                 <div className="nav-heading">
@@ -55,6 +57,7 @@ const SelectPanel = () => (
         <nav className="documentation-nav">
             {routes.map((route, i) => {
                 const NavGroupWithRouter = withRouter(NavGroup);
+
                 return <NavGroupWithRouter key={i} route={route} />;
             })}
         </nav>
@@ -63,5 +66,5 @@ const SelectPanel = () => (
 
 export default withRouter(SelectPanel);
 
-/* for testing */
+/* For testing */
 export { SearchBox };

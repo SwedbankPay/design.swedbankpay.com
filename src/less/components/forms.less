@@ -1,12 +1,26 @@
+// TODO: Clean this up!! [EH]
+
 label {
     display: inline-block;
     max-width: 100%;
-    margin-bottom: 0.25rem;
+    margin-bottom: @base-margin-xs;
     text-transform: uppercase;
     font-weight: @font-weight-light;
     font-size: @base-font-size * 0.9;
     color: @input-color;
     line-height: 1.5;
+
+    .required-asterisk {
+        color: @red;
+        margin-left: 0.25rem;
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 1;
+
+        .has-success & {
+            color: @state-success;
+        }
+    }
 }
 
 fieldset {
@@ -17,14 +31,14 @@ fieldset {
     // so we reset that to ensure it behaves more like a standard block element.
     // See https://github.com/twbs/bootstrap/issues/12359.
     min-width: 0;
-    margin-bottom: 1rem;
+    margin-bottom: @base-margin;
 
     &:disabled {
         textarea {
             resize: none;
         }
 
-        .checkbox input[type=checkbox] {
+        .checkbox input[type="checkbox"] {
             + label:before {
                 background-color: @input-bg-disabled;
                 border-color: @input-checked-bg-disabled;
@@ -43,7 +57,7 @@ fieldset {
             }
         }
 
-        .radio input[type=radio] {
+        .radio input[type="radio"] {
             + label:before {
                 background-color: @input-bg-disabled;
                 border-color: @input-checked-bg-disabled;
@@ -60,7 +74,7 @@ fieldset {
             }
         }
 
-        .togglebox input[type=checkbox] {
+        .togglebox input[type="checkbox"] {
             + label:before,
             + label:after {
                 background-color: @input-bg-disabled;
@@ -81,7 +95,7 @@ fieldset {
         }
 
         .rangeslider {
-            input[type=range] {
+            input[type="range"] {
                 cursor: not-allowed;
 
                 &::-webkit-slider-thumb {
@@ -128,7 +142,7 @@ fieldset {
                     background: @input-checked-bg-disabled;
 
                     &:before {
-                        border-right-color: @input-checked-bg-disabled !important;
+                        border-right-color: @input-checked-bg-disabled !important; // stylelint-disable-line declaration-no-important
                     }
                 }
             }
@@ -185,7 +199,7 @@ legend {
     &[disabled],
     &[readonly],
     fieldset[disabled] & {
-        background-color: @input-bg-disabled !important;
+        background-color: @input-bg-disabled !important; // stylelint-disable-line declaration-no-important
         opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
     }
 
@@ -201,49 +215,7 @@ legend {
 }
 
 .form-group {
-    margin-bottom: @form-margin;
-
-    .validation-success,
-    .validation-warning,
-    .validation-error {
-        display: none;
-    }
-
-    .validation-default {
-        display: inline-block;
-    }
-
-    &.has-success {
-        .form-control-validation(@state-success);
-
-        .validation-default {
-            display: none;
-        }
-
-        .validation-success {
-            display: inline-block;
-        }
-
-        .success-feedback {
-            display: block;
-        }
-    }
-
-    &.has-error {
-        .form-control-validation(@state-error);
-
-        .validation-default {
-            display: none;
-        }
-
-        .validation-error {
-            display: inline-block;
-        }
-
-        .error-feedback {
-            display: block;
-        }
-    }
+    margin-bottom: @base-margin;
 }
 
 .checkbox,
@@ -256,12 +228,20 @@ legend {
 }
 
 .help-block {
+    position: relative;
     display: block;
-    margin: 0.325rem 0;
+    margin: @helpblock-margin;
     color: lighten(@text-color, 25%);
     text-transform: uppercase;
     font-size: @base-font-size * 0.8;
     line-height: 1rem;
+
+    &:after {
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 }
 
 textarea[disabled] {
@@ -273,7 +253,7 @@ select[multiple] {
     padding: 0;
 
     option {
-        padding: 0.187rem 0.375rem;
+        padding: @select-option-margin;
     }
 }
 
@@ -285,18 +265,18 @@ select[multiple] {
     align-items: center;
 
     &:not(:last-child) {
-        margin-bottom: 0.6rem;
+        margin-bottom: @base-margin-sm;
     }
 
     label {
         position: relative;
         align-items: center;
         margin: 0;
-        padding-left: 0.2rem;
+        padding-left: @checkbox-label-padding;
     }
 
-    input[type=checkbox] {
-        margin-right: 1rem;
+    input[type="checkbox"] {
+        margin-right: @base-margin;
         opacity: 0;
 
         + label:before {
@@ -350,18 +330,18 @@ select[multiple] {
     align-items: center;
 
     &:not(:last-child) {
-        margin-bottom: 0.6rem;
+        margin-bottom: @base-margin-sm;
     }
 
     label {
         position: relative;
         align-items: center;
         margin: 0;
-        padding-left: 0.2rem;
+        padding-left: @checkbox-label-padding;
     }
 
-    input[type=radio] {
-        margin-right: 1rem;
+    input[type="radio"] {
+        margin-right: @base-margin;
         opacity: 0;
 
         + label:before {
@@ -415,15 +395,15 @@ select[multiple] {
     align-items: center;
 
     &:not(:last-child) {
-        margin-bottom: 0.5rem;
+        margin-bottom: @base-margin-sm;
     }
 
     label {
         margin: 0;
     }
 
-    input[type=checkbox] {
-        margin-right: 0.5rem;
+    input[type="checkbox"] {
+        margin-right: @base-margin-sm;
         height: @checkbox-height;
         width: @checkbox-width * 2;
 
@@ -513,7 +493,7 @@ select[multiple] {
         background: @color;
 
         &:before {
-            border-right-color: @color !important;
+            border-right-color: @color !important; // stylelint-disable-line declaration-no-important
         }
 
         &:after {
@@ -609,7 +589,7 @@ select[multiple] {
                 background: @input-checked-bg-disabled;
 
                 &:before {
-                    border-right-color: @input-checked-bg-disabled !important;
+                    border-right-color: @input-checked-bg-disabled !important; // stylelint-disable-line declaration-no-important
                 }
             }
         }
@@ -623,7 +603,7 @@ select[multiple] {
     height: @thumb-size;
     box-sizing: border-box;
     background: transparent;
-    margin-top: 2rem;
+    margin-top: @base-margin-xl;
 
     &.rangeslider-brand {
         .slider-color(@brand-primary);
@@ -639,7 +619,7 @@ select[multiple] {
 
     &.label-right {
         .value-label {
-            margin-left: 1rem;
+            margin-left: @base-margin;
             position: relative;
             height: @thumb-size;
 
@@ -681,7 +661,7 @@ select[multiple] {
         box-sizing: border-box;
         display: flex;
         color: @white;
-        padding: 0.2rem;
+        padding: @checkbox-label-padding;
         font-size: @small-font-size;
         text-align: center;
         vertical-align: middle;
@@ -692,7 +672,7 @@ select[multiple] {
             margin: 0;
             align-items: center;
 
-            span {
+            span { // Todo: cleanup
                 margin: 0 1.5px;
             }
         }

@@ -28,5 +28,5 @@ Breadcrumb.propTypes = {
 
 export default Breadcrumb;
 
-// exporting for testing purposes
+// Exporting for testing purposes
 export { DefaultItems };

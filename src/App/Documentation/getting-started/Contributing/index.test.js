@@ -10,9 +10,7 @@ describe("GettingStarted: Contributing", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Contributing />
-        );
+        const wrapper = shallow(<Contributing />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -23,9 +21,7 @@ describe("GettingStarted: Contributing", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <CreatingYourComponent />
-            );
+            const wrapper = shallow(<CreatingYourComponent />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -37,9 +33,7 @@ describe("GettingStarted: Contributing", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <CreateADocumentationPage />
-            );
+            const wrapper = shallow(<CreateADocumentationPage />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -51,9 +45,7 @@ describe("GettingStarted: Contributing", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <AddComponentToRoutes />
-            );
+            const wrapper = shallow(<AddComponentToRoutes />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -65,15 +57,11 @@ describe("GettingStarted: Contributing", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <AddingStyles />
-            );
+            const wrapper = shallow(<AddingStyles />);
 
             if (AddingStyles().props.children) {
                 AddingStyles().props.children.map(Child => {
-                    const wrapper = shallow(
-                        <Child.type />
-                    );
+                    const wrapper = shallow(<Child.type />);
 
                     expect(wrapper).toMatchSnapshot();
                 });
@@ -89,15 +77,11 @@ describe("GettingStarted: Contributing", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <AddingJavaScript />
-            );
+            const wrapper = shallow(<AddingJavaScript />);
 
             if (AddingJavaScript().props.children) {
                 AddingJavaScript().props.children.map(Child => {
-                    const wrapper = shallow(
-                        <Child.type />
-                    );
+                    const wrapper = shallow(<Child.type />);
 
                     expect(wrapper).toMatchSnapshot();
                 });
@@ -113,9 +97,7 @@ describe("GettingStarted: Contributing", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <ContributingText />
-            );
+            const wrapper = shallow(<ContributingText />);
 
             expect(wrapper).toMatchSnapshot();
         });

@@ -9,9 +9,7 @@ describe("Documentation: Pagination", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Pagination />
-        );
+        const wrapper = shallow(<Pagination />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Documentation: Pagination", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <DefaultPagination />
-            );
+            const wrapper = shallow(<DefaultPagination />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("Documentation: Pagination", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <SimplePagination />
-            );
+            const wrapper = shallow(<SimplePagination />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -50,9 +44,7 @@ describe("Documentation: Pagination", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <PaginationBullets />
-            );
+            const wrapper = shallow(<PaginationBullets />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -64,9 +56,7 @@ describe("Documentation: Pagination", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <PaginationText />
-            );
+            const wrapper = shallow(<PaginationText />);
 
             expect(wrapper).toMatchSnapshot();
         });

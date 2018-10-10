@@ -32,12 +32,15 @@ export default class NavMenu {
             if (this.navMenuElement) {
                 this._initTargetLinks();
             }
+
+            this._initAnchors();
         }
     }
 
     _initNavSlides () {
         const appendBackBtn = element => {
             const i = document.createElement("i");
+
             i.classList.add("material-icons", "slide-back-btn");
             i.innerHTML = icons.back;
             i.addEventListener("click", () => {
@@ -63,8 +66,10 @@ export default class NavMenu {
                     this.currentActive = targetLink.targetElement;
                     this.history.push(targetLink.parentSlide);
                     targetLink.navigateToTarget();
+
                     if (this.history.length > 1) {
                         const index = this.history.length - 2;
+
                         this.history[index].classList.add("inactive");
                     }
                 } else {
@@ -74,33 +79,47 @@ export default class NavMenu {
         });
     }
 
+    _initAnchors () {
+        // Closing menu for clicking on links in SPA's.
+        this.navMenuElement.querySelectorAll("a")
+            .forEach(anchor => anchor.addEventListener("click", () => this.close()));
+    }
+
     open () {
-        this.navMenuElement.classList.add("in");
-        this.isOpen = true;
-        if (this.iconElement) {
-            this.iconElement.innerHTML = icons.close;
+        if (!this.isOpen) {
+            this.navMenuElement.classList.add("in");
+            this.isOpen = true;
+
+            if (this.iconElement) {
+                this.iconElement.innerHTML = icons.close;
+            }
         }
     }
 
     close () {
-        this.navMenuElement.classList.remove("in");
-        this.isOpen = false;
-        if (this.iconElement) {
-            this.iconElement.innerHTML = this.userIcon;
-        }
+        if (this.isOpen) {
+            this.navMenuElement.classList.remove("in");
+            this.isOpen = false;
 
-        setTimeout(() => {
-            this.reset();
-        }, 500);
+            if (this.iconElement) {
+                this.iconElement.innerHTML = this.userIcon;
+            }
+
+            setTimeout(() => {
+                this.reset();
+            }, 500);
+        }
     }
 
     goBack () {
         if (this.history.length > 1) {
             const index = this.history.length - 2;
+
             this.history[index].classList.remove("inactive");
         }
 
         const lastActive = this.history.pop();
+
         this.currentActive.classList.remove("current");
         this.currentActive = lastActive;
         lastActive.classList.remove("prev");
@@ -111,6 +130,7 @@ export default class NavMenu {
         this.history = [];
         this.navSlides.forEach((slide, i) => {
             slide.classList.remove("current", "prev", "inactive");
+
             if (i === 0) {
                 slide.classList.add("current");
             }

@@ -9,9 +9,7 @@ describe("Documentation: Dialog", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Dialog />
-        );
+        const wrapper = shallow(<Dialog />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Documentation: Dialog", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Example />
-            );
+            const wrapper = shallow(<Example />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("Documentation: Dialog", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <DialogText />
-            );
+            const wrapper = shallow(<DialogText />);
 
             expect(wrapper).toMatchSnapshot();
         });

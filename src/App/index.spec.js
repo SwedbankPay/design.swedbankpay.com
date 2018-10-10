@@ -5,6 +5,7 @@ fixture `Frontpage`
 
 test("Frontpage test", async t => {
     const header = await Selector(".panel-body").find("h2");
+
     await t
         .expect(header.textContent).contains("Welcome to the PayEx DesignGuide");
 });

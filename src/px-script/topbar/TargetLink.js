@@ -10,6 +10,7 @@ export default class TargetLink {
 
     appendArrow (icon) {
         const i = document.createElement("i");
+
         i.classList.add("material-icons");
         i.innerHTML = icon;
         this.element.append(i);

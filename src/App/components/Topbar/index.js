@@ -19,13 +19,14 @@ const LeftMenu = ({ align, menu }) => {
 
             return (
                 <Fragment>
-                    {href ? <a href={href}>{title}</a> : <span data-target={`#nav-${align}-slide-${target}`}>{title}</span>}{!href || last ? "\n" : null}
+                    {href ? <a href={href} onClick={e => e.preventDefault()}>{title}</a> : <span data-target={`#nav-${align}-slide-${target}`}>{title}</span>}{!href || last ? "\n" : null}
                 </Fragment>
             );
         };
 
         const GroupItem = ({ groupItem }) => {
             const { groupTitle, items } = groupItem;
+
             return (
                 <div className="topbar-nav-group">
                     <div className="topbar-nav-group-heading">{groupTitle}</div>{"\n"}
@@ -61,24 +62,22 @@ const RightMenu = ({ align, menu }) => {
         <nav id={id} className={`topbar-nav topbar-nav-${align}`}>
             {items.map((item, i) => (
                 <Fragment key={i}>{"\n"}
-                    <a href={item.href}>{item.title}</a>
+                    <a href={item.href} onClick={e => e.preventDefault()}>{item.title}</a>
                 </Fragment>
             ))}{"\n"}
         </nav>
     );
 };
 
-const Topbar = ({ leftMenu, rightMenu }) => {
-    return (
-        <div className="topbar">{"\n"}
-            {leftMenu ? <TopbarBtn align="left" icon={leftMenu.btn.icon} text={leftMenu.btn.text} target={leftMenu.id} /> : null}{leftMenu ? "\n" : null}
-            <a href="#" className={"topbar-logo"}></a>{"\n"}
-            {rightMenu ? <TopbarBtn align="right" icon={rightMenu.btn.icon} text={rightMenu.btn.text} target={rightMenu.id} /> : null}{rightMenu ? "\n" : null}
-            {leftMenu ? <LeftMenu align="left" menu={leftMenu} /> : null}{leftMenu ? "\n" : null}
-            {rightMenu ? <RightMenu align="right" menu={rightMenu} /> : null}{rightMenu ? "\n" : null}
-        </div>
-    );
-};
+const Topbar = ({ leftMenu, rightMenu }) => (
+    <div className="topbar">{"\n"}
+        {leftMenu ? <TopbarBtn align="left" icon={leftMenu.btn.icon} text={leftMenu.btn.text} target={leftMenu.id} /> : null}{leftMenu ? "\n" : null}
+        <a href="#" className={"topbar-logo"} onClick={e => e.preventDefault()}></a>{"\n"}
+        {rightMenu ? <TopbarBtn align="right" icon={rightMenu.btn.icon} text={rightMenu.btn.text} target={rightMenu.id} /> : null}{rightMenu ? "\n" : null}
+        {leftMenu ? <LeftMenu align="left" menu={leftMenu} /> : null}{leftMenu ? "\n" : null}
+        {rightMenu ? <RightMenu align="right" menu={rightMenu} /> : null}{rightMenu ? "\n" : null}
+    </div>
+);
 
 Topbar.propTypes = {
     leftMenu: PropTypes.object,

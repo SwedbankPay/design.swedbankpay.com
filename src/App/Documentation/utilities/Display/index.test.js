@@ -9,9 +9,7 @@ describe("Utilities: Display", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(
-            <Display />
-        );
+        const wrapper = shallow(<Display />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -22,9 +20,7 @@ describe("Utilities: Display", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <HowItWorks />
-            );
+            const wrapper = shallow(<HowItWorks />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -36,9 +32,7 @@ describe("Utilities: Display", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Notation />
-            );
+            const wrapper = shallow(<Notation />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -50,9 +44,7 @@ describe("Utilities: Display", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <Examples />
-            );
+            const wrapper = shallow(<Examples />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -64,9 +56,7 @@ describe("Utilities: Display", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <HidingElements />
-            );
+            const wrapper = shallow(<HidingElements />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -78,9 +68,7 @@ describe("Utilities: Display", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(
-                <DisplayText />
-            );
+            const wrapper = shallow(<DisplayText />);
 
             expect(wrapper).toMatchSnapshot();
         });

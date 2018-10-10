@@ -11,9 +11,7 @@ describe("Component: FormControlText - ", () => {
     it("prop text is required", () => {
         console.error = jest.fn();
 
-        const wrapper = shallow(
-            <FormControlText />
-        );
+        const wrapper = shallow(<FormControlText />);
 
         expect(wrapper).toMatchSnapshot();
         expect(console.error).toHaveBeenCalled();
@@ -21,9 +19,7 @@ describe("Component: FormControlText - ", () => {
     });
 
     it("renders without label", () => {
-        const wrapper = shallow(
-            <FormControlText text="test" />
-        );
+        const wrapper = shallow(<FormControlText text="test" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<span className="form-control-text">test</span>)).toEqual(true);
@@ -31,9 +27,7 @@ describe("Component: FormControlText - ", () => {
     });
 
     it("renders with label", () => {
-        const wrapper = shallow(
-            <FormControlText text="test" label="test" />
-        );
+        const wrapper = shallow(<FormControlText text="test" label="test" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<span className="form-control-text">test</span>)).toEqual(true);
