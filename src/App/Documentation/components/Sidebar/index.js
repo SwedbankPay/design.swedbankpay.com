@@ -102,6 +102,7 @@ const SidebarText = () => (
         <Overview />
         <Vertical />
         <VerticalWide />
+        <TwoLevels />
     </div>
 );
 
