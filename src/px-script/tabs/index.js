@@ -26,15 +26,16 @@ class Tabs {
     }
 
     open () {
-        [...this._el.children].forEach(test => {
-            if (test.nodeName === "UL") {
-                this.flexDir = getComputedStyle(test).flexDirection;
+        [...this._el.children].forEach(tabsUl => {
+            if (tabsUl.nodeName === "UL") {
+                this.flexDir = getComputedStyle(tabsUl).flexDirection;
             }
         });
 
         if (!this.isOpen && this.flexDir === "column") {
             this.isOpen = true;
             this._el.classList.add("tabs-open");
+            window.addEventListener("resize", () => this.close());
         }
     }
 
@@ -42,6 +43,7 @@ class Tabs {
         if (this.isOpen) {
             this.isOpen = false;
             this._el.classList.remove("tabs-open");
+            window.removeEventListener("resize", this.close);
         }
     }
 }
