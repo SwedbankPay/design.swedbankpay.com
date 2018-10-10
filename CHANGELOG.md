@@ -10,7 +10,8 @@
 ### Changed
 
 - Updated readme with deploy/release procedure.
-- Reworked tabs
+- Reworked tabs.
+- Reworked form validation.
 
 ### Fixed
 
