@@ -1,27 +1,35 @@
 const sidebar = (() => {
     const init = () => {
-        [...document.querySelectorAll(".sidebar")].forEach(ulSidebar => {
-            const listElem = ulSidebar.querySelectorAll("li");
+        [...document.querySelectorAll(".sidebar")].forEach(navSidebar => {
+            const listElem = navSidebar.querySelectorAll("li");
 
             if ([...listElem].length > 4) {
-                const hamburgerMenu = [...listElem].splice(3);
-                const hamburger = document.createElement("li");
-                const sidebarMenu = document.createElement("ul");
+                const menu = document.createElement("a");
+                const hiddenItems = [...listElem].slice(4);
 
-                hamburger.innerHTML += "<a><i class='material-icons'>menu</i></a>";
+                menu.classList.add("hamburger");
+                menu.innerHTML += "<i class='material-icons'>menu</i>";
 
-                hamburgerMenu.forEach(item => {
-                    sidebarMenu.appendChild(item);
-                    item.style.display = "none";
+                hiddenItems.forEach(item => {
+                    item.classList.add("itemInvis");
                 });
 
-                hamburger.appendChild(sidebarMenu);
-                ulSidebar.appendChild(hamburger);
+                navSidebar.appendChild(menu);
 
-                hamburger.addEventListener("click", () => {
-                    [...hamburger.querySelectorAll("li")].forEach(listElem => {
-                        listElem.style.display = "block";
-                    });
+                menu.addEventListener("click", () => {
+                    if (navSidebar.classList.contains("sidebar-vertical")) {
+                        navSidebar.classList.remove("sidebar-vertical");
+
+                        hiddenItems.forEach(item => {
+                            item.classList.add("itemInvis");
+                        });
+                    } else {
+                        navSidebar.classList.add("sidebar-vertical");
+
+                        hiddenItems.forEach(item => {
+                            item.classList.remove("itemInvis");
+                        });
+                    }
                 });
             }
         });

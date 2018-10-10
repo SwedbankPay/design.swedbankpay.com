@@ -24,6 +24,10 @@ const sidebarItems = [
     {
         name: "Language",
         icon: "language"
+    },
+    {
+        name: "Account",
+        icon: "account_balance"
     }
 ];
 
@@ -38,9 +42,9 @@ const Overview = () => (
 
 const Vertical = () => (
     <>
-        <h2 id="example-usage">Example usage</h2>
+        <h2 id="vertical-sidebar">Vertical sidebar</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <SidebarComponent items={sidebarItems} />
+            <SidebarComponent mode="xl" items={sidebarItems} />
         </ComponentPreview>
     </>
 );
@@ -58,8 +62,7 @@ const SidebarText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
         <p className="lead">Sidebars...</p>
         <Overview />
-        {/* {/* <Vertical /> */}
-        <VerticalWide />
+        <Vertical />
     </div>
 );
 

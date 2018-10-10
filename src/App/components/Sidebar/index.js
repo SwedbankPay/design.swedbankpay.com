@@ -1,9 +1,15 @@
 import React from "react";
+import classnames from "classnames";
 
-const Sidebar = ({ items }) => {
+const Sidebar = ({ items, mode }) => {
+    const sidebarClassname = classnames(
+        "sidebar",
+        mode ? `sidebar-vertical-${mode}` : null
+    );
+
     return (
-        <>
-            <ul className="sidebar">
+        <nav className={sidebarClassname}>
+            <ul>
                 {items.map(({ name, icon }, i) => (
                     <li key={`sidebar-item-${name}-${i}`}>
                         <a>
@@ -13,7 +19,7 @@ const Sidebar = ({ items }) => {
                     </li>
                 ))}
             </ul>
-        </>
+        </nav>
     );
 };
 

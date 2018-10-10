@@ -1,39 +1,83 @@
 .sidebar {
-    list-style: none;
-    padding: 0;
     display: flex;
-    background-color: #f7f7f7;
+    justify-content: space-between;
 
-    > li {
-        padding: 0.5rem 1rem 0;
+    ul {
+        display: flex;
+        padding: 0;
+        list-style: none;
 
-        &:first-child {
-            padding-left: 1rem;
+        > li {
+            margin-top: 0.5rem;
+            margin-left: 1rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            a {
+                border-bottom: none;
+                display: inline-flex;
+
+                i {
+                    color: rgba(0, 0, 0, 0.6); // Temporary [AW]
+                }
+
+                span {
+                    display: none;
+                }
+            }
+
+            &.itemInvis {
+                display: none;
+            }
         }
+    }
 
-        &:last-child {
-            padding-right: 1rem;
+    > a {
+        border-bottom: none;
+
+        &.hamburger {
+            margin-top: 0.5rem;
+            margin-right: 1rem;
+            color: rgba(0, 0, 0, 0.6);
         }
 
         &:hover {
             cursor: pointer;
         }
+    }
+}
 
-        a {
-            border-bottom: none;
-            display: inline-flex;
+.sidebar-vertical {
+    &.sidebar {
+        ul {
+            flex-direction: column;
 
-            i {
-                color: rgba(0, 0, 0, 0.6); // Temporary [AW]
-            }
+            li {
+                a {
+                    span {
+                        display: block;
+                        color: @brand-primary;
+                        margin-left: 0.5rem;
 
-            span {
-                display: none;
+                        &:hover {
+                            color: darken(@brand-primary, 8%);
+                        }
+                    }
+                }
             }
         }
+    }
+}
 
-        > .hamburger {
-            color: blue;
+.for-each(@breakpoint in @grid-breakpoints) {
+    @infix: extract(@breakpoint, 1);
+    @min-width: extract(@breakpoint, 2);
+
+    .sidebar-vertical-@{infix} {
+        @media screen and (min-width: @min-width) {
+            .sidebar-vertical();
         }
     }
 }
