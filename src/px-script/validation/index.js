@@ -1,4 +1,9 @@
-const FIELDSELECTORS = "input, select, textarea";
+const SELECTORS = {
+    VALIDATE: "[data-validate]",
+    FIELDS: "input, select, textarea",
+    VALIDATIONCONTAINER: ".form-group",
+    SUBMITBUTTON: "[data-disable-invalid]"
+};
 const EMAILREGEX = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 const validation = (() => {
@@ -16,11 +21,13 @@ const validation = (() => {
 
     const validateForm = form => {
         if (form.tagName === "FORM") {
-            const fieldsToValidate = form.querySelector(FIELDSELECTORS);
+            const fieldsToValidate = form.querySelectorAll(SELECTORS.FIELDS);
             let formValid = true;
 
             fieldsToValidate.forEach(field => {
-                if (!validateField(field)) {
+                const state = _checkFieldState(field);
+
+                if (state === "ERROR") {
                     formValid = false;
                 }
             });
@@ -28,7 +35,7 @@ const validation = (() => {
             return formValid;
         } else {
             try {
-                throw new TypeError("validateForm: Element tagName not form.");
+                throw new Error("px.validation.validateForm: Argument not HTMLElement with tagName form.");
             } catch (e) {
                 console.error(`${e.name} ${e.message}`);
 
@@ -45,7 +52,8 @@ const validation = (() => {
         return validateField(field) ? "SUCCESS" : "ERROR";
     };
 
-    const _addFieldState = (field, validationContainer) => {
+    const _addFieldState = field => {
+        const validationContainer = field.closest(SELECTORS.VALIDATIONCONTAINER);
         const state = _checkFieldState(field);
 
         switch (state) {
@@ -63,10 +71,12 @@ const validation = (() => {
                 validationContainer.classList.remove("has-error");
                 validationContainer.classList.remove("has-success");
         }
+
+        return state;
     };
 
     const _addFieldValidation = field => {
-        const validationContainer = field.closest(".form-group");
+        const validationContainer = field.closest(SELECTORS.VALIDATIONCONTAINER);
 
         if (field.required) {
             const reqLabel = validationContainer.querySelector("label");
@@ -77,17 +87,18 @@ const validation = (() => {
             reqLabel.appendChild(asterisk);
         }
 
-        field.addEventListener("focus", () => {
-            validationContainer.classList.remove("has-success");
-            validationContainer.classList.remove("has-error");
+        field.addEventListener("input", () => {
+            if (validationContainer.classList.contains("has-success") || validationContainer.classList.contains("has-error")) {
+                _addFieldState(field);
+            }
         });
 
-        field.addEventListener("blur", () => _addFieldState(field, validationContainer));
+        field.addEventListener("blur", () => _addFieldState(field));
     };
 
     const _addFormValidation = form => {
-        const fields = form.querySelectorAll(FIELDSELECTORS);
-        const submitBtn = form.querySelector("[data-disable-invalid]");
+        const fields = form.querySelectorAll(SELECTORS.FIELDS);
+        const submitBtn = form.querySelector(SELECTORS.SUBMITBUTTON);
 
         if (submitBtn && !validateForm(form)) {
             submitBtn.disabled = true;
@@ -106,14 +117,21 @@ const validation = (() => {
         }
 
         form.addEventListener("submit", e => {
-            if (!validateForm(form)) {
+            const formFields = form.querySelectorAll(SELECTORS.FIELDS);
+            let formValid = true;
+
+            formFields.forEach(field => {
+                _addFieldState(field) === "ERROR" ? formValid = false : null;
+            });
+
+            if (!formValid) {
                 e.preventDefault();
             }
         });
     };
 
     const init = () => {
-        const validateEls = document.querySelectorAll("[data-validate]");
+        const validateEls = document.querySelectorAll(SELECTORS.VALIDATE);
 
         if (validateEls) {
             validateEls.forEach(element => {
