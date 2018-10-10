@@ -22,6 +22,7 @@
 - Fixed an issue where alert close button got properties from the new `<a>` styling (blue border bottom).
 - Fixed a minor issue with toast not resetting its type, if called without a type after another toast with a type has already been called.
 - Fixed an issue with open tabs not closing on screen resize.
+- Fixed an issue with toast overlapping topbar.
 
 ### Removed
 
