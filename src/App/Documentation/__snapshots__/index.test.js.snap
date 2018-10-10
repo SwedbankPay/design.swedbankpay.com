@@ -441,6 +441,15 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "ValidationOverview": [Function],
+                  "ValidationText": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/components/validation",
+                "title": "Validation (Temporary)",
+              },
+              Object {
+                "component": Object {
                   "DefaultWell": [Function],
                   "WellSizes": [Function],
                   "WellText": [Function],
