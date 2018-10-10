@@ -31,9 +31,38 @@ const sidebarItems = [
     }
 ];
 
+const sidebarItemsTwoLevels = [
+    {
+        name: "Home",
+        icon: "home"
+    },
+    {
+        name: "Settings",
+        icon: "settings",
+        subItems: ["Email", "Password", "Address"]
+    },
+    {
+        name: "Transactions",
+        icon: "shopping_cart"
+    },
+    {
+        name: "Favorites",
+        icon: "favorite",
+        subItems: ["Music", "Movies", "Employees"]
+    },
+    {
+        name: "Language",
+        icon: "language"
+    },
+    {
+        name: "Account",
+        icon: "account_balance"
+    }
+];
+
 const Overview = () => (
     <>
-        <h2 id="sidebar-usage">Standard sidebar behaviour</h2>
+        <h2 id="sidebar-responsive">Responsive sidebar</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <SidebarComponent items={sidebarItems} />
         </ComponentPreview>
@@ -42,18 +71,27 @@ const Overview = () => (
 
 const Vertical = () => (
     <>
-        <h2 id="vertical-sidebar">Vertical sidebar</h2>
+        <h2 id="vertical-sidebar">Vertical sidebar icons only</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <SidebarComponent mode="xl" items={sidebarItems} />
+            <SidebarComponent mode="md" items={sidebarItems} />
         </ComponentPreview>
     </>
 );
 
 const VerticalWide = () => (
     <>
-        <h2 id="example-usage">Example usage</h2>
+        <h2 id="vertical-sidebar-wide">Vertical sidebar with text</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <SidebarComponent items={sidebarItems} />
+            <SidebarComponent mode="wide-md" items={sidebarItems} />
+        </ComponentPreview>
+    </>
+);
+
+const TwoLevels = () => (
+    <>
+        <h2 id="twolevels-sidebar">Vertical sidebar with two levels</h2>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <SidebarComponent items={sidebarItemsTwoLevels} />
         </ComponentPreview>
     </>
 );
@@ -63,6 +101,7 @@ const SidebarText = () => (
         <p className="lead">Sidebars...</p>
         <Overview />
         <Vertical />
+        <VerticalWide />
     </div>
 );
 

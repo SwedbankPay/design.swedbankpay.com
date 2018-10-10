@@ -2,18 +2,14 @@
     display: flex;
     justify-content: space-between;
 
-    ul {
+    > ul {
         display: flex;
         padding: 0;
         list-style: none;
 
-        > li {
+        li {
             margin-top: 0.5rem;
             margin-left: 1rem;
-
-            &:hover {
-                cursor: pointer;
-            }
 
             a {
                 border-bottom: none;
@@ -21,14 +17,26 @@
 
                 i {
                     color: rgba(0, 0, 0, 0.6); // Temporary [AW]
+
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
 
                 span {
                     display: none;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
             }
 
-            &.itemInvis {
+            &.itemInvis { // Temporary name [AW]
+                display: none;
+            }
+
+            ul {
                 display: none;
             }
         }
@@ -51,25 +59,36 @@
 
 .sidebar-vertical {
     &.sidebar {
-        ul {
+        > ul {
             flex-direction: column;
+        }
+    }
+}
 
-            li {
-                a {
-                    span {
-                        display: block;
-                        color: @brand-primary;
-                        margin-left: 0.5rem;
+.sidebar-vertical-wide() {
+    .sidebar-expand();
+}
 
-                        &:hover {
-                            color: darken(@brand-primary, 8%);
-                        }
+.sidebar-expand {
+    .sidebar-vertical();
+
+    > ul {
+        li {
+            a {
+                span {
+                    display: block;
+                    color: @brand-primary;
+                    margin-left: 0.5rem;
+
+                    &:hover {
+                        color: darken(@brand-primary, 8%);
                     }
                 }
             }
         }
     }
 }
+
 
 .for-each(@breakpoint in @grid-breakpoints) {
     @infix: extract(@breakpoint, 1);
@@ -78,6 +97,48 @@
     .sidebar-vertical-@{infix} {
         @media screen and (min-width: @min-width) {
             .sidebar-vertical();
+
+            .hamburger {
+                display: none;
+            }
+
+            ul {
+                li {
+                    a {
+                        span {
+                            display: none;
+                        }
+                    }
+
+                    &.itemInvis { // Temporary name [AW]
+                        display: block;
+
+                        a {
+                            span {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .sidebar-vertical-wide-@{infix} {
+        @media screen and (min-width: @min-width) {
+            .sidebar-vertical-wide();
+
+            .hamburger {
+                display: none;
+            }
+
+            ul {
+                li {
+                    &.itemInvis { // Temporary name [AW]
+                        display: block;
+                    }
+                }
+            }
         }
     }
 }
