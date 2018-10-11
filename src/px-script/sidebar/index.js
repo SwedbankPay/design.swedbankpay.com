@@ -1,7 +1,8 @@
 class Sidebar {
     constructor (el) {
-        this.element = el;
+        this._el = el;
         this.isExp = el.classList.contains("sidebar-expanded");
+        this.containsChild = [];
 
         document.addEventListener("click", e => {
             if (!e.target.closest(".sidebar") && this.isExp) {
@@ -9,46 +10,86 @@ class Sidebar {
             }
         });
 
-        if ([...this.element.querySelectorAll("li")].length > 4) {
+        [...this._el.querySelectorAll("li")].map(noChild => {
+            if (noChild.querySelector("UL") !== null) {
+                this.containsChild.push(noChild);
+            }
+        });
+
+        console.log(this.containsChild);
+
+        if ([...this._el.querySelectorAll("li")].length > 4 || this.containsChild.length > 0) {
             const menu = document.createElement("a");
-            const hiddenItems = [...this.element.querySelectorAll("li")].slice(4);
+
+            this.hideItems();
 
             menu.classList.add("hamburger");
             menu.innerHTML += "<i class='material-icons'>menu</i>";
 
-            hiddenItems.forEach(item => {
-                item.classList.add("itemInvis");
-            });
+            this._el.appendChild(menu);
 
-            this.element.appendChild(menu);
-
-            menu.addEventListener("click", () => {
+            menu.querySelector("i").addEventListener("click", () => {
                 if (this.isExp) {
                     this.close();
-
-                    hiddenItems.forEach(item => {
-                        item.classList.add("itemInvis");
-                    });
+                    this.hideItems();
                 } else {
                     this.open();
-
-                    hiddenItems.forEach(item => {
-                        item.classList.remove("itemInvis");
-                    });
+                    this.showItems();
                 }
+            });
+        }
+    }
+
+    showItems () {
+        [...this._el.querySelectorAll("li")].map(listItem => {
+            if (listItem.classList.contains("itemInvis")) {
+                listItem.classList.remove("itemInvis");
+            }
+        });
+    }
+
+    hideItems () {
+        const noLevelTwoList = [];
+        const firstFour = [];
+
+        [...this._el.querySelectorAll("li")].map(noChild => {
+            if (noChild.querySelector("UL") !== null) {
+                noLevelTwoList.push(noChild);
+            }
+        });
+
+        if (noLevelTwoList.length > 0) {
+            noLevelTwoList.map(levelTwo => {
+                levelTwo.classList.add("itemInvis");
+            });
+
+            [...this._el.querySelectorAll("li")].map(noInvis => {
+                if (!noInvis.classList.contains("itemInvis") && noInvis.querySelector("UL") === null && this._el.querySelector("UL") === noInvis.parentElement) {
+                    firstFour.push(noInvis);
+                }
+            });
+
+            if (firstFour.length > 4) {
+                firstFour.slice(4).map(item => {
+                    item.classList.add("itemInvis");
+                });
+            }
+        } else {
+            [...this._el.querySelectorAll("li")].slice(4).map(items => {
+                items.classList.add("itemInvis");
             });
         }
     }
 
     open () {
         this.isExp = true;
-        this.element.classList.add("sidebar-expand");
+        this._el.classList.add("sidebar-expand");
         window.addEventListener("resize", () => this.close());
     }
 
     close () {
         this.isExp = false;
-        this.element.classList.remove("sidebar-expand");
+        this._el.classList.remove("sidebar-expand");
         window.removeEventListener("resize", this.close);
     }
 }

@@ -12,22 +12,6 @@ const sidebarItems = [
     {
         name: "Settings",
         icon: "settings"
-    },
-    {
-        name: "Transactions",
-        icon: "shopping_cart"
-    },
-    {
-        name: "Favorites",
-        icon: "favorite"
-    },
-    {
-        name: "Language",
-        icon: "language"
-    },
-    {
-        name: "Account",
-        icon: "account_balance"
     }
 ];
 
@@ -39,24 +23,7 @@ const sidebarItemsTwoLevels = [
     {
         name: "Settings",
         icon: "settings",
-        subItems: ["Email", "Password", "Address"]
-    },
-    {
-        name: "Transactions",
-        icon: "shopping_cart"
-    },
-    {
-        name: "Favorites",
-        icon: "favorite",
-        subItems: ["Music", "Movies", "Employees"]
-    },
-    {
-        name: "Language",
-        icon: "language"
-    },
-    {
-        name: "Account",
-        icon: "account_balance"
+        subItems: ["Email"]
     }
 ];
 

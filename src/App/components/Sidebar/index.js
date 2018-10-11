@@ -32,10 +32,3 @@ const Sidebar = ({ items, mode }) => {
 };
 
 export default Sidebar;
-
-// {subItems.map((itemsname, j) => {
-//     <li key={`sidebar-itemstwo-${itemsname}-${j}`}>
-//         {console.log(itemsname)}
-//         <span>{itemsname}</span>
-//     </li>;
-// })}
