@@ -11,10 +11,12 @@
 // Example usage: change the default blue border and shadow to white for better
 // contrast against a dark gray background.
 .form-control-focus(@color: @input-border-focus) {
-    @color-rgba: rgba(red(@color), green(@color), blue(@color), 0.6);
+    @color-rgba: rgba(red(@color), green(@color), blue(@color), 1);
 
     &:focus {
         // outline: 0;
+        color: @text-color;
+        outline-color: @color-rgba;
         box-shadow: none;
         background-color: @white;
     }

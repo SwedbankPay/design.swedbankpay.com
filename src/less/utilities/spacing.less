@@ -40,7 +40,7 @@
         @size: extract(@spacer, 1);
         @length: extract(@spacer, 2);
 
-        .negative-values() when (@size > 0) {
+        & when (@size > 0) {
             .m@{infix}-n@{size} { margin: -@length !important; }
 
             .mt@{infix}-n@{size},
@@ -63,8 +63,6 @@
                 margin-left: -@length !important;
             }
         }
-
-        .negative-values();
     }
 
 
