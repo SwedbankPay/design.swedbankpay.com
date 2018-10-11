@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, Attribute, DocToc } from "#";
+import { ComponentPreview, Attribute, Property, DocToc } from "#";
 
 import AlertComponent from "@/Alert";
 import { alert } from "$/px-script";
@@ -62,7 +62,7 @@ const ExtendedUsage = () => (
     <>
         <h2 id="extended-usage">Extended usage</h2>
         <p>Alerts can also contain additional HTML elements like headings, paragraphs and dividers.</p>
-        <p>Just make sure to wrap the content in a container with the class <span className="token attr-value">.alert-body</span>.</p>
+        <p>Just make sure to wrap the content in a container with the class <Property value=".alert-body" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <AlertComponent type="success" close icon="check_circle">
                 <h3 className="color-success">Success!</h3>

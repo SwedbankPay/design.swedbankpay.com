@@ -9,11 +9,9 @@ exports[`Documentation: ProgressTracker Basic ProgressTracker renders 1`] = `
   </h2>
   <p>
     Add class 
-    <code
-      className="token property"
-    >
-      .progress-tracker
-    </code>
+    <Property
+      value=".progress-tracker"
+    />
      to a containing 
     <PrismCode
       className="language-html"
@@ -98,11 +96,9 @@ exports[`Documentation: ProgressTracker Disabled ProgressTracker renders 1`] = `
       &lt;li&gt;
     </PrismCode>
      element (will not work with 
-    <code
-      className="token property"
-    >
-      .active
-    </code>
+    <Property
+      value=".active"
+    />
     ).
   </p>
   <ComponentPreview
@@ -160,11 +156,9 @@ exports[`Documentation: ProgressTracker Small ProgressTracker renders 1`] = `
   </h2>
   <p>
     Add class 
-    <code
-      className="token property"
-    >
-      .progress-tracker-sm
-    </code>
+    <Property
+      value=".progress-tracker-sm"
+    />
      to the containing 
     <PrismCode
       className="language-html"

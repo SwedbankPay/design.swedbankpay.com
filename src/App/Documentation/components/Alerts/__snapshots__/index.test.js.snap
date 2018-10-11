@@ -244,11 +244,9 @@ exports[`Documentation: Alerts Extended Usage renders 1`] = `
   </p>
   <p>
     Just make sure to wrap the content in a container with the class 
-    <span
-      className="token attr-value"
-    >
-      .alert-body
-    </span>
+    <Property
+      value=".alert-body"
+    />
     .
   </p>
   <ComponentPreview

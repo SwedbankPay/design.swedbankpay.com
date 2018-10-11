@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocToc, ExperimentalComponentAlert } from "#";
+import { ComponentPreview, DocToc, ExperimentalComponentAlert, Attribute } from "#";
 import { toast } from "$/px-script";
 
 const Overview = () => (
@@ -36,61 +36,61 @@ const Options = () => (
                 <tr>
                     <td>html</td>
                     <td>String</td>
-                    <td><code className="token attr-value">{"\"\""}</code></td>
+                    <td><Attribute value={"\"\""} /></td>
                     <td>The HTML content of the Toast.</td>
                 </tr>
                 <tr>
                     <td>type</td>
                     <td>String</td>
-                    <td><code className="token attr-value">{"\"\""}</code></td>
-                    <td>Premade alert types; <code className="token attr-value">{"success"}</code>, <code className="token attr-value">{"neutral"}</code>, <code className="token attr-value">{"warning"}</code> and <code className="token attr-value">{"danger"}</code> are available.</td>
+                    <td><Attribute value={"\"\""} /></td>
+                    <td>Premade alert types; <Attribute value="success" />, <Attribute value="neutral" />, <Attribute value="warning" /> and <Attribute value="danger" /> are available.</td>
                 </tr>
                 <tr>
                     <td>dismissable</td>
                     <td>Boolean</td>
-                    <td><code className="token attr-value">true</code></td>
+                    <td><Attribute value="true" /></td>
                     <td>Wether or not the alert should be dismissable by the user (close button).</td>
                 </tr>
                 <tr>
                     <td>icon</td>
                     <td>String</td>
-                    <td><code className="token attr-value">{"\"\""}</code></td>
+                    <td><Attribute value={"\"\""} /></td>
                     <td>Custom icon for the toast. See <Link to="/docs/core/icons">icons</Link> for more info.</td>
                 </tr>
                 <tr>
                     <td>displayLength</td>
                     <td>Number</td>
-                    <td><code className="token attr-value">4000</code></td>
+                    <td><Attribute value="4000" /></td>
                     <td>Length in ms the Toast stays before dismissal.</td>
                 </tr>
                 {/* <tr>
                     <td>inDuration</td>
                     <td>Number</td>
-                    <td><code className="token attr-value">300</code></td>
+                    <td><Attribute value="300" /></td>
                     <td>Transition in duration in milliseconds.</td>
                 </tr>
                 <tr>
                     <td>outDuration</td>
                     <td>Number</td>
-                    <td><code className="token attr-value">375</code></td>
+                    <td><Attribute value="375" /></td>
                     <td>Transition out duration in milliseconds.</td>
                 </tr> */}
                 <tr>
                     <td>classes</td>
                     <td>Array of strings</td>
-                    <td><code className="token attr-value">[]</code></td>
+                    <td><Attribute value="[]" /></td>
                     <td>Classes to be added to the toast element.</td>
                 </tr>
                 <tr>
                     <td>completeCallback</td>
                     <td>Function</td>
-                    <td><code className="token attr-value">null</code></td>
+                    <td><Attribute value="null" /></td>
                     <td>Callback function called when toast is dismissed.</td>
                 </tr>
                 {/* <tr>
                     <td>activationPercent</td>
                     <td>Number</td>
-                    <td><code className="token attr-value">0.8</code></td>
+                    <td><Attribute value="0.8" /></td>
                     <td>The percentage of the toast{"'"}s width it takes for a drag to dismiss a Toast.</td>
                 </tr> */}
             </tbody>
@@ -101,7 +101,7 @@ const Options = () => (
 const PremadeToasts = () => (
     <>
         <h2 id="premade-toasts">Premade toasts</h2>
-        <p>There are four premade toast styles other than the default one; <span className="token attr-value">neutral</span>, <span className="token attr-value">success</span>, <span className="token attr-value">warning</span> and <span className="token attr-value">danger</span>. Apply the desired one to the options object and be amazed!</p>
+        <p>There are four premade toast styles other than the default one; <Attribute value="neutral" />, <Attribute value="success" />, <Attribute value="warning" /> and <Attribute value="danger" />. Apply the desired one to the options object and be amazed!</p>
         <ComponentPreview language="html" codeFigure dangerousHTML>
             {"<button type=\"button\" onclick=\"px.toast({ html: 'I am a neutral toast!', type: 'neutral' })\" class=\"btn btn-primary\">Neutral toast</button>"}
             {"<button type=\"button\" onclick=\"px.toast({ html: 'I am a success toast!', type: 'success' })\" class=\"btn btn-primary\">Success toast</button>"}

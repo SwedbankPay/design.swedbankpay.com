@@ -70,38 +70,28 @@ exports[`Utilities: Display HidingElements renders 1`] = `
   </p>
   <p>
     To hide elements simply use the 
-    <code
-      className="token property"
-    >
-      .d-none
-    </code>
+    <Property
+      value=".d-none"
+    />
      class or one of the 
-    <code
-      className="token property"
-    >
-      .d-{sm,md,lg,xl}-none
-    </code>
+    <Property
+      value=".d-{sm,md,lg,xl}-none"
+    />
      classes for any responsive screen variation.
   </p>
   <p>
     To show an element only on a given interval of screen sizes you can combine one 
-    <code
-      className="token property"
-    >
-      .d-*-none
-    </code>
+    <Property
+      value=".d-*-none"
+    />
      class with a 
-    <code
-      className="token property"
-    >
-      .d-*-*
-    </code>
+    <Property
+      value=".d-*-*"
+    />
      class, for example 
-    <code
-      className="token property"
-    >
-      .d-none .d-md-block .d-xl-none
-    </code>
+    <Property
+      value=".d-none .d-md-block .d-xl-none"
+    />
      will hide the element for all screen sizes except on medium and large devices.
   </p>
   <table
@@ -123,11 +113,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Hidden on all
         </td>
         <td>
-          <code
-            className="token property"
-          >
-            .d-none
-          </code>
+          <Property
+            value=".d-none"
+          />
         </td>
       </tr>
       <tr>
@@ -135,11 +123,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Hidden only on xs
         </td>
         <td>
-          <code
-            className="token property"
-          >
-            .d-none .d-sm-block
-          </code>
+          <Property
+            value=".d-none .d-sm-block"
+          />
         </td>
       </tr>
       <tr>
@@ -147,11 +133,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Hidden only on sm
         </td>
         <td>
-          <code
-            className="token property"
-          >
-            .d-sm-none .d-md-block
-          </code>
+          <Property
+            value=".d-sm-none .d-md-block"
+          />
         </td>
       </tr>
       <tr>
@@ -159,11 +143,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Hidden only on md
         </td>
         <td>
-          <code
-            className="token property"
-          >
-            .d-md-none .d-lg-block
-          </code>
+          <Property
+            value=".d-md-none .d-lg-block"
+          />
         </td>
       </tr>
       <tr>
@@ -171,11 +153,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Hidden only on lg
         </td>
         <td>
-          <code
-            className="token property"
-          >
-            .d-lg-none .d-xl-block
-          </code>
+          <Property
+            value=".d-lg-none .d-xl-block"
+          />
         </td>
       </tr>
       <tr>
@@ -183,11 +163,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Hidden only on xl
         </td>
         <td>
-          <code
-            className="token property"
-          >
-            .d-xl-none .d-xxl-block
-          </code>
+          <Property
+            value=".d-xl-none .d-xxl-block"
+          />
         </td>
       </tr>
       <tr>
@@ -195,11 +173,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Hidden only on xxl
         </td>
         <td>
-          <code
-            className="token property"
-          >
-            .d-xxl-none
-          </code>
+          <Property
+            value=".d-xxl-none"
+          />
         </td>
       </tr>
       <tr>
@@ -207,11 +183,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Visible on all
         </td>
         <td>
-          <code
-            className="token property"
-          >
-            .d-block
-          </code>
+          <Property
+            value=".d-block"
+          />
         </td>
       </tr>
       <tr>
@@ -219,11 +193,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Visible only on xs
         </td>
         <td>
-          <code
-            className="token property"
-          >
-            .d-block .d-sm-none
-          </code>
+          <Property
+            value=".d-block .d-sm-none"
+          />
         </td>
       </tr>
       <tr>
@@ -231,11 +203,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Visible only on sm
         </td>
         <td>
-          <code
-            className="token property"
-          >
-            .d-sm-block .d-md-none
-          </code>
+          <Property
+            value=".d-sm-block .d-md-none"
+          />
         </td>
       </tr>
       <tr>
@@ -243,11 +213,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Visible only on md
         </td>
         <td>
-          <code
-            className="token property"
-          >
-            .d-md-block .d-lg-none
-          </code>
+          <Property
+            value=".d-md-block .d-lg-none"
+          />
         </td>
       </tr>
       <tr>
@@ -255,11 +223,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Visible only on lg
         </td>
         <td>
-          <code
-            className="token property"
-          >
-            .d-lg-block .d-xl-none
-          </code>
+          <Property
+            value=".d-lg-block .d-xl-none"
+          />
         </td>
       </tr>
       <tr>
@@ -267,11 +233,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Visible only on xl
         </td>
         <td>
-          <code
-            className="token property"
-          >
-            .d-xl-block .d-xxl-none
-          </code>
+          <Property
+            value=".d-xl-block .d-xxl-none"
+          />
         </td>
       </tr>
       <tr>
@@ -279,11 +243,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Visible only on xxl
         </td>
         <td>
-          <code
-            className="token property"
-          >
-            .d-xxl-block
-          </code>
+          <Property
+            value=".d-xxl-block"
+          />
         </td>
       </tr>
     </tbody>
@@ -322,11 +284,9 @@ exports[`Utilities: Display HowItWorks renders 1`] = `
       display property
     </a>
      with our responsive display utility classes. We purposely support only a subset of all possible values for 
-    <code
-      className="token property"
-    >
-      display
-    </code>
+    <Property
+      value="display"
+    />
     . Classes can be combined for various effects as you need.
   </p>
 </Fragment>
@@ -348,23 +308,17 @@ exports[`Utilities: Display Notation renders 1`] = `
       breakpoints
     </Link>
     , from 
-    <code
-      className="token property"
-    >
-      xs
-    </code>
+    <Property
+      value="xs"
+    />
      to 
-    <code
-      className="token property"
-    >
-      xxl
-    </code>
+    <Property
+      value="xxl"
+    />
     , have no breakpoint abbreviation in them. This is because those classes are applied from 
-    <code
-      className="token property"
-    >
-      min-width: 0;
-    </code>
+    <Property
+      value="min-width: 0;"
+    />
      and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
   </p>
   <p>
@@ -372,54 +326,38 @@ exports[`Utilities: Display Notation renders 1`] = `
   </p>
   <ul>
     <li>
-      <code
-        className="token property"
-      >
-        .d-{value}
-      </code>
+      <Property
+        value=".d-{value}"
+      />
        for 
-      <code
-        className="token property"
-      >
-        xs
-      </code>
+      <Property
+        value="xs"
+      />
     </li>
     <li>
-      <code
-        className="token property"
-      >
-        .d-{breakpoint}-{value}
-      </code>
+      <Property
+        value=".d-{breakpoint}-{value}"
+      />
        for 
-      <code
-        className="token property"
-      >
-        sm
-      </code>
+      <Property
+        value="sm"
+      />
       , 
-      <code
-        className="token property"
-      >
-        md
-      </code>
+      <Property
+        value="md"
+      />
       , 
-      <code
-        className="token property"
-      >
-        lg
-      </code>
+      <Property
+        value="lg"
+      />
       , 
-      <code
-        className="token property"
-      >
-        xl
-      </code>
+      <Property
+        value="xl"
+      />
        and 
-      <code
-        className="token property"
-      >
-        xxl
-      </code>
+      <Property
+        value="xxl"
+      />
       .
     </li>
   </ul>
@@ -432,67 +370,49 @@ exports[`Utilities: Display Notation renders 1`] = `
   </p>
   <ul>
     <li>
-      <code
-        className="token property"
-      >
-        none
-      </code>
+      <Property
+        value="none"
+      />
     </li>
     <li>
-      <code
-        className="token property"
-      >
-        inline
-      </code>
+      <Property
+        value="inline"
+      />
     </li>
     <li>
-      <code
-        className="token property"
-      >
-        inline-block
-      </code>
+      <Property
+        value="inline-block"
+      />
     </li>
     <li>
-      <code
-        className="token property"
-      >
-        block
-      </code>
+      <Property
+        value="block"
+      />
     </li>
     <li>
-      <code
-        className="token property"
-      >
-        table
-      </code>
+      <Property
+        value="table"
+      />
     </li>
     <li>
-      <code
-        className="token property"
-      >
-        table-cell
-      </code>
+      <Property
+        value="table-cell"
+      />
     </li>
     <li>
-      <code
-        className="token property"
-      >
-        table-row
-      </code>
+      <Property
+        value="table-row"
+      />
     </li>
     <li>
-      <code
-        className="token property"
-      >
-        flex
-      </code>
+      <Property
+        value="flex"
+      />
     </li>
     <li>
-      <code
-        className="token property"
-      >
-        inline-flex
-      </code>
+      <Property
+        value="inline-flex"
+      />
     </li>
   </ul>
   <p>
@@ -501,29 +421,21 @@ exports[`Utilities: Display Notation renders 1`] = `
       or larger
     </i>
     . For example, 
-    <code
-      className="token property"
-    >
-      .d-xl-none
-    </code>
+    <Property
+      value=".d-xl-none"
+    />
      sets 
-    <code
-      className="token property"
-    >
-      display: none;
-    </code>
+    <Property
+      value="display: none;"
+    />
      on both 
-    <code
-      className="token property"
-    >
-      xl
-    </code>
+    <Property
+      value="xl"
+    />
      and 
-    <code
-      className="token property"
-    >
-      xxl
-    </code>
+    <Property
+      value="xxl"
+    />
      screens.
   </p>
 </Fragment>

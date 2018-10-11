@@ -9,11 +9,9 @@ exports[`Components: Well DefaultWell renders 1`] = `
   </h2>
   <p>
     Use the 
-    <code
-      className="token property"
-    >
-      .well
-    </code>
+    <Property
+      value=".well"
+    />
      as a simple effect on an element to give it an inset effect.
   </p>
   <ComponentPreview
@@ -39,17 +37,13 @@ exports[`Components: Well WellSizes renders 1`] = `
   </h2>
   <p>
     Use the two optional 
-    <code
-      className="token property"
-    >
-      .well-sm
-    </code>
+    <Property
+      value=".well-sm"
+    />
      and 
-    <code
-      className="token property"
-    >
-      .well-lg
-    </code>
+    <Property
+      value=".well-lg"
+    />
      classes to control padding and rounded corners.
   </p>
   <ComponentPreview

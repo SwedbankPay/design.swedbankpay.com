@@ -74,9 +74,9 @@ exports[`Core: Favicons Usage renders 1`] = `
       &lt;meta&gt;
     </PrismCode>
      tags to reflect the title of your project. Make sure to also do this in the 
-    <code>
-      manifest.json
-    </code>
+    <Property
+      value="manifest.json"
+    />
      file in the icons folder.
   </p>
   <Button

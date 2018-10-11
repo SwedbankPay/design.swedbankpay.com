@@ -48,11 +48,9 @@ exports[`Documentation: Loaders Muted Loader renders 1`] = `
   </h2>
   <p>
     Use class 
-    <code
-      className="token property"
-    >
-      .loader-muted
-    </code>
+    <Property
+      value=".loader-muted"
+    />
      to mute the loader...
   </p>
   <ComponentPreview
@@ -79,23 +77,17 @@ exports[`Documentation: Loaders Sizes renders 1`] = `
   </h2>
   <p>
     In addition to 
-    <code
-      className="token property"
-    >
-      .loader-default
-    </code>
+    <Property
+      value=".loader-default"
+    />
      you can use 
-    <code
-      className="token property"
-    >
-      .loader-small
-    </code>
+    <Property
+      value=".loader-small"
+    />
      and 
-    <code
-      className="token property"
-    >
-      .loader-large
-    </code>
+    <Property
+      value=".loader-large"
+    />
      to decrease or increase the size of the loader.
   </p>
   <h3>
@@ -166,173 +158,6 @@ exports[`Documentation: Loaders Static Html renders 1`] = `
     />
     .
   </p>
-</Fragment>
-`;
-
-exports[`Documentation: Loaders Usage With Javascript renders 1`] = `
-<Fragment>
-  <h2
-    id="usage-with-javascript"
-  >
-    Usage with javascript
-  </h2>
-  <p>
-    To interact with the loader-component with javascript...
-  </p>
-  <h3>
-    Show loaders
-  </h3>
-  <ComponentPreview
-    codeFigure={true}
-    language="javascript"
-  >
-    px.loader.show();
-    
-
-    // OR
-    
-
-    px.loader.show(id);
-  </ComponentPreview>
-  <h3>
-    Hide loaders
-  </h3>
-  <ComponentPreview
-    codeFigure={true}
-    language="javascript"
-  >
-    px.loader.hide();
-    
-
-    // OR
-    
-
-    px.loader.hide(id);
-  </ComponentPreview>
-  <h3>
-    Methods
-  </h3>
-  <table
-    className="table table-striped"
-  >
-    <thead>
-      <tr>
-        <th>
-          Method
-        </th>
-        <th>
-          Description
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <PxScript
-            component="loader"
-            func="show"
-          />
-        </td>
-        <td>
-          Gives all rendered loaders the class 
-          <code
-            className="token property"
-          >
-            .in
-          </code>
-          , effectively giving them the css property 
-          <PrismCode
-            className="language-css"
-            component="code"
-          >
-            display: inline-block;
-          </PrismCode>
-          .
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <PxScript
-            component="loader"
-            func="show"
-            params={
-              Array [
-                "id",
-              ]
-            }
-          />
-        </td>
-        <td>
-          Gives the specified loader the class 
-          <code
-            className="token property"
-          >
-            .in
-          </code>
-          , giving it the css property 
-          <PrismCode
-            className="language-css"
-            component="code"
-          >
-            display: inline-block;
-          </PrismCode>
-          . If no loader with the specified id is rendered to the DOM, the method does nothing.
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <PxScript
-            component="loader"
-            func="hide"
-          />
-        </td>
-        <td>
-          Removes the class 
-          <code
-            className="token property"
-          >
-            .in
-          </code>
-           from all rendered loaders, effectively giving them the css property 
-          <PrismCode
-            className="language-css"
-            component="code"
-          >
-            display: none;
-          </PrismCode>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <PxScript
-            component="loader"
-            func="hide"
-            params={
-              Array [
-                "id",
-              ]
-            }
-          />
-        </td>
-        <td>
-          Removes the class 
-          <code
-            className="token property"
-          >
-            .in
-          </code>
-           from the loader specified by id, giving it the css property 
-          <PrismCode
-            className="language-css"
-            component="code"
-          >
-            display: none;
-          </PrismCode>
-          . If no alert with the specified id is rendered to the DOM, the method does nothing.
-        </td>
-      </tr>
-    </tbody>
-  </table>
 </Fragment>
 `;
 

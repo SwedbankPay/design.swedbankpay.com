@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc, Icon } from "#";
+import { ComponentPreview, DocToc, Icon, Property } from "#";
 import actionList from "$/px-script/action-list";
 
 const BasicList = () => (
     <>
         <h2 id="basic-list">Basic list</h2>
-        <p>Basic lists info...<code className="token property">.list</code></p>
+        <p>Basic lists info...<Property value=".list" /></p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="list">
                 <li>Bread</li>
@@ -35,7 +35,7 @@ const BasicList = () => (
 const InlineList = () => (
     <>
         <h2 id="inline-list">Inline list</h2>
-        <p>Inline lists info...<code className="token property">.list-inline</code></p>
+        <p>Inline lists info...<Property value=".list-inline" /></p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="list list-inline">
                 <li>Coffee</li>
@@ -49,7 +49,7 @@ const InlineList = () => (
 const DescriptionList = () => (
     <>
         <h2 id="description-list">Description list</h2>
-        <p>Description lists info...<code className="token property">.description-list</code></p>
+        <p>Description lists info...<Property value=".description-list" /></p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <dl className="description-list">{"\n"}
                 <dt>Frog</dt>
@@ -66,7 +66,7 @@ const DescriptionList = () => (
 const SettingsList = () => (
     <>
         <h2 id="settings-list">Settings list</h2>
-        <p>Settings lists info...<code className="token property">.settings-list</code></p>
+        <p>Settings lists info...<Property value=".settings-list" /></p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="settings-list">
                 <li>{"\n"}
@@ -89,7 +89,7 @@ const SettingsList = () => (
 const ItemList = () => (
     <>
         <h2 id="item-list">Item list </h2>
-        <p> Item list info...<code className="token property">.item-list</code></p>
+        <p> Item list info...<Property value=".item-list" /></p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="item-list">
                 <li>
@@ -109,7 +109,7 @@ const ItemList = () => (
 const StatusItemList = () => (
     <>
         <h2 id="status-item-list">Status item list </h2>
-        <p> Status item list info...<code className="token property">.item-list</code></p>
+        <p> Status item list info...<Property value=".item-list" /></p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="item-list">
                 <li>{"\n"}
@@ -132,7 +132,7 @@ const StatusItemList = () => (
 const StripedItemList = () => (
     <>
         <h2 id="item-list-striped">Striped item list</h2>
-        <p> Striped item list info...<code className="token property">.item-list-striped</code></p>
+        <p> Striped item list info...<Property value=".item-list-striped" /></p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="item-list item-list-striped">
                 <li>

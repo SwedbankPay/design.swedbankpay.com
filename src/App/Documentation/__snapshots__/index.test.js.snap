@@ -64,13 +64,6 @@ exports[`Documentation: index renders 1`] = `
                 "path": "/docs/getting-started/contributing",
                 "title": "Contributing",
               },
-              Object {
-                "component": Object {
-                  "default": [Function],
-                },
-                "path": "/docs/getting-started/browser-support",
-                "title": "Browser Support",
-              },
             ]
           }
           title="Getting Started"
@@ -237,7 +230,6 @@ exports[`Documentation: index renders 1`] = `
                   "OutlineButtons": [Function],
                   "Sizes": [Function],
                   "UsageWithIcons": [Function],
-                  "UsageWithJavascript": [Function],
                   "UsageWithOtherTags": [Function],
                   "default": [Function],
                 },
@@ -321,7 +313,6 @@ exports[`Documentation: index renders 1`] = `
                   "MutedLoader": [Function],
                   "Sizes": [Function],
                   "StaticHtml": [Function],
-                  "UsageWithJavascript": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/components/loaders",

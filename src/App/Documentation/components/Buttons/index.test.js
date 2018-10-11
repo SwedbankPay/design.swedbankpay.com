@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Buttons, { Examples, UsageWithOtherTags, OutlineButtons, Sizes, ActiveState, DisabledState, UsageWithIcons, ButtonLoader, UsageWithJavascript, ButtonsText } from "./index";
+import Buttons, { Examples, UsageWithOtherTags, OutlineButtons, Sizes, ActiveState, DisabledState, UsageWithIcons, ButtonLoader, ButtonsText } from "./index";
 
 describe("Documentation: Buttons", () => {
     it("is defined", () => {
@@ -105,18 +105,6 @@ describe("Documentation: Buttons", () => {
 
         it("renders", () => {
             const wrapper = shallow(<ButtonLoader />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("Usage With Javascript", () => {
-        it("is defined", () => {
-            expect(UsageWithJavascript).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<UsageWithJavascript />);
 
             expect(wrapper).toMatchSnapshot();
         });

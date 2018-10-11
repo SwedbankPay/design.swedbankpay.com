@@ -12,15 +12,15 @@ export default [
                 path: "/docs/getting-started/introduction",
                 component: require("../Documentation/getting-started/Introduction")
             },
+            // {
+            //     title: "Browser Support",
+            //     path: "/docs/getting-started/browser-support",
+            //     component: require("../Documentation/getting-started/BrowserSupport")
+            // },
             {
                 title: "Contributing",
                 path: "/docs/getting-started/contributing",
                 component: require("../Documentation/getting-started/Contributing")
-            },
-            {
-                title: "Browser Support",
-                path: "/docs/getting-started/browser-support",
-                component: require("../Documentation/getting-started/BrowserSupport")
             }
         ]
     },

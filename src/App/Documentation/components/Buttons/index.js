@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, Attribute, PxScript, DocToc } from "#";
+import { ComponentPreview, Attribute, Property, DocToc } from "#";
 import ButtonComponent from "@/Button";
 import { button } from "$/px-script";
 
@@ -24,7 +24,7 @@ const Examples = () => (
 const UsageWithOtherTags = () => (
     <>
         <h2 id="usage-with-other-tags">Usage with other tags</h2>
-        <p>The <code className="token property">.btn</code> class can also be used with other html-tags like <PrismCode className="language-html">{"<a>"}</PrismCode> or <PrismCode className="language-html">{"<input>"}</PrismCode>.</p>
+        <p>The <Property value=".btn" /> class can also be used with other html-tags like <PrismCode className="language-html">{"<a>"}</PrismCode> or <PrismCode className="language-html">{"<input>"}</PrismCode>.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <ButtonComponent type="primary" label="Anchor" href="#" />{"\n"}
@@ -40,7 +40,7 @@ const UsageWithOtherTags = () => (
 const OutlineButtons = () => (
     <>
         <h2 id="outline-buttons">Outline buttons</h2>
-        <p>Several button styles etc...</p>
+        <p>Several button styles etc...<Property value=".btn-outline-{variant}" /></p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <ButtonComponent outline type="primary" label="Primary" />{"\n"}
@@ -54,7 +54,7 @@ const OutlineButtons = () => (
 const ButtonGroup = () => (
     <>
         <h2 id="button-group">Using buttons together</h2>
-        <p>When you use buttons next to each other you have to wrap them in a <code className="token-property">button-group</code>.</p>
+        <p>When you use buttons next to each other you have to wrap them in a <Property value=".button-group" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="button-group">{"\n"}
                 <ButtonComponent type="primary" label="Activate" />{"\n"}
@@ -70,7 +70,7 @@ const Sizes = () => (
         <h2 id="sizes">Sizes</h2>
         <p>Several button sizes etc...</p>
         <h3>Large buttons</h3>
-        <p>...<code className="token property">.btn-lg</code></p>
+        <p>...<Property value=".btn-lg" /></p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <ButtonComponent size="lg" type="primary" label="Large button" />{"\n"}
@@ -78,7 +78,7 @@ const Sizes = () => (
             </div>
         </ComponentPreview>
         <h3>Small buttons</h3>
-        <p>...<code className="token property">.btn-sm</code></p>
+        <p>...<Property value=".btn-sm" /></p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <ButtonComponent size="sm" type="primary" label="Small button" />{"\n"}
@@ -86,7 +86,7 @@ const Sizes = () => (
             </div>
         </ComponentPreview>
         <h3>Extra small buttons</h3>
-        <p>...<code className="token property">.btn-xs</code></p>
+        <p>...<Property value=".btn-xs" /></p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <ButtonComponent size="xs" type="primary" label="Extra small button" />{"\n"}
@@ -94,7 +94,7 @@ const Sizes = () => (
             </div>
         </ComponentPreview>
         <h3>Block level</h3>
-        <p>...<code className="token property">.btn-block</code></p>
+        <p>...<Property value=".btn-block" /></p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <ButtonComponent fullWidth type="primary" label="Block level button" />{"\n"}
@@ -107,7 +107,7 @@ const Sizes = () => (
 const ActiveState = () => (
     <>
         <h2 id="active-state">Active state</h2>
-        <p>Active state with <code className="token property">.active</code>...</p>
+        <p>Active state with <Property value=".active" />...</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <ButtonComponent active type="primary" label="Primary" />{"\n"}
@@ -148,7 +148,7 @@ const UsageWithIcons = () => (
 const ButtonLoader = () => (
     <>
         <h2 id="button-loader">Button loader</h2>
-        <p>To use a button with a loader simply add the attribute <Attribute data name="button-loader" /> to add the required markup for the loader component. Add class <code className="token property">.loading</code> to display the loader.</p>
+        <p>To use a button with a loader simply add the attribute <Attribute data name="button-loader" /> to add the required markup for the loader component. Add class <Property value=".loading" /> to display the loader.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <ButtonComponent type="primary" label="Primary" loader loading />{"\n"}
@@ -180,76 +180,6 @@ const ButtonLoader = () => (
     </>
 );
 
-const UsageWithJavascript = () => (
-    <>
-        <h2 id="usage-with-javascript">Usage with javascript</h2>
-        <p>To interact with the alert-component with javascript...</p>
-        <h3>Show loader</h3>
-        <ComponentPreview language="javascript" codeFigure>
-            {"px.button.loader.show();"}{"\n"}
-            {"// OR"}{"\n"}
-            {"px.button.loader.show(id);"}
-        </ComponentPreview>
-        <h3>Hide loader</h3>
-        <ComponentPreview language="javascript" codeFigure>
-            {"px.button.loader.hide();"}{"\n"}
-            {"// OR"}{"\n"}
-            {"px.button.loader.hide(id);"}
-        </ComponentPreview>
-        <h3>Methods</h3>
-        <table className="table table-striped">
-            <thead>
-                <tr>
-                    <th>Method</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <PxScript component="button" func="init" />
-                    </td>
-                    <td>
-                        Renders the HTML for the loader component for buttons that has the attribute <Attribute data name="loader" />. This is done automatically when the <code className="token property">px-script.js</code> loads, but might have to be used if you are not rendering your buttons right away. For instance, in react, you might want to call this function within the <PrismCode className="language-javascript">{"componentDidMount()"}</PrismCode> method.
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <PxScript component="button" subComponents={["loader"]} func="show" />
-                    </td>
-                    <td>
-                        Gives all rendered buttons the class <code className="token property">.loading</code>, displaying the loader component within the buttons (<b>if present</b>).
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <PxScript component="button" subComponents={["loader"]} func="show" params={["id"]} />
-                    </td>
-                    <td>
-                        Gives the specified button the class <code className="token property">.loading</code>. If no alert with the specified id is rendered to the DOM, the method does nothing.
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <PxScript component="button" subComponents={["loader"]} func="hide" />
-                    </td>
-                    <td>
-                        Removes the class <code className="token property">.loading</code> from all rendered buttons, hiding the loader component.
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <PxScript component="button" subComponents={["loader"]} func="hide" params={["id"]} />
-                    </td>
-                    <td>
-                        Removes the class <code className="token property">.loading</code> from the button specified by id, hiding the loader component within the button. If no button with the specified id is rendered to the DOM, the method does nothing.
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </>
-);
-
 const ButtonsText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
         <p className="lead">Use buttons...</p>
@@ -262,7 +192,6 @@ const ButtonsText = () => (
         <DisabledState />
         <UsageWithIcons />
         <ButtonLoader />
-        {/* <UsageWithJavascript /> */}
     </div>
 );
 
@@ -286,4 +215,4 @@ class Buttons extends Component {
 export default Buttons;
 
 /* for testing */
-export { Examples, UsageWithOtherTags, OutlineButtons, Sizes, ActiveState, DisabledState, UsageWithIcons, ButtonLoader, UsageWithJavascript, ButtonsText, ButtonGroup };
+export { Examples, UsageWithOtherTags, OutlineButtons, Sizes, ActiveState, DisabledState, UsageWithIcons, ButtonLoader, ButtonsText, ButtonGroup };
