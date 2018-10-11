@@ -4,7 +4,6 @@ class Tabs {
         this.id = el.id;
         this.classList = el.classList;
         this.isOpen = el.classList.contains("tabs-open");
-        this.flexDir = getComputedStyle(el.querySelector("UL")).flexDirection;
         this.hasActive = !!this._el.querySelector(".active");
 
         document.addEventListener("click", e => {
@@ -13,13 +12,12 @@ class Tabs {
             }
         });
 
-        this._el.addEventListener("click", e => {
-            e.preventDefault();
+        this._el.addEventListener("click", () => {
             this.flexDir = getComputedStyle(this._el.querySelector("UL")).flexDirection;
 
             if (!this.isOpen && this.flexDir === "column") {
                 this.open();
-            } else {
+            } else if (this.isOpen && this.flexDir === "column") {
                 this.close();
             }
         });
@@ -33,10 +31,9 @@ class Tabs {
 
     addListener () {
         [...this._el.querySelectorAll("li")].forEach(listElem => {
-            listElem.addEventListener("click", () => {
-                if (!listElem.classList.contains("active")) {
-                    this._el.querySelector(".active").classList.remove("active");
-                    listElem.classList.add("active");
+            listElem.addEventListener("click", e => {
+                if (listElem.classList.contains("active")) {
+                    e.preventDefault();
                 }
             });
         });
