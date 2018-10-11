@@ -7,6 +7,7 @@ class Sidebar {
         document.addEventListener("click", e => {
             if (!e.target.closest(".sidebar") && this.isExp) {
                 this.close();
+                this.hideItems();
             }
         });
 
@@ -23,7 +24,7 @@ class Sidebar {
 
             this.hideItems();
 
-            menu.classList.add("hamburger");
+            menu.classList.add("hamburger"); // Temporary name [AW]
             menu.innerHTML += "<i class='material-icons'>menu</i>";
 
             this._el.appendChild(menu);
@@ -84,7 +85,10 @@ class Sidebar {
     open () {
         this.isExp = true;
         this._el.classList.add("sidebar-expand");
-        window.addEventListener("resize", () => this.close());
+        window.addEventListener("resize", () => {
+            this.close();
+            this.hideItems();
+        });
     }
 
     close () {
