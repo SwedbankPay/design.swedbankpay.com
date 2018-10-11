@@ -1,11 +1,11 @@
 # Changelog
 
-## [0.1x.x] - 2018-x-x
+## [0.12.1] - 2018-10-11
 
 ### Added
 
-### Changed
+- Added remainig spacing classes for breakpoint abbreviations (e.g. `.mx-sm-2`).
 
 ### Fixed
 
-### Removed
+- Fixed issue with tabs not adding class `.active` on click events.
