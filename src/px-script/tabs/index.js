@@ -5,6 +5,7 @@ class Tabs {
         this.classList = el.classList;
         this.isOpen = el.classList.contains("tabs-open");
         this.flexDir;
+        this.hasActive = this._el.querySelector(".active");
 
         document.addEventListener("click", e => {
             if (!e.target.closest(".tabs") && this.isOpen) {
@@ -20,6 +21,36 @@ class Tabs {
                     this.open();
                 } else {
                     this.close();
+                }
+            });
+        });
+
+        if (this.hasActive) {
+            [...this._el.querySelectorAll("li")].map(listElem => {
+                listElem.addEventListener("click", e => {
+                    e.preventDefault();
+
+                    if (!listElem.classList.contains("active")) {
+                        this._el.querySelector(".active").classList.remove("active");
+                        listElem.classList.add("active");
+                    }
+                });
+            });
+        } else {
+            this._el.querySelector("li").classList.add("active");
+
+            this.addListener();
+        }
+    }
+
+    addListener () {
+        [...this._el.querySelectorAll("li")].map(listElem => {
+            listElem.addEventListener("click", e => {
+                e.preventDefault();
+
+                if (!listElem.classList.contains("active")) {
+                    this._el.querySelector(".active").classList.remove("active");
+                    listElem.classList.add("active");
                 }
             });
         });
