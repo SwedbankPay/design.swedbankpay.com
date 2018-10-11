@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added documentation section for text utlities.
+
 ### Changed
 
 ### Fixed

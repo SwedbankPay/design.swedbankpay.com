@@ -485,6 +485,18 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "FontWeightAndItalics": [Function],
+                  "TextAlignment": [Function],
+                  "TextText": [Function],
+                  "TextTransform": [Function],
+                  "TextWrappingAndOverflow": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/utilities/text",
+                "title": "Text",
+              },
+              Object {
+                "component": Object {
                   "Intro": [Function],
                   "VisibilityText": [Function],
                   "default": [Function],
