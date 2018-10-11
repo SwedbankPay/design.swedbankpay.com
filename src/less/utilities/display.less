@@ -14,15 +14,15 @@
 
 /* stylelint-enable block-opening-brace-space-before */
 
-//
-// Creating base-classes like ".d-none"
-//
+/*
+ * Creating base-classes like ".d-none"
+ */
 
 .display-rules(~"");
 
-//
-// Creating classes for breakpoints like ".d-md-none"
-//
+/*
+ * Creating classes for breakpoint abbrebiations like ".d-md-none"
+ */
 
 .for-each(@breakpoint in @grid-breakpoints) {
     @infix: extract(@breakpoint, 1);
@@ -34,9 +34,9 @@
     .media-breakpoint-up(@infix, @breakpoint, { .ruleset(); });
 }
 
-//
-// Utilities for toggling `display` in print
-//
+/*
+ * Utilities for toggling `display` in print
+ */
 
 @media print {
     .display-rules(~"-print");
