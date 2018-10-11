@@ -57,22 +57,12 @@ exports[`Components: Tabs BasicUsage renders 1`] = `
     <Tabs
       items={
         Array [
-          Object {
-            "name": "Kort",
-          },
-          Object {
-            "name": "Transaksjoner",
-          },
-          Object {
-            "active": true,
-            "name": "Faktura",
-          },
-          Object {
-            "name": "Instillinger",
-          },
-          Object {
-            "name": "Audit trail",
-          },
+          "Kort",
+          "Rabatter",
+          "Transaksjoner",
+          "Faktura",
+          "Instillinger",
+          "Audit trail",
         ]
       }
       mode="xl"
@@ -105,22 +95,12 @@ exports[`Components: Tabs Collapsed renders 1`] = `
     <Tabs
       items={
         Array [
-          Object {
-            "name": "Kort",
-          },
-          Object {
-            "name": "Transaksjoner",
-          },
-          Object {
-            "active": true,
-            "name": "Faktura",
-          },
-          Object {
-            "name": "Instillinger",
-          },
-          Object {
-            "name": "Audit trail",
-          },
+          "Kort",
+          "Rabatter",
+          "Transaksjoner",
+          "Faktura",
+          "Instillinger",
+          "Audit trail",
         ]
       }
     />

@@ -5,7 +5,7 @@ const script = (() => {
         for (const key in px) {
             if (typeof px[key].init === "function") {
                 px[key].init();
-            } else if (key !== "script") {
+            } else if (key !== "script" && key !== "toast" && key !== "utils") {
                 console.warn(`Module ${key} does not have an init method.`);
             }
         }
