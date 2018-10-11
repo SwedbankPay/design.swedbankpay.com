@@ -1,127 +1,113 @@
-/* stylelint-disable block-opening-brace-space-before, block-closing-brace-space-before, declaration-colon-space-after, declaration-block-single-line-max-declarations, declaration-block-semicolon-space-after, declaration-no-important, declaration-bang-space-before */
+/* stylelint-disable declaration-no-important */
 
+.spacing-rules(@infix) {
+    @properties: margin m, padding p;
+
+    .for-each(@property in @properties) {
+        @prop: extract(@property, 1);
+        @abbrev: extract(@property, 2);
+
+        .for-each(@spacer in @spacers) {
+            @size: extract(@spacer, 1);
+            @length: extract(@spacer, 2);
+
+            .@{abbrev}@{infix}-@{size} { @{prop}: @length !important; }
+
+            .@{abbrev}t@{infix}-@{size},
+            .@{abbrev}y@{infix}-@{size} {
+                @{prop}-top: @length !important;
+            }
+
+            .@{abbrev}r@{infix}-@{size},
+            .@{abbrev}x@{infix}-@{size} {
+                @{prop}-right: @length !important;
+            }
+
+            .@{abbrev}b@{infix}-@{size},
+            .@{abbrev}y@{infix}-@{size} {
+                @{prop}-bottom: @length !important;
+            }
+
+            .@{abbrev}l@{infix}-@{size},
+            .@{abbrev}x@{infix}-@{size} {
+                @{prop}-left: @length !important;
+            }
+        }
+    }
+
+    // Negative margins (e.g., where `.mb-n1` is negative version of `.mb-1`)
+    .for-each(@spacer in @spacers) {
+        @size: extract(@spacer, 1);
+        @length: extract(@spacer, 2);
+
+        .negative-values() when (@size > 0) {
+            .m@{infix}-n@{size} { margin: -@length !important; }
+
+            .mt@{infix}-n@{size},
+            .my@{infix}-n@{size} {
+                margin-top: -@length !important;
+            }
+
+            .mr@{infix}-n@{size},
+            .mx@{infix}-n@{size} {
+                margin-right: -@length !important;
+            }
+
+            .mb@{infix}-n@{size},
+            .my@{infix}-n@{size} {
+                margin-bottom: -@length !important;
+            }
+
+            .ml@{infix}-n@{size},
+            .mx@{infix}-n@{size} {
+                margin-left: -@length !important;
+            }
+        }
+
+        .negative-values();
+    }
+
+
+    // Some special margin utils
+    .m@{infix}-auto { margin: auto !important; }
+
+    .mt@{infix}-auto,
+    .my@{infix}-auto {
+        margin-top: auto !important;
+    }
+
+    .mr@{infix}-auto,
+    .mx@{infix}-auto {
+        margin-right: auto !important;
+    }
+
+    .mb@{infix}-auto,
+    .my@{infix}-auto {
+        margin-bottom: auto !important;
+    }
+
+    .ml@{infix}-auto,
+    .mx@{infix}-auto {
+        margin-left: auto !important;
+    }
+}
 
 /*
- * TODO: refactor this using loops [EH]
- * https://github.com/twbs/bootstrap/blob/v4-dev/scss/utilities/_spacing.scss
+ * Creating base-classes like ".mx-auto"
  */
 
-// Margin
-// ==========================================================================
+.spacing-rules(~"");
 
-.m-0        { margin:           0               !important;                                                 }
-.m-1        { margin:           @spacer * 0.25  !important;                                                 }
-.m-2        { margin:           @spacer * 0.5   !important;                                                 }
-.m-3        { margin:           @spacer * 1     !important;                                                 }
-.m-4        { margin:           @spacer * 1.5   !important;                                                 }
-.m-5        { margin:           @spacer * 3     !important;                                                 }
+/*
+ * Creating classes for breakpoint abbrebiations like ".mx-md-auto"
+ */
 
-/* Margin top */
-.mt-0       { margin-top:       0               !important;                                                 }
-.mt-1       { margin-top:       @spacer * 0.25  !important;                                                 }
-.mt-2       { margin-top:       @spacer * 0.5   !important;                                                 }
-.mt-3       { margin-top:       @spacer * 1     !important;                                                 }
-.mt-4       { margin-top:       @spacer * 1.5   !important;                                                 }
-.mt-5       { margin-top:       @spacer * 3     !important;                                                 }
+.for-each(@breakpoint in @grid-breakpoints) {
+    @infix: extract(@breakpoint, 1);
 
-/* Margin right */
-.mr-0       { margin-right:     0               !important;                                                 }
-.mr-1       { margin-right:     @spacer * 0.25  !important;                                                 }
-.mr-2       { margin-right:     @spacer * 0.5   !important;                                                 }
-.mr-3       { margin-right:     @spacer * 1     !important;                                                 }
-.mr-4       { margin-right:     @spacer * 1.5   !important;                                                 }
-.mr-5       { margin-right:     @spacer * 3     !important;                                                 }
+    .ruleset() {
+        .spacing-rules(~"-@{infix}");
+    }
 
-/* Margin bottom */
-.mb-0       { margin-bottom:    0               !important;                                                 }
-.mb-1       { margin-bottom:    @spacer * 0.25  !important;                                                 }
-.mb-2       { margin-bottom:    @spacer * 0.5   !important;                                                 }
-.mb-3       { margin-bottom:    @spacer * 1     !important;                                                 }
-.mb-4       { margin-bottom:    @spacer * 1.5   !important;                                                 }
-.mb-5       { margin-bottom:    @spacer * 3     !important;                                                 }
-
-/* Margin left */
-.ml-0       { margin-left:      0               !important;                                                 }
-.ml-1       { margin-left:      @spacer * 0.25  !important;                                                 }
-.ml-2       { margin-left:      @spacer * 0.5   !important;                                                 }
-.ml-3       { margin-left:      @spacer * 1     !important;                                                 }
-.ml-4       { margin-left:      @spacer * 1.5   !important;                                                 }
-.ml-5       { margin-left:      @spacer * 3     !important;                                                 }
-
-/* Margin y-axis */
-.my-0       { margin-top:       0               !important;     margin-bottom:  0               !important; }
-.my-1       { margin-top:       @spacer * 0.25  !important;     margin-bottom:  @spacer * 0.25  !important; }
-.my-2       { margin-top:       @spacer * 0.5   !important;     margin-bottom:  @spacer * 0.5   !important; }
-.my-3       { margin-top:       @spacer * 1     !important;     margin-bottom:  @spacer * 1     !important; }
-.my-4       { margin-top:       @spacer * 1.5   !important;     margin-bottom:  @spacer * 1.5   !important; }
-.my-5       { margin-top:       @spacer * 3     !important;     margin-bottom:  @spacer * 3     !important; }
-
-/* Margin x-axis */
-.mx-0       { margin-right:     0               !important;     margin-left:    0               !important; }
-.mx-1       { margin-right:     @spacer * 0.25  !important;     margin-left:    @spacer * 0.25  !important; }
-.mx-2       { margin-right:     @spacer * 0.5   !important;     margin-left:    @spacer * 0.5   !important; }
-.mx-3       { margin-right:     @spacer * 1     !important;     margin-left:    @spacer * 1     !important; }
-.mx-4       { margin-right:     @spacer * 1.5   !important;     margin-left:    @spacer * 1.5   !important; }
-.mx-5       { margin-right:     @spacer * 3     !important;     margin-left:    @spacer * 3     !important; }
-
-// auto for horizontal centering
-.mx-auto { margin-right:        auto            !important;     margin-left:    auto            !important; }
-
-
-// Padding
-// ==========================================================================
-
-.p-0        { padding:          0               !important;                                                 }
-.p-1        { padding:          @spacer * 0.25  !important;                                                 }
-.p-2        { padding:          @spacer * 0.5   !important;                                                 }
-.p-3        { padding:          @spacer * 1     !important;                                                 }
-.p-4        { padding:          @spacer * 1.5   !important;                                                 }
-.p-5        { padding:          @spacer * 3     !important;                                                 }
-
-/* Padding top */
-.pt-0       { padding-top:      0               !important;                                                 }
-.pt-1       { padding-top:      @spacer * 0.25  !important;                                                 }
-.pt-2       { padding-top:      @spacer * 0.5   !important;                                                 }
-.pt-3       { padding-top:      @spacer * 1     !important;                                                 }
-.pt-4       { padding-top:      @spacer * 1.5   !important;                                                 }
-.pt-5       { padding-top:      @spacer * 3     !important;                                                 }
-
-/* Padding right */
-.pr-0       { padding-right:    0               !important;                                                 }
-.pr-1       { padding-right:    @spacer * 0.25  !important;                                                 }
-.pr-2       { padding-right:    @spacer * 0.5   !important;                                                 }
-.pr-3       { padding-right:    @spacer * 1     !important;                                                 }
-.pr-4       { padding-right:    @spacer * 1.5   !important;                                                 }
-.pr-5       { padding-right:    @spacer * 3     !important;                                                 }
-
-/* Padding bottom */
-.pb-0       { padding-bottom:   0               !important;                                                 }
-.pb-1       { padding-bottom:   @spacer * 0.25  !important;                                                 }
-.pb-2       { padding-bottom:   @spacer * 0.5   !important;                                                 }
-.pb-3       { padding-bottom:   @spacer * 1     !important;                                                 }
-.pb-4       { padding-bottom:   @spacer * 1.5   !important;                                                 }
-.pb-5       { padding-bottom:   @spacer * 3     !important;                                                 }
-
-/* Padding left */
-.pl-0       { padding-left:     0               !important;                                                 }
-.pl-1       { padding-left:     @spacer * 0.25  !important;                                                 }
-.pl-2       { padding-left:     @spacer * 0.5   !important;                                                 }
-.pl-3       { padding-left:     @spacer * 1     !important;                                                 }
-.pl-4       { padding-left:     @spacer * 1.5   !important;                                                 }
-.pl-5       { padding-left:     @spacer * 3     !important;                                                 }
-
-/* padding y-axis */
-.py-0       { padding-top:      0               !important;     padding-bottom: 0               !important; }
-.py-1       { padding-top:      @spacer * 0.25  !important;     padding-bottom: @spacer * 0.25  !important; }
-.py-2       { padding-top:      @spacer * 0.5   !important;     padding-bottom: @spacer * 0.5   !important; }
-.py-3       { padding-top:      @spacer * 1     !important;     padding-bottom: @spacer * 1     !important; }
-.py-4       { padding-top:      @spacer * 1.5   !important;     padding-bottom: @spacer * 1.5   !important; }
-.py-5       { padding-top:      @spacer * 3     !important;     padding-bottom: @spacer * 3     !important; }
-
-/* padding x-axis */
-.px-0       { padding-right:    0               !important;     padding-left:   0               !important; }
-.px-1       { padding-right:    @spacer * 0.25  !important;     padding-left:   @spacer * 0.25  !important; }
-.px-2       { padding-right:    @spacer * 0.5   !important;     padding-left:   @spacer * 0.5   !important; }
-.px-3       { padding-right:    @spacer * 1     !important;     padding-left:   @spacer * 1     !important; }
-.px-4       { padding-right:    @spacer * 1.5   !important;     padding-left:   @spacer * 1.5   !important; }
-.px-5       { padding-right:    @spacer * 3     !important;     padding-left:   @spacer * 3     !important; }
+    .media-breakpoint-up(@infix, @breakpoint, { .ruleset(); });
+}
