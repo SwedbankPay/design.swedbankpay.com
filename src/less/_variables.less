@@ -89,19 +89,21 @@
 // 2. Global
 // ==========================================================================
 
+@spacer:                                    1rem;
+
 /* Margin */
-@base-margin:                               1rem;
-@base-margin-sm:                            @base-margin/2;
-@base-margin-xs:                            @base-margin/4;
-@base-margin-lg:                            @base-margin*1.5;
-@base-margin-xl:                            @base-margin*2;
+@base-margin:                               @spacer;
+@base-margin-sm:                            @base-margin / 2;
+@base-margin-xs:                            @base-margin / 4;
+@base-margin-lg:                            @base-margin * 1.5;
+@base-margin-xl:                            @base-margin * 2;
 
 /* Padding */
-@base-padding:                              1rem;
-@base-padding-sm:                           @base-padding/2;
-@base-padding-xs:                           @base-padding/4;
-@base-padding-lg:                           @base-padding*1.5;
-@base-padding-xl:                           @base-padding*2;
+@base-padding:                              @spacer;
+@base-padding-sm:                           @base-padding / 2;
+@base-padding-xs:                           @base-padding / 4;
+@base-padding-lg:                           @base-padding * 1.5;
+@base-padding-xl:                           @base-padding * 2;
 
 /* Body */
 @body-bg:                                   @background-body;
@@ -153,7 +155,7 @@
 //** Padding between columns. Gets divided in half for the left and right.
 @grid-gutter-width:                         30px;
 
-@grid-breakpoints:                          xs 0, sm 576px, md 768px, lg 992px, xl 1200px, xxl 1600px;
+@grid-breakpoints:                          ~"xs" 0, ~"sm" 576px, ~"md" 768px, ~"lg" 992px, ~"xl" 1200px, ~"xxl" 1600px;
 
 @container-max-widths:                      540px, 720px, 960px, 1140px, 1460px;
 
@@ -285,14 +287,22 @@
 // 6. Action List
 // ==========================================================================
 
-@action-menu-anchor-padding:                round(@base-padding/3, 1);
+@action-menu-anchor-padding:                round(@base-padding / 3, 1);
 
 // 7. Badge
 // ==========================================================================
 
-@badge-list: default @gray-8, brand @green, blue @blue, purple @purple, yellow @yellow, red @red;
+/* stylelint-disable indentation */
+@badge-list:                                ~"default" @gray-8,
+                                            ~"brand" @green,
+                                            ~"blue" @blue,
+                                            ~"purple" @purple,
+                                            ~"yellow" @yellow,
+                                            ~"red" @red;
 
-@badge-padding:                             @base-margin*0.125 @base-margin-sm;
+/* stylelint-enable indentation */
+
+@badge-padding:                             @base-margin * 0.125 @base-margin-sm;
 
 // 8. Breadcrumb
 // ==========================================================================
@@ -362,7 +372,7 @@
 @datepicker-weekday-color:                  @brand-primary;
 @datepicker-hover-color:                    @gray-10;
 
-@datepicker-rd-padding:                     round(@base-padding/3, 1);
+@datepicker-rd-padding:                     round(@base-padding / 3, 1);
 
 // 12. Dialog
 // ==========================================================================
@@ -401,11 +411,11 @@
 
 @legend-border-color:                       @gray-9;
 @legend-color:                              @gray-3;
-@legend-bottom-margin:                      @base-margin*1.25;
+@legend-bottom-margin:                      @base-margin * 1.25;
 
-@helpblock-margin:                          @base-margin*0.325 0;
+@helpblock-margin:                          (@base-margin * 0.325) 0;
 
-@select-option-margin:                      @base-margin*0.187 @base-margin*0.375;
+@select-option-margin:                      (@base-margin * 0.187) (@base-margin * 0.375);
 
 // Checkbox
 @checkbox-bg:                               @brand-primary;

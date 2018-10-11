@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+export const Property = ({ value }) => <code className="token property">{value}</code>;
+
 const Attribute = ({ data, name, value }) => {
     if (name && value) {
         return (
@@ -34,6 +36,10 @@ Attribute.propTypes = {
     name: PropTypes.string,
     value: PropTypes.string,
     data: PropTypes.bool
+};
+
+Property.propTypes = {
+    value: PropTypes.string.isRequired
 };
 
 export default Attribute;

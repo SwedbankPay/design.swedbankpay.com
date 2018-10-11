@@ -1,4 +1,4 @@
-import Attribute from "./Attribute";
+import Attribute, { Property } from "./Attribute";
 import ComponentPreview from "./ComponentPreview";
 import DocHeading from "./DocHeading";
 import DocToc from "./DocToc";
@@ -16,6 +16,7 @@ export {
     DeprecatedComponentAlert,
     ExperimentalComponentAlert,
     Icon,
+    Property,
     PxScript,
     RenderRoutes
 };

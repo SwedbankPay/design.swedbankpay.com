@@ -175,7 +175,7 @@ export default [
                 component: require("../Documentation/components/Status")
             },
             {
-                title: "Step Bar",
+                title: "Step Bar (experimental)",
                 path: "/docs/components/step-bar",
                 component: require("../Documentation/components/StepBar")
             },
@@ -224,6 +224,11 @@ export default [
                 title: "Display",
                 path: "/docs/utilities/display",
                 component: require("../Documentation/utilities/Display")
+            },
+            {
+                title: "Spacing",
+                path: "/docs/utilities/spacing",
+                component: require("../Documentation/utilities/Spacing")
             },
             {
                 title: "Visibility",

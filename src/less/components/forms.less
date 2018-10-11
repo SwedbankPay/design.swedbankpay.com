@@ -1,3 +1,5 @@
+// TODO: Clean this up!! [EH]
+
 label {
     display: inline-block;
     max-width: 100%;
@@ -7,6 +9,18 @@ label {
     font-size: @base-font-size * 0.9;
     color: @input-color;
     line-height: 1.5;
+
+    .required-asterisk {
+        color: @red;
+        margin-left: 0.25rem;
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 1;
+
+        .has-success & {
+            color: @state-success;
+        }
+    }
 }
 
 fieldset {
@@ -24,7 +38,7 @@ fieldset {
             resize: none;
         }
 
-        .checkbox input[type=checkbox] {
+        .checkbox input[type="checkbox"] {
             + label:before {
                 background-color: @input-bg-disabled;
                 border-color: @input-checked-bg-disabled;
@@ -43,7 +57,7 @@ fieldset {
             }
         }
 
-        .radio input[type=radio] {
+        .radio input[type="radio"] {
             + label:before {
                 background-color: @input-bg-disabled;
                 border-color: @input-checked-bg-disabled;
@@ -60,7 +74,7 @@ fieldset {
             }
         }
 
-        .togglebox input[type=checkbox] {
+        .togglebox input[type="checkbox"] {
             + label:before,
             + label:after {
                 background-color: @input-bg-disabled;
@@ -81,7 +95,7 @@ fieldset {
         }
 
         .rangeslider {
-            input[type=range] {
+            input[type="range"] {
                 cursor: not-allowed;
 
                 &::-webkit-slider-thumb {
@@ -128,7 +142,7 @@ fieldset {
                     background: @input-checked-bg-disabled;
 
                     &:before {
-                        border-right-color: @input-checked-bg-disabled !important;
+                        border-right-color: @input-checked-bg-disabled !important; // stylelint-disable-line declaration-no-important
                     }
                 }
             }
@@ -185,7 +199,7 @@ legend {
     &[disabled],
     &[readonly],
     fieldset[disabled] & {
-        background-color: @input-bg-disabled !important;
+        background-color: @input-bg-disabled !important; // stylelint-disable-line declaration-no-important
         opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
     }
 
@@ -202,48 +216,6 @@ legend {
 
 .form-group {
     margin-bottom: @base-margin;
-
-    .validation-success,
-    .validation-warning,
-    .validation-error {
-        display: none;
-    }
-
-    .validation-default {
-        display: inline-block;
-    }
-
-    &.has-success {
-        .form-control-validation(@state-success);
-
-        .validation-default {
-            display: none;
-        }
-
-        .validation-success {
-            display: inline-block;
-        }
-
-        .success-feedback {
-            display: block;
-        }
-    }
-
-    &.has-error {
-        .form-control-validation(@state-error);
-
-        .validation-default {
-            display: none;
-        }
-
-        .validation-error {
-            display: inline-block;
-        }
-
-        .error-feedback {
-            display: block;
-        }
-    }
 }
 
 .checkbox,
@@ -256,12 +228,20 @@ legend {
 }
 
 .help-block {
+    position: relative;
     display: block;
     margin: @helpblock-margin;
     color: lighten(@text-color, 25%);
     text-transform: uppercase;
     font-size: @base-font-size * 0.8;
     line-height: 1rem;
+
+    &:after {
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 }
 
 textarea[disabled] {
@@ -295,7 +275,7 @@ select[multiple] {
         padding-left: @checkbox-label-padding;
     }
 
-    input[type=checkbox] {
+    input[type="checkbox"] {
         margin-right: @base-margin;
         opacity: 0;
 
@@ -360,7 +340,7 @@ select[multiple] {
         padding-left: @checkbox-label-padding;
     }
 
-    input[type=radio] {
+    input[type="radio"] {
         margin-right: @base-margin;
         opacity: 0;
 
@@ -422,7 +402,7 @@ select[multiple] {
         margin: 0;
     }
 
-    input[type=checkbox] {
+    input[type="checkbox"] {
         margin-right: @base-margin-sm;
         height: @checkbox-height;
         width: @checkbox-width * 2;
@@ -513,7 +493,7 @@ select[multiple] {
         background: @color;
 
         &:before {
-            border-right-color: @color !important;
+            border-right-color: @color !important; // stylelint-disable-line declaration-no-important
         }
 
         &:after {
@@ -609,7 +589,7 @@ select[multiple] {
                 background: @input-checked-bg-disabled;
 
                 &:before {
-                    border-right-color: @input-checked-bg-disabled !important;
+                    border-right-color: @input-checked-bg-disabled !important; // stylelint-disable-line declaration-no-important
                 }
             }
         }

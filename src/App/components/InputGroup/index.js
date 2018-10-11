@@ -37,7 +37,9 @@ const InputGroup = ({
     postfixType,
     postfixBtnColor,
     feedbackIcon,
-    helpBlock
+    helpBlock,
+    errorMessage,
+    successMessage
 }) => {
     const attrs = {
         type: type || null,
@@ -48,9 +50,9 @@ const InputGroup = ({
         disabled: disabled || null,
         readOnly: readOnly || null,
         autoComplete: autoComplete || null,
-        "data-validate": validate ? "" : null,
-        "data-pattern": pattern ? "" : null,
-        "data-required": required ? "" : null
+        required: required || null,
+        pattern: pattern ? "" : null,
+        "data-validate": validate ? "" : null
     };
 
     const inputGrpClasses = classnames(
@@ -80,7 +82,7 @@ const InputGroup = ({
                 {feedbackIcon ? <Feedback icon={feedbackIcon} /> : null} {feedbackIcon ? "\n" : null}
                 {postfixValue ? <Addon type={postfixType} value={postfixValue} color={postfixBtnColor} /> : null }{postfixValue ? "\n" : null}
             </div>
-            {helpBlock ? <div className="help-block">{helpBlock}</div> : null}
+            {helpBlock ? <div className="help-block" data-success={successMessage || null} data-error={errorMessage || null}>{helpBlock}</div> : null}
         </div>
     );
 };
@@ -106,7 +108,9 @@ InputGroup.propTypes = {
     postfixType: PropTypes.oneOf(["button", "icon", ""]),
     postfixBtnColor: PropTypes.oneOf(["primary", "secondary", "danger"]),
     feedbackIcon: PropTypes.string,
-    helpBlock: PropTypes.string
+    helpBlock: PropTypes.string,
+    errorMessag: PropTypes.string,
+    successMessag: PropTypes.string
 };
 
 export default InputGroup;

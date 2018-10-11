@@ -1,7 +1,7 @@
 import React from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocToc } from "#";
+import { ComponentPreview, DocToc, ExperimentalComponentAlert } from "#";
 import StepBarComponent from "@/StepBar";
 
 const BasicStepBar = () => {
@@ -66,6 +66,7 @@ const HorizontalStepBar = () => {
 
 const StepBarText = () => (
     <div className="col-12 col-lg-10 doc-body">
+        <ExperimentalComponentAlert />
         <p className="lead">Step Bar.</p>
         <BasicStepBar />
         <HorizontalStepBar />
