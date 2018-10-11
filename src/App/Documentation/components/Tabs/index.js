@@ -6,7 +6,24 @@ import { ComponentPreview, DocToc, ExperimentalComponentAlert } from "#";
 import { tabs } from "$/px-script";
 import TabsComponent from "@/Tabs";
 
-const tabItems = ["Kort", "Rabatter", "Transaksjoner", "Faktura", "Instillinger", "Audit trail"];
+const tabItems = [
+    {
+        name: "Kort"
+    },
+    {
+        name: "Transaksjoner"
+    },
+    {
+        name: "Faktura",
+        active: true
+    },
+    {
+        name: "Instillinger"
+    },
+    {
+        name: "Audit trail"
+    }
+];
 
 const BasicUsage = () => (
     <>

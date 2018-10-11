@@ -4,7 +4,8 @@ class Tabs {
         this.id = el.id;
         this.classList = el.classList;
         this.isOpen = el.classList.contains("tabs-open");
-        this.flexDir;
+        this.flexDir = getComputedStyle(el.querySelector("UL")).flexDirection;
+        this.hasActive = !!this._el.querySelector(".active");
 
         document.addEventListener("click", e => {
             if (!e.target.closest(".tabs") && this.isOpen) {
@@ -12,39 +13,45 @@ class Tabs {
             }
         });
 
-        [...this._el.children].forEach(elem => {
-            elem.addEventListener("click", e => {
-                e.preventDefault();
+        this._el.addEventListener("click", e => {
+            e.preventDefault();
+            this.flexDir = getComputedStyle(this._el.querySelector("UL")).flexDirection;
 
-                if (!this.isOpen) {
-                    this.open();
-                } else {
-                    this.close();
+            if (!this.isOpen && this.flexDir === "column") {
+                this.open();
+            } else {
+                this.close();
+            }
+        });
+
+        if (!this.hasActive) {
+            this._el.querySelector("li").classList.add("active");
+        }
+
+        this.addListener();
+    }
+
+    addListener () {
+        [...this._el.querySelectorAll("li")].forEach(listElem => {
+            listElem.addEventListener("click", () => {
+                if (!listElem.classList.contains("active")) {
+                    this._el.querySelector(".active").classList.remove("active");
+                    listElem.classList.add("active");
                 }
             });
         });
     }
 
     open () {
-        [...this._el.children].forEach(tabsUl => {
-            if (tabsUl.nodeName === "UL") {
-                this.flexDir = getComputedStyle(tabsUl).flexDirection;
-            }
-        });
-
-        if (!this.isOpen && this.flexDir === "column") {
-            this.isOpen = true;
-            this._el.classList.add("tabs-open");
-            window.addEventListener("resize", () => this.close());
-        }
+        this.isOpen = true;
+        this._el.classList.add("tabs-open");
+        window.addEventListener("resize", () => this.close());
     }
 
     close () {
-        if (this.isOpen) {
-            this.isOpen = false;
-            this._el.classList.remove("tabs-open");
-            window.removeEventListener("resize", this.close);
-        }
+        this.isOpen = false;
+        this._el.classList.remove("tabs-open");
+        window.removeEventListener("resize", this.close);
     }
 }
 

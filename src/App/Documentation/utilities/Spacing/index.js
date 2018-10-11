@@ -15,10 +15,10 @@ const Notation = () => (
     <>
         <h2 id="notation">Notation</h2>
         <p>
-            Spacing utilities that apply to all breakpoints, from <Property value="xs" /> to <Property value="xxl" />, have no breakpoint abbreviation in them. This is because those classes are applied from <Property value="min-width: 0" /> and up, and thus are not bound by a media query. <s>The remaining breakpoints, however, do include a breakpoint abbreviation.</s> <b>(Spacing utilities with breakpoint abbreviations will be included later)</b>
+            Spacing utilities that apply to all breakpoints, from <Property value="xs" /> to <Property value="xxl" />, have no breakpoint abbreviation in them. This is because those classes are applied from <Property value="min-width: 0" /> and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
         </p>
         <p>
-            The classes are named using the format <Property value="{property}{sides}-{size}" /> for <Property value="xs" /> <s>and <Property value="{property}{sides}-{breakpoint}-{size}" /> for <Property value="sm" />, <Property value="md" />, <Property value="lg" />, <Property value="xl" />, and <Property value="xxl" />.</s>
+            The classes are named using the format <Property value="{property}{sides}-{size}" /> for <Property value="xs" /> and <Property value="{property}{sides}-{breakpoint}-{size}" /> for <Property value="sm" />, <Property value="md" />, <Property value="lg" />, <Property value="xl" />, and <Property value="xxl" />.
         </p>
 
         <p>Where <i>property</i> is one of:</p>
@@ -46,6 +46,15 @@ const Notation = () => (
             <li><Property value="4" /> - for classes that set the <Property value="margin" /> or <Property value="padding" /> to <Property value="@spacer * 1.5" /></li>
             <li><Property value="5" /> - for classes that set the <Property value="margin" /> or <Property value="padding" /> to <Property value="@spacer * 3" /></li>
             <li><Property value="auto" /> - for classes that set <Property value="margin" /> to <Property value="auto" /></li>
+        </ul>
+
+        <p>For margin you can also set negative <i>size</i> (excluding <Property value="0" />):</p>
+        <ul>
+            <li><Property value="n1" /> - for classes that set the <Property value="margin" /> to <Property value="-@spacer * 0.25" /></li>
+            <li><Property value="n2" /> - for classes that set the <Property value="margin" /> to <Property value="-@spacer * 0.5" /></li>
+            <li><Property value="n3" /> - for classes that set the <Property value="margin" /> to <Property value="-@spacer" /></li>
+            <li><Property value="n4" /> - for classes that set the <Property value="margin" /> to <Property value="-@spacer * 1.5" /></li>
+            <li><Property value="n5" /> - for classes that set the <Property value="margin" /> to <Property value="-@spacer * 3" /></li>
         </ul>
 
         <p>(<Property value="@spacer" /> is set to <Property value="1rem (16px)" />)</p>

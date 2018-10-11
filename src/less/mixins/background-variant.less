@@ -1,8 +1,10 @@
+/* stylelint-disable declaration-no-important */
+
 .background-variant(@color) {
-    background-color: @color;
-    color: @white;
+    background-color: @color !important;
+    color: @white !important;
 
     a&:hover {
-        background-color: darken(@color, 10%);
+        background-color: darken(@color, 10%) !important;
     }
 }

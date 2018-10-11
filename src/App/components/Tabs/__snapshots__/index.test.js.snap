@@ -14,31 +14,25 @@ exports[`Component: Tabs -  Prop mode is required 1`] = `
   <ul>
     <li
       className={null}
-      key="tab-item-test-0"
+      key="tab-item-undefined-0"
     >
       
 
       <a
         href="#"
-        onClick={[Function]}
-      >
-        test
-      </a>
+      />
       
 
     </li>
     <li
-      className="active"
-      key="tab-item-test 2-1"
+      className={null}
+      key="tab-item-undefined-1"
     >
       
 
       <a
         href="#"
-        onClick={[Function]}
-      >
-        test 2
-      </a>
+      />
       
 
     </li>
@@ -60,31 +54,25 @@ exports[`Component: Tabs -  renders 1`] = `
   <ul>
     <li
       className={null}
-      key="tab-item-test-0"
+      key="tab-item-undefined-0"
     >
       
 
       <a
         href="#"
-        onClick={[Function]}
-      >
-        test
-      </a>
+      />
       
 
     </li>
     <li
-      className="active"
-      key="tab-item-test 2-1"
+      className={null}
+      key="tab-item-undefined-1"
     >
       
 
       <a
         href="#"
-        onClick={[Function]}
-      >
-        test 2
-      </a>
+      />
       
 
     </li>
