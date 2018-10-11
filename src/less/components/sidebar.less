@@ -12,24 +12,17 @@
             margin-top: 0.5rem;
             margin-left: 1rem;
 
-            a {
+            a,
+            span {
                 border-bottom: none;
                 display: inline-flex;
 
                 i {
                     color: rgba(0, 0, 0, 0.6); // Temporary [AW]
-
-                    &:hover {
-                        cursor: pointer;
-                    }
                 }
 
                 span {
                     display: none;
-
-                    &:hover {
-                        cursor: pointer;
-                    }
                 }
             }
 
@@ -37,14 +30,27 @@
                 display: none;
             }
 
+            > span {
+                i {
+                    margin-right: 0.5rem;
+                }
+            }
+
             ul {
                 list-style: none;
-                margin: 0;
                 padding: 0;
+                margin: 0;
 
                 li {
                     margin: 0.5rem 0 0.5rem 2rem;
-                    color: @brand-primary;
+
+                    a {
+                        color: @brand-primary;
+
+                        &:hover {
+                            color: darken(@brand-primary, 10%);
+                        }
+                    }
                 }
             }
         }
@@ -69,7 +75,7 @@
     }
 }
 
-.sidebar-vertical-wide() {
+.sidebar-vertical-wide () {
     .sidebar-expand();
 }
 

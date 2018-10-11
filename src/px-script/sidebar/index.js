@@ -2,7 +2,7 @@ class Sidebar {
     constructor (el) {
         this._el = el;
         this.isExp = el.classList.contains("sidebar-expanded");
-        this.containsChild = [];
+        this.containsChild = [...this._el.querySelectorAll("li")].filter(hasChild => hasChild.querySelector("ul"));
 
         document.addEventListener("click", e => {
             if (!e.target.closest(".sidebar") && this.isExp) {
@@ -10,14 +10,6 @@ class Sidebar {
                 this.hideItems();
             }
         });
-
-        [...this._el.querySelectorAll("li")].map(noChild => {
-            if (noChild.querySelector("UL") !== null) {
-                this.containsChild.push(noChild);
-            }
-        });
-
-        console.log(this.containsChild);
 
         if ([...this._el.querySelectorAll("li")].length > 4 || this.containsChild.length > 0) {
             const menu = document.createElement("a");
@@ -42,7 +34,7 @@ class Sidebar {
     }
 
     showItems () {
-        [...this._el.querySelectorAll("li")].map(listItem => {
+        [...this._el.querySelectorAll("li")].forEach(listItem => {
             if (listItem.classList.contains("itemInvis")) {
                 listItem.classList.remove("itemInvis");
             }
@@ -50,33 +42,21 @@ class Sidebar {
     }
 
     hideItems () {
-        const noLevelTwoList = [];
-        const firstFour = [];
+        const firstFour = [...this._el.querySelectorAll("li")].filter(noInvis => !noInvis.classList.contains("itemInvis") && noInvis.querySelector("UL") === null && this._el.querySelector("UL") === noInvis.parentElement);
+        const hasTwoLevels = [...this._el.querySelectorAll("li")].filter(hasChild => hasChild.querySelector("ul"));
 
-        [...this._el.querySelectorAll("li")].map(noChild => {
-            if (noChild.querySelector("UL") !== null) {
-                noLevelTwoList.push(noChild);
-            }
-        });
-
-        if (noLevelTwoList.length > 0) {
-            noLevelTwoList.map(levelTwo => {
+        if (hasTwoLevels.length > 0) {
+            hasTwoLevels.forEach(levelTwo => {
                 levelTwo.classList.add("itemInvis");
             });
 
-            [...this._el.querySelectorAll("li")].map(noInvis => {
-                if (!noInvis.classList.contains("itemInvis") && noInvis.querySelector("UL") === null && this._el.querySelector("UL") === noInvis.parentElement) {
-                    firstFour.push(noInvis);
-                }
-            });
-
             if (firstFour.length > 4) {
-                firstFour.slice(4).map(item => {
+                firstFour.slice(4).forEach(item => {
                     item.classList.add("itemInvis");
                 });
             }
         } else {
-            [...this._el.querySelectorAll("li")].slice(4).map(items => {
+            [...this._el.querySelectorAll("li")].slice(4).forEach(items => {
                 items.classList.add("itemInvis");
             });
         }
@@ -95,6 +75,7 @@ class Sidebar {
         this.isExp = false;
         this._el.classList.remove("sidebar-expand");
         window.removeEventListener("resize", this.close);
+        window.removeEventListener("resize", this.hideItems);
     }
 }
 

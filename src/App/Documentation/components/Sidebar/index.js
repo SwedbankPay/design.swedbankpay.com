@@ -65,7 +65,7 @@ const Vertical = () => (
     <>
         <h2 id="vertical-sidebar">Vertical sidebar icons only</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <SidebarComponent mode="md" items={sidebarItems} />
+            <SidebarComponent mode="md" items={sidebarItemsTwoLevels} />
         </ComponentPreview>
     </>
 );
@@ -83,7 +83,7 @@ const TwoLevels = () => (
     <>
         <h2 id="twolevels-sidebar">Vertical sidebar with two levels</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <SidebarComponent items={sidebarItemsTwoLevels} />
+            <SidebarComponent mode="wide-lg" items={sidebarItemsTwoLevels} />
         </ComponentPreview>
     </>
 );
