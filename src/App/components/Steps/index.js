@@ -21,35 +21,46 @@ const DefaultSteps = [
     }
 ];
 
-const RenderSteps = ({ steps }) => (
+
+const StepContent = ({completed, subtitle, title}) => ( 
+    <>
+        {completed ? <div className="material-icons steps-icon" >check</div> : null}
+        {title}
+        {subtitle ? <div className="steps-sub-title">{subtitle}</div> : null}
+    </>
+);
+
+const RenderSteps = ({ steps, clickable }) => (
     <>
         {steps.map(({ title, subtitle, completed, ongoing, selected }, i) => (
             <li key={i} className={classnames(completed ? "steps-completed" : null,
                 ongoing ? "steps-ongoing" : null,
                 selected ? "steps-selected" : null)}>
-                {completed ? <div className="material-icons steps-icon" >check</div> : null}
-                {title}
-                {subtitle ? <div className="steps-sub-title">{subtitle}</div> : null}
+
+                {clickable ? <a><StepContent completed={completed} subtitle={subtitle} title={title}/></a> : <StepContent completed={completed} subtitle={subtitle} title={title}/> }
+
             </li>
         ))}
     </>
 );
 
-const Steps = ({ steps, horizontal }) => {
+const Steps = ({ steps, horizontal, clickable }) => {
     const stepsClasses = classnames(
         "steps",
-        horizontal ? "steps-horizontal" : null
+        horizontal ? "steps-horizontal" : null,
+        clickable ? "steps-clickable" : null
     );
 
     return (<ol className={stepsClasses}>
-        {steps ? <RenderSteps steps={steps} /> : <RenderSteps steps={DefaultSteps} />}
+        {steps ? <RenderSteps steps={steps} clickable={clickable} /> : <RenderSteps steps={DefaultSteps} />}
     </ol>
     );
 };
 
 Steps.propTypes = {
     steps: PropTypes.array,
-    horizontal: PropTypes.bool
+    horizontal: PropTypes.bool,
+    clickable: PropTypes.bool
 };
 
 export default Steps;
