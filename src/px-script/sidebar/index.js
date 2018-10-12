@@ -43,21 +43,21 @@ class Sidebar {
 
     hideItems () {
         const firstFour = [...this._el.querySelectorAll("li")].filter(noInvis => !noInvis.classList.contains("itemInvis") && noInvis.querySelector("UL") === null && this._el.querySelector("UL") === noInvis.parentElement);
-        const hasTwoLevels = [...this._el.querySelectorAll("li")].filter(hasChild => hasChild.querySelector("ul"));
+        const hasTwoLevels = this._el.querySelectorAll(".submenu");
 
-        if (hasTwoLevels.length > 0) {
+        if (hasTwoLevels) {
             hasTwoLevels.forEach(levelTwo => {
-                levelTwo.classList.add("itemInvis");
+                levelTwo.parentElement.classList.add("itemInvis");
             });
 
             if (firstFour.length > 4) {
                 firstFour.slice(4).forEach(item => {
-                    item.classList.add("itemInvis");
+                    item.parentElement.classList.add("itemInvis");
                 });
             }
         } else {
             [...this._el.querySelectorAll("li")].slice(4).forEach(items => {
-                items.classList.add("itemInvis");
+                items.parentElement.classList.add("itemInvis");
             });
         }
     }

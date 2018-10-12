@@ -12,11 +12,9 @@ const Sidebar = ({ items, mode }) => {
                 {items.map(({ name, icon, subItems }, i) => (
                     <li key={`sidebar-item-${name}-${i}`}>
                         { subItems ?
-                            <>
-                                <span>
-                                    <i className="material-icons">{icon}</i>
-                                    {name}
-                                </span>
+                            <div className="submenu">
+                                <i className="material-icons">{icon}</i>
+                                <span>{name}</span>
                                 <ul>
                                     {subItems.map((itemsname, j) => (
                                         <li key={`sidebar-subItems-${itemsname}-${j}`}>
@@ -24,7 +22,7 @@ const Sidebar = ({ items, mode }) => {
                                         </li>
                                     ))}
                                 </ul>
-                            </>
+                            </div>
                             :
                             <a href="#">
                                 <i className="material-icons">{icon}</i>
