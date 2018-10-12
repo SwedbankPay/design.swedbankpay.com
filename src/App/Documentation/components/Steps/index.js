@@ -66,11 +66,43 @@ const HorizontalSteps = () => {
     );
 };
 
+const ClickableSteps = () => {
+    const steps = [
+        {
+            title: "Step one",
+            completed: true
+        },
+        {
+            title: "Step two",
+            ongoing: true
+        },
+        {
+            title: "Step three",
+            selected: true
+        },
+        {
+            title: "Step four"
+        }
+    ];
+
+    return (
+    <>
+        <h2 id="clickable-steps">Clickable steps</h2>
+        <p>Add an anchor element (<PrismCode className="language-html">{"<a>"}</PrismCode>) to the list item element ( <PrismCode className="language-html">{"<li>"}</PrismCode>). Ensure that all content within the list element is also inside the anchor element. </p>
+        
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <StepsComponent steps={steps} clickable />
+        </ComponentPreview>
+    </>
+    );
+};
+
 const StepsText = () => (
     <div className="col-12 col-lg-10 doc-body">
         <p className="lead">Steps.</p>
         <BasicSteps />
         <HorizontalSteps />
+        <ClickableSteps />
     </div>
 );
 
@@ -86,4 +118,4 @@ const Steps = () => (
 export default Steps;
 
 /* for testing */
-export { BasicSteps, HorizontalSteps, StepsText };
+export { BasicSteps, HorizontalSteps, ClickableSteps, StepsText };

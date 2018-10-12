@@ -1,12 +1,7 @@
-/* steps -> steps ?
-
- active -> Ongoing (circle) and selected (Gray)
-
- border top on li is weird on horizontal version
-
-Documentation for links, "li"'s without a link shouldn't be navigatable perhaps?
-Override default link behavior, take up full parent.
-
+/* 
+ - [Done] Anchor in list item 
+ - Responsive solution (view progress, go to step)
+ - Switch default (horisontal vs. vertical)?
  */
 
 .steps {
@@ -18,12 +13,32 @@ Override default link behavior, take up full parent.
     box-shadow: @default-box-shadow;
 
     li {
-        display: block;
         position: relative;
+        box-sizing: content-box;
         padding: 2rem 1.5rem 2rem 5.5rem;
         border-top: @border-width solid transparent;
         border-bottom: @border-width solid transparent;
         line-height: 1rem;
+
+        > a {
+            display: block;
+            /* Take full parent size, ignoring parents padding, and stil growing the parent with text from this element */
+            /* The small difference in padding (0.0625rem) is to account for the border */
+            /* TODO : variable */
+            padding: 2rem 1.5rem 2rem 5.5rem;
+            margin: -2.0625rem -1.5rem -2.0625rem -5.5rem;
+            border-top: @border-width solid transparent;
+            border-bottom: @border-width solid transparent;
+
+            color: @brand-primary;
+            cursor: pointer;
+
+            &:hover{
+                /* TODO : mixin? */
+                background-color: @gray-10;
+                border-color: @gray-9;
+            }
+        }
 
         /* Circle */
         &:before {
