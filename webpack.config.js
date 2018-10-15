@@ -13,7 +13,7 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const AppManifestWebpackPlugin = require("app-manifest-webpack-plugin");
 
 module.exports = (env, argv) => {
-    const version = pkg.version;
+    const version = env && env.semver ? env.semver : pkg.version;
     const isProd = argv.mode === "production";
     const isRelease = env && env.release === "true";
     const isDevServer = !!argv.host;
@@ -248,16 +248,6 @@ module.exports = (env, argv) => {
                         ],
                         delete: [
                             "./dist/temp"
-                        ]
-                    }, {
-                        mkdir: [
-                            "./temp"
-                        ],
-                        copy: [
-                            {
-                                source: "./dist",
-                                destination: `./temp/${basename}`
-                            }
                         ]
                     }
                 ]
