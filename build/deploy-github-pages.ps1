@@ -16,6 +16,7 @@ Add-Content "$Env:USERPROFILE\.git-credentials" "https://$($Env:access_token):x-
 git checkout -f gh-pages
 if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode)  }
 xcopy dist\* $formatted_basename\ /sy
+ls
 if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode)  }
 git add .
 if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode)  }
