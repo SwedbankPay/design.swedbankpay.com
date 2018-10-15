@@ -17,7 +17,7 @@ module.exports = (env, argv) => {
     const isProd = argv.mode === "production";
     const isRelease = env && env.release === "true";
     const isDevServer = !!argv.host;
-    const basename = env && env.basename ? `/${env.basename}` : "/";
+    const basename = env && env.basename ? `/${env.basename}/` : "/";
 
     const config = {
         entry: {
