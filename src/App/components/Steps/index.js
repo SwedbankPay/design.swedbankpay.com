@@ -30,13 +30,13 @@ const StepContent = ({completed, subtitle, title}) => (
     </>
 );
 
-const RenderSteps = ({ steps, clickable }) => (
+const RenderSteps = ({ steps }) => (
     <>
-        {steps.map(({ title, subtitle, completed, ongoing, selected }, i) => (
+        {steps.map(({ title, subtitle, completed, ongoing, selected, clickable }, i) => (      
             <li key={i} className={classnames(completed ? "steps-completed" : null,
                 ongoing ? "steps-ongoing" : null,
                 selected ? "steps-selected" : null)}>
-
+                {console.log(steps) }
                 {clickable ? <a><StepContent completed={completed} subtitle={subtitle} title={title}/></a> : <StepContent completed={completed} subtitle={subtitle} title={title}/> }
 
             </li>
@@ -44,15 +44,14 @@ const RenderSteps = ({ steps, clickable }) => (
     </>
 );
 
-const Steps = ({ steps, horizontal, clickable }) => {
+const Steps = ({ steps, horizontal }) => {
     const stepsClasses = classnames(
         "steps",
         horizontal ? "steps-horizontal" : null,
-        clickable ? "steps-clickable" : null
     );
 
     return (<ol className={stepsClasses}>
-        {steps ? <RenderSteps steps={steps} clickable={clickable} /> : <RenderSteps steps={DefaultSteps} />}
+        {steps ? <RenderSteps steps={steps} /> : <RenderSteps steps={DefaultSteps} />}
     </ol>
     );
 };
