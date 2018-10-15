@@ -14,12 +14,12 @@ git config --global user.email $Env:github_email
 git config --global user.name "payex-dev"
 Add-Content "$Env:USERPROFILE\.git-credentials" "https://$($Env:access_token):x-oauth-basic@github.com`n"
 git checkout -f gh-pages
-if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode )  }
+if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode)  }
 xcopy dist\* $formatted_basename\ /sy
-if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode )  }
+if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode)  }
 git add .
-if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode )  }
+if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode)  }
 git commit -m "GitHub release $Env:GitVersion_FullSemVer"
-if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode )  }
+if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode)  }
 git push
-if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode )  }
+if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode)  }
