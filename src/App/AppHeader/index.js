@@ -14,12 +14,7 @@ const AppHeader = ({ location }) => {
         <header className="topbar topbar-fixed designguide-header">
             <a className="topbar-logo" href="#"></a>
             <nav className="header-links">
-                {routes.map((route, i) => {
-                    const { title, path, exact } = route;
-                    const active = exact ? (pathname === path) : (pathname.startsWith(path));
-
-                    return <NavLink key={`root_link_${i}`} to={path} activeClassName="active">{title}</NavLink>;
-                })}
+                {routes.map((route, i) => <NavLink key={`root_link_${i}`} to={route.path} activeClassName="active">{route.title}</NavLink>)}
             </nav>
             <div className="topbar-info">
                 <div className="topbar-info-contact">

@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import { HashRouter as Router, Switch, Redirect, Route, withRouter } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Redirect, Route, withRouter } from "react-router-dom";
 
 import routes from "./routes/root.js";
 import AppHeader from "./AppHeader";
 import ErrorPage404 from "./ErrorPage404";
+
+const BASENAME = process.env.basename;
 
 class ScrollToTop extends Component {
     componentDidUpdate (prevProps) {
@@ -21,7 +23,7 @@ const ScrollToTopComponent = withRouter(ScrollToTop);
 
 const App = () => (
     <div id="px-designguide">
-        <Router>
+        <Router basename={BASENAME}>
             <ScrollToTopComponent>
                 <AppHeader />
                 <Switch>

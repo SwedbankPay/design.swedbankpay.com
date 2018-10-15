@@ -4,7 +4,9 @@ exports[`Main: App renders 1`] = `
 <div
   id="px-designguide"
 >
-  <HashRouter>
+  <BrowserRouter
+    basename="/TEST"
+  >
     <withRouter(ScrollToTop)>
       <withRouter(AppHeader) />
       <Switch>
@@ -31,6 +33,6 @@ exports[`Main: App renders 1`] = `
         />
       </Switch>
     </withRouter(ScrollToTop)>
-  </HashRouter>
+  </BrowserRouter>
 </div>
 `;
