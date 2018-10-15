@@ -45,7 +45,6 @@ exports[`Documentation: index renders 1`] = `
                   "IntroductionText": [Function],
                   "JavaScript": [Function],
                   "QuickStart": [Function],
-                  "StarterTemplate": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/getting-started/introduction",

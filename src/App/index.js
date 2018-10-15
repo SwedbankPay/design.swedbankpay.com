@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import { Router, Switch, Route, withRouter } from "react-router-dom";
-import createBrowserHistory from "history/createBrowserHistory";
+import { BrowserRouter as Router, Switch, Route, withRouter } from "react-router-dom";
 
 import routes from "./routes/root.js";
 import AppHeader from "./AppHeader";
 import ErrorPage404 from "./ErrorPage404";
 
-const history = createBrowserHistory();
+const BASENAME = process.env.basename;
 
 class ScrollToTop extends Component {
     componentDidUpdate (prevProps) {
@@ -24,7 +23,7 @@ const ScrollToTopComponent = withRouter(ScrollToTop);
 
 const App = () => (
     <div id="px-designguide">
-        <Router history={history}>
+        <Router basename={BASENAME}>
             <ScrollToTopComponent>
                 <AppHeader />
                 <Switch>
@@ -33,7 +32,7 @@ const App = () => (
                         const RouteComponent = component.default;
 
                         return (
-                            <Route key={i} exact={exact} path={path} render={() => {
+                            <Route key={`component_${i}`} exact={exact} path={path} render={() => {
                                 if (process.env.google) {
                                     history.listen(location => {
                                         window.gtag("config", "UA-3440932-20", {

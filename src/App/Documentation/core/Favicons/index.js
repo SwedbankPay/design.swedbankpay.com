@@ -4,12 +4,14 @@ import PrismCode from "react-prism";
 import { ComponentPreview, DocToc, Attribute } from "#";
 import Button from "@/Button";
 
+const BASENAME = process.env.basename;
+
 const OurFavicon = () => (
     <>
         <h2 id="our-favicon">Our favicon</h2>
         <p>Our favicon...</p>
         <ComponentPreview language="html" showCasePanel>
-            <img src="/icons/android-chrome-96x96.png" alt="PayEx favicon"/>
+            <img src={`${BASENAME}/icons/android-chrome-96x96.png`} alt="PayEx favicon"/>
         </ComponentPreview>
     </>
 );

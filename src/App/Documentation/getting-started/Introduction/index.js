@@ -2,11 +2,10 @@ import React from "react";
 import PrismCode from "react-prism";
 
 import { ComponentPreview, DocToc } from "#";
-import pkg from "~/package.json";
 
-const version = pkg.version;
-const scriptUrl = `https://design.payex.com/v/${version}/scripts/px-script.js`;
-const styleUrl = `https://design.payex.com/v/${version}/styles/px.css`;
+const BASENAME = process.env.basename;
+const scriptUrl = `https://design.payex.com${BASENAME}/scripts/px-script.js`;
+const styleUrl = `https://design.payex.com${BASENAME}/styles/px.css`;
 
 const QuickStart = () => (
     <>
@@ -35,36 +34,12 @@ const JavaScript = () => (
     </>
 );
 
-const StarterTemplate = () => (
-    <>
-        <h2 id="starter-template">Starter template</h2>
-        <p>As a starting point you can use the following template</p>
-        <ComponentPreview language="html" codeFigure>
-            <html lang="en">
-                <head>
-                    <meta charSet="utf-8" />
-                    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-                    <link rel="stylesheet" href={styleUrl} />
-
-                    <title>Hello, PayEx!</title>
-                </head>
-                <body>
-                    <h1>Hello, PayEx!</h1>
-                    <script src={scriptUrl}></script>
-                </body>
-            </html>
-        </ComponentPreview>
-    </>
-);
-
 const IntroductionText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
         <p className="lead">Get started with the PayEx DesignGuide.</p>
         <QuickStart />
         <Css />
         <JavaScript />
-        {/* <StarterTemplate /> */}
     </div>
 );
 
@@ -80,4 +55,4 @@ const Introduction = () => (
 export default Introduction;
 
 /* For testing */
-export { QuickStart, Css, JavaScript, StarterTemplate, IntroductionText };
+export { QuickStart, Css, JavaScript, IntroductionText };

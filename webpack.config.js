@@ -1,22 +1,23 @@
 /* eslint camelcase: 0, object-curly-newline: 0 */
 const pkg = require("./package.json");
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const autoprefixer = require("autoprefixer");
-const AppManifestWebpackPlugin = require("app-manifest-webpack-plugin");
-const lessListPlugin = require("less-plugin-lists");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const FileManagerPlugin = require("filemanager-webpack-plugin");
+const lessListPlugin = require("less-plugin-lists");
 const SentryCliPlugin = require("@sentry/webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const FileManagerPlugin = require("filemanager-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const AppManifestWebpackPlugin = require("app-manifest-webpack-plugin");
 
 module.exports = (env, argv) => {
     const version = pkg.version;
     const isProd = argv.mode === "production";
     const isRelease = env && env.release === "true";
     const isDevServer = !!argv.host;
+    const basename = env && env.basename ? `/${env.basename}` : "/";
 
     const config = {
         entry: {
@@ -30,13 +31,13 @@ module.exports = (env, argv) => {
         output: {
             library: "payex",
             path: path.resolve(__dirname, "dist"),
-            filename: `v/${version}/scripts/[name].js?[hash]`,
-            publicPath: "/"
+            filename: "scripts/[name].js?[hash]",
+            publicPath: basename
         },
         devtool: "source-map",
         devServer: {
             contentBase: path.resolve(__dirname, "dist"),
-            publicPath: "/",
+            publicPath: basename,
             compress: true,
             port: 3000,
             hot: true,
@@ -188,7 +189,14 @@ module.exports = (env, argv) => {
                 }
             }),
             new MiniCssExtractPlugin({
-                filename: `v/${version}/styles/[name].css`
+                filename: "styles/[name].css"
+            }),
+            new webpack.DefinePlugin({
+                "process.env": {
+                    basename: JSON.stringify(basename),
+                    sentry: false,
+                    google: false
+                }
             }),
             new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/) // For now this ignores moment's locale folder, which doubles moment's size..
         ]
@@ -200,7 +208,8 @@ module.exports = (env, argv) => {
                 onStart: [
                     {
                         delete: [
-                            "./dist"
+                            "./dist",
+                            "./temp"
                         ]
                     }
                 ],
@@ -209,17 +218,45 @@ module.exports = (env, argv) => {
                         copy: [
                             {
                                 source: "./dist/icons",
-                                destination: "./dist/temp/icons"
+                                destination: "./dist/temp/icons/icons"
+                            },
+                            {
+                                source: "./dist/scripts/px-script.js",
+                                destination: "./dist/temp/release/scripts"
+                            },
+                            {
+                                source: "./dist/scripts/px-script.js.map",
+                                destination: "./dist/temp/release/scripts"
+                            },
+                            {
+                                source: "./dist/styles/px.css",
+                                destination: "./dist/temp/release/styles"
                             }
+                        ],
+                        mkdir: [
+                            "./dist/release"
                         ],
                         archive: [
                             {
-                                source: "./dist/temp",
-                                destination: "./dist/icons.zip"
+                                source: "./dist/temp/icons",
+                                destination: "./dist/release/icons.zip"
                             },
                             {
-                                source: `./dist/v/${version}`,
-                                destination: `./dist/temp/PayEx.DesignGuide.v${version}.zip`
+                                source: "./dist/temp/release",
+                                destination: `./dist/release/PayEx.DesignGuide.v${version}.zip`
+                            }
+                        ],
+                        delete: [
+                            "./dist/temp"
+                        ]
+                    }, {
+                        mkdir: [
+                            "./temp"
+                        ],
+                        copy: [
+                            {
+                                source: "./dist",
+                                destination: `./temp/${basename}`
                             }
                         ]
                     }
