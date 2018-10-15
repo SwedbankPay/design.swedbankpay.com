@@ -17,8 +17,7 @@ const BasicSteps = () => {
             ongoing: true
         },
         {
-            title: "Step three",
-            selected: true
+            title: "Step three"
         },
         {
             title: "Step four"
@@ -47,8 +46,7 @@ const HorizontalSteps = () => {
             ongoing: true
         },
         {
-            title: "Step three",
-            selected: true
+            title: "Step three"
         },
         {
             title: "Step four"
@@ -70,15 +68,18 @@ const ClickableSteps = () => {
     const steps = [
         {
             title: "Step one",
-            completed: true
+            completed: true,
+            clickable: true
         },
         {
             title: "Step two",
-            ongoing: true
+            ongoing: true,
+            clickable: true
         },
         {
             title: "Step three",
-            selected: true
+            selected: true,
+            clickable: true
         },
         {
             title: "Step four"
@@ -88,10 +89,14 @@ const ClickableSteps = () => {
     return (
     <>
         <h2 id="clickable-steps">Clickable steps</h2>
-        <p>Add an anchor element (<PrismCode className="language-html">{"<a>"}</PrismCode>) to the list item element ( <PrismCode className="language-html">{"<li>"}</PrismCode>). Ensure that all content within the list element is also inside the anchor element. </p>
+        <p>
+            Add an anchor element (<PrismCode className="language-html">{"<a>"}</PrismCode>) to the list item element ( <PrismCode className="language-html">{"<li>"}</PrismCode>). 
+            Ensure that all content within the list element is also inside the anchor element. 
+            <br/>Clickable steps is not working properly
+        </p>
         
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <StepsComponent steps={steps} clickable />
+            <StepsComponent steps={steps} />
         </ComponentPreview>
     </>
     );
