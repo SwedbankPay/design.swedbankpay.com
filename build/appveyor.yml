@@ -59,7 +59,7 @@ test_script:
 #     deployment configuration    #
 #---------------------------------#
 
-before_deploy:
+after_test:
 - ps: ./build/deploy-github-pages.ps1
 
 deploy:
