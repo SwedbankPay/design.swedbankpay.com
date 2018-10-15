@@ -34,6 +34,7 @@
         "react-dom": "^16.5.2",
         "react-prism": "^4.3.2",
         "react-router-dom": "^4.3.1",
+        "react-router-hash-link": "^1.2.0",
         "rome": "^2.1.22"
     },
     "devDependencies": {

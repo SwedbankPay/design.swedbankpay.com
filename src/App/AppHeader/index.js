@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, withRouter } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
 
 import { GithubLogo, SlackLogo } from "./HeaderIcons";
 
@@ -18,7 +18,7 @@ const AppHeader = ({ location }) => {
                     const { title, path, exact } = route;
                     const active = exact ? (pathname === path) : (pathname.startsWith(path));
 
-                    return <Link key={i} to={path} className={active ? "active" : ""}>{title}</Link>;
+                    return <NavLink key={`root_link_${i}`} to={path} activeClassName="active">{title}</NavLink>;
                 })}
             </nav>
             <div className="topbar-info">

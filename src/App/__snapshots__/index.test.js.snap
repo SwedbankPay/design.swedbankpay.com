@@ -4,16 +4,20 @@ exports[`Main: App renders 1`] = `
 <div
   id="px-designguide"
 >
-  <BrowserRouter
-    basename="/TEST"
-  >
+  <HashRouter>
     <withRouter(ScrollToTop)>
       <withRouter(AppHeader) />
       <Switch>
+        <Redirect
+          exact={true}
+          from="/"
+          push={false}
+          to="/home"
+        />
         <Route
           exact={true}
           key="component_0"
-          path="/"
+          path="/home"
           render={[Function]}
         />
         <Route
@@ -27,6 +31,6 @@ exports[`Main: App renders 1`] = `
         />
       </Switch>
     </withRouter(ScrollToTop)>
-  </BrowserRouter>
+  </HashRouter>
 </div>
 `;

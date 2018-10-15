@@ -1,7 +1,7 @@
 export default [
     {
         title: "Home",
-        path: "/",
+        path: "/home",
         component: require("../Home"),
         exact: true
     },
