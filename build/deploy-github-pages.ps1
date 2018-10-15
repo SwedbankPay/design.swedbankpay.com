@@ -1,10 +1,10 @@
 if (($Env:APPVEYOR_REPO_TAG -eq "true") -and ($Env:GitVersion_BranchName -eq "master")) {
     # Store content of CHANGELOG.md in env variable
     $Env:changelog = [IO.File]::ReadAllText("C:\projects\design-payex-com\CHANGELOG.md")
-}
 
-# Push artifact to appveyor
-Push-AppveyorArtifact "dist/temp/PayEx.DesignGuide.v$($Env:GitVersion_SemVer).zip"
+    # Push artifact to appveyor
+    Push-AppveyorArtifact "dist/release/PayEx.DesignGuide.v$($Env:GitVersion_FullSemVer).zip"
+}
 
 # Deploy to gh-pages
 git config --global credential.helper store
