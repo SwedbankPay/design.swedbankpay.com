@@ -35,7 +35,7 @@ const BasicSteps = () => {
     );
 };
 
-const HorizontalSteps = () => {
+const VerticalSteps = () => {
     const steps = [
         {
             title: "Step one",
@@ -55,10 +55,10 @@ const HorizontalSteps = () => {
 
     return (
     <>
-        <h2 id="horizontal-steps">Horizontal steps</h2>
-        <p>In addition to class <code className="token property">.steps</code>, add the extension class <code className="token property">.steps-horizontal</code> to an <PrismCode className="language-html">{"<ol>"}</PrismCode> element.</p>
+        <h2 id="vertical-steps">Vertical steps</h2>
+        <p>In addition to class <code className="token property">.steps</code>, add the extension class <code className="token property">.steps-vertical</code> to an <PrismCode className="language-html">{"<ol>"}</PrismCode> element.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <StepsComponent steps={steps} horizontal />
+            <StepsComponent steps={steps} vertical />
         </ComponentPreview>
     </>
     );
@@ -106,7 +106,7 @@ const StepsText = () => (
     <div className="col-12 col-lg-10 doc-body">
         <p className="lead">Steps.</p>
         <BasicSteps />
-        <HorizontalSteps />
+        <VerticalSteps />
         <ClickableSteps />
     </div>
 );
@@ -123,4 +123,4 @@ const Steps = () => (
 export default Steps;
 
 /* for testing */
-export { BasicSteps, HorizontalSteps, ClickableSteps, StepsText };
+export { BasicSteps, VerticalSteps, ClickableSteps, StepsText };
