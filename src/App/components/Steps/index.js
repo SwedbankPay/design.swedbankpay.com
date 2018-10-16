@@ -44,10 +44,10 @@ const RenderSteps = ({ steps }) => (
     </>
 );
 
-const Steps = ({ steps, horizontal }) => {
+const Steps = ({ steps, vertical }) => {
     const stepsClasses = classnames(
         "steps",
-        horizontal ? "steps-horizontal" : null,
+        vertical ? "steps-vertical" : null,
     );
 
     return (<ol className={stepsClasses}>
@@ -58,7 +58,7 @@ const Steps = ({ steps, horizontal }) => {
 
 Steps.propTypes = {
     steps: PropTypes.array,
-    horizontal: PropTypes.bool,
+    vertical: PropTypes.bool,
     clickable: PropTypes.bool
 };
 
