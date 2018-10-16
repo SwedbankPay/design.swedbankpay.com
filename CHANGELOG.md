@@ -4,6 +4,8 @@
 
 ### Added
 
+-- Added Sidebar component.
+
 ### Changed
 
 ### Fixed
