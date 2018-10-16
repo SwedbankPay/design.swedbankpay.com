@@ -382,7 +382,11 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
-                  "Overview": [Function],
+                  "Responsive": [Function],
+                  "SidebarText": [Function],
+                  "StandardSidebar": [Function],
+                  "TabletMode": [Function],
+                  "TwoLevels": [Function],
                   "default": [Function],
                 },
                 "path": "/docs/components/sidebar",

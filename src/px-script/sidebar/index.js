@@ -2,17 +2,18 @@ class Sidebar {
     constructor (el) {
         this._el = el;
         this.sidebarOpen = el.classList.contains("sidebar-expanded");
-        this.childCount = this._el.querySelectorAll(".submenu").length;
+        this.childCount = [...this._el.querySelectorAll(".submenu")].length;
         this.submenus = this._el.querySelectorAll(".submenu");
         this.listItems = [...this._el.querySelectorAll("li")].length;
-        this.submenuOpen;
-        this.resizeEventFunc;
+        this.resizeEventMenuOpen;
+        this.resizeEventSubmenuOpen;
+        this.submenuClosed;
 
         document.addEventListener("click", e => {
             if (!e.target.closest(".sidebar") && this.sidebarOpen) {
                 this.close();
                 this.hideItems();
-            } else if (!e.target.closest(".submenu") && !this.submenuOpen) {
+            } else if (!e.target.closest(".submenu") && !this.submenuClosed) {
                 this.submenuCloseAll();
             }
         });
@@ -20,13 +21,13 @@ class Sidebar {
         if (this.listItems > 4 || this.childCount > 0) {
             const menu = document.createElement("a");
 
-            // menu.setAttribute("href", "#");
+            menu.setAttribute("href", "#");
             this.hideItems();
             menu.classList.add("sidebar-expandbtn");
             menu.innerHTML += "<i class='material-icons'>menu</i>";
             this._el.appendChild(menu);
 
-            menu.querySelector("i").addEventListener("click", e => {
+            menu.addEventListener("click", e => {
                 e.preventDefault();
 
                 if (this.sidebarOpen) {
@@ -41,11 +42,14 @@ class Sidebar {
 
         if (this.submenus) {
             this.submenus.forEach(submenu => {
-                submenu.addEventListener("click", e => {
-                    this.submenuOpen = submenu.classList.contains("submenu-open");
+                submenu.addEventListener("click", () => {
+                    this.submenuClosed = submenu.classList.contains("submenu-open");
+                    console.log(this.submenuClosed);
 
-                    if (!this.submenuOpen) {
+                    if (!this.submenuClosed) {
                         this.submenuCloseAll();
+                        this.resizeEventSubmenuOpen = this.onResize.bind(this);
+                        window.addEventListener("resize", this.resizeEventSubmenuOpen, { passive: true });
                         submenu.classList.add("submenu-open");
                     } else {
                         this.submenuCloseAll();
@@ -56,6 +60,7 @@ class Sidebar {
     }
 
     submenuCloseAll () {
+        window.removeEventListener("resize", this.resizeEventSubmenuOpen, { passive: true });
         this.submenus.forEach(submenu => submenu.classList.remove("submenu-open"));
     }
 
@@ -68,17 +73,10 @@ class Sidebar {
     }
 
     hideItems () {
-        const firstFour = [...this._el.querySelectorAll("li")].filter(notHidden => !notHidden.classList.contains("itemHidden") && notHidden.querySelector("ul") === null && this._el.querySelector("UL") === notHidden.parentElement);
-        console.log(firstFour);
+        const firstFour = [...this._el.querySelectorAll("li")].filter(notHidden => !notHidden.classList.contains("itemHidden") && notHidden.querySelector(".submenu") === null && this._el.querySelector("UL") === notHidden.parentElement);
 
-        const firstFourv2 = [...this._el.querySelectorAll("li")].filter(noChildren => noChildren.querySelectorAll(".submenu").length === 0);
-
-        console.log(firstFourv2);
-
-        const submenus = this._el.querySelectorAll(".submenu");
-
-        if (submenus.length > 0) {
-            submenus.forEach(levelTwo => {
+        if (this.submenus.length > 0) {
+            this.submenus.forEach(levelTwo => {
                 levelTwo.parentElement.classList.add("itemHidden");
             });
 
@@ -97,19 +95,20 @@ class Sidebar {
     onResize () {
         this.close();
         this.hideItems();
+        this.submenuCloseAll();
     }
 
     open () {
         this.sidebarOpen = true;
         this._el.classList.add("sidebar-expand");
-        this.resizeEventFunc = this.onResize.bind(this);
-        window.addEventListener("resize", this.resizeEventFunc, { passive: true });
+        this.resizeEventMenuOpen = this.onResize.bind(this);
+        window.addEventListener("resize", this.resizeEventMenuOpen, { passive: true });
     }
 
     close () {
         this.sidebarOpen = false;
         this._el.classList.remove("sidebar-expand");
-        window.removeEventListener("resize", this.resizeEventFunc, { passive: true });
+        window.removeEventListener("resize", this.resizeEventMenuOpen, { passive: true });
     }
 }
 

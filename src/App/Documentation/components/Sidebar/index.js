@@ -54,12 +54,12 @@ const sidebarItemsTwoLevels = [
     }
 ];
 
-const StandardUsage = () => (
+const StandardSidebar = () => (
     <>
-        <h2 id="sidebar-standard">Standard usage</h2>
+        <h2 id="sidebar-standard">Standard sidebar</h2>
         <p>
             Add class <code className="token property">.sidebar</code> and <code className="token property">.sidebar-vertical-wide-desired_size</code> to a nav containing an <PrismCode className="language-html">{"<ul>"}</PrismCode> with <PrismCode className="language-html">{"<li>"}</PrismCode> items to get a standard sidebar.
-            Add <PrismCode className="language-html">{"<i>"}</PrismCode> and <PrismCode className="language-html">{"<span>"}</PrismCode> with your desired <Link to="/docs/core/icons">icon</Link> and text. <code className="token property">.sidebar-vertical-wide-desired_size</code> determines 
+            Add <PrismCode className="language-html">{"<i>"}</PrismCode> and <PrismCode className="language-html">{"<span>"}</PrismCode> with your desired <Link to="/docs/core/icons">icon</Link> and text. <code className="token property">.sidebar-vertical-wide-desired_size</code> determines
             when your sidebar will switch from responsive mode to vertical. Only the first four icons will be visible in responsive mode.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
@@ -96,7 +96,7 @@ const TabletMode = () => (
 
 const Responsive = () => (
     <>
-        <h2 id="vertical-sidebar-wide">Vertical sidebar with text</h2>
+        <h2 id="responsive-sidebar">Responsive sidebar</h2>
         <p>
             To only use responsive mode use class <code className="token property">.sidebar</code> alone.
         </p>
@@ -109,7 +109,7 @@ const Responsive = () => (
 const SidebarText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
         <p className="lead">Sidebars...</p>
-        <StandardUsage />
+        <StandardSidebar />
         <TwoLevels />
         <TabletMode />
         <Responsive />
@@ -140,4 +140,4 @@ class Sidebar extends Component {
 export default Sidebar;
 
 /* For testing */
-export { StandardUsage, TwoLevels, TabletMode };
+export { StandardSidebar, TwoLevels, TabletMode, Responsive, SidebarText };

@@ -1,0 +1,333 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Sidebar Responsive renders 1`] = `
+<Fragment>
+  <h2
+    id="responsive-sidebar"
+  >
+    Responsive sidebar
+  </h2>
+  <p>
+    To only use responsive mode use class 
+    <code
+      className="token property"
+    >
+      .sidebar
+    </code>
+     alone.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Sidebar
+      items={
+        Array [
+          Object {
+            "icon": "home",
+            "name": "Home",
+          },
+          Object {
+            "icon": "shopping_cart",
+            "name": "Transactions",
+          },
+          Object {
+            "icon": "favorite",
+            "name": "Favorites",
+          },
+          Object {
+            "icon": "language",
+            "name": "Language",
+          },
+          Object {
+            "icon": "account_balance",
+            "name": "Account",
+          },
+        ]
+      }
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Component: Sidebar SidebarText renders 1`] = `
+<div
+  className="col-md-12 col-lg-10 doc-body"
+>
+  <p
+    className="lead"
+  >
+    Sidebars...
+  </p>
+  <StandardSidebar />
+  <TwoLevels />
+  <TabletMode />
+  <Responsive />
+</div>
+`;
+
+exports[`Component: Sidebar StandardSidebar renders 1`] = `
+<Fragment>
+  <h2
+    id="sidebar-standard"
+  >
+    Standard sidebar
+  </h2>
+  <p>
+    Add class 
+    <code
+      className="token property"
+    >
+      .sidebar
+    </code>
+     and 
+    <code
+      className="token property"
+    >
+      .sidebar-vertical-wide-desired_size
+    </code>
+     to a nav containing an 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;ul&gt;
+    </PrismCode>
+     with 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;li&gt;
+    </PrismCode>
+     items to get a standard sidebar. Add 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;i&gt;
+    </PrismCode>
+     and 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;span&gt;
+    </PrismCode>
+     with your desired 
+    <Link
+      replace={false}
+      to="/docs/core/icons"
+    >
+      icon
+    </Link>
+     and text. 
+    <code
+      className="token property"
+    >
+      .sidebar-vertical-wide-desired_size
+    </code>
+     determines when your sidebar will switch from responsive mode to vertical. Only the first four icons will be visible in responsive mode.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Sidebar
+      items={
+        Array [
+          Object {
+            "icon": "home",
+            "name": "Home",
+          },
+          Object {
+            "icon": "shopping_cart",
+            "name": "Transactions",
+          },
+          Object {
+            "icon": "favorite",
+            "name": "Favorites",
+          },
+          Object {
+            "icon": "language",
+            "name": "Language",
+          },
+          Object {
+            "icon": "account_balance",
+            "name": "Account",
+          },
+        ]
+      }
+      mode="wide-lg"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Component: Sidebar TabletMode renders 1`] = `
+<Fragment>
+  <h2
+    id="tablet-sidebar"
+  >
+    Tablet mode
+  </h2>
+  <p>
+    To display only icons use class 
+    <code
+      className="token property"
+    >
+      .sidebar-vertical-desired_size
+    </code>
+    .  
+    <code
+      className="token property"
+    >
+      .sidebar-vertical-desired_size
+    </code>
+     works just like in the standard example. In this mode it is possible to display another level of items.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Sidebar
+      items={
+        Array [
+          Object {
+            "icon": "home",
+            "name": "Home",
+          },
+          Object {
+            "icon": "shopping_cart",
+            "name": "Transactions",
+          },
+          Object {
+            "icon": "favorite",
+            "name": "Favorites",
+            "subItems": Array [
+              "Music",
+              "Movies",
+              "Employees",
+            ],
+          },
+          Object {
+            "icon": "language",
+            "name": "Language",
+          },
+          Object {
+            "icon": "account_balance",
+            "name": "Account",
+            "subItems": Array [
+              "Email",
+              "Information",
+              "Other things",
+            ],
+          },
+        ]
+      }
+      mode="md"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Component: Sidebar TwoLevels renders 1`] = `
+<Fragment>
+  <h2
+    id="twolevels-sidebar"
+  >
+    Standard sidebar with two levels
+  </h2>
+  <p>
+    You can also nest another level of items in the standard sidebar. Just nest a 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;div&gt;
+    </PrismCode>
+     with class 
+    <code
+      className="token property"
+    >
+      .submenu
+    </code>
+     containing an icon and text like the standard sidebar and add a new 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;ul&gt;
+    </PrismCode>
+     with 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;li&gt;
+    </PrismCode>
+     items. This level does not use icons. List items containing another level are not visible in responsive mode, they will be displayed when the items are expanded.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Sidebar
+      items={
+        Array [
+          Object {
+            "icon": "home",
+            "name": "Home",
+          },
+          Object {
+            "icon": "shopping_cart",
+            "name": "Transactions",
+          },
+          Object {
+            "icon": "favorite",
+            "name": "Favorites",
+            "subItems": Array [
+              "Music",
+              "Movies",
+              "Employees",
+            ],
+          },
+          Object {
+            "icon": "language",
+            "name": "Language",
+          },
+          Object {
+            "icon": "account_balance",
+            "name": "Account",
+            "subItems": Array [
+              "Email",
+              "Information",
+              "Other things",
+            ],
+          },
+        ]
+      }
+      mode="wide-lg"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Component: Sidebar renders 1`] = `
+<div
+  className="doc-container"
+>
+  <div
+    className="row"
+  >
+    <SidebarText />
+    <DocToc
+      component={[Function]}
+    />
+  </div>
+</div>
+`;
