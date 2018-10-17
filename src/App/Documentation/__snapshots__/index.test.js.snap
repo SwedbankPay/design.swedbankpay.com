@@ -390,7 +390,7 @@ exports[`Documentation: index renders 1`] = `
                   "default": [Function],
                 },
                 "path": "/docs/components/sidebar",
-                "title": "Sidebar",
+                "title": "Sidebar (experimental)",
               },
               Object {
                 "component": Object {

@@ -1,9 +1,10 @@
 import React from "react";
 import classnames from "classnames";
 
-const Sidebar = ({ items, mode }) => {
+const Sidebar = ({ items, vertsize, widesize }) => {
     const sidebarClassname = classnames("sidebar",
-        mode ? `sidebar-vertical-${mode}` : ""
+        vertsize ? `sidebar-${vertsize}-vertical` : "",
+        widesize ? `sidebar-${widesize}-vertical-wide` : ""
     );
 
     return (

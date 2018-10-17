@@ -165,7 +165,7 @@ export default [
                 component: require("../Documentation/components/Sheet")
             },
             {
-                title: "Sidebar",
+                title: "Sidebar (experimental)",
                 path: "/docs/components/sidebar",
                 component: require("../Documentation/Components/Sidebar")
             },

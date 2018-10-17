@@ -1,7 +1,7 @@
 class Sidebar {
     constructor (el) {
         this._el = el;
-        this.sidebarOpen = el.classList.contains("sidebar-expanded");
+        this.sidebarOpen = el.classList.contains("sidebar-open");
         this.childCount = [...this._el.querySelectorAll(".submenu")].length;
         this.submenus = this._el.querySelectorAll(".submenu");
         this.listItems = [...this._el.querySelectorAll("li")].length;
@@ -11,19 +11,19 @@ class Sidebar {
 
         document.addEventListener("click", e => {
             if (!e.target.closest(".sidebar") && this.sidebarOpen) {
-                this.close();
+                this.closeSidebar();
                 this.hideItems();
             } else if (!e.target.closest(".submenu") && !this.submenuClosed) {
                 this.submenuCloseAll();
             }
         });
 
-        if (this.listItems > 4 || this.childCount > 0) {
+        if (this.listItems > 5 || this.childCount > 0) {
             const menu = document.createElement("a");
 
             menu.setAttribute("href", "#");
             this.hideItems();
-            menu.classList.add("sidebar-expandbtn");
+            menu.classList.add("sidebar-openbtn");
             menu.innerHTML += "<i class='material-icons'>menu</i>";
             this._el.appendChild(menu);
 
@@ -31,10 +31,10 @@ class Sidebar {
                 e.preventDefault();
 
                 if (this.sidebarOpen) {
-                    this.close();
+                    this.closeSidebar();
                     this.hideItems();
                 } else {
-                    this.open();
+                    this.openSidebar();
                     this.showItems();
                 }
             });
@@ -42,9 +42,12 @@ class Sidebar {
 
         if (this.submenus) {
             this.submenus.forEach(submenu => {
-                submenu.addEventListener("click", () => {
+                const submenuCopy = submenu.querySelector("i").cloneNode(true);
+
+                submenuCopy.classList.add("submenuIcon-clickable");
+                submenu.insertBefore(submenuCopy, submenu.querySelector("i"));
+                submenuCopy.addEventListener("click", () => {
                     this.submenuClosed = submenu.classList.contains("submenu-open");
-                    console.log(this.submenuClosed);
 
                     if (!this.submenuClosed) {
                         this.submenuCloseAll();
@@ -65,11 +68,7 @@ class Sidebar {
     }
 
     showItems () {
-        [...this._el.querySelectorAll("li")].forEach(listItem => {
-            if (listItem.classList.contains("itemHidden")) {
-                listItem.classList.remove("itemHidden");
-            }
-        });
+        [...this._el.querySelectorAll("li")].forEach(listItem => listItem.classList.remove("itemHidden"));
     }
 
     hideItems () {
@@ -93,21 +92,21 @@ class Sidebar {
     }
 
     onResize () {
-        this.close();
+        this.closeSidebar();
         this.hideItems();
         this.submenuCloseAll();
     }
 
-    open () {
+    openSidebar () {
         this.sidebarOpen = true;
-        this._el.classList.add("sidebar-expand");
+        this._el.classList.add("sidebar-open");
         this.resizeEventMenuOpen = this.onResize.bind(this);
         window.addEventListener("resize", this.resizeEventMenuOpen, { passive: true });
     }
 
-    close () {
+    closeSidebar () {
         this.sidebarOpen = false;
-        this._el.classList.remove("sidebar-expand");
+        this._el.classList.remove("sidebar-open");
         window.removeEventListener("resize", this.resizeEventMenuOpen, { passive: true });
     }
 }
