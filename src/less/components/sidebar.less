@@ -2,12 +2,17 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    margin: @sidebar-margin-responsive;
 
     > ul {
         display: flex;
         padding: 0;
         margin: 0;
         list-style: none;
+
+        :first-child {
+            margin-left: 0;
+        }
 
         li {
             margin-left: @base-margin-sm;
@@ -23,12 +28,12 @@
                 }
             }
 
-            &.itemHidden {
+            &.responsive-hidden {
                 display: none;
             }
 
             span {
-                color: @gray-4;
+                color: @gray-5;
             }
 
             .submenu {
@@ -53,7 +58,7 @@
                 li {
                     margin: 0;
 
-                    .submenuIcon-clickable {
+                    .submenu-icon-clickable {
                         display: none;
                     }
 
@@ -76,7 +81,6 @@
 
         &.sidebar-openbtn {
             margin-top: @base-margin-sm;
-            margin-right: @base-margin-sm;
 
             &:hover {
                 cursor: pointer;
@@ -92,12 +96,13 @@
 .sidebar-vertical () {
     ul {
         flex-direction: column;
+        margin: @sidebar-margin-tablet;
 
         li {
             margin: 0;
 
-            &.itemHidden {
-                display: block;
+            &.responsive-hidden {
+                display: list-item;
 
                 .submenu {
                     span,
@@ -112,8 +117,8 @@
                 .material-icons {
                     display: none;
 
-                    &.submenuIcon-clickable {
-                        display: block;
+                    &.submenu-icon-clickable {
+                        display: list-item;
                         cursor: pointer;
                     }
                 }
@@ -169,7 +174,7 @@
 
             i {
                 margin-right: 0;
-                font-size: @submenu-tablet-icon-fontsize;
+                font-size: @submenu-icon-fontsize-tablet;
                 padding: @base-padding-sm;
                 padding-left: @submenu-p-icon-left;
                 line-height: @sidebar-icon-lineheight;
@@ -189,14 +194,16 @@
         display: none;
     }
 
+    margin: @sidebar-margin;
+
     ul {
+        > :first-child {
+            margin-top: 0;
+        }
+
         li {
             margin-left: @base-margin-sm;
             margin-top: @base-margin-sm;
-
-            &:first-child {
-                margin-top: 0;
-            }
 
             &:last-child {
                 .submenu {
@@ -206,11 +213,14 @@
                 }
             }
 
-            &.itemHidden {
-                display: block;
+            &.responsive-hidden {
+                display: list-item;
 
                 .submenu {
-                    span,
+                    span {
+                        display: inline;
+                    }
+
                     ul {
                         display: block;
                     }
@@ -219,7 +229,7 @@
 
             a {
                 span {
-                    display: block;
+                    display: inline;
                 }
             }
 
@@ -230,9 +240,9 @@
             div {
                 &.submenu {
                     .material-icons {
-                        display: block;
+                        display: inline;
 
-                        &.submenuIcon-clickable {
+                        &.submenu-icon-clickable {
                             display: none;
                         }
                     }
@@ -246,15 +256,16 @@
     > ul {
         flex-direction: column;
 
-        li {
-            &:first-child {
-                margin-top: 0;
-            }
+        > :first-child {
+            margin-top: 0;
+            margin-left: @base-margin-sm;
+        }
 
+        li {
             a,
             span {
                 span {
-                    display: block;
+                    display: inline;
                     color: @brand-primary;
 
                     &:hover {
@@ -265,15 +276,17 @@
 
             div {
                 &.submenu {
-                    display: inline-flex;
-                    flex-wrap: wrap;
-
-                    .submenuIcon-clickable {
+                    .submenu-icon-clickable {
                         display: none;
                     }
 
                     > ul {
                         width: 100%;
+                    }
+
+                    .material-icons {
+                        margin-right: calc(@base-margin - 4px);
+                        vertical-align: -5px;
                     }
                 }
             }

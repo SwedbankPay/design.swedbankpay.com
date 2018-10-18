@@ -44,7 +44,7 @@ class Sidebar {
             this.submenus.forEach(submenu => {
                 const submenuCopy = submenu.querySelector("i").cloneNode(true);
 
-                submenuCopy.classList.add("submenuIcon-clickable");
+                submenuCopy.classList.add("submenu-icon-clickable");
                 submenu.insertBefore(submenuCopy, submenu.querySelector("i"));
                 submenuCopy.addEventListener("click", () => {
                     this.submenuClosed = submenu.classList.contains("submenu-open");
@@ -68,25 +68,25 @@ class Sidebar {
     }
 
     showItems () {
-        [...this._el.querySelectorAll("li")].forEach(listItem => listItem.classList.remove("itemHidden"));
+        [...this._el.querySelectorAll("li")].forEach(listItem => listItem.classList.remove("responsive-hidden"));
     }
 
     hideItems () {
-        const firstFour = [...this._el.querySelectorAll("li")].filter(notHidden => !notHidden.classList.contains("itemHidden") && notHidden.querySelector(".submenu") === null && this._el.querySelector("UL") === notHidden.parentElement);
+        const firstFour = [...this._el.querySelectorAll("li")].filter(notHidden => !notHidden.classList.contains("responsive-hidden") && notHidden.querySelector(".submenu") === null && this._el.querySelector("UL") === notHidden.parentElement);
 
         if (this.submenus.length > 0) {
             this.submenus.forEach(levelTwo => {
-                levelTwo.parentElement.classList.add("itemHidden");
+                levelTwo.parentElement.classList.add("responsive-hidden");
             });
 
             if (firstFour.length > 4) {
                 firstFour.slice(4).forEach(item => {
-                    item.parentElement.classList.add("itemHidden");
+                    item.parentElement.classList.add("responsive-hidden");
                 });
             }
         } else {
             [...this._el.querySelectorAll("li")].slice(4).forEach(items => {
-                items.classList.add("itemHidden");
+                items.classList.add("responsive-hidden");
             });
         }
     }
