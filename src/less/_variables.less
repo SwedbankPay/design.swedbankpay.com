@@ -480,12 +480,18 @@
 // 17. Sidebar
 // ==========================================================================
 
-@sidebar-icon-lineheight:                   1.1;
-
 @submenu-margin-left:                       @base-margin*0.3;
 @submenu-list-margin-left:                  @base-margin-xl + 0.5;
+
+@submenu-padding:                           @base-padding*0.34;
+@submenu-p-first-child:                     calc(@submenu-padding + 2px);
+@submenu-p-icon-left:                       calc(@base-padding-sm + 2px);
+@submenu-p-icon-open:                       calc(@base-padding-sm - 2px);
+
+@sidebar-icon-lineheight:                   1.1;
 @submenu-font-size:                         @base-font-size*0.85;
 @submenu-left:                              @submenu-list-margin-left;
+@submenu-border:                            2px solid @gray-9;
 
 // 18. Status
 // ==========================================================================
