@@ -108,7 +108,7 @@ const Mix = () => (
             <SidebarComponent vertsize="md" widesize="lg" items={sidebarItemsTwoLevels} />
         </ComponentPreview>
     </>
-)
+);
 
 const Responsive = () => (
     <>
