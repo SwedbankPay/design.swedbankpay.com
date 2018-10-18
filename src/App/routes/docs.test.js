@@ -28,13 +28,13 @@ describe("Routes: docs", () => {
         });
     });
 
-    it("all child routes has a title, path and component", () => {
+    it("all child routes has a title, path and componentPath", () => {
         docsRoutes.forEach(route => {
-            route.routes.forEach(({ title, path, component }) => {
+            route.routes.forEach(({ title, path, componentPath }) => {
 
                 expect(title).toBeDefined();
                 expect(path).toBeDefined();
-                expect(component).toBeDefined();
+                expect(componentPath).toBeDefined();
             });
         });
     });

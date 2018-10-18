@@ -4,13 +4,15 @@ import { NavLink, withRouter } from "react-router-dom";
 import { GithubLogo, SlackLogo } from "./HeaderIcons";
 
 import pkg from "~/package.json";
-import routes from "../routes/root.js";
 
 const AppHeader = () => (
     <header className="topbar topbar-fixed designguide-header">
         <a className="topbar-logo" href="#"></a>
         <nav className="header-links">
-            {routes.map((route, i) => <NavLink key={`root_link_${route.title}_${i}`} to={route.path} activeClassName="active">{route.title}</NavLink>)}
+            <NavLink exact to="/" activeClassName="active">Home</NavLink>
+            <NavLink to="/docs" activeClassName="active">Documentation</NavLink>
+            {/* <NavLink to="/examples" activeClassName="active">Examples</NavLink> */}
+            {/* <NavLink to="/templates" activeClassName="active">Templates</NavLink> */}
         </nav>
         <div className="topbar-info">
             <div className="topbar-info-contact">

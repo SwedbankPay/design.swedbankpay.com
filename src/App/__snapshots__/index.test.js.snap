@@ -1,38 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Main: App renders 1`] = `
-<div
-  id="px-designguide"
+<BrowserRouter
+  basename="/TEST"
 >
-  <BrowserRouter
-    basename="/TEST"
-  >
-    <withRouter(ScrollToTop)>
-      <withRouter(AppHeader) />
-      <Switch>
-        <Redirect
-          exact={true}
-          from="/"
-          push={false}
-          to="/home"
-        />
-        <Route
-          exact={true}
-          key="component_0"
-          path="/home"
-          render={[Function]}
-        />
-        <Route
-          exact={false}
-          key="component_1"
-          path="/docs"
-          render={[Function]}
-        />
-        <Route
-          component={[Function]}
-        />
-      </Switch>
-    </withRouter(ScrollToTop)>
-  </BrowserRouter>
-</div>
+  <withRouter(ScrollToTop)>
+    <withRouter(AppHeader) />
+    <Switch>
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/"
+      />
+      <Route
+        component={[Function]}
+        path="/docs"
+      />
+      <Route
+        component={[Function]}
+        path="/Examples"
+      />
+      <Route
+        component={[Function]}
+        path="/Templates"
+      />
+      <Route
+        component={[Function]}
+      />
+    </Switch>
+  </withRouter(ScrollToTop)>
+</BrowserRouter>
 `;

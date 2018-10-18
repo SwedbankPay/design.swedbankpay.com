@@ -4,8 +4,8 @@ import PrismCode from "react-prism";
 import { ComponentPreview, DocToc } from "#";
 
 const BASENAME = process.env.basename;
-const scriptUrl = `https://design.payex.com${BASENAME}/scripts/px-script.js`;
-const styleUrl = `https://design.payex.com${BASENAME}/styles/px.css`;
+const scriptUrl = `https://design.payex.com${BASENAME}scripts/px-script.js`;
+const styleUrl = `https://design.payex.com${BASENAME}styles/px.css`;
 
 const QuickStart = () => (
     <>

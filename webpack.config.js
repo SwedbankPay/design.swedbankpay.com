@@ -9,6 +9,7 @@ const SentryCliPlugin = require("@sentry/webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FileManagerPlugin = require("filemanager-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const AppManifestWebpackPlugin = require("app-manifest-webpack-plugin");
 
@@ -32,8 +33,10 @@ module.exports = (env, argv) => {
             library: "payex",
             path: path.resolve(__dirname, "dist"),
             filename: "scripts/[name].js?[hash]",
+            chunkFilename: "scripts/[name].js?[hash]",
             publicPath: basename
         },
+        // target: "async-node",
         devtool: "source-map",
         devServer: {
             contentBase: path.resolve(__dirname, "dist"),
@@ -48,7 +51,11 @@ module.exports = (env, argv) => {
             rules: [
                 {
                     test: /\.jsx?$/,
-                    exclude: modulePath => (/node_modules/).test(modulePath) && !(/node_modules\/*/).test(modulePath),
+                    exclude: modulePath => (
+                        (/node_modules/).test(modulePath) &&
+                        !(/node_modules\/*/).test(modulePath) &&
+                        (/__snapshots__/).test(modulePath)
+                    ),
                     loader: "babel-loader"
                 },
                 {
@@ -114,11 +121,37 @@ module.exports = (env, argv) => {
             ]
         },
         optimization: {
+            runtimeChunk: {
+                name: entrypoint => `runtime~${entrypoint.name}`
+            },
             splitChunks: {
+                chunks: "async",
+                minSize: 3000,
+                maxSize: 0,
+                minChunks: 2,
+                maxAsyncRequests: 5,
+                maxInitialRequests: 3,
+                automaticNameDelimiter: "~",
+                name: true,
                 cacheGroups: {
-                    vendors: {
-                        test: /[\\/]node_modules[\\/]/,
-                        priority: -10
+                    // vendors: {
+                    //     test: /[\\/]node_modules[\\/]/,
+                    //     name: "vendors",
+                    //     chunks: "all"
+                    // },
+                    app: {
+                        name: "app",
+                        test: /app\.js$/,
+                        reuseExistingChunk: true,
+                        chunks: "all",
+                        enforce: true
+                    },
+                    pxScript: {
+                        name: "px-script",
+                        test: /px-script/,
+                        reuseExistingChunk: false,
+                        chunks: "all",
+                        enforce: true
                     },
                     pxStyles: {
                         name: "px",
@@ -201,6 +234,12 @@ module.exports = (env, argv) => {
             new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/) // For now this ignores moment's locale folder, which doubles moment's size..
         ]
     };
+
+    if (!env && !isDevServer) {
+        config.plugins.push(
+            new BundleAnalyzerPlugin()
+        );
+    }
 
     if (isProd && !isDevServer) {
         config.plugins.push(
