@@ -74,7 +74,7 @@ const StandardSidebar = () => (
 
 const TwoLevels = () => (
     <>
-        <h2 id="sidebar-twolevels">Standard sidebar with two levels</h2>
+        <h2 id="sidebar-twolevels">Two levels</h2>
         <p>
             You can also display another level of items in the standard sidebar. Just nest a <PrismCode className="language-html">{"<div>"}</PrismCode> with class <code className="token property">.submenu</code> containing an icon and text like the
             standard sidebar and add a new <PrismCode className="language-html">{"<ul>"}</PrismCode> with <PrismCode className="language-html">{"<li>"}</PrismCode> items. This level does not use icons. List items containing another level are not visible in responsive mode, they will be displayed when the items are expanded.
@@ -85,9 +85,9 @@ const TwoLevels = () => (
     </>
 );
 
-const TabletMode = () => (
+const IconsOnly = () => (
     <>
-        <h2 id="sidebar-tablet">Tablet mode</h2>
+        <h2 id="sidebar-tablet">Icons only</h2>
         <p>
             To display only icons use class <code className="token property">.sidebar-(desired_size)-vertical</code>.  <code className="token property">.sidebar-(desired_size)-vertical</code> works
             just like in the standard example. In this mode it is possible to display another level of items.
@@ -102,7 +102,7 @@ const Mix = () => (
     <>
         <h2 id="sidebar-mix">Tablet and wide</h2>
         <p>
-            You can also use both tablet and wide together.
+            You can also use both icons only and wide together.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <SidebarComponent vertsize="md" widesize="lg" items={sidebarItemsTwoLevels} />
@@ -125,10 +125,10 @@ const Responsive = () => (
 const SidebarText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
         <ExperimentalComponentAlert />
-        <p className="lead">Sidebars...</p>
+        <p className="lead">Sidebars.</p>
         <StandardSidebar />
         <TwoLevels />
-        <TabletMode />
+        <IconsOnly />
         <Mix />
         <Responsive />
     </div>
@@ -158,4 +158,4 @@ class Sidebar extends Component {
 export default Sidebar;
 
 /* For testing */
-export { StandardSidebar, TwoLevels, TabletMode, Mix, Responsive, SidebarText };
+export { StandardSidebar, TwoLevels, IconsOnly, Mix, Responsive, SidebarText };
