@@ -30,7 +30,7 @@ exports[`Core: Favicons OurFavicon renders 1`] = `
   >
     <img
       alt="PayEx favicon"
-      src="/TESTicons/android-chrome-96x96.png"
+      src="/TEST/icons/android-chrome-96x96.png"
     />
   </ComponentPreview>
 </Fragment>
@@ -80,7 +80,7 @@ exports[`Core: Favicons Usage renders 1`] = `
      file in the icons folder.
   </p>
   <Button
-    href="/icons.zip"
+    href="/TEST/release/icons.zip"
     icon="file_download"
     label="Download Favicons"
     type="primary"

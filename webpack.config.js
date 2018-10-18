@@ -2,6 +2,7 @@
 const pkg = require("./package.json");
 const path = require("path");
 const webpack = require("webpack");
+const appRoutes = require("./tools/generate-routes-copy-array");
 const autoprefixer = require("autoprefixer");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const lessListPlugin = require("less-plugin-lists");
@@ -31,7 +32,7 @@ module.exports = (env, argv) => {
         },
         output: {
             library: "payex",
-            path: path.resolve(__dirname, "dist"),
+            path: path.resolve(__dirname, `dist${basename}`),
             filename: "scripts/[name].js?[hash]",
             chunkFilename: "scripts/[name].js?[hash]",
             publicPath: basename
@@ -39,7 +40,7 @@ module.exports = (env, argv) => {
         // target: "async-node",
         devtool: "source-map",
         devServer: {
-            contentBase: path.resolve(__dirname, "dist"),
+            contentBase: path.resolve(__dirname, `dist${basename}`),
             publicPath: basename,
             compress: true,
             port: 3000,
@@ -189,13 +190,8 @@ module.exports = (env, argv) => {
             new HtmlWebpackPlugin({
                 template: "./src/index.html",
                 hash: true,
-                title: "PayEx DesignGuide"
-            }),
-            new HtmlWebpackPlugin({
-                filename: "404.html",
-                template: "./src/index.html",
-                hash: true,
-                title: "PayEx DesignGuide"
+                title: "PayEx DesignGuide",
+                excludeChunks: ["base-redir", "runtime~base-redir"]
             }),
             new AppManifestWebpackPlugin({
                 logo: "./src/img/favicon.png",
@@ -242,52 +238,56 @@ module.exports = (env, argv) => {
     }
 
     if (isProd && !isDevServer) {
+        const onEndArchive = [
+            {
+                source: "./dist/temp/icons",
+                destination: `./dist${basename}release/icons.zip`
+            }
+        ];
+
+        if (isRelease) {
+            onEndArchive.push({
+                source: "./dist/temp/release",
+                destination: `./dist${basename}release/PayEx.DesignGuide.v${version}.zip`
+            });
+        }
+
         config.plugins.push(
             new FileManagerPlugin({
                 onStart: [
                     {
-                        delete: [
-                            "./dist",
-                            "./temp"
-                        ]
+                        delete: ["./dist"]
                     }
                 ],
                 onEnd: [
                     {
                         copy: [
                             {
-                                source: "./dist/icons",
+                                source: `./dist${basename}icons`,
                                 destination: "./dist/temp/icons/icons"
                             },
                             {
-                                source: "./dist/scripts/px-script.js",
+                                source: `./dist${basename}scripts/px-script.js`,
                                 destination: "./dist/temp/release/scripts"
                             },
                             {
-                                source: "./dist/scripts/px-script.js.map",
+                                source: `./dist${basename}scripts/px-script.js.map`,
                                 destination: "./dist/temp/release/scripts"
                             },
                             {
-                                source: "./dist/styles/px.css",
+                                source: `./dist${basename}styles/px.css`,
                                 destination: "./dist/temp/release/styles"
                             }
                         ],
-                        mkdir: [
-                            "./dist/release"
-                        ],
-                        archive: [
-                            {
-                                source: "./dist/temp/icons",
-                                destination: "./dist/release/icons.zip"
-                            },
-                            {
-                                source: "./dist/temp/release",
-                                destination: `./dist/release/PayEx.DesignGuide.v${version}.zip`
-                            }
-                        ],
-                        delete: [
-                            "./dist/temp"
-                        ]
+                        mkdir: [`./dist${basename}release`],
+                        archive: onEndArchive,
+                        delete: ["./dist/temp"]
+                    },
+                    {
+                        copy: appRoutes.map(route => ({
+                            source: `./dist${basename}index.html`,
+                            destination: `./dist${basename}${route}`
+                        }))
                     }
                 ]
             })
@@ -295,7 +295,23 @@ module.exports = (env, argv) => {
     }
 
     if (isRelease) {
+        config.entry["base-redir"] = "./tools/base-redir.js";
+
         config.plugins.push(
+            new HtmlWebpackPlugin({
+                filename: "../index.html",
+                template: "./src/index.html",
+                hash: true,
+                title: "PayEx DesignGuide",
+                chunks: ["base-redir", "runtime~base-redir"]
+            }),
+            new HtmlWebpackPlugin({
+                filename: "../404.html",
+                template: "./src/index.html",
+                hash: true,
+                title: "PayEx DesignGuide",
+                excludeChunks: ["base-redir", "runtime~base-redir"]
+            }),
             new SentryCliPlugin({
                 release: version,
                 include: ".",

@@ -1,4 +1,4 @@
-const ROOTROUTES = ["/", "/docs", "/examples", "/templates"];
+const ROOTROUTES = ["/docs", "/examples", "/templates"];
 const docRoutes = require("../src/App/routes/docs");
 
 const getRoutes = () => {
@@ -11,4 +11,6 @@ const getRoutes = () => {
 
     return ROUTES;
 };
+
+module.exports = getRoutes();
 
