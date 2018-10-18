@@ -7,6 +7,15 @@ exports[`Component: Sidebar Responsive renders 1`] = `
   >
     Responsive sidebar
   </h2>
+  <p>
+    To only use responsive mode use class 
+    <code
+      className="token property"
+    >
+      .sidebar
+    </code>
+     alone.
+  </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
@@ -24,8 +33,8 @@ exports[`Component: Sidebar Responsive renders 1`] = `
             "name": "Transactions",
           },
           Object {
-            "icon": "favorite",
-            "name": "Favorites",
+            "icon": "notification_important",
+            "name": "Notifications",
           },
           Object {
             "icon": "language",
@@ -34,6 +43,10 @@ exports[`Component: Sidebar Responsive renders 1`] = `
           Object {
             "icon": "account_balance",
             "name": "Account",
+          },
+          Object {
+            "icon": "fingerprint",
+            "name": "Authentication",
           },
         ]
       }
@@ -55,6 +68,7 @@ exports[`Component: Sidebar SidebarText renders 1`] = `
   <StandardSidebar />
   <TwoLevels />
   <TabletMode />
+  <Mix />
   <Responsive />
 </div>
 `;
@@ -66,6 +80,55 @@ exports[`Component: Sidebar StandardSidebar renders 1`] = `
   >
     Standard sidebar
   </h2>
+  <p>
+    Add class 
+    <code
+      className="token property"
+    >
+      .sidebar
+    </code>
+     and 
+    <code
+      className="token property"
+    >
+      .sidebar-(desired_size)-vertical-wide
+    </code>
+     to a nav containing an 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;ul&gt;
+    </PrismCode>
+     to get a standard sidebar. Add 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;i&gt;
+    </PrismCode>
+     and 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;span&gt;
+    </PrismCode>
+     with your desired 
+    <Link
+      replace={false}
+      to="/docs/core/icons"
+    >
+      icon
+    </Link>
+     and text. 
+    <code
+      className="token property"
+    >
+      .sidebar-(desired_size)-vertical-wide
+    </code>
+     determines when your sidebar will switch from responsive mode to vertical. If you have more than five icons then the first four icons will be the only visible ones in responsive mode.
+  </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
@@ -83,8 +146,8 @@ exports[`Component: Sidebar StandardSidebar renders 1`] = `
             "name": "Transactions",
           },
           Object {
-            "icon": "favorite",
-            "name": "Favorites",
+            "icon": "notification_important",
+            "name": "Notifications",
           },
           Object {
             "icon": "language",
@@ -94,9 +157,12 @@ exports[`Component: Sidebar StandardSidebar renders 1`] = `
             "icon": "account_balance",
             "name": "Account",
           },
+          Object {
+            "icon": "fingerprint",
+            "name": "Authentication",
+          },
         ]
       }
-      vertsize="md"
       widesize="lg"
     />
   </ComponentPreview>
@@ -106,10 +172,25 @@ exports[`Component: Sidebar StandardSidebar renders 1`] = `
 exports[`Component: Sidebar TabletMode renders 1`] = `
 <Fragment>
   <h2
-    id="tablet-sidebar"
+    id="sidebar-tablet"
   >
     Tablet mode
   </h2>
+  <p>
+    To display only icons use class 
+    <code
+      className="token property"
+    >
+      .sidebar-(desired_size)-vertical
+    </code>
+    .  
+    <code
+      className="token property"
+    >
+      .sidebar-(desired_size)-vertical
+    </code>
+     works just like in the standard example. In this mode it is possible to display another level of items.
+  </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
@@ -125,15 +206,14 @@ exports[`Component: Sidebar TabletMode renders 1`] = `
           Object {
             "icon": "shopping_cart",
             "name": "Transactions",
+            "subItems": Array [
+              "Purchase history",
+              "Invoice",
+            ],
           },
           Object {
-            "icon": "favorite",
-            "name": "Favorites",
-            "subItems": Array [
-              "Music",
-              "Movies",
-              "Employees",
-            ],
+            "icon": "notification_important",
+            "name": "Notifications",
           },
           Object {
             "icon": "language",
@@ -159,10 +239,40 @@ exports[`Component: Sidebar TabletMode renders 1`] = `
 exports[`Component: Sidebar TwoLevels renders 1`] = `
 <Fragment>
   <h2
-    id="twolevels-sidebar"
+    id="sidebar-twolevels"
   >
     Standard sidebar with two levels
   </h2>
+  <p>
+    You can also display another level of items in the standard sidebar. Just nest a 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;div&gt;
+    </PrismCode>
+     with class 
+    <code
+      className="token property"
+    >
+      .submenu
+    </code>
+     containing an icon and text like the standard sidebar and add a new 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;ul&gt;
+    </PrismCode>
+     with 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;li&gt;
+    </PrismCode>
+     items. This level does not use icons. List items containing another level are not visible in responsive mode, they will be displayed when the items are expanded.
+  </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
@@ -178,15 +288,14 @@ exports[`Component: Sidebar TwoLevels renders 1`] = `
           Object {
             "icon": "shopping_cart",
             "name": "Transactions",
+            "subItems": Array [
+              "Purchase history",
+              "Invoice",
+            ],
           },
           Object {
-            "icon": "favorite",
-            "name": "Favorites",
-            "subItems": Array [
-              "Music",
-              "Movies",
-              "Employees",
-            ],
+            "icon": "notification_important",
+            "name": "Notifications",
           },
           Object {
             "icon": "language",
@@ -203,7 +312,6 @@ exports[`Component: Sidebar TwoLevels renders 1`] = `
           },
         ]
       }
-      vertsize="md"
       widesize="lg"
     />
   </ComponentPreview>

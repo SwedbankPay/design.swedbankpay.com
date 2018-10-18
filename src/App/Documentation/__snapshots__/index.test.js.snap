@@ -382,6 +382,7 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "Mix": [Function],
                   "Responsive": [Function],
                   "SidebarText": [Function],
                   "StandardSidebar": [Function],
