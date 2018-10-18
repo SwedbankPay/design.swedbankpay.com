@@ -1,5 +1,72 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Component: Sidebar IconsOnly renders 1`] = `
+<Fragment>
+  <h2
+    id="sidebar-tablet"
+  >
+    Icons only
+  </h2>
+  <p>
+    To display only icons use class 
+    <code
+      className="token property"
+    >
+      .sidebar-(desired_size)-vertical
+    </code>
+    .  
+    <code
+      className="token property"
+    >
+      .sidebar-(desired_size)-vertical
+    </code>
+     works just like in the standard example. In this mode it is possible to display another level of items.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Sidebar
+      items={
+        Array [
+          Object {
+            "icon": "home",
+            "name": "Home",
+          },
+          Object {
+            "icon": "shopping_cart",
+            "name": "Transactions",
+            "subItems": Array [
+              "Purchase history",
+              "Invoice",
+            ],
+          },
+          Object {
+            "icon": "notification_important",
+            "name": "Notifications",
+          },
+          Object {
+            "icon": "language",
+            "name": "Language",
+          },
+          Object {
+            "icon": "account_balance",
+            "name": "Account",
+            "subItems": Array [
+              "Email",
+              "Information",
+              "Other things",
+            ],
+          },
+        ]
+      }
+      vertsize="md"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Component: Sidebar Responsive renders 1`] = `
 <Fragment>
   <h2
@@ -63,11 +130,11 @@ exports[`Component: Sidebar SidebarText renders 1`] = `
   <p
     className="lead"
   >
-    Sidebars...
+    Sidebars.
   </p>
   <StandardSidebar />
   <TwoLevels />
-  <TabletMode />
+  <IconsOnly />
   <Mix />
   <Responsive />
 </div>
@@ -169,79 +236,12 @@ exports[`Component: Sidebar StandardSidebar renders 1`] = `
 </Fragment>
 `;
 
-exports[`Component: Sidebar TabletMode renders 1`] = `
-<Fragment>
-  <h2
-    id="sidebar-tablet"
-  >
-    Tablet mode
-  </h2>
-  <p>
-    To display only icons use class 
-    <code
-      className="token property"
-    >
-      .sidebar-(desired_size)-vertical
-    </code>
-    .  
-    <code
-      className="token property"
-    >
-      .sidebar-(desired_size)-vertical
-    </code>
-     works just like in the standard example. In this mode it is possible to display another level of items.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Sidebar
-      items={
-        Array [
-          Object {
-            "icon": "home",
-            "name": "Home",
-          },
-          Object {
-            "icon": "shopping_cart",
-            "name": "Transactions",
-            "subItems": Array [
-              "Purchase history",
-              "Invoice",
-            ],
-          },
-          Object {
-            "icon": "notification_important",
-            "name": "Notifications",
-          },
-          Object {
-            "icon": "language",
-            "name": "Language",
-          },
-          Object {
-            "icon": "account_balance",
-            "name": "Account",
-            "subItems": Array [
-              "Email",
-              "Information",
-              "Other things",
-            ],
-          },
-        ]
-      }
-      vertsize="md"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
 exports[`Component: Sidebar TwoLevels renders 1`] = `
 <Fragment>
   <h2
     id="sidebar-twolevels"
   >
-    Standard sidebar with two levels
+    Two levels
   </h2>
   <p>
     You can also display another level of items in the standard sidebar. Just nest a 

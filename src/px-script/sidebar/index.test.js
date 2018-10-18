@@ -37,6 +37,18 @@ describe("px-script: sidebar", () => {
                     </a>
                 </li>
                 <li>
+                    <a href="#">
+                        <i className="material-icons">shopping_cart</i>
+                        <span>Transactions</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i className="material-icons">language</i>
+                        <span>Language</span>
+                    </a>
+                </li>
+                <li>
                     { subItems ?
                         <div className="submenu">{"\n"}
                             <i className="material-icons">language</i>{"\n"}
@@ -136,40 +148,40 @@ describe("px-script: sidebar", () => {
         ReactDOM.unmountComponentAtNode(div);
     });
 
-    // it("opens when clicking the menu icon", () => {
-    //     ReactDOM.render(<Sidebar />, div);
-    //     sidebar.init();
+    it("opens when clicking the menu icon", () => {
+        ReactDOM.render(<Sidebar />, div);
+        sidebar.init();
 
-    //     const renderedSidebar = document.querySelector(".sidebar");
-    //     const sidebarMenubtn = renderedSidebar.querySelector(".sidebar-openbtn");
+        const renderedSidebar = document.querySelector(".sidebar");
+        const sidebarMenubtn = renderedSidebar.querySelector(".sidebar-openbtn");
 
-    //     expect(renderedSidebar).toBeDefined();
-    //     expect(sidebarMenubtn).toBeDefined();
-    //     expect(renderedSidebar.classList).not.toContain("sidebar-open");
+        expect(renderedSidebar).toBeDefined();
+        expect(sidebarMenubtn).toBeDefined();
+        expect(renderedSidebar.classList).not.toContain("sidebar-open");
 
-    //     sidebarMenubtn.click();
+        sidebarMenubtn.click();
 
-    //     expect(renderedSidebar.classList).toContain("sidebar-open");
+        expect(renderedSidebar.classList).toContain("sidebar-open");
 
-    //     ReactDOM.unmountComponentAtNode(div);
-    // });
+        ReactDOM.unmountComponentAtNode(div);
+    });
 
-    // it("closes when clicking the menu icon while open", () => {
-    //     ReactDOM.render(<Sidebar open />, div);
-    //     sidebar.init();
+    it("closes when clicking the menu icon while open", () => {
+        ReactDOM.render(<Sidebar open />, div);
+        sidebar.init();
 
-    //     const renderedSidebar = document.querySelector(".sidebar");
-    //     const sidebarMenubtn = renderedSidebar.querySelector(".sidebar-openbtn");
+        const renderedSidebar = document.querySelector(".sidebar");
+        const sidebarMenubtn = renderedSidebar.querySelector(".sidebar-openbtn");
 
-    //     expect(renderedSidebar).toBeDefined();
-    //     expect(sidebarMenubtn).toBeDefined();
-    //     expect(renderedSidebar.classList).toContain("sidebar-open");
+        expect(renderedSidebar).toBeDefined();
+        expect(sidebarMenubtn).toBeDefined();
+        expect(renderedSidebar.classList).toContain("sidebar-open");
 
-    //     sidebarMenubtn.click();
-    //     expect(renderedSidebar.classList).not.toContain("sidebar-open");
+        sidebarMenubtn.click();
+        expect(renderedSidebar.classList).not.toContain("sidebar-open");
 
-    //     ReactDOM.unmountComponentAtNode(div);
-    // });
+        ReactDOM.unmountComponentAtNode(div);
+    });
 
     it("closes when clicking outside sidebar", () => {
         ReactDOM.render(<Sidebar open />, div);
