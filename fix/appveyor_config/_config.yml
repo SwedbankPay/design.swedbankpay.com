@@ -1,5 +1,0 @@
-whitelist:
-  - jekyll-redirect-from
-  
-redirect_from:
-  - /fix/appveyor_config/*
