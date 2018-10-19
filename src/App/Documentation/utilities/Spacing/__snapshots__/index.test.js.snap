@@ -123,14 +123,7 @@ exports[`Utilities: Spacing Notation renders 1`] = `
     <Property
       value="min-width: 0"
     />
-     and up, and thus are not bound by a media query. 
-    <s>
-      The remaining breakpoints, however, do include a breakpoint abbreviation.
-    </s>
-     
-    <b>
-      (Spacing utilities with breakpoint abbreviations will be included later)
-    </b>
+     and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
   </p>
   <p>
     The classes are named using the format 
@@ -141,34 +134,31 @@ exports[`Utilities: Spacing Notation renders 1`] = `
     <Property
       value="xs"
     />
-     
-    <s>
-      and 
-      <Property
-        value="{property}{sides}-{breakpoint}-{size}"
-      />
-       for 
-      <Property
-        value="sm"
-      />
-      , 
-      <Property
-        value="md"
-      />
-      , 
-      <Property
-        value="lg"
-      />
-      , 
-      <Property
-        value="xl"
-      />
-      , and 
-      <Property
-        value="xxl"
-      />
-      .
-    </s>
+     and 
+    <Property
+      value="{property}{sides}-{breakpoint}-{size}"
+    />
+     for 
+    <Property
+      value="sm"
+    />
+    , 
+    <Property
+      value="md"
+    />
+    , 
+    <Property
+      value="lg"
+    />
+    , 
+    <Property
+      value="xl"
+    />
+    , and 
+    <Property
+      value="xxl"
+    />
+    .
   </p>
   <p>
     Where 
@@ -405,6 +395,84 @@ exports[`Utilities: Spacing Notation renders 1`] = `
        to 
       <Property
         value="auto"
+      />
+    </li>
+  </ul>
+  <p>
+    For margin you can also set negative 
+    <i>
+      size
+    </i>
+     (excluding 
+    <Property
+      value="0"
+    />
+    ):
+  </p>
+  <ul>
+    <li>
+      <Property
+        value="n1"
+      />
+       - for classes that set the 
+      <Property
+        value="margin"
+      />
+       to 
+      <Property
+        value="-@spacer * 0.25"
+      />
+    </li>
+    <li>
+      <Property
+        value="n2"
+      />
+       - for classes that set the 
+      <Property
+        value="margin"
+      />
+       to 
+      <Property
+        value="-@spacer * 0.5"
+      />
+    </li>
+    <li>
+      <Property
+        value="n3"
+      />
+       - for classes that set the 
+      <Property
+        value="margin"
+      />
+       to 
+      <Property
+        value="-@spacer"
+      />
+    </li>
+    <li>
+      <Property
+        value="n4"
+      />
+       - for classes that set the 
+      <Property
+        value="margin"
+      />
+       to 
+      <Property
+        value="-@spacer * 1.5"
+      />
+    </li>
+    <li>
+      <Property
+        value="n5"
+      />
+       - for classes that set the 
+      <Property
+        value="margin"
+      />
+       to 
+      <Property
+        value="-@spacer * 3"
       />
     </li>
   </ul>

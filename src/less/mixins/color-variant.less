@@ -1,11 +1,13 @@
+/* stylelint-disable declaration-no-important */
+
 .color-variant(@color) {
-    color: @color;
+    color: @color !important;
 
     a&:hover {
-        color: darken(@color, 10%);
+        color: darken(@color, 10%) !important;
     }
 
     .text-muted {
-        color: fade(@color, 75%);
+        color: fade(@color, 75%) !important;
     }
 }

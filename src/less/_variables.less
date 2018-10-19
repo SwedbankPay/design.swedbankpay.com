@@ -90,7 +90,16 @@
 // 2. Global
 // ==========================================================================
 
-@spacer:                                    1rem;
+@spacer:                                    1rem; // Default
+
+/* stylelint-disable indentation */
+@spacers:                                   0 0,
+                                            1 (@spacer * 0.25),
+                                            2 (@spacer * 0.5),
+                                            3 @spacer,
+                                            4 (@spacer * 1.5),
+                                            5 (@spacer * 3);
+/* stylelint-enable indentation */
 
 /* Margin */
 @base-margin:                               @spacer;
@@ -157,9 +166,20 @@
 //** Padding between columns. Gets divided in half for the left and right.
 @grid-gutter-width:                         30px;
 
-@grid-breakpoints:                          ~"xs" 0, ~"sm" 576px, ~"md" 768px, ~"lg" 992px, ~"xl" 1200px, ~"xxl" 1600px;
+/* stylelint-disable indentation */
+@grid-breakpoints:                          ~"xs" 0,
+                                            ~"sm" 576px,
+                                            ~"md" 768px,
+                                            ~"lg" 992px,
+                                            ~"xl" 1200px,
+                                            ~"xxl" 1600px;
 
-@container-max-widths:                      540px, 720px, 960px, 1140px, 1460px;
+@container-max-widths:                      540px,
+                                            720px,
+                                            960px,
+                                            1140px,
+                                            1460px;
+/* stylelint-enable indentation */
 
 /* Media queries breakpoints */
 // Define the breakpoints at which your layout will change, adapting to different screen sizes.
@@ -509,8 +529,8 @@
 @status-size:                               13px;
 @status-padding:                            10;
 
-@status-padding-left:                       @base-padding*1.2;
-@status-padding-head:                       @base-padding*8;
+@status-padding-left:                       @base-padding * 1.2;
+@status-padding-head:                       @base-padding * 8;
 
 
 // 19. Toast
@@ -532,5 +552,5 @@
 @topbar-slide-transition:                   0.5s ease;
 @topbar-background-transition:              background-color 0.5s ease-in;
 
-@topbar-margin:                             @base-margin+@base-margin-xs;
-@topbar-padding:                            @base-padding+@base-margin-xs;
+@topbar-margin:                             @base-margin + @base-margin-xs;
+@topbar-padding:                            @base-padding + @base-margin-xs;
