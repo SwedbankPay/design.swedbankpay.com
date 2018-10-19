@@ -3,8 +3,7 @@ import PropTypes from "prop-types";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Loadable from "react-loadable";
 
-// TODO: Make this a real loader [EH]
-const RouteLoading = () => <h2>Loading...</h2>;
+import { LoadingComponent } from "$/App/utils";
 
 const RenderRoutes = ({ path, redirect, routes }) => (
     <Switch>
@@ -13,7 +12,7 @@ const RenderRoutes = ({ path, redirect, routes }) => (
             const { path, componentPath } = route;
             const LoadableComponent = Loadable({
                 loader: () => import(/* webpackChunkName: "doc-route.chunk_" */ `../../${componentPath}/index.js`),
-                loading: RouteLoading
+                loading: LoadingComponent
             });
 
             return <Route key={`doc_route_${path}`} exact path={path} render={() => <LoadableComponent />} />;

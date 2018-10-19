@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, withRouter } from "react-router
 import Loadable from "react-loadable";
 
 import AppHeader from "./AppHeader";
+import { LoadingComponent } from "./utils";
 
 const BASENAME = process.env.basename;
 
@@ -19,9 +20,6 @@ class ScrollToTop extends Component {
 }
 
 const ScrollToTopComponent = withRouter(ScrollToTop);
-
-// TODO: Create a better route loader [EH]
-const LoadingComponent = () => <h2>Loading...</h2>;
 
 const Home = Loadable({
     loader: () => import(/* webpackChunkName: "home.chunk" */ "./Home/index.js"),
