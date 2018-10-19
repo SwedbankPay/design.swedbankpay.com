@@ -9,7 +9,7 @@ describe("px-script: sidebar", () => {
 
     document.body.appendChild(div);
 
-    const Sidebar = ({ subItems, open }) => (
+    const Sidebar = ({ subItems, open, subopen }) => (
         <nav className={`sidebar ${open ? "sidebar-open" : null}`}>
             <ul>
                 <li>
@@ -50,7 +50,7 @@ describe("px-script: sidebar", () => {
                 </li>
                 <li>
                     { subItems ?
-                        <div className="submenu">{"\n"}
+                        <div className={subopen ? "submenu submenu-open" : "submenu"}>{"\n"}
                             <i className="material-icons">language</i>{"\n"}
                             <span>{name}</span>
                             <ul>
@@ -199,19 +199,128 @@ describe("px-script: sidebar", () => {
         ReactDOM.unmountComponentAtNode(div);
     });
 
-    // it("opens a submenu when submenu icon is clicked", () => {
-    //     ReactDOM.render(<Sidebar subItems = {submenuItems}/>, div);
+    it("closes sidebar on resize", () => {
+        ReactDOM.render(<Sidebar subItems = {submenuItems} />, div);
+        sidebar.init();
 
-    //     const renderedSidebar = document.querySelector(".sidebar");
-    //     const submenu = renderedSidebar.querySelector(".submenu");
+        const renderedSidebar = document.querySelector(".sidebar");
+        const sidebarMenubtn = renderedSidebar.querySelector(".sidebar-openbtn");
 
-    //     expect(renderedSidebar).toBeDefined();
-    //     expect(submenu).toBeDefined();
-    //     expect(submenu.classList).not.toContain("submenu-open");
+        expect(renderedSidebar).toBeDefined();
+        expect(sidebarMenubtn).toBeDefined();
+        expect(renderedSidebar.classList).not.toContain("sidebar-open");
 
-    //     submenu.click();
-    //     expect(submenu.classList).toContain("submenu-open");
+        sidebarMenubtn.click();
 
-    //     ReactDOM.unmountComponentAtNode(div);
-    // });
+        expect(renderedSidebar.classList).toContain("sidebar-open");
+
+        global.dispatchEvent(new Event("resize"));
+
+        expect(renderedSidebar.classList).not.toContain("sidebar-open");
+
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
+    it("creates one copy of the submenu icon", () => {
+        ReactDOM.render(<Sidebar subItems = {submenuItems} />, div);
+        sidebar.init();
+
+        const renderedSidebar = document.querySelector(".sidebar");
+        const submenu = renderedSidebar.querySelector(".submenu");
+        const submenuicons = submenu.querySelectorAll("i");
+
+        expect(renderedSidebar).toBeDefined();
+        expect(submenu).toBeDefined();
+        expect(submenuicons).toBeDefined();
+        expect([...submenuicons]).toHaveLength(2);
+
+        const submenuIcon = [...submenuicons][1];
+        const submenuIconCopy = [...submenuicons][0];
+
+        expect(submenuIconCopy).not.toEqual(submenuIcon);
+
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
+    it("opens a submenu when a submenu icon is clicked", () => {
+        ReactDOM.render(<Sidebar subItems = {submenuItems} />, div);
+        sidebar.init();
+
+        const renderedSidebar = document.querySelector(".sidebar");
+        const submenu = renderedSidebar.querySelector(".submenu");
+        const iconClickable = submenu.querySelector(".submenu-icon-clickable");
+
+        expect(renderedSidebar).toBeDefined();
+        expect(submenu).toBeDefined();
+        expect(iconClickable).toBeDefined();
+        expect(submenu.classList).not.toContain("submenu-open");
+
+        iconClickable.click();
+
+        expect(submenu.classList).toContain("submenu-open");
+
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
+    it("closes a submenu when a submenu icon is clicked", () => {
+        ReactDOM.render(<Sidebar subItems = {submenuItems} subopen />, div);
+        sidebar.init();
+
+        const renderedSidebar = document.querySelector(".sidebar");
+        const submenu = renderedSidebar.querySelector(".submenu");
+        const iconClickable = submenu.querySelector(".submenu-icon-clickable");
+
+        expect(renderedSidebar).toBeDefined();
+        expect(submenu).toBeDefined();
+        expect(iconClickable).toBeDefined();
+        expect(submenu.classList).toContain("submenu-open");
+
+        iconClickable.click();
+
+        expect(submenu.classList).not.toContain("submenu-open");
+
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
+    it("closes a submenu when clicking outside the submenu", () => {
+        ReactDOM.render(<Sidebar subItems = {submenuItems} subopen />, div);
+        sidebar.init();
+
+        const renderedSidebar = document.querySelector(".sidebar");
+        const submenu = renderedSidebar.querySelector(".submenu");
+
+        expect(renderedSidebar).toBeDefined();
+        expect(submenu).toBeDefined();
+        expect(submenu.classList).toContain("submenu-open");
+
+        document.querySelector("html").click();
+
+        expect(submenu.classList).not.toContain("submenu-open");
+
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
+    it("closes submenu on resize", () => {
+        ReactDOM.render(<Sidebar subItems = {submenuItems} />, div);
+        sidebar.init();
+
+        const renderedSidebar = document.querySelector(".sidebar");
+        const submenu = renderedSidebar.querySelector(".submenu");
+        const iconClickable = submenu.querySelector(".submenu-icon-clickable");
+
+        expect(renderedSidebar).toBeDefined();
+        expect(submenu).toBeDefined();
+        expect(iconClickable).toBeDefined();
+        expect(submenu.classList).not.toContain("submenu-open");
+
+        iconClickable.click();
+
+        expect(submenu.classList).toContain("submenu-open");
+
+        global.dispatchEvent(new Event("resize"));
+
+        expect(submenu.classList).not.toContain("submenu-open");
+
+        ReactDOM.unmountComponentAtNode(div);
+    });
 });
