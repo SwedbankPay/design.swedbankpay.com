@@ -3,14 +3,14 @@ if (($Env:APPVEYOR_REPO_TAG -eq "true") -and ($Env:GitVersion_BranchName -eq "ma
     $Env:changelog = [IO.File]::ReadAllText("C:\projects\design-payex-com\CHANGELOG.md")
 
     # Push artifact to appveyor
-    Push-AppveyorArtifact "dist/release/PayEx.DesignGuide.v$($Env:GitVersion_FullSemVer).zip"
+    Push-AppveyorArtifact "dist/release/PayEx.DesignGuide.v$Env:GitVersion_FullSemVer.zip"
 }
 
 # Deploy to gh-pages
 git config --global credential.helper store
 git config --global user.email $Env:github_email
 git config --global user.name "payex-dev"
-Add-Content "$Env:USERPROFILE\.git-credentials" "https://$($Env:access_token):x-oauth-basic@github.com`n"
+Add-Content "$Env:USERPROFILE\.git-credentials" "https://$Env:access_token:x-oauth-basic@github.com`n"
 git checkout -f gh-pages
 if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode)  }
 xcopy dist\* . /sy

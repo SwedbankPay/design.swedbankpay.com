@@ -24,7 +24,7 @@ const AppHeader = () => (
                 </a>
             </div>
             <div className="topbar-info-version">
-                <a href={`https://github.com/PayEx/design.payex.com/releases/tag/${pkg.version}`} target="b_blank" rel="noopener">v.{pkg.version}</a>
+                <a href={`https://github.com/PayEx/design.payex.com/releases/tag/${pkg.version}`} target="b_blank" rel="noopener">v.{process.env.version || pkg.version}</a>
             </div>
         </div>
     </header>

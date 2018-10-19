@@ -41,10 +41,6 @@ before_build:
 build_script:
 - cmd: npm run build:prod -- --env.release=%release% --env.basename=%basename% --env.semver=%GitVersion_FullSemVer%
 
-# TODO:
-# after_build:
-# -ps: put basename in jekyll redirect
-
 #---------------------------------#
 #       tests configuration       #
 #---------------------------------#

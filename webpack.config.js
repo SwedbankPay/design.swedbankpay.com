@@ -1,5 +1,4 @@
 /* eslint camelcase: 0, object-curly-newline: 0 */
-const pkg = require("./package.json");
 const path = require("path");
 const webpack = require("webpack");
 const appRoutes = require("./tools/generate-routes-copy-array");
@@ -15,7 +14,7 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const AppManifestWebpackPlugin = require("app-manifest-webpack-plugin");
 
 module.exports = (env, argv) => {
-    const version = env && env.semver ? env.semver : pkg.version;
+    const version = env && env.semver ? env.semver : "LOCAL_DEV";
     const isProd = argv.mode === "production";
     const isRelease = env && env.release === "true";
     const isDevServer = !!argv.host;
@@ -223,8 +222,9 @@ module.exports = (env, argv) => {
             new webpack.DefinePlugin({
                 "process.env": {
                     basename: JSON.stringify(basename),
-                    sentry: false,
-                    google: false
+                    version: JSON.stringify(version),
+                    sentry: isRelease,
+                    google: isRelease
                 }
             }),
             new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/) // For now this ignores moment's locale folder, which doubles moment's size..
@@ -316,12 +316,6 @@ module.exports = (env, argv) => {
                 release: version,
                 include: ".",
                 ignore: ["node_modules", "webpack.config.js"]
-            }),
-            new webpack.DefinePlugin({
-                "process.env": {
-                    sentry: true,
-                    google: true
-                }
             })
         );
     }
