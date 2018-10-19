@@ -43,7 +43,7 @@ class Sidebar {
         if (this.submenus) {
             this.submenus.forEach(submenu => {
                 const submenuCopy = submenu.querySelector("i").cloneNode(true);
-                
+
                 submenuCopy.classList.add("submenu-icon-clickable");
                 submenu.insertBefore(submenuCopy, submenu.querySelector("i"));
                 submenuCopy.addEventListener("click", () => {
