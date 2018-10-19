@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Sidebar, { StandardSidebar, TwoLevels, IconsOnly, Responsive, SidebarText } from "./index";
+import Sidebar, { StandardSidebar, TwoLevels, IconsOnly, Mix, Responsive, SidebarText } from "./index";
 
 describe("Component: Sidebar", () => {
     it("is defined", () => {
@@ -45,6 +45,18 @@ describe("Component: Sidebar", () => {
 
         it("renders", () => {
             const wrapper = shallow(<IconsOnly />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("Mix", () => {
+        it("is defined", () => {
+            expect(Mix).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<Mix />);
 
             expect(wrapper).toMatchSnapshot();
         });

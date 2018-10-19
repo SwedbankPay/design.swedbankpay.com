@@ -67,6 +67,62 @@ exports[`Component: Sidebar IconsOnly renders 1`] = `
 </Fragment>
 `;
 
+exports[`Component: Sidebar Mix renders 1`] = `
+<Fragment>
+  <h2
+    id="sidebar-mix"
+  >
+    Tablet and wide
+  </h2>
+  <p>
+    You can also use both icons only and wide together.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Sidebar
+      items={
+        Array [
+          Object {
+            "icon": "home",
+            "name": "Home",
+          },
+          Object {
+            "icon": "shopping_cart",
+            "name": "Transactions",
+            "subItems": Array [
+              "Purchase history",
+              "Invoice",
+            ],
+          },
+          Object {
+            "icon": "notification_important",
+            "name": "Notifications",
+          },
+          Object {
+            "icon": "language",
+            "name": "Language",
+          },
+          Object {
+            "icon": "account_balance",
+            "name": "Account",
+            "subItems": Array [
+              "Email",
+              "Information",
+              "Other things",
+            ],
+          },
+        ]
+      }
+      vertsize="md"
+      widesize="lg"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Component: Sidebar Responsive renders 1`] = `
 <Fragment>
   <h2
