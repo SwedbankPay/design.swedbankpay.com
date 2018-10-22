@@ -30,40 +30,24 @@ const navItems = [
     }
 ];
 
-const navItemsTwoLevels = [
-    {
-        name: "Home",
-        icon: "home"
-    },
-    {
-        name: "Transactions",
-        icon: "shopping_cart",
-        subItems: ["Purchase history", "Invoice"]
-    },
-    {
-        name: "Notifications",
-        icon: "notification_important"
-    },
-    {
-        name: "Language",
-        icon: "language"
-    },
-    {
-        name: "Account",
-        icon: "account_balance",
-        subItems: ["Email", "Information", "Other things"]
-    }
-];
-
 describe("Component: Nav - ", () => {
     it("is defined", () => {
         expect(Nav).toBeDefined();
     });
 
-    it("Prop mode is required", () => {
+    it("Throws an error when proptype for vertsize is wrong", () => {
         console.error = jest.fn();
 
         const wrapper = shallow(<Nav items={navItems} vertsize="xxxl" />);
+
+        expect(console.error).toHaveBeenCalled();
+        expect(wrapper).toMatchSnapshot();
+    });
+
+    it("Throws an error when proptype for horsize is wrong", () => {
+        console.error = jest.fn();
+
+        const wrapper = shallow(<Nav items={navItems} widesize="xxxl" />);
 
         expect(console.error).toHaveBeenCalled();
         expect(wrapper).toMatchSnapshot();
@@ -75,9 +59,16 @@ describe("Component: Nav - ", () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    it("setActive prevents default", () => {
-        const wrapper = shallow(<Nav items={navItems} />);
+    // it("setActive prevents default", () => {
+    //     const wrapper = shallow(<Nav items={navItems} />);
+    //     const listItem = wrapper.find(".active");
 
-        expect(wrapper).toMatchSnapshot();
-    });
+    //     const setActive = jest.fn();
+
+    //     expect(listItem).toHaveLength(1);
+    //     listItem.simulate("click");
+    //     expect(setActive).toHaveBeenCalled();
+
+    //     expect(wrapper).toMatchSnapshot();
+    // });
 });

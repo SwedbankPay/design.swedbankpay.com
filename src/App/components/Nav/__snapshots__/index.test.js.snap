@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Nav -  Prop mode is required 1`] = `
+exports[`Component: Nav -  Throws an error when proptype for horsize is wrong 1`] = `
 <nav
-  className="nav nav-xxxl-vertical"
+  className="nav nav-xxxl-vertical-wide"
 >
   <ul>
     <li
@@ -19,15 +19,12 @@ exports[`Component: Nav -  Prop mode is required 1`] = `
 
         <i
           className="material-icons"
-          onClick={[Function]}
         >
           home
         </i>
         
 
-        <span
-          onClick={[Function]}
-        >
+        <span>
           Home
         </span>
         
@@ -50,15 +47,12 @@ exports[`Component: Nav -  Prop mode is required 1`] = `
 
         <i
           className="material-icons"
-          onClick={[Function]}
         >
           shopping_cart
         </i>
         
 
-        <span
-          onClick={[Function]}
-        >
+        <span>
           Transactions
         </span>
         
@@ -81,15 +75,12 @@ exports[`Component: Nav -  Prop mode is required 1`] = `
 
         <i
           className="material-icons"
-          onClick={[Function]}
         >
           notification_important
         </i>
         
 
-        <span
-          onClick={[Function]}
-        >
+        <span>
           Notifications
         </span>
         
@@ -112,15 +103,12 @@ exports[`Component: Nav -  Prop mode is required 1`] = `
 
         <i
           className="material-icons"
-          onClick={[Function]}
         >
           language
         </i>
         
 
-        <span
-          onClick={[Function]}
-        >
+        <span>
           Language
         </span>
         
@@ -143,15 +131,12 @@ exports[`Component: Nav -  Prop mode is required 1`] = `
 
         <i
           className="material-icons"
-          onClick={[Function]}
         >
           account_balance
         </i>
         
 
-        <span
-          onClick={[Function]}
-        >
+        <span>
           Account
         </span>
         
@@ -174,15 +159,189 @@ exports[`Component: Nav -  Prop mode is required 1`] = `
 
         <i
           className="material-icons"
-          onClick={[Function]}
         >
           fingerprint
         </i>
         
 
-        <span
-          onClick={[Function]}
+        <span>
+          Authentication
+        </span>
+        
+
+      </a>
+      
+
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`Component: Nav -  Throws an error when proptype for vertsize is wrong 1`] = `
+<nav
+  className="nav nav-xxxl-vertical"
+>
+  <ul>
+    <li
+      key="nav-item-Home-0"
+    >
+      
+
+      <a
+        className="active"
+        href="#"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          className="material-icons"
         >
+          home
+        </i>
+        
+
+        <span>
+          Home
+        </span>
+        
+
+      </a>
+      
+
+    </li>
+    <li
+      key="nav-item-Transactions-1"
+    >
+      
+
+      <a
+        className={null}
+        href="#"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          className="material-icons"
+        >
+          shopping_cart
+        </i>
+        
+
+        <span>
+          Transactions
+        </span>
+        
+
+      </a>
+      
+
+    </li>
+    <li
+      key="nav-item-Notifications-2"
+    >
+      
+
+      <a
+        className={null}
+        href="#"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          className="material-icons"
+        >
+          notification_important
+        </i>
+        
+
+        <span>
+          Notifications
+        </span>
+        
+
+      </a>
+      
+
+    </li>
+    <li
+      key="nav-item-Language-3"
+    >
+      
+
+      <a
+        className={null}
+        href="#"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          className="material-icons"
+        >
+          language
+        </i>
+        
+
+        <span>
+          Language
+        </span>
+        
+
+      </a>
+      
+
+    </li>
+    <li
+      key="nav-item-Account-4"
+    >
+      
+
+      <a
+        className={null}
+        href="#"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          className="material-icons"
+        >
+          account_balance
+        </i>
+        
+
+        <span>
+          Account
+        </span>
+        
+
+      </a>
+      
+
+    </li>
+    <li
+      key="nav-item-Authentication-5"
+    >
+      
+
+      <a
+        className={null}
+        href="#"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          className="material-icons"
+        >
+          fingerprint
+        </i>
+        
+
+        <span>
           Authentication
         </span>
         
@@ -214,15 +373,12 @@ exports[`Component: Nav -  renders 1`] = `
 
         <i
           className="material-icons"
-          onClick={[Function]}
         >
           home
         </i>
         
 
-        <span
-          onClick={[Function]}
-        >
+        <span>
           Home
         </span>
         
@@ -245,15 +401,12 @@ exports[`Component: Nav -  renders 1`] = `
 
         <i
           className="material-icons"
-          onClick={[Function]}
         >
           shopping_cart
         </i>
         
 
-        <span
-          onClick={[Function]}
-        >
+        <span>
           Transactions
         </span>
         
@@ -276,15 +429,12 @@ exports[`Component: Nav -  renders 1`] = `
 
         <i
           className="material-icons"
-          onClick={[Function]}
         >
           notification_important
         </i>
         
 
-        <span
-          onClick={[Function]}
-        >
+        <span>
           Notifications
         </span>
         
@@ -307,15 +457,12 @@ exports[`Component: Nav -  renders 1`] = `
 
         <i
           className="material-icons"
-          onClick={[Function]}
         >
           language
         </i>
         
 
-        <span
-          onClick={[Function]}
-        >
+        <span>
           Language
         </span>
         
@@ -338,15 +485,12 @@ exports[`Component: Nav -  renders 1`] = `
 
         <i
           className="material-icons"
-          onClick={[Function]}
         >
           account_balance
         </i>
         
 
-        <span
-          onClick={[Function]}
-        >
+        <span>
           Account
         </span>
         
@@ -369,15 +513,12 @@ exports[`Component: Nav -  renders 1`] = `
 
         <i
           className="material-icons"
-          onClick={[Function]}
         >
           fingerprint
         </i>
         
 
-        <span
-          onClick={[Function]}
-        >
+        <span>
           Authentication
         </span>
         

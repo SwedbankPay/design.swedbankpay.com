@@ -50,9 +50,9 @@ class Nav extends Component {
                                     </ul>
                                 </div>
                                 :
-                                <a href="#" onClick = {e => e.preventDefault()} className={this.state.active === `main-${i}` ? "active" : null}>{"\n"}
-                                    <i onClick = {e => this.setActive(e, `main-${i}`)} className="material-icons">{icon}</i>{"\n"}
-                                    <span onClick = {e => this.setActive(e, `main-${i}`)}>{name}</span>{"\n"}
+                                <a href="#" onClick = {e => this.setActive(e, `main-${i}`)} className={this.state.active === `main-${i}` ? "active" : null}>{"\n"}
+                                    <i className="material-icons">{icon}</i>{"\n"}
+                                    <span>{name}</span>{"\n"}
                                 </a>}{"\n"}
                         </li>
                     ))}
