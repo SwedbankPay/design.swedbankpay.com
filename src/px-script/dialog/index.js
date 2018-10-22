@@ -52,7 +52,7 @@ const dialog = (() => {
     const init = () => {
         const dialogEls = [...document.querySelectorAll(SELECTORS.DIALOG)];
 
-        window.px._dialogs = [];
+        window.px._dialogs = window.px._dialogs || [];
 
         if (dialogEls.length) {
             dialogEls.forEach(dialog => window.px._dialogs.push(new Dialog(dialog)));
