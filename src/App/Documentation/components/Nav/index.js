@@ -62,8 +62,8 @@ const StandardNav = () => (
     <>
         <h2 id="nav-standard">Standard nav</h2>
         <p>
-            Add class <code className="token property">.nav</code> and <code className="token property">.nav-(desired_size)-vertical-wide</code> to a nav containing an <PrismCode className="language-html">{"<ul>"}</PrismCode> to get a standard nav.
-            Add <PrismCode className="language-html">{"<i>"}</PrismCode> and <PrismCode className="language-html">{"<span>"}</PrismCode> with your desired <Link to="/docs/core/icons">icon</Link> and text. <code className="token property">.nav-(desired_size)-vertical-wide</code> determines
+            Add class <code className="token property">.nav</code> and <code className="token property">.nav-{"{desired_size}"}-vertical-wide</code> to a nav containing an <PrismCode className="language-html">{"<ul>"}</PrismCode> to get a standard nav.
+            Add <PrismCode className="language-html">{"<i>"}</PrismCode> and <PrismCode className="language-html">{"<span>"}</PrismCode> with your desired <Link to="/docs/core/icons">icon</Link> and text. <code className="token property">.nav-{"{desired_size}"}-vertical-wide</code> determines
             when your nav will switch from mobile view to vertical. If you have more than five icons then the first four icons will be the only visible ones in mobile view.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
@@ -89,7 +89,7 @@ const IconsOnly = () => (
     <>
         <h2 id="nav-tablet">Icons only</h2>
         <p>
-            To display only icons use class <code className="token property">.nav-(desired_size)-vertical</code>.  <code className="token property">.nav-(desired_size)-vertical</code> works
+            To display only icons use class <code className="token property">.nav-{"{desired_size}"}-vertical</code>.  <code className="token property">.nav-{"{desired_size}"}-vertical</code> works
             just like in the standard example. In this mode it is possible to display another level of items.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
