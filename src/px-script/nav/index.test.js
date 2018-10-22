@@ -1,16 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import sidebar from "./index";
+import nav from "./index";
 
-describe("px-script: sidebar", () => {
+describe("px-script: nav", () => {
     const div = document.createElement("div");
     const submenuItems = ["Email", "Information", "Other things"];
 
     document.body.appendChild(div);
 
-    const Sidebar = ({ subItems, open, subopen }) => (
-        <nav className={`sidebar ${open ? "sidebar-open" : null}`}>
+    const Nav = ({ subItems, open, subopen }) => (
+        <nav className={`nav ${open ? "nav-open" : null}`}>
             <ul>
                 <li>
                     <a href="#">
@@ -55,7 +55,7 @@ describe("px-script: sidebar", () => {
                             <span>{name}</span>
                             <ul>
                                 {subItems.map((itemsname, j) => (
-                                    <li key={`sidebar-subItems-${itemsname}-${j}`}>
+                                    <li key={`nav-subItems-${itemsname}-${j}`}>
                                         <a href="#" onClick = {e => e.preventDefault()}>{itemsname}</a>
                                     </li>
                                 ))}
@@ -71,8 +71,8 @@ describe("px-script: sidebar", () => {
         </nav>
     );
 
-    const Sidebarsm = ({ subItems }) => (
-        <nav className="sidebar">
+    const Navsm = ({ subItems }) => (
+        <nav className="nav">
             <ul>
                 <li>
                     <i className="material-icons">home</i>
@@ -84,7 +84,7 @@ describe("px-script: sidebar", () => {
                         <span>{name}</span>
                         <ul>
                             {subItems.map((itemsname, j) => (
-                                <li key={`sidebar-subItems-${itemsname}-${j}`}>
+                                <li key={`nav-subItems-${itemsname}-${j}`}>
                                     <a href="#" onClick = {e => e.preventDefault()}>{itemsname}</a>
                                 </li>
                             ))}
@@ -101,20 +101,20 @@ describe("px-script: sidebar", () => {
     );
 
     it("is defined", () => {
-        expect(sidebar).toBeDefined();
+        expect(nav).toBeDefined();
     });
 
     it("has an init method", () => {
-        expect(sidebar.init).toBeDefined();
-        expect(sidebar.init).toBeInstanceOf(Function);
+        expect(nav.init).toBeDefined();
+        expect(nav.init).toBeInstanceOf(Function);
     });
 
     it("does not render a menu icon when there are less than four list elements", () => {
-        ReactDOM.render(<Sidebarsm />, div);
-        sidebar.init();
+        ReactDOM.render(<Navsm />, div);
+        nav.init();
 
-        const renderedSidebar = document.querySelector(".sidebar");
-        const sidebarMenubtn = renderedSidebar.querySelector(".sidebar-openbtn");
+        const renderedSidebar = document.querySelector(".nav");
+        const sidebarMenubtn = renderedSidebar.querySelector(".nav-openbtn");
 
         expect(renderedSidebar).toBeDefined();
         expect(sidebarMenubtn).toBeNull();
@@ -123,11 +123,11 @@ describe("px-script: sidebar", () => {
     });
 
     it("renders a menu icon when there are less than four list elements but submenus exist", () => {
-        ReactDOM.render(<Sidebarsm subItems = {submenuItems} />, div);
-        sidebar.init();
+        ReactDOM.render(<Navsm subItems = {submenuItems} />, div);
+        nav.init();
 
-        const renderedSidebar = document.querySelector(".sidebar");
-        const sidebarMenubtn = renderedSidebar.querySelector(".sidebar-openbtn");
+        const renderedSidebar = document.querySelector(".nav");
+        const sidebarMenubtn = renderedSidebar.querySelector(".nav-openbtn");
 
         expect(renderedSidebar).toBeDefined();
         expect(sidebarMenubtn).toBeDefined();
@@ -136,11 +136,11 @@ describe("px-script: sidebar", () => {
     });
 
     it("renders a menu icon when there are more than four list elements", () => {
-        ReactDOM.render(<Sidebar />, div);
-        sidebar.init();
+        ReactDOM.render(<nav />, div);
+        nav.init();
 
-        const renderedSidebar = document.querySelector(".sidebar");
-        const sidebarMenubtn = renderedSidebar.querySelector(".sidebar-openbtn");
+        const renderedSidebar = document.querySelector(".nav");
+        const sidebarMenubtn = renderedSidebar.querySelector(".nav-openbtn");
 
         expect(renderedSidebar).toBeDefined();
         expect(sidebarMenubtn).toBeDefined();
@@ -149,83 +149,83 @@ describe("px-script: sidebar", () => {
     });
 
     it("opens when clicking the menu icon", () => {
-        ReactDOM.render(<Sidebar />, div);
-        sidebar.init();
+        ReactDOM.render(<nav />, div);
+        nav.init();
 
-        const renderedSidebar = document.querySelector(".sidebar");
-        const sidebarMenubtn = renderedSidebar.querySelector(".sidebar-openbtn");
+        const renderedSidebar = document.querySelector(".nav");
+        const sidebarMenubtn = renderedSidebar.querySelector(".nav-openbtn");
 
         expect(renderedSidebar).toBeDefined();
         expect(sidebarMenubtn).toBeDefined();
-        expect(renderedSidebar.classList).not.toContain("sidebar-open");
+        expect(renderedSidebar.classList).not.toContain("nav-open");
 
         sidebarMenubtn.click();
 
-        expect(renderedSidebar.classList).toContain("sidebar-open");
+        expect(renderedSidebar.classList).toContain("nav-open");
 
         ReactDOM.unmountComponentAtNode(div);
     });
 
     it("closes when clicking the menu icon while open", () => {
-        ReactDOM.render(<Sidebar open />, div);
-        sidebar.init();
+        ReactDOM.render(<nav open />, div);
+        nav.init();
 
-        const renderedSidebar = document.querySelector(".sidebar");
-        const sidebarMenubtn = renderedSidebar.querySelector(".sidebar-openbtn");
+        const renderedSidebar = document.querySelector(".nav");
+        const sidebarMenubtn = renderedSidebar.querySelector(".nav-openbtn");
 
         expect(renderedSidebar).toBeDefined();
         expect(sidebarMenubtn).toBeDefined();
-        expect(renderedSidebar.classList).toContain("sidebar-open");
+        expect(renderedSidebar.classList).toContain("nav-open");
 
         sidebarMenubtn.click();
-        expect(renderedSidebar.classList).not.toContain("sidebar-open");
+        expect(renderedSidebar.classList).not.toContain("nav-open");
 
         ReactDOM.unmountComponentAtNode(div);
     });
 
-    it("closes when clicking outside sidebar", () => {
-        ReactDOM.render(<Sidebar open />, div);
-        sidebar.init();
+    it("closes when clicking outside nav", () => {
+        ReactDOM.render(<nav open />, div);
+        nav.init();
 
-        const renderedSidebar = document.querySelector(".sidebar");
+        const renderedSidebar = document.querySelector(".nav");
 
         expect(renderedSidebar).toBeDefined();
-        expect(renderedSidebar.classList).toContain("sidebar-open");
+        expect(renderedSidebar.classList).toContain("nav-open");
 
         document.querySelector("html").click();
 
-        expect(renderedSidebar.classList).not.toContain("sidebar-open");
+        expect(renderedSidebar.classList).not.toContain("nav-open");
 
         ReactDOM.unmountComponentAtNode(div);
     });
 
-    it("closes sidebar on resize", () => {
-        ReactDOM.render(<Sidebar subItems = {submenuItems} />, div);
-        sidebar.init();
+    it("closes nav on resize", () => {
+        ReactDOM.render(<nav subItems = {submenuItems} />, div);
+        nav.init();
 
-        const renderedSidebar = document.querySelector(".sidebar");
-        const sidebarMenubtn = renderedSidebar.querySelector(".sidebar-openbtn");
+        const renderedSidebar = document.querySelector(".nav");
+        const sidebarMenubtn = renderedSidebar.querySelector(".nav-openbtn");
 
         expect(renderedSidebar).toBeDefined();
         expect(sidebarMenubtn).toBeDefined();
-        expect(renderedSidebar.classList).not.toContain("sidebar-open");
+        expect(renderedSidebar.classList).not.toContain("nav-open");
 
         sidebarMenubtn.click();
 
-        expect(renderedSidebar.classList).toContain("sidebar-open");
+        expect(renderedSidebar.classList).toContain("nav-open");
 
         global.dispatchEvent(new Event("resize"));
 
-        expect(renderedSidebar.classList).not.toContain("sidebar-open");
+        expect(renderedSidebar.classList).not.toContain("nav-open");
 
         ReactDOM.unmountComponentAtNode(div);
     });
 
     it("creates one copy of the submenu icon", () => {
-        ReactDOM.render(<Sidebar subItems = {submenuItems} />, div);
-        sidebar.init();
+        ReactDOM.render(<nav subItems = {submenuItems} />, div);
+        nav.init();
 
-        const renderedSidebar = document.querySelector(".sidebar");
+        const renderedSidebar = document.querySelector(".nav");
         const submenu = renderedSidebar.querySelector(".submenu");
         const submenuicons = submenu.querySelectorAll("i");
 
@@ -243,10 +243,10 @@ describe("px-script: sidebar", () => {
     });
 
     it("opens a submenu when a submenu icon is clicked", () => {
-        ReactDOM.render(<Sidebar subItems = {submenuItems} />, div);
-        sidebar.init();
+        ReactDOM.render(<nav subItems = {submenuItems} />, div);
+        nav.init();
 
-        const renderedSidebar = document.querySelector(".sidebar");
+        const renderedSidebar = document.querySelector(".nav");
         const submenu = renderedSidebar.querySelector(".submenu");
         const iconClickable = submenu.querySelector(".submenu-icon-clickable");
 
@@ -263,10 +263,10 @@ describe("px-script: sidebar", () => {
     });
 
     it("closes a submenu when a submenu icon is clicked", () => {
-        ReactDOM.render(<Sidebar subItems = {submenuItems} subopen />, div);
-        sidebar.init();
+        ReactDOM.render(<nav subItems = {submenuItems} subopen />, div);
+        nav.init();
 
-        const renderedSidebar = document.querySelector(".sidebar");
+        const renderedSidebar = document.querySelector(".nav");
         const submenu = renderedSidebar.querySelector(".submenu");
         const iconClickable = submenu.querySelector(".submenu-icon-clickable");
 
@@ -283,10 +283,10 @@ describe("px-script: sidebar", () => {
     });
 
     it("closes a submenu when clicking outside the submenu", () => {
-        ReactDOM.render(<Sidebar subItems = {submenuItems} subopen />, div);
-        sidebar.init();
+        ReactDOM.render(<nav subItems = {submenuItems} subopen />, div);
+        nav.init();
 
-        const renderedSidebar = document.querySelector(".sidebar");
+        const renderedSidebar = document.querySelector(".nav");
         const submenu = renderedSidebar.querySelector(".submenu");
 
         expect(renderedSidebar).toBeDefined();
@@ -301,10 +301,10 @@ describe("px-script: sidebar", () => {
     });
 
     it("closes submenu on resize", () => {
-        ReactDOM.render(<Sidebar subItems = {submenuItems} />, div);
-        sidebar.init();
+        ReactDOM.render(<nav subItems = {submenuItems} />, div);
+        nav.init();
 
-        const renderedSidebar = document.querySelector(".sidebar");
+        const renderedSidebar = document.querySelector(".nav");
         const submenu = renderedSidebar.querySelector(".submenu");
         const iconClickable = submenu.querySelector(".submenu-icon-clickable");
 
