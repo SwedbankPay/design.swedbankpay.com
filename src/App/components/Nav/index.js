@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import classnames from "classnames";
 
 class Nav extends Component {
@@ -60,5 +61,13 @@ class Nav extends Component {
         );
     }
 }
+
+const mediaQueries = ["xs", "sm", "md", "lg", "xl", "xxl"];
+
+Nav.propTypes = {
+    items: PropTypes.array.isRequired,
+    vertsize: PropTypes.oneOf(mediaQueries),
+    widesize: PropTypes.oneOf(mediaQueries)
+};
 
 export default Nav;

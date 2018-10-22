@@ -1,0 +1,391 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Nav -  Prop mode is required 1`] = `
+<nav
+  className="nav nav-xxxl-vertical"
+>
+  <ul>
+    <li
+      key="nav-item-Home-0"
+    >
+      
+
+      <a
+        className="active"
+        href="#"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          className="material-icons"
+          onClick={[Function]}
+        >
+          home
+        </i>
+        
+
+        <span
+          onClick={[Function]}
+        >
+          Home
+        </span>
+        
+
+      </a>
+      
+
+    </li>
+    <li
+      key="nav-item-Transactions-1"
+    >
+      
+
+      <a
+        className={null}
+        href="#"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          className="material-icons"
+          onClick={[Function]}
+        >
+          shopping_cart
+        </i>
+        
+
+        <span
+          onClick={[Function]}
+        >
+          Transactions
+        </span>
+        
+
+      </a>
+      
+
+    </li>
+    <li
+      key="nav-item-Notifications-2"
+    >
+      
+
+      <a
+        className={null}
+        href="#"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          className="material-icons"
+          onClick={[Function]}
+        >
+          notification_important
+        </i>
+        
+
+        <span
+          onClick={[Function]}
+        >
+          Notifications
+        </span>
+        
+
+      </a>
+      
+
+    </li>
+    <li
+      key="nav-item-Language-3"
+    >
+      
+
+      <a
+        className={null}
+        href="#"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          className="material-icons"
+          onClick={[Function]}
+        >
+          language
+        </i>
+        
+
+        <span
+          onClick={[Function]}
+        >
+          Language
+        </span>
+        
+
+      </a>
+      
+
+    </li>
+    <li
+      key="nav-item-Account-4"
+    >
+      
+
+      <a
+        className={null}
+        href="#"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          className="material-icons"
+          onClick={[Function]}
+        >
+          account_balance
+        </i>
+        
+
+        <span
+          onClick={[Function]}
+        >
+          Account
+        </span>
+        
+
+      </a>
+      
+
+    </li>
+    <li
+      key="nav-item-Authentication-5"
+    >
+      
+
+      <a
+        className={null}
+        href="#"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          className="material-icons"
+          onClick={[Function]}
+        >
+          fingerprint
+        </i>
+        
+
+        <span
+          onClick={[Function]}
+        >
+          Authentication
+        </span>
+        
+
+      </a>
+      
+
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`Component: Nav -  renders 1`] = `
+<nav
+  className="nav"
+>
+  <ul>
+    <li
+      key="nav-item-Home-0"
+    >
+      
+
+      <a
+        className="active"
+        href="#"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          className="material-icons"
+          onClick={[Function]}
+        >
+          home
+        </i>
+        
+
+        <span
+          onClick={[Function]}
+        >
+          Home
+        </span>
+        
+
+      </a>
+      
+
+    </li>
+    <li
+      key="nav-item-Transactions-1"
+    >
+      
+
+      <a
+        className={null}
+        href="#"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          className="material-icons"
+          onClick={[Function]}
+        >
+          shopping_cart
+        </i>
+        
+
+        <span
+          onClick={[Function]}
+        >
+          Transactions
+        </span>
+        
+
+      </a>
+      
+
+    </li>
+    <li
+      key="nav-item-Notifications-2"
+    >
+      
+
+      <a
+        className={null}
+        href="#"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          className="material-icons"
+          onClick={[Function]}
+        >
+          notification_important
+        </i>
+        
+
+        <span
+          onClick={[Function]}
+        >
+          Notifications
+        </span>
+        
+
+      </a>
+      
+
+    </li>
+    <li
+      key="nav-item-Language-3"
+    >
+      
+
+      <a
+        className={null}
+        href="#"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          className="material-icons"
+          onClick={[Function]}
+        >
+          language
+        </i>
+        
+
+        <span
+          onClick={[Function]}
+        >
+          Language
+        </span>
+        
+
+      </a>
+      
+
+    </li>
+    <li
+      key="nav-item-Account-4"
+    >
+      
+
+      <a
+        className={null}
+        href="#"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          className="material-icons"
+          onClick={[Function]}
+        >
+          account_balance
+        </i>
+        
+
+        <span
+          onClick={[Function]}
+        >
+          Account
+        </span>
+        
+
+      </a>
+      
+
+    </li>
+    <li
+      key="nav-item-Authentication-5"
+    >
+      
+
+      <a
+        className={null}
+        href="#"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          className="material-icons"
+          onClick={[Function]}
+        >
+          fingerprint
+        </i>
+        
+
+        <span
+          onClick={[Function]}
+        >
+          Authentication
+        </span>
+        
+
+      </a>
+      
+
+    </li>
+  </ul>
+</nav>
+`;
