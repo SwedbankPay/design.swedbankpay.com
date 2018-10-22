@@ -1,7 +1,7 @@
-class Sidebar {
+class Nav {
     constructor (el) {
         this._el = el;
-        this.sidebarOpen = el.classList.contains("sidebar-open");
+        this.sidebarOpen = el.classList.contains("nav-open");
         this.childCount = [...this._el.querySelectorAll(".submenu")].length;
         this.submenus = this._el.querySelectorAll(".submenu");
         this.listItems = [...this._el.querySelectorAll("li")].length;
@@ -10,31 +10,33 @@ class Sidebar {
         this.submenuClosed;
 
         document.addEventListener("click", e => {
-            if (!e.target.closest(".sidebar") && this.sidebarOpen) {
-                this.closeSidebar();
+            if (!e.target.closest(".nav") && this.sidebarOpen) {
+                this.close();
                 this.hideItems();
             } else if (!e.target.closest(".submenu") && !this.submenuClosed) {
                 this.submenuCloseAll();
             }
         });
 
-        if (this.listItems > 5 || this.childCount > 0) {
+        if (this.listItems > 5 || this.childCount) {
+            this.hideItems();
+
             const menu = document.createElement("a");
 
             menu.setAttribute("href", "#");
-            this.hideItems();
-            menu.classList.add("sidebar-openbtn");
-            menu.innerHTML += "<i class='material-icons'>menu</i>";
+            menu.classList.add("nav-openbtn");
+            menu.innerHTML = "<i class='material-icons'>menu</i>";
+
             this._el.appendChild(menu);
 
             menu.addEventListener("click", e => {
                 e.preventDefault();
 
                 if (this.sidebarOpen) {
-                    this.closeSidebar();
+                    this.close();
                     this.hideItems();
                 } else {
-                    this.openSidebar();
+                    this.open();
                     this.showItems();
                 }
             });
@@ -92,31 +94,31 @@ class Sidebar {
     }
 
     onResize () {
-        this.closeSidebar();
+        this.close();
         this.hideItems();
         this.submenuCloseAll();
     }
 
-    openSidebar () {
+    open () {
         this.sidebarOpen = true;
-        this._el.classList.add("sidebar-open");
+        this._el.classList.add("nav-open");
         this.resizeEventMenuOpen = this.onResize.bind(this);
         window.addEventListener("resize", this.resizeEventMenuOpen, { passive: true });
     }
 
-    closeSidebar () {
+    close () {
         this.sidebarOpen = false;
-        this._el.classList.remove("sidebar-open");
+        this._el.classList.remove("nav-open");
         window.removeEventListener("resize", this.resizeEventMenuOpen, { passive: true });
     }
 }
 
-const sidebar = (() => {
+const nav = (() => {
     const init = () => {
-        [...document.querySelectorAll(".sidebar")].map(sidebars => new Sidebar(sidebars));
+        [...document.querySelectorAll(".nav")].map(sidebars => new Nav(sidebars));
     };
 
     return { init };
 })();
 
-export default sidebar;
+export default nav;

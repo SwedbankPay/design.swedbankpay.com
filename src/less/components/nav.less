@@ -1,8 +1,8 @@
-.sidebar {
+.nav {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin: @sidebar-margin-responsive;
+    margin: @nav-margin-responsive;
 
     > ul {
         display: flex;
@@ -75,7 +75,7 @@
         border-bottom: none;
         line-height: 0.7;
 
-        &.sidebar-openbtn {
+        &.nav-openbtn {
             margin-top: @base-margin-sm;
 
             &:hover {
@@ -89,10 +89,10 @@
     color: @gray-6;
 }
 
-.sidebar-vertical () {
+.nav-vertical () {
     ul {
         flex-direction: column;
-        margin: @sidebar-margin-tablet;
+        margin: @nav-margin-tablet;
 
         li {
             margin: 0;
@@ -128,7 +128,7 @@
 
                     ul {
                         margin: 0;
-                        z-index: @zindex-sidebar-submenu;
+                        z-index: @zindex-nav-submenu;
                         background-color: #ffffff;
                         display: block;
                         position: absolute;
@@ -173,24 +173,24 @@
                 font-size: @submenu-icon-fontsize-tablet;
                 padding: @base-padding-sm;
                 padding-left: @submenu-p-icon-left;
-                line-height: @sidebar-icon-lineheight;
+                line-height: @nav-icon-lineheight;
             }
         }
     }
 
-    .sidebar-openbtn {
+    .nav-openbtn {
         display: none;
     }
 }
 
-.sidebar-vertical-wide () {
-    .sidebar-open();
+.nav-vertical-wide () {
+    .nav-open();
 
-    .sidebar-openbtn {
+    .nav-openbtn {
         display: none;
     }
 
-    margin: @sidebar-margin;
+    margin: @nav-margin;
 
     ul {
         > :first-child {
@@ -248,7 +248,7 @@
     }
 }
 
-.sidebar-open {
+.nav-open {
     > ul {
         flex-direction: column;
 
@@ -299,15 +299,15 @@
     @infix: extract(@breakpoint, 1);
     @min-width: extract(@breakpoint, 2);
 
-    .sidebar-@{infix}-vertical {
+    .nav-@{infix}-vertical {
         @media screen and (min-width: @min-width) {
-            .sidebar-vertical();
+            .nav-vertical();
         }
     }
 
-    .sidebar-@{infix}-vertical-wide {
+    .nav-@{infix}-vertical-wide {
         @media screen and (min-width: @min-width) {
-            .sidebar-vertical-wide();
+            .nav-vertical-wide();
         }
     }
 }

@@ -145,6 +145,11 @@ export default [
                 component: require("../Documentation/components/MediaObject")
             },
             {
+                title: "Nav (experimental)",
+                path: "/docs/components/nav",
+                component: require("../Documentation/Components/Nav")
+            },
+            {
                 title: "Pagination",
                 path: "/docs/components/pagination",
                 component: require("../Documentation/components/Pagination")
@@ -163,11 +168,6 @@ export default [
                 title: "Sheet",
                 path: "/docs/components/sheet",
                 component: require("../Documentation/components/Sheet")
-            },
-            {
-                title: "Sidebar (experimental)",
-                path: "/docs/components/sidebar",
-                component: require("../Documentation/Components/Sidebar")
             },
             {
                 title: "Status",

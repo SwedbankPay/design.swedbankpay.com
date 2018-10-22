@@ -4,7 +4,7 @@
 
 ### Added
 
--- Added Sidebar component.
+- Added Sidebar component.
 
 ### Changed
 

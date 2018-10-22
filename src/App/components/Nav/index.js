@@ -1,24 +1,24 @@
 import React from "react";
 import classnames from "classnames";
 
-const Sidebar = ({ items, vertsize, widesize }) => {
-    const sidebarClassname = classnames("sidebar",
-        vertsize ? `sidebar-${vertsize}-vertical` : "",
-        widesize ? `sidebar-${widesize}-vertical-wide` : ""
+const Nav = ({ items, vertsize, widesize }) => {
+    const sidebarClassname = classnames("nav",
+        vertsize ? `nav-${vertsize}-vertical` : "",
+        widesize ? `nav-${widesize}-vertical-wide` : ""
     );
 
     return (
         <nav className={sidebarClassname}>
             <ul>
                 {items.map(({ name, icon, subItems }, i) => (
-                    <li key={`sidebar-item-${name}-${i}`}>{"\n"}
+                    <li key={`nav-item-${name}-${i}`}>{"\n"}
                         { subItems ?
                             <div className="submenu">{"\n"}
                                 <i className="material-icons">{icon}</i>{"\n"}
                                 <span>{name}</span>
                                 <ul>
                                     {subItems.map((itemsname, j) => (
-                                        <li key={`sidebar-subItems-${itemsname}-${j}`}>
+                                        <li key={`nav-subItems-${itemsname}-${j}`}>
                                             <a href="#" onClick = {e => e.preventDefault()}>{itemsname}</a>
                                         </li>
                                     ))}
@@ -36,4 +36,4 @@ const Sidebar = ({ items, vertsize, widesize }) => {
     );
 };
 
-export default Sidebar;
+export default Nav;

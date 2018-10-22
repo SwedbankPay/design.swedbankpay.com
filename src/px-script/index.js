@@ -6,9 +6,9 @@ import button from "./button";
 import datepicker from "./datepicker";
 import dialog from "./dialog";
 import loader from "./loader";
+import nav from "./nav";
 import rangeslider from "./rangeslider";
 import sheet from "./sheet";
-import sidebar from "./sidebar";
 import script from "./script";
 import tabs from "./tabs";
 import toast from "./toast";
@@ -28,9 +28,9 @@ const px = {
     datepicker,
     dialog,
     loader,
+    nav,
     rangeslider,
     sheet,
-    sidebar,
     script,
     tabs,
     toast,
@@ -49,4 +49,4 @@ if (!window.stopPx) {
 
 export default px;
 
-export { actionList, alert, button, datepicker, dialog, loader, rangeslider, sheet, sidebar, script, tabs, toast, topbar, utils, validation };
+export { actionList, alert, button, datepicker, dialog, loader, rangeslider, sheet, nav, script, tabs, toast, topbar, utils, validation };

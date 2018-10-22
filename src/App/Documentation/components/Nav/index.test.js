@@ -1,26 +1,26 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Sidebar, { StandardSidebar, TwoLevels, IconsOnly, Mix, Responsive, SidebarText } from "./index";
+import Nav, { StandardNav, TwoLevels, IconsOnly, Mix, Mobile, SidebarText } from "./index";
 
-describe("Component: Sidebar", () => {
+describe("Component: Nav", () => {
     it("is defined", () => {
-        expect(Sidebar).toBeDefined();
+        expect(Nav).toBeDefined();
     });
 
     it("renders", () => {
-        const wrapper = shallow(<Sidebar />);
+        const wrapper = shallow(<Nav />);
 
         expect(wrapper).toMatchSnapshot();
     });
 
-    describe("StandardSidebar", () => {
+    describe("StandardNav", () => {
         it("is defined", () => {
-            expect(StandardSidebar).toBeDefined();
+            expect(StandardNav).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<StandardSidebar />);
+            const wrapper = shallow(<StandardNav />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -62,13 +62,13 @@ describe("Component: Sidebar", () => {
         });
     });
 
-    describe("Responsive", () => {
+    describe("Mobile", () => {
         it("is defined", () => {
-            expect(Responsive).toBeDefined();
+            expect(Mobile).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<Responsive />);
+            const wrapper = shallow(<Mobile />);
 
             expect(wrapper).toMatchSnapshot();
         });
