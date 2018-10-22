@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Sidebar IconsOnly renders 1`] = `
+exports[`Component: Nav IconsOnly renders 1`] = `
 <Fragment>
   <h2
-    id="sidebar-tablet"
+    id="nav-tablet"
   >
     Icons only
   </h2>
@@ -12,13 +12,13 @@ exports[`Component: Sidebar IconsOnly renders 1`] = `
     <code
       className="token property"
     >
-      .sidebar-(desired_size)-vertical
+      .nav-(desired_size)-vertical
     </code>
     .  
     <code
       className="token property"
     >
-      .sidebar-(desired_size)-vertical
+      .nav-(desired_size)-vertical
     </code>
      works just like in the standard example. In this mode it is possible to display another level of items.
   </p>
@@ -27,7 +27,7 @@ exports[`Component: Sidebar IconsOnly renders 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <Sidebar
+    <Nav
       items={
         Array [
           Object {
@@ -67,10 +67,10 @@ exports[`Component: Sidebar IconsOnly renders 1`] = `
 </Fragment>
 `;
 
-exports[`Component: Sidebar Mix renders 1`] = `
+exports[`Component: Nav Mix renders 1`] = `
 <Fragment>
   <h2
-    id="sidebar-mix"
+    id="nav-mix"
   >
     Tablet and wide
   </h2>
@@ -82,7 +82,7 @@ exports[`Component: Sidebar Mix renders 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <Sidebar
+    <Nav
       items={
         Array [
           Object {
@@ -123,19 +123,19 @@ exports[`Component: Sidebar Mix renders 1`] = `
 </Fragment>
 `;
 
-exports[`Component: Sidebar Responsive renders 1`] = `
+exports[`Component: Nav Mobile renders 1`] = `
 <Fragment>
   <h2
-    id="responsive-sidebar"
+    id="nav-mobile"
   >
-    Responsive sidebar
+    Mobile nav
   </h2>
   <p>
-    To only use responsive mode use class 
+    To only display mobile view use class 
     <code
       className="token property"
     >
-      .sidebar
+      .nav
     </code>
      alone.
   </p>
@@ -144,7 +144,7 @@ exports[`Component: Sidebar Responsive renders 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <Sidebar
+    <Nav
       items={
         Array [
           Object {
@@ -178,7 +178,7 @@ exports[`Component: Sidebar Responsive renders 1`] = `
 </Fragment>
 `;
 
-exports[`Component: Sidebar SidebarText renders 1`] = `
+exports[`Component: Nav NavText renders 1`] = `
 <div
   className="col-md-12 col-lg-10 doc-body"
 >
@@ -188,33 +188,33 @@ exports[`Component: Sidebar SidebarText renders 1`] = `
   >
     Sidebars.
   </p>
-  <StandardSidebar />
+  <StandardNav />
   <TwoLevels />
   <IconsOnly />
   <Mix />
-  <Responsive />
+  <Mobile />
 </div>
 `;
 
-exports[`Component: Sidebar StandardSidebar renders 1`] = `
+exports[`Component: Nav StandardNav renders 1`] = `
 <Fragment>
   <h2
-    id="sidebar-standard"
+    id="nav-standard"
   >
-    Standard sidebar
+    Standard nav
   </h2>
   <p>
     Add class 
     <code
       className="token property"
     >
-      .sidebar
+      .nav
     </code>
      and 
     <code
       className="token property"
     >
-      .sidebar-(desired_size)-vertical-wide
+      .nav-(desired_size)-vertical-wide
     </code>
      to a nav containing an 
     <PrismCode
@@ -223,7 +223,7 @@ exports[`Component: Sidebar StandardSidebar renders 1`] = `
     >
       &lt;ul&gt;
     </PrismCode>
-     to get a standard sidebar. Add 
+     to get a standard nav. Add 
     <PrismCode
       className="language-html"
       component="code"
@@ -248,16 +248,16 @@ exports[`Component: Sidebar StandardSidebar renders 1`] = `
     <code
       className="token property"
     >
-      .sidebar-(desired_size)-vertical-wide
+      .nav-(desired_size)-vertical-wide
     </code>
-     determines when your sidebar will switch from responsive mode to vertical. If you have more than five icons then the first four icons will be the only visible ones in responsive mode.
+     determines when your nav will switch from mobile view to vertical. If you have more than five icons then the first four icons will be the only visible ones in mobile view.
   </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}
   >
-    <Sidebar
+    <Nav
       items={
         Array [
           Object {
@@ -292,15 +292,15 @@ exports[`Component: Sidebar StandardSidebar renders 1`] = `
 </Fragment>
 `;
 
-exports[`Component: Sidebar TwoLevels renders 1`] = `
+exports[`Component: Nav TwoLevels renders 1`] = `
 <Fragment>
   <h2
-    id="sidebar-twolevels"
+    id="nav-twolevels"
   >
     Two levels
   </h2>
   <p>
-    You can also display another level of items in the standard sidebar. Just nest a 
+    You can also display another level of items in the standard nav. Just nest a 
     <PrismCode
       className="language-html"
       component="code"
@@ -313,7 +313,7 @@ exports[`Component: Sidebar TwoLevels renders 1`] = `
     >
       .submenu
     </code>
-     containing an icon and text like the standard sidebar and add a new 
+     containing an icon and text like the standard nav and add a new 
     <PrismCode
       className="language-html"
       component="code"
@@ -334,7 +334,7 @@ exports[`Component: Sidebar TwoLevels renders 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <Sidebar
+    <Nav
       items={
         Array [
           Object {
@@ -374,14 +374,14 @@ exports[`Component: Sidebar TwoLevels renders 1`] = `
 </Fragment>
 `;
 
-exports[`Component: Sidebar renders 1`] = `
+exports[`Component: Nav renders 1`] = `
 <div
   className="doc-container"
 >
   <div
     className="row"
   >
-    <SidebarText />
+    <NavText />
     <DocToc
       component={[Function]}
     />

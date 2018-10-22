@@ -339,6 +339,19 @@ exports[`Documentation: index renders 1`] = `
               },
               Object {
                 "component": Object {
+                  "IconsOnly": [Function],
+                  "Mix": [Function],
+                  "Mobile": [Function],
+                  "NavText": [Function],
+                  "StandardNav": [Function],
+                  "TwoLevels": [Function],
+                  "default": [Function],
+                },
+                "path": "/docs/components/nav",
+                "title": "Nav (experimental)",
+              },
+              Object {
+                "component": Object {
                   "DefaultPagination": [Function],
                   "PaginationBullets": [Function],
                   "PaginationText": [Function],
@@ -379,19 +392,6 @@ exports[`Documentation: index renders 1`] = `
                 },
                 "path": "/docs/components/sheet",
                 "title": "Sheet",
-              },
-              Object {
-                "component": Object {
-                  "IconsOnly": [Function],
-                  "Mix": [Function],
-                  "Responsive": [Function],
-                  "SidebarText": [Function],
-                  "StandardSidebar": [Function],
-                  "TwoLevels": [Function],
-                  "default": [Function],
-                },
-                "path": "/docs/components/sidebar",
-                "title": "Sidebar (experimental)",
               },
               Object {
                 "component": Object {

@@ -1,7 +1,7 @@
 class Nav {
     constructor (el) {
         this._el = el;
-        this.sidebarOpen = el.classList.contains("nav-open");
+        this.navOpen = el.classList.contains("nav-open");
         this.childCount = [...this._el.querySelectorAll(".submenu")].length;
         this.submenus = this._el.querySelectorAll(".submenu");
         this.listItems = [...this._el.querySelectorAll("li")].length;
@@ -10,7 +10,7 @@ class Nav {
         this.submenuClosed;
 
         document.addEventListener("click", e => {
-            if (!e.target.closest(".nav") && this.sidebarOpen) {
+            if (!e.target.closest(".nav") && this.navOpen) {
                 this.close();
                 this.hideItems();
             } else if (!e.target.closest(".submenu") && !this.submenuClosed) {
@@ -32,7 +32,7 @@ class Nav {
             menu.addEventListener("click", e => {
                 e.preventDefault();
 
-                if (this.sidebarOpen) {
+                if (this.navOpen) {
                     this.close();
                     this.hideItems();
                 } else {
@@ -100,14 +100,14 @@ class Nav {
     }
 
     open () {
-        this.sidebarOpen = true;
+        this.navOpen = true;
         this._el.classList.add("nav-open");
         this.resizeEventMenuOpen = this.onResize.bind(this);
         window.addEventListener("resize", this.resizeEventMenuOpen, { passive: true });
     }
 
     close () {
-        this.sidebarOpen = false;
+        this.navOpen = false;
         this._el.classList.remove("nav-open");
         window.removeEventListener("resize", this.resizeEventMenuOpen, { passive: true });
     }
@@ -115,7 +115,7 @@ class Nav {
 
 const nav = (() => {
     const init = () => {
-        [...document.querySelectorAll(".nav")].map(sidebars => new Nav(sidebars));
+        [...document.querySelectorAll(".nav")].map(nav => new Nav(nav));
     };
 
     return { init };

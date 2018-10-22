@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Nav, { StandardNav, TwoLevels, IconsOnly, Mix, Mobile, SidebarText } from "./index";
+import Nav, { StandardNav, TwoLevels, IconsOnly, Mix, Mobile, SidebarText, NavText } from "./index";
 
 describe("Component: Nav", () => {
     it("is defined", () => {
@@ -74,13 +74,13 @@ describe("Component: Nav", () => {
         });
     });
 
-    describe("SidebarText", () => {
+    describe("NavText", () => {
         it("is defined", () => {
-            expect(SidebarText).toBeDefined();
+            expect(NavText).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<SidebarText />);
+            const wrapper = shallow(<NavText />);
 
             expect(wrapper).toMatchSnapshot();
         });
