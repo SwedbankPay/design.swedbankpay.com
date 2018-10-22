@@ -5,12 +5,13 @@ class Nav extends Component {
     constructor (props) {
         super(props);
 
-        this.state = { active: 0 };
+        this.state = { activesub: 1 };
     }
 
     setActive (e, i, j) {
         e.preventDefault();
-        this.setState({ active: i + j });
+        console.log(e);
+        this.setState({ activesub: i + j });
     }
 
     render () {
@@ -32,7 +33,7 @@ class Nav extends Component {
                                     <span>{name}</span>
                                     <ul>
                                         {subItems.map((itemsname, j) => (
-                                            <li key={`nav-subItems-${itemsname}-${j}`} className={this.state.active === i + j ? "active" : null}>
+                                            <li key={`nav-subItems-${itemsname}-${j}`} className={this.state.activesub === i + j ? "active" : null}>
                                                 <a href="#" onClick = {e => this.setActive(e, i, j)}>{itemsname}</a>
                                             </li>
                                         ))}
@@ -41,7 +42,7 @@ class Nav extends Component {
                                 :
                                 <a href="#" onClick = {e => e.preventDefault()}>{"\n"}
                                     <i className="material-icons">{icon}</i>{"\n"}
-                                    <span>{name}</span>{"\n"}
+                                    <span onClick = {e => this.setActive(e, i)}>{name}</span>{"\n"}
                                 </a>}{"\n"}
                         </li>
                     ))}

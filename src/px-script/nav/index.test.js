@@ -101,11 +101,11 @@ describe("px-script: nav", () => {
     );
 
     it("is defined", () => {
-        expect(nav).toBeDefined();
+        expect(nav).toBeTruthy();
     });
 
     it("has an init method", () => {
-        expect(nav.init).toBeDefined();
+        expect(nav.init).toBeTruthy();
         expect(nav.init).toBeInstanceOf(Function);
     });
 
@@ -116,7 +116,7 @@ describe("px-script: nav", () => {
         const renderedNav = document.querySelector(".nav");
         const sidebarMenubtn = renderedNav.querySelector(".nav-openbtn");
 
-        expect(renderedNav).toBeDefined();
+        expect(renderedNav).toBeTruthy();
         expect(sidebarMenubtn).toBeNull();
 
         ReactDOM.unmountComponentAtNode(div);
@@ -129,8 +129,8 @@ describe("px-script: nav", () => {
         const renderedNav = document.querySelector(".nav");
         const sidebarMenubtn = renderedNav.querySelector(".nav-openbtn");
 
-        expect(renderedNav).toBeDefined();
-        expect(sidebarMenubtn).toBeDefined();
+        expect(renderedNav).toBeTruthy();
+        expect(sidebarMenubtn).toBeTruthy();
 
         ReactDOM.unmountComponentAtNode(div);
     });
@@ -142,8 +142,8 @@ describe("px-script: nav", () => {
         const renderedNav = document.querySelector(".nav");
         const sidebarMenubtn = renderedNav.querySelector(".nav-openbtn");
 
-        expect(renderedNav).toBeDefined();
-        expect(sidebarMenubtn).toBeDefined();
+        expect(renderedNav).toBeTruthy();
+        expect(sidebarMenubtn).toBeTruthy();
 
         ReactDOM.unmountComponentAtNode(div);
     });
@@ -155,8 +155,8 @@ describe("px-script: nav", () => {
         const renderedNav = document.querySelector(".nav");
         const sidebarMenubtn = renderedNav.querySelector(".nav-openbtn");
 
-        expect(renderedNav).toBeDefined();
-        expect(sidebarMenubtn).toBeDefined();
+        expect(renderedNav).toBeTruthy();
+        expect(sidebarMenubtn).toBeTruthy();
         expect(renderedNav.classList).not.toContain("nav-open");
 
         sidebarMenubtn.click();
@@ -173,8 +173,8 @@ describe("px-script: nav", () => {
         const renderedNav = document.querySelector(".nav");
         const sidebarMenubtn = renderedNav.querySelector(".nav-openbtn");
 
-        expect(renderedNav).toBeDefined();
-        expect(sidebarMenubtn).toBeDefined();
+        expect(renderedNav).toBeTruthy();
+        expect(sidebarMenubtn).toBeTruthy();
         expect(renderedNav.classList).toContain("nav-open");
 
         sidebarMenubtn.click();
@@ -189,7 +189,7 @@ describe("px-script: nav", () => {
 
         const renderedNav = document.querySelector(".nav");
 
-        expect(renderedNav).toBeDefined();
+        expect(renderedNav).toBeTruthy();
         expect(renderedNav.classList).toContain("nav-open");
 
         document.querySelector("html").click();
@@ -206,8 +206,8 @@ describe("px-script: nav", () => {
         const renderedNav = document.querySelector(".nav");
         const sidebarMenubtn = renderedNav.querySelector(".nav-openbtn");
 
-        expect(renderedNav).toBeDefined();
-        expect(sidebarMenubtn).toBeDefined();
+        expect(renderedNav).toBeTruthy();
+        expect(sidebarMenubtn).toBeTruthy();
         expect(renderedNav.classList).not.toContain("nav-open");
 
         sidebarMenubtn.click();
@@ -229,9 +229,9 @@ describe("px-script: nav", () => {
         const submenu = renderedNav.querySelector(".submenu");
         const submenuicons = submenu.querySelectorAll("i");
 
-        expect(renderedNav).toBeDefined();
-        expect(submenu).toBeDefined();
-        expect(submenuicons).toBeDefined();
+        expect(renderedNav).toBeTruthy();
+        expect(submenu).toBeTruthy();
+        expect(submenuicons).toBeTruthy();
         expect([...submenuicons]).toHaveLength(2);
 
         const submenuIcon = [...submenuicons][1];
@@ -250,9 +250,9 @@ describe("px-script: nav", () => {
         const submenu = renderedNav.querySelector(".submenu");
         const iconClickable = submenu.querySelector(".submenu-icon-clickable");
 
-        expect(renderedNav).toBeDefined();
-        expect(submenu).toBeDefined();
-        expect(iconClickable).toBeDefined();
+        expect(renderedNav).toBeTruthy();
+        expect(submenu).toBeTruthy();
+        expect(iconClickable).toBeTruthy();
         expect(submenu.classList).not.toContain("submenu-open");
 
         iconClickable.click();
@@ -270,9 +270,9 @@ describe("px-script: nav", () => {
         const submenu = renderedNav.querySelector(".submenu");
         const iconClickable = submenu.querySelector(".submenu-icon-clickable");
 
-        expect(renderedNav).toBeDefined();
-        expect(submenu).toBeDefined();
-        expect(iconClickable).toBeDefined();
+        expect(renderedNav).toBeTruthy();
+        expect(submenu).toBeTruthy();
+        expect(iconClickable).toBeTruthy();
         expect(submenu.classList).toContain("submenu-open");
 
         iconClickable.click();
@@ -289,8 +289,8 @@ describe("px-script: nav", () => {
         const renderedNav = document.querySelector(".nav");
         const submenu = renderedNav.querySelector(".submenu");
 
-        expect(renderedNav).toBeDefined();
-        expect(submenu).toBeDefined();
+        expect(renderedNav).toBeTruthy();
+        expect(submenu).toBeTruthy();
         expect(submenu.classList).toContain("submenu-open");
 
         document.querySelector("html").click();
@@ -308,9 +308,9 @@ describe("px-script: nav", () => {
         const submenu = renderedNav.querySelector(".submenu");
         const iconClickable = submenu.querySelector(".submenu-icon-clickable");
 
-        expect(renderedNav).toBeDefined();
-        expect(submenu).toBeDefined();
-        expect(iconClickable).toBeDefined();
+        expect(renderedNav).toBeTruthy();
+        expect(submenu).toBeTruthy();
+        expect(iconClickable).toBeTruthy();
         expect(submenu.classList).not.toContain("submenu-open");
 
         iconClickable.click();

@@ -12,13 +12,17 @@ exports[`Component: Nav IconsOnly renders 1`] = `
     <code
       className="token property"
     >
-      .nav-(desired_size)-vertical
+      .nav-
+      {desired_size}
+      -vertical
     </code>
     .  
     <code
       className="token property"
     >
-      .nav-(desired_size)-vertical
+      .nav-
+      {desired_size}
+      -vertical
     </code>
      works just like in the standard example. In this mode it is possible to display another level of items.
   </p>
@@ -214,7 +218,9 @@ exports[`Component: Nav StandardNav renders 1`] = `
     <code
       className="token property"
     >
-      .nav-(desired_size)-vertical-wide
+      .nav-
+      {desired_size}
+      -vertical-wide
     </code>
      to a nav containing an 
     <PrismCode
@@ -248,7 +254,9 @@ exports[`Component: Nav StandardNav renders 1`] = `
     <code
       className="token property"
     >
-      .nav-(desired_size)-vertical-wide
+      .nav-
+      {desired_size}
+      -vertical-wide
     </code>
      determines when your nav will switch from mobile view to vertical. If you have more than five icons then the first four icons will be the only visible ones in mobile view.
   </p>
