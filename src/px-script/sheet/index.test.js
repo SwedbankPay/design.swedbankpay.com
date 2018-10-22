@@ -31,6 +31,10 @@ describe("px-script: sheet", () => {
         </>
     );
 
+    beforeEach(() => {
+        document.body.classList.remove("sheet-open");
+    });
+
     it("is defined", () => {
         expect(sheet).toBeDefined();
     });
@@ -138,7 +142,7 @@ describe("px-script: sheet", () => {
         ReactDOM.unmountComponentAtNode(div);
     });
 
-    it("closes sheet when clicking outside the dialog section", () => {
+    it("closes sheet when clicking outside the sheet section", () => {
         ReactDOM.render(<OpenSheet />, div);
 
         const renderedSheet = document.querySelector(".sheet");
@@ -204,6 +208,97 @@ describe("px-script: sheet", () => {
         expect(renderedSheet.classList).not.toContain("sheet-open");
         expect(document.body.classList).not.toContain("sheet-open");
         expect(renderedSheet.classList).not.toContain("d-block");
+
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
+    it("opens sheet when calling sheet.open", () => {
+        ReactDOM.render(<Sheet />, div);
+
+        const renderedSheet = document.querySelector(".sheet");
+
+        expect(renderedSheet.classList).not.toContain("d-block");
+        expect(renderedSheet.classList).not.toContain("sheet-open");
+        expect(document.body.classList).not.toContain("sheet-open");
+
+        sheet.init();
+        expect(document.body.classList).not.toContain("sheet-open");
+
+        sheet.open("demo-sheet");
+        jest.runAllTimers();
+
+        expect(renderedSheet.classList).toContain("d-block");
+        expect(renderedSheet.classList).toContain("sheet-open");
+        expect(document.body.classList).toContain("sheet-open");
+
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
+    it("does not open sheet when calling sheet.open with wrong id and prints error to console", () => {
+        console.error = jest.fn();
+        ReactDOM.render(<Sheet />, div);
+
+        const renderedSheet = document.querySelector(".sheet");
+
+        expect(renderedSheet.classList).not.toContain("d-block");
+        expect(renderedSheet.classList).not.toContain("sheet-open");
+        expect(document.body.classList).not.toContain("sheet-open");
+
+        sheet.init();
+        expect(renderedSheet.classList).not.toContain("d-block");
+        expect(renderedSheet.classList).not.toContain("sheet-open");
+        expect(document.body.classList).not.toContain("sheet-open");
+
+        sheet.open("qwerty");
+
+        expect(console.error).toHaveBeenCalledWith("sheet.open: No sheet with id \"qwerty\" found.");
+
+        expect(renderedSheet.classList).not.toContain("d-block");
+        expect(renderedSheet.classList).not.toContain("sheet-open");
+        expect(document.body.classList).not.toContain("sheet-open");
+
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
+    it("closes sheet when calling sheet.close", () => {
+        ReactDOM.render(<OpenSheet />, div);
+
+        const renderedSheet = document.querySelector(".sheet");
+
+        expect(document.body.classList).not.toContain("sheet-open");
+
+        sheet.init();
+        expect(document.body.classList).toContain("sheet-open");
+
+        sheet.close("demo-sheet");
+        jest.runAllTimers();
+
+        expect(renderedSheet.classList).not.toContain("d-block");
+        expect(renderedSheet.classList).not.toContain("sheet-open");
+        expect(document.body.classList).not.toContain("sheet-open");
+
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
+    it("does not close sheet when calling sheet.close with wrong id and prints error to console", () => {
+        console.error = jest.fn();
+        ReactDOM.render(<OpenSheet />, div);
+
+        const renderedSheet = document.querySelector(".sheet");
+
+        expect(document.body.classList).not.toContain("sheet-open");
+
+        sheet.init();
+        expect(document.body.classList).toContain("sheet-open");
+
+        sheet.close("qwerty");
+        jest.runAllTimers();
+
+        expect(console.error).toHaveBeenCalledWith("sheet.close: No sheet with id \"qwerty\" found.");
+
+        expect(renderedSheet.classList).toContain("d-block");
+        expect(renderedSheet.classList).toContain("sheet-open");
+        expect(document.body.classList).toContain("sheet-open");
 
         ReactDOM.unmountComponentAtNode(div);
     });
