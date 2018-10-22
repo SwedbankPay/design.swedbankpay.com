@@ -22,6 +22,14 @@
                 span {
                     display: none;
                 }
+
+                &.active {
+                    font-weight: bold;
+
+                    i {
+                        color: @brand-primary;
+                    }
+                }
             }
 
             &.responsive-hidden {
@@ -125,10 +133,6 @@
 
                 &.submenu-open {
                     position: relative;
-
-                    i {
-                        color: @brand-primary;
-                    }
 
                     ul {
                         margin: 0;

@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Nav, { StandardNav, TwoLevels, IconsOnly, Mix, Mobile, SidebarText, NavText } from "./index";
+import Nav, { StandardNav, TwoLevels, IconsOnly, Mix, Mobile, NavText } from "./index";
 
 describe("Component: Nav", () => {
     it("is defined", () => {

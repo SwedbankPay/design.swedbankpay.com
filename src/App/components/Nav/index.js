@@ -5,13 +5,22 @@ class Nav extends Component {
     constructor (props) {
         super(props);
 
-        this.state = { activesub: 1 };
+        this.state = {
+            active: "main-0"
+        };
     }
 
-    setActive (e, i, j) {
+    setActive (e, id) {
         e.preventDefault();
-        console.log(e);
-        this.setState({ activesub: i + j });
+
+        const subParent = e.target.closest(".submenu");
+
+        if (subParent) {
+            subParent.classList.remove("submenu-open");
+        }
+
+        this.setState({ active: id });
+
     }
 
     render () {
@@ -33,16 +42,16 @@ class Nav extends Component {
                                     <span>{name}</span>
                                     <ul>
                                         {subItems.map((itemsname, j) => (
-                                            <li key={`nav-subItems-${itemsname}-${j}`} className={this.state.activesub === i + j ? "active" : null}>
-                                                <a href="#" onClick = {e => this.setActive(e, i, j)}>{itemsname}</a>
+                                            <li key={`nav-subItems-${itemsname}-${j}`} className={this.state.active === `sub-${i}-${j}` ? "active" : null}>
+                                                <a href="#" onClick = {e => this.setActive(e, `sub-${i}-${j}`)}>{itemsname}</a>
                                             </li>
                                         ))}
                                     </ul>
                                 </div>
                                 :
-                                <a href="#" onClick = {e => e.preventDefault()}>{"\n"}
-                                    <i className="material-icons">{icon}</i>{"\n"}
-                                    <span onClick = {e => this.setActive(e, i)}>{name}</span>{"\n"}
+                                <a href="#" onClick = {e => e.preventDefault()} className={this.state.active === `main-${i}` ? "active" : null}>{"\n"}
+                                    <i onClick = {e => this.setActive(e, `main-${i}`)} className="material-icons">{icon}</i>{"\n"}
+                                    <span onClick = {e => this.setActive(e, `main-${i}`)}>{name}</span>{"\n"}
                                 </a>}{"\n"}
                         </li>
                     ))}
@@ -50,6 +59,6 @@ class Nav extends Component {
             </nav>
         );
     }
-};
+}
 
 export default Nav;
