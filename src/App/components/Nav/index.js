@@ -7,17 +7,26 @@ class Nav extends Component {
         super(props);
 
         this.state = {
-            active: "main-0"
+            active: "main-0",
+            activeParent: null
         };
     }
 
     setActive (e, id) {
         e.preventDefault();
+        console.log("hello");
 
         const subParent = e.target.closest(".submenu");
 
         if (subParent) {
-            subParent.classList.remove("submenu-open");
+            if (this.state.activeParent) {
+                this.state.activeParent.classList.remove("submenu-active-parent");
+            }
+
+            subParent.classList.add("submenu-active-parent");
+            this.setState({ activeParent: subParent });
+        } else if (this.state.activeParent) {
+            this.state.activeParent.classList.remove("submenu-active-parent");
         }
 
         this.setState({ active: id });

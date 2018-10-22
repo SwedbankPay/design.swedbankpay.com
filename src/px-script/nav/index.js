@@ -7,16 +7,7 @@ class Nav {
         this.listItems = [...this._el.querySelectorAll("li")].length;
         this.resizeEventMenuOpen;
         this.resizeEventSubmenuOpen;
-        this.submenuClosed;
-
-        document.addEventListener("click", e => {
-            if (!e.target.closest(".nav") && this.navOpen) {
-                this.close();
-                this.hideItems();
-            } else if (!e.target.closest(".submenu") && !this.submenuClosed) {
-                this.submenuCloseAll();
-            }
-        });
+        this.submenuOpen = false;
 
         if (this.listItems > 5 || this.childCount) {
             this.hideItems();
@@ -49,17 +40,17 @@ class Nav {
                 submenuCopy.classList.add("submenu-icon-clickable");
                 submenu.insertBefore(submenuCopy, submenu.querySelector("i"));
                 submenuCopy.addEventListener("click", () => {
-                    this.submenuClosed = submenu.classList.contains("submenu-open");
-
-                    if (!this.submenuClosed) {
+                    if (!this.submenuOpen) {
+                        console.log("open");
                         this.submenuCloseAll();
                         this.resizeEventSubmenuOpen = this.onResize.bind(this);
                         window.addEventListener("resize", this.resizeEventSubmenuOpen, { passive: true });
                         submenu.classList.add("submenu-open");
+                        this.submenuOpen = true;
                     } else {
                         this.submenuCloseAll();
                     }
-                });
+                }, false);
             });
         }
     }
@@ -67,6 +58,7 @@ class Nav {
     submenuCloseAll () {
         window.removeEventListener("resize", this.resizeEventSubmenuOpen, { passive: true });
         this.submenus.forEach(submenu => submenu.classList.remove("submenu-open"));
+        this.submenuOpen = false;
     }
 
     showItems () {
@@ -115,7 +107,25 @@ class Nav {
 
 const nav = (() => {
     const init = () => {
-        [...document.querySelectorAll(".nav")].map(nav => new Nav(nav));
+        const navsExist = [...document.querySelectorAll(".nav")];
+
+        if (navsExist.length) {
+            const navs = [...document.querySelectorAll(".nav")].map(nav => new Nav(nav));
+
+            document.addEventListener("click", e => {
+                navs.forEach(nav => {
+                    if (!e.target.closest(".nav") && nav.navOpen) {
+                        nav.close();
+                        nav.hideItems();
+                    }
+                    
+                    if (!e.target.closest(".submenu") && nav.submenuOpen) {
+                        console.log("close");
+                        nav.submenuCloseAll();
+                    }
+                });
+            }, false);
+        }
     };
 
     return { init };
