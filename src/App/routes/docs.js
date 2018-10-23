@@ -147,7 +147,7 @@ module.exports = [
             {
                 title: "Nav (experimental)",
                 path: "/docs/components/nav",
-                component: require("../Documentation/Components/Nav")
+                componentPath: "components/Nav"
             },
             {
                 title: "Pagination",
