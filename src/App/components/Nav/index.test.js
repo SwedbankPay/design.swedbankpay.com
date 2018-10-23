@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from "react-dom";
 import { shallow } from "enzyme";
 
 import Nav from "./index";
@@ -55,6 +56,10 @@ const navItemsTwoLevels = [
     }
 ];
 
+const div = document.createElement("div");
+
+document.body.appendChild(div);
+
 describe("Component: Nav - ", () => {
     it("is defined", () => {
         expect(Nav).toBeDefined();
@@ -93,28 +98,70 @@ describe("Component: Nav - ", () => {
     it("renders with an active list if state active matches", () => {
         const wrapper = shallow(<Nav items={navItems} />);
 
-        wrapper.setState({ active: "main-0" });
-
         expect(wrapper.find(".active")).toHaveLength(1);
         expect(wrapper).toMatchSnapshot();
     });
 
     it("renders with an active sublistItem if state active matches", () => {
-        const wrapper = shallow(<Nav items={navItemsTwoLevels} />);
-
-        wrapper.setState({ active: "sub-1-0" });
+        const wrapper = shallow(<Nav items={navItemsTwoLevels} />).setState({ active: "sub-1-0" });
 
         expect(wrapper.find(".active")).toHaveLength(1);
         expect(wrapper).toMatchSnapshot();
     });
 
-    it("does nothing when clicking on an anchor in an active listitem", () => {
-        const wrapper = shallow(<Nav items={navItemsTwoLevels} />).setState({ active: "sub-1-0"});
-        const activeList = wrapper.find(".active");
+    it("does nothing when clicking on an active listitem", () => {
+        ReactDOM.render(<Nav items={navItems} />, div);
 
-        expect(activeList).toHaveLength(1);
-        activeList.find("a").simulate("click");
+        const renderedNav = document.querySelector(".nav");
+        const activeAnchor = renderedNav.querySelector(".active");
 
-        expect(wrapper).toMatchSnapshot();
+        expect(renderedNav).toBeTruthy();
+        expect(activeAnchor).toBeTruthy();
+        expect(activeAnchor.classList).toContain("active");
+
+        activeAnchor.click();
+
+        expect(activeAnchor.classList).toContain("active");
+
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
+    it("changes active item", () => {
+        ReactDOM.render(<Nav items={navItems} />, div);
+
+        const renderedNav = document.querySelector(".nav");
+        const inactiveAnchor = renderedNav.querySelector("a:not(.active)");
+
+        expect(renderedNav).toBeTruthy();
+        expect(inactiveAnchor).toBeTruthy();
+        expect(inactiveAnchor.classList).not.toContain("active");
+
+        inactiveAnchor.click();
+
+        expect(inactiveAnchor.classList).toContain("active");
+
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
+    it("sets subitems parent to active aswell as subitem when clicked", () => {
+        ReactDOM.render(<Nav items={navItemsTwoLevels} />, div);
+
+        const renderedNav = document.querySelector(".nav");
+        const submenu = renderedNav.querySelector(".submenu");
+        const subitemList = submenu.querySelector("li");
+        const subitemAnchor = submenu.querySelector("a");
+
+        expect(renderedNav).toBeTruthy();
+        expect(submenu).toBeTruthy();
+        expect(subitemAnchor).toBeTruthy();
+        expect(submenu.classList).not.toContain("submenu-active-parent");
+        expect(subitemList.classList).not.toContain("active");
+
+        subitemAnchor.click();
+
+        expect(submenu.classList).toContain("submenu-active-parent");
+        expect(subitemList.classList).toContain("active");
+
+        ReactDOM.unmountComponentAtNode(div);
     });
 });
