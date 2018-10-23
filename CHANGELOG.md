@@ -5,6 +5,8 @@
 ### Added
 
 - Added Sidebar component.
+- Added functionality to programmatically open and close dialog component.
+- Added functionality to programmatically open and close sheet component.
 
 ### Changed
 

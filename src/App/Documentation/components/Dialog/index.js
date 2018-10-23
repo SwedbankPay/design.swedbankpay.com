@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc, Icon } from "#";
+import { ComponentPreview, DocToc, Icon, Property } from "#";
 import { dialog } from "$/px-script";
 
 const Example = () => (
@@ -30,10 +30,19 @@ const Example = () => (
     </>
 );
 
+const UsageWithJavascript = () => (
+    <>
+        <h2 id="usage-with-javascript">Usage with javascript</h2>
+        <p>To programmatically open a dialog, use <Property value={"px.dialog.open(\"DIALOG_ID\")"} />.</p>
+        <p>To programmatically close a dialog, use <Property value={"px.dialog.close(\"DIALOG_ID\")"} />.</p>
+    </>
+);
+
 const DialogText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
         <p className="lead">Dialogs...</p>
         <Example />
+        <UsageWithJavascript />
     </div>
 );
 
@@ -57,4 +66,4 @@ class Dialog extends Component {
 export default Dialog;
 
 /* For testing */
-export { Example, DialogText };
+export { Example, UsageWithJavascript, DialogText };
