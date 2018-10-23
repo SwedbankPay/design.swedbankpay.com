@@ -1,11 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 
-import "prismjs";
 import "prismjs/themes/prism.css";
-import "prismjs/plugins/toolbar/prism-toolbar.css";
-import "prismjs/plugins/toolbar/prism-toolbar.min.js";
-import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js";
 
 // Polyfills
 import "./polyfills";
