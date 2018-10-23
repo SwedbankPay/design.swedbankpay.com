@@ -396,3 +396,18 @@ exports[`Component: Nav renders 1`] = `
   </div>
 </div>
 `;
+
+exports[`Component: Nav runs init on rerender 1`] = `
+<div
+  className="doc-container"
+>
+  <div
+    className="row"
+  >
+    <NavText />
+    <DocToc
+      component={[Function]}
+    />
+  </div>
+</div>
+`;

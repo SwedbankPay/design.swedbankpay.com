@@ -7,7 +7,7 @@ class Nav {
         this.listItems = [...this._el.querySelectorAll("li")].length;
         this.resizeEventMenuOpen;
         this.resizeEventSubmenuOpen;
-        this.submenuOpen = false;
+        this.submenuOpen = this._el.querySelector(".submenu-open");
 
         if (this.listItems > 5 || this.childCount) {
             this.hideItems();

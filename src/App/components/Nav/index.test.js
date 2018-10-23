@@ -30,6 +30,31 @@ const navItems = [
     }
 ];
 
+const navItemsTwoLevels = [
+    {
+        name: "Home",
+        icon: "home"
+    },
+    {
+        name: "Transactions",
+        icon: "shopping_cart",
+        subItems: ["Purchase history", "Invoice"]
+    },
+    {
+        name: "Notifications",
+        icon: "notification_important"
+    },
+    {
+        name: "Language",
+        icon: "language"
+    },
+    {
+        name: "Account",
+        icon: "account_balance",
+        subItems: ["Email", "Information", "Other things"]
+    }
+];
+
 describe("Component: Nav - ", () => {
     it("is defined", () => {
         expect(Nav).toBeDefined();
@@ -44,7 +69,7 @@ describe("Component: Nav - ", () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    it("Throws an error when proptype for horsize is wrong", () => {
+    it("Throws an error when proptype for widesize is wrong", () => {
         console.error = jest.fn();
 
         const wrapper = shallow(<Nav items={navItems} widesize="xxxl" />);
@@ -59,16 +84,9 @@ describe("Component: Nav - ", () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    // it("setActive prevents default", () => {
-    //     const wrapper = shallow(<Nav items={navItems} />);
-    //     const listItem = wrapper.find(".active");
+    it("renders with two levels", () => {
+        const wrapper = shallow(<Nav items={navItemsTwoLevels} />);
 
-    //     const setActive = jest.fn();
-
-    //     expect(listItem).toHaveLength(1);
-    //     listItem.simulate("click");
-    //     expect(setActive).toHaveBeenCalled();
-
-    //     expect(wrapper).toMatchSnapshot();
-    // });
+        expect(wrapper).toMatchSnapshot();
+    });
 });

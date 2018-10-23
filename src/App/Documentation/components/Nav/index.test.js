@@ -14,6 +14,14 @@ describe("Component: Nav", () => {
         expect(wrapper).toMatchSnapshot();
     });
 
+    it("runs init on rerender", () => {
+        const wrapper = shallow(<Nav />);
+
+        wrapper.setState({ foo: "bar" });
+
+        expect(wrapper).toMatchSnapshot();
+    });
+
     describe("StandardNav", () => {
         it("is defined", () => {
             expect(StandardNav).toBeDefined();
