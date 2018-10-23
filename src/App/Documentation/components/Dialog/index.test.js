@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Dialog, { Example, DialogText } from "./index";
+import Dialog, { Example, UsageWithJavascript, DialogText } from "./index";
 
 describe("Documentation: Dialog", () => {
     it("is defined", () => {
@@ -21,6 +21,18 @@ describe("Documentation: Dialog", () => {
 
         it("renders", () => {
             const wrapper = shallow(<Example />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("UsageWithJavascript", () => {
+        it("is defined", () => {
+            expect(UsageWithJavascript).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<UsageWithJavascript />);
 
             expect(wrapper).toMatchSnapshot();
         });

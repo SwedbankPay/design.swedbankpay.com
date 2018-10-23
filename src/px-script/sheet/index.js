@@ -58,15 +58,17 @@ const sheet = (() => {
     const init = () => {
         const sheetEls = [...document.querySelectorAll(SELECTORS.SHEET)];
 
-        if (sheetEls) {
-            const sheets = sheetEls.map(sheet => new Sheet(sheet));
+        window.px._sheets = window.px._sheets || [];
+
+        if (sheetEls.length) {
+            sheetEls.forEach(sheet => window.px._sheets.push(new Sheet(sheet)));
 
             // Init open buttons
             document.querySelectorAll(SELECTORS.OPEN).forEach(btn => {
                 const id = btn.dataset.sheetOpen;
                 let sheet;
 
-                sheets.forEach(s => s.id === id ? sheet = s : null);
+                window.px._sheets.forEach(s => s.id === id ? sheet = s : null);
 
                 if (sheet) {
                     btn.addEventListener("click", e => {
@@ -83,7 +85,7 @@ const sheet = (() => {
                 const id = btn.dataset.sheetClose;
                 let sheet;
 
-                sheets.forEach(s => s.id === id ? sheet = s : null);
+                window.px._sheets.forEach(s => s.id === id ? sheet = s : null);
 
                 if (sheet) {
                     btn.addEventListener("click", e => {
@@ -97,7 +99,43 @@ const sheet = (() => {
         }
     };
 
-    return { init };
+    const close = id => {
+        let sheet = null;
+
+        window.px._sheets.forEach(d => d.id === id ? sheet = d : null);
+
+        try {
+            sheet.close();
+        } catch (e) {
+            console.error(`sheet.close: No sheet with id "${id}" found.`);
+
+            return false;
+        }
+
+        return sheet;
+    };
+
+    const open = id => {
+        let sheet = null;
+
+        window.px._sheets.forEach(d => d.id === id ? sheet = d : null);
+
+        try {
+            sheet.open();
+        } catch (e) {
+            console.error(`sheet.open: No sheet with id "${id}" found.`);
+
+            return false;
+        }
+
+        return sheet;
+    };
+
+    return {
+        init,
+        close,
+        open
+    };
 })();
 
 export default sheet;

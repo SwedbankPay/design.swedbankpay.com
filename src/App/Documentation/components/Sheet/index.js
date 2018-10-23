@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc, Icon } from "#";
+import { ComponentPreview, DocToc, Icon, Property } from "#";
 import { sheet } from "$/px-script";
 
 const Example = () => (
@@ -53,10 +53,19 @@ const Example = () => (
     </>
 );
 
+const UsageWithJavascript = () => (
+    <>
+        <h2 id="usage-with-javascript">Usage with javascript</h2>
+        <p>To programmatically open a sheet, use <Property value={"px.sheet.open(\"SHEET_ID\")"} />.</p>
+        <p>To programmatically close a sheet, use <Property value={"px.sheet.close(\"SHEET_ID\")"} />.</p>
+    </>
+);
+
 const SheetText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
         <p className="lead">Sheet...</p>
         <Example />
+        <UsageWithJavascript />
     </div>
 );
 
@@ -80,4 +89,4 @@ class Sheet extends Component {
 export default Sheet;
 
 /* For testing */
-export { Example, SheetText };
+export { Example, UsageWithJavascript, SheetText };
