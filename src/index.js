@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 
+import "prismjs";
 import "prismjs/themes/prism.css";
 
 // Polyfills
