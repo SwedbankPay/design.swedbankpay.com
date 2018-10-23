@@ -96,7 +96,7 @@ describe("Component: Nav - ", () => {
     });
 
     it("renders with an active list if state active matches", () => {
-        const wrapper = shallow(<Nav items={navItems} />);
+        const wrapper = shallow(<Nav items={navItems} active="main-0" />);
 
         expect(wrapper.find(".active")).toHaveLength(1);
         expect(wrapper).toMatchSnapshot();
@@ -110,7 +110,7 @@ describe("Component: Nav - ", () => {
     });
 
     it("does nothing when clicking on an active listitem", () => {
-        ReactDOM.render(<Nav items={navItems} />, div);
+        ReactDOM.render(<Nav items={navItems} active="main-0" />, div);
 
         const renderedNav = document.querySelector(".nav");
         const activeAnchor = renderedNav.querySelector(".active");
@@ -127,7 +127,7 @@ describe("Component: Nav - ", () => {
     });
 
     it("changes active item", () => {
-        ReactDOM.render(<Nav items={navItems} />, div);
+        ReactDOM.render(<Nav items={navItems} active="main-0" />, div);
 
         const renderedNav = document.querySelector(".nav");
         const inactiveAnchor = renderedNav.querySelector("a:not(.active)");
@@ -162,6 +162,42 @@ describe("Component: Nav - ", () => {
         expect(submenu.classList).toContain("submenu-active-parent");
         expect(subitemList.classList).toContain("active");
 
-        ReactDOM.unmountComponentAtNode(div);
+        // Not unmounting to keep state for following test [AW]
+    });
+
+    // NB! Do not put new tests between these two [AW]
+
+    it("changes active parent and active item when another subitem is clicked", () => {
+        const renderedNav = document.querySelector(".nav");
+        const submenu = renderedNav.querySelector("div:not(.submenu-active-parent");
+        const subitemList = submenu.querySelector("li");
+        const subitemAnchor = submenu.querySelector("a");
+
+        expect(subitemList).toBeTruthy();
+        expect(subitemAnchor).toBeTruthy();
+        expect(submenu.classList).not.toContain("submenu-active-parent");
+        expect(subitemList.classList).not.toContain("active");
+
+        subitemAnchor.click();
+
+        expect(submenu.classList).toContain("submenu-active-parent");
+        expect(subitemList.classList).toContain("active");
+
+        // Not unmounting to keep state for following test [AW]
+    });
+
+    // NB! Do not put new tests between these two [AW]
+
+    it("removes active parent if top level item is clicked", () => {
+        const renderedNav = document.querySelector(".nav");
+        const anchor = renderedNav.querySelector("a");
+
+        expect(renderedNav).toBeTruthy();
+        expect(anchor).toBeTruthy();
+        expect(anchor.classList).not.toContain("active");
+
+        anchor.click();
+
+        expect(anchor.classList).toContain("active");
     });
 });
