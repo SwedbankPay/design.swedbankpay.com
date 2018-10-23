@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocToc, ExperimentalComponentAlert } from "#";
+import { ComponentPreview, DocToc, ExperimentalComponentAlert, Attribute, Property } from "#";
 import { nav } from "$/px-script";
 import NavComponent from "@/Nav";
 
@@ -62,8 +62,8 @@ const StandardNav = () => (
     <>
         <h2 id="nav-standard">Standard nav</h2>
         <p>
-            Add class <code className="token property">.nav</code> and <code className="token property">.nav-{"{desired_size}"}-vertical-wide</code> to a nav containing an <PrismCode className="language-html">{"<ul>"}</PrismCode> to get a standard nav.
-            Add <PrismCode className="language-html">{"<i>"}</PrismCode> and <PrismCode className="language-html">{"<span>"}</PrismCode> with your desired <Link to="/docs/core/icons">icon</Link> and text. <code className="token property">.nav-{"{desired_size}"}-vertical-wide</code> determines
+            Add class <Property value=".nav"/> and <Property value=".nav-{desired_size}-vertical-wide"/> to a nav containing an <PrismCode className="language-html">{"<ul>"}</PrismCode> to get a standard nav.
+            Add <PrismCode className="language-html">{"<i>"}</PrismCode> and <PrismCode className="language-html">{"<span>"}</PrismCode> with your desired <Link to="/docs/core/icons">icon</Link> and text. <Property value=".nav-{desired_size}-vertical-wide"/> determines
             when your nav will switch from mobile view to vertical. If you have more than five icons then the first four icons will be the only visible ones in mobile view.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
@@ -76,7 +76,7 @@ const TwoLevels = () => (
     <>
         <h2 id="nav-twolevels">Two levels</h2>
         <p>
-            You can also display another level of items in the standard nav. Just nest a <PrismCode className="language-html">{"<div>"}</PrismCode> with class <code className="token property">.submenu</code> containing an icon and text like the
+            You can also display another level of items in the standard nav. Just nest a <PrismCode className="language-html">{"<div>"}</PrismCode> with class <Property value=".submenu"/> containing an icon and text like the
             standard nav and add a new <PrismCode className="language-html">{"<ul>"}</PrismCode> with <PrismCode className="language-html">{"<li>"}</PrismCode> items. This level does not use icons. List items containing another level are not visible in responsive mode, they will be displayed when the items are expanded.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
@@ -89,8 +89,8 @@ const IconsOnly = () => (
     <>
         <h2 id="nav-tablet">Icons only</h2>
         <p>
-            To display only icons use class <code className="token property">.nav-{"{desired_size}"}-vertical</code>.  <code className="token property">.nav-{"{desired_size}"}-vertical</code> works
-            just like in the standard example. In this mode it is possible to display another level of items.
+            To display only icons use class <Property value=".nav-{desired_size}-vertical"/>. Like the first example, this determines when your <Property value=".nav"/> will switch from mobile to icons only.
+            In this mode it is possible to display another level of items.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <NavComponent vertsize="md" items={navItemsTwoLevels} />
@@ -114,7 +114,7 @@ const Mobile = () => (
     <>
         <h2 id="nav-mobile">Mobile nav</h2>
         <p>
-            To only display mobile view use class <code className="token property">.nav</code> alone.
+            To only display mobile view use class <Property value=".nav"/> alone.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <NavComponent items={navItems} />
