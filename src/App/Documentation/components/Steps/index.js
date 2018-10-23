@@ -1,8 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
 import PrismCode from "react-prism";
 
 import { ComponentPreview, DocToc } from "#";
 import StepsComponent from "@/Steps";
+import { steps } from "$/px-script";
 
 const BasicSteps = () => {
     const steps = [
@@ -78,11 +79,17 @@ const ClickableSteps = () => {
         },
         {
             title: "Step three",
-            selected: true,
             clickable: true
         },
         {
-            title: "Step four"
+            title: "Step four",
+            selected: true
+        },
+        {
+            title: "Step Five"
+        },
+        {
+            title: "Step Six"
         }
     ];
 
@@ -111,14 +118,23 @@ const StepsText = () => (
     </div>
 );
 
-const Steps = () => (
-    <div className="doc-container">
-        <div className="row">
-            <StepsText />
-            <DocToc component={StepsText} />
-        </div>
-    </div>
-);
+class Steps extends Component {
+    componentDidMount () {
+        steps.init();
+    }
+
+    render () {
+        return (
+            <div className="doc-container">
+                <div className="row">
+                    <StepsText />
+                    <DocToc component={StepsText} />
+                </div>
+            </div>
+        );
+    }
+}
+
 
 export default Steps;
 

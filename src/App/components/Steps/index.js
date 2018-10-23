@@ -36,7 +36,6 @@ const RenderSteps = ({ steps }) => (
             <li key={i} className={classnames(completed ? "steps-completed" : null,
                 ongoing ? "steps-ongoing" : null,
                 selected ? "steps-selected" : null)}>
-                {console.log(steps) }
                 {clickable ? <a><StepContent completed={completed} subtitle={subtitle} title={title}/></a> : <StepContent completed={completed} subtitle={subtitle} title={title}/> }
 
             </li>

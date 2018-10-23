@@ -14,6 +14,7 @@ import toast from "./toast";
 import topbar from "./topbar";
 import utils from "./utils";
 import validation from "./validation";
+import steps from "./steps";
 
 // Sentry reporter
 if (process.env.sentry) {
@@ -34,7 +35,8 @@ const px = {
     toast,
     topbar,
     utils,
-    validation
+    validation,
+    steps
 };
 
 window.px = px;
@@ -47,4 +49,4 @@ if (!window.stopPx) {
 
 export default px;
 
-export { actionList, alert, button, datepicker, dialog, loader, rangeslider, sheet, script, tabs, toast, topbar, utils, validation };
+export { actionList, alert, button, datepicker, dialog, loader, rangeslider, sheet, script, tabs, toast, topbar, utils, validation, steps };
