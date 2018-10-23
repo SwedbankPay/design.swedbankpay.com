@@ -221,6 +221,11 @@ module.exports = [
                 componentPath: "utilities/Display"
             },
             {
+                title: "Flex",
+                path: "/docs/utilities/flex",
+                componentPath: "utilities/Flex"
+            },
+            {
                 title: "Spacing",
                 path: "/docs/utilities/spacing",
                 componentPath: "utilities/Spacing"
