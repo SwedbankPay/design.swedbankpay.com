@@ -14,7 +14,6 @@ class Nav extends Component {
 
     setActive (e, id) {
         e.preventDefault();
-        console.log("hello");
 
         const subParent = e.target.closest(".submenu");
 

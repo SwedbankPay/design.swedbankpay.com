@@ -39,17 +39,20 @@ class Nav {
 
                 submenuCopy.classList.add("submenu-icon-clickable");
                 submenu.insertBefore(submenuCopy, submenu.querySelector("i"));
+
                 submenuCopy.addEventListener("click", () => {
-                    if (!this.submenuOpen) {
-                        console.log("open");
-                        this.submenuCloseAll();
-                        this.resizeEventSubmenuOpen = this.onResize.bind(this);
-                        window.addEventListener("resize", this.resizeEventSubmenuOpen, { passive: true });
-                        submenu.classList.add("submenu-open");
-                        this.submenuOpen = true;
-                    } else {
-                        this.submenuCloseAll();
-                    }
+                    // if (!this.submenuOpen) {
+                    this.submenuCloseAll();
+                    this.resizeEventSubmenuOpen = this.onResize.bind(this);
+                    window.addEventListener("resize", this.resizeEventSubmenuOpen, { passive: true });
+                    submenu.classList.add("submenu-open");
+                    this.submenuOpen = true;
+                    console.log(submenu);
+                    // } 
+                    // else {
+                    //     this.submenuCloseAll();
+                    //     console.log("close all");
+                    // }
                 }, false);
             });
         }
@@ -118,13 +121,12 @@ const nav = (() => {
                         nav.close();
                         nav.hideItems();
                     }
-                    
+
                     if (!e.target.closest(".submenu") && nav.submenuOpen) {
-                        console.log("close");
                         nav.submenuCloseAll();
                     }
                 });
-            }, false);
+            });
         }
     };
 
