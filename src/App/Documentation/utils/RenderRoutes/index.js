@@ -1,14 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Switch, Route, Redirect } from "react-router-dom";
+import Loadable from "react-loadable";
+
+import { LoadingComponent } from "$/App/utils";
 
 const RenderRoutes = ({ path, redirect, routes }) => (
     <Switch>
         <Route exact path={path} render={() => <Redirect to={redirect} />}/>
-        {routes.map((route, i) => {
-            const { path, component } = route;
+        {routes.map(route => {
+            const { path, componentPath } = route;
+            const LoadableComponent = Loadable({
+                loader: () => import(/* webpackChunkName: "doc-route.chunk_" */ `../../${componentPath}/index.js`),
+                loading: LoadingComponent
+            });
 
-            return <Route key={i} exact path={path} render={() => <component.default />} />;
+            return <Route key={`doc_route_${path}`} exact path={path} render={() => <LoadableComponent />} />;
         })}
         <Redirect from={`${path}/*`} to="/404" />
     </Switch>

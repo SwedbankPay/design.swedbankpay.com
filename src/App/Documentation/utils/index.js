@@ -6,7 +6,6 @@ import DeprecatedComponentAlert from "./DeprecatedComponentAlert";
 import ExperimentalComponentAlert from "./ExperimentalComponentAlert";
 import Icon from "./Icon";
 import PxScript from "./PxScript";
-import RenderRoutes from "./RenderRoutes";
 
 export {
     Attribute,
@@ -17,6 +16,5 @@ export {
     ExperimentalComponentAlert,
     Icon,
     Property,
-    PxScript,
-    RenderRoutes
+    PxScript
 };

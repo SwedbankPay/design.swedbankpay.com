@@ -1,51 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Main: App renders 1`] = `
-<div
-  id="px-designguide"
+<BrowserRouter
+  basename="/TEST/"
 >
-  <Router
-    history={
-      Object {
-        "action": "POP",
-        "block": [Function],
-        "createHref": [Function],
-        "go": [Function],
-        "goBack": [Function],
-        "goForward": [Function],
-        "length": 1,
-        "listen": [Function],
-        "location": Object {
-          "hash": "",
-          "pathname": "/",
-          "search": "",
-          "state": undefined,
-        },
-        "push": [Function],
-        "replace": [Function],
-      }
-    }
-  >
-    <withRouter(ScrollToTop)>
-      <withRouter(AppHeader) />
-      <Switch>
-        <Route
-          exact={true}
-          key="0"
-          path="/"
-          render={[Function]}
-        />
-        <Route
-          exact={false}
-          key="1"
-          path="/docs"
-          render={[Function]}
-        />
-        <Route
-          component={[Function]}
-        />
-      </Switch>
-    </withRouter(ScrollToTop)>
-  </Router>
-</div>
+  <withRouter(ScrollToTop)>
+    <withRouter(AppHeader) />
+    <Switch>
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/"
+      />
+      <Route
+        component={[Function]}
+        path="/docs"
+      />
+      <Route
+        component={[Function]}
+        path="/Examples"
+      />
+      <Route
+        component={[Function]}
+        path="/Templates"
+      />
+      <Route
+        component={[Function]}
+      />
+    </Switch>
+  </withRouter(ScrollToTop)>
+</BrowserRouter>
 `;

@@ -34,40 +34,23 @@ exports[`Documentation: index renders 1`] = `
           render={[Function]}
         />
         <RenderRoutes
-          key="0"
+          key="renderRoutes_Getting Started"
           path="/docs/getting-started"
           redirect="/docs/getting-started/introduction"
           routes={
             Array [
               Object {
-                "component": Object {
-                  "Css": [Function],
-                  "IntroductionText": [Function],
-                  "JavaScript": [Function],
-                  "QuickStart": [Function],
-                  "StarterTemplate": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "getting-started/Introduction",
                 "path": "/docs/getting-started/introduction",
                 "title": "Introduction",
               },
               Object {
-                "component": Object {
-                  "AddComponentToRoutes": [Function],
-                  "AddingJavaScript": [Function],
-                  "AddingStyles": [Function],
-                  "ContributingText": [Function],
-                  "CreateADocumentationPage": [Function],
-                  "CreatingYourComponent": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "getting-started/Contributing",
                 "path": "/docs/getting-started/contributing",
                 "title": "Contributing",
               },
               Object {
-                "component": Object {
-                  "default": [Function],
-                },
+                "componentPath": "getting-started/BrowserSupport",
                 "path": "/docs/getting-started/browser-support",
                 "title": "Browser Support",
               },
@@ -76,101 +59,48 @@ exports[`Documentation: index renders 1`] = `
           title="Getting Started"
         />
         <RenderRoutes
-          key="1"
+          key="renderRoutes_Core"
           path="/docs/core"
           redirect="/docs/core/breakpoints"
           routes={
             Array [
               Object {
-                "component": Object {
-                  "BreakpointsText": [Function],
-                  "Overview": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "core/Breakpoints",
                 "path": "/docs/core/breakpoints",
                 "title": "Breakpoints",
               },
               Object {
-                "component": Object {
-                  "ColorPalette": [Function],
-                  "ColorText": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "core/Color",
                 "path": "/docs/core/color",
                 "title": "Color",
               },
               Object {
-                "component": Object {
-                  "FaviconsText": [Function],
-                  "OurFavicon": [Function],
-                  "Usage": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "core/Favicons",
                 "path": "/docs/core/favicons",
                 "title": "Favicons",
               },
               Object {
-                "component": Object {
-                  "Alignment": [Function],
-                  "AutoLayoutColumns": [Function],
-                  "GridOptions": [Function],
-                  "GridText": [Function],
-                  "HowItWorks": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "core/Grid",
                 "path": "/docs/core/grid",
                 "title": "Grid",
               },
               Object {
-                "component": Object {
-                  "IconsText": [Function],
-                  "Usage": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "core/Icons",
                 "path": "/docs/core/icons",
                 "title": "Icons",
               },
               Object {
-                "component": Object {
-                  "BasicList": [Function],
-                  "DescriptionList": [Function],
-                  "InlineList": [Function],
-                  "ItemList": [Function],
-                  "ListsText": [Function],
-                  "SettingsList": [Function],
-                  "StatusItemList": [Function],
-                  "StripedItemList": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "core/Lists",
                 "path": "/docs/core/lists",
                 "title": "Lists",
               },
               Object {
-                "component": Object {
-                  "BasicTable": [Function],
-                  "DescriptionTable": [Function],
-                  "HoverStripedTable": [Function],
-                  "HoverTable": [Function],
-                  "StripedTable": [Function],
-                  "TablesText": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "core/Tables",
                 "path": "/docs/core/tables",
                 "title": "Tables",
               },
               Object {
-                "component": Object {
-                  "Abbreviations": [Function],
-                  "Blockquotes": [Function],
-                  "Fonts": [Function],
-                  "Headings": [Function],
-                  "Inline": [Function],
-                  "Lead": [Function],
-                  "Small": [Function],
-                  "TextUtilities": [Function],
-                  "TypographyText": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "core/Typography",
                 "path": "/docs/core/typography",
                 "title": "Typography",
               },
@@ -179,286 +109,123 @@ exports[`Documentation: index renders 1`] = `
           title="Core"
         />
         <RenderRoutes
-          key="2"
+          key="renderRoutes_Components"
           path="/docs/components"
           redirect="/docs/components/action-list"
           routes={
             Array [
               Object {
-                "component": Object {
-                  "ActionListText": [Function],
-                  "Anchorpoints": [Function],
-                  "Overview": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "components/ActionList",
                 "path": "/docs/components/action-list",
                 "title": "Action List (experimental)",
               },
               Object {
-                "component": Object {
-                  "AlertWithIcon": [Function],
-                  "AlertsText": [Function],
-                  "BasicUsage": [Function],
-                  "ClosingTheAlert": [Function],
-                  "ExtendedUsage": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "components/Alerts",
                 "path": "/docs/components/alerts",
                 "title": "Alerts",
               },
               Object {
-                "component": Object {
-                  "BadgeText": [Function],
-                  "FurtherUsage": [Function],
-                  "Overview": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "components/Badge",
                 "path": "/docs/components/badge",
                 "title": "Badge",
               },
               Object {
-                "component": Object {
-                  "BasicBreadCrumb": [Function],
-                  "BreadcrumbText": [Function],
-                  "DisabledBreadcrumb": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "components/Breadcrumb",
                 "path": "/docs/components/breadcrumb",
                 "title": "Breadcrumb",
               },
               Object {
-                "component": Object {
-                  "ActiveState": [Function],
-                  "ButtonGroup": [Function],
-                  "ButtonLoader": [Function],
-                  "ButtonsText": [Function],
-                  "DisabledState": [Function],
-                  "Examples": [Function],
-                  "OutlineButtons": [Function],
-                  "Sizes": [Function],
-                  "UsageWithIcons": [Function],
-                  "UsageWithJavascript": [Function],
-                  "UsageWithOtherTags": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "components/Buttons",
                 "path": "/docs/components/buttons",
                 "title": "Buttons",
               },
               Object {
-                "component": Object {
-                  "CardText": [Function],
-                  "Overview": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "components/Card",
                 "path": "/docs/components/card",
                 "title": "Card (experimental)",
               },
               Object {
-                "component": Object {
-                  "CustomFormat": [Function],
-                  "DateRange": [Function],
-                  "DatepickersText": [Function],
-                  "IncludeTime": [Function],
-                  "InitialValue": [Function],
-                  "Options": [Function],
-                  "Required": [Function],
-                  "ShowingMultipleMonths": [Function],
-                  "SimpleDatepicker": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "components/Datepickers",
                 "path": "/docs/components/datepickers",
                 "title": "Datepickers",
               },
               Object {
-                "component": Object {
-                  "DialogText": [Function],
-                  "Example": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "components/Dialog",
                 "path": "/docs/components/dialog",
                 "title": "Dialog",
               },
               Object {
-                "component": Object {
-                  "Checkboxes": [Function],
-                  "DisabledCheckboxes": [Function],
-                  "DisabledRadioButtons": [Function],
-                  "DisabledRangeSlider": [Function],
-                  "DisabledToggleboxes": [Function],
-                  "FormGrid": [Function],
-                  "FormsText": [Function],
-                  "Overview": [Function],
-                  "RadioButtons": [Function],
-                  "RangeSlider": [Function],
-                  "StaticText": [Function],
-                  "Toggleboxes": [Function],
-                  "UsageWithFieldsets": [Function],
-                  "Validation": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "components/Forms",
                 "path": "/docs/components/forms",
                 "title": "Forms",
               },
               Object {
-                "component": Object {
-                  "BasicExample": [Function],
-                  "ButtonAddons": [Function],
-                  "CheckboxesAndRadios": [Function],
-                  "Disabled": [Function],
-                  "InputGroupText": [Function],
-                  "ValidationStates": [Function],
-                  "WithFeedbackIcon": [Function],
-                  "WithSelect": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "components/InputGroup",
                 "path": "/docs/components/input-group",
                 "title": "Input Group",
               },
               Object {
-                "component": Object {
-                  "BasicUsage": [Function],
-                  "LoadersText": [Function],
-                  "MutedLoader": [Function],
-                  "Sizes": [Function],
-                  "StaticHtml": [Function],
-                  "UsageWithJavascript": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "components/Loaders",
                 "path": "/docs/components/loaders",
                 "title": "Loaders",
               },
               Object {
-                "component": Object {
-                  "MediaObjectText": [Function],
-                  "MediaPosition": [Function],
-                  "Overview": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "components/MediaObject",
                 "path": "/docs/components/media-object",
                 "title": "Media Object",
               },
               Object {
-                "component": Object {
-                  "IconsOnly": [Function],
-                  "Mix": [Function],
-                  "Mobile": [Function],
-                  "NavText": [Function],
-                  "StandardNav": [Function],
-                  "TwoLevels": [Function],
-                  "default": [Function],
-                },
-                "path": "/docs/components/nav",
-                "title": "Nav (experimental)",
-              },
-              Object {
-                "component": Object {
-                  "DefaultPagination": [Function],
-                  "PaginationBullets": [Function],
-                  "PaginationText": [Function],
-                  "SimplePagination": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "components/Pagination",
                 "path": "/docs/components/pagination",
                 "title": "Pagination",
               },
               Object {
-                "component": Object {
-                  "Overview": [Function],
-                  "PanelDark": [Function],
-                  "PanelHeaders": [Function],
-                  "PanelMuted": [Function],
-                  "PanelText": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "components/Panel",
                 "path": "/docs/components/panel",
                 "title": "Panel",
               },
               Object {
-                "component": Object {
-                  "BasicProgressTracker": [Function],
-                  "DisabledProgressTracker": [Function],
-                  "ProgressTrackerText": [Function],
-                  "SmallProgressTracker": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "components/ProgressTracker",
                 "path": "/docs/components/progress-tracker",
                 "title": "Progress Tracker (deprecated)",
               },
               Object {
-                "component": Object {
-                  "Example": [Function],
-                  "SheetText": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "components/Sheet",
                 "path": "/docs/components/sheet",
                 "title": "Sheet",
               },
               Object {
-                "component": Object {
-                  "ExtendedUsage": [Function],
-                  "Overview": [Function],
-                  "StatusText": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "components/Status",
                 "path": "/docs/components/status",
                 "title": "Status",
               },
               Object {
-                "component": Object {
-                  "BasicStepBar": [Function],
-                  "HorizontalStepBar": [Function],
-                  "StepBarText": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "components/StepBar",
                 "path": "/docs/components/step-bar",
                 "title": "Step Bar (experimental)",
               },
               Object {
-                "component": Object {
-                  "BasicUsage": [Function],
-                  "Collapsed": [Function],
-                  "TabsText": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "components/Tabs",
                 "path": "/docs/components/tabs",
                 "title": "Tabs (experimental)",
               },
               Object {
-                "component": Object {
-                  "Options": [Function],
-                  "Overview": [Function],
-                  "PremadeToasts": [Function],
-                  "ToastText": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "components/Toast",
                 "path": "/docs/components/toast",
                 "title": "Toast (experimental)",
               },
               Object {
-                "component": Object {
-                  "Overview": [Function],
-                  "TooltipText": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "components/Tooltips",
                 "path": "/docs/components/tooltips",
                 "title": "Tooltips",
               },
               Object {
-                "component": Object {
-                  "Overview": [Function],
-                  "TopbarText": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "components/Topbar",
                 "path": "/docs/components/topbar",
                 "title": "Topbar",
               },
               Object {
-                "component": Object {
-                  "DefaultWell": [Function],
-                  "WellSizes": [Function],
-                  "WellText": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "components/Well",
                 "path": "/docs/components/well",
                 "title": "Well (experimental)",
               },
@@ -467,50 +234,28 @@ exports[`Documentation: index renders 1`] = `
           title="Components"
         />
         <RenderRoutes
-          key="3"
+          key="renderRoutes_Utilities"
           path="/docs/utilities"
           redirect="/docs/utilities/colors"
           routes={
             Array [
               Object {
-                "component": Object {
-                  "BackgroundColors": [Function],
-                  "ColorsText": [Function],
-                  "TextColors": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "utilities/Colors",
                 "path": "/docs/utilities/colors",
                 "title": "Colors",
               },
               Object {
-                "component": Object {
-                  "DisplayText": [Function],
-                  "Examples": [Function],
-                  "HidingElements": [Function],
-                  "HowItWorks": [Function],
-                  "Notation": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "utilities/Display",
                 "path": "/docs/utilities/display",
                 "title": "Display",
               },
               Object {
-                "component": Object {
-                  "Examples": [Function],
-                  "HowItWorks": [Function],
-                  "Notation": [Function],
-                  "SpacingText": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "utilities/Spacing",
                 "path": "/docs/utilities/spacing",
                 "title": "Spacing",
               },
               Object {
-                "component": Object {
-                  "Intro": [Function],
-                  "VisibilityText": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "utilities/Visibility",
                 "path": "/docs/utilities/visibility",
                 "title": "Visibility",
               },
