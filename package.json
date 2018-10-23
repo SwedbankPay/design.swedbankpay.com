@@ -10,7 +10,6 @@
         "build:prod": "webpack --mode production",
         "test": "jest",
         "test:update": "jest --updateSnapshot",
-        "eslint": "eslint src/",
         "lint": "eslint src/ && stylelint src/less/",
         "e2e:chrome": "testcafe chrome src/**/*.spec.js"
     },
