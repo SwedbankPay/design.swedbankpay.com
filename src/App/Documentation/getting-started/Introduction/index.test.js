@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Introduction, { QuickStart, Css, JavaScript, StarterTemplate, IntroductionText } from "./index";
+import Introduction, { QuickStart, Css, JavaScript, IntroductionText } from "./index";
 
 describe("GettingStarted: Introduction", () => {
     it("is defined", () => {
@@ -45,18 +45,6 @@ describe("GettingStarted: Introduction", () => {
 
         it("renders", () => {
             const wrapper = shallow(<JavaScript />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("StarterTemplate", () => {
-        it("is defined", () => {
-            expect(StarterTemplate).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<StarterTemplate />);
 
             expect(wrapper).toMatchSnapshot();
         });

@@ -1,4 +1,4 @@
-export default [
+module.exports = [
     /**
      * Getting Started
      */
@@ -10,7 +10,7 @@ export default [
             {
                 title: "Introduction",
                 path: "/docs/getting-started/introduction",
-                component: require("../Documentation/getting-started/Introduction")
+                componentPath: "getting-started/Introduction"
             },
             // {
             //     title: "Browser Support",
@@ -20,7 +20,12 @@ export default [
             {
                 title: "Contributing",
                 path: "/docs/getting-started/contributing",
-                component: require("../Documentation/getting-started/Contributing")
+                componentPath: "getting-started/Contributing"
+            },
+            {
+                title: "Browser Support",
+                path: "/docs/getting-started/browser-support",
+                componentPath: "getting-started/BrowserSupport"
             }
         ]
     },
@@ -36,42 +41,42 @@ export default [
             {
                 title: "Breakpoints",
                 path: "/docs/core/breakpoints",
-                component: require("../Documentation/core/Breakpoints")
+                componentPath: "core/Breakpoints"
             },
             {
                 title: "Color",
                 path: "/docs/core/color",
-                component: require("../Documentation/core/Color")
+                componentPath: "core/Color"
             },
             {
                 title: "Favicons",
                 path: "/docs/core/favicons",
-                component: require("../Documentation/core/Favicons")
+                componentPath: "core/Favicons"
             },
             {
                 title: "Grid",
                 path: "/docs/core/grid",
-                component: require("../Documentation/core/Grid")
+                componentPath: "core/Grid"
             },
             {
                 title: "Icons",
                 path: "/docs/core/icons",
-                component: require("../Documentation/core/Icons")
+                componentPath: "core/Icons"
             },
             {
                 title: "Lists",
                 path: "/docs/core/lists",
-                component: require("../Documentation/core/Lists")
+                componentPath: "core/Lists"
             },
             {
                 title: "Tables",
                 path: "/docs/core/tables",
-                component: require("../Documentation/core/Tables")
+                componentPath: "core/Tables"
             },
             {
                 title: "Typography",
                 path: "/docs/core/typography",
-                component: require("../Documentation/core/Typography")
+                componentPath: "core/Typography"
             }
         ]
     },
@@ -87,117 +92,117 @@ export default [
             {
                 title: "Action List (experimental)",
                 path: "/docs/components/action-list",
-                component: require("../Documentation/components/ActionList")
+                componentPath: "components/ActionList"
             },
             {
                 title: "Alerts",
                 path: "/docs/components/alerts",
-                component: require("../Documentation/components/Alerts")
+                componentPath: "components/Alerts"
             },
             {
                 title: "Badge",
                 path: "/docs/components/badge",
-                component: require("../Documentation/components/Badge")
+                componentPath: "components/Badge"
             },
             {
                 title: "Breadcrumb",
                 path: "/docs/components/breadcrumb",
-                component: require("../Documentation/components/Breadcrumb")
+                componentPath: "components/Breadcrumb"
             },
             {
                 title: "Buttons",
                 path: "/docs/components/buttons",
-                component: require("../Documentation/components/Buttons")
+                componentPath: "components/Buttons"
             },
             {
                 title: "Card (experimental)",
                 path: "/docs/components/card",
-                component: require("../Documentation/components/Card")
+                componentPath: "components/Card"
             },
             {
                 title: "Datepickers",
                 path: "/docs/components/datepickers",
-                component: require("../Documentation/components/Datepickers")
+                componentPath: "components/Datepickers"
             },
             {
                 title: "Dialog",
                 path: "/docs/components/dialog",
-                component: require("../Documentation/components/Dialog")
+                componentPath: "components/Dialog"
             },
             {
                 title: "Forms",
                 path: "/docs/components/forms",
-                component: require("../Documentation/components/Forms")
+                componentPath: "components/Forms"
             },
             {
                 title: "Input Group",
                 path: "/docs/components/input-group",
-                component: require("../Documentation/components/InputGroup")
+                componentPath: "components/InputGroup"
             },
             {
                 title: "Loaders",
                 path: "/docs/components/loaders",
-                component: require("../Documentation/components/Loaders")
+                componentPath: "components/Loaders"
             },
             {
                 title: "Media Object",
                 path: "/docs/components/media-object",
-                component: require("../Documentation/components/MediaObject")
+                componentPath: "components/MediaObject"
             },
             {
                 title: "Pagination",
                 path: "/docs/components/pagination",
-                component: require("../Documentation/components/Pagination")
+                componentPath: "components/Pagination"
             },
             {
                 title: "Panel",
                 path: "/docs/components/panel",
-                component: require("../Documentation/components/Panel")
+                componentPath: "components/Panel"
             },
             {
                 title: "Progress Tracker (deprecated)",
                 path: "/docs/components/progress-tracker",
-                component: require("../Documentation/components/ProgressTracker")
+                componentPath: "components/ProgressTracker"
             },
             {
                 title: "Sheet",
                 path: "/docs/components/sheet",
-                component: require("../Documentation/components/Sheet")
+                componentPath: "components/Sheet"
             },
             {
                 title: "Status",
                 path: "/docs/components/status",
-                component: require("../Documentation/components/Status")
+                componentPath: "components/Status"
             },
             {
                 title: "Step Bar (experimental)",
                 path: "/docs/components/step-bar",
-                component: require("../Documentation/components/StepBar")
+                componentPath: "components/StepBar"
             },
             {
                 title: "Tabs (experimental)",
                 path: "/docs/components/tabs",
-                component: require("../Documentation/components/Tabs")
+                componentPath: "components/Tabs"
             },
             {
                 title: "Toast (experimental)",
                 path: "/docs/components/toast",
-                component: require("../Documentation/components/Toast")
+                componentPath: "components/Toast"
             },
             {
                 title: "Tooltips",
                 path: "/docs/components/tooltips",
-                component: require("../Documentation/components/Tooltips")
+                componentPath: "components/Tooltips"
             },
             {
                 title: "Topbar",
                 path: "/docs/components/topbar",
-                component: require("../Documentation/components/Topbar")
+                componentPath: "components/Topbar"
             },
             {
                 title: "Well (experimental)",
                 path: "/docs/components/well",
-                component: require("../Documentation/components/Well")
+                componentPath: "components/Well"
             }
         ]
     },
@@ -213,17 +218,17 @@ export default [
             {
                 title: "Colors",
                 path: "/docs/utilities/colors",
-                component: require("../Documentation/utilities/Colors")
+                componentPath: "utilities/Colors"
             },
             {
                 title: "Display",
                 path: "/docs/utilities/display",
-                component: require("../Documentation/utilities/Display")
+                componentPath: "utilities/Display"
             },
             {
                 title: "Spacing",
                 path: "/docs/utilities/spacing",
-                component: require("../Documentation/utilities/Spacing")
+                componentPath: "utilities/Spacing"
             },
             {
                 title: "Text",
@@ -233,7 +238,7 @@ export default [
             {
                 title: "Visibility",
                 path: "/docs/utilities/visibility",
-                component: require("../Documentation/utilities/Visibility")
+                componentPath: "utilities/Visibility"
             }
         ]
     }
