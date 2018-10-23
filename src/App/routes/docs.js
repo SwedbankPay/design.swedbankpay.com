@@ -12,20 +12,15 @@ module.exports = [
                 path: "/docs/getting-started/introduction",
                 componentPath: "getting-started/Introduction"
             },
-            // {
-            //     title: "Browser Support",
-            //     path: "/docs/getting-started/browser-support",
-            //     component: require("../Documentation/getting-started/BrowserSupport")
-            // },
-            {
-                title: "Contributing",
-                path: "/docs/getting-started/contributing",
-                componentPath: "getting-started/Contributing"
-            },
             {
                 title: "Browser Support",
                 path: "/docs/getting-started/browser-support",
                 componentPath: "getting-started/BrowserSupport"
+            },
+            {
+                title: "Contributing",
+                path: "/docs/getting-started/contributing",
+                componentPath: "getting-started/Contributing"
             }
         ]
     },
@@ -233,7 +228,7 @@ module.exports = [
             {
                 title: "Text",
                 path: "/docs/utilities/text",
-                component: require("../Documentation/utilities/Text")
+                componentPath: "utilities/Text"
             },
             {
                 title: "Visibility",
