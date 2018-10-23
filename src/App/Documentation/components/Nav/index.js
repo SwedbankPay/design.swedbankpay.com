@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocToc, ExperimentalComponentAlert, Attribute, Property } from "#";
+import { ComponentPreview, DocToc, ExperimentalComponentAlert, Property } from "#";
 import { nav } from "$/px-script";
 import NavComponent from "@/Nav";
 
