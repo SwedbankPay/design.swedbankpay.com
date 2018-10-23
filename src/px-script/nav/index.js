@@ -41,12 +41,15 @@ class Nav {
                 submenu.insertBefore(submenuCopy, submenu.querySelector("i"));
 
                 submenuCopy.addEventListener("click", () => {
-                    console.log("onclick");
-                    this.submenuCloseAll();
-                    this.resizeEventSubmenuOpen = this.onResize.bind(this);
-                    window.addEventListener("resize", this.resizeEventSubmenuOpen, { passive: true });
-                    submenu.classList.add("submenu-open");
-                    this.submenuOpen = !this.submenuOpen;
+                    if (submenu.classList.contains("submenu-open")) {
+                        this.submenuCloseAll();
+                    } else {
+                        this.submenuCloseAll();
+                        this.resizeEventSubmenuOpen = this.onResize.bind(this);
+                        window.addEventListener("resize", this.resizeEventSubmenuOpen, { passive: true });
+                        submenu.classList.add("submenu-open");
+                        this.submenuOpen = true;
+                    }
                 });
             });
         }
@@ -55,6 +58,7 @@ class Nav {
     submenuCloseAll () {
         window.removeEventListener("resize", this.resizeEventSubmenuOpen, { passive: true });
         this.submenus.forEach(submenu => submenu.classList.remove("submenu-open"));
+        this.submenuOpen = false;
     }
 
     showItems () {
