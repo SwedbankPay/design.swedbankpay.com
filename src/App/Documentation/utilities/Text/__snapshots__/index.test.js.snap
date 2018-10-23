@@ -87,7 +87,7 @@ exports[`Utilities: Text TextAlignment renders 1`] = `
 
 
     <p
-      className="flex-sm-row"
+      className="text-sm-left"
     >
       Left aligned text on viewports sized SM (small) or wider.
     </p>
