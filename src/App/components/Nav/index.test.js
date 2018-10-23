@@ -89,4 +89,32 @@ describe("Component: Nav - ", () => {
 
         expect(wrapper).toMatchSnapshot();
     });
+
+    it("renders with an active list if state active matches", () => {
+        const wrapper = shallow(<Nav items={navItems} />);
+
+        wrapper.setState({ active: "main-0" });
+
+        expect(wrapper.find(".active")).toHaveLength(1);
+        expect(wrapper).toMatchSnapshot();
+    });
+
+    it("renders with an active sublistItem if state active matches", () => {
+        const wrapper = shallow(<Nav items={navItemsTwoLevels} />);
+
+        wrapper.setState({ active: "sub-1-0" });
+
+        expect(wrapper.find(".active")).toHaveLength(1);
+        expect(wrapper).toMatchSnapshot();
+    });
+
+    it("does nothing when clicking on an anchor in an active listitem", () => {
+        const wrapper = shallow(<Nav items={navItemsTwoLevels} />).setState({ active: "sub-1-0"});
+        const activeList = wrapper.find(".active");
+
+        expect(activeList).toHaveLength(1);
+        activeList.find("a").simulate("click");
+
+        expect(wrapper).toMatchSnapshot();
+    });
 });
