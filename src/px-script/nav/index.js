@@ -41,19 +41,12 @@ class Nav {
                 submenu.insertBefore(submenuCopy, submenu.querySelector("i"));
 
                 submenuCopy.addEventListener("click", () => {
-                    // if (!this.submenuOpen) {
                     this.submenuCloseAll();
                     this.resizeEventSubmenuOpen = this.onResize.bind(this);
                     window.addEventListener("resize", this.resizeEventSubmenuOpen, { passive: true });
                     submenu.classList.add("submenu-open");
                     this.submenuOpen = true;
-                    console.log(submenu);
-                    // } 
-                    // else {
-                    //     this.submenuCloseAll();
-                    //     console.log("close all");
-                    // }
-                }, false);
+                });
             });
         }
     }
