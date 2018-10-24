@@ -37,9 +37,9 @@ class Dialog {
 
     hasScrollBar () {
         if (this.hasVScroll() > 0) {
-            this._el.classList.add("has-vertical-scroll");
+            document.body.classList.add("dialog-has-vscroll");
         } else {
-            this._el.classList.remove("has-vertical-scroll");
+            document.body.classList.remove("dialog-has-vscroll");
         }
     }
 

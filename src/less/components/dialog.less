@@ -54,14 +54,18 @@
             }
         }
     }
-
-    &.has-vertical-scroll {
-        padding-right: 17px;
-    }
 }
 
 .dialog-open {
     overflow: hidden;
+
+    &.has-vertical-scroll {
+        padding-right: 17px;
+
+        .dialog {
+            padding-right: 17px;
+        }
+    }
 
     .dialog {
         overflow-x: hidden;
