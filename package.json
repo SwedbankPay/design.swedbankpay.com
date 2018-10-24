@@ -46,6 +46,7 @@
         "@babel/plugin-syntax-dynamic-import": "^7.0.0",
         "@babel/preset-env": "^7.1.0",
         "@babel/preset-react": "^7.0.0",
+        "@babel/traverse": "7.0.0",
         "@sentry/browser": "^4.2.1",
         "@sentry/webpack-plugin": "^1.6.1",
         "app-manifest-webpack-plugin": "^1.1.3",
