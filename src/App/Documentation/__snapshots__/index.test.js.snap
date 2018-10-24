@@ -45,14 +45,14 @@ exports[`Documentation: index renders 1`] = `
                 "title": "Introduction",
               },
               Object {
-                "componentPath": "getting-started/Contributing",
-                "path": "/docs/getting-started/contributing",
-                "title": "Contributing",
-              },
-              Object {
                 "componentPath": "getting-started/BrowserSupport",
                 "path": "/docs/getting-started/browser-support",
                 "title": "Browser Support",
+              },
+              Object {
+                "componentPath": "getting-started/Contributing",
+                "path": "/docs/getting-started/contributing",
+                "title": "Contributing",
               },
             ]
           }
@@ -185,11 +185,6 @@ exports[`Documentation: index renders 1`] = `
                 "title": "Panel",
               },
               Object {
-                "componentPath": "components/ProgressTracker",
-                "path": "/docs/components/progress-tracker",
-                "title": "Progress Tracker (deprecated)",
-              },
-              Object {
                 "componentPath": "components/Sheet",
                 "path": "/docs/components/sheet",
                 "title": "Sheet",
@@ -250,9 +245,24 @@ exports[`Documentation: index renders 1`] = `
                 "title": "Display",
               },
               Object {
+                "componentPath": "utilities/Flex",
+                "path": "/docs/utilities/flex",
+                "title": "Flex",
+              },
+              Object {
+                "componentPath": "utilities/Sizing",
+                "path": "/docs/utilities/sizing",
+                "title": "Sizing",
+              },
+              Object {
                 "componentPath": "utilities/Spacing",
                 "path": "/docs/utilities/spacing",
                 "title": "Spacing",
+              },
+              Object {
+                "componentPath": "utilities/Text",
+                "path": "/docs/utilities/text",
+                "title": "Text",
               },
               Object {
                 "componentPath": "utilities/Visibility",

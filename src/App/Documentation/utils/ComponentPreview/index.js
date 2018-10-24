@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { renderToStaticMarkup } from "react-dom/server";
-import PrismCode from "react-prism";
 import jsbeautifier from "js-beautify";
+import Highlight, { defaultProps } from "prism-react-renderer";
 
 // NOTE: dangerousHTML prop is used when wanting to show html in the codefigure without encoding.
 
@@ -107,24 +107,37 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
 
                 break;
             case "css":
-                code = jsbeautifier.css_beautify(code);
+                code = jsbeautifier.css(code);
 
                 break;
             case "javascript":
                 // This is not needed, and for some reason crashes after a prod build [EH]
-                // code = jsbeautifier.js_beautify(code);
+                // code = jsbeautifier(code);
                 break;
             default:
                 return "update switchcase!";
         }
 
+        defaultProps.style = "";
+
         return (
             <figure>
-                <pre>
-                    <PrismCode className={`language-${language}`}>
-                        {code}
-                    </PrismCode>
-                </pre>
+                {/* keep theme as undefined to apply default prism theme */}
+                <Highlight {...defaultProps} theme={undefined} code={code} language={language}>
+                    {({ className, style, tokens, getLineProps, getTokenProps }) => (
+                        <pre className={className} style={style}>
+                            {tokens.map((line, i) => (
+                                <div key={line + i} {...getLineProps({ line,
+                                    key: i })}>
+                                    {line.map((token, key) => (
+                                        <span key={key} {...getTokenProps({ token,
+                                            key })} />
+                                    ))}
+                                </div>
+                            ))}
+                        </pre>
+                    )}
+                </Highlight>
             </figure>
         );
     };

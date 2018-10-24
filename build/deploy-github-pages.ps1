@@ -16,7 +16,6 @@ if ($Env:GitVersion_PreReleaseLabel -ne "PullRequest") {
     git checkout -f gh-pages
     if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode) }
     xcopy dist\* . /sy
-    ls
     if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode) }
     git add .
     if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode) }

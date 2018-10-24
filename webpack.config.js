@@ -22,7 +22,7 @@ module.exports = (env, argv) => {
 
     const config = {
         entry: {
-            polyfills: "./src/polyfills/index.js",
+            polyfills: ["./src/polyfills/index.js", "@babel/polyfill"],
             app: "./src/index.js",
             "px-script": "./src/px-script/index.js"
         },

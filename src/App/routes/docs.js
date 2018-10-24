@@ -13,14 +13,14 @@ module.exports = [
                 componentPath: "getting-started/Introduction"
             },
             {
-                title: "Contributing",
-                path: "/docs/getting-started/contributing",
-                componentPath: "getting-started/Contributing"
-            },
-            {
                 title: "Browser Support",
                 path: "/docs/getting-started/browser-support",
                 componentPath: "getting-started/BrowserSupport"
+            },
+            {
+                title: "Contributing",
+                path: "/docs/getting-started/contributing",
+                componentPath: "getting-started/Contributing"
             }
         ]
     },
@@ -155,11 +155,6 @@ module.exports = [
                 componentPath: "components/Panel"
             },
             {
-                title: "Progress Tracker (deprecated)",
-                path: "/docs/components/progress-tracker",
-                componentPath: "components/ProgressTracker"
-            },
-            {
                 title: "Sheet",
                 path: "/docs/components/sheet",
                 componentPath: "components/Sheet"
@@ -221,9 +216,24 @@ module.exports = [
                 componentPath: "utilities/Display"
             },
             {
+                title: "Flex",
+                path: "/docs/utilities/flex",
+                componentPath: "utilities/Flex"
+            },
+            {
+                title: "Sizing",
+                path: "/docs/utilities/sizing",
+                componentPath: "utilities/Sizing"
+            },
+            {
                 title: "Spacing",
                 path: "/docs/utilities/spacing",
                 componentPath: "utilities/Spacing"
+            },
+            {
+                title: "Text",
+                path: "/docs/utilities/text",
+                componentPath: "utilities/Text"
             },
             {
                 title: "Visibility",

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, Attribute, DocToc } from "#";
+import { ComponentPreview, Attribute, Property, DocToc } from "#";
 
 import AlertComponent from "@/Alert";
 import { alert } from "$/px-script";
@@ -50,7 +50,7 @@ const ClosingTheAlert = () => (
             <AlertComponent type="danger" text="This is a danger alert with an icon!" close icon="error" />
         </ComponentPreview>
         <h3>External close button</h3>
-        <p>To add an external close-button for your alert add the attribute <Attribute data name="alert-close" value="[alert ID]" /> to the button element.</p>
+        <p>To add an external close-button for your alert add the attribute <Attribute data name="alert-close" value="{id}" /> to the button element.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <AlertComponent id="alert-success-1" type="success" text="Press the button below to close me" icon="check_circle" />{"\n\n"}
             <button type="button" className="btn btn-primary" data-alert-close="alert-success-1">Close alert</button>
@@ -62,7 +62,7 @@ const ExtendedUsage = () => (
     <>
         <h2 id="extended-usage">Extended usage</h2>
         <p>Alerts can also contain additional HTML elements like headings, paragraphs and dividers.</p>
-        <p>Just make sure to wrap the content in a container with the class <span className="token attr-value">.alert-body</span>.</p>
+        <p>Just make sure to wrap the content in a container with the class <Property value=".alert-body" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <AlertComponent type="success" close icon="check_circle">
                 <h3 className="color-success">Success!</h3>

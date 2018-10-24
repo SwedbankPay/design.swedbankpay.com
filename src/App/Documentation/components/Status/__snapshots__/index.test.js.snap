@@ -9,11 +9,9 @@ exports[`Documentation: Status ExtendedUsage renders 1`] = `
   </h2>
   <p>
     Extended usage... 
-    <code
-      className="token property"
-    >
-      .status
-    </code>
+    <Property
+      value=".status"
+    />
     ...
   </p>
   <ComponentPreview
@@ -59,11 +57,9 @@ exports[`Documentation: Status Overview renders 1`] = `
   </h2>
   <p>
     Overview... 
-    <code
-      className="token property"
-    >
-      .status
-    </code>
+    <Property
+      value=".status"
+    />
     ...
   </p>
   <ComponentPreview

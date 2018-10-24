@@ -1,13 +1,83 @@
 /* stylelint-disable block-opening-brace-space-before, declaration-no-important */
 
 // Alignment
-.text-left           { text-align: left !important; }
-.text-right          { text-align: right !important; }
-.text-center         { text-align: center !important; }
-.text-justify        { text-align: justify !important; }
-.text-nowrap         { white-space: nowrap !important; }
+
+.text-justify  { text-align: justify !important; }
+.text-nowrap   { white-space: nowrap !important; }
+.text-truncate { .text-truncate(); }
+
+// Responsive alignment
+
+.text-responsive-alignment-rules(@infix) {
+    .text@{infix}-left           { text-align: left !important; }
+    .text@{infix}-right          { text-align: right !important; }
+    .text@{infix}-center         { text-align: center !important; }
+}
+
+// Creating base clases like ".text-left"
+.text-responsive-alignment-rules(~"");
+
+// Creating classes for breakpoint abbreviations like ".text-md-left"
+.for-each(@breakpoint in @grid-breakpoints) {
+    @infix: extract(@breakpoint, 1);
+
+    .ruleset() {
+        .text-responsive-alignment-rules(~"-@{infix}");
+    }
+
+    .media-breakpoint-up(@infix, @breakpoint, { .ruleset(); });
+}
 
 // Transformation
+
 .text-lowercase      { text-transform: lowercase !important; }
 .text-uppercase      { text-transform: uppercase !important; }
 .text-capitalize     { text-transform: capitalize !important; }
+
+// Weight and italics
+.font-weight-light   { font-weight: @font-weight-light !important; }
+.font-weight-normal  { font-weight: @font-weight-normal !important; }
+.font-weight-bold    { font-weight: @font-weight-bold !important; }
+.font-italic         { font-style: italic !important; }
+
+// Contextual colors
+
+.color-brand {
+    .color-variant(@brand-primary);
+}
+
+.color-default {
+    .color-variant(@text-color);
+}
+
+.color-success,
+.color-green {
+    .color-variant(@state-success);
+}
+
+.color-neutral,
+.color-blue {
+    .color-variant(@state-neutral);
+}
+
+.color-warning,
+.color-yellow {
+    .color-variant(@state-warning);
+}
+
+.color-danger,
+.color-red {
+    .color-variant(@state-error);
+}
+
+.color-purple {
+    .color-variant(@purple);
+}
+
+// Misc
+
+.text-decoration-none { text-decoration: none !important; }
+
+// Reset
+
+.text-reset { color: inherit !important; }

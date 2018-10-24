@@ -1,7 +1,7 @@
 import React from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocToc, ExperimentalComponentAlert } from "#";
+import { ComponentPreview, DocToc, ExperimentalComponentAlert, Property } from "#";
 import StepBarComponent from "@/StepBar";
 
 const BasicStepBar = () => {
@@ -27,7 +27,7 @@ const BasicStepBar = () => {
     return (
     <>
         <h2 id="basic-usage">Basic usage</h2>
-        <p>Add class <code className="token property">.step-bar</code> to an <PrismCode className="language-html">{"<ol>"}</PrismCode> element.</p>
+        <p>Add class <Property value=".step-bar" /> to an <PrismCode className="language-html">{"<ol>"}</PrismCode> element.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <StepBarComponent items={items} />
         </ComponentPreview>
@@ -56,7 +56,7 @@ const HorizontalStepBar = () => {
     return (
     <>
         <h2 id="horizontal-step-bar">Horizontal step bar</h2>
-        <p>In addition to class <code className="token property">.step-bar</code>, add the extension class <code className="token property">.step-bar--horizontal</code> to an <PrismCode className="language-html">{"<ol>"}</PrismCode> element.</p>
+        <p>In addition to class <Property value=".step-bar" />, add the extension class <Property value=".step-bar--horizontal" /> to an <PrismCode className="language-html">{"<ol>"}</PrismCode> element.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <StepBarComponent items={items} horizontal />
         </ComponentPreview>

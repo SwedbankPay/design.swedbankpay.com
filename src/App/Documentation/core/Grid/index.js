@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ComponentPreview, DocToc } from "#";
+import { ComponentPreview, DocToc, Property } from "#";
 
 const HowItWorks = () => (
     <>
@@ -24,14 +24,14 @@ const HowItWorks = () => (
                 </div>
             </div>
         </ComponentPreview>
-        <p>The above example creates three equal-width columns on small, medium, large, extra large, and extra extra large devices using our predefined grid classes. Those columns are centered in the page with the parent <code className="token property">.container</code>.</p>
+        <p>The above example creates three equal-width columns on small, medium, large, extra large, and extra extra large devices using our predefined grid classes. Those columns are centered in the page with the parent <Property value=".container" />.</p>
     </>
 );
 
 const GridOptions = () => (
     <>
         <h2 id="grid-options">Grid options</h2>
-        <p>Most sizes in the PayEx DesignGuide is defined using <code className="token property">em</code>s or <code className="token property">rem</code>s, <code className="token property">px</code>s are used for grid breakpoints and container widths. This is because the viewport width is in pixels and does not change with the font size.</p>
+        <p>Most sizes in the PayEx DesignGuide is defined using <Property value="em" />s or <Property value="rem" />s, <Property value="px" />s are used for grid breakpoints and container widths. This is because the viewport width is in pixels and does not change with the font size.</p>
         <table className="table table-striped">
             <thead>
                 <tr>
@@ -74,12 +74,12 @@ const GridOptions = () => (
                 </tr>
                 <tr>
                     <th scope="row">Class prefix</th>
-                    <td><code className="token property">.col-</code></td>
-                    <td><code className="token property">.col-sm-</code></td>
-                    <td><code className="token property">.col-md-</code></td>
-                    <td><code className="token property">.col-lg-</code></td>
-                    <td><code className="token property">.col-xl-</code></td>
-                    <td><code className="token property">.col-xxl-</code></td>
+                    <td><Property value=".col-" /></td>
+                    <td><Property value=".col-sm-" /></td>
+                    <td><Property value=".col-md-" /></td>
+                    <td><Property value=".col-lg-" /></td>
+                    <td><Property value=".col-xl-" /></td>
+                    <td><Property value=".col-xxl-" /></td>
                 </tr>
                 <tr>
                     <th scope="row"># of columns</th>
@@ -105,7 +105,7 @@ const GridOptions = () => (
 const AutoLayoutColumns = () => (
     <>
         <h2 id="auto-layout-columns">Auto-layout columns</h2>
-        <p>Utilize breakpoint-specific column classes for easy column sizing without an explicit numbered class like <code className="token property">.col-sm-6</code>.</p>
+        <p>Utilize breakpoint-specific column classes for easy column sizing without an explicit numbered class like <Property value=".col-sm-6" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="showcase-grid">
                 <div className="container">

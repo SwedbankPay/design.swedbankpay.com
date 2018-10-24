@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc } from "#";
+import { ComponentPreview, DocToc, Property } from "#";
 import PanelComponent from "@/Panel";
 
 const Overview = () => (
@@ -25,7 +25,7 @@ const Overview = () => (
 const PanelHeaders = () => (
     <>
         <h2 id="panel-headers">Panel headers</h2>
-        <p>Two types of headers... <code className="token property">.panel-default</code> and <code className="token property">.panel-brand</code>...</p>
+        <p>Two types of headers... <Property value=".panel-default" /> and <Property value=".panel-brand" />...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <PanelComponent title="Default panel" />{"\n\n"}
             <PanelComponent type="brand" title="Panel brand" />
@@ -36,7 +36,7 @@ const PanelHeaders = () => (
 const PanelDark = () => (
     <>
         <h2 id="panel-dark-mode">Panel dark mode</h2>
-        <p>Dark body with <code className="token property">.panel-dark</code>...</p>
+        <p>Dark body with <Property value=".panel-dark" />...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <PanelComponent
                 type="brand"
@@ -58,7 +58,7 @@ const PanelDark = () => (
 const PanelMuted = () => (
     <>
         <h2 id="muted-panel">Muted panel</h2>
-        <p>Muted panel with <code className="token property">.panel-muted</code>...</p>
+        <p>Muted panel with <Property value=".panel-muted" />...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <PanelComponent
                 type="muted"

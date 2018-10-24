@@ -9,11 +9,9 @@ exports[`Documentation: Lists BasicList renders 1`] = `
   </h2>
   <p>
     Basic lists info...
-    <code
-      className="token property"
-    >
-      .list
-    </code>
+    <Property
+      value=".list"
+    />
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -85,11 +83,9 @@ exports[`Documentation: Lists DescriptionList renders 1`] = `
   </h2>
   <p>
     Description lists info...
-    <code
-      className="token property"
-    >
-      .description-list
-    </code>
+    <Property
+      value=".description-list"
+    />
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -139,11 +135,9 @@ exports[`Documentation: Lists InlineList renders 1`] = `
   </h2>
   <p>
     Inline lists info...
-    <code
-      className="token property"
-    >
-      .list-inline
-    </code>
+    <Property
+      value=".list-inline"
+    />
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -195,11 +189,9 @@ exports[`Documentation: Lists SettingsList renders 1`] = `
   </h2>
   <p>
     Settings lists info...
-    <code
-      className="token property"
-    >
-      .settings-list
-    </code>
+    <Property
+      value=".settings-list"
+    />
   </p>
   <ComponentPreview
     codeFigure={true}
