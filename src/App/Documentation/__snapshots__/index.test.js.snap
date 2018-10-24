@@ -255,6 +255,11 @@ exports[`Documentation: index renders 1`] = `
                 "title": "Flex",
               },
               Object {
+                "componentPath": "utilities/Sizing",
+                "path": "/docs/utilities/sizing",
+                "title": "Sizing",
+              },
+              Object {
                 "componentPath": "utilities/Spacing",
                 "path": "/docs/utilities/spacing",
                 "title": "Spacing",

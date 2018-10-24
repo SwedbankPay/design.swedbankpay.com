@@ -226,6 +226,11 @@ module.exports = [
                 componentPath: "utilities/Flex"
             },
             {
+                title: "Sizing",
+                path: "/docs/utilities/sizing",
+                componentPath: "utilities/Sizing"
+            },
+            {
                 title: "Spacing",
                 path: "/docs/utilities/spacing",
                 componentPath: "utilities/Spacing"

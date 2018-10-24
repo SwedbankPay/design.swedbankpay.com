@@ -1,7 +1,7 @@
 /* stylelint-disable declaration-no-important */
 
 .spacing-rules(@infix) {
-    @properties: margin m, padding p;
+    @properties: ~"margin" ~"m", ~"padding" ~"p";
 
     .for-each(@property in @properties) {
         @prop: extract(@property, 1);
