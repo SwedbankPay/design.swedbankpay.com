@@ -11,6 +11,7 @@ class Sheet {
         this.id = el.id;
         this.closeIcon = el.querySelector(SELECTORS.CLOSEICON);
         this.isOpen = el.classList.contains("sheet-open");
+        this.hasVScroll = () => window.innerWidth - document.documentElement.clientWidth;
 
         if (this.closeIcon) {
             this.closeIcon.addEventListener("click", e => {
@@ -35,7 +36,16 @@ class Sheet {
         });
     }
 
+    hasScrollBar () {
+        if (this.hasVScroll() > 0) {
+            document.body.classList.add("sheet-has-vscroll");
+        } else {
+            document.body.classList.remove("sheet-has-vscroll");
+        }
+    }
+
     open () {
+        this.hasScrollBar();
         this.isOpen = true;
         this._el.classList.add("d-block");
         document.body.classList.add("sheet-open");
@@ -45,6 +55,7 @@ class Sheet {
     }
 
     close () {
+        this.hasScrollBar();
         this.isOpen = false;
         this._el.classList.remove("sheet-open");
         document.body.classList.remove("sheet-open");
