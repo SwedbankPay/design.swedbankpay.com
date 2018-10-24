@@ -15,3 +15,5 @@
 ### Fixed
 
 ### Removed
+
+- Removed deprecated progress tracker component.

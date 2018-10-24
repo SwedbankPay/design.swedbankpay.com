@@ -155,11 +155,6 @@ module.exports = [
                 componentPath: "components/Panel"
             },
             {
-                title: "Progress Tracker (deprecated)",
-                path: "/docs/components/progress-tracker",
-                componentPath: "components/ProgressTracker"
-            },
-            {
                 title: "Sheet",
                 path: "/docs/components/sheet",
                 componentPath: "components/Sheet"

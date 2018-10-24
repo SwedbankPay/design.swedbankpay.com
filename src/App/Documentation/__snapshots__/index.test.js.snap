@@ -185,11 +185,6 @@ exports[`Documentation: index renders 1`] = `
                 "title": "Panel",
               },
               Object {
-                "componentPath": "components/ProgressTracker",
-                "path": "/docs/components/progress-tracker",
-                "title": "Progress Tracker (deprecated)",
-              },
-              Object {
                 "componentPath": "components/Sheet",
                 "path": "/docs/components/sheet",
                 "title": "Sheet",
