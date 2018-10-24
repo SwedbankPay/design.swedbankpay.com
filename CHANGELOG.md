@@ -11,4 +11,6 @@
 
 ### Fixed
 
+- Fixed bug where dialog component adds padding-right when no scrollbar exists
+
 ### Removed
