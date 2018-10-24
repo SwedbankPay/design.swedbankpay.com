@@ -11,6 +11,7 @@ class Dialog {
         this.id = el.id;
         this.closeIcon = el.querySelector(SELECTORS.CLOSEICON);
         this.isOpen = el.classList.contains("d-flex");
+        this.hasVScroll = () => window.innerWidth - document.documentElement.clientWidth;
 
         if (this.closeIcon) {
             this.closeIcon.addEventListener("click", e => {
@@ -34,13 +35,23 @@ class Dialog {
         });
     }
 
+    hasScrollBar () {
+        if (this.hasVScroll() > 0) {
+            this._el.classList.add("has-vertical-scroll");
+        } else {
+            this._el.classList.remove("has-vertical-scroll");
+        }
+    }
+
     open () {
+        this.hasScrollBar();
         this.isOpen = true;
         this._el.classList.add("d-flex");
         document.body.classList.add("dialog-open");
     }
 
     close () {
+        this.hasScrollBar();
         this.isOpen = false;
         this._el.classList.remove("d-flex");
         document.body.classList.remove("dialog-open");
