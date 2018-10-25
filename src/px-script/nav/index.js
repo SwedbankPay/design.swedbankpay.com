@@ -109,7 +109,9 @@ const nav = (() => {
     const init = () => {
         const navsExist = [...document.querySelectorAll(".nav")];
 
-        if (navsExist.length) {
+let navs = document.querySelectorAll(".nav");
+        if (navs) {
+            navs = [...navs].map(nav => new Nav(nav));
             const navs = [...document.querySelectorAll(".nav")].map(nav => new Nav(nav));
 
             document.addEventListener("click", e => {
