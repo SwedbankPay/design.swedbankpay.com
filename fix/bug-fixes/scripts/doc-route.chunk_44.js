@@ -1,2 +1,2 @@
 (window.webpackJsonppayex=window.webpackJsonppayex||[]).push([[53],{151:function(e,n,a){"use strict";a.r(n);var i=a(0),r=a.n(i),s=a(1),c=function(e){var n=e.icon;return r.a.createElement("i",{className:"material-icons"},n)};c.propTypes={icon:a.n(s).a.string.isRequired},n.default=c}}]);
-//# sourceMappingURL=doc-route.chunk_44.js.map?eb7ee3aff6581e8b8173
+//# sourceMappingURL=doc-route.chunk_44.js.map?30d2b6aed792e0d6766a
