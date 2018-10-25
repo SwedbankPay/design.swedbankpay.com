@@ -13,7 +13,12 @@
 
 ### Changed
 
+- Removed border-bottom for link buttons
+
 ### Fixed
+
+- Fixed bug where dialog component adds padding-right when no scrollbar exists
+- Fixed bug where sheet component adds padding-right when no scrollbar exists
 
 ### Removed
 

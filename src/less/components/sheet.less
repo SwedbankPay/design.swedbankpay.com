@@ -49,14 +49,19 @@
 
 body.sheet-open {
     overflow: hidden;
-    padding-right: 17px; // Width of the scrollbar (don't change this) [EH]
 
     .sheet {
-        padding-right: 17px; // Width of the scrollbar (don't change this) [EH]
-
         > section {
             overflow-x: hidden;
             overflow-y: auto;
+        }
+    }
+
+    &.body-has-vscroll {
+        padding-right: @scrollbar-size;
+
+        .topbar {
+            padding-right: @scrollbar-size;
         }
     }
 }
