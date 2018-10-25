@@ -1,8 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Main: App renders 1`] = `
-<BrowserRouter
+<Router
   basename="/TEST/"
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
 >
   <withRouter(ScrollToTop)>
     <withRouter(AppHeader) />
@@ -29,5 +49,5 @@ exports[`Main: App renders 1`] = `
       />
     </Switch>
   </withRouter(ScrollToTop)>
-</BrowserRouter>
+</Router>
 `;
