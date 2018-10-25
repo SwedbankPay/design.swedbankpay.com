@@ -2,14 +2,13 @@ class Nav {
     constructor (el) {
         this._el = el;
         this.navOpen = el.classList.contains("nav-open");
-        this.childCount = [...this._el.querySelectorAll(".submenu")].length;
         this.submenus = this._el.querySelectorAll(".submenu");
-        this.listItems = [...this._el.querySelectorAll("li")].length;
+        this.listItems = [...this._el.querySelectorAll("li")];
         this.resizeEventMenuOpen;
         this.resizeEventSubmenuOpen;
         this.submenuOpen = this._el.querySelector(".submenu-open");
 
-        if (this.listItems > 5 || this.childCount) {
+        if (this.listItems.length > 5 || this.submenus.length) {
             this.hideItems();
 
             const menu = document.createElement("a");
@@ -62,11 +61,11 @@ class Nav {
     }
 
     showItems () {
-        [...this._el.querySelectorAll("li")].forEach(listItem => listItem.classList.remove("responsive-hidden"));
+        this.listItems.forEach(listItem => listItem.classList.remove("responsive-hidden"));
     }
 
     hideItems () {
-        const firstFour = [...this._el.querySelectorAll("li")].filter(notHidden => !notHidden.classList.contains("responsive-hidden") && notHidden.querySelector(".submenu") === null && this._el.querySelector("UL") === notHidden.parentElement);
+        const firstFour = this.listItems.filter(notHidden => !notHidden.classList.contains("responsive-hidden") && notHidden.querySelector(".submenu") === null && this._el.querySelector("UL") === notHidden.parentElement);
 
         if (this.submenus.length > 0) {
             this.submenus.forEach(levelTwo => {
@@ -79,7 +78,7 @@ class Nav {
                 });
             }
         } else {
-            [...this._el.querySelectorAll("li")].slice(4).forEach(items => {
+            this.listItems.slice(4).forEach(items => {
                 items.classList.add("responsive-hidden");
             });
         }
@@ -107,12 +106,10 @@ class Nav {
 
 const nav = (() => {
     const init = () => {
-        const navsExist = [...document.querySelectorAll(".nav")];
+        let navs = document.querySelectorAll(".nav");
 
-let navs = document.querySelectorAll(".nav");
         if (navs) {
             navs = [...navs].map(nav => new Nav(nav));
-            const navs = [...document.querySelectorAll(".nav")].map(nav => new Nav(nav));
 
             document.addEventListener("click", e => {
                 navs.forEach(nav => {

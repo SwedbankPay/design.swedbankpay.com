@@ -57,7 +57,7 @@
             ul {
                 list-style: none;
                 padding: 0;
-                margin: 0 0 @base-margin-sm @submenu-list-margin-left;
+                margin: 0 0 @base-margin-sm @nav-submenu-list-margin-left;
 
                 li {
                     margin: 0;
@@ -68,7 +68,7 @@
 
                     a {
                         color: @brand-primary;
-                        font-size: @submenu-font-size;
+                        font-size: @nav-submenu-font-size;
 
                         &:hover {
                             color: darken(@brand-primary, 10%);
@@ -141,23 +141,23 @@
                         background-color: @white;
                         display: block;
                         position: absolute;
-                        left: @submenu-left;
+                        left: @nav-submenu-left;
                         top: 0;
-                        border: @submenu-border;
+                        border: @nav-submenu-border;
                         white-space: nowrap;
 
                         &:before {
                             content: "";
-                            width: @submenu-before-width;
-                            height: @submenu-before-height;
+                            width: @nav-submenu-before-width;
+                            height: @nav-submenu-before-height;
                             position: absolute;
                             transform: rotate(45deg);
-                            border: @submenu-border;
+                            border: @nav-submenu-border;
                             border-top: 0;
                             border-right: 0;
                             background: @white;
-                            left: @submenu-before-left;
-                            top: @submenu-before-top;
+                            left: @nav-submenu-before-left;
+                            top: @nav-submenu-before-top;
                         }
 
                         li {
@@ -185,9 +185,9 @@
 
             i {
                 margin-right: 0;
-                font-size: @submenu-icon-fontsize-tablet;
+                font-size: @nav-submenu-icon-fontsize-tablet;
                 padding: @base-padding-sm;
-                padding-left: @submenu-p-icon-left;
+                padding-left: @nav-submenu-p-icon-left;
                 line-height: @nav-icon-lineheight;
             }
         }
