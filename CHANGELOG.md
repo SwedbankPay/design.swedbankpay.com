@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.1x.x] - 2018-x-x
+## [0.13.0] - 2018-10-25
 
 ### Added
 
@@ -13,12 +13,12 @@
 
 ### Changed
 
-- Removed border-bottom for link buttons
+- Removed border-bottom for link buttons.
 
 ### Fixed
 
-- Fixed bug where dialog component adds padding-right when no scrollbar exists
-- Fixed bug where sheet component adds padding-right when no scrollbar exists
+- Fixed bug where dialog component adds padding-right when no scrollbar exists.
+- Fixed bug where sheet component adds padding-right when no scrollbar exists.
 
 ### Removed
 
