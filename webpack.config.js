@@ -1,26 +1,28 @@
 /* eslint camelcase: 0, object-curly-newline: 0 */
-const pkg = require("./package.json");
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
+const appRoutes = require("./tools/generate-routes-copy-array");
 const autoprefixer = require("autoprefixer");
-const AppManifestWebpackPlugin = require("app-manifest-webpack-plugin");
-const lessListPlugin = require("less-plugin-lists");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const FileManagerPlugin = require("filemanager-webpack-plugin");
+const lessListPlugin = require("less-plugin-lists");
 const SentryCliPlugin = require("@sentry/webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const FileManagerPlugin = require("filemanager-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const AppManifestWebpackPlugin = require("app-manifest-webpack-plugin");
 
 module.exports = (env, argv) => {
-    const version = pkg.version;
+    const version = env && env.semver ? env.semver : "LOCAL_DEV";
     const isProd = argv.mode === "production";
     const isRelease = env && env.release === "true";
     const isDevServer = !!argv.host;
+    const basename = env && env.basename ? `/${env.basename}/` : "/";
 
     const config = {
         entry: {
-            polyfills: "./src/polyfills/index.js",
+            polyfills: ["./src/polyfills/index.js", "@babel/polyfill"],
             app: "./src/index.js",
             "px-script": "./src/px-script/index.js"
         },
@@ -29,14 +31,16 @@ module.exports = (env, argv) => {
         },
         output: {
             library: "payex",
-            path: path.resolve(__dirname, "dist"),
-            filename: `v/${version}/scripts/[name].js?[hash]`,
-            publicPath: "/"
+            path: path.resolve(__dirname, `dist${basename}`),
+            filename: "scripts/[name].js?[hash]",
+            chunkFilename: "scripts/[name].js?[hash]",
+            publicPath: basename
         },
+        // target: "async-node",
         devtool: "source-map",
         devServer: {
-            contentBase: path.resolve(__dirname, "dist"),
-            publicPath: "/",
+            contentBase: path.resolve(__dirname, `dist${basename}`),
+            publicPath: basename,
             compress: true,
             port: 3000,
             hot: true,
@@ -47,7 +51,11 @@ module.exports = (env, argv) => {
             rules: [
                 {
                     test: /\.jsx?$/,
-                    exclude: modulePath => (/node_modules/).test(modulePath) && !(/node_modules\/*/).test(modulePath),
+                    exclude: modulePath => (
+                        (/node_modules/).test(modulePath) &&
+                        !(/node_modules\/*/).test(modulePath) &&
+                        (/__snapshots__/).test(modulePath)
+                    ),
                     loader: "babel-loader"
                 },
                 {
@@ -113,11 +121,37 @@ module.exports = (env, argv) => {
             ]
         },
         optimization: {
+            runtimeChunk: {
+                name: entrypoint => `runtime~${entrypoint.name}`
+            },
             splitChunks: {
+                chunks: "async",
+                minSize: 3000,
+                maxSize: 0,
+                minChunks: 2,
+                maxAsyncRequests: 5,
+                maxInitialRequests: 3,
+                automaticNameDelimiter: "~",
+                name: true,
                 cacheGroups: {
-                    vendors: {
-                        test: /[\\/]node_modules[\\/]/,
-                        priority: -10
+                    // vendors: {
+                    //     test: /[\\/]node_modules[\\/]/,
+                    //     name: "vendors",
+                    //     chunks: "all"
+                    // },
+                    app: {
+                        name: "app",
+                        test: /app\.js$/,
+                        reuseExistingChunk: true,
+                        chunks: "all",
+                        enforce: true
+                    },
+                    pxScript: {
+                        name: "px-script",
+                        test: /px-script/,
+                        reuseExistingChunk: false,
+                        chunks: "all",
+                        enforce: true
                     },
                     pxStyles: {
                         name: "px",
@@ -155,13 +189,8 @@ module.exports = (env, argv) => {
             new HtmlWebpackPlugin({
                 template: "./src/index.html",
                 hash: true,
-                title: "PayEx DesignGuide"
-            }),
-            new HtmlWebpackPlugin({
-                filename: "404.html",
-                template: "./src/index.html",
-                hash: true,
-                title: "PayEx DesignGuide"
+                title: "PayEx DesignGuide",
+                excludeChunks: ["base-redir", "runtime~base-redir"]
             }),
             new AppManifestWebpackPlugin({
                 logo: "./src/img/favicon.png",
@@ -188,40 +217,77 @@ module.exports = (env, argv) => {
                 }
             }),
             new MiniCssExtractPlugin({
-                filename: `v/${version}/styles/[name].css`
+                filename: "styles/[name].css"
+            }),
+            new webpack.DefinePlugin({
+                "process.env": {
+                    basename: JSON.stringify(basename),
+                    version: JSON.stringify(version),
+                    sentry: isRelease,
+                    google: isRelease
+                }
             }),
             new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/) // For now this ignores moment's locale folder, which doubles moment's size..
         ]
     };
 
+    if (!env && !isDevServer) {
+        config.plugins.push(
+            new BundleAnalyzerPlugin()
+        );
+    }
+
     if (isProd && !isDevServer) {
+        const onEndArchive = [
+            {
+                source: "./dist/temp/icons",
+                destination: `./dist${basename}release/icons.zip`
+            }
+        ];
+
+        if (isRelease) {
+            onEndArchive.push({
+                source: "./dist/temp/release",
+                destination: `./dist${basename}release/PayEx.DesignGuide.v${version}.zip`
+            });
+        }
+
         config.plugins.push(
             new FileManagerPlugin({
                 onStart: [
                     {
-                        delete: [
-                            "./dist"
-                        ]
+                        delete: ["./dist"]
                     }
                 ],
                 onEnd: [
                     {
                         copy: [
                             {
-                                source: "./dist/icons",
-                                destination: "./dist/temp/icons"
-                            }
-                        ],
-                        archive: [
-                            {
-                                source: "./dist/temp",
-                                destination: "./dist/icons.zip"
+                                source: `./dist${basename}icons`,
+                                destination: "./dist/temp/icons/icons"
                             },
                             {
-                                source: `./dist/v/${version}`,
-                                destination: `./dist/temp/PayEx.DesignGuide.v${version}.zip`
+                                source: `./dist${basename}scripts/px-script.js`,
+                                destination: "./dist/temp/release/scripts"
+                            },
+                            {
+                                source: `./dist${basename}scripts/px-script.js.map`,
+                                destination: "./dist/temp/release/scripts"
+                            },
+                            {
+                                source: `./dist${basename}styles/px.css`,
+                                destination: "./dist/temp/release/styles"
                             }
-                        ]
+                        ],
+                        mkdir: [`./dist${basename}release`],
+                        archive: onEndArchive,
+                        delete: ["./dist/temp"]
+                    },
+                    {
+                        copy: appRoutes.map(route => ({
+                            source: `./dist${basename}index.html`,
+                            destination: `./dist${basename}${route}`
+                        }))
                     }
                 ]
             })
@@ -229,17 +295,27 @@ module.exports = (env, argv) => {
     }
 
     if (isRelease) {
+        config.entry["base-redir"] = "./tools/base-redir.js";
+
         config.plugins.push(
+            new HtmlWebpackPlugin({
+                filename: "../index.html",
+                template: "./src/index.html",
+                hash: true,
+                title: "PayEx DesignGuide",
+                chunks: ["base-redir", "runtime~base-redir"]
+            }),
+            new HtmlWebpackPlugin({
+                filename: "../404.html",
+                template: "./src/index.html",
+                hash: true,
+                title: "PayEx DesignGuide",
+                excludeChunks: ["base-redir", "runtime~base-redir"]
+            }),
             new SentryCliPlugin({
                 release: version,
                 include: ".",
                 ignore: ["node_modules", "webpack.config.js"]
-            }),
-            new webpack.DefinePlugin({
-                "process.env": {
-                    sentry: true,
-                    google: true
-                }
             })
         );
     }

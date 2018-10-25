@@ -11,6 +11,7 @@ class Sheet {
         this.id = el.id;
         this.closeIcon = el.querySelector(SELECTORS.CLOSEICON);
         this.isOpen = el.classList.contains("sheet-open");
+        this.hasVScroll = () => (window.innerWidth - document.documentElement.clientWidth) > 0;
 
         if (this.closeIcon) {
             this.closeIcon.addEventListener("click", e => {
@@ -35,7 +36,16 @@ class Sheet {
         });
     }
 
+    handleScrollbar () {
+        if (this.hasVScroll()) {
+            document.body.classList.add("body-has-vscroll");
+        } else {
+            document.body.classList.remove("body-has-vscroll");
+        }
+    }
+
     open () {
+        this.handleScrollbar();
         this.isOpen = true;
         this._el.classList.add("d-block");
         document.body.classList.add("sheet-open");
@@ -45,6 +55,7 @@ class Sheet {
     }
 
     close () {
+        this.handleScrollbar();
         this.isOpen = false;
         this._el.classList.remove("sheet-open");
         document.body.classList.remove("sheet-open");
@@ -58,15 +69,17 @@ const sheet = (() => {
     const init = () => {
         const sheetEls = [...document.querySelectorAll(SELECTORS.SHEET)];
 
-        if (sheetEls) {
-            const sheets = sheetEls.map(sheet => new Sheet(sheet));
+        window.px._sheets = window.px._sheets || [];
+
+        if (sheetEls.length) {
+            sheetEls.forEach(sheet => window.px._sheets.push(new Sheet(sheet)));
 
             // Init open buttons
             document.querySelectorAll(SELECTORS.OPEN).forEach(btn => {
                 const id = btn.dataset.sheetOpen;
                 let sheet;
 
-                sheets.forEach(s => s.id === id ? sheet = s : null);
+                window.px._sheets.forEach(s => s.id === id ? sheet = s : null);
 
                 if (sheet) {
                     btn.addEventListener("click", e => {
@@ -83,7 +96,7 @@ const sheet = (() => {
                 const id = btn.dataset.sheetClose;
                 let sheet;
 
-                sheets.forEach(s => s.id === id ? sheet = s : null);
+                window.px._sheets.forEach(s => s.id === id ? sheet = s : null);
 
                 if (sheet) {
                     btn.addEventListener("click", e => {
@@ -97,7 +110,43 @@ const sheet = (() => {
         }
     };
 
-    return { init };
+    const close = id => {
+        let sheet = null;
+
+        window.px._sheets.forEach(d => d.id === id ? sheet = d : null);
+
+        try {
+            sheet.close();
+        } catch (e) {
+            console.error(`sheet.close: No sheet with id "${id}" found.`);
+
+            return false;
+        }
+
+        return sheet;
+    };
+
+    const open = id => {
+        let sheet = null;
+
+        window.px._sheets.forEach(d => d.id === id ? sheet = d : null);
+
+        try {
+            sheet.open();
+        } catch (e) {
+            console.error(`sheet.open: No sheet with id "${id}" found.`);
+
+            return false;
+        }
+
+        return sheet;
+    };
+
+    return {
+        init,
+        close,
+        open
+    };
 })();
 
 export default sheet;

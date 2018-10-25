@@ -58,11 +58,18 @@
 
 .dialog-open {
     overflow: hidden;
-    padding-right: 17px; // Width of the scrollbar (don't change this) [EH]
+
+    &.body-has-vscroll {
+        padding-right: @scrollbar-size;
+
+        .dialog,
+        .topbar {
+            padding-right: @scrollbar-size;
+        }
+    }
 
     .dialog {
         overflow-x: hidden;
         overflow-y: auto;
-        padding-right: 17px; // Width of the scrollbar (don't change this) [EH]
     }
 }

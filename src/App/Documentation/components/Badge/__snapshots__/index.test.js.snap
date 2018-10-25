@@ -23,11 +23,9 @@ exports[`Components: Badge FurtherUsage renders 1`] = `
   </h2>
   <p>
     Further usage... 
-    <code
-      className="token property"
-    >
-      .badge
-    </code>
+    <Property
+      value=".badge"
+    />
     ...
   </p>
   <ComponentPreview

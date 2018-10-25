@@ -21,7 +21,7 @@ const Documentation = () => (
             <main className="doc-view col-xxl-10 col-md-9 col-sm-12">
                 <Switch>
                     <Route exact path="/docs" render={() => <Redirect to="/docs/getting-started" />} />
-                    {routes.map((route, i) => <RenderRoutes key={i} {...route} />)}
+                    {routes.map(route => <RenderRoutes key={`renderRoutes_${route.title}`} {...route} />)}
                     <Redirect from="/docs/*" to="/404" />
                 </Switch>
             </main>

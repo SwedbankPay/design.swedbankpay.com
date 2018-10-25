@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { NavHashLink as NavLink } from "react-router-hash-link";
 
 // FIXME: This function is really moronic and super fragile, but works for now [EH]
 const _findHeadings = children => {
@@ -60,16 +61,13 @@ class DocToc extends Component {
         this.setState({ windowTopPosition: window.pageYOffset });
     }
 
-    scrollToElement (e, topPosition, id) {
-        e.preventDefault();
-
-        window.scroll({
-            top: topPosition + 100,
+    scrollToElement (element) {
+        // window.scroll(0, element.offsetTop + 100);
+        window.scrollTo({
+            top: element.offsetTop + 100,
             left: 0,
-            behavior: "smooth"
+            behavior: "instant"
         });
-
-        window.history.pushState(null, null, `#${id}`);
     }
 
     componentDidMount () {
@@ -102,7 +100,13 @@ class DocToc extends Component {
 
                                 return (
                                     <li key={i} className={isWithinBoundary ? "active" : ""}>
-                                        <a href={`#${heading.id}`} onClick={e => this.scrollToElement(e, heading.top, heading.id)}>{heading.title}</a>
+                                        <NavLink
+                                            to={`#${heading.id}`}
+                                            activeClassName="active"
+                                            scroll={this.scrollToElement}
+                                        >
+                                            {heading.title}
+                                        </NavLink>
                                     </li>
                                 );
                             }

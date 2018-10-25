@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc } from "#";
+import { ComponentPreview, DocToc, Property } from "#";
 import TopbarComponent from "@/Topbar";
 import { topbar } from "$/px-script";
 
@@ -117,7 +117,7 @@ const rightMenu = {
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
-        <p>This will only show the code for the <code className="token property">.topbar</code> component, at least for now. For a demonstration of the usage check the example app (coming soon), or implement it in your own project!</p>
+        <p>This will only show the code for the <Property value=".topbar" /> component, at least for now. For a demonstration of the usage check the example app (coming soon), or implement it in your own project!</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <TopbarComponent logo="default" leftMenu={leftMenu} rightMenu={rightMenu} />
         </ComponentPreview>

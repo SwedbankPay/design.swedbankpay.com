@@ -4,32 +4,24 @@ exports[`Utilities: Visibility Intro renders 1`] = `
 <Fragment>
   <p>
     Set the 
-    <code
-      className="token property"
-    >
-      visibility
-    </code>
+    <Property
+      value="visibility"
+    />
      of elements with our visibility utilities. These do not modify the 
-    <code
-      className="token property"
-    >
-      display
-    </code>
+    <Property
+      value="display"
+    />
      value at all and are helpful for hiding content from most users, but still keeping them for screen readers.
   </p>
   <p>
     Apply 
-    <code
-      className="token property"
-    >
-      .visible
-    </code>
+    <Property
+      value=".visible"
+    />
      or 
-    <code
-      className="token property"
-    >
-      .invisible
-    </code>
+    <Property
+      value=".invisible"
+    />
      as needed.
   </p>
   <ComponentPreview
@@ -52,7 +44,6 @@ exports[`Utilities: Visibility Intro renders 1`] = `
     language="css"
   >
     
-                // Class
                 .visible {
                     visibility: visible !important;
                 }

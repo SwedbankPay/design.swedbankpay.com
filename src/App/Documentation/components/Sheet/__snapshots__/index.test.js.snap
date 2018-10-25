@@ -169,7 +169,32 @@ exports[`Documentation: Sheet SheetText renders 1`] = `
     Sheet...
   </p>
   <Example />
+  <UsageWithJavascript />
 </div>
+`;
+
+exports[`Documentation: Sheet UsageWithJavascript renders 1`] = `
+<Fragment>
+  <h2
+    id="usage-with-javascript"
+  >
+    Usage with javascript
+  </h2>
+  <p>
+    To programmatically open a sheet, use 
+    <Property
+      value="px.sheet.open(\\"SHEET_ID\\")"
+    />
+    .
+  </p>
+  <p>
+    To programmatically close a sheet, use 
+    <Property
+      value="px.sheet.close(\\"SHEET_ID\\")"
+    />
+    .
+  </p>
+</Fragment>
 `;
 
 exports[`Documentation: Sheet renders 1`] = `

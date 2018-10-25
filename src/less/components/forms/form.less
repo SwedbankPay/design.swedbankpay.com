@@ -1,0 +1,258 @@
+form {
+    label {
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: @base-margin-xs;
+        text-transform: uppercase;
+        font-weight: @font-weight-light;
+        font-size: @base-font-size * 0.9;
+        color: @input-color;
+        line-height: 1.5;
+
+        .required-asterisk {
+            color: @red;
+            margin-left: 0.25rem;
+            font-weight: normal;
+            font-size: 1rem;
+            line-height: 1;
+
+            .has-success & {
+                color: @state-success;
+            }
+        }
+    }
+
+    fieldset {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+        // so we reset that to ensure it behaves more like a standard block element.
+        // See https://github.com/twbs/bootstrap/issues/12359.
+        min-width: 0;
+        margin-bottom: @base-margin;
+
+        &:disabled {
+            textarea {
+                resize: none;
+            }
+
+            .checkbox input[type="checkbox"] {
+                + label:before {
+                    background-color: @input-bg-disabled;
+                    border-color: @input-checked-bg-disabled;
+                    cursor: not-allowed;
+                }
+
+                &:checked + label:before {
+                    background-color: @input-checked-bg-disabled;
+                }
+
+                + label,
+                + label:before,
+                &:after,
+                &:checked + label:before {
+                    cursor: not-allowed;
+                }
+            }
+
+            .radio input[type="radio"] {
+                + label:before {
+                    background-color: @input-bg-disabled;
+                    border-color: @input-checked-bg-disabled;
+                }
+
+                &:checked + label:before {
+                    background-color: @input-checked-bg-disabled;
+                }
+
+                + label,
+                + label:before,
+                &:checked + label:before {
+                    cursor: not-allowed;
+                }
+            }
+
+            .togglebox input[type="checkbox"] {
+                + label:before,
+                + label:after {
+                    background-color: @input-bg-disabled;
+                    border-color: @input-checked-bg-disabled;
+                }
+
+                &:checked + label:before {
+                    background-color: @input-checked-bg-disabled;
+                }
+
+                + label,
+                + label:before,
+                + label:after,
+                &:checked + label:before,
+                &:checked + label:after {
+                    cursor: not-allowed;
+                }
+            }
+
+            .rangeslider {
+                input[type="range"] {
+                    cursor: not-allowed;
+
+                    &::-webkit-slider-thumb {
+                        .slider-thumb(@input-checked-bg-disabled, @input-bg-disabled);
+                    }
+
+                    &::-moz-range-thumb {
+                        .slider-thumb(@input-checked-bg-disabled, @input-bg-disabled);
+                    }
+
+                    &::-ms-thumb {
+                        .slider-thumb(@input-checked-bg-disabled, @input-bg-disabled);
+                    }
+
+                    &::-webkit-slider-runnable-track {
+                        .slider-range(linear-gradient(90deg, @input-checked-bg-disabled, @input-checked-bg-disabled) 0 100% no-repeat content-box, @input-checked-bg-disabled);
+                    }
+
+                    /* FIREFOX */
+                    &::-moz-range-track {
+                        .slider-range(#f9fafa, @input-checked-bg-disabled);
+                    }
+
+                    /* INTERNET EXPLORER & EDGE */
+                    &::-ms-track {
+                        .slider-range(transparent, @input-checked-bg-disabled);
+                    }
+
+                    &::-moz-range-progress {
+                        background: @input-checked-bg-disabled;
+                    }
+
+                    &::-ms-fill-upper {
+                        background: #f9fafa;
+                        border: 1px solid @input-checked-bg-disabled;
+                    }
+
+                    &::-ms-fill-lower {
+                        background: @input-checked-bg-disabled;
+                        border: 1px solid @input-checked-bg-disabled;
+                    }
+
+                    + .value-label {
+                        background: @input-checked-bg-disabled;
+
+                        &:before {
+                            border-right-color: @input-checked-bg-disabled !important; // stylelint-disable-line declaration-no-important
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    legend {
+        display: block;
+        width: 100%;
+        margin-bottom: @legend-bottom-margin;
+        line-height: @base-font-size * 2.8;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: @base-font-size * 0.9;
+        color: @legend-color;
+        border: 0;
+        border-bottom: 1px solid @legend-border-color;
+    }
+
+    .form-control-text,
+    .form-control {
+        display: block;
+        width: 100%;
+        font-size: @base-font-size;
+        line-height: @input-line-height;
+        color: @input-color;
+    }
+
+    .form-control-text {
+        padding: @input-padding-y 0;
+    }
+
+    .form-control {
+        height: ~"calc(2.25rem + 2px)";
+        padding: @input-padding-y @input-padding-x;
+        background-color: @input-bg;
+        background-clip: padding-box;
+        border: @input-border-width solid @input-border-color;
+        border-radius: @input-border-radius;
+        box-shadow: none;
+        transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+        .form-control-focus();
+        .placeholder();
+
+        &::placeholder {
+            color: @gray-6; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+            opacity: 1;
+        }
+
+        // HTML5 says that controls under a fieldset > legend:first-child won't be
+        // disabled if the fieldset is disabled. Due to implementation difficulty, we
+        // don't honor that edge case; we style them as disabled anyway.
+        &[disabled],
+        &[readonly],
+        fieldset[disabled] & {
+            background-color: @input-bg-disabled !important; // stylelint-disable-line declaration-no-important
+            opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+        }
+
+        &[disabled],
+        fieldset[disabled] & {
+            cursor: @cursor-disabled;
+        }
+
+        // Reset height for `textarea`s
+        textarea& {
+            height: auto;
+        }
+    }
+
+    .form-group {
+        margin-bottom: @base-margin;
+    }
+
+    .checkbox,
+    .radio,
+    .togglebox {
+        label {
+            cursor: pointer;
+            text-transform: none;
+        }
+    }
+
+    .help-block {
+        position: relative;
+        display: block;
+        margin: @helpblock-margin;
+        color: lighten(@text-color, 25%);
+        text-transform: uppercase;
+        font-size: @base-font-size * 0.8;
+        line-height: 1rem;
+
+        &:after {
+            opacity: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    textarea[disabled] {
+        resize: none;
+    }
+
+    select[multiple] {
+        height: auto;
+        padding: 0;
+
+        option {
+            padding: @select-option-margin;
+        }
+    }
+}

@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc, ExperimentalComponentAlert } from "#";
+import { ComponentPreview, Property, DocToc, ExperimentalComponentAlert } from "#";
 import CardComponent from "@/Card";
 
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
-        <p>Overview... <code className="token property">.card</code>...</p>
-        <p>... <code className="token property">.card-default</code>...</p>
-        <p>... <code className="token property">.card-brand</code>...</p>
-        <p>... <code className="token property">.card-light</code>...</p>
+        <p>Overview... <Property value=".card" /></p>
+        <p>... <Property value=".card-default" /></p>
+        <p>... <Property value=".card-brand" /></p>
+        <p>... <Property value=".card-light" /></p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="cards">
                 <ul>

@@ -3,162 +3,185 @@
 
 #px-designguide {
     width: 100%;
-}
 
-.designguide-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    .designguide-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-    .topbar-logo {
-        margin-right: 0;
-    }
+        .topbar-logo {
+            margin-right: 0;
+        }
 
-    &:before,
-    &:after {
-        display: none;
-    }
+        &:before,
+        &:after {
+            display: none;
+        }
 
-    .header-links {
-        a {
-            padding: 0 1rem;
-            .brand-link();
+        .header-links {
+            a {
+                padding: 0 1rem;
+                .brand-link();
 
-            &.active {
-                font-weight: @font-weight-bold;
+                &.active {
+                    font-weight: @font-weight-bold;
+                }
+
+                &:hover,
+                &:focus {
+                    text-decoration: none;
+                }
+
+                &:active {
+                    outline: none;
+                }
             }
+        }
 
-            &:hover,
-            &:focus {
-                text-decoration: none;
-            }
+        .topbar-info {
+            margin-right: 0.5rem;
+            margin-top: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
 
-            &:active {
-                outline: none;
+            a {
+                margin: 5px;
+                color: @text-muted;
+                fill: @text-muted;
+                border: none;
+
+                svg {
+                    overflow: visible;
+                    width: 2rem;
+                    height: 2rem;
+                    display: inline-block;
+                    vertical-align: top;
+                }
+
+                &:hover {
+                    color: darken(@text-muted, 20%);
+                    fill: darken(@text-muted, 20%);
+                }
             }
         }
     }
 
-    .topbar-info {
-        margin-right: 0.5rem;
-        margin-top: 0.5rem;
+    pre {
+        font-size: 87.5%;
+    }
 
-        a {
-            margin: 5px;
-            color: @text-muted;
-            fill: @text-muted;
-            border: none;
+    .color-preview {
+        width: 100%;
+        color: @white;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0.5rem;
 
-            svg {
-                overflow: visible;
-                width: 2rem;
-                height: 2rem;
-                display: inline-block;
-                vertical-align: top;
-            }
-
-            &:hover {
-                color: darken(@text-muted, 20%);
-                fill: darken(@text-muted, 20%);
-            }
+        p {
+            margin: 0;
         }
     }
 
-    .topbar-info-version {
-        text-align: right;
-    }
-}
-
-pre {
-    font-size: 87.5%;
-}
-
-.color-preview {
-    width: 100%;
-    color: @white;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 0.5rem;
-
-    p {
-        margin: 0;
-    }
-}
-
-.showcase-panel {
-    div.d-block,
-    div.d-inline {
-        padding: 0.5rem;
-    }
-
-    .sheet.d-block {
-        padding: 0;
-    }
-}
-
-.showcase-grid {
-    .row {
-        > [class*="col"] {
-            padding-top: 0.5rem;
-            padding-bottom: 0.5rem;
-            background: @gray-9;
-            border: 1px solid fade(@gray-8, 80%);
+    .showcase-panel {
+        div.d-block,
+        div.d-inline {
+            padding: 0.5rem;
         }
 
-        + .row {
-            margin-top: 1rem;
+        .sheet.d-block {
+            padding: 0;
         }
     }
 
-    &.showcase-vertical-space {
+    .sc-highlight {
+        background-color: rgba(86, 61, 124, 0.15);
+        border: 1px solid rgba(86, 61, 124, 0.15);
+    }
+
+    .showcase-grid {
         .row {
-            background: @gray-10;
-            height: 10rem;
+            > [class*="col"] {
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                background: @gray-9;
+                border: 1px solid fade(@gray-8, 80%);
+            }
+
+            + .row {
+                margin-top: 1rem;
+            }
+        }
+
+        &.showcase-vertical-space {
+            .row {
+                background: @gray-10;
+                height: 10rem;
+            }
         }
     }
-}
 
-.browser-support-table {
-    th,
-    tr {
-        text-align: center;
-        vertical-align: middle;
+    .browser-support-table {
+        th,
+        tr {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            display: inline-block;
+        }
     }
 
-    svg {
-        width: 1.5rem;
-        height: 1.5rem;
-        display: inline-block;
-    }
-}
+    // Override the prism toolbar button rules
+    figure {
+        .code-toolbar {
+            > .toolbar {
+                opacity: 1;
 
-// Override the prism toolbar button rules
-figure {
-    .code-toolbar {
-        > .toolbar {
-            opacity: 1;
+                > .toolbar-item {
+                    a {
+                        background: transparent;
+                        padding: 0.25rem 0.5rem;
+                        border-radius: 0.25rem;
+                        border: 0;
+                        box-shadow: none;
 
-            > .toolbar-item {
-                a {
-                    background: transparent;
-                    padding: 0.25rem 0.5rem;
-                    border-radius: 0.25rem;
-                    border: 0;
-                    box-shadow: none;
-
-                    &:hover {
-                        color: @white;
-                        background: @brand-primary;
+                        &:hover {
+                            color: @white;
+                            background: @brand-primary;
+                        }
                     }
                 }
             }
         }
     }
-}
 
-// NOTE: This is not used for anything but including the image in the build [EH]
-#mail_icon {
-    background: url("../img/payexmail.png");
+    #loading-component {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: ~"calc(100vh - 70px)";
+
+        .loading-text {
+            margin-top: 1rem;
+            color: @text-muted;
+        }
+    }
+
+    .doc-view {
+        #loading-component {
+            height: ~"calc(100vh - 150px)";
+        }
+    }
+
+    // NOTE: This is not used for anything but including the image in the build [EH]
+    #mail_icon {
+        background: url("../img/payexmail.png");
+    }
 }

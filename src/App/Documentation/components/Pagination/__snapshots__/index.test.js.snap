@@ -9,11 +9,9 @@ exports[`Documentation: Pagination DefaultPagination renders 1`] = `
   </h2>
   <p>
     Default pagination... 
-    <code
-      className="token property"
-    >
-      .pagination
-    </code>
+    <Property
+      value=".pagination"
+    />
     ...
   </p>
   <ComponentPreview
@@ -67,11 +65,9 @@ exports[`Documentation: Pagination PaginationBullets renders 1`] = `
   </h2>
   <p>
     Pagination bullets... 
-    <code
-      className="token property"
-    >
-      .pagination-bullets
-    </code>
+    <Property
+      value=".pagination-bullets"
+    />
     ...
   </p>
   <ComponentPreview
@@ -141,11 +137,9 @@ exports[`Documentation: Pagination SimplePagination renders 1`] = `
   </h2>
   <p>
     Simple pagination... 
-    <code
-      className="token property"
-    >
-      .pagination
-    </code>
+    <Property
+      value=".pagination"
+    />
     ...
   </p>
   <ComponentPreview

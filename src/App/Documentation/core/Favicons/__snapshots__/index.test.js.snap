@@ -30,7 +30,7 @@ exports[`Core: Favicons OurFavicon renders 1`] = `
   >
     <img
       alt="PayEx favicon"
-      src="/icons/android-chrome-96x96.png"
+      src="/TEST/icons/android-chrome-96x96.png"
     />
   </ComponentPreview>
 </Fragment>
@@ -74,13 +74,13 @@ exports[`Core: Favicons Usage renders 1`] = `
       &lt;meta&gt;
     </PrismCode>
      tags to reflect the title of your project. Make sure to also do this in the 
-    <code>
-      manifest.json
-    </code>
+    <Property
+      value="manifest.json"
+    />
      file in the icons folder.
   </p>
   <Button
-    href="/icons.zip"
+    href="/TEST/release/icons.zip"
     icon="file_download"
     label="Download Favicons"
     type="primary"

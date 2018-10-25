@@ -373,45 +373,33 @@ exports[`Documentation: Forms RangeSlider renders 1`] = `
     s colors and label positioning can be customized.
   </p>
   <p>
-    Currently there are three different supported colors for the slider:  
-    <code
-      className="token property"
-    >
-      rangeslider-brand
-    </code>
+    Currently there are three different supported colors for the slider: 
+    <Property
+      value=".rangeslider-brand"
+    />
     , 
-    <code
-      className="token property"
-    >
-      rangeslider-default
-    </code>
+    <Property
+      value=".rangeslider-default"
+    />
      and 
-    <code
-      className="token property"
-    >
-      rangeslider-neutral
-    </code>
+    <Property
+      value=".rangeslider-neutral"
+    />
     .
   </p>
   <p>
     The Rangeslider currently supports two positions: 
-    <code
-      className="token property"
-    >
-      label-right
-    </code>
+    <Property
+      value=".label-right"
+    />
      and 
-    <code
-      className="token property"
-    >
-      label-top
-    </code>
+    <Property
+      value=".label-top"
+    />
     . If no position is given, 
-    <code
-      className="token property"
-    >
-      right
-    </code>
+    <Property
+      value="right"
+    />
      is defaulted.
   </p>
   <ComponentPreview
@@ -561,11 +549,9 @@ exports[`Documentation: Forms UsageWithFieldsets renders 1`] = `
   </h3>
   <p>
     Disable entire fieldsets with 
-    <span
-      className="token attr-name"
-    >
-      disabled
-    </span>
+    <Attribute
+      name="disabled"
+    />
      attribute...
   </p>
   <ComponentPreview
