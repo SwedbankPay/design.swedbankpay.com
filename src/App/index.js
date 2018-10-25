@@ -1,11 +1,13 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route, withRouter } from "react-router-dom";
+import { Router, Switch, Route, withRouter } from "react-router-dom";
+import createHistory from "history/createBrowserHistory";
 import Loadable from "react-loadable";
 
 import AppHeader from "./AppHeader";
 import { LoadingComponent } from "./utils";
 
 const BASENAME = process.env.basename;
+const history = createHistory({ basename: BASENAME });
 
 class ScrollToTop extends Component {
     componentDidUpdate (prevProps) {
@@ -64,7 +66,7 @@ class App extends Component {
 
     render () {
         return (
-            <Router basename={BASENAME}>
+            <Router basename={BASENAME} history={history}>
                 <ScrollToTopComponent>
                     <AppHeader />
                     <Switch>

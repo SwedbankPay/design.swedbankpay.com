@@ -3,7 +3,7 @@ if (($Env:APPVEYOR_REPO_TAG -eq "true") -and ($Env:GitVersion_BranchName -eq "ma
     $Env:changelog = [IO.File]::ReadAllText("C:\projects\design-payex-com\CHANGELOG.md")
 
     # Push artifact to appveyor
-    Push-AppveyorArtifact "dist/release/PayEx.DesignGuide.v$($Env:GitVersion_FullSemVer).zip"
+    Push-AppveyorArtifact "dist/$Env:basename/release/PayEx.DesignGuide.v$($Env:GitVersion_FullSemVer).zip"
 }
 
 # Avoid deploying PR's as they do not have access to secrets
