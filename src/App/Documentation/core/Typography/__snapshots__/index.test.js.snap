@@ -19,11 +19,9 @@ exports[`Core: Typography Abbreviations renders 1`] = `
   </p>
   <p>
     Add 
-    <code
-      className="token property"
-    >
-      .initialism
-    </code>
+    <Property
+      value=".initialism"
+    />
      to an abbreviation for a slightly smaller font-size.
   </p>
   <ComponentPreview
@@ -76,11 +74,9 @@ exports[`Core: Typography Blockquotes renders 1`] = `
       &lt;blockquote&gt;
     </PrismCode>
      or 
-    <code
-      className="token property"
-    >
-      .blockquote
-    </code>
+    <Property
+      value=".blockquote"
+    />
      around any HTML as the quote.
   </p>
   <ComponentPreview
@@ -257,17 +253,13 @@ exports[`Core: Typography Headings renders 1`] = `
   </ComponentPreview>
   <p>
     The classes 
-    <code
-      className="token property"
-    >
-      .h1
-    </code>
+    <Property
+      value=".h1"
+    />
      through 
-    <code
-      className="token property"
-    >
-      .h6
-    </code>
+    <Property
+      value=".h6"
+    />
      are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.
   </p>
   <ComponentPreview
@@ -379,17 +371,13 @@ exports[`Core: Typography Inline renders 1`] = `
   </ComponentPreview>
   <p>
     The 
-    <code
-      className="token property"
-    >
-      .mark
-    </code>
+    <Property
+      value=".mark"
+    />
      and 
-    <code
-      className="token property"
-    >
-      .small
-    </code>
+    <Property
+      value=".small"
+    />
      classes are also available to apply the same styles as 
     <PrismCode
       className="language-html"
@@ -449,11 +437,9 @@ exports[`Core: Typography Lead renders 1`] = `
   </h2>
   <p>
     Make a paragraph stand out by using 
-    <code
-      className="token property"
-    >
-      .lead
-    </code>
+    <Property
+      value=".lead"
+    />
     .
   </p>
   <ComponentPreview

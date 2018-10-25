@@ -9,11 +9,9 @@ exports[`GettingStarted: Contributing Add Component To Routes renders 1`] = `
   </h2>
   <p>
     In 
-    <code
-      className="token property"
-    >
-      ./src/App/routes/docs.js
-    </code>
+    <Property
+      value="./src/App/routes/docs.js"
+    />
      under the components object add the following:
   </p>
   <ComponentPreview
@@ -63,19 +61,15 @@ exports[`GettingStarted: Contributing Add Component To Routes renders 1`] = `
   </ComponentPreview>
   <p>
     You will now be able to go to the route you provided to preview your component. Run 
-    <code
-      className="token property"
-    >
-      npm start
-    </code>
+    <Property
+      value="npm start"
+    />
      if you haven
     '
     t already done so, and navigate to 
-    <code
-      className="token property"
-    >
-      localhost:3000/docs/components/my-example-documentation-component
-    </code>
+    <Property
+      value="localhost:3000/docs/components/my-example-documentation-component"
+    />
      to see your component in action.
   </p>
 </Fragment>
@@ -92,17 +86,13 @@ exports[`GettingStarted: Contributing Adding JavaScript renders 3`] = `
   </h3>
   <p>
     Create a new file under 
-    <code
-      className="token property"
-    >
-      ./src/px-script/[MyExampleComponent]/
-    </code>
+    <Property
+      value="./src/px-script/[MyExampleComponent]/"
+    />
      for your component, name it 
-    <code
-      className="token property"
-    >
-      index.js
-    </code>
+    <Property
+      value="index.js"
+    />
     :
   </p>
   <ComponentPreview
@@ -127,11 +117,9 @@ exports[`GettingStarted: Contributing Adding JavaScript renders 3`] = `
   </ComponentPreview>
   <p>
     Note: All essential functionality for your component needs to be called within the 
-    <code
-      className="token property"
-    >
-      init
-    </code>
+    <Property
+      value="init"
+    />
      method.
   </p>
 </div>
@@ -144,11 +132,9 @@ exports[`GettingStarted: Contributing Adding JavaScript renders 4`] = `
   </h3>
   <p>
     Open 
-    <code
-      className="token property"
-    >
-      ./src/px-script/index.js
-    </code>
+    <Property
+      value="./src/px-script/index.js"
+    />
      and add your component:
   </p>
   <ComponentPreview
@@ -187,30 +173,24 @@ exports[`GettingStarted: Contributing Adding JavaScript renders 5`] = `
   </h2>
   <p>
     Considering the documentation is built in react your documentation component will load after 
-    <code
-      className="token property"
-    >
-      px-script
-    </code>
+    <Property
+      value="px-script"
+    />
      runs it
     '
     s 
-    <code
-      className="token property"
-    >
-      initAll
-    </code>
+    <Property
+      value="initAll"
+    />
      method, you will need to run your component
     '
     s init method when the component actually renders.
   </p>
   <p>
     You can do this by slightly modifying the 
-    <code
-      className="token property"
-    >
-      MyExampleDocumentationComponent
-    </code>
+    <Property
+      value="MyExampleDocumentationComponent"
+    />
     :
   </p>
   <ComponentPreview
@@ -281,11 +261,9 @@ exports[`GettingStarted: Contributing Adding JavaScript renders 6`] = `
   </h2>
   <p>
     If your component needs javascript to run, you will need to add the javascript to the 
-    <code
-      className="token property"
-    >
-      px-script
-    </code>
+    <Property
+      value="px-script"
+    />
   </p>
   <CreateAScriptFile />
   <AddScriptToPX />
@@ -304,17 +282,13 @@ exports[`GettingStarted: Contributing Adding Styles renders 3`] = `
   </h3>
   <p>
     Import it in the appropriate root-file (
-    <code
-      className="token property"
-    >
-      px.less
-    </code>
+    <Property
+      value="px.less"
+    />
      for the core styles, under 
-    <code
-      className="token property"
-    >
-      /themes
-    </code>
+    <Property
+      value="/themes"
+    />
      if the component is going to be part of a specific theme).
   </p>
   <p>
@@ -351,11 +325,9 @@ exports[`GettingStarted: Contributing Adding Styles renders 4`] = `
   </h3>
   <p>
     To add custom variables to your component modify 
-    <code
-      className="token property"
-    >
-      ./src/less/_variables.less
-    </code>
+    <Property
+      value="./src/less/_variables.less"
+    />
     , and add a section for your component. Add it alphabetically and update the table of contents.
   </p>
   <p>
@@ -398,55 +370,41 @@ exports[`GettingStarted: Contributing Adding Styles renders 7`] = `
   </h2>
   <p>
     To add styling for your component create a new file in 
-    <code
-      className="token property"
-    >
-      ./src/less/components/
-    </code>
+    <Property
+      value="./src/less/components/"
+    />
     , name it 
-    <code
-      className="token property"
-    >
-      my-example-component.less
-    </code>
+    <Property
+      value="my-example-component.less"
+    />
     .
   </p>
   <ImportingTheStyles />
   <CreatingVariables />
   <p>
     Your the styles for 
-    <code
-      className="token property"
-    >
-      MyExampleComponent
-    </code>
+    <Property
+      value="MyExampleComponent"
+    />
      should now be included properly, and you should see changes immediatly while running dev.
   </p>
   <p>
     When writing styles for your component, try to use 
-    <code
-      className="token property"
-    >
-      rem
-    </code>
+    <Property
+      value="rem"
+    />
      (
-    <code
-      className="token property"
-    >
-      1rem
-    </code>
+    <Property
+      value="1rem"
+    />
      = ~
-    <code
-      className="token property"
-    >
-      16px
-    </code>
+    <Property
+      value="16px"
+    />
     ) and the predefined variables (only if it makes sense of course) as much as possible. And follow the linting rules set by 
-    <code
-      className="token property"
-    >
-      ./.stylelintrc
-    </code>
+    <Property
+      value="./.stylelintrc"
+    />
     .
   </p>
 </div>
@@ -478,17 +436,13 @@ exports[`GettingStarted: Contributing Create A Documentation Page renders 1`] = 
   </h2>
   <p>
     Create a new file under 
-    <code
-      className="token property"
-    >
-      ./src/App/Documentation/Components/[MyExampleDocumentationComponent]/
-    </code>
+    <Property
+      value="./src/App/Documentation/Components/[MyExampleDocumentationComponent]/"
+    />
      for your component, call it 
-    <code
-      className="token property"
-    >
-      index.js
-    </code>
+    <Property
+      value="index.js"
+    />
     :
   </p>
   <ComponentPreview
@@ -545,29 +499,21 @@ exports[`GettingStarted: Contributing Create A Documentation Page renders 1`] = 
   </ComponentPreview>
   <p>
     Use the custom 
-    <code
-      className="token property"
-    >
-      ComponentPreview
-    </code>
+    <Property
+      value="ComponentPreview"
+    />
      component to preview your component. It has three props, 
-    <code
-      className="token property"
-    >
-      language
-    </code>
+    <Property
+      value="language"
+    />
     , 
-    <code
-      className="token property"
-    >
-      showCasePanel
-    </code>
+    <Property
+      value="showCasePanel"
+    />
      and 
-    <code
-      className="token property"
-    >
-      codeFigure
-    </code>
+    <Property
+      value="codeFigure"
+    />
     , for this example we are goin to be using all three.
   </p>
   <p>
@@ -599,17 +545,13 @@ exports[`GettingStarted: Contributing Creating Your Component renders 1`] = `
   </h2>
   <p>
     Create a new file under 
-    <code
-      className="token property"
-    >
-      ./src/App/components/[MyExampleComponent]/
-    </code>
+    <Property
+      value="./src/App/components/[MyExampleComponent]/"
+    />
      for your component, name it 
-    <code
-      className="token property"
-    >
-      index.js
-    </code>
+    <Property
+      value="index.js"
+    />
     :
   </p>
   <ComponentPreview

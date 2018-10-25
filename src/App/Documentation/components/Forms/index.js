@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocToc, Attribute } from "#";
+import { ComponentPreview, DocToc, Attribute, Property } from "#";
 import { rangeslider, validation } from "$/px-script";
 import InputGroup from "@/InputGroup";
 import Button from "@/Button";
@@ -181,7 +181,7 @@ const UsageWithFieldsets = () => (
             </form>
         </ComponentPreview>
         <h3>Disable a fieldset</h3>
-        <p>Disable entire fieldsets with <span className="token attr-name">disabled</span> attribute...</p>
+        <p>Disable entire fieldsets with <Attribute name="disabled" /> attribute...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <form>
                 <fieldset disabled>
@@ -293,9 +293,9 @@ const RangeSlider = () => (
     <>
         <h2 id="rangeslider">Rangeslider</h2>
         <p>Asides from the default behavior of a range input, the Rangeslider{"'"}s colors and label positioning can be customized.</p>
-        <p>Currently there are three different supported colors for the slider:  <code className="token property">rangeslider-brand</code>, <code className="token property">rangeslider-default</code> and <code className="token property">rangeslider-neutral</code>.</p>
+        <p>Currently there are three different supported colors for the slider: <Property value=".rangeslider-brand" />, <Property value=".rangeslider-default" /> and <Property value=".rangeslider-neutral" />.</p>
 
-        <p>The Rangeslider currently supports two positions: <code className="token property">label-right</code> and <code className="token property">label-top</code>. If no position is given, <code className="token property">right</code> is defaulted.</p>
+        <p>The Rangeslider currently supports two positions: <Property value=".label-right" /> and <Property value=".label-top" />. If no position is given, <Property value="right" /> is defaulted.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <Rangeslider min={0} max={200} step={1} value={100} valueLabel valueLabelPrefix="$" valueLabelPostfix="%" />
         </ComponentPreview>

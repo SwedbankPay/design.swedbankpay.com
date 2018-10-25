@@ -9,12 +9,10 @@ exports[`Utilities: Colors BackgroundColors renders 1`] = `
   </h2>
   <p>
     To alter the background-color of an element, add the class 
-    <code
-      className="token property"
-    >
-      background-
-    </code>
-     appended with the desired color to get the desired background-color.
+    <Property
+      value="background-{name}"
+    />
+    .
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -91,12 +89,10 @@ exports[`Utilities: Colors TextColors renders 1`] = `
   </h2>
   <p>
     To use a color simply prepend 
-    <code
-      className="token property"
-    >
-      color-
-    </code>
-     to the desired color and add it to the element class attribute.
+    <Property
+      value="color-{name}"
+    />
+    .
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -136,11 +132,9 @@ exports[`Utilities: Colors TextColors renders 1`] = `
   </ComponentPreview>
   <h3>
     With 
-    <code
-      className="token property"
-    >
-      .text-muted
-    </code>
+    <Property
+      value=".text-muted"
+    />
   </h3>
   <p>
     To get a muted effect on the color you are using, append a 
@@ -151,11 +145,9 @@ exports[`Utilities: Colors TextColors renders 1`] = `
       &lt;span&gt;
     </PrismCode>
     -element with the class 
-    <code
-      className="token property"
-    >
-      .text-muted
-    </code>
+    <Property
+      value=".text-muted"
+    />
      to the desired element.
   </p>
   <ComponentPreview

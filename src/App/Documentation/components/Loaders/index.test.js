@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Loaders, { BasicUsage, Sizes, MutedLoader, StaticHtml, UsageWithJavascript, LoadersText } from "./index";
+import Loaders, { BasicUsage, Sizes, MutedLoader, StaticHtml, LoadersText } from "./index";
 
 describe("Documentation: Loaders", () => {
     it("is defined", () => {
@@ -45,18 +45,6 @@ describe("Documentation: Loaders", () => {
 
         it("renders", () => {
             const wrapper = shallow(<MutedLoader />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("Usage With Javascript", () => {
-        it("is defined", () => {
-            expect(UsageWithJavascript).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<UsageWithJavascript />);
 
             expect(wrapper).toMatchSnapshot();
         });

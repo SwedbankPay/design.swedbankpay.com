@@ -1,0 +1,62 @@
+.radio {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+        margin-bottom: @base-margin-sm;
+    }
+
+    label {
+        position: relative;
+        align-items: center;
+        margin: 0;
+        padding-left: @checkbox-label-padding;
+    }
+
+    input[type="radio"] {
+        margin-right: @base-margin;
+        opacity: 0;
+
+        + label:before {
+            content: "";
+            position: absolute;
+            visibility: visible;
+            left: -28px;
+            height: @checkbox-height;
+            width: @checkbox-width;
+            background-color: @white;
+            border: 1px solid @checkbox-bg;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        &:checked + label:before {
+            background-color: @checkbox-bg;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNWWFMmUAAABMSURBVChTjY8xCgAgDMT6GEf/7uDTHBzrBe0iFjwIlDOUau4ORTQxD8x0Fo9D3KErCNhZGgIrs8wvoe/5mY5QRXZkRQiJTfFNZnVuC4bS8W24IBKtAAAAAElFTkSuQmCC);
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+        }
+
+        &:focus + label:before {
+            .tab-focus();
+        }
+
+        &[disabled] {
+            + label:before {
+                background-color: @input-bg-disabled;
+                border-color: @input-checked-bg-disabled;
+            }
+
+            &:checked + label:before {
+                background-color: @input-checked-bg-disabled;
+            }
+
+            + label,
+            &:after,
+            &:checked + label:before {
+                cursor: not-allowed;
+            }
+        }
+    }
+}

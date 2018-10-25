@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc } from "#";
+import { ComponentPreview, DocToc, Property } from "#";
 import PaginationComponent from "@/Pagination";
 
 const paginationItems = [
@@ -16,7 +16,7 @@ const paginationItems = [
 const DefaultPagination = () => (
         <>
             <h2 id="default-pagination">Default pagination</h2>
-            <p>Default pagination... <code className="token property">.pagination</code>...</p>
+            <p>Default pagination... <Property value=".pagination" />...</p>
             <ComponentPreview language="html" showCasePanel codeFigure>
                 <PaginationComponent items={paginationItems} arrows farArrows />
             </ComponentPreview>
@@ -26,7 +26,7 @@ const DefaultPagination = () => (
 const PaginationBullets = () => (
         <>
             <h2 id="pagination-bullets">Pagination bullets</h2>
-            <p>Pagination bullets... <code className="token property">.pagination-bullets</code>...</p>
+            <p>Pagination bullets... <Property value=".pagination-bullets" />...</p>
             <ComponentPreview language="html" showCasePanel codeFigure>
                 <PaginationComponent type="bullets" items={paginationItems} arrows farArrows />
             </ComponentPreview>
@@ -36,7 +36,7 @@ const PaginationBullets = () => (
 const SimplePagination = () => (
     <>
         <h2 id="simple-pagination">Simple pagination</h2>
-        <p>Simple pagination... <code className="token property">.pagination</code>...</p>
+        <p>Simple pagination... <Property value=".pagination" />...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <PaginationComponent text="16 of 256" arrows farArrows />
         </ComponentPreview>

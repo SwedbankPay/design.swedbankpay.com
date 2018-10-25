@@ -44,11 +44,9 @@ exports[`Documentation: Panel PanelDark renders 1`] = `
   </h2>
   <p>
     Dark body with 
-    <code
-      className="token property"
-    >
-      .panel-dark
-    </code>
+    <Property
+      value=".panel-dark"
+    />
     ...
   </p>
   <ComponentPreview
@@ -92,17 +90,13 @@ exports[`Documentation: Panel PanelHeaders renders 1`] = `
   </h2>
   <p>
     Two types of headers... 
-    <code
-      className="token property"
-    >
-      .panel-default
-    </code>
+    <Property
+      value=".panel-default"
+    />
      and 
-    <code
-      className="token property"
-    >
-      .panel-brand
-    </code>
+    <Property
+      value=".panel-brand"
+    />
     ...
   </p>
   <ComponentPreview
@@ -133,11 +127,9 @@ exports[`Documentation: Panel PanelMuted renders 1`] = `
   </h2>
   <p>
     Muted panel with 
-    <code
-      className="token property"
-    >
-      .panel-muted
-    </code>
+    <Property
+      value=".panel-muted"
+    />
     ...
   </p>
   <ComponentPreview

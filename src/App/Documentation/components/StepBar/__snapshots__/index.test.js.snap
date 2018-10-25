@@ -9,11 +9,9 @@ exports[`Documentation: StepBar Basic StepBar renders 1`] = `
   </h2>
   <p>
     Add class 
-    <code
-      className="token property"
-    >
-      .step-bar
-    </code>
+    <Property
+      value=".step-bar"
+    />
      to an 
     <PrismCode
       className="language-html"
