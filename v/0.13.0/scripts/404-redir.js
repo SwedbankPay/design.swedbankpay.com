@@ -1,0 +1,2 @@
+var payex=(window.webpackJsonppayex=window.webpackJsonppayex||[]).push([[6],{420:function(n,o,p){p(56),n.exports=p(421)},421:function(n,o){var p="https://design.payex.com".concat("/v/0.13.0/","/404");window.location=p}},[[420,65,5]]]);
+//# sourceMappingURL=404-redir.js.map?29c4421b1cf6575c6986
