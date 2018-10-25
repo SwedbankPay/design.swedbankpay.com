@@ -2,6 +2,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const appRoutes = require("./tools/generate-routes-copy-array");
+const levelsToRoot = require("./tools/levels-to-root");
 const autoprefixer = require("autoprefixer");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const lessListPlugin = require("less-plugin-lists");
@@ -190,7 +191,12 @@ module.exports = (env, argv) => {
                 template: "./src/index.html",
                 hash: true,
                 title: "PayEx DesignGuide",
-                excludeChunks: ["base-redir", "runtime~base-redir"]
+                excludeChunks: [
+                    "base-redir",
+                    "runtime~base-redir",
+                    "404-redir",
+                    "runtime~404-redir"
+                ]
             }),
             new AppManifestWebpackPlugin({
                 logo: "./src/img/favicon.png",
@@ -295,22 +301,25 @@ module.exports = (env, argv) => {
     }
 
     if (isRelease) {
+        const rootPath = levelsToRoot(basename);
+
         config.entry["base-redir"] = "./tools/base-redir.js";
+        config.entry["404-redir"] = "./tools/404-redir.js";
 
         config.plugins.push(
             new HtmlWebpackPlugin({
-                filename: "../index.html",
+                filename: `${rootPath}index.html`,
                 template: "./src/index.html",
                 hash: true,
                 title: "PayEx DesignGuide",
                 chunks: ["base-redir", "runtime~base-redir"]
             }),
             new HtmlWebpackPlugin({
-                filename: "../404.html",
+                filename: `${rootPath}404.html`,
                 template: "./src/index.html",
                 hash: true,
                 title: "PayEx DesignGuide",
-                excludeChunks: ["base-redir", "runtime~base-redir"]
+                chunks: ["404-redir", "runtime~404-redir"]
             }),
             new SentryCliPlugin({
                 release: version,
