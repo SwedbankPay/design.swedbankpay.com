@@ -190,13 +190,7 @@ module.exports = (env, argv) => {
             new HtmlWebpackPlugin({
                 template: "./src/index.html",
                 hash: true,
-                title: "PayEx DesignGuide",
-                excludeChunks: [
-                    "base-redir",
-                    "runtime~base-redir",
-                    "404-redir",
-                    "runtime~404-redir"
-                ]
+                title: "PayEx DesignGuide"
             }),
             new AppManifestWebpackPlugin({
                 logo: "./src/img/favicon.png",
@@ -303,29 +297,28 @@ module.exports = (env, argv) => {
     if (isRelease) {
         const rootPath = levelsToRoot(basename);
 
-        config.entry["base-redir"] = "./tools/base-redir.js";
-        config.entry["404-redir"] = "./tools/404-redir.js";
-
         config.plugins.push(
             new HtmlWebpackPlugin({
                 filename: `${rootPath}index.html`,
-                template: "./src/index.html",
+                template: "./build/rootindex.html",
                 hash: true,
                 title: "PayEx DesignGuide",
-                chunks: ["base-redir", "runtime~base-redir"]
+                chunks: ["px"],
+                basename
             }),
             new HtmlWebpackPlugin({
                 filename: `${rootPath}404.html`,
-                template: "./src/index.html",
+                template: "./build/root404.html",
                 hash: true,
+                chunks: ["px"],
                 title: "PayEx DesignGuide",
-                chunks: ["404-redir", "runtime~404-redir"]
+                basename
             }),
-            new SentryCliPlugin({
-                release: version,
-                include: ".",
-                ignore: ["node_modules", "webpack.config.js"]
-            })
+            // new SentryCliPlugin({
+            //     release: version,
+            //     include: ".",
+            //     ignore: ["node_modules", "webpack.config.js"]
+            // })
         );
     }
 
