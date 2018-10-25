@@ -1,7 +1,7 @@
 /* stylelint-disable declaration-no-important */
 
 .spacing-rules(@infix) {
-    @properties: margin m, padding p;
+    @properties: ~"margin" ~"m", ~"padding" ~"p";
 
     .for-each(@property in @properties) {
         @prop: extract(@property, 1);
@@ -97,7 +97,7 @@
 .spacing-rules(~"");
 
 /*
- * Creating classes for breakpoint abbrebiations like ".mx-md-auto"
+ * Creating classes for breakpoint abbreviations like ".mx-md-auto"
  */
 
 .for-each(@breakpoint in @grid-breakpoints) {

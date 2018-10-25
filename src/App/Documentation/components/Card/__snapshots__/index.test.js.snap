@@ -23,39 +23,27 @@ exports[`Documentation: Card Overview renders 1`] = `
   </h2>
   <p>
     Overview... 
-    <code
-      className="token property"
-    >
-      .card
-    </code>
-    ...
+    <Property
+      value=".card"
+    />
   </p>
   <p>
     ... 
-    <code
-      className="token property"
-    >
-      .card-default
-    </code>
-    ...
+    <Property
+      value=".card-default"
+    />
   </p>
   <p>
     ... 
-    <code
-      className="token property"
-    >
-      .card-brand
-    </code>
-    ...
+    <Property
+      value=".card-brand"
+    />
   </p>
   <p>
     ... 
-    <code
-      className="token property"
-    >
-      .card-light
-    </code>
-    ...
+    <Property
+      value=".card-light"
+    />
   </p>
   <ComponentPreview
     codeFigure={true}

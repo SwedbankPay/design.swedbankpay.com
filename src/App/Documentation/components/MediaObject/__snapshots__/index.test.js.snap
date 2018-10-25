@@ -24,11 +24,9 @@ exports[`Documentation: MediaObject MediaPosition renders 1`] = `
   </h2>
   <p>
     Use the 
-    <code
-      className="token property"
-    >
-      .media-right
-    </code>
+    <Property
+      value=".media-right"
+    />
      class to align the media content to the right.
   </p>
   <ComponentPreview
@@ -61,11 +59,9 @@ exports[`Documentation: MediaObject Overview renders 1`] = `
   </h2>
   <p>
     Use the 
-    <code
-      className="token property"
-    >
-      .media
-    </code>
+    <Property
+      value=".media"
+    />
      class on an object to style it as a small container that feature a left- or right-aligned image/icon alongside textual content.
   </p>
   <ComponentPreview

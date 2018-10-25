@@ -9,11 +9,9 @@ exports[`Documentation: Breadcrumb Basic BreadCrumb renders 1`] = `
   </h2>
   <p>
     Add class 
-    <code
-      className="token property"
-    >
-      .breadcrumb
-    </code>
+    <Property
+      value=".breadcrumb"
+    />
      to a containing 
     <PrismCode
       className="language-html"

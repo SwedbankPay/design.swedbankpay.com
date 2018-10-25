@@ -6,7 +6,7 @@ import { ComponentPreview, DocToc } from "#";
 const Usage = () => (
     <>
         <h2 id="usage">Usage</h2>
-        <p>To use an icon, provide the following markup: <PrismCode className="language-html">{"<i class=\"material-icons\">[ICON NAME]</i>"}</PrismCode>.</p>
+        <p>To use an icon, provide the following markup: <PrismCode className="language-html">{"<i class=\"material-icons\">{icon_name}</i>"}</PrismCode>.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <i className="material-icons">android</i>{"\n"}
             <i className="material-icons">contact_support</i>{"\n"}

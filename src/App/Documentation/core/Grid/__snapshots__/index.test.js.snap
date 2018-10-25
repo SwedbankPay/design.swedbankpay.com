@@ -219,11 +219,9 @@ exports[`Core: Grid AutoLayoutColumns renders 1`] = `
   </h2>
   <p>
     Utilize breakpoint-specific column classes for easy column sizing without an explicit numbered class like 
-    <code
-      className="token property"
-    >
-      .col-sm-6
-    </code>
+    <Property
+      value=".col-sm-6"
+    />
     .
   </p>
   <ComponentPreview
@@ -352,11 +350,9 @@ exports[`Core: Grid HowItWorks renders 1`] = `
   </ComponentPreview>
   <p>
     The above example creates three equal-width columns on small, medium, large, extra large, and extra extra large devices using our predefined grid classes. Those columns are centered in the page with the parent 
-    <code
-      className="token property"
-    >
-      .container
-    </code>
+    <Property
+      value=".container"
+    />
     .
   </p>
 </Fragment>

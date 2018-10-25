@@ -13,14 +13,14 @@ module.exports = [
                 componentPath: "getting-started/Introduction"
             },
             {
-                title: "Contributing",
-                path: "/docs/getting-started/contributing",
-                componentPath: "getting-started/Contributing"
-            },
-            {
                 title: "Browser Support",
                 path: "/docs/getting-started/browser-support",
                 componentPath: "getting-started/BrowserSupport"
+            },
+            {
+                title: "Contributing",
+                path: "/docs/getting-started/contributing",
+                componentPath: "getting-started/Contributing"
             }
         ]
     },
@@ -145,6 +145,11 @@ module.exports = [
                 componentPath: "components/MediaObject"
             },
             {
+                title: "Nav (experimental)",
+                path: "/docs/components/nav",
+                componentPath: "components/Nav"
+            },
+            {
                 title: "Pagination",
                 path: "/docs/components/pagination",
                 componentPath: "components/Pagination"
@@ -153,11 +158,6 @@ module.exports = [
                 title: "Panel",
                 path: "/docs/components/panel",
                 componentPath: "components/Panel"
-            },
-            {
-                title: "Progress Tracker (deprecated)",
-                path: "/docs/components/progress-tracker",
-                componentPath: "components/ProgressTracker"
             },
             {
                 title: "Sheet",
@@ -221,9 +221,24 @@ module.exports = [
                 componentPath: "utilities/Display"
             },
             {
+                title: "Flex",
+                path: "/docs/utilities/flex",
+                componentPath: "utilities/Flex"
+            },
+            {
+                title: "Sizing",
+                path: "/docs/utilities/sizing",
+                componentPath: "utilities/Sizing"
+            },
+            {
                 title: "Spacing",
                 path: "/docs/utilities/spacing",
                 componentPath: "utilities/Spacing"
+            },
+            {
+                title: "Text",
+                path: "/docs/utilities/text",
+                componentPath: "utilities/Text"
             },
             {
                 title: "Visibility",

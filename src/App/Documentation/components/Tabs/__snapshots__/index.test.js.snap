@@ -9,17 +9,13 @@ exports[`Components: Tabs BasicUsage renders 1`] = `
   </h2>
   <p>
     Add class 
-    <code
-      className="token property"
-    >
-      .tabs
-    </code>
+    <Property
+      value=".tabs"
+    />
      with a 
-    <code
-      className="token property"
-    >
-      .tabs-horizontal-desired_size
-    </code>
+    <Property
+      value=".tabs-horizontal-desired_size"
+    />
      to a div containing an arrow icon along with 
     <PrismCode
       className="language-html"
@@ -35,11 +31,9 @@ exports[`Components: Tabs BasicUsage renders 1`] = `
       &lt;li&gt;
     </PrismCode>
      as needed. The 
-    <code
-      className="token property"
-    >
-      .tabs-horizontal-desired_size
-    </code>
+    <Property
+      value=".tabs-horizontal-desired_size"
+    />
      class determines when your tabs will switch from horizontal to collapsed. The available sizes can be found in our 
     <Link
       replace={false}
@@ -80,11 +74,9 @@ exports[`Components: Tabs Collapsed renders 1`] = `
   </h2>
   <p>
     If no 
-    <code
-      className="token property"
-    >
-      .tabs-horizontal-desired_size
-    </code>
+    <Property
+      value=".tabs-horizontal-desired_size"
+    />
      is provided then the tabs will always be in collapsed mode.
   </p>
   <ComponentPreview

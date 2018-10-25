@@ -35,11 +35,9 @@ exports[`Components: Toast Options renders 1`] = `
           String
         </td>
         <td>
-          <code
-            className="token attr-value"
-          >
-            ""
-          </code>
+          <Attribute
+            value="\\"\\""
+          />
         </td>
         <td>
           The HTML content of the Toast.
@@ -53,37 +51,27 @@ exports[`Components: Toast Options renders 1`] = `
           String
         </td>
         <td>
-          <code
-            className="token attr-value"
-          >
-            ""
-          </code>
+          <Attribute
+            value="\\"\\""
+          />
         </td>
         <td>
           Premade alert types; 
-          <code
-            className="token attr-value"
-          >
-            success
-          </code>
+          <Attribute
+            value="success"
+          />
           , 
-          <code
-            className="token attr-value"
-          >
-            neutral
-          </code>
+          <Attribute
+            value="neutral"
+          />
           , 
-          <code
-            className="token attr-value"
-          >
-            warning
-          </code>
+          <Attribute
+            value="warning"
+          />
            and 
-          <code
-            className="token attr-value"
-          >
-            danger
-          </code>
+          <Attribute
+            value="danger"
+          />
            are available.
         </td>
       </tr>
@@ -95,11 +83,9 @@ exports[`Components: Toast Options renders 1`] = `
           Boolean
         </td>
         <td>
-          <code
-            className="token attr-value"
-          >
-            true
-          </code>
+          <Attribute
+            value="true"
+          />
         </td>
         <td>
           Wether or not the alert should be dismissable by the user (close button).
@@ -113,11 +99,9 @@ exports[`Components: Toast Options renders 1`] = `
           String
         </td>
         <td>
-          <code
-            className="token attr-value"
-          >
-            ""
-          </code>
+          <Attribute
+            value="\\"\\""
+          />
         </td>
         <td>
           Custom icon for the toast. See 
@@ -138,11 +122,9 @@ exports[`Components: Toast Options renders 1`] = `
           Number
         </td>
         <td>
-          <code
-            className="token attr-value"
-          >
-            4000
-          </code>
+          <Attribute
+            value="4000"
+          />
         </td>
         <td>
           Length in ms the Toast stays before dismissal.
@@ -156,11 +138,9 @@ exports[`Components: Toast Options renders 1`] = `
           Array of strings
         </td>
         <td>
-          <code
-            className="token attr-value"
-          >
-            []
-          </code>
+          <Attribute
+            value="[]"
+          />
         </td>
         <td>
           Classes to be added to the toast element.
@@ -174,11 +154,9 @@ exports[`Components: Toast Options renders 1`] = `
           Function
         </td>
         <td>
-          <code
-            className="token attr-value"
-          >
-            null
-          </code>
+          <Attribute
+            value="null"
+          />
         </td>
         <td>
           Callback function called when toast is dismissed.
@@ -236,29 +214,21 @@ exports[`Components: Toast PremadeToasts renders 1`] = `
   </h2>
   <p>
     There are four premade toast styles other than the default one; 
-    <span
-      className="token attr-value"
-    >
-      neutral
-    </span>
+    <Attribute
+      value="neutral"
+    />
     , 
-    <span
-      className="token attr-value"
-    >
-      success
-    </span>
+    <Attribute
+      value="success"
+    />
     , 
-    <span
-      className="token attr-value"
-    >
-      warning
-    </span>
+    <Attribute
+      value="warning"
+    />
      and 
-    <span
-      className="token attr-value"
-    >
-      danger
-    </span>
+    <Attribute
+      value="danger"
+    />
     . Apply the desired one to the options object and be amazed!
   </p>
   <ComponentPreview

@@ -9,11 +9,9 @@ exports[`Documentation: Buttons Active State renders 1`] = `
   </h2>
   <p>
     Active state with 
-    <code
-      className="token property"
-    >
-      .active
-    </code>
+    <Property
+      value=".active"
+    />
     ...
   </p>
   <ComponentPreview
@@ -67,11 +65,9 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
       name="button-loader"
     />
      to add the required markup for the loader component. Add class 
-    <code
-      className="token property"
-    >
-      .loading
-    </code>
+    <Property
+      value=".loading"
+    />
      to display the loader.
   </p>
   <ComponentPreview
@@ -348,6 +344,9 @@ exports[`Documentation: Buttons Outline Buttons renders 1`] = `
   </h2>
   <p>
     Several button styles etc...
+    <Property
+      value=".btn-outline-{variant}"
+    />
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -401,11 +400,9 @@ exports[`Documentation: Buttons Sizes renders 1`] = `
   </h3>
   <p>
     ...
-    <code
-      className="token property"
-    >
-      .btn-lg
-    </code>
+    <Property
+      value=".btn-lg"
+    />
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -439,11 +436,9 @@ exports[`Documentation: Buttons Sizes renders 1`] = `
   </h3>
   <p>
     ...
-    <code
-      className="token property"
-    >
-      .btn-sm
-    </code>
+    <Property
+      value=".btn-sm"
+    />
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -477,11 +472,9 @@ exports[`Documentation: Buttons Sizes renders 1`] = `
   </h3>
   <p>
     ...
-    <code
-      className="token property"
-    >
-      .btn-xs
-    </code>
+    <Property
+      value=".btn-xs"
+    />
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -515,11 +508,9 @@ exports[`Documentation: Buttons Sizes renders 1`] = `
   </h3>
   <p>
     ...
-    <code
-      className="token property"
-    >
-      .btn-block
-    </code>
+    <Property
+      value=".btn-block"
+    />
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -599,199 +590,6 @@ exports[`Documentation: Buttons Usage With Icons renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Buttons Usage With Javascript renders 1`] = `
-<Fragment>
-  <h2
-    id="usage-with-javascript"
-  >
-    Usage with javascript
-  </h2>
-  <p>
-    To interact with the alert-component with javascript...
-  </p>
-  <h3>
-    Show loader
-  </h3>
-  <ComponentPreview
-    codeFigure={true}
-    language="javascript"
-  >
-    px.button.loader.show();
-    
-
-    // OR
-    
-
-    px.button.loader.show(id);
-  </ComponentPreview>
-  <h3>
-    Hide loader
-  </h3>
-  <ComponentPreview
-    codeFigure={true}
-    language="javascript"
-  >
-    px.button.loader.hide();
-    
-
-    // OR
-    
-
-    px.button.loader.hide(id);
-  </ComponentPreview>
-  <h3>
-    Methods
-  </h3>
-  <table
-    className="table table-striped"
-  >
-    <thead>
-      <tr>
-        <th>
-          Method
-        </th>
-        <th>
-          Description
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <PxScript
-            component="button"
-            func="init"
-          />
-        </td>
-        <td>
-          Renders the HTML for the loader component for buttons that has the attribute 
-          <Attribute
-            data={true}
-            name="loader"
-          />
-          . This is done automatically when the 
-          <code
-            className="token property"
-          >
-            px-script.js
-          </code>
-           loads, but might have to be used if you are not rendering your buttons right away. For instance, in react, you might want to call this function within the 
-          <PrismCode
-            className="language-javascript"
-            component="code"
-          >
-            componentDidMount()
-          </PrismCode>
-           method.
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <PxScript
-            component="button"
-            func="show"
-            subComponents={
-              Array [
-                "loader",
-              ]
-            }
-          />
-        </td>
-        <td>
-          Gives all rendered buttons the class 
-          <code
-            className="token property"
-          >
-            .loading
-          </code>
-          , displaying the loader component within the buttons (
-          <b>
-            if present
-          </b>
-          ).
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <PxScript
-            component="button"
-            func="show"
-            params={
-              Array [
-                "id",
-              ]
-            }
-            subComponents={
-              Array [
-                "loader",
-              ]
-            }
-          />
-        </td>
-        <td>
-          Gives the specified button the class 
-          <code
-            className="token property"
-          >
-            .loading
-          </code>
-          . If no alert with the specified id is rendered to the DOM, the method does nothing.
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <PxScript
-            component="button"
-            func="hide"
-            subComponents={
-              Array [
-                "loader",
-              ]
-            }
-          />
-        </td>
-        <td>
-          Removes the class 
-          <code
-            className="token property"
-          >
-            .loading
-          </code>
-           from all rendered buttons, hiding the loader component.
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <PxScript
-            component="button"
-            func="hide"
-            params={
-              Array [
-                "id",
-              ]
-            }
-            subComponents={
-              Array [
-                "loader",
-              ]
-            }
-          />
-        </td>
-        <td>
-          Removes the class 
-          <code
-            className="token property"
-          >
-            .loading
-          </code>
-           from the button specified by id, hiding the loader component within the button. If no button with the specified id is rendered to the DOM, the method does nothing.
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</Fragment>
-`;
-
 exports[`Documentation: Buttons Usage With Other Tags renders 1`] = `
 <Fragment>
   <h2
@@ -801,11 +599,9 @@ exports[`Documentation: Buttons Usage With Other Tags renders 1`] = `
   </h2>
   <p>
     The 
-    <code
-      className="token property"
-    >
-      .btn
-    </code>
+    <Property
+      value=".btn"
+    />
      class can also be used with other html-tags like 
     <PrismCode
       className="language-html"

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ComponentPreview, DocToc } from "#";
+import { ComponentPreview, Property, DocToc } from "#";
 
 const Overview = () => (
     <>
@@ -20,7 +20,7 @@ const Overview = () => (
 const FurtherUsage = () => (
     <>
         <h2 id="further-usage">Further usage</h2>
-        <p>Further usage... <code className="token property">.badge</code>...</p>
+        <p>Further usage... <Property value=".badge" />...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <h1>Badge <small className="badge badge-default">default</small></h1>
             <h2>Badge <small className="badge badge-brand">brand</small></h2>

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocToc } from "#";
+import { ComponentPreview, DocToc, Property } from "#";
 
 const Fonts = () => {
     const removeRobotoCode = `html {
@@ -34,7 +34,7 @@ const Headings = () => (
             <h5>Heading h5</h5>
             <h6>Heading h6</h6>
         </ComponentPreview>
-        <p>The classes <code className="token property">.h1</code> through <code className="token property">.h6</code> are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.</p>
+        <p>The classes <Property value=".h1" /> through <Property value=".h6" /> are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <p className="h1">.h1 heading</p>
             <p className="h2">.h2 heading</p>
@@ -59,7 +59,7 @@ const Small = () => (
 const Lead = () => (
     <>
         <h2 id="lead">Lead</h2>
-        <p>Make a paragraph stand out by using <code className="token property">.lead</code>.</p>
+        <p>Make a paragraph stand out by using <Property value=".lead" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <p className="lead">This is a leading paragraph which for instance can be used as an introduction.</p>
         </ComponentPreview>
@@ -83,7 +83,7 @@ const Inline = () => (
             <p><i>This is the last line, it too will render as italicized text.</i></p>
         </ComponentPreview>
         <p>
-            The <code className="token property">.mark</code> and <code className="token property">.small</code> classes are also available to apply the same styles as <PrismCode className="language-html">{"<mark>"}</PrismCode> and <PrismCode className="language-html">{"<small>"}</PrismCode> while avoiding any unwanted semantic implications that the tags would bring.
+            The <Property value=".mark" /> and <Property value=".small" /> classes are also available to apply the same styles as <PrismCode className="language-html">{"<mark>"}</PrismCode> and <PrismCode className="language-html">{"<small>"}</PrismCode> while avoiding any unwanted semantic implications that the tags would bring.
         </p>
         <p>
         While not shown above, feel free to use <PrismCode className="language-html">{"<b>"}</PrismCode> and <PrismCode className="language-html">{"<i>"}</PrismCode> in HTML5. <PrismCode className="language-html">{"<b>"}</PrismCode> is meant to highlight words or phrases without conveying additional importance while <PrismCode className="language-html">{"<i>"}</PrismCode> is mostly for voice, technical terms, etc.
@@ -102,7 +102,7 @@ const Abbreviations = () => (
     <>
         <h2 id="abbreviations">Abbreviations</h2>
         <p>Stylized implementation of HTML’s <PrismCode className="language-html">{"<abbr>"}</PrismCode> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.</p>
-        <p>Add <code className="token property">.initialism</code> to an abbreviation for a slightly smaller font-size.</p>
+        <p>Add <Property value=".initialism" /> to an abbreviation for a slightly smaller font-size.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <p><abbr title="Laugh Out Loud">LOL</abbr></p>
             <p><abbr title="HyperText Markup Language" className="initialism">HTML</abbr></p>
@@ -115,7 +115,7 @@ const Blockquotes = () => {
     const BlockquotesText = () => (
         <>
             <h2 id="blockquotes">Blockquotes</h2>
-            <p>For quoting blocks of content from another source within your document. Wrap <PrismCode className="language-html">{"<blockquote>"}</PrismCode> or <code className="token property">.blockquote</code> around any HTML as the quote.</p>
+            <p>For quoting blocks of content from another source within your document. Wrap <PrismCode className="language-html">{"<blockquote>"}</PrismCode> or <Property value=".blockquote" /> around any HTML as the quote.</p>
             <ComponentPreview language="html" showCasePanel codeFigure>
                 <blockquote className="blockquote">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>

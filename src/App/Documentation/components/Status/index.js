@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc } from "#";
+import { ComponentPreview, DocToc, Property } from "#";
 
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
-        <p>Overview... <code className="token property">.status</code>...</p>
+        <p>Overview... <Property value=".status" />...</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeList>
             <ul className="list">
                 <li>
@@ -31,7 +31,7 @@ const Overview = () => (
 const ExtendedUsage = () => (
     <>
         <h2 id="extended-usage">Extended usage</h2>
-        <p>Extended usage... <code className="token property">.status</code>...</p>
+        <p>Extended usage... <Property value=".status" />...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <h1 className="status status-default">Default</h1>
             <h2 className="status status-neutral">Neutral</h2>

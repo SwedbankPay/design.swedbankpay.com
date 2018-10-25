@@ -9,11 +9,9 @@ exports[`Components: Topbar Overview renders 1`] = `
   </h2>
   <p>
     This will only show the code for the 
-    <code
-      className="token property"
-    >
-      .topbar
-    </code>
+    <Property
+      value=".topbar"
+    />
      component, at least for now. For a demonstration of the usage check the example app (coming soon), or implement it in your own project!
   </p>
   <ComponentPreview
