@@ -22,12 +22,13 @@
 // 11. Datepicker
 // 12. Dialog
 // 13. Form
-// 14. Pagination
-// 15. Panel
-// 16. Sheet
-// 17. Status
-// 18. Toast
-// 19. Topbar
+// 14. Nav
+// 15. Pagination
+// 16. Panel
+// 17. Sheet
+// 18. Status
+// 19. Toast
+// 20. Topbar
 
 // ==========================================================================
 //
@@ -149,6 +150,7 @@
 @zindex-tabs-arrow:                         101;
 @zindex-action-list:                        500;
 @zindex-action-list-anchor:                 501;
+@zindex-nav-submenu:                    520;
 @zindex-topbar:                             550;
 @zindex-dialog-backdrop:                    1040;
 @zindex-dialog:                             1050;
@@ -454,8 +456,34 @@
 @range-height:                              @checkbox-height / 2;
 @thumb-size:                                @checkbox-height;
 
+// 17. Nav
+// ==========================================================================
 
-// 14. Pagination
+@nav-margin:                                @base-margin @base-margin-xl @base-margin @base-margin-sm;
+@nav-margin-responsive:                     @base-margin @base-margin @base-margin @base-margin-sm;
+@nav-margin-tablet:                         @base-margin 0;
+@nav-submenu-margin-left:                       @base-margin*0.3;
+@nav-submenu-list-margin-left:                  @base-margin-xl+0.75;
+
+@nav-submenu-padding:                           @base-padding*0.34;
+@nav-submenu-p-first-child:                     calc(@nav-submenu-padding + 2px);
+@nav-submenu-p-icon-left:                       calc(@base-padding-sm + 2px);
+@nav-submenu-p-icon-open:                       calc(@base-padding-sm - 2px);
+
+@nav-icon-lineheight:                       1.1;
+@nav-submenu-font-size:                         @base-font-size*0.85;
+@nav-submenu-border:                            2px solid @gray-9;
+@nav-submenu-left:                              3.8rem;
+
+@nav-submenu-before-width:                      1rem;
+@nav-submenu-before-height:                     1rem;
+@nav-submenu-before-left:                       -10px;
+@nav-submenu-before-top:                        13px;
+
+@nav-submenu-icon-fontsize-tablet:              @base-font-size*2.25;
+
+
+// 15. Pagination
 // ==========================================================================
 
 @pagination-active-color:                   @brand-primary;
@@ -463,7 +491,7 @@
 
 @pagination-bullet-size:                    @status-size;
 
-// 15. Panel
+// 16. Panel
 // ==========================================================================
 
 /* Colors */
@@ -489,7 +517,7 @@
 @panel-footer-padding:                      @base-padding @base-padding-xl @base-padding-sm @base-padding-xl;
 
 
-// 16. Sheet
+// 17. Sheet
 // ==========================================================================
 
 @sheet-backdrop-bg:                         fade(@black, 50%);
@@ -500,8 +528,7 @@
 @sheet-width-sm:                            75%;
 @sheet-width:                               580px;
 
-
-// 17. Status
+// 18. Status
 // ==========================================================================
 
 @status-size:                               13px;
@@ -511,7 +538,7 @@
 @status-padding-head:                       @base-padding * 8;
 
 
-// 18. Toast
+// 19. Toast
 // ==========================================================================
 
 @toast-height:                              48px;
@@ -519,7 +546,7 @@
 @toast-text-color:                          @text-color;
 @toast-action-color:                        @yellow;
 
-// 19. Topbar
+// 20. Topbar
 // ==========================================================================
 
 @topbar-height:                             70px;

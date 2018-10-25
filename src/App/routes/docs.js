@@ -145,6 +145,11 @@ module.exports = [
                 componentPath: "components/MediaObject"
             },
             {
+                title: "Nav (experimental)",
+                path: "/docs/components/nav",
+                componentPath: "components/Nav"
+            },
+            {
                 title: "Pagination",
                 path: "/docs/components/pagination",
                 componentPath: "components/Pagination"

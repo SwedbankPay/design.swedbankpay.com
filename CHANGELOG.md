@@ -4,6 +4,7 @@
 
 ### Added
 
+- Added Sidebar component.
 - Added documentation section for text utlities.
 - Added documentation section for flex utlities.
 - Added documentation section for sizing utlities.
