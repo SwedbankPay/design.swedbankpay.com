@@ -314,11 +314,11 @@ module.exports = (env, argv) => {
                 title: "PayEx DesignGuide",
                 basename
             }),
-            // new SentryCliPlugin({
-            //     release: version,
-            //     include: ".",
-            //     ignore: ["node_modules", "webpack.config.js"]
-            // })
+            new SentryCliPlugin({
+                release: version,
+                include: ".",
+                ignore: ["node_modules", "webpack.config.js"]
+            })
         );
     }
 
