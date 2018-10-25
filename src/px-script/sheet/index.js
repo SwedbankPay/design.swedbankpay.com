@@ -11,7 +11,7 @@ class Sheet {
         this.id = el.id;
         this.closeIcon = el.querySelector(SELECTORS.CLOSEICON);
         this.isOpen = el.classList.contains("sheet-open");
-        this.hasVScroll = () => window.innerWidth - document.documentElement.clientWidth;
+        this.hasVScroll = () => (window.innerWidth - document.documentElement.clientWidth) > 0;
 
         if (this.closeIcon) {
             this.closeIcon.addEventListener("click", e => {
@@ -36,16 +36,16 @@ class Sheet {
         });
     }
 
-    hasScrollBar () {
-        if (this.hasVScroll() > 0) {
-            document.body.classList.add("sheet-has-vscroll");
+    handleScrollbar () {
+        if (this.hasVScroll()) {
+            document.body.classList.add("body-has-vscroll");
         } else {
-            document.body.classList.remove("sheet-has-vscroll");
+            document.body.classList.remove("body-has-vscroll");
         }
     }
 
     open () {
-        this.hasScrollBar();
+        this.handleScrollbar();
         this.isOpen = true;
         this._el.classList.add("d-block");
         document.body.classList.add("sheet-open");
@@ -55,7 +55,7 @@ class Sheet {
     }
 
     close () {
-        this.hasScrollBar();
+        this.handleScrollbar();
         this.isOpen = false;
         this._el.classList.remove("sheet-open");
         document.body.classList.remove("sheet-open");
