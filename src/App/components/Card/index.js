@@ -13,8 +13,8 @@ const Card = ({ type, title, imgSrc, icon, highlightTitle, highlightSubTitle, te
         </div> : null}
         <div className="highlight">
             {icon ? <i className="material-icons">{icon}</i> : null}
+            {children}
             <div className="highlight-wrapper">
-                {children}
                 {highlightTitle ? <h4 className="highlight-title">{highlightTitle}</h4> : null}
                 {highlightSubTitle ? <p className="highlight-subtitle">{highlightSubTitle}</p> : null}
             </div>
