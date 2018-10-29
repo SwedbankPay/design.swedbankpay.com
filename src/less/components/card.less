@@ -1,18 +1,14 @@
 .cards {
-    > ul {
-        list-style: none;
-        padding-left: 0;
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 
-        @media (max-width: @screen-md-min) {
-            display: block;
-        }
+    @media (max-width: @screen-md-min) {
+        display: block;
+    }
 
-        .card + .card {
-            margin-top: 0;
-        }
+    .card + .card {
+        margin-top: 0;
     }
 
     .card {
@@ -22,6 +18,8 @@
         max-width: 18rem;
         flex: 1;
         margin: @card-margin;
+        display: flex;
+        flex-direction: column;
 
         header {
             padding: 0 @base-padding;
@@ -100,6 +98,10 @@
                     font-size: 80%;
                     margin: 0;
                 }
+
+                .media {
+                    margin-bottom: 0;
+                }
             }
         }
 
@@ -109,12 +111,12 @@
 
         footer {
             border-top: 1px solid @gray-9;
-            padding: @base-padding @base-padding-xl;
+            padding: @base-padding;
             margin-top: auto;
 
             .footer-text {
                 p {
-                    margin-bottom: @base-margin-xs;
+                    margin: @base-margin-xs 0;
                 }
             }
 
@@ -134,32 +136,20 @@
             }
         }
 
-        + .card {
-            margin-top: 1.5rem;
-        }
+        // + .card {
+        //     margin-top: 1.5rem;
+        // }
 
-        // TODO: rename this to .card-text? Also put this in the documentation [EH]
-        .text {
-            flex-grow: 1;
-            max-width: 60ch;
-
+        .card-text {
             > * + * {
-                margin-top: 0.75rem;
+                &:not(:last-child) {
+                    margin-top: 0.75rem;
+                }
             }
 
-            &:last-child {
-                margin-top: auto;
-            }
-
-            &:nth-last-child(2) {
-                margin-bottom: 0.75rem;
+            > :last-child {
+                margin-bottom: 0;
             }
         }
-    }
-
-    .card,
-    .card .text {
-        display: flex;
-        flex-direction: column;
     }
 }

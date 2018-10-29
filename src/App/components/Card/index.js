@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Card = ({ type, title, imgSrc, icon, highlightTitle, highlightSubTitle, text, smallText, btnTxt, footerTxt, footerLink, footerLinkTxt }) => (
-    <li className={`card${type ? ` card-${type}` : ""}`}>
+const Card = ({ type, title, imgSrc, icon, highlightTitle, highlightSubTitle, text, smallText, btnTxt, footerTxt, footerLink, footerLinkTxt, children }) => (
+    <div className={`card${type ? ` card-${type}` : ""}`}>
         {title ? <header>
             <h3>
                 <a href="#">{title}</a>
@@ -14,6 +14,7 @@ const Card = ({ type, title, imgSrc, icon, highlightTitle, highlightSubTitle, te
         <div className="highlight">
             {icon ? <i className="material-icons">{icon}</i> : null}
             <div className="highlight-wrapper">
+                {children}
                 {highlightTitle ? <h4 className="highlight-title">{highlightTitle}</h4> : null}
                 {highlightSubTitle ? <p className="highlight-subtitle">{highlightSubTitle}</p> : null}
             </div>
@@ -27,7 +28,7 @@ const Card = ({ type, title, imgSrc, icon, highlightTitle, highlightSubTitle, te
             {footerTxt ? <div className="footer-text"><p>{footerTxt}</p></div> : null}
             {footerLinkTxt ? <div className="footer-link"><a href={footerLink || "#"}>{footerLinkTxt}</a></div> : null}
         </footer>
-    </li>
+    </div>
 );
 
 Card.propTypes = {
