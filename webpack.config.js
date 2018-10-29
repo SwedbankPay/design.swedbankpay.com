@@ -122,9 +122,9 @@ module.exports = (env, argv) => {
             ]
         },
         optimization: {
-            runtimeChunk: {
-                name: entrypoint => `runtime~${entrypoint.name}`
-            },
+            // runtimeChunk: {
+            //     name: entrypoint => `runtime~${entrypoint.name}`
+            // },
             splitChunks: {
                 chunks: "async",
                 minSize: 3000,
@@ -147,13 +147,13 @@ module.exports = (env, argv) => {
                         chunks: "all",
                         enforce: true
                     },
-                    pxScript: {
-                        name: "px-script",
-                        test: /px-script/,
-                        reuseExistingChunk: false,
-                        chunks: "all",
-                        enforce: true
-                    },
+                    // pxScript: {
+                    //     name: "px-script",
+                    //     test: /px-script/,
+                    //     reuseExistingChunk: false,
+                    //     chunks: "all",
+                    //     enforce: true
+                    // },
                     pxStyles: {
                         name: "px",
                         test: /px\.less$/,
@@ -184,37 +184,13 @@ module.exports = (env, argv) => {
                 }),
                 new OptimizeCSSAssetsPlugin()
             ],
-            mergeDuplicateChunks: !isProd
+            mergeDuplicateChunks: isProd
         },
         plugins: [
             new HtmlWebpackPlugin({
                 template: "./src/index.html",
                 hash: true,
                 title: "PayEx DesignGuide"
-            }),
-            new AppManifestWebpackPlugin({
-                logo: "./src/img/favicon.png",
-                output: "/icons/",
-                config: {
-                    appName: "PayEx DesignGuide",
-                    developerName: "PayEx",
-                    developerURL: "https://payex.com",
-                    background: "#000",
-                    theme_color: "#2da944",
-                    version,
-                    icons: {
-                        android: true,
-                        appleIcon: true,
-                        appleStartup: true,
-                        coast: true,
-                        favicons: true,
-                        firefox: false,
-                        opengraph: true,
-                        twitter: true,
-                        yandex: false,
-                        windows: true
-                    }
-                }
             }),
             new MiniCssExtractPlugin({
                 filename: "styles/[name].css"
@@ -236,6 +212,61 @@ module.exports = (env, argv) => {
             new BundleAnalyzerPlugin()
         );
     }
+
+    if (isRelease) {
+        const rootPath = levelsToRoot(basename);
+
+        config.plugins.push(
+            new HtmlWebpackPlugin({
+                filename: `${rootPath}index.html`,
+                template: "./build/rootindex.html",
+                hash: true,
+                title: "PayEx DesignGuide",
+                chunks: ["px"],
+                basename
+            }),
+            new HtmlWebpackPlugin({
+                filename: `${rootPath}404.html`,
+                template: "./build/root404.html",
+                hash: true,
+                chunks: ["px"],
+                title: "PayEx DesignGuide",
+                basename
+            }),
+            new SentryCliPlugin({
+                release: version,
+                include: ".",
+                ignore: ["node_modules", "webpack.config.js"]
+            })
+        );
+    }
+
+    // This needs to be after all HtmlWebpackPlugin instances, but before the FileManagerPlugin [EH]
+    config.plugins.push(
+        new AppManifestWebpackPlugin({
+            logo: "./src/img/favicon.png",
+            output: "/icons/",
+            config: {
+                appName: "PayEx DesignGuide",
+                developerName: "PayEx",
+                developerURL: "https://payex.com",
+                background: "#000",
+                theme_color: "#2da944",
+                version,
+                icons: {
+                    android: true,
+                    appleIcon: true,
+                    appleStartup: true,
+                    coast: true,
+                    favicons: true,
+                    firefox: false,
+                    opengraph: true,
+                    twitter: true,
+                    yandex: false,
+                    windows: true
+                }
+            }
+        }));
 
     if (isProd && !isDevServer) {
         const onEndArchive = [
@@ -291,34 +322,6 @@ module.exports = (env, argv) => {
                     }
                 ]
             })
-        );
-    }
-
-    if (isRelease) {
-        const rootPath = levelsToRoot(basename);
-
-        config.plugins.push(
-            new HtmlWebpackPlugin({
-                filename: `${rootPath}index.html`,
-                template: "./build/rootindex.html",
-                hash: true,
-                title: "PayEx DesignGuide",
-                chunks: ["px"],
-                basename
-            }),
-            new HtmlWebpackPlugin({
-                filename: `${rootPath}404.html`,
-                template: "./build/root404.html",
-                hash: true,
-                chunks: ["px"],
-                title: "PayEx DesignGuide",
-                basename
-            }),
-            // new SentryCliPlugin({
-            //     release: version,
-            //     include: ".",
-            //     ignore: ["node_modules", "webpack.config.js"]
-            // })
         );
     }
 

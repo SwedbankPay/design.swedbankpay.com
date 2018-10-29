@@ -1,4 +1,4 @@
-const ROOTROUTES = ["/docs", "/examples", "/templates"];
+const ROOTROUTES = ["/docs", "/examples", "/templates", "/404"];
 const docRoutes = require("../src/App/routes/docs");
 
 const getRoutes = () => {
