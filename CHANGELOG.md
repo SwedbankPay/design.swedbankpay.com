@@ -1,11 +1,8 @@
 # Changelog
 
-## [0.1x.0] - 2018-xx-xx
-
-### Added
-
-### Changed
+## [0.13.1] - 2018-10-29
 
 ### Fixed
 
-### Removed
+- Fixed an issue with px-script not running on load.
+- Fixed an issue with form styling not being applied to some form components.
