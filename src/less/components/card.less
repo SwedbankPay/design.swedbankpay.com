@@ -84,9 +84,14 @@
                     font-size: 80%;
                     margin: 0;
                 }
+            }
 
-                .media {
-                    margin-bottom: 0;
+            .media {
+                margin-bottom: 0;
+                color: @gray-3;
+
+                &-img {
+                    align-items: center;
                 }
             }
 
@@ -102,12 +107,12 @@
 
         .card-body {
             padding: @base-padding;
+            flex: 1 1 auto;
         }
 
         footer {
             border-top: 1px solid @gray-9;
             padding: @base-padding;
-            margin-top: auto;
 
             .footer-text {
                 p {
