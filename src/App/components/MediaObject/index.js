@@ -43,7 +43,8 @@ MediaObject.propTypes = {
     imgUrl: PropTypes.string,
     icon: PropTypes.string,
     heading: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
+    text: PropTypes.string,
+    textsm: PropTypes.string,
     mediaRight: PropTypes.bool
 };
 
