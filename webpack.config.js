@@ -122,9 +122,9 @@ module.exports = (env, argv) => {
             ]
         },
         optimization: {
-            runtimeChunk: {
-                name: entrypoint => `runtime~${entrypoint.name}`
-            },
+            // runtimeChunk: {
+            //     name: entrypoint => `runtime~${entrypoint.name}`
+            // },
             splitChunks: {
                 chunks: "async",
                 minSize: 3000,
@@ -147,13 +147,13 @@ module.exports = (env, argv) => {
                         chunks: "all",
                         enforce: true
                     },
-                    pxScript: {
-                        name: "px-script",
-                        test: /px-script/,
-                        reuseExistingChunk: false,
-                        chunks: "all",
-                        enforce: true
-                    },
+                    // pxScript: {
+                    //     name: "px-script",
+                    //     test: /px-script/,
+                    //     reuseExistingChunk: false,
+                    //     chunks: "all",
+                    //     enforce: true
+                    // },
                     pxStyles: {
                         name: "px",
                         test: /px\.less$/,
