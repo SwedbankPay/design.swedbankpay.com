@@ -1,5 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Component: Card -  renders a button in the footer 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="highlight"
+  />
+  <div
+    className="card-body"
+  />
+  <footer>
+    <button
+      className="btn btn-primary btn-block"
+      type="button"
+    >
+      Button
+    </button>
+  </footer>
+</div>
+`;
+
 exports[`Component: Card -  renders a header 1`] = `
 <div
   className="card"
@@ -15,87 +36,47 @@ exports[`Component: Card -  renders a header 1`] = `
   </header>
   <div
     className="highlight"
-  >
-    <div
-      className="highlight-wrapper"
-    />
-  </div>
+  />
   <div
     className="card-body"
-  >
-    <p />
-    <small />
-  </div>
-  <footer>
-    <button
-      className="btn btn-primary btn-block"
-      type="button"
-    />
-  </footer>
+  />
+  <footer />
 </div>
 `;
 
-exports[`Component: Card -  renders a highlight subtitle 1`] = `
+exports[`Component: Card -  renders a smallText in card-body 1`] = `
 <div
   className="card"
 >
   <div
     className="highlight"
-  >
-    <div
-      className="highlight-wrapper"
-    >
-      <p
-        className="highlight-subtitle"
-      >
-        remaining amount to pay
-      </p>
-    </div>
-  </div>
+  />
   <div
     className="card-body"
   >
-    <p />
-    <small />
+    <small>
+      small text
+    </small>
   </div>
-  <footer>
-    <button
-      className="btn btn-primary btn-block"
-      type="button"
-    />
-  </footer>
+  <footer />
 </div>
 `;
 
-exports[`Component: Card -  renders a highlight title 1`] = `
+exports[`Component: Card -  renders a text in card-body 1`] = `
 <div
   className="card"
 >
   <div
     className="highlight"
-  >
-    <div
-      className="highlight-wrapper"
-    >
-      <h4
-        className="highlight-title"
-      >
-        Balance
-      </h4>
-    </div>
-  </div>
+  />
   <div
     className="card-body"
   >
-    <p />
-    <small />
+    <p>
+      Card text
+    </p>
   </div>
-  <footer>
-    <button
-      className="btn btn-primary btn-block"
-      type="button"
-    />
-  </footer>
+  <footer />
 </div>
 `;
 
@@ -111,22 +92,11 @@ exports[`Component: Card -  renders an icon 1`] = `
     >
       home
     </i>
-    <div
-      className="highlight-wrapper"
-    />
   </div>
   <div
     className="card-body"
-  >
-    <p />
-    <small />
-  </div>
-  <footer>
-    <button
-      className="btn btn-primary btn-block"
-      type="button"
-    />
-  </footer>
+  />
+  <footer />
 </div>
 `;
 
@@ -148,23 +118,11 @@ exports[`Component: Card -  renders an image 1`] = `
   </div>
   <div
     className="highlight"
-  >
-    <div
-      className="highlight-wrapper"
-    />
-  </div>
+  />
   <div
     className="card-body"
-  >
-    <p />
-    <small />
-  </div>
-  <footer>
-    <button
-      className="btn btn-primary btn-block"
-      type="button"
-    />
-  </footer>
+  />
+  <footer />
 </div>
 `;
 
@@ -174,22 +132,11 @@ exports[`Component: Card -  renders footer link text 1`] = `
 >
   <div
     className="highlight"
-  >
-    <div
-      className="highlight-wrapper"
-    />
-  </div>
+  />
   <div
     className="card-body"
-  >
-    <p />
-    <small />
-  </div>
+  />
   <footer>
-    <button
-      className="btn btn-primary btn-block"
-      type="button"
-    />
     <div
       className="footer-link"
     >
@@ -209,22 +156,11 @@ exports[`Component: Card -  renders footer text 1`] = `
 >
   <div
     className="highlight"
-  >
-    <div
-      className="highlight-wrapper"
-    />
-  </div>
+  />
   <div
     className="card-body"
-  >
-    <p />
-    <small />
-  </div>
+  />
   <footer>
-    <button
-      className="btn btn-primary btn-block"
-      type="button"
-    />
     <div
       className="footer-text"
     >
@@ -236,29 +172,31 @@ exports[`Component: Card -  renders footer text 1`] = `
 </div>
 `;
 
-exports[`Component: Card -  renders with class name card if no type is specified 1`] = `
+exports[`Component: Card -  renders with class name card 1`] = `
 <div
   className="card"
 >
   <div
     className="highlight"
-  >
-    <div
-      className="highlight-wrapper"
-    />
-  </div>
+  />
   <div
     className="card-body"
-  >
-    <p />
-    <small />
-  </div>
-  <footer>
-    <button
-      className="btn btn-primary btn-block"
-      type="button"
-    />
-  </footer>
+  />
+  <footer />
+</div>
+`;
+
+exports[`Component: Card -  renders with correct class name 1`] = `
+<div
+  className="card card-brand"
+>
+  <div
+    className="highlight"
+  />
+  <div
+    className="card-body"
+  />
+  <footer />
 </div>
 `;
 
@@ -268,22 +206,10 @@ exports[`Component: Card -  throws an error if type does not match proptypes 1`]
 >
   <div
     className="highlight"
-  >
-    <div
-      className="highlight-wrapper"
-    />
-  </div>
+  />
   <div
     className="card-body"
-  >
-    <p />
-    <small />
-  </div>
-  <footer>
-    <button
-      className="btn btn-primary btn-block"
-      type="button"
-    />
-  </footer>
+  />
+  <footer />
 </div>
 `;

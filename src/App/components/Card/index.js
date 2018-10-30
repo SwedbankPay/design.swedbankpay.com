@@ -16,11 +16,11 @@ const Card = ({ type, title, imgSrc, icon, text, smallText, btnTxt, footerTxt, f
             {children}
         </div>
         <div className="card-body">
-            <p>{text}</p>
-            <small>{smallText}</small>
+            {text ? <p>{text}</p> : null}
+            {smallText ? <small>{smallText}</small> : null}
         </div>
         <footer>
-            <button type="button" className="btn btn-primary btn-block">{btnTxt}</button>
+            {btnTxt ? <button type="button" className="btn btn-primary btn-block">{btnTxt}</button> : null}
             {footerTxt ? <div className="footer-text"><p>{footerTxt}</p></div> : null}
             {footerLinkTxt ? <div className="footer-link"><a href={footerLink || "#"}>{footerLinkTxt}</a></div> : null}
         </footer>
