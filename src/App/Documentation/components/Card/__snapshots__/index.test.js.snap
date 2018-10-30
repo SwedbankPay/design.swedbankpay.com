@@ -18,20 +18,23 @@ exports[`Documentation: Card CardText renders 1`] = `
 exports[`Documentation: Card CardTypes renders 1`] = `
 <Fragment>
   <h2
-    id="overview"
+    id="card-types"
   >
-    Cards horizontal
+    Card Types
   </h2>
   <p>
-    When displaying cards use wrapper class 
+    To decide how your cards will look you can use 
     <Property
-      value=".card"
+      value=".card-default"
     />
-     along with 
+    , 
     <Property
-      value=".cards-{desired_size}-horizontal"
+      value=".card-brand"
     />
-     to decide when the cards will switch from mobile view to horizontal.
+    , or 
+    <Property
+      value=".card-light"
+    />
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -48,8 +51,8 @@ exports[`Documentation: Card CardTypes renders 1`] = `
         imgSrc="https://picsum.photos/300"
         smallText="And the small text"
         text="This is the cards text"
-        title="Card default"
-        type="default"
+        title="Card brand"
+        type="brand"
       >
         <MediaObject
           heading="725 NOK"
@@ -82,8 +85,8 @@ exports[`Documentation: Card CardTypes renders 1`] = `
         imgSrc="https://picsum.photos/300"
         smallText="And the small text"
         text="This is the cards text"
-        title="Card default"
-        type="default"
+        title="Card light"
+        type="light"
       >
         <MediaObject
           heading="75%"

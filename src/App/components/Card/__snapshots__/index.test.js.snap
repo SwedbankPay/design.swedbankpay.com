@@ -1,0 +1,289 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Card -  renders a header 1`] = `
+<div
+  className="card"
+>
+  <header>
+    <h3>
+      <a
+        href="#"
+      >
+        Card default
+      </a>
+    </h3>
+  </header>
+  <div
+    className="highlight"
+  >
+    <div
+      className="highlight-wrapper"
+    />
+  </div>
+  <div
+    className="card-body"
+  >
+    <p />
+    <small />
+  </div>
+  <footer>
+    <button
+      className="btn btn-primary btn-block"
+      type="button"
+    />
+  </footer>
+</div>
+`;
+
+exports[`Component: Card -  renders a highlight subtitle 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="highlight"
+  >
+    <div
+      className="highlight-wrapper"
+    >
+      <p
+        className="highlight-subtitle"
+      >
+        remaining amount to pay
+      </p>
+    </div>
+  </div>
+  <div
+    className="card-body"
+  >
+    <p />
+    <small />
+  </div>
+  <footer>
+    <button
+      className="btn btn-primary btn-block"
+      type="button"
+    />
+  </footer>
+</div>
+`;
+
+exports[`Component: Card -  renders a highlight title 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="highlight"
+  >
+    <div
+      className="highlight-wrapper"
+    >
+      <h4
+        className="highlight-title"
+      >
+        Balance
+      </h4>
+    </div>
+  </div>
+  <div
+    className="card-body"
+  >
+    <p />
+    <small />
+  </div>
+  <footer>
+    <button
+      className="btn btn-primary btn-block"
+      type="button"
+    />
+  </footer>
+</div>
+`;
+
+exports[`Component: Card -  renders an icon 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="highlight"
+  >
+    <i
+      className="material-icons"
+    >
+      home
+    </i>
+    <div
+      className="highlight-wrapper"
+    />
+  </div>
+  <div
+    className="card-body"
+  >
+    <p />
+    <small />
+  </div>
+  <footer>
+    <button
+      className="btn btn-primary btn-block"
+      type="button"
+    />
+  </footer>
+</div>
+`;
+
+exports[`Component: Card -  renders an image 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-img"
+  >
+    
+
+    <img
+      alt=""
+      src="url.address"
+    />
+    
+
+  </div>
+  <div
+    className="highlight"
+  >
+    <div
+      className="highlight-wrapper"
+    />
+  </div>
+  <div
+    className="card-body"
+  >
+    <p />
+    <small />
+  </div>
+  <footer>
+    <button
+      className="btn btn-primary btn-block"
+      type="button"
+    />
+  </footer>
+</div>
+`;
+
+exports[`Component: Card -  renders footer link text 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="highlight"
+  >
+    <div
+      className="highlight-wrapper"
+    />
+  </div>
+  <div
+    className="card-body"
+  >
+    <p />
+    <small />
+  </div>
+  <footer>
+    <button
+      className="btn btn-primary btn-block"
+      type="button"
+    />
+    <div
+      className="footer-link"
+    >
+      <a
+        href="#"
+      >
+        Click this footer link
+      </a>
+    </div>
+  </footer>
+</div>
+`;
+
+exports[`Component: Card -  renders footer text 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="highlight"
+  >
+    <div
+      className="highlight-wrapper"
+    />
+  </div>
+  <div
+    className="card-body"
+  >
+    <p />
+    <small />
+  </div>
+  <footer>
+    <button
+      className="btn btn-primary btn-block"
+      type="button"
+    />
+    <div
+      className="footer-text"
+    >
+      <p>
+        Footer information
+      </p>
+    </div>
+  </footer>
+</div>
+`;
+
+exports[`Component: Card -  renders with class name card if no type is specified 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="highlight"
+  >
+    <div
+      className="highlight-wrapper"
+    />
+  </div>
+  <div
+    className="card-body"
+  >
+    <p />
+    <small />
+  </div>
+  <footer>
+    <button
+      className="btn btn-primary btn-block"
+      type="button"
+    />
+  </footer>
+</div>
+`;
+
+exports[`Component: Card -  throws an error if type does not match proptypes 1`] = `
+<div
+  className="card card-error"
+>
+  <div
+    className="highlight"
+  >
+    <div
+      className="highlight-wrapper"
+    />
+  </div>
+  <div
+    className="card-body"
+  >
+    <p />
+    <small />
+  </div>
+  <footer>
+    <button
+      className="btn btn-primary btn-block"
+      type="button"
+    />
+  </footer>
+</div>
+`;

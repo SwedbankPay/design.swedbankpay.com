@@ -26,6 +26,18 @@ describe("Documentation: Card", () => {
         });
     });
 
+    describe("CardTypes", () => {
+        it("is defined", () => {
+            expect(CardTypes).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<CardTypes />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
     describe("CardText", () => {
         it("is defined", () => {
             expect(CardText).toBeDefined();
@@ -33,18 +45,6 @@ describe("Documentation: Card", () => {
 
         it("renders", () => {
             const wrapper = shallow(<CardText />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("CardTypes", () => {
-        it("is defined", () => {
-            expect(CardTypes).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<Overview />);
 
             expect(wrapper).toMatchSnapshot();
         });
