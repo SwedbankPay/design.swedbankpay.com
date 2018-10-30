@@ -144,24 +144,15 @@
     }
 }
 
-.cards-horizontal {
-    display: flex;
-    flex-wrap: wrap;
+@media screen and (min-width: @screen-sm-min) {
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
 
-    .card {
-        display: inline-flex;
-        margin: @card-margin;
-        max-width: 18rem;
-    }
-}
-
-.for-each(@breakpoint in @grid-breakpoints) {
-    @infix: extract(@breakpoint, 1);
-    @min-width: extract(@breakpoint, 2);
-
-    .cards-@{infix}-horizontal {
-        @media screen and (min-width: @min-width) {
-            .cards-horizontal();
+        .card {
+            display: inline-flex;
+            margin: @card-margin;
+            max-width: 18rem;
         }
     }
 }
