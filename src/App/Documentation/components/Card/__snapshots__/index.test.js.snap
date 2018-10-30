@@ -23,7 +23,7 @@ exports[`Documentation: Card CardTypes renders 1`] = `
     Card Types
   </h2>
   <p>
-    To decide how your cards will look you can use 
+    To decide how your cards will look use 
     <Property
       value=".card-default"
     />
@@ -42,7 +42,7 @@ exports[`Documentation: Card CardTypes renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="cards cards-md-horizontal"
+      className="cards"
     >
       <Card
         btnTxt="Button"
@@ -108,15 +108,18 @@ exports[`Documentation: Card Overview renders 1`] = `
     Cards horizontal
   </h2>
   <p>
-    When displaying cards use wrapper class 
+    Wrap indiviual cards in the 
     <Property
-      value=".card"
+      value=".cards"
     />
-     along with 
-    <Property
-      value=".cards-{desired_size}-horizontal"
-    />
-     to decide when the cards will switch from mobile view to horizontal.
+     class to display them lined up next to each other. When the window reaches 
+    <Link
+      replace={false}
+      to="/docs/core/breakpoints"
+    >
+      breakpoint
+    </Link>
+     sm the cards will switch to mobile view and take up one row each and stretch to fill the width of the container.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -124,7 +127,7 @@ exports[`Documentation: Card Overview renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="cards cards-md-horizontal"
+      className="cards"
     >
       <Card
         btnTxt="Button"
