@@ -15,6 +15,88 @@ exports[`Documentation: Card CardText renders 1`] = `
 </div>
 `;
 
+exports[`Documentation: Card CardTypes renders 1`] = `
+<Fragment>
+  <h2
+    id="overview"
+  >
+    Cards horizontal
+  </h2>
+  <p>
+    When displaying cards use wrapper class 
+    <Property
+      value=".card"
+    />
+     along with 
+    <Property
+      value=".cards-{desired_size}-horizontal"
+    />
+     to decide when the cards will switch from mobile view to horizontal.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="cards cards-md-horizontal"
+    >
+      <Card
+        btnTxt="Button"
+        footerLinkTxt="You wanna click this link?"
+        footerTxt="This is some text that goes in the footer."
+        imgSrc="https://picsum.photos/300"
+        smallText="And the small text"
+        text="This is the cards text"
+        title="Card default"
+        type="default"
+      >
+        <MediaObject
+          heading="725 NOK"
+          icon="account_balance"
+          size="sm"
+          textsm="Outstanding balance"
+        />
+      </Card>
+      <Card
+        btnTxt="Button"
+        footerLinkTxt="You wanna click this link?"
+        footerTxt="This is some text that goes in the footer."
+        imgSrc="https://picsum.photos/300"
+        smallText="And the small text"
+        text="This is the cards text"
+        title="Card default"
+        type="default"
+      >
+        <MediaObject
+          heading="Bob Corlsan"
+          icon="account_circle"
+          size="sm"
+          textsm="bob.corlsan@payex.com"
+        />
+      </Card>
+      <Card
+        btnTxt="Button"
+        footerLinkTxt="You wanna click this link?"
+        footerTxt="This is some text that goes in the footer."
+        imgSrc="https://picsum.photos/300"
+        smallText="And the small text"
+        text="This is the cards text"
+        title="Card default"
+        type="default"
+      >
+        <MediaObject
+          heading="75%"
+          icon="verified_user"
+          size="sm"
+          textsm="Complete"
+        />
+      </Card>
+    </div>
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Documentation: Card Overview renders 1`] = `
 <Fragment>
   <h2
