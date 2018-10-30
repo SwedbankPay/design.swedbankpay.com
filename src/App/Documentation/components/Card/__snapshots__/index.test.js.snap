@@ -11,6 +11,7 @@ exports[`Documentation: Card CardText renders 1`] = `
     Card...
   </p>
   <Overview />
+  <CardTypes />
 </div>
 `;
 
@@ -19,31 +20,18 @@ exports[`Documentation: Card Overview renders 1`] = `
   <h2
     id="overview"
   >
-    Overview
+    Cards horizontal
   </h2>
   <p>
-    Overview... 
+    Use the 
     <Property
       value=".card"
     />
-  </p>
-  <p>
-    ... 
+     class and 
     <Property
       value=".card-default"
     />
-  </p>
-  <p>
-    ... 
-    <Property
-      value=".card-brand"
-    />
-  </p>
-  <p>
-    ... 
-    <Property
-      value=".card-light"
-    />
+     class on a container object to style it as a card.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -51,49 +39,59 @@ exports[`Documentation: Card Overview renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="cards"
+      className="cards cards-md-horizontal"
     >
-      <ul>
-        <Card
-          btnTxt="Button"
-          footerLinkTxt="You wanna click this link?"
-          footerTxt="This is some text that goes in the footer."
-          highlightSubTitle="Outstanding balance"
-          highlightTitle="725 NOK"
+      <Card
+        btnTxt="Button"
+        footerLinkTxt="You wanna click this link?"
+        footerTxt="This is some text that goes in the footer."
+        imgSrc="https://picsum.photos/300"
+        smallText="And the small text"
+        text="This is the cards text"
+        title="Card default"
+        type="default"
+      >
+        <MediaObject
+          heading="725 NOK"
           icon="account_balance"
-          imgSrc="https://picsum.photos/300"
-          smallText="And the small text"
-          text="This is the cards text"
-          title="Card default"
-          type="default"
+          size="sm"
+          textsm="Outstanding balance"
         />
-        <Card
-          btnTxt="Button"
-          footerLinkTxt="You wanna click this link?"
-          footerTxt="This is some text that goes in the footer."
-          highlightSubTitle="bob.corlsan@payex.com"
-          highlightTitle="Bob Corlsan"
-          icon="face"
-          imgSrc="https://picsum.photos/300"
-          smallText="And the small text"
-          text="This is the cards text"
-          title="Card brand"
-          type="brand"
+      </Card>
+      <Card
+        btnTxt="Button"
+        footerLinkTxt="You wanna click this link?"
+        footerTxt="This is some text that goes in the footer."
+        imgSrc="https://picsum.photos/300"
+        smallText="And the small text"
+        text="This is the cards text"
+        title="Card default"
+        type="default"
+      >
+        <MediaObject
+          heading="Bob Corlsan"
+          icon="account_circle"
+          size="sm"
+          textsm="bob.corlsan@payex.com"
         />
-        <Card
-          btnTxt="Button"
-          footerLinkTxt="You wanna click this link?"
-          footerTxt="This is some text that goes in the footer."
-          highlightSubTitle="Complete"
-          highlightTitle="75%"
+      </Card>
+      <Card
+        btnTxt="Button"
+        footerLinkTxt="You wanna click this link?"
+        footerTxt="This is some text that goes in the footer."
+        imgSrc="https://picsum.photos/300"
+        smallText="And the small text"
+        text="This is the cards text"
+        title="Card default"
+        type="default"
+      >
+        <MediaObject
+          heading="75%"
           icon="verified_user"
-          imgSrc="https://picsum.photos/300"
-          smallText="And the small text"
-          text="This is the cards text"
-          title="Card light"
-          type="light"
+          size="sm"
+          textsm="Complete"
         />
-      </ul>
+      </Card>
     </div>
   </ComponentPreview>
 </Fragment>
