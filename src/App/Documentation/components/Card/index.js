@@ -9,7 +9,7 @@ const Overview = () => (
         <h2 id="overview">Cards horizontal</h2>
         <p>When displaying cards use wrapper class <Property value=".card" /> along with <Property value=".cards-{desired_size}-horizontal" /> to decide when the cards will switch from mobile view to horizontal.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="cards cards-md-horizontal">
+            <div className="cards">
                 <CardComponent
                     type="default"
                     title="Card default"
@@ -71,7 +71,7 @@ const CardTypes = () => (
         <h2 id="card-types">Card Types</h2>
         <p>To decide how your cards will look you can use <Property value=".card-default" />, <Property value=".card-brand" />, or <Property value=".card-light" /></p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="cards cards-md-horizontal">
+            <div className="cards">
                 <CardComponent
                     type="brand"
                     title="Card brand"
