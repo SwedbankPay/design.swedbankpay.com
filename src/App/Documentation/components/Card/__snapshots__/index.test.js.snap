@@ -23,15 +23,15 @@ exports[`Documentation: Card Overview renders 1`] = `
     Cards horizontal
   </h2>
   <p>
-    Use the 
+    When displaying cards use wrapper class 
     <Property
       value=".card"
     />
-     class and 
+     along with 
     <Property
-      value=".card-default"
+      value=".cards-{desired_size}-horizontal"
     />
-     class on a container object to style it as a card.
+     to decide when the cards will switch from mobile view to horizontal.
   </p>
   <ComponentPreview
     codeFigure={true}
