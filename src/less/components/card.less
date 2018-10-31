@@ -99,7 +99,7 @@
         }
 
         .card-img {
-            height: 10rem;
+            height: @card-image-height;
 
             img {
                 height: 100%;
@@ -111,7 +111,7 @@
         .card-text {
             > * + * {
                 &:not(:last-child) {
-                    margin-top: 0.75rem;
+                    margin-top: @card-margin-top;
                 }
             }
 
