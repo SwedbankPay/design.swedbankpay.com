@@ -57,7 +57,7 @@ exports[`Component: Card -  renders a text in card-body 1`] = `
 </div>
 `;
 
-exports[`Component: Card -  renders a title with provided text 1`] = `
+exports[`Component: Card -  renders a title 1`] = `
 <div
   className="card"
 >
