@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-const MediaObject = ({ size, imgUrl, icon, heading, text, textsm, mediaRight }) => {
+const MediaObject = ({ size, imgUrl, icon, heading, text, textSmall, mediaRight }) => {
     const mediaHeading = () => {
         switch (size) {
             case "sm":
@@ -30,9 +30,7 @@ const MediaObject = ({ size, imgUrl, icon, heading, text, textsm, mediaRight }) 
                 : null}
             <div className="media-body">
                 {mediaHeading()}
-                <p>{textsm ?
-                    <small>{textsm}</small>
-                    : text}</p>
+                <p>{textSmall ? <small>{text}</small> : text}</p>
             </div>
         </div>
     );
@@ -44,7 +42,7 @@ MediaObject.propTypes = {
     icon: PropTypes.string,
     heading: PropTypes.string.isRequired,
     text: PropTypes.string,
-    textsm: PropTypes.string,
+    textSmall: PropTypes.bool,
     mediaRight: PropTypes.bool
 };
 

@@ -10,7 +10,7 @@ exports[`Documentation: Card CardText renders 1`] = `
   >
     Card...
   </p>
-  <Overview />
+  <DefaultBehaviour />
   <CardTypes />
 </div>
 `;
@@ -100,10 +100,10 @@ exports[`Documentation: Card CardTypes renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Card Overview renders 1`] = `
+exports[`Documentation: Card DefaultBehaviour renders 1`] = `
 <Fragment>
   <h2
-    id="overview"
+    id="default-behaviour"
   >
     Default behaviour
   </h2>
@@ -140,44 +140,44 @@ exports[`Documentation: Card Overview renders 1`] = `
         type="default"
       >
         <MediaObject
-          heading="725 NOK"
-          icon="account_balance"
-          size="sm"
-          textsm="Outstanding balance"
-        />
-      </Card>
-      <Card
-        btnTxt="Button"
-        footerLinkTxt="You wanna click this link?"
-        footerTxt="This is some text that goes in the footer."
-        imgSrc="https://picsum.photos/300"
-        smallText="And the small text"
-        text="This is the cards text"
-        title="Card default"
-        type="default"
-      >
-        <MediaObject
-          heading="725 NOK"
-          icon="account_balance"
-          size="sm"
-          textsm="Outstanding balance"
-        />
-      </Card>
-      <Card
-        btnTxt="Button"
-        footerLinkTxt="You wanna click this link?"
-        footerTxt="This is some text that goes in the footer."
-        imgSrc="https://picsum.photos/300"
-        smallText="And the small text"
-        text="This is the cards text"
-        title="Card default"
-        type="default"
-      >
-        <MediaObject
           heading="Bob Corlsan"
           icon="account_circle"
           size="sm"
           textsm="bob.corlsan@payex.com"
+        />
+      </Card>
+      <Card
+        btnTxt="Button"
+        footerLinkTxt="You wanna click this link?"
+        footerTxt="This is some text that goes in the footer."
+        imgSrc="https://picsum.photos/300"
+        smallText="And the small text"
+        text="This is the cards text"
+        title="Card default"
+        type="default"
+      >
+        <MediaObject
+          heading="725 NOK"
+          icon="account_balance"
+          size="sm"
+          textsm="Outstanding balance"
+        />
+      </Card>
+      <Card
+        btnTxt="Button"
+        footerLinkTxt="You wanna click this link?"
+        footerTxt="This is some text that goes in the footer."
+        imgSrc="https://picsum.photos/300"
+        smallText="And the small text"
+        text="This is the cards text"
+        title="Card default"
+        type="default"
+      >
+        <MediaObject
+          heading="75%"
+          icon="verified_user"
+          size="sm"
+          textsm="Complete"
         />
       </Card>
     </div>

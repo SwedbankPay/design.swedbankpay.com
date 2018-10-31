@@ -49,14 +49,6 @@ describe("Component: Card - ", () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    it("renders an icon", () => {
-        const wrapper = shallow(<Card icon="home" />);
-
-        expect(wrapper.html()).toContain("material-icons");
-        expect(wrapper.find(".material-icons").text()).toEqual("home");
-        expect(wrapper).toMatchSnapshot();
-    });
-
     it("renders a text in card-body", () => {
         const wrapper = shallow(<Card text="Card text" />);
 

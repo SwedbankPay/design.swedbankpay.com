@@ -80,26 +80,6 @@ exports[`Component: Card -  renders a title 1`] = `
 </div>
 `;
 
-exports[`Component: Card -  renders an icon 1`] = `
-<div
-  className="card"
->
-  <div
-    className="highlight"
-  >
-    <i
-      className="material-icons"
-    >
-      home
-    </i>
-  </div>
-  <div
-    className="card-body"
-  />
-  <footer />
-</div>
-`;
-
 exports[`Component: Card -  renders an image 1`] = `
 <div
   className="card"

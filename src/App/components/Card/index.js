@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Card = ({ type, title, imgSrc, icon, text, smallText, btnTxt, footerTxt, footerLink, footerLinkTxt, children }) => (
+const Card = ({ type, title, imgSrc, text, smallText, btnTxt, footerTxt, footerLink, footerLinkTxt, children }) => (
     <div className={`card${type ? ` card-${type}` : ""}`}>
         {title ? <header>
             <h3>
@@ -12,7 +12,6 @@ const Card = ({ type, title, imgSrc, icon, text, smallText, btnTxt, footerTxt, f
             <img src={imgSrc} alt=""/>{"\n"}
         </div> : null}
         <div className="highlight">
-            {icon ? <i className="material-icons">{icon}</i> : null}
             {children}
         </div>
         <div className="card-body">

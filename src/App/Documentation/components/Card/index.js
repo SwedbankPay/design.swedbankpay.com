@@ -5,9 +5,9 @@ import { ComponentPreview, Property, DocToc, ExperimentalComponentAlert } from "
 import CardComponent from "@/Card";
 import MediaObject from "@/MediaObject";
 
-const Overview = () => (
+const DefaultBehaviour = () => (
     <>
-        <h2 id="overview">Default behaviour</h2>
+        <h2 id="default-behaviour">Default behaviour</h2>
         <p>
             Wrap indiviual cards in the <Property value=".cards" /> class to display them lined up next to each other.
             When the window reaches <Link to="/docs/core/breakpoints">breakpoint</Link> sm the cards will switch to mobile view and take up one row each and stretch to fill the width of the container.
@@ -24,33 +24,33 @@ const Overview = () => (
                     footerTxt="This is some text that goes in the footer."
                     footerLinkTxt="You wanna click this link?"
                 >
-                    <MediaObject size="sm" icon="account_balance" heading="725 NOK" textsm="Outstanding balance" />
-                </CardComponent>
-
-                <CardComponent
-                    type="default"
-                    title="Card default"
-                    imgSrc="https://picsum.photos/300"
-                    text="This is the cards text"
-                    smallText="And the small text"
-                    btnTxt="Button"
-                    footerTxt="This is some text that goes in the footer."
-                    footerLinkTxt="You wanna click this link?"
-                >
-                    <MediaObject size="sm" icon="account_balance" heading="725 NOK" textsm="Outstanding balance" />
-                </CardComponent>
-
-                <CardComponent
-                    type="default"
-                    title="Card default"
-                    imgSrc="https://picsum.photos/300"
-                    text="This is the cards text"
-                    smallText="And the small text"
-                    btnTxt="Button"
-                    footerTxt="This is some text that goes in the footer."
-                    footerLinkTxt="You wanna click this link?"
-                >
                     <MediaObject size="sm" icon="account_circle" heading="Bob Corlsan" textsm="bob.corlsan@payex.com" />
+                </CardComponent>
+
+                <CardComponent
+                    type="default"
+                    title="Card default"
+                    imgSrc="https://picsum.photos/300"
+                    text="This is the cards text"
+                    smallText="And the small text"
+                    btnTxt="Button"
+                    footerTxt="This is some text that goes in the footer."
+                    footerLinkTxt="You wanna click this link?"
+                >
+                    <MediaObject size="sm" icon="account_balance" heading="725 NOK" textsm="Outstanding balance" />
+                </CardComponent>
+
+                <CardComponent
+                    type="default"
+                    title="Card default"
+                    imgSrc="https://picsum.photos/300"
+                    text="This is the cards text"
+                    smallText="And the small text"
+                    btnTxt="Button"
+                    footerTxt="This is some text that goes in the footer."
+                    footerLinkTxt="You wanna click this link?"
+                >
+                    <MediaObject size="sm" icon="verified_user" heading="75%" textsm="Complete" />
                 </CardComponent>
             </div>
         </ComponentPreview>
@@ -110,7 +110,7 @@ const CardText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
         <ExperimentalComponentAlert />
         <p className="lead">Card...</p>
-        <Overview />
+        <DefaultBehaviour />
         <CardTypes />
     </div>
 );
@@ -131,4 +131,4 @@ class Card extends Component {
 export default Card;
 
 /* For testing */
-export { Overview, CardTypes, CardText };
+export { DefaultBehaviour, CardTypes, CardText };
