@@ -3,6 +3,8 @@ import { shallow } from "enzyme";
 
 import Card from "./index";
 
+// TODO: write more tests [AW]
+
 describe("Component: Card - ", () => {
     it("is defined", () => {
         expect(Card).toBeDefined();
@@ -58,6 +60,7 @@ describe("Component: Card - ", () => {
         const wrapper = shallow(<Card text="Card text" />);
 
         expect(wrapper.html()).toContain("p");
+        expect(wrapper.find("p")).toHaveLength(1);
         expect(wrapper).toMatchSnapshot();
     });
 
