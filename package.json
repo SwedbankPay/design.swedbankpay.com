@@ -10,7 +10,9 @@
         "build:prod": "webpack --mode production",
         "test": "jest",
         "test:update": "jest --updateSnapshot",
-        "lint": "eslint src/ && stylelint src/less/",
+        "eslint": "eslint src/**/*.js",
+        "stylelint": "stylelint src/**/*.less",
+        "lint": "npm run eslint && npm run stylelint",
         "e2e:chrome": "testcafe chrome src/**/*.spec.js"
     },
     "repository": {
