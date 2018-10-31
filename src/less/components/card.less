@@ -85,6 +85,15 @@
                     }
                 }
             }
+
+            .media {
+                margin-bottom: 0;
+                color: @gray-3;
+
+                &-img {
+                    align-items: center;
+                }
+            }
         }
 
         .card-body {
@@ -141,6 +150,17 @@
             display: inline-flex;
             margin: @card-margin;
             max-width: @card-max-width;
+        }
+    }
+}
+
+.for-each(@breakpoint in @grid-breakpoints) {
+    @infix: extract(@breakpoint, 1);
+    @min-width: extract(@breakpoint, 2);
+
+    .cards-@{infix}-horizontal {
+        @media screen and (min-width: @min-width) {
+            .cards-horizontal();
         }
     }
 }

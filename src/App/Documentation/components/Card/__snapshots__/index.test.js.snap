@@ -127,7 +127,7 @@ exports[`Documentation: Card Overview renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="cards"
+      className="cards cards-md-horizontal"
     >
       <Card
         btnTxt="Button"
