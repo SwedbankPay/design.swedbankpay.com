@@ -2,17 +2,16 @@
     "extends": ["stylelint-config-standard"],
     "ignoreFiles": ["**/*.md", "**/*.js", "**/*.js.snap", "**/*.css"],
     "plugins": [
-        "stylelint-csstree-validator",
         "stylelint-declaration-block-no-ignored-properties"
     ],
     "rules": {
+        "at-rule-empty-line-before": null,
         "at-rule-name-space-after": "always",
         "at-rule-no-unknown": null,
         "color-hex-case": [ "lower", {
             "message": "Lowercase letters are easier to distinguish from numbers"
         }],
         "color-named": "never",
-        "csstree/validator": true,
         "declaration-block-semicolon-newline-after": "always-multi-line",
         "declaration-block-semicolon-newline-before": "never-multi-line",
         "declaration-block-semicolon-space-after": "always-single-line",
