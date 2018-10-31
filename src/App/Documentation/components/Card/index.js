@@ -77,19 +77,6 @@ const CardTypes = () => (
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="cards">
                 <CardComponent
-                    type="brand"
-                    title="Card brand"
-                    imgSrc="https://picsum.photos/300"
-                    text="This is the cards text"
-                    smallText="And the small text"
-                    btnTxt="Button"
-                    footerTxt="This is some text that goes in the footer."
-                    footerLinkTxt="You wanna click this link?"
-                >
-                    <MediaObject size="sm" icon="account_balance" heading="725 NOK" textsm="Outstanding balance" />
-                </CardComponent>
-
-                <CardComponent
                     type="default"
                     title="Card default"
                     imgSrc="https://picsum.photos/300"
@@ -100,6 +87,19 @@ const CardTypes = () => (
                     footerLinkTxt="You wanna click this link?"
                 >
                     <MediaObject size="sm" icon="account_circle" heading="Bob Corlsan" textsm="bob.corlsan@payex.com" />
+                </CardComponent>
+
+                <CardComponent
+                    type="brand"
+                    title="Card brand"
+                    imgSrc="https://picsum.photos/300"
+                    text="This is the cards text"
+                    smallText="And the small text"
+                    btnTxt="Button"
+                    footerTxt="This is some text that goes in the footer."
+                    footerLinkTxt="You wanna click this link?"
+                >
+                    <MediaObject size="sm" icon="account_balance" heading="725 NOK" textsm="Outstanding balance" />
                 </CardComponent>
 
                 <CardComponent
