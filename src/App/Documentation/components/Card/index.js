@@ -52,19 +52,6 @@ const Overview = () => (
                 >
                     <MediaObject size="sm" icon="account_circle" heading="Bob Corlsan" textsm="bob.corlsan@payex.com" />
                 </CardComponent>
-
-                <CardComponent
-                    type="default"
-                    title="Card default"
-                    imgSrc="https://picsum.photos/300"
-                    text="This is the cards text"
-                    smallText="And the small text"
-                    btnTxt="Button"
-                    footerTxt="This is some text that goes in the footer."
-                    footerLinkTxt="You wanna click this link?"
-                >
-                    <MediaObject size="sm" icon="verified_user" heading="75%" textsm="Complete" />
-                </CardComponent>
             </div>
         </ComponentPreview>
     </>
