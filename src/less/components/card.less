@@ -1,6 +1,4 @@
 .cards {
-    display: block;
-
     .card {
         background-color: @white;
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
@@ -85,15 +83,6 @@
                     }
                 }
             }
-
-            .media {
-                margin-bottom: 0;
-                color: @gray-3;
-
-                &-img {
-                    align-items: center;
-                }
-            }
         }
 
         .card-body {
@@ -150,17 +139,6 @@
             display: inline-flex;
             margin: @card-margin;
             max-width: @card-max-width;
-        }
-    }
-}
-
-.for-each(@breakpoint in @grid-breakpoints) {
-    @infix: extract(@breakpoint, 1);
-    @min-width: extract(@breakpoint, 2);
-
-    .cards-@{infix}-horizontal {
-        @media screen and (min-width: @min-width) {
-            .cards-horizontal();
         }
     }
 }

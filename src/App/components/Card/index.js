@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Card = ({ type, title, imgSrc, icon, highlightTitle, highlightSubTitle, text, smallText, btnTxt, footerTxt, footerLink, footerLinkTxt, children }) => (
+const Card = ({ type, title, imgSrc, icon, text, smallText, btnTxt, footerTxt, footerLink, footerLinkTxt, children }) => (
     <div className={`card${type ? ` card-${type}` : ""}`}>
         {title ? <header>
             <h3>
@@ -14,10 +14,6 @@ const Card = ({ type, title, imgSrc, icon, highlightTitle, highlightSubTitle, te
         <div className="highlight">
             {icon ? <i className="material-icons">{icon}</i> : null}
             {children}
-            <div className="highlight-wrapper">
-                {highlightTitle ? <h4 className="highlight-title">{highlightTitle}</h4> : null}
-                {highlightSubTitle ? <p className="highlight-subtitle">{highlightSubTitle}</p> : null}
-            </div>
         </div>
         <div className="card-body">
             {text ? <p>{text}</p> : null}
