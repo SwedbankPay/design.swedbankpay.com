@@ -51,14 +51,14 @@ exports[`Documentation: Card CardTypes renders 1`] = `
         imgSrc="https://picsum.photos/300"
         smallText="And the small text"
         text="This is the cards text"
-        title="Card brand"
-        type="brand"
+        title="Card default"
+        type="default"
       >
         <MediaObject
-          heading="725 NOK"
-          icon="account_balance"
+          heading="Bob Corlsan"
+          icon="account_circle"
           size="sm"
-          textsm="Outstanding balance"
+          textsm="bob.corlsan@payex.com"
         />
       </Card>
       <Card
@@ -68,14 +68,14 @@ exports[`Documentation: Card CardTypes renders 1`] = `
         imgSrc="https://picsum.photos/300"
         smallText="And the small text"
         text="This is the cards text"
-        title="Card default"
-        type="default"
+        title="Card brand"
+        type="brand"
       >
         <MediaObject
-          heading="Bob Corlsan"
-          icon="account_circle"
+          heading="725 NOK"
+          icon="account_balance"
           size="sm"
-          textsm="bob.corlsan@payex.com"
+          textsm="Outstanding balance"
         />
       </Card>
       <Card
