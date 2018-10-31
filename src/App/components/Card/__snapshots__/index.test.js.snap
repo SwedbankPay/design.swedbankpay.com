@@ -21,29 +21,6 @@ exports[`Component: Card -  renders a button in the footer 1`] = `
 </div>
 `;
 
-exports[`Component: Card -  renders a header 1`] = `
-<div
-  className="card"
->
-  <header>
-    <h3>
-      <a
-        href="#"
-      >
-        Card default
-      </a>
-    </h3>
-  </header>
-  <div
-    className="highlight"
-  />
-  <div
-    className="card-body"
-  />
-  <footer />
-</div>
-`;
-
 exports[`Component: Card -  renders a smallText in card-body 1`] = `
 <div
   className="card"
@@ -76,6 +53,29 @@ exports[`Component: Card -  renders a text in card-body 1`] = `
       Card text
     </p>
   </div>
+  <footer />
+</div>
+`;
+
+exports[`Component: Card -  renders a title with provided text 1`] = `
+<div
+  className="card"
+>
+  <header>
+    <h3>
+      <a
+        href="#"
+      >
+        Card title goes here
+      </a>
+    </h3>
+  </header>
+  <div
+    className="highlight"
+  />
+  <div
+    className="card-body"
+  />
   <footer />
 </div>
 `;

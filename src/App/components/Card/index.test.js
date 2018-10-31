@@ -33,10 +33,11 @@ describe("Component: Card - ", () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    it("renders a header", () => {
-        const wrapper = shallow(<Card title="Card default"/>);
+    it("renders a title", () => {
+        const wrapper = shallow(<Card title="Card title goes here"/>);
 
         expect(wrapper.html()).toContain("header");
+        expect(wrapper.find("header").text()).toEqual("Card title goes here");
         expect(wrapper).toMatchSnapshot();
     });
 
@@ -44,6 +45,7 @@ describe("Component: Card - ", () => {
         const wrapper = shallow(<Card imgSrc="url.address" />);
 
         expect(wrapper.html()).toContain("card-img");
+        expect(wrapper.find("img").prop("src")).toEqual("url.address");
         expect(wrapper).toMatchSnapshot();
     });
 
@@ -51,6 +53,7 @@ describe("Component: Card - ", () => {
         const wrapper = shallow(<Card icon="home" />);
 
         expect(wrapper.html()).toContain("material-icons");
+        expect(wrapper.find(".material-icons").text()).toEqual("home");
         expect(wrapper).toMatchSnapshot();
     });
 
@@ -59,6 +62,7 @@ describe("Component: Card - ", () => {
 
         expect(wrapper.html()).toContain("p");
         expect(wrapper.find("p")).toHaveLength(1);
+        expect(wrapper.find("p").text()).toEqual("Card text");
         expect(wrapper).toMatchSnapshot();
     });
 
@@ -66,6 +70,8 @@ describe("Component: Card - ", () => {
         const wrapper = shallow(<Card smallText="small text" />);
 
         expect(wrapper.html()).toContain("small");
+        expect(wrapper.find("small")).toHaveLength(1);
+        expect(wrapper.find("small").text()).toEqual("small text");
         expect(wrapper).toMatchSnapshot();
     });
 
@@ -73,6 +79,8 @@ describe("Component: Card - ", () => {
         const wrapper = shallow(<Card btnTxt="Button" />);
 
         expect(wrapper.html()).toContain("btn");
+        expect(wrapper.find(".btn")).toHaveLength(1);
+        expect(wrapper.find(".btn").text()).toEqual("Button");
         expect(wrapper).toMatchSnapshot();
     });
 
@@ -80,6 +88,8 @@ describe("Component: Card - ", () => {
         const wrapper = shallow(<Card footerTxt="Footer information" />);
 
         expect(wrapper.html()).toContain("footer-text");
+        expect(wrapper.find(".footer-text")).toHaveLength(1);
+        expect(wrapper.find(".footer-text").text()).toEqual("Footer information");
         expect(wrapper).toMatchSnapshot();
     });
 
@@ -87,6 +97,8 @@ describe("Component: Card - ", () => {
         const wrapper = shallow(<Card footerLinkTxt="Click this footer link" />);
 
         expect(wrapper.html()).toContain("footer-link");
+        expect(wrapper.find(".footer-link")).toHaveLength(1);
+        expect(wrapper.find(".footer-link").text()).toEqual("Click this footer link");
         expect(wrapper).toMatchSnapshot();
     });
 });
