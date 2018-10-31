@@ -7,7 +7,7 @@ import MediaObject from "@/MediaObject";
 
 const Overview = () => (
     <>
-        <h2 id="overview">Cards horizontal</h2>
+        <h2 id="overview">Default behaviour</h2>
         <p>
             Wrap indiviual cards in the <Property value=".cards" /> class to display them lined up next to each other.
             When the window reaches <Link to="/docs/core/breakpoints">breakpoint</Link> sm the cards will switch to mobile view and take up one row each and stretch to fill the width of the container.
