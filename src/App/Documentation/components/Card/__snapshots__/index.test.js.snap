@@ -180,23 +180,6 @@ exports[`Documentation: Card Overview renders 1`] = `
           textsm="bob.corlsan@payex.com"
         />
       </Card>
-      <Card
-        btnTxt="Button"
-        footerLinkTxt="You wanna click this link?"
-        footerTxt="This is some text that goes in the footer."
-        imgSrc="https://picsum.photos/300"
-        smallText="And the small text"
-        text="This is the cards text"
-        title="Card default"
-        type="default"
-      >
-        <MediaObject
-          heading="75%"
-          icon="verified_user"
-          size="sm"
-          textsm="Complete"
-        />
-      </Card>
     </div>
   </ComponentPreview>
 </Fragment>
