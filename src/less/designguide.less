@@ -86,42 +86,34 @@
     }
 
     .showcase-panel {
-        div.d-block,
-        div.d-inline {
-            padding: 0.5rem;
+        .sc-highlight {
+            background-color: rgba(86, 61, 124, 0.15);
+            border: 1px solid rgba(86, 61, 124, 0.15);
         }
 
-        .sheet.d-block {
-            padding: 0;
-        }
-    }
-
-    .sc-highlight {
-        background-color: rgba(86, 61, 124, 0.15);
-        border: 1px solid rgba(86, 61, 124, 0.15);
-    }
-
-    .showcase-grid {
-        .row {
-            > [class*="col"] {
-                padding-top: 0.5rem;
-                padding-bottom: 0.5rem;
-                background: @gray-9;
-                border: 1px solid fade(@gray-8, 80%);
-            }
-
-            + .row {
-                margin-top: 1rem;
-            }
-        }
-
-        &.showcase-vertical-space {
+        .showcase-grid {
             .row {
-                background: @gray-10;
-                height: 10rem;
+                > [class*="col"] {
+                    padding-top: 0.5rem;
+                    padding-bottom: 0.5rem;
+                    background: @gray-9;
+                    border: 1px solid fade(@gray-8, 80%);
+                }
+
+                + .row {
+                    margin-top: 1rem;
+                }
+            }
+
+            &.showcase-vertical-space {
+                .row {
+                    background: @gray-10;
+                    height: 10rem;
+                }
             }
         }
     }
+
 
     .browser-support-table {
         th,

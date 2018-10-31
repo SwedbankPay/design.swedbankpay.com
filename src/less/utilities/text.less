@@ -8,24 +8,14 @@
 
 // Responsive alignment
 
-.text-responsive-alignment-rules(@infix) {
-    .text@{infix}-left           { text-align: left !important; }
-    .text@{infix}-right          { text-align: right !important; }
-    .text@{infix}-center         { text-align: center !important; }
-}
-
-// Creating base clases like ".text-left"
-.text-responsive-alignment-rules(~"");
-
-// Creating classes for breakpoint abbreviations like ".text-md-left"
 .for-each(@breakpoint in @grid-breakpoints) {
-    @infix: extract(@breakpoint, 1);
-
-    .ruleset() {
-        .text-responsive-alignment-rules(~"-@{infix}");
+    @ruleset: {
+        .text@{infix}-left           { text-align: left !important; }
+        .text@{infix}-right          { text-align: right !important; }
+        .text@{infix}-center         { text-align: center !important; }
     }
 
-    .media-breakpoint-up(@infix, @breakpoint, { .ruleset(); });
+    .media-breakpoint-up(@breakpoint, @ruleset);
 }
 
 // Transformation
