@@ -1,5 +1,7 @@
 /* stylelint-disable declaration-no-important */
-@properties: ~"width" ~"w", ~"height" ~"h";
+@properties:
+    ~"width" ~"w",
+    ~"height" ~"h";
 
 .for-each(@property in @properties) {
     @prop: extract(@property, 1);
