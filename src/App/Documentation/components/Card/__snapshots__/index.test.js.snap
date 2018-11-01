@@ -10,37 +10,28 @@ exports[`Documentation: Card CardText renders 1`] = `
   >
     Card...
   </p>
-  <Overview />
+  <DefaultBehaviour />
+  <CardTypes />
 </div>
 `;
 
-exports[`Documentation: Card Overview renders 1`] = `
+exports[`Documentation: Card CardTypes renders 1`] = `
 <Fragment>
   <h2
-    id="overview"
+    id="card-types"
   >
-    Overview
+    Card Types
   </h2>
   <p>
-    Overview... 
-    <Property
-      value=".card"
-    />
-  </p>
-  <p>
-    ... 
+    To decide how your cards will look use 
     <Property
       value=".card-default"
     />
-  </p>
-  <p>
-    ... 
+    , 
     <Property
       value=".card-brand"
     />
-  </p>
-  <p>
-    ... 
+    , or 
     <Property
       value=".card-light"
     />
@@ -53,47 +44,148 @@ exports[`Documentation: Card Overview renders 1`] = `
     <div
       className="cards"
     >
-      <ul>
-        <Card
-          btnTxt="Button"
-          footerLinkTxt="You wanna click this link?"
-          footerTxt="This is some text that goes in the footer."
-          highlightSubTitle="Outstanding balance"
-          highlightTitle="725 NOK"
+      <Card
+        btnTxt="Button"
+        footerLinkTxt="You wanna click this link?"
+        footerTxt="This is some text that goes in the footer."
+        imgSrc="https://picsum.photos/300"
+        smallText="And the small text"
+        text="This is the cards text"
+        title="Card default"
+        type="default"
+      >
+        <MediaObject
+          heading="Bob Corlsan"
+          icon="account_circle"
+          size="sm"
+          text="bob.corlsan@payex.com"
+          textSmall={true}
+        />
+      </Card>
+      <Card
+        btnTxt="Button"
+        footerLinkTxt="You wanna click this link?"
+        footerTxt="This is some text that goes in the footer."
+        imgSrc="https://picsum.photos/300"
+        smallText="And the small text"
+        text="This is the cards text"
+        title="Card brand"
+        type="brand"
+      >
+        <MediaObject
+          heading="725 NOK"
           icon="account_balance"
-          imgSrc="https://picsum.photos/300"
-          smallText="And the small text"
-          text="This is the cards text"
-          title="Card default"
-          type="default"
+          size="sm"
+          text="Outstanding balance"
+          textSmall={true}
         />
-        <Card
-          btnTxt="Button"
-          footerLinkTxt="You wanna click this link?"
-          footerTxt="This is some text that goes in the footer."
-          highlightSubTitle="bob.corlsan@payex.com"
-          highlightTitle="Bob Corlsan"
-          icon="face"
-          imgSrc="https://picsum.photos/300"
-          smallText="And the small text"
-          text="This is the cards text"
-          title="Card brand"
-          type="brand"
-        />
-        <Card
-          btnTxt="Button"
-          footerLinkTxt="You wanna click this link?"
-          footerTxt="This is some text that goes in the footer."
-          highlightSubTitle="Complete"
-          highlightTitle="75%"
+      </Card>
+      <Card
+        btnTxt="Button"
+        footerLinkTxt="You wanna click this link?"
+        footerTxt="This is some text that goes in the footer."
+        imgSrc="https://picsum.photos/300"
+        smallText="And the small text"
+        text="This is the cards text"
+        title="Card light"
+        type="light"
+      >
+        <MediaObject
+          heading="75%"
           icon="verified_user"
-          imgSrc="https://picsum.photos/300"
-          smallText="And the small text"
-          text="This is the cards text"
-          title="Card light"
-          type="light"
+          size="sm"
+          text="Complete"
+          textSmall={true}
         />
-      </ul>
+      </Card>
+    </div>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Card DefaultBehaviour renders 1`] = `
+<Fragment>
+  <h2
+    id="default-behaviour"
+  >
+    Default behaviour
+  </h2>
+  <p>
+    Wrap indiviual cards in the 
+    <Property
+      value=".cards"
+    />
+     class to display them lined up next to each other. When the window reaches 
+    <Link
+      replace={false}
+      to="/docs/core/breakpoints"
+    >
+      breakpoint
+    </Link>
+     sm the cards will switch to mobile view and take up one row each and stretch to fill the width of the container.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="cards"
+    >
+      <Card
+        btnTxt="Button"
+        footerLinkTxt="You wanna click this link?"
+        footerTxt="This is some text that goes in the footer."
+        imgSrc="https://picsum.photos/300"
+        smallText="And the small text"
+        text="This is the cards text"
+        title="Card default"
+        type="default"
+      >
+        <MediaObject
+          heading="Bob Corlsan"
+          icon="account_circle"
+          size="sm"
+          text="bob.corlsan@payex.com"
+          textSmall={true}
+        />
+      </Card>
+      <Card
+        btnTxt="Button"
+        footerLinkTxt="You wanna click this link?"
+        footerTxt="This is some text that goes in the footer."
+        imgSrc="https://picsum.photos/300"
+        smallText="And the small text"
+        text="This is the cards text"
+        title="Card default"
+        type="default"
+      >
+        <MediaObject
+          heading="725 NOK"
+          icon="account_balance"
+          size="sm"
+          text="Outstanding balance"
+          textSmall={true}
+        />
+      </Card>
+      <Card
+        btnTxt="Button"
+        footerLinkTxt="You wanna click this link?"
+        footerTxt="This is some text that goes in the footer."
+        imgSrc="https://picsum.photos/300"
+        smallText="And the small text"
+        text="This is the cards text"
+        title="Card default"
+        type="default"
+      >
+        <MediaObject
+          heading="75%"
+          icon="verified_user"
+          size="sm"
+          text="Complete"
+          textSmall={true}
+        />
+      </Card>
     </div>
   </ComponentPreview>
 </Fragment>
