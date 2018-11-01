@@ -58,7 +58,8 @@ exports[`Documentation: Card CardTypes renders 1`] = `
           heading="Bob Corlsan"
           icon="account_circle"
           size="sm"
-          textsm="bob.corlsan@payex.com"
+          text="bob.corlsan@payex.com"
+          textSmall={true}
         />
       </Card>
       <Card
@@ -75,7 +76,8 @@ exports[`Documentation: Card CardTypes renders 1`] = `
           heading="725 NOK"
           icon="account_balance"
           size="sm"
-          textsm="Outstanding balance"
+          text="Outstanding balance"
+          textSmall={true}
         />
       </Card>
       <Card
@@ -92,7 +94,8 @@ exports[`Documentation: Card CardTypes renders 1`] = `
           heading="75%"
           icon="verified_user"
           size="sm"
-          textsm="Complete"
+          text="Complete"
+          textSmall={true}
         />
       </Card>
     </div>
@@ -143,7 +146,8 @@ exports[`Documentation: Card DefaultBehaviour renders 1`] = `
           heading="Bob Corlsan"
           icon="account_circle"
           size="sm"
-          textsm="bob.corlsan@payex.com"
+          text="bob.corlsan@payex.com"
+          textSmall={true}
         />
       </Card>
       <Card
@@ -160,7 +164,8 @@ exports[`Documentation: Card DefaultBehaviour renders 1`] = `
           heading="725 NOK"
           icon="account_balance"
           size="sm"
-          textsm="Outstanding balance"
+          text="Outstanding balance"
+          textSmall={true}
         />
       </Card>
       <Card
@@ -177,7 +182,8 @@ exports[`Documentation: Card DefaultBehaviour renders 1`] = `
           heading="75%"
           icon="verified_user"
           size="sm"
-          textsm="Complete"
+          text="Complete"
+          textSmall={true}
         />
       </Card>
     </div>

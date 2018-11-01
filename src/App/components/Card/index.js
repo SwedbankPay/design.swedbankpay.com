@@ -15,7 +15,7 @@ const Card = ({ type, title, imgSrc, text, smallText, btnTxt, footerTxt, footerL
             {children}
         </div>
         <div className="card-body">
-            {text ? <p>{text}</p> : null}
+            {text ? <p>{text}</p> : null}{"\n"}
             {smallText ? <small>{smallText}</small> : null}
         </div>
         <footer>

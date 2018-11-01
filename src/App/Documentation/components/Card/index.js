@@ -24,7 +24,7 @@ const DefaultBehaviour = () => (
                     footerTxt="This is some text that goes in the footer."
                     footerLinkTxt="You wanna click this link?"
                 >
-                    <MediaObject size="sm" icon="account_circle" heading="Bob Corlsan" textsm="bob.corlsan@payex.com" />
+                    <MediaObject size="sm" icon="account_circle" heading="Bob Corlsan" text="bob.corlsan@payex.com" textSmall />
                 </CardComponent>
 
                 <CardComponent
@@ -37,7 +37,7 @@ const DefaultBehaviour = () => (
                     footerTxt="This is some text that goes in the footer."
                     footerLinkTxt="You wanna click this link?"
                 >
-                    <MediaObject size="sm" icon="account_balance" heading="725 NOK" textsm="Outstanding balance" />
+                    <MediaObject size="sm" icon="account_balance" heading="725 NOK" text="Outstanding balance" textSmall />
                 </CardComponent>
 
                 <CardComponent
@@ -50,7 +50,7 @@ const DefaultBehaviour = () => (
                     footerTxt="This is some text that goes in the footer."
                     footerLinkTxt="You wanna click this link?"
                 >
-                    <MediaObject size="sm" icon="verified_user" heading="75%" textsm="Complete" />
+                    <MediaObject size="sm" icon="verified_user" heading="75%" text="Complete" textSmall />
                 </CardComponent>
             </div>
         </ComponentPreview>
@@ -73,7 +73,7 @@ const CardTypes = () => (
                     footerTxt="This is some text that goes in the footer."
                     footerLinkTxt="You wanna click this link?"
                 >
-                    <MediaObject size="sm" icon="account_circle" heading="Bob Corlsan" textsm="bob.corlsan@payex.com" />
+                    <MediaObject size="sm" icon="account_circle" heading="Bob Corlsan" text="bob.corlsan@payex.com" textSmall />
                 </CardComponent>
 
                 <CardComponent
@@ -86,7 +86,7 @@ const CardTypes = () => (
                     footerTxt="This is some text that goes in the footer."
                     footerLinkTxt="You wanna click this link?"
                 >
-                    <MediaObject size="sm" icon="account_balance" heading="725 NOK" textsm="Outstanding balance" />
+                    <MediaObject size="sm" icon="account_balance" heading="725 NOK" text="Outstanding balance" textSmall />
                 </CardComponent>
 
                 <CardComponent
@@ -99,7 +99,7 @@ const CardTypes = () => (
                     footerTxt="This is some text that goes in the footer."
                     footerLinkTxt="You wanna click this link?"
                 >
-                    <MediaObject size="sm" icon="verified_user" heading="75%" textsm="Complete" />
+                    <MediaObject size="sm" icon="verified_user" heading="75%" text="Complete" textSmall />
                 </CardComponent>
             </div>
         </ComponentPreview>

@@ -9,7 +9,10 @@ exports[`Component: Card -  renders a button in the footer 1`] = `
   />
   <div
     className="card-body"
-  />
+  >
+    
+
+  </div>
   <footer>
     <button
       className="btn btn-primary btn-block"
@@ -31,6 +34,8 @@ exports[`Component: Card -  renders a smallText in card-body 1`] = `
   <div
     className="card-body"
   >
+    
+
     <small>
       small text
     </small>
@@ -52,6 +57,8 @@ exports[`Component: Card -  renders a text in card-body 1`] = `
     <p>
       Card text
     </p>
+    
+
   </div>
   <footer />
 </div>
@@ -75,7 +82,10 @@ exports[`Component: Card -  renders a title 1`] = `
   />
   <div
     className="card-body"
-  />
+  >
+    
+
+  </div>
   <footer />
 </div>
 `;
@@ -101,7 +111,10 @@ exports[`Component: Card -  renders an image 1`] = `
   />
   <div
     className="card-body"
-  />
+  >
+    
+
+  </div>
   <footer />
 </div>
 `;
@@ -115,7 +128,10 @@ exports[`Component: Card -  renders footer link text 1`] = `
   />
   <div
     className="card-body"
-  />
+  >
+    
+
+  </div>
   <footer>
     <div
       className="footer-link"
@@ -139,7 +155,10 @@ exports[`Component: Card -  renders footer text 1`] = `
   />
   <div
     className="card-body"
-  />
+  >
+    
+
+  </div>
   <footer>
     <div
       className="footer-text"
@@ -161,7 +180,10 @@ exports[`Component: Card -  renders with class name card 1`] = `
   />
   <div
     className="card-body"
-  />
+  >
+    
+
+  </div>
   <footer />
 </div>
 `;
@@ -175,7 +197,10 @@ exports[`Component: Card -  renders with correct class name 1`] = `
   />
   <div
     className="card-body"
-  />
+  >
+    
+
+  </div>
   <footer />
 </div>
 `;
@@ -189,7 +214,10 @@ exports[`Component: Card -  throws an error if type does not match proptypes 1`]
   />
   <div
     className="card-body"
-  />
+  >
+    
+
+  </div>
   <footer />
 </div>
 `;
