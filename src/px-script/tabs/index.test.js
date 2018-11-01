@@ -49,7 +49,7 @@ describe("px-script: tabs", () => {
         ReactDOM.unmountComponentAtNode(div);
     });
 
-    it("does not change active if you click an active tab", () => {
+    it("prevents default if you click an active tab", () => {
         ReactDOM.render(<NoActiveTab items={items} />, div);
         tabs.init();
 
@@ -67,19 +67,39 @@ describe("px-script: tabs", () => {
         ReactDOM.unmountComponentAtNode(div);
     });
 
-    it("changes active item when an inactive item gets clicked", () => {
+    it("opens a tab dropdown when clicked", () => {
         ReactDOM.render(<NoActiveTab items={items} />, div);
-        tabs.init();
 
         const renderedTab = document.querySelector(".tabs");
-        const inactiveTab = renderedTab.querySelector("li:not(.active)");
+        const tabUl = document.querySelector("ul");
+
+        tabUl.style.flexDirection = "column";
+        tabs.init();
 
         expect(renderedTab).toBeTruthy();
-        expect(inactiveTab).toBeTruthy();
 
-        inactiveTab.click()
+        renderedTab.click();
 
-        expect(inactiveTab.classList).toContain("active");
+        expect(renderedTab.classList).toContain("tabs-open");
+
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
+    it("closes a tab dropdown when clicked", () => {
+        ReactDOM.render(<NoActiveTab items={items} />, div);
+
+        const renderedTab = document.querySelector(".tabs");
+        const tabUl = document.querySelector("ul");
+
+        expect(renderedTab).toBeTruthy();
+
+        renderedTab.classList.add("tabs-open");
+        tabUl.style.flexDirection = "column";
+        tabs.init();
+
+        renderedTab.click();
+
+        expect(renderedTab.classList).not.toContain("tabs-open");
 
         ReactDOM.unmountComponentAtNode(div);
     });

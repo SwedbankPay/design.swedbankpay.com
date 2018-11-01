@@ -41,7 +41,6 @@ class Tabs {
     }
 
     close () {
-        console.log("close");
         this.isOpen = false;
         this._el.classList.remove("tabs-open");
         window.removeEventListener("resize", this.close);
