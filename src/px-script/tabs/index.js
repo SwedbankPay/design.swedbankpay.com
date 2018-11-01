@@ -5,19 +5,14 @@ class Tabs {
         this.classList = el.classList;
         this.isOpen = el.classList.contains("tabs-open");
         this.hasActive = !!this._el.querySelector(".active");
+        this.openUl = this._el.querySelector("UL");
 
-        document.addEventListener("click", e => {
-            if (!e.target.closest(".tabs") && this.isOpen) {
-                this.close();
-            }
-        });
-
-        this._el.addEventListener("click", () => {
-            this.flexDir = getComputedStyle(this._el.querySelector("UL")).flexDirection;
+        this._el.addEventListener("click", e => {
+            this.flexDir = getComputedStyle(this.openUl).flexDirection;
 
             if (!this.isOpen && this.flexDir === "column") {
                 this.open();
-            } else if (this.isOpen && this.flexDir === "column") {
+            } else if (this.isOpen && this.flexDir === "column" && e.target !== this.openUl) {
                 this.close();
             }
         });
@@ -46,6 +41,7 @@ class Tabs {
     }
 
     close () {
+        console.log("close");
         this.isOpen = false;
         this._el.classList.remove("tabs-open");
         window.removeEventListener("resize", this.close);
@@ -54,7 +50,19 @@ class Tabs {
 
 const tabs = (() => {
     const init = () => {
-        [...document.querySelectorAll(".tabs")].map(tabs => new Tabs(tabs));
+        let tabs = document.querySelectorAll(".tabs");
+
+        if (tabs) {
+            tabs = [...tabs].map(tabs => new Tabs(tabs));
+
+            document.addEventListener("click", e => {
+                tabs.forEach(tab => {
+                    if (!e.target.closest(".tabs") && tab.isOpen) {
+                        tab.close();
+                    }
+                });
+            });
+        }
     };
 
     return { init };
