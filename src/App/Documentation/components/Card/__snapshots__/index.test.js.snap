@@ -57,6 +57,7 @@ exports[`Documentation: Card CardTypes renders 1`] = `
         <MediaObject
           heading="Bob Corlsan"
           icon="account_circle"
+          muted={true}
           size="sm"
           text="bob.corlsan@payex.com"
           textSmall={true}
@@ -75,6 +76,7 @@ exports[`Documentation: Card CardTypes renders 1`] = `
         <MediaObject
           heading="725 NOK"
           icon="account_balance"
+          muted={true}
           size="sm"
           text="Outstanding balance"
           textSmall={true}
@@ -93,6 +95,7 @@ exports[`Documentation: Card CardTypes renders 1`] = `
         <MediaObject
           heading="75%"
           icon="verified_user"
+          muted={true}
           size="sm"
           text="Complete"
           textSmall={true}
@@ -145,6 +148,7 @@ exports[`Documentation: Card DefaultBehaviour renders 1`] = `
         <MediaObject
           heading="Bob Corlsan"
           icon="account_circle"
+          muted={true}
           size="sm"
           text="bob.corlsan@payex.com"
           textSmall={true}
@@ -163,6 +167,7 @@ exports[`Documentation: Card DefaultBehaviour renders 1`] = `
         <MediaObject
           heading="725 NOK"
           icon="account_balance"
+          muted={true}
           size="sm"
           text="Outstanding balance"
           textSmall={true}
@@ -181,6 +186,7 @@ exports[`Documentation: Card DefaultBehaviour renders 1`] = `
         <MediaObject
           heading="75%"
           icon="verified_user"
+          muted={true}
           size="sm"
           text="Complete"
           textSmall={true}

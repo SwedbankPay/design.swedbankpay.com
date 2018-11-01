@@ -88,10 +88,11 @@
 @state-warning:                             @yellow;
 @state-error:                               @red;
 
+
 /*
- * 2. Global
- * ==========================================================================
- */
+* 2. Global
+* ==========================================================================
+*/
 
 @spacer:                                    1rem; /* Default */
 
@@ -265,6 +266,23 @@
 @text-neutral:                              @state-neutral;
 @text-warning:                              @state-warning;
 @text-error:                                @state-error;
+
+/* Color list */
+/* stylelint-disable indentation */
+@color-list:                                ~"default" @text-color,
+                                            ~"green" @green,
+                                            ~"purple" @purple,
+                                            ~"blue" @blue,
+                                            ~"yellow" @yellow,
+                                            ~"red" @red,
+                                            ~"black" @black,
+                                            ~"white" @white,
+                                            ~"brand" @brand-primary,
+                                            ~"success" @state-success,
+                                            ~"neutral" @state-neutral,
+                                            ~"warning" @state-warning,
+                                            ~"error" @state-error;
+/* stylelint-enable */
 
 @blockquote-border-color:                   @gray-8;
 @blockquote-small-color:                    @gray-5;
