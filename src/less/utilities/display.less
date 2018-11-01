@@ -1,37 +1,22 @@
-/* stylelint-disable declaration-no-important */
-/* stylelint-disable block-opening-brace-space-before */
-
-.display-rules(@infix) {
-    .d@{infix}-none           { display: none !important; }
-    .d@{infix}-inline         { display: inline !important; }
-    .d@{infix}-inline-block   { display: inline-block !important; }
-    .d@{infix}-block          { display: block !important; }
-    .d@{infix}-table-row      { display: table-row !important; }
-    .d@{infix}-table-cell     { display: table-cell !important; }
-    .d@{infix}-flex           { display: flex !important; }
-    .d@{infix}-inline-flex    { display: inline-flex !important; }
-}
-
-/* stylelint-enable block-opening-brace-space-before */
+/* stylelint-disable declaration-no-important, block-opening-brace-space-before */
 
 /*
- * Creating base-classes like ".d-none"
- */
-
-.display-rules(~"");
-
-/*
- * Creating classes for breakpoint abbrebiations like ".d-md-none"
+ * Utilities for common `display` values
  */
 
 .for-each(@breakpoint in @grid-breakpoints) {
-    @infix: extract(@breakpoint, 1);
-
-    .ruleset() {
-        .display-rules(~"-@{infix}");
+    @ruleset: {
+        .d@{infix}-none           { display: none !important; }
+        .d@{infix}-inline         { display: inline !important; }
+        .d@{infix}-inline-block   { display: inline-block !important; }
+        .d@{infix}-block          { display: block !important; }
+        .d@{infix}-table-row      { display: table-row !important; }
+        .d@{infix}-table-cell     { display: table-cell !important; }
+        .d@{infix}-flex           { display: flex !important; }
+        .d@{infix}-inline-flex    { display: inline-flex !important; }
     }
 
-    .media-breakpoint-up(@infix, @breakpoint, { .ruleset(); });
+    .media-breakpoint-up(@breakpoint, @ruleset);
 }
 
 /*
@@ -39,5 +24,12 @@
  */
 
 @media print {
-    .display-rules(~"-print");
+    .d-print-none           { display: none !important; }
+    .d-print-inline         { display: inline !important; }
+    .d-print-inline-block   { display: inline-block !important; }
+    .d-print-block          { display: block !important; }
+    .d-print-table-row      { display: table-row !important; }
+    .d-print-table-cell     { display: table-cell !important; }
+    .d-print-flex           { display: flex !important; }
+    .d-print-inline-flex    { display: inline-flex !important; }
 }
