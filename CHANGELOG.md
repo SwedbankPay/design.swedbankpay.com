@@ -8,4 +8,6 @@
 
 ### Fixed
 
+- Fixed bug where an opened collapsed tab would close when clicking the container without clicking a list item.
+
 ### Removed
