@@ -1,0 +1,9 @@
+visa
+mastercard
+masterpass
+diners
+amex
+Xvipps
+Xswish
+Xmobilepay
+Xpaypal
