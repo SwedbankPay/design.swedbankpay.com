@@ -48,7 +48,7 @@ describe("px-script: tabs", () => {
         ReactDOM.render(<NoTabsClass items={items} />, div);
         tabs.init();
 
-        const renderedTab = document.querySelector("active");
+        const renderedTab = document.querySelector(".tabs");
 
         expect(renderedTab).toBeFalsy();
 

@@ -51,7 +51,7 @@ const tabs = (() => {
     const init = () => {
         let tabs = document.querySelectorAll(".tabs");
 
-        if (tabs) {
+        if (tabs.length > 0) {
             tabs = [...tabs].map(tab => new Tabs(tab));
 
             document.addEventListener("click", e => {
