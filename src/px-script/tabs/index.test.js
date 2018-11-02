@@ -2,8 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import tabs from "./index";
-
-// TODO: write tests for "else" branches [AW]
+import TabsComponent from "@/Tabs";
 
 describe("px-script: tabs", () => {
     const div = document.createElement("div");
@@ -37,16 +36,33 @@ describe("px-script: tabs", () => {
         ReactDOM.render(<NoActiveTab items={items} />, div);
 
         const renderedTab = document.querySelector(".tabs");
-        let activeTab = document.querySelector(".active");
+        let activeTab = renderedTab.querySelector(".active");
 
         expect(renderedTab).toBeTruthy();
         expect(activeTab).toBeFalsy();
 
         tabs.init();
 
-        activeTab = document.querySelector(".active");
+        activeTab = renderedTab.querySelector(".active");
 
         expect(activeTab).toBeTruthy();
+
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
+    it("does not reassign active item if one exists", () => {
+        ReactDOM.render(<TabsComponent items={items} />, div);
+        tabs.init();
+
+        const renderedTab = document.querySelector(".tabs");
+        const activeTab = renderedTab.querySelector(".active");
+        const firstTab = renderedTab.querySelector("li");
+
+        expect(activeTab).toBeTruthy();
+        expect(firstTab).toBeTruthy();
+        expect(activeTab.classList).toContain("active");
+        expect(firstTab.classList).not.toContain("active");
+        expect(activeTab).not.toEqual(firstTab);
 
         ReactDOM.unmountComponentAtNode(div);
     });
@@ -75,7 +91,7 @@ describe("px-script: tabs", () => {
         ReactDOM.render(<NoActiveTab items={items} />, div);
 
         const renderedTab = document.querySelector(".tabs");
-        const tabUl = document.querySelector("ul");
+        const tabUl = renderedTab.querySelector("ul");
 
         tabUl.style.flexDirection = "column";
         tabs.init();
@@ -86,15 +102,20 @@ describe("px-script: tabs", () => {
 
         expect(renderedTab.classList).toContain("tabs-open");
 
-        // Not unmounting to use states in following test. [AW]
+        ReactDOM.unmountComponentAtNode(div);
     });
 
-    // NB! Do not put new tests between these two [AW]
-
     it("closes a dropdown tab when clicked", () => {
+        ReactDOM.render(<NoActiveTab items={items} />, div);
+
         const renderedTab = document.querySelector(".tabs");
+        const tabUl = renderedTab.querySelector("ul");
 
         expect(renderedTab).toBeTruthy();
+
+        renderedTab.classList.add("tabs-open");
+        tabUl.style.flexDirection = "column";
+        tabs.init();
 
         renderedTab.click();
 

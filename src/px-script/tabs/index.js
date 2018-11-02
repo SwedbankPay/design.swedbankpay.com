@@ -52,7 +52,7 @@ const tabs = (() => {
         let tabs = document.querySelectorAll(".tabs");
 
         if (tabs) {
-            tabs = [...tabs].map(tabs => new Tabs(tabs));
+            tabs = [...tabs].map(tab => new Tabs(tab));
 
             document.addEventListener("click", e => {
                 tabs.forEach(tab => {
