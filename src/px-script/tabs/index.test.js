@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 
 import tabs from "./index";
 
+// TODO: write tests for "else" branches [AW]
+
 describe("px-script: tabs", () => {
     const div = document.createElement("div");
     const items = ["item1", "item2", "item3"];
@@ -49,6 +51,8 @@ describe("px-script: tabs", () => {
         ReactDOM.unmountComponentAtNode(div);
     });
 
+    // TODO: check if preventdefault was actually called [AW]
+
     it("prevents default if you click an active tab", () => {
         ReactDOM.render(<NoActiveTab items={items} />, div);
         tabs.init();
@@ -82,20 +86,15 @@ describe("px-script: tabs", () => {
 
         expect(renderedTab.classList).toContain("tabs-open");
 
-        ReactDOM.unmountComponentAtNode(div);
+        // Not unmounting to use states in following test. [AW]
     });
 
-    it("closes a tab dropdown when clicked", () => {
-        ReactDOM.render(<NoActiveTab items={items} />, div);
+    // NB! Do not put new tests between these two [AW]
 
+    it("closes a dropdown tab when clicked", () => {
         const renderedTab = document.querySelector(".tabs");
-        const tabUl = document.querySelector("ul");
 
         expect(renderedTab).toBeTruthy();
-
-        renderedTab.classList.add("tabs-open");
-        tabUl.style.flexDirection = "column";
-        tabs.init();
 
         renderedTab.click();
 
@@ -103,13 +102,45 @@ describe("px-script: tabs", () => {
 
         ReactDOM.unmountComponentAtNode(div);
     });
+
+    it("closes a dropdown tab when user clicks outside the dropdown tab", () => {
+        ReactDOM.render(<NoActiveTab items={items} />, div);
+
+        const renderedTab = document.querySelector(".tabs");
+        const tabUl = renderedTab.querySelector("ul");
+
+        expect(renderedTab).toBeTruthy();
+
+        renderedTab.classList.add("tabs-open");
+        tabUl.style.flexDirection = "column";
+        tabs.init();
+
+        document.querySelector("html").click();
+
+        expect(renderedTab.classList).not.toContain("tabs-open");
+
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
+    it("closes a dropdown tab when window is resized", () => {
+        ReactDOM.render(<NoActiveTab items={items} />, div);
+
+        const renderedTab = document.querySelector(".tabs");
+        const tabUl = renderedTab.querySelector("ul");
+
+        expect(renderedTab).toBeTruthy();
+
+        tabUl.style.flexDirection = "column";
+        tabs.init();
+
+        tabUl.click();
+
+        expect(renderedTab.classList).toContain("tabs-open");
+
+        global.dispatchEvent(new Event("resize"));
+
+        expect(renderedTab.classList).not.toContain("tabs-open");
+
+        ReactDOM.unmountComponentAtNode(div);
+    });
 });
-
-// it("", () => {
-//     ReactDOM.render(<NoActiveTab items={items} />, div);
-//     tabs.init();
-
-//     const renderedTab = document.querySelector(".tabs");
-
-//     ReactDOM.unmountComponentAtNode(div);
-// });
