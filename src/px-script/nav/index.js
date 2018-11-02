@@ -108,7 +108,7 @@ const nav = (() => {
     const init = () => {
         let navs = document.querySelectorAll(".nav");
 
-        if (navs) {
+        if (navs.length > 0) {
             navs = [...navs].map(nav => new Nav(nav));
 
             document.addEventListener("click", e => {
