@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import ActionList, { Overview, ActionListText } from "./index";
+import ActionList, { Overview, Anchorpoints, ActionListText } from "./index";
 
 describe("Components: ActionList", () => {
     it("is defined", () => {
@@ -22,6 +22,38 @@ describe("Components: ActionList", () => {
         it("renders", () => {
             const wrapper = shallow(<Overview />);
 
+            expect(wrapper).toMatchSnapshot();
+        });
+
+        it("onClick prevents default", () => {
+            const wrapper = shallow(<Overview />);
+            const clickHandler = { preventDefault: jest.fn() };
+            const onclickAnchors = wrapper.find("a");
+
+            onclickAnchors.forEach(anchor => anchor.simulate("click", clickHandler));
+            expect(clickHandler.preventDefault).toBeCalledTimes(onclickAnchors.length);
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("Anchorpoints", () => {
+        it("is defined", () => {
+            expect(Anchorpoints).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<Anchorpoints />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+
+        it("onClick prevents default", () => {
+            const wrapper = shallow(<Anchorpoints />);
+            const clickHandler = { preventDefault: jest.fn() };
+            const onclickAnchors = wrapper.find("a");
+
+            onclickAnchors.forEach(anchor => anchor.simulate("click", clickHandler));
+            expect(clickHandler.preventDefault).toBeCalledTimes(onclickAnchors.length);
             expect(wrapper).toMatchSnapshot();
         });
     });
