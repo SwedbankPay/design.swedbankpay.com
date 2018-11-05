@@ -24,6 +24,15 @@ describe("Documentation: Forms", () => {
 
             expect(wrapper).toMatchSnapshot();
         });
+
+        it("form prevents default", () => {
+            const wrapper = shallow(<Overview />);
+            const submitEvent = { preventDefault: jest.fn() };
+
+            wrapper.find("form").simulate("submit", submitEvent);
+            expect(submitEvent.preventDefault).toHaveBeenCalled();
+            expect(wrapper).toMatchSnapshot();
+        });
     });
 
     describe("FormGrid", () => {
@@ -34,6 +43,15 @@ describe("Documentation: Forms", () => {
         it("renders", () => {
             const wrapper = shallow(<FormGrid />);
 
+            expect(wrapper).toMatchSnapshot();
+        });
+
+        it("form prevents default", () => {
+            const wrapper = shallow(<FormGrid />);
+            const submitEvent = { preventDefault: jest.fn() };
+
+            wrapper.find("form").simulate("submit", submitEvent);
+            expect(submitEvent.preventDefault).toHaveBeenCalled();
             expect(wrapper).toMatchSnapshot();
         });
     });
@@ -58,6 +76,16 @@ describe("Documentation: Forms", () => {
         it("renders", () => {
             const wrapper = shallow(<UsageWithFieldsets />);
 
+            expect(wrapper).toMatchSnapshot();
+        });
+
+        it("form prevents default", () => {
+            const wrapper = shallow(<UsageWithFieldsets />);
+            const forms = wrapper.find("form");
+            const submitEvent = { preventDefault: jest.fn() };
+
+            forms.forEach(form => form.simulate("submit", submitEvent));
+            expect(submitEvent.preventDefault).toHaveBeenCalled();
             expect(wrapper).toMatchSnapshot();
         });
     });

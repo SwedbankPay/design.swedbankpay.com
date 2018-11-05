@@ -31,7 +31,7 @@ describe("Components: ActionList", () => {
             const onclickAnchors = wrapper.find("a");
 
             onclickAnchors.forEach(anchor => anchor.simulate("click", clickHandler));
-            expect(clickHandler.preventDefault).toBeCalledTimes(onclickAnchors.length);
+            expect(clickHandler.preventDefault).toHaveBeenCalledTimes(onclickAnchors.length);
             expect(wrapper).toMatchSnapshot();
         });
     });
@@ -53,7 +53,7 @@ describe("Components: ActionList", () => {
             const onclickAnchors = wrapper.find("a");
 
             onclickAnchors.forEach(anchor => anchor.simulate("click", clickHandler));
-            expect(clickHandler.preventDefault).toBeCalledTimes(onclickAnchors.length);
+            expect(clickHandler.preventDefault).toHaveBeenCalledTimes(onclickAnchors.length);
             expect(wrapper).toMatchSnapshot();
         });
     });
