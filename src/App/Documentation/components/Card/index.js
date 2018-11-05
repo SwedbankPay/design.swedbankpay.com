@@ -113,7 +113,7 @@ const CardVariants = () => (
         <h2 id="card-variants">Card Variants</h2>
         <p>
             You don`t have to use all sections of a card, you can use different combinations as you see fit.
-            The card body inherits the size of the largest card in the <Property value=".cards" /> container.
+            The card body inherits the size of the largest card that exists on the same line when wrapped with a <Property value=".cards" /> container.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="cards">
