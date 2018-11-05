@@ -23,6 +23,22 @@
         }
     }
 
+    .full-width-container {
+        margin: 0 -@base-margin-xl;
+
+        .table {
+            thead,
+            tbody {
+                tr {
+                    :first-child,
+                    :last-child {
+                        padding-left: @base-margin-xl;
+                    }
+                }
+            }
+        }
+    }
+
     &.panel-bottomless {
         .panel-body {
             margin-bottom: 0;
