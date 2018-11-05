@@ -152,4 +152,4 @@ const Tables = () => (
 export default Tables;
 
 /* For testing */
-export { BasicTable, StripedTable, CondensedTable, HoverTable, HoverStripedTable, DescriptionTable, TablesText };
+export { DocTable, BasicTable, StripedTable, CondensedTable, HoverTable, HoverStripedTable, DescriptionTable, TablesText };
