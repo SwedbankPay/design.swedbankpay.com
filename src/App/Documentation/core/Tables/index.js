@@ -67,6 +67,16 @@ const StripedTable = () => (
     </>
 );
 
+const CondensedTable = () => (
+    <>
+        <h2 id="condensed-table">Condensed table</h2>
+        <p>Condensed table info...</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <DocTable tableClass="table table-condensed" />
+        </ComponentPreview>
+    </>
+);
+
 const HoverTable = () => (
     <>
         <h2 id="hover-table">Hover table</h2>
@@ -123,6 +133,7 @@ const TablesText = () => (
         <p className="lead">Lots of nice info about tables will be here...</p>
         <BasicTable />
         <StripedTable />
+        <CondensedTable />
         <HoverTable />
         <HoverStripedTable />
         <DescriptionTable />
@@ -141,4 +152,4 @@ const Tables = () => (
 export default Tables;
 
 /* For testing */
-export { BasicTable, StripedTable, HoverTable, HoverStripedTable, DescriptionTable, TablesText };
+export { BasicTable, StripedTable, CondensedTable, HoverTable, HoverStripedTable, DescriptionTable, TablesText };
