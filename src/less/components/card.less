@@ -62,6 +62,10 @@
             display: flex;
             justify-content: center;
             align-content: center;
+
+            > * {
+                margin-bottom: 0;
+            }
         }
 
         .card-body {
@@ -100,10 +104,6 @@
                 &:not(:last-child) {
                     margin-top: @card-margin-top;
                 }
-            }
-
-            > :last-child {
-                margin-bottom: 0;
             }
         }
     }

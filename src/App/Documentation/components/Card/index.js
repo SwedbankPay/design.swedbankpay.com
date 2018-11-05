@@ -5,6 +5,8 @@ import { ComponentPreview, Property, DocToc, ExperimentalComponentAlert } from "
 import CardComponent from "@/Card";
 import MediaObject from "@/MediaObject";
 
+const textArr = ["This is a lot of text", "With some more text", "And then even some more", "Is it really possible to have this much text in one card?", "Yes!"];
+
 const DefaultBehaviour = () => (
     <>
         <h2 id="default-behaviour">Default behaviour</h2>
@@ -106,12 +108,51 @@ const CardTypes = () => (
     </>
 );
 
+const CardVariants = () => (
+    <>
+        <h2 id="card-variants">Card Variants</h2>
+        <p>
+            You don`t have to use all sections of a card, you can use different combinations as you see fit.
+            The card body inherits the size of the largest card in the <Property value=".cards" /> container.
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <div className="cards">
+                <CardComponent
+                    type="default"
+                    title="My custom card"
+                    text="Card text"
+                    smallText="Small card text"
+                    footerTxt="This is some text that goes in the footer."
+                >
+                    <MediaObject size="sm" icon="verified_user" heading="75%" text="Complete" textSmall muted />
+                </CardComponent>
+
+                <CardComponent
+                    type="default"
+                    title="Text card"
+                    textSection={textArr}
+                    smallText="This is some small text"
+                    footerTxt="This is some text that goes in the footer."
+                />
+
+                <CardComponent
+                    type="brand"
+                    title="Image card"
+                    imgSrc="https://picsum.photos/300"
+                    text="This is a card with an image and body"
+                />
+            </div>
+        </ComponentPreview>
+    </>
+);
+
 const CardText = () => (
     <div className="col-md-12 col-lg-10 doc-body">
         <ExperimentalComponentAlert />
         <p className="lead">Card...</p>
         <DefaultBehaviour />
         <CardTypes />
+        <CardVariants />
     </div>
 );
 
@@ -131,4 +172,4 @@ class Card extends Component {
 export default Card;
 
 /* For testing */
-export { DefaultBehaviour, CardTypes, CardText };
+export { DefaultBehaviour, CardTypes, CardText, CardVariants };

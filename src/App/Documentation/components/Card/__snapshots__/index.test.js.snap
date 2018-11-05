@@ -12,6 +12,7 @@ exports[`Documentation: Card CardText renders 1`] = `
   </p>
   <DefaultBehaviour />
   <CardTypes />
+  <CardVariants />
 </div>
 `;
 
@@ -101,6 +102,64 @@ exports[`Documentation: Card CardTypes renders 1`] = `
           textSmall={true}
         />
       </Card>
+    </div>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Card CardVariants renders 1`] = `
+<Fragment>
+  <h2
+    id="card-variants"
+  >
+    Card Variants
+  </h2>
+  <p>
+    You don\`t have to use all sections of a card, you can use different combinations as you see fit. The card body inherits the size of the largest card in the 
+    <Property
+      value=".cards"
+    />
+     container.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="cards"
+    >
+      <Card
+        footerTxt="This is some text that goes in the footer."
+        smallText="Small card text"
+        text="Card text"
+        title="My custom card"
+        type="default"
+      >
+        <MediaObject
+          heading="75%"
+          icon="verified_user"
+          muted={true}
+          size="sm"
+          text="Complete"
+          textSmall={true}
+        />
+      </Card>
+      <Card
+        footerTxt="This is some text that goes in the footer."
+        smallText="This is some small text"
+        textSection={
+          Array [
+            "This is a lot of text",
+            "With some more text",
+            "And then even some more",
+            "Is it really possible to have this much text in one card?",
+            "Yes!",
+          ]
+        }
+        title="Text card"
+        type="default"
+      />
     </div>
   </ComponentPreview>
 </Fragment>
