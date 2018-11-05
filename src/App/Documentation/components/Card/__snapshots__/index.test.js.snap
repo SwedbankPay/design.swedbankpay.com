@@ -160,6 +160,12 @@ exports[`Documentation: Card CardVariants renders 1`] = `
         title="Text card"
         type="default"
       />
+      <Card
+        imgSrc="https://picsum.photos/300"
+        text="This is a card with an image and body"
+        title="Image card"
+        type="brand"
+      />
     </div>
   </ComponentPreview>
 </Fragment>

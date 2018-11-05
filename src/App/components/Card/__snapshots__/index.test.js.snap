@@ -21,6 +21,66 @@ exports[`Component: Card -  renders a button in the footer 1`] = `
 </div>
 `;
 
+exports[`Component: Card -  renders a card-text container 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-body"
+  >
+    
+
+    <div
+      className="card-text"
+    >
+      <p
+        key="card-p-0"
+      >
+        This is a lot of text
+      </p>
+      <p
+        key="card-p-1"
+      >
+        With some more text
+      </p>
+      <p
+        key="card-p-2"
+      >
+        And then even some more
+      </p>
+      <p
+        key="card-p-3"
+      >
+        Is it really possible to have this much text in one card?
+      </p>
+      <p
+        key="card-p-4"
+      >
+        Yes!
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Component: Card -  renders a child object 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="highlight"
+  >
+    This is child text
+  </div>
+  <div
+    className="card-body"
+  >
+    
+
+  </div>
+</div>
+`;
+
 exports[`Component: Card -  renders a smallText in card-body 1`] = `
 <div
   className="card"
@@ -34,7 +94,6 @@ exports[`Component: Card -  renders a smallText in card-body 1`] = `
       small text
     </small>
   </div>
-  <footer />
 </div>
 `;
 
@@ -46,12 +105,11 @@ exports[`Component: Card -  renders a text in card-body 1`] = `
     className="card-body"
   >
     <p>
-      Card text
+      Text that goes in card body
     </p>
     
 
   </div>
-  <footer />
 </div>
 `;
 
@@ -74,7 +132,6 @@ exports[`Component: Card -  renders a title 1`] = `
     
 
   </div>
-  <footer />
 </div>
 `;
 
@@ -100,7 +157,6 @@ exports[`Component: Card -  renders an image 1`] = `
     
 
   </div>
-  <footer />
 </div>
 `;
 
@@ -160,7 +216,6 @@ exports[`Component: Card -  renders with class name card 1`] = `
     
 
   </div>
-  <footer />
 </div>
 `;
 
@@ -174,8 +229,12 @@ exports[`Component: Card -  renders with correct class name 1`] = `
     
 
   </div>
-  <footer />
 </div>
+`;
+
+exports[`Component: Card -  renders with only body when no props are passed 1`] = `
+"<div class=\\"card\\"><div class=\\"card-body\\">
+</div></div>"
 `;
 
 exports[`Component: Card -  throws an error if type does not match proptypes 1`] = `
@@ -188,6 +247,5 @@ exports[`Component: Card -  throws an error if type does not match proptypes 1`]
     
 
   </div>
-  <footer />
 </div>
 `;
