@@ -83,6 +83,75 @@ exports[`Documentation: MediaObject Overview renders 1`] = `
 </Fragment>
 `;
 
+exports[`Documentation: MediaObject Sizes renders 1`] = `
+<Fragment>
+  <h2
+    id="sizes"
+  >
+    Sizes
+  </h2>
+  <p>
+    Sizes for media object...
+  </p>
+  <h3>
+    Small
+  </h3>
+  <p>
+    Small media object 
+    <Property
+      value=".media-sm"
+    />
+    ...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <MediaObject
+      heading="Bob Corlsan"
+      imgUrl="https://via.placeholder.com/40x40"
+      size="sm"
+      text="bob.corlsan@payex.com"
+    />
+    <MediaObject
+      heading="Bob Corlsan"
+      icon="account_circle"
+      size="sm"
+      text="bob.corlsan@payex.com"
+    />
+  </ComponentPreview>
+  <h3>
+    Large
+  </h3>
+  <p>
+    Large media object 
+    <Property
+      value=".media-lg"
+    />
+    ...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <MediaObject
+      heading="Bob Corlsan"
+      imgUrl="https://via.placeholder.com/56x56"
+      size="lg"
+      text="bob.corlsan@payex.com"
+    />
+    <MediaObject
+      heading="Bob Corlsan"
+      icon="account_circle"
+      size="lg"
+      text="bob.corlsan@payex.com"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Documentation: MediaObject renders 1`] = `
 <div
   className="doc-container"

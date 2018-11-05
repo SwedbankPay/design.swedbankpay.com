@@ -65,4 +65,4 @@ const MediaObject = () => (
 export default MediaObject;
 
 /* For testing */
-export { Overview, MediaPosition, MediaObjectText };
+export { Overview, Sizes, MediaPosition, MediaObjectText };
