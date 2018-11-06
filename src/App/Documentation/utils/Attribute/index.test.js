@@ -69,4 +69,3 @@ describe("Utilities: property", () => {
         expect(wrapper.contains(<code className="token property">test</code>)).toEqual(true);
     });
 });
-
