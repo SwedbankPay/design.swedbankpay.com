@@ -11,25 +11,11 @@ import ComponentPreview from "./index";
 //     .replace(/"/g, "&quot;");
 
 describe("Utilities: ComponentPreview", () => {
-    const TestComponentH1 = () => <h1 className="h1-class">test1</h1>;
-    const TestComponentH2 = () => <h2 className="h2-class">test2</h2>;
+    const TestComponentH1 = () => <h1>test1</h1>;
+    const TestComponentH2 = () => <h2>test2</h2>;
     const TestComponentH1WithOuterTags = () => (
-        <div className="div-class">
-            <h1 className="h1-class">test1</h1>
-        </div>
-    );
-    const TestComponentNoElement = () => "test text with no wrapping element";
-    const TestComponentList = () => (
-        <ul className="unordered-list">
-            <li className="listElem">This</li>
-            <li className="listElem">Iis</li>
-            <li className="listElem">A</li>
-            <li className="listElem">Test</li>
-        </ul>
-    );
-    const TestComponentValue = () => (
-        <div value="test-value">
-            <a href="#">This is a test-link</a>
+        <div>
+            <h1>test1</h1>
         </div>
     );
 
@@ -86,42 +72,18 @@ describe("Utilities: ComponentPreview", () => {
         // expect(wrapper.html("<h2>test2</h2>")).toEqual(true);
     });
 
-    it("CodeFigure removes outer tag from markup", () => {
+    it("CodeFigure removes outer tags from component", () => {
         const wrapper = mount(
             <ComponentPreview language="html" codeFigure removeOuterTag>
-                <TestComponentH1WithOuterTags />
-            </ComponentPreview>
-        );
-
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains("div-class")).toEqual(false);
-        expect(wrapper.contains("h1-class")).toEqual(true);
-    });
-
-    it("CodeFigure removes outer tag from multiple html tags", () => {
-        const wrapper = mount(
-            <ComponentPreview language="html" codeFigure removeOuterTag>
-                <TestComponentH1WithOuterTags />
                 <TestComponentH1WithOuterTags />
                 <TestComponentH1WithOuterTags />
             </ComponentPreview>
         );
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains("div-class")).toEqual(false);
-        expect(wrapper.contains("h1-class")).toEqual(true);
-    });
+        // TODO: Update expects [EH]
 
-    it("CodeFigure removes outer tag from markup even if no child element exists", () => {
-        const wrapper = mount(
-            <ComponentPreview language="html" codeFigure removeOuterTag>
-                <TestComponentNoElement />
-            </ComponentPreview>
-        );
-
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("test text with no wrapping element");
-        // TODO: Update expects [AW]
+        // expect(wrapper.contains(<div><h1>test1</h1></div>)).toEqual(true);
     });
 
     // it("CodeFigure renders markup without renderToStaticMarkup", () => {
