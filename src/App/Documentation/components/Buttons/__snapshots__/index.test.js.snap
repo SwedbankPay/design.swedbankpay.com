@@ -107,6 +107,58 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
 
     </div>
   </ComponentPreview>
+  <p>
+    With 
+    <Property
+      value="disabled"
+    />
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        disabled={true}
+        label="Primary"
+        loader={true}
+        loading={true}
+        type="primary"
+      />
+      
+
+      <Button
+        disabled={true}
+        label="Secondary"
+        loader={true}
+        loading={true}
+        type="secondary"
+      />
+      
+
+      <Button
+        disabled={true}
+        label="Danger"
+        loader={true}
+        loading={true}
+        type="danger"
+      />
+      
+
+    </div>
+  </ComponentPreview>
+  <p>
+    With 
+    <Property
+      value=".outline"
+    />
+  </p>
   <ComponentPreview
     codeFigure={true}
     language="html"

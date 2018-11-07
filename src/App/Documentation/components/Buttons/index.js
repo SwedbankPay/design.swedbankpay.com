@@ -156,6 +156,15 @@ const ButtonLoader = () => (
                 <ButtonComponent type="danger" label="Danger" loader loading />{"\n"}
             </div>
         </ComponentPreview>
+        <p>With <Property value="disabled" /></p>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+            <div className="button-group">{"\n"}
+                <ButtonComponent disabled type="primary" label="Primary" loader loading />{"\n"}
+                <ButtonComponent disabled type="secondary" label="Secondary" loader loading />{"\n"}
+                <ButtonComponent disabled type="danger" label="Danger" loader loading />{"\n"}
+            </div>
+        </ComponentPreview>
+        <p>With <Property value=".outline" /></p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <ButtonComponent outline type="primary" label="Primary" loader loading />{"\n"}
