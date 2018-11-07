@@ -3,6 +3,8 @@ import { shallow } from "enzyme";
 
 import Card from "./index";
 
+const textArr = ["This is a lot of text", "With some more text", "And then even some more", "Is it really possible to have this much text in one card?", "Yes!"];
+
 describe("Component: Card - ", () => {
     it("is defined", () => {
         expect(Card).toBeDefined();
@@ -15,6 +17,17 @@ describe("Component: Card - ", () => {
 
         expect(console.error).toHaveBeenCalled();
         expect(wrapper).toMatchSnapshot();
+    });
+
+    it("renders with only body when no props are passed", () => {
+        const wrapper = shallow(<Card />);
+
+        expect(wrapper.html()).not.toContain("header");
+        expect(wrapper.html()).not.toContain("card-img");
+        expect(wrapper.html()).not.toContain("highlight");
+        expect(wrapper.html()).toContain("card-body");
+        expect(wrapper.html()).not.toContain("footer");
+        expect(wrapper.html()).toMatchSnapshot();
     });
 
     it("renders with class name card", () => {
@@ -50,11 +63,18 @@ describe("Component: Card - ", () => {
     });
 
     it("renders a text in card-body", () => {
-        const wrapper = shallow(<Card text="Card text" />);
+        const wrapper = shallow(<Card text="Text that goes in card body" />);
 
         expect(wrapper.html()).toContain("p");
         expect(wrapper.find("p")).toHaveLength(1);
-        expect(wrapper.find("p").text()).toEqual("Card text");
+        expect(wrapper.find("p").text()).toEqual("Text that goes in card body");
+        expect(wrapper).toMatchSnapshot();
+    });
+
+    it("renders a card-text container", () => {
+        const wrapper = shallow(<Card textSection={textArr}/>);
+
+        expect(wrapper.html()).toContain("card-text");
         expect(wrapper).toMatchSnapshot();
     });
 
@@ -64,6 +84,13 @@ describe("Component: Card - ", () => {
         expect(wrapper.html()).toContain("small");
         expect(wrapper.find("small")).toHaveLength(1);
         expect(wrapper.find("small").text()).toEqual("small text");
+        expect(wrapper).toMatchSnapshot();
+    });
+
+    it("renders a child object", () => {
+        const wrapper = shallow(<Card>This is child text</Card>);
+
+        expect(wrapper.html()).toContain("This is child text");
         expect(wrapper).toMatchSnapshot();
     });
 
