@@ -241,33 +241,6 @@ module.exports = (env, argv) => {
         );
     }
 
-    // This needs to be after all HtmlWebpackPlugin instances, but before the FileManagerPlugin [EH]
-    config.plugins.push(
-        new AppManifestWebpackPlugin({
-            logo: "./src/img/favicon.png",
-            output: "/icons/",
-            config: {
-                appName: "PayEx DesignGuide",
-                developerName: "PayEx",
-                developerURL: "https://payex.com",
-                background: "#000",
-                theme_color: "#2da944",
-                version,
-                icons: {
-                    android: true,
-                    appleIcon: true,
-                    appleStartup: true,
-                    coast: true,
-                    favicons: true,
-                    firefox: false,
-                    opengraph: true,
-                    twitter: true,
-                    yandex: false,
-                    windows: true
-                }
-            }
-        }));
-
     if (isProd && !isDevServer) {
         const onEndArchive = [
             {
@@ -284,6 +257,30 @@ module.exports = (env, argv) => {
         }
 
         config.plugins.push(
+            new AppManifestWebpackPlugin({
+                logo: "./src/img/favicon.png",
+                output: "/icons/",
+                config: {
+                    appName: "PayEx DesignGuide",
+                    developerName: "PayEx",
+                    developerURL: "https://payex.com",
+                    background: "#000",
+                    theme_color: "#2da944",
+                    version,
+                    icons: {
+                        android: true,
+                        appleIcon: true,
+                        appleStartup: true,
+                        coast: true,
+                        favicons: true,
+                        firefox: false,
+                        opengraph: true,
+                        twitter: true,
+                        yandex: false,
+                        windows: true
+                    }
+                }
+            }),
             new FileManagerPlugin({
                 onStart: [
                     {

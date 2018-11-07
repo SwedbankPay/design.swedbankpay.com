@@ -8,11 +8,27 @@ exports[`Documentation: Buttons Active State renders 1`] = `
     Active state
   </h2>
   <p>
-    Active state with 
+    Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. 
+    <b>
+      There’s no need to add a class to 
+      <PrismCode
+        className="language-html"
+        component="code"
+      >
+        &lt;button&gt;
+      </PrismCode>
+      s as they use a pseudo-class.
+    </b>
+     However, you can still force the same active appearance with 
     <Property
       value=".active"
     />
-    ...
+     (and include the 
+    <Attribute
+      name="aria-pressed"
+      value="true"
+    />
+     attribute) should you need to replicate the state programmatically.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -27,6 +43,7 @@ exports[`Documentation: Buttons Active State renders 1`] = `
 
       <Button
         active={true}
+        href="#"
         label="Primary"
         type="primary"
       />
@@ -34,6 +51,7 @@ exports[`Documentation: Buttons Active State renders 1`] = `
 
       <Button
         active={true}
+        href="#"
         label="Secondary"
         type="secondary"
       />
@@ -41,6 +59,7 @@ exports[`Documentation: Buttons Active State renders 1`] = `
 
       <Button
         active={true}
+        href="#"
         label="Danger"
         type="danger"
       />
@@ -107,6 +126,70 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
 
     </div>
   </ComponentPreview>
+  <h3>
+    Disabled loader
+  </h3>
+  <p>
+    <Property
+      value=".loading"
+    />
+     with 
+    <Attribute
+      name="disabled"
+    />
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        disabled={true}
+        label="Primary"
+        loader={true}
+        loading={true}
+        type="primary"
+      />
+      
+
+      <Button
+        disabled={true}
+        label="Secondary"
+        loader={true}
+        loading={true}
+        type="secondary"
+      />
+      
+
+      <Button
+        disabled={true}
+        label="Danger"
+        loader={true}
+        loading={true}
+        type="danger"
+      />
+      
+
+    </div>
+  </ComponentPreview>
+  <h3>
+    Outline loader
+  </h3>
+  <p>
+    <Property
+      value=".loading"
+    />
+     with 
+    <Property
+      value=".outline"
+    />
+  </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
@@ -147,6 +230,9 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
 
     </div>
   </ComponentPreview>
+  <h3>
+    The markup
+  </h3>
   <p>
     Adding the attribute 
     <Attribute
@@ -196,20 +282,72 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
 
     </button>
   </ComponentPreview>
+  <Alert
+    type="warning"
+  >
+    <h5>
+      Including the loader html
+    </h5>
+    <p>
+      If you want more control over the loader component you can include the html yourself (e.g. for server-side rendering), just make sure you do 
+      <b>
+        not
+      </b>
+       add the attribute 
+      <Attribute
+        data={true}
+        name="button-loader"
+      />
+      .
+    </p>
+  </Alert>
+</Fragment>
+`;
+
+exports[`Documentation: Buttons Button group renders 1`] = `
+<Fragment>
+  <h2
+    id="button-group"
+  >
+    Using buttons together
+  </h2>
   <p>
-    If you want more control over the loader component you can include the html yourself (e.g. for server-side rendering), just make sure you 
-    <b>
-      don
-      '
-      t
-    </b>
-     add the attribute 
-    <Attribute
-      data={true}
-      name="button-loader"
+    When you use buttons next to each other you have to wrap them in a 
+    <Property
+      value=".button-group"
     />
     .
   </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        label="Activate"
+        type="primary"
+      />
+      
+
+      <Button
+        label="Disable"
+        type="secondary"
+      />
+      
+
+      <Button
+        label="Delete"
+        type="danger"
+      />
+      
+
+    </div>
+  </ComponentPreview>
 </Fragment>
 `;
 
@@ -220,7 +358,7 @@ exports[`Documentation: Buttons Buttons Text renders 1`] = `
   <p
     className="lead"
   >
-    Use buttons...
+    Use our button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
   </p>
   <Examples />
   <UsageWithOtherTags />
@@ -242,11 +380,18 @@ exports[`Documentation: Buttons Disabled State renders 1`] = `
     Disabled state
   </h2>
   <p>
-    Disabled state with 
+    Make buttons look inactive by adding the 
     <Attribute
       name="disabled"
     />
-    ...
+     boolean attribute to any 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;button&gt;
+    </PrismCode>
+     element.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -282,6 +427,120 @@ exports[`Documentation: Buttons Disabled State renders 1`] = `
 
     </div>
   </ComponentPreview>
+  <p>
+    Disabled buttons using the 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;a&gt;
+    </PrismCode>
+     element behave a bit different:
+  </p>
+  <ul>
+    <li>
+      <PrismCode
+        className="language-html"
+        component="code"
+      >
+        &lt;a&gt;
+      </PrismCode>
+      s do not support the 
+      <Attribute
+        name="disabled"
+      />
+      attribute, so you must add the 
+      <Property
+        value=".disabled"
+      />
+       class to make it visually appear disabled.
+    </li>
+    <li>
+      Some future-friendly styles are included to disable all 
+      <Property
+        value="pointer-events"
+      />
+       on anchor buttons. In browsers which support that property, you won’t see the disabled cursor at all.
+    </li>
+    <li>
+      Disabled buttons should include the 
+      <Attribute
+        name="aria-disabled"
+        value="true"
+      />
+       attribute to indicate the state of the element to assistive technologies.
+    </li>
+  </ul>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        disabled={true}
+        href="#"
+        label="Primary"
+        type="primary"
+      />
+      
+
+      <Button
+        disabled={true}
+        href="#"
+        label="Secondary"
+        type="secondary"
+      />
+      
+
+      <Button
+        disabled={true}
+        href="#"
+        label="Danger"
+        type="danger"
+      />
+      
+
+    </div>
+  </ComponentPreview>
+  <Alert
+    type="warning"
+  >
+    <h5>
+      Link functionality caveat
+    </h5>
+    <p>
+      The 
+      <Property
+        value=".disabled"
+      />
+       class uses 
+      <Property
+        value="pointer-events: none"
+      />
+       to try to disable the link functionality of 
+      <PrismCode
+        className="language-html"
+        component="code"
+      >
+        &lt;a&gt;
+      </PrismCode>
+      s, but that CSS property is not yet standardized. In addition, even in browsers that do support 
+      <Property
+        value="pointer-events: none"
+      />
+      , keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a 
+      <Property
+        value="tabindex=\\"-1\\""
+      />
+       attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.
+    </p>
+  </Alert>
 </Fragment>
 `;
 
@@ -293,7 +552,7 @@ exports[`Documentation: Buttons Examples renders 1`] = `
     Examples
   </h2>
   <p>
-    Several button styles etc...
+    The DesignGuide includes a few predefined button styles, each serving its own semantic purpose.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -343,10 +602,11 @@ exports[`Documentation: Buttons Outline Buttons renders 1`] = `
     Outline buttons
   </h2>
   <p>
-    Several button styles etc...
+    Replace the default modifier classes with the 
     <Property
-      value=".btn-outline-{variant}"
+      value=".btn-outline-{style}"
     />
+     ones to get an outline of the button style.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -393,53 +653,53 @@ exports[`Documentation: Buttons Sizes renders 1`] = `
     Sizes
   </h2>
   <p>
-    Several button sizes etc...
-  </p>
-  <h3>
-    Large buttons
-  </h3>
-  <p>
-    ...
+    For a different sized button add 
     <Property
       value=".btn-lg"
     />
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-  >
-    <div
-      className="button-group"
-    >
-      
-
-      <Button
-        label="Large button"
-        size="lg"
-        type="primary"
-      />
-      
-
-      <Button
-        label="Large button"
-        size="lg"
-        type="secondary"
-      />
-      
-
-    </div>
-  </ComponentPreview>
-  <h3>
-    Small buttons
-  </h3>
-  <p>
-    ...
+    , 
     <Property
       value=".btn-sm"
     />
+     or 
+    <Property
+      value=".btn-xs"
+    />
+    .
   </p>
+  <h3>
+    Large
+  </h3>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        label="Large button"
+        size="lg"
+        type="primary"
+      />
+      
+
+      <Button
+        label="Large button"
+        size="lg"
+        type="secondary"
+      />
+      
+
+    </div>
+  </ComponentPreview>
+  <h3>
+    Small
+  </h3>
   <ComponentPreview
     codeFigure={true}
     language="html"
@@ -468,14 +728,8 @@ exports[`Documentation: Buttons Sizes renders 1`] = `
     </div>
   </ComponentPreview>
   <h3>
-    Extra small buttons
+    Extra small
   </h3>
-  <p>
-    ...
-    <Property
-      value=".btn-xs"
-    />
-  </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
@@ -507,10 +761,11 @@ exports[`Documentation: Buttons Sizes renders 1`] = `
     Block level
   </h3>
   <p>
-    ...
+    Create block level buttons—those that span the full width of a parent by adding 
     <Property
       value=".btn-block"
     />
+    .
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -550,7 +805,17 @@ exports[`Documentation: Buttons Usage With Icons renders 1`] = `
     Usage with icons
   </h2>
   <p>
-    To use a button with an icon... Read more about icon usage here 
+    To use a button with an icon simply put the icon markup inside the 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;button&gt;
+    </PrismCode>
+    .
+  </p>
+  <p>
+    Read more about icon usage here 
     <Link
       replace={false}
       to="/docs/core/icons"
@@ -585,6 +850,13 @@ exports[`Documentation: Buttons Usage With Icons renders 1`] = `
       />
       
 
+      <Button
+        icon="cloud"
+        label="Danger"
+        type="danger"
+      />
+      
+
     </div>
   </ComponentPreview>
 </Fragment>
@@ -602,7 +874,14 @@ exports[`Documentation: Buttons Usage With Other Tags renders 1`] = `
     <Property
       value=".btn"
     />
-     class can also be used with other html-tags like 
+     classes are designed to be used with the 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;button&gt;
+    </PrismCode>
+     element. However, you can also use these classes on 
     <PrismCode
       className="language-html"
       component="code"
@@ -616,7 +895,22 @@ exports[`Documentation: Buttons Usage With Other Tags renders 1`] = `
     >
       &lt;input&gt;
     </PrismCode>
-    .
+     elements (though some browsers may apply a slightly different rendering).
+  </p>
+  <p>
+    When using button classes on 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;a&gt;
+    </PrismCode>
+     elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a 
+    <Attribute
+      name="role"
+      value="button"
+    />
+     to appropriately convey their purpose to assistive technologies such as screen readers.
   </p>
   <ComponentPreview
     codeFigure={true}
