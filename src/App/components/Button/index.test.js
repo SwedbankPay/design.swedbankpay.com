@@ -302,7 +302,7 @@ describe("Component: Button - ", () => {
             const wrapper = shallow(<Button type="primary" loader />);
 
             expect(wrapper).toMatchSnapshot();
-            expect(wrapper.contains(<button className="btn btn-primary" data-button-loader="" type="button"></button>)).toEqual(true);
+            expect(wrapper.html()).toEqual("<button class=\"btn btn-primary\" data-button-loader=\"\" type=\"button\"></button>");
         });
 
         it("renders a button with an icon when prop icon is provided", () => {
@@ -312,12 +312,12 @@ describe("Component: Button - ", () => {
             expect(wrapper.contains(<i className="material-icons">test</i>)).toEqual(true);
         });
 
-        it("renders a button with icon and label inside a span when prop icon and label is provided", () => {
-            const wrapper = shallow(<Button type="primary" icon="test" label="test" />);
+        it("renders a button with icon and label when prop icon and label is provided", () => {
+            const wrapper = shallow(<Button type="primary" icon="icon" label="test" />);
 
             expect(wrapper).toMatchSnapshot();
-            expect(wrapper.contains(<i className="material-icons">test</i>)).toEqual(true);
-            expect(wrapper.contains(<span>test</span>)).toEqual(true);
+            expect(wrapper.contains(<i className="material-icons">icon</i>)).toEqual(true);
+            expect(wrapper.contains("test")).toEqual(true);
         });
     });
 });
