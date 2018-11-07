@@ -16,8 +16,9 @@ const rangeslider = (() => {
     const init = () => {
         const rangeContainers = document.querySelectorAll(".rangeslider");
 
-        if (rangeContainers) {
+        if (rangeContainers.length > 0) {
             rangeContainers.forEach((rangeContainer, i) => {
+
                 const input = rangeContainer.querySelector("input[type=range]");
                 const valueSpan = rangeContainer.querySelector("span[data-rs-value]");
 
