@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Card, { DefaultBehaviour, CardTypes, CardText } from "./index";
+import Card, { DefaultBehaviour, CardTypes, CardVariants, CardText } from "./index";
 
 describe("Documentation: Card", () => {
     it("is defined", () => {
@@ -33,6 +33,18 @@ describe("Documentation: Card", () => {
 
         it("renders", () => {
             const wrapper = shallow(<CardTypes />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("CardVariants", () => {
+        it("is defined", () => {
+            expect(CardVariants).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<CardVariants />);
 
             expect(wrapper).toMatchSnapshot();
         });
