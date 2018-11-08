@@ -3,7 +3,7 @@ import React from "react";
 import { ComponentPreview, DocToc } from "#";
 
 const DocTable = props => (
-    <table className={props.tableClass}>
+    <table {...props}>
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -52,7 +52,7 @@ const BasicTable = () => (
         <h2 id="basic-table">Basic table</h2>
         <p>Basic tables info...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <DocTable tableClass="table" />
+            <DocTable className="table" />
         </ComponentPreview>
     </>
 );
@@ -62,7 +62,7 @@ const StripedTable = () => (
         <h2 id="striped-table">Striped table</h2>
         <p>Striped tables info...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <DocTable tableClass="table table-striped" />
+            <DocTable className="table table-striped" />
         </ComponentPreview>
     </>
 );
@@ -72,7 +72,7 @@ const CondensedTable = () => (
         <h2 id="condensed-table">Condensed table</h2>
         <p>Condensed table info...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <DocTable tableClass="table table-condensed" />
+            <DocTable className="table table-condensed" />
         </ComponentPreview>
     </>
 );
@@ -82,7 +82,7 @@ const HoverTable = () => (
         <h2 id="hover-table">Hover table</h2>
         <p>Hover tables info...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <DocTable tableClass="table table-hover" />
+            <DocTable className="table table-hover" />
         </ComponentPreview>
     </>
 );
@@ -92,7 +92,7 @@ const HoverStripedTable = () => (
         <h2 id="hover-striped-table">Hover striped table</h2>
         <p>Hover striped tables info...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <DocTable tableClass="table table-hover table-striped" />
+            <DocTable className="table table-hover table-striped" />
         </ComponentPreview>
     </>
 );

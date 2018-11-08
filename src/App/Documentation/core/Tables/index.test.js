@@ -16,7 +16,7 @@ describe("Documentation: Table", () => {
 
     describe("DocTable", () => {
         it("renders table with given class name", () => {
-            const wrapper = shallow(<DocTable tableClass="table" />);
+            const wrapper = shallow(<DocTable className="table" />);
 
             expect(wrapper.hasClass("table")).toBeTruthy();
             expect(wrapper).toMatchSnapshot();

@@ -16,7 +16,7 @@ exports[`Documentation: Table BasicTable renders 1`] = `
     showCasePanel={true}
   >
     <DocTable
-      tableClass="table"
+      className="table"
     />
   </ComponentPreview>
 </Fragment>
@@ -38,7 +38,7 @@ exports[`Documentation: Table CondensedTable renders 1`] = `
     showCasePanel={true}
   >
     <DocTable
-      tableClass="table table-condensed"
+      className="table table-condensed"
     />
   </ComponentPreview>
 </Fragment>
@@ -242,7 +242,7 @@ exports[`Documentation: Table HoverStripedTable renders 1`] = `
     showCasePanel={true}
   >
     <DocTable
-      tableClass="table table-hover table-striped"
+      className="table table-hover table-striped"
     />
   </ComponentPreview>
 </Fragment>
@@ -264,7 +264,7 @@ exports[`Documentation: Table HoverTable renders 1`] = `
     showCasePanel={true}
   >
     <DocTable
-      tableClass="table table-hover"
+      className="table table-hover"
     />
   </ComponentPreview>
 </Fragment>
@@ -286,7 +286,7 @@ exports[`Documentation: Table StripedTable renders 1`] = `
     showCasePanel={true}
   >
     <DocTable
-      tableClass="table table-striped"
+      className="table table-striped"
     />
   </ComponentPreview>
 </Fragment>
