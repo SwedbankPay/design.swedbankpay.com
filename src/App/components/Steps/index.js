@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
+import { ClickableSteps } from "../../Documentation/components/steps";
 
 const DefaultSteps = [
     {
@@ -37,11 +38,25 @@ const RenderSteps = ({ steps }) => (
                 ongoing ? "steps-ongoing" : null,
                 selected ? "steps-selected" : null)}>
                 {clickable ? <a><StepContent completed={completed} subtitle={subtitle} title={title}/></a> : <StepContent completed={completed} subtitle={subtitle} title={title}/> }
-
             </li>
         ))}
     </>
 );
+
+const RenderStepsNav = ({ steps }) => {
+    const clickableItem = steps.some((item) => {
+        return item.clickable;
+    });
+
+    var arrowLeft = clickableItem ?  <div className="material-icons steps-nav-left">keyboard_arrow_left</div> : null;
+    var arrowRight = clickableItem ?  <div className="material-icons steps-nav-right">keyboard_arrow_right</div> : null;
+
+    return <>
+        { arrowLeft }
+         Step 3
+         { arrowRight }
+    </>
+};
 
 const Steps = ({ steps, vertical }) => {
     const stepsClasses = classnames(
@@ -49,10 +64,12 @@ const Steps = ({ steps, vertical }) => {
         vertical ? "steps-vertical" : null,
     );
 
-    return (<ol className={stepsClasses}>
-        {steps ? <RenderSteps steps={steps} /> : <RenderSteps steps={DefaultSteps} />}
-    </ol>
-    );
+    return (<div>
+        <ol className={stepsClasses}>
+            {steps ? <RenderSteps steps={steps} /> : <RenderSteps steps={DefaultSteps} />}
+        </ol>
+        <RenderStepsNav steps={steps} />
+    </div>);
 };
 
 Steps.propTypes = {
