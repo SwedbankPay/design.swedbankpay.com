@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import rangeslider from "./index";
+import { stringify } from "querystring";
 
 describe("px-script: rangeslider", () => {
     const TestSlider = () => (
@@ -61,6 +62,7 @@ describe("px-script: rangeslider", () => {
         expect(rangeslider.init).toBeInstanceOf(Function);
     });
 
+    // Start of Chrome specific tests [AW]
     it("generates special styling to fill slider background for chrome", () => {
         ReactDOM.render(<TestSlider />, div);
 
@@ -120,39 +122,48 @@ describe("px-script: rangeslider", () => {
         rangeslider.init();
 
         const rangeSlider = document.querySelector(".rangeslider");
+        const input = rangeSlider.querySelector("input[type=range]");
         const chromeStyle = document.querySelector("style");
 
         expect(rangeSlider).toBeTruthy();
+        expect(input).toBeTruthy();
         expect(chromeStyle).toBeTruthy();
+        expect(chromeStyle.innerHTML.match(/#px-rs-0/gm)).toHaveLength(1);
+
+        input.value = 50;
+        input.dispatchEvent(new Event("change"));
+
+        expect(document.querySelectorAll("style")).toHaveLength(1);
+        expect(chromeStyle.innerHTML.match(/#px-rs-0/g)).toHaveLength(1);
 
         Object.defineProperty(window.navigator, "userAgent", { value: defaultUseragent });
         document.body.removeChild(chromeStyle);
         ReactDOM.unmountComponentAtNode(div);
     });
 
-    // it("sets default max and min values for chrome if none are provided", () => {
-    //     ReactDOM.render(<TestSlider />, div);
+    it("sets max and min values to 0 and 100 for rangesliders if none are provided", () => {
+        ReactDOM.render(<TestSliderNoLabel />, div);
 
-    //     const defaultUseragent = window.navigator.userAgent;
+        const defaultUseragent = window.navigator.userAgent;
 
-    //     Object.defineProperty(window.navigator, "userAgent", {
-    //         value: "Chrome",
-    //         writable: true
-    //     });
-    //     rangeslider.init();
+        Object.defineProperty(window.navigator, "userAgent", {
+            value: "Chrome",
+            writable: true
+        });
+        rangeslider.init();
 
-    //     const rangeSlider = document.querySelector(".rangeslider");
-    //     const input = rangeSlider.querySelector("input[type=range]");
-    //     const valueSpan = rangeSlider.querySelector("span[data-rs-value]");
+        const rangeSlider = document.querySelector(".rangeslider");
+        const chromeStyle = document.querySelector("style");
+        const expectedStyleValue = "#px-rs-0::-webkit-slider-runnable-track{background-size: 0% 100%}";
 
-    //     expect(rangeSlider).toBeTruthy();
-    //     expect(input).toBeTruthy();
-    //     expect(valueSpan).toBeTruthy();
-    //     expect(valueSpan.attributes.max).toEqual(100);
+        expect(rangeSlider).toBeTruthy();
+        expect(chromeStyle).toBeTruthy();
+        expect(expectedStyleValue).toEqual(chromeStyle.innerHTML);
 
-    //     Object.defineProperty(window.navigator, "userAgent", { value: defaultUseragent });
-    //     ReactDOM.unmountComponentAtNode(div);
-    // });
+        Object.defineProperty(window.navigator, "userAgent", { value: defaultUseragent });
+        ReactDOM.unmountComponentAtNode(div);
+    });
+    // End of Chrome specific tests [AW]
 
     it("updates displayed value span on change in rangeslider", () => {
         ReactDOM.render(<TestSlider />, div);

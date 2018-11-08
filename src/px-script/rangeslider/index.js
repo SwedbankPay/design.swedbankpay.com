@@ -6,7 +6,7 @@ const _writeStyle = obj => {
     (index === -1) ? inlineStyleContent.push(obj) : inlineStyleContent[index] = obj;
 
     inlineStyleContent.forEach(({ id, percent }) => {
-        styleText += `#${id}::-webkit-slider-runnable-track{background-size: ${percent}% 100%} \n`;
+        styleText += `#${id}::-webkit-slider-runnable-track{background-size: ${percent}% 100%}`;
     });
 
     inlineStyle.textContent = styleText;
