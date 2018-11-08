@@ -10,19 +10,24 @@ const Button = ({ label, id, name, value, href, icon, loading, type, disabled, b
         loading ? "loading" : null,
         fullWidth ? "btn-block" : null,
         pullRight ? "pull-right" : null,
-        active ? "active" : null
+        active && href ? "active" : null,
+        disabled && href ? "disabled" : null
     );
 
     const attrs = {
         href,
         id,
         name,
-        disabled,
+        defaultValue: value,
+        disabled: href ? null : disabled,
         "data-button-loader": loader ? "" : null,
-        defaultValue: value
+        active: active && !href ? "" : null,
+        role: href ? "button" : null,
+        type: !href ? btnType || "button" : null,
+        "aria-pressed": active ? true : null,
+        "aria-disabled": href && disabled ? true : null,
+        tabIndex: href && disabled ? "-1" : null
     };
-
-    href ? attrs.role = "button" : attrs.type = btnType || "button";
 
     if (href) {
         return (
@@ -39,8 +44,8 @@ const Button = ({ label, id, name, value, href, icon, loading, type, disabled, b
 
     return (
         <button className={btnClasses} {...attrs}>{icon ? "\n\t\t" : null}
-            {icon ? <i className="material-icons">{icon}</i> : null}{icon ? "\n\t\t" : null}
-            {(icon && label) ? <span>{label}</span> : label}{icon ? "\n\t" : null}
+            {icon ? <><i className="material-icons">{icon}</i>{"\n\t\t"}</> : null}
+            {label}{icon ? "\n\t" : null}
         </button>
     );
 };
