@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import rangeslider from "./index";
-import { stringify } from "querystring";
 
 describe("px-script: rangeslider", () => {
     const TestSlider = () => (
