@@ -6,7 +6,7 @@ const _writeStyle = obj => {
     (index === -1) ? inlineStyleContent.push(obj) : inlineStyleContent[index] = obj;
 
     inlineStyleContent.forEach(({ id, percent }) => {
-        styleText += `#${id}::-webkit-slider-runnable-track{background-size: ${percent}% 100%}`;
+        styleText += `#${id}::-webkit-slider-runnable-track{background-size: ${percent}% 100%} \n`;
     });
 
     inlineStyle.textContent = styleText;
@@ -15,10 +15,17 @@ const _writeStyle = obj => {
 const rangeslider = (() => {
     const init = () => {
         const rangeContainers = document.querySelectorAll(".rangeslider");
+        const userBrowser = navigator.userAgent;
+        const inlineStyle = document.createElement("style");
+        const inlineStyleContent = [];
+        const isBrowserChrome = userBrowser.indexOf("Chrome") > -1;
 
         if (rangeContainers.length > 0) {
-            rangeContainers.forEach((rangeContainer, i) => {
+            if (isBrowserChrome) {
+                document.body.appendChild(inlineStyle);
+            }
 
+            rangeContainers.forEach((rangeContainer, i) => {
                 const input = rangeContainer.querySelector("input[type=range]");
                 const valueSpan = rangeContainer.querySelector("span[data-rs-value]");
 
@@ -33,11 +40,7 @@ const rangeslider = (() => {
                 }
 
                 /* Filling slider background for chrome */
-                if (navigator.userAgent.indexOf("Chrome") > -1) {
-                    const inlineStyle = document.createElement("style");
-                    const inlineStyleContent = [];
-
-                    document.body.appendChild(inlineStyle);
+                if (isBrowserChrome) {
                     input.id = `px-rs-${i}`;
 
                     const updateStyle = () => {

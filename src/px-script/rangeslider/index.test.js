@@ -17,6 +17,31 @@ describe("px-script: rangeslider", () => {
         </div>
     );
 
+    const TwoTestSliders = () => (
+        <>
+            <div className="rangeslider rangeslider-brand label-right">
+                <input type="range" min="0" max="200" step="1" />
+                <output className="value-label">
+                    <p>
+                        <span>$</span>
+                        <span data-rs-value="true">100</span>
+                        <span>%</span>
+                    </p>
+                </output>
+            </div>
+            <div className="rangeslider rangeslider-brand label-right">
+                <input type="range" min="0" max="200" step="1" />
+                <output className="value-label">
+                    <p>
+                        <span>$</span>
+                        <span data-rs-value="true">100</span>
+                        <span>%</span>
+                    </p>
+                </output>
+            </div>
+        </>
+    );
+
     const TestSliderNoLabel = () => (
         <div className="rangeslider rangeslider-brand label-right">
             <input type="range" step="1" />
@@ -36,21 +61,74 @@ describe("px-script: rangeslider", () => {
         expect(rangeslider.init).toBeInstanceOf(Function);
     });
 
-    // TODO: Write tests for chrome
-    // it("generates special styling for chrome browsers", () => {
-    //     ReactDOM.render(<TestSlider />, div);
+    it("generates special styling to fill slider background for chrome", () => {
+        ReactDOM.render(<TestSlider />, div);
 
-    //     const defaultUseragent = window.navigator.userAgent;
+        const defaultUseragent = window.navigator.userAgent;
 
-    //     Object.defineProperty(window.navigator, "userAgent", {
-    //         value: "Chrome",
-    //         writable: true
-    //     });
-    //     rangeslider.init();
+        Object.defineProperty(window.navigator, "userAgent", {
+            value: "Chrome",
+            writable: true
+        });
+        rangeslider.init();
 
-    //     Object.defineProperty(window.navigator, "userAgent", { value: defaultUseragent });
-    //     ReactDOM.unmountComponentAtNode(div);
-    // });
+        const rangeSlider = document.querySelector(".rangeslider");
+        const chromeStyle = document.querySelector("style");
+
+        expect(rangeSlider).toBeTruthy();
+        expect(chromeStyle).toBeTruthy();
+
+        Object.defineProperty(window.navigator, "userAgent", { value: defaultUseragent });
+        document.body.removeChild(chromeStyle);
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
+    it("creates a unique styling for each rangeslider in one style tag for chrome", () => {
+        ReactDOM.render(<TwoTestSliders />, div);
+
+        const defaultUseragent = window.navigator.userAgent;
+
+        Object.defineProperty(window.navigator, "userAgent", {
+            value: "Chrome",
+            writable: true
+        });
+        rangeslider.init();
+
+        const rangeSlider = document.querySelector(".rangeslider");
+        const chromeStyle = document.querySelector("style");
+
+        expect(rangeSlider).toBeTruthy();
+        expect(chromeStyle).toBeTruthy();
+        expect(document.querySelectorAll("style")).toHaveLength(1);
+        expect(chromeStyle.innerHTML.includes("#px-rs-0")).toEqual(true);
+        expect(chromeStyle.innerHTML.includes("#px-rs-1")).toEqual(true);
+
+        Object.defineProperty(window.navigator, "userAgent", { value: defaultUseragent });
+        document.body.removeChild(chromeStyle);
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
+    it("does not create duplicate styling when onchange occurs", () => {
+        ReactDOM.render(<TestSlider />, div);
+
+        const defaultUseragent = window.navigator.userAgent;
+
+        Object.defineProperty(window.navigator, "userAgent", {
+            value: "Chrome",
+            writable: true
+        });
+        rangeslider.init();
+
+        const rangeSlider = document.querySelector(".rangeslider");
+        const chromeStyle = document.querySelector("style");
+
+        expect(rangeSlider).toBeTruthy();
+        expect(chromeStyle).toBeTruthy();
+
+        Object.defineProperty(window.navigator, "userAgent", { value: defaultUseragent });
+        document.body.removeChild(chromeStyle);
+        ReactDOM.unmountComponentAtNode(div);
+    });
 
     // it("sets default max and min values for chrome if none are provided", () => {
     //     ReactDOM.render(<TestSlider />, div);
