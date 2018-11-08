@@ -15,7 +15,7 @@
 
         > .btn {
             float: left;
-            padding: @base-margin-xs/2 @base-margin-xs;
+            padding: @table-button-padding;
             margin-top: 0;
             margin-right: @base-margin-xs;
             margin-bottom: -@base-margin-xs;
@@ -130,11 +130,11 @@
 
         tr {
             td {
-                padding: @base-padding-xs @base-padding*0.625;
+                padding: @base-padding-xs @table-description-padding;
             }
 
             th {
-                padding: 0 @base-padding*0.625;
+                padding: 0 @table-description-padding;
                 line-height: @base-font-size * 2.8;
             }
 
@@ -167,6 +167,13 @@
                     color: @gray-7;
                 }
             }
+        }
+    }
+
+    &.table-condensed {
+        th,
+        td {
+            padding: @table-cell-condensed-padding;
         }
     }
 

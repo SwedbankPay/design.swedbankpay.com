@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added new table variant table-condensed.
+
 ### Changed
 
 ### Fixed
