@@ -4,9 +4,6 @@
  - Switch default (horisontal vs. vertical)?
  */
 
- @overflow-shadow-left: inset 10px 0 10px -8px rgba(0,0,0,0.3);
- @overflow-shadow-right: inset -10px 0 10px -8px rgba(0,0,0,0.3);
-
 .steps {
     list-style: none;
     margin: 0;
@@ -155,20 +152,6 @@
         text-align: center;
         font-size: 1.1rem;
         top: 2rem;
-    }
-
-
-    // background-color: rgba(0,0,0,0.06);
-    &.steps-shadow-left{
-        box-shadow:  @overflow-shadow-left, @default-box-shadow;
-    }
-
-    &.steps-shadow-right{
-        box-shadow: @overflow-shadow-right, @default-box-shadow;
-    }
-
-    &.steps-shadow{
-        box-shadow:  @overflow-shadow-left,  @overflow-shadow-right, @default-box-shadow;
     }
 }
 
