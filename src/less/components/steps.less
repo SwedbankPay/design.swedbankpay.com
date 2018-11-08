@@ -9,7 +9,6 @@
 
 .steps {
     list-style: none;
-    overflow-x: scroll;
     margin: 0;
     padding: 0;
     background-color: @background-white;
@@ -31,7 +30,6 @@
         padding: 3.4rem 0 0.8rem 0;
         text-align: center;
         line-height: 1rem;
-        min-width: 100% / 3;
 
         > a {
             display: block;
@@ -174,10 +172,28 @@
     }
 }
 
+.steps-responsive{
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background: #efefef;
+    padding: 5px 10px;
+    border-top: 1px solid #e6e7e8;
+    border-bottom: 1px solid #e6e7e8;
+    box-sizing: border-box;
+    display: flex;
+}
 
-
+.steps-responsive-text{
+    flex-grow: 1;
+    text-align: center;
+}
 
 @media screen and (min-width: @screen-sm-min) {
+    .steps-responsive{
+        display: none;
+    }
+
     .steps {
         font-size: 1.1rem;
         overflow: visible;

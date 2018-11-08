@@ -52,9 +52,11 @@ const RenderStepsNav = ({ steps }) => {
     var arrowRight = clickableItem ?  <div className="material-icons steps-nav-right">keyboard_arrow_right</div> : null;
 
     return <>
-        { arrowLeft }
-         Step 3
-         { arrowRight }
+        <div className="steps-responsive">
+            { arrowLeft }
+                <div class="steps-responsive-text">Step 3</div>
+            { arrowRight }
+        </div>
     </>
 };
 
