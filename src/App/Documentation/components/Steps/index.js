@@ -119,10 +119,6 @@ const StepsText = () => (
 );
 
 class Steps extends Component {
-    componentDidMount () {
-        steps.init();
-    }
-
     render () {
         return (
             <div className="doc-container">
