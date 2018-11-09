@@ -12,7 +12,6 @@
     box-shadow: @default-box-shadow;
 
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
 
     li {
@@ -24,14 +23,16 @@
         flex: 0 1 100%;
         flex-grow: 1;
         position: relative;
-        padding: 3.4rem 0 0.8rem 0;
+        padding: 3.4rem 0 0 0;
         text-align: center;
         line-height: 1rem;
+        overflow: hidden;
+        height: 0;
 
         > a {
             display: block;
-            padding: 3.4rem 0 0.8rem 0;
-            margin: -3.4rem 0 -0.8rem 0;
+            padding: 3.4rem 0 0 0;
+            margin: -3.4rem 0 0 0;
             
             width: 100%;
 
@@ -60,7 +61,6 @@
             box-sizing: border-box;
             z-index: @zindex-steps-circle;
             // TODO: Variable?
-            margin-top: -15px;
             height: 30px;
             width: 30px;
             border-radius: 30px;
@@ -68,8 +68,8 @@
             background-color: @background-white;
 
             left: initial;
-            // TODO: Variable?
-            top: 2rem;
+            top: 50%;
+            margin-top: -30px / 2;
         }
 
         /* Line */
@@ -82,7 +82,8 @@
             height: 3px;
             // Prevent small gaps based 1/3 width
             width: 101%;
-            top: 2rem;
+            top: 50%;
+            margin-top: -3px / 2;
         }
 
         &:first-child {
@@ -131,7 +132,7 @@
     .steps-selected {
         // 
         background-color: rgba(0,0,0,0.06);
-        border-color: @gray-9;
+        box-shadow: 1px 0 0 0 @gray-9, -1px 0 0 0 @gray-9, 0 1px 0 0 @gray-10;
     }
 
     .steps-sub-title {
@@ -151,7 +152,8 @@
         line-height: 30px;
         text-align: center;
         font-size: 1.1rem;
-        top: 2rem;
+        top: 50%;
+        margin-top: -30px / 2;
     }
 }
 
@@ -184,6 +186,7 @@
         li {
             min-width: auto;
             padding: 4.8rem 0 1rem 0;
+            height: auto;
 
             // TODO: Variables?
             > a{
@@ -231,9 +234,10 @@
             display: block;
             text-align: left;
             padding: 2rem 1.5rem 2rem 5.5rem;
-            border-top: @border-width solid transparent;
-            border-bottom: @border-width solid transparent;
-            
+
+            &.steps-selected{
+                box-shadow: 0 1px 0 0 @gray-9, 0 -1px 0 0 @gray-9;    
+            }
             > a {
                 /* Take full parent size, ignoring parents padding, and stil growing the parent with text from this element */
                 /* The small difference in padding (0.0625rem) is to account for the border */
