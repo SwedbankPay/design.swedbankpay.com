@@ -57,7 +57,7 @@ exports[`Utilities: Visibility Intro renders 1`] = `
 
 exports[`Utilities: Visibility VisibilityText renders 1`] = `
 <div
-  className="col-12 doc-body"
+  className="col doc-body"
 >
   <p
     className="lead"

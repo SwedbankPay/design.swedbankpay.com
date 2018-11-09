@@ -172,7 +172,7 @@ const CustomHtml = () => {
 };
 
 const ToastText = () => (
-    <div className="col-md-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <ExperimentalComponentAlert />
         <p className="lead">Toast...</p>
         <Overview />

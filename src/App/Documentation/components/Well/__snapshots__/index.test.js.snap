@@ -73,7 +73,7 @@ exports[`Components: Well WellSizes renders 1`] = `
 
 exports[`Components: Well WellText renders 1`] = `
 <div
-  className="col-md-12 col-lg-10 doc-body"
+  className="col-lg-10 doc-body"
 >
   <ExperimentalComponentAlert />
   <p

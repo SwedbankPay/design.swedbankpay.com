@@ -198,7 +198,7 @@ exports[`Documentation: Lists ItemList renders 1`] = `
 
 exports[`Documentation: Lists ListsText renders 1`] = `
 <div
-  className="col-md-12 col-lg-10 doc-body"
+  className="col-lg-10 doc-body"
 >
   <p
     className="lead"

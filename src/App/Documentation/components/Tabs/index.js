@@ -29,7 +29,7 @@ const Collapsed = () => (
 );
 
 const TabsText = () => (
-    <div className="col-md-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <ExperimentalComponentAlert />
         <p className="lead">Tabs...</p>
         <BasicUsage />

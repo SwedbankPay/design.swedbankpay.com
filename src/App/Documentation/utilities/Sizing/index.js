@@ -3,7 +3,7 @@ import React from "react";
 import { ComponentPreview, Property } from "#";
 
 const SizingText = () => (
-    <div className="col-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <p className="lead">Easily make an element as wide or as tall (relative to its parent) with our width and height utilities.</p>
         <p>
             Width and height utilities are generated with support for values; <Property value="25%" />, <Property value="50%" />, <Property value="75%" />, <Property value="100%" />, and <Property value="auto" />.

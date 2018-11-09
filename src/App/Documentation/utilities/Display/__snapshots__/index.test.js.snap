@@ -2,7 +2,7 @@
 
 exports[`Utilities: Display DisplayText renders 1`] = `
 <div
-  className="col-12 col-lg-10 doc-body"
+  className="col-lg-10 doc-body"
 >
   <p
     className="lead"

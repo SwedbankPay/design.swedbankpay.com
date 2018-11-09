@@ -33,3 +33,18 @@
 
     margin-left: percentage(@num);
 }
+
+.infix-ruleset(@breakpoint, @ruleset) {
+    @abbr: at(@breakpoint, 1);
+    @size: at(@breakpoint, 2);
+
+    & when (@size > 0) {
+        @infix: ~"-@{abbr}";
+        @ruleset();
+    }
+
+    & when (@size = 0) {
+        @infix: ~"";
+        @ruleset();
+    }
+}

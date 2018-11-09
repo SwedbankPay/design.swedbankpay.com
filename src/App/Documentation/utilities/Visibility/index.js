@@ -24,7 +24,7 @@ const Intro = () => (
 );
 
 const VisibilityText = () => (
-    <div className="col-12 doc-body">
+    <div className="col doc-body">
         <p className="lead">Control the visibility, without modifying the display, of elements with visibility utilities.</p>
         <Intro />
     </div>

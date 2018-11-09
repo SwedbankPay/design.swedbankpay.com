@@ -101,7 +101,7 @@ const Examples = () => (
 );
 
 const SpacingText = () => (
-    <div className="col-md-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <p className="lead">The DesignGuide includes a wide range of shorthand responsive margin and padding utility classes to modify an element’s appearance.</p>
         <HowItWorks />
         <Notation />

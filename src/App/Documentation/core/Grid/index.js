@@ -246,7 +246,7 @@ const Alignment = () => (
 );
 
 const GridText = () => (
-    <div className="col-md-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <p className="lead">Use our grid system...</p>
         <HowItWorks />
         <GridOptions />

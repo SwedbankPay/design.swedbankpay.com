@@ -123,7 +123,7 @@ const Mobile = () => (
 );
 
 const NavText = () => (
-    <div className="col-md-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <ExperimentalComponentAlert />
         <p className="lead">Navs.</p>
         <StandardNav />

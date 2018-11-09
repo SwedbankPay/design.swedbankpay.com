@@ -38,7 +38,7 @@ const CreateADocumentationPage = () => (
             {"import { ComponentPreview, DocToc } from \"#\";"}
             {"import MyExampleComponent from \"@/MyExampleComponent\";\n\n"}
             {"const MyExampleDocumentationComponentText = () => (\n"}
-            {"    <div className=\"col-md-12 col-lg-10 doc-body\">\n"}
+            {"    <div className=\"col-lg-10 doc-body\">\n"}
             {"        <p className=\"lead\">This is the documentation for My Example Component.</p>\n"}
             {"        <h2 id=\"example-usage\">Example usage</h2>\n"}
             {"        <ComponentPreview language=\"html\" showCasePanel codeFigure>\n"}
@@ -223,7 +223,7 @@ const AddingJavaScript = () => {
 };
 
 const ContributingText = () => (
-    <div className="col-md-12 col-lg-10">
+    <div className="col-lg-10">
         <p className="lead">To create a new component</p>
         <CreatingYourComponent />
         <CreateADocumentationPage />
