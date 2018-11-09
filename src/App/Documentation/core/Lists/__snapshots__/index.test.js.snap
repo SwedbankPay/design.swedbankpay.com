@@ -161,6 +161,41 @@ exports[`Documentation: Lists InlineList renders 1`] = `
 </Fragment>
 `;
 
+exports[`Documentation: Lists ItemList renders 1`] = `
+<Fragment>
+  <h2
+    id="item-list"
+  >
+    Item list 
+  </h2>
+  <p>
+     Item list info...
+    <Property
+      value=".item-list"
+    />
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ul
+      className="item-list"
+    >
+      <li>
+        4925*********004
+      </li>
+      <li>
+        4925*********004
+      </li>
+      <li>
+        4925*********004
+      </li>
+    </ul>
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Documentation: Lists ListsText renders 1`] = `
 <div
   className="col-lg-10 doc-body"
@@ -234,6 +269,406 @@ exports[`Documentation: Lists SettingsList renders 1`] = `
           clear
         </i>
         Energetic squirrels newsletter
+        
+
+      </li>
+    </ul>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Lists StatusItemList renders 1`] = `
+<Fragment>
+  <h2
+    id="status-item-list"
+  >
+    Status item list 
+  </h2>
+  <p>
+     Status item list info...
+    <Property
+      value=".item-list"
+    />
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ul
+      className="item-list"
+    >
+      <li>
+        
+
+        <span>
+          4925*********004
+        </span>
+        
+
+        <span
+          className="status status-success"
+        >
+          Active
+        </span>
+        
+
+      </li>
+      <li>
+        
+
+        <span>
+          4925*********004
+        </span>
+        
+
+        <span
+          className="status status-warning"
+        >
+          Expires soon
+        </span>
+        
+
+      </li>
+      <li>
+        
+
+        <span>
+          4925*********004
+        </span>
+        
+
+        <span
+          className="status status-danger"
+        >
+          Expired
+        </span>
+        
+
+      </li>
+    </ul>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Lists StripedItemList prevents default on anchors 1`] = `
+<Fragment>
+  <h2
+    id="item-list-striped"
+  >
+    Striped item list
+  </h2>
+  <p>
+     Striped item list info...
+    <Property
+      value=".item-list-striped"
+    />
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ul
+      className="item-list item-list-striped"
+    >
+      <li>
+        <span>
+          4925*********004
+        </span>
+        <div
+          className="action-list"
+        >
+          
+
+          <Icon
+            icon="more_vert"
+          />
+          
+
+          <div
+            className="action-menu"
+          >
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <Icon
+                icon="bookmark"
+              />
+              Add bookmark
+            </a>
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <Icon
+                icon="business_center"
+              />
+              Add client
+            </a>
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <Icon
+                icon="add_circle"
+              />
+              Add document
+            </a>
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <Icon
+                icon="person_add"
+              />
+              Add user
+            </a>
+            
+
+          </div>
+        </div>
+      </li>
+      <li>
+        
+
+        <span>
+          
+			
+          4925*********004
+          
+			
+          <span
+            className="badge badge-blue"
+          >
+            new
+          </span>
+          
+
+        </span>
+        
+
+        <a
+          href="https://developer.payex.com"
+        >
+          developer.payex.com
+        </a>
+        
+
+      </li>
+      <li>
+        
+
+        <span>
+          4925*********004
+        </span>
+        
+
+        <i
+          className="material-icons"
+        >
+          star
+        </i>
+        
+
+      </li>
+      <li>
+        
+
+        <span>
+          4925*********004
+        </span>
+        
+
+        <span
+          className="status status-success"
+        >
+          Active
+        </span>
+        
+
+        <button
+          className="btn btn-danger btn-xs"
+          type="button"
+        >
+          <i
+            className="material-icons"
+          >
+            delete
+          </i>
+        </button>
+        
+
+      </li>
+    </ul>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Lists StripedItemList renders 1`] = `
+<Fragment>
+  <h2
+    id="item-list-striped"
+  >
+    Striped item list
+  </h2>
+  <p>
+     Striped item list info...
+    <Property
+      value=".item-list-striped"
+    />
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ul
+      className="item-list item-list-striped"
+    >
+      <li>
+        <span>
+          4925*********004
+        </span>
+        <div
+          className="action-list"
+        >
+          
+
+          <Icon
+            icon="more_vert"
+          />
+          
+
+          <div
+            className="action-menu"
+          >
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <Icon
+                icon="bookmark"
+              />
+              Add bookmark
+            </a>
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <Icon
+                icon="business_center"
+              />
+              Add client
+            </a>
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <Icon
+                icon="add_circle"
+              />
+              Add document
+            </a>
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <Icon
+                icon="person_add"
+              />
+              Add user
+            </a>
+            
+
+          </div>
+        </div>
+      </li>
+      <li>
+        
+
+        <span>
+          
+			
+          4925*********004
+          
+			
+          <span
+            className="badge badge-blue"
+          >
+            new
+          </span>
+          
+
+        </span>
+        
+
+        <a
+          href="https://developer.payex.com"
+        >
+          developer.payex.com
+        </a>
+        
+
+      </li>
+      <li>
+        
+
+        <span>
+          4925*********004
+        </span>
+        
+
+        <i
+          className="material-icons"
+        >
+          star
+        </i>
+        
+
+      </li>
+      <li>
+        
+
+        <span>
+          4925*********004
+        </span>
+        
+
+        <span
+          className="status status-success"
+        >
+          Active
+        </span>
+        
+
+        <button
+          className="btn btn-danger btn-xs"
+          type="button"
+        >
+          <i
+            className="material-icons"
+          >
+            delete
+          </i>
+        </button>
         
 
       </li>

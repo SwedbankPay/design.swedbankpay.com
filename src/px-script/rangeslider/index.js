@@ -15,8 +15,16 @@ const _writeStyle = obj => {
 const rangeslider = (() => {
     const init = () => {
         const rangeContainers = document.querySelectorAll(".rangeslider");
+        const userBrowser = navigator.userAgent;
+        const inlineStyle = document.createElement("style");
+        const inlineStyleContent = [];
+        const isBrowserChrome = userBrowser.indexOf("Chrome") > -1;
 
-        if (rangeContainers) {
+        if (rangeContainers.length > 0) {
+            if (isBrowserChrome) {
+                document.body.appendChild(inlineStyle);
+            }
+
             rangeContainers.forEach((rangeContainer, i) => {
                 const input = rangeContainer.querySelector("input[type=range]");
                 const valueSpan = rangeContainer.querySelector("span[data-rs-value]");
@@ -32,11 +40,7 @@ const rangeslider = (() => {
                 }
 
                 /* Filling slider background for chrome */
-                if (navigator.userAgent.indexOf("Chrome") > -1) {
-                    const inlineStyle = document.createElement("style");
-                    const inlineStyleContent = [];
-
-                    document.body.appendChild(inlineStyle);
+                if (isBrowserChrome) {
                     input.id = `px-rs-${i}`;
 
                     const updateStyle = () => {

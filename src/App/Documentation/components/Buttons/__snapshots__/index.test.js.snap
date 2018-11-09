@@ -351,6 +351,53 @@ exports[`Documentation: Buttons Button group renders 1`] = `
 </Fragment>
 `;
 
+exports[`Documentation: Buttons ButtonGroup renders 1`] = `
+<Fragment>
+  <h2
+    id="button-group"
+  >
+    Using buttons together
+  </h2>
+  <p>
+    When you use buttons next to each other you have to wrap them in a 
+    <Property
+      value=".button-group"
+    />
+    .
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        label="Activate"
+        type="primary"
+      />
+      
+
+      <Button
+        label="Disable"
+        type="secondary"
+      />
+      
+
+      <Button
+        label="Delete"
+        type="danger"
+      />
+      
+
+    </div>
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Documentation: Buttons Buttons Text renders 1`] = `
 <div
   className="col-lg-10 doc-body"

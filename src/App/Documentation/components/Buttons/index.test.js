@@ -74,6 +74,18 @@ describe("Documentation: Buttons", () => {
         });
     });
 
+    describe("ButtonGroup", () => {
+        it("is defined", () => {
+            expect(ButtonGroup).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<ButtonGroup />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
     describe("Active State", () => {
         it("is defined", () => {
             expect(ActiveState).toBeDefined();
