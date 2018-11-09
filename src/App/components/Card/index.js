@@ -20,9 +20,7 @@ const Card = ({ type, title, imgSrc, text, textSection, smallText, btnTxt, foote
         <div className="card-body">
             {text ? <p>{text}</p> : null}{"\n"}
             {textSection ?
-                <div className="card-text">
-                    {textSection.map((secText, i) => <p key={`card-p-${i}`}>{secText}</p>)}
-                </div>
+                textSection.map((secText, i) => <p key={`card-p-${i}`}>{secText}</p>)
                 : null
             }
             {smallText ? <small>{smallText}</small> : null}
