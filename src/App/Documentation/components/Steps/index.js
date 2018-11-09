@@ -3,7 +3,6 @@ import PrismCode from "react-prism";
 
 import { ComponentPreview, DocToc } from "#";
 import StepsComponent from "@/Steps";
-import { steps } from "$/px-script";
 
 const BasicSteps = () => {
     const steps = [
@@ -15,7 +14,8 @@ const BasicSteps = () => {
         },
         {
             title: "Step two",
-            ongoing: true
+            ongoing: true,
+            selected: true
         },
         {
             title: "Step three"
@@ -44,7 +44,8 @@ const VerticalSteps = () => {
         },
         {
             title: "Step two",
-            ongoing: true
+            ongoing: true,
+            selected: true
         },
         {
             title: "Step three"
