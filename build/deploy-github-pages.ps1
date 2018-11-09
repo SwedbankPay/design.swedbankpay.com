@@ -9,6 +9,7 @@ if (($Env:APPVEYOR_REPO_TAG -eq "true") -and ($Env:GitVersion_BranchName -eq "ma
 # Avoid deploying PR's as they do not have access to secrets
 if ($Env:GitVersion_PreReleaseLabel -ne "PullRequest") {
     # Deploy to gh-pages
+    Write-Host "Starting deploy to gh-pages"
     git config --global credential.helper store
     git config --global user.email $Env:github_email
     git config --global user.name "payex-dev"
@@ -24,15 +25,17 @@ if ($Env:GitVersion_PreReleaseLabel -ne "PullRequest") {
     git push
     if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode) }
 
-    # Remove all deployed folders
-    Get-ChildItem -Path  "C:\temp" -Recurse |
+    # Remove all deployed folders and files
+    Write-Host "Removing deployed folders and files"
+    Get-ChildItem -Path  "C:\projects\design-payex-com" -Recurse |
     Select -ExpandProperty FullName |
-    Where {$_ -notlike "C:\temp\.git*"} |
+    Where {$_ -notlike "C:\projects\design-payex-com\.git*"} |
     sort length -Descending |
     Remove-Item -force
     if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode) }
 
     # Switch back to original branch
+    Write-Host "Switching branch to $Env:GitVersion_BranchName"
     git checkout -f $Env:GitVersion_BranchName
     if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode) }
 }
