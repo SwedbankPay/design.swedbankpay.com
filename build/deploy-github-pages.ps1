@@ -23,5 +23,17 @@ if ($Env:GitVersion_PreReleaseLabel -ne "PullRequest") {
     if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode) }
     git push
     if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode) }
+
+    # Remove all deployed folders
+    Get-ChildItem -Path  "C:\temp" -Recurse |
+    Select -ExpandProperty FullName |
+    Where {$_ -notlike "C:\temp\.git*"} |
+    sort length -Descending |
+    Remove-Item -force
+    if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode) }
+
+    # Switch back to original branch
+    git checkout -f $Env:GitVersion_BranchName
+    if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode) }
 }
 

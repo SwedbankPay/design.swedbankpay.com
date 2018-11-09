@@ -20,6 +20,7 @@ environment:
   sentry_token:
     secure: a/+7STfY8W8+RTlSDgKIZghq6iIy8K9WL5lICC6wsaoXPvKuBMjCsTE/KBdvP6vauLd9E2zbGHWjGUTI8SrF1bZUluC4VqhmrkWz9edM+10=
   # Time to wait for github pages to update after deploy (in seconds)
+  # TODO: Figure out the sweet spot here [EH]
   wait_time: 10
 
 # cache:
