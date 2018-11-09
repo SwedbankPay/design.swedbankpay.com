@@ -54,7 +54,7 @@ const RenderStepsNav = ({ steps }) => {
     return <>
         <div className="steps-responsive">
             { arrowLeft }
-                <div class="steps-responsive-text">Step 3</div>
+                <div className="steps-responsive-text">Step 3</div>
             { arrowRight }
         </div>
     </>
