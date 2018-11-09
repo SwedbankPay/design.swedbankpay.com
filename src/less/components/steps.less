@@ -76,12 +76,12 @@
         &:after {
             content: "";
             position: absolute;
-            bottom: 0;
             background-color: @gray-8;
             z-index: @zindex-steps-line;
             height: 3px;
-            // Prevent small gaps based 1/3 width
+            // Prevent small render gaps on certain resolutions 
             width: 101%;
+            left: 0;
             top: 50%;
             margin-top: -3px / 2;
         }
@@ -89,6 +89,7 @@
         &:first-child {
             &:after {
                 right: 0;
+                left: auto;
                 width: 50%;
             }
         }
@@ -96,7 +97,6 @@
         &:last-child {
             &:after {
                 width: 50%;
-                left: 0;
             }
         }
     }
@@ -274,6 +274,7 @@
             // TODO: Redundans?
             &:first-child{
                 &:after{
+                    left: 50.5px;
                     height: 50%;
                     width: 5px;
                     top: auto;
