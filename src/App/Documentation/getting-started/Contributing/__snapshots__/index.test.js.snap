@@ -412,7 +412,7 @@ exports[`GettingStarted: Contributing Adding Styles renders 7`] = `
 
 exports[`GettingStarted: Contributing Contributing Text renders 1`] = `
 <div
-  className="col-md-12 col-lg-10"
+  className="col-lg-10"
 >
   <p
     className="lead"
@@ -461,7 +461,7 @@ exports[`GettingStarted: Contributing Create A Documentation Page renders 1`] = 
 
     const MyExampleDocumentationComponentText = () =&gt; (
 
-        &lt;div className="col-md-12 col-lg-10 doc-body"&gt;
+        &lt;div className="col-lg-10 doc-body"&gt;
 
             &lt;p className="lead"&gt;This is the documentation for My Example Component.&lt;/p&gt;
 

@@ -691,7 +691,7 @@ const AlignContent = () => (
 );
 
 const FlexText = () => (
-    <div className="col-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <p className="lead">Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.</p>
         <EnableFlexBehaviors />
         <Direction />

@@ -32,7 +32,7 @@ const WellSizes = () => (
 );
 
 const WellText = () => (
-    <div className="col-md-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <ExperimentalComponentAlert />
         <p className="lead">Well well well, look what the cat dragged in...</p>
         <DefaultWell />

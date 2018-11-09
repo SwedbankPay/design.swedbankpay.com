@@ -65,7 +65,7 @@ const HorizontalStepBar = () => {
 };
 
 const StepBarText = () => (
-    <div className="col-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <ExperimentalComponentAlert />
         <p className="lead">Step Bar.</p>
         <BasicStepBar />

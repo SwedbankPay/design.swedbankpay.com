@@ -144,7 +144,7 @@ const HidingElements = () => (
 );
 
 const DisplayText = () => (
-    <div className="col-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <p className="lead">Quickly and responsively toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.</p>
         <HowItWorks />
         <Notation />

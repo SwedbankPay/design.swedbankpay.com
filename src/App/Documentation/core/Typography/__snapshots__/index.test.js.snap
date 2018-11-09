@@ -510,7 +510,7 @@ exports[`Core: Typography Text Utilities renders 1`] = `
 
 exports[`Core: Typography Typography Text renders 1`] = `
 <div
-  className="col-md-12 col-lg-10 doc-body"
+  className="col-lg-10 doc-body"
 >
   <p
     className="lead"

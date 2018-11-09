@@ -285,7 +285,7 @@ exports[`Components: Toast PremadeToasts renders 1`] = `
 
 exports[`Components: Toast ToastText renders 1`] = `
 <div
-  className="col-md-12 col-lg-10 doc-body"
+  className="col-lg-10 doc-body"
 >
   <ExperimentalComponentAlert />
   <p

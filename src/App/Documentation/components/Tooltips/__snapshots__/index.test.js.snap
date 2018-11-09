@@ -97,7 +97,7 @@ exports[`Components: Tooltip Overview renders 1`] = `
 
 exports[`Components: Tooltip TooltipText renders 1`] = `
 <div
-  className="col-md-12 col-lg-10 doc-body"
+  className="col-lg-10 doc-body"
 >
   <p
     className="lead"

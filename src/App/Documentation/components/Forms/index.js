@@ -317,7 +317,7 @@ const DisabledRangeSlider = () => (
 );
 
 const FormsText = () => (
-    <div className="col-md-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <p className="lead">Forms...</p>
         <Overview />
         <FormGrid />

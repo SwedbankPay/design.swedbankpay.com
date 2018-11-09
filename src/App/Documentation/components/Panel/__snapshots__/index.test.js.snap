@@ -165,7 +165,7 @@ exports[`Documentation: Panel PanelMuted renders 1`] = `
 
 exports[`Documentation: Panel PanelText renders 1`] = `
 <div
-  className="col-md-12 col-lg-10 doc-body"
+  className="col-lg-10 doc-body"
 >
   <p
     className="lead"

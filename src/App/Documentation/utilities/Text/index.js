@@ -81,7 +81,7 @@ const FontWeightAndItalics = () => (
 
 // Ya I know, but gotta keep it consistent... [EH]
 const TextText = () => (
-    <div className="col-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <p className="lead">Documentation and examples for common text utilities to control alignment, wrapping, weight, and more.</p>
         <TextAlignment />
         <TextWrappingAndOverflow />

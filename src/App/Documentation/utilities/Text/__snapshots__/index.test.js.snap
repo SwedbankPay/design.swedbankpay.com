@@ -117,7 +117,7 @@ exports[`Utilities: Text TextAlignment renders 1`] = `
 
 exports[`Utilities: Text TextText renders 1`] = `
 <div
-  className="col-12 col-lg-10 doc-body"
+  className="col-lg-10 doc-body"
 >
   <p
     className="lead"

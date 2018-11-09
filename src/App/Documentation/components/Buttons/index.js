@@ -214,7 +214,7 @@ const ButtonLoader = () => (
 );
 
 const ButtonsText = () => (
-    <div className="col-md-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <p className="lead">Use our button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
         <Examples />
         <UsageWithOtherTags />

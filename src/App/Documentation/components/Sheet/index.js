@@ -62,7 +62,7 @@ const UsageWithJavascript = () => (
 );
 
 const SheetText = () => (
-    <div className="col-md-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <p className="lead">Sheet...</p>
         <Example />
         <UsageWithJavascript />

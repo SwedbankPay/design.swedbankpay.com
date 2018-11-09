@@ -353,7 +353,7 @@ exports[`Documentation: Buttons Button group renders 1`] = `
 
 exports[`Documentation: Buttons Buttons Text renders 1`] = `
 <div
-  className="col-md-12 col-lg-10 doc-body"
+  className="col-lg-10 doc-body"
 >
   <p
     className="lead"

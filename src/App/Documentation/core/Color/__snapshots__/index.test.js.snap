@@ -72,7 +72,7 @@ exports[`Core: Color ColorPalette renders 1`] = `
 
 exports[`Core: Color ColorText renders 1`] = `
 <div
-  className="col-md-12 col-lg-10 doc-body"
+  className="col-lg-10 doc-body"
 >
   <p
     className="lead"
