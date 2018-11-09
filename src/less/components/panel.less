@@ -23,19 +23,6 @@
         }
     }
 
-    .panel-table {
-        .table {
-            thead,
-            tbody {
-                tr {
-                    :first-child {
-                        padding-left: @base-margin-xl;
-                    }
-                }
-            }
-        }
-    }
-
     &.panel-bottomless {
         .panel-body {
             margin-bottom: 0;
@@ -88,6 +75,19 @@
 
         > .panel-heading {
             margin: -15px -30px 15px -30px;
+        }
+    }
+
+    .panel-table {
+        .table {
+            thead,
+            tbody {
+                tr {
+                    :first-child {
+                        padding-left: @base-margin-xl;
+                    }
+                }
+            }
         }
     }
 
