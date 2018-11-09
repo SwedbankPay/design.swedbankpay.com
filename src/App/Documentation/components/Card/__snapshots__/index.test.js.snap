@@ -11,100 +11,8 @@ exports[`Documentation: Card CardText renders 1`] = `
     Card...
   </p>
   <DefaultBehaviour />
-  <CardTypes />
   <CardVariants />
 </div>
-`;
-
-exports[`Documentation: Card CardTypes renders 1`] = `
-<Fragment>
-  <h2
-    id="card-types"
-  >
-    Card Types
-  </h2>
-  <p>
-    To decide how your cards will look use 
-    <Property
-      value=".card-default"
-    />
-    , 
-    <Property
-      value=".card-brand"
-    />
-    , or 
-    <Property
-      value=".card-light"
-    />
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <div
-      className="cards"
-    >
-      <Card
-        btnTxt="Button"
-        footerLinkTxt="You wanna click this link?"
-        footerTxt="This is some text that goes in the footer."
-        imgSrc="https://picsum.photos/300"
-        smallText="And the small text"
-        text="This is the cards text"
-        title="Card default"
-        type="default"
-      >
-        <MediaObject
-          heading="Bob Corlsan"
-          icon="account_circle"
-          muted={true}
-          size="sm"
-          text="bob.corlsan@payex.com"
-          textSmall={true}
-        />
-      </Card>
-      <Card
-        btnTxt="Button"
-        footerLinkTxt="You wanna click this link?"
-        footerTxt="This is some text that goes in the footer."
-        imgSrc="https://picsum.photos/300"
-        smallText="And the small text"
-        text="This is the cards text"
-        title="Card brand"
-        type="brand"
-      >
-        <MediaObject
-          heading="725 NOK"
-          icon="account_balance"
-          muted={true}
-          size="sm"
-          text="Outstanding balance"
-          textSmall={true}
-        />
-      </Card>
-      <Card
-        btnTxt="Button"
-        footerLinkTxt="You wanna click this link?"
-        footerTxt="This is some text that goes in the footer."
-        imgSrc="https://picsum.photos/300"
-        smallText="And the small text"
-        text="This is the cards text"
-        title="Card light"
-        type="light"
-      >
-        <MediaObject
-          heading="75%"
-          icon="verified_user"
-          muted={true}
-          size="sm"
-          text="Complete"
-          textSmall={true}
-        />
-      </Card>
-    </div>
-  </ComponentPreview>
-</Fragment>
 `;
 
 exports[`Documentation: Card CardVariants renders 1`] = `
@@ -190,7 +98,18 @@ exports[`Documentation: Card DefaultBehaviour renders 1`] = `
     >
       breakpoint
     </Link>
-     sm the cards will switch to mobile view and take up one row each and stretch to fill the width of the container.
+     sm the cards will switch to mobile view and take up one row each and stretch to fill the width of the container. To decide how your cards will look use 
+    <Property
+      value=".card-default"
+    />
+    , 
+    <Property
+      value=".card-brand"
+    />
+    , or 
+    <Property
+      value=".card-light"
+    />
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -226,8 +145,8 @@ exports[`Documentation: Card DefaultBehaviour renders 1`] = `
         imgSrc="https://picsum.photos/300"
         smallText="And the small text"
         text="This is the cards text"
-        title="Card default"
-        type="default"
+        title="Card brand"
+        type="brand"
       >
         <MediaObject
           heading="725 NOK"
@@ -245,8 +164,8 @@ exports[`Documentation: Card DefaultBehaviour renders 1`] = `
         imgSrc="https://picsum.photos/300"
         smallText="And the small text"
         text="This is the cards text"
-        title="Card default"
-        type="default"
+        title="Card light"
+        type="light"
       >
         <MediaObject
           heading="75%"
