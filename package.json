@@ -13,7 +13,8 @@
         "eslint": "eslint src/**/*.js",
         "stylelint": "stylelint src/**/*.less",
         "lint": "npm run eslint && npm run stylelint",
-        "e2e:chrome": "testcafe chrome src/**/*.spec.js"
+        "e2e:chrome": "testcafe chrome src/**/*.spec.js",
+        "response-time": "node build/check-response-time.js"
     },
     "repository": {
         "type": "git",

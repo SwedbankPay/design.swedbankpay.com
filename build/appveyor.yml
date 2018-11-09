@@ -19,6 +19,8 @@ environment:
   # Sentry
   sentry_token:
     secure: a/+7STfY8W8+RTlSDgKIZghq6iIy8K9WL5lICC6wsaoXPvKuBMjCsTE/KBdvP6vauLd9E2zbGHWjGUTI8SrF1bZUluC4VqhmrkWz9edM+10=
+  # Time to wait for github pages to update after deploy (in seconds)
+  wait_time: 10
 
 # cache:
 #   - node_modules
@@ -55,8 +57,9 @@ test_script:
 #     deployment configuration    #
 #---------------------------------#
 
+# This is excplicitly set to 'after_test' instead of 'before_deploy' so it runs on all branches [EH]
 after_test:
-- ps: ./build/deploy-github-pages.ps1
+- ps: ./build/before-deploy.ps1
 
 deploy:
   # Deploy to GitHub Releases
