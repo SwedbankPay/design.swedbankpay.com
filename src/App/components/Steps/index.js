@@ -65,8 +65,8 @@ const Steps = ({ steps, vertical }) => {
         vertical ? "steps-vertical" : null,
     );
 
-    return (<div>
-        <ol className={stepsClasses}>
+    return (<div className={stepsClasses}>
+        <ol>
             {steps ? <RenderSteps steps={steps} /> : <RenderSteps steps={DefaultSteps} />}
         </ol>
         <RenderStepsNav steps={steps} />
