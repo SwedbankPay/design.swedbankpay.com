@@ -25,15 +25,6 @@ if ($Env:GitVersion_PreReleaseLabel -ne "PullRequest") {
     git push
     if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode) }
 
-    # Remove all deployed folders and files
-    # Write-Host "Removing deployed folders and files"
-    # Get-ChildItem -Path  "C:\projects\design-payex-com" -Recurse |
-    # Select -ExpandProperty FullName |
-    # Where {$_ -notlike "C:\projects\design-payex-com\.git*"} |
-    # sort length -Descending |
-    # Remove-Item -force
-    # if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode) }
-
     # Switch back to original branch
     Write-Host "Switching branch to $Env:GitVersion_BranchName"
     git checkout -f $Env:GitVersion_BranchName

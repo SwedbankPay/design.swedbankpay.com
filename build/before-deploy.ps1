@@ -5,6 +5,6 @@
 Start-Sleep -s $Env:wait_time
 
 # Check response time for scripts and styles
-npm run response-time basename=$Env:basename
+npm run response-time
 
 # TODO: Run functional tests etc here [EH]

@@ -22,6 +22,8 @@ environment:
   # Time to wait for github pages to update after deploy (in seconds)
   # TODO: Figure out the sweet spot here [EH]
   wait_time: 10
+  test_var:
+    secure: mtTIk5zBHQFvB7nc+M5WddrggwpyQ+tDg3oIjwc3uwc=
 
 # cache:
 #   - node_modules
