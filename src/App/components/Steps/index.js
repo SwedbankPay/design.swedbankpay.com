@@ -21,8 +21,7 @@ const DefaultSteps = [
     }
 ];
 
-
-const StepContent = ({completed, subtitle, title}) => ( 
+const StepContent = ({ completed, subtitle, title }) => (
     <>
         {completed ? <div className="material-icons steps-icon" >check</div> : null}
         {title}
@@ -43,20 +42,18 @@ const RenderSteps = ({ steps }) => (
 );
 
 const RenderStepsNav = ({ steps }) => {
-    const clickableItem = steps.some((item) => {
-        return item.clickable;
-    });
+    const clickableItem = steps.some(item => item.clickable);
 
-    var arrowLeft = clickableItem ?  <div className="material-icons steps-nav-left">keyboard_arrow_left</div> : null;
-    var arrowRight = clickableItem ?  <div className="material-icons steps-nav-right">keyboard_arrow_right</div> : null;
+    const arrowLeft = clickableItem ? <div className="material-icons steps-nav-left">keyboard_arrow_left</div> : null;
+    const arrowRight = clickableItem ? <div className="material-icons steps-nav-right">keyboard_arrow_right</div> : null;
 
     return <>
         <div className="steps-responsive">
             { arrowLeft }
-                <div className="steps-responsive-text">Step 3</div>
+            <div className="steps-responsive-text">Step 3</div>
             { arrowRight }
         </div>
-    </>
+    </>;
 };
 
 const Steps = ({ steps, vertical }) => {
