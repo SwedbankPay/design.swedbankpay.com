@@ -23,9 +23,9 @@ const DefaultSteps = [
 
 const StepContent = ({ completed, subtitle, title }) => (
     <>
-        {completed ? <div className="material-icons steps-icon" >check</div> : null}
+        {completed ? <><div className="material-icons steps-icon" >check</div>{ "\n" }</> : null}
         {title}
-        {subtitle ? <div className="steps-sub-title">{subtitle}</div> : null}
+        {subtitle ? <>{ "\n" }<div className="steps-sub-title">{subtitle}</div></> : null}
     </>
 );
 
@@ -35,7 +35,11 @@ const RenderSteps = ({ steps }) => (
             <li key={i} className={classnames(completed ? "steps-completed" : null,
                 ongoing ? "steps-ongoing" : null,
                 selected ? "steps-selected" : null)}>
-                {clickable ? <a><StepContent completed={completed} subtitle={subtitle} title={title}/></a> : <StepContent completed={completed} subtitle={subtitle} title={title}/> }
+                { clickable ?
+                    <>{ "\n" } <a><StepContent completed={completed} subtitle={subtitle} title={title}/></a> { "\n" } </>
+                    :
+                    <StepContent completed={completed} subtitle={subtitle} title={title}/>
+                }
             </li>
         ))}
     </>
