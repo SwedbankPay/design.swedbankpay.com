@@ -41,7 +41,7 @@ before_build:
 - ps: ./build/prepare-release-build.ps1
 
 build_script:
-- cmd: npm run build:prod -- --env.release=%release% --env.basename=%basename% --env.semver=%GitVersion_FullSemVer%
+- cmd: npm run build:prod
 
 #---------------------------------#
 #       tests configuration       #

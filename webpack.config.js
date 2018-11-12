@@ -17,9 +17,9 @@ const AppManifestWebpackPlugin = require("app-manifest-webpack-plugin");
 module.exports = (env, argv) => {
     const isProd = argv.mode === "production";
     const isDevServer = !!argv.host;
-    const version = env && env.semver ? env.semver : "LOCAL_DEV";
-    const isRelease = env && env.release === "true";
-    const basename = env && env.basename ? `/${env.basename}/` : "/";
+    const version = process.env.GitVersion_FullSemVer ? process.env.GitVersion_FullSemVer : "LOCAL_DEV";
+    const isRelease = process.env.release === "true";
+    const basename = process.env.basename ? `/${process.env.basename}/` : "/";
     const infoVersion = process.env.GitVersion_InformationalVersion ? process.env.GitVersion_InformationalVersion : "LOCAL_DEV";
 
     const config = {

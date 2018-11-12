@@ -1,16 +1,15 @@
 const fetch = require("node-fetch");
 
-// process.env.basename = "v/0.133.1";
-// process.env.slack_designguide_webhook = "https://hooks.slack.com/services/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";
-// process.env.GitVersion_Sha = "a1cc78904c43a627193479bdc41b0c08c22132e3";
-// process.env.GitVersion_ShortSha = "e9c9edd";
-
-// const BASEURL = "http://localhost:8080";
 const BASEURL = `https://design.payex.com/${process.env.basename}`;
 const STATES = {
     SUCCESS: "#2da944",
     WARNING: "#ff9f00",
     ERROR: "#cd2e00"
+};
+
+const MS_THRESHOLDS = {
+    ERROR: 500,
+    WARNING: 300
 };
 
 const urlsToCheck = [
@@ -57,7 +56,7 @@ const getResponseTime = async url => {
 
 const checkResponseTime = async () => {
     const slackMessageData = {
-        text: `Response times for *${process.env.basename}* (<https://github.com/PayEx/design.payex.com/commit/${process.env.GitVersion_ShortSha}|${process.env.GitVersion_ShortSha}>):`,
+        text: `Response times for *${process.env.basename} (<https://github.com/PayEx/design.payex.com/commit/${process.env.GitVersion_ShortSha}|${process.env.GitVersion_ShortSha}>)*:`,
         attachments: []
     };
     let highMsWarning = true;
@@ -68,11 +67,11 @@ const checkResponseTime = async () => {
         let responseColor = "";
         let responseIcon = "";
 
-        if (responseTime > 500) {
+        if (responseTime > MS_THRESHOLDS.ERROR) {
             responseColor = STATES.ERROR;
             responseIcon = ":x:";
             highMsWarning = true;
-        } else if (responseTime > 300) {
+        } else if (responseTime > MS_THRESHOLDS.WARNING) {
             responseColor = STATES.WARNING;
             responseIcon = ":exclamation:";
         } else {
