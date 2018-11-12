@@ -31,7 +31,7 @@ const StepContent = ({ completed, subtitle, title }) => (
 
 const RenderSteps = ({ steps }) => (
     <>
-        {steps.map(({ title, subtitle, completed, ongoing, selected, clickable }, i) => (      
+        {steps.map(({ title, subtitle, completed, ongoing, selected, clickable }, i) => (
             <li key={i} className={classnames(completed ? "steps-completed" : null,
                 ongoing ? "steps-ongoing" : null,
                 selected ? "steps-selected" : null)}>

@@ -98,8 +98,8 @@ const ClickableSteps = () => {
     <>
         <h2 id="clickable-steps">Clickable steps</h2>
         <p>
-            Add an anchor element (<PrismCode className="language-html">{"<a>"}</PrismCode>) to the list item element ( <PrismCode className="language-html">{"<li>"}</PrismCode>). 
-            Ensure that all content within the list element is also inside the anchor element. 
+            Add an anchor element (<PrismCode className="language-html">{"<a>"}</PrismCode>) to the list item element ( <PrismCode className="language-html">{"<li>"}</PrismCode>).
+            Ensure that all content within the list element is also inside the anchor element.
             <br/>Clickable steps is not working properly
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
