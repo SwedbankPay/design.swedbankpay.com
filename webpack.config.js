@@ -20,7 +20,7 @@ module.exports = (env, argv) => {
     const version = env && env.semver ? env.semver : "LOCAL_DEV";
     const isRelease = env && env.release === "true";
     const basename = env && env.basename ? `/${env.basename}/` : "/";
-    const infoVersion = env && env.infoversion ? env.infoversion : "LOCAL_DEV";
+    const infoVersion = process.env.GitVersion_InformationalVersion ? process.env.GitVersion_InformationalVersion : "LOCAL_DEV";
 
     const config = {
         entry: {
