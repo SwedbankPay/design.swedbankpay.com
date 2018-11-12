@@ -102,7 +102,6 @@ const ClickableSteps = () => {
             Ensure that all content within the list element is also inside the anchor element. 
             <br/>Clickable steps is not working properly
         </p>
-        
         <ComponentPreview language="html" showCasePanel codeFigure>
             <StepsComponent steps={steps} />
         </ComponentPreview>
@@ -131,7 +130,6 @@ class Steps extends Component {
         );
     }
 }
-
 
 export default Steps;
 
