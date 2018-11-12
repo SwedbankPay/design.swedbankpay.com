@@ -22,8 +22,8 @@ environment:
   # Time to wait for github pages to update after deploy (in seconds)
   # TODO: Figure out the sweet spot here [EH]
   wait_time: 10
-  test_var:
-    secure: mtTIk5zBHQFvB7nc+M5WddrggwpyQ+tDg3oIjwc3uwc=
+  slack_designguide_webhook:
+    secure: gxWz5+nY3Ctg2JTqo5RQVwHA+UNxiB/H1u72IC71b3oBZj/dxqBLc1/EYZtxzWjiOCXPSOfKJ485+XhtyTt1kNjHon7JWRftucuOyhaozmw=
 
 # cache:
 #   - node_modules
