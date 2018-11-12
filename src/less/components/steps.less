@@ -1,8 +1,12 @@
 @list-item-padding: 3.4rem 0 0 0;
-@list-item-padding-desktop: 2rem 1.5rem 2rem 5.5rem;
+@list-item-padding-desktop: 4.8rem 0 1rem 0;
+@list-item-padding-desktop-vertical: 2rem 1.5rem 2rem 5.5rem;
 
 @circle-size: 30px;
-@circle-size: 30px;
+@circle-size-desktop: 45px;
+
+@line-width: 3px;
+@line-width-desktop: 5px;
 
 .steps ol {
     list-style: none;
@@ -30,26 +34,25 @@
 
         > a {
             display: block;
+            width: 100%;
 
             /* Take full parent size, ignoring parents padding, and stil growing the parent with text from this element */
 
             /* TODO : variable */
             padding: @list-item-padding;
             margin: -@list-item-padding;
-            width: 100%;
-            border-top: @border-width solid transparent;
-            border-bottom: @border-width solid transparent;
             color: @brand-primary;
+            border: 0;
             cursor: pointer;
 
             &:hover {
                 background-color: @gray-10;
-                border-color: @gray-9;
+                box-shadow: 1px 0 0 0 @gray-9, -1px 0 0 0 @gray-9, 0 1px 0 0 @gray-10;
             }
 
             .steps-icon {
                 left: 50%;
-                margin-left: -15px;
+                margin-left: -@circle-size / 2;
             }
         }
 
@@ -61,16 +64,14 @@
             position: absolute;
             box-sizing: border-box;
             z-index: @zindex-steps-circle;
-
-            /* TODO: Variable? */
-            height: 30px;
-            width: 30px;
-            border-radius: 30px;
+            height: @circle-size;
+            width: @circle-size;
+            border-radius: 50%;
             border: 3px solid @gray-8;
             background-color: @background-white;
             left: initial;
             top: 50%;
-            margin-top: -30px / 2;
+            margin-top: -@circle-size / 2;
         }
 
         /* Line */
@@ -79,13 +80,13 @@
             position: absolute;
             background-color: @gray-8;
             z-index: @zindex-steps-line;
-            height: 3px;
+            height: @line-width;
 
-            /* Prevent small render gaps on certain resolutions */
+            /* Prevents small render gaps on certain resolutions */
             width: 102%;
             left: 0;
             top: 50%;
-            margin-top: -3px / 2;
+            margin-top: -@line-width / 2;
         }
 
         &:first-child {
@@ -146,14 +147,14 @@
     .steps-icon {
         color: @background-white;
         position: absolute;
-        width: 30px;
-        height: 30px;
+        width: @circle-size;
+        height: @circle-size;
         z-index: @zindex-steps-icon;
-        line-height: 30px;
+        line-height: @circle-size;
         text-align: center;
         font-size: 1.1rem;
         top: 50%;
-        margin-top: -30px / 2;
+        margin-top: -@circle-size / 2;
     }
 }
 
@@ -183,41 +184,39 @@
         font-size: 1.1rem;
 
         li {
-            min-width: auto;
-            padding: 4.8rem 0 1rem 0;
+            padding: @list-item-padding-desktop;
             height: auto;
 
-            /* TODO: Variables? */
             > a {
-                padding: 4.8rem 0 1rem 0;
-                margin: -4.8rem 0 -1rem 0;
+                padding: @list-item-padding-desktop;
+                margin: -@list-item-padding-desktop;
 
                 .steps-icon {
-                    margin-left: -22.5px;
+                    margin-left: -@circle-size-desktop / 2;
                     top: 2.7rem;
                 }
             }
 
             .steps-icon {
-                width: 45px;
-                height: 45px;
-                margin-top: -22.5px;
+                width: @circle-size-desktop;
+                height: @circle-size-desktop;
+                margin-top: -@circle-size-desktop / 2;
+                line-height: @circle-size-desktop;
                 font-size: 24px;
-                line-height: 45px;
                 top: 2.7rem;
             }
 
             &:before {
-                margin-top: -22.5px;
-                height: 45px;
-                width: 45px;
+                margin-top: -@circle-size-desktop / 2;
+                height: @circle-size-desktop;
+                width: @circle-size-desktop;
                 top: 2.7rem;
                 border-width: 5px;
             }
 
             &:after {
                 top: 2.7rem;
-                height: 5px;
+                height: @line-width-desktop;
             }
         }
 
@@ -232,20 +231,21 @@
         li {
             display: block;
             text-align: left;
-            padding: 2rem 1.5rem 2rem 5.5rem;
+            padding: @list-item-padding-desktop-vertical;
 
             &.steps-selected {
                 box-shadow: 0 1px 0 0 @gray-9, 0 -1px 0 0 @gray-9;
             }
 
             > a {
-                padding: 2rem 1.5rem 2rem 5.5rem;
-                margin: -2.0625rem -1.5rem -2.0625rem -5.5rem;
+                padding: @list-item-padding-desktop-vertical;
+                margin: -@list-item-padding-desktop-vertical;
                 width: auto;
 
                 .steps-icon {
-                    /* TODO: All the pixels :/ */
-                    left: 52.5px;
+                    top: 50%;
+                    left: 30px;
+                    margin-left: 0;
                 }
             }
 
@@ -261,9 +261,9 @@
 
             /* Line */
             &:after {
-                width: 5px;
-                left: 50.5px;
-                top: -2px;
+                width: @line-width-desktop;
+                left: 30px + (@circle-size-desktop / 2) - (@line-width-desktop / 2);
+                top: 0;
                 bottom: 0;
                 height: auto;
             }
