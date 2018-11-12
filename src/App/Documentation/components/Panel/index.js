@@ -64,7 +64,7 @@ const Overview = () => (
                 subTitle="Panel subtitle"
                 footerText="Footer content goes here."
                 footerBtnText="Footer button"
-                panelBodyContent={bodyContent}
+                bodyContent={bodyContent}
             />
         </ComponentPreview>
     </>
@@ -90,7 +90,7 @@ const PanelDark = () => (
                 type="brand"
                 title="Panel title"
                 subTitle="Panel subtitle"
-                panelBodyContent={bodyContent}
+                bodyContent={bodyContent}
                 footerText="Footer content goes here."
                 footerBtnText="Footer button"
                 darkMode
@@ -108,7 +108,7 @@ const PanelMuted = () => (
                 type="muted"
                 title="Panel title"
                 subTitle="Panel subtitle"
-                panelBodyContent={bodyContent}
+                bodyContent={bodyContent}
                 footerText="Footer content goes here."
                 footerBtnText="Footer button"
             />
@@ -129,7 +129,7 @@ const PanelTable = () => (
                 type="brand"
                 title="Panel title"
                 subTitle="Panel subtitle"
-                panelBodyContent={bodyContent}
+                bodyContent={bodyContent}
                 footerText="Footer content goes here."
                 footerBtnText="Footer button"
                 panelTable={TableContent}

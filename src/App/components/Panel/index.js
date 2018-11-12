@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-const Panel = ({ title, subTitle, id, type, removeBottomPadding, removeAllPadding, halfPadding, darkMode, panelBodyContent, panelTable, footerText }) => {
+const Panel = ({ title, subTitle, id, type, removeBottomPadding, removeAllPadding, halfPadding, darkMode, bodyContent, panelTable, footerText }) => {
     const panelClasses = classnames(
         "panel",
         type ? `panel-${type}` : "panel-default",
@@ -22,10 +22,10 @@ const Panel = ({ title, subTitle, id, type, removeBottomPadding, removeAllPaddin
                     {subTitle ? <p className="panel-sub-title">{subTitle}</p> : null}
                 </header>
                 : null}
-            {panelBodyContent ?
+            {bodyContent ?
                 <div className="panel-body">
                     {
-                        panelBodyContent.map((text, i) => (
+                        bodyContent.map((text, i) => (
                             <p key={i}>{text}</p>
                         ))
                     }
@@ -54,7 +54,7 @@ Panel.propTypes = {
     removeAllPadding: PropTypes.bool,
     removeBottomPadding: PropTypes.bool,
     darkMode: PropTypes.bool,
-    panelBodyContent: PropTypes.array,
+    bodyContent: PropTypes.array,
     footerText: PropTypes.string
 };
 

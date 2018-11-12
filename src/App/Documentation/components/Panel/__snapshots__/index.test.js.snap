@@ -16,21 +16,18 @@ exports[`Documentation: Panel Overview renders 1`] = `
     showCasePanel={true}
   >
     <Panel
+      bodyContent={
+        Array [
+          "Your main panel content is put here.",
+          "Some more content over here.",
+          "And one more line, just to be safe.",
+        ]
+      }
       footerBtnText="Footer button"
       footerText="Footer content goes here."
       subTitle="Panel subtitle"
       title="Panel title"
-    >
-      <p>
-        Your main panel content is put here.
-      </p>
-      <p>
-        Some more content over here.
-      </p>
-      <p>
-        And one more line, just to be safe.
-      </p>
-    </Panel>
+    />
   </ComponentPreview>
 </Fragment>
 `;
@@ -55,28 +52,20 @@ exports[`Documentation: Panel PanelDark renders 1`] = `
     showCasePanel={true}
   >
     <Panel
+      bodyContent={
+        Array [
+          "Your main panel content is put here.",
+          "Some more content over here.",
+          "And one more line, just to be safe.",
+        ]
+      }
       darkMode={true}
       footerBtnText="Footer button"
       footerText="Footer content goes here."
       subTitle="Panel subtitle"
       title="Panel title"
       type="brand"
-    >
-      <p
-        className="lead"
-      >
-        This is a dark panel.
-      </p>
-      <p>
-        Your main panel content is put here.
-      </p>
-      <p>
-        Some more content over here.
-      </p>
-      <p>
-        And one more line, just to be safe.
-      </p>
-    </Panel>
+    />
   </ComponentPreview>
 </Fragment>
 `;
@@ -138,27 +127,19 @@ exports[`Documentation: Panel PanelMuted renders 1`] = `
     showCasePanel={true}
   >
     <Panel
+      bodyContent={
+        Array [
+          "Your main panel content is put here.",
+          "Some more content over here.",
+          "And one more line, just to be safe.",
+        ]
+      }
       footerBtnText="Footer button"
       footerText="Footer content goes here."
       subTitle="Panel subtitle"
       title="Panel title"
       type="muted"
-    >
-      <p
-        className="lead"
-      >
-        This is a muted panel.
-      </p>
-      <p>
-        Your main panel content is put here.
-      </p>
-      <p>
-        Some more content over here.
-      </p>
-      <p>
-        And one more line, just to be safe.
-      </p>
-    </Panel>
+    />
   </ComponentPreview>
 </Fragment>
 `;
@@ -176,6 +157,7 @@ exports[`Documentation: Panel PanelText renders 1`] = `
   <PanelHeaders />
   <PanelDark />
   <PanelMuted />
+  <PanelTable />
 </div>
 `;
 
