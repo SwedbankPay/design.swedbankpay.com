@@ -31,7 +31,7 @@ install:
 
     gitversion /output BuildServer
 
-    npm install
+    npm install -- --env.release=%release% --env.basename=%basename% --env.semver=%GitVersion_FullSemVer% --env.info_version=GitVersion_InformationalVersion
 
 #---------------------------------#
 #       build configuration       #
