@@ -3,9 +3,10 @@ const fetch = require("node-fetch");
 // process.env.basename = "v/0.133.1";
 // process.env.slack_designguide_webhook = "https://hooks.slack.com/services/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";
 // process.env.GitVersion_Sha = "a1cc78904c43a627193479bdc41b0c08c22132e3";
+// process.env.GitVersion_ShortSha = "e9c9edd";
 
-const BASEURL = `https://design.payex.com/${process.env.basename}`;
 // const BASEURL = "http://localhost:8080";
+const BASEURL = `https://design.payex.com/${process.env.basename}`;
 const STATES = {
     SUCCESS: "#2da944",
     WARNING: "#ff9f00",
@@ -56,51 +57,60 @@ const getResponseTime = async url => {
 
 const checkResponseTime = async () => {
     const slackMessageData = {
-        text: `Response times for *${process.env.basename}*:`,
+        text: `Response times for *${process.env.basename}* (<https://github.com/PayEx/design.payex.com/commit/${process.env.GitVersion_ShortSha}|${process.env.GitVersion_ShortSha}>):`,
         attachments: []
     };
-    let highMsWarning = false;
+    let highMsWarning = true;
 
     await asyncForEach(urlsToCheck, async url => {
         const responseTime = await getResponseTime(BASEURL + url.path);
 
-        const responseTimeData = {
-            text: `${url.name}: *${responseTime}ms*`,
-            color: STATES.SUCCESS
-        };
+        let responseColor = "";
+        let responseIcon = "";
 
         if (responseTime > 500) {
-            responseTimeData.color = STATES.ERROR;
+            responseColor = STATES.ERROR;
+            responseIcon = ":x:";
             highMsWarning = true;
         } else if (responseTime > 300) {
-            responseTimeData.color = STATES.WARNING;
+            responseColor = STATES.WARNING;
+            responseIcon = ":exclamation:";
+        } else {
+            responseColor = STATES.SUCCESS;
+            responseIcon = ":heavy_check_mark:";
         }
 
-        slackMessageData.attachments.push(responseTimeData);
+        slackMessageData.attachments.push({
+            text: `${responseIcon} ${url.name}: *${responseTime}ms*`,
+            color: responseColor
+        });
     });
 
-    sendSlackMessage(slackMessageData);
-
     if (highMsWarning) {
-        sendSlackMessage({ text: "@channel Investigate response times!" });
+        slackMessageData.attachments.push({
+            text: "<!channel> Investigate response times! :fire:",
+            color: STATES.ERROR
+        });
     }
+
+    sendSlackMessage(slackMessageData);
 };
 
-let commitDeployed = false;
+let intervalCount = 0;
+const interval = setInterval(() => {
+    intervalCount++;
 
-for (let i = 0; i < 120; i++) {
-    if (commitDeployed) {
-        break;
+    if (intervalCount >= 120) {
+        clearInterval(interval);
     }
 
-    setTimeout(() => {
-        fetch(BASEURL)
-            .then(res => res.text())
-            .then(res => {
-                if (res.includes(process.env.GitVersion_Sha)) {
-                    checkResponseTime();
-                    commitDeployed = true;
-                }
-            });
-    }, 10000);
-}
+    fetch(BASEURL)
+        .then(res => res.text())
+        .then(res => {
+            if (res.includes(process.env.GitVersion_Sha)) {
+                console.log(`Commit "${process.env.GitVersion_ShortSha}" is deployed!`);
+                clearInterval(interval);
+                checkResponseTime();
+            }
+        });
+}, 10000);
