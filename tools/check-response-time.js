@@ -1,6 +1,11 @@
 const fetch = require("node-fetch");
 
+// process.env.basename = "v/0.133.1";
+// process.env.slack_designguide_webhook = "https://hooks.slack.com/services/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";
+// process.env.GitVersion_Sha = "a1cc78904c43a627193479bdc41b0c08c22132e3";
+
 const BASEURL = `https://design.payex.com/${process.env.basename}`;
+// const BASEURL = "http://localhost:8080";
 const STATES = {
     SUCCESS: "#2da944",
     WARNING: "#ff9f00",
@@ -81,4 +86,21 @@ const checkResponseTime = async () => {
     }
 };
 
-checkResponseTime();
+let commitDeployed = false;
+
+for (let i = 0; i < 120; i++) {
+    if (commitDeployed) {
+        break;
+    }
+
+    setTimeout(() => {
+        fetch(BASEURL)
+            .then(res => res.text())
+            .then(res => {
+                if (res.includes(process.env.GitVersion_Sha)) {
+                    checkResponseTime();
+                    commitDeployed = true;
+                }
+            });
+    }, 10000);
+}
