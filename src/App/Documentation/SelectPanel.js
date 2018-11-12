@@ -29,7 +29,7 @@ class NavGroup extends Component {
         return (
             <div className={`nav-group${this.state.isActive ? " active" : ""}`}>
                 <div className="nav-heading">
-                    <i className="material-icons">keyboard_arrow_right</i>
+                    <i className="material-icons" onClick={() => this.toggleActive()}>keyboard_arrow_right</i>
                     <span onClick={() => this.toggleActive()}>{title}</span>
                 </div>
                 <ul>
