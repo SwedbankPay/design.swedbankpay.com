@@ -12,8 +12,6 @@ const Panel = ({ title, subTitle, id, type, removeBottomPadding, removeAllPaddin
         darkMode ? "panel-dark" : null
     );
 
-    const TableComponent = panelTable;
-
     return (
         <section
             className={panelClasses}
@@ -27,10 +25,10 @@ const Panel = ({ title, subTitle, id, type, removeBottomPadding, removeAllPaddin
             {panelBodyContent ?
                 <div className="panel-body">
                     {
-                        panelBodyContent.forEach(text => (
-                            <p>{text}</p>
+                        panelBodyContent.map((text, i) => (
+                            <p key={i}>{text}</p>
                         ))
-                    };
+                    }
                 </div>
                 : null}
             {panelTable ?

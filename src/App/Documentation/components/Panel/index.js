@@ -64,6 +64,7 @@ const Overview = () => (
                 subTitle="Panel subtitle"
                 footerText="Footer content goes here."
                 footerBtnText="Footer button"
+                panelBodyContent={bodyContent}
             />
         </ComponentPreview>
     </>
@@ -89,6 +90,7 @@ const PanelDark = () => (
                 type="brand"
                 title="Panel title"
                 subTitle="Panel subtitle"
+                panelBodyContent={bodyContent}
                 footerText="Footer content goes here."
                 footerBtnText="Footer button"
                 darkMode
@@ -102,8 +104,14 @@ const PanelMuted = () => (
         <h2 id="muted-panel">Muted panel</h2>
         <p>Muted panel with <Property value=".panel-muted" />...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <PanelComponent title="Default panel" />{"\n\n"}
-            <PanelComponent type="brand" title="Panel brand" />
+            <PanelComponent
+                type="muted"
+                title="Panel title"
+                subTitle="Panel subtitle"
+                panelBodyContent={bodyContent}
+                footerText="Footer content goes here."
+                footerBtnText="Footer button"
+            />
         </ComponentPreview>
     </>
 );
@@ -112,14 +120,16 @@ const PanelTable = () => (
     <>
         <h2 id="panel-with-table">Displaying a full width table</h2>
         <p>
-            To Display a full width table in a panel use <Property value=".panel-table" /> on a div wrapping the table.
-            This has to be put outside the panel-body since body has its own padding.
+            To display a full width table in a panel use <Property value=".panel-table" /> on a div wrapping the table.
+            Put <Property value=".panel-table" /> as a direct child of <Property value=".panel" />. Tables put in a panel are given a
+            border bottom to seperate it from the following elements.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <PanelComponent
                 type="brand"
                 title="Panel title"
                 subTitle="Panel subtitle"
+                panelBodyContent={bodyContent}
                 footerText="Footer content goes here."
                 footerBtnText="Footer button"
                 panelTable={TableContent}
