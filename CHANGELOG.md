@@ -14,5 +14,6 @@
 - Fixed issue with disabled loading button not displaying properly (#61).
 - Fixed a bug that would cause the rangeslider script to generate one style tag for each rangeslider component on a given page.
 - Fixed an issue with faulty grid baserules.
+- Fixed issue with icons not aligning properly with text inside block-level buttons.
 
 ### Removed
