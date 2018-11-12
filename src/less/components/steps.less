@@ -1,10 +1,15 @@
+@list-item-padding: 3.4rem 0 0 0;
+@list-item-padding-desktop: 2rem 1.5rem 2rem 5.5rem;
+
+@circle-size: 30px;
+@circle-size: 30px;
+
 .steps ol {
     list-style: none;
     margin: 0;
     padding: 0;
     background-color: @background-white;
     box-shadow: @default-box-shadow;
-
     display: flex;
     justify-content: space-between;
 
@@ -17,7 +22,7 @@
         flex: 0 1 100%;
         flex-grow: 1;
         position: relative;
-        padding: 3.4rem 0 0 0;
+        padding: @list-item-padding;
         text-align: center;
         line-height: 1rem;
         overflow: hidden;
@@ -25,22 +30,24 @@
 
         > a {
             display: block;
-            padding: 3.4rem 0 0 0;
-            margin: -3.4rem 0 0 0;
-            
-            width: 100%;
 
+            /* Take full parent size, ignoring parents padding, and stil growing the parent with text from this element */
+
+            /* TODO : variable */
+            padding: @list-item-padding;
+            margin: -@list-item-padding;
+            width: 100%;
             border-top: @border-width solid transparent;
             border-bottom: @border-width solid transparent;
             color: @brand-primary;
             cursor: pointer;
 
-            &:hover{
+            &:hover {
                 background-color: @gray-10;
                 border-color: @gray-9;
             }
 
-            .steps-icon{
+            .steps-icon {
                 left: 50%;
                 margin-left: -15px;
             }
@@ -49,17 +56,18 @@
         /* Circle */
         &:before {
             content: "";
-            // TODO: No need for absolute on horizontal
+
+            /* TODO: No need for absolute on horizontal */
             position: absolute;
             box-sizing: border-box;
             z-index: @zindex-steps-circle;
-            // TODO: Variable?
+
+            /* TODO: Variable? */
             height: 30px;
             width: 30px;
             border-radius: 30px;
             border: 3px solid @gray-8;
             background-color: @background-white;
-
             left: initial;
             top: 50%;
             margin-top: -30px / 2;
@@ -72,7 +80,8 @@
             background-color: @gray-8;
             z-index: @zindex-steps-line;
             height: 3px;
-            // Prevent small render gaps on certain resolutions 
+
+            /* Prevent small render gaps on certain resolutions */
             width: 102%;
             left: 0;
             top: 50%;
@@ -123,7 +132,6 @@
     }
 
     .steps-selected {
-        // 
         background-color: @gray-10;
         box-shadow: 1px 0 0 0 @gray-9, -1px 0 0 0 @gray-9, 0 1px 0 0 @gray-10;
     }
@@ -140,7 +148,6 @@
         position: absolute;
         width: 30px;
         height: 30px;
-        margin-top: -15px;
         z-index: @zindex-steps-icon;
         line-height: 30px;
         text-align: center;
@@ -150,7 +157,7 @@
     }
 }
 
-.steps-responsive{
+.steps-responsive {
     width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -162,13 +169,13 @@
     display: flex;
 }
 
-.steps-responsive-text{
+.steps-responsive-text {
     flex-grow: 1;
     text-align: center;
 }
 
 @media screen and (min-width: @screen-sm-min) {
-    .steps-responsive{
+    .steps-responsive {
         display: none;
     }
 
@@ -180,18 +187,18 @@
             padding: 4.8rem 0 1rem 0;
             height: auto;
 
-            // TODO: Variables?
-            > a{
+            /* TODO: Variables? */
+            > a {
                 padding: 4.8rem 0 1rem 0;
                 margin: -4.8rem 0 -1rem 0;
 
-                .steps-icon{
+                .steps-icon {
                     margin-left: -22.5px;
                     top: 2.7rem;
                 }
             }
 
-            .steps-icon{
+            .steps-icon {
                 width: 45px;
                 height: 45px;
                 margin-top: -22.5px;
@@ -200,7 +207,7 @@
                 top: 2.7rem;
             }
 
-            &:before{
+            &:before {
                 margin-top: -22.5px;
                 height: 45px;
                 width: 45px;
@@ -208,7 +215,7 @@
                 border-width: 5px;
             }
 
-            &:after{
+            &:after {
                 top: 2.7rem;
                 height: 5px;
             }
@@ -221,39 +228,37 @@
 
     .steps-vertical ol {
         display: block;
-    
+
         li {
             display: block;
             text-align: left;
             padding: 2rem 1.5rem 2rem 5.5rem;
 
-            &.steps-selected{
-                box-shadow: 0 1px 0 0 @gray-9, 0 -1px 0 0 @gray-9;    
+            &.steps-selected {
+                box-shadow: 0 1px 0 0 @gray-9, 0 -1px 0 0 @gray-9;
             }
+
             > a {
-                /* Take full parent size, ignoring parents padding, and stil growing the parent with text from this element */
-                /* The small difference in padding (0.0625rem) is to account for the border */
-                /* TODO : variable */
                 padding: 2rem 1.5rem 2rem 5.5rem;
                 margin: -2.0625rem -1.5rem -2.0625rem -5.5rem;
                 width: auto;
-    
+
                 .steps-icon {
-                    // TODO: All the pixels :/ 
+                    /* TODO: All the pixels :/ */
                     left: 52.5px;
                 }
             }
-    
+
             /* Circle */
             &:before {
                 left: 30px;
                 top: 50%;
             }
 
-            .steps-icon{
+            .steps-icon {
                 top: 50%;
             }
-    
+
             /* Line */
             &:after {
                 width: 5px;
@@ -262,35 +267,34 @@
                 bottom: 0;
                 height: auto;
             }
-    
+
             // TODO: Redundans?
-            &:first-child{
-                &:after{
+            &:first-child {
+                &:after {
                     left: 50.5px;
                     height: 50%;
                     width: 5px;
                     top: auto;
                 }
             }
-    
+
             &:last-child {
                 &:after {
                     top: -2px;
-                    height:  50%;
+                    height: 50%;
                     width: 5px;
                     left: 50.5px;
                 }
             }
         }
-    
+
         .steps-ongoing:after {
             background: linear-gradient(@brand-primary 50%, @gray-8 50%);
         }
-    
+
         .steps-icon {
             left: 30px;
             top: 50%;
         }
     }
-
 }
