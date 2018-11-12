@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-const Panel = ({ title, subTitle, id, type, removeBottomPadding, removeAllPadding, halfPadding, darkMode, children, footerText }) => {
+const Panel = ({ title, subTitle, id, type, removeBottomPadding, removeAllPadding, halfPadding, darkMode, panelBodyContent, panelTable, footerText }) => {
     const panelClasses = classnames(
         "panel",
         type ? `panel-${type}` : "panel-default",
@@ -11,6 +11,8 @@ const Panel = ({ title, subTitle, id, type, removeBottomPadding, removeAllPaddin
         halfPadding ? "panel-half-padding" : null,
         darkMode ? "panel-dark" : null
     );
+
+    const TableComponent = panelTable;
 
     return (
         <section
@@ -22,8 +24,19 @@ const Panel = ({ title, subTitle, id, type, removeBottomPadding, removeAllPaddin
                     {subTitle ? <p className="panel-sub-title">{subTitle}</p> : null}
                 </header>
                 : null}
-            {children ?
-                <div className="panel-body">{children}</div>
+            {panelBodyContent ?
+                <div className="panel-body">
+                    {
+                        panelBodyContent.forEach(text => (
+                            <p>{text}</p>
+                        ))
+                    };
+                </div>
+                : null}
+            {panelTable ?
+                <div className="panel-table">
+                    {panelTable()}
+                </div>
                 : null}
             {footerText ?
                 <footer>
@@ -43,6 +56,7 @@ Panel.propTypes = {
     removeAllPadding: PropTypes.bool,
     removeBottomPadding: PropTypes.bool,
     darkMode: PropTypes.bool,
+    panelBodyContent: PropTypes.array,
     footerText: PropTypes.string
 };
 
