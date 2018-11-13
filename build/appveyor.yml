@@ -38,7 +38,7 @@ install:
 #---------------------------------#
 
 before_build:
-- ps: ./build/prepare-release-build.ps1
+- ps: ./build/prepare-build.ps1
 
 build_script:
 - cmd: npm run build:prod -- --env.release=%release% --env.basename=%basename% --env.semver=%GitVersion_FullSemVer% --env.info_version=%GitVersion_InformationalVersion%
@@ -59,7 +59,7 @@ test_script:
 
 # This is excplicitly set to 'after_test' instead of 'before_deploy' so it runs on all branches [EH]
 after_test:
-- ps: ./build/before-deploy.ps1
+- ps: ./build/prepare-deploy.ps1
 
 deploy:
   # Deploy to GitHub Releases
