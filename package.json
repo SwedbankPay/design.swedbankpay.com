@@ -32,7 +32,7 @@
         "classnames": "^2.2.6",
         "js-beautify": "^1.8.8",
         "normalize.css": "^8.0.1",
-        "prism-react-renderer": "^0.1.4",
+        "prism-react-renderer": "^0.1.5",
         "prismjs": "^1.15.0",
         "react": "^16.6.1",
         "react-dom": "^16.6.1",
