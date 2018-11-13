@@ -15,11 +15,12 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const AppManifestWebpackPlugin = require("app-manifest-webpack-plugin");
 
 module.exports = (env, argv) => {
-    const version = env && env.semver ? env.semver : "LOCAL_DEV";
     const isProd = argv.mode === "production";
-    const isRelease = env && env.release === "true";
     const isDevServer = !!argv.host;
+    const version = env && env.semver ? env.semver : "LOCAL_DEV";
+    const isRelease = env && env.release === "true";
     const basename = env && env.basename ? `/${env.basename}/` : "/";
+    const infoVersion = env && env.info_version ? env.info_version : "LOCAL_DEV";
 
     const config = {
         entry: {
@@ -190,7 +191,10 @@ module.exports = (env, argv) => {
             new HtmlWebpackPlugin({
                 template: "./src/index.html",
                 hash: true,
-                title: "PayEx DesignGuide"
+                title: "PayEx DesignGuide",
+                meta: {
+                    "informational-version": infoVersion
+                }
             }),
             new MiniCssExtractPlugin({
                 filename: "styles/[name].css"
