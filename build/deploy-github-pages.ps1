@@ -27,4 +27,3 @@ if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode) }
 Write-Host "Switching branch to $Env:GitVersion_BranchName"
 git checkout -f $Env:GitVersion_BranchName
 if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode) }
-

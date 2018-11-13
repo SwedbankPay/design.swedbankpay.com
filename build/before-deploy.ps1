@@ -7,5 +7,6 @@ if ($Env:GitVersion_PreReleaseLabel -NotMatch "PullRequest") {
     npm run response-time
 
     # TODO: Run functional tests etc here [EH]
+} else {
+    Write-Host "Pull request, skipping deploy."
 }
-
