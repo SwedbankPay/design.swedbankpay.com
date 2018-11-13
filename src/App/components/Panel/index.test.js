@@ -40,23 +40,24 @@ describe("Component: Panel - ", () => {
         expect(wrapper.contains(<p className="panel-sub-title">test</p>)).toEqual(true);
     });
 
-    it("renders without panel-body when no children is provided", () => {
+    it("renders without panel-body when prop bodyContent is not provided", () => {
         const wrapper = shallow(<Panel />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).not.toContain("panel-body");
     });
 
-    it("renders with panel-body when children is provided", () => {
-        const wrapper = shallow(
-            <Panel>
-                <p>test</p>
-            </Panel>
-        );
+    it("renders with panel-body when prop bodyContent is provided", () => {
+        const bodyContent = [
+            "Your main panel content is put here.",
+            "Some more content over here.",
+            "And one more line, just to be safe."
+        ];
+        const wrapper = shallow(<Panel bodyContent={bodyContent} />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("panel-body");
-        expect(wrapper.contains(<p>test</p>)).toEqual(true);
+        expect(wrapper.contains(<p>Your main panel content is put here.</p>)).toEqual(true);
     });
 
     it("renders without a footer when prop footerText is not provided", () => {

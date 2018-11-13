@@ -81,15 +81,27 @@ exports[`Component: Panel -  renders with class 'panel-no-padding' when prop rem
 />
 `;
 
-exports[`Component: Panel -  renders with panel-body when children is provided 1`] = `
+exports[`Component: Panel -  renders with panel-body when prop bodyContent is provided 1`] = `
 <section
   className="panel panel-default"
 >
   <div
     className="panel-body"
   >
-    <p>
-      test
+    <p
+      key="0"
+    >
+      Your main panel content is put here.
+    </p>
+    <p
+      key="1"
+    >
+      Some more content over here.
+    </p>
+    <p
+      key="2"
+    >
+      And one more line, just to be safe.
     </p>
   </div>
 </section>
@@ -107,7 +119,7 @@ exports[`Component: Panel -  renders without header when prop title is missing 1
 />
 `;
 
-exports[`Component: Panel -  renders without panel-body when no children is provided 1`] = `
+exports[`Component: Panel -  renders without panel-body when prop bodyContent is not provided 1`] = `
 <section
   className="panel panel-default"
 />

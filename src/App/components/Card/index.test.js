@@ -71,13 +71,6 @@ describe("Component: Card - ", () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    it("renders a card-text container", () => {
-        const wrapper = shallow(<Card textSection={textArr}/>);
-
-        expect(wrapper.html()).toContain("card-text");
-        expect(wrapper).toMatchSnapshot();
-    });
-
     it("renders a smallText in card-body", () => {
         const wrapper = shallow(<Card smallText="small text" />);
 
