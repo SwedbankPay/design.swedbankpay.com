@@ -77,6 +77,16 @@
     overflow-y: auto;
     z-index: @zindex-topbar-nav;
 
+    //TODO: merge into topbar-nav when menu-right and left are deleted. [AW]
+    &:not(.topbar-nav-left):not(.topbar-nav-right) {
+        transition: left @topbar-slide-transition;
+        left: -@topbar-nav-width;
+
+        &.in {
+            left: 0;
+        }
+    }
+
     &.topbar-nav-right {
         transition: right @topbar-slide-transition;
         right: -@topbar-nav-width;
