@@ -3,8 +3,6 @@ import { shallow } from "enzyme";
 
 import Card from "./index";
 
-const textArr = ["This is a lot of text", "With some more text", "And then even some more", "Is it really possible to have this much text in one card?", "Yes!"];
-
 describe("Component: Card - ", () => {
     it("is defined", () => {
         expect(Card).toBeDefined();
