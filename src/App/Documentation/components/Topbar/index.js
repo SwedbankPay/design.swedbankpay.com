@@ -7,27 +7,14 @@ import { topbar } from "$/px-script";
 import Alert from "@/Alert";
 
 const menu = {
-    btn: {
+    btnLeft: {
         icon: "menu",
         text: "Menu"
     },
-    items: [
-        {
-            title: "Link 1",
-            href: "#"
-        },
-        {
-            title: "Link 2",
-            href: "#"
-        },
-        {
-            title: "Link 3",
-            href: "#"
-        }
-    ]
+    items: ["Link 1", "Link 2", "Link 3"]
 };
 
-const menuInfo = {
+const topbarContent = {
     id: "topbar-nav",
     ...menu
 };
@@ -62,7 +49,7 @@ const Overview = () => (
             to get the menu to appear when the menu-button is clicked.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <TopbarComponent menuInfo={menuInfo} />
+            <TopbarComponent topbarContent={topbarContent} logout />
         </ComponentPreview>
     </>
 );
@@ -75,7 +62,7 @@ const FixedTopbar = () =>  (
             For a demonstration of the usage see the documentations top bar or implement it in your own project!
         </p>
         <ComponentPreview language="html" codeFigure>
-            <TopbarComponent menuInfo={menuInfo} fixed />
+            <TopbarComponent fixed />
         </ComponentPreview>
     </>
 );
@@ -109,4 +96,4 @@ class Topbar extends Component {
 export default Topbar;
 
 /* For testing */
-export { Overview, TopbarText, DeprecatedAlert, FixedTopbar };
+export { Overview, TopbarText, FixedTopbar, DeprecatedAlert };

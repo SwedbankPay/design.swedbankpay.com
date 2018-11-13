@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Topbar, { Overview, TopbarText, DeprecatedAlert } from "./index";
+import Topbar, { Overview, TopbarText, FixedTopbar, DeprecatedAlert } from "./index";
 
 describe("Components: Topbar", () => {
     it("is defined", () => {
@@ -33,6 +33,18 @@ describe("Components: Topbar", () => {
 
         it("renders", () => {
             const wrapper = shallow(<TopbarText />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("FixedTopbar", () => {
+        it("is defined", () => {
+            expect(FixedTopbar).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<FixedTopbar />);
 
             expect(wrapper).toMatchSnapshot();
         });

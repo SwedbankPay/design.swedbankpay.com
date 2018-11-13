@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Topbar -  renders 1`] = `
+<header
+  className="topbar "
+>
+  
+
+  <a
+    className="topbar-logo"
+    href="#"
+    onClick={[Function]}
+  />
+  
+
+</header>
+`;
+
+exports[`Component: Topbar -  renders with nav and button when prop topbarContent is provided 1`] = `
+<header
+  className="topbar "
+>
+  
+
+  <TopbarBtn
+    align="left"
+    target="topbar-nav"
+    text="Menu"
+  />
+  
+
+  <TopbarMenu
+    menu={
+      Object {
+        "btnLeft": Object {
+          "text": "Menu",
+        },
+        "id": "topbar-nav",
+        "items": Array [
+          Object {
+            "href": "#",
+            "title": "Link 1",
+          },
+          Object {
+            "href": "#",
+            "title": "Link 2",
+          },
+          Object {
+            "href": "#",
+            "title": "Link 3",
+          },
+        ],
+      }
+    }
+  />
+  <a
+    className="topbar-logo"
+    href="#"
+    onClick={[Function]}
+  />
+  
+
+</header>
+`;

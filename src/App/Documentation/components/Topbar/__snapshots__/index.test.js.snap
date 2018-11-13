@@ -24,6 +24,35 @@ exports[`Components: Topbar DeprecatedAlert renders 1`] = `
 </Alert>
 `;
 
+exports[`Components: Topbar FixedTopbar renders 1`] = `
+<Fragment>
+  <h2
+    id="fixed-topbar"
+  >
+    Fixed topbar
+  </h2>
+  <p>
+    Add 
+    <Property
+      value=".topbar-fixed"
+    />
+     with your 
+    <Property
+      value=".topbar"
+    />
+     to get a fixed topbar. For a demonstration of the usage see the documentations top bar or implement it in your own project!
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+  >
+    <Topbar
+      fixed={true}
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Components: Topbar Overview renders 1`] = `
 <Fragment>
   <h2
@@ -32,11 +61,52 @@ exports[`Components: Topbar Overview renders 1`] = `
     Overview
   </h2>
   <p>
-    This will only show the code for the 
-    <Property
-      value=".topbar"
+    To use a topbar the bare minimum markup required is:
+  </p>
+  <ul>
+    <li>
+      <Property
+        value=".topbar"
+      />
+       wrapper.
+    </li>
+    <li>
+      Anchor with class 
+      <Property
+        value=".topbar-logo"
+      />
+       to display the logo and make it clickable.
+    </li>
+  </ul>
+  <p>
+    With this you get a topbar with the PayEx logo. In the topbar you can add additional functionality like a menu containing links. To enable this add a 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;button&gt;
+    </PrismCode>
+     and a 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;nav&gt;
+    </PrismCode>
+     containing anchors. Remember to include 
+    <Attribute
+      data={true}
+      name="toggle-nav"
+      value="{your_nav_id}"
     />
-     component, at least for now. For a demonstration of the usage check the example app (coming soon), or implement it in your own project!
+     as a 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;button&gt;
+    </PrismCode>
+     attribute to get the menu to appear when the menu-button is clicked.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -44,14 +114,17 @@ exports[`Components: Topbar Overview renders 1`] = `
     showCasePanel={true}
   >
     <Topbar
-      logo="default"
-      menuInfo={
+      topbarContent={
         Object {
-          "btn": Object {
+          "btnLeft": Object {
             "icon": "menu",
             "text": "Menu",
           },
-          "id": "topbar-nav-left",
+          "btnRight": Object {
+            "icon": "exit_to_app",
+            "text": "Log out",
+          },
+          "id": "topbar-nav",
           "items": Array [
             Object {
               "href": "#",
@@ -84,6 +157,7 @@ exports[`Components: Topbar TopbarText renders 1`] = `
     Topbar...
   </p>
   <Overview />
+  <FixedTopbar />
 </div>
 `;
 
