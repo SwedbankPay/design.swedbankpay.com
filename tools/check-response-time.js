@@ -56,7 +56,7 @@ const getResponseTime = async url => {
 
 const checkResponseTime = async () => {
     const slackMessageData = {
-        text: `Response times for *${process.env.basename} (<https://github.com/PayEx/design.payex.com/commit/${process.env.GitVersion_ShortSha}|${process.env.GitVersion_ShortSha}>)*:`,
+        text: `Response times for \`${process.env.basename} (<https://github.com/PayEx/design.payex.com/commit/${process.env.GitVersion_ShortSha}|${process.env.GitVersion_ShortSha}>)\`:`,
         attachments: []
     };
     let highMsWarning = false;
@@ -76,11 +76,11 @@ const checkResponseTime = async () => {
             responseIcon = ":exclamation:";
         } else {
             responseColor = STATES.SUCCESS;
-            responseIcon = ":heavy_check_mark:";
+            responseIcon = ":white_check_mark:";
         }
 
         slackMessageData.attachments.push({
-            text: `${responseIcon} ${url.name}: *${responseTime}ms*`,
+            text: `${responseIcon} ${url.name}: \`${responseTime}ms\``,
             color: responseColor
         });
     });
