@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { ComponentPreview, DocToc, Property } from "#";
 import TopbarComponent from "@/Topbar";
 import { topbar } from "$/px-script";
+import Alert from "@/Alert";
 
 const menu = {
     btn: {
@@ -30,6 +31,18 @@ const menuInfo = {
     ...menu
 };
 
+const DeprecatedAlert = () => (
+    <Alert type="danger">
+        <h3>Component contains deprecated parts</h3>
+        <p>The following parts are deprecated and will be removed:</p>
+        <ul>
+            <li>Right nav</li>
+            <li>Levels in left nav</li>
+        </ul>
+        <p>For continued support, please follow the examples in the documentation.</p>
+    </Alert>
+);
+
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
@@ -42,6 +55,7 @@ const Overview = () => (
 
 const TopbarText = () => (
     <div className="col-lg-10 doc-body">
+        <DeprecatedAlert />
         <p className="lead">Topbar...</p>
         <Overview />
     </div>
