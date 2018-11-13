@@ -2,17 +2,24 @@ const fetch = require("node-fetch");
 
 const BASEURL = `https://design.payex.com/${process.env.basename}`;
 const STATES = {
-    SUCCESS: "#2da944",
-    WARNING: "#ff9f00",
-    ERROR: "#cd2e00"
+    SUCCESS: {
+        COLOR: "#2da944",
+        ICON: ":white_check_mark:"
+    },
+    WARNING: {
+        COLOR: "#ff9f00",
+        ICON: ":exclamation:"
+    },
+    ERROR: {
+        COLOR: "#cd2e00",
+        ICON: ":x:"
+    }
 };
-
 const MS_THRESHOLDS = {
     ERROR: 500,
     WARNING: 300
 };
-
-const urlsToCheck = [
+const URL_LIST = [
     {
         name: "px-script",
         path: "/scripts/px-script.js"
@@ -61,22 +68,23 @@ const checkResponseTime = async () => {
     };
     let highMsWarning = false;
 
-    await asyncForEach(urlsToCheck, async url => {
+    await asyncForEach(URL_LIST, async url => {
         const responseTime = await getResponseTime(BASEURL + url.path);
+        const { SUCCESS, WARNING, ERROR } = STATES;
 
         let responseColor = "";
         let responseIcon = "";
 
         if (responseTime > MS_THRESHOLDS.ERROR) {
-            responseColor = STATES.ERROR;
-            responseIcon = ":x:";
+            responseColor = ERROR.COLOR;
+            responseIcon = ERROR.ICON;
             highMsWarning = true;
         } else if (responseTime > MS_THRESHOLDS.WARNING) {
-            responseColor = STATES.WARNING;
-            responseIcon = ":exclamation:";
+            responseColor = WARNING.COLOR;
+            responseIcon = WARNING.ICON;
         } else {
-            responseColor = STATES.SUCCESS;
-            responseIcon = ":white_check_mark:";
+            responseColor = SUCCESS.COLOR;
+            responseIcon = SUCCESS.ICON;
         }
 
         slackMessageData.attachments.push({
