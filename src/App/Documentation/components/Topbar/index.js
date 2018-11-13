@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import PrismCode from "react-prism";
 
-import { ComponentPreview, DocToc, Property } from "#";
+import { ComponentPreview, DocToc, Property, Attribute } from "#";
 import TopbarComponent from "@/Topbar";
 import { topbar } from "$/px-script";
 import Alert from "@/Alert";
@@ -27,7 +28,7 @@ const menu = {
 };
 
 const menuInfo = {
-    id: "topbar-nav-left",
+    id: "topbar-nav",
     ...menu
 };
 
@@ -47,19 +48,34 @@ const DeprecatedAlert = () => (
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
-        <p>This will only show the code for the <Property value=".topbar" /> component, at least for now. For a demonstration of the usage check the example app (coming soon), or implement it in your own project!</p>
+        <p>
+            To use a topbar the bare minimum markup required is:
+        </p>
+        <ul>
+            <li><Property value=".topbar" /> wrapper.</li>
+            <li>Anchor with class <Property value=".topbar-logo" /> to display the logo and make it clickable.</li>
+        </ul>
+        <p>
+            With this you get a topbar with the PayEx logo.
+            In the topbar you can add additional functionality like a menu containing links. To enable this add a <PrismCode className="language-html">{"<button>"}</PrismCode> and
+            a <PrismCode className="language-html">{"<nav>"}</PrismCode> containing anchors. Remember to include <Attribute data name="toggle-nav" value="{your_nav_id}"/> as a <PrismCode className="language-html">{"<button>"}</PrismCode> attribute
+            to get the menu to appear when the menu-button is clicked.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <TopbarComponent logo="default" menuInfo={menuInfo} />
+            <TopbarComponent menuInfo={menuInfo} />
         </ComponentPreview>
     </>
 );
 
-const StaticTopbar = () =>  (
+const FixedTopbar = () =>  (
     <>
-        <h2 id="static-topbar">Static topbar</h2>
-        <p>This will only show the code for the <Property value=".topbar" /> component, at least for now. For a demonstration of the usage check the example app (coming soon), or implement it in your own project!</p>
+        <h2 id="fixed-topbar">Fixed topbar</h2>
+        <p>
+            Add <Property value=".topbar-fixed" /> with your <Property value=".topbar" /> to get a fixed topbar.
+            For a demonstration of the usage see the documentations top bar or implement it in your own project!
+        </p>
         <ComponentPreview language="html" codeFigure>
-            <TopbarComponent logo="default" menuInfo={menuInfo} />
+            <TopbarComponent menuInfo={menuInfo} fixed />
         </ComponentPreview>
     </>
 );
@@ -69,7 +85,7 @@ const TopbarText = () => (
         <DeprecatedAlert />
         <p className="lead">Topbar...</p>
         <Overview />
-        <StaticTopbar />
+        <FixedTopbar />
     </div>
 );
 
@@ -93,4 +109,4 @@ class Topbar extends Component {
 export default Topbar;
 
 /* For testing */
-export { Overview, TopbarText, DeprecatedAlert, StaticTopbar };
+export { Overview, TopbarText, DeprecatedAlert, FixedTopbar };

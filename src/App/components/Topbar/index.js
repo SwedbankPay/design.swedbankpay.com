@@ -25,19 +25,19 @@ const TopbarMenu = ({ menu }) => {
         <nav id={id} className={"topbar-nav"}>
             {items.map((item, i) => (
                 <Fragment key={i}>
-                    <a href={item.href} onClick={e => e.preventDefault()}>{item.title}</a>{"\n"}
+                    {"\n"}<a href={item.href} onClick={e => e.preventDefault()}>{item.title}</a>
                 </Fragment>
             ))}{"\n"}
         </nav>
     );
 };
 
-const Topbar = ({ menuInfo }) => (
-    <div className="topbar">{"\n"}
-        <TopbarBtn align="left" icon={menuInfo.btn.icon} text={menuInfo.btn.text} target={menuInfo.id} />
+const Topbar = ({ menuInfo, fixed }) => (
+    <header className={`topbar ${fixed ? "topbar-fixed" : ""}`}>{"\n"}
+        <TopbarBtn align="left" icon={menuInfo.btn.icon} text={menuInfo.btn.text} target={menuInfo.id} />{"\n"}
         <a href="#" className={"topbar-logo"} onClick={e => e.preventDefault()}></a>{"\n"}
         <TopbarMenu menu={menuInfo} />
-    </div>
+    </header>
 );
 
 Topbar.propTypes = {
