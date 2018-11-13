@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="215" height="69" viewBox="0 0 215 69">
+<svg
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 215 69">
     <defs>
         <linearGradient id="a" x1="48.743%" x2="52.403%" y1="76.002%" y2="-.583%">
             <stop stop-color="#504678" offset="0%"/>
@@ -13,7 +14,7 @@
             <stop stop-color="#504678" stop-opacity=".872" offset="17.9%"/>
             <stop stop-color="#504678" stop-opacity=".536" offset="52.6%"/>
             <stop stop-color="#504678" stop-opacity="0" offset="100%"/>
-            </linearGradient>
+        </linearGradient>
         <linearGradient id="c" x1="47.724%" x2="45.261%" y1="34.971%" y2="18.375%">
             <stop stop-color="#504678" offset="0%"/>
             <stop stop-color="#504678" stop-opacity=".332" offset="64.3%"/>
