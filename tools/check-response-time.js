@@ -59,7 +59,7 @@ const checkResponseTime = async () => {
         text: `Response times for *${process.env.basename} (<https://github.com/PayEx/design.payex.com/commit/${process.env.GitVersion_ShortSha}|${process.env.GitVersion_ShortSha}>)*:`,
         attachments: []
     };
-    let highMsWarning = true;
+    let highMsWarning = false;
 
     await asyncForEach(urlsToCheck, async url => {
         const responseTime = await getResponseTime(BASEURL + url.path);
