@@ -3,8 +3,18 @@ import PropTypes from "prop-types";
 
 const TopbarBtn = ({ align, icon, text, target }) => (
     <button type="button" className={`topbar-btn-${align}`} data-toggle-nav={`#${target}`}>{"\n\t\t"}
-        {icon ? <i className="material-icons topbar-btn-icon">{icon}</i> : null}{icon ? "\n\t\t" : null}
-        {text ? <span className="topbar-btn-text">{text}</span> : null}{text ? "\n\t" : null}
+        {icon ?
+            <>
+                <i className="material-icons topbar-btn-icon">{icon}</i>
+                {"\n\t\t"}
+            </>
+            : null}
+        {text ?
+            <>
+                <span className="topbar-btn-text">{text}</span>
+                {"\n\t"}
+            </>
+            : null}
     </button>
 );
 

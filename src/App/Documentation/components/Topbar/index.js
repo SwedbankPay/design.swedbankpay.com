@@ -31,6 +31,7 @@ const menuInfo = {
     ...menu
 };
 
+// TODO: Remove when deprecated parts are deleted.
 const DeprecatedAlert = () => (
     <Alert type="danger">
         <h3>Component contains deprecated parts</h3>
@@ -53,11 +54,22 @@ const Overview = () => (
     </>
 );
 
+const StaticTopbar = () =>  (
+    <>
+        <h2 id="static-topbar">Static topbar</h2>
+        <p>This will only show the code for the <Property value=".topbar" /> component, at least for now. For a demonstration of the usage check the example app (coming soon), or implement it in your own project!</p>
+        <ComponentPreview language="html" codeFigure>
+            <TopbarComponent logo="default" menuInfo={menuInfo} />
+        </ComponentPreview>
+    </>
+);
+
 const TopbarText = () => (
     <div className="col-lg-10 doc-body">
         <DeprecatedAlert />
         <p className="lead">Topbar...</p>
         <Overview />
+        <StaticTopbar />
     </div>
 );
 
@@ -81,4 +93,4 @@ class Topbar extends Component {
 export default Topbar;
 
 /* For testing */
-export { Overview, TopbarText };
+export { Overview, TopbarText, DeprecatedAlert, StaticTopbar };

@@ -1,5 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Components: Topbar DeprecatedAlert renders 1`] = `
+<Alert
+  type="danger"
+>
+  <h3>
+    Component contains deprecated parts
+  </h3>
+  <p>
+    The following parts are deprecated and will be removed:
+  </p>
+  <ul>
+    <li>
+      Right nav
+    </li>
+    <li>
+      Levels in left nav
+    </li>
+  </ul>
+  <p>
+    For continued support, please follow the examples in the documentation.
+  </p>
+</Alert>
+`;
+
 exports[`Components: Topbar Overview renders 1`] = `
 <Fragment>
   <h2
@@ -20,95 +44,14 @@ exports[`Components: Topbar Overview renders 1`] = `
     showCasePanel={true}
   >
     <Topbar
-      leftMenu={
-        Object {
-          "btn": Object {
-            "icon": "menu",
-            "text": "Menu",
-          },
-          "hierarchy": Array [
-            Object {
-              "id": "1",
-              "items": Array [
-                Object {
-                  "groupTitle": "Group 1",
-                  "items": Array [
-                    Object {
-                      "target": "2",
-                      "title": "Item 1",
-                    },
-                    Object {
-                      "target": "2",
-                      "title": "Item 2",
-                    },
-                  ],
-                },
-                Object {
-                  "groupTitle": "Group 2",
-                  "items": Array [
-                    Object {
-                      "target": "2",
-                      "title": "Item 1",
-                    },
-                  ],
-                },
-                Object {
-                  "href": "#",
-                  "title": "Link 1",
-                },
-              ],
-            },
-            Object {
-              "id": "2",
-              "items": Array [
-                Object {
-                  "groupTitle": "Group 3",
-                  "items": Array [
-                    Object {
-                      "target": "3",
-                      "title": "Item 1",
-                    },
-                  ],
-                },
-                Object {
-                  "href": "#",
-                  "title": "Link 2",
-                },
-                Object {
-                  "href": "#",
-                  "title": "Link 3",
-                },
-              ],
-            },
-            Object {
-              "id": "3",
-              "items": Array [
-                Object {
-                  "href": "#",
-                  "title": "Link 4",
-                },
-                Object {
-                  "href": "#",
-                  "title": "Link 5",
-                },
-                Object {
-                  "href": "#",
-                  "title": "Link 6",
-                },
-              ],
-            },
-          ],
-          "id": "topbar-nav-left",
-        }
-      }
       logo="default"
-      rightMenu={
+      menuInfo={
         Object {
           "btn": Object {
             "icon": "menu",
             "text": "Menu",
           },
-          "id": "topbar-nav-right",
+          "id": "topbar-nav-left",
           "items": Array [
             Object {
               "href": "#",
@@ -134,6 +77,7 @@ exports[`Components: Topbar TopbarText renders 1`] = `
 <div
   className="col-lg-10 doc-body"
 >
+  <DeprecatedAlert />
   <p
     className="lead"
   >
