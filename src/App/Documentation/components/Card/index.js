@@ -13,56 +13,8 @@ const DefaultBehaviour = () => (
         <p>
             Wrap indiviual cards in the <Property value=".cards" /> class to display them lined up next to each other.
             When the window reaches <Link to="/docs/core/breakpoints">breakpoint</Link> sm the cards will switch to mobile view and take up one row each and stretch to fill the width of the container.
+            To decide how your cards will look use <Property value=".card-default" />, <Property value=".card-brand" />, or <Property value=".card-light" />
         </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="cards">
-                <CardComponent
-                    type="default"
-                    title="Card default"
-                    imgSrc="https://picsum.photos/300"
-                    text="This is the cards text"
-                    smallText="And the small text"
-                    btnTxt="Button"
-                    footerTxt="This is some text that goes in the footer."
-                    footerLinkTxt="You wanna click this link?"
-                >
-                    <MediaObject size="sm" icon="account_circle" heading="Bob Corlsan" text="bob.corlsan@payex.com" textSmall muted />
-                </CardComponent>
-
-                <CardComponent
-                    type="default"
-                    title="Card default"
-                    imgSrc="https://picsum.photos/300"
-                    text="This is the cards text"
-                    smallText="And the small text"
-                    btnTxt="Button"
-                    footerTxt="This is some text that goes in the footer."
-                    footerLinkTxt="You wanna click this link?"
-                >
-                    <MediaObject size="sm" icon="account_balance" heading="725 NOK" text="Outstanding balance" textSmall muted />
-                </CardComponent>
-
-                <CardComponent
-                    type="default"
-                    title="Card default"
-                    imgSrc="https://picsum.photos/300"
-                    text="This is the cards text"
-                    smallText="And the small text"
-                    btnTxt="Button"
-                    footerTxt="This is some text that goes in the footer."
-                    footerLinkTxt="You wanna click this link?"
-                >
-                    <MediaObject size="sm" icon="verified_user" heading="75%" text="Complete" textSmall muted />
-                </CardComponent>
-            </div>
-        </ComponentPreview>
-    </>
-);
-
-const CardTypes = () => (
-    <>
-        <h2 id="card-types">Card Types</h2>
-        <p>To decide how your cards will look use <Property value=".card-default" />, <Property value=".card-brand" />, or <Property value=".card-light" /></p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="cards">
                 <CardComponent
@@ -151,7 +103,6 @@ const CardText = () => (
         <ExperimentalComponentAlert />
         <p className="lead">Card...</p>
         <DefaultBehaviour />
-        <CardTypes />
         <CardVariants />
     </div>
 );
@@ -172,4 +123,4 @@ class Card extends Component {
 export default Card;
 
 /* For testing */
-export { DefaultBehaviour, CardTypes, CardText, CardVariants };
+export { DefaultBehaviour, CardText, CardVariants };

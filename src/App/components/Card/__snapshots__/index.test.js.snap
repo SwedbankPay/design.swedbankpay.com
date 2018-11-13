@@ -21,48 +21,6 @@ exports[`Component: Card -  renders a button in the footer 1`] = `
 </div>
 `;
 
-exports[`Component: Card -  renders a card-text container 1`] = `
-<div
-  className="card"
->
-  <div
-    className="card-body"
-  >
-    
-
-    <div
-      className="card-text"
-    >
-      <p
-        key="card-p-0"
-      >
-        This is a lot of text
-      </p>
-      <p
-        key="card-p-1"
-      >
-        With some more text
-      </p>
-      <p
-        key="card-p-2"
-      >
-        And then even some more
-      </p>
-      <p
-        key="card-p-3"
-      >
-        Is it really possible to have this much text in one card?
-      </p>
-      <p
-        key="card-p-4"
-      >
-        Yes!
-      </p>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`Component: Card -  renders a child object 1`] = `
 <div
   className="card"

@@ -5,6 +5,7 @@
 ### Added
 
 - Added new table variant table-condensed.
+- Added panel-table for displaying a table taking up the full width of a panel.
 
 ### Changed
 
