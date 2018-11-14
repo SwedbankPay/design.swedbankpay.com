@@ -1,5 +1,6 @@
 @list-item-padding: 3.4rem 0 0 0;
-@list-item-padding-desktop: 4.8rem 0 1rem 0;
+@list-item-padding-desktop-top: 4.5rem;
+@list-item-padding-desktop: @list-item-padding-desktop-top 0 1.2rem 0;
 @list-item-padding-desktop-vertical: 2rem 1.5rem 2rem 5.5rem;
 
 @vertical-margin-left: 30px;
@@ -186,24 +187,25 @@
             .steps-icon {
                 width: @circle-size-desktop;
                 height: @circle-size-desktop;
-                margin-top: -@circle-size-desktop / 2;
                 line-height: @circle-size-desktop;
                 margin-left: -@circle-size-desktop / 2;
                 font-size: 24px;
-                top: 2.7rem;
+                top: @list-item-padding-desktop-top / 2;
+                margin-top: -@circle-size-desktop / 2;
             }
 
             &:before {
-                margin-top: -@circle-size-desktop / 2;
                 height: @circle-size-desktop;
                 width: @circle-size-desktop;
-                top: 2.7rem;
                 border-width: 5px;
                 margin-left: -@circle-size-desktop / 2;
+                top: @list-item-padding-desktop-top / 2;
+                margin-top: -@circle-size-desktop / 2;
             }
 
             &:after {
-                top: 2.7rem;
+                top: @list-item-padding-desktop-top / 2;
+                margin-top: -@line-width-desktop / 2;
                 height: @line-width-desktop;
             }
         }
@@ -251,6 +253,7 @@
                 top: 0;
                 bottom: 0;
                 height: auto;
+                margin-top: 0;
             }
 
             &:first-child {
