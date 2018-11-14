@@ -4,6 +4,7 @@
 @list-item-padding-desktop-vertical: 2rem 1.5rem 2rem 5.5rem;
 
 @vertical-margin-left: 30px;
+@vertical-line-left: @vertical-margin-left + (@circle-size-desktop / 2) - (@line-width-desktop / 2);
 
 @circle-size: 30px;
 @circle-size-desktop: 45px;
@@ -239,7 +240,7 @@
             /* Line */
             &:after {
                 width: @line-width-desktop;
-                left: @vertical-margin-left + (@circle-size-desktop / 2) - (@line-width-desktop / 2);
+                left: @vertical-line-left;
                 top: 0;
                 bottom: 0;
                 height: auto;
@@ -250,7 +251,7 @@
                 &:after {
                     height: 50%;
                     width: @line-width-desktop;
-                    left: @vertical-margin-left + (@circle-size-desktop / 2) - (@line-width-desktop / 2);
+                    left: @vertical-line-left;
                     top: auto;
                 }
             }
@@ -259,7 +260,7 @@
                 &:after {
                     height: 50%;
                     width: @line-width-desktop;
-                    left: @vertical-margin-left + (@circle-size-desktop / 2) - (@line-width-desktop / 2);
+                    left: @vertical-line-left;
                 }
             }
         }
