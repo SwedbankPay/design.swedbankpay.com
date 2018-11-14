@@ -1,0 +1,631 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Documentation: PaymentIcons Overview renders 1`] = `
+<Fragment>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <p>
+    To use an icon, provide the following markup: 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;i class="payment-icon {icon_name}"&gt;&lt;/i&gt;
+    </PrismCode>
+    .
+  </p>
+  <ComponentPreview
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="row justify-content-evenly mb-2"
+    >
+      <PaymentIcon
+        name="amex"
+        preview={true}
+      />
+      
+
+      <PaymentIcon
+        name="diners"
+        preview={true}
+      />
+      
+
+      <PaymentIcon
+        name="mastercard"
+        preview={true}
+      />
+      
+
+      <PaymentIcon
+        name="visa"
+        preview={true}
+      />
+    </div>
+    <div
+      className="row justify-content-evenly"
+    >
+      <PaymentIcon
+        name="mobilepay"
+        preview={true}
+      />
+      
+
+      <PaymentIcon
+        name="paypal"
+        preview={true}
+      />
+      
+
+      <PaymentIcon
+        name="swish"
+        preview={true}
+      />
+      
+
+      <PaymentIcon
+        name="vipps"
+        preview={true}
+      />
+      
+
+    </div>
+  </ComponentPreview>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+  >
+    <PaymentIcon
+      name="amex"
+    />
+    
+
+    <PaymentIcon
+      name="diners"
+    />
+    
+
+    <PaymentIcon
+      name="mastercard"
+    />
+    
+
+    <PaymentIcon
+      name="visa"
+    />
+    
+
+    <PaymentIcon
+      name="mobilepay"
+    />
+    
+
+    <PaymentIcon
+      name="paypal"
+    />
+    
+
+    <PaymentIcon
+      name="swish"
+    />
+    
+
+    <PaymentIcon
+      name="vipps"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: PaymentIcons PaymentIconsText renders 1`] = `
+<div
+  className="col-lg-10 doc-body"
+>
+  <p
+    className="lead"
+  >
+    Payment icons...
+  </p>
+  <Overview />
+  <Sizes />
+  <Usage />
+</div>
+`;
+
+exports[`Documentation: PaymentIcons Sizes renders 1`] = `
+<Fragment>
+  <h2
+    id="sizes"
+  >
+    Sizes
+  </h2>
+  <p>
+    Sizes... 
+    <Property
+      value=".small"
+    />
+    , 
+    <Property
+      value=".medium"
+    />
+    , 
+    <Property
+      value=".large"
+    />
+     and 
+    <Property
+      value=".huge"
+    />
+    . If no size is provided 
+    <Property
+      value=".medium"
+    />
+     is defaulted.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="row justify-content-evenly align-items-center"
+    >
+      <PaymentIcon
+        name="visa"
+        size="small"
+      />
+      
+
+      <PaymentIcon
+        name="visa"
+        size="medium"
+      />
+      
+
+      <PaymentIcon
+        name="visa"
+        size="large"
+      />
+      
+
+      <PaymentIcon
+        name="visa"
+        size="huge"
+      />
+    </div>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: PaymentIcons Usage prevents default on anchors 1`] = `
+<Fragment>
+  <h2
+    id="usage"
+  >
+    Usage
+  </h2>
+  <p>
+    Typical usage would be in for instance an 
+    <Property
+      value=".item-list"
+    />
+    .
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ul
+      className="item-list item-list-striped"
+    >
+      <li>
+        <div
+          className="d-flex align-items-center"
+        >
+          
+
+          <PaymentIcon
+            className="mr-2"
+            name="visa"
+          />
+          
+
+          <span>
+            4925*********004
+          </span>
+          
+
+        </div>
+        <div
+          className="action-list"
+        >
+          
+
+          <Icon
+            icon="more_vert"
+          />
+          
+
+          <div
+            className="action-menu"
+          >
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <Icon
+                icon="bookmark"
+              />
+              Add bookmark
+            </a>
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <Icon
+                icon="business_center"
+              />
+              Add client
+            </a>
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <Icon
+                icon="add_circle"
+              />
+              Add document
+            </a>
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <Icon
+                icon="person_add"
+              />
+              Add user
+            </a>
+            
+
+          </div>
+        </div>
+      </li>
+      <li>
+        <div
+          className="d-flex align-items-center"
+        >
+          
+
+          <PaymentIcon
+            className="mr-2"
+            name="mastercard"
+          />
+          
+
+          <span>
+            5792*********138
+          </span>
+          
+
+          <span
+            className="badge badge-blue ml-2"
+          >
+            new
+          </span>
+          
+
+        </div>
+        
+
+        <a
+          href="https://developer.payex.com"
+        >
+          developer.payex.com
+        </a>
+        
+
+      </li>
+      <li>
+        <div
+          className="d-flex align-items-center"
+        >
+          
+
+          <PaymentIcon
+            className="mr-2"
+            name="amex"
+          />
+          
+
+          <span>
+            3651*********701
+          </span>
+          
+
+        </div>
+        <i
+          className="material-icons"
+        >
+          star
+        </i>
+        
+
+      </li>
+      <li>
+        <div
+          className="d-flex align-items-center"
+        >
+          
+
+          <PaymentIcon
+            className="mr-2"
+            name="visa"
+          />
+          
+
+          <span>
+            4925*********007
+          </span>
+          
+
+        </div>
+        <span
+          className="status status-success"
+        >
+          Active
+        </span>
+        
+
+        <button
+          className="btn btn-danger btn-xs"
+          type="button"
+        >
+          <i
+            className="material-icons"
+          >
+            delete
+          </i>
+        </button>
+        
+
+      </li>
+    </ul>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: PaymentIcons Usage renders 1`] = `
+<Fragment>
+  <h2
+    id="usage"
+  >
+    Usage
+  </h2>
+  <p>
+    Typical usage would be in for instance an 
+    <Property
+      value=".item-list"
+    />
+    .
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ul
+      className="item-list item-list-striped"
+    >
+      <li>
+        <div
+          className="d-flex align-items-center"
+        >
+          
+
+          <PaymentIcon
+            className="mr-2"
+            name="visa"
+          />
+          
+
+          <span>
+            4925*********004
+          </span>
+          
+
+        </div>
+        <div
+          className="action-list"
+        >
+          
+
+          <Icon
+            icon="more_vert"
+          />
+          
+
+          <div
+            className="action-menu"
+          >
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <Icon
+                icon="bookmark"
+              />
+              Add bookmark
+            </a>
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <Icon
+                icon="business_center"
+              />
+              Add client
+            </a>
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <Icon
+                icon="add_circle"
+              />
+              Add document
+            </a>
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <Icon
+                icon="person_add"
+              />
+              Add user
+            </a>
+            
+
+          </div>
+        </div>
+      </li>
+      <li>
+        <div
+          className="d-flex align-items-center"
+        >
+          
+
+          <PaymentIcon
+            className="mr-2"
+            name="mastercard"
+          />
+          
+
+          <span>
+            5792*********138
+          </span>
+          
+
+          <span
+            className="badge badge-blue ml-2"
+          >
+            new
+          </span>
+          
+
+        </div>
+        
+
+        <a
+          href="https://developer.payex.com"
+        >
+          developer.payex.com
+        </a>
+        
+
+      </li>
+      <li>
+        <div
+          className="d-flex align-items-center"
+        >
+          
+
+          <PaymentIcon
+            className="mr-2"
+            name="amex"
+          />
+          
+
+          <span>
+            3651*********701
+          </span>
+          
+
+        </div>
+        <i
+          className="material-icons"
+        >
+          star
+        </i>
+        
+
+      </li>
+      <li>
+        <div
+          className="d-flex align-items-center"
+        >
+          
+
+          <PaymentIcon
+            className="mr-2"
+            name="visa"
+          />
+          
+
+          <span>
+            4925*********007
+          </span>
+          
+
+        </div>
+        <span
+          className="status status-success"
+        >
+          Active
+        </span>
+        
+
+        <button
+          className="btn btn-danger btn-xs"
+          type="button"
+        >
+          <i
+            className="material-icons"
+          >
+            delete
+          </i>
+        </button>
+        
+
+      </li>
+    </ul>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: PaymentIcons renders 1`] = `
+<div
+  className="doc-container"
+>
+  <div
+    className="row"
+  >
+    <PaymentIconsText />
+    <DocToc
+      component={[Function]}
+    />
+  </div>
+</div>
+`;

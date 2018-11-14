@@ -1,9 +1,31 @@
 i.payment-icon {
-    height: 40px;
-    width: 40px;
+    height: 2rem;
+    width: 3rem;
     display: inline-block;
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0.25rem;
+
+    &.small {
+        height: 1.5rem;
+        width: 2rem;
+    }
+
+    &.medium {
+        height: 2rem;
+        width: 3rem;
+    }
+
+    &.large {
+        height: 3rem;
+        width: 5rem;
+    }
+
+    &.huge {
+        height: 4rem;
+        width: 6rem;
+    }
 
     &.amex {
         background-image: url("../../icons/payment-icons/amex.svg");
@@ -37,14 +59,3 @@ i.payment-icon {
         background-image: url("../../icons/payment-icons/visa.svg");
     }
 }
-
-// .topbar-logo {
-//     height: 45px;
-//     margin-left: @topbar-margin;
-//     margin-top: 5px;
-//     margin-right: auto;
-//     background: url("../../img/px-logo.svg") no-repeat;
-//     background-size: cover;
-//     width: 140px;
-//     border: none;
-// }

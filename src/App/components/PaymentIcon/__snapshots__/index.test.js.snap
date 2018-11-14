@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Panel -  prop name is an enum with specified allowed values 1`] = `
+<div>
+  <PaymentIcon
+    name="amex"
+  />
+  <PaymentIcon
+    name="diners"
+  />
+  <PaymentIcon
+    name="mastercard"
+  />
+  <PaymentIcon
+    name="mobilepay"
+  />
+  <PaymentIcon
+    name="paypal"
+  />
+  <PaymentIcon
+    name="swish"
+  />
+  <PaymentIcon
+    name="vipps"
+  />
+  <PaymentIcon
+    name="visa"
+  />
+</div>
+`;
+
+exports[`Component: Panel -  prop name is an enum with specified allowed values 2`] = `
+<i
+  className="payment-icon test"
+/>
+`;
+
+exports[`Component: Panel -  prop name is marked as required 1`] = `
+<i
+  className="payment-icon"
+/>
+`;
+
+exports[`Component: Panel -  prop size is an enum with specified allowed values 1`] = `
+<div>
+  <PaymentIcon
+    name="amex"
+    size="small"
+  />
+  <PaymentIcon
+    name="diners"
+    size="medium"
+  />
+  <PaymentIcon
+    name="mastercard"
+    size="large"
+  />
+  <PaymentIcon
+    name="mobilepay"
+    size="huge"
+  />
+</div>
+`;
+
+exports[`Component: Panel -  prop size is an enum with specified allowed values 2`] = `
+<i
+  className="payment-icon amex test"
+/>
+`;
+
+exports[`Component: Panel -  renders 1`] = `
+<i
+  className="payment-icon amex"
+/>
+`;
+
+exports[`Component: Panel -  renders a preview wrapper around icon when prop preview is true 1`] = `
+<div
+  className="icon-preview"
+>
+  <i
+    className="payment-icon amex"
+  />
+  <span>
+    amex
+  </span>
+</div>
+`;
+
+exports[`Component: Panel -  renders correct icon when prop name is provided 1`] = `
+<i
+  className="payment-icon amex"
+/>
+`;
+
+exports[`Component: Panel -  renders correct size when prop size is provided 1`] = `
+<i
+  className="payment-icon amex large"
+/>
+`;
+
+exports[`Component: Panel -  renders icon with custom when prop className is provided 1`] = `
+<i
+  className="payment-icon amex test test2 test-3"
+/>
+`;
