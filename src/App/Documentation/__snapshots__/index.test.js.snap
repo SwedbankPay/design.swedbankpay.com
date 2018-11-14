@@ -95,6 +95,11 @@ exports[`Documentation: index renders 1`] = `
                 "title": "Lists",
               },
               Object {
+                "componentPath": "core/PaymentIcons",
+                "path": "/docs/core/payment-icons",
+                "title": "Payment Icons",
+              },
+              Object {
                 "componentPath": "core/Tables",
                 "path": "/docs/core/tables",
                 "title": "Tables",
