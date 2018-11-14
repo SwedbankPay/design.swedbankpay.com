@@ -2,6 +2,8 @@
 @list-item-padding-desktop: 4.8rem 0 1rem 0;
 @list-item-padding-desktop-vertical: 2rem 1.5rem 2rem 5.5rem;
 
+@vertical-margin-left: 30px;
+
 @circle-size: 30px;
 @circle-size-desktop: 45px;
 
@@ -37,8 +39,6 @@
             width: 100%;
 
             /* Take full parent size, ignoring parents padding, and stil growing the parent with text from this element */
-
-            /* TODO : variable */
             padding: @list-item-padding;
             margin: -@list-item-padding;
             color: @brand-primary;
@@ -244,57 +244,51 @@
 
                 .steps-icon {
                     top: 50%;
-                    left: 30px;
+                    left: @vertical-margin-left;
                     margin-left: 0;
                 }
             }
 
             /* Circle */
             &:before {
-                left: 30px;
+                left: @vertical-margin-left;
                 top: 50%;
             }
 
             .steps-icon {
+                left: @vertical-margin-left;
                 top: 50%;
             }
 
             /* Line */
             &:after {
                 width: @line-width-desktop;
-                left: 30px + (@circle-size-desktop / 2) - (@line-width-desktop / 2);
+                left: @vertical-margin-left + (@circle-size-desktop / 2) - (@line-width-desktop / 2);
                 top: 0;
                 bottom: 0;
                 height: auto;
             }
 
-            // TODO: Redundans?
             &:first-child {
                 &:after {
-                    left: 50.5px;
                     height: 50%;
-                    width: 5px;
+                    width: @line-width-desktop;
+                    left: @vertical-margin-left + (@circle-size-desktop / 2) - (@line-width-desktop / 2);
                     top: auto;
                 }
             }
 
             &:last-child {
                 &:after {
-                    top: -2px;
                     height: 50%;
-                    width: 5px;
-                    left: 50.5px;
+                    width: @line-width-desktop;
+                    left: @vertical-margin-left + (@circle-size-desktop / 2) - (@line-width-desktop / 2);
                 }
             }
         }
 
         .steps-ongoing:after {
             background: linear-gradient(@brand-primary 50%, @gray-8 50%);
-        }
-
-        .steps-icon {
-            left: 30px;
-            top: 50%;
         }
     }
 }
