@@ -38,10 +38,10 @@ exports[`Documentation: Steps Basic Steps renders 1`] = `
           },
           Object {
             "ongoing": true,
+            "selected": true,
             "title": "Step two",
           },
           Object {
-            "selected": true,
             "title": "Step three",
           },
           Object {
@@ -64,7 +64,8 @@ exports[`Documentation: Steps Steps Text renders 1`] = `
     Steps.
   </p>
   <BasicSteps />
-  <HorizontalSteps />
+  <VerticalSteps />
+  <ClickableSteps />
 </div>
 `;
 
