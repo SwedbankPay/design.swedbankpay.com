@@ -47,21 +47,36 @@
             }
         }
 
-        /* Circle */
-        &:before {
-            content: "";
+        .circle-base() {
             position: absolute;
-            box-sizing: border-box;
-            z-index: @zindex-steps-circle;
-            height: @circle-size;
             width: @circle-size;
-            border-radius: 50%;
-            border: 3px solid @gray-8;
-            background-color: @background-white;
+            height: @circle-size;
             top: 50%;
             margin-top: -@circle-size / 2;
             left: 50%;
             margin-left: -@circle-size / 2;
+        }
+
+        /* Circle */
+        &:before {
+            .circle-base();
+
+            content: "";
+            box-sizing: border-box;
+            z-index: @zindex-steps-circle;
+            border-radius: 50%;
+            border: 3px solid @gray-8;
+            background-color: @background-white;
+        }
+
+        .steps-icon {
+            .circle-base();
+
+            color: @background-white;
+            z-index: @zindex-steps-icon;
+            line-height: @circle-size;
+            text-align: center;
+            font-size: 1.1rem;
         }
 
         /* Line */
@@ -133,21 +148,6 @@
         font-size: @font-size-small;
         color: @mid-gray;
     }
-
-    .steps-icon {
-        color: @background-white;
-        position: absolute;
-        width: @circle-size;
-        height: @circle-size;
-        z-index: @zindex-steps-icon;
-        line-height: @circle-size;
-        text-align: center;
-        font-size: 1.1rem;
-        top: 50%;
-        margin-top: -@circle-size / 2;
-        left: 50%;
-        margin-left: -@circle-size / 2;
-    }
 }
 
 .steps-responsive {
@@ -184,25 +184,20 @@
                 margin: -@list-item-padding-desktop;
             }
 
-            .steps-icon {
+            /* Circle */
+            .steps-icon,
+            &:before {
                 width: @circle-size-desktop;
                 height: @circle-size-desktop;
                 line-height: @circle-size-desktop;
                 margin-left: -@circle-size-desktop / 2;
+                top: @list-item-padding-desktop-top / 2;
+                margin-top: -@circle-size-desktop / 2;
                 font-size: 24px;
-                top: @list-item-padding-desktop-top / 2;
-                margin-top: -@circle-size-desktop / 2;
-            }
-
-            &:before {
-                height: @circle-size-desktop;
-                width: @circle-size-desktop;
                 border-width: 5px;
-                margin-left: -@circle-size-desktop / 2;
-                top: @list-item-padding-desktop-top / 2;
-                margin-top: -@circle-size-desktop / 2;
             }
 
+            /* Line */
             &:after {
                 top: @list-item-padding-desktop-top / 2;
                 margin-top: -@line-width-desktop / 2;
@@ -234,12 +229,7 @@
             }
 
             /* Circle */
-            &:before {
-                margin-left: 0;
-                left: @vertical-margin-left;
-                top: 50%;
-            }
-
+            &:before,
             .steps-icon {
                 margin-left: 0;
                 left: @vertical-margin-left;
