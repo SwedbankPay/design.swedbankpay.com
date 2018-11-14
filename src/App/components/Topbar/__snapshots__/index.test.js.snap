@@ -1,9 +1,142 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Component: Topbar -  logo prevents default when clicked 1`] = `
+<header
+  className="topbar "
+>
+  
+
+  
+
+  <a
+    className="topbar-logo"
+    href="#"
+    onClick={[Function]}
+  />
+  
+
+</header>
+`;
+
+exports[`Component: Topbar -  menu links prevents default when clicked 1`] = `
+<Topbar
+  topbarContent={
+    Object {
+      "btn": Object {
+        "icon": "menu",
+        "text": "Menu",
+      },
+      "id": "topbar-nav",
+      "items": Array [
+        "Link 1",
+        "Link 2",
+        "Link 3",
+      ],
+    }
+  }
+>
+  <header
+    className="topbar "
+  >
+    
+
+    <TopbarBtn
+      icon="menu"
+      target="topbar-nav"
+      text="Menu"
+    >
+      <button
+        className="topbar-btn"
+        data-toggle-nav="#topbar-nav"
+        type="button"
+      >
+        
+		
+        <i
+          className="material-icons"
+        >
+          menu
+        </i>
+        
+		
+        <span
+          className="topbar-btn-text"
+        >
+          Menu
+        </span>
+        
+	
+      </button>
+    </TopbarBtn>
+    
+
+    <TopbarMenu
+      menu={
+        Object {
+          "btn": Object {
+            "icon": "menu",
+            "text": "Menu",
+          },
+          "id": "topbar-nav",
+          "items": Array [
+            "Link 1",
+            "Link 2",
+            "Link 3",
+          ],
+        }
+      }
+    >
+      <nav
+        className="topbar-nav"
+        id="topbar-nav"
+      >
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          Link 1
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          Link 2
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          Link 3
+        </a>
+        
+
+      </nav>
+    </TopbarMenu>
+    
+
+    <a
+      className="topbar-logo"
+      href="#"
+      onClick={[Function]}
+    />
+    
+
+  </header>
+</Topbar>
+`;
+
 exports[`Component: Topbar -  renders 1`] = `
 <header
   className="topbar "
 >
+  
+
   
 
   <a
@@ -22,6 +155,8 @@ exports[`Component: Topbar -  renders a static topbar if prop fixed is true 1`] 
 >
   
 
+  
+
   <a
     className="topbar-logo"
     href="#"
@@ -36,6 +171,8 @@ exports[`Component: Topbar -  renders with a button right and a logo 1`] = `
 <header
   className="topbar "
 >
+  
+
   
 
   <a

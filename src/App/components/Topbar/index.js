@@ -40,10 +40,12 @@ const TopbarMenu = ({ menu }) => {
 
 const Topbar = ({ topbarContent, fixed, logout }) => (
     <header className={`topbar ${fixed ? "topbar-fixed" : ""}`}>{"\n"}
-        {topbarContent ?
         <>
-            <TopbarBtn icon={topbarContent.btn.icon} text={topbarContent.btn.text} target={topbarContent.id} />{"\n"}
-            <TopbarMenu menu={topbarContent} />
+            {topbarContent ?
+            <>
+                <TopbarBtn icon={topbarContent.btn.icon} text={topbarContent.btn.text} target={topbarContent.id} />{"\n"}
+                <TopbarMenu menu={topbarContent} />
+            </> : null}
             {"\n"}<a href="#" className="topbar-logo" onClick={e => e.preventDefault()}></a>{"\n"}
             {logout ?
                 <>
@@ -51,15 +53,6 @@ const Topbar = ({ topbarContent, fixed, logout }) => (
                 </> :
                 null}
         </>
-            :
-        <>
-            <a href="#" className="topbar-logo" onClick={e => e.preventDefault()}></a>{"\n"}
-            {logout ?
-                <>
-                    <TopbarBtn icon="exit_to_app" text="Log out" />{"\n"}
-                </> :
-                null}
-        </>}
     </header>
 );
 

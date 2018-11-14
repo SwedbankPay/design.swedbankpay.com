@@ -74,7 +74,7 @@ describe("Component: Topbar - ", () => {
         expect(wrapper.html()).not.toContain("topbar-nav");
     });
 
-    it("renders with a topbar-btn for the navbar aswell as a logout topbar-btn", () => {
+    it("renders with a topbar-btn aswell as a logout topbar-btn", () => {
         const topbarContent = {
             id: "topbar-nav",
             ...menu
@@ -90,7 +90,7 @@ describe("Component: Topbar - ", () => {
         ReactDOM.unmountComponentAtNode(div);
     });
 
-    it("renders a topbar-btn for the navbar with no icon", () => {
+    it("renders a topbar-btn with no icon", () => {
         const topbarContent = {
             id: "topbar-nav",
             ...menuNoBtnIcon
@@ -106,7 +106,7 @@ describe("Component: Topbar - ", () => {
         ReactDOM.unmountComponentAtNode(div);
     });
 
-    it("renders a topbar-btn for the navbar with no text", () => {
+    it("renders a topbar-btn with no text", () => {
         const topbarContent = {
             id: "topbar-nav",
             ...menuNoBtnText
@@ -137,5 +137,35 @@ describe("Component: Topbar - ", () => {
         expect(renderedTopbar.querySelector(".topbar-btn")).toBeFalsy();
 
         ReactDOM.unmountComponentAtNode(div);
+    });
+
+    it("logo prevents default when clicked", () => {
+        const wrapper = shallow(<Topbar />);
+        const eventHandler = { preventDefault: jest.fn() };
+        const logo = wrapper.find(".topbar-logo");
+
+        expect(wrapper).toMatchSnapshot();
+
+        logo.simulate("click", eventHandler);
+
+        expect(eventHandler.preventDefault).toHaveBeenCalled();
+    });
+
+    it("menu links prevents default when clicked", () => {
+        const topbarContent = {
+            id: "topbar-nav",
+            ...menu
+        };
+
+        const wrapper = mount(<Topbar topbarContent={topbarContent} />);
+        const eventHandler = { preventDefault: jest.fn() };
+        const menuLinks = wrapper.find(".topbar-nav a");
+
+        menuLinks.forEach(anchor => {
+            anchor.simulate("click", eventHandler);
+        });
+
+        expect(wrapper).toMatchSnapshot();
+        expect(eventHandler.preventDefault).toHaveBeenCalled();
     });
 });
