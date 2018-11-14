@@ -46,6 +46,10 @@ const RenderSteps = ({ steps }) => (
 );
 
 const RenderStepsNav = ({ steps }) => {
+    if (!steps) {
+        return null;
+    }
+
     const clickableItem = steps.some(item => item.clickable);
 
     const arrowLeft = clickableItem ? <div className="material-icons steps-nav-left">keyboard_arrow_left</div> : null;
