@@ -20,11 +20,6 @@
     justify-content: space-between;
 
     li {
-        // TODO: Flex?
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
         flex: 0 1 100%;
         flex-grow: 1;
         position: relative;
@@ -49,11 +44,6 @@
                 background-color: @gray-10;
                 box-shadow: 1px 0 0 0 @gray-9, -1px 0 0 0 @gray-9, 0 1px 0 0 @gray-10;
             }
-
-            .steps-icon {
-                left: 50%;
-                margin-left: -@circle-size / 2;
-            }
         }
 
         /* Circle */
@@ -69,9 +59,10 @@
             border-radius: 50%;
             border: 3px solid @gray-8;
             background-color: @background-white;
-            left: initial;
             top: 50%;
             margin-top: -@circle-size / 2;
+            left: 50%;
+            margin-left: -@circle-size / 2;
         }
 
         /* Line */
@@ -155,6 +146,8 @@
         font-size: 1.1rem;
         top: 50%;
         margin-top: -@circle-size / 2;
+        left: 50%;
+        margin-left: -@circle-size / 2;
     }
 }
 
@@ -190,13 +183,6 @@
             > a {
                 padding: @list-item-padding-desktop;
                 margin: -@list-item-padding-desktop;
-
-                .steps-icon {
-                    margin-left: -@circle-size-desktop / 2;
-
-                    /* TODO: This ain't centered, and dependent on padding */
-                    top: 2.7rem;
-                }
             }
 
             .steps-icon {
@@ -204,6 +190,7 @@
                 height: @circle-size-desktop;
                 margin-top: -@circle-size-desktop / 2;
                 line-height: @circle-size-desktop;
+                margin-left: -@circle-size-desktop / 2;
                 font-size: 24px;
                 top: 2.7rem;
             }
@@ -214,6 +201,7 @@
                 width: @circle-size-desktop;
                 top: 2.7rem;
                 border-width: 5px;
+                margin-left: -@circle-size-desktop / 2;
             }
 
             &:after {
@@ -243,21 +231,17 @@
                 padding: @list-item-padding-desktop-vertical;
                 margin: -@list-item-padding-desktop-vertical;
                 width: auto;
-
-                .steps-icon {
-                    top: 50%;
-                    left: @vertical-margin-left;
-                    margin-left: 0;
-                }
             }
 
             /* Circle */
             &:before {
+                margin-left: 0;
                 left: @vertical-margin-left;
                 top: 50%;
             }
 
             .steps-icon {
+                margin-left: 0;
                 left: @vertical-margin-left;
                 top: 50%;
             }
