@@ -6,6 +6,7 @@
 
 - Added new table variant table-condensed.
 - Added panel-table for displaying a table taking up the full width of a panel.
+- Added flex utility class `.justify-content-evenly` for `justify content: space-evenly`.
 
 ### Changed
 

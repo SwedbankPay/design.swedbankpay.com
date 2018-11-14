@@ -99,7 +99,7 @@ const JustifyContent = () => (
         <h2 id="justify-content">Justify content</h2>
         <p>
             Use <Property value="justify-content" /> utilities on flexbox containers to change the alignment of flex items on the main axis (the x-axis to start, y-axis if <Property value="flex-direction: column" />).
-            Choose from <Property value="start" /> (browser default), <Property value="end" />, <Property value="center" />, <Property value="between" />, or <Property value="around" />.
+            Choose from <Property value="start" /> (browser default), <Property value="end" />, <Property value="center" />, <Property value="between" />, <Property value="around" />, or <Property value="evenly" />.
         </p>
         <ComponentPreview language="html" showCasePanel>
             <div className="d-flex justify-content-start sc-highlight mb-3">
@@ -122,7 +122,12 @@ const JustifyContent = () => (
                 <div className="p-2 sc-highlight">Flex item</div>
                 <div className="p-2 sc-highlight">Flex item</div>
             </div>
-            <div className="d-flex justify-content-around sc-highlight">
+            <div className="d-flex justify-content-around sc-highlight mb-3">
+                <div className="p-2 sc-highlight">Flex item</div>
+                <div className="p-2 sc-highlight">Flex item</div>
+                <div className="p-2 sc-highlight">Flex item</div>
+            </div>
+            <div className="d-flex justify-content-evenly sc-highlight">
                 <div className="p-2 sc-highlight">Flex item</div>
                 <div className="p-2 sc-highlight">Flex item</div>
                 <div className="p-2 sc-highlight">Flex item</div>
@@ -134,6 +139,7 @@ const JustifyContent = () => (
             <div className="d-flex justify-content-center">...</div>
             <div className="d-flex justify-content-between">...</div>
             <div className="d-flex justify-content-around">...</div>
+            <div className="d-flex justify-content-evenly">...</div>
         </ComponentPreview>
         <p>Responsive variations also exist for <Property value="justify-content" />.</p>
         <ul>
@@ -153,6 +159,9 @@ const JustifyContent = () => (
                 <Property value=".justify-content-around" />
             </li>
             <li>
+                <Property value=".justify-content-evenly" />
+            </li>
+            <li>
                 <Property value=".justify-content-{breakpoint}-start" />
             </li>
             <li>
@@ -166,6 +175,9 @@ const JustifyContent = () => (
             </li>
             <li>
                 <Property value=".justify-content-{breakpoint}-around" />
+            </li>
+            <li>
+                <Property value=".justify-content-{breakpoint}-evenly" />
             </li>
         </ul>
     </>
