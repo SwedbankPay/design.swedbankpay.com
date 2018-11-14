@@ -55,7 +55,7 @@ const Overview = () => (
     </>
 );
 
-const FixedTopbar = () =>  (
+const FixedTopbar = () => (
     <>
         <h2 id="fixed-topbar">Fixed topbar</h2>
         <p>

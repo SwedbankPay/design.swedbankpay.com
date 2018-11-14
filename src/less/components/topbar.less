@@ -44,10 +44,6 @@
 
         &:hover {
             cursor: pointer;
-        }
-
-        &:hover,
-        &:focus {
             background-color: @gray-9;
         }
 
@@ -58,6 +54,11 @@
 
         &:first-child {
             border-right: 1px solid @gray-8;
+
+            &:hover,
+            &:focus {
+                background-color: @gray-9;
+            }
         }
 
         &:last-child {
