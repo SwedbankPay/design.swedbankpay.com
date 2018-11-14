@@ -17,6 +17,9 @@ exports[`Components: Topbar DeprecatedAlert renders 1`] = `
     <li>
       Levels in left nav
     </li>
+    <li>
+      topbar-btn-right class will be replaced by topbar-btn
+    </li>
   </ul>
   <p>
     For continued support, please follow the examples in the documentation.
@@ -114,30 +117,18 @@ exports[`Components: Topbar Overview renders 1`] = `
     showCasePanel={true}
   >
     <Topbar
+      logout={true}
       topbarContent={
         Object {
-          "btnLeft": Object {
+          "btn": Object {
             "icon": "menu",
             "text": "Menu",
           },
-          "btnRight": Object {
-            "icon": "exit_to_app",
-            "text": "Log out",
-          },
           "id": "topbar-nav",
           "items": Array [
-            Object {
-              "href": "#",
-              "title": "Link 1",
-            },
-            Object {
-              "href": "#",
-              "title": "Link 2",
-            },
-            Object {
-              "href": "#",
-              "title": "Link 3",
-            },
+            "Link 1",
+            "Link 2",
+            "Link 3",
           ],
         }
       }

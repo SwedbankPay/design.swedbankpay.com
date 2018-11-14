@@ -1,52 +1,39 @@
 import React from "react";
-import { shallow } from "enzyme";
+import ReactDOM from "react-dom";
+import { shallow, mount } from "enzyme";
 
 import Topbar from "./index";
 
 describe("Component: Topbar - ", () => {
+    const div = document.createElement("div");
+
+    document.body.appendChild(div);
+
     const menu = {
-        btnLeft: {
+        btn: {
+            icon: "menu",
             text: "Menu"
         },
-        items: [
-            {
-                title: "Link 1",
-                href: "#"
-            },
-            {
-                title: "Link 2",
-                href: "#"
-            },
-            {
-                title: "Link 3",
-                href: "#"
-            }
-        ]
+        items: ["Link 1", "Link 2", "Link 3"]
     };
 
     const menuNoBtnIcon = {
         btn: {
             text: "Menu"
         },
-        items: [
-            {
-                title: "Link 1",
-                href: "#"
-            },
-            {
-                title: "Link 2",
-                href: "#"
-            },
-            {
-                title: "Link 3",
-                href: "#"
-            }
-        ]
+        items: ["Link 1", "Link 2", "Link 3"]
     };
 
-    const topbarContent = {
-        id: "topbar-nav",
-        ...menu
+    const menuNoBtnText = {
+        btn: {
+            icon: "menu"
+        },
+        items: ["Link 1", "Link 2", "Link 3"]
+    };
+
+    const menuEmptyBtn = {
+        btn: {},
+        items: ["Link 1", "Link 2", "Link 3"]
     };
 
     it("is defined", () => {
@@ -59,11 +46,96 @@ describe("Component: Topbar - ", () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    it("renders with nav and button when prop topbarContent is provided", () => {
+    it("renders a static topbar if prop fixed is true", () => {
+        const wrapper = shallow(<Topbar fixed />);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.html()).toContain("topbar-fixed");
+    });
+
+    it("renders with nav and button left when prop topbarContent is provided", () => {
+        const topbarContent = {
+            id: "topbar-nav",
+            ...menu
+        };
         const wrapper = shallow(<Topbar topbarContent={topbarContent} />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("topbar-btn-left");
+        expect(wrapper.html()).toContain("topbar-btn");
         expect(wrapper.html()).toContain("topbar-nav");
+    });
+
+    it("renders with a button right and a logo", () => {
+        const wrapper = shallow(<Topbar logout/>);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.html()).toContain("topbar-btn");
+        expect(wrapper.html()).toContain("topbar-logo");
+        expect(wrapper.html()).not.toContain("topbar-nav");
+    });
+
+    it("renders with a topbar-btn for the navbar aswell as a logout topbar-btn", () => {
+        const topbarContent = {
+            id: "topbar-nav",
+            ...menu
+        };
+
+        ReactDOM.render(<Topbar topbarContent={topbarContent} logout />, div);
+
+        const renderedTopbar = document.querySelector(".topbar");
+
+        expect(renderedTopbar).toBeTruthy();
+        expect(renderedTopbar.querySelectorAll(".topbar-btn")).toHaveLength(2);
+
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
+    it("renders a topbar-btn for the navbar with no icon", () => {
+        const topbarContent = {
+            id: "topbar-nav",
+            ...menuNoBtnIcon
+        };
+
+        ReactDOM.render(<Topbar topbarContent={topbarContent} />, div);
+
+        const renderedTopbar = document.querySelector(".topbar");
+
+        expect(renderedTopbar).toBeTruthy();
+        expect(renderedTopbar.querySelector("i")).toBeFalsy();
+
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
+    it("renders a topbar-btn for the navbar with no text", () => {
+        const topbarContent = {
+            id: "topbar-nav",
+            ...menuNoBtnText
+        };
+
+        ReactDOM.render(<Topbar topbarContent={topbarContent} />, div);
+
+        const renderedTopbar = document.querySelector(".topbar");
+
+        expect(renderedTopbar).toBeTruthy();
+        expect(renderedTopbar.querySelectorAll("i")).toBeTruthy();
+        expect(renderedTopbar.querySelector(".topbar-btn-text")).toBeFalsy();
+
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
+    it("does not render a button if an empty btn object is passed", () => {
+        const topbarContent = {
+            id: "topbar-nav",
+            ...menuEmptyBtn
+        };
+
+        ReactDOM.render(<Topbar topbarContent={topbarContent} />, div);
+
+        const renderedTopbar = document.querySelector(".topbar");
+
+        expect(renderedTopbar).toBeTruthy();
+        expect(renderedTopbar.querySelector(".topbar-btn")).toBeFalsy();
+
+        ReactDOM.unmountComponentAtNode(div);
     });
 });

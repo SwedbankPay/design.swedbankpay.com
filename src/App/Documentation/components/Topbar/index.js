@@ -7,7 +7,7 @@ import { topbar } from "$/px-script";
 import Alert from "@/Alert";
 
 const menu = {
-    btnLeft: {
+    btn: {
         icon: "menu",
         text: "Menu"
     },
@@ -27,6 +27,7 @@ const DeprecatedAlert = () => (
         <ul>
             <li>Right nav</li>
             <li>Levels in left nav</li>
+            <li>topbar-btn-right class will be replaced by topbar-btn</li>
         </ul>
         <p>For continued support, please follow the examples in the documentation.</p>
     </Alert>
