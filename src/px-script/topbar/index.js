@@ -7,8 +7,10 @@ const topbar = (() => {
         let rightNavMenu;
 
         if (menu) {
+            // TODO: remove when left and right btn gets deleted from topbar
             const leftMenuBtnElement = menu.querySelector(".topbar-btn-left");
             const rightMenuBtnElement = menu.querySelector(".topbar-btn-right");
+            const menuBtnElement = menu.querySelector(".topbar-btn");
 
             if (leftMenuBtnElement) {
                 leftNavMenu = new NavMenu(leftMenuBtnElement);
@@ -16,6 +18,11 @@ const topbar = (() => {
 
             if (rightMenuBtnElement) {
                 rightNavMenu = new NavMenu(rightMenuBtnElement);
+            }
+
+            // TODO: Simpler if-statement after deprecated parts are removed
+            if (!leftMenuBtnElement && !rightMenuBtnElement && menuBtnElement) {
+                leftNavMenu = new NavMenu(menuBtnElement);
             }
 
             document.querySelector("html").addEventListener("mousedown", e => {
