@@ -28,7 +28,6 @@ const BasicSteps = () => {
     return (
         <>
             <h2 id="basic-usage">Basic usage</h2>
-            <p>Add class <Property value=".steps" /> to an <PrismCode className="language-html">{"<ol>"}</PrismCode> element.</p>
             <ComponentPreview language="html" showCasePanel codeFigure>
                 <StepsComponent steps={steps} />
             </ComponentPreview>
@@ -58,7 +57,7 @@ const VerticalSteps = () => {
     return (
         <>
             <h2 id="vertical-steps">Vertical steps</h2>
-            <p>In addition to class <Property value=".steps" />, add the extension class <Property value=".steps-vertical" /> to an <PrismCode className="language-html">{"<ol>"}</PrismCode> element.</p>
+            <p>Add <Property value=".steps-vertical" /> to the <PrismCode className="language-html">{"<div>"}</PrismCode> element.</p>
             <ComponentPreview language="html" showCasePanel codeFigure>
                 <StepsComponent steps={steps} vertical />
             </ComponentPreview>
@@ -100,7 +99,6 @@ const ClickableSteps = () => {
             <p>
                 Add an anchor element (<PrismCode className="language-html">{"<a>"}</PrismCode>) to the list item element ( <PrismCode className="language-html">{"<li>"}</PrismCode>).
                 Ensure that all content within the list element is also inside the anchor element.
-                <br/>Clickable steps is not working properly
             </p>
             <ComponentPreview language="html" showCasePanel codeFigure>
                 <StepsComponent steps={steps} />
