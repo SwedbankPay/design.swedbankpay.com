@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Loader from "@/Loader";
-import { loader } from "$/px-script";
+import { loader } from "$/px-script/main";
 
 class LoadingComponent extends Component {
     componentDidMount () {

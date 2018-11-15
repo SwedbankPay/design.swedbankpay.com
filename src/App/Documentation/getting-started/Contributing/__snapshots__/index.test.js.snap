@@ -87,7 +87,7 @@ exports[`GettingStarted: Contributing Adding JavaScript renders 3`] = `
   <p>
     Create a new file under 
     <Property
-      value="./src/px-script/[MyExampleComponent]/"
+      value="./src/px-script/main/[MyExampleComponent]/"
     />
      for your component, name it 
     <Property
@@ -133,7 +133,7 @@ exports[`GettingStarted: Contributing Adding JavaScript renders 4`] = `
   <p>
     Open 
     <Property
-      value="./src/px-script/index.js"
+      value="./src/px-script/main/index.js"
     />
      and add your component:
   </p>
@@ -208,7 +208,7 @@ exports[`GettingStarted: Contributing Adding JavaScript renders 5`] = `
 
     // import your components script
 
-    import { MyExampleComponent } from "../../../../px-script";
+    import { MyExampleComponent } from "../../../../px-script/main";
 
 
     ...

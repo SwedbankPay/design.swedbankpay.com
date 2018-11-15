@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
 import { ComponentPreview, DocToc, ExperimentalComponentAlert, Property } from "#";
-import { nav } from "$/px-script";
+import { nav } from "$/px-script/main";
 import NavComponent from "@/Nav";
 
 const navItems = [

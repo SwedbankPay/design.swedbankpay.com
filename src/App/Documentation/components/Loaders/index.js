@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import { ComponentPreview, Attribute, DocToc, Property } from "#";
 import LoaderComponent from "@/Loader";
-import { loader } from "$/px-script";
+import { loader } from "$/px-script/main";
 
 const BasicUsage = () => (
     <>

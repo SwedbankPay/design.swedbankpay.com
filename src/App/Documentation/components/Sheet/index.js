@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { ComponentPreview, DocToc, Icon, Property } from "#";
-import { sheet } from "$/px-script";
+import { sheet } from "$/px-script/main";
 
 const Example = () => (
     <>

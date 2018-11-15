@@ -3,7 +3,7 @@ import PrismCode from "react-prism";
 
 import { ComponentPreview, DocToc, Property, Attribute } from "#";
 import TopbarComponent from "@/Topbar";
-import { topbar } from "$/px-script";
+import { topbar } from "$/px-script/main";
 import Alert from "@/Alert";
 
 const menu = {

@@ -144,7 +144,7 @@ const AddingJavaScript = () => {
     const CreateAScriptFile = () => (
         <div>
             <h3>Create a script file for your component</h3>
-            <p>Create a new file under <Property value="./src/px-script/[MyExampleComponent]/" /> for your component, name it <Property value="index.js" />:</p>
+            <p>Create a new file under <Property value="./src/px-script/main/[MyExampleComponent]/" /> for your component, name it <Property value="index.js" />:</p>
             <ComponentPreview language="javascript" codeFigure>
                 {"const int = () => {\n"}
                 {"alert(\"MyExampleComponent was initialized\");\n"}
@@ -161,7 +161,7 @@ const AddingJavaScript = () => {
     const AddScriptToPX = () => (
         <div>
             <h3>Add your components script to px-script</h3>
-            <p>Open <Property value="./src/px-script/index.js" /> and add your component:</p>
+            <p>Open <Property value="./src/px-script/main/index.js" /> and add your component:</p>
             <ComponentPreview language="javascript" codeFigure>
                 {"...\n"}
                 {"import MyExampleComponent from \"./MyExampleComponent\";\n"}
@@ -188,7 +188,7 @@ const AddingJavaScript = () => {
                 {"import React, { Component } from \"react\";\n"}
                 {"...\n"}
                 {"// import your components script\n"}
-                {"import { MyExampleComponent } from \"../../../../px-script\";\n\n"}
+                {"import { MyExampleComponent } from \"../../../../px-script/main\";\n\n"}
                 {"...\n"}
                 {"...\n"}
                 {"// modify MyExampleDocumentationComponent\n"}

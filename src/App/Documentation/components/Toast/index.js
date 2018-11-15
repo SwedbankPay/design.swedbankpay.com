@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocToc, ExperimentalComponentAlert, Attribute } from "#";
-import { toast } from "$/px-script";
+import { toast } from "$/px-script/main";
 
 const Overview = () => (
     <>

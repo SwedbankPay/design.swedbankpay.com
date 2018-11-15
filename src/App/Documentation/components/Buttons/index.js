@@ -5,7 +5,7 @@ import PrismCode from "react-prism";
 import { ComponentPreview, Attribute, Property, DocToc } from "#";
 import ButtonComponent from "@/Button";
 import Alert from "@/Alert";
-import { button } from "$/px-script";
+import { button } from "$/px-script/main";
 
 const Examples = () => (
     <>

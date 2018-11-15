@@ -3,7 +3,7 @@ import PrismCode from "react-prism";
 
 import { ComponentPreview, DocToc, Property, Icon } from "#";
 import PaymentIcon from "@/PaymentIcon";
-import actionList from "$/px-script/action-list";
+import actionList from "$/px-script/main/action-list";
 
 const Overview = () => (
     <>

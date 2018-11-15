@@ -5,7 +5,7 @@ import PrismCode from "react-prism";
 import { ComponentPreview, Attribute, Property, DocToc } from "#";
 
 import AlertComponent from "@/Alert";
-import { alert } from "$/px-script";
+import { alert } from "$/px-script/main";
 
 const BasicUsage = () => (
     <>

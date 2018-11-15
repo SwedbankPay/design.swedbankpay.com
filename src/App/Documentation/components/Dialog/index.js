@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { ComponentPreview, DocToc, Icon, Property } from "#";
-import { dialog } from "$/px-script";
+import { dialog } from "$/px-script/main";
 
 const Example = () => (
     <>

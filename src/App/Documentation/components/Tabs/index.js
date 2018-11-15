@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
 import { ComponentPreview, DocToc, ExperimentalComponentAlert, Property } from "#";
-import { tabs } from "$/px-script";
+import { tabs } from "$/px-script/main";
 import TabsComponent from "@/Tabs";
 
 const tabItems = ["Kort", "Rabatter", "Transaksjoner", "Faktura", "Instillinger", "Audit trail"];
