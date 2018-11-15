@@ -2,7 +2,7 @@ import React from "react";
 
 import { ComponentPreview, DocToc, ExperimentalComponentAlert, Property } from "#";
 
-const DefaultWell = () => (
+const DefaultSlab = () => (
     <>
         <h2 id="default-well">Default well</h2>
         <p>Use the <Property value=".well" /> as a simple effect on an element to give it an inset effect.</p>
@@ -14,7 +14,7 @@ const DefaultWell = () => (
     </>
 );
 
-const WellSizes = () => (
+const SlabSizes = () => (
     <>
         <h2 id="well-sizes">Well sizes</h2>
         <p>Use the two optional <Property value=".well-sm" /> and <Property value=".well-lg" /> classes to control padding and rounded corners.</p>
@@ -31,20 +31,20 @@ const WellSizes = () => (
     </>
 );
 
-const WellText = () => (
+const SlabText = () => (
     <div className="col-lg-10 doc-body">
         <ExperimentalComponentAlert />
         <p className="lead">Well well well, look what the cat dragged in...</p>
-        <DefaultWell />
-        <WellSizes />
+        <DefaultSlab />
+        <SlabSizes />
     </div>
 );
 
 const Well = () => (
     <div className="doc-container">
         <div className="row">
-            <WellText />
-            <DocToc component={WellText} />
+            <SlabText />
+            <DocToc component={SlabText} />
         </div>
     </div>
 );
@@ -52,4 +52,4 @@ const Well = () => (
 export default Well;
 
 /* For testing */
-export { DefaultWell, WellSizes, WellText };
+export { DefaultSlab, SlabSizes, SlabText };

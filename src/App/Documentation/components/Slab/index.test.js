@@ -1,50 +1,50 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Well, { DefaultWell, WellSizes, WellText } from "./index";
+import Slab, { DefaultSlab, SlabSizes, SlabText } from "./index";
 
-describe("Components: Well", () => {
+describe("Components: Slab", () => {
     it("is defined", () => {
-        expect(Well).toBeDefined();
+        expect(Slab).toBeDefined();
     });
 
     it("renders", () => {
-        const wrapper = shallow(<Well />);
+        const wrapper = shallow(<Slab />);
 
         expect(wrapper).toMatchSnapshot();
     });
 
-    describe("DefaultWell", () => {
+    describe("DefaultSlab", () => {
         it("is defined", () => {
-            expect(DefaultWell).toBeDefined();
+            expect(DefaultSlab).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<DefaultWell />);
+            const wrapper = shallow(<DefaultSlab />);
 
             expect(wrapper).toMatchSnapshot();
         });
     });
 
-    describe("WellSizes", () => {
+    describe("SlabSizes", () => {
         it("is defined", () => {
-            expect(WellSizes).toBeDefined();
+            expect(SlabSizes).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<WellSizes />);
+            const wrapper = shallow(<SlabSizes />);
 
             expect(wrapper).toMatchSnapshot();
         });
     });
 
-    describe("WellText", () => {
+    describe("SlabText", () => {
         it("is defined", () => {
-            expect(WellText).toBeDefined();
+            expect(SlabText).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<WellText />);
+            const wrapper = shallow(<SlabText />);
 
             expect(wrapper).toMatchSnapshot();
         });

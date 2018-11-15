@@ -170,6 +170,11 @@ module.exports = [
                 componentPath: "components/Sheet"
             },
             {
+                title: "Slab (experimental)",
+                path: "/docs/components/slab",
+                componentPath: "components/Slab"
+            },
+            {
                 title: "Status",
                 path: "/docs/components/status",
                 componentPath: "components/Status"
@@ -198,11 +203,6 @@ module.exports = [
                 title: "Topbar (contains deprecated)",
                 path: "/docs/components/topbar",
                 componentPath: "components/Topbar"
-            },
-            {
-                title: "Well (experimental)",
-                path: "/docs/components/well",
-                componentPath: "components/Well"
             }
         ]
     },
