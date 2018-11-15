@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Tabs -  Prop mode is one of our breakpoints (xs, sm, md... ) 1`] = `
+exports[`Component: Tabs -  props mode is one of our breakpoints (xs, sm, md... ) 1`] = `
 <div
   className="tabs tabs-horizontal-auto"
 >

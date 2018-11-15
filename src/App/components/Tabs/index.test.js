@@ -15,7 +15,7 @@ describe("Component: Tabs - ", () => {
         expect(Tabs).toBeDefined();
     });
 
-    it("Prop mode is one of our breakpoints (xs, sm, md... )", () => {
+    it("props mode is one of our breakpoints (xs, sm, md... )", () => {
         console.error = jest.fn();
 
         const wrapper = shallow(<Tabs mode="auto" items={items} />);
