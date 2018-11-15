@@ -9,11 +9,9 @@ exports[`Documentation: Steps Basic Steps renders 1`] = `
   </h2>
   <p>
     Add class 
-    <code
-      className="token property"
-    >
-      .steps
-    </code>
+    <Property
+      value=".steps"
+    />
      to an 
     <PrismCode
       className="language-html"

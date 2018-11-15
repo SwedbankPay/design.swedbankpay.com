@@ -205,13 +205,7 @@ exports[`Documentation: index renders 1`] = `
                 "title": "Status",
               },
               Object {
-                "component": Object {
-                  "BasicSteps": [Function],
-                  "ClickableSteps": [Function],
-                  "StepsText": [Function],
-                  "VerticalSteps": [Function],
-                  "default": [Function],
-                },
+                "componentPath": "components/Steps",
                 "path": "/docs/components/steps",
                 "title": "Steps",
               },

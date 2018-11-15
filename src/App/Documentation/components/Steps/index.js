@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocToc } from "#";
+import { ComponentPreview, DocToc, Property } from "#";
 import StepsComponent from "@/Steps";
 
 const BasicSteps = () => {
@@ -26,13 +26,13 @@ const BasicSteps = () => {
     ];
 
     return (
-    <>
-        <h2 id="basic-usage">Basic usage</h2>
-        <p>Add class <code className="token property">.steps</code> to an <PrismCode className="language-html">{"<ol>"}</PrismCode> element.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <StepsComponent steps={steps} />
-        </ComponentPreview>
-    </>
+        <>
+            <h2 id="basic-usage">Basic usage</h2>
+            <p>Add class <Property value=".steps" /> to an <PrismCode className="language-html">{"<ol>"}</PrismCode> element.</p>
+            <ComponentPreview language="html" showCasePanel codeFigure>
+                <StepsComponent steps={steps} />
+            </ComponentPreview>
+        </>
     );
 };
 
@@ -56,13 +56,13 @@ const VerticalSteps = () => {
     ];
 
     return (
-    <>
-        <h2 id="vertical-steps">Vertical steps</h2>
-        <p>In addition to class <code className="token property">.steps</code>, add the extension class <code className="token property">.steps-vertical</code> to an <PrismCode className="language-html">{"<ol>"}</PrismCode> element.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <StepsComponent steps={steps} vertical />
-        </ComponentPreview>
-    </>
+        <>
+            <h2 id="vertical-steps">Vertical steps</h2>
+            <p>In addition to class <Property value=".steps" />, add the extension class <Property value=".steps-vertical" /> to an <PrismCode className="language-html">{"<ol>"}</PrismCode> element.</p>
+            <ComponentPreview language="html" showCasePanel codeFigure>
+                <StepsComponent steps={steps} vertical />
+            </ComponentPreview>
+        </>
     );
 };
 
@@ -95,17 +95,17 @@ const ClickableSteps = () => {
     ];
 
     return (
-    <>
-        <h2 id="clickable-steps">Clickable steps</h2>
-        <p>
-            Add an anchor element (<PrismCode className="language-html">{"<a>"}</PrismCode>) to the list item element ( <PrismCode className="language-html">{"<li>"}</PrismCode>).
-            Ensure that all content within the list element is also inside the anchor element.
-            <br/>Clickable steps is not working properly
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <StepsComponent steps={steps} />
-        </ComponentPreview>
-    </>
+        <>
+            <h2 id="clickable-steps">Clickable steps</h2>
+            <p>
+                Add an anchor element (<PrismCode className="language-html">{"<a>"}</PrismCode>) to the list item element ( <PrismCode className="language-html">{"<li>"}</PrismCode>).
+                Ensure that all content within the list element is also inside the anchor element.
+                <br/>Clickable steps is not working properly
+            </p>
+            <ComponentPreview language="html" showCasePanel codeFigure>
+                <StepsComponent steps={steps} />
+            </ComponentPreview>
+        </>
     );
 };
 
