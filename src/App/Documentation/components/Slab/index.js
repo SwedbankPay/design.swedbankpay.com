@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc, ExperimentalComponentAlert, Property } from "#";
-import { tabs } from "$/px-script";
-import TabsComponent from "@/Tabs";
+import { ComponentPreview, DocToc, ExperimentalComponentAlert } from "#";
+import { validation } from "$/px-script/main/";
 
 const DefaultSlab = () => (
     <>
@@ -31,7 +30,7 @@ const SlabElevated = () => (
         <h2 id="elevated-slab">Elevated slab</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="slab slab-elevated">
-                <p>Look ma, im elevated!</p>
+                Look ma, im elevated!
             </div>
         </ComponentPreview>
     </>
@@ -53,10 +52,46 @@ const tabItems = ["Kort", "Rabatter", "Transaksjoner", "Faktura", "Instillinger"
 const SlabWhite = () => (
     <>
         <h2 id="slab-white">Slab white</h2>
+        <p>This slab can contain so many things</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
+            <p className="lead text-center">Here is some text and then a striped item list</p>
             <div className="slab slab-white">
-                <h4 className="text-center">This slab can fit so many tabs in it.</h4>
-                <TabsComponent mode="xl" items={tabItems}/>
+                <ul className="item-list item-list-striped">
+                    <li>
+                        <span>4925*********004</span>
+                    </li>
+                    <li>{"\n"}
+                        <span>{"\n\t\t\t"}4925*********004{"\n\t\t\t"}
+                            <span className="badge badge-blue">new</span>{"\n"}
+                        </span>{"\n"}
+                        <a href="https://developer.payex.com">developer.payex.com</a>{"\n"}
+                    </li>
+                    <li>{"\n"}
+                        <span>4925*********004</span>{"\n"}
+                        <i className="material-icons">star</i>{"\n"}
+                    </li>
+                    <li>{"\n"}
+                        <span>4925*********004</span>{"\n"}
+                        <span className="status status-success">Active</span>{"\n"}
+                        <button type="button" className="btn btn-danger btn-xs"><i className="material-icons">delete</i></button>{"\n"}
+                    </li>
+                </ul>
+                <p>You can also put a steps component in this slab so you can track your progress!</p>
+                <div className="steps">
+                    <ol>
+                        <li className="steps-completed">
+                            <div className="material-icons steps-icon">check</div>
+                            Step one
+                            <div className="steps-sub-title">24.12.17 12:10</div>
+                        </li>
+                        <li className="steps-ongoing steps-selected">Step two</li>
+                        <li>Step three</li>
+                        <li>Step four</li>
+                    </ol>
+                    <div className="steps-responsive">
+                        <div className="steps-responsive-text">Step 3</div>
+                    </div>
+                </div>
             </div>
         </ComponentPreview>
     </>
@@ -64,15 +99,34 @@ const SlabWhite = () => (
 
 const SlabSizes = () => (
     <>
-        <h2 id="well-sizes">Well sizes</h2>
+        <h2 id="slab-sizes">Slab sizes</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="slab slab-sm">
-                This was kind of tight.
+                This is very snug.
             </div>
         </ComponentPreview>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="slab slab-white slab-lg">
+            <div className="slab slab-lg">
                 This is so spacious I can hardly believe it!
+            </div>
+        </ComponentPreview>
+    </>
+);
+
+const SlabCombinations = () => (
+    <>
+        <h2 id="slab-combinations">Slab combinations</h2>
+        <p>
+            You can mix and match slab variations as you see fit.
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <div className="slab slab-white slab-elevated">
+                This is an elevated white slab.
+            </div>
+        </ComponentPreview>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <div className="slab slab-white slab-well slab-lg">
+                This well is too big for my liking.
             </div>
         </ComponentPreview>
     </>
@@ -82,20 +136,20 @@ const SlabText = () => (
     <div className="col-lg-10 doc-body">
         <ExperimentalComponentAlert />
         <p className="lead">
-            Slabs are meant to be used as container components,
-            therefore it works with whatever you want to put in it.
+            Slabs are container components, therefore it works with whatever you want to put in it.
         </p>
         <DefaultSlab />
         <SlabElevated />
         <SlabWell />
         <SlabWhite />
         <SlabSizes />
+        <SlabCombinations />
     </div>
 );
 
 class Slab extends Component {
     componentDidMount () {
-        tabs.init();
+        validation.init();
     }
 
     render () {
@@ -113,4 +167,4 @@ class Slab extends Component {
 export default Slab;
 
 /* For testing */
-export { DefaultSlab, SlabElevated, SlabWell, SlabWhite, SlabSizes, SlabText };
+export { DefaultSlab, SlabElevated, SlabWell, SlabWhite, SlabSizes, SlabCombinations, SlabText };
