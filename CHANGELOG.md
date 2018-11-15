@@ -11,6 +11,8 @@
 
 ### Changed
 
+- Step bar component has been renamed to steps and recieved an overhaul.
+
 ### Fixed
 
 - Fixed bug where an opened collapsed tab would close when clicking the container without clicking a list item.
