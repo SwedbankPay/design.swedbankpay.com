@@ -7,20 +7,6 @@ exports[`Documentation: Steps Basic Steps renders 1`] = `
   >
     Basic usage
   </h2>
-  <p>
-    Add class 
-    <Property
-      value=".steps"
-    />
-     to an 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;ol&gt;
-    </PrismCode>
-     element.
-  </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
