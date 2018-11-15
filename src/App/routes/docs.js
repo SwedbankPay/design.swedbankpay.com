@@ -64,6 +64,11 @@ module.exports = [
                 componentPath: "core/Lists"
             },
             {
+                title: "Payment Icons",
+                path: "/docs/core/payment-icons",
+                componentPath: "core/PaymentIcons"
+            },
+            {
                 title: "Tables",
                 path: "/docs/core/tables",
                 componentPath: "core/Tables"

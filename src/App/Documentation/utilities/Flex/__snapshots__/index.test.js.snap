@@ -1786,9 +1786,13 @@ exports[`Utilities: Flex JustifyContent renders 1`] = `
     <Property
       value="between"
     />
-    , or 
+    , 
     <Property
       value="around"
+    />
+    , or 
+    <Property
+      value="evenly"
     />
     .
   </p>
@@ -1873,7 +1877,26 @@ exports[`Utilities: Flex JustifyContent renders 1`] = `
       </div>
     </div>
     <div
-      className="d-flex justify-content-around sc-highlight"
+      className="d-flex justify-content-around sc-highlight mb-3"
+    >
+      <div
+        className="p-2 sc-highlight"
+      >
+        Flex item
+      </div>
+      <div
+        className="p-2 sc-highlight"
+      >
+        Flex item
+      </div>
+      <div
+        className="p-2 sc-highlight"
+      >
+        Flex item
+      </div>
+    </div>
+    <div
+      className="d-flex justify-content-evenly sc-highlight"
     >
       <div
         className="p-2 sc-highlight"
@@ -1921,6 +1944,11 @@ exports[`Utilities: Flex JustifyContent renders 1`] = `
     >
       ...
     </div>
+    <div
+      className="d-flex justify-content-evenly"
+    >
+      ...
+    </div>
   </ComponentPreview>
   <p>
     Responsive variations also exist for 
@@ -1957,6 +1985,11 @@ exports[`Utilities: Flex JustifyContent renders 1`] = `
     </li>
     <li>
       <Property
+        value=".justify-content-evenly"
+      />
+    </li>
+    <li>
+      <Property
         value=".justify-content-{breakpoint}-start"
       />
     </li>
@@ -1978,6 +2011,11 @@ exports[`Utilities: Flex JustifyContent renders 1`] = `
     <li>
       <Property
         value=".justify-content-{breakpoint}-around"
+      />
+    </li>
+    <li>
+      <Property
+        value=".justify-content-{breakpoint}-evenly"
       />
     </li>
   </ul>

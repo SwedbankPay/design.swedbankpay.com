@@ -23,12 +23,15 @@
     transition: opacity 0.3s ease, color 0.3s ease;
     .button-size(@padding-base-vertical; @padding-base-horizontal; @base-font-size; @line-height-base; @btn-border-radius-base;);
 
-    & .material-icons {
+    .material-icons {
         font-size: 1.25rem;
         position: relative;
         display: inline-block;
         line-height: 1;
-        margin-right: @base-margin-sm;
+
+        &:not(:last-child) {
+            margin-right: @base-margin-sm;
+        }
     }
 
     &:last-child {
