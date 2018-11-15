@@ -13,6 +13,7 @@
 
 - Step bar component has been renamed to steps and recieved an overhaul.
 - Topbar has been simplified therefore some parts have been deprecated.
+- Well changed to Slab, also added some more variations.
 
 ### Fixed
 
