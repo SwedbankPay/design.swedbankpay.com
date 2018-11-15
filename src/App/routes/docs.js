@@ -203,6 +203,27 @@ module.exports = [
     },
 
     /**
+     * Dashboard
+     */
+    {
+        title: "Dashboard",
+        path: "/docs/dashboard",
+        redirect: "/docs/dashboard/introduction",
+        routes: [
+            {
+                title: "Introduction to dashboard",
+                path: "/docs/dashboard/introduction-to-dashboard",
+                componentPath: "dashboard/Introduction"
+            },
+            {
+                title: "Chart",
+                path: "/docs/dashboard/chart",
+                componentPath: "dashboard/Chart"
+            }
+        ]
+    },
+
+    /**
      * Utilities
      */
     {
