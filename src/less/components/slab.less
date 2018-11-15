@@ -1,17 +1,29 @@
-.well {
+.slab {
     min-height: 1rem;
     padding: @base-padding;
-    background-color: @white;
-    border: 1px solid @gray-10;
-    border-radius: 0.25rem;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5);
+    background-color: @gray-10;
+    border: 1px solid transparent;
 
-    &.well-lg {
-        padding: @base-padding-lg;
-        border-radius: 0.375rem;
+    &.slab-elevated {
+        border: 1px solid transparent;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
     }
 
-    &.well-sm {
+    &.slab-well {
+        border: 1px solid transparent;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5);
+    }
+
+    &.slab-white {
+        background-color: @white;
+        border: 1px solid @gray-8;
+    }
+
+    &.slab-lg {
+        padding: @base-padding-lg;
+    }
+
+    &.slab-sm {
         padding: @base-padding-sm;
     }
 }
