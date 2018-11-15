@@ -21,6 +21,9 @@ environment:
     secure: a/+7STfY8W8+RTlSDgKIZghq6iIy8K9WL5lICC6wsaoXPvKuBMjCsTE/KBdvP6vauLd9E2zbGHWjGUTI8SrF1bZUluC4VqhmrkWz9edM+10=
   slack_designguide_webhook:
     secure: gxWz5+nY3Ctg2JTqo5RQVwHA+UNxiB/H1u72IC71b3oBZj/dxqBLc1/EYZtxzWjiOCXPSOfKJ485+XhtyTt1kNjHon7JWRftucuOyhaozmw=
+  # Codecov
+  CODECOV_TOKEN:
+    secure: aSdbrWvXrfwEJ9+bz03FYLUSD7m55aqN0npBW+FKhC9UegsoI73jPMzlNFicBkmS
 
 # cache:
 #   - node_modules
@@ -32,6 +35,7 @@ install:
     gitversion /output BuildServer
 
     npm install
+    npm install -g codecov
 
 #---------------------------------#
 #       build configuration       #
@@ -51,7 +55,7 @@ test_script:
 - cmd: >-
     npm run lint
 
-    npm test
+    npm test:codecov
 
 #---------------------------------#
 #     deployment configuration    #
