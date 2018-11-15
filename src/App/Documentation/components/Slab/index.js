@@ -1,13 +1,14 @@
-import React from "react";
+import React, { Component } from "react";
 
 import { ComponentPreview, DocToc, ExperimentalComponentAlert, Property } from "#";
+import { tabs } from "$/px-script";
+import TabsComponent from "@/Tabs";
 
 const DefaultSlab = () => (
     <>
         <h2 id="default-slab">Default slab</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="slab">
-                <p className="lead">Put things in me!</p> {/* Too sexual? :) */}
                 <p>Do you want to sign up for the slab mailing list?</p>
                 <form action="#" noValidate data-validate>
                     <div className="form-group">
@@ -47,35 +48,15 @@ const SlabWell = () => (
     </>
 );
 
+const tabItems = ["Kort", "Rabatter", "Transaksjoner", "Faktura", "Instillinger", "Audit trail"];
+
 const SlabWhite = () => (
     <>
         <h2 id="slab-white">Slab white</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="slab slab-white">
-                <h2>This slab can fit so many tabs in it.</h2>
-                <div className="tabs tabs-horizontal-xl">
-                    <i className="material-icons">keyboard_arrow_right</i>
-                    <ul>
-                        <li>
-                            <a href="#">Kort</a>
-                        </li>
-                        <li className="active">
-                            <a href="#">Rabatter</a>
-                        </li>
-                        <li>
-                            <a href="#">Transaksjoner</a>
-                        </li>
-                        <li>
-                            <a href="#">Faktura</a>
-                        </li>
-                        <li>
-                            <a href="#">Instillinger</a>
-                        </li>
-                        <li>
-                            <a href="#">Audit trail</a>
-                        </li>
-                    </ul>
-                </div>
+                <h4 className="text-center">This slab can fit so many tabs in it.</h4>
+                <TabsComponent mode="xl" items={tabItems}/>
             </div>
         </ComponentPreview>
     </>
@@ -86,20 +67,12 @@ const SlabSizes = () => (
         <h2 id="well-sizes">Well sizes</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="slab slab-sm">
-                Look ma, im on a small slab!
+                This was kind of tight.
             </div>
         </ComponentPreview>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="slab slab-white slab-lg">
-                <p className="lead">Here you can easily see how far along you are in this part of the slab docs. Ain't that neat?</p>
-                <ol className="step-bar step-bar--horizontal">
-                    <li className="step-bar-item-complete">Step one</li>
-                    <li className="step-bar-item-complete">Step two</li>
-                    <li className="step-bar-item-complete">Step three</li>
-                    <li className="step-bar-item-complete">
-                        <div className="material-icons step-bar-icon">check</div>Step four
-                    </li>
-                </ol>
+                This is so spacious I can hardly believe it!
             </div>
         </ComponentPreview>
     </>
@@ -120,16 +93,24 @@ const SlabText = () => (
     </div>
 );
 
-const Well = () => (
-    <div className="doc-container">
-        <div className="row">
-            <SlabText />
-            <DocToc component={SlabText} />
-        </div>
-    </div>
-);
+class Slab extends Component {
+    componentDidMount () {
+        tabs.init();
+    }
 
-export default Well;
+    render () {
+        return (
+            <div className="doc-container">
+                <div className="row">
+                    <SlabText />
+                    <DocToc component={SlabText} />
+                </div>
+            </div>
+        );
+    }
+}
+
+export default Slab;
 
 /* For testing */
 export { DefaultSlab, SlabElevated, SlabWell, SlabWhite, SlabSizes, SlabText };
