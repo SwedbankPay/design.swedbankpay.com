@@ -45,7 +45,7 @@ const Button = ({ label, id, name, value, href, icon, loading, type, disabled, b
     return (
         <button className={btnClasses} {...attrs}>{icon ? "\n\t\t" : null}
             {icon ? <><i className="material-icons">{icon}</i>{"\n\t\t"}</> : null}
-            {label}{icon ? "\n\t" : null}
+            {(icon && label) ? <span>{label}</span> : label}{icon ? "\n\t" : null}
         </button>
     );
 };

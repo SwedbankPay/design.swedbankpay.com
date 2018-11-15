@@ -1,33 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Documentation: StepBar Basic StepBar renders 1`] = `
+exports[`Documentation: Steps Basic Steps renders 1`] = `
 <Fragment>
   <h2
     id="basic-usage"
   >
     Basic usage
   </h2>
-  <p>
-    Add class 
-    <Property
-      value=".step-bar"
-    />
-     to an 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;ol&gt;
-    </PrismCode>
-     element.
-  </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}
   >
-    <StepBar
-      items={
+    <Steps
+      steps={
         Array [
           Object {
             "completed": true,
@@ -35,7 +21,8 @@ exports[`Documentation: StepBar Basic StepBar renders 1`] = `
             "title": "Step one",
           },
           Object {
-            "active": true,
+            "ongoing": true,
+            "selected": true,
             "title": "Step two",
           },
           Object {
@@ -51,29 +38,29 @@ exports[`Documentation: StepBar Basic StepBar renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: StepBar StepBar Text renders 1`] = `
+exports[`Documentation: Steps Steps Text renders 1`] = `
 <div
-  className="col-lg-10 doc-body"
+  className="col-12 col-lg-10 doc-body"
 >
-  <ExperimentalComponentAlert />
   <p
     className="lead"
   >
-    Step Bar.
+    Steps.
   </p>
-  <BasicStepBar />
-  <HorizontalStepBar />
+  <BasicSteps />
+  <VerticalSteps />
+  <ClickableSteps />
 </div>
 `;
 
-exports[`Documentation: StepBar renders 1`] = `
+exports[`Documentation: Steps renders 1`] = `
 <div
   className="doc-container"
 >
   <div
     className="row"
   >
-    <StepBarText />
+    <StepsText />
     <DocToc
       component={[Function]}
     />

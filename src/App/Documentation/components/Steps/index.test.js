@@ -1,42 +1,42 @@
 import React from "react";
 import { shallow } from "enzyme";
-import StepBar, { BasicStepBar, StepBarText } from "./index";
+import Steps, { BasicSteps, StepsText } from "./index";
 
-describe("Documentation: StepBar", () => {
+describe("Documentation: Steps", () => {
     it("is defined", () => {
-        expect(StepBar).toBeDefined();
+        expect(Steps).toBeDefined();
     });
 
     it("renders", () => {
         const wrapper = shallow(
-            <StepBar />
+            <Steps />
         );
 
         expect(wrapper).toMatchSnapshot();
     });
 
-    describe("Basic StepBar", () => {
+    describe("Basic Steps", () => {
         it("is defined", () => {
-            expect(BasicStepBar).toBeDefined();
+            expect(BasicSteps).toBeDefined();
         });
 
         it("renders", () => {
             const wrapper = shallow(
-                <BasicStepBar />
+                <BasicSteps />
             );
 
             expect(wrapper).toMatchSnapshot();
         });
     });
 
-    describe("StepBar Text", () => {
+    describe("Steps Text", () => {
         it("is defined", () => {
-            expect(StepBarText).toBeDefined();
+            expect(StepsText).toBeDefined();
         });
 
         it("renders", () => {
             const wrapper = shallow(
-                <StepBarText />
+                <StepsText />
             );
 
             expect(wrapper).toMatchSnapshot();

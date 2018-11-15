@@ -95,6 +95,11 @@ exports[`Documentation: index renders 1`] = `
                 "title": "Lists",
               },
               Object {
+                "componentPath": "core/PaymentIcons",
+                "path": "/docs/core/payment-icons",
+                "title": "Payment Icons",
+              },
+              Object {
                 "componentPath": "core/Tables",
                 "path": "/docs/core/tables",
                 "title": "Tables",
@@ -200,9 +205,9 @@ exports[`Documentation: index renders 1`] = `
                 "title": "Status",
               },
               Object {
-                "componentPath": "components/StepBar",
-                "path": "/docs/components/step-bar",
-                "title": "Step Bar (experimental)",
+                "componentPath": "components/Steps",
+                "path": "/docs/components/steps",
+                "title": "Steps",
               },
               Object {
                 "componentPath": "components/Tabs",

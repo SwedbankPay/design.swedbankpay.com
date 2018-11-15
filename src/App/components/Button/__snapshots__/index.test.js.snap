@@ -319,7 +319,9 @@ exports[`Component: Button -  Button tag: renders a button with icon and label w
   </i>
   
 		
-  test
+  <span>
+    test
+  </span>
   
 	
 </button>

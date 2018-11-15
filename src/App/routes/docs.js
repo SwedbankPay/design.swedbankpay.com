@@ -64,6 +64,11 @@ module.exports = [
                 componentPath: "core/Lists"
             },
             {
+                title: "Payment Icons",
+                path: "/docs/core/payment-icons",
+                componentPath: "core/PaymentIcons"
+            },
+            {
                 title: "Tables",
                 path: "/docs/core/tables",
                 componentPath: "core/Tables"
@@ -170,9 +175,9 @@ module.exports = [
                 componentPath: "components/Status"
             },
             {
-                title: "Step Bar (experimental)",
-                path: "/docs/components/step-bar",
-                componentPath: "components/StepBar"
+                title: "Steps",
+                path: "/docs/components/steps",
+                componentPath: "components/Steps"
             },
             {
                 title: "Tabs (experimental)",

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Steps renders 1`] = `
+<div
+  className="steps"
+>
+  <ol>
+    <RenderSteps
+      steps={
+        Array [
+          Object {
+            "completed": true,
+            "subtitle": "24.12.17 12:10",
+            "title": "Step one",
+          },
+          Object {
+            "ongoing": true,
+            "title": "Step two",
+          },
+          Object {
+            "selected": true,
+            "title": "Step three",
+          },
+          Object {
+            "title": "Step four",
+          },
+        ]
+      }
+    />
+  </ol>
+  <RenderStepsNav />
+</div>
+`;

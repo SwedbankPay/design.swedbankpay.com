@@ -6,8 +6,12 @@
 
 - Added new table variant table-condensed.
 - Added panel-table for displaying a table taking up the full width of a panel.
+- Added flex utility class `.justify-content-evenly` for `justify content: space-evenly`.
+- Added payment icons to DesignGuide (located under core).
 
 ### Changed
+
+- Step bar component has been renamed to steps and recieved an overhaul.
 
 ### Fixed
 
@@ -16,5 +20,6 @@
 - Fixed a bug that would cause the rangeslider script to generate one style tag for each rangeslider component on a given page.
 - Fixed an issue with faulty grid baserules.
 - Fixed issue with icons not aligning properly with text inside block-level buttons.
+- Fixed an issue with button icon margin.
 
 ### Removed
