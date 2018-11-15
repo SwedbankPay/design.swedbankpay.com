@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Panel, { Overview, PanelHeaders, PanelDark, PanelMuted, PanelText, PanelTable, TableContent  } from "./index";
+import Panel, { Overview, PanelHeaders, PanelDark, PanelMuted, PanelText, PanelTable, TableContent } from "./index";
 
 describe("Documentation: Panel", () => {
     it("is defined", () => {
@@ -88,11 +88,11 @@ describe("Documentation: Panel", () => {
 
     describe("TableContent ", () => {
         it("is defined", () => {
-            expect(TableContent ).toBeDefined();
+            expect(TableContent).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<TableContent  />);
+            const wrapper = shallow(<TableContent />);
 
             expect(wrapper).toMatchSnapshot();
         });

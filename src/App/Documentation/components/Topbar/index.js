@@ -27,7 +27,7 @@ const DeprecatedAlert = () => (
         <ul>
             <li>Right nav</li>
             <li>Levels in left nav</li>
-            <li>topbar-btn-right class will be replaced by topbar-btn</li>
+            <li>topbar-btn-right and topbar-btn-left classes will be replaced by topbar-btn</li>
         </ul>
         <p>For continued support, please follow the examples in the documentation.</p>
     </Alert>
