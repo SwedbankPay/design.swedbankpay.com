@@ -47,8 +47,6 @@ const SlabWell = () => (
     </>
 );
 
-const tabItems = ["Kort", "Rabatter", "Transaksjoner", "Faktura", "Instillinger", "Audit trail"];
-
 const SlabWhite = () => (
     <>
         <h2 id="slab-white">Slab white</h2>

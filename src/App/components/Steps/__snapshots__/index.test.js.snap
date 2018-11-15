@@ -1,6 +1,254 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Steps renders 1`] = `
+exports[`Component: Steps renders clickable steps 1`] = `
+<Steps
+  steps={
+    Array [
+      Object {
+        "clickable": true,
+        "completed": true,
+        "title": "Step one",
+      },
+      Object {
+        "clickable": true,
+        "ongoing": true,
+        "title": "Step two",
+      },
+      Object {
+        "clickable": true,
+        "title": "Step three",
+      },
+      Object {
+        "selected": true,
+        "title": "Step four",
+      },
+      Object {
+        "title": "Step Five",
+      },
+      Object {
+        "title": "Step Six",
+      },
+    ]
+  }
+>
+  <div
+    className="steps"
+  >
+    <ol>
+      <RenderSteps
+        steps={
+          Array [
+            Object {
+              "clickable": true,
+              "completed": true,
+              "title": "Step one",
+            },
+            Object {
+              "clickable": true,
+              "ongoing": true,
+              "title": "Step two",
+            },
+            Object {
+              "clickable": true,
+              "title": "Step three",
+            },
+            Object {
+              "selected": true,
+              "title": "Step four",
+            },
+            Object {
+              "title": "Step Five",
+            },
+            Object {
+              "title": "Step Six",
+            },
+          ]
+        }
+      >
+        <li
+          className="steps-completed"
+          key="0"
+        >
+          
+
+           
+          <a>
+            <StepContent
+              completed={true}
+              title="Step one"
+            >
+              <div
+                className="material-icons steps-icon"
+              >
+                check
+              </div>
+              
+
+              Step one
+            </StepContent>
+          </a>
+           
+          
+
+           
+        </li>
+        <li
+          className="steps-ongoing"
+          key="1"
+        >
+          
+
+           
+          <a>
+            <StepContent
+              title="Step two"
+            >
+              Step two
+            </StepContent>
+          </a>
+           
+          
+
+           
+        </li>
+        <li
+          className=""
+          key="2"
+        >
+          
+
+           
+          <a>
+            <StepContent
+              title="Step three"
+            >
+              Step three
+            </StepContent>
+          </a>
+           
+          
+
+           
+        </li>
+        <li
+          className="steps-selected"
+          key="3"
+        >
+          <StepContent
+            title="Step four"
+          >
+            Step four
+          </StepContent>
+        </li>
+        <li
+          className=""
+          key="4"
+        >
+          <StepContent
+            title="Step Five"
+          >
+            Step Five
+          </StepContent>
+        </li>
+        <li
+          className=""
+          key="5"
+        >
+          <StepContent
+            title="Step Six"
+          >
+            Step Six
+          </StepContent>
+        </li>
+      </RenderSteps>
+    </ol>
+    <RenderStepsNav
+      steps={
+        Array [
+          Object {
+            "clickable": true,
+            "completed": true,
+            "title": "Step one",
+          },
+          Object {
+            "clickable": true,
+            "ongoing": true,
+            "title": "Step two",
+          },
+          Object {
+            "clickable": true,
+            "title": "Step three",
+          },
+          Object {
+            "selected": true,
+            "title": "Step four",
+          },
+          Object {
+            "title": "Step Five",
+          },
+          Object {
+            "title": "Step Six",
+          },
+        ]
+      }
+    >
+      <div
+        className="steps-responsive"
+      >
+        <div
+          className="material-icons steps-nav-left"
+        >
+          keyboard_arrow_left
+        </div>
+        <div
+          className="steps-responsive-text"
+        >
+          Step 3
+        </div>
+        <div
+          className="material-icons steps-nav-right"
+        >
+          keyboard_arrow_right
+        </div>
+      </div>
+    </RenderStepsNav>
+  </div>
+</Steps>
+`;
+
+exports[`Component: Steps renders in vertical mode if prop vertical is provided 1`] = `
+<div
+  className="steps steps-vertical"
+>
+  <ol>
+    <RenderSteps
+      steps={
+        Array [
+          Object {
+            "completed": true,
+            "subtitle": "24.12.17 12:10",
+            "title": "Step one",
+          },
+          Object {
+            "ongoing": true,
+            "title": "Step two",
+          },
+          Object {
+            "selected": true,
+            "title": "Step three",
+          },
+          Object {
+            "title": "Step four",
+          },
+        ]
+      }
+    />
+  </ol>
+  <RenderStepsNav />
+</div>
+`;
+
+exports[`Component: Steps renders with default items if no props are provided 1`] = `
 <div
   className="steps"
 >
@@ -30,4 +278,100 @@ exports[`Component: Steps renders 1`] = `
   </ol>
   <RenderStepsNav />
 </div>
+`;
+
+exports[`Component: Steps renders with given items if prop steps is given 1`] = `
+<Steps
+  steps={
+    Array [
+      Object {
+        "title": "one step",
+      },
+      Object {
+        "title": "two steps",
+      },
+      Object {
+        "title": "three steps for testing",
+      },
+    ]
+  }
+>
+  <div
+    className="steps"
+  >
+    <ol>
+      <RenderSteps
+        steps={
+          Array [
+            Object {
+              "title": "one step",
+            },
+            Object {
+              "title": "two steps",
+            },
+            Object {
+              "title": "three steps for testing",
+            },
+          ]
+        }
+      >
+        <li
+          className=""
+          key="0"
+        >
+          <StepContent
+            title="one step"
+          >
+            one step
+          </StepContent>
+        </li>
+        <li
+          className=""
+          key="1"
+        >
+          <StepContent
+            title="two steps"
+          >
+            two steps
+          </StepContent>
+        </li>
+        <li
+          className=""
+          key="2"
+        >
+          <StepContent
+            title="three steps for testing"
+          >
+            three steps for testing
+          </StepContent>
+        </li>
+      </RenderSteps>
+    </ol>
+    <RenderStepsNav
+      steps={
+        Array [
+          Object {
+            "title": "one step",
+          },
+          Object {
+            "title": "two steps",
+          },
+          Object {
+            "title": "three steps for testing",
+          },
+        ]
+      }
+    >
+      <div
+        className="steps-responsive"
+      >
+        <div
+          className="steps-responsive-text"
+        >
+          Step 3
+        </div>
+      </div>
+    </RenderStepsNav>
+  </div>
+</Steps>
 `;
