@@ -49,4 +49,20 @@ if (!window.stopPx) {
 
 export default px;
 
-export { actionList, alert, button, datepicker, dialog, loader, rangeslider, sheet, nav, script, tabs, toast, topbar, utils, validation };
+export {
+    actionList,
+    alert,
+    button,
+    datepicker,
+    dialog,
+    loader,
+    nav,
+    rangeslider,
+    sheet,
+    script,
+    tabs,
+    toast,
+    topbar,
+    utils,
+    validation
+};
