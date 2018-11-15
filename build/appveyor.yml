@@ -56,7 +56,7 @@ test_script:
 - cmd: >-
     npm run lint
 
-    npm test:codecov
+    npm run test:codecov
 
 #---------------------------------#
 #     deployment configuration    #
