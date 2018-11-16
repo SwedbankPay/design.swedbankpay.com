@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.1x.x] - 2018-xx-xx
+## [0.14.0] - 2018-11-16
 
 ### Added
 
@@ -12,6 +12,7 @@
 
 ### Changed
 
+- Changed `.alert-default` to have a thicker border-left.
 - Step bar component has been renamed to steps and recieved an overhaul.
 - Topbar has been simplified therefore some parts have been deprecated.
 - Well has been absorbed by slab.
@@ -26,3 +27,5 @@
 - Fixed an issue with button icon margin.
 
 ### Removed
+
+- Removed well component, use `.slab .slab-well` instead.
