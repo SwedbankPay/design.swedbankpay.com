@@ -1,9 +1,14 @@
-import chartjs from "chart.js";
+import Chart from "chart.js";
 
-const chart = (() => {
-    console.log(chartjs);
+const chart = (id, options) => {
+    const element = document.getElementById(id);
 
-    return chartjs;
-})();
+    console.log(element);
+    // if (element) {
+
+    // } else {
+    //     console.warn("No ")
+    // }
+};
 
 export default chart;
