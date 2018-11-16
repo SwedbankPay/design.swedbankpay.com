@@ -112,7 +112,7 @@ const SlabSizes = () => (
     <>
         <h2 id="slab-sizes">Slab sizes</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="slab slab-muted">
+            <div className="slab slab-sm">
                 This is very snug.
             </div>
         </ComponentPreview>
