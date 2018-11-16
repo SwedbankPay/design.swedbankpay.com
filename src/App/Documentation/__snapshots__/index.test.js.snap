@@ -200,6 +200,11 @@ exports[`Documentation: index renders 1`] = `
                 "title": "Sheet",
               },
               Object {
+                "componentPath": "components/Slab",
+                "path": "/docs/components/slab",
+                "title": "Slab (experimental)",
+              },
+              Object {
                 "componentPath": "components/Status",
                 "path": "/docs/components/status",
                 "title": "Status",
@@ -228,11 +233,6 @@ exports[`Documentation: index renders 1`] = `
                 "componentPath": "components/Topbar",
                 "path": "/docs/components/topbar",
                 "title": "Topbar (contains deprecated)",
-              },
-              Object {
-                "componentPath": "components/Well",
-                "path": "/docs/components/well",
-                "title": "Well (experimental)",
               },
             ]
           }

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Documentation: Steps Basic Steps renders 1`] = `
+exports[`Documentation: Steps BasicSteps renders 1`] = `
 <Fragment>
   <h2
     id="basic-usage"
@@ -38,6 +38,69 @@ exports[`Documentation: Steps Basic Steps renders 1`] = `
 </Fragment>
 `;
 
+exports[`Documentation: Steps ClickableSteps renders 1`] = `
+<Fragment>
+  <h2
+    id="clickable-steps"
+  >
+    Clickable steps
+  </h2>
+  <p>
+    Add an anchor element (
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;a&gt;
+    </PrismCode>
+    ) to the list item element ( 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;li&gt;
+    </PrismCode>
+    ). Ensure that all content within the list element is also inside the anchor element.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Steps
+      steps={
+        Array [
+          Object {
+            "clickable": true,
+            "completed": true,
+            "title": "Step one",
+          },
+          Object {
+            "clickable": true,
+            "ongoing": true,
+            "title": "Step two",
+          },
+          Object {
+            "clickable": true,
+            "title": "Step three",
+          },
+          Object {
+            "selected": true,
+            "title": "Step four",
+          },
+          Object {
+            "title": "Step Five",
+          },
+          Object {
+            "title": "Step Six",
+          },
+        ]
+      }
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Documentation: Steps Steps Text renders 1`] = `
 <div
   className="col-12 col-lg-10 doc-body"
@@ -51,6 +114,58 @@ exports[`Documentation: Steps Steps Text renders 1`] = `
   <VerticalSteps />
   <ClickableSteps />
 </div>
+`;
+
+exports[`Documentation: Steps VerticalSteps renders 1`] = `
+<Fragment>
+  <h2
+    id="vertical-steps"
+  >
+    Vertical steps
+  </h2>
+  <p>
+    Add 
+    <Property
+      value=".steps-vertical"
+    />
+     to the 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;div&gt;
+    </PrismCode>
+     element.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Steps
+      steps={
+        Array [
+          Object {
+            "completed": true,
+            "title": "Step one",
+          },
+          Object {
+            "ongoing": true,
+            "selected": true,
+            "title": "Step two",
+          },
+          Object {
+            "title": "Step three",
+          },
+          Object {
+            "title": "Step four",
+          },
+        ]
+      }
+      vertical={true}
+    />
+  </ComponentPreview>
+</Fragment>
 `;
 
 exports[`Documentation: Steps renders 1`] = `

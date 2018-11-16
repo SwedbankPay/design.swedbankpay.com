@@ -8,11 +8,13 @@
 - Added panel-table for displaying a table taking up the full width of a panel.
 - Added flex utility class `.justify-content-evenly` for `justify content: space-evenly`.
 - Added payment icons to DesignGuide (located under core).
+- Added Slab component.
 
 ### Changed
 
 - Step bar component has been renamed to steps and recieved an overhaul.
 - Topbar has been simplified therefore some parts have been deprecated.
+- Well has been absorbed by slab.
 
 ### Fixed
 

@@ -1,5 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Components: Toast CustomHtml calls toast on click 1`] = `
+<Fragment>
+  <h2
+    id="custom-html"
+  >
+    Custom HTML
+  </h2>
+  <p>
+    You can pass in an HTML String as the first argument as well. Take a look at the example below, where we pass in text as well as a flat button. If you call an external function instead of in-line JavaScript, you will not need to escape quotation marks.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    const toastHtml = "&lt;span&gt;&lt;p&gt;I am toast content.&lt;/p&gt;&lt;p&gt;You can put me on several lines.&lt;/p&gt;&lt;/span&gt;&lt;button class='btn toast-action'&gt;Undo&lt;/button&gt;";
+    
+
+    px.toast({ html: toastHtml });
+  </ComponentPreview>
+  <ComponentPreview
+    language="html"
+    showCasePanel={true}
+  >
+    <button
+      className="btn btn-primary"
+      onClick={[Function]}
+      type="button"
+    >
+      Toast with action
+    </button>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Components: Toast CustomHtml renders 1`] = `
+<Fragment>
+  <h2
+    id="custom-html"
+  >
+    Custom HTML
+  </h2>
+  <p>
+    You can pass in an HTML String as the first argument as well. Take a look at the example below, where we pass in text as well as a flat button. If you call an external function instead of in-line JavaScript, you will not need to escape quotation marks.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    const toastHtml = "&lt;span&gt;&lt;p&gt;I am toast content.&lt;/p&gt;&lt;p&gt;You can put me on several lines.&lt;/p&gt;&lt;/span&gt;&lt;button class='btn toast-action'&gt;Undo&lt;/button&gt;";
+    
+
+    px.toast({ html: toastHtml });
+  </ComponentPreview>
+  <ComponentPreview
+    language="html"
+    showCasePanel={true}
+  >
+    <button
+      className="btn btn-primary"
+      onClick={[Function]}
+      type="button"
+    >
+      Toast with action
+    </button>
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Components: Toast Options renders 1`] = `
 <Fragment>
   <h2
@@ -167,6 +235,44 @@ exports[`Components: Toast Options renders 1`] = `
 </Fragment>
 `;
 
+exports[`Components: Toast Overview calls toast on click 1`] = `
+<Fragment>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <p>
+    You want jam on that toast?
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    px.toast({ html: "I am a toast!" });
+  </ComponentPreview>
+  <ComponentPreview
+    codeFigure={true}
+    dangerousHTML={true}
+    language="html"
+  >
+    &lt;button onclick="px.toast({ html: 'I am a toast!' })" class="btn btn-primary"&gt;Toast!&lt;/button&gt;
+  </ComponentPreview>
+  <ComponentPreview
+    language="html"
+    showCasePanel={true}
+  >
+    <button
+      className="btn btn-primary"
+      onClick={[Function]}
+      type="button"
+    >
+      Click for toast!
+    </button>
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Components: Toast Overview renders 1`] = `
 <Fragment>
   <h2
@@ -200,6 +306,84 @@ exports[`Components: Toast Overview renders 1`] = `
       type="button"
     >
       Click for toast!
+    </button>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Components: Toast PremadeToasts calls toast on click 1`] = `
+<Fragment>
+  <h2
+    id="premade-toasts"
+  >
+    Premade toasts
+  </h2>
+  <p>
+    There are four premade toast styles other than the default one; 
+    <Attribute
+      value="neutral"
+    />
+    , 
+    <Attribute
+      value="success"
+    />
+    , 
+    <Attribute
+      value="warning"
+    />
+     and 
+    <Attribute
+      value="danger"
+    />
+    . Apply the desired one to the options object and be amazed!
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    dangerousHTML={true}
+    language="html"
+  >
+    &lt;button type="button" onclick="px.toast({ html: 'I am a neutral toast!', type: 'neutral' })" class="btn btn-primary"&gt;Neutral toast&lt;/button&gt;
+    &lt;button type="button" onclick="px.toast({ html: 'I am a success toast!', type: 'success' })" class="btn btn-primary"&gt;Success toast&lt;/button&gt;
+    &lt;button type="button" onclick="px.toast({ html: 'I am a warning toast!', type: 'warning' })" class="btn btn-primary"&gt;Warning toast&lt;/button&gt;
+    &lt;button type="button" onclick="px.toast({ html: 'I am a danger toast!', type: 'danger' })" class="btn btn-primary"&gt;Danger toast&lt;/button&gt;
+  </ComponentPreview>
+  <ComponentPreview
+    language="html"
+    showCasePanel={true}
+  >
+    <button
+      className="btn btn-primary"
+      onClick={[Function]}
+      type="button"
+    >
+      Neutral toast
+    </button>
+    
+
+    <button
+      className="btn btn-primary"
+      onClick={[Function]}
+      type="button"
+    >
+      Success toast
+    </button>
+    
+
+    <button
+      className="btn btn-primary"
+      onClick={[Function]}
+      type="button"
+    >
+      Warning toast
+    </button>
+    
+
+    <button
+      className="btn btn-primary"
+      onClick={[Function]}
+      type="button"
+    >
+      Danger toast
     </button>
   </ComponentPreview>
 </Fragment>
