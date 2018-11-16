@@ -1,13 +1,16 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
+import classnames from "classnames";
 
 const TopbarBtn = ({ icon, text, target }) => {
+    const iconClass = classnames("material-icons", icon === "menu" ? "topbar-btn-icon" : "");
+
     if (icon || text) {
         return (
             <button type="button" className="topbar-btn" data-toggle-nav={target ? `#${target}` : null}>{"\n\t\t"}
                 {icon ?
                     <>
-                        <i className="material-icons">{icon}</i>
+                        <i className={iconClass}>{icon}</i>
                         {"\n\t\t"}
                     </>
                     : null}

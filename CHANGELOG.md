@@ -8,4 +8,6 @@
 
 ### Fixed
 
+- Fixed issue with menu icon not changing when clicked for topbar
+
 ### Removed
