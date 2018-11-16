@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Slab, { DefaultSlab, SlabElevated, SlabWell, SlabWhite, SlabSizes, SlabCombinations, SlabText } from "./index";
+import Slab, { DefaultSlab, SlabElevated, SlabWell, SlabWhite, SlabSizes, SlabMuted, SlabCombinations, SlabText } from "./index";
 
 describe("Components: Slab", () => {
     it("is defined", () => {
@@ -57,6 +57,18 @@ describe("Components: Slab", () => {
 
         it("renders", () => {
             const wrapper = shallow(<SlabWhite />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("SlabMuted", () => {
+        it("is defined", () => {
+            expect(SlabMuted).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<SlabMuted />);
 
             expect(wrapper).toMatchSnapshot();
         });

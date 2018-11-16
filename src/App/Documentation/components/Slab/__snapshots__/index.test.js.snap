@@ -87,9 +87,9 @@ exports[`Components: Slab SlabCombinations renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="slab slab-white slab-elevated"
+      className="slab slab-white slab-muted slab-elevated"
     >
-      This is an elevated white slab.
+      This is an elevated white slab with muted text.
     </div>
   </ComponentPreview>
   <ComponentPreview
@@ -98,9 +98,9 @@ exports[`Components: Slab SlabCombinations renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="slab slab-white slab-well slab-lg"
+      className="slab slab-well slab-lg"
     >
-      This well is too big for my liking.
+      This is a big well!
     </div>
   </ComponentPreview>
 </Fragment>
@@ -127,6 +127,37 @@ exports[`Components: Slab SlabElevated renders 1`] = `
 </Fragment>
 `;
 
+exports[`Components: Slab SlabMuted renders 1`] = `
+<Fragment>
+  <h2
+    id="slab-muted"
+  >
+    Slab muted
+  </h2>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="slab slab-muted"
+    >
+      <h4>
+        This text will be gray.
+      </h4>
+      
+
+      <span>
+        And this text will be gray.
+      </span>
+      
+
+      Even this text will be gray!
+    </div>
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Components: Slab SlabSizes renders 1`] = `
 <Fragment>
   <h2
@@ -140,7 +171,7 @@ exports[`Components: Slab SlabSizes renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="slab slab-sm"
+      className="slab slab-muted"
     >
       This is very snug.
     </div>
@@ -173,6 +204,7 @@ exports[`Components: Slab SlabText renders 1`] = `
   <SlabElevated />
   <SlabWell />
   <SlabWhite />
+  <SlabMuted />
   <SlabSizes />
   <SlabCombinations />
 </div>
@@ -303,7 +335,7 @@ exports[`Components: Slab SlabWhite renders 1`] = `
         </li>
       </ul>
       <p>
-        You can also put a steps component in this slab so you can track your progress!
+        Maybe include a steps component in this slab so you can track your progress!
       </p>
       <div
         className="steps"

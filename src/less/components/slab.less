@@ -24,4 +24,17 @@
     &.slab-sm {
         padding: @base-padding-sm;
     }
+
+    /* stylelint-disable selector-list-comma-newline-after */
+    &.slab-muted {
+        color: @text-muted;
+
+        h1, h2, h3, h4, h5, h6,
+        .h1, .h2, .h3, .h4, .h5, .h6,
+        .lead, p, span, small, mark,
+        abbr, .initialism, blockquote {
+            color: @text-muted;
+        }
+    }
+    /* stylelint-enable selector-list-comma-newline-after */
 }

@@ -52,8 +52,8 @@ const SlabWhite = () => (
         <h2 id="slab-white">Slab white</h2>
         <p>This slab can contain so many things</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <p className="lead text-center">Here is some text and then a striped item list</p>
             <div className="slab slab-white">
+                <p className="lead text-center">Here is some text and then a striped item list</p>
                 <ul className="item-list item-list-striped">
                     <li>
                         <span>4925*********004</span>
@@ -74,7 +74,7 @@ const SlabWhite = () => (
                         <button type="button" className="btn btn-danger btn-xs"><i className="material-icons">delete</i></button>{"\n"}
                     </li>
                 </ul>
-                <p>You can also put a steps component in this slab so you can track your progress!</p>
+                <p>Maybe include a steps component in this slab so you can track your progress!</p>
                 <div className="steps">
                     <ol>
                         <li className="steps-completed">
@@ -95,11 +95,24 @@ const SlabWhite = () => (
     </>
 );
 
+const SlabMuted = () => (
+    <>
+        <h2 id="slab-muted">Slab muted</h2>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <div className="slab slab-muted">
+                <h4>This text will be gray.</h4>{"\n"}
+                <span>And this text will be gray.</span>{"\n"}
+                Even this text will be gray!
+            </div>
+        </ComponentPreview>
+    </>
+);
+
 const SlabSizes = () => (
     <>
         <h2 id="slab-sizes">Slab sizes</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="slab slab-sm">
+            <div className="slab slab-muted">
                 This is very snug.
             </div>
         </ComponentPreview>
@@ -118,13 +131,13 @@ const SlabCombinations = () => (
             You can mix and match slab variations as you see fit.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="slab slab-white slab-elevated">
-                This is an elevated white slab.
+            <div className="slab slab-white slab-muted slab-elevated">
+                This is an elevated white slab with muted text.
             </div>
         </ComponentPreview>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="slab slab-white slab-well slab-lg">
-                This well is too big for my liking.
+            <div className="slab slab-well slab-lg">
+                This is a big well!
             </div>
         </ComponentPreview>
     </>
@@ -140,6 +153,7 @@ const SlabText = () => (
         <SlabElevated />
         <SlabWell />
         <SlabWhite />
+        <SlabMuted />
         <SlabSizes />
         <SlabCombinations />
     </div>
@@ -165,4 +179,4 @@ class Slab extends Component {
 export default Slab;
 
 /* For testing */
-export { DefaultSlab, SlabElevated, SlabWell, SlabWhite, SlabSizes, SlabCombinations, SlabText };
+export { DefaultSlab, SlabElevated, SlabWell, SlabWhite, SlabSizes, SlabMuted, SlabCombinations, SlabText };
