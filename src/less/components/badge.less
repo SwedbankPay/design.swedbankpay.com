@@ -4,7 +4,12 @@
     border-radius: 0.1875rem;
 
     .for-each(@badge in @badge-list) {
-        .make-badge(@badge);
+        @name: at(@badge, 1);
+
+        &.badge-@{name} {
+            background-color: at(@badge, 2);
+            border: 1px solid at(@badge, 2);
+        }
     }
 
     .material-icons {

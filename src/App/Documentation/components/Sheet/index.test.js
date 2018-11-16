@@ -24,6 +24,25 @@ describe("Documentation: Sheet", () => {
 
             expect(wrapper).toMatchSnapshot();
         });
+
+        it("onSubmit prevents default", () => {
+            const wrapper = shallow(<Example />);
+            const eventHandler = { preventDefault: jest.fn() };
+
+            wrapper.find("form").simulate("submit", eventHandler);
+            expect(eventHandler.preventDefault).toHaveBeenCalled();
+            expect(wrapper).toMatchSnapshot();
+        });
+
+        it("onClick prevents default", () => {
+            const wrapper = shallow(<Example />);
+            const clickHandler = { preventDefault: jest.fn() };
+            const formBtn = wrapper.find("form").find("button");
+
+            formBtn.simulate("click", clickHandler);
+            expect(clickHandler.preventDefault).toHaveBeenCalled();
+            expect(wrapper).toMatchSnapshot();
+        });
     });
 
     describe("UsageWithJavascript", () => {

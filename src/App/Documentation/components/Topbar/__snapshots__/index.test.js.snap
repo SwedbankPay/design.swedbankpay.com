@@ -1,5 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Components: Topbar DeprecatedAlert renders 1`] = `
+<Alert
+  type="danger"
+>
+  <h3>
+    Component contains deprecated parts
+  </h3>
+  <p>
+    The following parts are deprecated and will be removed:
+  </p>
+  <ul>
+    <li>
+      Right nav
+    </li>
+    <li>
+      Levels in left nav
+    </li>
+    <li>
+      topbar-btn-right and topbar-btn-left classes will be replaced by topbar-btn
+    </li>
+  </ul>
+  <p>
+    For continued support, please follow the examples in the documentation.
+  </p>
+</Alert>
+`;
+
+exports[`Components: Topbar FixedTopbar renders 1`] = `
+<Fragment>
+  <h2
+    id="fixed-topbar"
+  >
+    Fixed topbar
+  </h2>
+  <p>
+    Add 
+    <Property
+      value=".topbar-fixed"
+    />
+     with your 
+    <Property
+      value=".topbar"
+    />
+     to get a fixed topbar. For a demonstration of the usage see the documentations top bar or implement it in your own project!
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+  >
+    <Topbar
+      fixed={true}
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Components: Topbar Overview renders 1`] = `
 <Fragment>
   <h2
@@ -8,11 +64,52 @@ exports[`Components: Topbar Overview renders 1`] = `
     Overview
   </h2>
   <p>
-    This will only show the code for the 
-    <Property
-      value=".topbar"
+    To use a topbar the bare minimum markup required is:
+  </p>
+  <ul>
+    <li>
+      <Property
+        value=".topbar"
+      />
+       wrapper.
+    </li>
+    <li>
+      Anchor with class 
+      <Property
+        value=".topbar-logo"
+      />
+       to display the logo and make it clickable.
+    </li>
+  </ul>
+  <p>
+    With this you get a topbar with the PayEx logo. In the topbar you can add additional functionality like a menu containing links. To enable this add a 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;button&gt;
+    </PrismCode>
+     and a 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;nav&gt;
+    </PrismCode>
+     containing anchors. Remember to include 
+    <Attribute
+      data={true}
+      name="toggle-nav"
+      value="{your_nav_id}"
     />
-     component, at least for now. For a demonstration of the usage check the example app (coming soon), or implement it in your own project!
+     as a 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;button&gt;
+    </PrismCode>
+     attribute to get the menu to appear when the menu-button is clicked.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -20,108 +117,18 @@ exports[`Components: Topbar Overview renders 1`] = `
     showCasePanel={true}
   >
     <Topbar
-      leftMenu={
+      logout={true}
+      topbarContent={
         Object {
           "btn": Object {
             "icon": "menu",
             "text": "Menu",
           },
-          "hierarchy": Array [
-            Object {
-              "id": "1",
-              "items": Array [
-                Object {
-                  "groupTitle": "Group 1",
-                  "items": Array [
-                    Object {
-                      "target": "2",
-                      "title": "Item 1",
-                    },
-                    Object {
-                      "target": "2",
-                      "title": "Item 2",
-                    },
-                  ],
-                },
-                Object {
-                  "groupTitle": "Group 2",
-                  "items": Array [
-                    Object {
-                      "target": "2",
-                      "title": "Item 1",
-                    },
-                  ],
-                },
-                Object {
-                  "href": "#",
-                  "title": "Link 1",
-                },
-              ],
-            },
-            Object {
-              "id": "2",
-              "items": Array [
-                Object {
-                  "groupTitle": "Group 3",
-                  "items": Array [
-                    Object {
-                      "target": "3",
-                      "title": "Item 1",
-                    },
-                  ],
-                },
-                Object {
-                  "href": "#",
-                  "title": "Link 2",
-                },
-                Object {
-                  "href": "#",
-                  "title": "Link 3",
-                },
-              ],
-            },
-            Object {
-              "id": "3",
-              "items": Array [
-                Object {
-                  "href": "#",
-                  "title": "Link 4",
-                },
-                Object {
-                  "href": "#",
-                  "title": "Link 5",
-                },
-                Object {
-                  "href": "#",
-                  "title": "Link 6",
-                },
-              ],
-            },
-          ],
-          "id": "topbar-nav-left",
-        }
-      }
-      logo="default"
-      rightMenu={
-        Object {
-          "btn": Object {
-            "icon": "menu",
-            "text": "Menu",
-          },
-          "id": "topbar-nav-right",
+          "id": "topbar-nav",
           "items": Array [
-            Object {
-              "href": "#",
-              "title": "Link 1",
-            },
-            Object {
-              "href": "#",
-              "title": "Link 2",
-            },
-            Object {
-              "href": "#",
-              "title": "Link 3",
-            },
+            "Link 1",
+            "Link 2",
+            "Link 3",
           ],
         }
       }
@@ -132,14 +139,16 @@ exports[`Components: Topbar Overview renders 1`] = `
 
 exports[`Components: Topbar TopbarText renders 1`] = `
 <div
-  className="col-md-12 col-lg-10 doc-body"
+  className="col-lg-10 doc-body"
 >
+  <DeprecatedAlert />
   <p
     className="lead"
   >
     Topbar...
   </p>
   <Overview />
+  <FixedTopbar />
 </div>
 `;
 

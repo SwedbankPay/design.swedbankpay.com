@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocToc, ExperimentalComponentAlert, Attribute } from "#";
-import { toast } from "$/px-script";
+import { toast } from "$/px-script/main";
 
 const Overview = () => (
     <>
@@ -172,7 +172,7 @@ const CustomHtml = () => {
 };
 
 const ToastText = () => (
-    <div className="col-md-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <ExperimentalComponentAlert />
         <p className="lead">Toast...</p>
         <Overview />
@@ -198,4 +198,4 @@ class Toast extends Component {
 export default Toast;
 
 /* For testing */
-export { Overview, Options, PremadeToasts, ToastText };
+export { Overview, Options, PremadeToasts, CustomHtml, ToastText };

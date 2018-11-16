@@ -3,6 +3,57 @@ import React, { Component } from "react";
 import { ComponentPreview, DocToc, Property } from "#";
 import PanelComponent from "@/Panel";
 
+const bodyContent = [
+    "Your main panel content is put here.",
+    "Some more content over here.",
+    "And one more line, just to be safe."
+];
+
+const TableContent = () => (
+    <table className="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Sven</td>
+                <td>Svensson</td>
+                <td>Visby</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Sara</td>
+                <td>Svensson</td>
+                <td>Stockholm</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Ola</td>
+                <td>Nordmann</td>
+                <td>Oslo</td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>Holger</td>
+                <td>Danske</td>
+                <td>Copenhagen</td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>Matti</td>
+                <td>Meikäläinen</td>
+                <td>Lahti</td>
+            </tr>
+        </tbody>
+    </table>
+);
+
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
@@ -13,11 +64,8 @@ const Overview = () => (
                 subTitle="Panel subtitle"
                 footerText="Footer content goes here."
                 footerBtnText="Footer button"
-            >
-                <p>Your main panel content is put here.</p>
-                <p>Some more content over here.</p>
-                <p>And one more line, just to be safe.</p>
-            </PanelComponent>
+                bodyContent={bodyContent}
+            />
         </ComponentPreview>
     </>
 );
@@ -42,15 +90,11 @@ const PanelDark = () => (
                 type="brand"
                 title="Panel title"
                 subTitle="Panel subtitle"
+                bodyContent={bodyContent}
                 footerText="Footer content goes here."
                 footerBtnText="Footer button"
                 darkMode
-            >
-                <p className="lead">This is a dark panel.</p>
-                <p>Your main panel content is put here.</p>
-                <p>Some more content over here.</p>
-                <p>And one more line, just to be safe.</p>
-            </PanelComponent>
+            />
         </ComponentPreview>
     </>
 );
@@ -64,25 +108,44 @@ const PanelMuted = () => (
                 type="muted"
                 title="Panel title"
                 subTitle="Panel subtitle"
+                bodyContent={bodyContent}
                 footerText="Footer content goes here."
                 footerBtnText="Footer button"
-            >
-                <p className="lead">This is a muted panel.</p>
-                <p>Your main panel content is put here.</p>
-                <p>Some more content over here.</p>
-                <p>And one more line, just to be safe.</p>
-            </PanelComponent>
+            />
+        </ComponentPreview>
+    </>
+);
+
+const PanelTable = () => (
+    <>
+        <h2 id="panel-with-table">Displaying a full width table</h2>
+        <p>
+            To display a full width table in a panel use <Property value=".panel-table" /> on a div wrapping the table.
+            Put <Property value=".panel-table" /> as a direct child of <Property value=".panel" />. Tables put in a panel are given a
+            border bottom to seperate it from the following elements.
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <PanelComponent
+                type="brand"
+                title="Panel title"
+                subTitle="Panel subtitle"
+                bodyContent={bodyContent}
+                footerText="Footer content goes here."
+                footerBtnText="Footer button"
+                panelTable={TableContent}
+            />
         </ComponentPreview>
     </>
 );
 
 const PanelText = () => (
-    <div className="col-md-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <p className="lead">Panels...</p>
         <Overview />
         <PanelHeaders />
         <PanelDark />
         <PanelMuted />
+        <PanelTable />
     </div>
 );
 
@@ -102,4 +165,4 @@ class Panel extends Component {
 export default Panel;
 
 /* For testing */
-export { Overview, PanelHeaders, PanelDark, PanelMuted, PanelText };
+export { Overview, PanelHeaders, PanelDark, PanelMuted, PanelText, PanelTable, TableContent };

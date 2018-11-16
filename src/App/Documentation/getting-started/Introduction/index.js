@@ -4,7 +4,7 @@ import PrismCode from "react-prism";
 import { ComponentPreview, DocToc } from "#";
 
 const BASENAME = process.env.basename;
-const scriptUrl = `https://design.payex.com${BASENAME}scripts/px-script.js`;
+const scriptUrl = `https://design.payex.com${BASENAME}scripts/px-script/main.js`;
 const styleUrl = `https://design.payex.com${BASENAME}styles/px.css`;
 
 const QuickStart = () => (
@@ -35,7 +35,7 @@ const JavaScript = () => (
 );
 
 const IntroductionText = () => (
-    <div className="col-md-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <p className="lead">Get started with the PayEx DesignGuide.</p>
         <QuickStart />
         <Css />

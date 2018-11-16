@@ -1,27 +1,11 @@
 .cards {
-    > ul {
-        list-style: none;
-        padding-left: 0;
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-
-        @media (max-width: @screen-md-min) {
-            display: block;
-        }
-
-        .card + .card {
-            margin-top: 0;
-        }
-    }
-
     .card {
         background-color: @white;
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-        min-width: 18rem;
-        max-width: 18rem;
-        flex: 1;
-        margin: @card-margin;
+        margin: 0 0 @base-margin;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
 
         header {
             padding: 0 @base-padding;
@@ -78,43 +62,23 @@
             justify-content: center;
             align-content: center;
 
-            .material-icons {
-                margin-top: -0.2rem;
-                font-size: 2rem;
-                line-height: 2rem;
-                color: @gray-3;
-                margin-right: @base-margin-sm;
-            }
-
-            .highlight-wrapper {
-                display: inline-block;
-
-                .highlight-title {
-                    margin: 0;
-                    line-height: 1rem;
-                    color: @gray-3;
-                }
-
-                .highlight-subtitle {
-                    line-height: 1rem;
-                    font-size: 80%;
-                    margin: 0;
-                }
+            > * {
+                margin-bottom: 0;
             }
         }
 
         .card-body {
             padding: @base-padding;
+            flex: 1 1 auto;
         }
 
         footer {
             border-top: 1px solid @gray-9;
-            padding: @base-padding @base-padding-xl;
-            margin-top: auto;
+            padding: @base-padding;
 
             .footer-text {
                 p {
-                    margin-bottom: @base-margin-xs;
+                    margin: @base-margin-xs 0;
                 }
             }
 
@@ -125,7 +89,7 @@
         }
 
         .card-img {
-            height: 10rem;
+            height: @card-image-height;
 
             img {
                 height: 100%;
@@ -133,33 +97,19 @@
                 object-fit: cover;
             }
         }
-
-        + .card {
-            margin-top: 1.5rem;
-        }
-
-        // TODO: rename this to .card-text? Also put this in the documentation [EH]
-        .text {
-            flex-grow: 1;
-            max-width: 60ch;
-
-            > * + * {
-                margin-top: 0.75rem;
-            }
-
-            &:last-child {
-                margin-top: auto;
-            }
-
-            &:nth-last-child(2) {
-                margin-bottom: 0.75rem;
-            }
-        }
     }
+}
 
-    .card,
-    .card .text {
+@media screen and (min-width: @screen-xs-min) {
+    .cards {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+
+        .card {
+            display: inline-flex;
+            margin: @card-margin;
+            max-width: @card-width;
+            min-width: @card-width;
+        }
     }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Table, { BasicTable, StripedTable, HoverTable, HoverStripedTable, DescriptionTable, TablesText } from "./index";
+import Table, { DocTable, BasicTable, StripedTable, CondensedTable, HoverTable, HoverStripedTable, DescriptionTable, TablesText } from "./index";
 
 describe("Documentation: Table", () => {
     it("is defined", () => {
@@ -12,6 +12,15 @@ describe("Documentation: Table", () => {
         const wrapper = shallow(<Table />);
 
         expect(wrapper).toMatchSnapshot();
+    });
+
+    describe("DocTable", () => {
+        it("renders table with given class name", () => {
+            const wrapper = shallow(<DocTable className="table" />);
+
+            expect(wrapper.hasClass("table")).toBeTruthy();
+            expect(wrapper).toMatchSnapshot();
+        });
     });
 
     describe("BasicTable", () => {
@@ -33,6 +42,18 @@ describe("Documentation: Table", () => {
 
         it("renders", () => {
             const wrapper = shallow(<StripedTable />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("CondensedTable", () => {
+        it("is defined", () => {
+            expect(CondensedTable).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<CondensedTable />);
 
             expect(wrapper).toMatchSnapshot();
         });

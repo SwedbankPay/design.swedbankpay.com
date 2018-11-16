@@ -1,133 +1,79 @@
 import React, { Component } from "react";
+import PrismCode from "react-prism";
 
-import { ComponentPreview, DocToc, Property } from "#";
+import { ComponentPreview, DocToc, Property, Attribute } from "#";
 import TopbarComponent from "@/Topbar";
-import { topbar } from "$/px-script";
+import { topbar } from "$/px-script/main";
+import Alert from "@/Alert";
 
 const menu = {
     btn: {
         icon: "menu",
         text: "Menu"
     },
-    hierarchy: [
-        {
-            id: "1",
-            items: [
-                {
-                    groupTitle: "Group 1",
-                    items: [
-                        {
-                            title: "Item 1",
-                            target: "2"
-                        },
-                        {
-                            title: "Item 2",
-                            target: "2"
-                        }
-                    ]
-                },
-                {
-                    groupTitle: "Group 2",
-                    items: [
-                        {
-                            title: "Item 1",
-                            target: "2"
-                        }
-                    ]
-                },
-                {
-                    title: "Link 1",
-                    href: "#"
-                }
-            ]
-        },
-        {
-            id: "2",
-            items: [
-                {
-                    groupTitle: "Group 3",
-                    items: [
-                        {
-                            title: "Item 1",
-                            target: "3"
-                        }
-                    ]
-                },
-                {
-                    title: "Link 2",
-                    href: "#"
-                },
-                {
-                    title: "Link 3",
-                    href: "#"
-                }
-            ]
-        },
-        {
-            id: "3",
-            items: [
-                {
-                    title: "Link 4",
-                    href: "#"
-                },
-                {
-                    title: "Link 5",
-                    href: "#"
-                },
-                {
-                    title: "Link 6",
-                    href: "#"
-                }
-            ]
-        }
-    ]
+    items: ["Link 1", "Link 2", "Link 3"]
 };
 
-const smallMenu = {
-    btn: {
-        icon: "menu",
-        text: "Menu"
-    },
-    items: [
-        {
-            title: "Link 1",
-            href: "#"
-        },
-        {
-            title: "Link 2",
-            href: "#"
-        },
-        {
-            title: "Link 3",
-            href: "#"
-        }
-    ]
-};
-
-const leftMenu = {
-    id: "topbar-nav-left",
+const topbarContent = {
+    id: "topbar-nav",
     ...menu
 };
 
-const rightMenu = {
-    id: "topbar-nav-right",
-    ...smallMenu
-};
+// TODO: Remove when deprecated parts are deleted.
+const DeprecatedAlert = () => (
+    <Alert type="danger">
+        <h3>Component contains deprecated parts</h3>
+        <p>The following parts are deprecated and will be removed:</p>
+        <ul>
+            <li>Right nav</li>
+            <li>Levels in left nav</li>
+            <li>topbar-btn-right and topbar-btn-left classes will be replaced by topbar-btn</li>
+        </ul>
+        <p>For continued support, please follow the examples in the documentation.</p>
+    </Alert>
+);
 
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
-        <p>This will only show the code for the <Property value=".topbar" /> component, at least for now. For a demonstration of the usage check the example app (coming soon), or implement it in your own project!</p>
+        <p>
+            To use a topbar the bare minimum markup required is:
+        </p>
+        <ul>
+            <li><Property value=".topbar" /> wrapper.</li>
+            <li>Anchor with class <Property value=".topbar-logo" /> to display the logo and make it clickable.</li>
+        </ul>
+        <p>
+            With this you get a topbar with the PayEx logo.
+            In the topbar you can add additional functionality like a menu containing links. To enable this add a <PrismCode className="language-html">{"<button>"}</PrismCode> and
+            a <PrismCode className="language-html">{"<nav>"}</PrismCode> containing anchors. Remember to include <Attribute data name="toggle-nav" value="{your_nav_id}"/> as a <PrismCode className="language-html">{"<button>"}</PrismCode> attribute
+            to get the menu to appear when the menu-button is clicked.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <TopbarComponent logo="default" leftMenu={leftMenu} rightMenu={rightMenu} />
+            <TopbarComponent topbarContent={topbarContent} logout />
+        </ComponentPreview>
+    </>
+);
+
+const FixedTopbar = () => (
+    <>
+        <h2 id="fixed-topbar">Fixed topbar</h2>
+        <p>
+            Add <Property value=".topbar-fixed" /> with your <Property value=".topbar" /> to get a fixed topbar.
+            For a demonstration of the usage see the documentations top bar or implement it in your own project!
+        </p>
+        <ComponentPreview language="html" codeFigure>
+            <TopbarComponent fixed />
         </ComponentPreview>
     </>
 );
 
 const TopbarText = () => (
-    <div className="col-md-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
+        <DeprecatedAlert />
         <p className="lead">Topbar...</p>
         <Overview />
+        <FixedTopbar />
     </div>
 );
 
@@ -151,4 +97,4 @@ class Topbar extends Component {
 export default Topbar;
 
 /* For testing */
-export { Overview, TopbarText };
+export { Overview, TopbarText, FixedTopbar, DeprecatedAlert };

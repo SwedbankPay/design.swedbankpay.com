@@ -16,7 +16,7 @@ const DocHeading = ({ location }) => {
 
     _setTitle(title);
 
-    return <h1>{title}</h1>;
+    return <h2 className="h1">{title}</h2>;
 };
 
 export default withRouter(DocHeading);

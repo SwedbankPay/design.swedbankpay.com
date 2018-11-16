@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { ComponentPreview, DocToc, Icon, Property } from "#";
-import actionList from "$/px-script/action-list";
+import actionList from "$/px-script/main/action-list";
 
 const BasicList = () => (
     <>
@@ -168,7 +168,7 @@ const StripedItemList = () => (
 );
 
 const ListsText = () => (
-    <div className="col-md-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <p className="lead">Lots of cool info about lists will be here...</p>
         <BasicList />
         <InlineList />

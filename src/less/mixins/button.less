@@ -15,6 +15,7 @@
         background-image: none;
     }
 
+    &[active],
     &:active,
     &.active {
         background-image: none;
@@ -35,11 +36,18 @@
         &:hover,
         &:focus,
         &.focus,
+        &[active],
         &:active,
         &.active {
-            background: @gray-8;
-            color: @gray-4;
-            border-color: darken(@gray-8, 5%);
+            &:not(.loading) {
+                background: @gray-8;
+                color: @gray-4;
+                border-color: darken(@gray-8, 5%);
+            }
+
+            &.loading {
+                color: transparent;
+            }
         }
     }
 }
@@ -60,6 +68,7 @@
         background-color: @background;
     }
 
+    &[active],
     &:active,
     &.active {
         background-image: none;
@@ -80,6 +89,7 @@
         &:hover,
         &:focus,
         &.focus,
+        &[active],
         &:active,
         &.active {
             background-color: @gray-8;

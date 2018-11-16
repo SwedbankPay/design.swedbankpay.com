@@ -27,7 +27,7 @@ const Usage = () => (
 );
 
 const IconsText = () => (
-    <div className="col-md-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <p className="lead">The PayEx DesignGuide includes Google{"'"}s material icons. For a full overview of the available icons please visit <a href="https://material.io/tools/icons/">this site</a>.</p>
         <Usage />
     </div>

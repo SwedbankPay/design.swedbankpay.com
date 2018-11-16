@@ -54,3 +54,56 @@ exports[`Utilities: Attribute renders data attribute 1`] = `
   </span>
 </code>
 `;
+
+exports[`Utilities: Attribute renders name when only the name prop has been passed 1`] = `
+<code>
+  <span
+    className="token attr-name"
+  >
+    test
+  </span>
+</code>
+`;
+
+exports[`Utilities: Attribute renders name with data when the name and data prop has been passed 1`] = `
+<code>
+  <span
+    className="token attr-name"
+  >
+    data-
+  </span>
+  <span
+    className="token attr-name"
+  >
+    test
+  </span>
+</code>
+`;
+
+exports[`Utilities: Attribute renders only value when value and data has been passed 1`] = `
+<code>
+  <span
+    className="token attr-value"
+  >
+    test
+  </span>
+</code>
+`;
+
+exports[`Utilities: Attribute renders value when only the value prop has been passed 1`] = `
+<code>
+  <span
+    className="token attr-value"
+  >
+    test
+  </span>
+</code>
+`;
+
+exports[`Utilities: property renders with value prop 1`] = `
+<code
+  className="token property"
+>
+  test
+</code>
+`;

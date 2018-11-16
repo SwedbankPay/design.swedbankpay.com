@@ -31,6 +31,42 @@
         border: none;
     }
 
+    .topbar-btn {
+        margin: 0;
+        border: 0;
+        background: none;
+        height: 100%;
+        padding: 0 @topbar-padding;
+        font-weight: bold;
+        outline: 0;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            cursor: pointer;
+            background-color: @gray-9;
+        }
+
+        .material-icons {
+            margin-right: 5px;
+            margin-top: -2px;
+        }
+
+        &:first-child {
+            border-right: 1px solid @gray-8;
+
+            &:hover,
+            &:focus {
+                background-color: @gray-9;
+            }
+        }
+
+        &:last-child {
+            border-left: 1px solid @gray-8;
+        }
+    }
+
+    // TODO: Remove when topbar-btn-left and right are deleted [AW].
     .topbar-btn-left,
     .topbar-btn-right {
         margin: 0;
@@ -76,6 +112,17 @@
     overflow-x: hidden;
     overflow-y: auto;
     z-index: @zindex-topbar-nav;
+
+    //TODO: merge into topbar-nav when menu-right and left are deleted. [AW]
+    &:not(.topbar-nav-left):not(.topbar-nav-right) {
+        padding: @base-padding-sm @base-padding;
+        transition: left @topbar-slide-transition;
+        left: -@topbar-nav-width;
+
+        &.in {
+            left: 0;
+        }
+    }
 
     &.topbar-nav-right {
         transition: right @topbar-slide-transition;

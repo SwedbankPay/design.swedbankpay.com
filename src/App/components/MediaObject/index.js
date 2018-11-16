@@ -2,15 +2,17 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-const MediaObject = ({ size, imgUrl, icon, heading, text, mediaRight }) => {
+const MediaObject = ({ size, imgUrl, icon, heading, text, textSmall, mediaRight, muted }) => {
     const mediaHeading = () => {
+        const headingClasses = classnames(muted ? "text-muted" : null);
+
         switch (size) {
             case "sm":
-                return <h4>{heading}</h4>;
+                return <h4 className={headingClasses}>{heading}</h4>;
             case "lg":
-                return <h2>{heading}</h2>;
+                return <h2 className={headingClasses}>{heading}</h2>;
             default:
-                return <h3>{heading}</h3>;
+                return <h3 className={headingClasses}>{heading}</h3>;
         }
     };
 
@@ -20,17 +22,22 @@ const MediaObject = ({ size, imgUrl, icon, heading, text, mediaRight }) => {
         size ? `media-${size}` : null
     );
 
+    const iconClasses = classnames(
+        "material-icons",
+        muted ? "text-muted" : null
+    );
+
     return (
         <div className={mediaClasses}>
             {(imgUrl || icon) ?
                 <div className="media-img">{"\n"}
-                    {imgUrl ? <img src={imgUrl} /> : null}{imgUrl ? "\n" : null}
-                    {icon ? <i className="material-icons">{icon}</i> : null}{icon ? "\n" : null}
+                    {imgUrl ? <> <img src={imgUrl} /> {"\n"} </> : null}
+                    {icon ? <> <i className={iconClasses}>{icon}</i> {"\n"} </> : null}
                 </div>
                 : null}
             <div className="media-body">
                 {mediaHeading()}
-                <p>{text}</p>
+                <p>{textSmall ? <small>{text}</small> : text}</p>
             </div>
         </div>
     );
@@ -41,8 +48,10 @@ MediaObject.propTypes = {
     imgUrl: PropTypes.string,
     icon: PropTypes.string,
     heading: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
-    mediaRight: PropTypes.bool
+    text: PropTypes.string,
+    textSmall: PropTypes.bool,
+    mediaRight: PropTypes.bool,
+    muted: PropTypes.bool
 };
 
 export default MediaObject;

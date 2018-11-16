@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Card = ({ type, title, imgSrc, icon, highlightTitle, highlightSubTitle, text, smallText, btnTxt, footerTxt, footerLink, footerLinkTxt }) => (
-    <li className={`card${type ? ` card-${type}` : ""}`}>
+const Card = ({ type, title, imgSrc, text, textSection, smallText, btnTxt, footerTxt, footerLink, footerLinkTxt, children }) => (
+    <div className={`card${type ? ` card-${type}` : ""}`}>
         {title ? <header>
             <h3>
                 <a href="#">{title}</a>
@@ -11,23 +11,26 @@ const Card = ({ type, title, imgSrc, icon, highlightTitle, highlightSubTitle, te
         {imgSrc ? <div className="card-img">{"\n"}
             <img src={imgSrc} alt=""/>{"\n"}
         </div> : null}
-        <div className="highlight">
-            {icon ? <i className="material-icons">{icon}</i> : null}
-            <div className="highlight-wrapper">
-                {highlightTitle ? <h4 className="highlight-title">{highlightTitle}</h4> : null}
-                {highlightSubTitle ? <p className="highlight-subtitle">{highlightSubTitle}</p> : null}
+        {children ?
+            <div className="highlight">
+                {children}
             </div>
-        </div>
+            : null
+        }
         <div className="card-body">
-            <p>{text}</p>
-            <small>{smallText}</small>
+            {text ? <p>{text}</p> : null}{"\n"}
+            {textSection ?
+                textSection.map((secText, i) => <p key={`card-p-${i}`}>{secText}</p>)
+                : null
+            }
+            {smallText ? <small>{smallText}</small> : null}
         </div>
-        <footer>
-            <button type="button" className="btn btn-primary btn-block">{btnTxt}</button>
+        {btnTxt || footerTxt || footerLinkTxt ? <footer>
+            {btnTxt ? <button type="button" className="btn btn-primary btn-block">{btnTxt}</button> : null}
             {footerTxt ? <div className="footer-text"><p>{footerTxt}</p></div> : null}
             {footerLinkTxt ? <div className="footer-link"><a href={footerLink || "#"}>{footerLinkTxt}</a></div> : null}
-        </footer>
-    </li>
+        </footer> : null}
+    </div>
 );
 
 Card.propTypes = {
@@ -35,10 +38,9 @@ Card.propTypes = {
     title: PropTypes.string,
     imgSrc: PropTypes.string,
     icon: PropTypes.string,
-    highlightTitle: PropTypes.string,
-    highlightSubTitle: PropTypes.string,
     text: PropTypes.string,
     smallText: PropTypes.string,
+    textSection: PropTypes.array,
     btnTxt: PropTypes.string,
     footerTxt: PropTypes.string,
     footerLink: PropTypes.string,

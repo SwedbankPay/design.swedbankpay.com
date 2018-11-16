@@ -8,7 +8,7 @@ import "prismjs/themes/prism.css";
 import "./polyfills";
 
 // Px-script
-import "./px-script";
+import "./px-script/main";
 
 import "./less/px.less";
 import "./less/themes/documentation.less";

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { ComponentPreview, DocToc, Icon, Property } from "#";
-import { sheet } from "$/px-script";
+import { sheet } from "$/px-script/main";
 
 const Example = () => (
     <>
@@ -62,7 +62,7 @@ const UsageWithJavascript = () => (
 );
 
 const SheetText = () => (
-    <div className="col-md-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <p className="lead">Sheet...</p>
         <Example />
         <UsageWithJavascript />

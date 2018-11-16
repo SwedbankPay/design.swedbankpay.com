@@ -35,13 +35,13 @@ const BackgroundColors = () => (
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="container">
                 <div className="row">
-                    <div className="col-12 bg-brand">.bg-brand</div>
-                    <div className="col-12 bg-default">.bg-default</div>
-                    <div className="col-12 bg-neutral">.bg-neutral</div>
-                    <div className="col-12 bg-success">.bg-success</div>
-                    <div className="col-12 bg-warning">.bg-warning</div>
-                    <div className="col-12 bg-danger">.bg-danger</div>
-                    <div className="col-12 bg-white">.bg-white</div>
+                    <div className="col-12 bg-brand p-2">.bg-brand</div>
+                    <div className="col-12 bg-default p-2">.bg-default</div>
+                    <div className="col-12 bg-neutral p-2">.bg-neutral</div>
+                    <div className="col-12 bg-success p-2">.bg-success</div>
+                    <div className="col-12 bg-warning p-2">.bg-warning</div>
+                    <div className="col-12 bg-danger p-2">.bg-danger</div>
+                    <div className="col-12 bg-white p-2">.bg-white</div>
                 </div>
             </div>
         </ComponentPreview>
@@ -49,7 +49,7 @@ const BackgroundColors = () => (
 );
 
 const ColorsText = () => (
-    <div className="col-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <p className="lead">Convey meaning through color with a handful of color utility classes.</p>
         <TextColors />
         <BackgroundColors />

@@ -492,7 +492,7 @@ exports[`Utilities: Spacing Notation renders 1`] = `
 
 exports[`Utilities: Spacing SpacingText renders 1`] = `
 <div
-  className="col-md-12 col-lg-10 doc-body"
+  className="col-lg-10 doc-body"
 >
   <p
     className="lead"

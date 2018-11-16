@@ -2,7 +2,7 @@
 
 exports[`Documentation: Card CardText renders 1`] = `
 <div
-  className="col-md-12 col-lg-10 doc-body"
+  className="col-lg-10 doc-body"
 >
   <ExperimentalComponentAlert />
   <p
@@ -10,37 +10,103 @@ exports[`Documentation: Card CardText renders 1`] = `
   >
     Card...
   </p>
-  <Overview />
+  <DefaultBehaviour />
+  <CardVariants />
 </div>
 `;
 
-exports[`Documentation: Card Overview renders 1`] = `
+exports[`Documentation: Card CardVariants renders 1`] = `
 <Fragment>
   <h2
-    id="overview"
+    id="card-variants"
   >
-    Overview
+    Card Variants
   </h2>
   <p>
-    Overview... 
+    You don\`t have to use all sections of a card, you can use different combinations as you see fit. The card body inherits the size of the largest card that exists on the same line when wrapped with a 
     <Property
-      value=".card"
+      value=".cards"
     />
+     container.
   </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="cards"
+    >
+      <Card
+        footerTxt="This is some text that goes in the footer."
+        smallText="Small card text"
+        text="Card text"
+        title="My custom card"
+        type="default"
+      >
+        <MediaObject
+          heading="75%"
+          icon="verified_user"
+          muted={true}
+          size="sm"
+          text="Complete"
+          textSmall={true}
+        />
+      </Card>
+      <Card
+        footerTxt="This is some text that goes in the footer."
+        smallText="This is some small text"
+        textSection={
+          Array [
+            "This is a lot of text",
+            "With some more text",
+            "And then even some more",
+            "Is it really possible to have this much text in one card?",
+            "Yes!",
+          ]
+        }
+        title="Text card"
+        type="default"
+      />
+      <Card
+        imgSrc="https://picsum.photos/300"
+        text="This is a card with an image and body"
+        title="Image card"
+        type="brand"
+      />
+    </div>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Card DefaultBehaviour renders 1`] = `
+<Fragment>
+  <h2
+    id="default-behaviour"
+  >
+    Default behaviour
+  </h2>
   <p>
-    ... 
+    Wrap indiviual cards in the 
+    <Property
+      value=".cards"
+    />
+     class to display them lined up next to each other. When the window reaches 
+    <Link
+      replace={false}
+      to="/docs/core/breakpoints"
+    >
+      breakpoint
+    </Link>
+     sm the cards will switch to mobile view and take up one row each and stretch to fill the width of the container. To decide how your cards will look use 
     <Property
       value=".card-default"
     />
-  </p>
-  <p>
-    ... 
+    , 
     <Property
       value=".card-brand"
     />
-  </p>
-  <p>
-    ... 
+    , or 
     <Property
       value=".card-light"
     />
@@ -53,47 +119,63 @@ exports[`Documentation: Card Overview renders 1`] = `
     <div
       className="cards"
     >
-      <ul>
-        <Card
-          btnTxt="Button"
-          footerLinkTxt="You wanna click this link?"
-          footerTxt="This is some text that goes in the footer."
-          highlightSubTitle="Outstanding balance"
-          highlightTitle="725 NOK"
+      <Card
+        btnTxt="Button"
+        footerLinkTxt="You wanna click this link?"
+        footerTxt="This is some text that goes in the footer."
+        imgSrc="https://picsum.photos/300"
+        smallText="And the small text"
+        text="This is the cards text"
+        title="Card default"
+        type="default"
+      >
+        <MediaObject
+          heading="Bob Corlsan"
+          icon="account_circle"
+          muted={true}
+          size="sm"
+          text="bob.corlsan@payex.com"
+          textSmall={true}
+        />
+      </Card>
+      <Card
+        btnTxt="Button"
+        footerLinkTxt="You wanna click this link?"
+        footerTxt="This is some text that goes in the footer."
+        imgSrc="https://picsum.photos/300"
+        smallText="And the small text"
+        text="This is the cards text"
+        title="Card brand"
+        type="brand"
+      >
+        <MediaObject
+          heading="725 NOK"
           icon="account_balance"
-          imgSrc="https://picsum.photos/300"
-          smallText="And the small text"
-          text="This is the cards text"
-          title="Card default"
-          type="default"
+          muted={true}
+          size="sm"
+          text="Outstanding balance"
+          textSmall={true}
         />
-        <Card
-          btnTxt="Button"
-          footerLinkTxt="You wanna click this link?"
-          footerTxt="This is some text that goes in the footer."
-          highlightSubTitle="bob.corlsan@payex.com"
-          highlightTitle="Bob Corlsan"
-          icon="face"
-          imgSrc="https://picsum.photos/300"
-          smallText="And the small text"
-          text="This is the cards text"
-          title="Card brand"
-          type="brand"
-        />
-        <Card
-          btnTxt="Button"
-          footerLinkTxt="You wanna click this link?"
-          footerTxt="This is some text that goes in the footer."
-          highlightSubTitle="Complete"
-          highlightTitle="75%"
+      </Card>
+      <Card
+        btnTxt="Button"
+        footerLinkTxt="You wanna click this link?"
+        footerTxt="This is some text that goes in the footer."
+        imgSrc="https://picsum.photos/300"
+        smallText="And the small text"
+        text="This is the cards text"
+        title="Card light"
+        type="light"
+      >
+        <MediaObject
+          heading="75%"
           icon="verified_user"
-          imgSrc="https://picsum.photos/300"
-          smallText="And the small text"
-          text="This is the cards text"
-          title="Card light"
-          type="light"
+          muted={true}
+          size="sm"
+          text="Complete"
+          textSmall={true}
         />
-      </ul>
+      </Card>
     </div>
   </ComponentPreview>
 </Fragment>

@@ -85,6 +85,7 @@
                 }
 
                 i {
+                    cursor: pointer;
                     color: @text-muted;
                     margin-right: 0.25rem;
                     transition: transform 0.5s ease-in-out;
@@ -133,7 +134,7 @@
         height: 80px;
         border-left: 1px solid darken(@brand-primary, 5%);
 
-        h1 {
+        h2 {
             color: @text-light;
             padding-left: @base-padding-xl;
             margin: 0;
@@ -213,5 +214,16 @@
         border-radius: 0.3rem;
         white-space: normal;
         background: @background-code;
+    }
+
+    .icon-preview {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .payment-icon {
+            height: 3rem;
+            width: 5rem;
+        }
     }
 }

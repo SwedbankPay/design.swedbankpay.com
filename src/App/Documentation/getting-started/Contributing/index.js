@@ -38,7 +38,7 @@ const CreateADocumentationPage = () => (
             {"import { ComponentPreview, DocToc } from \"#\";"}
             {"import MyExampleComponent from \"@/MyExampleComponent\";\n\n"}
             {"const MyExampleDocumentationComponentText = () => (\n"}
-            {"    <div className=\"col-md-12 col-lg-10 doc-body\">\n"}
+            {"    <div className=\"col-lg-10 doc-body\">\n"}
             {"        <p className=\"lead\">This is the documentation for My Example Component.</p>\n"}
             {"        <h2 id=\"example-usage\">Example usage</h2>\n"}
             {"        <ComponentPreview language=\"html\" showCasePanel codeFigure>\n"}
@@ -144,7 +144,7 @@ const AddingJavaScript = () => {
     const CreateAScriptFile = () => (
         <div>
             <h3>Create a script file for your component</h3>
-            <p>Create a new file under <Property value="./src/px-script/[MyExampleComponent]/" /> for your component, name it <Property value="index.js" />:</p>
+            <p>Create a new file under <Property value="./src/px-script/main/[MyExampleComponent]/" /> for your component, name it <Property value="index.js" />:</p>
             <ComponentPreview language="javascript" codeFigure>
                 {"const int = () => {\n"}
                 {"alert(\"MyExampleComponent was initialized\");\n"}
@@ -161,7 +161,7 @@ const AddingJavaScript = () => {
     const AddScriptToPX = () => (
         <div>
             <h3>Add your components script to px-script</h3>
-            <p>Open <Property value="./src/px-script/index.js" /> and add your component:</p>
+            <p>Open <Property value="./src/px-script/main/index.js" /> and add your component:</p>
             <ComponentPreview language="javascript" codeFigure>
                 {"...\n"}
                 {"import MyExampleComponent from \"./MyExampleComponent\";\n"}
@@ -188,7 +188,7 @@ const AddingJavaScript = () => {
                 {"import React, { Component } from \"react\";\n"}
                 {"...\n"}
                 {"// import your components script\n"}
-                {"import { MyExampleComponent } from \"../../../../px-script\";\n\n"}
+                {"import { MyExampleComponent } from \"../../../../px-script/main\";\n\n"}
                 {"...\n"}
                 {"...\n"}
                 {"// modify MyExampleDocumentationComponent\n"}
@@ -223,7 +223,7 @@ const AddingJavaScript = () => {
 };
 
 const ContributingText = () => (
-    <div className="col-md-12 col-lg-10">
+    <div className="col-lg-10">
         <p className="lead">To create a new component</p>
         <CreatingYourComponent />
         <CreateADocumentationPage />

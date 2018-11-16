@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import { ComponentPreview, Attribute, DocToc } from "#";
 import { Datepicker as DatepickerComponent } from "@/FormComponents";
-import { datepicker } from "$/px-script";
+import { datepicker } from "$/px-script/main";
 
 const moment = window.moment;
 
@@ -266,7 +266,7 @@ const Options = () => (
 );
 
 const DatepickersText = () => (
-    <div className="col-md-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <p className="lead">Datepickers...</p>
         <SimpleDatepicker />
         <InitialValue />

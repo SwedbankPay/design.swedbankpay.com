@@ -20,16 +20,17 @@
     border: 1px solid transparent;
     white-space: nowrap;
     user-select: none;
+    transition: opacity 0.3s ease, color 0.3s ease;
     .button-size(@padding-base-vertical; @padding-base-horizontal; @base-font-size; @line-height-base; @btn-border-radius-base;);
 
-    & .material-icons {
+    .material-icons {
         font-size: 1.25rem;
         position: relative;
         display: inline-block;
         line-height: 1;
 
-        & + * {
-            margin-left: @base-margin-sm;
+        &:not(:last-child) {
+            margin-right: @base-margin-sm;
         }
     }
 
@@ -38,6 +39,7 @@
     }
 
     &,
+    &[active],
     &:active,
     &.active {
         &:focus,
@@ -53,6 +55,7 @@
         text-decoration: none;
     }
 
+    &[active],
     &:active,
     &.active {
         outline: 0;
@@ -99,6 +102,7 @@
         font-weight: normal;
         background: transparent;
 
+        &[active],
         &:active,
         &.active,
         &[disabled],
@@ -169,7 +173,9 @@
     // --------------------------------------------------
 
     &.btn-block {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
     }
 
@@ -206,7 +212,7 @@
         }
 
         .loader {
-            .btn-loader-variant(.875rem; .2rem; .125rem; .125rem; .875rem; .75rem);
+            .btn-loader-variant(0.875rem; 0.2rem; 0.125rem; 0.125rem; 0.875rem; 0.75rem);
             .loader-color-variant(@white);
 
             .loader-icon {
@@ -226,7 +232,7 @@
 
         &.btn-lg {
             .loader {
-                .btn-loader-variant(1.125rem; .4rem; .250rem; .250rem; 1.125rem; 1rem);
+                .btn-loader-variant(1.125rem; 0.4rem; 0.25rem; 0.25rem; 1.125rem; 1rem);
 
                 .loader-icon {
                     li:first-child {
@@ -247,7 +253,7 @@
         &.btn-sm,
         &.btn-xs {
             .loader {
-                .btn-loader-variant(.875rem; .2rem; .125rem; .125rem; .875rem; .5rem);
+                .btn-loader-variant(0.875rem; 0.2rem; 0.125rem; 0.125rem; 0.875rem; 0.5rem);
 
                 .loader-icon {
                     li:first-child {

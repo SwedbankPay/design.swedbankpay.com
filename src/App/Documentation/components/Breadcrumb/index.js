@@ -58,7 +58,7 @@ const DisabledBreadcrumb = () => {
 };
 
 const BreadcrumbText = () => (
-    <div className="col-md-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <p className="lead">Breadcrumbs are a good way to display your current location. This is usually used when you have multiple layers of content.</p>
         <BasicBreadCrumb />
         <DisabledBreadcrumb />

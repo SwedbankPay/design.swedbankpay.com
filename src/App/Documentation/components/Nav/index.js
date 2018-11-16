@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
 import { ComponentPreview, DocToc, ExperimentalComponentAlert, Property } from "#";
-import { nav } from "$/px-script";
+import { nav } from "$/px-script/main";
 import NavComponent from "@/Nav";
 
 const navItems = [
@@ -123,7 +123,7 @@ const Mobile = () => (
 );
 
 const NavText = () => (
-    <div className="col-md-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <ExperimentalComponentAlert />
         <p className="lead">Navs.</p>
         <StandardNav />

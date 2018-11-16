@@ -1,0 +1,209 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Card -  renders a button in the footer 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-body"
+  >
+    
+
+  </div>
+  <footer>
+    <button
+      className="btn btn-primary btn-block"
+      type="button"
+    >
+      Button
+    </button>
+  </footer>
+</div>
+`;
+
+exports[`Component: Card -  renders a child object 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="highlight"
+  >
+    This is child text
+  </div>
+  <div
+    className="card-body"
+  >
+    
+
+  </div>
+</div>
+`;
+
+exports[`Component: Card -  renders a smallText in card-body 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-body"
+  >
+    
+
+    <small>
+      small text
+    </small>
+  </div>
+</div>
+`;
+
+exports[`Component: Card -  renders a text in card-body 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-body"
+  >
+    <p>
+      Text that goes in card body
+    </p>
+    
+
+  </div>
+</div>
+`;
+
+exports[`Component: Card -  renders a title 1`] = `
+<div
+  className="card"
+>
+  <header>
+    <h3>
+      <a
+        href="#"
+      >
+        Card title goes here
+      </a>
+    </h3>
+  </header>
+  <div
+    className="card-body"
+  >
+    
+
+  </div>
+</div>
+`;
+
+exports[`Component: Card -  renders an image 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-img"
+  >
+    
+
+    <img
+      alt=""
+      src="url.address"
+    />
+    
+
+  </div>
+  <div
+    className="card-body"
+  >
+    
+
+  </div>
+</div>
+`;
+
+exports[`Component: Card -  renders footer link text 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-body"
+  >
+    
+
+  </div>
+  <footer>
+    <div
+      className="footer-link"
+    >
+      <a
+        href="#"
+      >
+        Click this footer link
+      </a>
+    </div>
+  </footer>
+</div>
+`;
+
+exports[`Component: Card -  renders footer text 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-body"
+  >
+    
+
+  </div>
+  <footer>
+    <div
+      className="footer-text"
+    >
+      <p>
+        Footer information
+      </p>
+    </div>
+  </footer>
+</div>
+`;
+
+exports[`Component: Card -  renders with class name card 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-body"
+  >
+    
+
+  </div>
+</div>
+`;
+
+exports[`Component: Card -  renders with correct class name 1`] = `
+<div
+  className="card card-brand"
+>
+  <div
+    className="card-body"
+  >
+    
+
+  </div>
+</div>
+`;
+
+exports[`Component: Card -  renders with only body when no props are passed 1`] = `
+"<div class=\\"card\\"><div class=\\"card-body\\">
+</div></div>"
+`;
+
+exports[`Component: Card -  throws an error if type does not match proptypes 1`] = `
+<div
+  className="card card-error"
+>
+  <div
+    className="card-body"
+  >
+    
+
+  </div>
+</div>
+`;

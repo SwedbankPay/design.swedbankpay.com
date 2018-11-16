@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { ComponentPreview, DocToc, Icon, Property } from "#";
-import { dialog } from "$/px-script";
+import { dialog } from "$/px-script/main";
 
 const Example = () => (
     <>
@@ -39,7 +39,7 @@ const UsageWithJavascript = () => (
 );
 
 const DialogText = () => (
-    <div className="col-md-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <p className="lead">Dialogs...</p>
         <Example />
         <UsageWithJavascript />

@@ -19,27 +19,35 @@ environment:
   # Sentry
   sentry_token:
     secure: a/+7STfY8W8+RTlSDgKIZghq6iIy8K9WL5lICC6wsaoXPvKuBMjCsTE/KBdvP6vauLd9E2zbGHWjGUTI8SrF1bZUluC4VqhmrkWz9edM+10=
+  # Slack hook for bot to #design-guide-dev
+  slack_designguide_webhook:
+    secure: gxWz5+nY3Ctg2JTqo5RQVwHA+UNxiB/H1u72IC71b3oBZj/dxqBLc1/EYZtxzWjiOCXPSOfKJ485+XhtyTt1kNjHon7JWRftucuOyhaozmw=
+  # Codecov
+  CODECOV_TOKEN:
+    secure: aSdbrWvXrfwEJ9+bz03FYLUSD7m55aqN0npBW+FKhC9UegsoI73jPMzlNFicBkmS
 
 # cache:
 #   - node_modules
 
 install:
 - cmd: >-
-    choco install gitversion.portable --pre
+    choco install gitversion.portable -pre -y
 
-    gitversion /output BuildServer
+    gitversion /l console /output buildserver
 
     npm install
+
+    npm install -g codecov
 
 #---------------------------------#
 #       build configuration       #
 #---------------------------------#
 
 before_build:
-- ps: ./build/prepare-release-build.ps1
+- ps: ./build/prepare-build.ps1
 
 build_script:
-- cmd: npm run build:prod -- --env.release=%release% --env.basename=%basename% --env.semver=%GitVersion_FullSemVer%
+- cmd: npm run build:prod -- --env.release=%release% --env.basename=%basename% --env.semver=%GitVersion_FullSemVer% --env.info_version=%GitVersion_InformationalVersion%
 
 #---------------------------------#
 #       tests configuration       #
@@ -49,14 +57,15 @@ test_script:
 - cmd: >-
     npm run lint
 
-    npm test
+    npm run test:codecov
 
 #---------------------------------#
 #     deployment configuration    #
 #---------------------------------#
 
+# This is excplicitly set to 'after_test' instead of 'before_deploy' so it runs on all branches [EH]
 after_test:
-- ps: ./build/deploy-github-pages.ps1
+- ps: ./build/prepare-deploy.ps1
 
 deploy:
   # Deploy to GitHub Releases

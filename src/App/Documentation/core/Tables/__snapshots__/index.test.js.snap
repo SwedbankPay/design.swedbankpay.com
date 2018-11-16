@@ -15,116 +15,29 @@ exports[`Documentation: Table BasicTable renders 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <table
-      className="table"
-    >
-      <thead>
-        <tr>
-          <th
-            scope="col"
-          >
-            #
-          </th>
-          <th
-            scope="col"
-          >
-            First Name
-          </th>
-          <th
-            scope="col"
-          >
-            Last Name
-          </th>
-          <th
-            scope="col"
-          >
-            Location
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th
-            scope="row"
-          >
-            1
-          </th>
-          <td>
-            Sven
-          </td>
-          <td>
-            Svensson
-          </td>
-          <td>
-            Visby
-          </td>
-        </tr>
-        <tr>
-          <th
-            scope="row"
-          >
-            2
-          </th>
-          <td>
-            Sara
-          </td>
-          <td>
-            Svensson
-          </td>
-          <td>
-            Stockholm
-          </td>
-        </tr>
-        <tr>
-          <th
-            scope="row"
-          >
-            3
-          </th>
-          <td>
-            Ola
-          </td>
-          <td>
-            Nordmann
-          </td>
-          <td>
-            Oslo
-          </td>
-        </tr>
-        <tr>
-          <th
-            scope="row"
-          >
-            4
-          </th>
-          <td>
-            Holger
-          </td>
-          <td>
-            Danske
-          </td>
-          <td>
-            Copenhagen
-          </td>
-        </tr>
-        <tr>
-          <th
-            scope="row"
-          >
-            5
-          </th>
-          <td>
-            Matti
-          </td>
-          <td>
-            Meikäläinen
-          </td>
-          <td>
-            Lahti
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <DocTable />
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Table CondensedTable renders 1`] = `
+<Fragment>
+  <h2
+    id="condensed-table"
+  >
+    Condensed table
+  </h2>
+  <p>
+    Condensed table info...
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <DocTable
+      condensed={true}
+    />
   </ComponentPreview>
 </Fragment>
 `;
@@ -198,6 +111,119 @@ exports[`Documentation: Table DescriptionTable renders 1`] = `
 </Fragment>
 `;
 
+exports[`Documentation: Table DocTable renders table with given class name 1`] = `
+<table
+  className="table"
+>
+  <thead>
+    <tr>
+      <th
+        scope="col"
+      >
+        #
+      </th>
+      <th
+        scope="col"
+      >
+        First Name
+      </th>
+      <th
+        scope="col"
+      >
+        Last Name
+      </th>
+      <th
+        scope="col"
+      >
+        Location
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th
+        scope="row"
+      >
+        1
+      </th>
+      <td>
+        Sven
+      </td>
+      <td>
+        Svensson
+      </td>
+      <td>
+        Visby
+      </td>
+    </tr>
+    <tr>
+      <th
+        scope="row"
+      >
+        2
+      </th>
+      <td>
+        Sara
+      </td>
+      <td>
+        Svensson
+      </td>
+      <td>
+        Stockholm
+      </td>
+    </tr>
+    <tr>
+      <th
+        scope="row"
+      >
+        3
+      </th>
+      <td>
+        Ola
+      </td>
+      <td>
+        Nordmann
+      </td>
+      <td>
+        Oslo
+      </td>
+    </tr>
+    <tr>
+      <th
+        scope="row"
+      >
+        4
+      </th>
+      <td>
+        Holger
+      </td>
+      <td>
+        Danske
+      </td>
+      <td>
+        Copenhagen
+      </td>
+    </tr>
+    <tr>
+      <th
+        scope="row"
+      >
+        5
+      </th>
+      <td>
+        Matti
+      </td>
+      <td>
+        Meikäläinen
+      </td>
+      <td>
+        Lahti
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
 exports[`Documentation: Table HoverStripedTable renders 1`] = `
 <Fragment>
   <h2
@@ -213,116 +239,10 @@ exports[`Documentation: Table HoverStripedTable renders 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <table
-      className="table table-hover table-striped"
-    >
-      <thead>
-        <tr>
-          <th
-            scope="col"
-          >
-            #
-          </th>
-          <th
-            scope="col"
-          >
-            First Name
-          </th>
-          <th
-            scope="col"
-          >
-            Last Name
-          </th>
-          <th
-            scope="col"
-          >
-            Location
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th
-            scope="row"
-          >
-            1
-          </th>
-          <td>
-            Sven
-          </td>
-          <td>
-            Svensson
-          </td>
-          <td>
-            Visby
-          </td>
-        </tr>
-        <tr>
-          <th
-            scope="row"
-          >
-            2
-          </th>
-          <td>
-            Sara
-          </td>
-          <td>
-            Svensson
-          </td>
-          <td>
-            Stockholm
-          </td>
-        </tr>
-        <tr>
-          <th
-            scope="row"
-          >
-            3
-          </th>
-          <td>
-            Ola
-          </td>
-          <td>
-            Nordmann
-          </td>
-          <td>
-            Oslo
-          </td>
-        </tr>
-        <tr>
-          <th
-            scope="row"
-          >
-            4
-          </th>
-          <td>
-            Holger
-          </td>
-          <td>
-            Danske
-          </td>
-          <td>
-            Copenhagen
-          </td>
-        </tr>
-        <tr>
-          <th
-            scope="row"
-          >
-            5
-          </th>
-          <td>
-            Matti
-          </td>
-          <td>
-            Meikäläinen
-          </td>
-          <td>
-            Lahti
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <DocTable
+      hover={true}
+      striped={true}
+    />
   </ComponentPreview>
 </Fragment>
 `;
@@ -342,116 +262,9 @@ exports[`Documentation: Table HoverTable renders 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <table
-      className="table table-hover"
-    >
-      <thead>
-        <tr>
-          <th
-            scope="col"
-          >
-            #
-          </th>
-          <th
-            scope="col"
-          >
-            First Name
-          </th>
-          <th
-            scope="col"
-          >
-            Last Name
-          </th>
-          <th
-            scope="col"
-          >
-            Location
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th
-            scope="row"
-          >
-            1
-          </th>
-          <td>
-            Sven
-          </td>
-          <td>
-            Svensson
-          </td>
-          <td>
-            Visby
-          </td>
-        </tr>
-        <tr>
-          <th
-            scope="row"
-          >
-            2
-          </th>
-          <td>
-            Sara
-          </td>
-          <td>
-            Svensson
-          </td>
-          <td>
-            Stockholm
-          </td>
-        </tr>
-        <tr>
-          <th
-            scope="row"
-          >
-            3
-          </th>
-          <td>
-            Ola
-          </td>
-          <td>
-            Nordmann
-          </td>
-          <td>
-            Oslo
-          </td>
-        </tr>
-        <tr>
-          <th
-            scope="row"
-          >
-            4
-          </th>
-          <td>
-            Holger
-          </td>
-          <td>
-            Danske
-          </td>
-          <td>
-            Copenhagen
-          </td>
-        </tr>
-        <tr>
-          <th
-            scope="row"
-          >
-            5
-          </th>
-          <td>
-            Matti
-          </td>
-          <td>
-            Meikäläinen
-          </td>
-          <td>
-            Lahti
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <DocTable
+      hover={true}
+    />
   </ComponentPreview>
 </Fragment>
 `;
@@ -471,123 +284,16 @@ exports[`Documentation: Table StripedTable renders 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <table
-      className="table table-striped"
-    >
-      <thead>
-        <tr>
-          <th
-            scope="col"
-          >
-            #
-          </th>
-          <th
-            scope="col"
-          >
-            First Name
-          </th>
-          <th
-            scope="col"
-          >
-            Last Name
-          </th>
-          <th
-            scope="col"
-          >
-            Location
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th
-            scope="row"
-          >
-            1
-          </th>
-          <td>
-            Sven
-          </td>
-          <td>
-            Svensson
-          </td>
-          <td>
-            Visby
-          </td>
-        </tr>
-        <tr>
-          <th
-            scope="row"
-          >
-            2
-          </th>
-          <td>
-            Sara
-          </td>
-          <td>
-            Svensson
-          </td>
-          <td>
-            Stockholm
-          </td>
-        </tr>
-        <tr>
-          <th
-            scope="row"
-          >
-            3
-          </th>
-          <td>
-            Ola
-          </td>
-          <td>
-            Nordmann
-          </td>
-          <td>
-            Oslo
-          </td>
-        </tr>
-        <tr>
-          <th
-            scope="row"
-          >
-            4
-          </th>
-          <td>
-            Holger
-          </td>
-          <td>
-            Danske
-          </td>
-          <td>
-            Copenhagen
-          </td>
-        </tr>
-        <tr>
-          <th
-            scope="row"
-          >
-            5
-          </th>
-          <td>
-            Matti
-          </td>
-          <td>
-            Meikäläinen
-          </td>
-          <td>
-            Lahti
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <DocTable
+      striped={true}
+    />
   </ComponentPreview>
 </Fragment>
 `;
 
 exports[`Documentation: Table TablesText renders 1`] = `
 <div
-  className="col-md-12 col-lg-10 doc-body"
+  className="col-lg-10 doc-body"
 >
   <p
     className="lead"
@@ -596,6 +302,7 @@ exports[`Documentation: Table TablesText renders 1`] = `
   </p>
   <BasicTable />
   <StripedTable />
+  <CondensedTable />
   <HoverTable />
   <HoverStripedTable />
   <DescriptionTable />

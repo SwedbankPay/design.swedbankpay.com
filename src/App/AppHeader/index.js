@@ -7,7 +7,7 @@ import pkg from "~/package.json";
 
 const AppHeader = () => (
     <header className="topbar topbar-fixed designguide-header">
-        <a className="topbar-logo" href="#"></a>
+        <a className="topbar-logo" href="/"></a>
         <nav className="header-links">
             <NavLink exact to="/" activeClassName="active">Home</NavLink>
             <NavLink to="/docs" activeClassName="active">Documentation</NavLink>
@@ -16,15 +16,15 @@ const AppHeader = () => (
         </nav>
         <div className="topbar-info">
             <div className="topbar-info-contact">
-                <a href="https://github.com/PayEx/design.payex.com" target="b_blank" rel="noopener">
+                <a href="https://github.com/PayEx/design.payex.com" target="_blank" rel="noopener noreferrer">
                     <GithubLogo />
                 </a>
-                <a href="https://payex.slack.com/messages/C0L3W8B2S/" target="b_blank" rel="noopener">
+                <a href="https://payex.slack.com/messages/C0L3W8B2S/" target="_blank" rel="noopener noreferrer">
                     <SlackLogo />
                 </a>
             </div>
             <div className="topbar-info-version">
-                <a href={`https://github.com/PayEx/design.payex.com/releases/tag/${pkg.version}`} target="b_blank" rel="noopener">v.{process.env.version || pkg.version}</a>
+                <a href={`https://github.com/PayEx/design.payex.com/releases/tag/${pkg.version}`} target="_blank" rel="noopener noreferrer">v.{process.env.version || pkg.version}</a>
             </div>
         </div>
     </header>

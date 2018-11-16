@@ -1,0 +1,275 @@
+@list-item-padding: 3.4rem 0 0 0;
+@list-item-padding-desktop-top: 4.5rem;
+@list-item-padding-desktop: @list-item-padding-desktop-top 0 1.2rem 0;
+@list-item-padding-desktop-vertical: 2rem 1.5rem 2rem 5.5rem;
+
+@vertical-left: 1.7rem;
+@vertical-margin: (@circle-size-desktop / 2) - (@line-width-desktop / 2);
+
+@circle-size: 30px;
+@circle-size-desktop: 45px;
+
+@line-width: 3px;
+@line-width-desktop: 5px;
+
+.steps ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: @background-white;
+    box-shadow: @default-box-shadow;
+    display: flex;
+    justify-content: space-between;
+
+    li {
+        flex: 0 1 100%;
+        flex-grow: 1;
+        position: relative;
+        padding: @list-item-padding;
+        text-align: center;
+        line-height: 1rem;
+        overflow: hidden;
+        height: 0;
+
+        > a {
+            display: block;
+            width: 100%;
+
+            /* Take full parent size, ignoring parents padding, and stil growing the parent with text from this element */
+            padding: @list-item-padding;
+            margin: -@list-item-padding;
+            color: @brand-primary;
+            border: 0;
+            cursor: pointer;
+
+            &:hover {
+                background-color: @gray-10;
+                box-shadow: 1px 0 0 0 @gray-9, -1px 0 0 0 @gray-9, 0 1px 0 0 @gray-10;
+            }
+        }
+
+        .circle-base() {
+            position: absolute;
+            width: @circle-size;
+            height: @circle-size;
+            top: 50%;
+            margin-top: -@circle-size / 2;
+            left: 50%;
+            margin-left: -@circle-size / 2;
+        }
+
+        /* Circle */
+        &:before {
+            .circle-base();
+
+            content: "";
+            box-sizing: border-box;
+            z-index: @zindex-steps-circle;
+            border-radius: 50%;
+            border: 3px solid @gray-8;
+            background-color: @background-white;
+        }
+
+        .steps-icon {
+            .circle-base();
+
+            color: @background-white;
+            z-index: @zindex-steps-icon;
+            line-height: @circle-size;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        /* Line */
+        &:after {
+            content: "";
+            position: absolute;
+            background-color: @gray-8;
+            z-index: @zindex-steps-line;
+            height: @line-width;
+
+            /* Prevents small render gaps on certain resolutions */
+            width: 102%;
+            left: 0;
+            top: 50%;
+            margin-top: -@line-width / 2;
+        }
+
+        &:first-child {
+            &:after {
+                right: 0;
+                left: auto;
+                width: 50%;
+            }
+        }
+
+        &:last-child {
+            &:after {
+                width: 50%;
+            }
+        }
+    }
+
+    .steps-completed {
+        &:before {
+            border-color: @brand-primary;
+            background-color: @brand-primary;
+        }
+
+        &:after {
+            background-color: @brand-primary;
+        }
+    }
+
+    .steps-ongoing {
+        &:before {
+            border-color: @brand-primary;
+        }
+
+        &:after {
+            background: linear-gradient(to right, @brand-primary 50%, @gray-8 50%);
+        }
+
+        &:first-child,
+        &:last-child {
+            &:after {
+                background: linear-gradient(to right, @brand-primary 100%);
+            }
+        }
+    }
+
+    .steps-selected {
+        background-color: @gray-10;
+        box-shadow: 1px 0 0 0 @gray-9, -1px 0 0 0 @gray-9, 0 1px 0 0 @gray-10;
+    }
+
+    .steps-sub-title {
+        line-height: 1rem;
+        margin-top: @base-margin-xs;
+        font-size: @font-size-small;
+        color: @mid-gray;
+    }
+}
+
+.steps-responsive {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background: @gray-10;
+    padding: @base-padding-xs @base-padding-sm;
+    border-top: 1px solid @gray-9;
+    border-bottom: 1px solid @gray-9;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.steps-responsive-text {
+    flex-grow: 1;
+    text-align: center;
+}
+
+@media screen and (min-width: @screen-sm-min) {
+    .steps-responsive {
+        display: none;
+    }
+
+    .steps ol {
+        font-size: 1.1rem;
+
+        li {
+            padding: @list-item-padding-desktop;
+            height: auto;
+
+            > a {
+                padding: @list-item-padding-desktop;
+                margin: -@list-item-padding-desktop;
+            }
+
+            /* Circle */
+            .steps-icon,
+            &:before {
+                width: @circle-size-desktop;
+                height: @circle-size-desktop;
+                line-height: @circle-size-desktop;
+                margin-left: -@circle-size-desktop / 2;
+                top: @list-item-padding-desktop-top / 2;
+                margin-top: -@circle-size-desktop / 2;
+                font-size: 24px;
+                border-width: 5px;
+            }
+
+            /* Line */
+            &:after {
+                top: @list-item-padding-desktop-top / 2;
+                margin-top: -@line-width-desktop / 2;
+                height: @line-width-desktop;
+            }
+        }
+
+        .steps-sub-title {
+            margin-top: @base-margin-sm;
+        }
+    }
+
+    .steps-vertical ol {
+        display: block;
+
+        li {
+            display: block;
+            text-align: left;
+            padding: @list-item-padding-desktop-vertical;
+
+            &.steps-selected {
+                box-shadow: 0 1px 0 0 @gray-9, 0 -1px 0 0 @gray-9;
+            }
+
+            > a {
+                padding: @list-item-padding-desktop-vertical;
+                margin: -@list-item-padding-desktop-vertical;
+                width: auto;
+            }
+
+            /* Circle */
+            &:before,
+            .steps-icon {
+                margin-left: 0;
+                left: @vertical-left;
+                top: 50%;
+            }
+
+            /* Line */
+            &:after {
+                width: @line-width-desktop;
+                left: @vertical-left;
+                margin-left: @vertical-margin;
+                top: 0;
+                bottom: 0;
+                height: auto;
+                margin-top: 0;
+            }
+
+            &:first-child {
+                &:after {
+                    height: 50%;
+                    width: @line-width-desktop;
+                    left: @vertical-left;
+                    margin-left: @vertical-margin;
+                    top: auto;
+                }
+            }
+
+            &:last-child {
+                &:after {
+                    height: 50%;
+                    width: @line-width-desktop;
+                    left: @vertical-left;
+                    margin-left: @vertical-margin;
+                }
+            }
+        }
+
+        .steps-ongoing:after {
+            background: linear-gradient(@brand-primary 50%, @gray-8 50%);
+        }
+    }
+}

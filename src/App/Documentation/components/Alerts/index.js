@@ -5,7 +5,7 @@ import PrismCode from "react-prism";
 import { ComponentPreview, Attribute, Property, DocToc } from "#";
 
 import AlertComponent from "@/Alert";
-import { alert } from "$/px-script";
+import { alert } from "$/px-script/main";
 
 const BasicUsage = () => (
     <>
@@ -75,7 +75,7 @@ const ExtendedUsage = () => (
 );
 
 const AlertsText = () => (
-    <div className="col-md-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <p className="lead">Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.</p>
         <BasicUsage />
         <AlertWithIcon />

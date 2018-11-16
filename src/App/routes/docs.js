@@ -64,6 +64,11 @@ module.exports = [
                 componentPath: "core/Lists"
             },
             {
+                title: "Payment Icons",
+                path: "/docs/core/payment-icons",
+                componentPath: "core/PaymentIcons"
+            },
+            {
                 title: "Tables",
                 path: "/docs/core/tables",
                 componentPath: "core/Tables"
@@ -165,14 +170,19 @@ module.exports = [
                 componentPath: "components/Sheet"
             },
             {
+                title: "Slab (experimental)",
+                path: "/docs/components/slab",
+                componentPath: "components/Slab"
+            },
+            {
                 title: "Status",
                 path: "/docs/components/status",
                 componentPath: "components/Status"
             },
             {
-                title: "Step Bar (experimental)",
-                path: "/docs/components/step-bar",
-                componentPath: "components/StepBar"
+                title: "Steps",
+                path: "/docs/components/steps",
+                componentPath: "components/Steps"
             },
             {
                 title: "Tabs (experimental)",
@@ -190,14 +200,9 @@ module.exports = [
                 componentPath: "components/Tooltips"
             },
             {
-                title: "Topbar",
+                title: "Topbar (contains deprecated)",
                 path: "/docs/components/topbar",
                 componentPath: "components/Topbar"
-            },
-            {
-                title: "Well (experimental)",
-                path: "/docs/components/well",
-                componentPath: "components/Well"
             }
         ]
     },

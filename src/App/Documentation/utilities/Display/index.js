@@ -47,12 +47,12 @@ const Examples = () => (
     <>
         <h2 id="examples">Examples</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="d-inline bg-brand">d-inline</div>
-            <div className="d-inline bg-default">d-inline</div>
+            <div className="d-inline p-2 bg-brand">d-inline</div>
+            <div className="d-inline p-2 bg-default">d-inline</div>
         </ComponentPreview>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="d-block bg-brand">d-block</div>
-            <div className="d-block bg-default">d-block</div>
+            <div className="d-block p-2 bg-brand">d-block</div>
+            <div className="d-block p-2 bg-default">d-block</div>
         </ComponentPreview>
     </>
 );
@@ -144,7 +144,7 @@ const HidingElements = () => (
 );
 
 const DisplayText = () => (
-    <div className="col-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <p className="lead">Quickly and responsively toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.</p>
         <HowItWorks />
         <Notation />

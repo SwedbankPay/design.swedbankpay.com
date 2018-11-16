@@ -8,24 +8,14 @@
 
 // Responsive alignment
 
-.text-responsive-alignment-rules(@infix) {
-    .text@{infix}-left           { text-align: left !important; }
-    .text@{infix}-right          { text-align: right !important; }
-    .text@{infix}-center         { text-align: center !important; }
-}
-
-// Creating base clases like ".text-left"
-.text-responsive-alignment-rules(~"");
-
-// Creating classes for breakpoint abbreviations like ".text-md-left"
 .for-each(@breakpoint in @grid-breakpoints) {
-    @infix: extract(@breakpoint, 1);
-
-    .ruleset() {
-        .text-responsive-alignment-rules(~"-@{infix}");
+    @ruleset: {
+        .text@{infix}-left           { text-align: left !important; }
+        .text@{infix}-right          { text-align: right !important; }
+        .text@{infix}-center         { text-align: center !important; }
     }
 
-    .media-breakpoint-up(@infix, @breakpoint, { .ruleset(); });
+    .media-breakpoint-up(@breakpoint, @ruleset);
 }
 
 // Transformation
@@ -42,37 +32,17 @@
 
 // Contextual colors
 
-.color-brand {
-    .color-variant(@brand-primary);
+.for-each(@color in @color-list) {
+    @name: at(@color, 1);
+    @value: at(@color, 2);
+
+    .color-variant(~"color-@{name}", @value);
 }
 
-.color-default {
-    .color-variant(@text-color);
-}
+.text-muted { color: @text-muted !important; }
 
-.color-success,
-.color-green {
-    .color-variant(@state-success);
-}
-
-.color-neutral,
-.color-blue {
-    .color-variant(@state-neutral);
-}
-
-.color-warning,
-.color-yellow {
-    .color-variant(@state-warning);
-}
-
-.color-danger,
-.color-red {
-    .color-variant(@state-error);
-}
-
-.color-purple {
-    .color-variant(@purple);
-}
+.text-black-50 { color: fade(@black, 50%) !important; }
+.text-white-50 { color: fade(@white, 50%) !important; }
 
 // Misc
 

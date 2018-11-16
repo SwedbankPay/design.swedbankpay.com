@@ -2,7 +2,7 @@
 
 exports[`Utilities: Display DisplayText renders 1`] = `
 <div
-  className="col-12 col-lg-10 doc-body"
+  className="col-lg-10 doc-body"
 >
   <p
     className="lead"
@@ -29,12 +29,12 @@ exports[`Utilities: Display Examples renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="d-inline bg-brand"
+      className="d-inline p-2 bg-brand"
     >
       d-inline
     </div>
     <div
-      className="d-inline bg-default"
+      className="d-inline p-2 bg-default"
     >
       d-inline
     </div>
@@ -45,12 +45,12 @@ exports[`Utilities: Display Examples renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="d-block bg-brand"
+      className="d-block p-2 bg-brand"
     >
       d-block
     </div>
     <div
-      className="d-block bg-default"
+      className="d-block p-2 bg-default"
     >
       d-block
     </div>

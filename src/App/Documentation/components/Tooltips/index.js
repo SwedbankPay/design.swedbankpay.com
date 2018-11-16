@@ -43,7 +43,7 @@ const Overview = () => (
 );
 
 const TooltipText = () => (
-    <div className="col-md-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <p className="lead">Tooltips are small, interactive, textual hints for mainly graphical elements. When using icons for actions you can use a tooltip to give people clarification on its function.</p>
         <Overview />
     </div>

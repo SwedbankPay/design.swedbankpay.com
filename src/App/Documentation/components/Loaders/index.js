@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import { ComponentPreview, Attribute, DocToc, Property } from "#";
 import LoaderComponent from "@/Loader";
-import { loader } from "$/px-script";
+import { loader } from "$/px-script/main";
 
 const BasicUsage = () => (
     <>
@@ -55,7 +55,7 @@ const StaticHtml = () => (
 );
 
 const LoadersText = () => (
-    <div className="col-md-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <p className="lead">Use loaders...</p>
         <BasicUsage />
         <Sizes />

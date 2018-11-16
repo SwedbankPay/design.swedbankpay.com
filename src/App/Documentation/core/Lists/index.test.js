@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Lists, { BasicList, InlineList, DescriptionList, SettingsList, ListsText } from "./index";
+import Lists, { BasicList, InlineList, DescriptionList, SettingsList, ItemList, StatusItemList, StripedItemList, ListsText } from "./index";
 
 describe("Documentation: Lists", () => {
     it("is defined", () => {
@@ -58,6 +58,52 @@ describe("Documentation: Lists", () => {
         it("renders", () => {
             const wrapper = shallow(<SettingsList />);
 
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("ItemList", () => {
+        it("is defined", () => {
+            expect(ItemList).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<ItemList />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("StatusItemList", () => {
+        it("is defined", () => {
+            expect(StatusItemList).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<StatusItemList />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("StripedItemList", () => {
+        it("is defined", () => {
+            expect(StripedItemList).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<StripedItemList />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+
+        it("prevents default on anchors", () => {
+            const wrapper = shallow(<StripedItemList />);
+            const menuAnchors = wrapper.find(".action-menu").find("a");
+            const eventHandler = { preventDefault: jest.fn() };
+
+            menuAnchors.forEach(anchor => anchor.simulate("click", eventHandler));
+            expect(eventHandler.preventDefault).toHaveBeenCalledTimes(menuAnchors.length);
             expect(wrapper).toMatchSnapshot();
         });
     });

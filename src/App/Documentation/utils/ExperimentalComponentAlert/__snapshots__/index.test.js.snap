@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Utilities: ExperimentalComponentAlert renders 1`] = `
+<Alert
+  type="danger"
+>
+  <h3
+    className="color-danger"
+  >
+    Component under development!
+  </h3>
+  <p>
+    This component is still under development and is subject to change.
+  </p>
+</Alert>
+`;

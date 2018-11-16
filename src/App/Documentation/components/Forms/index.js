@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PrismCode from "react-prism";
 
 import { ComponentPreview, DocToc, Attribute, Property } from "#";
-import { rangeslider, validation } from "$/px-script";
+import { rangeslider, validation } from "$/px-script/main";
 import InputGroup from "@/InputGroup";
 import Button from "@/Button";
 import { Checkbox, FormControlText, Radio, Rangeslider, Togglebox } from "@/FormComponents";
@@ -317,7 +317,7 @@ const DisabledRangeSlider = () => (
 );
 
 const FormsText = () => (
-    <div className="col-md-12 col-lg-10 doc-body">
+    <div className="col-lg-10 doc-body">
         <p className="lead">Forms...</p>
         <Overview />
         <FormGrid />

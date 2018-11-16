@@ -38,7 +38,7 @@ exports[`GettingStarted: Introduction Css renders 1`] = `
 
 exports[`GettingStarted: Introduction IntroductionText renders 1`] = `
 <div
-  className="col-md-12 col-lg-10 doc-body"
+  className="col-lg-10 doc-body"
 >
   <p
     className="lead"
@@ -80,7 +80,7 @@ exports[`GettingStarted: Introduction JavaScript renders 1`] = `
     language="html"
   >
     <script
-      src="https://design.payex.com/TEST/scripts/px-script.js"
+      src="https://design.payex.com/TEST/scripts/px-script/main.js"
     />
   </ComponentPreview>
 </Fragment>
