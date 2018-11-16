@@ -53,7 +53,7 @@ exports[`Component: Topbar -  menu links prevents default when clicked 1`] = `
         
 		
         <i
-          className="material-icons"
+          className="material-icons topbar-btn-icon"
         >
           menu
         </i>
