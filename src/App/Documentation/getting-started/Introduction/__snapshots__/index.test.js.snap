@@ -80,7 +80,7 @@ exports[`GettingStarted: Introduction JavaScript renders 1`] = `
     language="html"
   >
     <script
-      src="https://design.payex.com/TEST/scripts/px-script/main.js"
+      src="https://design.payex.com/TEST/scripts/px-script.js"
     />
   </ComponentPreview>
 </Fragment>
