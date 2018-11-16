@@ -246,14 +246,14 @@ exports[`Components: Slab SlabWhite renders 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <p
-      className="lead text-center"
-    >
-      Here is some text and then a striped item list
-    </p>
     <div
       className="slab slab-white"
     >
+      <p
+        className="lead text-center"
+      >
+        Here is some text and then a striped item list
+      </p>
       <ul
         className="item-list item-list-striped"
       >
