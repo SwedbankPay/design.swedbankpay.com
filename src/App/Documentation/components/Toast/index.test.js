@@ -2,8 +2,13 @@ import React from "react";
 import { shallow } from "enzyme";
 
 import Toast, { Overview, PremadeToasts, Options, CustomHtml, ToastText } from "./index";
+import { toast } from "../../../../px-script/main";
+
+jest.mock("../../../../px-script/main");
 
 describe("Components: Toast", () => {
+    beforeEach(() => toast.mockClear());
+
     it("is defined", () => {
         expect(Toast).toBeDefined();
     });
@@ -23,6 +28,16 @@ describe("Components: Toast", () => {
             const wrapper = shallow(<Overview />);
 
             expect(wrapper).toMatchSnapshot();
+        });
+
+        it("calls toast on click", () => {
+            const wrapper = shallow(<Overview />);
+            const btn = wrapper.find("button");
+
+            btn.simulate("click");
+
+            expect(wrapper).toMatchSnapshot();
+            expect(toast).toHaveBeenCalled();
         });
     });
 
@@ -48,6 +63,16 @@ describe("Components: Toast", () => {
 
             expect(wrapper).toMatchSnapshot();
         });
+
+        it("calls toast on click", () => {
+            const wrapper = shallow(<PremadeToasts />);
+            const btns = wrapper.find("button");
+
+            btns.forEach(btn => btn.simulate("click"));
+
+            expect(wrapper).toMatchSnapshot();
+            expect(toast).toHaveBeenCalledTimes(btns.length);
+        });
     });
 
     describe("CustomHtml", () => {
@@ -59,6 +84,16 @@ describe("Components: Toast", () => {
             const wrapper = shallow(<CustomHtml />);
 
             expect(wrapper).toMatchSnapshot();
+        });
+
+        it("calls toast on click", () => {
+            const wrapper = shallow(<CustomHtml />);
+            const btn = wrapper.find("button");
+
+            btn.simulate("click");
+
+            expect(wrapper).toMatchSnapshot();
+            expect(toast).toHaveBeenCalled();
         });
     });
 
