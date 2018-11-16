@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Toast, { Overview, Options, PremadeToasts, ToastText } from "./index";
+import Toast, { Overview, PremadeToasts, Options, CustomHtml, ToastText } from "./index";
 
 describe("Components: Toast", () => {
     it("is defined", () => {
@@ -45,6 +45,18 @@ describe("Components: Toast", () => {
 
         it("renders", () => {
             const wrapper = shallow(<PremadeToasts />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("CustomHtml", () => {
+        it("is defined", () => {
+            expect(CustomHtml).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<CustomHtml />);
 
             expect(wrapper).toMatchSnapshot();
         });

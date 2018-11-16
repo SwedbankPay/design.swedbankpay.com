@@ -198,4 +198,4 @@ class Toast extends Component {
 export default Toast;
 
 /* For testing */
-export { Overview, Options, PremadeToasts, ToastText };
+export { Overview, Options, PremadeToasts, CustomHtml, ToastText };

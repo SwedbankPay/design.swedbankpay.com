@@ -1,5 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Components: Toast CustomHtml renders 1`] = `
+<Fragment>
+  <h2
+    id="custom-html"
+  >
+    Custom HTML
+  </h2>
+  <p>
+    You can pass in an HTML String as the first argument as well. Take a look at the example below, where we pass in text as well as a flat button. If you call an external function instead of in-line JavaScript, you will not need to escape quotation marks.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    const toastHtml = "&lt;span&gt;&lt;p&gt;I am toast content.&lt;/p&gt;&lt;p&gt;You can put me on several lines.&lt;/p&gt;&lt;/span&gt;&lt;button class='btn toast-action'&gt;Undo&lt;/button&gt;";
+    
+
+    px.toast({ html: toastHtml });
+  </ComponentPreview>
+  <ComponentPreview
+    language="html"
+    showCasePanel={true}
+  >
+    <button
+      className="btn btn-primary"
+      onClick={[Function]}
+      type="button"
+    >
+      Toast with action
+    </button>
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Components: Toast Options renders 1`] = `
 <Fragment>
   <h2
