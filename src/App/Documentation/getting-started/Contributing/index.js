@@ -56,7 +56,7 @@ const CreateADocumentationPage = () => (
             {");\n\n"}
             {"export default MyExampleDocumentationComponent;"}
         </ComponentPreview>
-        <p>Use the custom <Property value="ComponentPreview" /> component to preview your component. It has three props, <Property value="language" />, <Property value="showCasePanel" /> and <Property value="codeFigure" />, for this example we are goin to be using all three.</p>
+        <p>Use the custom <Property value="ComponentPreview" /> component to preview your component. It has several props, for this example we are going to be using <Property value="language" />, <Property value="showCasePanel" /> and <Property value="codeFigure" />.</p>
         <p>We are also using the `DocToc` component to add a dynamic table of contents to the documentation of your component. This component scans the provided component for <PrismCode className="language-html">{"<h2>"}</PrismCode>-tags and creates anchors for easier navigation. Just remember to add an id to the <PrismCode className="language-html">{"<h2>"}</PrismCode>-tag.</p>
     </>
 );
@@ -80,7 +80,7 @@ const AddComponentToRoutes = () => (
             {"        {\n"}
             {"            title: \"My Example Documentation Component\",\n"}
             {"            path: \"/docs/components/my-example-documentation-component\",\n"}
-            {"            component: require(\"../Documentation/Components/MyExampleDocumentationComponent\")\n"}
+            {"            componentPath: \"components/My-example-documentation-component\"\n"}
             {"        },\n"}
             {"        ...\n"}
             {"        ...\n"}
