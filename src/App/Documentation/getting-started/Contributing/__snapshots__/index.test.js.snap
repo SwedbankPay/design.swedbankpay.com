@@ -46,7 +46,7 @@ exports[`GettingStarted: Contributing Add Component To Routes renders 1`] = `
 
                 path: "/docs/components/my-example-documentation-component",
 
-                component: require("../Documentation/Components/MyExampleDocumentationComponent")
+                componentPath: "components/My-example-documentation-component"
 
             },
 
@@ -502,7 +502,7 @@ exports[`GettingStarted: Contributing Create A Documentation Page renders 1`] = 
     <Property
       value="ComponentPreview"
     />
-     component to preview your component. It has three props, 
+     component to preview your component. It has several props, for this example we are going to be using 
     <Property
       value="language"
     />
@@ -514,7 +514,7 @@ exports[`GettingStarted: Contributing Create A Documentation Page renders 1`] = 
     <Property
       value="codeFigure"
     />
-    , for this example we are goin to be using all three.
+    .
   </p>
   <p>
     We are also using the \`DocToc\` component to add a dynamic table of contents to the documentation of your component. This component scans the provided component for 
