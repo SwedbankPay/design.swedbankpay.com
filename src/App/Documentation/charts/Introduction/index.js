@@ -1,7 +1,7 @@
 import React from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocToc } from "#";
+import { ComponentPreview, DocToc, ExperimentalComponentAlert } from "#";
 
 const BASENAME = process.env.basename;
 const scriptUrl = `https://design.payex.com${BASENAME}scripts/px-script.js`;
@@ -40,7 +40,8 @@ const JavaScript = () => (
 
 const IntroductionText = () => (
     <div className="col-lg-10 doc-body">
-        <p className="lead">Get started with the PayEx DesignGuide Dashboard theme.</p>
+        <ExperimentalComponentAlert />
+        <p className="lead">Get started with the charts using the PayEx DesignGuide Dashboard theme. We are using <a href="https://www.chartjs.org/" target="_blank" rel="noopener noreferrer">chart.js</a>.</p>
         <QuickStart />
         <Css />
         <JavaScript />

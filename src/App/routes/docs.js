@@ -206,19 +206,24 @@ module.exports = [
      * Dashboard
      */
     {
-        title: "Dashboard",
-        path: "/docs/dashboard",
-        redirect: "/docs/dashboard/introduction",
+        title: "Charts (Experimental)",
+        path: "/docs/charts",
+        redirect: "/docs/charts/introduction",
         routes: [
             {
-                title: "Introduction to dashboard",
-                path: "/docs/dashboard/introduction-to-dashboard",
-                componentPath: "dashboard/Introduction"
+                title: "Introduction to charts",
+                path: "/docs/charts/introduction-to-charts",
+                componentPath: "charts/Introduction"
             },
             {
-                title: "Chart",
-                path: "/docs/dashboard/chart",
-                componentPath: "dashboard/Chart"
+                title: "Bar",
+                path: "/docs/charts/bar",
+                componentPath: "charts/Bar"
+            },
+            {
+                title: "Pie",
+                path: "/docs/charts/pie",
+                componentPath: "charts/Pie"
             }
         ]
     },

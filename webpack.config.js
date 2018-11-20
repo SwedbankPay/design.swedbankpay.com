@@ -25,7 +25,8 @@ module.exports = (env, argv) => {
         entry: {
             polyfills: ["./src/polyfills/index.js", "@babel/polyfill"],
             app: "./src/index.js",
-            "px-script": "./src/px-script/main/index.js"
+            "px-script": "./src/px-script/main/index.js",
+            "px.dashboard": "./src/px-script/dashboard/index.js"
         },
         resolve: {
             extensions: [".js", ".jsx", ".json"]
