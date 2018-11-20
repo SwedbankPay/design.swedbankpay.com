@@ -1,18 +1,30 @@
 import React, { Component } from "react";
-import PrismCode from "react-prism";
 
-import { ComponentPreview, DocToc, Attribute, Property, ExperimentalComponentAlert } from "#";
-import { chart } from "$/px-script/dashboard";
+import { ComponentPreview, DocToc, Property, ExperimentalComponentAlert } from "#";
+import Chart from "@/Chart";
 
-const SimplePie = () => (
-    <>
-        <h2 id="pie">Pie</h2>
-        <p>To add a simple pie chart.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure >
-            <canvas id="simple-pie-chart" />
-        </ComponentPreview>
-        <ComponentPreview language="javascript" codeFigure >
-            {`
+const SimplePie = () => {
+    const chartOptions = {
+        type: "pie",
+        data: {
+            labels: ["Chrome", "Internet Explorer", "Firefox", "Edge", "Safari", "Opera", "Other"],
+            datasets: [
+                {
+                    data: [63.14, 11.43, 10.23, 4.34, 3.83, 1.56, 4.19]
+                }
+            ]
+        }
+    };
+
+    return (
+        <>
+            <h2 id="pie">Pie</h2>
+            <p>To add a simple pie chart.</p>
+            <ComponentPreview language="html" showCasePanel codeFigure >
+                <Chart id="simple-pie-chart" options={chartOptions} />
+            </ComponentPreview>
+            <ComponentPreview language="javascript" codeFigure >
+                {`
 const options = {
     type: "pie",
     data: {
@@ -25,20 +37,34 @@ const options = {
     }
 };
 px.chart("simple-pie-chart", options);
-            `}
-        </ComponentPreview>
-    </>
-);
+                `}
+            </ComponentPreview>
+        </>
+    );
+};
 
-const Doughnut = () => (
-    <>
-        <h2 id="doughnut">Doughnut</h2>
-        <p>To add a simple pie chart.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure >
-            <canvas id="doughnut-chart" />
-        </ComponentPreview>
-        <ComponentPreview language="javascript" codeFigure >
-            {`
+const Doughnut = () => {
+    const chartOptions = {
+        type: "doughnut",
+        data: {
+            labels: ["Chrome", "Internet Explorer", "Firefox", "Edge", "Safari", "Opera", "Other"],
+            datasets: [
+                {
+                    data: [63.14, 11.43, 10.23, 4.34, 3.83, 1.56, 4.19]
+                }
+            ]
+        }
+    };
+
+    return (
+        <>
+            <h2 id="doughnut">Doughnut</h2>
+            <p>To add a simple pie chart.</p>
+            <ComponentPreview language="html" showCasePanel codeFigure >
+                <Chart id="doughnut-chart" options={chartOptions} />
+            </ComponentPreview>
+            <ComponentPreview language="javascript" codeFigure >
+                {`
 const options = {
     type: "doughnut",
     data: {
@@ -52,9 +78,10 @@ const options = {
 };
 px.chart("doughnut-chart", options);
             `}
-        </ComponentPreview>
-    </>
-);
+            </ComponentPreview>
+        </>
+    );
+};
 
 const AvailableOptions = () => (
     <>
@@ -121,32 +148,6 @@ const ChartText = () => (
 );
 
 class Bar extends Component {
-    componentDidMount () {
-        chart("simple-pie-chart", {
-            type: "pie",
-            data: {
-                labels: ["Chrome", "Internet Explorer", "Firefox", "Edge", "Safari", "Opera", "Other"],
-                datasets: [
-                    {
-                        data: [63.14, 11.43, 10.23, 4.34, 3.83, 1.56, 4.19]
-                    }
-                ]
-            }
-        });
-
-        chart("doughnut-chart", {
-            type: "doughnut",
-            data: {
-                labels: ["Chrome", "Internet Explorer", "Firefox", "Edge", "Safari", "Opera", "Other"],
-                datasets: [
-                    {
-                        data: [63.14, 11.43, 10.23, 4.34, 3.83, 1.56, 4.19]
-                    }
-                ]
-            }
-        });
-    }
-
     render () {
         return (
             <div className="doc-container">
