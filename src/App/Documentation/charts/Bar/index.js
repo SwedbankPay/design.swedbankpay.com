@@ -271,7 +271,7 @@ const AvailableOptions = () => (
     </>
 );
 
-const ChartText = () => (
+const BarText = () => (
     <div className="col-lg-10 doc-body">
         <ExperimentalComponentAlert />
         <p className="lead">A priest and a rabbi walked into a bar...</p>
@@ -288,8 +288,8 @@ class Bar extends Component {
         return (
             <div className="doc-container">
                 <div className="row">
-                    <ChartText />
-                    <DocToc component={ChartText} />
+                    <BarText />
+                    <DocToc component={BarText} />
                 </div>
             </div>
         );
@@ -299,4 +299,4 @@ class Bar extends Component {
 export default Bar;
 
 /* For testing */
-export { SimpleBar, HorizontalBar, MultipleDatasets, StackedBar, AvailableOptions, ChartText };
+export { SimpleBar, HorizontalBar, MultipleDatasets, StackedBar, AvailableOptions, BarText };

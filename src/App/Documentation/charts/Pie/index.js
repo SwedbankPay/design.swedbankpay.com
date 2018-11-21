@@ -121,12 +121,6 @@ const AvailableOptions = () => (
                     <td>Contains the datasets you want to render.</td>
                 </tr>
                 <tr>
-                    <td><code>data.datasets.label</code></td>
-                    <td>String</td>
-                    <td><Property value={"\"\""} /></td>
-                    <td>Label for the dataset.</td>
-                </tr>
-                <tr>
                     <td><code>data.datasets.data</code></td>
                     <td>Array</td>
                     <td><Property value={"[]"} /></td>
@@ -137,31 +131,31 @@ const AvailableOptions = () => (
     </>
 );
 
-const ChartText = () => (
+const PieText = () => (
     <div className="col-lg-10 doc-body">
         <ExperimentalComponentAlert />
-        <p className="lead">A priest and a rabbi walked into a bar...</p>
+        <p className="lead">Stress cannot exist in the presence of pie...</p>
         <SimplePie />
         <Doughnut />
         <AvailableOptions />
     </div>
 );
 
-class Bar extends Component {
+class Pie extends Component {
     render () {
         return (
             <div className="doc-container">
                 <div className="row">
-                    <ChartText />
-                    <DocToc component={ChartText} />
+                    <PieText />
+                    <DocToc component={PieText} />
                 </div>
             </div>
         );
     }
 }
 
-export default Bar;
+export default Pie;
 
 /* For testing */
-export { SimplePie, AvailableOptions, ChartText };
+export { SimplePie, AvailableOptions, PieText };
 
