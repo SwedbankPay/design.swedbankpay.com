@@ -8,6 +8,7 @@
 
 - Changed border-color on checkbox and radio button in unchecked state to gray.
 - Changed transition and border-color for toggleboxes
+- Changed paragraphs to not have margin-bottom if it is a last child.
 
 ### Fixed
 
