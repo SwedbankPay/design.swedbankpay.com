@@ -1,2 +1,4 @@
 # Disabling this due to dependabot commit messages
 commit-message-incrementing: Disabled
+ignore:
+  commits-before: 2018-11-20T12:00:00
