@@ -309,6 +309,14 @@ module.exports = (env, argv) => {
                                 destination: "./dist/temp/release/scripts"
                             },
                             {
+                                source: `./dist${basename}scripts/px.dashboard.js`,
+                                destination: "./dist/temp/release/scripts"
+                            },
+                            {
+                                source: `./dist${basename}scripts/px.dashboard.js.map`,
+                                destination: "./dist/temp/release/scripts"
+                            },
+                            {
                                 source: `./dist${basename}styles/px.css`,
                                 destination: "./dist/temp/release/styles"
                             }
