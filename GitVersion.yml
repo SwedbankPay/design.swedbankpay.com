@@ -1,6 +1,2 @@
 # Disabling this due to dependabot commit messages
 commit-message-incrementing: Disabled
-
-branches:
-  develop:
-    prevent-increment-of-merged-branch-version: true

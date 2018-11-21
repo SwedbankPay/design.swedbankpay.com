@@ -26,13 +26,14 @@
             height: @checkbox-height;
             width: @checkbox-width;
             background-color: @white;
-            border: 1px solid @checkbox-bg;
+            border: 1px solid @checkbox-color;
             cursor: pointer;
             border-radius: 50%;
         }
 
         &:checked + label:before {
-            background-color: @checkbox-bg;
+            border-color: @checkbox-checked-color;
+            background-color: @checkbox-checked-color;
             background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNWWFMmUAAABMSURBVChTjY8xCgAgDMT6GEf/7uDTHBzrBe0iFjwIlDOUau4ORTQxD8x0Fo9D3KErCNhZGgIrs8wvoe/5mY5QRXZkRQiJTfFNZnVuC4bS8W24IBKtAAAAAElFTkSuQmCC);
             background-position: 50% 50%;
             background-repeat: no-repeat;

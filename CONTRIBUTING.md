@@ -26,15 +26,15 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const MyExampleComponent = ({ type, title, separator }) => (
-    <div className={`well well-${type}`}>
+    <div className={`slab slab-${type}`}>
         <h3>{title}</h3>
         {separator ? <hr /> : null}
-        This is my example component in a well.
+        This is my example component on a slab.
     </div>
 );
 
 MyExampleComponent.propTypes = {
-    type: PropTypes.oneOf(["light", "dark"]).isRequired,
+    type: PropTypes.oneOf(["sm", "lg"]).isRequired,
     title: PropTypes.string.isRequired,
     separator: PropTypes.bool
 };
@@ -60,7 +60,7 @@ const MyExampleDocumentationComponentText = () => (
         <p className="lead">This is the documentation for My Example Component.</p>
         <h2 id="example-usage">Example usage</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <MyExampleComponent type="dark" title="My Example Component" separator />
+            <MyExampleComponent type="lg" title="My Example Component" separator />
         </ComponentPreview>
     </div>
 );
@@ -77,7 +77,7 @@ const MyExampleDocumentationComponent = () => (
 export default MyExampleDocumentationComponent;
 ```
 
-Use the custom `ComponentPreview` component to preview your component. It has three props, `language`, `showCasePanel` and `codeFigure`, for this example we are goin to be using all three.
+Use the custom `ComponentPreview` component to preview your component. It has several props, for this example we are going to be using `language`, `showCasePanel` and `codeFigure`.
 
 We are also using the `DocToc` component to add a dynamic table of contents to the documentation of your component. This component scans the provided component for `<h2>`-tags and creates anchors for easier navigation. Just remember to add an id to the `<h2>`-tag.
 
@@ -100,7 +100,7 @@ In `./src/App/routes/docs.js` under the components object add the following:
             {
                 title: "My Example Documentation Component",
                 path: "/docs/components/my-example-documentation-component",
-                component: require("../Documentation/Components/MyExampleDocumentationComponent")
+                componentPath: "components/My-example-documentation-component"
             },
             ...
             ...
@@ -165,7 +165,7 @@ If your component needs javascript to run, you will need to add the javascript t
 
 #### Create a script file for your component
 
-Create a new file under `./src/px-script/[MyExampleComponent]/` for your component, name it `index.js`:
+Create a new file under `./src/px-script/main/[MyExampleComponent]/` for your component, name it `index.js`:
 
 ```javascript
     const init = () => {
