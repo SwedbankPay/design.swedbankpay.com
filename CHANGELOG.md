@@ -1,8 +1,6 @@
 # Changelog
 
-## [0.1x.x] - 2018-xx-xx
-
-### Added
+## [0.14.1] - 2018-11-21
 
 ### Changed
 
@@ -15,5 +13,3 @@
 - Fixed issue with menu icon not changing when clicked for topbar.
 - Fixed issue with `.color-danger` wrongfully being renamed to `.color-error`.
 - Fixed alignment issue with checkboxes.
-
-### Removed
