@@ -85,19 +85,14 @@ exports[`Documentation: index renders 1`] = `
                 "title": "Grid",
               },
               Object {
-                "componentPath": "core/Icons",
-                "path": "/docs/core/icons",
-                "title": "Icons",
+                "componentPath": "core/Iconography",
+                "path": "/docs/core/iconography",
+                "title": "Iconography",
               },
               Object {
                 "componentPath": "core/Lists",
                 "path": "/docs/core/lists",
                 "title": "Lists",
-              },
-              Object {
-                "componentPath": "core/PaymentIcons",
-                "path": "/docs/core/payment-icons",
-                "title": "Payment Icons",
               },
               Object {
                 "componentPath": "core/Tables",

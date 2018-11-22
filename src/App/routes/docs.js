@@ -54,19 +54,14 @@ module.exports = [
                 componentPath: "core/Grid"
             },
             {
-                title: "Icons",
-                path: "/docs/core/icons",
-                componentPath: "core/Icons"
+                title: "Iconography",
+                path: "/docs/core/iconography",
+                componentPath: "core/Iconography"
             },
             {
                 title: "Lists",
                 path: "/docs/core/lists",
                 componentPath: "core/Lists"
-            },
-            {
-                title: "Payment Icons",
-                path: "/docs/core/payment-icons",
-                componentPath: "core/PaymentIcons"
             },
             {
                 title: "Tables",

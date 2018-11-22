@@ -2,14 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-const PaymentIcon = ({ name, preview, size, className }) => {
+const PaymentIcon = ({ name, preview, previewSize, size, className }) => {
     const classNames = className ? className.split(" ") : [];
     const iconClasses = classnames("payment-icon", name, size, ...classNames);
 
-    return preview ? (
+    return preview || previewSize ? (
         <div className="icon-preview">
             <i className={iconClasses}></i>
-            <span>{name}</span>
+            <span>{preview ? name : size}</span>
         </div>
     ) : <i className={iconClasses}></i>;
 };

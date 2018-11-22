@@ -1,11 +1,94 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Documentation: PaymentIcons Overview renders 1`] = `
+exports[`Core: Iconography IconsText renders 1`] = `
+<div
+  className="col-lg-10 doc-body"
+>
+  <p
+    className="lead"
+  >
+    The PayEx DesignGuide includes Google
+    '
+    s material icons. For a full overview of the available icons please visit 
+    <a
+      href="https://material.io/tools/icons/"
+    >
+      this site
+    </a>
+    .
+  </p>
+  <MaterialIcons />
+  <PaymentIcons />
+</div>
+`;
+
+exports[`Core: Iconography MaterialIcons renders 1`] = `
 <Fragment>
   <h2
-    id="overview"
+    id="material-icons"
   >
-    Overview
+    Material Icons
+  </h2>
+  <p>
+    To use an icon, provide the following markup: 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;i class="material-icons"&gt;{icon_name}&lt;/i&gt;
+    </PrismCode>
+    .
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <i
+      className="material-icons"
+    >
+      android
+    </i>
+    
+
+    <i
+      className="material-icons"
+    >
+      contact_support
+    </i>
+    
+
+    <i
+      className="material-icons"
+    >
+      face
+    </i>
+    
+
+    <i
+      className="material-icons"
+    >
+      star
+    </i>
+    
+
+    <i
+      className="material-icons"
+    >
+      warning
+    </i>
+    
+
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Core: Iconography PaymentIcons renders 1`] = `
+<Fragment>
+  <h2
+    id="payment-icons"
+  >
+    Payment Icons
   </h2>
   <p>
     To use an icon, provide the following markup: 
@@ -27,24 +110,28 @@ exports[`Documentation: PaymentIcons Overview renders 1`] = `
       <PaymentIcon
         name="amex"
         preview={true}
+        size="large"
       />
       
 
       <PaymentIcon
         name="diners"
         preview={true}
+        size="large"
       />
       
 
       <PaymentIcon
         name="mastercard"
         preview={true}
+        size="large"
       />
       
 
       <PaymentIcon
         name="visa"
         preview={true}
+        size="large"
       />
     </div>
     <div
@@ -53,24 +140,28 @@ exports[`Documentation: PaymentIcons Overview renders 1`] = `
       <PaymentIcon
         name="mobilepay"
         preview={true}
+        size="large"
       />
       
 
       <PaymentIcon
         name="paypal"
         preview={true}
+        size="large"
       />
       
 
       <PaymentIcon
         name="swish"
         preview={true}
+        size="large"
       />
       
 
       <PaymentIcon
         name="vipps"
         preview={true}
+        size="large"
       />
       
 
@@ -119,33 +210,11 @@ exports[`Documentation: PaymentIcons Overview renders 1`] = `
       name="vipps"
     />
   </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Documentation: PaymentIcons PaymentIconsText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Payment icons...
-  </p>
-  <Overview />
-  <Sizes />
-  <Usage />
-</div>
-`;
-
-exports[`Documentation: PaymentIcons Sizes renders 1`] = `
-<Fragment>
-  <h2
-    id="sizes"
-  >
+  <h3>
     Sizes
-  </h2>
+  </h3>
   <p>
-    Sizes... 
+    Different sizes are available by adding 
     <Property
       value=".small"
     />
@@ -157,7 +226,7 @@ exports[`Documentation: PaymentIcons Sizes renders 1`] = `
     <Property
       value=".large"
     />
-     and 
+     and
     <Property
       value=".huge"
     />
@@ -168,9 +237,7 @@ exports[`Documentation: PaymentIcons Sizes renders 1`] = `
      is defaulted.
   </p>
   <ComponentPreview
-    codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
   >
     <div
@@ -178,38 +245,64 @@ exports[`Documentation: PaymentIcons Sizes renders 1`] = `
     >
       <PaymentIcon
         name="visa"
+        previewSize={true}
         size="small"
       />
       
 
       <PaymentIcon
         name="visa"
+        previewSize={true}
         size="medium"
       />
       
 
       <PaymentIcon
         name="visa"
+        previewSize={true}
         size="large"
       />
       
 
       <PaymentIcon
         name="visa"
+        previewSize={true}
         size="huge"
       />
     </div>
   </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Documentation: PaymentIcons Usage prevents default on anchors 1`] = `
-<Fragment>
-  <h2
-    id="usage"
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
   >
+    <PaymentIcon
+      name="visa"
+      size="small"
+    />
+    
+
+    <PaymentIcon
+      name="visa"
+      size="medium"
+    />
+    
+
+    <PaymentIcon
+      name="visa"
+      size="large"
+    />
+    
+
+    <PaymentIcon
+      name="visa"
+      size="huge"
+    />
+    
+
+  </ComponentPreview>
+  <h3>
     Usage
-  </h2>
+  </h3>
   <p>
     Typical usage would be in for instance an 
     <Property
@@ -409,220 +502,14 @@ exports[`Documentation: PaymentIcons Usage prevents default on anchors 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: PaymentIcons Usage renders 1`] = `
-<Fragment>
-  <h2
-    id="usage"
-  >
-    Usage
-  </h2>
-  <p>
-    Typical usage would be in for instance an 
-    <Property
-      value=".item-list"
-    />
-    .
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <ul
-      className="item-list item-list-striped"
-    >
-      <li>
-        <div
-          className="d-flex align-items-center"
-        >
-          
-
-          <PaymentIcon
-            className="mr-2"
-            name="visa"
-          />
-          
-
-          <span>
-            4925*********004
-          </span>
-          
-
-        </div>
-        <div
-          className="action-list"
-        >
-          
-
-          <Icon
-            icon="more_vert"
-          />
-          
-
-          <div
-            className="action-menu"
-          >
-            
-
-            <a
-              href="#"
-              onClick={[Function]}
-            >
-              <Icon
-                icon="bookmark"
-              />
-              Add bookmark
-            </a>
-            
-
-            <a
-              href="#"
-              onClick={[Function]}
-            >
-              <Icon
-                icon="business_center"
-              />
-              Add client
-            </a>
-            
-
-            <a
-              href="#"
-              onClick={[Function]}
-            >
-              <Icon
-                icon="add_circle"
-              />
-              Add document
-            </a>
-            
-
-            <a
-              href="#"
-              onClick={[Function]}
-            >
-              <Icon
-                icon="person_add"
-              />
-              Add user
-            </a>
-            
-
-          </div>
-        </div>
-      </li>
-      <li>
-        <div
-          className="d-flex align-items-center"
-        >
-          
-
-          <PaymentIcon
-            className="mr-2"
-            name="mastercard"
-          />
-          
-
-          <span>
-            5792*********138
-          </span>
-          
-
-          <span
-            className="badge badge-blue ml-2"
-          >
-            new
-          </span>
-          
-
-        </div>
-        
-
-        <a
-          href="https://developer.payex.com"
-        >
-          developer.payex.com
-        </a>
-        
-
-      </li>
-      <li>
-        <div
-          className="d-flex align-items-center"
-        >
-          
-
-          <PaymentIcon
-            className="mr-2"
-            name="amex"
-          />
-          
-
-          <span>
-            3651*********701
-          </span>
-          
-
-        </div>
-        <i
-          className="material-icons"
-        >
-          star
-        </i>
-        
-
-      </li>
-      <li>
-        <div
-          className="d-flex align-items-center"
-        >
-          
-
-          <PaymentIcon
-            className="mr-2"
-            name="visa"
-          />
-          
-
-          <span>
-            4925*********007
-          </span>
-          
-
-        </div>
-        <span
-          className="status status-success"
-        >
-          Active
-        </span>
-        
-
-        <button
-          className="btn btn-danger btn-xs"
-          type="button"
-        >
-          <i
-            className="material-icons"
-          >
-            delete
-          </i>
-        </button>
-        
-
-      </li>
-    </ul>
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Documentation: PaymentIcons renders 1`] = `
+exports[`Core: Iconography renders 1`] = `
 <div
   className="doc-container"
 >
   <div
     className="row"
   >
-    <PaymentIconsText />
+    <IconsText />
     <DocToc
       component={[Function]}
     />

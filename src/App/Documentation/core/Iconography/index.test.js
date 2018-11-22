@@ -1,9 +1,9 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Icons, { Usage, IconsText } from "./index";
+import Icons, { MaterialIcons, PaymentIcons, IconsText } from "./index";
 
-describe("Core: Icons", () => {
+describe("Core: Iconography", () => {
     it("is defined", () => {
         expect(Icons).toBeDefined();
     });
@@ -14,13 +14,25 @@ describe("Core: Icons", () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    describe("Usage", () => {
+    describe("MaterialIcons", () => {
         it("is defined", () => {
-            expect(Usage).toBeDefined();
+            expect(MaterialIcons).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<Usage />);
+            const wrapper = shallow(<MaterialIcons />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("PaymentIcons", () => {
+        it("is defined", () => {
+            expect(PaymentIcons).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<PaymentIcons />);
 
             expect(wrapper).toMatchSnapshot();
         });

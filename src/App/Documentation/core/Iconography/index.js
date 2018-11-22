@@ -5,22 +5,45 @@ import { ComponentPreview, DocToc, Property, Icon } from "#";
 import PaymentIcon from "@/PaymentIcon";
 import actionList from "$/px-script/main/action-list";
 
-const Overview = () => (
+const MaterialIcons = () => (
     <>
-        <h2 id="overview">Overview</h2>
+        <h2 id="material-icons">Material Icons</h2>
+        <p>To use an icon, provide the following markup: <PrismCode className="language-html">{"<i class=\"material-icons\">{icon_name}</i>"}</PrismCode>.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <i className="material-icons">android</i>{"\n"}
+            <i className="material-icons">contact_support</i>{"\n"}
+            <i className="material-icons">face</i>{"\n"}
+            <i className="material-icons">star</i>{"\n"}
+            <i className="material-icons">warning</i>{"\n"}
+        </ComponentPreview>
+        <h3>Sizes</h3>
+        <p>Material icons also come in different sizes, the available ones are <code className="token property">.tiny</code>, <code className="token property">.small</code>, <code className="token property">.medium</code> and <code className="token property">.large</code>.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <i className="material-icons tiny">android</i>{"\n"}
+            <i className="material-icons small">android</i>{"\n"}
+            <i className="material-icons">android</i>{"\n"}
+            <i className="material-icons medium">android</i>{"\n"}
+            <i className="material-icons large">android</i>{"\n"}
+        </ComponentPreview>
+    </>
+);
+
+const PaymentIcons = () => (
+    <>
+        <h2 id="payment-icons">Payment Icons</h2>
         <p>To use an icon, provide the following markup: <PrismCode className="language-html">{"<i class=\"payment-icon {icon_name}\"></i>"}</PrismCode>.</p>
         <ComponentPreview language="html" showCasePanel>
             <div className="row justify-content-evenly mb-2">
-                <PaymentIcon preview name="amex" />{"\n"}
-                <PaymentIcon preview name="diners" />{"\n"}
-                <PaymentIcon preview name="mastercard" />{"\n"}
-                <PaymentIcon preview name="visa" />
+                <PaymentIcon preview name="amex" size="large" />{"\n"}
+                <PaymentIcon preview name="diners" size="large" />{"\n"}
+                <PaymentIcon preview name="mastercard" size="large" />{"\n"}
+                <PaymentIcon preview name="visa" size="large" />
             </div>
             <div className="row justify-content-evenly">
-                <PaymentIcon preview name="mobilepay" />{"\n"}
-                <PaymentIcon preview name="paypal" />{"\n"}
-                <PaymentIcon preview name="swish" />{"\n"}
-                <PaymentIcon preview name="vipps" />{"\n"}
+                <PaymentIcon preview name="mobilepay" size="large" />{"\n"}
+                <PaymentIcon preview name="paypal" size="large" />{"\n"}
+                <PaymentIcon preview name="swish" size="large" />{"\n"}
+                <PaymentIcon preview name="vipps" size="large" />{"\n"}
             </div>
         </ComponentPreview>
         <ComponentPreview language="html" codeFigure>
@@ -33,27 +56,28 @@ const Overview = () => (
             <PaymentIcon name="swish" />{"\n"}
             <PaymentIcon name="vipps" />
         </ComponentPreview>
-    </>
-);
 
-const Sizes = () => (
-    <>
-        <h2 id="sizes">Sizes</h2>
-        <p>Sizes... <Property value=".small" />, <Property value=".medium" />, <Property value=".large" /> and <Property value=".huge" />. If no size is provided <Property value=".medium" /> is defaulted.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+        <h3>Sizes</h3>
+        <p>
+            Different sizes are available by adding <Property value=".small" />, <Property value=".medium" />, <Property value=".large" /> and
+            <Property value=".huge" />. If no size is provided <Property value=".medium" /> is defaulted.
+        </p>
+        <ComponentPreview language="html" showCasePanel>
             <div className="row justify-content-evenly align-items-center">
-                <PaymentIcon name="visa" size="small" />{"\n"}
-                <PaymentIcon name="visa" size="medium" />{"\n"}
-                <PaymentIcon name="visa" size="large" />{"\n"}
-                <PaymentIcon name="visa" size="huge" />
+                <PaymentIcon previewSize name="visa" size="small" />{"\n"}
+                <PaymentIcon previewSize name="visa" size="medium" />{"\n"}
+                <PaymentIcon previewSize name="visa" size="large" />{"\n"}
+                <PaymentIcon previewSize name="visa" size="huge" />
             </div>
         </ComponentPreview>
-    </>
-);
+        <ComponentPreview language="html" codeFigure>
+            <PaymentIcon name="visa" size="small" />{"\n"}
+            <PaymentIcon name="visa" size="medium" />{"\n"}
+            <PaymentIcon name="visa" size="large" />{"\n"}
+            <PaymentIcon name="visa" size="huge" />{"\n"}
+        </ComponentPreview>
 
-const Usage = () => (
-    <>
-        <h2 id="usage">Usage</h2>
+        <h3>Usage</h3>
         <p>Typical usage would be in for instance an <Property value=".item-list" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="item-list item-list-striped">
@@ -100,16 +124,15 @@ const Usage = () => (
     </>
 );
 
-const PaymentIconsText = () => (
+const IconsText = () => (
     <div className="col-lg-10 doc-body">
-        <p className="lead">Payment icons...</p>
-        <Overview />
-        <Sizes />
-        <Usage />
+        <p className="lead">The PayEx DesignGuide includes Google{"'"}s material icons. For a full overview of the available icons please visit <a href="https://material.io/tools/icons/">this site</a>.</p>
+        <MaterialIcons />
+        <PaymentIcons />
     </div>
 );
 
-class PaymentIcons extends Component {
+class Icons extends Component {
     componentDidMount () {
         actionList.init();
     }
@@ -118,15 +141,15 @@ class PaymentIcons extends Component {
         return (
             <div className="doc-container">
                 <div className="row">
-                    <PaymentIconsText />
-                    <DocToc component={PaymentIconsText} />
+                    <IconsText />
+                    <DocToc component={IconsText} />
                 </div>
             </div>
         );
     }
 }
 
-export default PaymentIcons;
+export default Icons;
 
 /* For testing */
-export { Overview, Sizes, Usage, PaymentIconsText };
+export { MaterialIcons, PaymentIcons, IconsText };
