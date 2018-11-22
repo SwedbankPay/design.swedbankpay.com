@@ -1,11 +1,9 @@
 const initBarChart = (userOptions, colorPool) => {
     const prepareDataset = (dataset, index) => {
-        const { label, data, type } = dataset;
+        const { data, type } = dataset;
 
         const preparedDataset = {
-            label,
-            data,
-            type,
+            ...dataset,
             backgroundColor: [],
             borderColor: [],
             hoverBackgroundColor: [],
@@ -14,44 +12,45 @@ const initBarChart = (userOptions, colorPool) => {
             hoverBorderWidth: 2
         };
 
+        if (type === "line") {
+            preparedDataset.pointBackgroundColor = [];
+            preparedDataset.pointHoverBackgroundColor = [];
+            preparedDataset.pointHoverBorderColor = [];
+            preparedDataset.pointBorderColor = [];
+            preparedDataset.pointBorderWidth = 2;
+            preparedDataset.borderWidth = 4;
+            preparedDataset.pointRadius = 4;
+            preparedDataset.pointHoverRadius = 6;
+        }
+
         data.forEach(() => {
-            preparedDataset.backgroundColor.push(`rgba(${colorPool[index]}, ${type ? 0 : 0.5})`);
-            preparedDataset.hoverBackgroundColor.push(`rgba(${colorPool[index]}, ${type ? 0 : 0.7})`);
-            preparedDataset.borderColor.push(`rgba(${colorPool[index]}, 0.9)`);
-            preparedDataset.hoverBorderColor.push(`rgba(${colorPool[index]}, 1)`);
+            if (!type) {
+                preparedDataset.backgroundColor.push(`rgba(${colorPool[index]}, 0.5)`);
+                preparedDataset.hoverBackgroundColor.push(`rgba(${colorPool[index]}, 0.7)`);
+                preparedDataset.borderColor.push(`rgba(${colorPool[index]}, 0.9)`);
+                preparedDataset.hoverBorderColor.push(`rgba(${colorPool[index]}, 1)`);
+
+            } else if (type === "line") {
+                preparedDataset.backgroundColor.push(`rgba(${colorPool[index]}, 0.2)`);
+                preparedDataset.borderColor.push(`rgba(${colorPool[index]}, 0.7)`);
+                preparedDataset.pointBackgroundColor.push(`rgba(${colorPool[index]}, 0.9)`);
+                preparedDataset.pointBorderColor.push(`rgba(${colorPool[index]}, 0.9)`);
+                preparedDataset.pointHoverBorderColor.push(`rgba(${colorPool[index]}, 1)`);
+                preparedDataset.pointHoverBackgroundColor.push(`rgba(${colorPool[index]}, 1)`);
+            }
 
         });
 
         return preparedDataset;
     };
 
-    const { type, data, beginAtZero, stacked } = userOptions;
+    const { data } = userOptions;
 
     return {
-        type,
+        ...userOptions,
         data: {
             labels: data.labels,
             datasets: data.datasets.map((dataset, i) => prepareDataset(dataset, i))
-        },
-        options: {
-            scales: {
-                xAxes: [
-                    {
-                        stacked,
-                        ticks: {
-                            beginAtZero
-                        }
-                    }
-                ],
-                yAxes: [
-                    {
-                        stacked,
-                        ticks: {
-                            beginAtZero
-                        }
-                    }
-                ]
-            }
         }
     };
 };

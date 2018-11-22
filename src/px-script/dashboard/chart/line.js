@@ -1,13 +1,7 @@
 const initLineChart = (userOptions, colorPool) => {
     const prepareDataset = (dataset, index) => {
-        const { label, data, fill, steppedLine, borderDash } = dataset;
-
         const preparedDataset = {
-            label,
-            data,
-            steppedLine,
-            borderDash,
-            fill: fill ? fill : false,
+            ...dataset,
             backgroundColor: [],
             borderColor: [],
             pointBackgroundColor: [],
@@ -20,7 +14,7 @@ const initLineChart = (userOptions, colorPool) => {
             pointHoverRadius: 6
         };
 
-        data.forEach(() => {
+        dataset.data.forEach(() => {
             preparedDataset.backgroundColor.push(`rgba(${colorPool[index]}, 0.2)`);
             preparedDataset.borderColor.push(`rgba(${colorPool[index]}, 0.7)`);
             preparedDataset.pointBackgroundColor.push(`rgba(${colorPool[index]}, 0.9)`);

@@ -1,10 +1,7 @@
 const initPieChart = (userOptions, colorPool) => {
     const prepareDataset = dataset => {
-        const { label, data } = dataset;
-
         const preparedDataset = {
-            label,
-            data,
+            ...dataset,
             backgroundColor: [],
             borderColor: [],
             hoverBackgroundColor: [],
@@ -13,7 +10,7 @@ const initPieChart = (userOptions, colorPool) => {
             hoverBorderWidth: 2
         };
 
-        data.forEach((d, i) => {
+        dataset.data.forEach((d, i) => {
             preparedDataset.backgroundColor.push(`rgba(${colorPool[i]}, 0.5)`);
             preparedDataset.hoverBackgroundColor.push(`rgba(${colorPool[i]}, 0.7)`);
             preparedDataset.borderColor.push(`rgba(${colorPool[i]}, 0.9)`);
@@ -24,16 +21,13 @@ const initPieChart = (userOptions, colorPool) => {
         return preparedDataset;
     };
 
-    const { type, data, cutoutPercentage } = userOptions;
+    const { data } = userOptions;
 
     return {
-        type,
+        ...userOptions,
         data: {
             labels: data.labels,
             datasets: data.datasets.map(dataset => prepareDataset(dataset))
-        },
-        options: {
-            cutoutPercentage: type === "pie" ? cutoutPercentage || 0 : cutoutPercentage || 50
         }
     };
 };

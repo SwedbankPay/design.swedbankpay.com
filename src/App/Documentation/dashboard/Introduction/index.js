@@ -40,8 +40,7 @@ const JavaScript = () => (
 
 const IntroductionText = () => (
     <div className="col-lg-10 doc-body">
-        <ExperimentalComponentAlert />
-        <p className="lead">Get started with the charts using the PayEx DesignGuide Dashboard theme. We are using <a href="https://www.chartjs.org/" target="_blank" rel="noopener noreferrer">chart.js</a>.</p>
+        <p className="lead">Get started with the PayEx DesignGuide Dashboard theme.</p>
         <QuickStart />
         <Css />
         <JavaScript />
