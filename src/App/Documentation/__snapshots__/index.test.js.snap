@@ -250,6 +250,11 @@ exports[`Documentation: index renders 1`] = `
                 "title": "Bar",
               },
               Object {
+                "componentPath": "charts/Line",
+                "path": "/docs/charts/line",
+                "title": "Line",
+              },
+              Object {
                 "componentPath": "charts/Pie",
                 "path": "/docs/charts/pie",
                 "title": "Pie",

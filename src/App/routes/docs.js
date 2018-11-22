@@ -221,6 +221,11 @@ module.exports = [
                 componentPath: "charts/Bar"
             },
             {
+                title: "Line",
+                path: "/docs/charts/line",
+                componentPath: "charts/Line"
+            },
+            {
                 title: "Pie",
                 path: "/docs/charts/pie",
                 componentPath: "charts/Pie"

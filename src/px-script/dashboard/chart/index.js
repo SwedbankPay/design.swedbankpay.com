@@ -2,6 +2,7 @@ import Chart from "chart.js";
 
 import initBarChart from "./bar";
 import initPieChart from "./pie";
+import initLineChart from "./line";
 
 const _colorPool = [
     "45, 169, 68", // original
@@ -31,6 +32,10 @@ const _init = (ctx, userOptions) => {
 
             break;
 
+        case "line":
+            options = initLineChart(userOptions, _colorPool);
+
+            break;
         default:
             console.warn(`Chart: Chart type "${userOptions.type}" is not supported.`);
     }
