@@ -20,7 +20,7 @@ const DefaultBehaviour = () => (
                 <CardComponent
                     type="default"
                     title="Card default"
-                    imgSrc="https://picsum.photos/300"
+                    imgSrc="https://picsum.photos/300/?random"
                     text="This is the cards text"
                     smallText="And the small text"
                     btnTxt="Button"
@@ -33,7 +33,7 @@ const DefaultBehaviour = () => (
                 <CardComponent
                     type="brand"
                     title="Card brand"
-                    imgSrc="https://picsum.photos/300"
+                    imgSrc="https://picsum.photos/300/?random"
                     text="This is the cards text"
                     smallText="And the small text"
                     btnTxt="Button"
@@ -46,7 +46,7 @@ const DefaultBehaviour = () => (
                 <CardComponent
                     type="light"
                     title="Card light"
-                    imgSrc="https://picsum.photos/300"
+                    imgSrc="https://picsum.photos/300/?random"
                     text="This is the cards text"
                     smallText="And the small text"
                     btnTxt="Button"
@@ -90,7 +90,7 @@ const CardVariants = () => (
                 <CardComponent
                     type="brand"
                     title="Image card"
-                    imgSrc="https://picsum.photos/300"
+                    imgSrc="https://picsum.photos/300/?random"
                     text="This is a card with an image and body"
                 />
             </div>
