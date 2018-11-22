@@ -4,6 +4,9 @@
 
 ### Added
 
+- Added documentation for image utilities.
+- Added image utility .img-thumbnail.
+
 ### Changed
 
 ### Fixed
