@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer, Icon } from "#";
 import { dialog } from "$/px-script/main";
@@ -57,7 +58,10 @@ class Dialog extends Component {
     render () {
         return (
             <DocContainer docToc>
-                <p className="lead">Dialogs...</p>
+                <p className="lead">
+                    Dialog is meant to be used to show a snippet of text like a confirmation box before you delete something.
+                    Use <Link to="/docs/components/sheet">sheet</Link> if you wish to receive input from the user or display a large chunk of information.
+                </p>
                 <Example />
                 <UsageWithJavascript />
             </DocContainer>

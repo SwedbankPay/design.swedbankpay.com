@@ -103,7 +103,10 @@ class Card extends Component {
         return (
             <DocContainer docToc>
                 <ExperimentalComponentAlert />
-                <p className="lead">Card...</p>
+                <p className="lead">
+                    Cards are meant to display smaller items and is not intended to span the entire width of a page.
+                    See <Link to="/docs/components/panel">panel</Link> if the card component is too narrow.
+                </p>
                 <DefaultBehaviour />
                 <CardVariants />
             </DocContainer>

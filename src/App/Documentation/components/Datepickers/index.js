@@ -273,7 +273,10 @@ class Datepickers extends Component {
     render () {
         return (
             <DocContainer docToc>
-                <p className="lead">Datepickers...</p>
+                <p className="lead">
+                    Datepickers should be used for recent dates. If you need a date of birth or
+                    something similar then it is easier to just use an input field with validation.
+                </p>
                 <SimpleDatepicker />
                 <InitialValue />
                 <CustomFormat />
