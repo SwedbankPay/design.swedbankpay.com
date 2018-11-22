@@ -130,13 +130,6 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
     
 
     <i
-      className="material-icons"
-    >
-      android
-    </i>
-    
-
-    <i
       className="material-icons medium"
     >
       android
