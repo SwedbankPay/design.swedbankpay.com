@@ -21,7 +21,6 @@ const MaterialIcons = () => (
         <ComponentPreview language="html" showCasePanel codeFigure>
             <i className="material-icons tiny">android</i>{"\n"}
             <i className="material-icons small">android</i>{"\n"}
-            <i className="material-icons">android</i>{"\n"}
             <i className="material-icons medium">android</i>{"\n"}
             <i className="material-icons large">android</i>{"\n"}
         </ComponentPreview>
