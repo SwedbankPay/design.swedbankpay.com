@@ -7,7 +7,7 @@ const ImageFluid = () => (
         <h2 id="image-fluid">Image fluid</h2>
         <p><Property value=".img-fluid" /> makes your images responsive by forcing the picture to scale with its parent.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <img src="https://picsum.photos/1000/250?image=937" className="img-fluid" style={{ width: "100%" }}/>
+            <img src="https://picsum.photos/1000/250?image=937" className="img-fluid" />
         </ComponentPreview>
     </>
 );

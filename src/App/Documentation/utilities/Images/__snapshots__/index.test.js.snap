@@ -117,11 +117,6 @@ exports[`Utilities: Image renders 1`] = `
     <img
       className="img-fluid"
       src="https://picsum.photos/1000/250?image=937"
-      style={
-        Object {
-          "width": "100%",
-        }
-      }
     />
   </ComponentPreview>
 </Fragment>
