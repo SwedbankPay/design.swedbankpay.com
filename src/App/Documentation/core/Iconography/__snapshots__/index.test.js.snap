@@ -80,6 +80,77 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
     
 
   </ComponentPreview>
+  <h3>
+    Sizes
+  </h3>
+  <p>
+    Material icons also come in different sizes, the available ones are 
+    <code
+      className="token property"
+    >
+      .tiny
+    </code>
+    , 
+    <code
+      className="token property"
+    >
+      .small
+    </code>
+    , 
+    <code
+      className="token property"
+    >
+      .medium
+    </code>
+     and 
+    <code
+      className="token property"
+    >
+      .large
+    </code>
+    .
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <i
+      className="material-icons tiny"
+    >
+      android
+    </i>
+    
+
+    <i
+      className="material-icons small"
+    >
+      android
+    </i>
+    
+
+    <i
+      className="material-icons"
+    >
+      android
+    </i>
+    
+
+    <i
+      className="material-icons medium"
+    >
+      android
+    </i>
+    
+
+    <i
+      className="material-icons large"
+    >
+      android
+    </i>
+    
+
+  </ComponentPreview>
 </Fragment>
 `;
 
