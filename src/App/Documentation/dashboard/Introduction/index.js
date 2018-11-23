@@ -1,7 +1,7 @@
 import React from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocToc, ExperimentalComponentAlert } from "#";
+import { ComponentPreview, DocToc } from "#";
 
 const BASENAME = process.env.basename;
 const scriptUrl = `https://design.payex.com${BASENAME}scripts/px-script.js`;
@@ -42,7 +42,7 @@ const IntroductionText = () => (
     <div className="col-lg-10 doc-body">
         <p className="lead">Get started with the PayEx DesignGuide Dashboard theme.</p>
         <QuickStart />
-        <Css />
+        {/* <Css /> */}
         <JavaScript />
     </div>
 );

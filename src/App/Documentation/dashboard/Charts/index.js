@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc, Property, ExperimentalComponentAlert } from "#";
+import { ComponentPreview, DocToc, ExperimentalComponentAlert } from "#";
 import Chart from "@/Chart";
 
 const LineChart = () => (
         <>
             <h2 id="line-chart">Line chart</h2>
             <p className="lead">If Johnny Cash could, then you too should be able to...</p>
-            <p>To add a simple line chart.</p>
+            <p>A line chart is a way of plotting data points on a line. Often, it is used to show trend data, or the comparison of two data sets.</p>
+            <p>See <a href="https://www.chartjs.org/docs/latest/charts/line.html" target="_blank" rel="noopener noreferrer">chart.js</a> for more information on line charts.</p>
             <ComponentPreview language="html" showCasePanel codeFigure >
                 <Chart id="simple-line-chart" options={{
                     type: "line",
@@ -160,6 +161,7 @@ const BarChart = () => (
         <h2 id="bar-chart">Bar chart</h2>
         <p className="lead">A priest and a rabbi walked into a bar...</p>
         <p>A bar chart provides a way of showing data values represented as vertical bars. It is sometimes used to show trend data, and the comparison of multiple data sets side by side.</p>
+        <p>See <a href="https://www.chartjs.org/docs/latest/charts/bar.html" target="_blank" rel="noopener noreferrer">chart.js</a> for more information on bar charts.</p>
         <ComponentPreview language="html" showCasePanel codeFigure >
             <Chart id="simple-bar-chart" options={{
                 type: "bar",
@@ -353,11 +355,12 @@ px.chart("stacked-multi-bar-chart", {
     </>
 );
 
-const PieChart = () => (
+const DoughnutAndPieCharts = () => (
     <>
-        <h2 id="pie-chart">Pie chart</h2>
+        <h2 id="doughnut-and-pie-charts">Doughnut and Pie charts</h2>
         <p className="lead">Stress cannot exist in the presence of pie...</p>
-        <p>To add a simple pie chart.</p>
+        <p>Pie and doughnut charts are probably the most commonly used charts. They are divided into segments, the arc of each segment shows the proportional value of each piece of data.</p>
+        <p>See <a href="https://www.chartjs.org/docs/latest/charts/doughnut.html" target="_blank" rel="noopener noreferrer">chart.js</a> for more information on doughnut and pie charts.</p>
         <ComponentPreview language="html" showCasePanel codeFigure >
             <Chart id="simple-pie-chart" options={{
                 type: "pie",
@@ -423,6 +426,7 @@ px.chart("doughnut-chart", {
 const MixingTypes = () => (
     <>
         <h2 id="mixing-types">Mixing types</h2>
+        <p className="lead">With Chart.js, it is possible to create <a href="https://www.chartjs.org/docs/latest/charts/mixed.html" target="_blank" rel="noopener noreferrer">mixed charts</a> that are a combination of two or more different chart types. A common example is a bar chart that also includes a line dataset.</p>
         <ComponentPreview language="html" showCasePanel codeFigure >
             <Chart id="mixed-chart" options={{
                 type: "bar",
@@ -489,10 +493,17 @@ px.chart("mixed-chart", {
 const ChartsText = () => (
     <div className="col-lg-10 doc-body">
         <ExperimentalComponentAlert />
-        <p className="lead"> We are using <a href="https://www.chartjs.org/" target="_blank" rel="noopener noreferrer">chart.js</a></p>
+        <p className="lead">We are using <a href="https://www.chartjs.org/" target="_blank" rel="noopener noreferrer">chart.js</a> to generate the charts. Our script is mainly just a wrapper around that library to add the correct styling etc.</p>
+        <p>Most options and settings available in the chart.js documentation will be available.</p>
+        <p>For now, the following chart types are available:</p>
+        <ul>
+            <li><code className="token string">{"\"line\""}</code></li>
+            <li><code className="token string">{"\"bar\"/\"horizontalBar\""}</code></li>
+            <li><code className="token string">{"\"pie\"/\"doughnut\""}</code></li>
+        </ul>
         <LineChart />
         <BarChart />
-        <PieChart />
+        <DoughnutAndPieCharts />
         <MixingTypes />
     </div>
 );
@@ -513,5 +524,5 @@ class Charts extends Component {
 export default Charts;
 
 /* For testing */
-export { LineChart, BarChart, PieChart, MixingTypes, ChartsText };
+export { LineChart, BarChart, DoughnutAndPieCharts, MixingTypes, ChartsText };
 
