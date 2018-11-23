@@ -11,6 +11,7 @@
 ### Changed
 
 - Renamed icons to iconography under core, and moved payment icons under material icons.
+- Slightly increased the bottom margin on all form fields to allow for better grouping and spacing for data attribute messages.
 
 ### Fixed
 
