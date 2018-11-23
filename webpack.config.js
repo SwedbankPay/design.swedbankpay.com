@@ -125,38 +125,25 @@ module.exports = (env, argv) => {
             ]
         },
         optimization: {
-            // runtimeChunk: {
-            //     name: entrypoint => `runtime~${entrypoint.name}`
-            // },
             splitChunks: {
                 chunks: "async",
-                minSize: 3000,
+                minSize: 30000,
                 maxSize: 0,
-                minChunks: 2,
+                minChunks: 1,
                 maxAsyncRequests: 5,
                 maxInitialRequests: 3,
                 automaticNameDelimiter: "~",
                 name: true,
                 cacheGroups: {
-                    // vendors: {
-                    //     test: /[\\/]node_modules[\\/]/,
-                    //     name: "vendors",
-                    //     chunks: "all"
-                    // },
-                    app: {
-                        name: "app",
-                        test: /app\.js$/,
-                        reuseExistingChunk: true,
-                        chunks: "all",
-                        enforce: true
+                    vendors: {
+                        test: /[\\/]node_modules[\\/]/,
+                        priority: -10
                     },
-                    // pxScript: {
-                    //     name: "px-script",
-                    //     test: /px-script/,
-                    //     reuseExistingChunk: false,
-                    //     chunks: "all",
-                    //     enforce: true
-                    // },
+                    default: {
+                        minChunks: 2,
+                        priority: -20,
+                        reuseExistingChunk: true
+                    },
                     pxStyles: {
                         name: "px",
                         test: /px\.less$/,
