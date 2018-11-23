@@ -36,6 +36,16 @@ describe("Core: Iconography", () => {
 
             expect(wrapper).toMatchSnapshot();
         });
+
+        it("onClick prevents default", () => {
+            const wrapper = shallow(<PaymentIcons />);
+            const clickHandler = { preventDefault: jest.fn() };
+            const onclickAnchors = wrapper.find(".action-menu a");
+
+            onclickAnchors.forEach(anchor => anchor.simulate("click", clickHandler));
+            expect(clickHandler.preventDefault).toHaveBeenCalledTimes(onclickAnchors.length);
+            expect(wrapper).toMatchSnapshot();
+        });
     });
 
     describe("IconsText", () => {

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PrismCode from "react-prism";
 
 import { ComponentPreview, DocToc, Property, Icon } from "#";
-import PaymentIcon from "@/PaymentIcon";
+import IconPreview from "@/IconPreview";
 import actionList from "$/px-script/main/action-list";
 
 const MaterialIcons = () => (
@@ -14,15 +14,24 @@ const MaterialIcons = () => (
             <i className="material-icons">contact_support</i>{"\n"}
             <i className="material-icons">face</i>{"\n"}
             <i className="material-icons">star</i>{"\n"}
-            <i className="material-icons">warning</i>{"\n"}
+            <i className="material-icons">warning</i>
         </ComponentPreview>
+
         <h3>Sizes</h3>
-        <p>Material icons also come in different sizes, the available ones are <code className="token property">.tiny</code>, <code className="token property">.small</code>, <code className="token property">.medium</code> and <code className="token property">.large</code>.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <p>You can modify the size of the material icons by adding one of the size classes: <Property value=".tiny" />, <Property value=".small" />, <Property value=".medium" /> or <Property value=".large" />.</p>
+        <ComponentPreview language="html" showCasePanel>
+            <div className="row justify-content-evenly align-items-center">
+                <IconPreview previewSize type="material-icons" name="android" size="tiny" />
+                <IconPreview previewSize type="material-icons" name="android" size="small" />
+                <IconPreview previewSize type="material-icons" name="android" size="medium" />
+                <IconPreview previewSize type="material-icons" name="android" size="large" />
+            </div>
+        </ComponentPreview>
+        <ComponentPreview language="html" codeFigure>
             <i className="material-icons tiny">android</i>{"\n"}
             <i className="material-icons small">android</i>{"\n"}
             <i className="material-icons medium">android</i>{"\n"}
-            <i className="material-icons large">android</i>{"\n"}
+            <i className="material-icons large">android</i>
         </ComponentPreview>
     </>
 );
@@ -33,27 +42,27 @@ const PaymentIcons = () => (
         <p>To use an icon, provide the following markup: <PrismCode className="language-html">{"<i class=\"payment-icon {icon_name}\"></i>"}</PrismCode>.</p>
         <ComponentPreview language="html" showCasePanel>
             <div className="row justify-content-evenly mb-2">
-                <PaymentIcon preview name="amex" size="large" />{"\n"}
-                <PaymentIcon preview name="diners" size="large" />{"\n"}
-                <PaymentIcon preview name="mastercard" size="large" />{"\n"}
-                <PaymentIcon preview name="visa" size="large" />
+                <IconPreview preview type="payment-icon" name="amex" size="large" />{"\n"}
+                <IconPreview preview type="payment-icon" name="diners" size="large" />{"\n"}
+                <IconPreview preview type="payment-icon" name="mastercard" size="large" />{"\n"}
+                <IconPreview preview type="payment-icon" name="visa" size="large" />
             </div>
             <div className="row justify-content-evenly">
-                <PaymentIcon preview name="mobilepay" size="large" />{"\n"}
-                <PaymentIcon preview name="paypal" size="large" />{"\n"}
-                <PaymentIcon preview name="swish" size="large" />{"\n"}
-                <PaymentIcon preview name="vipps" size="large" />{"\n"}
+                <IconPreview preview type="payment-icon" name="mobilepay" size="large" />{"\n"}
+                <IconPreview preview type="payment-icon" name="paypal" size="large" />{"\n"}
+                <IconPreview preview type="payment-icon" name="swish" size="large" />{"\n"}
+                <IconPreview preview type="payment-icon" name="vipps" size="large" />{"\n"}
             </div>
         </ComponentPreview>
         <ComponentPreview language="html" codeFigure>
-            <PaymentIcon name="amex" />{"\n"}
-            <PaymentIcon name="diners" />{"\n"}
-            <PaymentIcon name="mastercard" />{"\n"}
-            <PaymentIcon name="visa" />{"\n"}
-            <PaymentIcon name="mobilepay" />{"\n"}
-            <PaymentIcon name="paypal" />{"\n"}
-            <PaymentIcon name="swish" />{"\n"}
-            <PaymentIcon name="vipps" />
+            <IconPreview type="payment-icon" name="amex" />{"\n"}
+            <IconPreview type="payment-icon" name="diners" />{"\n"}
+            <IconPreview type="payment-icon" name="mastercard" />{"\n"}
+            <IconPreview type="payment-icon" name="visa" />{"\n"}
+            <IconPreview type="payment-icon" name="mobilepay" />{"\n"}
+            <IconPreview type="payment-icon" name="paypal" />{"\n"}
+            <IconPreview type="payment-icon" name="swish" />{"\n"}
+            <IconPreview type="payment-icon" name="vipps" />
         </ComponentPreview>
 
         <h3>Sizes</h3>
@@ -63,17 +72,17 @@ const PaymentIcons = () => (
         </p>
         <ComponentPreview language="html" showCasePanel>
             <div className="row justify-content-evenly align-items-center">
-                <PaymentIcon previewSize name="visa" size="small" />{"\n"}
-                <PaymentIcon previewSize name="visa" size="medium" />{"\n"}
-                <PaymentIcon previewSize name="visa" size="large" />{"\n"}
-                <PaymentIcon previewSize name="visa" size="huge" />
+                <IconPreview type="payment-icon" previewSize name="visa" size="small" />{"\n"}
+                <IconPreview type="payment-icon" previewSize name="visa" size="medium" />{"\n"}
+                <IconPreview type="payment-icon" previewSize name="visa" size="large" />{"\n"}
+                <IconPreview type="payment-icon" previewSize name="visa" size="huge" />
             </div>
         </ComponentPreview>
         <ComponentPreview language="html" codeFigure>
-            <PaymentIcon name="visa" size="small" />{"\n"}
-            <PaymentIcon name="visa" size="medium" />{"\n"}
-            <PaymentIcon name="visa" size="large" />{"\n"}
-            <PaymentIcon name="visa" size="huge" />{"\n"}
+            <IconPreview type="payment-icon" name="visa" size="small" />{"\n"}
+            <IconPreview type="payment-icon" name="visa" size="medium" />{"\n"}
+            <IconPreview type="payment-icon" name="visa" size="large" />{"\n"}
+            <IconPreview type="payment-icon" name="visa" size="huge" />{"\n"}
         </ComponentPreview>
 
         <h3>Usage</h3>
@@ -82,7 +91,7 @@ const PaymentIcons = () => (
             <ul className="item-list item-list-striped">
                 <li>
                     <div className="d-flex align-items-center">{"\n"}
-                        <PaymentIcon name="visa" className="mr-2" />{"\n"}
+                        <IconPreview type="payment-icon" name="visa" className="mr-2" />{"\n"}
                         <span>4925*********004</span>{"\n"}
                     </div>
                     <div className="action-list">{"\n"}
@@ -97,7 +106,7 @@ const PaymentIcons = () => (
                 </li>
                 <li>
                     <div className="d-flex align-items-center">{"\n"}
-                        <PaymentIcon name="mastercard" className="mr-2" />{"\n"}
+                        <IconPreview type="payment-icon" name="mastercard" className="mr-2" />{"\n"}
                         <span>5792*********138</span>{"\n"}
                         <span className="badge badge-blue ml-2">new</span>{"\n"}
                     </div>{"\n"}
@@ -105,14 +114,14 @@ const PaymentIcons = () => (
                 </li>
                 <li>
                     <div className="d-flex align-items-center">{"\n"}
-                        <PaymentIcon name="amex" className="mr-2" />{"\n"}
+                        <IconPreview type="payment-icon" name="amex" className="mr-2" />{"\n"}
                         <span>3651*********701</span>{"\n"}
                     </div>
                     <i className="material-icons">star</i>{"\n"}
                 </li>
                 <li>
                     <div className="d-flex align-items-center">{"\n"}
-                        <PaymentIcon name="visa" className="mr-2" />{"\n"}
+                        <IconPreview type="payment-icon" name="visa" className="mr-2" />{"\n"}
                         <span>4925*********007</span>{"\n"}
                     </div>
                     <span className="status status-success">Active</span>{"\n"}

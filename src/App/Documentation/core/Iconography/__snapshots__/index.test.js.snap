@@ -77,43 +77,65 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
     >
       warning
     </i>
-    
-
   </ComponentPreview>
   <h3>
     Sizes
   </h3>
   <p>
-    Material icons also come in different sizes, the available ones are 
-    <code
-      className="token property"
-    >
-      .tiny
-    </code>
+    You can modify the size of the material icons by adding one of the size classes: 
+    <Property
+      value=".tiny"
+    />
     , 
-    <code
-      className="token property"
-    >
-      .small
-    </code>
+    <Property
+      value=".small"
+    />
     , 
-    <code
-      className="token property"
-    >
-      .medium
-    </code>
-     and 
-    <code
-      className="token property"
-    >
-      .large
-    </code>
+    <Property
+      value=".medium"
+    />
+     or 
+    <Property
+      value=".large"
+    />
     .
   </p>
   <ComponentPreview
-    codeFigure={true}
     language="html"
     showCasePanel={true}
+  >
+    <div
+      className="row justify-content-evenly align-items-center"
+    >
+      <IconPreview
+        name="android"
+        previewSize={true}
+        size="tiny"
+        type="material-icons"
+      />
+      <IconPreview
+        name="android"
+        previewSize={true}
+        size="small"
+        type="material-icons"
+      />
+      <IconPreview
+        name="android"
+        previewSize={true}
+        size="medium"
+        type="material-icons"
+      />
+      <IconPreview
+        name="android"
+        previewSize={true}
+        size="large"
+        type="material-icons"
+      />
+    </div>
+  </ComponentPreview>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
   >
     <i
       className="material-icons tiny"
@@ -141,13 +163,11 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
     >
       android
     </i>
-    
-
   </ComponentPreview>
 </Fragment>
 `;
 
-exports[`Core: Iconography PaymentIcons renders 1`] = `
+exports[`Core: Iconography PaymentIcons onClick prevents default 1`] = `
 <Fragment>
   <h2
     id="payment-icons"
@@ -171,61 +191,69 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
     <div
       className="row justify-content-evenly mb-2"
     >
-      <PaymentIcon
+      <IconPreview
         name="amex"
         preview={true}
         size="large"
+        type="payment-icon"
       />
       
 
-      <PaymentIcon
+      <IconPreview
         name="diners"
         preview={true}
         size="large"
+        type="payment-icon"
       />
       
 
-      <PaymentIcon
+      <IconPreview
         name="mastercard"
         preview={true}
         size="large"
+        type="payment-icon"
       />
       
 
-      <PaymentIcon
+      <IconPreview
         name="visa"
         preview={true}
         size="large"
+        type="payment-icon"
       />
     </div>
     <div
       className="row justify-content-evenly"
     >
-      <PaymentIcon
+      <IconPreview
         name="mobilepay"
         preview={true}
         size="large"
+        type="payment-icon"
       />
       
 
-      <PaymentIcon
+      <IconPreview
         name="paypal"
         preview={true}
         size="large"
+        type="payment-icon"
       />
       
 
-      <PaymentIcon
+      <IconPreview
         name="swish"
         preview={true}
         size="large"
+        type="payment-icon"
       />
       
 
-      <PaymentIcon
+      <IconPreview
         name="vipps"
         preview={true}
         size="large"
+        type="payment-icon"
       />
       
 
@@ -235,43 +263,51 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
     codeFigure={true}
     language="html"
   >
-    <PaymentIcon
+    <IconPreview
       name="amex"
+      type="payment-icon"
     />
     
 
-    <PaymentIcon
+    <IconPreview
       name="diners"
+      type="payment-icon"
     />
     
 
-    <PaymentIcon
+    <IconPreview
       name="mastercard"
+      type="payment-icon"
     />
     
 
-    <PaymentIcon
+    <IconPreview
       name="visa"
+      type="payment-icon"
     />
     
 
-    <PaymentIcon
+    <IconPreview
       name="mobilepay"
+      type="payment-icon"
     />
     
 
-    <PaymentIcon
+    <IconPreview
       name="paypal"
+      type="payment-icon"
     />
     
 
-    <PaymentIcon
+    <IconPreview
       name="swish"
+      type="payment-icon"
     />
     
 
-    <PaymentIcon
+    <IconPreview
       name="vipps"
+      type="payment-icon"
     />
   </ComponentPreview>
   <h3>
@@ -307,31 +343,35 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
     <div
       className="row justify-content-evenly align-items-center"
     >
-      <PaymentIcon
+      <IconPreview
         name="visa"
         previewSize={true}
         size="small"
+        type="payment-icon"
       />
       
 
-      <PaymentIcon
+      <IconPreview
         name="visa"
         previewSize={true}
         size="medium"
+        type="payment-icon"
       />
       
 
-      <PaymentIcon
+      <IconPreview
         name="visa"
         previewSize={true}
         size="large"
+        type="payment-icon"
       />
       
 
-      <PaymentIcon
+      <IconPreview
         name="visa"
         previewSize={true}
         size="huge"
+        type="payment-icon"
       />
     </div>
   </ComponentPreview>
@@ -339,27 +379,31 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
     codeFigure={true}
     language="html"
   >
-    <PaymentIcon
+    <IconPreview
       name="visa"
       size="small"
+      type="payment-icon"
     />
     
 
-    <PaymentIcon
+    <IconPreview
       name="visa"
       size="medium"
+      type="payment-icon"
     />
     
 
-    <PaymentIcon
+    <IconPreview
       name="visa"
       size="large"
+      type="payment-icon"
     />
     
 
-    <PaymentIcon
+    <IconPreview
       name="visa"
       size="huge"
+      type="payment-icon"
     />
     
 
@@ -388,9 +432,10 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
         >
           
 
-          <PaymentIcon
+          <IconPreview
             className="mr-2"
             name="visa"
+            type="payment-icon"
           />
           
 
@@ -468,9 +513,10 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
         >
           
 
-          <PaymentIcon
+          <IconPreview
             className="mr-2"
             name="mastercard"
+            type="payment-icon"
           />
           
 
@@ -503,9 +549,10 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
         >
           
 
-          <PaymentIcon
+          <IconPreview
             className="mr-2"
             name="amex"
+            type="payment-icon"
           />
           
 
@@ -529,9 +576,457 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
         >
           
 
-          <PaymentIcon
+          <IconPreview
             className="mr-2"
             name="visa"
+            type="payment-icon"
+          />
+          
+
+          <span>
+            4925*********007
+          </span>
+          
+
+        </div>
+        <span
+          className="status status-success"
+        >
+          Active
+        </span>
+        
+
+        <button
+          className="btn btn-danger btn-xs"
+          type="button"
+        >
+          <i
+            className="material-icons"
+          >
+            delete
+          </i>
+        </button>
+        
+
+      </li>
+    </ul>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Core: Iconography PaymentIcons renders 1`] = `
+<Fragment>
+  <h2
+    id="payment-icons"
+  >
+    Payment Icons
+  </h2>
+  <p>
+    To use an icon, provide the following markup: 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;i class="payment-icon {icon_name}"&gt;&lt;/i&gt;
+    </PrismCode>
+    .
+  </p>
+  <ComponentPreview
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="row justify-content-evenly mb-2"
+    >
+      <IconPreview
+        name="amex"
+        preview={true}
+        size="large"
+        type="payment-icon"
+      />
+      
+
+      <IconPreview
+        name="diners"
+        preview={true}
+        size="large"
+        type="payment-icon"
+      />
+      
+
+      <IconPreview
+        name="mastercard"
+        preview={true}
+        size="large"
+        type="payment-icon"
+      />
+      
+
+      <IconPreview
+        name="visa"
+        preview={true}
+        size="large"
+        type="payment-icon"
+      />
+    </div>
+    <div
+      className="row justify-content-evenly"
+    >
+      <IconPreview
+        name="mobilepay"
+        preview={true}
+        size="large"
+        type="payment-icon"
+      />
+      
+
+      <IconPreview
+        name="paypal"
+        preview={true}
+        size="large"
+        type="payment-icon"
+      />
+      
+
+      <IconPreview
+        name="swish"
+        preview={true}
+        size="large"
+        type="payment-icon"
+      />
+      
+
+      <IconPreview
+        name="vipps"
+        preview={true}
+        size="large"
+        type="payment-icon"
+      />
+      
+
+    </div>
+  </ComponentPreview>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+  >
+    <IconPreview
+      name="amex"
+      type="payment-icon"
+    />
+    
+
+    <IconPreview
+      name="diners"
+      type="payment-icon"
+    />
+    
+
+    <IconPreview
+      name="mastercard"
+      type="payment-icon"
+    />
+    
+
+    <IconPreview
+      name="visa"
+      type="payment-icon"
+    />
+    
+
+    <IconPreview
+      name="mobilepay"
+      type="payment-icon"
+    />
+    
+
+    <IconPreview
+      name="paypal"
+      type="payment-icon"
+    />
+    
+
+    <IconPreview
+      name="swish"
+      type="payment-icon"
+    />
+    
+
+    <IconPreview
+      name="vipps"
+      type="payment-icon"
+    />
+  </ComponentPreview>
+  <h3>
+    Sizes
+  </h3>
+  <p>
+    Different sizes are available by adding 
+    <Property
+      value=".small"
+    />
+    , 
+    <Property
+      value=".medium"
+    />
+    , 
+    <Property
+      value=".large"
+    />
+     and
+    <Property
+      value=".huge"
+    />
+    . If no size is provided 
+    <Property
+      value=".medium"
+    />
+     is defaulted.
+  </p>
+  <ComponentPreview
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="row justify-content-evenly align-items-center"
+    >
+      <IconPreview
+        name="visa"
+        previewSize={true}
+        size="small"
+        type="payment-icon"
+      />
+      
+
+      <IconPreview
+        name="visa"
+        previewSize={true}
+        size="medium"
+        type="payment-icon"
+      />
+      
+
+      <IconPreview
+        name="visa"
+        previewSize={true}
+        size="large"
+        type="payment-icon"
+      />
+      
+
+      <IconPreview
+        name="visa"
+        previewSize={true}
+        size="huge"
+        type="payment-icon"
+      />
+    </div>
+  </ComponentPreview>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+  >
+    <IconPreview
+      name="visa"
+      size="small"
+      type="payment-icon"
+    />
+    
+
+    <IconPreview
+      name="visa"
+      size="medium"
+      type="payment-icon"
+    />
+    
+
+    <IconPreview
+      name="visa"
+      size="large"
+      type="payment-icon"
+    />
+    
+
+    <IconPreview
+      name="visa"
+      size="huge"
+      type="payment-icon"
+    />
+    
+
+  </ComponentPreview>
+  <h3>
+    Usage
+  </h3>
+  <p>
+    Typical usage would be in for instance an 
+    <Property
+      value=".item-list"
+    />
+    .
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ul
+      className="item-list item-list-striped"
+    >
+      <li>
+        <div
+          className="d-flex align-items-center"
+        >
+          
+
+          <IconPreview
+            className="mr-2"
+            name="visa"
+            type="payment-icon"
+          />
+          
+
+          <span>
+            4925*********004
+          </span>
+          
+
+        </div>
+        <div
+          className="action-list"
+        >
+          
+
+          <Icon
+            icon="more_vert"
+          />
+          
+
+          <div
+            className="action-menu"
+          >
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <Icon
+                icon="bookmark"
+              />
+              Add bookmark
+            </a>
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <Icon
+                icon="business_center"
+              />
+              Add client
+            </a>
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <Icon
+                icon="add_circle"
+              />
+              Add document
+            </a>
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <Icon
+                icon="person_add"
+              />
+              Add user
+            </a>
+            
+
+          </div>
+        </div>
+      </li>
+      <li>
+        <div
+          className="d-flex align-items-center"
+        >
+          
+
+          <IconPreview
+            className="mr-2"
+            name="mastercard"
+            type="payment-icon"
+          />
+          
+
+          <span>
+            5792*********138
+          </span>
+          
+
+          <span
+            className="badge badge-blue ml-2"
+          >
+            new
+          </span>
+          
+
+        </div>
+        
+
+        <a
+          href="https://developer.payex.com"
+        >
+          developer.payex.com
+        </a>
+        
+
+      </li>
+      <li>
+        <div
+          className="d-flex align-items-center"
+        >
+          
+
+          <IconPreview
+            className="mr-2"
+            name="amex"
+            type="payment-icon"
+          />
+          
+
+          <span>
+            3651*********701
+          </span>
+          
+
+        </div>
+        <i
+          className="material-icons"
+        >
+          star
+        </i>
+        
+
+      </li>
+      <li>
+        <div
+          className="d-flex align-items-center"
+        >
+          
+
+          <IconPreview
+            className="mr-2"
+            name="visa"
+            type="payment-icon"
           />
           
 
