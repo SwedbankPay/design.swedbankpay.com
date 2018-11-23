@@ -9,11 +9,11 @@ const _colorPool = [
     "0, 67, 0", // darkened 40%
     "147, 255, 170", // lightened 40%
     "0, 93, 0", // darkened 30%
+    "122, 246, 145", // lightened 30%
     "0, 118, 17", // darkened 20%
-    "20, 144, 43", // darkened 10%
-    "71, 195, 94", // lightened 10%
     "96, 220, 119", // lightened 20%
-    "122, 246, 145" // lightened 30%
+    "20, 144, 43", // darkened 10%
+    "71, 195, 94" // lightened 10%
 ];
 
 const _init = (ctx, userOptions) => {

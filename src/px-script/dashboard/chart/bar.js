@@ -6,28 +6,30 @@ const initBarChart = (userOptions, colorPool) => {
             ...dataset,
             backgroundColor: [],
             borderColor: [],
-            hoverBackgroundColor: [],
-            hoverBorderColor: [],
             borderWidth: 1,
             hoverBorderWidth: 2
         };
 
         if (type === "line") {
             preparedDataset.pointBackgroundColor = [];
-            preparedDataset.pointHoverBackgroundColor = [];
-            preparedDataset.pointHoverBorderColor = [];
             preparedDataset.pointBorderColor = [];
-            preparedDataset.pointBorderWidth = 2;
+            preparedDataset.pointHoverBorderColor = [];
+            preparedDataset.pointHoverBackgroundColor = [];
             preparedDataset.borderWidth = 4;
+            preparedDataset.pointBorderWidth = 2;
             preparedDataset.pointRadius = 4;
             preparedDataset.pointHoverRadius = 6;
+
+        } else {
+            preparedDataset.hoverBackgroundColor = [];
+            preparedDataset.hoverBorderColor = [];
         }
 
         data.forEach(() => {
             if (!type) {
                 preparedDataset.backgroundColor.push(`rgba(${colorPool[index]}, 0.5)`);
-                preparedDataset.hoverBackgroundColor.push(`rgba(${colorPool[index]}, 0.7)`);
                 preparedDataset.borderColor.push(`rgba(${colorPool[index]}, 0.9)`);
+                preparedDataset.hoverBackgroundColor.push(`rgba(${colorPool[index]}, 0.7)`);
                 preparedDataset.hoverBorderColor.push(`rgba(${colorPool[index]}, 1)`);
 
             } else if (type === "line") {
