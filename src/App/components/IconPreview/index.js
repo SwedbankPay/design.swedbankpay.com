@@ -11,7 +11,7 @@ const IconPreview = ({ name, preview, previewSize, size, className, type }) => {
             <i className={iconClasses}>{iconClasses.includes("material-icons") ? name : null}</i>
             <span>{preview ? name : size}</span>
         </div>
-    ) : <i className={iconClasses}></i>;
+    ) : <i className={iconClasses}>{iconClasses.includes("material-icons") ? name : null}</i>;
 };
 
 IconPreview.propTypes = {
