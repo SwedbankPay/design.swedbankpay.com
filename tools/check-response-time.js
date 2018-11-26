@@ -25,6 +25,10 @@ const URL_LIST = [
         path: "/scripts/px-script.js"
     },
     {
+        name: "px.dashboard",
+        path: "/scripts/px.dashboard.js"
+    },
+    {
         name: "px.css",
         path: "/styles/px.css"
     }
@@ -69,11 +73,17 @@ const checkResponseTime = async () => {
     let highMsWarning = false;
 
     await asyncForEach(URL_LIST, async url => {
-        const responseTime = await getResponseTime(BASEURL + url.path);
         const { SUCCESS, WARNING, ERROR } = STATES;
 
+        let responseTime = 9001;
+        let timesChecked = 0;
         let responseColor = "";
         let responseIcon = "";
+
+        while (responseTime > MS_THRESHOLDS.ERROR && timesChecked < 5) {
+            timesChecked++;
+            responseTime = await getResponseTime(BASEURL + url.path);
+        }
 
         if (responseTime > MS_THRESHOLDS.ERROR) {
             responseColor = ERROR.COLOR;
@@ -95,7 +105,7 @@ const checkResponseTime = async () => {
 
     if (highMsWarning) {
         slackMessageData.attachments.push({
-            text: "<!channel> Investigate response times! :fire:",
+            text: "One or more high response times! :fire:",
             color: STATES.ERROR
         });
     }
