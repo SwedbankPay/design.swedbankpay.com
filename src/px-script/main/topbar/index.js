@@ -8,7 +8,7 @@ const topbar = (() => {
         if (menu) {
             const menuBtnElement = menu.querySelector(".topbar-btn");
 
-            if (menuBtnElement) {
+            if (menuBtnElement && menuBtnElement.querySelector("i").innerHTML === "menu") {
                 leftNavMenu = new NavMenu(menuBtnElement);
             }
 

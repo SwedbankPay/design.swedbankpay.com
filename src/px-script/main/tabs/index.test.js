@@ -44,7 +44,7 @@ describe("px-script: tabs", () => {
         expect(tabs.init).toBeInstanceOf(Function);
     });
 
-    it("does not try to create tabs class if no .tabs are present in the DOM", () => {
+    it("does not generate tabs instances if no .tabs are present in the DOM", () => {
         ReactDOM.render(<NoTabsClass items={items} />, div);
         tabs.init();
 

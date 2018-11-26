@@ -42,7 +42,7 @@ const TopbarMenu = ({ menu }) => {
 };
 
 const Topbar = ({ topbarContent, fixed, logout }) => (
-    <header className={`topbar ${fixed ? "topbar-fixed" : ""}`}>{"\n"}
+    <header className={`topbar${fixed ? " topbar-fixed" : ""}`}>{"\n"}
         <>
             {topbarContent ?
             <>
