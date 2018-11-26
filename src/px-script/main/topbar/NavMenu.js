@@ -1,11 +1,8 @@
-import TargetLink from "./TargetLink";
 import { isWithinBoundingBox } from "../utils";
 
 const icons = {
     default: "menu", // "&#xE5D2;"
-    close: "close", // "&#xE5CD;"
-    back: "arrow_back", // "&#xE5C4;"
-    forward: "chevron_right" // "&#xe5cc;"
+    close: "close" // "&#xE5CD;"
 };
 
 export default class NavMenu {
@@ -15,68 +12,14 @@ export default class NavMenu {
         this.btnElement = btnElement;
         this.iconElement = btnElement.querySelector(".topbar-btn-icon");
         this.userIcon = this.iconElement ? this.iconElement.innerHTML : icons.default;
-        this.history = [];
 
         if (this.navMenuElement) {
-            this.navSlides = this.navMenuElement.querySelectorAll(".topbar-nav-slide");
-            this.currentActive = this.navSlides[0];
             btnElement.addEventListener("click", e => {
                 e.preventDefault();
                 this.handleClick();
             });
-
-            if (this.navSlides.length) {
-                this._initNavSlides();
-            }
-
-            if (this.navMenuElement) {
-                this._initTargetLinks();
-            }
-
             this._initAnchors();
         }
-    }
-
-    _initNavSlides () {
-        const appendBackBtn = element => {
-            const i = document.createElement("i");
-
-            i.classList.add("material-icons", "slide-back-btn");
-            i.innerHTML = icons.back;
-            i.addEventListener("click", () => {
-                this.goBack();
-            });
-
-            element.appendChild(i);
-        };
-
-        for (let i = 0; i < this.navSlides.length; i++) {
-            appendBackBtn(this.navSlides[i]);
-        }
-
-        this.navSlides[0].classList.add("current");
-    }
-
-    _initTargetLinks () {
-        this.navMenuElement.querySelectorAll("[data-target]").forEach(link => {
-            const targetLink = new TargetLink(link, icons.forward);
-
-            targetLink.element.addEventListener("click", () => {
-                if (targetLink.targetElement) {
-                    this.currentActive = targetLink.targetElement;
-                    this.history.push(targetLink.parentSlide);
-                    targetLink.navigateToTarget();
-
-                    if (this.history.length > 1) {
-                        const index = this.history.length - 2;
-
-                        this.history[index].classList.add("inactive");
-                    }
-                } else {
-                    console.warn(`There is no element with the selector "${link.dataset.target}" present in the DOM.`);
-                }
-            });
-        });
     }
 
     _initAnchors () {
@@ -104,37 +47,7 @@ export default class NavMenu {
             if (this.iconElement) {
                 this.iconElement.innerHTML = this.userIcon;
             }
-
-            setTimeout(() => {
-                this.reset();
-            }, 500);
         }
-    }
-
-    goBack () {
-        if (this.history.length > 1) {
-            const index = this.history.length - 2;
-
-            this.history[index].classList.remove("inactive");
-        }
-
-        const lastActive = this.history.pop();
-
-        this.currentActive.classList.remove("current");
-        this.currentActive = lastActive;
-        lastActive.classList.remove("prev");
-        lastActive.classList.add("current");
-    }
-
-    reset () {
-        this.history = [];
-        this.navSlides.forEach((slide, i) => {
-            slide.classList.remove("current", "prev", "inactive");
-
-            if (i === 0) {
-                slide.classList.add("current");
-            }
-        });
     }
 
     handleClick () {

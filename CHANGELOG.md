@@ -18,3 +18,4 @@
 ### Removed
 
 - Removed Payment Icons from core documentation.
+- Removed support for topbar-nav-left with several levels and topbar-nav-right.
