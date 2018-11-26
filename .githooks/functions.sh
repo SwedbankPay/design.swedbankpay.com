@@ -12,5 +12,5 @@ check_difference() {
         $2
     else
         echo -e "======> No changes found."
-fi
+    fi
 }
