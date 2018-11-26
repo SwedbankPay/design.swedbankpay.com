@@ -37,17 +37,4 @@ describe("Components: Topbar", () => {
             expect(wrapper).toMatchSnapshot();
         });
     });
-
-    // TODO: Remove when deprecated parts are deleted. [AW]
-    describe("DeprecatedAlert", () => {
-        it("is defined", () => {
-            expect(DeprecatedAlert).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<DeprecatedAlert />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
 });

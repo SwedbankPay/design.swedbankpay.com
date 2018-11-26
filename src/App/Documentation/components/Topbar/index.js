@@ -4,7 +4,6 @@ import PrismCode from "react-prism";
 import { ComponentPreview, DocContainer, Property, Attribute } from "#";
 import TopbarComponent from "@/Topbar";
 import { topbar } from "$/px-script/main";
-import Alert from "@/Alert";
 
 const menu = {
     btn: {
@@ -18,20 +17,6 @@ const topbarContent = {
     id: "topbar-nav",
     ...menu
 };
-
-// TODO: Remove when deprecated parts are deleted.
-const DeprecatedAlert = () => (
-    <Alert type="danger">
-        <h3>Component contains deprecated parts</h3>
-        <p>The following parts are deprecated and will be removed:</p>
-        <ul>
-            <li>Right nav</li>
-            <li>Levels in left nav</li>
-            <li>topbar-btn-right and topbar-btn-left classes will be replaced by topbar-btn</li>
-        </ul>
-        <p>For continued support, please follow the examples in the documentation.</p>
-    </Alert>
-);
 
 const Overview = () => (
     <>
