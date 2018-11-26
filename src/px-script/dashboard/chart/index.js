@@ -49,9 +49,14 @@ const chart = (id, userOptions) => {
     const element = document.getElementById(id);
 
     if (element && element.tagName === "CANVAS") {
-        const ctx = element.getContext("2d");
+        if (!userOptions.type) {
+            console.warn("Chart: You need to specify a chart type.");
+        } else if (!userOptions.data) {
+            console.warn("Chart: You need to provide options.data.");
+        } else {
+            _init(element.getContext("2d"), userOptions);
+        }
 
-        _init(ctx, userOptions);
     } else if (element) {
         console.warn(`Chart: Element with id "${id}" is not of type canvas.`);
     } else {
@@ -60,3 +65,6 @@ const chart = (id, userOptions) => {
 };
 
 export default chart;
+
+/* For testing */
+export { _colorPool };
