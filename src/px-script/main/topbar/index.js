@@ -2,21 +2,21 @@ import NavMenu from "./NavMenu";
 
 const topbar = (() => {
     const init = index => {
-        const menu = document.querySelectorAll(".topbar")[index || 0];
-        let leftNavMenu;
+        const topbarComponent = document.querySelectorAll(".topbar")[index || 0];
+        let navMenu;
 
-        if (menu) {
-            const menuBtnElement = menu.querySelector(".topbar-btn");
+        if (topbarComponent) {
+            navMenu = topbarComponent.querySelector(".topbar-nav");
 
-            if (menuBtnElement && menuBtnElement.querySelector("i").innerHTML === "menu") {
-                leftNavMenu = new NavMenu(menuBtnElement);
+            if (navMenu) {
+                navMenu = new NavMenu(topbarComponent, navMenu);
+
+                document.querySelector("html").addEventListener("mousedown", e => {
+                    if (navMenu.isOpen && !navMenu.containsPoint(e.clientX, e.clientY)) {
+                        navMenu.close();
+                    }
+                });
             }
-
-            document.querySelector("html").addEventListener("mousedown", e => {
-                if (leftNavMenu && leftNavMenu.isOpen && !leftNavMenu.containsPoint(e.clientX, e.clientY)) {
-                    leftNavMenu.close();
-                }
-            });
         }
     };
 

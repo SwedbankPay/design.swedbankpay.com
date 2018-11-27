@@ -6,20 +6,18 @@ const icons = {
 };
 
 export default class NavMenu {
-    constructor (btnElement) {
-        this.navMenuElement = document.querySelector(btnElement.dataset.toggleNav);
+    constructor (topbarComponent, navMenu) {
+        this.navMenuElement = navMenu;
         this.isOpen = false;
-        this.btnElement = btnElement;
-        this.iconElement = btnElement.querySelector(".topbar-btn-icon");
+        this.btnElement = topbarComponent.querySelector(".topbar-btn");
+        this.iconElement = this.btnElement.querySelector(".topbar-btn-icon");
         this.userIcon = this.iconElement ? this.iconElement.innerHTML : icons.default;
 
-        if (this.navMenuElement) {
-            btnElement.addEventListener("click", e => {
-                e.preventDefault();
-                this.handleClick();
-            });
-            this._initAnchors();
-        }
+        this.btnElement.addEventListener("click", e => {
+            e.preventDefault();
+            this.handleClick();
+        });
+        this._initAnchors();
     }
 
     _initAnchors () {
@@ -29,24 +27,20 @@ export default class NavMenu {
     }
 
     open () {
-        if (!this.isOpen) {
-            this.navMenuElement.classList.add("in");
-            this.isOpen = true;
+        this.navMenuElement.classList.add("in");
+        this.isOpen = true;
 
-            if (this.iconElement) {
-                this.iconElement.innerHTML = icons.close;
-            }
+        if (this.iconElement) {
+            this.iconElement.innerHTML = icons.close;
         }
     }
 
     close () {
-        if (this.isOpen) {
-            this.navMenuElement.classList.remove("in");
-            this.isOpen = false;
+        this.navMenuElement.classList.remove("in");
+        this.isOpen = false;
 
-            if (this.iconElement) {
-                this.iconElement.innerHTML = this.userIcon;
-            }
+        if (this.iconElement) {
+            this.iconElement.innerHTML = this.userIcon;
         }
     }
 

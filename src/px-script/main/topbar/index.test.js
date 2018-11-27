@@ -105,11 +105,5 @@ describe("px-script: topbar", () => {
         ReactDOM.unmountComponentAtNode(div);
     });
 
-    it("closes topbar-nav if you click outside", () => {
-        ReactDOM.render(<Topbar navOpen />, div);
-        NavMenu.containsPoint(() => false);
-        topbar.init();
-
-        ReactDOM.unmountComponentAtNode(div);
-    });
+    // Missing some tests [AW]
 });
