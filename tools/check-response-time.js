@@ -25,10 +25,6 @@ const URL_LIST = [
         path: "/scripts/px-script.js"
     },
     {
-        name: "px.dashboard",
-        path: "/scripts/px.dashboard.js"
-    },
-    {
         name: "px.css",
         path: "/styles/px.css"
     }
