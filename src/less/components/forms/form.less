@@ -25,11 +25,12 @@ fieldset {
     padding: 0;
     margin: 0;
     border: 0;
-    // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
-    // so we reset that to ensure it behaves more like a standard block element.
-    // See https://github.com/twbs/bootstrap/issues/12359.
-    min-width: 0;
     margin-bottom: @base-margin;
+
+    /* Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+     * so we reset that to ensure it behaves more like a standard block element.
+     * See https://github.com/twbs/bootstrap/issues/12359. */
+    min-width: 0;
 
     &:disabled {
         textarea {
@@ -140,7 +141,7 @@ fieldset {
                     background: @input-checked-bg-disabled;
 
                     &:before {
-                        border-right-color: @input-checked-bg-disabled !important; // stylelint-disable-line declaration-no-important
+                        border-right-color: @input-checked-bg-disabled !important; /* stylelint-disable-line declaration-no-important */
                     }
                 }
             }
@@ -187,19 +188,19 @@ legend {
     .placeholder();
 
     &::placeholder {
-        color: @gray-6; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+        color: @gray-6; /* Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526. */
         opacity: 1;
     }
 
-    /* HTML5 says that controls under a fieldset > legend:first-child won't be
+    /* HTML5 says that controls under a fieldset > legend:first-child wont be
      * disabled if the fieldset is disabled. Due to implementation difficulty, we
-     * don't honor that edge case; we style them as disabled anyway.
+     * dont honor that edge case; we style them as disabled anyway.
      */
     &[disabled],
     &[readonly],
     fieldset[disabled] & {
-        background-color: @input-bg-disabled !important; // stylelint-disable-line declaration-no-important
-        opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+        background-color: @input-bg-disabled !important; /* stylelint-disable-line declaration-no-important */
+        opacity: 1; /* iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655 */
     }
 
     &[disabled],
