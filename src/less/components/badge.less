@@ -2,15 +2,13 @@
     color: @white;
     padding: @badge-padding;
     border-radius: 0.1875rem;
-
-    .for-each(@badge in @badge-list) {
-        @name: at(@badge, 1);
-
+    
+    each(@badge-list-new, .(@color, @name) {
         &.badge-@{name} {
-            background-color: at(@badge, 2);
-            border: 1px solid at(@badge, 2);
+            background-color: @color;
+            border: 1px solid @color;
         }
-    }
+    });
 
     .material-icons {
         font-size: 1rem;
