@@ -1,15 +1,7 @@
 # Changelog
 
-## [0.14.1] - 2018-11-21
+## [0.14.2] - 2018-11-27
 
 ### Changed
 
-- Changed border-color on checkbox and radio button in unchecked state to gray.
-- Changed transition and border-color for toggleboxes
-- Changed paragraphs to not have margin-bottom if it is a last child.
-
-### Fixed
-
-- Fixed issue with menu icon not changing when clicked for topbar.
-- Fixed issue with `.color-danger` wrongfully being renamed to `.color-error`.
-- Fixed alignment issue with checkboxes.
+- Slightly increased the bottom margin on all form fields to allow for better grouping and spacing for data attribute messages.
