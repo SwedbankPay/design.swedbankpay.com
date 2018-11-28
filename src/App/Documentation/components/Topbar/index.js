@@ -4,7 +4,6 @@ import PrismCode from "react-prism";
 import { ComponentPreview, DocContainer, Property, Attribute } from "#";
 import TopbarComponent from "@/Topbar";
 import { topbar } from "$/px-script/main";
-import Alert from "@/Alert";
 
 const menu = {
     btn: {
@@ -13,25 +12,6 @@ const menu = {
     },
     items: ["Link 1", "Link 2", "Link 3"]
 };
-
-const topbarContent = {
-    id: "topbar-nav",
-    ...menu
-};
-
-// TODO: Remove when deprecated parts are deleted.
-const DeprecatedAlert = () => (
-    <Alert type="danger">
-        <h3>Component contains deprecated parts</h3>
-        <p>The following parts are deprecated and will be removed:</p>
-        <ul>
-            <li>Right nav</li>
-            <li>Levels in left nav</li>
-            <li>topbar-btn-right and topbar-btn-left classes will be replaced by topbar-btn</li>
-        </ul>
-        <p>For continued support, please follow the examples in the documentation.</p>
-    </Alert>
-);
 
 const Overview = () => (
     <>
@@ -50,7 +30,7 @@ const Overview = () => (
             to get the menu to appear when the menu-button is clicked.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <TopbarComponent topbarContent={topbarContent} logout />
+            <TopbarComponent topbarContent={menu} logout />
         </ComponentPreview>
     </>
 );
@@ -76,8 +56,7 @@ class Topbar extends Component {
     render () {
         return (
             <DocContainer docToc>
-                <DeprecatedAlert />
-                <p className="lead">Topbar...</p>
+                <p className="lead">The topbar is used to give users an easily available navigational bar at the top of your web application.</p>
                 <Overview />
                 <FixedTopbar />
             </DocContainer>
@@ -88,4 +67,4 @@ class Topbar extends Component {
 export default Topbar;
 
 /* For testing */
-export { Overview, FixedTopbar, DeprecatedAlert };
+export { Overview, FixedTopbar };

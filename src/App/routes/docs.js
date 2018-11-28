@@ -195,7 +195,7 @@ module.exports = [
                 componentPath: "components/Tooltips"
             },
             {
-                title: "Topbar (contains deprecated)",
+                title: "Topbar",
                 path: "/docs/components/topbar",
                 componentPath: "components/Topbar"
             }

@@ -227,7 +227,7 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "components/Topbar",
                 "path": "/docs/components/topbar",
-                "title": "Topbar (contains deprecated)",
+                "title": "Topbar",
               },
             ]
           }
