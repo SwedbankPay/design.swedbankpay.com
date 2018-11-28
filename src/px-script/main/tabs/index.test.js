@@ -21,18 +21,6 @@ describe("px-script: tabs", () => {
         </div>
     );
 
-    const NoTabsClass = () => (
-        <div>
-            <ul>
-                {items.map((name, i) => (
-                    <li key={i}>{"\n"}
-                        <a href="#">{name}</a>{"\n"}
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
-
     document.body.appendChild(div);
 
     it("is defined", () => {
