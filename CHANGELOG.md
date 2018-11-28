@@ -7,6 +7,7 @@
 - Added documentation for image utilities.
 - Added image utility .img-thumbnail.
 - Added size classes for material icons.
+- Added hover version of item-list.
 
 ### Changed
 

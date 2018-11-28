@@ -106,12 +106,14 @@ const ItemList = () => (
     </>
 );
 
-const StatusItemList = () => (
+const HoverItemList = () => (
     <>
-        <h2 id="status-item-list">Status item list </h2>
-        <p> Status item list info...<Property value=".item-list" /></p>
+        <h2 id="hover-item-list">Hover item list </h2>
+        <p>
+            Include <Property value=".item-list-hover" /> to give your items a hover effect. You can use this on any variation of <Property value=".item-list" />.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <ul className="item-list">
+            <ul className="item-list item-list-hover">
                 <li>{"\n"}
                     <span>4925*********004</span>{"\n"}
                     <span className="status status-success">Active</span>{"\n"}
@@ -175,7 +177,7 @@ const ListsText = () => (
         <DescriptionList />
         <SettingsList />
         <ItemList />
-        <StatusItemList />
+        <HoverItemList />
         <StripedItemList />
     </div>
 );
@@ -200,4 +202,4 @@ class Lists extends Component {
 export default Lists;
 
 /* For testing */
-export { BasicList, InlineList, DescriptionList, SettingsList, ItemList, StatusItemList, StripedItemList, ListsText };
+export { BasicList, InlineList, DescriptionList, SettingsList, ItemList, HoverItemList, StripedItemList, ListsText };
