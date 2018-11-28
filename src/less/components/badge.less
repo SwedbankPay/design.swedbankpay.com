@@ -2,8 +2,8 @@
     color: @white;
     padding: @badge-padding;
     border-radius: 0.1875rem;
-    
-    each(@badge-list-new, .(@color, @name) {
+
+    each(@badge-list, .(@color, @name) {
         &.badge-@{name} {
             background-color: @color;
             border: 1px solid @color;
