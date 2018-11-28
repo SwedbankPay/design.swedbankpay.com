@@ -467,10 +467,8 @@ exports[`Components: Toast PremadeToasts renders 1`] = `
 </Fragment>
 `;
 
-exports[`Components: Toast ToastText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
+exports[`Components: Toast renders 1`] = `
+<DocContainer>
   <ExperimentalComponentAlert />
   <p
     className="lead"
@@ -481,20 +479,5 @@ exports[`Components: Toast ToastText renders 1`] = `
   <Options />
   <PremadeToasts />
   <CustomHtml />
-</div>
-`;
-
-exports[`Components: Toast renders 1`] = `
-<div
-  className="doc-container"
->
-  <div
-    className="row"
-  >
-    <ToastText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+</DocContainer>
 `;

@@ -1617,29 +1617,6 @@ exports[`Utilities: Flex Fill renders 1`] = `
 </Fragment>
 `;
 
-exports[`Utilities: Flex FlexText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.
-  </p>
-  <EnableFlexBehaviors />
-  <Direction />
-  <JustifyContent />
-  <AlignItems />
-  <AlignSelf />
-  <Fill />
-  <GrowAndShrink />
-  <AutoMargins />
-  <Wrap />
-  <Order />
-  <AlignContent />
-</div>
-`;
-
 exports[`Utilities: Flex GrowAndShrink renders 1`] = `
 <Fragment>
   <h2
@@ -2358,18 +2335,24 @@ exports[`Utilities: Flex Wrap renders 1`] = `
 `;
 
 exports[`Utilities: Flex renders 1`] = `
-<Fragment>
-  <div
-    className="doc-container"
+<DocContainer
+  docToc={true}
+>
+  <p
+    className="lead"
   >
-    <div
-      className="row"
-    >
-      <FlexText />
-      <DocToc
-        component={[Function]}
-      />
-    </div>
-  </div>
-</Fragment>
+    Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.
+  </p>
+  <EnableFlexBehaviors />
+  <Direction />
+  <JustifyContent />
+  <AlignItems />
+  <AlignSelf />
+  <Fill />
+  <GrowAndShrink />
+  <AutoMargins />
+  <Wrap />
+  <Order />
+  <AlignContent />
+</DocContainer>
 `;

@@ -490,9 +490,9 @@ exports[`Utilities: Spacing Notation renders 1`] = `
 </Fragment>
 `;
 
-exports[`Utilities: Spacing SpacingText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
+exports[`Utilities: Spacing renders 1`] = `
+<DocContainer
+  docToc={true}
 >
   <p
     className="lead"
@@ -502,22 +502,5 @@ exports[`Utilities: Spacing SpacingText renders 1`] = `
   <HowItWorks />
   <Notation />
   <Examples />
-</div>
-`;
-
-exports[`Utilities: Spacing renders 1`] = `
-<Fragment>
-  <div
-    className="doc-container"
-  >
-    <div
-      className="row"
-    >
-      <SpacingText />
-      <DocToc
-        component={[Function]}
-      />
-    </div>
-  </div>
-</Fragment>
+</DocContainer>
 `;

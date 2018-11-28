@@ -410,23 +410,6 @@ exports[`GettingStarted: Contributing Adding Styles renders 7`] = `
 </div>
 `;
 
-exports[`GettingStarted: Contributing Contributing Text renders 1`] = `
-<div
-  className="col-lg-10"
->
-  <p
-    className="lead"
-  >
-    To create a new component
-  </p>
-  <CreatingYourComponent />
-  <CreateADocumentationPage />
-  <AddComponentToRoutes />
-  <AddingStyles />
-  <AddingJavaScript />
-</div>
-`;
-
 exports[`GettingStarted: Contributing Create A Documentation Page renders 1`] = `
 <Fragment>
   <h2
@@ -594,16 +577,18 @@ exports[`GettingStarted: Contributing Creating Your Component renders 1`] = `
 `;
 
 exports[`GettingStarted: Contributing renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <p
+    className="lead"
   >
-    <ContributingText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    To create a new component
+  </p>
+  <CreatingYourComponent />
+  <CreateADocumentationPage />
+  <AddComponentToRoutes />
+  <AddingStyles />
+  <AddingJavaScript />
+</DocContainer>
 `;

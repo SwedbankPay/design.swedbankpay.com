@@ -477,20 +477,6 @@ exports[`Documentation: Sheet Example renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Sheet SheetText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Sheet...
-  </p>
-  <Example />
-  <UsageWithJavascript />
-</div>
-`;
-
 exports[`Documentation: Sheet UsageWithJavascript renders 1`] = `
 <Fragment>
   <h2
@@ -516,16 +502,15 @@ exports[`Documentation: Sheet UsageWithJavascript renders 1`] = `
 `;
 
 exports[`Documentation: Sheet renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <p
+    className="lead"
   >
-    <SheetText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    Sheet...
+  </p>
+  <Example />
+  <UsageWithJavascript />
+</DocContainer>
 `;

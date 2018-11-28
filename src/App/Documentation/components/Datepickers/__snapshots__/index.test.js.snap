@@ -1,25 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Documentation: Datepickers DatepickersText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Datepickers...
-  </p>
-  <SimpleDatepicker />
-  <InitialValue />
-  <CustomFormat />
-  <IncludeTime />
-  <Required />
-  <ShowingMultipleMonths />
-  <DateRange />
-  <Options />
-</div>
-`;
-
 exports[`Documentation: Datepickers Options renders 1`] = `
 <Fragment>
   <h2
@@ -306,16 +286,21 @@ exports[`Documentation: Datepickers SimpleDatepicker renders 1`] = `
 `;
 
 exports[`Documentation: Datepickers renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <p
+    className="lead"
   >
-    <DatepickersText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    Datepickers...
+  </p>
+  <SimpleDatepicker />
+  <InitialValue />
+  <CustomFormat />
+  <IncludeTime />
+  <Required />
+  <ShowingMultipleMonths />
+  <DateRange />
+  <Options />
+</DocContainer>
 `;

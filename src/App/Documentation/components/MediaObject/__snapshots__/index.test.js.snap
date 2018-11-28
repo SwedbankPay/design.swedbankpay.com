@@ -1,20 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Documentation: MediaObject MediaObjectText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Media objects...
-  </p>
-  <Overview />
-  <Sizes />
-  <MediaPosition />
-</div>
-`;
-
 exports[`Documentation: MediaObject MediaPosition renders 1`] = `
 <Fragment>
   <h2
@@ -153,16 +138,16 @@ exports[`Documentation: MediaObject Sizes renders 1`] = `
 `;
 
 exports[`Documentation: MediaObject renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <p
+    className="lead"
   >
-    <MediaObjectText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    Media objects...
+  </p>
+  <Overview />
+  <Sizes />
+  <MediaPosition />
+</DocContainer>
 `;

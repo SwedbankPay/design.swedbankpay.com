@@ -101,21 +101,6 @@ exports[`Documentation: Steps ClickableSteps renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Steps Steps Text renders 1`] = `
-<div
-  className="col-12 col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Steps.
-  </p>
-  <BasicSteps />
-  <VerticalSteps />
-  <ClickableSteps />
-</div>
-`;
-
 exports[`Documentation: Steps VerticalSteps renders 1`] = `
 <Fragment>
   <h2
@@ -133,7 +118,7 @@ exports[`Documentation: Steps VerticalSteps renders 1`] = `
       className="language-html"
       component="code"
     >
-      &lt;div&gt;
+      &lt;DocContainer&gt;
     </PrismCode>
      element.
   </p>
@@ -169,16 +154,16 @@ exports[`Documentation: Steps VerticalSteps renders 1`] = `
 `;
 
 exports[`Documentation: Steps renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <p
+    className="lead"
   >
-    <StepsText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    Steps.
+  </p>
+  <BasicSteps />
+  <VerticalSteps />
+  <ClickableSteps />
+</DocContainer>
 `;

@@ -1,19 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Documentation: Dialog DialogText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Dialogs...
-  </p>
-  <Example />
-  <UsageWithJavascript />
-</div>
-`;
-
 exports[`Documentation: Dialog Example renders 1`] = `
 <Fragment>
   <h2
@@ -126,16 +112,15 @@ exports[`Documentation: Dialog UsageWithJavascript renders 1`] = `
 `;
 
 exports[`Documentation: Dialog renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <p
+    className="lead"
   >
-    <DialogText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    Dialogs...
+  </p>
+  <Example />
+  <UsageWithJavascript />
+</DocContainer>
 `;

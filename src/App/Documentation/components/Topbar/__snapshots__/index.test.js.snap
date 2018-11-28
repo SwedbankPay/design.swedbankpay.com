@@ -137,9 +137,9 @@ exports[`Components: Topbar Overview renders 1`] = `
 </Fragment>
 `;
 
-exports[`Components: Topbar TopbarText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
+exports[`Components: Topbar renders 1`] = `
+<DocContainer
+  docToc={true}
 >
   <DeprecatedAlert />
   <p
@@ -149,20 +149,5 @@ exports[`Components: Topbar TopbarText renders 1`] = `
   </p>
   <Overview />
   <FixedTopbar />
-</div>
-`;
-
-exports[`Components: Topbar renders 1`] = `
-<div
-  className="doc-container"
->
-  <div
-    className="row"
-  >
-    <TopbarText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+</DocContainer>
 `;

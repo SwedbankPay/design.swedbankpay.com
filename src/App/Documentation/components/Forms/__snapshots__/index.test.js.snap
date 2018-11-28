@@ -308,31 +308,6 @@ exports[`Documentation: Forms FormGrid renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Forms FormsText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Forms...
-  </p>
-  <Overview />
-  <FormGrid />
-  <Validation />
-  <UsageWithFieldsets />
-  <StaticText />
-  <Checkboxes />
-  <DisabledCheckboxes />
-  <RadioButtons />
-  <DisabledRadioButtons />
-  <Toggleboxes />
-  <DisabledToggleboxes />
-  <RangeSlider />
-  <DisabledRangeSlider />
-</div>
-`;
-
 exports[`Documentation: Forms Overview form prevents default 1`] = `
 <Fragment>
   <h2
@@ -1057,16 +1032,26 @@ exports[`Documentation: Forms Validation renders 1`] = `
 `;
 
 exports[`Documentation: Forms renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <p
+    className="lead"
   >
-    <FormsText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    Forms...
+  </p>
+  <Overview />
+  <FormGrid />
+  <Validation />
+  <UsageWithFieldsets />
+  <StaticText />
+  <Checkboxes />
+  <DisabledCheckboxes />
+  <RadioButtons />
+  <DisabledRadioButtons />
+  <Toggleboxes />
+  <DisabledToggleboxes />
+  <RangeSlider />
+  <DisabledRangeSlider />
+</DocContainer>
 `;

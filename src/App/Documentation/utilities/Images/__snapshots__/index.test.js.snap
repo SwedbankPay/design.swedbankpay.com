@@ -54,22 +54,6 @@ exports[`Utilities: Image ImageRounded renders 1`] = `
 </Fragment>
 `;
 
-exports[`Utilities: Image ImageText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Use our image utilties to modify how they are displayed or work when resized.
-  </p>
-  <ImageFluid />
-  <ImageRounded />
-  <ImageCircle />
-  <ImageThumbnail />
-</div>
-`;
-
 exports[`Utilities: Image ImageThumbnail renders 1`] = `
 <Fragment>
   <h2

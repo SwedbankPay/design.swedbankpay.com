@@ -113,21 +113,6 @@ exports[`Documentation: Pagination PaginationBullets renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Pagination PaginationText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Pagination...
-  </p>
-  <DefaultPagination />
-  <PaginationBullets />
-  <SimplePagination />
-</div>
-`;
-
 exports[`Documentation: Pagination SimplePagination renders 1`] = `
 <Fragment>
   <h2
@@ -157,16 +142,16 @@ exports[`Documentation: Pagination SimplePagination renders 1`] = `
 `;
 
 exports[`Documentation: Pagination renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <p
+    className="lead"
   >
-    <PaginationText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    Pagination...
+  </p>
+  <DefaultPagination />
+  <PaginationBullets />
+  <SimplePagination />
+</DocContainer>
 `;

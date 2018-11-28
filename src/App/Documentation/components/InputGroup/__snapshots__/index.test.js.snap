@@ -235,23 +235,6 @@ exports[`Documentation: InputGroup Disabled renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: InputGroup InputGroupText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Input groups...
-  </p>
-  <BasicExample />
-  <ButtonAddons />
-  <WithSelect />
-  <ValidationStates />
-  <Disabled />
-</div>
-`;
-
 exports[`Documentation: InputGroup ValidationStates renders 1`] = `
 <Fragment>
   <h2
@@ -347,16 +330,18 @@ exports[`Documentation: InputGroup WithSelect renders 1`] = `
 `;
 
 exports[`Documentation: InputGroup renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <p
+    className="lead"
   >
-    <InputGroupText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    Input groups...
+  </p>
+  <BasicExample />
+  <ButtonAddons />
+  <WithSelect />
+  <ValidationStates />
+  <Disabled />
+</DocContainer>
 `;

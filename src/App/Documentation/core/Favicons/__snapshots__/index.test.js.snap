@@ -1,19 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Core: Favicons FaviconsText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    The PayEx favicon...
-  </p>
-  <OurFavicon />
-  <Usage />
-</div>
-`;
-
 exports[`Core: Favicons OurFavicon renders 1`] = `
 <Fragment>
   <h2
@@ -251,16 +237,15 @@ exports[`Core: Favicons Usage renders 1`] = `
 `;
 
 exports[`Core: Favicons renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <p
+    className="lead"
   >
-    <FaviconsText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    The PayEx favicon...
+  </p>
+  <OurFavicon />
+  <Usage />
+</DocContainer>
 `;

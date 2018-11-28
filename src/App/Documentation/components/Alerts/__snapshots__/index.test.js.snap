@@ -63,22 +63,6 @@ exports[`Documentation: Alerts Alert With Icon renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Alerts Alerts Text renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
-  </p>
-  <BasicUsage />
-  <AlertWithIcon />
-  <ClosingTheAlert />
-  <ExtendedUsage />
-</div>
-`;
-
 exports[`Documentation: Alerts Basic Usage renders 1`] = `
 <Fragment>
   <h2
@@ -279,16 +263,17 @@ exports[`Documentation: Alerts Extended Usage renders 1`] = `
 `;
 
 exports[`Documentation: Alerts renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <p
+    className="lead"
   >
-    <AlertsText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
+  </p>
+  <BasicUsage />
+  <AlertWithIcon />
+  <ClosingTheAlert />
+  <ExtendedUsage />
+</DocContainer>
 `;

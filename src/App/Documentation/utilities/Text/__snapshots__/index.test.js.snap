@@ -115,22 +115,6 @@ exports[`Utilities: Text TextAlignment renders 1`] = `
 </Fragment>
 `;
 
-exports[`Utilities: Text TextText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Documentation and examples for common text utilities to control alignment, wrapping, weight, and more.
-  </p>
-  <TextAlignment />
-  <TextWrappingAndOverflow />
-  <TextTransform />
-  <FontWeightAndItalics />
-</div>
-`;
-
 exports[`Utilities: Text TextTransform renders 1`] = `
 <Fragment>
   <h2
@@ -265,18 +249,17 @@ exports[`Utilities: Text TextWrappingAndOverflow renders 1`] = `
 `;
 
 exports[`Utilities: Text renders 1`] = `
-<Fragment>
-  <div
-    className="doc-container"
+<DocContainer
+  docToc={true}
+>
+  <p
+    className="lead"
   >
-    <div
-      className="row"
-    >
-      <TextText />
-      <DocToc
-        component={[Function]}
-      />
-    </div>
-  </div>
-</Fragment>
+    Documentation and examples for common text utilities to control alignment, wrapping, weight, and more.
+  </p>
+  <TextAlignment />
+  <TextWrappingAndOverflow />
+  <TextTransform />
+  <FontWeightAndItalics />
+</DocContainer>
 `;
