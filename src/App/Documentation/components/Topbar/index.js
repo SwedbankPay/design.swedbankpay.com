@@ -56,8 +56,7 @@ class Topbar extends Component {
     render () {
         return (
             <DocContainer docToc>
-                <DeprecatedAlert />
-                <p className="lead">Topbar...</p>
+                <p className="lead">The topbar is used to give users an easily available navigational bar at the top of your web application.</p>
                 <Overview />
                 <FixedTopbar />
             </DocContainer>
@@ -68,4 +67,4 @@ class Topbar extends Component {
 export default Topbar;
 
 /* For testing */
-export { Overview, FixedTopbar, DeprecatedAlert };
+export { Overview, FixedTopbar };

@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Topbar, { Overview, FixedTopbar, DeprecatedAlert } from "./index";
+import Topbar, { Overview, FixedTopbar } from "./index";
 
 describe("Components: Topbar", () => {
     it("is defined", () => {
