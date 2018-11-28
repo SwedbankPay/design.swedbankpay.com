@@ -4,7 +4,7 @@
  * Utilities for common `display` values
  */
 
-.for-each(@breakpoint in @grid-breakpoints) {
+each(@grid-breakpoints, .(@size, @abbr) {
     @ruleset: {
         .d@{infix}-none           { display: none !important; }
         .d@{infix}-inline         { display: inline !important; }
@@ -16,8 +16,8 @@
         .d@{infix}-inline-flex    { display: inline-flex !important; }
     }
 
-    .media-breakpoint-up(@breakpoint, @ruleset);
-}
+    .media-breakpoint-up(@size, @abbr, @ruleset);
+});
 
 /*
  * Utilities for toggling `display` in print
