@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, Attribute, DocToc } from "#";
+import { ComponentPreview, Attribute, DocContainer } from "#";
 import { Datepicker as DatepickerComponent } from "@/FormComponents";
 import { datepicker } from "$/px-script/main";
 
@@ -265,20 +265,6 @@ const Options = () => (
     </>
 );
 
-const DatepickersText = () => (
-    <div className="col-lg-10 doc-body">
-        <p className="lead">Datepickers...</p>
-        <SimpleDatepicker />
-        <InitialValue />
-        <CustomFormat />
-        <IncludeTime />
-        <Required />
-        <ShowingMultipleMonths />
-        <DateRange />
-        <Options />
-    </div>
-);
-
 class Datepickers extends Component {
     componentDidMount () {
         datepicker.init();
@@ -286,12 +272,17 @@ class Datepickers extends Component {
 
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <DatepickersText />
-                    <DocToc component={DatepickersText} />
-                </div>
-            </div>
+            <DocContainer docToc>
+                <p className="lead">Datepickers...</p>
+                <SimpleDatepicker />
+                <InitialValue />
+                <CustomFormat />
+                <IncludeTime />
+                <Required />
+                <ShowingMultipleMonths />
+                <DateRange />
+                <Options />
+            </DocContainer>
         );
     }
 }
@@ -299,4 +290,4 @@ class Datepickers extends Component {
 export default Datepickers;
 
 /* For testing */
-export { SimpleDatepicker, InitialValue, CustomFormat, IncludeTime, Required, ShowingMultipleMonths, DateRange, Options, DatepickersText };
+export { SimpleDatepicker, InitialValue, CustomFormat, IncludeTime, Required, ShowingMultipleMonths, DateRange, Options };

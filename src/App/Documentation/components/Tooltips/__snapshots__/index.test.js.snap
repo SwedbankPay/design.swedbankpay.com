@@ -95,9 +95,9 @@ exports[`Components: Tooltip Overview renders 1`] = `
 </Fragment>
 `;
 
-exports[`Components: Tooltip TooltipText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
+exports[`Components: Tooltip renders 1`] = `
+<DocContainer
+  docToc={true}
 >
   <p
     className="lead"
@@ -105,20 +105,5 @@ exports[`Components: Tooltip TooltipText renders 1`] = `
     Tooltips are small, interactive, textual hints for mainly graphical elements. When using icons for actions you can use a tooltip to give people clarification on its function.
   </p>
   <Overview />
-</div>
-`;
-
-exports[`Components: Tooltip renders 1`] = `
-<div
-  className="doc-container"
->
-  <div
-    className="row"
-  >
-    <TooltipText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+</DocContainer>
 `;

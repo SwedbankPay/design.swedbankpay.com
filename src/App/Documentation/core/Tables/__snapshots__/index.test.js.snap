@@ -291,9 +291,9 @@ exports[`Documentation: Table StripedTable renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Table TablesText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
+exports[`Documentation: Table renders 1`] = `
+<DocContainer
+  docToc={true}
 >
   <p
     className="lead"
@@ -306,20 +306,5 @@ exports[`Documentation: Table TablesText renders 1`] = `
   <HoverTable />
   <HoverStripedTable />
   <DescriptionTable />
-</div>
-`;
-
-exports[`Documentation: Table renders 1`] = `
-<div
-  className="doc-container"
->
-  <div
-    className="row"
-  >
-    <TablesText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+</DocContainer>
 `;

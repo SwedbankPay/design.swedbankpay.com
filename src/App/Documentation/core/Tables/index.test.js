@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Table, { DocTable, BasicTable, StripedTable, CondensedTable, HoverTable, HoverStripedTable, DescriptionTable, TablesText } from "./index";
+import Table, { DocTable, BasicTable, StripedTable, CondensedTable, HoverTable, HoverStripedTable, DescriptionTable } from "./index";
 
 describe("Documentation: Table", () => {
     it("is defined", () => {
@@ -90,18 +90,6 @@ describe("Documentation: Table", () => {
 
         it("renders", () => {
             const wrapper = shallow(<DescriptionTable />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("TablesText", () => {
-        it("is defined", () => {
-            expect(TablesText).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<TablesText />);
 
             expect(wrapper).toMatchSnapshot();
         });

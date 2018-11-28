@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Tabs, { BasicUsage, Collapsed, TabsText } from "./index";
+import Tabs, { BasicUsage, Collapsed } from "./index";
 
 describe("Components: Tabs", () => {
     it("is defined", () => {
@@ -33,18 +33,6 @@ describe("Components: Tabs", () => {
 
         it("renders", () => {
             const wrapper = shallow(<Collapsed />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("TabsText", () => {
-        it("is defined", () => {
-            expect(TabsText).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<TabsText />);
 
             expect(wrapper).toMatchSnapshot();
         });

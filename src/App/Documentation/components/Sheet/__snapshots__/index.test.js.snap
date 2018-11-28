@@ -477,9 +477,54 @@ exports[`Documentation: Sheet Example renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Sheet SheetText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
+exports[`Documentation: Sheet UsageWithJavascript renders 1`] = `
+<Fragment>
+  <h2
+    id="usage-with-javascript"
+  >
+    Usage with javascript
+  </h2>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+  >
+    <div
+      className="sheet"
+      id="demo-sheet"
+    >
+      
+
+      ...
+      
+
+    </div>
+    
+
+  </ComponentPreview>
+  <p>
+    To open a sheet:
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    px.sheet.open("demo-sheet")
+  </ComponentPreview>
+  <p>
+    To close a sheet:
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    px.sheet.close("demo-sheet")
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Sheet renders 1`] = `
+<DocContainer
+  docToc={true}
 >
   <p
     className="lead"
@@ -488,44 +533,5 @@ exports[`Documentation: Sheet SheetText renders 1`] = `
   </p>
   <Example />
   <UsageWithJavascript />
-</div>
-`;
-
-exports[`Documentation: Sheet UsageWithJavascript renders 1`] = `
-<Fragment>
-  <h2
-    id="usage-with-javascript"
-  >
-    Usage with javascript
-  </h2>
-  <p>
-    To programmatically open a sheet, use 
-    <Property
-      value="px.sheet.open(\\"SHEET_ID\\")"
-    />
-    .
-  </p>
-  <p>
-    To programmatically close a sheet, use 
-    <Property
-      value="px.sheet.close(\\"SHEET_ID\\")"
-    />
-    .
-  </p>
-</Fragment>
-`;
-
-exports[`Documentation: Sheet renders 1`] = `
-<div
-  className="doc-container"
->
-  <div
-    className="row"
-  >
-    <SheetText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+</DocContainer>
 `;

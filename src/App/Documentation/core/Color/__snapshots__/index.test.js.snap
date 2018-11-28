@@ -70,30 +70,13 @@ exports[`Core: Color ColorPalette renders 1`] = `
 </Fragment>
 `;
 
-exports[`Core: Color ColorText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
+exports[`Core: Color renders 1`] = `
+<DocContainer>
   <p
     className="lead"
   >
     Here there be colors...
   </p>
   <ColorPalette />
-</div>
-`;
-
-exports[`Core: Color renders 1`] = `
-<div
-  className="doc-container"
->
-  <div
-    className="row"
-  >
-    <ColorText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+</DocContainer>
 `;

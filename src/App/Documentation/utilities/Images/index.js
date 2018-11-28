@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ComponentPreview, DocToc, Property } from "#";
+import { ComponentPreview, DocContainer, Property } from "#";
 
 const ImageFluid = () => (
     <>
@@ -42,26 +42,17 @@ const ImageThumbnail = () => (
     </>
 );
 
-const ImageText = () => (
-    <div className="col-lg-10 doc-body">
+const Image = () => (
+    <DocContainer docToc>
         <p className="lead">Use our image utilties to modify how they are displayed or work when resized.</p>
         <ImageFluid />
         <ImageRounded />
         <ImageCircle />
         <ImageThumbnail />
-    </div>
-);
-
-const Image = () => (
-    <div className="doc-container">
-        <div className="row">
-            <ImageText />
-            <DocToc component={ImageText} />
-        </div>
-    </div>
+    </DocContainer>
 );
 
 export default Image;
 
 /* For testing */
-export { ImageFluid, ImageRounded, ImageCircle, ImageThumbnail, ImageText };
+export { ImageFluid, ImageRounded, ImageCircle, ImageThumbnail };

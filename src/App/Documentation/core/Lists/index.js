@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc, Icon, Property } from "#";
+import { ComponentPreview, DocContainer, Icon, Property } from "#";
 import actionList from "$/px-script/main/action-list";
 
 const BasicList = () => (
@@ -169,19 +169,6 @@ const StripedItemList = () => (
     </>
 );
 
-const ListsText = () => (
-    <div className="col-lg-10 doc-body">
-        <p className="lead">Lots of cool info about lists will be here...</p>
-        <BasicList />
-        <InlineList />
-        <DescriptionList />
-        <SettingsList />
-        <ItemList />
-        <HoverItemList />
-        <StripedItemList />
-    </div>
-);
-
 class Lists extends Component {
     componentDidMount () {
         actionList.init();
@@ -189,12 +176,16 @@ class Lists extends Component {
 
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <ListsText />
-                    <DocToc component={ListsText} />
-                </div>
-            </div>
+            <DocContainer docToc>
+                <p className="lead">Lots of cool info about lists will be here...</p>
+                <BasicList />
+                <InlineList />
+                <DescriptionList />
+                <SettingsList />
+                <ItemList />
+                <HoverItemList />
+                <StripedItemList />
+            </DocContainer>
         );
     }
 }
@@ -202,4 +193,4 @@ class Lists extends Component {
 export default Lists;
 
 /* For testing */
-export { BasicList, InlineList, DescriptionList, SettingsList, ItemList, HoverItemList, StripedItemList, ListsText };
+export { BasicList, InlineList, DescriptionList, SettingsList, ItemList, HoverItemList, StripedItemList };

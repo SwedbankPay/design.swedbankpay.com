@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Breakpoints, { Overview, BreakpointsText } from "./index";
+import Breakpoints, { Overview } from "./index";
 
 describe("Core: Breakpoints", () => {
     it("is defined", () => {
@@ -21,18 +21,6 @@ describe("Core: Breakpoints", () => {
 
         it("renders", () => {
             const wrapper = shallow(<Overview />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("BreakpointsText", () => {
-        it("is defined", () => {
-            expect(BreakpointsText).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<BreakpointsText />);
 
             expect(wrapper).toMatchSnapshot();
         });

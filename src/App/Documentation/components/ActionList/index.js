@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc, Icon, ExperimentalComponentAlert } from "#";
+import { ComponentPreview, DocContainer, Icon, ExperimentalComponentAlert } from "#";
 import actionList from "$/px-script/main/action-list";
 
 const Overview = () => (
@@ -67,15 +67,6 @@ const Anchorpoints = () => (
     </>
 );
 
-const ActionListText = () => (
-    <div className="col-lg-10 doc-body">
-        <ExperimentalComponentAlert />
-        <p className="lead">Action lists...</p>
-        <Overview />
-        <Anchorpoints />
-    </div>
-);
-
 class ActionList extends Component {
     componentDidMount () {
         actionList.init();
@@ -83,12 +74,12 @@ class ActionList extends Component {
 
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <ActionListText />
-                    <DocToc component={ActionListText} />
-                </div>
-            </div>
+            <DocContainer docToc>
+                <ExperimentalComponentAlert />
+                <p className="lead">Action lists...</p>
+                <Overview />
+                <Anchorpoints />
+            </DocContainer>
         );
     }
 }
@@ -96,4 +87,4 @@ class ActionList extends Component {
 export default ActionList;
 
 /* For testing */
-export { Overview, Anchorpoints, ActionListText };
+export { Overview, Anchorpoints };

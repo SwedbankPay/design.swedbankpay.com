@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, Attribute, Property, DocToc } from "#";
+import { ComponentPreview, Attribute, Property, DocContainer } from "#";
 
 import AlertComponent from "@/Alert";
 import { alert } from "$/px-script/main";
@@ -74,16 +74,6 @@ const ExtendedUsage = () => (
     </>
 );
 
-const AlertsText = () => (
-    <div className="col-lg-10 doc-body">
-        <p className="lead">Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.</p>
-        <BasicUsage />
-        <AlertWithIcon />
-        <ClosingTheAlert />
-        <ExtendedUsage />
-    </div>
-);
-
 class Alerts extends Component {
     componentDidMount () {
         alert.init();
@@ -91,12 +81,13 @@ class Alerts extends Component {
 
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <AlertsText />
-                    <DocToc component={AlertsText} />
-                </div>
-            </div>
+            <DocContainer docToc>
+                <p className="lead">Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.</p>
+                <BasicUsage />
+                <AlertWithIcon />
+                <ClosingTheAlert />
+                <ExtendedUsage />
+            </DocContainer>
         );
     }
 }
@@ -104,4 +95,4 @@ class Alerts extends Component {
 export default Alerts;
 
 /* For testing */
-export { BasicUsage, AlertWithIcon, ClosingTheAlert, ExtendedUsage, AlertsText };
+export { BasicUsage, AlertWithIcon, ClosingTheAlert, ExtendedUsage };

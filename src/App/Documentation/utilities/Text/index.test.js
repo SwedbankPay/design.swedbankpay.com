@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Text, { TextAlignment, TextWrappingAndOverflow, TextTransform, FontWeightAndItalics, TextText } from "./index";
+import Text, { TextAlignment, TextWrappingAndOverflow, TextTransform, FontWeightAndItalics } from "./index";
 
 describe("Utilities: Text", () => {
     it("is defined", () => {
@@ -57,18 +57,6 @@ describe("Utilities: Text", () => {
 
         it("renders", () => {
             const wrapper = shallow(<FontWeightAndItalics />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("TextText", () => {
-        it("is defined", () => {
-            expect(TextText).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<TextText />);
 
             expect(wrapper).toMatchSnapshot();
         });

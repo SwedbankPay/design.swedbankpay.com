@@ -1,19 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components: Badge BadgeText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Badge...
-  </p>
-  <Overview />
-  <FurtherUsage />
-</div>
-`;
-
 exports[`Components: Badge FurtherUsage renders 1`] = `
 <Fragment>
   <h2
@@ -159,16 +145,15 @@ exports[`Components: Badge Overview renders 1`] = `
 `;
 
 exports[`Components: Badge renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <p
+    className="lead"
   >
-    <BadgeText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    Badge...
+  </p>
+  <Overview />
+  <FurtherUsage />
+</DocContainer>
 `;

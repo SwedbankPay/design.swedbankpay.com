@@ -508,9 +508,9 @@ exports[`Core: Typography Text Utilities renders 1`] = `
 </Fragment>
 `;
 
-exports[`Core: Typography Typography Text renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
+exports[`Core: Typography renders 1`] = `
+<DocContainer
+  docToc={true}
 >
   <p
     className="lead"
@@ -525,20 +525,5 @@ exports[`Core: Typography Typography Text renders 1`] = `
   <TextUtilities />
   <Abbreviations />
   <Blockquotes />
-</div>
-`;
-
-exports[`Core: Typography renders 1`] = `
-<div
-  className="doc-container"
->
-  <div
-    className="row"
-  >
-    <TypographyText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+</DocContainer>
 `;

@@ -111,9 +111,9 @@ exports[`Documentation: Status Overview renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Status StatusText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
+exports[`Documentation: Status renders 1`] = `
+<DocContainer
+  docToc={true}
 >
   <p
     className="lead"
@@ -122,20 +122,5 @@ exports[`Documentation: Status StatusText renders 1`] = `
   </p>
   <Overview />
   <ExtendedUsage />
-</div>
-`;
-
-exports[`Documentation: Status renders 1`] = `
-<div
-  className="doc-container"
->
-  <div
-    className="row"
-  >
-    <StatusText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+</DocContainer>
 `;

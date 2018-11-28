@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Colors, { TextColors, BackgroundColors, ColorsText } from "./index";
+import Colors, { TextColors, BackgroundColors } from "./index";
 
 describe("Utilities: Colors", () => {
     it("is defined", () => {
@@ -22,12 +22,6 @@ describe("Utilities: Colors", () => {
 
     it("BackgroundColors renders", () => {
         const wrapper = shallow(<BackgroundColors />);
-
-        expect(wrapper).toMatchSnapshot();
-    });
-
-    it("ColorsText renders", () => {
-        const wrapper = shallow(<ColorsText />);
 
         expect(wrapper).toMatchSnapshot();
     });

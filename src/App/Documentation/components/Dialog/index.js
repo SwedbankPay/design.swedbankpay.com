@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc, Icon, Property } from "#";
+import { ComponentPreview, DocContainer, Icon } from "#";
 import { dialog } from "$/px-script/main";
 
 const Example = () => (
@@ -33,17 +33,20 @@ const Example = () => (
 const UsageWithJavascript = () => (
     <>
         <h2 id="usage-with-javascript">Usage with javascript</h2>
-        <p>To programmatically open a dialog, use <Property value={"px.dialog.open(\"DIALOG_ID\")"} />.</p>
-        <p>To programmatically close a dialog, use <Property value={"px.dialog.close(\"DIALOG_ID\")"} />.</p>
+        <ComponentPreview language="html" codeFigure>
+            <div className="dialog" id="demo-dialog">{"\n"}
+                ...{"\n"}
+            </div>{"\n"}
+        </ComponentPreview>
+        <p>To open a dialog:</p>
+        <ComponentPreview language="javascript" codeFigure>
+            {"px.dialog.open(\"demo-dialog\")"}
+        </ComponentPreview>
+        <p>To close a dialog:</p>
+        <ComponentPreview language="javascript" codeFigure>
+            {"px.dialog.close(\"demo-dialog\")"}
+        </ComponentPreview>
     </>
-);
-
-const DialogText = () => (
-    <div className="col-lg-10 doc-body">
-        <p className="lead">Dialogs...</p>
-        <Example />
-        <UsageWithJavascript />
-    </div>
 );
 
 class Dialog extends Component {
@@ -53,12 +56,11 @@ class Dialog extends Component {
 
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <DialogText />
-                    <DocToc component={DialogText} />
-                </div>
-            </div>
+            <DocContainer docToc>
+                <p className="lead">Dialogs...</p>
+                <Example />
+                <UsageWithJavascript />
+            </DocContainer>
         );
     }
 }
@@ -66,4 +68,4 @@ class Dialog extends Component {
 export default Dialog;
 
 /* For testing */
-export { Example, UsageWithJavascript, DialogText };
+export { Example, UsageWithJavascript };

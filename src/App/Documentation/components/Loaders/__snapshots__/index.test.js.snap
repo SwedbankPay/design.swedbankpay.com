@@ -23,22 +23,6 @@ exports[`Documentation: Loaders Basic Usage renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Loaders Loaders Text renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Use loaders...
-  </p>
-  <BasicUsage />
-  <Sizes />
-  <MutedLoader />
-  <StaticHtml />
-</div>
-`;
-
 exports[`Documentation: Loaders Muted Loader renders 1`] = `
 <Fragment>
   <h2
@@ -162,16 +146,17 @@ exports[`Documentation: Loaders Static Html renders 1`] = `
 `;
 
 exports[`Documentation: Loaders renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <p
+    className="lead"
   >
-    <LoadersText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    Use loaders...
+  </p>
+  <BasicUsage />
+  <Sizes />
+  <MutedLoader />
+  <StaticHtml />
+</DocContainer>
 `;

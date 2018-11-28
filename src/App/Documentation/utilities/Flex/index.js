@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ComponentPreview, DocToc, Property } from "#";
+import { ComponentPreview, DocContainer, Property } from "#";
 
 const EnableFlexBehaviors = () => (
     <>
@@ -702,8 +702,8 @@ const AlignContent = () => (
     </>
 );
 
-const FlexText = () => (
-    <div className="col-lg-10 doc-body">
+const Flex = () => (
+    <DocContainer docToc>
         <p className="lead">Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.</p>
         <EnableFlexBehaviors />
         <Direction />
@@ -716,21 +716,10 @@ const FlexText = () => (
         <Wrap />
         <Order />
         <AlignContent />
-    </div>
-);
-
-const Flex = () => (
-    <>
-        <div className="doc-container">
-            <div className="row">
-                <FlexText />
-                <DocToc component={FlexText} />
-            </div>
-        </div>
-    </>
+    </DocContainer>
 );
 
 export default Flex;
 
 /* For testing */
-export { EnableFlexBehaviors, Direction, JustifyContent, AlignItems, AlignSelf, Fill, GrowAndShrink, AutoMargins, Wrap, Order, AlignContent, FlexText };
+export { EnableFlexBehaviors, Direction, JustifyContent, AlignItems, AlignSelf, Fill, GrowAndShrink, AutoMargins, Wrap, Order, AlignContent };

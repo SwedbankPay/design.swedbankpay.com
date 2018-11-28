@@ -190,23 +190,6 @@ exports[`Documentation: Panel PanelTable renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Panel PanelText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Panels...
-  </p>
-  <Overview />
-  <PanelHeaders />
-  <PanelDark />
-  <PanelMuted />
-  <PanelTable />
-</div>
-`;
-
 exports[`Documentation: Panel TableContent  renders 1`] = `
 <table
   className="table"
@@ -321,16 +304,18 @@ exports[`Documentation: Panel TableContent  renders 1`] = `
 `;
 
 exports[`Documentation: Panel renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <p
+    className="lead"
   >
-    <PanelText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    Panels...
+  </p>
+  <Overview />
+  <PanelHeaders />
+  <PanelDark />
+  <PanelMuted />
+  <PanelTable />
+</DocContainer>
 `;

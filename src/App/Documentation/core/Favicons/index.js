@@ -1,7 +1,7 @@
 import React from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocToc, Attribute, Property } from "#";
+import { ComponentPreview, DocContainer, Attribute, Property } from "#";
 import Button from "@/Button";
 
 const BASENAME = process.env.basename;
@@ -60,24 +60,15 @@ const Usage = () => (
     </>
 );
 
-const FaviconsText = () => (
-    <div className="col-lg-10 doc-body">
+const Favicons = () => (
+    <DocContainer docToc>
         <p className="lead">The PayEx favicon...</p>
         <OurFavicon />
         <Usage />
-    </div>
-);
-
-const Favicons = () => (
-    <div className="doc-container">
-        <div className="row">
-            <FaviconsText />
-            <DocToc component={FaviconsText} />
-        </div>
-    </div>
+    </DocContainer>
 );
 
 export default Favicons;
 
 /* For testing */
-export { OurFavicon, Usage, FaviconsText };
+export { OurFavicon, Usage };

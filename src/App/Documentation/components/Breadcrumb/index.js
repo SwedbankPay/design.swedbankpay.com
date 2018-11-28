@@ -1,7 +1,7 @@
 import React from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, Property, DocToc } from "#";
+import { ComponentPreview, Property, DocContainer } from "#";
 import BreadcrumbComponent from "@/Breadcrumb";
 
 const BasicBreadCrumb = () => {
@@ -57,24 +57,15 @@ const DisabledBreadcrumb = () => {
     );
 };
 
-const BreadcrumbText = () => (
-    <div className="col-lg-10 doc-body">
+const Breadcrumb = () => (
+    <DocContainer docToc>
         <p className="lead">Breadcrumbs are a good way to display your current location. This is usually used when you have multiple layers of content.</p>
         <BasicBreadCrumb />
         <DisabledBreadcrumb />
-    </div>
-);
-
-const Breadcrumb = () => (
-    <div className="doc-container">
-        <div className="row">
-            <BreadcrumbText />
-            <DocToc component={BreadcrumbText} />
-        </div>
-    </div>
+    </DocContainer>
 );
 
 export default Breadcrumb;
 
 /* For testing */
-export { BasicBreadCrumb, DisabledBreadcrumb, BreadcrumbText };
+export { BasicBreadCrumb, DisabledBreadcrumb };

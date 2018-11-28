@@ -1,27 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Core: Iconography IconsText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    The PayEx DesignGuide includes Google
-    '
-    s material icons. For a full overview of the available icons please visit 
-    <a
-      href="https://material.io/tools/icons/"
-    >
-      this site
-    </a>
-    .
-  </p>
-  <MaterialIcons />
-  <PaymentIcons />
-</div>
-`;
-
 exports[`Core: Iconography MaterialIcons renders 1`] = `
 <Fragment>
   <h2
@@ -1062,16 +1040,23 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
 `;
 
 exports[`Core: Iconography renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <p
+    className="lead"
   >
-    <IconsText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    The PayEx DesignGuide includes Google
+    '
+    s material icons. For a full overview of the available icons please visit 
+    <a
+      href="https://material.io/tools/icons/"
+    >
+      this site
+    </a>
+    .
+  </p>
+  <MaterialIcons />
+  <PaymentIcons />
+</DocContainer>
 `;

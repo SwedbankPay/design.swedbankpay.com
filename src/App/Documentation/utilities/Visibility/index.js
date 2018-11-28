@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ComponentPreview, Property } from "#";
+import { ComponentPreview, Property, DocContainer } from "#";
 
 const Intro = () => (
     <>
@@ -23,24 +23,14 @@ const Intro = () => (
     </>
 );
 
-const VisibilityText = () => (
-    <div className="col doc-body">
+const Visibility = () => (
+    <DocContainer>
         <p className="lead">Control the visibility, without modifying the display, of elements with visibility utilities.</p>
         <Intro />
-    </div>
-);
-
-const Visibility = () => (
-    <>
-        <div className="doc-container">
-            <div className="row">
-                <VisibilityText />
-            </div>
-        </div>
-    </>
+    </DocContainer>
 );
 
 export default Visibility;
 
 /* For testing */
-export { Intro, VisibilityText };
+export { Intro };

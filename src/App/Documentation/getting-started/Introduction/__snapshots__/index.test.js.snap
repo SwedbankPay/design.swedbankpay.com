@@ -36,21 +36,6 @@ exports[`GettingStarted: Introduction Css renders 1`] = `
 </Fragment>
 `;
 
-exports[`GettingStarted: Introduction IntroductionText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Get started with the PayEx DesignGuide.
-  </p>
-  <QuickStart />
-  <Css />
-  <JavaScript />
-</div>
-`;
-
 exports[`GettingStarted: Introduction JavaScript renders 1`] = `
 <Fragment>
   <h2
@@ -100,16 +85,16 @@ exports[`GettingStarted: Introduction QuickStart renders 1`] = `
 `;
 
 exports[`GettingStarted: Introduction renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <p
+    className="lead"
   >
-    <IntroductionText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    Get started with the PayEx DesignGuide.
+  </p>
+  <QuickStart />
+  <Css />
+  <JavaScript />
+</DocContainer>
 `;

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocToc, Property, Icon } from "#";
+import { ComponentPreview, DocContainer, Property, Icon } from "#";
 import IconPreview from "@/IconPreview";
 import actionList from "$/px-script/main/action-list";
 
@@ -132,14 +132,6 @@ const PaymentIcons = () => (
     </>
 );
 
-const IconsText = () => (
-    <div className="col-lg-10 doc-body">
-        <p className="lead">The PayEx DesignGuide includes Google{"'"}s material icons. For a full overview of the available icons please visit <a href="https://material.io/tools/icons/">this site</a>.</p>
-        <MaterialIcons />
-        <PaymentIcons />
-    </div>
-);
-
 class Icons extends Component {
     componentDidMount () {
         actionList.init();
@@ -147,12 +139,11 @@ class Icons extends Component {
 
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <IconsText />
-                    <DocToc component={IconsText} />
-                </div>
-            </div>
+            <DocContainer docToc>
+                <p className="lead">The PayEx DesignGuide includes Google{"'"}s material icons. For a full overview of the available icons please visit <a href="https://material.io/tools/icons/">this site</a>.</p>
+                <MaterialIcons />
+                <PaymentIcons />
+            </DocContainer>
         );
     }
 }
@@ -160,4 +151,4 @@ class Icons extends Component {
 export default Icons;
 
 /* For testing */
-export { MaterialIcons, PaymentIcons, IconsText };
+export { MaterialIcons, PaymentIcons };

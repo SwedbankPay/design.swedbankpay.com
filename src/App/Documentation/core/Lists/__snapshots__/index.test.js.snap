@@ -275,25 +275,6 @@ exports[`Documentation: Lists ItemList renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Lists ListsText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Lots of cool info about lists will be here...
-  </p>
-  <BasicList />
-  <InlineList />
-  <DescriptionList />
-  <SettingsList />
-  <ItemList />
-  <HoverItemList />
-  <StripedItemList />
-</div>
-`;
-
 exports[`Documentation: Lists SettingsList renders 1`] = `
 <Fragment>
   <h2
@@ -683,16 +664,20 @@ exports[`Documentation: Lists StripedItemList renders 1`] = `
 `;
 
 exports[`Documentation: Lists renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <p
+    className="lead"
   >
-    <ListsText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    Lots of cool info about lists will be here...
+  </p>
+  <BasicList />
+  <InlineList />
+  <DescriptionList />
+  <SettingsList />
+  <ItemList />
+  <HoverItemList />
+  <StripedItemList />
+</DocContainer>
 `;

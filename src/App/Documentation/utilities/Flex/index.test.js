@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Flex, { EnableFlexBehaviors, Direction, JustifyContent, AlignItems, AlignSelf, Fill, GrowAndShrink, AutoMargins, Wrap, Order, AlignContent, FlexText } from "./index";
+import Flex, { EnableFlexBehaviors, Direction, JustifyContent, AlignItems, AlignSelf, Fill, GrowAndShrink, AutoMargins, Wrap, Order, AlignContent } from "./index";
 
 describe("Utilities: Flex", () => {
     it("is defined", () => {
@@ -141,18 +141,6 @@ describe("Utilities: Flex", () => {
 
         it("renders", () => {
             const wrapper = shallow(<AlignContent />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("FlexText", () => {
-        it("is defined", () => {
-            expect(FlexText).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<FlexText />);
 
             expect(wrapper).toMatchSnapshot();
         });

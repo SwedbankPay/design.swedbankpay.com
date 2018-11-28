@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ComponentPreview, Property, DocToc } from "#";
+import { ComponentPreview, Property, DocContainer } from "#";
 
 const Overview = () => (
     <>
@@ -32,24 +32,15 @@ const FurtherUsage = () => (
     </>
 );
 
-const BadgeText = () => (
-    <div className="col-lg-10 doc-body">
+const Badge = () => (
+    <DocContainer docToc>
         <p className="lead">Badge...</p>
         <Overview />
         <FurtherUsage />
-    </div>
-);
-
-const Badge = () => (
-    <div className="doc-container">
-        <div className="row">
-            <BadgeText />
-            <DocToc component={BadgeText} />
-        </div>
-    </div>
+    </DocContainer>
 );
 
 export default Badge;
 
 /* For testing */
-export { Overview, FurtherUsage, BadgeText };
+export { Overview, FurtherUsage };
