@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocContainer, Icon, Property } from "#";
+import { ComponentPreview, DocContainer, Icon } from "#";
 import { dialog } from "$/px-script/main";
 
 const Example = () => (
@@ -33,8 +33,19 @@ const Example = () => (
 const UsageWithJavascript = () => (
     <>
         <h2 id="usage-with-javascript">Usage with javascript</h2>
-        <p>To programmatically open a dialog, use <Property value={"px.dialog.open(\"DIALOG_ID\")"} />.</p>
-        <p>To programmatically close a dialog, use <Property value={"px.dialog.close(\"DIALOG_ID\")"} />.</p>
+        <ComponentPreview language="html" codeFigure>
+            <div className="dialog" id="demo-dialog">{"\n"}
+                ...{"\n"}
+            </div>{"\n"}
+        </ComponentPreview>
+        <p>To open a dialog:</p>
+        <ComponentPreview language="javascript" codeFigure>
+            {"px.dialog.open(\"demo-dialog\")"}
+        </ComponentPreview>
+        <p>To close a dialog:</p>
+        <ComponentPreview language="javascript" codeFigure>
+            {"px.dialog.close(\"demo-dialog\")"}
+        </ComponentPreview>
     </>
 );
 

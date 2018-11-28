@@ -94,20 +94,41 @@ exports[`Documentation: Dialog UsageWithJavascript renders 1`] = `
   >
     Usage with javascript
   </h2>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+  >
+    <div
+      className="dialog"
+      id="demo-dialog"
+    >
+      
+
+      ...
+      
+
+    </div>
+    
+
+  </ComponentPreview>
   <p>
-    To programmatically open a dialog, use 
-    <Property
-      value="px.dialog.open(\\"DIALOG_ID\\")"
-    />
-    .
+    To open a dialog:
   </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    px.dialog.open("demo-dialog")
+  </ComponentPreview>
   <p>
-    To programmatically close a dialog, use 
-    <Property
-      value="px.dialog.close(\\"DIALOG_ID\\")"
-    />
-    .
+    To close a dialog:
   </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    px.dialog.close("demo-dialog")
+  </ComponentPreview>
 </Fragment>
 `;
 
