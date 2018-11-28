@@ -52,26 +52,17 @@ Create a new file under `./src/App/Documentation/Components/[MyExampleDocumentat
 import React from "react";
 
 //Read more about the import shortcuts in the readme (#, @, $ etc.)
-import { ComponentPreview, DocToc } from "#";
+import { ComponentPreview, DocContainer } from "#";
 import MyExampleComponent from "@/MyExampleComponent";
 
-const MyExampleDocumentationComponentText = () => (
-    <div className="col-md-12 col-lg-10 doc-body">
+const MyExampleDocumentationComponent = () => (
+    <DocContainer docToc>
         <p className="lead">This is the documentation for My Example Component.</p>
         <h2 id="example-usage">Example usage</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <MyExampleComponent type="lg" title="My Example Component" separator />
         </ComponentPreview>
-    </div>
-);
-
-const MyExampleDocumentationComponent = () => (
-    <div className="doc-container">
-        <div className="row">
-            <MyExampleDocumentationComponentText />
-            <DocToc component={MyExampleDocumentationComponentText} />
-        </div>
-    </div>
+    </DocContainer>
 );
 
 export default MyExampleDocumentationComponent;
@@ -79,7 +70,7 @@ export default MyExampleDocumentationComponent;
 
 Use the custom `ComponentPreview` component to preview your component. It has several props, for this example we are going to be using `language`, `showCasePanel` and `codeFigure`.
 
-We are also using the `DocToc` component to add a dynamic table of contents to the documentation of your component. This component scans the provided component for `<h2>`-tags and creates anchors for easier navigation. Just remember to add an id to the `<h2>`-tag.
+We are also using the `DocContainer` component to sentralize the layout of the documentation, pass the `docToc` prop to add a dynamic table of contents to the documentation of your component. This component scans the provided component for `<h2>`-tags and creates anchors for easier navigation. Just remember to add an id to the `<h2>`-tag.
 
 ### Add MyExampleDocumentationComponent to the routes
 
@@ -213,7 +204,7 @@ Considering the documentation is built in react your documentation component wil
 import React, { Component } from "react";
 ...
 // import your components script
-import { MyExampleComponent } from "../../../../px-script";
+import { MyExampleComponent } from "$/px-script";
 
 ...
 ...
@@ -225,12 +216,13 @@ class MyExampleDocumentationComponent extends Component {
 
     render() {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <MyExampleDocumentationComponentText />
-                    <DocToc component={MyExampleDocumentationComponentText} />
-                </div>
-            </div>
+            <DocContainer docToc>
+                <p className="lead">This is the documentation for My Example Component.</p>
+                <h2 id="example-usage">Example usage</h2>
+                <ComponentPreview language="html" showCasePanel codeFigure>
+                    <MyExampleComponent type="lg" title="My Example Component" separator />
+                </ComponentPreview>
+            </DocContainer>
         )
     }
 }

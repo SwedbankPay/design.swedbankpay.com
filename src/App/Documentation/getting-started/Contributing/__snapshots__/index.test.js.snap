@@ -18,46 +18,28 @@ exports[`GettingStarted: Contributing Add Component To Routes renders 1`] = `
     codeFigure={true}
     language="javascript"
   >
-    /**
-
-     * Components
-
-     */
-
-    {
-
-        title: "Components",
-
-        path: "/docs/components",
-
-        redirect: "/docs/components/alerts",
-
-        routes: [
-
-            ...
-
-            ...
-
-            // ADD THIS
-
-            {
-
-                title: "My Example Documentation Component",
-
-                path: "/docs/components/my-example-documentation-component",
-
-                componentPath: "components/My-example-documentation-component"
-
-            },
-
-            ...
-
-            ...
-
-        ]
-
-    },
-
+    
+/**
+ * Components
+ */
+{
+    title: "Components",
+    path: "/docs/components",
+    redirect: "/docs/components/alerts",
+    routes: [
+        ...
+        ...
+        // ADD THIS
+        {
+            title: "My Example Documentation Component",
+            path: "/docs/components/my-example-documentation-component",
+            componentPath: "components/My-example-documentation-component"
+        },
+        ...
+        ...
+    ]
+},
+            
   </ComponentPreview>
   <p>
     You will now be able to go to the route you provided to preview your component. Run 
@@ -99,21 +81,15 @@ exports[`GettingStarted: Contributing Adding JavaScript renders 3`] = `
     codeFigure={true}
     language="javascript"
   >
-    const int = () =&gt; {
-
+    
+const init = () =&gt; {
     alert("MyExampleComponent was initialized");
-
-    };
-
-
-    const MyExampleComponent = {
-
+};
+const MyExampleComponent = {
     init
-
-    };
-
-
-    export default MyExampleComponent;
+};
+export default MyExampleComponent;
+                
   </ComponentPreview>
   <p>
     Note: All essential functionality for your component needs to be called within the 
@@ -141,27 +117,18 @@ exports[`GettingStarted: Contributing Adding JavaScript renders 4`] = `
     codeFigure={true}
     language="javascript"
   >
-    ...
-
-    import MyExampleComponent from "./MyExampleComponent";
-
-    ...
-
-    const px = {
-
-    ...
-
-    MyExampleComponent,
-
-    ...
-
-    };
-
-
-    ...
-
-    export { ... MyExampleComponent, ... }
-
+    
+...
+import MyExampleComponent from "./MyExampleComponent";
+...
+const px = {
+...
+MyExampleComponent,
+...
+};
+...
+export { ... MyExampleComponent, ... }
+                
   </ComponentPreview>
 </div>
 `;
@@ -197,57 +164,33 @@ exports[`GettingStarted: Contributing Adding JavaScript renders 5`] = `
     codeFigure={true}
     language="javascript"
   >
-    //example documentation component
-
-
-    // change this line
-
-    import React, { Component } from "react";
-
-    ...
-
-    // import your components script
-
-    import { MyExampleComponent } from "../../../../px-script/main";
-
-
-    ...
-
-    ...
-
-    // modify MyExampleDocumentationComponent
-
-    class MyExampleDocumentationComponent extends Component {
-
+    
+//example documentation component
+// change this line
+import React, { Component } from "react";
+...
+// import your components script
+import { MyExampleComponent } from "$/px-script/main";
+...
+...
+// modify MyExampleDocumentationComponent
+class MyExampleDocumentationComponent extends Component {
     componentDidMount () {
-
-    MyExampleComponent.init();
-
+        MyExampleComponent.init();
     }
-
-
     render() {
-
-    return (
-
-    &lt;div className="doc-container"&gt;
-
-    				&lt;div className="row"&gt;
-
-    					&lt;MyExampleDocumentationComponentText /&gt;
-
-    					&lt;DocToc component={MyExampleDocumentationComponentText} /&gt;
-
-    				&lt;/div&gt;
-
-    			&lt;/div&gt;
-
-    )
-
+        return (
+            &lt;DocContainer docToc&gt;
+                &lt;p className="lead"&gt;This is the documentation for My Example Component.&lt;/p&gt;
+                &lt;h2 id="example-usage"&gt;Example usage&lt;/h2&gt;
+                &lt;ComponentPreview language="html" showCasePanel codeFigure&gt;
+                    &lt;MyExampleComponent type="dark" title="My Example Component" separator /&gt;
+                &lt;/ComponentPreview&gt;
+            &lt;/DocContainer&gt;
+        )
     }
-
-    }
-
+}
+                
   </ComponentPreview>
 </div>
 `;
@@ -298,22 +241,13 @@ exports[`GettingStarted: Contributing Adding Styles renders 3`] = `
     codeFigure={true}
     language="css"
   >
-    // px.less
-
-    ...
-
-    ...
-
-
-    // Components
-
-    ...
-
-    ...
-
-    @import "components/my-example-component";
-
-    ...
+    
+/* px.less */
+...
+/* Components */
+@import "components/my-example-component";
+...
+                
   </ComponentPreview>
 </Fragment>
 `;
@@ -337,22 +271,15 @@ exports[`GettingStarted: Contributing Adding Styles renders 4`] = `
     codeFigure={true}
     language="css"
   >
-    // _variables.less
-
-
-    // [number]. My Example Component
-
-    // ==========================================================================
-
-
-    @my-example-component-color: @gray-3;
-
-    @my-example-component-background: @gray-8;
-
-    @my-example-component-padding: 1rem;
-
-    @my-example-component-font-family: "Arial";
-
+    
+// _variables.less
+// [number]. My Example Component
+// ==========================================================================
+@my-example-component-color: @gray-3;
+@my-example-component-background: @gray-8;
+@my-example-component-padding: 1rem;
+@my-example-component-font-family: "Arial";
+                
   </ComponentPreview>
 </Fragment>
 `;
@@ -432,53 +359,22 @@ exports[`GettingStarted: Contributing Create A Documentation Page renders 1`] = 
     codeFigure={true}
     language="javascript"
   >
-    //example documentation component
-
-
-    import React from "react";
-
-
-    import { ComponentPreview, DocToc } from "#";
-    import MyExampleComponent from "@/MyExampleComponent";
-
-
-    const MyExampleDocumentationComponentText = () =&gt; (
-
-        &lt;div className="col-lg-10 doc-body"&gt;
-
-            &lt;p className="lead"&gt;This is the documentation for My Example Component.&lt;/p&gt;
-
-            &lt;h2 id="example-usage"&gt;Example usage&lt;/h2&gt;
-
-            &lt;ComponentPreview language="html" showCasePanel codeFigure&gt;
-
-                &lt;MyExampleComponent type="dark" title="My Example Component" separator /&gt;
-
-            &lt;/ComponentPreview&gt;
-
-        &lt;/div&gt;
-
-    );
-
-
-    const MyExampleDocumentationComponent = () =&gt; (
-
-        &lt;div className="doc-container"&gt;
-
-            &lt;div className="row"&gt;
-
-                &lt;MyExampleDocumentationComponentText /&gt;
-
-                &lt;DocToc component={MyExampleDocumentationComponentText} /&gt;
-
-            &lt;/div&gt;
-
-        &lt;/div&gt;
-
-    );
-
-
-    export default MyExampleDocumentationComponent;
+    
+//example documentation component
+import React from "react";
+import { ComponentPreview, DocContainer } from "#";
+import MyExampleComponent from "@/MyExampleComponent";
+const MyExampleDocumentationComponent = () =&gt; (
+    &lt;DocContainer docToc&gt;
+        &lt;p className="lead"&gt;This is the documentation for My Example Component.&lt;/p&gt;
+        &lt;h2 id="example-usage"&gt;Example usage&lt;/h2&gt;
+        &lt;ComponentPreview language="html" showCasePanel codeFigure&gt;
+            &lt;MyExampleComponent type="dark" title="My Example Component" separator /&gt;
+        &lt;/ComponentPreview&gt;
+    &lt;/DocContainer&gt;
+);
+export default MyExampleDocumentationComponent;
+            
   </ComponentPreview>
   <p>
     Use the custom 
@@ -500,7 +396,15 @@ exports[`GettingStarted: Contributing Create A Documentation Page renders 1`] = 
     .
   </p>
   <p>
-    We are also using the \`DocToc\` component to add a dynamic table of contents to the documentation of your component. This component scans the provided component for 
+    We are also using the 
+    <Property
+      value="DocContainer"
+    />
+     component to sentralize the layout of the documentation, pass the 
+    <Property
+      value="docToc"
+    />
+     prop to add a dynamic table of contents to the documentation of your component. This component scans the provided component for 
     <PrismCode
       className="language-html"
       component="code"
@@ -541,37 +445,24 @@ exports[`GettingStarted: Contributing Creating Your Component renders 1`] = `
     codeFigure={true}
     language="javascript"
   >
-    //example component
-
-
-    import React from "react";
-    import PropTypes from "prop-types";
-
-
-    const MyExampleComponent = ({ type, title, separator }) =&gt; (
-
+    
+//example component
+import React from "react";
+import PropTypes from "prop-types";
+const MyExampleComponent = ({ type, title, separator }) =&gt; (
     &lt;div className={\`well well-\${type}\`}&gt;
-
-            &lt;h3&gt;{title}&lt;/h3&gt;
-
-            {separator ? &lt;hr /&gt; : null}
-
-            This is my example component in a well.
-
-        &lt;/div&gt;
-
-    );
-
-
-    MyExampleComponent.propTypes = {
-
+        &lt;h3&gt;{title}&lt;/h3&gt;
+        {separator ? &lt;hr /&gt; : null}
+        This is my example component in a well.
+    &lt;/div&gt;
+);
+MyExampleComponent.propTypes = {
     type: PropTypes.oneOf(["light", "dark"]).isRequired,
     title: PropTypes.string.isRequired,
     separator: PropTypes.bool
-    };
-
-
-    export default MyExampleComponent;
+};
+export default MyExampleComponent;
+            
   </ComponentPreview>
 </Fragment>
 `;
