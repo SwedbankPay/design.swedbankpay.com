@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc, ExperimentalComponentAlert } from "#";
+import { ComponentPreview, DocContainer, ExperimentalComponentAlert } from "#";
 import { validation } from "$/px-script/main/";
 
 const DefaultSlab = () => (
@@ -143,22 +143,6 @@ const SlabCombinations = () => (
     </>
 );
 
-const SlabText = () => (
-    <div className="col-lg-10 doc-body">
-        <ExperimentalComponentAlert />
-        <p className="lead">
-            Slabs are container components, therefore it works with whatever you want to put in it.
-        </p>
-        <DefaultSlab />
-        <SlabElevated />
-        <SlabWell />
-        <SlabWhite />
-        <SlabMuted />
-        <SlabSizes />
-        <SlabCombinations />
-    </div>
-);
-
 class Slab extends Component {
     componentDidMount () {
         validation.init();
@@ -166,12 +150,19 @@ class Slab extends Component {
 
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <SlabText />
-                    <DocToc component={SlabText} />
-                </div>
-            </div>
+            <DocContainer docToc>
+                <ExperimentalComponentAlert />
+                <p className="lead">
+                    Slabs are container components, therefore it works with whatever you want to put in it.
+                </p>
+                <DefaultSlab />
+                <SlabElevated />
+                <SlabWell />
+                <SlabWhite />
+                <SlabMuted />
+                <SlabSizes />
+                <SlabCombinations />
+            </DocContainer>
         );
     }
 }
@@ -179,4 +170,4 @@ class Slab extends Component {
 export default Slab;
 
 /* For testing */
-export { DefaultSlab, SlabElevated, SlabWell, SlabWhite, SlabSizes, SlabMuted, SlabCombinations, SlabText };
+export { DefaultSlab, SlabElevated, SlabWell, SlabWhite, SlabSizes, SlabMuted, SlabCombinations };

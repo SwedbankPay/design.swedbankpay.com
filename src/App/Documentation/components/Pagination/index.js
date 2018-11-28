@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc, Property } from "#";
+import { ComponentPreview, DocContainer, Property } from "#";
 import PaginationComponent from "@/Pagination";
 
 const paginationItems = [
@@ -43,24 +43,15 @@ const SimplePagination = () => (
     </>
 );
 
-const PaginationText = () => (
-    <div className="col-lg-10 doc-body">
-        <p className="lead">Pagination...</p>
-        <DefaultPagination />
-        <PaginationBullets />
-        <SimplePagination />
-    </div>
-);
-
 class Pagination extends Component {
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <PaginationText />
-                    <DocToc component={PaginationText} />
-                </div>
-            </div>
+            <DocContainer docToc>
+                <p className="lead">Pagination...</p>
+                <DefaultPagination />
+                <PaginationBullets />
+                <SimplePagination />
+            </DocContainer>
         );
     }
 }
@@ -68,4 +59,4 @@ class Pagination extends Component {
 export default Pagination;
 
 /* For testing */
-export { DefaultPagination, SimplePagination, PaginationBullets, PaginationText };
+export { DefaultPagination, SimplePagination, PaginationBullets };

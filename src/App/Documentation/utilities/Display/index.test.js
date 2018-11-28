@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Display, { HowItWorks, Notation, Examples, HidingElements, DisplayText } from "./index";
+import Display, { HowItWorks, Notation, Examples, HidingElements } from "./index";
 
 describe("Utilities: Display", () => {
     it("is defined", () => {
@@ -57,18 +57,6 @@ describe("Utilities: Display", () => {
 
         it("renders", () => {
             const wrapper = shallow(<HidingElements />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("DisplayText", () => {
-        it("is defined", () => {
-            expect(DisplayText).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<DisplayText />);
 
             expect(wrapper).toMatchSnapshot();
         });

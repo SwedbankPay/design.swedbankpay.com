@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Sheet, { Example, UsageWithJavascript, SheetText } from "./index";
+import Sheet, { Example, UsageWithJavascript } from "./index";
 
 describe("Documentation: Sheet", () => {
     it("is defined", () => {
@@ -52,18 +52,6 @@ describe("Documentation: Sheet", () => {
 
         it("renders", () => {
             const wrapper = shallow(<UsageWithJavascript />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("SheetText", () => {
-        it("is defined", () => {
-            expect(SheetText).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<SheetText />);
 
             expect(wrapper).toMatchSnapshot();
         });

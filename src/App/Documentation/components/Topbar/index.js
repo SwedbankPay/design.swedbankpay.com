@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocToc, Property, Attribute } from "#";
+import { ComponentPreview, DocContainer, Property, Attribute } from "#";
 import TopbarComponent from "@/Topbar";
 import { topbar } from "$/px-script/main";
 import Alert from "@/Alert";
@@ -68,15 +68,6 @@ const FixedTopbar = () => (
     </>
 );
 
-const TopbarText = () => (
-    <div className="col-lg-10 doc-body">
-        <DeprecatedAlert />
-        <p className="lead">Topbar...</p>
-        <Overview />
-        <FixedTopbar />
-    </div>
-);
-
 class Topbar extends Component {
     componentDidMount () {
         topbar.init(1);
@@ -84,12 +75,12 @@ class Topbar extends Component {
 
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <TopbarText />
-                    <DocToc component={TopbarText} />
-                </div>
-            </div>
+            <DocContainer docToc>
+                <DeprecatedAlert />
+                <p className="lead">Topbar...</p>
+                <Overview />
+                <FixedTopbar />
+            </DocContainer>
         );
     }
 }
@@ -97,4 +88,4 @@ class Topbar extends Component {
 export default Topbar;
 
 /* For testing */
-export { Overview, TopbarText, FixedTopbar, DeprecatedAlert };
+export { Overview, FixedTopbar, DeprecatedAlert };

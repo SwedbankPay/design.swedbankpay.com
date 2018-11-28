@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import Steps, { BasicSteps, VerticalSteps, ClickableSteps, StepsText } from "./index";
+import Steps, { BasicSteps, VerticalSteps, ClickableSteps } from "./index";
 
 describe("Documentation: Steps", () => {
     it("is defined", () => {
@@ -46,20 +46,6 @@ describe("Documentation: Steps", () => {
 
         it("renders", () => {
             const wrapper = shallow(<ClickableSteps />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("Steps Text", () => {
-        it("is defined", () => {
-            expect(StepsText).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(
-                <StepsText />
-            );
 
             expect(wrapper).toMatchSnapshot();
         });

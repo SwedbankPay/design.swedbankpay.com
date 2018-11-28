@@ -1,7 +1,7 @@
 import React from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocToc, Property } from "#";
+import { ComponentPreview, DocContainer, Property } from "#";
 
 const TextColors = () => (
     <>
@@ -48,26 +48,15 @@ const BackgroundColors = () => (
     </>
 );
 
-const ColorsText = () => (
-    <div className="col-lg-10 doc-body">
+const Colors = () => (
+    <DocContainer docToc>
         <p className="lead">Convey meaning through color with a handful of color utility classes.</p>
         <TextColors />
         <BackgroundColors />
-    </div>
-);
-
-const Colors = () => (
-    <>
-        <div className="doc-container">
-            <div className="row">
-                <ColorsText />
-                <DocToc component={ColorsText} />
-            </div>
-        </div>
-    </>
+    </DocContainer>
 );
 
 export default Colors;
 
 /* For testing */
-export { TextColors, BackgroundColors, ColorsText };
+export { TextColors, BackgroundColors };

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ComponentPreview, DocToc, Property } from "#";
+import { ComponentPreview, DocContainer, Property } from "#";
 
 const HowItWorks = () => (
     <>
@@ -100,27 +100,16 @@ const Examples = () => (
     </>
 );
 
-const SpacingText = () => (
-    <div className="col-lg-10 doc-body">
+const Spacing = () => (
+    <DocContainer docToc>
         <p className="lead">The DesignGuide includes a wide range of shorthand responsive margin and padding utility classes to modify an element’s appearance.</p>
         <HowItWorks />
         <Notation />
         <Examples />
-    </div>
-);
-
-const Spacing = () => (
-    <>
-        <div className="doc-container">
-            <div className="row">
-                <SpacingText />
-                <DocToc component={SpacingText} />
-            </div>
-        </div>
-    </>
+    </DocContainer>
 );
 
 export default Spacing;
 
 /* For testing */
-export { HowItWorks, Notation, Examples, SpacingText };
+export { HowItWorks, Notation, Examples };

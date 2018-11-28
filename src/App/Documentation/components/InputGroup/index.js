@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc } from "#";
+import { ComponentPreview, DocContainer } from "#";
 import InputGroupComponent from "@/InputGroup";
 
 const BasicExample = () => (
@@ -181,19 +181,6 @@ const Disabled = () => (
     </>
 );
 
-const InputGroupText = () => (
-    <div className="col-lg-10 doc-body">
-        <p className="lead">Input groups...</p>
-        <BasicExample />
-        {/* <CheckboxesAndRadios /> */}
-        <ButtonAddons />
-        <WithSelect />
-        {/* <WithFeedbackIcon /> */}
-        <ValidationStates />
-        <Disabled />
-    </div>
-);
-
 class InputGroup extends Component {
     componentDidMount () {
         // forms.init();
@@ -201,12 +188,16 @@ class InputGroup extends Component {
 
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <InputGroupText />
-                    <DocToc component={InputGroupText} />
-                </div>
-            </div>
+            <DocContainer docToc>
+                <p className="lead">Input groups...</p>
+                <BasicExample />
+                {/* <CheckboxesAndRadios /> */}
+                <ButtonAddons />
+                <WithSelect />
+                {/* <WithFeedbackIcon /> */}
+                <ValidationStates />
+                <Disabled />
+            </DocContainer>
         );
     }
 }
@@ -214,4 +205,4 @@ class InputGroup extends Component {
 export default InputGroup;
 
 /* For testing */
-export { BasicExample, CheckboxesAndRadios, ButtonAddons, WithSelect, WithFeedbackIcon, ValidationStates, Disabled, InputGroupText };
+export { BasicExample, CheckboxesAndRadios, ButtonAddons, WithSelect, WithFeedbackIcon, ValidationStates, Disabled };

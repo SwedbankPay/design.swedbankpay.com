@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Image, { ImageFluid, ImageRounded, ImageCircle, ImageThumbnail, ImageText } from "./index";
+import Image, { ImageFluid, ImageRounded, ImageCircle, ImageThumbnail } from "./index";
 
 describe("Utilities: Image", () => {
     it("is defined", () => {
@@ -28,12 +28,6 @@ describe("Utilities: Image", () => {
 
     it("ImageThumbnail renders", () => {
         const wrapper = shallow(<ImageThumbnail />);
-
-        expect(wrapper).toMatchSnapshot();
-    });
-
-    it("ImageText renders", () => {
-        const wrapper = shallow(<ImageText />);
 
         expect(wrapper).toMatchSnapshot();
     });

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ComponentPreview, DocToc, Property } from "#";
+import { ComponentPreview, DocContainer, Property } from "#";
 import MediaObjectComponent from "@/MediaObject";
 
 const Overview = () => (
@@ -44,25 +44,16 @@ const MediaPosition = () => (
     </>
 );
 
-const MediaObjectText = () => (
-    <div className="col-lg-10 doc-body">
+const MediaObject = () => (
+    <DocContainer docToc>
         <p className="lead">Media objects...</p>
         <Overview />
         <Sizes />
         <MediaPosition />
-    </div>
-);
-
-const MediaObject = () => (
-    <div className="doc-container">
-        <div className="row">
-            <MediaObjectText />
-            <DocToc component={MediaObjectText} />
-        </div>
-    </div>
+    </DocContainer>
 );
 
 export default MediaObject;
 
 /* For testing */
-export { Overview, Sizes, MediaPosition, MediaObjectText };
+export { Overview, Sizes, MediaPosition };

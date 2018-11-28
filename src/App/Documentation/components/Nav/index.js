@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocToc, ExperimentalComponentAlert, Property } from "#";
+import { ComponentPreview, DocContainer, ExperimentalComponentAlert, Property } from "#";
 import { nav } from "$/px-script/main";
 import NavComponent from "@/Nav";
 
@@ -76,7 +76,7 @@ const TwoLevels = () => (
     <>
         <h2 id="nav-twolevels">Two levels</h2>
         <p>
-            You can also display another level of items in the standard nav. Just nest a <PrismCode className="language-html">{"<div>"}</PrismCode> with class <Property value=".submenu"/> containing an icon and text like the
+            You can also display another level of items in the standard nav. Just nest a <PrismCode className="language-html">{"<DocContainer>"}</PrismCode> with class <Property value=".submenu"/> containing an icon and text like the
             standard nav and add a new <PrismCode className="language-html">{"<ul>"}</PrismCode> with <PrismCode className="language-html">{"<li>"}</PrismCode> items. This level does not use icons. List items containing another level are not visible in responsive mode, they will be displayed when the items are expanded.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
@@ -122,18 +122,6 @@ const Mobile = () => (
     </>
 );
 
-const NavText = () => (
-    <div className="col-lg-10 doc-body">
-        <ExperimentalComponentAlert />
-        <p className="lead">Navs.</p>
-        <StandardNav />
-        <TwoLevels />
-        <IconsOnly />
-        <Mix />
-        <Mobile />
-    </div>
-);
-
 class Nav extends Component {
     componentDidUpdate () {
         nav.init();
@@ -145,12 +133,15 @@ class Nav extends Component {
 
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <NavText />
-                    <DocToc component={NavText} />
-                </div>
-            </div>
+            <DocContainer docToc>
+                <ExperimentalComponentAlert />
+                <p className="lead">Navs.</p>
+                <StandardNav />
+                <TwoLevels />
+                <IconsOnly />
+                <Mix />
+                <Mobile />
+            </DocContainer>
         );
     }
 }
@@ -158,4 +149,4 @@ class Nav extends Component {
 export default Nav;
 
 /* For testing */
-export { StandardNav, TwoLevels, IconsOnly, Mix, Mobile, NavText };
+export { StandardNav, TwoLevels, IconsOnly, Mix, Mobile };

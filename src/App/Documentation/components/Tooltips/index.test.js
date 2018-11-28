@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Tooltip, { Overview, TooltipText } from "./index";
+import Tooltip, { Overview } from "./index";
 
 describe("Components: Tooltip", () => {
     it("is defined", () => {
@@ -21,18 +21,6 @@ describe("Components: Tooltip", () => {
 
         it("renders", () => {
             const wrapper = shallow(<Overview />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("TooltipText", () => {
-        it("is defined", () => {
-            expect(TooltipText).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<TooltipText />);
 
             expect(wrapper).toMatchSnapshot();
         });

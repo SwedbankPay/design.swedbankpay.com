@@ -1,7 +1,7 @@
 import React from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocToc, Property } from "#";
+import { ComponentPreview, DocContainer, Property } from "#";
 
 const CreatingYourComponent = () => (
     <>
@@ -222,27 +222,18 @@ const AddingJavaScript = () => {
     );
 };
 
-const ContributingText = () => (
-    <div className="col-lg-10">
+const Contributing = () => (
+    <DocContainer docToc>
         <p className="lead">To create a new component</p>
         <CreatingYourComponent />
         <CreateADocumentationPage />
         <AddComponentToRoutes />
         <AddingStyles />
         <AddingJavaScript />
-    </div>
-);
-
-const Contributing = () => (
-    <div className="doc-container">
-        <div className="row">
-            <ContributingText />
-            <DocToc component={ContributingText} />
-        </div>
-    </div>
+    </DocContainer>
 );
 
 export default Contributing;
 
 /* For testing */
-export { CreatingYourComponent, CreateADocumentationPage, AddComponentToRoutes, AddingStyles, AddingJavaScript, ContributingText };
+export { CreatingYourComponent, CreateADocumentationPage, AddComponentToRoutes, AddingStyles, AddingJavaScript };

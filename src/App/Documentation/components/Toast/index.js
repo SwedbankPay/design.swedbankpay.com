@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocToc, ExperimentalComponentAlert, Attribute } from "#";
+import { ComponentPreview, DocContainer, ExperimentalComponentAlert, Attribute } from "#";
 import { toast } from "$/px-script/main";
 
 const Overview = () => (
@@ -171,26 +171,17 @@ const CustomHtml = () => {
     );
 };
 
-const ToastText = () => (
-    <div className="col-lg-10 doc-body">
-        <ExperimentalComponentAlert />
-        <p className="lead">Toast...</p>
-        <Overview />
-        <Options />
-        <PremadeToasts />
-        <CustomHtml />
-    </div>
-);
-
 class Toast extends Component {
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <ToastText />
-                    <DocToc component={ToastText} />
-                </div>
-            </div>
+            <DocContainer>
+                <ExperimentalComponentAlert />
+                <p className="lead">Toast...</p>
+                <Overview />
+                <Options />
+                <PremadeToasts />
+                <CustomHtml />
+            </DocContainer>
         );
     }
 }
@@ -198,4 +189,4 @@ class Toast extends Component {
 export default Toast;
 
 /* For testing */
-export { Overview, Options, PremadeToasts, CustomHtml, ToastText };
+export { Overview, Options, PremadeToasts, CustomHtml };

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc, Icon, Property } from "#";
+import { ComponentPreview, DocContainer, Icon, Property } from "#";
 import { sheet } from "$/px-script/main";
 
 const Example = () => (
@@ -61,14 +61,6 @@ const UsageWithJavascript = () => (
     </>
 );
 
-const SheetText = () => (
-    <div className="col-lg-10 doc-body">
-        <p className="lead">Sheet...</p>
-        <Example />
-        <UsageWithJavascript />
-    </div>
-);
-
 class Sheet extends Component {
     componentDidMount () {
         sheet.init();
@@ -76,12 +68,11 @@ class Sheet extends Component {
 
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <SheetText />
-                    <DocToc component={SheetText} />
-                </div>
-            </div>
+            <DocContainer docToc>
+                <p className="lead">Sheet...</p>
+                <Example />
+                <UsageWithJavascript />
+            </DocContainer>
         );
     }
 }
@@ -89,4 +80,4 @@ class Sheet extends Component {
 export default Sheet;
 
 /* For testing */
-export { Example, UsageWithJavascript, SheetText };
+export { Example, UsageWithJavascript };

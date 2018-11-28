@@ -1,7 +1,7 @@
 import React from "react";
 import classnames from "classnames";
 
-import { ComponentPreview, DocToc } from "#";
+import { ComponentPreview, DocContainer } from "#";
 
 const DocTable = ({ striped, condensed, hover }) => {
     const tableClasses = classnames(
@@ -138,8 +138,8 @@ const DescriptionTable = () => (
     </>
 );
 
-const TablesText = () => (
-    <div className="col-lg-10 doc-body">
+const Tables = () => (
+    <DocContainer docToc>
         <p className="lead">Lots of nice info about tables will be here...</p>
         <BasicTable />
         <StripedTable />
@@ -147,19 +147,10 @@ const TablesText = () => (
         <HoverTable />
         <HoverStripedTable />
         <DescriptionTable />
-    </div>
-);
-
-const Tables = () => (
-    <div className="doc-container">
-        <div className="row">
-            <TablesText />
-            <DocToc component={TablesText} />
-        </div>
-    </div>
+    </DocContainer>
 );
 
 export default Tables;
 
 /* For testing */
-export { DocTable, BasicTable, StripedTable, CondensedTable, HoverTable, HoverStripedTable, DescriptionTable, TablesText };
+export { DocTable, BasicTable, StripedTable, CondensedTable, HoverTable, HoverStripedTable, DescriptionTable };

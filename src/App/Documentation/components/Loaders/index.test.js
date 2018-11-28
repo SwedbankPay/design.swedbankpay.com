@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Loaders, { BasicUsage, Sizes, MutedLoader, StaticHtml, LoadersText } from "./index";
+import Loaders, { BasicUsage, Sizes, MutedLoader, StaticHtml } from "./index";
 
 describe("Documentation: Loaders", () => {
     it("is defined", () => {
@@ -48,19 +48,6 @@ describe("Documentation: Loaders", () => {
 
             expect(wrapper).toMatchSnapshot();
         });
-    });
-
-    describe("Loaders Text", () => {
-        it("is defined", () => {
-            expect(LoadersText).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<LoadersText />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-
     });
 
     describe("Static Html", () => {

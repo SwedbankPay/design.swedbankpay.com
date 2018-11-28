@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ComponentPreview, DocToc } from "#";
+import { ComponentPreview, DocContainer } from "#";
 import ColorPreview from "./ColorPreview";
 
 const ColorPalette = () => (
@@ -32,23 +32,14 @@ const ColorPalette = () => (
     </>
 );
 
-const ColorText = () => (
-    <div className="col-lg-10 doc-body">
+const Color = () => (
+    <DocContainer>
         <p className="lead">Here there be colors...</p>
         <ColorPalette />
-    </div>
-);
-
-const Color = () => (
-    <div className="doc-container">
-        <div className="row">
-            <ColorText />
-            <DocToc component={ColorText} />
-        </div>
-    </div>
+    </DocContainer>
 );
 
 export default Color;
 
 /* For testing */
-export { ColorPalette, ColorText };
+export { ColorPalette };

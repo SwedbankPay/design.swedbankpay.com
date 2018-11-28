@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc, Icon, Property } from "#";
+import { ComponentPreview, DocContainer, Icon, Property } from "#";
 import { dialog } from "$/px-script/main";
 
 const Example = () => (
@@ -38,14 +38,6 @@ const UsageWithJavascript = () => (
     </>
 );
 
-const DialogText = () => (
-    <div className="col-lg-10 doc-body">
-        <p className="lead">Dialogs...</p>
-        <Example />
-        <UsageWithJavascript />
-    </div>
-);
-
 class Dialog extends Component {
     componentDidMount () {
         dialog.init();
@@ -53,12 +45,11 @@ class Dialog extends Component {
 
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <DialogText />
-                    <DocToc component={DialogText} />
-                </div>
-            </div>
+            <DocContainer docToc>
+                <p className="lead">Dialogs...</p>
+                <Example />
+                <UsageWithJavascript />
+            </DocContainer>
         );
     }
 }
@@ -66,4 +57,4 @@ class Dialog extends Component {
 export default Dialog;
 
 /* For testing */
-export { Example, UsageWithJavascript, DialogText };
+export { Example, UsageWithJavascript };

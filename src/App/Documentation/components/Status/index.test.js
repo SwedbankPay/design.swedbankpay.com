@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Status, { Overview, ExtendedUsage, StatusText } from "./index";
+import Status, { Overview, ExtendedUsage } from "./index";
 
 describe("Documentation: Status", () => {
     it("is defined", () => {
@@ -33,18 +33,6 @@ describe("Documentation: Status", () => {
 
         it("renders", () => {
             const wrapper = shallow(<ExtendedUsage />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("StatusText", () => {
-        it("is defined", () => {
-            expect(StatusText).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<StatusText />);
 
             expect(wrapper).toMatchSnapshot();
         });

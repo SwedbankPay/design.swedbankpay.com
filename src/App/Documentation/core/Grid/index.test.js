@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Grid, { HowItWorks, GridOptions, AutoLayoutColumns, Alignment, GridText } from "./index";
+import Grid, { HowItWorks, GridOptions, AutoLayoutColumns, Alignment } from "./index";
 
 describe("Core: Grid", () => {
     it("is defined", () => {
@@ -57,18 +57,6 @@ describe("Core: Grid", () => {
 
         it("renders", () => {
             const wrapper = shallow(<Alignment />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("GridText", () => {
-        it("is defined", () => {
-            expect(GridText).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<GridText />);
 
             expect(wrapper).toMatchSnapshot();
         });

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, Attribute, DocToc, Property } from "#";
+import { ComponentPreview, Attribute, DocContainer, Property } from "#";
 import LoaderComponent from "@/Loader";
 import { loader } from "$/px-script/main";
 
@@ -54,16 +54,6 @@ const StaticHtml = () => (
     </>
 );
 
-const LoadersText = () => (
-    <div className="col-lg-10 doc-body">
-        <p className="lead">Use loaders...</p>
-        <BasicUsage />
-        <Sizes />
-        <MutedLoader />
-        <StaticHtml />
-    </div>
-);
-
 class Loaders extends Component {
     componentDidMount () {
         loader.init();
@@ -71,12 +61,13 @@ class Loaders extends Component {
 
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <LoadersText />
-                    <DocToc component={LoadersText} />
-                </div>
-            </div>
+            <DocContainer docToc>
+                <p className="lead">Use loaders...</p>
+                <BasicUsage />
+                <Sizes />
+                <MutedLoader />
+                <StaticHtml />
+            </DocContainer>
         );
     }
 }
@@ -84,4 +75,4 @@ class Loaders extends Component {
 export default Loaders;
 
 /* For testing */
-export { BasicUsage, Sizes, MutedLoader, StaticHtml, LoadersText };
+export { BasicUsage, Sizes, MutedLoader, StaticHtml };

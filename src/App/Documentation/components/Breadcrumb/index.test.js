@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Breadcrumb, { BasicBreadCrumb, DisabledBreadcrumb, BreadcrumbText } from "./index";
+import Breadcrumb, { BasicBreadCrumb, DisabledBreadcrumb } from "./index";
 
 describe("Documentation: Breadcrumb", () => {
     it("is defined", () => {
@@ -33,18 +33,6 @@ describe("Documentation: Breadcrumb", () => {
 
         it("renders", () => {
             const wrapper = shallow(<DisabledBreadcrumb />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("BreadCrumb Text", () => {
-        it("is defined", () => {
-            expect(BreadcrumbText).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<BreadcrumbText />);
 
             expect(wrapper).toMatchSnapshot();
         });

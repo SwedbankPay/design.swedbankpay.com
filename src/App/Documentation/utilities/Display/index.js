@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocToc, Property } from "#";
+import { ComponentPreview, DocContainer, Property } from "#";
 
 const HowItWorks = () => (
     <>
@@ -143,28 +143,17 @@ const HidingElements = () => (
     </>
 );
 
-const DisplayText = () => (
-    <div className="col-lg-10 doc-body">
+const Display = () => (
+    <DocContainer docToc>
         <p className="lead">Quickly and responsively toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.</p>
         <HowItWorks />
         <Notation />
         <Examples />
         <HidingElements />
-    </div>
-);
-
-const Display = () => (
-    <>
-        <div className="doc-container">
-            <div className="row">
-                <DisplayText />
-                <DocToc component={DisplayText} />
-            </div>
-        </div>
-    </>
+    </DocContainer>
 );
 
 export default Display;
 
 /* For testing */
-export { HowItWorks, Notation, Examples, HidingElements, DisplayText };
+export { HowItWorks, Notation, Examples, HidingElements };

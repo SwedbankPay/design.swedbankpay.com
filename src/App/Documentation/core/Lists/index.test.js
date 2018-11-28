@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Lists, { BasicList, InlineList, DescriptionList, SettingsList, ItemList, HoverItemList, StripedItemList, ListsText } from "./index";
+import Lists, { BasicList, InlineList, DescriptionList, SettingsList, ItemList, HoverItemList, StripedItemList } from "./index";
 
 describe("Documentation: Lists", () => {
     it("is defined", () => {
@@ -104,18 +104,6 @@ describe("Documentation: Lists", () => {
 
             menuAnchors.forEach(anchor => anchor.simulate("click", eventHandler));
             expect(eventHandler.preventDefault).toHaveBeenCalledTimes(menuAnchors.length);
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("ListsText", () => {
-        it("is defined", () => {
-            expect(ListsText).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<ListsText />);
-
             expect(wrapper).toMatchSnapshot();
         });
     });

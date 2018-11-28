@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc, Property } from "#";
+import { ComponentPreview, DocContainer, Property } from "#";
 
 const Overview = () => (
     <>
@@ -42,23 +42,14 @@ const ExtendedUsage = () => (
     </>
 );
 
-const StatusText = () => (
-    <div className="col-lg-10 doc-body">
-        <p className="lead">Status...</p>
-        <Overview />
-        <ExtendedUsage />
-    </div>
-);
-
 class Status extends Component {
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <StatusText />
-                    <DocToc component={StatusText} />
-                </div>
-            </div>
+            <DocContainer docToc>
+                <p className="lead">Status...</p>
+                <Overview />
+                <ExtendedUsage />
+            </DocContainer>
         );
     }
 }
@@ -66,4 +57,4 @@ class Status extends Component {
 export default Status;
 
 /* For testing */
-export { Overview, ExtendedUsage, StatusText };
+export { Overview, ExtendedUsage };

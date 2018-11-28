@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc, Property } from "#";
+import { ComponentPreview, DocContainer, Property } from "#";
 import PanelComponent from "@/Panel";
 
 const bodyContent = [
@@ -138,26 +138,17 @@ const PanelTable = () => (
     </>
 );
 
-const PanelText = () => (
-    <div className="col-lg-10 doc-body">
-        <p className="lead">Panels...</p>
-        <Overview />
-        <PanelHeaders />
-        <PanelDark />
-        <PanelMuted />
-        <PanelTable />
-    </div>
-);
-
 class Panel extends Component {
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <PanelText />
-                    <DocToc component={PanelText} />
-                </div>
-            </div>
+            <DocContainer docToc>
+                <p className="lead">Panels...</p>
+                <Overview />
+                <PanelHeaders />
+                <PanelDark />
+                <PanelMuted />
+                <PanelTable />
+            </DocContainer>
         );
     }
 }
@@ -165,4 +156,4 @@ class Panel extends Component {
 export default Panel;
 
 /* For testing */
-export { Overview, PanelHeaders, PanelDark, PanelMuted, PanelText, PanelTable, TableContent };
+export { Overview, PanelHeaders, PanelDark, PanelMuted, PanelTable, TableContent };

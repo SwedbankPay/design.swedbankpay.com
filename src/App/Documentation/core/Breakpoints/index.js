@@ -1,6 +1,6 @@
 import React from "react";
 
-import { DocToc, Property } from "#";
+import { DocContainer, Property } from "#";
 
 const Overview = () => (
     <>
@@ -99,25 +99,14 @@ const Overview = () => (
     </>
 );
 
-const BreakpointsText = () => (
-    <div className="col-lg-10 doc-body">
+const Breakpoints = () => (
+    <DocContainer>
         <p className="lead">Our breakpoints is based on <a href="http://getbootstrap.com/docs/4.1/layout/overview/#responsive-breakpoints">Bootstrap{"'"}s breakpoints</a>, but has some modifications.</p>
         <Overview />
-    </div>
-);
-
-const Breakpoints = () => (
-    <>
-        <div className="doc-container">
-            <div className="row">
-                <BreakpointsText />
-                <DocToc component={BreakpointsText} />
-            </div>
-        </div>
-    </>
+    </DocContainer>
 );
 
 export default Breakpoints;
 
 /* For testing */
-export { Overview, BreakpointsText };
+export { Overview };

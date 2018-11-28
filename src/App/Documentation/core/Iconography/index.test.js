@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Icons, { MaterialIcons, PaymentIcons, IconsText } from "./index";
+import Icons, { MaterialIcons, PaymentIcons } from "./index";
 
 describe("Core: Iconography", () => {
     it("is defined", () => {
@@ -44,18 +44,6 @@ describe("Core: Iconography", () => {
 
             onclickAnchors.forEach(anchor => anchor.simulate("click", clickHandler));
             expect(clickHandler.preventDefault).toHaveBeenCalledTimes(onclickAnchors.length);
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("IconsText", () => {
-        it("is defined", () => {
-            expect(IconsText).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<IconsText />);
-
             expect(wrapper).toMatchSnapshot();
         });
     });

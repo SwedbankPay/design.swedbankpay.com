@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Spacing, { HowItWorks, Notation, Examples, SpacingText } from "./index";
+import Spacing, { HowItWorks, Notation, Examples } from "./index";
 
 describe("Utilities: Spacing", () => {
     it("is defined", () => {
@@ -45,18 +45,6 @@ describe("Utilities: Spacing", () => {
 
         it("renders", () => {
             const wrapper = shallow(<Examples />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("SpacingText", () => {
-        it("is defined", () => {
-            expect(SpacingText).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<SpacingText />);
 
             expect(wrapper).toMatchSnapshot();
         });

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc, Attribute } from "#";
+import { ComponentPreview, DocContainer, Attribute } from "#";
 
 const Overview = () => (
     <>
@@ -42,22 +42,13 @@ const Overview = () => (
     </>
 );
 
-const TooltipText = () => (
-    <div className="col-lg-10 doc-body">
-        <p className="lead">Tooltips are small, interactive, textual hints for mainly graphical elements. When using icons for actions you can use a tooltip to give people clarification on its function.</p>
-        <Overview />
-    </div>
-);
-
 class Tooltip extends Component {
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <TooltipText />
-                    <DocToc component={TooltipText} />
-                </div>
-            </div>
+            <DocContainer docToc>
+                <p className="lead">Tooltips are small, interactive, textual hints for mainly graphical elements. When using icons for actions you can use a tooltip to give people clarification on its function.</p>
+                <Overview />
+            </DocContainer>
         );
     }
 }
@@ -65,4 +56,4 @@ class Tooltip extends Component {
 export default Tooltip;
 
 /* For testing */
-export { Overview, TooltipText };
+export { Overview };

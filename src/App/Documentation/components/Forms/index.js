@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocToc, Attribute, Property } from "#";
+import { ComponentPreview, DocContainer, Attribute, Property } from "#";
 import { rangeslider, validation } from "$/px-script/main";
 import InputGroup from "@/InputGroup";
 import Button from "@/Button";
@@ -316,25 +316,6 @@ const DisabledRangeSlider = () => (
     </>
 );
 
-const FormsText = () => (
-    <div className="col-lg-10 doc-body">
-        <p className="lead">Forms...</p>
-        <Overview />
-        <FormGrid />
-        <Validation />
-        <UsageWithFieldsets />
-        <StaticText />
-        <Checkboxes />
-        <DisabledCheckboxes />
-        <RadioButtons />
-        <DisabledRadioButtons />
-        <Toggleboxes />
-        <DisabledToggleboxes />
-        <RangeSlider />
-        <DisabledRangeSlider />
-    </div>
-);
-
 class Forms extends Component {
     componentDidMount () {
         rangeslider.init();
@@ -343,12 +324,22 @@ class Forms extends Component {
 
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <FormsText />
-                    <DocToc component={FormsText} />
-                </div>
-            </div>
+            <DocContainer docToc>
+                <p className="lead">Forms...</p>
+                <Overview />
+                <FormGrid />
+                <Validation />
+                <UsageWithFieldsets />
+                <StaticText />
+                <Checkboxes />
+                <DisabledCheckboxes />
+                <RadioButtons />
+                <DisabledRadioButtons />
+                <Toggleboxes />
+                <DisabledToggleboxes />
+                <RangeSlider />
+                <DisabledRangeSlider />
+            </DocContainer>
         );
     }
 }
@@ -356,4 +347,4 @@ class Forms extends Component {
 export default Forms;
 
 /* For testing */
-export { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, Checkboxes, DisabledCheckboxes, RadioButtons, DisabledRadioButtons, Toggleboxes, DisabledToggleboxes, RangeSlider, DisabledRangeSlider, FormsText };
+export { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, Checkboxes, DisabledCheckboxes, RadioButtons, DisabledRadioButtons, Toggleboxes, DisabledToggleboxes, RangeSlider, DisabledRangeSlider };
