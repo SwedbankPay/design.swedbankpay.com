@@ -24,8 +24,9 @@
  * 15. Panel
  * 16. Sheet
  * 17. Status
- * 18. Toast
- * 19. Topbar
+ * 18. Steps
+ * 19. Toast
+ * 20. Topbar
  */
 
 /* ==========================================================================
@@ -565,7 +566,26 @@
 @status-padding-head:                       @base-padding * 8;
 
 /*
- * 18. Toast
+ * 18. Steps
+ * ==========================================================================
+ */
+
+@list-item-padding:                         3.4rem 0 0 0;
+@list-item-padding-desktop-top:             4.5rem;
+@list-item-padding-desktop:                 @list-item-padding-desktop-top 0 1.2rem 0;
+@list-item-padding-desktop-vertical:        2rem 1.5rem 2rem 5.5rem;
+
+@circle-size:                               30px;
+@circle-size-desktop:                       45px;
+
+@vertical-left:                             1.7rem;
+@vertical-margin:                           (@circle-size-desktop / 2) - (@line-width-desktop / 2);
+
+@line-width:                                3px;
+@line-width-desktop:                        5px;
+
+/*
+ * 19. Toast
  * ==========================================================================
  */
 
@@ -575,7 +595,7 @@
 @toast-action-color:                        @yellow;
 
 /*
- * 19. Topbar
+ * 20. Topbar
  * ==========================================================================
  */
 
