@@ -115,18 +115,17 @@
     }
 }
 
-.for-each(@breakpoint in @grid-breakpoints) {
-    @infix: extract(@breakpoint, 1);
-    @min-width: extract(@breakpoint, 2);
-
+each(@grid-breakpoints, .(@min-width, @infix) {
     .tabs-horizontal-@{infix} {
         @media screen and (min-width: @min-width) {
             .tabs-horizontal();
         }
     }
-}
+});
 
-// &.tabs-vertical { Not sure if this is going to be kept, i suspect this won't work with the newest changes [AW]
+
+// TODO: Not sure if this is going to be kept, i suspect this won't work with the newest changes [AW]
+// &.tabs-vertical {
 //     padding-left: 0;
 //     flex-direction: column;
 
