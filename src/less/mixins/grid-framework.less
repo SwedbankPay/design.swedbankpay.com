@@ -7,13 +7,15 @@
         padding-left: (@gutter / 2);
     }
 
-    .for-each(@breakpoint in @breakpoints) {
+    each(@grid-breakpoints, .(@size, @abbr) {
         @ruleset_1: {
-            .for(@i, @end: @columns) {
+            .generate-columns(@n, @i: 1) when (@i =< @n) {
                 .col@{infix}-@{i} {
                     @grid-column();
                 }
+                .generate-columns(@n, (@i + 1));
             }
+            .generate-columns(@columns);
 
             .col@{infix},
             .col@{infix}-auto {
@@ -34,11 +36,13 @@
                 max-width: none; /* Reset earlier grid tiers */
             }
 
-            .for(@i, @end: @columns) {
+            .make-columns(@n, @i: 1) when (@i =< @n) {
                 .col@{infix}-@{i} {
                     .make-col(@i, @columns);
                 }
+                .make-columns(@n, (@i + 1));
             }
+            .make-columns(@columns);
 
             .order@{infix}-first {
                 order: -1;
@@ -48,21 +52,25 @@
                 order: @columns + 1;
             }
 
-            .for(@i: 0, @end: @columns) {
+            .make-column-orders(@n, @i: 1) when (@i =< @n) {
                 .order@{infix}-@{i} {
                     order: @i;
                 }
+                .make-column-orders(@n, (@i + 1));
             }
+            .make-column-orders(@columns);
 
-            .for(@i: 0, @end: (@columns - 1)) {
+            .make-column-offsets(@n, @i: 1) when (@i =< @n) {
                 .offset@{infix}-@{i} {
                     .make-col-offset(@i, @columns);
                 }
+                .make-column-offsets(@n, (@i + 1));
             }
+            .make-column-offsets(@columns);
         }
 
-        .infix-ruleset(@breakpoint, @ruleset_1);
-        .media-breakpoint-up(@breakpoint, @ruleset_2);
-    }
+        .infix-ruleset(@size, @abbr, @ruleset_1);
+        .media-breakpoint-up(@size, @abbr, @ruleset_2);
+    });
 }
 
