@@ -83,4 +83,20 @@
             }
         }
     }
+
+    &-hover {
+        li {
+            position: relative;
+
+            &:hover:before {
+                content: "";
+                top: -1px;
+                left: 0;
+                bottom: -1px;
+                position: absolute;
+                width: 6px;
+                background-color: @brand-primary;
+            }
+        }
+    }
 }
