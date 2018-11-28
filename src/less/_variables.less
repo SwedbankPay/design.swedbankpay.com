@@ -176,24 +176,16 @@
 /* Padding between columns. Gets divided in half for the left and right. */
 @grid-gutter-width:                         30px;
 
-/* stylelint-disable property-no-unknown */
-@grid-breakpoints-new: {
-    xs: 0;
-    sm: 576px;
-    md: 768px;
-    lg: 992px;
-    xl: 1200px;
-    xxl: 1600px;
-}
 
-// TODO: Swap this with @grid-breakpoints-new when we update Less and start using native `each` function [EH]
 /* stylelint-disable indentation */
-@grid-breakpoints:                          ~"xs" 0,
-                                            ~"sm" 576px,
-                                            ~"md" 768px,
-                                            ~"lg" 992px,
-                                            ~"xl" 1200px,
-                                            ~"xxl" 1600px;
+@grid-breakpoints: {
+                                            xs: 0;
+                                            sm: 576px;
+                                            md: 768px;
+                                            lg: 992px;
+                                            xl: 1200px;
+                                            xxl: 1600px;
+}
 
 @container-max-widths:                      540px,
                                             720px,
@@ -209,11 +201,11 @@
  * Uses 0.02px rather than 0.01px to work around a current rounding bug in Safari.
  * See https://bugs.webkit.org/show_bug.cgi?id=178261
  */
-@screen-xs-min:                             @grid-breakpoints-new[sm];
-@screen-sm-min:                             @grid-breakpoints-new[md];
-@screen-md-min:                             @grid-breakpoints-new[lg];
-@screen-lg-min:                             @grid-breakpoints-new[xl];
-@screen-xl-min:                             @grid-breakpoints-new[xxl];
+@screen-xs-min:                             @grid-breakpoints[sm];
+@screen-sm-min:                             @grid-breakpoints[md];
+@screen-md-min:                             @grid-breakpoints[lg];
+@screen-lg-min:                             @grid-breakpoints[xl];
+@screen-xl-min:                             @grid-breakpoints[xxl];
 
 @screen-xs-max:                             (@screen-sm-min - 0.02);
 @screen-sm-max:                             (@screen-md-min - 0.02);

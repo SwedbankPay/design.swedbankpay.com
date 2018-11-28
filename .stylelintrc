@@ -33,6 +33,12 @@
         "plugin/declaration-block-no-ignored-properties": true,
         "property-no-unknown": [true, {
             "ignoreProperties": [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+                "xxl",
                 "default",
                 "brand",
                 "blue",
