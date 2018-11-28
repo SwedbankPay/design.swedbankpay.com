@@ -58,6 +58,11 @@
                 "3",
                 "4",
                 "5",
+                "25",
+                "50",
+                "75",
+                "100",
+                "auto"
             ]
         }],
         "selector-attribute-quotes": "always",
