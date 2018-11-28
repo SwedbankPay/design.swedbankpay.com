@@ -2,12 +2,12 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-const TopbarBtn = ({ icon, text, target }) => {
+const TopbarBtn = ({ icon, text }) => {
     const iconClass = classnames("material-icons", icon === "menu" ? "topbar-btn-icon" : "");
 
     if (icon || text) {
         return (
-            <button type="button" className="topbar-btn" data-toggle-nav={target ? `#${target}` : null}>{"\n\t\t"}
+            <button type="button" className="topbar-btn">{"\n\t\t"}
                 {icon ?
                     <>
                         <i className={iconClass}>{icon}</i>
@@ -28,10 +28,10 @@ const TopbarBtn = ({ icon, text, target }) => {
 };
 
 const TopbarMenu = ({ menu }) => {
-    const { id, items } = menu;
+    const { items } = menu;
 
     return (
-        <nav id={id} className="topbar-nav">
+        <nav className="topbar-nav">
             {items.map((item, i) => (
                 <Fragment key={i}>
                     {"\n"}<a href="#" onClick={e => e.preventDefault()}>{item}</a>
@@ -42,7 +42,7 @@ const TopbarMenu = ({ menu }) => {
 };
 
 const Topbar = ({ topbarContent, fixed, logout }) => (
-    <header className={`topbar ${fixed ? "topbar-fixed" : ""}`}>{"\n"}
+    <header className={`topbar${fixed ? " topbar-fixed" : ""}`}>{"\n"}
         <>
             {topbarContent ?
             <>

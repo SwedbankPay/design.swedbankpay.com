@@ -65,42 +65,6 @@
             border-left: 1px solid @gray-8;
         }
     }
-
-    // TODO: Remove when topbar-btn-left and right are deleted [AW].
-    .topbar-btn-left,
-    .topbar-btn-right {
-        margin: 0;
-        border: 0;
-        background: none;
-        height: 100%;
-        padding: 0 @topbar-padding;
-        font-weight: bold;
-        outline: 0;
-        display: flex;
-        align-items: center;
-
-        &:hover {
-            cursor: pointer;
-        }
-
-        &:hover,
-        &:focus {
-            background-color: @gray-9;
-        }
-
-        .topbar-btn-icon {
-            margin-right: 5px;
-            margin-top: -2px;
-        }
-    }
-
-    .topbar-btn-left {
-        border-right: 1px solid @gray-8;
-    }
-
-    .topbar-btn-right {
-        border-left: 1px solid @gray-8;
-    }
 }
 
 .topbar-nav {
@@ -112,112 +76,17 @@
     overflow-x: hidden;
     overflow-y: auto;
     z-index: @zindex-topbar-nav;
+    padding: @base-padding-sm @base-padding;
+    transition: left @topbar-slide-transition;
+    left: -@topbar-nav-width;
 
-    /* TODO: merge into topbar-nav when menu-right and left are deleted. [AW] */
-    &:not(.topbar-nav-left):not(.topbar-nav-right) {
-        padding: @base-padding-sm @base-padding;
-        transition: left @topbar-slide-transition;
-        left: -@topbar-nav-width;
-
-        &.in {
-            left: 0;
-        }
-    }
-
-    &.topbar-nav-right {
-        transition: right @topbar-slide-transition;
-        right: -@topbar-nav-width;
-        padding: @base-padding;
-
-        &.in {
-            right: 0;
-        }
-    }
-
-    &.topbar-nav-left {
-        transition: left @topbar-slide-transition;
-        left: -@topbar-nav-width;
-
-        &.in {
-            left: 0;
-        }
-
-        .topbar-nav-slide {
-            position: absolute;
-            width: @topbar-nav-width;
-            height: 100%;
-            color: @gray-7;
-            left: @topbar-nav-width + @topbar-back-btn-width;
-            transition: left @topbar-slide-transition, @topbar-background-transition;
-
-            &.current {
-                left: 0;
-            }
-
-            &.prev {
-                left: -@topbar-slide-prev-pos;
-                background-color: @gray-0;
-
-                &.inactive {
-                    left: -@topbar-slide-prev-pos - @topbar-slide-prev-pos;
-                }
-
-                .slides-container {
-                    opacity: 0;
-                    visibility: hidden;
-                }
-
-                .slide-back-btn {
-                    left: @topbar-slide-prev-pos;
-                    visibility: visible;
-                }
-            }
-
-            &:not(:first-child) {
-                &.current {
-                    left: @topbar-back-btn-width;
-                }
-
-                .slides-container {
-                    width: @topbar-nav-slide-width;
-                    margin: @base-margin-sm;
-                    padding: 0 @base-padding-sm;
-                }
-            }
-
-            .slide-back-btn {
-                visibility: hidden;
-                padding: @base-padding-sm;
-                position: absolute;
-                top: 0;
-                left: 0;
-
-                &:hover {
-                    cursor: pointer;
-                }
-            }
-
-            .slides-container {
-                margin: @base-margin-sm @base-margin;
-                flex-grow: 1;
-
-                .topbar-nav-group {
-                    margin: @base-margin-sm 0 @base-margin;
-
-                    .topbar-nav-group-heading {
-                        text-transform: uppercase;
-                        border-bottom: 1px solid @gray-2;
-                        padding-bottom: @base-padding-xs;
-                        opacity: 0.65;
-                    }
-                }
-            }
-        }
+    &.in {
+        left: 0;
     }
 
     a,
     span {
-        display: block;
+        display: flex;
         color: @gray-7;
         padding: @base-padding-sm 0 @base-padding-sm @base-padding-sm;
         cursor: pointer;
@@ -228,16 +97,6 @@
             background-color: @gray-2;
             color: @white;
             text-decoration: none;
-        }
-
-        &[data-target] {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .material-icons {
-            opacity: 0.65;
-            margin-top: 1px; /* TODO: this might backfire, rem and stuff.. [STA] */
         }
     }
 }
