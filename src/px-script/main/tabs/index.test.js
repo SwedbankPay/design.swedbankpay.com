@@ -44,17 +44,6 @@ describe("px-script: tabs", () => {
         expect(tabs.init).toBeInstanceOf(Function);
     });
 
-    it("does not generate tabs instances if no .tabs are present in the DOM", () => {
-        ReactDOM.render(<NoTabsClass items={items} />, div);
-        tabs.init();
-
-        const renderedTab = document.querySelector(".tabs");
-
-        expect(renderedTab).toBeFalsy();
-
-        ReactDOM.unmountComponentAtNode(div);
-    });
-
     it("sets an active item if none has been provided", () => {
         ReactDOM.render(<NoActiveTab items={items} />, div);
 
@@ -90,11 +79,10 @@ describe("px-script: tabs", () => {
         ReactDOM.unmountComponentAtNode(div);
     });
 
-    // TODO: check if preventdefault was actually called [AW]
-
     it("prevents default if you click an active tab", () => {
         ReactDOM.render(<NoActiveTab items={items} />, div);
         tabs.init();
+        Event.prototype.preventDefault = jest.fn();
 
         const renderedTab = document.querySelector(".tabs");
         const activeTab = renderedTab.querySelector(".active");
@@ -106,6 +94,7 @@ describe("px-script: tabs", () => {
 
         expect(activeTab.classList).toContain("active");
         expect(document.querySelector(".active")).toEqual(activeTab);
+        expect(Event.prototype.preventDefault).toHaveBeenCalled();
 
         ReactDOM.unmountComponentAtNode(div);
     });

@@ -13,11 +13,6 @@ const menu = {
     items: ["Link 1", "Link 2", "Link 3"]
 };
 
-const topbarContent = {
-    id: "topbar-nav",
-    ...menu
-};
-
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
@@ -35,7 +30,7 @@ const Overview = () => (
             to get the menu to appear when the menu-button is clicked.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <TopbarComponent topbarContent={topbarContent} logout />
+            <TopbarComponent topbarContent={menu} logout />
         </ComponentPreview>
     </>
 );

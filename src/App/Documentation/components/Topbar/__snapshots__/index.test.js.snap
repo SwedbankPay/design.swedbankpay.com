@@ -97,7 +97,6 @@ exports[`Components: Topbar Overview renders 1`] = `
             "icon": "menu",
             "text": "Menu",
           },
-          "id": "topbar-nav",
           "items": Array [
             "Link 1",
             "Link 2",

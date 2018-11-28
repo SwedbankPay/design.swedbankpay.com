@@ -8,10 +8,10 @@ describe("px-script: topbar - NavMenu", () => {
 
     document.body.appendChild(div);
 
-    const Topbar = ({ navOpen, noBtnIcon, standardIcons }) => (
+    const Topbar = ({ navOpen, noBtnIcon }) => (
         <header className="topbar">
             <button type="button" className="topbar-btn" data-toggle-nav="#topbar-nav">
-                {noBtnIcon ? null :<i className="material-icons topbar-btn-icon">{standardIcons ? "" : "menu"}</i>}
+                {noBtnIcon ? null : <i className="material-icons topbar-btn-icon">menu</i>}
                 <span className="topbar-btn-text">Menu</span>
             </button>
             <nav id="topbar-nav" className={`topbar-nav${navOpen ? " in" : ""}`}>
@@ -41,6 +41,58 @@ describe("px-script: topbar - NavMenu", () => {
         expect(topbar).toBeTruthy();
         expect(navMenu).toBeTruthy();
         expect(newNavMenu).toBeTruthy();
+
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
+    it("sets userIcon to null if no iconElement exists", () => {
+        ReactDOM.render(<Topbar noBtnIcon />, div);
+
+        const topbar = document.querySelector(".topbar");
+        const navMenu = topbar.querySelector(".topbar-nav");
+        const newNavMenu = new NavMenu(topbar, navMenu);
+
+        expect(topbar).toBeTruthy();
+        expect(navMenu).toBeTruthy();
+        expect(newNavMenu).toBeTruthy();
+        expect(newNavMenu.userIcon).toEqual(null);
+
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
+    it("does not set icon value if no button icon exists when a nav gets opened", () => {
+        ReactDOM.render(<Topbar noBtnIcon />, div);
+
+        const topbar = document.querySelector(".topbar");
+        const topbarBtn = topbar.querySelector(".topbar-btn");
+        const navMenu = topbar.querySelector(".topbar-nav");
+        const newNavMenu = new NavMenu(topbar, navMenu);
+
+        expect(topbar).toBeTruthy();
+        expect(topbarBtn).toBeTruthy();
+        expect(navMenu).toBeTruthy();
+        expect(newNavMenu).toBeTruthy();
+        expect(newNavMenu.userIcon).toEqual(null);
+        expect(topbar.querySelector(".topbar-btn-icon")).toBeFalsy();
+
+        topbarBtn.click();
+
+        expect(topbar.querySelector(".topbar-btn-icon")).toBeFalsy();
+        // Not unmounting to keep state for next test. [AW]
+    });
+
+    // NB! Do not put new tests between these two as that will make the next test break. [AW]
+
+    it("does not set icon value if no button icon exists when a nav gets closed", () => {
+        const topbar = document.querySelector(".topbar");
+        const topbarBtn = topbar.querySelector(".topbar-btn");
+
+        expect(topbarBtn).toBeTruthy();
+        expect(topbar.querySelector(".topbar-btn-icon")).toBeFalsy();
+
+        topbarBtn.click();
+
+        expect(topbar.querySelector(".topbar-btn-icon")).toBeFalsy();
 
         ReactDOM.unmountComponentAtNode(div);
     });
@@ -90,7 +142,7 @@ describe("px-script: topbar - NavMenu", () => {
         // Not unmounting to keep state for next test. [AW]
     });
 
-    // NB! Do not put new tests between these two as that make the tests break. [AW]
+    // NB! Do not put new tests between these two as that will make the next test break. [AW]
 
     it("closes the menu when the nav menu is open and topbar button is clicked", () => {
         const topbar = document.querySelector(".topbar");
@@ -130,20 +182,18 @@ describe("px-script: topbar - NavMenu", () => {
         ReactDOM.unmountComponentAtNode(div);
     });
 
-    it("containsPoint returns true if the given coordinates are inside the nav- menu or button", () => {
-        ReactDOM.render(<Topbar navOpen />, div);
+    it("containsPoint is defined and can be called", () => {
+        ReactDOM.render(<Topbar />, div);
 
         const topbar = document.querySelector(".topbar");
         const navMenu = topbar.querySelector(".topbar-nav");
         const newNavMenu = new NavMenu(topbar, navMenu);
 
-        newNavMenu.containsPoint = jest.fn();
-
-        console.log(newNavMenu.containsPoint);
-
         expect(topbar).toBeTruthy();
         expect(navMenu).toBeTruthy();
         expect(newNavMenu).toBeTruthy();
+        expect(newNavMenu.containsPoint).toBeDefined();
+        expect(newNavMenu.containsPoint(0, 0)).toEqual(false);
 
         ReactDOM.unmountComponentAtNode(div);
     });

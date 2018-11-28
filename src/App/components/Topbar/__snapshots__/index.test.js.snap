@@ -47,7 +47,6 @@ exports[`Component: Topbar -  menu links prevents default when clicked 1`] = `
     >
       <button
         className="topbar-btn"
-        data-toggle-nav="#topbar-nav"
         type="button"
       >
         
@@ -88,7 +87,6 @@ exports[`Component: Topbar -  menu links prevents default when clicked 1`] = `
     >
       <nav
         className="topbar-nav"
-        id="topbar-nav"
       >
         
 

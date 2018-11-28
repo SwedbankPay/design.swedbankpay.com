@@ -83,27 +83,4 @@ describe("px-script: topbar", () => {
 
         ReactDOM.unmountComponentAtNode(div);
     });
-
-    it("does not close topbar-nav if you click inside it", () => {
-        ReactDOM.render(<Topbar navOpen />, div);
-        topbar.init();
-
-        const topbarComponent = document.querySelector(".topbar");
-        const topbarNav = topbarComponent.querySelector("#topbar-nav");
-
-        expect(topbarComponent).toBeTruthy();
-        expect(topbarNav).toBeTruthy();
-        expect(topbarNav.classList).toContain("in");
-
-        const clickEvent = document.createEvent("MouseEvents");
-
-        clickEvent.initEvent("mousedown", true, true);
-        topbarNav.dispatchEvent(clickEvent);
-
-        expect(topbarNav.classList).toContain("in");
-
-        ReactDOM.unmountComponentAtNode(div);
-    });
-
-    // Missing some tests [AW]
 });
