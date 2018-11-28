@@ -401,60 +401,6 @@ px.chart("stacked-multi-bar-chart", {
 </Fragment>
 `;
 
-exports[`Dashboard: Charts ChartsText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <ExperimentalComponentAlert />
-  <p
-    className="lead"
-  >
-    We are using 
-    <a
-      href="https://www.chartjs.org/"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      chart.js
-    </a>
-     to generate the charts. Our script is mainly just a wrapper around that library to add the correct styling etc.
-  </p>
-  <p>
-    Most options and settings available in the chart.js documentation will be available.
-  </p>
-  <p>
-    For now, the following chart types are available:
-  </p>
-  <ul>
-    <li>
-      <code
-        className="token string"
-      >
-        "line"
-      </code>
-    </li>
-    <li>
-      <code
-        className="token string"
-      >
-        "bar"/"horizontalBar"
-      </code>
-    </li>
-    <li>
-      <code
-        className="token string"
-      >
-        "pie"/"doughnut"
-      </code>
-    </li>
-  </ul>
-  <LineChart />
-  <BarChart />
-  <DoughnutAndPieCharts />
-  <MixingTypes />
-</div>
-`;
-
 exports[`Dashboard: Charts DoughnutAndPieCharts renders 1`] = `
 <Fragment>
   <h2
@@ -1014,16 +960,55 @@ px.chart("mixed-chart", {
 `;
 
 exports[`Dashboard: Charts renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <ExperimentalComponentAlert />
+  <p
+    className="lead"
   >
-    <ChartsText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    We are using 
+    <a
+      href="https://www.chartjs.org/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      chart.js
+    </a>
+     to generate the charts. Our script is mainly just a wrapper around that library to add the correct styling etc.
+  </p>
+  <p>
+    Most options and settings available in the chart.js documentation will be available.
+  </p>
+  <p>
+    For now, the following chart types are available:
+  </p>
+  <ul>
+    <li>
+      <code
+        className="token string"
+      >
+        "line"
+      </code>
+    </li>
+    <li>
+      <code
+        className="token string"
+      >
+        "bar"/"horizontalBar"
+      </code>
+    </li>
+    <li>
+      <code
+        className="token string"
+      >
+        "pie"/"doughnut"
+      </code>
+    </li>
+  </ul>
+  <LineChart />
+  <BarChart />
+  <DoughnutAndPieCharts />
+  <MixingTypes />
+</DocContainer>
 `;

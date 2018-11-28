@@ -1,7 +1,7 @@
 import React from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocToc } from "#";
+import { ComponentPreview, Property, DocContainer } from "#";
 
 const BASENAME = process.env.basename;
 const scriptUrl = `https://design.payex.com${BASENAME}scripts/px-script.js`;
@@ -30,7 +30,7 @@ const Css = () => (
 const JavaScript = () => (
     <>
         <h2 id="javascript">JavaScript</h2>
-        <p>Many of our components require the use of JavaScript to function. Place the following <PrismCode className="language-html">{"<script>"}</PrismCode> tag near the end of your pages, right before the closing <PrismCode className="language-html">{"</body>"}</PrismCode> tag, to enable them.</p>
+        <p>The dashboard theme requires a separate script to run properly. So add the dashboard script below the <Property value="px-script" /> at the bottom of your <PrismCode className="language-html">{"<body>"}</PrismCode> tag like this:</p>
         <ComponentPreview language="html" codeFigure>
             <script src={scriptUrl}></script>
             <script src={dashboardScriptUrl}></script>
@@ -38,25 +38,16 @@ const JavaScript = () => (
     </>
 );
 
-const IntroductionText = () => (
-    <div className="col-lg-10 doc-body">
+const Introduction = () => (
+    <DocContainer>
         <p className="lead">Get started with the PayEx DesignGuide Dashboard theme.</p>
         <QuickStart />
         {/* <Css /> */}
         <JavaScript />
-    </div>
-);
-
-const Introduction = () => (
-    <div className="doc-container">
-        <div className="row">
-            <IntroductionText />
-            <DocToc component={IntroductionText} />
-        </div>
-    </div>
+    </DocContainer>
 );
 
 export default Introduction;
 
 /* For testing */
-export { QuickStart, Css, JavaScript, IntroductionText };
+export { QuickStart, Css, JavaScript };

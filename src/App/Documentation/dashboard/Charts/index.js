@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc, ExperimentalComponentAlert } from "#";
+import { ComponentPreview, DocContainer, ExperimentalComponentAlert } from "#";
 import Chart from "@/Chart";
 
 const LineChart = () => (
@@ -490,33 +490,24 @@ px.chart("mixed-chart", {
     </>
 );
 
-const ChartsText = () => (
-    <div className="col-lg-10 doc-body">
-        <ExperimentalComponentAlert />
-        <p className="lead">We are using <a href="https://www.chartjs.org/" target="_blank" rel="noopener noreferrer">chart.js</a> to generate the charts. Our script is mainly just a wrapper around that library to add the correct styling etc.</p>
-        <p>Most options and settings available in the chart.js documentation will be available.</p>
-        <p>For now, the following chart types are available:</p>
-        <ul>
-            <li><code className="token string">{"\"line\""}</code></li>
-            <li><code className="token string">{"\"bar\"/\"horizontalBar\""}</code></li>
-            <li><code className="token string">{"\"pie\"/\"doughnut\""}</code></li>
-        </ul>
-        <LineChart />
-        <BarChart />
-        <DoughnutAndPieCharts />
-        <MixingTypes />
-    </div>
-);
-
 class Charts extends Component {
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <ChartsText />
-                    <DocToc component={ChartsText} />
-                </div>
-            </div>
+            <DocContainer docToc>
+                <ExperimentalComponentAlert />
+                <p className="lead">We are using <a href="https://www.chartjs.org/" target="_blank" rel="noopener noreferrer">chart.js</a> to generate the charts. Our script is mainly just a wrapper around that library to add the correct styling etc.</p>
+                <p>Most options and settings available in the chart.js documentation will be available.</p>
+                <p>For now, the following chart types are available:</p>
+                <ul>
+                    <li><code className="token string">{"\"line\""}</code></li>
+                    <li><code className="token string">{"\"bar\"/\"horizontalBar\""}</code></li>
+                    <li><code className="token string">{"\"pie\"/\"doughnut\""}</code></li>
+                </ul>
+                <LineChart />
+                <BarChart />
+                <DoughnutAndPieCharts />
+                <MixingTypes />
+            </DocContainer>
         );
     }
 }
@@ -524,5 +515,5 @@ class Charts extends Component {
 export default Charts;
 
 /* For testing */
-export { LineChart, BarChart, DoughnutAndPieCharts, MixingTypes, ChartsText };
+export { LineChart, BarChart, DoughnutAndPieCharts, MixingTypes };
 

@@ -87,4 +87,4 @@ const chart = (id, userOptions) => {
 export default chart;
 
 /* For testing */
-export { _colorPool };
+export { _colorPool, _colorPoolSecondary };

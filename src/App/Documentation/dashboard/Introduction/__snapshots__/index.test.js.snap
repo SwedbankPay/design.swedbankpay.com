@@ -40,20 +40,6 @@ exports[`Dashboard: Introduction Css renders 1`] = `
 </Fragment>
 `;
 
-exports[`Dashboard: Introduction IntroductionText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Get started with the PayEx DesignGuide Dashboard theme.
-  </p>
-  <QuickStart />
-  <JavaScript />
-</div>
-`;
-
 exports[`Dashboard: Introduction JavaScript renders 1`] = `
 <Fragment>
   <h2
@@ -62,21 +48,18 @@ exports[`Dashboard: Introduction JavaScript renders 1`] = `
     JavaScript
   </h2>
   <p>
-    Many of our components require the use of JavaScript to function. Place the following 
+    The dashboard theme requires a separate script to run properly. So add the dashboard script below the 
+    <Property
+      value="px-script"
+    />
+     at the bottom of your 
     <PrismCode
       className="language-html"
       component="code"
     >
-      &lt;script&gt;
+      &lt;body&gt;
     </PrismCode>
-     tag near the end of your pages, right before the closing 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;/body&gt;
-    </PrismCode>
-     tag, to enable them.
+     tag like this:
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -106,16 +89,13 @@ exports[`Dashboard: Introduction QuickStart renders 1`] = `
 `;
 
 exports[`Dashboard: Introduction renders 1`] = `
-<div
-  className="doc-container"
->
-  <div
-    className="row"
+<DocContainer>
+  <p
+    className="lead"
   >
-    <IntroductionText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    Get started with the PayEx DesignGuide Dashboard theme.
+  </p>
+  <QuickStart />
+  <JavaScript />
+</DocContainer>
 `;
