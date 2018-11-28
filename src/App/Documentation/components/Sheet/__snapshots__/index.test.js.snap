@@ -484,20 +484,41 @@ exports[`Documentation: Sheet UsageWithJavascript renders 1`] = `
   >
     Usage with javascript
   </h2>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+  >
+    <div
+      className="sheet"
+      id="demo-sheet"
+    >
+      
+
+      ...
+      
+
+    </div>
+    
+
+  </ComponentPreview>
   <p>
-    To programmatically open a sheet, use 
-    <Property
-      value="px.sheet.open(\\"SHEET_ID\\")"
-    />
-    .
+    To open a sheet:
   </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    px.sheet.open("demo-sheet")
+  </ComponentPreview>
   <p>
-    To programmatically close a sheet, use 
-    <Property
-      value="px.sheet.close(\\"SHEET_ID\\")"
-    />
-    .
+    To close a sheet:
   </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    px.sheet.close("demo-sheet")
+  </ComponentPreview>
 </Fragment>
 `;
 

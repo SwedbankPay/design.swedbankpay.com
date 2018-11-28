@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocContainer, Icon, Property } from "#";
+import { ComponentPreview, DocContainer, Icon } from "#";
 import { sheet } from "$/px-script/main";
 
 const Example = () => (
@@ -56,8 +56,19 @@ const Example = () => (
 const UsageWithJavascript = () => (
     <>
         <h2 id="usage-with-javascript">Usage with javascript</h2>
-        <p>To programmatically open a sheet, use <Property value={"px.sheet.open(\"SHEET_ID\")"} />.</p>
-        <p>To programmatically close a sheet, use <Property value={"px.sheet.close(\"SHEET_ID\")"} />.</p>
+        <ComponentPreview language="html" codeFigure>
+            <div className="sheet" id="demo-sheet">{"\n"}
+                ...{"\n"}
+            </div>{"\n"}
+        </ComponentPreview>
+        <p>To open a sheet:</p>
+        <ComponentPreview language="javascript" codeFigure>
+            {"px.sheet.open(\"demo-sheet\")"}
+        </ComponentPreview>
+        <p>To close a sheet:</p>
+        <ComponentPreview language="javascript" codeFigure>
+            {"px.sheet.close(\"demo-sheet\")"}
+        </ComponentPreview>
     </>
 );
 
