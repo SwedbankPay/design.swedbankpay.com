@@ -40,11 +40,18 @@
                 "xl",
                 "xxl",
                 "default",
-                "brand",
-                "blue",
+                "green",
                 "purple",
+                "blue",
                 "yellow",
-                "red"
+                "red",
+                "black",
+                "white",
+                "brand",
+                "success",
+                "neutral",
+                "warning",
+                "danger"
             ]
         }],
         "selector-attribute-quotes": "always",

@@ -266,19 +266,21 @@
 
 /* Color list */
 /* stylelint-disable indentation */
-@color-list:                                ~"default" @text-color,
-                                            ~"green" @green,
-                                            ~"purple" @purple,
-                                            ~"blue" @blue,
-                                            ~"yellow" @yellow,
-                                            ~"red" @red,
-                                            ~"black" @black,
-                                            ~"white" @white,
-                                            ~"brand" @brand-primary,
-                                            ~"success" @state-success,
-                                            ~"neutral" @state-neutral,
-                                            ~"warning" @state-warning,
-                                            ~"danger" @state-error;
+@color-list: {
+                                            default: @text-color;
+                                            green: @green;
+                                            purple: @purple;
+                                            blue: @blue;
+                                            yellow: @yellow;
+                                            red: @red;
+                                            black: @black;
+                                            white: @white;
+                                            brand: @brand-primary;
+                                            success: @state-success;
+                                            neutral: @state-neutral;
+                                            warning: @state-warning;
+                                            danger: @state-error;
+}
 /* stylelint-enable */
 
 @blockquote-border-color:                   @gray-8;

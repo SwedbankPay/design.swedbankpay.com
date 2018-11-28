@@ -1,7 +1,4 @@
-.media-breakpoint-up(@breakpoint, @ruleset) {
-    @abbr: at(@breakpoint, 1);
-    @size: at(@breakpoint, 2);
-
+.media-breakpoint-up(@size, @abbr, @ruleset) {
     & when (@size > 0) {
         @infix: ~"-@{abbr}";
         @media (min-width: @size) {
