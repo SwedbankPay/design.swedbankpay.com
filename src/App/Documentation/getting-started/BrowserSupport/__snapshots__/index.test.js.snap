@@ -2,6 +2,18 @@
 
 exports[`GettingStarted: BrowserSupport renders 1`] = `
 <DocContainer>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+            .browser-icon {
+                height: 48px;
+                width: 48px;
+            }
+        ",
+      }
+    }
+  />
   <p
     className="lead"
   >
@@ -13,22 +25,46 @@ exports[`GettingStarted: BrowserSupport renders 1`] = `
     <thead>
       <tr>
         <th>
-          <Chrome />
+          <img
+            alt="Google Chrome Icon"
+            className="browser-icon"
+            src=""
+          />
         </th>
         <th>
-          <Firefox />
+          <img
+            alt="Mozilla Firefox Icon"
+            className="browser-icon"
+            src=""
+          />
         </th>
         <th>
-          <Edge />
+          <img
+            alt="Microsoft Edge Icon"
+            className="browser-icon"
+            src=""
+          />
         </th>
         <th>
-          <InternetExplorer />
+          <img
+            alt="Microsoft Internet Explorer Icon"
+            className="browser-icon"
+            src=""
+          />
         </th>
         <th>
-          <Opera />
+          <img
+            alt="Opera Browser Icon"
+            className="browser-icon"
+            src=""
+          />
         </th>
         <th>
-          <Safari />
+          <img
+            alt="Apple Safari Icon"
+            className="browser-icon"
+            src=""
+          />
         </th>
       </tr>
     </thead>
@@ -37,32 +73,32 @@ exports[`GettingStarted: BrowserSupport renders 1`] = `
         <td
           className="background-brand"
         >
-          Yes (v.66)
+          Yes
         </td>
         <td
           className="background-warning"
         >
-          Partially
+          Yes
         </td>
         <td
           className="background-warning"
         >
-          Partially
+          Yes
         </td>
         <td
           className="background-warning"
         >
-          Partially
+          11
         </td>
         <td
           className="background-warning"
         >
-          Partially
+          Yes
         </td>
         <td
           className="background-warning"
         >
-          Partially
+          Yes
         </td>
       </tr>
     </tbody>

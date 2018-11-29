@@ -11,6 +11,9 @@ module.exports = {
         "json",
         "lcov"
     ],
+    moduleNameMapper: {
+        "\\.(svg)$": "<rootDir>/__mocks__/svgMock.js"
+    },
     setupFiles: [
         "./jest.setup.js"
     ],
