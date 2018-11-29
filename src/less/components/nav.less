@@ -315,11 +315,7 @@
     }
 }
 
-
-.for-each(@breakpoint in @grid-breakpoints) {
-    @infix: extract(@breakpoint, 1);
-    @min-width: extract(@breakpoint, 2);
-
+each(@grid-breakpoints, .(@min-width, @infix) {
     .nav-@{infix}-vertical {
         @media screen and (min-width: @min-width) {
             .nav-vertical();
@@ -331,4 +327,4 @@
             .nav-vertical-wide();
         }
     }
-}
+});

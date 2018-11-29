@@ -5,7 +5,6 @@ const appRoutes = require("./tools/generate-routes-copy-array");
 const levelsToRoot = require("./tools/levels-to-root");
 const autoprefixer = require("autoprefixer");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-const lessListPlugin = require("less-plugin-lists");
 const SentryCliPlugin = require("@sentry/webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FileManagerPlugin = require("filemanager-webpack-plugin");
@@ -80,10 +79,7 @@ module.exports = (env, argv) => {
                         {
                             loader: "less-loader",
                             options: {
-                                javascriptEnabled: true,
-                                plugins: [
-                                    new lessListPlugin()
-                                ]
+                                javascriptEnabled: true
                             }
                         }
                     ]

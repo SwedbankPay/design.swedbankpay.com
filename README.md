@@ -28,7 +28,7 @@ DesignGuide requires [Node.js](https://nodejs.org/en/) (includes npm).
 
 ### Set up Git Hooks
 
-- Open a terminal and navigate to root of repository
+- Open a terminal and navigate to repo root
 - Run `git config core.hooksPath .githooks`
 
 ## Developing

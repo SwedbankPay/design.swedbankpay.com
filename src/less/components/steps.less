@@ -1,17 +1,3 @@
-@list-item-padding: 3.4rem 0 0 0;
-@list-item-padding-desktop-top: 4.5rem;
-@list-item-padding-desktop: @list-item-padding-desktop-top 0 1.2rem 0;
-@list-item-padding-desktop-vertical: 2rem 1.5rem 2rem 5.5rem;
-
-@vertical-left: 1.7rem;
-@vertical-margin: (@circle-size-desktop / 2) - (@line-width-desktop / 2);
-
-@circle-size: 30px;
-@circle-size-desktop: 45px;
-
-@line-width: 3px;
-@line-width-desktop: 5px;
-
 .steps ol {
     list-style: none;
     margin: 0;
@@ -37,7 +23,7 @@
 
             /* Take full parent size, ignoring parents padding, and stil growing the parent with text from this element */
             padding: @list-item-padding;
-            margin: -@list-item-padding;
+            margin: ~"-@{list-item-padding}";
             color: @brand-primary;
             border: 0;
             cursor: pointer;
@@ -182,7 +168,7 @@
 
             > a {
                 padding: @list-item-padding-desktop;
-                margin: -@list-item-padding-desktop;
+                margin: ~"-@{list-item-padding-desktop}";
             }
 
             /* Circle */
@@ -225,7 +211,7 @@
 
             > a {
                 padding: @list-item-padding-desktop-vertical;
-                margin: -@list-item-padding-desktop-vertical;
+                margin: ~"-@{list-item-padding-desktop-vertical}";
                 width: auto;
             }
 

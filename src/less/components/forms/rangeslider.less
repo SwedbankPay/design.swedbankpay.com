@@ -20,7 +20,7 @@
         background: @color;
 
         &:before {
-            border-right-color: @color !important; // stylelint-disable-line declaration-no-important
+            border-right-color: @color !important; /* stylelint-disable-line declaration-no-important */
         }
 
         &:after {
@@ -116,7 +116,7 @@
                 background: @input-checked-bg-disabled;
 
                 &:before {
-                    border-right-color: @input-checked-bg-disabled !important; // stylelint-disable-line declaration-no-important
+                    border-right-color: @input-checked-bg-disabled !important; /* stylelint-disable-line declaration-no-important */
                 }
             }
         }
@@ -164,8 +164,8 @@
         .value-label {
             position: absolute;
             top: -45px;
-            left: 0; // <- to please ie
-            right: 0; // <- to please ie
+            left: 0; /* <- to please ie */
+            right: 0; /* <- to please ie */
             justify-content: center;
             margin: 0 auto;
             padding: 0;
@@ -199,7 +199,7 @@
             margin: 0;
             align-items: center;
 
-            span { // Todo: cleanup
+            span {
                 margin: 0 1.5px;
             }
         }
@@ -252,7 +252,7 @@
         }
 
         &::-ms-thumb {
-            margin-top: @thumb-size / 2; // Offset for Edge
+            margin-top: @thumb-size / 2; /* Offset for Edge */
 
             /* Reset offset for correct placement in IE */
             @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {

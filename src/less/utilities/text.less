@@ -8,15 +8,15 @@
 
 // Responsive alignment
 
-.for-each(@breakpoint in @grid-breakpoints) {
+each(@grid-breakpoints, .(@size, @abbr) {
     @ruleset: {
         .text@{infix}-left           { text-align: left !important; }
         .text@{infix}-right          { text-align: right !important; }
         .text@{infix}-center         { text-align: center !important; }
     }
 
-    .media-breakpoint-up(@breakpoint, @ruleset);
-}
+    .media-breakpoint-up(@size, @abbr, @ruleset);
+});
 
 // Transformation
 
@@ -32,12 +32,9 @@
 
 // Contextual colors
 
-.for-each(@color in @color-list) {
-    @name: at(@color, 1);
-    @value: at(@color, 2);
-
-    .color-variant(~"color-@{name}", @value);
-}
+each(@color-list, .(@color, @name) {
+    .color-variant(~"color-@{name}", @color);
+});
 
 .text-muted { color: @text-muted !important; }
 

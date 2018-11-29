@@ -1,19 +1,14 @@
 /* stylelint-disable declaration-no-important */
-@properties:
-    ~"width" ~"w",
-    ~"height" ~"h";
-
-.for-each(@property in @properties) {
-    @prop: extract(@property, 1);
-    @abbrev: extract(@property, 2);
-
-    .for-each(@sizepair in @sizes) {
-        @size: extract(@sizepair, 1);
-        @length: extract(@sizepair, 2);
-
-        .@{abbrev}-@{size} { @{prop}: @length !important; }
-    }
+@properties: {
+    width: ~"w";
+    height: ~"h";
 }
+
+each(@properties, .(@abbrev, @prop) {
+    each(@sizes, .(@length, @size) {
+        .@{abbrev}-@{size} { @{prop}: @length !important; }
+    });
+});
 
 .mw-100 { max-width: 100% !important; }
 .mh-100 { max-height: 100% !important; }
