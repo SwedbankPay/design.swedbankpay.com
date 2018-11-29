@@ -32,11 +32,20 @@
         }
 
         &:checked + label:before {
-            border-color: @checkbox-checked-color;
-            background-color: @checkbox-checked-color;
-            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNWWFMmUAAABMSURBVChTjY8xCgAgDMT6GEf/7uDTHBzrBe0iFjwIlDOUau4ORTQxD8x0Fo9D3KErCNhZGgIrs8wvoe/5mY5QRXZkRQiJTfFNZnVuC4bS8W24IBKtAAAAAElFTkSuQmCC);
+            background-color: @checkbox-bg;
             background-position: 50% 50%;
             background-repeat: no-repeat;
+        }
+
+        &:checked + label:after {
+            content: "";
+            position: absolute;
+            left: -22px;
+            top: 6px;
+            height: @radio-circle-height;
+            width: @radio-circle-width;
+            background-color: @white;
+            border-radius: 50%;
         }
 
         &:focus + label:before {
