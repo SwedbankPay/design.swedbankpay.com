@@ -163,6 +163,31 @@
                 box-shadow: 0 0 2px 2px rgba(45, 169, 68, 0.5);
             }
         }
+
+        .search-results {
+            position: absolute;
+            background-color: @white;
+            width: ~"calc(100% - 2rem)";
+            list-style: none;
+            margin-top: 0.5rem;
+            padding: 0;
+            border: 1px solid @input-border-color;
+            border-radius: 0.25rem;
+            z-index: 2000;
+            box-shadow: 10px 10px 50px -10px rgba(0, 0, 0, 0.75);
+            display: none;
+
+            .search-result a {
+                color: @brand-primary;
+                border: 0;
+                display: block;
+                padding: 0.25rem 0.5rem;
+
+                &:hover {
+                    background-color: fade(@brand-primary, 10%);
+                }
+            }
+        }
     }
 
     .doc-section-heading {
