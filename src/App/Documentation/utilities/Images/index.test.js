@@ -9,7 +9,7 @@ describe("Utilities: Image", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<ImageFluid />);
+        const wrapper = shallow(<Image />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -28,6 +28,12 @@ describe("Utilities: Image", () => {
 
     it("ImageThumbnail renders", () => {
         const wrapper = shallow(<ImageThumbnail />);
+
+        expect(wrapper).toMatchSnapshot();
+    });
+
+    it("ImageFluid renders", () => {
+        const wrapper = shallow(<ImageFluid />);
 
         expect(wrapper).toMatchSnapshot();
     });
