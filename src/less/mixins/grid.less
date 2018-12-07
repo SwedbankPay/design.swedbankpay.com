@@ -7,9 +7,11 @@
 }
 
 .make-container-max-widths(@max-widths: @container-max-widths, @breakpoints: @grid-breakpoints) {
-    each(@max-widths, .(@width, @i) {
-        @media (min-width: extract(extract(@grid-breakpoints, (@i + 1)), 2)) {
-            max-width: @width;
+    each(@breakpoints, .(@width, @key, @i) {
+        & when (@width > 0) {
+            @media (min-width: @width) {
+                max-width: extract(@max-widths, @i - 1);
+            }
         }
     });
 }
