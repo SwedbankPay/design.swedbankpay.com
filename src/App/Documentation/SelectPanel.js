@@ -1,13 +1,8 @@
 import React, { Component } from "react";
 import { NavLink, withRouter } from "react-router-dom";
 
+import SearchBox from "./SearchBox";
 import routes from "../routes/docs";
-
-const SearchBox = () => (
-    <div className="input-group doc-search">
-        <input type="text" className="form-control doc-search-input" id="doc-search-input" name="designguide-search" placeholder="Search..." />
-    </div>
-);
 
 class NavGroup extends Component {
     constructor (props) {
@@ -46,7 +41,7 @@ class NavGroup extends Component {
 
 const SelectPanel = () => (
     <div className="doc-sidebar col-xxl-2 col-md-3">
-        {/* <SearchBox /> */}
+        <SearchBox routes={routes} />
         <nav className="documentation-nav">
             {routes.map((route, i) => {
                 const NavGroupWithRouter = withRouter(NavGroup);
