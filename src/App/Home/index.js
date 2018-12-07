@@ -13,12 +13,12 @@ class Home extends Component {
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-md-8 col-xxl-6">
-                        <div className="panel panel-default">
+                        <section className="panel panel-default">
                             <div className="panel-body">
                                 <h2>Welcome to the PayEx DesignGuide</h2>
                                 <p>You might wanna go look at the <Link to="/docs">documentation</Link> </p>
                             </div>
-                        </div>
+                        </section>
                     </div>
                 </div>
             </div>
