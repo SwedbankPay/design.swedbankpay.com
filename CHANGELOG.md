@@ -8,6 +8,7 @@
 - Added image utility .img-thumbnail.
 - Added size classes for material icons.
 - Added hover version of item-list.
+- Added examples tab to topbar which redirects to our example pages.
 
 ### Changed
 
