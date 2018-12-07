@@ -11,6 +11,10 @@ class SearchBox extends Component {
             results: [],
             showResults: false
         };
+
+        this.getResults = this.getResults.bind(this);
+        this.closeResults = this.closeResults.bind(this);
+        this.handleInputChange = this.handleInputChange.bind(this);
     }
 
     getResults (query) {
@@ -31,26 +35,24 @@ class SearchBox extends Component {
         this.setState({ results });
     }
 
+    closeResults (e) {
+        if ((e.type === "keydown" && e.key === "Escape") || (e.type === "click" && !e.target.closest(".doc-search"))) {
+            this.setState({ showResults: false });
+        }
+    }
+
     handleInputChange (e) {
         this.getResults(e.target.value);
     }
 
     componentWillUnmount () {
-        document.removeEventListener("keydown");
+        document.removeEventListener("keydown", this.closeResults);
+        document.removeEventListener("click", this.closeResults);
     }
 
     componentDidMount () {
-        document.addEventListener("keydown", e => {
-            if (e.key === "Escape") {
-                this.setState({ showResults: false });
-            }
-        });
-
-        document.addEventListener("click", e => {
-            if (!e.target.closest(".doc-search")) {
-                this.setState({ showResults: false });
-            }
-        });
+        document.addEventListener("keydown", this.closeResults);
+        document.addEventListener("click", this.closeResults);
     }
 
     render () {
@@ -61,7 +63,7 @@ class SearchBox extends Component {
                     className="form-control"
                     name="designguide-search"
                     placeholder="Search..."
-                    onChange={this.handleInputChange.bind(this)}
+                    onChange={this.handleInputChange}
                     onFocus={() => this.setState({ showResults: true })}
                 />
                 {this.state.results.length ?
