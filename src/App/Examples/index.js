@@ -18,22 +18,22 @@ class Examples extends Component {
                                 <ul className="list">
                                     <li>
                                         <span>
-                                            <a target="_blank" rel="noopener noreferrer" href="https://examples.design.payex.com/login/index.html">Login page</a>
+                                            <a target="_blank" rel="noopener noreferrer" href="https://examples.design.payex.com/login/">Login page</a>
                                         </span>
                                     </li>
                                     <li>
                                         <span>
-                                            <a target="_blank" rel="noopener noreferrer" href="https://examples.design.payex.com/signup/index.html">Signup</a>
+                                            <a target="_blank" rel="noopener noreferrer" href="https://examples.design.payex.com/signup/">Signup</a>
                                         </span>
                                     </li>
                                     <li>
                                         <span>
-                                            <a target="_blank" rel="noopener noreferrer" href="https://examples.design.payex.com/error-page/404/index.html">404 page</a>
+                                            <a target="_blank" rel="noopener noreferrer" href="https://examples.design.payex.com/error-page/404/">404 page</a>
                                         </span>
                                     </li>
                                     <li>
                                         <span>
-                                            <a target="_blank" rel="noopener noreferrer" href="https://examples.design.payex.com/error-page/500/index.html">500 page</a>
+                                            <a target="_blank" rel="noopener noreferrer" href="https://examples.design.payex.com/error-page/500/">500 page</a>
                                         </span>
                                     </li>
                                 </ul>

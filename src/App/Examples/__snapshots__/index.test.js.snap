@@ -25,7 +25,7 @@ exports[`Examples: index renders 1`] = `
             <li>
               <span>
                 <a
-                  href="https://examples.design.payex.com/login/index.html"
+                  href="https://examples.design.payex.com/login/"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -36,7 +36,7 @@ exports[`Examples: index renders 1`] = `
             <li>
               <span>
                 <a
-                  href="https://examples.design.payex.com/signup/index.html"
+                  href="https://examples.design.payex.com/signup/"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -47,7 +47,7 @@ exports[`Examples: index renders 1`] = `
             <li>
               <span>
                 <a
-                  href="https://examples.design.payex.com/error-page/404/index.html"
+                  href="https://examples.design.payex.com/error-page/404/"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -58,7 +58,7 @@ exports[`Examples: index renders 1`] = `
             <li>
               <span>
                 <a
-                  href="https://examples.design.payex.com/error-page/500/index.html"
+                  href="https://examples.design.payex.com/error-page/500/"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
