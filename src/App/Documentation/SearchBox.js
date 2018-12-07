@@ -58,8 +58,7 @@ class SearchBox extends Component {
             <form className="doc-search">
                 <input
                     type="text"
-                    className="form-control doc-search-input"
-                    id="doc-search-input"
+                    className="form-control"
                     name="designguide-search"
                     placeholder="Search..."
                     onChange={this.handleInputChange.bind(this)}

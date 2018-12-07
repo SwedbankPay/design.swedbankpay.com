@@ -155,26 +155,16 @@
         padding: @base-padding 15px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.075);
 
-        .doc-search-input {
-            border-radius: 0.25rem;
-
-            &:focus {
-                outline: 0;
-                box-shadow: 0 0 2px 2px rgba(45, 169, 68, 0.5);
-            }
-        }
-
         .search-results {
             position: absolute;
+            left: 0;
             background-color: @white;
-            width: ~"calc(100% - 2rem)";
+            width: 100%;
             list-style: none;
-            margin-top: 0.5rem;
             padding: 0;
             border: 1px solid @input-border-color;
-            border-radius: 0.25rem;
             z-index: 2000;
-            box-shadow: 10px 10px 50px -10px rgba(0, 0, 0, 0.75);
+            box-shadow: 0 5px 50px -10px rgba(0, 0, 0, 0.75);
             display: none;
 
             .search-result a {
