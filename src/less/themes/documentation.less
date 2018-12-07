@@ -152,20 +152,21 @@
     }
 
     .doc-search {
-        padding: @base-padding 15px;
+        padding: @base-padding 1rem;
         border-bottom: 1px solid rgba(0, 0, 0, 0.075);
 
         .search-results {
             position: absolute;
             left: 0;
-            background-color: @white;
-            width: 100%;
-            list-style: none;
+            width: ~"calc(100% - 2rem)";
+            margin: 0 1rem 0;
             padding: 0;
+            list-style: none;
             border: 1px solid @input-border-color;
             z-index: 2000;
             box-shadow: 0 5px 50px -10px rgba(0, 0, 0, 0.75);
             display: none;
+            background-color: @white;
 
             .search-result a {
                 color: @brand-primary;
