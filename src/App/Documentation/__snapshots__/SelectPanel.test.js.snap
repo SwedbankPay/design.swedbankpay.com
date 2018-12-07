@@ -5,8 +5,7 @@ exports[`Documentation: SelectPanel SearchBox renders 1`] = `
   className="doc-search"
 >
   <input
-    className="form-control doc-search-input"
-    id="doc-search-input"
+    className="form-control"
     name="designguide-search"
     onChange={[Function]}
     onFocus={[Function]}

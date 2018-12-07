@@ -23,7 +23,7 @@ describe("Documentation: SelectPanel", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<SearchBox />);
+            const wrapper = shallow(<SearchBox routes={[]} />);
 
             expect(wrapper).toMatchSnapshot();
         });
