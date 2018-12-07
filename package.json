@@ -31,7 +31,7 @@
     "dependencies": {
         "@babel/polyfill": "^7.0.0",
         "classnames": "^2.2.6",
-        "js-beautify": "^1.8.8",
+        "js-beautify": "^1.8.9",
         "normalize.css": "^8.0.1",
         "prism-react-renderer": "^0.1.5",
         "prismjs": "^1.15.0",
@@ -86,7 +86,7 @@
         "stylelint-declaration-block-no-ignored-properties": "^1.1.0",
         "testcafe": "^0.23.2",
         "uglifyjs-webpack-plugin": "^2.0.1",
-        "webpack": "^4.27.0",
+        "webpack": "^4.27.1",
         "webpack-bundle-analyzer": "^3.0.3",
         "webpack-cli": "^3.1.2",
         "webpack-dev-server": "^3.1.10"
