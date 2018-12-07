@@ -17,7 +17,7 @@ const BrowserSupport = () => (
                 height: 48px;
                 width: 48px;
             }
-        `}} />
+        ` }} />
         <p className="lead">Currently supported browsers:</p>
         <table className="browser-support-table table">
             <thead>
