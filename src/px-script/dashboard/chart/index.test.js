@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Chart from "chart.js";
 
-import chart, { _colorPool, _colorPoolSecondary } from "./index";
+import chart, { _colorPool } from "./index";
 import initBarChart from "./bar";
 import initPieChart from "./pie";
 import initLineChart from "./line";
@@ -92,7 +92,7 @@ describe("px-script - dashboard: chart index", () => {
         initBarChart.mockReturnValueOnce("test");
         chart("test", mockData);
 
-        expect(initBarChart).toHaveBeenCalledWith(mockData, _colorPoolSecondary);
+        expect(initBarChart).toHaveBeenCalledWith(mockData, _colorPool);
         expect(Chart).toHaveBeenCalled();
 
         ReactDOM.unmountComponentAtNode(div);
@@ -111,7 +111,7 @@ describe("px-script - dashboard: chart index", () => {
         initBarChart.mockReturnValueOnce("test");
         chart("test", mockData);
 
-        expect(initBarChart).toHaveBeenCalledWith(mockData, _colorPoolSecondary);
+        expect(initBarChart).toHaveBeenCalledWith(mockData, _colorPool);
         expect(Chart).toHaveBeenCalled();
 
         ReactDOM.unmountComponentAtNode(div);
@@ -130,7 +130,7 @@ describe("px-script - dashboard: chart index", () => {
         initPieChart.mockReturnValueOnce("test");
         chart("test", mockData);
 
-        expect(initPieChart).toHaveBeenCalledWith(mockData, _colorPoolSecondary);
+        expect(initPieChart).toHaveBeenCalledWith(mockData, _colorPool);
         expect(Chart).toHaveBeenCalled();
 
         ReactDOM.unmountComponentAtNode(div);
@@ -149,7 +149,7 @@ describe("px-script - dashboard: chart index", () => {
         initPieChart.mockReturnValueOnce("test");
         chart("test", mockData);
 
-        expect(initPieChart).toHaveBeenCalledWith(mockData, _colorPoolSecondary);
+        expect(initPieChart).toHaveBeenCalledWith(mockData, _colorPool);
         expect(Chart).toHaveBeenCalled();
 
         ReactDOM.unmountComponentAtNode(div);
@@ -168,7 +168,7 @@ describe("px-script - dashboard: chart index", () => {
         initLineChart.mockReturnValueOnce("test");
         chart("test", mockData);
 
-        expect(initLineChart).toHaveBeenCalledWith(mockData, _colorPoolSecondary);
+        expect(initLineChart).toHaveBeenCalledWith(mockData, _colorPool);
         expect(Chart).toHaveBeenCalled();
 
         ReactDOM.unmountComponentAtNode(div);
