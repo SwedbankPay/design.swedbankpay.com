@@ -78,7 +78,7 @@ exports[`Documentation: Panel PanelHeaders renders 1`] = `
     Panel headers
   </h2>
   <p>
-    We have two different headers available. One using our brand color and a simple white one, add 
+    You can pick between two different panel headers, brand color with white text and white with green text. add 
     <Property
       value=".panel-default"
     />

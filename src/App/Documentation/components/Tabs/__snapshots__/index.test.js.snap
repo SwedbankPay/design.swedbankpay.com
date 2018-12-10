@@ -108,7 +108,7 @@ exports[`Components: Tabs renders 1`] = `
   <p
     className="lead"
   >
-    Tabs...
+    Use tabs to show which page or section that is active out of several options.
   </p>
   <BasicUsage />
   <Collapsed />

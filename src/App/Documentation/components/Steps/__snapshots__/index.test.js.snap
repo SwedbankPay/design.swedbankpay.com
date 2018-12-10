@@ -7,6 +7,9 @@ exports[`Documentation: Steps BasicSteps renders 1`] = `
   >
     Basic usage
   </h2>
+  <p>
+    The standard steps component will render horizontally and scale according to the size of its parent.
+  </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
@@ -109,7 +112,7 @@ exports[`Documentation: Steps VerticalSteps renders 1`] = `
     Vertical steps
   </h2>
   <p>
-    Add 
+    If you wish to use steps vertically you can add 
     <Property
       value=".steps-vertical"
     />
