@@ -78,7 +78,7 @@ const PanelHeaders = () => (
     <>
         <h2 id="panel-headers">Panel headers</h2>
         <p>
-            We have two different headers available. One using our brand color and a simple white one, add <Property value=".panel-default" /> or <Property value=".panel-brand" /> to
+            You can pick between two different panel headers, brand color with white text and white with green text. add <Property value=".panel-default" /> or <Property value=".panel-brand" /> to
             the header to use one of them.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>

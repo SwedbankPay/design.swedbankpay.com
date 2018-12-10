@@ -6,7 +6,13 @@ import { sheet } from "$/px-script/main";
 const Example = () => (
     <>
         <h2 id="example">Example</h2>
-        <p>Example sheet...</p>
+        <p>
+            A standard sheet should display content that complements the screen’s primary content. It will close when the user clicks outside of the sheet or exits out of it in another way.
+        </p>
+        <p>
+            Sheets can be used for a number of different things, but common use cases for a sheet are for example displaying a list of actions that affet the screen’s primary content such as filters, deletion or other
+            ways to manipulate the main content. If you have a form then you could include an icon that opens said sheet to display more information about what the expected input is.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="sheet" id="demo-sheet">
                 <section>{"\n"}
@@ -80,7 +86,9 @@ class Sheet extends Component {
     render () {
         return (
             <DocContainer docToc>
-                <p className="lead">Sheet...</p>
+                <p className="lead">
+                    Sheet is a container component that is anchored on the right side of the screen and can contain a number of different things.
+                </p>
                 <Example />
                 <UsageWithJavascript />
             </DocContainer>

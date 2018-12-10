@@ -28,6 +28,9 @@ const BasicSteps = () => {
     return (
         <>
             <h2 id="basic-usage">Basic usage</h2>
+            <p>
+                The standard steps component will render horizontally and scale according to the size of its parent.
+            </p>
             <ComponentPreview language="html" showCasePanel codeFigure>
                 <StepsComponent steps={steps} />
             </ComponentPreview>
@@ -57,7 +60,9 @@ const VerticalSteps = () => {
     return (
         <>
             <h2 id="vertical-steps">Vertical steps</h2>
-            <p>Add <Property value=".steps-vertical" /> to the <PrismCode className="language-html">{"<DocContainer>"}</PrismCode> element.</p>
+            <p>
+                If you wish to use steps vertically you can add <Property value=".steps-vertical" /> to the <PrismCode className="language-html">{"<div>"}</PrismCode> element.
+            </p>
             <ComponentPreview language="html" showCasePanel codeFigure>
                 <StepsComponent steps={steps} vertical />
             </ComponentPreview>
@@ -111,7 +116,9 @@ class Steps extends Component {
     render () {
         return (
             <DocContainer docToc>
-                <p className="lead">Steps.</p>
+                <p className="lead">
+                    Use steps to visualize the users progress through a process.
+                </p>
                 <BasicSteps />
                 <VerticalSteps />
                 <ClickableSteps />

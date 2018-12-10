@@ -37,7 +37,9 @@ class Tabs extends Component {
         return (
             <DocContainer docToc>
                 <ExperimentalComponentAlert />
-                <p className="lead">Tabs...</p>
+                <p className="lead">
+                    Use tabs to show which page or section that is active out of several options.
+                </p>
                 <BasicUsage />
                 <Collapsed />
             </DocContainer>
