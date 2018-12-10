@@ -234,6 +234,26 @@ exports[`Documentation: index renders 1`] = `
           title="Components"
         />
         <RenderRoutes
+          key="renderRoutes_Dashboard"
+          path="/docs/dashboard"
+          redirect="/docs/dashboard/introduction"
+          routes={
+            Array [
+              Object {
+                "componentPath": "dashboard/Introduction",
+                "path": "/docs/dashboard/introduction",
+                "title": "Introduction",
+              },
+              Object {
+                "componentPath": "dashboard/Charts",
+                "path": "/docs/dashboard/charts",
+                "title": "Charts (Experimental)",
+              },
+            ]
+          }
+          title="Dashboard"
+        />
+        <RenderRoutes
           key="renderRoutes_Utilities"
           path="/docs/utilities"
           redirect="/docs/utilities/colors"
