@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PrismCode from "react-prism";
 
 import { ComponentPreview, DocContainer, Property } from "#";
 import PanelComponent from "@/Panel";
@@ -57,7 +58,10 @@ const TableContent = () => (
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
-        <p>Panel...</p>
+        <p>
+            A panel consists of three parts: A header, a body and a footer. You can mostly put whatever you want in any of these,
+            but try not to put too much in the header and footer as these are meant to contain short and concise information about the body content.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <PanelComponent
                 title="Panel title"
@@ -73,7 +77,10 @@ const Overview = () => (
 const PanelHeaders = () => (
     <>
         <h2 id="panel-headers">Panel headers</h2>
-        <p>Two types of headers... <Property value=".panel-default" /> and <Property value=".panel-brand" />...</p>
+        <p>
+            You can pick between two different panel headers, brand color with white text and white with green text. add <Property value=".panel-default" /> or <Property value=".panel-brand" /> to
+            the header to use one of them.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <PanelComponent title="Default panel" />{"\n\n"}
             <PanelComponent type="brand" title="Panel brand" />
@@ -102,7 +109,9 @@ const PanelDark = () => (
 const PanelMuted = () => (
     <>
         <h2 id="muted-panel">Muted panel</h2>
-        <p>Muted panel with <Property value=".panel-muted" />...</p>
+        <p>
+            If you wish to use a completely gray panel you can add <Property value=".panel-muted" /> to the panel <PrismCode className="language-html">{"<section>"}</PrismCode>.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <PanelComponent
                 type="muted"
@@ -142,7 +151,9 @@ class Panel extends Component {
     render () {
         return (
             <DocContainer docToc>
-                <p className="lead">Panels...</p>
+                <p className="lead">
+                    Panels are large containers meant to be able to contain all of our other components.
+                </p>
                 <Overview />
                 <PanelHeaders />
                 <PanelDark />

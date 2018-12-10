@@ -8,7 +8,7 @@ exports[`Documentation: Panel Overview renders 1`] = `
     Overview
   </h2>
   <p>
-    Panel...
+    A panel consists of three parts: A header, a body and a footer. You can mostly put whatever you want in any of these, but try not to put too much in the header and footer as these are meant to contain short and concise information about the body content.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -78,15 +78,15 @@ exports[`Documentation: Panel PanelHeaders renders 1`] = `
     Panel headers
   </h2>
   <p>
-    Two types of headers... 
+    You can pick between two different panel headers, brand color with white text and white with green text. add 
     <Property
       value=".panel-default"
     />
-     and 
+     or 
     <Property
       value=".panel-brand"
     />
-    ...
+     to the header to use one of them.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -115,11 +115,18 @@ exports[`Documentation: Panel PanelMuted renders 1`] = `
     Muted panel
   </h2>
   <p>
-    Muted panel with 
+    If you wish to use a completely gray panel you can add 
     <Property
       value=".panel-muted"
     />
-    ...
+     to the panel 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;section&gt;
+    </PrismCode>
+    .
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -310,7 +317,7 @@ exports[`Documentation: Panel renders 1`] = `
   <p
     className="lead"
   >
-    Panels...
+    Panels are large containers meant to be able to contain all of our other components.
   </p>
   <Overview />
   <PanelHeaders />

@@ -27,6 +27,32 @@ exports[`Utilities: Image ImageCircle renders 1`] = `
 </Fragment>
 `;
 
+exports[`Utilities: Image ImageFluid renders 1`] = `
+<Fragment>
+  <h2
+    id="image-fluid"
+  >
+    Image fluid
+  </h2>
+  <p>
+    <Property
+      value=".img-fluid"
+    />
+     makes your images responsive by forcing the picture to scale with its parent.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <img
+      className="img-fluid"
+      src="https://picsum.photos/1000/250?image=937"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Utilities: Image ImageRounded renders 1`] = `
 <Fragment>
   <h2
@@ -81,27 +107,17 @@ exports[`Utilities: Image ImageThumbnail renders 1`] = `
 `;
 
 exports[`Utilities: Image renders 1`] = `
-<Fragment>
-  <h2
-    id="image-fluid"
+<DocContainer
+  docToc={true}
+>
+  <p
+    className="lead"
   >
-    Image fluid
-  </h2>
-  <p>
-    <Property
-      value=".img-fluid"
-    />
-     makes your images responsive by forcing the picture to scale with its parent.
+    Use our image utilties to modify how they are displayed or work when resized.
   </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <img
-      className="img-fluid"
-      src="https://picsum.photos/1000/250?image=937"
-    />
-  </ComponentPreview>
-</Fragment>
+  <ImageFluid />
+  <ImageRounded />
+  <ImageCircle />
+  <ImageThumbnail />
+</DocContainer>
 `;

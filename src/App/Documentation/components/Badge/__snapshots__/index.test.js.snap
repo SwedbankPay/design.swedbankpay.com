@@ -8,11 +8,7 @@ exports[`Components: Badge FurtherUsage renders 1`] = `
     Further usage
   </h2>
   <p>
-    Further usage... 
-    <Property
-      value=".badge"
-    />
-    ...
+    Badges inherit the size of the immediate parent element.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -79,13 +75,15 @@ exports[`Components: Badge Overview renders 1`] = `
     Overview
   </h2>
   <p>
-    Overview... 
-    <code
-      className="token property"
-    >
-      .badge
-    </code>
-    ...
+    Use class 
+    <Property
+      value=".badge"
+    />
+     along with 
+    <Property
+      value=".badge-{color}"
+    />
+     to display the badge of your choosing.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -151,7 +149,7 @@ exports[`Components: Badge renders 1`] = `
   <p
     className="lead"
   >
-    Badge...
+    Badges are small rectangular boxes which can convey a message and or state with their text and color.
   </p>
   <Overview />
   <FurtherUsage />

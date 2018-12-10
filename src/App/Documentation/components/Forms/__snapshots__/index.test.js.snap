@@ -8,7 +8,7 @@ exports[`Documentation: Forms Checkboxes renders 1`] = `
     Checkboxes
   </h2>
   <p>
-    Checkboxes...
+    Use checkboxes to make it so a user can select several options. If you need to restrict the number of possible selections to one, see radio buttons.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -32,117 +32,19 @@ exports[`Documentation: Forms Checkboxes renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Forms DisabledCheckboxes renders 1`] = `
+exports[`Documentation: Forms DisabledFormComponents renders 1`] = `
 <Fragment>
   <h2
-    id="disabled-checkboxes"
+    id="disabled-form-components"
   >
-    Disabled checkboxes
+    Disabled form components
   </h2>
   <p>
-    Disabled checkboxes...
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Checkbox
-      disabled={true}
-      id="checkbox-disabled-example-1"
-      label="Bread"
+    Disable whichever form component you want by adding 
+    <Attribute
+      name="disabled"
     />
-    <Checkbox
-      disabled={true}
-      id="checkbox-disabled-example-2"
-      label="Not bread. I'm not really fond of it. What I would really like, however, is one single piece of cracker with some nutella on it. Perhaps this could be the second checkbox. These thoughts are written here simply to show you how the checkboxes align themselves when label text is fairly long."
-    />
-    <Checkbox
-      checked={true}
-      disabled={true}
-      id="checkbox-disabled-example-3"
-      label="Milk"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Documentation: Forms DisabledRadioButtons renders 1`] = `
-<Fragment>
-  <h2
-    id="disabled-radio-buttons"
-  >
-    Disabled radio buttons
-  </h2>
-  <p>
-    Disabled radio buttons...
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Radio
-      disabled={true}
-      id="radio-disabled-example-1"
-      label="Hamburgers"
-      name="radio-disabled-example"
-    />
-    <Radio
-      disabled={true}
-      id="radio-disabled-example-2"
-      label="Not the one above because I'm not really fond of hamburgers. What I would really like, however, is a nice piece of steak. Perhaps that could be the second option. These thoughts are written here simply to show you how radio buttons align themselves when label text is fairly long."
-      name="radio-disabled-example"
-    />
-    <Radio
-      checked={true}
-      disabled={true}
-      id="radio-disabled-example-3"
-      label="Pizza"
-      name="radio-disabled-example"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Documentation: Forms DisabledRangeSlider renders 1`] = `
-<Fragment>
-  <h2
-    id="disabled-rangeslider"
-  >
-    Disabled rangeslider
-  </h2>
-  <p>
-    Disabled rangeslider...
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Rangeslider
-      disabled={true}
-      max={200}
-      min={0}
-      step={1}
-      value={100}
-      valueLabel={true}
-      valueLabelPostfix="%"
-      valueLabelPrefix="$"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Documentation: Forms DisabledToggleboxes renders 1`] = `
-<Fragment>
-  <h2
-    id="disabled-toggleboxes"
-  >
-    Disabled toggleboxes
-  </h2>
-  <p>
-    Disabled toggleboxes...
+     to the desired input element
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -154,12 +56,85 @@ exports[`Documentation: Forms DisabledToggleboxes renders 1`] = `
       id="togglebox-disabled-example-1"
       label="Enable overdrive"
     />
-    <Togglebox
+    <Radio
+      disabled={true}
+      id="radio-disabled-example-1"
+      label="Hamburgers"
+      name="radio-disabled-example"
+    />
+    <Checkbox
       checked={true}
       disabled={true}
-      id="togglebox-disabled-example-2"
-      label="Enable superpowers"
+      id="checkbox-disabled-example-3"
+      label="Milk"
     />
+    <Rangeslider
+      className="mb-2"
+      disabled={true}
+      max={200}
+      min={0}
+      step={1}
+      value={100}
+      valueLabel={true}
+      valueLabelPostfix="%"
+      valueLabelPrefix="$"
+    />
+    <p>
+      I am a text, am i too close to the component above me maybe?
+    </p>
+  </ComponentPreview>
+  <h3>
+    Disable a fieldset
+  </h3>
+  <p>
+    Disable entire fieldsets by adding 
+    <Attribute
+      name="disabled"
+    />
+     to the fieldset element
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <form>
+      <fieldset
+        disabled={true}
+      >
+        <legend>
+          Log in
+        </legend>
+        <InputGroup
+          autoComplete="username"
+          id="fieldset-disabled-username"
+          label="Username"
+          placeholder="Enter your username"
+          type="text"
+        />
+        <InputGroup
+          autoComplete="current-password"
+          id="fieldset-disabled-password"
+          label="Password"
+          placeholder="Enter your password"
+          type="password"
+        />
+        <Checkbox
+          id="fieldset-disabled-checkbox"
+          label="Remember me"
+        />
+      </fieldset>
+      
+
+      <Button
+        btnType="submit"
+        disabled={true}
+        label="Log in"
+        type="primary"
+      />
+      
+
+    </form>
   </ComponentPreview>
 </Fragment>
 `;
@@ -172,7 +147,11 @@ exports[`Documentation: Forms FormGrid form prevents default 1`] = `
     Form grid
   </h2>
   <p>
-    Form grid...
+    You can use the grid system to customize how forms are displayed. Just wrap your form elements in a row container to have two or more input elements next to eachother horizontally. Remember to add 
+    <Property
+      value=".col-{your_size}"
+    />
+     to the forms.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -244,7 +223,11 @@ exports[`Documentation: Forms FormGrid renders 1`] = `
     Form grid
   </h2>
   <p>
-    Form grid...
+    You can use the grid system to customize how forms are displayed. Just wrap your form elements in a row container to have two or more input elements next to eachother horizontally. Remember to add 
+    <Property
+      value=".col-{your_size}"
+    />
+     to the forms.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -316,7 +299,49 @@ exports[`Documentation: Forms Overview form prevents default 1`] = `
     Overview
   </h2>
   <p>
-    Forms overview...
+    Use 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;input&gt;
+    </PrismCode>
+     in combination with 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;form-group&gt;
+    </PrismCode>
+    s and/or 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;form&gt;
+    </PrismCode>
+    s to show a collection of related inputs. 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;form-group&gt;
+    </PrismCode>
+    s can contain more than just an input, like a 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;label&gt;
+    </PrismCode>
+     or
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;help-block&gt;
+    </PrismCode>
+    s.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -380,7 +405,49 @@ exports[`Documentation: Forms Overview renders 1`] = `
     Overview
   </h2>
   <p>
-    Forms overview...
+    Use 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;input&gt;
+    </PrismCode>
+     in combination with 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;form-group&gt;
+    </PrismCode>
+    s and/or 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;form&gt;
+    </PrismCode>
+    s to show a collection of related inputs. 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;form-group&gt;
+    </PrismCode>
+    s can contain more than just an input, like a 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;label&gt;
+    </PrismCode>
+     or
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;help-block&gt;
+    </PrismCode>
+    s.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -444,7 +511,7 @@ exports[`Documentation: Forms RadioButtons renders 1`] = `
     Radio buttons
   </h2>
   <p>
-    Radio buttons...
+    Use radio buttons when you wish to limit your user to one choice out of several possible.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -556,7 +623,14 @@ exports[`Documentation: Forms StaticText renders 1`] = `
     Static text
   </h2>
   <p>
-    Static text...
+    To just display static text in forms use a 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;span&gt;
+    </PrismCode>
+     inside a form
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -583,7 +657,7 @@ exports[`Documentation: Forms Toggleboxes renders 1`] = `
     Toggleboxes
   </h2>
   <p>
-    Toggleboxes...
+    Use toggleboxes if you wish present the user with an either-or option.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -611,7 +685,7 @@ exports[`Documentation: Forms UsageWithFieldsets form prevents default 1`] = `
     Usage with fieldsets
   </h2>
   <p>
-    Usage with fieldsets...
+    Use fieldsets to give your forms more structure.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -648,59 +722,6 @@ exports[`Documentation: Forms UsageWithFieldsets form prevents default 1`] = `
 
       <Button
         btnType="submit"
-        label="Log in"
-        type="primary"
-      />
-      
-
-    </form>
-  </ComponentPreview>
-  <h3>
-    Disable a fieldset
-  </h3>
-  <p>
-    Disable entire fieldsets with 
-    <Attribute
-      name="disabled"
-    />
-     attribute...
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <form>
-      <fieldset
-        disabled={true}
-      >
-        <legend>
-          Log in
-        </legend>
-        <InputGroup
-          autoComplete="username"
-          id="fieldset-disabled-username"
-          label="Username"
-          placeholder="Enter your username"
-          type="text"
-        />
-        <InputGroup
-          autoComplete="current-password"
-          id="fieldset-disabled-password"
-          label="Password"
-          placeholder="Enter your password"
-          type="password"
-        />
-        <Checkbox
-          id="fieldset-disabled-checkbox"
-          label="Remember me"
-        />
-      </fieldset>
-      
-
-      <Button
-        btnType="submit"
-        disabled={true}
         label="Log in"
         type="primary"
       />
@@ -719,7 +740,7 @@ exports[`Documentation: Forms UsageWithFieldsets renders 1`] = `
     Usage with fieldsets
   </h2>
   <p>
-    Usage with fieldsets...
+    Use fieldsets to give your forms more structure.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -756,59 +777,6 @@ exports[`Documentation: Forms UsageWithFieldsets renders 1`] = `
 
       <Button
         btnType="submit"
-        label="Log in"
-        type="primary"
-      />
-      
-
-    </form>
-  </ComponentPreview>
-  <h3>
-    Disable a fieldset
-  </h3>
-  <p>
-    Disable entire fieldsets with 
-    <Attribute
-      name="disabled"
-    />
-     attribute...
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <form>
-      <fieldset
-        disabled={true}
-      >
-        <legend>
-          Log in
-        </legend>
-        <InputGroup
-          autoComplete="username"
-          id="fieldset-disabled-username"
-          label="Username"
-          placeholder="Enter your username"
-          type="text"
-        />
-        <InputGroup
-          autoComplete="current-password"
-          id="fieldset-disabled-password"
-          label="Password"
-          placeholder="Enter your password"
-          type="password"
-        />
-        <Checkbox
-          id="fieldset-disabled-checkbox"
-          label="Remember me"
-        />
-      </fieldset>
-      
-
-      <Button
-        btnType="submit"
-        disabled={true}
         label="Log in"
         type="primary"
       />
@@ -1038,7 +1006,7 @@ exports[`Documentation: Forms renders 1`] = `
   <p
     className="lead"
   >
-    Forms...
+    Form componenets allow you to gather user input in various different ways.
   </p>
   <Overview />
   <FormGrid />
@@ -1046,12 +1014,9 @@ exports[`Documentation: Forms renders 1`] = `
   <UsageWithFieldsets />
   <StaticText />
   <Checkboxes />
-  <DisabledCheckboxes />
   <RadioButtons />
-  <DisabledRadioButtons />
   <Toggleboxes />
-  <DisabledToggleboxes />
   <RangeSlider />
-  <DisabledRangeSlider />
+  <DisabledFormComponents />
 </DocContainer>
 `;

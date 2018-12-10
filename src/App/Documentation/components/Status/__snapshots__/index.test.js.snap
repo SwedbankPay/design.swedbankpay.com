@@ -8,11 +8,7 @@ exports[`Documentation: Status ExtendedUsage renders 1`] = `
     Extended usage
   </h2>
   <p>
-    Extended usage... 
-    <Property
-      value=".status"
-    />
-    ...
+    The status component inherits the size of its direct parent.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -56,11 +52,11 @@ exports[`Documentation: Status Overview renders 1`] = `
     Overview
   </h2>
   <p>
-    Overview... 
+    Be aware of what color you use when deciding what message you want to convey. A completion status should not use a warning or danger status, that is why 
     <Property
-      value=".status"
+      value=".status-success"
     />
-    ...
+     exists.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -108,6 +104,16 @@ exports[`Documentation: Status Overview renders 1`] = `
       </li>
     </ul>
   </ComponentPreview>
+  <Alert
+    type="warning"
+  >
+    <h5>
+      Visual impairments and colors
+    </h5>
+    <p>
+      Be careful not to rely soley on the color of the status icon to convey your message.
+    </p>
+  </Alert>
 </Fragment>
 `;
 
@@ -118,7 +124,7 @@ exports[`Documentation: Status renders 1`] = `
   <p
     className="lead"
   >
-    Status...
+    The status component is a good way to convey to the user the state of something.
   </p>
   <Overview />
   <ExtendedUsage />

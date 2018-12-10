@@ -135,7 +135,10 @@ class Nav extends Component {
         return (
             <DocContainer docToc>
                 <ExperimentalComponentAlert />
-                <p className="lead">Navs.</p>
+                <p className="lead">
+                    Use <PrismCode className="language-html">{"<nav>"}</PrismCode>s to create a basic navigational
+                    element containing links.
+                </p>
                 <StandardNav />
                 <TwoLevels />
                 <IconsOnly />

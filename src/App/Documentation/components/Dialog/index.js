@@ -1,12 +1,19 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocContainer, Icon } from "#";
+import { ComponentPreview, DocContainer, Icon, Attribute } from "#";
 import { dialog } from "$/px-script/main";
 
 const Example = () => (
     <>
         <h2 id="example">Example</h2>
-        <p>Example dialog...</p>
+        <p>
+            Dialog boxes consist of a header, a body and a footer. In these you can put whatever you want, but some basic functionality should be included in all dialogs.
+            The header should contain a short descriptive text for what the dialog-box does. Remember to include a way to close the dialog box in the header
+            in the form of a clickable icon or something similar. The dialog body should contain the main content, usually just text confirming an action.
+            In the footer you will find buttons to confirm or cancel the requested action. To make a button open the dialog box you need to
+            include <Attribute data name="datepicker-time" value="{#your-dialog-id}" /> as an attribute to that button.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="dialog" id="demo-dialog">
                 <section>
@@ -57,7 +64,10 @@ class Dialog extends Component {
     render () {
         return (
             <DocContainer docToc>
-                <p className="lead">Dialogs...</p>
+                <p className="lead">
+                    Dialog is meant to be used to show a snippet of text like a confirmation box before you delete something.
+                    Use <Link to="/docs/components/sheet">sheet</Link> if you wish to receive input from the user or display a large chunk of information.
+                </p>
                 <Example />
                 <UsageWithJavascript />
             </DocContainer>

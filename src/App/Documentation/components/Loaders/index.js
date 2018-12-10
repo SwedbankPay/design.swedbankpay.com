@@ -7,7 +7,9 @@ import { loader } from "$/px-script/main";
 const BasicUsage = () => (
     <>
         <h2 id="basic-usage">Basic usage</h2>
-        <p>Basic usage...</p>
+        <p>
+            To use a default loader add <Property value=".loader" />, <Property value=".loader-default" /> and <Attribute name="loader" data /> to a div.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <LoaderComponent size="default" visible />
         </ComponentPreview>
@@ -32,7 +34,9 @@ const Sizes = () => (
 const MutedLoader = () => (
     <>
         <h2 id="muted-loader">Muted loader</h2>
-        <p>Use class <Property value=".loader-muted" /> to mute the loader...</p>
+        <p>
+            Use class <Property value=".loader-muted" /> to make the loader muted.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <LoaderComponent id="test" size="default" visible muted />
         </ComponentPreview>
@@ -62,7 +66,9 @@ class Loaders extends Component {
     render () {
         return (
             <DocContainer docToc>
-                <p className="lead">Use loaders...</p>
+                <p className="lead">
+                    Use loaders to indicate to the user that your web application is loading.
+                </p>
                 <BasicUsage />
                 <Sizes />
                 <MutedLoader />

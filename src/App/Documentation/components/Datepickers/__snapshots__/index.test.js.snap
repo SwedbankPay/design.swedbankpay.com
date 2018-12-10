@@ -199,13 +199,13 @@ exports[`Documentation: Datepickers Required renders 1`] = `
     Required
   </h2>
   <p>
-    Required.. 
+    If you set 
     <Attribute
       data={true}
       name="required"
       value="true"
     />
-     will autopopulate the input after clicking it if no date is selected. Keep in mind that if you do not pass a value to the datepicker it will remain blank if the user does not click the input.
+     to true it will autopopulate the input after clicking it if no date is selected. Keep in mind that if you do not pass a value to the datepicker it will remain blank if the user does not click the input.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -231,7 +231,7 @@ exports[`Documentation: Datepickers ShowingMultipleMonths renders 1`] = `
     Showing multiple months
   </h2>
   <p>
-    Showing multiple months.. 
+    If you need to show more than one month in your date picker use the attribute 
     <Attribute
       data={true}
       name="datepicker-months"
@@ -263,10 +263,14 @@ exports[`Documentation: Datepickers SimpleDatepicker renders 1`] = `
     Simple datepicker
   </h2>
   <p>
-    Simple datepicker..
+    A basic datepicker can be made by applying the attribute 
     <Attribute
       data={true}
       name="datepicker"
+    />
+     to an input element inside a 
+    <Property
+      value=".form-group"
     />
     .
   </p>
@@ -292,8 +296,9 @@ exports[`Documentation: Datepickers renders 1`] = `
   <p
     className="lead"
   >
-    Datepickers...
+    Datepickers makes it easy to get dates from your users. With datepickers you do not have to worry about how your users write the given date, alleviating the need to do format validation.
   </p>
+  <AboutDatepickers />
   <SimpleDatepicker />
   <InitialValue />
   <CustomFormat />

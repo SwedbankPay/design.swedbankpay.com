@@ -8,10 +8,11 @@ exports[`Documentation: Lists BasicList renders 1`] = `
     Basic list
   </h2>
   <p>
-    Basic lists info...
+    Add 
     <Property
       value=".list"
     />
+     to a list to display the basic list. Our lists do not use bullet points.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -39,7 +40,7 @@ exports[`Documentation: Lists BasicList renders 1`] = `
     Nested list
   </h3>
   <p>
-    Nested lists are also pretty sweet...
+    Use nesting with lists to signify that some items are children of another item.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -82,10 +83,11 @@ exports[`Documentation: Lists DescriptionList renders 1`] = `
     Description list
   </h2>
   <p>
-    Description lists info...
+    The description list lets you provide each item with a more specific description of each item. Add 
     <Property
       value=".description-list"
     />
+     to your dl.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -213,10 +215,11 @@ exports[`Documentation: Lists InlineList renders 1`] = `
     Inline list
   </h2>
   <p>
-    Inline lists info...
+    Use 
     <Property
       value=".list-inline"
     />
+     on a list to make all items appear on the same line.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -248,10 +251,10 @@ exports[`Documentation: Lists ItemList renders 1`] = `
     Item list 
   </h2>
   <p>
-     Item list info...
     <Property
       value=".item-list"
     />
+    s is a good way to offer more extensive information about each item. Each item has their own box which seperates the items more clearly than our other options.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -283,10 +286,11 @@ exports[`Documentation: Lists SettingsList renders 1`] = `
     Settings list
   </h2>
   <p>
-    Settings lists info...
+    Use 
     <Property
       value=".settings-list"
     />
+     to visualize different settings in your web application.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -345,10 +349,11 @@ exports[`Documentation: Lists StripedItemList prevents default on anchors 1`] = 
     Striped item list
   </h2>
   <p>
-     Striped item list info...
+    If you want more seperation between each item you can use 
     <Property
       value=".item-list-striped"
     />
+    .
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -508,10 +513,11 @@ exports[`Documentation: Lists StripedItemList renders 1`] = `
     Striped item list
   </h2>
   <p>
-     Striped item list info...
+    If you want more seperation between each item you can use 
     <Property
       value=".item-list-striped"
     />
+    .
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -670,7 +676,7 @@ exports[`Documentation: Lists renders 1`] = `
   <p
     className="lead"
   >
-    Lots of cool info about lists will be here...
+    Use lists to give a structured view of information.
   </p>
   <BasicList />
   <InlineList />
