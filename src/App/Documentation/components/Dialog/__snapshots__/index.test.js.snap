@@ -145,7 +145,14 @@ exports[`Documentation: Dialog renders 1`] = `
   <p
     className="lead"
   >
-    Dialogs...
+    Dialog is meant to be used to show a snippet of text such as a confirmation box before you delete something. Use 
+    <Link
+      replace={false}
+      to="/docs/components/sheet"
+    >
+      sheet
+    </Link>
+     if you wish to receive input from the user or display a large chunk of information.
   </p>
   <Example />
   <UsageWithJavascript />

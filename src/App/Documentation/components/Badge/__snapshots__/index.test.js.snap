@@ -149,7 +149,7 @@ exports[`Components: Badge renders 1`] = `
   <p
     className="lead"
   >
-    Badge...
+    Badges are small rectangular boxes which can convey a message and or state with their text and color.
   </p>
   <Overview />
   <FurtherUsage />

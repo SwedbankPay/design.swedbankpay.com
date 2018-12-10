@@ -121,7 +121,7 @@ exports[`Documentation: Steps VerticalSteps renders 1`] = `
       className="language-html"
       component="code"
     >
-      &lt;DocContainer&gt;
+      &lt;div&gt;
     </PrismCode>
      element.
   </p>
@@ -163,7 +163,7 @@ exports[`Documentation: Steps renders 1`] = `
   <p
     className="lead"
   >
-    Steps.
+    Use steps to visualize the users progress through a process.
   </p>
   <BasicSteps />
   <VerticalSteps />

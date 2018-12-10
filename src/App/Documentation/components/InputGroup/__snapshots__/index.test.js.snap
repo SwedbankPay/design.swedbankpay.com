@@ -398,7 +398,25 @@ exports[`Documentation: InputGroup renders 1`] = `
   <p
     className="lead"
   >
-    Input groups...
+    You can include additional information to specific input elements by adding 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;span&gt;
+    </PrismCode>
+    s or 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;button&gt;
+    </PrismCode>
+    s in a 
+    <Property
+      value=".input-group"
+    />
+    .
   </p>
   <BasicExample />
   <ButtonAddons />

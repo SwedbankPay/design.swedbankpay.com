@@ -1006,7 +1006,7 @@ exports[`Documentation: Forms renders 1`] = `
   <p
     className="lead"
   >
-    Forms...
+    Form componenets allow you to gather user input in various different ways.
   </p>
   <Overview />
   <FormGrid />
@@ -1014,12 +1014,9 @@ exports[`Documentation: Forms renders 1`] = `
   <UsageWithFieldsets />
   <StaticText />
   <Checkboxes />
-  <DisabledCheckboxes />
   <RadioButtons />
-  <DisabledRadioButtons />
   <Toggleboxes />
-  <DisabledToggleboxes />
   <RangeSlider />
-  <DisabledRangeSlider />
+  <DisabledFormComponents />
 </DocContainer>
 `;

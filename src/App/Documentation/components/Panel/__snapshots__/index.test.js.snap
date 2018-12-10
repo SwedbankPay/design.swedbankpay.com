@@ -317,7 +317,7 @@ exports[`Documentation: Panel renders 1`] = `
   <p
     className="lead"
   >
-    Panels...
+    Panels are large containers meant to be able to contain all of our other components.
   </p>
   <Overview />
   <PanelHeaders />

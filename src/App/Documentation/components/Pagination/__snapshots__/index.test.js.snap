@@ -172,7 +172,7 @@ exports[`Documentation: Pagination renders 1`] = `
   <p
     className="lead"
   >
-    Pagination...
+    Use the pagination component to indicate that a series of related content exist across multiple pages.
   </p>
   <DefaultPagination />
   <PaginationBullets />

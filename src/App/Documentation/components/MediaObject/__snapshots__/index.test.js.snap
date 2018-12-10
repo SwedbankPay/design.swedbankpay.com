@@ -138,7 +138,7 @@ exports[`Documentation: MediaObject renders 1`] = `
   <p
     className="lead"
   >
-    Media objects...
+    Use media objects to showcase basic user information with text and a small image element or an icon.
   </p>
   <Overview />
   <Sizes />

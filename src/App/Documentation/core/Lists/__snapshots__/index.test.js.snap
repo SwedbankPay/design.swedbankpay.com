@@ -676,7 +676,7 @@ exports[`Documentation: Lists renders 1`] = `
   <p
     className="lead"
   >
-    Lots of cool info about lists will be here...
+    Use lists to give a structured view of information.
   </p>
   <BasicList />
   <InlineList />

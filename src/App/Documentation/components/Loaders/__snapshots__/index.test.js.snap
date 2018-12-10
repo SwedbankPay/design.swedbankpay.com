@@ -165,7 +165,7 @@ exports[`Documentation: Loaders renders 1`] = `
   <p
     className="lead"
   >
-    Use loaders...
+    Use loaders to indicate to the user that your web application is loading.
   </p>
   <BasicUsage />
   <Sizes />
