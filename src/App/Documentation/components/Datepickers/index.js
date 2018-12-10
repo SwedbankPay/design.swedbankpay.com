@@ -11,8 +11,8 @@ const AboutDatepickers = () => (
     <>
         <h2 id="about-datepickers">About</h2>
         <p>
-            Datepickers give a visual presentation of days, months and years. By utilizing the datepicker you can be assured the given input is in the format you expect without having to deal with too much validation.
-            Datepickers should be used for recent dates to avoid having the user click a lot of times to find the required date.
+            Datepickers give a visual presentation of days, months and years. By utilizing the datepicker you can be assured the given input is in the format you
+            expect without having to deal with too much client-side validation. Datepickers should be used for recent dates to avoid having the user click a lot of times to find the required date.
             If you need a date of birth or something similarly far back, an input field with proper validation will be easier to use.
         </p>
     </>
@@ -48,7 +48,7 @@ const InitialValue = () => (
         </ComponentPreview>
         <Alert type="warning">
             <h5>Initial value and format</h5>
-            <p>Keep in mind that the datepicker will not insert the initial value if it does not correctly match the set format (iso8601 if you have not specified a format).</p>
+            <p>Keep in mind that the datepicker will not insert the initial value if it does not correctly match the set format (<Attribute value="iso8601"/> if you have not specified a format).</p>
         </Alert>
     </>
 );
@@ -293,8 +293,8 @@ class Datepickers extends Component {
         return (
             <DocContainer docToc>
                 <p className="lead">
-                    Datepickers makes it easy to get dates from your user. With datepickers you do not have to worry about how your user
-                    writes the given date so you can skip format validation.
+                    Datepickers makes it easy to get dates from your users. With datepickers you do not have to worry about how your users
+                    write the given date, alleviating the need to do format validation.
                 </p>
                 <AboutDatepickers />
                 <SimpleDatepicker />

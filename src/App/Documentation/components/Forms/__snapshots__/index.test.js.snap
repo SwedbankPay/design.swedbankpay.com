@@ -299,7 +299,49 @@ exports[`Documentation: Forms Overview form prevents default 1`] = `
     Overview
   </h2>
   <p>
-    A group of forms must be wrapped contained by a form element. Each input element must be wrapped by its own form-group, but every form-group can contain a number of elements. Labels are used as a mini heading for each input element. The help block can be used to give a short description of the expected input. Validation can be used together with help blocks read more further down.
+    Use 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;input&gt;
+    </PrismCode>
+     in combination with 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;form-group&gt;
+    </PrismCode>
+    s and/or 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;form&gt;
+    </PrismCode>
+    s to show a collection of related inputs. 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;form-group&gt;
+    </PrismCode>
+    s can contain more than just an input, like a 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;label&gt;
+    </PrismCode>
+     or
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;help-block&gt;
+    </PrismCode>
+    s.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -363,7 +405,49 @@ exports[`Documentation: Forms Overview renders 1`] = `
     Overview
   </h2>
   <p>
-    A group of forms must be wrapped contained by a form element. Each input element must be wrapped by its own form-group, but every form-group can contain a number of elements. Labels are used as a mini heading for each input element. The help block can be used to give a short description of the expected input. Validation can be used together with help blocks read more further down.
+    Use 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;input&gt;
+    </PrismCode>
+     in combination with 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;form-group&gt;
+    </PrismCode>
+    s and/or 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;form&gt;
+    </PrismCode>
+    s to show a collection of related inputs. 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;form-group&gt;
+    </PrismCode>
+    s can contain more than just an input, like a 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;label&gt;
+    </PrismCode>
+     or
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;help-block&gt;
+    </PrismCode>
+    s.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -427,7 +511,7 @@ exports[`Documentation: Forms RadioButtons renders 1`] = `
     Radio buttons
   </h2>
   <p>
-    Use radio buttons when you wish to limit your user to one choice out of several.
+    Use radio buttons when you wish to limit your user to one choice out of several possible.
   </p>
   <ComponentPreview
     codeFigure={true}

@@ -11,9 +11,9 @@ const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
         <p>
-            A group of forms must be wrapped contained by a form element. Each input element must be wrapped by its own form-group, but every form-group can contain a number of elements.
-            Labels are used as a mini heading for each input element. The help block can be used to give a short description of the expected input. Validation can be used together with help blocks
-            read more further down.
+            Use <PrismCode className="language-html">{"<input>"}</PrismCode> in combination with <PrismCode className="language-html">{"<form-group>"}</PrismCode>s and/or <PrismCode className="language-html">{"<form>"}</PrismCode>s to
+            show a collection of related inputs. <PrismCode className="language-html">{"<form-group>"}</PrismCode>s can contain more than just an input, like a <PrismCode className="language-html">{"<label>"}</PrismCode> or
+            <PrismCode className="language-html">{"<help-block>"}</PrismCode>s.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <form onSubmit={e => e.preventDefault()}>
@@ -219,7 +219,7 @@ const RadioButtons = () => (
     <>
         <h2 id="radio-buttons">Radio buttons</h2>
         <p>
-            Use radio buttons when you wish to limit your user to one choice out of several.
+            Use radio buttons when you wish to limit your user to one choice out of several possible.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <Radio label="Hamburgers" id="radio-example-1" name="radio-example" />
@@ -308,7 +308,7 @@ class Forms extends Component {
         return (
             <DocContainer docToc>
                 <p className="lead">
-                    Forms is a collection of different tools available to you to gather user input.
+                    Form componenets allow you to gather user input in various different ways.
                 </p>
                 <Overview />
                 <FormGrid />

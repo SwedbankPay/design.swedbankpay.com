@@ -8,15 +8,36 @@ exports[`Documentation: InputGroup BasicExample renders 1`] = `
     Basic example
   </h2>
   <p>
-    Add a span with class 
+    Add a 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;span&gt;
+    </PrismCode>
+     with class 
     <Property
       value=".input-group-addon"
     />
-     to get a gray box on the left, right or both sides of an input element. The position of your 
+     to get a gray box on the left, right or both sides of an 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;input&gt;
+    </PrismCode>
+     element. The position of your 
     <Property
       value=".input-group-addon"
     />
-     depends on if you place it before or after the input element.
+     depends on if you place it before or after the 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;input
+    </PrismCode>
+     element.
   </p>
   <ComponentPreview
     codeFigure={true}

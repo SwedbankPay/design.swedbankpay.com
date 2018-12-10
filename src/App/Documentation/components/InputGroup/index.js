@@ -8,8 +8,9 @@ const BasicExample = () => (
     <>
         <h2 id="basic-example">Basic example</h2>
         <p>
-            Add a span with class <Property value=".input-group-addon"/> to get a gray box on the left, right or both sides of an input element. The position of
-            your <Property value=".input-group-addon"/> depends on if you place it before or after the input element.
+            Add a <PrismCode className="language-html">{"<span>"}</PrismCode> with class <Property value=".input-group-addon"/> to get a gray box on the left,
+            right or both sides of an <PrismCode className="language-html">{"<input>"}</PrismCode> element. The position of
+            your <Property value=".input-group-addon"/> depends on if you place it before or after the <PrismCode className="language-html">{"<input"}</PrismCode> element.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure >
             <InputGroupComponent
