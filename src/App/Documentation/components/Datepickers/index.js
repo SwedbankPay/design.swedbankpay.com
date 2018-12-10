@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, Attribute, DocContainer } from "#";
+import { ComponentPreview, Attribute, Property, DocContainer } from "#";
 import { Datepicker as DatepickerComponent } from "@/FormComponents";
 import { datepicker } from "$/px-script/main";
+import Alert from "@/Alert";
 
 const moment = window.moment;
 
 const SimpleDatepicker = () => (
     <>
         <h2 id="simple-datepicker">Simple datepicker</h2>
-        <p>Simple datepicker..<Attribute data name="datepicker" />.</p>
+        <p>A basic datepicker can be made by applying the attribute <Attribute data name="datepicker" /> to an input tag inside a <Property value=".form-group" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent
                 label="Date"
@@ -24,7 +25,7 @@ const SimpleDatepicker = () => (
 const InitialValue = () => (
     <>
         <h2 id="initial-value">Initial value</h2>
-        <p>Initial value..<Attribute data name="datepicker-value" />.</p>
+        <p>If you want to set an initial value for your datepicker use <Attribute data value="{your-date}" name="datepicker-value" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent
                 value={moment().format("YYYY-MM-DD")}
@@ -34,14 +35,19 @@ const InitialValue = () => (
                 id="init-value-datepicker"
             />
         </ComponentPreview>
-        <p>Keep in mind that the datepicker will not insert the initial value if it does not correctly match the set format (iso8601 if you have not specified a format).</p>
+        <Alert type="warning">
+            <h5>Inintial value and format</h5>
+            <p>Keep in mind that the datepicker will not insert the initial value if it does not correctly match the set format (iso8601 if you have not specified a format).</p>
+        </Alert>
     </>
 );
 
 const CustomFormat = () => (
     <>
         <h2 id="custom-format">Custom format</h2>
-        <p>Custom format..<Attribute data name="datepicker-format" value="[nb|sv|da|fi|en|iso8601(default)]" />.</p>
+        <p>
+            To use a custom format include <Attribute data name="datepicker-format" value="[nb|sv|da|fi|en|iso8601(default)]" />.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent
                 label="nb (norwegian):"
@@ -98,7 +104,7 @@ const CustomFormat = () => (
 const IncludeTime = () => (
     <>
         <h2 id="include-time">Include time</h2>
-        <p>Include time.. <Attribute data name="datepicker-time" value="true" />.</p>
+        <p>Adding time to your datepicker is as easy as using <Attribute data name="datepicker-time" value="true" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent
                 time
@@ -116,7 +122,7 @@ const IncludeTime = () => (
 const Required = () => (
     <>
         <h2 id="required">Required</h2>
-        <p>Required.. <Attribute data name="required" value="true" /> will autopopulate the input after clicking it if no date is selected. Keep in mind that if you do not pass a value to the datepicker it will remain blank if the user does not click the input.</p>
+        <p>If you set <Attribute data name="required" value="true" /> to true it will autopopulate the input after clicking it if no date is selected. Keep in mind that if you do not pass a value to the datepicker it will remain blank if the user does not click the input.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent
                 required label="Date"
@@ -131,7 +137,7 @@ const Required = () => (
 const ShowingMultipleMonths = () => (
     <>
         <h2 id="showing-multiple-months">Showing multiple months</h2>
-        <p>Showing multiple months.. <Attribute data name="datepicker-months" value="[number]" />.</p>
+        <p>If you need to show more than one month in your date picker user attribute <Attribute data name="datepicker-months" value="[number]" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent
                 months="2"
