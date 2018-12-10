@@ -4,8 +4,21 @@ import initBarChart from "./bar";
 import initPieChart from "./pie";
 import initLineChart from "./line";
 
-// Shades of green
 const _colorPool = [
+    "45, 169, 68", // brand
+    "38, 108, 154", // neutral
+    "125, 85, 170", // purple
+    "255, 159, 0", // warning
+    "205, 46, 0", // danger
+    "19, 70, 17", // up forest green (custom)
+    "0, 52, 89", // prussian blue (custom)
+    "106, 1, 54", // tyrian purple (custom)
+    "245, 184, 65", // maximum yellow (red) (custom)
+    "255, 34, 12" // red (ryb) (custom)
+];
+
+// Shades of green
+const _colorPoolGreen = [
     "45, 169, 68", // original
     "11, 93, 30",
     "5, 59, 6",
@@ -23,37 +36,24 @@ const _colorPool = [
     // "71, 195, 94" // lightened 10%
 ];
 
-const _colorPoolSecondary = [
-    "45, 169, 68", // brand
-    "38, 108, 154", // neutral
-    "125, 85, 170", // purple
-    "255, 159, 0", // warning
-    "205, 46, 0", // danger
-    "19, 70, 17", // up forest green (custom)
-    "0, 52, 89", // prussian blue (custom)
-    "106, 1, 54", // tyrian purple (custom)
-    "245, 184, 65", // maximum yellow (red) (custom)
-    "255, 34, 12" // red (ryb) (custom)
-];
-
 const _init = (ctx, userOptions) => {
     let options;
 
     switch (userOptions.type) {
         case "bar":
         case "horizontalBar":
-            options = initBarChart(userOptions, _colorPoolSecondary);
+            options = initBarChart(userOptions, _colorPool);
 
             break;
 
         case "pie":
         case "doughnut":
-            options = initPieChart(userOptions, _colorPoolSecondary);
+            options = initPieChart(userOptions, _colorPool);
 
             break;
 
         case "line":
-            options = initLineChart(userOptions, _colorPoolSecondary);
+            options = initLineChart(userOptions, _colorPool);
 
             break;
         default:
@@ -87,4 +87,4 @@ const chart = (id, userOptions) => {
 export default chart;
 
 /* For testing */
-export { _colorPool, _colorPoolSecondary };
+export { _colorPool, _colorPoolGreen };
