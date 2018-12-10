@@ -153,7 +153,9 @@ const ShowingMultipleMonths = () => (
 const DateRange = () => (
     <>
         <h2 id="date-range">Date range</h2>
-        <p>Date range with <Attribute data name="datepicker-min" /> and <Attribute data name="datepicker-max" />...</p>
+        <p>
+            You can set a range of available dates to select from by using <Attribute data name="datepicker-min" /> and <Attribute data name="datepicker-max" />
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             {/* eslint-disable newline-per-chained-call*/}
             <DatepickerComponent
