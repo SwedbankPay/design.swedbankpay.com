@@ -22,7 +22,8 @@ const Overview = () => (
             <h5>Content restriction</h5>
             <p>
                 Don’t put too much text in toasts as they are meant to be visible for only a short amount of time.
-                Due to the time restriction you should also avoid putting vital information in them.
+                Due to the time restriction you should also avoid putting vital information in them. If you wish to give some sort of feedback
+                to the user see <Link to="/docs/components/dialog">dialog</Link> or <Link to="/docs/components/sheet">sheet</Link>.
             </p>
         </Alert>
     </>

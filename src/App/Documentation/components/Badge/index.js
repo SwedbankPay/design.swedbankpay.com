@@ -35,7 +35,7 @@ const FurtherUsage = () => (
 const Badge = () => (
     <DocContainer docToc>
         <p className="lead">
-            Badges are small rectangular boxes which can convey a message and or state with both the text inside and color of the box.
+            Badges are small rectangular boxes which can convey a message and or state with their text and color.
         </p>
         <Overview />
         <FurtherUsage />

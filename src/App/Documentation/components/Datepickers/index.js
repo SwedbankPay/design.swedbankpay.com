@@ -7,10 +7,21 @@ import Alert from "@/Alert";
 
 const moment = window.moment;
 
+const AboutDatepickers = () => (
+    <>
+        <h2 id="about-datepickers">About</h2>
+        <p>
+            Datepickers give a visual presentation of days, months and years. By utilizing the datepicker you can be assured the given input is in the format you expect without having to deal with too much validation.
+            Datepickers should be used for recent dates to avoid having the user click a lot of times to find the required date.
+            If you need a date of birth or something similarly far back, an input field with proper validation will be easier to use.
+        </p>
+    </>
+);
+
 const SimpleDatepicker = () => (
     <>
         <h2 id="simple-datepicker">Simple datepicker</h2>
-        <p>A basic datepicker can be made by applying the attribute <Attribute data name="datepicker" /> to an input tag inside a <Property value=".form-group" />.</p>
+        <p>A basic datepicker can be made by applying the attribute <Attribute data name="datepicker" /> to an input element inside a <Property value=".form-group" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent
                 label="Date"
@@ -36,7 +47,7 @@ const InitialValue = () => (
             />
         </ComponentPreview>
         <Alert type="warning">
-            <h5>Inintial value and format</h5>
+            <h5>Initial value and format</h5>
             <p>Keep in mind that the datepicker will not insert the initial value if it does not correctly match the set format (iso8601 if you have not specified a format).</p>
         </Alert>
     </>
@@ -137,7 +148,7 @@ const Required = () => (
 const ShowingMultipleMonths = () => (
     <>
         <h2 id="showing-multiple-months">Showing multiple months</h2>
-        <p>If you need to show more than one month in your date picker user attribute <Attribute data name="datepicker-months" value="[number]" />.</p>
+        <p>If you need to show more than one month in your date picker use the attribute <Attribute data name="datepicker-months" value="[number]" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent
                 months="2"
@@ -282,9 +293,10 @@ class Datepickers extends Component {
         return (
             <DocContainer docToc>
                 <p className="lead">
-                    Datepickers should be used for recent dates. If you need a date of birth or
-                    something similar then it is easier to just use an input field with validation.
+                    Datepickers makes it easy to get dates from your user. With datepickers you do not have to worry about how your user
+                    writes the given date so you can skip format validation.
                 </p>
+                <AboutDatepickers />
                 <SimpleDatepicker />
                 <InitialValue />
                 <CustomFormat />
