@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Forms, { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, Checkboxes, DisabledCheckboxes, RadioButtons, DisabledRadioButtons, Toggleboxes, DisabledToggleboxes, RangeSlider, DisabledRangeSlider } from "./index";
+import Forms, { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, Checkboxes, RadioButtons, Toggleboxes, RangeSlider, DisabledFormComponents } from "./index";
 
 describe("Documentation: Forms", () => {
     it("is defined", () => {
@@ -114,18 +114,6 @@ describe("Documentation: Forms", () => {
         });
     });
 
-    describe("DisabledCheckboxes", () => {
-        it("is defined", () => {
-            expect(DisabledCheckboxes).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<DisabledCheckboxes />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
     describe("RadioButtons", () => {
         it("is defined", () => {
             expect(RadioButtons).toBeDefined();
@@ -133,18 +121,6 @@ describe("Documentation: Forms", () => {
 
         it("renders", () => {
             const wrapper = shallow(<RadioButtons />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("DisabledRadioButtons", () => {
-        it("is defined", () => {
-            expect(DisabledRadioButtons).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<DisabledRadioButtons />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -162,18 +138,6 @@ describe("Documentation: Forms", () => {
         });
     });
 
-    describe("DisabledToggleboxes", () => {
-        it("is defined", () => {
-            expect(DisabledToggleboxes).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<DisabledToggleboxes />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
     describe("RangeSlider", () => {
         it("is defined", () => {
             expect(RangeSlider).toBeDefined();
@@ -186,13 +150,13 @@ describe("Documentation: Forms", () => {
         });
     });
 
-    describe("DisabledRangeSlider", () => {
+    describe("DisabledFormComponents", () => {
         it("is defined", () => {
-            expect(DisabledRangeSlider).toBeDefined();
+            expect(DisabledFormComponents).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<DisabledRangeSlider />);
+            const wrapper = shallow(<DisabledFormComponents />);
 
             expect(wrapper).toMatchSnapshot();
         });

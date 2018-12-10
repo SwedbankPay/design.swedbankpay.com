@@ -9,9 +9,9 @@ const Example = () => (
         <h2 id="example">Example</h2>
         <p>
             Our dialog boxes consist of a header, a body and a footer. In these you can put whatever you want, but some basic functionality should be included in all dialogs.
-            The header is where you will put a short descriptive text for what the dialog-box does. Normally you should include a way to close the dialog box in the header.
-            We do this in form of a icon anchor. In the dialog body is where you want to have the main content, normally just text confirming an action.
-            In the footer you will usually find buttons to confirm or cancel the requested action. To make a button open the dialog box you need to
+            The header is where you will put a short descriptive text for what the dialog-box does. You should always include a way to close the dialog box in the header,
+            we do this in form of a clickable icon. In the dialog body is where you want to have the main content, usually just text confirming an action.
+            In the footer you will find buttons to confirm or cancel the requested action. To make a button open the dialog box you need to
             include <Attribute data name="datepicker-time" value="{#your-dialog-id}" /> as an attribute to that button.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>

@@ -187,31 +187,6 @@ const UsageWithFieldsets = () => (
                 <Button type="primary" label="Log in" btnType="submit" />{"\n"}
             </form>
         </ComponentPreview>
-        <h3>Disable a fieldset</h3>
-        <p>Disable entire fieldsets with <Attribute name="disabled" /> attribute...</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <form>
-                <fieldset disabled>
-                    <legend>Log in</legend>
-                    <InputGroup
-                        id="fieldset-disabled-username"
-                        type="text"
-                        autoComplete="username"
-                        label="Username"
-                        placeholder="Enter your username"
-                    />
-                    <InputGroup
-                        id="fieldset-disabled-password"
-                        type="password"
-                        label="Password"
-                        autoComplete="current-password"
-                        placeholder="Enter your password"
-                    />
-                    <Checkbox label="Remember me" id="fieldset-disabled-checkbox" />
-                </fieldset>{"\n"}
-                <Button type="primary" label="Log in" btnType="submit" disabled />{"\n"}
-            </form>
-        </ComponentPreview>
     </>
 );
 
@@ -240,24 +215,12 @@ const Checkboxes = () => (
     </>
 );
 
-const DisabledCheckboxes = () => (
-    <>
-        <h2 id="disabled-checkboxes">Disabled checkboxes</h2>
-        <p>
-            To disable a checkbox add <Property value=".disabled" />
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <Checkbox label="Bread" id="checkbox-disabled-example-1" disabled />
-            <Checkbox label="Not bread. I'm not really fond of it. What I would really like, however, is one single piece of cracker with some nutella on it. Perhaps this could be the second checkbox. These thoughts are written here simply to show you how the checkboxes align themselves when label text is fairly long." id="checkbox-disabled-example-2" disabled />
-            <Checkbox label="Milk" id="checkbox-disabled-example-3" disabled checked />
-        </ComponentPreview>
-    </>
-);
-
 const RadioButtons = () => (
     <>
         <h2 id="radio-buttons">Radio buttons</h2>
-        <p>Radio buttons are used when only one option out of several can be selected.</p>
+        <p>
+            Use radio buttons when you wish to limit your user to one choice out of several.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <Radio label="Hamburgers" id="radio-example-1" name="radio-example" />
             <Radio label="Not the one above because I'm not really fond of hamburgers. What I would really like, however, is a nice piece of steak. Perhaps that could be the second option. These thoughts are written here simply to show you how radio buttons align themselves when label text is fairly long." id="radio-example-2" name="radio-example" />
@@ -266,36 +229,15 @@ const RadioButtons = () => (
     </>
 );
 
-const DisabledRadioButtons = () => (
-    <>
-        <h2 id="disabled-radio-buttons">Disabled radio buttons</h2>
-        <p>Like checkboxes you can just add <Property value=".disabled" /> to a radio button to make it unclickable</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <Radio label="Hamburgers" id="radio-disabled-example-1" name="radio-disabled-example" disabled />
-            <Radio label="Not the one above because I'm not really fond of hamburgers. What I would really like, however, is a nice piece of steak. Perhaps that could be the second option. These thoughts are written here simply to show you how radio buttons align themselves when label text is fairly long." id="radio-disabled-example-2" name="radio-disabled-example" disabled />
-            <Radio label="Pizza" id="radio-disabled-example-3" name="radio-disabled-example" disabled checked />
-        </ComponentPreview>
-    </>
-);
-
 const Toggleboxes = () => (
     <>
         <h2 id="toggleboxes">Toggleboxes</h2>
-        <p>Use toggleboxes if you wish present the user with an either-or option.</p>
+        <p>
+            Use toggleboxes if you wish present the user with an either-or option.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <Togglebox id="togglebox-example-1" label="Enable overdrive" />
             <Togglebox id="togglebox-example-2" label="Enable superpowers" checked />
-        </ComponentPreview>
-    </>
-);
-
-const DisabledToggleboxes = () => (
-    <>
-        <h2 id="disabled-toggleboxes">Disabled toggleboxes</h2>
-        <p>Disabled toggleboxes...</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <Togglebox id="togglebox-disabled-example-1" label="Enable overdrive" disabled />
-            <Togglebox id="togglebox-disabled-example-2" label="Enable superpowers" disabled checked />
         </ComponentPreview>
     </>
 );
@@ -305,7 +247,6 @@ const RangeSlider = () => (
         <h2 id="rangeslider">Rangeslider</h2>
         <p>Asides from the default behavior of a range input, the Rangeslider{"'"}s colors and label positioning can be customized.</p>
         <p>Currently there are three different supported colors for the slider: <Property value=".rangeslider-brand" />, <Property value=".rangeslider-default" /> and <Property value=".rangeslider-neutral" />.</p>
-
         <p>The Rangeslider currently supports two positions: <Property value=".label-right" /> and <Property value=".label-top" />. If no position is given, <Property value="right" /> is defaulted.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <Rangeslider min={0} max={200} step={1} value={100} valueLabel valueLabelPrefix="$" valueLabelPostfix="%" />
@@ -317,12 +258,42 @@ const RangeSlider = () => (
     </>
 );
 
-const DisabledRangeSlider = () => (
+const DisabledFormComponents = () => (
     <>
-        <h2 id="disabled-rangeslider">Disabled rangeslider</h2>
-        <p>Disabled rangeslider...</p>
+        <h2 id="disabled-form-components">Disabled form components</h2>
+        <p>Disable whichever form component you want by adding <Attribute name="disabled" /> to the desired input element</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <Rangeslider min={0} max={200} step={1} value={100} valueLabel valueLabelPrefix="$" valueLabelPostfix="%" disabled />
+            <Togglebox id="togglebox-disabled-example-1" label="Enable overdrive" disabled />
+            <Radio label="Hamburgers" id="radio-disabled-example-1" name="radio-disabled-example" disabled />
+            <Checkbox label="Milk" id="checkbox-disabled-example-3" disabled checked />
+            <Rangeslider className="mb-2" min={0} max={200} step={1} value={100} valueLabel valueLabelPrefix="$" valueLabelPostfix="%" disabled/>
+            <p>I am a text, am i too close to the component above me maybe?</p>
+        </ComponentPreview>
+
+        <h3>Disable a fieldset</h3>
+        <p>Disable entire fieldsets by adding <Attribute name="disabled" /> to the fieldset element</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <form>
+                <fieldset disabled>
+                    <legend>Log in</legend>
+                    <InputGroup
+                        id="fieldset-disabled-username"
+                        type="text"
+                        autoComplete="username"
+                        label="Username"
+                        placeholder="Enter your username"
+                    />
+                    <InputGroup
+                        id="fieldset-disabled-password"
+                        type="password"
+                        label="Password"
+                        autoComplete="current-password"
+                        placeholder="Enter your password"
+                    />
+                    <Checkbox label="Remember me" id="fieldset-disabled-checkbox" />
+                </fieldset>{"\n"}
+                <Button type="primary" label="Log in" btnType="submit" disabled />{"\n"}
+            </form>
         </ComponentPreview>
     </>
 );
@@ -337,7 +308,7 @@ class Forms extends Component {
         return (
             <DocContainer docToc>
                 <p className="lead">
-                    Forms is a collection of different tools used to gather user input.
+                    Forms is a collection of different tools available to you to gather user input.
                 </p>
                 <Overview />
                 <FormGrid />
@@ -345,13 +316,10 @@ class Forms extends Component {
                 <UsageWithFieldsets />
                 <StaticText />
                 <Checkboxes />
-                <DisabledCheckboxes />
                 <RadioButtons />
-                <DisabledRadioButtons />
                 <Toggleboxes />
-                <DisabledToggleboxes />
                 <RangeSlider />
-                <DisabledRangeSlider />
+                <DisabledFormComponents />
             </DocContainer>
         );
     }
@@ -360,4 +328,4 @@ class Forms extends Component {
 export default Forms;
 
 /* For testing */
-export { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, Checkboxes, DisabledCheckboxes, RadioButtons, DisabledRadioButtons, Toggleboxes, DisabledToggleboxes, RangeSlider, DisabledRangeSlider };
+export { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, Checkboxes, RadioButtons, Toggleboxes, RangeSlider, DisabledFormComponents };

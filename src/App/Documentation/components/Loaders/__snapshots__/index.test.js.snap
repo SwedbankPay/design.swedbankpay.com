@@ -8,7 +8,20 @@ exports[`Documentation: Loaders Basic Usage renders 1`] = `
     Basic usage
   </h2>
   <p>
-    Basic usage...
+    To use a default loader add 
+    <Property
+      value=".loader"
+    />
+    , 
+    <Property
+      value=".loader-default"
+    />
+     and 
+    <Attribute
+      data={true}
+      name="loader"
+    />
+     to a div.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -35,7 +48,7 @@ exports[`Documentation: Loaders Muted Loader renders 1`] = `
     <Property
       value=".loader-muted"
     />
-     to mute the loader...
+     to make the loader muted.
   </p>
   <ComponentPreview
     codeFigure={true}

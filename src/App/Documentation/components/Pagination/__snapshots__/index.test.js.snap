@@ -8,11 +8,32 @@ exports[`Documentation: Pagination DefaultPagination renders 1`] = `
     Default pagination
   </h2>
   <p>
-    Default pagination... 
+    Default pagination shows the pages as numbers. Add 
     <Property
       value=".pagination"
     />
-    ...
+     to an 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;ul&gt;
+    </PrismCode>
+     containing
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;li&gt;
+    </PrismCode>
+    . If you wish to present the user with navigational arrows you need to add those as 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;li&gt;
+    </PrismCode>
+     elements.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -64,11 +85,18 @@ exports[`Documentation: Pagination PaginationBullets renders 1`] = `
     Pagination bullets
   </h2>
   <p>
-    Pagination bullets... 
+    If you want to show bullets instead of numbers you can add 
     <Property
       value=".pagination-bullets"
     />
-    ...
+     to your 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;ul&gt;
+    </PrismCode>
+    .
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -121,11 +149,7 @@ exports[`Documentation: Pagination SimplePagination renders 1`] = `
     Simple pagination
   </h2>
   <p>
-    Simple pagination... 
-    <Property
-      value=".pagination"
-    />
-    ...
+    If the number of pages get high enough then it is better to use numbers.
   </p>
   <ComponentPreview
     codeFigure={true}

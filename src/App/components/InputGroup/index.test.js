@@ -13,4 +13,6 @@ describe("Component: InputGroup - ", () => {
 
         expect(wrapper).toMatchSnapshot();
     });
+
+    // TODO: write lots of tests [AW]
 });

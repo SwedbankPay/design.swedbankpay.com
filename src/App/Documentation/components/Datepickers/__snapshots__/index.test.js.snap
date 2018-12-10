@@ -231,7 +231,7 @@ exports[`Documentation: Datepickers ShowingMultipleMonths renders 1`] = `
     Showing multiple months
   </h2>
   <p>
-    If you need to show more than one month in your date picker user attribute 
+    If you need to show more than one month in your date picker use the attribute 
     <Attribute
       data={true}
       name="datepicker-months"
@@ -268,7 +268,7 @@ exports[`Documentation: Datepickers SimpleDatepicker renders 1`] = `
       data={true}
       name="datepicker"
     />
-     to an input tag inside a 
+     to an input element inside a 
     <Property
       value=".form-group"
     />
