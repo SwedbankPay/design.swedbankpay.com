@@ -1445,7 +1445,7 @@ exports[`Core: Iconography renders 1`] = `
   <p
     className="lead"
   >
-    The PayEx DesignGuide includes a variety of icons. Mainly we use the material icons, but we also include icons for known payment providers, and fags for most nations in the world.
+    The PayEx DesignGuide includes a variety of icons. Mainly we use the material icons, but we also include icons for known payment providers, and flags for most nations in the world.
   </p>
   <MaterialIcons />
   <PaymentIcons />
