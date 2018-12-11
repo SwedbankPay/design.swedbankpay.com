@@ -94,12 +94,7 @@ module.exports = (env, argv) => {
                     test: /\.css$/,
                     use: [
                         "style-loader",
-                        {
-                            loader: "css-loader",
-                            options: {
-                                minimize: isProd
-                            }
-                        },
+                        "css-loader",
                         {
                             loader: "postcss-loader",
                             options: {
