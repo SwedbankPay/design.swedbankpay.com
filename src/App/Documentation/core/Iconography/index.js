@@ -225,7 +225,7 @@ class Icons extends Component {
     render () {
         return (
             <DocContainer docToc>
-                <p className="lead">The PayEx DesignGuide includes Google{"'"}s material icons. For a full overview of the available icons please visit <a href="https://material.io/tools/icons/">this site</a>.</p>
+                <p className="lead">The PayEx DesignGuide includes a variety of icons. Mainly we use the material icons, but we also include icons for known payment providers, and fags for most nations in the world.</p>
                 <MaterialIcons />
                 <PaymentIcons />
                 <Flags />
