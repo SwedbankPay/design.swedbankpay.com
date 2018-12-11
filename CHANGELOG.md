@@ -1,7 +1,11 @@
 # Changelog
 
-## [0.15.1] - 2018-12-11
+## [0.xx.x] - 2018-xx-xx
+
+### Added
+
+### Changed
 
 ### Fixed
 
-- Fixed issue with flag icons not being generated properly.
+### Removed
