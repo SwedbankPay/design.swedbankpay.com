@@ -907,7 +907,7 @@ exports[`Documentation: Forms Validation renders 1`] = `
     >
       <InputGroup
         errorMessage="Wrong!"
-        helpBlock="This one might be a little tricky"
+        helpBlock={true}
         id="validation-email-2"
         label="Email"
         placeholder="bob.corlsan@example.com"
