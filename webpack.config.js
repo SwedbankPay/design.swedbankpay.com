@@ -94,12 +94,7 @@ module.exports = (env, argv) => {
                     test: /\.css$/,
                     use: [
                         "style-loader",
-                        {
-                            loader: "css-loader",
-                            options: {
-                                minimize: isProd
-                            }
-                        },
+                        "css-loader",
                         {
                             loader: "postcss-loader",
                             options: {
@@ -111,7 +106,38 @@ module.exports = (env, argv) => {
                     ]
                 },
                 {
+                    test: /\.svg$/i,
+                    include: [
+                        path.resolve(__dirname, "src/icons/flags/1x1")
+                    ],
+                    use: [
+                        {
+                            loader: "file-loader",
+                            options: {
+                                outputPath: "img/flags/1x1/",
+                                name: "[name].[ext]?[hash]"
+                            }
+                        }
+                    ]
+                },
+                {
+                    test: /\.svg$/i,
+                    include: [
+                        path.resolve(__dirname, "src/icons/flags/4x3")
+                    ],
+                    use: [
+                        {
+                            loader: "file-loader",
+                            options: {
+                                outputPath: "img/flags/4x3/",
+                                name: "[name].[ext]?[hash]"
+                            }
+                        }
+                    ]
+                },
+                {
                     test: /\.(png|jpe?g|gif|svg)$/i,
+                    exclude: /flags/,
                     use: [
                         {
                             loader: "file-loader",
