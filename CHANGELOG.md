@@ -8,4 +8,6 @@
 
 ### Fixed
 
+- Fixed issue with flag icons not being generated properly.
+
 ### Removed
