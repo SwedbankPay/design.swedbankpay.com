@@ -10,6 +10,7 @@
 - Added hover version of item-list.
 - Added examples tab to topbar which redirects to our example pages.
 - Added dashboard theme with chart component.
+- Added flag icons.
 
 ### Changed
 
