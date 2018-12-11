@@ -129,7 +129,7 @@ const Validation = () => (
                     placeholder="bob.corlsan@example.com"
                     prefixType="icon"
                     prefixValue="email"
-                    helpBlock="This one might be a little tricky"
+                    helpBlock
                     successMessage="Right!"
                     errorMessage="Wrong!"
                 />{"\n"}

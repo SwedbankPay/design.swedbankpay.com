@@ -108,7 +108,10 @@ InputGroup.propTypes = {
     postfixType: PropTypes.oneOf(["button", "icon", ""]),
     postfixBtnColor: PropTypes.oneOf(["primary", "secondary", "danger"]),
     feedbackIcon: PropTypes.string,
-    helpBlock: PropTypes.string,
+    helpBlock: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.bool
+    ]),
     errorMessag: PropTypes.string,
     successMessag: PropTypes.string
 };
