@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.xx.x] - 2018-xx-xx
+## [0.15.0] - 2018-12-11
 
 ### Added
 
@@ -15,8 +15,6 @@
 ### Changed
 
 - Renamed icons to iconography under core, and moved payment icons to it's own section below material icons.
-
-### Fixed
 
 ### Removed
 
