@@ -14,7 +14,7 @@
 
 ### Changed
 
-- Renamed icons to iconography under core, and moved payment icons under material icons.
+- Renamed icons to iconography under core, and moved payment icons to it's own section below material icons.
 
 ### Fixed
 
