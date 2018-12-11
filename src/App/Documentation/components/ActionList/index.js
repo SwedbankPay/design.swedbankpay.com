@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc, Icon, ExperimentalComponentAlert } from "#";
+import { ComponentPreview, DocContainer, Icon, ExperimentalComponentAlert } from "#";
 import actionList from "$/px-script/main/action-list";
 
 const Overview = () => (
@@ -24,7 +24,7 @@ const Overview = () => (
 const Anchorpoints = () => (
     <>
         <h2 id="anchorpoints">Anchorpoints</h2>
-        <p>Customize anchorpoint... Top right is default.</p>
+        <p>You can change where the action list will have its anchor, by default the anchor will be top right.</p>
         <h3>Top left</h3>
         <p>Use class <code className="token property">.anchor-top-left</code> to anchor action-list button to the top left corner of the menu.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
@@ -67,15 +67,6 @@ const Anchorpoints = () => (
     </>
 );
 
-const ActionListText = () => (
-    <div className="col-lg-10 doc-body">
-        <ExperimentalComponentAlert />
-        <p className="lead">Action lists...</p>
-        <Overview />
-        <Anchorpoints />
-    </div>
-);
-
 class ActionList extends Component {
     componentDidMount () {
         actionList.init();
@@ -83,12 +74,14 @@ class ActionList extends Component {
 
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <ActionListText />
-                    <DocToc component={ActionListText} />
-                </div>
-            </div>
+            <DocContainer docToc>
+                <ExperimentalComponentAlert />
+                <p className="lead">
+                    Action lists are small menus that remain hidden until clicked. In these you can put page links or anchors that trigger an action elsewhere.
+                </p>
+                <Overview />
+                <Anchorpoints />
+            </DocContainer>
         );
     }
 }
@@ -96,4 +89,4 @@ class ActionList extends Component {
 export default ActionList;
 
 /* For testing */
-export { Overview, Anchorpoints, ActionListText };
+export { Overview, Anchorpoints };

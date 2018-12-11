@@ -1,11 +1,11 @@
 import React from "react";
 
-import { ComponentPreview, Property, DocToc } from "#";
+import { ComponentPreview, Property, DocContainer } from "#";
 
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
-        <p>Overview... <code className="token property">.badge</code>...</p>
+        <p>Use class <Property value=".badge" /> along with <Property value=".badge-{color}" /> to display the badge of your choosing.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <p>Badge <span className="badge badge-default">default</span></p>
             <p>Badge <span className="badge badge-brand">brand</span></p>
@@ -20,7 +20,7 @@ const Overview = () => (
 const FurtherUsage = () => (
     <>
         <h2 id="further-usage">Further usage</h2>
-        <p>Further usage... <Property value=".badge" />...</p>
+        <p>Badges inherit the size of the immediate parent element.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <h1>Badge <small className="badge badge-default">default</small></h1>
             <h2>Badge <small className="badge badge-brand">brand</small></h2>
@@ -32,24 +32,17 @@ const FurtherUsage = () => (
     </>
 );
 
-const BadgeText = () => (
-    <div className="col-lg-10 doc-body">
-        <p className="lead">Badge...</p>
+const Badge = () => (
+    <DocContainer docToc>
+        <p className="lead">
+            Badges are small rectangular boxes which can convey a message and or state with their text and color.
+        </p>
         <Overview />
         <FurtherUsage />
-    </div>
-);
-
-const Badge = () => (
-    <div className="doc-container">
-        <div className="row">
-            <BadgeText />
-            <DocToc component={BadgeText} />
-        </div>
-    </div>
+    </DocContainer>
 );
 
 export default Badge;
 
 /* For testing */
-export { Overview, FurtherUsage, BadgeText };
+export { Overview, FurtherUsage };

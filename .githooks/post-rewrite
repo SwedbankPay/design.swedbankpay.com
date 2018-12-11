@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+. ./.githooks/functions.sh
+
+echo "Git Hook: 'post-rewrite' is running!"
+
+check_difference "package-lock.json" "npm install"

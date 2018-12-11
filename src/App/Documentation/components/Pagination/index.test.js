@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Pagination, { DefaultPagination, SimplePagination, PaginationBullets, PaginationText } from "./index";
+import Pagination, { DefaultPagination, SimplePagination, PaginationBullets } from "./index";
 
 describe("Documentation: Pagination", () => {
     it("is defined", () => {
@@ -45,18 +45,6 @@ describe("Documentation: Pagination", () => {
 
         it("renders", () => {
             const wrapper = shallow(<PaginationBullets />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("PaginationText", () => {
-        it("is defined", () => {
-            expect(PaginationText).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<PaginationText />);
 
             expect(wrapper).toMatchSnapshot();
         });

@@ -1,32 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components: Topbar DeprecatedAlert renders 1`] = `
-<Alert
-  type="danger"
->
-  <h3>
-    Component contains deprecated parts
-  </h3>
-  <p>
-    The following parts are deprecated and will be removed:
-  </p>
-  <ul>
-    <li>
-      Right nav
-    </li>
-    <li>
-      Levels in left nav
-    </li>
-    <li>
-      topbar-btn-right and topbar-btn-left classes will be replaced by topbar-btn
-    </li>
-  </ul>
-  <p>
-    For continued support, please follow the examples in the documentation.
-  </p>
-</Alert>
-`;
-
 exports[`Components: Topbar FixedTopbar renders 1`] = `
 <Fragment>
   <h2
@@ -124,7 +97,6 @@ exports[`Components: Topbar Overview renders 1`] = `
             "icon": "menu",
             "text": "Menu",
           },
-          "id": "topbar-nav",
           "items": Array [
             "Link 1",
             "Link 2",
@@ -137,32 +109,16 @@ exports[`Components: Topbar Overview renders 1`] = `
 </Fragment>
 `;
 
-exports[`Components: Topbar TopbarText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
+exports[`Components: Topbar renders 1`] = `
+<DocContainer
+  docToc={true}
 >
-  <DeprecatedAlert />
   <p
     className="lead"
   >
-    Topbar...
+    The topbar is used to give users an easily available navigational bar at the top of your web application.
   </p>
   <Overview />
   <FixedTopbar />
-</div>
-`;
-
-exports[`Components: Topbar renders 1`] = `
-<div
-  className="doc-container"
->
-  <div
-    className="row"
-  >
-    <TopbarText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+</DocContainer>
 `;

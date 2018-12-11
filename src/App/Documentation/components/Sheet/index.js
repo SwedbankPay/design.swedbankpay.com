@@ -1,12 +1,18 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc, Icon, Property } from "#";
+import { ComponentPreview, DocContainer, Icon } from "#";
 import { sheet } from "$/px-script/main";
 
 const Example = () => (
     <>
         <h2 id="example">Example</h2>
-        <p>Example sheet...</p>
+        <p>
+            A standard sheet should display content that complements the screen’s primary content. It will close when the user clicks outside of the sheet or exits out of it in another way.
+        </p>
+        <p>
+            Sheets can be used for a number of different things, but common use cases for a sheet are for example displaying a list of actions that affet the screen’s primary content such as filters, deletion or other
+            ways to manipulate the main content. If you have a form then you could include an icon that opens said sheet to display more information about what the expected input is.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="sheet" id="demo-sheet">
                 <section>{"\n"}
@@ -56,17 +62,20 @@ const Example = () => (
 const UsageWithJavascript = () => (
     <>
         <h2 id="usage-with-javascript">Usage with javascript</h2>
-        <p>To programmatically open a sheet, use <Property value={"px.sheet.open(\"SHEET_ID\")"} />.</p>
-        <p>To programmatically close a sheet, use <Property value={"px.sheet.close(\"SHEET_ID\")"} />.</p>
+        <ComponentPreview language="html" codeFigure>
+            <div className="sheet" id="demo-sheet">{"\n"}
+                ...{"\n"}
+            </div>{"\n"}
+        </ComponentPreview>
+        <p>To open a sheet:</p>
+        <ComponentPreview language="javascript" codeFigure>
+            {"px.sheet.open(\"demo-sheet\")"}
+        </ComponentPreview>
+        <p>To close a sheet:</p>
+        <ComponentPreview language="javascript" codeFigure>
+            {"px.sheet.close(\"demo-sheet\")"}
+        </ComponentPreview>
     </>
-);
-
-const SheetText = () => (
-    <div className="col-lg-10 doc-body">
-        <p className="lead">Sheet...</p>
-        <Example />
-        <UsageWithJavascript />
-    </div>
 );
 
 class Sheet extends Component {
@@ -76,12 +85,13 @@ class Sheet extends Component {
 
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <SheetText />
-                    <DocToc component={SheetText} />
-                </div>
-            </div>
+            <DocContainer docToc>
+                <p className="lead">
+                    Sheet is a container component that is anchored on the right side of the screen and can contain a number of different things.
+                </p>
+                <Example />
+                <UsageWithJavascript />
+            </DocContainer>
         );
     }
 }
@@ -89,4 +99,4 @@ class Sheet extends Component {
 export default Sheet;
 
 /* For testing */
-export { Example, UsageWithJavascript, SheetText };
+export { Example, UsageWithJavascript };

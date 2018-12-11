@@ -1,26 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Core: Breakpoints BreakpointsText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Our breakpoints is based on 
-    <a
-      href="http://getbootstrap.com/docs/4.1/layout/overview/#responsive-breakpoints"
-    >
-      Bootstrap
-      '
-      s breakpoints
-    </a>
-    , but has some modifications.
-  </p>
-  <Overview />
-</div>
-`;
-
 exports[`Core: Breakpoints Overview renders 1`] = `
 <Fragment>
   <h2
@@ -211,18 +190,20 @@ exports[`Core: Breakpoints Overview renders 1`] = `
 `;
 
 exports[`Core: Breakpoints renders 1`] = `
-<Fragment>
-  <div
-    className="doc-container"
+<DocContainer>
+  <p
+    className="lead"
   >
-    <div
-      className="row"
+    Our breakpoints is based on 
+    <a
+      href="http://getbootstrap.com/docs/4.1/layout/overview/#responsive-breakpoints"
     >
-      <BreakpointsText />
-      <DocToc
-        component={[Function]}
-      />
-    </div>
-  </div>
-</Fragment>
+      Bootstrap
+      '
+      s breakpoints
+    </a>
+    , but has some modifications.
+  </p>
+  <Overview />
+</DocContainer>
 `;

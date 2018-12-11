@@ -1,20 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Documentation: Card CardText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <ExperimentalComponentAlert />
-  <p
-    className="lead"
-  >
-    Card...
-  </p>
-  <DefaultBehaviour />
-  <CardVariants />
-</div>
-`;
-
 exports[`Documentation: Card CardVariants renders 1`] = `
 <Fragment>
   <h2
@@ -182,16 +167,23 @@ exports[`Documentation: Card DefaultBehaviour renders 1`] = `
 `;
 
 exports[`Documentation: Card renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <ExperimentalComponentAlert />
+  <p
+    className="lead"
   >
-    <CardText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    Cards are meant to display smaller items and is not intended to span the entire width of a page. See 
+    <Link
+      replace={false}
+      to="/docs/components/panel"
+    >
+      panel
+    </Link>
+     if the card component is too narrow.
+  </p>
+  <DefaultBehaviour />
+  <CardVariants />
+</DocContainer>
 `;

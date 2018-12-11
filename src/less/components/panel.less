@@ -2,10 +2,9 @@
     margin-top: @base-margin;
     margin-bottom: @base-margin;
     background-color: @panel-background-color;
-    // border: 1px solid @gray-9;
     box-shadow: @panel-box-shadow;
 
-    // Contextual variations
+    /* Contextual variations */
     &.panel-default {
         .panel-variant(@white, @brand-primary, @panel-default-border-color);
     }
@@ -67,11 +66,10 @@
         }
     }
 
-    // Panel contents
+    /* Panel contents */
     .panel-body {
         background-color: @white;
         padding: @panel-body-padding;
-        &:extend(.clearfix all);
 
         > .panel-heading {
             margin: -15px -30px 15px -30px;

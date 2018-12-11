@@ -2,7 +2,7 @@
 
 # PayEx DesignGuide
 
-[![Version](https://img.shields.io/badge/Version-0.14.1-blue.svg)](https://github.com/PayEx/design.payex.com/releases/tag/0.14.1)
+[![Version](https://img.shields.io/badge/Version-0.15.0-blue.svg)](https://github.com/PayEx/design.payex.com/releases/tag/0.15.0)
 [![Build status](https://ci.appveyor.com/api/projects/status/1dii19sqw1m7xtsn/branch/master?svg=true)](https://ci.appveyor.com/project/PayEx/design-payex-com/branch/master)
 [![Code Coverage](https://codecov.io/gh/payex/design.payex.com/branch/master/graph/badge.svg)](https://codecov.io/gh/payex/design.payex.com)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=PayEx/design.payex.com)](https://dependabot.com)
@@ -26,26 +26,31 @@ DesignGuide requires [Node.js](https://nodejs.org/en/) (includes npm).
 5. Works? If not, contact us on Slack ([#design-guide-general](https://payex.slack.com/messages/C0L3W8B2S/)).
 6. Get to work.
 
+### Set up Git Hooks
+
+- Open a terminal and navigate to repo root
+- Run `git config core.hooksPath .githooks`
+
 ## Developing
 
 ### Built with
 
-* [React](https://reactjs.org/)
-* [Less](http://lesscss.org/)
+- [React](https://reactjs.org/)
+- [Less](http://lesscss.org/)
 
 ### Setting up Dev
 
-* Running the command `npm start` starts the webpack dev server, (which is configured in `~/webpack.config.js`). If any changes is made to this file, or any files directly influencing this file (i.e. any loaders or plugins) you need to restart the server.
-* The script `npm start` will start the dev server in development mode. If you wish to run the dev server in production-like environment run the command `npm run start:prod`.
+- Running the command `npm start` starts the webpack dev server, (which is configured in `~/webpack.config.js`). If any changes is made to this file, or any files directly influencing this file (i.e. any loaders or plugins) you need to restart the server.
+- The script `npm start` will start the dev server in development mode. If you wish to run the dev server in production-like environment run the command `npm run start:prod`.
 
 #### Importing components
 
 When importing different components in the files you create, you can use shortcuts for common paths. The shortcuts are as following:
 
-* `~` - root of the project (example `import package from "~/package";`).
-* `$` - `~/src`-folder (example `import px from "$/px-script";`).
-* `@` - `~/src/App/components`-folder (example `import Alert from "@/Alert";`).
-* `#` - `~/src/App/Documentation/utils`-folder (example `import { DocToc } from "#";`).
+- `~` - root of the project (example `import package from "~/package";`).
+- `$` - `~/src`-folder (example `import px from "$/px-script";`).
+- `@` - `~/src/App/components`-folder (example `import Alert from "@/Alert";`).
+- `#` - `~/src/App/Documentation/utils`-folder (example `import { DocToc } from "#";`).
 
 The shortcuts are specified in the `~/.babelrc`-file. Specifying the prefix-shortcuts in the `~/jsconfig.json`-file enables path intellisense for the shortcuts (at least in VSCode).
 
@@ -62,8 +67,8 @@ DesignGuide uses [semantic versioning](http://semver.org/). This means that inte
 
 1. Open a terminal and navigate to repo root
 2. Run the command `npm test`
-    * Many of the tests are snapshot based, and runs against already created snapshots. If you need to update the snapshots due to changes run the command `npm run test:update`.
-    * A test coverage report is generated after running the tests. This can be found in `~/coverage`.
+    - Many of the tests are snapshot based, and runs against already created snapshots. If you need to update the snapshots due to changes run the command `npm run test:update`.
+    - A test coverage report is generated after running the tests. This can be found in `~/coverage`.
 > Note: Snapshot testing is pretty unforgiving, so if you make __ANY__ changes to how a component, which already has a snapshot, is rendered, the tests __WILL__ crash! So make sure to run `npm run test:update` before committing.
 
 ## Code style
@@ -74,9 +79,9 @@ __*Make sure to follow the syntax rules enforced by eslint & stylelint.*__
 
 ## Contributing
 
-* Bug reports: File bugs as Github [issues](https://github.com/PayEx/design.payex.com/issues).
-* Feature suggestions: File as Github issue or discuss the feature on Slack ([#design-guide-general](https://payex.slack.com/messages/C0L3W8B2S/)).
-* Code contribtions: Code contribtions are highly encouraged, but discuss the feature/bugfix in an issue or on Slack before you start coding.
+- Bug reports: File bugs as Github [issues](https://github.com/PayEx/design.payex.com/issues).
+- Feature suggestions: File as Github issue or discuss the feature on Slack ([#design-guide-general](https://payex.slack.com/messages/C0L3W8B2S/)).
+- Code contribtions: Code contribtions are highly encouraged, but discuss the feature/bugfix in an issue or on Slack before you start coding.
 
 ## Creating a release
 
@@ -102,30 +107,30 @@ After pushing to master, complete the following steps:
 
 ## Maintainers
 
-* [Erik Hallaraaker](https://github.com/erikhallaraaker)
-* [Håkon Mosvoll](https://github.com/hmosvoll)
-* [Aksel Wiig](https://github.com/Akswii)
+- [Erik Hallaraaker](https://github.com/erikhallaraaker)
+- [Håkon Mosvoll](https://github.com/hmosvoll)
+- [Aksel Wiig](https://github.com/Akswii)
 
 ## Contents of this project
 
-* `~/coverage` - Test coverage report for the project (not commited to repo).
-* `~/dist` - Static files generated by [webpack](https://webpack.js.org/) (not commited to repo).
-* `~/src` - All the source files.
-* `~/build` - Config files for [AppVeyor](https://www.appveyor.com/), and other files required for the AppVeyor build process.
-* `~/tools` - Various tools, mostly related to the build/deploy process.
+- `~/coverage` - Test coverage report for the project (not commited to repo).
+- `~/dist` - Static files generated by [webpack](https://webpack.js.org/) (not commited to repo).
+- `~/src` - All the source files.
+- `~/build` - Config files for [AppVeyor](https://www.appveyor.com/), and other files required for the AppVeyor build process.
+- `~/tools` - Various tools, mostly related to the build/deploy process.
 
 ## Notable files
 
-* `.babelrc` - [Babel](https://babeljs.io/) configuration.
-* `.eslintignore` - List of files/directories eslint will ignore (similar to .gitignore).
-* `.eslintrc` - [Eslint](https://eslint.org/) configuration.
-* `.sentryclirc` - [Sentry](https://sentry.io) configuration used by webpack to configure a new release on sentry.
-    * _Do __not__ change the line `token = <token>`, as this placeholder is used by AppVeyor to insert the sentry api key._
-* `.stylelintrc` - [Stylelint](https://stylelint.io/) configuration.
-* `CHANGELOG.md` - Collection of changes made to the project. Insert your changes here.
-* `jest.config.js` - [jest](https://facebook.github.io/jest/) configuration.
-* `jest.setup.js` - Script file that will run before jest executes the tests, this includes [enzyme](http://airbnb.io/enzyme/) setup, polyfills and other useful snippets.
-* `webpack.config.js` - [Webpack](https://webpack.js.org/) configuration.
+- `.babelrc` - [Babel](https://babeljs.io/) configuration.
+- `.eslintignore` - List of files/directories eslint will ignore (similar to .gitignore).
+- `.eslintrc` - [Eslint](https://eslint.org/) configuration.
+- `.sentryclirc` - [Sentry](https://sentry.io) configuration used by webpack to configure a new release on sentry.
+    - _Do __not__ change the line `token = <token>`, as this placeholder is used by AppVeyor to insert the sentry api key._
+- `.stylelintrc` - [Stylelint](https://stylelint.io/) configuration.
+- `CHANGELOG.md` - Collection of changes made to the project. Insert your changes here.
+- `jest.config.js` - [jest](https://facebook.github.io/jest/) configuration.
+- `jest.setup.js` - Script file that will run before jest executes the tests, this includes [enzyme](http://airbnb.io/enzyme/) setup, polyfills and other useful snippets.
+- `webpack.config.js` - [Webpack](https://webpack.js.org/) configuration.
 
 ## Copyright, license and credits
 

@@ -54,19 +54,14 @@ module.exports = [
                 componentPath: "core/Grid"
             },
             {
-                title: "Icons",
-                path: "/docs/core/icons",
-                componentPath: "core/Icons"
+                title: "Iconography",
+                path: "/docs/core/iconography",
+                componentPath: "core/Iconography"
             },
             {
                 title: "Lists",
                 path: "/docs/core/lists",
                 componentPath: "core/Lists"
-            },
-            {
-                title: "Payment Icons",
-                path: "/docs/core/payment-icons",
-                componentPath: "core/PaymentIcons"
             },
             {
                 title: "Tables",
@@ -200,9 +195,30 @@ module.exports = [
                 componentPath: "components/Tooltips"
             },
             {
-                title: "Topbar (contains deprecated)",
+                title: "Topbar",
                 path: "/docs/components/topbar",
                 componentPath: "components/Topbar"
+            }
+        ]
+    },
+
+    /**
+     * Dashboard
+     */
+    {
+        title: "Dashboard",
+        path: "/docs/dashboard",
+        redirect: "/docs/dashboard/introduction",
+        routes: [
+            {
+                title: "Introduction",
+                path: "/docs/dashboard/introduction",
+                componentPath: "dashboard/Introduction"
+            },
+            {
+                title: "Charts (Experimental)",
+                path: "/docs/dashboard/charts",
+                componentPath: "dashboard/Charts"
             }
         ]
     },

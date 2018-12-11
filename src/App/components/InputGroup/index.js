@@ -2,9 +2,9 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-export const Addon = ({ type, value, color }) => (
+export const Addon = ({ type, value, color, disabled }) => (
     (type === "button") ?
-        <button type="button" className={`btn btn-${color}`}>
+        <button type="button" className={`btn btn-${color}`} disabled={disabled}>
             {value}
         </button>
         : <span className="input-group-addon">{(type === "icon") ? <i className="material-icons">{value}</i> : value}</span>
@@ -65,7 +65,7 @@ const InputGroup = ({
         <div className="form-group">{"\n"}
             {label ? <label htmlFor={id}>{label}</label> : null}{label ? "\n" : null}
             <div className={inputGrpClasses}>{"\n"}
-                {prefixValue ? <Addon type={prefixType} value={prefixValue} color={prefixBtnColor} /> : null }{prefixValue ? "\n" : null}
+                {prefixValue ? <Addon type={prefixType} value={prefixValue} color={prefixBtnColor} disabled={disabled} /> : null }{prefixValue ? "\n" : null}
                 {type === "textarea" ?
                     <textarea {...attrs} ></textarea>
                     : type === "select" ?
@@ -80,7 +80,7 @@ const InputGroup = ({
                         <input {...attrs} />}
                 {"\n"}
                 {feedbackIcon ? <Feedback icon={feedbackIcon} /> : null} {feedbackIcon ? "\n" : null}
-                {postfixValue ? <Addon type={postfixType} value={postfixValue} color={postfixBtnColor} /> : null }{postfixValue ? "\n" : null}
+                {postfixValue ? <Addon type={postfixType} value={postfixValue} color={postfixBtnColor} disabled={disabled} /> : null }{postfixValue ? "\n" : null}
             </div>
             {helpBlock ? <div className="help-block" data-success={successMessage || null} data-error={errorMessage || null}>{helpBlock}</div> : null}
         </div>
@@ -108,7 +108,10 @@ InputGroup.propTypes = {
     postfixType: PropTypes.oneOf(["button", "icon", ""]),
     postfixBtnColor: PropTypes.oneOf(["primary", "secondary", "danger"]),
     feedbackIcon: PropTypes.string,
-    helpBlock: PropTypes.string,
+    helpBlock: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.bool
+    ]),
     errorMessag: PropTypes.string,
     successMessag: PropTypes.string
 };

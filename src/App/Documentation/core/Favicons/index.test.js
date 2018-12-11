@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Favicons, { OurFavicon, Usage, FaviconsText } from "./index";
+import Favicons, { OurFavicon, Usage } from "./index";
 
 describe("Core: Favicons", () => {
     it("is defined", () => {
@@ -22,12 +22,6 @@ describe("Core: Favicons", () => {
 
     it("Usage renders", () => {
         const wrapper = shallow(<Usage />);
-
-        expect(wrapper).toMatchSnapshot();
-    });
-
-    it("FaviconsText renders", () => {
-        const wrapper = shallow(<FaviconsText />);
 
         expect(wrapper).toMatchSnapshot();
     });

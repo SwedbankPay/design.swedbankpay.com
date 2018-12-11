@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ComponentPreview, DocToc, Property } from "#";
+import { ComponentPreview, DocContainer, Property } from "#";
 import MediaObjectComponent from "@/MediaObject";
 
 const Overview = () => (
@@ -17,15 +17,15 @@ const Overview = () => (
 const Sizes = () => (
     <>
         <h2 id="sizes">Sizes</h2>
-        <p>Sizes for media object...</p>
+        <p>
+            Use <Property value=".media-sm" /> or <Property value=".media-lg" /> to modify the size of your media objects.
+        </p>
         <h3>Small</h3>
-        <p>Small media object <Property value=".media-sm" />...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <MediaObjectComponent size="sm" imgUrl="https://via.placeholder.com/40x40" heading="Bob Corlsan" text="bob.corlsan@payex.com" />
             <MediaObjectComponent size="sm" icon="account_circle" heading="Bob Corlsan" text="bob.corlsan@payex.com" />
         </ComponentPreview>
         <h3>Large</h3>
-        <p>Large media object <Property value=".media-lg" />...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <MediaObjectComponent size="lg" imgUrl="https://via.placeholder.com/56x56" heading="Bob Corlsan" text="bob.corlsan@payex.com" />
             <MediaObjectComponent size="lg" icon="account_circle" heading="Bob Corlsan" text="bob.corlsan@payex.com" />
@@ -44,25 +44,18 @@ const MediaPosition = () => (
     </>
 );
 
-const MediaObjectText = () => (
-    <div className="col-lg-10 doc-body">
-        <p className="lead">Media objects...</p>
+const MediaObject = () => (
+    <DocContainer docToc>
+        <p className="lead">
+            Use media objects to showcase basic user information with text and a small image element or an icon.
+        </p>
         <Overview />
         <Sizes />
         <MediaPosition />
-    </div>
-);
-
-const MediaObject = () => (
-    <div className="doc-container">
-        <div className="row">
-            <MediaObjectText />
-            <DocToc component={MediaObjectText} />
-        </div>
-    </div>
+    </DocContainer>
 );
 
 export default MediaObject;
 
 /* For testing */
-export { Overview, Sizes, MediaPosition, MediaObjectText };
+export { Overview, Sizes, MediaPosition };

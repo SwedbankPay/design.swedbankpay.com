@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocToc, ExperimentalComponentAlert, Attribute } from "#";
+import { ComponentPreview, DocContainer, ExperimentalComponentAlert, Attribute } from "#";
 import { toast } from "$/px-script/main";
+import Alert from "@/Alert";
 
 const Overview = () => (
     <>
@@ -17,6 +18,14 @@ const Overview = () => (
         <ComponentPreview language="html" showCasePanel>
             <button className="btn btn-primary" type="button" onClick={() => toast({ html: "I am a toast!" })}>Click for toast!</button>
         </ComponentPreview>
+        <Alert type="warning">
+            <h5>Content restriction</h5>
+            <p>
+                Don’t put too much text in toasts as they are meant to be visible for only a short amount of time.
+                Due to the time restriction you should also avoid putting vital information in them. If you wish to give some sort of feedback
+                to the user see <Link to="/docs/components/dialog">dialog</Link> or <Link to="/docs/components/sheet">sheet</Link>.
+            </p>
+        </Alert>
     </>
 );
 
@@ -171,26 +180,20 @@ const CustomHtml = () => {
     );
 };
 
-const ToastText = () => (
-    <div className="col-lg-10 doc-body">
-        <ExperimentalComponentAlert />
-        <p className="lead">Toast...</p>
-        <Overview />
-        <Options />
-        <PremadeToasts />
-        <CustomHtml />
-    </div>
-);
-
 class Toast extends Component {
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <ToastText />
-                    <DocToc component={ToastText} />
-                </div>
-            </div>
+            <DocContainer>
+                <ExperimentalComponentAlert />
+                <p className="lead">
+                    Toasts can be used as a way to give feedback to a user. Use it to display short messages that something has happened that will not be immediatley apparent on the website.
+                    This can be everything from a server query to saving some user settings.
+                </p>
+                <Overview />
+                <Options />
+                <PremadeToasts />
+                <CustomHtml />
+            </DocContainer>
         );
     }
 }
@@ -198,4 +201,4 @@ class Toast extends Component {
 export default Toast;
 
 /* For testing */
-export { Overview, Options, PremadeToasts, CustomHtml, ToastText };
+export { Overview, Options, PremadeToasts, CustomHtml };

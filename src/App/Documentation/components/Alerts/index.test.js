@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Alerts, { BasicUsage, AlertWithIcon, ClosingTheAlert, ExtendedUsage, AlertsText } from "./index";
+import Alerts, { BasicUsage, AlertWithIcon, ClosingTheAlert, ExtendedUsage } from "./index";
 
 describe("Documentation: Alerts", () => {
     it("is defined", () => {
@@ -57,18 +57,6 @@ describe("Documentation: Alerts", () => {
 
         it("renders", () => {
             const wrapper = shallow(<ExtendedUsage />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("Alerts Text", () => {
-        it("is defined", () => {
-            expect(AlertsText).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<AlertsText />);
 
             expect(wrapper).toMatchSnapshot();
         });

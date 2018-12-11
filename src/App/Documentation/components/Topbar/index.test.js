@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Topbar, { Overview, TopbarText, FixedTopbar, DeprecatedAlert } from "./index";
+import Topbar, { Overview, FixedTopbar } from "./index";
 
 describe("Components: Topbar", () => {
     it("is defined", () => {
@@ -26,18 +26,6 @@ describe("Components: Topbar", () => {
         });
     });
 
-    describe("TopbarText", () => {
-        it("is defined", () => {
-            expect(TopbarText).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<TopbarText />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
     describe("FixedTopbar", () => {
         it("is defined", () => {
             expect(FixedTopbar).toBeDefined();
@@ -45,19 +33,6 @@ describe("Components: Topbar", () => {
 
         it("renders", () => {
             const wrapper = shallow(<FixedTopbar />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    // TODO: Remove when deprecated parts are deleted. [AW]
-    describe("DeprecatedAlert", () => {
-        it("is defined", () => {
-            expect(DeprecatedAlert).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<DeprecatedAlert />);
 
             expect(wrapper).toMatchSnapshot();
         });

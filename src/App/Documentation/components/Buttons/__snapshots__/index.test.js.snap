@@ -398,27 +398,6 @@ exports[`Documentation: Buttons ButtonGroup renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Buttons Buttons Text renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Use our button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
-  </p>
-  <Examples />
-  <UsageWithOtherTags />
-  <OutlineButtons />
-  <ButtonGroup />
-  <Sizes />
-  <ActiveState />
-  <DisabledState />
-  <UsageWithIcons />
-  <ButtonLoader />
-</div>
-`;
-
 exports[`Documentation: Buttons Disabled State renders 1`] = `
 <Fragment>
   <h2
@@ -1013,16 +992,22 @@ exports[`Documentation: Buttons Usage With Other Tags renders 1`] = `
 `;
 
 exports[`Documentation: Buttons renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <p
+    className="lead"
   >
-    <ButtonsText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    Use our button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
+  </p>
+  <Examples />
+  <UsageWithOtherTags />
+  <OutlineButtons />
+  <ButtonGroup />
+  <Sizes />
+  <ActiveState />
+  <DisabledState />
+  <UsageWithIcons />
+  <ButtonLoader />
+</DocContainer>
 `;

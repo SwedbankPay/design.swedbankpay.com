@@ -55,29 +55,13 @@ exports[`Utilities: Visibility Intro renders 1`] = `
 </Fragment>
 `;
 
-exports[`Utilities: Visibility VisibilityText renders 1`] = `
-<div
-  className="col doc-body"
->
+exports[`Utilities: Visibility renders 1`] = `
+<DocContainer>
   <p
     className="lead"
   >
     Control the visibility, without modifying the display, of elements with visibility utilities.
   </p>
   <Intro />
-</div>
-`;
-
-exports[`Utilities: Visibility renders 1`] = `
-<Fragment>
-  <div
-    className="doc-container"
-  >
-    <div
-      className="row"
-    >
-      <VisibilityText />
-    </div>
-  </div>
-</Fragment>
+</DocContainer>
 `;

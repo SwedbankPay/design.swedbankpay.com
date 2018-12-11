@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocToc, Property } from "#";
+import { ComponentPreview, DocContainer, Property } from "#";
 
 const Fonts = () => {
     const removeRobotoCode = `html {
@@ -163,8 +163,8 @@ const Blockquotes = () => {
     );
 };
 
-const TypographyText = () => (
-    <div className="col-lg-10 doc-body">
+const Typography = () => (
+    <DocContainer docToc>
         <p className="lead">Documentation and examples for PayEx DesignGuide typography.</p>
         <Fonts />
         <Headings />
@@ -174,19 +174,10 @@ const TypographyText = () => (
         <TextUtilities />
         <Abbreviations />
         <Blockquotes />
-    </div>
-);
-
-const Typography = () => (
-    <div className="doc-container">
-        <div className="row">
-            <TypographyText />
-            <DocToc component={TypographyText} />
-        </div>
-    </div>
+    </DocContainer>
 );
 
 export default Typography;
 
 /* For testing */
-export { Fonts, Headings, Small, Lead, Inline, TextUtilities, Abbreviations, Blockquotes, TypographyText };
+export { Fonts, Headings, Small, Lead, Inline, TextUtilities, Abbreviations, Blockquotes };

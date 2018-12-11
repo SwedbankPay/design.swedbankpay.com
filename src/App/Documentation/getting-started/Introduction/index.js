@@ -1,7 +1,7 @@
 import React from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocToc } from "#";
+import { ComponentPreview, DocContainer } from "#";
 
 const BASENAME = process.env.basename;
 const scriptUrl = `https://design.payex.com${BASENAME}scripts/px-script.js`;
@@ -34,25 +34,16 @@ const JavaScript = () => (
     </>
 );
 
-const IntroductionText = () => (
-    <div className="col-lg-10 doc-body">
+const Introduction = () => (
+    <DocContainer docToc>
         <p className="lead">Get started with the PayEx DesignGuide.</p>
         <QuickStart />
         <Css />
         <JavaScript />
-    </div>
-);
-
-const Introduction = () => (
-    <div className="doc-container">
-        <div className="row">
-            <IntroductionText />
-            <DocToc component={IntroductionText} />
-        </div>
-    </div>
+    </DocContainer>
 );
 
 export default Introduction;
 
 /* For testing */
-export { QuickStart, Css, JavaScript, IntroductionText };
+export { QuickStart, Css, JavaScript };

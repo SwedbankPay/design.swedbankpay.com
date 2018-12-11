@@ -8,7 +8,36 @@ exports[`Documentation: InputGroup BasicExample renders 1`] = `
     Basic example
   </h2>
   <p>
-    Basic input group...
+    Add a 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;span&gt;
+    </PrismCode>
+     with class 
+    <Property
+      value=".input-group-addon"
+    />
+     to get a gray box on the left, right or both sides of an 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;input&gt;
+    </PrismCode>
+     element. The position of your 
+    <Property
+      value=".input-group-addon"
+    />
+     depends on if you place it before or after the 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;input
+    </PrismCode>
+     element.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -71,7 +100,21 @@ exports[`Documentation: InputGroup ButtonAddons renders 1`] = `
     Button addons
   </h2>
   <p>
-    Addons...
+    If you want 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;button&gt;
+    </PrismCode>
+    s included with your input elements you can just add a 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;button&gt;
+    </PrismCode>
+     inside a input-group like you would anywhere else.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -191,7 +234,19 @@ exports[`Documentation: InputGroup Disabled renders 1`] = `
     Disabled
   </h2>
   <p>
-    Disabled blabla...
+    Just like for forms you can add 
+    <Attribute
+      name="disabled"
+    />
+     to an input element to disable it. If you are going to disable an element in a 
+    <Property
+      value=".input-group"
+    />
+     make sure to also add the 
+    <Attribute
+      name="disabled"
+    />
+     attribute to the buttons.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -211,45 +266,16 @@ exports[`Documentation: InputGroup Disabled renders 1`] = `
     />
     <InputGroup
       disabled={true}
-      id="input-id-4"
-      label="Special requests"
-      placeholder="Extra frosting, no pineapple..."
-      prefixType="icon"
-      prefixValue="format_quote"
-      type="textarea"
-    />
-    <InputGroup
-      disabled={true}
-      label="Flavor"
-      prefixValue="Options"
-      selectOptions={
-        Array [
-          "Option one",
-          "Option two",
-          "Option three",
-        ]
-      }
-      type="select"
+      postfixBtnColor="danger"
+      postfixType="button"
+      postfixValue="Button"
+      prefixBtnColor="secondary"
+      prefixType="button"
+      prefixValue="Button"
+      type="text"
     />
   </ComponentPreview>
 </Fragment>
-`;
-
-exports[`Documentation: InputGroup InputGroupText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Input groups...
-  </p>
-  <BasicExample />
-  <ButtonAddons />
-  <WithSelect />
-  <ValidationStates />
-  <Disabled />
-</div>
 `;
 
 exports[`Documentation: InputGroup ValidationStates renders 1`] = `
@@ -260,7 +286,19 @@ exports[`Documentation: InputGroup ValidationStates renders 1`] = `
     Validation states
   </h2>
   <p>
-    Validation...
+    You can also visualize validation on your input-groups. Just add 
+    <Property
+      value=".has-success"
+    />
+     or 
+    <Property
+      value=".has-error"
+    />
+     with a 
+    <Property
+      value=".input-group"
+    />
+    .
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -323,7 +361,14 @@ exports[`Documentation: InputGroup WithSelect renders 1`] = `
     With select
   </h2>
   <p>
-    Select...
+    Inserting text next to a 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;select&gt;
+    </PrismCode>
+     works just like any other input element.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -347,16 +392,36 @@ exports[`Documentation: InputGroup WithSelect renders 1`] = `
 `;
 
 exports[`Documentation: InputGroup renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <p
+    className="lead"
   >
-    <InputGroupText />
-    <DocToc
-      component={[Function]}
+    You can include additional information to specific input elements by adding 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;span&gt;
+    </PrismCode>
+    s or 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;button&gt;
+    </PrismCode>
+    s in a 
+    <Property
+      value=".input-group"
     />
-  </div>
-</div>
+    .
+  </p>
+  <BasicExample />
+  <ButtonAddons />
+  <WithSelect />
+  <ValidationStates />
+  <Disabled />
+</DocContainer>
 `;

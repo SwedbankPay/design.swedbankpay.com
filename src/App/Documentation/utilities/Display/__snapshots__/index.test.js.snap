@@ -1,21 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Utilities: Display DisplayText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Quickly and responsively toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.
-  </p>
-  <HowItWorks />
-  <Notation />
-  <Examples />
-  <HidingElements />
-</div>
-`;
-
 exports[`Utilities: Display Examples renders 1`] = `
 <Fragment>
   <h2
@@ -442,18 +426,17 @@ exports[`Utilities: Display Notation renders 1`] = `
 `;
 
 exports[`Utilities: Display renders 1`] = `
-<Fragment>
-  <div
-    className="doc-container"
+<DocContainer
+  docToc={true}
+>
+  <p
+    className="lead"
   >
-    <div
-      className="row"
-    >
-      <DisplayText />
-      <DocToc
-        component={[Function]}
-      />
-    </div>
-  </div>
-</Fragment>
+    Quickly and responsively toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.
+  </p>
+  <HowItWorks />
+  <Notation />
+  <Examples />
+  <HidingElements />
+</DocContainer>
 `;

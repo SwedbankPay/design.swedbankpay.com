@@ -2,7 +2,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Contributing, { CreatingYourComponent, CreateADocumentationPage, AddComponentToRoutes, AddingStyles, AddingJavaScript, ContributingText } from "./index";
+import Contributing, { CreatingYourComponent, CreateADocumentationPage, AddComponentToRoutes, AddingStyles, AddingJavaScript } from "./index";
 
 describe("GettingStarted: Contributing", () => {
     it("is defined", () => {
@@ -86,18 +86,6 @@ describe("GettingStarted: Contributing", () => {
                     expect(wrapper).toMatchSnapshot();
                 });
             }
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("Contributing Text", () => {
-        it("is defined", () => {
-            expect(ContributingText).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<ContributingText />);
 
             expect(wrapper).toMatchSnapshot();
         });

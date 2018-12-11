@@ -7,6 +7,9 @@ exports[`Documentation: Steps BasicSteps renders 1`] = `
   >
     Basic usage
   </h2>
+  <p>
+    The standard steps component will render horizontally and scale according to the size of its parent.
+  </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
@@ -101,21 +104,6 @@ exports[`Documentation: Steps ClickableSteps renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Steps Steps Text renders 1`] = `
-<div
-  className="col-12 col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Steps.
-  </p>
-  <BasicSteps />
-  <VerticalSteps />
-  <ClickableSteps />
-</div>
-`;
-
 exports[`Documentation: Steps VerticalSteps renders 1`] = `
 <Fragment>
   <h2
@@ -124,7 +112,7 @@ exports[`Documentation: Steps VerticalSteps renders 1`] = `
     Vertical steps
   </h2>
   <p>
-    Add 
+    If you wish to use steps vertically you can add 
     <Property
       value=".steps-vertical"
     />
@@ -169,16 +157,16 @@ exports[`Documentation: Steps VerticalSteps renders 1`] = `
 `;
 
 exports[`Documentation: Steps renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <p
+    className="lead"
   >
-    <StepsText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    Use steps to visualize the users progress through a process.
+  </p>
+  <BasicSteps />
+  <VerticalSteps />
+  <ClickableSteps />
+</DocContainer>
 `;

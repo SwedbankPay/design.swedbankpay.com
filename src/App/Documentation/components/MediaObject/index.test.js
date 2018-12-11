@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import MediaObject, { Overview, Sizes, MediaPosition, MediaObjectText } from "./index";
+import MediaObject, { Overview, Sizes, MediaPosition } from "./index";
 
 describe("Documentation: MediaObject", () => {
     it("is defined", () => {
@@ -48,18 +48,5 @@ describe("Documentation: MediaObject", () => {
 
             expect(wrapper).toMatchSnapshot();
         });
-    });
-
-    describe("MediaObjectText", () => {
-        it("is defined", () => {
-            expect(MediaObjectText).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<MediaObjectText />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-
     });
 });

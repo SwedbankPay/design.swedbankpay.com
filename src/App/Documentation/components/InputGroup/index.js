@@ -1,12 +1,17 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc } from "#";
+import { ComponentPreview, DocContainer, Property, Attribute } from "#";
+import PrismCode from "react-prism";
 import InputGroupComponent from "@/InputGroup";
 
 const BasicExample = () => (
     <>
         <h2 id="basic-example">Basic example</h2>
-        <p>Basic input group...</p>
+        <p>
+            Add a <PrismCode className="language-html">{"<span>"}</PrismCode> with class <Property value=".input-group-addon"/> to get a gray box on the left,
+            right or both sides of an <PrismCode className="language-html">{"<input>"}</PrismCode> element. The position of
+            your <Property value=".input-group-addon"/> depends on if you place it before or after the <PrismCode className="language-html">{"<input"}</PrismCode> element.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure >
             <InputGroupComponent
                 id="input-id-1"
@@ -72,7 +77,10 @@ const CheckboxesAndRadios = () => (
 const ButtonAddons = () => (
     <>
         <h2 id="button-addons">Button addons</h2>
-        <p>Addons...</p>
+        <p>
+            If you want <PrismCode className="language-html">{"<button>"}</PrismCode>s included with your input elements you can just add a <PrismCode className="language-html">{"<button>"}</PrismCode> inside
+            a input-group like you would anywhere else.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <InputGroupComponent
                 type="text"
@@ -96,7 +104,9 @@ const ButtonAddons = () => (
 const WithSelect = () => (
     <>
         <h2 id="with-select">With select</h2>
-        <p>Select...</p>
+        <p>
+            Inserting text next to a <PrismCode className="language-html">{"<select>"}</PrismCode> works just like any other input element.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <InputGroupComponent
                 type="select"
@@ -126,7 +136,9 @@ const WithFeedbackIcon = () => (
 const ValidationStates = () => (
     <>
         <h2 id="validation-states">Validation states</h2>
-        <p>Validation...</p>
+        <p>
+            You can also visualize validation on your input-groups. Just add <Property value=".has-success" /> or <Property value=".has-error" /> with a <Property value=".input-group" />.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <InputGroupComponent
                 type="text"
@@ -149,7 +161,10 @@ const ValidationStates = () => (
 const Disabled = () => (
     <>
         <h2 id="disabled">Disabled</h2>
-        <p>Disabled blabla...</p>
+        <p>
+            Just like for forms you can add <Attribute name="disabled" /> to an input element to disable it.
+            If you are going to disable an element in a <Property value=".input-group" /> make sure to also add the <Attribute name="disabled"/> attribute to the buttons.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <InputGroupComponent
                 id="input-id-3"
@@ -162,36 +177,17 @@ const Disabled = () => (
                 postfixValue=".00"
             />
             <InputGroupComponent
-                id="input-id-4"
-                type="textarea"
-                label="Special requests"
-                placeholder="Extra frosting, no pineapple..."
+                type="text"
                 disabled
-                prefixType="icon"
-                prefixValue="format_quote"
-            />
-            <InputGroupComponent
-                type="select"
-                selectOptions={["Option one", "Option two", "Option three"]}
-                label="Flavor"
-                prefixValue="Options"
-                disabled
+                prefixType="button"
+                prefixValue="Button"
+                prefixBtnColor="secondary"
+                postfixType="button"
+                postfixValue="Button"
+                postfixBtnColor="danger"
             />
         </ComponentPreview>
     </>
-);
-
-const InputGroupText = () => (
-    <div className="col-lg-10 doc-body">
-        <p className="lead">Input groups...</p>
-        <BasicExample />
-        {/* <CheckboxesAndRadios /> */}
-        <ButtonAddons />
-        <WithSelect />
-        {/* <WithFeedbackIcon /> */}
-        <ValidationStates />
-        <Disabled />
-    </div>
 );
 
 class InputGroup extends Component {
@@ -201,12 +197,19 @@ class InputGroup extends Component {
 
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <InputGroupText />
-                    <DocToc component={InputGroupText} />
-                </div>
-            </div>
+            <DocContainer docToc>
+                <p className="lead">
+                    You can include additional information to specific input elements by adding <PrismCode className="language-html">{"<span>"}</PrismCode>s
+                    or <PrismCode className="language-html">{"<button>"}</PrismCode>s in a <Property value=".input-group" />.
+                </p>
+                <BasicExample />
+                {/* <CheckboxesAndRadios /> */}
+                <ButtonAddons />
+                <WithSelect />
+                {/* <WithFeedbackIcon /> */}
+                <ValidationStates />
+                <Disabled />
+            </DocContainer>
         );
     }
 }
@@ -214,4 +217,4 @@ class InputGroup extends Component {
 export default InputGroup;
 
 /* For testing */
-export { BasicExample, CheckboxesAndRadios, ButtonAddons, WithSelect, WithFeedbackIcon, ValidationStates, Disabled, InputGroupText };
+export { BasicExample, CheckboxesAndRadios, ButtonAddons, WithSelect, WithFeedbackIcon, ValidationStates, Disabled };

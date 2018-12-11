@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ComponentPreview, DocToc, Property } from "#";
+import { ComponentPreview, DocContainer, Property } from "#";
 
 const TextAlignment = () => (
     <>
@@ -79,29 +79,17 @@ const FontWeightAndItalics = () => (
     </>
 );
 
-// Ya I know, but gotta keep it consistent... [EH]
-const TextText = () => (
-    <div className="col-lg-10 doc-body">
+const Text = () => (
+    <DocContainer docToc>
         <p className="lead">Documentation and examples for common text utilities to control alignment, wrapping, weight, and more.</p>
         <TextAlignment />
         <TextWrappingAndOverflow />
         <TextTransform />
         <FontWeightAndItalics />
-    </div>
-);
-
-const Text = () => (
-    <>
-        <div className="doc-container">
-            <div className="row">
-                <TextText />
-                <DocToc component={TextText} />
-            </div>
-        </div>
-    </>
+    </DocContainer>
 );
 
 export default Text;
 
 /* For testing */
-export { TextAlignment, TextWrappingAndOverflow, TextTransform, FontWeightAndItalics, TextText };
+export { TextAlignment, TextWrappingAndOverflow, TextTransform, FontWeightAndItalics };

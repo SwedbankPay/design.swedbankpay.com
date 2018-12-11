@@ -72,20 +72,6 @@ exports[`Documentation: Breadcrumb Basic BreadCrumb renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Breadcrumb BreadCrumb Text renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Breadcrumbs are a good way to display your current location. This is usually used when you have multiple layers of content.
-  </p>
-  <BasicBreadCrumb />
-  <DisabledBreadcrumb />
-</div>
-`;
-
 exports[`Documentation: Breadcrumb Disabled BreadCrumb renders 1`] = `
 <Fragment>
   <h2
@@ -140,16 +126,15 @@ exports[`Documentation: Breadcrumb Disabled BreadCrumb renders 1`] = `
 `;
 
 exports[`Documentation: Breadcrumb renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <p
+    className="lead"
   >
-    <BreadcrumbText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    Breadcrumbs are a good way to display your current location. This is usually used when you have multiple layers of content.
+  </p>
+  <BasicBreadCrumb />
+  <DisabledBreadcrumb />
+</DocContainer>
 `;

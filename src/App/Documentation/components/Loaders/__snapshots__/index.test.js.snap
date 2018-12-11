@@ -8,7 +8,20 @@ exports[`Documentation: Loaders Basic Usage renders 1`] = `
     Basic usage
   </h2>
   <p>
-    Basic usage...
+    To use a default loader add 
+    <Property
+      value=".loader"
+    />
+    , 
+    <Property
+      value=".loader-default"
+    />
+     and 
+    <Attribute
+      data={true}
+      name="loader"
+    />
+     to a div.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -23,22 +36,6 @@ exports[`Documentation: Loaders Basic Usage renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Loaders Loaders Text renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Use loaders...
-  </p>
-  <BasicUsage />
-  <Sizes />
-  <MutedLoader />
-  <StaticHtml />
-</div>
-`;
-
 exports[`Documentation: Loaders Muted Loader renders 1`] = `
 <Fragment>
   <h2
@@ -51,7 +48,7 @@ exports[`Documentation: Loaders Muted Loader renders 1`] = `
     <Property
       value=".loader-muted"
     />
-     to mute the loader...
+     to make the loader muted.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -162,16 +159,17 @@ exports[`Documentation: Loaders Static Html renders 1`] = `
 `;
 
 exports[`Documentation: Loaders renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <p
+    className="lead"
   >
-    <LoadersText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    Use loaders to indicate to the user that your web application is loading.
+  </p>
+  <BasicUsage />
+  <Sizes />
+  <MutedLoader />
+  <StaticHtml />
+</DocContainer>
 `;

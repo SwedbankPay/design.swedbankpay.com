@@ -66,20 +66,6 @@ exports[`Utilities: Colors BackgroundColors renders 1`] = `
 </Fragment>
 `;
 
-exports[`Utilities: Colors ColorsText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Convey meaning through color with a handful of color utility classes.
-  </p>
-  <TextColors />
-  <BackgroundColors />
-</div>
-`;
-
 exports[`Utilities: Colors TextColors renders 1`] = `
 <Fragment>
   <h2
@@ -220,18 +206,15 @@ exports[`Utilities: Colors TextColors renders 1`] = `
 `;
 
 exports[`Utilities: Colors renders 1`] = `
-<Fragment>
-  <div
-    className="doc-container"
+<DocContainer
+  docToc={true}
+>
+  <p
+    className="lead"
   >
-    <div
-      className="row"
-    >
-      <ColorsText />
-      <DocToc
-        component={[Function]}
-      />
-    </div>
-  </div>
-</Fragment>
+    Convey meaning through color with a handful of color utility classes.
+  </p>
+  <TextColors />
+  <BackgroundColors />
+</DocContainer>
 `;

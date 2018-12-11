@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Badge, { Overview, FurtherUsage, BadgeText } from "./index";
+import Badge, { Overview, FurtherUsage } from "./index";
 
 describe("Components: Badge", () => {
     it("is defined", () => {
@@ -33,18 +33,6 @@ describe("Components: Badge", () => {
 
         it("renders", () => {
             const wrapper = shallow(<FurtherUsage />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("BadgeText", () => {
-        it("is defined", () => {
-            expect(BadgeText).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<BadgeText />);
 
             expect(wrapper).toMatchSnapshot();
         });

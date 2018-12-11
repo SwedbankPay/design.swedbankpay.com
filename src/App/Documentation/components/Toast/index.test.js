@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Toast, { Overview, PremadeToasts, Options, CustomHtml, ToastText } from "./index";
+import Toast, { Overview, PremadeToasts, Options, CustomHtml } from "./index";
 import { toast } from "../../../../px-script/main";
 
 jest.mock("../../../../px-script/main");
@@ -94,18 +94,6 @@ describe("Components: Toast", () => {
 
             expect(wrapper).toMatchSnapshot();
             expect(toast).toHaveBeenCalled();
-        });
-    });
-
-    describe("ToastText", () => {
-        it("is defined", () => {
-            expect(ToastText).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<ToastText />);
-
-            expect(wrapper).toMatchSnapshot();
         });
     });
 });

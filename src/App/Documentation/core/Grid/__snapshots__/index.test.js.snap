@@ -487,22 +487,6 @@ exports[`Core: Grid GridOptions renders 1`] = `
 </Fragment>
 `;
 
-exports[`Core: Grid GridText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Use our grid system...
-  </p>
-  <HowItWorks />
-  <GridOptions />
-  <AutoLayoutColumns />
-  <Alignment />
-</div>
-`;
-
 exports[`Core: Grid HowItWorks renders 1`] = `
 <Fragment>
   <h2
@@ -571,16 +555,17 @@ exports[`Core: Grid HowItWorks renders 1`] = `
 `;
 
 exports[`Core: Grid renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <p
+    className="lead"
   >
-    <GridText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    Use our grid system...
+  </p>
+  <HowItWorks />
+  <GridOptions />
+  <AutoLayoutColumns />
+  <Alignment />
+</DocContainer>
 `;

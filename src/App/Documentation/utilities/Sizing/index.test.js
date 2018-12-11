@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Sizing, { SizingText } from "./index";
+import Sizing from "./index";
 
 describe("Utilities: Sizing", () => {
     it("is defined", () => {
@@ -12,17 +12,5 @@ describe("Utilities: Sizing", () => {
         const wrapper = shallow(<Sizing />);
 
         expect(wrapper).toMatchSnapshot();
-    });
-
-    describe("SizingText", () => {
-        it("is defined", () => {
-            expect(SizingText).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<SizingText />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
     });
 });

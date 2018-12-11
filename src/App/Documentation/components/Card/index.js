@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, Property, DocToc, ExperimentalComponentAlert } from "#";
+import { ComponentPreview, Property, DocContainer, ExperimentalComponentAlert } from "#";
 import CardComponent from "@/Card";
 import MediaObject from "@/MediaObject";
 
@@ -98,24 +98,18 @@ const CardVariants = () => (
     </>
 );
 
-const CardText = () => (
-    <div className="col-lg-10 doc-body">
-        <ExperimentalComponentAlert />
-        <p className="lead">Card...</p>
-        <DefaultBehaviour />
-        <CardVariants />
-    </div>
-);
-
 class Card extends Component {
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <CardText />
-                    <DocToc component={CardText} />
-                </div>
-            </div>
+            <DocContainer docToc>
+                <ExperimentalComponentAlert />
+                <p className="lead">
+                    Cards are meant to display smaller items and is not intended to span the entire width of a page.
+                    See <Link to="/docs/components/panel">panel</Link> if the card component is too narrow.
+                </p>
+                <DefaultBehaviour />
+                <CardVariants />
+            </DocContainer>
         );
     }
 }
@@ -123,4 +117,4 @@ class Card extends Component {
 export default Card;
 
 /* For testing */
-export { DefaultBehaviour, CardText, CardVariants };
+export { DefaultBehaviour, CardVariants };

@@ -1,7 +1,7 @@
 import docsRoutes from "./docs";
 
 describe("Routes: docs", () => {
-    const pathFormat = new RegExp("^(\\/[a-z]+(-[a-z]+)?)+$");
+    const pathFormat = new RegExp("^(\\/[a-z]+([-a-z]+)?)+$");
 
     it("is defined", () => {
         expect(docsRoutes).toBeDefined();

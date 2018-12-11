@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import PrismCode from "react-prism";
 
-import { ComponentPreview, DocToc, Property } from "#";
+import { ComponentPreview, DocContainer, Property } from "#";
 import PaginationComponent from "@/Pagination";
 
 const paginationItems = [
@@ -16,7 +17,10 @@ const paginationItems = [
 const DefaultPagination = () => (
         <>
             <h2 id="default-pagination">Default pagination</h2>
-            <p>Default pagination... <Property value=".pagination" />...</p>
+            <p>
+                Default pagination shows the pages as numbers. Add <Property value=".pagination" /> to an <PrismCode className="language-html">{"<ul>"}</PrismCode> containing
+                <PrismCode className="language-html">{"<li>"}</PrismCode>. If you wish to present the user with navigational arrows you need to add those as <PrismCode className="language-html">{"<li>"}</PrismCode> elements.
+            </p>
             <ComponentPreview language="html" showCasePanel codeFigure>
                 <PaginationComponent items={paginationItems} arrows farArrows />
             </ComponentPreview>
@@ -26,7 +30,9 @@ const DefaultPagination = () => (
 const PaginationBullets = () => (
         <>
             <h2 id="pagination-bullets">Pagination bullets</h2>
-            <p>Pagination bullets... <Property value=".pagination-bullets" />...</p>
+            <p>
+                If you want to show bullets instead of numbers you can add <Property value=".pagination-bullets" /> to your <PrismCode className="language-html">{"<ul>"}</PrismCode>.
+            </p>
             <ComponentPreview language="html" showCasePanel codeFigure>
                 <PaginationComponent type="bullets" items={paginationItems} arrows farArrows />
             </ComponentPreview>
@@ -36,31 +42,26 @@ const PaginationBullets = () => (
 const SimplePagination = () => (
     <>
         <h2 id="simple-pagination">Simple pagination</h2>
-        <p>Simple pagination... <Property value=".pagination" />...</p>
+        <p>
+            If the number of pages get high enough then it is better to use numbers.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <PaginationComponent text="16 of 256" arrows farArrows />
         </ComponentPreview>
     </>
 );
 
-const PaginationText = () => (
-    <div className="col-lg-10 doc-body">
-        <p className="lead">Pagination...</p>
-        <DefaultPagination />
-        <PaginationBullets />
-        <SimplePagination />
-    </div>
-);
-
 class Pagination extends Component {
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <PaginationText />
-                    <DocToc component={PaginationText} />
-                </div>
-            </div>
+            <DocContainer docToc>
+                <p className="lead">
+                    Use the pagination component to indicate that a series of related content exist across multiple pages.
+                </p>
+                <DefaultPagination />
+                <PaginationBullets />
+                <SimplePagination />
+            </DocContainer>
         );
     }
 }
@@ -68,4 +69,4 @@ class Pagination extends Component {
 export default Pagination;
 
 /* For testing */
-export { DefaultPagination, SimplePagination, PaginationBullets, PaginationText };
+export { DefaultPagination, SimplePagination, PaginationBullets };

@@ -5,7 +5,6 @@ const appRoutes = require("./tools/generate-routes-copy-array");
 const levelsToRoot = require("./tools/levels-to-root");
 const autoprefixer = require("autoprefixer");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-const lessListPlugin = require("less-plugin-lists");
 const SentryCliPlugin = require("@sentry/webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FileManagerPlugin = require("filemanager-webpack-plugin");
@@ -26,7 +25,8 @@ module.exports = (env, argv) => {
         entry: {
             polyfills: ["./src/polyfills/index.js", "@babel/polyfill"],
             app: "./src/index.js",
-            "px-script": "./src/px-script/main/index.js"
+            "px-script": "./src/px-script/main/index.js",
+            "px.dashboard": "./src/px-script/dashboard/index.js"
         },
         resolve: {
             extensions: [".js", ".jsx", ".json"]
@@ -67,7 +67,12 @@ module.exports = (env, argv) => {
                         {
                             loader: isProd ? MiniCssExtractPlugin.loader : "style-loader"
                         },
-                        { loader: "css-loader" },
+                        {
+                            loader: "css-loader",
+                            options: {
+                                // modules: "global"
+                            }
+                        },
                         {
                             loader: "postcss-loader",
                             options: {
@@ -80,10 +85,7 @@ module.exports = (env, argv) => {
                         {
                             loader: "less-loader",
                             options: {
-                                javascriptEnabled: true,
-                                plugins: [
-                                    new lessListPlugin()
-                                ]
+                                javascriptEnabled: true
                             }
                         }
                     ]
@@ -123,38 +125,25 @@ module.exports = (env, argv) => {
             ]
         },
         optimization: {
-            // runtimeChunk: {
-            //     name: entrypoint => `runtime~${entrypoint.name}`
-            // },
             splitChunks: {
                 chunks: "async",
-                minSize: 3000,
+                minSize: 30000,
                 maxSize: 0,
-                minChunks: 2,
+                minChunks: 1,
                 maxAsyncRequests: 5,
                 maxInitialRequests: 3,
                 automaticNameDelimiter: "~",
                 name: true,
                 cacheGroups: {
-                    // vendors: {
-                    //     test: /[\\/]node_modules[\\/]/,
-                    //     name: "vendors",
-                    //     chunks: "all"
-                    // },
-                    app: {
-                        name: "app",
-                        test: /app\.js$/,
-                        reuseExistingChunk: true,
-                        chunks: "all",
-                        enforce: true
+                    vendors: {
+                        test: /[\\/]node_modules[\\/]/,
+                        priority: -10
                     },
-                    // pxScript: {
-                    //     name: "px-script",
-                    //     test: /px-script/,
-                    //     reuseExistingChunk: false,
-                    //     chunks: "all",
-                    //     enforce: true
-                    // },
+                    default: {
+                        minChunks: 2,
+                        priority: -20,
+                        reuseExistingChunk: true
+                    },
                     pxStyles: {
                         name: "px",
                         test: /px\.less$/,
@@ -304,6 +293,14 @@ module.exports = (env, argv) => {
                             },
                             {
                                 source: `./dist${basename}scripts/px-script.js.map`,
+                                destination: "./dist/temp/release/scripts"
+                            },
+                            {
+                                source: `./dist${basename}scripts/px.dashboard.js`,
+                                destination: "./dist/temp/release/scripts"
+                            },
+                            {
+                                source: `./dist${basename}scripts/px.dashboard.js.map`,
                                 destination: "./dist/temp/release/scripts"
                             },
                             {

@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import InputGroup, { BasicExample, CheckboxesAndRadios, ButtonAddons, WithSelect, WithFeedbackIcon, ValidationStates, Disabled, InputGroupText } from "./index";
+import InputGroup, { BasicExample, CheckboxesAndRadios, ButtonAddons, WithSelect, WithFeedbackIcon, ValidationStates, Disabled } from "./index";
 
 describe("Documentation: InputGroup", () => {
     it("is defined", () => {
@@ -93,18 +93,6 @@ describe("Documentation: InputGroup", () => {
 
         it("renders", () => {
             const wrapper = shallow(<Disabled />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("InputGroupText", () => {
-        it("is defined", () => {
-            expect(InputGroupText).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<InputGroupText />);
 
             expect(wrapper).toMatchSnapshot();
         });

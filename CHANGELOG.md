@@ -1,7 +1,22 @@
 # Changelog
 
-## [0.14.2] - 2018-11-27
+## [0.15.0] - 2018-12-11
+
+### Added
+
+- Added documentation for image utilities.
+- Added image utility .img-thumbnail.
+- Added size classes for material icons.
+- Added hover version of item-list.
+- Added examples tab to topbar which redirects to our example pages.
+- Added dashboard theme with chart component.
+- Added flag icons.
 
 ### Changed
 
-- Slightly increased the bottom margin on all form fields to allow for better grouping and spacing for data attribute messages.
+- Renamed icons to iconography under core, and moved payment icons to it's own section below material icons.
+
+### Removed
+
+- Removed Payment Icons from core documentation.
+- Removed support for topbar-nav-left with several levels and topbar-nav-right.

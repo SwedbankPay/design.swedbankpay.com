@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, Attribute, Property, DocToc } from "#";
+import { ComponentPreview, Attribute, Property, DocContainer } from "#";
 import ButtonComponent from "@/Button";
 import Alert from "@/Alert";
 import { button } from "$/px-script/main";
@@ -213,21 +213,6 @@ const ButtonLoader = () => (
     </>
 );
 
-const ButtonsText = () => (
-    <div className="col-lg-10 doc-body">
-        <p className="lead">Use our button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
-        <Examples />
-        <UsageWithOtherTags />
-        <OutlineButtons />
-        <ButtonGroup />
-        <Sizes />
-        <ActiveState />
-        <DisabledState />
-        <UsageWithIcons />
-        <ButtonLoader />
-    </div>
-);
-
 class Buttons extends Component {
     componentDidMount () {
         button.init();
@@ -235,12 +220,18 @@ class Buttons extends Component {
 
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <ButtonsText />
-                    <DocToc component={ButtonsText} />
-                </div>
-            </div>
+            <DocContainer docToc>
+                <p className="lead">Use our button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
+                <Examples />
+                <UsageWithOtherTags />
+                <OutlineButtons />
+                <ButtonGroup />
+                <Sizes />
+                <ActiveState />
+                <DisabledState />
+                <UsageWithIcons />
+                <ButtonLoader />
+            </DocContainer>
         );
     }
 }
@@ -248,4 +239,4 @@ class Buttons extends Component {
 export default Buttons;
 
 /* for testing */
-export { Examples, UsageWithOtherTags, OutlineButtons, ButtonGroup, Sizes, ActiveState, DisabledState, UsageWithIcons, ButtonLoader, ButtonsText };
+export { Examples, UsageWithOtherTags, OutlineButtons, ButtonGroup, Sizes, ActiveState, DisabledState, UsageWithIcons, ButtonLoader };

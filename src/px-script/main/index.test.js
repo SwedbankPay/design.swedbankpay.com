@@ -1,6 +1,6 @@
 import px from "./index";
 
-describe("px-script: px (index)", () => {
+describe("px-script: index (main)", () => {
     it("is defined", () => {
         expect(px).toBeDefined();
     });

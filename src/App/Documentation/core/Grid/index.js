@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ComponentPreview, DocToc, Property } from "#";
+import { ComponentPreview, DocContainer, Property } from "#";
 
 const HowItWorks = () => (
     <>
@@ -245,26 +245,17 @@ const Alignment = () => (
     </>
 );
 
-const GridText = () => (
-    <div className="col-lg-10 doc-body">
+const Grid = () => (
+    <DocContainer docToc>
         <p className="lead">Use our grid system...</p>
         <HowItWorks />
         <GridOptions />
         <AutoLayoutColumns />
         <Alignment />
-    </div>
-);
-
-const Grid = () => (
-    <div className="doc-container">
-        <div className="row">
-            <GridText />
-            <DocToc component={GridText} />
-        </div>
-    </div>
+    </DocContainer>
 );
 
 export default Grid;
 
 /* For testing */
-export { HowItWorks, GridOptions, AutoLayoutColumns, Alignment, GridText };
+export { HowItWorks, GridOptions, AutoLayoutColumns, Alignment };

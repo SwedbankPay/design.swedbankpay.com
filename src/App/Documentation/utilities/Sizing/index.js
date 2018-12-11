@@ -1,12 +1,12 @@
 import React from "react";
 
-import { ComponentPreview, Property } from "#";
+import { ComponentPreview, Property, DocContainer } from "#";
 
-const SizingText = () => (
-    <div className="col-lg-10 doc-body">
+const Sizing = () => (
+    <DocContainer>
         <p className="lead">Easily make an element as wide or as tall (relative to its parent) with our width and height utilities.</p>
         <p>
-            Width and height utilities are generated with support for values; <Property value="25%" />, <Property value="50%" />, <Property value="75%" />, <Property value="100%" />, and <Property value="auto" />.
+        Width and height utilities are generated with support for values; <Property value="25%" />, <Property value="50%" />, <Property value="75%" />, <Property value="100%" />, and <Property value="auto" />.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="w-25 p-3 sc-highlight">Width 25%</div>
@@ -31,20 +31,7 @@ const SizingText = () => (
                 <div className="mh-100 sc-highlight" style={{ width: "100px", height: "200px" }}>Max-height 100%</div> {/* eslint-disable-line object-property-newline */}
             </div>
         </ComponentPreview>
-    </div>
-);
-
-const Sizing = () => (
-    <>
-        <div className="doc-container">
-            <div className="row">
-                <SizingText />
-            </div>
-        </div>
-    </>
+    </DocContainer>
 );
 
 export default Sizing;
-
-/* For testing */
-export { SizingText };

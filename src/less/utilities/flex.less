@@ -1,4 +1,4 @@
-.for-each(@breakpoint in @grid-breakpoints) {
+each(@grid-breakpoints, .(@size, @abbr) {
     /* stylelint-disable declaration-no-important, block-opening-brace-space-before */
     @ruleset: {
         .flex@{infix}-row                  { flex-direction: row !important; }
@@ -44,5 +44,5 @@
         /* stylelint-enable */
     }
 
-    .media-breakpoint-up(@breakpoint, @ruleset);
-}
+    .media-breakpoint-up(@size, @abbr, @ruleset);
+});

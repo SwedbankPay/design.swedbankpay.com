@@ -14,17 +14,17 @@
  * ===============
  *  6. Action List
  *  7. Badge
- *  8. Breadcrumb
- *  9. Button
- * 10. Card
- * 11. Datepicker
- * 12. Dialog
- * 13. Form
- * 14. Nav
- * 15. Pagination
- * 16. Panel
- * 17. Sheet
- * 18. Status
+ *  8. Button
+ *  9. Card
+ * 10. Datepicker
+ * 11. Dialog
+ * 12. Form
+ * 13. Nav
+ * 14. Pagination
+ * 15. Panel
+ * 16. Sheet
+ * 17. Status
+ * 18. Steps
  * 19. Toast
  * 20. Topbar
  */
@@ -97,18 +97,22 @@
 @spacer:                                    1rem; /* Default */
 
 /* stylelint-disable indentation */
-@spacers:                                   0 0,
-                                            1 (@spacer * 0.25),
-                                            2 (@spacer * 0.5),
-                                            3 @spacer,
-                                            4 (@spacer * 1.5),
-                                            5 (@spacer * 3);
+@spacers: {
+                                            0: 0;
+                                            1: (@spacer * 0.25);
+                                            2: (@spacer * 0.5);
+                                            3: @spacer;
+                                            4: (@spacer * 1.5);
+                                            5: (@spacer * 3);
+}
 
-@sizes:                                     25 25%,
-                                            50 50%,
-                                            75 75%,
-                                            100 100%,
-                                            auto auto;
+@sizes: {
+                                            25: 25%;
+                                            50: 50%;
+                                            75: 75%;
+                                            100: 100%;
+                                            auto: auto;
+}
 /* stylelint-enable indentation */
 
 /* Margin */
@@ -177,24 +181,16 @@
 /* Padding between columns. Gets divided in half for the left and right. */
 @grid-gutter-width:                         30px;
 
-/* stylelint-disable property-no-unknown */
-@grid-breakpoints-new: {
-    xs: 0;
-    sm: 576px;
-    md: 768px;
-    lg: 992px;
-    xl: 1200px;
-    xxl: 1600px;
-}
 
-// TODO: Swap this with @grid-breakpoints-new when we update Less and start using native `each` function [EH]
 /* stylelint-disable indentation */
-@grid-breakpoints:                          ~"xs" 0,
-                                            ~"sm" 576px,
-                                            ~"md" 768px,
-                                            ~"lg" 992px,
-                                            ~"xl" 1200px,
-                                            ~"xxl" 1600px;
+@grid-breakpoints: {
+                                            xs: 0;
+                                            sm: 576px;
+                                            md: 768px;
+                                            lg: 992px;
+                                            xl: 1200px;
+                                            xxl: 1600px;
+}
 
 @container-max-widths:                      540px,
                                             720px,
@@ -210,11 +206,11 @@
  * Uses 0.02px rather than 0.01px to work around a current rounding bug in Safari.
  * See https://bugs.webkit.org/show_bug.cgi?id=178261
  */
-@screen-xs-min:                             @grid-breakpoints-new[sm];
-@screen-sm-min:                             @grid-breakpoints-new[md];
-@screen-md-min:                             @grid-breakpoints-new[lg];
-@screen-lg-min:                             @grid-breakpoints-new[xl];
-@screen-xl-min:                             @grid-breakpoints-new[xxl];
+@screen-xs-min:                             @grid-breakpoints[sm];
+@screen-sm-min:                             @grid-breakpoints[md];
+@screen-md-min:                             @grid-breakpoints[lg];
+@screen-lg-min:                             @grid-breakpoints[xl];
+@screen-xl-min:                             @grid-breakpoints[xxl];
 
 @screen-xs-max:                             (@screen-sm-min - 0.02);
 @screen-sm-max:                             (@screen-md-min - 0.02);
@@ -274,19 +270,21 @@
 
 /* Color list */
 /* stylelint-disable indentation */
-@color-list:                                ~"default" @text-color,
-                                            ~"green" @green,
-                                            ~"purple" @purple,
-                                            ~"blue" @blue,
-                                            ~"yellow" @yellow,
-                                            ~"red" @red,
-                                            ~"black" @black,
-                                            ~"white" @white,
-                                            ~"brand" @brand-primary,
-                                            ~"success" @state-success,
-                                            ~"neutral" @state-neutral,
-                                            ~"warning" @state-warning,
-                                            ~"danger" @state-error;
+@color-list: {
+                                            default: @text-color;
+                                            green: @green;
+                                            purple: @purple;
+                                            blue: @blue;
+                                            yellow: @yellow;
+                                            red: @red;
+                                            black: @black;
+                                            white: @white;
+                                            brand: @brand-primary;
+                                            success: @state-success;
+                                            neutral: @state-neutral;
+                                            warning: @state-warning;
+                                            danger: @state-error;
+}
 /* stylelint-enable */
 
 @blockquote-border-color:                   @gray-8;
@@ -368,52 +366,21 @@
  */
 
 /* stylelint-disable indentation */
-@badge-list:                                ~"default" @gray-8,
-                                            ~"brand" @green,
-                                            ~"blue" @blue,
-                                            ~"purple" @purple,
-                                            ~"yellow" @yellow,
-                                            ~"red" @red;
-
+@badge-list: {
+                                            default: @gray-8;
+                                            brand: @green;
+                                            blue: @blue;
+                                            purple: @purple;
+                                            yellow: @yellow;
+                                            red: @red;
+}
 /* stylelint-enable */
 
 @badge-padding:                             @base-margin * 0.125 @base-margin-sm;
 
-/*
- * 8. Breadcrumb
- * ==========================================================================
- * TODO: clean this up when progress tracker is remade
- */
-
-@breadcrumb-margin:                         @base-margin;
-@breadcrumb-padding:                        0.6rem 1.2rem 0.6rem 2rem;
-@breadcrumb-padding-first:                  @base-padding;
-
-@breadcrumb-bg:                             @white;
-@breadcrumb-border-color:                   @brand-primary;
-@breadcrumb-disabled-bg:                    @gray-10;
-@breadcrumb-disabled-color:                 @gray-2;
-@breadcrumb-active-bg:                      @brand-primary;
-@breadcrumb-active-color:                   @white;
-
-
-/* Arrow constants */
-@breadcrumb-arrow-border-size:              0.075rem;
-@breadcrumb-arrow-border:                   1.3rem;
-@breadcrumb-arrow-bg:                       @breadcrumb-arrow-border - @breadcrumb-arrow-border-size;
-
-
-/* Small */
-@breadcrumb-padding-sm:                     0.3rem 0.6rem 0.3rem 1.25rem;
-@breadcrumb-padding-first-sm:               @base-padding-sm;
-
-/* Arrow constants */
-@breadcrumb-arrow-border-size-sm:           0.05rem;
-@breadcrumb-arrow-border-sm:                0.85rem;
-@breadcrumb-arrow-bg-sm:                    @breadcrumb-arrow-border-sm - @breadcrumb-arrow-border-size-sm;
 
 /*
- * 9. Button
+ * 8. Button
  * ==========================================================================
  */
 
@@ -436,7 +403,7 @@
 @btn-link-disabled-color:                   @gray-6;
 
 /*
- * 10. Card
+ * 9. Card
  * ==========================================================================
  */
 
@@ -447,7 +414,7 @@
 @card-margin-top:                           @base-margin-sm + @base-margin-xs;
 
 /*
- * 11. Datepicker
+ * 10. Datepicker
  * ==========================================================================
  */
 
@@ -461,7 +428,7 @@
 @datepicker-rd-padding:                     round(@base-padding / 3, 1);
 
 /*
- * 12. Dialog
+ * 11. Dialog
  * ==========================================================================
  */
 
@@ -478,7 +445,7 @@
 @dialog-size:                               500px;
 
 /*
- * 13. Form
+ * 12. Form
  * ==========================================================================
  */
 
@@ -519,7 +486,7 @@
 @thumb-size:                                @checkbox-height;
 
 /*
- * 17. Nav
+ * 13. Nav
  * ==========================================================================
  */
 
@@ -547,7 +514,7 @@
 @nav-submenu-icon-fontsize-tablet:          @base-font-size * 2.25;
 
 /*
- * 15. Pagination
+ * 14. Pagination
  * ==========================================================================
  */
 
@@ -557,7 +524,7 @@
 @pagination-bullet-size:                    @status-size;
 
 /*
- * 16. Panel
+ * 15. Panel
  * ==========================================================================
  */
 
@@ -581,7 +548,7 @@
 @panel-footer-padding:                      @base-padding @base-padding-xl;
 
 /*
- * 17. Sheet
+ * 16. Sheet
  * ==========================================================================
  */
 
@@ -594,7 +561,7 @@
 @sheet-width:                               580px;
 
 /*
- * 18. Status
+ * 17. Status
  * ==========================================================================
  */
 
@@ -603,6 +570,25 @@
 
 @status-padding-left:                       @base-padding * 1.2;
 @status-padding-head:                       @base-padding * 8;
+
+/*
+ * 18. Steps
+ * ==========================================================================
+ */
+
+@list-item-padding:                         3.4rem 0 0 0;
+@list-item-padding-desktop-top:             4.5rem;
+@list-item-padding-desktop:                 @list-item-padding-desktop-top 0 1.2rem 0;
+@list-item-padding-desktop-vertical:        2rem 1.5rem 2rem 5.5rem;
+
+@circle-size:                               30px;
+@circle-size-desktop:                       45px;
+
+@vertical-left:                             1.7rem;
+@vertical-margin:                           (@circle-size-desktop / 2) - (@line-width-desktop / 2);
+
+@line-width:                                3px;
+@line-width-desktop:                        5px;
 
 /*
  * 19. Toast

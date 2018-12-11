@@ -8,7 +8,10 @@ exports[`Documentation: Sheet Example onClick prevents default 1`] = `
     Example
   </h2>
   <p>
-    Example sheet...
+    A standard sheet should display content that complements the screen’s primary content. It will close when the user clicks outside of the sheet or exits out of it in another way.
+  </p>
+  <p>
+    Sheets can be used for a number of different things, but common use cases for a sheet are for example displaying a list of actions that affet the screen’s primary content such as filters, deletion or other ways to manipulate the main content. If you have a form then you could include an icon that opens said sheet to display more information about what the expected input is.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -167,7 +170,10 @@ exports[`Documentation: Sheet Example onSubmit prevents default 1`] = `
     Example
   </h2>
   <p>
-    Example sheet...
+    A standard sheet should display content that complements the screen’s primary content. It will close when the user clicks outside of the sheet or exits out of it in another way.
+  </p>
+  <p>
+    Sheets can be used for a number of different things, but common use cases for a sheet are for example displaying a list of actions that affet the screen’s primary content such as filters, deletion or other ways to manipulate the main content. If you have a form then you could include an icon that opens said sheet to display more information about what the expected input is.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -326,7 +332,10 @@ exports[`Documentation: Sheet Example renders 1`] = `
     Example
   </h2>
   <p>
-    Example sheet...
+    A standard sheet should display content that complements the screen’s primary content. It will close when the user clicks outside of the sheet or exits out of it in another way.
+  </p>
+  <p>
+    Sheets can be used for a number of different things, but common use cases for a sheet are for example displaying a list of actions that affet the screen’s primary content such as filters, deletion or other ways to manipulate the main content. If you have a form then you could include an icon that opens said sheet to display more information about what the expected input is.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -477,20 +486,6 @@ exports[`Documentation: Sheet Example renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Sheet SheetText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <p
-    className="lead"
-  >
-    Sheet...
-  </p>
-  <Example />
-  <UsageWithJavascript />
-</div>
-`;
-
 exports[`Documentation: Sheet UsageWithJavascript renders 1`] = `
 <Fragment>
   <h2
@@ -498,34 +493,54 @@ exports[`Documentation: Sheet UsageWithJavascript renders 1`] = `
   >
     Usage with javascript
   </h2>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+  >
+    <div
+      className="sheet"
+      id="demo-sheet"
+    >
+      
+
+      ...
+      
+
+    </div>
+    
+
+  </ComponentPreview>
   <p>
-    To programmatically open a sheet, use 
-    <Property
-      value="px.sheet.open(\\"SHEET_ID\\")"
-    />
-    .
+    To open a sheet:
   </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    px.sheet.open("demo-sheet")
+  </ComponentPreview>
   <p>
-    To programmatically close a sheet, use 
-    <Property
-      value="px.sheet.close(\\"SHEET_ID\\")"
-    />
-    .
+    To close a sheet:
   </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    px.sheet.close("demo-sheet")
+  </ComponentPreview>
 </Fragment>
 `;
 
 exports[`Documentation: Sheet renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <p
+    className="lead"
   >
-    <SheetText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    Sheet is a container component that is anchored on the right side of the screen and can contain a number of different things.
+  </p>
+  <Example />
+  <UsageWithJavascript />
+</DocContainer>
 `;

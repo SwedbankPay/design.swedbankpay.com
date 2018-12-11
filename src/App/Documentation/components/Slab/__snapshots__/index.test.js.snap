@@ -190,26 +190,6 @@ exports[`Components: Slab SlabSizes renders 1`] = `
 </Fragment>
 `;
 
-exports[`Components: Slab SlabText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <ExperimentalComponentAlert />
-  <p
-    className="lead"
-  >
-    Slabs are container components, therefore it works with whatever you want to put in it.
-  </p>
-  <DefaultSlab />
-  <SlabElevated />
-  <SlabWell />
-  <SlabWhite />
-  <SlabMuted />
-  <SlabSizes />
-  <SlabCombinations />
-</div>
-`;
-
 exports[`Components: Slab SlabWell renders 1`] = `
 <Fragment>
   <h2
@@ -384,16 +364,21 @@ exports[`Components: Slab SlabWhite renders 1`] = `
 `;
 
 exports[`Components: Slab renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <ExperimentalComponentAlert />
+  <p
+    className="lead"
   >
-    <SlabText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    Slabs are container components, therefore it works with whatever you want to put in it.
+  </p>
+  <DefaultSlab />
+  <SlabElevated />
+  <SlabWell />
+  <SlabWhite />
+  <SlabMuted />
+  <SlabSizes />
+  <SlabCombinations />
+</DocContainer>
 `;

@@ -172,24 +172,6 @@ exports[`Component: Nav Mobile renders 1`] = `
 </Fragment>
 `;
 
-exports[`Component: Nav NavText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <ExperimentalComponentAlert />
-  <p
-    className="lead"
-  >
-    Navs.
-  </p>
-  <StandardNav />
-  <TwoLevels />
-  <IconsOnly />
-  <Mix />
-  <Mobile />
-</div>
-`;
-
 exports[`Component: Nav StandardNav renders 1`] = `
 <Fragment>
   <h2
@@ -293,7 +275,7 @@ exports[`Component: Nav TwoLevels renders 1`] = `
       className="language-html"
       component="code"
     >
-      &lt;div&gt;
+      &lt;DocContainer&gt;
     </PrismCode>
      with class 
     <Property
@@ -361,31 +343,51 @@ exports[`Component: Nav TwoLevels renders 1`] = `
 `;
 
 exports[`Component: Nav renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <ExperimentalComponentAlert />
+  <p
+    className="lead"
   >
-    <NavText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    Use 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;nav&gt;
+    </PrismCode>
+    s to create a basic navigational element containing links.
+  </p>
+  <StandardNav />
+  <TwoLevels />
+  <IconsOnly />
+  <Mix />
+  <Mobile />
+</DocContainer>
 `;
 
 exports[`Component: Nav runs init on rerender 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <ExperimentalComponentAlert />
+  <p
+    className="lead"
   >
-    <NavText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    Use 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;nav&gt;
+    </PrismCode>
+    s to create a basic navigational element containing links.
+  </p>
+  <StandardNav />
+  <TwoLevels />
+  <IconsOnly />
+  <Mix />
+  <Mobile />
+</DocContainer>
 `;

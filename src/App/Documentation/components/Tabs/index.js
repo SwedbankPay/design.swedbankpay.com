@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocToc, ExperimentalComponentAlert, Property } from "#";
+import { ComponentPreview, DocContainer, ExperimentalComponentAlert, Property } from "#";
 import { tabs } from "$/px-script/main";
 import TabsComponent from "@/Tabs";
 
@@ -28,15 +28,6 @@ const Collapsed = () => (
     </>
 );
 
-const TabsText = () => (
-    <div className="col-lg-10 doc-body">
-        <ExperimentalComponentAlert />
-        <p className="lead">Tabs...</p>
-        <BasicUsage />
-        <Collapsed />
-    </div>
-);
-
 class Tabs extends Component {
     componentDidMount () {
         tabs.init();
@@ -44,12 +35,14 @@ class Tabs extends Component {
 
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <TabsText />
-                    <DocToc component={TabsText} />
-                </div>
-            </div>
+            <DocContainer docToc>
+                <ExperimentalComponentAlert />
+                <p className="lead">
+                    Use tabs to show which page or section that is active out of several options.
+                </p>
+                <BasicUsage />
+                <Collapsed />
+            </DocContainer>
         );
     }
 }
@@ -57,4 +50,4 @@ class Tabs extends Component {
 export default Tabs;
 
 /* For testing */
-export { BasicUsage, Collapsed, TabsText };
+export { BasicUsage, Collapsed };

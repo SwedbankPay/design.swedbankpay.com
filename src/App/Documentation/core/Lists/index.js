@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocToc, Icon, Property } from "#";
+import { ComponentPreview, DocContainer, Icon, Property } from "#";
 import actionList from "$/px-script/main/action-list";
 
 const BasicList = () => (
     <>
         <h2 id="basic-list">Basic list</h2>
-        <p>Basic lists info...<Property value=".list" /></p>
+        <p>
+            Add <Property value=".list" /> to a list to display the basic list. Our lists do not use bullet points.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="list">
                 <li>Bread</li>
@@ -16,7 +18,9 @@ const BasicList = () => (
             </ul>
         </ComponentPreview>
         <h3>Nested list</h3>
-        <p>Nested lists are also pretty sweet...</p>
+        <p>
+            Use nesting with lists to signify that some items are children of another item.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="list">
                 <li>Coffee</li>
@@ -35,7 +39,9 @@ const BasicList = () => (
 const InlineList = () => (
     <>
         <h2 id="inline-list">Inline list</h2>
-        <p>Inline lists info...<Property value=".list-inline" /></p>
+        <p>
+            Use <Property value=".list-inline" /> on a list to make all items appear on the same line.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="list list-inline">
                 <li>Coffee</li>
@@ -49,7 +55,9 @@ const InlineList = () => (
 const DescriptionList = () => (
     <>
         <h2 id="description-list">Description list</h2>
-        <p>Description lists info...<Property value=".description-list" /></p>
+        <p>
+            The description list lets you provide each item with a more specific description of each item. Add <Property value=".description-list" /> to your dl.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <dl className="description-list">{"\n"}
                 <dt>Frog</dt>
@@ -66,7 +74,9 @@ const DescriptionList = () => (
 const SettingsList = () => (
     <>
         <h2 id="settings-list">Settings list</h2>
-        <p>Settings lists info...<Property value=".settings-list" /></p>
+        <p>
+            Use <Property value=".settings-list" /> to visualize different settings in your web application.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="settings-list">
                 <li>{"\n"}
@@ -89,7 +99,9 @@ const SettingsList = () => (
 const ItemList = () => (
     <>
         <h2 id="item-list">Item list </h2>
-        <p> Item list info...<Property value=".item-list" /></p>
+        <p>
+            <Property value=".item-list"/>s is a good way to offer more extensive information about each item. Each item has their own box which seperates the items more clearly than our other options.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="item-list">
                 <li>
@@ -106,12 +118,14 @@ const ItemList = () => (
     </>
 );
 
-const StatusItemList = () => (
+const HoverItemList = () => (
     <>
-        <h2 id="status-item-list">Status item list </h2>
-        <p> Status item list info...<Property value=".item-list" /></p>
+        <h2 id="hover-item-list">Hover item list </h2>
+        <p>
+            Include <Property value=".item-list-hover" /> to give your items a hover effect. You can use this on any variation of <Property value=".item-list" />.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <ul className="item-list">
+            <ul className="item-list item-list-hover">
                 <li>{"\n"}
                     <span>4925*********004</span>{"\n"}
                     <span className="status status-success">Active</span>{"\n"}
@@ -132,7 +146,9 @@ const StatusItemList = () => (
 const StripedItemList = () => (
     <>
         <h2 id="item-list-striped">Striped item list</h2>
-        <p> Striped item list info...<Property value=".item-list-striped" /></p>
+        <p>
+            If you want more seperation between each item you can use <Property value=".item-list-striped" />.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="item-list item-list-striped">
                 <li>
@@ -167,19 +183,6 @@ const StripedItemList = () => (
     </>
 );
 
-const ListsText = () => (
-    <div className="col-lg-10 doc-body">
-        <p className="lead">Lots of cool info about lists will be here...</p>
-        <BasicList />
-        <InlineList />
-        <DescriptionList />
-        <SettingsList />
-        <ItemList />
-        <StatusItemList />
-        <StripedItemList />
-    </div>
-);
-
 class Lists extends Component {
     componentDidMount () {
         actionList.init();
@@ -187,12 +190,18 @@ class Lists extends Component {
 
     render () {
         return (
-            <div className="doc-container">
-                <div className="row">
-                    <ListsText />
-                    <DocToc component={ListsText} />
-                </div>
-            </div>
+            <DocContainer docToc>
+                <p className="lead">
+                    Use lists to give a structured view of information.
+                </p>
+                <BasicList />
+                <InlineList />
+                <DescriptionList />
+                <SettingsList />
+                <ItemList />
+                <HoverItemList />
+                <StripedItemList />
+            </DocContainer>
         );
     }
 }
@@ -200,4 +209,4 @@ class Lists extends Component {
 export default Lists;
 
 /* For testing */
-export { BasicList, InlineList, DescriptionList, SettingsList, ItemList, StatusItemList, StripedItemList, ListsText };
+export { BasicList, InlineList, DescriptionList, SettingsList, ItemList, HoverItemList, StripedItemList };

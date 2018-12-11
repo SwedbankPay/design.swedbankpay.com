@@ -11,7 +11,7 @@ const AppHeader = () => (
         <nav className="header-links">
             <NavLink exact to="/" activeClassName="active">Home</NavLink>
             <NavLink to="/docs" activeClassName="active">Documentation</NavLink>
-            {/* <NavLink to="/examples" activeClassName="active">Examples</NavLink> */}
+            <NavLink to="/examples" activeClassName="active">Examples</NavLink>
             {/* <NavLink to="/templates" activeClassName="active">Templates</NavLink> */}
         </nav>
         <div className="topbar-info">

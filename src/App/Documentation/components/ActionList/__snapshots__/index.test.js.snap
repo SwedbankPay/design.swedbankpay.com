@@ -1,20 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components: ActionList ActionListText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
->
-  <ExperimentalComponentAlert />
-  <p
-    className="lead"
-  >
-    Action lists...
-  </p>
-  <Overview />
-  <Anchorpoints />
-</div>
-`;
-
 exports[`Components: ActionList Anchorpoints onClick prevents default 1`] = `
 <Fragment>
   <h2
@@ -23,7 +8,7 @@ exports[`Components: ActionList Anchorpoints onClick prevents default 1`] = `
     Anchorpoints
   </h2>
   <p>
-    Customize anchorpoint... Top right is default.
+    You can change where the action list will have its anchor, by default the anchor will be top right.
   </p>
   <h3>
     Top left
@@ -273,7 +258,7 @@ exports[`Components: ActionList Anchorpoints renders 1`] = `
     Anchorpoints
   </h2>
   <p>
-    Customize anchorpoint... Top right is default.
+    You can change where the action list will have its anchor, by default the anchor will be top right.
   </p>
   <h3>
     Top left
@@ -676,16 +661,16 @@ exports[`Components: ActionList Overview renders 1`] = `
 `;
 
 exports[`Components: ActionList renders 1`] = `
-<div
-  className="doc-container"
+<DocContainer
+  docToc={true}
 >
-  <div
-    className="row"
+  <ExperimentalComponentAlert />
+  <p
+    className="lead"
   >
-    <ActionListText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+    Action lists are small menus that remain hidden until clicked. In these you can put page links or anchors that trigger an action elsewhere.
+  </p>
+  <Overview />
+  <Anchorpoints />
+</DocContainer>
 `;

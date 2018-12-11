@@ -100,32 +100,17 @@ exports[`Components: Tabs Collapsed renders 1`] = `
 </Fragment>
 `;
 
-exports[`Components: Tabs TabsText renders 1`] = `
-<div
-  className="col-lg-10 doc-body"
+exports[`Components: Tabs renders 1`] = `
+<DocContainer
+  docToc={true}
 >
   <ExperimentalComponentAlert />
   <p
     className="lead"
   >
-    Tabs...
+    Use tabs to show which page or section that is active out of several options.
   </p>
   <BasicUsage />
   <Collapsed />
-</div>
-`;
-
-exports[`Components: Tabs renders 1`] = `
-<div
-  className="doc-container"
->
-  <div
-    className="row"
-  >
-    <TabsText />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
-</div>
+</DocContainer>
 `;
