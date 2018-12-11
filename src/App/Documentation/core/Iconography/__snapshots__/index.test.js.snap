@@ -213,31 +213,31 @@ exports[`Core: Iconography Flags renders 1`] = `
     >
       <IconPreview
         name="se"
-        preview={true}
+        previewSize={true}
         size="tiny"
         type="flag-icon"
       />
       <IconPreview
         name="no"
-        preview={true}
+        previewSize={true}
         size="small"
         type="flag-icon"
       />
       <IconPreview
         name="dk"
-        preview={true}
+        previewSize={true}
         size="medium"
         type="flag-icon"
       />
       <IconPreview
         name="fi"
-        preview={true}
+        previewSize={true}
         size="large"
         type="flag-icon"
       />
       <IconPreview
         name="eu"
-        preview={true}
+        previewSize={true}
         size="huge"
         type="flag-icon"
       />
@@ -285,35 +285,35 @@ exports[`Core: Iconography Flags renders 1`] = `
     >
       <IconPreview
         name="se"
-        preview={true}
+        previewSize={true}
         size="tiny"
         squaredFlag={true}
         type="flag-icon"
       />
       <IconPreview
         name="no"
-        preview={true}
+        previewSize={true}
         size="small"
         squaredFlag={true}
         type="flag-icon"
       />
       <IconPreview
         name="dk"
-        preview={true}
+        previewSize={true}
         size="medium"
         squaredFlag={true}
         type="flag-icon"
       />
       <IconPreview
         name="fi"
-        preview={true}
+        previewSize={true}
         size="large"
         squaredFlag={true}
         type="flag-icon"
       />
       <IconPreview
         name="eu"
-        preview={true}
+        previewSize={true}
         size="huge"
         squaredFlag={true}
         type="flag-icon"

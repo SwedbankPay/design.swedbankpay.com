@@ -183,11 +183,11 @@ const Flags = () => (
         <p>Flags support sizes <Property value=".tiny" />, <Property value=".small" />, <Property value=".medium" />, <Property value=".large" /> and <Property value=".huge" />. If no size is provided <Property value=".tiny" /> is defaulted.</p>
         <ComponentPreview language="html" showCasePanel>
             <div className="row justify-content-evenly align-items-end">
-                <IconPreview preview type="flag-icon" name="se" size="tiny" />
-                <IconPreview preview type="flag-icon" name="no" size="small" />
-                <IconPreview preview type="flag-icon" name="dk" size="medium" />
-                <IconPreview preview type="flag-icon" name="fi" size="large" />
-                <IconPreview preview type="flag-icon" name="eu" size="huge" />
+                <IconPreview previewSize type="flag-icon" name="se" size="tiny" />
+                <IconPreview previewSize type="flag-icon" name="no" size="small" />
+                <IconPreview previewSize type="flag-icon" name="dk" size="medium" />
+                <IconPreview previewSize type="flag-icon" name="fi" size="large" />
+                <IconPreview previewSize type="flag-icon" name="eu" size="huge" />
             </div>
         </ComponentPreview>
         <ComponentPreview language="html" codeFigure>
@@ -200,11 +200,11 @@ const Flags = () => (
         <h3>Squared Sizes</h3>
         <ComponentPreview language="html" showCasePanel>
             <div className="row justify-content-evenly align-items-end">
-                <IconPreview preview type="flag-icon" squaredFlag name="se" size="tiny" />
-                <IconPreview preview type="flag-icon" squaredFlag name="no" size="small" />
-                <IconPreview preview type="flag-icon" squaredFlag name="dk" size="medium" />
-                <IconPreview preview type="flag-icon" squaredFlag name="fi" size="large" />
-                <IconPreview preview type="flag-icon" squaredFlag name="eu" size="huge" />
+                <IconPreview previewSize type="flag-icon" squaredFlag name="se" size="tiny" />
+                <IconPreview previewSize type="flag-icon" squaredFlag name="no" size="small" />
+                <IconPreview previewSize type="flag-icon" squaredFlag name="dk" size="medium" />
+                <IconPreview previewSize type="flag-icon" squaredFlag name="fi" size="large" />
+                <IconPreview previewSize type="flag-icon" squaredFlag name="eu" size="huge" />
             </div>
         </ComponentPreview>
         <ComponentPreview language="html" codeFigure>
