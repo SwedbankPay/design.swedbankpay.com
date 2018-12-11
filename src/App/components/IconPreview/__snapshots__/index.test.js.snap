@@ -71,9 +71,11 @@ exports[`Component: IconPreview -  renders a preview wrapper around material-ico
   >
     android
   </i>
-  <span>
+  <code
+    className="token property p-0 mt-2"
+  >
     android
-  </span>
+  </code>
 </div>
 `;
 
@@ -86,9 +88,11 @@ exports[`Component: IconPreview -  renders a preview wrapper around material-ico
   >
     android
   </i>
-  <span>
-    large
-  </span>
+  <code
+    className="token property p-0 mt-2"
+  >
+    .large
+  </code>
 </div>
 `;
 
@@ -99,9 +103,11 @@ exports[`Component: IconPreview -  renders a preview wrapper around payment-icon
   <i
     className="payment-icon amex"
   />
-  <span>
+  <code
+    className="token property p-0 mt-2"
+  >
     amex
-  </span>
+  </code>
 </div>
 `;
 

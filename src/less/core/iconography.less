@@ -1,3 +1,5 @@
+@import "flag-list";
+
 i.payment-icon {
     height: 2rem;
     width: 3rem;
@@ -80,3 +82,75 @@ i.material-icons {
         font-size: 6rem;
     }
 }
+
+i.flag-icon {
+    position: relative;
+    display: inline-block;
+    width: unit((4 / 3), rem);
+    line-height: 1rem;
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+
+    &.tiny {
+        width: unit((4 / 3), rem);
+        line-height: 1rem;
+    }
+
+    &.small {
+        width: unit(((4 / 3) * 1.5), rem);
+        line-height: 1.5rem;
+    }
+
+    &.medium {
+        width: unit(((4 / 3) * 2), rem);
+        line-height: 2rem;
+    }
+
+    &.large {
+        width: unit(((4 / 3) * 3), rem);
+        line-height: 3rem;
+    }
+
+    &.huge {
+        width: unit(((4 / 3) * 4), rem);
+        line-height: 4rem;
+    }
+
+    &:before {
+        content: "\00a0";
+    }
+
+    &.flag-icon-squared {
+        width: 1rem;
+
+        &.tiny {
+            width: 1rem;
+            line-height: 1rem;
+        }
+
+        &.small {
+            width: 1.5rem;
+            line-height: 1.5rem;
+        }
+
+        &.medium {
+            width: 2rem;
+            line-height: 2rem;
+        }
+
+        &.large {
+            width: 3rem;
+            line-height: 3rem;
+        }
+
+        &.huge {
+            width: 4rem;
+            line-height: 4rem;
+        }
+    }
+}
+
+each(@flag-list, .(@country-code) {
+    .flag-icon(@country-code);
+});

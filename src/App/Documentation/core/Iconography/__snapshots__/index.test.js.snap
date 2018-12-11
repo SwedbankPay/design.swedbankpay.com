@@ -1,5 +1,358 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Core: Iconography Flags renders 1`] = `
+<Fragment>
+  <h2
+    id="flags"
+  >
+    Flags
+  </h2>
+  <p>
+    To use the flag icons add the classes 
+    <Property
+      value=".flag-icon"
+    />
+     and 
+    <Property
+      value=".flag-icon-xx"
+    />
+     (where xx is the 
+    <a
+      href="https://www.iso.org/obp/ui/#search"
+    >
+      ISO 3166-1-alpha-2 code
+    </a>
+     of a country) to an empty 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;i&gt;
+    </PrismCode>
+    .
+  </p>
+  <ComponentPreview
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="row justify-content-evenly align-items-end"
+    >
+      <IconPreview
+        name="se"
+        preview={true}
+        type="flag-icon"
+      />
+      <IconPreview
+        name="no"
+        preview={true}
+        type="flag-icon"
+      />
+      <IconPreview
+        name="dk"
+        preview={true}
+        type="flag-icon"
+      />
+      <IconPreview
+        name="fi"
+        preview={true}
+        type="flag-icon"
+      />
+      <IconPreview
+        name="eu"
+        preview={true}
+        type="flag-icon"
+      />
+    </div>
+  </ComponentPreview>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+  >
+    <i
+      className="flag-icon flag-icon-no"
+    />
+    
+
+    <i
+      className="flag-icon flag-icon-sv"
+    />
+    
+
+    <i
+      className="flag-icon flag-icon-dk"
+    />
+    
+
+    <i
+      className="flag-icon flag-icon-fi"
+    />
+    
+
+    <i
+      className="flag-icon flag-icon-eu"
+    />
+    
+
+  </ComponentPreview>
+  <h3>
+    Squared
+  </h3>
+  <p>
+    To use a squared version of a flag add the class 
+    <Property
+      value=".flag-icon-squared"
+    />
+    .
+  </p>
+  <ComponentPreview
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="row justify-content-evenly align-items-end"
+    >
+      <IconPreview
+        name="se"
+        preview={true}
+        squaredFlag={true}
+        type="flag-icon"
+      />
+      <IconPreview
+        name="no"
+        preview={true}
+        squaredFlag={true}
+        type="flag-icon"
+      />
+      <IconPreview
+        name="dk"
+        preview={true}
+        squaredFlag={true}
+        type="flag-icon"
+      />
+      <IconPreview
+        name="fi"
+        preview={true}
+        squaredFlag={true}
+        type="flag-icon"
+      />
+      <IconPreview
+        name="eu"
+        preview={true}
+        squaredFlag={true}
+        type="flag-icon"
+      />
+    </div>
+  </ComponentPreview>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+  >
+    <i
+      className="flag-icon flag-icon-squared flag-icon-no"
+    />
+    
+
+    <i
+      className="flag-icon flag-icon-squared flag-icon-sv"
+    />
+    
+
+    <i
+      className="flag-icon flag-icon-squared flag-icon-dk"
+    />
+    
+
+    <i
+      className="flag-icon flag-icon-squared flag-icon-fi"
+    />
+    
+
+    <i
+      className="flag-icon flag-icon-squared flag-icon-eu"
+    />
+    
+
+  </ComponentPreview>
+  <h3>
+    Sizes
+  </h3>
+  <p>
+    Flags support sizes 
+    <Property
+      value=".tiny"
+    />
+    , 
+    <Property
+      value=".small"
+    />
+    , 
+    <Property
+      value=".medium"
+    />
+    , 
+    <Property
+      value=".large"
+    />
+     and 
+    <Property
+      value=".huge"
+    />
+    . If no size is provided 
+    <Property
+      value=".tiny"
+    />
+     is defaulted.
+  </p>
+  <ComponentPreview
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="row justify-content-evenly align-items-end"
+    >
+      <IconPreview
+        name="se"
+        previewSize={true}
+        size="tiny"
+        type="flag-icon"
+      />
+      <IconPreview
+        name="no"
+        previewSize={true}
+        size="small"
+        type="flag-icon"
+      />
+      <IconPreview
+        name="dk"
+        previewSize={true}
+        size="medium"
+        type="flag-icon"
+      />
+      <IconPreview
+        name="fi"
+        previewSize={true}
+        size="large"
+        type="flag-icon"
+      />
+      <IconPreview
+        name="eu"
+        previewSize={true}
+        size="huge"
+        type="flag-icon"
+      />
+    </div>
+  </ComponentPreview>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+  >
+    <i
+      className="flag-icon flag-icon-no tiny"
+    />
+    
+
+    <i
+      className="flag-icon flag-icon-sv small"
+    />
+    
+
+    <i
+      className="flag-icon flag-icon-dk medium"
+    />
+    
+
+    <i
+      className="flag-icon flag-icon-fi large"
+    />
+    
+
+    <i
+      className="flag-icon flag-icon-eu huge"
+    />
+    
+
+  </ComponentPreview>
+  <h3>
+    Squared Sizes
+  </h3>
+  <ComponentPreview
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="row justify-content-evenly align-items-end"
+    >
+      <IconPreview
+        name="se"
+        previewSize={true}
+        size="tiny"
+        squaredFlag={true}
+        type="flag-icon"
+      />
+      <IconPreview
+        name="no"
+        previewSize={true}
+        size="small"
+        squaredFlag={true}
+        type="flag-icon"
+      />
+      <IconPreview
+        name="dk"
+        previewSize={true}
+        size="medium"
+        squaredFlag={true}
+        type="flag-icon"
+      />
+      <IconPreview
+        name="fi"
+        previewSize={true}
+        size="large"
+        squaredFlag={true}
+        type="flag-icon"
+      />
+      <IconPreview
+        name="eu"
+        previewSize={true}
+        size="huge"
+        squaredFlag={true}
+        type="flag-icon"
+      />
+    </div>
+  </ComponentPreview>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+  >
+    <i
+      className="flag-icon flag-icon-squared flag-icon-no tiny"
+    />
+    
+
+    <i
+      className="flag-icon flag-icon-squared flag-icon-sv small"
+    />
+    
+
+    <i
+      className="flag-icon flag-icon-squared flag-icon-dk medium"
+    />
+    
+
+    <i
+      className="flag-icon flag-icon-squared flag-icon-fi large"
+    />
+    
+
+    <i
+      className="flag-icon flag-icon-squared flag-icon-eu huge"
+    />
+    
+
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Core: Iconography MaterialIcons renders 1`] = `
 <Fragment>
   <h2
@@ -7,6 +360,19 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
   >
     Material Icons
   </h2>
+  <p
+    className="lead"
+  >
+    DesignGuide includes Google
+    '
+    s material icons. For a full overview of the available icons please visit 
+    <a
+      href="https://material.io/tools/icons/"
+    >
+      this site
+    </a>
+    .
+  </p>
   <p>
     To use an icon, provide the following markup: 
     <PrismCode
@@ -18,9 +384,42 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
     .
   </p>
   <ComponentPreview
-    codeFigure={true}
     language="html"
     showCasePanel={true}
+  >
+    <div
+      className="row justify-content-evenly align-items-end"
+    >
+      <IconPreview
+        name="android"
+        preview={true}
+        type="material-icons"
+      />
+      <IconPreview
+        name="contact_support"
+        preview={true}
+        type="material-icons"
+      />
+      <IconPreview
+        name="face"
+        preview={true}
+        type="material-icons"
+      />
+      <IconPreview
+        name="star"
+        preview={true}
+        type="material-icons"
+      />
+      <IconPreview
+        name="warning"
+        preview={true}
+        type="material-icons"
+      />
+    </div>
+  </ComponentPreview>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
   >
     <i
       className="material-icons"
@@ -83,7 +482,7 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="row justify-content-evenly align-items-center"
+      className="row justify-content-evenly align-items-end"
     >
       <IconPreview
         name="android"
@@ -304,7 +703,7 @@ exports[`Core: Iconography PaymentIcons onClick prevents default 1`] = `
     <Property
       value=".large"
     />
-     and
+     and 
     <Property
       value=".huge"
     />
@@ -319,7 +718,7 @@ exports[`Core: Iconography PaymentIcons onClick prevents default 1`] = `
     showCasePanel={true}
   >
     <div
-      className="row justify-content-evenly align-items-center"
+      className="row justify-content-evenly align-items-end"
     >
       <IconPreview
         name="visa"
@@ -751,7 +1150,7 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
     <Property
       value=".large"
     />
-     and
+     and 
     <Property
       value=".huge"
     />
@@ -766,7 +1165,7 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="row justify-content-evenly align-items-center"
+      className="row justify-content-evenly align-items-end"
     >
       <IconPreview
         name="visa"
@@ -1046,17 +1445,10 @@ exports[`Core: Iconography renders 1`] = `
   <p
     className="lead"
   >
-    The PayEx DesignGuide includes Google
-    '
-    s material icons. For a full overview of the available icons please visit 
-    <a
-      href="https://material.io/tools/icons/"
-    >
-      this site
-    </a>
-    .
+    The PayEx DesignGuide includes a variety of icons. Mainly we use the material icons, but we also include icons for known payment providers, and flags for most nations in the world.
   </p>
   <MaterialIcons />
   <PaymentIcons />
+  <Flags />
 </DocContainer>
 `;
