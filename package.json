@@ -32,6 +32,7 @@
         "@babel/polyfill": "^7.0.0",
         "chart.js": "^2.7.3",
         "classnames": "^2.2.6",
+        "flatpickr": "^4.5.2",
         "js-beautify": "^1.8.9",
         "normalize.css": "^8.0.1",
         "prism-react-renderer": "^0.1.5",

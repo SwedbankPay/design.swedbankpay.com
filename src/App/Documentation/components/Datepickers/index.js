@@ -5,6 +5,8 @@ import { Datepicker as DatepickerComponent } from "@/FormComponents";
 import { datepicker } from "$/px-script/main";
 import Alert from "@/Alert";
 
+require("flatpickr/dist/themes/material_green.css");
+
 const moment = window.moment;
 
 const AboutDatepickers = () => (
@@ -21,7 +23,10 @@ const AboutDatepickers = () => (
 const SimpleDatepicker = () => (
     <>
         <h2 id="simple-datepicker">Simple datepicker</h2>
-        <p>A basic datepicker can be made by applying the attribute <Attribute data name="datepicker" /> to an input element inside a <Property value=".form-group" />.</p>
+        <p>
+            A basic datepicker can be made by applying the attribute <Attribute data name="datepicker" /> to an input element inside a <Property value=".form-group" />.
+            The basic datepicker has a read-only input field.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent
                 label="Date"
@@ -300,11 +305,11 @@ class Datepickers extends Component {
                 <SimpleDatepicker />
                 <InitialValue />
                 <CustomFormat />
-                <IncludeTime />
+                {/* <IncludeTime />
                 <Required />
                 <ShowingMultipleMonths />
                 <DateRange />
-                <Options />
+                <Options /> */}
             </DocContainer>
         );
     }
