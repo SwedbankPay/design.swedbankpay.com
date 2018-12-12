@@ -272,7 +272,7 @@ exports[`Documentation: Datepickers SimpleDatepicker renders 1`] = `
     <Property
       value=".form-group"
     />
-    .
+    . The basic datepicker has a read-only input field.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -302,10 +302,5 @@ exports[`Documentation: Datepickers renders 1`] = `
   <SimpleDatepicker />
   <InitialValue />
   <CustomFormat />
-  <IncludeTime />
-  <Required />
-  <ShowingMultipleMonths />
-  <DateRange />
-  <Options />
 </DocContainer>
 `;

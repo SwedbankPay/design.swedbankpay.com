@@ -5,7 +5,7 @@ import { Datepicker as DatepickerComponent } from "@/FormComponents";
 import { datepicker } from "$/px-script/main";
 import Alert from "@/Alert";
 
-require("flatpickr/dist/themes/material_green.css");
+// require("flatpickr/dist/themes/material_green.css");
 
 const moment = window.moment;
 
