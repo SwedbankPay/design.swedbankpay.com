@@ -18,11 +18,25 @@ const datepicker = (() => {
             required
         } = datepicker.dataset;
 
-        // Some format check to see if it's valid [AW]
+        // A type of format check to see if the value is valid [AW]
 
         const options = {
-            defaultDate: datepickerValue || null
+            defaultDate: datepickerValue || null,
+            dateFormat: datepickerFormat ? formats[datepickerFormat].dateFormat : "Y-m-d",
+            locale: datepickerFormat ? formats[datepickerFormat] : null,
+            enableTime: !!datepickerTime || "",
+            showMonths: datepickerMonths || 1,
+            time_24hr: true
         };
+
+        if (datepickerFormat && options.enableTime) {
+            options.dateFormat = formats[datepickerFormat].dateFormat.concat(" ", formats[datepickerFormat].hourFormat);
+            options.locale = formats[datepickerFormat];
+        }
+        // else if (datepickerFormat) {
+        //     options.dateFormat = formats[datepickerFormat].dateFormat;
+        //     options.locale = formats[datepickerFormat];
+        // }
 
         flatpickr(datepicker, options);
     };

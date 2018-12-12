@@ -3,69 +3,142 @@
 
 export default {
     nb: {
-        dateFormat: "DD.MM.YYYY",
-        hourFormat: "HH:mm",
-        locale: {
-            months: ["januar", "februar", "mars", "april", "mai", "juni", "juli", "august", "september", "oktober", "november", "desember"],
-            monthsShort: ["jan", "feb", "mar", "apr", "mai", "jun", "jul", "aug", "sep", "okt", "nov", "des"],
-            weekdays: ["søndag", "mandag", "tirsdag", "onsdag", "torsdag", "fredag", "lørdag"],
-            weekdaysShort: ["søn", "man", "tir", "ons", "tor", "fre", "lør"],
-            weekdaysMin: ["sø", "ma", "ti", "on", "to", "fr", "lø"]
-        }
+        dateFormat: "d.m.Y",
+        hourFormat: "H:i",
+        firstDayOfWeek: 1,
+        months: {
+            shorthand: ["jan", "feb", "mar", "apr", "mai", "jun", "jul", "aug", "sep", "okt", "nov", "des"],
+            longhand: ["januar", "februar", "mars", "april", "mai", "juni", "juli", "august", "september", "oktober", "november", "desember"]
+        },
+        weekdays: {
+            shorthand: ["søn", "man", "tir", "ons", "tor", "fre", "lør"],
+            longhand: ["søndag", "mandag", "tirsdag", "onsdag", "torsdag", "fredag", "lørdag"]
+        },
+        rangeSeperator: " til ",
+        scrollTitle: "Scroll for å endre",
+        toggleTitle: "Klikk for å veksle",
+        weekAbbreviation: "Uke",
+        ordinal: () => "."
     },
     sv: {
-        dateFormat: "YYYY-MM-DD",
-        hourFormat: "HH:mm",
-        locale: {
-            months: ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"],
-            monthsShort: ["jan", "feb", "mar", "apr", "maj", "jun", "jul", "aug", "sep", "okt", "nov", "dec"],
-            weekdays: ["söndag", "måndag", "tisdag", "onsdag", "torsdag", "fredag", "lördag"],
-            weekdaysShort: ["sön", "mån", "tis", "ons", "tor", "fre", "lör"],
-            weekdaysMin: ["sö", "må", "ti", "on", "to", "fr", "lö"]
-        }
+        dateFormat: "Y-m-d",
+        hourFormat: "H:i",
+        firstDayOfWeek: 1,
+        months: {
+            shorthand: ["jan", "feb", "mar", "apr", "maj", "jun", "jul", "aug", "sep", "okt", "nov", "dec"],
+            longhand: ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"]
+        },
+        weekdays: {
+            shorthand: ["sön", "mån", "tis", "ons", "tor", "fre", "lör"],
+            longhand: ["söndag", "måndag", "tisdag", "onsdag", "torsdag", "fredag", "lördag"]
+        },
+        weekAbbreviation: "v",
+        ordinal: () => "."
     },
     da: {
-        dateFormat: "DD.MM.YYYY",
-        hourFormat: "HH:mm",
-        locale: {
-            months: ["januar", "februar", "marts", "april", "maj", "juni", "juli", "august", "september", "oktober", "november", "december"],
-            monthsShort: ["jan", "feb", "mar", "apr", "maj", "jun", "jul", "aug", "sep", "okt", "nov", "dec"],
-            weekdays: ["søndag", "mandag", "tirsdag", "onsdag", "torsdag", "fredag", "lørdag"],
-            weekdaysShort: ["søn", "man", "tir", "ons", "tor", "fre", "lør"],
-            weekdaysMin: ["sø", "ma", "ti", "on", "to", "fr", "lø"]
-        }
+        dateFormat: "d.m.Y",
+        hourFormat: "H:i",
+        firstDayOfWeek: 1,
+        months: {
+            shorthand: ["jan", "feb", "mar", "apr", "maj", "jun", "jul", "aug", "sep", "okt", "nov", "dec"],
+            longhand: ["januar", "februar", "marts", "april", "maj", "juni", "juli", "august", "september", "oktober", "november", "december"]
+        },
+        weekdays: {
+            shorthand: ["søn", "man", "tir", "ons", "tor", "fre", "lør"],
+            longhand: ["søndag", "mandag", "tirsdag", "onsdag", "torsdag", "fredag", "lørdag"]
+        },
+        rangeSeperator: " til ",
+        weekAbbreviation: "uge",
+        ordinal: () => "."
     },
     fi: {
-        dateFormat: "DD.MM.YYYY",
-        hourFormat: "HH:mm",
-        locale: {
-            months: ["tammikuu", "helmikuu", "maaliskuu", "huhtikuu", "toukokuu", "kesäkuu", "heinäkuu", "elokuu", "syyskuu", "lokakuu", "marraskuu", "joulukuu"],
-            monthsShort: ["tammi", "helmi", "maalis", "huhti", "touko", "kesä", "heinä", "elo", "syys", "loka", "marras", "joulu"],
-            weekdays: ["sunnuntai", "maanantai", "tiistai", "keskiviikko", "torstai", "perjantai", "lauantai"],
-            weekdaysShort: ["su", "ma", "ti", "ke", "to", "pe", "la"],
-            weekdaysMin: ["su", "ma", "ti", "ke", "to", "pe", "la"]
-        }
+        dateFormat: "d.m.Y",
+        hourFormat: "H:i",
+        firstDayOfWeek: 1,
+        weekdays: {
+            shorthand: ["Su", "Ma", "Ti", "Ke", "To", "Pe", "La"],
+            longhand: ["Sunnuntai", "Maanantai", "Tiistai", "Keskiviikko", "Torstai", "Perjantai", "Lauantai"]
+        },
+        months: {
+            shorthand: ["Tammi", "Helmi", "Maalis", "Huhti", "Touko", "Kesä", "Heinä", "Elo", "Syys", "Loka", "Marras", "Joulu"],
+            longhand: ["Tammikuu", "Helmikuu", "Maaliskuu", "Huhtikuu", "Toukokuu", "Kesäkuu", "Heinäkuu", "Elokuu", "Syyskuu", "Lokakuu", "Marraskuu", "Joulukuu"]
+        },
+        ordinal: () => "."
     },
     en: {
-        dateFormat: "DD/MM/YYYY",
-        hourFormat: "HH:mm",
-        locale: {
-            months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-            monthsShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-            weekdays: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            weekdaysShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-            weekdaysMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]
-        }
+        dateFormat: "d/m/Y",
+        hourFormat: "H:i",
+        daysInMonth: [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
+        firstDayOfWeek: 0,
+        weekdays: {
+            shorthand: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+            longhand: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        },
+        months: {
+            shorthand: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            longhand: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+        },
+        ordinal (nth) {
+            const s = nth % 100;
+
+            if (s > 3 && s < 21) {
+                return "th";
+            }
+
+            switch (s % 10) {
+                case 1:
+                    return "st";
+                case 2:
+                    return "nd";
+                case 3:
+                    return "rd";
+                default:
+                    return "th";
+            }
+        },
+        rangeSeparator: " to ",
+        weekAbbreviation: "Wk",
+        scrollTitle: "Scroll to increment",
+        toggleTitle: "Click to toggle",
+        amPM: ["AM", "PM"],
+        yearAriaLabel: "Year"
     },
     iso8601: {
-        dateFormat: "YYYY-MM-DD",
-        hourFormat: "HH:mm",
-        locale: {
-            months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-            monthsShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-            weekdays: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            weekdaysShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-            weekdaysMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]
-        }
+        dateFormat: "Y-m-d",
+        hourFormat: "H:i",
+        daysInMonth: [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
+        firstDayOfWeek: 0,
+        weekdays: {
+            shorthand: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+            longhand: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        },
+        months: {
+            shorthand: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            longhand: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+        },
+        ordinal (nth) {
+            const s = nth % 100;
+
+            if (s > 3 && s < 21) {
+                return "th";
+            }
+
+            switch (s % 10) {
+                case 1:
+                    return "st";
+                case 2:
+                    return "nd";
+                case 3:
+                    return "rd";
+                default:
+                    return "th";
+            }
+        },
+        rangeSeparator: " to ",
+        weekAbbreviation: "Wk",
+        scrollTitle: "Scroll to increment",
+        toggleTitle: "Click to toggle",
+        amPM: ["AM", "PM"],
+        yearAriaLabel: "Year"
     }
 };

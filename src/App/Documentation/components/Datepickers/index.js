@@ -5,7 +5,7 @@ import { Datepicker as DatepickerComponent } from "@/FormComponents";
 import { datepicker } from "$/px-script/main";
 import Alert from "@/Alert";
 
-// require("flatpickr/dist/themes/material_green.css");
+// require("flatpickr/dist/flatpickr.css");
 
 const moment = window.moment;
 
@@ -120,11 +120,14 @@ const CustomFormat = () => (
 const IncludeTime = () => (
     <>
         <h2 id="include-time">Include time</h2>
-        <p>Adding time to your datepicker is as easy as using <Attribute data name="datepicker-time" value="true" />.</p>
+        <p>
+            Adding time to your datepicker is as easy as using <Attribute data name="datepicker-time" value="true" />. If you wish to set
+            a default time for the time picker just include it in the <Attribute data name="datepicker-value" value={moment().format("DD.MM.YYYY HH:mm")} /> attribute.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent
                 time
-                value={moment().format("HH:mm DD.MM.YYYY")}
+                value={moment().format("DD.MM.YYYY HH:mm")}
                 format="nb"
                 label="Date"
                 prefixType="icon"
@@ -305,10 +308,10 @@ class Datepickers extends Component {
                 <SimpleDatepicker />
                 <InitialValue />
                 <CustomFormat />
-                {/* <IncludeTime />
-                <Required />
+                <IncludeTime />
+                {/* <Required /> We have to script this manually if we want it [AW] */}
                 <ShowingMultipleMonths />
-                <DateRange />
+                {/* <DateRange />
                 <Options /> */}
             </DocContainer>
         );
