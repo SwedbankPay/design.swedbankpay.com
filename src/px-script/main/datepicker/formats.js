@@ -32,6 +32,7 @@ export default {
             shorthand: ["sön", "mån", "tis", "ons", "tor", "fre", "lör"],
             longhand: ["söndag", "måndag", "tisdag", "onsdag", "torsdag", "fredag", "lördag"]
         },
+        rangeSeparator: " till ",
         weekAbbreviation: "v",
         ordinal: () => "."
     },
@@ -63,6 +64,7 @@ export default {
             shorthand: ["Tammi", "Helmi", "Maalis", "Huhti", "Touko", "Kesä", "Heinä", "Elo", "Syys", "Loka", "Marras", "Joulu"],
             longhand: ["Tammikuu", "Helmikuu", "Maaliskuu", "Huhtikuu", "Toukokuu", "Kesäkuu", "Heinäkuu", "Elokuu", "Syyskuu", "Lokakuu", "Marraskuu", "Joulukuu"]
         },
+        rangeSeparator: " että ",
         ordinal: () => "."
     },
     en: {

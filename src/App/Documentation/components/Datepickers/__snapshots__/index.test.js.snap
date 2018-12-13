@@ -300,10 +300,13 @@ exports[`Documentation: Datepickers renders 1`] = `
   </p>
   <AboutDatepickers />
   <SimpleDatepicker />
+  <AltInput />
   <InitialValue />
   <CustomFormat />
   <IncludeTime />
   <ShowingMultipleMonths />
+  <ValidDates />
   <DateRange />
+  <Options />
 </DocContainer>
 `;

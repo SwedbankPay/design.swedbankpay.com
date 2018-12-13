@@ -4,9 +4,11 @@ exports[`Component: Datepicker -  renders 1`] = `
 <input
   className="form-control"
   data-datepicker=""
+  data-datepicker-altinput={null}
   data-datepicker-format={null}
   data-datepicker-max={null}
   data-datepicker-min={null}
+  data-datepicker-mode={null}
   data-datepicker-months={null}
   data-datepicker-time={null}
   data-datepicker-value={null}
@@ -38,9 +40,11 @@ exports[`Component: Datepicker -  renders with the form-group and label 1`] = `
     <input
       className="form-control"
       data-datepicker=""
+      data-datepicker-altinput={null}
       data-datepicker-format={null}
       data-datepicker-max={null}
       data-datepicker-min={null}
+      data-datepicker-mode={null}
       data-datepicker-months={null}
       data-datepicker-time={null}
       data-datepicker-value={null}

@@ -4,8 +4,7 @@ import { ComponentPreview, Attribute, Property, DocContainer } from "#";
 import { Datepicker as DatepickerComponent } from "@/FormComponents";
 import { datepicker } from "$/px-script/main";
 import Alert from "@/Alert";
-
-// require("flatpickr/dist/flatpickr.css");
+// import "flatpickr/dist/flatpickr.css";
 
 const moment = window.moment;
 
@@ -55,6 +54,26 @@ const InitialValue = () => (
             <h5>Initial value and format</h5>
             <p>Keep in mind that the datepicker will not insert the initial value if it does not correctly match the set format (<Attribute value="iso8601"/> if you have not specified a format).</p>
         </Alert>
+    </>
+);
+
+const AltInput = () => (
+    <>
+        <h2 id="alt-input">Alternative date</h2>
+        <p>
+            You can change how the date is displayed to the user by using <Attribute data name="datepicker-altinput" value="{desired format}"/>. You
+            can see the different formatting options at the bottom of the page.
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <DatepickerComponent
+                value="today"
+                label="Date"
+                prefixType="icon"
+                prefixValue="event"
+                altInput="F j, Y"
+                id="init-value-datepicker"
+            />
+        </ComponentPreview>
     </>
 );
 
@@ -169,7 +188,7 @@ const ShowingMultipleMonths = () => (
     </>
 );
 
-const DateRange = () => {
+const ValidDates = () => {
     let futureDate = new Date();
 
     futureDate.setDate(futureDate.getDate() + 15);
@@ -177,9 +196,9 @@ const DateRange = () => {
 
     return (
         <>
-            <h2 id="date-range">Date range</h2>
+            <h2 id="valid-dates">Valid dates</h2>
             <p>
-                You can set a range of available dates to select from by using <Attribute data name="datepicker-min" /> and <Attribute data name="datepicker-max" />
+                You can set a range of available dates to select from by using <Attribute data name="datepicker-min" /> and <Attribute data name="datepicker-max" />.
             </p>
             <ComponentPreview language="html" showCasePanel codeFigure>
                 <DatepickerComponent
@@ -190,13 +209,33 @@ const DateRange = () => {
                     label="Date"
                     prefixType="icon"
                     prefixValue="event"
-                    id="date-range-datepicker"
+                    id="valid-dates-datepicker"
                 />
             </ComponentPreview>
             <p><b>NOTE:</b> Using range with required and no initial value will make the datepicker select current date if a user clicks the input and does not select a date within the range.</p>
         </>
     );
 };
+
+const DateRange = () => (
+    <>
+        <h2 id="date-range">Date range</h2>
+        <p>
+            You can make it possible to select a range of dates with <Attribute data name="datepicker-range" />.
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <DatepickerComponent
+                value="today"
+                min="today"
+                label="date"
+                prefixType="icon"
+                prefixValue="event"
+                id="date-range-datepicker"
+                mode="range"
+            />
+        </ComponentPreview>
+    </>
+);
 
 const Options = () => (
     <>
@@ -310,13 +349,15 @@ class Datepickers extends Component {
                 </p>
                 <AboutDatepickers />
                 <SimpleDatepicker />
+                <AltInput />
                 <InitialValue />
                 <CustomFormat />
                 <IncludeTime />
                 {/* <Required /> We have to script this manually if we want it [AW] */}
                 <ShowingMultipleMonths />
+                <ValidDates />
                 <DateRange />
-                {/* <Options /> */}
+                <Options />
             </DocContainer>
         );
     }
@@ -325,4 +366,4 @@ class Datepickers extends Component {
 export default Datepickers;
 
 /* For testing */
-export { SimpleDatepicker, InitialValue, CustomFormat, IncludeTime, Required, ShowingMultipleMonths, DateRange, Options };
+export { SimpleDatepicker, InitialValue, CustomFormat, IncludeTime, Required, ShowingMultipleMonths, ValidDates, DateRange, Options };

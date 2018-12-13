@@ -15,8 +15,12 @@ const datepicker = (() => {
             datepickerMax,
             datepickerValue,
             datepickerMonths,
+            datepickerAltinput,
+            datepickerMode,
             required
         } = datepicker.dataset;
+
+        console.log(datepicker.dataset);
 
         // A type of format check to see if the value is valid [AW]
 
@@ -30,6 +34,9 @@ const datepicker = (() => {
             locale: format,
             enableTime: !!datepickerTime || "",
             showMonths: datepickerMonths || 1,
+            altInput: !!datepickerAltinput,
+            altFormat: datepickerAltinput ? datepickerAltinput : "",
+            mode: datepickerMode || "single",
             time_24hr: true
         };
 

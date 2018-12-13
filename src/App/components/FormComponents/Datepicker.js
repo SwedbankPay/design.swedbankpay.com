@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Addon } from "@/InputGroup";
 
-const Datepicker = ({ format, time, min, max, months, value, label, required, prefixValue, prefixType, id }) => {
+const Datepicker = ({ format, time, min, max, months, value, label, prefixValue, prefixType, altInput, mode, required, id }) => {
     const attrs = {
         className: "form-control",
         type: "text",
@@ -13,6 +13,8 @@ const Datepicker = ({ format, time, min, max, months, value, label, required, pr
         "data-datepicker-max": max || null,
         "data-datepicker-value": value || null,
         "data-datepicker-months": months || null,
+        "data-datepicker-altinput": altInput || null,
+        "data-datepicker-mode": mode || null,
         "data-required": required || null,
         id
     };
@@ -30,7 +32,7 @@ const Datepicker = ({ format, time, min, max, months, value, label, required, pr
 };
 
 Datepicker.propTypes = {
-    // format: PropTypes.oneOf(["nb", "sv", "da", "fi", "en", "iso8601"]),
+    format: PropTypes.oneOf(["nb", "sv", "da", "fi", "en", "iso8601"])
     // time: PropTypes.bool,
     // min: PropTypes.string,
     // max: PropTypes.string,
