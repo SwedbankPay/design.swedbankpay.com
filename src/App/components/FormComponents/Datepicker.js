@@ -30,15 +30,15 @@ const Datepicker = ({ format, time, min, max, months, value, label, required, pr
 };
 
 Datepicker.propTypes = {
-    format: PropTypes.oneOf(["nb", "sv", "da", "fi", "en", "iso8601"]),
-    time: PropTypes.bool,
-    min: PropTypes.string,
-    max: PropTypes.string,
-    months: PropTypes.string,
-    value: PropTypes.string,
-    label: PropTypes.string,
-    id: PropTypes.string,
-    required: PropTypes.bool
+    // format: PropTypes.oneOf(["nb", "sv", "da", "fi", "en", "iso8601"]),
+    // time: PropTypes.bool,
+    // min: PropTypes.string,
+    // max: PropTypes.string,
+    // months: PropTypes.string,
+    // value: PropTypes.string,
+    // label: PropTypes.string,
+    // id: PropTypes.string,
+    // required: PropTypes.bool
 };
 
 export default Datepicker;

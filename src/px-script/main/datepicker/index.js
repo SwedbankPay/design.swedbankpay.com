@@ -20,23 +20,22 @@ const datepicker = (() => {
 
         // A type of format check to see if the value is valid [AW]
 
+        const format = datepickerFormat ? formats[datepickerFormat] : null;
+
         const options = {
             defaultDate: datepickerValue || null,
-            dateFormat: datepickerFormat ? formats[datepickerFormat].dateFormat : "Y-m-d",
-            locale: datepickerFormat ? formats[datepickerFormat] : null,
+            minDate: datepickerMin || null,
+            maxDate: datepickerMax || null,
+            dateFormat: format ? format.dateFormat : "Y-m-d",
+            locale: format,
             enableTime: !!datepickerTime || "",
             showMonths: datepickerMonths || 1,
             time_24hr: true
         };
 
-        if (datepickerFormat && options.enableTime) {
-            options.dateFormat = formats[datepickerFormat].dateFormat.concat(" ", formats[datepickerFormat].hourFormat);
-            options.locale = formats[datepickerFormat];
+        if (format && options.enableTime) {
+            options.dateFormat = format.dateFormat.concat(" ", format.hourFormat);
         }
-        // else if (datepickerFormat) {
-        //     options.dateFormat = formats[datepickerFormat].dateFormat;
-        //     options.locale = formats[datepickerFormat];
-        // }
 
         flatpickr(datepicker, options);
     };

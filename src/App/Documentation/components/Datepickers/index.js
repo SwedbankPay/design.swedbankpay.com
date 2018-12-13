@@ -169,30 +169,34 @@ const ShowingMultipleMonths = () => (
     </>
 );
 
-const DateRange = () => (
-    <>
-        <h2 id="date-range">Date range</h2>
-        <p>
-            You can set a range of available dates to select from by using <Attribute data name="datepicker-min" /> and <Attribute data name="datepicker-max" />
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            {/* eslint-disable newline-per-chained-call*/}
-            <DatepickerComponent
-                value={moment().format("DD.MM.YYYY")}
-                min={moment().subtract(5, "d").format("DD.MM.YYYY")}
-                max={moment().add(5, "d").format("DD.MM.YYYY")}
-                months="2"
-                format="nb"
-                label="Date"
-                prefixType="icon"
-                prefixValue="event"
-                id="date-range-datepicker"
-            />
-            {/* eslint-enable newline-per-chained-call*/}
-        </ComponentPreview>
-        <p><b>NOTE:</b> Using range with required and no initial value will make the datepicker select current date if a user clicks the input and does not select a date within the range.</p>
-    </>
-);
+const DateRange = () => {
+    let futureDate = new Date();
+
+    futureDate.setDate(futureDate.getDate() + 15);
+    futureDate = `${futureDate.getFullYear()}-${futureDate.getMonth() + 1}-${futureDate.getDate()}`;
+
+    return (
+        <>
+            <h2 id="date-range">Date range</h2>
+            <p>
+                You can set a range of available dates to select from by using <Attribute data name="datepicker-min" /> and <Attribute data name="datepicker-max" />
+            </p>
+            <ComponentPreview language="html" showCasePanel codeFigure>
+                <DatepickerComponent
+                    value="today"
+                    min="today"
+                    max={futureDate}
+                    format="nb"
+                    label="Date"
+                    prefixType="icon"
+                    prefixValue="event"
+                    id="date-range-datepicker"
+                />
+            </ComponentPreview>
+            <p><b>NOTE:</b> Using range with required and no initial value will make the datepicker select current date if a user clicks the input and does not select a date within the range.</p>
+        </>
+    );
+};
 
 const Options = () => (
     <>
@@ -311,8 +315,8 @@ class Datepickers extends Component {
                 <IncludeTime />
                 {/* <Required /> We have to script this manually if we want it [AW] */}
                 <ShowingMultipleMonths />
-                {/* <DateRange />
-                <Options /> */}
+                <DateRange />
+                {/* <Options /> */}
             </DocContainer>
         );
     }

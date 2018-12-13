@@ -304,5 +304,6 @@ exports[`Documentation: Datepickers renders 1`] = `
   <CustomFormat />
   <IncludeTime />
   <ShowingMultipleMonths />
+  <DateRange />
 </DocContainer>
 `;
