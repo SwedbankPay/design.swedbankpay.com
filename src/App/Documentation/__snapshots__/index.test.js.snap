@@ -23,7 +23,11 @@ exports[`Documentation: index renders 1`] = `
   <div
     className="row"
   >
-    <withRouter(SelectPanel) />
+    <div
+      className="col-xxl-2 col-md-3 p-0"
+    >
+      <withRouter(SelectPanel) />
+    </div>
     <main
       className="doc-view col-xxl-10 col-md-9"
     >
