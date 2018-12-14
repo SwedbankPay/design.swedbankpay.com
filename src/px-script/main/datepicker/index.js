@@ -1,12 +1,8 @@
-import rome from "rome";
-
 import formats from "./formats";
 import flatpickr from "flatpickr";
 
 // 080989◢◤200418
 const datepicker = (() => {
-    window.moment = window.moment || rome.moment;
-
     const _createDatepicker = datepicker => {
         const {
             datepickerFormat,
@@ -17,26 +13,30 @@ const datepicker = (() => {
             datepickerMonths,
             datepickerAltinput,
             datepickerMode,
-            required
+            datepickerAllowinput
         } = datepicker.dataset;
 
-        console.log(datepicker.dataset);
-
         // A type of format check to see if the value is valid [AW]
+        const format = datepickerFormat ? formats[datepickerFormat] : formats.iso8601;
 
-        const format = datepickerFormat ? formats[datepickerFormat] : null;
+        if (datepickerFormat && !formats[datepickerFormat]) {
+            console.warn(`${datepickerFormat} is not a recognised date format, using default date format instead.`);
+        }
+
+        console.log(formats.iso8601);
 
         const options = {
-            defaultDate: datepickerValue || null,
-            minDate: datepickerMin || null,
-            maxDate: datepickerMax || null,
-            dateFormat: format ? format.dateFormat : "Y-m-d",
-            locale: format,
-            enableTime: !!datepickerTime || "",
-            showMonths: datepickerMonths || 1,
+            allowInput: !!datepickerAllowinput,
             altInput: !!datepickerAltinput,
             altFormat: datepickerAltinput ? datepickerAltinput : "",
+            defaultDate: datepickerValue || null,
+            dateFormat: format.dateFormat,
+            enableTime: !!datepickerTime || "",
+            locale: format,
+            maxDate: datepickerMax || null,
             mode: datepickerMode || "single",
+            minDate: datepickerMin || null,
+            showMonths: datepickerMonths || 1,
             time_24hr: true
         };
 
