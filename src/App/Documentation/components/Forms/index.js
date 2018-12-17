@@ -267,7 +267,6 @@ const DisabledFormComponents = () => (
             <Radio label="Hamburgers" id="radio-disabled-example-1" name="radio-disabled-example" disabled />
             <Checkbox label="Milk" id="checkbox-disabled-example-3" disabled checked />
             <Rangeslider className="mb-2" min={0} max={200} step={1} value={100} valueLabel valueLabelPrefix="$" valueLabelPostfix="%" disabled/>
-            <p>I am a text, am i too close to the component above me maybe?</p>
         </ComponentPreview>
 
         <h3>Disable a fieldset</h3>
