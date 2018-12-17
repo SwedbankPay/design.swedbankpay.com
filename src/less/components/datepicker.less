@@ -1,8 +1,13 @@
-@import "../../../node_modules/flatpickr/dist/flatpickr.min.css";
+@import "../../../node_modules/flatpickr/dist/flatpickr.css";
 
 .flatpickr-calendar {
+    &.open {
+        z-index: @zindex-datepicker;
+    }
+
     .flatpickr-weekday {
         color: @brand-primary;
+        font-size: @base-font-size;
     }
 
     .flatpickr-day.selected {
@@ -11,7 +16,7 @@
     }
 
     .flatpickr-current-month span.cur-month {
-        font-weight: 100;
+        font-weight: @font-weight-base;
     }
 
     .flatpickr-current-month span.cur-month:hover {
@@ -45,7 +50,13 @@
     }
 
     .flatpickr-day.selected:hover {
-        background: #959ea9;
-        border: #959ea9;
+        background: @gray-3;
+        border: @gray-3;
+    }
+
+    .flatpickr-day.selected.startRange + .endRange:not(:nth-child(7n+1)),
+    .flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n+1)),
+    .flatpickr-day.endRange.startRange + .endRange:not(:nth-child(7n+1)) {
+        box-shadow: -10px 0 0 @brand-primary;
     }
 }

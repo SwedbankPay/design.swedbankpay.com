@@ -93,7 +93,9 @@ module.exports = (env, argv) => {
                 {
                     test: /\.css$/,
                     use: [
-                        "style-loader",
+                        {
+                            loader: isProd ? MiniCssExtractPlugin.loader : "style-loader"
+                        },
                         "css-loader",
                         {
                             loader: "postcss-loader",
@@ -172,7 +174,7 @@ module.exports = (env, argv) => {
                     },
                     pxStyles: {
                         name: "px",
-                        test: /px\.less$/,
+                        test: /(flatpickr\.css|px\.less)$/,
                         chunks: "all",
                         enforce: true
                     },

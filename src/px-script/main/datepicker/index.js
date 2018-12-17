@@ -16,15 +16,7 @@ const datepicker = (() => {
             datepickerAllowinput
         } = datepicker.dataset;
 
-        // A type of format check to see if the value is valid [AW]
-        const format = datepickerFormat ? formats[datepickerFormat] : formats.iso8601;
-
-        if (datepickerFormat && !formats[datepickerFormat]) {
-            console.warn(`${datepickerFormat} is not a recognised date format, using default date format instead.`);
-        }
-
-        console.log(formats.iso8601);
-
+        const format = (datepickerFormat && !!formats[datepickerFormat]) ? formats[datepickerFormat] : formats.iso8601;
         const options = {
             allowInput: !!datepickerAllowinput,
             altInput: !!datepickerAltinput,
@@ -37,7 +29,7 @@ const datepicker = (() => {
             mode: datepickerMode || "single",
             minDate: datepickerMin || null,
             showMonths: datepickerMonths || 1,
-            time_24hr: true
+            time_24hr: true // eslint-disable-line camelcase
         };
 
         if (format && options.enableTime) {
