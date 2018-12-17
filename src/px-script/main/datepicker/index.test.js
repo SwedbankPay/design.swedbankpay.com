@@ -1,218 +1,237 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import flatpickr from "flatpickr";
 
 import datepicker from "./index";
 import Datepicker from "@/FormComponents/Datepicker";
 import formats from "./formats";
 
+jest.mock("flatpickr");
+
 describe("px-script: datepicker", () => {
     const div = document.createElement("div");
 
     document.body.appendChild(div);
-    jest.useFakeTimers();
+
+    beforeEach(() => {
+        ReactDOM.unmountComponentAtNode(div);
+    });
 
     it("is defined", () => {
         expect(datepicker).toBeDefined();
     });
 
-    // it("has an init method", () => {
-    //     expect(datepicker.init).toBeDefined();
-    //     expect(datepicker.init).toBeInstanceOf(Function);
-    // });
+    it("has an init method", () => {
+        expect(datepicker.init).toBeDefined();
+        expect(datepicker.init).toBeInstanceOf(Function);
+    });
 
-    // it("exposes moment globally", () => {
-    //     expect(window.moment).toBeDefined();
-    // });
+    it("does not init if no datepickers exist", () => {
+        ReactDOM.render(<p>No datepickers here!</p>, div);
 
-    // it("warns about non-existing formats", () => {
-    //     console.error = jest.fn(); // To prevent error message from using non-enum for format
-    //     console.warn = jest.fn();
+        const datePickerSpy = jest.spyOn(datepicker, "init");
 
-    //     ReactDOM.render(<Datepicker format="test" />, div);
+        expect(datePickerSpy).not.toHaveBeenCalled();
+    });
 
-    //     datepicker.init();
-    //     expect(console.warn).toHaveBeenCalled();
-    // });
+    it("warns about non-existing formats", () => {
+        console.error = jest.fn(); // To prevent error message from using non-enum for format
+        console.warn = jest.fn();
 
-    // it("defaults to iso8601 when no format is specified", () => {
-    //     console.error = jest.fn(); // To prevent error message from using non-enum for format
+        ReactDOM.render(<Datepicker format="test" />, div);
 
-    //     ReactDOM.render(<Datepicker />, div);
+        datepicker.init();
+        expect(console.warn).toHaveBeenCalled();
+    });
 
-    //     datepicker.init();
-    //     expect(rome).toHaveBeenCalled();
-    //     expect(rome).toHaveBeenCalledWith(
-    //         expect.any(HTMLElement),
-    //         expect.objectContaining({
-    //             inputFormat: formats.iso8601.dateFormat
-    //         })
-    //     );
-    // });
+    it("defaults to iso8601 when no format is specified", () => {
+        console.error = jest.fn(); // To prevent error message from using non-enum for format
 
-    // it("defaults to iso8601 when no format is specified and includes time when specified", () => {
-    //     console.error = jest.fn(); // To prevent error message from using non-enum for format
+        ReactDOM.render(<Datepicker />, div);
+        datepicker.init();
 
-    //     ReactDOM.render(<Datepicker time />, div);
+        expect(flatpickr).toHaveBeenCalled();
+        expect(flatpickr).toHaveBeenCalledWith(
+            expect.any(HTMLElement),
+            expect.objectContaining({
+                locale: formats.iso8601
+            })
+        );
+    });
 
-    //     datepicker.init();
-    //     expect(rome).toHaveBeenCalled();
-    //     expect(rome).toHaveBeenCalledWith(
-    //         expect.any(HTMLElement),
-    //         expect.objectContaining({
-    //             inputFormat: `${formats.iso8601.hourFormat} ${formats.iso8601.dateFormat}`,
-    //             time: true,
-    //             monthsInCalendar: 1
-    //         })
-    //     );
-    // });
+    it("sets an alternate format if it is specified", () => {
+        console.error = jest.fn(); // To prevent error message from using non-enum for format
 
-    // it("sends rome correct options for dateformat when specified as nb", () => {
-    //     ReactDOM.render(<Datepicker format="nb" />, div);
+        ReactDOM.render(<Datepicker altInput="F j, Y" />, div);
+        datepicker.init();
 
-    //     datepicker.init();
-    //     expect(rome).toHaveBeenCalled();
-    //     expect(rome).toHaveBeenCalledWith(
-    //         expect.any(HTMLElement),
-    //         expect.objectContaining({
-    //             inputFormat: formats.nb.dateFormat
-    //         })
-    //     );
-    // });
+        expect(flatpickr).toHaveBeenCalled();
+        expect(flatpickr).toHaveBeenCalledWith(
+            expect.any(HTMLElement),
+            expect.objectContaining({
+                locale: formats.iso8601,
+                altFormat: "F j, Y",
+                altInput: true
+            })
+        );
+    });
 
-    // it("sends rome correct options for dateformat when specified as sv", () => {
-    //     ReactDOM.render(<Datepicker format="sv" />, div);
+    it("defaults to iso8601 when no format is specified and includes time when specified", () => {
+        console.error = jest.fn(); // To prevent error message from using non-enum for format
 
-    //     datepicker.init();
-    //     expect(rome).toHaveBeenCalled();
-    //     expect(rome).toHaveBeenCalledWith(
-    //         expect.any(HTMLElement),
-    //         expect.objectContaining({
-    //             inputFormat: formats.sv.dateFormat
-    //         })
-    //     );
-    // });
+        ReactDOM.render(<Datepicker time />, div);
 
-    // it("sends rome correct options for dateformat when specified as da", () => {
-    //     ReactDOM.render(<Datepicker format="da" />, div);
+        datepicker.init();
+        expect(flatpickr).toHaveBeenCalled();
+        expect(flatpickr).toHaveBeenCalledWith(
+            expect.any(HTMLElement),
+            expect.objectContaining({
+                dateFormat: `${formats.iso8601.dateFormat} ${formats.iso8601.hourFormat}`,
+                enableTime: true,
+                locale: formats.iso8601
+            })
+        );
+    });
 
-    //     datepicker.init();
-    //     expect(rome).toHaveBeenCalled();
-    //     expect(rome).toHaveBeenCalledWith(
-    //         expect.any(HTMLElement),
-    //         expect.objectContaining({
-    //             inputFormat: formats.da.dateFormat
-    //         })
-    //     );
-    // });
+    it("sends flatpickr correct options for dateformat when specified as nb", () => {
+        ReactDOM.render(<Datepicker format="nb" />, div);
 
-    // it("sends rome correct options for dateformat when specified as fi", () => {
-    //     ReactDOM.render(<Datepicker format="fi" />, div);
+        datepicker.init();
+        expect(flatpickr).toHaveBeenCalled();
+        expect(flatpickr).toHaveBeenCalledWith(
+            expect.any(HTMLElement),
+            expect.objectContaining({
+                locale: formats.nb,
+                dateFormat: formats.nb.dateFormat
+            })
+        );
+    });
 
-    //     datepicker.init();
-    //     expect(rome).toHaveBeenCalled();
-    //     expect(rome).toHaveBeenCalledWith(
-    //         expect.any(HTMLElement),
-    //         expect.objectContaining({
-    //             inputFormat: formats.fi.dateFormat
-    //         })
-    //     );
-    // });
+    it("sends flatpickr correct options for dateformat when specified as sv", () => {
+        ReactDOM.render(<Datepicker format="sv" />, div);
 
-    // it("sends rome correct options for dateformat when specified as en", () => {
-    //     ReactDOM.render(<Datepicker format="en" />, div);
+        datepicker.init();
+        expect(flatpickr).toHaveBeenCalled();
+        expect(flatpickr).toHaveBeenCalledWith(
+            expect.any(HTMLElement),
+            expect.objectContaining({
+                locale: formats.sv,
+                dateFormat: formats.sv.dateFormat
+            })
+        );
+    });
 
-    //     datepicker.init();
-    //     expect(rome).toHaveBeenCalled();
-    //     expect(rome).toHaveBeenCalledWith(
-    //         expect.any(HTMLElement),
-    //         expect.objectContaining({
-    //             inputFormat: formats.en.dateFormat
-    //         })
-    //     );
-    // });
+    it("sends flatpickr correct options for dateformat when specified as da", () => {
+        ReactDOM.render(<Datepicker format="da" />, div);
 
-    // it("sends rome correct options for dateformat when specified as iso8601", () => {
-    //     ReactDOM.render(<Datepicker format="iso8601" />, div);
+        datepicker.init();
+        expect(flatpickr).toHaveBeenCalled();
+        expect(flatpickr).toHaveBeenCalledWith(
+            expect.any(HTMLElement),
+            expect.objectContaining({
+                locale: formats.da,
+                dateFormat: formats.da.dateFormat
+            })
+        );
+    });
 
-    //     datepicker.init();
-    //     expect(rome).toHaveBeenCalled();
-    //     expect(rome).toHaveBeenCalledWith(
-    //         expect.any(HTMLElement),
-    //         expect.objectContaining({
-    //             inputFormat: formats.iso8601.dateFormat
-    //         })
-    //     );
-    // });
+    it("sends flatpickr correct options for dateformat when specified as fi", () => {
+        ReactDOM.render(<Datepicker format="fi" />, div);
 
-    // it("sends rome correct options for dateformat when specified as nb with attribute min", () => {
-    //     ReactDOM.render(<Datepicker format="nb" min="test" />, div);
+        datepicker.init();
+        expect(flatpickr).toHaveBeenCalled();
+        expect(flatpickr).toHaveBeenCalledWith(
+            expect.any(HTMLElement),
+            expect.objectContaining({
+                locale: formats.fi,
+                dateFormat: formats.fi.dateFormat
+            })
+        );
+    });
 
-    //     datepicker.init();
-    //     expect(rome).toHaveBeenCalled();
-    //     expect(rome).toHaveBeenCalledWith(
-    //         expect.any(HTMLElement),
-    //         expect.objectContaining({
-    //             inputFormat: formats.nb.dateFormat,
-    //             min: "test"
-    //         })
-    //     );
-    // });
+    it("sends flatpickr correct options for dateformat when specified as en", () => {
+        ReactDOM.render(<Datepicker format="en" />, div);
 
-    // it("sends rome correct options for dateformat when specified as nb with attribute max", () => {
-    //     ReactDOM.render(<Datepicker format="nb" max="test" />, div);
+        datepicker.init();
+        expect(flatpickr).toHaveBeenCalled();
+        expect(flatpickr).toHaveBeenCalledWith(
+            expect.any(HTMLElement),
+            expect.objectContaining({
+                locale: formats.en,
+                dateFormat: formats.en.dateFormat
+            })
+        );
+    });
 
-    //     datepicker.init();
-    //     expect(rome).toHaveBeenCalled();
-    //     expect(rome).toHaveBeenCalledWith(
-    //         expect.any(HTMLElement),
-    //         expect.objectContaining({
-    //             inputFormat: formats.nb.dateFormat,
-    //             max: "test"
-    //         })
-    //     );
-    // });
+    it("sends flatpickr correct options for dateformat when specified as iso8601", () => {
+        ReactDOM.render(<Datepicker format="iso8601" />, div);
 
-    // it("sends rome correct options for dateformat when specified as nb with attribute datepicker-value", () => {
-    //     ReactDOM.render(<Datepicker format="nb" value="test" />, div);
+        datepicker.init();
+        expect(flatpickr).toHaveBeenCalled();
+        expect(flatpickr).toHaveBeenCalledWith(
+            expect.any(HTMLElement),
+            expect.objectContaining({
+                locale: formats.iso8601,
+                dateFormat: formats.iso8601.dateFormat
+            })
+        );
+    });
 
-    //     datepicker.init();
-    //     expect(rome).toHaveBeenCalled();
-    //     expect(rome).toHaveBeenCalledWith(
-    //         expect.any(HTMLElement),
-    //         expect.objectContaining({
-    //             inputFormat: formats.nb.dateFormat,
-    //             initialValue: "test"
-    //         })
-    //     );
-    // });
+    it("sends flatpickr correct options for dateformat when specified as nb with attribute min", () => {
+        ReactDOM.render(<Datepicker format="nb" min="test" />, div);
 
-    // it("sends rome correct options for dateformat when specified as nb with attribute required", () => {
-    //     ReactDOM.render(<Datepicker format="nb" required />, div);
+        datepicker.init();
+        expect(flatpickr).toHaveBeenCalled();
+        expect(flatpickr).toHaveBeenCalledWith(
+            expect.any(HTMLElement),
+            expect.objectContaining({
+                locale: formats.nb,
+                minDate: "test"
+            })
+        );
+    });
 
-    //     datepicker.init();
-    //     expect(rome).toHaveBeenCalled();
-    //     expect(rome).toHaveBeenCalledWith(
-    //         expect.any(HTMLElement),
-    //         expect.objectContaining({
-    //             inputFormat: formats.nb.dateFormat,
-    //             required: true
-    //         })
-    //     );
-    // });
+    it("sends flatpickr correct options for dateformat when specified as nb with attribute max", () => {
+        ReactDOM.render(<Datepicker format="nb" max="test" />, div);
 
-    // it("sends rome correct options for dateformat when specified as nb with attribute months", () => {
-    //     ReactDOM.render(<Datepicker format="nb" months="3" />, div);
+        datepicker.init();
+        expect(flatpickr).toHaveBeenCalled();
+        expect(flatpickr).toHaveBeenCalledWith(
+            expect.any(HTMLElement),
+            expect.objectContaining({
+                locale: formats.nb,
+                maxDate: "test"
+            })
+        );
+    });
 
-    //     datepicker.init();
-    //     expect(rome).toHaveBeenCalled();
-    //     expect(rome).toHaveBeenCalledWith(
-    //         expect.any(HTMLElement),
-    //         expect.objectContaining({
-    //             inputFormat: formats.nb.dateFormat,
-    //             monthsInCalendar: 3
-    //         })
-    //     );
-    // });
+    it("sends flatpickr correct options for dateformat when specified as nb with attribute datepicker-value", () => {
+        ReactDOM.render(<Datepicker format="nb" value="test" />, div);
+
+        datepicker.init();
+        expect(flatpickr).toHaveBeenCalled();
+        expect(flatpickr).toHaveBeenCalledWith(
+            expect.any(HTMLElement),
+            expect.objectContaining({
+                locale: formats.nb,
+                defaultDate: "test"
+            })
+        );
+    });
+
+    it("sends flatpickr correct options for dateformat when specified as nb with attribute months", () => {
+        ReactDOM.render(<Datepicker format="nb" months="3" />, div);
+
+        datepicker.init();
+        expect(flatpickr).toHaveBeenCalled();
+        expect(flatpickr).toHaveBeenCalledWith(
+            expect.any(HTMLElement),
+            expect.objectContaining({
+                dateFormat: formats.nb.dateFormat,
+                numMonths: 3
+            })
+        );
+    });
 
     // it("Adds click event on label that triggers the calendar", () => {
     //     ReactDOM.render(<Datepicker format="nb" id="test" label="test" />, div);

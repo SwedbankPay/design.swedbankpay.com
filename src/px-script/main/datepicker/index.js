@@ -15,12 +15,21 @@ const datepicker = (() => {
             datepickerMode,
             datepickerAllowinput
         } = datepicker.dataset;
+        let format = "";
 
-        const format = (datepickerFormat && !!formats[datepickerFormat]) ? formats[datepickerFormat] : formats.iso8601;
+        if (datepickerFormat && !!formats[datepickerFormat]) {
+            format = formats[datepickerFormat];
+        } else if (datepickerFormat && !formats[datepickerFormat]) {
+            format = formats.iso8601;
+            console.warn(`${datepickerFormat} is not a recognized value, using standard format instead (iso8601)`);
+        } else {
+            format = formats.iso8601;
+        }
+
         const options = {
             allowInput: !!datepickerAllowinput,
-            altInput: !!datepickerAltinput,
             altFormat: datepickerAltinput ? datepickerAltinput : "",
+            altInput: !!datepickerAltinput,
             defaultDate: datepickerValue || null,
             dateFormat: format.dateFormat,
             enableTime: !!datepickerTime || "",
@@ -28,7 +37,7 @@ const datepicker = (() => {
             maxDate: datepickerMax || null,
             mode: datepickerMode || "single",
             minDate: datepickerMin || null,
-            showMonths: datepickerMonths || 1,
+            numMonths: parseInt(datepickerMonths) || 1,
             time_24hr: true // eslint-disable-line camelcase
         };
 
@@ -36,13 +45,15 @@ const datepicker = (() => {
             options.dateFormat = format.dateFormat.concat(" ", format.hourFormat);
         }
 
+        // TODO: add onclick listener to label [AW]
+
         flatpickr(datepicker, options);
     };
 
     const init = () => {
         const datepickers = document.querySelectorAll("[data-datepicker]");
 
-        if (datepickers) {
+        if (datepickers.length) {
             datepickers.forEach(picker => {
                 _createDatepicker(picker);
             });
