@@ -232,18 +232,4 @@ describe("px-script: datepicker", () => {
             })
         );
     });
-
-    // it("Adds click event on label that triggers the calendar", () => {
-    //     ReactDOM.render(<Datepicker format="nb" id="test" label="test" />, div);
-
-    //     const renderedDatepicker = document.getElementById("test");
-    //     const label = document.querySelector("label[for=test]");
-
-    //     renderedDatepicker.focus = jest.fn();
-
-    //     datepicker.init();
-    //     label.click();
-    //     jest.runAllTimers();
-    //     expect(renderedDatepicker.focus).toHaveBeenCalled();
-    // });
 });

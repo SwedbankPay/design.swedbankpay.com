@@ -45,8 +45,6 @@ const datepicker = (() => {
             options.dateFormat = format.dateFormat.concat(" ", format.hourFormat);
         }
 
-        // TODO: add onclick listener to label [AW]
-
         flatpickr(datepicker, options);
     };
 
