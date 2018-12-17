@@ -14,7 +14,7 @@ export default {
             shorthand: ["søn", "man", "tir", "ons", "tor", "fre", "lør"],
             longhand: ["søndag", "mandag", "tirsdag", "onsdag", "torsdag", "fredag", "lørdag"]
         },
-        rangeSeperator: " til ",
+        rangeSeparator: " til ",
         scrollTitle: "Scroll for å endre",
         toggleTitle: "Klikk for å veksle",
         weekAbbreviation: "Uke",
@@ -48,7 +48,7 @@ export default {
             shorthand: ["søn", "man", "tir", "ons", "tor", "fre", "lør"],
             longhand: ["søndag", "mandag", "tirsdag", "onsdag", "torsdag", "fredag", "lørdag"]
         },
-        rangeSeperator: " til ",
+        rangeSeparator: " til ",
         weekAbbreviation: "uge",
         ordinal: () => "."
     },
@@ -81,13 +81,11 @@ export default {
             longhand: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
         },
         ordinal (nth) {
-            const s = nth % 100;
-
-            if (s > 3 && s < 21) {
+            if (nth > 3 && nth < 21) {
                 return "th";
             }
 
-            switch (s % 10) {
+            switch (nth % 10) {
                 case 1:
                     return "st";
                 case 2:
@@ -102,7 +100,6 @@ export default {
         weekAbbreviation: "Wk",
         scrollTitle: "Scroll to increment",
         toggleTitle: "Click to toggle",
-        amPM: ["AM", "PM"],
         yearAriaLabel: "Year"
     },
     iso8601: {
@@ -119,13 +116,11 @@ export default {
             longhand: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
         },
         ordinal (nth) {
-            const s = nth % 100;
-
-            if (s > 3 && s < 21) {
+            if (nth > 3 && nth < 21) {
                 return "th";
             }
 
-            switch (s % 10) {
+            switch (nth % 10) {
                 case 1:
                     return "st";
                 case 2:
@@ -140,7 +135,6 @@ export default {
         weekAbbreviation: "Wk",
         scrollTitle: "Scroll to increment",
         toggleTitle: "Click to toggle",
-        amPM: ["AM", "PM"],
         yearAriaLabel: "Year"
     }
 };
