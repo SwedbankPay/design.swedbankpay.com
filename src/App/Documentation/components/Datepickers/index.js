@@ -418,4 +418,4 @@ class Datepickers extends Component {
 export default Datepickers;
 
 /* For testing */
-export { SimpleDatepicker, InitialValue, CustomFormat, IncludeTime, ShowingMultipleMonths, ValidDates, DateRange, MultipleDates, AllowInput, Options };
+export { AboutDatepickers, SimpleDatepicker, AllowInput, AltInput, InitialValue, CustomFormat, IncludeTime, ShowingMultipleMonths, ValidDates, DateRange, MultipleDates, Options };

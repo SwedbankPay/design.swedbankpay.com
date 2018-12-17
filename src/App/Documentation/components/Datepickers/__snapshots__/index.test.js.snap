@@ -1,5 +1,86 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Documentation: Datepickers AboutDatepickers renders 1`] = `
+<Fragment>
+  <h2
+    id="about-datepickers"
+  >
+    About
+  </h2>
+  <p>
+    Datepickers give a visual presentation of days, months and years. By utilizing the datepicker you can be assured the given input is in the format you expect without having to deal with too much client-side validation. Datepickers should be used for recent dates to avoid having the user click a lot of times to find the required date. If you need a date of birth or something similarly far back, an input field with proper validation will be easier to use.
+  </p>
+</Fragment>
+`;
+
+exports[`Documentation: Datepickers AllowInput renders 1`] = `
+<Fragment>
+  <h2
+    id="allow-input"
+  >
+    Allow input
+  </h2>
+  <p>
+    By default datepickers do not allow input but you can use 
+    <Attribute
+      data={true}
+      name="datepicker-allowinput"
+    />
+    . When you allow input then the given date has to match the datepicker format (
+    <Attribute
+      value="iso8601"
+    />
+     if you have not specified a format).
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Datepicker
+      allowinput={true}
+      id="simle-datepicker"
+      label="Date"
+      prefixType="icon"
+      prefixValue="event"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Datepickers AltInput renders 1`] = `
+<Fragment>
+  <h2
+    id="alt-input"
+  >
+    Alternative date
+  </h2>
+  <p>
+    You can change how the date is displayed to the user by using 
+    <Attribute
+      data={true}
+      name="datepicker-altinput"
+      value="{desired format}"
+    />
+    . You can see the different formatting options at the bottom of the page.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Datepicker
+      altInput="F j, Y"
+      id="init-value-datepicker"
+      label="Date"
+      prefixType="icon"
+      prefixValue="event"
+      value="1972-12-28"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Documentation: Datepickers CustomFormat renders 1`] = `
 <Fragment>
   <h2
@@ -179,6 +260,58 @@ exports[`Documentation: Datepickers InitialValue renders 1`] = `
       value="1972-12-28"
     />
   </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Datepickers MultipleDates renders 1`] = `
+<Fragment>
+  <h2
+    id="multiple-dates"
+  >
+    Multiple dates
+  </h2>
+  <p>
+    Set mode to 
+    <Attribute
+      value="multiple"
+    />
+     for multiple date selection.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Datepicker
+      format="nb"
+      id="date-range-datepicker"
+      label="date"
+      min="10.12.1972"
+      mode="multiple"
+      prefixType="icon"
+      prefixValue="event"
+    />
+  </ComponentPreview>
+  <Alert
+    type="warning"
+  >
+    <h5>
+      Max number of dates
+    </h5>
+    <p>
+      The 
+      <Attribute
+        value="multiple"
+      />
+       variation of datepicker does not have an upper limit of dates. Use 
+      <NavHashLink
+        to="#date-range"
+      >
+        range
+      </NavHashLink>
+       if you want to select a continuous range of dates.
+    </p>
+  </Alert>
 </Fragment>
 `;
 
@@ -506,6 +639,45 @@ exports[`Documentation: Datepickers SimpleDatepicker renders 1`] = `
       label="Date"
       prefixType="icon"
       prefixValue="event"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Datepickers ValidDates renders 1`] = `
+<Fragment>
+  <h2
+    id="valid-dates"
+  >
+    Valid dates
+  </h2>
+  <p>
+    You can set a range of available dates to select from by using 
+    <Attribute
+      data={true}
+      name="datepicker-min"
+    />
+     and 
+    <Attribute
+      data={true}
+      name="datepicker-max"
+    />
+    .
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Datepicker
+      format="nb"
+      id="valid-dates-datepicker"
+      label="Date"
+      max="10.05.2017"
+      min="28.12.1972"
+      prefixType="icon"
+      prefixValue="event"
+      value="28.12.1972"
     />
   </ComponentPreview>
 </Fragment>
