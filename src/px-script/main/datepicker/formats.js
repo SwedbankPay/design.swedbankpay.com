@@ -5,6 +5,7 @@ export default {
     nb: {
         dateFormat: "d.m.Y",
         hourFormat: "H:i",
+        fulldate: "j. F Y",
         firstDayOfWeek: 1,
         months: {
             shorthand: ["jan", "feb", "mar", "apr", "mai", "jun", "jul", "aug", "sep", "okt", "nov", "des"],
@@ -23,6 +24,7 @@ export default {
     sv: {
         dateFormat: "Y-m-d",
         hourFormat: "H:i",
+        fulldate: "j. F Y",
         firstDayOfWeek: 1,
         months: {
             shorthand: ["jan", "feb", "mar", "apr", "maj", "jun", "jul", "aug", "sep", "okt", "nov", "dec"],
@@ -39,6 +41,7 @@ export default {
     da: {
         dateFormat: "d.m.Y",
         hourFormat: "H:i",
+        fulldate: "j. F Y",
         firstDayOfWeek: 1,
         months: {
             shorthand: ["jan", "feb", "mar", "apr", "maj", "jun", "jul", "aug", "sep", "okt", "nov", "dec"],
@@ -55,6 +58,7 @@ export default {
     fi: {
         dateFormat: "d.m.Y",
         hourFormat: "H:i",
+        fulldate: "j. F Y",
         firstDayOfWeek: 1,
         weekdays: {
             shorthand: ["Su", "Ma", "Ti", "Ke", "To", "Pe", "La"],
@@ -70,6 +74,7 @@ export default {
     en: {
         dateFormat: "d/m/Y",
         hourFormat: "H:i",
+        fulldate: "F J, Y",
         daysInMonth: [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
         firstDayOfWeek: 0,
         weekdays: {
@@ -105,6 +110,7 @@ export default {
     iso8601: {
         dateFormat: "Y-m-d",
         hourFormat: "H:i",
+        fulldate: "F J, Y",
         daysInMonth: [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
         firstDayOfWeek: 0,
         weekdays: {

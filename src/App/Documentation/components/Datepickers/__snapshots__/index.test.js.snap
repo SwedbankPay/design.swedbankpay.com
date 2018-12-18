@@ -48,39 +48,6 @@ exports[`Documentation: Datepickers AllowInput renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Datepickers AltInput renders 1`] = `
-<Fragment>
-  <h2
-    id="alt-input"
-  >
-    Alternative date
-  </h2>
-  <p>
-    You can change how the date is displayed to the user by using 
-    <Attribute
-      data={true}
-      name="datepicker-altinput"
-      value="{desired format}"
-    />
-    . You can see the different formatting options at the bottom of the page.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Datepicker
-      altInput="F j, Y"
-      id="init-value-datepicker"
-      label="Date"
-      prefixType="icon"
-      prefixValue="event"
-      value="1972-12-28"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
 exports[`Documentation: Datepickers CustomFormat renders 1`] = `
 <Fragment>
   <h2
@@ -187,6 +154,38 @@ exports[`Documentation: Datepickers DateRange renders 1`] = `
       mode="range"
       prefixType="icon"
       prefixValue="event"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Datepickers HumanReadable renders 1`] = `
+<Fragment>
+  <h2
+    id="human-readable"
+  >
+    Human readable date
+  </h2>
+  <p>
+    If you wish to make the date more readable to humans you can add 
+    <Attribute
+      data={true}
+      name="datepicker-fulldate"
+      value="true"
+    />
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Datepicker
+      fulldate={true}
+      id="init-value-datepicker"
+      label="Date"
+      prefixType="icon"
+      prefixValue="event"
+      value="1972-12-28"
     />
   </ComponentPreview>
 </Fragment>
@@ -695,7 +694,7 @@ exports[`Documentation: Datepickers renders 1`] = `
   <AboutDatepickers />
   <SimpleDatepicker />
   <AllowInput />
-  <AltInput />
+  <HumanReadable />
   <InitialValue />
   <CustomFormat />
   <IncludeTime />

@@ -70,12 +70,11 @@ const InitialValue = () => (
     </>
 );
 
-const AltInput = () => (
+const HumanReadable = () => (
     <>
-        <h2 id="alt-input">Alternative date</h2>
+        <h2 id="human-readable">Human readable date</h2>
         <p>
-            You can change how the date is displayed to the user by using <Attribute data name="datepicker-altinput" value="{desired format}"/>. You
-            can see the different formatting options at the bottom of the page.
+            If you wish to make the date more readable to humans you can add <Attribute data value="true" name="datepicker-fulldate" />
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent
@@ -83,7 +82,7 @@ const AltInput = () => (
                 label="Date"
                 prefixType="icon"
                 prefixValue="event"
-                altInput="F j, Y"
+                fulldate
                 id="init-value-datepicker"
             />
         </ComponentPreview>
@@ -401,7 +400,7 @@ class Datepickers extends Component {
                 <AboutDatepickers />
                 <SimpleDatepicker />
                 <AllowInput />
-                <AltInput />
+                <HumanReadable />
                 <InitialValue />
                 <CustomFormat />
                 <IncludeTime />
@@ -418,4 +417,4 @@ class Datepickers extends Component {
 export default Datepickers;
 
 /* For testing */
-export { AboutDatepickers, SimpleDatepicker, AllowInput, AltInput, InitialValue, CustomFormat, IncludeTime, ShowingMultipleMonths, ValidDates, DateRange, MultipleDates, Options };
+export { AboutDatepickers, SimpleDatepicker, AllowInput, HumanReadable, InitialValue, CustomFormat, IncludeTime, ShowingMultipleMonths, ValidDates, DateRange, MultipleDates, Options };

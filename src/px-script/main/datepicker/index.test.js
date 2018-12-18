@@ -59,10 +59,10 @@ describe("px-script: datepicker", () => {
         );
     });
 
-    it("sets an alternate format if it is specified", () => {
+    it("sets an alternate format if datepicker-fulldate is true", () => {
         console.error = jest.fn(); // To prevent error message from using non-enum for format
 
-        ReactDOM.render(<Datepicker altInput="F j, Y" />, div);
+        ReactDOM.render(<Datepicker fulldate="true" />, div);
         datepicker.init();
 
         expect(flatpickr).toHaveBeenCalled();
@@ -70,7 +70,7 @@ describe("px-script: datepicker", () => {
             expect.any(HTMLElement),
             expect.objectContaining({
                 locale: formats.iso8601,
-                altFormat: "F j, Y",
+                altFormat: formats.iso8601.fulldate,
                 altInput: true
             })
         );

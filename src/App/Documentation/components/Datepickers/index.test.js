@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Datepickers, { AboutDatepickers, SimpleDatepicker, AllowInput, AltInput, InitialValue, CustomFormat, IncludeTime, ShowingMultipleMonths, ValidDates, DateRange, MultipleDates, Options } from "./index";
+import Datepickers, { AboutDatepickers, SimpleDatepicker, AllowInput, HumanReadable, InitialValue, CustomFormat, IncludeTime, ShowingMultipleMonths, ValidDates, DateRange, MultipleDates, Options } from "./index";
 
 describe("Documentation: Datepickers", () => {
     it("is defined", () => {
@@ -50,13 +50,13 @@ describe("Documentation: Datepickers", () => {
         });
     });
 
-    describe("AltInput", () => {
+    describe("HumanReadable", () => {
         it("is defined", () => {
-            expect(AltInput).toBeDefined();
+            expect(HumanReadable).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<AltInput />);
+            const wrapper = shallow(<HumanReadable />);
 
             expect(wrapper).toMatchSnapshot();
         });

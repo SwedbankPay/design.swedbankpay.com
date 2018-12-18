@@ -11,7 +11,7 @@ const datepicker = (() => {
             datepickerMax,
             datepickerValue,
             datepickerMonths,
-            datepickerAltinput,
+            datepickerFulldate,
             datepickerMode,
             datepickerAllowinput
         } = datepicker.dataset;
@@ -28,8 +28,8 @@ const datepicker = (() => {
 
         const options = {
             allowInput: !!datepickerAllowinput,
-            altFormat: datepickerAltinput ? datepickerAltinput : "",
-            altInput: !!datepickerAltinput,
+            altFormat: datepickerFulldate ? format.fulldate : "",
+            altInput: !!datepickerFulldate,
             defaultDate: datepickerValue || null,
             dateFormat: format.dateFormat,
             enableTime: !!datepickerTime || "",
