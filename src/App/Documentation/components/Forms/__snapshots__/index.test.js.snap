@@ -906,6 +906,7 @@ exports[`Documentation: Forms Validation renders 1`] = `
         errorMessage="Wrong!"
         helpBlock={true}
         id="validation-email-2"
+        label="Email"
         placeholder="bob.corlsan@example.com"
         prefixType="icon"
         prefixValue="email"

@@ -14,8 +14,9 @@ describe("px-script: validation", () => {
     const Email = props => (
         <form>
             <div className="form-group">
+                <label htmlFor="validation-email">Email</label>
                 <div className="input-group">
-                    <input {...props} type="email" className="form-control" id="test-id" placeholder="Email" data-validate/>
+                    <input {...props} type="email" className="form-control" id="validation-email" placeholder="Email" data-validate/>
                 </div>
             </div>
         </form>
@@ -34,7 +35,7 @@ describe("px-script: validation", () => {
         ReactDOM.render(<Email />, div);
 
         const formElement = document.querySelector(".form-group");
-        const inputElement = formElement.querySelector("#test-id");
+        const inputElement = formElement.querySelector("#validation-email");
 
         expect(formElement).toBeTruthy();
         expect(inputElement).toBeTruthy();
@@ -53,7 +54,7 @@ describe("px-script: validation", () => {
         ReactDOM.render(<Email />, div);
 
         const formElement = document.querySelector(".form-group");
-        const inputElement = formElement.querySelector("#test-id");
+        const inputElement = formElement.querySelector("#validation-email");
 
         expect(formElement).toBeTruthy();
         expect(inputElement).toBeTruthy();
@@ -72,7 +73,7 @@ describe("px-script: validation", () => {
         ReactDOM.render(<Email />, div);
 
         const formElement = document.querySelector(".form-group");
-        const inputElement = formElement.querySelector("#test-id");
+        const inputElement = formElement.querySelector("#validation-email");
 
         expect(formElement).toBeTruthy();
         expect(inputElement).toBeTruthy();
@@ -91,7 +92,7 @@ describe("px-script: validation", () => {
         ReactDOM.render(<Email pattern="[^@]+@[^\.]+\..+"/>, div);
 
         const formElement = document.querySelector(".form-group");
-        const inputElement = formElement.querySelector("#test-id");
+        const inputElement = formElement.querySelector("#validation-email");
 
         expect(formElement).toBeTruthy();
         expect(inputElement).toBeTruthy();
@@ -110,7 +111,7 @@ describe("px-script: validation", () => {
         ReactDOM.render(<Email pattern="[^@]+@[^\.]+\..+" />, div);
 
         const formElement = document.querySelector(".form-group");
-        const inputElement = formElement.querySelector("#test-id");
+        const inputElement = formElement.querySelector("#validation-email");
 
         expect(formElement).toBeTruthy();
         expect(inputElement).toBeTruthy();
@@ -129,7 +130,7 @@ describe("px-script: validation", () => {
         ReactDOM.render(<Email />, div);
 
         const formElement = document.querySelector(".form-group");
-        const inputElement = formElement.querySelector("#test-id");
+        const inputElement = formElement.querySelector("#validation-email");
 
         expect(formElement).toBeTruthy();
         expect(inputElement).toBeTruthy();
@@ -149,7 +150,7 @@ describe("px-script: validation", () => {
         ReactDOM.render(<Email />, div);
 
         const formElement = document.querySelector(".form-group");
-        const inputElement = formElement.querySelector("#test-id");
+        const inputElement = formElement.querySelector("#validation-email");
 
         expect(formElement).toBeTruthy();
         expect(inputElement).toBeTruthy();
@@ -169,7 +170,7 @@ describe("px-script: validation", () => {
         ReactDOM.render(<Email />, div);
 
         const formElement = document.querySelector(".form-group");
-        const inputElement = formElement.querySelector("#test-id");
+        const inputElement = formElement.querySelector("#validation-email");
 
         expect(formElement).toBeTruthy();
         expect(inputElement).toBeTruthy();
@@ -180,5 +181,21 @@ describe("px-script: validation", () => {
         inputElement.dispatchEvent(new Event("input"));
         expect(formElement.classList.contains("has-success")).toBeFalsy();
         expect(formElement.classList.contains("has-error")).toBeFalsy();
+    });
+
+    it("adds an asterisk to required input element labels if label exists", () => {
+        ReactDOM.render(<Email required />, div);
+
+        const formElement = document.querySelector(".form-group");
+        const inputElement = formElement.querySelector("#validation-email");
+        const reqLabel = formElement.querySelector("label");
+
+        expect(formElement).toBeTruthy();
+        expect(inputElement).toBeTruthy();
+        expect(reqLabel).toBeTruthy();
+
+        validation.init();
+
+        expect(reqLabel.innerHTML).toContain("required-asterisk");
     });
 });
