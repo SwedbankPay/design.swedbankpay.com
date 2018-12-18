@@ -4,6 +4,23 @@ import ReactDOM from "react-dom";
 import validation from "./index";
 
 describe("px-script: validation", () => {
+    const div = document.createElement("div");
+
+    document.body.appendChild(div);
+    afterEach(() => {
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
+    const Email = props => (
+        <form>
+            <div className="form-group">
+                <div className="input-group">
+                    <input {...props} type="email" className="form-control" id="test-id" placeholder="Email" data-validate/>
+                </div>
+            </div>
+        </form>
+    );
+
     it("is defined", () => {
         expect(validation).toBeDefined();
     });
@@ -13,5 +30,98 @@ describe("px-script: validation", () => {
         expect(validation.init).toBeInstanceOf(Function);
     });
 
-    // TODO: Continue here... [EH]
+    it("does nothing if no value is given", () => {
+        ReactDOM.render(<Email />, div);
+
+        const formElement = document.querySelector(".form-group");
+        const inputElement = formElement.querySelector("#test-id");
+
+        expect(formElement).toBeTruthy();
+        expect(inputElement).toBeTruthy();
+        expect(formElement.classList.contains("has-error")).toBeFalsy();
+        expect(formElement.classList.contains("has-success")).toBeFalsy();
+
+        validation.init();
+
+        inputElement.dispatchEvent(new Event("blur"));
+
+        expect(formElement.classList.contains("has-error")).toBeFalsy();
+        expect(formElement.classList.contains("has-success")).toBeFalsy();
+    });
+
+    it("tests given email with default email regex and adds class has-success to form-group when it succeeds", () => {
+        ReactDOM.render(<Email />, div);
+
+        const formElement = document.querySelector(".form-group");
+        const inputElement = formElement.querySelector("#test-id");
+
+        expect(formElement).toBeTruthy();
+        expect(inputElement).toBeTruthy();
+        expect(formElement.classList.contains("has-error")).toBeFalsy();
+        expect(formElement.classList.contains("has-success")).toBeFalsy();
+
+        validation.init();
+
+        inputElement.value = "correct.email@address.com";
+        inputElement.dispatchEvent(new Event("blur"));
+
+        expect(formElement.classList.contains("has-success")).toBeTruthy();
+    });
+
+    it("tests given email with default email regex and adds class has-error to form-group when it fails", () => {
+        ReactDOM.render(<Email />, div);
+
+        const formElement = document.querySelector(".form-group");
+        const inputElement = formElement.querySelector("#test-id");
+
+        expect(formElement).toBeTruthy();
+        expect(inputElement).toBeTruthy();
+        expect(formElement.classList.contains("has-error")).toBeFalsy();
+        expect(formElement.classList.contains("has-success")).toBeFalsy();
+
+        validation.init();
+
+        inputElement.value = "incorrect email address";
+        inputElement.dispatchEvent(new Event("blur"));
+
+        expect(formElement.classList.contains("has-error")).toBeTruthy();
+    });
+
+    it("tests given email with pattern and adds class has-success to form-group when it succeeds", () => {
+        ReactDOM.render(<Email pattern="[^@]+@[^\.]+\..+"/>, div);
+
+        const formElement = document.querySelector(".form-group");
+        const inputElement = formElement.querySelector("#test-id");
+
+        expect(formElement).toBeTruthy();
+        expect(inputElement).toBeTruthy();
+        expect(formElement.classList.contains("has-error")).toBeFalsy();
+        expect(formElement.classList.contains("has-success")).toBeFalsy();
+
+        validation.init();
+
+        inputElement.value = "correct.email@address.com";
+        inputElement.dispatchEvent(new Event("blur"));
+
+        expect(formElement.classList.contains("has-success")).toBeTruthy();
+    });
+
+    it("tests given email with pattern and adds class has-error to form-group when it fails", () => {
+        ReactDOM.render(<Email pattern="[^@]+@[^\.]+\..+" />, div);
+
+        const formElement = document.querySelector(".form-group");
+        const inputElement = formElement.querySelector("#test-id");
+
+        expect(formElement).toBeTruthy();
+        expect(inputElement).toBeTruthy();
+        expect(formElement.classList.contains("has-error")).toBeFalsy();
+        expect(formElement.classList.contains("has-success")).toBeFalsy();
+
+        validation.init();
+
+        inputElement.value = "incorrect email address";
+        inputElement.dispatchEvent(new Event("input"));
+
+        expect(formElement.classList.contains("has-error")).toBeTruthy();
+    });
 });

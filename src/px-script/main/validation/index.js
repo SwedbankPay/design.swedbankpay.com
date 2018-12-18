@@ -137,6 +137,8 @@ const validation = (() => {
             validateEls.forEach(element => {
                 const { tagName } = element;
 
+                console.log(tagName);
+
                 if (tagName === "FORM") {
                     _addFormValidation(element);
                 } else if (tagName === "INPUT" || tagName === "TEXTAREA" || tagName === "SELECT") {
