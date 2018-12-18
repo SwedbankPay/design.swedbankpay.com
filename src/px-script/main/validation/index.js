@@ -77,9 +77,9 @@ const validation = (() => {
 
     const _addFieldValidation = field => {
         const validationContainer = field.closest(SELECTORS.VALIDATIONCONTAINER);
+        const reqLabel = validationContainer.querySelector("label");
 
-        if (field.required) {
-            const reqLabel = validationContainer.querySelector("label");
+        if (field.required && reqLabel) {
             const asterisk = document.createElement("span");
 
             asterisk.classList.add("required-asterisk");
@@ -93,7 +93,9 @@ const validation = (() => {
             }
         });
 
-        field.addEventListener("blur", () => _addFieldState(field));
+        field.addEventListener("blur", () => {
+            _addFieldState(field);
+        });
     };
 
     const _addFormValidation = form => {

@@ -120,8 +120,65 @@ describe("px-script: validation", () => {
         validation.init();
 
         inputElement.value = "incorrect email address";
+        inputElement.dispatchEvent(new Event("blur"));
+
+        expect(formElement.classList.contains("has-error")).toBeTruthy();
+    });
+
+    it("triggers validation when input event is triggered after initial validation state is set as has-success", () => {
+        ReactDOM.render(<Email />, div);
+
+        const formElement = document.querySelector(".form-group");
+        const inputElement = formElement.querySelector("#test-id");
+
+        expect(formElement).toBeTruthy();
+        expect(inputElement).toBeTruthy();
+
+        validation.init();
+
+        inputElement.value = "correct.email@address.com";
+        inputElement.dispatchEvent(new Event("blur"));
+        expect(formElement.classList.contains("has-success")).toBeTruthy();
+
+        inputElement.dispatchEvent(new Event("input"));
+
+        expect(formElement.classList.contains("has-success")).toBeTruthy();
+    });
+
+    it("triggers validation when input event is triggered after initial validation state is set as has-error", () => {
+        ReactDOM.render(<Email />, div);
+
+        const formElement = document.querySelector(".form-group");
+        const inputElement = formElement.querySelector("#test-id");
+
+        expect(formElement).toBeTruthy();
+        expect(inputElement).toBeTruthy();
+
+        validation.init();
+
+        inputElement.value = "incorrect mail address";
+        inputElement.dispatchEvent(new Event("blur"));
+        expect(formElement.classList.contains("has-error")).toBeTruthy();
+
         inputElement.dispatchEvent(new Event("input"));
 
         expect(formElement.classList.contains("has-error")).toBeTruthy();
+    });
+
+    it("does not trigger validation when input event is triggered if parent format element does not contain has-success or has-error", () => {
+        ReactDOM.render(<Email />, div);
+
+        const formElement = document.querySelector(".form-group");
+        const inputElement = formElement.querySelector("#test-id");
+
+        expect(formElement).toBeTruthy();
+        expect(inputElement).toBeTruthy();
+
+        validation.init();
+
+        inputElement.value = "incorrect mail address";
+        inputElement.dispatchEvent(new Event("input"));
+        expect(formElement.classList.contains("has-success")).toBeFalsy();
+        expect(formElement.classList.contains("has-error")).toBeFalsy();
     });
 });

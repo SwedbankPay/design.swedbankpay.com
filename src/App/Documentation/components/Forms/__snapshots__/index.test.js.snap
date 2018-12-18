@@ -890,7 +890,7 @@ exports[`Documentation: Forms Validation renders 1`] = `
     <Attribute
       value=".help-block"
     />
-     element.
+     element. To display an asterisk you have to include a label with your input element.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -906,7 +906,6 @@ exports[`Documentation: Forms Validation renders 1`] = `
         errorMessage="Wrong!"
         helpBlock={true}
         id="validation-email-2"
-        label="Email"
         placeholder="bob.corlsan@example.com"
         prefixType="icon"
         prefixValue="email"
