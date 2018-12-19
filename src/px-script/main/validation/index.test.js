@@ -22,6 +22,18 @@ describe("px-script: validation", () => {
         </form>
     );
 
+    const FormValidation = ({ submitBtn }) => (
+        <form noValidate data-validate="">
+            <div className="form-group">
+                <label htmlFor="validation-email">Email</label>
+                <div className="input-group">
+                    <input type="email" className="form-control" id="validation-email" placeholder="Enter your email" required/>
+                </div>
+            </div>
+            {submitBtn ? <button className="btn btn-primary" type="submit" data-disable-invalid>Submit</button> : null}
+        </form>
+    );
+
     it("is defined", () => {
         expect(validation).toBeDefined();
     });
@@ -197,5 +209,105 @@ describe("px-script: validation", () => {
         validation.init();
 
         expect(reqLabel.innerHTML).toContain("required-asterisk");
+    });
+
+    it("disables the form button if it exists and the form contains a required field with invalid values", () => {
+        ReactDOM.render(<FormValidation submitBtn />, div);
+
+        const form = document.querySelector("form");
+        const submitButton = form.querySelector(".btn");
+
+        expect(form).toBeTruthy();
+        expect(submitButton).toBeTruthy();
+
+        validation.init();
+
+        expect(submitButton.hasAttribute("disabled")).toBeTruthy();
+    });
+
+    it("removes disabled attribute from button if the required fields of a form contains valid values", () => {
+        ReactDOM.render(<FormValidation submitBtn />, div);
+
+        const form = document.querySelector("form");
+        const inputElement = form.querySelector("#validation-email");
+        const submitButton = form.querySelector(".btn");
+
+        expect(form).toBeTruthy();
+        expect(inputElement).toBeTruthy();
+        expect(submitButton).toBeTruthy();
+
+        validation.init();
+
+        expect(submitButton.hasAttribute("disabled")).toBeTruthy();
+
+        inputElement.value = "valid.email@test.com";
+        form.dispatchEvent(new Event("input"));
+
+        expect(submitButton.hasAttribute("disabled")).toBeFalsy();
+    });
+
+    it("adds disabled attribute to button if a required field in a form contains invalid values", () => {
+        ReactDOM.render(<FormValidation submitBtn />, div);
+
+        const form = document.querySelector("form");
+        const inputElement = form.querySelector("#validation-email");
+        const submitButton = form.querySelector(".btn");
+
+        expect(form).toBeTruthy();
+        expect(inputElement).toBeTruthy();
+        expect(submitButton).toBeTruthy();
+
+        validation.init();
+
+        expect(submitButton.hasAttribute("disabled")).toBeTruthy();
+
+        inputElement.value = "invalid email";
+        form.dispatchEvent(new Event("input"));
+
+        expect(submitButton.hasAttribute("disabled")).toBeTruthy();
+    });
+
+    it("checks all forms before submitting value and prevents default if one of the required fields are invalid", () => {
+        ReactDOM.render(<FormValidation submitBtn />, div);
+        Event.prototype.preventDefault = jest.fn();
+
+        const form = document.querySelector("form");
+        const inputElement = form.querySelector("#validation-email");
+        const submitButton = form.querySelector(".btn");
+
+        expect(form).toBeTruthy();
+        expect(inputElement).toBeTruthy();
+        expect(submitButton).toBeTruthy();
+
+        validation.init();
+        inputElement.value = "valid.emest.com";
+
+        expect(submitButton.hasAttribute("disabled")).toBeTruthy();
+
+        form.dispatchEvent(new Event("submit"));
+
+        expect(Event.prototype.preventDefault).toHaveBeenCalled();
+    });
+
+    it("checks all forms before submitting value and does not prevent default if all the required fields are valid", () => {
+        ReactDOM.render(<FormValidation submitBtn />, div);
+        Event.prototype.preventDefault = jest.fn();
+
+        const form = document.querySelector("form");
+        const inputElement = form.querySelector("#validation-email");
+        const submitButton = form.querySelector(".btn");
+
+        expect(form).toBeTruthy();
+        expect(inputElement).toBeTruthy();
+        expect(submitButton).toBeTruthy();
+
+        validation.init();
+        inputElement.value = "valid.email@test.com";
+
+        expect(submitButton.hasAttribute("disabled")).toBeTruthy();
+
+        form.dispatchEvent(new Event("submit"));
+
+        expect(Event.prototype.preventDefault).not.toHaveBeenCalled();
     });
 });
