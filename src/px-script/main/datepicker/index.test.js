@@ -228,7 +228,7 @@ describe("px-script: datepicker", () => {
             expect.any(HTMLElement),
             expect.objectContaining({
                 dateFormat: formats.nb.dateFormat,
-                numMonths: 3
+                showMonths: 3
             })
         );
     });
