@@ -1,11 +1,10 @@
 import React, { Component } from "react";
+import { NavHashLink as NavLink } from "react-router-hash-link";
 
 import { ComponentPreview, Attribute, Property, DocContainer } from "#";
 import { Datepicker as DatepickerComponent } from "@/FormComponents";
 import { datepicker } from "$/px-script/main";
 import Alert from "@/Alert";
-
-const moment = window.moment;
 
 const AboutDatepickers = () => (
     <>
@@ -21,7 +20,10 @@ const AboutDatepickers = () => (
 const SimpleDatepicker = () => (
     <>
         <h2 id="simple-datepicker">Simple datepicker</h2>
-        <p>A basic datepicker can be made by applying the attribute <Attribute data name="datepicker" /> to an input element inside a <Property value=".form-group" />.</p>
+        <p>
+            A basic datepicker can be made by applying the attribute <Attribute data name="datepicker" /> to an input element inside a <Property value=".form-group" />.
+            The basic datepicker has a read-only input field.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent
                 label="Date"
@@ -33,23 +35,57 @@ const SimpleDatepicker = () => (
     </>
 );
 
+const AllowInput = () => (
+    <>
+        <h2 id="allow-input">Allow input</h2>
+        <p>
+            By default datepickers do not allow input but you can use <Attribute data name="datepicker-allowinput" />. When
+            you allow input then the given date has to match the datepicker format (<Attribute value="iso8601"/> if you have not specified a format).
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <DatepickerComponent
+                label="Date"
+                prefixType="icon"
+                prefixValue="event"
+                id="simle-datepicker"
+                allowinput
+            />
+        </ComponentPreview>
+    </>
+);
+
 const InitialValue = () => (
     <>
         <h2 id="initial-value">Initial value</h2>
         <p>If you want to set an initial value for your datepicker use <Attribute data value="{your-date}" name="datepicker-value" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent
-                value={moment().format("YYYY-MM-DD")}
+                value="1972-12-28"
                 label="Date"
                 prefixType="icon"
                 prefixValue="event"
                 id="init-value-datepicker"
             />
         </ComponentPreview>
-        <Alert type="warning">
-            <h5>Initial value and format</h5>
-            <p>Keep in mind that the datepicker will not insert the initial value if it does not correctly match the set format (<Attribute value="iso8601"/> if you have not specified a format).</p>
-        </Alert>
+    </>
+);
+
+const HumanReadable = () => (
+    <>
+        <h2 id="human-readable">Human readable date</h2>
+        <p>
+            If you wish to make the date more readable to humans you can add <Attribute data value="true" name="datepicker-fulldate" />
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <DatepickerComponent
+                value="1972-12-28"
+                label="Date"
+                prefixType="icon"
+                prefixValue="event"
+                fulldate
+                id="init-value-datepicker"
+            />
+        </ComponentPreview>
     </>
 );
 
@@ -57,12 +93,13 @@ const CustomFormat = () => (
     <>
         <h2 id="custom-format">Custom format</h2>
         <p>
-            To use a custom format include <Attribute data name="datepicker-format" value="[nb|sv|da|fi|en|iso8601(default)]" />.
+            To use a custom format include <Attribute data name="datepicker-format" value="[nb|sv|da|fi|en|iso8601(default)]" />. If no
+            format is provided then datepicker will default to <Attribute value="iso8601" />. Same behaviour applies if you try to set an invalid date.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent
                 label="nb (norwegian):"
-                value={moment().format("DD.MM.YYYY")}
+                value="28.12.1972"
                 format="nb"
                 prefixType="icon"
                 prefixValue="event"
@@ -70,7 +107,7 @@ const CustomFormat = () => (
             />
             <DatepickerComponent
                 label="sv (swedish):"
-                value={moment().format("YYYY-MM-DD")}
+                value="1972-12-28"
                 format="sv"
                 prefixType="icon"
                 prefixValue="event"
@@ -78,7 +115,7 @@ const CustomFormat = () => (
             />
             <DatepickerComponent
                 label="da (danish):"
-                value={moment().format("DD.MM.YYYY")}
+                value="28.12.1972"
                 format="da"
                 prefixType="icon"
                 prefixValue="event"
@@ -86,7 +123,7 @@ const CustomFormat = () => (
             />
             <DatepickerComponent
                 label="fi (finnish):"
-                value={moment().format("DD.MM.YYYY")}
+                value="28.12.1972"
                 format="fi"
                 prefixType="icon"
                 prefixValue="event"
@@ -94,7 +131,7 @@ const CustomFormat = () => (
             />
             <DatepickerComponent
                 label="en (english):"
-                value={moment().format("DD/MM/YYYY")}
+                value="28/12/1972"
                 format="en"
                 prefixType="icon"
                 prefixValue="event"
@@ -102,7 +139,7 @@ const CustomFormat = () => (
             />
             <DatepickerComponent
                 label="iso8601 (robotic):"
-                value={moment().format("YYYY-MM-DD")}
+                value="1972-12-28"
                 format="iso8601"
                 prefixType="icon"
                 prefixValue="event"
@@ -115,11 +152,14 @@ const CustomFormat = () => (
 const IncludeTime = () => (
     <>
         <h2 id="include-time">Include time</h2>
-        <p>Adding time to your datepicker is as easy as using <Attribute data name="datepicker-time" value="true" />.</p>
+        <p>
+            Adding time to your datepicker is as easy as using <Attribute data name="datepicker-time" value="true" />. If you wish to set
+            a default time for the time picker just include it in the <Attribute data name="datepicker-value" /> attribute.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent
+                value="28.12.1972 12:00"
                 time
-                value={moment().format("HH:mm DD.MM.YYYY")}
                 format="nb"
                 label="Date"
                 prefixType="icon"
@@ -130,25 +170,10 @@ const IncludeTime = () => (
     </>
 );
 
-const Required = () => (
-    <>
-        <h2 id="required">Required</h2>
-        <p>If you set <Attribute data name="required" value="true" /> to true it will autopopulate the input after clicking it if no date is selected. Keep in mind that if you do not pass a value to the datepicker it will remain blank if the user does not click the input.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <DatepickerComponent
-                required label="Date"
-                prefixType="icon"
-                prefixValue="event"
-                id="required-datepicker"
-            />
-        </ComponentPreview>
-    </>
-);
-
 const ShowingMultipleMonths = () => (
     <>
         <h2 id="showing-multiple-months">Showing multiple months</h2>
-        <p>If you need to show more than one month in your date picker use the attribute <Attribute data name="datepicker-months" value="[number]" />.</p>
+        <p>If you need to show more than one month in your date picker use the attribute <Attribute data name="datepicker-months" value="{number}" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent
                 months="2"
@@ -161,28 +186,71 @@ const ShowingMultipleMonths = () => (
     </>
 );
 
-const DateRange = () => (
+const ValidDates = () => (
     <>
-        <h2 id="date-range">Date range</h2>
+        <h2 id="valid-dates">Valid dates</h2>
         <p>
-            You can set a range of available dates to select from by using <Attribute data name="datepicker-min" /> and <Attribute data name="datepicker-max" />
+            You can set a range of available dates to select from by using <Attribute data name="datepicker-min" /> and <Attribute data name="datepicker-max" />.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            {/* eslint-disable newline-per-chained-call*/}
             <DatepickerComponent
-                value={moment().format("DD.MM.YYYY")}
-                min={moment().subtract(5, "d").format("DD.MM.YYYY")}
-                max={moment().add(5, "d").format("DD.MM.YYYY")}
-                months="2"
+                value="28.12.1972"
+                min="28.12.1972"
+                max="10.05.2017"
                 format="nb"
                 label="Date"
                 prefixType="icon"
                 prefixValue="event"
-                id="date-range-datepicker"
+                id="valid-dates-datepicker"
             />
-            {/* eslint-enable newline-per-chained-call*/}
         </ComponentPreview>
-        <p><b>NOTE:</b> Using range with required and no initial value will make the datepicker select current date if a user clicks the input and does not select a date within the range.</p>
+    </>
+);
+
+const DateRange = () => (
+    <>
+        <h2 id="date-range">Date range</h2>
+        <p>
+            You can make it possible to select a range of dates with <Attribute data name="datepicker-mode" value="range" />.
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <DatepickerComponent
+                min="10.12.1972"
+                label="date"
+                prefixType="icon"
+                prefixValue="event"
+                id="date-range-datepicker"
+                mode="range"
+                format="nb"
+            />
+        </ComponentPreview>
+    </>
+);
+
+const MultipleDates = () => (
+    <>
+        <h2 id="multiple-dates">Multiple dates</h2>
+        <p>
+            Set mode to <Attribute value="multiple" /> for multiple date selection.
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <DatepickerComponent
+                min="10.12.1972"
+                label="date"
+                prefixType="icon"
+                prefixValue="event"
+                id="date-range-datepicker"
+                mode="multiple"
+                format="nb"
+            />
+        </ComponentPreview>
+        <Alert type="warning">
+            <h5>Max number of dates</h5>
+            <p>
+                The <Attribute value="multiple" /> variation of datepicker does not have an upper limit of dates. Use <NavLink to="#date-range">range</NavLink> if
+                you want to select a continuous range of dates.
+            </p>
+        </Alert>
     </>
 );
 
@@ -203,9 +271,20 @@ const Options = () => (
                     <td>
                         <Attribute data name="datepicker-value" />
                     </td>
-                    <td></td>
+                    <td>
+                        <Attribute value="null" />
+                    </td>
                     <td>
                         Value used to initialize calendar. Set this value with the same format currently set for the datepicker (including time if you have enabled that).
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <Attribute data name="datepicker-allowinput" />
+                    </td>
+                    <td></td>
+                    <td>
+                        This allows the user to write in the input field. The dates given must match the format of the datepicker.
                     </td>
                 </tr>
                 <tr>
@@ -236,7 +315,9 @@ const Options = () => (
                     <td>
                         <Attribute data name="datepicker-time" />
                     </td>
-                    <td></td>
+                    <td>
+                        <Attribute value="false" />
+                    </td>
                     <td>
                         If the calendar shows the current time and allows you to change it using a dropdown.
                     </td>
@@ -256,7 +337,9 @@ const Options = () => (
                     <td>
                         <Attribute data name="datepicker-min" />
                     </td>
-                    <td></td>
+                    <td>
+                        <Attribute value="null" />
+                    </td>
                     <td>
                         Disallow dates before min.
                     </td>
@@ -265,18 +348,36 @@ const Options = () => (
                     <td>
                         <Attribute data name="datepicker-max" />
                     </td>
-                    <td></td>
+                    <td>
+                        <Attribute value="null" />
+                    </td>
                     <td>
                         Disallow dates past max.
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <Attribute data name="required" />
+                        <Attribute data name="datepicker-altinput" />
                     </td>
                     <td></td>
                     <td>
-                        Forces a value in the input field, but only if an initial value is set or the user clicks/tabs the input.
+                        Use a custom format to display the selected date(s) shown in the input field.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <Attribute data name="datepicker-mode" />
+                    </td>
+                    <td>
+                        <Attribute value="single" />
+                    </td>
+                    <td>
+                        Different variations of date selection. Available options are:
+                        <ul className="list">
+                            <li className="mb-sm"><Attribute value="single" />User can select one date</li>
+                            <li className="mb-sm"><Attribute value="multiple" />User can select multiple dates</li>
+                            <li className="mb-sm"><Attribute value="range" />User can select a range of continuous dates</li>
+                        </ul>
                     </td>
                 </tr>
             </tbody>
@@ -298,12 +399,15 @@ class Datepickers extends Component {
                 </p>
                 <AboutDatepickers />
                 <SimpleDatepicker />
+                <AllowInput />
+                <HumanReadable />
                 <InitialValue />
                 <CustomFormat />
                 <IncludeTime />
-                <Required />
                 <ShowingMultipleMonths />
+                <ValidDates />
                 <DateRange />
+                <MultipleDates />
                 <Options />
             </DocContainer>
         );
@@ -313,4 +417,4 @@ class Datepickers extends Component {
 export default Datepickers;
 
 /* For testing */
-export { SimpleDatepicker, InitialValue, CustomFormat, IncludeTime, Required, ShowingMultipleMonths, DateRange, Options };
+export { AboutDatepickers, SimpleDatepicker, AllowInput, HumanReadable, InitialValue, CustomFormat, IncludeTime, ShowingMultipleMonths, ValidDates, DateRange, MultipleDates, Options };

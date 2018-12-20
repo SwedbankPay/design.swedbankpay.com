@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Datepickers, { SimpleDatepicker, InitialValue, CustomFormat, IncludeTime, Required, ShowingMultipleMonths, DateRange, Options } from "./index";
+import Datepickers, { AboutDatepickers, SimpleDatepicker, AllowInput, HumanReadable, InitialValue, CustomFormat, IncludeTime, ShowingMultipleMonths, ValidDates, DateRange, MultipleDates, Options } from "./index";
 
 describe("Documentation: Datepickers", () => {
     it("is defined", () => {
@@ -12,6 +12,18 @@ describe("Documentation: Datepickers", () => {
         const wrapper = shallow(<Datepickers />);
 
         expect(wrapper).toMatchSnapshot();
+    });
+
+    describe("AboutDatepickers", () => {
+        it("is defined", () => {
+            expect(AboutDatepickers).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<AboutDatepickers />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
     });
 
     describe("SimpleDatepicker", () => {
@@ -26,19 +38,42 @@ describe("Documentation: Datepickers", () => {
         });
     });
 
+    describe("AllowInput", () => {
+        it("is defined", () => {
+            expect(AllowInput).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<AllowInput />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("HumanReadable", () => {
+        it("is defined", () => {
+            expect(HumanReadable).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<HumanReadable />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
     describe("InitialValue", () => {
         it("is defined", () => {
             expect(InitialValue).toBeDefined();
         });
 
-        // TODO: Test fails due to using todays date
-        // it("renders", () => {
-        //     const wrapper = shallow(
-        //         <InitialValue />
-        //     );
+        it("renders", () => {
+            const wrapper = shallow(
+                <InitialValue />
+            );
 
-        //     expect(wrapper).toMatchSnapshot();
-        // });
+            expect(wrapper).toMatchSnapshot();
+        });
     });
 
     describe("CustomFormat", () => {
@@ -46,14 +81,13 @@ describe("Documentation: Datepickers", () => {
             expect(CustomFormat).toBeDefined();
         });
 
-        // TODO: Test fails due to using todays date
-        // it("renders", () => {
-        //     const wrapper = shallow(
-        //         <CustomFormat />
-        //     );
+        it("renders", () => {
+            const wrapper = shallow(
+                <CustomFormat />
+            );
 
-        //     expect(wrapper).toMatchSnapshot();
-        // });
+            expect(wrapper).toMatchSnapshot();
+        });
     });
 
     describe("IncludeTime", () => {
@@ -61,23 +95,10 @@ describe("Documentation: Datepickers", () => {
             expect(IncludeTime).toBeDefined();
         });
 
-        // TODO: Test fails due to using todays date
-        // it("renders", () => {
-        //     const wrapper = shallow(
-        //         <IncludeTime />
-        //     );
-
-        //     expect(wrapper).toMatchSnapshot();
-        // });
-    });
-
-    describe("Required", () => {
-        it("is defined", () => {
-            expect(Required).toBeDefined();
-        });
-
         it("renders", () => {
-            const wrapper = shallow(<Required />);
+            const wrapper = shallow(
+                <IncludeTime />
+            );
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -95,19 +116,44 @@ describe("Documentation: Datepickers", () => {
         });
     });
 
+    describe("ValidDates", () => {
+        it("is defined", () => {
+            expect(ValidDates).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(
+                <ValidDates />
+            );
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
     describe("DateRange", () => {
         it("is defined", () => {
             expect(DateRange).toBeDefined();
         });
 
-        // TODO: Test fails due to using todays date
-        // it("renders", () => {
-        //     const wrapper = shallow(
-        //         <DateRange />
-        //     );
+        it("renders", () => {
+            const wrapper = shallow(
+                <DateRange />
+            );
 
-        //     expect(wrapper).toMatchSnapshot();
-        // });
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("MultipleDates", () => {
+        it("is defined", () => {
+            expect(MultipleDates).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<MultipleDates />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
     });
 
     describe("Options", () => {
