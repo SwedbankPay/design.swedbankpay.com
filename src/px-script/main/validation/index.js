@@ -135,7 +135,7 @@ const validation = (() => {
     const init = () => {
         const validateEls = document.querySelectorAll(SELECTORS.VALIDATE);
 
-        if (validateEls) {
+        if (validateEls.length) {
             validateEls.forEach(element => {
                 const { tagName } = element;
 
