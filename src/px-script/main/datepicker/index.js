@@ -37,7 +37,7 @@ const datepicker = (() => {
             maxDate: datepickerMax || null,
             mode: datepickerMode || "single",
             minDate: datepickerMin || null,
-            numMonths: parseInt(datepickerMonths) || 1,
+            showMonths: parseInt(datepickerMonths) || 1,
             time_24hr: true // eslint-disable-line camelcase
         };
 
