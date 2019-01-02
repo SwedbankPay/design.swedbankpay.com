@@ -19,6 +19,18 @@ describe("px-script: validation", () => {
                     <input {...props} type="email" className="form-control" id="validation-email" placeholder="Email" data-validate/>
                 </div>
             </div>
+            <div className="form-group">
+                <label htmlFor="validation-textarea">textarea</label>
+                <div className="input-group">
+                    <textarea className="form-control" id="validation-textarea" placeholder="textarea" data-validate/>
+                </div>
+            </div>
+            <div className="form-group">
+                <label htmlFor="validation-select">select</label>
+                <div className="input-group">
+                    <select className="form-control" id="validation-select" placeholder="select" data-validate/>
+                </div>
+            </div>
         </form>
     );
 
@@ -36,6 +48,14 @@ describe("px-script: validation", () => {
 
     it("is defined", () => {
         expect(validation).toBeDefined();
+    });
+
+    it("validateField is exposed globally", () => {
+        expect(validation.validateField).toBeDefined();
+    });
+
+    it("validateForm is exposed globally", () => {
+        expect(validation.validateForm).toBeDefined();
     });
 
     it("has an init method", () => {
@@ -309,5 +329,22 @@ describe("px-script: validation", () => {
         form.dispatchEvent(new Event("submit"));
 
         expect(Event.prototype.preventDefault).not.toHaveBeenCalled();
+    });
+
+    it("validateForm throws an error if sent element is not a form", () => {
+        console.error = jest.fn();
+
+        const elem = document.createElement("div");
+        const invalidValue = validation.validateForm(elem);
+
+        expect(invalidValue).toBeFalsy();
+        expect(console.error).toHaveBeenCalled();
+    });
+
+    it("if the given element is not of type email validateField then tests element validity", () => {
+        const elem = document.createElement("input");
+        const checkValidity = validation.validateField(elem);
+
+        expect(checkValidity).toBeTruthy();
     });
 });
