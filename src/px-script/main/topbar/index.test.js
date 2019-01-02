@@ -62,6 +62,7 @@ describe("px-script: topbar", () => {
         topbar.init();
 
         expect(NavMenu).not.toHaveBeenCalled();
+        expect(NavMenu.mock.instances[0]).toBeFalsy();
 
         ReactDOM.unmountComponentAtNode(div);
     });
@@ -71,6 +72,7 @@ describe("px-script: topbar", () => {
         topbar.init();
 
         expect(NavMenu).not.toHaveBeenCalled();
+        expect(NavMenu.mock.instances[0]).toBeFalsy();
 
         ReactDOM.unmountComponentAtNode(div);
     });
@@ -80,7 +82,27 @@ describe("px-script: topbar", () => {
         topbar.init();
 
         expect(NavMenu).toHaveBeenCalled();
+        expect(NavMenu.mock.instances[0]).toBeTruthy();
 
         ReactDOM.unmountComponentAtNode(div);
+    });
+
+    it("closes navMenu on mousedown if the nav menu is open and you don't click inside", () => {
+        ReactDOM.render(<Topbar />, div);
+        topbar.init();
+
+        const NavMenuElement = document.querySelector(".topbar");
+        const NavMenuInst = NavMenu.mock.instances[0];
+
+        expect(NavMenuElement).toBeTruthy();
+        expect(NavMenuInst).toBeTruthy();
+
+        NavMenuInst.containsPoint.mockReturnValue(false);
+        NavMenuInst.isOpen = true;
+
+        document.querySelector("html").dispatchEvent(new Event("mousedown"));
+
+        expect(NavMenuInst.containsPoint).toHaveBeenCalled();
+        expect(NavMenuInst.close).toHaveBeenCalled();
     });
 });
