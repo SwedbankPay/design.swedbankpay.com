@@ -60,7 +60,7 @@
             }
             .make-column-orders(@columns);
 
-            .make-column-offsets(@n, @i: 1) when (@i =< @n) {
+            .make-column-offsets(@n, @i: 0) when (@i =< @n) {
                 .offset@{infix}-@{i} {
                     .make-col-offset(@i, @columns);
                 }
