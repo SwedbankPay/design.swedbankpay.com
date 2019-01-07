@@ -292,20 +292,17 @@ const ResponsiveClasses = () => (
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="showcase-grid">
                 <div className="container">
-                    {"<!-- Stack the columns on mobile by making one full-width and the other half-width -->"}
                     <div className="row">
                         <div className="col-12 col-md-8">.col-12 .col-md-8</div>
                         <div className="col-6 col-md-4">.col-6 .col-md-4</div>
                     </div>
 
-                    {/* <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop --> */}
                     <div className="row">
                         <div className="col-6 col-md-4">.col-6 .col-md-4</div>
                         <div className="col-6 col-md-4">.col-6 .col-md-4</div>
                         <div className="col-6 col-md-4">.col-6 .col-md-4</div>
                     </div>
 
-                    {/* <!-- Columns are always 50% wide, on mobile and desktop --> */}
                     <div className="row">
                         <div className="col-6">.col-6</div>
                         <div className="col-6">.col-6</div>
@@ -377,6 +374,7 @@ const Alignment = () => (
                 </div>
             </div>
         </ComponentPreview>
+
         <h3>Horizontal alignment</h3>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="showcase-grid">
@@ -424,6 +422,182 @@ const Alignment = () => (
                 </div>
             </div>
         </ComponentPreview>
+
+        <h3>Column wrapping</h3>
+        <p>If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+            <div className="showcase-grid">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-9">.col-9</div>
+                        <div className="col-4">.col-4<br/>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+                        <div className="col-6">.col-6<br/>Subsequent columns continue along the new line.</div>
+                    </div>
+                </div>
+            </div>
+        </ComponentPreview>
+
+        <h3>Column breaks</h3>
+        <p>Breaking columns to a new line in flexbox requires a small hack: add an element with <Property value="width: 100%" /> wherever you want to wrap your columns to a new line. Normally this is accomplished with multiple <Property value=".row" />s, but not every implementation method can account for this.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+            <div className="showcase-grid">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-6 col-sm-3">.col-6 .col-sm-3</div>
+                        <div className="col-6 col-sm-3">.col-6 .col-sm-3</div>
+
+                        <div className="w-100"></div>
+
+                        <div className="col-6 col-sm-3">.col-6 .col-sm-3</div>
+                        <div className="col-6 col-sm-3">.col-6 .col-sm-3</div>
+                    </div>
+                </div>
+            </div>
+        </ComponentPreview>
+        <p>You may also apply this break at specific breakpoints with our <Link to="/docs/utilities/display">responsive display utilities</Link>.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+            <div className="showcase-grid">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-6 col-sm-4">.col-6 .col-sm-4</div>
+                        <div className="col-6 col-sm-4">.col-6 .col-sm-4</div>
+
+                        <div className="w-100 d-none d-md-block"></div>
+
+                        <div className="col-6 col-sm-4">.col-6 .col-sm-4</div>
+                        <div className="col-6 col-sm-4">.col-6 .col-sm-4</div>
+                    </div>
+                </div>
+            </div>
+        </ComponentPreview>
+    </>
+);
+
+const Reordering = () => (
+    <>
+        <h2 id="reordering">Reordering</h2>
+        <h3>Order classes</h3>
+        <p>Use <Property value=".order-" /> classes for controlling the <b>visual</b> order of your content. These classes are responsive, so you can set the <Property value="order" /> by breakpoint (e.g., <Property value=".order-1.order-md-2" />). Includes support for <Property value="1" /> through <Property value="12" /> across all five grid tiers.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+            <div className="showcase-grid">
+                <div className="container">
+                    <div className="row">
+                        <div className="col">
+                            First, but unordered
+                        </div>
+                        <div className="col order-12">
+                            Second, but last
+                        </div>
+                        <div className="col order-1">
+                            Third, but first
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ComponentPreview>
+        <p>There are also responsive <Property value=".order-first" /> and <Property value=".order-last" /> classes that change the <Property value="order" /> of an element by applying <Property value="order: -1" /> and <Property value="order: 13" />, respectively. These classes can also be intermixed with the numbered <Property value=".order-*" /> classes as needed.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+            <div className="showcase-grid">
+                <div className="container">
+                    <div className="row">
+                        <div className="col order-last">
+                            First, but last
+                        </div>
+                        <div className="col">
+                            Second, but unordered
+                        </div>
+                        <div className="col order-first">
+                            Third, but first
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ComponentPreview>
+
+        <h3>Offsetting columns</h3>
+        <p>You can offset grid columns in two ways: our responsive <Property value=".offset-" /> grid classes and our <Link to="/docs/utilities/display">margin utilities</Link>. Grid classes are sized to match columns while margins are more useful for quick layouts where the width of the offset is variable.</p>
+
+        <h4>Offset classes</h4>
+        <p>Move columns to the right using <Property value=".offset-md-*" /> classes. These classes increase the left margin of a column by <Property value="*" /> columns. For example, <Property value=".offset-md-4" /> moves <Property value=".col-md-4" /> over four columns.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+            <div className="showcase-grid">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-4">.col-md-4</div>
+                        <div className="col-md-4 offset-md-4">.col-md-4 .offset-md-4</div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+                        <div className="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-6 offset-md-3">.col-md-6 .offset-md-3</div>
+                    </div>
+                </div>
+            </div>
+        </ComponentPreview>
+        <p>In addition to column clearing at responsive breakpoints, you may need to reset offsets.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+            <div className="showcase-grid">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+                        <div className="col-sm-5 offset-sm-2 col-md-6 offset-md-0">.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0</div>
+                    </div>
+                    <div className="row">
+                        <div className="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
+                        <div className="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0</div>
+                    </div>
+                </div>
+            </div>
+        </ComponentPreview>
+
+        <h4>Margin utilities</h4>
+        <p>You can also use margin utilities like <Property value=".mr-auto" /> to force sibling columns away from one another.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+            <div className="showcase-grid">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-4">.col-md-4</div>
+                        <div className="col-md-4 ml-auto">.col-md-4 .ml-auto</div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
+                        <div className="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
+                    </div>
+                    <div className="row">
+                        <div className="col-auto mr-auto">.col-auto .mr-auto</div>
+                        <div className="col-auto">.col-auto</div>
+                    </div>
+                </div>
+            </div>
+        </ComponentPreview>
+    </>
+);
+
+const Nesting = () => (
+    <>
+        <h2 id="nesting">Nesting</h2>
+        <p>To nest your content with the default grid, add a new <Property value=".row" /> and set of <Property value=".col-sm-*" /> columns within an existing <Property value=".col-sm-*" /> column. Nested rows should include a set of columns that add up to 12 or fewer (it is not required that you use all 12 available columns).</p>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+            <div className="showcase-grid">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-sm-9">
+                            Level 1: .col-sm-9
+                            <div className="row">
+                                <div className="col-8 col-sm-6">
+                                    Level 2: .col-8 .col-sm-6
+                                </div>
+                                <div className="col-4 col-sm-6">
+                                    Level 2: .col-4 .col-sm-6
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ComponentPreview>
     </>
 );
 
@@ -436,10 +610,12 @@ const Grid = () => (
         <AutoLayoutColumns />
         <ResponsiveClasses />
         <Alignment />
+        <Reordering />
+        <Nesting />
     </DocContainer>
 );
 
 export default Grid;
 
 /* For testing */
-export { HowItWorks, GridOptions, AutoLayoutColumns, ResponsiveClasses, Alignment };
+export { HowItWorks, GridOptions, AutoLayoutColumns, ResponsiveClasses, Alignment, Reordering, Nesting };
