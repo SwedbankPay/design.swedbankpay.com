@@ -14,4 +14,6 @@
 
 ### Fixed
 
+- Fixed issue with negative margin utility classes not being generated.
+
 ### Removed
