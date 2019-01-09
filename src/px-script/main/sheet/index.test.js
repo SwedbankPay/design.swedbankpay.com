@@ -35,6 +35,10 @@ describe("px-script: sheet", () => {
         document.body.classList.remove("sheet-open");
     });
 
+    afterEach(() => {
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
     it("is defined", () => {
         expect(sheet).toBeDefined();
     });
@@ -42,6 +46,25 @@ describe("px-script: sheet", () => {
     it("has an init method", () => {
         expect(sheet.init).toBeDefined();
         expect(sheet.init).toBeInstanceOf(Function);
+    });
+
+    it("adds body-has-vscroll when sheet is opened if vertical scrollbar exists", () => {
+        ReactDOM.render(<Sheet />, div);
+        sheet.init();
+
+        document.querySelector("button").dispatchEvent(new Event("click"));
+
+        expect(document.body.classList).toContain("body-has-vscroll");
+    });
+
+    it("removes body-has-vscroll when sheet is opened if vertical scrollbar does not exist", () => {
+        ReactDOM.render(<Sheet />, div);
+        window.innerWidth = 0;
+        sheet.init();
+
+        document.querySelector("button").dispatchEvent(new Event("click"));
+
+        expect(document.body.classList).not.toContain("body-has-vscroll");
     });
 
     it("button with attribute 'data-sheet-open' pointing to the correct id opens corresponding sheet", () => {
@@ -60,8 +83,6 @@ describe("px-script: sheet", () => {
         expect(renderedSheet.classList).toContain("d-block");
         expect(document.body.classList).toContain("sheet-open");
         expect(renderedSheet.classList).toContain("sheet-open");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("button with attribute 'data-sheet-close' pointing to the correct id closes corresponding sheet", () => {
@@ -81,8 +102,6 @@ describe("px-script: sheet", () => {
         expect(renderedSheet.classList).not.toContain("sheet-open");
         expect(document.body.classList).not.toContain("sheet-open");
         expect(renderedSheet.classList).not.toContain("d-block");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("warns user when there is no sheet with an id matching the value of the attribute 'data-sheet-open'", () => {
@@ -99,8 +118,6 @@ describe("px-script: sheet", () => {
         sheet.init();
         expect(console.warn).toHaveBeenCalled();
         expect(console.warn).toHaveBeenCalledWith(expect.stringContaining("tester-sheet"));
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("warns user when there is no sheet with an id matching the value of the attribute 'data-sheet-close'", () => {
@@ -117,8 +134,6 @@ describe("px-script: sheet", () => {
         sheet.init();
         expect(console.warn).toHaveBeenCalled();
         expect(console.warn).toHaveBeenCalledWith(expect.stringContaining("tester-sheet"));
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("closes sheet when clicking the close icon", () => {
@@ -138,8 +153,6 @@ describe("px-script: sheet", () => {
         expect(renderedSheet.classList).not.toContain("sheet-open");
         expect(document.body.classList).not.toContain("sheet-open");
         expect(renderedSheet.classList).not.toContain("d-block");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("closes sheet when clicking outside the sheet section", () => {
@@ -158,8 +171,6 @@ describe("px-script: sheet", () => {
         expect(renderedSheet.classList).not.toContain("sheet-open");
         expect(document.body.classList).not.toContain("sheet-open");
         expect(renderedSheet.classList).not.toContain("d-block");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("does not close sheet when pressing keys other than esc", () => {
@@ -183,8 +194,6 @@ describe("px-script: sheet", () => {
         expect(renderedSheet.classList).toContain("sheet-open");
         expect(document.body.classList).toContain("sheet-open");
         expect(renderedSheet.classList).toContain("d-block");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("closes sheet when pressing esc", () => {
@@ -208,8 +217,6 @@ describe("px-script: sheet", () => {
         expect(renderedSheet.classList).not.toContain("sheet-open");
         expect(document.body.classList).not.toContain("sheet-open");
         expect(renderedSheet.classList).not.toContain("d-block");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("opens sheet when calling sheet.open", () => {
@@ -230,8 +237,6 @@ describe("px-script: sheet", () => {
         expect(renderedSheet.classList).toContain("d-block");
         expect(renderedSheet.classList).toContain("sheet-open");
         expect(document.body.classList).toContain("sheet-open");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("does not open sheet when calling sheet.open with wrong id and prints error to console", () => {
@@ -256,8 +261,6 @@ describe("px-script: sheet", () => {
         expect(renderedSheet.classList).not.toContain("d-block");
         expect(renderedSheet.classList).not.toContain("sheet-open");
         expect(document.body.classList).not.toContain("sheet-open");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("closes sheet when calling sheet.close", () => {
@@ -276,8 +279,6 @@ describe("px-script: sheet", () => {
         expect(renderedSheet.classList).not.toContain("d-block");
         expect(renderedSheet.classList).not.toContain("sheet-open");
         expect(document.body.classList).not.toContain("sheet-open");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("does not close sheet when calling sheet.close with wrong id and prints error to console", () => {
@@ -299,7 +300,5 @@ describe("px-script: sheet", () => {
         expect(renderedSheet.classList).toContain("d-block");
         expect(renderedSheet.classList).toContain("sheet-open");
         expect(document.body.classList).toContain("sheet-open");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 });
