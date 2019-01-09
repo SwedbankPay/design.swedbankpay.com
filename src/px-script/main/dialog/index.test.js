@@ -55,6 +55,10 @@ describe("px-script: dialog", () => {
         document.body.classList.remove("dialog-open");
     });
 
+    afterEach(() => {
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
     it("is defined", () => {
         expect(dialog).toBeDefined();
     });
@@ -62,6 +66,25 @@ describe("px-script: dialog", () => {
     it("has an init method", () => {
         expect(dialog.init).toBeDefined();
         expect(dialog.init).toBeInstanceOf(Function);
+    });
+
+    it("adds body-has-vscroll when sheet is opened if vertical scrollbar exists", () => {
+        ReactDOM.render(<Dialog />, div);
+        dialog.init();
+
+        document.querySelector("button").dispatchEvent(new Event("click"));
+
+        expect(document.body.classList).toContain("body-has-vscroll");
+    });
+
+    it("removes body-has-vscroll when dialog is opened if vertical scrollbar does not exist", () => {
+        ReactDOM.render(<Dialog />, div);
+        window.innerWidth = 0;
+        dialog.init();
+
+        document.querySelector("button").dispatchEvent(new Event("click"));
+
+        expect(document.body.classList).not.toContain("body-has-vscroll");
     });
 
     it("button with attribute 'data-dialog-open' pointing to the correct id opens corresponding dialog", () => {
@@ -78,8 +101,6 @@ describe("px-script: dialog", () => {
         openBtn.click();
         expect(renderedDialog.classList).toContain("d-flex");
         expect(document.body.classList).toContain("dialog-open");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("button with attribute 'data-dialog-close' pointing to the correct id closes corresponding dialog", () => {
@@ -96,8 +117,6 @@ describe("px-script: dialog", () => {
         closeBtn.click();
         expect(renderedDialog.classList).not.toContain("d-flex");
         expect(document.body.classList).not.toContain("dialog-open");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("warns user when there is no dialog with an id matching the value of the attribute 'data-dialog-open'", () => {
@@ -114,8 +133,6 @@ describe("px-script: dialog", () => {
         dialog.init();
         expect(console.warn).toHaveBeenCalled();
         expect(console.warn).toHaveBeenCalledWith(expect.stringContaining("tester-dialog"));
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("warns user when there is no dialog with an id matching the value of the attribute 'data-dialog-close'", () => {
@@ -137,8 +154,6 @@ describe("px-script: dialog", () => {
         dialog.init();
         expect(console.warn).toHaveBeenCalled();
         expect(console.warn).toHaveBeenCalledWith(expect.stringContaining("tester-dialog"));
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("closes dialog when clicking outside dialog component", () => {
@@ -155,8 +170,6 @@ describe("px-script: dialog", () => {
 
         expect(renderedDialog.classList).not.toContain("d-flex");
         expect(document.body.classList).not.toContain("dialog-open");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("closes dialog when clicking the close icon", () => {
@@ -174,8 +187,6 @@ describe("px-script: dialog", () => {
 
         expect(renderedDialog.classList).not.toContain("d-flex");
         expect(document.body.classList).not.toContain("dialog-open");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("does not close dialog when pressing keys other than esc", () => {
@@ -196,8 +207,6 @@ describe("px-script: dialog", () => {
 
         expect(renderedDialog.classList).toContain("d-flex");
         expect(document.body.classList).toContain("dialog-open");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("closes dialog when pressing esc", () => {
@@ -218,8 +227,6 @@ describe("px-script: dialog", () => {
 
         expect(renderedDialog.classList).not.toContain("d-flex");
         expect(document.body.classList).not.toContain("dialog-open");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("opens dialog when calling dialog.open", () => {
@@ -237,8 +244,6 @@ describe("px-script: dialog", () => {
 
         expect(renderedDialog.classList).toContain("d-flex");
         expect(document.body.classList).toContain("dialog-open");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("does not open dialog when calling dialog.open with wrong id and prints error to console", () => {
@@ -258,8 +263,6 @@ describe("px-script: dialog", () => {
 
         expect(renderedDialog.classList).not.toContain("d-flex");
         expect(document.body.classList).not.toContain("dialog-open");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("closes dialog when calling dialog.close", () => {
@@ -276,8 +279,6 @@ describe("px-script: dialog", () => {
 
         expect(renderedDialog.classList).not.toContain("d-flex");
         expect(document.body.classList).not.toContain("dialog-open");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("does not close dialog when calling dialog.close with wrong id and prints error to console", () => {
@@ -297,7 +298,5 @@ describe("px-script: dialog", () => {
 
         expect(renderedDialog.classList).toContain("d-flex");
         expect(document.body.classList).toContain("dialog-open");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 });

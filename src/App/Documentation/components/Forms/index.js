@@ -118,7 +118,10 @@ const Validation = () => (
         </ComponentPreview>
 
         <h3>Feedback</h3>
-        <p>To give users validation feedback on each input insert the message in the attributes <Attribute data name="success" /> and <Attribute data name="error" /> in the <Attribute value=".help-block" /> element.</p>
+        <p>
+            To give users validation feedback on each input insert the message in the attributes <Attribute data name="success" /> and <Attribute data name="error" /> in
+            the <Attribute value=".help-block" /> element. To display an asterisk you have to include a label with your input element.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <form action="#" noValidate data-validate="">
                 <InputGroup
