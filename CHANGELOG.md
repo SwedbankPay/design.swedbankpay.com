@@ -15,5 +15,6 @@
 ### Fixed
 
 - Fixed issue with negative margin utility classes not being generated.
+- Fixed issue with panel not taking full width on mobile screens.
 
 ### Removed
