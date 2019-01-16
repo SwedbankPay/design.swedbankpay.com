@@ -112,3 +112,16 @@
         }
     }
 }
+
+@media (min-width: @screen-lg-min) {
+    [data-tooltip] {
+        &[data-tooltip-position="left"]:before {
+            margin-left: -14px;
+        }
+
+        &[data-tooltip-position="right"]:before {
+            margin-left: 1px;
+        }
+    }
+}
+
