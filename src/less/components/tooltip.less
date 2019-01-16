@@ -56,6 +56,7 @@
         top: 50%;
         margin-left: -9px;
         transform: translateX(-100%) translateY(-50%);
+        box-shadow: rgba(0, 0, 0, 0.3) -1px 0 0 0;
     }
 
     &[data-tooltip-position="top"]:before {
@@ -112,3 +113,16 @@
         }
     }
 }
+
+@media (min-width: @screen-lg-min) {
+    [data-tooltip] {
+        &[data-tooltip-position="left"]:before {
+            margin-left: -14px;
+        }
+
+        &[data-tooltip-position="right"]:before {
+            margin-left: 1px;
+        }
+    }
+}
+
