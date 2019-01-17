@@ -26,32 +26,32 @@ exports[`Utilities: Colors BackgroundColors renders 1`] = `
         className="row"
       >
         <div
-          className="col-12 bg-brand p-2"
+          className="col-12 text-white bg-brand p-2"
         >
           .bg-brand
         </div>
         <div
-          className="col-12 bg-default p-2"
+          className="col-12 text-white bg-default p-2"
         >
           .bg-default
         </div>
         <div
-          className="col-12 bg-neutral p-2"
+          className="col-12 text-white bg-neutral p-2"
         >
           .bg-neutral
         </div>
         <div
-          className="col-12 bg-success p-2"
+          className="col-12 text-white bg-success p-2"
         >
           .bg-success
         </div>
         <div
-          className="col-12 bg-warning p-2"
+          className="col-12 text-white bg-warning p-2"
         >
           .bg-warning
         </div>
         <div
-          className="col-12 bg-danger p-2"
+          className="col-12 text-white bg-danger p-2"
         >
           .bg-danger
         </div>
@@ -73,10 +73,24 @@ exports[`Utilities: Colors TextColors renders 1`] = `
   >
     Text colors
   </h2>
+  <Alert
+    type="danger"
+  >
+    <h5>
+      Deprecated classname
+    </h5>
+    <p>
+      The class 
+      <Property
+        value=".color-{name}"
+      />
+       has been deprecated, and will be removed.
+    </p>
+  </Alert>
   <p>
     To use a color simply prepend 
     <Property
-      value="color-{name}"
+      value=".text-{name}"
     />
     .
   </p>
@@ -86,73 +100,50 @@ exports[`Utilities: Colors TextColors renders 1`] = `
     showCasePanel={true}
   >
     <p
-      className="color-brand"
+      className="text-brand"
     >
-      This text is color-brand.
+      .text-brand
     </p>
     <p
-      className="color-default"
+      className="text-default"
     >
-      This text is color-default.
+      .text-default
     </p>
     <p
-      className="color-neutral"
+      className="text-neutral"
     >
-      This text is color-neutral.
+      .text-neutral
     </p>
     <p
-      className="color-success"
+      className="text-success"
     >
-      This text is color-success.
+      .text-success
     </p>
     <p
-      className="color-warning"
+      className="text-warning"
     >
-      This text is color-warning.
+      .text-warning
     </p>
     <p
-      className="color-danger"
+      className="text-danger"
     >
-      This text is color-danger.
+      .text-danger
     </p>
-  </ComponentPreview>
-  <h3>
-    Black and white fade
-  </h3>
-  <p>
-    To use 50% faded black and white apply classes 
-    <Property
-      value=".color-black-50"
-    />
-     and 
-    <Property
-      value=".color-white-50"
-    />
-    .
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <div
-      className="col bg-white"
+    <p
+      className="text-white bg-default"
     >
-      <p
-        className="color-black-50"
-      >
-        This text is color-black-50.
-      </p>
-    </div>
-    <div
-      className="col bg-default"
+      .text-white
+    </p>
+    <p
+      className="text-black-50"
     >
-      <p
-        className="color-white-50"
-      >
-        This text is color-white-50.
-      </p>
-    </div>
+      .text-black-50
+    </p>
+    <p
+      className="text-white-50 bg-default"
+    >
+      .text-white-50
+    </p>
   </ComponentPreview>
   <h3>
     With 
@@ -180,63 +171,73 @@ exports[`Utilities: Colors TextColors renders 1`] = `
     showCasePanel={true}
   >
     <p
-      className="color-brand"
+      className="text-brand"
     >
-      This text is color-brand, 
+      .text-brand 
       <span
         className="text-muted"
       >
-        with a muted ending.
+        .text-muted
       </span>
     </p>
     <p
-      className="color-default"
+      className="text-default"
     >
-      This text is color-default, 
+      .text-default 
       <span
         className="text-muted"
       >
-        with a muted ending.
+        .text-muted
       </span>
     </p>
     <p
-      className="color-neutral"
+      className="text-neutral"
     >
-      This text is color-neutral, 
+      .text-neutral 
       <span
         className="text-muted"
       >
-        with a muted ending.
+        .text-muted
       </span>
     </p>
     <p
-      className="color-success"
+      className="text-success"
     >
-      This text is color-success, 
+      .text-success 
       <span
         className="text-muted"
       >
-        with a muted ending.
+        .text-muted
       </span>
     </p>
     <p
-      className="color-warning"
+      className="text-warning"
     >
-      This text is color-warning, 
+      .text-warning 
       <span
         className="text-muted"
       >
-        with a muted ending.
+        .text-muted
       </span>
     </p>
     <p
-      className="color-danger"
+      className="text-danger"
     >
-      This text is color-danger, 
+      .text-danger 
       <span
         className="text-muted"
       >
-        with a muted ending.
+        .text-muted
+      </span>
+    </p>
+    <p
+      className="text-white bg-default"
+    >
+      .text-white 
+      <span
+        className="text-muted"
+      >
+        .text-muted
       </span>
     </p>
   </ComponentPreview>
