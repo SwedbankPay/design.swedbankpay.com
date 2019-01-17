@@ -15,6 +15,18 @@ const TextColors = () => (
             <p className="color-warning">This text is color-warning.</p>
             <p className="color-danger">This text is color-danger.</p>
         </ComponentPreview>
+
+        <h3>Black and white fade</h3>
+        <p>To use 50% faded black and white apply classes <Property value=".color-black-50" /> and <Property value=".color-white-50" />.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <div className="col bg-white">
+                <p className="color-black-50">This text is color-black-50.</p>
+            </div>
+            <div className="col bg-default">
+                <p className="color-white-50">This text is color-white-50.</p>
+            </div>
+        </ComponentPreview>
+
         <h3>With <Property value=".text-muted" /></h3>
         <p>To get a muted effect on the color you are using, append a <PrismCode className="language-html">{"<span>"}</PrismCode>-element with the class <Property value=".text-muted" /> to the desired element.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>

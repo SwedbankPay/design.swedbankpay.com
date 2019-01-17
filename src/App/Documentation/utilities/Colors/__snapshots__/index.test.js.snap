@@ -117,6 +117,44 @@ exports[`Utilities: Colors TextColors renders 1`] = `
     </p>
   </ComponentPreview>
   <h3>
+    Black and white fade
+  </h3>
+  <p>
+    To use 50% faded black and white apply classes 
+    <Property
+      value=".color-black-50"
+    />
+     and 
+    <Property
+      value=".color-white-50"
+    />
+    .
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="col bg-white"
+    >
+      <p
+        className="color-black-50"
+      >
+        This text is color-black-50.
+      </p>
+    </div>
+    <div
+      className="col bg-default"
+    >
+      <p
+        className="color-white-50"
+      >
+        This text is color-white-50.
+      </p>
+    </div>
+  </ComponentPreview>
+  <h3>
     With 
     <Property
       value=".text-muted"
