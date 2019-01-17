@@ -2,40 +2,38 @@ import React from "react";
 import PrismCode from "react-prism";
 
 import { ComponentPreview, DocContainer, Property } from "#";
+import Alert from "@/Alert";
 
 const TextColors = () => (
     <>
         <h2 id="text-colors">Text colors</h2>
-        <p>To use a color simply prepend <Property value="color-{name}" />.</p>
+        <Alert type="danger">
+            <h5>Deprecated classname</h5>
+            <p>The class <Property value=".color-{name}" /> has been deprecated, and will be removed.</p>
+        </Alert>
+        <p>To use a color simply prepend <Property value=".text-{name}" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <p className="color-brand">This text is color-brand.</p>
-            <p className="color-default">This text is color-default.</p>
-            <p className="color-neutral">This text is color-neutral.</p>
-            <p className="color-success">This text is color-success.</p>
-            <p className="color-warning">This text is color-warning.</p>
-            <p className="color-danger">This text is color-danger.</p>
-        </ComponentPreview>
-
-        <h3>Black and white fade</h3>
-        <p>To use 50% faded black and white apply classes <Property value=".color-black-50" /> and <Property value=".color-white-50" />.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="col bg-white">
-                <p className="color-black-50">This text is color-black-50.</p>
-            </div>
-            <div className="col bg-default">
-                <p className="color-white-50">This text is color-white-50.</p>
-            </div>
+            <p className="text-brand">.text-brand</p>
+            <p className="text-default">.text-default</p>
+            <p className="text-neutral">.text-neutral</p>
+            <p className="text-success">.text-success</p>
+            <p className="text-warning">.text-warning</p>
+            <p className="text-danger">.text-danger</p>
+            <p className="text-white bg-default">.text-white</p>
+            <p className="text-black-50">.text-black-50</p>
+            <p className="text-white-50 bg-default">.text-white-50</p>
         </ComponentPreview>
 
         <h3>With <Property value=".text-muted" /></h3>
         <p>To get a muted effect on the color you are using, append a <PrismCode className="language-html">{"<span>"}</PrismCode>-element with the class <Property value=".text-muted" /> to the desired element.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <p className="color-brand">This text is color-brand, <span className="text-muted">with a muted ending.</span></p>
-            <p className="color-default">This text is color-default, <span className="text-muted">with a muted ending.</span></p>
-            <p className="color-neutral">This text is color-neutral, <span className="text-muted">with a muted ending.</span></p>
-            <p className="color-success">This text is color-success, <span className="text-muted">with a muted ending.</span></p>
-            <p className="color-warning">This text is color-warning, <span className="text-muted">with a muted ending.</span></p>
-            <p className="color-danger">This text is color-danger, <span className="text-muted">with a muted ending.</span></p>
+            <p className="text-brand">.text-brand <span className="text-muted">.text-muted</span></p>
+            <p className="text-default">.text-default <span className="text-muted">.text-muted</span></p>
+            <p className="text-neutral">.text-neutral <span className="text-muted">.text-muted</span></p>
+            <p className="text-success">.text-success <span className="text-muted">.text-muted</span></p>
+            <p className="text-warning">.text-warning <span className="text-muted">.text-muted</span></p>
+            <p className="text-danger">.text-danger <span className="text-muted">.text-muted</span></p>
+            <p className="text-white bg-default">.text-white <span className="text-muted">.text-muted</span></p>
         </ComponentPreview>
     </>
 );
@@ -47,12 +45,12 @@ const BackgroundColors = () => (
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="container">
                 <div className="row">
-                    <div className="col-12 bg-brand p-2">.bg-brand</div>
-                    <div className="col-12 bg-default p-2">.bg-default</div>
-                    <div className="col-12 bg-neutral p-2">.bg-neutral</div>
-                    <div className="col-12 bg-success p-2">.bg-success</div>
-                    <div className="col-12 bg-warning p-2">.bg-warning</div>
-                    <div className="col-12 bg-danger p-2">.bg-danger</div>
+                    <div className="col-12 text-white bg-brand p-2">.bg-brand</div>
+                    <div className="col-12 text-white bg-default p-2">.bg-default</div>
+                    <div className="col-12 text-white bg-neutral p-2">.bg-neutral</div>
+                    <div className="col-12 text-white bg-success p-2">.bg-success</div>
+                    <div className="col-12 text-white bg-warning p-2">.bg-warning</div>
+                    <div className="col-12 text-white bg-danger p-2">.bg-danger</div>
                     <div className="col-12 bg-white p-2">.bg-white</div>
                 </div>
             </div>
