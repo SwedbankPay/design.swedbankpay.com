@@ -1,115 +1,113 @@
-.cards {
-    .card {
-        background-color: @white;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-        margin: 0 0 @base-margin;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
+.card {
+    background-color: @white;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    margin: 0 0 @base-margin;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
 
+    header {
+        padding: 0 @base-padding;
+
+        /* stylelint-disable selector-list-comma-newline-after */
+        h1, h2, h3, h4, h5, h6,
+        .h1, .h2, .h3, .h4, .h5, .h6 {
+            margin: @base-margin 0;
+        }
+        /* stylelint-enable selector-list-comma-newline-after */
+
+        a {
+            border: none;
+        }
+    }
+
+    &.card-default {
         header {
-            padding: 0 @base-padding;
+            background-color: @background-body;
+            border-bottom: 1px solid @gray-9;
 
-            /* stylelint-disable selector-list-comma-newline-after */
-            h1, h2, h3, h4, h5, h6,
-            .h1, .h2, .h3, .h4, .h5, .h6 {
-                margin: @base-margin 0;
+            * {
+                color: @text-color;
             }
-            /* stylelint-enable selector-list-comma-newline-after */
+        }
+    }
 
-            a {
-                border: none;
+    &.card-brand {
+        header {
+            background-color: @brand-primary;
+            border-bottom-color: darken(@brand-primary, 10%);
+
+            * {
+                color: @white;
+            }
+        }
+    }
+
+    &.card-light {
+        header {
+            background-color: @white;
+            border-bottom: 1px solid @gray-9;
+
+            * {
+                color: @brand-primary;
+            }
+        }
+    }
+
+    .highlight {
+        padding: @base-padding-xl;
+        background-color: @gray-10;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+
+        > * {
+            margin-bottom: 0;
+        }
+    }
+
+    .card-body {
+        padding: @base-padding;
+        flex: 1 1 auto;
+    }
+
+    footer {
+        border-top: 1px solid @gray-9;
+        padding: @base-padding;
+
+        .footer-text {
+            p {
+                margin: @base-margin-xs 0;
             }
         }
 
-        &.card-default {
-            header {
-                background-color: @background-body;
-                border-bottom: 1px solid @gray-9;
-
-                * {
-                    color: @text-color;
-                }
-            }
+        .footer-link {
+            text-align: center;
+            font-size: 80%;
         }
+    }
 
-        &.card-brand {
-            header {
-                background-color: @brand-primary;
-                border-bottom-color: darken(@brand-primary, 10%);
+    .card-img {
+        height: @card-image-height;
 
-                * {
-                    color: @white;
-                }
-            }
-        }
-
-        &.card-light {
-            header {
-                background-color: @white;
-                border-bottom: 1px solid @gray-9;
-
-                * {
-                    color: @brand-primary;
-                }
-            }
-        }
-
-        .highlight {
-            padding: @base-padding-xl;
-            background-color: @gray-10;
-            display: flex;
-            justify-content: center;
-            align-content: center;
-
-            > * {
-                margin-bottom: 0;
-            }
-        }
-
-        .card-body {
-            padding: @base-padding;
-            flex: 1 1 auto;
-        }
-
-        footer {
-            border-top: 1px solid @gray-9;
-            padding: @base-padding;
-
-            .footer-text {
-                p {
-                    margin: @base-margin-xs 0;
-                }
-            }
-
-            .footer-link {
-                text-align: center;
-                font-size: 80%;
-            }
-        }
-
-        .card-img {
-            height: @card-image-height;
-
-            img {
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-            }
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
         }
     }
 }
 
 @media screen and (min-width: @screen-xs-min) {
-    .cards {
-        display: flex;
-        flex-wrap: wrap;
-
-        .card {
-            display: inline-flex;
-            margin: @card-margin;
-            max-width: @card-width;
-            min-width: @card-width;
-        }
+    .card {
+        display: inline-flex;
+        margin: @card-margin;
+        width: @card-width;
     }
+}
+
+.cards {
+    display: inline-flex;
+    flex-wrap: wrap;
 }

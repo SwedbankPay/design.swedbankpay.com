@@ -123,6 +123,10 @@ exports[`Documentation: Card DefaultBehaviour renders 1`] = `
           textSmall={true}
         />
       </Card>
+    </div>
+    <div
+      className="cards"
+    >
       <Card
         btnTxt="Button"
         footerLinkTxt="You wanna click this link?"
@@ -142,6 +146,10 @@ exports[`Documentation: Card DefaultBehaviour renders 1`] = `
           textSmall={true}
         />
       </Card>
+    </div>
+    <div
+      className="cards"
+    >
       <Card
         btnTxt="Button"
         footerLinkTxt="You wanna click this link?"

@@ -11,6 +11,7 @@
 ### Changed
 
 - Replaced rome datepicker with flatpickr as rome is no longer maintained, as a result moment is no longer available through the designguide.
+- Changed cards so it is no longer required to wrap cards in the `.cards` container for them to work.
 
 ### Fixed
 
