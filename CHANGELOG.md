@@ -19,5 +19,6 @@
 - Fixed issue with negative margin utility classes not being generated.
 - Fixed issue with panel not taking full width on mobile screens.
 - Fixed issue with gap between body and arrow in tooltips on larger screens.
+- Fixed issue with documentation header not appearing on refresh.
 
 ### Removed
