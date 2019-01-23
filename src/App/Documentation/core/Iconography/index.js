@@ -28,7 +28,7 @@ const MaterialIcons = () => (
         </ComponentPreview>
 
         <h3>Sizes</h3>
-        <p>You can modify the size of the material icons by adding one of the size classes: <Property value=".tiny" />, <Property value=".small" />, <Property value=".medium" /> or <Property value=".large" />.</p>
+        <p>You can modify the size of the material icons by adding one of the size classes: <Property value="material-icons-tiny" />, <Property value="material-icons-small" />, <Property value="material-icons-medium" /> or <Property value="material-icons-large" />.</p>
         <ComponentPreview language="html" showCasePanel>
             <div className="row justify-content-evenly align-items-end">
                 <IconPreview previewSize type="material-icons" name="android" size="tiny" />
@@ -38,10 +38,10 @@ const MaterialIcons = () => (
             </div>
         </ComponentPreview>
         <ComponentPreview language="html" codeFigure>
-            <i className="material-icons tiny">android</i>{"\n"}
-            <i className="material-icons small">android</i>{"\n"}
-            <i className="material-icons medium">android</i>{"\n"}
-            <i className="material-icons large">android</i>
+            <i className="material-icons material-icons-tiny">android</i>{"\n"}
+            <i className="material-icons material-icons-small">android</i>{"\n"}
+            <i className="material-icons material-icons-medium">android</i>{"\n"}
+            <i className="material-icons material-icons-large">android</i>
         </ComponentPreview>
     </>
 );
@@ -191,11 +191,11 @@ const Flags = () => (
             </div>
         </ComponentPreview>
         <ComponentPreview language="html" codeFigure>
-            <i className="flag-icon flag-icon-no tiny"></i>{"\n"}
-            <i className="flag-icon flag-icon-sv small"></i>{"\n"}
-            <i className="flag-icon flag-icon-dk medium"></i>{"\n"}
-            <i className="flag-icon flag-icon-fi large"></i>{"\n"}
-            <i className="flag-icon flag-icon-eu huge"></i>{"\n"}
+            <i className="flag-icon flag-icon-no flag-icon-tiny"></i>{"\n"}
+            <i className="flag-icon flag-icon-sv flag-icon-small"></i>{"\n"}
+            <i className="flag-icon flag-icon-dk flag-icon-medium"></i>{"\n"}
+            <i className="flag-icon flag-icon-fi flag-icon-large"></i>{"\n"}
+            <i className="flag-icon flag-icon-eu flag-icon-huge"></i>{"\n"}
         </ComponentPreview>
         <h3>Squared Sizes</h3>
         <ComponentPreview language="html" showCasePanel>
@@ -208,11 +208,11 @@ const Flags = () => (
             </div>
         </ComponentPreview>
         <ComponentPreview language="html" codeFigure>
-            <i className="flag-icon flag-icon-squared flag-icon-no tiny"></i>{"\n"}
-            <i className="flag-icon flag-icon-squared flag-icon-sv small"></i>{"\n"}
-            <i className="flag-icon flag-icon-squared flag-icon-dk medium"></i>{"\n"}
-            <i className="flag-icon flag-icon-squared flag-icon-fi large"></i>{"\n"}
-            <i className="flag-icon flag-icon-squared flag-icon-eu huge"></i>{"\n"}
+            <i className="flag-icon flag-icon-squared flag-icon-no flag-icon-tiny"></i>{"\n"}
+            <i className="flag-icon flag-icon-squared flag-icon-sv flag-icon-small"></i>{"\n"}
+            <i className="flag-icon flag-icon-squared flag-icon-dk flag-icon-medium"></i>{"\n"}
+            <i className="flag-icon flag-icon-squared flag-icon-fi flag-icon-large"></i>{"\n"}
+            <i className="flag-icon flag-icon-squared flag-icon-eu flag-icon-huge"></i>{"\n"}
         </ComponentPreview>
     </>
 );

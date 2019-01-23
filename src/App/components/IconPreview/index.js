@@ -6,24 +6,32 @@ const IconPreview = ({ name, squaredFlag, preview, previewSize, size, className,
     const classNames = className ? className.split(" ") : [];
     const iconClasses = classnames(
         type,
-        type === "payment-icon" ? name : "",
-        type === "flag-icon" ? `flag-icon-${name}` : "",
+        size ? `${type}-${size}` : "",
+        type === "material-icons" ? "" : `${type}-${name}`,
         squaredFlag ? "flag-icon-squared" : "",
-        size,
         ...classNames
     );
+    const prevComponent = !!preview || !!previewSize;
 
-    return preview || previewSize ? (
+    return prevComponent ? (
         <div className="icon-preview">
             <i className={iconClasses}>{iconClasses.includes("material-icons") ? name : null}</i>
-            <code className="token property p-0 mt-2">{preview ? name : `.${size}`}</code>
+            <code className="token property p-0 mt-2">
+                {
+                    preview ? (iconClasses.includes("material-icons") ? name : `${type}-${name}`) : `${type}-${size}`
+                }
+            </code>
         </div>
     ) : <i className={iconClasses}>{iconClasses.includes("material-icons") ? name : null}</i>;
 };
 
 IconPreview.propTypes = {
     name: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
+    type: PropTypes.oneOf([
+        "material-icons",
+        "payment-icon",
+        "flag-icon"
+    ]),
     squaredFlag: PropTypes.bool,
     preview: PropTypes.bool,
     size: PropTypes.oneOf([
