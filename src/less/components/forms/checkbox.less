@@ -33,21 +33,22 @@
         }
 
         &:checked + label:before {
-            background-color: @checkbox-bg;
+            background-color: @brand-primary;
             background-position: 50% 50%;
             background-repeat: no-repeat;
+            background-image: url("../../../icons/shapes/check-mark.svg");
         }
 
-        &:checked + label:after {
-            content: "";
-            position: absolute;
-            left: -22px;
-            top: 9px;
-            height: @checkbox-checkmark-height;
-            width: @checkbox-checkmark-width;
-            box-shadow: 2px 0 0 @white, 4px 0 0 @white, 4px -2px 0 @white, 4px -4px 0 @white, 4px -6px 0 @white, 4px -8px 0 @white;
-            transform: rotate(45deg);
-        }
+        // &:checked + label:after {
+        //     content: "";
+        //     position: absolute;
+        //     left: -22px;
+        //     top: 9px;
+        //     height: @checkbox-checkmark-height;
+        //     width: @checkbox-checkmark-width;
+        //     box-shadow: 2px 0 0 @white, 4px 0 0 @white, 4px -2px 0 @white, 4px -4px 0 @white, 4px -6px 0 @white, 4px -8px 0 @white;
+        //     transform: rotate(45deg);
+        // }
 
         &:focus + label:before {
             .tab-focus();
