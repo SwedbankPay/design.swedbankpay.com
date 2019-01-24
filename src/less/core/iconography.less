@@ -9,76 +9,96 @@ i.payment-icon {
     background-position: center;
     border-radius: 0.25rem;
 
-    &-small {
+    &-small,
+    &.small {
         height: 1.5rem;
         width: 2rem;
+        font-weight: inherit;
+        color: inherit;
     }
 
-    &-medium {
+    &-medium,
+    &.medium {
         height: 2rem;
         width: 3rem;
     }
 
-    &-large {
+    &-large,
+    &.large {
         height: 3rem;
         width: 5rem;
     }
 
-    &-huge {
+    &-huge,
+    &.huge {
         height: 4rem;
         width: 6rem;
     }
 
-    &-amex {
+    &-amex,
+    &.amex {
         background-image: url("../../icons/payment-icons/amex.svg");
     }
 
-    &-diners {
+    &-diners,
+    &.diners {
         background-image: url("../../icons/payment-icons/diners.svg");
     }
 
-    &-mastercard {
+    &-mastercard,
+    &.mastercard {
         background-image: url("../../icons/payment-icons/mastercard.svg");
     }
 
-    &-mobilepay {
+    &-mobilepay,
+    &.mobilepay {
         background-color: #f5f5f2;
         background-image: url("../../icons/payment-icons/mobilepay.svg");
     }
 
-    &-paypal {
+    &-paypal,
+    &.paypal {
         background-image: url("../../icons/payment-icons/paypal.svg");
     }
 
-    &-swish {
+    &-swish,
+    &.swish {
         background-color: @white;
         background-image: url("../../icons/payment-icons/swish.svg");
     }
 
-    &-vipps {
+    &-vipps,
+    &.vipps {
         background-color: @white;
         background-image: url("../../icons/payment-icons/vipps.svg");
     }
 
-    &-visa {
+    &-visa,
+    &.visa {
         background-image: url("../../icons/payment-icons/visa.svg");
     }
 }
 
 i.material-icons {
-    &-tiny {
+    &-tiny,
+    &.tiny {
         font-size: 1rem;
     }
 
-    &-small {
+    &-small,
+    &.small {
         font-size: 2rem;
+        font-weight: inherit;
+        color: inherit;
     }
 
-    &-medium {
+    &-medium,
+    &.medium {
         font-size: 4rem;
     }
 
-    &-large {
+    &-large,
+    &.large {
         font-size: 6rem;
     }
 }
@@ -96,7 +116,8 @@ i.flag-icon {
         width: 1rem;
     }
 
-    &-tiny {
+    &-tiny,
+    &.tiny {
         width: unit((4 / 3), rem);
         line-height: 1rem;
 
@@ -106,9 +127,12 @@ i.flag-icon {
         }
     }
 
-    &-small {
+    &-small,
+    &.small {
         width: unit(((4 / 3) * 1.5), rem);
         line-height: 1.5rem;
+        font-weight: inherit;
+        color: inherit;
 
         &.flag-icon-squared {
             width: 1.5rem;
@@ -116,7 +140,8 @@ i.flag-icon {
         }
     }
 
-    &-medium {
+    &-medium,
+    &.medium {
         width: unit(((4 / 3) * 2), rem);
         line-height: 2rem;
 
@@ -126,7 +151,8 @@ i.flag-icon {
         }
     }
 
-    &-large {
+    &-large,
+    &.large {
         width: unit(((4 / 3) * 3), rem);
         line-height: 3rem;
 
@@ -136,7 +162,8 @@ i.flag-icon {
         }
     }
 
-    &-huge {
+    &-huge,
+    &.huge {
         width: unit(((4 / 3) * 4), rem);
         line-height: 4rem;
 

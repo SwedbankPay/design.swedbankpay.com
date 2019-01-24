@@ -180,27 +180,27 @@ exports[`Core: Iconography Flags renders 1`] = `
   <p>
     Flags support sizes 
     <Property
-      value=".tiny"
+      value=".payment-icon-tiny"
     />
     , 
     <Property
-      value=".small"
+      value=".payment-icon-small"
     />
     , 
     <Property
-      value=".medium"
+      value=".payment-icon-medium"
     />
     , 
     <Property
-      value=".large"
+      value=".payment-icon-large"
     />
      and 
     <Property
-      value=".huge"
+      value=".payment-icon-huge"
     />
     . If no size is provided 
     <Property
-      value=".tiny"
+      value=".payment-icon-tiny"
     />
      is defaulted.
   </p>
@@ -557,7 +557,7 @@ exports[`Core: Iconography PaymentIcons onClick prevents default 1`] = `
       className="language-html"
       component="code"
     >
-      &lt;i class="payment-icon {icon_name}"&gt;&lt;/i&gt;
+      &lt;i class="payment-icon payment-icon-{icon_name}"&gt;&lt;/i&gt;
     </PrismCode>
     .
   </p>
@@ -693,23 +693,23 @@ exports[`Core: Iconography PaymentIcons onClick prevents default 1`] = `
   <p>
     Different sizes are available by adding 
     <Property
-      value=".small"
+      value=".payment-icon-small"
     />
     , 
     <Property
-      value=".medium"
+      value=".payment-icon-medium"
     />
     , 
     <Property
-      value=".large"
+      value=".payment-icon-large"
     />
      and 
     <Property
-      value=".huge"
+      value=".payment-icon-huge"
     />
     . If no size is provided 
     <Property
-      value=".medium"
+      value=".payment-icon-medium"
     />
      is defaulted.
   </p>
@@ -1004,7 +1004,7 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
       className="language-html"
       component="code"
     >
-      &lt;i class="payment-icon {icon_name}"&gt;&lt;/i&gt;
+      &lt;i class="payment-icon payment-icon-{icon_name}"&gt;&lt;/i&gt;
     </PrismCode>
     .
   </p>
@@ -1140,23 +1140,23 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
   <p>
     Different sizes are available by adding 
     <Property
-      value=".small"
+      value=".payment-icon-small"
     />
     , 
     <Property
-      value=".medium"
+      value=".payment-icon-medium"
     />
     , 
     <Property
-      value=".large"
+      value=".payment-icon-large"
     />
      and 
     <Property
-      value=".huge"
+      value=".payment-icon-huge"
     />
     . If no size is provided 
     <Property
-      value=".medium"
+      value=".payment-icon-medium"
     />
      is defaulted.
   </p>

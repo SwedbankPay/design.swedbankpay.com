@@ -33,7 +33,7 @@ describe("Component: IconPreview - ", () => {
                 <IconPreview type="flag-icon" />
             </div>
         );
-        
+
         expect(console.error).not.toHaveBeenCalled();
 
         const illegalSize = shallow(<IconPreview type="invalid_value" />);
@@ -97,8 +97,6 @@ describe("Component: IconPreview - ", () => {
     it("renders a preview wrapper around payment-icon when prop preview is true", () => {
         const wrapper = shallow(<IconPreview name="amex" type="payment-icon" preview />);
 
-        console.log(wrapper.html());
-
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(
             <div className="icon-preview">
@@ -126,8 +124,8 @@ describe("Component: IconPreview - ", () => {
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(
             <div className="icon-preview">
-                <i className="material-icons large">android</i>
-                <code className="token property p-0 mt-2">.large</code>
+                <i className="material-icons material-icons-large">android</i>
+                <code className="token property p-0 mt-2">material-icons-large</code>
             </div>
         )).toEqual(true);
     });

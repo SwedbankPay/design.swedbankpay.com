@@ -49,7 +49,7 @@ const MaterialIcons = () => (
 const PaymentIcons = () => (
     <>
         <h2 id="payment-icons">Payment Icons</h2>
-        <p>To use an icon, provide the following markup: <PrismCode className="language-html">{"<i class=\"payment-icon {icon_name}\"></i>"}</PrismCode>.</p>
+        <p>To use an icon, provide the following markup: <PrismCode className="language-html">{"<i class=\"payment-icon payment-icon-{icon_name}\"></i>"}</PrismCode>.</p>
         <ComponentPreview language="html" showCasePanel>
             <div className="row justify-content-evenly mb-2">
                 <IconPreview preview type="payment-icon" name="amex" size="large" />{"\n"}
@@ -77,7 +77,7 @@ const PaymentIcons = () => (
 
         <h3>Sizes</h3>
         <p>
-            Different sizes are available by adding <Property value=".small" />, <Property value=".medium" />, <Property value=".large" /> and <Property value=".huge" />. If no size is provided <Property value=".medium" /> is defaulted.
+            Different sizes are available by adding <Property value=".payment-icon-small" />, <Property value=".payment-icon-medium" />, <Property value=".payment-icon-large" /> and <Property value=".payment-icon-huge" />. If no size is provided <Property value=".payment-icon-medium" /> is defaulted.
         </p>
         <ComponentPreview language="html" showCasePanel>
             <div className="row justify-content-evenly align-items-end">
@@ -180,7 +180,7 @@ const Flags = () => (
             <i className="flag-icon flag-icon-squared flag-icon-eu"></i>{"\n"}
         </ComponentPreview>
         <h3>Sizes</h3>
-        <p>Flags support sizes <Property value=".tiny" />, <Property value=".small" />, <Property value=".medium" />, <Property value=".large" /> and <Property value=".huge" />. If no size is provided <Property value=".tiny" /> is defaulted.</p>
+        <p>Flags support sizes <Property value=".payment-icon-tiny" />, <Property value=".payment-icon-small" />, <Property value=".payment-icon-medium" />, <Property value=".payment-icon-large" /> and <Property value=".payment-icon-huge" />. If no size is provided <Property value=".payment-icon-tiny" /> is defaulted.</p>
         <ComponentPreview language="html" showCasePanel>
             <div className="row justify-content-evenly align-items-end">
                 <IconPreview previewSize type="flag-icon" name="se" size="tiny" />
