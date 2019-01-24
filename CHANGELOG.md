@@ -22,5 +22,6 @@
 - Fixed issue with panel not taking full width on mobile screens.
 - Fixed issue with gap between body and arrow in tooltips on larger screens.
 - Fixed issue with documentation header not appearing on refresh.
+- Fixed issue with wrong spacing in step items with anchor elements (#183).
 
 ### Removed
