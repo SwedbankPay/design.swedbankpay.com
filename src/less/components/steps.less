@@ -23,10 +23,10 @@
 
             /* Take full parent size, ignoring parents padding, and stil growing the parent with text from this element */
             padding: @list-item-padding;
-            margin: ~"-@{list-item-padding}";
             color: @brand-primary;
             border: 0;
             cursor: pointer;
+            .negative-margin(@list-item-padding);
 
             &:hover {
                 background-color: @gray-10;
@@ -168,7 +168,7 @@
 
             > a {
                 padding: @list-item-padding-desktop;
-                margin: ~"-@{list-item-padding-desktop}";
+                .negative-margin(@list-item-padding-desktop);
             }
 
             /* Circle */
@@ -211,8 +211,8 @@
 
             > a {
                 padding: @list-item-padding-desktop-vertical;
-                margin: ~"-@{list-item-padding-desktop-vertical}";
                 width: auto;
+                .negative-margin(@list-item-padding-desktop-vertical);
             }
 
             /* Circle */
