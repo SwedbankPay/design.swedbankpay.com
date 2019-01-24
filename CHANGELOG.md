@@ -14,7 +14,7 @@
 - Changed cards so it is no longer required to wrap cards in the `.cards` container for them to work.
 - Text color utility class `.color-{name}` has been replaced with `.text-{name}`, and is deprecated.
 - Renamed icons to iconography under core, and moved payment icons under material icons.
-- Replaced `data:` schema at checkbox checkmark and radio button circle with css.
+- Replaced b64 images with SVGs for `<select>`, checkbox and radio buttons.
 
 ### Fixed
 
