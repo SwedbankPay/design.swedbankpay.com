@@ -94,38 +94,26 @@ describe("Component: IconPreview - ", () => {
         expect(wrapper.contains(<i className="payment-icon payment-icon-amex test test2 test-3"></i>)).toEqual(true);
     });
 
-    it("renders a preview wrapper around payment-icon when prop preview is true", () => {
+    it("renders a preview wrapper around the <i> tag when prop preview is true", () => {
         const wrapper = shallow(<IconPreview name="amex" type="payment-icon" preview />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(
             <div className="icon-preview">
                 <i className="payment-icon payment-icon-amex"></i>
-                <code className="token property p-0 mt-2">payment-icon-amex</code>
+                <code className="token property p-0 mt-2">amex</code>
             </div>
         )).toEqual(true);
     });
 
-    it("renders a preview wrapper around material-icon when prop preview is true", () => {
-        const wrapper = shallow(<IconPreview name="android" type="material-icons" preview />);
-
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(
-            <div className="icon-preview">
-                <i className="material-icons">android</i>
-                <code className="token property p-0 mt-2">android</code>
-            </div>
-        )).toEqual(true);
-    });
-
-    it("renders a preview wrapper around material-icon when prop previewSize is true with a span containing the size as text", () => {
+    it("renders a preview wrapper around material-icon when prop previewSize is true", () => {
         const wrapper = shallow(<IconPreview name="android" type="material-icons" size="large" previewSize />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(
             <div className="icon-preview">
                 <i className="material-icons material-icons-large">android</i>
-                <code className="token property p-0 mt-2">material-icons-large</code>
+                <code className="token property p-0 mt-2">large</code>
             </div>
         )).toEqual(true);
     });

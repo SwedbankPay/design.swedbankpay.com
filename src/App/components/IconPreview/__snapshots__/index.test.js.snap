@@ -76,24 +76,7 @@ exports[`Component: IconPreview -  renders a material icon when type is equal to
 </i>
 `;
 
-exports[`Component: IconPreview -  renders a preview wrapper around material-icon when prop preview is true 1`] = `
-<div
-  className="icon-preview"
->
-  <i
-    className="material-icons"
-  >
-    android
-  </i>
-  <code
-    className="token property p-0 mt-2"
-  >
-    android
-  </code>
-</div>
-`;
-
-exports[`Component: IconPreview -  renders a preview wrapper around material-icon when prop previewSize is true with a span containing the size as text 1`] = `
+exports[`Component: IconPreview -  renders a preview wrapper around material-icon when prop previewSize is true 1`] = `
 <div
   className="icon-preview"
 >
@@ -105,12 +88,12 @@ exports[`Component: IconPreview -  renders a preview wrapper around material-ico
   <code
     className="token property p-0 mt-2"
   >
-    material-icons-large
+    large
   </code>
 </div>
 `;
 
-exports[`Component: IconPreview -  renders a preview wrapper around payment-icon when prop preview is true 1`] = `
+exports[`Component: IconPreview -  renders a preview wrapper around the <i> tag when prop preview is true 1`] = `
 <div
   className="icon-preview"
 >
@@ -120,7 +103,7 @@ exports[`Component: IconPreview -  renders a preview wrapper around payment-icon
   <code
     className="token property p-0 mt-2"
   >
-    payment-icon-amex
+    amex
   </code>
 </div>
 `;

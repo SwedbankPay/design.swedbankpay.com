@@ -11,15 +11,12 @@ const IconPreview = ({ name, squaredFlag, preview, previewSize, size, className,
         squaredFlag ? "flag-icon-squared" : "",
         ...classNames
     );
-    const prevComponent = !!preview || !!previewSize;
 
-    return prevComponent ? (
+    return preview || previewSize ? (
         <div className="icon-preview">
             <i className={iconClasses}>{iconClasses.includes("material-icons") ? name : null}</i>
             <code className="token property p-0 mt-2">
-                {
-                    preview ? (iconClasses.includes("material-icons") ? name : `${type}-${name}`) : `${type}-${size}`
-                }
+                {previewSize ? size : name}
             </code>
         </div>
     ) : <i className={iconClasses}>{iconClasses.includes("material-icons") ? name : null}</i>;
