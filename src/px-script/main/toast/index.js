@@ -27,7 +27,7 @@ class Toast {
             type: "",
             icon: "",
             dismissable: true,
-            displayLength: 4000,
+            displayLength: 400000000,
             inDuration: 300,
             outDuration: 375,
             classes: [],
@@ -37,6 +37,7 @@ class Toast {
     }
 
     static _createContainer () {
+        const sheet = document.querySelector(".sheet");
         const container = document.createElement("div");
 
         container.setAttribute("id", "toast-container");
