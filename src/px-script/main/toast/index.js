@@ -5,6 +5,9 @@ class Toast {
         this.options = extendObj(true, this._defaults(), options);
         this.message = this.options.html;
         this.timeRemaining = this.options.displayLength; // Time remaining until the toast is removed.
+        this.sheetComponent = document.querySelector(".sheet");
+        // this.sheetOpen = this.sheetComponent ? document.querySelector(".sheet-open") : null;
+        this.sheetOpen = document.querySelector(".sheet-open");
 
         if (Toast._toasts.length === 0) {
             Toast._createContainer();
@@ -37,7 +40,6 @@ class Toast {
     }
 
     static _createContainer () {
-        const sheet = document.querySelector(".sheet");
         const container = document.createElement("div");
 
         container.setAttribute("id", "toast-container");
@@ -60,6 +62,8 @@ class Toast {
         const toastContent = document.createElement("div");
 
         toast.classList.add("toast");
+
+        this.sheetOpen ? Toast._container.setAttribute("style", `margin-right: ${this.sheetComponent.querySelector("section").offsetWidth}px`) : null;
 
         if (this.options.classes.length) {
             toast.classList.add(...this.options.classes);
