@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { ComponentPreview, DocContainer, Icon } from "#";
-import { sheet, toast } from "$/px-script/main";
+import { sheet } from "$/px-script/main";
 
 const Example = () => (
     <>
@@ -29,7 +29,7 @@ const Example = () => (
                         <li><code>356 - 1 = 355</code></li>
                     </ul>
                     <hr/>
-                    {/* <form onSubmit={e => e.preventDefault()}>
+                    <form onSubmit={e => e.preventDefault()}>
                         <div className="form-group">
                             <label htmlFor="full-name">Full name</label>
                             <div className="input-group">
@@ -51,8 +51,7 @@ const Example = () => (
                             </div>
                         </div>
                         <button className="btn btn-primary" type="submit" onClick={e => e.preventDefault()}>Submit</button>
-                    </form> */}
-                    <button className="btn btn-primary" onClick={() => toast({ html: "I am a toast!" })}>Toasty</button>
+                    </form>
                 </section>
             </div>{"\n"}
             <button className="btn btn-primary" type="button" data-sheet-open="demo-sheet">Open sheet</button>
