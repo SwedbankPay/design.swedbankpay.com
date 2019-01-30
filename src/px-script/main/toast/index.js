@@ -6,7 +6,6 @@ class Toast {
         this.message = this.options.html;
         this.timeRemaining = this.options.displayLength; // Time remaining until the toast is removed.
         this.sheetComponent = document.querySelector(".sheet");
-        // this.sheetOpen = this.sheetComponent ? document.querySelector(".sheet-open") : null;
         this.sheetOpen = document.querySelector(".sheet-open");
 
         if (Toast._toasts.length === 0) {
@@ -167,14 +166,6 @@ class Toast {
     dismiss () {
         window.clearInterval(this.counterInterval);
 
-        const activationDistance = this.el.offsetWidth * this.options.activationPercent;
-
-        if (this.wasSwiped) {
-            this.el.style.transition = "transform 0.05s, opacity 0.05s";
-            this.el.style.transform = `translateX(${activationDistance}px)`;
-            this.el.style.opacity = 0;
-        }
-
         // TODO: Wrap this in animation callback function:
         if (typeof this.options.completeCallback === "function") {
             this.options.completeCallback();
@@ -191,6 +182,5 @@ class Toast {
 
 Toast._toasts = [];
 Toast._container = null;
-Toast._draggedToast = null;
 
 export default options => new Toast(options);
