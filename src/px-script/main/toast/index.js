@@ -19,7 +19,6 @@ class Toast {
 
         toastElement.pxToast = this;
         this.el = toastElement;
-        this._animateIn();
         this._setTimer();
     }
 
@@ -136,17 +135,11 @@ class Toast {
         return toast;
     }
 
-    _animateIn () {
-        // TODO: Add animation
-    }
-
     _setTimer () {
         if (this.timeRemaining !== Infinity) {
             this.counterInterval = setInterval(() => {
                 // If toast is not being dragged, decrease its time remaining
-                if (!this.panning) {
-                    this.timeRemaining -= 20;
-                }
+                this.timeRemaining -= 20;
 
                 // Animate toast out
                 if (this.timeRemaining <= 0) {
