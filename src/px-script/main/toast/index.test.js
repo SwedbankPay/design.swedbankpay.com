@@ -212,6 +212,21 @@ describe("px-script: toast", () => {
         expect(document.querySelector(".toast")).toBeNull();
     });
 
+    it("runs a given function after timer expires", () => {
+        const testFunc = jest.fn();
+
+        toast({
+            html: "hello",
+            completeCallback: testFunc
+        });
+
+        expect(testFunc).not.toHaveBeenCalled();
+
+        jest.runAllTimers();
+
+        expect(testFunc).toHaveBeenCalled();
+    });
+
     it("adds margin-right to toast-container if a sheet is open", () => {
         ReactDOM.render(<Sheet />, div);
         document.querySelector("body").classList.add("sheet-open");
