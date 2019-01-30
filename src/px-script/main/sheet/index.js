@@ -69,7 +69,7 @@ class Sheet {
 
         const toastContainer = document.querySelector("#toast-container");
 
-        toastContainer ? toastContainer.setAttribute("style", "margin-right: 0px; transition: margin 0.3s ease-in-out;") : null;
+        toastContainer ? toastContainer.setAttribute("style", "transition: margin 0.3s ease-in-out;") : null;
     }
 }
 
