@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import sheet from "./index";
+import toast from "../toast/index";
 
 describe("px-script: sheet", () => {
     const div = document.createElement("div");
@@ -32,6 +33,7 @@ describe("px-script: sheet", () => {
     );
 
     beforeEach(() => {
+        jest.runAllTimers();
         document.body.classList.remove("sheet-open");
     });
 
@@ -300,5 +302,25 @@ describe("px-script: sheet", () => {
         expect(renderedSheet.classList).toContain("d-block");
         expect(renderedSheet.classList).toContain("sheet-open");
         expect(document.body.classList).toContain("sheet-open");
+    });
+
+    it("adds margin right to toast when sheet is opened", () => {
+        ReactDOM.render(<Sheet />, div);
+        sheet.init();
+
+        const renderedSheet = document.querySelector(".sheet");
+
+        expect(renderedSheet).toBeTruthy();
+        expect(renderedSheet.classList).not.toContain("sheet-open");
+        toast({ html: "test" });
+
+        sheet.open();
+
+        expect(renderedSheet.classList).toContain("sheet-open");
+
+        const renderedToast = document.querySelector("#toast-container");
+
+        expect(renderedToast).toBeTruthy();
+        expect(Object.keys(renderedToast.style._values)).toContain("margin-right");
     });
 });

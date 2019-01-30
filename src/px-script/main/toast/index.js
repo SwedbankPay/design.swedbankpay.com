@@ -166,7 +166,6 @@ class Toast {
     dismiss () {
         window.clearInterval(this.counterInterval);
 
-        // TODO: Wrap this in animation callback function:
         if (typeof this.options.completeCallback === "function") {
             this.options.completeCallback();
         }
