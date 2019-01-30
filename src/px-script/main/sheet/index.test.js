@@ -304,7 +304,7 @@ describe("px-script: sheet", () => {
         expect(document.body.classList).toContain("sheet-open");
     });
 
-    it("adds margin right to toast when sheet is opened", () => {
+    it("adds margin right to toast-container when a toast is active and sheet is opened", () => {
         ReactDOM.render(<Sheet />, div);
         sheet.init();
 
@@ -314,13 +314,36 @@ describe("px-script: sheet", () => {
         expect(renderedSheet.classList).not.toContain("sheet-open");
         toast({ html: "test" });
 
-        sheet.open();
+        const renderedToast = document.querySelector("#toast-container");
+
+        sheet.open("demo-sheet");
+        jest.runAllTimers();
 
         expect(renderedSheet.classList).toContain("sheet-open");
+        expect(renderedToast).toBeTruthy();
+        expect(Object.keys(renderedToast.style._values)).toContain("margin-right");
+    });
+
+    it("removes margin-right from toast-container when a toast is active and sheet is closed", () => {
+        ReactDOM.render(<OpenSheet />, div);
+        sheet.init();
+        jest.runAllTimers();
+
+        const renderedSheet = document.querySelector(".sheet");
+
+        expect(renderedSheet).toBeTruthy();
+        expect(renderedSheet.classList).toContain("sheet-open");
+        toast({ html: "test" });
 
         const renderedToast = document.querySelector("#toast-container");
 
         expect(renderedToast).toBeTruthy();
         expect(Object.keys(renderedToast.style._values)).toContain("margin-right");
+
+        sheet.close("demo-sheet");
+        jest.runAllTimers();
+
+        expect(renderedSheet.classList).not.toContain("sheet-open");
+        expect(Object.keys(renderedToast.style._values)).not.toContain("margin-right");
     });
 });
