@@ -26,5 +26,6 @@
 - Fixed issue with wrong spacing in step items with anchor elements (#183).
 - Fixed issue with button loaders displaying button name when clicked.
 - Fixed issue with disabled button loaders being clickable.
+- Fixed issue with tooltip not displaying correctly with icons.
 
 ### Removed
