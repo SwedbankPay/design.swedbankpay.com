@@ -49,23 +49,18 @@ describe("px-script: utils", () => {
     });
 
     describe("- handleScrollbar", () => {
-        it("adds class body-has-vscroll to body if innerwidth is larger than clientwidth", () => {
-            const bodyElem = document.querySelector("body");
-
-            bodyElem.classList.add("dialog-open");
+        it("adds class has-vscroll to body if innerwidth is larger than clientwidth", () => {
             handleScrollbar();
 
-            expect(document.body.classList).toContain("body-has-vscroll");
+            expect(document.body.classList).toContain("has-vscroll");
         });
 
-        it("removes body-has-vscroll when sheet is opened if vertical scrollbar does not exist", () => {
-            const bodyElem = document.querySelector("body");
-
+        it("removes has-vscroll if vertical scrollbar does not exist", () => {
+            document.body.classList.add("has-vscroll");
             window.innerWidth = 0;
-            bodyElem.classList.add("dialog-open");
             handleScrollbar();
 
-            expect(document.body.classList).not.toContain("body-has-vscroll");
+            expect(document.body.classList).not.toContain("has-vscroll");
         });
     });
 
