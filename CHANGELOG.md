@@ -16,6 +16,7 @@
 - Renamed icons to iconography under core, and moved payment icons under material icons.
 - Replaced b64 images with SVGs for `<select>`, checkbox and radio buttons.
 - Changed icon classes naming so they are more consistent. Icon class names without the correct prefix (.small..) are deprecated.
+- Changed how toasts are displayed in combination with sheet. They now appear to the left of sheet.
 
 ### Fixed
 

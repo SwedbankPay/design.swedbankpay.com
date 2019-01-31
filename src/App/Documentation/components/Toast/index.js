@@ -72,18 +72,6 @@ const Options = () => (
                     <td><Attribute value="4000" /></td>
                     <td>Length in ms the Toast stays before dismissal.</td>
                 </tr>
-                {/* <tr>
-                    <td>inDuration</td>
-                    <td>Number</td>
-                    <td><Attribute value="300" /></td>
-                    <td>Transition in duration in milliseconds.</td>
-                </tr>
-                <tr>
-                    <td>outDuration</td>
-                    <td>Number</td>
-                    <td><Attribute value="375" /></td>
-                    <td>Transition out duration in milliseconds.</td>
-                </tr> */}
                 <tr>
                     <td>classes</td>
                     <td>Array of strings</td>
@@ -96,12 +84,6 @@ const Options = () => (
                     <td><Attribute value="null" /></td>
                     <td>Callback function called when toast is dismissed.</td>
                 </tr>
-                {/* <tr>
-                    <td>activationPercent</td>
-                    <td>Number</td>
-                    <td><Attribute value="0.8" /></td>
-                    <td>The percentage of the toast{"'"}s width it takes for a drag to dismiss a Toast.</td>
-                </tr> */}
             </tbody>
         </table>
     </>

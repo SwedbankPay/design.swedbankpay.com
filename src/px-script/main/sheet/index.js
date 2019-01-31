@@ -52,6 +52,10 @@ class Sheet {
         setTimeout(() => {
             this._el.classList.add("sheet-open");
         }, 10); // If set lower than 10, the initial open will be instant.
+
+        const toastContainer = document.querySelector("#toast-container");
+
+        toastContainer ? toastContainer.setAttribute("style", `margin-right: ${this._el.querySelector("section").offsetWidth}px; transition: margin 0.3s ease-in-out;`) : null;
     }
 
     close () {
@@ -62,6 +66,10 @@ class Sheet {
         setTimeout(() => {
             this._el.classList.remove("d-block");
         }, 300);
+
+        const toastContainer = document.querySelector("#toast-container");
+
+        toastContainer ? toastContainer.setAttribute("style", "transition: margin 0.3s ease-in-out;") : null;
     }
 }
 
