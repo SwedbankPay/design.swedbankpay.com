@@ -28,5 +28,6 @@
 - Fixed issue with button loaders displaying button name when clicked.
 - Fixed issue with disabled button loaders being clickable.
 - Fixed issue with tooltip not displaying correctly with icons.
+- Fixed issue with open dialog and sheet padding for mobile.
 
 ### Removed

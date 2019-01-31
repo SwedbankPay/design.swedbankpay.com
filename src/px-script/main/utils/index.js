@@ -24,9 +24,9 @@ export const handleScrollbar = () => {
     const hasVScroll = (window.innerWidth - document.documentElement.clientWidth) > 0;
 
     if (hasVScroll) {
-        document.body.classList.add("body-has-vscroll");
+        document.body.classList.add("has-vscroll");
     } else {
-        document.body.classList.remove("body-has-vscroll");
+        document.body.classList.remove("has-vscroll");
     }
 };
 
