@@ -68,25 +68,6 @@ describe("px-script: dialog", () => {
         expect(dialog.init).toBeInstanceOf(Function);
     });
 
-    it("adds body-has-vscroll when sheet is opened if vertical scrollbar exists", () => {
-        ReactDOM.render(<Dialog />, div);
-        dialog.init();
-
-        document.querySelector("button").dispatchEvent(new Event("click"));
-
-        expect(document.body.classList).toContain("body-has-vscroll");
-    });
-
-    it("removes body-has-vscroll when dialog is opened if vertical scrollbar does not exist", () => {
-        ReactDOM.render(<Dialog />, div);
-        window.innerWidth = 0;
-        dialog.init();
-
-        document.querySelector("button").dispatchEvent(new Event("click"));
-
-        expect(document.body.classList).not.toContain("body-has-vscroll");
-    });
-
     it("button with attribute 'data-dialog-open' pointing to the correct id opens corresponding dialog", () => {
         ReactDOM.render(<Dialog />, div);
 

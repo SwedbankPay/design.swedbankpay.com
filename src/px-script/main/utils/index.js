@@ -20,8 +20,18 @@ export const isWithinBoundingBox = (x, y, element) => {
     return ((xMin < x) && (xMax > x)) && ((yMin < y) && (yMax > y));
 };
 
-export default {
-    extendObj,
-    isWithinBoundingBox
+export const handleScrollbar = () => {
+    const hasVScroll = (window.innerWidth - document.documentElement.clientWidth) > 0;
+
+    if (hasVScroll) {
+        document.body.classList.add("body-has-vscroll");
+    } else {
+        document.body.classList.remove("body-has-vscroll");
+    }
 };
 
+export default {
+    extendObj,
+    isWithinBoundingBox,
+    handleScrollbar
+};
