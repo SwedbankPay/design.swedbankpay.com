@@ -40,7 +40,7 @@ fieldset {
         .checkbox input[type="checkbox"] {
             + label:before {
                 background-color: @input-bg-disabled;
-                border-color: @input-checked-bg-disabled;
+                border-color: @checkbox-color;
                 cursor: not-allowed;
             }
 
@@ -199,8 +199,10 @@ legend {
     &[disabled],
     &[readonly],
     fieldset[disabled] & {
-        background-color: @input-bg-disabled !important; /* stylelint-disable-line declaration-no-important */
-        opacity: 1; /* iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655 */
+        &:not(.flatpickr-input) {
+            background-color: @input-bg-disabled !important; /* stylelint-disable-line declaration-no-important */
+            opacity: 1; /* iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655 */
+        }
     }
 
     &[disabled],

@@ -93,7 +93,9 @@ module.exports = (env, argv) => {
                 {
                     test: /\.css$/,
                     use: [
-                        "style-loader",
+                        {
+                            loader: isProd ? MiniCssExtractPlugin.loader : "style-loader"
+                        },
                         "css-loader",
                         {
                             loader: "postcss-loader",
@@ -172,7 +174,7 @@ module.exports = (env, argv) => {
                     },
                     pxStyles: {
                         name: "px",
-                        test: /px\.less$/,
+                        test: /(flatpickr\.css|px\.less)$/,
                         chunks: "all",
                         enforce: true
                     },
@@ -222,7 +224,7 @@ module.exports = (env, argv) => {
                     google: isRelease
                 }
             }),
-            new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/) // For now this ignores moment's locale folder, which doubles moment's size..
+            new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/) // Ignores moments locale folder which doubles the size of the package, moment is a dependency of chart.js [EH]
         ]
     };
 

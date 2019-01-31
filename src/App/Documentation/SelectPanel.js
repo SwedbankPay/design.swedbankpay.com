@@ -40,7 +40,7 @@ class NavGroup extends Component {
 }
 
 const SelectPanel = () => (
-    <div className="doc-sidebar col-xxl-2 col-md-3">
+    <div className="doc-sidebar">
         <SearchBox routes={routes} />
         <nav className="documentation-nav">
             {routes.map((route, i) => {

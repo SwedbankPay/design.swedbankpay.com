@@ -1,3 +1,5 @@
+import React from "react";
+import ReactDOM from "react-dom";
 import toast from "./index";
 
 describe("px-script: toast", () => {
@@ -5,7 +7,20 @@ describe("px-script: toast", () => {
 
     beforeEach(() => {
         jest.runAllTimers();
+        ReactDOM.unmountComponentAtNode(div);
     });
+
+    const div = document.createElement("div");
+
+    document.body.appendChild(div);
+
+    const Sheet = () => (
+        <div className="sheet" id="demo-sheet">
+            <section>
+                <p>Some content</p>
+            </section>
+        </div>
+    );
 
     it("is defined", () => {
         expect(toast).toBeDefined();
@@ -197,5 +212,29 @@ describe("px-script: toast", () => {
         expect(document.querySelector(".toast")).toBeNull();
     });
 
-    // TODO: Write more tests when mobile gestures gets finished [EH]
+    it("runs a given function after timer expires", () => {
+        const testFunc = jest.fn();
+
+        toast({
+            html: "hello",
+            completeCallback: testFunc
+        });
+
+        expect(testFunc).not.toHaveBeenCalled();
+
+        jest.runAllTimers();
+
+        expect(testFunc).toHaveBeenCalled();
+    });
+
+    it("adds margin-right to toast-container if a sheet is open", () => {
+        ReactDOM.render(<Sheet />, div);
+        document.querySelector("body").classList.add("sheet-open");
+        toast({ html: "Test" });
+
+        const renderedToast = document.querySelector("#toast-container");
+
+        expect(renderedToast).toBeTruthy();
+        expect(Object.keys(renderedToast.style._values)).toContain("margin-right");
+    });
 });

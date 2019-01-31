@@ -118,7 +118,10 @@ const Validation = () => (
         </ComponentPreview>
 
         <h3>Feedback</h3>
-        <p>To give users validation feedback on each input insert the message in the attributes <Attribute data name="success" /> and <Attribute data name="error" /> in the <Attribute value=".help-block" /> element.</p>
+        <p>
+            To give users validation feedback on each input insert the message in the attributes <Attribute data name="success" /> and <Attribute data name="error" /> in
+            the <Attribute value=".help-block" /> element. To display an asterisk you have to include a label with your input element.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <form action="#" noValidate data-validate="">
                 <InputGroup
@@ -267,7 +270,6 @@ const DisabledFormComponents = () => (
             <Radio label="Hamburgers" id="radio-disabled-example-1" name="radio-disabled-example" disabled />
             <Checkbox label="Milk" id="checkbox-disabled-example-3" disabled checked />
             <Rangeslider className="mb-2" min={0} max={200} step={1} value={100} valueLabel valueLabelPrefix="$" valueLabelPostfix="%" disabled/>
-            <p>I am a text, am i too close to the component above me maybe?</p>
         </ComponentPreview>
 
         <h3>Disable a fieldset</h3>

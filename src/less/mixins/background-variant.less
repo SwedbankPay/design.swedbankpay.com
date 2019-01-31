@@ -1,10 +1,11 @@
 /* stylelint-disable declaration-no-important */
 
-.background-variant(@color) {
-    background-color: @color !important;
-    color: @white !important;
+.background-variant(@parent, @color) {
+    .@{parent} {
+        background-color: @color !important;
 
-    a&:hover {
-        background-color: darken(@color, 10%) !important;
+        a&:hover {
+            background-color: darken(@color, 10%) !important;
+        }
     }
 }

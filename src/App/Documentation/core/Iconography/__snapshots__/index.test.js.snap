@@ -180,27 +180,27 @@ exports[`Core: Iconography Flags renders 1`] = `
   <p>
     Flags support sizes 
     <Property
-      value=".tiny"
+      value=".payment-icon-tiny"
     />
     , 
     <Property
-      value=".small"
+      value=".payment-icon-small"
     />
     , 
     <Property
-      value=".medium"
+      value=".payment-icon-medium"
     />
     , 
     <Property
-      value=".large"
+      value=".payment-icon-large"
     />
      and 
     <Property
-      value=".huge"
+      value=".payment-icon-huge"
     />
     . If no size is provided 
     <Property
-      value=".tiny"
+      value=".payment-icon-tiny"
     />
      is defaulted.
   </p>
@@ -248,27 +248,27 @@ exports[`Core: Iconography Flags renders 1`] = `
     language="html"
   >
     <i
-      className="flag-icon flag-icon-no tiny"
+      className="flag-icon flag-icon-no flag-icon-tiny"
     />
     
 
     <i
-      className="flag-icon flag-icon-sv small"
+      className="flag-icon flag-icon-sv flag-icon-small"
     />
     
 
     <i
-      className="flag-icon flag-icon-dk medium"
+      className="flag-icon flag-icon-dk flag-icon-medium"
     />
     
 
     <i
-      className="flag-icon flag-icon-fi large"
+      className="flag-icon flag-icon-fi flag-icon-large"
     />
     
 
     <i
-      className="flag-icon flag-icon-eu huge"
+      className="flag-icon flag-icon-eu flag-icon-huge"
     />
     
 
@@ -325,27 +325,27 @@ exports[`Core: Iconography Flags renders 1`] = `
     language="html"
   >
     <i
-      className="flag-icon flag-icon-squared flag-icon-no tiny"
+      className="flag-icon flag-icon-squared flag-icon-no flag-icon-tiny"
     />
     
 
     <i
-      className="flag-icon flag-icon-squared flag-icon-sv small"
+      className="flag-icon flag-icon-squared flag-icon-sv flag-icon-small"
     />
     
 
     <i
-      className="flag-icon flag-icon-squared flag-icon-dk medium"
+      className="flag-icon flag-icon-squared flag-icon-dk flag-icon-medium"
     />
     
 
     <i
-      className="flag-icon flag-icon-squared flag-icon-fi large"
+      className="flag-icon flag-icon-squared flag-icon-fi flag-icon-large"
     />
     
 
     <i
-      className="flag-icon flag-icon-squared flag-icon-eu huge"
+      className="flag-icon flag-icon-squared flag-icon-eu flag-icon-huge"
     />
     
 
@@ -461,19 +461,19 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
   <p>
     You can modify the size of the material icons by adding one of the size classes: 
     <Property
-      value=".tiny"
+      value="material-icons-tiny"
     />
     , 
     <Property
-      value=".small"
+      value="material-icons-small"
     />
     , 
     <Property
-      value=".medium"
+      value="material-icons-medium"
     />
      or 
     <Property
-      value=".large"
+      value="material-icons-large"
     />
     .
   </p>
@@ -515,28 +515,28 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
     language="html"
   >
     <i
-      className="material-icons tiny"
+      className="material-icons material-icons-tiny"
     >
       android
     </i>
     
 
     <i
-      className="material-icons small"
+      className="material-icons material-icons-small"
     >
       android
     </i>
     
 
     <i
-      className="material-icons medium"
+      className="material-icons material-icons-medium"
     >
       android
     </i>
     
 
     <i
-      className="material-icons large"
+      className="material-icons material-icons-large"
     >
       android
     </i>
@@ -557,7 +557,7 @@ exports[`Core: Iconography PaymentIcons onClick prevents default 1`] = `
       className="language-html"
       component="code"
     >
-      &lt;i class="payment-icon {icon_name}"&gt;&lt;/i&gt;
+      &lt;i class="payment-icon payment-icon-{icon_name}"&gt;&lt;/i&gt;
     </PrismCode>
     .
   </p>
@@ -693,23 +693,23 @@ exports[`Core: Iconography PaymentIcons onClick prevents default 1`] = `
   <p>
     Different sizes are available by adding 
     <Property
-      value=".small"
+      value=".payment-icon-small"
     />
     , 
     <Property
-      value=".medium"
+      value=".payment-icon-medium"
     />
     , 
     <Property
-      value=".large"
+      value=".payment-icon-large"
     />
      and 
     <Property
-      value=".huge"
+      value=".payment-icon-huge"
     />
     . If no size is provided 
     <Property
-      value=".medium"
+      value=".payment-icon-medium"
     />
      is defaulted.
   </p>
@@ -1004,7 +1004,7 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
       className="language-html"
       component="code"
     >
-      &lt;i class="payment-icon {icon_name}"&gt;&lt;/i&gt;
+      &lt;i class="payment-icon payment-icon-{icon_name}"&gt;&lt;/i&gt;
     </PrismCode>
     .
   </p>
@@ -1140,23 +1140,23 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
   <p>
     Different sizes are available by adding 
     <Property
-      value=".small"
+      value=".payment-icon-small"
     />
     , 
     <Property
-      value=".medium"
+      value=".payment-icon-medium"
     />
     , 
     <Property
-      value=".large"
+      value=".payment-icon-large"
     />
      and 
     <Property
-      value=".huge"
+      value=".payment-icon-huge"
     />
     . If no size is provided 
     <Property
-      value=".medium"
+      value=".payment-icon-medium"
     />
      is defaulted.
   </p>

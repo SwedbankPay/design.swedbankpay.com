@@ -68,6 +68,10 @@
         cursor: @cursor-disabled;
         opacity: 0.65;
         box-shadow: none;
+
+        * {
+            pointer-events: none;
+        }
     }
 
     a& {
@@ -202,6 +206,8 @@
         &,
         &:hover,
         &:active,
+        &.active,
+        &[active],
         &:focus {
             color: transparent;
         }

@@ -1,34 +1,4 @@
 // Background classes
-.bg-brand {
-    .background-variant(@brand-primary);
-}
-
-.bg-default {
-    .background-variant(@text-color);
-}
-
-.bg-success,
-.bg-green {
-    .background-variant(@state-success);
-}
-
-.bg-neutral,
-.bg-blue {
-    .background-variant(@state-neutral);
-}
-
-.bg-warning,
-.bg-yellow {
-    .background-variant(@state-warning);
-}
-
-.bg-danger,
-.bg-red {
-    .background-variant(@state-error);
-}
-
-.bg-white {
-    .background-variant(@white);
-
-    color: @text-color !important; /* stylelint-disable-line declaration-no-important */
-}
+each(@background-list, .(@color, @name) {
+    .background-variant(~"bg-@{name}", @color);
+});

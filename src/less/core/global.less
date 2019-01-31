@@ -33,6 +33,17 @@ body {
     color: @text-color;
     background-color: @body-bg;
     min-height: 100%;
+
+    @media screen and (min-width: @screen-sm-min) {
+        &.has-vscroll {
+            padding-right: @scrollbar-size;
+
+            .dialog,
+            .topbar {
+                padding-right: @scrollbar-size;
+            }
+        }
+    }
 }
 
 // Reset fonts for relevant elements
@@ -175,7 +186,9 @@ textarea {
 
 // Fix issue with select tags in safari
 select {
-    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAY0lEQVQokdXSwQmAMAyF4T/iNOJkIq7ikD25hM+DFlusNNSTCYG8w5dTTIiW6prUF9jHxbDqEaE9DQABkGNWcXaEkwNtwJDBC88VNIq7yQIsHvSABVxERZjg8IaEsP98TjM8AFoueJdPecmTAAAAAElFTkSuQmCC) no-repeat right 3px center;
+    background: url(../../icons/shapes/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
     -moz-appearance: none;
     -webkit-appearance: none;
 }

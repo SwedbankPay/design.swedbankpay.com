@@ -1,134 +1,62 @@
-.rd-container {
-    display: none;
-    background-color: @datepicker-background-color;
-    padding: @base-padding @base-padding-sm;
-    text-align: center;
-    box-shadow: @datepicker-box-shadow;
-    z-index: @zindex-datepicker;
-}
+@import "../../../node_modules/flatpickr/dist/flatpickr.css";
 
-.rd-container-attachment {
-    position: absolute;
-}
-
-.rd-month {
-    display: inline-block;
-    margin-right: @base-margin-lg;
-}
-
-.rd-month-label {
-    text-transform: uppercase;
-    font-weight: 300;
-    font-size: 1rem;
-    line-height: 1.7rem;
-}
-
-.rd-month:last-child {
-    margin-right: 0;
-}
-
-.rd-back,
-.rd-next {
-    font-family: "Material icons";
-    cursor: pointer;
-    border: none;
-    outline: none;
-    background: none;
-    padding: 0 @base-padding-sm;
-    margin: 0;
-}
-
-.rd-back[disabled],
-.rd-next[disabled] {
-    cursor: default;
-}
-
-.rd-back {
-    float: left;
-}
-
-.rd-next {
-    float: right;
-}
-
-.rd-back:before {
-    display: block;
-    content: "\E5C4";
-}
-
-.rd-next:before {
-    display: block;
-    content: "\E5C8";
-}
-
-.rd-days {
-    td,
-    th {
-        padding: 0.35rem 0.7rem;
+.flatpickr-calendar {
+    &.open {
+        z-index: @zindex-datepicker;
     }
-}
 
-.rd-day-head {
-    color: @datepicker-weekday-color;
-}
+    .flatpickr-weekday {
+        color: @brand-primary;
+        font-size: @base-font-size;
+    }
 
-.rd-day-body {
-    cursor: pointer;
-    text-align: center;
-}
+    .flatpickr-day.selected {
+        background: @brand-primary;
+        border-color: @brand-primary;
+    }
 
+    .flatpickr-current-month span.cur-month {
+        font-weight: @font-weight-base;
+    }
 
-/* Highlight */
+    .flatpickr-current-month span.cur-month:hover {
+        background: transparent;
+    }
 
-.rd-day-selected,
-.rd-time-selected {
-    cursor: pointer;
-    background-color: @datepicker-highlight-background;
-    color: @datepicker-highlight-color;
-}
+    .flatpickr-months .flatpickr-prev-month:hover svg,
+    .flatpickr-months .flatpickr-next-month:hover svg {
+        fill: @brand-primary;
+    }
 
-.rd-time-option:hover,
-.rd-day-body:hover {
-    cursor: pointer;
-    background-color: @datepicker-hover-color;
-}
+    .flatpickr-day.selected,
+    .flatpickr-day.startRange,
+    .flatpickr-day.endRange,
+    .flatpickr-day.selected.inRange,
+    .flatpickr-day.startRange.inRange,
+    .flatpickr-day.endRange.inRange,
+    .flatpickr-day.selected:focus,
+    .flatpickr-day.startRange:focus,
+    .flatpickr-day.endRange:focus,
+    .flatpickr-day.startRange:hover,
+    .flatpickr-day.endRange:hover,
+    .flatpickr-day.selected.prevMonthDay,
+    .flatpickr-day.startRange.prevMonthDay,
+    .flatpickr-day.endRange.prevMonthDay,
+    .flatpickr-day.selected.nextMonthDay,
+    .flatpickr-day.startRange.nextMonthDay,
+    .flatpickr-day.endRange.nextMonthDay {
+        background: @brand-primary;
+        border: @brand-primary;
+    }
 
-.rd-day-prev-month,
-.rd-day-next-month {
-    color: #999999;
-}
+    .flatpickr-day.selected:hover {
+        background: @gray-3;
+        border: @gray-3;
+    }
 
-.rd-day-disabled {
-    cursor: default;
-    color: #ffcccc;
-}
-
-.rd-time {
-    position: relative;
-    display: inline-block;
-    margin-top: 5px;
-    min-width: 80px;
-}
-
-.rd-time-list {
-    display: none;
-    position: absolute;
-    overflow-y: scroll;
-    max-height: 160px;
-    left: 0;
-    right: 0;
-    background-color: @datepicker-background-color;
-    color: #333333;
-}
-
-.rd-time-selected {
-    padding: @datepicker-rd-padding;
-}
-
-.rd-time-option {
-    padding: @datepicker-rd-padding;
-}
-
-.rd-day-concealed {
-    visibility: hidden;
+    .flatpickr-day.selected.startRange + .endRange:not(:nth-child(7n+1)),
+    .flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n+1)),
+    .flatpickr-day.endRange.startRange + .endRange:not(:nth-child(7n+1)) {
+        box-shadow: -10px 0 0 @brand-primary;
+    }
 }

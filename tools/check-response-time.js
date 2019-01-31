@@ -119,6 +119,10 @@ const interval = setInterval(() => {
 
     if (intervalCount >= 120) {
         clearInterval(interval);
+        sendSlackMessage({
+            text: `Response time check for \`${process.env.basename}\` (\`<https://github.com/PayEx/design.payex.com/commit/${process.env.GitVersion_ShortSha}|${process.env.GitVersion_ShortSha}>\`) timed out.`
+        });
+        console.log("Response time check timed out.");
     }
 
     fetch(BASEURL)

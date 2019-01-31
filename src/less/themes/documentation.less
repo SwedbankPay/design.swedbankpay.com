@@ -17,9 +17,9 @@
     }
 
     .doc-sidebar {
-        padding-right: 0;
-        padding-left: 0;
         height: auto;
+        position: sticky;
+        top: 70px;
     }
 
     .sidebar-heading {
@@ -37,9 +37,9 @@
     }
 
     .documentation-nav {
-        position: sticky;
-        top: 70px;
         padding: @base-padding;
+        max-height: calc(100vh - 220px);
+        overflow-y: auto;
 
         .nav-group {
             margin-bottom: @base-margin;
@@ -61,7 +61,7 @@
 
             .nav-heading {
                 display: flex;
-                align-items: end;
+                align-items: flex-end;
 
                 > i.material-icons {
                     user-select: none;

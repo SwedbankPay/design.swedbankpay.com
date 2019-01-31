@@ -1,3 +1,5 @@
+import { handleScrollbar } from "../utils";
+
 const SELECTORS = {
     SHEET: ".sheet",
     CLOSE: "[data-sheet-close]",
@@ -11,7 +13,6 @@ class Sheet {
         this.id = el.id;
         this.closeIcon = el.querySelector(SELECTORS.CLOSEICON);
         this.isOpen = el.classList.contains("sheet-open");
-        this.hasVScroll = () => (window.innerWidth - document.documentElement.clientWidth) > 0;
 
         if (this.closeIcon) {
             this.closeIcon.addEventListener("click", e => {
@@ -36,32 +37,32 @@ class Sheet {
         });
     }
 
-    handleScrollbar () {
-        if (this.hasVScroll()) {
-            document.body.classList.add("body-has-vscroll");
-        } else {
-            document.body.classList.remove("body-has-vscroll");
-        }
-    }
-
     open () {
-        this.handleScrollbar();
+        handleScrollbar();
         this.isOpen = true;
         this._el.classList.add("d-block");
         document.body.classList.add("sheet-open");
         setTimeout(() => {
             this._el.classList.add("sheet-open");
         }, 10); // If set lower than 10, the initial open will be instant.
+
+        const toastContainer = document.querySelector("#toast-container");
+
+        toastContainer ? toastContainer.setAttribute("style", `margin-right: ${this._el.querySelector("section").offsetWidth}px; transition: margin 0.3s ease-in-out;`) : null;
     }
 
     close () {
-        this.handleScrollbar();
+        handleScrollbar();
         this.isOpen = false;
         this._el.classList.remove("sheet-open");
         document.body.classList.remove("sheet-open");
         setTimeout(() => {
             this._el.classList.remove("d-block");
         }, 300);
+
+        const toastContainer = document.querySelector("#toast-container");
+
+        toastContainer ? toastContainer.setAttribute("style", "transition: margin 0.3s ease-in-out;") : null;
     }
 }
 

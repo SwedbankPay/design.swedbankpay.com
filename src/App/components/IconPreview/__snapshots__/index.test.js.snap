@@ -2,7 +2,7 @@
 
 exports[`Component: IconPreview -  prop name is marked as required 1`] = `
 <i
-  className="payment-icon"
+  className="payment-icon payment-icon-undefined"
 />
 `;
 
@@ -38,19 +38,33 @@ exports[`Component: IconPreview -  prop size is an enum with specified allowed v
 
 exports[`Component: IconPreview -  prop size is an enum with specified allowed values 2`] = `
 <i
-  className="payment-icon amex test"
+  className="payment-icon payment-icon-test payment-icon-amex"
 />
 `;
 
-exports[`Component: IconPreview -  prop type is marked as required 1`] = `
+exports[`Component: IconPreview -  prop type has specific allowed values 1`] = `
+<div>
+  <IconPreview
+    type="material-icons"
+  />
+  <IconPreview
+    type="payment-icon"
+  />
+  <IconPreview
+    type="flag-icon"
+  />
+</div>
+`;
+
+exports[`Component: IconPreview -  prop type has specific allowed values 2`] = `
 <i
-  className=""
+  className="invalid_value invalid_value-undefined"
 />
 `;
 
 exports[`Component: IconPreview -  renders 1`] = `
 <i
-  className="payment-icon amex"
+  className="payment-icon payment-icon-amex"
 />
 `;
 
@@ -62,46 +76,29 @@ exports[`Component: IconPreview -  renders a material icon when type is equal to
 </i>
 `;
 
-exports[`Component: IconPreview -  renders a preview wrapper around material-icon when prop preview is true 1`] = `
+exports[`Component: IconPreview -  renders a preview wrapper around material-icon when prop previewSize is true 1`] = `
 <div
   className="icon-preview"
 >
   <i
-    className="material-icons"
+    className="material-icons material-icons-large"
   >
     android
   </i>
   <code
     className="token property p-0 mt-2"
   >
-    android
+    large
   </code>
 </div>
 `;
 
-exports[`Component: IconPreview -  renders a preview wrapper around material-icon when prop previewSize is true with a span containing the size as text 1`] = `
+exports[`Component: IconPreview -  renders a preview wrapper around the <i> tag when prop preview is true 1`] = `
 <div
   className="icon-preview"
 >
   <i
-    className="material-icons large"
-  >
-    android
-  </i>
-  <code
-    className="token property p-0 mt-2"
-  >
-    .large
-  </code>
-</div>
-`;
-
-exports[`Component: IconPreview -  renders a preview wrapper around payment-icon when prop preview is true 1`] = `
-<div
-  className="icon-preview"
->
-  <i
-    className="payment-icon amex"
+    className="payment-icon payment-icon-amex"
   />
   <code
     className="token property p-0 mt-2"
@@ -113,18 +110,18 @@ exports[`Component: IconPreview -  renders a preview wrapper around payment-icon
 
 exports[`Component: IconPreview -  renders correct icon when prop name is provided 1`] = `
 <i
-  className="payment-icon amex"
+  className="payment-icon payment-icon-amex"
 />
 `;
 
 exports[`Component: IconPreview -  renders correct size when prop size is provided 1`] = `
 <i
-  className="payment-icon amex large"
+  className="payment-icon payment-icon-large payment-icon-amex"
 />
 `;
 
 exports[`Component: IconPreview -  renders icon with custom when prop className is provided 1`] = `
 <i
-  className="payment-icon amex test test2 test-3"
+  className="payment-icon payment-icon-amex test test2 test-3"
 />
 `;

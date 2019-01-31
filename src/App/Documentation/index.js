@@ -17,7 +17,9 @@ const Documentation = () => (
             </div>
         </div>
         <div className="row">
-            <SelectPanel />
+            <div className="col-xxl-2 col-md-3 p-0">
+                <SelectPanel />
+            </div>
             <main className="doc-view col-xxl-10 col-md-9">
                 <Switch>
                     <Route exact path="/docs" render={() => <Redirect to="/docs/getting-started" />} />

@@ -159,6 +159,7 @@
 @zindex-action-list:                        500;
 @zindex-action-list-anchor:                 501;
 @zindex-nav-submenu:                        520;
+@zindex-datepicker:                         530;
 @zindex-topbar:                             550;
 @zindex-dialog-backdrop:                    1040;
 @zindex-dialog:                             1050;
@@ -167,7 +168,6 @@
 @zindex-topbar-nav:                         2000;
 @zindex-sheet-backdrop:                     3000;
 @zindex-sheet:                              3100;
-@zindex-datepicker:                         3200;
 @zindex-tooltip:                            9001;
 @zindex-toast:                              10000;
 
@@ -272,11 +272,6 @@
 /* stylelint-disable indentation */
 @color-list: {
                                             default: @text-color;
-                                            green: @green;
-                                            purple: @purple;
-                                            blue: @blue;
-                                            yellow: @yellow;
-                                            red: @red;
                                             black: @black;
                                             white: @white;
                                             brand: @brand-primary;
@@ -284,6 +279,23 @@
                                             neutral: @state-neutral;
                                             warning: @state-warning;
                                             danger: @state-error;
+}
+/* stylelint-enable */
+
+/* Background list */
+/* stylelint-disable indentation */
+@background-list: {
+                                            default: @text-color;
+                                            brand: @brand-primary;
+                                            green: @green;
+                                            success: @state-success;
+                                            blue: @blue;
+                                            neutral: @state-neutral;
+                                            yellow: @yellow;
+                                            warning: @state-warning;
+                                            red: @red;
+                                            danger: @state-error;
+                                            white: @white;
 }
 /* stylelint-enable */
 
@@ -474,12 +486,19 @@
 @select-option-margin:                      (@base-margin * 0.187) (@base-margin * 0.375);
 
 /* Checkbox */
-@checkbox-color:                            @gray-3;
+@checkbox-color:                            @gray-6;
 @checkbox-checked-color:                    @brand-primary;
-@checkbox-height:                           1.4rem;
+@checkbox-height:                           1.375rem;
 @checkbox-width:                            @checkbox-height; /* This also controls radio and togglebox */
 
 @checkbox-label-padding:                    @base-padding / 5;
+
+@checkbox-checkmark-height:                 2px;
+@checkbox-checkmark-width:                  2px;
+
+/* Radio */
+@radio-circle-height:                       10px;
+@radio-circle-width:                        10px;
 
 /* Rangeslider */
 @range-height:                              @checkbox-height / 2;

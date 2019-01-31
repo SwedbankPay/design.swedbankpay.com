@@ -29,7 +29,8 @@ const DefaultBehaviour = () => (
                 >
                     <MediaObject size="sm" icon="account_circle" heading="Bob Corlsan" text="bob.corlsan@payex.com" textSmall muted />
                 </CardComponent>
-
+            </div>
+            <div className="cards">
                 <CardComponent
                     type="brand"
                     title="Card brand"
@@ -42,7 +43,8 @@ const DefaultBehaviour = () => (
                 >
                     <MediaObject size="sm" icon="account_balance" heading="725 NOK" text="Outstanding balance" textSmall muted />
                 </CardComponent>
-
+            </div>
+            <div className="cards">
                 <CardComponent
                     type="light"
                     title="Card light"

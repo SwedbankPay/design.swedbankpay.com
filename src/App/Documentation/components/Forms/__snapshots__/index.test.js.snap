@@ -79,9 +79,6 @@ exports[`Documentation: Forms DisabledFormComponents renders 1`] = `
       valueLabelPostfix="%"
       valueLabelPrefix="$"
     />
-    <p>
-      I am a text, am i too close to the component above me maybe?
-    </p>
   </ComponentPreview>
   <h3>
     Disable a fieldset
@@ -893,7 +890,7 @@ exports[`Documentation: Forms Validation renders 1`] = `
     <Attribute
       value=".help-block"
     />
-     element.
+     element. To display an asterisk you have to include a label with your input element.
   </p>
   <ComponentPreview
     codeFigure={true}
