@@ -50,25 +50,6 @@ describe("px-script: sheet", () => {
         expect(sheet.init).toBeInstanceOf(Function);
     });
 
-    it("adds body-has-vscroll when sheet is opened if vertical scrollbar exists", () => {
-        ReactDOM.render(<Sheet />, div);
-        sheet.init();
-
-        document.querySelector("button").dispatchEvent(new Event("click"));
-
-        expect(document.body.classList).toContain("body-has-vscroll");
-    });
-
-    it("removes body-has-vscroll when sheet is opened if vertical scrollbar does not exist", () => {
-        ReactDOM.render(<Sheet />, div);
-        window.innerWidth = 0;
-        sheet.init();
-
-        document.querySelector("button").dispatchEvent(new Event("click"));
-
-        expect(document.body.classList).not.toContain("body-has-vscroll");
-    });
-
     it("button with attribute 'data-sheet-open' pointing to the correct id opens corresponding sheet", () => {
         ReactDOM.render(<Sheet />, div);
 

@@ -33,6 +33,17 @@ body {
     color: @text-color;
     background-color: @body-bg;
     min-height: 100%;
+
+    @media screen and (min-width: @screen-sm-min) {
+        &.has-vscroll {
+            padding-right: @scrollbar-size;
+
+            .dialog,
+            .topbar {
+                padding-right: @scrollbar-size;
+            }
+        }
+    }
 }
 
 // Reset fonts for relevant elements

@@ -1,4 +1,4 @@
-import { extendObj, isWithinBoundingBox } from "./index";
+import { extendObj, handleScrollbar, isWithinBoundingBox } from "./index";
 
 describe("px-script: utils", () => {
     describe("- extendObj", () => {
@@ -45,6 +45,22 @@ describe("px-script: utils", () => {
             const extObj = extendObj(true, oldObj, newObj);
 
             expect(expectedObj).toEqual(extObj);
+        });
+    });
+
+    describe("- handleScrollbar", () => {
+        it("adds class has-vscroll to body if innerwidth is larger than clientwidth", () => {
+            handleScrollbar();
+
+            expect(document.body.classList).toContain("has-vscroll");
+        });
+
+        it("removes has-vscroll if vertical scrollbar does not exist", () => {
+            document.body.classList.add("has-vscroll");
+            window.innerWidth = 0;
+            handleScrollbar();
+
+            expect(document.body.classList).not.toContain("has-vscroll");
         });
     });
 
