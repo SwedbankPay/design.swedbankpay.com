@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.xx.x] - 2018-xx-xx
+## [0.16.0] - 2019-01-31
 
 ### Added
 
@@ -29,5 +29,3 @@
 - Fixed issue with disabled button loaders being clickable.
 - Fixed issue with tooltip not displaying correctly with icons.
 - Fixed issue with open dialog and sheet padding for mobile.
-
-### Removed
