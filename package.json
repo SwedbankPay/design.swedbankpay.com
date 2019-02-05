@@ -28,6 +28,9 @@
         "url": "https://github.com/PayEx/design.payex.com/issues"
     },
     "homepage": "https://github.com/PayEx/design.payex.com#readme",
+    "resolutions": {
+        "write-file-atomic": "2.4.1"
+    },
     "dependencies": {
         "@babel/polyfill": "^7.2.5",
         "chart.js": "^2.7.3",
