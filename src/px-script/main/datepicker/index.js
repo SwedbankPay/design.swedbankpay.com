@@ -45,16 +45,16 @@ const datepicker = (() => {
             options.dateFormat = format.dateFormat.concat(" ", format.hourFormat);
         }
 
-        flatpickr(datepicker, options);
+        return flatpickr(datepicker, options);
     };
 
     const init = () => {
         const datepickers = document.querySelectorAll("[data-datepicker]");
 
+        window.px._datepickers = window.px._datepickers || [];
+
         if (datepickers.length) {
-            datepickers.forEach(picker => {
-                _createDatepicker(picker);
-            });
+            datepickers.forEach(picker => window.px._datepickers.push(_createDatepicker(picker)));
         }
     };
 
