@@ -2,7 +2,7 @@
 
 # PayEx DesignGuide
 
-[![Version](https://img.shields.io/badge/Version-0.16.0-blue.svg)](https://github.com/PayEx/design.payex.com/releases/tag/0.16.0)
+[![Version](https://img.shields.io/badge/Version-0.16.1-blue.svg)](https://github.com/PayEx/design.payex.com/releases/tag/0.16.1)
 [![Build status](https://ci.appveyor.com/api/projects/status/1dii19sqw1m7xtsn/branch/master?svg=true)](https://ci.appveyor.com/project/PayEx/design-payex-com/branch/master)
 [![Code Coverage](https://codecov.io/gh/payex/design.payex.com/branch/master/graph/badge.svg)](https://codecov.io/gh/payex/design.payex.com)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=PayEx/design.payex.com)](https://dependabot.com)
