@@ -1,7 +1,11 @@
 # Changelog
 
-## [0.16.1] - 2019-02-05
+## [0.XX.X] - 2019-XX-XX
+
+### Added
+
+### Changed
 
 ### Fixed
 
-- Fixed issue with datepicker not being visible inside sheet.
+### Removed
