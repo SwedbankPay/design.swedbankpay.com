@@ -45,7 +45,6 @@ const actionList = (() => {
             document.addEventListener("click", e => {
                 actionLists.forEach(l => {
                     if (!l.containsPoint(e.clientX, e.clientY) && l.isOpen) {
-                        console.log(e.clientX, e.clientY);
                         l.close();
                     }
                 });
