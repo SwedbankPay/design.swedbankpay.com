@@ -8,4 +8,6 @@
 
 ### Fixed
 
+- Fixed issue with autocomplete for search field in documentation.
+
 ### Removed

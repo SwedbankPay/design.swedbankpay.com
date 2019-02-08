@@ -5,6 +5,7 @@ exports[`Documentation: SelectPanel SearchBox renders 1`] = `
   className="doc-search"
 >
   <input
+    autoComplete="off"
     className="form-control"
     name="designguide-search"
     onChange={[Function]}
