@@ -8,4 +8,6 @@
 
 ### Fixed
 
+- Fixed issue with action lists not closing when opening a new one.
+
 ### Removed
