@@ -77,7 +77,7 @@ deploy:
     description: $(changelog)
     artifact: /PayEx.DesignGuide.*\.zip/
     draft: false
-    prerelease: true
+    prerelease: false
     on:
       appveyor_repo_tag: true
 
