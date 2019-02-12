@@ -1,6 +1,6 @@
 {
     "name": "design.payex.com",
-    "version": "0.16.1",
+    "version": "2.0.0",
     "description": "PayEx DesignGuide",
     "main": "index.js",
     "scripts": {
@@ -50,7 +50,7 @@
         "@babel/plugin-syntax-dynamic-import": "^7.2.0",
         "@babel/preset-env": "^7.3.1",
         "@babel/preset-react": "^7.0.0",
-        "@sentry/browser": "^4.5.3",
+        "@sentry/browser": "^4.5.4",
         "@sentry/webpack-plugin": "^1.6.2",
         "app-manifest-webpack-plugin": "^1.2.0",
         "autoprefixer": "^9.4.7",
@@ -88,7 +88,7 @@
         "testcafe": "^1.0.0",
         "uglifyjs-webpack-plugin": "^2.1.1",
         "webpack": "^4.29.3",
-        "webpack-bundle-analyzer": "^3.0.3",
+        "webpack-bundle-analyzer": "^3.0.4",
         "webpack-cli": "^3.2.3",
         "webpack-dev-server": "^3.1.14"
     }
