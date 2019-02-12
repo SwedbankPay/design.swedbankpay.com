@@ -8,14 +8,8 @@ class ActionList {
         this.actionMenuLinks = this.actionMenu.querySelectorAll("a");
         this.isOpen = this.actionMenu.classList.contains("active");
 
-        this.toggleBtn.addEventListener("click", e => {
-            e.stopPropagation();
-
-            if (!this.isOpen) {
-                this.open();
-            } else {
-                this.close();
-            }
+        this.toggleBtn.addEventListener("click", () => {
+            this.toggleMenu();
         });
 
         // close menu when clicking on links
@@ -32,27 +26,30 @@ class ActionList {
         this.isOpen = false;
     }
 
+    toggleMenu () {
+        this.isOpen ? this.close() : this.open();
+    }
+
     containsPoint (x, y) {
-        return isWithinBoundingBox(x, y, this.actionMenu);
+        return (isWithinBoundingBox(x, y, this.toggleBtn) || isWithinBoundingBox(x, y, this.actionMenu));
     }
 }
 
 const actionList = (() => {
     const init = () => {
-        const actionLists = document.querySelectorAll(".action-list");
+        let actionLists = document.querySelectorAll(".action-list");
 
-        if (actionLists) {
-            actionLists.forEach(l => {
-                const list = new ActionList(l);
+        if (actionLists.length) {
+            actionLists = [...actionLists].map(l => new ActionList(l));
 
-                document.querySelector("html").addEventListener("click", e => {
-                    if (list.isOpen && !list.containsPoint(e.clientX, e.clientY)) {
-                        list.close();
+            document.addEventListener("click", e => {
+                actionLists.forEach(l => {
+                    if (!l.containsPoint(e.clientX, e.clientY) && l.isOpen) {
+                        l.close();
                     }
                 });
             });
         }
-
     };
 
     return { init };

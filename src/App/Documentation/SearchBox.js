@@ -63,6 +63,7 @@ class SearchBox extends Component {
                     className="form-control"
                     name="designguide-search"
                     placeholder="Search..."
+                    autoComplete="off"
                     onChange={this.handleInputChange}
                     onFocus={() => this.setState({ showResults: true })}
                 />

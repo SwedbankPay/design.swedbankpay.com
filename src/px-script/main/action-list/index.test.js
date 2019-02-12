@@ -40,7 +40,7 @@ describe("px-script: action-list", () => {
         expect(actionMenu.classList).not.toContain("active");
 
         actionList.init();
-        toggleBtn.click();
+        toggleBtn.dispatchEvent(new Event("click"));
 
         expect(actionMenu.classList).toContain("active");
 
@@ -60,7 +60,7 @@ describe("px-script: action-list", () => {
         expect(actionMenu.classList).toContain("active");
 
         actionList.init();
-        toggleBtn.click();
+        toggleBtn.dispatchEvent(new Event("click"));
 
         expect(actionMenu.classList).not.toContain("active");
 
