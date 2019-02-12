@@ -1,10 +1,11 @@
 # Changelog
 
-## [2.0.0] - 2019-02-12
+## [2.X.X] - 2019-XX-XX
 
-Hooray!! :tada: :confetti_ball: :tada: It's finally here, Stable release! :tada: :confetti_ball: :tada:
+### Added
+
+### Changed
 
 ### Fixed
 
-- Fixed issue with action lists not closing when opening a new one.
-- Fixed issue with autocomplete for search field in documentation.
+### Removed
