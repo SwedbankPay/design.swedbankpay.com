@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer, ExperimentalComponentAlert, Property } from "#";
+import { ComponentPreview, DocContainer, Property } from "#";
 import { nav } from "$/px-script/main";
 import NavComponent from "@/Nav";
 
@@ -134,7 +134,6 @@ class Nav extends Component {
     render () {
         return (
             <DocContainer docToc>
-                <ExperimentalComponentAlert />
                 <p className="lead">
                     Use <PrismCode className="language-html">{"<nav>"}</PrismCode>s to create a basic navigational
                     element containing links.

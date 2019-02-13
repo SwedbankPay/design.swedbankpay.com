@@ -963,7 +963,6 @@ exports[`Dashboard: Charts renders 1`] = `
 <DocContainer
   docToc={true}
 >
-  <ExperimentalComponentAlert />
   <p
     className="lead"
   >

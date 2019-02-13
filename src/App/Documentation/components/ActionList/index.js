@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocContainer, Icon, ExperimentalComponentAlert } from "#";
+import { ComponentPreview, DocContainer, Icon } from "#";
 import actionList from "$/px-script/main/action-list";
 
 const Overview = () => (
@@ -75,7 +75,6 @@ class ActionList extends Component {
     render () {
         return (
             <DocContainer docToc>
-                <ExperimentalComponentAlert />
                 <p className="lead">
                     Action lists are small menus that remain hidden until clicked. In these you can put page links or anchors that trigger an action elsewhere.
                 </p>

@@ -121,7 +121,7 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "components/ActionList",
                 "path": "/docs/components/action-list",
-                "title": "Action List (experimental)",
+                "title": "Action List",
               },
               Object {
                 "componentPath": "components/Alerts",
@@ -146,7 +146,7 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "components/Card",
                 "path": "/docs/components/card",
-                "title": "Card (experimental)",
+                "title": "Card",
               },
               Object {
                 "componentPath": "components/Datepickers",
@@ -181,7 +181,7 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "components/Nav",
                 "path": "/docs/components/nav",
-                "title": "Nav (experimental)",
+                "title": "Nav",
               },
               Object {
                 "componentPath": "components/Pagination",
@@ -201,7 +201,7 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "components/Slab",
                 "path": "/docs/components/slab",
-                "title": "Slab (experimental)",
+                "title": "Slab",
               },
               Object {
                 "componentPath": "components/Status",
@@ -216,12 +216,12 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "components/Tabs",
                 "path": "/docs/components/tabs",
-                "title": "Tabs (experimental)",
+                "title": "Tabs",
               },
               Object {
                 "componentPath": "components/Toast",
                 "path": "/docs/components/toast",
-                "title": "Toast (experimental)",
+                "title": "Toast",
               },
               Object {
                 "componentPath": "components/Tooltips",
@@ -251,7 +251,7 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "dashboard/Charts",
                 "path": "/docs/dashboard/charts",
-                "title": "Charts (Experimental)",
+                "title": "Charts",
               },
             ]
           }

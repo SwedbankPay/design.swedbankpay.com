@@ -73,20 +73,6 @@ exports[`Utilities: Colors TextColors renders 1`] = `
   >
     Text colors
   </h2>
-  <Alert
-    type="danger"
-  >
-    <h5>
-      Deprecated classname
-    </h5>
-    <p>
-      The class 
-      <Property
-        value=".color-{name}"
-      />
-       has been deprecated, and will be removed.
-    </p>
-  </Alert>
   <p>
     To use a color simply prepend 
     <Property

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocContainer, ExperimentalComponentAlert } from "#";
+import { ComponentPreview, DocContainer } from "#";
 import { validation } from "$/px-script/main/";
 
 const DefaultSlab = () => (
@@ -151,7 +151,6 @@ class Slab extends Component {
     render () {
         return (
             <DocContainer docToc>
-                <ExperimentalComponentAlert />
                 <p className="lead">
                     Slabs are container components, therefore it works with whatever you want to put in it.
                 </p>

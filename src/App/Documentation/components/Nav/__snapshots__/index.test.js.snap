@@ -346,7 +346,6 @@ exports[`Component: Nav renders 1`] = `
 <DocContainer
   docToc={true}
 >
-  <ExperimentalComponentAlert />
   <p
     className="lead"
   >
@@ -371,7 +370,6 @@ exports[`Component: Nav runs init on rerender 1`] = `
 <DocContainer
   docToc={true}
 >
-  <ExperimentalComponentAlert />
   <p
     className="lead"
   >

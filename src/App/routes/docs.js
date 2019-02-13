@@ -85,7 +85,7 @@ module.exports = [
         redirect: "/docs/components/action-list",
         routes: [
             {
-                title: "Action List (experimental)",
+                title: "Action List",
                 path: "/docs/components/action-list",
                 componentPath: "components/ActionList"
             },
@@ -110,7 +110,7 @@ module.exports = [
                 componentPath: "components/Buttons"
             },
             {
-                title: "Card (experimental)",
+                title: "Card",
                 path: "/docs/components/card",
                 componentPath: "components/Card"
             },
@@ -145,7 +145,7 @@ module.exports = [
                 componentPath: "components/MediaObject"
             },
             {
-                title: "Nav (experimental)",
+                title: "Nav",
                 path: "/docs/components/nav",
                 componentPath: "components/Nav"
             },
@@ -165,7 +165,7 @@ module.exports = [
                 componentPath: "components/Sheet"
             },
             {
-                title: "Slab (experimental)",
+                title: "Slab",
                 path: "/docs/components/slab",
                 componentPath: "components/Slab"
             },
@@ -180,12 +180,12 @@ module.exports = [
                 componentPath: "components/Steps"
             },
             {
-                title: "Tabs (experimental)",
+                title: "Tabs",
                 path: "/docs/components/tabs",
                 componentPath: "components/Tabs"
             },
             {
-                title: "Toast (experimental)",
+                title: "Toast",
                 path: "/docs/components/toast",
                 componentPath: "components/Toast"
             },
@@ -216,7 +216,7 @@ module.exports = [
                 componentPath: "dashboard/Introduction"
             },
             {
-                title: "Charts (Experimental)",
+                title: "Charts",
                 path: "/docs/dashboard/charts",
                 componentPath: "dashboard/Charts"
             }
