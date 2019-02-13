@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocContainer, ExperimentalComponentAlert } from "#";
+import { ComponentPreview, DocContainer } from "#";
 import Chart from "@/Chart";
 
 const LineChart = () => (
@@ -494,7 +494,6 @@ class Charts extends Component {
     render () {
         return (
             <DocContainer docToc>
-                <ExperimentalComponentAlert />
                 <p className="lead">We are using <a href="https://www.chartjs.org/" target="_blank" rel="noopener noreferrer">chart.js</a> to generate the charts. Our script is mainly just a wrapper around that library to add the correct styling etc.</p>
                 <p>Most options and settings available in the chart.js documentation will be available.</p>
                 <p>For now, the following chart types are available:</p>

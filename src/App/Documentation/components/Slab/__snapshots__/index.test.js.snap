@@ -367,7 +367,6 @@ exports[`Components: Slab renders 1`] = `
 <DocContainer
   docToc={true}
 >
-  <ExperimentalComponentAlert />
   <p
     className="lead"
   >

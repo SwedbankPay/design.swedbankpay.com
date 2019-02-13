@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, Property, DocContainer, ExperimentalComponentAlert } from "#";
+import { ComponentPreview, Property, DocContainer } from "#";
 import CardComponent from "@/Card";
 import MediaObject from "@/MediaObject";
 
@@ -104,7 +104,6 @@ class Card extends Component {
     render () {
         return (
             <DocContainer docToc>
-                <ExperimentalComponentAlert />
                 <p className="lead">
                     Cards are meant to display smaller items and is not intended to span the entire width of a page.
                     See <Link to="/docs/components/panel">panel</Link> if the card component is too narrow.

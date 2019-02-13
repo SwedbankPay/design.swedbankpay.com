@@ -104,7 +104,6 @@ exports[`Components: Tabs renders 1`] = `
 <DocContainer
   docToc={true}
 >
-  <ExperimentalComponentAlert />
   <p
     className="lead"
   >

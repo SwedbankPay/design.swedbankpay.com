@@ -36,13 +36,6 @@ each(@color-list, .(@color, @name) {
     .color-variant(~"text-@{name}", @color);
 });
 
-/* Remove this, `.color-{name}` is deprecated */
-each(@color-list, .(@color, @name) {
-    .color-variant(~"color-@{name}", @color);
-});
-
-/* end remove */
-
 .text-muted { color: @text-muted !important; }
 
 .text-black-50 { color: fade(@black, 50%) !important; }

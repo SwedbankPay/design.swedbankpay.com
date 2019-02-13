@@ -517,7 +517,6 @@ exports[`Components: Toast PremadeToasts renders 1`] = `
 
 exports[`Components: Toast renders 1`] = `
 <DocContainer>
-  <ExperimentalComponentAlert />
   <p
     className="lead"
   >

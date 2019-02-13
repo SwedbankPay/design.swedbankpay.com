@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer, ExperimentalComponentAlert, Property } from "#";
+import { ComponentPreview, DocContainer, Property } from "#";
 import { tabs } from "$/px-script/main";
 import TabsComponent from "@/Tabs";
 
@@ -36,7 +36,6 @@ class Tabs extends Component {
     render () {
         return (
             <DocContainer docToc>
-                <ExperimentalComponentAlert />
                 <p className="lead">
                     Use tabs to show which page or section that is active out of several options.
                 </p>

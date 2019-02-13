@@ -2,15 +2,10 @@ import React from "react";
 import PrismCode from "react-prism";
 
 import { ComponentPreview, DocContainer, Property } from "#";
-import Alert from "@/Alert";
 
 const TextColors = () => (
     <>
         <h2 id="text-colors">Text colors</h2>
-        <Alert type="danger">
-            <h5>Deprecated classname</h5>
-            <p>The class <Property value=".color-{name}" /> has been deprecated, and will be removed.</p>
-        </Alert>
         <p>To use a color simply prepend <Property value=".text-{name}" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <p className="text-brand">.text-brand</p>

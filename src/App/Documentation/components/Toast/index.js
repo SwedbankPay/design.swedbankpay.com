@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocContainer, ExperimentalComponentAlert, Attribute } from "#";
+import { ComponentPreview, DocContainer, Attribute } from "#";
 import { toast } from "$/px-script/main";
 import Alert from "@/Alert";
 
@@ -166,7 +166,6 @@ class Toast extends Component {
     render () {
         return (
             <DocContainer>
-                <ExperimentalComponentAlert />
                 <p className="lead">
                     Toasts can be used as a way to give feedback to a user. Use it to display short messages that something has happened that will not be immediatley apparent on the website.
                     This can be everything from a server query to saving some user settings.
