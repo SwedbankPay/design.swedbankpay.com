@@ -1,11 +1,11 @@
 # Changelog
 
-## [2.0.1] - 2019-02-13
+## [2.X.X] - 2019-XX-XX
+
+### Added
 
 ### Changed
 
-- Removed straggling experimental warnings.
+### Fixed
 
 ### Removed
-
-- Removed deprecated text color utility classname `.color-{color}`, use `.text-{color}`.
