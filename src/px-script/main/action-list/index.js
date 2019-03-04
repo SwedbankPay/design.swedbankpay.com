@@ -44,9 +44,14 @@ const actionList = (() => {
 
             document.addEventListener("click", e => {
                 actionLists.forEach(l => {
-                    if (!l.containsPoint(e.clientX, e.clientY) && l.isOpen) {
+                    console.log(e.target.closest(".action-list"));
+
+                    if (e.target.closest(".action-list") !== l && l.isOpen) {
                         l.close();
                     }
+                    // if (!l.containsPoint(e.clientX, e.clientY) && l.isOpen) {
+                    //     l.close();
+                    // }
                 });
             });
         }
