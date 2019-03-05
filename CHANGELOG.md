@@ -8,4 +8,6 @@
 
 ### Fixed
 
+- Fixed issue with action-list icon showing through action-list menu.
+
 ### Removed
