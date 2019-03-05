@@ -17,15 +17,6 @@ const Overview = () => (
                     <a href="#" onClick={e => e.preventDefault()}><Icon icon="person_add"/>Add user</a>{"\n"}
                 </div>
             </div>
-            <div className="action-list">{"\n"}
-                <Icon icon="more_vert" />{"\n"}
-                <div className="action-menu">{"\n"}
-                    <a href="#" onClick={e => e.preventDefault()}><Icon icon="bookmark"/>Add bookmark</a>{"\n"}
-                    <a href="#" onClick={e => e.preventDefault()}><Icon icon="business_center"/>Add client</a>{"\n"}
-                    <a href="#" onClick={e => e.preventDefault()}><Icon icon="add_circle"/>Add document</a>{"\n"}
-                    <a href="#" onClick={e => e.preventDefault()}><Icon icon="person_add"/>Add user</a>{"\n"}
-                </div>
-            </div>
         </ComponentPreview>
     </>
 );
