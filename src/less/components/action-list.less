@@ -1,10 +1,11 @@
 .action-list {
     position: relative;
     width: 1rem;
+    display: flex;
+    justify-content: center;
 
     > .material-icons {
         position: relative;
-        z-index: @zindex-action-list-anchor;
         color: @gray-5;
         line-height: 1.1;
         user-select: none;
@@ -46,8 +47,14 @@
                 color: @gray-2;
             }
         }
+    }
 
-        &.active {
+    &.active {
+        .material-icons {
+            z-index: @zindex-action-list-anchor;
+        }
+
+        .action-menu {
             border: 2px solid @gray-10;
             background-color: @white;
             height: fit-content;
