@@ -576,6 +576,67 @@ exports[`Components: ActionList Overview onClick prevents default 1`] = `
 
       </div>
     </div>
+    <div
+      className="action-list"
+    >
+      
+
+      <Icon
+        icon="more_vert"
+      />
+      
+
+      <div
+        className="action-menu"
+      >
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="bookmark"
+          />
+          Add bookmark
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="business_center"
+          />
+          Add client
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="add_circle"
+          />
+          Add document
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="person_add"
+          />
+          Add user
+        </a>
+        
+
+      </div>
+    </div>
   </ComponentPreview>
 </Fragment>
 `;
@@ -595,6 +656,67 @@ exports[`Components: ActionList Overview renders 1`] = `
     language="html"
     showCasePanel={true}
   >
+    <div
+      className="action-list"
+    >
+      
+
+      <Icon
+        icon="more_vert"
+      />
+      
+
+      <div
+        className="action-menu"
+      >
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="bookmark"
+          />
+          Add bookmark
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="business_center"
+          />
+          Add client
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="add_circle"
+          />
+          Add document
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="person_add"
+          />
+          Add user
+        </a>
+        
+
+      </div>
+    </div>
     <div
       className="action-list"
     >
