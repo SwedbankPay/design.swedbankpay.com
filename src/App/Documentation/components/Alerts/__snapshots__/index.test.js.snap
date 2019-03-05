@@ -244,7 +244,7 @@ exports[`Documentation: Alerts Extended Usage renders 1`] = `
       type="success"
     >
       <h3
-        className="color-success"
+        className="text-success"
       >
         Success!
       </h3>

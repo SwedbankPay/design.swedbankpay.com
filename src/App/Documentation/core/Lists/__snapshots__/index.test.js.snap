@@ -304,7 +304,7 @@ exports[`Documentation: Lists SettingsList renders 1`] = `
         
 
         <i
-          className="material-icons color-success"
+          className="material-icons text-success"
         >
           check
         </i>
@@ -316,7 +316,7 @@ exports[`Documentation: Lists SettingsList renders 1`] = `
         
 
         <i
-          className="material-icons color-warning"
+          className="material-icons text-warning"
         >
           remove
         </i>
@@ -328,7 +328,7 @@ exports[`Documentation: Lists SettingsList renders 1`] = `
         
 
         <i
-          className="material-icons color-danger"
+          className="material-icons text-danger"
         >
           clear
         </i>

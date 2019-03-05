@@ -65,7 +65,7 @@ const ExtendedUsage = () => (
         <p>Just make sure to wrap the content in a container with the class <Property value=".alert-body" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <AlertComponent type="success" close icon="check_circle">
-                <h3 className="color-success">Success!</h3>
+                <h3 className="text-success">Success!</h3>
                 <p>PDF was successfully uploaded. <br /> Some additional information.</p>
                 <hr/>
                 <p>By the way, great job!</p>
