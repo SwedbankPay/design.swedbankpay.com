@@ -50,7 +50,7 @@
     &:hover,
     &:focus,
     &.focus {
-        color: @btn-secondary-color;
+        color: @btn-guiding-color;
         text-decoration: none;
     }
 
@@ -85,15 +85,15 @@
     // --------------------------------------------------
 
     &.btn-primary {
-        .button-variant(@btn-primary-color, @btn-primary-bg);
+        .button-variant(@btn-guiding-color, @btn-guiding-bg);
     }
 
     &.btn-secondary {
-        .button-variant(@btn-secondary-color, @btn-secondary-bg);
+        .button-variant(@btn-executive-color, @btn-executive-bg);
     }
 
     &.btn-danger {
-        .button-variant(@btn-danger-color, @btn-danger-bg);
+        .button-variant(@btn-destructive-color, @btn-destructive-bg);
     }
 
     // Link buttons
@@ -143,15 +143,15 @@
     // --------------------------------------------------
 
     &.btn-outline-primary {
-        .button-outline-variant(@btn-primary-outline-color, @btn-primary-bg, @btn-primary-color);
+        .button-outline-variant(@btn-executive-bg, @btn-executive-bg, @btn-executive-color);
     }
 
     &.btn-outline-secondary {
-        .button-outline-variant(@btn-secondary-outline-color, @btn-secondary-bg, @btn-secondary-color);
+        .button-outline-variant(@btn-guiding-bg, @btn-guiding-bg, @btn-guiding-color);
     }
 
     &.btn-outline-danger {
-        .button-outline-variant(@btn-danger-outline-color, @btn-danger-bg, @btn-danger-color);
+        .button-outline-variant(@btn-destructive-bg, @btn-destructive-bg, @btn-destructive-color);
     }
 
     // Button Sizes
@@ -202,120 +202,120 @@
         display: none;
     }
 
-    &.loading {
-        &,
-        &:hover,
-        &:active,
-        &.active,
-        &[active],
-        &:focus {
-            color: transparent;
-        }
+    // &.loading {
+    //     &,
+    //     &:hover,
+    //     &:active,
+    //     &.active,
+    //     &[active],
+    //     &:focus {
+    //         color: transparent;
+    //     }
 
-        .btn-loader-label {
-            visibility: hidden;
-        }
+    //     .btn-loader-label {
+    //         visibility: hidden;
+    //     }
 
-        .loader {
-            .btn-loader-variant(0.875rem; 0.2rem; 0.125rem; 0.125rem; 0.875rem; 0.75rem);
-            .loader-color-variant(@white);
+    //     .loader {
+    //         .btn-loader-variant(0.875rem; 0.2rem; 0.125rem; 0.125rem; 0.875rem; 0.75rem);
+    //         .loader-color-variant(@white);
 
-            .loader-icon {
-                li:first-child {
-                    animation: loadbarsbtn 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) infinite 0s normal;
-                }
+    //         .loader-icon {
+    //             li:first-child {
+    //                 animation: loadbarsbtn 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) infinite 0s normal;
+    //             }
 
-                li:nth-child(2) {
-                    animation: loadbarsbtn 0.6s ease-in-out infinite -0.2s normal;
-                }
+    //             li:nth-child(2) {
+    //                 animation: loadbarsbtn 0.6s ease-in-out infinite -0.2s normal;
+    //             }
 
-                li:nth-child(3) {
-                    animation: loadbarsbtn 0.6s ease-in-out infinite -0.4s normal;
-                }
-            }
-        }
+    //             li:nth-child(3) {
+    //                 animation: loadbarsbtn 0.6s ease-in-out infinite -0.4s normal;
+    //             }
+    //         }
+    //     }
 
-        &.btn-lg {
-            .loader {
-                .btn-loader-variant(1.125rem; 0.4rem; 0.25rem; 0.25rem; 1.125rem; 1rem);
+    //     &.btn-lg {
+    //         .loader {
+    //             .btn-loader-variant(1.125rem; 0.4rem; 0.25rem; 0.25rem; 1.125rem; 1rem);
 
-                .loader-icon {
-                    li:first-child {
-                        animation: loadbarsbtnlg 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) infinite 0s normal;
-                    }
+    //             .loader-icon {
+    //                 li:first-child {
+    //                     animation: loadbarsbtnlg 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) infinite 0s normal;
+    //                 }
 
-                    li:nth-child(2) {
-                        animation: loadbarsbtnlg 0.6s ease-in-out infinite -0.2s normal;
-                    }
+    //                 li:nth-child(2) {
+    //                     animation: loadbarsbtnlg 0.6s ease-in-out infinite -0.2s normal;
+    //                 }
 
-                    li:nth-child(3) {
-                        animation: loadbarsbtnlg 0.6s ease-in-out infinite -0.4s normal;
-                    }
-                }
-            }
-        }
+    //                 li:nth-child(3) {
+    //                     animation: loadbarsbtnlg 0.6s ease-in-out infinite -0.4s normal;
+    //                 }
+    //             }
+    //         }
+    //     }
 
-        &.btn-sm,
-        &.btn-xs {
-            .loader {
-                .btn-loader-variant(0.875rem; 0.2rem; 0.125rem; 0.125rem; 0.875rem; 0.5rem);
+    //     &.btn-sm,
+    //     &.btn-xs {
+    //         .loader {
+    //             .btn-loader-variant(0.875rem; 0.2rem; 0.125rem; 0.125rem; 0.875rem; 0.5rem);
 
-                .loader-icon {
-                    li:first-child {
-                        animation: loadbarsbtnsm 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) infinite 0s normal;
-                    }
+    //             .loader-icon {
+    //                 li:first-child {
+    //                     animation: loadbarsbtnsm 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) infinite 0s normal;
+    //                 }
 
-                    li:nth-child(2) {
-                        animation: loadbarsbtnsm 0.6s ease-in-out infinite -0.2s normal;
-                    }
+    //                 li:nth-child(2) {
+    //                     animation: loadbarsbtnsm 0.6s ease-in-out infinite -0.2s normal;
+    //                 }
 
-                    li:nth-child(3) {
-                        animation: loadbarsbtnsm 0.6s ease-in-out infinite -0.4s normal;
-                    }
-                }
-            }
-        }
+    //                 li:nth-child(3) {
+    //                     animation: loadbarsbtnsm 0.6s ease-in-out infinite -0.4s normal;
+    //                 }
+    //             }
+    //         }
+    //     }
 
-        &.btn-secondary {
-            .loader {
-                .loader-color-variant(@btn-secondary-color);
-            }
-        }
+    //     &.btn-secondary {
+    //         .loader {
+    //             .loader-color-variant(@btn-secondary-color);
+    //         }
+    //     }
 
-        &.btn-link {
-            .loader {
-                .loader-color-variant(@blue);
-            }
-        }
+    //     &.btn-link {
+    //         .loader {
+    //             .loader-color-variant(@blue);
+    //         }
+    //     }
 
-        &.btn-outline-primary {
-            .loader {
-                .loader-color-variant(@btn-primary-outline-color);
-            }
+    //     &.btn-outline-primary {
+    //         .loader {
+    //             .loader-color-variant(@btn-primary-outline-color);
+    //         }
 
-            &:hover {
-                .loader-color-variant(@btn-primary-color);
-            }
-        }
+    //         &:hover {
+    //             .loader-color-variant(@btn-primary-color);
+    //         }
+    //     }
 
-        &.btn-outline-secondary {
-            .loader {
-                .loader-color-variant(@btn-secondary-outline-color);
-            }
+    //     &.btn-outline-secondary {
+    //         .loader {
+    //             .loader-color-variant(@btn-secondary-outline-color);
+    //         }
 
-            &:hover {
-                .loader-color-variant(@btn-secondary-color);
-            }
-        }
+    //         &:hover {
+    //             .loader-color-variant(@btn-secondary-color);
+    //         }
+    //     }
 
-        &.btn-outline-danger {
-            .loader {
-                .loader-color-variant(@btn-danger-outline-color);
-            }
+    //     &.btn-outline-danger {
+    //         .loader {
+    //             .loader-color-variant(@btn-danger-outline-color);
+    //         }
 
-            &:hover {
-                .loader-color-variant(@btn-danger-color);
-            }
-        }
-    }
+    //         &:hover {
+    //             .loader-color-variant(@btn-danger-color);
+    //         }
+    //     }
+    // }
 }

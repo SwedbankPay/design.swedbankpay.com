@@ -8,10 +8,10 @@
     align-items: flex-start;
 
     &.alert-default {
-        .alert-variant(@gray-7);
+        .alert-variant(@state-default);
 
         .alert-icon {
-            color: @text-color;
+            color: @gray-medium-light;
         }
     }
 
@@ -28,7 +28,7 @@
     }
 
     &.alert-danger {
-        .alert-variant(@state-error);
+        .alert-variant(@state-danger);
     }
 
     .alert-heading {

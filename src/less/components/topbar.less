@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid @gray-8;
+    border-bottom: 1px solid @gray-bright-alt;
     box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.85);
 
     &.topbar-fixed {
@@ -44,7 +44,7 @@
 
         &:hover {
             cursor: pointer;
-            background-color: @gray-9;
+            background-color: @gray-bright-alt;
         }
 
         .material-icons {
@@ -53,16 +53,16 @@
         }
 
         &:first-child {
-            border-right: 1px solid @gray-8;
+            border-right: 1px solid @gray-bright-alt;
 
             &:hover,
             &:focus {
-                background-color: @gray-9;
+                background-color: @gray-bright-alt;
             }
         }
 
         &:last-child {
-            border-left: 1px solid @gray-8;
+            border-left: 1px solid @gray-bright-alt;
         }
     }
 }
@@ -72,7 +72,7 @@
     position: fixed;
     top: @topbar-height;
     bottom: 0;
-    background-color: @gray-1;
+    background-color: @gray-medium;
     overflow-x: hidden;
     overflow-y: auto;
     z-index: @zindex-topbar-nav;
@@ -87,14 +87,14 @@
     a,
     span {
         display: flex;
-        color: @gray-7;
+        color: @gray-bright-alt;
         padding: @base-padding-sm 0 @base-padding-sm @base-padding-sm;
         cursor: pointer;
         text-transform: uppercase;
         border: none;
 
         &:hover {
-            background-color: @gray-2;
+            background-color: @gray-medium-light;
             color: @white;
             text-decoration: none;
         }

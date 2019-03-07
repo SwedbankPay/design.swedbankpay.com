@@ -6,12 +6,12 @@
 
     > .material-icons {
         position: relative;
-        color: @gray-5;
+        color: @color-muted;
         line-height: 1.1;
         user-select: none;
 
         &:hover {
-            color: @gray-2;
+            color: @color-muted-hover;
             cursor: pointer;
         }
     }
@@ -28,7 +28,7 @@
             display: flex;
             padding: @action-menu-anchor-padding;
             padding-right: @base-padding-xl;
-            color: @gray-5;
+            color: @color-muted;
             visibility: hidden;
             position: relative;
             border: none;
@@ -44,8 +44,8 @@
 
             &:hover {
                 text-decoration: none;
-                background-color: @gray-10;
-                color: @gray-2;
+                background-color: @bg-gray;
+                color: @text-color;
             }
         }
     }
@@ -56,7 +56,7 @@
         }
 
         .action-menu {
-            border: 2px solid @gray-10;
+            border: 2px solid @color-muted;
             background-color: @white;
             height: fit-content;
             white-space: nowrap;

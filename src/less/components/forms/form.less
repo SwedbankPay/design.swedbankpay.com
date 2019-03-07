@@ -9,7 +9,7 @@ label {
     line-height: 1.5;
 
     .required-asterisk {
-        color: @red;
+        color: @state-danger;
         margin-left: 0.25rem;
         font-weight: normal;
         font-size: 1rem;
@@ -40,7 +40,7 @@ fieldset {
         .checkbox input[type="checkbox"] {
             + label:before {
                 background-color: @input-bg-disabled;
-                border-color: @checkbox-color;
+                border-color: @checkbox-border-color;
                 cursor: not-allowed;
             }
 
@@ -185,10 +185,10 @@ legend {
     box-shadow: none;
     transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
     .form-control-focus();
-    .placeholder();
+    .placeholder(@brown);
 
     &::placeholder {
-        color: @gray-6; /* Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526. */
+        color: @brown; /* Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526. */
         opacity: 1;
     }
 
