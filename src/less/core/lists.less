@@ -27,7 +27,6 @@
         font-weight: 300;
         font-size: @base-font-size * 0.9;
         line-height: 1.7rem;
-        color: @gray-3;
         margin-top: @base-margin;
     }
 
@@ -53,14 +52,14 @@
 .item-list {
     list-style: none;
     padding-left: 0;
-    border: @border-width solid @gray-9;
+    border: @border-width solid @gray-bright;
     border-radius: 3px;
 
     li {
         display: flex;
         padding: @base-padding;
         align-items: center;
-        border-bottom: @border-width solid @gray-9;
+        border-bottom: @border-width solid @gray-bright;
 
         > * {
             margin-left: @base-margin-sm;
@@ -79,7 +78,7 @@
     &-striped {
         li {
             &:nth-child(odd) {
-                background-color: @gray-10;
+                background-color: @neargray;
             }
         }
     }
