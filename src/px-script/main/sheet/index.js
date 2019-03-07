@@ -16,24 +16,24 @@ class Sheet {
 
         if (this.closeIcon) {
             this.closeIcon.addEventListener("click", e => {
+                handleScrollbar();
                 e.preventDefault();
                 this.close();
             });
         }
 
         if (this.isOpen) {
+            handleScrollbar();
             this._el.classList.add("d-block");
             document.body.classList.add("sheet-open");
         }
 
-        // Close sheet on esc
-        document.addEventListener("keydown", e => {
-            e.keyCode === 27 ? this.close() : null;
-        });
-
         // Close the sheet when clicking outside
         this._el.addEventListener("click", e => {
-            e.target.classList.contains("sheet-open") ? this.close() : null;
+            if (e.target.classList.contains("sheet-open")) {
+                handleScrollbar();
+                this.close();
+            }
         });
     }
 
@@ -52,7 +52,6 @@ class Sheet {
     }
 
     close () {
-        handleScrollbar();
         this.isOpen = false;
         this._el.classList.remove("sheet-open");
         document.body.classList.remove("sheet-open");
@@ -108,6 +107,14 @@ const sheet = (() => {
                     console.warn(`CLOSE: No sheet with with id ${id} was found, make sure the attribute data-sheet-close contains the correct id.`);
                 }
             });
+
+            // Close sheet on esc
+            document.addEventListener("keydown", e => {
+                if (e.keyCode === 27 && document.body.classList.contains("sheet-open")) {
+                    handleScrollbar();
+                    window.px._sheets.forEach(sheet => sheet.isOpen ? sheet.close() : null);
+                }
+            });
         }
     };
 
@@ -123,6 +130,8 @@ const sheet = (() => {
 
             return false;
         }
+
+        handleScrollbar();
 
         return sheet;
     };
