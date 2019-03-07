@@ -1,11 +1,8 @@
 # Changelog
 
-## [2.0.1] - 2019-02-13
+## [2.0.2] - 2019-03-07
 
-### Changed
+### Fixed
 
-- Removed straggling experimental warnings.
-
-### Removed
-
-- Removed deprecated text color utility classname `.color-{color}`, use `.text-{color}`.
+- Fixed issue with "has-vscroll" class not being removed on sheet close.
+- Fixed issue with panel table css selectors.
