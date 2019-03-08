@@ -105,13 +105,28 @@ const ItemList = () => (
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="item-list">
                 <li>
-                    4925*********004
+                    <div>
+                        <p className="mb-0">Mediamark</p>
+                        <small>Some info</small>
+                    </div>
+                    <div><span className="h5">520,-</span></div>
+                    <footer className="item-list-footer"><a href="#">My custom link</a></footer>
                 </li>
                 <li>
-                    4925*********004
+                    <div>
+                        <h4>Mediamarkt</h4>
+                        <p>Some info</p>
+                    </div>
+                    <div><span className="h4">520,-</span></div>
+                    <footer className="item-list-footer"><a href="#">My custom link</a></footer>
                 </li>
                 <li>
-                    4925*********004
+                    <div>
+                        <h4>Mediamarkt</h4>
+                        <p>Some info</p>
+                    </div>
+                    <div><span className="h4">520,-</span></div>
+                    <footer className="item-list-footer"><a href="#">My custom link</a></footer>
                 </li>
             </ul>
         </ComponentPreview>

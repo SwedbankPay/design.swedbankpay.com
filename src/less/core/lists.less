@@ -52,17 +52,18 @@
 .item-list {
     list-style: none;
     padding-left: 0;
-    border: @border-width solid @gray-bright;
-    border-radius: 3px;
+    // border: @border-width solid @gray-bright;
+    // border-radius: 3px;
 
     li {
         display: flex;
-        padding: @base-padding;
-        align-items: center;
-        border-bottom: @border-width solid @gray-bright;
+        flex-flow: wrap;
+        // padding: @base-padding;
+        // align-items: center;
+        // border-bottom: @border-width solid @gray-bright;
 
         > * {
-            margin-left: @base-margin-sm;
+            // margin-left: @base-margin-sm;
         }
 
         > :first-child {
@@ -97,5 +98,10 @@
                 background-color: @brand-primary;
             }
         }
+    }
+
+    .item-list-footer {
+        padding: 1rem 0;
+        flex: 1 100%;
     }
 }

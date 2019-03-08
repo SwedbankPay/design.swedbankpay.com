@@ -113,6 +113,18 @@ module.exports = (env, argv) => {
                     ]
                 },
                 {
+                    test: /\.(woff(2)?|ttf|eot)$/,
+                    use: [
+                        {
+                            loader: "file-loader",
+                            options: {
+                                outputPath: "fonts/",
+                                name: "[name].[ext]"
+                            }
+                        }
+                    ]
+                },
+                {
                     test: /\.svg$/i,
                     include: [
                         path.resolve(__dirname, "src/icons/flags/1x1")
