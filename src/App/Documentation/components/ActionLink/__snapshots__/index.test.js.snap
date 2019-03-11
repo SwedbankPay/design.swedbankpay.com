@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components: ActionLink ActionLinkBadge renders 1`] = `
+<Fragment>
+  <h2
+    id="action-link-badge"
+  >
+    Action Link with Badge
+  </h2>
+  <p>
+    Action links.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <a
+      className="action-link"
+      href="#"
+    >
+      
+
+      <span
+        className="badge badge-brand"
+      >
+        40
+      </span>
+       
+      
+
+      My link
+      
+
+    </a>
+    
+
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Components: ActionLink Overview renders 1`] = `
+<Fragment>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <p>
+    Action links.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <a
+      className="action-link"
+      href="#"
+    >
+      
+
+      My link
+      
+
+    </a>
+    
+
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Components: ActionLink renders 1`] = `
+<DocContainer
+  docToc={true}
+>
+  <p
+    className="lead"
+  >
+    Action link
+  </p>
+  <Overview />
+  <ActionLinkBadge />
+</DocContainer>
+`;
