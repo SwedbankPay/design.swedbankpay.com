@@ -110,7 +110,7 @@ const ItemList = () => (
                         <small>Due date 2 days</small>
                     </div>
                     <div>
-                        <span className="h5">2120 kr</span>
+                        <span className="h5 text-hightlight">2120 kr</span>
                     </div>
                 </li>
                 <li>
@@ -119,7 +119,7 @@ const ItemList = () => (
                         <small>Due date 1 day</small>
                     </div>
                     <div>
-                        <span className="h5">1100 kr</span>
+                        <span className="h5 text-hightlight">1100 kr</span>
                     </div>
                 </li>
                 <li>
@@ -128,7 +128,7 @@ const ItemList = () => (
                         <small>Due date 5 days</small>
                     </div>
                     <div>
-                        <span className="h5">200 kr</span>
+                        <span className="h5 text-hightlight">200 kr</span>
                     </div>
                 </li>
             </ul>
@@ -147,7 +147,7 @@ const ItemListLarge = () => (
                         <small>Due date 2 days</small>
                     </div>
                     <div>
-                        <span className="h5">2120 kr</span>
+                        <span className="h5 text-hightlight">2120 kr</span>
                     </div>
                     <footer><a href="#">Se faktura</a></footer>
                 </li>
@@ -157,7 +157,7 @@ const ItemListLarge = () => (
                         <small>Due date 1 day</small>
                     </div>
                     <div>
-                        <span className="h5">1100 kr</span>
+                        <span className="h5 text-hightlight">1100 kr</span>
                     </div>
                     <footer className="item-list-footer">
                         <a href="#">Se faktura</a>
@@ -169,7 +169,7 @@ const ItemListLarge = () => (
                         <small>Due date 5 days</small>
                     </div>
                     <div>
-                        <span className="h5">200 kr</span>
+                        <span className="h5 text-hightlight">200 kr</span>
                     </div>
                     <footer className="item-list-footer">
                         <a href="#">Se faktura</a>
@@ -191,7 +191,7 @@ const ItemListBordered = () => (
                         <small>Due date 2 days</small>
                     </div>
                     <div>
-                        <span className="h5">2120 kr</span>
+                        <span className="h5 text-hightlight">2120 kr</span>
                     </div>
                     <footer><a href="#">Se faktura</a></footer>
                 </li>
@@ -201,7 +201,7 @@ const ItemListBordered = () => (
                         <small>Due date 1 day</small>
                     </div>
                     <div>
-                        <span className="h5">1100 kr</span>
+                        <span className="h5 text-hightlight">1100 kr</span>
                     </div>
                     <footer className="item-list-footer">
                         <a href="#">Se faktura</a>
@@ -213,7 +213,7 @@ const ItemListBordered = () => (
                         <small>Due date 5 days</small>
                     </div>
                     <div>
-                        <span className="h5">200 kr</span>
+                        <span className="h5 text-hightlight">200 kr</span>
                     </div>
                     <footer className="item-list-footer">
                         <a href="#">Se faktura</a>
