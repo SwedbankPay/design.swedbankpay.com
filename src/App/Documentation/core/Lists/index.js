@@ -106,27 +106,47 @@ const ItemList = () => (
             <ul className="item-list">
                 <li>
                     <div>
-                        <p className="mb-0">Mediamark</p>
+                        <h5>NetonNet</h5>
                         <small>Some info</small>
                     </div>
-                    <div><span className="h5">520,-</span></div>
-                    <footer className="item-list-footer"><a href="#">My custom link</a></footer>
+                    <div><span className="h5">2120 kr</span></div>
+                    {/* <footer className="item-list-footer"><a href="#">My custom link</a></footer> */}
                 </li>
                 <li>
                     <div>
-                        <h4>Mediamarkt</h4>
-                        <p>Some info</p>
+                        <h5>NetonNet</h5>
+                        <small>Some info</small>
                     </div>
-                    <div><span className="h4">520,-</span></div>
-                    <footer className="item-list-footer"><a href="#">My custom link</a></footer>
+                    <div><span className="h5">2120 kr</span></div>
                 </li>
                 <li>
                     <div>
-                        <h4>Mediamarkt</h4>
-                        <p>Some info</p>
+                        <h5>NetonNet</h5>
+                        <small>Some info</small>
                     </div>
-                    <div><span className="h4">520,-</span></div>
-                    <footer className="item-list-footer"><a href="#">My custom link</a></footer>
+                    <div><span className="h5">2120 kr</span></div>
+                </li>
+            </ul>
+        </ComponentPreview>
+    </>
+);
+
+const ItemListBordered = () => (
+    <>
+        <h2 id="item-list-bordered">Bordered item list </h2>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <ul className="item-list item-list-bordered">
+                <li>{"\n"}
+                    <span>4925*********004</span>{"\n"}
+                    <span className="status status-success">Active</span>{"\n"}
+                </li>
+                <li>{"\n"}
+                    <span>4925*********004</span>{"\n"}
+                    <span className="status status-warning">Expires soon</span>{"\n"}
+                </li>
+                <li>{"\n"}
+                    <span>4925*********004</span>{"\n"}
+                    <span className="status status-danger">Expired</span>{"\n"}
                 </li>
             </ul>
         </ComponentPreview>
@@ -209,13 +229,14 @@ class Lists extends Component {
                 <p className="lead">
                     Use lists to give a structured view of information.
                 </p>
-                <BasicList />
+                {/* <BasicList />
                 <InlineList />
                 <DescriptionList />
-                <SettingsList />
+                <SettingsList /> */}
                 <ItemList />
-                <HoverItemList />
-                <StripedItemList />
+                <ItemListBordered />
+                {/* <HoverItemList />
+                <StripedItemList /> */}
             </DocContainer>
         );
     }
@@ -224,4 +245,4 @@ class Lists extends Component {
 export default Lists;
 
 /* For testing */
-export { BasicList, InlineList, DescriptionList, SettingsList, ItemList, HoverItemList, StripedItemList };
+export { BasicList, InlineList, DescriptionList, SettingsList, ItemList, ItemListBordered, HoverItemList, StripedItemList };

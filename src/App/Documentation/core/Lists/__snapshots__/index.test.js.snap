@@ -266,11 +266,9 @@ exports[`Documentation: Lists ItemList renders 1`] = `
     >
       <li>
         <div>
-          <p
-            className="mb-0"
-          >
-            Mediamark
-          </p>
+          <h5>
+            NetonNet
+          </h5>
           <small>
             Some info
           </small>
@@ -279,70 +277,43 @@ exports[`Documentation: Lists ItemList renders 1`] = `
           <span
             className="h5"
           >
-            520,-
+            2120 kr
           </span>
         </div>
-        <footer
-          className="item-list-footer"
-        >
-          <a
-            href="#"
-          >
-            My custom link
-          </a>
-        </footer>
       </li>
       <li>
         <div>
-          <h4>
-            Mediamarkt
-          </h4>
-          <p>
+          <h5>
+            NetonNet
+          </h5>
+          <small>
             Some info
-          </p>
+          </small>
         </div>
         <div>
           <span
-            className="h4"
+            className="h5"
           >
-            520,-
+            2120 kr
           </span>
         </div>
-        <footer
-          className="item-list-footer"
-        >
-          <a
-            href="#"
-          >
-            My custom link
-          </a>
-        </footer>
       </li>
       <li>
         <div>
-          <h4>
-            Mediamarkt
-          </h4>
-          <p>
+          <h5>
+            NetonNet
+          </h5>
+          <small>
             Some info
-          </p>
+          </small>
         </div>
         <div>
           <span
-            className="h4"
+            className="h5"
           >
-            520,-
+            2120 kr
           </span>
         </div>
-        <footer
-          className="item-list-footer"
-        >
-          <a
-            href="#"
-          >
-            My custom link
-          </a>
-        </footer>
       </li>
     </ul>
   </ComponentPreview>
@@ -749,12 +720,7 @@ exports[`Documentation: Lists renders 1`] = `
   >
     Use lists to give a structured view of information.
   </p>
-  <BasicList />
-  <InlineList />
-  <DescriptionList />
-  <SettingsList />
   <ItemList />
-  <HoverItemList />
-  <StripedItemList />
+  <ItemListBordered />
 </DocContainer>
 `;

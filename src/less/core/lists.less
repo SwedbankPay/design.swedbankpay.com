@@ -52,28 +52,31 @@
 .item-list {
     list-style: none;
     padding-left: 0;
-    // border: @border-width solid @gray-bright;
-    // border-radius: 3px;
+    line-height: 1;
 
     li {
         display: flex;
         flex-flow: wrap;
-        // padding: @base-padding;
-        // align-items: center;
-        // border-bottom: @border-width solid @gray-bright;
+        margin-bottom: 1.5rem;
 
-        > * {
-            // margin-left: @base-margin-sm;
+        /* stylelint-disable selector-list-comma-newline-after */
+        h1, h2, h3, h4, h5, h6,
+        .h1, .h2, .h3, .h4, .h5, .h6 {
+            margin: 0;
         }
+        /* stylelint-enable selector-list-comma-newline-after */
 
         > :first-child {
             flex: 1 1 auto;
-            margin-left: 0;
         }
 
         &:last-child {
-            border-bottom: 0;
+            margin-bottom: 0;
         }
+    }
+
+    &:last-child {
+        border-bottom: 0;
     }
 
     &-striped {
