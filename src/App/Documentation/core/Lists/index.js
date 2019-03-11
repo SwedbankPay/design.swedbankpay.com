@@ -136,17 +136,39 @@ const ItemListBordered = () => (
         <h2 id="item-list-bordered">Bordered item list </h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="item-list item-list-bordered">
-                <li>{"\n"}
-                    <span>4925*********004</span>{"\n"}
-                    <span className="status status-success">Active</span>{"\n"}
+                <li>
+                    <div>
+                        <h5>Foo</h5>
+                        <small>Due date 2 days</small>
+                    </div>
+                    <div>
+                        <span className="h5">2120 kr</span>
+                    </div>
+                    <footer><a href="#">testing</a></footer>
                 </li>
-                <li>{"\n"}
-                    <span>4925*********004</span>{"\n"}
-                    <span className="status status-warning">Expires soon</span>{"\n"}
+                <li>
+                    <div>
+                        <h5>Bar</h5>
+                        <small>Due date 1 day</small>
+                    </div>
+                    <div>
+                        <span className="h5">1100 kr</span>
+                    </div>
+                    <footer className="item-list-footer">
+                        <a href="#">testing</a>
+                    </footer>
                 </li>
-                <li>{"\n"}
-                    <span>4925*********004</span>{"\n"}
-                    <span className="status status-danger">Expired</span>{"\n"}
+                <li>
+                    <div>
+                        <h5>Baz</h5>
+                        <small>Due date 5 days</small>
+                    </div>
+                    <div>
+                        <span className="h5">200 kr</span>
+                    </div>
+                    <footer className="item-list-footer">
+                        <a href="#">testing</a>
+                    </footer>
                 </li>
             </ul>
         </ComponentPreview>
