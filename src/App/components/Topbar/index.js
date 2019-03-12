@@ -8,16 +8,16 @@ const TopbarBtn = ({ icon, text }) => {
     if (icon || text) {
         return (
             <button type="button" className="topbar-btn">{"\n\t\t"}
+                {text && icon === "exit_to_app" ?
+                    <>
+                        <span className="topbar-btn-text">{text}</span>
+                        {"\n\t"}
+                    </>
+                    : null}
                 {icon ?
                     <>
                         <i className={iconClass}>{icon}</i>
                         {"\n\t\t"}
-                    </>
-                    : null}
-                {text ?
-                    <>
-                        <span className="topbar-btn-text">{text}</span>
-                        {"\n\t"}
                     </>
                     : null}
             </button>
