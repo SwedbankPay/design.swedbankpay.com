@@ -5,32 +5,21 @@
     width: 100%;
     z-index: @zindex-topbar;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    border-top: 8px solid @brand-primary;
-
-    &.topbar-fixed {
-        position: fixed;
-        top: 0;
-        left: 0;
-
-        + * {
-            margin-top: @topbar-height;
-        }
-    }
 
     .topbar-logo {
         height: 45px;
-        margin-left: @topbar-margin;
+        // margin-left: @topbar-margin;
         margin-top: 6px;
-        margin-right: auto;
+        // margin-right: auto;
         background: url("../../img/px-logo.svg") no-repeat;
         background-size: cover;
         width: 140px;
         border: none;
     }
 
-    .topbar-btn {
+    .topbar-menu {
         margin: 0;
         border: 0;
         background: none;
@@ -40,6 +29,7 @@
         outline: 0;
         display: flex;
         align-items: center;
+        margin-left: -64px;
 
         &:hover {
             cursor: pointer;
@@ -51,56 +41,62 @@
             }
         }
     }
-}
 
-.topbar-nav {
-    width: @topbar-nav-width;
-    position: fixed;
-    top: @topbar-height;
-    bottom: 0;
-    background-color: @gray-medium;
-    overflow-x: hidden;
-    overflow-y: auto;
-    z-index: @zindex-topbar-nav;
-    padding: @base-padding-sm @base-padding;
-    transition: left @topbar-slide-transition;
-    left: -@topbar-nav-width;
+    .topbar-nav {
+        width: @topbar-nav-width;
+        position: fixed;
+        top: @topbar-height;
+        bottom: 0;
+        background-color: @gray-medium;
+        overflow-x: hidden;
+        overflow-y: auto;
+        z-index: @zindex-topbar-nav;
+        padding: @base-padding-sm @base-padding;
+        transition: left @topbar-slide-transition;
+        left: -@topbar-nav-width;
 
-    &.in {
-        left: 0;
-    }
+        &.in {
+            left: 0;
+        }
 
-    a,
-    span {
-        display: flex;
-        color: @gray-bright-alt;
-        padding: @base-padding-sm 0 @base-padding-sm @base-padding-sm;
-        cursor: pointer;
-        text-transform: uppercase;
-        border: none;
+        a,
+        span {
+            display: flex;
+            color: @gray-bright-alt;
+            padding: @base-padding-sm 0 @base-padding-sm @base-padding-sm;
+            cursor: pointer;
+            text-transform: uppercase;
+            border: none;
 
-        &:hover {
-            background-color: @gray-medium-light;
-            color: @white;
-            text-decoration: none;
+            &:hover {
+                background-color: @gray-medium-light;
+                color: @white;
+                text-decoration: none;
+            }
         }
     }
 }
 
-@media screen and (max-width: @screen-xs-max) {
+@media screen and (min-width: @screen-sm-min) {
     .topbar {
-        .topbar-btn {
-            display: none;
-        }
-    }
-
-    .topbar-px-logo {
-        position: absolute;
-        left: 50%;
-        margin-left: -55px;
-
-        &.mypayex {
-            margin-left: -78px;
-        }
+        // background-color: blue;
     }
 }
+
+// @media screen and (max-width: @screen-xs-max) {
+//     .topbar {
+//         .topbar-btn {
+//             display: flex;
+//         }
+//     }
+
+//     .topbar-px-logo {
+//         position: absolute;
+//         left: 50%;
+//         margin-left: -55px;
+
+//         &.mypayex {
+//             margin-left: -78px;
+//         }
+//     }
+// }

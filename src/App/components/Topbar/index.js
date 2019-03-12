@@ -3,23 +3,15 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 
 const TopbarBtn = ({ icon, text }) => {
-    const iconClass = classnames("material-icons", icon === "menu" ? "topbar-btn-icon" : "");
+    const iconClass = classnames("material-icons", icon === "menu" ? "topbar-menu-icon" : "");
 
     if (icon || text) {
         return (
-            <button type="button" className="topbar-btn">{"\n\t\t"}
-                {text && icon === "exit_to_app" ?
-                    <>
-                        <span className="topbar-btn-text">{text}</span>
-                        {"\n\t"}
-                    </>
-                    : null}
-                {icon ?
+            <button type="button" className="topbar-menu">{"\n\t\t"}
                     <>
                         <i className={iconClass}>{icon}</i>
                         {"\n\t\t"}
                     </>
-                    : null}
             </button>
         );
     } else {
@@ -27,7 +19,7 @@ const TopbarBtn = ({ icon, text }) => {
     }
 };
 
-const TopbarMenu = ({ menu }) => {
+const TopbarMenu = ({ menu, logout }) => {
     const { items } = menu;
 
     return (
@@ -37,6 +29,10 @@ const TopbarMenu = ({ menu }) => {
                     {"\n"}<a href="#" onClick={e => e.preventDefault()}>{item}</a>
                 </Fragment>
             ))}{"\n"}
+            {logout ?
+                <>
+                    <a href="#" onClick={e => e.preventDefault()}>Log out <i className="material-icons">exit_to_app</i></a>{"\n"}
+                </> : null}
         </nav>
     );
 };
@@ -47,14 +43,12 @@ const Topbar = ({ topbarContent, fixed, logout }) => (
             {topbarContent ?
             <>
                 <TopbarBtn icon={topbarContent.btn.icon} text={topbarContent.btn.text} target={topbarContent.id} />{"\n"}
-                <TopbarMenu menu={topbarContent} />
-            </> : null}
-            {"\n"}<a href="#" className="topbar-logo" onClick={e => e.preventDefault()}></a>{"\n"}
-            {logout ?
-                <>
-                    <TopbarBtn icon="exit_to_app" text="Log out" />{"\n"}
-                </> :
-                null}
+                {"\n"}<a href="#" className="topbar-logo" onClick={e => e.preventDefault()}></a>{"\n"}
+                <TopbarMenu menu={topbarContent} logout={!!logout} />
+            </> :
+            <>
+                {"\n"} <a href="#" className="topbar-logo" onClick={e => e.preventDefault()}></a>{"\n"}
+            </>}
         </>
     </header>
 );

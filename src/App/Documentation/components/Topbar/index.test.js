@@ -25,16 +25,4 @@ describe("Components: Topbar", () => {
             expect(wrapper).toMatchSnapshot();
         });
     });
-
-    describe("FixedTopbar", () => {
-        it("is defined", () => {
-            expect(FixedTopbar).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<FixedTopbar />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
 });

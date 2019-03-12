@@ -6,7 +6,7 @@ import { GithubLogo, SlackLogo } from "./HeaderIcons";
 import pkg from "~/package.json";
 
 const AppHeader = () => (
-    <header className="topbar topbar-fixed designguide-header">
+    <header className="topbar designguide-header">
         <a className="topbar-logo" href="/"></a>
         <nav className="header-links">
             <NavLink exact to="/" activeClassName="active">Home</NavLink>

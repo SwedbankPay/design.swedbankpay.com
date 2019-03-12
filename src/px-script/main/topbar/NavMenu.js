@@ -4,8 +4,8 @@ export default class NavMenu {
     constructor (topbarComponent, navMenu) {
         this.navMenuElement = navMenu;
         this.isOpen = false;
-        this.btnElement = topbarComponent.querySelector(".topbar-btn");
-        this.iconElement = this.btnElement.querySelector(".topbar-btn-icon");
+        this.btnElement = topbarComponent.querySelector(".topbar-menu");
+        this.iconElement = this.btnElement.querySelector(".topbar-menu-icon");
         this.userIcon = this.iconElement ? this.iconElement.innerHTML : null;
 
         this.btnElement.addEventListener("click", e => {

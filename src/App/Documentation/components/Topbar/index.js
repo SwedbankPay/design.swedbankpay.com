@@ -35,19 +35,6 @@ const Overview = () => (
     </>
 );
 
-const FixedTopbar = () => (
-    <>
-        <h2 id="fixed-topbar">Fixed topbar</h2>
-        <p>
-            Add <Property value=".topbar-fixed" /> with your <Property value=".topbar" /> to get a fixed topbar.
-            For a demonstration of the usage see the documentations top bar or implement it in your own project!
-        </p>
-        <ComponentPreview language="html" codeFigure>
-            <TopbarComponent fixed />
-        </ComponentPreview>
-    </>
-);
-
 class Topbar extends Component {
     componentDidMount () {
         topbar.init(1);
@@ -58,7 +45,6 @@ class Topbar extends Component {
             <DocContainer docToc>
                 <p className="lead">The topbar is used to give users an easily available navigational bar at the top of your web application.</p>
                 <Overview />
-                <FixedTopbar />
             </DocContainer>
         );
     }
@@ -67,4 +53,4 @@ class Topbar extends Component {
 export default Topbar;
 
 /* For testing */
-export { Overview, FixedTopbar };
+export { Overview };
