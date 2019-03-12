@@ -58,13 +58,6 @@ exports[`Component: Topbar -  menu links prevents default when clicked 1`] = `
         </i>
         
 		
-        <span
-          className="topbar-btn-text"
-        >
-          Menu
-        </span>
-        
-	
       </button>
     </TopbarBtn>
     
