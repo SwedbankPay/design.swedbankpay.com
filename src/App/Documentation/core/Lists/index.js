@@ -300,15 +300,15 @@ class Lists extends Component {
                 <p className="lead">
                     Use lists to give a structured view of information.
                 </p>
-                {/* <BasicList />
+                <BasicList />
                 <InlineList />
                 <DescriptionList />
-                <SettingsList /> */}
+                <SettingsList />
                 <ItemList />
                 <ItemListLarge />
                 <ItemListBordered />
-                {/* <HoverItemList />
-                <StripedItemList /> */}
+                <HoverItemList />
+                <StripedItemList />
             </DocContainer>
         );
     }

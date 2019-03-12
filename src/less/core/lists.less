@@ -58,7 +58,6 @@
         display: flex;
         flex-flow: wrap;
         padding: 1rem;
-        margin-bottom: 1rem;
         border-bottom: 1px solid @bg-gray;
 
         /* stylelint-disable selector-list-comma-newline-after */
@@ -70,6 +69,7 @@
 
         > :first-child {
             flex: 1 1 auto;
+            align-self: center;
         }
 
         &:last-child {
@@ -91,6 +91,7 @@
             border-left: 1px solid @bg-gray;
             border-right: 1px solid @bg-gray;
             padding: 1rem;
+            margin-bottom: 1rem;
         }
     }
 
@@ -105,7 +106,7 @@
         }
     }
 
-    &-striped {
+    &.item-list-striped {
         li {
             &:nth-child(odd) {
                 background-color: @neargray;
@@ -113,18 +114,21 @@
         }
     }
 
-    &-hover {
+    &.item-list-hover {
         li {
-            position: relative;
+            // position: relative;
 
-            &:hover:before {
-                content: "";
-                top: -1px;
-                left: 0;
-                bottom: -1px;
-                position: absolute;
-                width: 6px;
-                background-color: @brand-primary;
+            // &:hover:before {
+            //     content: "";
+            //     top: -1px;
+            //     left: 0;
+            //     bottom: -1px;
+            //     position: absolute;
+            //     width: 6px;
+            //     background-color: @brand-primary;
+            // }
+            &:hover {
+                background-color: @light-gray;
             }
         }
     }
