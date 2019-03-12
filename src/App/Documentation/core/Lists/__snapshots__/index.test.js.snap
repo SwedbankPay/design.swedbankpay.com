@@ -720,8 +720,14 @@ exports[`Documentation: Lists renders 1`] = `
   >
     Use lists to give a structured view of information.
   </p>
+  <BasicList />
+  <InlineList />
+  <DescriptionList />
+  <SettingsList />
   <ItemList />
   <ItemListLarge />
   <ItemListBordered />
+  <HoverItemList />
+  <StripedItemList />
 </DocContainer>
 `;

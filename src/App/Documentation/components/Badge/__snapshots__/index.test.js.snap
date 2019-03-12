@@ -50,9 +50,9 @@ exports[`Components: Badge FurtherUsage renders 1`] = `
     <h5>
       Badge 
       <small
-        className="badge badge-yellow"
+        className="badge badge-green"
       >
-        yellow
+        green
       </small>
     </h5>
     <h6>
@@ -125,9 +125,9 @@ exports[`Components: Badge Overview renders 1`] = `
     <p>
       Badge 
       <span
-        className="badge badge-yellow"
+        className="badge badge-green"
       >
-        yellow
+        green
       </span>
     </p>
     <p>
