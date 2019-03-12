@@ -11,7 +11,7 @@ const Overview = () => (
             <p>Badge <span className="badge badge-brand">brand</span></p>
             <p>Badge <span className="badge badge-blue">blue</span></p>
             <p>Badge <span className="badge badge-purple">purple</span></p>
-            <p>Badge <span className="badge badge-yellow">yellow</span></p>
+            <p>Badge <span className="badge badge-green">green</span></p>
             <p>Badge <span className="badge badge-red">red</span></p>
         </ComponentPreview>
     </>
@@ -26,7 +26,7 @@ const FurtherUsage = () => (
             <h2>Badge <small className="badge badge-brand">brand</small></h2>
             <h3>Badge <small className="badge badge-blue">blue</small></h3>
             <h4>Badge <small className="badge badge-purple">purple</small></h4>
-            <h5>Badge <small className="badge badge-yellow">yellow</small></h5>
+            <h5>Badge <small className="badge badge-green">green</small></h5>
             <h6>Badge <small className="badge badge-red">red</small></h6>
         </ComponentPreview>
     </>
