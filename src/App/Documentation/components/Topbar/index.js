@@ -10,7 +10,20 @@ const menu = {
         icon: "menu",
         text: "Menu"
     },
-    items: ["Link 1", "Link 2", "Link 3"]
+    items: [
+        {
+            text: "Home",
+            icon: "home"
+        },
+        {
+            text: "Purchase history",
+            icon: "shopping_cart"
+        },
+        {
+            text: "Settings",
+            icon: "settings"
+        }
+    ]
 };
 
 const Overview = () => (
@@ -35,9 +48,22 @@ const Overview = () => (
     </>
 );
 
+const TopbarWide = () => (
+    <>
+        <h2 id="topbar-wide">Wide topbar</h2>
+        <p>
+            This is a wide topbar.
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <TopbarComponent topbarContent={menu} wide logout />
+        </ComponentPreview>
+    </>
+);
+
 class Topbar extends Component {
     componentDidMount () {
         topbar.init(1);
+        topbar.init(2);
     }
 
     render () {
@@ -45,6 +71,7 @@ class Topbar extends Component {
             <DocContainer docToc>
                 <p className="lead">The topbar is used to give users an easily available navigational bar at the top of your web application.</p>
                 <Overview />
+                <TopbarWide />
             </DocContainer>
         );
     }
@@ -53,4 +80,4 @@ class Topbar extends Component {
 export default Topbar;
 
 /* For testing */
-export { Overview };
+export { Overview, TopbarWide };

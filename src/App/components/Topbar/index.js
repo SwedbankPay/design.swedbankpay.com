@@ -14,31 +14,35 @@ const TopbarBtn = ({ icon, text }) => {
                     </>
             </button>
         );
-    } else {
-        return null;
     }
+
+    return null;
 };
 
 const TopbarMenu = ({ menu, logout }) => {
     const { items } = menu;
 
+    console.log(menu);
+
     return (
         <nav className="topbar-nav">
             {items.map((item, i) => (
                 <Fragment key={i}>
-                    {"\n"}<a href="#" onClick={e => e.preventDefault()}>{item}</a>
+                    {console.log(item)}
+                    {"\n"}
+                    <a href="#" className={item.text === "Home" ? "active" : null} onClick={e => e.preventDefault()}>{item.text}</a>
                 </Fragment>
             ))}{"\n"}
             {logout ?
                 <>
-                    <a href="#" onClick={e => e.preventDefault()}>Log out <i className="material-icons">exit_to_app</i></a>{"\n"}
+                    <a className="topbar-link-right" href="#" onClick={e => e.preventDefault()}>{"\n"}Log out {"\n"}<i className="material-icons">exit_to_app</i>{"\n"}</a>{"\n"}
                 </> : null}
         </nav>
     );
 };
 
-const Topbar = ({ topbarContent, fixed, logout }) => (
-    <header className={`topbar${fixed ? " topbar-fixed" : ""}`}>{"\n"}
+const Topbar = ({ topbarContent, wide, logout }) => (
+    <header className={`topbar ${wide ? "topbar-wide" : ""}`}>{"\n"}
         <>
             {topbarContent ?
             <>

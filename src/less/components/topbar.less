@@ -10,9 +10,7 @@
 
     .topbar-logo {
         height: 45px;
-        // margin-left: @topbar-margin;
         margin-top: 6px;
-        // margin-right: auto;
         background: url("../../img/px-logo.svg") no-repeat;
         background-size: cover;
         width: 140px;
@@ -45,9 +43,9 @@
     .topbar-nav {
         width: @topbar-nav-width;
         position: fixed;
-        top: @topbar-height;
+        top: 0;
         bottom: 0;
-        background-color: @gray-medium;
+        background-color: @bg-apricot;
         overflow-x: hidden;
         overflow-y: auto;
         z-index: @zindex-topbar-nav;
@@ -57,21 +55,36 @@
 
         &.in {
             left: 0;
+            display: flex;
+            flex-direction: column;
         }
 
-        a,
-        span {
-            display: flex;
-            color: @gray-bright-alt;
-            padding: @base-padding-sm 0 @base-padding-sm @base-padding-sm;
+        a {
+            font-family: @font-swedbank-headline;
+            color: @dark-brown;
             cursor: pointer;
-            text-transform: uppercase;
-            border: none;
+            display: flex;
+            text-decoration: none;
+            margin: 1rem;
 
             &:hover {
-                background-color: @gray-medium-light;
-                color: @white;
-                text-decoration: none;
+                // background-color: @gray-medium-light;
+                // color: @white;
+                // text-decoration: none;
+            }
+
+            &.active {
+                position: relative;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    height: 4px;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: @brand-primary;
+                }
             }
         }
     }
@@ -79,24 +92,59 @@
 
 @media screen and (min-width: @screen-sm-min) {
     .topbar {
-        // background-color: blue;
+        &.topbar-wide {
+            .topbar-menu {
+                display: none;
+            }
+
+            .topbar-logo {
+                margin-top: 0;
+            }
+
+            .topbar-nav {
+                flex-grow: 1;
+                position: initial;
+                background-color: transparent;
+                width: auto;
+                display: flex;
+                margin-left: 2rem;
+                padding: 0;
+                overflow-x: initial;
+                overflow-y: initial;
+
+                > a {
+                    text-decoration: none;
+                    padding: 0;
+                    margin: 0 0.5rem;
+                    line-height: 1;
+                    align-items: center;
+
+                    &:hover {
+                        background-color: transparent;
+                        color: none;
+                    }
+
+                    &.active {
+                        position: relative;
+
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            height: 4px;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            background-color: @brand-primary;
+                        }
+                    }
+
+                    &.topbar-link-right {
+                        margin-left: auto;
+                        padding: 0;
+                        align-items: center;
+                    }
+                }
+            }
+        }
     }
 }
-
-// @media screen and (max-width: @screen-xs-max) {
-//     .topbar {
-//         .topbar-btn {
-//             display: flex;
-//         }
-//     }
-
-//     .topbar-px-logo {
-//         position: absolute;
-//         left: 50%;
-//         margin-left: -55px;
-
-//         &.mypayex {
-//             margin-left: -78px;
-//         }
-//     }
-// }
