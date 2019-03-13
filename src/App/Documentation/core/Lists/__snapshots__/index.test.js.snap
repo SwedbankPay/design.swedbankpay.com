@@ -275,7 +275,7 @@ exports[`Documentation: Lists ItemList renders 1`] = `
         </div>
         <div>
           <span
-            className="h5 text-hightlight"
+            className="h5 text-highlight"
           >
             2120 kr
           </span>
@@ -292,7 +292,7 @@ exports[`Documentation: Lists ItemList renders 1`] = `
         </div>
         <div>
           <span
-            className="h5 text-hightlight"
+            className="h5 text-highlight"
           >
             1100 kr
           </span>
@@ -309,7 +309,7 @@ exports[`Documentation: Lists ItemList renders 1`] = `
         </div>
         <div>
           <span
-            className="h5 text-hightlight"
+            className="h5 text-highlight"
           >
             200 kr
           </span>
