@@ -7,20 +7,20 @@ import { topbar } from "$/px-script/main";
 
 const menu = {
     btn: {
-        icon: "menu",
-        text: "Menu"
+        name: "Menu",
+        icon: "menu"
     },
     items: [
         {
-            text: "Home",
+            name: "Home",
             icon: "home"
         },
         {
-            text: "Purchase history",
+            name: "Purchase history",
             icon: "shopping_cart"
         },
         {
-            text: "Settings",
+            name: "Settings",
             icon: "settings"
         }
     ]

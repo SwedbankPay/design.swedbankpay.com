@@ -22,15 +22,15 @@ const TopbarBtn = ({ icon, text }) => {
 const TopbarMenu = ({ menu, logout }) => {
     const { items } = menu;
 
-    console.log(menu);
-
     return (
         <nav className="topbar-nav">
             {items.map((item, i) => (
                 <Fragment key={i}>
-                    {console.log(item)}
                     {"\n"}
-                    <a href="#" className={item.text === "Home" ? "active" : null} onClick={e => e.preventDefault()}>{item.text}</a>
+                    <a href="#" className={item.name === "Home" ? "active" : null} onClick={e => e.preventDefault()}>
+                        <i className="material-icons">{item.icon}</i>
+                        <span>{item.name}</span>
+                    </a>
                 </Fragment>
             ))}{"\n"}
             {logout ?
@@ -42,18 +42,16 @@ const TopbarMenu = ({ menu, logout }) => {
 };
 
 const Topbar = ({ topbarContent, wide, logout }) => (
-    <header className={`topbar ${wide ? "topbar-wide" : ""}`}>{"\n"}
+    <header className={`topbar${wide ? " topbar-wide" : ""}`}>{"\n"}
+        {topbarContent ?
         <>
-            {topbarContent ?
-            <>
-                <TopbarBtn icon={topbarContent.btn.icon} text={topbarContent.btn.text} target={topbarContent.id} />{"\n"}
-                {"\n"}<a href="#" className="topbar-logo" onClick={e => e.preventDefault()}></a>{"\n"}
-                <TopbarMenu menu={topbarContent} logout={!!logout} />
-            </> :
-            <>
-                {"\n"} <a href="#" className="topbar-logo" onClick={e => e.preventDefault()}></a>{"\n"}
-            </>}
-        </>
+            <TopbarBtn icon={topbarContent.btn.icon} text={topbarContent.btn.name} target={topbarContent.id} />{"\n"}
+            {"\n"}<a href="#" className="topbar-logo" onClick={e => e.preventDefault()}></a>{"\n"}
+            <TopbarMenu menu={topbarContent} logout={!!logout} />
+        </> :
+        <>
+            {"\n"} <a href="#" className="topbar-logo" onClick={e => e.preventDefault()}></a>{"\n"}
+        </>}
     </header>
 );
 

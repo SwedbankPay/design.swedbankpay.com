@@ -26,7 +26,6 @@
         font-weight: bold;
         outline: 0;
         display: flex;
-        align-items: center;
         margin-left: -64px;
 
         &:hover {
@@ -49,41 +48,46 @@
         overflow-x: hidden;
         overflow-y: auto;
         z-index: @zindex-topbar-nav;
-        padding: @base-padding-sm @base-padding;
+        padding: 2rem 0.5rem;
         transition: left @topbar-slide-transition;
         left: -@topbar-nav-width;
 
-        &.in {
+        &.topbar-nav-open {
             left: 0;
-            display: flex;
-            flex-direction: column;
         }
 
-        a {
+        > * {
             font-family: @font-swedbank-headline;
             color: @dark-brown;
             cursor: pointer;
             display: flex;
             text-decoration: none;
             margin: 1rem;
+            line-height: 1;
+            align-items: center;
 
-            &:hover {
-                // background-color: @gray-medium-light;
-                // color: @white;
-                // text-decoration: none;
+            &.topbar-link-right {
+                flex-direction: row-reverse;
+                justify-content: flex-end;
+            }
+
+            .material-icons {
+                margin: 0 0.5rem 0 0;
             }
 
             &.active {
-                position: relative;
+                span {
+                    position: relative;
 
-                &:before {
-                    content: "";
-                    position: absolute;
-                    height: 4px;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    background-color: @brand-primary;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        background-color: @brand-primary;
+                        height: 4px;
+                        bottom: -4px;
+                        left: 0;
+                        right: 0;
+                    }
                 }
             }
         }
@@ -112,36 +116,43 @@
                 overflow-x: initial;
                 overflow-y: initial;
 
-                > a {
+                > * {
                     text-decoration: none;
                     padding: 0;
                     margin: 0 0.5rem;
-                    line-height: 1;
-                    align-items: center;
-
-                    &:hover {
-                        background-color: transparent;
-                        color: none;
-                    }
-
-                    &.active {
-                        position: relative;
-
-                        &:before {
-                            content: "";
-                            position: absolute;
-                            height: 4px;
-                            bottom: 0;
-                            left: 0;
-                            right: 0;
-                            background-color: @brand-primary;
-                        }
-                    }
 
                     &.topbar-link-right {
                         margin-left: auto;
                         padding: 0;
                         align-items: center;
+                        flex-direction: row;
+                        margin-right: 0;
+
+                        .material-icons {
+                            margin: 0 0 0 0.5rem;
+                        }
+                    }
+
+                    &.active {
+                        > * {
+                            position: relative;
+
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                background-color: @brand-primary;
+                                height: 4px;
+                                bottom: -4px;
+                                left: 0;
+                                right: 0;
+                            }
+                        }
+                    }
+
+                    &:not(.topbar-link-right) {
+                        .material-icons {
+                            display: none;
+                        }
                     }
                 }
             }

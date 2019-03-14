@@ -22,7 +22,7 @@ export default class NavMenu {
     }
 
     open () {
-        this.navMenuElement.classList.add("in");
+        this.navMenuElement.classList.add("topbar-nav-open");
         this.isOpen = true;
 
         if (this.iconElement) {
@@ -31,7 +31,7 @@ export default class NavMenu {
     }
 
     close () {
-        this.navMenuElement.classList.remove("in");
+        this.navMenuElement.classList.remove("topbar-nav-open");
         this.isOpen = false;
 
         if (this.iconElement) {
