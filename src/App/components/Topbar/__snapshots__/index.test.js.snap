@@ -2,7 +2,7 @@
 
 exports[`Component: Topbar -  renders 1`] = `
 <header
-  className="topbar "
+  className="topbar"
 >
   
 

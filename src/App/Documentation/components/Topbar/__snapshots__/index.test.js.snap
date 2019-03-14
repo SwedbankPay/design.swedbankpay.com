@@ -66,20 +66,20 @@ exports[`Components: Topbar Overview renders 1`] = `
         Object {
           "btn": Object {
             "icon": "menu",
-            "text": "Menu",
+            "name": "Menu",
           },
           "items": Array [
             Object {
               "icon": "home",
-              "text": "Home",
+              "name": "Home",
             },
             Object {
               "icon": "shopping_cart",
-              "text": "Purchase history",
+              "name": "Purchase history",
             },
             Object {
               "icon": "settings",
-              "text": "Settings",
+              "name": "Settings",
             },
           ],
         }
