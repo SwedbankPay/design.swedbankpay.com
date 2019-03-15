@@ -24,25 +24,38 @@ const TopbarMenu = ({ menu, logout }) => {
 
     return (
         <nav className="topbar-nav">
-            {items.map((item, i) => (
-                <Fragment key={i}>
-                    {"\n"}
-                    <a href="#" className={item.name === "Home" ? "active" : null} onClick={e => e.preventDefault()}>
-                        <i className="material-icons">{item.icon}</i>
-                        <span>{item.name}</span>
-                    </a>
-                </Fragment>
-            ))}{"\n"}
-            {logout ?
-                <>
-                    <a className="topbar-link-right" href="#" onClick={e => e.preventDefault()}>{"\n"}Log out {"\n"}<i className="material-icons">exit_to_app</i>{"\n"}</a>{"\n"}
-                </> : null}
+            <div className="topbar-link-container">{"\n"}
+                <i className="material-icons close-topbar-nav">close</i>
+                {items.map((item, i) => (
+                    <Fragment key={i}>
+                        {"\n"}
+                        <a href="#" className={item.name === "Home" ? "active" : null} onClick={e => e.preventDefault()}>
+                            {"\n"}
+                            <i className="material-icons">{item.icon}</i>
+                            {"\n"}
+                            <span>{item.name}</span>
+                            {"\n"}
+                        </a>
+                    </Fragment>
+                ))}{"\n"}
+                {logout ?
+                    <>
+                        <a className="topbar-link-right" href="#" onClick={e => e.preventDefault()}>
+                            {"\n"}
+                            <i className="material-icons">exit_to_app</i>
+                            {"\n"}
+                            <span>Log out</span>
+                            {"\n"}
+                        </a>
+                        {"\n"}
+                    </> : null}
+            </div>
         </nav>
     );
 };
 
 const Topbar = ({ topbarContent, wide, logout }) => (
-    <header className={`topbar${wide ? " topbar-wide" : ""}`}>{"\n"}
+    <header className={`topbar${wide ? ` topbar-${wide}-wide` : ""}`}>{"\n"}
         {topbarContent ?
         <>
             <TopbarBtn icon={topbarContent.btn.icon} text={topbarContent.btn.name} target={topbarContent.id} />{"\n"}

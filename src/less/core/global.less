@@ -35,13 +35,18 @@ body {
     min-height: 100%;
     border-top: 8px solid @brand-primary;
 
-    @media screen and (min-width: @screen-sm-min) {
-        &.has-vscroll {
+    &.has-vscroll {
+        overflow: hidden;
+
+        @media screen and (min-width: @screen-sm-min) {
             padding-right: @scrollbar-size;
 
-            .dialog,
-            .topbar {
+            .dialog {
                 padding-right: @scrollbar-size;
+            }
+
+            .topbar {
+                padding: 0 20px;
             }
         }
     }

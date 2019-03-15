@@ -110,7 +110,7 @@ const sheet = (() => {
 
             // Close sheet on esc
             document.addEventListener("keydown", e => {
-                if (e.keyCode === 27 && document.body.classList.contains("sheet-open")) {
+                if (e.keyCode === 27 && document.body.classList.contains("has-vscroll")) {
                     handleScrollbar();
                     window.px._sheets.forEach(sheet => sheet.isOpen ? sheet.close() : null);
                 }
