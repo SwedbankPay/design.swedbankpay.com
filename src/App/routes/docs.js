@@ -85,6 +85,11 @@ module.exports = [
         redirect: "/docs/components/action-list",
         routes: [
             {
+                title: "Accordion",
+                path: "/docs/components/accordion",
+                componentPath: "components/Accordion"
+            },
+            {
                 title: "Action Link",
                 path: "/docs/components/action-link",
                 componentPath: "components/ActionLink"
