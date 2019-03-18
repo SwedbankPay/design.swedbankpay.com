@@ -1,0 +1,65 @@
+.accordion {
+    padding: 1rem;
+    border: 0 solid @light-brown;
+    border-width: 1px 1px 0 1px;
+    box-shadow: 0 3px 1px -1px @light-brown;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+
+    /* stylelint-disable selector-list-comma-newline-after */
+    > h1, > h2, > h3, > h4, > h5, > h6,
+    > .h1, > .h2, > .h3, > .h4, > .h5, > .h6 {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        margin-left: 1rem;
+        cursor: pointer;
+
+        &:before {
+            content: "";
+            position: absolute;
+            height: 0.5rem;
+            width: 0.5rem;
+            border-bottom: 2px solid @dark-brown;
+            border-right: 2px solid @dark-brown;
+            left: -1rem;
+            top: -2px;
+            bottom: 0;
+            margin: auto;
+            transform: rotate(45deg);
+            transition: transform 0.5s;
+        }
+    }
+    /* stylelint-enable selector-list-comma-newline-after */
+
+    .accordion-item {
+        max-height: 0;
+        display: none;
+        margin-top: 1rem;
+        overflow: hidden;
+        transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+    }
+
+    &.accordion-open {
+        max-height: initial;
+        border: 1px solid @medium-brown;
+        box-shadow: none;
+        /* stylelint-disable selector-list-comma-newline-after */
+        > h1, > h2, > h3, > h4, > h5, > h6,
+        > .h1, > .h2, > .h3, > .h4, > .h5, > .h6 {
+            color: @medium-brown;
+
+            &:before {
+                transform: rotate(-135deg);
+            }
+        }
+        /* stylelint-enable selector-list-comma-newline-after */
+
+        .accordion-item {
+            display: initial;
+            max-height: fit-content;
+            transition: max-height 1s ease-in-out;
+        }
+    }
+}
