@@ -22,7 +22,6 @@ exports[`Home: index renders 1`] = `
           <p>
             You might wanna go look at the 
             <Link
-              replace={false}
               to="/docs"
             >
               documentation

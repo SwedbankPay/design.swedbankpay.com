@@ -78,7 +78,6 @@ exports[`Documentation: Card DefaultBehaviour renders 1`] = `
     />
      class to display them lined up next to each other. When the window reaches 
     <Link
-      replace={false}
       to="/docs/core/breakpoints"
     >
       breakpoint
@@ -183,7 +182,6 @@ exports[`Documentation: Card renders 1`] = `
   >
     Cards are meant to display smaller items and is not intended to span the entire width of a page. See 
     <Link
-      replace={false}
       to="/docs/components/panel"
     >
       panel
