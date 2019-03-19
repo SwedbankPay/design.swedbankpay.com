@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components: Accordion Overview renders 1`] = `
+<Fragment>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <p>
+    Accordion.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Accordion
+      items={
+        Array [
+          Object {
+            "content": <p>
+              My accordion content
+            </p>,
+            "title": "Foo",
+          },
+          Object {
+            "content": <p>
+              My accordion content
+            </p>,
+            "title": "Bar",
+          },
+          Object {
+            "content": <React.Fragment>
+              <p>
+                My accordion content
+              </p>
+              <p>
+                My accordion content
+              </p>
+              <p>
+                My accordion content
+              </p>
+              <p>
+                My accordion content
+              </p>
+              <p>
+                My accordion content
+              </p>
+            </React.Fragment>,
+            "title": "Baz",
+          },
+        ]
+      }
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Components: Accordion renders 1`] = `
+<DocContainer
+  docToc={true}
+>
+  <p
+    className="lead"
+  >
+    Accordion
+  </p>
+  <Overview />
+</DocContainer>
+`;
