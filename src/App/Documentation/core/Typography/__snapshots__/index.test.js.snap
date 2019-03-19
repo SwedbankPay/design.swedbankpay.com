@@ -455,7 +455,6 @@ exports[`Core: Typography Text Utilities renders 1`] = `
   <p>
     Change text color with our 
     <Link
-      replace={false}
       to="/docs/utilities/colors"
     >
       color utilities
