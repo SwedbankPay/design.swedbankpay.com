@@ -17,51 +17,51 @@ exports[`Components: Badge FurtherUsage renders 1`] = `
   >
     <h1>
       Badge 
-      <small
-        className="badge badge-default"
-      >
-        default
-      </small>
-    </h1>
-    <h2>
-      Badge 
-      <small
-        className="badge badge-brand"
-      >
-        brand
-      </small>
-    </h2>
-    <h3>
-      Badge 
-      <small
+      <span
         className="badge badge-blue"
       >
         blue
-      </small>
+      </span>
+    </h1>
+    <h2>
+      Badge 
+      <span
+        className="badge badge-blue"
+      >
+        blue
+      </span>
+    </h2>
+    <h3>
+      Badge 
+      <span
+        className="badge badge-blue"
+      >
+        blue
+      </span>
     </h3>
     <h4>
       Badge 
-      <small
-        className="badge badge-purple"
+      <span
+        className="badge badge-blue"
       >
-        purple
-      </small>
+        blue
+      </span>
     </h4>
     <h5>
       Badge 
-      <small
-        className="badge badge-green"
+      <span
+        className="badge badge-blue"
       >
-        green
-      </small>
+        blue
+      </span>
     </h5>
     <h6>
       Badge 
-      <small
-        className="badge badge-red"
+      <span
+        className="badge badge-blue"
       >
-        red
-      </small>
+        blue
+      </span>
     </h6>
   </ComponentPreview>
 </Fragment>
@@ -101,7 +101,7 @@ exports[`Components: Badge Overview renders 1`] = `
     <p>
       Badge 
       <span
-        className="badge badge-brand"
+        className="badge badge-yellow"
       >
         brand
       </span>
@@ -112,22 +112,6 @@ exports[`Components: Badge Overview renders 1`] = `
         className="badge badge-blue"
       >
         blue
-      </span>
-    </p>
-    <p>
-      Badge 
-      <span
-        className="badge badge-purple"
-      >
-        purple
-      </span>
-    </p>
-    <p>
-      Badge 
-      <span
-        className="badge badge-green"
-      >
-        green
       </span>
     </p>
     <p>
