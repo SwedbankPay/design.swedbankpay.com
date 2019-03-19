@@ -45,17 +45,14 @@
             margin-bottom: @base-margin;
 
             a {
-                // .brand-link();
+                text-decoration: none;
 
                 &.active {
-                    outline: none;
-                    text-decoration: none;
                     font-weight: @font-weight-bold;
                 }
 
                 &:focus {
                     outline: none;
-                    // color: @brand-primary;
                 }
             }
 
@@ -196,7 +193,7 @@
 
     .doc-toc {
         position: sticky;
-        top: 100px;
+        top: 32px;
         font-size: 0.8rem;
 
         ul {
@@ -208,13 +205,13 @@
                 padding-left: @base-padding;
 
                 &.active {
-                    border-left: 2px solid rgba(45, 169, 68, 0.7);
+                    border-left: 2px solid @brand-primary;
                     font-weight: @font-weight-bold;
                     padding-left: calc(@base-padding - 1px);
                 }
 
                 a {
-                    .brand-link();
+                    text-decoration: none;
                 }
             }
         }
