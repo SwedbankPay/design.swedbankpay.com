@@ -14,12 +14,6 @@ export default class TopbarNav {
             this.handleClick();
         });
 
-        this.topbarNav.addEventListener("click", e => {
-            if (e.target.classList.contains("topbar-nav-open")) {
-                this.close();
-            }
-        });
-
         try {
             this.closeNavIcon.addEventListener("click", () => {
                 this.close();
@@ -32,7 +26,7 @@ export default class TopbarNav {
     _initAnchors () {
         // Closing menu for clicking on links in SPA's.
         this.topbarNav.querySelectorAll("a")
-            .forEach(anchor => anchor.addEventListener("click", () => this.close()));
+            .forEach(anchor => anchor.addEventListener("click", () => this.isOpen ? this.close() : null));
     }
 
     open () {
