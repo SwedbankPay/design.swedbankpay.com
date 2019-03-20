@@ -32,7 +32,7 @@ const Example = () => (
                     </footer>
                 </section>
             </div>{"\n"}
-            <button className="btn btn-primary" type="button" data-dialog-open="demo-dialog">Open dialog</button>
+            <button className="btn btn-executive" type="button" data-dialog-open="demo-dialog">Open dialog</button>
         </ComponentPreview>
     </>
 );

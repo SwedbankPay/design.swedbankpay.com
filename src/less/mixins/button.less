@@ -1,7 +1,7 @@
 .button-variant(@color; @background;) {
     color: @color;
-    background-image: linear-gradient(to bottom, @background 0%, darken(@background, 5%) 100%);
     border-color: darken(@background, 5%);
+    background-color: @background;
 
     &:focus,
     &.focus {
@@ -12,13 +12,11 @@
     &:hover {
         color: @color;
         background-color: darken(@background, 5%);
-        background-image: none;
     }
 
     &[active],
     &:active,
     &.active {
-        background-image: none;
         .button-active-state(darken(@background, 10%), @color);
     }
 
@@ -64,7 +62,6 @@
     &[active],
     &:active,
     &.active {
-        background-image: none;
         .button-active-state(darken(@background, 10%), @color);
 
         &:hover,

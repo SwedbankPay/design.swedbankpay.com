@@ -18,7 +18,7 @@ const DefaultSlab = () => (
                         </div>
                         <div className="help-block" data-success="Right!" data-error="Wrong!">This one might be a little tricky</div>
                     </div>
-                    <button className="btn btn-primary" type="submit">Submit</button>
+                    <button className="btn btn-executive" type="submit">Submit</button>
                 </form>
             </div>
         </ComponentPreview>

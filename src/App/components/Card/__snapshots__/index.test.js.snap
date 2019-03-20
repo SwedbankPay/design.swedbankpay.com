@@ -12,7 +12,7 @@ exports[`Component: Card -  renders a button in the footer 1`] = `
   </div>
   <footer>
     <button
-      className="btn btn-primary btn-block"
+      className="btn btn-executive btn-block"
       type="button"
     >
       Button

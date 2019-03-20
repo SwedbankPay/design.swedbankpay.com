@@ -53,7 +53,7 @@ const ClosingTheAlert = () => (
         <p>To add an external close-button for your alert add the attribute <Attribute data name="alert-close" value="{id}" /> to the button element.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <AlertComponent id="alert-success-1" type="success" text="Press the button below to close me" icon="check_circle" />{"\n\n"}
-            <button type="button" className="btn btn-primary" data-alert-close="alert-success-1">Close alert</button>
+            <button type="button" className="btn btn-executive" data-alert-close="alert-success-1">Close alert</button>
         </ComponentPreview>
     </>
 );

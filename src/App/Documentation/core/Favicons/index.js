@@ -21,7 +21,7 @@ const Usage = () => (
         <h2 id="usage">Usage</h2>
         <p>To use our favicons download the zip-file below and extract it to the root of your build-folder. Insert the code below in the <PrismCode className="language-html">{"<head>"}</PrismCode> tag of your html documents and you are ready to go.</p>
         <p>You should also rename the <Attribute name="content" /> of the <Attribute value="apple-mobile-web-app-title" /> and <Attribute value="application-name" /> <PrismCode className="language-html">{"<meta>"}</PrismCode> tags to reflect the title of your project. Make sure to also do this in the <Property value="manifest.json" /> file in the icons folder.</p>
-        <Button type="primary" icon="file_download" href={`${BASENAME}release/icons.zip`} label="Download Favicons" />
+        <Button type="executive" icon="file_download" href={`${BASENAME}release/icons.zip`} label="Download Favicons" />
         <ComponentPreview language="html" codeFigure>
             <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-touch-icon-114x114.png" />
             <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-touch-icon-120x120.png" />

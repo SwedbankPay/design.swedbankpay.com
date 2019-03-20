@@ -24,7 +24,7 @@ describe("px-script: dialog", () => {
                     </footer>
                 </section>
             </div>
-            <button className="btn btn-primary" type="button" data-dialog-open="test-dialog">Open dialog</button>
+            <button className="btn btn-executive" type="button" data-dialog-open="test-dialog">Open dialog</button>
         </>
     );
 
@@ -47,7 +47,7 @@ describe("px-script: dialog", () => {
                     </footer>
                 </section>
             </div>
-            <button className="btn btn-primary" type="button" data-dialog-open="test-dialog">Open dialog</button>
+            <button className="btn btn-executive" type="button" data-dialog-open="test-dialog">Open dialog</button>
         </>
     );
 
@@ -104,7 +104,7 @@ describe("px-script: dialog", () => {
         const TestDialog = () => (
             <>
                 <div className="dialog" id="test-dialog"></div>
-                <button className="btn btn-primary" type="button" data-dialog-open="tester-dialog">Open dialog</button>
+                <button className="btn btn-executive" type="button" data-dialog-open="tester-dialog">Open dialog</button>
             </>
         );
 
@@ -122,7 +122,7 @@ describe("px-script: dialog", () => {
                 <div className="dialog" id="test-dialog">
                     <section>
                         <footer>
-                            <button className="btn btn-primary" type="button" data-dialog-close="tester-dialog">Close dialog</button>
+                            <button className="btn btn-executive" type="button" data-dialog-close="tester-dialog">Close dialog</button>
                         </footer>
                     </section>
                 </div>

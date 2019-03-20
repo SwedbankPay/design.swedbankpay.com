@@ -15,7 +15,7 @@ describe("px-script: sheet", () => {
             <div className="sheet" id="demo-sheet">
                 <section></section>
             </div>
-            <button className="btn btn-primary" type="button" data-sheet-open="demo-sheet">Open sheet</button>
+            <button className="btn btn-executive" type="button" data-sheet-open="demo-sheet">Open sheet</button>
         </>
     );
 
@@ -28,7 +28,7 @@ describe("px-script: sheet", () => {
                     </a>
                 </section>
             </div>
-            <button className="btn btn-primary" type="button" data-sheet-close="demo-sheet">Close sheet</button>
+            <button className="btn btn-executive" type="button" data-sheet-close="demo-sheet">Close sheet</button>
         </>
     );
 
@@ -91,7 +91,7 @@ describe("px-script: sheet", () => {
         const TestSheet = () => (
             <>
                 <div className="sheet" id="test-sheet"></div>
-                <button className="btn btn-primary" type="button" data-sheet-open="tester-sheet">Open sheet</button>
+                <button className="btn btn-executive" type="button" data-sheet-open="tester-sheet">Open sheet</button>
             </>
         );
 
@@ -107,7 +107,7 @@ describe("px-script: sheet", () => {
         const TestSheet = () => (
             <>
                 <div className="sheet" id="test-sheet"></div>
-                <button className="btn btn-primary" type="button" data-sheet-close="tester-sheet">Close sheet</button>
+                <button className="btn btn-executive" type="button" data-sheet-close="tester-sheet">Close sheet</button>
             </>
         );
 

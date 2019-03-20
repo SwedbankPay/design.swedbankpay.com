@@ -69,7 +69,7 @@ exports[`Core: Favicons Usage renders 1`] = `
     href="/TEST/release/icons.zip"
     icon="file_download"
     label="Download Favicons"
-    type="primary"
+    type="executive"
   />
   <ComponentPreview
     codeFigure={true}

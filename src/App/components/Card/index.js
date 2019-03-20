@@ -26,7 +26,7 @@ const Card = ({ type, title, imgSrc, text, textSection, smallText, btnTxt, foote
             {smallText ? <small>{smallText}</small> : null}
         </div>
         {btnTxt || footerTxt || footerLinkTxt ? <footer>
-            {btnTxt ? <button type="button" className="btn btn-primary btn-block">{btnTxt}</button> : null}
+            {btnTxt ? <button type="button" className="btn btn-executive btn-block">{btnTxt}</button> : null}
             {footerTxt ? <div className="footer-text"><p>{footerTxt}</p></div> : null}
             {footerLinkTxt ? <div className="footer-link"><a href={footerLink || "#"}>{footerLinkTxt}</a></div> : null}
         </footer> : null}

@@ -21,8 +21,8 @@ describe("px-script: button", () => {
     it("method init is defined and adds loader markup to buttons with attribute [data-button-loader]", () => {
         const Buttons = () => (
             <div>
-                <Button type="primary" label="test" loader />
-                <Button type="primary" label="test" loader />
+                <Button type="executive" label="test" loader />
+                <Button type="executive" label="test" loader />
             </div>
         );
 

@@ -20,7 +20,9 @@
     white-space: nowrap;
     user-select: none;
     transition: opacity 0.3s ease, color 0.3s ease;
-    .button-size(@padding-base-vertical; @padding-base-horizontal; @base-font-size; @line-height-base; @btn-border-radius-base;);
+
+    /* padding-top-bottom, padding-left-right, font-size, line-height */
+    .button-size(1rem; 1rem; 1rem; 1rem; @btn-border-radius-base;);
 
     .material-icons {
         font-size: 1.25rem;
@@ -84,15 +86,15 @@
     // Alternate buttons
     // --------------------------------------------------
 
-    &.btn-primary {
-        .button-variant(@btn-guiding-color, @btn-guiding-bg);
-    }
-
-    &.btn-secondary {
+    &.btn-executive {
         .button-variant(@btn-executive-color, @btn-executive-bg);
     }
 
-    &.btn-danger {
+    &.btn-guiding {
+        .button-variant(@btn-guiding-color, @btn-guiding-bg);
+    }
+
+    &.btn-destructive {
         .button-variant(@btn-destructive-color, @btn-destructive-bg);
     }
 
@@ -142,15 +144,15 @@
     // Outline buttons
     // --------------------------------------------------
 
-    &.btn-outline-primary {
+    &.btn-outline-executive {
         .button-outline-variant(@btn-executive-bg, @btn-executive-bg, @btn-executive-color);
     }
 
-    &.btn-outline-secondary {
+    &.btn-outline-guiding {
         .button-outline-variant(@btn-guiding-bg, @btn-guiding-bg, @btn-guiding-color);
     }
 
-    &.btn-outline-danger {
+    &.btn-outline-destructive {
         .button-outline-variant(@btn-destructive-bg, @btn-destructive-bg, @btn-destructive-color);
     }
 
@@ -169,7 +171,7 @@
     }
 
     &.btn-xs {
-        .button-size(@padding-xs-vertical; @base-padding-xs; @font-size-small; @line-height-small; @btn-border-radius-small);
+        .button-size(0.1rem; 0.25rem; @font-size-small; @line-height-small; @btn-border-radius-small);
     }
 
     // Block button
@@ -276,9 +278,9 @@
     //         }
     //     }
 
-    //     &.btn-secondary {
+    //     &.btn-guiding {
     //         .loader {
-    //             .loader-color-variant(@btn-secondary-color);
+    //             .loader-color-variant(@btn-guiding-color);
     //         }
     //     }
 
@@ -288,33 +290,33 @@
     //         }
     //     }
 
-    //     &.btn-outline-primary {
+    //     &.btn-outline-executive {
     //         .loader {
-    //             .loader-color-variant(@btn-primary-outline-color);
+    //             .loader-color-variant(@btn-executive-outline-color);
     //         }
 
     //         &:hover {
-    //             .loader-color-variant(@btn-primary-color);
+    //             .loader-color-variant(@btn-executive-color);
     //         }
     //     }
 
-    //     &.btn-outline-secondary {
+    //     &.btn-outline-guiding {
     //         .loader {
-    //             .loader-color-variant(@btn-secondary-outline-color);
+    //             .loader-color-variant(@btn-guiding-outline-color);
     //         }
 
     //         &:hover {
-    //             .loader-color-variant(@btn-secondary-color);
+    //             .loader-color-variant(@btn-guiding-color);
     //         }
     //     }
 
-    //     &.btn-outline-danger {
+    //     &.btn-outline-destructive {
     //         .loader {
-    //             .loader-color-variant(@btn-danger-outline-color);
+    //             .loader-color-variant(@btn-destructive-outline-color);
     //         }
 
     //         &:hover {
-    //             .loader-color-variant(@btn-danger-color);
+    //             .loader-color-variant(@btn-destructive-color);
     //         }
     //     }
     // }
