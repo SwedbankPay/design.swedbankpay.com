@@ -29,7 +29,7 @@
     },
     "homepage": "https://github.com/PayEx/design.payex.com#readme",
     "dependencies": {
-        "@babel/polyfill": "^7.2.5",
+        "@babel/polyfill": "^7.4.0",
         "chart.js": "^2.8.0",
         "classnames": "^2.2.6",
         "flatpickr": "^4.5.7",
@@ -46,9 +46,9 @@
     },
     "devDependencies": {
         "@babel/cli": "^7.2.3",
-        "@babel/core": "^7.3.4",
+        "@babel/core": "^7.4.0",
         "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-        "@babel/preset-env": "^7.3.4",
+        "@babel/preset-env": "^7.4.1",
         "@babel/preset-react": "^7.0.0",
         "@sentry/browser": "^4.6.4",
         "@sentry/webpack-plugin": "^1.6.2",
