@@ -226,7 +226,7 @@ class Buttons extends Component {
                 <UsageWithOtherTags />
                 <OutlineButtons />
                 <ButtonGroup />
-                {/* <Sizes /> */}
+                <Sizes />
                 <ActiveState />
                 <DisabledState />
                 <UsageWithIcons />
