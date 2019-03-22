@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 
 import { ComponentPreview, DocContainer } from "#";
-import accordion from "$/px-script/main/accordion";
-import AccordionComponent from "@/Accordion";
+import expandable from "$/px-script/main/expandable";
+import ExpandableComponent from "@/Expandable";
 
 const items = [
     {
@@ -36,13 +36,25 @@ const Overview = () => (
         <h2 id="overview">Overview</h2>
         <p>Accordion.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <AccordionComponent items={items} />
+            <ExpandableComponent items={items} />
         </ComponentPreview>
     </>
 );
 
-const Accordion = () => {
-    useEffect(() => accordion.init());
+const Accordion = () => (
+    <>
+        <h2 id="overview">Overview</h2>
+        <p>Accordion.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <div className="accordion">
+                <ExpandableComponent items={items} />
+            </div>
+        </ComponentPreview>
+    </>
+);
+
+const Expandable = () => {
+    useEffect(() => expandable.init());
 
     return (
         <DocContainer docToc>
@@ -50,11 +62,12 @@ const Accordion = () => {
                 Accordion
             </p>
             <Overview />
+            <Accordion />
         </DocContainer>
     );
 };
 
-export default Accordion;
+export default Expandable;
 
 /* For testing */
-export { Overview };
+export { Overview, Accordion };

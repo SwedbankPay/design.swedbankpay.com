@@ -119,11 +119,6 @@ exports[`Documentation: index renders 1`] = `
           routes={
             Array [
               Object {
-                "componentPath": "components/Accordion",
-                "path": "/docs/components/accordion",
-                "title": "Accordion",
-              },
-              Object {
                 "componentPath": "components/ActionLink",
                 "path": "/docs/components/action-link",
                 "title": "Action Link",
@@ -167,6 +162,11 @@ exports[`Documentation: index renders 1`] = `
                 "componentPath": "components/Dialog",
                 "path": "/docs/components/dialog",
                 "title": "Dialog",
+              },
+              Object {
+                "componentPath": "components/Expandable",
+                "path": "/docs/components/expandable",
+                "title": "Expandable",
               },
               Object {
                 "componentPath": "components/Forms",

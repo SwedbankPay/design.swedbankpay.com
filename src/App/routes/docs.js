@@ -85,11 +85,6 @@ module.exports = [
         redirect: "/docs/components/action-list",
         routes: [
             {
-                title: "Accordion",
-                path: "/docs/components/accordion",
-                componentPath: "components/Accordion"
-            },
-            {
                 title: "Action Link",
                 path: "/docs/components/action-link",
                 componentPath: "components/ActionLink"
@@ -133,6 +128,11 @@ module.exports = [
                 title: "Dialog",
                 path: "/docs/components/dialog",
                 componentPath: "components/Dialog"
+            },
+            {
+                title: "Expandable",
+                path: "/docs/components/expandable",
+                componentPath: "components/Expandable"
             },
             {
                 title: "Forms",

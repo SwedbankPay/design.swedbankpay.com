@@ -1,12 +1,12 @@
 import { init } from "~/node_modules/@sentry/browser";
 import "$/polyfills";
 
-import accordion from "./accordion";
 import actionList from "./action-list";
 import alert from "./alert";
 import button from "./button";
 import datepicker from "./datepicker";
 import dialog from "./dialog";
+import expandable from "./expandable";
 import loader from "./loader";
 import nav from "./nav";
 import rangeslider from "./rangeslider";
@@ -24,12 +24,12 @@ if (process.env.sentry) {
 }
 
 const px = {
-    accordion,
     actionList,
     alert,
     button,
     datepicker,
     dialog,
+    expandable,
     loader,
     nav,
     rangeslider,
@@ -53,12 +53,12 @@ if (!window.stopPx) {
 export default px;
 
 export {
-    accordion,
     actionList,
     alert,
     button,
     datepicker,
     dialog,
+    expandable,
     loader,
     nav,
     rangeslider,

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components: Expandable renders 1`] = `
+<DocContainer
+  docToc={true}
+>
+  <p
+    className="lead"
+  >
+    Accordion
+  </p>
+  <Overview />
+  <Accordion />
+</DocContainer>
+`;
