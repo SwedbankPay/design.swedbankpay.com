@@ -17,12 +17,31 @@
         border-color: @gray-bright-alt;
     }
 
+    &.slab-apricot {
+        background-color: @bg-apricot;
+    }
+
     &.slab-lg {
         padding: @base-padding-lg;
     }
 
     &.slab-sm {
         padding: @base-padding-sm;
+    }
+
+    &.slab-arrow {
+        position: relative;
+
+        &:before {
+            content: "";
+            height: 1rem;
+            width: 1rem;
+            transform: rotate(45deg);
+            background-color: inherit;
+            position: absolute;
+            top: -0.5rem;
+            left: 1.5rem;
+        }
     }
 
     /* stylelint-disable selector-list-comma-newline-after */

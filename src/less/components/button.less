@@ -107,6 +107,7 @@
         color: @blue;
         font-weight: normal;
         background: transparent;
+        text-decoration: none;
 
         &[active],
         &:active,
@@ -120,7 +121,6 @@
         &:hover,
         &:focus,
         &:active {
-            border-color: transparent;
             box-shadow: none;
         }
 
@@ -129,7 +129,6 @@
             color: darken(@blue, 10%);
             text-decoration: none;
             background-color: transparent;
-            border-bottom-color: transparent;
         }
 
         &[disabled],
@@ -162,7 +161,6 @@
 
     &.btn-lg {
         // line-height: ensure even-numbered height of button next to large input
-        border-width: 2px;
         .button-size(@base-padding-sm; @base-padding; @font-size-large; @line-height-large; @btn-border-radius-large);
     }
 
