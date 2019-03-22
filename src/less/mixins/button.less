@@ -1,6 +1,5 @@
-.button-variant(@color; @background;) {
+.button-variant(@color, @background, @disabled-color, @disabled-bg) {
     color: @color;
-    border-color: darken(@background, 5%);
     background-color: @background;
 
     &:focus,
@@ -31,9 +30,9 @@
         &:active,
         &.active {
             &:not(.loading) {
-                background: @btn-guiding-disabled-bg;
-                color: @btn-guiding-disabled-color;
-                border-color: darken(@btn-guiding-disabled-bg, 5%);
+                background: @disabled-bg;
+                color: @disabled-color;
+                // border-color: darken(@btn-guiding-disabled-bg, 5%);
             }
 
             &.loading {
