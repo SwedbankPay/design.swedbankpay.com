@@ -1,8 +1,11 @@
 # Changelog
 
-## [2.0.3] - 2019-03-25
+## [2.X.X] - 2019-X-X
+
+### Added
+
+### Changed
 
 ### Fixed
 
-- Fixed issue with action-list icon showing through action-list menu.
-- Fixed issue with polyfills
+### Removed
