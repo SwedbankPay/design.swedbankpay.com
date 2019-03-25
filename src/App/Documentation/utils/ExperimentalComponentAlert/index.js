@@ -3,7 +3,7 @@ import Alert from "@/Alert";
 
 const ExperimentalComponentAlert = () => (
     <Alert type="danger">
-        <h3 className="color-danger">Component under development!</h3>
+        <h3 className="text-danger">Component under development!</h3>
         <p>This component is still under development and is subject to change.</p>
     </Alert>
 );

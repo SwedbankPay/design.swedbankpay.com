@@ -309,7 +309,6 @@ exports[`Documentation: index renders 1`] = `
         />
         <Redirect
           from="/docs/*"
-          push={false}
           to="/404"
         />
       </Switch>

@@ -5,7 +5,7 @@ exports[`Utilities: ExperimentalComponentAlert renders 1`] = `
   type="danger"
 >
   <h3
-    className="color-danger"
+    className="text-danger"
   >
     Component under development!
   </h3>

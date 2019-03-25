@@ -211,7 +211,6 @@ exports[`Component: Nav StandardNav renders 1`] = `
     </PrismCode>
      with your desired 
     <Link
-      replace={false}
       to="/docs/core/icons"
     >
       icon

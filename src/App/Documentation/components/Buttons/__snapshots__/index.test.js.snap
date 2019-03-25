@@ -843,7 +843,6 @@ exports[`Documentation: Buttons Usage With Icons renders 1`] = `
   <p>
     Read more about icon usage here 
     <Link
-      replace={false}
       to="/docs/core/icons"
     >
       here

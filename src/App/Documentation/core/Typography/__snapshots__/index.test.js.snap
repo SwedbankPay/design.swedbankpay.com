@@ -148,7 +148,6 @@ exports[`Core: Typography Blockquotes renders 3`] = `
   <p>
     Use 
     <Link
-      replace={false}
       to="/docs/utilities/text"
     >
       text utilities
@@ -498,7 +497,6 @@ exports[`Core: Typography Text Utilities renders 1`] = `
   <p>
     Change text color with our 
     <Link
-      replace={false}
       to="/docs/utilities/colors"
     >
       color utilities

@@ -36,7 +36,6 @@ exports[`Components: Tabs BasicUsage renders 1`] = `
     />
      class determines when your tabs will switch from horizontal to collapsed. The available sizes can be found in our 
     <Link
-      replace={false}
       to="/docs/core/breakpoints"
     >
       breakpoints documentation

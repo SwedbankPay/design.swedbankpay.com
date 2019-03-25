@@ -3,7 +3,7 @@ import Alert from "@/Alert";
 
 const DeprecatedComponentAlert = () => (
     <Alert type="danger">
-        <h3 className="color-danger">Component deprecated!</h3>
+        <h3 className="text-danger">Component deprecated!</h3>
         <p>This component has been deprecated and should not be used!</p>
     </Alert>
 );

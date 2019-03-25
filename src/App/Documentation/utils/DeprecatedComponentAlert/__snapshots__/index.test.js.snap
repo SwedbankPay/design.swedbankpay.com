@@ -5,7 +5,7 @@ exports[`Utilities: DeprecatedComponentAlert renders 1`] = `
   type="danger"
 >
   <h3
-    className="color-danger"
+    className="text-danger"
   >
     Component deprecated!
   </h3>

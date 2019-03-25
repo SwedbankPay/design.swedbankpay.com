@@ -80,15 +80,15 @@ const SettingsList = () => (
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="settings-list">
                 <li>{"\n"}
-                    <i className="material-icons color-success">check</i>
+                    <i className="material-icons text-success">check</i>
                     Shovels and tapestry newsletter{"\n"}
                 </li>
                 <li>{"\n"}
-                    <i className="material-icons color-warning">remove</i>
+                    <i className="material-icons text-warning">remove</i>
                     Spoon collectors weekly newsletter{"\n"}
                 </li>
                 <li>{"\n"}
-                    <i className="material-icons color-danger">clear</i>
+                    <i className="material-icons text-danger">clear</i>
                     Energetic squirrels newsletter{"\n"}
                 </li>
             </ul>
