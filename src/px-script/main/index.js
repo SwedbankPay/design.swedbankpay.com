@@ -1,4 +1,5 @@
 import { init } from "~/node_modules/@sentry/browser";
+import "$/polyfills";
 
 import actionList from "./action-list";
 import alert from "./alert";

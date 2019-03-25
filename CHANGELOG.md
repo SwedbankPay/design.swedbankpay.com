@@ -9,5 +9,6 @@
 ### Fixed
 
 - Fixed issue with action-list icon showing through action-list menu.
+- Fixed issue with polyfills
 
 ### Removed
