@@ -316,5 +316,4 @@ class Lists extends Component {
 
 export default Lists;
 
-/* For Se faktura */
 export { BasicList, InlineList, DescriptionList, SettingsList, ItemList, ItemListBordered, ItemListLarge, HoverItemList, StripedItemList };
