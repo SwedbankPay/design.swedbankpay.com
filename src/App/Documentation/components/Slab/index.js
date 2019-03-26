@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocContainer } from "#";
+import { ComponentPreview, DocContainer, Property } from "#";
 import { validation } from "$/px-script/main/";
 
 const DefaultSlab = () => (
@@ -47,49 +47,52 @@ const SlabWell = () => (
     </>
 );
 
-const SlabWhite = () => (
+const SlabArrow = () => (
     <>
-        <h2 id="slab-white">Slab white</h2>
-        <p>This slab can contain so many things</p>
+        <h2 id="slab-arrow">Slab arrow</h2>
+        <p>
+            <Property val=".slab-arrow" /> inherits the color from the slab it is appended to, and is given a border
+            if used with slab-white.
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <div className="slab slab-white slab-arrow">
+                <p>
+                    This slab has some connection to the content above.
+                </p>
+            </div>
+        </ComponentPreview>
+    </>
+);
+
+const SlabColors = () => (
+    <>
+        <h2 id="slab-colors">Slab colors</h2>
+        <p>
+            Both white and apricot variants of slab exist.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="slab slab-white">
-                <p className="lead text-center">Here is some text and then a striped item list</p>
-                <ul className="item-list item-list-striped">
-                    <li>
-                        <span>4925*********004</span>
-                    </li>
-                    <li>{"\n"}
-                        <span>{"\n\t\t\t"}4925*********004{"\n\t\t\t"}
-                            <span className="badge badge-blue">new</span>{"\n"}
-                        </span>{"\n"}
-                        <a href="https://developer.payex.com">developer.payex.com</a>{"\n"}
-                    </li>
-                    <li>{"\n"}
-                        <span>4925*********004</span>{"\n"}
-                        <i className="material-icons">star</i>{"\n"}
-                    </li>
-                    <li>{"\n"}
-                        <span>4925*********004</span>{"\n"}
-                        <span className="status status-success">Active</span>{"\n"}
-                        <button type="button" className="btn btn-danger btn-xs"><i className="material-icons">delete</i></button>{"\n"}
-                    </li>
-                </ul>
-                <p>Maybe include a steps component in this slab so you can track your progress!</p>
-                <div className="steps">
-                    <ol>
-                        <li className="steps-completed">
-                            <div className="material-icons steps-icon">check</div>
-                            Step one
-                            <div className="steps-sub-title">24.12.17 12:10</div>
-                        </li>
-                        <li className="steps-ongoing steps-selected">Step two</li>
-                        <li>Step three</li>
-                        <li>Step four</li>
-                    </ol>
-                    <div className="steps-responsive">
-                        <div className="steps-responsive-text">Step 3</div>
-                    </div>
-                </div>
+                <h4>Here is some text and then a striped item list</h4>
+                <p>
+                    Some text with a small listing of items underneath.
+                    <ul className="list item-list">
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div className="slab slab-apricot">
+                <h4>Here is some text and then a striped item list</h4>
+                <p>
+                    Some text with a small listing of items underneath.
+                    <ul className="list item-list">
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
+                </p>
             </div>
         </ComponentPreview>
     </>
@@ -157,7 +160,8 @@ class Slab extends Component {
                 <DefaultSlab />
                 <SlabElevated />
                 <SlabWell />
-                <SlabWhite />
+                <SlabArrow />
+                <SlabColors />
                 <SlabMuted />
                 <SlabSizes />
                 <SlabCombinations />
@@ -169,4 +173,4 @@ class Slab extends Component {
 export default Slab;
 
 /* For testing */
-export { DefaultSlab, SlabElevated, SlabWell, SlabWhite, SlabSizes, SlabMuted, SlabCombinations };
+export { DefaultSlab, SlabElevated, SlabWell, SlabArrow, SlabColors, SlabSizes, SlabMuted, SlabCombinations };

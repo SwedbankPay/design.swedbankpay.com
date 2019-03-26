@@ -99,6 +99,11 @@ exports[`Documentation: index renders 1`] = `
                 "title": "Lists",
               },
               Object {
+                "componentPath": "core/Page-layout",
+                "path": "/docs/core/page-layout",
+                "title": "Page Layout",
+              },
+              Object {
                 "componentPath": "core/Tables",
                 "path": "/docs/core/tables",
                 "title": "Tables",
