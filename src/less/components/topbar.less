@@ -19,15 +19,15 @@
     }
 
     .topbar-menu {
-        margin: 0;
-        border: 0;
+        user-select: none;
         background: none;
-        height: 100%;
-        padding: 0 @topbar-padding;
         font-weight: bold;
-        outline: 0;
         display: flex;
-        margin-left: -64px;
+        padding: 0;
+        margin: 0 @topbar-padding;
+        margin-left: -44px; /* This offset equals the topbar-menu width including padding, if it changes this offset has to change so the logo is still centered [AW] */
+        border: 0;
+        outline: 0;
 
         &:hover {
             cursor: pointer;
@@ -89,6 +89,7 @@
 
                 .material-icons {
                     margin: 0 0.5rem 0 0;
+                    user-select: none;
                 }
 
                 &.active {
