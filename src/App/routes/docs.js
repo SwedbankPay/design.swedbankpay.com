@@ -64,11 +64,6 @@ module.exports = [
                 componentPath: "core/Lists"
             },
             {
-                title: "Page Layout",
-                path: "/docs/core/page-layout",
-                componentPath: "core/Page-layout"
-            },
-            {
                 title: "Tables",
                 path: "/docs/core/tables",
                 componentPath: "core/Tables"
