@@ -40,6 +40,10 @@
         }
     }
 
+    > .topbar-link-right {
+        display: none;
+    }
+
     .topbar-nav {
         position: fixed;
         top: 0;
@@ -72,25 +76,24 @@
             transition: left @topbar-slide-transition;
             left: -@topbar-nav-width;
 
-            > *:not(.close-topbar-nav) {
+            > *:not(.material-icons) {
                 font-family: @font-swedbank-headline;
                 color: @dark-brown;
                 cursor: pointer;
-                display: flex;
                 text-decoration: none;
-                margin: 1rem 0;
-                line-height: 1;
-                align-items: center;
+                display: flex;
 
-                &.topbar-link-right {
-                    flex-direction: row;
-                    justify-content: flex-start;
+                &:not(.topbar-link-right) {
+                    margin: 1rem 0;
+                    line-height: 1;
+                    align-items: center;
+
+                    .material-icons {
+                        margin: 0 0.5rem 0 0;
+                        user-select: none;
+                    }
                 }
 
-                .material-icons {
-                    margin: 0 0.5rem 0 0;
-                    user-select: none;
-                }
 
                 &.active {
                     > span {
@@ -122,13 +125,32 @@
     }
 }
 
-.topbar-wide () {
+.topbar-wide {
+    justify-content: initial;
+
     .topbar-menu {
         display: none;
     }
 
     .topbar-logo {
         margin-top: 0;
+    }
+
+    .topbar-link-right {
+        margin-left: auto;
+        padding: 0;
+        align-items: center;
+        flex-direction: row-reverse;
+        margin-right: 0;
+        font-family: @font-swedbank-headline;
+        color: @dark-brown;
+        cursor: pointer;
+        text-decoration: none;
+        display: flex;
+
+        .material-icons {
+            margin: 0 0 0 0.5rem;
+        }
     }
 
     .topbar-nav {
@@ -148,22 +170,10 @@
             overflow-x: initial;
             overflow-y: initial;
 
-            > *:not(.close-topbar-nav) {
+            > *:not(.close-topbar-nav):not(.topbar-link-right) {
                 text-decoration: none;
                 padding: 0;
                 margin: 0 0.5rem;
-
-                &.topbar-link-right {
-                    margin-left: auto;
-                    padding: 0;
-                    align-items: center;
-                    flex-direction: row-reverse;
-                    margin-right: 0;
-
-                    .material-icons {
-                        margin: 0 0 0 0.5rem;
-                    }
-                }
 
                 &.active {
                     > span {

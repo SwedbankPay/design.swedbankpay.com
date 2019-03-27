@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Topbar -  renders 1`] = `
+exports[`Component: Topbar -  renders a topbar with only a clickable logo 1`] = `
 <header
   className="topbar"
 >
@@ -14,6 +14,47 @@ exports[`Component: Topbar -  renders 1`] = `
     href="#"
     onClick={[Function]}
   />
+  
+
+</header>
+`;
+
+exports[`Component: Topbar -  renders with a logout button and a logo 1`] = `
+<header
+  className="topbar"
+>
+  
+
+  
+
+   
+  <a
+    className="topbar-logo"
+    href="#"
+    onClick={[Function]}
+  />
+  
+
+  <a
+    className="topbar-link-right"
+    href="#"
+    onClick={[Function]}
+  >
+    
+
+    <i
+      className="material-icons"
+    >
+      exit_to_app
+    </i>
+    
+
+    <span>
+      Log out
+    </span>
+    
+
+  </a>
   
 
 </header>

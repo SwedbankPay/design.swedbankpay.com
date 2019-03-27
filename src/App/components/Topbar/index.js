@@ -64,6 +64,17 @@ const Topbar = ({ topbarContent, wide, logout }) => (
         </> :
         <>
             {"\n"} <a href="#" className="topbar-logo" onClick={e => e.preventDefault()}></a>{"\n"}
+            {logout ?
+                    <>
+                        <a className="topbar-link-right" href="#" onClick={e => e.preventDefault()}>
+                            {"\n"}
+                            <i className="material-icons">exit_to_app</i>
+                            {"\n"}
+                            <span>Log out</span>
+                            {"\n"}
+                        </a>
+                        {"\n"}
+                    </> : null}
         </>}
     </header>
 );

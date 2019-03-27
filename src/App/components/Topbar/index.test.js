@@ -9,70 +9,26 @@ describe("Component: Topbar - ", () => {
 
     document.body.appendChild(div);
 
-    const menu = {
-        btn: {
-            icon: "menu",
-            text: "Menu"
-        },
-        items: ["Link 1", "Link 2", "Link 3"]
-    };
-
-    const menuNoBtnIcon = {
-        btn: {
-            text: "Menu"
-        },
-        items: ["Link 1", "Link 2", "Link 3"]
-    };
-
-    const menuNoBtnText = {
-        btn: {
-            icon: "menu"
-        },
-        items: ["Link 1", "Link 2", "Link 3"]
-    };
-
-    const menuEmptyBtn = {
-        btn: {},
-        items: ["Link 1", "Link 2", "Link 3"]
-    };
-
     it("is defined", () => {
         expect(Topbar).toBeDefined();
     });
 
-    it("renders", () => {
+    it("renders a topbar with only a clickable logo", () => {
         const wrapper = shallow(<Topbar />);
 
         expect(wrapper).toMatchSnapshot();
+        expect(wrapper.html()).toContain("topbar-logo");
+        expect(wrapper.html()).not.toContain("topbar-nav");
     });
 
-    // it("renders a static topbar if prop fixed is true", () => {
-    //     const wrapper = shallow(<Topbar fixed />);
+    it("renders with a logout button and a logo", () => {
+        const wrapper = shallow(<Topbar logout/>);
 
-    //     expect(wrapper).toMatchSnapshot();
-    //     expect(wrapper.html()).toContain("topbar-fixed");
-    // });
-
-    // it("renders with nav and button left when prop topbarContent is provided", () => {
-    //     const topbarContent = {
-    //         id: "topbar-nav",
-    //         ...menu
-    //     };
-    //     const wrapper = shallow(<Topbar topbarContent={topbarContent} />);
-
-    //     expect(wrapper).toMatchSnapshot();
-    //     expect(wrapper.html()).toContain("topbar-btn");
-    //     expect(wrapper.html()).toContain("topbar-nav");
-    // });
-
-    // it("renders with a button right and a logo", () => {
-    //     const wrapper = shallow(<Topbar logout/>);
-
-    //     expect(wrapper).toMatchSnapshot();
-    //     expect(wrapper.html()).toContain("topbar-btn");
-    //     expect(wrapper.html()).toContain("topbar-logo");
-    //     expect(wrapper.html()).not.toContain("topbar-nav");
-    // });
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.html()).toContain("topbar-link-right");
+        expect(wrapper.html()).toContain("Log out");
+        expect(wrapper.html()).not.toContain("topbar-nav");
+    });
 
     // it("renders with a topbar-btn aswell as a logout topbar-btn", () => {
     //     const topbarContent = {
