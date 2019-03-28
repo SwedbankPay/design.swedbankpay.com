@@ -8,6 +8,7 @@
     justify-content: center;
     align-items: center;
     padding: 0 1.25rem;
+    position: relative;
 
     .topbar-logo {
         height: 45px;
@@ -23,9 +24,9 @@
         background: none;
         font-weight: bold;
         display: flex;
+        position: absolute;
+        left: 1.25rem;
         padding: 0;
-        margin: 0 @topbar-padding;
-        margin-left: -44px; /* This offset equals the topbar-menu width including padding, if it changes this offset has to change so the logo is still centered [AW] */
         border: 0;
         outline: 0;
 
