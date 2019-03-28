@@ -4,7 +4,7 @@ export default class TopbarNav {
     constructor (topbarComponent) {
         this.topbar = topbarComponent;
         this.topbarNav = this.topbar.querySelector(".topbar-nav");
-        this.btnElement = this.topbar.querySelector(".topbar-menu");
+        this.btnElement = this.topbar.querySelector(".topbar-menu-button");
         this.closeNavIcon = this.topbar.querySelector(".close-topbar-nav");
         this.isOpen = false;
         this._initAnchors();

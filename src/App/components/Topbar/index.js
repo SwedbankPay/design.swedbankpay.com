@@ -7,7 +7,7 @@ const TopbarBtn = ({ icon, text }) => {
 
     if (icon || text) {
         return (
-            <button type="button" className="topbar-menu">{"\n\t\t"}
+            <button type="button" className="topbar-menu-button">{"\n\t\t"}
                     <>
                         <i className={iconClass}>{icon}</i>
                         {"\n\t\t"}
@@ -31,7 +31,7 @@ const TopbarMenu = ({ menu, logout }) => {
                         {"\n"}
                         <a href="#" className={item.name === "Home" ? "active" : null} onClick={e => e.preventDefault()}>
                             {"\n"}
-                            <i className="material-icons">{item.icon}</i>
+                            {item.icon ? <i className="material-icons">{item.icon}</i> : null}
                             {"\n"}
                             <span>{item.name}</span>
                             {"\n"}

@@ -8,7 +8,7 @@ import pkg from "~/package.json";
 
 const AppHeader = () => (
     <header className="topbar topbar-md-wide designguide-header">
-        <button type="button" className="topbar-menu">
+        <button type="button" className="topbar-menu-button">
             <i className="material-icons topbar-menu-icon">menu</i>
         </button>
         <a className="topbar-logo" href="/"></a>
