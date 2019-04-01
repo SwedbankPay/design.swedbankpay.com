@@ -1,25 +1,48 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
+import { shallow } from "enzyme";
 import NavMenu from "./NavMenu";
 
 describe("px-script: topbar - NavMenu", () => {
+    jest.useFakeTimers();
+
     const div = document.createElement("div");
 
     document.body.appendChild(div);
 
-    const Topbar = ({ navOpen, noBtnIcon }) => (
+    beforeEach(() => {
+        ReactDOM.unmountComponentAtNode(div);
+    });
+
+    const TopbarTest = ({ menuBtn, closeIcon, openNav }) => (
         <header className="topbar">
-            <button type="button" className="topbar-btn" data-toggle-nav="#topbar-nav">
-                {noBtnIcon ? null : <i className="material-icons topbar-btn-icon">menu</i>}
-                <span className="topbar-btn-text">Menu</span>
-            </button>
-            <nav id="topbar-nav" className={`topbar-nav${navOpen ? " in" : ""}`}>
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-            </nav>
+            {menuBtn ?
+                <button type="button" className="topbar-menu-button" data-toggle-nav="#topbar-nav">
+                    <i className="material-icons topbar-btn-icon">menu</i>
+                </button>
+                : null}
             <a href="#" className="topbar-logo"></a>
+            <nav className={`topbar-nav${openNav ? " d-block topbar-nav-open" : ""}`}>
+                <div className="topbar-link-container">
+                    {closeIcon ? <i className="material-icons close-topbar-nav">close</i> : null}
+                    <a href="#" className="active">
+                        <i className="material-icons">home</i>
+                        <span>Home</span>
+                    </a>
+                    <a href="#">
+                        <i className="material-icons">shopping_cart</i>
+                        <span>Purchase history</span>
+                    </a>
+                    <a href="#">
+                        <i className="material-icons">settings</i>
+                        <span>Settings</span>
+                    </a>
+                    <a className="topbar-link-right" href="#">
+                        <i className="material-icons">exit_to_app</i>
+                        <span>Log out</span>
+                    </a>
+                </div>
+            </nav>
             <button type="button" className="topbar-btn">
                 <i className="material-icons">exit_to_app</i>
                 <span className="topbar-btn-text">Log out</span>
@@ -31,172 +54,76 @@ describe("px-script: topbar - NavMenu", () => {
         expect(NavMenu).toBeDefined();
     });
 
-    test.todo("Update NavMenu tests");
+    it("creates a new instance with sent button and connected topbar-nav", () => {
+        ReactDOM.render(<TopbarTest menuBtn closeIcon />, div);
 
-    // it("creates a new instance with sent button and connected topbar-nav", () => {
-    //     ReactDOM.render(<Topbar />, div);
+        const topbar = document.querySelector(".topbar");
+        const newNavMenu = new NavMenu(topbar);
 
-    //     const topbar = document.querySelector(".topbar");
-    //     const navMenu = topbar.querySelector(".topbar-nav");
-    //     const newNavMenu = new NavMenu(topbar, navMenu);
+        expect(topbar).toBeTruthy();
+        expect(newNavMenu).toBeTruthy();
+    });
 
-    //     expect(topbar).toBeTruthy();
-    //     expect(navMenu).toBeTruthy();
-    //     expect(newNavMenu).toBeTruthy();
+    it("throws an error message if no closing icon exists", () => {
+        ReactDOM.render(<TopbarTest menuBtn />, div);
 
-    //     ReactDOM.unmountComponentAtNode(div);
-    // });
+        console.error = jest.fn();
 
-    // it("sets userIcon to null if no iconElement exists", () => {
-    //     ReactDOM.render(<Topbar noBtnIcon />, div);
+        const topbar = document.querySelector(".topbar");
 
-    //     const topbar = document.querySelector(".topbar");
-    //     const navMenu = topbar.querySelector(".topbar-nav");
-    //     const newNavMenu = new NavMenu(topbar, navMenu);
+        expect(topbar).toBeTruthy();
 
-    //     expect(topbar).toBeTruthy();
-    //     expect(navMenu).toBeTruthy();
-    //     expect(newNavMenu).toBeTruthy();
-    //     expect(newNavMenu.userIcon).toEqual(null);
+        new NavMenu(topbar);
 
-    //     ReactDOM.unmountComponentAtNode(div);
-    // });
+        expect(console.error).toHaveBeenCalledTimes(1);
+    });
 
-    // it("does not set icon value if no button icon exists when a nav gets opened", () => {
-    //     ReactDOM.render(<Topbar noBtnIcon />, div);
+    it("throws an error message if no menuBtn exists", () => {
+        ReactDOM.render(<TopbarTest closeIcon />, div);
 
-    //     const topbar = document.querySelector(".topbar");
-    //     const topbarBtn = topbar.querySelector(".topbar-btn");
-    //     const navMenu = topbar.querySelector(".topbar-nav");
-    //     const newNavMenu = new NavMenu(topbar, navMenu);
+        console.error = jest.fn();
 
-    //     expect(topbar).toBeTruthy();
-    //     expect(topbarBtn).toBeTruthy();
-    //     expect(navMenu).toBeTruthy();
-    //     expect(newNavMenu).toBeTruthy();
-    //     expect(newNavMenu.userIcon).toEqual(null);
-    //     expect(topbar.querySelector(".topbar-btn-icon")).toBeFalsy();
+        const topbar = document.querySelector(".topbar");
 
-    //     topbarBtn.click();
+        expect(topbar).toBeTruthy();
 
-    //     expect(topbar.querySelector(".topbar-btn-icon")).toBeFalsy();
-    //     // Not unmounting to keep state for next test. [AW]
-    // });
+        new NavMenu(topbar);
 
-    // // NB! Do not put new tests between these two as that will make the next test break. [AW]
+        expect(console.error).toHaveBeenCalledTimes(1);
+    });
 
-    // it("does not set icon value if no button icon exists when a nav gets closed", () => {
-    //     const topbar = document.querySelector(".topbar");
-    //     const topbarBtn = topbar.querySelector(".topbar-btn");
+    it("opens the topbar nav when the menu button is clicked", () => {
+        ReactDOM.render(<TopbarTest menuBtn closeIcon />, div);
 
-    //     expect(topbarBtn).toBeTruthy();
-    //     expect(topbar.querySelector(".topbar-btn-icon")).toBeFalsy();
+        const topbar = document.querySelector(".topbar");
+        const navMenu = topbar.querySelector(".topbar-nav");
+        const navMenuBtn = topbar.querySelector(".topbar-menu-button");
 
-    //     topbarBtn.click();
+        new NavMenu(topbar);
 
-    //     expect(topbar.querySelector(".topbar-btn-icon")).toBeFalsy();
+        expect(navMenu.classList.contains("topbar-nav-open")).toBeFalsy();
 
-    //     ReactDOM.unmountComponentAtNode(div);
-    // });
+        navMenuBtn.click();
+        jest.runAllTimers();
 
-    // it("prevents default and fires handleClick() when the topbar button connected to a nav is clicked", () => {
-    //     ReactDOM.render(<Topbar />, div);
+        expect(navMenu.classList).toContain("topbar-nav-open");
+    });
 
-    //     const topbar = document.querySelector(".topbar");
-    //     const navMenu = topbar.querySelector(".topbar-nav");
-    //     const navBtn = topbar.querySelector(".topbar-btn");
-    //     const newNavMenu = new NavMenu(topbar, navMenu);
+    it("closes the topbar nav when the menu button is clicked", () => {
+        ReactDOM.render(<TopbarTest menuBtn closeIcon openNav />, div);
 
-    //     newNavMenu.handleClick = jest.fn();
-    //     Event.prototype.preventDefault = jest.fn();
+        const topbar = document.querySelector(".topbar");
+        const navMenu = topbar.querySelector(".topbar-nav");
+        const navMenuBtn = topbar.querySelector(".topbar-menu-button");
+        const navInstance = new NavMenu(topbar);
 
-    //     expect(topbar).toBeTruthy();
-    //     expect(navMenu).toBeTruthy();
-    //     expect(navBtn).toBeTruthy();
-    //     expect(newNavMenu).toBeTruthy();
+        navInstance.isOpen = true;
 
-    //     navBtn.click();
+        expect(navMenu.classList.contains("topbar-nav-open")).toBeTruthy();
 
-    //     expect(newNavMenu.handleClick).toHaveBeenCalled();
-    //     expect(Event.prototype.preventDefault).toHaveBeenCalled();
+        navMenuBtn.click();
+        jest.runAllTimers();
 
-    //     ReactDOM.unmountComponentAtNode(div);
-    // });
-
-    // it("opens the menu when the topbar button is clicked", () => {
-    //     ReactDOM.render(<Topbar />, div);
-
-    //     const topbar = document.querySelector(".topbar");
-    //     const navMenu = topbar.querySelector(".topbar-nav");
-    //     const navBtn = topbar.querySelector(".topbar-btn");
-    //     const newNavMenu = new NavMenu(topbar, navMenu);
-
-    //     expect(topbar).toBeTruthy();
-    //     expect(navMenu).toBeTruthy();
-    //     expect(navBtn).toBeTruthy();
-    //     expect(newNavMenu).toBeTruthy();
-    //     expect(navMenu.classList).not.toContain("in");
-
-    //     navBtn.click();
-
-    //     expect(navMenu.classList).toContain("in");
-
-    //     // Not unmounting to keep state for next test. [AW]
-    // });
-
-    // // NB! Do not put new tests between these two as that will make the next test break. [AW]
-
-    // it("closes the menu when the nav menu is open and topbar button is clicked", () => {
-    //     const topbar = document.querySelector(".topbar");
-    //     const navMenu = topbar.querySelector(".topbar-nav");
-    //     const navBtn = topbar.querySelector(".topbar-btn");
-
-    //     expect(topbar).toBeTruthy();
-    //     expect(navMenu).toBeTruthy();
-    //     expect(navBtn).toBeTruthy();
-    //     expect(navMenu.classList).toContain("in");
-
-    //     navBtn.click();
-
-    //     expect(navMenu.classList).not.toContain("in");
-
-    //     ReactDOM.unmountComponentAtNode(div);
-    // });
-
-    // it("closes the menu when an anchor is clicked.", () => {
-    //     ReactDOM.render(<Topbar navOpen />, div);
-
-    //     const topbar = document.querySelector(".topbar");
-    //     const navMenu = topbar.querySelector(".topbar-nav");
-    //     const navAnchor = navMenu.querySelector("a");
-    //     const newNavMenu = new NavMenu(topbar, navMenu);
-
-    //     expect(topbar).toBeTruthy();
-    //     expect(navMenu).toBeTruthy();
-    //     expect(navAnchor).toBeTruthy();
-    //     expect(newNavMenu).toBeTruthy();
-    //     expect(navMenu.classList).toContain("in");
-
-    //     navAnchor.click();
-
-    //     expect(navMenu.classList).not.toContain("in");
-
-    //     ReactDOM.unmountComponentAtNode(div);
-    // });
-
-    // it("containsPoint is defined and can be called", () => {
-    //     ReactDOM.render(<Topbar />, div);
-
-    //     const topbar = document.querySelector(".topbar");
-    //     const navMenu = topbar.querySelector(".topbar-nav");
-    //     const newNavMenu = new NavMenu(topbar, navMenu);
-
-    //     expect(topbar).toBeTruthy();
-    //     expect(navMenu).toBeTruthy();
-    //     expect(newNavMenu).toBeTruthy();
-    //     expect(newNavMenu.containsPoint).toBeDefined();
-    //     expect(newNavMenu.containsPoint(0, 0)).toEqual(false);
-
-    //     ReactDOM.unmountComponentAtNode(div);
-    // });
+        expect(navMenu.classList).not.toContain("topbar-nav-open");
+    });
 });

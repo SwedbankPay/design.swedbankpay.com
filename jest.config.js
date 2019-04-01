@@ -9,7 +9,8 @@ module.exports = {
     coverageDirectory: "coverage",
     coverageReporters: [
         "json",
-        "lcov"
+        "lcov",
+        "text-summary"
     ],
     moduleNameMapper: {
         "\\.(svg)$": "<rootDir>/__mocks__/svgMock.js"

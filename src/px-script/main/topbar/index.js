@@ -19,7 +19,7 @@ const topbar = (() => {
 
                 // Close sheet on esc
                 document.addEventListener("keydown", e => {
-                    if (e.key === "Escape" && document.body.classList.contains("has-vscroll")) {
+                    if (e.key === "Escape" && navMenu.isOpen) {
                         navMenu.close();
                     }
                 });

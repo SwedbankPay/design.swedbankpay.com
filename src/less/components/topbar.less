@@ -61,6 +61,24 @@
 
             .topbar-link-container {
                 left: 0;
+
+                > a {
+                    span {
+                        margin-left: 2rem;
+                    }
+
+                    .material-icons + span {
+                        margin-left: 0;
+                    }
+                }
+
+                .topbar-link-right {
+                    margin: initial;
+
+                    .material-icons {
+                        margin: 0 0.5rem 0 0;
+                    }
+                }
             }
         }
 
@@ -83,18 +101,14 @@
                 cursor: pointer;
                 text-decoration: none;
                 display: flex;
+                margin: 1rem 0;
+                line-height: 1;
+                align-items: center;
 
-                &:not(.topbar-link-right) {
-                    margin: 1rem 0;
-                    line-height: 1;
-                    align-items: center;
-
-                    .material-icons {
-                        margin: 0 0.5rem 0 0;
-                        user-select: none;
-                    }
+                .material-icons {
+                    margin: 0 0.5rem 0 0;
+                    user-select: none;
                 }
-
 
                 &.active {
                     > span {
@@ -113,8 +127,17 @@
                 }
             }
 
+            .topbar-link-right {
+                margin-left: auto;
+
+                .material-icons {
+                    margin: 0 0 0 0.5rem;
+                }
+            }
+
             .close-topbar-nav {
                 position: absolute;
+                user-select: none;
                 top: 1.5rem;
                 right: 2rem;
 

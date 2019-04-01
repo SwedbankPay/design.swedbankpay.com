@@ -1,25 +1,30 @@
 import { isWithinBoundingBox, handleScrollbar } from "../utils";
 
-export default class TopbarNav {
+export default class NavMenu {
     constructor (topbarComponent) {
         this.topbar = topbarComponent;
         this.topbarNav = this.topbar.querySelector(".topbar-nav");
+        this.linkContainer = this.topbarNav.querySelector(".topbar-link-container");
         this.btnElement = this.topbar.querySelector(".topbar-menu-button");
         this.closeNavIcon = this.topbar.querySelector(".close-topbar-nav");
         this.isOpen = false;
         this._initAnchors();
 
-        this.btnElement.addEventListener("click", e => {
-            e.preventDefault();
-            this.handleClick();
-        });
+        try {
+            this.btnElement.addEventListener("click", e => {
+                e.preventDefault();
+                this.handleClick();
+            });
+        } catch (e) {
+            console.error("Topbar is missing a menu button");
+        }
 
         try {
             this.closeNavIcon.addEventListener("click", () => {
                 this.close();
             });
         } catch (e) {
-            console.error("The topbar nav is missing .close-topbar-nav");
+            console.error("Topbar is missing a close icon");
         }
     }
 
@@ -52,6 +57,6 @@ export default class TopbarNav {
     }
 
     containsPoint (x, y) {
-        return isWithinBoundingBox(x, y, this.topbarNav) || isWithinBoundingBox(x, y, this.btnElement);
+        return isWithinBoundingBox(x, y, this.linkContainer);
     }
 }
