@@ -42,26 +42,18 @@ class Dialog {
 
         // Init open buttons
         this.openBtns.forEach(btn => {
-            try {
-                btn.addEventListener("click", e => {
-                    e.preventDefault();
-                    this.open();
-                });
-            } catch (error) {
-                console.warn(`OPEN: No dialog with id ${this.id} was found, make sure the attribute data-dialog-open contains the correct id.`);
-            }
+            btn.addEventListener("click", e => {
+                e.preventDefault();
+                this.open();
+            });
         });
 
         // Init close buttons
         document.querySelectorAll(`[data-dialog-close=${this.id}]`).forEach(btn => {
-            try {
-                btn.addEventListener("click", e => {
-                    e.preventDefault();
-                    this.close();
-                });
-            } catch (error) {
-                console.warn(`Close: No dialog with id ${this.id} was found, make sure the attribute data-dialog-open contains the correct id.`);
-            }
+            btn.addEventListener("click", e => {
+                e.preventDefault();
+                this.close();
+            });
         });
     }
 
