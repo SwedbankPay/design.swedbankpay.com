@@ -58,7 +58,7 @@ const UsageWithJavascript = () => (
 
 class Dialog extends Component {
     componentDidMount () {
-        dialog.init();
+        // dialog.init();
     }
 
     render () {

@@ -1,4 +1,4 @@
-import { handleScrollbar } from "../utils";
+import { handleScrollbar, findElemsWithId } from "../utils";
 
 const SELECTORS = {
     DIALOG: ".dialog",
@@ -13,6 +13,11 @@ class Dialog {
         this.id = el.id;
         this.closeIcon = el.querySelector(SELECTORS.CLOSEICON);
         this.isOpen = el.classList.contains("d-flex");
+        this.openBtns = document.querySelectorAll(`[data-dialog-open=${this.id}]`);
+
+        if (!this.openBtns.length) {
+            console.warn(`No corresponding buttons found for dialog with id ${this.id}`);
+        }
 
         if (this.closeIcon) {
             this.closeIcon.addEventListener("click", e => {
@@ -34,6 +39,30 @@ class Dialog {
         this._el.addEventListener("click", e => {
             e.target.classList.contains("d-flex") ? this.close() : null;
         });
+
+        // Init open buttons
+        this.openBtns.forEach(btn => {
+            try {
+                btn.addEventListener("click", e => {
+                    e.preventDefault();
+                    this.open();
+                });
+            } catch (error) {
+                console.warn(`OPEN: No dialog with id ${this.id} was found, make sure the attribute data-dialog-open contains the correct id.`);
+            }
+        });
+
+        // Init close buttons
+        document.querySelectorAll(`[data-dialog-close=${this.id}]`).forEach(btn => {
+            try {
+                btn.addEventListener("click", e => {
+                    e.preventDefault();
+                    this.close();
+                });
+            } catch (error) {
+                console.warn(`Close: No dialog with id ${this.id} was found, make sure the attribute data-dialog-open contains the correct id.`);
+            }
+        });
     }
 
     open () {
@@ -49,51 +78,16 @@ class Dialog {
         this._el.classList.remove("d-flex");
         document.body.classList.remove("dialog-open");
     }
-
 }
 
 const dialog = (() => {
-    const init = () => {
-        const dialogEls = [...document.querySelectorAll(SELECTORS.DIALOG)];
+    const init = ids => {
+        const dialogEls = ids ? findElemsWithId(ids, "dialog") : document.querySelectorAll(".dialog");
 
         window.px._dialogs = window.px._dialogs || [];
 
         if (dialogEls.length) {
             dialogEls.forEach(dialog => window.px._dialogs.push(new Dialog(dialog)));
-
-            // Init open buttons
-            document.querySelectorAll(SELECTORS.OPEN).forEach(btn => {
-                const id = btn.dataset.dialogOpen;
-                let dialog;
-
-                window.px._dialogs.forEach(d => d.id === id ? dialog = d : null);
-
-                if (dialog) {
-                    btn.addEventListener("click", e => {
-                        e.preventDefault();
-                        dialog.open();
-                    });
-                } else {
-                    console.warn(`OPEN: No dialog with with id "${id}" was found, make sure the attribute data-dialog-open contains the correct id.`);
-                }
-            });
-
-            // Init close buttons
-            document.querySelectorAll(SELECTORS.CLOSE).forEach(btn => {
-                const id = btn.dataset.dialogClose;
-                let dialog;
-
-                window.px._dialogs.forEach(d => d.id === id ? dialog = d : null);
-
-                if (dialog) {
-                    btn.addEventListener("click", e => {
-                        e.preventDefault();
-                        dialog.close();
-                    });
-                } else {
-                    console.warn(`CLOSE: No dialog with with id "${id}" was found, make sure the attribute data-dialog-close contains the correct id.`);
-                }
-            });
         }
     };
 
