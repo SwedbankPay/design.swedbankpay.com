@@ -1,4 +1,4 @@
-import { handleScrollbar, findElemsWithId } from "../utils";
+import { handleScrollbar, getElementsById } from "../utils";
 
 const SELECTORS = {
     DIALOG: ".dialog",
@@ -16,7 +16,7 @@ class Dialog {
         this.openBtns = document.querySelectorAll(`[data-dialog-open=${this.id}]`);
 
         if (!this.openBtns.length) {
-            console.warn(`No corresponding buttons found for dialog with id ${this.id}`);
+            console.warn(`No corresponding open-button found for dialog with id ${this.id}`);
         }
 
         if (this.closeIcon) {
@@ -82,7 +82,7 @@ class Dialog {
 
 const dialog = (() => {
     const init = ids => {
-        const dialogEls = ids ? findElemsWithId(ids, "dialog") : document.querySelectorAll(".dialog");
+        const dialogEls = ids ? getElementsById(ids, "dialog") : document.querySelectorAll(".dialog");
 
         window.px._dialogs = window.px._dialogs || [];
 
