@@ -62,6 +62,7 @@ class Dialog extends Component {
     }
 
     render () {
+        console.log("render");
         return (
             <DocContainer docToc>
                 <p className="lead">

@@ -1,4 +1,4 @@
-import { handleScrollbar, getElementsById } from "../utils";
+import { handleScrollbar, getElementsByIds, updateInstanceArray } from "../utils";
 
 const SELECTORS = {
     DIALOG: ".dialog",
@@ -80,21 +80,33 @@ class Dialog {
     }
 }
 
+Dialog._dialogs = [];
+
 const dialog = (() => {
     const init = ids => {
-        const dialogEls = ids ? getElementsById(ids, "dialog") : document.querySelectorAll(".dialog");
-
-        window.px._dialogs = window.px._dialogs || [];
+        const dialogEls = ids ? getElementsByIds(ids, "dialog") : document.querySelectorAll(".dialog");
 
         if (dialogEls.length) {
-            dialogEls.forEach(dialog => window.px._dialogs.push(new Dialog(dialog)));
+            dialogEls.forEach(dialog => {
+                const newDialog = new Dialog(dialog);
+
+                if (Dialog._dialogs.length) {
+                    Dialog._dialogs.forEach((element, index) => {
+                        element.id === newDialog.id ? Dialog._dialogs[index] = newDialog : Dialog._dialogs.push(newDialog);
+                    });
+                } else {
+                    Dialog._dialogs.push(newDialog);
+                }
+            });
         }
+
+        console.log("INIT: ", Dialog._dialogs);
     };
 
     const close = id => {
         let dialog = null;
 
-        window.px._dialogs.forEach(d => d.id === id ? dialog = d : null);
+        dialogInstances.forEach(d => d.id === id ? dialog = d : null);
 
         try {
             dialog.close();
@@ -110,7 +122,7 @@ const dialog = (() => {
     const open = id => {
         let dialog = null;
 
-        window.px._dialogs.forEach(d => d.id === id ? dialog = d : null);
+        Dialog._dialogs.forEach(d => d.id === id ? dialog = d : null);
 
         try {
             dialog.open();
@@ -123,10 +135,13 @@ const dialog = (() => {
         return dialog;
     };
 
+    const getDialogs = () => Dialog._dialogs;
+
     return {
         init,
         close,
-        open
+        open,
+        getDialogs
     };
 })();
 
