@@ -46,8 +46,8 @@ module.exports = (env, argv) => {
             port: 3000,
             hot: true,
             clientLogLevel: "warning",
-            historyApiFallback: true
-            // disableHostCheck: true
+            historyApiFallback: true,
+            disableHostCheck: true /* Temporary fix for the websocket issue with webpack dev server on IE11 [AW] */
         },
         module: {
             rules: [
