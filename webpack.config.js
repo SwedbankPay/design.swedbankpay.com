@@ -4,7 +4,7 @@ const webpack = require("webpack");
 const appRoutes = require("./tools/generate-routes-copy-array");
 const levelsToRoot = require("./tools/levels-to-root");
 const autoprefixer = require("autoprefixer");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 const SentryCliPlugin = require("@sentry/webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FileManagerPlugin = require("filemanager-webpack-plugin");
@@ -47,6 +47,7 @@ module.exports = (env, argv) => {
             hot: true,
             clientLogLevel: "warning",
             historyApiFallback: true
+            // disableHostCheck: true
         },
         module: {
             rules: [
@@ -57,7 +58,12 @@ module.exports = (env, argv) => {
                         !(/node_modules\/*/).test(modulePath) &&
                         (/__snapshots__/).test(modulePath)
                     ),
-                    loader: "babel-loader"
+                    use: {
+                        loader: "babel-loader",
+                        options: {
+                            presets: ["@babel/preset-env"]
+                        }
+                    }
                 },
                 {
                     test: /\.less$/,
@@ -193,10 +199,10 @@ module.exports = (env, argv) => {
             },
             minimize: isProd,
             minimizer: [
-                new UglifyJsPlugin({
+                new TerserPlugin({
                     sourceMap: true,
-                    uglifyOptions: {
-                        compress: { pure_funcs: ["console.log"] }
+                    terserOptions: {
+                        compress: { drop_console: true }
                     }
                 }),
                 new OptimizeCSSAssetsPlugin()
