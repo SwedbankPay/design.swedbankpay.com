@@ -1,3 +1,5 @@
+import { handleScrollbar } from "../utils";
+
 const SELECTORS = {
     DIALOG: ".dialog",
     CLOSE: "[data-dialog-close]",
@@ -12,6 +14,7 @@ class Dialog {
         this.closeIcon = el.querySelector(SELECTORS.CLOSEICON);
         this.isOpen = el.classList.contains("d-flex");
         this.openBtns = document.querySelectorAll(`[data-dialog-open=${this.id}]`);
+        this.closeBtns = document.querySelectorAll(`[data-dialog-close=${this.id}]`);
 
         if (!this.openBtns.length) {
             console.warn(`No corresponding open-button found for dialog with id ${this.id}`);
@@ -51,7 +54,7 @@ class Dialog {
         });
 
         // Init close buttons
-        document.querySelectorAll(`[data-dialog-close=${this.id}]`).forEach(btn => {
+        this.closeBtns.forEach(btn => {
             try {
                 btn.addEventListener("click", e => {
                     e.preventDefault();
@@ -64,14 +67,14 @@ class Dialog {
     }
 
     open () {
-        px.utils.handleScrollbar();
+        handleScrollbar();
         this.isOpen = true;
         this._el.classList.add("d-flex");
         document.body.classList.add("dialog-open");
     }
 
     close () {
-        px.utils.handleScrollbar();
+        handleScrollbar();
         this.isOpen = false;
         this._el.classList.remove("d-flex");
         document.body.classList.remove("dialog-open");
