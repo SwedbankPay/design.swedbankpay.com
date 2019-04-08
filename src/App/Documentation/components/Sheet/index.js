@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 import { ComponentPreview, DocContainer, Icon } from "#";
-import { sheet } from "$/px-script/main";
 
 const Example = () => (
     <>
@@ -80,7 +79,7 @@ const UsageWithJavascript = () => (
 
 class Sheet extends Component {
     componentDidMount () {
-        sheet.init();
+        px.sheet.init();
     }
 
     render () {

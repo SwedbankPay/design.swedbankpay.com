@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
 import { ComponentPreview, DocContainer, Property } from "#";
-import { tabs } from "$/px-script/main";
 import TabsComponent from "@/Tabs";
 
 const tabItems = ["Kort", "Rabatter", "Transaksjoner", "Faktura", "Instillinger", "Audit trail"];
@@ -30,7 +29,7 @@ const Collapsed = () => (
 
 class Tabs extends Component {
     componentDidMount () {
-        tabs.init();
+        px.tabs.init();
     }
 
     render () {

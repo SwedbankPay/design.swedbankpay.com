@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 import { ComponentPreview, DocContainer, Icon, Property } from "#";
-import actionList from "$/px-script/main/action-list";
 
 const BasicList = () => (
     <>
@@ -185,7 +184,7 @@ const StripedItemList = () => (
 
 class Lists extends Component {
     componentDidMount () {
-        actionList.init();
+        px.actionList.init();
     }
 
     render () {

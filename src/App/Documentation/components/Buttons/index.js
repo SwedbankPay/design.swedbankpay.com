@@ -5,7 +5,6 @@ import PrismCode from "react-prism";
 import { ComponentPreview, Attribute, Property, DocContainer } from "#";
 import ButtonComponent from "@/Button";
 import Alert from "@/Alert";
-import { button } from "$/px-script/main";
 
 const Examples = () => (
     <>
@@ -215,7 +214,7 @@ const ButtonLoader = () => (
 
 class Buttons extends Component {
     componentDidMount () {
-        button.init();
+        px.button.init();
     }
 
     render () {

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer, Attribute } from "#";
-import { toast } from "$/px-script/main";
 import Alert from "@/Alert";
 
 const Overview = () => (
@@ -16,7 +15,7 @@ const Overview = () => (
             {"<button onclick=\"px.toast({ html: 'I am a toast!' })\" class=\"btn btn-primary\">Toast!</button>"}
         </ComponentPreview>
         <ComponentPreview language="html" showCasePanel>
-            <button className="btn btn-primary" type="button" onClick={() => toast({ html: "I am a toast!" })}>Click for toast!</button>
+            <button className="btn btn-primary" type="button" onClick={() => px.toast({ html: "I am a toast!" })}>Click for toast!</button>
         </ComponentPreview>
         <Alert type="warning">
             <h5>Content restriction</h5>
@@ -103,7 +102,7 @@ const PremadeToasts = () => (
             <button
                 className="btn btn-primary"
                 type="button"
-                onClick={() => toast({
+                onClick={() => px.toast({
                     html: "I am a toast!",
                     type: "neutral"
                 })}
@@ -113,7 +112,7 @@ const PremadeToasts = () => (
             <button
                 className="btn btn-primary"
                 type="button"
-                onClick={() => toast({
+                onClick={() => px.toast({
                     html: "I am a toast!",
                     type: "success"
                 })}
@@ -123,7 +122,7 @@ const PremadeToasts = () => (
             <button
                 className="btn btn-primary"
                 type="button"
-                onClick={() => toast({
+                onClick={() => px.toast({
                     html: "I am a toast!",
                     type: "warning"
                 })}
@@ -133,7 +132,7 @@ const PremadeToasts = () => (
             <button
                 className="btn btn-primary"
                 type="button"
-                onClick={() => toast({
+                onClick={() => px.toast({
                     html: "I am a toast!",
                     type: "danger"
                 })}

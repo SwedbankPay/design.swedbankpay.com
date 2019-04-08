@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import PrismCode from "react-prism";
 
 import { ComponentPreview, DocContainer, Attribute, Property } from "#";
-import { rangeslider, validation } from "$/px-script/main";
 import InputGroup from "@/InputGroup";
 import Button from "@/Button";
 import { Checkbox, FormControlText, Radio, Rangeslider, Togglebox } from "@/FormComponents";
@@ -302,8 +301,8 @@ const DisabledFormComponents = () => (
 
 class Forms extends Component {
     componentDidMount () {
-        rangeslider.init();
-        validation.init();
+        px.rangeslider.init();
+        px.validation.init();
     }
 
     render () {

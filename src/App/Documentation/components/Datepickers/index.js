@@ -3,7 +3,6 @@ import { NavHashLink as NavLink } from "react-router-hash-link";
 
 import { ComponentPreview, Attribute, Property, DocContainer } from "#";
 import { Datepicker as DatepickerComponent } from "@/FormComponents";
-import { datepicker } from "$/px-script/main";
 import Alert from "@/Alert";
 
 const AboutDatepickers = () => (
@@ -387,7 +386,7 @@ const Options = () => (
 
 class Datepickers extends Component {
     componentDidMount () {
-        datepicker.init();
+        px.datepicker.init();
     }
 
     render () {

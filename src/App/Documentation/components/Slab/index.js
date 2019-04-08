@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 import { ComponentPreview, DocContainer } from "#";
-import { validation } from "$/px-script/main/";
 
 const DefaultSlab = () => (
     <>
@@ -145,7 +144,7 @@ const SlabCombinations = () => (
 
 class Slab extends Component {
     componentDidMount () {
-        validation.init();
+        px.validation.init();
     }
 
     render () {

@@ -5,7 +5,6 @@ import PrismCode from "react-prism";
 import { ComponentPreview, Attribute, Property, DocContainer } from "#";
 
 import AlertComponent from "@/Alert";
-import { alert } from "$/px-script/main";
 
 const BasicUsage = () => (
     <>
@@ -76,7 +75,7 @@ const ExtendedUsage = () => (
 
 class Alerts extends Component {
     componentDidMount () {
-        alert.init();
+        px.alert.init();
     }
 
     render () {

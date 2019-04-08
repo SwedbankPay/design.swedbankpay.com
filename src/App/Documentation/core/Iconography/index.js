@@ -3,7 +3,6 @@ import PrismCode from "react-prism";
 
 import { ComponentPreview, DocContainer, Property, Icon } from "#";
 import IconPreview from "@/IconPreview";
-import actionList from "$/px-script/main/action-list";
 
 const MaterialIcons = () => (
     <>
@@ -219,7 +218,7 @@ const Flags = () => (
 
 class Icons extends Component {
     componentDidMount () {
-        actionList.init();
+        px.actionList.init();
     }
 
     render () {

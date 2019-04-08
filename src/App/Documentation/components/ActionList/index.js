@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 import { ComponentPreview, DocContainer, Icon } from "#";
-import actionList from "$/px-script/main/action-list";
 
 const Overview = () => (
     <>
@@ -69,7 +68,7 @@ const Anchorpoints = () => (
 
 class ActionList extends Component {
     componentDidMount () {
-        actionList.init();
+        px.actionList.init();
     }
 
     render () {

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 import { ComponentPreview, Attribute, DocContainer, Property } from "#";
 import LoaderComponent from "@/Loader";
-import { loader } from "$/px-script/main";
 
 const BasicUsage = () => (
     <>
@@ -60,7 +59,7 @@ const StaticHtml = () => (
 
 class Loaders extends Component {
     componentDidMount () {
-        loader.init();
+        px.loader.init();
     }
 
     render () {
