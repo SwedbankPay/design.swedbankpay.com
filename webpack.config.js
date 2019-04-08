@@ -216,8 +216,7 @@ module.exports = (env, argv) => {
                 title: "PayEx DesignGuide",
                 meta: {
                     "informational-version": infoVersion
-                },
-                excludeChunks: ["px-script", "px.dashboard"]
+                }
             }),
             new MiniCssExtractPlugin({
                 filename: "styles/[name].css"

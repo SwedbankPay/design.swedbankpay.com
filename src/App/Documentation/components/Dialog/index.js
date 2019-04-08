@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer, Icon, Attribute } from "#";
-import { dialog } from "$/px-script/main";
 
 const Example = () => (
     <>
@@ -58,11 +57,10 @@ const UsageWithJavascript = () => (
 
 class Dialog extends Component {
     componentDidMount () {
-        dialog.init();
+        px.dialog.init();
     }
 
     render () {
-        console.log("render");
         return (
             <DocContainer docToc>
                 <p className="lead">

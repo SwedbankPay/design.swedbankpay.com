@@ -51,10 +51,10 @@ const datepicker = (() => {
     const init = () => {
         const datepickers = document.querySelectorAll("[data-datepicker]");
 
-        window.px._datepickers = window.px._datepickers || [];
+        const _datepickers = _datepickers || [];
 
         if (datepickers.length) {
-            datepickers.forEach(picker => window.px._datepickers.push(_createDatepicker(picker)));
+            datepickers.forEach(picker => _datepickers.push(_createDatepicker(picker)));
         }
     };
 

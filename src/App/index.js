@@ -64,10 +64,6 @@ class App extends Component {
         }
     }
 
-    shouldComponentUpdate () {
-        console.log("update?");
-    }
-
     render () {
         return (
             <Router basename={BASENAME} history={history}>

@@ -1,5 +1,3 @@
-import { handleScrollbar, getElementsByIds, updateInstanceArray } from "../utils";
-
 const SELECTORS = {
     DIALOG: ".dialog",
     CLOSE: "[data-dialog-close]",
@@ -66,47 +64,43 @@ class Dialog {
     }
 
     open () {
-        handleScrollbar();
+        px.utils.handleScrollbar();
         this.isOpen = true;
         this._el.classList.add("d-flex");
         document.body.classList.add("dialog-open");
     }
 
     close () {
-        handleScrollbar();
+        px.utils.handleScrollbar();
         this.isOpen = false;
         this._el.classList.remove("d-flex");
         document.body.classList.remove("dialog-open");
     }
 }
 
-Dialog._dialogs = [];
-
 const dialog = (() => {
     const init = ids => {
-        const dialogEls = ids ? getElementsByIds(ids, "dialog") : document.querySelectorAll(".dialog");
+        const dialogEls = ids || ids === "" ? px.utils.getElementsByIds(ids, "dialog") : document.querySelectorAll(".dialog");
 
         if (dialogEls.length) {
             dialogEls.forEach(dialog => {
                 const newDialog = new Dialog(dialog);
 
-                if (Dialog._dialogs.length) {
-                    Dialog._dialogs.forEach((element, index) => {
-                        element.id === newDialog.id ? Dialog._dialogs[index] = newDialog : Dialog._dialogs.push(newDialog);
+                if (_dialogs.length) {
+                    _dialogs.forEach((element, index) => {
+                        element.id === newDialog.id ? _dialogs[index] = newDialog : _dialogs.push(newDialog);
                     });
                 } else {
-                    Dialog._dialogs.push(newDialog);
+                    _dialogs.push(newDialog);
                 }
             });
         }
-
-        console.log("INIT: ", Dialog._dialogs);
     };
 
     const close = id => {
         let dialog = null;
 
-        dialogInstances.forEach(d => d.id === id ? dialog = d : null);
+        _dialogs.forEach(d => d.id === id ? dialog = d : null);
 
         try {
             dialog.close();
@@ -122,7 +116,7 @@ const dialog = (() => {
     const open = id => {
         let dialog = null;
 
-        Dialog._dialogs.forEach(d => d.id === id ? dialog = d : null);
+        _dialogs.forEach(d => d.id === id ? dialog = d : null);
 
         try {
             dialog.open();
@@ -135,14 +129,13 @@ const dialog = (() => {
         return dialog;
     };
 
-    const getDialogs = () => Dialog._dialogs;
-
     return {
         init,
         close,
-        open,
-        getDialogs
+        open
     };
 })();
+
+const _dialogs = _dialogs || [];
 
 export default dialog;
