@@ -155,7 +155,7 @@ const CustomHtml = () => {
                 {"px.toast({ html: toastHtml });"}
             </ComponentPreview>
             <ComponentPreview language="html" showCasePanel>
-                <button className="btn btn-primary" type="button" onClick={() => toast({ html: toastHtml })}>Toast with action</button>
+                <button className="btn btn-primary" type="button" onClick={() => px.toast({ html: toastHtml })}>Toast with action</button>
             </ComponentPreview>
         </>
     );

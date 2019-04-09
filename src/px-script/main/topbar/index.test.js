@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
-import topbar from "./index";
 import NavMenu from "./NavMenu";
+import topbar from "./index";
 
 jest.mock("./NavMenu");
 
@@ -50,14 +49,14 @@ describe("px-script: topbar", () => {
         </header>
     );
 
-    it("is defined", () => {
-        expect(topbar).toBeDefined();
-    });
+    // it("is defined", () => {
+    //     expect(topbar).toBeDefined();
+    // });
 
-    it("has an init method", () => {
-        expect(topbar.init).toBeDefined();
-        expect(topbar.init).toBeInstanceOf(Function);
-    });
+    // it("has an init method", () => {
+    //     expect(topbar.init).toBeDefined();
+    //     expect(topbar.init).toBeInstanceOf(Function);
+    // });
 
     // it("does not generate NavMenu instances if no .topbar exists", () => {
     //     ReactDOM.render(<NoTopbar />, div);
@@ -77,17 +76,17 @@ describe("px-script: topbar", () => {
 
     // });
 
-    // it("generates NavMenu instances if .topbar exists", () => {
-    //     ReactDOM.render(<Topbar />, div);
-    //     // topbar.NavMenu = jest.fn();
-    //     topbar.init();
+    it("generates NavMenu instances if .topbar-nav exists", () => {
+        ReactDOM.render(<Topbar />, div);
 
-    //     console.log(NavMenu);
+        topbar.init();
 
-    //     expect(topbar.NavMenu).toHaveBeenCalled();
-    //     // expect(NavMenu.mock.instances[0]).toBeTruthy();
+        // console.log(NavMenu);
 
-    // });
+        expect(NavMenu).toHaveBeenCalled();
+        // expect(NavMenu.mock.instances[0]).toBeTruthy();
+        ReactDOM.unmountComponentAtNode(div);
+    });
 
     // it("closes navMenu on mousedown if the nav menu is open and you don't click inside", () => {
     //     ReactDOM.render(<Topbar />, div);
@@ -107,5 +106,5 @@ describe("px-script: topbar", () => {
     //     expect(NavMenuInst.containsPoint).toHaveBeenCalled();
     //     expect(NavMenuInst.close).toHaveBeenCalled();
     // });
-    test.todo("Update topbar navmenu tests");
+    // test.todo("Update topbar navmenu tests");
 });

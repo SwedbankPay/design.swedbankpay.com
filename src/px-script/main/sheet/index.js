@@ -25,7 +25,7 @@ class Sheet {
         }
 
         if (this.isOpen) {
-            px.utils.handleScrollbar();
+            handleScrollbar();
             this._el.classList.add("d-block");
             document.body.classList.add("sheet-open");
         }
@@ -33,42 +33,8 @@ class Sheet {
         // Close the sheet when clicking outside
         this._el.addEventListener("click", e => {
             if (e.target.classList.contains("sheet-open")) {
-                px.utils.handleScrollbar();
+                handleScrollbar();
                 this.close();
-            }
-        });
-
-        // Init open buttons
-        this.openBtns.forEach(btn => {
-            const id = btn.dataset.sheetOpen;
-            let sheet;
-
-            _sheets.forEach(s => s.id === id ? sheet = s : null);
-
-            if (sheet) {
-                btn.addEventListener("click", e => {
-                    e.preventDefault();
-                    sheet.open();
-                });
-            } else {
-                console.warn(`OPEN: No sheet with with id ${id} was found, make sure the attribute data-sheet-open contains the correct id.`);
-            }
-        });
-
-        // Init close buttons
-        this.closeBtns.forEach(btn => {
-            const id = btn.dataset.sheetClose;
-            let sheet;
-
-            _sheets.forEach(s => s.id === id ? sheet = s : null);
-
-            if (sheet) {
-                btn.addEventListener("click", e => {
-                    e.preventDefault();
-                    sheet.close();
-                });
-            } else {
-                console.warn(`CLOSE: No sheet with with id ${id} was found, make sure the attribute data-sheet-close contains the correct id.`);
             }
         });
     }
@@ -106,7 +72,9 @@ const sheet = (() => {
         const sheetEls = [...document.querySelectorAll(SELECTORS.SHEET)];
 
         if (sheetEls.length) {
-            sheetEls.forEach(sheet => _sheets.push(new Sheet(sheet)));
+            sheetEls.forEach(sheet => {
+                _sheets.push(new Sheet(sheet));
+            });
         }
 
         // Close sheet on esc
@@ -114,6 +82,40 @@ const sheet = (() => {
             if (e.keyCode === 27 && document.body.classList.contains("sheet-open")) {
                 handleScrollbar();
                 _sheets.forEach(sheet => sheet.isOpen ? sheet.close() : null);
+            }
+        });
+
+        // Init open buttons
+        document.querySelectorAll(SELECTORS.OPEN).forEach(btn => {
+            const id = btn.dataset.sheetOpen;
+            let sheet;
+
+            _sheets.forEach(s => s.id === id ? sheet = s : null);
+
+            if (sheet) {
+                btn.addEventListener("click", e => {
+                    e.preventDefault();
+                    sheet.open();
+                });
+            } else {
+                console.warn(`OPEN: No sheet with with id ${id} was found, make sure the attribute data-sheet-open contains the correct id.`);
+            }
+        });
+
+        // Init close buttons
+        document.querySelectorAll(SELECTORS.CLOSE).forEach(btn => {
+            const id = btn.dataset.sheetClose;
+            let sheet;
+
+            _sheets.forEach(s => s.id === id ? sheet = s : null);
+
+            if (sheet) {
+                btn.addEventListener("click", e => {
+                    e.preventDefault();
+                    sheet.close();
+                });
+            } else {
+                console.warn(`CLOSE: No sheet with with id ${id} was found, make sure the attribute data-sheet-close contains the correct id.`);
             }
         });
     };
@@ -160,5 +162,6 @@ const sheet = (() => {
 })();
 
 const _sheets = _sheets || [];
+// console.log(_sheets);
 
 export default sheet;

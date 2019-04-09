@@ -10,7 +10,6 @@ const topbar = (() => {
 
             if (navMenu) {
                 navMenu = new NavMenu(topbarComponent, navMenu);
-
                 document.querySelector("html").addEventListener("mousedown", e => {
                     if (navMenu.isOpen && !navMenu.containsPoint(e.clientX, e.clientY)) {
                         navMenu.close();
