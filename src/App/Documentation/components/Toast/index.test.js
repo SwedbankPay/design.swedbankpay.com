@@ -3,10 +3,11 @@ import { shallow } from "enzyme";
 
 import Toast, { Overview, PremadeToasts, Options, CustomHtml } from "./index";
 
+px.toast = jest.fn();
+
 describe("Components: Toast", () => {
     beforeEach(() => {
-        px.toast = jest.fn();
-        // px.toast.mockClear();
+        px.toast.mockClear();
     });
 
     it("is defined", () => {

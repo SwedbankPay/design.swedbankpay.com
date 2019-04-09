@@ -1,5 +1,4 @@
 module.exports = {
-    rootDir: "./src/px-script",
     collectCoverage: true,
     collectCoverageFrom: [
         "*.{js,jsx}",
@@ -15,7 +14,7 @@ module.exports = {
         "\\.(svg)$": "<rootDir>/__mocks__/svgMock.js"
     },
     setupFiles: [
-        "./jest.setup.px.js"
+        "./jest.setup.js"
     ],
     snapshotSerializers: [
         "enzyme-to-json/serializer"

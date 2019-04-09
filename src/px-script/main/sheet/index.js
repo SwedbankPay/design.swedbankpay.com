@@ -162,6 +162,5 @@ const sheet = (() => {
 })();
 
 const _sheets = _sheets || [];
-// console.log(_sheets);
 
 export default sheet;

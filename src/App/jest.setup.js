@@ -1,7 +1,7 @@
 import { configure, shallow, render, mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 
-import px from "./src/px-script/main";
+import px from "../px-script/main";
 
 global.px = px;
 

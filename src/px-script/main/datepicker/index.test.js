@@ -6,7 +6,7 @@ import datepicker from "./index";
 import Datepicker from "@/FormComponents/Datepicker";
 import formats from "./formats";
 
-jest.fn("flatpickr");
+jest.mock("flatpickr");
 
 describe("px-script: datepicker", () => {
     const div = document.createElement("div");
