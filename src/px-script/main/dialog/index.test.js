@@ -138,22 +138,6 @@ describe("px-script: dialog", () => {
         expect(console.warn).toHaveBeenCalledWith(expect.stringContaining("test-dialog"));
     });
 
-    it("closes dialog when clicking outside dialog component", () => {
-        ReactDOM.render(<OpenDialog />, div);
-
-        const renderedDialog = document.querySelector(".dialog");
-
-        expect(renderedDialog.classList).toContain("d-flex");
-
-        dialog.init();
-        expect(document.body.classList).toContain("dialog-open");
-
-        renderedDialog.click();
-
-        expect(renderedDialog.classList).not.toContain("d-flex");
-        expect(document.body.classList).not.toContain("dialog-open");
-    });
-
     it("closes dialog when clicking the close icon", () => {
         ReactDOM.render(<OpenDialog />, div);
 
@@ -166,46 +150,6 @@ describe("px-script: dialog", () => {
         expect(document.body.classList).toContain("dialog-open");
 
         closeIcon.click();
-
-        expect(renderedDialog.classList).not.toContain("d-flex");
-        expect(document.body.classList).not.toContain("dialog-open");
-    });
-
-    it("does not close dialog when pressing keys other than esc", () => {
-        ReactDOM.render(<OpenDialog />, div);
-
-        const renderedDialog = document.querySelector(".dialog");
-
-        expect(renderedDialog.classList).toContain("d-flex");
-
-        dialog.init();
-        expect(document.body.classList).toContain("dialog-open");
-
-        // Simulate keypress
-        const e = new Event("keydown");
-
-        e.keyCode = 13; // Enter
-        document.dispatchEvent(e);
-
-        expect(renderedDialog.classList).toContain("d-flex");
-        expect(document.body.classList).toContain("dialog-open");
-    });
-
-    it("closes dialog when pressing esc", () => {
-        ReactDOM.render(<OpenDialog />, div);
-
-        const renderedDialog = document.querySelector(".dialog");
-
-        expect(renderedDialog.classList).toContain("d-flex");
-
-        dialog.init();
-        expect(document.body.classList).toContain("dialog-open");
-
-        // Simulate keypress
-        const e = new Event("keydown");
-
-        e.keyCode = 27; // Esc
-        document.dispatchEvent(e);
 
         expect(renderedDialog.classList).not.toContain("d-flex");
         expect(document.body.classList).not.toContain("dialog-open");

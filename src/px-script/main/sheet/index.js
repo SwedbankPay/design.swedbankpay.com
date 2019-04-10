@@ -75,49 +75,50 @@ const sheet = (() => {
             sheetEls.forEach(sheet => {
                 _sheets.push(new Sheet(sheet));
             });
+
+            // Close sheet on esc
+            document.addEventListener("keydown", e => {
+                if (e.keyCode === 27 && document.body.classList.contains("sheet-open")) {
+                    handleScrollbar();
+                    _sheets.forEach(sheet => sheet.isOpen ? sheet.close() : null);
+                }
+            });
+
+            // Init open buttons
+            document.querySelectorAll(SELECTORS.OPEN).forEach(btn => {
+                const id = btn.dataset.sheetOpen;
+                let sheet;
+
+                _sheets.forEach(s => s.id === id ? sheet = s : null);
+
+                if (sheet) {
+                    btn.addEventListener("click", e => {
+                        e.preventDefault();
+                        sheet.open();
+                    });
+                } else {
+                    console.warn(`OPEN: No sheet with with id ${id} was found, make sure the attribute data-sheet-open contains the correct id.`);
+                }
+            });
+
+            // Init close buttons
+            document.querySelectorAll(SELECTORS.CLOSE).forEach(btn => {
+                const id = btn.dataset.sheetClose;
+                let sheet;
+
+                _sheets.forEach(s => s.id === id ? sheet = s : null);
+
+                if (sheet) {
+                    btn.addEventListener("click", e => {
+                        e.preventDefault();
+                        sheet.close();
+                    });
+                } else {
+                    console.warn(`CLOSE: No sheet with with id ${id} was found, make sure the attribute data-sheet-close contains the correct id.`);
+                }
+            });
         }
 
-        // Close sheet on esc
-        document.addEventListener("keydown", e => {
-            if (e.keyCode === 27 && document.body.classList.contains("sheet-open")) {
-                handleScrollbar();
-                _sheets.forEach(sheet => sheet.isOpen ? sheet.close() : null);
-            }
-        });
-
-        // Init open buttons
-        document.querySelectorAll(SELECTORS.OPEN).forEach(btn => {
-            const id = btn.dataset.sheetOpen;
-            let sheet;
-
-            _sheets.forEach(s => s.id === id ? sheet = s : null);
-
-            if (sheet) {
-                btn.addEventListener("click", e => {
-                    e.preventDefault();
-                    sheet.open();
-                });
-            } else {
-                console.warn(`OPEN: No sheet with with id ${id} was found, make sure the attribute data-sheet-open contains the correct id.`);
-            }
-        });
-
-        // Init close buttons
-        document.querySelectorAll(SELECTORS.CLOSE).forEach(btn => {
-            const id = btn.dataset.sheetClose;
-            let sheet;
-
-            _sheets.forEach(s => s.id === id ? sheet = s : null);
-
-            if (sheet) {
-                btn.addEventListener("click", e => {
-                    e.preventDefault();
-                    sheet.close();
-                });
-            } else {
-                console.warn(`CLOSE: No sheet with with id ${id} was found, make sure the attribute data-sheet-close contains the correct id.`);
-            }
-        });
     };
 
     const close = id => {

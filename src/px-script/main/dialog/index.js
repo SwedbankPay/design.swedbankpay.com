@@ -30,40 +30,6 @@ class Dialog {
         if (this.isOpen) {
             document.body.classList.add("dialog-open");
         }
-
-        // Close dialog on esc
-        document.addEventListener("keydown", e => {
-            e.keyCode === 27 ? this.close() : null;
-        });
-
-        // Close the dialog when clicking outside
-        this._el.addEventListener("click", e => {
-            e.target.classList.contains("d-flex") ? this.close() : null;
-        });
-
-        // Init open buttons
-        this.openBtns.forEach(btn => {
-            try {
-                btn.addEventListener("click", e => {
-                    e.preventDefault();
-                    this.open();
-                });
-            } catch (error) {
-                console.warn(`OPEN: No dialog with id ${this.id} was found, make sure the attribute data-dialog-open contains the correct id.`);
-            }
-        });
-
-        // Init close buttons
-        this.closeBtns.forEach(btn => {
-            try {
-                btn.addEventListener("click", e => {
-                    e.preventDefault();
-                    this.close();
-                });
-            } catch (error) {
-                console.warn(`Close: No dialog with id ${this.id} was found, make sure the attribute data-dialog-open contains the correct id.`);
-            }
-        });
     }
 
     open () {
@@ -95,6 +61,40 @@ const dialog = (() => {
                     });
                 } else {
                     _dialogs.push(newDialog);
+                }
+            });
+
+            // Init open buttons
+            document.querySelectorAll(SELECTORS.OPEN).forEach(btn => {
+                const id = btn.dataset.dialogOpen;
+                let dialog;
+
+                _dialogs.forEach(d => d.id === id ? dialog = d : null);
+
+                if (dialog) {
+                    btn.addEventListener("click", e => {
+                        e.preventDefault();
+                        dialog.open();
+                    });
+                } else {
+                    console.warn(`OPEN: No dialog with with id "${id}" was found, make sure the attribute data-dialog-open contains the correct id.`);
+                }
+            });
+
+            // Init close buttons
+            document.querySelectorAll(SELECTORS.CLOSE).forEach(btn => {
+                const id = btn.dataset.dialogClose;
+                let dialog;
+
+                _dialogs.forEach(d => d.id === id ? dialog = d : null);
+
+                if (dialog) {
+                    btn.addEventListener("click", e => {
+                        e.preventDefault();
+                        dialog.close();
+                    });
+                } else {
+                    console.warn(`CLOSE: No dialog with with id "${id}" was found, make sure the attribute data-dialog-close contains the correct id.`);
                 }
             });
         }
