@@ -9,7 +9,6 @@
         "build": "webpack --mode development",
         "build:prod": "webpack --mode production",
         "test": "jest",
-        "test:script": "jest -c jest.config.px.js",
         "test:update": "jest --updateSnapshot",
         "test:codecov": "jest && codecov",
         "eslint": "eslint src/**/*.js",

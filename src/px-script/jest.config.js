@@ -1,18 +1,7 @@
 module.exports = {
-    collectCoverage: true,
     collectCoverageFrom: [
-        "*.{js,jsx}",
-        "!src/index.js",
-        "!src/polyfills/**/*.js"
+        "**/*.{js,jsx}"
     ],
-    coverageDirectory: "coverage",
-    coverageReporters: [
-        "json",
-        "lcov"
-    ],
-    moduleNameMapper: {
-        "\\.(svg)$": "<rootDir>/__mocks__/svgMock.js"
-    },
     setupFiles: [
         "./jest.setup.js"
     ],
@@ -20,7 +9,6 @@ module.exports = {
         "enzyme-to-json/serializer"
     ],
     testPathIgnorePatterns: [
-        "/node_modules/",
         "\\.spec\\.js"
     ]
 };
