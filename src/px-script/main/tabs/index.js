@@ -1,3 +1,5 @@
+import { getElementsByIds } from "../utils";
+
 class Tabs {
     constructor (el) {
         this._el = el;
@@ -47,24 +49,24 @@ class Tabs {
     }
 }
 
-const tabs = (() => {
-    const init = () => {
-        let tabs = document.querySelectorAll(".tabs");
+const init = ids => {
+    let tabs = ids || ids === "" ? getElementsByIds(ids, "tabs") : document.querySelectorAll(".tabs");
 
-        if (tabs.length > 0) {
-            tabs = [...tabs].map(tab => new Tabs(tab));
+    if (tabs.length > 0) {
+        tabs = [...tabs].map(tab => new Tabs(tab));
 
-            document.addEventListener("click", e => {
-                tabs.forEach(tab => {
-                    if (!e.target.closest(".tabs") && tab.isOpen) {
-                        tab.close();
-                    }
-                });
+        document.addEventListener("click", e => {
+            tabs.forEach(tab => {
+                if (!e.target.closest(".tabs") && tab.isOpen) {
+                    tab.close();
+                }
             });
-        }
-    };
+        });
+    }
 
-    return { init };
-})();
+    return tabs;
+};
 
-export default tabs;
+export default {
+    init
+};
