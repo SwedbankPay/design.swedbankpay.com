@@ -1,3 +1,5 @@
+import { getElementsByIds } from "../utils";
+
 class ActionList {
     constructor (element) {
         this.container = element;
@@ -30,7 +32,7 @@ class ActionList {
 }
 
 const init = ids => {
-    let actionLists = ids || ids === "" ? px.utils.getElementsByIds(ids, "action-list") : document.querySelectorAll(".action-list");
+    let actionLists = ids || ids === "" ? getElementsByIds(ids, "action-list") : document.querySelectorAll(".action-list");
 
     if (actionLists.length) {
         actionLists = [...actionLists].map(l => new ActionList(l));

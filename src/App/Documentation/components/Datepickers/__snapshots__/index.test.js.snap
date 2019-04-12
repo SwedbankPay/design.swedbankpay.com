@@ -39,7 +39,7 @@ exports[`Documentation: Datepickers AllowInput renders 1`] = `
   >
     <Datepicker
       allowinput={true}
-      id="simle-datepicker"
+      id="simple-datepicker"
       label="Date"
       prefixType="icon"
       prefixValue="event"
@@ -634,7 +634,7 @@ exports[`Documentation: Datepickers SimpleDatepicker renders 1`] = `
     showCasePanel={true}
   >
     <Datepicker
-      id="simle-datepicker"
+      id="simple-datepicker"
       label="Date"
       prefixType="icon"
       prefixValue="event"

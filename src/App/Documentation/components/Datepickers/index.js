@@ -28,7 +28,7 @@ const SimpleDatepicker = () => (
                 label="Date"
                 prefixType="icon"
                 prefixValue="event"
-                id="simle-datepicker"
+                id="simple-datepicker"
             />
         </ComponentPreview>
     </>
@@ -46,7 +46,7 @@ const AllowInput = () => (
                 label="Date"
                 prefixType="icon"
                 prefixValue="event"
-                id="simle-datepicker"
+                id="simple-datepicker"
                 allowinput
             />
         </ComponentPreview>
