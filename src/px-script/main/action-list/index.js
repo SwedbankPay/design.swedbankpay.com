@@ -29,24 +29,24 @@ class ActionList {
     }
 }
 
-const actionList = (() => {
-    const init = () => {
-        let actionLists = document.querySelectorAll(".action-list");
+const init = ids => {
+    let actionLists = ids || ids === "" ? px.utils.getElementsByIds(ids, "action-list") : document.querySelectorAll(".action-list");
 
-        if (actionLists.length) {
-            actionLists = [...actionLists].map(l => new ActionList(l));
+    if (actionLists.length) {
+        actionLists = [...actionLists].map(l => new ActionList(l));
 
-            document.addEventListener("click", e => {
-                actionLists.forEach(l => {
-                    if (e.target.closest(".action-list") !== l.container && l.isOpen) {
-                        l.close();
-                    }
-                });
+        document.addEventListener("click", e => {
+            actionLists.forEach(l => {
+                if (e.target.closest(".action-list") !== l.container && l.isOpen) {
+                    l.close();
+                }
             });
-        }
-    };
+        });
+    }
 
-    return { init };
-})();
+    return actionLists;
+};
 
-export default actionList;
+export default {
+    init
+};

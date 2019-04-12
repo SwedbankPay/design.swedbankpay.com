@@ -49,62 +49,57 @@ describe("px-script: topbar", () => {
         </header>
     );
 
-    // it("is defined", () => {
-    //     expect(topbar).toBeDefined();
-    // });
+    it("is defined", () => {
+        expect(topbar).toBeDefined();
+    });
 
-    // it("has an init method", () => {
-    //     expect(topbar.init).toBeDefined();
-    //     expect(topbar.init).toBeInstanceOf(Function);
-    // });
+    it("has an init method", () => {
+        expect(topbar.init).toBeDefined();
+        expect(topbar.init).toBeInstanceOf(Function);
+    });
 
-    // it("does not generate NavMenu instances if no .topbar exists", () => {
-    //     ReactDOM.render(<NoTopbar />, div);
-    //     topbar.init();
+    it("does not generate NavMenu instances if no .topbar exists", () => {
+        ReactDOM.render(<NoTopbar />, div);
+        topbar.init();
 
-    //     expect(NavMenu).not.toHaveBeenCalled();
-    //     expect(NavMenu.mock.instances[0]).toBeFalsy();
+        expect(NavMenu).not.toHaveBeenCalled();
+        expect(NavMenu.mock.instances[0]).toBeFalsy();
+    });
 
-    // });
+    it("does not generate NavMenu instances if .topbar exists but no menu button exists", () => {
+        ReactDOM.render(<TopbarNoBtn />, div);
+        topbar.init();
 
-    // it("does not generate NavMenu instances if .topbar exists but no menu button exists", () => {
-    //     ReactDOM.render(<TopbarNoBtn />, div);
-    //     topbar.init();
-
-    //     expect(NavMenu).not.toHaveBeenCalled();
-    //     expect(NavMenu.mock.instances[0]).toBeFalsy();
-
-    // });
+        expect(NavMenu).not.toHaveBeenCalled();
+        expect(NavMenu.mock.instances[0]).toBeFalsy();
+    });
 
     it("generates NavMenu instances if .topbar-nav exists", () => {
         ReactDOM.render(<Topbar />, div);
 
         topbar.init();
 
-        // console.log(NavMenu);
-
         expect(NavMenu).toHaveBeenCalled();
-        // expect(NavMenu.mock.instances[0]).toBeTruthy();
         ReactDOM.unmountComponentAtNode(div);
     });
 
-    // it("closes navMenu on mousedown if the nav menu is open and you don't click inside", () => {
-    //     ReactDOM.render(<Topbar />, div);
-    //     topbar.init();
+    it("closes navMenu on mousedown if the nav menu is open and you don't click inside", () => {
+        ReactDOM.render(<Topbar />, div);
+        topbar.init();
 
-    //     const NavMenuElement = document.querySelector(".topbar");
-    //     const NavMenuInst = NavMenu.mock.instances[0];
+        const NavMenuElement = document.querySelector(".topbar");
+        const NavMenuInst = NavMenu.mock.instances[0];
 
-    //     expect(NavMenuElement).toBeTruthy();
-    //     expect(NavMenuInst).toBeTruthy();
+        expect(NavMenuElement).toBeTruthy();
+        expect(NavMenuInst).toBeTruthy();
 
-    //     NavMenuInst.containsPoint.mockReturnValue(false);
-    //     NavMenuInst.isOpen = true;
+        NavMenuInst.containsPoint.mockReturnValue(false);
+        NavMenuInst.isOpen = true;
 
-    //     document.querySelector("html").dispatchEvent(new Event("mousedown"));
+        document.querySelector("html").dispatchEvent(new Event("mousedown"));
 
-    //     expect(NavMenuInst.containsPoint).toHaveBeenCalled();
-    //     expect(NavMenuInst.close).toHaveBeenCalled();
-    // });
-    // test.todo("Update topbar navmenu tests");
+        expect(NavMenuInst.containsPoint).toHaveBeenCalled();
+        expect(NavMenuInst.close).toHaveBeenCalled();
+    });
+    test.todo("Update topbar navmenu tests");
 });

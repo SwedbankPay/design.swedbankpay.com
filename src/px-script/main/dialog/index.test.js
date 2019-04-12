@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import dialog from "./index";
-// import px from "../index";
 
 describe("px-script: dialog", () => {
     const div = document.createElement("div");
