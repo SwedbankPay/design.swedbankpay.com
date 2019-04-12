@@ -1,3 +1,5 @@
+import { getElementsByIds } from "../utils";
+
 class Nav {
     constructor (el) {
         this._el = el;
@@ -104,29 +106,29 @@ class Nav {
     }
 }
 
-const nav = (() => {
-    const init = () => {
-        let navs = document.querySelectorAll(".nav");
+const init = ids => {
+    let navs = ids || ids === "" ? getElementsByIds(ids, "nav") : document.querySelectorAll(".nav");
 
-        if (navs.length > 0) {
-            navs = [...navs].map(nav => new Nav(nav));
+    if (navs.length > 0) {
+        navs = [...navs].map(nav => new Nav(nav));
 
-            document.addEventListener("click", e => {
-                navs.forEach(nav => {
-                    if (!e.target.closest(".nav") && nav.navOpen) {
-                        nav.close();
-                        nav.hideItems();
-                    }
+        document.addEventListener("click", e => {
+            navs.forEach(nav => {
+                if (!e.target.closest(".nav") && nav.navOpen) {
+                    nav.close();
+                    nav.hideItems();
+                }
 
-                    if (!e.target.closest(".submenu") && nav.submenuOpen) {
-                        nav.submenuCloseAll();
-                    }
-                });
+                if (!e.target.closest(".submenu") && nav.submenuOpen) {
+                    nav.submenuCloseAll();
+                }
             });
-        }
-    };
+        });
+    }
 
-    return { init };
-})();
+    return navs;
+};
 
-export default nav;
+export default {
+    init
+};
