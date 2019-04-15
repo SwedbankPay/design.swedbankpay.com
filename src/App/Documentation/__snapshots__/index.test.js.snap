@@ -269,6 +269,11 @@ exports[`Documentation: index renders 1`] = `
           routes={
             Array [
               Object {
+                "componentPath": "utilities/Borders",
+                "path": "/docs/utilities/borders",
+                "title": "Borders",
+              },
+              Object {
                 "componentPath": "utilities/Colors",
                 "path": "/docs/utilities/colors",
                 "title": "Colors",

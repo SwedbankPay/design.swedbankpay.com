@@ -237,6 +237,11 @@ module.exports = [
         redirect: "/docs/utilities/colors",
         routes: [
             {
+                title: "Borders",
+                path: "/docs/utilities/borders",
+                componentPath: "utilities/Borders"
+            },
+            {
                 title: "Colors",
                 path: "/docs/utilities/colors",
                 componentPath: "utilities/Colors"
