@@ -11,7 +11,7 @@ const Overview = () => (
             <div className="demo-square border" />
             <div className="demo-square border-top" />
             <div className="demo-square border-right" />
-            <div className="demo-square border-right" />
+            <div className="demo-square border-bottom" />
             <div className="demo-square border-left" />
         </ComponentPreview>
     </>

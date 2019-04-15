@@ -5,7 +5,7 @@
 ### Added
 
 - Added Page Layout section /core
-- Added .page-container class
+- Added .main-content class
 - Added Border section to /utilities
 - Added .border class along with more variants
 

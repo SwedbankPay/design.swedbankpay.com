@@ -8,19 +8,38 @@ exports[`Utilities: PageLayout CenteredContent renders 1`] = `
     Centered content
   </h2>
   <p>
-    If you wish to have your content centered use 
+    For a centered layout use 
     <Property
       value=".container"
     />
-    . This class has built in breakpoints and will switch to full-width if the screen size is small enough.
+    , it has built in breakpoints and will switch to full-width if the screen size is small enough (see 
+    <Link
+      to="/docs/core/grid"
+    >
+      grid
+    </Link>
+    ). When the content is centered it will require 
+    <Link
+      to="/docs/utilities/borders"
+    >
+      borders
+    </Link>
+     on the right and left side.
   </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
   >
     <div
-      className="container-fluid"
+      className="container"
     >
+      <div
+        className="row"
+      >
+        <header>
+          Topbar component...
+        </header>
+      </div>
       <div
         className="row"
       >
@@ -29,11 +48,11 @@ exports[`Utilities: PageLayout CenteredContent renders 1`] = `
         >
           Sidebar component...
         </div>
-        <div
-          className="col page-container"
+        <main
+          className="col main-content border-left border-right"
         >
           Main content things...
-        </div>
+        </main>
       </div>
     </div>
   </ComponentPreview>
@@ -48,11 +67,29 @@ exports[`Utilities: PageLayout FullWidth renders 1`] = `
     Full width page
   </h2>
   <p>
-    To get a full-width page with a sidebar/nav menu use 
+    To use a full width layout use a combination of grid and the 
     <Property
-      value=".container-fluid"
+      value=".main-content"
     />
-    .
+     class. 
+    <Property
+      value=".main-content"
+    />
+     has a white background and padding some padding. For a full width layout use 
+    <Property
+      value=".border-left"
+    />
+     to clearly seperate the sidebar and the main content. Go to the 
+    <Link
+      to="/docs/utilities/borders"
+    >
+      borders
+    </Link>
+     docs for more information about the 
+    <Property
+      value=".border"
+    />
+     utility.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -64,16 +101,23 @@ exports[`Utilities: PageLayout FullWidth renders 1`] = `
       <div
         className="row"
       >
+        <header>
+          Topbar component...
+        </header>
+      </div>
+      <div
+        className="row"
+      >
         <div
           className="col-auto"
         >
           Sidebar component...
         </div>
-        <div
-          className="col page-container"
+        <main
+          className="col main-content border-left"
         >
           Main content things...
-        </div>
+        </main>
       </div>
     </div>
   </ComponentPreview>
@@ -87,7 +131,7 @@ exports[`Utilities: PageLayout renders 1`] = `
   <p
     className="lead"
   >
-    Supported page layouts. Use our container classes to customize how your page looks and behaves at different breakpoints. test.
+    How to build different page layouts.
   </p>
   <FullWidth />
   <CenteredContent />
