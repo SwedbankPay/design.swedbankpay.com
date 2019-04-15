@@ -1,25 +1,40 @@
 import NavMenu from "./NavMenu";
+import { getElementsByIds } from "../utils";
 
-const topbar = (() => {
-    const init = index => {
-        const topbarComponent = document.querySelectorAll(".topbar")[index || 0];
-        let navMenu;
+const init = ids => {
+    const topbarComponents = ids || ids === "" ? getElementsByIds(ids, "topbar") : document.querySelectorAll(".topbar");
+    let navMenus = [];
 
-        if (topbarComponent) {
-            navMenu = topbarComponent.querySelector(".topbar-nav");
+    console.log(topbarComponents);
 
-            if (navMenu) {
-                navMenu = new NavMenu(topbarComponent, navMenu);
+    if (topbarComponents.length) {
+        topbarComponents.forEach(topbar => {
+            const navMenuSelector = topbar.querySelector(".topbar-nav");
+
+            /*
+                A topbar can only have one navMenu, but you can initialize several topbars at the same time. [AW]
+            */
+            if (navMenuSelector) {
+                const navMenuInstance = new NavMenu(topbar, navMenuSelector);
+
+                navMenus = [...navMenus, navMenuInstance];
+
+                /*
+                    One document listener per topbar. Several document listeners for the same thing are normally bad practice,
+                    but you should not have more than one topbar either. [AW]
+                */
                 document.querySelector("html").addEventListener("mousedown", e => {
-                    if (navMenu.isOpen && !navMenu.containsPoint(e.clientX, e.clientY)) {
-                        navMenu.close();
+                    if (navMenuInstance.isOpen && !navMenuInstance.containsPoint(e.clientX, e.clientY)) {
+                        navMenuInstance.close();
                     }
                 });
             }
-        }
-    };
+        });
 
-    return { init };
-})();
+        return navMenus;
+    }
+};
 
-export default topbar;
+export default {
+    init
+};

@@ -50,10 +50,11 @@ class Tabs {
 }
 
 const init = ids => {
-    let tabs = ids || ids === "" ? getElementsByIds(ids, "tabs") : document.querySelectorAll(".tabs");
+    const tabsSelector = ids || ids === "" ? getElementsByIds(ids, "tabs") : document.querySelectorAll(".tabs");
+    let tabs = [];
 
-    if (tabs.length > 0) {
-        tabs = [...tabs].map(tab => new Tabs(tab));
+    if (tabsSelector.length > 0) {
+        tabs = [...tabsSelector].map(tab => new Tabs(tab));
 
         document.addEventListener("click", e => {
             tabs.forEach(tab => {
