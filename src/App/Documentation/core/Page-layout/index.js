@@ -47,7 +47,7 @@ const CenteredContent = () => (
 const PageLayout = () => (
     <DocContainer docToc >
         <p className="lead">
-            Supported page layouts. Use our container classes to customize how your page looks and behaves at different breakpoints.
+            Supported page layouts. Use our container classes to customize how your page looks and behaves at different breakpoints. test.
         </p>
         <FullWidth />
         <CenteredContent />
