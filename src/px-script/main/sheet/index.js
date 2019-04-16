@@ -1,4 +1,4 @@
-import { handleScrollbar } from "../utils";
+import { handleScrollbar, getElementsByIds } from "../utils";
 
 const SELECTORS = {
     SHEET: ".sheet",
@@ -67,12 +67,23 @@ class Sheet {
     }
 }
 
-const init = () => {
-    const sheetEls = [...document.querySelectorAll(SELECTORS.SHEET)];
+const init = ids => {
+    const sheetSelector = ids || ids === "" ? getElementsByIds(ids, "sheet") : document.querySelectorAll(".sheet");
+    let sheetEls = [];
 
-    if (sheetEls.length) {
-        sheetEls.forEach(sheet => {
-            _sheets.push(new Sheet(sheet));
+    if (sheetSelector.length) {
+        sheetEls = [...sheetSelector].map(sheet => {
+            const sheetInstance = new Sheet(sheet);
+
+            if (_sheets.length) {
+                _sheets.forEach((arraySheet, index) => {
+                    arraySheet.id === sheetInstance.id ? _sheets[index] = sheetInstance : _sheets.push(sheetInstance);
+                });
+            } else {
+                _sheets.push(sheetInstance);
+            }
+
+            return sheetInstance;
         });
 
         // Close sheet on esc
@@ -118,6 +129,7 @@ const init = () => {
         });
     }
 
+    return sheetEls;
 };
 
 const close = id => {

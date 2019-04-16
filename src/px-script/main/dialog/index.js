@@ -48,21 +48,22 @@ class Dialog {
 }
 
 const init = ids => {
-    let dialogEls = ids || ids === "" ? getElementsByIds(ids, "dialog") : document.querySelectorAll(".dialog");
+    const dialogSelector = ids || ids === "" ? getElementsByIds(ids, "dialog") : document.querySelectorAll(".dialog");
+    let dialogEls = [];
 
-    if (dialogEls.length) {
-        dialogEls = [...dialogEls].map(dialog => {
-            const newDialog = new Dialog(dialog);
+    if (dialogSelector.length) {
+        dialogEls = [...dialogSelector].map(dialog => {
+            const dialogInstance = new Dialog(dialog);
 
             if (_dialogs.length) {
-                _dialogs.forEach((element, index) => {
-                    element.id === newDialog.id ? _dialogs[index] = newDialog : _dialogs.push(newDialog);
+                _dialogs.forEach((arrayDialog, index) => {
+                    arrayDialog.id === dialogInstance.id ? _dialogs[index] = dialogInstance : _dialogs.push(dialogInstance);
                 });
             } else {
-                _dialogs.push(newDialog);
+                _dialogs.push(dialogInstance);
             }
 
-            return newDialog;
+            return dialogInstance;
         });
 
         // Init open buttons
