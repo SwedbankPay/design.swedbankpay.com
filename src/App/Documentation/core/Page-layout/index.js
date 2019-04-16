@@ -61,7 +61,8 @@ const CenteredContent = () => (
 const PageLayout = () => (
     <DocContainer docToc >
         <p className="lead">
-            How to build different page layouts.
+            Use grid with our <Property value=".main-content" /> class to use a variety of page layouts. As we have a mobile first approach we only use 1rem as base padding for
+            our <Property value=".main-content"/> class. Use the <Link to="/docs/utilities/spacing">spacing</Link> classes to customize padding to fit your needs.
         </p>
         <FullWidth />
         <CenteredContent />
