@@ -10,7 +10,7 @@ const _hideAlert = alertElement => {
 const init = () => {
     const closeButtons = document.querySelectorAll(SELECTORS.CLOSE);
 
-    if (closeButtons) {
+    if (closeButtons.length) {
         closeButtons.forEach(btn => {
             const dataVal = btn.dataset.alertClose;
 

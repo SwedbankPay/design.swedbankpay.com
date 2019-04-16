@@ -18,7 +18,7 @@ const loader = (() => {
     const init = () => {
         const loaders = document.querySelectorAll(SELECTORS.LOADER);
 
-        if (loaders) {
+        if (loaders.length) {
             loaders.forEach(loader => {
                 _appendLoader(loader);
             });
