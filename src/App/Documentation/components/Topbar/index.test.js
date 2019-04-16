@@ -9,6 +9,12 @@ describe("Components: Topbar", () => {
     });
 
     it("renders", () => {
+        /*
+            The Topbar component calls px.topbar.init("demo-topbar") on componentDidMount. Mocking the topbarscript
+            to avoid a warning message. [AW]
+        */
+        px.topbar.init = jest.fn();
+
         const wrapper = shallow(<Topbar />);
 
         expect(wrapper).toMatchSnapshot();
