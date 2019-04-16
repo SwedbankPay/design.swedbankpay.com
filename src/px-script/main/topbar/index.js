@@ -5,8 +5,6 @@ const init = ids => {
     const topbarComponents = ids || ids === "" ? getElementsByIds(ids, "topbar") : document.querySelectorAll(".topbar");
     let navMenus = [];
 
-    console.log(topbarComponents);
-
     if (topbarComponents.length) {
         topbarComponents.forEach(topbar => {
             const navMenuSelector = topbar.querySelector(".topbar-nav");

@@ -22,7 +22,7 @@ const button = (() => {
     const init = () => {
         const loaderButtons = document.querySelectorAll(SELECTORS.LOADER);
 
-        if (loaderButtons) {
+        if (loaderButtons.length) {
             loaderButtons.forEach(button => {
                 _appendLoader(button);
             });
