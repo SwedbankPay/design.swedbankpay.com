@@ -49,7 +49,7 @@ const FixedTopbar = () => (
 
 class Topbar extends Component {
     componentDidMount () {
-        // px.topbar.init("demo-topbar");
+        px.topbar.init("demo-topbar");
     }
 
     render () {
