@@ -8,8 +8,8 @@
 
 ### Changed
 
-- Dialog can no longer be closed by clicking outside or pressing the ESC key.
-
 ### Fixed
 
 ### Removed
+
+- Dialog can no longer be closed by clicking outside or pressing the ESC key.

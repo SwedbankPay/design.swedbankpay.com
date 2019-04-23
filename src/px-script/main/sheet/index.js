@@ -13,8 +13,6 @@ class Sheet {
         this.id = el.id;
         this.closeIcon = el.querySelector(SELECTORS.CLOSEICON);
         this.isOpen = el.classList.contains("sheet-open");
-        this.openBtns = document.querySelectorAll(SELECTORS.OPEN);
-        this.closeBtns = document.querySelectorAll(SELECTORS.CLOSE);
 
         if (this.closeIcon) {
             this.closeIcon.addEventListener("click", e => {

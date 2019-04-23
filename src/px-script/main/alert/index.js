@@ -1,14 +1,9 @@
-const SELECTORS = {
-    ALERT: ".alert",
-    CLOSE: "[data-alert-close]"
-};
-
 const _hideAlert = alertElement => {
     alertElement.classList.add("d-none");
 };
 
 const init = () => {
-    const closeButtons = document.querySelectorAll(SELECTORS.CLOSE);
+    const closeButtons = document.querySelectorAll("[data-alert-close]");
 
     if (closeButtons.length) {
         closeButtons.forEach(btn => {

@@ -16,10 +16,9 @@ const _writeStyle = obj => {
 
 const init = ids => {
     const rangeContainers = ids || ids === "" ? getElementsByIds(ids, "rangeslider") : document.querySelectorAll(".rangeslider");
-    const userBrowser = navigator.userAgent;
     const inlineStyle = document.createElement("style");
     const inlineStyleContent = [];
-    const isBrowserChrome = userBrowser.indexOf("Chrome") > -1;
+    const isBrowserChrome = navigator.userAgent.indexOf("Chrome") > -1;
 
     if (rangeContainers.length > 0) {
         if (isBrowserChrome) {

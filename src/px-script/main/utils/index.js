@@ -34,8 +34,9 @@ export const handleScrollbar = () => {
     This function returns an array of components matching the given id/ids. The return value is an array even if you
     send a single id, this is to have a predictable return type even though the given argument can vary. [AW]
 */
-export const getElementsByIds = (ids, component) => {
+export const getElementsByIds = (ids, componentName) => {
     const elements = [];
+    const component = componentName || "component";
     const pushElement = id => {
         const element = document.getElementById(id);
 
