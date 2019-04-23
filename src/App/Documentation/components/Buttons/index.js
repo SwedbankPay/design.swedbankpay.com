@@ -6,6 +6,8 @@ import { ComponentPreview, Attribute, Property, DocContainer } from "#";
 import ButtonComponent from "@/Button";
 import Alert from "@/Alert";
 
+const { button } = window.px;
+
 const Examples = () => (
     <>
         <h2 id="examples">Examples</h2>
@@ -214,7 +216,7 @@ const ButtonLoader = () => (
 
 class Buttons extends Component {
     componentDidMount () {
-        px.button.init();
+        button.init();
     }
 
     render () {

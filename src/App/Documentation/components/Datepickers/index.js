@@ -5,6 +5,8 @@ import { ComponentPreview, Attribute, Property, DocContainer } from "#";
 import { Datepicker as DatepickerComponent } from "@/FormComponents";
 import Alert from "@/Alert";
 
+const { datepicker } = window.px;
+
 const AboutDatepickers = () => (
     <>
         <h2 id="about-datepickers">About</h2>
@@ -386,7 +388,7 @@ const Options = () => (
 
 class Datepickers extends Component {
     componentDidMount () {
-        px.datepicker.init();
+        datepicker.init();
     }
 
     render () {

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 import { ComponentPreview, DocContainer, Attribute } from "#";
 
@@ -42,16 +42,12 @@ const Overview = () => (
     </>
 );
 
-class Tooltip extends Component {
-    render () {
-        return (
-            <DocContainer docToc>
-                <p className="lead">Tooltips are small, interactive, textual hints for mainly graphical elements. When using icons for actions you can use a tooltip to give people clarification on its function.</p>
-                <Overview />
-            </DocContainer>
-        );
-    }
-}
+const Tooltip = () => (
+    <DocContainer docToc>
+        <p className="lead">Tooltips are small, interactive, textual hints for mainly graphical elements. When using icons for actions you can use a tooltip to give people clarification on its function.</p>
+        <Overview />
+    </DocContainer>
+);
 
 export default Tooltip;
 

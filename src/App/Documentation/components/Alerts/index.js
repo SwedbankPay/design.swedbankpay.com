@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
 import { ComponentPreview, Attribute, Property, DocContainer } from "#";
-
 import AlertComponent from "@/Alert";
+
+const { alert } = window.px;
 
 const BasicUsage = () => (
     <>
@@ -75,7 +76,7 @@ const ExtendedUsage = () => (
 
 class Alerts extends Component {
     componentDidMount () {
-        px.alert.init();
+        alert.init();
     }
 
     render () {

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import { ComponentPreview, DocContainer, Icon } from "#";
 
+const { actionList } = window.px;
+
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
@@ -68,7 +70,7 @@ const Anchorpoints = () => (
 
 class ActionList extends Component {
     componentDidMount () {
-        px.actionList.init();
+        actionList.init();
     }
 
     render () {

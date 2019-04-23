@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import { ComponentPreview, Attribute, DocContainer, Property } from "#";
 import LoaderComponent from "@/Loader";
 
+const { loader } = window.px;
+
 const BasicUsage = () => (
     <>
         <h2 id="basic-usage">Basic usage</h2>
@@ -59,7 +61,7 @@ const StaticHtml = () => (
 
 class Loaders extends Component {
     componentDidMount () {
-        px.loader.init();
+        loader.init();
     }
 
     render () {

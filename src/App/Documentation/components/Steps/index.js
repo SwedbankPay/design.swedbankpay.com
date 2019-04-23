@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import PrismCode from "react-prism";
 
 import { ComponentPreview, DocContainer, Property } from "#";
@@ -112,20 +112,16 @@ const ClickableSteps = () => {
     );
 };
 
-class Steps extends Component {
-    render () {
-        return (
-            <DocContainer docToc>
-                <p className="lead">
-                    Use steps to visualize the users progress through a process.
-                </p>
-                <BasicSteps />
-                <VerticalSteps />
-                <ClickableSteps />
-            </DocContainer>
-        );
-    }
-}
+const Steps = () => (
+    <DocContainer docToc>
+        <p className="lead">
+            Use steps to visualize the users progress through a process.
+        </p>
+        <BasicSteps />
+        <VerticalSteps />
+        <ClickableSteps />
+    </DocContainer>
+);
 
 export default Steps;
 

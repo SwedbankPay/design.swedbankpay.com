@@ -6,6 +6,8 @@ import InputGroup from "@/InputGroup";
 import Button from "@/Button";
 import { Checkbox, FormControlText, Radio, Rangeslider, Togglebox } from "@/FormComponents";
 
+const { rangeslider, validation } = window.px;
+
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
@@ -301,8 +303,8 @@ const DisabledFormComponents = () => (
 
 class Forms extends Component {
     componentDidMount () {
-        px.rangeslider.init();
-        px.validation.init();
+        rangeslider.init();
+        validation.init();
     }
 
     render () {

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import { ComponentPreview, DocContainer, Icon } from "#";
 
+const { sheet } = window.px;
+
 const Example = () => (
     <>
         <h2 id="example">Example</h2>
@@ -79,7 +81,7 @@ const UsageWithJavascript = () => (
 
 class Sheet extends Component {
     componentDidMount () {
-        px.sheet.init();
+        sheet.init();
     }
 
     render () {

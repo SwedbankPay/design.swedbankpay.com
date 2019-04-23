@@ -5,6 +5,8 @@ import PrismCode from "react-prism";
 import { ComponentPreview, DocContainer, Property } from "#";
 import NavComponent from "@/Nav";
 
+const { nav } = window.px;
+
 const navItems = [
     {
         name: "Home",
@@ -123,11 +125,11 @@ const Mobile = () => (
 
 class Nav extends Component {
     componentDidUpdate () {
-        px.nav.init();
+        nav.init();
     }
 
     componentDidMount () {
-        px.nav.init();
+        nav.init();
     }
 
     render () {

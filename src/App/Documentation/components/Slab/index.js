@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import { ComponentPreview, DocContainer } from "#";
 
+const { validation } = window.px;
+
 const DefaultSlab = () => (
     <>
         <h2 id="default-slab">Default slab</h2>
@@ -144,7 +146,7 @@ const SlabCombinations = () => (
 
 class Slab extends Component {
     componentDidMount () {
-        px.validation.init();
+        validation.init();
     }
 
     render () {

@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer, Icon, Attribute, Property } from "#";
 
+const { dialog } = window.px;
+
 const Example = () => (
     <>
         <h2 id="example">Example</h2>
@@ -57,7 +59,7 @@ const UsageWithJavascript = () => (
 
 class Dialog extends Component {
     componentDidMount () {
-        px.dialog.init();
+        dialog.init();
     }
 
     render () {

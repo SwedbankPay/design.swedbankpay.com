@@ -5,6 +5,8 @@ import PrismCode from "react-prism";
 import { ComponentPreview, DocContainer, Property } from "#";
 import TabsComponent from "@/Tabs";
 
+const { tabs } = window.px;
+
 const tabItems = ["Kort", "Rabatter", "Transaksjoner", "Faktura", "Instillinger", "Audit trail"];
 
 const BasicUsage = () => (
@@ -29,7 +31,7 @@ const Collapsed = () => (
 
 class Tabs extends Component {
     componentDidMount () {
-        px.tabs.init();
+        tabs.init();
     }
 
     render () {

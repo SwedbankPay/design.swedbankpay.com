@@ -4,6 +4,8 @@ import PrismCode from "react-prism";
 import { ComponentPreview, DocContainer, Property, Attribute } from "#";
 import TopbarComponent from "@/Topbar";
 
+const { topbar } = window.px;
+
 const menu = {
     btn: {
         icon: "menu",
@@ -49,7 +51,7 @@ const FixedTopbar = () => (
 
 class Topbar extends Component {
     componentDidMount () {
-        px.topbar.init("demo-topbar");
+        topbar.init("demo-topbar");
     }
 
     render () {
