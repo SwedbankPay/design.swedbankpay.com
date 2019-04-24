@@ -1,11 +1,16 @@
 import { isWithinBoundingBox } from "../utils";
 
+const SELECTORS = {
+    BTN: ".topbar-btn",
+    ICON: "topbar-btn-icon"
+};
+
 export default class NavMenu {
     constructor (topbarComponent, navMenu) {
         this.navMenuElement = navMenu;
         this.isOpen = false;
-        this.btnElement = topbarComponent.querySelector(".topbar-btn");
-        this.iconElement = this.btnElement.querySelector(".topbar-btn-icon");
+        this.btnElement = topbarComponent.querySelector(SELECTORS.BTN);
+        this.iconElement = this.btnElement.querySelector(SELECTORS.ICON);
         this.userIcon = this.iconElement ? this.iconElement.innerHTML : null;
 
         this.btnElement.addEventListener("click", e => {
