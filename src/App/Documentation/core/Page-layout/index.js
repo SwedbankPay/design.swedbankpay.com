@@ -6,9 +6,8 @@ const FullWidth = () => (
     <>
         <h2 id="full-width">Full width page</h2>
         <p>
-            To use a full width layout use a combination of grid and the <Property value=".main-content" /> class. <Property value=".main-content" /> has a white background and padding some padding.
-            For a full width layout use <Property value=".border-left" /> to clearly seperate the sidebar and the main content. Go to the <Link to="/docs/utilities/borders">borders</Link> docs for more information about
-            the <Property value=".border" /> utility.
+            To use a full width layout use a combination of grid and the <Property value=".main-content" /> class. <Property value=".main-content" /> has a white background and some padding.
+            For a full width layout use <Property value=".border-left" /> to clearly seperate the sidebar and the main content. See <Link to="/docs/utilities/borders">borders</Link> docs for more information.
         </p>
         <ComponentPreview language="html" codeFigure>
             <div className="container-fluid">
@@ -36,15 +35,17 @@ const CenteredContent = () => (
         <p>
             For a centered layout use <Property value=".container"/>, it has built in breakpoints and will switch to full-width if the screen size is small
             enough (see <Link to="/docs/core/grid">grid</Link>). When the content is centered it will require <Link to="/docs/utilities/borders">borders</Link> on
-            the right and left side.
+            the right and left side. To make your topbar fill the page horizontally you will have to wrap it in a <Property value=".row" /> and <Property value=".container-fluid" />.
         </p>
         <ComponentPreview language="html" codeFigure>
-            <div className="container">
+            <div className="container-fluid">
                 <div className="row">
                     <header>
                         Topbar component...
                     </header>
                 </div>
+            </div>
+            <div className="container">
                 <div className="row">
                     <div className="col-auto">
                         Sidebar component...
