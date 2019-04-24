@@ -113,7 +113,7 @@ describe("px-script: dialog", () => {
 
         dialog.init();
         expect(console.warn).toHaveBeenCalled();
-        expect(console.warn).toHaveBeenCalledWith(expect.stringContaining("test-dialog"));
+        expect(console.warn).toHaveBeenCalledWith(expect.stringContaining("tester-dialog"));
     });
 
     it("warns user when there is no dialog with an id matching the value of the attribute 'data-dialog-close'", () => {
@@ -134,7 +134,7 @@ describe("px-script: dialog", () => {
 
         dialog.init();
         expect(console.warn).toHaveBeenCalled();
-        expect(console.warn).toHaveBeenCalledWith(expect.stringContaining("test-dialog"));
+        expect(console.warn).toHaveBeenCalledWith(expect.stringContaining("tester-dialog"));
     });
 
     it("closes dialog when clicking the close icon", () => {

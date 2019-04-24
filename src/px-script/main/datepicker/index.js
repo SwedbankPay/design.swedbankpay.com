@@ -1,6 +1,10 @@
 import formats from "./formats";
 import flatpickr from "flatpickr";
 
+const SELECTORS = {
+    DATEPICKER: "[data-datepicker]"
+};
+
 // 080989◢◤200418
 const _createDatepicker = datepicker => {
     const {
@@ -48,7 +52,7 @@ const _createDatepicker = datepicker => {
 };
 
 const init = ids => {
-    const datepickers = ids || ids === "" ? px.utils.getElementsByIds(ids, "datepicker") : document.querySelectorAll("[data-datepicker]");
+    const datepickers = ids || ids === "" ? px.utils.getElementsByIds(ids, "datepicker") : document.querySelectorAll(SELECTORS.DATEPICKER);
     const _datepickers = _datepickers || [];
 
     if (datepickers.length) {

@@ -1,4 +1,5 @@
 const SELECTORS = {
+    ALERT: ".alert",
     CLOSE: "[data-alert-close]"
 };
 
@@ -26,7 +27,7 @@ const init = () => {
                 }
 
             } else {
-                const alert = btn.closest(".alert");
+                const alert = btn.closest(SELECTORS.ALERT);
 
                 btn.addEventListener("click", e => {
                     e.preventDefault();

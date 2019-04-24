@@ -1,14 +1,22 @@
 import { getElementsByIds } from "../utils";
 
+const SELECTORS = {
+    NAV: ".nav",
+    SUB: ".submenu",
+    SUBMENU: {
+        OPEN: ".submenu-open"
+    }
+};
+
 class Nav {
     constructor (el) {
         this._el = el;
         this.navOpen = el.classList.contains("nav-open");
-        this.submenus = this._el.querySelectorAll(".submenu");
+        this.submenus = this._el.querySelectorAll(SELECTORS.SUB);
         this.listItems = [...this._el.querySelectorAll("li")];
         this.resizeEventMenuOpen;
         this.resizeEventSubmenuOpen;
-        this.submenuOpen = this._el.querySelector(".submenu-open");
+        this.submenuOpen = this._el.querySelector(SELECTORS.SUBMENU.OPEN);
 
         if (this.listItems.length > 5 || this.submenus.length) {
             this.hideItems();
@@ -67,7 +75,7 @@ class Nav {
     }
 
     hideItems () {
-        const firstFour = this.listItems.filter(notHidden => !notHidden.classList.contains("responsive-hidden") && notHidden.querySelector(".submenu") === null && this._el.querySelector("UL") === notHidden.parentElement);
+        const firstFour = this.listItems.filter(notHidden => !notHidden.classList.contains("responsive-hidden") && notHidden.querySelector(SELECTORS.SUB) === null && this._el.querySelector("UL") === notHidden.parentElement);
 
         if (this.submenus.length > 0) {
             this.submenus.forEach(levelTwo => {
@@ -107,19 +115,19 @@ class Nav {
 }
 
 const init = ids => {
-    let navs = ids || ids === "" ? getElementsByIds(ids, "nav") : document.querySelectorAll(".nav");
+    let navs = ids || ids === "" ? getElementsByIds(ids, "nav") : document.querySelectorAll(SELECTORS.NAV);
 
     if (navs.length > 0) {
         navs = [...navs].map(nav => new Nav(nav));
 
         document.addEventListener("click", e => {
             navs.forEach(nav => {
-                if (!e.target.closest(".nav") && nav.navOpen) {
+                if (!e.target.closest(SELECTORS.NAV) && nav.navOpen) {
                     nav.close();
                     nav.hideItems();
                 }
 
-                if (!e.target.closest(".submenu") && nav.submenuOpen) {
+                if (!e.target.closest(SELECTORS.SUB) && nav.submenuOpen) {
                     nav.submenuCloseAll();
                 }
             });

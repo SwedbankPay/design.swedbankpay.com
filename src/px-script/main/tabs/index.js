@@ -1,12 +1,17 @@
 import { getElementsByIds } from "../utils";
 
+const SELECTORS = {
+    TABS: ".tabs",
+    ACTIVE: ".active"
+};
+
 class Tabs {
     constructor (el) {
         this._el = el;
         this.id = el.id;
         this.classList = el.classList;
         this.isOpen = el.classList.contains("tabs-open");
-        this.hasActive = !!this._el.querySelector(".active");
+        this.hasActive = !!this._el.querySelector(SELECTORS.ACTIVE);
         this.openUl = this._el.querySelector("UL");
 
         this._el.addEventListener("click", e => {
@@ -50,7 +55,7 @@ class Tabs {
 }
 
 const init = ids => {
-    const tabsSelector = ids || ids === "" ? getElementsByIds(ids, "tabs") : document.querySelectorAll(".tabs");
+    const tabsSelector = ids || ids === "" ? getElementsByIds(ids, "tabs") : document.querySelectorAll(SELECTORS.TABS);
     let tabs = [];
 
     if (tabsSelector.length > 0) {
@@ -58,7 +63,7 @@ const init = ids => {
 
         document.addEventListener("click", e => {
             tabs.forEach(tab => {
-                if (!e.target.closest(".tabs") && tab.isOpen) {
+                if (!e.target.closest(SELECTORS.TABS) && tab.isOpen) {
                     tab.close();
                 }
             });

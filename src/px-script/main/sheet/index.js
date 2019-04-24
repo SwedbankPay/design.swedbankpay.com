@@ -66,7 +66,7 @@ class Sheet {
 }
 
 const init = ids => {
-    const sheetSelector = ids || ids === "" ? getElementsByIds(ids, "sheet") : document.querySelectorAll(".sheet");
+    const sheetSelector = ids || ids === "" ? getElementsByIds(ids, "sheet") : document.querySelectorAll(SELECTORS.SHEET);
     let sheetEls = [];
 
     if (sheetSelector.length) {

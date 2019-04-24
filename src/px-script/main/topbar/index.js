@@ -1,13 +1,18 @@
 import NavMenu from "./NavMenu";
 import { getElementsByIds } from "../utils";
 
+const SELECTORS = {
+    TOPBAR: ".topbar",
+    TOPBARLINKS: ".topbar-nav"
+};
+
 const init = ids => {
-    const topbarComponents = ids || ids === "" ? getElementsByIds(ids, "topbar") : document.querySelectorAll(".topbar");
+    const topbarComponents = ids || ids === "" ? getElementsByIds(ids, "topbar") : document.querySelectorAll(SELECTORS.TOPBAR);
     let navMenus = [];
 
     if (topbarComponents.length) {
         topbarComponents.forEach(topbar => {
-            const navMenuSelector = topbar.querySelector(".topbar-nav");
+            const navMenuSelector = topbar.querySelector(SELECTORS.TOPBARLINKS);
 
             /*
                 A topbar can only have one navMenu, but you can initialize several topbars at the same time. [AW]

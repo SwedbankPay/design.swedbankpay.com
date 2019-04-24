@@ -13,12 +13,6 @@ class Dialog {
         this.id = el.id;
         this.closeIcon = el.querySelector(SELECTORS.CLOSEICON);
         this.isOpen = el.classList.contains("d-flex");
-        this.openBtns = document.querySelectorAll(`[data-dialog-open=${this.id}]`);
-        this.closeBtns = document.querySelectorAll(`[data-dialog-close=${this.id}]`);
-
-        if (!this.openBtns.length) {
-            console.warn(`No corresponding open-button found for dialog with id ${this.id}`);
-        }
 
         if (this.closeIcon) {
             this.closeIcon.addEventListener("click", e => {
@@ -48,7 +42,7 @@ class Dialog {
 }
 
 const init = ids => {
-    const dialogSelector = ids || ids === "" ? getElementsByIds(ids, "dialog") : document.querySelectorAll(".dialog");
+    const dialogSelector = ids || ids === "" ? getElementsByIds(ids, "dialog") : document.querySelectorAll(SELECTORS.DIALOG);
     let dialogEls = [];
 
     if (dialogSelector.length) {

@@ -1,5 +1,9 @@
 import { getElementsByIds } from "../utils";
 
+const SELECTORS = {
+    RANGESLIDER: ".rangeslider"
+};
+
 const _writeStyle = obj => {
     const { inlineStyleContent, inlineStyle } = obj;
     const index = inlineStyleContent.map(({ id }) => id).indexOf(obj.id);
@@ -15,7 +19,7 @@ const _writeStyle = obj => {
 };
 
 const init = ids => {
-    const rangeContainers = ids || ids === "" ? getElementsByIds(ids, "rangeslider") : document.querySelectorAll(".rangeslider");
+    const rangeContainers = ids || ids === "" ? getElementsByIds(ids, "rangeslider") : document.querySelectorAll(SELECTORS.RANGESLIDER);
     const inlineStyle = document.createElement("style");
     const inlineStyleContent = [];
     const isBrowserChrome = navigator.userAgent.indexOf("Chrome") > -1;
