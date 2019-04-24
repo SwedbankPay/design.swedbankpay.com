@@ -18,7 +18,7 @@ const HowItWorks = () => (
 
 const Overview = () => (
     <>
-        <h2 id="example">Overview</h2>
+        <h2 id="overview">Overview</h2>
         <p>
             Dialog boxes consist of a header, a body and a footer. In these you can put whatever you want, but some basic functionality should be included in all dialogs.
             The header should contain a short descriptive text for what the dialog-box does. You can include an icon with class <Property value=".dialog-close" /> if you wish to give your user a way to close the dialog box without choosing an option.
@@ -52,6 +52,10 @@ const Overview = () => (
 const UsageWithJavascript = () => (
     <>
         <h2 id="usage-with-javascript">Usage With Javascript</h2>
+        <p>
+            With the Dialog object you are given access to <Property value="init()" />, <Property value="open()" /> and  <Property value="close()" />.
+        </p>
+        <h3>Initializing dialogs</h3>
         <p>
             To initialize a Dialog use <Property value="px.dialog.init()" />. If called without arguments it will initialize all dialogs the page, or you can specify dialogs.
             The init function accepts both a single string or an array of strings. These strings need to match an existing dialog id and will print warning messages if an argument is invalid.

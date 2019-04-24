@@ -1,11 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Documentation: Dialog Example renders 1`] = `
+exports[`Documentation: Dialog HowItWorks renders 1`] = `
 <Fragment>
   <h2
-    id="example"
+    id="how"
   >
-    Example
+    How it works
+  </h2>
+  <p>
+    A dialog remains hidden until it is triggered. Once it is open it overlays the website with a dark background and presents some options, usually confirming or cancelling an action. If you use a dialog it is assumed that you want to "force" the user to make a choice. Therefore the only way to close a dialog is to choose one of the presented actions or, if given, press the 
+    <i
+      className="material-icons"
+    >
+      close
+    </i>
+     to close the dialog.
+  </p>
+</Fragment>
+`;
+
+exports[`Documentation: Dialog Overview renders 1`] = `
+<Fragment>
+  <h2
+    id="overview"
+  >
+    Overview
   </h2>
   <p>
     Dialog boxes consist of a header, a body and a footer. In these you can put whatever you want, but some basic functionality should be included in all dialogs. The header should contain a short descriptive text for what the dialog-box does. You can include an icon with class 
@@ -15,7 +34,7 @@ exports[`Documentation: Dialog Example renders 1`] = `
      if you wish to give your user a way to close the dialog box without choosing an option. The dialog body should contain the main content, usually just text confirming an action. In the footer you will find buttons to confirm or cancel the requested action. To make a button open the dialog box you need to include 
     <Attribute
       data={true}
-      name="datepicker-time"
+      name="dialog-open"
       value="{#your-dialog-id}"
     />
      as an attribute to that button.
@@ -102,42 +121,70 @@ exports[`Documentation: Dialog UsageWithJavascript renders 1`] = `
   <h2
     id="usage-with-javascript"
   >
-    Usage with javascript
+    Usage With Javascript
   </h2>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-  >
-    <div
-      className="dialog"
-      id="demo-dialog"
-    >
-      
-
-      ...
-      
-
-    </div>
-    
-
-  </ComponentPreview>
   <p>
-    To open a dialog:
+    With the Dialog object you are given access to 
+    <Property
+      value="init()"
+    />
+    , 
+    <Property
+      value="open()"
+    />
+     and  
+    <Property
+      value="close()"
+    />
+    .
+  </p>
+  <h3>
+    Initializing dialogs
+  </h3>
+  <p>
+    To initialize a Dialog use 
+    <Property
+      value="px.dialog.init()"
+    />
+    . If called without arguments it will initialize all dialogs the page, or you can specify dialogs. The init function accepts both a single string or an array of strings. These strings need to match an existing dialog id and will print warning messages if an argument is invalid.
+    <hr />
+    Example of valid arguments
   </p>
   <ComponentPreview
     codeFigure={true}
     language="javascript"
   >
-    px.dialog.open("demo-dialog")
+    px.dialog.init();
+
+    px.dialog.init("demo-dialog");
+
+    px.dialog.init(["demo-dialog"]);
+
+    px.dialog.init(["demo-dialog-1", .. "demo-dialog-x"]);
+
   </ComponentPreview>
+  <h3>
+    Toggling dialogs programmatically
+  </h3>
   <p>
-    To close a dialog:
+    We only support having one dialog open at-a-time, so 
+    <Property
+      value="dialog.open()"
+    />
+     and 
+    <Property
+      value="dialog.close()"
+    />
+     only accept single IDs as arguments.
   </p>
   <ComponentPreview
     codeFigure={true}
     language="javascript"
   >
-    px.dialog.close("demo-dialog")
+    px.dialog.open("demo-dialog");
+
+    px.dialog.close("demo-dialog");
+
   </ComponentPreview>
 </Fragment>
 `;
@@ -157,7 +204,8 @@ exports[`Documentation: Dialog renders 1`] = `
     </Link>
      if you wish to receive input from the user or display a large chunk of information.
   </p>
-  <Example />
+  <HowItWorks />
+  <Overview />
   <UsageWithJavascript />
 </DocContainer>
 `;
