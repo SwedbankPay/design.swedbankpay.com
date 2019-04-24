@@ -24,14 +24,22 @@ exports[`Utilities: PageLayout CenteredContent renders 1`] = `
     >
       borders
     </Link>
-     on the right and left side.
+     on the right and left side. To make your topbar fill the page horizontally you will have to wrap it in a 
+    <Property
+      value=".row"
+    />
+     and 
+    <Property
+      value=".container-fluid"
+    />
+    .
   </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
   >
     <div
-      className="container"
+      className="container-fluid"
     >
       <div
         className="row"
@@ -40,6 +48,10 @@ exports[`Utilities: PageLayout CenteredContent renders 1`] = `
           Topbar component...
         </header>
       </div>
+    </div>
+    <div
+      className="container"
+    >
       <div
         className="row"
       >
@@ -75,21 +87,17 @@ exports[`Utilities: PageLayout FullWidth renders 1`] = `
     <Property
       value=".main-content"
     />
-     has a white background and padding some padding. For a full width layout use 
+     has a white background and some padding. For a full width layout use 
     <Property
       value=".border-left"
     />
-     to clearly seperate the sidebar and the main content. Go to the 
+     to clearly seperate the sidebar and the main content. See 
     <Link
       to="/docs/utilities/borders"
     >
       borders
     </Link>
-     docs for more information about the 
-    <Property
-      value=".border"
-    />
-     utility.
+     docs for more information.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -131,7 +139,21 @@ exports[`Utilities: PageLayout renders 1`] = `
   <p
     className="lead"
   >
-    How to build different page layouts.
+    Use grid with our 
+    <Property
+      value=".main-content"
+    />
+     class to use a variety of page layouts. As we have a mobile first approach we only use 1rem as base padding for our 
+    <Property
+      value=".main-content"
+    />
+     class. Use the 
+    <Link
+      to="/docs/utilities/spacing"
+    >
+      spacing
+    </Link>
+     classes to customize padding to fit your needs.
   </p>
   <FullWidth />
   <CenteredContent />
