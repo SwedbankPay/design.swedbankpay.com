@@ -4,7 +4,7 @@ const SELECTORS = {
     RANGESLIDER: ".rangeslider"
 };
 
-const _writeStyle = obj => {
+const writeStyle = obj => {
     const { inlineStyleContent, inlineStyle } = obj;
     const index = inlineStyleContent.map(({ id }) => id).indexOf(obj.id);
     let styleText = "";
@@ -53,7 +53,7 @@ const init = ids => {
                     const value = Number(input.value);
                     const rangePercent = (value + Math.abs(min)) / (max - min) * 100;
 
-                    _writeStyle({
+                    writeStyle({
                         id: input.id,
                         percent: rangePercent,
                         inlineStyleContent,

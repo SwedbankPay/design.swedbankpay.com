@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import { ComponentPreview, DocContainer, Icon, Property } from "#";
 
+const { actionList } = window.px;
+
 const BasicList = () => (
     <>
         <h2 id="basic-list">Basic list</h2>
@@ -184,7 +186,7 @@ const StripedItemList = () => (
 
 class Lists extends Component {
     componentDidMount () {
-        px.actionList.init();
+        actionList.init();
     }
 
     render () {

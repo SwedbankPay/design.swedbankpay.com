@@ -7,6 +7,8 @@ const SELECTORS = {
     CLOSEICON: ".sheet-close"
 };
 
+const _sheets = _sheets || [];
+
 class Sheet {
     constructor (el) {
         this._el = el;
@@ -163,8 +165,6 @@ const open = id => {
 
     return sheet;
 };
-
-const _sheets = _sheets || [];
 
 export default {
     init,

@@ -3,6 +3,8 @@ import { shallow } from "enzyme";
 
 import Topbar, { Overview, FixedTopbar } from "./index";
 
+const { topbar } = window.px;
+
 describe("Components: Topbar", () => {
     it("is defined", () => {
         expect(Topbar).toBeDefined();
@@ -13,7 +15,7 @@ describe("Components: Topbar", () => {
             The Topbar component calls px.topbar.init("demo-topbar") on componentDidMount. Mocking the topbarscript
             to avoid a warning message. [AW]
         */
-        px.topbar.init = jest.fn();
+        topbar.init = jest.fn();
 
         const wrapper = shallow(<Topbar />);
 

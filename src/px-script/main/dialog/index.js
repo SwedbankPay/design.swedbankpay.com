@@ -7,6 +7,8 @@ const SELECTORS = {
     CLOSEICON: ".dialog-close"
 };
 
+const _dialogs = _dialogs || [];
+
 class Dialog {
     constructor (el) {
         this._el = el;
@@ -129,8 +131,6 @@ const open = id => {
 
     return dialog;
 };
-
-const _dialogs = _dialogs || [];
 
 export default {
     init,

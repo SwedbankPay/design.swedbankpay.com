@@ -27,7 +27,7 @@ const init = ids => {
                     but you should not have more than one topbar either. [AW]
                 */
                 document.querySelector("html").addEventListener("mousedown", e => {
-                    if (navMenuInstance.isOpen && !navMenuInstance.containsPoint(e.clientX, e.clientY)) {
+                    if (navMenuInstance.isOpen && !navMenuInstance._containsPoint(e.clientX, e.clientY)) {
                         navMenuInstance.close();
                     }
                 });

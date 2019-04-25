@@ -93,12 +93,12 @@ describe("px-script: topbar", () => {
         expect(NavMenuElement).toBeTruthy();
         expect(NavMenuInst).toBeTruthy();
 
-        NavMenuInst.containsPoint.mockReturnValue(false);
+        NavMenuInst._containsPoint.mockReturnValue(false);
         NavMenuInst.isOpen = true;
 
         document.querySelector("html").dispatchEvent(new Event("mousedown"));
 
-        expect(NavMenuInst.containsPoint).toHaveBeenCalled();
+        expect(NavMenuInst._containsPoint).toHaveBeenCalled();
         expect(NavMenuInst.close).toHaveBeenCalled();
     });
     test.todo("Update topbar navmenu tests");

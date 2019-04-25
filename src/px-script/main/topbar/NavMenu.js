@@ -10,12 +10,12 @@ export default class NavMenu {
         this.navMenuElement = navMenu;
         this.isOpen = false;
         this.btnElement = topbarComponent.querySelector(SELECTORS.BTN);
-        this.iconElement = this.btnElement.querySelector(SELECTORS.ICON);
+        this.iconElement = this.btnElement ? this.btnElement.querySelector(SELECTORS.ICON) : null;
         this.userIcon = this.iconElement ? this.iconElement.innerHTML : null;
 
         this.btnElement.addEventListener("click", e => {
             e.preventDefault();
-            this.handleClick();
+            this._handleClick();
         });
         this._initAnchors();
     }
@@ -44,11 +44,11 @@ export default class NavMenu {
         }
     }
 
-    handleClick () {
+    _handleClick () {
         this.isOpen ? this.close() : this.open();
     }
 
-    containsPoint (x, y) {
+    _containsPoint (x, y) {
         return isWithinBoundingBox(x, y, this.navMenuElement) || isWithinBoundingBox(x, y, this.btnElement);
     }
 }
