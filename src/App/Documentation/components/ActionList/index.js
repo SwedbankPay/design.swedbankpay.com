@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocContainer, Icon } from "#";
+import { ComponentPreview, DocContainer, Icon, Property } from "#";
 
 const { actionList } = window.px;
 
@@ -68,6 +68,15 @@ const Anchorpoints = () => (
     </>
 );
 
+const UsageWithJavascript = () => (
+    <>
+        <h2 id="usage-with-javascript">Usage with javascript</h2>
+        <p>
+            The actionlist object gives you access to <Property value="init()" />.
+        </p>
+    </>
+);
+
 class ActionList extends Component {
     componentDidMount () {
         actionList.init();
@@ -81,6 +90,7 @@ class ActionList extends Component {
                 </p>
                 <Overview />
                 <Anchorpoints />
+                <UsageWithJavascript />
             </DocContainer>
         );
     }

@@ -5,6 +5,7 @@
 ### Added
 
 - Added new init functionality. You can now pass an ID or an array of IDs to init only specific components.
+- Added javascript documentation for components with script functions.
 
 ### Changed
 

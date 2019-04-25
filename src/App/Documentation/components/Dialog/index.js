@@ -2,31 +2,37 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer, Icon, Attribute, Property } from "#";
+import AlertComponent from "@/Alert";
 
 const { dialog } = window.px;
 
 const HowItWorks = () => (
     <>
-        <h2 id="how">How it works</h2>
+        <h2 id="how-it-works">How it works</h2>
         <p>
             A dialog remains hidden until it is triggered. Once it is open it overlays the website with a dark background and presents some options, usually confirming or cancelling an action.
             If you use a dialog it is assumed that you want to &quot;force&quot; the user to make a choice. Therefore the only way to close a dialog is to choose one of the presented actions or, if given,
-            press the <i className="material-icons">close</i> to close the dialog.
+            press the <i className="material-icons d-inline-flex">close</i> to close the dialog.
         </p>
-    </>
-);
-
-const Overview = () => (
-    <>
-        <h2 id="overview">Overview</h2>
         <p>
             Dialog boxes consist of a header, a body and a footer. In these you can put whatever you want, but some basic functionality should be included in all dialogs.
             The header should contain a short descriptive text for what the dialog-box does. You can include an icon with class <Property value=".dialog-close" /> if you wish to give your user a way to close the dialog box without choosing an option.
             The dialog body should contain the main content, usually just text confirming an action.
-            In the footer you will find buttons to confirm or cancel the requested action. To make a button open the dialog box you need to
-            include <Attribute data name="dialog-open" value="{#your-dialog-id}" /> as an attribute to that button.
+            In the footer you will find buttons to confirm or cancel the requested action.
         </p>
+        <AlertComponent type="warning">
+            <h4>Initializing dialog buttons</h4>
+            To make a button open the dialog box you need to
+            include <Attribute data name="dialog-open" value="{#your-dialog-id}" /> as an attribute to that button.
+        </AlertComponent>
+    </>
+);
+
+const Example = () => (
+    <>
+        <h2 id="overview">Example</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
+            <button className="btn btn-primary" type="button" data-dialog-open="demo-dialog">Open dialog</button>
             <div className="dialog" id="demo-dialog">
                 <section>
                     <header>
@@ -44,7 +50,6 @@ const Overview = () => (
                     </footer>
                 </section>
             </div>{"\n"}
-            <button className="btn btn-primary" type="button" data-dialog-open="demo-dialog">Open dialog</button>
         </ComponentPreview>
     </>
 );
@@ -59,7 +64,9 @@ const UsageWithJavascript = () => (
         <p>
             To initialize a Dialog use <Property value="px.dialog.init()" />. If called without arguments it will initialize all dialogs the page, or you can specify dialogs.
             The init function accepts both a single string or an array of strings. These strings need to match an existing dialog id and will print warning messages if an argument is invalid.
-            <hr></hr>
+        </p>
+        <hr/>
+        <p>
             Example of valid arguments
         </p>
         <ComponentPreview language="javascript" codeFigure >
@@ -92,7 +99,7 @@ class Dialog extends Component {
                     Use <Link to="/docs/components/sheet">sheet</Link> if you wish to receive input from the user or display a large chunk of information.
                 </p>
                 <HowItWorks />
-                <Overview />
+                <Example />
                 <UsageWithJavascript />
             </DocContainer>
         );
@@ -102,4 +109,4 @@ class Dialog extends Component {
 export default Dialog;
 
 /* For testing */
-export { HowItWorks, Overview, UsageWithJavascript };
+export { HowItWorks, Example, UsageWithJavascript };
