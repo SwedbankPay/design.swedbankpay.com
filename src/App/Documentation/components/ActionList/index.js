@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocContainer, Icon, Property } from "#";
+import { ComponentPreview, DocContainer, Icon, Property, InitDocumentation } from "#";
 
 const { actionList } = window.px;
 
@@ -74,6 +74,7 @@ const UsageWithJavascript = () => (
         <p>
             The actionlist object gives you access to <Property value="init()" />.
         </p>
+        <InitDocumentation componentName="action-list" scriptName="actionlist" />
     </>
 );
 

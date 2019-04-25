@@ -146,33 +146,9 @@ exports[`Documentation: Dialog UsageWithJavascript renders 1`] = `
     />
     .
   </p>
-  <h3>
-    Initializing dialogs
-  </h3>
-  <p>
-    To initialize a Dialog use 
-    <Property
-      value="px.dialog.init()"
-    />
-    . If called without arguments it will initialize all dialogs the page, or you can specify dialogs. The init function accepts both a single string or an array of strings. These strings need to match an existing dialog id and will print warning messages if an argument is invalid.
-  </p>
-  <hr />
-  <p>
-    Example of valid arguments
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="javascript"
-  >
-    px.dialog.init();
-
-    px.dialog.init("demo-dialog");
-
-    px.dialog.init(["demo-dialog"]);
-
-    px.dialog.init(["demo-dialog-1", .. "demo-dialog-x"]);
-
-  </ComponentPreview>
+  <InitDocumentation
+    componentName="Dialog"
+  />
   <h3>
     Toggling dialogs programmatically
   </h3>

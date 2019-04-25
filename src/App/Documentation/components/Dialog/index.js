@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocContainer, Icon, Attribute, Property } from "#";
+import { ComponentPreview, DocContainer, Icon, Attribute, Property, InitDocumentation } from "#";
 import AlertComponent from "@/Alert";
 
 const { dialog } = window.px;
@@ -60,21 +60,7 @@ const UsageWithJavascript = () => (
         <p>
             With the Dialog object you are given access to <Property value="init()" />, <Property value="open()" /> and  <Property value="close()" />.
         </p>
-        <h3>Initializing dialogs</h3>
-        <p>
-            To initialize a Dialog use <Property value="px.dialog.init()" />. If called without arguments it will initialize all dialogs the page, or you can specify dialogs.
-            The init function accepts both a single string or an array of strings. These strings need to match an existing dialog id and will print warning messages if an argument is invalid.
-        </p>
-        <hr/>
-        <p>
-            Example of valid arguments
-        </p>
-        <ComponentPreview language="javascript" codeFigure >
-            {"px.dialog.init();\n"}
-            {"px.dialog.init(\"demo-dialog\");\n"}
-            {"px.dialog.init([\"demo-dialog\"]);\n"}
-            {"px.dialog.init([\"demo-dialog-1\", .. \"demo-dialog-x\"]);\n"}
-        </ComponentPreview>
+        <InitDocumentation componentName="Dialog" />
         <h3>Toggling dialogs programmatically</h3>
         <p>
             We only support having one dialog open at-a-time, so <Property value="dialog.open()" /> and <Property value="dialog.close()" /> only accept single IDs as arguments.
