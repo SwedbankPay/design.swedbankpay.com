@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocContainer, Icon, Property } from "#";
+import { ComponentPreview, DocContainer, Icon, PxScript } from "#";
 
 const { actionList } = window.px;
 
@@ -72,7 +72,15 @@ const UsageWithJavascript = () => (
     <>
         <h2 id="usage-with-javascript">Usage with javascript</h2>
         <p>
-            The actionlist object gives you access to <Property value="init()" />.
+            Action-lists have very basic functionality and can only be triggered to open and close.
+        </p>
+        <h4><PxScript component="action-list" func="open" /></h4>
+        <p>
+            Opens the action-list.
+        </p>
+        <h4><PxScript component="action-list" func="close" /></h4>
+        <p>
+            Closes the action-list.
         </p>
     </>
 );

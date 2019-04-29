@@ -15,7 +15,7 @@ class ActionList {
         this.isOpen = this.container.classList.contains("active");
 
         this.toggleBtn.addEventListener("click", () => {
-            this.toggleMenu();
+            this._toggleMenu();
         });
 
         // close menu when clicking on links
@@ -32,7 +32,7 @@ class ActionList {
         this.isOpen = false;
     }
 
-    toggleMenu () {
+    _toggleMenu () {
         this.isOpen ? this.close() : this.open();
     }
 }

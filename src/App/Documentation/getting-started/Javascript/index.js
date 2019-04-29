@@ -17,6 +17,9 @@ const AboutInit = () => (
             by sending one or more ids as an argument. The init function accepts both a single string or an array of strings. These strings need to match an
             existing component id and will print warning messages if an argument is invalid.
         </p>
+        <p>
+            All inits return the same thing; an array containing an object reference to the element(s) that was passed.
+        </p>
         <ComponentPreview language="javascript" codeFigure >
             {"px.component.init();\n"}
             {"px.component.init(\"demo-component\");\n"}
