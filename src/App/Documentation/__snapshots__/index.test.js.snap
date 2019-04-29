@@ -58,6 +58,11 @@ exports[`Documentation: index renders 1`] = `
                 "path": "/docs/getting-started/contributing",
                 "title": "Contributing",
               },
+              Object {
+                "componentPath": "getting-started/Javascript",
+                "path": "/docs/getting-started/javascript",
+                "title": "Javascript",
+              },
             ]
           }
           title="Getting Started"

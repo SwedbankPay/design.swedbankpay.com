@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocContainer, Icon, Attribute, Property, InitDocumentation } from "#";
+import { ComponentPreview, DocContainer, Icon, Attribute, Property } from "#";
 import AlertComponent from "@/Alert";
 
 const { dialog } = window.px;
@@ -60,7 +60,6 @@ const UsageWithJavascript = () => (
         <p>
             With the Dialog object you are given access to <Property value="init()" />, <Property value="open()" /> and  <Property value="close()" />.
         </p>
-        <InitDocumentation componentName="Dialog" />
         <h3>Toggling dialogs programmatically</h3>
         <p>
             We only support having one dialog open at-a-time, so <Property value="dialog.open()" /> and <Property value="dialog.close()" /> only accept single IDs as arguments.

@@ -74,6 +74,15 @@ const ExtendedUsage = () => (
     </>
 );
 
+const UsageWithJavascript = () => (
+    <>
+        <h2 id="usage-with-javascript">Usage with javascript</h2>
+        <p>
+            With the alert object you are given access to <Property value="init()" />.
+        </p>
+    </>
+);
+
 class Alerts extends Component {
     componentDidMount () {
         alert.init();
@@ -87,6 +96,7 @@ class Alerts extends Component {
                 <AlertWithIcon />
                 <ClosingTheAlert />
                 <ExtendedUsage />
+                <UsageWithJavascript />
             </DocContainer>
         );
     }

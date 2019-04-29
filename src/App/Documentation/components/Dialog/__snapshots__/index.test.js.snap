@@ -146,9 +146,6 @@ exports[`Documentation: Dialog UsageWithJavascript renders 1`] = `
     />
     .
   </p>
-  <InitDocumentation
-    componentName="Dialog"
-  />
   <h3>
     Toggling dialogs programmatically
   </h3>

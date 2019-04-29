@@ -6,7 +6,6 @@ import DocToc from "./DocToc";
 import DeprecatedComponentAlert from "./DeprecatedComponentAlert";
 import ExperimentalComponentAlert from "./ExperimentalComponentAlert";
 import Icon from "./Icon";
-import InitDocumentation from "./InitDocumentation";
 import PxScript from "./PxScript";
 
 export {
@@ -18,7 +17,6 @@ export {
     DeprecatedComponentAlert,
     ExperimentalComponentAlert,
     Icon,
-    InitDocumentation,
     Property,
     PxScript
 };

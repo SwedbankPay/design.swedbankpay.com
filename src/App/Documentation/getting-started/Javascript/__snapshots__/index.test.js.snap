@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GettingStarted: JavascriptDocs AboutInit renders 1`] = `
+<Fragment>
+  <h2
+    id="about-init"
+  >
+    Initializing components
+  </h2>
+  <p>
+    To initialize components use 
+    <Property
+      value="px.{component_name}.init()"
+    />
+    . If 
+    <Property
+      value=".init()"
+    />
+     is called without arguments it will target all components on the page. To initialize only a select few send one or more ids as an argument. The init function accepts both a single string or an array of strings. These strings need to match an existing component id and will print warning messages if an argument is invalid.
+  </p>
+  <hr />
+  <p>
+    Example of valid arguments
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    px.component.init();
+
+    px.component.init("demo-component");
+
+    px.component.init(["demo-component"]);
+
+    px.component.init(["demo-component-1", .. "demo-component-x"]);
+
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`GettingStarted: JavascriptDocs renders 1`] = `
+<DocContainer
+  docToc={true}
+>
+  <p
+    className="lead"
+  >
+    How to utilize our 
+    <Property
+      value="px.{component_name}.init()"
+    />
+     function.
+  </p>
+  <AboutInit />
+</DocContainer>
+`;
