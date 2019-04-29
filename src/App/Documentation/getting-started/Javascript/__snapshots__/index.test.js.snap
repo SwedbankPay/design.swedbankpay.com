@@ -5,22 +5,41 @@ exports[`GettingStarted: JavascriptDocs AboutInit renders 1`] = `
   <h2
     id="about-init"
   >
-    Initializing components
+    When to initialize
   </h2>
   <p>
-    To initialize components use 
-    <Property
-      value="px.{component_name}.init()"
+    Our script runs 
+    <PxScript
+      component="script"
+      func="initAll"
     />
-    . If 
-    <Property
-      value=".init()"
+     on DOMContentLoaded. Making it so you have to run 
+    <PxScript
+      component="{component_name}"
+      func="init"
     />
-     is called without arguments it will target all components on the page. To initialize only a select few send one or more ids as an argument. The init function accepts both a single string or an array of strings. These strings need to match an existing component id and will print warning messages if an argument is invalid.
+     manually when that component is rendered.
   </p>
-  <hr />
+  <h3>
+    Manual initializing
+  </h3>
   <p>
-    Example of valid arguments
+    To initialize components use 
+    <PxScript
+      component="{component_name}"
+      func="init"
+      params={
+        Array [
+          "\\"test-2\\"",
+          "test-3",
+        ]
+      }
+    />
+    . If the function is called without arguments it will target all components with class 
+    <Property
+      value="{component_name}"
+    />
+     on the page. Initializing only a select few can be done by sending one or more ids as an argument. The init function accepts both a single string or an array of strings. These strings need to match an existing component id and will print warning messages if an argument is invalid.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -35,6 +54,11 @@ exports[`GettingStarted: JavascriptDocs AboutInit renders 1`] = `
     px.component.init(["demo-component-1", .. "demo-component-x"]);
 
   </ComponentPreview>
+  <Alert
+    type="warning"
+  >
+    Additional functions may be available for some components. Read about them on the components documentation page.
+  </Alert>
 </Fragment>
 `;
 

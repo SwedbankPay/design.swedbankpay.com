@@ -5,7 +5,7 @@ const PxScript = ({ component, subComponents, func, params }) => {
     let renderedParams;
     let renderedSubComponents;
 
-    if (subComponents) {
+    if (subComponents && Array.isArray(subComponents)) {
         renderedSubComponents = subComponents.map((component, i) => (
             <span key={i}>{component}
                 <span className="token punctuation">.</span>
@@ -13,9 +13,9 @@ const PxScript = ({ component, subComponents, func, params }) => {
         ));
     }
 
-    if (params) {
+    if (params && Array.isArray(params)) {
         renderedParams = params.map((param, i) => (
-            <span key={i}>{param}
+            <span key={i} className={param.includes("\"") ? "token string" : null}>{param}
                 {(i < params.length - 1) ? <span className="token punctuation">, </span> : null}
             </span>
         ));

@@ -131,21 +131,6 @@ exports[`Documentation: Dialog UsageWithJavascript renders 1`] = `
   >
     Usage With Javascript
   </h2>
-  <p>
-    With the Dialog object you are given access to 
-    <Property
-      value="init()"
-    />
-    , 
-    <Property
-      value="open()"
-    />
-     and  
-    <Property
-      value="close()"
-    />
-    .
-  </p>
   <h3>
     Toggling dialogs programmatically
   </h3>

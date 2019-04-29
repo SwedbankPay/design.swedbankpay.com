@@ -57,9 +57,6 @@ const Example = () => (
 const UsageWithJavascript = () => (
     <>
         <h2 id="usage-with-javascript">Usage With Javascript</h2>
-        <p>
-            With the Dialog object you are given access to <Property value="init()" />, <Property value="open()" /> and  <Property value="close()" />.
-        </p>
         <h3>Toggling dialogs programmatically</h3>
         <p>
             We only support having one dialog open at-a-time, so <Property value="dialog.open()" /> and <Property value="dialog.close()" /> only accept single IDs as arguments.
