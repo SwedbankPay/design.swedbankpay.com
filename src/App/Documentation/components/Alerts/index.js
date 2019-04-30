@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, Attribute, Property, DocContainer } from "#";
+import { ComponentPreview, Attribute, Property, DocContainer, PxScript } from "#";
 import AlertComponent from "@/Alert";
 
 const { alert } = window.px;
@@ -74,11 +74,12 @@ const ExtendedUsage = () => (
     </>
 );
 
-const UsageWithJavascript = () => (
+const JavascriptMethods = () => (
     <>
-        <h2 id="usage-with-javascript">Usage with javascript</h2>
+        <h2 id="javascript-methods">Javascript methods</h2>
+        <h4><PxScript component="alert" func="init" /></h4>
         <p>
-            With the alert object you are given access to <Property value="init()" />.
+            <Link to="/docs/getting-started/javascript">Initializes</Link> alerts.
         </p>
     </>
 );
@@ -96,7 +97,7 @@ class Alerts extends Component {
                 <AlertWithIcon />
                 <ClosingTheAlert />
                 <ExtendedUsage />
-                <UsageWithJavascript />
+                <JavascriptMethods />
             </DocContainer>
         );
     }
@@ -105,4 +106,4 @@ class Alerts extends Component {
 export default Alerts;
 
 /* For testing */
-export { BasicUsage, AlertWithIcon, ClosingTheAlert, ExtendedUsage };
+export { BasicUsage, AlertWithIcon, ClosingTheAlert, ExtendedUsage, JavascriptMethods };

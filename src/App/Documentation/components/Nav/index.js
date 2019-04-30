@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer, Property } from "#";
+import { ComponentPreview, DocContainer, Property, PxScript } from "#";
 import NavComponent from "@/Nav";
 
 const { nav } = window.px;
@@ -123,6 +123,24 @@ const Mobile = () => (
     </>
 );
 
+const JavascriptMethods = () => (
+    <>
+        <h2 id="javascript-methods">Javascript methods</h2>
+        <h4><PxScript component="nav" func="init" /></h4>
+        <p>
+            <Link to="/docs/getting-started/javascript">Initializes</Link> navs.
+        </p>
+        <h4><PxScript component="nav" func="open" params={["{nav-id}"]} /></h4>
+        <p>
+            Opens the given nav.
+        </p>
+        <h4><PxScript component="nav" func="close" params={["{nav-id}"]} /></h4>
+        <p>
+            Closes the given nav.
+        </p>
+    </>
+);
+
 class Nav extends Component {
     componentDidUpdate () {
         nav.init();
@@ -144,6 +162,7 @@ class Nav extends Component {
                 <IconsOnly />
                 <Mix />
                 <Mobile />
+                <JavascriptMethods />
             </DocContainer>
         );
     }
@@ -152,4 +171,4 @@ class Nav extends Component {
 export default Nav;
 
 /* For testing */
-export { StandardNav, TwoLevels, IconsOnly, Mix, Mobile };
+export { StandardNav, TwoLevels, IconsOnly, Mix, Mobile, JavascriptMethods };

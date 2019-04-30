@@ -6,8 +6,11 @@ const SELECTORS = {
     ICONS: "i.material-icons"
 };
 
+const _actionLists = _actionLists || [];
+
 class ActionList {
     constructor (element) {
+        this.id = element.id;
         this.container = element;
         this.toggleBtn = element.querySelector(SELECTORS.ICONS);
         this.actionMenu = element.querySelector(SELECTORS.ACTIONMENU);
@@ -37,14 +40,22 @@ class ActionList {
     }
 }
 
-const init = ids => {
-    let actionLists = ids || ids === "" ? getElementsByIds(ids, "action-list") : document.querySelectorAll(SELECTORS.ACTIONLIST);
+const init = id => {
+    const actionListId = (id && id.includes("#") ? id : (id ? `#${id}` : null));
+    const actionListQuery = actionListId ? document.querySelectorAll(actionListId) : document.querySelectorAll(SELECTORS.ACTIONLIST);
+    let actionListInstances = [];
 
-    if (actionLists.length) {
-        actionLists = [...actionLists].map(l => new ActionList(l));
+    if (actionListQuery.length) {
+        actionListInstances = [...actionListQuery].map(l => {
+            const actionListInstance = new ActionList(l);
+
+            _actionLists.push(actionListInstance);
+
+            return actionListInstance;
+        });
 
         document.addEventListener("click", e => {
-            actionLists.forEach(l => {
+            actionListQuery.forEach(l => {
                 if (e.target.closest(SELECTORS.ACTIONLIST) !== l.container && l.isOpen) {
                     l.close();
                 }
@@ -52,9 +63,43 @@ const init = ids => {
         });
     }
 
-    return actionLists;
+    return actionListInstances.length === 1 ? actionListInstances[0] : actionListInstances;
+};
+
+const close = id => {
+    let actionlist = null;
+
+    _actionLists.forEach(d => d.id === id ? actionlist = d : null);
+
+    try {
+        actionlist.close();
+    } catch (e) {
+        console.error(`actionlist.close: No actionlist with id "${id}" found.`);
+
+        return false;
+    }
+
+    return actionlist;
+};
+
+const open = id => {
+    let actionlist = null;
+
+    _actionLists.forEach(d => d.id === id ? actionlist = d : null);
+
+    try {
+        actionlist.open();
+    } catch (e) {
+        console.error(`actionlist.open: No actionlist with id "${id}" found.`);
+
+        return false;
+    }
+
+    return actionlist;
 };
 
 export default {
-    init
+    init,
+    open,
+    close
 };

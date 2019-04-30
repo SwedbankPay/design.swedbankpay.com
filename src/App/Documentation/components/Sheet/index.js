@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocContainer, Icon } from "#";
+import { ComponentPreview, DocContainer, Icon, PxScript } from "#";
 
 const { sheet } = window.px;
 
@@ -60,22 +61,21 @@ const Example = () => (
     </>
 );
 
-const UsageWithJavascript = () => (
+const JavascriptMethods = () => (
     <>
-        <h2 id="usage-with-javascript">Usage with javascript</h2>
-        <ComponentPreview language="html" codeFigure>
-            <div className="sheet" id="demo-sheet">{"\n"}
-                ...{"\n"}
-            </div>{"\n"}
-        </ComponentPreview>
-        <p>To open a sheet:</p>
-        <ComponentPreview language="javascript" codeFigure>
-            {"px.sheet.open(\"demo-sheet\")"}
-        </ComponentPreview>
-        <p>To close a sheet:</p>
-        <ComponentPreview language="javascript" codeFigure>
-            {"px.sheet.close(\"demo-sheet\")"}
-        </ComponentPreview>
+        <h2 id="javascript-methods">Javascript methods</h2>
+        <h4><PxScript component="nav" func="init" /></h4>
+        <p>
+            <Link to="/docs/getting-started/javascript">Initializes</Link> navs.
+        </p>
+        <h4><PxScript component="nav" func="open" params={["{nav-id}"]} /></h4>
+        <p>
+            Opens the given nav.
+        </p>
+        <h4><PxScript component="nav" func="close" params={["{nav-id}"]} /></h4>
+        <p>
+            Closes the given nav.
+        </p>
     </>
 );
 
@@ -91,7 +91,7 @@ class Sheet extends Component {
                     Sheet is a container component that is anchored on the right side of the screen and can contain a number of different things.
                 </p>
                 <Example />
-                <UsageWithJavascript />
+                <JavascriptMethods />
             </DocContainer>
         );
     }
@@ -100,4 +100,4 @@ class Sheet extends Component {
 export default Sheet;
 
 /* For testing */
-export { Example, UsageWithJavascript };
+export { Example, JavascriptMethods };

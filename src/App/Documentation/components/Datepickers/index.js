@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { NavHashLink as NavLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 
-import { ComponentPreview, Attribute, Property, DocContainer } from "#";
+import { ComponentPreview, Attribute, Property, DocContainer, PxScript } from "#";
 import { Datepicker as DatepickerComponent } from "@/FormComponents";
 import Alert from "@/Alert";
 
@@ -386,6 +387,16 @@ const Options = () => (
     </>
 );
 
+const JavascriptMethods = () => (
+    <>
+        <h2 id="javascript-methods">Javascript methods</h2>
+        <h4><PxScript component="datepicker" func="init" /></h4>
+        <p>
+            <Link to="/docs/getting-started/javascript">Initializes</Link> datepickers.
+        </p>
+    </>
+);
+
 class Datepickers extends Component {
     componentDidMount () {
         datepicker.init();
@@ -410,6 +421,7 @@ class Datepickers extends Component {
                 <DateRange />
                 <MultipleDates />
                 <Options />
+                <JavascriptMethods />
             </DocContainer>
         );
     }
@@ -418,4 +430,4 @@ class Datepickers extends Component {
 export default Datepickers;
 
 /* For testing */
-export { AboutDatepickers, SimpleDatepicker, AllowInput, HumanReadable, InitialValue, CustomFormat, IncludeTime, ShowingMultipleMonths, ValidDates, DateRange, MultipleDates, Options };
+export { AboutDatepickers, SimpleDatepicker, AllowInput, HumanReadable, InitialValue, CustomFormat, IncludeTime, ShowingMultipleMonths, ValidDates, DateRange, MultipleDates, Options, JavascriptMethods };

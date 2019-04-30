@@ -19,7 +19,7 @@ class Nav {
         this.submenuOpen = this._el.querySelector(SELECTORS.SUBMENU.OPEN);
 
         if (this.listItems.length > 5 || this.submenus.length) {
-            this.hideItems();
+            this._hideItems();
 
             const menu = document.createElement("a");
 
@@ -34,10 +34,10 @@ class Nav {
 
                 if (this.navOpen) {
                     this.close();
-                    this.hideItems();
+                    this._hideItems();
                 } else {
                     this.open();
-                    this.showItems();
+                    this._showItems();
                 }
             });
         }
@@ -51,10 +51,10 @@ class Nav {
 
                 submenuCopy.addEventListener("click", () => {
                     if (submenu.classList.contains("submenu-open")) {
-                        this.submenuCloseAll();
+                        this._submenuCloseAll();
                     } else {
-                        this.submenuCloseAll();
-                        this.resizeEventSubmenuOpen = this.onResize.bind(this);
+                        this._submenuCloseAll();
+                        this.resizeEventSubmenuOpen = this._onResize.bind(this);
                         window.addEventListener("resize", this.resizeEventSubmenuOpen, { passive: true });
                         submenu.classList.add("submenu-open");
                         this.submenuOpen = true;
@@ -64,17 +64,17 @@ class Nav {
         }
     }
 
-    submenuCloseAll () {
+    _submenuCloseAll () {
         window.removeEventListener("resize", this.resizeEventSubmenuOpen, { passive: true });
         this.submenus.forEach(submenu => submenu.classList.remove("submenu-open"));
         this.submenuOpen = false;
     }
 
-    showItems () {
+    _showItems () {
         this.listItems.forEach(listItem => listItem.classList.remove("responsive-hidden"));
     }
 
-    hideItems () {
+    _hideItems () {
         const firstFour = this.listItems.filter(notHidden => !notHidden.classList.contains("responsive-hidden") && notHidden.querySelector(SELECTORS.SUB) === null && this._el.querySelector("UL") === notHidden.parentElement);
 
         if (this.submenus.length > 0) {
@@ -94,16 +94,16 @@ class Nav {
         }
     }
 
-    onResize () {
+    _onResize () {
         this.close();
-        this.hideItems();
-        this.submenuCloseAll();
+        this._hideItems();
+        this._submenuCloseAll();
     }
 
     open () {
         this.navOpen = true;
         this._el.classList.add("nav-open");
-        this.resizeEventMenuOpen = this.onResize.bind(this);
+        this.resizeEventMenuOpen = this._onResize.bind(this);
         window.addEventListener("resize", this.resizeEventMenuOpen, { passive: true });
     }
 
@@ -124,11 +124,11 @@ const init = ids => {
             navs.forEach(nav => {
                 if (!e.target.closest(SELECTORS.NAV) && nav.navOpen) {
                     nav.close();
-                    nav.hideItems();
+                    nav._hideItems();
                 }
 
                 if (!e.target.closest(SELECTORS.SUB) && nav.submenuOpen) {
-                    nav.submenuCloseAll();
+                    nav._submenuCloseAll();
                 }
             });
         });

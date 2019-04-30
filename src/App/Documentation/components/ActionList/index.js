@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer, Icon, PxScript } from "#";
 
@@ -68,19 +69,20 @@ const Anchorpoints = () => (
     </>
 );
 
-const UsageWithJavascript = () => (
+const JavascriptMethods = () => (
     <>
-        <h2 id="usage-with-javascript">Usage with javascript</h2>
+        <h2 id="javascript-methods">Javascript methods</h2>
+        <h4><PxScript component="actionList" func="init" /></h4>
         <p>
-            Action-lists have very basic functionality and can only be triggered to open and close.
+            <Link to="/docs/getting-started/javascript">Initializes</Link> action-lists.
         </p>
-        <h4><PxScript component="action-list" func="open" /></h4>
+        <h4><PxScript component="actionList" func="open" params={["{datepicker_id}"]} /></h4>
         <p>
-            Opens the action-list.
+            Opens the given action-list.
         </p>
-        <h4><PxScript component="action-list" func="close" /></h4>
+        <h4><PxScript component="actionList" func="close" params={["{datepicker_id}"]} /></h4>
         <p>
-            Closes the action-list.
+            Closes the given action-list.
         </p>
     </>
 );
@@ -98,7 +100,7 @@ class ActionList extends Component {
                 </p>
                 <Overview />
                 <Anchorpoints />
-                <UsageWithJavascript />
+                <JavascriptMethods />
             </DocContainer>
         );
     }
@@ -107,4 +109,4 @@ class ActionList extends Component {
 export default ActionList;
 
 /* For testing */
-export { Overview, Anchorpoints };
+export { Overview, Anchorpoints, JavascriptMethods };

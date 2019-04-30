@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocContainer, Icon, Attribute, Property } from "#";
+import { ComponentPreview, DocContainer, Icon, Attribute, Property, PxScript } from "#";
 import AlertComponent from "@/Alert";
 
 const { dialog } = window.px;
@@ -54,17 +54,21 @@ const Example = () => (
     </>
 );
 
-const UsageWithJavascript = () => (
+const JavascriptMethods = () => (
     <>
-        <h2 id="usage-with-javascript">Usage With Javascript</h2>
-        <h3>Toggling dialogs programmatically</h3>
+        <h2 id="javascript-methods">Javascript methods</h2>
+        <h4><PxScript component="dialog" func="init" /></h4>
         <p>
-            We only support having one dialog open at-a-time, so <Property value="dialog.open()" /> and <Property value="dialog.close()" /> only accept single IDs as arguments.
+            <Link to="/docs/getting-started/javascript">Initializes</Link> dialogs.
         </p>
-        <ComponentPreview language="javascript" codeFigure >
-            {"px.dialog.open(\"demo-dialog\");\n"}
-            {"px.dialog.close(\"demo-dialog\");\n"}
-        </ComponentPreview>
+        <h4><PxScript component="dialog" func="open" params={["{dialog-id}"]} /></h4>
+        <p>
+            Opens the given dialog.
+        </p>
+        <h4><PxScript component="dialog" func="close" params={["{dialog-id}"]} /></h4>
+        <p>
+            Closes the given dialog.
+        </p>
     </>
 );
 
@@ -82,7 +86,7 @@ class Dialog extends Component {
                 </p>
                 <HowItWorks />
                 <Example />
-                <UsageWithJavascript />
+                <JavascriptMethods />
             </DocContainer>
         );
     }
@@ -91,4 +95,4 @@ class Dialog extends Component {
 export default Dialog;
 
 /* For testing */
-export { HowItWorks, Example, UsageWithJavascript };
+export { HowItWorks, Example, JavascriptMethods };

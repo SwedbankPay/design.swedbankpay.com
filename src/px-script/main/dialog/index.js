@@ -1,4 +1,4 @@
-import { handleScrollbar, getElementsByIds } from "../utils";
+import { handleScrollbar } from "../utils";
 
 const SELECTORS = {
     DIALOG: ".dialog",
@@ -43,21 +43,16 @@ class Dialog {
     }
 }
 
-const init = ids => {
-    const dialogSelector = ids || ids === "" ? getElementsByIds(ids, "dialog") : document.querySelectorAll(SELECTORS.DIALOG);
+const init = id => {
+    const dialogId = (id && id.includes("#") ? id : (id ? `#${id}` : null));
+    const dialogSelector = dialogId ? document.querySelectorAll(dialogId) : document.querySelectorAll(SELECTORS.DIALOG);
     let dialogEls = [];
 
     if (dialogSelector.length) {
         dialogEls = [...dialogSelector].map(dialog => {
             const dialogInstance = new Dialog(dialog);
 
-            if (_dialogs.length) {
-                _dialogs.forEach((arrayDialog, index) => {
-                    arrayDialog.id === dialogInstance.id ? _dialogs[index] = dialogInstance : _dialogs.push(dialogInstance);
-                });
-            } else {
-                _dialogs.push(dialogInstance);
-            }
+            _dialogs.push(dialogInstance);
 
             return dialogInstance;
         });
@@ -96,7 +91,7 @@ const init = ids => {
             }
         });
 
-        return dialogEls;
+        return dialogEls.length === 1 ? dialogEls[0] : dialogEls;
     }
 };
 
