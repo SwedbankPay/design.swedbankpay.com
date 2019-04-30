@@ -34,17 +34,17 @@ module.exports = [
         redirect: "/docs/core/breakpoints",
         routes: [
             {
-                title: "Breakpoints",
+                title: "Breakpoints ☐",
                 path: "/docs/core/breakpoints",
                 componentPath: "core/Breakpoints"
             },
             {
-                title: "Color",
+                title: "Color ☑",
                 path: "/docs/core/color",
                 componentPath: "core/Color"
             },
             {
-                title: "Favicons",
+                title: "Favicons ☐",
                 path: "/docs/core/favicons",
                 componentPath: "core/Favicons"
             },
@@ -54,22 +54,22 @@ module.exports = [
                 componentPath: "core/Grid"
             },
             {
-                title: "Iconography",
+                title: "Iconography ☐",
                 path: "/docs/core/iconography",
                 componentPath: "core/Iconography"
             },
             {
-                title: "Lists",
+                title: "Lists ☑",
                 path: "/docs/core/lists",
                 componentPath: "core/Lists"
             },
             {
-                title: "Tables",
+                title: "Tables ☐",
                 path: "/docs/core/tables",
                 componentPath: "core/Tables"
             },
             {
-                title: "Typography",
+                title: "Typography ☐",
                 path: "/docs/core/typography",
                 componentPath: "core/Typography"
             }
@@ -85,127 +85,127 @@ module.exports = [
         redirect: "/docs/components/action-list",
         routes: [
             {
-                title: "Action Link",
+                title: "Action Link ☑",
                 path: "/docs/components/action-link",
                 componentPath: "components/ActionLink"
             },
             {
-                title: "Action List",
+                title: "Action List ☐",
                 path: "/docs/components/action-list",
                 componentPath: "components/ActionList"
             },
             {
-                title: "Alerts",
+                title: "Alerts ☐",
                 path: "/docs/components/alerts",
                 componentPath: "components/Alerts"
             },
             {
-                title: "Badge",
+                title: "Badge ☑",
                 path: "/docs/components/badge",
                 componentPath: "components/Badge"
             },
             {
-                title: "Breadcrumb",
+                title: "Breadcrumb ☐",
                 path: "/docs/components/breadcrumb",
                 componentPath: "components/Breadcrumb"
             },
             {
-                title: "Buttons",
+                title: "Buttons ☑",
                 path: "/docs/components/buttons",
                 componentPath: "components/Buttons"
             },
             {
-                title: "Card",
+                title: "Card ☐",
                 path: "/docs/components/card",
                 componentPath: "components/Card"
             },
             {
-                title: "Datepickers",
+                title: "Datepickers ☐",
                 path: "/docs/components/datepickers",
                 componentPath: "components/Datepickers"
             },
             {
-                title: "Dialog",
+                title: "Dialog ☐",
                 path: "/docs/components/dialog",
                 componentPath: "components/Dialog"
             },
             {
-                title: "Expandable",
+                title: "Expandable ☑",
                 path: "/docs/components/expandable",
                 componentPath: "components/Expandable"
             },
             {
-                title: "Forms",
+                title: "Forms ☐",
                 path: "/docs/components/forms",
                 componentPath: "components/Forms"
             },
             {
-                title: "Input Group",
+                title: "Input Group ☐",
                 path: "/docs/components/input-group",
                 componentPath: "components/InputGroup"
             },
             {
-                title: "Loaders",
+                title: "Loaders ☐",
                 path: "/docs/components/loaders",
                 componentPath: "components/Loaders"
             },
             {
-                title: "Media Object",
+                title: "Media Object ☐",
                 path: "/docs/components/media-object",
                 componentPath: "components/MediaObject"
             },
             {
-                title: "Nav",
+                title: "Nav ☐",
                 path: "/docs/components/nav",
                 componentPath: "components/Nav"
             },
             {
-                title: "Pagination",
+                title: "Pagination ☐",
                 path: "/docs/components/pagination",
                 componentPath: "components/Pagination"
             },
             {
-                title: "Panel",
+                title: "Panel ☐",
                 path: "/docs/components/panel",
                 componentPath: "components/Panel"
             },
             {
-                title: "Sheet",
+                title: "Sheet ☐",
                 path: "/docs/components/sheet",
                 componentPath: "components/Sheet"
             },
             {
-                title: "Slab",
+                title: "Slab ☐",
                 path: "/docs/components/slab",
                 componentPath: "components/Slab"
             },
             {
-                title: "Status",
+                title: "Status ☐",
                 path: "/docs/components/status",
                 componentPath: "components/Status"
             },
             {
-                title: "Steps",
+                title: "Steps ☐",
                 path: "/docs/components/steps",
                 componentPath: "components/Steps"
             },
             {
-                title: "Tabs",
+                title: "Tabs ☐",
                 path: "/docs/components/tabs",
                 componentPath: "components/Tabs"
             },
             {
-                title: "Toast",
+                title: "Toast ☐",
                 path: "/docs/components/toast",
                 componentPath: "components/Toast"
             },
             {
-                title: "Tooltips",
+                title: "Tooltips ☐",
                 path: "/docs/components/tooltips",
                 componentPath: "components/Tooltips"
             },
             {
-                title: "Topbar",
+                title: "Topbar ☑",
                 path: "/docs/components/topbar",
                 componentPath: "components/Topbar"
             }
@@ -226,7 +226,7 @@ module.exports = [
                 componentPath: "dashboard/Introduction"
             },
             {
-                title: "Charts",
+                title: "Charts ☐",
                 path: "/docs/dashboard/charts",
                 componentPath: "dashboard/Charts"
             }
