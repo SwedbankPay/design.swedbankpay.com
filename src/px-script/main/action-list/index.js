@@ -1,5 +1,3 @@
-import { getElementsByIds } from "../utils";
-
 const SELECTORS = {
     ACTIONMENU: ".action-menu",
     ACTIONLIST: ".action-list",
@@ -55,7 +53,7 @@ const init = id => {
         });
 
         document.addEventListener("click", e => {
-            actionListQuery.forEach(l => {
+            actionListInstances.forEach(l => {
                 if (e.target.closest(SELECTORS.ACTIONLIST) !== l.container && l.isOpen) {
                     l.close();
                 }

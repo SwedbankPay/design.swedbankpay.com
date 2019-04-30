@@ -124,36 +124,55 @@ exports[`Documentation: Dialog HowItWorks renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Dialog UsageWithJavascript renders 1`] = `
+exports[`Documentation: Dialog JavascriptMethods renders 1`] = `
 <Fragment>
   <h2
-    id="usage-with-javascript"
+    id="javascript-methods"
   >
-    Usage With Javascript
+    Javascript methods
   </h2>
-  <h3>
-    Toggling dialogs programmatically
-  </h3>
+  <h4>
+    <PxScript
+      component="dialog"
+      func="init"
+    />
+  </h4>
   <p>
-    We only support having one dialog open at-a-time, so 
-    <Property
-      value="dialog.open()"
-    />
-     and 
-    <Property
-      value="dialog.close()"
-    />
-     only accept single IDs as arguments.
+    <Link
+      to="/docs/getting-started/javascript"
+    >
+      Initializes
+    </Link>
+     dialogs.
   </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="javascript"
-  >
-    px.dialog.open("demo-dialog");
-
-    px.dialog.close("demo-dialog");
-
-  </ComponentPreview>
+  <h4>
+    <PxScript
+      component="dialog"
+      func="open"
+      params={
+        Array [
+          "{dialog-id}",
+        ]
+      }
+    />
+  </h4>
+  <p>
+    Opens the given dialog.
+  </p>
+  <h4>
+    <PxScript
+      component="dialog"
+      func="close"
+      params={
+        Array [
+          "{dialog-id}",
+        ]
+      }
+    />
+  </h4>
+  <p>
+    Closes the given dialog.
+  </p>
 </Fragment>
 `;
 
@@ -174,6 +193,6 @@ exports[`Documentation: Dialog renders 1`] = `
   </p>
   <HowItWorks />
   <Example />
-  <UsageWithJavascript />
+  <JavascriptMethods />
 </DocContainer>
 `;

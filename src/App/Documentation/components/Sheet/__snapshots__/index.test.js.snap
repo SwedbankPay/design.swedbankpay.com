@@ -486,48 +486,55 @@ exports[`Documentation: Sheet Example renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Sheet UsageWithJavascript renders 1`] = `
+exports[`Documentation: Sheet JavascriptMethods renders 1`] = `
 <Fragment>
   <h2
-    id="usage-with-javascript"
+    id="javascript-methods"
   >
-    Usage with javascript
+    Javascript methods
   </h2>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-  >
-    <div
-      className="sheet"
-      id="demo-sheet"
+  <h4>
+    <PxScript
+      component="nav"
+      func="init"
+    />
+  </h4>
+  <p>
+    <Link
+      to="/docs/getting-started/javascript"
     >
-      
-
-      ...
-      
-
-    </div>
-    
-
-  </ComponentPreview>
-  <p>
-    To open a sheet:
+      Initializes
+    </Link>
+     navs.
   </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="javascript"
-  >
-    px.sheet.open("demo-sheet")
-  </ComponentPreview>
+  <h4>
+    <PxScript
+      component="nav"
+      func="open"
+      params={
+        Array [
+          "{nav-id}",
+        ]
+      }
+    />
+  </h4>
   <p>
-    To close a sheet:
+    Opens the given nav.
   </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="javascript"
-  >
-    px.sheet.close("demo-sheet")
-  </ComponentPreview>
+  <h4>
+    <PxScript
+      component="nav"
+      func="close"
+      params={
+        Array [
+          "{nav-id}",
+        ]
+      }
+    />
+  </h4>
+  <p>
+    Closes the given nav.
+  </p>
 </Fragment>
 `;
 
@@ -541,6 +548,6 @@ exports[`Documentation: Sheet renders 1`] = `
     Sheet is a container component that is anchored on the right side of the screen and can contain a number of different things.
   </p>
   <Example />
-  <UsageWithJavascript />
+  <JavascriptMethods />
 </DocContainer>
 `;

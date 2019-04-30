@@ -703,5 +703,6 @@ exports[`Documentation: Datepickers renders 1`] = `
   <DateRange />
   <MultipleDates />
   <Options />
+  <JavascriptMethods />
 </DocContainer>
 `;

@@ -671,6 +671,6 @@ exports[`Components: ActionList renders 1`] = `
   </p>
   <Overview />
   <Anchorpoints />
-  <UsageWithJavascript />
+  <JavascriptMethods />
 </DocContainer>
 `;

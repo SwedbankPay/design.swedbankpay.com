@@ -68,6 +68,55 @@ describe("px-script: dialog", () => {
         expect(dialog.init).toBeInstanceOf(Function);
     });
 
+    it("can init and return multiple dialogs", () => {
+        ReactDOM.render(
+            <>
+                <Dialog />
+                <Dialog />
+            </>
+            , div);
+
+        const renderedDialogs = document.querySelector(".dialog");
+        const dialogObject = dialog.init();
+
+        expect(renderedDialogs).toBeTruthy();
+        expect(Array.isArray(dialogObject)).toBeTruthy(); // To check if it returns an Array.
+        expect(dialogObject.length).toEqual(2);
+    });
+
+    it("can init and return the initialized dialog object", () => {
+        ReactDOM.render(<Dialog />, div);
+
+        const renderedDialog = document.querySelector(".dialog");
+        const dialogObject = dialog.init("test-dialog");
+
+        expect(renderedDialog).toBeTruthy();
+        expect(Array.isArray(dialogObject)).toBeFalsy(); // To check if it returns an object and not an Array.
+        expect(dialogObject.id).toEqual("test-dialog");
+    });
+
+    it("the init function accepts ids with and without #", () => {
+        ReactDOM.render(<Dialog />, div);
+
+        const renderedDialog = document.querySelector(".dialog");
+        const initWithHash = dialog.init("#test-dialog");
+        const initWithoutHash = dialog.init("test-dialog");
+
+        expect(renderedDialog).toBeTruthy();
+        expect(initWithHash).toBeTruthy();
+        expect(initWithoutHash).toBeTruthy();
+    });
+
+    it("init returns null if no dialog is found", () => {
+        ReactDOM.render(<div />, div);
+
+        const renderedDialog = document.querySelector(".dialog");
+        const returnVal = dialog.init();
+
+        expect(renderedDialog).toBeFalsy();
+        expect(returnVal).toBeNull();
+    });
+
     it("button with attribute 'data-dialog-open' pointing to the correct id opens corresponding dialog", () => {
         ReactDOM.render(<Dialog />, div);
 

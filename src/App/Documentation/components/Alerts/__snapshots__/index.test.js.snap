@@ -274,6 +274,6 @@ exports[`Documentation: Alerts renders 1`] = `
   <AlertWithIcon />
   <ClosingTheAlert />
   <ExtendedUsage />
-  <UsageWithJavascript />
+  <JavascriptMethods />
 </DocContainer>
 `;
