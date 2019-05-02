@@ -90,11 +90,11 @@ const init = id => {
                 console.warn(`CLOSE: No dialog with with id "${id}" was found, make sure the attribute data-dialog-close contains the correct id.`);
             }
         });
-    } else {
-        return null;
+
+        return dialogEls.length === 1 ? (dialogEls[0]) : (dialogEls);
     }
 
-    return dialogEls.length === 1 ? (dialogEls[0]) : (dialogEls);
+    return null;
 };
 
 const close = id => {

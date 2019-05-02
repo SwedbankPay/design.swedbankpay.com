@@ -4,9 +4,12 @@
 
 ### Added
 
-- Added new init functionality. You can now pass an ID or an array of IDs to init only specific components.
+- Added new init functionality. You can now pass an ID init one specific component.
+- Added return values to init. It now returns an object, array of objects or null.
 - Added javascript documentation to getting-started section.
-- Added component specific documentation about eventlisteners and functions.
+- Added component specific documentation about functions.
+- Added open and close by ID to actionlist object
+- Added close to alert object
 
 ### Changed
 
@@ -14,4 +17,4 @@
 
 ### Removed
 
-- Dialog can no longer be closed by clicking outside or pressing the ESC key.
+- Dialog can no longer be closed by clicking outside of it or pressing the ESC key.
