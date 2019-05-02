@@ -9,6 +9,8 @@ describe("px-script: alert", () => {
 
     document.body.appendChild(div);
 
+    afterEach(() => ReactDOM.unmountComponentAtNode(div));
+
     it("is defined", () => {
         expect(alert).toBeDefined();
     });
@@ -18,73 +20,106 @@ describe("px-script: alert", () => {
         expect(alert.init).toBeInstanceOf(Function);
     });
 
-    it("method init adds eventlisteners on all close buttons", () => {
-        const Alerts = () => (
-            <>
-                <Alert id="asd" type="success" close display />
-                <Alert type="success" close display />
-            </>
-        );
+    describe("alert.init", () => {
+        it("adds eventlisteners on all close buttons", () => {
+            const Alerts = () => (
+                <>
+                    <Alert id="asd" type="success" close display />
+                    <Alert type="success" close display />
+                </>
+            );
 
-        ReactDOM.render(<Alerts />, div);
+            ReactDOM.render(<Alerts />, div);
 
-        const renderedButtons = document.querySelectorAll("[data-alert-close]");
+            const renderedButtons = document.querySelectorAll("[data-alert-close]");
 
-        expect(renderedButtons).toHaveLength(2);
+            expect(renderedButtons).toHaveLength(2);
 
-        renderedButtons.forEach(button => {
-            expect(button.parentElement.classList).not.toContain("d-none");
+            renderedButtons.forEach(button => {
+                expect(button.parentElement.classList).not.toContain("d-none");
+            });
+
+            alert.init();
+
+            renderedButtons.forEach(button => {
+                button.click();
+                expect(button.parentElement.classList).toContain("d-none");
+            });
         });
 
-        alert.init();
+        it("adds eventlisteners on all button with data attributes", () => {
+            const AlertTest = () => (
+                <>
+                    <Alert id="test" type="success" display />
+                    <button data-alert-close="test"></button>
+                </>
+            );
 
-        renderedButtons.forEach(button => {
-            button.click();
-            expect(button.parentElement.classList).toContain("d-none");
+            ReactDOM.render(<AlertTest />, div);
+
+            const renderedButton = document.querySelector("[data-alert-close]");
+
+            expect(renderedButton).toBeDefined();
+
+            const targetAlert = document.getElementById(renderedButton.dataset.alertClose);
+
+            expect(targetAlert.classList).not.toContain("d-none");
+
+            alert.init();
+
+            renderedButton.click();
+            expect(targetAlert.classList).toContain("d-none");
         });
 
-        ReactDOM.unmountComponentAtNode(div);
+        it("warns about possible wrong id", () => {
+            const AlertTest = () => (
+                <>
+                    <button data-alert-close="test"></button>
+                </>
+            );
+
+            ReactDOM.render(<AlertTest />, div);
+            console.warn = jest.fn();
+
+            alert.init();
+            expect(console.warn).toHaveBeenCalled();
+        });
     });
 
-    it("method init adds eventlisteners on all button with data attributes", () => {
-        const AlertTest = () => (
-            <>
-                <Alert id="test" type="success" display />
-                <button data-alert-close="test"></button>
-            </>
-        );
-
-        ReactDOM.render(<AlertTest />, div);
-
-        const renderedButton = document.querySelector("[data-alert-close]");
-
-        expect(renderedButton).toBeDefined();
-
-        const targetAlert = document.getElementById(renderedButton.dataset.alertClose);
-
-        expect(targetAlert.classList).not.toContain("d-none");
-
-        alert.init();
-
-        renderedButton.click();
-        expect(targetAlert.classList).toContain("d-none");
-
-        ReactDOM.unmountComponentAtNode(div);
+    it("has a close method", () => {
+        expect(alert.close).toBeDefined();
+        expect(alert.close).toBeInstanceOf(Function);
     });
 
-    it("method init warns about possible wrong id", () => {
-        const AlertTest = () => (
-            <>
-                <button data-alert-close="test"></button>
-            </>
-        );
+    describe("alert.close", () => {
+        it("prints a warning message if method is called with no ID", () => {
+            console.warn = jest.fn();
 
-        ReactDOM.render(<AlertTest />, div);
-        console.warn = jest.fn();
+            alert.close();
 
-        alert.init();
-        expect(console.warn).toHaveBeenCalled();
+            expect(console.warn).toHaveBeenCalled();
+        });
 
-        ReactDOM.unmountComponentAtNode(div);
+        it("adds class .d-none when called with a valid ID", () => {
+            ReactDOM.render(<Alert id="demo-alert" type="success" />, div);
+
+            const renderedAlert = document.querySelector(".alert");
+
+            expect(renderedAlert.classList).not.toContain("d-none");
+
+            alert.close("demo-alert");
+
+            expect(renderedAlert.classList).toContain("d-none");
+        });
+
+        it("prints a warning message to console if alert with passed id doesn't exist", () => {
+            console.warn = jest.fn();
+
+            ReactDOM.render(<Alert id="demo-alert" type="success" />, div);
+
+            alert.close("wrong-id");
+
+            expect(console.warn).toHaveBeenCalled();
+        });
     });
 });

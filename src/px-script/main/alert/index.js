@@ -1,3 +1,5 @@
+import { hashId } from "../utils";
+
 const SELECTORS = {
     ALERT: ".alert",
     CLOSE: "[data-alert-close]"
@@ -5,6 +7,15 @@ const SELECTORS = {
 
 const _hideAlert = alertElement => {
     alertElement.classList.add("d-none");
+
+    return true;
+};
+
+const close = id => {
+    const alertId = hashId(id);
+    const alertSelector = alertId ? document.querySelector(alertId) : console.warn("No ID was passed");
+
+    return alertSelector ? _hideAlert(alertSelector) : console.warn(`No alert with with id ${id} was found, make sure the attribute data-alert-close contains the correct id.`);
 };
 
 const init = () => {
@@ -35,9 +46,14 @@ const init = () => {
                 });
             }
         });
+
+        return {};
     }
+
+    return null;
 };
 
 export default {
-    init
+    init,
+    close
 };
