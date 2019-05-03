@@ -1,9 +1,13 @@
 import formats from "./formats";
 import flatpickr from "flatpickr";
 
+import { hashId } from "../utils";
+
 const SELECTORS = {
     DATEPICKER: "[data-datepicker]"
 };
+
+const _datepickers = _datepickers || [];
 
 // 080989◢◤200418
 const _createDatepicker = datepicker => {
@@ -51,17 +55,61 @@ const _createDatepicker = datepicker => {
     return flatpickr(datepicker, options);
 };
 
-const init = ids => {
-    const datepickers = ids || ids === "" ? px.utils.getElementsByIds(ids, "datepicker") : document.querySelectorAll(SELECTORS.DATEPICKER);
-    const _datepickers = _datepickers || [];
+const init = id => {
+    const datepickerId = hashId(id);
+    const datepickers = datepickerId ? document.querySelectorAll(datepickerId) : document.querySelectorAll(SELECTORS.DATEPICKER);
 
     if (datepickers.length) {
-        datepickers.forEach(picker => _datepickers.push(_createDatepicker(picker)));
+        const datepickerObjects = [...datepickers].map(picker => {
+            const datepickerObject = _createDatepicker(picker);
+
+            _datepickers.push(datepickerObject);
+
+            return datepickerObject;
+        });
+
+        return datepickerObjects.length === 1 ? datepickerObjects[0] : datepickerObjects;
     }
 
-    return datepickers;
+    return null;
+};
+
+const open = id => {
+    let datepicker = null;
+
+    _datepickers.forEach(d => d.element.id === id ? datepicker = d : null);
+
+    try {
+        datepicker.open();
+    } catch (e) {
+        console.error(`datepicker.open: No datepicker with id ${id} found.`);
+
+        return false;
+    }
+
+    return true;
+};
+
+const close = id => {
+    let datepicker = null;
+
+    _datepickers.forEach(d => {
+        d.element.id === id ? datepicker = d : null;
+    });
+
+    try {
+        datepicker.close();
+    } catch (e) {
+        console.error(`datepicker.close: No datepicker with id ${id} found.`);
+
+        return false;
+    }
+
+    return true;
 };
 
 export default {
-    init
+    init,
+    open,
+    close
 };

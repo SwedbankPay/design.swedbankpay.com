@@ -1,4 +1,4 @@
-import { getElementsByIds } from "../utils";
+import { hashId } from "../utils";
 
 const SELECTORS = {
     TABS: ".tabs",
@@ -55,22 +55,22 @@ class Tabs {
 }
 
 const init = ids => {
-    const tabsSelector = ids || ids === "" ? getElementsByIds(ids, "tabs") : document.querySelectorAll(SELECTORS.TABS);
-    let tabs = [];
+    // const tabsSelector = ids || ids === "" ? getElementsByIds(ids, "tabs") : document.querySelectorAll(SELECTORS.TABS);
+    // let tabs = [];
 
-    if (tabsSelector.length > 0) {
-        tabs = [...tabsSelector].map(tab => new Tabs(tab));
+    // if (tabsSelector.length > 0) {
+    //     tabs = [...tabsSelector].map(tab => new Tabs(tab));
 
-        document.addEventListener("click", e => {
-            tabs.forEach(tab => {
-                if (!e.target.closest(SELECTORS.TABS) && tab.isOpen) {
-                    tab.close();
-                }
-            });
-        });
-    }
+    //     document.addEventListener("click", e => {
+    //         tabs.forEach(tab => {
+    //             if (!e.target.closest(SELECTORS.TABS) && tab.isOpen) {
+    //                 tab.close();
+    //             }
+    //         });
+    //     });
+    // }
 
-    return tabs;
+    // return tabs;
 };
 
 export default {
