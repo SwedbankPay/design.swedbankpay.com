@@ -394,6 +394,14 @@ const JavascriptMethods = () => (
         <p>
             <Link to="/docs/getting-started/javascript">Initializes</Link> datepickers.
         </p>
+        <h4><PxScript component="datepicker" func="open" params={["<datepicker-id>"]} /></h4>
+        <p>
+            Opens the given datepicker.
+        </p>
+        <h4><PxScript component="datepicker" func="close" params={["<datepicker-id>"]} /></h4>
+        <p>
+            Closes the given datepicker.
+        </p>
     </>
 );
 

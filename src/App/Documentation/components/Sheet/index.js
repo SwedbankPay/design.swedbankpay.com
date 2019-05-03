@@ -68,11 +68,11 @@ const JavascriptMethods = () => (
         <p>
             <Link to="/docs/getting-started/javascript">Initializes</Link> navs.
         </p>
-        <h4><PxScript component="nav" func="open" params={["{nav-id}"]} /></h4>
+        <h4><PxScript component="nav" func="open" params={["<nav-id>"]} /></h4>
         <p>
             Opens the given nav.
         </p>
-        <h4><PxScript component="nav" func="close" params={["{nav-id}"]} /></h4>
+        <h4><PxScript component="nav" func="close" params={["<nav-id>"]} /></h4>
         <p>
             Closes the given nav.
         </p>
