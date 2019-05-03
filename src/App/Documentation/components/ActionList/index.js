@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocContainer, Icon, PxScript } from "#";
+import { ComponentPreview, DocContainer, Icon, JavascriptDocs } from "#";
 
 const { actionList } = window.px;
 
@@ -72,18 +72,7 @@ const Anchorpoints = () => (
 const JavascriptMethods = () => (
     <>
         <h2 id="javascript-methods">Javascript methods</h2>
-        <h4><PxScript component="actionList" func="init" /></h4>
-        <p>
-            <Link to="/docs/getting-started/javascript">Initializes</Link> action-lists.
-        </p>
-        <h4><PxScript component="actionList" func="open" params={["{datepicker_id}"]} /></h4>
-        <p>
-            Opens the given action-list.
-        </p>
-        <h4><PxScript component="actionList" func="close" params={["{datepicker_id}"]} /></h4>
-        <p>
-            Closes the given action-list.
-        </p>
+        <JavascriptDocs componentName="actionList" open close />
     </>
 );
 

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, Attribute, Property, DocContainer, PxScript } from "#";
+import { ComponentPreview, Attribute, Property, DocContainer, JavascriptDocs } from "#";
 import AlertComponent from "@/Alert";
 
 const { alert } = window.px;
@@ -77,10 +77,7 @@ const ExtendedUsage = () => (
 const JavascriptMethods = () => (
     <>
         <h2 id="javascript-methods">Javascript methods</h2>
-        <h4><PxScript component="alert" func="init" /></h4>
-        <p>
-            <Link to="/docs/getting-started/javascript">Initializes</Link> alerts.
-        </p>
+        <JavascriptDocs componentName="alert" />
     </>
 );
 

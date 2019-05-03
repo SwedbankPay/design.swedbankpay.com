@@ -67,69 +67,70 @@ class Sheet {
     }
 }
 
-const init = ids => {
-    // const sheetSelector = ids || ids === "" ? getElementsByIds(ids, "sheet") : document.querySelectorAll(SELECTORS.SHEET);
-    // let sheetEls = [];
+const init = id => {
+    const sheetId = hashId(id);
+    const sheetSelector = sheetId ? document.querySelectorAll(sheetId) : document.querySelectorAll(SELECTORS.SHEET);
+    let sheetEls = [];
 
-    // if (sheetSelector.length) {
-    //     sheetEls = [...sheetSelector].map(sheet => {
-    //         const sheetInstance = new Sheet(sheet);
+    if (sheetSelector.length) {
+        sheetEls = [...sheetSelector].map(sheet => {
+            const sheetInstance = new Sheet(sheet);
 
-    //         if (_sheets.length) {
-    //             _sheets.forEach((arraySheet, index) => {
-    //                 arraySheet.id === sheetInstance.id ? _sheets[index] = sheetInstance : _sheets.push(sheetInstance);
-    //             });
-    //         } else {
-    //             _sheets.push(sheetInstance);
-    //         }
+            if (_sheets.length) {
+                _sheets.forEach((arraySheet, index) => {
+                    arraySheet.id === sheetInstance.id ? _sheets[index] = sheetInstance : _sheets.push(sheetInstance);
+                });
+            } else {
+                _sheets.push(sheetInstance);
+            }
 
-    //         return sheetInstance;
-    //     });
+            return sheetInstance;
+        });
 
-    //     // Close sheet on esc
-    //     document.addEventListener("keydown", e => {
-    //         if (e.keyCode === 27 && document.body.classList.contains("sheet-open")) {
-    //             handleScrollbar();
-    //             _sheets.forEach(sheet => sheet.isOpen ? sheet.close() : null);
-    //         }
-    //     });
+        // Close sheet on esc
+        document.addEventListener("keydown", e => {
+            if (e.keyCode === 27 && document.body.classList.contains("sheet-open")) {
+                handleScrollbar();
+                _sheets.forEach(sheet => sheet.isOpen ? sheet.close() : null);
+            }
+        });
 
-    //     // Init open buttons
-    //     document.querySelectorAll(SELECTORS.OPEN).forEach(btn => {
-    //         const id = btn.dataset.sheetOpen;
-    //         let sheet;
+        // Init open buttons
+        document.querySelectorAll(SELECTORS.OPEN).forEach(btn => {
+            const id = btn.dataset.sheetOpen;
+            let sheet;
 
-    //         _sheets.forEach(s => s.id === id ? sheet = s : null);
+            _sheets.forEach(s => s.id === id ? sheet = s : null);
 
-    //         if (sheet) {
-    //             btn.addEventListener("click", e => {
-    //                 e.preventDefault();
-    //                 sheet.open();
-    //             });
-    //         } else {
-    //             console.warn(`OPEN: No sheet with with id ${id} was found, make sure the attribute data-sheet-open contains the correct id.`);
-    //         }
-    //     });
+            if (sheet) {
+                btn.addEventListener("click", e => {
+                    e.preventDefault();
+                    sheet.open();
+                });
+            } else {
+                console.warn(`OPEN: No sheet with with id ${id} was found, make sure the attribute data-sheet-open contains the correct id.`);
+            }
+        });
 
-    //     // Init close buttons
-    //     document.querySelectorAll(SELECTORS.CLOSE).forEach(btn => {
-    //         const id = btn.dataset.sheetClose;
-    //         let sheet;
+        // Init close buttons
+        document.querySelectorAll(SELECTORS.CLOSE).forEach(btn => {
+            const id = btn.dataset.sheetClose;
+            let sheet;
 
-    //         _sheets.forEach(s => s.id === id ? sheet = s : null);
+            _sheets.forEach(s => s.id === id ? sheet = s : null);
 
-    //         if (sheet) {
-    //             btn.addEventListener("click", e => {
-    //                 e.preventDefault();
-    //                 sheet.close();
-    //             });
-    //         } else {
-    //             console.warn(`CLOSE: No sheet with with id ${id} was found, make sure the attribute data-sheet-close contains the correct id.`);
-    //         }
-    //     });
-    // }
+            if (sheet) {
+                btn.addEventListener("click", e => {
+                    e.preventDefault();
+                    sheet.close();
+                });
+            } else {
+                console.warn(`CLOSE: No sheet with with id ${id} was found, make sure the attribute data-sheet-close contains the correct id.`);
+            }
+        });
+    }
 
-    // return sheetEls;
+    return sheetEls;
 };
 
 const close = id => {

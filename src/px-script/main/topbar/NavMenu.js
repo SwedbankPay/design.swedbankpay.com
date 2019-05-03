@@ -7,6 +7,7 @@ const SELECTORS = {
 
 export default class NavMenu {
     constructor (topbarComponent, navMenu) {
+        this.id = navMenu.id;
         this.navMenuElement = navMenu;
         this.isOpen = false;
         this.btnElement = topbarComponent.querySelector(SELECTORS.BTN);

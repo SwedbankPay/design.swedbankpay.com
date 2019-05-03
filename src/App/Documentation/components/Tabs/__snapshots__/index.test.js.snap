@@ -110,5 +110,6 @@ exports[`Components: Tabs renders 1`] = `
   </p>
   <BasicUsage />
   <Collapsed />
+  <JavascriptMethods />
 </DocContainer>
 `;

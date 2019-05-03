@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocContainer, Icon, Attribute, Property, PxScript } from "#";
+import { ComponentPreview, DocContainer, Icon, Attribute, Property, JavascriptDocs } from "#";
 import AlertComponent from "@/Alert";
 
 const { dialog } = window.px;
@@ -57,18 +57,7 @@ const Example = () => (
 const JavascriptMethods = () => (
     <>
         <h2 id="javascript-methods">Javascript methods</h2>
-        <h4><PxScript component="dialog" func="init" /></h4>
-        <p>
-            <Link to="/docs/getting-started/javascript">Initializes</Link> dialogs.
-        </p>
-        <h4><PxScript component="dialog" func="open" params={["{dialog-id}"]} /></h4>
-        <p>
-            Opens the given dialog.
-        </p>
-        <h4><PxScript component="dialog" func="close" params={["{dialog-id}"]} /></h4>
-        <p>
-            Closes the given dialog.
-        </p>
+        <JavascriptDocs componentName="dialog" open close />
     </>
 );
 

@@ -203,74 +203,78 @@ describe("px-script: dialog", () => {
         expect(document.body.classList).not.toContain("dialog-open");
     });
 
-    it("opens dialog when calling dialog.open", () => {
-        ReactDOM.render(<Dialog />, div);
+    describe("dialog.open", () => {
+        it("opens dialog when calling dialog.open", () => {
+            ReactDOM.render(<Dialog />, div);
 
-        const renderedDialog = document.querySelector(".dialog");
+            const renderedDialog = document.querySelector(".dialog");
 
-        expect(renderedDialog.classList).not.toContain("d-flex");
-        expect(document.body.classList).not.toContain("dialog-open");
+            expect(renderedDialog.classList).not.toContain("d-flex");
+            expect(document.body.classList).not.toContain("dialog-open");
 
-        dialog.init();
-        expect(document.body.classList).not.toContain("dialog-open");
+            dialog.init();
+            expect(document.body.classList).not.toContain("dialog-open");
 
-        dialog.open("test-dialog");
+            dialog.open("test-dialog");
 
-        expect(renderedDialog.classList).toContain("d-flex");
-        expect(document.body.classList).toContain("dialog-open");
+            expect(renderedDialog.classList).toContain("d-flex");
+            expect(document.body.classList).toContain("dialog-open");
+        });
+
+        it("does not open dialog when calling dialog.open with wrong id and prints error to console", () => {
+            console.error = jest.fn();
+            ReactDOM.render(<Dialog />, div);
+
+            const renderedDialog = document.querySelector(".dialog");
+
+            expect(renderedDialog.classList).not.toContain("d-flex");
+
+            dialog.init();
+            expect(document.body.classList).not.toContain("dialog-open");
+
+            dialog.open("qwerty");
+
+            expect(console.error).toHaveBeenCalledWith("dialog.open: No dialog with id \"qwerty\" found.");
+
+            expect(renderedDialog.classList).not.toContain("d-flex");
+            expect(document.body.classList).not.toContain("dialog-open");
+        });
     });
 
-    it("does not open dialog when calling dialog.open with wrong id and prints error to console", () => {
-        console.error = jest.fn();
-        ReactDOM.render(<Dialog />, div);
+    describe("dialog.close", () => {
+        it("closes dialog when calling dialog.close", () => {
+            ReactDOM.render(<OpenDialog />, div);
 
-        const renderedDialog = document.querySelector(".dialog");
+            const renderedDialog = document.querySelector(".dialog");
 
-        expect(renderedDialog.classList).not.toContain("d-flex");
+            expect(renderedDialog.classList).toContain("d-flex");
 
-        dialog.init();
-        expect(document.body.classList).not.toContain("dialog-open");
+            dialog.init();
+            expect(document.body.classList).toContain("dialog-open");
 
-        dialog.open("qwerty");
+            dialog.close("test-dialog");
 
-        expect(console.error).toHaveBeenCalledWith("dialog.open: No dialog with id \"qwerty\" found.");
+            expect(renderedDialog.classList).not.toContain("d-flex");
+            expect(document.body.classList).not.toContain("dialog-open");
+        });
 
-        expect(renderedDialog.classList).not.toContain("d-flex");
-        expect(document.body.classList).not.toContain("dialog-open");
-    });
+        it("does not close dialog when calling dialog.close with wrong id and prints error to console", () => {
+            console.error = jest.fn();
+            ReactDOM.render(<OpenDialog />, div);
 
-    it("closes dialog when calling dialog.close", () => {
-        ReactDOM.render(<OpenDialog />, div);
+            const renderedDialog = document.querySelector(".dialog");
 
-        const renderedDialog = document.querySelector(".dialog");
+            expect(renderedDialog.classList).toContain("d-flex");
 
-        expect(renderedDialog.classList).toContain("d-flex");
+            dialog.init();
+            expect(document.body.classList).toContain("dialog-open");
 
-        dialog.init();
-        expect(document.body.classList).toContain("dialog-open");
+            dialog.close("qwerty");
 
-        dialog.close("test-dialog");
+            expect(console.error).toHaveBeenCalledWith("dialog.close: No dialog with id \"qwerty\" found.");
 
-        expect(renderedDialog.classList).not.toContain("d-flex");
-        expect(document.body.classList).not.toContain("dialog-open");
-    });
-
-    it("does not close dialog when calling dialog.close with wrong id and prints error to console", () => {
-        console.error = jest.fn();
-        ReactDOM.render(<OpenDialog />, div);
-
-        const renderedDialog = document.querySelector(".dialog");
-
-        expect(renderedDialog.classList).toContain("d-flex");
-
-        dialog.init();
-        expect(document.body.classList).toContain("dialog-open");
-
-        dialog.close("qwerty");
-
-        expect(console.error).toHaveBeenCalledWith("dialog.close: No dialog with id \"qwerty\" found.");
-
-        expect(renderedDialog.classList).toContain("d-flex");
-        expect(document.body.classList).toContain("dialog-open");
+            expect(renderedDialog.classList).toContain("d-flex");
+            expect(document.body.classList).toContain("dialog-open");
+        });
     });
 });

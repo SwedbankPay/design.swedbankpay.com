@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { NavHashLink as NavLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, Attribute, Property, DocContainer, PxScript } from "#";
+import { ComponentPreview, Attribute, Property, DocContainer, JavascriptDocs } from "#";
 import { Datepicker as DatepickerComponent } from "@/FormComponents";
 import Alert from "@/Alert";
 
@@ -390,18 +390,7 @@ const Options = () => (
 const JavascriptMethods = () => (
     <>
         <h2 id="javascript-methods">Javascript methods</h2>
-        <h4><PxScript component="datepicker" func="init" /></h4>
-        <p>
-            <Link to="/docs/getting-started/javascript">Initializes</Link> datepickers.
-        </p>
-        <h4><PxScript component="datepicker" func="open" params={["<datepicker-id>"]} /></h4>
-        <p>
-            Opens the given datepicker.
-        </p>
-        <h4><PxScript component="datepicker" func="close" params={["<datepicker-id>"]} /></h4>
-        <p>
-            Closes the given datepicker.
-        </p>
+        <JavascriptDocs componentName="datepicker" open close />
     </>
 );
 

@@ -8,8 +8,8 @@ describe("px-script: tabs", () => {
     const div = document.createElement("div");
     const items = ["item1", "item2", "item3"];
 
-    const NoActiveTab = () => (
-        <div className="tabs">
+    const NoActiveTab = ({ id, tabsOpen }) => (
+        <div className={`tabs ${tabsOpen ? "tabs-open" : null}`} id={id}>
             <i className="material-icons">keyboard_arrow_right</i>
             <ul>
                 {items.map((name, i) => (
@@ -22,6 +22,11 @@ describe("px-script: tabs", () => {
     );
 
     document.body.appendChild(div);
+
+    beforeEach(() => {
+        jest.resetModules();
+        ReactDOM.unmountComponentAtNode(div);
+    });
 
     it("is defined", () => {
         expect(tabs).toBeTruthy();
@@ -46,8 +51,6 @@ describe("px-script: tabs", () => {
         activeTab = renderedTab.querySelector(".active");
 
         expect(activeTab).toBeTruthy();
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("does not reassign active item if one exists", () => {
@@ -63,8 +66,6 @@ describe("px-script: tabs", () => {
         expect(activeTab.classList).toContain("active");
         expect(firstTab.classList).not.toContain("active");
         expect(activeTab).not.toEqual(firstTab);
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("prevents default if you click an active tab", () => {
@@ -83,8 +84,6 @@ describe("px-script: tabs", () => {
         expect(activeTab.classList).toContain("active");
         expect(document.querySelector(".active")).toEqual(activeTab);
         expect(Event.prototype.preventDefault).toHaveBeenCalled();
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("opens a tab dropdown when clicked", () => {
@@ -101,8 +100,6 @@ describe("px-script: tabs", () => {
         renderedTab.click();
 
         expect(renderedTab.classList).toContain("tabs-open");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("closes a dropdown tab when clicked", () => {
@@ -120,8 +117,6 @@ describe("px-script: tabs", () => {
         renderedTab.click();
 
         expect(renderedTab.classList).not.toContain("tabs-open");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("closes a dropdown tab when user clicks outside the dropdown tab", () => {
@@ -139,8 +134,6 @@ describe("px-script: tabs", () => {
         document.querySelector("html").click();
 
         expect(renderedTab.classList).not.toContain("tabs-open");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("closes a dropdown tab when window is resized", () => {
@@ -161,7 +154,57 @@ describe("px-script: tabs", () => {
         global.dispatchEvent(new Event("resize"));
 
         expect(renderedTab.classList).not.toContain("tabs-open");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
+
+    describe("tabs.open", () => {
+        it("opens the tabs matching the passed ID", () => {
+            ReactDOM.render(<NoActiveTab id="demo-tabs" items={items} />, div);
+
+            const renderedTabs = document.querySelector(".tabs");
+
+            tabs.init();
+
+            expect(renderedTabs).toBeTruthy();
+            expect(renderedTabs.classList).not.toContain("tabs-open");
+
+            tabs.open("demo-tabs");
+
+            expect(renderedTabs.classList).toContain("tabs-open");
+        });
+
+        it("prints an error message if no tabs with matching ID exists", () => {
+            console.error = jest.fn();
+
+            tabs.open("demo-tabs-1");
+
+            expect(console.error).toHaveBeenCalled();
+        });
+    });
+
+    describe("tabs.close", () => {
+        it("closes the tabs matching the passed ID", () => {
+            ReactDOM.render(<NoActiveTab id="demo-tabs" items={items} tabsOpen />, div);
+
+            const renderedTabs = document.querySelector(".tabs");
+
+            tabs.init();
+
+            expect(renderedTabs).toBeTruthy();
+            expect(renderedTabs.classList).toContain("tabs-open");
+
+            tabs.close("demo-tabs");
+
+            expect(renderedTabs.classList).not.toContain("tabs-open");
+        });
+
+        it("prints an error message if no tabs with matching ID exists", () => {
+            console.error = jest.fn();
+
+            tabs.close("demo-tabs-1");
+
+            expect(console.error).toHaveBeenCalled();
+        });
+    });
+
+    test.todo("Tests persist the _tabs array through test cases. No way to \"reset\" an imported module, have to use require. [AW]");
 });

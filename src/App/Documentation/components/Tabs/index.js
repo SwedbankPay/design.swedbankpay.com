@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer, Property } from "#";
+import { ComponentPreview, DocContainer, Property, JavascriptDocs } from "#";
 import TabsComponent from "@/Tabs";
 
 const { tabs } = window.px;
@@ -29,6 +29,13 @@ const Collapsed = () => (
     </>
 );
 
+const JavascriptMethods = () => (
+    <>
+        <h2 id="javascript-methods">Javascript methods</h2>
+        <JavascriptDocs componentName="tabs"open close />
+    </>
+);
+
 class Tabs extends Component {
     componentDidMount () {
         tabs.init();
@@ -42,6 +49,7 @@ class Tabs extends Component {
                 </p>
                 <BasicUsage />
                 <Collapsed />
+                <JavascriptMethods />
             </DocContainer>
         );
     }
@@ -50,4 +58,4 @@ class Tabs extends Component {
 export default Tabs;
 
 /* For testing */
-export { BasicUsage, Collapsed };
+export { BasicUsage, Collapsed, JavascriptMethods };

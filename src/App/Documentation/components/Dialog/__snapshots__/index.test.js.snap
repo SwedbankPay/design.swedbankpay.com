@@ -131,48 +131,11 @@ exports[`Documentation: Dialog JavascriptMethods renders 1`] = `
   >
     Javascript methods
   </h2>
-  <h4>
-    <PxScript
-      component="dialog"
-      func="init"
-    />
-  </h4>
-  <p>
-    <Link
-      to="/docs/getting-started/javascript"
-    >
-      Initializes
-    </Link>
-     dialogs.
-  </p>
-  <h4>
-    <PxScript
-      component="dialog"
-      func="open"
-      params={
-        Array [
-          "{dialog-id}",
-        ]
-      }
-    />
-  </h4>
-  <p>
-    Opens the given dialog.
-  </p>
-  <h4>
-    <PxScript
-      component="dialog"
-      func="close"
-      params={
-        Array [
-          "{dialog-id}",
-        ]
-      }
-    />
-  </h4>
-  <p>
-    Closes the given dialog.
-  </p>
+  <JavascriptDocs
+    close={true}
+    componentName="dialog"
+    open={true}
+  />
 </Fragment>
 `;
 

@@ -18,55 +18,56 @@ const writeStyle = obj => {
     inlineStyle.textContent = styleText;
 };
 
-const init = ids => {
-    // const rangeContainers = ids || ids === "" ? getElementsByIds(ids, "rangeslider") : document.querySelectorAll(SELECTORS.RANGESLIDER);
-    // const inlineStyle = document.createElement("style");
-    // const inlineStyleContent = [];
-    // const isBrowserChrome = navigator.userAgent.indexOf("Chrome") > -1;
+const init = id => {
+    const rangeId = hashId(id);
+    const rangeContainers = rangeId ? document.querySelectorAll(rangeId) : document.querySelectorAll(SELECTORS.RANGESLIDER);
+    const inlineStyle = document.createElement("style");
+    const inlineStyleContent = [];
+    const isBrowserChrome = navigator.userAgent.indexOf("Chrome") > -1;
 
-    // if (rangeContainers.length > 0) {
-    //     if (isBrowserChrome) {
-    //         document.body.appendChild(inlineStyle);
-    //     }
+    if (rangeContainers.length > 0) {
+        if (isBrowserChrome) {
+            document.body.appendChild(inlineStyle);
+        }
 
-    //     rangeContainers.forEach((rangeContainer, i) => {
-    //         const input = rangeContainer.querySelector("input[type=range]");
-    //         const valueSpan = rangeContainer.querySelector("span[data-rs-value]");
+        rangeContainers.forEach((rangeContainer, i) => {
+            const input = rangeContainer.querySelector("input[type=range]");
+            const valueSpan = rangeContainer.querySelector("span[data-rs-value]");
 
-    //         /* Changing value of span */
-    //         if (valueSpan) {
-    //             input.addEventListener("change", () => {
-    //                 valueSpan.innerHTML = input.value;
-    //             });
-    //             input.addEventListener("input", () => {
-    //                 valueSpan.innerHTML = input.value;
-    //             });
-    //         }
+            /* Changing value of span */
+            if (valueSpan) {
+                input.addEventListener("change", () => {
+                    valueSpan.innerHTML = input.value;
+                });
+                input.addEventListener("input", () => {
+                    valueSpan.innerHTML = input.value;
+                });
+            }
 
-    //         /* Filling slider background for chrome */
-    //         if (isBrowserChrome) {
-    //             input.id = `px-rs-${i}`;
+            /* Filling slider background for chrome */
+            if (isBrowserChrome) {
+                input.id = `px-rs-${i}`;
 
-    //             const updateStyle = () => {
-    //                 const max = input.attributes.max ? Number(input.attributes.max.value) : 100;
-    //                 const min = input.attributes.min ? Number(input.attributes.min.value) : 0;
-    //                 const value = Number(input.value);
-    //                 const rangePercent = (value + Math.abs(min)) / (max - min) * 100;
+                const updateStyle = () => {
+                    const max = input.attributes.max ? Number(input.attributes.max.value) : 100;
+                    const min = input.attributes.min ? Number(input.attributes.min.value) : 0;
+                    const value = Number(input.value);
+                    const rangePercent = (value + Math.abs(min)) / (max - min) * 100;
 
-    //                 writeStyle({
-    //                     id: input.id,
-    //                     percent: rangePercent,
-    //                     inlineStyleContent,
-    //                     inlineStyle
-    //                 });
-    //             };
+                    writeStyle({
+                        id: input.id,
+                        percent: rangePercent,
+                        inlineStyleContent,
+                        inlineStyle
+                    });
+                };
 
-    //             input.addEventListener("change", updateStyle);
-    //             input.addEventListener("input", updateStyle);
-    //             updateStyle();
-    //         }
-    //     });
-    // }
+                input.addEventListener("change", updateStyle);
+                input.addEventListener("input", updateStyle);
+                updateStyle();
+            }
+        });
+    }
 };
 
 export default {

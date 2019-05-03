@@ -89,47 +89,67 @@ describe("px-script: action-list", () => {
         expect(renderedActionList.classList).not.toContain("active");
     });
 
-    it("opens actionlist when calling actionList.open", () => {
-        ReactDOM.render(<ActionList id="demo-actionlist" />, div);
+    describe("actionList.open", () => {
+        it("opens actionlist when calling actionList.open", () => {
+            ReactDOM.render(<ActionList id="demo-actionlist" />, div);
 
-        const renderedActionList = document.querySelector(".action-list");
+            const renderedActionList = document.querySelector(".action-list");
 
-        expect(renderedActionList).toBeTruthy();
+            expect(renderedActionList).toBeTruthy();
 
-        actionList.init();
-        expect(renderedActionList.classList).not.toContain("active");
+            actionList.init();
+            expect(renderedActionList.classList).not.toContain("active");
 
-        actionList.open("demo-actionlist");
-        expect(renderedActionList.classList).toContain("active");
+            actionList.open("demo-actionlist");
+            expect(renderedActionList.classList).toContain("active");
+        });
+
+        it("does not open actionlist when calling actionlist.open with wrong id and prints error to console", () => {
+            console.error = jest.fn();
+
+            ReactDOM.render(<ActionList id="demo-actionlist" />, div);
+
+            const renderedActionList = document.querySelector(".action-list");
+
+            expect(renderedActionList).toBeTruthy();
+            expect(renderedActionList.classList).not.toContain("active");
+
+            actionList.open("invalid-id");
+
+            expect(renderedActionList.classList).not.toContain("active");
+            expect(console.error).toHaveBeenCalled();
+        });
     });
 
-    it("does not open actionlist when calling actionlist.open with wrong id and prints error to console", () => {
-        console.error = jest.fn();
+    describe("actionList.close", () => {
+        it("closes an open actionlist when calling actionList.close", () => {
+            ReactDOM.render(<ActionList active id="demo-actionlist" />, div);
 
-        ReactDOM.render(<ActionList id="demo-actionlist" />, div);
+            const renderedActionList = document.querySelector(".action-list");
 
-        const renderedActionList = document.querySelector(".action-list");
+            expect(renderedActionList).toBeTruthy();
+            expect(renderedActionList.classList).toContain("active");
 
-        expect(renderedActionList).toBeTruthy();
-        expect(renderedActionList.classList).not.toContain("active");
+            actionList.init();
+            actionList.close("demo-actionlist");
 
-        actionList.open("invalid-id");
+            expect(renderedActionList.classList).not.toContain("active");
+        });
 
-        expect(renderedActionList.classList).not.toContain("active");
-        expect(console.error).toHaveBeenCalled();
-    });
+        it("does not close actionlist when calling actionlist.close with wrong id and prints error to console", () => {
+            console.error = jest.fn();
 
-    it("closes an open actionlist when calling actionList.close", () => {
-        ReactDOM.render(<ActionList active id="demo-actionlist" />, div);
+            ReactDOM.render(<ActionList id="demo-actionlist" active />, div);
 
-        const renderedActionList = document.querySelector(".action-list");
+            const renderedActionList = document.querySelector(".action-list");
 
-        expect(renderedActionList).toBeTruthy();
-        expect(renderedActionList.classList).toContain("active");
+            expect(renderedActionList).toBeTruthy();
+            expect(renderedActionList.classList).toContain("active");
 
-        actionList.init();
-        actionList.close("demo-actionlist");
+            actionList.close("invalid-id");
 
-        expect(renderedActionList.classList).not.toContain("active");
+            expect(renderedActionList.classList).toContain("active");
+            expect(console.error).toHaveBeenCalled();
+        });
     });
 });

@@ -1,4 +1,4 @@
-import { handleScrollbar } from "../utils";
+import { handleScrollbar, hashId } from "../utils";
 
 const SELECTORS = {
     DIALOG: ".dialog",
@@ -44,7 +44,7 @@ class Dialog {
 }
 
 const init = id => {
-    const dialogId = (id && id.includes("#") ? id : (id ? `#${id}` : null));
+    const dialogId = hashId(id);
     const dialogSelector = dialogId ? document.querySelectorAll(dialogId) : document.querySelectorAll(SELECTORS.DIALOG);
     let dialogEls = [];
 
@@ -97,22 +97,6 @@ const init = id => {
     return null;
 };
 
-const close = id => {
-    let dialog = null;
-
-    _dialogs.forEach(d => d.id === id ? dialog = d : null);
-
-    try {
-        dialog.close();
-    } catch (e) {
-        console.error(`dialog.close: No dialog with id "${id}" found.`);
-
-        return false;
-    }
-
-    return dialog;
-};
-
 const open = id => {
     let dialog = null;
 
@@ -129,8 +113,24 @@ const open = id => {
     return dialog;
 };
 
+const close = id => {
+    let dialog = null;
+
+    _dialogs.forEach(d => d.id === id ? dialog = d : null);
+
+    try {
+        dialog.close();
+    } catch (e) {
+        console.error(`dialog.close: No dialog with id "${id}" found.`);
+
+        return false;
+    }
+
+    return dialog;
+};
+
 export default {
     init,
-    close,
-    open
+    open,
+    close
 };

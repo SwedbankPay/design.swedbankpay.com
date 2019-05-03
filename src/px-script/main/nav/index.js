@@ -114,27 +114,29 @@ class Nav {
     }
 }
 
-const init = ids => {
-    // let navs = ids || ids === "" ? getElementsByIds(ids, "nav") : document.querySelectorAll(SELECTORS.NAV);
+const init = id => {
+    const navId = hashId(id);
+    const navSelector = navId ? document.querySelectorAll(navId) : document.querySelectorAll(SELECTORS.NAV);
+    let navs = [];
 
-    // if (navs.length > 0) {
-    //     navs = [...navs].map(nav => new Nav(nav));
+    if (navSelector.length > 0) {
+        navs = [...navSelector].map(nav => new Nav(nav));
 
-    //     document.addEventListener("click", e => {
-    //         navs.forEach(nav => {
-    //             if (!e.target.closest(SELECTORS.NAV) && nav.navOpen) {
-    //                 nav.close();
-    //                 nav._hideItems();
-    //             }
+        document.addEventListener("click", e => {
+            navs.forEach(nav => {
+                if (!e.target.closest(SELECTORS.NAV) && nav.navOpen) {
+                    nav.close();
+                    nav._hideItems();
+                }
 
-    //             if (!e.target.closest(SELECTORS.SUB) && nav.submenuOpen) {
-    //                 nav._submenuCloseAll();
-    //             }
-    //         });
-    //     });
-    // }
+                if (!e.target.closest(SELECTORS.SUB) && nav.submenuOpen) {
+                    nav._submenuCloseAll();
+                }
+            });
+        });
+    }
 
-    // return navs;
+    return navs;
 };
 
 export default {

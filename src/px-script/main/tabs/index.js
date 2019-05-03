@@ -5,6 +5,8 @@ const SELECTORS = {
     ACTIVE: ".active"
 };
 
+const _tabs = _tabs || [];
+
 class Tabs {
     constructor (el) {
         this._el = el;
@@ -28,10 +30,10 @@ class Tabs {
             this._el.querySelector("li").classList.add("active");
         }
 
-        this.addListener();
+        this._addListener();
     }
 
-    addListener () {
+    _addListener () {
         [...this._el.querySelectorAll("li")].forEach(listElem => {
             listElem.addEventListener("click", e => {
                 if (listElem.classList.contains("active")) {
@@ -54,25 +56,70 @@ class Tabs {
     }
 }
 
-const init = ids => {
-    // const tabsSelector = ids || ids === "" ? getElementsByIds(ids, "tabs") : document.querySelectorAll(SELECTORS.TABS);
-    // let tabs = [];
+const init = id => {
+    const tabId = hashId(id);
+    const tabsSelector = tabId ? document.querySelectorAll(tabId) : document.querySelectorAll(SELECTORS.TABS);
+    let tabs = [];
 
-    // if (tabsSelector.length > 0) {
-    //     tabs = [...tabsSelector].map(tab => new Tabs(tab));
+    if (tabsSelector.length > 0) {
+        tabs = [...tabsSelector].map(tab => {
+            const tabsInstance = new Tabs(tab);
 
-    //     document.addEventListener("click", e => {
-    //         tabs.forEach(tab => {
-    //             if (!e.target.closest(SELECTORS.TABS) && tab.isOpen) {
-    //                 tab.close();
-    //             }
-    //         });
-    //     });
-    // }
+            _tabs.push(tabsInstance);
 
-    // return tabs;
+            return tabsInstance;
+        });
+
+        document.addEventListener("click", e => {
+            tabs.forEach(tab => {
+                if (!e.target.closest(SELECTORS.TABS) && tab.isOpen) {
+                    tab.close();
+                }
+            });
+        });
+
+        return tabs.length === 1 ? tabs[0] : tabs;
+    }
+
+    return null;
+};
+
+const open = id => {
+    let tabs = null;
+
+    _tabs.forEach(t => t.id === id ? tabs = t : null);
+
+    try {
+        tabs.open();
+    } catch (e) {
+        console.error(`tabs.open: No tabs with id "${id}" found.`);
+
+        return false;
+    }
+
+    return true;
+
+};
+
+const close = id => {
+    let tabs = null;
+
+    _tabs.forEach(t => t.id === id ? tabs = t : null);
+
+    try {
+        tabs.close();
+    } catch (e) {
+        console.error(`tabs.close: No tabs with id "${id}" found.`);
+
+        return false;
+    }
+
+    return true;
+
 };
 
 export default {
-    init
+    init,
+    open,
+    close
 };
