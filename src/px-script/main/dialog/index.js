@@ -91,7 +91,7 @@ const init = id => {
             }
         });
 
-        return dialogEls.length === 1 ? (dialogEls[0]) : (dialogEls);
+        return dialogEls.length === 1 ? dialogEls[0] : dialogEls;
     }
 
     return null;

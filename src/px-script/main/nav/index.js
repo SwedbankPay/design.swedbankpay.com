@@ -143,9 +143,11 @@ const init = id => {
                 }
             });
         });
+
+        return navs.length === 1 ? navs[0] : navs;
     }
 
-    return navs;
+    return null;
 };
 
 const open = id => {

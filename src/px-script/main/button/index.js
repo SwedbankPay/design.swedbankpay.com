@@ -1,4 +1,4 @@
-import { hashId } from "../utils"; 
+import { hashId } from "../utils";
 
 const SELECTORS = { LOADER: "button[data-button-loader]" };
 
