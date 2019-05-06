@@ -121,5 +121,6 @@ exports[`Components: Topbar renders 1`] = `
   </p>
   <Overview />
   <FixedTopbar />
+  <JavascriptMethods />
 </DocContainer>
 `;

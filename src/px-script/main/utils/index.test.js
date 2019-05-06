@@ -1,5 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom";
 import { extendObj, isWithinBoundingBox, handleScrollbar, hashId } from "./index";
 
 describe("px-script: utils", () => {

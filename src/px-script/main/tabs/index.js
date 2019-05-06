@@ -97,7 +97,7 @@ const open = id => {
         return false;
     }
 
-    return true;
+    return tabs;
 
 };
 
@@ -114,7 +114,7 @@ const close = id => {
         return false;
     }
 
-    return true;
+    return tabs;
 
 };
 

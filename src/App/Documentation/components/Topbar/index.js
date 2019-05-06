@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer, Property, Attribute } from "#";
+import { ComponentPreview, DocContainer, Property, Attribute, JavascriptDocs } from "#";
 import TopbarComponent from "@/Topbar";
 
 const { topbar } = window.px;
@@ -49,6 +49,13 @@ const FixedTopbar = () => (
     </>
 );
 
+const JavascriptMethods = () => (
+    <>
+        <h2 id="javascript-methods">Javascript Methods</h2>
+        <JavascriptDocs componentName="topbar" open close />
+    </>
+);
+
 class Topbar extends Component {
     componentDidMount () {
         topbar.init("demo-topbar");
@@ -60,6 +67,7 @@ class Topbar extends Component {
                 <p className="lead">The topbar is used to give users an easily available navigational bar at the top of your web application.</p>
                 <Overview />
                 <FixedTopbar />
+                <JavascriptMethods />
             </DocContainer>
         );
     }

@@ -2,12 +2,12 @@ import { isWithinBoundingBox } from "../utils";
 
 const SELECTORS = {
     BTN: ".topbar-btn",
-    ICON: "topbar-btn-icon"
+    ICON: ".topbar-btn-icon"
 };
 
 export default class NavMenu {
     constructor (topbarComponent, navMenu) {
-        this.id = navMenu.id;
+        this.id = topbarComponent.id;
         this.navMenuElement = navMenu;
         this.isOpen = false;
         this.btnElement = topbarComponent.querySelector(SELECTORS.BTN);

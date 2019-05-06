@@ -8,8 +8,11 @@ const SELECTORS = {
     }
 };
 
+const _navs = _navs || [];
+
 class Nav {
     constructor (el) {
+        this.id = el.id;
         this._el = el;
         this.navOpen = el.classList.contains("nav-open");
         this.submenus = this._el.querySelectorAll(SELECTORS.SUB);
@@ -120,7 +123,13 @@ const init = id => {
     let navs = [];
 
     if (navSelector.length > 0) {
-        navs = [...navSelector].map(nav => new Nav(nav));
+        navs = [...navSelector].map(nav => {
+            const navInstance = new Nav(nav);
+
+            _navs.push(navInstance);
+
+            return navInstance;
+        });
 
         document.addEventListener("click", e => {
             navs.forEach(nav => {
@@ -139,6 +148,40 @@ const init = id => {
     return navs;
 };
 
+const open = id => {
+    let nav = null;
+
+    _navs.forEach(n => n.id === id ? nav = n : null);
+
+    try {
+        nav.open();
+    } catch (e) {
+        console.error(`nav.open: No nav with id "${id}" found.`);
+
+        return false;
+    }
+
+    return nav;
+};
+
+const close = id => {
+    let nav = null;
+
+    _navs.forEach(n => n.id === id ? nav = n : null);
+
+    try {
+        nav.close();
+    } catch (e) {
+        console.error(`nav.close: No nav with id "${id}" found.`);
+
+        return false;
+    }
+
+    return nav;
+};
+
 export default {
-    init
+    init,
+    open,
+    close
 };

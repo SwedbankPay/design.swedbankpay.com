@@ -87,7 +87,7 @@ const open = id => {
         return false;
     }
 
-    return true;
+    return datepicker;
 };
 
 const close = id => {
@@ -105,7 +105,7 @@ const close = id => {
         return false;
     }
 
-    return true;
+    return datepicker;
 };
 
 export default {
