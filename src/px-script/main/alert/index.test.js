@@ -15,12 +15,12 @@ describe("px-script: alert", () => {
         expect(alert).toBeDefined();
     });
 
-    it("has an init method", () => {
-        expect(alert.init).toBeDefined();
-        expect(alert.init).toBeInstanceOf(Function);
-    });
-
     describe("alert.init", () => {
+        it("has an init method", () => {
+            expect(alert.init).toBeDefined();
+            expect(alert.init).toBeInstanceOf(Function);
+        });
+
         it("adds eventlisteners on all close buttons", () => {
             const Alerts = () => (
                 <>
@@ -86,12 +86,12 @@ describe("px-script: alert", () => {
         });
     });
 
-    it("has a close method", () => {
-        expect(alert.close).toBeDefined();
-        expect(alert.close).toBeInstanceOf(Function);
-    });
-
     describe("alert.close", () => {
+        it("has a close method", () => {
+            expect(alert.close).toBeDefined();
+            expect(alert.close).toBeInstanceOf(Function);
+        });
+
         it("prints a warning message if method is called with no ID", () => {
             console.warn = jest.fn();
 

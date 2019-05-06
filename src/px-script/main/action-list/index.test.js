@@ -24,9 +24,49 @@ describe("px-script: action-list", () => {
         expect(actionList).toBeDefined();
     });
 
-    it("has an init method", () => {
-        expect(actionList.init).toBeDefined();
-        expect(actionList.init).toBeInstanceOf(Function);
+    describe("actionList.init", () => {
+        it("has an init method", () => {
+            expect(actionList.init).toBeDefined();
+            expect(actionList.init).toBeInstanceOf(Function);
+        });
+
+        it("returns a single object when one element is initialized", () => {
+            ReactDOM.render(<ActionList id="demo-action" />, div);
+
+            const renderedActionList = document.querySelector(".action-list");
+
+            expect(renderedActionList).toBeTruthy();
+
+            const returnVal = actionList.init("demo-action");
+
+            expect(Array.isArray(returnVal)).toBeFalsy();
+            expect(typeof returnVal).toEqual("object");
+        });
+
+        it("returns an array of objects when more than one element is initialized", () => {
+            ReactDOM.render(
+                <>
+                    <ActionList />
+                    <ActionList />
+                </>
+                , div);
+
+            const renderedActionLists = document.querySelectorAll(".action-list");
+
+            expect(renderedActionLists).toBeTruthy();
+            expect(renderedActionLists.length).toEqual(2);
+
+            const returnVal = actionList.init();
+
+            expect(Array.isArray(returnVal)).toBeTruthy();
+            expect(returnVal.length).toEqual(2);
+        });
+
+        it("returns null if no action-list is found", () => {
+            const returnVal = actionList.init();
+
+            expect(returnVal).toBeNull();
+        });
     });
 
     it("opens when clicking the icon", () => {

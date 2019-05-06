@@ -1,3 +1,5 @@
+import { hashId } from "../utils";
+
 const SELECTORS = {
     ACTIONMENU: ".action-menu",
     ACTIONLIST: ".action-list",
@@ -39,7 +41,7 @@ class ActionList {
 }
 
 const init = id => {
-    const actionListId = (id && id.includes("#") ? id : (id ? `#${id}` : null));
+    const actionListId = hashId(id);
     const actionListQuery = actionListId ? document.querySelectorAll(actionListId) : document.querySelectorAll(SELECTORS.ACTIONLIST);
     let actionListInstances = [];
 
@@ -59,9 +61,11 @@ const init = id => {
                 }
             });
         });
+
+        return actionListInstances.length === 1 ? actionListInstances[0] : actionListInstances;
     }
 
-    return actionListInstances.length === 1 ? actionListInstances[0] : actionListInstances;
+    return null;
 };
 
 const close = id => {
