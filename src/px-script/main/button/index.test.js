@@ -9,6 +9,8 @@ describe("px-script: button", () => {
 
     document.body.appendChild(div);
 
+    beforeEach(() => ReactDOM.unmountComponentAtNode(div));
+
     it("is defined", () => {
         expect(button).toBeDefined();
     });
@@ -42,7 +44,32 @@ describe("px-script: button", () => {
             expect(button.childNodes).toHaveLength(2);
             expect(button.lastChild.classList).toContain("loader");
         });
+    });
 
-        ReactDOM.unmountComponentAtNode(div);
+    it("returns one object when an ID is passed", () => {
+        ReactDOM.render(<Button type="primary" label="test" id="test" loader />, div);
+
+        const returnVal = button.init("test");
+
+        expect(Array.isArray(returnVal)).toBeFalsy();
+        expect(typeof returnVal).toEqual("object");
+    });
+
+    it("returns an array of objects if several loader buttons exist", () => {
+        ReactDOM.render(
+            <>
+                <Button type="primary" label="test" id="test-1" loader />
+                <Button type="primary" label="test" id="test-2" loader />
+            </>
+            , div);
+
+        const returnVal = button.init();
+
+        expect(Array.isArray(returnVal)).toBeTruthy();
+        expect(returnVal.length).toEqual(2);
+    });
+
+    it("returns null if no button loaders exist", () => {
+        expect(button.init()).toBeNull();
     });
 });

@@ -1,3 +1,5 @@
+import { hashId } from "../utils"; 
+
 const SELECTORS = { LOADER: "button[data-button-loader]" };
 
 const _appendLoader = button => {
@@ -18,18 +20,27 @@ const _appendLoader = button => {
     button.appendChild(div);
 };
 
-const button = (() => {
-    const init = () => {
-        const loaderButtons = document.querySelectorAll(SELECTORS.LOADER);
+const init = id => {
+    const loaderId = hashId(id);
+    const loaderSelector = loaderId ? document.querySelectorAll(loaderId) : document.querySelectorAll(SELECTORS.LOADER);
+    const buttonLoaders = [];
 
-        if (loaderButtons.length) {
-            loaderButtons.forEach(button => {
-                _appendLoader(button);
+    if (loaderSelector.length) {
+        loaderSelector.forEach(button => {
+            _appendLoader(button);
+
+            buttonLoaders.push({
+                _el: button,
+                id: button.id
             });
-        }
-    };
+        });
 
-    return { init };
-})();
+        return buttonLoaders.length === 1 ? buttonLoaders[0] : buttonLoaders;
+    }
 
-export default button;
+    return null;
+};
+
+export default {
+    init
+};
