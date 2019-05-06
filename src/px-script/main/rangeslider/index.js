@@ -20,17 +20,18 @@ const writeStyle = obj => {
 
 const init = id => {
     const rangeId = hashId(id);
-    const rangeContainers = rangeId ? document.querySelectorAll(rangeId) : document.querySelectorAll(SELECTORS.RANGESLIDER);
+    const rangeContainerSelector = rangeId ? document.querySelectorAll(rangeId) : document.querySelectorAll(SELECTORS.RANGESLIDER);
+    let rangeContainers = [];
     const inlineStyle = document.createElement("style");
     const inlineStyleContent = [];
     const isBrowserChrome = navigator.userAgent.indexOf("Chrome") > -1;
 
-    if (rangeContainers.length > 0) {
+    if (rangeContainerSelector.length > 0) {
         if (isBrowserChrome) {
             document.body.appendChild(inlineStyle);
         }
 
-        rangeContainers.forEach((rangeContainer, i) => {
+        rangeContainers = [...rangeContainerSelector].map((rangeContainer, i) => {
             const input = rangeContainer.querySelector("input[type=range]");
             const valueSpan = rangeContainer.querySelector("span[data-rs-value]");
 
@@ -66,8 +67,14 @@ const init = id => {
                 input.addEventListener("input", updateStyle);
                 updateStyle();
             }
+
+            return { _el: rangeContainer };
         });
+
+        return rangeContainers.length === 1 ? rangeContainers[0] : rangeContainers;
     }
+
+    return null;
 };
 
 export default {

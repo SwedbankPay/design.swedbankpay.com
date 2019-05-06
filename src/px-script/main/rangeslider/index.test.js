@@ -4,8 +4,8 @@ import ReactDOM from "react-dom";
 import rangeslider from "./index";
 
 describe("px-script: rangeslider", () => {
-    const TestSlider = () => (
-        <div className="rangeslider rangeslider-brand label-right">
+    const TestSlider = ({ id }) => (
+        <div className="rangeslider rangeslider-brand label-right" id={id}>
             <input type="range" min="0" max="200" step="1" />
             <output className="value-label">
                 <p>
@@ -52,13 +52,44 @@ describe("px-script: rangeslider", () => {
 
     document.body.appendChild(div);
 
+    beforeEach(() => ReactDOM.unmountComponentAtNode(div));
+
     it("is defined", () => {
         expect(rangeslider).toBeDefined();
     });
 
-    it("has an init method", () => {
-        expect(rangeslider.init).toBeDefined();
-        expect(rangeslider.init).toBeInstanceOf(Function);
+    describe("rangeslider.init", () => {
+        it("is defined", () => {
+            expect(rangeslider.init).toBeDefined();
+            expect(rangeslider.init).toBeInstanceOf(Function);
+        });
+
+        it("returns a single object when one ID is passed", () => {
+            ReactDOM.render(<TestSlider id="demo-range" />, div);
+
+            const returnVal = rangeslider.init("demo-range");
+
+            expect(Array.isArray(returnVal)).toBeFalsy();
+            expect(typeof returnVal).toEqual("object");
+        });
+
+        it("returns an array of objects when more than one rangeslider exists", () => {
+            ReactDOM.render(
+                <>
+                    <TestSlider />
+                    <TestSlider />
+                </>
+                , div);
+
+            const returnVal = rangeslider.init();
+
+            expect(Array.isArray(returnVal)).toBeTruthy();
+            expect(returnVal.length).toEqual(2);
+        });
+
+        it("returns null if no rangesliders exist", () => {
+            expect(rangeslider.init()).toBeNull();
+        });
     });
 
     // Start of Chrome specific tests [AW]
@@ -81,7 +112,6 @@ describe("px-script: rangeslider", () => {
 
         Object.defineProperty(window.navigator, "userAgent", { value: defaultUseragent });
         document.body.removeChild(chromeStyle);
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("creates a unique styling for each rangeslider in one style tag for chrome", () => {
@@ -106,7 +136,6 @@ describe("px-script: rangeslider", () => {
 
         Object.defineProperty(window.navigator, "userAgent", { value: defaultUseragent });
         document.body.removeChild(chromeStyle);
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("does not create duplicate styling when onchange occurs", () => {
@@ -137,7 +166,6 @@ describe("px-script: rangeslider", () => {
 
         Object.defineProperty(window.navigator, "userAgent", { value: defaultUseragent });
         document.body.removeChild(chromeStyle);
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("sets max and min values to 0 and 100 for rangesliders if none are provided", () => {
@@ -160,7 +188,6 @@ describe("px-script: rangeslider", () => {
         expect(expectedStyleValue).toEqual(chromeStyle.innerHTML);
 
         Object.defineProperty(window.navigator, "userAgent", { value: defaultUseragent });
-        ReactDOM.unmountComponentAtNode(div);
     });
     // End of Chrome specific tests [AW]
 
@@ -181,7 +208,6 @@ describe("px-script: rangeslider", () => {
 
         expect(valueSpan.innerHTML).toEqual(input.value);
 
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("updates displayed value span on input in rangeslider", () => {
@@ -201,7 +227,6 @@ describe("px-script: rangeslider", () => {
 
         expect(valueSpan.innerHTML).toEqual(input.value);
 
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("does not do value-label updates if value-label is not defined", () => {
@@ -214,6 +239,5 @@ describe("px-script: rangeslider", () => {
         expect(rangeSlider).toBeTruthy();
         expect(valueSpan).toBeFalsy();
 
-        ReactDOM.unmountComponentAtNode(div);
     });
 });
