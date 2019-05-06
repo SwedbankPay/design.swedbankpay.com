@@ -128,9 +128,11 @@ const init = id => {
                 console.warn(`CLOSE: No sheet with with id ${id} was found, make sure the attribute data-sheet-close contains the correct id.`);
             }
         });
+
+        return sheetEls.length === 1 ? sheetEls[0] : sheetEls;
     }
 
-    return sheetEls;
+    return null;
 };
 
 const close = id => {

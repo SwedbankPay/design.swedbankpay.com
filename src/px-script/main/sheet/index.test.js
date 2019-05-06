@@ -10,12 +10,12 @@ describe("px-script: sheet", () => {
     document.body.appendChild(div);
     jest.useFakeTimers();
 
-    const Sheet = () => (
+    const Sheet = ({ id }) => (
         <>
-            <div className="sheet" id="demo-sheet">
+            <div className="sheet" id={id}>
                 <section></section>
             </div>
-            <button className="btn btn-primary" type="button" data-sheet-open="demo-sheet">Open sheet</button>
+            <button className="btn btn-primary" type="button" data-sheet-open={id}>Open sheet</button>
         </>
     );
 
@@ -45,13 +45,53 @@ describe("px-script: sheet", () => {
         expect(sheet).toBeDefined();
     });
 
-    it("has an init method", () => {
-        expect(sheet.init).toBeDefined();
-        expect(sheet.init).toBeInstanceOf(Function);
+    describe("sheet.init", () => {
+        it("has an init method", () => {
+            expect(sheet.init).toBeDefined();
+            expect(sheet.init).toBeInstanceOf(Function);
+        });
+
+        it("returns one object when an ID is passed", () => {
+            ReactDOM.render(<Sheet id="demo-sheet-1" />, div);
+
+            const renderedSheet = document.querySelector(".sheet");
+
+            expect(renderedSheet).toBeTruthy();
+
+            const returnVal = sheet.init("demo-sheet-1");
+
+            expect(Array.isArray(returnVal)).toBeFalsy();
+            expect(typeof returnVal).toEqual("object");
+        });
+
+        it("returns an array of objects when more than one element is initialized", () => {
+            ReactDOM.render(
+                <>
+                    <Sheet />
+                    <Sheet />
+                </>
+                , div);
+
+            const renderedSheets = document.querySelectorAll(".sheet");
+
+            expect(renderedSheets).toBeTruthy();
+            expect(renderedSheets.length).toEqual(2);
+
+            const returnVal = sheet.init();
+
+            expect(Array.isArray(returnVal)).toBeTruthy();
+            expect(returnVal.length).toEqual(2);
+        });
+
+        it("returns null if no sheet is found", () => {
+            const returnVal = sheet.init();
+
+            expect(returnVal).toBeNull();
+        });
     });
 
     it("button with attribute 'data-sheet-open' pointing to the correct id opens corresponding sheet", () => {
-        ReactDOM.render(<Sheet />, div);
+        ReactDOM.render(<Sheet id="demo-sheet" />, div);
 
         const renderedSheet = document.querySelector(".sheet");
         const openBtn = document.querySelector("[data-sheet-open]");
@@ -204,7 +244,7 @@ describe("px-script: sheet", () => {
 
     describe("sheet.open", () => {
         it("opens sheet when calling sheet.open", () => {
-            ReactDOM.render(<Sheet />, div);
+            ReactDOM.render(<Sheet id="demo-sheet" />, div);
 
             const renderedSheet = document.querySelector(".sheet");
 
@@ -225,7 +265,7 @@ describe("px-script: sheet", () => {
 
         it("does not open sheet when calling sheet.open with wrong id and prints error to console", () => {
             console.error = jest.fn();
-            ReactDOM.render(<Sheet />, div);
+            ReactDOM.render(<Sheet id="demo-sheet" />, div);
 
             const renderedSheet = document.querySelector(".sheet");
 
@@ -291,7 +331,7 @@ describe("px-script: sheet", () => {
 
     describe("sheet and toast", () => {
         it("adds margin right to toast-container when a toast is active and sheet is opened", () => {
-            ReactDOM.render(<Sheet />, div);
+            ReactDOM.render(<Sheet id="demo-sheet" />, div);
             sheet.init();
 
             const renderedSheet = document.querySelector(".sheet");
