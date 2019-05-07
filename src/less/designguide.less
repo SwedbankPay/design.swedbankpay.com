@@ -172,6 +172,18 @@
         }
     }
 
+    /* Only used for showing border-utility [AW] */
+    .demo-square {
+        height: 5rem;
+        width: 5rem;
+        background-color: @input-gray;
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+
     // NOTE: This is not used for anything but including the image in the build [EH]
     #mail_icon {
         background: url("../img/payexmail.png");

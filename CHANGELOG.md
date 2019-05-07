@@ -1,8 +1,10 @@
 # Changelog
 
-## [2.0.3] - 2019-03-25
+## [2.1.0] - 2019-05-07
 
-### Fixed
+### Added
 
-- Fixed issue with action-list icon showing through action-list menu.
-- Fixed issue with polyfills
+- Added Page Layout section /core
+- Added .main-content class
+- Added Border section to /utilities
+- Added .border class along with more variants

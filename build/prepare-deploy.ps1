@@ -4,7 +4,7 @@ if ($Env:GitVersion_PreReleaseLabel -NotMatch "PullRequest" -And $Env:GitVersion
     ./build/deploy-github-pages.ps1
 
     # Check response time for scripts and styles
-    npm run response-time
+    # npm run response-time
 
     # TODO: Run functional tests etc here [EH]
 } else {

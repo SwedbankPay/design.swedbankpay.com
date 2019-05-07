@@ -99,6 +99,11 @@ exports[`Documentation: index renders 1`] = `
                 "title": "Lists",
               },
               Object {
+                "componentPath": "core/Page-layout",
+                "path": "/docs/core/page-layout",
+                "title": "Page layout",
+              },
+              Object {
                 "componentPath": "core/Tables",
                 "path": "/docs/core/tables",
                 "title": "Tables",
@@ -263,6 +268,11 @@ exports[`Documentation: index renders 1`] = `
           redirect="/docs/utilities/colors"
           routes={
             Array [
+              Object {
+                "componentPath": "utilities/Borders",
+                "path": "/docs/utilities/borders",
+                "title": "Borders",
+              },
               Object {
                 "componentPath": "utilities/Colors",
                 "path": "/docs/utilities/colors",

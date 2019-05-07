@@ -67,3 +67,6 @@ typings/
 
 # Mac stuff
 .DS_Store
+
+# Local test file
+/index.html
