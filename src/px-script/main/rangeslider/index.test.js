@@ -17,31 +17,6 @@ describe("px-script: rangeslider", () => {
         </div>
     );
 
-    const TwoTestSliders = () => (
-        <>
-            <div className="rangeslider rangeslider-brand label-right">
-                <input type="range" min="0" max="200" step="1" />
-                <output className="value-label">
-                    <p>
-                        <span>$</span>
-                        <span data-rs-value="true">100</span>
-                        <span>%</span>
-                    </p>
-                </output>
-            </div>
-            <div className="rangeslider rangeslider-brand label-right">
-                <input type="range" min="0" max="200" step="1" />
-                <output className="value-label">
-                    <p>
-                        <span>$</span>
-                        <span data-rs-value="true">100</span>
-                        <span>%</span>
-                    </p>
-                </output>
-            </div>
-        </>
-    );
-
     const TestSliderNoLabel = () => (
         <div className="rangeslider rangeslider-brand label-right">
             <input type="range" step="1" />
@@ -115,7 +90,12 @@ describe("px-script: rangeslider", () => {
     });
 
     it("creates a unique styling for each rangeslider in one style tag for chrome", () => {
-        ReactDOM.render(<TwoTestSliders />, div);
+        ReactDOM.render(
+            <>
+                <TestSlider />
+                <TestSlider />
+            </>
+            , div);
 
         const defaultUseragent = window.navigator.userAgent;
 

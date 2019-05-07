@@ -21,12 +21,12 @@ describe("px-script: loader", () => {
             expect(loader.init).toBeInstanceOf(Function);
         });
 
-        it("returns a single object when one element is initialized", () => {
+        it("returns a single object when one loader is initialized", () => {
             ReactDOM.render(<Loader id="demo-loader" size="default" />, div);
 
-            const renderedActionList = document.querySelector(".loader");
+            const renderedLoader = document.querySelector(".loader");
 
-            expect(renderedActionList).toBeTruthy();
+            expect(renderedLoader).toBeTruthy();
 
             const returnVal = loader.init("demo-loader");
 
@@ -34,7 +34,7 @@ describe("px-script: loader", () => {
             expect(typeof returnVal).toEqual("object");
         });
 
-        it("returns an array of objects when more than one element is initialized", () => {
+        it("returns an array of objects when more than one loader is initialized", () => {
             ReactDOM.render(
                 <>
                     <Loader size="default" />

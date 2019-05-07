@@ -51,7 +51,7 @@ describe("px-script: tabs", () => {
             expect(typeof returnVal).toEqual("object");
         });
 
-        it("returns an array of objects when more than one element is initialized", () => {
+        it("returns an array of objects when more than one tabs is initialized", () => {
             ReactDOM.render(
                 <>
                     <NoActiveTab />

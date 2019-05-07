@@ -9,8 +9,8 @@ describe("px-script: nav", () => {
 
     document.body.appendChild(div);
 
-    const Nav = ({ subItems, open, subopen }) => (
-        <nav className={`nav ${open ? "nav-open" : null}`}>
+    const Nav = ({ subItems, open, subopen, id }) => (
+        <nav id={id} className={`nav ${open ? "nav-open" : null}`}>
             <ul>
                 <li>
                     <a href="#">
@@ -100,13 +100,53 @@ describe("px-script: nav", () => {
         </nav>
     );
 
+    beforeEach(() => ReactDOM.unmountComponentAtNode(div));
+
     it("is defined", () => {
         expect(nav).toBeTruthy();
     });
 
-    it("has an init method", () => {
-        expect(nav.init).toBeTruthy();
-        expect(nav.init).toBeInstanceOf(Function);
+    describe("nav.init", () => {
+        it("is defined", () => {
+            expect(nav.init).toBeTruthy();
+            expect(nav.init).toBeInstanceOf(Function);
+        });
+
+        it("returns a single object when one ID is passed", () => {
+            ReactDOM.render(<Nav id="demo-nav" />, div);
+
+            const renderedNav = document.querySelector(".nav");
+
+            expect(renderedNav).toBeTruthy();
+
+            const returnVal = nav.init("demo-nav");
+
+            expect(Array.isArray(returnVal)).toBeFalsy();
+            expect(returnVal.id).toEqual("demo-nav");
+        });
+
+        it("returns an array of objects when more than one nav is initialized", () => {
+            ReactDOM.render(
+                <>
+                    <Nav />
+                    <Nav />
+                </>
+                , div);
+
+            const renderedNavs = document.querySelectorAll(".nav");
+
+            expect(renderedNavs).toBeTruthy();
+            expect(renderedNavs.length).toEqual(2);
+
+            const returnVal = nav.init();
+
+            expect(Array.isArray(returnVal)).toBeTruthy();
+            expect(returnVal.length).toEqual(2);
+        });
+
+        it("init returns null if no nav is found", () => {
+            expect(nav.init()).toBeNull();
+        });
     });
 
     it("does not render a menu icon when there are less than four list elements", () => {
@@ -118,8 +158,6 @@ describe("px-script: nav", () => {
 
         expect(renderedNav).toBeTruthy();
         expect(sidebarMenubtn).toBeNull();
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("renders a menu icon when there are less than four list elements but submenus exist", () => {
@@ -131,8 +169,6 @@ describe("px-script: nav", () => {
 
         expect(renderedNav).toBeTruthy();
         expect(sidebarMenubtn).toBeTruthy();
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("renders a menu icon when there are more than four list elements", () => {
@@ -144,8 +180,6 @@ describe("px-script: nav", () => {
 
         expect(renderedNav).toBeTruthy();
         expect(sidebarMenubtn).toBeTruthy();
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("opens when clicking the menu icon", () => {
@@ -162,8 +196,6 @@ describe("px-script: nav", () => {
         sidebarMenubtn.click();
 
         expect(renderedNav.classList).toContain("nav-open");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("closes when clicking the menu icon while open", () => {
@@ -179,8 +211,6 @@ describe("px-script: nav", () => {
 
         sidebarMenubtn.click();
         expect(renderedNav.classList).not.toContain("nav-open");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("closes when clicking outside nav", () => {
@@ -195,8 +225,6 @@ describe("px-script: nav", () => {
         document.querySelector("html").click();
 
         expect(renderedNav.classList).not.toContain("nav-open");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("closes nav on resize", () => {
@@ -217,8 +245,6 @@ describe("px-script: nav", () => {
         global.dispatchEvent(new Event("resize"));
 
         expect(renderedNav.classList).not.toContain("nav-open");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("creates one copy of the submenu icon", () => {
@@ -238,8 +264,6 @@ describe("px-script: nav", () => {
         const submenuIconCopy = [...submenuicons][0];
 
         expect(submenuIconCopy).not.toEqual(submenuIcon);
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("opens a submenu when a submenu icon is clicked", () => {
@@ -258,8 +282,6 @@ describe("px-script: nav", () => {
         iconClickable.click();
 
         expect(submenu.classList).toContain("submenu-open");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("closes a submenu when a submenu icon is clicked", () => {
@@ -278,8 +300,6 @@ describe("px-script: nav", () => {
         iconClickable.click();
 
         expect(submenu.classList).not.toContain("submenu-open");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("closes a submenu when clicking outside the submenu", () => {
@@ -296,8 +316,6 @@ describe("px-script: nav", () => {
         document.querySelector("html").click();
 
         expect(submenu.classList).not.toContain("submenu-open");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("closes submenu on resize", () => {
@@ -320,7 +338,5 @@ describe("px-script: nav", () => {
         global.dispatchEvent(new Event("resize"));
 
         expect(submenu.classList).not.toContain("submenu-open");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 });

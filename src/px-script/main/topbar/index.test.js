@@ -73,7 +73,7 @@ describe("px-script: topbar", () => {
             expect(typeof returnVal).toEqual("object");
         });
 
-        it("returns an array of objects when more than one element is initialized", () => {
+        it("returns an array of objects when more than one topbar is initialized", () => {
             ReactDOM.render(
                 <>
                     <Topbar />

@@ -18,45 +18,51 @@ describe("px-script: datepicker", () => {
         expect(datepicker).toBeDefined();
     });
 
-    it("has an init method", () => {
-        expect(datepicker.init).toBeDefined();
-        expect(datepicker.init).toBeInstanceOf(Function);
-    });
+    describe("datepicker.init", () => {
+        it("has an init method", () => {
+            expect(datepicker.init).toBeDefined();
+            expect(datepicker.init).toBeInstanceOf(Function);
+        });
 
-    it("does not init if no datepickers exist", () => {
-        ReactDOM.render(<p>No datepickers here!</p>, div);
+        it("does not init if no datepickers exist", () => {
+            ReactDOM.render(<p>No datepickers here!</p>, div);
 
-        const datePickerSpy = jest.spyOn(datepicker, "init");
+            const datePickerSpy = jest.spyOn(datepicker, "init");
 
-        expect(datePickerSpy).not.toHaveBeenCalled();
-    });
+            expect(datePickerSpy).not.toHaveBeenCalled();
+        });
 
-    it("inits the datepicker matching the passed ID", () => {
-        ReactDOM.render(<Datepicker id="test-datepicker" />, div);
+        it("inits the datepicker matching the passed ID", () => {
+            ReactDOM.render(<Datepicker id="test-datepicker" />, div);
 
-        const returnVal = datepicker.init("test-datepicker");
+            const returnVal = datepicker.init("test-datepicker");
 
-        expect(returnVal.input.id).toEqual("test-datepicker");
-    });
+            expect(returnVal.input.id).toEqual("test-datepicker");
+        });
 
-    it("returns a single object when initing a single datepicker", () => {
-        ReactDOM.render(<Datepicker />, div);
+        it("returns a single object when one ID is passed", () => {
+            ReactDOM.render(<Datepicker />, div);
 
-        const returnVal = datepicker.init();
+            const returnVal = datepicker.init();
 
-        expect(Array.isArray(returnVal)).toBeFalsy();
-        expect(typeof returnVal).toEqual("object");
-    });
+            expect(Array.isArray(returnVal)).toBeFalsy();
+            expect(typeof returnVal).toEqual("object");
+        });
 
-    it("returns an array of objects if more than one datepicker exists on the page", () => {
-        ReactDOM.render(
-            <>
-                <Datepicker />
-                <Datepicker />
-            </>, div
-        );
+        it("returns an array of objects if more than one datepicker is initialized", () => {
+            ReactDOM.render(
+                <>
+                    <Datepicker />
+                    <Datepicker />
+                </>, div
+            );
 
-        expect(datepicker.init().length).toEqual(2);
+            expect(datepicker.init().length).toEqual(2);
+        });
+
+        it("returns null if no datepickers exist", () => {
+            expect(datepicker.init()).toBeNull();
+        });
     });
 
     it("warns about non-existing formats", () => {

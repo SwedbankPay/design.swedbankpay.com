@@ -64,7 +64,7 @@ describe("px-script: sheet", () => {
             expect(typeof returnVal).toEqual("object");
         });
 
-        it("returns an array of objects when more than one element is initialized", () => {
+        it("returns an array of objects when more than one sheet is initialized", () => {
             ReactDOM.render(
                 <>
                     <Sheet />
@@ -84,9 +84,7 @@ describe("px-script: sheet", () => {
         });
 
         it("returns null if no sheet is found", () => {
-            const returnVal = sheet.init();
-
-            expect(returnVal).toBeNull();
+            expect(sheet.init()).toBeNull();
         });
     });
 

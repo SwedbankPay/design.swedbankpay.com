@@ -46,10 +46,10 @@ class Dialog {
 const init = id => {
     const dialogId = hashId(id);
     const dialogSelector = dialogId ? document.querySelectorAll(dialogId) : document.querySelectorAll(SELECTORS.DIALOG);
-    let dialogEls = [];
+    let dialogs = [];
 
     if (dialogSelector.length) {
-        dialogEls = [...dialogSelector].map(dialog => {
+        dialogs = [...dialogSelector].map(dialog => {
             const dialogObject = new Dialog(dialog);
 
             _dialogs.push(dialogObject);
@@ -91,7 +91,7 @@ const init = id => {
             }
         });
 
-        return dialogEls.length === 1 ? dialogEls[0] : dialogEls;
+        return dialogs.length === 1 ? dialogs[0] : dialogs;
     }
 
     return null;

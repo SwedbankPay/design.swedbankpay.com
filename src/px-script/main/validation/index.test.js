@@ -34,8 +34,8 @@ describe("px-script: validation", () => {
         </form>
     );
 
-    const FormValidation = ({ submitBtn }) => (
-        <form noValidate data-validate="">
+    const FormValidation = ({ submitBtn, id }) => (
+        <form id={id} noValidate data-validate="">
             <div className="form-group">
                 <label htmlFor="validation-email">Email</label>
                 <div className="input-group">
@@ -50,17 +50,13 @@ describe("px-script: validation", () => {
         expect(validation).toBeDefined();
     });
 
-    it("validateField is exposed globally", () => {
-        expect(validation.validateField).toBeDefined();
-    });
-
-    it("validateForm is exposed globally", () => {
-        expect(validation.validateForm).toBeDefined();
-    });
-
     it("has an init method", () => {
         expect(validation.init).toBeDefined();
         expect(validation.init).toBeInstanceOf(Function);
+    });
+
+    it("validateField is exposed globally", () => {
+        expect(validation.validateField).toBeDefined();
     });
 
     it("does nothing if no value is given", () => {

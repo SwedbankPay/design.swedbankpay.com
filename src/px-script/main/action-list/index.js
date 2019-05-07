@@ -10,7 +10,7 @@ const _actionLists = _actionLists || [];
 
 class ActionList {
     constructor (element) {
-        this.id = element.id;
+        this.id = element.id ? element.id : null;
         this.container = element;
         this.toggleBtn = element.querySelector(SELECTORS.ICONS);
         this.actionMenu = element.querySelector(SELECTORS.ACTIONMENU);
