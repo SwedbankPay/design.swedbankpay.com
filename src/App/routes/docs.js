@@ -64,6 +64,11 @@ module.exports = [
                 componentPath: "core/Lists"
             },
             {
+                title: "Page layout",
+                path: "/docs/core/page-layout",
+                componentPath: "core/Page-layout"
+            },
+            {
                 title: "Tables",
                 path: "/docs/core/tables",
                 componentPath: "core/Tables"
@@ -231,6 +236,11 @@ module.exports = [
         path: "/docs/utilities",
         redirect: "/docs/utilities/colors",
         routes: [
+            {
+                title: "Borders",
+                path: "/docs/utilities/borders",
+                componentPath: "utilities/Borders"
+            },
             {
                 title: "Colors",
                 path: "/docs/utilities/colors",
