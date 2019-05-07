@@ -21,17 +21,17 @@ const init = id => {
                 A topbar can only have one navMenu, but you can initialize several topbars at the same time. [AW]
             */
             if (navMenuSelector) {
-                const navMenuInstance = new NavMenu(topbar, navMenuSelector);
+                const navMenuObject = new NavMenu(topbar, navMenuSelector);
 
-                navMenus.push(navMenuInstance);
+                navMenus.push(navMenuObject);
 
                 /*
                     One document listener per topbar. Several document listeners for the same thing are normally bad practice,
                     but you should not have more than one topbar either. [AW]
                 */
                 document.querySelector("html").addEventListener("mousedown", e => {
-                    if (navMenuInstance.isOpen && !navMenuInstance._containsPoint(e.clientX, e.clientY)) {
-                        navMenuInstance.close();
+                    if (navMenuObject.isOpen && !navMenuObject._containsPoint(e.clientX, e.clientY)) {
+                        navMenuObject.close();
                     }
                 });
             }

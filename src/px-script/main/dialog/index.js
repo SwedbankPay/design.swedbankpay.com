@@ -50,11 +50,11 @@ const init = id => {
 
     if (dialogSelector.length) {
         dialogEls = [...dialogSelector].map(dialog => {
-            const dialogInstance = new Dialog(dialog);
+            const dialogObject = new Dialog(dialog);
 
-            _dialogs.push(dialogInstance);
+            _dialogs.push(dialogObject);
 
-            return dialogInstance;
+            return dialogObject;
         });
 
         // Init open buttons

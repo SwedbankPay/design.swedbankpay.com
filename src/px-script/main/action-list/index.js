@@ -43,26 +43,26 @@ class ActionList {
 const init = id => {
     const actionListId = hashId(id);
     const actionListQuery = actionListId ? document.querySelectorAll(actionListId) : document.querySelectorAll(SELECTORS.ACTIONLIST);
-    let actionListInstances = [];
+    let actionLists = [];
 
     if (actionListQuery.length) {
-        actionListInstances = [...actionListQuery].map(l => {
-            const actionListInstance = new ActionList(l);
+        actionLists = [...actionListQuery].map(l => {
+            const actionListObject = new ActionList(l);
 
-            _actionLists.push(actionListInstance);
+            _actionLists.push(actionListObject);
 
-            return actionListInstance;
+            return actionListObject;
         });
 
         document.addEventListener("click", e => {
-            actionListInstances.forEach(l => {
+            actionLists.forEach(l => {
                 if (e.target.closest(SELECTORS.ACTIONLIST) !== l.container && l.isOpen) {
                     l.close();
                 }
             });
         });
 
-        return actionListInstances.length === 1 ? actionListInstances[0] : actionListInstances;
+        return actionLists.length === 1 ? actionLists[0] : actionLists;
     }
 
     return null;

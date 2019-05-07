@@ -124,11 +124,11 @@ const init = id => {
 
     if (navSelector.length > 0) {
         navs = [...navSelector].map(nav => {
-            const navInstance = new Nav(nav);
+            const navObject = new Nav(nav);
 
-            _navs.push(navInstance);
+            _navs.push(navObject);
 
-            return navInstance;
+            return navObject;
         });
 
         document.addEventListener("click", e => {

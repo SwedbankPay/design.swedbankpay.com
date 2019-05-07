@@ -63,9 +63,7 @@ describe("px-script: action-list", () => {
         });
 
         it("returns null if no action-list is found", () => {
-            const returnVal = actionList.init();
-
-            expect(returnVal).toBeNull();
+            expect(actionList.init()).toBeNull();
         });
     });
 

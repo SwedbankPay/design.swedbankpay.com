@@ -1,3 +1,5 @@
+import { hashId } from "../utils";
+
 const SELECTORS = {
     VALIDATE: "[data-validate]",
     FIELDS: "input, select, textarea",
@@ -132,11 +134,13 @@ const validation = (() => {
         });
     };
 
-    const init = () => {
-        const validateEls = document.querySelectorAll(SELECTORS.VALIDATE);
+    const init = id => {
+        const validateId = hashId(id);
+        const validationSelector = validateId ? document.querySelectorAll(validateId) : document.querySelectorAll(SELECTORS.VALIDATE);
+        let validationElems = [];
 
-        if (validateEls.length) {
-            validateEls.forEach(element => {
+        if (validationSelector.length) {
+            validationElems = [...validationSelector].map(element => {
                 const { tagName } = element;
 
                 if (tagName === "FORM") {
@@ -144,8 +148,14 @@ const validation = (() => {
                 } else if (tagName === "INPUT" || tagName === "TEXTAREA" || tagName === "SELECT") {
                     _addFieldValidation(element);
                 }
+
+                return { _el: element };
             });
+
+            return validationElems.length === 1 ? validationElems[0] : validationElems;
         }
+
+        return null;
     };
 
     return {

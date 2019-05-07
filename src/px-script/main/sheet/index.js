@@ -70,21 +70,21 @@ class Sheet {
 const init = id => {
     const sheetId = hashId(id);
     const sheetSelector = sheetId ? document.querySelectorAll(sheetId) : document.querySelectorAll(SELECTORS.SHEET);
-    let sheetEls = [];
+    let sheets = [];
 
     if (sheetSelector.length) {
-        sheetEls = [...sheetSelector].map(sheet => {
-            const sheetInstance = new Sheet(sheet);
+        sheets = [...sheetSelector].map(sheet => {
+            const sheetObject = new Sheet(sheet);
 
             if (_sheets.length) {
                 _sheets.forEach((arraySheet, index) => {
-                    arraySheet.id === sheetInstance.id ? _sheets[index] = sheetInstance : _sheets.push(sheetInstance);
+                    arraySheet.id === sheetObject.id ? _sheets[index] = sheetObject : _sheets.push(sheetObject);
                 });
             } else {
-                _sheets.push(sheetInstance);
+                _sheets.push(sheetObject);
             }
 
-            return sheetInstance;
+            return sheetObject;
         });
 
         // Close sheet on esc
@@ -129,7 +129,7 @@ const init = id => {
             }
         });
 
-        return sheetEls.length === 1 ? sheetEls[0] : sheetEls;
+        return sheets.length === 1 ? sheets[0] : sheets;
     }
 
     return null;
