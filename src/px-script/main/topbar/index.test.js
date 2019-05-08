@@ -127,20 +127,18 @@ describe("px-script: topbar", () => {
         ReactDOM.render(<Topbar />, div);
         topbar.init();
 
-        const NavMenuElement = document.querySelector(".topbar");
-        const NavMenuInst = NavMenu.mock.instances[0];
+        const navMenuInstance = NavMenu.mock.instances[0];
 
-        expect(NavMenuElement).toBeTruthy();
-        expect(NavMenuInst).toBeTruthy();
+        expect(navMenuInstance).toBeTruthy();
 
-        NavMenuInst._containsPoint.mockReturnValue(false);
-        NavMenuInst.isOpen = true;
+        navMenuInstance._containsPoint.mockReturnValue(false);
+        navMenuInstance.isOpen = true;
 
         document.querySelector("html").dispatchEvent(new Event("mousedown"));
 
-        expect(NavMenuInst._containsPoint).toHaveBeenCalled();
-        expect(NavMenuInst.close).toHaveBeenCalled();
+        expect(navMenuInstance._containsPoint).toHaveBeenCalled();
+        expect(navMenuInstance.close).toHaveBeenCalled();
     });
 
-    test.todo("Write tests for topbar.open");
+    test.todo("Write tests for topbar.open and topbar.close");
 });

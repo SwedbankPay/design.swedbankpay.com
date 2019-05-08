@@ -339,4 +339,64 @@ describe("px-script: nav", () => {
 
         expect(submenu.classList).not.toContain("submenu-open");
     });
+
+    describe("nav.open", () => {
+        it("opens nav when calling nav.open", () => {
+            ReactDOM.render(<Nav id="demo-nav" />, div);
+            nav.init();
+
+            const renderedNav = document.querySelector(".nav");
+
+            expect(renderedNav.classList).not.toContain("nav-open");
+
+            nav.open("demo-nav");
+
+            expect(renderedNav.classList).toContain("nav-open");
+        });
+
+        it("does not open nav when calling nav.open with wrong id and prints error to console", () => {
+            console.error = jest.fn();
+            ReactDOM.render(<Nav id="demo-nav" />, div);
+            nav.init();
+
+            const renderedNav = document.querySelector(".nav");
+
+            expect(renderedNav.classList).not.toContain("nav-open");
+
+            nav.open("qwerty");
+
+            expect(console.error).toHaveBeenCalledWith("nav.open: No nav with id \"qwerty\" found.");
+            expect(renderedNav.classList).not.toContain("nav-open");
+        });
+    });
+
+    describe("nav.close", () => {
+        it("closes nav when calling nav.close", () => {
+            ReactDOM.render(<Nav id="demo-nav" open />, div);
+
+            const renderedNav = document.querySelector(".nav");
+
+            expect(renderedNav.classList).toContain("nav-open");
+
+            nav.init();
+            nav.close("demo-nav");
+
+            expect(renderedNav.classList).not.toContain("nav-open");
+        });
+
+        it("does not close nav when calling nav.close with wrong id and prints error to console", () => {
+            console.error = jest.fn();
+            ReactDOM.render(<Nav id="demo-nav" open />, div);
+            nav.init();
+
+            const renderedNav = document.querySelector(".nav");
+
+            expect(renderedNav.classList).toContain("nav-open");
+
+            nav.close("qwerty");
+
+            expect(console.error).toHaveBeenCalledWith("nav.close: No nav with id \"qwerty\" found.");
+            expect(renderedNav.classList).toContain("nav-open");
+        });
+    });
 });
