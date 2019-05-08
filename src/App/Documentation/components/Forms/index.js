@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer, Attribute, Property } from "#";
+import { ComponentPreview, DocContainer, Attribute, Property, PxScript ,JavascriptDocs } from "#";
 import InputGroup from "@/InputGroup";
 import Button from "@/Button";
 import { Checkbox, FormControlText, Radio, Rangeslider, Togglebox } from "@/FormComponents";
@@ -301,6 +301,17 @@ const DisabledFormComponents = () => (
     </>
 );
 
+const JavascriptMethods = () => (
+    <>
+        <h2 id="javascript-methods">Javascript methods</h2>
+        <JavascriptDocs componentName="validation" />
+        <p>
+            The <PxScript component="validation" func="init" /> can be used on a form tag to initialize all fields
+            contained in the form, or you can pass a single field to initialize just that one.
+        </p>
+    </>
+);
+
 class Forms extends Component {
     componentDidMount () {
         rangeslider.init();
@@ -323,6 +334,7 @@ class Forms extends Component {
                 <Toggleboxes />
                 <RangeSlider />
                 <DisabledFormComponents />
+                <JavascriptMethods />
             </DocContainer>
         );
     }
@@ -331,4 +343,4 @@ class Forms extends Component {
 export default Forms;
 
 /* For testing */
-export { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, Checkboxes, RadioButtons, Toggleboxes, RangeSlider, DisabledFormComponents };
+export { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, Checkboxes, RadioButtons, Toggleboxes, RangeSlider, DisabledFormComponents, JavascriptMethods };
