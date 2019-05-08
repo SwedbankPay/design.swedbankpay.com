@@ -261,6 +261,19 @@ exports[`Documentation: Alerts Extended Usage renders 1`] = `
 </Fragment>
 `;
 
+exports[`Documentation: Alerts JavascriptMethods renders 1`] = `
+<Fragment>
+  <h2
+    id="javascript-methods"
+  >
+    Javascript methods
+  </h2>
+  <JavascriptDocs
+    componentName="alert"
+  />
+</Fragment>
+`;
+
 exports[`Documentation: Alerts renders 1`] = `
 <DocContainer
   docToc={true}

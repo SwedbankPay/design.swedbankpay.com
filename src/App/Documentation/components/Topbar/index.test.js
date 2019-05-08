@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Topbar, { Overview, FixedTopbar } from "./index";
+import Topbar, { Overview, FixedTopbar, JavascriptMethods } from "./index";
 
 const { topbar } = window.px;
 
@@ -41,6 +41,18 @@ describe("Components: Topbar", () => {
 
         it("renders", () => {
             const wrapper = shallow(<FixedTopbar />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("JavascriptMethods", () => {
+        it("is defined", () => {
+            expect(JavascriptMethods).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<JavascriptMethods />);
 
             expect(wrapper).toMatchSnapshot();
         });

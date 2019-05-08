@@ -13,12 +13,12 @@ exports[`GettingStarted: JavascriptDocs AboutInit renders 1`] = `
       component="script"
       func="initAll"
     />
-     on DOMContentLoaded. Making it so you have to run 
+     on DOMContentLoaded making it so you have to run 
     <PxScript
-      component="{component_name}"
+      component="<component_name>"
       func="init"
     />
-     manually when that component is rendered.
+     manually when a component is rendered after the event has fired.
   </p>
   <h3>
     Manual initializing
@@ -26,23 +26,17 @@ exports[`GettingStarted: JavascriptDocs AboutInit renders 1`] = `
   <p>
     To initialize components use 
     <PxScript
-      component="{component_name}"
+      component="<component_name>"
       func="init"
-      params={
-        Array [
-          "\\"test-2\\"",
-          "test-3",
-        ]
-      }
     />
     . If the function is called without arguments it will target all components with class 
     <Property
-      value="{component_name}"
+      value="<component_name>"
     />
-     on the page. Initializing only a select few can be done by sending one or more ids as an argument. The init function accepts both a single string or an array of strings. These strings need to match an existing component id and will print warning messages if an argument is invalid.
+     on the page. Initializing only one component can be done by passing an ID, it must match an existing components ID and will print a warning message if the value is invalid.
   </p>
   <p>
-    All inits return the same thing; an array containing an object reference to the element(s) that was passed.
+    If only one component is initialized then the init function will return one object. If several components are initialized it will return an array of objects.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -50,11 +44,7 @@ exports[`GettingStarted: JavascriptDocs AboutInit renders 1`] = `
   >
     px.component.init();
 
-    px.component.init("demo-component");
-
-    px.component.init(["demo-component"]);
-
-    px.component.init(["demo-component-1", .. "demo-component-x"]);
+    px.component.init("demo-component-id");
 
   </ComponentPreview>
   <Alert
@@ -74,7 +64,7 @@ exports[`GettingStarted: JavascriptDocs renders 1`] = `
   >
     How to utilize our 
     <Property
-      value="px.{component_name}.init()"
+      value="px.<component_name>.init()"
     />
      function.
   </p>

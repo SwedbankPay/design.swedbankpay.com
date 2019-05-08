@@ -99,6 +99,21 @@ exports[`Components: Tabs Collapsed renders 1`] = `
 </Fragment>
 `;
 
+exports[`Components: Tabs JavascriptMethods renders 1`] = `
+<Fragment>
+  <h2
+    id="javascript-methods"
+  >
+    Javascript methods
+  </h2>
+  <JavascriptDocs
+    close={true}
+    componentName="tabs"
+    open={true}
+  />
+</Fragment>
+`;
+
 exports[`Components: Tabs renders 1`] = `
 <DocContainer
   docToc={true}

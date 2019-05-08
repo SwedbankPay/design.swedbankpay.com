@@ -63,6 +63,21 @@ exports[`Component: Nav IconsOnly renders 1`] = `
 </Fragment>
 `;
 
+exports[`Component: Nav JavascriptMethods renders 1`] = `
+<Fragment>
+  <h2
+    id="javascript-methods"
+  >
+    Javascript methods
+  </h2>
+  <JavascriptDocs
+    close={true}
+    componentName="nav"
+    open={true}
+  />
+</Fragment>
+`;
+
 exports[`Component: Nav Mix renders 1`] = `
 <Fragment>
   <h2

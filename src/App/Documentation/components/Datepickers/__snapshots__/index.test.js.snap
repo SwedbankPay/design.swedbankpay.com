@@ -262,6 +262,21 @@ exports[`Documentation: Datepickers InitialValue renders 1`] = `
 </Fragment>
 `;
 
+exports[`Documentation: Datepickers JavascriptMethods renders 1`] = `
+<Fragment>
+  <h2
+    id="javascript-methods"
+  >
+    Javascript methods
+  </h2>
+  <JavascriptDocs
+    close={true}
+    componentName="datepicker"
+    open={true}
+  />
+</Fragment>
+`;
+
 exports[`Documentation: Datepickers MultipleDates renders 1`] = `
 <Fragment>
   <h2

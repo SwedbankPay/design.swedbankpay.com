@@ -7,24 +7,22 @@ const AboutInit = () => (
     <>
         <h2 id="about-init">When to initialize</h2>
         <p>
-            Our script runs <PxScript component="script" func="initAll" /> on DOMContentLoaded. Making it so you have to
-            run <PxScript component="{component_name}" func="init" /> manually when that component is rendered.
+            Our script runs <PxScript component="script" func="initAll" /> on DOMContentLoaded making it so you have to
+            run <PxScript component="<component_name>" func="init" /> manually when a component is rendered after the event has fired.
         </p>
         <h3>Manual initializing</h3>
         <p>
-            To initialize components use <PxScript component="{component_name}" func="init" params={["\"test-2\"", "test-3"]} />. If the function is called
-            without arguments it will target all components with class <Property value="{component_name}" /> on the page. Initializing only a select few can be done
-            by sending one or more ids as an argument. The init function accepts both a single string or an array of strings. These strings need to match an
-            existing component id and will print warning messages if an argument is invalid.
+            To initialize components use <PxScript component="<component_name>" func="init" />. If the function is called
+            without arguments it will target all components with class <Property value="<component_name>" /> on the page. Initializing only one component can be done
+            by passing an ID, it must match an existing components ID and will print a warning message if the value is invalid.
         </p>
         <p>
-            All inits return the same thing; an array containing an object reference to the element(s) that was passed.
+            If only one component is initialized then the init function will return one object. If several components are initialized
+            it will return an array of objects.
         </p>
         <ComponentPreview language="javascript" codeFigure >
             {"px.component.init();\n"}
-            {"px.component.init(\"demo-component\");\n"}
-            {"px.component.init([\"demo-component\"]);\n"}
-            {"px.component.init([\"demo-component-1\", .. \"demo-component-x\"]);\n"}
+            {"px.component.init(\"demo-component-id\");\n"}
         </ComponentPreview>
         <Alert type="warning">
             Additional functions may be available for some components. Read about them on the components documentation page.
@@ -35,7 +33,7 @@ const AboutInit = () => (
 const JavascriptDocs = () => (
     <DocContainer docToc>
         <p className="lead">
-            How to utilize our <Property value="px.{component_name}.init()" /> function.
+            How to utilize our <Property value="px.<component_name>.init()" /> function.
         </p>
         <AboutInit />
     </DocContainer>

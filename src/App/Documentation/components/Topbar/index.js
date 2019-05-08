@@ -76,4 +76,4 @@ class Topbar extends Component {
 export default Topbar;
 
 /* For testing */
-export { Overview, FixedTopbar };
+export { Overview, FixedTopbar, JavascriptMethods };

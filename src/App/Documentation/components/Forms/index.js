@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer, Attribute, Property, PxScript ,JavascriptDocs } from "#";
+import { ComponentPreview, DocContainer, Attribute, Property, PxScript, JavascriptDocs } from "#";
 import InputGroup from "@/InputGroup";
 import Button from "@/Button";
 import { Checkbox, FormControlText, Radio, Rangeslider, Togglebox } from "@/FormComponents";
