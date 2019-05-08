@@ -9,7 +9,11 @@
 - Added javascript documentation to getting-started section.
 - Added component specific documentation about functions.
 - Added open and close by ID to actionlist object
-- Added close to alert object
+- Added close by ID to alert object
+- Added open and close by ID to datepicker object
+- Added open and close by ID to nav object
+- Added open and close by ID to tabs object
+- Added open and close by ID to topbar object
 
 ### Changed
 
