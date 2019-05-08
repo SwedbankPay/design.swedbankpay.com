@@ -25,7 +25,7 @@ const init = id => {
         loaders = [...loaderSelector].map(loader => {
             _appendLoader(loader);
 
-            return { _el: loader };
+            return { container: loader };
         });
 
         return loaders.length === 1 ? loaders[0] : loaders;

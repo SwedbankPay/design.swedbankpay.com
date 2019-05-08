@@ -30,8 +30,8 @@ const init = id => {
             _appendLoader(button);
 
             buttonLoaders.push({
-                id: button.id,
-                _el: button
+                container: button,
+                id: button.id
             });
         });
 

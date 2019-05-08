@@ -68,7 +68,7 @@ const init = id => {
                 updateStyle();
             }
 
-            return { _el: rangeContainer };
+            return { container: rangeContainer };
         });
 
         return rangeContainers.length === 1 ? rangeContainers[0] : rangeContainers;
