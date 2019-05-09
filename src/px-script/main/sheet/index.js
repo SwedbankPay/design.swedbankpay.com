@@ -12,6 +12,7 @@ const _sheets = _sheets || [];
 class Sheet {
     constructor (el) {
         this._el = el;
+        this.requireAction = el.dataset.requireAction;
         this.id = el.id;
         this.closeIcon = el.querySelector(SELECTORS.CLOSEICON);
         this.isOpen = el.classList.contains("sheet-open");
@@ -33,12 +34,14 @@ class Sheet {
         }
 
         // Close the sheet when clicking outside
-        this._el.addEventListener("click", e => {
-            if (e.target.classList.contains("sheet-open")) {
-                handleScrollbar();
-                this.close();
-            }
-        });
+        if (!this.requireAction) {
+            this._el.addEventListener("click", e => {
+                if (e.target.classList.contains("sheet-open")) {
+                    handleScrollbar();
+                    this.close();
+                }
+            });
+        }
 
         this._initializeButtons();
     }
