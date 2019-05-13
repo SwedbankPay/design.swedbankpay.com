@@ -7,7 +7,7 @@ import TabsComponent from "@/Tabs";
 
 const { tabs } = window.px;
 
-const tabItems = ["Kort", "Rabatter", "Transaksjoner", "Faktura", "Instillinger", "Audit trail"];
+const tabItems = ["Card", "Discounts", "Transactions", "Invoice", "Settings", "Audit trail"];
 
 const BasicUsage = () => (
     <>

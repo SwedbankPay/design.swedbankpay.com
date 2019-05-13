@@ -70,20 +70,6 @@ describe("px-script: alert", () => {
         expect(targetAlert.classList).toContain("d-none");
     });
 
-    // it("warns about possible wrong id", () => {
-    //     const AlertTest = () => (
-    //         <>
-    //             <button data-alert-close="test"></button>
-    //         </>
-    //     );
-
-    //     ReactDOM.render(<AlertTest id="test-2" />, div);
-    //     console.warn = jest.fn();
-
-    //     alert.init("test-2");
-    //     expect(console.warn).toHaveBeenCalled();
-    // });
-
     describe("alert.close", () => {
         it("has a close method", () => {
             expect(alert.close).toBeDefined();

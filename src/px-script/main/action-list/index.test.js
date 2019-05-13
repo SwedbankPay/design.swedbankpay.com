@@ -63,7 +63,10 @@ describe("px-script: action-list", () => {
         });
 
         it("returns null if no action-list is found", () => {
+            console.warn = jest.fn();
+
             expect(actionList.init()).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
         });
     });
 
@@ -142,8 +145,8 @@ describe("px-script: action-list", () => {
             expect(renderedActionList.classList).toContain("active");
         });
 
-        it("does not open actionlist when calling actionlist.open with wrong id and prints error to console", () => {
-            console.error = jest.fn();
+        it("does not open actionlist when calling actionlist.open with wrong id and prints warn to console", () => {
+            console.warn = jest.fn();
 
             ReactDOM.render(<ActionList id="demo-actionlist" />, div);
 
@@ -155,7 +158,7 @@ describe("px-script: action-list", () => {
             actionList.open("invalid-id");
 
             expect(renderedActionList.classList).not.toContain("active");
-            expect(console.error).toHaveBeenCalled();
+            expect(console.warn).toHaveBeenCalled();
         });
     });
 
@@ -174,8 +177,8 @@ describe("px-script: action-list", () => {
             expect(renderedActionList.classList).not.toContain("active");
         });
 
-        it("does not close actionlist when calling actionlist.close with wrong id and prints error to console", () => {
-            console.error = jest.fn();
+        it("does not close actionlist when calling actionlist.close with wrong id and prints warn to console", () => {
+            console.warn = jest.fn();
 
             ReactDOM.render(<ActionList id="demo-actionlist" active />, div);
 
@@ -187,7 +190,7 @@ describe("px-script: action-list", () => {
             actionList.close("invalid-id");
 
             expect(renderedActionList.classList).toContain("active");
-            expect(console.error).toHaveBeenCalled();
+            expect(console.warn).toHaveBeenCalled();
         });
     });
 });

@@ -33,38 +33,9 @@ describe("px-script: rangeslider", () => {
         expect(rangeslider).toBeDefined();
     });
 
-    describe("rangeslider.init", () => {
-        it("is defined", () => {
-            expect(rangeslider.init).toBeDefined();
-            expect(rangeslider.init).toBeInstanceOf(Function);
-        });
-
-        it("returns a single object when one ID is passed", () => {
-            ReactDOM.render(<TestSlider id="demo-range" />, div);
-
-            const returnVal = rangeslider.init("demo-range");
-
-            expect(Array.isArray(returnVal)).toBeFalsy();
-            expect(typeof returnVal).toEqual("object");
-        });
-
-        it("returns an array of objects when more than one rangeslider exists", () => {
-            ReactDOM.render(
-                <>
-                    <TestSlider />
-                    <TestSlider />
-                </>
-                , div);
-
-            const returnVal = rangeslider.init();
-
-            expect(Array.isArray(returnVal)).toBeTruthy();
-            expect(returnVal.length).toEqual(2);
-        });
-
-        it("returns null if no rangesliders exist", () => {
-            expect(rangeslider.init()).toBeNull();
-        });
+    it("init is defined", () => {
+        expect(rangeslider.init).toBeDefined();
+        expect(rangeslider.init).toBeInstanceOf(Function);
     });
 
     // Start of Chrome specific tests [AW]

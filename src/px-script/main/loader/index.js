@@ -1,5 +1,3 @@
-import { hashId } from "../utils";
-
 const SELECTORS = { LOADER: "[data-loader]" };
 
 const _appendLoader = loader => {
@@ -16,9 +14,8 @@ const _appendLoader = loader => {
     loader.appendChild(ul);
 };
 
-const init = id => {
-    const loaderId = hashId(id);
-    const loaderSelector = loaderId ? document.querySelectorAll(loaderId) : document.querySelectorAll(SELECTORS.LOADER);
+const init = () => {
+    const loaderSelector = document.querySelectorAll(SELECTORS.LOADER);
     let loaders = [];
 
     if (loaderSelector.length) {

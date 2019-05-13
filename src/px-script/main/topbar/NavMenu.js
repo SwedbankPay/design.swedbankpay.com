@@ -14,10 +14,13 @@ export default class NavMenu {
         this.iconElement = this.btnElement ? this.btnElement.querySelector(SELECTORS.ICON) : null;
         this.userIcon = this.iconElement ? this.iconElement.innerHTML : null;
 
-        this.btnElement.addEventListener("click", e => {
-            e.preventDefault();
-            this._handleClick();
-        });
+        if (this.btnElement) {
+            this.btnElement.addEventListener("click", e => {
+                e.preventDefault();
+                this._handleClick();
+            });
+        }
+
         this._initAnchors();
     }
 

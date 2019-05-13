@@ -83,8 +83,11 @@ describe("px-script: sheet", () => {
             expect(returnVal.length).toEqual(2);
         });
 
-        it("returns null if no sheet is found", () => {
+        it("returns null if no sheet is found and prints a warning", () => {
+            console.warn = jest.fn();
+
             expect(sheet.init()).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
         });
     });
 
@@ -123,38 +126,6 @@ describe("px-script: sheet", () => {
         expect(renderedSheet.classList).not.toContain("sheet-open");
         expect(document.body.classList).not.toContain("sheet-open");
         expect(renderedSheet.classList).not.toContain("d-block");
-    });
-
-    it("warns user when there is no sheet with an id matching the value of the attribute 'data-sheet-open'", () => {
-        const TestSheet = () => (
-            <>
-                <div className="sheet" id="test-sheet"></div>
-                <button className="btn btn-primary" type="button" data-sheet-open="tester-sheet">Open sheet</button>
-            </>
-        );
-
-        ReactDOM.render(<TestSheet />, div);
-        console.warn = jest.fn();
-
-        sheet.init();
-        expect(console.warn).toHaveBeenCalled();
-        expect(console.warn).toHaveBeenCalledWith(expect.stringContaining("tester-sheet"));
-    });
-
-    it("warns user when there is no sheet with an id matching the value of the attribute 'data-sheet-close'", () => {
-        const TestSheet = () => (
-            <>
-                <div className="sheet" id="test-sheet"></div>
-                <button className="btn btn-primary" type="button" data-sheet-close="tester-sheet">Close sheet</button>
-            </>
-        );
-
-        ReactDOM.render(<TestSheet />, div);
-        console.warn = jest.fn();
-
-        sheet.init();
-        expect(console.warn).toHaveBeenCalled();
-        expect(console.warn).toHaveBeenCalledWith(expect.stringContaining("tester-sheet"));
     });
 
     it("closes sheet when clicking the close icon", () => {
@@ -261,8 +232,8 @@ describe("px-script: sheet", () => {
             expect(document.body.classList).toContain("sheet-open");
         });
 
-        it("does not open sheet when calling sheet.open with wrong id and prints error to console", () => {
-            console.error = jest.fn();
+        it("does not open sheet when calling sheet.open with wrong id and prints warn to console", () => {
+            console.warn = jest.fn();
             ReactDOM.render(<Sheet id="demo-sheet" />, div);
 
             const renderedSheet = document.querySelector(".sheet");
@@ -278,7 +249,7 @@ describe("px-script: sheet", () => {
 
             sheet.open("qwerty");
 
-            expect(console.error).toHaveBeenCalledWith("sheet.open: No sheet with id \"qwerty\" found.");
+            expect(console.warn).toHaveBeenCalledWith("sheet.open: No sheet with id \"qwerty\" found.");
 
             expect(renderedSheet.classList).not.toContain("d-block");
             expect(renderedSheet.classList).not.toContain("sheet-open");
@@ -305,8 +276,8 @@ describe("px-script: sheet", () => {
             expect(document.body.classList).not.toContain("sheet-open");
         });
 
-        it("does not close sheet when calling sheet.close with wrong id and prints error to console", () => {
-            console.error = jest.fn();
+        it("does not close sheet when calling sheet.close with wrong id and prints warn to console", () => {
+            console.warn = jest.fn();
             ReactDOM.render(<OpenSheet />, div);
 
             const renderedSheet = document.querySelector(".sheet");
@@ -319,7 +290,7 @@ describe("px-script: sheet", () => {
             sheet.close("qwerty");
             jest.runAllTimers();
 
-            expect(console.error).toHaveBeenCalledWith("sheet.close: No sheet with id \"qwerty\" found.");
+            expect(console.warn).toHaveBeenCalledWith("sheet.close: No sheet with id \"qwerty\" found.");
 
             expect(renderedSheet.classList).toContain("d-block");
             expect(renderedSheet.classList).toContain("sheet-open");

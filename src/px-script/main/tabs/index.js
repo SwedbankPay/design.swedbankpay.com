@@ -1,5 +1,3 @@
-import { hashId } from "../utils";
-
 const SELECTORS = {
     TABS: ".tabs",
     ACTIVE: ".active"
@@ -56,32 +54,44 @@ class Tabs {
     }
 }
 
+const _createTab = tabQuery => {
+    const tabObject = new Tabs(tabQuery);
+
+    _tabs.push(tabObject);
+
+    return tabObject;
+};
+
 const init = id => {
-    const tabId = hashId(id);
-    const tabsSelector = tabId ? document.querySelectorAll(tabId) : document.querySelectorAll(SELECTORS.TABS);
-    let tabs = [];
-
-    if (tabsSelector.length > 0) {
-        tabs = [...tabsSelector].map(tab => {
-            const tabsInstance = new Tabs(tab);
-
-            _tabs.push(tabsInstance);
-
-            return tabsInstance;
+    document.addEventListener("click", e => {
+        _tabs.forEach(tab => {
+            if (!e.target.closest(SELECTORS.TABS) && tab.isOpen) {
+                tab.close();
+            }
         });
+    });
 
-        document.addEventListener("click", e => {
-            tabs.forEach(tab => {
-                if (!e.target.closest(SELECTORS.TABS) && tab.isOpen) {
-                    tab.close();
-                }
-            });
-        });
+    if (id) {
+        const tab = document.getElementById(id);
 
-        return tabs.length === 1 ? tabs[0] : tabs;
+        if (!tab) {
+            console.warn("doesn't exist");
+
+            return null;
+        }
+
+        return _createTab(tab);
+    } else {
+        const tabs = document.querySelectorAll(SELECTORS.TABS);
+
+        if (!tabs.length) {
+            console.warn("doesn't exist");
+
+            return null;
+        }
+
+        return [...tabs].map(tab => _createTab(tab));
     }
-
-    return null;
 };
 
 const open = id => {

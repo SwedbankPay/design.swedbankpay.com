@@ -1,5 +1,3 @@
-import { hashId } from "../utils";
-
 const SELECTORS = {
     VALIDATE: "[data-validate]",
     FIELDS: "input, select, textarea",
@@ -133,28 +131,40 @@ const _addFormValidation = form => {
     });
 };
 
-const init = id => {
-    const validateId = hashId(id);
-    const validationSelector = validateId ? document.querySelectorAll(validateId) : document.querySelectorAll(SELECTORS.VALIDATE);
-    let validationElems = [];
+const _addValidation = element => {
+    const { tagName } = element;
 
-    if (validationSelector.length) {
-        validationElems = [...validationSelector].map(element => {
-            const { tagName } = element;
-
-            if (tagName === "FORM") {
-                _addFormValidation(element);
-            } else if (tagName === "INPUT" || tagName === "TEXTAREA" || tagName === "SELECT") {
-                _addFieldValidation(element);
-            }
-
-            return { container: element };
-        });
-
-        return validationElems.length === 1 ? validationElems[0] : validationElems;
+    if (tagName === "FORM") {
+        _addFormValidation(element);
+    } else if (tagName === "INPUT" || tagName === "TEXTAREA" || tagName === "SELECT") {
+        _addFieldValidation(element);
     }
 
-    return null;
+    return { container: element };
+};
+
+const init = id => {
+    if (id) {
+        const element = document.getElementById(id);
+
+        if (!element) {
+            console.warn("doesn't exist");
+
+            return null;
+        }
+
+        return _addValidation(element);
+    } else {
+        const elements = document.querySelectorAll(SELECTORS.VALIDATE);
+
+        if (!elements.length) {
+            console.warn("doesn't exist");
+
+            return null;
+        }
+
+        return [...elements].map(element => _addValidation(element));
+    }
 };
 
 export default {

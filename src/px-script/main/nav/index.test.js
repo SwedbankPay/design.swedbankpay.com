@@ -145,7 +145,10 @@ describe("px-script: nav", () => {
         });
 
         it("init returns null if no nav is found", () => {
+            console.warn = jest.fn();
+
             expect(nav.init()).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
         });
     });
 

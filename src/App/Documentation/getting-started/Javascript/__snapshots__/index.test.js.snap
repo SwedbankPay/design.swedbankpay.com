@@ -63,8 +63,9 @@ exports[`GettingStarted: JavascriptDocs renders 1`] = `
     className="lead"
   >
     How to utilize our 
-    <Property
-      value="px.<component_name>.init()"
+    <PxScript
+      component="<component_name>"
+      func="init"
     />
      function.
   </p>

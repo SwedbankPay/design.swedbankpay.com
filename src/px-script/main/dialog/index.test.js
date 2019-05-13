@@ -85,8 +85,11 @@ describe("px-script: dialog", () => {
             expect(returnVal.length).toEqual(2);
         });
 
-        it("init returns null if no dialog is found", () => {
+        it("init returns null if no dialog is found and prints a warning message", () => {
+            console.warn = jest.fn();
+
             expect(dialog.init()).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
         });
     });
 
@@ -120,24 +123,6 @@ describe("px-script: dialog", () => {
         closeBtn.click();
         expect(renderedDialog.classList).not.toContain("d-flex");
         expect(document.body.classList).not.toContain("dialog-open");
-    });
-
-    it("warns user when there is no dialog with an id matching the value of the attribute 'data-dialog-open'", () => {
-        ReactDOM.render(<Dialog id="demo-dialog" btnId="non-matching-id" />, div);
-        console.warn = jest.fn();
-
-        dialog.init();
-        expect(console.warn).toHaveBeenCalled();
-        expect(console.warn).toHaveBeenCalledWith(expect.stringContaining("non-matching-id"));
-    });
-
-    it("warns user when there is no dialog with an id matching the value of the attribute 'data-dialog-close'", () => {
-        ReactDOM.render(<Dialog id="demo-dialog" btnId="non-matching-id" />, div);
-        console.warn = jest.fn();
-
-        dialog.init();
-        expect(console.warn).toHaveBeenCalled();
-        expect(console.warn).toHaveBeenCalledWith(expect.stringContaining("non-matching-id"));
     });
 
     it("closes dialog when clicking the close icon", () => {
@@ -175,8 +160,8 @@ describe("px-script: dialog", () => {
             expect(document.body.classList).toContain("dialog-open");
         });
 
-        it("does not open dialog when calling dialog.open with wrong id and prints error to console", () => {
-            console.error = jest.fn();
+        it("does not open dialog when calling dialog.open with wrong id and prints warn to console", () => {
+            console.warn = jest.fn();
             ReactDOM.render(<Dialog id="demo-dialog" />, div);
 
             const renderedDialog = document.querySelector(".dialog");
@@ -188,7 +173,7 @@ describe("px-script: dialog", () => {
 
             dialog.open("qwerty");
 
-            expect(console.error).toHaveBeenCalledWith("dialog.open: No dialog with id \"qwerty\" found.");
+            expect(console.warn).toHaveBeenCalledWith("dialog.open: No dialog with id \"qwerty\" found.");
 
             expect(renderedDialog.classList).not.toContain("d-flex");
             expect(document.body.classList).not.toContain("dialog-open");
@@ -212,8 +197,8 @@ describe("px-script: dialog", () => {
             expect(document.body.classList).not.toContain("dialog-open");
         });
 
-        it("does not close dialog when calling dialog.close with wrong id and prints error to console", () => {
-            console.error = jest.fn();
+        it("does not close dialog when calling dialog.close with wrong id and prints warn to console", () => {
+            console.warn = jest.fn();
             ReactDOM.render(<Dialog id="demo-dialog" open />, div);
 
             const renderedDialog = document.querySelector(".dialog");
@@ -225,7 +210,7 @@ describe("px-script: dialog", () => {
 
             dialog.close("qwerty");
 
-            expect(console.error).toHaveBeenCalledWith("dialog.close: No dialog with id \"qwerty\" found.");
+            expect(console.warn).toHaveBeenCalledWith("dialog.close: No dialog with id \"qwerty\" found.");
 
             expect(renderedDialog.classList).toContain("d-flex");
             expect(document.body.classList).toContain("dialog-open");

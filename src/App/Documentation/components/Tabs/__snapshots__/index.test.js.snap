@@ -50,11 +50,11 @@ exports[`Components: Tabs BasicUsage renders 1`] = `
     <Tabs
       items={
         Array [
-          "Kort",
-          "Rabatter",
-          "Transaksjoner",
-          "Faktura",
-          "Instillinger",
+          "Card",
+          "Discounts",
+          "Transactions",
+          "Invoice",
+          "Settings",
           "Audit trail",
         ]
       }
@@ -86,11 +86,11 @@ exports[`Components: Tabs Collapsed renders 1`] = `
     <Tabs
       items={
         Array [
-          "Kort",
-          "Rabatter",
-          "Transaksjoner",
-          "Faktura",
-          "Instillinger",
+          "Card",
+          "Discounts",
+          "Transactions",
+          "Invoice",
+          "Settings",
           "Audit trail",
         ]
       }

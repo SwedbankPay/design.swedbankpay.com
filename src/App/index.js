@@ -6,7 +6,7 @@ import Loadable from "react-loadable";
 import AppHeader from "./AppHeader";
 import { LoadingComponent } from "./utils";
 
-const BASENAME = process.env.basename;
+const BASENAME = process.env.basename || "/";
 const history = createBrowserHistory({ basename: BASENAME });
 
 class ScrollToTop extends Component {

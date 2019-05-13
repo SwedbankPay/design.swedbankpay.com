@@ -1,5 +1,3 @@
-import { hashId } from "../utils";
-
 const SELECTORS = {
     RANGESLIDER: ".rangeslider"
 };
@@ -18,9 +16,8 @@ const writeStyle = obj => {
     inlineStyle.textContent = styleText;
 };
 
-const init = id => {
-    const rangeId = hashId(id);
-    const rangeContainerSelector = rangeId ? document.querySelectorAll(rangeId) : document.querySelectorAll(SELECTORS.RANGESLIDER);
+const init = () => {
+    const rangeContainerSelector = document.querySelectorAll(SELECTORS.RANGESLIDER);
     let rangeContainers = [];
     const inlineStyle = document.createElement("style");
     const inlineStyleContent = [];

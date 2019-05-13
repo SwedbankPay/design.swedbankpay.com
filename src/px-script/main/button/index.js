@@ -1,5 +1,3 @@
-import { hashId } from "../utils";
-
 const SELECTORS = { LOADER: "button[data-button-loader]" };
 
 const _appendLoader = button => {
@@ -20,18 +18,19 @@ const _appendLoader = button => {
     button.appendChild(div);
 };
 
-const init = id => {
-    const loaderId = hashId(id);
-    const loaderSelector = loaderId ? document.querySelectorAll(loaderId) : document.querySelectorAll(SELECTORS.LOADER);
+const init = () => {
+    const loaderSelector = document.querySelectorAll(SELECTORS.LOADER);
     const buttonLoaders = [];
 
     if (loaderSelector.length) {
         loaderSelector.forEach(button => {
-            _appendLoader(button);
+            if (!button.querySelector(".loader")) {
+                _appendLoader(button);
 
-            buttonLoaders.push({
-                container: button
-            });
+                buttonLoaders.push({
+                    container: button
+                });
+            }
         });
 
         return buttonLoaders.length === 1 ? buttonLoaders[0] : buttonLoaders;

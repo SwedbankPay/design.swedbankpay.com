@@ -1,4 +1,4 @@
-import { handleScrollbar, hashId } from "../utils";
+import { handleScrollbar } from "../utils";
 
 const SELECTORS = {
     DIALOG: ".dialog",
@@ -15,6 +15,8 @@ class Dialog {
         this.id = el.id;
         this.closeIcon = el.querySelector(SELECTORS.CLOSEICON);
         this.isOpen = el.classList.contains("d-flex");
+        this.openBtns = this.id ? document.querySelectorAll(`[data-dialog-open=${this.id}]`) : null;
+        this.closeBtns = this.id ? document.querySelectorAll(`[data-dialog-close=${this.id}]`) : null;
 
         if (this.closeIcon) {
             this.closeIcon.addEventListener("click", e => {
@@ -25,6 +27,30 @@ class Dialog {
 
         if (this.isOpen) {
             document.body.classList.add("dialog-open");
+        }
+
+        this._initializeButtons();
+    }
+
+    _initializeButtons () {
+        // Init open buttons
+        if (this.openBtns) {
+            this.openBtns.forEach(btn => {
+                btn.addEventListener("click", e => {
+                    e.preventDefault();
+                    this.open();
+                });
+            });
+        }
+
+        // Init close buttons
+        if (this.closeBtns) {
+            this.closeBtns.forEach(btn => {
+                btn.addEventListener("click", e => {
+                    e.preventDefault();
+                    this.close();
+                });
+            });
         }
     }
 
@@ -43,58 +69,36 @@ class Dialog {
     }
 }
 
+const _createDialog = dialogQuery => {
+    const dialogObject = new Dialog(dialogQuery);
+
+    _dialogs.push(dialogObject);
+
+    return dialogObject;
+};
+
 const init = id => {
-    const dialogId = hashId(id);
-    const dialogSelector = dialogId ? document.querySelectorAll(dialogId) : document.querySelectorAll(SELECTORS.DIALOG);
-    let dialogs = [];
+    if (id) {
+        const dialog = document.getElementById(id);
 
-    if (dialogSelector.length) {
-        dialogs = [...dialogSelector].map(dialog => {
-            const dialogObject = new Dialog(dialog);
+        if (!dialog) {
+            console.warn("doesn't exist");
 
-            _dialogs.push(dialogObject);
+            return null;
+        }
 
-            return dialogObject;
-        });
+        return _createDialog(dialog);
+    } else {
+        const dialogs = document.querySelectorAll(SELECTORS.DIALOG);
 
-        // Init open buttons
-        document.querySelectorAll(SELECTORS.OPEN).forEach(btn => {
-            const id = btn.dataset.dialogOpen;
-            let dialog;
+        if (!dialogs.length) {
+            console.warn("doesn't exist");
 
-            _dialogs.forEach(d => d.id === id ? dialog = d : null);
+            return null;
+        }
 
-            if (dialog) {
-                btn.addEventListener("click", e => {
-                    e.preventDefault();
-                    dialog.open();
-                });
-            } else {
-                console.warn(`OPEN: No dialog with with id "${id}" was found, make sure the attribute data-dialog-open contains the correct id.`);
-            }
-        });
-
-        // Init close buttons
-        document.querySelectorAll(SELECTORS.CLOSE).forEach(btn => {
-            const id = btn.dataset.dialogClose;
-            let dialog;
-
-            _dialogs.forEach(d => d.id === id ? dialog = d : null);
-
-            if (dialog) {
-                btn.addEventListener("click", e => {
-                    e.preventDefault();
-                    dialog.close();
-                });
-            } else {
-                console.warn(`CLOSE: No dialog with with id "${id}" was found, make sure the attribute data-dialog-close contains the correct id.`);
-            }
-        });
-
-        return dialogs.length === 1 ? dialogs[0] : dialogs;
+        return [...dialogs].map(dialog => _createDialog(dialog));
     }
-
-    return null;
 };
 
 const open = id => {
@@ -105,7 +109,7 @@ const open = id => {
     try {
         dialog.open();
     } catch (e) {
-        console.error(`dialog.open: No dialog with id "${id}" found.`);
+        console.warn(`dialog.open: No dialog with id "${id}" found.`);
 
         return false;
     }
@@ -121,7 +125,7 @@ const close = id => {
     try {
         dialog.close();
     } catch (e) {
-        console.error(`dialog.close: No dialog with id "${id}" found.`);
+        console.warn(`dialog.close: No dialog with id "${id}" found.`);
 
         return false;
     }

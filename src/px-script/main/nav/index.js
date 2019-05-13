@@ -1,5 +1,3 @@
-import { hashId } from "../utils";
-
 const SELECTORS = {
     NAV: ".nav",
     SUB: ".submenu",
@@ -67,16 +65,19 @@ class Nav {
         }
     }
 
+    /* Closes all open submenus */
     _submenuCloseAll () {
         window.removeEventListener("resize", this.resizeEventSubmenuOpen, { passive: true });
         this.submenus.forEach(submenu => submenu.classList.remove("submenu-open"));
         this.submenuOpen = false;
     }
 
+    /* Removes hidden class from list items */
     _showItems () {
         this.listItems.forEach(listItem => listItem.classList.remove("responsive-hidden"));
     }
 
+    /* Hides menu items with the class .responsive-hidden */
     _hideItems () {
         const firstFour = this.listItems.filter(notHidden => !notHidden.classList.contains("responsive-hidden") && notHidden.querySelector(SELECTORS.SUB) === null && this._el.querySelector("UL") === notHidden.parentElement);
 
@@ -97,6 +98,7 @@ class Nav {
         }
     }
 
+    /* Operations to run when the window is resized */
     _onResize () {
         this.close();
         this._hideItems();
@@ -117,37 +119,49 @@ class Nav {
     }
 }
 
+/* Generate nav instances */
+const _createNav = navQuery => {
+    const navObject = new Nav(navQuery);
+
+    _navs.push(navObject);
+
+    /* Add listener on document to close other navs */
+    document.addEventListener("click", e => {
+        if (!e.target.closest(".nav") && navObject.navOpen) {
+            navObject.close();
+            navObject._hideItems();
+        }
+
+        if (!e.target.closest(".submenu") && navObject.submenuOpen) {
+            navObject._submenuCloseAll();
+        }
+    });
+
+    return navObject;
+};
+
 const init = id => {
-    const navId = hashId(id);
-    const navSelector = navId ? document.querySelectorAll(navId) : document.querySelectorAll(SELECTORS.NAV);
-    let navs = [];
+    if (id) {
+        const nav = document.getElementById(id);
 
-    if (navSelector.length > 0) {
-        navs = [...navSelector].map(nav => {
-            const navObject = new Nav(nav);
+        if (!nav) {
+            console.warn("doesn't exist");
 
-            _navs.push(navObject);
+            return null;
+        }
 
-            return navObject;
-        });
+        return _createNav(nav);
+    } else {
+        const navs = document.querySelectorAll(SELECTORS.NAV);
 
-        document.addEventListener("click", e => {
-            navs.forEach(nav => {
-                if (!e.target.closest(SELECTORS.NAV) && nav.navOpen) {
-                    nav.close();
-                    nav._hideItems();
-                }
+        if (!navs.length) {
+            console.warn("doesn't exist");
 
-                if (!e.target.closest(SELECTORS.SUB) && nav.submenuOpen) {
-                    nav._submenuCloseAll();
-                }
-            });
-        });
+            return null;
+        }
 
-        return navs.length === 1 ? navs[0] : navs;
+        return [...navs].map(nav => _createNav(nav));
     }
-
-    return null;
 };
 
 const open = id => {

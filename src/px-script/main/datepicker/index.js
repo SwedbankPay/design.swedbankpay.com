@@ -1,8 +1,6 @@
 import formats from "./formats";
 import flatpickr from "flatpickr";
 
-import { hashId } from "../utils";
-
 const SELECTORS = {
     DATEPICKER: "[data-datepicker]"
 };
@@ -52,26 +50,35 @@ const _createDatepicker = datepicker => {
         options.dateFormat = format.dateFormat.concat(" ", format.hourFormat);
     }
 
-    return flatpickr(datepicker, options);
+    const datepickerObj = flatpickr(datepicker, options);
+
+    _datepickers.push(datepickerObj);
+
+    return datepickerObj;
 };
 
 const init = id => {
-    const datepickerId = hashId(id);
-    const datepickers = datepickerId ? document.querySelectorAll(datepickerId) : document.querySelectorAll(SELECTORS.DATEPICKER);
+    if (id) {
+        const datepicker = document.getElementById(id);
 
-    if (datepickers.length) {
-        const datepickerObjects = [...datepickers].map(picker => {
-            const datepickerObject = _createDatepicker(picker);
+        if (!datepicker) {
+            console.warn("doesn't exist");
 
-            _datepickers.push(datepickerObject);
+            return null;
+        }
 
-            return datepickerObject;
-        });
+        return _createDatepicker(datepicker);
+    } else {
+        const datepickers = document.querySelectorAll(SELECTORS.DATEPICKER);
 
-        return datepickerObjects.length === 1 ? datepickerObjects[0] : datepickerObjects;
+        if (!datepickers.length) {
+            console.warn("doesn't exist");
+
+            return null;
+        }
+
+        return [...datepickers].map(datepicker => _createDatepicker(datepicker));
     }
-
-    return null;
 };
 
 const open = id => {

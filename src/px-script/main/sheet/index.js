@@ -1,4 +1,4 @@
-import { handleScrollbar, hashId } from "../utils";
+import { handleScrollbar } from "../utils";
 
 const SELECTORS = {
     SHEET: ".sheet",
@@ -15,6 +15,8 @@ class Sheet {
         this.id = el.id;
         this.closeIcon = el.querySelector(SELECTORS.CLOSEICON);
         this.isOpen = el.classList.contains("sheet-open");
+        this.openBtns = this.id ? document.querySelectorAll(`[data-sheet-open=${this.id}]`) : null;
+        this.closeBtns = this.id ? document.querySelectorAll(`[data-sheet-close=${this.id}]`) : null;
 
         if (this.closeIcon) {
             this.closeIcon.addEventListener("click", e => {
@@ -37,6 +39,30 @@ class Sheet {
                 this.close();
             }
         });
+
+        this._initializeButtons();
+    }
+
+    _initializeButtons () {
+        // Init open buttons
+        if (this.openBtns) {
+            this.openBtns.forEach(btn => {
+                btn.addEventListener("click", e => {
+                    e.preventDefault();
+                    this.open();
+                });
+            });
+        }
+
+        // Init close buttons
+        if (this.closeBtns) {
+            this.closeBtns.forEach(btn => {
+                btn.addEventListener("click", e => {
+                    e.preventDefault();
+                    this.close();
+                });
+            });
+        }
     }
 
     open () {
@@ -67,72 +93,54 @@ class Sheet {
     }
 }
 
+const _createSheet = sheetQuery => {
+    const sheetObject = new Sheet(sheetQuery);
+
+    _sheets.push(sheetObject);
+
+    return sheetObject;
+};
+
 const init = id => {
-    const sheetId = hashId(id);
-    const sheetSelector = sheetId ? document.querySelectorAll(sheetId) : document.querySelectorAll(SELECTORS.SHEET);
-    let sheets = [];
+    if (id) {
+        const sheet = document.getElementById(id);
 
-    if (sheetSelector.length) {
-        sheets = [...sheetSelector].map(sheet => {
-            const sheetObject = new Sheet(sheet);
+        if (!sheet) {
+            console.warn("doesn't exist");
 
-            if (_sheets.length) {
-                _sheets.forEach((arraySheet, index) => {
-                    arraySheet.id === sheetObject.id ? _sheets[index] = sheetObject : _sheets.push(sheetObject);
-                });
-            } else {
-                _sheets.push(sheetObject);
-            }
+            return null;
+        }
 
-            return sheetObject;
-        });
+        const sheetObj = _createSheet(sheet);
 
-        // Close sheet on esc
-        document.addEventListener("keydown", e => {
-            if (e.keyCode === 27 && document.body.classList.contains("sheet-open")) {
-                handleScrollbar();
-                _sheets.forEach(sheet => sheet.isOpen ? sheet.close() : null);
-            }
-        });
+        _addEscListener();
 
-        // Init open buttons
-        document.querySelectorAll(SELECTORS.OPEN).forEach(btn => {
-            const id = btn.dataset.sheetOpen;
-            let sheet;
+        return sheetObj;
+    } else {
+        const sheets = document.querySelectorAll(SELECTORS.SHEET);
 
-            _sheets.forEach(s => s.id === id ? sheet = s : null);
+        if (!sheets.length) {
+            console.warn("doesn't exist");
 
-            if (sheet) {
-                btn.addEventListener("click", e => {
-                    e.preventDefault();
-                    sheet.open();
-                });
-            } else {
-                console.warn(`OPEN: No sheet with with id ${id} was found, make sure the attribute data-sheet-open contains the correct id.`);
-            }
-        });
+            return null;
+        }
 
-        // Init close buttons
-        document.querySelectorAll(SELECTORS.CLOSE).forEach(btn => {
-            const id = btn.dataset.sheetClose;
-            let sheet;
+        const sheetObjects = [...sheets].map(actionList => _createSheet(actionList));
 
-            _sheets.forEach(s => s.id === id ? sheet = s : null);
+        _addEscListener();
 
-            if (sheet) {
-                btn.addEventListener("click", e => {
-                    e.preventDefault();
-                    sheet.close();
-                });
-            } else {
-                console.warn(`CLOSE: No sheet with with id ${id} was found, make sure the attribute data-sheet-close contains the correct id.`);
-            }
-        });
-
-        return sheets.length === 1 ? sheets[0] : sheets;
+        return sheetObjects;
     }
+};
 
-    return null;
+const _addEscListener = () => {
+    // Close sheet on esc
+    document.addEventListener("keydown", e => {
+        if (e.keyCode === 27 && document.body.classList.contains("sheet-open")) {
+            handleScrollbar();
+            _sheets.forEach(sheet => sheet.isOpen ? sheet.close() : null);
+        }
+    });
 };
 
 const close = id => {
@@ -143,7 +151,7 @@ const close = id => {
     try {
         sheet.close();
     } catch (e) {
-        console.error(`sheet.close: No sheet with id "${id}" found.`);
+        console.warn(`sheet.close: No sheet with id "${id}" found.`);
 
         return false;
     }
@@ -161,7 +169,7 @@ const open = id => {
     try {
         sheet.open();
     } catch (e) {
-        console.error(`sheet.open: No sheet with id "${id}" found.`);
+        console.warn(`sheet.open: No sheet with id "${id}" found.`);
 
         return false;
     }

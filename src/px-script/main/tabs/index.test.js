@@ -71,9 +71,10 @@ describe("px-script: tabs", () => {
         });
 
         it("returns null if no tabs is found", () => {
-            const returnVal = tabs.init();
+            console.warn = jest.fn();
 
-            expect(returnVal).toBeNull();
+            expect(tabs.init()).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
         });
     });
 

@@ -30,13 +30,8 @@ export const handleScrollbar = () => {
     }
 };
 
-export const hashId = id => (
-    (id && id.includes("#")) ? id : (id ? `#${id}` : null)
-);
-
 export default {
     extendObj,
     isWithinBoundingBox,
-    handleScrollbar,
-    hashId
+    handleScrollbar
 };

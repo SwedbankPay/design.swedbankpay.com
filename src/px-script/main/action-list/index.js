@@ -1,5 +1,3 @@
-import { hashId } from "../utils";
-
 const SELECTORS = {
     ACTIONMENU: ".action-menu",
     ACTIONLIST: ".action-list",
@@ -40,32 +38,42 @@ class ActionList {
     }
 }
 
+const _createActionList = actionListQuery => {
+    const actionListObject = new ActionList(actionListQuery);
+
+    _actionLists.push(actionListObject);
+
+    document.addEventListener("click", e => {
+        if (e.target.closest(".action-list") !== actionListObject.container && actionListObject.isOpen) {
+            actionListObject.close();
+        }
+    });
+
+    return actionListObject;
+};
+
 const init = id => {
-    const actionListId = hashId(id);
-    const actionListQuery = actionListId ? document.querySelectorAll(actionListId) : document.querySelectorAll(SELECTORS.ACTIONLIST);
-    let actionLists = [];
+    if (id) {
+        const actionList = document.getElementById(id);
 
-    if (actionListQuery.length) {
-        actionLists = [...actionListQuery].map(l => {
-            const actionListObject = new ActionList(l);
+        if (!actionList) {
+            console.warn("doesn't exist");
 
-            _actionLists.push(actionListObject);
+            return null;
+        }
 
-            return actionListObject;
-        });
+        return _createActionList(actionList);
+    } else {
+        const actionLists = document.querySelectorAll(SELECTORS.ACTIONLIST);
 
-        document.addEventListener("click", e => {
-            actionLists.forEach(l => {
-                if (e.target.closest(SELECTORS.ACTIONLIST) !== l.container && l.isOpen) {
-                    l.close();
-                }
-            });
-        });
+        if (!actionLists.length) {
+            console.warn("doesn't exist");
 
-        return actionLists.length === 1 ? actionLists[0] : actionLists;
+            return null;
+        }
+
+        return [...actionLists].map(actionList => _createActionList(actionList));
     }
-
-    return null;
 };
 
 const close = id => {
@@ -76,7 +84,7 @@ const close = id => {
     try {
         actionlist.close();
     } catch (e) {
-        console.error(`actionlist.close: No actionlist with id "${id}" found.`);
+        console.warn(`actionlist.close: No actionlist with id "${id}" found.`);
 
         return false;
     }
@@ -92,7 +100,7 @@ const open = id => {
     try {
         actionlist.open();
     } catch (e) {
-        console.error(`actionlist.open: No actionlist with id "${id}" found.`);
+        console.warn(`actionlist.open: No actionlist with id "${id}" found.`);
 
         return false;
     }

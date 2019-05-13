@@ -47,15 +47,6 @@ describe("px-script: button", () => {
             });
         });
 
-        it("returns one object when an ID is passed", () => {
-            ReactDOM.render(<Button type="primary" label="test" id="test" loader />, div);
-
-            const returnVal = button.init("test");
-
-            expect(Array.isArray(returnVal)).toBeFalsy();
-            expect(typeof returnVal).toEqual("object");
-        });
-
         it("returns an array of objects if several loader buttons exist", () => {
             ReactDOM.render(
                 <>

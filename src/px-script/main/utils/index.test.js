@@ -1,4 +1,4 @@
-import { extendObj, isWithinBoundingBox, handleScrollbar, hashId } from "./index";
+import { extendObj, isWithinBoundingBox, handleScrollbar } from "./index";
 
 describe("px-script: utils", () => {
     describe("- extendObj", () => {
@@ -63,27 +63,6 @@ describe("px-script: utils", () => {
             handleScrollbar();
 
             expect(document.body.classList).not.toContain("has-vscroll");
-        });
-    });
-
-    describe("- hashId", () => {
-        it("takes a string and prepends #", () => {
-            const returnVal = hashId("test");
-
-            expect(returnVal).toEqual("#test");
-        });
-
-        it("returns the same value if an ID with # is passed", () => {
-            const testVal = "#test";
-            const returnVal = hashId(testVal);
-
-            expect(returnVal).toEqual(testVal);
-        });
-
-        it("returns null if no ID is passed", () => {
-            const returnVal = hashId();
-
-            expect(returnVal).toBeNull();
         });
     });
 });

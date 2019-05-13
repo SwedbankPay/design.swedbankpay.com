@@ -1,5 +1,4 @@
 import NavMenu from "./NavMenu";
-import { hashId } from "../utils";
 
 const SELECTORS = {
     TOPBAR: ".topbar",
@@ -8,40 +7,49 @@ const SELECTORS = {
 
 const _navMenus = _navMenus || [];
 
+const _createTopbar = (topbar, navMenu) => {
+    const navMenuObject = new NavMenu(topbar, navMenu);
+
+    _navMenus.push(navMenuObject);
+
+    document.querySelector("html").addEventListener("mousedown", e => {
+        if (navMenuObject.isOpen && !navMenuObject._containsPoint(e.clientX, e.clientY)) {
+            navMenuObject.close();
+        }
+    });
+
+    return navMenuObject;
+};
+
 const init = id => {
-    const topbarId = hashId(id);
-    const topbarComponents = topbarId ? document.querySelectorAll(topbarId) : document.querySelectorAll(SELECTORS.TOPBAR);
-    const navMenus = [];
+    if (id) {
+        const topbar = document.getElementById(id);
+        const navMenuQuery = topbar.querySelector(SELECTORS.TOPBARLINKS);
 
-    if (topbarComponents.length) {
-        topbarComponents.forEach(topbar => {
-            const navMenuSelector = topbar.querySelector(SELECTORS.TOPBARLINKS);
+        if (!topbar) {
+            console.warn("doesn't exist");
 
-            /*
-                A topbar can only have one navMenu, but you can initialize several topbars at the same time. [AW]
-            */
-            if (navMenuSelector) {
-                const navMenuObject = new NavMenu(topbar, navMenuSelector);
+            return null;
+        }
 
-                navMenus.push(navMenuObject);
+        return navMenuQuery ? _createTopbar(topbar, navMenuQuery) : null;
+    } else {
+        const topbars = document.querySelectorAll(SELECTORS.TOPBAR);
 
-                /*
-                    One document listener per topbar. Several document listeners for the same thing are normally bad practice,
-                    but you should not have more than one topbar either. [AW]
-                */
-                document.querySelector("html").addEventListener("mousedown", e => {
-                    if (navMenuObject.isOpen && !navMenuObject._containsPoint(e.clientX, e.clientY)) {
-                        navMenuObject.close();
-                    }
-                });
-            }
+        if (!topbars.length) {
+            console.warn("doesn't exist");
+
+            return null;
+        }
+
+        const navMenuObjects = [...topbars].map(topbar => {
+            const navMenuQuery = topbar.querySelector(SELECTORS.TOPBARLINKS);
+
+            navMenuQuery ? _createTopbar(topbar, navMenuQuery) : null;
         });
-        _navMenus.push(...navMenus);
 
-        return navMenus.length === 1 ? navMenus[0] : navMenus;
+        return navMenuObjects;
     }
-
-    return null;
 };
 
 const open = id => {

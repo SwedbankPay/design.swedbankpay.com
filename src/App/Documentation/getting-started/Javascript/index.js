@@ -33,7 +33,7 @@ const AboutInit = () => (
 const JavascriptDocs = () => (
     <DocContainer docToc>
         <p className="lead">
-            How to utilize our <Property value="px.<component_name>.init()" /> function.
+            How to utilize our <PxScript component="<component_name>" func="init" /> function.
         </p>
         <AboutInit />
     </DocContainer>

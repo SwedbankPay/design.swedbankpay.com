@@ -93,9 +93,10 @@ describe("px-script: topbar", () => {
         });
 
         it("returns null if no topbar is found", () => {
-            const returnVal = topbar.init();
+            console.warn = jest.fn();
 
-            expect(returnVal).toBeNull();
+            expect(topbar.init()).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
         });
     });
 

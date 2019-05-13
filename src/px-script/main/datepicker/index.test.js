@@ -40,15 +40,6 @@ describe("px-script: datepicker", () => {
             expect(returnVal.input.id).toEqual("test-datepicker");
         });
 
-        it("returns a single object when one ID is passed", () => {
-            ReactDOM.render(<Datepicker />, div);
-
-            const returnVal = datepicker.init();
-
-            expect(Array.isArray(returnVal)).toBeFalsy();
-            expect(typeof returnVal).toEqual("object");
-        });
-
         it("returns an array of objects if more than one datepicker is initialized", () => {
             ReactDOM.render(
                 <>
@@ -61,7 +52,10 @@ describe("px-script: datepicker", () => {
         });
 
         it("returns null if no datepickers exist", () => {
+            console.warn = jest.fn();
+
             expect(datepicker.init()).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
         });
     });
 
@@ -78,9 +72,9 @@ describe("px-script: datepicker", () => {
     it("defaults to iso8601 when no format is specified", () => {
         console.error = jest.fn(); // To prevent error message from using non-enum for format
 
-        ReactDOM.render(<Datepicker />, div);
+        ReactDOM.render(<Datepicker id="test-datepicker" />, div);
 
-        const returnVal = datepicker.init();
+        const returnVal = datepicker.init("test-datepicker");
 
         expect(returnVal.config.dateFormat).toEqual(formats.iso8601.dateFormat);
     });
@@ -88,9 +82,9 @@ describe("px-script: datepicker", () => {
     it("sets an alternate format if datepicker-fulldate is true", () => {
         console.error = jest.fn(); // To prevent error message from using non-enum for format
 
-        ReactDOM.render(<Datepicker fulldate="true" />, div);
+        ReactDOM.render(<Datepicker id="test-datepicker" fulldate="true" />, div);
 
-        const returnVal = datepicker.init();
+        const returnVal = datepicker.init("test-datepicker");
 
         expect(returnVal.config.locale.fulldate).toEqual(formats.iso8601.fulldate);
     });
@@ -98,89 +92,89 @@ describe("px-script: datepicker", () => {
     it("includes time when specified", () => {
         console.error = jest.fn(); // To prevent error message from using non-enum for format
 
-        ReactDOM.render(<Datepicker time />, div);
+        ReactDOM.render(<Datepicker id="test-datepicker" time />, div);
 
-        const returnVal = datepicker.init();
+        const returnVal = datepicker.init("test-datepicker");
 
         expect(returnVal.config.enableTime).toBeTruthy();
     });
 
     it("sends flatpickr correct options for dateformat when specified as nb", () => {
-        ReactDOM.render(<Datepicker format="nb" />, div);
+        ReactDOM.render(<Datepicker id="test-datepicker" format="nb" />, div);
 
-        const returnVal = datepicker.init();
+        const returnVal = datepicker.init("test-datepicker");
 
         expect(returnVal.config.locale.dateFormat).toEqual(formats.nb.dateFormat);
     });
 
     it("sends flatpickr correct options for dateformat when specified as sv", () => {
-        ReactDOM.render(<Datepicker format="sv" />, div);
+        ReactDOM.render(<Datepicker id="test-datepicker" format="sv" />, div);
 
-        const returnVal = datepicker.init();
+        const returnVal = datepicker.init("test-datepicker");
 
         expect(returnVal.config.locale.dateFormat).toEqual(formats.sv.dateFormat);
     });
 
     it("sends flatpickr correct options for dateformat when specified as da", () => {
-        ReactDOM.render(<Datepicker format="da" />, div);
+        ReactDOM.render(<Datepicker id="test-datepicker" format="da" />, div);
 
-        const returnVal = datepicker.init();
+        const returnVal = datepicker.init("test-datepicker");
 
         expect(returnVal.config.locale.dateFormat).toEqual(formats.da.dateFormat);
     });
 
     it("sends flatpickr correct options for dateformat when specified as fi", () => {
-        ReactDOM.render(<Datepicker format="fi" />, div);
+        ReactDOM.render(<Datepicker id="test-datepicker" format="fi" />, div);
 
-        const returnVal = datepicker.init();
+        const returnVal = datepicker.init("test-datepicker");
 
         expect(returnVal.config.locale.dateFormat).toEqual(formats.fi.dateFormat);
     });
 
     it("sends flatpickr correct options for dateformat when specified as en", () => {
-        ReactDOM.render(<Datepicker format="en" />, div);
+        ReactDOM.render(<Datepicker id="test-datepicker" format="en" />, div);
 
-        const returnVal = datepicker.init();
+        const returnVal = datepicker.init("test-datepicker");
 
         expect(returnVal.config.locale.dateFormat).toEqual(formats.en.dateFormat);
     });
 
     it("sends flatpickr correct options for dateformat when specified as iso8601", () => {
-        ReactDOM.render(<Datepicker format="iso8601" />, div);
+        ReactDOM.render(<Datepicker id="test-datepicker" format="iso8601" />, div);
 
-        const returnVal = datepicker.init();
+        const returnVal = datepicker.init("test-datepicker");
 
         expect(returnVal.config.locale.dateFormat).toEqual(formats.iso8601.dateFormat);
     });
 
     it("sends flatpickr correct options for dateformat when specified as nb with attribute min", () => {
-        ReactDOM.render(<Datepicker format="nb" min="test" />, div);
+        ReactDOM.render(<Datepicker id="test-datepicker" format="nb" min="test" />, div);
 
-        const returnVal = datepicker.init();
+        const returnVal = datepicker.init("test-datepicker");
 
         expect(returnVal.config.datepickerMin).toEqual("test");
     });
 
     it("sends flatpickr correct options for dateformat when specified as nb with attribute max", () => {
-        ReactDOM.render(<Datepicker format="nb" max="test" />, div);
+        ReactDOM.render(<Datepicker id="test-datepicker" format="nb" max="test" />, div);
 
-        const returnVal = datepicker.init();
+        const returnVal = datepicker.init("test-datepicker");
 
         expect(returnVal.config.datepickerMax).toEqual("test");
     });
 
     it("sends flatpickr correct options for dateformat when specified as nb with attribute datepicker-value", () => {
-        ReactDOM.render(<Datepicker format="nb" value="test" />, div);
+        ReactDOM.render(<Datepicker id="test-datepicker" format="nb" value="test" />, div);
 
-        const returnVal = datepicker.init();
+        const returnVal = datepicker.init("test-datepicker");
 
         expect(returnVal.config.datepickerValue).toEqual("test");
     });
 
     it("sends flatpickr correct options for dateformat when specified as nb with attribute months", () => {
-        ReactDOM.render(<Datepicker format="nb" months="3" />, div);
+        ReactDOM.render(<Datepicker id="test-datepicker" format="nb" months="3" />, div);
 
-        const returnVal = datepicker.init();
+        const returnVal = datepicker.init("test-datepicker");
 
         expect(returnVal.config.datepickerMonths).toEqual("3");
     });
