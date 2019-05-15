@@ -13,7 +13,7 @@ const _appendLoader = loader => {
 
     loader.appendChild(ul);
 
-    return {container: loader}
+    return { container: loader };
 };
 
 const init = id => {
@@ -25,7 +25,7 @@ const init = id => {
 
             return null;
         }
-        
+
         return _appendLoader(loader);
     } else {
         const loaders = document.querySelectorAll(SELECTORS.LOADER);

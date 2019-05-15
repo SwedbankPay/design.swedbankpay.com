@@ -16,27 +16,32 @@ const _appendLoader = button => {
     div.appendChild(ul);
 
     button.appendChild(div);
+
+    return { container: button };
 };
 
-const init = () => {
-    const loaderSelector = document.querySelectorAll(SELECTORS.LOADER);
-    const buttonLoaders = [];
+const init = id => {
+    if (id) {
+        const btnLoader = document.getElementById(id);
 
-    if (loaderSelector.length) {
-        loaderSelector.forEach(button => {
-            if (!button.querySelector(".loader")) {
-                _appendLoader(button);
+        if (!btnLoader) {
+            console.warn("doesn't exist");
 
-                buttonLoaders.push({
-                    container: button
-                });
-            }
-        });
+            return null;
+        }
 
-        return buttonLoaders.length === 1 ? buttonLoaders[0] : buttonLoaders;
+        return _appendLoader(btnLoader);
+    } else {
+        const btnLoaders = document.querySelectorAll(SELECTORS.LOADER);
+
+        if (!btnLoaders.length) {
+            console.warn("doesn't exist");
+
+            return null;
+        }
+
+        return [...btnLoaders].map(btnLoader => _appendLoader(btnLoader));
     }
-
-    return null;
 };
 
 export default {
