@@ -106,7 +106,7 @@ const init = id => {
         const sheet = document.getElementById(id);
 
         if (!sheet) {
-            console.warn("doesn't exist");
+            console.warn(`No sheet with id ${id} found`);
 
             return null;
         }
@@ -120,7 +120,7 @@ const init = id => {
         const sheets = document.querySelectorAll(SELECTORS.SHEET);
 
         if (!sheets.length) {
-            console.warn("doesn't exist");
+            console.warn("No sheets found");
 
             return null;
         }

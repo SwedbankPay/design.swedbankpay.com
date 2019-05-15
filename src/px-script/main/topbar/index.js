@@ -27,7 +27,7 @@ const init = id => {
         const navMenuQuery = topbar.querySelector(SELECTORS.TOPBARLINKS);
 
         if (!topbar) {
-            console.warn("doesn't exist");
+            console.warn(`No topbar with id ${id} found`);
 
             return null;
         }
@@ -37,7 +37,7 @@ const init = id => {
         const topbars = document.querySelectorAll(SELECTORS.TOPBAR);
 
         if (!topbars.length) {
-            console.warn("doesn't exist");
+            console.warn("No topbars found");
 
             return null;
         }

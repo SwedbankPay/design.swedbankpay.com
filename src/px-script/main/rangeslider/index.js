@@ -69,7 +69,7 @@ const init = id => {
         const rangeSlider = document.getElementById(id);
 
         if (!rangeSlider) {
-            console.warn("doesn't exist");
+            console.warn(`No rangeslider with id ${id} found`);
 
             return null;
         }
@@ -83,7 +83,7 @@ const init = id => {
         const rangeSliders = document.querySelectorAll(SELECTORS.RANGESLIDER);
 
         if (!rangeSliders.length) {
-            console.warn("doesn't exist");
+            console.warn("No rangesliders found");
 
             return null;
         }

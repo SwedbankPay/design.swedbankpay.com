@@ -62,7 +62,7 @@ const init = id => {
         const datepicker = document.getElementById(id);
 
         if (!datepicker) {
-            console.warn("doesn't exist");
+            console.warn(`No datepicker with id ${id} found`);
 
             return null;
         }
@@ -72,7 +72,7 @@ const init = id => {
         const datepickers = document.querySelectorAll(SELECTORS.DATEPICKER);
 
         if (!datepickers.length) {
-            console.warn("doesn't exist");
+            console.warn("No datepickers found");
 
             return null;
         }

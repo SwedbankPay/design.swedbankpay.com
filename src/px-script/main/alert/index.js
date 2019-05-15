@@ -52,7 +52,7 @@ const init = id => {
         const alert = document.getElementById(id);
 
         if (!alert) {
-            console.warn("doesn't exist");
+            console.warn(`No alert with id ${id} found`);
 
             return null;
         }
@@ -62,7 +62,7 @@ const init = id => {
         const alerts = document.querySelectorAll(SELECTORS.ALERT);
 
         if (!alerts.length) {
-            console.warn("doesn't exist");
+            console.warn("No alerts found");
 
             return null;
         }

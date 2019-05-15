@@ -82,7 +82,7 @@ const init = id => {
         const dialog = document.getElementById(id);
 
         if (!dialog) {
-            console.warn("doesn't exist");
+            console.warn(`No dialog with id ${id} found`);
 
             return null;
         }
@@ -92,7 +92,7 @@ const init = id => {
         const dialogs = document.querySelectorAll(SELECTORS.DIALOG);
 
         if (!dialogs.length) {
-            console.warn("doesn't exist");
+            console.warn("No dialogs found");
 
             return null;
         }

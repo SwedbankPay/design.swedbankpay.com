@@ -25,7 +25,7 @@ const init = id => {
         const btnLoader = document.getElementById(id);
 
         if (!btnLoader) {
-            console.warn("doesn't exist");
+            console.warn(`No loader button with id ${id} found`);
 
             return null;
         }
@@ -35,7 +35,7 @@ const init = id => {
         const btnLoaders = document.querySelectorAll(SELECTORS.LOADER);
 
         if (!btnLoaders.length) {
-            console.warn("doesn't exist");
+            console.warn("No loader buttons found");
 
             return null;
         }

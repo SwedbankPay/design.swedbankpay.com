@@ -21,7 +21,7 @@ const init = id => {
         const loader = document.getElementById(id);
 
         if (!loader) {
-            console.warn("doesn't exist");
+            console.warn(`No loader with id ${id} found`);
 
             return null;
         }
@@ -31,7 +31,7 @@ const init = id => {
         const loaders = document.querySelectorAll(SELECTORS.LOADER);
 
         if (!loaders.length) {
-            console.warn("doesn't exist");
+            console.warn("No loaders found");
 
             return null;
         }

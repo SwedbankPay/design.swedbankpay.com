@@ -75,7 +75,7 @@ const init = id => {
         const tab = document.getElementById(id);
 
         if (!tab) {
-            console.warn("doesn't exist");
+            console.warn(`No tab with id ${id} found`);
 
             return null;
         }
@@ -85,7 +85,7 @@ const init = id => {
         const tabs = document.querySelectorAll(SELECTORS.TABS);
 
         if (!tabs.length) {
-            console.warn("doesn't exist");
+            console.warn("No tabs found");
 
             return null;
         }

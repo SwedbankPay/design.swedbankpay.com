@@ -148,7 +148,7 @@ const init = id => {
         const element = document.getElementById(id);
 
         if (!element) {
-            console.warn("doesn't exist");
+            console.warn(`No validation with id ${id} found`);
 
             return null;
         }
@@ -158,7 +158,7 @@ const init = id => {
         const elements = document.querySelectorAll(SELECTORS.VALIDATE);
 
         if (!elements.length) {
-            console.warn("doesn't exist");
+            console.warn("No forms with validation found");
 
             return null;
         }

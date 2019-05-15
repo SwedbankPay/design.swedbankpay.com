@@ -145,7 +145,7 @@ const init = id => {
         const nav = document.getElementById(id);
 
         if (!nav) {
-            console.warn("doesn't exist");
+            console.warn(`No nav with id ${id} found`);
 
             return null;
         }
@@ -155,7 +155,7 @@ const init = id => {
         const navs = document.querySelectorAll(SELECTORS.NAV);
 
         if (!navs.length) {
-            console.warn("doesn't exist");
+            console.warn("No navs found");
 
             return null;
         }

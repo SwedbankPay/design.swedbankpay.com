@@ -44,7 +44,7 @@ const _createActionList = actionListQuery => {
     _actionLists.push(actionListObject);
 
     document.addEventListener("click", e => {
-        if (e.target.closest(".action-list") !== actionListObject.container && actionListObject.isOpen) {
+        if (e.target.closest(SELECTORS.ACTIONLIST) !== actionListObject.container && actionListObject.isOpen) {
             actionListObject.close();
         }
     });
@@ -57,7 +57,7 @@ const init = id => {
         const actionList = document.getElementById(id);
 
         if (!actionList) {
-            console.warn("doesn't exist");
+            console.warn(`No action List with id ${id} found`);
 
             return null;
         }
@@ -67,7 +67,7 @@ const init = id => {
         const actionLists = document.querySelectorAll(SELECTORS.ACTIONLIST);
 
         if (!actionLists.length) {
-            console.warn("doesn't exist");
+            console.warn("No action lists found");
 
             return null;
         }
