@@ -10,68 +10,90 @@ const writeStyle = obj => {
     (index === -1) ? inlineStyleContent.push(obj) : inlineStyleContent[index] = obj;
 
     inlineStyleContent.forEach(({ id, percent }) => {
-        styleText += `#${id}::-webkit-slider-runnable-track{background-size: ${percent}% 100%}`;
+        styleText +=
+        `.rangeslider input[type="range"][data-rs-id="${id}"]::-webkit-slider-runnable-track,
+        .rangeslider input[type="range"][disabled][data-rs-id="${id}"]::-webkit-slider-runnable-track {
+            background-size: ${percent}% 100%
+        }`;
     });
 
     inlineStyle.textContent = styleText;
 };
 
-const init = () => {
-    const rangeContainerSelector = document.querySelectorAll(SELECTORS.RANGESLIDER);
-    let rangeContainers = [];
+const _createRangeSlider = (rangeContainer, inlineStyle, inlineStyleContent, isBrowserChrome, i) => {
+    const input = rangeContainer.querySelector("input[type=range]");
+    const valueSpan = rangeContainer.querySelector("span[data-rs-value]");
+
+    /* Changing value of span */
+    if (valueSpan) {
+        input.addEventListener("change", () => {
+            valueSpan.innerHTML = input.value;
+        });
+        input.addEventListener("input", () => {
+            valueSpan.innerHTML = input.value;
+        });
+    }
+
+    /* Filling slider background for chrome */
+    if (isBrowserChrome) {
+        input.dataset.rsId = rangeContainer.id ? `px-rs-${rangeContainer.id}` : `px-rs-${i}`;
+
+        const updateStyle = () => {
+            const max = input.attributes.max ? Number(input.attributes.max.value) : 100;
+            const min = input.attributes.min ? Number(input.attributes.min.value) : 0;
+            const value = Number(input.value);
+            const rangePercent = (value + Math.abs(min)) / (max - min) * 100;
+
+            writeStyle({
+                id: input.dataset.rsId,
+                percent: rangePercent,
+                inlineStyleContent,
+                inlineStyle
+            });
+        };
+
+        input.addEventListener("change", updateStyle);
+        input.addEventListener("input", updateStyle);
+        updateStyle();
+    }
+
+    return { container: rangeContainer };
+};
+
+const init = id => {
+    const isBrowserChrome = navigator.userAgent.indexOf("Chrome") > -1;
     const inlineStyle = document.createElement("style");
     const inlineStyleContent = [];
-    const isBrowserChrome = navigator.userAgent.indexOf("Chrome") > -1;
 
-    if (rangeContainerSelector.length > 0) {
+    if (id) {
+        const rangeSlider = document.getElementById(id);
+
+        if (!rangeSlider) {
+            console.warn("doesn't exist");
+
+            return null;
+        }
+
         if (isBrowserChrome) {
             document.body.appendChild(inlineStyle);
         }
 
-        rangeContainers = [...rangeContainerSelector].map((rangeContainer, i) => {
-            const input = rangeContainer.querySelector("input[type=range]");
-            const valueSpan = rangeContainer.querySelector("span[data-rs-value]");
+        return _createRangeSlider(rangeSlider, inlineStyle, inlineStyleContent, isBrowserChrome);
+    } else {
+        const rangeSliders = document.querySelectorAll(SELECTORS.RANGESLIDER);
 
-            /* Changing value of span */
-            if (valueSpan) {
-                input.addEventListener("change", () => {
-                    valueSpan.innerHTML = input.value;
-                });
-                input.addEventListener("input", () => {
-                    valueSpan.innerHTML = input.value;
-                });
-            }
+        if (!rangeSliders.length) {
+            console.warn("doesn't exist");
 
-            /* Filling slider background for chrome */
-            if (isBrowserChrome) {
-                input.id = `px-rs-${i}`;
+            return null;
+        }
 
-                const updateStyle = () => {
-                    const max = input.attributes.max ? Number(input.attributes.max.value) : 100;
-                    const min = input.attributes.min ? Number(input.attributes.min.value) : 0;
-                    const value = Number(input.value);
-                    const rangePercent = (value + Math.abs(min)) / (max - min) * 100;
+        if (isBrowserChrome) {
+            document.body.appendChild(inlineStyle);
+        }
 
-                    writeStyle({
-                        id: input.id,
-                        percent: rangePercent,
-                        inlineStyleContent,
-                        inlineStyle
-                    });
-                };
-
-                input.addEventListener("change", updateStyle);
-                input.addEventListener("input", updateStyle);
-                updateStyle();
-            }
-
-            return { container: rangeContainer };
-        });
-
-        return rangeContainers.length === 1 ? rangeContainers[0] : rangeContainers;
+        return [...rangeSliders].map((rangeSlider, i) => _createRangeSlider(rangeSlider, inlineStyle, inlineStyleContent, isBrowserChrome, i));
     }
-
-    return null;
 };
 
 export default {

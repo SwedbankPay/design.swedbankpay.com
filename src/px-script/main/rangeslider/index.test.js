@@ -82,8 +82,8 @@ describe("px-script: rangeslider", () => {
         expect(rangeSlider).toBeTruthy();
         expect(chromeStyle).toBeTruthy();
         expect(document.querySelectorAll("style")).toHaveLength(1);
-        expect(chromeStyle.innerHTML.includes("#px-rs-0")).toEqual(true);
-        expect(chromeStyle.innerHTML.includes("#px-rs-1")).toEqual(true);
+        expect(chromeStyle.innerHTML.includes("px-rs-0")).toEqual(true);
+        expect(chromeStyle.innerHTML.includes("px-rs-1")).toEqual(true);
 
         Object.defineProperty(window.navigator, "userAgent", { value: defaultUseragent });
         document.body.removeChild(chromeStyle);
@@ -104,16 +104,18 @@ describe("px-script: rangeslider", () => {
         const input = rangeSlider.querySelector("input[type=range]");
         const chromeStyle = document.querySelector("style");
 
+        console.log(chromeStyle.innerHTML);
+
         expect(rangeSlider).toBeTruthy();
         expect(input).toBeTruthy();
         expect(chromeStyle).toBeTruthy();
-        expect(chromeStyle.innerHTML.match(/#px-rs-0/gm)).toHaveLength(1);
+        expect(chromeStyle.innerHTML.match(/px-rs-0/gm)).toHaveLength(2);
 
         input.value = 50;
         input.dispatchEvent(new Event("change"));
 
         expect(document.querySelectorAll("style")).toHaveLength(1);
-        expect(chromeStyle.innerHTML.match(/#px-rs-0/g)).toHaveLength(1);
+        expect(chromeStyle.innerHTML.match(/px-rs-0/g)).toHaveLength(2);
 
         Object.defineProperty(window.navigator, "userAgent", { value: defaultUseragent });
         document.body.removeChild(chromeStyle);
@@ -132,7 +134,7 @@ describe("px-script: rangeslider", () => {
 
         const rangeSlider = document.querySelector(".rangeslider");
         const chromeStyle = document.querySelector("style");
-        const expectedStyleValue = "#px-rs-0::-webkit-slider-runnable-track{background-size: 0% 100%}";
+        const expectedStyleValue = "px-rs-0::-webkit-slider-runnable-track{background-size: 0% 100%}";
 
         expect(rangeSlider).toBeTruthy();
         expect(chromeStyle).toBeTruthy();
