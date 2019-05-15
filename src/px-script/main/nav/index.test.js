@@ -144,10 +144,17 @@ describe("px-script: nav", () => {
             expect(returnVal.length).toEqual(2);
         });
 
-        it("init returns null if no nav is found", () => {
+        it("init returns null if no nav is found prints a warning message", () => {
             console.warn = jest.fn();
 
             expect(nav.init()).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
+        });
+
+        it("returns null if an invalid ID is passed and prints a warning message", () => {
+            console.warn = jest.fn();
+
+            expect(nav.init("test")).toBeNull();
             expect(console.warn).toHaveBeenCalled();
         });
     });

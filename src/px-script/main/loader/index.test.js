@@ -53,8 +53,18 @@ describe("px-script: loader", () => {
             expect(returnVal.length).toEqual(2);
         });
 
-        it("returns null if no loader is found", () => {
+        it("returns null if no loader is found and prints a warning message", () => {
+            console.warn = jest.fn();
+
             expect(loader.init()).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
+        });
+
+        it("returns null if an invalid ID is passed and prints a warning message", () => {
+            console.warn = jest.fn();
+
+            expect(loader.init("test")).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
         });
     });
 

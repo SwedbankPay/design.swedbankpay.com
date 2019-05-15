@@ -91,6 +91,13 @@ describe("px-script: dialog", () => {
             expect(dialog.init()).toBeNull();
             expect(console.warn).toHaveBeenCalled();
         });
+
+        it("returns null if an invalid ID is passed and prints a warning message", () => {
+            console.warn = jest.fn();
+
+            expect(dialog.init("test")).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
+        });
     });
 
     it("button with attribute 'data-dialog-open' pointing to the correct id opens corresponding dialog", () => {

@@ -51,10 +51,17 @@ describe("px-script: datepicker", () => {
             expect(datepicker.init().length).toEqual(2);
         });
 
-        it("returns null if no datepickers exist", () => {
+        it("returns null if no datepickers exist and prints a warning message", () => {
             console.warn = jest.fn();
 
             expect(datepicker.init()).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
+        });
+
+        it("returns null if an invalid ID is passed and prints a warning message", () => {
+            console.warn = jest.fn();
+
+            expect(datepicker.init("test")).toBeNull();
             expect(console.warn).toHaveBeenCalled();
         });
     });

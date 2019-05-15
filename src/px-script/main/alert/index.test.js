@@ -15,9 +15,57 @@ describe("px-script: alert", () => {
         expect(alert).toBeDefined();
     });
 
-    it("has an init method", () => {
-        expect(alert.init).toBeDefined();
-        expect(alert.init).toBeInstanceOf(Function);
+    describe("alert.init", () => {
+        it("is defined", () => {
+            expect(alert.init).toBeDefined();
+            expect(alert.init).toBeInstanceOf(Function);
+        });
+
+        it("returns a single object when one element is initialized", () => {
+            ReactDOM.render(<Alert type="success" id="demo-alert" />, div);
+
+            const renderedAlert = document.querySelector(".alert");
+
+            expect(renderedAlert).toBeTruthy();
+
+            const returnVal = alert.init("demo-alert");
+
+            expect(Array.isArray(returnVal)).toBeFalsy();
+            expect(typeof returnVal).toEqual("object");
+        });
+
+        it("returns an array of objects when more than one element is initialized", () => {
+            ReactDOM.render(
+                <>
+                    <Alert type="success" />
+                    <Alert type="success" />
+                </>
+                , div);
+
+            const renderedAlert = document.querySelectorAll(".alert");
+
+            expect(renderedAlert).toBeTruthy();
+            expect(renderedAlert.length).toEqual(2);
+
+            const returnVal = alert.init();
+
+            expect(Array.isArray(returnVal)).toBeTruthy();
+            expect(returnVal.length).toEqual(2);
+        });
+
+        it("returns null if no alert is found and prints a warning message", () => {
+            console.warn = jest.fn();
+
+            expect(alert.init()).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
+        });
+
+        it("returns null if an invalid ID is passed and prints a warning message", () => {
+            console.warn = jest.fn();
+
+            expect(alert.init("test")).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
+        });
     });
 
     it("adds eventlisteners on all close buttons", () => {

@@ -62,10 +62,17 @@ describe("px-script: action-list", () => {
             expect(returnVal.length).toEqual(2);
         });
 
-        it("returns null if no action-list is found", () => {
+        it("returns null if no action-list is found and prints a warning message", () => {
             console.warn = jest.fn();
 
             expect(actionList.init()).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
+        });
+
+        it("returns null if an invalid ID is passed and prints a warning message", () => {
+            console.warn = jest.fn();
+
+            expect(actionList.init("test")).toBeNull();
             expect(console.warn).toHaveBeenCalled();
         });
     });

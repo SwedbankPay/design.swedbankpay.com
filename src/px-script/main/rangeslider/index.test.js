@@ -33,9 +33,57 @@ describe("px-script: rangeslider", () => {
         expect(rangeslider).toBeDefined();
     });
 
-    it("init is defined", () => {
-        expect(rangeslider.init).toBeDefined();
-        expect(rangeslider.init).toBeInstanceOf(Function);
+    describe("rangeslider.init", () => {
+        it("it is defined", () => {
+            expect(rangeslider.init).toBeDefined();
+            expect(rangeslider.init).toBeInstanceOf(Function);
+        });
+
+        it("returns a single object when one element is initialized", () => {
+            ReactDOM.render(<TestSlider id="demo-slider" />, div);
+
+            const renderedRangeSlider = document.querySelector(".rangeslider");
+
+            expect(renderedRangeSlider).toBeTruthy();
+
+            const returnVal = rangeslider.init("demo-slider");
+
+            expect(Array.isArray(returnVal)).toBeFalsy();
+            expect(typeof returnVal).toEqual("object");
+        });
+
+        it("returns an array of objects when more than one element is initialized", () => {
+            ReactDOM.render(
+                <>
+                    <TestSlider />
+                    <TestSlider />
+                </>
+                , div);
+
+            const renderedRangeSliders = document.querySelectorAll(".rangeslider");
+
+            expect(renderedRangeSliders).toBeTruthy();
+            expect(renderedRangeSliders.length).toEqual(2);
+
+            const returnVal = rangeslider.init();
+
+            expect(Array.isArray(returnVal)).toBeTruthy();
+            expect(returnVal.length).toEqual(2);
+        });
+
+        it("returns null if no rangeslider is found and prints a warning message", () => {
+            console.warn = jest.fn();
+
+            expect(rangeslider.init()).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
+        });
+
+        it("returns null if an invalid ID is passed and prints a warning message", () => {
+            console.warn = jest.fn();
+
+            expect(rangeslider.init("test")).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
+        });
     });
 
     // Start of Chrome specific tests [AW]

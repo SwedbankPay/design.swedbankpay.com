@@ -47,6 +47,19 @@ describe("px-script: button", () => {
             });
         });
 
+        it("returns a single object when one element is initialized", () => {
+            ReactDOM.render(<Button type="primary" id="demo-button" />, div);
+
+            const renderedButton = document.querySelector(".btn");
+
+            expect(renderedButton).toBeTruthy();
+
+            const returnVal = button.init("demo-button");
+
+            expect(Array.isArray(returnVal)).toBeFalsy();
+            expect(typeof returnVal).toEqual("object");
+        });
+
         it("returns an array of objects if several loader buttons exist", () => {
             ReactDOM.render(
                 <>
@@ -61,8 +74,18 @@ describe("px-script: button", () => {
             expect(returnVal.length).toEqual(2);
         });
 
-        it("returns null if no button loaders exist", () => {
+        it("returns null if no button loaders exist and prints a warning", () => {
+            console.warn = jest.fn();
+
             expect(button.init()).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
+        });
+
+        it("returns null if an invalid ID is passed and prints a warning", () => {
+            console.warn = jest.fn();
+
+            expect(button.init("test")).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
         });
     });
 });
