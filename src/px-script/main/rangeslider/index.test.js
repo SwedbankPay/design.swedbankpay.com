@@ -104,8 +104,6 @@ describe("px-script: rangeslider", () => {
         const input = rangeSlider.querySelector("input[type=range]");
         const chromeStyle = document.querySelector("style");
 
-        console.log(chromeStyle.innerHTML);
-
         expect(rangeSlider).toBeTruthy();
         expect(input).toBeTruthy();
         expect(chromeStyle).toBeTruthy();
@@ -134,11 +132,10 @@ describe("px-script: rangeslider", () => {
 
         const rangeSlider = document.querySelector(".rangeslider");
         const chromeStyle = document.querySelector("style");
-        const expectedStyleValue = "px-rs-0::-webkit-slider-runnable-track{background-size: 0% 100%}";
 
         expect(rangeSlider).toBeTruthy();
         expect(chromeStyle).toBeTruthy();
-        expect(expectedStyleValue).toEqual(chromeStyle.innerHTML);
+        expect(chromeStyle.innerHTML).toContain("background-size: 0% 100%");
 
         Object.defineProperty(window.navigator, "userAgent", { value: defaultUseragent });
     });
