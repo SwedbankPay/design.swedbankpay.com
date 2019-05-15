@@ -12,23 +12,32 @@ const _appendLoader = loader => {
     }
 
     loader.appendChild(ul);
+
+    return {container: loader}
 };
 
-const init = () => {
-    const loaderSelector = document.querySelectorAll(SELECTORS.LOADER);
-    let loaders = [];
+const init = id => {
+    if (id) {
+        const loader = document.getElementById(id);
 
-    if (loaderSelector.length) {
-        loaders = [...loaderSelector].map(loader => {
-            _appendLoader(loader);
+        if (!loader) {
+            console.warn("doesn't exist");
 
-            return { container: loader };
-        });
+            return null;
+        }
+        
+        return _appendLoader(loader);
+    } else {
+        const loaders = document.querySelectorAll(SELECTORS.LOADER);
 
-        return loaders.length === 1 ? loaders[0] : loaders;
+        if (!loaders.length) {
+            console.warn("doesn't exist");
+
+            return null;
+        }
+
+        return [...loaders].map(loader => _appendLoader(loader));
     }
-
-    return null;
 };
 
 export default {
