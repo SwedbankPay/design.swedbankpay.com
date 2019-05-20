@@ -51,7 +51,7 @@ const FixedTopbar = () => (
 
 const JavascriptMethods = () => (
     <>
-        <h2 id="javascript-methods">Javascript Methods</h2>
+        <h2 id="javascript-methods">JavaScript Methods</h2>
         <JavascriptDocs componentName="topbar" open close />
     </>
 );

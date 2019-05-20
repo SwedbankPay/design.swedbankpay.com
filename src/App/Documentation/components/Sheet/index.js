@@ -62,7 +62,7 @@ const Example = () => (
 
 const JavascriptMethods = () => (
     <>
-        <h2 id="javascript-methods">Javascript methods</h2>
+        <h2 id="javascript-methods">JavaScript methods</h2>
         <JavascriptDocs componentName="sheet"open close />
     </>
 );

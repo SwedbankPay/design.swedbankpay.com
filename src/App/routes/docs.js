@@ -23,7 +23,7 @@ module.exports = [
                 componentPath: "getting-started/Contributing"
             },
             {
-                title: "Javascript",
+                title: "JavaScript",
                 path: "/docs/getting-started/javascript",
                 componentPath: "getting-started/Javascript"
             }

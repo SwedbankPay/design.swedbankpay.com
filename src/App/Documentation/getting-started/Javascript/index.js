@@ -25,7 +25,7 @@ const AboutInit = () => (
             {"px.component.init(\"demo-component-id\");\n"}
         </ComponentPreview>
         <Alert type="warning">
-            Additional functions may be available for some components. Read about them on the components documentation page.
+            Additional functions is available for some components. Read about them on the components documentation page.
         </Alert>
     </>
 );

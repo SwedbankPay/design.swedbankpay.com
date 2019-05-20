@@ -303,7 +303,7 @@ const DisabledFormComponents = () => (
 
 const JavascriptMethods = () => (
     <>
-        <h2 id="javascript-methods">Javascript methods</h2>
+        <h2 id="javascript-methods">JavaScript methods</h2>
         <JavascriptDocs componentName="validation" />
         <p>
             The <PxScript component="validation" func="init" /> can be used on a form tag to initialize all fields
