@@ -68,7 +68,7 @@ exports[`Component: Nav JavascriptMethods renders 1`] = `
   <h2
     id="javascript-methods"
   >
-    Javascript methods
+    JavaScript methods
   </h2>
   <JavascriptDocs
     close={true}

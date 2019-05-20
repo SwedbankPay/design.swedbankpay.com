@@ -34,7 +34,7 @@ exports[`Components: Topbar JavascriptMethods renders 1`] = `
   <h2
     id="javascript-methods"
   >
-    Javascript Methods
+    JavaScript Methods
   </h2>
   <JavascriptDocs
     close={true}

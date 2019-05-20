@@ -9,9 +9,12 @@ describe("Documentation: Datepickers", () => {
     });
 
     it("renders", () => {
+        console.warn = jest.fn();
+
         const wrapper = shallow(<Datepickers />);
 
         expect(wrapper).toMatchSnapshot();
+        expect(console.warn).toHaveBeenCalled();
     });
 
     describe("AboutDatepickers", () => {
