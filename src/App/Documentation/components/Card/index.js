@@ -32,8 +32,6 @@ const DefaultBehaviour = () => (
                     }
                     btnTxt="Button"
                 />
-            </div>
-            <div className="cards">
                 <CardComponent
                     type="secondary"
                     title={<h3>Card secondary</h3>}
@@ -44,11 +42,9 @@ const DefaultBehaviour = () => (
                 >
                     <MediaObject size="sm" icon="account_balance" heading="725 NOK" text="Outstanding balance" textSmall muted />
                 </CardComponent>
-            </div>
-            {/* <div className="cards">
                 <CardComponent
                     type="plain"
-                    title="Card light"
+                    title={<h3>Card plain</h3>}
                     imgSrc="https://picsum.photos/300/?random"
                     text="This is the cards text"
                     smallText="And the small text"
@@ -58,7 +54,7 @@ const DefaultBehaviour = () => (
                 >
                     <MediaObject size="sm" icon="verified_user" heading="75%" text="Complete" textSmall muted />
                 </CardComponent>
-            </div> */}
+            </div>
         </ComponentPreview>
     </>
 );
@@ -73,8 +69,8 @@ const CardVariants = () => (
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="cards">
                 <CardComponent
-                    type="default"
-                    title="My custom card"
+                    type="primary"
+                    title={<h3>My Custom card</h3>}
                     text="Card text"
                     smallText="Small card text"
                     footerTxt="This is some text that goes in the footer."
@@ -83,16 +79,16 @@ const CardVariants = () => (
                 </CardComponent>
 
                 <CardComponent
-                    type="default"
-                    title="Text card"
+                    type="primary"
+                    title={<h3>Text card</h3>}
                     textSection={textArr}
                     smallText="This is some small text"
                     footerTxt="This is some text that goes in the footer."
                 />
 
                 <CardComponent
-                    type="brand"
-                    title="Image card"
+                    type="secondary"
+                    title={<h3>Image card</h3>}
                     imgSrc="https://picsum.photos/300/?random"
                     text="This is a card with an image and body"
                 />

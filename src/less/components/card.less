@@ -6,12 +6,12 @@
     width: 100%;
 
     header {
-        // padding: 0 @base-padding;
+        padding: 1rem 1rem 0;
 
         /* stylelint-disable selector-list-comma-newline-after */
         h1, h2, h3, h4, h5, h6,
         .h1, .h2, .h3, .h4, .h5, .h6 {
-            margin: @base-margin 0;
+            margin: 0;
         }
         /* stylelint-enable selector-list-comma-newline-after */
 
@@ -26,15 +26,14 @@
         header {
             position: relative;
             border-top: 7px solid @orange-bright;
-            padding: 1rem 1rem 0;
 
             * {
                 color: @brown;
             }
 
             &:after {
-                position: absolute;
                 content: "";
+                position: absolute;
                 top: 0;
                 left: 1.6rem;
                 width: 1.2rem;
@@ -63,8 +62,8 @@
             }
 
             &:after {
-                position: absolute;
                 content: "";
+                position: absolute;
                 top: 0;
                 left: 1.6rem;
                 width: 1.2rem;
@@ -76,12 +75,11 @@
     }
 
     &.card-plain {
-        header {
-            background-color: @white;
-            border-bottom: 1px solid @bg-gray;
+        background-color: @offwhite;
 
+        header {
             * {
-                color: @brand-primary;
+                color: @brown;
             }
         }
     }
@@ -112,10 +110,20 @@
     }
 
     footer {
-        // padding: @base-padding;
+        padding: @base-padding;
+        background: rgba(0, 0, 0, 0.03);
 
         .btn {
             border-radius: 0;
+
+            &.btn-block {
+                width: calc(100% + 2rem);
+                margin-left: -1rem;
+
+                &:last-child {
+                    margin-bottom: -1rem;
+                }
+            }
         }
 
         .footer-text {
