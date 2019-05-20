@@ -18,25 +18,26 @@ const DefaultBehaviour = () => (
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="cards">
                 <CardComponent
-                    type="default"
-                    title="Card default"
+                    title={<MediaObject size="sm" icon="account_circle" heading="Bob Corlsan" text="bob.corlsan@payex.com" textSmall />}
+                    type="primary"
                     imgSrc="https://picsum.photos/300/?random"
-                    text="This is the cards text"
-                    smallText="And the small text"
+                    text={
+                            <>
+                                This paragraph contains some text about the person displayed above.
+                                <ul className="list pt-3">
+                                    <li><span className="font-weight-bold">Card number:</span> 4563 5648 5642</li>
+                                    <li><span className="font-weight-bold">Balance:</span> 2500,- </li>
+                                </ul>
+                            </>
+                    }
                     btnTxt="Button"
-                    footerTxt="This is some text that goes in the footer."
-                    footerLinkTxt="You wanna click this link?"
-                >
-                    <MediaObject size="sm" icon="account_circle" heading="Bob Corlsan" text="bob.corlsan@payex.com" textSmall muted />
-                </CardComponent>
+                />
             </div>
             <div className="cards">
                 <CardComponent
-                    type="brand"
-                    title="Card brand"
-                    imgSrc="https://picsum.photos/300/?random"
+                    type="secondary"
+                    title={<h3>Card secondary</h3>}
                     text="This is the cards text"
-                    smallText="And the small text"
                     btnTxt="Button"
                     footerTxt="This is some text that goes in the footer."
                     footerLinkTxt="You wanna click this link?"
@@ -44,9 +45,9 @@ const DefaultBehaviour = () => (
                     <MediaObject size="sm" icon="account_balance" heading="725 NOK" text="Outstanding balance" textSmall muted />
                 </CardComponent>
             </div>
-            <div className="cards">
+            {/* <div className="cards">
                 <CardComponent
-                    type="light"
+                    type="plain"
                     title="Card light"
                     imgSrc="https://picsum.photos/300/?random"
                     text="This is the cards text"
@@ -57,7 +58,7 @@ const DefaultBehaviour = () => (
                 >
                     <MediaObject size="sm" icon="verified_user" heading="75%" text="Complete" textSmall muted />
                 </CardComponent>
-            </div>
+            </div> */}
         </ComponentPreview>
     </>
 );

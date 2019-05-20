@@ -3,21 +3,21 @@ import PropTypes from "prop-types";
 
 const Card = ({ type, title, imgSrc, text, textSection, smallText, btnTxt, footerTxt, footerLink, footerLinkTxt, children }) => (
     <div className={`card${type ? ` card-${type}` : ""}`}>
-        {title ? <header>
-            <h3>
-                <a href="#">{title}</a>
-            </h3>
-        </header> : null}
         {imgSrc ? <div className="card-img">{"\n"}
             <img src={imgSrc} alt=""/>{"\n"}
         </div> : null}
-        {children ?
-            <div className="highlight">
-                {children}
-            </div>
-            : null
-        }
+        {title ?
+            <header>
+                {title}
+            </header>
+            : null}
         <div className="card-body">
+            {children ?
+                <div className="highlight">
+                    {children}
+                </div>
+                : null
+            }
             {text ? <p>{text}</p> : null}{"\n"}
             {textSection ?
                 textSection.map((secText, i) => <p key={`card-p-${i}`}>{secText}</p>)
