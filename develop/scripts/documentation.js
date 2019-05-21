@@ -1,2 +1,2 @@
-(window.webpackJsonppayex=window.webpackJsonppayex||[]).push([[59],{342:function(p,n,w){}}]);
-//# sourceMappingURL=documentation.js.map?ef9d593efc9abb95b48d
+(window.webpackJsonppayex=window.webpackJsonppayex||[]).push([[60],{351:function(p,n,w){}}]);
+//# sourceMappingURL=documentation.js.map?72edcc81b8fc90972503
