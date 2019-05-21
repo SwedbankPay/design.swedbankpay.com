@@ -20,7 +20,7 @@ const ActionLinkBadge = () => (
         <p>Action links.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <a className="action-link" href="#">{"\n"}
-                <span className="badge badge-brand">40</span> {"\n"}
+                <span className="badge badge-yellow">40</span>{"\n"}
                 My link{"\n"}
             </a>{"\n"}
         </ComponentPreview>

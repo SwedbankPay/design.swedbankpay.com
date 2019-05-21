@@ -8,7 +8,7 @@ const Overview = () => (
         <p>Use class <Property value=".badge" /> along with <Property value=".badge-{color}" /> to display the badge of your choosing.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <p>Badge <span className="badge badge-default">default</span></p>
-            <p>Badge <span className="badge badge-yellow">brand</span></p>
+            <p>Badge <span className="badge badge-yellow">yellow</span></p>
             <p>Badge <span className="badge badge-blue">blue</span></p>
             <p>Badge <span className="badge badge-red">red</span></p>
         </ComponentPreview>
