@@ -35,6 +35,13 @@ describe("Component: Sheet - ", () => {
         expect(wrapper.html()).toContain("data-require-action");
     });
 
+    it("does not render with data-require-action if it is set to false", () => {
+        const wrapper = shallow(<Sheet requireAction={false} />);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.html()).not.toContain("data-require-action");
+    });
+
     it("renders with children", () => {
         const wrapper = shallow(<Sheet>Test</Sheet>);
 

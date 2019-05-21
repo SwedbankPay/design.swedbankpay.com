@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { Icon } from "#";
 
 const Sheet = ({ id, requireAction, children }) => (
-    <div className="sheet" id={id} data-require-action={requireAction}>
+    <div className="sheet" id={id} data-require-action={requireAction ? true : null}>
         <section>{"\n"}
             <a href="#" className="sheet-close">{"\n\t\t\t"}
                 <Icon icon="close" />{"\n\t\t"}

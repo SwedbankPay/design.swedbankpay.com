@@ -1,8 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Component: Sheet -  does not render with data-require-action if it is set to false 1`] = `
+<div
+  className="sheet"
+  data-require-action={null}
+>
+  <section>
+    
+
+    <a
+      className="sheet-close"
+      href="#"
+    >
+      
+			
+      <Icon
+        icon="close"
+      />
+      
+		
+    </a>
+  </section>
+</div>
+`;
+
 exports[`Component: Sheet -  renders 1`] = `
 <div
   className="sheet"
+  data-require-action={null}
 >
   <section>
     
@@ -26,6 +51,7 @@ exports[`Component: Sheet -  renders 1`] = `
 exports[`Component: Sheet -  renders with a close icon 1`] = `
 <div
   className="sheet"
+  data-require-action={null}
 >
   <section>
     
@@ -49,6 +75,7 @@ exports[`Component: Sheet -  renders with a close icon 1`] = `
 exports[`Component: Sheet -  renders with an ID 1`] = `
 <div
   className="sheet"
+  data-require-action={null}
   id="demo-sheet"
 >
   <section>
@@ -73,6 +100,7 @@ exports[`Component: Sheet -  renders with an ID 1`] = `
 exports[`Component: Sheet -  renders with children 1`] = `
 <div
   className="sheet"
+  data-require-action={null}
 >
   <section>
     
