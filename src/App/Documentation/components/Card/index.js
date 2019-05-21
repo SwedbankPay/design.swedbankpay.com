@@ -35,10 +35,8 @@ const DefaultBehaviour = () => (
                 <CardComponent
                     type="secondary"
                     title={<h3>Card secondary</h3>}
-                    text="This is the cards text"
-                    btnTxt="Button"
-                    footerTxt="This is some text that goes in the footer."
-                    footerLinkTxt="You wanna click this link?"
+                    text="Descriptive text to put inside the card, could contain a lot."
+                    footerLinkTxt="Footer link"
                 >
                     <MediaObject size="sm" icon="account_balance" heading="725 NOK" text="Outstanding balance" textSmall muted />
                 </CardComponent>
@@ -46,11 +44,10 @@ const DefaultBehaviour = () => (
                     type="plain"
                     title={<h3>Card plain</h3>}
                     imgSrc="https://picsum.photos/300/?random"
-                    text="This is the cards text"
+                    text="Descriptive text to put inside the card, could contain a lot."
                     smallText="And the small text"
                     btnTxt="Button"
-                    footerTxt="This is some text that goes in the footer."
-                    footerLinkTxt="You wanna click this link?"
+                    footerLinkTxt="Footer link"
                 >
                     <MediaObject size="sm" icon="verified_user" heading="75%" text="Complete" textSmall muted />
                 </CardComponent>
