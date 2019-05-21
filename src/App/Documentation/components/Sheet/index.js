@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocContainer, Icon, JavascriptDocs } from "#";
+import { ComponentPreview, DocContainer, Property, JavascriptDocs } from "#";
 import SheetComponent from "@/Sheet";
 
 const { sheet } = window.px;
@@ -74,7 +74,7 @@ const RequireAction = () => (
     </>
 );
 
-const UsageWithJavascript = () => (
+const JavascriptMethods = () => (
     <>
         <h2 id="javascript-methods">JavaScript methods</h2>
         <JavascriptDocs componentName="sheet"open close />
@@ -94,7 +94,7 @@ class Sheet extends Component {
                 </p>
                 <Example />
                 <RequireAction />
-                <UsageWithJavascript />
+                <JavascriptMethods />
             </DocContainer>
         );
     }
@@ -103,4 +103,4 @@ class Sheet extends Component {
 export default Sheet;
 
 /* For testing */
-export { Example, RequireAction, UsageWithJavascript };
+export { Example, RequireAction, JavascriptMethods };

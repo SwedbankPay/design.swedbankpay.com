@@ -460,6 +460,7 @@ exports[`Documentation: Sheet renders 1`] = `
     Sheet is a container component that is anchored on the right side of the screen and can contain a number of different things.
   </p>
   <Example />
+  <RequireAction />
   <JavascriptMethods />
 </DocContainer>
 `;
