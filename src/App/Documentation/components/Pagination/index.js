@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import PrismCode from "react-prism";
 
 import { ComponentPreview, DocContainer, Property } from "#";
@@ -51,20 +51,16 @@ const SimplePagination = () => (
     </>
 );
 
-class Pagination extends Component {
-    render () {
-        return (
-            <DocContainer docToc>
-                <p className="lead">
-                    Use the pagination component to indicate that a series of related content exist across multiple pages.
-                </p>
-                <DefaultPagination />
-                <PaginationBullets />
-                <SimplePagination />
-            </DocContainer>
-        );
-    }
-}
+const Pagination = () => (
+    <DocContainer docToc>
+        <p className="lead">
+            Use the pagination component to indicate that a series of related content exist across multiple pages.
+        </p>
+        <DefaultPagination />
+        <PaginationBullets />
+        <SimplePagination />
+    </DocContainer>
+);
 
 export default Pagination;
 

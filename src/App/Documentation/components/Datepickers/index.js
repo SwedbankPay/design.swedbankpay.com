@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import { NavHashLink as NavLink } from "react-router-hash-link";
 
-import { ComponentPreview, Attribute, Property, DocContainer } from "#";
+import { ComponentPreview, Attribute, Property, DocContainer, JavascriptDocs } from "#";
 import { Datepicker as DatepickerComponent } from "@/FormComponents";
-import { datepicker } from "$/px-script/main";
 import Alert from "@/Alert";
+
+const { datepicker } = window.px;
 
 const AboutDatepickers = () => (
     <>
@@ -29,7 +30,7 @@ const SimpleDatepicker = () => (
                 label="Date"
                 prefixType="icon"
                 prefixValue="event"
-                id="simle-datepicker"
+                id="simple-datepicker"
             />
         </ComponentPreview>
     </>
@@ -47,7 +48,7 @@ const AllowInput = () => (
                 label="Date"
                 prefixType="icon"
                 prefixValue="event"
-                id="simle-datepicker"
+                id="simple-datepicker"
                 allowinput
             />
         </ComponentPreview>
@@ -385,6 +386,13 @@ const Options = () => (
     </>
 );
 
+const JavascriptMethods = () => (
+    <>
+        <h2 id="javascript-methods">JavaScript methods</h2>
+        <JavascriptDocs componentName="datepicker" open close />
+    </>
+);
+
 class Datepickers extends Component {
     componentDidMount () {
         datepicker.init();
@@ -409,6 +417,7 @@ class Datepickers extends Component {
                 <DateRange />
                 <MultipleDates />
                 <Options />
+                <JavascriptMethods />
             </DocContainer>
         );
     }
@@ -417,4 +426,4 @@ class Datepickers extends Component {
 export default Datepickers;
 
 /* For testing */
-export { AboutDatepickers, SimpleDatepicker, AllowInput, HumanReadable, InitialValue, CustomFormat, IncludeTime, ShowingMultipleMonths, ValidDates, DateRange, MultipleDates, Options };
+export { AboutDatepickers, SimpleDatepicker, AllowInput, HumanReadable, InitialValue, CustomFormat, IncludeTime, ShowingMultipleMonths, ValidDates, DateRange, MultipleDates, Options, JavascriptMethods };

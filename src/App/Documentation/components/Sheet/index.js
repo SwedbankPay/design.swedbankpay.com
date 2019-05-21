@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocContainer, Icon } from "#";
-import { sheet } from "$/px-script/main";
+import { ComponentPreview, DocContainer, Icon, JavascriptDocs } from "#";
+
+const { sheet } = window.px;
 
 const Example = () => (
     <>
@@ -59,22 +60,10 @@ const Example = () => (
     </>
 );
 
-const UsageWithJavascript = () => (
+const JavascriptMethods = () => (
     <>
-        <h2 id="usage-with-javascript">Usage with javascript</h2>
-        <ComponentPreview language="html" codeFigure>
-            <div className="sheet" id="demo-sheet">{"\n"}
-                ...{"\n"}
-            </div>{"\n"}
-        </ComponentPreview>
-        <p>To open a sheet:</p>
-        <ComponentPreview language="javascript" codeFigure>
-            {"px.sheet.open(\"demo-sheet\")"}
-        </ComponentPreview>
-        <p>To close a sheet:</p>
-        <ComponentPreview language="javascript" codeFigure>
-            {"px.sheet.close(\"demo-sheet\")"}
-        </ComponentPreview>
+        <h2 id="javascript-methods">JavaScript methods</h2>
+        <JavascriptDocs componentName="sheet"open close />
     </>
 );
 
@@ -90,7 +79,7 @@ class Sheet extends Component {
                     Sheet is a container component that is anchored on the right side of the screen and can contain a number of different things.
                 </p>
                 <Example />
-                <UsageWithJavascript />
+                <JavascriptMethods />
             </DocContainer>
         );
     }
@@ -99,4 +88,4 @@ class Sheet extends Component {
 export default Sheet;
 
 /* For testing */
-export { Example, UsageWithJavascript };
+export { Example, JavascriptMethods };

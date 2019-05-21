@@ -1,10 +1,17 @@
+const SELECTORS = {
+    TABS: ".tabs",
+    ACTIVE: ".active"
+};
+
+const _tabs = _tabs || [];
+
 class Tabs {
     constructor (el) {
         this._el = el;
         this.id = el.id;
         this.classList = el.classList;
         this.isOpen = el.classList.contains("tabs-open");
-        this.hasActive = !!this._el.querySelector(".active");
+        this.hasActive = !!this._el.querySelector(SELECTORS.ACTIVE);
         this.openUl = this._el.querySelector("UL");
 
         this._el.addEventListener("click", e => {
@@ -21,10 +28,10 @@ class Tabs {
             this._el.querySelector("li").classList.add("active");
         }
 
-        this.addListener();
+        this._addListener();
     }
 
-    addListener () {
+    _addListener () {
         [...this._el.querySelectorAll("li")].forEach(listElem => {
             listElem.addEventListener("click", e => {
                 if (listElem.classList.contains("active")) {
@@ -47,24 +54,82 @@ class Tabs {
     }
 }
 
-const tabs = (() => {
-    const init = () => {
-        let tabs = document.querySelectorAll(".tabs");
+const _createTab = tabQuery => {
+    const tabObject = new Tabs(tabQuery);
 
-        if (tabs.length > 0) {
-            tabs = [...tabs].map(tab => new Tabs(tab));
+    _tabs.push(tabObject);
 
-            document.addEventListener("click", e => {
-                tabs.forEach(tab => {
-                    if (!e.target.closest(".tabs") && tab.isOpen) {
-                        tab.close();
-                    }
-                });
-            });
+    return tabObject;
+};
+
+const init = id => {
+    document.addEventListener("click", e => {
+        _tabs.forEach(tab => {
+            if (!e.target.closest(SELECTORS.TABS) && tab.isOpen) {
+                tab.close();
+            }
+        });
+    });
+
+    if (id) {
+        const tab = document.getElementById(id);
+
+        if (!tab) {
+            console.warn(`No tab with id ${id} found`);
+
+            return null;
         }
-    };
 
-    return { init };
-})();
+        return _createTab(tab);
+    } else {
+        const tabs = document.querySelectorAll(SELECTORS.TABS);
 
-export default tabs;
+        if (!tabs.length) {
+            console.warn("No tabs found");
+
+            return null;
+        }
+
+        return [...tabs].map(tab => _createTab(tab));
+    }
+};
+
+const open = id => {
+    let tabs = null;
+
+    _tabs.forEach(t => t.id === id ? tabs = t : null);
+
+    try {
+        tabs.open();
+    } catch (e) {
+        console.error(`tabs.open: No tabs with id "${id}" found.`);
+
+        return false;
+    }
+
+    return tabs;
+
+};
+
+const close = id => {
+    let tabs = null;
+
+    _tabs.forEach(t => t.id === id ? tabs = t : null);
+
+    try {
+        tabs.close();
+    } catch (e) {
+        console.error(`tabs.close: No tabs with id "${id}" found.`);
+
+        return false;
+    }
+
+    return tabs;
+
+};
+
+export default {
+    init,
+    open,
+    close
+};

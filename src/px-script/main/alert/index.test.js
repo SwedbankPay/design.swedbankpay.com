@@ -9,16 +9,66 @@ describe("px-script: alert", () => {
 
     document.body.appendChild(div);
 
+    afterEach(() => ReactDOM.unmountComponentAtNode(div));
+
     it("is defined", () => {
         expect(alert).toBeDefined();
     });
 
-    it("has an init method", () => {
-        expect(alert.init).toBeDefined();
-        expect(alert.init).toBeInstanceOf(Function);
+    describe("alert.init", () => {
+        it("is defined", () => {
+            expect(alert.init).toBeDefined();
+            expect(alert.init).toBeInstanceOf(Function);
+        });
+
+        it("returns a single object when one element is initialized", () => {
+            ReactDOM.render(<Alert type="success" id="demo-alert" />, div);
+
+            const renderedAlert = document.querySelector(".alert");
+
+            expect(renderedAlert).toBeTruthy();
+
+            const returnVal = alert.init("demo-alert");
+
+            expect(Array.isArray(returnVal)).toBeFalsy();
+            expect(typeof returnVal).toEqual("object");
+        });
+
+        it("returns an array of objects when more than one element is initialized", () => {
+            ReactDOM.render(
+                <>
+                    <Alert type="success" />
+                    <Alert type="success" />
+                </>
+                , div);
+
+            const renderedAlert = document.querySelectorAll(".alert");
+
+            expect(renderedAlert).toBeTruthy();
+            expect(renderedAlert.length).toEqual(2);
+
+            const returnVal = alert.init();
+
+            expect(Array.isArray(returnVal)).toBeTruthy();
+            expect(returnVal.length).toEqual(2);
+        });
+
+        it("returns null if no alert is found and prints a warning message", () => {
+            console.warn = jest.fn();
+
+            expect(alert.init()).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
+        });
+
+        it("returns null if an invalid ID is passed and prints a warning message", () => {
+            console.warn = jest.fn();
+
+            expect(alert.init("test")).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
+        });
     });
 
-    it("method init adds eventlisteners on all close buttons", () => {
+    it("adds eventlisteners on all close buttons", () => {
         const Alerts = () => (
             <>
                 <Alert id="asd" type="success" close display />
@@ -42,11 +92,9 @@ describe("px-script: alert", () => {
             button.click();
             expect(button.parentElement.classList).toContain("d-none");
         });
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
-    it("method init adds eventlisteners on all button with data attributes", () => {
+    it("adds eventlisteners on all button with data attributes", () => {
         const AlertTest = () => (
             <>
                 <Alert id="test" type="success" display />
@@ -68,23 +116,42 @@ describe("px-script: alert", () => {
 
         renderedButton.click();
         expect(targetAlert.classList).toContain("d-none");
-
-        ReactDOM.unmountComponentAtNode(div);
     });
 
-    it("method init warns about possible wrong id", () => {
-        const AlertTest = () => (
-            <>
-                <button data-alert-close="test"></button>
-            </>
-        );
+    describe("alert.close", () => {
+        it("has a close method", () => {
+            expect(alert.close).toBeDefined();
+            expect(alert.close).toBeInstanceOf(Function);
+        });
 
-        ReactDOM.render(<AlertTest />, div);
-        console.warn = jest.fn();
+        it("prints a warning message if method is called with no ID", () => {
+            console.warn = jest.fn();
 
-        alert.init();
-        expect(console.warn).toHaveBeenCalled();
+            alert.close();
 
-        ReactDOM.unmountComponentAtNode(div);
+            expect(console.warn).toHaveBeenCalled();
+        });
+
+        it("adds class .d-none when called with a valid ID", () => {
+            ReactDOM.render(<Alert id="demo-alert" type="success" />, div);
+
+            const renderedAlert = document.querySelector(".alert");
+
+            expect(renderedAlert.classList).not.toContain("d-none");
+
+            alert.close("demo-alert");
+
+            expect(renderedAlert.classList).toContain("d-none");
+        });
+
+        it("prints a warning message to console if alert with passed id doesn't exist", () => {
+            console.warn = jest.fn();
+
+            ReactDOM.render(<Alert id="demo-alert" type="success" />, div);
+
+            alert.close("wrong-id");
+
+            expect(console.warn).toHaveBeenCalled();
+        });
     });
 });

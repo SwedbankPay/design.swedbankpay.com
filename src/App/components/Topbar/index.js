@@ -41,8 +41,8 @@ const TopbarMenu = ({ menu }) => {
     );
 };
 
-const Topbar = ({ topbarContent, fixed, logout }) => (
-    <header className={`topbar${fixed ? " topbar-fixed" : ""}`}>{"\n"}
+const Topbar = ({ topbarContent, fixed, logout, id }) => (
+    <header className={`topbar${fixed ? " topbar-fixed" : ""}`} id={id} >{"\n"}
         <>
             {topbarContent ?
             <>

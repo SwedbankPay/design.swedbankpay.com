@@ -2,12 +2,13 @@ import React from "react";
 import { shallow } from "enzyme";
 
 import Toast, { Overview, PremadeToasts, Options, CustomHtml } from "./index";
-import { toast } from "../../../../px-script/main";
 
-jest.mock("../../../../px-script/main");
+px.toast = jest.fn();
 
 describe("Components: Toast", () => {
-    beforeEach(() => toast.mockClear());
+    beforeEach(() => {
+        px.toast.mockClear();
+    });
 
     it("is defined", () => {
         expect(Toast).toBeDefined();
@@ -37,7 +38,7 @@ describe("Components: Toast", () => {
             btn.simulate("click");
 
             expect(wrapper).toMatchSnapshot();
-            expect(toast).toHaveBeenCalled();
+            expect(px.toast).toHaveBeenCalled();
         });
     });
 
@@ -71,7 +72,7 @@ describe("Components: Toast", () => {
             btns.forEach(btn => btn.simulate("click"));
 
             expect(wrapper).toMatchSnapshot();
-            expect(toast).toHaveBeenCalledTimes(btns.length);
+            expect(px.toast).toHaveBeenCalledTimes(btns.length);
         });
     });
 
@@ -93,7 +94,7 @@ describe("Components: Toast", () => {
             btn.simulate("click");
 
             expect(wrapper).toMatchSnapshot();
-            expect(toast).toHaveBeenCalled();
+            expect(px.toast).toHaveBeenCalled();
         });
     });
 });

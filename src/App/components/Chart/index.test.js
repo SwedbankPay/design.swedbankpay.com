@@ -2,11 +2,12 @@ import React from "react";
 import { shallow } from "enzyme";
 
 import Chart from "./index";
-import { chart } from "../../../px-script/dashboard";
 
-jest.mock("../../../px-script/dashboard");
+px.chart = jest.fn();
 
 describe("Component: Chart - ", () => {
+    beforeEach(() => px.chart.mockClear());
+
     it("is defined", () => {
         expect(Chart).toBeDefined();
     });
@@ -40,6 +41,6 @@ describe("Component: Chart - ", () => {
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<canvas id="test" />)).toEqual(true);
-        expect(chart).toHaveBeenCalledWith("test", { test: "test" });
+        expect(px.chart).toHaveBeenCalledWith("test", { test: "test" });
     });
 });

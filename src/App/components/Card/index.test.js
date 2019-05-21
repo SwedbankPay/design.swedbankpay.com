@@ -69,6 +69,13 @@ describe("Component: Card - ", () => {
         expect(wrapper).toMatchSnapshot();
     });
 
+    it("renders a several paragraphs in card-body", () => {
+        const textArr = ["test1", "test2", "test3"];
+        const wrapper = shallow(<Card textSection={textArr} />);
+
+        expect(wrapper.find("p").length).toEqual(textArr.length);
+    });
+
     it("renders a smallText in card-body", () => {
         const wrapper = shallow(<Card smallText="small text" />);
 

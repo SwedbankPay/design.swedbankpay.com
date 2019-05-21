@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Alerts, { BasicUsage, AlertWithIcon, ClosingTheAlert, ExtendedUsage } from "./index";
+import Alerts, { BasicUsage, AlertWithIcon, ClosingTheAlert, ExtendedUsage, JavascriptMethods } from "./index";
 
 describe("Documentation: Alerts", () => {
     it("is defined", () => {
@@ -9,9 +9,12 @@ describe("Documentation: Alerts", () => {
     });
 
     it("renders", () => {
+        console.warn = jest.fn();
+
         const wrapper = shallow(<Alerts />);
 
         expect(wrapper).toMatchSnapshot();
+        expect(console.warn).toHaveBeenCalled();
     });
 
     describe("Basic Usage", () => {
@@ -57,6 +60,18 @@ describe("Documentation: Alerts", () => {
 
         it("renders", () => {
             const wrapper = shallow(<ExtendedUsage />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("JavascriptMethods", () => {
+        it("is defined", () => {
+            expect(JavascriptMethods).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<JavascriptMethods />);
 
             expect(wrapper).toMatchSnapshot();
         });

@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Datepickers, { AboutDatepickers, SimpleDatepicker, AllowInput, HumanReadable, InitialValue, CustomFormat, IncludeTime, ShowingMultipleMonths, ValidDates, DateRange, MultipleDates, Options } from "./index";
+import Datepickers, { AboutDatepickers, SimpleDatepicker, AllowInput, HumanReadable, InitialValue, CustomFormat, IncludeTime, ShowingMultipleMonths, ValidDates, DateRange, MultipleDates, Options, JavascriptMethods } from "./index";
 
 describe("Documentation: Datepickers", () => {
     it("is defined", () => {
@@ -9,9 +9,12 @@ describe("Documentation: Datepickers", () => {
     });
 
     it("renders", () => {
+        console.warn = jest.fn();
+
         const wrapper = shallow(<Datepickers />);
 
         expect(wrapper).toMatchSnapshot();
+        expect(console.warn).toHaveBeenCalled();
     });
 
     describe("AboutDatepickers", () => {
@@ -163,6 +166,18 @@ describe("Documentation: Datepickers", () => {
 
         it("renders", () => {
             const wrapper = shallow(<Options />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("JavascriptMethods", () => {
+        it("is defined", () => {
+            expect(JavascriptMethods).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<JavascriptMethods />);
 
             expect(wrapper).toMatchSnapshot();
         });

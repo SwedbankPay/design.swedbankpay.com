@@ -15,7 +15,7 @@ const PxScript = ({ component, subComponents, func, params }) => {
 
     if (params) {
         renderedParams = params.map((param, i) => (
-            <span key={i}>{param}
+            <span key={i} className={param.includes("\"") ? "token string" : null}>{param}
                 {(i < params.length - 1) ? <span className="token punctuation">, </span> : null}
             </span>
         ));

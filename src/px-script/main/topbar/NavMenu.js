@@ -1,17 +1,26 @@
 import { isWithinBoundingBox } from "../utils";
 
+const SELECTORS = {
+    BTN: ".topbar-btn",
+    ICON: ".topbar-btn-icon"
+};
+
 export default class NavMenu {
     constructor (topbarComponent, navMenu) {
+        this.id = topbarComponent.id;
         this.navMenuElement = navMenu;
         this.isOpen = false;
-        this.btnElement = topbarComponent.querySelector(".topbar-btn");
-        this.iconElement = this.btnElement.querySelector(".topbar-btn-icon");
+        this.btnElement = topbarComponent.querySelector(SELECTORS.BTN);
+        this.iconElement = this.btnElement ? this.btnElement.querySelector(SELECTORS.ICON) : null;
         this.userIcon = this.iconElement ? this.iconElement.innerHTML : null;
 
-        this.btnElement.addEventListener("click", e => {
-            e.preventDefault();
-            this.handleClick();
-        });
+        if (this.btnElement) {
+            this.btnElement.addEventListener("click", e => {
+                e.preventDefault();
+                this._handleClick();
+            });
+        }
+
         this._initAnchors();
     }
 
@@ -39,11 +48,11 @@ export default class NavMenu {
         }
     }
 
-    handleClick () {
+    _handleClick () {
         this.isOpen ? this.close() : this.open();
     }
 
-    containsPoint (x, y) {
+    _containsPoint (x, y) {
         return isWithinBoundingBox(x, y, this.navMenuElement) || isWithinBoundingBox(x, y, this.btnElement);
     }
 }

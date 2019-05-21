@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import PrismCode from "react-prism";
 
 import { ComponentPreview, DocContainer, Property } from "#";
@@ -147,22 +147,18 @@ const PanelTable = () => (
     </>
 );
 
-class Panel extends Component {
-    render () {
-        return (
-            <DocContainer docToc>
-                <p className="lead">
-                    Panels are large containers meant to be able to contain all of our other components.
-                </p>
-                <Overview />
-                <PanelHeaders />
-                <PanelDark />
-                <PanelMuted />
-                <PanelTable />
-            </DocContainer>
-        );
-    }
-}
+const Panel = () => (
+    <DocContainer docToc>
+        <p className="lead">
+            Panels are large containers meant to be able to contain all of our other components.
+        </p>
+        <Overview />
+        <PanelHeaders />
+        <PanelDark />
+        <PanelMuted />
+        <PanelTable />
+    </DocContainer>
+);
 
 export default Panel;
 

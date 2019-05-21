@@ -1,4 +1,4 @@
-import { extendObj, handleScrollbar, isWithinBoundingBox } from "./index";
+import { extendObj, isWithinBoundingBox, handleScrollbar } from "./index";
 
 describe("px-script: utils", () => {
     describe("- extendObj", () => {
@@ -48,6 +48,8 @@ describe("px-script: utils", () => {
         });
     });
 
+    test.todo("Write tests for isWithinBoundingBox");
+
     describe("- handleScrollbar", () => {
         it("adds class has-vscroll to body if innerwidth is larger than clientwidth", () => {
             handleScrollbar();
@@ -63,6 +65,4 @@ describe("px-script: utils", () => {
             expect(document.body.classList).not.toContain("has-vscroll");
         });
     });
-
-    test.todo("Write tests for isWithinBoundingBox");
 });

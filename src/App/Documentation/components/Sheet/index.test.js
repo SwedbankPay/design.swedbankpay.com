@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Sheet, { Example, UsageWithJavascript } from "./index";
+import Sheet, { Example, JavascriptMethods } from "./index";
 
 describe("Documentation: Sheet", () => {
     it("is defined", () => {
@@ -9,9 +9,12 @@ describe("Documentation: Sheet", () => {
     });
 
     it("renders", () => {
+        console.warn = jest.fn();
+
         const wrapper = shallow(<Sheet />);
 
         expect(wrapper).toMatchSnapshot();
+        expect(console.warn).toHaveBeenCalled();
     });
 
     describe("Example", () => {
@@ -45,13 +48,13 @@ describe("Documentation: Sheet", () => {
         });
     });
 
-    describe("UsageWithJavascript", () => {
+    describe("JavascriptMethods", () => {
         it("is defined", () => {
-            expect(UsageWithJavascript).toBeDefined();
+            expect(JavascriptMethods).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<UsageWithJavascript />);
+            const wrapper = shallow(<JavascriptMethods />);
 
             expect(wrapper).toMatchSnapshot();
         });

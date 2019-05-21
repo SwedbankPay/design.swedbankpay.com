@@ -5,41 +5,73 @@ const SELECTORS = {
 
 const _hideAlert = alertElement => {
     alertElement.classList.add("d-none");
+
+    return true;
 };
 
-const alert = (() => {
-    const init = () => {
-        const closeButtons = document.querySelectorAll(SELECTORS.CLOSE);
+const _addEventListener = (btn, alert) => {
+    btn.addEventListener("click", e => {
+        e.preventDefault();
+        _hideAlert(alert);
+    });
+};
 
-        if (closeButtons) {
-            closeButtons.forEach(btn => {
-                const dataVal = btn.dataset.alertClose;
+const close = id => {
+    const alertSelector = document.getElementById(id);
 
-                if (dataVal) {
-                    const alert = document.getElementById(dataVal);
+    return alertSelector ? _hideAlert(alertSelector) : console.warn(`No alert with with id ${id} was found, make sure the attribute data-alert-close contains the correct id.`);
+};
 
-                    if (alert) {
-                        btn.addEventListener("click", e => {
-                            e.preventDefault();
-                            _hideAlert(alert);
-                        });
-                    } else {
-                        console.warn(`No alert with with id ${dataVal} was found, make sure the attribute data-alert-close contains the correct id.`);
-                    }
+const _createAlert = alert => {
+    const externalClose = alert.id ? document.querySelectorAll(`[data-alert-close=${alert.id}]`) : null;
+    const internalClose = alert.querySelectorAll(SELECTORS.CLOSE);
+    const closeBtns = [];
 
-                } else {
-                    const alert = btn.closest(".alert");
+    if (externalClose && externalClose.length) {
+        [...externalClose].forEach(btn => {
+            _addEventListener(btn, alert);
 
-                    btn.addEventListener("click", e => {
-                        e.preventDefault();
-                        _hideAlert(alert);
-                    });
-                }
-            });
-        }
+            closeBtns.push(btn);
+        });
+    }
+
+    [...internalClose].forEach(btn => {
+        _addEventListener(btn, alert);
+
+        closeBtns.push(btn);
+    });
+
+    return {
+        container: alert,
+        closeBtns: closeBtns.length ? (closeBtns.length === 1 ? closeBtns[0] : closeBtns) : null
     };
+};
 
-    return { init };
-})();
+const init = id => {
+    if (id) {
+        const alert = document.getElementById(id);
 
-export default alert;
+        if (!alert) {
+            console.warn(`No alert with id ${id} found`);
+
+            return null;
+        }
+
+        return _createAlert(alert);
+    } else {
+        const alerts = document.querySelectorAll(SELECTORS.ALERT);
+
+        if (!alerts.length) {
+            console.warn("No alerts found");
+
+            return null;
+        }
+
+        return [...alerts].map(alert => _createAlert(alert));
+    }
+};
+
+export default {
+    init,
+    close
+};

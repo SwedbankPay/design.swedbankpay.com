@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 
 import { ComponentPreview, DocContainer, Icon, Property } from "#";
-import actionList from "$/px-script/main/action-list";
+
+const { actionList } = window.px;
 
 const BasicList = () => (
     <>

@@ -29,6 +29,21 @@ exports[`Components: Topbar FixedTopbar renders 1`] = `
 </Fragment>
 `;
 
+exports[`Components: Topbar JavascriptMethods renders 1`] = `
+<Fragment>
+  <h2
+    id="javascript-methods"
+  >
+    JavaScript Methods
+  </h2>
+  <JavascriptDocs
+    close={true}
+    componentName="topbar"
+    open={true}
+  />
+</Fragment>
+`;
+
 exports[`Components: Topbar Overview renders 1`] = `
 <Fragment>
   <h2
@@ -90,6 +105,7 @@ exports[`Components: Topbar Overview renders 1`] = `
     showCasePanel={true}
   >
     <Topbar
+      id="demo-topbar"
       logout={true}
       topbarContent={
         Object {
@@ -120,5 +136,6 @@ exports[`Components: Topbar renders 1`] = `
   </p>
   <Overview />
   <FixedTopbar />
+  <JavascriptMethods />
 </DocContainer>
 `;

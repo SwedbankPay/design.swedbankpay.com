@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 
 import { ComponentPreview, DocContainer } from "#";
-import { validation } from "$/px-script/main/";
+
+const { validation } = window.px;
 
 const DefaultSlab = () => (
     <>

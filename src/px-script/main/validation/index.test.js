@@ -34,8 +34,8 @@ describe("px-script: validation", () => {
         </form>
     );
 
-    const FormValidation = ({ submitBtn }) => (
-        <form noValidate data-validate="">
+    const FormValidation = ({ submitBtn, id }) => (
+        <form id={id} noValidate data-validate="">
             <div className="form-group">
                 <label htmlFor="validation-email">Email</label>
                 <div className="input-group">
@@ -50,17 +50,39 @@ describe("px-script: validation", () => {
         expect(validation).toBeDefined();
     });
 
+    describe("validation.init", () => {
+        it("is defined", () => {
+            expect(validation.init).toBeDefined();
+            expect(validation.init).toBeInstanceOf(Function);
+        });
+
+        it("returns a single object when one ID is passed", () => {
+            ReactDOM.render(<FormValidation id="demo-validation" />, div);
+
+            const returnVal = validation.init("demo-validation");
+
+            expect(Array.isArray(returnVal)).toBeFalsy();
+            expect(typeof returnVal).toEqual("object");
+            expect(returnVal.container.tagName).toEqual("FORM");
+        });
+
+        it("returns an array of objects when more than one dialog is initialized", () => {
+            ReactDOM.render(
+                <>
+                    <FormValidation id="demo-validation-1" />
+                    <FormValidation id="demo-validation-2" />
+                </>
+                , div);
+
+            const returnVal = validation.init();
+
+            expect(Array.isArray(returnVal)).toBeTruthy();
+            expect(returnVal.length).toEqual(2);
+        });
+    });
+
     it("validateField is exposed globally", () => {
         expect(validation.validateField).toBeDefined();
-    });
-
-    it("validateForm is exposed globally", () => {
-        expect(validation.validateForm).toBeDefined();
-    });
-
-    it("has an init method", () => {
-        expect(validation.init).toBeDefined();
-        expect(validation.init).toBeInstanceOf(Function);
     });
 
     it("does nothing if no value is given", () => {

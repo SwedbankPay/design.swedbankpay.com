@@ -1,15 +1,26 @@
+const SELECTORS = {
+    NAV: ".nav",
+    SUB: ".submenu",
+    SUBMENU: {
+        OPEN: ".submenu-open"
+    }
+};
+
+const _navs = _navs || [];
+
 class Nav {
     constructor (el) {
+        this.id = el.id;
         this._el = el;
         this.navOpen = el.classList.contains("nav-open");
-        this.submenus = this._el.querySelectorAll(".submenu");
+        this.submenus = this._el.querySelectorAll(SELECTORS.SUB);
         this.listItems = [...this._el.querySelectorAll("li")];
         this.resizeEventMenuOpen;
         this.resizeEventSubmenuOpen;
-        this.submenuOpen = this._el.querySelector(".submenu-open");
+        this.submenuOpen = this._el.querySelector(SELECTORS.SUBMENU.OPEN);
 
         if (this.listItems.length > 5 || this.submenus.length) {
-            this.hideItems();
+            this._hideItems();
 
             const menu = document.createElement("a");
 
@@ -24,10 +35,10 @@ class Nav {
 
                 if (this.navOpen) {
                     this.close();
-                    this.hideItems();
+                    this._hideItems();
                 } else {
                     this.open();
-                    this.showItems();
+                    this._showItems();
                 }
             });
         }
@@ -41,10 +52,10 @@ class Nav {
 
                 submenuCopy.addEventListener("click", () => {
                     if (submenu.classList.contains("submenu-open")) {
-                        this.submenuCloseAll();
+                        this._submenuCloseAll();
                     } else {
-                        this.submenuCloseAll();
-                        this.resizeEventSubmenuOpen = this.onResize.bind(this);
+                        this._submenuCloseAll();
+                        this.resizeEventSubmenuOpen = this._onResize.bind(this);
                         window.addEventListener("resize", this.resizeEventSubmenuOpen, { passive: true });
                         submenu.classList.add("submenu-open");
                         this.submenuOpen = true;
@@ -54,18 +65,21 @@ class Nav {
         }
     }
 
-    submenuCloseAll () {
+    /* Closes all open submenus */
+    _submenuCloseAll () {
         window.removeEventListener("resize", this.resizeEventSubmenuOpen, { passive: true });
         this.submenus.forEach(submenu => submenu.classList.remove("submenu-open"));
         this.submenuOpen = false;
     }
 
-    showItems () {
+    /* Removes hidden class from list items */
+    _showItems () {
         this.listItems.forEach(listItem => listItem.classList.remove("responsive-hidden"));
     }
 
-    hideItems () {
-        const firstFour = this.listItems.filter(notHidden => !notHidden.classList.contains("responsive-hidden") && notHidden.querySelector(".submenu") === null && this._el.querySelector("UL") === notHidden.parentElement);
+    /* Hides menu items with the class .responsive-hidden */
+    _hideItems () {
+        const firstFour = this.listItems.filter(notHidden => !notHidden.classList.contains("responsive-hidden") && notHidden.querySelector(SELECTORS.SUB) === null && this._el.querySelector("UL") === notHidden.parentElement);
 
         if (this.submenus.length > 0) {
             this.submenus.forEach(levelTwo => {
@@ -84,16 +98,17 @@ class Nav {
         }
     }
 
-    onResize () {
+    /* Operations to run when the window is resized */
+    _onResize () {
         this.close();
-        this.hideItems();
-        this.submenuCloseAll();
+        this._hideItems();
+        this._submenuCloseAll();
     }
 
     open () {
         this.navOpen = true;
         this._el.classList.add("nav-open");
-        this.resizeEventMenuOpen = this.onResize.bind(this);
+        this.resizeEventMenuOpen = this._onResize.bind(this);
         window.addEventListener("resize", this.resizeEventMenuOpen, { passive: true });
     }
 
@@ -104,29 +119,85 @@ class Nav {
     }
 }
 
-const nav = (() => {
-    const init = () => {
-        let navs = document.querySelectorAll(".nav");
+/* Generate nav instances */
+const _createNav = navQuery => {
+    const navObject = new Nav(navQuery);
 
-        if (navs.length > 0) {
-            navs = [...navs].map(nav => new Nav(nav));
+    _navs.push(navObject);
 
-            document.addEventListener("click", e => {
-                navs.forEach(nav => {
-                    if (!e.target.closest(".nav") && nav.navOpen) {
-                        nav.close();
-                        nav.hideItems();
-                    }
-
-                    if (!e.target.closest(".submenu") && nav.submenuOpen) {
-                        nav.submenuCloseAll();
-                    }
-                });
-            });
+    /* Add listener on document to close other navs */
+    document.addEventListener("click", e => {
+        if (!e.target.closest(".nav") && navObject.navOpen) {
+            navObject.close();
+            navObject._hideItems();
         }
-    };
 
-    return { init };
-})();
+        if (!e.target.closest(".submenu") && navObject.submenuOpen) {
+            navObject._submenuCloseAll();
+        }
+    });
 
-export default nav;
+    return navObject;
+};
+
+const init = id => {
+    if (id) {
+        const nav = document.getElementById(id);
+
+        if (!nav) {
+            console.warn(`No nav with id ${id} found`);
+
+            return null;
+        }
+
+        return _createNav(nav);
+    } else {
+        const navs = document.querySelectorAll(SELECTORS.NAV);
+
+        if (!navs.length) {
+            console.warn("No navs found");
+
+            return null;
+        }
+
+        return [...navs].map(nav => _createNav(nav));
+    }
+};
+
+const open = id => {
+    let nav = null;
+
+    _navs.forEach(n => n.id === id ? nav = n : null);
+
+    try {
+        nav.open();
+    } catch (e) {
+        console.error(`nav.open: No nav with id "${id}" found.`);
+
+        return false;
+    }
+
+    return nav;
+};
+
+const close = id => {
+    let nav = null;
+
+    _navs.forEach(n => n.id === id ? nav = n : null);
+
+    try {
+        nav.close();
+    } catch (e) {
+        console.error(`nav.close: No nav with id "${id}" found.`);
+
+        return false;
+    }
+
+    return nav;
+};
+
+export default {
+    init,
+    open,
+    close
+};

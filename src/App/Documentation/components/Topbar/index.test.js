@@ -1,7 +1,9 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Topbar, { Overview, FixedTopbar } from "./index";
+import Topbar, { Overview, FixedTopbar, JavascriptMethods } from "./index";
+
+const { topbar } = window.px;
 
 describe("Components: Topbar", () => {
     it("is defined", () => {
@@ -9,6 +11,12 @@ describe("Components: Topbar", () => {
     });
 
     it("renders", () => {
+        /*
+            The Topbar component calls px.topbar.init("demo-topbar") on componentDidMount. Mocking the topbarscript
+            to avoid a warning message. [AW]
+        */
+        topbar.init = jest.fn();
+
         const wrapper = shallow(<Topbar />);
 
         expect(wrapper).toMatchSnapshot();
@@ -33,6 +41,18 @@ describe("Components: Topbar", () => {
 
         it("renders", () => {
             const wrapper = shallow(<FixedTopbar />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("JavascriptMethods", () => {
+        it("is defined", () => {
+            expect(JavascriptMethods).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<JavascriptMethods />);
 
             expect(wrapper).toMatchSnapshot();
         });

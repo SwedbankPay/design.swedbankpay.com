@@ -500,6 +500,21 @@ exports[`Components: ActionList Anchorpoints renders 1`] = `
 </Fragment>
 `;
 
+exports[`Components: ActionList JavascriptMethods renders 1`] = `
+<Fragment>
+  <h2
+    id="javascript-methods"
+  >
+    JavaScript methods
+  </h2>
+  <JavascriptDocs
+    close={true}
+    componentName="actionList"
+    open={true}
+  />
+</Fragment>
+`;
+
 exports[`Components: ActionList Overview onClick prevents default 1`] = `
 <Fragment>
   <h2
@@ -671,5 +686,6 @@ exports[`Components: ActionList renders 1`] = `
   </p>
   <Overview />
   <Anchorpoints />
+  <JavascriptMethods />
 </DocContainer>
 `;

@@ -1,20 +1,38 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocContainer, Icon, Attribute } from "#";
-import { dialog } from "$/px-script/main";
+import { ComponentPreview, DocContainer, Icon, Attribute, Property, JavascriptDocs } from "#";
+import AlertComponent from "@/Alert";
+
+const { dialog } = window.px;
+
+const HowItWorks = () => (
+    <>
+        <h2 id="how-it-works">How it works</h2>
+        <p>
+            A dialog remains hidden until it is triggered. Once it is open it overlays the website with a dark background and presents some options, usually confirming or cancelling an action.
+            If you use a dialog it is assumed that you want to &quot;force&quot; the user to make a choice. Therefore the only way to close a dialog is to choose one of the presented actions or, if given,
+            press the <i className="material-icons d-inline-flex">close</i> to close the dialog.
+        </p>
+        <p>
+            Dialog boxes consist of a header, a body and a footer. In these you can put whatever you want, but some basic functionality should be included in all dialogs.
+            The header should contain a short descriptive text for what the dialog-box does. You can include an icon with class <Property value=".dialog-close" /> if you wish to give your user a way to close the dialog box without choosing an option.
+            The dialog body should contain the main content, usually just text confirming an action.
+            In the footer you will find buttons to confirm or cancel the requested action.
+        </p>
+        <AlertComponent type="warning">
+            <h4>Initializing dialog buttons</h4>
+            To make a button open the dialog box you need to
+            include <Attribute data name="dialog-open" value="{#your-dialog-id}" /> as an attribute to that button.
+        </AlertComponent>
+    </>
+);
 
 const Example = () => (
     <>
-        <h2 id="example">Example</h2>
-        <p>
-            Dialog boxes consist of a header, a body and a footer. In these you can put whatever you want, but some basic functionality should be included in all dialogs.
-            The header should contain a short descriptive text for what the dialog-box does. Remember to include a way to close the dialog box in the header
-            in the form of a clickable icon or something similar. The dialog body should contain the main content, usually just text confirming an action.
-            In the footer you will find buttons to confirm or cancel the requested action. To make a button open the dialog box you need to
-            include <Attribute data name="datepicker-time" value="{#your-dialog-id}" /> as an attribute to that button.
-        </p>
+        <h2 id="overview">Example</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
+            <button className="btn btn-primary" type="button" data-dialog-open="demo-dialog">Open dialog</button>
             <div className="dialog" id="demo-dialog">
                 <section>
                     <header>
@@ -32,27 +50,14 @@ const Example = () => (
                     </footer>
                 </section>
             </div>{"\n"}
-            <button className="btn btn-primary" type="button" data-dialog-open="demo-dialog">Open dialog</button>
         </ComponentPreview>
     </>
 );
 
-const UsageWithJavascript = () => (
+const JavascriptMethods = () => (
     <>
-        <h2 id="usage-with-javascript">Usage with javascript</h2>
-        <ComponentPreview language="html" codeFigure>
-            <div className="dialog" id="demo-dialog">{"\n"}
-                ...{"\n"}
-            </div>{"\n"}
-        </ComponentPreview>
-        <p>To open a dialog:</p>
-        <ComponentPreview language="javascript" codeFigure>
-            {"px.dialog.open(\"demo-dialog\")"}
-        </ComponentPreview>
-        <p>To close a dialog:</p>
-        <ComponentPreview language="javascript" codeFigure>
-            {"px.dialog.close(\"demo-dialog\")"}
-        </ComponentPreview>
+        <h2 id="javascript-methods">JavaScript methods</h2>
+        <JavascriptDocs componentName="dialog" open close />
     </>
 );
 
@@ -68,8 +73,9 @@ class Dialog extends Component {
                     Dialog is meant to be used to show a snippet of text like a confirmation box before you delete something.
                     Use <Link to="/docs/components/sheet">sheet</Link> if you wish to receive input from the user or display a large chunk of information.
                 </p>
+                <HowItWorks />
                 <Example />
-                <UsageWithJavascript />
+                <JavascriptMethods />
             </DocContainer>
         );
     }
@@ -78,4 +84,4 @@ class Dialog extends Component {
 export default Dialog;
 
 /* For testing */
-export { Example, UsageWithJavascript };
+export { HowItWorks, Example, JavascriptMethods };
