@@ -18,16 +18,25 @@
             a {
                 border-bottom: none;
                 display: inline-flex;
+                text-decoration: none;
 
                 span {
                     display: none;
                 }
 
                 &.active {
-                    font-weight: bold;
+                    > span {
+                        position: relative;
 
-                    i {
-                        color: @brand-primary;
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            background-color: @brand-primary;
+                            height: 4px;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                        }
                     }
                 }
             }
@@ -37,7 +46,7 @@
             }
 
             span {
-                color: @bg-gray;
+                color: dark-brown;
             }
 
             .submenu {
@@ -67,16 +76,28 @@
                     }
 
                     a {
-                        color: @brand-primary;
+                        color: @dark-brown;
                         font-size: @nav-submenu-font-size;
 
                         &:hover {
-                            color: darken(@brand-primary, 10%);
+                            color: darken(@dark-brown, 10%);
                         }
                     }
 
                     &.active {
-                        font-weight: bold;
+                        > a {
+                            position: relative;
+
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                background-color: @brand-primary;
+                                height: 4px;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                            }
+                        }
                     }
                 }
             }
@@ -97,7 +118,7 @@
     }
 
     .material-icons {
-        color: @bg-gray;
+        color: @brown;
         user-select: none;
     }
 }
@@ -163,7 +184,7 @@
                         li {
                             a {
                                 font-size: @base-font-size;
-                                color: @brand-primary;
+                                color: @dark-brown;
                                 padding: @base-margin-sm;
                             }
 
@@ -178,7 +199,7 @@
 
                 &.submenu-active-parent {
                     i {
-                        color: @brand-primary;
+                        color: @dark-brown;
                     }
                 }
             }
@@ -276,10 +297,10 @@
             span {
                 span {
                     display: inline;
-                    color: @brand-primary;
+                    color: @dark-brown;
 
                     &:hover {
-                        color: darken(@brand-primary, 8%);
+                        color: darken(@dark-brown, 8%);
                     }
                 }
             }
@@ -301,7 +322,7 @@
 
                     &.submenu-active-parent {
                         i {
-                            color: @brand-primary;
+                            color: @dark-brown;
                         }
                     }
                 }
