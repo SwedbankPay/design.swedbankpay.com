@@ -20,7 +20,7 @@
         padding-left: 11px;
         padding-bottom: @base-padding-sm;
         background-color: @white;
-        border-bottom: 1px solid @gray-bright-alt;
+        // border-bottom: 1px solid @gray-bright-alt;
 
         li {
             list-style: none;
@@ -28,14 +28,17 @@
 
             a,
             span {
-                color: fade(@brand-primary, 80%);
+                // color: fade(@brand-primary, 80%);
+                color: @brown;
                 background-color: @white;
                 display: block;
                 border-bottom: transparent;
+                text-decoration: none;
             }
 
             &.active {
-                font-weight: bold;
+                // font-weight: bold;
+                // background-color: @brand-primary;
                 display: block;
                 padding-left: @base-padding;
             }
@@ -87,28 +90,58 @@
     }
 
     ul {
+        position: initial;
         flex-direction: row;
         padding: 0;
+        margin: 0;
 
         li {
             display: block;
-            margin-left: @base-margin-lg;
+            // margin-left: @base-margin-lg;
+            border-right: 2px solid @white;
+
+            &:last-child {
+                border-right: 0;
+
+                > a {
+                    border-radius: 0 0.3rem 0.3rem 0;
+                }
+            }
 
             &:first-child {
-                margin-left: @base-margin;
+                > a {
+                    border-radius: 0.3rem 0 0 0.3rem;
+                }
             }
 
             a {
-                padding-bottom: @base-padding-sm;
+                background-color: @gray-bright;
+                padding: 0.5rem 1rem;
+
+                &:hover {
+                    background-color: @brand-primary;
+                }
             }
 
             &.active {
-                font-weight: bold;
                 padding-left: 0;
 
                 > a {
-                    border-bottom: 2px solid @brand-primary;
-                    padding-bottom: calc(@base-padding-sm - 2px);
+                    background-color: @brand-primary;
+                    position: relative;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        bottom: -0.6rem;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        width: 1.2rem;
+                        height: 0.6rem;
+                        background-color: @brand-primary;
+                        clip-path: polygon(100% 0, 0 0, 50% 100%);
+                    }
                 }
             }
         }

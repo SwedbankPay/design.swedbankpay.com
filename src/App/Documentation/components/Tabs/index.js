@@ -13,7 +13,7 @@ const BasicUsage = () => (
         <h2 id="basic-usage">Basic usage</h2>
         <p>Add class <Property value=".tabs" /> with a <Property value=".tabs-horizontal-desired_size" /> to a div containing an arrow icon along with <PrismCode className="language-html">{"<ul>"}</PrismCode> and nest <PrismCode className="language-html">{"<li>"}</PrismCode> as needed. The <Property value=".tabs-horizontal-desired_size" /> class determines when your tabs will switch from horizontal to collapsed. The available sizes can be found in our <Link to="/docs/core/breakpoints">breakpoints documentation</Link>.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <TabsComponent mode="xl" items={tabItems}/>
+            <TabsComponent mode="sm" items={tabItems}/>
         </ComponentPreview>
     </>
 );
