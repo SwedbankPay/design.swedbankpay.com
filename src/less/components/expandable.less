@@ -1,8 +1,13 @@
 .expandable {
-    border: 0 solid @light-brown;
-    border-width: 1px 1px 0 1px;
-    box-shadow: 0 3px 1px -1px @light-brown;
+    // border: 0 solid @light-brown;
+    // border-width: 1px 1px 0 1px;
+    // box-shadow: 0 3px 1px -1px @light-brown;
+    border: 1px solid transparent;
+    border-bottom: 2px solid @light-brown;
+    border-radius: 2px;
     margin-bottom: 1rem;
+    background-color: @offwhite;
+    position: relative;
 
     &:last-child {
         margin-bottom: 0;
@@ -13,6 +18,16 @@
         padding: 1rem 1rem 1rem 0;
         cursor: pointer;
         user-select: none;
+
+        &:before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 0.5rem;
+            left: 0;
+            top: 0;
+            background-color: @brand-primary;
+        }
 
         /* stylelint-disable selector-list-comma-newline-after */
         > h1, > h2, > h3, > h4, > h5, > h6,
@@ -62,6 +77,10 @@
                     transform: rotate(-135deg);
                     top: 2px;
                 }
+            }
+
+            &:before {
+                content: none;
             }
             /* stylelint-enable selector-list-comma-newline-after */
         }
