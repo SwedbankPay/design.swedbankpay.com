@@ -63,7 +63,7 @@ const RequireAction = () => (
             To disable the listener responsible for closing the sheet when a user clicks outside, add <Property value="data-require-action" /> to your Sheet.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <SheetComponent id="demo-sheet-1" requireAction={false}>
+            <SheetComponent id="demo-sheet-1" requireAction>
                 <h2>Sheet component</h2>
                 <p>
                     This sheet can not be closed by clicking outside its white area.
