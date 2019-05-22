@@ -23,15 +23,15 @@ const Overview = () => (
                     autoComplete="given-name"
                     label="First name"
                     placeholder="Enter your first name"
-                    helpBlock="The first word of your full name"
+                    // helpBlock="The first word of your full name"
                 />
                 <InputGroup
                     id="last-name"
                     type="text"
                     label="Last name"
                     autoComplete="family-name"
-                    placeholder="Enter your last name"
-                    helpBlock="The very last collection of letters in your name"
+                    placeholder=""
+                    // helpBlock="The very last collection of letters in your name"
                 />
                 <InputGroup
                     id="email-address"
@@ -39,7 +39,7 @@ const Overview = () => (
                     label="Email"
                     autoComplete="email"
                     placeholder="Enter your email"
-                    helpBlock="The last part is probably @payex.com"
+                    // helpBlock="The last part is probably @payex.com"
                 />
                 <div className="form-group">
                     <Checkbox label={"Subscribe to our Shovels and Tapestry catalogue"} id="subscribe-checkbox" />
@@ -300,6 +300,23 @@ const DisabledFormComponents = () => (
     </>
 );
 
+// const Test = () => (
+//     <div className="container my-5">
+//         <div className="row">
+//             <div className="col-md-6 mx-auto">
+//                 <div className="form-group">
+//                     <input type="text" id="name" className="form-control" required />
+//                     <label className="form-control-placeholder" forhtml="name">Name</label>
+//                 </div>
+//                 <div className="form-group">
+//                     <input type="password" id="password" className="form-control" required />
+//                     <label className="form-control-placeholder" forhtml="password">Password</label>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+// );
+
 class Forms extends Component {
     componentDidMount () {
         rangeslider.init();
@@ -308,7 +325,7 @@ class Forms extends Component {
 
     render () {
         return (
-            <DocContainer docToc>
+            <DocContainer>
                 <p className="lead">
                     Form componenets allow you to gather user input in various different ways.
                 </p>
