@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import { chart } from "$/px-script/dashboard";
-
 class Chart extends Component {
     componentDidMount () {
         const { id, options } = this.props;
 
-        chart(id, options);
+        px.chart(id, options);
     }
 
     render () {

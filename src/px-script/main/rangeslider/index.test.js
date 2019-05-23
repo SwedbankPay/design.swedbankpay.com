@@ -4,8 +4,8 @@ import ReactDOM from "react-dom";
 import rangeslider from "./index";
 
 describe("px-script: rangeslider", () => {
-    const TestSlider = () => (
-        <div className="rangeslider rangeslider-brand label-right">
+    const TestSlider = ({ id }) => (
+        <div className="rangeslider rangeslider-brand label-right" id={id}>
             <input type="range" min="0" max="200" step="1" />
             <output className="value-label">
                 <p>
@@ -15,31 +15,6 @@ describe("px-script: rangeslider", () => {
                 </p>
             </output>
         </div>
-    );
-
-    const TwoTestSliders = () => (
-        <>
-            <div className="rangeslider rangeslider-brand label-right">
-                <input type="range" min="0" max="200" step="1" />
-                <output className="value-label">
-                    <p>
-                        <span>$</span>
-                        <span data-rs-value="true">100</span>
-                        <span>%</span>
-                    </p>
-                </output>
-            </div>
-            <div className="rangeslider rangeslider-brand label-right">
-                <input type="range" min="0" max="200" step="1" />
-                <output className="value-label">
-                    <p>
-                        <span>$</span>
-                        <span data-rs-value="true">100</span>
-                        <span>%</span>
-                    </p>
-                </output>
-            </div>
-        </>
     );
 
     const TestSliderNoLabel = () => (
@@ -52,13 +27,63 @@ describe("px-script: rangeslider", () => {
 
     document.body.appendChild(div);
 
+    beforeEach(() => ReactDOM.unmountComponentAtNode(div));
+
     it("is defined", () => {
         expect(rangeslider).toBeDefined();
     });
 
-    it("has an init method", () => {
-        expect(rangeslider.init).toBeDefined();
-        expect(rangeslider.init).toBeInstanceOf(Function);
+    describe("rangeslider.init", () => {
+        it("it is defined", () => {
+            expect(rangeslider.init).toBeDefined();
+            expect(rangeslider.init).toBeInstanceOf(Function);
+        });
+
+        it("returns a single object when one element is initialized", () => {
+            ReactDOM.render(<TestSlider id="demo-slider" />, div);
+
+            const renderedRangeSlider = document.querySelector(".rangeslider");
+
+            expect(renderedRangeSlider).toBeTruthy();
+
+            const returnVal = rangeslider.init("demo-slider");
+
+            expect(Array.isArray(returnVal)).toBeFalsy();
+            expect(typeof returnVal).toEqual("object");
+        });
+
+        it("returns an array of objects when more than one element is initialized", () => {
+            ReactDOM.render(
+                <>
+                    <TestSlider />
+                    <TestSlider />
+                </>
+                , div);
+
+            const renderedRangeSliders = document.querySelectorAll(".rangeslider");
+
+            expect(renderedRangeSliders).toBeTruthy();
+            expect(renderedRangeSliders.length).toEqual(2);
+
+            const returnVal = rangeslider.init();
+
+            expect(Array.isArray(returnVal)).toBeTruthy();
+            expect(returnVal.length).toEqual(2);
+        });
+
+        it("returns null if no rangeslider is found and prints a warning message", () => {
+            console.warn = jest.fn();
+
+            expect(rangeslider.init()).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
+        });
+
+        it("returns null if an invalid ID is passed and prints a warning message", () => {
+            console.warn = jest.fn();
+
+            expect(rangeslider.init("test")).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
+        });
     });
 
     // Start of Chrome specific tests [AW]
@@ -81,11 +106,15 @@ describe("px-script: rangeslider", () => {
 
         Object.defineProperty(window.navigator, "userAgent", { value: defaultUseragent });
         document.body.removeChild(chromeStyle);
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("creates a unique styling for each rangeslider in one style tag for chrome", () => {
-        ReactDOM.render(<TwoTestSliders />, div);
+        ReactDOM.render(
+            <>
+                <TestSlider />
+                <TestSlider />
+            </>
+            , div);
 
         const defaultUseragent = window.navigator.userAgent;
 
@@ -101,12 +130,11 @@ describe("px-script: rangeslider", () => {
         expect(rangeSlider).toBeTruthy();
         expect(chromeStyle).toBeTruthy();
         expect(document.querySelectorAll("style")).toHaveLength(1);
-        expect(chromeStyle.innerHTML.includes("#px-rs-0")).toEqual(true);
-        expect(chromeStyle.innerHTML.includes("#px-rs-1")).toEqual(true);
+        expect(chromeStyle.innerHTML.includes("px-rs-0")).toEqual(true);
+        expect(chromeStyle.innerHTML.includes("px-rs-1")).toEqual(true);
 
         Object.defineProperty(window.navigator, "userAgent", { value: defaultUseragent });
         document.body.removeChild(chromeStyle);
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("does not create duplicate styling when onchange occurs", () => {
@@ -127,17 +155,16 @@ describe("px-script: rangeslider", () => {
         expect(rangeSlider).toBeTruthy();
         expect(input).toBeTruthy();
         expect(chromeStyle).toBeTruthy();
-        expect(chromeStyle.innerHTML.match(/#px-rs-0/gm)).toHaveLength(1);
+        expect(chromeStyle.innerHTML.match(/px-rs-0/gm)).toHaveLength(2);
 
         input.value = 50;
         input.dispatchEvent(new Event("change"));
 
         expect(document.querySelectorAll("style")).toHaveLength(1);
-        expect(chromeStyle.innerHTML.match(/#px-rs-0/g)).toHaveLength(1);
+        expect(chromeStyle.innerHTML.match(/px-rs-0/g)).toHaveLength(2);
 
         Object.defineProperty(window.navigator, "userAgent", { value: defaultUseragent });
         document.body.removeChild(chromeStyle);
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("sets max and min values to 0 and 100 for rangesliders if none are provided", () => {
@@ -153,14 +180,12 @@ describe("px-script: rangeslider", () => {
 
         const rangeSlider = document.querySelector(".rangeslider");
         const chromeStyle = document.querySelector("style");
-        const expectedStyleValue = "#px-rs-0::-webkit-slider-runnable-track{background-size: 0% 100%}";
 
         expect(rangeSlider).toBeTruthy();
         expect(chromeStyle).toBeTruthy();
-        expect(expectedStyleValue).toEqual(chromeStyle.innerHTML);
+        expect(chromeStyle.innerHTML).toContain("background-size: 0% 100%");
 
         Object.defineProperty(window.navigator, "userAgent", { value: defaultUseragent });
-        ReactDOM.unmountComponentAtNode(div);
     });
     // End of Chrome specific tests [AW]
 
@@ -181,7 +206,6 @@ describe("px-script: rangeslider", () => {
 
         expect(valueSpan.innerHTML).toEqual(input.value);
 
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("updates displayed value span on input in rangeslider", () => {
@@ -201,7 +225,6 @@ describe("px-script: rangeslider", () => {
 
         expect(valueSpan.innerHTML).toEqual(input.value);
 
-        ReactDOM.unmountComponentAtNode(div);
     });
 
     it("does not do value-label updates if value-label is not defined", () => {
@@ -214,6 +237,5 @@ describe("px-script: rangeslider", () => {
         expect(rangeSlider).toBeTruthy();
         expect(valueSpan).toBeFalsy();
 
-        ReactDOM.unmountComponentAtNode(div);
     });
 });

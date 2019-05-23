@@ -63,6 +63,21 @@ exports[`Component: Nav IconsOnly renders 1`] = `
 </Fragment>
 `;
 
+exports[`Component: Nav JavascriptMethods renders 1`] = `
+<Fragment>
+  <h2
+    id="javascript-methods"
+  >
+    JavaScript methods
+  </h2>
+  <JavascriptDocs
+    close={true}
+    componentName="nav"
+    open={true}
+  />
+</Fragment>
+`;
+
 exports[`Component: Nav Mix renders 1`] = `
 <Fragment>
   <h2
@@ -362,6 +377,7 @@ exports[`Component: Nav renders 1`] = `
   <IconsOnly />
   <Mix />
   <Mobile />
+  <JavascriptMethods />
 </DocContainer>
 `;
 
@@ -386,5 +402,6 @@ exports[`Component: Nav runs init on rerender 1`] = `
   <IconsOnly />
   <Mix />
   <Mobile />
+  <JavascriptMethods />
 </DocContainer>
 `;

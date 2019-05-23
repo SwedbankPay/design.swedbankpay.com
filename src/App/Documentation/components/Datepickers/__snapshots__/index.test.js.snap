@@ -39,7 +39,7 @@ exports[`Documentation: Datepickers AllowInput renders 1`] = `
   >
     <Datepicker
       allowinput={true}
-      id="simle-datepicker"
+      id="simple-datepicker"
       label="Date"
       prefixType="icon"
       prefixValue="event"
@@ -259,6 +259,21 @@ exports[`Documentation: Datepickers InitialValue renders 1`] = `
       value="1972-12-28"
     />
   </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Datepickers JavascriptMethods renders 1`] = `
+<Fragment>
+  <h2
+    id="javascript-methods"
+  >
+    JavaScript methods
+  </h2>
+  <JavascriptDocs
+    close={true}
+    componentName="datepicker"
+    open={true}
+  />
 </Fragment>
 `;
 
@@ -634,7 +649,7 @@ exports[`Documentation: Datepickers SimpleDatepicker renders 1`] = `
     showCasePanel={true}
   >
     <Datepicker
-      id="simle-datepicker"
+      id="simple-datepicker"
       label="Date"
       prefixType="icon"
       prefixValue="event"
@@ -703,5 +718,6 @@ exports[`Documentation: Datepickers renders 1`] = `
   <DateRange />
   <MultipleDates />
   <Options />
+  <JavascriptMethods />
 </DocContainer>
 `;

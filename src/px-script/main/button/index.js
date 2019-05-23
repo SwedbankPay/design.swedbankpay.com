@@ -16,20 +16,34 @@ const _appendLoader = button => {
     div.appendChild(ul);
 
     button.appendChild(div);
+
+    return { container: button };
 };
 
-const button = (() => {
-    const init = () => {
-        const loaderButtons = document.querySelectorAll(SELECTORS.LOADER);
+const init = id => {
+    if (id) {
+        const btnLoader = document.getElementById(id);
 
-        if (loaderButtons) {
-            loaderButtons.forEach(button => {
-                _appendLoader(button);
-            });
+        if (!btnLoader) {
+            console.warn(`No loader button with id ${id} found`);
+
+            return null;
         }
-    };
 
-    return { init };
-})();
+        return _appendLoader(btnLoader);
+    } else {
+        const btnLoaders = document.querySelectorAll(SELECTORS.LOADER);
 
-export default button;
+        if (!btnLoaders.length) {
+            console.warn("No loader buttons found");
+
+            return null;
+        }
+
+        return [...btnLoaders].map(btnLoader => _appendLoader(btnLoader));
+    }
+};
+
+export default {
+    init
+};

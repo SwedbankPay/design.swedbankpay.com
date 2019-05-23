@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer, Property, Attribute } from "#";
+import { ComponentPreview, DocContainer, Property, Attribute, JavascriptDocs } from "#";
 import TopbarComponent from "@/Topbar";
-import { topbar } from "$/px-script/main";
+
+const { topbar } = window.px;
 
 const menu = {
     btn: {
@@ -30,7 +31,7 @@ const Overview = () => (
             to get the menu to appear when the menu-button is clicked.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <TopbarComponent topbarContent={menu} logout />
+            <TopbarComponent topbarContent={menu} logout id="demo-topbar" />
         </ComponentPreview>
     </>
 );
@@ -48,9 +49,16 @@ const FixedTopbar = () => (
     </>
 );
 
+const JavascriptMethods = () => (
+    <>
+        <h2 id="javascript-methods">JavaScript Methods</h2>
+        <JavascriptDocs componentName="topbar" open close />
+    </>
+);
+
 class Topbar extends Component {
     componentDidMount () {
-        topbar.init(1);
+        topbar.init("demo-topbar");
     }
 
     render () {
@@ -59,6 +67,7 @@ class Topbar extends Component {
                 <p className="lead">The topbar is used to give users an easily available navigational bar at the top of your web application.</p>
                 <Overview />
                 <FixedTopbar />
+                <JavascriptMethods />
             </DocContainer>
         );
     }
@@ -67,4 +76,4 @@ class Topbar extends Component {
 export default Topbar;
 
 /* For testing */
-export { Overview, FixedTopbar };
+export { Overview, FixedTopbar, JavascriptMethods };

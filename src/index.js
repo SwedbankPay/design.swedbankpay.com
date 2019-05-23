@@ -4,12 +4,6 @@ import { render } from "react-dom";
 import "prismjs";
 import "prismjs/themes/prism.css";
 
-// Polyfills
-import "./polyfills";
-
-// Px-script
-import "./px-script/main";
-
 import "./less/px.less";
 import "./less/themes/documentation.less";
 import "./less/designguide.less";

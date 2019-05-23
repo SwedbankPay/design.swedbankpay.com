@@ -97,7 +97,7 @@ describe("px-script: topbar - NavMenu", () => {
         ReactDOM.unmountComponentAtNode(div);
     });
 
-    it("prevents default and fires handleClick() when the topbar button connected to a nav is clicked", () => {
+    it("prevents default and fires _handleClick() when the topbar button connected to a nav is clicked", () => {
         ReactDOM.render(<Topbar />, div);
 
         const topbar = document.querySelector(".topbar");
@@ -105,7 +105,7 @@ describe("px-script: topbar - NavMenu", () => {
         const navBtn = topbar.querySelector(".topbar-btn");
         const newNavMenu = new NavMenu(topbar, navMenu);
 
-        newNavMenu.handleClick = jest.fn();
+        newNavMenu._handleClick = jest.fn();
         Event.prototype.preventDefault = jest.fn();
 
         expect(topbar).toBeTruthy();
@@ -115,7 +115,7 @@ describe("px-script: topbar - NavMenu", () => {
 
         navBtn.click();
 
-        expect(newNavMenu.handleClick).toHaveBeenCalled();
+        expect(newNavMenu._handleClick).toHaveBeenCalled();
         expect(Event.prototype.preventDefault).toHaveBeenCalled();
 
         ReactDOM.unmountComponentAtNode(div);
@@ -192,8 +192,8 @@ describe("px-script: topbar - NavMenu", () => {
         expect(topbar).toBeTruthy();
         expect(navMenu).toBeTruthy();
         expect(newNavMenu).toBeTruthy();
-        expect(newNavMenu.containsPoint).toBeDefined();
-        expect(newNavMenu.containsPoint(0, 0)).toEqual(false);
+        expect(newNavMenu._containsPoint).toBeDefined();
+        expect(newNavMenu._containsPoint(0, 0)).toEqual(false);
 
         ReactDOM.unmountComponentAtNode(div);
     });

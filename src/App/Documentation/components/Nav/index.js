@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer, Property } from "#";
-import { nav } from "$/px-script/main";
+import { ComponentPreview, DocContainer, Property, JavascriptDocs } from "#";
 import NavComponent from "@/Nav";
+
+const { nav } = window.px;
 
 const navItems = [
     {
@@ -122,6 +123,13 @@ const Mobile = () => (
     </>
 );
 
+const JavascriptMethods = () => (
+    <>
+        <h2 id="javascript-methods">JavaScript methods</h2>
+        <JavascriptDocs componentName="nav" open close />
+    </>
+);
+
 class Nav extends Component {
     componentDidUpdate () {
         nav.init();
@@ -143,6 +151,7 @@ class Nav extends Component {
                 <IconsOnly />
                 <Mix />
                 <Mobile />
+                <JavascriptMethods />
             </DocContainer>
         );
     }
@@ -151,4 +160,4 @@ class Nav extends Component {
 export default Nav;
 
 /* For testing */
-export { StandardNav, TwoLevels, IconsOnly, Mix, Mobile };
+export { StandardNav, TwoLevels, IconsOnly, Mix, Mobile, JavascriptMethods };

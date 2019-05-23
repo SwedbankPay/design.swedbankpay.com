@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 import { ComponentPreview, DocContainer, Property } from "#";
 import Alert from "@/Alert";
@@ -54,19 +54,15 @@ const ExtendedUsage = () => (
     </>
 );
 
-class Status extends Component {
-    render () {
-        return (
-            <DocContainer docToc>
-                <p className="lead">
-                    The status component is a good way to convey to the user the state of something.
-                </p>
-                <Overview />
-                <ExtendedUsage />
-            </DocContainer>
-        );
-    }
-}
+const Status = () => (
+    <DocContainer docToc>
+        <p className="lead">
+            The status component is a good way to convey to the user the state of something.
+        </p>
+        <Overview />
+        <ExtendedUsage />
+    </DocContainer>
+);
 
 export default Status;
 

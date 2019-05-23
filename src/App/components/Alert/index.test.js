@@ -45,6 +45,18 @@ describe("Component: Alert", () => {
         expect(wrapper.html()).toContain("data-alert-close");
     });
 
+    it("the close-button prevents default", () => {
+        const wrapper = shallow(<Alert type="test" close />);
+        const eventHandler = { preventDefault: jest.fn() };
+        const closeBtn = wrapper.find("[data-alert-close]");
+
+        expect(wrapper).toMatchSnapshot();
+
+        closeBtn.simulate("click", eventHandler);
+
+        expect(eventHandler.preventDefault).toHaveBeenCalled();
+    });
+
     it("renders an alert without a close-button if no close prop is provided", () => {
         const wrapper = shallow(<Alert type="test" />);
 
@@ -64,5 +76,15 @@ describe("Component: Alert", () => {
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<p>test</p>)).toEqual(false);
+    });
+
+    it("renders the children sent to the alert component and a alert-body", () => {
+        const wrapper = shallow(
+            <Alert type="test" >
+                <p>Alert text</p>
+            </Alert>);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.contains(<div className="alert-body"><p>Alert text</p></div>)).toBeTruthy();
     });
 });

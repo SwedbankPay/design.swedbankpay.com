@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Tabs, { BasicUsage, Collapsed } from "./index";
+import Tabs, { BasicUsage, Collapsed, JavascriptMethods } from "./index";
 
 describe("Components: Tabs", () => {
     it("is defined", () => {
@@ -9,9 +9,12 @@ describe("Components: Tabs", () => {
     });
 
     it("renders", () => {
+        console.warn = jest.fn();
+
         const wrapper = shallow(<Tabs />);
 
         expect(wrapper).toMatchSnapshot();
+        expect(console.warn).toHaveBeenCalled();
     });
 
     describe("BasicUsage", () => {
@@ -33,6 +36,18 @@ describe("Components: Tabs", () => {
 
         it("renders", () => {
             const wrapper = shallow(<Collapsed />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("JavascriptMethods", () => {
+        it("is defined", () => {
+            expect(JavascriptMethods).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<JavascriptMethods />);
 
             expect(wrapper).toMatchSnapshot();
         });

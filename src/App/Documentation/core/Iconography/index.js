@@ -3,7 +3,8 @@ import PrismCode from "react-prism";
 
 import { ComponentPreview, DocContainer, Property, Icon } from "#";
 import IconPreview from "@/IconPreview";
-import actionList from "$/px-script/main/action-list";
+
+const { actionList } = window.px;
 
 const MaterialIcons = () => (
     <>

@@ -100,3 +100,47 @@ exports[`Component: Alert renders an alert without text if no text prop is provi
 
 </div>
 `;
+
+exports[`Component: Alert renders the children sent to the alert component and a alert-body 1`] = `
+<div
+  className="alert alert-test"
+>
+  
+
+  <div
+    className="alert-body"
+  >
+    <p>
+      Alert text
+    </p>
+  </div>
+  
+
+</div>
+`;
+
+exports[`Component: Alert the close-button prevents default 1`] = `
+<div
+  className="alert alert-test"
+>
+  
+
+  <a
+    data-alert-close=""
+    href="#"
+    onClick={[Function]}
+  >
+    
+		
+    <i
+      className="material-icons"
+    >
+      close
+    </i>
+    
+	
+  </a>
+  
+
+</div>
+`;

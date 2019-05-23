@@ -1,12 +1,19 @@
 import { extendObj } from "../utils";
 
+const SELECTORS = {
+    SHEET: {
+        COMPONENT: ".sheet",
+        OPEN: ".sheet-open"
+    }
+};
+
 class Toast {
     constructor (options) {
         this.options = extendObj(true, this._defaults(), options);
         this.message = this.options.html;
         this.timeRemaining = this.options.displayLength; // Time remaining until the toast is removed.
-        this.sheetComponent = document.querySelector(".sheet");
-        this.sheetOpen = document.querySelector(".sheet-open");
+        this.sheetComponent = document.querySelector(SELECTORS.SHEET.COMPONENT);
+        this.sheetOpen = document.querySelector(SELECTORS.SHEET.OPEN);
 
         if (Toast._toasts.length === 0) {
             Toast._createContainer();

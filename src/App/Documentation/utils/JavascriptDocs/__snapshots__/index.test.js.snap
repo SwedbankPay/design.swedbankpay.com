@@ -1,0 +1,431 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Utilities: JavascriptDocs renders init and close methods 1`] = `
+<JavascriptDocs
+  close={true}
+  componentName="test"
+>
+  <h4>
+    <PxScript
+      component="test"
+      func="init"
+    >
+      <code>
+        <span>
+          px
+        </span>
+        <span
+          className="token punctuation"
+        >
+          .
+        </span>
+        <span>
+          test
+        </span>
+        <span
+          className="token punctuation"
+        >
+          .
+        </span>
+        <span
+          className="token function"
+        >
+          init
+        </span>
+        <span
+          className="token punctuation"
+        >
+          (
+        </span>
+        <span
+          className="token punctuation"
+        >
+          );
+        </span>
+      </code>
+    </PxScript>
+  </h4>
+  <p>
+    <Link
+      to="/docs/getting-started/javascript"
+    />
+     
+    test
+    .
+  </p>
+  <CloseDocs
+    componentName="test"
+  >
+    <h4>
+      <PxScript
+        component="test"
+        func="close"
+        params={
+          Array [
+            "<test-id>",
+          ]
+        }
+      >
+        <code>
+          <span>
+            px
+          </span>
+          <span
+            className="token punctuation"
+          >
+            .
+          </span>
+          <span>
+            test
+          </span>
+          <span
+            className="token punctuation"
+          >
+            .
+          </span>
+          <span
+            className="token function"
+          >
+            close
+          </span>
+          <span
+            className="token punctuation"
+          >
+            (
+          </span>
+          <span
+            className={null}
+            key="0"
+          >
+            &lt;test-id&gt;
+          </span>
+          <span
+            className="token punctuation"
+          >
+            );
+          </span>
+        </code>
+      </PxScript>
+    </h4>
+    <p>
+      Closes the given 
+      test
+      .
+    </p>
+  </CloseDocs>
+</JavascriptDocs>
+`;
+
+exports[`Utilities: JavascriptDocs renders init and open methods 1`] = `
+<JavascriptDocs
+  componentName="test"
+  open={true}
+>
+  <h4>
+    <PxScript
+      component="test"
+      func="init"
+    >
+      <code>
+        <span>
+          px
+        </span>
+        <span
+          className="token punctuation"
+        >
+          .
+        </span>
+        <span>
+          test
+        </span>
+        <span
+          className="token punctuation"
+        >
+          .
+        </span>
+        <span
+          className="token function"
+        >
+          init
+        </span>
+        <span
+          className="token punctuation"
+        >
+          (
+        </span>
+        <span
+          className="token punctuation"
+        >
+          );
+        </span>
+      </code>
+    </PxScript>
+  </h4>
+  <p>
+    <Link
+      to="/docs/getting-started/javascript"
+    />
+     
+    test
+    .
+  </p>
+  <OpenDocs
+    componentName="test"
+  >
+    <h4>
+      <PxScript
+        component="test"
+        func="open"
+        params={
+          Array [
+            "<test-id>",
+          ]
+        }
+      >
+        <code>
+          <span>
+            px
+          </span>
+          <span
+            className="token punctuation"
+          >
+            .
+          </span>
+          <span>
+            test
+          </span>
+          <span
+            className="token punctuation"
+          >
+            .
+          </span>
+          <span
+            className="token function"
+          >
+            open
+          </span>
+          <span
+            className="token punctuation"
+          >
+            (
+          </span>
+          <span
+            className={null}
+            key="0"
+          >
+            &lt;test-id&gt;
+          </span>
+          <span
+            className="token punctuation"
+          >
+            );
+          </span>
+        </code>
+      </PxScript>
+    </h4>
+    <p>
+      Opens the given 
+      test
+      .
+    </p>
+  </OpenDocs>
+</JavascriptDocs>
+`;
+
+exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
+<JavascriptDocs
+  close={true}
+  componentName="test"
+  open={true}
+>
+  <h4>
+    <PxScript
+      component="test"
+      func="init"
+    >
+      <code>
+        <span>
+          px
+        </span>
+        <span
+          className="token punctuation"
+        >
+          .
+        </span>
+        <span>
+          test
+        </span>
+        <span
+          className="token punctuation"
+        >
+          .
+        </span>
+        <span
+          className="token function"
+        >
+          init
+        </span>
+        <span
+          className="token punctuation"
+        >
+          (
+        </span>
+        <span
+          className="token punctuation"
+        >
+          );
+        </span>
+      </code>
+    </PxScript>
+  </h4>
+  <p>
+    <Link
+      to="/docs/getting-started/javascript"
+    />
+     
+    test
+    .
+  </p>
+  <OpenDocs
+    componentName="test"
+  >
+    <h4>
+      <PxScript
+        component="test"
+        func="open"
+        params={
+          Array [
+            "<test-id>",
+          ]
+        }
+      >
+        <code>
+          <span>
+            px
+          </span>
+          <span
+            className="token punctuation"
+          >
+            .
+          </span>
+          <span>
+            test
+          </span>
+          <span
+            className="token punctuation"
+          >
+            .
+          </span>
+          <span
+            className="token function"
+          >
+            open
+          </span>
+          <span
+            className="token punctuation"
+          >
+            (
+          </span>
+          <span
+            className={null}
+            key="0"
+          >
+            &lt;test-id&gt;
+          </span>
+          <span
+            className="token punctuation"
+          >
+            );
+          </span>
+        </code>
+      </PxScript>
+    </h4>
+    <p>
+      Opens the given 
+      test
+      .
+    </p>
+  </OpenDocs>
+  <CloseDocs
+    componentName="test"
+  >
+    <h4>
+      <PxScript
+        component="test"
+        func="close"
+        params={
+          Array [
+            "<test-id>",
+          ]
+        }
+      >
+        <code>
+          <span>
+            px
+          </span>
+          <span
+            className="token punctuation"
+          >
+            .
+          </span>
+          <span>
+            test
+          </span>
+          <span
+            className="token punctuation"
+          >
+            .
+          </span>
+          <span
+            className="token function"
+          >
+            close
+          </span>
+          <span
+            className="token punctuation"
+          >
+            (
+          </span>
+          <span
+            className={null}
+            key="0"
+          >
+            &lt;test-id&gt;
+          </span>
+          <span
+            className="token punctuation"
+          >
+            );
+          </span>
+        </code>
+      </PxScript>
+    </h4>
+    <p>
+      Closes the given 
+      test
+      .
+    </p>
+  </CloseDocs>
+</JavascriptDocs>
+`;
+
+exports[`Utilities: JavascriptDocs renders only init method 1`] = `
+<Fragment>
+  <h4>
+    <PxScript
+      component="test"
+      func="init"
+    />
+  </h4>
+  <p>
+    <Link
+      to="/docs/getting-started/javascript"
+    >
+      Initializes
+    </Link>
+     
+    test
+    .
+  </p>
+</Fragment>
+`;

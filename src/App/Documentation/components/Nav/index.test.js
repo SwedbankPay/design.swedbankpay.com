@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Nav, { StandardNav, TwoLevels, IconsOnly, Mix, Mobile } from "./index";
+import Nav, { StandardNav, TwoLevels, IconsOnly, Mix, Mobile, JavascriptMethods } from "./index";
 
 describe("Component: Nav", () => {
     it("is defined", () => {
@@ -9,9 +9,12 @@ describe("Component: Nav", () => {
     });
 
     it("renders", () => {
+        console.warn = jest.fn();
+
         const wrapper = shallow(<Nav />);
 
         expect(wrapper).toMatchSnapshot();
+        expect(console.warn).toHaveBeenCalled();
     });
 
     it("runs init on rerender", () => {
@@ -77,6 +80,18 @@ describe("Component: Nav", () => {
 
         it("renders", () => {
             const wrapper = shallow(<Mobile />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("JavascriptMethods", () => {
+        it("is defined", () => {
+            expect(JavascriptMethods).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<JavascriptMethods />);
 
             expect(wrapper).toMatchSnapshot();
         });
