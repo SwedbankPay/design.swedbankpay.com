@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.X.X] - 2019-X-X
+## [2.2.0] - 2019-05-23
 
 ### Added
 
@@ -15,10 +15,6 @@
 - Added open and close by ID to tabs object
 - Added open and close by ID to topbar object
 - Added option to disable the listener resposible for closing the sheet on clicking outside (data-require-action).
-
-### Changed
-
-### Fixed
 
 ### Removed
 
