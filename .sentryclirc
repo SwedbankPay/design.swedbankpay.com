@@ -1,6 +1,6 @@
 [defaults]
 url = https://sentry.io/
-org = payex
+org = payexs
 project = payex-designguide-dev
 sentry_log_level = info
 
