@@ -63,6 +63,7 @@ const InputGroup = ({
 
     return (
         <div className="form-group">{"\n"}
+            {label ? <label htmlFor={id}>{label}</label> : null}{label ? "\n" : null}
             <div className={inputGrpClasses}>{"\n"}
                 {prefixValue ? <Addon type={prefixType} value={prefixValue} color={prefixBtnColor} disabled={disabled} /> : null }{prefixValue ? "\n" : null}
                 {type === "textarea" ?
@@ -77,7 +78,6 @@ const InputGroup = ({
                         </select>
                         :
                         <input {...attrs} />}
-                {label ? <>{"\n"}<label className="form-control-placeholder" htmlFor={id}>{label}</label></> : null}
                 {"\n"}
                 {feedbackIcon ? <Feedback icon={feedbackIcon} /> : null} {feedbackIcon ? "\n" : null}
                 {postfixValue ? <Addon type={postfixType} value={postfixValue} color={postfixBtnColor} disabled={disabled} /> : null }{postfixValue ? "\n" : null}

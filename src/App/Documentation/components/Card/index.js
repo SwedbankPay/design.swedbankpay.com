@@ -70,7 +70,6 @@ const CardVariants = () => (
                     title={<h3>My Custom card</h3>}
                     text="Card text"
                     smallText="Small card text"
-                    footerTxt="This is some text that goes in the footer."
                 >
                     <MediaObject size="sm" icon="verified_user" heading="75%" text="Complete" textSmall muted />
                 </CardComponent>
@@ -80,7 +79,6 @@ const CardVariants = () => (
                     title={<h3>Text card</h3>}
                     textSection={textArr}
                     smallText="This is some small text"
-                    footerTxt="This is some text that goes in the footer."
                 />
 
                 <CardComponent

@@ -23,15 +23,15 @@ const Overview = () => (
                     autoComplete="given-name"
                     label="First name"
                     placeholder="Enter your first name"
-                    // helpBlock="The first word of your full name"
+                    helpBlock="The first word of your full name"
                 />
                 <InputGroup
                     id="last-name"
                     type="text"
                     label="Last name"
                     autoComplete="family-name"
-                    placeholder=""
-                    // helpBlock="The very last collection of letters in your name"
+                    placeholder="Enter your last name"
+                    helpBlock="The very last collection of letters in your name"
                 />
                 <InputGroup
                     id="email-address"
@@ -39,7 +39,7 @@ const Overview = () => (
                     label="Email"
                     autoComplete="email"
                     placeholder="Enter your email"
-                    // helpBlock="The last part is probably @payex.com"
+                    helpBlock="The last part is probably @payex.com"
                 />
                 <div className="form-group">
                     <Checkbox label={"Subscribe to our Shovels and Tapestry catalogue"} id="subscribe-checkbox" />
