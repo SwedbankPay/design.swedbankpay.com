@@ -2,7 +2,7 @@
 url = https://sentry.io/
 org = payex
 project = payex-designguide-dev
-sentry_log_level = debug
+sentry_log_level = info
 
 [auth]
 token = <token>
