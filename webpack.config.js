@@ -229,6 +229,13 @@ module.exports = (env, argv) => {
                     google: isRelease
                 }
             }),
+            // TODO: Remove after test
+            new SentryCliPlugin({
+                release: version,
+                include: ".",
+                ignore: ["node_modules", "webpack.config.js"]
+            }),
+            // END TODO
             new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/) // Ignores moments locale folder which doubles the size of the package, moment is a dependency of chart.js [EH]
         ]
     };
@@ -258,12 +265,12 @@ module.exports = (env, argv) => {
                 chunks: ["px"],
                 title: "PayEx DesignGuide",
                 basename
-            }),
-            new SentryCliPlugin({
-                release: version,
-                include: ".",
-                ignore: ["node_modules", "webpack.config.js"]
             })
+            // new SentryCliPlugin({
+            //     release: version,
+            //     include: ".",
+            //     ignore: ["node_modules", "webpack.config.js"]
+            // })
         );
     }
 

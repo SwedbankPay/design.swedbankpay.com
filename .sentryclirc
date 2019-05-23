@@ -1,7 +1,8 @@
 [defaults]
 url = https://sentry.io/
-org = okb
+org = payex
 project = payex-designguide-dev
+sentry_log_level = debug
 
 [auth]
 token = <token>
