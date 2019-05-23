@@ -18,137 +18,120 @@ exports[`Documentation: Sheet Example onClick prevents default 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <div
-      className="sheet"
+    <Sheet
       id="demo-sheet"
     >
-      <section>
-        
-
-        <a
-          className="sheet-close"
-          href="#"
+      <h2>
+        Sheet component
+      </h2>
+      <p>
+        This is the sheet component. It can contain anything you want.
+      </p>
+      <p>
+        It can also contain lots of useless text, just like the text in this paragraph. Or it can contain useful info and cheats. For example if you have a math quiz coming up;
+      </p>
+      <ul
+        className="list"
+      >
+        <li>
+          <code>
+            3 + 8 = 11
+          </code>
+        </li>
+        <li>
+          <code>
+            36 - 22 = 14
+          </code>
+        </li>
+        <li>
+          <code>
+            256 + 113 = 369
+          </code>
+        </li>
+        <li>
+          <code>
+            356 - 1 = 355
+          </code>
+        </li>
+      </ul>
+      <hr />
+      <form
+        onSubmit={[Function]}
+      >
+        <div
+          className="form-group"
         >
-          
-			
-          <Icon
-            icon="close"
-          />
-          
-		
-        </a>
-        <h2>
-          Sheet component
-        </h2>
-        <p>
-          This is the sheet component. It can contain anything you want.
-        </p>
-        <p>
-          It can also contain lots of useless text, just like the text in this paragraph. Or it can contain useful info and cheats. For example if you have a math quiz coming up;
-        </p>
-        <ul
-          className="list"
+          <label
+            htmlFor="full-name"
+          >
+            Full name
+          </label>
+          <div
+            className="input-group"
+          >
+            <input
+              className="form-control"
+              id="full-name"
+              placeholder="Enter your full name"
+              type="text"
+            />
+          </div>
+          <div
+            className="help-block"
+          >
+            Your full name
+          </div>
+        </div>
+        <div
+          className="form-group"
         >
-          <li>
-            <code>
-              3 + 8 = 11
-            </code>
-          </li>
-          <li>
-            <code>
-              36 - 22 = 14
-            </code>
-          </li>
-          <li>
-            <code>
-              256 + 113 = 369
-            </code>
-          </li>
-          <li>
-            <code>
-              356 - 1 = 355
-            </code>
-          </li>
-        </ul>
-        <hr />
-        <form
-          onSubmit={[Function]}
+          <label
+            htmlFor="email-address"
+          >
+            Email
+          </label>
+          <div
+            className="input-group"
+          >
+            <input
+              className="form-control"
+              id="email-address"
+              placeholder="Enter your email"
+              type="text"
+            />
+          </div>
+          <div
+            className="help-block"
+          >
+            Email means electronic mail, not express mail
+          </div>
+        </div>
+        <div
+          className="form-group"
         >
           <div
-            className="form-group"
+            className="checkbox"
           >
+            <input
+              id="subscribe-checkbox"
+              type="checkbox"
+            />
             <label
-              htmlFor="full-name"
+              htmlFor="subscribe-checkbox"
             >
-              Full name
+              Sign up to our math newsletter
             </label>
-            <div
-              className="input-group"
-            >
-              <input
-                className="form-control"
-                id="full-name"
-                placeholder="Enter your full name"
-                type="text"
-              />
-            </div>
-            <div
-              className="help-block"
-            >
-              Your full name
-            </div>
           </div>
-          <div
-            className="form-group"
-          >
-            <label
-              htmlFor="email-address"
-            >
-              Email
-            </label>
-            <div
-              className="input-group"
-            >
-              <input
-                className="form-control"
-                id="email-address"
-                placeholder="Enter your email"
-                type="text"
-              />
-            </div>
-            <div
-              className="help-block"
-            >
-              Email means electronic mail, not express mail
-            </div>
-          </div>
-          <div
-            className="form-group"
-          >
-            <div
-              className="checkbox"
-            >
-              <input
-                id="subscribe-checkbox"
-                type="checkbox"
-              />
-              <label
-                htmlFor="subscribe-checkbox"
-              >
-                Sign up to our math newsletter
-              </label>
-            </div>
-          </div>
-          <button
-            className="btn btn-primary"
-            onClick={[Function]}
-            type="submit"
-          >
-            Submit
-          </button>
-        </form>
-      </section>
-    </div>
+        </div>
+        <button
+          className="btn btn-primary"
+          onClick={[Function]}
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+    </Sheet>
     
 
     <button
@@ -180,137 +163,120 @@ exports[`Documentation: Sheet Example onSubmit prevents default 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <div
-      className="sheet"
+    <Sheet
       id="demo-sheet"
     >
-      <section>
-        
-
-        <a
-          className="sheet-close"
-          href="#"
+      <h2>
+        Sheet component
+      </h2>
+      <p>
+        This is the sheet component. It can contain anything you want.
+      </p>
+      <p>
+        It can also contain lots of useless text, just like the text in this paragraph. Or it can contain useful info and cheats. For example if you have a math quiz coming up;
+      </p>
+      <ul
+        className="list"
+      >
+        <li>
+          <code>
+            3 + 8 = 11
+          </code>
+        </li>
+        <li>
+          <code>
+            36 - 22 = 14
+          </code>
+        </li>
+        <li>
+          <code>
+            256 + 113 = 369
+          </code>
+        </li>
+        <li>
+          <code>
+            356 - 1 = 355
+          </code>
+        </li>
+      </ul>
+      <hr />
+      <form
+        onSubmit={[Function]}
+      >
+        <div
+          className="form-group"
         >
-          
-			
-          <Icon
-            icon="close"
-          />
-          
-		
-        </a>
-        <h2>
-          Sheet component
-        </h2>
-        <p>
-          This is the sheet component. It can contain anything you want.
-        </p>
-        <p>
-          It can also contain lots of useless text, just like the text in this paragraph. Or it can contain useful info and cheats. For example if you have a math quiz coming up;
-        </p>
-        <ul
-          className="list"
+          <label
+            htmlFor="full-name"
+          >
+            Full name
+          </label>
+          <div
+            className="input-group"
+          >
+            <input
+              className="form-control"
+              id="full-name"
+              placeholder="Enter your full name"
+              type="text"
+            />
+          </div>
+          <div
+            className="help-block"
+          >
+            Your full name
+          </div>
+        </div>
+        <div
+          className="form-group"
         >
-          <li>
-            <code>
-              3 + 8 = 11
-            </code>
-          </li>
-          <li>
-            <code>
-              36 - 22 = 14
-            </code>
-          </li>
-          <li>
-            <code>
-              256 + 113 = 369
-            </code>
-          </li>
-          <li>
-            <code>
-              356 - 1 = 355
-            </code>
-          </li>
-        </ul>
-        <hr />
-        <form
-          onSubmit={[Function]}
+          <label
+            htmlFor="email-address"
+          >
+            Email
+          </label>
+          <div
+            className="input-group"
+          >
+            <input
+              className="form-control"
+              id="email-address"
+              placeholder="Enter your email"
+              type="text"
+            />
+          </div>
+          <div
+            className="help-block"
+          >
+            Email means electronic mail, not express mail
+          </div>
+        </div>
+        <div
+          className="form-group"
         >
           <div
-            className="form-group"
+            className="checkbox"
           >
+            <input
+              id="subscribe-checkbox"
+              type="checkbox"
+            />
             <label
-              htmlFor="full-name"
+              htmlFor="subscribe-checkbox"
             >
-              Full name
+              Sign up to our math newsletter
             </label>
-            <div
-              className="input-group"
-            >
-              <input
-                className="form-control"
-                id="full-name"
-                placeholder="Enter your full name"
-                type="text"
-              />
-            </div>
-            <div
-              className="help-block"
-            >
-              Your full name
-            </div>
           </div>
-          <div
-            className="form-group"
-          >
-            <label
-              htmlFor="email-address"
-            >
-              Email
-            </label>
-            <div
-              className="input-group"
-            >
-              <input
-                className="form-control"
-                id="email-address"
-                placeholder="Enter your email"
-                type="text"
-              />
-            </div>
-            <div
-              className="help-block"
-            >
-              Email means electronic mail, not express mail
-            </div>
-          </div>
-          <div
-            className="form-group"
-          >
-            <div
-              className="checkbox"
-            >
-              <input
-                id="subscribe-checkbox"
-                type="checkbox"
-              />
-              <label
-                htmlFor="subscribe-checkbox"
-              >
-                Sign up to our math newsletter
-              </label>
-            </div>
-          </div>
-          <button
-            className="btn btn-primary"
-            onClick={[Function]}
-            type="submit"
-          >
-            Submit
-          </button>
-        </form>
-      </section>
-    </div>
+        </div>
+        <button
+          className="btn btn-primary"
+          onClick={[Function]}
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+    </Sheet>
     
 
     <button
@@ -342,137 +308,120 @@ exports[`Documentation: Sheet Example renders 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <div
-      className="sheet"
+    <Sheet
       id="demo-sheet"
     >
-      <section>
-        
-
-        <a
-          className="sheet-close"
-          href="#"
+      <h2>
+        Sheet component
+      </h2>
+      <p>
+        This is the sheet component. It can contain anything you want.
+      </p>
+      <p>
+        It can also contain lots of useless text, just like the text in this paragraph. Or it can contain useful info and cheats. For example if you have a math quiz coming up;
+      </p>
+      <ul
+        className="list"
+      >
+        <li>
+          <code>
+            3 + 8 = 11
+          </code>
+        </li>
+        <li>
+          <code>
+            36 - 22 = 14
+          </code>
+        </li>
+        <li>
+          <code>
+            256 + 113 = 369
+          </code>
+        </li>
+        <li>
+          <code>
+            356 - 1 = 355
+          </code>
+        </li>
+      </ul>
+      <hr />
+      <form
+        onSubmit={[Function]}
+      >
+        <div
+          className="form-group"
         >
-          
-			
-          <Icon
-            icon="close"
-          />
-          
-		
-        </a>
-        <h2>
-          Sheet component
-        </h2>
-        <p>
-          This is the sheet component. It can contain anything you want.
-        </p>
-        <p>
-          It can also contain lots of useless text, just like the text in this paragraph. Or it can contain useful info and cheats. For example if you have a math quiz coming up;
-        </p>
-        <ul
-          className="list"
+          <label
+            htmlFor="full-name"
+          >
+            Full name
+          </label>
+          <div
+            className="input-group"
+          >
+            <input
+              className="form-control"
+              id="full-name"
+              placeholder="Enter your full name"
+              type="text"
+            />
+          </div>
+          <div
+            className="help-block"
+          >
+            Your full name
+          </div>
+        </div>
+        <div
+          className="form-group"
         >
-          <li>
-            <code>
-              3 + 8 = 11
-            </code>
-          </li>
-          <li>
-            <code>
-              36 - 22 = 14
-            </code>
-          </li>
-          <li>
-            <code>
-              256 + 113 = 369
-            </code>
-          </li>
-          <li>
-            <code>
-              356 - 1 = 355
-            </code>
-          </li>
-        </ul>
-        <hr />
-        <form
-          onSubmit={[Function]}
+          <label
+            htmlFor="email-address"
+          >
+            Email
+          </label>
+          <div
+            className="input-group"
+          >
+            <input
+              className="form-control"
+              id="email-address"
+              placeholder="Enter your email"
+              type="text"
+            />
+          </div>
+          <div
+            className="help-block"
+          >
+            Email means electronic mail, not express mail
+          </div>
+        </div>
+        <div
+          className="form-group"
         >
           <div
-            className="form-group"
+            className="checkbox"
           >
+            <input
+              id="subscribe-checkbox"
+              type="checkbox"
+            />
             <label
-              htmlFor="full-name"
+              htmlFor="subscribe-checkbox"
             >
-              Full name
+              Sign up to our math newsletter
             </label>
-            <div
-              className="input-group"
-            >
-              <input
-                className="form-control"
-                id="full-name"
-                placeholder="Enter your full name"
-                type="text"
-              />
-            </div>
-            <div
-              className="help-block"
-            >
-              Your full name
-            </div>
           </div>
-          <div
-            className="form-group"
-          >
-            <label
-              htmlFor="email-address"
-            >
-              Email
-            </label>
-            <div
-              className="input-group"
-            >
-              <input
-                className="form-control"
-                id="email-address"
-                placeholder="Enter your email"
-                type="text"
-              />
-            </div>
-            <div
-              className="help-block"
-            >
-              Email means electronic mail, not express mail
-            </div>
-          </div>
-          <div
-            className="form-group"
-          >
-            <div
-              className="checkbox"
-            >
-              <input
-                id="subscribe-checkbox"
-                type="checkbox"
-              />
-              <label
-                htmlFor="subscribe-checkbox"
-              >
-                Sign up to our math newsletter
-              </label>
-            </div>
-          </div>
-          <button
-            className="btn btn-primary"
-            onClick={[Function]}
-            type="submit"
-          >
-            Submit
-          </button>
-        </form>
-      </section>
-    </div>
+        </div>
+        <button
+          className="btn btn-primary"
+          onClick={[Function]}
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+    </Sheet>
     
 
     <button
@@ -511,6 +460,7 @@ exports[`Documentation: Sheet renders 1`] = `
     Sheet is a container component that is anchored on the right side of the screen and can contain a number of different things.
   </p>
   <Example />
+  <RequireAction />
   <JavascriptMethods />
 </DocContainer>
 `;

@@ -14,6 +14,7 @@
 - Added open and close by ID to nav object
 - Added open and close by ID to tabs object
 - Added open and close by ID to topbar object
+- Added option to disable the listener resposible for closing the sheet on clicking outside (data-require-action).
 
 ### Changed
 
