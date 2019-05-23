@@ -18,7 +18,8 @@ environment:
     secure: U3oByHGtWDiIy9psThpxwg==
   # Sentry
   sentry_token:
-    secure: a/+7STfY8W8+RTlSDgKIZghq6iIy8K9WL5lICC6wsaoXPvKuBMjCsTE/KBdvP6vauLd9E2zbGHWjGUTI8SrF1bZUluC4VqhmrkWz9edM+10=
+    secure: ZVzDML65c1wV9ID2TIWIvuPITTVzczNRt1VXpJn3KbJ77ImHnFPD1SBLNnAk4V6B
+    # secure: a/+7STfY8W8+RTlSDgKIZghq6iIy8K9WL5lICC6wsaoXPvKuBMjCsTE/KBdvP6vauLd9E2zbGHWjGUTI8SrF1bZUluC4VqhmrkWz9edM+10=
   # Slack hook for bot to #design-guide-dev
   slack_designguide_webhook:
     secure: gxWz5+nY3Ctg2JTqo5RQVwHA+UNxiB/H1u72IC71b3oBZj/dxqBLc1/EYZtxzWjiOCXPSOfKJ485+XhtyTt1kNjHon7JWRftucuOyhaozmw=
