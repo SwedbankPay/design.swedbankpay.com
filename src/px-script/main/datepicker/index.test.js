@@ -64,6 +64,18 @@ describe("px-script: datepicker", () => {
             expect(datepicker.init("test")).toBeNull();
             expect(console.warn).toHaveBeenCalled();
         });
+
+        it("destroys existing flatpickr instances", () => {
+            ReactDOM.render(<Datepicker id="test-datepicker" />, div);
+
+            datepicker.init();
+
+            expect(document.querySelectorAll(".flatpickr-calendar").length).toEqual(1);
+
+            datepicker.init();
+
+            expect(document.querySelectorAll(".flatpickr-calendar").length).toEqual(1);
+        });
     });
 
     it("warns about non-existing formats", () => {

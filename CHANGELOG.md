@@ -12,4 +12,6 @@
 
 ### Fixed
 
+- datepicker.init() now deletes existing flatpickr instances when init is called more than once.
+
 ### Removed

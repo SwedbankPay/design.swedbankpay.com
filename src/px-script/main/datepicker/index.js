@@ -57,6 +57,10 @@ const _createDatepicker = datepicker => {
     return datepickerObj;
 };
 
+const _destroyDatepickers = () => {
+    _datepickers.forEach(datepicker => datepicker.destroy());
+};
+
 const init = id => {
     if (id) {
         const datepicker = document.getElementById(id);
@@ -67,6 +71,8 @@ const init = id => {
             return null;
         }
 
+        if (_datepickers.length) { _destroyDatepickers(); }
+
         return _createDatepicker(datepicker);
     } else {
         const datepickers = document.querySelectorAll(SELECTORS.DATEPICKER);
@@ -76,6 +82,8 @@ const init = id => {
 
             return null;
         }
+
+        if (_datepickers.length) { _destroyDatepickers(); }
 
         return [...datepickers].map(datepicker => _createDatepicker(datepicker));
     }
