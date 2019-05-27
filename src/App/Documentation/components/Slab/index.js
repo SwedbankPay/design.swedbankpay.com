@@ -51,7 +51,7 @@ const SlabArrow = () => (
     <>
         <h2 id="slab-arrow">Slab arrow</h2>
         <p>
-            <Property val=".slab-arrow" /> inherits the color from the slab it is appended to, and is given a border
+            <Property value=".slab-arrow" /> inherits the color from the slab it is appended to, and is given a border
             if used with slab-white.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
@@ -75,24 +75,24 @@ const SlabColors = () => (
                 <h4>Here is some text and then a striped item list</h4>
                 <p>
                     Some text with a small listing of items underneath.
-                    <ul className="list item-list">
-                        <li>Item 1</li>
-                        <li>Item 2</li>
-                        <li>Item 3</li>
-                    </ul>
                 </p>
+                <ul className="list item-list">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
             </div>
 
             <div className="slab slab-apricot">
                 <h4>Here is some text and then a striped item list</h4>
                 <p>
                     Some text with a small listing of items underneath.
-                    <ul className="list item-list">
-                        <li>Item 1</li>
-                        <li>Item 2</li>
-                        <li>Item 3</li>
-                    </ul>
                 </p>
+                <ul className="list item-list">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
             </div>
         </ComponentPreview>
     </>

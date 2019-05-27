@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Card = ({ type, title, imgSrc, text, textSection, smallText, btnTxt, footerTxt, footerLink, footerLinkTxt, children }) => (
+const Card = ({ type, title, imgSrc, text, content, textSection, smallText, btnTxt, footerTxt, footerLink, footerLinkTxt, children }) => (
     <div className={`card${type ? ` card-${type}` : ""}`}>
         {imgSrc ? <div className="card-img">{"\n"}
             <img src={imgSrc} alt=""/>{"\n"}
@@ -19,6 +19,7 @@ const Card = ({ type, title, imgSrc, text, textSection, smallText, btnTxt, foote
                 : null
             }
             {text ? <p>{text}</p> : null}{"\n"}
+            {content ? <>{content}</> : null}{"\n"}
             {textSection ?
                 textSection.map((secText, i) => <p key={`card-p-${i}`}>{secText}</p>)
                 : null
@@ -34,8 +35,8 @@ const Card = ({ type, title, imgSrc, text, textSection, smallText, btnTxt, foote
 );
 
 Card.propTypes = {
-    type: PropTypes.oneOf(["brand", "default", "light"]),
-    title: PropTypes.string,
+    type: PropTypes.oneOf(["primary", "secondary", "plain"]),
+    // title: PropTypes.string,
     imgSrc: PropTypes.string,
     icon: PropTypes.string,
     text: PropTypes.string,

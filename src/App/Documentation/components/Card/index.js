@@ -21,14 +21,12 @@ const DefaultBehaviour = () => (
                     title={<MediaObject size="sm" icon="account_circle" heading="Bob Corlsan" text="bob.corlsan@payex.com" textSmall />}
                     type="primary"
                     imgSrc="https://picsum.photos/300/?random"
-                    text={
-                            <>
-                                This paragraph contains some text about the person displayed above.
-                                <ul className="list pt-3">
-                                    <li><span className="font-weight-bold">Card number:</span> 4563 5648 5642</li>
-                                    <li><span className="font-weight-bold">Balance:</span> 2500,- </li>
-                                </ul>
-                            </>
+                    text="This paragraph contains some text about the person displayed above."
+                    content={
+                        <ul className="list pt-3">
+                            <li><span className="font-weight-bold">Card number:</span> 4563 5648 5642</li>
+                            <li><span className="font-weight-bold">Balance:</span> 2500,- </li>
+                        </ul>
                     }
                     btnTxt="Button"
                 />

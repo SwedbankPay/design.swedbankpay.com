@@ -22,11 +22,10 @@ exports[`Components: ActionLink ActionLinkBadge renders 1`] = `
       
 
       <span
-        className="badge badge-brand"
+        className="badge badge-yellow"
       >
         40
       </span>
-       
       
 
       My link

@@ -94,20 +94,20 @@ exports[`Components: Slab SlabColors renders 1`] = `
       </h4>
       <p>
         Some text with a small listing of items underneath.
-        <ul
-          className="list item-list"
-        >
-          <li>
-            Item 1
-          </li>
-          <li>
-            Item 2
-          </li>
-          <li>
-            Item 3
-          </li>
-        </ul>
       </p>
+      <ul
+        className="list item-list"
+      >
+        <li>
+          Item 1
+        </li>
+        <li>
+          Item 2
+        </li>
+        <li>
+          Item 3
+        </li>
+      </ul>
     </div>
     <div
       className="slab slab-apricot"
@@ -117,20 +117,20 @@ exports[`Components: Slab SlabColors renders 1`] = `
       </h4>
       <p>
         Some text with a small listing of items underneath.
-        <ul
-          className="list item-list"
-        >
-          <li>
-            Item 1
-          </li>
-          <li>
-            Item 2
-          </li>
-          <li>
-            Item 3
-          </li>
-        </ul>
       </p>
+      <ul
+        className="list item-list"
+      >
+        <li>
+          Item 1
+        </li>
+        <li>
+          Item 2
+        </li>
+        <li>
+          Item 3
+        </li>
+      </ul>
     </div>
   </ComponentPreview>
 </Fragment>

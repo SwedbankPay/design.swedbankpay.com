@@ -9,15 +9,15 @@ exports[`Component: Card -  renders a button in the footer 1`] = `
   >
     
 
-  </div>
-  <footer>
+    
+
     <button
       className="btn btn-executive btn-block"
       type="button"
     >
       Button
     </button>
-  </footer>
+  </div>
 </div>
 `;
 
@@ -26,31 +26,17 @@ exports[`Component: Card -  renders a child object 1`] = `
   className="card"
 >
   <div
-    className="highlight"
-  >
-    This is child text
-  </div>
-  <div
     className="card-body"
   >
+    <div
+      className="highlight"
+    >
+      This is child text
+    </div>
     
 
-  </div>
-</div>
-`;
-
-exports[`Component: Card -  renders a smallText in card-body 1`] = `
-<div
-  className="card"
->
-  <div
-    className="card-body"
-  >
     
 
-    <small>
-      small text
-    </small>
   </div>
 </div>
 `;
@@ -67,6 +53,8 @@ exports[`Component: Card -  renders a text in card-body 1`] = `
     </p>
     
 
+    
+
   </div>
 </div>
 `;
@@ -76,17 +64,13 @@ exports[`Component: Card -  renders a title 1`] = `
   className="card"
 >
   <header>
-    <h3>
-      <a
-        href="#"
-      >
-        Card title goes here
-      </a>
-    </h3>
+    Card title goes here
   </header>
   <div
     className="card-body"
   >
+    
+
     
 
   </div>
@@ -114,6 +98,8 @@ exports[`Component: Card -  renders an image 1`] = `
   >
     
 
+    
+
   </div>
 </div>
 `;
@@ -125,6 +111,8 @@ exports[`Component: Card -  renders footer link text 1`] = `
   <div
     className="card-body"
   >
+    
+
     
 
   </div>
@@ -151,6 +139,8 @@ exports[`Component: Card -  renders footer text 1`] = `
   >
     
 
+    
+
   </div>
   <footer>
     <div
@@ -173,6 +163,8 @@ exports[`Component: Card -  renders with class name card 1`] = `
   >
     
 
+    
+
   </div>
 </div>
 `;
@@ -186,12 +178,15 @@ exports[`Component: Card -  renders with correct class name 1`] = `
   >
     
 
+    
+
   </div>
 </div>
 `;
 
 exports[`Component: Card -  renders with only body when no props are passed 1`] = `
 "<div class=\\"card\\"><div class=\\"card-body\\">
+
 </div></div>"
 `;
 
@@ -202,6 +197,8 @@ exports[`Component: Card -  throws an error if type does not match proptypes 1`]
   <div
     className="card-body"
   >
+    
+
     
 
   </div>
