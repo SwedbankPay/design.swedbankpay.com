@@ -6,6 +6,8 @@
 
 ### Changed
 
+- Changed how labels, help-blocks, legends and placeholders appear.
+
 ### Fixed
 
 ### Removed

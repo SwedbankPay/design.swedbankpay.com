@@ -2,9 +2,7 @@ label {
     display: inline-block;
     max-width: 100%;
     margin-bottom: @base-margin-xs;
-    // font-weight: @font-weight-light;
-    font-size: @base-font-size;
-    color: @input-color;
+    font-size: @base-font-size * 0.9;
     line-height: 1.5;
 
     .required-asterisk {
@@ -153,8 +151,6 @@ legend {
     width: 100%;
     margin-bottom: @legend-bottom-margin;
     line-height: @base-font-size * 2.8;
-    font-weight: 300;
-    font-size: @base-font-size * 0.9;
     color: @legend-color;
     border: 0;
     border-bottom: 1px solid @legend-border-color;
@@ -187,7 +183,8 @@ legend {
 
     &::placeholder {
         color: @gray-6; /* Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526. */
-        opacity: 1;
+        font-weight: 300;
+        letter-spacing: -0.1px;
     }
 
     /* HTML5 says that controls under a fieldset > legend:first-child wont be
@@ -233,6 +230,7 @@ legend {
     margin: @helpblock-margin;
     color: lighten(@text-color, 25%);
     font-size: @base-font-size * 0.8;
+    font-style: italic;
     line-height: 1rem;
     min-height: 1rem;
 
