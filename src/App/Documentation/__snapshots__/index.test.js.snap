@@ -111,7 +111,7 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "core/Tables",
                 "path": "/docs/core/tables",
-                "title": "Tables ☐",
+                "title": "Tables",
               },
               Object {
                 "componentPath": "core/Typography",

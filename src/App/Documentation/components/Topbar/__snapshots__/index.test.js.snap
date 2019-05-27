@@ -1,34 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components: Topbar FixedTopbar renders 1`] = `
-<Fragment>
-  <h2
-    id="fixed-topbar"
-  >
-    Fixed topbar
-  </h2>
-  <p>
-    Add 
-    <Property
-      value=".topbar-fixed"
-    />
-     with your 
-    <Property
-      value=".topbar"
-    />
-     to get a fixed topbar. For a demonstration of the usage see the documentations top bar or implement it in your own project!
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-  >
-    <Topbar
-      fixed={true}
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
 exports[`Components: Topbar JavascriptMethods renders 1`] = `
 <Fragment>
   <h2
@@ -134,6 +105,51 @@ exports[`Components: Topbar Overview renders 1`] = `
 </Fragment>
 `;
 
+exports[`Components: Topbar TopbarWide renders 1`] = `
+<Fragment>
+  <h2
+    id="topbar-wide"
+  >
+    Wide topbar
+  </h2>
+  <p>
+    This is a wide topbar.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Topbar
+      logout={true}
+      topbarContent={
+        Object {
+          "btn": Object {
+            "icon": "menu",
+            "name": "Menu",
+          },
+          "items": Array [
+            Object {
+              "icon": "home",
+              "name": "Home",
+            },
+            Object {
+              "icon": "shopping_cart",
+              "name": "Purchase history",
+            },
+            Object {
+              "icon": "settings",
+              "name": "Settings",
+            },
+          ],
+        }
+      }
+      wide="xl"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Components: Topbar renders 1`] = `
 <DocContainer
   docToc={true}
@@ -144,7 +160,7 @@ exports[`Components: Topbar renders 1`] = `
     The topbar is used to give users an easily available navigational bar at the top of your web application.
   </p>
   <Overview />
-  <FixedTopbar />
+  <TopbarWide />
   <JavascriptMethods />
 </DocContainer>
 `;

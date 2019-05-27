@@ -54,13 +54,13 @@ exports[`Component: Topbar -  menu links prevents default when clicked 1`] = `
       text="Menu"
     >
       <button
-        className="topbar-menu-button"
+        className="topbar-btn"
         type="button"
       >
         
 		
         <i
-          className="material-icons topbar-menu-icon"
+          className="material-icons topbar-btn-icon"
         >
           menu
         </i>
@@ -246,13 +246,13 @@ exports[`Component: Topbar -  renders a topbar-menu-button when content is provi
       text="Menu"
     >
       <button
-        className="topbar-menu-button"
+        className="topbar-btn"
         type="button"
       >
         
 		
         <i
-          className="material-icons topbar-menu-icon"
+          className="material-icons topbar-btn-icon"
         >
           menu
         </i>
@@ -461,13 +461,13 @@ exports[`Component: Topbar -  renders topbar-link-container and a logout link 1`
       text="Menu"
     >
       <button
-        className="topbar-menu-button"
+        className="topbar-btn"
         type="button"
       >
         
 		
         <i
-          className="material-icons topbar-menu-icon"
+          className="material-icons topbar-btn-icon"
         >
           menu
         </i>
@@ -656,13 +656,13 @@ exports[`Component: Topbar -  renders topbar-link-container and populates it wit
       text="Menu"
     >
       <button
-        className="topbar-menu-button"
+        className="topbar-btn"
         type="button"
       >
         
 		
         <i
-          className="material-icons topbar-menu-icon"
+          className="material-icons topbar-btn-icon"
         >
           menu
         </i>

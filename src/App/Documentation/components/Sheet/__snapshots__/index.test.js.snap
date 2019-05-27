@@ -135,7 +135,7 @@ exports[`Documentation: Sheet Example onClick prevents default 1`] = `
     
 
     <button
-      className="btn btn-executive"
+      className="btn btn-primary"
       data-sheet-open="demo-sheet"
       type="button"
     >
@@ -280,7 +280,7 @@ exports[`Documentation: Sheet Example onSubmit prevents default 1`] = `
     
 
     <button
-      className="btn btn-executive"
+      className="btn btn-primary"
       data-sheet-open="demo-sheet"
       type="button"
     >
@@ -425,7 +425,7 @@ exports[`Documentation: Sheet Example renders 1`] = `
     
 
     <button
-      className="btn btn-executive"
+      className="btn btn-primary"
       data-sheet-open="demo-sheet"
       type="button"
     >

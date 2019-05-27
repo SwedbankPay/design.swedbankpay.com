@@ -36,7 +36,7 @@ describe("Components: Topbar", () => {
 
     describe("TopbarWide", () => {
         it("is defined", () => {
-            expect(FixedTopbar).toBeDefined();
+            expect(TopbarWide).toBeDefined();
         });
 
         it("renders", () => {

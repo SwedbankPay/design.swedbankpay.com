@@ -15,7 +15,7 @@ const Overview = () => (
             {"<button onclick=\"px.toast({ html: 'I am a toast!' })\" class=\"btn btn-executive\">Toast!</button>"}
         </ComponentPreview>
         <ComponentPreview language="html" showCasePanel>
-            <button className="btn btn-executive" type="button" onClick={() => toast({ html: "I am a toast!" })}>Click for toast!</button>
+            <button className="btn btn-executive" type="button" onClick={() => px.toast({ html: "I am a toast!" })}>Click for toast!</button>
         </ComponentPreview>
         <Alert type="warning">
             <h5>Content restriction</h5>
@@ -156,7 +156,7 @@ const CustomHtml = () => {
                 {"px.toast({ html: toastHtml });"}
             </ComponentPreview>
             <ComponentPreview language="html" showCasePanel>
-                <button className="btn btn-executive" type="button" onClick={() => toast({ html: toastHtml })}>Toast with action</button>
+                <button className="btn btn-executive" type="button" onClick={() => px.toast({ html: toastHtml })}>Toast with action</button>
             </ComponentPreview>
         </>
     );

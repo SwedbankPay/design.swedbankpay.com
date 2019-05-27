@@ -13,6 +13,7 @@ const TopbarBtn = ({ icon, text }) => {
                         <i className={iconClass}>{icon}</i>
                         {"\n\t\t"}
                     </>
+                    : null}
             </button>
         );
     }
@@ -55,8 +56,8 @@ const TopbarMenu = ({ menu, logout }) => {
     );
 };
 
-const Topbar = ({ topbarContent, wide, logout }) => (
-    <header className={`topbar${wide ? ` topbar-${wide}-wide` : ""}`}>{"\n"}
+const Topbar = ({ topbarContent, wide, logout, id }) => (
+    <header className={`topbar${wide ? ` topbar-${wide}-wide` : ""}`} id={id}>{"\n"}
         {topbarContent ?
         <>
             <TopbarBtn icon={topbarContent.btn.icon} text={topbarContent.btn.name} target={topbarContent.id} />{"\n"}
