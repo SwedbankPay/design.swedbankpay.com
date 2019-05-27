@@ -1,62 +1,58 @@
-import { isWithinBoundingBox, handleScrollbar } from "../utils";
+import { isWithinBoundingBox } from "../utils";
+
+const SELECTORS = {
+    BTN: ".topbar-btn",
+    ICON: ".topbar-btn-icon"
+};
 
 export default class NavMenu {
-    constructor (topbarComponent) {
-        this.topbar = topbarComponent;
-        this.topbarNav = this.topbar.querySelector(".topbar-nav");
-        this.linkContainer = this.topbarNav.querySelector(".topbar-link-container");
-        this.btnElement = this.topbar.querySelector(".topbar-menu-button");
-        this.closeNavIcon = this.topbar.querySelector(".close-topbar-nav");
+    constructor (topbarComponent, navMenu) {
+        this.id = topbarComponent.id;
+        this.navMenuElement = navMenu;
         this.isOpen = false;
-        this._initAnchors();
+        this.btnElement = topbarComponent.querySelector(SELECTORS.BTN);
+        this.iconElement = this.btnElement ? this.btnElement.querySelector(SELECTORS.ICON) : null;
+        this.userIcon = this.iconElement ? this.iconElement.innerHTML : null;
 
-        try {
+        if (this.btnElement) {
             this.btnElement.addEventListener("click", e => {
                 e.preventDefault();
-                this.handleClick();
+                this._handleClick();
             });
-        } catch (e) {
-            console.error("Topbar is missing a menu button");
         }
 
-        try {
-            this.closeNavIcon.addEventListener("click", () => {
-                this.close();
-            });
-        } catch (e) {
-            console.error("Topbar is missing a close icon");
-        }
+        this._initAnchors();
     }
 
     _initAnchors () {
         // Closing menu for clicking on links in SPA's.
-        this.topbarNav.querySelectorAll("a")
-            .forEach(anchor => anchor.addEventListener("click", () => this.isOpen ? this.close() : null));
+        this.navMenuElement.querySelectorAll("a")
+            .forEach(anchor => anchor.addEventListener("click", () => this.close()));
     }
 
     open () {
-        handleScrollbar();
-        this.topbarNav.classList.add("d-block");
-        setTimeout(() => {
-            this.topbarNav.classList.add("topbar-nav-open");
-        }, 10);
+        this.navMenuElement.classList.add("in");
         this.isOpen = true;
+
+        if (this.iconElement) {
+            this.iconElement.innerHTML = "close";
+        }
     }
 
     close () {
-        handleScrollbar();
-        this.topbarNav.classList.remove("topbar-nav-open");
+        this.navMenuElement.classList.remove("in");
         this.isOpen = false;
-        setTimeout(() => {
-            this.topbarNav.classList.remove("d-block");
-        }, 300);
+
+        if (this.iconElement) {
+            this.iconElement.innerHTML = this.userIcon;
+        }
     }
 
-    handleClick () {
+    _handleClick () {
         this.isOpen ? this.close() : this.open();
     }
 
-    containsPoint (x, y) {
-        return isWithinBoundingBox(x, y, this.linkContainer);
+    _containsPoint (x, y) {
+        return isWithinBoundingBox(x, y, this.navMenuElement) || isWithinBoundingBox(x, y, this.btnElement);
     }
 }

@@ -14,7 +14,9 @@
         "mocha": true,
         "jest/globals": true
     },
-    "globals": { },
+    "globals": { 
+        "px": true
+    },
     "plugins": [
         "babel",
         "react",

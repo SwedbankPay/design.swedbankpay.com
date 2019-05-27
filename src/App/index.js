@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import { Router, Switch, Route, withRouter } from "react-router-dom";
-import createHistory from "history/createBrowserHistory";
+import { createBrowserHistory } from "history";
 import Loadable from "react-loadable";
 
 import AppHeader from "./AppHeader";
 import { LoadingComponent } from "./utils";
 import { topbar } from "../px-script/main";
 
-const BASENAME = process.env.basename;
-const history = createHistory({ basename: BASENAME });
+const BASENAME = process.env.basename || "/";
+const history = createBrowserHistory({ basename: BASENAME });
 
 class ScrollToTop extends Component {
     componentDidUpdate (prevProps) {

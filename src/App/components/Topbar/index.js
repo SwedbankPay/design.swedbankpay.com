@@ -3,11 +3,12 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 
 const TopbarBtn = ({ icon, text }) => {
-    const iconClass = classnames("material-icons", icon === "menu" ? "topbar-menu-icon" : "");
+    const iconClass = classnames("material-icons", icon === "menu" ? "topbar-btn-icon" : "");
 
     if (icon || text) {
         return (
-            <button type="button" className="topbar-menu-button">{"\n\t\t"}
+            <button type="button" className="topbar-btn">{"\n\t\t"}
+                {icon ?
                     <>
                         <i className={iconClass}>{icon}</i>
                         {"\n\t\t"}

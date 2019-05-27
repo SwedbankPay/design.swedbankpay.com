@@ -1,5 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Components: Topbar FixedTopbar renders 1`] = `
+<Fragment>
+  <h2
+    id="fixed-topbar"
+  >
+    Fixed topbar
+  </h2>
+  <p>
+    Add 
+    <Property
+      value=".topbar-fixed"
+    />
+     with your 
+    <Property
+      value=".topbar"
+    />
+     to get a fixed topbar. For a demonstration of the usage see the documentations top bar or implement it in your own project!
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+  >
+    <Topbar
+      fixed={true}
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Components: Topbar JavascriptMethods renders 1`] = `
+<Fragment>
+  <h2
+    id="javascript-methods"
+  >
+    JavaScript Methods
+  </h2>
+  <JavascriptDocs
+    close={true}
+    componentName="topbar"
+    open={true}
+  />
+</Fragment>
+`;
+
 exports[`Components: Topbar Overview renders 1`] = `
 <Fragment>
   <h2
@@ -61,6 +105,7 @@ exports[`Components: Topbar Overview renders 1`] = `
     showCasePanel={true}
   >
     <Topbar
+      id="demo-topbar"
       logout={true}
       topbarContent={
         Object {
@@ -99,6 +144,7 @@ exports[`Components: Topbar renders 1`] = `
     The topbar is used to give users an easily available navigational bar at the top of your web application.
   </p>
   <Overview />
-  <TopbarWide />
+  <FixedTopbar />
+  <JavascriptMethods />
 </DocContainer>
 `;

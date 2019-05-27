@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 import { ComponentPreview, DocContainer, Property, Attribute } from "#";
 import PrismCode from "react-prism";
@@ -190,29 +190,19 @@ const Disabled = () => (
     </>
 );
 
-class InputGroup extends Component {
-    componentDidMount () {
-        // forms.init();
-    }
-
-    render () {
-        return (
-            <DocContainer docToc>
-                <p className="lead">
-                    You can include additional information to specific input elements by adding <PrismCode className="language-html">{"<span>"}</PrismCode>s
-                    or <PrismCode className="language-html">{"<button>"}</PrismCode>s in a <Property value=".input-group" />.
-                </p>
-                <BasicExample />
-                {/* <CheckboxesAndRadios /> */}
-                <ButtonAddons />
-                <WithSelect />
-                {/* <WithFeedbackIcon /> */}
-                <ValidationStates />
-                <Disabled />
-            </DocContainer>
-        );
-    }
-}
+const InputGroup = () => (
+    <DocContainer docToc>
+        <p className="lead">
+            You can include additional information to specific input elements by adding <PrismCode className="language-html">{"<span>"}</PrismCode>s
+            or <PrismCode className="language-html">{"<button>"}</PrismCode>s in a <Property value=".input-group" />.
+        </p>
+        <BasicExample />
+        <ButtonAddons />
+        <WithSelect />
+        <ValidationStates />
+        <Disabled />
+    </DocContainer>
+);
 
 export default InputGroup;
 

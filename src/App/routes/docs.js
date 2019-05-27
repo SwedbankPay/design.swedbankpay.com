@@ -21,6 +21,11 @@ module.exports = [
                 title: "Contributing",
                 path: "/docs/getting-started/contributing",
                 componentPath: "getting-started/Contributing"
+            },
+            {
+                title: "JavaScript",
+                path: "/docs/getting-started/javascript",
+                componentPath: "getting-started/Javascript"
             }
         ]
     },
@@ -64,7 +69,12 @@ module.exports = [
                 componentPath: "core/Lists"
             },
             {
-                title: "Tables ☐",
+                title: "Page layout",
+                path: "/docs/core/page-layout",
+                componentPath: "core/Page-layout"
+            },
+            {
+                title: "Tables",
                 path: "/docs/core/tables",
                 componentPath: "core/Tables"
             },
@@ -241,6 +251,11 @@ module.exports = [
         path: "/docs/utilities",
         redirect: "/docs/utilities/colors",
         routes: [
+            {
+                title: "Borders",
+                path: "/docs/utilities/borders",
+                componentPath: "utilities/Borders"
+            },
             {
                 title: "Colors",
                 path: "/docs/utilities/colors",

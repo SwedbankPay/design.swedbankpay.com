@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, Attribute, Property, DocContainer } from "#";
+import { ComponentPreview, Attribute, Property, DocContainer, JavascriptDocs } from "#";
 import ButtonComponent from "@/Button";
 import Alert from "@/Alert";
-import { button } from "$/px-script/main";
+
+const { button } = window.px;
 
 const Examples = () => (
     <>
@@ -210,6 +211,11 @@ const ButtonLoader = () => (
             <h5>Including the loader html</h5>
             <p>If you want more control over the loader component you can include the html yourself (e.g. for server-side rendering), just make sure you do <b>not</b> add the attribute <Attribute data name="button-loader" />.</p>
         </Alert>
+        <h3>JavascriptMethods</h3>
+        <p>
+            Only button loaders have to be initialized.
+        </p>
+        <JavascriptDocs componentName="button" />
     </>
 );
 

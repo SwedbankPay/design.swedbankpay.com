@@ -301,6 +301,15 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
       .
     </p>
   </Alert>
+  <h3>
+    JavascriptMethods
+  </h3>
+  <p>
+    Only button loaders have to be initialized.
+  </p>
+  <JavascriptDocs
+    componentName="button"
+  />
 </Fragment>
 `;
 

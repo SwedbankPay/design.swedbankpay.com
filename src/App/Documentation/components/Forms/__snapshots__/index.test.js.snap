@@ -288,6 +288,27 @@ exports[`Documentation: Forms FormGrid renders 1`] = `
 </Fragment>
 `;
 
+exports[`Documentation: Forms JavascriptMethods renders 1`] = `
+<Fragment>
+  <h2
+    id="javascript-methods"
+  >
+    JavaScript methods
+  </h2>
+  <JavascriptDocs
+    componentName="validation"
+  />
+  <p>
+    The 
+    <PxScript
+      component="validation"
+      func="init"
+    />
+     can be used on a form tag to initialize all fields contained in the form, or you can pass a single field to initialize just that one.
+  </p>
+</Fragment>
+`;
+
 exports[`Documentation: Forms Overview form prevents default 1`] = `
 <Fragment>
   <h2
@@ -1013,5 +1034,6 @@ exports[`Documentation: Forms renders 1`] = `
   <Toggleboxes />
   <RangeSlider />
   <DisabledFormComponents />
+  <JavascriptMethods />
 </DocContainer>
 `;

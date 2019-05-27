@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer, Attribute } from "#";
-import { toast } from "$/px-script/main";
 import Alert from "@/Alert";
 
 const Overview = () => (
@@ -22,8 +21,9 @@ const Overview = () => (
             <h5>Content restriction</h5>
             <p>
                 Don’t put too much text in toasts as they are meant to be visible for only a short amount of time.
-                Due to the time restriction you should also avoid putting vital information in them. If you wish to give some sort of feedback
-                to the user see <Link to="/docs/components/dialog">dialog</Link> or <Link to="/docs/components/sheet">sheet</Link>.
+                Due to the time restriction you should also avoid putting vital information in them.
+                A <Link to="/docs/components/sheet">sheet</Link> or <Link to="/docs/components/dialog">dialog</Link> is
+                recommended when recieving input or relaying large amounts of information.
             </p>
         </Alert>
     </>
@@ -103,7 +103,7 @@ const PremadeToasts = () => (
             <button
                 className="btn btn-executive"
                 type="button"
-                onClick={() => toast({
+                onClick={() => px.toast({
                     html: "I am a toast!",
                     type: "neutral"
                 })}
@@ -113,7 +113,7 @@ const PremadeToasts = () => (
             <button
                 className="btn btn-executive"
                 type="button"
-                onClick={() => toast({
+                onClick={() => px.toast({
                     html: "I am a toast!",
                     type: "success"
                 })}
@@ -123,7 +123,7 @@ const PremadeToasts = () => (
             <button
                 className="btn btn-executive"
                 type="button"
-                onClick={() => toast({
+                onClick={() => px.toast({
                     html: "I am a toast!",
                     type: "warning"
                 })}
@@ -133,7 +133,7 @@ const PremadeToasts = () => (
             <button
                 className="btn btn-executive"
                 type="button"
-                onClick={() => toast({
+                onClick={() => px.toast({
                     html: "I am a toast!",
                     type: "danger"
                 })}

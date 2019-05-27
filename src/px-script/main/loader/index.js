@@ -12,20 +12,34 @@ const _appendLoader = loader => {
     }
 
     loader.appendChild(ul);
+
+    return { container: loader };
 };
 
-const loader = (() => {
-    const init = () => {
+const init = id => {
+    if (id) {
+        const loader = document.getElementById(id);
+
+        if (!loader) {
+            console.warn(`No loader with id ${id} found`);
+
+            return null;
+        }
+
+        return _appendLoader(loader);
+    } else {
         const loaders = document.querySelectorAll(SELECTORS.LOADER);
 
-        if (loaders) {
-            loaders.forEach(loader => {
-                _appendLoader(loader);
-            });
+        if (!loaders.length) {
+            console.warn("No loaders found");
+
+            return null;
         }
-    };
 
-    return { init };
-})();
+        return [...loaders].map(loader => _appendLoader(loader));
+    }
+};
 
-export default loader;
+export default {
+    init
+};

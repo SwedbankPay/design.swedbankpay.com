@@ -1,33 +1,91 @@
 import NavMenu from "./NavMenu";
 
-const topbar = (() => {
-    const init = index => {
-        const topbarComponent = document.querySelectorAll(".topbar")[index || 0];
-        let navMenu;
+const SELECTORS = {
+    TOPBAR: ".topbar",
+    TOPBARLINKS: ".topbar-nav"
+};
 
-        if (topbarComponent) {
-            navMenu = topbarComponent.querySelector(".topbar-nav");
+const _navMenus = _navMenus || [];
 
-            if (navMenu) {
-                navMenu = new NavMenu(topbarComponent);
+const _createTopbar = (topbar, navMenu) => {
+    const navMenuObject = new NavMenu(topbar, navMenu);
 
-                document.querySelector("html").addEventListener("mousedown", e => {
-                    if (navMenu.isOpen && !navMenu.containsPoint(e.clientX, e.clientY)) {
-                        navMenu.close();
-                    }
-                });
+    _navMenus.push(navMenuObject);
 
-                // Close sheet on esc
-                document.addEventListener("keydown", e => {
-                    if (e.key === "Escape" && navMenu.isOpen) {
-                        navMenu.close();
-                    }
-                });
-            }
+    document.querySelector("html").addEventListener("mousedown", e => {
+        if (navMenuObject.isOpen && !navMenuObject._containsPoint(e.clientX, e.clientY)) {
+            navMenuObject.close();
         }
-    };
+    });
 
-    return { init };
-})();
+    return navMenuObject;
+};
 
-export default topbar;
+const init = id => {
+    if (id) {
+        const topbar = document.getElementById(id);
+        const navMenuQuery = topbar.querySelector(SELECTORS.TOPBARLINKS);
+
+        if (!topbar) {
+            console.warn(`No topbar with id ${id} found`);
+
+            return null;
+        }
+
+        return navMenuQuery ? _createTopbar(topbar, navMenuQuery) : null;
+    } else {
+        const topbars = document.querySelectorAll(SELECTORS.TOPBAR);
+
+        if (!topbars.length) {
+            console.warn("No topbars found");
+
+            return null;
+        }
+
+        const navMenuObjects = [...topbars].map(topbar => {
+            const navMenuQuery = topbar.querySelector(SELECTORS.TOPBARLINKS);
+
+            navMenuQuery ? _createTopbar(topbar, navMenuQuery) : null;
+        });
+
+        return navMenuObjects;
+    }
+};
+
+const open = id => {
+    let navmenu = null;
+
+    _navMenus.forEach(n => n.id === id ? navmenu = n : null);
+
+    try {
+        navmenu.open();
+    } catch (e) {
+        console.error(`navmenu.open: No navmenu with id "${id}" found.`);
+
+        return false;
+    }
+
+    return navmenu;
+};
+
+const close = id => {
+    let navmenu = null;
+
+    _navMenus.forEach(n => n.id === id ? navmenu = n : null);
+
+    try {
+        navmenu.close();
+    } catch (e) {
+        console.error(`navmenu.close: No navmenu with id "${id}" found.`);
+
+        return false;
+    }
+
+    return navmenu;
+};
+
+export default {
+    init,
+    open,
+    close
+};

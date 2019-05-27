@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import ActionList, { Overview, Anchorpoints } from "./index";
+import ActionList, { Overview, Anchorpoints, JavascriptMethods } from "./index";
 
 describe("Components: ActionList", () => {
     it("is defined", () => {
@@ -9,9 +9,12 @@ describe("Components: ActionList", () => {
     });
 
     it("renders", () => {
+        console.warn = jest.fn();
+
         const wrapper = shallow(<ActionList />);
 
         expect(wrapper).toMatchSnapshot();
+        expect(console.warn).toHaveBeenCalled();
     });
 
     describe("Overview", () => {
@@ -32,6 +35,18 @@ describe("Components: ActionList", () => {
 
             onclickAnchors.forEach(anchor => anchor.simulate("click", clickHandler));
             expect(clickHandler.preventDefault).toHaveBeenCalledTimes(onclickAnchors.length);
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("JavascriptMethods", () => {
+        it("is defined", () => {
+            expect(JavascriptMethods).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<JavascriptMethods />);
+
             expect(wrapper).toMatchSnapshot();
         });
     });

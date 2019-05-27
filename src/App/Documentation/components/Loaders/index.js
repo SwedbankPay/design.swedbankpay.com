@@ -2,7 +2,8 @@ import React, { Component } from "react";
 
 import { ComponentPreview, Attribute, DocContainer, Property } from "#";
 import LoaderComponent from "@/Loader";
-import { loader } from "$/px-script/main";
+
+const { loader } = window.px;
 
 const BasicUsage = () => (
     <>

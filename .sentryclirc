@@ -1,6 +1,6 @@
 [defaults]
 url = https://sentry.io/
-org = okb
+org = payexs
 project = payex-designguide-dev
 
 [auth]

@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocContainer, Icon } from "#";
-import actionList from "$/px-script/main/action-list";
+import { ComponentPreview, DocContainer, Icon, JavascriptDocs } from "#";
+
+const { actionList } = window.px;
 
 const Overview = () => (
     <>
@@ -67,6 +68,13 @@ const Anchorpoints = () => (
     </>
 );
 
+const JavascriptMethods = () => (
+    <>
+        <h2 id="javascript-methods">JavaScript methods</h2>
+        <JavascriptDocs componentName="actionList" open close />
+    </>
+);
+
 class ActionList extends Component {
     componentDidMount () {
         actionList.init();
@@ -80,6 +88,7 @@ class ActionList extends Component {
                 </p>
                 <Overview />
                 <Anchorpoints />
+                <JavascriptMethods />
             </DocContainer>
         );
     }
@@ -88,4 +97,4 @@ class ActionList extends Component {
 export default ActionList;
 
 /* For testing */
-export { Overview, Anchorpoints };
+export { Overview, Anchorpoints, JavascriptMethods };

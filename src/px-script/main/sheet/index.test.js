@@ -10,9 +10,9 @@ describe("px-script: sheet", () => {
     document.body.appendChild(div);
     jest.useFakeTimers();
 
-    const Sheet = () => (
+    const Sheet = ({ id }) => (
         <>
-            <div className="sheet" id="demo-sheet">
+            <div className="sheet" id={id}>
                 <section></section>
             </div>
             <button className="btn btn-executive" type="button" data-sheet-open="demo-sheet">Open sheet</button>
@@ -45,13 +45,54 @@ describe("px-script: sheet", () => {
         expect(sheet).toBeDefined();
     });
 
-    it("has an init method", () => {
-        expect(sheet.init).toBeDefined();
-        expect(sheet.init).toBeInstanceOf(Function);
+    describe("sheet.init", () => {
+        it("has an init method", () => {
+            expect(sheet.init).toBeDefined();
+            expect(sheet.init).toBeInstanceOf(Function);
+        });
+
+        it("returns one object when an ID is passed", () => {
+            ReactDOM.render(<Sheet id="demo-sheet-1" />, div);
+
+            const renderedSheet = document.querySelector(".sheet");
+
+            expect(renderedSheet).toBeTruthy();
+
+            const returnVal = sheet.init("demo-sheet-1");
+
+            expect(Array.isArray(returnVal)).toBeFalsy();
+            expect(typeof returnVal).toEqual("object");
+        });
+
+        it("returns an array of objects when more than one sheet is initialized", () => {
+            ReactDOM.render(
+                <>
+                    <Sheet />
+                    <Sheet />
+                </>
+                , div);
+
+            const renderedSheets = document.querySelectorAll(".sheet");
+
+            expect(renderedSheets).toBeTruthy();
+            expect(renderedSheets.length).toEqual(2);
+
+            const returnVal = sheet.init();
+
+            expect(Array.isArray(returnVal)).toBeTruthy();
+            expect(returnVal.length).toEqual(2);
+        });
+
+        it("returns null if no sheet is found and prints a warning", () => {
+            console.warn = jest.fn();
+
+            expect(sheet.init()).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
+        });
     });
 
     it("button with attribute 'data-sheet-open' pointing to the correct id opens corresponding sheet", () => {
-        ReactDOM.render(<Sheet />, div);
+        ReactDOM.render(<Sheet id="demo-sheet" />, div);
 
         const renderedSheet = document.querySelector(".sheet");
         const openBtn = document.querySelector("[data-sheet-open]");
@@ -85,38 +126,6 @@ describe("px-script: sheet", () => {
         expect(renderedSheet.classList).not.toContain("sheet-open");
         expect(document.body.classList).not.toContain("sheet-open");
         expect(renderedSheet.classList).not.toContain("d-block");
-    });
-
-    it("warns user when there is no sheet with an id matching the value of the attribute 'data-sheet-open'", () => {
-        const TestSheet = () => (
-            <>
-                <div className="sheet" id="test-sheet"></div>
-                <button className="btn btn-executive" type="button" data-sheet-open="tester-sheet">Open sheet</button>
-            </>
-        );
-
-        ReactDOM.render(<TestSheet />, div);
-        console.warn = jest.fn();
-
-        sheet.init();
-        expect(console.warn).toHaveBeenCalled();
-        expect(console.warn).toHaveBeenCalledWith(expect.stringContaining("tester-sheet"));
-    });
-
-    it("warns user when there is no sheet with an id matching the value of the attribute 'data-sheet-close'", () => {
-        const TestSheet = () => (
-            <>
-                <div className="sheet" id="test-sheet"></div>
-                <button className="btn btn-executive" type="button" data-sheet-close="tester-sheet">Close sheet</button>
-            </>
-        );
-
-        ReactDOM.render(<TestSheet />, div);
-        console.warn = jest.fn();
-
-        sheet.init();
-        expect(console.warn).toHaveBeenCalled();
-        expect(console.warn).toHaveBeenCalledWith(expect.stringContaining("tester-sheet"));
     });
 
     it("closes sheet when clicking the close icon", () => {
@@ -202,129 +211,135 @@ describe("px-script: sheet", () => {
         expect(renderedSheet.classList).not.toContain("d-block");
     });
 
-    it("opens sheet when calling sheet.open", () => {
-        ReactDOM.render(<Sheet />, div);
+    describe("sheet.open", () => {
+        it("opens sheet when calling sheet.open", () => {
+            ReactDOM.render(<Sheet id="demo-sheet" />, div);
 
-        const renderedSheet = document.querySelector(".sheet");
+            const renderedSheet = document.querySelector(".sheet");
 
-        expect(renderedSheet.classList).not.toContain("d-block");
-        expect(renderedSheet.classList).not.toContain("sheet-open");
-        expect(document.body.classList).not.toContain("sheet-open");
+            expect(renderedSheet.classList).not.toContain("d-block");
+            expect(renderedSheet.classList).not.toContain("sheet-open");
+            expect(document.body.classList).not.toContain("sheet-open");
 
-        sheet.init();
-        expect(document.body.classList).not.toContain("sheet-open");
+            sheet.init();
+            expect(document.body.classList).not.toContain("sheet-open");
 
-        sheet.open("demo-sheet");
-        jest.runAllTimers();
+            sheet.open("demo-sheet");
+            jest.runAllTimers();
 
-        expect(renderedSheet.classList).toContain("d-block");
-        expect(renderedSheet.classList).toContain("sheet-open");
-        expect(document.body.classList).toContain("sheet-open");
+            expect(renderedSheet.classList).toContain("d-block");
+            expect(renderedSheet.classList).toContain("sheet-open");
+            expect(document.body.classList).toContain("sheet-open");
+        });
+
+        it("does not open sheet when calling sheet.open with wrong id and prints warn to console", () => {
+            console.warn = jest.fn();
+            ReactDOM.render(<Sheet id="demo-sheet" />, div);
+
+            const renderedSheet = document.querySelector(".sheet");
+
+            expect(renderedSheet.classList).not.toContain("d-block");
+            expect(renderedSheet.classList).not.toContain("sheet-open");
+            expect(document.body.classList).not.toContain("sheet-open");
+
+            sheet.init();
+            expect(renderedSheet.classList).not.toContain("d-block");
+            expect(renderedSheet.classList).not.toContain("sheet-open");
+            expect(document.body.classList).not.toContain("sheet-open");
+
+            sheet.open("qwerty");
+
+            expect(console.warn).toHaveBeenCalledWith("sheet.open: No sheet with id \"qwerty\" found.");
+
+            expect(renderedSheet.classList).not.toContain("d-block");
+            expect(renderedSheet.classList).not.toContain("sheet-open");
+            expect(document.body.classList).not.toContain("sheet-open");
+        });
     });
 
-    it("does not open sheet when calling sheet.open with wrong id and prints error to console", () => {
-        console.error = jest.fn();
-        ReactDOM.render(<Sheet />, div);
+    describe("sheet.close", () => {
+        it("closes sheet when calling sheet.close", () => {
+            ReactDOM.render(<OpenSheet />, div);
 
-        const renderedSheet = document.querySelector(".sheet");
+            const renderedSheet = document.querySelector(".sheet");
 
-        expect(renderedSheet.classList).not.toContain("d-block");
-        expect(renderedSheet.classList).not.toContain("sheet-open");
-        expect(document.body.classList).not.toContain("sheet-open");
+            expect(document.body.classList).not.toContain("sheet-open");
 
-        sheet.init();
-        expect(renderedSheet.classList).not.toContain("d-block");
-        expect(renderedSheet.classList).not.toContain("sheet-open");
-        expect(document.body.classList).not.toContain("sheet-open");
+            sheet.init();
+            expect(document.body.classList).toContain("sheet-open");
 
-        sheet.open("qwerty");
+            sheet.close("demo-sheet");
+            jest.runAllTimers();
 
-        expect(console.error).toHaveBeenCalledWith("sheet.open: No sheet with id \"qwerty\" found.");
+            expect(renderedSheet.classList).not.toContain("d-block");
+            expect(renderedSheet.classList).not.toContain("sheet-open");
+            expect(document.body.classList).not.toContain("sheet-open");
+        });
 
-        expect(renderedSheet.classList).not.toContain("d-block");
-        expect(renderedSheet.classList).not.toContain("sheet-open");
-        expect(document.body.classList).not.toContain("sheet-open");
+        it("does not close sheet when calling sheet.close with wrong id and prints warn to console", () => {
+            console.warn = jest.fn();
+            ReactDOM.render(<OpenSheet />, div);
+
+            const renderedSheet = document.querySelector(".sheet");
+
+            expect(document.body.classList).not.toContain("sheet-open");
+
+            sheet.init();
+            expect(document.body.classList).toContain("sheet-open");
+
+            sheet.close("qwerty");
+            jest.runAllTimers();
+
+            expect(console.warn).toHaveBeenCalledWith("sheet.close: No sheet with id \"qwerty\" found.");
+
+            expect(renderedSheet.classList).toContain("d-block");
+            expect(renderedSheet.classList).toContain("sheet-open");
+            expect(document.body.classList).toContain("sheet-open");
+        });
     });
 
-    it("closes sheet when calling sheet.close", () => {
-        ReactDOM.render(<OpenSheet />, div);
+    describe("sheet and toast", () => {
+        it("adds margin right to toast-container when a toast is active and sheet is opened", () => {
+            ReactDOM.render(<Sheet id="demo-sheet" />, div);
+            sheet.init();
 
-        const renderedSheet = document.querySelector(".sheet");
+            const renderedSheet = document.querySelector(".sheet");
 
-        expect(document.body.classList).not.toContain("sheet-open");
+            expect(renderedSheet).toBeTruthy();
+            expect(renderedSheet.classList).not.toContain("sheet-open");
+            toast({ html: "test" });
 
-        sheet.init();
-        expect(document.body.classList).toContain("sheet-open");
+            const renderedToast = document.querySelector("#toast-container");
 
-        sheet.close("demo-sheet");
-        jest.runAllTimers();
+            sheet.open("demo-sheet");
+            jest.runAllTimers();
 
-        expect(renderedSheet.classList).not.toContain("d-block");
-        expect(renderedSheet.classList).not.toContain("sheet-open");
-        expect(document.body.classList).not.toContain("sheet-open");
-    });
+            expect(renderedSheet.classList).toContain("sheet-open");
+            expect(renderedToast).toBeTruthy();
+            expect(Object.keys(renderedToast.style._values)).toContain("margin-right");
+        });
 
-    it("does not close sheet when calling sheet.close with wrong id and prints error to console", () => {
-        console.error = jest.fn();
-        ReactDOM.render(<OpenSheet />, div);
+        it("removes margin-right from toast-container when a toast is active and sheet is closed", () => {
+            ReactDOM.render(<OpenSheet />, div);
+            sheet.init();
+            jest.runAllTimers();
 
-        const renderedSheet = document.querySelector(".sheet");
+            const renderedSheet = document.querySelector(".sheet");
 
-        expect(document.body.classList).not.toContain("sheet-open");
+            expect(renderedSheet).toBeTruthy();
+            expect(renderedSheet.classList).toContain("sheet-open");
+            toast({ html: "test" });
 
-        sheet.init();
-        expect(document.body.classList).toContain("sheet-open");
+            const renderedToast = document.querySelector("#toast-container");
 
-        sheet.close("qwerty");
-        jest.runAllTimers();
+            expect(renderedToast).toBeTruthy();
+            expect(Object.keys(renderedToast.style._values)).toContain("margin-right");
 
-        expect(console.error).toHaveBeenCalledWith("sheet.close: No sheet with id \"qwerty\" found.");
+            sheet.close("demo-sheet");
+            jest.runAllTimers();
 
-        expect(renderedSheet.classList).toContain("d-block");
-        expect(renderedSheet.classList).toContain("sheet-open");
-        expect(document.body.classList).toContain("sheet-open");
-    });
-
-    it("adds margin right to toast-container when a toast is active and sheet is opened", () => {
-        ReactDOM.render(<Sheet />, div);
-        sheet.init();
-
-        const renderedSheet = document.querySelector(".sheet");
-
-        expect(renderedSheet).toBeTruthy();
-        expect(renderedSheet.classList).not.toContain("sheet-open");
-        toast({ html: "test" });
-
-        const renderedToast = document.querySelector("#toast-container");
-
-        sheet.open("demo-sheet");
-        jest.runAllTimers();
-
-        expect(renderedSheet.classList).toContain("sheet-open");
-        expect(renderedToast).toBeTruthy();
-        expect(Object.keys(renderedToast.style._values)).toContain("margin-right");
-    });
-
-    it("removes margin-right from toast-container when a toast is active and sheet is closed", () => {
-        ReactDOM.render(<OpenSheet />, div);
-        sheet.init();
-        jest.runAllTimers();
-
-        const renderedSheet = document.querySelector(".sheet");
-
-        expect(renderedSheet).toBeTruthy();
-        expect(renderedSheet.classList).toContain("sheet-open");
-        toast({ html: "test" });
-
-        const renderedToast = document.querySelector("#toast-container");
-
-        expect(renderedToast).toBeTruthy();
-        expect(Object.keys(renderedToast.style._values)).toContain("margin-right");
-
-        sheet.close("demo-sheet");
-        jest.runAllTimers();
-
-        expect(renderedSheet.classList).not.toContain("sheet-open");
-        expect(Object.keys(renderedToast.style._values)).not.toContain("margin-right");
+            expect(renderedSheet.classList).not.toContain("sheet-open");
+            expect(Object.keys(renderedToast.style._values)).not.toContain("margin-right");
+        });
     });
 });

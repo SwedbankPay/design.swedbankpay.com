@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Dialog, { Example, UsageWithJavascript } from "./index";
+import Dialog, { HowItWorks, Example, JavascriptMethods } from "./index";
 
 describe("Documentation: Dialog", () => {
     it("is defined", () => {
@@ -9,9 +9,24 @@ describe("Documentation: Dialog", () => {
     });
 
     it("renders", () => {
+        console.warn = jest.fn();
+
         const wrapper = shallow(<Dialog />);
 
         expect(wrapper).toMatchSnapshot();
+        expect(console.warn).toHaveBeenCalled();
+    });
+
+    describe("HowItWorks", () => {
+        it("is defined", () => {
+            expect(HowItWorks).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<HowItWorks />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
     });
 
     describe("Example", () => {
@@ -26,13 +41,13 @@ describe("Documentation: Dialog", () => {
         });
     });
 
-    describe("UsageWithJavascript", () => {
+    describe("JavascriptMethods", () => {
         it("is defined", () => {
-            expect(UsageWithJavascript).toBeDefined();
+            expect(JavascriptMethods).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<UsageWithJavascript />);
+            const wrapper = shallow(<JavascriptMethods />);
 
             expect(wrapper).toMatchSnapshot();
         });

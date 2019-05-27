@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, Attribute, Property, DocContainer } from "#";
-
+import { ComponentPreview, Attribute, Property, DocContainer, JavascriptDocs } from "#";
 import AlertComponent from "@/Alert";
-import { alert } from "$/px-script/main";
+
+const { alert } = window.px;
 
 const BasicUsage = () => (
     <>
@@ -74,6 +74,13 @@ const ExtendedUsage = () => (
     </>
 );
 
+const JavascriptMethods = () => (
+    <>
+        <h2 id="javascript-methods">JavaScript methods</h2>
+        <JavascriptDocs componentName="alert" />
+    </>
+);
+
 class Alerts extends Component {
     componentDidMount () {
         alert.init();
@@ -87,6 +94,7 @@ class Alerts extends Component {
                 <AlertWithIcon />
                 <ClosingTheAlert />
                 <ExtendedUsage />
+                <JavascriptMethods />
             </DocContainer>
         );
     }
@@ -95,4 +103,4 @@ class Alerts extends Component {
 export default Alerts;
 
 /* For testing */
-export { BasicUsage, AlertWithIcon, ClosingTheAlert, ExtendedUsage };
+export { BasicUsage, AlertWithIcon, ClosingTheAlert, ExtendedUsage, JavascriptMethods };

@@ -30,28 +30,10 @@ export const handleScrollbar = () => {
     }
 };
 
-export const getElementsById = (ids, component) => {
-    const elements = [];
-    const pushElement = id => {
-        const element = document.getElementById(id);
-
-        element ? elements.push(element) : console.warn(`No ${component} found with ID: ${id}`);
-    };
-
-    if (typeof ids === "string") {
-        pushElement(ids);
-    } else if (Array.isArray(ids)) {
-        ids.forEach(id => typeof id === "string" ? pushElement(id) : console.warn(`Skipping init selector ${id}, must be of type string.`));
-    } else {
-        console.warn(`Typeof selector "${ids}" is invalid for ${component}; must be a string or an array of strings`);
-    }
-
-    return elements;
-};
+// export const warningMsg = (component, id) => ();
 
 export default {
     extendObj,
     isWithinBoundingBox,
-    handleScrollbar,
-    getElementsById
+    handleScrollbar
 };
