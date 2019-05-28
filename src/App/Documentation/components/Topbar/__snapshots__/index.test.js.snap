@@ -121,6 +121,7 @@ exports[`Components: Topbar TopbarWide renders 1`] = `
     showCasePanel={true}
   >
     <Topbar
+      id="demo-topbar-1"
       logout={true}
       topbarContent={
         Object {
