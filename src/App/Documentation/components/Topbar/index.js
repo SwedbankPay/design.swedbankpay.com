@@ -56,7 +56,7 @@ const TopbarWide = () => (
             This is a wide topbar.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <TopbarComponent topbarContent={menu} wide="xl" logout />
+            <TopbarComponent id="demo-topbar-1" topbarContent={menu} wide="xl" logout />
         </ComponentPreview>
     </>
 );
@@ -71,6 +71,7 @@ const JavascriptMethods = () => (
 class Topbar extends Component {
     componentDidMount () {
         topbar.init("demo-topbar");
+        topbar.init("demo-topbar-1");
     }
 
     render () {

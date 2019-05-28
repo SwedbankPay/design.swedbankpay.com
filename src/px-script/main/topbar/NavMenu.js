@@ -2,13 +2,14 @@ import { isWithinBoundingBox, handleScrollbar } from "../utils";
 
 const SELECTORS = {
     BTN: ".topbar-btn",
-    ICON: ".topbar-btn-icon"
+    ICON: ".topbar-btn-icon",
+    OPEN: "topbar-nav-open"
 };
 
 export default class NavMenu {
     constructor (topbarComponent, navMenu) {
         this.id = topbarComponent.id;
-        this.isOpen = false;
+        this.isOpen = navMenu.classList.contains(SELECTORS.OPEN);
         this.navMenuElement = navMenu;
         this.linkContainer = this.navMenuElement.querySelector(".topbar-link-container");
         this.closeNavIcon = this.navMenuElement.querySelector(".close-topbar-nav");
@@ -19,16 +20,22 @@ export default class NavMenu {
         if (this.btnElement) {
             this.btnElement.addEventListener("click", e => {
                 e.preventDefault();
-                this._handleClick();
+                this.open();
             });
         }
 
-        try {
-            this.closeNavIcon.addEventListener("click", () => {
-                this.close();
+        if (this.navMenuElement) {
+            this.navMenuElement.addEventListener("mousedown", e => {
+                if (this.isOpen && !this._containsPoint(e.clientX, e.clientY)) { this.close(); }
             });
-        } catch (e) {
-            console.error("Topbar is missing a close icon");
+
+            try {
+                this.closeNavIcon.addEventListener("click", () => {
+                    this.close();
+                });
+            } catch (e) {
+                console.warn("Topbar is missing a close icon");
+            }
         }
 
         this._initAnchors();
@@ -62,10 +69,6 @@ export default class NavMenu {
         setTimeout(() => {
             this.navMenuElement.classList.remove("d-block");
         }, 300);
-    }
-
-    _handleClick () {
-        this.isOpen ? this.close() : this.open();
     }
 
     _containsPoint (x, y) {

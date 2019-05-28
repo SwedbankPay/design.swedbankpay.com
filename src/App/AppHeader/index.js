@@ -2,10 +2,10 @@ import React from "react";
 import { NavLink, withRouter } from "react-router-dom";
 
 import { GithubLogo, SlackLogo } from "./HeaderIcons";
-import TopbarComponent from "@/Topbar";
 
 import pkg from "~/package.json";
 
+/* TODO: Use topbar component instead of using markup [AW] */
 const AppHeader = () => (
     <header className="topbar topbar-md-wide designguide-header">
         <button type="button" className="topbar-btn">
