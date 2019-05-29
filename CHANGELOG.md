@@ -6,7 +6,7 @@
 
 ### Changed
 
-- Changed how labels, help-blocks, legends and placeholders appear.
+- Changed label, help-block, legend and placeholder appearance to improve readability.
 
 ### Fixed
 
