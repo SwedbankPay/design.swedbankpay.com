@@ -1,7 +1,7 @@
 const SELECTORS = {
-    ACTIONMENU: ".action-menu",
     ACTIONLIST: ".action-list",
-    ICONS: "i.material-icons"
+    ACTIONMENU: ".action-menu",
+    TOGGLE: ".action-toggle"
 };
 
 const _actionLists = _actionLists || [];
@@ -10,7 +10,7 @@ class ActionList {
     constructor (element) {
         this.id = element.id ? element.id : null;
         this.container = element;
-        this.toggleBtn = element.querySelector(SELECTORS.ICONS);
+        this.toggleBtn = element.querySelector(SELECTORS.TOGGLE);
         this.actionMenu = element.querySelector(SELECTORS.ACTIONMENU);
         this.actionMenuLinks = this.actionMenu.querySelectorAll("a");
         this.isOpen = this.container.classList.contains("active");
