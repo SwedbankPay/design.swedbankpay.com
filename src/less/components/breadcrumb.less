@@ -5,10 +5,14 @@ ol.breadcrumb {
     display: flex;
 
     li {
+        display: flex;
         list-style: none;
+        align-items: center;
 
-        a {
-            .brand-link();
+        &:not(:last-child) {
+            span {
+                color: @gray-light;
+            }
         }
 
         &:last-child {
@@ -20,9 +24,21 @@ ol.breadcrumb {
         }
 
         &:after {
-            content: ">";
-            color: @brand-primary;
-            margin: 0 @base-margin-sm;
+            content: "chevron_right";
+            color: @gray-light;
+            margin-right: 0.5rem;
+            margin-left: 0.5rem;
+            font-family: "Material Icons";
+            font-weight: normal;
+            font-style: normal;
+            font-size: 20px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
         }
     }
 

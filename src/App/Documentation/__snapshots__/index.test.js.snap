@@ -151,7 +151,7 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "components/Breadcrumb",
                 "path": "/docs/components/breadcrumb",
-                "title": "Breadcrumb ☐",
+                "title": "Breadcrumb ☑",
               },
               Object {
                 "componentPath": "components/Buttons",

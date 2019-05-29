@@ -115,7 +115,7 @@ module.exports = [
                 componentPath: "components/Badge"
             },
             {
-                title: "Breadcrumb ☐",
+                title: "Breadcrumb ☑",
                 path: "/docs/components/breadcrumb",
                 componentPath: "components/Breadcrumb"
             },
