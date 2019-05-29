@@ -8,35 +8,37 @@ const MainColors = () => (
         <h2 id="main-colors">Main colors</h2>
         <p>The main color palette of Swedbank Pay</p>
         <ComponentPreview language="html" showCasePanel>
-            <div className="row">
-                <div className="col-xs-12 col-sm-6 col-md-4 col-lg-2 offset-lg-1 mb-2">
+            <div className="row color-container">
+                <div className="col-xl col-lg-2 col-12 mb-lg-0">
                     <ColorPreview name="orange-medium" hex="#ee7023" />
                 </div>
-                <div className="col-xs-12 col-sm-6 col-md-4 col-lg-2 mb-2">
+                <div className="col-xl col-lg-2 col-12 mb-lg-0">
                     <ColorPreview name="orange-light" hex="#ff9900" />
                 </div>
-                <div className="col-xs-12 col-sm-6 col-md-4 col-lg-2 mb-2">
+                <div className="col-xl col-lg-2 col-12 mb-lg-0">
                     <ColorPreview name="orange-bright" hex="#ffcc00" />
                 </div>
-                <div className="col-xs-12 col-sm-6 col-md-4 col-lg-2 mb-2">
+                <div className="col-xl col-lg-2 col-12 mb-lg-0">
                     <ColorPreview name="green" hex="#82b236" />
                 </div>
-                <div className="col-xs-12 col-sm-6 col-md-4 col-lg-2 mb-2">
+                <div className="col-xl col-lg-2 col-12 mb-lg-0">
                     <ColorPreview name="blue" hex="#5b8ad6" />
                 </div>
-                <div className="col-xs-12 col-sm-6 col-md-4 col-lg-2 offset-lg-1 mb-2">
+            </div>
+            <div className="row color-container">
+                <div className="col-xl col-lg-2 col-12 mb-lg-0">
                     <ColorPreview name="blue-light" hex="#a2c9ce" />
                 </div>
-                <div className="col-xs-12 col-sm-6 col-md-4 col-lg-2 mb-2">
+                <div className="col-xl col-lg-2 col-12 mb-lg-0">
                     <ColorPreview name="blue-bright" hex="#d7e6e9" />
                 </div>
-                <div className="col-xs-12 col-sm-6 col-md-4 col-lg-2 mb-2">
+                <div className="col-xl col-lg-2 col-12 mb-lg-0">
                     <ColorPreview name="teal" hex="#4893a0" />
                 </div>
-                <div className="col-xs-12 col-sm-6 col-md-4 col-lg-2 mb-2">
+                <div className="col-xl col-lg-2 col-12 mb-lg-0">
                     <ColorPreview name="blue-bright-alt" hex="#a3c9cf" />
                 </div>
-                <div className="col-xs-12 col-sm-6 col-md-4 col-lg-2 mb-2">
+                <div className="col-xl col-lg-2 col-12 mb-lg-0">
                     <ColorPreview name="red-medium" hex="#dd3300" />
                 </div>
             </div>
@@ -48,7 +50,7 @@ const AlertColors = () => (
     <>
         <h2 id="alert-colors">Alert colors</h2>
         <ComponentPreview language="html" showCasePanel>
-            <div className="row">
+            <div className="row color-container">
                 <div className="col-12">
                     <ColorPreview name="brand-success" hex="#477d17" />
                 </div>
@@ -85,7 +87,7 @@ const Grayscale = () => (
     <>
         <h2 id="grayscale">Grayscale</h2>
         <ComponentPreview language="html" showCasePanel>
-            <div className="row">
+            <div className="row color-container">
                 <div className="col-12">
                     <ColorPreview name="black" hex="#000000" color="#eaeaea" />
                 </div>

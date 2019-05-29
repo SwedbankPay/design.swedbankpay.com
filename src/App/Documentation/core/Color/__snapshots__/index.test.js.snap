@@ -12,7 +12,7 @@ exports[`Core: Color AlertColors renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="row"
+      className="row color-container"
     >
       <div
         className="col-12"
@@ -103,7 +103,7 @@ exports[`Core: Color Grayscale renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="row"
+      className="row color-container"
     >
       <div
         className="col-12"
@@ -245,10 +245,10 @@ exports[`Core: Color MainColors renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="row"
+      className="row color-container"
     >
       <div
-        className="col-xs-12 col-sm-6 col-md-4 col-lg-2 offset-lg-1 mb-2"
+        className="col-xl col-lg-2 col-12 mb-lg-0"
       >
         <ColorPreview
           hex="#ee7023"
@@ -256,7 +256,7 @@ exports[`Core: Color MainColors renders 1`] = `
         />
       </div>
       <div
-        className="col-xs-12 col-sm-6 col-md-4 col-lg-2 mb-2"
+        className="col-xl col-lg-2 col-12 mb-lg-0"
       >
         <ColorPreview
           hex="#ff9900"
@@ -264,7 +264,7 @@ exports[`Core: Color MainColors renders 1`] = `
         />
       </div>
       <div
-        className="col-xs-12 col-sm-6 col-md-4 col-lg-2 mb-2"
+        className="col-xl col-lg-2 col-12 mb-lg-0"
       >
         <ColorPreview
           hex="#ffcc00"
@@ -272,7 +272,7 @@ exports[`Core: Color MainColors renders 1`] = `
         />
       </div>
       <div
-        className="col-xs-12 col-sm-6 col-md-4 col-lg-2 mb-2"
+        className="col-xl col-lg-2 col-12 mb-lg-0"
       >
         <ColorPreview
           hex="#82b236"
@@ -280,15 +280,19 @@ exports[`Core: Color MainColors renders 1`] = `
         />
       </div>
       <div
-        className="col-xs-12 col-sm-6 col-md-4 col-lg-2 mb-2"
+        className="col-xl col-lg-2 col-12 mb-lg-0"
       >
         <ColorPreview
           hex="#5b8ad6"
           name="blue"
         />
       </div>
+    </div>
+    <div
+      className="row color-container"
+    >
       <div
-        className="col-xs-12 col-sm-6 col-md-4 col-lg-2 offset-lg-1 mb-2"
+        className="col-xl col-lg-2 col-12 mb-lg-0"
       >
         <ColorPreview
           hex="#a2c9ce"
@@ -296,7 +300,7 @@ exports[`Core: Color MainColors renders 1`] = `
         />
       </div>
       <div
-        className="col-xs-12 col-sm-6 col-md-4 col-lg-2 mb-2"
+        className="col-xl col-lg-2 col-12 mb-lg-0"
       >
         <ColorPreview
           hex="#d7e6e9"
@@ -304,7 +308,7 @@ exports[`Core: Color MainColors renders 1`] = `
         />
       </div>
       <div
-        className="col-xs-12 col-sm-6 col-md-4 col-lg-2 mb-2"
+        className="col-xl col-lg-2 col-12 mb-lg-0"
       >
         <ColorPreview
           hex="#4893a0"
@@ -312,7 +316,7 @@ exports[`Core: Color MainColors renders 1`] = `
         />
       </div>
       <div
-        className="col-xs-12 col-sm-6 col-md-4 col-lg-2 mb-2"
+        className="col-xl col-lg-2 col-12 mb-lg-0"
       >
         <ColorPreview
           hex="#a3c9cf"
@@ -320,7 +324,7 @@ exports[`Core: Color MainColors renders 1`] = `
         />
       </div>
       <div
-        className="col-xs-12 col-sm-6 col-md-4 col-lg-2 mb-2"
+        className="col-xl col-lg-2 col-12 mb-lg-0"
       >
         <ColorPreview
           hex="#dd3300"
