@@ -76,7 +76,7 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "core/Breakpoints",
                 "path": "/docs/core/breakpoints",
-                "title": "Breakpoints ☐",
+                "title": "Breakpoints",
               },
               Object {
                 "componentPath": "core/Color",
@@ -86,7 +86,7 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "core/Favicons",
                 "path": "/docs/core/favicons",
-                "title": "Favicons ☐",
+                "title": "Favicons",
               },
               Object {
                 "componentPath": "core/Grid",
@@ -96,7 +96,7 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "core/Iconography",
                 "path": "/docs/core/iconography",
-                "title": "Iconography ☐",
+                "title": "Iconography ☑",
               },
               Object {
                 "componentPath": "core/Lists",
@@ -116,7 +116,7 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "core/Typography",
                 "path": "/docs/core/typography",
-                "title": "Typography ☐",
+                "title": "Typography ☑",
               },
             ]
           }
@@ -161,12 +161,12 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "components/Card",
                 "path": "/docs/components/card",
-                "title": "Card ☐",
+                "title": "Card ☑",
               },
               Object {
                 "componentPath": "components/Datepickers",
                 "path": "/docs/components/datepickers",
-                "title": "Datepickers ☐",
+                "title": "Datepickers ☑",
               },
               Object {
                 "componentPath": "components/Dialog",
@@ -181,32 +181,32 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "components/Forms",
                 "path": "/docs/components/forms",
-                "title": "Forms ☐",
+                "title": "Forms ☑",
               },
               Object {
                 "componentPath": "components/InputGroup",
                 "path": "/docs/components/input-group",
-                "title": "Input Group ☐",
+                "title": "Input Group ☑",
               },
               Object {
                 "componentPath": "components/Loaders",
                 "path": "/docs/components/loaders",
-                "title": "Loaders ☐",
+                "title": "Loaders ☑",
               },
               Object {
                 "componentPath": "components/MediaObject",
                 "path": "/docs/components/media-object",
-                "title": "Media Object ☐",
+                "title": "Media Object ☑",
               },
               Object {
                 "componentPath": "components/Nav",
                 "path": "/docs/components/nav",
-                "title": "Nav ☐",
+                "title": "Nav ☑",
               },
               Object {
                 "componentPath": "components/Pagination",
                 "path": "/docs/components/pagination",
-                "title": "Pagination ☐",
+                "title": "Pagination ☑",
               },
               Object {
                 "componentPath": "components/Panel",
@@ -216,7 +216,7 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "components/Sheet",
                 "path": "/docs/components/sheet",
-                "title": "Sheet ☐",
+                "title": "Sheet ☑",
               },
               Object {
                 "componentPath": "components/Slab",
@@ -226,7 +226,7 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "components/Status",
                 "path": "/docs/components/status",
-                "title": "Status ☐",
+                "title": "Status ☑",
               },
               Object {
                 "componentPath": "components/Steps",
@@ -236,17 +236,17 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "components/Tabs",
                 "path": "/docs/components/tabs",
-                "title": "Tabs ☐",
+                "title": "Tabs ☑",
               },
               Object {
                 "componentPath": "components/Toast",
                 "path": "/docs/components/toast",
-                "title": "Toast ☐",
+                "title": "Toast ☑",
               },
               Object {
                 "componentPath": "components/Tooltips",
                 "path": "/docs/components/tooltips",
-                "title": "Tooltips ☐",
+                "title": "Tooltips ☑",
               },
               Object {
                 "componentPath": "components/Topbar",

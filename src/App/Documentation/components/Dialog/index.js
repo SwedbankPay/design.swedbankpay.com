@@ -45,8 +45,8 @@ const Example = () => (
                         <p>Are you sure you want to permanently delete the item <i>German Swashbuckle (456)?</i></p>
                     </div>
                     <footer>{"\n"}
-                        <button className="btn btn-secondary" type="button" data-dialog-close="demo-dialog">Cancel</button>{"\n"}
-                        <button className="btn btn-danger" type="button">Delete</button>{"\n"}
+                        <button className="btn btn-guiding" type="button" data-dialog-close="demo-dialog">Cancel</button>{"\n"}
+                        <button className="btn btn-destructive" type="button">Delete</button>{"\n"}
                     </footer>
                 </section>
             </div>{"\n"}
