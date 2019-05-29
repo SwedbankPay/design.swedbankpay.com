@@ -1018,7 +1018,9 @@ exports[`Documentation: Forms Validation renders 1`] = `
 `;
 
 exports[`Documentation: Forms renders 1`] = `
-<DocContainer>
+<DocContainer
+  docToc={true}
+>
   <p
     className="lead"
   >

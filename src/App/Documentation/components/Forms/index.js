@@ -320,7 +320,7 @@ class Forms extends Component {
 
     render () {
         return (
-            <DocContainer>
+            <DocContainer docToc>
                 <p className="lead">
                     Form componenets allow you to gather user input in various different ways.
                 </p>
