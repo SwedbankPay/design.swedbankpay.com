@@ -5,6 +5,8 @@ import datepicker from "./index";
 import Datepicker from "@/FormComponents/Datepicker";
 import formats from "./formats";
 
+// TODO: rewrite tests to mock flatpickr [AW]
+
 describe("px-script: datepicker", () => {
     const div = document.createElement("div");
 
@@ -64,17 +66,39 @@ describe("px-script: datepicker", () => {
             expect(datepicker.init("test")).toBeNull();
             expect(console.warn).toHaveBeenCalled();
         });
+    });
 
-        it("destroys existing flatpickr instances", () => {
-            ReactDOM.render(<Datepicker id="test-datepicker" />, div);
-
-            datepicker.init();
-
-            expect(document.querySelectorAll(".flatpickr-calendar").length).toEqual(1);
+    describe("_destroyDatepickers", () => {
+        it("destroys existing flatpickr instances on init()", () => {
+            ReactDOM.render(<Datepicker />, div);
 
             datepicker.init();
 
             expect(document.querySelectorAll(".flatpickr-calendar").length).toEqual(1);
+
+            datepicker.init();
+
+            expect(document.querySelectorAll(".flatpickr-calendar").length).toEqual(1);
+        });
+
+        it("does not destroy existing flatpickr instances on init(id)", () => {
+            // Use default value because flatpickr is kept thorugh test cases [AW]
+            const defaultVal = document.querySelectorAll(".flatpickr-calendar").length;
+
+            ReactDOM.render(
+                <>
+                    <Datepicker id="test-1" />
+                    <Datepicker id="test-2" />
+                </>, div
+            );
+
+            datepicker.init("test-1");
+
+            expect(document.querySelectorAll(".flatpickr-calendar").length).toEqual(defaultVal + 1);
+
+            datepicker.init("test-2");
+
+            expect(document.querySelectorAll(".flatpickr-calendar").length).toEqual(defaultVal + 2);
         });
     });
 

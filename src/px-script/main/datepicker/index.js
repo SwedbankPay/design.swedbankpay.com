@@ -5,7 +5,7 @@ const SELECTORS = {
     DATEPICKER: "[data-datepicker]"
 };
 
-const _datepickers = _datepickers || [];
+let _datepickers = _datepickers || [];
 
 // 080989◢◤200418
 const _createDatepicker = datepicker => {
@@ -59,6 +59,7 @@ const _createDatepicker = datepicker => {
 
 const _destroyDatepickers = () => {
     _datepickers.forEach(datepicker => datepicker.destroy());
+    _datepickers = [];
 };
 
 const init = id => {
@@ -70,8 +71,6 @@ const init = id => {
 
             return null;
         }
-
-        if (_datepickers.length) { _destroyDatepickers(); }
 
         return _createDatepicker(datepicker);
     } else {
