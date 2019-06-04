@@ -1,7 +1,8 @@
 const SELECTORS = {
     ACTIONLIST: ".action-list",
     ACTIONMENU: ".action-menu",
-    TOGGLE: ".action-toggle"
+    TOGGLE: ".action-toggle",
+    TOGGLE_OLD: ".action-list > i.material-icons"
 };
 
 const _actionLists = _actionLists || [];
@@ -10,14 +11,25 @@ class ActionList {
     constructor (element) {
         this.id = element.id ? element.id : null;
         this.container = element;
-        this.toggleBtn = element.querySelector(SELECTORS.TOGGLE);
         this.actionMenu = element.querySelector(SELECTORS.ACTIONMENU);
         this.actionMenuLinks = this.actionMenu.querySelectorAll("a");
         this.isOpen = this.container.classList.contains("active");
+        this.newToggleBtn = element.querySelector(SELECTORS.TOGGLE);
+        this.oldToggleBtn = element.querySelector(SELECTORS.TOGGLE_OLD);
+        this.toggleBtn = (this.newToggleBtn) ? this.newToggleBtn : ((this.oldToggleBtn) ?
+            (
+                console.warn("DEPRECATED: Selecting on .material-icons is deprecated, add .action-toggle to your toggling element"),
+                this.oldToggleBtn
+            ) : null
+        );
 
-        this.toggleBtn.addEventListener("click", () => {
-            this._toggleMenu();
-        });
+        try {
+            this.toggleBtn.addEventListener("click", () => {
+                this._toggleMenu();
+            });
+        } catch (e) {
+            console.warn("No toggle element exist, add an element with the class .action-toggle");
+        }
 
         // close menu when clicking on links
         this.actionMenuLinks.forEach(link => link.addEventListener("click", () => this.close()));

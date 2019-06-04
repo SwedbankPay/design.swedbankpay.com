@@ -8,9 +8,9 @@ describe("px-script: action-list", () => {
 
     document.body.appendChild(div);
 
-    const ActionList = ({ active, id }) => (
+    const ActionList = ({ active, id, noToggle }) => (
         <div className={`action-list${active ? " active" : ""}`} id={id}>
-            <i className="material-icons">more_vert</i>
+            {noToggle ? null : <i className="material-icons action-toggle">more_vert</i>}
             <div className="action-menu">
                 <a href="#"><i className="material-icons">bookmark</i>Add bookmark</a>
                 <a href="#"><i className="material-icons">business_center</i>Add client</a>
@@ -24,180 +24,191 @@ describe("px-script: action-list", () => {
         expect(actionList).toBeDefined();
     });
 
-    // describe("actionList.init", () => {
-    //     it("has an init method", () => {
-    //         expect(actionList.init).toBeDefined();
-    //         expect(actionList.init).toBeInstanceOf(Function);
-    //     });
+    describe("actionList.init", () => {
+        it("has an init method", () => {
+            expect(actionList.init).toBeDefined();
+            expect(actionList.init).toBeInstanceOf(Function);
+        });
 
-    //     it("returns a single object when one element is initialized", () => {
-    //         ReactDOM.render(<ActionList id="demo-action" />, div);
+        it("returns a single object when one element is initialized", () => {
+            ReactDOM.render(<ActionList id="demo-action" />, div);
 
-    //         const renderedActionList = document.querySelector(".action-list");
+            const renderedActionList = document.querySelector(".action-list");
 
-    //         expect(renderedActionList).toBeTruthy();
+            expect(renderedActionList).toBeTruthy();
 
-    //         const returnVal = actionList.init("demo-action");
+            const returnVal = actionList.init("demo-action");
 
-    //         expect(Array.isArray(returnVal)).toBeFalsy();
-    //         expect(typeof returnVal).toEqual("object");
-    //     });
+            expect(Array.isArray(returnVal)).toBeFalsy();
+            expect(typeof returnVal).toEqual("object");
+        });
 
-    //     it("returns an array of objects when more than one element is initialized", () => {
-    //         ReactDOM.render(
-    //             <>
-    //                 <ActionList />
-    //                 <ActionList />
-    //             </>
-    //             , div);
+        it("returns an array of objects when more than one element is initialized", () => {
+            ReactDOM.render(
+                <>
+                    <ActionList />
+                    <ActionList />
+                </>
+                , div);
 
-    //         const renderedActionLists = document.querySelectorAll(".action-list");
+            const renderedActionLists = document.querySelectorAll(".action-list");
 
-    //         expect(renderedActionLists).toBeTruthy();
-    //         expect(renderedActionLists.length).toEqual(2);
+            expect(renderedActionLists).toBeTruthy();
+            expect(renderedActionLists.length).toEqual(2);
 
-    //         const returnVal = actionList.init();
+            const returnVal = actionList.init();
 
-    //         expect(Array.isArray(returnVal)).toBeTruthy();
-    //         expect(returnVal.length).toEqual(2);
-    //     });
+            expect(Array.isArray(returnVal)).toBeTruthy();
+            expect(returnVal.length).toEqual(2);
+        });
 
-    //     it("returns null if no action-list is found and prints a warning message", () => {
-    //         console.warn = jest.fn();
+        it("returns null if no action-list is found and prints a warning message", () => {
+            console.warn = jest.fn();
 
-    //         expect(actionList.init()).toBeNull();
-    //         expect(console.warn).toHaveBeenCalled();
-    //     });
+            expect(actionList.init()).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
+        });
 
-    //     it("returns null if an invalid ID is passed and prints a warning message", () => {
-    //         console.warn = jest.fn();
+        it("returns null if an invalid ID is passed and prints a warning message", () => {
+            console.warn = jest.fn();
 
-    //         expect(actionList.init("test")).toBeNull();
-    //         expect(console.warn).toHaveBeenCalled();
-    //     });
-    // });
+            expect(actionList.init("test")).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
+        });
+    });
 
-    // it("opens when clicking the icon", () => {
-    //     ReactDOM.render(<ActionList />, div);
+    it("throws an error if no .toggle-btn is found", () => {
+        console.warn = jest.fn();
 
-    //     const renderedActionList = document.querySelector(".action-list");
-    //     const toggleBtn = renderedActionList.querySelector("i.material-icons");
+        ReactDOM.render(<ActionList noToggle />, div);
 
-    //     expect(renderedActionList).toBeDefined();
-    //     expect(toggleBtn).toBeDefined();
-    //     expect(renderedActionList.classList).not.toContain("active");
+        actionList.init();
 
-    //     actionList.init();
-    //     toggleBtn.dispatchEvent(new Event("click"));
+        expect(console.warn).toHaveBeenCalled();
+        expect(console.warn).toHaveBeenCalledWith("No toggle element exist, add an element with the class .action-toggle");
+    });
 
-    //     expect(renderedActionList.classList).toContain("active");
-    // });
+    it("opens when clicking the icon", () => {
+        ReactDOM.render(<ActionList />, div);
 
-    // it("closes when clicking on icon while open", () => {
-    //     ReactDOM.render(<ActionList active />, div);
+        const renderedActionList = document.querySelector(".action-list");
+        const toggleBtn = renderedActionList.querySelector("i.material-icons");
 
-    //     const renderedActionList = document.querySelector(".action-list");
-    //     const toggleBtn = renderedActionList.querySelector("i.material-icons");
+        expect(renderedActionList).toBeDefined();
+        expect(toggleBtn).toBeDefined();
+        expect(renderedActionList.classList).not.toContain("active");
 
-    //     expect(renderedActionList).toBeDefined();
-    //     expect(toggleBtn).toBeDefined();
-    //     expect(renderedActionList.classList).toContain("active");
+        actionList.init();
+        toggleBtn.dispatchEvent(new Event("click"));
 
-    //     actionList.init();
-    //     toggleBtn.dispatchEvent(new Event("click"));
+        expect(renderedActionList.classList).toContain("active");
+    });
 
-    //     expect(renderedActionList.classList).not.toContain("active");
-    // });
+    it("closes when clicking on icon while open", () => {
+        ReactDOM.render(<ActionList active />, div);
 
-    // it("closes open action menu when clicking on a link", () => {
-    //     ReactDOM.render(<ActionList active />, div);
+        const renderedActionList = document.querySelector(".action-list");
+        const toggleBtn = renderedActionList.querySelector("i.material-icons");
 
-    //     const renderedActionList = document.querySelector(".action-list");
+        expect(renderedActionList).toBeDefined();
+        expect(toggleBtn).toBeDefined();
+        expect(renderedActionList.classList).toContain("active");
 
-    //     expect(renderedActionList).toBeDefined();
-    //     expect(renderedActionList.classList).toContain("active");
+        actionList.init();
+        toggleBtn.dispatchEvent(new Event("click"));
 
-    //     actionList.init();
-    //     renderedActionList.querySelector("a").click();
+        expect(renderedActionList.classList).not.toContain("active");
+    });
 
-    //     expect(renderedActionList.classList).not.toContain("active");
-    // });
+    it("closes open action menu when clicking on a link", () => {
+        ReactDOM.render(<ActionList active />, div);
 
-    // it("closes when clicking outside menu while open", () => {
-    //     ReactDOM.render(<ActionList active />, div);
+        const renderedActionList = document.querySelector(".action-list");
 
-    //     const renderedActionList = document.querySelector(".action-list");
+        expect(renderedActionList).toBeDefined();
+        expect(renderedActionList.classList).toContain("active");
 
-    //     expect(renderedActionList).toBeDefined();
-    //     expect(renderedActionList.classList).toContain("active");
+        actionList.init();
+        renderedActionList.querySelector("a").click();
 
-    //     actionList.init();
-    //     document.querySelector("html").click(); // for clicking outside action list
+        expect(renderedActionList.classList).not.toContain("active");
+    });
 
-    //     expect(renderedActionList.classList).not.toContain("active");
-    // });
+    it("closes when clicking outside menu while open", () => {
+        ReactDOM.render(<ActionList active />, div);
 
-    // describe("actionList.open", () => {
-    //     it("opens actionlist when calling actionList.open", () => {
-    //         ReactDOM.render(<ActionList id="demo-actionlist" />, div);
+        const renderedActionList = document.querySelector(".action-list");
 
-    //         const renderedActionList = document.querySelector(".action-list");
+        expect(renderedActionList).toBeDefined();
+        expect(renderedActionList.classList).toContain("active");
 
-    //         expect(renderedActionList).toBeTruthy();
+        actionList.init();
+        document.querySelector("html").click(); // for clicking outside action list
 
-    //         actionList.init();
-    //         expect(renderedActionList.classList).not.toContain("active");
+        expect(renderedActionList.classList).not.toContain("active");
+    });
 
-    //         actionList.open("demo-actionlist");
-    //         expect(renderedActionList.classList).toContain("active");
-    //     });
+    describe("actionList.open", () => {
+        it("opens actionlist when calling actionList.open", () => {
+            ReactDOM.render(<ActionList id="demo-actionlist" />, div);
 
-    //     it("does not open actionlist when calling actionlist.open with wrong id and prints warn to console", () => {
-    //         console.warn = jest.fn();
+            const renderedActionList = document.querySelector(".action-list");
 
-    //         ReactDOM.render(<ActionList id="demo-actionlist" />, div);
+            expect(renderedActionList).toBeTruthy();
 
-    //         const renderedActionList = document.querySelector(".action-list");
+            actionList.init();
+            expect(renderedActionList.classList).not.toContain("active");
 
-    //         expect(renderedActionList).toBeTruthy();
-    //         expect(renderedActionList.classList).not.toContain("active");
+            actionList.open("demo-actionlist");
+            expect(renderedActionList.classList).toContain("active");
+        });
 
-    //         actionList.open("invalid-id");
+        it("does not open actionlist when calling actionlist.open with wrong id and prints warn to console", () => {
+            console.warn = jest.fn();
 
-    //         expect(renderedActionList.classList).not.toContain("active");
-    //         expect(console.warn).toHaveBeenCalled();
-    //     });
-    // });
+            ReactDOM.render(<ActionList id="demo-actionlist" />, div);
 
-    // describe("actionList.close", () => {
-    //     it("closes an open actionlist when calling actionList.close", () => {
-    //         ReactDOM.render(<ActionList active id="demo-actionlist" />, div);
+            const renderedActionList = document.querySelector(".action-list");
 
-    //         const renderedActionList = document.querySelector(".action-list");
+            expect(renderedActionList).toBeTruthy();
+            expect(renderedActionList.classList).not.toContain("active");
 
-    //         expect(renderedActionList).toBeTruthy();
-    //         expect(renderedActionList.classList).toContain("active");
+            actionList.open("invalid-id");
 
-    //         actionList.init();
-    //         actionList.close("demo-actionlist");
+            expect(renderedActionList.classList).not.toContain("active");
+            expect(console.warn).toHaveBeenCalled();
+        });
+    });
 
-    //         expect(renderedActionList.classList).not.toContain("active");
-    //     });
+    describe("actionList.close", () => {
+        it("closes an open actionlist when calling actionList.close", () => {
+            ReactDOM.render(<ActionList active id="demo-actionlist" />, div);
 
-    //     it("does not close actionlist when calling actionlist.close with wrong id and prints warn to console", () => {
-    //         console.warn = jest.fn();
+            const renderedActionList = document.querySelector(".action-list");
 
-    //         ReactDOM.render(<ActionList id="demo-actionlist" active />, div);
+            expect(renderedActionList).toBeTruthy();
+            expect(renderedActionList.classList).toContain("active");
 
-    //         const renderedActionList = document.querySelector(".action-list");
+            actionList.init();
+            actionList.close("demo-actionlist");
 
-    //         expect(renderedActionList).toBeTruthy();
-    //         expect(renderedActionList.classList).toContain("active");
+            expect(renderedActionList.classList).not.toContain("active");
+        });
 
-    //         actionList.close("invalid-id");
+        it("does not close actionlist when calling actionlist.close with wrong id and prints warn to console", () => {
+            console.warn = jest.fn();
 
-    //         expect(renderedActionList.classList).toContain("active");
-    //         expect(console.warn).toHaveBeenCalled();
-    //     });
-    // });
+            ReactDOM.render(<ActionList id="demo-actionlist" active />, div);
+
+            const renderedActionList = document.querySelector(".action-list");
+
+            expect(renderedActionList).toBeTruthy();
+            expect(renderedActionList.classList).toContain("active");
+
+            actionList.close("invalid-id");
+
+            expect(renderedActionList.classList).toContain("active");
+            expect(console.warn).toHaveBeenCalled();
+        });
+    });
 });
