@@ -97,9 +97,25 @@ describe("Component: ActionList", () => {
     });
 
     it("renders with a custom .action-toggle if it is provided", () => {
-        const wrapper = mount(<ActionList items={items} toggleBtn={<a href="#">Custom action-toggle</a>} />);
+        const wrapper = mount(<ActionList items={items} toggleBtn={<a className="action-toggle" href="#">Custom action-toggle</a>} />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("Custom action-toggle");
+    });
+
+    describe(".action-menu", () => {
+        it("prevents default when an item is clicked", () => {
+            const eventHandler = { preventDefault: jest.fn() };
+
+            const wrapper = shallow(<ActionList items={items} />);
+
+            expect(wrapper).toMatchSnapshot();
+
+            const items = wrapper.find("a");
+
+            items.forEach(item => item.simulate("click"));
+
+            expect(eventHandler.preventDefault).toHaveBeenCalledTimes(items.length);
+        });
     });
 });

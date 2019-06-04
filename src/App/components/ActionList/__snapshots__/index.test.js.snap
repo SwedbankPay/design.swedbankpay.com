@@ -1,5 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Component: ActionList .action-menu prevents default when an item is clicked 1`] = `
+<Fragment>
+  <div
+    className="action-list"
+  >
+    
+
+    <i
+      className="material-icons action-toggle"
+    >
+      more_vert
+    </i>
+    <div
+      className="action-menu"
+    >
+      
+
+    </div>
+  </div>
+</Fragment>
+`;
+
 exports[`Component: ActionList prop types items prints an error if it does not contain objects 1`] = `
 <ActionList
   items={
@@ -772,6 +794,7 @@ exports[`Component: ActionList renders with a custom .action-toggle if it is pro
   }
   toggleBtn={
     <a
+      className="action-toggle"
       href="#"
     >
       Custom action-toggle
@@ -784,6 +807,7 @@ exports[`Component: ActionList renders with a custom .action-toggle if it is pro
     
 
     <a
+      className="action-toggle"
       href="#"
     >
       Custom action-toggle

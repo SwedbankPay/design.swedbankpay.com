@@ -189,6 +189,7 @@ exports[`Components: ActionList Overview renders 1`] = `
       }
     />
   </ComponentPreview>
+  <TemporaryAlert />
 </Fragment>
 `;
 
