@@ -1,7 +1,8 @@
 const SELECTORS = {
-    ACTIONMENU: ".action-menu",
     ACTIONLIST: ".action-list",
-    ICONS: "i.material-icons"
+    ACTIONMENU: ".action-menu",
+    TOGGLE: ".action-toggle",
+    TOGGLE_OLD: ".action-list > i.material-icons"
 };
 
 const _actionLists = _actionLists || [];
@@ -10,14 +11,30 @@ class ActionList {
     constructor (element) {
         this.id = element.id ? element.id : null;
         this.container = element;
-        this.toggleBtn = element.querySelector(SELECTORS.ICONS);
         this.actionMenu = element.querySelector(SELECTORS.ACTIONMENU);
         this.actionMenuLinks = this.actionMenu.querySelectorAll("a");
         this.isOpen = this.container.classList.contains("active");
+        this.newToggleBtn = element.querySelector(SELECTORS.TOGGLE);
 
-        this.toggleBtn.addEventListener("click", () => {
-            this._toggleMenu();
-        });
+        /*
+            TODO: remove oldToggleBtn and ternary related to oldToggleBtn on next major release. Current: 2.2.0
+            https://payexjira.atlassian.net/browse/DG-325 [AW]
+        */
+        this.oldToggleBtn = element.querySelector(SELECTORS.TOGGLE_OLD);
+        this.toggleBtn = (this.newToggleBtn) ? this.newToggleBtn : ((this.oldToggleBtn) ?
+            (
+                console.warn("DEPRECATED: Selecting on .material-icons is deprecated, add .action-toggle to your toggling element"),
+                this.oldToggleBtn
+            ) : null
+        );
+
+        try {
+            this.toggleBtn.addEventListener("click", () => {
+                this._toggleMenu();
+            });
+        } catch (e) {
+            console.warn("No toggle element exist, add an element with the class .action-toggle");
+        }
 
         // close menu when clicking on links
         this.actionMenuLinks.forEach(link => link.addEventListener("click", () => this.close()));
