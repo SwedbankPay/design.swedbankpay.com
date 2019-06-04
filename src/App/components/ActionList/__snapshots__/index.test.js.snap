@@ -214,7 +214,7 @@ Array [
     }
   >
     <div
-      className="action-list 2"
+      className="action-list"
     >
       
 
@@ -323,7 +323,7 @@ Array [
     }
   >
     <div
-      className="action-list test-class"
+      className="action-list"
     >
       
 

@@ -32,7 +32,17 @@ const Overview = () => (
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ActionListComponent items={items} />
         </ComponentPreview>
-        <TemporaryAlert />
+        {/*
+            TODO: remove alert on next major release. Current: 2.2.0
+            https://payexjira.atlassian.net/browse/DG-325 [AW]
+        */}
+        <AlertComponent type="warning">
+            <h4>Deprecation warning</h4>
+            <p>
+                The Action list component no longer selects on <Property value=".material-icons"/>. Add <Property value=".action-toggle" /> to
+                your toggling element.
+            </p>
+        </AlertComponent>
     </>
 );
 
@@ -63,17 +73,6 @@ const JavascriptMethods = () => (
         <h2 id="javascript-methods">JavaScript methods</h2>
         <JavascriptDocs componentName="actionList" open close />
     </>
-);
-
-// TODO: remove this on the next major release. Current: 2.2.0 [AW]
-const TemporaryAlert = () => (
-    <AlertComponent type="warning">
-        <h4>Deprecation warning</h4>
-        <p>
-            The Action list component no longer selects on <Property value=".material-icons"/>. Add <Property value=".action-toggle" /> to
-            your toggling element.
-        </p>
-    </AlertComponent>
 );
 
 class ActionList extends Component {

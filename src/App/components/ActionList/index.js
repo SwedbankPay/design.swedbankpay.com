@@ -5,11 +5,11 @@ import { Icon } from "#";
 
 const ActionList = ({ id, classNames, toggleBtn, items }) => (
     <>
-        <div id={id} className={`action-list${classNames ? ` ${classNames}` : ""}`}>{"\n"}
+        <div id={id} className="action-list">{"\n"}
             {toggleBtn ? <>{toggleBtn}{"\n"}</> : <>{<i className="material-icons action-toggle">more_vert</i>}</>}
             <div className={`action-menu${classNames ? ` ${classNames}` : ""}`}>{"\n"}
                 {
-                    (Array.isArray(items)) ? items.map(({ name, icon }, i) => (
+                    items && Array.isArray(items) ? items.map(({ name, icon }, i) => (
                         <Fragment key={i}>
                             <a href="#" onClick={e => e.preventDefault()}>
                                 {icon ? <Icon icon={icon}/> : null}{name}
@@ -25,7 +25,10 @@ const ActionList = ({ id, classNames, toggleBtn, items }) => (
 ActionList.propTypes = {
     id: PropTypes.string,
     classNames: PropTypes.string,
-    items: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired
+    items: PropTypes.arrayOf(PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        icon: PropTypes.string
+    })).isRequired
 };
 
 export default ActionList;

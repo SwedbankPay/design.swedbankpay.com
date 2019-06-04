@@ -15,6 +15,11 @@ class ActionList {
         this.actionMenuLinks = this.actionMenu.querySelectorAll("a");
         this.isOpen = this.container.classList.contains("active");
         this.newToggleBtn = element.querySelector(SELECTORS.TOGGLE);
+
+        /*
+            TODO: remove oldToggleBtn and ternary related to oldToggleBtn on next major release. Current: 2.2.0
+            https://payexjira.atlassian.net/browse/DG-325 [AW]
+        */
         this.oldToggleBtn = element.querySelector(SELECTORS.TOGGLE_OLD);
         this.toggleBtn = (this.newToggleBtn) ? this.newToggleBtn : ((this.oldToggleBtn) ?
             (
