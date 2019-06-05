@@ -72,6 +72,11 @@ const init = id => {
             return null;
         }
 
+        _datepickers.forEach((d, i) => (d.element.id === id
+            ? (d.destroy(), _datepickers.splice(i, 1))
+            : null)
+        );
+
         return _createDatepicker(datepicker);
     } else {
         const datepickers = document.querySelectorAll(SELECTORS.DATEPICKER);
@@ -82,7 +87,7 @@ const init = id => {
             return null;
         }
 
-        if (_datepickers.length) { _destroyDatepickers(); }
+        _destroyDatepickers();
 
         return [...datepickers].map(datepicker => _createDatepicker(datepicker));
     }
