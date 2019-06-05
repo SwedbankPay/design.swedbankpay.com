@@ -9,7 +9,7 @@ const ActionList = ({ id, classNames, toggleBtn, items }) => (
             {toggleBtn ? <>{toggleBtn}{"\n"}</> : <>{<i className="material-icons action-toggle">more_vert</i>}</>}
             <div className={`action-menu${classNames ? ` ${classNames}` : ""}`}>{"\n"}
                 {
-                    items && Array.isArray(items) ? items.map(({ name, icon }, i) => (
+                    Array.isArray(items) ? items.map(({ name, icon }, i) => (
                         <Fragment key={i}>
                             <a href="#" onClick={e => e.preventDefault()}>
                                 {icon ? <Icon icon={icon}/> : null}{name}
