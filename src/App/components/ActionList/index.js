@@ -5,9 +5,9 @@ import { Icon } from "#";
 
 const ActionList = ({ id, classNames, toggleBtn, items }) => (
     <>
-        <div id={id} className="action-list">{"\n"}
+        <div id={id} className={`action-list${classNames ? ` ${classNames}` : ""}`}>{"\n"}
             {toggleBtn ? <>{toggleBtn}{"\n"}</> : <>{<i className="material-icons action-toggle">more_vert</i>}</>}
-            <div className={`action-menu${classNames ? ` ${classNames}` : ""}`}>{"\n"}
+            <div className="action-menu">{"\n"}
                 {
                     Array.isArray(items) ? items.map(({ name, icon }, i) => (
                         <Fragment key={i}>
