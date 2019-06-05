@@ -28,7 +28,11 @@
         "url": "https://github.com/PayEx/design.payex.com/issues"
     },
     "homepage": "https://github.com/PayEx/design.payex.com#readme",
-    "browserslist": ["last 3 versions", "> 1%", "ie >= 11"],
+    "browserslist": [
+        "last 3 versions",
+        "> 1%",
+        "ie >= 11"
+    ],
     "dependencies": {
         "@babel/polyfill": "^7.4.4",
         "chart.js": "^2.8.0",
