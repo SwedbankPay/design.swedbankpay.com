@@ -41,7 +41,7 @@ const SlabWell = () => (
     <>
         <h2 id="slab-well">Slab well</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="slab slab-well">
+            <div className="slab slab-white slab-well">
                 Look ma, im in a well!
             </div>
         </ComponentPreview>
@@ -56,7 +56,17 @@ const SlabArrow = () => (
             if used with slab-white.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
+            <div className="slab slab-arrow">
+                <p>
+                    This slab has some connection to the content above.
+                </p>
+            </div>
             <div className="slab slab-white slab-arrow">
+                <p>
+                    This slab has some connection to the content above.
+                </p>
+            </div>
+            <div className="slab slab-apricot slab-arrow">
                 <p>
                     This slab has some connection to the content above.
                 </p>
@@ -74,9 +84,9 @@ const SlabColors = () => (
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="slab slab-white">
                 <h4>Here is some text and then a striped item list</h4>
-                <p>
+                <small>
                     Some text with a small listing of items underneath.
-                </p>
+                </small>
                 <ul className="list item-list">
                     <li>Item 1</li>
                     <li>Item 2</li>
@@ -86,9 +96,9 @@ const SlabColors = () => (
 
             <div className="slab slab-apricot">
                 <h4>Here is some text and then a striped item list</h4>
-                <p>
+                <small>
                     Some text with a small listing of items underneath.
-                </p>
+                </small>
                 <ul className="list item-list">
                     <li>Item 1</li>
                     <li>Item 2</li>
@@ -128,25 +138,6 @@ const SlabSizes = () => (
     </>
 );
 
-const SlabCombinations = () => (
-    <>
-        <h2 id="slab-combinations">Slab combinations</h2>
-        <p>
-            You can mix and match slab variations as you see fit.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="slab slab-white slab-muted slab-elevated">
-                This is an elevated white slab with muted text.
-            </div>
-        </ComponentPreview>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="slab slab-well slab-lg">
-                This is a big well!
-            </div>
-        </ComponentPreview>
-    </>
-);
-
 class Slab extends Component {
     componentDidMount () {
         validation.init();
@@ -165,7 +156,6 @@ class Slab extends Component {
                 <SlabColors />
                 <SlabMuted />
                 <SlabSizes />
-                <SlabCombinations />
             </DocContainer>
         );
     }
@@ -174,4 +164,4 @@ class Slab extends Component {
 export default Slab;
 
 /* For testing */
-export { DefaultSlab, SlabElevated, SlabWell, SlabArrow, SlabColors, SlabSizes, SlabMuted, SlabCombinations };
+export { DefaultSlab, SlabElevated, SlabWell, SlabArrow, SlabColors, SlabSizes, SlabMuted };

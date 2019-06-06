@@ -92,9 +92,9 @@ exports[`Components: Slab SlabColors renders 1`] = `
       <h4>
         Here is some text and then a striped item list
       </h4>
-      <p>
+      <small>
         Some text with a small listing of items underneath.
-      </p>
+      </small>
       <ul
         className="list item-list"
       >
@@ -115,9 +115,9 @@ exports[`Components: Slab SlabColors renders 1`] = `
       <h4>
         Here is some text and then a striped item list
       </h4>
-      <p>
+      <small>
         Some text with a small listing of items underneath.
-      </p>
+      </small>
       <ul
         className="list item-list"
       >
@@ -131,41 +131,6 @@ exports[`Components: Slab SlabColors renders 1`] = `
           Item 3
         </li>
       </ul>
-    </div>
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Components: Slab SlabCombinations renders 1`] = `
-<Fragment>
-  <h2
-    id="slab-combinations"
-  >
-    Slab combinations
-  </h2>
-  <p>
-    You can mix and match slab variations as you see fit.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <div
-      className="slab slab-white slab-muted slab-elevated"
-    >
-      This is an elevated white slab with muted text.
-    </div>
-  </ComponentPreview>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <div
-      className="slab slab-well slab-lg"
-    >
-      This is a big well!
     </div>
   </ComponentPreview>
 </Fragment>
@@ -268,7 +233,7 @@ exports[`Components: Slab SlabWell renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="slab slab-well"
+      className="slab slab-white slab-well"
     >
       Look ma, im in a well!
     </div>
@@ -292,6 +257,5 @@ exports[`Components: Slab renders 1`] = `
   <SlabColors />
   <SlabMuted />
   <SlabSizes />
-  <SlabCombinations />
 </DocContainer>
 `;
