@@ -8,7 +8,7 @@
     align-items: flex-start;
 
     &.alert-default {
-        .alert-variant(@state-default);
+        .alert-variant(@gray-medium-light, @nearwhite);
 
         .alert-icon {
             color: @gray-medium-light;
@@ -16,19 +16,19 @@
     }
 
     &.alert-success {
-        .alert-variant(@state-success);
+        .alert-variant(@state-success, @state-success-light);
     }
 
     &.alert-neutral {
-        .alert-variant(@state-neutral);
+        .alert-variant(@state-neutral, @state-neutral-light);
     }
 
     &.alert-warning {
-        .alert-variant(@state-warning);
+        .alert-variant(@state-warning, @state-warning-light);
     }
 
     &.alert-danger {
-        .alert-variant(@state-danger);
+        .alert-variant(@state-danger, @state-danger-light);
     }
 
     .alert-heading {
@@ -47,6 +47,7 @@
 
     .alert-icon {
         margin-right: @base-margin;
+        margin-top: 1px; // Aligns the icon with a single line of text, is it worth? [AW]
     }
 
     [data-alert-close] {
