@@ -58,8 +58,7 @@ const _createDatepicker = datepicker => {
 };
 
 const _destroyDatepickers = () => {
-    _datepickers.forEach(datepicker => datepicker.destroy());
-    _datepickers = [];
+    _datepickers = _datepickers.filter(datepicker => datepicker.destroy());
 };
 
 const init = id => {
@@ -73,7 +72,7 @@ const init = id => {
         }
 
         _datepickers.forEach((d, i) => (d.element.id === id
-            ? (d.destroy(), _datepickers.splice(i, 1))
+            ? _datepickers.splice(i, 1)[0].destroy()
             : null)
         );
 
