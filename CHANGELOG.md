@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added class .action-toggle to .action-list, selecting on .material-icons is deprecated.
+
 ### Changed
 
 - Changed label, help-block, legend and placeholder appearance to improve readability.
