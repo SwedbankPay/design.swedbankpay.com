@@ -46,22 +46,22 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "getting-started/Introduction",
                 "path": "/docs/getting-started/introduction",
-                "title": "Introduction",
+                "title": "Introduction ☐",
               },
               Object {
                 "componentPath": "getting-started/BrowserSupport",
                 "path": "/docs/getting-started/browser-support",
-                "title": "Browser Support",
+                "title": "Browser Support ☐",
               },
               Object {
                 "componentPath": "getting-started/Contributing",
                 "path": "/docs/getting-started/contributing",
-                "title": "Contributing",
+                "title": "Contributing ☐",
               },
               Object {
                 "componentPath": "getting-started/Javascript",
                 "path": "/docs/getting-started/javascript",
-                "title": "JavaScript",
+                "title": "JavaScript ☑",
               },
             ]
           }
@@ -76,7 +76,7 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "core/Breakpoints",
                 "path": "/docs/core/breakpoints",
-                "title": "Breakpoints",
+                "title": "Breakpoints ☑",
               },
               Object {
                 "componentPath": "core/Color",
@@ -86,12 +86,12 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "core/Favicons",
                 "path": "/docs/core/favicons",
-                "title": "Favicons",
+                "title": "Favicons ☐",
               },
               Object {
                 "componentPath": "core/Grid",
                 "path": "/docs/core/grid",
-                "title": "Grid",
+                "title": "Grid ☑",
               },
               Object {
                 "componentPath": "core/Iconography",
@@ -106,12 +106,12 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "core/Page-layout",
                 "path": "/docs/core/page-layout",
-                "title": "Page layout",
+                "title": "Page layout ☐",
               },
               Object {
                 "componentPath": "core/Tables",
                 "path": "/docs/core/tables",
-                "title": "Tables",
+                "title": "Tables ☐",
               },
               Object {
                 "componentPath": "core/Typography",
@@ -136,12 +136,12 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "components/ActionList",
                 "path": "/docs/components/action-list",
-                "title": "Action List ☐",
+                "title": "Action List ☑",
               },
               Object {
                 "componentPath": "components/Alerts",
                 "path": "/docs/components/alerts",
-                "title": "Alerts ☐",
+                "title": "Alerts ◯",
               },
               Object {
                 "componentPath": "components/Badge",
@@ -266,7 +266,7 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "dashboard/Introduction",
                 "path": "/docs/dashboard/introduction",
-                "title": "Introduction",
+                "title": "Introduction ☐",
               },
               Object {
                 "componentPath": "dashboard/Charts",
@@ -286,47 +286,47 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "utilities/Borders",
                 "path": "/docs/utilities/borders",
-                "title": "Borders",
+                "title": "Borders ☑",
               },
               Object {
                 "componentPath": "utilities/Colors",
                 "path": "/docs/utilities/colors",
-                "title": "Colors",
+                "title": "Colors ☐",
               },
               Object {
                 "componentPath": "utilities/Display",
                 "path": "/docs/utilities/display",
-                "title": "Display",
+                "title": "Display ☑",
               },
               Object {
                 "componentPath": "utilities/Flex",
                 "path": "/docs/utilities/flex",
-                "title": "Flex",
+                "title": "Flex ☑",
               },
               Object {
                 "componentPath": "utilities/Images",
                 "path": "/docs/utilities/images",
-                "title": "Images",
+                "title": "Images ☑",
               },
               Object {
                 "componentPath": "utilities/Sizing",
                 "path": "/docs/utilities/sizing",
-                "title": "Sizing",
+                "title": "Sizing ☑",
               },
               Object {
                 "componentPath": "utilities/Spacing",
                 "path": "/docs/utilities/spacing",
-                "title": "Spacing",
+                "title": "Spacing ☑",
               },
               Object {
                 "componentPath": "utilities/Text",
                 "path": "/docs/utilities/text",
-                "title": "Text",
+                "title": "Text ☑",
               },
               Object {
                 "componentPath": "utilities/Visibility",
                 "path": "/docs/utilities/visibility",
-                "title": "Visibility",
+                "title": "Visibility ☑",
               },
             ]
           }

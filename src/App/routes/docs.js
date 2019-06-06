@@ -8,22 +8,22 @@ module.exports = [
         redirect: "/docs/getting-started/introduction",
         routes: [
             {
-                title: "Introduction",
+                title: "Introduction ☐",
                 path: "/docs/getting-started/introduction",
                 componentPath: "getting-started/Introduction"
             },
             {
-                title: "Browser Support",
+                title: "Browser Support ☐",
                 path: "/docs/getting-started/browser-support",
                 componentPath: "getting-started/BrowserSupport"
             },
             {
-                title: "Contributing",
+                title: "Contributing ☐",
                 path: "/docs/getting-started/contributing",
                 componentPath: "getting-started/Contributing"
             },
             {
-                title: "JavaScript",
+                title: "JavaScript ☑",
                 path: "/docs/getting-started/javascript",
                 componentPath: "getting-started/Javascript"
             }
@@ -39,7 +39,7 @@ module.exports = [
         redirect: "/docs/core/breakpoints",
         routes: [
             {
-                title: "Breakpoints",
+                title: "Breakpoints ☑",
                 path: "/docs/core/breakpoints",
                 componentPath: "core/Breakpoints"
             },
@@ -49,12 +49,12 @@ module.exports = [
                 componentPath: "core/Color"
             },
             {
-                title: "Favicons",
+                title: "Favicons ☐",
                 path: "/docs/core/favicons",
                 componentPath: "core/Favicons"
             },
             {
-                title: "Grid",
+                title: "Grid ☑",
                 path: "/docs/core/grid",
                 componentPath: "core/Grid"
             },
@@ -69,12 +69,12 @@ module.exports = [
                 componentPath: "core/Lists"
             },
             {
-                title: "Page layout",
+                title: "Page layout ☐",
                 path: "/docs/core/page-layout",
                 componentPath: "core/Page-layout"
             },
             {
-                title: "Tables",
+                title: "Tables ☐",
                 path: "/docs/core/tables",
                 componentPath: "core/Tables"
             },
@@ -100,12 +100,12 @@ module.exports = [
                 componentPath: "components/ActionLink"
             },
             {
-                title: "Action List ☐",
+                title: "Action List ☑",
                 path: "/docs/components/action-list",
                 componentPath: "components/ActionList"
             },
             {
-                title: "Alerts ☐",
+                title: "Alerts ◯",
                 path: "/docs/components/alerts",
                 componentPath: "components/Alerts"
             },
@@ -231,7 +231,7 @@ module.exports = [
         redirect: "/docs/dashboard/introduction",
         routes: [
             {
-                title: "Introduction",
+                title: "Introduction ☐",
                 path: "/docs/dashboard/introduction",
                 componentPath: "dashboard/Introduction"
             },
@@ -252,47 +252,47 @@ module.exports = [
         redirect: "/docs/utilities/colors",
         routes: [
             {
-                title: "Borders",
+                title: "Borders ☑",
                 path: "/docs/utilities/borders",
                 componentPath: "utilities/Borders"
             },
             {
-                title: "Colors",
+                title: "Colors ☐",
                 path: "/docs/utilities/colors",
                 componentPath: "utilities/Colors"
             },
             {
-                title: "Display",
+                title: "Display ☑",
                 path: "/docs/utilities/display",
                 componentPath: "utilities/Display"
             },
             {
-                title: "Flex",
+                title: "Flex ☑",
                 path: "/docs/utilities/flex",
                 componentPath: "utilities/Flex"
             },
             {
-                title: "Images",
+                title: "Images ☑",
                 path: "/docs/utilities/images",
                 componentPath: "utilities/Images"
             },
             {
-                title: "Sizing",
+                title: "Sizing ☑",
                 path: "/docs/utilities/sizing",
                 componentPath: "utilities/Sizing"
             },
             {
-                title: "Spacing",
+                title: "Spacing ☑",
                 path: "/docs/utilities/spacing",
                 componentPath: "utilities/Spacing"
             },
             {
-                title: "Text",
+                title: "Text ☑",
                 path: "/docs/utilities/text",
                 componentPath: "utilities/Text"
             },
             {
-                title: "Visibility",
+                title: "Visibility ☑",
                 path: "/docs/utilities/visibility",
                 componentPath: "utilities/Visibility"
             }
