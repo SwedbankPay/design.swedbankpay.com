@@ -1,66 +1,75 @@
 .action-list {
     position: relative;
-    width: 1rem;
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
 
-    > .material-icons,
     .action-toggle {
         position: relative;
-        color: @color-muted;
         line-height: 1.1;
         user-select: none;
 
+        &:not(.material-icons) {
+            padding: 0.5rem;
+        }
+
         &:hover {
-            color: @color-muted-hover;
             cursor: pointer;
+
+            &.material-icons {
+                color: @color-muted;
+            }
+
+            &:not(.material-icons) {
+                background-color: @offwhite;
+            }
         }
     }
 
     .action-menu {
         position: absolute;
-        top: -0.5rem;
-        right: -0.65rem;
+        top: 1.65rem;
+        right: 0;
         z-index: @zindex-action-list;
         height: 0;
         overflow: hidden;
+        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+        background-color: @white;
 
         > a {
             display: flex;
-            padding: @action-menu-anchor-padding;
-            padding-right: @base-padding-xl;
-            color: @color-muted;
+            padding: 0.5rem 1rem 0.3rem 0.5rem;
             visibility: hidden;
             position: relative;
-            border: none;
+            text-decoration: none;
+            white-space: nowrap;
+            align-items: center;
+            color: @dark-brown;
 
             > .material-icons {
                 margin-right: @base-margin-sm;
             }
 
-            &:active,
-            &:focus {
-                text-decoration: none;
-            }
-
             &:hover {
                 text-decoration: none;
-                background-color: @bg-gray;
-                color: @text-color;
+                background-color: @offwhite;
+            }
+
+            &:not(:last-child) {
+                border-bottom: 1px solid @offwhite;
             }
         }
     }
 
     &.active {
-        .material-icons {
-            z-index: @zindex-action-list-anchor;
+        .action-toggle {
+            color: @color-muted;
+
+            &:not(.material-icons) {
+                background-color: @offwhite;
+            }
         }
 
         .action-menu {
-            border: 2px solid @color-muted;
-            background-color: @white;
             height: fit-content;
-            white-space: nowrap;
 
             > a {
                 visibility: visible;
@@ -70,21 +79,14 @@
 
     &.anchor-top-left {
         .action-menu {
-            top: -0.35rem;
             right: initial;
-            left: -0.35rem;
-
-            > a {
-                padding-left: @base-padding-xl;
-                padding-right: @base-padding;
-            }
         }
     }
 
     &.anchor-bottom-right {
         .action-menu {
             top: initial;
-            bottom: 0;
+            bottom: 27px;
         }
     }
 
@@ -92,13 +94,7 @@
         .action-menu {
             top: initial;
             right: initial;
-            left: -0.35rem;
-            bottom: 0;
-
-            > a {
-                padding-left: @base-padding-xl;
-                padding-right: @base-padding;
-            }
+            bottom: 27px;
         }
     }
 }

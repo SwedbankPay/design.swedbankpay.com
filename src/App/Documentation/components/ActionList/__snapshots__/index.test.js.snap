@@ -189,24 +189,6 @@ exports[`Components: ActionList Overview renders 1`] = `
       }
     />
   </ComponentPreview>
-  <Alert
-    type="warning"
-  >
-    <h4>
-      Deprecation warning
-    </h4>
-    <p>
-      The Action list component no longer selects on 
-      <Property
-        value=".material-icons"
-      />
-      . Add 
-      <Property
-        value=".action-toggle"
-      />
-       to your toggling element.
-    </p>
-  </Alert>
 </Fragment>
 `;
 

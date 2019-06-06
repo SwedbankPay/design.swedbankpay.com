@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 import ActionListComponent from "@/ActionList";
-import AlertComponent from "@/Alert";
 import { ComponentPreview, DocContainer, JavascriptDocs, Property } from "#";
 
 const { actionList } = window.px;
@@ -32,17 +31,6 @@ const Overview = () => (
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ActionListComponent items={items} />
         </ComponentPreview>
-        {/*
-            TODO: remove alert on next major release. Current: 2.2.0
-            https://payexjira.atlassian.net/browse/DG-325 [AW]
-        */}
-        <AlertComponent type="warning">
-            <h4>Deprecation warning</h4>
-            <p>
-                The Action list component no longer selects on <Property value=".material-icons"/>. Add <Property value=".action-toggle" /> to
-                your toggling element.
-            </p>
-        </AlertComponent>
     </>
 );
 

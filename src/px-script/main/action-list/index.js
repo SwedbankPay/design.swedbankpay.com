@@ -1,8 +1,7 @@
 const SELECTORS = {
     ACTIONLIST: ".action-list",
     ACTIONMENU: ".action-menu",
-    TOGGLE: ".action-toggle",
-    TOGGLE_OLD: ".action-list > i.material-icons"
+    TOGGLE: ".action-toggle"
 };
 
 const _actionLists = _actionLists || [];
@@ -14,19 +13,7 @@ class ActionList {
         this.actionMenu = element.querySelector(SELECTORS.ACTIONMENU);
         this.actionMenuLinks = this.actionMenu.querySelectorAll("a");
         this.isOpen = this.container.classList.contains("active");
-        this.newToggleBtn = element.querySelector(SELECTORS.TOGGLE);
-
-        /*
-            TODO: remove oldToggleBtn and ternary related to oldToggleBtn on next major release. Current: 2.2.0
-            https://payexjira.atlassian.net/browse/DG-325 [AW]
-        */
-        this.oldToggleBtn = element.querySelector(SELECTORS.TOGGLE_OLD);
-        this.toggleBtn = (this.newToggleBtn) ? this.newToggleBtn : ((this.oldToggleBtn) ?
-            (
-                console.warn("DEPRECATED: Selecting on .material-icons is deprecated, add .action-toggle to your toggling element"),
-                this.oldToggleBtn
-            ) : null
-        );
+        this.toggleBtn = element.querySelector(SELECTORS.TOGGLE);
 
         try {
             this.toggleBtn.addEventListener("click", () => {
