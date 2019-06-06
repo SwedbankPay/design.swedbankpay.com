@@ -5,7 +5,7 @@ const SELECTORS = {
     DATEPICKER: "[data-datepicker]"
 };
 
-const _datepickers = _datepickers || [];
+let _datepickers = _datepickers || [];
 
 // 080989◢◤200418
 const _createDatepicker = datepicker => {
@@ -57,6 +57,10 @@ const _createDatepicker = datepicker => {
     return datepickerObj;
 };
 
+const _destroyDatepickers = () => {
+    _datepickers = _datepickers.filter(datepicker => datepicker.destroy());
+};
+
 const init = id => {
     if (id) {
         const datepicker = document.getElementById(id);
@@ -67,6 +71,11 @@ const init = id => {
             return null;
         }
 
+        _datepickers.forEach((d, i) => (d.element.id === id
+            ? _datepickers.splice(i, 1)[0].destroy()
+            : null)
+        );
+
         return _createDatepicker(datepicker);
     } else {
         const datepickers = document.querySelectorAll(SELECTORS.DATEPICKER);
@@ -76,6 +85,8 @@ const init = id => {
 
             return null;
         }
+
+        _destroyDatepickers();
 
         return [...datepickers].map(datepicker => _createDatepicker(datepicker));
     }
