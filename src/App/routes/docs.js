@@ -100,7 +100,7 @@ module.exports = [
                 componentPath: "components/ActionLink"
             },
             {
-                title: "Action List ☑",
+                title: "Action List ◯",
                 path: "/docs/components/action-list",
                 componentPath: "components/ActionList"
             },
@@ -135,7 +135,7 @@ module.exports = [
                 componentPath: "components/Datepickers"
             },
             {
-                title: "Dialog ☐",
+                title: "Dialog ◯",
                 path: "/docs/components/dialog",
                 componentPath: "components/Dialog"
             },

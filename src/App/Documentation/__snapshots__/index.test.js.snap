@@ -136,7 +136,7 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "components/ActionList",
                 "path": "/docs/components/action-list",
-                "title": "Action List ☑",
+                "title": "Action List ◯",
               },
               Object {
                 "componentPath": "components/Alerts",
@@ -171,7 +171,7 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "components/Dialog",
                 "path": "/docs/components/dialog",
-                "title": "Dialog ☐",
+                "title": "Dialog ◯",
               },
               Object {
                 "componentPath": "components/Expandable",
