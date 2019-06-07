@@ -105,7 +105,7 @@ module.exports = [
                 componentPath: "components/ActionList"
             },
             {
-                title: "Alerts ☐",
+                title: "Alerts ☑",
                 path: "/docs/components/alerts",
                 componentPath: "components/Alerts"
             },

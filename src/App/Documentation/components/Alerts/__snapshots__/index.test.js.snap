@@ -77,22 +77,38 @@ exports[`Documentation: Alerts Basic Usage renders 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <ComplexAlert
-      close={true}
-      headerText="Success!"
-      icon="check_circle"
+    <Alert
+      text="This is a default alert!"
+      type="default"
+    />
+    
+
+
+    <Alert
+      text="This is a success alert!"
       type="success"
-    >
-      <p>
-        PDF was successfully uploaded.
-        <br />
-        Some additional information.
-      </p>
-      <hr />
-      <p>
-        By the way, great job!
-      </p>
-    </ComplexAlert>
+    />
+    
+
+
+    <Alert
+      text="This is a neutral alert!"
+      type="neutral"
+    />
+    
+
+
+    <Alert
+      text="This is a warning alert!"
+      type="warning"
+    />
+    
+
+
+    <Alert
+      text="This is a danger alert!"
+      type="danger"
+    />
   </ComponentPreview>
 </Fragment>
 `;
@@ -221,26 +237,22 @@ exports[`Documentation: Alerts Extended Usage renders 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <Alert
+    <ComplexAlert
       close={true}
+      headerText="Success!"
       icon="check_circle"
       type="success"
     >
-      <h3
-        className="text-success"
-      >
-        Success!
-      </h3>
       <p>
-        PDF was successfully uploaded. 
+        PDF was successfully uploaded.
         <br />
-         Some additional information.
+        Some additional information.
       </p>
       <hr />
       <p>
         By the way, great job!
       </p>
-    </Alert>
+    </ComplexAlert>
   </ComponentPreview>
 </Fragment>
 `;

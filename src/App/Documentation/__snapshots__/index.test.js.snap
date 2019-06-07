@@ -141,7 +141,7 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "components/Alerts",
                 "path": "/docs/components/alerts",
-                "title": "Alerts ☐",
+                "title": "Alerts ☑",
               },
               Object {
                 "componentPath": "components/Badge",

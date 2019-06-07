@@ -26,6 +26,7 @@ const ComplexAlert = ({ id, type, icon, close, headerText, children }) => (
                 ? <>
                     {"\n"}
                         <h3>{headerText}</h3>
+                    {"\n"}
                 </>
                 : null}
             {close

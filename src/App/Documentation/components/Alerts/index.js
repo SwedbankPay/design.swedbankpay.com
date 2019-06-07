@@ -12,17 +12,11 @@ const BasicUsage = () => (
         <h2 id="basic-usage">Basic usage</h2>
         <p>The default behavior of the alert present itself in a box with a border.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            {/* <AlertComponent type="default" text="This is a default alert!" />{"\n\n"}
+            <AlertComponent type="default" text="This is a default alert!" />{"\n\n"}
             <AlertComponent type="success" text="This is a success alert!" />{"\n\n"}
             <AlertComponent type="neutral" text="This is a neutral alert!" />{"\n\n"}
             <AlertComponent type="warning" text="This is a warning alert!" />{"\n\n"}
-            <AlertComponent type="danger" text="This is a danger alert!" /> */}
-            <ComplexAlert type="success" icon="check_circle" headerText="Success!" close>
-                <p>PDF was successfully uploaded.
-                    <br />Some additional information.</p>
-                <hr/>
-                <p>By the way, great job!</p>
-            </ComplexAlert>
+            <AlertComponent type="danger" text="This is a danger alert!" />
         </ComponentPreview>
     </>
 );
@@ -70,12 +64,12 @@ const ExtendedUsage = () => (
         <p>Alerts can also contain additional HTML elements like headings, paragraphs and dividers.</p>
         <p>Just make sure to wrap the content in a container with the class <Property value=".alert-body" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <AlertComponent type="success" close icon="check_circle">
-                <h3 className="text-success">Success!</h3>
-                <p>PDF was successfully uploaded. <br /> Some additional information.</p>
+            <ComplexAlert type="success" icon="check_circle" headerText="Success!" close>
+                <p>PDF was successfully uploaded.
+                    <br />Some additional information.</p>
                 <hr/>
                 <p>By the way, great job!</p>
-            </AlertComponent>
+            </ComplexAlert>
         </ComponentPreview>
     </>
 );
