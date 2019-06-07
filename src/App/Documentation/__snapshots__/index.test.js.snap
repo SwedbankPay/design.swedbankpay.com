@@ -136,7 +136,7 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "components/ActionList",
                 "path": "/docs/components/action-list",
-                "title": "Action List ☐",
+                "title": "Action List ☑",
               },
               Object {
                 "componentPath": "components/Alerts",

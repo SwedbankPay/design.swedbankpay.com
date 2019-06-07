@@ -187,6 +187,35 @@ exports[`Components: ActionList Overview renders 1`] = `
           },
         ]
       }
+      toggleBtn={
+        <span
+          className="action-toggle"
+        >
+          My Menu
+        </span>
+      }
+    />
+    <ActionList
+      items={
+        Array [
+          Object {
+            "icon": "bookmark",
+            "name": "Add bookmark",
+          },
+          Object {
+            "icon": "business_center",
+            "name": "Add client",
+          },
+          Object {
+            "icon": "add_circle",
+            "name": "Add document",
+          },
+          Object {
+            "icon": "person_add",
+            "name": "Add user",
+          },
+        ]
+      }
     />
   </ComponentPreview>
 </Fragment>

@@ -100,7 +100,7 @@ module.exports = [
                 componentPath: "components/ActionLink"
             },
             {
-                title: "Action List ☐",
+                title: "Action List ☑",
                 path: "/docs/components/action-list",
                 componentPath: "components/ActionList"
             },

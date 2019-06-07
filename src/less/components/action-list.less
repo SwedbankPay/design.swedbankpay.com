@@ -6,27 +6,23 @@
         position: relative;
         line-height: 1.1;
         user-select: none;
+        padding: 0.5rem;
+        border-radius: 2px;
+        color: @dark-brown;
 
         &:not(.material-icons) {
-            padding: 0.5rem;
+            padding: 0.7rem;
         }
 
         &:hover {
             cursor: pointer;
-
-            &.material-icons {
-                color: @color-muted;
-            }
-
-            &:not(.material-icons) {
-                background-color: @offwhite;
-            }
+            background-color: @gray-bright;
         }
     }
 
     .action-menu {
         position: absolute;
-        top: 1.65rem;
+        top: 2.7rem;
         right: 0;
         z-index: @zindex-action-list;
         height: 0;
@@ -50,22 +46,18 @@
 
             &:hover {
                 text-decoration: none;
-                background-color: @offwhite;
+                background-color: @gray-bright;
             }
 
             &:not(:last-child) {
-                border-bottom: 1px solid @offwhite;
+                border-bottom: 1px solid @gray-bright;
             }
         }
     }
 
     &.active {
         .action-toggle {
-            color: @color-muted;
-
-            &:not(.material-icons) {
-                background-color: @offwhite;
-            }
+            background-color: @gray-bright;
         }
 
         .action-menu {
@@ -86,15 +78,15 @@
     &.anchor-bottom-right {
         .action-menu {
             top: initial;
-            bottom: 27px;
+            bottom: 2.7rem;
         }
     }
 
     &.anchor-bottom-left {
         .action-menu {
             top: initial;
-            right: initial;
-            bottom: 27px;
+            right: $top;
+            bottom: 2.7rem;
         }
     }
 }
