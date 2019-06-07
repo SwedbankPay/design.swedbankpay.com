@@ -136,12 +136,12 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "components/ActionList",
                 "path": "/docs/components/action-list",
-                "title": "Action List ◯",
+                "title": "Action List ☐",
               },
               Object {
                 "componentPath": "components/Alerts",
                 "path": "/docs/components/alerts",
-                "title": "Alerts ◯",
+                "title": "Alerts ☐",
               },
               Object {
                 "componentPath": "components/Badge",
@@ -171,7 +171,7 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "components/Dialog",
                 "path": "/docs/components/dialog",
-                "title": "Dialog ◯",
+                "title": "Dialog ☑",
               },
               Object {
                 "componentPath": "components/Expandable",
@@ -221,7 +221,7 @@ exports[`Documentation: index renders 1`] = `
               Object {
                 "componentPath": "components/Slab",
                 "path": "/docs/components/slab",
-                "title": "Slab ☐",
+                "title": "Slab ☑",
               },
               Object {
                 "componentPath": "components/Status",

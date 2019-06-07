@@ -100,12 +100,12 @@ module.exports = [
                 componentPath: "components/ActionLink"
             },
             {
-                title: "Action List ◯",
+                title: "Action List ☐",
                 path: "/docs/components/action-list",
                 componentPath: "components/ActionList"
             },
             {
-                title: "Alerts ◯",
+                title: "Alerts ☐",
                 path: "/docs/components/alerts",
                 componentPath: "components/Alerts"
             },
@@ -135,7 +135,7 @@ module.exports = [
                 componentPath: "components/Datepickers"
             },
             {
-                title: "Dialog ◯",
+                title: "Dialog ☑",
                 path: "/docs/components/dialog",
                 componentPath: "components/Dialog"
             },
@@ -185,7 +185,7 @@ module.exports = [
                 componentPath: "components/Sheet"
             },
             {
-                title: "Slab ☐",
+                title: "Slab ☑",
                 path: "/docs/components/slab",
                 componentPath: "components/Slab"
             },
