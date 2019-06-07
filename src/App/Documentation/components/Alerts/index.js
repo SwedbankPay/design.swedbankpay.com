@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
 import { ComponentPreview, Attribute, Property, DocContainer, JavascriptDocs } from "#";
-import AlertComponent from "@/Alert";
+import AlertComponent, { ComplexAlert } from "@/Alert";
 
 const { alert } = window.px;
 
@@ -12,11 +12,17 @@ const BasicUsage = () => (
         <h2 id="basic-usage">Basic usage</h2>
         <p>The default behavior of the alert present itself in a box with a border.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <AlertComponent type="default" text="This is a default alert!" />{"\n\n"}
+            {/* <AlertComponent type="default" text="This is a default alert!" />{"\n\n"}
             <AlertComponent type="success" text="This is a success alert!" />{"\n\n"}
             <AlertComponent type="neutral" text="This is a neutral alert!" />{"\n\n"}
             <AlertComponent type="warning" text="This is a warning alert!" />{"\n\n"}
-            <AlertComponent type="danger" text="This is a danger alert!" />
+            <AlertComponent type="danger" text="This is a danger alert!" /> */}
+            <ComplexAlert type="success" icon="check_circle" headerText="Success!" close>
+                <p>PDF was successfully uploaded.
+                    <br />Some additional information.</p>
+                <hr/>
+                <p>By the way, great job!</p>
+            </ComplexAlert>
         </ComponentPreview>
     </>
 );

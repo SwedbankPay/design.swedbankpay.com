@@ -5,7 +5,8 @@
     margin-bottom: @base-margin;
     border: 1px solid transparent;
     display: flex;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
 
     &.alert-default {
         .alert-variant(@gray-medium-light, @nearwhite);
@@ -31,24 +32,31 @@
         .alert-variant(@state-danger, @state-danger-light);
     }
 
-    .alert-heading {
-        margin: 0;
-    }
-
     > p {
         margin-bottom: 0;
     }
 
+    .alert-icon {
+        margin-right: @base-margin;
+    }
+
+    .alert-header {
+        .header-margin-none();
+
+        display: flex;
+        flex: 0 1 100%;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
+
     .alert-body {
+        margin: 0 2.5rem;
+
         :last-child {
             margin-bottom: 0;
         }
     }
 
-    .alert-icon {
-        margin-right: @base-margin;
-        margin-top: 1px; // Aligns the icon with a single line of text, is it worth? [AW]
-    }
 
     [data-alert-close] {
         margin-left: auto;
