@@ -8,15 +8,21 @@ ol.breadcrumb {
         display: flex;
         list-style: none;
         align-items: center;
+        color: @link-color;
+
+        a {
+            text-decoration: none;
+        }
 
         &:not(:last-child) {
             span {
-                color: @gray-light;
+                color: @dark-brown;
             }
         }
 
         &:last-child {
             font-weight: bold;
+            color: @dark-brown;
 
             &:after {
                 display: none;
@@ -25,7 +31,7 @@ ol.breadcrumb {
 
         &:after {
             content: "chevron_right";
-            color: @gray-light;
+            color: @dark-brown;
             margin-right: 0.5rem;
             margin-left: 0.5rem;
             font-family: "Material Icons";
