@@ -29,7 +29,6 @@ const Overview = () => (
         <h2 id="overview">Overview</h2>
         <p>Action lists.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <ActionListComponent items={items} toggleBtn={<span className="action-toggle">My Menu</span>} />
             <ActionListComponent items={items} />
         </ComponentPreview>
     </>
