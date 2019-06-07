@@ -233,7 +233,7 @@ exports[`Components: Slab SlabWell renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="slab slab-white slab-well"
+      className="slab slab-well"
     >
       Look ma, im in a well!
     </div>

@@ -41,7 +41,7 @@ const SlabWell = () => (
     <>
         <h2 id="slab-well">Slab well</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="slab slab-white slab-well">
+            <div className="slab slab-well">
                 Look ma, im in a well!
             </div>
         </ComponentPreview>
