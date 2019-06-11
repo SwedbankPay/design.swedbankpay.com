@@ -4,6 +4,7 @@ import { Addon } from "@/InputGroup";
 
 const Datepicker = ({ format, time, min, max, months, value, label, prefixValue, prefixType, fulldate, mode, allowinput, required, id }) => {
     const attrs = {
+        id,
         className: "form-control",
         type: "text",
         "data-datepicker": "",
@@ -16,8 +17,7 @@ const Datepicker = ({ format, time, min, max, months, value, label, prefixValue,
         "data-datepicker-fulldate": fulldate || null,
         "data-datepicker-mode": mode || null,
         "data-datepicker-allowinput": allowinput || null,
-        "data-required": required || null,
-        id
+        "data-required": required || null
     };
 
     return (
