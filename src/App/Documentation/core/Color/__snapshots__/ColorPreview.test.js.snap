@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Core: Color renders 1`] = `
+<div
+  className="color-preview"
+  style={
+    Object {
+      "backgroundColor": "#test",
+    }
+  }
+>
+  <p
+    style={
+      Object {
+        "color": "black",
+      }
+    }
+  >
+    test
+     (
+    #test
+    )
+  </p>
+</div>
+`;
