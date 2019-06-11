@@ -14,29 +14,29 @@ describe("Components: Expandable", () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    // describe("Overview", () => {
-    //     it("is defined", () => {
-    //         expect(Overview).toBeDefined();
-    //     });
+    describe("Overview", () => {
+        it("is defined", () => {
+            expect(Overview).toBeDefined();
+        });
 
-    //     it("renders", () => {
-    //         const wrapper = shallow(<Overview />);
+        it("renders", () => {
+            const wrapper = shallow(<Overview />);
 
-    //         expect(wrapper).toMatchSnapshot();
-    //     });
-    // });
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
 
-    // describe("Accordion", () => {
-    //     it("is defined", () => {
-    //         expect(Accordion).toBeDefined();
-    //     });
+    describe("Accordion", () => {
+        it("is defined", () => {
+            expect(Accordion).toBeDefined();
+        });
 
-    //     it("renders", () => {
-    //         const wrapper = shallow(<Accordion />);
+        it("renders", () => {
+            const wrapper = shallow(<Accordion />);
 
-    //         expect(wrapper).toMatchSnapshot();
-    //     });
-    // });
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
 
     test.todo("Expandable tests");
 });

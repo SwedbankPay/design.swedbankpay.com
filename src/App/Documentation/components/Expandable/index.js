@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { ComponentPreview, DocContainer } from "#";
+import { ComponentPreview, DocContainer, Property } from "#";
 import expandable from "$/px-script/main/expandable";
 import ExpandableComponent from "@/Expandable";
 
@@ -34,7 +34,10 @@ const items = [
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
-        <p>Accordion.</p>
+        <p>
+            The expandable component shows only what is contained in the <Property value=".expandable-header" /> when it is
+            closed. <Property value=".expandable-content" /> will be visible in its open state.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ExpandableComponent items={items} />
         </ComponentPreview>
@@ -43,8 +46,11 @@ const Overview = () => (
 
 const Accordion = () => (
     <>
-        <h2 id="overview">Overview</h2>
-        <p>Accordion.</p>
+        <h2 id="accordion">Accordion</h2>
+        <p>
+            If you use a wrapper with <Property value=".accordion"/> then only one expandable can be open at the
+            same time.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="accordion">
                 <ExpandableComponent items={items} />

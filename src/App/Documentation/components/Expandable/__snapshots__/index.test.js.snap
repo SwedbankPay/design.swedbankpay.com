@@ -1,5 +1,107 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Components: Expandable Accordion renders 1`] = `
+<Fragment>
+  <h2
+    id="accordion"
+  >
+    Accordion
+  </h2>
+  <p>
+    If you use a wrapper with 
+    <Property
+      value=".accordion"
+    />
+     then only one expandable can be open at the same time.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="accordion"
+    >
+      <Expandable
+        items={
+          Array [
+            Object {
+              "content": <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique scelerisque blandit. Vestibulum venenatis elit non nunc pulvinar, vitae tincidunt quam malesuada. Etiam orci dui, ultricies consectetur venenatis sit amet, ullamcorper quis metus. Aliquam eget consequat erat. Praesent arcu tortor, eleifend ac lorem eu, ullamcorper tristique purus. Phasellus felis mi, malesuada et egestas eget, efficitur at magna. Fusce euismod, elit tempor vulputate mollis, diam eros venenatis libero, eget ultricies diam velit at erat. Morbi mattis scelerisque augue, ut volutpat lectus sodales iaculis.
+              </p>,
+              "title": "Foo",
+            },
+            Object {
+              "content": <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique scelerisque blandit. Vestibulum venenatis elit non nunc pulvinar, vitae tincidunt quam malesuada. Etiam orci dui, ultricies consectetur venenatis sit amet, ullamcorper quis metus. Aliquam eget consequat erat. Praesent arcu tortor, eleifend ac lorem eu, ullamcorper tristique purus. Phasellus felis mi, malesuada et egestas eget, efficitur at magna. Fusce euismod, elit tempor vulputate mollis, diam eros venenatis libero, eget ultricies diam velit at erat. Morbi mattis scelerisque augue, ut volutpat lectus sodales iaculis.
+              </p>,
+              "title": "Bar",
+            },
+            Object {
+              "content": <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique scelerisque blandit. Vestibulum venenatis elit non nunc pulvinar, vitae tincidunt quam malesuada. Etiam orci dui, ultricies consectetur venenatis sit amet, ullamcorper quis metus. Aliquam eget consequat erat. Praesent arcu tortor, eleifend ac lorem eu, ullamcorper tristique purus. Phasellus felis mi, malesuada et egestas eget, efficitur at magna. Fusce euismod, elit tempor vulputate mollis, diam eros venenatis libero, eget ultricies diam velit at erat. Morbi mattis scelerisque augue, ut volutpat lectus sodales iaculis.
+              </p>,
+              "title": "Baz",
+            },
+          ]
+        }
+      />
+    </div>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Components: Expandable Overview renders 1`] = `
+<Fragment>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <p>
+    The expandable component shows only what is contained in the 
+    <Property
+      value=".expandable-header"
+    />
+     when it is closed. 
+    <Property
+      value=".expandable-content"
+    />
+     will be visible in its open state.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Expandable
+      items={
+        Array [
+          Object {
+            "content": <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique scelerisque blandit. Vestibulum venenatis elit non nunc pulvinar, vitae tincidunt quam malesuada. Etiam orci dui, ultricies consectetur venenatis sit amet, ullamcorper quis metus. Aliquam eget consequat erat. Praesent arcu tortor, eleifend ac lorem eu, ullamcorper tristique purus. Phasellus felis mi, malesuada et egestas eget, efficitur at magna. Fusce euismod, elit tempor vulputate mollis, diam eros venenatis libero, eget ultricies diam velit at erat. Morbi mattis scelerisque augue, ut volutpat lectus sodales iaculis.
+            </p>,
+            "title": "Foo",
+          },
+          Object {
+            "content": <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique scelerisque blandit. Vestibulum venenatis elit non nunc pulvinar, vitae tincidunt quam malesuada. Etiam orci dui, ultricies consectetur venenatis sit amet, ullamcorper quis metus. Aliquam eget consequat erat. Praesent arcu tortor, eleifend ac lorem eu, ullamcorper tristique purus. Phasellus felis mi, malesuada et egestas eget, efficitur at magna. Fusce euismod, elit tempor vulputate mollis, diam eros venenatis libero, eget ultricies diam velit at erat. Morbi mattis scelerisque augue, ut volutpat lectus sodales iaculis.
+            </p>,
+            "title": "Bar",
+          },
+          Object {
+            "content": <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique scelerisque blandit. Vestibulum venenatis elit non nunc pulvinar, vitae tincidunt quam malesuada. Etiam orci dui, ultricies consectetur venenatis sit amet, ullamcorper quis metus. Aliquam eget consequat erat. Praesent arcu tortor, eleifend ac lorem eu, ullamcorper tristique purus. Phasellus felis mi, malesuada et egestas eget, efficitur at magna. Fusce euismod, elit tempor vulputate mollis, diam eros venenatis libero, eget ultricies diam velit at erat. Morbi mattis scelerisque augue, ut volutpat lectus sodales iaculis.
+            </p>,
+            "title": "Baz",
+          },
+        ]
+      }
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Components: Expandable renders 1`] = `
 <DocContainer
   docToc={true}
