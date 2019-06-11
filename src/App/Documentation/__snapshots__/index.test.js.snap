@@ -184,6 +184,11 @@ exports[`Documentation: index renders 1`] = `
                 "title": "Forms ☑",
               },
               Object {
+                "componentPath": "components/Footer",
+                "path": "/docs/components/footer",
+                "title": "Footer ☑",
+              },
+              Object {
                 "componentPath": "components/InputGroup",
                 "path": "/docs/components/input-group",
                 "title": "Input Group ☑",

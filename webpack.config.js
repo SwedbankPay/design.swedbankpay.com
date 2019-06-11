@@ -73,10 +73,7 @@ module.exports = (env, argv) => {
                             loader: isProd ? MiniCssExtractPlugin.loader : "style-loader"
                         },
                         {
-                            loader: "css-loader",
-                            options: {
-                                // modules: "global"
-                            }
+                            loader: "css-loader"
                         },
                         {
                             loader: "postcss-loader",

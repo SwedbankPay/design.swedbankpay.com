@@ -150,6 +150,11 @@ module.exports = [
                 componentPath: "components/Forms"
             },
             {
+                title: "Footer ☑",
+                path: "/docs/components/footer",
+                componentPath: "components/Footer"
+            },
+            {
                 title: "Input Group ☑",
                 path: "/docs/components/input-group",
                 componentPath: "components/InputGroup"
