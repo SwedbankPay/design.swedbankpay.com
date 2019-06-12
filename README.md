@@ -1,4 +1,4 @@
-![Swedbank Pay logo](./src/img/logo/Swedbank_pay_vertical_RGB_neg.svg)
+![Swedbank Pay logo](./src/img/logo/spay_vertical_pos.svg)
 
 # PayEx DesignGuide
 
