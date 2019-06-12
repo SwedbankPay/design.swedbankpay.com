@@ -29,7 +29,10 @@ environment:
 # cache:
 #   - node_modules
 
+# We need to install another version of node due to sharp (app-manifest-webpack-plugin -> favicons -> sharp) only supporting the 64-bit version. [AW]
+# Read sharps doucmentation -> (https://sharp.dimens.io/en/stable/install/)
 install:
+- ps: Install-Product node $env:nodejs_version x64
 - cmd: >-
     choco install gitversion.portable -pre -y
 

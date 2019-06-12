@@ -73,10 +73,7 @@ module.exports = (env, argv) => {
                             loader: isProd ? MiniCssExtractPlugin.loader : "style-loader"
                         },
                         {
-                            loader: "css-loader",
-                            options: {
-                                // modules: "global"
-                            }
+                            loader: "css-loader"
                         },
                         {
                             loader: "postcss-loader",
@@ -105,6 +102,18 @@ module.exports = (env, argv) => {
                             loader: "postcss-loader",
                             options: {
                                 plugins: () => autoprefixer()
+                            }
+                        }
+                    ]
+                },
+                {
+                    test: /\.(woff(2)?|ttf|eot)$/,
+                    use: [
+                        {
+                            loader: "file-loader",
+                            options: {
+                                outputPath: "fonts/",
+                                name: "[name].[ext]"
                             }
                         }
                     ]

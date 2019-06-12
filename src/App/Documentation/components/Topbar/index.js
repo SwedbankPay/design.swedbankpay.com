@@ -8,10 +8,23 @@ const { topbar } = window.px;
 
 const menu = {
     btn: {
-        icon: "menu",
-        text: "Menu"
+        name: "Menu",
+        icon: "menu"
     },
-    items: ["Link 1", "Link 2", "Link 3"]
+    items: [
+        {
+            name: "Home",
+            icon: "home"
+        },
+        {
+            name: "Purchase history",
+            icon: "shopping_cart"
+        },
+        {
+            name: "Settings",
+            icon: "settings"
+        }
+    ]
 };
 
 const Overview = () => (
@@ -36,15 +49,14 @@ const Overview = () => (
     </>
 );
 
-const FixedTopbar = () => (
+const TopbarWide = () => (
     <>
-        <h2 id="fixed-topbar">Fixed topbar</h2>
+        <h2 id="topbar-wide">Wide topbar</h2>
         <p>
-            Add <Property value=".topbar-fixed" /> with your <Property value=".topbar" /> to get a fixed topbar.
-            For a demonstration of the usage see the documentations top bar or implement it in your own project!
+            This is a wide topbar.
         </p>
-        <ComponentPreview language="html" codeFigure>
-            <TopbarComponent fixed />
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <TopbarComponent id="demo-topbar-1" topbarContent={menu} wide="xl" logout />
         </ComponentPreview>
     </>
 );
@@ -59,6 +71,7 @@ const JavascriptMethods = () => (
 class Topbar extends Component {
     componentDidMount () {
         topbar.init("demo-topbar");
+        topbar.init("demo-topbar-1");
     }
 
     render () {
@@ -66,7 +79,7 @@ class Topbar extends Component {
             <DocContainer docToc>
                 <p className="lead">The topbar is used to give users an easily available navigational bar at the top of your web application.</p>
                 <Overview />
-                <FixedTopbar />
+                <TopbarWide />
                 <JavascriptMethods />
             </DocContainer>
         );
@@ -76,4 +89,4 @@ class Topbar extends Component {
 export default Topbar;
 
 /* For testing */
-export { Overview, FixedTopbar, JavascriptMethods };
+export { Overview, TopbarWide, JavascriptMethods };

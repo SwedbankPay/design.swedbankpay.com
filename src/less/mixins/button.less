@@ -1,7 +1,6 @@
-.button-variant(@color; @background;) {
+.button-variant(@color, @background, @disabled-color, @disabled-bg) {
     color: @color;
-    background-image: linear-gradient(to bottom, @background 0%, darken(@background, 5%) 100%);
-    border-color: darken(@background, 5%);
+    background-color: @background;
 
     &:focus,
     &.focus {
@@ -12,13 +11,11 @@
     &:hover {
         color: @color;
         background-color: darken(@background, 5%);
-        background-image: none;
     }
 
     &[active],
     &:active,
     &.active {
-        background-image: none;
         .button-active-state(darken(@background, 10%), @color);
     }
 
@@ -33,9 +30,8 @@
         &:active,
         &.active {
             &:not(.loading) {
-                background: @gray-8;
-                color: @gray-4;
-                border-color: darken(@gray-8, 5%);
+                background: @disabled-bg;
+                color: @disabled-color;
             }
 
             &.loading {
@@ -64,7 +60,6 @@
     &[active],
     &:active,
     &.active {
-        background-image: none;
         .button-active-state(darken(@background, 10%), @color);
 
         &:hover,
@@ -85,8 +80,8 @@
         &[active],
         &:active,
         &.active {
-            background-color: @gray-8;
-            color: @gray-4;
+            background-color: @btn-guiding-disabled-bg;
+            color: @btn-guiding-disabled-color;
             border-color: transparent;
         }
     }

@@ -786,18 +786,6 @@ exports[`Core: Grid GridOptions renders 1`] = `
         <th
           scope="row"
         >
-          # of columns
-        </th>
-        <td
-          colSpan="6"
-        >
-          12
-        </td>
-      </tr>
-      <tr>
-        <th
-          scope="row"
-        >
           Gutter width
         </th>
         <td
@@ -891,19 +879,41 @@ exports[`Core: Grid HowItWorks renders 1`] = `
   </p>
   <ul>
     <li>
-      Containers provide a means to center and horizontally pad your site’s contents. Use 
-      <Property
-        value=".container"
-      />
-       for a responsive pixel width or 
-      <Property
-        value=".container-fluid"
-      />
-       for 
-      <Property
-        value="width: 100%"
-      />
-       across all viewport and device sizes.
+      Containers provide a means to center and horizontally pad your site’s contents. We have 4 different container sizes available:
+      <ul>
+        <li>
+          <Property
+            value=".container-sm"
+          />
+          <p>
+            Max-width: 992px.
+          </p>
+        </li>
+        <li>
+          <Property
+            value=".container"
+          />
+          <p>
+            Max-width: 1200px.
+          </p>
+        </li>
+        <li>
+          <Property
+            value=".container-lg"
+          />
+          <p>
+            Max-width: 1600px.
+          </p>
+        </li>
+        <li>
+          <Property
+            value=".container-fluid"
+          />
+          <p>
+            Max-width: none, takes up the entire page.
+          </p>
+        </li>
+      </ul>
     </li>
     <li>
       Rows are wrappers for columns. Each column has horizontal 

@@ -2,11 +2,12 @@ label {
     display: inline-block;
     max-width: 100%;
     margin-bottom: @base-margin-xs;
+    font-weight: @font-weight-light;
     font-size: @base-font-size * 0.9;
     line-height: 1.5;
 
     .required-asterisk {
-        color: @red;
+        color: @state-danger;
         margin-left: 0.25rem;
         font-weight: normal;
         font-size: 1rem;
@@ -37,7 +38,7 @@ fieldset {
         .checkbox input[type="checkbox"] {
             + label:before {
                 background-color: @input-bg-disabled;
-                border-color: @checkbox-color;
+                border-color: @checkbox-border-color;
                 cursor: not-allowed;
             }
 
@@ -170,19 +171,20 @@ legend {
 }
 
 .form-control {
-    height: ~"calc(2.25rem + 2px)";
-    padding: @input-padding-y @input-padding-x;
+    min-height: ~"calc(2.25rem + 2px)";
+    padding: 0 0.75rem;
     background-color: @input-bg;
     background-clip: padding-box;
-    border: @input-border-width solid @input-border-color;
+    border: solid @input-border-color;
+    border-width: @input-border-width;
     border-radius: @input-border-radius;
     box-shadow: none;
     transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
     .form-control-focus();
-    .placeholder();
+    .placeholder(@gray-bright-alt);
 
     &::placeholder {
-        color: @gray-6; /* Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526. */
+        color: @gray-bright-alt; /* Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526. */
         font-weight: 300;
         letter-spacing: -0.1px;
     }
@@ -208,6 +210,7 @@ legend {
     // Reset height for `textarea`s
     textarea& {
         height: auto;
+        padding: 1rem 0.75rem;
     }
 }
 

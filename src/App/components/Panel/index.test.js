@@ -96,13 +96,6 @@ describe("Component: Panel - ", () => {
         expect(wrapper.html()).toContain("panel-half-padding");
     });
 
-    it("renders with class 'panel-dark' when prop darkMode is true", () => {
-        const wrapper = shallow(<Panel darkMode />);
-
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("panel-dark");
-    });
-
     it("prop type is an enum with set values", () => {
         console.error = jest.fn();
 

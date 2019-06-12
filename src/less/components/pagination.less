@@ -15,7 +15,7 @@
             display: inline-block;
             cursor: pointer;
             user-select: none;
-            border: none;
+            text-decoration: none;
 
             &:hover {
                 text-decoration: none;
@@ -42,7 +42,7 @@
             span {
                 &:after {
                     content: "";
-                    border: 2px solid @pagination-active-color;
+                    border: 2px solid @pagination-arrow-color;
                     border-top: none;
                     border-right: none;
                     width: 10px;
@@ -68,7 +68,7 @@
             span {
                 &:before {
                     content: "";
-                    border: 2px solid @pagination-active-color;
+                    border: 2px solid @pagination-arrow-color;
                     border-top: none;
                     border-right: none;
                     width: 10px;
@@ -82,7 +82,7 @@
 
                 &:after {
                     content: "";
-                    border: 2px solid @pagination-active-color;
+                    border: 2px solid @pagination-arrow-color;
                     border-top: none;
                     border-right: none;
                     width: 10px;
@@ -109,7 +109,7 @@
             span {
                 &:after {
                     content: "";
-                    border: 2px solid @pagination-active-color;
+                    border: 2px solid @pagination-arrow-color;
                     border-bottom: none;
                     border-left: none;
                     width: 10px;
@@ -135,7 +135,7 @@
             span {
                 &:before {
                     content: "";
-                    border: 2px solid @pagination-active-color;
+                    border: 2px solid @pagination-arrow-color;
                     border-bottom: none;
                     border-left: none;
                     width: 10px;
@@ -149,7 +149,7 @@
 
                 &:after {
                     content: "";
-                    border: 2px solid @pagination-active-color;
+                    border: 2px solid @pagination-arrow-color;
                     border-bottom: none;
                     border-left: none;
                     width: 10px;
@@ -194,7 +194,7 @@
 
                 &:hover {
                     &:after {
-                        background-color: @pagination-active-color;
+                        background-color: @pagination-arrow-color;
                     }
                 }
             }
@@ -203,7 +203,7 @@
                 a,
                 span {
                     &:after {
-                        background-color: @pagination-active-color;
+                        background-color: @pagination-arrow-color;
                     }
                 }
             }

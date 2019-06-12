@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import { Icon } from "#";
+
 const Alert = ({ id, type, icon, close, text, children }) => (
     <div id={id} className={`alert alert-${type}`}>{icon ? "\n" : ""}
         {icon ? <i className="material-icons alert-icon">{icon}</i> : null}{text ? "\n" : ""}
@@ -9,6 +11,40 @@ const Alert = ({ id, type, icon, close, text, children }) => (
         {close ? <a href="#" data-alert-close="" onClick={e => e.preventDefault()}>{"\n\t\t"}
             <i className="material-icons">close</i>{"\n\t"}
         </a> : null}{"\n"}
+    </div>
+);
+
+const ComplexAlert = ({ id, type, icon, close, headerText, children }) => (
+    <div id={id} className={`alert alert-${type}`}>
+        <header className="alert-header">
+            {icon
+                ? <>
+                    {"\n"} <Icon classNames="alert-icon" icon={icon}/>
+                </>
+                : null}
+            {headerText
+                ? <>
+                    {"\n"}
+                        <h3>{headerText}</h3>
+                    {"\n"}
+                </>
+                : null}
+            {close
+                ? <a href="#" data-alert-close="" onClick={e => e.preventDefault()}>{"\n\t\t"}
+                    <Icon icon={"close"}/>{"\n\t"}
+                </a>
+                : null}
+            {"\n"}
+        </header>
+        {children
+            ? <>
+                {"\n"}
+                <div className="alert-body">
+                    {children}
+                </div>
+                {"\n"}
+            </>
+            : null}
     </div>
 );
 
@@ -21,3 +57,5 @@ Alert.propTypes = {
 };
 
 export default Alert;
+
+export { ComplexAlert };

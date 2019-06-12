@@ -1,7 +1,8 @@
 .badge {
     color: @white;
-    padding: @badge-padding;
-    border-radius: 0.1875rem;
+    padding: 0 0.5em; /* stylelint-disable-line */ /* Using em for variable padding based on font-size of badge [AW] */
+    border-radius: 2rem;
+    font-size: 85%;
 
     each(@badge-list, .(@color, @name) {
         &.badge-@{name} {
@@ -13,5 +14,9 @@
     .material-icons {
         font-size: 1rem;
         vertical-align: text-top;
+    }
+
+    &.badge-yellow {
+        color: @dark-brown;
     }
 }

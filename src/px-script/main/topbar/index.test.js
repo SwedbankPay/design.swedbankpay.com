@@ -37,16 +37,15 @@ describe("px-script: topbar", () => {
                 <i className="material-icons topbar-btn-icon">menu</i>
                 <span className="topbar-btn-text">Menu</span>
             </button>
-            <nav id="topbar-nav" className={`topbar-nav${navOpen ? " in" : ""}`}>
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
+            <nav className={`topbar-nav${navOpen ? " topbar-nav-open" : ""}`}>
+                <i className="material-icons close-topbar-nav">close</i>
+                <div className="topbar-link-container">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
             </nav>
             <a href="#" className="topbar-logo"></a>
-            <button type="button" className="topbar-btn">
-                <i className="material-icons">exit_to_app</i>
-                <span className="topbar-btn-text">Log out</span>
-            </button>
         </header>
     );
 
@@ -71,6 +70,15 @@ describe("px-script: topbar", () => {
 
             expect(Array.isArray(returnVal)).toBeFalsy();
             expect(typeof returnVal).toEqual("object");
+        });
+
+        it("warns the user if no topbar with the given ID exists", () => {
+            console.warn = jest.fn();
+
+            ReactDOM.render(<Topbar id="demo-topbar-1" />, div);
+
+            expect(topbar.init("demo-topbar-2")).toBeNull();
+            expect(console.warn).toHaveBeenCalledTimes(1);
         });
 
         it("returns an array of objects when more than one topbar is initialized", () => {
@@ -122,23 +130,6 @@ describe("px-script: topbar", () => {
         topbar.init();
 
         expect(NavMenu).toHaveBeenCalled();
-    });
-
-    it("closes navMenu on mousedown if the nav menu is open and you don't click inside", () => {
-        ReactDOM.render(<Topbar />, div);
-        topbar.init();
-
-        const navMenuInstance = NavMenu.mock.instances[0];
-
-        expect(navMenuInstance).toBeTruthy();
-
-        navMenuInstance._containsPoint.mockReturnValue(false);
-        navMenuInstance.isOpen = true;
-
-        document.querySelector("html").dispatchEvent(new Event("mousedown"));
-
-        expect(navMenuInstance._containsPoint).toHaveBeenCalled();
-        expect(navMenuInstance.close).toHaveBeenCalled();
     });
 
     test.todo("Write tests for topbar.open and topbar.close");

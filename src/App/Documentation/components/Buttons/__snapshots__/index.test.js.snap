@@ -44,24 +44,24 @@ exports[`Documentation: Buttons Active State renders 1`] = `
       <Button
         active={true}
         href="#"
-        label="Primary"
-        type="primary"
+        label="Executive"
+        type="executive"
       />
       
 
       <Button
         active={true}
         href="#"
-        label="Secondary"
-        type="secondary"
+        label="Guiding"
+        type="guiding"
       />
       
 
       <Button
         active={true}
         href="#"
-        label="Danger"
-        type="danger"
+        label="Destructive"
+        type="destructive"
       />
       
 
@@ -101,26 +101,26 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
       
 
       <Button
-        label="Primary"
+        label="Executive"
         loader={true}
         loading={true}
-        type="primary"
+        type="executive"
       />
       
 
       <Button
-        label="Secondary"
+        label="Guiding"
         loader={true}
         loading={true}
-        type="secondary"
+        type="guiding"
       />
       
 
       <Button
-        label="Danger"
+        label="Destructive"
         loader={true}
         loading={true}
-        type="danger"
+        type="destructive"
       />
       
 
@@ -151,28 +151,28 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
 
       <Button
         disabled={true}
-        label="Primary"
+        label="Executive"
         loader={true}
         loading={true}
-        type="primary"
+        type="executive"
       />
       
 
       <Button
         disabled={true}
-        label="Secondary"
+        label="Guiding"
         loader={true}
         loading={true}
-        type="secondary"
+        type="guiding"
       />
       
 
       <Button
         disabled={true}
-        label="Danger"
+        label="Destructive"
         loader={true}
         loading={true}
-        type="danger"
+        type="destructive"
       />
       
 
@@ -202,29 +202,29 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
       
 
       <Button
-        label="Primary"
+        label="Executive"
         loader={true}
         loading={true}
         outline={true}
-        type="primary"
+        type="executive"
       />
       
 
       <Button
-        label="Secondary"
+        label="Guiding"
         loader={true}
         loading={true}
         outline={true}
-        type="secondary"
+        type="guiding"
       />
       
 
       <Button
-        label="Danger"
+        label="Destructive"
         loader={true}
         loading={true}
         outline={true}
-        type="danger"
+        type="destructive"
       />
       
 
@@ -339,19 +339,19 @@ exports[`Documentation: Buttons Button group renders 1`] = `
 
       <Button
         label="Activate"
-        type="primary"
+        type="executive"
       />
       
 
       <Button
         label="Disable"
-        type="secondary"
+        type="guiding"
       />
       
 
       <Button
         label="Delete"
-        type="danger"
+        type="destructive"
       />
       
 
@@ -386,19 +386,19 @@ exports[`Documentation: Buttons ButtonGroup renders 1`] = `
 
       <Button
         label="Activate"
-        type="primary"
+        type="executive"
       />
       
 
       <Button
         label="Disable"
-        type="secondary"
+        type="guiding"
       />
       
 
       <Button
         label="Delete"
-        type="danger"
+        type="destructive"
       />
       
 
@@ -441,22 +441,22 @@ exports[`Documentation: Buttons Disabled State renders 1`] = `
 
       <Button
         disabled={true}
-        label="Primary"
-        type="primary"
+        label="Executive"
+        type="executive"
       />
       
 
       <Button
         disabled={true}
-        label="Secondary"
-        type="secondary"
+        label="Guiding"
+        type="guiding"
       />
       
 
       <Button
         disabled={true}
-        label="Danger"
-        type="danger"
+        label="Destructive"
+        type="destructive"
       />
       
 
@@ -520,24 +520,24 @@ exports[`Documentation: Buttons Disabled State renders 1`] = `
       <Button
         disabled={true}
         href="#"
-        label="Primary"
-        type="primary"
+        label="Executive"
+        type="executive"
       />
       
 
       <Button
         disabled={true}
         href="#"
-        label="Secondary"
-        type="secondary"
+        label="Guiding"
+        type="guiding"
       />
       
 
       <Button
         disabled={true}
         href="#"
-        label="Danger"
-        type="danger"
+        label="Destructive"
+        type="destructive"
       />
       
 
@@ -601,20 +601,20 @@ exports[`Documentation: Buttons Examples renders 1`] = `
       
 
       <Button
-        label="Primary"
-        type="primary"
+        label="Executive"
+        type="executive"
       />
       
 
       <Button
-        label="Secondary"
-        type="secondary"
+        label="Guiding"
+        type="guiding"
       />
       
 
       <Button
-        label="Danger"
-        type="danger"
+        label="Destructive"
+        type="destructive"
       />
       
 
@@ -655,23 +655,23 @@ exports[`Documentation: Buttons Outline Buttons renders 1`] = `
       
 
       <Button
-        label="Primary"
+        label="Executive"
         outline={true}
-        type="primary"
+        type="executive"
       />
       
 
       <Button
-        label="Secondary"
+        label="Guiding"
         outline={true}
-        type="secondary"
+        type="guiding"
       />
       
 
       <Button
-        label="Danger"
+        label="Destructive"
         outline={true}
-        type="danger"
+        type="destructive"
       />
       
 
@@ -719,14 +719,14 @@ exports[`Documentation: Buttons Sizes renders 1`] = `
       <Button
         label="Large button"
         size="lg"
-        type="primary"
+        type="executive"
       />
       
 
       <Button
         label="Large button"
         size="lg"
-        type="secondary"
+        type="guiding"
       />
       
 
@@ -749,14 +749,14 @@ exports[`Documentation: Buttons Sizes renders 1`] = `
       <Button
         label="Small button"
         size="sm"
-        type="primary"
+        type="executive"
       />
       
 
       <Button
         label="Small button"
         size="sm"
-        type="secondary"
+        type="guiding"
       />
       
 
@@ -779,14 +779,14 @@ exports[`Documentation: Buttons Sizes renders 1`] = `
       <Button
         label="Extra small button"
         size="xs"
-        type="primary"
+        type="executive"
       />
       
 
       <Button
         label="Extra small button"
         size="xs"
-        type="secondary"
+        type="guiding"
       />
       
 
@@ -816,14 +816,14 @@ exports[`Documentation: Buttons Sizes renders 1`] = `
       <Button
         fullWidth={true}
         label="Block level button"
-        type="primary"
+        type="executive"
       />
       
 
       <Button
         fullWidth={true}
         label="Block level button"
-        type="secondary"
+        type="guiding"
       />
       
 
@@ -871,23 +871,23 @@ exports[`Documentation: Buttons Usage With Icons renders 1`] = `
 
       <Button
         icon="cloud"
-        label="Primary"
-        type="primary"
+        label="Executive"
+        type="executive"
       />
       
 
 
       <Button
         icon="cloud"
-        label="Secondary"
-        type="secondary"
+        label="Guiding"
+        type="guiding"
       />
       
 
       <Button
         icon="cloud"
-        label="Danger"
-        type="danger"
+        label="Destructive"
+        type="destructive"
       />
       
 
@@ -960,20 +960,20 @@ exports[`Documentation: Buttons Usage With Other Tags renders 1`] = `
       <Button
         href="#"
         label="Anchor"
-        type="primary"
+        type="executive"
       />
       
 
       <Button
         label="Button"
-        type="primary"
+        type="executive"
       />
       
 
       <Button
         btnType="button"
         input={true}
-        type="primary"
+        type="executive"
         value="Input"
       />
       
@@ -981,7 +981,7 @@ exports[`Documentation: Buttons Usage With Other Tags renders 1`] = `
       <Button
         btnType="submit"
         input={true}
-        type="primary"
+        type="executive"
         value="Submit"
       />
       
@@ -989,7 +989,7 @@ exports[`Documentation: Buttons Usage With Other Tags renders 1`] = `
       <Button
         btnType="reset"
         input={true}
-        type="primary"
+        type="executive"
         value="Reset"
       />
       
@@ -1016,6 +1016,5 @@ exports[`Documentation: Buttons renders 1`] = `
   <ActiveState />
   <DisabledState />
   <UsageWithIcons />
-  <ButtonLoader />
 </DocContainer>
 `;

@@ -32,44 +32,6 @@ exports[`Documentation: Panel Overview renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Panel PanelDark renders 1`] = `
-<Fragment>
-  <h2
-    id="panel-dark-mode"
-  >
-    Panel dark mode
-  </h2>
-  <p>
-    Dark body with 
-    <Property
-      value=".panel-dark"
-    />
-    ...
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Panel
-      bodyContent={
-        Array [
-          "Your main panel content is put here.",
-          "Some more content over here.",
-          "And one more line, just to be safe.",
-        ]
-      }
-      darkMode={true}
-      footerBtnText="Footer button"
-      footerText="Footer content goes here."
-      subTitle="Panel subtitle"
-      title="Panel title"
-      type="brand"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
 exports[`Documentation: Panel PanelHeaders renders 1`] = `
 <Fragment>
   <h2
@@ -321,7 +283,6 @@ exports[`Documentation: Panel renders 1`] = `
   </p>
   <Overview />
   <PanelHeaders />
-  <PanelDark />
   <PanelMuted />
   <PanelTable />
 </DocContainer>

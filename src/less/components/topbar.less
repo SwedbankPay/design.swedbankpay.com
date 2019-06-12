@@ -5,114 +5,235 @@
     width: 100%;
     z-index: @zindex-topbar;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    border-bottom: 1px solid @gray-8;
-    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.85);
-
-    &.topbar-fixed {
-        position: fixed;
-        top: 0;
-        left: 0;
-
-        + * {
-            margin-top: @topbar-height;
-        }
-    }
+    padding: 0 1.25rem;
+    position: relative;
 
     .topbar-logo {
-        height: 45px;
-        margin-left: @topbar-margin;
-        margin-top: 5px;
-        margin-right: auto;
-        background: url("../../img/px-logo.svg") no-repeat;
+        width: 135px;
+        height: 80px;
+        background: url("../../img/logo/spay_horizontal_pos.svg") no-repeat;
         background-size: cover;
-        width: 140px;
         border: none;
     }
 
     .topbar-btn {
-        margin: 0;
-        border: 0;
+        user-select: none;
         background: none;
-        height: 100%;
-        padding: 0 @topbar-padding;
         font-weight: bold;
-        outline: 0;
         display: flex;
-        align-items: center;
+        position: absolute;
+        left: 1.25rem;
+        padding: 0;
+        border: 0;
+        outline: 0;
 
         &:hover {
             cursor: pointer;
-            background-color: @gray-9;
-        }
-
-        .material-icons {
-            margin-right: 5px;
-            margin-top: -2px;
-        }
-
-        &:first-child {
-            border-right: 1px solid @gray-8;
-
-            &:hover,
-            &:focus {
-                background-color: @gray-9;
-            }
         }
 
         &:last-child {
-            border-left: 1px solid @gray-8;
+            span {
+                margin-right: 0.2rem;
+            }
         }
     }
-}
 
-.topbar-nav {
-    width: @topbar-nav-width;
-    position: fixed;
-    top: @topbar-height;
-    bottom: 0;
-    background-color: @gray-1;
-    overflow-x: hidden;
-    overflow-y: auto;
-    z-index: @zindex-topbar-nav;
-    padding: @base-padding-sm @base-padding;
-    transition: left @topbar-slide-transition;
-    left: -@topbar-nav-width;
-
-    &.in {
-        left: 0;
-    }
-
-    a,
-    span {
-        display: flex;
-        color: @gray-7;
-        padding: @base-padding-sm 0 @base-padding-sm @base-padding-sm;
-        cursor: pointer;
-        text-transform: uppercase;
-        border: none;
-
-        &:hover {
-            background-color: @gray-2;
-            color: @white;
-            text-decoration: none;
-        }
-    }
-}
-
-@media (max-width: @screen-xs-max) {
-    .topbar-btn-text {
+    > .topbar-link-right {
         display: none;
     }
 
-    .topbar-px-logo {
-        position: absolute;
-        left: 50%;
-        margin-left: -55px;
+    .topbar-nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: @zindex-sheet-backdrop;
+        background: transparent;
+        transition: background 0.3s ease-in-out;
+        display: none;
 
-        &.mypayex {
-            margin-left: -78px;
+        &.topbar-nav-open {
+            background: @sheet-backdrop-bg;
+
+            .topbar-link-container {
+                left: 0;
+
+                > a {
+                    span {
+                        margin-left: 2rem;
+                    }
+
+                    .material-icons + span {
+                        margin-left: 0;
+                    }
+                }
+
+                .topbar-link-right {
+                    margin: initial;
+
+                    .material-icons {
+                        margin: 0 0.5rem 0 0;
+                    }
+                }
+            }
+        }
+
+        .topbar-link-container {
+            width: @topbar-nav-width;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            background-color: @bg-apricot;
+            overflow-x: hidden;
+            overflow-y: auto;
+            z-index: @zindex-topbar-nav;
+            padding: 3rem 2rem;
+            transition: left @topbar-slide-transition;
+            left: -@topbar-nav-width;
+
+            > *:not(.material-icons) {
+                font-family: @font-swedbank-headline;
+                color: @dark-brown;
+                cursor: pointer;
+                text-decoration: none;
+                display: flex;
+                margin: 1rem 0;
+                line-height: 1;
+                align-items: center;
+
+                .material-icons {
+                    margin: 0 0.5rem 0 0;
+                    user-select: none;
+                }
+
+                &.active {
+                    > span {
+                        position: relative;
+
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            background-color: @brand-primary;
+                            height: 4px;
+                            bottom: -4px;
+                            left: 0;
+                            right: 0;
+                        }
+                    }
+                }
+            }
+
+            .topbar-link-right {
+                margin-left: auto;
+
+                .material-icons {
+                    margin: 0 0 0 0.5rem;
+                }
+            }
+
+            .close-topbar-nav {
+                position: absolute;
+                user-select: none;
+                top: 1.5rem;
+                right: 2rem;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
         }
     }
 }
+
+.topbar-wide {
+    justify-content: initial;
+
+    .topbar-btn {
+        display: none;
+    }
+
+    .topbar-logo {
+        margin-top: 0;
+    }
+
+    .topbar-link-right {
+        margin-left: auto;
+        padding: 0;
+        align-items: center;
+        flex-direction: row-reverse;
+        margin-right: 0;
+        font-family: @font-swedbank-headline;
+        color: @dark-brown;
+        cursor: pointer;
+        text-decoration: none;
+        display: flex;
+
+        .material-icons {
+            margin: 0 0 0 0.5rem;
+        }
+    }
+
+    .topbar-nav {
+        display: flex;
+        position: initial;
+        flex-grow: 1;
+        margin-left: 2rem;
+        width: auto;
+        height: auto;
+
+        .topbar-link-container {
+            position: initial;
+            background-color: transparent;
+            width: 100%;
+            display: flex;
+            padding: 0;
+            overflow-x: initial;
+            overflow-y: initial;
+
+            > *:not(.close-topbar-nav):not(.topbar-link-right) {
+                text-decoration: none;
+                padding: 0;
+                margin: 0 0.5rem;
+                margin-top: 10px;
+
+                &.active {
+                    > span {
+                        position: relative;
+
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            background-color: @brand-primary;
+                            height: 4px;
+                            bottom: -4px;
+                            left: 0;
+                            right: 0;
+                        }
+                    }
+                }
+
+                &:not(.topbar-link-right) {
+                    .material-icons,
+                    &.material-icons {
+                        display: none;
+                    }
+                }
+            }
+
+            .close-topbar-nav {
+                display: none;
+            }
+        }
+    }
+}
+
+each(@grid-breakpoints, .(@min-width, @infix) {
+    .topbar-@{infix}-wide {
+        @media screen and (min-width: @min-width) {
+            .topbar-wide();
+        }
+    }
+});

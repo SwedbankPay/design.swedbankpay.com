@@ -41,53 +41,156 @@
  * ==========================================================================
  */
 
-/* Base colors */
-@green:                                     #2da944;
-@purple:                                    #7d55aa;
-@blue:                                      #266c9a;
-@yellow:                                    #ff9f00;
-@red:                                       #cd2e00; /* Not in the graphic manual */
-
-@black:                                     #000000;
-@white:                                     #ffffff;
-@dark-gray:                                 #3c3c3c;
-@mid-gray:                                  #828282;
-@light-gray:                                #c8c8c8;
-
-
 /* Grayscale */
-@gray-0:                                    #231f20;
-@gray-1:                                    #414042;
-@gray-2:                                    #58595b;
-@gray-3:                                    #6d6e71;
-@gray-4:                                    #808285;
-@gray-5:                                    #939598;
-@gray-6:                                    #a7a9ac;
-@gray-7:                                    #bcbec0;
-@gray-8:                                    #d1d3d4;
-@gray-9:                                    #e6e7e8;
-@gray-10:                                   #efefef;
+@black:                                     #000000;
+@nearblack:                                 #111111;
+@gray-dark:                                 #262626;
+@gray-medium-dark:                          #363636;
+@gray-medium:                               #404040;
+@gray-medium-light:                         #545454;
+@gray-light:                                #666666;
+@gray-light-alt:                            #999999;
+@gray-bright:                               #eaeaea;
+@gray-bright-alt:                           #bcbcbc;
+@neargray:                                  #f9f9f9;
+@light-gray:                                #F9F8F6;
+@offwhite:                                  #f4f4f4;
+@nearwhite:                                 #f0f0f0;
+@white:                                     #ffffff;
 
-@input-gray:                                #f9fafa;
+/* Brand */
+@orange-medium:                             #ff6100;
+@orange-light:                              #ff9900;
+@orange-bright:                             #ffcc00;
+@green:                                     #82b236;
+@blue:                                      #00bcdf;
+@blue-light:                                #a2c9ce;
+@blue-bright:                               #d7e6e9;
+@teal:                                      #4893a0;
+@blue-bright-alt:                           #a3c9cf;
+@red-medium:                                #dd3300;
 
-/* Brand colors */
-@brand-primary:                             @green;
-@brand-primary-faded:                       fade(@brand-primary, 60%);
+/* Alerts */
+@brand-success:                             #477d17;
+@brand-success-light:                       #f2f7eb;
+@brand-warning:                             #ff9900;
+@brand-warning-light:                       #fffae5;
+@brand-error-border:                        #f1bbb9;
+@brand-error:                               #b24843;
+@brand-error-light:                         #fceeed;
+@brand-info:                                #2c7a8f;
+@brand-info-light:                          #f0f9fb;
 
-/* Background colors */
-@background-white:                          @white;
-@background-body:                           #f7f7f7;
-@background-code:                           #f5f2f0;
 
-/* Shadows */
-@default-box-shadow:                        0 0 30px rgba(133, 133, 133, 0.4);
+/* BRAND MANAGER COLORS (NOT SHOWCASED ACORN, BUT SOME ARE USED) */
+
+/* Main Colors */
+@orange-main:                               #ee7023;
+@orange-headline:                           #f35b1c; // WCAG
+@turquoise:                                 #31a3ae;
+@turquoise-links:                           #257886; // WCAG
+@yellow:                                    #fdc129;
+@lilac:                                     #c5569a;
+@blue:                                      #5b8ad6;
+@brown:                                     #512b2b; // WCAG
+
+/* Gradient */
+@gradient-orange:                           #fa7f25;
+@gradient-yellow:                           #fdbe13;
+
+/* Background Colors */
+@bg-apricot:                                #fbf2ea;
+@bg-light-turquoise:                        #ebf8f2;
+@bg-pink:                                   #fbedf4;
+@bg-light-blue:                             #e9f7fb;
+@bg-gray:                                   #ebe7e2;
+@bg-white:                                  #ffffff;
+
+/* Alert Colors */
+@alert-red:                                 #c5131c;
+@alert-red-light:                           #f9ded3;
+@alert-green:                               #51971b;
+@alert-green-light:                         #f2f7eb;
+@alert-yellow:                              #f9ce22;
+@alert-yellow-light:                        #fff3d5;
+@alert-blue:                                #4572c0;
+@alert-blue-light:                          #e8eff9;
+
+/* Brownscale Colors */
+@solid-brown:                               #2f2424;
+@dark-brown:                                #493c3b;
+@medium-brown:                              #72605e;
+@soft-brown:                                #a38b80;
+@light-brown:                               #d4c4bc;
+@info-brown:                                #d4b8a3;
+
+/* END BRAND MANAGER COLORS */
 
 /* State colors */
-@state-success:                             @green;
-@state-neutral:                             @blue;
-@state-warning:                             @yellow;
-@state-error:                               @red;
+@state-default:                             @bg-gray;
+@state-neutral:                             @alert-blue;
+@state-neutral-light:                       @alert-blue-light;
+@state-success:                             @alert-green;
+@state-success-light:                       @alert-green-light;
+@state-warning:                             @alert-yellow;
+@state-warning-light:                       @alert-yellow-light;
+@state-danger:                              @alert-red;
+@state-danger-light:                        @alert-red-light;
 
+/* Border colors */
+@dialog-border:                             1px solid @gray-bright;
+@checkbox-border-color:                     @gray-light-alt;
+
+/* Disabled button colors */
+@executive-disabled-bg:                     #f5b895;
+@guiding-disabled-bg:                       #98d0d6;
+@destructive-disabled-bg:                   @info-brown;
+@destructive-disabled-color:                #696969; // (DIMGRAY)
+
+
+/* Misc */
+@brand-primary:                             @yellow;
+@brand-primary-faded:                       fade(@brand-primary, 60%);
+@color-muted:                               fade(@text-color, 75%);
+@color-muted-hover:                         fade(@text-color, 85%);
+@link-color:                                @turquoise-links;
+@default-box-shadow:                        0 0 20px 0 rgba(81, 43, 43, 0.12);
+@small-color:                               @gray-light;
+@footer-small-color:                        @gray-bright-alt;
+@mark-background:                           rgba(0, 0, 0, 0.1);
+@text-muted:                                fade(@text-color, 75%);
+
+/* Text color list */
+/* stylelint-disable indentation */
+@color-list: {
+                                            default: @text-color;
+                                            black: @black;
+                                            white: @white;
+                                            brand: @brand-primary;
+                                            success: @brand-success;
+                                            neutral: @brand-info;
+                                            warning: @brand-warning;
+                                            danger: @brand-error;
+                                            muted: @color-muted;
+}
+
+/* Background color list */
+@bg-color-list: {
+                                            white: @white;
+                                            success: @brand-success-light;
+                                            neutral: @brand-info-light;
+                                            warning: @brand-warning-light;
+                                            danger: @brand-error-light;
+                                            apricot: @bg-apricot;
+                                            light-turquoise: @bg-light-turquoise;
+                                            pink: @bg-pink;
+                                            light-blue: @bg-light-blue;
+                                            gray: @bg-gray;
+}
+/* stylelint-enable */
+
+/* Border colors */
+@action-list-border:                        @border-color;
 
 /*
 * 2. Global
@@ -130,24 +233,20 @@
 @base-padding-xl:                           @base-padding * 2;
 
 /* Body */
-@body-bg:                                   @background-body;
-@text-color:                                @dark-gray;
+@body-bg:                                   @white;
+@text-color:                                @gray-dark;
 
 /* Cursor */
 @cursor-disabled:                           not-allowed;
 
-/* Button */
-@padding-base-vertical:                     0.375rem;
-@padding-base-horizontal:                   0.75rem;
-@padding-xs-vertical:                       0.1rem;
-
 /* Borders */
 @border-width:                              1px;
-@border-color:                              @gray-3;
+@border-color:                              @light-brown;
 
-@border-radius-base:                        0.25rem;
-@border-radius-large:                       0.3rem;
-@border-radius-small:                       0.2rem;
+@border-radius-base:                        2px;
+
+@box-border:                                1px solid @bg-gray;
+@box-shadow-bottom:                         0 3px 1px -1px @bg-gray;
 
 
 /* Z-index master list */
@@ -156,8 +255,8 @@
 @zindex-steps-icon:                         15;
 @zindex-tabs:                               100;
 @zindex-tabs-arrow:                         101;
-@zindex-action-list:                        500;
-@zindex-action-list-anchor:                 501;
+@zindex-action-list-anchor:                 500;
+@zindex-action-list:                        501;
 @zindex-nav-submenu:                        520;
 @zindex-datepicker:                         530;
 @zindex-topbar:                             550;
@@ -206,6 +305,7 @@
  * Uses 0.02px rather than 0.01px to work around a current rounding bug in Safari.
  * See https://bugs.webkit.org/show_bug.cgi?id=178261
  */
+
 @screen-xs-min:                             @grid-breakpoints[sm];
 @screen-sm-min:                             @grid-breakpoints[md];
 @screen-md-min:                             @grid-breakpoints[lg];
@@ -224,16 +324,16 @@
 
 /* Colors */
 @table-bg:                                  transparent;
-@table-header-color:                        @brand-primary;
-@table-text-color:                          @gray-4;
-@table-border-color:                        @gray-9;
-@table-stripe-color:                        #f9f9f9;
-@table-collapse-content-color:              @gray-10;
-@table-collapse-border-color:               @gray-8;
+@table-header-color:                        @brown;
+@table-text-color:                          @gray-light-alt;
+@table-border-color:                        @border-color;
+@table-stripe-color:                        @neargray;
+@table-collapse-content-color:              @gray-bright-alt;
+@table-collapse-border-color:               @border-color;
 
 /* Dimensions */
-@table-cell-padding:                        @base-padding;
-@table-cell-condensed-padding:              @base-padding * 0.75;
+@table-cell-padding:                        1rem 1.2rem;
+@table-cell-condensed-padding:              0.5rem 0.6rem;
 @table-collapse-content-padding:            10px 20px 10px 20px;
 @table-button-padding:                      @base-padding-xs / 2 @base-padding-xs;
 @table-description-padding:                 @base-padding * 0.625;
@@ -251,56 +351,13 @@
  * ==========================================================================
  */
 
-@font-stack:                                "Roboto", sans-serif;
+/* fonts */
 
-/* Colors */
+@font-swedbank-headline:                    "Swedbank Headline", "Arial", sans-serif;
+@font-stack:                                "Arial", sans-serif;
 
-@small-color:                               @gray-3;
-@footer-small-color:                        @gray-7;
-@mark-background:                           rgba(0, 0, 0, 0.1);
-
-@text-muted:                                fade(@text-color, 75%);
-@text-brand:                                @brand-primary;
-@text-light:                                @white;
-
-@text-success:                              @state-success;
-@text-neutral:                              @state-neutral;
-@text-warning:                              @state-warning;
-@text-error:                                @state-error;
-
-/* Color list */
-/* stylelint-disable indentation */
-@color-list: {
-                                            default: @text-color;
-                                            black: @black;
-                                            white: @white;
-                                            brand: @brand-primary;
-                                            success: @state-success;
-                                            neutral: @state-neutral;
-                                            warning: @state-warning;
-                                            danger: @state-error;
-}
-/* stylelint-enable */
-
-/* Background list */
-/* stylelint-disable indentation */
-@background-list: {
-                                            default: @text-color;
-                                            brand: @brand-primary;
-                                            green: @green;
-                                            success: @state-success;
-                                            blue: @blue;
-                                            neutral: @state-neutral;
-                                            yellow: @yellow;
-                                            warning: @state-warning;
-                                            red: @red;
-                                            danger: @state-error;
-                                            white: @white;
-}
-/* stylelint-enable */
-
-@blockquote-border-color:                   @gray-8;
-@blockquote-small-color:                    @gray-5;
+@blockquote-border-color:                   @gray-bright-alt;
+@blockquote-small-color:                    @gray-light-alt;
 
 /* Font Size */
 @base-font-size:                            1rem;
@@ -322,19 +379,10 @@
 /* Temporary for backwards compatibility */
 @line-height-computed:                      @base-font-size * @line-height-base;
 
-
-/* Headings */
-@h1-font-size:                              @base-font-size * 2.5;
-@h2-font-size:                              @base-font-size * 2;
-@h3-font-size:                              @base-font-size * 1.75;
-@h4-font-size:                              @base-font-size * 1.5;
-@h5-font-size:                              @base-font-size * 1.25;
-@h6-font-size:                              @base-font-size;
-
 @headings-font-family:                      inherit;
 @headings-font-weight:                      500;
 @headings-line-height:                      1.2;
-@headings-color:                            @gray-1;
+@headings-color:                            @brown;
 
 /* Paragraphs */
 @paragraph-margin-bottom:                   @base-margin;
@@ -379,16 +427,12 @@
 
 /* stylelint-disable indentation */
 @badge-list: {
-                                            default: @gray-8;
-                                            brand: @green;
+                                            default: @gray-light-alt;
                                             blue: @blue;
-                                            purple: @purple;
                                             yellow: @yellow;
-                                            red: @red;
+                                            red: @alert-red;
 }
 /* stylelint-enable */
-
-@badge-padding:                             @base-margin * 0.125 @base-margin-sm;
 
 
 /*
@@ -396,23 +440,33 @@
  * ==========================================================================
  */
 
-@btn-border-radius-base:                    3px;
-@btn-border-radius-large:                   3px;
-@btn-border-radius-small:                   3px;
+@btn-font-size:                             1.8rem;
+@btn-min-width:                             112px;
 
-@btn-primary-color:                         @white;
-@btn-primary-outline-color:                 @brand-primary;
-@btn-primary-bg:                            @brand-primary;
+@btn-font-size-sm:                          1.6rem;
+@btn-font-size-xs:                          1.2rem;
 
-@btn-secondary-color:                       @gray-0;
-@btn-secondary-outline-color:               @gray-8;
-@btn-secondary-bg:                          @gray-8;
+@btn-border-radius-base:                    @border-radius-base;
+@btn-border-radius-large:                   @border-radius-base;
+@btn-border-radius-small:                   @border-radius-base;
 
-@btn-danger-color:                          @white;
-@btn-danger-outline-color:                  @state-error;
-@btn-danger-bg:                             @state-error;
+@btn-executive-color:                       @white;
+@btn-executive-bg:                          @orange-main;
+@btn-executive-disabled-color:              @white;
+@btn-executive-disabled-bg:                 @executive-disabled-bg;
 
-@btn-link-disabled-color:                   @gray-6;
+@btn-guiding-color:                         @white;
+@btn-guiding-bg:                            @turquoise;
+@btn-guiding-disabled-color:                @white;
+@btn-guiding-disabled-bg:                   @guiding-disabled-bg;
+
+@btn-destructive-color:                     @solid-brown;
+@btn-destructive-bg:                        @info-brown;
+@btn-destructive-disabled-color:            @destructive-disabled-color;
+@btn-destructive-disabled-bg:               @destructive-disabled-bg;
+
+@btn-link-color:                            @turquoise-links;
+@btn-link-disabled-color:                   @gray-light-alt;
 
 /*
  * 9. Card
@@ -435,7 +489,7 @@
 @datepicker-highlight-background:           @brand-primary;
 @datepicker-highlight-color:                @white;
 @datepicker-weekday-color:                  @brand-primary;
-@datepicker-hover-color:                    @gray-10;
+@datepicker-hover-color:                    @neargray;
 
 @datepicker-rd-padding:                     round(@base-padding / 3, 1);
 
@@ -447,38 +501,30 @@
 /* Colors */
 @dialog-background-color:                   transparent;
 @dialog-content-bg:                         @white;
-@dialog-border:                             1px solid @gray-9;
 @dialog-backdrop-bg:                        fade(@black, 50%);
-
-@dialog-heading-padding:                    @base-padding @base-padding-xl;
-@dialog-body-padding:                       @base-padding-xl @base-padding-xl;
-@dialog-footer-padding:                     @base-padding @base-padding-xl;
-
-@dialog-size:                               500px;
 
 /*
  * 12. Form
  * ==========================================================================
  */
-
 @input-padding-y:                           0.375rem;
 @input-padding-x:                           0.75rem;
 @input-line-height:                         @line-height-base;
 
-@input-color:                               @gray-3;
-@input-bg:                                  @input-gray;
-@input-bg-disabled:                         darken(@input-bg, 10%);
-@input-checked-bg-disabled:                 darken(@input-bg, 40%);
-@input-border-color:                        @gray-8;
-@input-addon-color:                         @gray-3;
-@input-addon-bg:                            @gray-10;
+@input-color:                               @brown;
+@input-bg:                                  @white;
+@input-bg-disabled:                         @bg-gray;
+@input-checked-bg-disabled:                 @gray-light-alt;
+@input-border-color:                        @border-color;
+@input-addon-color:                         @brown;
+@input-addon-bg:                            @bg-gray;
 @input-border-focus:                        #66afe9;
 
-@input-border-width:                        1px;
+@input-border-width:                        1px 1px 2px;
 @input-border-radius:                       0;
 
-@legend-border-color:                       @gray-9;
-@legend-color:                              @gray-3;
+@legend-border-color:                       @border-color;
+@legend-color:                              @brown;
 @legend-bottom-margin:                      @base-margin * 1.25;
 
 @helpblock-margin:                          (@base-margin * 0.325) 0;
@@ -486,8 +532,8 @@
 @select-option-margin:                      (@base-margin * 0.187) (@base-margin * 0.375);
 
 /* Checkbox */
-@checkbox-color:                            @gray-6;
-@checkbox-checked-color:                    @brand-primary;
+@checkbox-checked-color:                    @medium-brown;
+
 @checkbox-height:                           1.375rem;
 @checkbox-width:                            @checkbox-height; /* This also controls radio and togglebox */
 
@@ -522,23 +568,23 @@
 
 @nav-icon-lineheight:                       1.1;
 @nav-submenu-font-size:                     @base-font-size * 0.85;
-@nav-submenu-border:                        2px solid @gray-9;
-@nav-submenu-left:                          3.8rem;
+@nav-submenu-border:                        2px solid @gray-medium-light;
 
 @nav-submenu-before-width:                  1rem;
 @nav-submenu-before-height:                 1rem;
 @nav-submenu-before-left:                   -10px;
 @nav-submenu-before-top:                    13px;
 
-@nav-submenu-icon-fontsize-tablet:          @base-font-size * 2.25;
+@nav-submenu-icon-fontsize-vertical:        @base-font-size * 2.25;
 
 /*
  * 14. Pagination
  * ==========================================================================
  */
 
-@pagination-active-color:                   @brand-primary;
-@pagination-default-color:                  @gray-8;
+@pagination-active-color:                   @brown;
+@pagination-arrow-color:                    @brown;
+@pagination-default-color:                  @gray-bright-alt;
 
 @pagination-bullet-size:                    @status-size;
 
@@ -553,18 +599,18 @@
 @panel-box-shadow:                          @default-box-shadow;
 
 /* Default colors */
-@panel-default-border-color:                @gray-9;
-@panel-default-text-color:                  @gray-2;
+@panel-default-border-color:                @neargray;
+@panel-default-text-color:                  @text-color;
 
 /* Contextual colors */
-@panel-default-color:                       @gray-8;
+@panel-default-color:                       @gray-bright-alt;
 @panel-brand-color:                         @brand-primary;
 
 @panel-border-radius:                       0;
 
-@panel-body-padding:                        @base-padding-lg @base-padding-xl @base-padding @base-padding-xl;
+@panel-body-padding:                        2rem;
 @panel-table-margin:                        0;
-@panel-footer-padding:                      @base-padding @base-padding-xl;
+@panel-footer-padding:                      2rem;
 
 /*
  * 16. Sheet
@@ -587,21 +633,21 @@
 @status-size:                               13px;
 @status-padding:                            10;
 
-@status-padding-left:                       @base-padding * 1.2;
-@status-padding-head:                       @base-padding * 8;
+@status-padding-left:                       2rem;
+@status-padding-head:                       8rem;
 
 /*
  * 18. Steps
  * ==========================================================================
  */
 
-@list-item-padding:                         3.4rem 0 0 0;
-@list-item-padding-desktop-top:             4.5rem;
+@list-item-padding:                         5.4rem 0 0 0;
+@list-item-padding-desktop-top:             6rem;
 @list-item-padding-desktop:                 @list-item-padding-desktop-top 0 1.2rem 0;
-@list-item-padding-desktop-vertical:        2rem 1.5rem 2rem 5.5rem;
+@list-item-padding-desktop-vertical:        2rem 1.5rem 2rem 7rem;
 
 @circle-size:                               30px;
-@circle-size-desktop:                       45px;
+@circle-size-desktop:                       40px;
 
 @vertical-left:                             1.7rem;
 @vertical-margin:                           (@circle-size-desktop / 2) - (@line-width-desktop / 2);
@@ -624,7 +670,7 @@
  * ==========================================================================
  */
 
-@topbar-height:                             70px;
+@topbar-height:                             78px;
 @topbar-nav-width:                          300px;
 @topbar-nav-slide-width:                    240px;
 @topbar-back-btn-width:                     40px; /* This does not actually control the width of the button... [EH] */

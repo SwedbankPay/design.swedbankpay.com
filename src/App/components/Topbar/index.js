@@ -14,48 +14,70 @@ const TopbarBtn = ({ icon, text }) => {
                         {"\n\t\t"}
                     </>
                     : null}
-                {text ?
-                    <>
-                        <span className="topbar-btn-text">{text}</span>
-                        {"\n\t"}
-                    </>
-                    : null}
             </button>
         );
-    } else {
-        return null;
     }
+
+    return null;
 };
 
-const TopbarMenu = ({ menu }) => {
+const TopbarMenu = ({ menu, logout }) => {
     const { items } = menu;
 
     return (
         <nav className="topbar-nav">
-            {items.map((item, i) => (
-                <Fragment key={i}>
-                    {"\n"}<a href="#" onClick={e => e.preventDefault()}>{item}</a>
-                </Fragment>
-            ))}{"\n"}
+            <div className="topbar-link-container">{"\n"}
+                <i className="material-icons close-topbar-nav">close</i>
+                {items.map((item, i) => (
+                    <Fragment key={i}>
+                        {"\n"}
+                        <a href="#" className={item.name === "Home" ? "active" : null} onClick={e => e.preventDefault()}>
+                            {"\n"}
+                            {item.icon ? <i className="material-icons">{item.icon}</i> : null}
+                            {"\n"}
+                            <span>{item.name}</span>
+                            {"\n"}
+                        </a>
+                    </Fragment>
+                ))}{"\n"}
+                {logout ?
+                    <>
+                        <a className="topbar-link-right" href="#" onClick={e => e.preventDefault()}>
+                            {"\n"}
+                            <i className="material-icons">exit_to_app</i>
+                            {"\n"}
+                            <span>Log out</span>
+                            {"\n"}
+                        </a>
+                        {"\n"}
+                    </> : null}
+            </div>
         </nav>
     );
 };
 
-const Topbar = ({ topbarContent, fixed, logout, id }) => (
-    <header className={`topbar${fixed ? " topbar-fixed" : ""}`} id={id} >{"\n"}
+const Topbar = ({ topbarContent, wide, logout, id }) => (
+    <header className={`topbar${wide ? ` topbar-${wide}-wide` : ""}`} id={id}>{"\n"}
+        {topbarContent ?
         <>
-            {topbarContent ?
-            <>
-                <TopbarBtn icon={topbarContent.btn.icon} text={topbarContent.btn.text} target={topbarContent.id} />{"\n"}
-                <TopbarMenu menu={topbarContent} />
-            </> : null}
+            <TopbarBtn icon={topbarContent.btn.icon} text={topbarContent.btn.name} target={topbarContent.id} />{"\n"}
             {"\n"}<a href="#" className="topbar-logo" onClick={e => e.preventDefault()}></a>{"\n"}
+            <TopbarMenu menu={topbarContent} logout={!!logout} />
+        </> :
+        <>
+            {"\n"} <a href="#" className="topbar-logo" onClick={e => e.preventDefault()}></a>{"\n"}
             {logout ?
-                <>
-                    <TopbarBtn icon="exit_to_app" text="Log out" />{"\n"}
-                </> :
-                null}
-        </>
+                    <>
+                        <a className="topbar-link-right" href="#" onClick={e => e.preventDefault()}>
+                            {"\n"}
+                            <i className="material-icons">exit_to_app</i>
+                            {"\n"}
+                            <span>Log out</span>
+                            {"\n"}
+                        </a>
+                        {"\n"}
+                    </> : null}
+        </>}
     </header>
 );
 

@@ -12,12 +12,14 @@
 
     > section {
         position: relative;
-        max-width: @dialog-size;
+        max-width: 500px;
 
         header {
-            background: @background-body;
+            display: flex;
+            padding: 1rem 1.5rem;
+            align-items: center;
+            background: @white;
             border-bottom: @dialog-border;
-            padding: @dialog-heading-padding;
 
             /* stylelint-disable selector-list-comma-newline-after */
             h1, h2, h3, h4, h5, h6,
@@ -30,7 +32,7 @@
             .dialog-close {
                 position: absolute;
                 top: 1rem;
-                right: 1rem;
+                right: 1.5rem;
 
                 .close-button();
             }
@@ -38,13 +40,13 @@
 
         .dialog-body {
             background: @dialog-content-bg;
-            padding: @dialog-body-padding;
+            padding: 2rem 1.5rem;
         }
 
         footer {
-            background: @background-body;
+            background: @white;
             border-top: @dialog-border;
-            padding: @dialog-footer-padding;
+            padding: 1rem 1.5rem;
             margin: 0;
             display: flex;
             justify-content: flex-end;

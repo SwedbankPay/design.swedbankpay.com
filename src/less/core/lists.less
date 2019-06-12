@@ -27,7 +27,6 @@
         font-weight: 300;
         font-size: @base-font-size * 0.9;
         line-height: 1.7rem;
-        color: @gray-3;
         margin-top: @base-margin;
     }
 
@@ -53,49 +52,87 @@
 .item-list {
     list-style: none;
     padding-left: 0;
-    border: @border-width solid @gray-9;
-    border-radius: 3px;
+    line-height: 1;
 
     li {
         display: flex;
-        padding: @base-padding;
-        align-items: center;
-        border-bottom: @border-width solid @gray-9;
+        flex-flow: wrap;
+        padding: 1rem;
+        border-bottom: 1px solid @bg-gray;
 
-        > * {
-            margin-left: @base-margin-sm;
+        /* stylelint-disable selector-list-comma-newline-after */
+        h1, h2, h3, h4, h5, h6,
+        .h1, .h2, .h3, .h4, .h5, .h6 {
+            margin: 0;
         }
+        /* stylelint-enable selector-list-comma-newline-after */
 
         > :first-child {
             flex: 1 1 auto;
-            margin-left: 0;
+            align-self: center;
         }
 
         &:last-child {
+            margin-bottom: 0;
             border-bottom: 0;
+        }
+
+        > footer,
+        .item-list-footer {
+            padding: 0.5rem 0;
+            flex: 1 100%;
         }
     }
 
-    &-striped {
+    &.item-list-bordered {
         li {
-            &:nth-child(odd) {
-                background-color: @gray-10;
+            box-shadow: @box-shadow-bottom;
+            border-top: @box-border;
+            border-left: @box-border;
+            border-right: @box-border;
+            padding: 1rem;
+            margin-bottom: 1rem;
+
+            &:last-child {
+                border-bottom: 1px solid @bg-gray;
             }
         }
     }
 
-    &-hover {
+    &.item-list-lg {
         li {
-            position: relative;
+            line-height: 1.75rem;
 
-            &:hover:before {
-                content: "";
-                top: -1px;
-                left: 0;
-                bottom: -1px;
-                position: absolute;
-                width: 6px;
-                background-color: @brand-primary;
+            > footer,
+            .item-list-footer {
+                padding: 0.5rem 0;
+            }
+        }
+    }
+
+    &.item-list-striped {
+        li {
+            &:nth-child(odd) {
+                background-color: @neargray;
+            }
+        }
+    }
+
+    &.item-list-hover {
+        li {
+            // position: relative;
+
+            // &:hover:before {
+            //     content: "";
+            //     top: -1px;
+            //     left: 0;
+            //     bottom: -1px;
+            //     position: absolute;
+            //     width: 6px;
+            //     background-color: @brand-primary;
+            // }
+            &:hover {
+                background-color: @light-gray;
             }
         }
     }

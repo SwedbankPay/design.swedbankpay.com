@@ -14,33 +14,17 @@
     }
 
     &.panel-muted {
-        background-color: @background-body;
+        background-color: @bg-gray;
 
         .panel-body,
         > footer {
-            background-color: @background-body;
+            background-color: @bg-gray;
         }
     }
 
     &.panel-bottomless {
         .panel-body {
             margin-bottom: 0;
-        }
-    }
-
-    &.panel-dark {
-        .panel-body {
-            background-color: @gray-2;
-            color: @white;
-        }
-
-        nav ul.nav-tabs .active a {
-            background-color: @gray-2;
-            color: @white;
-
-            &:hover {
-                background-color: @gray-3;
-            }
         }
     }
 
@@ -140,7 +124,7 @@
 
     // Optional footer (stays gray in every modifier class)
     > footer {
-        background-color: @background-body;
+        background-color: @white;
         padding: @panel-footer-padding;
         border-top: 1px solid @panel-default-border-color;
     }

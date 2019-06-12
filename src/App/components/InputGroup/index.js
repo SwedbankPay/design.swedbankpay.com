@@ -103,10 +103,10 @@ InputGroup.propTypes = {
     selectOptions: PropTypes.array,
     prefixValue: PropTypes.string,
     prefixType: PropTypes.oneOf(["button", "icon", ""]),
-    prefixBtnColor: PropTypes.oneOf(["primary", "secondary", "danger"]),
+    prefixBtnColor: PropTypes.oneOf(["executive", "guiding", "destructive"]),
     postfixValue: PropTypes.string,
     postfixType: PropTypes.oneOf(["button", "icon", ""]),
-    postfixBtnColor: PropTypes.oneOf(["primary", "secondary", "danger"]),
+    postfixBtnColor: PropTypes.oneOf(["executive", "guiding", "destructive"]),
     feedbackIcon: PropTypes.string,
     helpBlock: PropTypes.oneOfType([
         PropTypes.string,

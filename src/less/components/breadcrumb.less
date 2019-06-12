@@ -5,14 +5,24 @@ ol.breadcrumb {
     display: flex;
 
     li {
+        display: flex;
         list-style: none;
+        align-items: center;
+        color: @link-color;
 
         a {
-            .brand-link();
+            text-decoration: none;
+        }
+
+        &:not(:last-child) {
+            span {
+                color: @dark-brown;
+            }
         }
 
         &:last-child {
             font-weight: bold;
+            color: @dark-brown;
 
             &:after {
                 display: none;
@@ -20,9 +30,9 @@ ol.breadcrumb {
         }
 
         &:after {
-            content: ">";
-            color: @brand-primary;
-            margin: 0 @base-margin-sm;
+            content: "chevron_right";
+
+            .material-icons-styling();
         }
     }
 

@@ -2,14 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-const Panel = ({ title, subTitle, id, type, removeBottomPadding, removeAllPadding, halfPadding, darkMode, bodyContent, panelTable, footerText }) => {
+const Panel = ({ title, subTitle, id, type, removeBottomPadding, removeAllPadding, halfPadding, bodyContent, panelTable, footerText }) => {
     const panelClasses = classnames(
         "panel",
         type ? `panel-${type}` : "panel-default",
         removeBottomPadding ? "panel-bottomless" : null,
         removeAllPadding ? "panel-no-padding" : null,
-        halfPadding ? "panel-half-padding" : null,
-        darkMode ? "panel-dark" : null
+        halfPadding ? "panel-half-padding" : null
     );
 
     return (

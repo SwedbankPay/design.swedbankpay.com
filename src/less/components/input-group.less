@@ -40,7 +40,7 @@
         }
 
         + .form-control {
-            margin-left: -@input-border-width;
+            margin-left: -1px;
         }
     }
 
@@ -56,14 +56,15 @@
         background-color: @input-addon-bg;
         text-align: center;
         white-space: nowrap;
-        border: @input-border-width solid @input-border-color;
+        border: solid @input-border-color;
+        border-width: @input-border-width;
 
         &:first-child {
-            margin-right: -@input-border-width;
+            margin-right: -1px;
         }
 
         &:last-child {
-            margin-left: -@input-border-width;
+            margin-left: -1px;
         }
 
         input[type="radio"],

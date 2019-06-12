@@ -6,6 +6,7 @@ import alert from "./alert";
 import button from "./button";
 import datepicker from "./datepicker";
 import dialog from "./dialog";
+import expandable from "./expandable";
 import loader from "./loader";
 import nav from "./nav";
 import rangeslider from "./rangeslider";
@@ -28,6 +29,7 @@ const px = {
     button,
     datepicker,
     dialog,
+    expandable,
     loader,
     nav,
     rangeslider,
@@ -56,6 +58,7 @@ export {
     button,
     datepicker,
     dialog,
+    expandable,
     loader,
     nav,
     rangeslider,

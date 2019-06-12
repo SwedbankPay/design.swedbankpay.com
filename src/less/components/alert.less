@@ -3,51 +3,59 @@
     position: relative;
     margin-top: 0;
     margin-bottom: @base-margin;
-    border: 1px solid transparent;
     display: flex;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
 
     &.alert-default {
-        .alert-variant(@gray-7);
+        .alert-variant(@gray-medium-light, @nearwhite);
 
         .alert-icon {
-            color: @text-color;
+            color: @gray-medium-light;
         }
     }
 
     &.alert-success {
-        .alert-variant(@state-success);
+        .alert-variant(@state-success, @state-success-light);
     }
 
     &.alert-neutral {
-        .alert-variant(@state-neutral);
+        .alert-variant(@state-neutral, @state-neutral-light);
     }
 
     &.alert-warning {
-        .alert-variant(@state-warning);
+        .alert-variant(@state-warning, @state-warning-light);
     }
 
     &.alert-danger {
-        .alert-variant(@state-error);
-    }
-
-    .alert-heading {
-        margin: 0;
+        .alert-variant(@state-danger, @state-danger-light);
     }
 
     > p {
         margin-bottom: 0;
     }
 
+    .alert-icon {
+        margin-right: @base-margin;
+    }
+
+    .alert-header {
+        .header-margin-none();
+
+        display: flex;
+        flex: 0 1 100%;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
+
     .alert-body {
+        margin: 0 2.5rem;
+
         :last-child {
             margin-bottom: 0;
         }
     }
 
-    .alert-icon {
-        margin-right: @base-margin;
-    }
 
     [data-alert-close] {
         margin-left: auto;

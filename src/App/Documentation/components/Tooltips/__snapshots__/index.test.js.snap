@@ -51,7 +51,7 @@ exports[`Components: Tooltip Overview renders 1`] = `
       
 
       <button
-        className="btn btn-primary"
+        className="btn btn-executive"
         data-tooltip="This is a tooltip!"
         data-tooltip-position="left"
         type="button"
@@ -61,7 +61,7 @@ exports[`Components: Tooltip Overview renders 1`] = `
       
 
       <button
-        className="btn btn-primary"
+        className="btn btn-executive"
         data-tooltip="This is a tooltip!"
         data-tooltip-position="top"
         type="button"
@@ -71,7 +71,7 @@ exports[`Components: Tooltip Overview renders 1`] = `
       
 
       <button
-        className="btn btn-primary"
+        className="btn btn-executive"
         data-tooltip="This is a tooltip!"
         data-tooltip-position="bottom"
         type="button"
@@ -81,7 +81,7 @@ exports[`Components: Tooltip Overview renders 1`] = `
       
 
       <button
-        className="btn btn-primary"
+        className="btn btn-executive"
         data-tooltip="This is a tooltip!"
         data-tooltip-position="right"
         type="button"

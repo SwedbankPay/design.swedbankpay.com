@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import { shallow, mount } from "enzyme";
 
 import Topbar from "./index";
@@ -11,132 +10,81 @@ describe("Component: Topbar - ", () => {
 
     const menu = {
         btn: {
-            icon: "menu",
-            text: "Menu"
-        },
-        items: ["Link 1", "Link 2", "Link 3"]
-    };
-
-    const menuNoBtnIcon = {
-        btn: {
-            text: "Menu"
-        },
-        items: ["Link 1", "Link 2", "Link 3"]
-    };
-
-    const menuNoBtnText = {
-        btn: {
+            name: "Menu",
             icon: "menu"
         },
-        items: ["Link 1", "Link 2", "Link 3"]
-    };
-
-    const menuEmptyBtn = {
-        btn: {},
-        items: ["Link 1", "Link 2", "Link 3"]
+        items: [
+            {
+                name: "Home",
+                icon: "home"
+            },
+            {
+                name: "Purchase history",
+                icon: "shopping_cart"
+            },
+            {
+                name: "Settings",
+                icon: "settings"
+            }
+        ]
     };
 
     it("is defined", () => {
         expect(Topbar).toBeDefined();
     });
 
-    it("renders", () => {
+    it("renders a topbar with only a clickable logo", () => {
         const wrapper = shallow(<Topbar />);
 
         expect(wrapper).toMatchSnapshot();
-    });
-
-    it("renders a static topbar if prop fixed is true", () => {
-        const wrapper = shallow(<Topbar fixed />);
-
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("topbar-fixed");
-    });
-
-    it("renders with nav and button left when prop topbarContent is provided", () => {
-        const topbarContent = {
-            id: "topbar-nav",
-            ...menu
-        };
-        const wrapper = shallow(<Topbar topbarContent={topbarContent} />);
-
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("topbar-btn");
-        expect(wrapper.html()).toContain("topbar-nav");
-    });
-
-    it("renders with a button right and a logo", () => {
-        const wrapper = shallow(<Topbar logout/>);
-
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("topbar-btn");
         expect(wrapper.html()).toContain("topbar-logo");
         expect(wrapper.html()).not.toContain("topbar-nav");
     });
 
-    it("renders with a topbar-btn aswell as a logout topbar-btn", () => {
-        const topbarContent = {
-            id: "topbar-nav",
-            ...menu
-        };
+    it("renders logout link and adds topbar-link-right to the logout", () => {
+        const wrapper = shallow(<Topbar logout/>);
 
-        ReactDOM.render(<Topbar topbarContent={topbarContent} logout />, div);
-
-        const renderedTopbar = document.querySelector(".topbar");
-
-        expect(renderedTopbar).toBeTruthy();
-        expect(renderedTopbar.querySelectorAll(".topbar-btn")).toHaveLength(2);
-
-        ReactDOM.unmountComponentAtNode(div);
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.html()).toContain("Log out");
+        expect(wrapper.html()).not.toContain("topbar-nav");
+        expect(wrapper.find(".topbar-link-right").html()).toContain("Log out");
     });
 
-    it("renders a topbar-btn with no icon", () => {
-        const topbarContent = {
-            id: "topbar-nav",
-            ...menuNoBtnIcon
-        };
+    it("renders topbar-link-container and populates it with given information without a logout link", () => {
+        const wrapper = mount(<Topbar topbarContent={menu} />);
 
-        ReactDOM.render(<Topbar topbarContent={topbarContent} />, div);
+        const renderedTopbar = wrapper.find(".topbar");
+        const renderedNav = renderedTopbar.find(".topbar-nav");
 
-        const renderedTopbar = document.querySelector(".topbar");
-
+        expect(wrapper).toMatchSnapshot();
         expect(renderedTopbar).toBeTruthy();
-        expect(renderedTopbar.querySelector("i")).toBeFalsy();
+        expect(renderedNav).toBeTruthy();
 
-        ReactDOM.unmountComponentAtNode(div);
+        menu.items.forEach(item => expect(renderedNav.html()).toContain(item.name));
+
+        expect(renderedNav.html()).not.toContain("Log out");
     });
 
-    it("renders a topbar-btn with no text", () => {
-        const topbarContent = {
-            id: "topbar-nav",
-            ...menuNoBtnText
-        };
+    it("renders topbar-link-container and a logout link", () => {
+        const wrapper = mount(<Topbar topbarContent={menu} logout />);
+        const renderedTopbar = wrapper.find(".topbar");
+        const renderedNav = renderedTopbar.find(".topbar-nav");
 
-        ReactDOM.render(<Topbar topbarContent={topbarContent} />, div);
-
-        const renderedTopbar = document.querySelector(".topbar");
-
+        expect(wrapper).toMatchSnapshot();
         expect(renderedTopbar).toBeTruthy();
-        expect(renderedTopbar.querySelectorAll("i")).toBeTruthy();
-        expect(renderedTopbar.querySelector(".topbar-btn-text")).toBeFalsy();
-
-        ReactDOM.unmountComponentAtNode(div);
+        expect(renderedNav).toBeTruthy();
+        expect(renderedNav.find(".topbar-link-right .material-icons").text()).toEqual("exit_to_app");
     });
 
-    it("does not render a button if an empty btn object is passed", () => {
-        const topbarContent = {
-            id: "topbar-nav",
-            ...menuEmptyBtn
-        };
+    it("renders a topbar-menu-button when content is provided", () => {
+        const wrapper = mount(<Topbar topbarContent={menu} />);
 
-        ReactDOM.render(<Topbar topbarContent={topbarContent} />, div);
+        const renderedTopbar = wrapper.find(".topbar");
+        const topbarMenuBtn = renderedTopbar.find(".topbar-menu-button");
 
-        const renderedTopbar = document.querySelector(".topbar");
-
+        expect(wrapper).toMatchSnapshot();
         expect(renderedTopbar).toBeTruthy();
-        expect(renderedTopbar.querySelector(".topbar-btn")).toBeFalsy();
-
-        ReactDOM.unmountComponentAtNode(div);
+        expect(topbarMenuBtn).toBeTruthy();
     });
 
     it("logo prevents default when clicked", () => {
@@ -152,12 +100,7 @@ describe("Component: Topbar - ", () => {
     });
 
     it("menu links prevents default when clicked", () => {
-        const topbarContent = {
-            id: "topbar-nav",
-            ...menu
-        };
-
-        const wrapper = mount(<Topbar topbarContent={topbarContent} />);
+        const wrapper = mount(<Topbar topbarContent={menu} />);
         const eventHandler = { preventDefault: jest.fn() };
         const menuLinks = wrapper.find(".topbar-nav a");
 

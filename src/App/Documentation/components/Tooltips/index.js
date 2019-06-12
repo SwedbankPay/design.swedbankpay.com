@@ -10,28 +10,28 @@ const Overview = () => (
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <button
-                    className="btn btn-primary"
+                    className="btn btn-executive"
                     type="button"
                     data-tooltip="This is a tooltip!"
                     data-tooltip-position="left"
                 >Tooltip to the left
                 </button>{"\n"}
                 <button
-                    className="btn btn-primary"
+                    className="btn btn-executive"
                     type="button"
                     data-tooltip="This is a tooltip!"
                     data-tooltip-position="top"
                 >Tooltip on top
                 </button>{"\n"}
                 <button
-                    className="btn btn-primary"
+                    className="btn btn-executive"
                     type="button"
                     data-tooltip="This is a tooltip!"
                     data-tooltip-position="bottom"
                 >Tooltip to the bottom
                 </button>{"\n"}
                 <button
-                    className="btn btn-primary"
+                    className="btn btn-executive"
                     type="button"
                     data-tooltip="This is a tooltip!"
                     data-tooltip-position="right"

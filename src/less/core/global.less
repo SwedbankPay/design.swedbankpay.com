@@ -33,14 +33,20 @@ body {
     color: @text-color;
     background-color: @body-bg;
     min-height: 100%;
+    border-top: 8px solid @brand-primary;
 
-    @media screen and (min-width: @screen-sm-min) {
-        &.has-vscroll {
+    &.has-vscroll {
+        overflow: hidden;
+
+        @media screen and (min-width: @screen-sm-min) {
             padding-right: @scrollbar-size;
 
-            .dialog,
-            .topbar {
+            .dialog {
                 padding-right: @scrollbar-size;
+            }
+
+            .topbar {
+                padding: 0 20px;
             }
         }
     }
@@ -60,15 +66,12 @@ textarea {
 // Links
 
 a {
-    color: @blue;
-    text-decoration: none;
-    border-bottom: 2px solid @blue;
+    color: @turquoise-links;
 
     &:hover,
     &:focus {
-        color: darken(@blue, 10%);
+        color: darken(@turquoise-links, 10%);
         text-decoration: none;
-        border-bottom-color: transparent;
     }
 
     &:active,
@@ -105,7 +108,7 @@ hr {
     margin-top: @base-margin;
     margin-bottom: @base-margin;
     border: 0;
-    border-top: 1px solid @gray-9;
+    border-top: 1px solid @gray-bright;
 }
 
 // Unordered and Ordered lists

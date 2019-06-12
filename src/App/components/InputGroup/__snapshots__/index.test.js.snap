@@ -259,7 +259,7 @@ exports[`Component: InputGroup -  renders a form-group with a postfix if prop po
 
 exports[`Component: InputGroup -  renders a form-group with a prefix button if prop prefixValue is provided 1`] = `
 <InputGroup
-  prefixBtnColor="primary"
+  prefixBtnColor="executive"
   prefixType="button"
   prefixValue="button text"
   type="typetest"
@@ -275,12 +275,12 @@ exports[`Component: InputGroup -  renders a form-group with a prefix button if p
       
 
       <Addon
-        color="primary"
+        color="executive"
         type="button"
         value="button text"
       >
         <button
-          className="btn btn-primary"
+          className="btn btn-executive"
           type="button"
         >
           button text

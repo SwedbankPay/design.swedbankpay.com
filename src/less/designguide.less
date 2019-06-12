@@ -5,10 +5,6 @@
     width: 100%;
 
     .designguide-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
         .topbar-logo {
             margin-right: 0;
         }
@@ -21,7 +17,7 @@
         .header-links {
             a {
                 padding: 0 1rem;
-                .brand-link();
+                border: 0;
 
                 &.active {
                     font-weight: @font-weight-bold;
@@ -39,14 +35,12 @@
         }
 
         .topbar-info {
-            margin-right: 0.5rem;
-            margin-top: 0.5rem;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
 
             a {
-                margin: 5px;
+                margin-left: 5px;
                 color: @text-muted;
                 fill: @text-muted;
                 border: none;
@@ -71,17 +65,32 @@
         font-size: 87.5%;
     }
 
-    .color-preview {
-        width: 100%;
-        color: @white;
-        padding: 1rem;
+    .color-container {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 0.5rem;
+        justify-content: center;
 
-        p {
-            margin: 0;
+        &:not(:last-child) {
+            margin-bottom: 0.5rem;
+        }
+
+        > div {
+            &:not(:last-child) {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        .color-preview {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            color: @black;
+            padding: 1rem;
+
+            p {
+                margin: 0;
+            }
         }
     }
 
@@ -96,8 +105,8 @@
                 > [class*="col"] {
                     padding-top: 0.5rem;
                     padding-bottom: 0.5rem;
-                    background: fade(@gray-5, 15%);
-                    border: 1px solid fade(@gray-8, 80%);
+                    background: @gray-bright;
+                    border: 1px solid fade(@gray-bright-alt, 80%);
                 }
 
                 + .row {
@@ -107,7 +116,7 @@
 
             &.showcase-vertical-space {
                 .row {
-                    background: @gray-10;
+                    background: @neargray;
                     height: 10rem;
                 }
             }
@@ -168,7 +177,7 @@
 
     .doc-view {
         #loading-component {
-            height: ~"calc(100vh - 150px)";
+            height: ~"calc(100vh - 166px)";
         }
     }
 
@@ -176,7 +185,7 @@
     .demo-square {
         height: 5rem;
         width: 5rem;
-        background-color: @input-gray;
+        background-color: @neargray;
         display: inline-block;
 
         &:not(:last-child) {
