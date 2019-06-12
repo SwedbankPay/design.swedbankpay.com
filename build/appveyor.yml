@@ -30,6 +30,7 @@ environment:
 #   - node_modules
 
 install:
+- ps: Install-Product node $env:nodejs_version x64
 - cmd: >-
     choco install gitversion.portable -pre -y
 
