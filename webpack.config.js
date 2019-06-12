@@ -31,7 +31,7 @@ module.exports = (env, argv) => {
             extensions: [".js", ".jsx", ".json"]
         },
         output: {
-            library: "payex",
+            library: "swedbankpay",
             path: path.resolve(__dirname, `dist${basename}`),
             filename: "scripts/[name].js?[hash]",
             chunkFilename: "scripts/[name].js?[hash]",
@@ -219,7 +219,7 @@ module.exports = (env, argv) => {
             new HtmlWebpackPlugin({
                 template: "./src/index.html",
                 hash: true,
-                title: "PayEx DesignGuide",
+                title: "Swedbank Pay DesignGuide",
                 meta: {
                     "informational-version": infoVersion
                 }
@@ -253,7 +253,7 @@ module.exports = (env, argv) => {
                 filename: `${rootPath}index.html`,
                 template: "./build/rootindex.html",
                 hash: true,
-                title: "PayEx DesignGuide",
+                title: "Swedbank Pay DesignGuide",
                 chunks: ["px"],
                 basename
             }),
@@ -262,7 +262,7 @@ module.exports = (env, argv) => {
                 template: "./build/root404.html",
                 hash: true,
                 chunks: ["px"],
-                title: "PayEx DesignGuide",
+                title: "Swedbank Pay DesignGuide",
                 basename
             }),
             new SentryCliPlugin({
@@ -284,7 +284,7 @@ module.exports = (env, argv) => {
         if (isRelease) {
             onEndArchive.push({
                 source: "./dist/temp/release",
-                destination: `./dist${basename}release/PayEx.DesignGuide.v${version}.zip`
+                destination: `./dist${basename}release/Swedbankpay.DesignGuide.v${version}.zip`
             });
         }
 
@@ -293,8 +293,8 @@ module.exports = (env, argv) => {
                 logo: "./src/img/favicon.png",
                 output: "/icons/",
                 config: {
-                    appName: "PayEx DesignGuide",
-                    developerName: "PayEx",
+                    appName: "Swedbank Pay DesignGuide",
+                    developerName: "Swedbank Pay",
                     developerURL: "https://payex.com",
                     background: "#000",
                     theme_color: "#2da944",
