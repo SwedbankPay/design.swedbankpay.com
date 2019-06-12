@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Footer = ({ className, children }) => (
-    <div className={`page-footer${className ? ` ${className}` : ""}`}>
+    <footer className={`page-footer${className ? ` ${className}` : ""}`}>
         {children || <p>© Swedbank Pay (publ)</p>}
-    </div>
+    </footer>
 );
 
 Footer.propTypes = {
