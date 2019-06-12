@@ -1,4 +1,6 @@
-![Swedbank Pay logo](./src/img/logo/spay_vertical_pos.svg)
+<p align="center">
+    <img src="./src/img/logo/spay_vertical_pos.svg" width=300 />
+</p>
 
 # PayEx DesignGuide
 
