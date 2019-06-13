@@ -6,3 +6,4 @@ src
 temp
 build
 __mocks__
+.vscode
