@@ -1,2 +1,2 @@
 (window.webpackJsonppayex=window.webpackJsonppayex||[]).push([[55],{382:function(a,n,e){"use strict";e.r(n);var c=e(2),s=e.n(c),i=e(57),o=function(a){var n=a.icon,e=a.classNames;return s.a.createElement("i",{className:"material-icons".concat(e?" ".concat(e):"")},n)};o.propTypes={icon:e.n(i).a.string.isRequired},n.default=o}}]);
-//# sourceMappingURL=doc-route.chunk_57.js.map?707979ca62d723eec23a
+//# sourceMappingURL=doc-route.chunk_57.js.map?10301c0663e9a1aff89a
