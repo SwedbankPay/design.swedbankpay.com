@@ -20,7 +20,7 @@ import validation from "./validation";
 
 // Sentry reporter
 if (process.env.sentry) {
-    init({ dsn: "https://832de6a6953642bea1d70c41c12a5ccd@sentry.io/80077" });
+    init({ dsn: "https://a80375d3150043fa85964c8d5eb24e0b@sentry.io/1481099" });
 }
 
 const px = {

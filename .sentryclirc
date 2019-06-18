@@ -1,7 +1,7 @@
 [defaults]
-url = https://sentry.io/
-org = payexs
-project = payex-designguide-dev
+project=spay-designguide-dev
+org=payex
+url=https://sentry.io/
 
 [auth]
-token = <token>
+token=<token>

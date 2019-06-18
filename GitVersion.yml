@@ -1,4 +1,10 @@
 # Disabling this due to dependabot commit messages
 commit-message-incrementing: Disabled
 ignore:
-  commits-before: 2018-11-20T12:00:00
+  sha:
+    - 68ddac4f1c9e3444cb60a92134caa96f3bc5a77a
+    - 541d2c3f7493db05a24b094dcc873768b3f85f5f
+    - 330b85c7cb188c424e547a819306b6180076a906
+    - 0345bacfe02a39e0705c0c8f96211938ff33b957
+    - d3cf7478c1b9115cd270a8c21348497723a578c4
+    - 0345bacfe02a39e0705c0c8f96211938ff33b957
