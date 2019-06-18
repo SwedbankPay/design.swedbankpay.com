@@ -1,7 +1,7 @@
 {
-    "name": "design.payex.com",
-    "version": "2.2.0",
-    "description": "PayEx DesignGuide",
+    "name": "design.swedbankpay.com",
+    "version": "3.0.0",
+    "description": "Swedbank Pay DesignGuide",
     "main": "index.js",
     "scripts": {
         "start": "webpack-dev-server --hot --mode development",
@@ -19,15 +19,15 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/PayEx/design.payex.com.git"
+        "url": "git+https://github.com/SwedbankPay/design.swedbankpay.com.git"
     },
     "keywords": [],
-    "author": "PayEx",
+    "author": "Swedbank Pay",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/PayEx/design.payex.com/issues"
+        "url": "https://github.com/SwedbankPay/design.swedbankpay.com/issues"
     },
-    "homepage": "https://github.com/PayEx/design.payex.com#readme",
+    "homepage": "https://github.com/SwedbankPay/design.swedbankpay.com#readme",
     "browserslist": [
         "last 3 versions",
         "> 1%",

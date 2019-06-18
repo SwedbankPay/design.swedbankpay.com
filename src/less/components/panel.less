@@ -2,23 +2,22 @@
     margin-top: @base-margin;
     margin-bottom: @base-margin;
     background-color: @panel-background-color;
-    box-shadow: @panel-box-shadow;
 
     /* Contextual variations */
     &.panel-default {
-        .panel-variant(@white, @brand-primary, @panel-default-border-color);
+        .panel-variant(@white, @panel-default-border-color);
     }
 
     &.panel-brand {
-        .panel-variant(@brand-primary, @white, @brand-primary);
+        .panel-variant(@white, @brand-primary);
     }
 
     &.panel-muted {
-        background-color: @bg-gray;
+        .panel-variant(@white, @panel-default-border-color);
 
         .panel-body,
         > footer {
-            background-color: @bg-gray;
+            background-color: @white;
         }
     }
 
