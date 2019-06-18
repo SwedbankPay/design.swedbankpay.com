@@ -45,7 +45,7 @@ const Overview = () => (
                 <div className="form-group">
                     <Checkbox label={"Subscribe to our Shovels and Tapestry catalogue"} id="subscribe-checkbox" />
                 </div>{"\n"}
-                <Button type="primary" label="Submit" btnType="submit" />{"\n"}
+                <Button type="executive" label="Submit" btnType="submit" />{"\n"}
             </form>
         </ComponentPreview>
     </>
@@ -84,7 +84,7 @@ const FormGrid = () => (
                     <div className="col-2">
                         <div className="form-group">{"\n"}
                             <br />{"\n"}
-                            <button type="submit" className="btn btn-primary">Search</button>{"\n"}
+                            <button type="submit" className="btn btn-executive">Search</button>{"\n"}
                         </div>
                     </div>
                 </div>
@@ -114,7 +114,7 @@ const Validation = () => (
                     placeholder="Enter your email"
                     helpBlock="This one should be pretty easy too"
                 />{"\n"}
-                <button className="btn btn-primary" type="submit">Submit</button>
+                <button className="btn btn-executive" type="submit">Submit</button>
             </form>
         </ComponentPreview>
 
@@ -137,7 +137,7 @@ const Validation = () => (
                     successMessage="Right!"
                     errorMessage="Wrong!"
                 />{"\n"}
-                <button className="btn btn-primary" type="submit">Submit</button>
+                <button className="btn btn-executive" type="submit">Submit</button>
             </form>
         </ComponentPreview>
 
@@ -158,7 +158,7 @@ const Validation = () => (
                     successMessage="Right!"
                     errorMessage="Wrong!"
                 />{"\n"}
-                <button className="btn btn-primary" type="submit" data-disable-invalid="">Submit</button>
+                <button className="btn btn-executive" type="submit" data-disable-invalid="">Submit</button>
             </form>
         </ComponentPreview>
     </>
@@ -188,7 +188,7 @@ const UsageWithFieldsets = () => (
                     />
                     <Checkbox label="Remember me" id="fieldset-checkbox" />
                 </fieldset>{"\n"}
-                <Button type="primary" label="Log in" btnType="submit" />{"\n"}
+                <Button type="executive" label="Log in" btnType="submit" />{"\n"}
             </form>
         </ComponentPreview>
     </>
@@ -295,7 +295,7 @@ const DisabledFormComponents = () => (
                     />
                     <Checkbox label="Remember me" id="fieldset-disabled-checkbox" />
                 </fieldset>{"\n"}
-                <Button type="primary" label="Log in" btnType="submit" disabled />{"\n"}
+                <Button type="executive" label="Log in" btnType="submit" disabled />{"\n"}
             </form>
         </ComponentPreview>
     </>

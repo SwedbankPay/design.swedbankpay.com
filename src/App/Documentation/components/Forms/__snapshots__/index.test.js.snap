@@ -127,7 +127,7 @@ exports[`Documentation: Forms DisabledFormComponents renders 1`] = `
         btnType="submit"
         disabled={true}
         label="Log in"
-        type="primary"
+        type="executive"
       />
       
 
@@ -197,7 +197,7 @@ exports[`Documentation: Forms FormGrid form prevents default 1`] = `
             
 
             <button
-              className="btn btn-primary"
+              className="btn btn-executive"
               type="submit"
             >
               Search
@@ -273,7 +273,7 @@ exports[`Documentation: Forms FormGrid renders 1`] = `
             
 
             <button
-              className="btn btn-primary"
+              className="btn btn-executive"
               type="submit"
             >
               Search
@@ -406,7 +406,7 @@ exports[`Documentation: Forms Overview form prevents default 1`] = `
       <Button
         btnType="submit"
         label="Submit"
-        type="primary"
+        type="executive"
       />
       
 
@@ -512,7 +512,7 @@ exports[`Documentation: Forms Overview renders 1`] = `
       <Button
         btnType="submit"
         label="Submit"
-        type="primary"
+        type="executive"
       />
       
 
@@ -741,7 +741,7 @@ exports[`Documentation: Forms UsageWithFieldsets form prevents default 1`] = `
       <Button
         btnType="submit"
         label="Log in"
-        type="primary"
+        type="executive"
       />
       
 
@@ -796,7 +796,7 @@ exports[`Documentation: Forms UsageWithFieldsets renders 1`] = `
       <Button
         btnType="submit"
         label="Log in"
-        type="primary"
+        type="executive"
       />
       
 
@@ -886,7 +886,7 @@ exports[`Documentation: Forms Validation renders 1`] = `
       
 
       <button
-        className="btn btn-primary"
+        className="btn btn-executive"
         type="submit"
       >
         Submit
@@ -938,7 +938,7 @@ exports[`Documentation: Forms Validation renders 1`] = `
       
 
       <button
-        className="btn btn-primary"
+        className="btn btn-executive"
         type="submit"
       >
         Submit
@@ -1006,7 +1006,7 @@ exports[`Documentation: Forms Validation renders 1`] = `
       
 
       <button
-        className="btn btn-primary"
+        className="btn btn-executive"
         data-disable-invalid=""
         type="submit"
       >

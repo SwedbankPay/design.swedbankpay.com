@@ -28,15 +28,23 @@
             height: @checkbox-height;
             width: @checkbox-width;
             background-color: @white;
-            border: 1px solid @checkbox-color;
-            cursor: pointer;
+            border: 2px solid @gray-light-alt;
+            border-radius: 2px;
         }
 
         &:checked + label:before {
-            background-color: @brand-primary;
+            background-color: @checkbox-checked-color;
+            border-color: @checkbox-checked-color;
             background-position: 50% 50%;
             background-repeat: no-repeat;
             background-image: url("../../../icons/shapes/check-mark.svg");
+        }
+
+        &:not(:checked):not([disabled]) {
+            &:hover + label:before {
+                background-color: @bg-apricot;
+                border-color: @soft-brown;
+            }
         }
 
         &:focus + label:before {
@@ -46,17 +54,11 @@
         &[disabled] {
             + label:before {
                 background-color: @input-bg-disabled;
-                border-color: @checkbox-color;
+                border-color: @checkbox-border-color;
             }
 
             &:checked + label:before {
                 background-color: @input-checked-bg-disabled;
-            }
-
-            + label,
-            &:after,
-            &:checked + label:before {
-                cursor: not-allowed;
             }
         }
     }

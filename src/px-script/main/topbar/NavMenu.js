@@ -1,15 +1,18 @@
-import { isWithinBoundingBox } from "../utils";
+import { isWithinBoundingBox, handleScrollbar } from "../utils";
 
 const SELECTORS = {
     BTN: ".topbar-btn",
-    ICON: ".topbar-btn-icon"
+    ICON: ".topbar-btn-icon",
+    OPEN: "topbar-nav-open"
 };
 
 export default class NavMenu {
     constructor (topbarComponent, navMenu) {
         this.id = topbarComponent.id;
+        this.isOpen = navMenu.classList.contains(SELECTORS.OPEN);
         this.navMenuElement = navMenu;
-        this.isOpen = false;
+        this.linkContainer = this.navMenuElement.querySelector(".topbar-link-container");
+        this.closeNavIcon = this.navMenuElement.querySelector(".close-topbar-nav");
         this.btnElement = topbarComponent.querySelector(SELECTORS.BTN);
         this.iconElement = this.btnElement ? this.btnElement.querySelector(SELECTORS.ICON) : null;
         this.userIcon = this.iconElement ? this.iconElement.innerHTML : null;
@@ -17,8 +20,22 @@ export default class NavMenu {
         if (this.btnElement) {
             this.btnElement.addEventListener("click", e => {
                 e.preventDefault();
-                this._handleClick();
+                this.open();
             });
+        }
+
+        if (this.navMenuElement) {
+            this.navMenuElement.addEventListener("mousedown", e => {
+                if (this.isOpen && !this._containsPoint(e.clientX, e.clientY)) { this.close(); }
+            });
+
+            try {
+                this.closeNavIcon.addEventListener("click", () => {
+                    this.close();
+                });
+            } catch (e) {
+                console.warn("Topbar is missing a close icon");
+            }
         }
 
         this._initAnchors();
@@ -31,28 +48,30 @@ export default class NavMenu {
     }
 
     open () {
-        this.navMenuElement.classList.add("in");
+        handleScrollbar();
         this.isOpen = true;
 
-        if (this.iconElement) {
-            this.iconElement.innerHTML = "close";
-        }
+        if (this.iconElement) { this.iconElement.innerHTML = "close"; }
+
+        this.navMenuElement.classList.add("d-block");
+        setTimeout(() => {
+            this.navMenuElement.classList.add("topbar-nav-open");
+        }, 10);
     }
 
     close () {
-        this.navMenuElement.classList.remove("in");
+        handleScrollbar();
         this.isOpen = false;
 
-        if (this.iconElement) {
-            this.iconElement.innerHTML = this.userIcon;
-        }
-    }
+        if (this.iconElement) { this.iconElement.innerHTML = this.userIcon; }
 
-    _handleClick () {
-        this.isOpen ? this.close() : this.open();
+        this.navMenuElement.classList.remove("topbar-nav-open");
+        setTimeout(() => {
+            this.navMenuElement.classList.remove("d-block");
+        }, 300);
     }
 
     _containsPoint (x, y) {
-        return isWithinBoundingBox(x, y, this.navMenuElement) || isWithinBoundingBox(x, y, this.btnElement);
+        return isWithinBoundingBox(x, y, this.linkContainer);
     }
 }

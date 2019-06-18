@@ -58,7 +58,7 @@ exports[`Components: Tabs BasicUsage renders 1`] = `
           "Audit trail",
         ]
       }
-      mode="xl"
+      mode="sm"
     />
   </ComponentPreview>
 </Fragment>

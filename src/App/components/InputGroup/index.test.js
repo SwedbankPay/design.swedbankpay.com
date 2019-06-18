@@ -48,7 +48,7 @@ describe("Component: InputGroup - ", () => {
     });
 
     it("throws an error if prefixBtnColor prop has an invalid value", () => {
-        const testValues = ["primary", "secondary", "danger", "invalid", "test"];
+        const testValues = ["executive", "guiding", "destructive", "invalid", "test"];
 
         console.error = jest.fn();
         testValues.forEach(testValue => {
@@ -72,7 +72,7 @@ describe("Component: InputGroup - ", () => {
     });
 
     it("throws an error if postfixBtnColor prop has an invalid value", () => {
-        const testValues = ["primary", "secondary", "danger", "invalid", "test"];
+        const testValues = ["executive", "guiding", "destructive", "invalid", "test"];
 
         console.error = jest.fn();
         testValues.forEach(testValue => {
@@ -92,10 +92,10 @@ describe("Component: InputGroup - ", () => {
     });
 
     it("renders a form-group with a prefix button if prop prefixValue is provided", () => {
-        const wrapper = mount(<InputGroup type="typetest" prefixType="button" prefixValue="button text" prefixBtnColor="primary" />);
+        const wrapper = mount(<InputGroup type="typetest" prefixType="button" prefixValue="button text" prefixBtnColor="executive" />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("btn btn-primary");
+        expect(wrapper.html()).toContain("btn btn-executive");
     });
 
     it("renders a form-group with a prefix label if prop prefixValue is provided and no prefixType is given", () => {

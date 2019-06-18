@@ -2,13 +2,24 @@
 
 exports[`Core: Color renders 1`] = `
 <div
-  className="color-preview bg-test"
+  className="color-preview"
+  style={
+    Object {
+      "backgroundColor": "#test",
+    }
+  }
 >
-  <p>
+  <p
+    style={
+      Object {
+        "color": "black",
+      }
+    }
+  >
     test
-  </p>
-  <p>
+     (
     #test
+    )
   </p>
 </div>
 `;

@@ -205,7 +205,7 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
 
 
     <button
-      className="btn btn-primary"
+      className="btn btn-executive"
       data-alert-close="alert-success-1"
       type="button"
     >
@@ -237,26 +237,22 @@ exports[`Documentation: Alerts Extended Usage renders 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <Alert
+    <ComplexAlert
       close={true}
+      headerText="Success!"
       icon="check_circle"
       type="success"
     >
-      <h3
-        className="text-success"
-      >
-        Success!
-      </h3>
       <p>
-        PDF was successfully uploaded. 
+        PDF was successfully uploaded.
         <br />
-         Some additional information.
+        Some additional information.
       </p>
       <hr />
       <p>
         By the way, great job!
       </p>
-    </Alert>
+    </ComplexAlert>
   </ComponentPreview>
 </Fragment>
 `;

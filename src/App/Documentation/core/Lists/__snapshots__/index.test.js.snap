@@ -265,13 +265,55 @@ exports[`Documentation: Lists ItemList renders 1`] = `
       className="item-list"
     >
       <li>
-        4925*********004
+        <div>
+          <h5>
+            Foo
+          </h5>
+          <small>
+            Due date 2 days
+          </small>
+        </div>
+        <div>
+          <span
+            className="h5 text-highlight"
+          >
+            2120 kr
+          </span>
+        </div>
       </li>
       <li>
-        4925*********004
+        <div>
+          <h5>
+            Bar
+          </h5>
+          <small>
+            Due date 1 day
+          </small>
+        </div>
+        <div>
+          <span
+            className="h5 text-highlight"
+          >
+            1100 kr
+          </span>
+        </div>
       </li>
       <li>
-        4925*********004
+        <div>
+          <h5>
+            Baz
+          </h5>
+          <small>
+            Due date 5 days
+          </small>
+        </div>
+        <div>
+          <span
+            className="h5 text-highlight"
+          >
+            200 kr
+          </span>
+        </div>
       </li>
     </ul>
   </ComponentPreview>
@@ -683,6 +725,8 @@ exports[`Documentation: Lists renders 1`] = `
   <DescriptionList />
   <SettingsList />
   <ItemList />
+  <ItemListLarge />
+  <ItemListBordered />
   <HoverItemList />
   <StripedItemList />
 </DocContainer>

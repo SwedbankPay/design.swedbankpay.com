@@ -28,7 +28,26 @@ const HowItWorks = () => (
         <p>Breaking it down, here’s how it works:</p>
         <ul>
             <li>
-                Containers provide a means to center and horizontally pad your site’s contents. Use <Property value=".container" /> for a responsive pixel width or <Property value=".container-fluid" /> for <Property value="width: 100%" /> across all viewport and device sizes.
+                {/* Use <Property value=".container" /> for a responsive pixel width or <Property value=".container-fluid" /> for <Property value="width: 100%" /> across all viewport and device sizes. */}
+                Containers provide a means to center and horizontally pad your site’s contents. We have 4 different container sizes available:
+                <ul>
+                    <li>
+                        <Property value=".container-sm" />
+                        <p>Max-width: 992px.</p>
+                    </li>
+                    <li>
+                        <Property value=".container" />
+                        <p>Max-width: 1200px.</p>
+                    </li>
+                    <li>
+                        <Property value=".container-lg" />
+                        <p>Max-width: 1600px.</p>
+                    </li>
+                    <li>
+                        <Property value=".container-fluid" />
+                        <p>Max-width: none, takes up the entire page.</p>
+                    </li>
+                </ul>
             </li>
             <li>
                 Rows are wrappers for columns. Each column has horizontal <Property value="padding" /> (called a gutter) for controlling the space between them. This <Property value="padding" /> is then counteracted on the rows with negative margins. This way, all the content in your columns is visually aligned down the left side.
@@ -111,10 +130,6 @@ const GridOptions = () => (
                     <td><Property value=".col-lg-" /></td>
                     <td><Property value=".col-xl-" /></td>
                     <td><Property value=".col-xxl-" /></td>
-                </tr>
-                <tr>
-                    <th scope="row"># of columns</th>
-                    <td colSpan="6">12</td>
                 </tr>
                 <tr>
                     <th scope="row">Gutter width</th>

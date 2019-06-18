@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
 import { ComponentPreview, Attribute, Property, DocContainer, JavascriptDocs } from "#";
-import AlertComponent from "@/Alert";
+import AlertComponent, { ComplexAlert } from "@/Alert";
 
 const { alert } = window.px;
 
@@ -53,7 +53,7 @@ const ClosingTheAlert = () => (
         <p>To add an external close-button for your alert add the attribute <Attribute data name="alert-close" value="{id}" /> to the button element.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <AlertComponent id="alert-success-1" type="success" text="Press the button below to close me" icon="check_circle" />{"\n\n"}
-            <button type="button" className="btn btn-primary" data-alert-close="alert-success-1">Close alert</button>
+            <button type="button" className="btn btn-executive" data-alert-close="alert-success-1">Close alert</button>
         </ComponentPreview>
     </>
 );
@@ -64,12 +64,12 @@ const ExtendedUsage = () => (
         <p>Alerts can also contain additional HTML elements like headings, paragraphs and dividers.</p>
         <p>Just make sure to wrap the content in a container with the class <Property value=".alert-body" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <AlertComponent type="success" close icon="check_circle">
-                <h3 className="text-success">Success!</h3>
-                <p>PDF was successfully uploaded. <br /> Some additional information.</p>
+            <ComplexAlert type="success" icon="check_circle" headerText="Success!" close>
+                <p>PDF was successfully uploaded.
+                    <br />Some additional information.</p>
                 <hr/>
                 <p>By the way, great job!</p>
-            </AlertComponent>
+            </ComplexAlert>
         </ComponentPreview>
     </>
 );

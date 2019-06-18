@@ -18,42 +18,34 @@ const DefaultBehaviour = () => (
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="cards">
                 <CardComponent
-                    type="default"
-                    title="Card default"
+                    title={<MediaObject size="sm" icon="account_circle" heading="Bob Corlsan" text="bob.corlsan@payex.com" textSmall />}
+                    type="primary"
                     imgSrc="https://picsum.photos/300/?random"
-                    text="This is the cards text"
-                    smallText="And the small text"
+                    text="This paragraph contains some text about the person displayed above."
+                    content={
+                        <ul className="list pt-3">
+                            <li><span className="font-weight-bold">Card number:</span> 4563 5648 5642</li>
+                            <li><span className="font-weight-bold">Balance:</span> 2500,- </li>
+                        </ul>
+                    }
                     btnTxt="Button"
-                    footerTxt="This is some text that goes in the footer."
-                    footerLinkTxt="You wanna click this link?"
-                >
-                    <MediaObject size="sm" icon="account_circle" heading="Bob Corlsan" text="bob.corlsan@payex.com" textSmall muted />
-                </CardComponent>
-            </div>
-            <div className="cards">
+                />
                 <CardComponent
-                    type="brand"
-                    title="Card brand"
-                    imgSrc="https://picsum.photos/300/?random"
-                    text="This is the cards text"
-                    smallText="And the small text"
-                    btnTxt="Button"
-                    footerTxt="This is some text that goes in the footer."
-                    footerLinkTxt="You wanna click this link?"
+                    type="secondary"
+                    title={<h3>Card secondary</h3>}
+                    text="Descriptive text to put inside the card, could contain a lot."
+                    footerLinkTxt="Footer link"
                 >
                     <MediaObject size="sm" icon="account_balance" heading="725 NOK" text="Outstanding balance" textSmall muted />
                 </CardComponent>
-            </div>
-            <div className="cards">
                 <CardComponent
-                    type="light"
-                    title="Card light"
+                    type="plain"
+                    title={<h3>Card plain</h3>}
                     imgSrc="https://picsum.photos/300/?random"
-                    text="This is the cards text"
+                    text="Descriptive text to put inside the card, could contain a lot."
                     smallText="And the small text"
                     btnTxt="Button"
-                    footerTxt="This is some text that goes in the footer."
-                    footerLinkTxt="You wanna click this link?"
+                    footerLinkTxt="Footer link"
                 >
                     <MediaObject size="sm" icon="verified_user" heading="75%" text="Complete" textSmall muted />
                 </CardComponent>
@@ -72,26 +64,24 @@ const CardVariants = () => (
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="cards">
                 <CardComponent
-                    type="default"
-                    title="My custom card"
+                    type="primary"
+                    title={<h3>My Custom card</h3>}
                     text="Card text"
                     smallText="Small card text"
-                    footerTxt="This is some text that goes in the footer."
                 >
                     <MediaObject size="sm" icon="verified_user" heading="75%" text="Complete" textSmall muted />
                 </CardComponent>
 
                 <CardComponent
-                    type="default"
-                    title="Text card"
+                    type="primary"
+                    title={<h3>Text card</h3>}
                     textSection={textArr}
                     smallText="This is some small text"
-                    footerTxt="This is some text that goes in the footer."
                 />
 
                 <CardComponent
-                    type="brand"
-                    title="Image card"
+                    type="secondary"
+                    title={<h3>Image card</h3>}
                     imgSrc="https://picsum.photos/300/?random"
                     text="This is a card with an image and body"
                 />

@@ -23,11 +23,14 @@ exports[`Documentation: Card CardVariants renders 1`] = `
       className="cards"
     >
       <Card
-        footerTxt="This is some text that goes in the footer."
         smallText="Small card text"
         text="Card text"
-        title="My custom card"
-        type="default"
+        title={
+          <h3>
+            My Custom card
+          </h3>
+        }
+        type="primary"
       >
         <MediaObject
           heading="75%"
@@ -39,7 +42,6 @@ exports[`Documentation: Card CardVariants renders 1`] = `
         />
       </Card>
       <Card
-        footerTxt="This is some text that goes in the footer."
         smallText="This is some small text"
         textSection={
           Array [
@@ -50,14 +52,22 @@ exports[`Documentation: Card CardVariants renders 1`] = `
             "Yes!",
           ]
         }
-        title="Text card"
-        type="default"
+        title={
+          <h3>
+            Text card
+          </h3>
+        }
+        type="primary"
       />
       <Card
         imgSrc="https://picsum.photos/300/?random"
         text="This is a card with an image and body"
-        title="Image card"
-        type="brand"
+        title={
+          <h3>
+            Image card
+          </h3>
+        }
+        type="secondary"
       />
     </div>
   </ComponentPreview>
@@ -105,36 +115,50 @@ exports[`Documentation: Card DefaultBehaviour renders 1`] = `
     >
       <Card
         btnTxt="Button"
-        footerLinkTxt="You wanna click this link?"
-        footerTxt="This is some text that goes in the footer."
+        content={
+          <ul
+            className="list pt-3"
+          >
+            <li>
+              <span
+                className="font-weight-bold"
+              >
+                Card number:
+              </span>
+               4563 5648 5642
+            </li>
+            <li>
+              <span
+                className="font-weight-bold"
+              >
+                Balance:
+              </span>
+               2500,- 
+            </li>
+          </ul>
+        }
         imgSrc="https://picsum.photos/300/?random"
-        smallText="And the small text"
-        text="This is the cards text"
-        title="Card default"
-        type="default"
-      >
-        <MediaObject
-          heading="Bob Corlsan"
-          icon="account_circle"
-          muted={true}
-          size="sm"
-          text="bob.corlsan@payex.com"
-          textSmall={true}
-        />
-      </Card>
-    </div>
-    <div
-      className="cards"
-    >
+        text="This paragraph contains some text about the person displayed above."
+        title={
+          <MediaObject
+            heading="Bob Corlsan"
+            icon="account_circle"
+            size="sm"
+            text="bob.corlsan@payex.com"
+            textSmall={true}
+          />
+        }
+        type="primary"
+      />
       <Card
-        btnTxt="Button"
-        footerLinkTxt="You wanna click this link?"
-        footerTxt="This is some text that goes in the footer."
-        imgSrc="https://picsum.photos/300/?random"
-        smallText="And the small text"
-        text="This is the cards text"
-        title="Card brand"
-        type="brand"
+        footerLinkTxt="Footer link"
+        text="Descriptive text to put inside the card, could contain a lot."
+        title={
+          <h3>
+            Card secondary
+          </h3>
+        }
+        type="secondary"
       >
         <MediaObject
           heading="725 NOK"
@@ -145,19 +169,18 @@ exports[`Documentation: Card DefaultBehaviour renders 1`] = `
           textSmall={true}
         />
       </Card>
-    </div>
-    <div
-      className="cards"
-    >
       <Card
         btnTxt="Button"
-        footerLinkTxt="You wanna click this link?"
-        footerTxt="This is some text that goes in the footer."
+        footerLinkTxt="Footer link"
         imgSrc="https://picsum.photos/300/?random"
         smallText="And the small text"
-        text="This is the cards text"
-        title="Card light"
-        type="light"
+        text="Descriptive text to put inside the card, could contain a lot."
+        title={
+          <h3>
+            Card plain
+          </h3>
+        }
+        type="plain"
       >
         <MediaObject
           heading="75%"

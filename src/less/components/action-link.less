@@ -1,0 +1,31 @@
+a.action-link {
+    position: relative;
+    display: block;
+    padding: 1rem;
+    padding-left: 1.5rem;
+    border: 0;
+    background-color: @bg-apricot;
+    text-decoration: none;
+
+    &:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 0.5rem;
+        left: 0;
+        top: 0;
+        background-color: @brand-primary;
+    }
+
+    &:after {
+        content: "▶";
+        position: absolute;
+        right: 1rem;
+        color: @brand-primary;
+    }
+
+    .material-icons {
+        color: @brand-primary;
+        font-size: 1.5rem;
+    }
+}

@@ -14,9 +14,9 @@ const Examples = () => (
         <p>The DesignGuide includes a few predefined button styles, each serving its own semantic purpose.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
-                <ButtonComponent type="primary" label="Primary" />{"\n"}
-                <ButtonComponent type="secondary" label="Secondary" />{"\n"}
-                <ButtonComponent type="danger" label="Danger" />{"\n"}
+                <ButtonComponent type="executive" label="Executive" />{"\n"}
+                <ButtonComponent type="guiding" label="Guiding" />{"\n"}
+                <ButtonComponent type="destructive" label="Destructive" />{"\n"}
                 <ButtonComponent type="link" label="Link" />{"\n"}
             </div>
         </ComponentPreview>
@@ -30,11 +30,11 @@ const UsageWithOtherTags = () => (
         <p>When using button classes on <PrismCode className="language-html">{"<a>"}</PrismCode> elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a <Attribute name="role" value="button" /> to appropriately convey their purpose to assistive technologies such as screen readers.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
-                <ButtonComponent type="primary" label="Anchor" href="#" />{"\n"}
-                <ButtonComponent type="primary" label="Button" />{"\n"}
-                <ButtonComponent type="primary" input value="Input" btnType="button" />{"\n"}
-                <ButtonComponent type="primary" input value="Submit" btnType="submit" />{"\n"}
-                <ButtonComponent type="primary" input value="Reset" btnType="reset" />{"\n"}
+                <ButtonComponent type="executive" label="Anchor" href="#" />{"\n"}
+                <ButtonComponent type="executive" label="Button" />{"\n"}
+                <ButtonComponent type="executive" input value="Input" btnType="button" />{"\n"}
+                <ButtonComponent type="executive" input value="Submit" btnType="submit" />{"\n"}
+                <ButtonComponent type="executive" input value="Reset" btnType="reset" />{"\n"}
             </div>
         </ComponentPreview>
     </>
@@ -46,9 +46,9 @@ const OutlineButtons = () => (
         <p>Replace the default modifier classes with the <Property value=".btn-outline-{style}" /> ones to get an outline of the button style.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
-                <ButtonComponent outline type="primary" label="Primary" />{"\n"}
-                <ButtonComponent outline type="secondary" label="Secondary" />{"\n"}
-                <ButtonComponent outline type="danger" label="Danger" />{"\n"}
+                <ButtonComponent outline type="executive" label="Executive" />{"\n"}
+                <ButtonComponent outline type="guiding" label="Guiding" />{"\n"}
+                <ButtonComponent outline type="destructive" label="Destructive" />{"\n"}
             </div>
         </ComponentPreview>
     </>
@@ -60,9 +60,9 @@ const ButtonGroup = () => (
         <p>When you use buttons next to each other you have to wrap them in a <Property value=".button-group" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="button-group">{"\n"}
-                <ButtonComponent type="primary" label="Activate" />{"\n"}
-                <ButtonComponent type="secondary" label="Disable" />{"\n"}
-                <ButtonComponent type="danger" label="Delete" />{"\n"}
+                <ButtonComponent type="executive" label="Activate" />{"\n"}
+                <ButtonComponent type="guiding" label="Disable" />{"\n"}
+                <ButtonComponent type="destructive" label="Delete" />{"\n"}
             </div>
         </ComponentPreview>
     </>
@@ -75,30 +75,30 @@ const Sizes = () => (
         <h3>Large</h3>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
-                <ButtonComponent size="lg" type="primary" label="Large button" />{"\n"}
-                <ButtonComponent size="lg" type="secondary" label="Large button" />{"\n"}
+                <ButtonComponent size="lg" type="executive" label="Large button" />{"\n"}
+                <ButtonComponent size="lg" type="guiding" label="Large button" />{"\n"}
             </div>
         </ComponentPreview>
         <h3>Small</h3>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
-                <ButtonComponent size="sm" type="primary" label="Small button" />{"\n"}
-                <ButtonComponent size="sm" type="secondary" label="Small button" />{"\n"}
+                <ButtonComponent size="sm" type="executive" label="Small button" />{"\n"}
+                <ButtonComponent size="sm" type="guiding" label="Small button" />{"\n"}
             </div>
         </ComponentPreview>
         <h3>Extra small</h3>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
-                <ButtonComponent size="xs" type="primary" label="Extra small button" />{"\n"}
-                <ButtonComponent size="xs" type="secondary" label="Extra small button" />{"\n"}
+                <ButtonComponent size="xs" type="executive" label="Extra small button" />{"\n"}
+                <ButtonComponent size="xs" type="guiding" label="Extra small button" />{"\n"}
             </div>
         </ComponentPreview>
         <h3>Block level</h3>
         <p>Create block level buttons—those that span the full width of a parent by adding <Property value=".btn-block" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
-                <ButtonComponent fullWidth type="primary" label="Block level button" />{"\n"}
-                <ButtonComponent fullWidth type="secondary" label="Block level button" />{"\n"}
+                <ButtonComponent fullWidth type="executive" label="Block level button" />{"\n"}
+                <ButtonComponent fullWidth type="guiding" label="Block level button" />{"\n"}
             </div>
         </ComponentPreview>
     </>
@@ -110,9 +110,9 @@ const ActiveState = () => (
         <p>Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. <b>There’s no need to add a class to <PrismCode className="language-html">{"<button>"}</PrismCode>s as they use a pseudo-class.</b> However, you can still force the same active appearance with <Property value=".active" /> (and include the <Attribute name="aria-pressed" value="true" /> attribute) should you need to replicate the state programmatically.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
-                <ButtonComponent href="#" active type="primary" label="Primary" />{"\n"}
-                <ButtonComponent href="#" active type="secondary" label="Secondary" />{"\n"}
-                <ButtonComponent href="#" active type="danger" label="Danger" />{"\n"}
+                <ButtonComponent href="#" active type="executive" label="Executive" />{"\n"}
+                <ButtonComponent href="#" active type="guiding" label="Guiding" />{"\n"}
+                <ButtonComponent href="#" active type="destructive" label="Destructive" />{"\n"}
             </div>
         </ComponentPreview>
     </>
@@ -124,9 +124,9 @@ const DisabledState = () => (
         <p>Make buttons look inactive by adding the <Attribute name="disabled" /> boolean attribute to any <PrismCode className="language-html">{"<button>"}</PrismCode> element.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
-                <ButtonComponent disabled type="primary" label="Primary" />{"\n"}
-                <ButtonComponent disabled type="secondary" label="Secondary" />{"\n"}
-                <ButtonComponent disabled type="danger" label="Danger" />{"\n"}
+                <ButtonComponent disabled type="executive" label="Executive" />{"\n"}
+                <ButtonComponent disabled type="guiding" label="Guiding" />{"\n"}
+                <ButtonComponent disabled type="destructive" label="Destructive" />{"\n"}
             </div>
         </ComponentPreview>
         <p>Disabled buttons using the <PrismCode className="language-html">{"<a>"}</PrismCode> element behave a bit different:</p>
@@ -137,9 +137,9 @@ const DisabledState = () => (
         </ul>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
-                <ButtonComponent href="#" disabled type="primary" label="Primary" />{"\n"}
-                <ButtonComponent href="#" disabled type="secondary" label="Secondary" />{"\n"}
-                <ButtonComponent href="#" disabled type="danger" label="Danger" />{"\n"}
+                <ButtonComponent href="#" disabled type="executive" label="Executive" />{"\n"}
+                <ButtonComponent href="#" disabled type="guiding" label="Guiding" />{"\n"}
+                <ButtonComponent href="#" disabled type="destructive" label="Destructive" />{"\n"}
             </div>
         </ComponentPreview>
         <Alert type="warning">
@@ -156,9 +156,9 @@ const UsageWithIcons = () => (
         <p>Read more about icon usage here <Link to="/docs/core/icons">here</Link>.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
-                <ButtonComponent icon="cloud" type="primary" label="Primary" />{"\n\n"}
-                <ButtonComponent icon="cloud" type="secondary" label="Secondary" />{"\n"}
-                <ButtonComponent icon="cloud" type="danger" label="Danger" />{"\n"}
+                <ButtonComponent icon="cloud" type="executive" label="Executive" />{"\n\n"}
+                <ButtonComponent icon="cloud" type="guiding" label="Guiding" />{"\n"}
+                <ButtonComponent icon="cloud" type="destructive" label="Destructive" />{"\n"}
             </div>
         </ComponentPreview>
     </>
@@ -170,27 +170,27 @@ const ButtonLoader = () => (
         <p>To use a button with a loader simply add the attribute <Attribute data name="button-loader" /> to add the required markup for the loader component. Add class <Property value=".loading" /> to display the loader.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
-                <ButtonComponent type="primary" label="Primary" loader loading />{"\n"}
-                <ButtonComponent type="secondary" label="Secondary" loader loading />{"\n"}
-                <ButtonComponent type="danger" label="Danger" loader loading />{"\n"}
+                <ButtonComponent type="executive" label="Executive" loader loading />{"\n"}
+                <ButtonComponent type="guiding" label="Guiding" loader loading />{"\n"}
+                <ButtonComponent type="destructive" label="Destructive" loader loading />{"\n"}
             </div>
         </ComponentPreview>
         <h3>Disabled loader</h3>
         <p><Property value=".loading" /> with <Attribute name="disabled" /></p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
-                <ButtonComponent disabled type="primary" label="Primary" loader loading />{"\n"}
-                <ButtonComponent disabled type="secondary" label="Secondary" loader loading />{"\n"}
-                <ButtonComponent disabled type="danger" label="Danger" loader loading />{"\n"}
+                <ButtonComponent disabled type="executive" label="Executive" loader loading />{"\n"}
+                <ButtonComponent disabled type="guiding" label="Guiding" loader loading />{"\n"}
+                <ButtonComponent disabled type="destructive" label="Destructive" loader loading />{"\n"}
             </div>
         </ComponentPreview>
         <h3>Outline loader</h3>
         <p><Property value=".loading" /> with <Property value=".outline" /></p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
-                <ButtonComponent outline type="primary" label="Primary" loader loading />{"\n"}
-                <ButtonComponent outline type="secondary" label="Secondary" loader loading />{"\n"}
-                <ButtonComponent outline type="danger" label="Danger" loader loading />{"\n"}
+                <ButtonComponent outline type="executive" label="Executive" loader loading />{"\n"}
+                <ButtonComponent outline type="guiding" label="Guiding" loader loading />{"\n"}
+                <ButtonComponent outline type="destructive" label="Destructive" loader loading />{"\n"}
             </div>
         </ComponentPreview>
         <h3>The markup</h3>
@@ -236,7 +236,7 @@ class Buttons extends Component {
                 <ActiveState />
                 <DisabledState />
                 <UsageWithIcons />
-                <ButtonLoader />
+                {/* <ButtonLoader /> */}
             </DocContainer>
         );
     }

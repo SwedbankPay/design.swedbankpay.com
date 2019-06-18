@@ -8,6 +8,7 @@ exports[`Component: Topbar -  logo prevents default when clicked 1`] = `
 
   
 
+   
   <a
     className="topbar-logo"
     href="#"
@@ -24,13 +25,21 @@ exports[`Component: Topbar -  menu links prevents default when clicked 1`] = `
     Object {
       "btn": Object {
         "icon": "menu",
-        "text": "Menu",
+        "name": "Menu",
       },
-      "id": "topbar-nav",
       "items": Array [
-        "Link 1",
-        "Link 2",
-        "Link 3",
+        Object {
+          "icon": "home",
+          "name": "Home",
+        },
+        Object {
+          "icon": "shopping_cart",
+          "name": "Purchase history",
+        },
+        Object {
+          "icon": "settings",
+          "name": "Settings",
+        },
       ],
     }
   }
@@ -42,7 +51,6 @@ exports[`Component: Topbar -  menu links prevents default when clicked 1`] = `
 
     <TopbarBtn
       icon="menu"
-      target="topbar-nav"
       text="Menu"
     >
       <button
@@ -58,64 +66,10 @@ exports[`Component: Topbar -  menu links prevents default when clicked 1`] = `
         </i>
         
 		
-        <span
-          className="topbar-btn-text"
-        >
-          Menu
-        </span>
-        
-	
       </button>
     </TopbarBtn>
     
 
-    <TopbarMenu
-      menu={
-        Object {
-          "btn": Object {
-            "icon": "menu",
-            "text": "Menu",
-          },
-          "id": "topbar-nav",
-          "items": Array [
-            "Link 1",
-            "Link 2",
-            "Link 3",
-          ],
-        }
-      }
-    >
-      <nav
-        className="topbar-nav"
-      >
-        
-
-        <a
-          href="#"
-          onClick={[Function]}
-        >
-          Link 1
-        </a>
-        
-
-        <a
-          href="#"
-          onClick={[Function]}
-        >
-          Link 2
-        </a>
-        
-
-        <a
-          href="#"
-          onClick={[Function]}
-        >
-          Link 3
-        </a>
-        
-
-      </nav>
-    </TopbarMenu>
     
 
     <a
@@ -125,11 +79,120 @@ exports[`Component: Topbar -  menu links prevents default when clicked 1`] = `
     />
     
 
+    <TopbarMenu
+      logout={false}
+      menu={
+        Object {
+          "btn": Object {
+            "icon": "menu",
+            "name": "Menu",
+          },
+          "items": Array [
+            Object {
+              "icon": "home",
+              "name": "Home",
+            },
+            Object {
+              "icon": "shopping_cart",
+              "name": "Purchase history",
+            },
+            Object {
+              "icon": "settings",
+              "name": "Settings",
+            },
+          ],
+        }
+      }
+    >
+      <nav
+        className="topbar-nav"
+      >
+        <div
+          className="topbar-link-container"
+        >
+          
+
+          <i
+            className="material-icons close-topbar-nav"
+          >
+            close
+          </i>
+          
+
+          <a
+            className="active"
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              className="material-icons"
+            >
+              home
+            </i>
+            
+
+            <span>
+              Home
+            </span>
+            
+
+          </a>
+          
+
+          <a
+            className={null}
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              className="material-icons"
+            >
+              shopping_cart
+            </i>
+            
+
+            <span>
+              Purchase history
+            </span>
+            
+
+          </a>
+          
+
+          <a
+            className={null}
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              className="material-icons"
+            >
+              settings
+            </i>
+            
+
+            <span>
+              Settings
+            </span>
+            
+
+          </a>
+          
+
+        </div>
+      </nav>
+    </TopbarMenu>
   </header>
 </Topbar>
 `;
 
-exports[`Component: Topbar -  renders 1`] = `
+exports[`Component: Topbar -  renders a topbar with only a clickable logo 1`] = `
 <header
   className="topbar"
 >
@@ -137,6 +200,7 @@ exports[`Component: Topbar -  renders 1`] = `
 
   
 
+   
   <a
     className="topbar-logo"
     href="#"
@@ -147,79 +211,188 @@ exports[`Component: Topbar -  renders 1`] = `
 </header>
 `;
 
-exports[`Component: Topbar -  renders a static topbar if prop fixed is true 1`] = `
-<header
-  className="topbar topbar-fixed"
->
-  
-
-  
-
-  <a
-    className="topbar-logo"
-    href="#"
-    onClick={[Function]}
-  />
-  
-
-</header>
-`;
-
-exports[`Component: Topbar -  renders with a button right and a logo 1`] = `
-<header
-  className="topbar"
->
-  
-
-  
-
-  <a
-    className="topbar-logo"
-    href="#"
-    onClick={[Function]}
-  />
-  
-
-  <TopbarBtn
-    icon="exit_to_app"
-    text="Log out"
-  />
-  
-
-</header>
-`;
-
-exports[`Component: Topbar -  renders with nav and button left when prop topbarContent is provided 1`] = `
-<header
-  className="topbar"
->
-  
-
-  <TopbarBtn
-    icon="menu"
-    target="topbar-nav"
-    text="Menu"
-  />
-  
-
-  <TopbarMenu
-    menu={
-      Object {
-        "btn": Object {
-          "icon": "menu",
-          "text": "Menu",
+exports[`Component: Topbar -  renders a topbar-menu-button when content is provided 1`] = `
+<Topbar
+  topbarContent={
+    Object {
+      "btn": Object {
+        "icon": "menu",
+        "name": "Menu",
+      },
+      "items": Array [
+        Object {
+          "icon": "home",
+          "name": "Home",
         },
-        "id": "topbar-nav",
-        "items": Array [
-          "Link 1",
-          "Link 2",
-          "Link 3",
-        ],
-      }
+        Object {
+          "icon": "shopping_cart",
+          "name": "Purchase history",
+        },
+        Object {
+          "icon": "settings",
+          "name": "Settings",
+        },
+      ],
     }
-  />
+  }
+>
+  <header
+    className="topbar"
+  >
+    
+
+    <TopbarBtn
+      icon="menu"
+      text="Menu"
+    >
+      <button
+        className="topbar-btn"
+        type="button"
+      >
+        
+		
+        <i
+          className="material-icons topbar-btn-icon"
+        >
+          menu
+        </i>
+        
+		
+      </button>
+    </TopbarBtn>
+    
+
+    
+
+    <a
+      className="topbar-logo"
+      href="#"
+      onClick={[Function]}
+    />
+    
+
+    <TopbarMenu
+      logout={false}
+      menu={
+        Object {
+          "btn": Object {
+            "icon": "menu",
+            "name": "Menu",
+          },
+          "items": Array [
+            Object {
+              "icon": "home",
+              "name": "Home",
+            },
+            Object {
+              "icon": "shopping_cart",
+              "name": "Purchase history",
+            },
+            Object {
+              "icon": "settings",
+              "name": "Settings",
+            },
+          ],
+        }
+      }
+    >
+      <nav
+        className="topbar-nav"
+      >
+        <div
+          className="topbar-link-container"
+        >
+          
+
+          <i
+            className="material-icons close-topbar-nav"
+          >
+            close
+          </i>
+          
+
+          <a
+            className="active"
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              className="material-icons"
+            >
+              home
+            </i>
+            
+
+            <span>
+              Home
+            </span>
+            
+
+          </a>
+          
+
+          <a
+            className={null}
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              className="material-icons"
+            >
+              shopping_cart
+            </i>
+            
+
+            <span>
+              Purchase history
+            </span>
+            
+
+          </a>
+          
+
+          <a
+            className={null}
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              className="material-icons"
+            >
+              settings
+            </i>
+            
+
+            <span>
+              Settings
+            </span>
+            
+
+          </a>
+          
+
+        </div>
+      </nav>
+    </TopbarMenu>
+  </header>
+</Topbar>
+`;
+
+exports[`Component: Topbar -  renders logout link and adds topbar-link-right to the logout 1`] = `
+<header
+  className="topbar"
+>
   
 
+  
+
+   
   <a
     className="topbar-logo"
     href="#"
@@ -227,5 +400,396 @@ exports[`Component: Topbar -  renders with nav and button left when prop topbarC
   />
   
 
+  <a
+    className="topbar-link-right"
+    href="#"
+    onClick={[Function]}
+  >
+    
+
+    <i
+      className="material-icons"
+    >
+      exit_to_app
+    </i>
+    
+
+    <span>
+      Log out
+    </span>
+    
+
+  </a>
+  
+
 </header>
+`;
+
+exports[`Component: Topbar -  renders topbar-link-container and a logout link 1`] = `
+<Topbar
+  logout={true}
+  topbarContent={
+    Object {
+      "btn": Object {
+        "icon": "menu",
+        "name": "Menu",
+      },
+      "items": Array [
+        Object {
+          "icon": "home",
+          "name": "Home",
+        },
+        Object {
+          "icon": "shopping_cart",
+          "name": "Purchase history",
+        },
+        Object {
+          "icon": "settings",
+          "name": "Settings",
+        },
+      ],
+    }
+  }
+>
+  <header
+    className="topbar"
+  >
+    
+
+    <TopbarBtn
+      icon="menu"
+      text="Menu"
+    >
+      <button
+        className="topbar-btn"
+        type="button"
+      >
+        
+		
+        <i
+          className="material-icons topbar-btn-icon"
+        >
+          menu
+        </i>
+        
+		
+      </button>
+    </TopbarBtn>
+    
+
+    
+
+    <a
+      className="topbar-logo"
+      href="#"
+      onClick={[Function]}
+    />
+    
+
+    <TopbarMenu
+      logout={true}
+      menu={
+        Object {
+          "btn": Object {
+            "icon": "menu",
+            "name": "Menu",
+          },
+          "items": Array [
+            Object {
+              "icon": "home",
+              "name": "Home",
+            },
+            Object {
+              "icon": "shopping_cart",
+              "name": "Purchase history",
+            },
+            Object {
+              "icon": "settings",
+              "name": "Settings",
+            },
+          ],
+        }
+      }
+    >
+      <nav
+        className="topbar-nav"
+      >
+        <div
+          className="topbar-link-container"
+        >
+          
+
+          <i
+            className="material-icons close-topbar-nav"
+          >
+            close
+          </i>
+          
+
+          <a
+            className="active"
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              className="material-icons"
+            >
+              home
+            </i>
+            
+
+            <span>
+              Home
+            </span>
+            
+
+          </a>
+          
+
+          <a
+            className={null}
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              className="material-icons"
+            >
+              shopping_cart
+            </i>
+            
+
+            <span>
+              Purchase history
+            </span>
+            
+
+          </a>
+          
+
+          <a
+            className={null}
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              className="material-icons"
+            >
+              settings
+            </i>
+            
+
+            <span>
+              Settings
+            </span>
+            
+
+          </a>
+          
+
+          <a
+            className="topbar-link-right"
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              className="material-icons"
+            >
+              exit_to_app
+            </i>
+            
+
+            <span>
+              Log out
+            </span>
+            
+
+          </a>
+          
+
+        </div>
+      </nav>
+    </TopbarMenu>
+  </header>
+</Topbar>
+`;
+
+exports[`Component: Topbar -  renders topbar-link-container and populates it with given information without a logout link 1`] = `
+<Topbar
+  topbarContent={
+    Object {
+      "btn": Object {
+        "icon": "menu",
+        "name": "Menu",
+      },
+      "items": Array [
+        Object {
+          "icon": "home",
+          "name": "Home",
+        },
+        Object {
+          "icon": "shopping_cart",
+          "name": "Purchase history",
+        },
+        Object {
+          "icon": "settings",
+          "name": "Settings",
+        },
+      ],
+    }
+  }
+>
+  <header
+    className="topbar"
+  >
+    
+
+    <TopbarBtn
+      icon="menu"
+      text="Menu"
+    >
+      <button
+        className="topbar-btn"
+        type="button"
+      >
+        
+		
+        <i
+          className="material-icons topbar-btn-icon"
+        >
+          menu
+        </i>
+        
+		
+      </button>
+    </TopbarBtn>
+    
+
+    
+
+    <a
+      className="topbar-logo"
+      href="#"
+      onClick={[Function]}
+    />
+    
+
+    <TopbarMenu
+      logout={false}
+      menu={
+        Object {
+          "btn": Object {
+            "icon": "menu",
+            "name": "Menu",
+          },
+          "items": Array [
+            Object {
+              "icon": "home",
+              "name": "Home",
+            },
+            Object {
+              "icon": "shopping_cart",
+              "name": "Purchase history",
+            },
+            Object {
+              "icon": "settings",
+              "name": "Settings",
+            },
+          ],
+        }
+      }
+    >
+      <nav
+        className="topbar-nav"
+      >
+        <div
+          className="topbar-link-container"
+        >
+          
+
+          <i
+            className="material-icons close-topbar-nav"
+          >
+            close
+          </i>
+          
+
+          <a
+            className="active"
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              className="material-icons"
+            >
+              home
+            </i>
+            
+
+            <span>
+              Home
+            </span>
+            
+
+          </a>
+          
+
+          <a
+            className={null}
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              className="material-icons"
+            >
+              shopping_cart
+            </i>
+            
+
+            <span>
+              Purchase history
+            </span>
+            
+
+          </a>
+          
+
+          <a
+            className={null}
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              className="material-icons"
+            >
+              settings
+            </i>
+            
+
+            <span>
+              Settings
+            </span>
+            
+
+          </a>
+          
+
+        </div>
+      </nav>
+    </TopbarMenu>
+  </header>
+</Topbar>
 `;

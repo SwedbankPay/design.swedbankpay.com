@@ -1,0 +1,93 @@
+.expandable {
+    // border: 0 solid @light-brown;
+    // border-width: 1px 1px 0 1px;
+    // box-shadow: 0 3px 1px -1px @light-brown;
+    border: 1px solid transparent;
+    border-bottom: 2px solid @light-brown;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+    background-color: @offwhite;
+    position: relative;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .expandable-header {
+        margin-left: 2.5rem;
+        padding: 1rem 1rem 1rem 0;
+        cursor: pointer;
+        user-select: none;
+
+        &:before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 0.5rem;
+            left: 0;
+            top: 0;
+            background-color: @brand-primary;
+        }
+
+        /* stylelint-disable selector-list-comma-newline-after */
+        > h1, > h2, > h3, > h4, > h5, > h6,
+        > .h1, > .h2, > .h3, > .h4, > .h5, > .h6 {
+            position: relative;
+            margin: 0;
+
+            &:before {
+                content: "";
+                position: absolute;
+                height: 10px;
+                width: 10px;
+                border-bottom: 2px solid @dark-brown;
+                border-right: 2px solid @dark-brown;
+                left: -1.2rem;
+                top: -2px;
+                bottom: 0;
+                margin: auto;
+                transform: rotate(45deg);
+            }
+        }
+        /* stylelint-enable selector-list-comma-newline-after */
+    }
+
+    .expandable-content {
+        max-height: 0;
+        padding: 0 1rem;
+        overflow: hidden;
+        transition: all 0.3s ease-out;
+
+        > :last-child {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &.expandable-open {
+        border: 1px solid @medium-brown;
+        box-shadow: none;
+
+        .expandable-header {
+            /* stylelint-disable selector-list-comma-newline-after */
+            > h1, > h2, > h3, > h4, > h5, > h6,
+            > .h1, > .h2, > .h3, > .h4, > .h5, > .h6 {
+                color: @medium-brown;
+
+                &:before {
+                    transform: rotate(-135deg);
+                    top: 2px;
+                }
+            }
+
+            &:before {
+                content: none;
+            }
+            /* stylelint-enable selector-list-comma-newline-after */
+        }
+
+        .expandable-content {
+            max-height: 100vh;
+            transition: all 0.8s;
+        }
+    }
+}

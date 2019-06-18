@@ -1,0 +1,893 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: ActionList .action-menu prevents default when an item is clicked 1`] = `
+<Fragment>
+  <div
+    className="action-list"
+  >
+    
+
+    <i
+      className="material-icons action-toggle"
+    >
+      more_vert
+    </i>
+    <div
+      className="action-menu"
+    >
+      
+
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`Component: ActionList prop types items prints an error if it does not contain objects 1`] = `
+<ActionList
+  items={
+    Array [
+      "Array",
+    ]
+  }
+>
+  <div
+    className="action-list"
+  >
+    
+
+    <i
+      className="material-icons action-toggle"
+    >
+      more_vert
+    </i>
+    <div
+      className="action-menu"
+    >
+      
+
+      <a
+        href="#"
+        onClick={[Function]}
+      />
+      
+
+    </div>
+  </div>
+</ActionList>
+`;
+
+exports[`Component: ActionList prop types items prints an error if it is not provided 1`] = `
+Array [
+  <ActionList>
+    <div
+      className="action-list"
+    >
+      
+
+      <i
+        className="material-icons action-toggle"
+      >
+        more_vert
+      </i>
+      <div
+        className="action-menu"
+      >
+        
+
+      </div>
+    </div>
+  </ActionList>,
+  <ActionList
+    items={
+      Array [
+        Object {
+          "icon": "bookmark",
+          "name": "Add bookmark",
+        },
+        Object {
+          "icon": "business_center",
+          "name": "Add client",
+        },
+        Object {
+          "icon": "add_circle",
+          "name": "Add document",
+        },
+        Object {
+          "icon": "person_add",
+          "name": "Add user",
+        },
+      ]
+    }
+  >
+    <div
+      className="action-list"
+    >
+      
+
+      <i
+        className="material-icons action-toggle"
+      >
+        more_vert
+      </i>
+      <div
+        className="action-menu"
+      >
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="bookmark"
+          >
+            <i
+              className="material-icons"
+            >
+              bookmark
+            </i>
+          </Icon>
+          Add bookmark
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="business_center"
+          >
+            <i
+              className="material-icons"
+            >
+              business_center
+            </i>
+          </Icon>
+          Add client
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="add_circle"
+          >
+            <i
+              className="material-icons"
+            >
+              add_circle
+            </i>
+          </Icon>
+          Add document
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="person_add"
+          >
+            <i
+              className="material-icons"
+            >
+              person_add
+            </i>
+          </Icon>
+          Add user
+        </a>
+        
+
+      </div>
+    </div>
+  </ActionList>,
+]
+`;
+
+exports[`Component: ActionList prop types prints a warning if prop classnames !== string 1`] = `
+Array [
+  <ActionList
+    classNames={2}
+    items={
+      Array [
+        Object {
+          "icon": "bookmark",
+          "name": "Add bookmark",
+        },
+        Object {
+          "icon": "business_center",
+          "name": "Add client",
+        },
+        Object {
+          "icon": "add_circle",
+          "name": "Add document",
+        },
+        Object {
+          "icon": "person_add",
+          "name": "Add user",
+        },
+      ]
+    }
+  >
+    <div
+      className="action-list 2"
+    >
+      
+
+      <i
+        className="material-icons action-toggle"
+      >
+        more_vert
+      </i>
+      <div
+        className="action-menu"
+      >
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="bookmark"
+          >
+            <i
+              className="material-icons"
+            >
+              bookmark
+            </i>
+          </Icon>
+          Add bookmark
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="business_center"
+          >
+            <i
+              className="material-icons"
+            >
+              business_center
+            </i>
+          </Icon>
+          Add client
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="add_circle"
+          >
+            <i
+              className="material-icons"
+            >
+              add_circle
+            </i>
+          </Icon>
+          Add document
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="person_add"
+          >
+            <i
+              className="material-icons"
+            >
+              person_add
+            </i>
+          </Icon>
+          Add user
+        </a>
+        
+
+      </div>
+    </div>
+  </ActionList>,
+  <ActionList
+    classNames="test-class"
+    items={
+      Array [
+        Object {
+          "icon": "bookmark",
+          "name": "Add bookmark",
+        },
+        Object {
+          "icon": "business_center",
+          "name": "Add client",
+        },
+        Object {
+          "icon": "add_circle",
+          "name": "Add document",
+        },
+        Object {
+          "icon": "person_add",
+          "name": "Add user",
+        },
+      ]
+    }
+  >
+    <div
+      className="action-list test-class"
+    >
+      
+
+      <i
+        className="material-icons action-toggle"
+      >
+        more_vert
+      </i>
+      <div
+        className="action-menu"
+      >
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="bookmark"
+          >
+            <i
+              className="material-icons"
+            >
+              bookmark
+            </i>
+          </Icon>
+          Add bookmark
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="business_center"
+          >
+            <i
+              className="material-icons"
+            >
+              business_center
+            </i>
+          </Icon>
+          Add client
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="add_circle"
+          >
+            <i
+              className="material-icons"
+            >
+              add_circle
+            </i>
+          </Icon>
+          Add document
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="person_add"
+          >
+            <i
+              className="material-icons"
+            >
+              person_add
+            </i>
+          </Icon>
+          Add user
+        </a>
+        
+
+      </div>
+    </div>
+  </ActionList>,
+]
+`;
+
+exports[`Component: ActionList prop types prints a warning if prop id !== string 1`] = `
+Array [
+  <ActionList
+    id={1}
+    items={
+      Array [
+        Object {
+          "icon": "bookmark",
+          "name": "Add bookmark",
+        },
+        Object {
+          "icon": "business_center",
+          "name": "Add client",
+        },
+        Object {
+          "icon": "add_circle",
+          "name": "Add document",
+        },
+        Object {
+          "icon": "person_add",
+          "name": "Add user",
+        },
+      ]
+    }
+  >
+    <div
+      className="action-list"
+      id={1}
+    >
+      
+
+      <i
+        className="material-icons action-toggle"
+      >
+        more_vert
+      </i>
+      <div
+        className="action-menu"
+      >
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="bookmark"
+          >
+            <i
+              className="material-icons"
+            >
+              bookmark
+            </i>
+          </Icon>
+          Add bookmark
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="business_center"
+          >
+            <i
+              className="material-icons"
+            >
+              business_center
+            </i>
+          </Icon>
+          Add client
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="add_circle"
+          >
+            <i
+              className="material-icons"
+            >
+              add_circle
+            </i>
+          </Icon>
+          Add document
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="person_add"
+          >
+            <i
+              className="material-icons"
+            >
+              person_add
+            </i>
+          </Icon>
+          Add user
+        </a>
+        
+
+      </div>
+    </div>
+  </ActionList>,
+  <ActionList
+    id="test-id"
+    items={
+      Array [
+        Object {
+          "icon": "bookmark",
+          "name": "Add bookmark",
+        },
+        Object {
+          "icon": "business_center",
+          "name": "Add client",
+        },
+        Object {
+          "icon": "add_circle",
+          "name": "Add document",
+        },
+        Object {
+          "icon": "person_add",
+          "name": "Add user",
+        },
+      ]
+    }
+  >
+    <div
+      className="action-list"
+      id="test-id"
+    >
+      
+
+      <i
+        className="material-icons action-toggle"
+      >
+        more_vert
+      </i>
+      <div
+        className="action-menu"
+      >
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="bookmark"
+          >
+            <i
+              className="material-icons"
+            >
+              bookmark
+            </i>
+          </Icon>
+          Add bookmark
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="business_center"
+          >
+            <i
+              className="material-icons"
+            >
+              business_center
+            </i>
+          </Icon>
+          Add client
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="add_circle"
+          >
+            <i
+              className="material-icons"
+            >
+              add_circle
+            </i>
+          </Icon>
+          Add document
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="person_add"
+          >
+            <i
+              className="material-icons"
+            >
+              person_add
+            </i>
+          </Icon>
+          Add user
+        </a>
+        
+
+      </div>
+    </div>
+  </ActionList>,
+]
+`;
+
+exports[`Component: ActionList prop types prints a warning if prop items !== array 1`] = `
+Array [
+  <ActionList
+    items="test"
+  >
+    <div
+      className="action-list"
+    >
+      
+
+      <i
+        className="material-icons action-toggle"
+      >
+        more_vert
+      </i>
+      <div
+        className="action-menu"
+      >
+        
+
+      </div>
+    </div>
+  </ActionList>,
+  <ActionList
+    items={
+      Array [
+        Object {
+          "icon": "bookmark",
+          "name": "Add bookmark",
+        },
+        Object {
+          "icon": "business_center",
+          "name": "Add client",
+        },
+        Object {
+          "icon": "add_circle",
+          "name": "Add document",
+        },
+        Object {
+          "icon": "person_add",
+          "name": "Add user",
+        },
+      ]
+    }
+  >
+    <div
+      className="action-list"
+    >
+      
+
+      <i
+        className="material-icons action-toggle"
+      >
+        more_vert
+      </i>
+      <div
+        className="action-menu"
+      >
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="bookmark"
+          >
+            <i
+              className="material-icons"
+            >
+              bookmark
+            </i>
+          </Icon>
+          Add bookmark
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="business_center"
+          >
+            <i
+              className="material-icons"
+            >
+              business_center
+            </i>
+          </Icon>
+          Add client
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="add_circle"
+          >
+            <i
+              className="material-icons"
+            >
+              add_circle
+            </i>
+          </Icon>
+          Add document
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <Icon
+            icon="person_add"
+          >
+            <i
+              className="material-icons"
+            >
+              person_add
+            </i>
+          </Icon>
+          Add user
+        </a>
+        
+
+      </div>
+    </div>
+  </ActionList>,
+]
+`;
+
+exports[`Component: ActionList renders with a custom .action-toggle if it is provided 1`] = `
+<ActionList
+  items={
+    Array [
+      Object {
+        "icon": "bookmark",
+        "name": "Add bookmark",
+      },
+      Object {
+        "icon": "business_center",
+        "name": "Add client",
+      },
+      Object {
+        "icon": "add_circle",
+        "name": "Add document",
+      },
+      Object {
+        "icon": "person_add",
+        "name": "Add user",
+      },
+    ]
+  }
+  toggleBtn={
+    <a
+      className="action-toggle"
+      href="#"
+    >
+      Custom action-toggle
+    </a>
+  }
+>
+  <div
+    className="action-list"
+  >
+    
+
+    <a
+      className="action-toggle"
+      href="#"
+    >
+      Custom action-toggle
+    </a>
+    
+
+    <div
+      className="action-menu"
+    >
+      
+
+      <a
+        href="#"
+        onClick={[Function]}
+      >
+        <Icon
+          icon="bookmark"
+        >
+          <i
+            className="material-icons"
+          >
+            bookmark
+          </i>
+        </Icon>
+        Add bookmark
+      </a>
+      
+
+      <a
+        href="#"
+        onClick={[Function]}
+      >
+        <Icon
+          icon="business_center"
+        >
+          <i
+            className="material-icons"
+          >
+            business_center
+          </i>
+        </Icon>
+        Add client
+      </a>
+      
+
+      <a
+        href="#"
+        onClick={[Function]}
+      >
+        <Icon
+          icon="add_circle"
+        >
+          <i
+            className="material-icons"
+          >
+            add_circle
+          </i>
+        </Icon>
+        Add document
+      </a>
+      
+
+      <a
+        href="#"
+        onClick={[Function]}
+      >
+        <Icon
+          icon="person_add"
+        >
+          <i
+            className="material-icons"
+          >
+            person_add
+          </i>
+        </Icon>
+        Add user
+      </a>
+      
+
+    </div>
+  </div>
+</ActionList>
+`;

@@ -13,7 +13,7 @@ exports[`Documentation: Dialog Example renders 1`] = `
     showCasePanel={true}
   >
     <button
-      className="btn btn-primary"
+      className="btn btn-executive"
       data-dialog-open="demo-dialog"
       type="button"
     >
@@ -59,7 +59,7 @@ exports[`Documentation: Dialog Example renders 1`] = `
           
 
           <button
-            className="btn btn-secondary"
+            className="btn btn-guiding"
             data-dialog-close="demo-dialog"
             type="button"
           >
@@ -68,7 +68,7 @@ exports[`Documentation: Dialog Example renders 1`] = `
           
 
           <button
-            className="btn btn-danger"
+            className="btn btn-destructive"
             type="button"
           >
             Delete

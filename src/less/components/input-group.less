@@ -29,6 +29,7 @@
         position: relative;
         flex: 1 1 auto;
         margin-bottom: 0;
+        color: @text-color;
 
         /* Add width 1% and flex-basis auto to ensure that button will not wrap out
          * the column. Applies to IE Edge+ and Firefox. Chrome does not require this. */
@@ -39,7 +40,7 @@
         }
 
         + .form-control {
-            margin-left: -@input-border-width;
+            margin-left: -1px;
         }
     }
 
@@ -55,14 +56,15 @@
         background-color: @input-addon-bg;
         text-align: center;
         white-space: nowrap;
-        border: @input-border-width solid @input-border-color;
+        border: solid @input-border-color;
+        border-width: @input-border-width;
 
         &:first-child {
-            margin-right: -@input-border-width;
+            margin-right: -1px;
         }
 
         &:last-child {
-            margin-left: -@input-border-width;
+            margin-left: -1px;
         }
 
         input[type="radio"],

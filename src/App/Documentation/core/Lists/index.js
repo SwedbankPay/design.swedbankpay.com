@@ -106,13 +106,119 @@ const ItemList = () => (
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="item-list">
                 <li>
-                    4925*********004
+                    <div>
+                        <h5>Foo</h5>
+                        <small>Due date 2 days</small>
+                    </div>
+                    <div>
+                        <span className="h5 text-highlight">2120 kr</span>
+                    </div>
                 </li>
                 <li>
-                    4925*********004
+                    <div>
+                        <h5>Bar</h5>
+                        <small>Due date 1 day</small>
+                    </div>
+                    <div>
+                        <span className="h5 text-highlight">1100 kr</span>
+                    </div>
                 </li>
                 <li>
-                    4925*********004
+                    <div>
+                        <h5>Baz</h5>
+                        <small>Due date 5 days</small>
+                    </div>
+                    <div>
+                        <span className="h5 text-highlight">200 kr</span>
+                    </div>
+                </li>
+            </ul>
+        </ComponentPreview>
+    </>
+);
+
+const ItemListLarge = () => (
+    <>
+        <h2 id="item-list-lg">Large item list </h2>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <ul className="item-list item-list-lg">
+                <li>
+                    <div>
+                        <h5>Foo</h5>
+                        <small>Due date 2 days</small>
+                    </div>
+                    <div>
+                        <span className="h5 text-highlight">2120 kr</span>
+                    </div>
+                    <footer><a href="#">Se faktura</a></footer>
+                </li>
+                <li>
+                    <div>
+                        <h5>Bar</h5>
+                        <small>Due date 1 day</small>
+                    </div>
+                    <div>
+                        <span className="h5 text-highlight">1100 kr</span>
+                    </div>
+                    <footer className="item-list-footer">
+                        <a href="#">Se faktura</a>
+                    </footer>
+                </li>
+                <li>
+                    <div>
+                        <h5>Baz</h5>
+                        <small>Due date 5 days</small>
+                    </div>
+                    <div>
+                        <span className="h5 text-highlight">200 kr</span>
+                    </div>
+                    <footer className="item-list-footer">
+                        <a href="#">Se faktura</a>
+                    </footer>
+                </li>
+            </ul>
+        </ComponentPreview>
+    </>
+);
+
+const ItemListBordered = () => (
+    <>
+        <h2 id="item-list-bordered">Bordered item list </h2>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <ul className="item-list item-list-bordered">
+                <li>
+                    <div>
+                        <h5>Foo</h5>
+                        <small>Due date 2 days</small>
+                    </div>
+                    <div>
+                        <span className="h5 text-highlight">2120 kr</span>
+                    </div>
+                    <footer><a href="#">Se faktura</a></footer>
+                </li>
+                <li>
+                    <div>
+                        <h5>Bar</h5>
+                        <small>Due date 1 day</small>
+                    </div>
+                    <div>
+                        <span className="h5 text-highlight">1100 kr</span>
+                    </div>
+                    <footer className="item-list-footer">
+                        <a href="#">Se faktura</a>
+                    </footer>
+                </li>
+                <li>
+                    <div>
+                        <h5>Baz</h5>
+                        <small>Due date 5 days</small>
+                    </div>
+                    <div>
+                        <span className="h5 text-highlight">200 kr</span>
+                    </div>
+                    <footer className="item-list-footer">
+                        <a href="#">Se faktura</a>
+                    </footer>
                 </li>
             </ul>
         </ComponentPreview>
@@ -200,6 +306,8 @@ class Lists extends Component {
                 <DescriptionList />
                 <SettingsList />
                 <ItemList />
+                <ItemListLarge />
+                <ItemListBordered />
                 <HoverItemList />
                 <StripedItemList />
             </DocContainer>
@@ -209,5 +317,4 @@ class Lists extends Component {
 
 export default Lists;
 
-/* For testing */
-export { BasicList, InlineList, DescriptionList, SettingsList, ItemList, HoverItemList, StripedItemList };
+export { BasicList, InlineList, DescriptionList, SettingsList, ItemList, ItemListBordered, ItemListLarge, HoverItemList, StripedItemList };

@@ -1,0 +1,18 @@
+// Background classes
+// each(@background-list, .(@color, @name) {
+//     .background-variant(~"bg-@{name}", @color);
+// });
+
+/* stylelint-disable declaration-no-important */
+
+// Background color classes
+each(@bg-color-list, .(@color, @name) {
+    .background-variant(~"bg-@{name}", @color);
+});
+
+// Text color classes
+each(@color-list, .(@color, @name) {
+    .color-variant(~"text-@{name}", @color);
+});
+
+.text-muted { color: @text-muted !important; }

@@ -19,7 +19,7 @@
     .doc-sidebar {
         height: auto;
         position: sticky;
-        top: 70px;
+        top: 0;
     }
 
     .sidebar-heading {
@@ -29,7 +29,7 @@
         height: 80px;
 
         h1 {
-            color: @text-light;
+            color: @text-color;
             margin: 0;
             font-weight: @font-weight-normal;
             line-height: 80px;
@@ -38,24 +38,21 @@
 
     .documentation-nav {
         padding: @base-padding;
-        max-height: calc(100vh - 220px);
+        max-height: calc(100vh - 237px);
         overflow-y: auto;
 
         .nav-group {
             margin-bottom: @base-margin;
 
             a {
-                .brand-link();
+                text-decoration: none;
 
                 &.active {
-                    outline: none;
-                    text-decoration: none;
                     font-weight: @font-weight-bold;
                 }
 
                 &:focus {
                     outline: none;
-                    color: @brand-primary;
                 }
             }
 
@@ -70,11 +67,11 @@
                 > span {
                     padding: 0;
                     cursor: pointer;
-                    color: @brand-primary;
+                    // color: @brand-primary;
 
                     &:hover,
                     &:focus {
-                        color: darken(@brand-primary, 10%);
+                        // color: darken(@brand-primary, 10%);
                         text-decoration: underline;
                     }
 
@@ -128,8 +125,8 @@
     .doc-view {
         padding-left: 0;
         padding-right: 0;
-        background: @background-white;
-        min-height: calc(~"100vh - 150px");
+        background: @bg-white;
+        min-height: calc(~"100vh - 166px");
         border-left: 1px solid rgba(0, 0, 0, 0.1);
     }
 
@@ -139,7 +136,7 @@
         border-left: 1px solid darken(@brand-primary, 5%);
 
         h2 {
-            color: @text-light;
+            color: @text-color;
             padding-left: @base-padding-xl;
             margin: 0;
             font-weight: @font-weight-normal;
@@ -173,13 +170,13 @@
             background-color: @white;
 
             .search-result a {
-                color: @brand-primary;
+                // color: @brand-primary;
                 border: 0;
                 display: block;
                 padding: 0.25rem 0.5rem;
 
                 &:hover {
-                    background-color: fade(@brand-primary, 10%);
+                    // background-color: fade(@brand-primary, 10%);
                 }
             }
         }
@@ -196,7 +193,7 @@
 
     .doc-toc {
         position: sticky;
-        top: 100px;
+        top: 32px;
         font-size: 0.8rem;
         line-height: 1.2;
 
@@ -209,13 +206,13 @@
                 padding: 0.5rem 0 0.5rem 1rem;
 
                 &.active {
-                    border-left: 2px solid rgba(45, 169, 68, 0.7);
+                    border-left: 2px solid @brand-primary;
                     font-weight: @font-weight-bold;
                     padding-left: calc(@base-padding - 1px);
                 }
 
                 a {
-                    .brand-link();
+                    text-decoration: none;
                 }
             }
         }
@@ -234,7 +231,7 @@
         padding: 0.1rem;
         border-radius: 0.3rem;
         white-space: normal;
-        background: @background-code;
+        background: @bg-apricot;
     }
 
     .icon-preview {

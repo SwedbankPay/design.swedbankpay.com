@@ -1,13 +1,15 @@
-![PayEx logo](./src/img/px-logo.svg)
+<p align="center">
+    <img src="./src/img/logo/spay_vertical_pos.svg" width=300 />
+</p>
 
-# PayEx DesignGuide
+# Swedbank Pay DesignGuide
 
-[![Version](https://img.shields.io/badge/Version-2.2.0-blue.svg)](https://github.com/PayEx/design.payex.com/releases/tag/2.2.0)
-[![Build status](https://ci.appveyor.com/api/projects/status/1dii19sqw1m7xtsn/branch/master?svg=true)](https://ci.appveyor.com/project/PayEx/design-payex-com/branch/master)
-[![Code Coverage](https://codecov.io/gh/payex/design.payex.com/branch/master/graph/badge.svg)](https://codecov.io/gh/payex/design.payex.com)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=PayEx/design.payex.com)](https://dependabot.com)
-[![dependencies Status](https://david-dm.org/payex/design.payex.com/status.svg)](https://david-dm.org/payex/design.payex.com)
-[![devDependencies Status](https://david-dm.org/payex/design.payex.com/dev-status.svg)](https://david-dm.org/payex/design.payex.com?type=dev)
+[![Version](https://img.shields.io/badge/Version-3.0.0-blue.svg)](https://github.com/swedbankpay/design.swedbankpay.com/releases/tag/3.0.0)
+[![Build status](https://ci.appveyor.com/api/projects/status/1dii19sqw1m7xtsn/branch/master?svg=true)](https://ci.appveyor.com/project/PayEx/design-swedbankpay-com/branch/master)
+[![Code Coverage](https://codecov.io/gh/payex/design.payex.com/branch/master/graph/badge.svg)](https://codecov.io/gh/swedbankpay/design.swedbankpay.com)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=swedbankpay/design.swedbankpay.com)](https://dependabot.com)
+<!-- [![dependencies Status](https://david-dm.org/payex/design.payex.com/status.svg)](https://david-dm.org/payex/design.payex.com)
+[![devDependencies Status](https://david-dm.org/payex/design.payex.com/dev-status.svg)](https://david-dm.org/payex/design.payex.com?type=dev) -->
 
 ## Installing / Getting started
 
@@ -79,7 +81,7 @@ __*Make sure to follow the syntax rules enforced by eslint & stylelint.*__
 
 ## Contributing
 
-- Bug reports: File bugs as Github [issues](https://github.com/PayEx/design.payex.com/issues).
+- Bug reports: File bugs as Github [issues](https://github.com/swedbankpay/design.swedbankpay.com/issues).
 - Feature suggestions: File as Github issue or discuss the feature on Slack ([#design-guide-general](https://payex.slack.com/messages/C0L3W8B2S/)).
 - Code contribtions: Code contribtions are highly encouraged, but discuss the feature/bugfix in an issue or on Slack before you start coding.
 
@@ -97,7 +99,7 @@ Before merging to master to create a release make sure you follow these steps:
 8. Create a tag with the new commit.
 9. Push the tagged commit to `master`.
 
-AppVeyor will now create and deploy a release on both github and [design.payex.com](https://design.payex.com).
+AppVeyor will now create and deploy a release on both github and [design.swedbankpay.com](https://design.swedbankpay.com).
 
 After pushing to master, complete the following steps:
 
@@ -134,6 +136,6 @@ After pushing to master, complete the following steps:
 
 ## Copyright, license and credits
 
-Code and documentation © PayEx and contributors, released under the [MIT License](LICENSE).
+Code and documentation © Swedbank Pay and contributors, released under the [MIT License](LICENSE).
 
 Inspired by [Bootstrap](http://getbootstrap.com/) and [Materialize](https://materializecss.com/).

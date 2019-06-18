@@ -139,26 +139,10 @@ const Blockquotes = () => {
         </>
     );
 
-    const BlockquotesAlignmentText = () => (
-        <>
-            <h3>Alignment</h3>
-            <p>Use <Link to="/docs/utilities/text">text utilities</Link> <b>(NOT YET IMPLEMENTED)</b> as needed to change the alignment of your blockquote.</p>
-            <ComponentPreview language="html" showCasePanel codeFigure>
-                <blockquote className="blockquote text-center">
-                    <p>
-                        It’s the ship that made the Kessel run in less than twelve parsecs. I’ve outrun Imperial starships. Not the local bulk cruisers, mind you. I’m talking about the big Corellian ships, now. She’s fast enough for you, old man.
-                    </p>
-                    <footer><cite title="Star Wars: Episode IV - A New Hope (1977)">Han Solo</cite></footer>
-                </blockquote>
-            </ComponentPreview>
-        </>
-    );
-
     return (
         <>
             <BlockquotesText />
             <BlockquoteWithSourceText />
-            <BlockquotesAlignmentText />
         </>
     );
 };

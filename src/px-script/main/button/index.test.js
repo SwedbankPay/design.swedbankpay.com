@@ -24,8 +24,8 @@ describe("px-script: button", () => {
         it("it adds loader markup to buttons with attribute [data-button-loader]", () => {
             const Buttons = () => (
                 <div>
-                    <Button type="primary" label="test" loader />
-                    <Button type="primary" label="test" loader />
+                    <Button type="executive" label="test" loader />
+                    <Button type="executive" label="test" loader />
                 </div>
             );
 
@@ -48,7 +48,7 @@ describe("px-script: button", () => {
         });
 
         it("returns a single object when one element is initialized", () => {
-            ReactDOM.render(<Button type="primary" id="demo-button" />, div);
+            ReactDOM.render(<Button type="executive" id="demo-button" />, div);
 
             const renderedButton = document.querySelector(".btn");
 
@@ -63,8 +63,8 @@ describe("px-script: button", () => {
         it("returns an array of objects if several loader buttons exist", () => {
             ReactDOM.render(
                 <>
-                    <Button type="primary" label="test" id="test-1" loader />
-                    <Button type="primary" label="test" id="test-2" loader />
+                    <Button type="executive" label="test" id="test-1" loader />
+                    <Button type="executive" label="test" id="test-2" loader />
                 </>
                 , div);
 

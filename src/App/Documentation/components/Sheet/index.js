@@ -48,10 +48,10 @@ const Example = () => (
                             <label htmlFor="subscribe-checkbox">Sign up to our math newsletter</label>
                         </div>
                     </div>
-                    <button className="btn btn-primary" type="submit" onClick={e => e.preventDefault()}>Submit</button>
+                    <button className="btn btn-executive" type="submit" onClick={e => e.preventDefault()}>Submit</button>
                 </form>
             </SheetComponent>{"\n"}
-            <button className="btn btn-primary" type="button" data-sheet-open="demo-sheet">Open sheet</button>
+            <button className="btn btn-executive" type="button" data-sheet-open="demo-sheet">Open sheet</button>
         </ComponentPreview>
     </>
 );
@@ -69,7 +69,7 @@ const RequireAction = () => (
                     This sheet can not be closed by clicking outside its white area.
                 </p>
             </SheetComponent>{"\n"}
-            <button className="btn btn-primary" type="button" data-sheet-open="demo-sheet-1">Open sheet</button>
+            <button className="btn btn-executive" type="button" data-sheet-open="demo-sheet-1">Open sheet</button>
         </ComponentPreview>
     </>
 );

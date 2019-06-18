@@ -24,7 +24,7 @@ exports[`Components: Toast CustomHtml calls toast on click 1`] = `
     showCasePanel={true}
   >
     <button
-      className="btn btn-primary"
+      className="btn btn-executive"
       onClick={[Function]}
       type="button"
     >
@@ -58,7 +58,7 @@ exports[`Components: Toast CustomHtml renders 1`] = `
     showCasePanel={true}
   >
     <button
-      className="btn btn-primary"
+      className="btn btn-executive"
       onClick={[Function]}
       type="button"
     >
@@ -255,14 +255,14 @@ exports[`Components: Toast Overview calls toast on click 1`] = `
     dangerousHTML={true}
     language="html"
   >
-    &lt;button onclick="px.toast({ html: 'I am a toast!' })" class="btn btn-primary"&gt;Toast!&lt;/button&gt;
+    &lt;button onclick="px.toast({ html: 'I am a toast!' })" class="btn btn-executive"&gt;Toast!&lt;/button&gt;
   </ComponentPreview>
   <ComponentPreview
     language="html"
     showCasePanel={true}
   >
     <button
-      className="btn btn-primary"
+      className="btn btn-executive"
       onClick={[Function]}
       type="button"
     >
@@ -315,14 +315,14 @@ exports[`Components: Toast Overview renders 1`] = `
     dangerousHTML={true}
     language="html"
   >
-    &lt;button onclick="px.toast({ html: 'I am a toast!' })" class="btn btn-primary"&gt;Toast!&lt;/button&gt;
+    &lt;button onclick="px.toast({ html: 'I am a toast!' })" class="btn btn-executive"&gt;Toast!&lt;/button&gt;
   </ComponentPreview>
   <ComponentPreview
     language="html"
     showCasePanel={true}
   >
     <button
-      className="btn btn-primary"
+      className="btn btn-executive"
       onClick={[Function]}
       type="button"
     >
@@ -385,17 +385,17 @@ exports[`Components: Toast PremadeToasts calls toast on click 1`] = `
     dangerousHTML={true}
     language="html"
   >
-    &lt;button type="button" onclick="px.toast({ html: 'I am a neutral toast!', type: 'neutral' })" class="btn btn-primary"&gt;Neutral toast&lt;/button&gt;
-    &lt;button type="button" onclick="px.toast({ html: 'I am a success toast!', type: 'success' })" class="btn btn-primary"&gt;Success toast&lt;/button&gt;
-    &lt;button type="button" onclick="px.toast({ html: 'I am a warning toast!', type: 'warning' })" class="btn btn-primary"&gt;Warning toast&lt;/button&gt;
-    &lt;button type="button" onclick="px.toast({ html: 'I am a danger toast!', type: 'danger' })" class="btn btn-primary"&gt;Danger toast&lt;/button&gt;
+    &lt;button type="button" onclick="px.toast({ html: 'I am a neutral toast!', type: 'neutral' })" class="btn btn-executive"&gt;Neutral toast&lt;/button&gt;
+    &lt;button type="button" onclick="px.toast({ html: 'I am a success toast!', type: 'success' })" class="btn btn-executive"&gt;Success toast&lt;/button&gt;
+    &lt;button type="button" onclick="px.toast({ html: 'I am a warning toast!', type: 'warning' })" class="btn btn-executive"&gt;Warning toast&lt;/button&gt;
+    &lt;button type="button" onclick="px.toast({ html: 'I am a danger toast!', type: 'danger' })" class="btn btn-executive"&gt;Danger toast&lt;/button&gt;
   </ComponentPreview>
   <ComponentPreview
     language="html"
     showCasePanel={true}
   >
     <button
-      className="btn btn-primary"
+      className="btn btn-executive"
       onClick={[Function]}
       type="button"
     >
@@ -404,7 +404,7 @@ exports[`Components: Toast PremadeToasts calls toast on click 1`] = `
     
 
     <button
-      className="btn btn-primary"
+      className="btn btn-executive"
       onClick={[Function]}
       type="button"
     >
@@ -413,7 +413,7 @@ exports[`Components: Toast PremadeToasts calls toast on click 1`] = `
     
 
     <button
-      className="btn btn-primary"
+      className="btn btn-executive"
       onClick={[Function]}
       type="button"
     >
@@ -422,7 +422,7 @@ exports[`Components: Toast PremadeToasts calls toast on click 1`] = `
     
 
     <button
-      className="btn btn-primary"
+      className="btn btn-executive"
       onClick={[Function]}
       type="button"
     >
@@ -463,17 +463,17 @@ exports[`Components: Toast PremadeToasts renders 1`] = `
     dangerousHTML={true}
     language="html"
   >
-    &lt;button type="button" onclick="px.toast({ html: 'I am a neutral toast!', type: 'neutral' })" class="btn btn-primary"&gt;Neutral toast&lt;/button&gt;
-    &lt;button type="button" onclick="px.toast({ html: 'I am a success toast!', type: 'success' })" class="btn btn-primary"&gt;Success toast&lt;/button&gt;
-    &lt;button type="button" onclick="px.toast({ html: 'I am a warning toast!', type: 'warning' })" class="btn btn-primary"&gt;Warning toast&lt;/button&gt;
-    &lt;button type="button" onclick="px.toast({ html: 'I am a danger toast!', type: 'danger' })" class="btn btn-primary"&gt;Danger toast&lt;/button&gt;
+    &lt;button type="button" onclick="px.toast({ html: 'I am a neutral toast!', type: 'neutral' })" class="btn btn-executive"&gt;Neutral toast&lt;/button&gt;
+    &lt;button type="button" onclick="px.toast({ html: 'I am a success toast!', type: 'success' })" class="btn btn-executive"&gt;Success toast&lt;/button&gt;
+    &lt;button type="button" onclick="px.toast({ html: 'I am a warning toast!', type: 'warning' })" class="btn btn-executive"&gt;Warning toast&lt;/button&gt;
+    &lt;button type="button" onclick="px.toast({ html: 'I am a danger toast!', type: 'danger' })" class="btn btn-executive"&gt;Danger toast&lt;/button&gt;
   </ComponentPreview>
   <ComponentPreview
     language="html"
     showCasePanel={true}
   >
     <button
-      className="btn btn-primary"
+      className="btn btn-executive"
       onClick={[Function]}
       type="button"
     >
@@ -482,7 +482,7 @@ exports[`Components: Toast PremadeToasts renders 1`] = `
     
 
     <button
-      className="btn btn-primary"
+      className="btn btn-executive"
       onClick={[Function]}
       type="button"
     >
@@ -491,7 +491,7 @@ exports[`Components: Toast PremadeToasts renders 1`] = `
     
 
     <button
-      className="btn btn-primary"
+      className="btn btn-executive"
       onClick={[Function]}
       type="button"
     >
@@ -500,7 +500,7 @@ exports[`Components: Toast PremadeToasts renders 1`] = `
     
 
     <button
-      className="btn btn-primary"
+      className="btn btn-executive"
       onClick={[Function]}
       type="button"
     >

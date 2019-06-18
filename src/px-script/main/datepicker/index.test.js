@@ -5,6 +5,12 @@ import datepicker from "./index";
 import Datepicker from "@/FormComponents/Datepicker";
 import formats from "./formats";
 
+// TODO: rewrite tests to mock flatpickr [AW]
+
+/*
+    NB: datepicker.init() resets the _datepickers array and destroys flatpickr instances only when at least one valid datepicker is found [AW]
+*/
+
 describe("px-script: datepicker", () => {
     const div = document.createElement("div");
 
@@ -63,6 +69,47 @@ describe("px-script: datepicker", () => {
 
             expect(datepicker.init("test")).toBeNull();
             expect(console.warn).toHaveBeenCalled();
+        });
+
+        it("destroys existing flatpickr instances on init()", () => {
+            ReactDOM.render(<Datepicker />, div);
+
+            datepicker.init();
+
+            expect(document.querySelectorAll(".flatpickr-calendar").length).toEqual(1);
+
+            datepicker.init();
+
+            expect(document.querySelectorAll(".flatpickr-calendar").length).toEqual(1);
+        });
+
+        it("destroys existing flatpickr instances on init(ID) if the given ID is already initialized", () => {
+            ReactDOM.render(
+                <>
+                    <Datepicker id="test-1" />
+                    <Datepicker id="test-2" />
+                </>, div
+            );
+
+            datepicker.init();
+
+            expect(document.querySelectorAll(".flatpickr-calendar").length).toEqual(2);
+
+            datepicker.init("test-2");
+
+            expect(document.querySelectorAll(".flatpickr-calendar").length).toEqual(2);
+        });
+
+        it("doesn't destroy existing flatpickr instances on init(ID) if the given ID is invalid", () => {
+            ReactDOM.render(<Datepicker id="test-1" />, div);
+
+            datepicker.init();
+
+            expect(document.querySelectorAll(".flatpickr-calendar").length).toEqual(1);
+
+            datepicker.init("invalid-id");
+
+            expect(document.querySelectorAll(".flatpickr-calendar").length).toEqual(1);
         });
     });
 

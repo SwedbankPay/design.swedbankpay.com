@@ -88,43 +88,6 @@ const PanelHeaders = () => (
     </>
 );
 
-const PanelDark = () => (
-    <>
-        <h2 id="panel-dark-mode">Panel dark mode</h2>
-        <p>Dark body with <Property value=".panel-dark" />...</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <PanelComponent
-                type="brand"
-                title="Panel title"
-                subTitle="Panel subtitle"
-                bodyContent={bodyContent}
-                footerText="Footer content goes here."
-                footerBtnText="Footer button"
-                darkMode
-            />
-        </ComponentPreview>
-    </>
-);
-
-const PanelMuted = () => (
-    <>
-        <h2 id="muted-panel">Muted panel</h2>
-        <p>
-            If you wish to use a completely gray panel you can add <Property value=".panel-muted" /> to the panel <PrismCode className="language-html">{"<section>"}</PrismCode>.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <PanelComponent
-                type="muted"
-                title="Panel title"
-                subTitle="Panel subtitle"
-                bodyContent={bodyContent}
-                footerText="Footer content goes here."
-                footerBtnText="Footer button"
-            />
-        </ComponentPreview>
-    </>
-);
-
 const PanelTable = () => (
     <>
         <h2 id="panel-with-table">Displaying a full width table</h2>
@@ -154,8 +117,6 @@ const Panel = () => (
         </p>
         <Overview />
         <PanelHeaders />
-        <PanelDark />
-        <PanelMuted />
         <PanelTable />
     </DocContainer>
 );
@@ -163,4 +124,4 @@ const Panel = () => (
 export default Panel;
 
 /* For testing */
-export { Overview, PanelHeaders, PanelDark, PanelMuted, PanelTable, TableContent };
+export { Overview, PanelHeaders, PanelTable, TableContent };

@@ -8,9 +8,9 @@ describe("px-script: action-list", () => {
 
     document.body.appendChild(div);
 
-    const ActionList = ({ active, id }) => (
+    const ActionList = ({ active, id, noToggle }) => (
         <div className={`action-list${active ? " active" : ""}`} id={id}>
-            <i className="material-icons">more_vert</i>
+            {noToggle ? null : <i className="material-icons action-toggle">more_vert</i>}
             <div className="action-menu">
                 <a href="#"><i className="material-icons">bookmark</i>Add bookmark</a>
                 <a href="#"><i className="material-icons">business_center</i>Add client</a>
@@ -75,6 +75,17 @@ describe("px-script: action-list", () => {
             expect(actionList.init("test")).toBeNull();
             expect(console.warn).toHaveBeenCalled();
         });
+    });
+
+    it("throws an error if no .toggle-btn is found", () => {
+        console.warn = jest.fn();
+
+        ReactDOM.render(<ActionList noToggle />, div);
+
+        actionList.init();
+
+        expect(console.warn).toHaveBeenCalled();
+        expect(console.warn).toHaveBeenCalledWith("No toggle element exist, add an element with the class .action-toggle");
     });
 
     it("opens when clicking the icon", () => {

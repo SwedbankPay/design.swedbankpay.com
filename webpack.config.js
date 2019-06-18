@@ -31,7 +31,7 @@ module.exports = (env, argv) => {
             extensions: [".js", ".jsx", ".json"]
         },
         output: {
-            library: "payex",
+            library: "swedbankpay",
             path: path.resolve(__dirname, `dist${basename}`),
             filename: "scripts/[name].js?[hash]",
             chunkFilename: "scripts/[name].js?[hash]",
@@ -73,16 +73,12 @@ module.exports = (env, argv) => {
                             loader: isProd ? MiniCssExtractPlugin.loader : "style-loader"
                         },
                         {
-                            loader: "css-loader",
-                            options: {
-                                // modules: "global"
-                            }
+                            loader: "css-loader"
                         },
                         {
                             loader: "postcss-loader",
                             options: {
                                 plugins: () => autoprefixer({
-                                    browsers: ["last 3 versions", "> 1%", "ie >= 11"],
                                     grid: true
                                 })
                             }
@@ -105,9 +101,19 @@ module.exports = (env, argv) => {
                         {
                             loader: "postcss-loader",
                             options: {
-                                plugins: () => autoprefixer({
-                                    browsers: ["last 3 versions", "> 1%"]
-                                })
+                                plugins: () => autoprefixer()
+                            }
+                        }
+                    ]
+                },
+                {
+                    test: /\.(woff(2)?|ttf|eot)$/,
+                    use: [
+                        {
+                            loader: "file-loader",
+                            options: {
+                                outputPath: "fonts/",
+                                name: "[name].[ext]"
                             }
                         }
                     ]
@@ -213,7 +219,7 @@ module.exports = (env, argv) => {
             new HtmlWebpackPlugin({
                 template: "./src/index.html",
                 hash: true,
-                title: "PayEx DesignGuide",
+                title: "Swedbank Pay DesignGuide",
                 meta: {
                     "informational-version": infoVersion
                 }
@@ -247,7 +253,7 @@ module.exports = (env, argv) => {
                 filename: `${rootPath}index.html`,
                 template: "./build/rootindex.html",
                 hash: true,
-                title: "PayEx DesignGuide",
+                title: "Swedbank Pay DesignGuide",
                 chunks: ["px"],
                 basename
             }),
@@ -256,7 +262,7 @@ module.exports = (env, argv) => {
                 template: "./build/root404.html",
                 hash: true,
                 chunks: ["px"],
-                title: "PayEx DesignGuide",
+                title: "Swedbank Pay DesignGuide",
                 basename
             }),
             new SentryCliPlugin({
@@ -278,7 +284,7 @@ module.exports = (env, argv) => {
         if (isRelease) {
             onEndArchive.push({
                 source: "./dist/temp/release",
-                destination: `./dist${basename}release/PayEx.DesignGuide.v${version}.zip`
+                destination: `./dist${basename}release/Swedbankpay.DesignGuide.v${version}.zip`
             });
         }
 
@@ -287,8 +293,8 @@ module.exports = (env, argv) => {
                 logo: "./src/img/favicon.png",
                 output: "/icons/",
                 config: {
-                    appName: "PayEx DesignGuide",
-                    developerName: "PayEx",
+                    appName: "Swedbank Pay DesignGuide",
+                    developerName: "Swedbank Pay",
                     developerURL: "https://payex.com",
                     background: "#000",
                     theme_color: "#2da944",
