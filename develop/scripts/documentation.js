@@ -1,2 +1,2 @@
-(window.webpackJsonppayex=window.webpackJsonppayex||[]).push([[60],{352:function(p,n,w){}}]);
-//# sourceMappingURL=documentation.js.map?076d5328cba93fae0085
+(window.webpackJsonpswedbankpay=window.webpackJsonpswedbankpay||[]).push([[61],{353:function(n,w,p){}}]);
+//# sourceMappingURL=documentation.js.map?f2550b52f5c2d38c793b
