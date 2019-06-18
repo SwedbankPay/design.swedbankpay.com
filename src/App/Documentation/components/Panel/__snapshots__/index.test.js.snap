@@ -69,50 +69,6 @@ exports[`Documentation: Panel PanelHeaders renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Panel PanelMuted renders 1`] = `
-<Fragment>
-  <h2
-    id="muted-panel"
-  >
-    Muted panel
-  </h2>
-  <p>
-    If you wish to use a completely gray panel you can add 
-    <Property
-      value=".panel-muted"
-    />
-     to the panel 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;section&gt;
-    </PrismCode>
-    .
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Panel
-      bodyContent={
-        Array [
-          "Your main panel content is put here.",
-          "Some more content over here.",
-          "And one more line, just to be safe.",
-        ]
-      }
-      footerBtnText="Footer button"
-      footerText="Footer content goes here."
-      subTitle="Panel subtitle"
-      title="Panel title"
-      type="muted"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
 exports[`Documentation: Panel PanelTable renders 1`] = `
 <Fragment>
   <h2
@@ -283,7 +239,6 @@ exports[`Documentation: Panel renders 1`] = `
   </p>
   <Overview />
   <PanelHeaders />
-  <PanelMuted />
   <PanelTable />
 </DocContainer>
 `;
