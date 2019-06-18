@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.X.X] - 2019-X-X
+## [3.0.0] - 2019-06-18
 
 ### Added
 
@@ -8,10 +8,9 @@
 
 ### Changed
 
+- Change from PayEx to Swedbank Pay
 - Changed label, help-block, legend and placeholder appearance to improve readability.
 
 ### Fixed
 
 - datepicker.init() now deletes existing flatpickr instances when init is called more than once.
-
-### Removed
