@@ -16,8 +16,6 @@ git checkout -f gh-pages
 if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode) }
 xcopy dist\* . /sy
 if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode) }
-git pull
-if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode) }
 git add .
 if ($LastExitCode -ne 0) { $host.SetShouldExit($LastExitCode) }
 git commit -m "GitHub release $Env:GitVersion_FullSemVer"
