@@ -6,10 +6,10 @@
 
 [![Version](https://img.shields.io/badge/Version-3.0.0-blue.svg)](https://github.com/swedbankpay/design.swedbankpay.com/releases/tag/3.0.0)
 [![Build status](https://ci.appveyor.com/api/projects/status/1dii19sqw1m7xtsn/branch/master?svg=true)](https://ci.appveyor.com/project/PayEx/design-swedbankpay-com/branch/master)
-[![codecov](https://codecov.io/gh/swedbankpay/design.swedbankpay.com/branch/master/graph/badge.svg)](https://codecov.io/gh/swedbankpay/design.swedbankpay.com)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=swedbankpay/design.swedbankpay.com)](https://dependabot.com)
-<!-- [![dependencies Status](https://david-dm.org/payex/design.payex.com/status.svg)](https://david-dm.org/payex/design.payex.com)
-[![devDependencies Status](https://david-dm.org/payex/design.payex.com/dev-status.svg)](https://david-dm.org/payex/design.payex.com?type=dev) -->
+[![codecov](https://codecov.io/gh/swedbankpay/design.swedbankpay.com/branch/develop/graph/badge.svg)](https://codecov.io/gh/swedbankpay/design.swedbankpay.com)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=SwedbankPay/design.swedbankpay.com)](https://dependabot.com)
+[![dependencies Status](https://david-dm.org/swedbankpay/design.swedbankpay.com/status.svg)](https://david-dm.org/swedbankpay/design.swedbankpay.com)
+[![devDependencies Status](https://david-dm.org/swedbankpay/design.swedbankpay.com/dev-status.svg)](https://david-dm.org/swedbankpay/design.swedbankpay.com?type=dev)
 
 ## Installing / Getting started
 
