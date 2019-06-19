@@ -16,9 +16,6 @@ environment:
     secure: IGs25EMrhe0au+uVDbOck6akDzC9ykvJeR0zJjhrT6idNuYOr/JpyGdefQxSlWXk
   github_email:
     secure: U3oByHGtWDiIy9psThpxwg==
-  # Codecov
-  codecov_token:
-    secure: aSdbrWvXrfwEJ9+bz03FYLUSD7m55aqN0npBW+FKhC9UegsoI73jPMzlNFicBkmS
   # Sentry
   sentry_token:
     secure: lgElsFCXpkvd6ZT3Zti2taxQfajuDzBFA3f4Jae4u3Y/HM4DXhumTtAv5lqgKv2du9Emg+o4ZEtuqoVWJpJJYcGx2zOoYn/Y1PXuFXhs+8U=
