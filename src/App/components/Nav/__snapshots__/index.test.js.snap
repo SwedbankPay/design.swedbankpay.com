@@ -758,9 +758,12 @@ exports[`Component: Nav -  renders with an active sublistItem if state active ma
         </i>
         
 
-        <span>
+        <a
+          href="#"
+          onClick={[Function]}
+        >
           Transactions
-        </span>
+        </a>
         <ul>
           <li
             className="active"
@@ -862,9 +865,12 @@ exports[`Component: Nav -  renders with an active sublistItem if state active ma
         </i>
         
 
-        <span>
+        <a
+          href="#"
+          onClick={[Function]}
+        >
           Account
-        </span>
+        </a>
         <ul>
           <li
             className={null}
@@ -958,9 +964,12 @@ exports[`Component: Nav -  renders with two levels 1`] = `
         </i>
         
 
-        <span>
+        <a
+          href="#"
+          onClick={[Function]}
+        >
           Transactions
-        </span>
+        </a>
         <ul>
           <li
             className={null}
@@ -1062,9 +1071,12 @@ exports[`Component: Nav -  renders with two levels 1`] = `
         </i>
         
 
-        <span>
+        <a
+          href="#"
+          onClick={[Function]}
+        >
           Account
-        </span>
+        </a>
         <ul>
           <li
             className={null}

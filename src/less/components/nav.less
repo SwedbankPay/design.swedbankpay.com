@@ -49,12 +49,6 @@
                 color: dark-brown;
             }
 
-            .submenu {
-                &:hover {
-                    cursor: default;
-                }
-            }
-
             &:last-child {
                 margin-right: 0;
 
@@ -144,7 +138,8 @@
             }
 
             .submenu {
-                .material-icons {
+                .material-icons,
+                > a {
                     display: none;
 
                     &.submenu-icon-clickable {
@@ -307,6 +302,14 @@
 
             div {
                 &.submenu {
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    > a {
+                        color: @dark-brown;
+                    }
+
                     .submenu-icon-clickable {
                         display: none;
                     }
