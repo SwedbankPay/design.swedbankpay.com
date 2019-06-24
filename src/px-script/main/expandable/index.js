@@ -55,8 +55,9 @@ const init = id => {
 
         return element.closest(".accordion") ? new Accordion(element) : new Expandable(element);
     } else {
-        let accordions = document.querySelectorAll(".accordion");
-        let expandables = [...document.querySelectorAll(".expandable")].filter(exp => !exp.closest(".accordion"));
+        const accordions = document.querySelectorAll(".accordion");
+        const expandables = [...document.querySelectorAll(".expandable")].filter(exp => !exp.closest(".accordion"));
+        const returnVal = [];
 
         if (!accordions.length && !expandables.length) {
             console.warn("No accordions or expandables found");
@@ -64,12 +65,10 @@ const init = id => {
             return null;
         }
 
-        console.log(accordions);
+        accordions.length ? [...accordions].forEach(acc => returnVal.push(new Accordion(acc))) : null;
+        expandables.length ? [...expandables].forEach(exp => returnVal.push(new Expandable(exp))) : null;
 
-        accordions = accordions.length ? [...accordions].map(acc => new Accordion(acc)) : null;
-        expandables = expandables.length ? [...expandables].map(exp => new Expandable(exp)) : null;
-
-        return [...accordions, ...expandables];
+        return returnVal;
     }
 };
 
