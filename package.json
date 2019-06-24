@@ -94,7 +94,7 @@
         "testcafe": "^1.2.1",
         "webpack": "^4.35.0",
         "webpack-bundle-analyzer": "^3.3.2",
-        "webpack-cli": "^3.3.4",
+        "webpack-cli": "^3.3.5",
         "webpack-dev-server": "^3.7.2"
     }
 }
