@@ -43,16 +43,36 @@ class Expandable {
     }
 }
 
-const expandable = (() => {
-    const init = () => {
-        const accordions = document.querySelectorAll(".accordion");
-        const expandables = [...document.querySelectorAll(".expandable")].filter(exp => !exp.closest(".accordion"));
+const init = id => {
+    if (id) {
+        const element = document.getElementById(id);
 
-        accordions.length ? accordions.forEach(acc => new Accordion(acc)) : null;
-        expandables.length ? expandables.forEach(exp => new Expandable(exp)) : null;
-    };
+        if (!element) {
+            console.warn(`No accordion or expandable with id ${id} found`);
 
-    return { init };
-})();
+            return null;
+        }
 
-export default expandable;
+        return element.closest(".accordion") ? new Accordion(element) : new Expandable(element);
+    } else {
+        let accordions = document.querySelectorAll(".accordion");
+        let expandables = [...document.querySelectorAll(".expandable")].filter(exp => !exp.closest(".accordion"));
+
+        if (!accordions.length && !expandables.length) {
+            console.warn("No accordions or expandables found");
+
+            return null;
+        }
+
+        console.log(accordions);
+
+        accordions = accordions.length ? [...accordions].map(acc => new Accordion(acc)) : null;
+        expandables = expandables.length ? [...expandables].map(exp => new Expandable(exp)) : null;
+
+        return [...accordions, ...expandables];
+    }
+};
+
+export default {
+    init
+};
