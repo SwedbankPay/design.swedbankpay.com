@@ -56,7 +56,7 @@ export default class NavMenu {
         this.navMenuElement.classList.add("d-block");
         setTimeout(() => {
             this.navMenuElement.classList.add("topbar-nav-open");
-        }, 10);
+        }, 100);
     }
 
     close () {

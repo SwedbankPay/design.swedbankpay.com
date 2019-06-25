@@ -9,11 +9,17 @@ const SELECTORS = {
 
 const _navMenus = _navMenus || [];
 
+const _closeOnEsc = () => (_navMenus.some(menu => menu.isOpen ? menu.close() : false));
+
 const _addEscListener = () => {
     document.addEventListener("keydown", e => {
-        if (e.key === "Escape" && document.body.classList.contains("has-vscroll")) {
+        if (e.key === "Escape") {
             /* Only runs handleScrollbar if a navMenu was actually closed [AW] */
-            if (_navMenus.some(menu => menu.isOpen ? menu.close() : false)) { handleScrollbar(); }
+            if (document.body.classList.contains("has-vscroll")) {
+                if (_closeOnEsc()) { handleScrollbar(); }
+            } else {
+                _closeOnEsc();
+            }
         }
     });
 };
