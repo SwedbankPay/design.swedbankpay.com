@@ -1,11 +1,7 @@
 # Changelog
 
-## [3.X.X] - 2019-X-X
+## [3.1.0] - 2019-06-25
 
 ### Added
 
-### Changed
-
-### Fixed
-
-### Removed
+- Added init by ID to expandable component
