@@ -1,6 +1,7 @@
 a.action-link {
     position: relative;
-    display: block;
+    display: flex;
+    align-items: center;
     padding: 1rem;
     padding-left: 1.5rem;
     border: 0;
@@ -18,14 +19,18 @@ a.action-link {
     }
 
     &:after {
-        content: "▶";
+        content: "arrow_right";
+        .material-icons-styling();
+
         position: absolute;
         right: 1rem;
+        margin: 0;
         color: @brand-primary;
+        font-size: 32px;
     }
 
-    .material-icons {
-        color: @brand-primary;
-        font-size: 1.5rem;
+    // Temporary solution until DG-323 (https://payexjira.atlassian.net/secure/RapidBoard.jspa?rapidView=80&projectKey=DG&modal=detail&selectedIssue=DG-323) is solved [AW].
+    > * {
+        margin-right: 0.5rem;
     }
 }
