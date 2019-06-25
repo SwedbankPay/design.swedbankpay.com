@@ -1,6 +1,6 @@
 {
     "name": "design.swedbankpay.com",
-    "version": "3.1.0",
+    "version": "3.1.1",
     "description": "Swedbank Pay DesignGuide",
     "main": "index.js",
     "scripts": {

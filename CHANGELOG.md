@@ -1,11 +1,6 @@
 # Changelog
 
-## [3.X.X] - 2019-X-X
-
-### Added
+## [3.1.1] - 2019-06-25
 
 ### Changed
-
-### Fixed
-
-### Removed
+- Changed action-link arrow to be material-icons instead of plain text.
