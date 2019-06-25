@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Expandable ExpandablePlaceholder renders 1`] = `
+<div
+  className="expandable"
+>
+  <div
+    className="expandable-header"
+  >
+    <h5>
+      Placeholder
+    </h5>
+  </div>
+  <div
+    className="expandable-content"
+  >
+    Placeholder text
+  </div>
+</div>
+`;
+
+exports[`Component: Expandable prints an expandable component when items is provided but is invalid 1`] = `
+<Expandable
+  items="wrong"
+>
+  <ExpandablePlaceholder>
+    <div
+      className="expandable"
+    >
+      <div
+        className="expandable-header"
+      >
+        <h5>
+          Placeholder
+        </h5>
+      </div>
+      <div
+        className="expandable-content"
+      >
+        Placeholder text
+      </div>
+    </div>
+  </ExpandablePlaceholder>
+</Expandable>
+`;
+
+exports[`Component: Expandable returns a number of expandables matching the length of items 1`] = `
+<Expandable
+  items={
+    Array [
+      Object {
+        "content": <p>
+          My accordion content
+        </p>,
+        "title": "Foo",
+      },
+      Object {
+        "content": <p>
+          My accordion content
+        </p>,
+        "title": "Bar",
+      },
+      Object {
+        "content": <p>
+          My accordion content
+        </p>,
+        "title": "Baz",
+      },
+    ]
+  }
+>
+  <div
+    className="expandable"
+    key="0"
+  >
+    <div
+      className="expandable-header"
+    >
+      <h5>
+        Foo
+      </h5>
+    </div>
+    <div
+      className="expandable-content"
+    >
+      <p>
+        My accordion content
+      </p>
+    </div>
+  </div>
+  <div
+    className="expandable"
+    key="1"
+  >
+    <div
+      className="expandable-header"
+    >
+      <h5>
+        Bar
+      </h5>
+    </div>
+    <div
+      className="expandable-content"
+    >
+      <p>
+        My accordion content
+      </p>
+    </div>
+  </div>
+  <div
+    className="expandable"
+    key="2"
+  >
+    <div
+      className="expandable-header"
+    >
+      <h5>
+        Baz
+      </h5>
+    </div>
+    <div
+      className="expandable-content"
+    >
+      <p>
+        My accordion content
+      </p>
+    </div>
+  </div>
+</Expandable>
+`;
+
+exports[`Component: Expandable returns an expandable component when no items are provided 1`] = `
+<Expandable>
+  <ExpandablePlaceholder>
+    <div
+      className="expandable"
+    >
+      <div
+        className="expandable-header"
+      >
+        <h5>
+          Placeholder
+        </h5>
+      </div>
+      <div
+        className="expandable-content"
+      >
+        Placeholder text
+      </div>
+    </div>
+  </ExpandablePlaceholder>
+</Expandable>
+`;

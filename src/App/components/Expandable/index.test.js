@@ -1,14 +1,7 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 
-import Accordion from "./index";
-
-const item = [
-    {
-        title: "Foo",
-        content: <p>My accordion content</p>
-    }
-];
+import Expandable, { ExpandablePlaceholder } from "./index";
 
 const items = [
     {
@@ -25,34 +18,38 @@ const items = [
     }
 ];
 
-describe("Component: Accordion", () => {
+describe("Component: Expandable", () => {
     it("is defined", () => {
-        expect(Accordion).toBeDefined();
+        expect(Expandable).toBeDefined();
     });
 
-    // it("returns an empty accordion container if the items props is not provided", () => {
-    //     const wrapper = shallow(<Accordion />);
+    it("returns an expandable component when no items are provided", () => {
+        const wrapper = mount(<Expandable />);
 
-    //     expect(wrapper).toMatchSnapshot();
-    //     expect(wrapper.contains(<div className="accordion"></div>)).toEqual(true);
-    // });
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.contains(<ExpandablePlaceholder />)).toEqual(true);
+    });
 
-    // it("returns an accordion containing the item", () => {
-    //     const wrapper = shallow(<Accordion items={item}/>);
+    it("returns a number of expandables matching the length of items", () => {
+        const wrapper = mount(<Expandable items={items}/>);
+        const expandables = wrapper.find(".expandable");
 
-    //     expect(wrapper).toMatchSnapshot();
-    //     expect(wrapper.contains(items[0].title)).toEqual(true);
-    //     expect(wrapper.contains(<div className="accordion-content">{items[0].content}</div>)).toEqual(true);
-    // });
+        expect(wrapper).toMatchSnapshot();
+        expect(expandables.length).toEqual(items.length);
+    });
 
-    // it("returns an accordion with several accordion items", () => {
-    //     const wrapper = shallow(<Accordion items={items}/>);
+    it("prints an expandable component when items is provided but is invalid", () => {
+        const wrapper = mount(<Expandable items="wrong" />);
 
-    //     expect(wrapper).toMatchSnapshot();
-    //     items.forEach(item => {
-    //         expect(wrapper.contains(item.title)).toEqual(true);
-    //         expect(wrapper.contains(<div className="accordion-content">{item.content}</div>)).toEqual(true);
-    //     });
-    // });
-    test.todo("Expandable component tests");
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.contains(<ExpandablePlaceholder />)).toEqual(true);
+    });
+
+    describe("ExpandablePlaceholder", () => {
+        it("renders", () => {
+            const wrapper = shallow(<ExpandablePlaceholder />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
 });

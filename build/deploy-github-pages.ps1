@@ -3,7 +3,7 @@ if (($Env:APPVEYOR_REPO_TAG -eq "true") -and ($Env:GitVersion_BranchName -eq "ma
     $Env:changelog = [IO.File]::ReadAllText("C:\projects\design-swedbankpay-com\CHANGELOG.md")
 
     # Push artifact to appveyor
-    Push-AppveyorArtifact "dist/$Env:basename/release/PayEx.DesignGuide.v$($Env:GitVersion_FullSemVer).zip"
+    Push-AppveyorArtifact "dist/$Env:basename/release/SwedbankPay.DesignGuide.v$($Env:GitVersion_FullSemVer).zip"
 }
 
 # Deploy to gh-pages
