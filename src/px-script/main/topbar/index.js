@@ -40,7 +40,7 @@ const open = id => {
     try {
         navmenu.open();
     } catch (e) {
-        console.error(`navmenu.open: No navmenu with id "${id}" found.`);
+        console.warn(`navmenu.open: No navmenu with id "${id}" found.`);
 
         return false;
     }
@@ -56,7 +56,7 @@ const close = id => {
     try {
         navmenu.close();
     } catch (e) {
-        console.error(`navmenu.close: No navmenu with id "${id}" found.`);
+        console.warn(`navmenu.close: No navmenu with id "${id}" found.`);
 
         return false;
     }
