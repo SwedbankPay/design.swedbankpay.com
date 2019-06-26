@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Sheet, { Example, JavascriptMethods } from "./index";
+import Sheet, { Example, RequireAction, JavascriptMethods } from "./index";
 
 describe("Documentation: Sheet", () => {
     it("is defined", () => {
@@ -44,6 +44,18 @@ describe("Documentation: Sheet", () => {
 
             formBtn.simulate("click", clickHandler);
             expect(clickHandler.preventDefault).toHaveBeenCalled();
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("RequireAction", () => {
+        it("is defined", () => {
+            expect(RequireAction).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<RequireAction />);
+
             expect(wrapper).toMatchSnapshot();
         });
     });
