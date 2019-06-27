@@ -260,6 +260,42 @@ exports[`Component: ComplexAlert Proptypes renders with the passed header text w
 </div>
 `;
 
+exports[`Component: ComplexAlert close icon prevents default 1`] = `
+<ComplexAlert
+  close={true}
+>
+  <div
+    className="alert alert-undefined"
+  >
+    <header
+      className="alert-header"
+    >
+      <a
+        data-alert-close=""
+        href="#"
+        onClick={[Function]}
+      >
+        
+		
+        <Icon
+          icon="close"
+        >
+          <i
+            className="material-icons"
+          >
+            close
+          </i>
+        </Icon>
+        
+	
+      </a>
+      
+
+    </header>
+  </div>
+</ComplexAlert>
+`;
+
 exports[`Component: ComplexAlert renders 1`] = `
 <div
   className="alert alert-undefined"

@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 
 import Alert, { ComplexAlert } from "./index";
 
@@ -143,4 +143,18 @@ describe("Component: ComplexAlert", () => {
             expect(wrapper.html()).toContain("<div class=\"alert-body\">Complex children...</div>");
         });
     });
+
+    // it("close icon prevents default", () => {
+    //     const eventHandler = { preventDefault: jest.fn() };
+    //     const wrapper = mount(<ComplexAlert close />);
+    //     const closeAnchor = wrapper.find("a[data-alert-close]");
+
+    //     expect(wrapper).toMatchSnapshot();
+
+    //     closeAnchor.simulate("click");
+
+    //     expect(eventHandler.preventDefault).toHaveBeenCalled();
+    // });
+
+    test.todo("Write tests for prevent default");
 });
