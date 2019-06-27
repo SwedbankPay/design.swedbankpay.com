@@ -8,7 +8,7 @@ import routes from "../routes/docs";
 const Documentation = () => (
     <div className="documentation">
         <div className="row">
-            <div className="col-xxl-2 col-md-3 p-0">
+            <div className="col-xxl-2 col-md-3">
                 <SelectPanel />
             </div>
             <main className="doc-view col-xxl-10 col-md-9">

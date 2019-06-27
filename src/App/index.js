@@ -3,6 +3,7 @@ import { Router, Switch, Route, withRouter } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import Loadable from "react-loadable";
 
+import Footer from "@/Footer";
 import AppHeader from "./AppHeader";
 import { LoadingComponent } from "./utils";
 import { topbar } from "../px-script/main";
@@ -82,6 +83,7 @@ class App extends Component {
                         <Route path="/404" component={ErrorPage404} />
                         <Route component={ErrorPage404} />
                     </Switch>
+                    <Footer />
                 </ScrollToTopComponent>
             </Router>
         );

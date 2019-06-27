@@ -10,7 +10,7 @@ class Home extends Component {
 
     render () {
         return (
-            <div className="container">
+            <div className="container set-doc-height">
                 <div className="row justify-content-center">
                     <div className="col-md-auto">
                         <section className="panel panel-default">

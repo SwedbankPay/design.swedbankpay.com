@@ -5,8 +5,6 @@
     width: 100%;
 
     .designguide-header {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
         .topbar-logo {
             margin-right: 0;
         }
@@ -61,6 +59,10 @@
                 }
             }
         }
+    }
+
+    .set-doc-height {
+        min-height: calc(100vh - 156px);
     }
 
     pre {
@@ -179,7 +181,7 @@
 
     .doc-view {
         #loading-component {
-            height: ~"calc(100vh - 166px)";
+            height: ~"calc(100vh - 156px)";
         }
     }
 

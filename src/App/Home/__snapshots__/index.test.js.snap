@@ -2,7 +2,7 @@
 
 exports[`Home: index renders 1`] = `
 <div
-  className="container"
+  className="container set-doc-height"
 >
   <div
     className="row justify-content-center"
