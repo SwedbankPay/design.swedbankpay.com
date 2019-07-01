@@ -1,11 +1,10 @@
 .card {
-    margin: 0 0 @base-margin;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     width: 100%;
 
     header {
+        overflow: hidden;
         padding: 1rem 1.5rem 0;
 
         /* stylelint-disable selector-list-comma-newline-after */
@@ -75,7 +74,7 @@
     }
 
     &.card-plain {
-        background-color: @offwhite;
+        background-color: @light-gray;
 
         header {
             * {
@@ -88,6 +87,7 @@
         padding: @base-padding 0;
         display: flex;
         justify-content: center;
+        overflow: hidden;
 
         > * {
             margin-bottom: 0;
@@ -136,17 +136,4 @@
             object-fit: cover;
         }
     }
-}
-
-@media screen and (min-width: @screen-xs-min) {
-    .card {
-        display: inline-flex;
-        margin: @card-margin;
-        width: @card-width;
-    }
-}
-
-.cards {
-    display: inline-flex;
-    flex-wrap: wrap;
 }
