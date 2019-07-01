@@ -8,11 +8,7 @@ exports[`Documentation: Card CardVariants renders 1`] = `
     Card Variants
   </h2>
   <p>
-    You don\`t have to use all sections of a card, you can use different combinations as you see fit. The card body inherits the size of the largest card that exists on the same line when wrapped with a 
-    <Property
-      value=".cards"
-    />
-     container.
+    You don\`t have to use all sections of a card, you can use different combinations as you see fit.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -20,55 +16,67 @@ exports[`Documentation: Card CardVariants renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="cards"
+      className="row"
     >
-      <Card
-        smallText="Small card text"
-        text="Card text"
-        title={
-          <h3>
-            My Custom card
-          </h3>
-        }
-        type="primary"
+      <div
+        className="col-12 col-lg-6 col-xl-4 mb-3"
       >
-        <MediaObject
-          heading="75%"
-          icon="verified_user"
-          muted={true}
-          size="sm"
-          text="Complete"
-          textSmall={true}
+        <Card
+          smallText="Small card text"
+          text="Card text"
+          title={
+            <h3>
+              My Custom card
+            </h3>
+          }
+          type="primary"
+        >
+          <MediaObject
+            heading="75%"
+            icon="verified_user"
+            muted={true}
+            size="sm"
+            text="Complete"
+            textSmall={true}
+          />
+        </Card>
+      </div>
+      <div
+        className="col-12 col-lg-6 col-xl-4 mb-3"
+      >
+        <Card
+          smallText="This is some small text"
+          textSection={
+            Array [
+              "This is a lot of text",
+              "With some more text",
+              "And then even some more",
+              "Is it really possible to have this much text in one card?",
+              "Yes!",
+            ]
+          }
+          title={
+            <h3>
+              Text card
+            </h3>
+          }
+          type="primary"
         />
-      </Card>
-      <Card
-        smallText="This is some small text"
-        textSection={
-          Array [
-            "This is a lot of text",
-            "With some more text",
-            "And then even some more",
-            "Is it really possible to have this much text in one card?",
-            "Yes!",
-          ]
-        }
-        title={
-          <h3>
-            Text card
-          </h3>
-        }
-        type="primary"
-      />
-      <Card
-        imgSrc="https://picsum.photos/300/?random"
-        text="This is a card with an image and body"
-        title={
-          <h3>
-            Image card
-          </h3>
-        }
-        type="secondary"
-      />
+      </div>
+      <div
+        className="col-12 col-lg-6 col-xl-4"
+      >
+        <Card
+          imgSrc="https://picsum.photos/300/?random"
+          text="This is a card with an image and body"
+          title={
+            <h3>
+              Image card
+            </h3>
+          }
+          type="secondary"
+        />
+      </div>
     </div>
   </ComponentPreview>
 </Fragment>
@@ -82,28 +90,13 @@ exports[`Documentation: Card DefaultBehaviour renders 1`] = `
     Default behaviour
   </h2>
   <p>
-    Wrap indiviual cards in the 
-    <Property
-      value=".cards"
-    />
-     class to display them lined up next to each other. When the window reaches 
+    The cards component is a flexible content container. You can use them with and without footers, headers, pictures, buttons and more. Cards have no width constraint so they will fill the parent container. Use cards in combination with our 
     <Link
-      to="/docs/core/breakpoints"
+      to="/docs/core/grid"
     >
-      breakpoint
+      grid
     </Link>
-     sm the cards will switch to mobile view and take up one row each and stretch to fill the width of the container. To decide how your cards will look use 
-    <Property
-      value=".card-default"
-    />
-    , 
-    <Property
-      value=".card-brand"
-    />
-    , or 
-    <Property
-      value=".card-light"
-    />
+     to decide how they will grow and shrink.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -111,86 +104,98 @@ exports[`Documentation: Card DefaultBehaviour renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="cards"
+      className="row"
     >
-      <Card
-        btnTxt="Button"
-        content={
-          <ul
-            className="list pt-3"
-          >
-            <li>
-              <span
-                className="font-weight-bold"
-              >
-                Card number:
-              </span>
-               4563 5648 5642
-            </li>
-            <li>
-              <span
-                className="font-weight-bold"
-              >
-                Balance:
-              </span>
-               2500,- 
-            </li>
-          </ul>
-        }
-        imgSrc="https://picsum.photos/300/?random"
-        text="This paragraph contains some text about the person displayed above."
-        title={
+      <div
+        className="col-12 col-lg-6 col-xl-4 mb-3"
+      >
+        <Card
+          btnTxt="Button"
+          content={
+            <ul
+              className="list pt-3"
+            >
+              <li>
+                <span
+                  className="font-weight-bold"
+                >
+                  Card number:
+                </span>
+                 4563 5648 5642
+              </li>
+              <li>
+                <span
+                  className="font-weight-bold"
+                >
+                  Balance:
+                </span>
+                 2500,- 
+              </li>
+            </ul>
+          }
+          imgSrc="https://picsum.photos/300/?random"
+          text="This paragraph contains some text about the person displayed above."
+          title={
+            <MediaObject
+              heading="Bob Corlsan"
+              icon="account_circle"
+              size="sm"
+              text="bob.corlsan@payex.com"
+              textSmall={true}
+            />
+          }
+          type="primary"
+        />
+      </div>
+      <div
+        className="col-12 col-lg-6 col-xl-4 mb-3"
+      >
+        <Card
+          footerLinkTxt="Footer link"
+          text="Descriptive text to put inside the card, could contain a lot."
+          title={
+            <h3>
+              Card secondary
+            </h3>
+          }
+          type="secondary"
+        >
           <MediaObject
-            heading="Bob Corlsan"
-            icon="account_circle"
+            heading="725 NOK"
+            icon="account_balance"
+            muted={true}
             size="sm"
-            text="bob.corlsan@payex.com"
+            text="Outstanding balance"
             textSmall={true}
           />
-        }
-        type="primary"
-      />
-      <Card
-        footerLinkTxt="Footer link"
-        text="Descriptive text to put inside the card, could contain a lot."
-        title={
-          <h3>
-            Card secondary
-          </h3>
-        }
-        type="secondary"
+        </Card>
+      </div>
+      <div
+        className="col-12 col-lg-6 col-xl-4"
       >
-        <MediaObject
-          heading="725 NOK"
-          icon="account_balance"
-          muted={true}
-          size="sm"
-          text="Outstanding balance"
-          textSmall={true}
-        />
-      </Card>
-      <Card
-        btnTxt="Button"
-        footerLinkTxt="Footer link"
-        imgSrc="https://picsum.photos/300/?random"
-        smallText="And the small text"
-        text="Descriptive text to put inside the card, could contain a lot."
-        title={
-          <h3>
-            Card plain
-          </h3>
-        }
-        type="plain"
-      >
-        <MediaObject
-          heading="75%"
-          icon="verified_user"
-          muted={true}
-          size="sm"
-          text="Complete"
-          textSmall={true}
-        />
-      </Card>
+        <Card
+          btnTxt="Button"
+          footerLinkTxt="Footer link"
+          imgSrc="https://picsum.photos/300/?random"
+          smallText="And the small text"
+          text="Descriptive text to put inside the card, could contain a lot."
+          title={
+            <h3>
+              Card plain
+            </h3>
+          }
+          type="plain"
+        >
+          <MediaObject
+            heading="75%"
+            icon="verified_user"
+            muted={true}
+            size="sm"
+            text="Complete"
+            textSmall={true}
+          />
+        </Card>
+      </div>
     </div>
   </ComponentPreview>
 </Fragment>
