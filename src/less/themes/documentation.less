@@ -38,11 +38,21 @@
 
     .documentation-nav {
         padding: @base-padding;
-        max-height: calc(100vh - 148px);
-        overflow-y: auto;
+        max-height: calc(100vh - 226px);
+        overflow-y: hidden;
+
+        &:hover {
+            overflow-y: auto;
+        }
 
         .nav-group {
             margin-bottom: @base-margin;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+
+            &:first-child {
+                padding-top: 1rem;
+                border-top: 1px solid rgba(0, 0, 0, 0.075);
+            }
 
             a {
                 text-decoration: none;
@@ -153,7 +163,6 @@
 
     .doc-search {
         padding: @base-padding 1rem;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.075);
 
         .search-results {
             position: absolute;
