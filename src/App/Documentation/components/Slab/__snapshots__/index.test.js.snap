@@ -71,6 +71,49 @@ exports[`Components: Slab DefaultSlab renders 1`] = `
 </Fragment>
 `;
 
+exports[`Components: Slab SlabArrow renders 1`] = `
+<Fragment>
+  <h2
+    id="slab-arrow"
+  >
+    Slab arrow
+  </h2>
+  <p>
+    <Property
+      value=".slab-arrow"
+    />
+     inherits the color from the slab it is appended to, and is given a border if used with slab-white.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="slab slab-arrow"
+    >
+      <p>
+        This slab has some connection to the content above.
+      </p>
+    </div>
+    <div
+      className="slab slab-white slab-arrow"
+    >
+      <p>
+        This slab has some connection to the content above.
+      </p>
+    </div>
+    <div
+      className="slab slab-apricot slab-arrow"
+    >
+      <p>
+        This slab has some connection to the content above.
+      </p>
+    </div>
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Components: Slab SlabColors renders 1`] = `
 <Fragment>
   <h2

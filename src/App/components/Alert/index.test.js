@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Alert from "./index";
+import Alert, { ComplexAlert } from "./index";
 
 describe("Component: Alert", () => {
     it("is defined", () => {
@@ -87,4 +87,74 @@ describe("Component: Alert", () => {
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<div className="alert-body"><p>Alert text</p></div>)).toBeTruthy();
     });
+});
+
+describe("Component: ComplexAlert", () => {
+    it("is defined", () => {
+        expect(ComplexAlert).toBeDefined();
+    });
+
+    it("renders", () => {
+        const wrapper = shallow(<ComplexAlert />);
+
+        expect(wrapper).toMatchSnapshot();
+    });
+
+    describe("Proptypes", () => {
+        it("renders with an ID when prop id is provided", () => {
+            const wrapper = shallow(<ComplexAlert id="test-alert" />);
+
+            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.html()).toContain("test-alert");
+        });
+
+        it("renders with the correct class when prop type is provided", () => {
+            const wrapper = shallow(<ComplexAlert type="default" />);
+
+            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.html()).toContain("alert-default");
+        });
+
+        it("renders with an icon when prop icon is provided", () => {
+            const wrapper = shallow(<ComplexAlert icon="home" />);
+
+            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.html()).toContain("<i class=\"material-icons alert-icon\">home</i>");
+        });
+
+        it("renders with a close button when prop close is true", () => {
+            const wrapper = shallow(<ComplexAlert close />);
+
+            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.html()).toContain("<i class=\"material-icons\">close</i>");
+        });
+
+        it("renders with the passed header text when prop headerText is provided", () => {
+            const wrapper = shallow(<ComplexAlert headerText="My custom header text"/>);
+
+            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.html()).toContain("<h3>My custom header text</h3>");
+        });
+
+        it("renders with the passed children when prop children is provided", () => {
+            const wrapper = shallow(<ComplexAlert>Complex children...</ComplexAlert>);
+
+            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.html()).toContain("<div class=\"alert-body\">Complex children...</div>");
+        });
+    });
+
+    // it("close icon prevents default", () => {
+    //     const eventHandler = { preventDefault: jest.fn() };
+    //     const wrapper = mount(<ComplexAlert close />);
+    //     const closeAnchor = wrapper.find("a[data-alert-close]");
+
+    //     expect(wrapper).toMatchSnapshot();
+
+    //     closeAnchor.simulate("click");
+
+    //     expect(eventHandler.preventDefault).toHaveBeenCalled();
+    // });
+
+    test.todo("Write tests for prevent default");
 });
