@@ -1,56 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Utilities: DeprecatedComponentAlert renders 1`] = `
-<DocContainer>
+exports[`Utilities: DocContainer renders 1`] = `
+<div
+  className="doc-container"
+>
+  <withRouter(DocHeading) />
   <div
-    className="doc-container"
+    className="row"
   >
-    <div
-      className="row"
-    >
-      <DocContent>
-        <div
-          className="doc-body col-12"
-        >
-          Component
-        </div>
-      </DocContent>
-    </div>
+    <DocContent />
   </div>
-</DocContainer>
+</div>
 `;
 
-exports[`Utilities: DeprecatedComponentAlert renders with a table of contents(doctoc) if prop docToc is given 1`] = `
-<DocContainer
-  docToc={true}
+exports[`Utilities: DocContainer renders with a table of contents(doctoc) if prop docToc is given 1`] = `
+<div
+  className="doc-container"
 >
+  <withRouter(DocHeading) />
   <div
-    className="doc-container"
+    className="row"
   >
-    <div
-      className="row"
-    >
-      <DocContent>
-        <div
-          className="doc-body col-lg-10"
-        >
-          Component
-        </div>
-      </DocContent>
-      <DocToc
-        component={[Function]}
-      >
-        <div
-          className="col-2 d-none d-lg-block"
-        >
-          <div
-            className="doc-toc"
-          >
-            <ul />
-          </div>
-        </div>
-      </DocToc>
-    </div>
+    <DocContent />
+    <DocToc
+      component={[Function]}
+    />
   </div>
-</DocContainer>
+</div>
 `;
