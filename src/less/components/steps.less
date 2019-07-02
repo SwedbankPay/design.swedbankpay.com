@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     background-color: @bg-white;
-    box-shadow: @default-box-shadow;
     display: flex;
     justify-content: space-between;
 
@@ -30,7 +29,6 @@
 
             &:hover {
                 background-color: @nearwhite;
-                box-shadow: 1px 0 0 0 @gray-bright, -1px 0 0 0 @gray-bright, 0 1px 0 0 @nearwhite;
             }
         }
 
@@ -126,7 +124,6 @@
 
     .steps-selected {
         background-color: @nearwhite;
-        box-shadow: 1px 0 0 0 @gray-bright, -1px 0 0 0 @gray-bright, 0 1px 0 0 @nearwhite;
     }
 
     .steps-sub-title {
@@ -204,10 +201,6 @@
             display: block;
             text-align: left;
             padding: @list-item-padding-desktop-vertical;
-
-            &.steps-selected {
-                box-shadow: 0 1px 0 0 @gray-bright, 0 -1px 0 0 @gray-bright;
-            }
 
             > a {
                 padding: @list-item-padding-desktop-vertical;
