@@ -16,42 +16,50 @@ const Home = () => {
                     <h3>Site under development</h3>
                 </header>
                 <div className="alert-body">
-                    <p>The Design Guide is under active development and thus subject to change.</p>
+                    <p>The Design Guide is under active development and is subject to change.</p>
                 </div>
             </div>
             <div className="row">
-                <div className="col-12 col-md-4 pt-3 pt-md-0">
+                <div className="col-12 col-md-4 pt-3 pt-md-0 d-flex">
                     <div className="card card-plain">
-                        <header className="card-header">
-                            <h2>Placeholder</h2>
-                        </header>
-                        <div className="card-body">
-                            <p>This paragraph contains some text.</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-12 col-md-4 pt-3 pt-md-0">
-                    <div className="card card-plain">
-                        <header className="card-header">
-                            <h2>Design Guide</h2>
-                        </header>
-                        <div className="card-body">
-                            <div className="d-flex justify-content-center">
-                                <i className="material-icons material-icons-large text-brand">computer</i>
+                        <div className="card-body text-center">
+                            <div className="doc-circle">
+                                <i className="material-icons material-icons-large text-white">desktop_windows</i>
                             </div>
-                            <p>The Design Guide contains our component library for web development and general documentation for component use.</p>
-                            <p>Check out the <Link to="/docs/getting-started/introduction">documentation</Link>.</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-12 col-md-4 pt-3 pt-md-0">
-                    <div className="card card-plain">
-                        <header className="card-header">
                             <h2>Placeholder</h2>
-                        </header>
-                        <div className="card-body">
                             <p>This paragraph contains some text.</p>
                         </div>
+                        <footer className="fp-card-footer">
+                            <Link className="btn btn-outline-guiding btn-block" to="/docs/getting-started/introduction">Placeholder link</Link>
+                        </footer>
+                    </div>
+                </div>
+                <div className="col-12 col-md-4 pt-3 pt-md-0 d-flex">
+                    <div className="card card-plain">
+                        <div className="card-body text-center">
+                            <div className="doc-circle">
+                                <i className="material-icons material-icons-large text-white">desktop_windows</i>
+                            </div>
+                            <h2>Web</h2>
+                            <p>User interface components for websites and web applications</p>
+                        </div>
+                        <footer className="fp-card-footer">
+                            <Link className="btn btn-outline-guiding btn-block" to="/docs/getting-started/introduction">Documentation</Link>
+                        </footer>
+                    </div>
+                </div>
+                <div className="col-12 col-md-4 pt-3 pt-md-0 d-flex">
+                    <div className="card card-plain">
+                        <div className="card-body text-center">
+                            <div className="doc-circle">
+                                <i className="material-icons material-icons-large text-white">desktop_windows</i>
+                            </div>
+                            <h2>Placeholder</h2>
+                            <p>This paragraph contains some text.</p>
+                        </div>
+                        <footer className="fp-card-footer">
+                            <Link className="btn btn-outline-guiding btn-block" to="/docs/getting-started/introduction">Placeholder link</Link>
+                        </footer>
                     </div>
                 </div>
             </div>
