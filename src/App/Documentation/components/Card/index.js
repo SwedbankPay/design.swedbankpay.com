@@ -16,7 +16,7 @@ const DefaultBehaviour = () => (
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="row">
-                <div className="col-12 col-lg-6 col-xl-4 mb-3">
+                <div className="col-12 col-lg-6 col-xl-4">
                     <CardComponent
                         title={<MediaObject size="sm" icon="account_circle" heading="Bob Corlsan" text="bob.corlsan@payex.com" textSmall />}
                         type="primary"
@@ -31,7 +31,7 @@ const DefaultBehaviour = () => (
                         btnTxt="Button"
                     />
                 </div>
-                <div className="col-12 col-lg-6 col-xl-4 mb-3">
+                <div className="col-12 col-lg-6 col-xl-4">
                     <CardComponent
                         type="secondary"
                         title={<h3>Card secondary</h3>}
@@ -47,7 +47,6 @@ const DefaultBehaviour = () => (
                         title={<h3>Card plain</h3>}
                         imgSrc="https://picsum.photos/300/?random"
                         text="Descriptive text to put inside the card, could contain a lot."
-                        smallText="And the small text"
                         btnTxt="Button"
                         footerLinkTxt="Footer link"
                     >
