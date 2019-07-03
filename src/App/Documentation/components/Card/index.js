@@ -7,91 +7,87 @@ import MediaObject from "@/MediaObject";
 
 const textArr = ["This is a lot of text", "With some more text", "And then even some more", "Is it really possible to have this much text in one card?", "Yes!"];
 
-const DefaultBehaviour = () => (
+const Overview = () => (
     <>
-        <h2 id="default-behaviour">Default behaviour</h2>
+        <h2 id="overview">Overview</h2>
         <p>
-            The cards component is a flexible content container. You can use them with and without footers, headers, pictures, buttons and more.
-            Cards have no width constraint so they will fill the parent container. Use cards in combination with our <Link to="/docs/core/grid">grid</Link> to decide how they will grow and shrink.
+            We offer three different card variants; <Property value=".card-primary" />, <Property value=".card-secondary" /> and <Property value=".card-plain" />.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="row">
-                <div className="col-12 col-lg-6 col-xl-4">
-                    <CardComponent
-                        title={<MediaObject size="sm" icon="account_circle" heading="Bob Corlsan" text="bob.corlsan@payex.com" textSmall />}
-                        type="primary"
-                        imgSrc="https://picsum.photos/300/?random"
-                        text="This paragraph contains some text about the person displayed above."
-                        content={
-                            <ul className="list pt-3">
-                                <li><span className="font-weight-bold">Card number:</span> 4563 5648 5642</li>
-                                <li><span className="font-weight-bold">Balance:</span> 2500,- </li>
-                            </ul>
-                        }
-                        btnTxt="Button"
-                    />
-                </div>
-                <div className="col-12 col-lg-6 col-xl-4">
-                    <CardComponent
-                        type="secondary"
-                        title={<h3>Card secondary</h3>}
-                        text="Descriptive text to put inside the card, could contain a lot."
-                        footerLinkTxt="Footer link"
-                    >
-                        <MediaObject size="sm" icon="account_balance" heading="725 NOK" text="Outstanding balance" textSmall muted />
-                    </CardComponent>
-                </div>
-                <div className="col-12 col-lg-6 col-xl-4">
-                    <CardComponent
-                        type="plain"
-                        title={<h3>Card plain</h3>}
-                        imgSrc="https://picsum.photos/300/?random"
-                        text="Descriptive text to put inside the card, could contain a lot."
-                        btnTxt="Button"
-                        footerLinkTxt="Footer link"
-                    >
-                        <MediaObject size="sm" icon="verified_user" heading="75%" text="Complete" textSmall muted />
-                    </CardComponent>
-                </div>
+                <CardComponent
+                    title={<MediaObject size="sm" icon="account_circle" heading="Bob Corlsan" text="bob.corlsan@payex.com" textSmall />}
+                    type="primary"
+                    imgSrc="https://picsum.photos/300/?random"
+                    text="This paragraph contains some text about the person displayed above."
+                >
+                    <ul className="list">
+                        <li><span className="font-weight-bold">Card number:</span> 4563 5648 5642</li>
+                        <li><span className="font-weight-bold">Balance:</span> 2500,- </li>
+                    </ul>
+                </CardComponent>
+                <CardComponent
+                    type="secondary"
+                    title={<h3>Card secondary</h3>}
+                    text="Descriptive text to put inside the card, could contain a lot."
+                    footerLinkTxt="Footer link"
+                >
+                    <MediaObject size="sm" icon="account_balance" heading="725 NOK" text="Outstanding balance" textSmall muted />
+                </CardComponent>
+                <CardComponent
+                    type="plain"
+                    title={<h3>Card plain</h3>}
+                    imgSrc="https://picsum.photos/300/?random"
+                    text="Descriptive text to put inside the card, could contain a lot."
+                    footerLinkTxt="Footer link"
+                >
+                    <MediaObject size="sm" icon="verified_user" heading="75%" text="Complete" textSmall muted />
+                </CardComponent>
             </div>
         </ComponentPreview>
     </>
 );
 
-const CardVariants = () => (
+const GridCard = () => (
     <>
-        <h2 id="card-variants">Card Variants</h2>
+        <h2 id="card-with-grid">Card with grid</h2>
         <p>
-            You don`t have to use all sections of a card, you can use different combinations as you see fit.
+            Use our <Link to="/docs/core/grid"/> along with cards to control their size and how they are displayed on different screen resolutions.
+            Make sure to add <Property value=".d-flex" /> to the wrapping container if you want the cards to be of equal height when next to each other.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="row">
-                <div className="col-12 col-lg-6 col-xl-4 mb-3">
+                <div className="col-12 col-lg-6 col-xl-4 d-flex">
                     <CardComponent
                         type="primary"
                         title={<h3>My Custom card</h3>}
                         text="Card text"
                         smallText="Small card text"
+                        btn
+                        btnClass="btn-block"
                     >
                         <MediaObject size="sm" icon="verified_user" heading="75%" text="Complete" textSmall muted />
                     </CardComponent>
                 </div>
 
-                <div className="col-12 col-lg-6 col-xl-4 mb-3">
+                <div className="col-12 col-lg-6 col-xl-4 d-flex">
                     <CardComponent
                         type="primary"
                         title={<h3>Text card</h3>}
                         textSection={textArr}
                         smallText="This is some small text"
+                        btn
+                        btnClass="btn-block"
                     />
                 </div>
 
-                <div className="col-12 col-lg-6 col-xl-4">
+                <div className="col-12 col-lg-6 col-xl-4 d-flex">
                     <CardComponent
                         type="secondary"
                         title={<h3>Image card</h3>}
                         imgSrc="https://picsum.photos/300/?random"
                         text="This is a card with an image and body"
+                        footerLinkTxt="Footer link"
                     />
                 </div>
             </div>
@@ -104,11 +100,10 @@ class Card extends Component {
         return (
             <DocContainer docToc>
                 <p className="lead">
-                    Cards are meant to display smaller items and is not intended to span the entire width of a page.
-                    See <Link to="/docs/components/panel">panel</Link> if the card component is too narrow.
+                    Card is a flexible container taking up the entire width of its parent element. It contains different sections like headers, footers, images and more.
                 </p>
-                <DefaultBehaviour />
-                <CardVariants />
+                <Overview />
+                <GridCard />
             </DocContainer>
         );
     }
@@ -117,4 +112,4 @@ class Card extends Component {
 export default Card;
 
 /* For testing */
-export { DefaultBehaviour, CardVariants };
+export { Overview, GridCard };

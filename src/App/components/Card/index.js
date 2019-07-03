@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Card = ({ type, title, imgSrc, text, content, textSection, smallText, btnTxt, footerTxt, footerLink, footerLinkTxt, children }) => (
+const Card = ({ type, title, imgSrc, text, highlight, textSection, smallText, btn, btnClass, footerTxt, footerLink, footerLinkTxt, children }) => (
     <div className={`card${type ? ` card-${type}` : ""}`}>
         {imgSrc ? <div className="card-img">{"\n"}
             <img src={imgSrc} alt=""/>{"\n"}
@@ -12,19 +12,13 @@ const Card = ({ type, title, imgSrc, text, content, textSection, smallText, btnT
             </header>
             : null}
         <div className="card-body">
-            {children ?
-                <div className="highlight">
-                    {children}
-                </div>
-                : null
-            }
+            {children ? children : null }
             {text ? <p>{text}</p> : null}{"\n"}
-            {content ? <>{content}</> : null}{"\n"}
             {textSection ?
                 textSection.map((secText, i) => <p key={`card-p-${i}`}>{secText}</p>)
                 : null
             }
-            {btnTxt ? <button type="button" className="btn btn-executive btn-block">{btnTxt}</button> : null}
+            {btn ? <button type="button" className={`btn btn-executive${btnClass ? ` ${btnClass}` : ""}`}>Button</button> : null}
         </div>
         {footerTxt || footerLinkTxt ? <footer>
             {smallText ? <small>{smallText}</small> : null}
@@ -36,13 +30,12 @@ const Card = ({ type, title, imgSrc, text, content, textSection, smallText, btnT
 
 Card.propTypes = {
     type: PropTypes.oneOf(["primary", "secondary", "plain"]),
-    // title: PropTypes.string,
     imgSrc: PropTypes.string,
     icon: PropTypes.string,
     text: PropTypes.string,
     smallText: PropTypes.string,
     textSection: PropTypes.array,
-    btnTxt: PropTypes.string,
+    btn: PropTypes.string,
     footerTxt: PropTypes.string,
     footerLink: PropTypes.string,
     footerLinkTxt: PropTypes.string
