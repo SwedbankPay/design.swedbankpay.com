@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Card = ({ type, title, imgSrc, text, highlight, textSection, smallText, btn, btnClass, footerTxt, footerLink, footerLinkTxt, children }) => (
+const Card = ({ type, title, imgSrc, text, textSection, smallText, btn, btnClass, bodyClass, footerTxt, footerLink, footerLinkTxt, children }) => (
     <div className={`card${type ? ` card-${type}` : ""}`}>
         {imgSrc ? <div className="card-img">{"\n"}
             <img src={imgSrc} alt=""/>{"\n"}
@@ -11,7 +11,7 @@ const Card = ({ type, title, imgSrc, text, highlight, textSection, smallText, bt
                 {title}
             </header>
             : null}
-        <div className="card-body">
+        <div className={`card-body ${bodyClass ? ` ${bodyClass}` : ""}`}>
             {children ? children : null }
             {text ? <p>{text}</p> : null}{"\n"}
             {textSection ?
@@ -35,7 +35,7 @@ Card.propTypes = {
     text: PropTypes.string,
     smallText: PropTypes.string,
     textSection: PropTypes.array,
-    btn: PropTypes.string,
+    btn: PropTypes.bool,
     footerTxt: PropTypes.string,
     footerLink: PropTypes.string,
     footerLinkTxt: PropTypes.string

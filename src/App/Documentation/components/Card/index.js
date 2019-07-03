@@ -64,7 +64,8 @@ const GridCard = () => (
                         text="Card text"
                         smallText="Small card text"
                         btn
-                        btnClass="btn-block"
+                        btnClass="btn-block mt-auto"
+                        bodyClass="d-flex flex-column"
                     >
                         <MediaObject size="sm" icon="verified_user" heading="75%" text="Complete" textSmall muted />
                     </CardComponent>
@@ -77,7 +78,8 @@ const GridCard = () => (
                         textSection={textArr}
                         smallText="This is some small text"
                         btn
-                        btnClass="btn-block"
+                        btnClass="btn-block mt-auto"
+                        bodyClass="d-flex flex-column"
                     />
                 </div>
 

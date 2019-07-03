@@ -69,15 +69,6 @@ describe("Component: Card - ", () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    // it("renders a smallText in card-body", () => {
-    //     const wrapper = shallow(<Card smallText="small text" />);
-
-    //     expect(wrapper.html()).toContain("small");
-    //     expect(wrapper.find("small")).toHaveLength(1);
-    //     expect(wrapper.find("small").text()).toEqual("small text");
-    //     expect(wrapper).toMatchSnapshot();
-    // });
-
     it("renders a child object", () => {
         const wrapper = shallow(<Card>This is child text</Card>);
 
@@ -85,8 +76,8 @@ describe("Component: Card - ", () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    it("renders a button in the footer", () => {
-        const wrapper = shallow(<Card btnTxt="Button" />);
+    it("renders with a button", () => {
+        const wrapper = shallow(<Card btn />);
 
         expect(wrapper.html()).toContain("btn");
         expect(wrapper.find(".btn")).toHaveLength(1);
