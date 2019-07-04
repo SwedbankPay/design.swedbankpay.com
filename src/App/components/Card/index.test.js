@@ -45,7 +45,7 @@ describe("Component: Card - ", () => {
     });
 
     it("renders a title", () => {
-        const wrapper = shallow(<Card title="Card title goes here"/>);
+        const wrapper = shallow(<Card titleTxt="Card title goes here"/>);
 
         expect(wrapper.html()).toContain("header");
         expect(wrapper.find("header").text()).toEqual("Card title goes here");
@@ -87,9 +87,9 @@ describe("Component: Card - ", () => {
     it("renders footer text", () => {
         const wrapper = shallow(<Card footerTxt="Footer information" />);
 
-        expect(wrapper.html()).toContain("footer-text");
-        expect(wrapper.find(".footer-text")).toHaveLength(1);
-        expect(wrapper.find(".footer-text").text()).toEqual("Footer information");
+        expect(wrapper.html()).toContain("card-footer");
+        expect(wrapper.find(".card-footer")).toHaveLength(1);
+        expect(wrapper.find(".card-footer").text()).toEqual("Footer information");
         expect(wrapper).toMatchSnapshot();
     });
 

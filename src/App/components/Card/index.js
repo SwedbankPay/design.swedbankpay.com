@@ -1,16 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Card = ({ type, title, imgSrc, text, textSection, smallText, btn, btnClass, bodyClass, footerTxt, footerLink, footerLinkTxt, children }) => (
+const Card = ({ type, titleTxt, titleMarkup, imgSrc, text, textSection, smallText, btn, btnClass, bodyClass, footerTxt, footerLink, footerLinkTxt, children }) => (
     <div className={`card${type ? ` card-${type}` : ""}`}>
         {imgSrc ? <div className="card-img">{"\n"}
             <img src={imgSrc} alt=""/>{"\n"}
         </div> : null}
-        {title ?
-            <header className="card-header">
-                {title}
-            </header>
-            : null}
+        {titleTxt
+            ? (<header className="card-header">
+                <h3>{titleTxt}</h3>
+            </header>)
+            : (titleMarkup
+                ? (<header className="card-header">
+                    {titleMarkup}
+                </header>)
+                : null)}
         <div className={`card-body${bodyClass ? ` ${bodyClass}` : ""}`}>
             {children ? children : null }
             {text ? <p>{text}</p> : null}{"\n"}
@@ -23,7 +27,7 @@ const Card = ({ type, title, imgSrc, text, textSection, smallText, btn, btnClass
         {footerTxt || footerLinkTxt
             ? <footer className="card-footer">
                 {smallText ? <small>{smallText}</small> : null}
-                {footerTxt ? <div className="footer-text"><p>{footerTxt}</p></div> : null}
+                {footerTxt ? footerTxt : null}
                 {footerLinkTxt ? <div className="footer-link"><a href={footerLink || "#"}>{footerLinkTxt}</a></div> : null}
             </footer> : null}
     </div>
@@ -32,12 +36,13 @@ const Card = ({ type, title, imgSrc, text, textSection, smallText, btn, btnClass
 Card.propTypes = {
     type: PropTypes.oneOf(["primary", "secondary", "plain"]),
     imgSrc: PropTypes.string,
+    titleTxt: PropTypes.string,
+    titleMarkup: PropTypes.object,
     icon: PropTypes.string,
     text: PropTypes.string,
     smallText: PropTypes.string,
     textSection: PropTypes.array,
     btn: PropTypes.bool,
-    footerTxt: PropTypes.string,
     footerLink: PropTypes.string,
     footerLinkTxt: PropTypes.string
 };

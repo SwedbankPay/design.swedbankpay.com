@@ -37,7 +37,9 @@ exports[`Component: Card -  renders a title 1`] = `
   <header
     className="card-header"
   >
-    Card title goes here
+    <h3>
+      Card title goes here
+    </h3>
   </header>
   <div
     className="card-body"
@@ -112,13 +114,7 @@ exports[`Component: Card -  renders footer text 1`] = `
   <footer
     className="card-footer"
   >
-    <div
-      className="footer-text"
-    >
-      <p>
-        Footer information
-      </p>
-    </div>
+    Footer information
   </footer>
 </div>
 `;

@@ -11,7 +11,9 @@ exports[`Documentation: Card GridCard renders 1`] = `
     Use our 
     <Link
       to="/docs/core/grid"
-    />
+    >
+      grid
+    </Link>
      along with cards to control their size and how they are displayed on different screen resolutions. Make sure to add 
     <Property
       value=".d-flex"
@@ -35,11 +37,7 @@ exports[`Documentation: Card GridCard renders 1`] = `
           btnClass="btn-block mt-auto"
           smallText="Small card text"
           text="Card text"
-          title={
-            <h3>
-              My Custom card
-            </h3>
-          }
+          titleTxt="My grid card"
           type="primary"
         >
           <MediaObject
@@ -69,11 +67,7 @@ exports[`Documentation: Card GridCard renders 1`] = `
               "Yes!",
             ]
           }
-          title={
-            <h3>
-              Text card
-            </h3>
-          }
+          titleTxt="My grid card"
           type="primary"
         />
       </div>
@@ -84,12 +78,8 @@ exports[`Documentation: Card GridCard renders 1`] = `
           footerLinkTxt="Footer link"
           imgSrc="https://picsum.photos/300/?random"
           text="This is a card with an image and body"
-          title={
-            <h3>
-              Image card
-            </h3>
-          }
-          type="secondary"
+          titleTxt="My grid card"
+          type="primary"
         />
       </div>
     </div>
@@ -105,99 +95,21 @@ exports[`Documentation: Card Overview renders 1`] = `
     Overview
   </h2>
   <p>
-    We offer three different card variants; 
-    <Property
-      value=".card-primary"
-    />
-    , 
-    <Property
-      value=".card-secondary"
-    />
-     and 
-    <Property
-      value=".card-plain"
-    />
-    .
+    Cards support a wide variety of content, including images, text, list groups, links, and more. Make sure to restrain the width of your card unless you wish for it to fill the wrapping component.
   </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}
+    showCasePanelSm={true}
   >
     <Card
+      footerTxt="Footer text"
       imgSrc="https://picsum.photos/300/?random"
-      text="This paragraph contains some text about the person displayed above."
-      title={
-        <MediaObject
-          heading="Bob Corlsan"
-          icon="account_circle"
-          size="sm"
-          text="bob.corlsan@payex.com"
-          textSmall={true}
-        />
-      }
+      text="This paragraph contains some text related to this card."
+      titleTxt="Card title"
       type="primary"
-    >
-      <ul
-        className="list"
-      >
-        <li>
-          <span
-            className="font-weight-bold"
-          >
-            Card number:
-          </span>
-           4563 5648 5642
-        </li>
-        <li>
-          <span
-            className="font-weight-bold"
-          >
-            Balance:
-          </span>
-           2500,- 
-        </li>
-      </ul>
-    </Card>
-    <Card
-      footerLinkTxt="Footer link"
-      text="Descriptive text to put inside the card, could contain a lot."
-      title={
-        <h3>
-          Card secondary
-        </h3>
-      }
-      type="secondary"
-    >
-      <MediaObject
-        heading="725 NOK"
-        icon="account_balance"
-        muted={true}
-        size="sm"
-        text="Outstanding balance"
-        textSmall={true}
-      />
-    </Card>
-    <Card
-      footerLinkTxt="Footer link"
-      imgSrc="https://picsum.photos/300/?random"
-      text="Descriptive text to put inside the card, could contain a lot."
-      title={
-        <h3>
-          Card plain
-        </h3>
-      }
-      type="plain"
-    >
-      <MediaObject
-        heading="75%"
-        icon="verified_user"
-        muted={true}
-        size="sm"
-        text="Complete"
-        textSmall={true}
-      />
-    </Card>
+    />
   </ComponentPreview>
 </Fragment>
 `;
@@ -209,9 +121,10 @@ exports[`Documentation: Card renders 1`] = `
   <p
     className="lead"
   >
-    Card is a flexible container taking up the entire width of its parent element. It contains different sections like headers, footers, images and more.
+    Card is a flexible colored box which fills the width of its parent element.
   </p>
   <Overview />
   <GridCard />
+  <CardTypes />
 </DocContainer>
 `;
