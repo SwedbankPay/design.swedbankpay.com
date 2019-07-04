@@ -1,49 +1,48 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Card = ({ type, title, imgSrc, text, content, textSection, smallText, btnTxt, footerTxt, footerLink, footerLinkTxt, children }) => (
+const Card = ({ type, titleTxt, titleMarkup, imgSrc, text, textSection, smallText, btn, btnClass, bodyClass, footerTxt, footerLink, footerLinkTxt, children }) => (
     <div className={`card${type ? ` card-${type}` : ""}`}>
         {imgSrc ? <div className="card-img">{"\n"}
             <img src={imgSrc} alt=""/>{"\n"}
         </div> : null}
-        {title ?
-            <header>
-                {title}
-            </header>
-            : null}
-        <div className="card-body">
-            {children ?
-                <div className="highlight">
-                    {children}
-                </div>
-                : null
-            }
+        {titleTxt
+            ? (<header className="card-header">
+                <h3>{titleTxt}</h3>
+            </header>)
+            : (titleMarkup
+                ? (<header className="card-header">
+                    {titleMarkup}
+                </header>)
+                : null)}
+        <div className={`card-body${bodyClass ? ` ${bodyClass}` : ""}`}>
+            {children ? children : null }
             {text ? <p>{text}</p> : null}{"\n"}
-            {content ? <>{content}</> : null}{"\n"}
             {textSection ?
                 textSection.map((secText, i) => <p key={`card-p-${i}`}>{secText}</p>)
                 : null
             }
-            {btnTxt ? <button type="button" className="btn btn-executive btn-block">{btnTxt}</button> : null}
+            {btn ? <button type="button" className={`btn btn-executive${btnClass ? ` ${btnClass}` : ""}`}>{"\n"}Button{"\n"}</button> : null}
         </div>
-        {footerTxt || footerLinkTxt ? <footer>
-            {smallText ? <small>{smallText}</small> : null}
-            {footerTxt ? <div className="footer-text"><p>{footerTxt}</p></div> : null}
-            {footerLinkTxt ? <div className="footer-link"><a href={footerLink || "#"}>{footerLinkTxt}</a></div> : null}
-        </footer> : null}
+        {footerTxt || footerLinkTxt
+            ? <footer className="card-footer">
+                {smallText ? <small>{smallText}</small> : null}
+                {footerTxt ? footerTxt : null}
+                {footerLinkTxt ? <div className="footer-link"><a href={footerLink || "#"}>{footerLinkTxt}</a></div> : null}
+            </footer> : null}
     </div>
 );
 
 Card.propTypes = {
     type: PropTypes.oneOf(["primary", "secondary", "plain"]),
-    // title: PropTypes.string,
     imgSrc: PropTypes.string,
+    titleTxt: PropTypes.string,
+    titleMarkup: PropTypes.object,
     icon: PropTypes.string,
     text: PropTypes.string,
     smallText: PropTypes.string,
     textSection: PropTypes.array,
-    btnTxt: PropTypes.string,
-    footerTxt: PropTypes.string,
+    btn: PropTypes.bool,
     footerLink: PropTypes.string,
     footerLinkTxt: PropTypes.string
 };

@@ -1,18 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Documentation: Card CardVariants renders 1`] = `
+exports[`Documentation: Card GridCard renders 1`] = `
 <Fragment>
   <h2
-    id="card-variants"
+    id="card-with-grid"
   >
-    Card Variants
+    Card with grid
   </h2>
   <p>
-    You don\`t have to use all sections of a card, you can use different combinations as you see fit. The card body inherits the size of the largest card that exists on the same line when wrapped with a 
+    Use our 
+    <Link
+      to="/docs/core/grid"
+    >
+      grid
+    </Link>
+     along with cards to control their size and how they are displayed on different screen resolutions. Make sure to add 
     <Property
-      value=".cards"
+      value=".d-flex"
     />
-     container.
+     to the wrapper if you want the cards to be of equal height when next to each other.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -20,178 +26,90 @@ exports[`Documentation: Card CardVariants renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="cards"
+      className="row"
     >
-      <Card
-        smallText="Small card text"
-        text="Card text"
-        title={
-          <h3>
-            My Custom card
-          </h3>
-        }
-        type="primary"
+      <div
+        className="col-12 col-lg-6 col-xl-4 d-flex"
       >
-        <MediaObject
-          heading="75%"
-          icon="verified_user"
-          muted={true}
-          size="sm"
-          text="Complete"
-          textSmall={true}
+        <Card
+          bodyClass="d-flex flex-column"
+          btn={true}
+          btnClass="btn-block mt-auto"
+          smallText="Small card text"
+          text="Card text"
+          titleTxt="My grid card"
+          type="primary"
+        >
+          <MediaObject
+            heading="75%"
+            icon="verified_user"
+            muted={true}
+            size="sm"
+            text="Complete"
+            textSmall={true}
+          />
+        </Card>
+      </div>
+      <div
+        className="col-12 col-lg-6 col-xl-4 d-flex"
+      >
+        <Card
+          bodyClass="d-flex flex-column"
+          btn={true}
+          btnClass="btn-block mt-auto"
+          smallText="This is some small text"
+          textSection={
+            Array [
+              "This is a lot of text",
+              "With some more text",
+              "And then even some more",
+              "Is it really possible to have this much text in one card?",
+              "Yes!",
+            ]
+          }
+          titleTxt="My grid card"
+          type="primary"
         />
-      </Card>
-      <Card
-        smallText="This is some small text"
-        textSection={
-          Array [
-            "This is a lot of text",
-            "With some more text",
-            "And then even some more",
-            "Is it really possible to have this much text in one card?",
-            "Yes!",
-          ]
-        }
-        title={
-          <h3>
-            Text card
-          </h3>
-        }
-        type="primary"
-      />
-      <Card
-        imgSrc="https://picsum.photos/300/?random"
-        text="This is a card with an image and body"
-        title={
-          <h3>
-            Image card
-          </h3>
-        }
-        type="secondary"
-      />
+      </div>
+      <div
+        className="col-12 col-lg-6 col-xl-4 d-flex"
+      >
+        <Card
+          footerLinkTxt="Footer link"
+          imgSrc="https://picsum.photos/300/?random"
+          text="This is a card with an image and body"
+          titleTxt="My grid card"
+          type="primary"
+        />
+      </div>
     </div>
   </ComponentPreview>
 </Fragment>
 `;
 
-exports[`Documentation: Card DefaultBehaviour renders 1`] = `
+exports[`Documentation: Card Overview renders 1`] = `
 <Fragment>
   <h2
-    id="default-behaviour"
+    id="overview"
   >
-    Default behaviour
+    Overview
   </h2>
   <p>
-    Wrap indiviual cards in the 
-    <Property
-      value=".cards"
-    />
-     class to display them lined up next to each other. When the window reaches 
-    <Link
-      to="/docs/core/breakpoints"
-    >
-      breakpoint
-    </Link>
-     sm the cards will switch to mobile view and take up one row each and stretch to fill the width of the container. To decide how your cards will look use 
-    <Property
-      value=".card-default"
-    />
-    , 
-    <Property
-      value=".card-brand"
-    />
-    , or 
-    <Property
-      value=".card-light"
-    />
+    Cards support a wide variety of content, including images, text, list groups, links, and more. Make sure to restrain the width of your card unless you wish for it to fill the wrapping component.
   </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}
+    showCasePanelSm={true}
   >
-    <div
-      className="cards"
-    >
-      <Card
-        btnTxt="Button"
-        content={
-          <ul
-            className="list pt-3"
-          >
-            <li>
-              <span
-                className="font-weight-bold"
-              >
-                Card number:
-              </span>
-               4563 5648 5642
-            </li>
-            <li>
-              <span
-                className="font-weight-bold"
-              >
-                Balance:
-              </span>
-               2500,- 
-            </li>
-          </ul>
-        }
-        imgSrc="https://picsum.photos/300/?random"
-        text="This paragraph contains some text about the person displayed above."
-        title={
-          <MediaObject
-            heading="Bob Corlsan"
-            icon="account_circle"
-            size="sm"
-            text="bob.corlsan@payex.com"
-            textSmall={true}
-          />
-        }
-        type="primary"
-      />
-      <Card
-        footerLinkTxt="Footer link"
-        text="Descriptive text to put inside the card, could contain a lot."
-        title={
-          <h3>
-            Card secondary
-          </h3>
-        }
-        type="secondary"
-      >
-        <MediaObject
-          heading="725 NOK"
-          icon="account_balance"
-          muted={true}
-          size="sm"
-          text="Outstanding balance"
-          textSmall={true}
-        />
-      </Card>
-      <Card
-        btnTxt="Button"
-        footerLinkTxt="Footer link"
-        imgSrc="https://picsum.photos/300/?random"
-        smallText="And the small text"
-        text="Descriptive text to put inside the card, could contain a lot."
-        title={
-          <h3>
-            Card plain
-          </h3>
-        }
-        type="plain"
-      >
-        <MediaObject
-          heading="75%"
-          icon="verified_user"
-          muted={true}
-          size="sm"
-          text="Complete"
-          textSmall={true}
-        />
-      </Card>
-    </div>
+    <Card
+      footerTxt="Footer text"
+      imgSrc="https://picsum.photos/300/?random"
+      text="This paragraph contains some text related to this card."
+      titleTxt="Card title"
+      type="primary"
+    />
   </ComponentPreview>
 </Fragment>
 `;
@@ -203,15 +121,10 @@ exports[`Documentation: Card renders 1`] = `
   <p
     className="lead"
   >
-    Cards are meant to display smaller items and is not intended to span the entire width of a page. See 
-    <Link
-      to="/docs/components/panel"
-    >
-      panel
-    </Link>
-     if the card component is too narrow.
+    Card is a flexible colored box which fills the width of its parent element.
   </p>
-  <DefaultBehaviour />
-  <CardVariants />
+  <Overview />
+  <GridCard />
+  <CardTypes />
 </DocContainer>
 `;

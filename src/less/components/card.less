@@ -1,9 +1,8 @@
 .card {
-    margin: 0 0 @base-margin;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     width: 100%;
+    margin-bottom: 1rem;
 
     header {
         padding: 1rem 1.5rem 0;
@@ -23,7 +22,7 @@
     &.card-primary {
         background-color: @bg-apricot;
 
-        header {
+        .card-header {
             position: relative;
             border-top: 7px solid @orange-bright;
 
@@ -53,7 +52,7 @@
         background-color: @bg-light-turquoise;
         position: relative;
 
-        header {
+        .card-header {
             position: relative;
             border-top: 7px solid @turquoise;
 
@@ -75,22 +74,12 @@
     }
 
     &.card-plain {
-        background-color: @offwhite;
+        background-color: @light-gray;
 
-        header {
+        .card-header {
             * {
                 color: @brown;
             }
-        }
-    }
-
-    .highlight {
-        padding: @base-padding 0;
-        display: flex;
-        justify-content: center;
-
-        > * {
-            margin-bottom: 0;
         }
     }
 
@@ -111,8 +100,8 @@
         /* stylelint-enable selector-list-comma-newline-after */
     }
 
-    footer {
-        padding: 1.5rem;
+    .card-footer {
+        padding: 1rem 1.5rem;
         background: rgba(0, 0, 0, 0.03);
 
         .footer-text {
@@ -136,17 +125,4 @@
             object-fit: cover;
         }
     }
-}
-
-@media screen and (min-width: @screen-xs-min) {
-    .card {
-        display: inline-flex;
-        margin: @card-margin;
-        width: @card-width;
-    }
-}
-
-.cards {
-    display: inline-flex;
-    flex-wrap: wrap;
 }
