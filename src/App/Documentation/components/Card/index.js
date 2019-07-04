@@ -14,36 +14,34 @@ const Overview = () => (
             We offer three different card variants; <Property value=".card-primary" />, <Property value=".card-secondary" /> and <Property value=".card-plain" />.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="row">
-                <CardComponent
-                    title={<MediaObject size="sm" icon="account_circle" heading="Bob Corlsan" text="bob.corlsan@payex.com" textSmall />}
-                    type="primary"
-                    imgSrc="https://picsum.photos/300/?random"
-                    text="This paragraph contains some text about the person displayed above."
-                >
-                    <ul className="list">
-                        <li><span className="font-weight-bold">Card number:</span> 4563 5648 5642</li>
-                        <li><span className="font-weight-bold">Balance:</span> 2500,- </li>
-                    </ul>
-                </CardComponent>
-                <CardComponent
-                    type="secondary"
-                    title={<h3>Card secondary</h3>}
-                    text="Descriptive text to put inside the card, could contain a lot."
-                    footerLinkTxt="Footer link"
-                >
-                    <MediaObject size="sm" icon="account_balance" heading="725 NOK" text="Outstanding balance" textSmall muted />
-                </CardComponent>
-                <CardComponent
-                    type="plain"
-                    title={<h3>Card plain</h3>}
-                    imgSrc="https://picsum.photos/300/?random"
-                    text="Descriptive text to put inside the card, could contain a lot."
-                    footerLinkTxt="Footer link"
-                >
-                    <MediaObject size="sm" icon="verified_user" heading="75%" text="Complete" textSmall muted />
-                </CardComponent>
-            </div>
+            <CardComponent
+                title={<MediaObject size="sm" icon="account_circle" heading="Bob Corlsan" text="bob.corlsan@payex.com" textSmall />}
+                type="primary"
+                imgSrc="https://picsum.photos/300/?random"
+                text="This paragraph contains some text about the person displayed above."
+            >
+                <ul className="list">
+                    <li><span className="font-weight-bold">Card number:</span> 4563 5648 5642</li>
+                    <li><span className="font-weight-bold">Balance:</span> 2500,- </li>
+                </ul>
+            </CardComponent>
+            <CardComponent
+                type="secondary"
+                title={<h3>Card secondary</h3>}
+                text="Descriptive text to put inside the card, could contain a lot."
+                footerLinkTxt="Footer link"
+            >
+                <MediaObject size="sm" icon="account_balance" heading="725 NOK" text="Outstanding balance" textSmall muted />
+            </CardComponent>
+            <CardComponent
+                type="plain"
+                title={<h3>Card plain</h3>}
+                imgSrc="https://picsum.photos/300/?random"
+                text="Descriptive text to put inside the card, could contain a lot."
+                footerLinkTxt="Footer link"
+            >
+                <MediaObject size="sm" icon="verified_user" heading="75%" text="Complete" textSmall muted />
+            </CardComponent>
         </ComponentPreview>
     </>
 );
@@ -53,7 +51,7 @@ const GridCard = () => (
         <h2 id="card-with-grid">Card with grid</h2>
         <p>
             Use our <Link to="/docs/core/grid"/> along with cards to control their size and how they are displayed on different screen resolutions.
-            Make sure to add <Property value=".d-flex" /> to the wrapping container if you want the cards to be of equal height when next to each other.
+            Make sure to add <Property value=".d-flex" /> to the wrapper if you want the cards to be of equal height when next to each other.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="row">
