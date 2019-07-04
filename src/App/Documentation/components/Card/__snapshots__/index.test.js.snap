@@ -16,7 +16,7 @@ exports[`Documentation: Card GridCard renders 1`] = `
     <Property
       value=".d-flex"
     />
-     to the wrapping container if you want the cards to be of equal height when next to each other.
+     to the wrapper if you want the cards to be of equal height when next to each other.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -124,84 +124,80 @@ exports[`Documentation: Card Overview renders 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <div
-      className="row"
+    <Card
+      imgSrc="https://picsum.photos/300/?random"
+      text="This paragraph contains some text about the person displayed above."
+      title={
+        <MediaObject
+          heading="Bob Corlsan"
+          icon="account_circle"
+          size="sm"
+          text="bob.corlsan@payex.com"
+          textSmall={true}
+        />
+      }
+      type="primary"
     >
-      <Card
-        imgSrc="https://picsum.photos/300/?random"
-        text="This paragraph contains some text about the person displayed above."
-        title={
-          <MediaObject
-            heading="Bob Corlsan"
-            icon="account_circle"
-            size="sm"
-            text="bob.corlsan@payex.com"
-            textSmall={true}
-          />
-        }
-        type="primary"
+      <ul
+        className="list"
       >
-        <ul
-          className="list"
-        >
-          <li>
-            <span
-              className="font-weight-bold"
-            >
-              Card number:
-            </span>
-             4563 5648 5642
-          </li>
-          <li>
-            <span
-              className="font-weight-bold"
-            >
-              Balance:
-            </span>
-             2500,- 
-          </li>
-        </ul>
-      </Card>
-      <Card
-        footerLinkTxt="Footer link"
-        text="Descriptive text to put inside the card, could contain a lot."
-        title={
-          <h3>
-            Card secondary
-          </h3>
-        }
-        type="secondary"
-      >
-        <MediaObject
-          heading="725 NOK"
-          icon="account_balance"
-          muted={true}
-          size="sm"
-          text="Outstanding balance"
-          textSmall={true}
-        />
-      </Card>
-      <Card
-        footerLinkTxt="Footer link"
-        imgSrc="https://picsum.photos/300/?random"
-        text="Descriptive text to put inside the card, could contain a lot."
-        title={
-          <h3>
-            Card plain
-          </h3>
-        }
-        type="plain"
-      >
-        <MediaObject
-          heading="75%"
-          icon="verified_user"
-          muted={true}
-          size="sm"
-          text="Complete"
-          textSmall={true}
-        />
-      </Card>
-    </div>
+        <li>
+          <span
+            className="font-weight-bold"
+          >
+            Card number:
+          </span>
+           4563 5648 5642
+        </li>
+        <li>
+          <span
+            className="font-weight-bold"
+          >
+            Balance:
+          </span>
+           2500,- 
+        </li>
+      </ul>
+    </Card>
+    <Card
+      footerLinkTxt="Footer link"
+      text="Descriptive text to put inside the card, could contain a lot."
+      title={
+        <h3>
+          Card secondary
+        </h3>
+      }
+      type="secondary"
+    >
+      <MediaObject
+        heading="725 NOK"
+        icon="account_balance"
+        muted={true}
+        size="sm"
+        text="Outstanding balance"
+        textSmall={true}
+      />
+    </Card>
+    <Card
+      footerLinkTxt="Footer link"
+      imgSrc="https://picsum.photos/300/?random"
+      text="Descriptive text to put inside the card, could contain a lot."
+      title={
+        <h3>
+          Card plain
+        </h3>
+      }
+      type="plain"
+    >
+      <MediaObject
+        heading="75%"
+        icon="verified_user"
+        muted={true}
+        size="sm"
+        text="Complete"
+        textSmall={true}
+      />
+    </Card>
   </ComponentPreview>
 </Fragment>
 `;

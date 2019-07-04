@@ -81,7 +81,6 @@ describe("Component: Card - ", () => {
 
         expect(wrapper.html()).toContain("btn");
         expect(wrapper.find(".btn")).toHaveLength(1);
-        expect(wrapper.find(".btn").text()).toEqual("Button");
         expect(wrapper).toMatchSnapshot();
     });
 
