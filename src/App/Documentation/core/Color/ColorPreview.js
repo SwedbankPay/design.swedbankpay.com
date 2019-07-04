@@ -1,21 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const ColorPreview = ({ name, hex, color }) => {
+const ColorPreview = ({ name, hex }) => {
     const style = { backgroundColor: hex };
-    const textStyle = { color: color || null };
 
     return (
-        <div className="color-preview" style={style}>
-            <p style={color ? textStyle : null}>{name} ({hex})</p>
+        <div className="color-preview">
+            <div className={`color-block${name === "white" ? " border" : ""}`} style={style}/>
+            <p>
+                {name}
+                <small><br/>HEX: {hex}</small>
+            </p>
         </div>
     );
 };
 
 ColorPreview.propTypes = {
     name: PropTypes.string.isRequired,
-    hex: PropTypes.string.isRequired,
-    color: PropTypes.string
+    hex: PropTypes.string.isRequired
 };
 
 export default ColorPreview;

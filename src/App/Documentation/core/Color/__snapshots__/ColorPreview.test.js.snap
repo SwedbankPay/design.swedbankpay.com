@@ -3,23 +3,22 @@
 exports[`Core: Color renders 1`] = `
 <div
   className="color-preview"
-  style={
-    Object {
-      "backgroundColor": "#test",
-    }
-  }
 >
-  <p
+  <div
+    className="color-block"
     style={
       Object {
-        "color": "black",
+        "backgroundColor": "#test",
       }
     }
-  >
+  />
+  <p>
     test
-     (
-    #test
-    )
+    <small>
+      <br />
+      HEX: 
+      #test
+    </small>
   </p>
 </div>
 `;
