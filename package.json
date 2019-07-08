@@ -56,7 +56,7 @@
         "@babel/preset-env": "7.4.5",
         "@babel/preset-react": "^7.0.0",
         "@sentry/browser": "^5.4.3",
-        "@sentry/webpack-plugin": "^1.6.2",
+        "@sentry/webpack-plugin": "^1.7.0",
         "app-manifest-webpack-plugin": "^1.2.0",
         "autoprefixer": "^9.6.0",
         "babel-core": "^7.0.0-bridge.0",
