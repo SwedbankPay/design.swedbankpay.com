@@ -9,35 +9,35 @@ const MainColors = () => (
         <h2 id="main-colors">Main colors</h2>
         <p>The main color palette of Swedbank Pay</p>
         <div className="row">
-            <div className="col- 12 col-sm mb-lg-0">
+            <div className="col-12 col-sm mb-lg-0">
                 <ColorPreview name="Yellow" hex="#fdc129" />
             </div>
-            <div className="col- 12 col-sm mb-lg-0">
+            <div className="col-12 col-sm mb-lg-0">
                 <ColorPreview name="Brown" hex="#512b2b" />
             </div>
-            <div className="col- 12 col-sm mb-lg-0">
+            <div className="col-12 col-sm mb-lg-0">
                 <ColorPreview name="Orange Main" hex="#ee7023" />
             </div>
         </div>
         <div className="row">
-            <div className="col- 12 col-sm mb-lg-0">
+            <div className="col-12 col-sm mb-lg-0">
                 <ColorPreview name="Info Turquoise" hex="#8acdc3" />
             </div>
-            <div className="col- 12 col-sm mb-lg-0">
+            <div className="col-12 col-sm mb-lg-0">
                 <ColorPreview name="Info Pink" hex="#efb7b6" />
             </div>
-            <div className="col- 12 col-sm mb-lg-0">
+            <div className="col-12 col-sm mb-lg-0">
                 <ColorPreview name="Apricot" hex="#fbf2ea" />
             </div>
         </div>
         <div className="row">
-            <div className="col- 12 col-sm mb-lg-0">
+            <div className="col-12 col-sm mb-lg-0">
                 <ColorPreview name="Light Turquoise" hex="#ebf8f2" />
             </div>
-            <div className="col- 12 col-sm mb-lg-0">
+            <div className="col-12 col-sm mb-lg-0">
                 <ColorPreview name="Turquoise" hex="#31a3ae" />
             </div>
-            <div className="col- 12 col-sm mb-lg-0">
+            <div className="col-12 col-sm mb-lg-0">
                 <ColorPreview name="Turquoise Links" hex="#257886" />
             </div>
         </div>
@@ -90,7 +90,7 @@ const AlertColors = () => (
 const Grayscale = () => (
     <>
         <h2 id="grayscale">Grayscale</h2>
-        <div className="row mt-3">
+        <div className="row">
             <div className="col-12 col-sm">
                 <ColorPreview name="black" hex="#000000" />
             </div>

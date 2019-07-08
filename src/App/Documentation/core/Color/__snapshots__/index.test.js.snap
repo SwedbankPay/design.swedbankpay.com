@@ -111,7 +111,7 @@ exports[`Core: Color Grayscale renders 1`] = `
     Grayscale
   </h2>
   <div
-    className="row mt-3"
+    className="row"
   >
     <div
       className="col-12 col-sm"
@@ -262,7 +262,7 @@ exports[`Core: Color MainColors renders 1`] = `
     className="row"
   >
     <div
-      className="col- 12 col-sm mb-lg-0"
+      className="col-12 col-sm mb-lg-0"
     >
       <ColorPreview
         hex="#fdc129"
@@ -270,7 +270,7 @@ exports[`Core: Color MainColors renders 1`] = `
       />
     </div>
     <div
-      className="col- 12 col-sm mb-lg-0"
+      className="col-12 col-sm mb-lg-0"
     >
       <ColorPreview
         hex="#512b2b"
@@ -278,7 +278,7 @@ exports[`Core: Color MainColors renders 1`] = `
       />
     </div>
     <div
-      className="col- 12 col-sm mb-lg-0"
+      className="col-12 col-sm mb-lg-0"
     >
       <ColorPreview
         hex="#ee7023"
@@ -290,7 +290,7 @@ exports[`Core: Color MainColors renders 1`] = `
     className="row"
   >
     <div
-      className="col- 12 col-sm mb-lg-0"
+      className="col-12 col-sm mb-lg-0"
     >
       <ColorPreview
         hex="#8acdc3"
@@ -298,7 +298,7 @@ exports[`Core: Color MainColors renders 1`] = `
       />
     </div>
     <div
-      className="col- 12 col-sm mb-lg-0"
+      className="col-12 col-sm mb-lg-0"
     >
       <ColorPreview
         hex="#efb7b6"
@@ -306,7 +306,7 @@ exports[`Core: Color MainColors renders 1`] = `
       />
     </div>
     <div
-      className="col- 12 col-sm mb-lg-0"
+      className="col-12 col-sm mb-lg-0"
     >
       <ColorPreview
         hex="#fbf2ea"
@@ -318,7 +318,7 @@ exports[`Core: Color MainColors renders 1`] = `
     className="row"
   >
     <div
-      className="col- 12 col-sm mb-lg-0"
+      className="col-12 col-sm mb-lg-0"
     >
       <ColorPreview
         hex="#ebf8f2"
@@ -326,7 +326,7 @@ exports[`Core: Color MainColors renders 1`] = `
       />
     </div>
     <div
-      className="col- 12 col-sm mb-lg-0"
+      className="col-12 col-sm mb-lg-0"
     >
       <ColorPreview
         hex="#31a3ae"
@@ -334,7 +334,7 @@ exports[`Core: Color MainColors renders 1`] = `
       />
     </div>
     <div
-      className="col- 12 col-sm mb-lg-0"
+      className="col-12 col-sm mb-lg-0"
     >
       <ColorPreview
         hex="#257886"
