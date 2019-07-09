@@ -8,4 +8,6 @@
 
 ### Fixed
 
+- Fixed issue with px.sheet.open and px.sheet.close
+
 ### Removed
