@@ -1,2 +1,2 @@
 (window.webpackJsonpswedbankpay=window.webpackJsonpswedbankpay||[]).push([[5],{354:function(n,w,p){}}]);
-//# sourceMappingURL=designguide.js.map?abc4543f57a2d52548a3
+//# sourceMappingURL=designguide.js.map?2700861c9cbda94f1706
