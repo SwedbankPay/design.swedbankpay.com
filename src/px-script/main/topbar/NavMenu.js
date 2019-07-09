@@ -42,7 +42,11 @@ export default class NavMenu {
     _initAnchors () {
         // Closing menu for clicking on links in SPA's.
         this.navMenuElement.querySelectorAll("a")
-            .forEach(anchor => anchor.addEventListener("click", () => this.close()));
+            .forEach(anchor => anchor.addEventListener("click", () => {
+                if (this.isOpen) {
+                    this.close();
+                }
+            }));
     }
 
     open () {
