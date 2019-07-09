@@ -89,6 +89,13 @@ describe("px-script: sheet", () => {
             expect(sheet.init()).toBeNull();
             expect(console.warn).toHaveBeenCalled();
         });
+
+        it("returns null if the passed id is not found and prints a warning", () => {
+            console.warn = jest.fn();
+
+            expect(sheet.init("invalid-id")).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
+        });
     });
 
     it("button with attribute 'data-sheet-open' pointing to the correct id opens corresponding sheet", () => {
@@ -255,6 +262,25 @@ describe("px-script: sheet", () => {
             expect(renderedSheet.classList).not.toContain("sheet-open");
             expect(document.body.classList).not.toContain("sheet-open");
         });
+
+        it("does not open sheet when the passed sheet is already open and prints a warning to the console", () => {
+            console.warn = jest.fn();
+            ReactDOM.render(<OpenSheet id="demo-sheet" />, div);
+
+            const renderedSheet = document.querySelector(".sheet");
+
+            sheet.init();
+            expect(renderedSheet.classList).toContain("d-block");
+            expect(renderedSheet.classList).toContain("sheet-open");
+            expect(document.body.classList).toContain("sheet-open");
+
+            sheet.open("demo-sheet");
+
+            expect(console.warn).toHaveBeenCalledWith("sheet.open: Sheet with id \"demo-sheet\" is open");
+            expect(renderedSheet.classList).toContain("d-block");
+            expect(renderedSheet.classList).toContain("sheet-open");
+            expect(document.body.classList).toContain("sheet-open");
+        });
     });
 
     describe("sheet.close", () => {
@@ -295,6 +321,25 @@ describe("px-script: sheet", () => {
             expect(renderedSheet.classList).toContain("d-block");
             expect(renderedSheet.classList).toContain("sheet-open");
             expect(document.body.classList).toContain("sheet-open");
+        });
+
+        it("does not close sheet when the passed sheet is close and prints a warning to the console", () => {
+            console.warn = jest.fn();
+            ReactDOM.render(<Sheet id="demo-sheet" />, div);
+
+            const renderedSheet = document.querySelector(".sheet");
+
+            sheet.init();
+            expect(renderedSheet.classList).not.toContain("d-block");
+            expect(renderedSheet.classList).not.toContain("sheet-open");
+            expect(document.body.classList).not.toContain("sheet-open");
+
+            sheet.close("demo-sheet");
+
+            expect(console.warn).toHaveBeenCalledWith("sheet.close: Sheet with id \"demo-sheet\" is not open");
+            expect(renderedSheet.classList).not.toContain("d-block");
+            expect(renderedSheet.classList).not.toContain("sheet-open");
+            expect(document.body.classList).not.toContain("sheet-open");
         });
     });
 
