@@ -37,7 +37,7 @@ exports[`Home: index renders 1`] = `
         className="card card-plain"
       >
         <div
-          className="card-body text-center"
+          className="card-body text-center d-flex flex-column"
         >
           <div
             className="doc-circle"
@@ -54,17 +54,13 @@ exports[`Home: index renders 1`] = `
           <p>
             This paragraph contains some text.
           </p>
-        </div>
-        <footer
-          className="fp-card-footer"
-        >
           <Link
-            className="btn btn-outline-guiding btn-block"
+            className="btn btn-outline-guiding btn-block mt-auto"
             to="/docs/getting-started/introduction"
           >
             Placeholder link
           </Link>
-        </footer>
+        </div>
       </div>
     </div>
     <div
@@ -74,7 +70,7 @@ exports[`Home: index renders 1`] = `
         className="card card-plain"
       >
         <div
-          className="card-body text-center"
+          className="card-body text-center d-flex flex-column"
         >
           <div
             className="doc-circle"
@@ -91,17 +87,13 @@ exports[`Home: index renders 1`] = `
           <p>
             User interface components for websites and web applications
           </p>
-        </div>
-        <footer
-          className="fp-card-footer"
-        >
           <Link
-            className="btn btn-outline-guiding btn-block"
+            className="btn btn-outline-guiding btn-block mt-auto"
             to="/docs/getting-started/introduction"
           >
             Documentation
           </Link>
-        </footer>
+        </div>
       </div>
     </div>
     <div
@@ -111,7 +103,7 @@ exports[`Home: index renders 1`] = `
         className="card card-plain"
       >
         <div
-          className="card-body text-center"
+          className="card-body text-center d-flex flex-column"
         >
           <div
             className="doc-circle"
@@ -128,17 +120,13 @@ exports[`Home: index renders 1`] = `
           <p>
             This paragraph contains some text.
           </p>
-        </div>
-        <footer
-          className="fp-card-footer"
-        >
           <Link
-            className="btn btn-outline-guiding btn-block"
+            className="btn btn-outline-guiding btn-block mt-auto"
             to="/docs/getting-started/introduction"
           >
             Placeholder link
           </Link>
-        </footer>
+        </div>
       </div>
     </div>
   </div>

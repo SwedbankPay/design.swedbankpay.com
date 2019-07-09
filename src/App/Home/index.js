@@ -22,44 +22,38 @@ const Home = () => {
             <div className="row">
                 <div className="col-12 col-md-4 pt-3 pt-md-0 d-flex">
                     <div className="card card-plain">
-                        <div className="card-body text-center">
+                        <div className="card-body text-center d-flex flex-column">
                             <div className="doc-circle">
                                 <i className="material-icons material-icons-large text-white">desktop_windows</i>
                             </div>
                             <h2>Placeholder</h2>
                             <p>This paragraph contains some text.</p>
+                            <Link className="btn btn-outline-guiding btn-block mt-auto" to="/docs/getting-started/introduction">Placeholder link</Link>
                         </div>
-                        <footer className="fp-card-footer">
-                            <Link className="btn btn-outline-guiding btn-block" to="/docs/getting-started/introduction">Placeholder link</Link>
-                        </footer>
                     </div>
                 </div>
                 <div className="col-12 col-md-4 pt-3 pt-md-0 d-flex">
                     <div className="card card-plain">
-                        <div className="card-body text-center">
+                        <div className="card-body text-center d-flex flex-column">
                             <div className="doc-circle">
                                 <i className="material-icons material-icons-large text-white">desktop_windows</i>
                             </div>
                             <h2>Web</h2>
                             <p>User interface components for websites and web applications</p>
+                            <Link className="btn btn-outline-guiding btn-block mt-auto" to="/docs/getting-started/introduction">Documentation</Link>
                         </div>
-                        <footer className="fp-card-footer">
-                            <Link className="btn btn-outline-guiding btn-block" to="/docs/getting-started/introduction">Documentation</Link>
-                        </footer>
                     </div>
                 </div>
                 <div className="col-12 col-md-4 pt-3 pt-md-0 d-flex">
                     <div className="card card-plain">
-                        <div className="card-body text-center">
+                        <div className="card-body text-center d-flex flex-column">
                             <div className="doc-circle">
                                 <i className="material-icons material-icons-large text-white">desktop_windows</i>
                             </div>
                             <h2>Placeholder</h2>
                             <p>This paragraph contains some text.</p>
+                            <Link className="btn btn-outline-guiding btn-block mt-auto" to="/docs/getting-started/introduction">Placeholder link</Link>
                         </div>
-                        <footer className="fp-card-footer">
-                            <Link className="btn btn-outline-guiding btn-block" to="/docs/getting-started/introduction">Placeholder link</Link>
-                        </footer>
                     </div>
                 </div>
             </div>
