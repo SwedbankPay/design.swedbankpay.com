@@ -14,8 +14,6 @@ export default class NavMenu {
         this.linkContainer = this.navMenuElement.querySelector(".topbar-link-container");
         this.closeNavIcon = this.navMenuElement.querySelector(".close-topbar-nav");
         this.btnElement = topbarComponent.querySelector(SELECTORS.BTN);
-        this.iconElement = this.btnElement ? this.btnElement.querySelector(SELECTORS.ICON) : null;
-        this.userIcon = this.iconElement ? this.iconElement.innerHTML : null;
 
         if (this.btnElement) {
             this.btnElement.addEventListener("click", e => {
@@ -51,8 +49,6 @@ export default class NavMenu {
         handleScrollbar();
         this.isOpen = true;
 
-        if (this.iconElement) { this.iconElement.innerHTML = "close"; }
-
         this.navMenuElement.classList.add("d-block");
         setTimeout(() => {
             this.navMenuElement.classList.add("topbar-nav-open");
@@ -62,8 +58,6 @@ export default class NavMenu {
     close () {
         handleScrollbar();
         this.isOpen = false;
-
-        if (this.iconElement) { this.iconElement.innerHTML = this.userIcon; }
 
         this.navMenuElement.classList.remove("topbar-nav-open");
         setTimeout(() => {
