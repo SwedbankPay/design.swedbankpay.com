@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin: @nav-margin-responsive;
+    margin: 1rem 0;
 
     > ul {
         display: flex;
@@ -11,14 +11,11 @@
         list-style: none;
 
         li {
-            margin-left: @base-margin-sm;
-            margin-top: @base-margin-sm;
-            margin-right: @base-margin-sm;
-
             a {
                 border-bottom: none;
                 display: inline-flex;
                 text-decoration: none;
+                padding: 0.75rem;
 
                 span {
                     display: none;
@@ -120,7 +117,6 @@
 .nav-vertical () {
     ul {
         flex-direction: column;
-        margin: @nav-margin-tablet;
 
         li {
             margin: 0;
@@ -218,17 +214,10 @@
         display: none;
     }
 
-    margin: @nav-margin;
-
     ul {
-        > :first-child {
-            margin-top: 0;
-        }
+        margin-left: -0.5rem;
 
         li {
-            margin-left: @base-margin-sm;
-            margin-top: @base-margin-sm;
-
             &:last-child {
                 .submenu {
                     ul {
@@ -252,6 +241,8 @@
             }
 
             a {
+                padding: 0.5rem;
+
                 span {
                     display: inline;
                 }
