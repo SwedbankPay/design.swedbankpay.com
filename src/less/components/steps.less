@@ -29,6 +29,7 @@
 
             &:hover {
                 background-color: @nearwhite;
+                box-shadow: 1px 0 0 0 @gray-bright, -1px 0 0 0 @gray-bright, 0 1px 0 0 @nearwhite;
             }
         }
 
@@ -124,6 +125,7 @@
 
     .steps-selected {
         background-color: @nearwhite;
+        box-shadow: 1px 0 0 0 @gray-bright, -1px 0 0 0 @gray-bright, 0 1px 0 0 @nearwhite;
     }
 
     .steps-sub-title {
@@ -206,6 +208,10 @@
                 padding: @list-item-padding-desktop-vertical;
                 width: auto;
                 .negative-margin(@list-item-padding-desktop-vertical);
+
+                &.steps-selected {
+                    box-shadow: 0 1px 0 0 @gray-bright, 0 -1px 0 0 @gray-bright;
+                }
             }
 
             /* Circle */
