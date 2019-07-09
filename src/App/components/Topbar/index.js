@@ -2,6 +2,8 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
+const basename = process.env.basename;
+
 const TopbarBtn = ({ icon, text }) => {
     const iconClass = classnames("material-icons", icon === "menu" ? "topbar-btn-icon" : "");
 
@@ -40,43 +42,40 @@ const TopbarMenu = ({ menu, logout }) => {
                         </a>
                     </Fragment>
                 ))}{"\n"}
-                {logout ?
-                    <>
-                        <a className="topbar-link-right" href="#" onClick={e => e.preventDefault()}>
-                            {"\n"}
-                            <i className="material-icons">exit_to_app</i>
-                            {"\n"}
-                            <span>Log out</span>
-                            {"\n"}
-                        </a>
-                        {"\n"}
-                    </> : null}
+                {logout ? <TopbarLogout /> : null}
             </div>
         </nav>
     );
 };
+
+const TopbarLogout = () => (
+    <>
+        <a className="topbar-link-right" href="#" onClick={e => e.preventDefault()}>{"\n"}
+            <i className="material-icons">exit_to_app</i>{"\n"}
+            <span>Log out</span>{"\n"}
+        </a>{"\n"}
+    </>
+);
+
+const TopbarLogo = () => (
+    <>
+        <a href="/">{"\n"}
+            <img className="topbar-logo" src={`${basename}img/spay_horizontal_pos.svg`} alt="swedbankpay-logo"/>{"\n"}
+        </a>{"\n"}
+    </>
+);
 
 const Topbar = ({ topbarContent, wide, logout, id }) => (
     <header className={`topbar${wide ? ` topbar-${wide}-wide` : ""}`} id={id}>{"\n"}
         {topbarContent ?
         <>
             <TopbarBtn icon={topbarContent.btn.icon} text={topbarContent.btn.name} target={topbarContent.id} />{"\n"}
-            {"\n"}<a href="#" className="topbar-logo" onClick={e => e.preventDefault()}></a>{"\n"}
+            <TopbarLogo />
             <TopbarMenu menu={topbarContent} logout={!!logout} />
         </> :
         <>
-            {"\n"} <a href="#" className="topbar-logo" onClick={e => e.preventDefault()}></a>{"\n"}
-            {logout ?
-                    <>
-                        <a className="topbar-link-right" href="#" onClick={e => e.preventDefault()}>
-                            {"\n"}
-                            <i className="material-icons">exit_to_app</i>
-                            {"\n"}
-                            <span>Log out</span>
-                            {"\n"}
-                        </a>
-                        {"\n"}
-                    </> : null}
+            <TopbarLogo />
+            {logout ? <TopbarLogout /> : null}
         </>}
     </header>
 );
