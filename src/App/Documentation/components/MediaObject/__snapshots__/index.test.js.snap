@@ -23,13 +23,13 @@ exports[`Documentation: MediaObject MediaPosition renders 1`] = `
       heading="Bob Corlsan"
       imgUrl="https://via.placeholder.com/48x48"
       mediaRight={true}
-      text="bob.corlsan@payex.com"
+      text="bob.corlsan@swedbankpay.com"
     />
     <MediaObject
       heading="Bob Corlsan"
       icon="account_circle"
       mediaRight={true}
-      text="bob.corlsan@payex.com"
+      text="bob.corlsan@swedbankpay.com"
     />
   </ComponentPreview>
 </Fragment>
@@ -57,12 +57,12 @@ exports[`Documentation: MediaObject Overview renders 1`] = `
     <MediaObject
       heading="Bob Corlsan"
       imgUrl="https://via.placeholder.com/48x48"
-      text="bob.corlsan@payex.com"
+      text="bob.corlsan@swedbankpay.com"
     />
     <MediaObject
       heading="Bob Corlsan"
       icon="account_circle"
-      text="bob.corlsan@payex.com"
+      text="bob.corlsan@swedbankpay.com"
     />
   </ComponentPreview>
 </Fragment>
@@ -98,13 +98,13 @@ exports[`Documentation: MediaObject Sizes renders 1`] = `
       heading="Bob Corlsan"
       imgUrl="https://via.placeholder.com/40x40"
       size="sm"
-      text="bob.corlsan@payex.com"
+      text="bob.corlsan@swedbankpay.com"
     />
     <MediaObject
       heading="Bob Corlsan"
       icon="account_circle"
       size="sm"
-      text="bob.corlsan@payex.com"
+      text="bob.corlsan@swedbankpay.com"
     />
   </ComponentPreview>
   <h3>
@@ -119,13 +119,13 @@ exports[`Documentation: MediaObject Sizes renders 1`] = `
       heading="Bob Corlsan"
       imgUrl="https://via.placeholder.com/56x56"
       size="lg"
-      text="bob.corlsan@payex.com"
+      text="bob.corlsan@swedbankpay.com"
     />
     <MediaObject
       heading="Bob Corlsan"
       icon="account_circle"
       size="lg"
-      text="bob.corlsan@payex.com"
+      text="bob.corlsan@swedbankpay.com"
     />
   </ComponentPreview>
 </Fragment>

@@ -4,8 +4,8 @@ import PrismCode from "react-prism";
 import { ComponentPreview, DocContainer } from "#";
 
 const BASENAME = process.env.basename;
-const scriptUrl = `https://design.payex.com${BASENAME}scripts/px-script.js`;
-const styleUrl = `https://design.payex.com${BASENAME}styles/px.css`;
+const scriptUrl = `https://design.swedbankpay.com${BASENAME}scripts/px-script.js`;
+const styleUrl = `https://design.swedbankpay.com${BASENAME}styles/px.css`;
 
 const QuickStart = () => (
     <>
@@ -36,7 +36,7 @@ const JavaScript = () => (
 
 const Introduction = () => (
     <DocContainer docToc>
-        <p className="lead">Get started with the PayEx DesignGuide.</p>
+        <p className="lead">Get started with the Swedbank Pay DesignGuide.</p>
         <QuickStart />
         <Css />
         <JavaScript />

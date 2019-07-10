@@ -120,7 +120,7 @@ const PaymentIcons = () => (
                         <span>5792*********138</span>{"\n"}
                         <span className="badge badge-blue ml-2">new</span>{"\n"}
                     </div>{"\n"}
-                    <a href="https://developer.payex.com">developer.payex.com</a>{"\n"}
+                    <a href="https://developer.payex.com">developer.swedbankpay.com</a>{"\n"}
                 </li>
                 <li>
                     <div className="d-flex align-items-center">{"\n"}
@@ -226,7 +226,7 @@ class Icons extends Component {
     render () {
         return (
             <DocContainer docToc>
-                <p className="lead">The PayEx DesignGuide includes a variety of icons. Mainly we use the material icons, but we also include icons for known payment providers, and flags for most nations in the world.</p>
+                <p className="lead">The Swedbank Pay DesignGuide includes a variety of icons. Mainly we use the material icons, but we also include icons for known payment providers, and flags for most nations in the world.</p>
                 <MaterialIcons />
                 <PaymentIcons />
                 <Flags />

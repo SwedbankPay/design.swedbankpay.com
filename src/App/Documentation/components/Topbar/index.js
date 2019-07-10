@@ -38,7 +38,7 @@ const Overview = () => (
             <li>Anchor with class <Property value=".topbar-logo" /> to display the logo and make it clickable.</li>
         </ul>
         <p>
-            With this you get a topbar with the PayEx logo.
+            With this you get a topbar with the Swedbank Pay logo.
             In the topbar you can add additional functionality like a menu containing links. To enable this add a <PrismCode className="language-html">{"<button>"}</PrismCode> and
             a <PrismCode className="language-html">{"<nav>"}</PrismCode> containing anchors. Remember to include <Attribute data name="toggle-nav" value="{your_nav_id}"/> as a <PrismCode className="language-html">{"<button>"}</PrismCode> attribute
             to get the menu to appear when the menu-button is clicked.

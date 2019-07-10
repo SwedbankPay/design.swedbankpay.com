@@ -8,7 +8,7 @@ const DocHeading = ({ location }) => {
         .map((word, i) => i > 0 ? word : word.charAt(0).toUpperCase() + word.substr(1))
         .join(" ");
 
-    document.title = `${title} | PayEx DesignGuide`;
+    document.title = `${title} | Swedbank Pay DesignGuide`;
 
     return <h2 className="h1">{title}</h2>;
 };
