@@ -58,7 +58,7 @@ const Example = () => (
 
 const RequireAction = () => (
     <>
-        <h2 id="example">Example</h2>
+        <h2 id="require-action">Require action</h2>
         <p>
             To disable the listener responsible for closing the sheet when a user clicks outside, add <Property value="data-require-action" /> to your Sheet.
         </p>
