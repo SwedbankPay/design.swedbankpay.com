@@ -204,14 +204,14 @@
             text-align: left;
             padding: @list-item-padding-desktop-vertical;
 
+            &.steps-selected {
+                box-shadow: 0 1px 0 0 @gray-bright, 0 -1px 0 0 @gray-bright;
+            }
+
             > a {
                 padding: @list-item-padding-desktop-vertical;
                 width: auto;
                 .negative-margin(@list-item-padding-desktop-vertical);
-
-                &.steps-selected {
-                    box-shadow: 0 1px 0 0 @gray-bright, 0 -1px 0 0 @gray-bright;
-                }
             }
 
             /* Circle */
