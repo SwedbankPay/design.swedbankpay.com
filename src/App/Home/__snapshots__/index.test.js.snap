@@ -49,16 +49,16 @@ exports[`Home: index renders 1`] = `
             </i>
           </div>
           <h2>
-            Placeholder
+            Web
           </h2>
           <p>
-            This paragraph contains some text.
+            User interface components for websites and web applications
           </p>
           <Link
             className="btn btn-outline-guiding btn-block mt-auto"
             to="/docs/getting-started/introduction"
           >
-            Placeholder link
+            Documentation
           </Link>
         </div>
       </div>
@@ -82,16 +82,16 @@ exports[`Home: index renders 1`] = `
             </i>
           </div>
           <h2>
-            Web
+            Placeholder
           </h2>
           <p>
-            User interface components for websites and web applications
+            This paragraph contains some text.
           </p>
           <Link
             className="btn btn-outline-guiding btn-block mt-auto"
             to="/docs/getting-started/introduction"
           >
-            Documentation
+            Placeholder link
           </Link>
         </div>
       </div>

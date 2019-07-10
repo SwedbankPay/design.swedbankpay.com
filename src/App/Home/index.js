@@ -26,9 +26,9 @@ const Home = () => {
                             <div className="doc-circle">
                                 <i className="material-icons material-icons-large text-white">desktop_windows</i>
                             </div>
-                            <h2>Placeholder</h2>
-                            <p>This paragraph contains some text.</p>
-                            <Link className="btn btn-outline-guiding btn-block mt-auto" to="/docs/getting-started/introduction">Placeholder link</Link>
+                            <h2>Web</h2>
+                            <p>User interface components for websites and web applications</p>
+                            <Link className="btn btn-outline-guiding btn-block mt-auto" to="/docs/getting-started/introduction">Documentation</Link>
                         </div>
                     </div>
                 </div>
@@ -38,9 +38,9 @@ const Home = () => {
                             <div className="doc-circle">
                                 <i className="material-icons material-icons-large text-white">desktop_windows</i>
                             </div>
-                            <h2>Web</h2>
-                            <p>User interface components for websites and web applications</p>
-                            <Link className="btn btn-outline-guiding btn-block mt-auto" to="/docs/getting-started/introduction">Documentation</Link>
+                            <h2>Placeholder</h2>
+                            <p>This paragraph contains some text.</p>
+                            <Link className="btn btn-outline-guiding btn-block mt-auto" to="/docs/getting-started/introduction">Placeholder link</Link>
                         </div>
                     </div>
                 </div>
