@@ -8,6 +8,8 @@
 
 ### Changed
 
+- Removed box-shadow from steps component.
+
 ### Fixed
 
 ### Removed
