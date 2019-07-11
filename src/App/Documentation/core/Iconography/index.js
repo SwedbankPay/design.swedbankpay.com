@@ -120,7 +120,7 @@ const PaymentIcons = () => (
                         <span>5792*********138</span>{"\n"}
                         <span className="badge badge-blue ml-2">new</span>{"\n"}
                     </div>{"\n"}
-                    <a href="https://developer.payex.com">developer.swedbankpay.com</a>{"\n"}
+                    <a href="https://payex.com">www.payex.com</a>{"\n"}
                 </li>
                 <li>
                     <div className="d-flex align-items-center">{"\n"}

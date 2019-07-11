@@ -913,9 +913,9 @@ exports[`Core: Iconography PaymentIcons onClick prevents default 1`] = `
         
 
         <a
-          href="https://developer.payex.com"
+          href="https://payex.com"
         >
-          developer.swedbankpay.com
+          www.payex.com
         </a>
         
 
@@ -1360,9 +1360,9 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
         
 
         <a
-          href="https://developer.payex.com"
+          href="https://payex.com"
         >
-          developer.swedbankpay.com
+          www.payex.com
         </a>
         
 
