@@ -49,12 +49,16 @@ class Expandable {
         this.expHeader = element.querySelector(".expandable-header");
         this.isOpen = element.classList.contains("expandable-open");
 
-        this.expHeader
-            ? this.elem.querySelector(".expandable-header").addEventListener("click", () => {
-                this.elem.classList.toggle("expandable-open");
-                this.isOpen = !this.isOpen;
-            })
-            : console.warn("expandable: No expandable-header found");
+        if (!this.expHeader) {
+            console.warn("expandable: No expandable-header found");
+
+            return null;
+        }
+
+        this.elem.querySelector(".expandable-header").addEventListener("click", () => {
+            this.elem.classList.toggle("expandable-open");
+            this.isOpen = !this.isOpen;
+        });
     }
 }
 
