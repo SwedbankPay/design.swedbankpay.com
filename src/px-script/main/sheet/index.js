@@ -21,14 +21,12 @@ class Sheet {
 
         if (this.closeIcon) {
             this.closeIcon.addEventListener("click", e => {
-                handleScrollbar();
                 e.preventDefault();
                 this.close();
             });
         }
 
         if (this.isOpen) {
-            handleScrollbar();
             this._el.classList.add("d-block");
             document.body.classList.add("sheet-open");
         }
@@ -37,7 +35,6 @@ class Sheet {
         if (!this.requireAction) {
             this._el.addEventListener("click", e => {
                 if (e.target.classList.contains("sheet-open")) {
-                    handleScrollbar();
                     this.close();
                 }
             });
@@ -83,6 +80,7 @@ class Sheet {
     }
 
     close () {
+        handleScrollbar();
         this.isOpen = false;
         this._el.classList.remove("sheet-open");
         document.body.classList.remove("sheet-open");
@@ -140,7 +138,6 @@ const _addEscListener = () => {
     // Close sheet on esc
     document.addEventListener("keydown", e => {
         if (e.keyCode === 27 && document.body.classList.contains("sheet-open")) {
-            handleScrollbar();
             _sheets.forEach(sheet => sheet.isOpen ? sheet.close() : null);
         }
     });
@@ -152,14 +149,18 @@ const close = id => {
     _sheets.forEach(d => d.id === id ? sheet = d : null);
 
     try {
+        if (!sheet.isOpen) {
+            console.warn(`sheet.close: Sheet with id "${id}" is not open`);
+
+            return false;
+        }
+
         sheet.close();
     } catch (e) {
         console.warn(`sheet.close: No sheet with id "${id}" found.`);
 
         return false;
     }
-
-    handleScrollbar();
 
     return sheet;
 };
@@ -170,6 +171,12 @@ const open = id => {
     _sheets.forEach(d => d.id === id ? sheet = d : null);
 
     try {
+        if (sheet.isOpen) {
+            console.warn(`sheet.open: Sheet with id "${id}" is open`);
+
+            return false;
+        }
+
         sheet.open();
     } catch (e) {
         console.warn(`sheet.open: No sheet with id "${id}" found.`);

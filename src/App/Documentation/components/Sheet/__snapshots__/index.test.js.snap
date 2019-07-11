@@ -453,9 +453,9 @@ exports[`Documentation: Sheet JavascriptMethods renders 1`] = `
 exports[`Documentation: Sheet RequireAction renders 1`] = `
 <Fragment>
   <h2
-    id="example"
+    id="require-action"
   >
-    Example
+    Require action
   </h2>
   <p>
     To disable the listener responsible for closing the sheet when a user clicks outside, add 
