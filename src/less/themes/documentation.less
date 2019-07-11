@@ -7,7 +7,7 @@
     .doc-container {
         margin-right: auto;
         margin-left: auto;
-        padding: 2rem 3rem;
+        padding: 1rem 3rem;
         width: 100%;
 
         @media (max-width: @screen-md-max) {
@@ -38,11 +38,21 @@
 
     .documentation-nav {
         padding: @base-padding;
-        max-height: calc(100vh - 237px);
-        overflow-y: auto;
+        max-height: calc(100vh - 226px);
+        overflow-y: hidden;
+
+        &:hover {
+            overflow-y: auto;
+        }
 
         .nav-group {
             margin-bottom: @base-margin;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+
+            &:first-child {
+                padding-top: 1rem;
+                border-top: 1px solid rgba(0, 0, 0, 0.075);
+            }
 
             a {
                 text-decoration: none;
@@ -126,8 +136,7 @@
         padding-left: 0;
         padding-right: 0;
         background: @bg-white;
-        min-height: calc(~"100vh - 166px");
-        border-left: 1px solid rgba(0, 0, 0, 0.1);
+        min-height: calc(~"100vh - 156px");
     }
 
     .view-heading {
@@ -154,7 +163,6 @@
 
     .doc-search {
         padding: @base-padding 1rem;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.075);
 
         .search-results {
             position: absolute;

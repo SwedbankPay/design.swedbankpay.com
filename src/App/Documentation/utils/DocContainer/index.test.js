@@ -1,23 +1,25 @@
 import React from "react";
-import { mount } from "enzyme";
+import { shallow } from "enzyme";
 
 import DocContainer from "./index";
 
-describe("Utilities: DeprecatedComponentAlert", () => {
+describe("Utilities: DocContainer", () => {
     it("is defined", () => {
         expect(DocContainer).toBeDefined();
     });
 
     it("renders", () => {
-        const wrapper = mount(<DocContainer>Component</DocContainer>);
+        const wrapper = shallow(<DocContainer>Component</DocContainer>);
 
         expect(wrapper).toMatchSnapshot();
     });
 
     it("renders with a table of contents(doctoc) if prop docToc is given", () => {
-        const wrapper = mount(<DocContainer docToc>Component</DocContainer>);
+        const wrapper = shallow(
+            <DocContainer docToc>Component</DocContainer>
+        );
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("doc-toc");
+        expect(wrapper.debug()).toContain("<DocToc component={[Function: DocContent]} />");
     });
 });
