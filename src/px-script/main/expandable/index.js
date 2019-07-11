@@ -4,15 +4,15 @@ class Accordion {
         this.expandables = element.querySelectorAll(".expandable");
         this.containsOpen = [...this.expandables].find(exp => exp.isOpen);
 
-        if (!this.expandables) {
-            console.warn("accordion.init(): No expandable  found")
+        if (!this.expandables.length) {
+            console.warn("accordion: No expandable found");
         }
 
         this.expandables.forEach(exp => {
             const expHeader = exp.querySelector(".expandable-header");
 
             if (!expHeader) {
-                console.warn("accordion.init(): No expandable-header found");
+                console.warn("accordion: No expandable-header found");
 
                 return null;
             }
@@ -54,7 +54,7 @@ class Expandable {
                 this.elem.classList.toggle("expandable-open");
                 this.isOpen = !this.isOpen;
             })
-            : console.warn("expandable.init: No expandable-header found");
+            : console.warn("expandable: No expandable-header found");
     }
 }
 
