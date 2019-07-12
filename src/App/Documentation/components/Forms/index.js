@@ -40,7 +40,7 @@ const Overview = () => (
                     label="Email"
                     autoComplete="email"
                     placeholder="Enter your email"
-                    helpBlock="The last part is probably @payex.com"
+                    helpBlock="The last part is probably @swedbankpay.com"
                 />
                 <div className="form-group">
                     <Checkbox label={"Subscribe to our Shovels and Tapestry catalogue"} id="subscribe-checkbox" />
@@ -199,7 +199,7 @@ const StaticText = () => (
         <h2 id="static-text">Static text</h2>
         <p>To just display static text in forms use a <PrismCode className="language-html">{"<span>"}</PrismCode> inside a form</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <FormControlText label="Company" text="PayEx" />
+            <FormControlText label="Company" text="Swedbank Pay" />
             <FormControlText label="Employee" text="Bob Corlsan" />
         </ComponentPreview>
     </>

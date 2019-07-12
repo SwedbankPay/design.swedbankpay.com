@@ -11,7 +11,7 @@ const OurFavicon = () => (
         <h2 id="our-favicon">Our favicon</h2>
         <p>Our favicon...</p>
         <ComponentPreview language="html" showCasePanel>
-            <img src={`${BASENAME}icons/android-chrome-96x96.png`} alt="PayEx favicon"/>
+            <img src={`${BASENAME}icons/android-chrome-96x96.png`} alt="Swedbank Pay favicon"/>
         </ComponentPreview>
     </>
 );
@@ -49,8 +49,8 @@ const Usage = () => (
             <link rel="shortcut icon" href="/icons/favicon.ico" />
             <meta name="apple-mobile-web-app-capable" content="yes" />
             <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-            <meta name="apple-mobile-web-app-title" content="PayEx App" />
-            <meta name="application-name" content="PayEx App" />
+            <meta name="apple-mobile-web-app-title" content="Swedbank Pay App" />
+            <meta name="application-name" content="Swedbank Pay App" />
             <meta name="mobile-web-app-capable" content="yes" />
             <meta name="msapplication-TileColor" content="#000" />
             <meta name="msapplication-TileImage" content="/icons/mstile-144x144.png" />
@@ -62,7 +62,7 @@ const Usage = () => (
 
 const Favicons = () => (
     <DocContainer docToc>
-        <p className="lead">The PayEx favicon...</p>
+        <p className="lead">The Swedbank Pay favicon...</p>
         <OurFavicon />
         <Usage />
     </DocContainer>

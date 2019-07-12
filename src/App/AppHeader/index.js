@@ -20,7 +20,7 @@ const AppHeader = () => (
                 <NavLink to="/examples" activeClassName="active"><span>Examples</span></NavLink>
                 <div className="topbar-info topbar-link-right">
                     <div className="topbar-info-contact">
-                        <a href="https://github.com/PayEx/design.payex.com" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/SwedbankPay/design.swedbankpay.com" target="_blank" rel="noopener noreferrer">
                             <GithubLogo />
                         </a>
                         <a href="https://payex.slack.com/messages/C0L3W8B2S/" target="_blank" rel="noopener noreferrer">
@@ -28,7 +28,7 @@ const AppHeader = () => (
                         </a>
                     </div>
                     <div className="topbar-info-version">
-                        <a href={`https://github.com/PayEx/design.payex.com/releases/tag/${pkg.version}`} target="_blank" rel="noopener noreferrer">v.{process.env.version || pkg.version}</a>
+                        <a href={`https://github.com/SwedbankPay/design.swedbankpay.com/releases/tag/${pkg.version}`} target="_blank" rel="noopener noreferrer">v.{process.env.version || pkg.version}</a>
                     </div>
                 </div>
             </div>

@@ -17,7 +17,7 @@ describe("Utilities: DocHeading", () => {
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("<h2 class=\"h1\">Test</h2>");
-        expect(document.title).toEqual("Test | PayEx DesignGuide");
+        expect(document.title).toEqual("Test | Swedbank Pay DesignGuide");
     });
 
     it("correctly formats title", () => {
@@ -29,7 +29,7 @@ describe("Utilities: DocHeading", () => {
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("<h2 class=\"h1\">Test test</h2>");
-        expect(document.title).toEqual("Test test | PayEx DesignGuide");
+        expect(document.title).toEqual("Test test | Swedbank Pay DesignGuide");
     });
 });
 

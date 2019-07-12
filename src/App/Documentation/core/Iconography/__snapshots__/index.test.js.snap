@@ -913,9 +913,9 @@ exports[`Core: Iconography PaymentIcons onClick prevents default 1`] = `
         
 
         <a
-          href="https://developer.payex.com"
+          href="https://payex.com"
         >
-          developer.payex.com
+          www.payex.com
         </a>
         
 
@@ -1360,9 +1360,9 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
         
 
         <a
-          href="https://developer.payex.com"
+          href="https://payex.com"
         >
-          developer.payex.com
+          www.payex.com
         </a>
         
 
@@ -1445,7 +1445,7 @@ exports[`Core: Iconography renders 1`] = `
   <p
     className="lead"
   >
-    The PayEx DesignGuide includes a variety of icons. Mainly we use the material icons, but we also include icons for known payment providers, and flags for most nations in the world.
+    The Swedbank Pay DesignGuide includes a variety of icons. Mainly we use the material icons, but we also include icons for known payment providers, and flags for most nations in the world.
   </p>
   <MaterialIcons />
   <PaymentIcons />

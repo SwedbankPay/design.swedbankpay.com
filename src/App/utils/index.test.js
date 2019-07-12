@@ -7,8 +7,8 @@ describe("App utils: setTitle", () => {
     });
 
     it("correctly sets document title", () => {
-        expect(document.title).not.toEqual("TEST | PayEx DesignGuide");
+        expect(document.title).not.toEqual("TEST | Swedbank Pay DesignGuide");
         setTitle("TEST");
-        expect(document.title).toEqual("TEST | PayEx DesignGuide");
+        expect(document.title).toEqual("TEST | Swedbank Pay DesignGuide");
     });
 });

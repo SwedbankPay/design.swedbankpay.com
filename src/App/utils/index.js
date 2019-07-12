@@ -1,7 +1,7 @@
 import LoadingComponent from "./LoadingComponent";
 
 const setTitle = title => {
-    document.title = `${title} | PayEx DesignGuide`;
+    document.title = `${title} | Swedbank Pay DesignGuide`;
 };
 
 export {
