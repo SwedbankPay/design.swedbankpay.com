@@ -103,20 +103,54 @@ describe("px-script: expandable", () => {
             expect(returnVal[1].elem.classList.contains("expandable")).toBeTruthy();
         });
 
-        it("prints a warning message if no accordion or expandable exist", () => {
-            console.warn = jest.fn();
+        describe("warning messages", () => {
+            beforeEach(() => console.warn = jest.fn());
 
-            expandable.init();
+            it("prints a warning message if no accordion or expandable exist", () => {
+                console.warn = jest.fn();
 
-            expect(console.warn).toHaveBeenCalled();
-        });
+                expandable.init();
 
-        it("prints a warning message if no  matching the passed ID exist", () => {
-            console.warn = jest.fn();
+                expect(console.warn).toHaveBeenCalled();
+            });
 
-            expandable.init("invalid-id");
+            it("prints a warning message if no  matching the passed ID exist", () => {
+                console.warn = jest.fn();
 
-            expect(console.warn).toHaveBeenCalled();
+                expandable.init("invalid-id");
+
+                expect(console.warn).toHaveBeenCalled();
+            });
+
+            it("prints a warning if an accordion without expandables is initialized", () => {
+                console.warn = jest.fn();
+                ReactDOM.render(<div id="empty-accordion" className="accordion"/>, div);
+
+                expandable.init("empty-accordion");
+
+                expect(console.warn).toHaveBeenCalledWith("accordion: No expandable found");
+            });
+
+            it("prints a warning when an expandable without .expandable-header is initialized", () => {
+                console.warn = jest.fn();
+                ReactDOM.render(<div id="exp-no-header" className="expandable" />, div);
+
+                expandable.init("exp-no-header");
+
+                expect(console.warn).toHaveBeenCalledWith("expandable: No expandable-header found");
+            });
+
+            it("prints a warning if an accordion containing expandables without and expandable-header", () => {
+                ReactDOM.render(
+                    <div id="acc-exp-no-header" className="accordion">
+                        <div className="expandable" />
+                    </div>
+                    , div);
+
+                expandable.init("acc-exp-no-header");
+
+                expect(console.warn).toHaveBeenCalledWith("accordion: No expandable-header found");
+            });
         });
     });
 
