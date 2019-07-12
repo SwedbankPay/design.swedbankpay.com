@@ -119,13 +119,27 @@
         flex-direction: column;
 
         li {
+            position: relative;
             margin: 0;
+
+            &.active,
+            a.active {
+                &:before {
+                    content: "";
+                    position: absolute;
+                    background-color: @brand-primary;
+                    width: 4px;
+                    height: 100%;
+                    bottom: 0;
+                    top: 0;
+                    left: 0;
+                }
+            }
 
             &.responsive-hidden {
                 display: list-item;
 
                 .submenu {
-                    span,
                     ul {
                         margin-top: 0;
                         display: none;
@@ -136,7 +150,9 @@
             .submenu {
                 .material-icons,
                 > a {
-                    display: none;
+                    :not(.submenu-icon-clickable) {
+                        display: none;
+                    }
 
                     &.submenu-icon-clickable {
                         display: list-item;
@@ -145,9 +161,13 @@
                 }
 
                 &.submenu-open {
-                    position: relative;
+                    &.submenu-active-parent {
+                        &:before {
+                            content: none;
+                        }
+                    }
 
-                    > .submenu-icon-clickable {
+                    > a {
                         background-color: @gray-bright;
                         border-radius: 2px;
                     }
@@ -158,9 +178,9 @@
                         background-color: @white;
                         display: block;
                         position: absolute;
-                        left: 3.4rem;
-                        top: 0;
-                        box-shadow: @action-list-shadow;
+                        left: 3.7rem;
+                        top: 0.5rem;
+                        box-shadow: 1px 3px 5px 0 rgba(0, 0, 0, 0.25);
                         white-space: nowrap;
 
                         li {
@@ -169,6 +189,17 @@
                                 font-size: @base-font-size;
                                 color: @dark-brown;
                                 padding: 0.5rem 1rem 0.5rem 0.5rem;
+
+                                span {
+                                    display: list-item;
+                                }
+                            }
+
+
+                            &.active {
+                                a:before {
+                                    content: none;
+                                }
                             }
 
                             &:hover {
@@ -186,8 +217,21 @@
                 }
 
                 &.submenu-active-parent {
+                    position: relative;
+
                     i {
                         color: @dark-brown;
+                    }
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        background-color: @brand-primary;
+                        width: 4px;
+                        height: 100%;
+                        bottom: 0;
+                        top: 0;
+                        left: 0;
                     }
                 }
             }
@@ -195,8 +239,6 @@
             i {
                 margin-right: 0;
                 font-size: @nav-submenu-icon-fontsize-vertical;
-                padding: @base-padding-sm;
-                padding-left: @nav-submenu-p-icon-left;
                 line-height: @nav-icon-lineheight;
             }
         }
@@ -223,6 +265,12 @@
                     ul {
                         margin-bottom: 0;
                     }
+                }
+            }
+
+            a.active {
+                &:before {
+                    content: none;
                 }
             }
 

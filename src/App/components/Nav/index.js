@@ -47,12 +47,16 @@ class Nav extends Component {
                         <li key={`nav-item-${name}-${i}`}>{"\n"}
                             { subItems ?
                                 <div className="submenu">{"\n"}
-                                    <i className="material-icons">{icon}</i>{"\n"}
-                                    <a href="#" onClick={e => this.setActive(e, `sub-${i}-0`)}>{name}</a>
+                                    <a href="#" onClick={e => this.setActive(e, `sub-${i}-0`)}>
+                                        <i className="material-icons">{icon}</i>{"\n"}
+                                        <span>{name}</span>{"\n"}
+                                    </a>
                                     <ul>
                                         {subItems.map((itemsname, j) => (
                                             <li key={`nav-subItems-${itemsname}-${j}`} className={this.state.active === `sub-${i}-${j}` ? "active" : null}>
-                                                <a href="#" onClick = {e => this.setActive(e, `sub-${i}-${j}`)}>{itemsname}</a>
+                                                <a href="#" onClick = {e => this.setActive(e, `sub-${i}-${j}`)}>
+                                                    <span>{itemsname}</span>
+                                                </a>
                                             </li>
                                         ))}
                                     </ul>
