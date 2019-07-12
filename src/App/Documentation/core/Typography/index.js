@@ -12,7 +12,7 @@ const Fonts = () => {
     return (
         <>
             <h2 id="font">Font</h2>
-            <p>The standard font PayEx DesignGuide uses is Roboto. It is included in the stylesheet. The included font weights you can use are: 300, 400, 500, 700 & 900. Both normal and italicized is available.</p>
+            <p>The standard font Swedbank Pay DesignGuide uses is Roboto. It is included in the stylesheet. The included font weights you can use are: 300, 400, 500, 700 & 900. Both normal and italicized is available.</p>
             <h3>Removing Roboto</h3>
             <p>In case your site is not going to use Roboto, you can modify your font stack by modifying the snippet below to your preferance and add it to your custom stylesheet.</p>
             <ComponentPreview language="css" codeFigure>
@@ -25,7 +25,7 @@ const Fonts = () => {
 const Headings = () => (
     <>
         <h2 id="headings">Headings</h2>
-        <p>PayEx DesignGuide provides basic styling on all headings (h1-h6).</p>
+        <p>Swedbank Pay DesignGuide provides basic styling on all headings (h1-h6).</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <h1>Heading h1</h1>
             <h2>Heading h2</h2>
@@ -149,7 +149,7 @@ const Blockquotes = () => {
 
 const Typography = () => (
     <DocContainer docToc>
-        <p className="lead">Documentation and examples for PayEx DesignGuide typography.</p>
+        <p className="lead">Documentation and examples for Swedbank Pay DesignGuide typography.</p>
         <Fonts />
         <Headings />
         <Small />

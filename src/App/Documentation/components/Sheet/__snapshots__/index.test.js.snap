@@ -450,6 +450,49 @@ exports[`Documentation: Sheet JavascriptMethods renders 1`] = `
 </Fragment>
 `;
 
+exports[`Documentation: Sheet RequireAction renders 1`] = `
+<Fragment>
+  <h2
+    id="require-action"
+  >
+    Require action
+  </h2>
+  <p>
+    To disable the listener responsible for closing the sheet when a user clicks outside, add 
+    <Property
+      value="data-require-action"
+    />
+     to your Sheet.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Sheet
+      id="demo-sheet-1"
+      requireAction={true}
+    >
+      <h2>
+        Sheet component
+      </h2>
+      <p>
+        This sheet can not be closed by clicking outside its white area.
+      </p>
+    </Sheet>
+    
+
+    <button
+      className="btn btn-executive"
+      data-sheet-open="demo-sheet-1"
+      type="button"
+    >
+      Open sheet
+    </button>
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Documentation: Sheet renders 1`] = `
 <DocContainer
   docToc={true}

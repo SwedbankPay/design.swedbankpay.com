@@ -15,7 +15,7 @@ exports[`Core: Favicons OurFavicon renders 1`] = `
     showCasePanel={true}
   >
     <img
-      alt="PayEx favicon"
+      alt="Swedbank Pay favicon"
       src="/TEST/icons/android-chrome-96x96.png"
     />
   </ComponentPreview>
@@ -205,11 +205,11 @@ exports[`Core: Favicons Usage renders 1`] = `
       name="apple-mobile-web-app-status-bar-style"
     />
     <meta
-      content="PayEx App"
+      content="Swedbank Pay App"
       name="apple-mobile-web-app-title"
     />
     <meta
-      content="PayEx App"
+      content="Swedbank Pay App"
       name="application-name"
     />
     <meta
@@ -243,7 +243,7 @@ exports[`Core: Favicons renders 1`] = `
   <p
     className="lead"
   >
-    The PayEx favicon...
+    The Swedbank Pay favicon...
   </p>
   <OurFavicon />
   <Usage />

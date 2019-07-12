@@ -60,7 +60,7 @@ const Accordion = () => (
 );
 
 const Expandable = () => {
-    useEffect(() => expandable.init());
+    useEffect(() => { expandable.init(); }, []);
 
     return (
         <DocContainer docToc>

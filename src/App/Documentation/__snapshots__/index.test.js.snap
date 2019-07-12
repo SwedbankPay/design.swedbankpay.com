@@ -8,23 +8,7 @@ exports[`Documentation: index renders 1`] = `
     className="row"
   >
     <div
-      className="sidebar-heading col-xxl-2 col-md-3"
-    >
-      <h1>
-        DesignGuide
-      </h1>
-    </div>
-    <div
-      className="view-heading col-xxl-10 col-md-9"
-    >
-      <withRouter(DocHeading) />
-    </div>
-  </div>
-  <div
-    className="row"
-  >
-    <div
-      className="col-xxl-2 col-md-3 p-0"
+      className="col-xxl-2 col-md-3"
     >
       <withRouter(SelectPanel) />
     </div>

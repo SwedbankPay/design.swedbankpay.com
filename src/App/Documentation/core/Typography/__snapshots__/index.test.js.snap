@@ -155,7 +155,7 @@ exports[`Core: Typography Fonts renders 1`] = `
     Font
   </h2>
   <p>
-    The standard font PayEx DesignGuide uses is Roboto. It is included in the stylesheet. The included font weights you can use are: 300, 400, 500, 700 & 900. Both normal and italicized is available.
+    The standard font Swedbank Pay DesignGuide uses is Roboto. It is included in the stylesheet. The included font weights you can use are: 300, 400, 500, 700 & 900. Both normal and italicized is available.
   </p>
   <h3>
     Removing Roboto
@@ -182,7 +182,7 @@ exports[`Core: Typography Headings renders 1`] = `
     Headings
   </h2>
   <p>
-    PayEx DesignGuide provides basic styling on all headings (h1-h6).
+    Swedbank Pay DesignGuide provides basic styling on all headings (h1-h6).
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -471,7 +471,7 @@ exports[`Core: Typography renders 1`] = `
   <p
     className="lead"
   >
-    Documentation and examples for PayEx DesignGuide typography.
+    Documentation and examples for Swedbank Pay DesignGuide typography.
   </p>
   <Fonts />
   <Headings />

@@ -7,7 +7,7 @@ exports[`Component: footer renders 1`] = `
   <p
     className="lead"
   >
-    Footer
+    The Swedbank Pay footer.
   </p>
   <Overview />
 </DocContainer>

@@ -387,7 +387,7 @@ exports[`Documentation: Forms Overview form prevents default 1`] = `
       />
       <InputGroup
         autoComplete="email"
-        helpBlock="The last part is probably @payex.com"
+        helpBlock="The last part is probably @swedbankpay.com"
         id="email-address"
         label="Email"
         placeholder="Enter your email"
@@ -493,7 +493,7 @@ exports[`Documentation: Forms Overview renders 1`] = `
       />
       <InputGroup
         autoComplete="email"
-        helpBlock="The last part is probably @payex.com"
+        helpBlock="The last part is probably @swedbankpay.com"
         id="email-address"
         label="Email"
         placeholder="Enter your email"
@@ -657,7 +657,7 @@ exports[`Documentation: Forms StaticText renders 1`] = `
   >
     <FormControlText
       label="Company"
-      text="PayEx"
+      text="Swedbank Pay"
     />
     <FormControlText
       label="Employee"

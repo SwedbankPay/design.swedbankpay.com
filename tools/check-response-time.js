@@ -1,6 +1,6 @@
 const fetch = require("node-fetch");
 
-const BASEURL = `https://design.payex.com/${process.env.basename}`;
+const BASEURL = `https://design.swedbankpay.com/${process.env.basename}`;
 const STATES = {
     SUCCESS: {
         COLOR: "#2da944",
@@ -67,7 +67,7 @@ const getResponseTime = async url => {
 
 const checkResponseTime = async () => {
     const slackMessageData = {
-        text: `Response times for \`${process.env.basename}\` (\`<https://github.com/PayEx/design.payex.com/commit/${process.env.GitVersion_ShortSha}|${process.env.GitVersion_ShortSha}>\`):`,
+        text: `Response times for \`${process.env.basename}\` (\`<https://github.com/SwedbankPay/design.swedbankpay.com/commit/${process.env.GitVersion_ShortSha}|${process.env.GitVersion_ShortSha}>\`):`,
         attachments: []
     };
     let highMsWarning = false;
@@ -120,7 +120,7 @@ const interval = setInterval(() => {
     if (intervalCount >= 120) {
         clearInterval(interval);
         sendSlackMessage({
-            text: `Response time check for \`${process.env.basename}\` (\`<https://github.com/PayEx/design.payex.com/commit/${process.env.GitVersion_ShortSha}|${process.env.GitVersion_ShortSha}>\`) timed out.`
+            text: `Response time check for \`${process.env.basename}\` (\`<https://github.com/SwedbankPay/design.swedbankpay.com/commit/${process.env.GitVersion_ShortSha}|${process.env.GitVersion_ShortSha}>\`) timed out.`
         });
         console.log("Response time check timed out.");
     }

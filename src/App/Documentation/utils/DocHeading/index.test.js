@@ -1,5 +1,5 @@
-// import React from "react";
-// import { shallow } from "enzyme";
+import React from "react";
+import { shallow } from "enzyme";
 
 import DocHeading from "./index";
 
@@ -8,28 +8,28 @@ describe("Utilities: DocHeading", () => {
         expect(DocHeading).toBeDefined();
     });
 
-    // it("renders heading and updates document title", () => {
-    //     const location = { pathname: "test" };
+    it("renders heading and updates document title", () => {
+        const location = { pathname: "test" };
 
-    //     const wrapper = shallow(
-    //         <DocHeading location={location} />
-    //     );
+        const wrapper = shallow(
+            <DocHeading.WrappedComponent location={location} />
+        );
 
-    //     expect(wrapper).toMatchSnapshot();
-    //     expect(wrapper.contains(<h1>Test</h1>)).toEqual(true);
-    //     expect(document.title).toEqual("Test | PayEx DesignGuide");
-    // });
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.html()).toContain("<h2 class=\"h1\">Test</h2>");
+        expect(document.title).toEqual("Test | Swedbank Pay DesignGuide");
+    });
 
-    // it("correctly formats title", () => {
-    //     const location = { pathname: "test-test" };
+    it("correctly formats title", () => {
+        const location = { pathname: "test-test" };
 
-    //     const wrapper = shallow(
-    //         <DocHeading location={location} />
-    //     );
+        const wrapper = shallow(
+            <DocHeading.WrappedComponent location={location} />
+        );
 
-    //     expect(wrapper).toMatchSnapshot();
-    //     expect(wrapper.contains(<h1>Test test</h1>)).toEqual(true);
-    //     expect(document.title).toEqual("Test test | PayEx DesignGuide");
-    // });
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.html()).toContain("<h2 class=\"h1\">Test test</h2>");
+        expect(document.title).toEqual("Test test | Swedbank Pay DesignGuide");
+    });
 });
 

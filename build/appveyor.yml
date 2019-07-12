@@ -36,7 +36,7 @@ install:
 
       gitversion /l console /output buildserver
 
-      npm install
+      npm ci
 
       npm install -g codecov
 

@@ -1,12 +1,15 @@
 import React from "react";
 
-import { ComponentPreview, DocContainer } from "#";
+import { ComponentPreview, DocContainer, Property } from "#";
 import FooterComponent from "@/Footer";
 
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
-        <p>Footer.</p>
+        <p>
+            Our footer component comes with the same brand color as our topbar.
+            The <Property value="page-footer-rights" /> class ensures that the wrapped text is centered on mobile.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <FooterComponent />
         </ComponentPreview>
@@ -16,7 +19,7 @@ const Overview = () => (
 const Footer = () => (
     <DocContainer docToc>
         <p className="lead">
-            Footer
+            The Swedbank Pay footer.
         </p>
         <Overview />
     </DocContainer>

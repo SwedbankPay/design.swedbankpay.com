@@ -29,7 +29,7 @@ exports[`GettingStarted: Introduction Css renders 1`] = `
     language="html"
   >
     <link
-      href="https://design.payex.com/TEST/styles/px.css"
+      href="https://design.swedbankpay.com/TEST/styles/px.css"
       rel="stylesheet"
     />
   </ComponentPreview>
@@ -65,7 +65,7 @@ exports[`GettingStarted: Introduction JavaScript renders 1`] = `
     language="html"
   >
     <script
-      src="https://design.payex.com/TEST/scripts/px-script.js"
+      src="https://design.swedbankpay.com/TEST/scripts/px-script.js"
     />
   </ComponentPreview>
 </Fragment>
@@ -91,7 +91,7 @@ exports[`GettingStarted: Introduction renders 1`] = `
   <p
     className="lead"
   >
-    Get started with the PayEx DesignGuide.
+    Get started with the Swedbank Pay DesignGuide.
   </p>
   <QuickStart />
   <Css />
