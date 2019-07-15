@@ -8,41 +8,127 @@ const MainColors = () => (
     <>
         <h2 id="main-colors">Main colors</h2>
         <p>The main color palette of Swedbank Pay</p>
-        <div className="row">
-            <div className="col-12 col-sm mb-lg-0">
+        <ul className="list row">
+            <li className="col-12 col-sm mb-lg-0">
                 <ColorPreview name="Yellow" hex="#fdc129" />
-            </div>
-            <div className="col-12 col-sm mb-lg-0">
+            </li>
+            <li className="col-12 col-sm mb-lg-0">
                 <ColorPreview name="Brown" hex="#512b2b" />
-            </div>
-            <div className="col-12 col-sm mb-lg-0">
+            </li>
+            <li className="col-12 col-sm mb-lg-0">
                 <ColorPreview name="Orange Main" hex="#ee7023" />
-            </div>
-        </div>
-        <div className="row">
-            <div className="col-12 col-sm mb-lg-0">
+            </li>
+        </ul>
+        <ul className="list row">
+            <li className="col-12 col-sm mb-lg-0">
                 <ColorPreview name="Info Turquoise" hex="#8acdc3" />
-            </div>
-            <div className="col-12 col-sm mb-lg-0">
+            </li>
+            <li className="col-12 col-sm mb-lg-0">
                 <ColorPreview name="Info Pink" hex="#efb7b6" />
-            </div>
-            <div className="col-12 col-sm mb-lg-0">
+            </li>
+            <li className="col-12 col-sm mb-lg-0">
                 <ColorPreview name="Apricot" hex="#fbf2ea" />
-            </div>
-        </div>
-        <div className="row">
-            <div className="col-12 col-sm mb-lg-0">
+            </li>
+        </ul>
+        <ul className="list row">
+            <li className="col-12 col-sm mb-lg-0">
                 <ColorPreview name="Light Turquoise" hex="#ebf8f2" />
-            </div>
-            <div className="col-12 col-sm mb-lg-0">
+            </li>
+            <li className="col-12 col-sm mb-lg-0">
                 <ColorPreview name="Turquoise" hex="#31a3ae" />
-            </div>
-            <div className="col-12 col-sm mb-lg-0">
+            </li>
+            <li className="col-12 col-sm mb-lg-0">
                 <ColorPreview name="Turquoise Links" hex="#257886" />
-            </div>
-        </div>
+            </li>
+        </ul>
+        <ul className="list row">
+            <li className="col-12 col-sm col-xl-3 mb-lg-0">
+                <figure className="color-preview">
+                    <svg viewBox="0 0 100 30">
+                        <rect width="100" height="100" fill="#fdc128"/>
+                    </svg>
+                    <figcaption>
+                        Name
+                        <small><br/>HEX: #fdc129</small>
+                    </figcaption>
+                </figure>
+            </li>
+            <li className="col-12 col-sm col-xl-3 mb-lg-0">
+                <figure className="color-preview">
+                    <svg viewBox="0 0 100 30">
+                        <rect width="100" height="100" fill="#fdc128"/>
+                    </svg>
+                    <figcaption>
+                        Name
+                        <small><br/>HEX: #fdc129</small>
+                    </figcaption>
+                </figure>
+            </li>
+            <li className="col-12 col-sm col-xl-3 mb-lg-0">
+                <figure className="color-preview">
+                    <svg viewBox="0 0 100 30">
+                        <rect width="100" height="100" fill="#fdc128"/>
+                    </svg>
+                    <figcaption>
+                        Name
+                        <small><br/>HEX: #fdc129</small>
+                    </figcaption>
+                </figure>
+            </li>
+            <li className="col-12 col-sm col-xl-3 mb-lg-0">
+                <figure className="color-preview">
+                    <svg viewBox="0 0 100 30">
+                        <rect width="100" height="100" fill="#fdc128"/>
+                    </svg>
+                    <figcaption>
+                        Name
+                        <small><br/>HEX: #fdc129</small>
+                    </figcaption>
+                </figure>
+            </li>
+        </ul>
     </>
 );
+
+// const MainColors = () => (
+//     <>
+//         <h2 id="main-colors">Main colors</h2>
+//         <p>The main color palette of Swedbank Pay</p>
+//         <div className="row">
+//             <div className="col-12 col-sm mb-lg-0">
+//                 <ColorPreview name="Yellow" hex="#fdc129" />
+//             </div>
+//             <div className="col-12 col-sm mb-lg-0">
+//                 <ColorPreview name="Brown" hex="#512b2b" />
+//             </div>
+//             <div className="col-12 col-sm mb-lg-0">
+//                 <ColorPreview name="Orange Main" hex="#ee7023" />
+//             </div>
+//         </div>
+//         <div className="row">
+//             <div className="col-12 col-sm mb-lg-0">
+//                 <ColorPreview name="Info Turquoise" hex="#8acdc3" />
+//             </div>
+//             <div className="col-12 col-sm mb-lg-0">
+//                 <ColorPreview name="Info Pink" hex="#efb7b6" />
+//             </div>
+//             <div className="col-12 col-sm mb-lg-0">
+//                 <ColorPreview name="Apricot" hex="#fbf2ea" />
+//             </div>
+//         </div>
+//         <div className="row">
+//             <div className="col-12 col-sm mb-lg-0">
+//                 <ColorPreview name="Light Turquoise" hex="#ebf8f2" />
+//             </div>
+//             <div className="col-12 col-sm mb-lg-0">
+//                 <ColorPreview name="Turquoise" hex="#31a3ae" />
+//             </div>
+//             <div className="col-12 col-sm mb-lg-0">
+//                 <ColorPreview name="Turquoise Links" hex="#257886" />
+//             </div>
+//         </div>
+//     </>
+// );
 
 const AlertColors = () => (
     <>

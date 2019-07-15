@@ -5,13 +5,13 @@ const ColorPreview = ({ name, hex }) => {
     const style = { backgroundColor: hex };
 
     return (
-        <div className="color-preview">
+        <figure className="color-preview">
             <div className={`color-block${name === "white" ? " border" : ""}`} style={style}/>
-            <p>
-                {name}
-                <small><br/>HEX: {hex}</small>
-            </p>
-        </div>
+            <figcaption>
+                {name}<br/>
+                <small>HEX: {hex}</small>
+            </figcaption>
+        </figure>
     );
 };
 
