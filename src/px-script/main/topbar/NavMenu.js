@@ -53,10 +53,8 @@ export default class NavMenu {
         handleScrollbar();
         this.isOpen = true;
 
+        this.navMenuElement.classList.add("topbar-nav-open");
         this.navMenuElement.classList.add("d-block");
-        setTimeout(() => {
-            this.navMenuElement.classList.add("topbar-nav-open");
-        }, 100);
     }
 
     close () {
@@ -64,9 +62,11 @@ export default class NavMenu {
         this.isOpen = false;
 
         this.navMenuElement.classList.remove("topbar-nav-open");
+        this.navMenuElement.classList.add("topbar-nav-closing");
         setTimeout(() => {
+            this.navMenuElement.classList.remove("topbar-nav-closing");
             this.navMenuElement.classList.remove("d-block");
-        }, 300);
+        }, 500);
     }
 
     _containsPoint (x, y) {
