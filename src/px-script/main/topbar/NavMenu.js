@@ -66,7 +66,7 @@ export default class NavMenu {
         setTimeout(() => {
             this.navMenuElement.classList.remove("topbar-nav-closing");
             this.navMenuElement.classList.remove("d-block");
-        }, 500);
+        }, 300);
     }
 
     _containsPoint (x, y) {
