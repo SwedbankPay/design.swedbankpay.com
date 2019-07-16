@@ -29,381 +29,7 @@ exports[`Component: Topbar -  logo prevents default when clicked 1`] = `
 </Topbar>
 `;
 
-exports[`Component: Topbar -  menu links prevents default when clicked 1`] = `
-<Topbar
-  topbarContent={
-    Object {
-      "btn": Object {
-        "icon": "menu",
-        "name": "Menu",
-      },
-      "items": Array [
-        Object {
-          "icon": "home",
-          "name": "Home",
-        },
-        Object {
-          "icon": "shopping_cart",
-          "name": "Purchase history",
-        },
-        Object {
-          "icon": "settings",
-          "name": "Settings",
-        },
-      ],
-    }
-  }
->
-  <header
-    className="topbar"
-  >
-    
-
-    <TopbarBtn
-      icon="menu"
-      text="Menu"
-    >
-      <button
-        className="topbar-btn"
-        type="button"
-      >
-        
-		
-        <i
-          className="material-icons topbar-btn-icon"
-        >
-          menu
-        </i>
-        
-		
-      </button>
-    </TopbarBtn>
-    
-
-    <TopbarLogo>
-      <a
-        className="topbar-logo"
-        href="/"
-        onClick={[Function]}
-      >
-        
-
-        <img
-          alt="swedbankpay-logo"
-          src="/TEST/img/spay_horizontal_pos.svg"
-        />
-        
-
-      </a>
-      
-
-    </TopbarLogo>
-    <TopbarMenu
-      logout={false}
-      menu={
-        Object {
-          "btn": Object {
-            "icon": "menu",
-            "name": "Menu",
-          },
-          "items": Array [
-            Object {
-              "icon": "home",
-              "name": "Home",
-            },
-            Object {
-              "icon": "shopping_cart",
-              "name": "Purchase history",
-            },
-            Object {
-              "icon": "settings",
-              "name": "Settings",
-            },
-          ],
-        }
-      }
-    >
-      <nav
-        className="topbar-nav"
-      >
-        <div
-          className="topbar-link-container"
-        >
-          
-
-          <i
-            className="material-icons close-topbar-nav"
-          >
-            close
-          </i>
-          
-
-          <a
-            className="active"
-            href="#"
-            onClick={[Function]}
-          >
-            
-
-            <i
-              className="material-icons"
-            >
-              home
-            </i>
-            
-
-            <span>
-              Home
-            </span>
-            
-
-          </a>
-          
-
-          <a
-            className={null}
-            href="#"
-            onClick={[Function]}
-          >
-            
-
-            <i
-              className="material-icons"
-            >
-              shopping_cart
-            </i>
-            
-
-            <span>
-              Purchase history
-            </span>
-            
-
-          </a>
-          
-
-          <a
-            className={null}
-            href="#"
-            onClick={[Function]}
-          >
-            
-
-            <i
-              className="material-icons"
-            >
-              settings
-            </i>
-            
-
-            <span>
-              Settings
-            </span>
-            
-
-          </a>
-          
-
-        </div>
-      </nav>
-    </TopbarMenu>
-  </header>
-</Topbar>
-`;
-
-exports[`Component: Topbar -  renders a topbar with only a clickable logo 1`] = `
-<header
-  className="topbar"
->
-  
-
-  <TopbarLogo />
-</header>
-`;
-
-exports[`Component: Topbar -  renders a topbar-menu-button when content is provided 1`] = `
-<Topbar
-  topbarContent={
-    Object {
-      "btn": Object {
-        "icon": "menu",
-        "name": "Menu",
-      },
-      "items": Array [
-        Object {
-          "icon": "home",
-          "name": "Home",
-        },
-        Object {
-          "icon": "shopping_cart",
-          "name": "Purchase history",
-        },
-        Object {
-          "icon": "settings",
-          "name": "Settings",
-        },
-      ],
-    }
-  }
->
-  <header
-    className="topbar"
-  >
-    
-
-    <TopbarBtn
-      icon="menu"
-      text="Menu"
-    >
-      <button
-        className="topbar-btn"
-        type="button"
-      >
-        
-		
-        <i
-          className="material-icons topbar-btn-icon"
-        >
-          menu
-        </i>
-        
-		
-      </button>
-    </TopbarBtn>
-    
-
-    <TopbarLogo>
-      <a
-        className="topbar-logo"
-        href="/"
-        onClick={[Function]}
-      >
-        
-
-        <img
-          alt="swedbankpay-logo"
-          src="/TEST/img/spay_horizontal_pos.svg"
-        />
-        
-
-      </a>
-      
-
-    </TopbarLogo>
-    <TopbarMenu
-      logout={false}
-      menu={
-        Object {
-          "btn": Object {
-            "icon": "menu",
-            "name": "Menu",
-          },
-          "items": Array [
-            Object {
-              "icon": "home",
-              "name": "Home",
-            },
-            Object {
-              "icon": "shopping_cart",
-              "name": "Purchase history",
-            },
-            Object {
-              "icon": "settings",
-              "name": "Settings",
-            },
-          ],
-        }
-      }
-    >
-      <nav
-        className="topbar-nav"
-      >
-        <div
-          className="topbar-link-container"
-        >
-          
-
-          <i
-            className="material-icons close-topbar-nav"
-          >
-            close
-          </i>
-          
-
-          <a
-            className="active"
-            href="#"
-            onClick={[Function]}
-          >
-            
-
-            <i
-              className="material-icons"
-            >
-              home
-            </i>
-            
-
-            <span>
-              Home
-            </span>
-            
-
-          </a>
-          
-
-          <a
-            className={null}
-            href="#"
-            onClick={[Function]}
-          >
-            
-
-            <i
-              className="material-icons"
-            >
-              shopping_cart
-            </i>
-            
-
-            <span>
-              Purchase history
-            </span>
-            
-
-          </a>
-          
-
-          <a
-            className={null}
-            href="#"
-            onClick={[Function]}
-          >
-            
-
-            <i
-              className="material-icons"
-            >
-              settings
-            </i>
-            
-
-            <span>
-              Settings
-            </span>
-            
-
-          </a>
-          
-
-        </div>
-      </nav>
-    </TopbarMenu>
-  </header>
-</Topbar>
-`;
-
-exports[`Component: Topbar -  renders logout link and adds topbar-link-right to the logout 1`] = `
+exports[`Component: Topbar -  props logout it prevents default when clicked 1`] = `
 <Topbar
   logout={true}
 >
@@ -458,15 +84,65 @@ exports[`Component: Topbar -  renders logout link and adds topbar-link-right to 
 </Topbar>
 `;
 
-exports[`Component: Topbar -  renders topbar-link-container and a logout link 1`] = `
+exports[`Component: Topbar -  props logout renders logout link and adds topbar-link-right to the logout 1`] = `
 <Topbar
   logout={true}
+>
+  <header
+    className="topbar"
+  >
+    
+
+    <TopbarLogo>
+      <a
+        className="topbar-logo"
+        href="/"
+        onClick={[Function]}
+      >
+        
+
+        <img
+          alt="swedbankpay-logo"
+          src="/TEST/img/spay_horizontal_pos.svg"
+        />
+        
+
+      </a>
+      
+
+    </TopbarLogo>
+    <TopbarLogout>
+      <a
+        className="topbar-link-right"
+        href="#"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          className="material-icons"
+        >
+          exit_to_app
+        </i>
+        
+
+        <span>
+          Log out
+        </span>
+        
+
+      </a>
+      
+
+    </TopbarLogout>
+  </header>
+</Topbar>
+`;
+
+exports[`Component: Topbar -  props topbarContent menu links prevents default when clicked 1`] = `
+<Topbar
   topbarContent={
     Object {
-      "btn": Object {
-        "icon": "menu",
-        "name": "Menu",
-      },
       "items": Array [
         Object {
           "icon": "home",
@@ -489,10 +165,500 @@ exports[`Component: Topbar -  renders topbar-link-container and a logout link 1`
   >
     
 
-    <TopbarBtn
-      icon="menu"
-      text="Menu"
+    <TopbarBtn>
+      <button
+        className="topbar-btn"
+        type="button"
+      >
+        
+		
+        <i
+          className="material-icons topbar-btn-icon"
+        >
+          menu
+        </i>
+        
+		
+      </button>
+    </TopbarBtn>
+    
+
+    <TopbarLogo>
+      <a
+        className="topbar-logo"
+        href="/"
+        onClick={[Function]}
+      >
+        
+
+        <img
+          alt="swedbankpay-logo"
+          src="/TEST/img/spay_horizontal_pos.svg"
+        />
+        
+
+      </a>
+      
+
+    </TopbarLogo>
+    <TopbarMenu
+      logout={false}
+      menu={
+        Object {
+          "items": Array [
+            Object {
+              "icon": "home",
+              "name": "Home",
+            },
+            Object {
+              "icon": "shopping_cart",
+              "name": "Purchase history",
+            },
+            Object {
+              "icon": "settings",
+              "name": "Settings",
+            },
+          ],
+        }
+      }
     >
+      <nav
+        className="topbar-nav"
+      >
+        <div
+          className="topbar-link-container"
+        >
+          
+
+          <i
+            className="material-icons close-topbar-nav"
+          >
+            close
+          </i>
+          
+
+          <a
+            className="active"
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              className="material-icons"
+            >
+              home
+            </i>
+            
+
+            <span>
+              Home
+            </span>
+            
+
+          </a>
+          
+
+          <a
+            className={null}
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              className="material-icons"
+            >
+              shopping_cart
+            </i>
+            
+
+            <span>
+              Purchase history
+            </span>
+            
+
+          </a>
+          
+
+          <a
+            className={null}
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              className="material-icons"
+            >
+              settings
+            </i>
+            
+
+            <span>
+              Settings
+            </span>
+            
+
+          </a>
+          
+
+        </div>
+      </nav>
+    </TopbarMenu>
+  </header>
+</Topbar>
+`;
+
+exports[`Component: Topbar -  props topbarContent renders a topbar menu without menu icons 1`] = `
+<Topbar
+  topbarContent={
+    Object {
+      "items": Array [
+        Object {
+          "name": "Home",
+        },
+        Object {
+          "name": "Purchase history",
+        },
+        Object {
+          "name": "Settings",
+        },
+      ],
+    }
+  }
+>
+  <header
+    className="topbar"
+  >
+    
+
+    <TopbarBtn>
+      <button
+        className="topbar-btn"
+        type="button"
+      >
+        
+		
+        <i
+          className="material-icons topbar-btn-icon"
+        >
+          menu
+        </i>
+        
+		
+      </button>
+    </TopbarBtn>
+    
+
+    <TopbarLogo>
+      <a
+        className="topbar-logo"
+        href="/"
+        onClick={[Function]}
+      >
+        
+
+        <img
+          alt="swedbankpay-logo"
+          src="/TEST/img/spay_horizontal_pos.svg"
+        />
+        
+
+      </a>
+      
+
+    </TopbarLogo>
+    <TopbarMenu
+      logout={false}
+      menu={
+        Object {
+          "items": Array [
+            Object {
+              "name": "Home",
+            },
+            Object {
+              "name": "Purchase history",
+            },
+            Object {
+              "name": "Settings",
+            },
+          ],
+        }
+      }
+    >
+      <nav
+        className="topbar-nav"
+      >
+        <div
+          className="topbar-link-container"
+        >
+          
+
+          <i
+            className="material-icons close-topbar-nav"
+          >
+            close
+          </i>
+          
+
+          <a
+            className="active"
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            
+
+            <span>
+              Home
+            </span>
+            
+
+          </a>
+          
+
+          <a
+            className={null}
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            
+
+            <span>
+              Purchase history
+            </span>
+            
+
+          </a>
+          
+
+          <a
+            className={null}
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            
+
+            <span>
+              Settings
+            </span>
+            
+
+          </a>
+          
+
+        </div>
+      </nav>
+    </TopbarMenu>
+  </header>
+</Topbar>
+`;
+
+exports[`Component: Topbar -  props topbarContent renders a topbar-menu-button when content is provided 1`] = `
+<Topbar
+  topbarContent={
+    Object {
+      "items": Array [
+        Object {
+          "icon": "home",
+          "name": "Home",
+        },
+        Object {
+          "icon": "shopping_cart",
+          "name": "Purchase history",
+        },
+        Object {
+          "icon": "settings",
+          "name": "Settings",
+        },
+      ],
+    }
+  }
+>
+  <header
+    className="topbar"
+  >
+    
+
+    <TopbarBtn>
+      <button
+        className="topbar-btn"
+        type="button"
+      >
+        
+		
+        <i
+          className="material-icons topbar-btn-icon"
+        >
+          menu
+        </i>
+        
+		
+      </button>
+    </TopbarBtn>
+    
+
+    <TopbarLogo>
+      <a
+        className="topbar-logo"
+        href="/"
+        onClick={[Function]}
+      >
+        
+
+        <img
+          alt="swedbankpay-logo"
+          src="/TEST/img/spay_horizontal_pos.svg"
+        />
+        
+
+      </a>
+      
+
+    </TopbarLogo>
+    <TopbarMenu
+      logout={false}
+      menu={
+        Object {
+          "items": Array [
+            Object {
+              "icon": "home",
+              "name": "Home",
+            },
+            Object {
+              "icon": "shopping_cart",
+              "name": "Purchase history",
+            },
+            Object {
+              "icon": "settings",
+              "name": "Settings",
+            },
+          ],
+        }
+      }
+    >
+      <nav
+        className="topbar-nav"
+      >
+        <div
+          className="topbar-link-container"
+        >
+          
+
+          <i
+            className="material-icons close-topbar-nav"
+          >
+            close
+          </i>
+          
+
+          <a
+            className="active"
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              className="material-icons"
+            >
+              home
+            </i>
+            
+
+            <span>
+              Home
+            </span>
+            
+
+          </a>
+          
+
+          <a
+            className={null}
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              className="material-icons"
+            >
+              shopping_cart
+            </i>
+            
+
+            <span>
+              Purchase history
+            </span>
+            
+
+          </a>
+          
+
+          <a
+            className={null}
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              className="material-icons"
+            >
+              settings
+            </i>
+            
+
+            <span>
+              Settings
+            </span>
+            
+
+          </a>
+          
+
+        </div>
+      </nav>
+    </TopbarMenu>
+  </header>
+</Topbar>
+`;
+
+exports[`Component: Topbar -  props topbarContent renders topbar-link-container and a logout link 1`] = `
+<Topbar
+  logout={true}
+  topbarContent={
+    Object {
+      "items": Array [
+        Object {
+          "icon": "home",
+          "name": "Home",
+        },
+        Object {
+          "icon": "shopping_cart",
+          "name": "Purchase history",
+        },
+        Object {
+          "icon": "settings",
+          "name": "Settings",
+        },
+      ],
+    }
+  }
+>
+  <header
+    className="topbar"
+  >
+    
+
+    <TopbarBtn>
       <button
         className="topbar-btn"
         type="button"
@@ -532,10 +698,6 @@ exports[`Component: Topbar -  renders topbar-link-container and a logout link 1`
       logout={true}
       menu={
         Object {
-          "btn": Object {
-            "icon": "menu",
-            "name": "Menu",
-          },
           "items": Array [
             Object {
               "icon": "home",
@@ -665,14 +827,10 @@ exports[`Component: Topbar -  renders topbar-link-container and a logout link 1`
 </Topbar>
 `;
 
-exports[`Component: Topbar -  renders topbar-link-container and populates it with given information without a logout link 1`] = `
+exports[`Component: Topbar -  props topbarContent renders topbar-link-container and populates it with given information without a logout link 1`] = `
 <Topbar
   topbarContent={
     Object {
-      "btn": Object {
-        "icon": "menu",
-        "name": "Menu",
-      },
       "items": Array [
         Object {
           "icon": "home",
@@ -695,10 +853,7 @@ exports[`Component: Topbar -  renders topbar-link-container and populates it wit
   >
     
 
-    <TopbarBtn
-      icon="menu"
-      text="Menu"
-    >
+    <TopbarBtn>
       <button
         className="topbar-btn"
         type="button"
@@ -738,10 +893,6 @@ exports[`Component: Topbar -  renders topbar-link-container and populates it wit
       logout={false}
       menu={
         Object {
-          "btn": Object {
-            "icon": "menu",
-            "name": "Menu",
-          },
           "items": Array [
             Object {
               "icon": "home",
@@ -845,4 +996,45 @@ exports[`Component: Topbar -  renders topbar-link-container and populates it wit
     </TopbarMenu>
   </header>
 </Topbar>
+`;
+
+exports[`Component: Topbar -  props wide renders a topbar with the given breakpoint 1`] = `
+<Topbar
+  wide="lg"
+>
+  <header
+    className="topbar topbar-lg-wide"
+  >
+    
+
+    <TopbarLogo>
+      <a
+        className="topbar-logo"
+        href="/"
+        onClick={[Function]}
+      >
+        
+
+        <img
+          alt="swedbankpay-logo"
+          src="/TEST/img/spay_horizontal_pos.svg"
+        />
+        
+
+      </a>
+      
+
+    </TopbarLogo>
+  </header>
+</Topbar>
+`;
+
+exports[`Component: Topbar -  renders a topbar with only a clickable logo 1`] = `
+<header
+  className="topbar"
+>
+  
+
+  <TopbarLogo />
+</header>
 `;

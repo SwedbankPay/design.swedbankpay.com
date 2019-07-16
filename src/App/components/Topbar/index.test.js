@@ -9,10 +9,6 @@ describe("Component: Topbar - ", () => {
     document.body.appendChild(div);
 
     const menu = {
-        btn: {
-            name: "Menu",
-            icon: "menu"
-        },
         items: [
             {
                 name: "Home",
@@ -29,6 +25,20 @@ describe("Component: Topbar - ", () => {
         ]
     };
 
+    const menuNoIcons = {
+        items: [
+            {
+                name: "Home"
+            },
+            {
+                name: "Purchase history"
+            },
+            {
+                name: "Settings"
+            }
+        ]
+    };
+
     it("is defined", () => {
         expect(Topbar).toBeDefined();
     });
@@ -41,74 +51,113 @@ describe("Component: Topbar - ", () => {
         expect(wrapper.html()).not.toContain("topbar-nav");
     });
 
-    it("renders logout link and adds topbar-link-right to the logout", () => {
-        const wrapper = mount(<Topbar logout/>);
+    describe("props", () => {
+        describe("wide", () => {
+            it("renders a topbar with the given breakpoint", () => {
+                const wrapper = mount(<Topbar wide="lg" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("Log out");
-        expect(wrapper.html()).not.toContain("topbar-nav");
-        expect(wrapper.find(".topbar-link-right").html()).toContain("Log out");
-    });
+                expect(wrapper).toMatchSnapshot();
+                expect(wrapper.find(".topbar-lg-wide").length).toEqual(1);
+            });
+        });
 
-    it("renders topbar-link-container and populates it with given information without a logout link", () => {
-        const wrapper = mount(<Topbar topbarContent={menu} />);
+        describe("topbarContent", () => {
+            it("renders a topbar menu without menu icons", () => {
+                const wrapper = mount(<Topbar topbarContent={menuNoIcons} />);
+                const menuContainer = wrapper.find(".topbar-link-container");
+                const menuIcons = menuContainer.find("i.material-icons");
 
-        const renderedTopbar = wrapper.find(".topbar");
-        const renderedNav = renderedTopbar.find(".topbar-nav");
+                expect(wrapper).toMatchSnapshot();
+                expect(menuIcons.length).toEqual(1); // The close icon will always render [AW]
+            });
 
-        expect(wrapper).toMatchSnapshot();
-        expect(renderedTopbar).toBeTruthy();
-        expect(renderedNav).toBeTruthy();
+            it("renders topbar-link-container and populates it with given information without a logout link", () => {
+                const wrapper = mount(<Topbar topbarContent={menu} />);
 
-        menu.items.forEach(item => expect(renderedNav.html()).toContain(item.name));
+                const renderedTopbar = wrapper.find(".topbar");
+                const renderedNav = renderedTopbar.find(".topbar-nav");
 
-        expect(renderedNav.html()).not.toContain("Log out");
-    });
+                expect(wrapper).toMatchSnapshot();
+                expect(renderedTopbar).toBeTruthy();
+                expect(renderedNav).toBeTruthy();
 
-    it("renders topbar-link-container and a logout link", () => {
-        const wrapper = mount(<Topbar topbarContent={menu} logout />);
-        const renderedTopbar = wrapper.find(".topbar");
-        const renderedNav = renderedTopbar.find(".topbar-nav");
+                menu.items.forEach(item => expect(renderedNav.html()).toContain(item.name));
 
-        expect(wrapper).toMatchSnapshot();
-        expect(renderedTopbar).toBeTruthy();
-        expect(renderedNav).toBeTruthy();
-        expect(renderedNav.find(".topbar-link-right .material-icons").text()).toEqual("exit_to_app");
-    });
+                expect(renderedNav.html()).not.toContain("Log out");
+            });
 
-    it("renders a topbar-menu-button when content is provided", () => {
-        const wrapper = mount(<Topbar topbarContent={menu} />);
+            it("renders topbar-link-container and a logout link", () => {
+                const wrapper = mount(<Topbar topbarContent={menu} logout />);
+                const renderedTopbar = wrapper.find(".topbar");
+                const renderedNav = renderedTopbar.find(".topbar-nav");
 
-        const renderedTopbar = wrapper.find(".topbar");
-        const topbarMenuBtn = renderedTopbar.find(".topbar-menu-button");
+                expect(wrapper).toMatchSnapshot();
+                expect(renderedTopbar).toBeTruthy();
+                expect(renderedNav).toBeTruthy();
+                expect(renderedNav.find(".topbar-link-right .material-icons").text()).toEqual("exit_to_app");
+            });
 
-        expect(wrapper).toMatchSnapshot();
-        expect(renderedTopbar).toBeTruthy();
-        expect(topbarMenuBtn).toBeTruthy();
+            it("renders a topbar-menu-button when content is provided", () => {
+                const wrapper = mount(<Topbar topbarContent={menu} />);
+
+                const renderedTopbar = wrapper.find(".topbar");
+                const topbarMenuBtn = renderedTopbar.find(".topbar-menu-button");
+
+                expect(wrapper).toMatchSnapshot();
+                expect(renderedTopbar).toBeTruthy();
+                expect(topbarMenuBtn).toBeTruthy();
+            });
+
+            it("menu links prevents default when clicked", () => {
+                const eventHandler = { preventDefault: jest.fn() };
+
+                const wrapper = mount(<Topbar topbarContent={menu} />);
+                const menuLinks = wrapper.find(".topbar-nav a");
+
+                menuLinks.forEach(anchor => {
+                    anchor.simulate("click", eventHandler);
+                });
+
+                expect(wrapper).toMatchSnapshot();
+                expect(eventHandler.preventDefault).toHaveBeenCalled();
+            });
+        });
+
+        describe("logout", () => {
+            it("renders logout link and adds topbar-link-right to the logout", () => {
+                const wrapper = mount(<Topbar logout/>);
+
+                expect(wrapper).toMatchSnapshot();
+                expect(wrapper.html()).toContain("Log out");
+                expect(wrapper.html()).not.toContain("topbar-nav");
+                expect(wrapper.find(".topbar-link-right").html()).toContain("Log out");
+            });
+
+            it("it prevents default when clicked", () => {
+                const eventHandler = { preventDefault: jest.fn() };
+
+                const wrapper = mount(<Topbar logout />);
+                const logout = wrapper.find(".topbar-link-right");
+
+                expect(wrapper).toMatchSnapshot();
+
+                logout.simulate("click", eventHandler);
+
+                expect(eventHandler.preventDefault).toHaveBeenCalled();
+            });
+        });
     });
 
     it("logo prevents default when clicked", () => {
-        const wrapper = mount(<Topbar />);
         const eventHandler = { preventDefault: jest.fn() };
+
+        const wrapper = mount(<Topbar />);
         const logo = wrapper.find(".topbar-logo");
 
         expect(wrapper).toMatchSnapshot();
 
         logo.simulate("click", eventHandler);
 
-        expect(eventHandler.preventDefault).toHaveBeenCalled();
-    });
-
-    it("menu links prevents default when clicked", () => {
-        const wrapper = mount(<Topbar topbarContent={menu} />);
-        const eventHandler = { preventDefault: jest.fn() };
-        const menuLinks = wrapper.find(".topbar-nav a");
-
-        menuLinks.forEach(anchor => {
-            anchor.simulate("click", eventHandler);
-        });
-
-        expect(wrapper).toMatchSnapshot();
         expect(eventHandler.preventDefault).toHaveBeenCalled();
     });
 });

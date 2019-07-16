@@ -1,28 +1,15 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import classnames from "classnames";
 import logo from "$/img/logo/spay_horizontal_pos.svg";
 
 const isDev = process.env.version === "LOCAL_DEV";
 
-const TopbarBtn = ({ icon, text }) => {
-    const iconClass = classnames("material-icons", icon === "menu" ? "topbar-btn-icon" : "");
-
-    if (icon || text) {
-        return (
-            <button type="button" className="topbar-btn">{"\n\t\t"}
-                {icon ?
-                    <>
-                        <i className={iconClass}>{icon}</i>
-                        {"\n\t\t"}
-                    </>
-                    : null}
-            </button>
-        );
-    }
-
-    return null;
-};
+const TopbarBtn = () => (
+    <button type="button" className="topbar-btn">{"\n\t\t"}
+        <i className="material-icons topbar-btn-icon">menu</i>
+        {"\n\t\t"}
+    </button>
+);
 
 const TopbarMenu = ({ menu, logout }) => {
     const { items } = menu;
@@ -70,7 +57,7 @@ const Topbar = ({ topbarContent, wide, logout, id }) => (
     <header className={`topbar${wide ? ` topbar-${wide}-wide` : ""}`} id={id}>{"\n"}
         {topbarContent ?
         <>
-            <TopbarBtn icon={topbarContent.btn.icon} text={topbarContent.btn.name} target={topbarContent.id} />{"\n"}
+            <TopbarBtn />{"\n"}
             <TopbarLogo />
             <TopbarMenu menu={topbarContent} logout={!!logout} />
         </> :
