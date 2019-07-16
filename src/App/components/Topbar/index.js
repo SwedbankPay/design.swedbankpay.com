@@ -1,8 +1,9 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
+import logo from "$/img/logo/spay_horizontal_pos.svg";
 
-const basename = process.env.basename;
+const isDev = process.env.version === "LOCAL_DEV";
 
 const TopbarBtn = ({ icon, text }) => {
     const iconClass = classnames("material-icons", icon === "menu" ? "topbar-btn-icon" : "");
@@ -59,8 +60,8 @@ const TopbarLogout = () => (
 
 const TopbarLogo = () => (
     <>
-        <a href="/">{"\n"}
-            <img className="topbar-logo" src={`${basename}img/spay_horizontal_pos.svg`} alt="swedbankpay-logo"/>{"\n"}
+        <a className="topbar-logo" href="/" onClick={e => e.preventDefault()}>{"\n"}
+            <img src={!isDev ? `${process.env.basename}img/spay_horizontal_pos.svg` : logo} alt="swedbankpay-logo"/>{"\n"}
         </a>{"\n"}
     </>
 );

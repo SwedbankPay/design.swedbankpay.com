@@ -42,7 +42,7 @@ describe("Component: Topbar - ", () => {
     });
 
     it("renders logout link and adds topbar-link-right to the logout", () => {
-        const wrapper = shallow(<Topbar logout/>);
+        const wrapper = mount(<Topbar logout/>);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("Log out");
@@ -88,7 +88,7 @@ describe("Component: Topbar - ", () => {
     });
 
     it("logo prevents default when clicked", () => {
-        const wrapper = shallow(<Topbar />);
+        const wrapper = mount(<Topbar />);
         const eventHandler = { preventDefault: jest.fn() };
         const logo = wrapper.find(".topbar-logo");
 

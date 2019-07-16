@@ -1,22 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Topbar -  logo prevents default when clicked 1`] = `
-<header
-  className="topbar"
->
-  
+<Topbar>
+  <header
+    className="topbar"
+  >
+    
 
-  
+    <TopbarLogo>
+      <a
+        className="topbar-logo"
+        href="/"
+        onClick={[Function]}
+      >
+        
 
-   
-  <a
-    className="topbar-logo"
-    href="#"
-    onClick={[Function]}
-  />
-  
+        <img
+          alt="swedbankpay-logo"
+          src="/TEST/img/spay_horizontal_pos.svg"
+        />
+        
 
-</header>
+      </a>
+      
+
+    </TopbarLogo>
+  </header>
+</Topbar>
 `;
 
 exports[`Component: Topbar -  menu links prevents default when clicked 1`] = `
@@ -70,15 +80,24 @@ exports[`Component: Topbar -  menu links prevents default when clicked 1`] = `
     </TopbarBtn>
     
 
-    
+    <TopbarLogo>
+      <a
+        className="topbar-logo"
+        href="/"
+        onClick={[Function]}
+      >
+        
 
-    <a
-      className="topbar-logo"
-      href="#"
-      onClick={[Function]}
-    />
-    
+        <img
+          alt="swedbankpay-logo"
+          src="/TEST/img/spay_horizontal_pos.svg"
+        />
+        
 
+      </a>
+      
+
+    </TopbarLogo>
     <TopbarMenu
       logout={false}
       menu={
@@ -198,16 +217,7 @@ exports[`Component: Topbar -  renders a topbar with only a clickable logo 1`] = 
 >
   
 
-  
-
-   
-  <a
-    className="topbar-logo"
-    href="#"
-    onClick={[Function]}
-  />
-  
-
+  <TopbarLogo />
 </header>
 `;
 
@@ -262,15 +272,24 @@ exports[`Component: Topbar -  renders a topbar-menu-button when content is provi
     </TopbarBtn>
     
 
-    
+    <TopbarLogo>
+      <a
+        className="topbar-logo"
+        href="/"
+        onClick={[Function]}
+      >
+        
 
-    <a
-      className="topbar-logo"
-      href="#"
-      onClick={[Function]}
-    />
-    
+        <img
+          alt="swedbankpay-logo"
+          src="/TEST/img/spay_horizontal_pos.svg"
+        />
+        
 
+      </a>
+      
+
+    </TopbarLogo>
     <TopbarMenu
       logout={false}
       menu={
@@ -385,44 +404,58 @@ exports[`Component: Topbar -  renders a topbar-menu-button when content is provi
 `;
 
 exports[`Component: Topbar -  renders logout link and adds topbar-link-right to the logout 1`] = `
-<header
-  className="topbar"
+<Topbar
+  logout={true}
 >
-  
-
-  
-
-   
-  <a
-    className="topbar-logo"
-    href="#"
-    onClick={[Function]}
-  />
-  
-
-  <a
-    className="topbar-link-right"
-    href="#"
-    onClick={[Function]}
+  <header
+    className="topbar"
   >
     
 
-    <i
-      className="material-icons"
-    >
-      exit_to_app
-    </i>
-    
+    <TopbarLogo>
+      <a
+        className="topbar-logo"
+        href="/"
+        onClick={[Function]}
+      >
+        
 
-    <span>
-      Log out
-    </span>
-    
+        <img
+          alt="swedbankpay-logo"
+          src="/TEST/img/spay_horizontal_pos.svg"
+        />
+        
 
-  </a>
-  
+      </a>
+      
 
-</header>
+    </TopbarLogo>
+    <TopbarLogout>
+      <a
+        className="topbar-link-right"
+        href="#"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          className="material-icons"
+        >
+          exit_to_app
+        </i>
+        
+
+        <span>
+          Log out
+        </span>
+        
+
+      </a>
+      
+
+    </TopbarLogout>
+  </header>
+</Topbar>
 `;
 
 exports[`Component: Topbar -  renders topbar-link-container and a logout link 1`] = `
@@ -477,15 +510,24 @@ exports[`Component: Topbar -  renders topbar-link-container and a logout link 1`
     </TopbarBtn>
     
 
-    
+    <TopbarLogo>
+      <a
+        className="topbar-logo"
+        href="/"
+        onClick={[Function]}
+      >
+        
 
-    <a
-      className="topbar-logo"
-      href="#"
-      onClick={[Function]}
-    />
-    
+        <img
+          alt="swedbankpay-logo"
+          src="/TEST/img/spay_horizontal_pos.svg"
+        />
+        
 
+      </a>
+      
+
+    </TopbarLogo>
     <TopbarMenu
       logout={true}
       menu={
@@ -592,28 +634,30 @@ exports[`Component: Topbar -  renders topbar-link-container and a logout link 1`
           </a>
           
 
-          <a
-            className="topbar-link-right"
-            href="#"
-            onClick={[Function]}
-          >
-            
-
-            <i
-              className="material-icons"
+          <TopbarLogout>
+            <a
+              className="topbar-link-right"
+              href="#"
+              onClick={[Function]}
             >
-              exit_to_app
-            </i>
+              
+
+              <i
+                className="material-icons"
+              >
+                exit_to_app
+              </i>
+              
+
+              <span>
+                Log out
+              </span>
+              
+
+            </a>
             
 
-            <span>
-              Log out
-            </span>
-            
-
-          </a>
-          
-
+          </TopbarLogout>
         </div>
       </nav>
     </TopbarMenu>
@@ -672,15 +716,24 @@ exports[`Component: Topbar -  renders topbar-link-container and populates it wit
     </TopbarBtn>
     
 
-    
+    <TopbarLogo>
+      <a
+        className="topbar-logo"
+        href="/"
+        onClick={[Function]}
+      >
+        
 
-    <a
-      className="topbar-logo"
-      href="#"
-      onClick={[Function]}
-    />
-    
+        <img
+          alt="swedbankpay-logo"
+          src="/TEST/img/spay_horizontal_pos.svg"
+        />
+        
 
+      </a>
+      
+
+    </TopbarLogo>
     <TopbarMenu
       logout={false}
       menu={
