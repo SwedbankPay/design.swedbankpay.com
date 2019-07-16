@@ -62,53 +62,6 @@ describe("px-script: topbar - NavMenu", () => {
         expect(console.warn).toHaveBeenCalledTimes(1);
     });
 
-    it("sets userIcon to null if no iconElement exists", () => {
-        ReactDOM.render(<Topbar noBtnIcon />, div);
-
-        const topbar = document.querySelector(".topbar");
-        const navMenu = topbar.querySelector(".topbar-nav");
-        const newNavMenu = new NavMenu(topbar, navMenu);
-
-        expect(topbar).toBeTruthy();
-        expect(navMenu).toBeTruthy();
-        expect(newNavMenu).toBeTruthy();
-        expect(newNavMenu.userIcon).toEqual(null);
-    });
-
-    it("does not set icon value if no button icon exists when a nav gets opened", () => {
-        ReactDOM.render(<Topbar noBtnIcon />, div);
-
-        const topbar = document.querySelector(".topbar");
-        const topbarBtn = topbar.querySelector(".topbar-btn");
-        const navMenu = topbar.querySelector(".topbar-nav");
-        const newNavMenu = new NavMenu(topbar, navMenu);
-
-        expect(topbar).toBeTruthy();
-        expect(topbarBtn).toBeTruthy();
-        expect(navMenu).toBeTruthy();
-        expect(newNavMenu).toBeTruthy();
-        expect(newNavMenu.userIcon).toEqual(null);
-        expect(topbar.querySelector(".topbar-btn-icon")).toBeFalsy();
-
-        topbarBtn.click();
-
-        expect(topbar.querySelector(".topbar-btn-icon")).toBeFalsy();
-    });
-
-    it("does not set icon value if no button icon exists when a nav gets closed", () => {
-        ReactDOM.render(<Topbar noBtnIcon navOpen />, div);
-
-        const topbar = document.querySelector(".topbar");
-        const topbarBtn = topbar.querySelector(".topbar-btn");
-
-        expect(topbarBtn).toBeTruthy();
-        expect(topbar.querySelector(".topbar-btn-icon")).toBeFalsy();
-
-        topbarBtn.click();
-
-        expect(topbar.querySelector(".topbar-btn-icon")).toBeFalsy();
-    });
-
     it("prevents default and fires open when the topbar button connected to a nav is clicked", () => {
         ReactDOM.render(<Topbar />, div);
 

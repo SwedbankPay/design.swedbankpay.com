@@ -51,14 +51,13 @@
         height: 100%;
         z-index: @zindex-sheet-backdrop;
         background: transparent;
-        transition: background 0.3s ease-in-out;
         display: none;
 
         &.topbar-nav-open {
-            background: @sheet-backdrop-bg;
+            animation: fade-in 0.5s forwards;
 
             .topbar-link-container {
-                left: 0;
+                animation: slide-in 0.5s ease forwards;
 
                 > a {
                     span {
@@ -80,8 +79,16 @@
             }
         }
 
+        &.topbar-nav-closing {
+            animation: fade-out 0.3s forwards;
+
+            .topbar-link-container {
+                animation: slide-out 0.3s ease alternate;
+            }
+        }
+
         .topbar-link-container {
-            width: @topbar-nav-width;
+            width: 300px;
             position: fixed;
             top: 0;
             bottom: 0;
@@ -90,8 +97,7 @@
             overflow-y: auto;
             z-index: @zindex-topbar-nav;
             padding: 3rem 2rem;
-            transition: left @topbar-slide-transition;
-            left: -@topbar-nav-width;
+            transform: translateX(-100%);
 
             > *:not(.material-icons) {
                 font-family: @font-swedbank-headline;
@@ -191,6 +197,7 @@
             padding: 0;
             overflow-x: initial;
             overflow-y: initial;
+            transform: translateX(0%);
 
             > *:not(.close-topbar-nav):not(.topbar-link-right) {
                 text-decoration: none;
@@ -236,3 +243,40 @@ each(@grid-breakpoints, .(@min-width, @infix) {
         }
     }
 });
+
+// Keyframe animations
+@keyframes slide-in {
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        background: transparent;
+    }
+
+    100% {
+        background: @sheet-backdrop-bg;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        background: @sheet-backdrop-bg;
+    }
+
+    100% {
+        background: transparent;
+    }
+}
