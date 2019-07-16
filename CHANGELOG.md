@@ -6,6 +6,11 @@
 
 ### Changed
 
+- Changed topbar logo to be an image wrapped by an anchor to be more accessible.
+
 ### Fixed
+
+- Fixed issue with esc event listener for topbar nav menu.
+- Updated animation for mobile topbar to make it smoother.
 
 ### Removed
