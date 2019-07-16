@@ -4,131 +4,155 @@ import { Link } from "react-router-dom";
 import { DocContainer } from "#";
 import ColorPreview from "./ColorPreview";
 
+const mainText = [
+    {
+        name: "Yellow",
+        hex: "#FDC129"
+    },
+    {
+        name: "Brown",
+        hex: "#512B2B"
+    },
+    {
+        name: "Orange Main",
+        hex: "#EE7023"
+    },
+    {
+        name: "Info Turquoise",
+        hex: "#8ACDC3"
+    },
+    {
+        name: "Info Pink",
+        hex: "#EFB7B6"
+    },
+    {
+        name: "Apricot",
+        hex: "#FBF2EA"
+    },
+    {
+        name: "Light Turquoise",
+        hex: "#EBF8F2"
+    },
+    {
+        name: "Turquoise",
+        hex: "#31A3AE"
+    },
+    {
+        name: "Turquoise Links",
+        hex: "#257886"
+    }
+];
+
+const alertText = [
+    {
+        name: "Brand success",
+        hex: "#477D17"
+    },
+    {
+        name: "Brand success light",
+        hex: "#F2F7EB"
+    },
+    {
+        name: "Brand warning",
+        hex: "#FF9900"
+    },
+    {
+        name: "Brand warning light",
+        hex: "#FFFAE5"
+    },
+    {
+        name: "Brand error",
+        hex: "#B24843"
+    },
+    {
+        name: "Brand error light",
+        hex: "#FCEEED"
+    },
+    {
+        name: "Brand info",
+        hex: "#2C7A8F"
+    },
+    {
+        name: "Brand info light",
+        hex: "#F0F9FB"
+    }
+];
+
+const grayScaleText = [
+    {
+        name: "Black",
+        hex: "#000000"
+    },
+    {
+        name: "Near black",
+        hex: "#111111"
+    },
+    {
+        name: "Gray dark",
+        hex: "#262626"
+    },
+    {
+        name: "Gray medium dark",
+        hex: "#363636"
+    },
+    {
+        name: "Gray medium",
+        hex: "#404040"
+    },
+    {
+        name: "Gray medium light",
+        hex: "#545454"
+    },
+    {
+        name: "Gray light",
+        hex: "#666666"
+    },
+    {
+        name: "Gray light alt",
+        hex: "#999999"
+    },
+    {
+        name: "Gray bright",
+        hex: "#EAEAEA"
+    },
+    {
+        name: "Gray bright alt",
+        hex: "#BCBCBC"
+    },
+    {
+        name: "Near gray",
+        hex: "#F9F9F9"
+    },
+    {
+        name: "Off white",
+        hex: "#F4F4F4"
+    },
+    {
+        name: "Near white",
+        hex: "#F0F0F0"
+    },
+    {
+        name: "White",
+        hex: "#FFFFFF"
+    }
+];
+
 const MainColors = () => (
+
     <>
         <h2 id="main-colors">Main colors</h2>
-        <p>The main color palette of Swedbank Pay</p>
-        <ul className="list row">
-            <li className="col-12 col-sm mb-lg-0">
-                <ColorPreview name="Yellow" hex="#fdc129" />
-            </li>
-            <li className="col-12 col-sm mb-lg-0">
-                <ColorPreview name="Brown" hex="#512b2b" />
-            </li>
-            <li className="col-12 col-sm mb-lg-0">
-                <ColorPreview name="Orange Main" hex="#ee7023" />
-            </li>
-        </ul>
-        <ul className="list row">
-            <li className="col-12 col-sm mb-lg-0">
-                <ColorPreview name="Info Turquoise" hex="#8acdc3" />
-            </li>
-            <li className="col-12 col-sm mb-lg-0">
-                <ColorPreview name="Info Pink" hex="#efb7b6" />
-            </li>
-            <li className="col-12 col-sm mb-lg-0">
-                <ColorPreview name="Apricot" hex="#fbf2ea" />
-            </li>
-        </ul>
-        <ul className="list row">
-            <li className="col-12 col-sm mb-lg-0">
-                <ColorPreview name="Light Turquoise" hex="#ebf8f2" />
-            </li>
-            <li className="col-12 col-sm mb-lg-0">
-                <ColorPreview name="Turquoise" hex="#31a3ae" />
-            </li>
-            <li className="col-12 col-sm mb-lg-0">
-                <ColorPreview name="Turquoise Links" hex="#257886" />
-            </li>
-        </ul>
-        <ul className="list row">
-            <li className="col-12 col-sm col-xl-3 mb-lg-0">
-                <figure className="color-preview">
-                    <svg viewBox="0 0 100 30">
-                        <rect width="100" height="100" fill="#fdc128"/>
-                    </svg>
-                    <figcaption>
-                        Name
-                        <small><br/>HEX: #fdc129</small>
-                    </figcaption>
-                </figure>
-            </li>
-            <li className="col-12 col-sm col-xl-3 mb-lg-0">
-                <figure className="color-preview">
-                    <svg viewBox="0 0 100 30">
-                        <rect width="100" height="100" fill="#fdc128"/>
-                    </svg>
-                    <figcaption>
-                        Name
-                        <small><br/>HEX: #fdc129</small>
-                    </figcaption>
-                </figure>
-            </li>
-            <li className="col-12 col-sm col-xl-3 mb-lg-0">
-                <figure className="color-preview">
-                    <svg viewBox="0 0 100 30">
-                        <rect width="100" height="100" fill="#fdc128"/>
-                    </svg>
-                    <figcaption>
-                        Name
-                        <small><br/>HEX: #fdc129</small>
-                    </figcaption>
-                </figure>
-            </li>
-            <li className="col-12 col-sm col-xl-3 mb-lg-0">
-                <figure className="color-preview">
-                    <svg viewBox="0 0 100 30">
-                        <rect width="100" height="100" fill="#fdc128"/>
-                    </svg>
-                    <figcaption>
-                        Name
-                        <small><br/>HEX: #fdc129</small>
-                    </figcaption>
-                </figure>
-            </li>
+        <p>
+            Our main color pallete.
+        </p>
+        <ul className="list color-preview">
+            {mainText.map((elem, i) => (
+                <li key={i} >
+                    <ColorPreview name={elem.name} hex={elem.hex} />
+                </li>
+            ))}
         </ul>
     </>
 );
-
-// const MainColors = () => (
-//     <>
-//         <h2 id="main-colors">Main colors</h2>
-//         <p>The main color palette of Swedbank Pay</p>
-//         <div className="row">
-//             <div className="col-12 col-sm mb-lg-0">
-//                 <ColorPreview name="Yellow" hex="#fdc129" />
-//             </div>
-//             <div className="col-12 col-sm mb-lg-0">
-//                 <ColorPreview name="Brown" hex="#512b2b" />
-//             </div>
-//             <div className="col-12 col-sm mb-lg-0">
-//                 <ColorPreview name="Orange Main" hex="#ee7023" />
-//             </div>
-//         </div>
-//         <div className="row">
-//             <div className="col-12 col-sm mb-lg-0">
-//                 <ColorPreview name="Info Turquoise" hex="#8acdc3" />
-//             </div>
-//             <div className="col-12 col-sm mb-lg-0">
-//                 <ColorPreview name="Info Pink" hex="#efb7b6" />
-//             </div>
-//             <div className="col-12 col-sm mb-lg-0">
-//                 <ColorPreview name="Apricot" hex="#fbf2ea" />
-//             </div>
-//         </div>
-//         <div className="row">
-//             <div className="col-12 col-sm mb-lg-0">
-//                 <ColorPreview name="Light Turquoise" hex="#ebf8f2" />
-//             </div>
-//             <div className="col-12 col-sm mb-lg-0">
-//                 <ColorPreview name="Turquoise" hex="#31a3ae" />
-//             </div>
-//             <div className="col-12 col-sm mb-lg-0">
-//                 <ColorPreview name="Turquoise Links" hex="#257886" />
-//             </div>
-//         </div>
-//     </>
-// );
 
 const AlertColors = () => (
     <>
@@ -137,99 +161,26 @@ const AlertColors = () => (
             These colors are used to visualize state,
             see <Link to="/docs/components/alerts/">Alert</Link> for an example.
         </p>
-        <div className="row">
-            <div className="col-12 col-sm">
-                <ColorPreview name="brand-success" hex="#477d17" />
-            </div>
-            <div className="col-12 col-sm">
-                <ColorPreview name="brand-success-light" hex="#f2f7eb" />
-            </div>
-            <div className="col-12 col-sm">
-                <ColorPreview name="brand-warning" hex="#ff9900" />
-            </div>
-        </div>
-        <div className="row">
-            <div className="col-12 col-sm">
-                <ColorPreview name="brand-warning-light" hex="#fffae5" />
-            </div>
-            <div className="col-12 col-sm">
-                <ColorPreview name="brand-error-border" hex="#f1bbb9" />
-            </div>
-            <div className="col-12 col-sm">
-                <ColorPreview name="brand-error" hex="#b24843" />
-            </div>
-        </div>
-        <div className="row">
-            <div className="col-12 col-sm">
-                <ColorPreview name="brand-error-light" hex="#fceeed" />
-            </div>
-            <div className="col-12 col-sm">
-                <ColorPreview name="brand-info" hex="#2c7a8f" />
-            </div>
-            <div className="col-12 col-sm">
-                <ColorPreview name="brand-info-light" hex="#f0f9fb" />
-            </div>
-        </div>
+        <ul className="list color-preview">
+            {alertText.map((elem, i) => (
+                <li key={i} >
+                    <ColorPreview name={elem.name} hex={elem.hex} />
+                </li>
+            ))}
+        </ul>
     </>
 );
 
 const Grayscale = () => (
     <>
         <h2 id="grayscale">Grayscale</h2>
-        <div className="row">
-            <div className="col-12 col-sm">
-                <ColorPreview name="black" hex="#000000" />
-            </div>
-            <div className="col-12 col-sm">
-                <ColorPreview name="nearblack" hex="#111111" />
-            </div>
-            <div className="col-12 col-sm">
-                <ColorPreview name="gray-dark" hex="#262626" />
-            </div>
-        </div>
-        <div className="row">
-            <div className="col-12 col-sm">
-                <ColorPreview name="gray-medium-dark" hex="#363636" />
-            </div>
-            <div className="col-12 col-sm">
-                <ColorPreview name="gray-medium" hex="#404040" />
-            </div>
-            <div className="col-12 col-sm">
-                <ColorPreview name="gray-medium-light" hex="#545454" />
-            </div>
-        </div>
-        <div className="row">
-            <div className="col-12 col-sm">
-                <ColorPreview name="gray-light" hex="#666666" />
-            </div>
-            <div className="col-12 col-sm">
-                <ColorPreview name="gray-light-alt" hex="#999999" />
-            </div>
-            <div className="col-12 col-sm">
-                <ColorPreview name="gray-bright" hex="#eaeaea" />
-            </div>
-        </div>
-        <div className="row">
-            <div className="col-12 col-sm">
-                <ColorPreview name="gray-bright-alt" hex="#bcbcbc" />
-            </div>
-            <div className="col-12 col-sm">
-                <ColorPreview name="neargray" hex="#f9f9f9" />
-            </div>
-            <div className="col-12 col-sm">
-                <ColorPreview name="offwhite" hex="#f4f4f4" />
-            </div>
-        </div>
-        <div className="row">
-            <div className="col-12 col-sm">
-                <ColorPreview name="nearwhite" hex="#f0f0f0" />
-            </div>
-            <div className="col-12 col-sm">
-                <ColorPreview name="white" hex="#ffffff" />
-            </div>
-            <div className="col-12 col-sm">
-            </div>
-        </div>
+        <ul className="list color-preview">
+            {grayScaleText.map((elem, i) => (
+                <li key={i} >
+                    <ColorPreview name={elem.name} hex={elem.hex} />
+                </li>
+            ))}
+        </ul>
     </>
 );
 

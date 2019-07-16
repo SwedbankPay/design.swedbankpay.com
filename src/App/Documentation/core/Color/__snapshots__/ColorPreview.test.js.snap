@@ -1,24 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Core: Color renders 1`] = `
-<div
-  className="color-preview"
->
-  <div
-    className="color-block"
-    style={
-      Object {
-        "backgroundColor": "#test",
-      }
-    }
-  />
-  <p>
+<figure>
+  <svg
+    className={null}
+  >
+    <rect
+      fill="#test"
+      height="100%"
+      width="100%"
+    />
+  </svg>
+  <figcaption>
     test
+    <br />
     <small>
-      <br />
-      HEX: 
+      Hex color code: 
       #test
     </small>
-  </p>
-</div>
+  </figcaption>
+</figure>
 `;

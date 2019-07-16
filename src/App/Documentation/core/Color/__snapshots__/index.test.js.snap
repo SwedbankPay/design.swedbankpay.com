@@ -16,90 +16,74 @@ exports[`Core: Color AlertColors renders 1`] = `
     </Link>
      for an example.
   </p>
-  <div
-    className="row"
+  <ul
+    className="list color-preview"
   >
-    <div
-      className="col-12 col-sm"
+    <li
+      key="0"
     >
       <ColorPreview
-        hex="#477d17"
-        name="brand-success"
+        hex="#477D17"
+        name="Brand success"
       />
-    </div>
-    <div
-      className="col-12 col-sm"
+    </li>
+    <li
+      key="1"
     >
       <ColorPreview
-        hex="#f2f7eb"
-        name="brand-success-light"
+        hex="#F2F7EB"
+        name="Brand success light"
       />
-    </div>
-    <div
-      className="col-12 col-sm"
+    </li>
+    <li
+      key="2"
     >
       <ColorPreview
-        hex="#ff9900"
-        name="brand-warning"
+        hex="#FF9900"
+        name="Brand warning"
       />
-    </div>
-  </div>
-  <div
-    className="row"
-  >
-    <div
-      className="col-12 col-sm"
+    </li>
+    <li
+      key="3"
     >
       <ColorPreview
-        hex="#fffae5"
-        name="brand-warning-light"
+        hex="#FFFAE5"
+        name="Brand warning light"
       />
-    </div>
-    <div
-      className="col-12 col-sm"
+    </li>
+    <li
+      key="4"
     >
       <ColorPreview
-        hex="#f1bbb9"
-        name="brand-error-border"
+        hex="#B24843"
+        name="Brand error"
       />
-    </div>
-    <div
-      className="col-12 col-sm"
+    </li>
+    <li
+      key="5"
     >
       <ColorPreview
-        hex="#b24843"
-        name="brand-error"
+        hex="#FCEEED"
+        name="Brand error light"
       />
-    </div>
-  </div>
-  <div
-    className="row"
-  >
-    <div
-      className="col-12 col-sm"
+    </li>
+    <li
+      key="6"
     >
       <ColorPreview
-        hex="#fceeed"
-        name="brand-error-light"
+        hex="#2C7A8F"
+        name="Brand info"
       />
-    </div>
-    <div
-      className="col-12 col-sm"
+    </li>
+    <li
+      key="7"
     >
       <ColorPreview
-        hex="#2c7a8f"
-        name="brand-info"
+        hex="#F0F9FB"
+        name="Brand info light"
       />
-    </div>
-    <div
-      className="col-12 col-sm"
-    >
-      <ColorPreview
-        hex="#f0f9fb"
-        name="brand-info-light"
-      />
-    </div>
-  </div>
+    </li>
+  </ul>
 </Fragment>
 `;
 
@@ -110,141 +94,122 @@ exports[`Core: Color Grayscale renders 1`] = `
   >
     Grayscale
   </h2>
-  <div
-    className="row"
+  <ul
+    className="list color-preview"
   >
-    <div
-      className="col-12 col-sm"
+    <li
+      key="0"
     >
       <ColorPreview
         hex="#000000"
-        name="black"
+        name="Black"
       />
-    </div>
-    <div
-      className="col-12 col-sm"
+    </li>
+    <li
+      key="1"
     >
       <ColorPreview
         hex="#111111"
-        name="nearblack"
+        name="Near black"
       />
-    </div>
-    <div
-      className="col-12 col-sm"
+    </li>
+    <li
+      key="2"
     >
       <ColorPreview
         hex="#262626"
-        name="gray-dark"
+        name="Gray dark"
       />
-    </div>
-  </div>
-  <div
-    className="row"
-  >
-    <div
-      className="col-12 col-sm"
+    </li>
+    <li
+      key="3"
     >
       <ColorPreview
         hex="#363636"
-        name="gray-medium-dark"
+        name="Gray medium dark"
       />
-    </div>
-    <div
-      className="col-12 col-sm"
+    </li>
+    <li
+      key="4"
     >
       <ColorPreview
         hex="#404040"
-        name="gray-medium"
+        name="Gray medium"
       />
-    </div>
-    <div
-      className="col-12 col-sm"
+    </li>
+    <li
+      key="5"
     >
       <ColorPreview
         hex="#545454"
-        name="gray-medium-light"
+        name="Gray medium light"
       />
-    </div>
-  </div>
-  <div
-    className="row"
-  >
-    <div
-      className="col-12 col-sm"
+    </li>
+    <li
+      key="6"
     >
       <ColorPreview
         hex="#666666"
-        name="gray-light"
+        name="Gray light"
       />
-    </div>
-    <div
-      className="col-12 col-sm"
+    </li>
+    <li
+      key="7"
     >
       <ColorPreview
         hex="#999999"
-        name="gray-light-alt"
+        name="Gray light alt"
       />
-    </div>
-    <div
-      className="col-12 col-sm"
+    </li>
+    <li
+      key="8"
     >
       <ColorPreview
-        hex="#eaeaea"
-        name="gray-bright"
+        hex="#EAEAEA"
+        name="Gray bright"
       />
-    </div>
-  </div>
-  <div
-    className="row"
-  >
-    <div
-      className="col-12 col-sm"
+    </li>
+    <li
+      key="9"
     >
       <ColorPreview
-        hex="#bcbcbc"
-        name="gray-bright-alt"
+        hex="#BCBCBC"
+        name="Gray bright alt"
       />
-    </div>
-    <div
-      className="col-12 col-sm"
+    </li>
+    <li
+      key="10"
     >
       <ColorPreview
-        hex="#f9f9f9"
-        name="neargray"
+        hex="#F9F9F9"
+        name="Near gray"
       />
-    </div>
-    <div
-      className="col-12 col-sm"
+    </li>
+    <li
+      key="11"
     >
       <ColorPreview
-        hex="#f4f4f4"
-        name="offwhite"
+        hex="#F4F4F4"
+        name="Off white"
       />
-    </div>
-  </div>
-  <div
-    className="row"
-  >
-    <div
-      className="col-12 col-sm"
+    </li>
+    <li
+      key="12"
     >
       <ColorPreview
-        hex="#f0f0f0"
-        name="nearwhite"
+        hex="#F0F0F0"
+        name="Near white"
       />
-    </div>
-    <div
-      className="col-12 col-sm"
+    </li>
+    <li
+      key="13"
     >
       <ColorPreview
-        hex="#ffffff"
-        name="white"
+        hex="#FFFFFF"
+        name="White"
       />
-    </div>
-    <div
-      className="col-12 col-sm"
-    />
-  </div>
+    </li>
+  </ul>
 </Fragment>
 `;
 
@@ -256,92 +221,84 @@ exports[`Core: Color MainColors renders 1`] = `
     Main colors
   </h2>
   <p>
-    The main color palette of Swedbank Pay
+    Our main color pallete.
   </p>
-  <div
-    className="row"
+  <ul
+    className="list color-preview"
   >
-    <div
-      className="col-12 col-sm mb-lg-0"
+    <li
+      key="0"
     >
       <ColorPreview
-        hex="#fdc129"
+        hex="#FDC129"
         name="Yellow"
       />
-    </div>
-    <div
-      className="col-12 col-sm mb-lg-0"
+    </li>
+    <li
+      key="1"
     >
       <ColorPreview
-        hex="#512b2b"
+        hex="#512B2B"
         name="Brown"
       />
-    </div>
-    <div
-      className="col-12 col-sm mb-lg-0"
+    </li>
+    <li
+      key="2"
     >
       <ColorPreview
-        hex="#ee7023"
+        hex="#EE7023"
         name="Orange Main"
       />
-    </div>
-  </div>
-  <div
-    className="row"
-  >
-    <div
-      className="col-12 col-sm mb-lg-0"
+    </li>
+    <li
+      key="3"
     >
       <ColorPreview
-        hex="#8acdc3"
+        hex="#8ACDC3"
         name="Info Turquoise"
       />
-    </div>
-    <div
-      className="col-12 col-sm mb-lg-0"
+    </li>
+    <li
+      key="4"
     >
       <ColorPreview
-        hex="#efb7b6"
+        hex="#EFB7B6"
         name="Info Pink"
       />
-    </div>
-    <div
-      className="col-12 col-sm mb-lg-0"
+    </li>
+    <li
+      key="5"
     >
       <ColorPreview
-        hex="#fbf2ea"
+        hex="#FBF2EA"
         name="Apricot"
       />
-    </div>
-  </div>
-  <div
-    className="row"
-  >
-    <div
-      className="col-12 col-sm mb-lg-0"
+    </li>
+    <li
+      key="6"
     >
       <ColorPreview
-        hex="#ebf8f2"
+        hex="#EBF8F2"
         name="Light Turquoise"
       />
-    </div>
-    <div
-      className="col-12 col-sm mb-lg-0"
+    </li>
+    <li
+      key="7"
     >
       <ColorPreview
-        hex="#31a3ae"
+        hex="#31A3AE"
         name="Turquoise"
       />
-    </div>
-    <div
-      className="col-12 col-sm mb-lg-0"
+    </li>
+    <li
+      key="8"
     >
       <ColorPreview
         hex="#257886"
         name="Turquoise Links"
       />
-    </div>
-  </div>
+    </li>
+  </ul>
 </Fragment>
 `;
 
