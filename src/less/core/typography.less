@@ -5,10 +5,8 @@
 /* stylelint-disable selector-list-comma-newline-after */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-    margin-top: @base-margin-xl;
-    margin-bottom: @base-margin-sm;
-    font-weight: @headings-font-weight;
-    line-height: @headings-line-height;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
     color: @headings-color;
 
     &:first-child {
@@ -17,7 +15,6 @@ h1, h2, h3, h4, h5, h6,
 
     .material-icons {
         display: inline-flex;
-        line-height: @headings-line-height;
         vertical-align: text-top;
     }
 }
@@ -28,9 +25,11 @@ h1,
     font-size: 32px;
     font-family: @font-swedbank-headline;
     font-weight: 700;
+    line-height: 40px;
 
     .material-icons {
         font-size: 32px;
+        line-height: 40px;
     }
 }
 
@@ -39,9 +38,11 @@ h2,
     font-size: 24px;
     font-family: @font-swedbank-headline;
     font-weight: 700;
+    line-height: 32px;
 
     .material-icons {
         font-size: 24px;
+        line-height: 32px;
     }
 }
 
@@ -49,15 +50,16 @@ h3,
 .h3 {
     font-size: 20px;
     font-weight: 700;
+    line-height: 24px;
 
     .material-icons {
         font-size: 20px;
+        line-height: 24px;
     }
 }
 
 h4,
 .h4 {
-    font-size: 18px;
     font-weight: 700;
 }
 
@@ -97,6 +99,7 @@ small,
     color: @small-color;
     font-size: 12px;
     font-weight: @font-weight-normal;
+    line-height: 18px;
 }
 
 mark,
