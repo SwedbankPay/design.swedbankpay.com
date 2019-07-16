@@ -22,19 +22,6 @@ h1, h2, h3, h4, h5, h6,
 
 h1,
 .h1 {
-    font-size: 32px;
-    font-family: @font-swedbank-headline;
-    font-weight: 700;
-    line-height: 40px;
-
-    .material-icons {
-        font-size: 32px;
-        line-height: 40px;
-    }
-}
-
-h2,
-.h2 {
     font-size: 24px;
     font-family: @font-swedbank-headline;
     font-weight: 700;
@@ -46,14 +33,25 @@ h2,
     }
 }
 
-h3,
-.h3 {
+h2,
+.h2 {
     font-size: 20px;
+    font-family: @font-swedbank-headline;
     font-weight: 700;
     line-height: 24px;
 
     .material-icons {
         font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+h3,
+.h3 {
+    font-weight: 700;
+    line-height: 24px;
+
+    .material-icons {
         line-height: 24px;
     }
 }
@@ -99,7 +97,7 @@ small,
     color: @small-color;
     font-size: 12px;
     font-weight: @font-weight-normal;
-    line-height: 18px;
+    line-height: 16px;
 }
 
 mark,
@@ -153,5 +151,40 @@ blockquote,
         &:before {
             content: "\2014 \00A0";
         }
+    }
+}
+
+@media screen and (min-width: @screen-sm-min) {
+    h1,
+    .h1 {
+        font-size: 32px;
+        line-height: 40px;
+
+        .material-icons {
+            font-size: 32px;
+            line-height: 40px;
+        }
+    }
+
+    h2,
+    .h2 {
+        font-size: 24px;
+        line-height: 32px;
+
+        .material-icons {
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+
+    h3,
+    .h3 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .small,
+    small {
+        line-height: 18px;
     }
 }
