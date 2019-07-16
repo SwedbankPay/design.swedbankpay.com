@@ -6,6 +6,8 @@
 
 ### Changed
 
+- Changed typography sizes and added breakpoint styling for headings/small.
+
 ### Fixed
 
 ### Removed
