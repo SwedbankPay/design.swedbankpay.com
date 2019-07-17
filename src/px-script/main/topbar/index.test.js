@@ -1,15 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
+
 import NavMenu from "./NavMenu";
 import topbar from "./index";
+import { handleScrollbar } from "../utils";
 
 jest.mock("./NavMenu");
+jest.mock("../utils");
 
 describe("px-script: topbar", () => {
     const div = document.createElement("div");
 
     beforeEach(() => {
         NavMenu.mockClear();
+        handleScrollbar.mockClear();
         ReactDOM.unmountComponentAtNode(div);
     });
 
@@ -18,16 +22,6 @@ describe("px-script: topbar", () => {
     const NoTopbar = () => (
         <header>
             <p>This is a header!</p>
-        </header>
-    );
-
-    const TopbarNoBtn = () => (
-        <header className="topbar">
-            <a href="#" className="topbar-logo"></a>
-            <button type="button" className="topbar-btn">
-                <i className="material-icons">exit_to_app</i>
-                <span className="topbar-btn-text">Log out</span>
-            </button>
         </header>
     );
 
@@ -106,31 +100,105 @@ describe("px-script: topbar", () => {
             expect(topbar.init()).toBeNull();
             expect(console.warn).toHaveBeenCalled();
         });
+
+        it("does not generate NavMenu instances if no .topbar exists", () => {
+            ReactDOM.render(<NoTopbar />, div);
+            topbar.init();
+
+            expect(NavMenu).not.toHaveBeenCalled();
+            expect(NavMenu.mock.instances[0]).toBeFalsy();
+        });
+
+        it("generates NavMenu instances if .topbar-nav exists", () => {
+            ReactDOM.render(<Topbar />, div);
+
+            topbar.init();
+
+            expect(NavMenu).toHaveBeenCalled();
+        });
     });
 
-    it("does not generate NavMenu instances if no .topbar exists", () => {
-        ReactDOM.render(<NoTopbar />, div);
-        topbar.init();
+    describe("event listeners", () => {
+        it("Escape closes an open navMenu", () => {
+            ReactDOM.render(<Topbar navOpen />, div);
 
-        expect(NavMenu).not.toHaveBeenCalled();
-        expect(NavMenu.mock.instances[0]).toBeFalsy();
+            topbar.init();
+            NavMenu.mock.instances[0].isOpen = true;
+
+            document.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape" }));
+
+            expect(NavMenu.mock.instances[0].close).toHaveBeenCalled();
+        });
+
+        it("Escape closes an open navMenu and calls handleScrollbar if the current page has a vertical scrollbar", () => {
+            ReactDOM.render(<Topbar navOpen />, div);
+            document.body.classList.add("has-vscroll");
+
+            topbar.init();
+            NavMenu.mock.instances[0].isOpen = true;
+            NavMenu.mock.instances[0].close.mockReturnValueOnce("true");
+
+            document.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape" }));
+
+            expect(NavMenu.mock.instances[0].close).toHaveBeenCalled();
+            expect(handleScrollbar).toHaveBeenCalled();
+        });
+
+        it("does nothing if a key other than Escape is pressed", () => {
+            ReactDOM.render(<Topbar navOpen />, div);
+
+            topbar.init();
+            NavMenu.mock.instances[0].isOpen = true;
+
+            document.dispatchEvent(new KeyboardEvent("keydown", { key: "Enter" }));
+
+            expect(NavMenu.mock.instances[0].close).not.toHaveBeenCalled();
+        });
     });
 
-    it("does not generate NavMenu instances if .topbar exists but no menu button exists", () => {
-        ReactDOM.render(<TopbarNoBtn />, div);
-        topbar.init();
+    describe("topbar.open", () => {
+        it("opens a topbar matching the passed ID", () => {
+            ReactDOM.render(<Topbar id="test-topbar" />, div);
 
-        expect(NavMenu).not.toHaveBeenCalled();
-        expect(NavMenu.mock.instances[0]).toBeFalsy();
+            const topbarInstance = topbar.init("test-topbar");
+
+            // Have to set the ID manually due to NavMenu being mocked and thus not savint the ID [AW].
+            topbarInstance.id = "test-topbar";
+
+            topbar.open("test-topbar");
+
+            // eslint-disable-next-line security/detect-non-literal-fs-filename
+            expect(topbarInstance.open).toHaveBeenCalled();
+        });
+
+        it("prints a warning message if the passed ID doesn't match any existing topbar", () => {
+            console.warn = jest.fn();
+
+            topbar.open("invalid-id");
+
+            expect(console.warn).toHaveBeenCalled();
+        });
     });
 
-    it("generates NavMenu instances if .topbar-nav exists", () => {
-        ReactDOM.render(<Topbar />, div);
+    describe("topbar.close", () => {
+        it("closes an open topbar matching the passed ID", () => {
+            ReactDOM.render(<Topbar id="test-topbar-2" />, div);
 
-        topbar.init();
+            const topbarInstance = topbar.init("test-topbar-2");
 
-        expect(NavMenu).toHaveBeenCalled();
+            topbarInstance.id = "test-topbar-2";
+
+            topbar.close("test-topbar-2");
+
+            expect(topbarInstance.close).toHaveBeenCalled();
+        });
+
+        it("prints a warning message if the passed ID doesn't match any existing topbar", () => {
+            console.warn = jest.fn();
+
+            topbar.close("invalid-id");
+
+            expect(console.warn).toHaveBeenCalled();
+        });
     });
-
-    test.todo("Write tests for topbar.open and topbar.close");
 });
