@@ -67,7 +67,8 @@
 
     .color-preview {
         display: grid;
-        gap: 20px;
+        row-gap: 1rem;
+        column-gap: 2.5rem;
         grid-template-columns: 1fr;
 
         svg {
@@ -75,14 +76,13 @@
         }
 
         figcaption {
-            line-height: 20px;
-            margin-top: 5px;
+            line-height: 1.25rem;
+            margin-top: 0.25rem;
         }
     }
 
     @media screen and (min-width: @screen-sm-min) {
         .color-preview {
-            gap: 20px;
             grid-template-columns: 1fr 1fr 1fr;
         }
     }
