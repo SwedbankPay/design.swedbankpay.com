@@ -1,18 +1,20 @@
 .pagination {
-    display: inline-block;
+    display: inline-flex;
+    // align-items: center;
     padding-left: 0;
     margin: @base-margin 0;
 
     li {
-        display: inline;
+        display: flex;
         position: relative;
 
         a,
         span {
-            margin: 0 @base-margin-sm;
+            display: flex;
+            align-items: center;
+            padding: 0 @base-margin-sm;
             font-weight: bold;
             color: @pagination-default-color;
-            display: inline-block;
             cursor: pointer;
             user-select: none;
             text-decoration: none;
@@ -41,17 +43,8 @@
             a,
             span {
                 &:after {
-                    content: "";
-                    border: 2px solid @pagination-arrow-color;
-                    border-top: none;
-                    border-right: none;
-                    width: 10px;
-                    height: 10px;
-                    position: absolute;
-                    top: 25%;
-                    left: 50%;
-                    cursor: pointer;
-                    transform: rotate(45deg);
+                    content: "chevron_left";
+                    .material-icons-styling(@color: @turquoise-links, @margin: 0);
                 }
             }
 
@@ -67,32 +60,37 @@
             a,
             span {
                 &:before {
-                    content: "";
-                    border: 2px solid @pagination-arrow-color;
-                    border-top: none;
-                    border-right: none;
-                    width: 10px;
-                    height: 10px;
-                    position: absolute;
-                    top: 25%;
-                    left: 50%;
-                    cursor: pointer;
-                    transform: rotate(45deg);
+                    content: "first_page";
+                    .material-icons-styling(@color: @turquoise-links, @margin: 0);
                 }
 
-                &:after {
-                    content: "";
-                    border: 2px solid @pagination-arrow-color;
-                    border-top: none;
-                    border-right: none;
-                    width: 10px;
-                    height: 10px;
-                    position: absolute;
-                    top: 25%;
-                    left: 15%;
-                    cursor: pointer;
-                    transform: rotate(45deg);
-                }
+                // &:before {
+                //     content: "";
+                //     border: 2px solid @pagination-arrow-color;
+                //     border-top: none;
+                //     border-right: none;
+                //     width: 10px;
+                //     height: 10px;
+                //     position: absolute;
+                //     top: 25%;
+                //     left: 50%;
+                //     cursor: pointer;
+                //     transform: rotate(45deg);
+                // }
+
+                // &:after {
+                //     content: "";
+                //     border: 2px solid @pagination-arrow-color;
+                //     border-top: none;
+                //     border-right: none;
+                //     width: 10px;
+                //     height: 10px;
+                //     position: absolute;
+                //     top: 25%;
+                //     left: 15%;
+                //     cursor: pointer;
+                //     transform: rotate(45deg);
+                // }
             }
 
             span {
@@ -108,17 +106,8 @@
             a,
             span {
                 &:after {
-                    content: "";
-                    border: 2px solid @pagination-arrow-color;
-                    border-bottom: none;
-                    border-left: none;
-                    width: 10px;
-                    height: 10px;
-                    position: absolute;
-                    top: 25%;
-                    right: 50%;
-                    cursor: pointer;
-                    transform: rotate(45deg);
+                    content: "chevron_right";
+                    .material-icons-styling(@color: @turquoise-links, @margin: 0);
                 }
             }
 
@@ -134,31 +123,8 @@
             a,
             span {
                 &:before {
-                    content: "";
-                    border: 2px solid @pagination-arrow-color;
-                    border-bottom: none;
-                    border-left: none;
-                    width: 10px;
-                    height: 10px;
-                    position: absolute;
-                    top: 25%;
-                    right: 50%;
-                    cursor: pointer;
-                    transform: rotate(45deg);
-                }
-
-                &:after {
-                    content: "";
-                    border: 2px solid @pagination-arrow-color;
-                    border-bottom: none;
-                    border-left: none;
-                    width: 10px;
-                    height: 10px;
-                    position: absolute;
-                    top: 25%;
-                    right: 5%;
-                    cursor: pointer;
-                    transform: rotate(45deg);
+                    content: "last_page";
+                    .material-icons-styling(@color: @turquoise-links, @margin: 0);
                 }
             }
 
@@ -174,7 +140,7 @@
 
     &.pagination-bullets {
         li:not(.arrow-start):not(.arrow-back):not(.arrow-forward):not(.arrow-end) {
-            margin: 0 @base-margin-xs;
+            padding: 0 @base-margin-xs;
 
             a,
             span {
