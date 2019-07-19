@@ -28,9 +28,8 @@ exports[`Documentation: Loaders Basic Usage renders 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <Loader
-      size="default"
-      visible={true}
+    <div
+      className="loader"
     />
   </ComponentPreview>
 </Fragment>

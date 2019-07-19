@@ -12,7 +12,8 @@ const BasicUsage = () => (
             To use a default loader add <Property value=".loader" />, <Property value=".loader-default" /> and <Attribute name="loader" data /> to a div.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <LoaderComponent size="default" visible />
+            {/* <LoaderComponent size="default" visible /> */}
+            <div className="loader" />
         </ComponentPreview>
     </>
 );
