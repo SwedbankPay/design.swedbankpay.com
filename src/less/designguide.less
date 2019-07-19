@@ -85,32 +85,25 @@
         font-size: 87.5%;
     }
 
-    .color-container {
-        display: flex;
-        justify-content: center;
+    .color-preview {
+        display: grid;
+        row-gap: 1rem;
+        column-gap: 2.5rem;
+        grid-template-columns: 1fr;
 
-        &:not(:last-child) {
-            margin-bottom: 0.5rem;
-        }
-
-        > div {
-            &:not(:last-child) {
-                margin-bottom: 0.5rem;
-            }
-        }
-
-        .color-preview {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        svg {
             width: 100%;
-            height: 100%;
-            color: @black;
-            padding: 1rem;
+        }
 
-            p {
-                margin: 0;
-            }
+        figcaption {
+            line-height: 1.25rem;
+            margin-top: 0.25rem;
+        }
+    }
+
+    @media screen and (min-width: @screen-sm-min) {
+        .color-preview {
+            grid-template-columns: 1fr 1fr 1fr;
         }
     }
 

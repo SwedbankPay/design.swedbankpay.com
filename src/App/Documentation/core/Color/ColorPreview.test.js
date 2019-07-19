@@ -12,7 +12,7 @@ describe("Core: Color", () => {
         const wrapper = shallow(<ColorPreview name="test" hex="#test" color="black" />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("test (#test)");
-        expect(wrapper.html()).toContain("background-color:#test");
+        expect(wrapper.html()).toContain("<small>Hex color code: #test</small>");
+        expect(wrapper.html()).toContain("fill=\"#test\"");
     });
 });
