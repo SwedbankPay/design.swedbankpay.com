@@ -5,7 +5,7 @@ exports[`Utilities: JavascriptDocs renders init and close methods 1`] = `
   close={true}
   componentName="test"
 >
-  <h4>
+  <p>
     <PxScript
       component="test"
       func="init"
@@ -44,7 +44,7 @@ exports[`Utilities: JavascriptDocs renders init and close methods 1`] = `
         </span>
       </code>
     </PxScript>
-  </h4>
+  </p>
   <p>
     <Link
       to="/docs/getting-started/javascript"
@@ -56,7 +56,7 @@ exports[`Utilities: JavascriptDocs renders init and close methods 1`] = `
   <CloseDocs
     componentName="test"
   >
-    <h4>
+    <p>
       <PxScript
         component="test"
         func="close"
@@ -106,7 +106,7 @@ exports[`Utilities: JavascriptDocs renders init and close methods 1`] = `
           </span>
         </code>
       </PxScript>
-    </h4>
+    </p>
     <p>
       Closes the given 
       test
@@ -121,7 +121,7 @@ exports[`Utilities: JavascriptDocs renders init and open methods 1`] = `
   componentName="test"
   open={true}
 >
-  <h4>
+  <p>
     <PxScript
       component="test"
       func="init"
@@ -160,7 +160,7 @@ exports[`Utilities: JavascriptDocs renders init and open methods 1`] = `
         </span>
       </code>
     </PxScript>
-  </h4>
+  </p>
   <p>
     <Link
       to="/docs/getting-started/javascript"
@@ -172,7 +172,7 @@ exports[`Utilities: JavascriptDocs renders init and open methods 1`] = `
   <OpenDocs
     componentName="test"
   >
-    <h4>
+    <p>
       <PxScript
         component="test"
         func="open"
@@ -222,7 +222,7 @@ exports[`Utilities: JavascriptDocs renders init and open methods 1`] = `
           </span>
         </code>
       </PxScript>
-    </h4>
+    </p>
     <p>
       Opens the given 
       test
@@ -238,7 +238,7 @@ exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
   componentName="test"
   open={true}
 >
-  <h4>
+  <p>
     <PxScript
       component="test"
       func="init"
@@ -277,7 +277,7 @@ exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
         </span>
       </code>
     </PxScript>
-  </h4>
+  </p>
   <p>
     <Link
       to="/docs/getting-started/javascript"
@@ -289,7 +289,7 @@ exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
   <OpenDocs
     componentName="test"
   >
-    <h4>
+    <p>
       <PxScript
         component="test"
         func="open"
@@ -339,7 +339,7 @@ exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
           </span>
         </code>
       </PxScript>
-    </h4>
+    </p>
     <p>
       Opens the given 
       test
@@ -349,7 +349,7 @@ exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
   <CloseDocs
     componentName="test"
   >
-    <h4>
+    <p>
       <PxScript
         component="test"
         func="close"
@@ -399,7 +399,7 @@ exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
           </span>
         </code>
       </PxScript>
-    </h4>
+    </p>
     <p>
       Closes the given 
       test
@@ -411,12 +411,12 @@ exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
 
 exports[`Utilities: JavascriptDocs renders only init method 1`] = `
 <Fragment>
-  <h4>
+  <p>
     <PxScript
       component="test"
       func="init"
     />
-  </h4>
+  </p>
   <p>
     <Link
       to="/docs/getting-started/javascript"
