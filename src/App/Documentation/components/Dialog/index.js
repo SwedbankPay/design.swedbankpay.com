@@ -36,7 +36,7 @@ const Example = () => (
             <div className="dialog" id="demo-dialog">
                 <section>
                     <header>
-                        <h5>Delete item 456?</h5>{"\n"}
+                        <h4>Delete item 456?</h4>{"\n"}
                         <a href="#" className="dialog-close">{"\n\t\t\t\t"}
                             <Icon icon="close" />{"\n\t\t\t"}
                         </a>{"\n\t\t"}
