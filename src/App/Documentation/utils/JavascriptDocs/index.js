@@ -5,7 +5,7 @@ import { PxScript } from "#";
 
 const OpenDocs = ({ componentName }) => (
     <>
-        <h4><PxScript component={componentName} func="open" params={[`<${componentName.toLowerCase()}-id>`]} /></h4>
+        <p><PxScript component={componentName} func="open" params={[`<${componentName.toLowerCase()}-id>`]} /></p>
         <p>
             Opens the given {componentName.toLowerCase()}.
         </p>
@@ -14,7 +14,7 @@ const OpenDocs = ({ componentName }) => (
 
 const CloseDocs = ({ componentName }) => (
     <>
-        <h4><PxScript component={componentName} func="close" params={[`<${componentName.toLowerCase()}-id>`]} /></h4>
+        <p><PxScript component={componentName} func="close" params={[`<${componentName.toLowerCase()}-id>`]} /></p>
         <p>
             Closes the given {componentName.toLowerCase()}.
         </p>
@@ -23,7 +23,7 @@ const CloseDocs = ({ componentName }) => (
 
 const JavascriptDocs = ({ componentName, open, close }) => (
     <>
-        <h4><PxScript component={componentName} func="init" /></h4>
+        <p><PxScript component={componentName} func="init" /></p>
         <p>
             <Link to="/docs/getting-started/javascript">Initializes</Link> {componentName.toLowerCase()}.
         </p>
