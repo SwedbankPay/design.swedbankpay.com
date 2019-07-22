@@ -2,7 +2,7 @@
 
 exports[`App utils: LoadingComponent renders 1`] = `
 <div
-  className="loading-component"
+  id="loading-component"
 >
   <div
     className="loader"

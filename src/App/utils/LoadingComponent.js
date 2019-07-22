@@ -1,7 +1,7 @@
 import React from "react";
 
 const LoadingComponent = () => (
-    <div className="loading-component">
+    <div id="loading-component">
         <div className="loader"></div>
     </div>
 );
