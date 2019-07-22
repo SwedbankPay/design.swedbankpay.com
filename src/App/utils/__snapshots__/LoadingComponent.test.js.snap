@@ -2,16 +2,10 @@
 
 exports[`App utils: LoadingComponent renders 1`] = `
 <div
-  id="loading-component"
+  className="loading-component"
 >
-  <Loader
-    muted={true}
-    size="large"
+  <div
+    className="loader"
   />
-  <span
-    className="loading-text text-muted"
-  >
-    Loading...
-  </span>
 </div>
 `;

@@ -1,12 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
 import { ComponentPreview, Attribute, Property, DocContainer, JavascriptDocs } from "#";
 import ButtonComponent from "@/Button";
 import Alert from "@/Alert";
-
-const { button } = window.px;
 
 const Examples = () => (
     <>
@@ -193,54 +191,24 @@ const ButtonLoader = () => (
                 <ButtonComponent outline type="destructive" label="Destructive" loader loading />{"\n"}
             </div>
         </ComponentPreview>
-        <h3>The markup</h3>
-        <p>Adding the attribute <Attribute data name="button-loader" /> to a button component will produce the following html:</p>
-        <ComponentPreview language="html" codeFigure>
-            <button className="btn btn-default loading" type="button" data-button-loader>{"\n\t"}
-                Default{"\n\t"}
-                <div className="loader">{"\n\t\t"}
-                    <ul className="loader-icon">{"\n\t\t\t"}
-                        <li></li>{"\n\t\t\t"}
-                        <li></li>{"\n\t\t\t"}
-                        <li></li>{"\n\t\t"}
-                    </ul>{"\n\t"}
-                </div>{"\n"}
-            </button>
-        </ComponentPreview>
-        <Alert type="warning">
-            <h5>Including the loader html</h5>
-            <p>If you want more control over the loader component you can include the html yourself (e.g. for server-side rendering), just make sure you do <b>not</b> add the attribute <Attribute data name="button-loader" />.</p>
-        </Alert>
-        <h3>JavascriptMethods</h3>
-        <p>
-            Only button loaders have to be initialized.
-        </p>
         <JavascriptDocs componentName="button" />
     </>
 );
 
-class Buttons extends Component {
-    componentDidMount () {
-        button.init();
-    }
-
-    render () {
-        return (
-            <DocContainer docToc>
-                <p className="lead">Use our button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
-                <Examples />
-                <UsageWithOtherTags />
-                <OutlineButtons />
-                <ButtonGroup />
-                <Sizes />
-                <ActiveState />
-                <DisabledState />
-                <UsageWithIcons />
-                {/* <ButtonLoader /> */}
-            </DocContainer>
-        );
-    }
-}
+const Buttons = () => (
+    <DocContainer docToc>
+        <p className="lead">Use our button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
+        <Examples />
+        <UsageWithOtherTags />
+        <OutlineButtons />
+        <ButtonGroup />
+        <Sizes />
+        <ActiveState />
+        <DisabledState />
+        <UsageWithIcons />
+        <ButtonLoader />
+    </DocContainer>
+);
 
 export default Buttons;
 

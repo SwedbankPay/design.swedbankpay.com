@@ -1,21 +1,9 @@
-import React, { Component } from "react";
-import Loader from "@/Loader";
+import React from "react";
 
-const { loader } = window.px;
-
-class LoadingComponent extends Component {
-    componentDidMount () {
-        loader.init();
-    }
-
-    render () {
-        return (
-            <div id="loading-component">
-                <Loader size="large" muted />
-                <span className="loading-text text-muted">Loading...</span>
-            </div>
-        );
-    }
-}
+const LoadingComponent = () => (
+    <div className="loading-component">
+        <div className="loader"></div>
+    </div>
+);
 
 export default LoadingComponent;

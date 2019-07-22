@@ -1,12 +1,27 @@
 .loader {
     display: inline-block;
     border: 0.2rem solid @blue-bright;
-    border-left-color: @blue-bright;
     border-left-color: @turquoise;
     border-radius: 50%;
     width: 2.5rem;
     height: 2.5rem;
     animation: loader-spin 0.8s linear infinite;
+
+    &.loader-sm {
+        width: 2rem;
+        height: $width;
+    }
+
+    &.loader-lg {
+        border-width: 0.25rem;
+        width: 3.5rem;
+        height: $width;
+    }
+
+    &.loader-muted {
+        border-color: @gray-bright;
+        border-left-color: @gray-light;
+    }
 }
 
 @keyframes loader-spin {
