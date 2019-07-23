@@ -4,17 +4,22 @@ exports[`Component: Expandable ExpandablePlaceholder renders 1`] = `
 <div
   className="expandable"
 >
-  <div
-    className="expandable-header"
+  <button
+    className="btn expandable-header"
   >
-    <h5>
-      Placeholder
-    </h5>
-  </div>
+    <span>
+      Placeholder title
+    </span>
+    <small>
+      Placeholder subtitle
+    </small>
+  </button>
   <div
     className="expandable-content"
   >
-    Placeholder text
+    <p>
+      Placeholder text
+    </p>
   </div>
 </div>
 `;
@@ -27,17 +32,22 @@ exports[`Component: Expandable prints an expandable component when items is prov
     <div
       className="expandable"
     >
-      <div
-        className="expandable-header"
+      <button
+        className="btn expandable-header"
       >
-        <h5>
-          Placeholder
-        </h5>
-      </div>
+        <span>
+          Placeholder title
+        </span>
+        <small>
+          Placeholder subtitle
+        </small>
+      </button>
       <div
         className="expandable-content"
       >
-        Placeholder text
+        <p>
+          Placeholder text
+        </p>
       </div>
     </div>
   </ExpandablePlaceholder>
@@ -49,21 +59,15 @@ exports[`Component: Expandable returns a number of expandables matching the leng
   items={
     Array [
       Object {
-        "content": <p>
-          My accordion content
-        </p>,
+        "content": "My accordion content",
         "title": "Foo",
       },
       Object {
-        "content": <p>
-          My accordion content
-        </p>,
+        "content": "My accordion content",
         "title": "Bar",
       },
       Object {
-        "content": <p>
-          My accordion content
-        </p>,
+        "content": "My accordion content",
         "title": "Baz",
       },
     ]
@@ -73,13 +77,23 @@ exports[`Component: Expandable returns a number of expandables matching the leng
     className="expandable"
     key="0"
   >
-    <div
-      className="expandable-header"
+    
+
+    <button
+      className="btn expandable-header"
+      type="button"
     >
-      <h5>
+      
+
+      <span>
         Foo
-      </h5>
-    </div>
+      </span>
+      
+
+      <small />
+      
+
+    </button>
     <div
       className="expandable-content"
     >
@@ -92,13 +106,23 @@ exports[`Component: Expandable returns a number of expandables matching the leng
     className="expandable"
     key="1"
   >
-    <div
-      className="expandable-header"
+    
+
+    <button
+      className="btn expandable-header"
+      type="button"
     >
-      <h5>
+      
+
+      <span>
         Bar
-      </h5>
-    </div>
+      </span>
+      
+
+      <small />
+      
+
+    </button>
     <div
       className="expandable-content"
     >
@@ -111,13 +135,23 @@ exports[`Component: Expandable returns a number of expandables matching the leng
     className="expandable"
     key="2"
   >
-    <div
-      className="expandable-header"
+    
+
+    <button
+      className="btn expandable-header"
+      type="button"
     >
-      <h5>
+      
+
+      <span>
         Baz
-      </h5>
-    </div>
+      </span>
+      
+
+      <small />
+      
+
+    </button>
     <div
       className="expandable-content"
     >
@@ -135,17 +169,22 @@ exports[`Component: Expandable returns an expandable component when no items are
     <div
       className="expandable"
     >
-      <div
-        className="expandable-header"
+      <button
+        className="btn expandable-header"
       >
-        <h5>
-          Placeholder
-        </h5>
-      </div>
+        <span>
+          Placeholder title
+        </span>
+        <small>
+          Placeholder subtitle
+        </small>
+      </button>
       <div
         className="expandable-content"
       >
-        Placeholder text
+        <p>
+          Placeholder text
+        </p>
       </div>
     </div>
   </ExpandablePlaceholder>

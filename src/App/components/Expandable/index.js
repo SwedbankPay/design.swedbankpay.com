@@ -2,11 +2,12 @@ import React from "react";
 
 const ExpandablePlaceholder = () => (
     <div className="expandable">
-        <div className="expandable-header">
-            <h5>Placeholder</h5>
-        </div>
+        <button className="btn expandable-header">
+            <span>Placeholder title</span>
+            <small>Placeholder subtitle</small>
+        </button>
         <div className="expandable-content">
-            Placeholder text
+            <p>Placeholder text</p>
         </div>
     </div>
 );
@@ -15,13 +16,18 @@ const ExpandablePlaceholder = () => (
 const Expandable = ({ items }) => (
     items
         ? (Array.isArray(items)
-            ? items.map(({ title, content }, i) => (
-                <div key={i} className="expandable">
-                    <div className="expandable-header">
-                        <h5>{title}</h5>
-                    </div>
+            ? items.map(({ title, subtitle, content }, i) => (
+                <div key={i} className="expandable">{"\n"}
+                    <button type="button" className="btn expandable-header">{"\n"}
+                        <span>
+                            {title}
+                        </span>{"\n"}
+                        <small>
+                            {subtitle}
+                        </small>{"\n"}
+                    </button>
                     <div className="expandable-content">
-                        {content}
+                        <p>{content}</p>
                     </div>
                 </div>
             )) :

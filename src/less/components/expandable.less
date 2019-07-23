@@ -1,55 +1,46 @@
 .expandable {
-    // border: 0 solid @light-brown;
-    // border-width: 1px 1px 0 1px;
-    // box-shadow: 0 3px 1px -1px @light-brown;
     border: 1px solid transparent;
     border-bottom: 2px solid @light-brown;
     border-radius: 2px;
     margin-bottom: 1rem;
     background-color: @offwhite;
-    position: relative;
+    display: flex;
+    flex-direction: column;
 
     &:last-child {
         margin-bottom: 0;
     }
 
     .expandable-header {
-        margin-left: 2.5rem;
-        padding: 1rem 1rem 1rem 0;
-        cursor: pointer;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         user-select: none;
+        color: @dark-brown;
+        padding: 1rem;
+        text-align: start;
+
+        &:active {
+            box-shadow: none;
+        }
+
+        &:hover,
+        &:focus {
+            color: @dark-brown;
+        }
 
         &:before {
-            content: "";
+            .material-icons-styling(@margin: 0 1rem);
+
+            content: "keyboard_arrow_down";
             position: absolute;
-            height: 100%;
-            width: 0.5rem;
-            left: 0;
+            right: 0;
             top: 0;
-            background-color: @brand-primary;
+            bottom: $top;
+            display: flex;
+            align-items: center;
         }
-
-        /* stylelint-disable selector-list-comma-newline-after */
-        > h1, > h2, > h3, > h4, > h5, > h6,
-        > .h1, > .h2, > .h3, > .h4, > .h5, > .h6 {
-            position: relative;
-            margin: 0;
-
-            &:before {
-                content: "";
-                position: absolute;
-                height: 10px;
-                width: 10px;
-                border-bottom: 2px solid @dark-brown;
-                border-right: 2px solid @dark-brown;
-                left: -1.2rem;
-                top: -2px;
-                bottom: 0;
-                margin: auto;
-                transform: rotate(45deg);
-            }
-        }
-        /* stylelint-enable selector-list-comma-newline-after */
     }
 
     .expandable-content {
@@ -65,24 +56,15 @@
 
     &.expandable-open {
         border: 1px solid @medium-brown;
-        box-shadow: none;
+        background-color: transparent;
 
         .expandable-header {
-            /* stylelint-disable selector-list-comma-newline-after */
-            > h1, > h2, > h3, > h4, > h5, > h6,
-            > .h1, > .h2, > .h3, > .h4, > .h5, > .h6 {
-                color: @medium-brown;
-
-                &:before {
-                    transform: rotate(-135deg);
-                    top: 2px;
-                }
-            }
+            color: @medium-brown;
+            background-color: transparent;
 
             &:before {
-                content: none;
+                transform: rotate(180deg);
             }
-            /* stylelint-enable selector-list-comma-newline-after */
         }
 
         .expandable-content {
