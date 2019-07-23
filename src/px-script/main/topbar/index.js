@@ -91,7 +91,7 @@ const init = id => {
         const navMenuObjects = [...topbars].map(topbar => {
             const navMenuQuery = topbar.querySelector(SELECTORS.TOPBARNAV);
 
-            navMenuQuery ? _createTopbar(topbar, navMenuQuery) : null;
+            return navMenuQuery ? _createTopbar(topbar, navMenuQuery) : null;
         });
 
         _addEscListener();

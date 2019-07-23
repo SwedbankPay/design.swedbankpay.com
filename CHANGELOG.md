@@ -12,5 +12,6 @@
 
 - Fixed issue with esc event listener for topbar nav menu.
 - Updated animation for mobile topbar to make it smoother.
+- Fixed issue with px.sheet.init() returning an empty array.
 
 ### Removed
