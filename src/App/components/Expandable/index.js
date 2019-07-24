@@ -26,7 +26,7 @@ const Expandable = ({ items }) => (
                             {subtitle}
                         </small>{"\n"}
                     </button>
-                    <div className="expandable-content">
+                    <div className="expandable-body">
                         <p>{content}</p>
                     </div>
                 </div>

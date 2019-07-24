@@ -1,66 +1,176 @@
+const _expandables = _expandables || [];
+
 class Accordion {
     constructor (element) {
         this.elem = element;
         this.expandables = element.querySelectorAll(".expandable");
-        this.containsOpen = [...this.expandables].find(exp => exp.isOpen);
+        this.openExp = [...this.expandables].find(exp => exp.isOpen);
 
         if (!this.expandables.length) {
             console.warn("accordion: No expandable found");
         }
 
-        this.expandables.forEach(exp => {
-            const expHeader = exp.querySelector(".expandable-header");
+        this.expandables = [...this.expandables].map(expandable => {
+            const expObj = new Expandable(expandable);
 
-            if (!expHeader) {
-                console.warn("accordion: No expandable-header found");
+            this._initializeHeader(expObj);
+            _expandables.push(expObj);
 
-                return null;
-            }
-
-            exp.querySelector(".expandable-header").addEventListener("click", () => {
-                if (exp.classList.contains("expandable-open")) {
-                    this._close(exp);
-                } else {
-                    this._closeAll(exp);
-                    this._open(exp);
-                }
-            });
+            return expObj;
         });
     }
 
-    _open (expandable) {
-        expandable.classList.add("expandable-open");
-        this.containsOpen = true;
+    _open (expParam) {
+        if (this.openExp) {
+            this.openExp._close();
+
+            if (this.openExp === expParam) {
+                this.openExp = null;
+
+                return;
+            }
+        }
+
+        expParam._open();
+        this.openExp = expParam;
     }
 
-    _close (expandable) {
-        expandable.classList.remove("expandable-open");
-        this.containsOpen = false;
+    _initializeHeader (expParam) {
+        expParam.header.addEventListener("click", () => {
+            if (this._containsExpanding()) {
+                return;
+            }
+
+            this._open(expParam);
+        });
     }
 
-    _closeAll (expandable) { // Closes all expandables except the one that is given
-        this.expandables.forEach(item => item !== expandable ? item.classList.remove("expandable-open") : null);
+    _containsExpanding () {
+        return this.expandables.some(exp => exp.isExpanding);
     }
 }
 
 class Expandable {
     constructor (element) {
+        this.id = element.id;
         this.elem = element;
-        this.expHeader = element.querySelector(".expandable-header");
-        this.isOpen = element.classList.contains("expandable-open");
+        this.header = this.elem.querySelector(".expandable-header");
+        this.body = this.elem.querySelector(".expandable-body");
 
-        if (!this.expHeader) {
+        this.isOpen = this.elem.classList.contains("expandable-open");
+        this.isExpanding = this.body.classList.contains("expanding");
+        this.bodyHeight = this.body.clientHeight;
+
+        if (!this.header) {
             console.warn("expandable: No expandable-header found");
 
             return null;
-        }
+        } else if (!this.body) {
+            console.warn("expandable: No expandable-body found");
 
-        this.elem.querySelector(".expandable-header").addEventListener("click", () => {
-            this.elem.classList.toggle("expandable-open");
-            this.isOpen = !this.isOpen;
+            return null;
+        }
+    }
+
+    _initializeHeader () {
+        this.header.addEventListener("click", () => {
+            this.isOpen ? this._close() : this._open();
         });
     }
+
+    _open () {
+        // If the expandable is expanding then return to avoid messing up the animation [AW]
+        if (this.isExpanding) {
+            return;
+        }
+
+        this.isOpen = true;
+        this.isExpanding = true;
+        this.elem.classList.add("expandable-open");
+        this.bodyHeight = this.body.clientHeight;
+        this.body.classList.add("expanding");
+
+        /*
+            Calling clientHeight forces a reflow making it so we get the correct element height.
+            https://developers.google.com/speed/docs/insights/browser-reflow [AW]
+        */
+        this.body.clientHeight;
+
+        this.body.style.height = `${this.bodyHeight}px`;
+
+        setTimeout(() => {
+            this.isExpanding = false;
+            this.body.style.height = "";
+            this.body.classList.remove("expanding");
+        }, 300);
+    }
+
+    _close () {
+        // If the expandable is expanding then return to avoid messing up the animation [AW]
+        if (this.isExpanding) {
+            return;
+        }
+
+        this.isOpen = false;
+        this.isExpanding = true;
+        this.body.style.height = `${this.body.clientHeight}px`;
+
+        this.body.clientHeight; // Trigger reflow again
+        this.body.classList.add("expanding");
+
+        this.body.style.height = "";
+
+        setTimeout(() => {
+            this.isExpanding = false;
+            this.body.classList.remove("expanding");
+            this.elem.classList.remove("expandable-open");
+        }, 300);
+    }
 }
+
+const open = id => {
+    let expandable = null;
+
+    _expandables.forEach(e => e.id === id ? expandable = e : null);
+
+    try {
+        if (expandable.isOpen) {
+            console.warn(`expandable.open: Expandable with id "${id}" is open`);
+
+            return false;
+        }
+
+        expandable._open();
+    } catch (e) {
+        console.warn(`expandable.open: No expandable with id "${id}" found`);
+
+        return false;
+    }
+
+    return expandable;
+};
+
+const close = id => {
+    let expandable = null;
+
+    _expandables.forEach(e => e.id === id ? expandable = e : null);
+
+    try {
+        if (!expandable.isOpen) {
+            console.warn(`expandable.close: Expandable with id "${id}" is not open`);
+
+            return false;
+        }
+
+        expandable._close();
+    } catch (e) {
+        console.warn(`expandable.open: No expandable with id "${id}" found`);
+
+        return false;
+    }
+
+    return expandable;
+};
 
 const init = id => {
     if (id) {
@@ -72,7 +182,16 @@ const init = id => {
             return null;
         }
 
-        return element.closest(".accordion") ? new Accordion(element) : new Expandable(element);
+        if (element.closest(".accordion")) {
+            return new Accordion(element);
+        }
+
+        const expObj = new Expandable(element);
+
+        expObj._initializeHeader();
+        _expandables.push(expObj);
+
+        return expObj;
     } else {
         const accordions = document.querySelectorAll(".accordion");
         const expandables = [...document.querySelectorAll(".expandable")].filter(exp => !exp.closest(".accordion"));
@@ -85,12 +204,22 @@ const init = id => {
         }
 
         accordions.length ? [...accordions].forEach(acc => returnVal.push(new Accordion(acc))) : null;
-        expandables.length ? [...expandables].forEach(exp => returnVal.push(new Expandable(exp))) : null;
+        expandables.length ? [...expandables].forEach(exp => {
+            const expObj = new Expandable(exp);
+
+            expObj._initializeHeader();
+
+            returnVal.push(expObj);
+            _expandables.push(expObj);
+        })
+            : null;
 
         return returnVal;
     }
 };
 
 export default {
-    init
+    init,
+    open,
+    close
 };

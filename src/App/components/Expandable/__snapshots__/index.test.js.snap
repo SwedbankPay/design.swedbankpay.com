@@ -95,7 +95,7 @@ exports[`Component: Expandable returns a number of expandables matching the leng
 
     </button>
     <div
-      className="expandable-content"
+      className="expandable-body"
     >
       <p>
         My accordion content
@@ -124,7 +124,7 @@ exports[`Component: Expandable returns a number of expandables matching the leng
 
     </button>
     <div
-      className="expandable-content"
+      className="expandable-body"
     >
       <p>
         My accordion content
@@ -153,7 +153,7 @@ exports[`Component: Expandable returns a number of expandables matching the leng
 
     </button>
     <div
-      className="expandable-content"
+      className="expandable-body"
     >
       <p>
         My accordion content

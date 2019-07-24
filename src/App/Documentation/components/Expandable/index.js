@@ -9,12 +9,12 @@ const items = [
     {
         title: "My title",
         subtitle: "My subtitle",
-        content: "Esse est enim Lorem amet ut consequat ut. Cillum esse labore sint mollit est sint sint. Lorem esse labore sint non elit laborum. Ipsum nostrud cupidatat ipsum elit irure elit fugiat. Culpa proident commodo id minim enim."
+        content: "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim."
     },
     {
         title: "My title",
         subtitle: "My subtitle",
-        content: "Incididunt nulla veniam eu irure quis excepteur irure dolor. Deserunt irure ad nulla proident commodo ea consectetur officia. Culpa esse pariatur excepteur ullamco."
+        content: "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim."
     },
     {
         title: "My title",
@@ -45,7 +45,34 @@ const Accordion = () => (
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="accordion">
-                <ExpandableComponent items={items} />
+                {/* <ExpandableComponent items={items} /> */}
+                <div id="test" className="expandable">
+                    <button type="button" className="btn expandable-header">
+                        <span>My title</span>
+                        <small>My subtitle</small>
+                    </button>
+                    <div className="expandable-body">
+                        <p>Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.</p>
+                    </div>
+                </div>
+                <div className="expandable">
+                    <button type="button" className="btn expandable-header">
+                        <span>My title</span>
+                        <small>My subtitle</small>
+                    </button>
+                    <div className="expandable-body">
+                        <p>Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.</p>
+                    </div>
+                </div>
+                <div className="expandable">
+                    <button type="button" className="btn expandable-header">
+                        <span>My title</span>
+                        <small>My subtitle</small>
+                    </button>
+                    <div className="expandable-body">
+                        <p>Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.</p>
+                    </div>
+                </div>
             </div>
         </ComponentPreview>
     </>
