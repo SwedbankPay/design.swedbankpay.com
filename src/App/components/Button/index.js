@@ -5,7 +5,8 @@ import classnames from "classnames";
 const Button = ({ label, id, name, value, href, icon, loading, type, disabled, btnType, fullWidth, pullRight, input, outline, active, size }) => {
     const btnClasses = classnames(
         "btn",
-        `btn-${outline ? "outline-" : ""}${type}`,
+        type ? `btn-${type}` : null,
+        outline ? "btn-outline" : null,
         size ? `btn-${size}` : null,
         loading ? "loading" : null,
         fullWidth ? "btn-block" : null,

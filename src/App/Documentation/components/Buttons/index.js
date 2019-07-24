@@ -165,7 +165,7 @@ const UsageWithIcons = () => (
 const ButtonLoader = () => (
     <>
         <h2 id="button-loader">Button loader</h2>
-        <p>To use a button with a loader simply add the attribute <Attribute data name="button-loader" /> to add the required markup for the loader component. Add class <Property value=".loading" /> to display the loader.</p>
+        <p>Add class <Property value=".loading" /> to display the loader.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <ButtonComponent type="executive" label="Executive" loader loading />{"\n"}
@@ -191,7 +191,6 @@ const ButtonLoader = () => (
                 <ButtonComponent outline type="destructive" label="Destructive" loader loading />{"\n"}
             </div>
         </ComponentPreview>
-        <JavascriptDocs componentName="button" />
     </>
 );
 
