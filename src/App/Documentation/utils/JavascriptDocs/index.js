@@ -5,30 +5,40 @@ import { PxScript } from "#";
 
 const OpenDocs = ({ componentName }) => (
     <>
-        <p><PxScript component={componentName} func="open" params={[`<${componentName.toLowerCase()}-id>`]} /></p>
-        <p>
-            Opens the given {componentName.toLowerCase()}.
-        </p>
+        <tr>
+            <td scope="row"><PxScript component={componentName} func="open" params={[`<${componentName.toLowerCase()}-id>`]} /></td>
+            <td>Opens the given {componentName.toLowerCase()}</td>
+        </tr>
     </>
 );
 
 const CloseDocs = ({ componentName }) => (
     <>
-        <p><PxScript component={componentName} func="close" params={[`<${componentName.toLowerCase()}-id>`]} /></p>
-        <p>
-            Closes the given {componentName.toLowerCase()}.
-        </p>
+        <tr>
+            <td scope="row"><PxScript component={componentName} func="close" params={[`<${componentName.toLowerCase()}-id>`]} /></td>
+            <td>Closes the given {componentName.toLowerCase()}</td>
+        </tr>
     </>
 );
 
 const JavascriptDocs = ({ componentName, open, close }) => (
     <>
-        <p><PxScript component={componentName} func="init" /></p>
-        <p>
-            <Link to="/docs/getting-started/javascript">Initializes</Link> {componentName.toLowerCase()}.
-        </p>
-        {open ? <OpenDocs componentName={componentName} /> : null}
-        {close ? <CloseDocs componentName={componentName} /> : null}
+        <table className="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Function</th>
+                    <th scope="col">Purpose</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row"><PxScript component={componentName} func="init" /></td>
+                    <td><Link to="/docs/getting-started/javascript">Initializes</Link> {componentName.toLowerCase()}</td>
+                </tr>
+                {open ? <OpenDocs componentName={componentName} /> : null}
+                {close ? <CloseDocs componentName={componentName} /> : null}
+            </tbody>
+        </table>
     </>
 );
 
