@@ -36,7 +36,7 @@ describe("Component: Button - ", () => {
             const wrapper = shallow(<Button type="executive" href="test" outline />);
 
             expect(wrapper).toMatchSnapshot();
-            expect(wrapper.html()).toContain("btn-outline-executive");
+            expect(wrapper.html()).toContain("btn-outline");
         });
 
         it("renders a button with specified size inside an anchor tag when prop href and size is provided", () => {
@@ -123,7 +123,7 @@ describe("Component: Button - ", () => {
             const wrapper = shallow(<Button type="executive" input outline />);
 
             expect(wrapper).toMatchSnapshot();
-            expect(wrapper.html()).toContain("btn-outline-executive");
+            expect(wrapper.html()).toContain("btn-outline");
         });
 
         it("renders a button with specified size inside an input tag when prop input and size is provided", () => {
@@ -216,7 +216,7 @@ describe("Component: Button - ", () => {
             const wrapper = shallow(<Button type="executive" outline />);
 
             expect(wrapper).toMatchSnapshot();
-            expect(wrapper.html()).toContain("btn-outline-executive");
+            expect(wrapper.html()).toContain("btn-outline");
         });
 
         it("renders a button with specified size when prop size is provided", () => {

@@ -196,7 +196,7 @@ exports[`Component: Button -  Anchor tag: renders a outline button inside an anc
   active={null}
   aria-disabled={null}
   aria-pressed={null}
-  className="btn btn-outline-executive"
+  className="btn btn-executive btn-outline"
   disabled={null}
   href="test"
   role="button"
@@ -398,7 +398,7 @@ exports[`Component: Button -  Button tag: renders an outline button when prop ou
   active={null}
   aria-disabled={null}
   aria-pressed={null}
-  className="btn btn-outline-executive"
+  className="btn btn-executive btn-outline"
   role={null}
   tabIndex={null}
   type="button"
@@ -546,7 +546,7 @@ exports[`Component: Button -  Input tag: renders an outline button inside an inp
   active={null}
   aria-disabled={null}
   aria-pressed={null}
-  className="btn btn-outline-executive"
+  className="btn btn-executive btn-outline"
   role={null}
   tabIndex={null}
   type="button"
@@ -558,7 +558,7 @@ exports[`Component: Button -  prop type is marked as required 1`] = `
   active={null}
   aria-disabled={null}
   aria-pressed={null}
-  className="btn btn-undefined"
+  className="btn"
   role={null}
   tabIndex={null}
   type="button"
