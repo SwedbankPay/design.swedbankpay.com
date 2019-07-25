@@ -28,7 +28,7 @@ const Home = () => {
                             </div>
                             <h2>Web</h2>
                             <p>User interface components for websites and web applications</p>
-                            <Link className="btn btn-outline-guiding btn-block mt-auto" to="/docs/getting-started/introduction">Documentation</Link>
+                            <Link className="btn btn-guiding btn-outline btn-block mt-auto" to="/docs/getting-started/introduction">Documentation</Link>
                         </div>
                     </div>
                 </div>
@@ -40,7 +40,7 @@ const Home = () => {
                             </div>
                             <h2>Placeholder</h2>
                             <p>This paragraph contains some text.</p>
-                            <Link className="btn btn-outline-guiding btn-block mt-auto" to="/docs/getting-started/introduction">Placeholder link</Link>
+                            <Link className="btn btn-guiding btn-outline btn-block mt-auto" to="/docs/getting-started/introduction">Placeholder link</Link>
                         </div>
                     </div>
                 </div>
@@ -52,7 +52,7 @@ const Home = () => {
                             </div>
                             <h2>Placeholder</h2>
                             <p>This paragraph contains some text.</p>
-                            <Link className="btn btn-outline-guiding btn-block mt-auto" to="/docs/getting-started/introduction">Placeholder link</Link>
+                            <Link className="btn btn-guiding btn-outline btn-block mt-auto" to="/docs/getting-started/introduction">Placeholder link</Link>
                         </div>
                     </div>
                 </div>

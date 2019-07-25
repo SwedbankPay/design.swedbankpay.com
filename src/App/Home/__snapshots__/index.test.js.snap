@@ -55,7 +55,7 @@ exports[`Home: index renders 1`] = `
             User interface components for websites and web applications
           </p>
           <Link
-            className="btn btn-outline-guiding btn-block mt-auto"
+            className="btn btn-guiding btn-outline btn-block mt-auto"
             to="/docs/getting-started/introduction"
           >
             Documentation
@@ -88,7 +88,7 @@ exports[`Home: index renders 1`] = `
             This paragraph contains some text.
           </p>
           <Link
-            className="btn btn-outline-guiding btn-block mt-auto"
+            className="btn btn-guiding btn-outline btn-block mt-auto"
             to="/docs/getting-started/introduction"
           >
             Placeholder link
@@ -121,7 +121,7 @@ exports[`Home: index renders 1`] = `
             This paragraph contains some text.
           </p>
           <Link
-            className="btn btn-outline-guiding btn-block mt-auto"
+            className="btn btn-guiding btn-outline btn-block mt-auto"
             to="/docs/getting-started/introduction"
           >
             Placeholder link

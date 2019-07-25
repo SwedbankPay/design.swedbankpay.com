@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, Attribute, Property, DocContainer, JavascriptDocs } from "#";
+import { ComponentPreview, Attribute, Property, DocContainer } from "#";
 import ButtonComponent from "@/Button";
 import Alert from "@/Alert";
 
