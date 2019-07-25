@@ -6,6 +6,12 @@
 .text-nowrap   { white-space: nowrap !important; }
 .text-truncate { .text-truncate(); }
 
+// Font family
+
+.swed-emphasized {
+    font-family: @font-swedbank-headline;
+}
+
 // Responsive alignment
 
 each(@grid-breakpoints, .(@size, @abbr) {

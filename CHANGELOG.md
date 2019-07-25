@@ -6,6 +6,7 @@
 
 ### Changed
 
+- Changed typography sizes and added breakpoint styling for headings/small.
 - Changed topbar logo to be an image wrapped by an anchor to be more accessible.
 
 ### Fixed

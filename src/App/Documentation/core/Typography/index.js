@@ -4,23 +4,12 @@ import PrismCode from "react-prism";
 
 import { ComponentPreview, DocContainer, Property } from "#";
 
-const Fonts = () => {
-    const removeRobotoCode = `html {
-                                font-family: GillSans, Calibri, Trebuchet, sans-serif;
-                            }`;
-
-    return (
+const Fonts = () => (
         <>
             <h2 id="font">Font</h2>
-            <p>The standard font Swedbank Pay DesignGuide uses is Roboto. It is included in the stylesheet. The included font weights you can use are: 300, 400, 500, 700 & 900. Both normal and italicized is available.</p>
-            <h3>Removing Roboto</h3>
-            <p>In case your site is not going to use Roboto, you can modify your font stack by modifying the snippet below to your preferance and add it to your custom stylesheet.</p>
-            <ComponentPreview language="css" codeFigure>
-                {removeRobotoCode}
-            </ComponentPreview>
+            <p>The standard font Swedbank Pay DesignGuide uses is Arial. The included font weights you can use are: 400, 600 & 800. Both normal and italicized is available.</p>
         </>
-    );
-};
+);
 
 const Headings = () => (
     <>
