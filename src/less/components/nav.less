@@ -57,7 +57,7 @@
             ul {
                 list-style: none;
                 padding: 0;
-                margin: 0 0 @base-margin-sm @nav-submenu-list-margin-left;
+                margin: 0 0 0.5rem 3rem;
 
                 li {
                     margin: 0;
@@ -76,7 +76,7 @@
                     }
 
                     &.active {
-                        > a {
+                        span {
                             position: relative;
 
                             &:before {
@@ -136,6 +136,15 @@
                 }
             }
 
+            a.active {
+                background-color: @light-gray;
+                border-radius: 2px;
+            }
+
+            a {
+                padding-left: calc(0.75rem + 4px);
+            }
+
             &.responsive-hidden {
                 display: list-item;
 
@@ -167,18 +176,13 @@
                         }
                     }
 
-                    > a {
-                        background-color: @gray-bright;
-                        border-radius: 2px;
-                    }
-
                     ul {
                         margin: 0;
                         z-index: @zindex-nav-submenu;
                         background-color: @white;
                         display: block;
                         position: absolute;
-                        left: 3.7rem;
+                        left: 4rem;
                         top: 0.5rem;
                         box-shadow: 1px 3px 5px 0 rgba(0, 0, 0, 0.25);
                         white-space: nowrap;
@@ -188,7 +192,7 @@
                                 display: flex;
                                 font-size: @base-font-size;
                                 color: @dark-brown;
-                                padding: 0.5rem 1rem 0.5rem 0.5rem;
+                                padding: 0.5rem 1rem 0.5rem 0.75rem;
 
                                 span {
                                     display: list-item;
@@ -197,19 +201,19 @@
 
 
                             &.active {
-                                a:before {
+                                span:before {
                                     content: none;
                                 }
                             }
 
                             &:hover {
                                 text-decoration: none;
-                                background-color: @gray-bright;
+                                background-color: @light-gray;
                             }
 
                             &:not(:last-child) {
                                 a {
-                                    border-bottom: 1px solid @gray-bright;
+                                    border-bottom: 1px solid @light-gray;
                                 }
                             }
                         }
@@ -233,6 +237,9 @@
                         top: 0;
                         left: 0;
                     }
+
+                    background-color: @light-gray;
+                    border-radius: 2px;
                 }
             }
 
@@ -340,6 +347,14 @@
                 }
             }
 
+            a.active {
+                background-color: transparent;
+            }
+
+            &.active:before {
+                content: none;
+            }
+
             div {
                 &.submenu {
                     &:hover {
@@ -348,6 +363,7 @@
 
                     > a {
                         color: @dark-brown;
+                        margin-bottom: -0.5rem;
                     }
 
                     .submenu-icon-clickable {
@@ -356,14 +372,19 @@
 
                     > ul {
                         width: 100%;
-                    }
 
-                    .material-icons {
-                        margin-right: calc(@base-margin - 4px);
-                        vertical-align: -5px;
+                        a {
+                            padding: 0.5rem;
+                        }
                     }
 
                     &.submenu-active-parent {
+                        background-color: transparent;
+
+                        &:before {
+                            content: none;
+                        }
+
                         i {
                             color: @dark-brown;
                         }
