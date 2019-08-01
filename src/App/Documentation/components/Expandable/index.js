@@ -36,43 +36,16 @@ const Overview = () => (
     </>
 );
 
-const Accordion = () => (
+const ExpandableGroup = () => (
     <>
-        <h2 id="accordion">Accordion</h2>
+        <h2 id="expandable-group">Expandable Group</h2>
         <p>
-            If you use a wrapper with <Property value=".accordion"/> then only one expandable can be open at the
+            If you use a wrapper with <Property value=".expandable-group"/> then only one expandable can be open at the
             same time.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="accordion">
-                {/* <ExpandableComponent items={items} /> */}
-                <div id="test" className="expandable">
-                    <button type="button" className="btn expandable-header">
-                        <span>My title</span>
-                        <small>My subtitle</small>
-                    </button>
-                    <div className="expandable-body">
-                        <p>Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.</p>
-                    </div>
-                </div>
-                <div className="expandable">
-                    <button type="button" className="btn expandable-header">
-                        <span>My title</span>
-                        <small>My subtitle</small>
-                    </button>
-                    <div className="expandable-body">
-                        <p>Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.</p>
-                    </div>
-                </div>
-                <div className="expandable">
-                    <button type="button" className="btn expandable-header">
-                        <span>My title</span>
-                        <small>My subtitle</small>
-                    </button>
-                    <div className="expandable-body">
-                        <p>Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.</p>
-                    </div>
-                </div>
+            <div className="expandable-group">
+                <ExpandableComponent items={items} />
             </div>
         </ComponentPreview>
     </>
@@ -84,10 +57,10 @@ const Expandable = () => {
     return (
         <DocContainer docToc>
             <p className="lead">
-                Accordion
+                Expandables offer a way to hide content and displaying it on click. We have two variants; using expandables separatley or wrap them in a expandable-group. Read more below the respective headlines.
             </p>
             <Overview />
-            <Accordion />
+            <ExpandableGroup />
         </DocContainer>
     );
 };
@@ -95,4 +68,4 @@ const Expandable = () => {
 export default Expandable;
 
 /* For testing */
-export { Overview, Accordion };
+export { Overview, ExpandableGroup };

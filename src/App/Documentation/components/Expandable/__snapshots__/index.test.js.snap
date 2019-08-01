@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components: Expandable Accordion renders 1`] = `
+exports[`Components: Expandable ExpandableGroup renders 1`] = `
 <Fragment>
   <h2
-    id="accordion"
+    id="expandable-group"
   >
-    Accordion
+    Expandable Group
   </h2>
   <p>
     If you use a wrapper with 
     <Property
-      value=".accordion"
+      value=".expandable-group"
     />
      then only one expandable can be open at the same time.
   </p>
@@ -20,75 +20,29 @@ exports[`Components: Expandable Accordion renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="accordion"
+      className="expandable-group"
     >
-      <div
-        className="expandable"
-        id="test"
-      >
-        <button
-          className="btn expandable-header"
-          type="button"
-        >
-          <span>
-            My title
-          </span>
-          <small>
-            My subtitle
-          </small>
-        </button>
-        <div
-          className="expandable-body"
-        >
-          <p>
-            Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.
-          </p>
-        </div>
-      </div>
-      <div
-        className="expandable"
-      >
-        <button
-          className="btn expandable-header"
-          type="button"
-        >
-          <span>
-            My title
-          </span>
-          <small>
-            My subtitle
-          </small>
-        </button>
-        <div
-          className="expandable-body"
-        >
-          <p>
-            Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.
-          </p>
-        </div>
-      </div>
-      <div
-        className="expandable"
-      >
-        <button
-          className="btn expandable-header"
-          type="button"
-        >
-          <span>
-            My title
-          </span>
-          <small>
-            My subtitle
-          </small>
-        </button>
-        <div
-          className="expandable-body"
-        >
-          <p>
-            Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.
-          </p>
-        </div>
-      </div>
+      <Expandable
+        items={
+          Array [
+            Object {
+              "content": "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.",
+              "subtitle": "My subtitle",
+              "title": "My title",
+            },
+            Object {
+              "content": "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.",
+              "subtitle": "My subtitle",
+              "title": "My title",
+            },
+            Object {
+              "content": "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.",
+              "subtitle": "My subtitle",
+              "title": "My title",
+            },
+          ]
+        }
+      />
     </div>
   </ComponentPreview>
 </Fragment>
@@ -149,9 +103,9 @@ exports[`Components: Expandable renders 1`] = `
   <p
     className="lead"
   >
-    Accordion
+    Expandables offer a way to hide content and displaying it on click. We have two variants; using expandables separatley or wrap them in a expandable-group. Read more below the respective headlines.
   </p>
   <Overview />
-  <Accordion />
+  <ExpandableGroup />
 </DocContainer>
 `;
