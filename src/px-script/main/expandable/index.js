@@ -1,13 +1,13 @@
 const _expandables = _expandables || [];
+const _expandableGroups = _expandableGroups || [];
 
-class Accordion {
+class ExpandableGroup {
     constructor (element) {
         this.elem = element;
         this.expandables = element.querySelectorAll(".expandable");
-        this.openExp = [...this.expandables].find(exp => exp.isOpen);
 
         if (!this.expandables.length) {
-            console.warn("accordion: No expandable found");
+            console.warn("expandable-group: No expandable children found");
         }
 
         this.expandables = [...this.expandables].map(expandable => {
@@ -18,9 +18,11 @@ class Accordion {
 
             return expObj;
         });
+
+        this.openExp = [...this.expandables].find(exp => exp.isOpen);
     }
 
-    _open (expParam) {
+    _toggle (expParam) {
         if (this.openExp) {
             this.openExp._close();
 
@@ -35,13 +37,37 @@ class Accordion {
         this.openExp = expParam;
     }
 
+    _open (expParam) {
+        if (this.openExp) {
+            this.openExp._close();
+        }
+
+        expParam._open();
+        this.openExp = expParam;
+    }
+
+    _close () {
+        if (this.openExp) {
+            this.openExp._close();
+            this.openExp = null;
+        }
+    }
+
     _initializeHeader (expParam) {
+        if (!expParam.header) {
+            console.warn("expandable-group: An expandable is missing a header");
+
+            return null;
+        }
+
         expParam.header.addEventListener("click", () => {
             if (this._containsExpanding()) {
-                return;
+                console.warn("expandable-group: The expandable-group contains an expanding element");
+
+                return null;
             }
 
-            this._open(expParam);
+            this._toggle(expParam);
         });
     }
 
@@ -56,23 +82,26 @@ class Expandable {
         this.elem = element;
         this.header = this.elem.querySelector(".expandable-header");
         this.body = this.elem.querySelector(".expandable-body");
+        this.expGrpParent = this.elem.closest(".expandable-group");
 
-        this.isOpen = this.elem.classList.contains("expandable-open");
-        this.isExpanding = this.body.classList.contains("expanding");
-        this.bodyHeight = this.body.clientHeight;
-
-        if (!this.header) {
-            console.warn("expandable: No expandable-header found");
-
-            return null;
-        } else if (!this.body) {
+        if (!this.body) {
             console.warn("expandable: No expandable-body found");
 
             return null;
         }
+
+        this.isOpen = this.elem.classList.contains("expandable-open");
+        this.isExpanding = this.body.classList.contains("expanding");
+        this.bodyHeight = this.body.clientHeight;
     }
 
     _initializeHeader () {
+        if (!this.header) {
+            console.warn("expandable: No expandable-header found");
+
+            return null;
+        }
+
         this.header.addEventListener("click", () => {
             this.isOpen ? this._close() : this._open();
         });
@@ -81,7 +110,9 @@ class Expandable {
     _open () {
         // If the expandable is expanding then return to avoid messing up the animation [AW]
         if (this.isExpanding) {
-            return;
+            console.warn(`expandable: The given expandable is ${this.isOpen ? "expanding" : "collapsing"}`);
+
+            return false;
         }
 
         this.isOpen = true;
@@ -108,7 +139,9 @@ class Expandable {
     _close () {
         // If the expandable is expanding then return to avoid messing up the animation [AW]
         if (this.isExpanding) {
-            return;
+            console.warn(`expandable: The given expandable is ${this.isOpen ? "expanding" : "collapsing"}`);
+
+            return false;
         }
 
         this.isOpen = false;
@@ -131,21 +164,29 @@ class Expandable {
 const open = id => {
     let expandable = null;
 
-    _expandables.forEach(e => e.id === id ? expandable = e : null);
+    expandable = _expandables.find(e => e.id === id);
 
-    try {
-        if (expandable.isOpen) {
-            console.warn(`expandable.open: Expandable with id "${id}" is open`);
-
-            return false;
-        }
-
-        expandable._open();
-    } catch (e) {
-        console.warn(`expandable.open: No expandable with id "${id}" found`);
+    if (!expandable) {
+        console.warn(`expandable.open: expandable with id ${id} was not found`);
 
         return false;
     }
+
+    if (expandable.isOpen) {
+        console.warn(`expandable.open: expandable with id ${expandable.id} is open`);
+
+        return false;
+    }
+
+    if (expandable.expGrpParent) {
+        const expGrpObj = _expandableGroups.find(eg => eg.elem === expandable.expGrpParent);
+
+        expGrpObj._open(expandable);
+
+        return expandable;
+    }
+
+    expandable._open();
 
     return expandable;
 };
@@ -153,21 +194,29 @@ const open = id => {
 const close = id => {
     let expandable = null;
 
-    _expandables.forEach(e => e.id === id ? expandable = e : null);
+    expandable = _expandables.find(e => e.id === id);
 
-    try {
-        if (!expandable.isOpen) {
-            console.warn(`expandable.close: Expandable with id "${id}" is not open`);
-
-            return false;
-        }
-
-        expandable._close();
-    } catch (e) {
-        console.warn(`expandable.open: No expandable with id "${id}" found`);
+    if (!expandable) {
+        console.warn(`expandable.close: expandable with id ${id} was not found`);
 
         return false;
     }
+
+    if (!expandable.isOpen) {
+        console.warn(`expandable.close: expandable with id ${expandable.id} is closed`);
+
+        return false;
+    }
+
+    if (expandable.expGrpParent) {
+        const expGrpObj = _expandableGroups.find(eg => eg.elem === expandable.expGrpParent);
+
+        expGrpObj._close(expandable);
+
+        return expandable;
+    }
+
+    expandable._close();
 
     return expandable;
 };
@@ -177,13 +226,17 @@ const init = id => {
         const element = document.getElementById(id);
 
         if (!element) {
-            console.warn(`No accordion or expandable with id ${id} found`);
+            console.warn(`No expandable-group or expandable with id ${id} found`);
 
             return null;
         }
 
-        if (element.closest(".accordion")) {
-            return new Accordion(element);
+        if (element.closest(".expandable-group")) {
+            const expGrpObj = new ExpandableGroup(element);
+
+            _expandableGroups.push(expGrpObj);
+
+            return expGrpObj;
         }
 
         const expObj = new Expandable(element);
@@ -193,26 +246,37 @@ const init = id => {
 
         return expObj;
     } else {
-        const accordions = document.querySelectorAll(".accordion");
-        const expandables = [...document.querySelectorAll(".expandable")].filter(exp => !exp.closest(".accordion"));
+        const expandableGroups = document.querySelectorAll(".expandable-group");
+        const expandables = [...document.querySelectorAll(".expandable")].filter(exp => !exp.closest(".expandable-group"));
         const returnVal = [];
 
-        if (!accordions.length && !expandables.length) {
-            console.warn("No accordions or expandables found");
+        if (!expandableGroups.length && !expandables.length) {
+            console.warn("expandable.init: No expandable-group or expandables found");
 
             return null;
         }
 
-        accordions.length ? [...accordions].forEach(acc => returnVal.push(new Accordion(acc))) : null;
-        expandables.length ? [...expandables].forEach(exp => {
-            const expObj = new Expandable(exp);
+        if (expandableGroups.length) {
+            [...expandableGroups].forEach(expGrp => {
+                const expGrpObj = new ExpandableGroup(expGrp);
 
-            expObj._initializeHeader();
+                returnVal.push(expGrpObj);
 
-            returnVal.push(expObj);
-            _expandables.push(expObj);
-        })
-            : null;
+                expGrpObj ? _expandableGroups.push(expGrpObj) : null;
+            });
+        }
+
+        if (expandables.length) {
+            [...expandables].forEach(exp => {
+                const expObj = new Expandable(exp);
+
+                expObj._initializeHeader();
+
+                returnVal.push(expObj);
+
+                expObj ? _expandables.push(expObj) : null;
+            });
+        }
 
         return returnVal;
     }
