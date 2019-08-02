@@ -47,10 +47,8 @@ class ExpandableGroup {
     }
 
     _close () {
-        if (this.openExp) {
-            this.openExp._close();
-            this.openExp = null;
-        }
+        this.openExp._close();
+        this.openExp = null;
     }
 
     _initializeHeader (expParam) {
