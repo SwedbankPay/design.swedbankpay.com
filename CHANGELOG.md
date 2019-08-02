@@ -1,23 +1,14 @@
 # Changelog
 
-## [3.2.0] - 2019-07-12
-
-### Added
-
-- Added .page-footer-rights class to use with .page-footer.
-- Added better feedback when initializing expandables/accordions
+## [3.3.0] - 2019-08-02
 
 ### Changed
 
-- There is no longer a width constraint on the card component. Use grid to set sizing.
-- Changed front page and general documentation styling.
-- Replaced documentation occurences of PayEx with Swedbank Pay.
+- Changed typography sizes and added breakpoint styling for headings/small.
+- Changed topbar logo to be an image wrapped by an anchor to be more accessible.
 
 ### Fixed
 
-- Fixed issue with px.sheet.open and px.sheet.close.
-
-### Removed
-
-- Removed box-shadow from steps component.
-- Removed .cards wrapper.
+- Fixed issue with esc event listener for topbar nav menu.
+- Updated animation for mobile topbar to make it smoother.
+- Fixed issue with px.sheet.init() returning an empty array.

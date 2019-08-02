@@ -1,21 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const ColorPreview = ({ name, hex, color }) => {
-    const style = { backgroundColor: hex };
-    const textStyle = { color: color || null };
-
-    return (
-        <div className="color-preview" style={style}>
-            <p style={color ? textStyle : null}>{name} ({hex})</p>
-        </div>
-    );
-};
+const ColorPreview = ({ name, hex }) => (
+    <figure>
+        <svg className={name === "White" ? "border" : null}>
+            <rect width="100%" height="100%" fill={hex} />
+        </svg>
+        <figcaption>
+            {name}<br/>
+            <small>Hex color code: {hex}</small>
+        </figcaption>
+    </figure>
+);
 
 ColorPreview.propTypes = {
     name: PropTypes.string.isRequired,
-    hex: PropTypes.string.isRequired,
-    color: PropTypes.string
+    hex: PropTypes.string.isRequired
 };
 
 export default ColorPreview;

@@ -10,7 +10,7 @@ const DocHeading = ({ location }) => {
 
     document.title = `${title} | Swedbank Pay DesignGuide`;
 
-    return <h2 className="h1">{title}</h2>;
+    return <h1>{title}</h1>;
 };
 
 export default withRouter(DocHeading);

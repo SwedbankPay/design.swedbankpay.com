@@ -9,11 +9,17 @@ const SELECTORS = {
 
 const _navMenus = _navMenus || [];
 
+const _closeOnEsc = () => (_navMenus.some(menu => menu.isOpen ? menu.close() : false));
+
 const _addEscListener = () => {
     document.addEventListener("keydown", e => {
-        if (e.key === "Escape" && document.body.classList.contains("has-vscroll")) {
+        if (e.key === "Escape") {
             /* Only runs handleScrollbar if a navMenu was actually closed [AW] */
-            if (_navMenus.some(menu => menu.isOpen ? menu.close() : false)) { handleScrollbar(); }
+            if (document.body.classList.contains("has-vscroll")) {
+                if (_closeOnEsc()) { handleScrollbar(); }
+            } else {
+                _closeOnEsc();
+            }
         }
     });
 };
@@ -34,7 +40,7 @@ const open = id => {
     try {
         navmenu.open();
     } catch (e) {
-        console.error(`navmenu.open: No navmenu with id "${id}" found.`);
+        console.warn(`navmenu.open: No navmenu with id "${id}" found.`);
 
         return false;
     }
@@ -50,7 +56,7 @@ const close = id => {
     try {
         navmenu.close();
     } catch (e) {
-        console.error(`navmenu.close: No navmenu with id "${id}" found.`);
+        console.warn(`navmenu.close: No navmenu with id "${id}" found.`);
 
         return false;
     }
@@ -85,7 +91,7 @@ const init = id => {
         const navMenuObjects = [...topbars].map(topbar => {
             const navMenuQuery = topbar.querySelector(SELECTORS.TOPBARNAV);
 
-            navMenuQuery ? _createTopbar(topbar, navMenuQuery) : null;
+            return navMenuQuery ? _createTopbar(topbar, navMenuQuery) : null;
         });
 
         _addEscListener();

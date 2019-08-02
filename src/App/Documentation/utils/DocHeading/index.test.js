@@ -16,7 +16,7 @@ describe("Utilities: DocHeading", () => {
         );
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("<h2 class=\"h1\">Test</h2>");
+        expect(wrapper.html()).toContain("<h1>Test</h1>");
         expect(document.title).toEqual("Test | Swedbank Pay DesignGuide");
     });
 
@@ -28,7 +28,7 @@ describe("Utilities: DocHeading", () => {
         );
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("<h2 class=\"h1\">Test test</h2>");
+        expect(wrapper.html()).toContain("<h1>Test test</h1>");
         expect(document.title).toEqual("Test test | Swedbank Pay DesignGuide");
     });
 });

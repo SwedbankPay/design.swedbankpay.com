@@ -1,18 +1,20 @@
 .pagination {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
     padding-left: 0;
     margin: @base-margin 0;
 
     li {
-        display: inline;
+        display: flex;
         position: relative;
 
         a,
         span {
-            margin: 0 @base-margin-sm;
+            display: flex;
+            align-items: center;
+            padding: 0 @base-margin-sm;
             font-weight: bold;
             color: @pagination-default-color;
-            display: inline-block;
             cursor: pointer;
             user-select: none;
             text-decoration: none;
@@ -29,6 +31,13 @@
             }
         }
 
+        &:not(.arrow-start):not(.arrow-back):not(.arrow-forward):not(.arrow-end) {
+            a,
+            span {
+                padding: 0.25rem 0.75rem;
+            }
+        }
+
         &.active {
             a,
             span {
@@ -41,24 +50,16 @@
             a,
             span {
                 &:after {
-                    content: "";
-                    border: 2px solid @pagination-arrow-color;
-                    border-top: none;
-                    border-right: none;
-                    width: 10px;
-                    height: 10px;
-                    position: absolute;
-                    top: 25%;
-                    left: 50%;
-                    cursor: pointer;
-                    transform: rotate(45deg);
+                    content: "chevron_left";
+                    .material-icons-styling(@color: @turquoise-links, @margin: 0, @font-size: 1.75rem);
                 }
             }
 
             span {
+                cursor: default;
+
                 &:after {
-                    border-color: @pagination-default-color;
-                    cursor: default;
+                    color: @pagination-default-color;
                 }
             }
         }
@@ -67,39 +68,17 @@
             a,
             span {
                 &:before {
-                    content: "";
-                    border: 2px solid @pagination-arrow-color;
-                    border-top: none;
-                    border-right: none;
-                    width: 10px;
-                    height: 10px;
-                    position: absolute;
-                    top: 25%;
-                    left: 50%;
-                    cursor: pointer;
-                    transform: rotate(45deg);
-                }
-
-                &:after {
-                    content: "";
-                    border: 2px solid @pagination-arrow-color;
-                    border-top: none;
-                    border-right: none;
-                    width: 10px;
-                    height: 10px;
-                    position: absolute;
-                    top: 25%;
-                    left: 15%;
-                    cursor: pointer;
-                    transform: rotate(45deg);
+                    content: "first_page";
+                    .material-icons-styling(@color: @turquoise-links, @margin: 0, @font-size: 1.75rem);
                 }
             }
 
             span {
+                cursor: default;
+
                 &:before,
                 &:after {
-                    border-color: @pagination-default-color;
-                    cursor: default;
+                    color: @pagination-default-color;
                 }
             }
         }
@@ -108,24 +87,16 @@
             a,
             span {
                 &:after {
-                    content: "";
-                    border: 2px solid @pagination-arrow-color;
-                    border-bottom: none;
-                    border-left: none;
-                    width: 10px;
-                    height: 10px;
-                    position: absolute;
-                    top: 25%;
-                    right: 50%;
-                    cursor: pointer;
-                    transform: rotate(45deg);
+                    content: "chevron_right";
+                    .material-icons-styling(@color: @turquoise-links, @margin: 0, @font-size: 1.75rem);
                 }
             }
 
             span {
+                cursor: default;
+
                 &:after {
-                    border-color: @pagination-default-color;
-                    cursor: default;
+                    color: @pagination-default-color;
                 }
             }
         }
@@ -134,39 +105,17 @@
             a,
             span {
                 &:before {
-                    content: "";
-                    border: 2px solid @pagination-arrow-color;
-                    border-bottom: none;
-                    border-left: none;
-                    width: 10px;
-                    height: 10px;
-                    position: absolute;
-                    top: 25%;
-                    right: 50%;
-                    cursor: pointer;
-                    transform: rotate(45deg);
-                }
-
-                &:after {
-                    content: "";
-                    border: 2px solid @pagination-arrow-color;
-                    border-bottom: none;
-                    border-left: none;
-                    width: 10px;
-                    height: 10px;
-                    position: absolute;
-                    top: 25%;
-                    right: 5%;
-                    cursor: pointer;
-                    transform: rotate(45deg);
+                    content: "last_page";
+                    .material-icons-styling(@color: @turquoise-links, @margin: 0, @font-size: 1.75rem);
                 }
             }
 
             span {
+                cursor: default;
+
                 &:before,
                 &:after {
-                    border-color: @pagination-default-color;
-                    cursor: default;
+                    color: @pagination-default-color;
                 }
             }
         }
@@ -174,22 +123,26 @@
 
     &.pagination-bullets {
         li:not(.arrow-start):not(.arrow-back):not(.arrow-forward):not(.arrow-end) {
-            margin: 0 @base-margin-xs;
-
             a,
             span {
                 //Hide the text, we just want to see bullets
                 color: rgba(0, 0, 0, 0);
+                position: relative;
+                padding: 0.25rem 0.75rem;
+
 
                 &:after {
                     content: "";
                     position: absolute;
-                    width: @pagination-bullet-size;
-                    height: @pagination-bullet-size;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    width: 1rem;
+                    height: 1rem;
                     border-radius: 50%;
                     background-color: @pagination-default-color;
-                    top: 15%;
-                    left: 25%;
+                    margin: auto;
                 }
 
                 &:hover {

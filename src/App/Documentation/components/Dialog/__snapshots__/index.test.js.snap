@@ -25,9 +25,9 @@ exports[`Documentation: Dialog Example renders 1`] = `
     >
       <section>
         <header>
-          <h5>
+          <h4>
             Delete item 456?
-          </h5>
+          </h4>
           
 
           <a

@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 
 import { ComponentPreview, DocContainer, Property } from "#";
-import expandable from "$/px-script/main/expandable";
 import ExpandableComponent from "@/Expandable";
+
+const { expandable } = window.px;
 
 const items = [
     {

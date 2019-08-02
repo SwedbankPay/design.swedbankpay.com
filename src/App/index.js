@@ -6,7 +6,8 @@ import Loadable from "react-loadable";
 import Footer from "@/Footer";
 import AppHeader from "./AppHeader";
 import { LoadingComponent } from "./utils";
-import { topbar } from "../px-script/main";
+
+const { topbar } = window.px;
 
 const BASENAME = process.env.basename || "/";
 const history = createBrowserHistory({ basename: BASENAME });
@@ -67,7 +68,7 @@ class App extends Component {
     }
 
     componentDidMount () {
-        topbar.init(0);
+        topbar.init();
     }
 
     render () {
