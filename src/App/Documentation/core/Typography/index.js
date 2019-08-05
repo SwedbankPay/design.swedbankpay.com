@@ -19,28 +19,12 @@ const Headings = () => (
             <h1>Heading h1</h1>
             <h2>Heading h2</h2>
             <h3>Heading h3</h3>
-            <h4>Heading h4</h4>
-            <h5>Heading h5</h5>
-            <h6>Heading h6</h6>
         </ComponentPreview>
         <p>The classes <Property value=".h1" /> through <Property value=".h6" /> are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <p className="h1">.h1 heading</p>
             <p className="h2">.h2 heading</p>
             <p className="h3">.h3 heading</p>
-            <p className="h4">.h4 heading</p>
-            <p className="h5">.h5 heading</p>
-            <p className="h6">.h6 heading</p>
-        </ComponentPreview>
-    </>
-);
-
-const Small = () => (
-    <>
-        <h2 id="small">Small</h2>
-        <p>Use the <PrismCode className="language-html">{"<small></small>"}</PrismCode> tags to create a secondary heading within a heading tag or class.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <h2>Main heading <small>with a faded secondary heading</small></h2>
         </ComponentPreview>
     </>
 );
@@ -141,7 +125,6 @@ const Typography = () => (
         <p className="lead">Documentation and examples for Swedbank Pay DesignGuide typography.</p>
         <Fonts />
         <Headings />
-        <Small />
         <Lead />
         <Inline />
         <TextUtilities />
@@ -153,4 +136,4 @@ const Typography = () => (
 export default Typography;
 
 /* For testing */
-export { Fonts, Headings, Small, Lead, Inline, TextUtilities, Abbreviations, Blockquotes };
+export { Fonts, Headings, Lead, Inline, TextUtilities, Abbreviations, Blockquotes };
