@@ -2,38 +2,11 @@
 @import "_mixins";
 
 #px-designguide {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 
     .designguide-header {
-        .topbar-logo {
-            margin-right: 0;
-        }
-
-        &:before,
-        &:after {
-            display: none;
-        }
-
-        .header-links {
-            a {
-                padding: 0 1rem;
-                border: 0;
-
-                &.active {
-                    font-weight: @font-weight-bold;
-                }
-
-                &:hover,
-                &:focus {
-                    text-decoration: none;
-                }
-
-                &:active {
-                    outline: none;
-                }
-            }
-        }
-
         .topbar-info {
             display: flex;
             flex-direction: column;
@@ -58,26 +31,6 @@
                     fill: darken(@text-muted, 20%);
                 }
             }
-        }
-    }
-
-    .fp-container {
-        min-height: calc(100vh - 156px);
-
-        .card {
-            border-bottom: 2px solid @border-color;
-            border-radius: 2px;
-        }
-
-        .doc-circle {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: auto;
-            height: 150px;
-            width: $height;
-            background-color: @brand-primary;
-            border-radius: 50%;
         }
     }
 
@@ -176,20 +129,11 @@
 
     #loading-component {
         display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: center;
-        height: ~"calc(100vh - 70px)";
+        flex-grow: 1;
 
-        .loading-text {
-            margin-top: 1rem;
-            color: @text-muted;
-        }
-    }
-
-    .doc-view {
-        #loading-component {
-            height: ~"calc(100vh - 156px)";
+        .loader {
+            margin-top: 10rem;
         }
     }
 

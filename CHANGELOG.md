@@ -4,17 +4,17 @@
 
 ### Added
 
+- Added .dialog-header and .dialog-footer to the dialog component.
+- Added tab lock to dialog making it so you can't tab out of the dialog until an option is clicked.
+- Added aria labels to dialog documentation to show an example of how to use dialog accessibly.
+
 ### Changed
 
-- Changed typography sizes and added breakpoint styling for headings/small.
-- Changed topbar logo to be an image wrapped by an anchor to be more accessible.
+- Made it so you don't have to include the ID on the close buttons inside Dialog.
+- Changed the close button in dialog to be a button instead of an icon.
 - Renamed .expandable-content to .expandable-body.
-- Changed animation for mobile topbar to make it smoother.
 - Changed animation for expandables making it smoother.
 
 ### Fixed
-
-- Fixed issue with esc event listener for topbar nav menu.
-- Fixed issue with px.sheet.init() returning an empty array.
 
 ### Removed

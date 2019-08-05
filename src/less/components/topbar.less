@@ -1,7 +1,7 @@
 .topbar {
     background-color: @white;
     margin: 0 auto;
-    height: @topbar-height;
+    height: 85px;
     width: 100%;
     z-index: @zindex-topbar;
     display: flex;
@@ -10,11 +10,18 @@
     padding: 0 1.25rem;
     position: relative;
 
+
     .topbar-logo {
-        width: 135px;
-        height: 80px;
+        width: 130px;
+        height: 100%;
         background-size: cover;
         border: none;
+        display: flex;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     .topbar-btn {
@@ -73,7 +80,7 @@
                     margin: initial;
 
                     .material-icons {
-                        margin: 0 0.5rem 0 0;
+                        margin: 0;
                     }
                 }
             }
@@ -105,12 +112,12 @@
                 cursor: pointer;
                 text-decoration: none;
                 display: flex;
-                margin: 1rem 0;
+                padding: 0.75rem 0;
                 line-height: 1;
                 align-items: center;
 
                 .material-icons {
-                    margin: 0 0.5rem 0 0;
+                    padding: 0 0.5rem 0 0;
                     user-select: none;
                 }
 
@@ -135,7 +142,7 @@
                 margin-left: auto;
 
                 .material-icons {
-                    margin: 0 0 0 0.5rem;
+                    margin: 0;
                 }
             }
 
@@ -154,8 +161,6 @@
 }
 
 .topbar-wide {
-    justify-content: initial;
-
     .topbar-btn {
         display: none;
     }
@@ -169,41 +174,34 @@
         padding: 0;
         align-items: center;
         flex-direction: row-reverse;
-        margin-right: 0;
         font-family: @font-swedbank-headline;
         color: @dark-brown;
         cursor: pointer;
         text-decoration: none;
         display: flex;
-
-        .material-icons {
-            margin: 0 0 0 0.5rem;
-        }
     }
 
     .topbar-nav {
         display: flex;
         position: initial;
         flex-grow: 1;
-        margin-left: 2rem;
-        width: auto;
-        height: auto;
 
         .topbar-link-container {
-            position: initial;
+            position: static;
             background-color: transparent;
             width: 100%;
             display: flex;
             padding: 0;
-            overflow-x: initial;
-            overflow-y: initial;
+            overflow: visible;
             transform: translateX(0%);
+
+            > a:not(.close-topbar-nav) {
+                margin-top: 8px;
+            }
 
             > *:not(.close-topbar-nav):not(.topbar-link-right) {
                 text-decoration: none;
-                padding: 0;
-                margin: 0 0.5rem;
-                margin-top: 10px;
+                padding: 0 0.5rem;
 
                 &.active {
                     > span {

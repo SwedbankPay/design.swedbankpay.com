@@ -12,7 +12,7 @@ const ActionList = ({ id, classNames, toggleBtn, items }) => (
                     Array.isArray(items) ? items.map(({ name, icon }, i) => (
                         <Fragment key={i}>
                             <a href="#" onClick={e => e.preventDefault()}>
-                                {icon ? <Icon icon={icon}/> : null}{name}
+                                {icon ? <Icon type={icon}/> : null}{name}
                             </a>{"\n"}
                         </Fragment>
                     )) : null

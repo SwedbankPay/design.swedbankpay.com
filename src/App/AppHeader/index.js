@@ -7,14 +7,13 @@ import pkg from "~/package.json";
 
 const basename = process.env.basename;
 
-/* TODO: Use topbar component instead of using markup [AW] */
 const AppHeader = () => (
     <header className="topbar topbar-md-wide designguide-header">
         <button type="button" className="topbar-btn">
             <i className="material-icons topbar-btn-icon">menu</i>
         </button>
-        <a href="/">{"\n"}
-            <img className="topbar-logo" src={`${basename}img/spay_horizontal_pos.svg`} alt="logo" />{"\n"}
+        <a href="/" className="topbar-logo">{"\n"}
+            <img src={`${basename}img/spay_horizontal_pos.svg`} alt="logo" />{"\n"}
         </a>
         <nav className="topbar-nav">
             <div className="topbar-link-container">
