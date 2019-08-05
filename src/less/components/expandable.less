@@ -13,6 +13,15 @@
     }
 
     .expandable-header {
+        font-weight: normal;
+        font-family: @font-swedbank-headline;
+        text-decoration: none;
+        vertical-align: middle;
+        touch-action: manipulation;
+        cursor: pointer;
+        line-height: 1rem;
+        border: 1px solid transparent;
+        white-space: nowrap;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -22,7 +31,7 @@
         background-color: @offwhite;
         padding: 1rem;
         text-align: start;
-        transition: background-color 0.3s ease;
+        // transition: background-color 0.3s ease; Removed temporarily until we have discussed color choices for expandables [AW]
 
         &:active {
             box-shadow: none;

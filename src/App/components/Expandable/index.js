@@ -2,11 +2,11 @@ import React from "react";
 
 const ExpandablePlaceholder = () => (
     <div className="expandable">
-        <button className="btn expandable-header">
+        <button className="expandable-header">
             <span>Placeholder title</span>
             <small>Placeholder subtitle</small>
         </button>
-        <div className="expandable-content">
+        <div className="expandable-body">
             <p>Placeholder text</p>
         </div>
     </div>
@@ -18,7 +18,7 @@ const Expandable = ({ items }) => (
         ? (Array.isArray(items)
             ? items.map(({ title, subtitle, content }, i) => (
                 <div key={i} className="expandable">{"\n"}
-                    <button type="button" className="btn expandable-header">{"\n"}
+                    <button type="button" className="expandable-header">{"\n"}
                         <span>
                             {title}
                         </span>{"\n"}

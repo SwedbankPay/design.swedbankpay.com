@@ -5,7 +5,7 @@ exports[`Component: Expandable ExpandablePlaceholder renders 1`] = `
   className="expandable"
 >
   <button
-    className="btn expandable-header"
+    className="expandable-header"
   >
     <span>
       Placeholder title
@@ -15,7 +15,7 @@ exports[`Component: Expandable ExpandablePlaceholder renders 1`] = `
     </small>
   </button>
   <div
-    className="expandable-content"
+    className="expandable-body"
   >
     <p>
       Placeholder text
@@ -33,7 +33,7 @@ exports[`Component: Expandable prints an expandable component when items is prov
       className="expandable"
     >
       <button
-        className="btn expandable-header"
+        className="expandable-header"
       >
         <span>
           Placeholder title
@@ -43,7 +43,7 @@ exports[`Component: Expandable prints an expandable component when items is prov
         </small>
       </button>
       <div
-        className="expandable-content"
+        className="expandable-body"
       >
         <p>
           Placeholder text
@@ -80,7 +80,7 @@ exports[`Component: Expandable returns a number of expandables matching the leng
     
 
     <button
-      className="btn expandable-header"
+      className="expandable-header"
       type="button"
     >
       
@@ -109,7 +109,7 @@ exports[`Component: Expandable returns a number of expandables matching the leng
     
 
     <button
-      className="btn expandable-header"
+      className="expandable-header"
       type="button"
     >
       
@@ -138,7 +138,7 @@ exports[`Component: Expandable returns a number of expandables matching the leng
     
 
     <button
-      className="btn expandable-header"
+      className="expandable-header"
       type="button"
     >
       
@@ -170,7 +170,7 @@ exports[`Component: Expandable returns an expandable component when no items are
       className="expandable"
     >
       <button
-        className="btn expandable-header"
+        className="expandable-header"
       >
         <span>
           Placeholder title
@@ -180,7 +180,7 @@ exports[`Component: Expandable returns an expandable component when no items are
         </small>
       </button>
       <div
-        className="expandable-content"
+        className="expandable-body"
       >
         <p>
           Placeholder text
