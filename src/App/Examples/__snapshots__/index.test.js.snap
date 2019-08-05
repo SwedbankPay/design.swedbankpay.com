@@ -2,7 +2,7 @@
 
 exports[`Examples: index renders 1`] = `
 <div
-  className="container"
+  className="documentation"
 >
   <div
     className="row justify-content-center"

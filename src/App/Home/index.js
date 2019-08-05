@@ -9,7 +9,7 @@ const Home = () => {
     });
 
     return (
-        <div className="container fp-container pt-3 pb-3">
+        <div className="documentation container pt-3 pb-3">
             <div className="alert alert-warning">
                 <header className="alert-header">
                     <i className="material-icons alert-icon">warning</i>
@@ -21,7 +21,7 @@ const Home = () => {
             </div>
             <div className="row">
                 <div className="col-12 col-md-4 pt-3 pt-md-0 d-flex">
-                    <div className="card card-plain">
+                    <div className="doc-card card card-plain">
                         <div className="card-body text-center d-flex flex-column">
                             <div className="doc-circle">
                                 <i className="material-icons material-icons-large text-white">desktop_windows</i>
@@ -33,7 +33,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="col-12 col-md-4 pt-3 pt-md-0 d-flex">
-                    <div className="card card-plain">
+                    <div className="doc-card card card-plain">
                         <div className="card-body text-center d-flex flex-column">
                             <div className="doc-circle">
                                 <i className="material-icons material-icons-large text-white">desktop_windows</i>
@@ -45,7 +45,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="col-12 col-md-4 pt-3 pt-md-0 d-flex">
-                    <div className="card card-plain">
+                    <div className="doc-card card card-plain">
                         <div className="card-body text-center d-flex flex-column">
                             <div className="doc-circle">
                                 <i className="material-icons material-icons-large text-white">desktop_windows</i>

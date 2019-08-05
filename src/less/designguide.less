@@ -2,7 +2,9 @@
 @import "_mixins";
 
 #px-designguide {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 
     .designguide-header {
         .topbar-logo {
@@ -58,26 +60,6 @@
                     fill: darken(@text-muted, 20%);
                 }
             }
-        }
-    }
-
-    .fp-container {
-        min-height: calc(100vh - 156px);
-
-        .card {
-            border-bottom: 2px solid @border-color;
-            border-radius: 2px;
-        }
-
-        .doc-circle {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: auto;
-            height: 150px;
-            width: $height;
-            background-color: @brand-primary;
-            border-radius: 50%;
         }
     }
 
@@ -177,6 +159,7 @@
     #loading-component {
         display: flex;
         justify-content: center;
+        flex-grow: 1;
 
         .loader {
             margin-top: 10rem;

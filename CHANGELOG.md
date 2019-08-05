@@ -8,7 +8,8 @@
 
 ### Changed
 
-- Changed loader styling
+- Changed loader styling.
+- Changed class btn-outline-<type> to btn-outline.
 
 ### Fixed
 
