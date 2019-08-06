@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Loaders, { BasicUsage, Sizes, MutedLoader, StaticHtml } from "./index";
+import Loaders, { BasicUsage, Sizes, MutedLoader } from "./index";
 
 describe("Documentation: Loaders", () => {
     it("is defined", () => {
@@ -9,12 +9,9 @@ describe("Documentation: Loaders", () => {
     });
 
     it("renders", () => {
-        console.warn = jest.fn();
-
         const wrapper = shallow(<Loaders />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(console.warn).toHaveBeenCalled();
     });
 
     describe("Basic Usage", () => {
@@ -48,18 +45,6 @@ describe("Documentation: Loaders", () => {
 
         it("renders", () => {
             const wrapper = shallow(<MutedLoader />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("Static Html", () => {
-        it("is defined", () => {
-            expect(StaticHtml).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<StaticHtml />);
 
             expect(wrapper).toMatchSnapshot();
         });

@@ -2,10 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-const Button = ({ label, id, name, value, href, icon, loading, type, disabled, btnType, fullWidth, loader, pullRight, input, outline, active, size }) => {
+const Button = ({ label, id, name, value, href, icon, loading, type, disabled, btnType, fullWidth, pullRight, input, outline, active, size }) => {
     const btnClasses = classnames(
         "btn",
-        `btn-${outline ? "outline-" : ""}${type}`,
+        type ? `btn-${type}` : null,
+        outline ? "btn-outline" : null,
         size ? `btn-${size}` : null,
         loading ? "loading" : null,
         fullWidth ? "btn-block" : null,
@@ -20,7 +21,6 @@ const Button = ({ label, id, name, value, href, icon, loading, type, disabled, b
         name,
         defaultValue: value,
         disabled: href ? null : disabled,
-        "data-button-loader": loader ? "" : null,
         active: active && !href ? "" : null,
         role: href ? "button" : null,
         type: !href ? btnType || "button" : null,

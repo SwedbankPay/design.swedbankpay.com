@@ -12,15 +12,6 @@ exports[`Documentation: Loaders Basic Usage renders 1`] = `
     <Property
       value=".loader"
     />
-    , 
-    <Property
-      value=".loader-default"
-    />
-     and 
-    <Attribute
-      data={true}
-      name="loader"
-    />
      to a div.
   </p>
   <ComponentPreview
@@ -28,9 +19,8 @@ exports[`Documentation: Loaders Basic Usage renders 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <Loader
-      size="default"
-      visible={true}
+    <div
+      className="loader"
     />
   </ComponentPreview>
 </Fragment>
@@ -55,11 +45,8 @@ exports[`Documentation: Loaders Muted Loader renders 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <Loader
-      id="test"
-      muted={true}
-      size="default"
-      visible={true}
+    <div
+      className="loader loader-muted"
     />
   </ComponentPreview>
 </Fragment>
@@ -75,15 +62,15 @@ exports[`Documentation: Loaders Sizes renders 1`] = `
   <p>
     In addition to 
     <Property
-      value=".loader-default"
+      value=".loader"
     />
      you can use 
     <Property
-      value=".loader-small"
+      value=".loader-sm"
     />
      and 
     <Property
-      value=".loader-large"
+      value=".loader-lg"
     />
      to decrease or increase the size of the loader.
   </p>
@@ -95,9 +82,8 @@ exports[`Documentation: Loaders Sizes renders 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <Loader
-      size="small"
-      visible={true}
+    <div
+      className="loader loader-sm"
     />
   </ComponentPreview>
   <h3>
@@ -108,53 +94,10 @@ exports[`Documentation: Loaders Sizes renders 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <Loader
-      size="large"
-      visible={true}
+    <div
+      className="loader loader-lg"
     />
   </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Documentation: Loaders Static Html renders 1`] = `
-<Fragment>
-  <h2
-    id="static-html"
-  >
-    Static HTML
-  </h2>
-  <p>
-    Using the attribute 
-    <Attribute
-      data={true}
-      name="loader"
-    />
-     will append the following HTML to the element:
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-  >
-    <ul
-      className="loader-icon"
-    >
-      <li />
-      <li />
-      <li />
-    </ul>
-  </ComponentPreview>
-  <p>
-    If you want to use the static HTML instead of the data-attribute, make sure to 
-    <b>
-      NOT
-    </b>
-     include the attribute 
-    <Attribute
-      data={true}
-      name="loader"
-    />
-    .
-  </p>
 </Fragment>
 `;
 
@@ -170,6 +113,5 @@ exports[`Documentation: Loaders renders 1`] = `
   <BasicUsage />
   <Sizes />
   <MutedLoader />
-  <StaticHtml />
 </DocContainer>
 `;
