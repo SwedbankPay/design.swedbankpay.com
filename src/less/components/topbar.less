@@ -170,7 +170,6 @@
         padding: 0;
         align-items: center;
         flex-direction: row-reverse;
-        // margin-right: 0;
         font-family: @font-swedbank-headline;
         color: @dark-brown;
         cursor: pointer;
@@ -192,13 +191,13 @@
             overflow: visible;
             transform: translateX(0%);
 
+            > a:not(.close-topbar-nav) {
+                margin-top: 8px;
+            }
+
             > *:not(.close-topbar-nav):not(.topbar-link-right) {
                 text-decoration: none;
                 padding: 0 0.5rem;
-
-                > span {
-                    margin-top: 8px;
-                }
 
                 &.active {
                     > span {
