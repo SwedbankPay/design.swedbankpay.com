@@ -1,6 +1,7 @@
 .topbar {
     background-color: @white;
     margin: 0 auto;
+    border-top: 8px solid @brand-primary;
     height: 85px;
     width: 100%;
     z-index: @zindex-topbar;
@@ -9,7 +10,6 @@
     align-items: center;
     padding: 0 1.25rem;
     position: relative;
-    border-top: 8px solid @brand-primary;
 
 
     .topbar-logo {
@@ -18,6 +18,11 @@
         background-size: cover;
         border: none;
         display: flex;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     .topbar-btn {
