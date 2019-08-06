@@ -9,12 +9,9 @@ describe("Documentation: Buttons", () => {
     });
 
     it("renders", () => {
-        console.warn = jest.fn();
-
         const wrapper = shallow(<Buttons />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(console.warn).toHaveBeenCalled();
     });
 
     describe("Examples", () => {

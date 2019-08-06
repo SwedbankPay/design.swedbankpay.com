@@ -1,14 +1,16 @@
 # Changelog
 
-## [3.3.0] - 2019-08-02
+## [3.4.0] - 2019-08-06
+
+### Added
+
+- Added button loader again with support for all our button variants.
 
 ### Changed
 
-- Changed typography sizes and added breakpoint styling for headings/small.
-- Changed topbar logo to be an image wrapped by an anchor to be more accessible.
+- Changed loader styling.
+- Changed class btn-outline-<type> to btn-outline.
 
 ### Fixed
 
-- Fixed issue with esc event listener for topbar nav menu.
-- Updated animation for mobile topbar to make it smoother.
-- Fixed issue with px.sheet.init() returning an empty array.
+### Removed

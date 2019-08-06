@@ -3,11 +3,9 @@ import "$/polyfills";
 
 import actionList from "./action-list";
 import alert from "./alert";
-import button from "./button";
 import datepicker from "./datepicker";
 import dialog from "./dialog";
 import expandable from "./expandable";
-import loader from "./loader";
 import nav from "./nav";
 import rangeslider from "./rangeslider";
 import sheet from "./sheet";
@@ -26,11 +24,9 @@ if (process.env.sentry) {
 const px = {
     actionList,
     alert,
-    button,
     datepicker,
     dialog,
     expandable,
-    loader,
     nav,
     rangeslider,
     sheet,
@@ -55,11 +51,9 @@ export default px;
 export {
     actionList,
     alert,
-    button,
     datepicker,
     dialog,
     expandable,
-    loader,
     nav,
     rangeslider,
     sheet,

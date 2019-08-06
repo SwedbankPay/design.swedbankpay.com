@@ -29,14 +29,8 @@
         &[active],
         &:active,
         &.active {
-            &:not(.loading) {
-                background: @disabled-bg;
-                color: @disabled-color;
-            }
-
-            &.loading {
-                color: transparent;
-            }
+            background: @disabled-bg;
+            color: @disabled-color;
         }
     }
 }
@@ -44,7 +38,7 @@
 .button-outline-variant(@color, @background, @hover-color) {
     background: transparent;
     color: @color;
-    border-color: darken(@color, 5%);
+    border-color: darken(@background, 5%);
 
     &:focus,
     &.focus {
