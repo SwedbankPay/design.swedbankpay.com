@@ -51,8 +51,10 @@ describe("px-script: nav", () => {
                 <li>
                     { subItems ?
                         <div className={subopen ? "submenu submenu-open" : "submenu"}>{"\n"}
-                            <i className="material-icons">language</i>{"\n"}
-                            <span>{name}</span>
+                            <a href="#">
+                                <i className="material-icons">language</i>{"\n"}
+                                <span>{name}</span>
+                            </a>
                             <ul>
                                 {subItems.map((itemsname, j) => (
                                     <li key={`nav-subItems-${itemsname}-${j}`}>
@@ -80,8 +82,10 @@ describe("px-script: nav", () => {
                 </li>
                 <li>{ subItems ?
                     <div className="submenu">{"\n"}
-                        <i className="material-icons">language</i>{"\n"}
-                        <span>{name}</span>
+                        <a href="#">
+                            <i className="material-icons">language</i>{"\n"}
+                            <span>{name}</span>
+                        </a>
                         <ul>
                             {subItems.map((itemsname, j) => (
                                 <li key={`nav-subItems-${itemsname}-${j}`}>
@@ -170,27 +174,27 @@ describe("px-script: nav", () => {
         expect(sidebarMenubtn).toBeNull();
     });
 
-    // it("renders a menu icon when there are less than four list elements but submenus exist", () => {
-    //     ReactDOM.render(<Navsm subItems = {submenuItems} />, div);
-    //     nav.init();
+    it("renders a menu icon when there are less than four list elements but submenus exist", () => {
+        ReactDOM.render(<Navsm subItems = {submenuItems} />, div);
+        nav.init();
 
-    //     const renderedNav = document.querySelector(".nav");
-    //     const sidebarMenubtn = renderedNav.querySelector(".nav-openbtn");
+        const renderedNav = document.querySelector(".nav");
+        const sidebarMenubtn = renderedNav.querySelector(".nav-openbtn");
 
-    //     expect(renderedNav).toBeTruthy();
-    //     expect(sidebarMenubtn).toBeTruthy();
-    // });
+        expect(renderedNav).toBeTruthy();
+        expect(sidebarMenubtn).toBeTruthy();
+    });
 
-    // it("renders a menu icon when there are more than four list elements", () => {
-    //     ReactDOM.render(<Nav />, div);
-    //     nav.init();
+    it("renders a menu icon when there are more than four list elements", () => {
+        ReactDOM.render(<Nav />, div);
+        nav.init();
 
-    //     const renderedNav = document.querySelector(".nav");
-    //     const sidebarMenubtn = renderedNav.querySelector(".nav-openbtn");
+        const renderedNav = document.querySelector(".nav");
+        const sidebarMenubtn = renderedNav.querySelector(".nav-openbtn");
 
-    //     expect(renderedNav).toBeTruthy();
-    //     expect(sidebarMenubtn).toBeTruthy();
-    // });
+        expect(renderedNav).toBeTruthy();
+        expect(sidebarMenubtn).toBeTruthy();
+    });
 
     it("opens when clicking the menu icon", () => {
         ReactDOM.render(<Nav />, div);
@@ -237,118 +241,112 @@ describe("px-script: nav", () => {
         expect(renderedNav.classList).not.toContain("nav-open");
     });
 
-    // it("closes nav on resize", () => {
-    //     ReactDOM.render(<Nav subItems = {submenuItems} />, div);
-    //     nav.init();
+    it("closes nav on resize", () => {
+        ReactDOM.render(<Nav id="nav-test" subItems = {submenuItems} />, div);
+        nav.init();
+        nav.open("nav-test");
 
-    //     const renderedNav = document.querySelector(".nav");
-    //     const sidebarMenubtn = renderedNav.querySelector(".nav-openbtn");
+        const renderedNav = document.querySelector(".nav");
 
-    //     expect(renderedNav).toBeTruthy();
-    //     expect(sidebarMenubtn).toBeTruthy();
-    //     expect(renderedNav.classList).not.toContain("nav-open");
+        expect(renderedNav.classList).toContain("nav-open");
 
-    //     sidebarMenubtn.click();
+        global.dispatchEvent(new Event("resize"));
 
-    //     expect(renderedNav.classList).toContain("nav-open");
+        expect(renderedNav.classList).not.toContain("nav-open");
+    });
 
-    //     global.dispatchEvent(new Event("resize"));
+    it("creates one copy of the submenu icon", () => {
+        ReactDOM.render(<Nav subItems = {submenuItems} />, div);
+        nav.init();
 
-    //     expect(renderedNav.classList).not.toContain("nav-open");
-    // });
+        const renderedNav = document.querySelector(".nav");
+        const submenu = renderedNav.querySelector(".submenu");
+        const submenuicons = submenu.querySelectorAll("i");
 
-    // it("creates one copy of the submenu icon", () => {
-    //     ReactDOM.render(<Nav subItems = {submenuItems} />, div);
-    //     nav.init();
+        expect(renderedNav).toBeTruthy();
+        expect(submenu).toBeTruthy();
+        expect(submenuicons).toBeTruthy();
+        expect([...submenuicons]).toHaveLength(2);
 
-    //     const renderedNav = document.querySelector(".nav");
-    //     const submenu = renderedNav.querySelector(".submenu");
-    //     const submenuicons = submenu.querySelectorAll("i");
+        const submenuIcon = [...submenuicons][1];
+        const submenuIconCopy = [...submenuicons][0];
 
-    //     expect(renderedNav).toBeTruthy();
-    //     expect(submenu).toBeTruthy();
-    //     expect(submenuicons).toBeTruthy();
-    //     expect([...submenuicons]).toHaveLength(2);
+        expect(submenuIconCopy).not.toEqual(submenuIcon);
+    });
 
-    //     const submenuIcon = [...submenuicons][1];
-    //     const submenuIconCopy = [...submenuicons][0];
+    it("opens a submenu when a submenu icon is clicked", () => {
+        ReactDOM.render(<Nav subItems = {submenuItems} />, div);
+        nav.init();
 
-    //     expect(submenuIconCopy).not.toEqual(submenuIcon);
-    // });
+        const renderedNav = document.querySelector(".nav");
+        const submenu = renderedNav.querySelector(".submenu");
+        const iconClickable = submenu.querySelector(".submenu-icon-clickable");
 
-    // it("opens a submenu when a submenu icon is clicked", () => {
-    //     ReactDOM.render(<Nav subItems = {submenuItems} />, div);
-    //     nav.init();
+        expect(renderedNav).toBeTruthy();
+        expect(submenu).toBeTruthy();
+        expect(iconClickable).toBeTruthy();
+        expect(submenu.classList).not.toContain("submenu-open");
 
-    //     const renderedNav = document.querySelector(".nav");
-    //     const submenu = renderedNav.querySelector(".submenu");
-    //     const iconClickable = submenu.querySelector(".submenu-icon-clickable");
+        iconClickable.click();
 
-    //     expect(renderedNav).toBeTruthy();
-    //     expect(submenu).toBeTruthy();
-    //     expect(iconClickable).toBeTruthy();
-    //     expect(submenu.classList).not.toContain("submenu-open");
+        expect(submenu.classList).toContain("submenu-open");
+    });
 
-    //     iconClickable.click();
+    it("closes a submenu when a submenu icon is clicked", () => {
+        ReactDOM.render(<Nav subItems = {submenuItems} subopen />, div);
+        nav.init();
 
-    //     expect(submenu.classList).toContain("submenu-open");
-    // });
+        const renderedNav = document.querySelector(".nav");
+        const submenu = renderedNav.querySelector(".submenu");
+        const iconClickable = submenu.querySelector(".submenu-icon-clickable");
 
-    // it("closes a submenu when a submenu icon is clicked", () => {
-    //     ReactDOM.render(<Nav subItems = {submenuItems} subopen />, div);
-    //     nav.init();
+        expect(renderedNav).toBeTruthy();
+        expect(submenu).toBeTruthy();
+        expect(iconClickable).toBeTruthy();
+        expect(submenu.classList).toContain("submenu-open");
 
-    //     const renderedNav = document.querySelector(".nav");
-    //     const submenu = renderedNav.querySelector(".submenu");
-    //     const iconClickable = submenu.querySelector(".submenu-icon-clickable");
+        iconClickable.click();
 
-    //     expect(renderedNav).toBeTruthy();
-    //     expect(submenu).toBeTruthy();
-    //     expect(iconClickable).toBeTruthy();
-    //     expect(submenu.classList).toContain("submenu-open");
+        expect(submenu.classList).not.toContain("submenu-open");
+    });
 
-    //     iconClickable.click();
+    it("closes a submenu when clicking outside the submenu", () => {
+        ReactDOM.render(<Nav subItems = {submenuItems} subopen />, div);
+        nav.init();
 
-    //     expect(submenu.classList).not.toContain("submenu-open");
-    // });
+        const renderedNav = document.querySelector(".nav");
+        const submenu = renderedNav.querySelector(".submenu");
 
-    // it("closes a submenu when clicking outside the submenu", () => {
-    //     ReactDOM.render(<Nav subItems = {submenuItems} subopen />, div);
-    //     nav.init();
+        expect(renderedNav).toBeTruthy();
+        expect(submenu).toBeTruthy();
+        expect(submenu.classList).toContain("submenu-open");
 
-    //     const renderedNav = document.querySelector(".nav");
-    //     const submenu = renderedNav.querySelector(".submenu");
+        document.querySelector("html").click();
 
-    //     expect(renderedNav).toBeTruthy();
-    //     expect(submenu).toBeTruthy();
-    //     expect(submenu.classList).toContain("submenu-open");
+        expect(submenu.classList).not.toContain("submenu-open");
+    });
 
-    //     document.querySelector("html").click();
+    it("closes submenu on resize", () => {
+        ReactDOM.render(<Nav subItems = {submenuItems} />, div);
+        nav.init();
 
-    //     expect(submenu.classList).not.toContain("submenu-open");
-    // });
+        const renderedNav = document.querySelector(".nav");
+        const submenu = renderedNav.querySelector(".submenu");
+        const iconClickable = submenu.querySelector(".submenu-icon-clickable");
 
-    // it("closes submenu on resize", () => {
-    //     ReactDOM.render(<Nav subItems = {submenuItems} />, div);
-    //     nav.init();
+        expect(renderedNav).toBeTruthy();
+        expect(submenu).toBeTruthy();
+        expect(iconClickable).toBeTruthy();
+        expect(submenu.classList).not.toContain("submenu-open");
 
-    //     const renderedNav = document.querySelector(".nav");
-    //     const submenu = renderedNav.querySelector(".submenu");
-    //     const iconClickable = submenu.querySelector(".submenu-icon-clickable");
+        iconClickable.click();
 
-    //     expect(renderedNav).toBeTruthy();
-    //     expect(submenu).toBeTruthy();
-    //     expect(iconClickable).toBeTruthy();
-    //     expect(submenu.classList).not.toContain("submenu-open");
+        expect(submenu.classList).toContain("submenu-open");
 
-    //     iconClickable.click();
+        global.dispatchEvent(new Event("resize"));
 
-    //     expect(submenu.classList).toContain("submenu-open");
-
-    //     global.dispatchEvent(new Event("resize"));
-
-    //     expect(submenu.classList).not.toContain("submenu-open");
-    // });
+        expect(submenu.classList).not.toContain("submenu-open");
+    });
 
     describe("nav.open", () => {
         it("opens nav when calling nav.open", () => {
