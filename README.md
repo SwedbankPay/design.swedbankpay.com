@@ -4,7 +4,7 @@
 
 # Swedbank Pay DesignGuide
 
-[![Version](https://img.shields.io/badge/Version-3.3.0-blue.svg)](https://github.com/swedbankpay/design.swedbankpay.com/releases/tag/3.3.0)
+[![Version](https://img.shields.io/badge/Version-3.4.0-blue.svg)](https://github.com/swedbankpay/design.swedbankpay.com/releases/tag/3.4.0)
 [![Build status](https://ci.appveyor.com/api/projects/status/1dii19sqw1m7xtsn/branch/master?svg=true)](https://ci.appveyor.com/project/PayEx/design-swedbankpay-com/branch/master)
 [![codecov](https://codecov.io/gh/swedbankpay/design.swedbankpay.com/branch/develop/graph/badge.svg)](https://codecov.io/gh/swedbankpay/design.swedbankpay.com)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=SwedbankPay/design.swedbankpay.com)](https://dependabot.com)

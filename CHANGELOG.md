@@ -1,10 +1,10 @@
 # Changelog
 
-## [3.X.X] - 2019-XX-XX
+## [3.4.0] - 2019-08-06
 
 ### Added
 
-- Readded button loader again with support for all our button variants.
+- Added button loader again with support for all our button variants.
 
 ### Changed
 
