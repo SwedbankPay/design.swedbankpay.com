@@ -4,38 +4,9 @@
 #px-designguide {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    min-height: 100%;
 
     .designguide-header {
-        .topbar-logo {
-            margin-right: 0;
-        }
-
-        &:before,
-        &:after {
-            display: none;
-        }
-
-        .header-links {
-            a {
-                padding: 0 1rem;
-                border: 0;
-
-                &.active {
-                    font-weight: @font-weight-bold;
-                }
-
-                &:hover,
-                &:focus {
-                    text-decoration: none;
-                }
-
-                &:active {
-                    outline: none;
-                }
-            }
-        }
-
         .topbar-info {
             display: flex;
             flex-direction: column;
