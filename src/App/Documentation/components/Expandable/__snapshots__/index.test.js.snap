@@ -103,9 +103,10 @@ exports[`Components: Expandable renders 1`] = `
   <p
     className="lead"
   >
-    Expandables offer a way to hide content and displaying it on click. We have two variants; using expandables separatley or wrap them in a expandable-group. Read more below the respective headlines.
+    Expandables toggle between hiding and showing content on click. They can be opened and closed independently of eachother, but if you wish for them to work like an accordion then wrap your expandables in an expandable-group.
   </p>
   <Overview />
   <ExpandableGroup />
+  <JavascriptMethods />
 </DocContainer>
 `;

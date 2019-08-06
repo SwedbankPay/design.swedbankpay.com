@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { ComponentPreview, DocContainer, Property } from "#";
+import { ComponentPreview, DocContainer, Property, JavascriptDocs } from "#";
 import ExpandableComponent from "@/Expandable";
 
 const { expandable } = window.px;
@@ -51,16 +51,25 @@ const ExpandableGroup = () => (
     </>
 );
 
+const JavascriptMethods = () => (
+    <>
+        <h2 id="javascript-methods">JavaScript methods</h2>
+        <JavascriptDocs componentName="expandable" open close />
+    </>
+);
+
 const Expandable = () => {
     useEffect(() => { expandable.init(); }, []);
 
     return (
         <DocContainer docToc>
             <p className="lead">
-                Expandables offer a way to hide content and displaying it on click. We have two variants; using expandables separatley or wrap them in a expandable-group. Read more below the respective headlines.
+                Expandables toggle between hiding and showing content on click.
+                They can be opened and closed independently of eachother, but if you wish for them to work like an accordion then wrap your expandables in an expandable-group.
             </p>
             <Overview />
             <ExpandableGroup />
+            <JavascriptMethods />
         </DocContainer>
     );
 };
