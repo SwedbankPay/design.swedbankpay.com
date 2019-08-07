@@ -7,6 +7,8 @@ const SELECTORS = {
     CLOSEICON: ".dialog-close"
 };
 
+const FOCUSELEMENTS = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex=\"0\"], [contenteditable]";
+
 const _dialogs = _dialogs || [];
 
 class Dialog {
@@ -17,6 +19,12 @@ class Dialog {
         this.isOpen = el.classList.contains("d-flex");
         this.openBtns = this.id ? document.querySelectorAll(`[data-dialog-open=${this.id}]`) : null;
         this.closeBtns = this.id ? document.querySelectorAll(`[data-dialog-close=${this.id}]`) : null;
+
+        this.focusedElemBeforeDialog = null;
+        this.focusableElements = el.querySelectorAll(FOCUSELEMENTS);
+        this.focusableElements = Array.prototype.slice.call(this.focusableElements);
+        this.firstTabStop = this.focusableElements[0];
+        this.lastTabStop = this.focusableElements[this.focusableElements.length - 1];
 
         if (this.closeIcon) {
             this.closeIcon.addEventListener("click", e => {
@@ -33,6 +41,23 @@ class Dialog {
     }
 
     _initializeButtons () {
+        this._el.addEventListener("keydown", e => {
+            if (e.key === "Tab") {
+                // SHIFT + TAB
+                if (e.shiftKey) {
+                    if (document.activeElement === this.firstTabStop) {
+                        e.preventDefault();
+                        this.lastTabStop.focus();
+                    }
+
+                // TAB
+                } else if (document.activeElement === this.lastTabStop) {
+                    e.preventDefault();
+                    this.firstTabStop.focus();
+                }
+            }
+        });
+
         // Init open buttons
         if (this.openBtns) {
             this.openBtns.forEach(btn => {
@@ -55,6 +80,8 @@ class Dialog {
     }
 
     open () {
+        this.focusedElemBeforeDialog = document.activeElement;
+        this._el.focus();
         handleScrollbar();
         this.isOpen = true;
         this._el.classList.add("d-flex");
@@ -66,6 +93,7 @@ class Dialog {
         this.isOpen = false;
         this._el.classList.remove("d-flex");
         document.body.classList.remove("dialog-open");
+        this.focusedElemBeforeDialog.focus();
     }
 }
 
