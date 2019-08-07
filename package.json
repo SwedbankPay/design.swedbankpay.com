@@ -86,7 +86,7 @@
         "node-fetch": "^2.6.0",
         "optimize-css-assets-webpack-plugin": "^5.0.3",
         "postcss-loader": "^3.0.0",
-        "style-loader": "^0.23.1",
+        "style-loader": "^1.0.0",
         "stylelint": "^10.1.0",
         "stylelint-config-standard": "^18.3.0",
         "stylelint-declaration-block-no-ignored-properties": "^2.1.0",
