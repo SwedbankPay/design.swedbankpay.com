@@ -5,7 +5,7 @@ import { Icon } from "#";
 
 const Dialog = ({ diaId, diaHeader, children }) => (
     <>
-        <div className="dialog" id={diaId}>
+        <div className="dialog" id={diaId} role="dialog" aria-modal="true">
             <section>
                 <header className="dialog-header">
                     <h4>{diaHeader}</h4>

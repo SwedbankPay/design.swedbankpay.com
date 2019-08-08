@@ -17,12 +17,16 @@ class Dialog {
         this.id = el.id;
         this.closeIcon = el.querySelector(SELECTORS.CLOSEICON);
         this.isOpen = el.classList.contains("d-flex");
-        this.openBtns = this.id ? document.querySelectorAll(`[data-dialog-open=${this.id}]`) : null;
-        this.closeBtns = this.id ? document.querySelectorAll(`[data-dialog-close=${this.id}]`) : null;
 
+        // Find all related buttons
+        this.openBtns = this.id ? [...document.querySelectorAll(`[data-dialog-open=${this.id}]`)] : null;
+        this.closeBtns = this.id ? [...document.querySelectorAll(`[data-dialog-close=${this.id}]`)] : null;
+        this.internalClose = this._el.querySelector("[data-dialog-close]");
+        this.closeBtns.every(closeBtn => closeBtn !== this.internalClose) ? this.closeBtns.push(this.internalClose) : null;
+
+        // Find focusable elements
         this.focusedElemBeforeDialog = null;
-        this.focusableElements = el.querySelectorAll(FOCUSELEMENTS);
-        this.focusableElements = Array.prototype.slice.call(this.focusableElements);
+        this.focusableElements = [...el.querySelectorAll(FOCUSELEMENTS)];
         this.firstTabStop = this.focusableElements[0];
         this.lastTabStop = this.focusableElements[this.focusableElements.length - 1];
 
@@ -37,10 +41,10 @@ class Dialog {
             document.body.classList.add("dialog-open");
         }
 
-        this._initializeButtons();
+        this._initializeListeners();
     }
 
-    _initializeButtons () {
+    _initializeListeners () {
         this._el.addEventListener("keydown", e => {
             if (e.key === "Tab") {
                 // SHIFT + TAB
@@ -81,11 +85,11 @@ class Dialog {
 
     open () {
         this.focusedElemBeforeDialog = document.activeElement;
-        this._el.focus();
         handleScrollbar();
         this.isOpen = true;
         this._el.classList.add("d-flex");
         document.body.classList.add("dialog-open");
+        this.firstTabStop.focus();
     }
 
     close () {

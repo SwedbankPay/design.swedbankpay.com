@@ -1,8 +1,9 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocContainer, Icon, Attribute, Property, JavascriptDocs } from "#";
+import { ComponentPreview, DocContainer, Attribute, Property, JavascriptDocs } from "#";
 import AlertComponent from "@/Alert";
+import DialogComponent from "@/Dialog";
 
 const { dialog } = window.px;
 
@@ -33,23 +34,9 @@ const Example = () => (
         <h2 id="overview">Example</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <button className="btn btn-executive" type="button" data-dialog-open="demo-dialog">Open dialog</button>
-            <div className="dialog" id="demo-dialog">
-                <section>
-                    <header>
-                        <h4>Delete item 456?</h4>{"\n"}
-                        <a href="#" className="dialog-close">{"\n\t\t\t\t"}
-                            <Icon icon="close" />{"\n\t\t\t"}
-                        </a>{"\n\t\t"}
-                    </header>
-                    <div className="dialog-body">
-                        <p>Are you sure you want to permanently delete the item <i>German Swashbuckle (456)?</i></p>
-                    </div>
-                    <footer>{"\n"}
-                        <button className="btn btn-guiding" type="button" data-dialog-close="demo-dialog">Cancel</button>{"\n"}
-                        <button className="btn btn-destructive" type="button">Delete</button>{"\n"}
-                    </footer>
-                </section>
-            </div>{"\n"}
+            <DialogComponent diaHeader="Delete item 456?" diaId="demo-dialog">
+                <p>Are you sure you want to permanently delete the item <i>German Swashbuckle (456)?</i></p>
+            </DialogComponent>
         </ComponentPreview>
     </>
 );
@@ -61,25 +48,21 @@ const JavascriptMethods = () => (
     </>
 );
 
-class Dialog extends Component {
-    componentDidMount () {
-        dialog.init();
-    }
+const Dialog = () => {
+    useEffect(() => { dialog.init(); });
 
-    render () {
-        return (
-            <DocContainer docToc>
-                <p className="lead">
-                    Dialog is meant to be used to show a snippet of text like a confirmation box before you delete something.
-                    Use <Link to="/docs/components/sheet">sheet</Link> if you wish to receive input from the user or display a large chunk of information.
-                </p>
-                <HowItWorks />
-                <Example />
-                <JavascriptMethods />
-            </DocContainer>
-        );
-    }
-}
+    return (
+        <DocContainer docToc>
+            <p className="lead">
+                Dialog is meant to be used to show a snippet of text like a confirmation box before you delete something.
+                Use <Link to="/docs/components/sheet">sheet</Link> if you wish to receive input from the user or display a large chunk of information.
+            </p>
+            <HowItWorks />
+            <Example />
+            <JavascriptMethods />
+        </DocContainer>
+    );
+};
 
 export default Dialog;
 
