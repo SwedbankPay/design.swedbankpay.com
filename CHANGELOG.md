@@ -1,7 +1,11 @@
 # Changelog
 
-## [3.4.1] - 2019-08-06
+## [3.X.X] - 2019-XX-XX
+
+### Added
+
+### Changed
 
 ### Fixed
 
-- Fixed issue with topbar on chrome.
+### Removed
