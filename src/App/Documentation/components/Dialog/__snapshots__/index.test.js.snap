@@ -37,7 +37,7 @@ exports[`Documentation: Dialog Example renders 1`] = `
             
 				
             <Icon
-              icon="close"
+              type="close"
             />
             
 			
@@ -60,7 +60,7 @@ exports[`Documentation: Dialog Example renders 1`] = `
 
           <button
             className="btn btn-guiding"
-            data-dialog-close="demo-dialog"
+            data-dialog-close={true}
             type="button"
           >
             Cancel

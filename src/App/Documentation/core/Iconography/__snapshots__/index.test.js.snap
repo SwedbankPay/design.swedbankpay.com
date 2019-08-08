@@ -828,7 +828,7 @@ exports[`Core: Iconography PaymentIcons onClick prevents default 1`] = `
           
 
           <Icon
-            icon="more_vert"
+            type="more_vert"
           />
           
 
@@ -842,7 +842,7 @@ exports[`Core: Iconography PaymentIcons onClick prevents default 1`] = `
               onClick={[Function]}
             >
               <Icon
-                icon="bookmark"
+                type="bookmark"
               />
               Add bookmark
             </a>
@@ -853,7 +853,7 @@ exports[`Core: Iconography PaymentIcons onClick prevents default 1`] = `
               onClick={[Function]}
             >
               <Icon
-                icon="business_center"
+                type="business_center"
               />
               Add client
             </a>
@@ -864,7 +864,7 @@ exports[`Core: Iconography PaymentIcons onClick prevents default 1`] = `
               onClick={[Function]}
             >
               <Icon
-                icon="add_circle"
+                type="add_circle"
               />
               Add document
             </a>
@@ -875,7 +875,7 @@ exports[`Core: Iconography PaymentIcons onClick prevents default 1`] = `
               onClick={[Function]}
             >
               <Icon
-                icon="person_add"
+                type="person_add"
               />
               Add user
             </a>
@@ -1275,7 +1275,7 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
           
 
           <Icon
-            icon="more_vert"
+            type="more_vert"
           />
           
 
@@ -1289,7 +1289,7 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
               onClick={[Function]}
             >
               <Icon
-                icon="bookmark"
+                type="bookmark"
               />
               Add bookmark
             </a>
@@ -1300,7 +1300,7 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
               onClick={[Function]}
             >
               <Icon
-                icon="business_center"
+                type="business_center"
               />
               Add client
             </a>
@@ -1311,7 +1311,7 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
               onClick={[Function]}
             >
               <Icon
-                icon="add_circle"
+                type="add_circle"
               />
               Add document
             </a>
@@ -1322,7 +1322,7 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
               onClick={[Function]}
             >
               <Icon
-                icon="person_add"
+                type="person_add"
               />
               Add user
             </a>
