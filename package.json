@@ -55,7 +55,7 @@
         "@babel/plugin-syntax-dynamic-import": "^7.2.0",
         "@babel/preset-env": "7.5.5",
         "@babel/preset-react": "^7.0.0",
-        "@sentry/browser": "^5.5.0",
+        "@sentry/browser": "^5.6.0",
         "@sentry/webpack-plugin": "^1.8.0",
         "app-manifest-webpack-plugin": "^1.2.0",
         "autoprefixer": "^9.6.1",
