@@ -1,0 +1,200 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Dialog -  renders 1`] = `
+<Fragment>
+  <div
+    className="dialog"
+  >
+    <section>
+      <header
+        className="dialog-header"
+      >
+        <h4 />
+        <button
+          className="dialog-close"
+          type="button"
+        >
+          <Icon
+            type="close"
+          />
+        </button>
+      </header>
+      <div
+        className="dialog-body"
+      />
+      <footer
+        className="dialog-footer"
+      >
+        <button
+          className="btn btn-guiding"
+          data-dialog-close={true}
+          type="button"
+        >
+          Cancel
+        </button>
+        
+
+        <button
+          className="btn btn-destructive"
+          type="button"
+        >
+          Delete
+        </button>
+        
+
+      </footer>
+    </section>
+  </div>
+</Fragment>
+`;
+
+exports[`Component: Dialog -  renders with the passed ID 1`] = `
+<Fragment>
+  <div
+    className="dialog"
+    id="my-id"
+  >
+    <section>
+      <header
+        className="dialog-header"
+      >
+        <h4 />
+        <button
+          className="dialog-close"
+          type="button"
+        >
+          <Icon
+            type="close"
+          />
+        </button>
+      </header>
+      <div
+        className="dialog-body"
+      />
+      <footer
+        className="dialog-footer"
+      >
+        <button
+          className="btn btn-guiding"
+          data-dialog-close={true}
+          type="button"
+        >
+          Cancel
+        </button>
+        
+
+        <button
+          className="btn btn-destructive"
+          type="button"
+        >
+          Delete
+        </button>
+        
+
+      </footer>
+    </section>
+  </div>
+</Fragment>
+`;
+
+exports[`Component: Dialog -  renders with the passed children 1`] = `
+<Fragment>
+  <div
+    className="dialog"
+  >
+    <section>
+      <header
+        className="dialog-header"
+      >
+        <h4 />
+        <button
+          className="dialog-close"
+          type="button"
+        >
+          <Icon
+            type="close"
+          />
+        </button>
+      </header>
+      <div
+        className="dialog-body"
+      >
+        <p>
+          My paragraph
+        </p>
+      </div>
+      <footer
+        className="dialog-footer"
+      >
+        <button
+          className="btn btn-guiding"
+          data-dialog-close={true}
+          type="button"
+        >
+          Cancel
+        </button>
+        
+
+        <button
+          className="btn btn-destructive"
+          type="button"
+        >
+          Delete
+        </button>
+        
+
+      </footer>
+    </section>
+  </div>
+</Fragment>
+`;
+
+exports[`Component: Dialog -  renders with the passed header 1`] = `
+<Fragment>
+  <div
+    className="dialog"
+  >
+    <section>
+      <header
+        className="dialog-header"
+      >
+        <h4>
+          My heading
+        </h4>
+        <button
+          className="dialog-close"
+          type="button"
+        >
+          <Icon
+            type="close"
+          />
+        </button>
+      </header>
+      <div
+        className="dialog-body"
+      />
+      <footer
+        className="dialog-footer"
+      >
+        <button
+          className="btn btn-guiding"
+          data-dialog-close={true}
+          type="button"
+        >
+          Cancel
+        </button>
+        
+
+        <button
+          className="btn btn-destructive"
+          type="button"
+        >
+          Delete
+        </button>
+        
+
+      </footer>
+    </section>
+  </div>
+</Fragment>
+`;
