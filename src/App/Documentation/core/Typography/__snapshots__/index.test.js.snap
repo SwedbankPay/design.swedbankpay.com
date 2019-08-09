@@ -184,15 +184,6 @@ exports[`Core: Typography Headings renders 1`] = `
     <h3>
       Heading h3
     </h3>
-    <h4>
-      Heading h4
-    </h4>
-    <h5>
-      Heading h5
-    </h5>
-    <h6>
-      Heading h6
-    </h6>
   </ComponentPreview>
   <p>
     The classes 
@@ -224,21 +215,6 @@ exports[`Core: Typography Headings renders 1`] = `
       className="h3"
     >
       .h3 heading
-    </p>
-    <p
-      className="h4"
-    >
-      .h4 heading
-    </p>
-    <p
-      className="h5"
-    >
-      .h5 heading
-    </p>
-    <p
-      className="h6"
-    >
-      .h6 heading
     </p>
   </ComponentPreview>
 </Fragment>
@@ -399,38 +375,6 @@ exports[`Core: Typography Lead renders 1`] = `
 </Fragment>
 `;
 
-exports[`Core: Typography Small renders 1`] = `
-<Fragment>
-  <h2
-    id="small"
-  >
-    Small
-  </h2>
-  <p>
-    Use the 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;small&gt;&lt;/small&gt;
-    </PrismCode>
-     tags to create a secondary heading within a heading tag or class.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <h2>
-      Main heading 
-      <small>
-        with a faded secondary heading
-      </small>
-    </h2>
-  </ComponentPreview>
-</Fragment>
-`;
-
 exports[`Core: Typography Text Utilities renders 1`] = `
 <Fragment>
   <h2
@@ -461,7 +405,6 @@ exports[`Core: Typography renders 1`] = `
   </p>
   <Fonts />
   <Headings />
-  <Small />
   <Lead />
   <Inline />
   <TextUtilities />

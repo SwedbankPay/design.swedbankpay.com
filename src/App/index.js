@@ -10,6 +10,7 @@ import { LoadingComponent } from "./utils";
 const { topbar } = window.px;
 
 const BASENAME = process.env.basename || "/";
+
 const history = createBrowserHistory({ basename: BASENAME });
 
 class ScrollToTop extends Component {

@@ -1,7 +1,8 @@
 # Changelog
 
-## [3.4.1] - 2019-08-06
+## [3.4.2] - 2019-08-09
 
-### Fixed
+### Changed
 
-- Fixed issue with topbar on chrome.
+- Added brand bar to body again as a temporary fix for .containers.
+- Added descendant selector to container to remove padding from topbar.
