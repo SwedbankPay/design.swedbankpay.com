@@ -5,18 +5,18 @@ import { Icon } from "#";
 
 const Dialog = ({ diaId, diaHeader, children }) => (
     <>
-        <div className="dialog" id={diaId} role="dialog" aria-modal="true">
+        <div className="dialog" id={diaId} role="dialog" aria-modal="true" aria-labelledby="aria-label-dia" aria-describedby="aria-describe-dia">
             <section>
-                <header className="dialog-header">
-                    <h4>{diaHeader}</h4>
-                    <button type="button" className="dialog-close">
-                        <Icon type="close" />
+                <header className="dialog-header" id="aria-label-dia">
+                    <h4>{diaHeader}</h4>{"\n"}
+                    <button type="button" className="dialog-close">{"\n"}
+                        <Icon type="close" />{"\n"}
                     </button>
                 </header>
-                <div className="dialog-body">
+                <div className="dialog-body" id="aria-describe-dia">
                     {children}
                 </div>
-                <footer className="dialog-footer">
+                <footer className="dialog-footer">{"\n"}
                     <button className="btn btn-guiding" type="button" data-dialog-close>Cancel</button>{"\n"}
                     <button className="btn btn-destructive" type="button">Delete</button>{"\n"}
                 </footer>

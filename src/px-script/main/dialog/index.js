@@ -16,13 +16,12 @@ class Dialog {
         this._el = el;
         this.id = el.id;
         this.closeIcon = el.querySelector(SELECTORS.CLOSEICON);
+        this.header = el.querySelector(".dialog-header");
         this.isOpen = el.classList.contains("d-flex");
 
         // Find all related buttons
-        this.openBtns = this.id ? [...document.querySelectorAll(`[data-dialog-open=${this.id}]`)] : null;
-        this.closeBtns = this.id ? [...document.querySelectorAll(`[data-dialog-close=${this.id}]`)] : null;
-        this.internalClose = this._el.querySelector("[data-dialog-close]");
-        this.closeBtns.every(closeBtn => closeBtn !== this.internalClose) ? this.closeBtns.push(this.internalClose) : null;
+        this.openBtns = this.id ? [...document.querySelectorAll(`[data-dialog-open=${this.id}]`)] : [];
+        this.closeBtn = this._el.querySelector("[data-dialog-close]");
 
         // Find focusable elements
         this.focusedElemBeforeDialog = null;
@@ -63,7 +62,7 @@ class Dialog {
         });
 
         // Init open buttons
-        if (this.openBtns) {
+        if (this.openBtns.length) {
             this.openBtns.forEach(btn => {
                 btn.addEventListener("click", e => {
                     e.preventDefault();
@@ -73,12 +72,10 @@ class Dialog {
         }
 
         // Init close buttons
-        if (this.closeBtns) {
-            this.closeBtns.forEach(btn => {
-                btn.addEventListener("click", e => {
-                    e.preventDefault();
-                    this.close();
-                });
+        if (this.closeBtn) {
+            this.closeBtn.addEventListener("click", e => {
+                e.preventDefault();
+                this.close();
             });
         }
     }
@@ -89,7 +86,7 @@ class Dialog {
         this.isOpen = true;
         this._el.classList.add("d-flex");
         document.body.classList.add("dialog-open");
-        this.firstTabStop.focus();
+        this.lastTabStop.focus();
     }
 
     close () {
@@ -97,7 +94,7 @@ class Dialog {
         this.isOpen = false;
         this._el.classList.remove("d-flex");
         document.body.classList.remove("dialog-open");
-        this.focusedElemBeforeDialog.focus();
+        this.focusedElemBeforeDialog ? this.focusedElemBeforeDialog.focus() : null;
     }
 }
 

@@ -17,7 +17,11 @@ exports[`Documentation: Dialog Example renders 1`] = `
       data-dialog-open="demo-dialog"
       type="button"
     >
+      
+
       Open dialog
+      
+
     </button>
     <Dialog
       diaHeader="Delete item 456?"

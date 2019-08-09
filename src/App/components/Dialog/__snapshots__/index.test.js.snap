@@ -3,6 +3,8 @@
 exports[`Component: Dialog -  renders 1`] = `
 <Fragment>
   <div
+    aria-describedby="aria-describe-dia"
+    aria-labelledby="aria-label-dia"
     aria-modal="true"
     className="dialog"
     role="dialog"
@@ -10,23 +12,33 @@ exports[`Component: Dialog -  renders 1`] = `
     <section>
       <header
         className="dialog-header"
+        id="aria-label-dia"
       >
         <h4 />
+        
+
         <button
           className="dialog-close"
           type="button"
         >
+          
+
           <Icon
             type="close"
           />
+          
+
         </button>
       </header>
       <div
         className="dialog-body"
+        id="aria-describe-dia"
       />
       <footer
         className="dialog-footer"
       >
+        
+
         <button
           className="btn btn-guiding"
           data-dialog-close={true}
@@ -53,6 +65,8 @@ exports[`Component: Dialog -  renders 1`] = `
 exports[`Component: Dialog -  renders with the passed ID 1`] = `
 <Fragment>
   <div
+    aria-describedby="aria-describe-dia"
+    aria-labelledby="aria-label-dia"
     aria-modal="true"
     className="dialog"
     id="my-id"
@@ -61,23 +75,33 @@ exports[`Component: Dialog -  renders with the passed ID 1`] = `
     <section>
       <header
         className="dialog-header"
+        id="aria-label-dia"
       >
         <h4 />
+        
+
         <button
           className="dialog-close"
           type="button"
         >
+          
+
           <Icon
             type="close"
           />
+          
+
         </button>
       </header>
       <div
         className="dialog-body"
+        id="aria-describe-dia"
       />
       <footer
         className="dialog-footer"
       >
+        
+
         <button
           className="btn btn-guiding"
           data-dialog-close={true}
@@ -104,6 +128,8 @@ exports[`Component: Dialog -  renders with the passed ID 1`] = `
 exports[`Component: Dialog -  renders with the passed children 1`] = `
 <Fragment>
   <div
+    aria-describedby="aria-describe-dia"
+    aria-labelledby="aria-label-dia"
     aria-modal="true"
     className="dialog"
     role="dialog"
@@ -111,19 +137,27 @@ exports[`Component: Dialog -  renders with the passed children 1`] = `
     <section>
       <header
         className="dialog-header"
+        id="aria-label-dia"
       >
         <h4 />
+        
+
         <button
           className="dialog-close"
           type="button"
         >
+          
+
           <Icon
             type="close"
           />
+          
+
         </button>
       </header>
       <div
         className="dialog-body"
+        id="aria-describe-dia"
       >
         <p>
           My paragraph
@@ -132,6 +166,8 @@ exports[`Component: Dialog -  renders with the passed children 1`] = `
       <footer
         className="dialog-footer"
       >
+        
+
         <button
           className="btn btn-guiding"
           data-dialog-close={true}
@@ -158,6 +194,8 @@ exports[`Component: Dialog -  renders with the passed children 1`] = `
 exports[`Component: Dialog -  renders with the passed header 1`] = `
 <Fragment>
   <div
+    aria-describedby="aria-describe-dia"
+    aria-labelledby="aria-label-dia"
     aria-modal="true"
     className="dialog"
     role="dialog"
@@ -165,25 +203,35 @@ exports[`Component: Dialog -  renders with the passed header 1`] = `
     <section>
       <header
         className="dialog-header"
+        id="aria-label-dia"
       >
         <h4>
           My heading
         </h4>
+        
+
         <button
           className="dialog-close"
           type="button"
         >
+          
+
           <Icon
             type="close"
           />
+          
+
         </button>
       </header>
       <div
         className="dialog-body"
+        id="aria-describe-dia"
       />
       <footer
         className="dialog-footer"
       >
+        
+
         <button
           className="btn btn-guiding"
           data-dialog-close={true}

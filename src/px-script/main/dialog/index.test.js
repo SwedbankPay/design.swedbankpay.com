@@ -13,24 +13,23 @@ describe("px-script: dialog", () => {
 
         return (
             <>
-                <div className={`dialog ${open ? " d-flex" : null}`} id={id}>
+                <button className="btn btn-executive" type="button" data-dialog-open={btnId}>
+                    Open dialog
+                </button>
+                <div className={`dialog ${open ? " d-flex" : null}`} id={id} role="dialog" aria-modal="true">
                     <section>
-                        <header>
-                            <h5>Delete item 456?</h5>
-                            <a href="#" className="dialog-close">
-                                <i className="material-icons">close</i>
-                            </a>
+                        <header className="dialog-header">
+                            <h4>Delete item 456?</h4><button type="button" className="dialog-close"><i className="material-icons">close</i></button>
                         </header>
                         <div className="dialog-body">
                             <p>Are you sure you want to permanently delete the item <i>German Swashbuckle (456)?</i></p>
                         </div>
-                        <footer>
-                            <button className="btn btn-secondary" type="button" data-dialog-close={id}>Cancel</button>
-                            <button className="btn btn-danger" type="button">Delete</button>
+                        <footer className="dialog-footer">
+                            <button className="btn btn-guiding" type="button" data-dialog-close>Cancel</button>
+                            <button className="btn btn-destructive" type="button">Delete</button>
                         </footer>
                     </section>
                 </div>
-                <button className="btn btn-primary" type="button" data-dialog-open={btnId}>Open dialog</button>
             </>
         );
     };
@@ -47,180 +46,224 @@ describe("px-script: dialog", () => {
         expect(dialog).toBeDefined();
     });
 
-    // describe("dialog.init", () => {
-    //     it("has an init method", () => {
-    //         expect(dialog.init).toBeDefined();
-    //         expect(dialog.init).toBeInstanceOf(Function);
-    //     });
+    describe("dialog.init", () => {
+        it("has an init method", () => {
+            expect(dialog.init).toBeDefined();
+            expect(dialog.init).toBeInstanceOf(Function);
+        });
 
-    //     it("returns a single object when one ID is passed", () => {
-    //         ReactDOM.render(<Dialog id="demo-dialog" />, div);
+        it("returns a single object when one ID is passed", () => {
+            ReactDOM.render(<Dialog id="demo-dialog" />, div);
 
-    //         const renderedDialog = document.querySelector(".dialog");
+            const renderedDialog = document.querySelector(".dialog");
 
-    //         expect(renderedDialog).toBeTruthy();
+            expect(renderedDialog).toBeTruthy();
 
-    //         const returnVal = dialog.init("demo-dialog");
+            const returnVal = dialog.init("demo-dialog");
 
-    //         expect(Array.isArray(returnVal)).toBeFalsy();
-    //         expect(typeof returnVal).toEqual("object");
-    //     });
+            expect(Array.isArray(returnVal)).toBeFalsy();
+            expect(typeof returnVal).toEqual("object");
+        });
 
-    //     it("returns an array of objects when more than one dialog is initialized", () => {
-    //         ReactDOM.render(
-    //             <>
-    //                 <Dialog />
-    //                 <Dialog />
-    //             </>
-    //             , div);
+        it("returns an array of objects when more than one dialog is initialized", () => {
+            ReactDOM.render(
+                <>
+                    <Dialog />
+                    <Dialog />
+                </>
+                , div);
 
-    //         const renderedDialog = document.querySelectorAll(".dialog");
+            const renderedDialog = document.querySelectorAll(".dialog");
 
-    //         expect(renderedDialog).toBeTruthy();
-    //         expect(renderedDialog.length).toEqual(2);
+            expect(renderedDialog).toBeTruthy();
+            expect(renderedDialog.length).toEqual(2);
 
-    //         const returnVal = dialog.init();
+            const returnVal = dialog.init();
 
-    //         expect(Array.isArray(returnVal)).toBeTruthy();
-    //         expect(returnVal.length).toEqual(2);
-    //     });
+            expect(Array.isArray(returnVal)).toBeTruthy();
+            expect(returnVal.length).toEqual(2);
+        });
 
-    //     it("init returns null if no dialog is found and prints a warning message", () => {
-    //         console.warn = jest.fn();
+        it("init returns null if no dialog is found and prints a warning message", () => {
+            console.warn = jest.fn();
 
-    //         expect(dialog.init()).toBeNull();
-    //         expect(console.warn).toHaveBeenCalled();
-    //     });
+            expect(dialog.init()).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
+        });
 
-    //     it("returns null if an invalid ID is passed and prints a warning message", () => {
-    //         console.warn = jest.fn();
+        it("returns null if an invalid ID is passed and prints a warning message", () => {
+            console.warn = jest.fn();
 
-    //         expect(dialog.init("test")).toBeNull();
-    //         expect(console.warn).toHaveBeenCalled();
-    //     });
-    // });
+            expect(dialog.init("test")).toBeNull();
+            expect(console.warn).toHaveBeenCalled();
+        });
+    });
 
-    // it("button with attribute 'data-dialog-open' pointing to the correct id opens corresponding dialog", () => {
-    //     ReactDOM.render(<Dialog id="demo-dialog" />, div);
+    it("button with attribute 'data-dialog-open' pointing to the correct id opens corresponding dialog", () => {
+        ReactDOM.render(<Dialog id="demo-dialog" />, div);
 
-    //     const renderedDialog = document.querySelector(".dialog");
-    //     const openBtn = document.querySelector("[data-dialog-open]");
+        const renderedDialog = document.querySelector(".dialog");
+        const openBtn = document.querySelector("[data-dialog-open]");
 
-    //     expect(renderedDialog.classList).not.toContain("d-flex");
+        expect(renderedDialog.classList).not.toContain("d-flex");
 
-    //     dialog.init();
-    //     expect(document.body.classList).not.toContain("dialog-open");
+        dialog.init();
+        expect(document.body.classList).not.toContain("dialog-open");
 
-    //     openBtn.click();
-    //     expect(renderedDialog.classList).toContain("d-flex");
-    //     expect(document.body.classList).toContain("dialog-open");
-    // });
+        openBtn.click();
+        expect(renderedDialog.classList).toContain("d-flex");
+        expect(document.body.classList).toContain("dialog-open");
+    });
 
-    // it("button with attribute 'data-dialog-close' pointing to the correct id closes corresponding dialog", () => {
-    //     ReactDOM.render(<Dialog id="demo-dialog" open />, div);
+    it("button with attribute 'data-dialog-close' pointing to the correct id closes corresponding dialog", () => {
+        ReactDOM.render(<Dialog id="demo-dialog" open />, div);
 
-    //     const renderedDialog = document.querySelector(".dialog");
-    //     const closeBtn = document.querySelector("[data-dialog-close]");
+        const renderedDialog = document.querySelector(".dialog");
+        const closeBtn = document.querySelector("[data-dialog-close]");
 
-    //     expect(renderedDialog.classList).toContain("d-flex");
+        expect(renderedDialog.classList).toContain("d-flex");
 
-    //     dialog.init();
-    //     expect(document.body.classList).toContain("dialog-open");
+        dialog.init();
+        expect(document.body.classList).toContain("dialog-open");
 
-    //     closeBtn.click();
-    //     expect(renderedDialog.classList).not.toContain("d-flex");
-    //     expect(document.body.classList).not.toContain("dialog-open");
-    // });
+        closeBtn.click();
+        expect(renderedDialog.classList).not.toContain("d-flex");
+        expect(document.body.classList).not.toContain("dialog-open");
+    });
 
-    // it("closes dialog when clicking the close icon", () => {
-    //     ReactDOM.render(<Dialog id="demo-dialog" open />, div);
+    it("closes dialog when clicking the close icon", () => {
+        ReactDOM.render(<Dialog id="demo-dialog" open />, div);
 
-    //     const renderedDialog = document.querySelector(".dialog");
-    //     const closeIcon = renderedDialog.querySelector(".dialog-close");
+        const renderedDialog = document.querySelector(".dialog");
+        const closeIcon = renderedDialog.querySelector(".dialog-close");
 
-    //     expect(renderedDialog.classList).toContain("d-flex");
+        expect(renderedDialog.classList).toContain("d-flex");
 
-    //     dialog.init();
-    //     expect(document.body.classList).toContain("dialog-open");
+        dialog.init();
+        expect(document.body.classList).toContain("dialog-open");
 
-    //     closeIcon.click();
+        closeIcon.click();
 
-    //     expect(renderedDialog.classList).not.toContain("d-flex");
-    //     expect(document.body.classList).not.toContain("dialog-open");
-    // });
+        expect(renderedDialog.classList).not.toContain("d-flex");
+        expect(document.body.classList).not.toContain("dialog-open");
+    });
 
-    // describe("dialog.open", () => {
-    //     it("opens dialog when calling dialog.open", () => {
-    //         ReactDOM.render(<Dialog id="demo-dialog" />, div);
+    it("sets focus on the last focusable element when dialog is opened", () => {
+        ReactDOM.render(<Dialog id="dia-id"/>, div);
 
-    //         const renderedDialog = document.querySelector(".dialog");
+        const delBtn = document.querySelector(".btn-destructive");
 
-    //         expect(renderedDialog.classList).not.toContain("d-flex");
-    //         expect(document.body.classList).not.toContain("dialog-open");
+        dialog.init();
+        dialog.open("dia-id");
 
-    //         dialog.init();
-    //         expect(document.body.classList).not.toContain("dialog-open");
+        expect(document.activeElement).toEqual(delBtn);
+    });
 
-    //         dialog.open("demo-dialog");
+    // It is not possible to trigger a focus change with keyboardevents, this is due to some security issues with JS [AW].
+    it("changes focus from the last focusable element to the first focusable element when focus change is induced", () => {
+        ReactDOM.render(<Dialog id="dia-id"/>, div);
 
-    //         expect(renderedDialog.classList).toContain("d-flex");
-    //         expect(document.body.classList).toContain("dialog-open");
-    //     });
+        const dialogElem = document.querySelector(".dialog");
+        const ev = new KeyboardEvent("keydown", { key: "Tab" });
 
-    //     it("does not open dialog when calling dialog.open with wrong id and prints warn to console", () => {
-    //         console.warn = jest.fn();
-    //         ReactDOM.render(<Dialog id="demo-dialog" />, div);
+        const diaObj = dialog.init()[0];
 
-    //         const renderedDialog = document.querySelector(".dialog");
+        diaObj.open();
+        dialogElem.dispatchEvent(ev);
 
-    //         expect(renderedDialog.classList).not.toContain("d-flex");
+        expect(document.activeElement).toEqual(diaObj.firstTabStop);
+    });
 
-    //         dialog.init();
-    //         expect(document.body.classList).not.toContain("dialog-open");
+    it("changes focus from the first focusable element to the last focusable element when focus change is induced", () => {
+        ReactDOM.render(<Dialog id="dia-id"/>, div);
 
-    //         dialog.open("qwerty");
+        const dialogElem = document.querySelector(".dialog");
+        const sEv = new KeyboardEvent("keydown", {
+            shiftKey: true,
+            key: "Tab"
+        });
+        const ev = new KeyboardEvent("keydown", { key: "Tab" });
+        const diaObj = dialog.init()[0];
 
-    //         expect(console.warn).toHaveBeenCalledWith("dialog.open: No dialog with id \"qwerty\" found.");
+        diaObj.open();
+        dialogElem.dispatchEvent(ev);
+        dialogElem.dispatchEvent(sEv);
 
-    //         expect(renderedDialog.classList).not.toContain("d-flex");
-    //         expect(document.body.classList).not.toContain("dialog-open");
-    //     });
-    // });
+        expect(document.activeElement).toEqual(diaObj.lastTabStop);
+    });
 
-    // describe("dialog.close", () => {
-    //     it("closes dialog when calling dialog.close", () => {
-    //         ReactDOM.render(<Dialog id="demo-dialog" open />, div);
+    describe("dialog.open", () => {
+        it("opens dialog when calling dialog.open", () => {
+            ReactDOM.render(<Dialog id="demo-dialog" />, div);
 
-    //         const renderedDialog = document.querySelector(".dialog");
+            const renderedDialog = document.querySelector(".dialog");
 
-    //         expect(renderedDialog.classList).toContain("d-flex");
+            expect(renderedDialog.classList).not.toContain("d-flex");
+            expect(document.body.classList).not.toContain("dialog-open");
 
-    //         dialog.init();
-    //         expect(document.body.classList).toContain("dialog-open");
+            dialog.init();
+            expect(document.body.classList).not.toContain("dialog-open");
 
-    //         dialog.close("demo-dialog");
+            dialog.open("demo-dialog");
 
-    //         expect(renderedDialog.classList).not.toContain("d-flex");
-    //         expect(document.body.classList).not.toContain("dialog-open");
-    //     });
+            expect(renderedDialog.classList).toContain("d-flex");
+            expect(document.body.classList).toContain("dialog-open");
+        });
 
-    //     it("does not close dialog when calling dialog.close with wrong id and prints warn to console", () => {
-    //         console.warn = jest.fn();
-    //         ReactDOM.render(<Dialog id="demo-dialog" open />, div);
+        it("does not open dialog when calling dialog.open with wrong id and prints warn to console", () => {
+            console.warn = jest.fn();
+            ReactDOM.render(<Dialog id="demo-dialog" />, div);
 
-    //         const renderedDialog = document.querySelector(".dialog");
+            const renderedDialog = document.querySelector(".dialog");
 
-    //         expect(renderedDialog.classList).toContain("d-flex");
+            expect(renderedDialog.classList).not.toContain("d-flex");
 
-    //         dialog.init();
-    //         expect(document.body.classList).toContain("dialog-open");
+            dialog.init();
+            expect(document.body.classList).not.toContain("dialog-open");
 
-    //         dialog.close("qwerty");
+            dialog.open("qwerty");
 
-    //         expect(console.warn).toHaveBeenCalledWith("dialog.close: No dialog with id \"qwerty\" found.");
+            expect(console.warn).toHaveBeenCalledWith("dialog.open: No dialog with id \"qwerty\" found.");
 
-    //         expect(renderedDialog.classList).toContain("d-flex");
-    //         expect(document.body.classList).toContain("dialog-open");
-    //     });
-    // });
+            expect(renderedDialog.classList).not.toContain("d-flex");
+            expect(document.body.classList).not.toContain("dialog-open");
+        });
+    });
+
+    describe("dialog.close", () => {
+        it("closes dialog when calling dialog.close", () => {
+            ReactDOM.render(<Dialog id="demo-dialog" open />, div);
+
+            const renderedDialog = document.querySelector(".dialog");
+
+            expect(renderedDialog.classList).toContain("d-flex");
+
+            dialog.init();
+            expect(document.body.classList).toContain("dialog-open");
+
+            dialog.close("demo-dialog");
+
+            expect(renderedDialog.classList).not.toContain("d-flex");
+            expect(document.body.classList).not.toContain("dialog-open");
+        });
+
+        it("does not close dialog when calling dialog.close with wrong id and prints warn to console", () => {
+            console.warn = jest.fn();
+            ReactDOM.render(<Dialog id="demo-dialog" open />, div);
+
+            const renderedDialog = document.querySelector(".dialog");
+
+            expect(renderedDialog.classList).toContain("d-flex");
+
+            dialog.init();
+            expect(document.body.classList).toContain("dialog-open");
+
+            dialog.close("qwerty");
+
+            expect(console.warn).toHaveBeenCalledWith("dialog.close: No dialog with id \"qwerty\" found.");
+
+            expect(renderedDialog.classList).toContain("d-flex");
+            expect(document.body.classList).toContain("dialog-open");
+        });
+    });
 });
