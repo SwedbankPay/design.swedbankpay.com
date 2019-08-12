@@ -19,10 +19,10 @@ const Expandable = ({ items }) => (
             ? items.map(({ title, subtitle, content }, i) => (
                 <div key={i} className="expandable">{"\n"}
                     <button type="button" className="expandable-header">{"\n"}
-                        <span>
+                        <span className="expandable-headline">
                             {title}
                         </span>{"\n"}
-                        <small>
+                        <small className="expandable-subtitle">
                             {subtitle}
                         </small>{"\n"}
                     </button>

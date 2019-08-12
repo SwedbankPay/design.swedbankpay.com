@@ -1,15 +1,31 @@
 .expandable {
-    border: 1px solid transparent;
+    border: 1px solid @light-brown;
     border-bottom: 2px solid @light-brown;
     border-radius: 2px;
     margin-bottom: 1rem;
-    background-color: @offwhite;
+    background-color: @light-gray;
     display: flex;
     flex-direction: column;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, height 0.3s ease;
 
     &:last-child {
         margin-bottom: 0;
+    }
+
+    &.expanding-test {
+        border-top: 1px solid transparent;
+        background-color: @white;
+        transition: background-color 0.3s ease;
+
+        .expandable-header {
+            background-color: @white;
+            transition: background-color 0.3s ease;
+
+            &:after {
+                background-color: @brand-primary;
+                transition: background-color 0.15s ease;
+            }
+        }
     }
 
     .expandable-header {
@@ -28,10 +44,34 @@
         align-items: flex-start;
         user-select: none;
         color: @dark-brown;
-        background-color: @offwhite;
+        background-color: @light-gray;
         padding: 1rem;
         text-align: start;
-        // transition: background-color 0.3s ease; Removed temporarily until we have discussed color choices for expandables [AW]
+        transition: background-color 0.3s ease;
+
+        .expandable-headline {
+            font-family: @font-swedbank-headline;
+            font-size: 1rem;
+            padding: 0;
+        }
+
+        .expandable-subtitle {
+            font-family: @font-stack;
+
+            .small();
+        }
+
+        // Color transition
+        &:after {
+            content: "";
+            position: absolute;
+            background-color: transparent;
+            height: 4px;
+            left: -1px;
+            right: -1px;
+            top: -1px;
+            transition: background-color 0.15s ease;
+        }
 
         &:active {
             box-shadow: none;
@@ -68,18 +108,25 @@
     }
 
     &.expandable-open {
-        border: 1px solid @medium-brown;
-        background-color: @white;
-        transition: background-color 0.3s ease;
+        // border-top: 1px solid transparent;
+        // background-color: @white;
+        // transition: background-color 0.3s ease;
 
         .expandable-header {
-            color: @medium-brown;
-            background-color: @white;
-            transition: background-color 0.3s ease;
+            // color: @medium-brown;
+            // background-color: @white;
+            position: relative;
+            // transition: background-color 0.3s ease;
 
             &:before {
                 transform: rotate(180deg);
             }
+
+            // &:after {
+            //     background-color: @brand-primary;
+            //     height: 4px;
+            //     transition: height 0.1s ease;
+            // }
         }
 
         .expandable-body {
