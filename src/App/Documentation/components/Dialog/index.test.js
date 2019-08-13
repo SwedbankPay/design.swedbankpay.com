@@ -9,12 +9,9 @@ describe("Documentation: Dialog", () => {
     });
 
     it("renders", () => {
-        console.warn = jest.fn();
-
         const wrapper = shallow(<Dialog />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(console.warn).toHaveBeenCalled();
     });
 
     describe("HowItWorks", () => {

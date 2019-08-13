@@ -119,7 +119,7 @@ Array [
           onClick={[Function]}
         >
           <Icon
-            icon="bookmark"
+            type="bookmark"
           >
             <i
               className="material-icons"
@@ -136,7 +136,7 @@ Array [
           onClick={[Function]}
         >
           <Icon
-            icon="business_center"
+            type="business_center"
           >
             <i
               className="material-icons"
@@ -153,7 +153,7 @@ Array [
           onClick={[Function]}
         >
           <Icon
-            icon="add_circle"
+            type="add_circle"
           >
             <i
               className="material-icons"
@@ -170,7 +170,7 @@ Array [
           onClick={[Function]}
         >
           <Icon
-            icon="person_add"
+            type="person_add"
           >
             <i
               className="material-icons"
@@ -233,7 +233,7 @@ Array [
           onClick={[Function]}
         >
           <Icon
-            icon="bookmark"
+            type="bookmark"
           >
             <i
               className="material-icons"
@@ -250,7 +250,7 @@ Array [
           onClick={[Function]}
         >
           <Icon
-            icon="business_center"
+            type="business_center"
           >
             <i
               className="material-icons"
@@ -267,7 +267,7 @@ Array [
           onClick={[Function]}
         >
           <Icon
-            icon="add_circle"
+            type="add_circle"
           >
             <i
               className="material-icons"
@@ -284,7 +284,7 @@ Array [
           onClick={[Function]}
         >
           <Icon
-            icon="person_add"
+            type="person_add"
           >
             <i
               className="material-icons"
@@ -342,7 +342,7 @@ Array [
           onClick={[Function]}
         >
           <Icon
-            icon="bookmark"
+            type="bookmark"
           >
             <i
               className="material-icons"
@@ -359,7 +359,7 @@ Array [
           onClick={[Function]}
         >
           <Icon
-            icon="business_center"
+            type="business_center"
           >
             <i
               className="material-icons"
@@ -376,7 +376,7 @@ Array [
           onClick={[Function]}
         >
           <Icon
-            icon="add_circle"
+            type="add_circle"
           >
             <i
               className="material-icons"
@@ -393,7 +393,7 @@ Array [
           onClick={[Function]}
         >
           <Icon
-            icon="person_add"
+            type="person_add"
           >
             <i
               className="material-icons"
@@ -457,7 +457,7 @@ Array [
           onClick={[Function]}
         >
           <Icon
-            icon="bookmark"
+            type="bookmark"
           >
             <i
               className="material-icons"
@@ -474,7 +474,7 @@ Array [
           onClick={[Function]}
         >
           <Icon
-            icon="business_center"
+            type="business_center"
           >
             <i
               className="material-icons"
@@ -491,7 +491,7 @@ Array [
           onClick={[Function]}
         >
           <Icon
-            icon="add_circle"
+            type="add_circle"
           >
             <i
               className="material-icons"
@@ -508,7 +508,7 @@ Array [
           onClick={[Function]}
         >
           <Icon
-            icon="person_add"
+            type="person_add"
           >
             <i
               className="material-icons"
@@ -567,7 +567,7 @@ Array [
           onClick={[Function]}
         >
           <Icon
-            icon="bookmark"
+            type="bookmark"
           >
             <i
               className="material-icons"
@@ -584,7 +584,7 @@ Array [
           onClick={[Function]}
         >
           <Icon
-            icon="business_center"
+            type="business_center"
           >
             <i
               className="material-icons"
@@ -601,7 +601,7 @@ Array [
           onClick={[Function]}
         >
           <Icon
-            icon="add_circle"
+            type="add_circle"
           >
             <i
               className="material-icons"
@@ -618,7 +618,7 @@ Array [
           onClick={[Function]}
         >
           <Icon
-            icon="person_add"
+            type="person_add"
           >
             <i
               className="material-icons"
@@ -701,7 +701,7 @@ Array [
           onClick={[Function]}
         >
           <Icon
-            icon="bookmark"
+            type="bookmark"
           >
             <i
               className="material-icons"
@@ -718,7 +718,7 @@ Array [
           onClick={[Function]}
         >
           <Icon
-            icon="business_center"
+            type="business_center"
           >
             <i
               className="material-icons"
@@ -735,7 +735,7 @@ Array [
           onClick={[Function]}
         >
           <Icon
-            icon="add_circle"
+            type="add_circle"
           >
             <i
               className="material-icons"
@@ -752,7 +752,7 @@ Array [
           onClick={[Function]}
         >
           <Icon
-            icon="person_add"
+            type="person_add"
           >
             <i
               className="material-icons"
@@ -824,7 +824,7 @@ exports[`Component: ActionList renders with a custom .action-toggle if it is pro
         onClick={[Function]}
       >
         <Icon
-          icon="bookmark"
+          type="bookmark"
         >
           <i
             className="material-icons"
@@ -841,7 +841,7 @@ exports[`Component: ActionList renders with a custom .action-toggle if it is pro
         onClick={[Function]}
       >
         <Icon
-          icon="business_center"
+          type="business_center"
         >
           <i
             className="material-icons"
@@ -858,7 +858,7 @@ exports[`Component: ActionList renders with a custom .action-toggle if it is pro
         onClick={[Function]}
       >
         <Icon
-          icon="add_circle"
+          type="add_circle"
         >
           <i
             className="material-icons"
@@ -875,7 +875,7 @@ exports[`Component: ActionList renders with a custom .action-toggle if it is pro
         onClick={[Function]}
       >
         <Icon
-          icon="person_add"
+          type="person_add"
         >
           <i
             className="material-icons"

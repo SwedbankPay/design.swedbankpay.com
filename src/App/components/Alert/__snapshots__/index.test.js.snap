@@ -160,7 +160,7 @@ exports[`Component: ComplexAlert Proptypes renders with a close button when prop
       
 		
       <Icon
-        icon="close"
+        type="close"
       />
       
 	
@@ -197,7 +197,7 @@ exports[`Component: ComplexAlert Proptypes renders with an icon when prop icon i
      
     <Icon
       classNames="alert-icon"
-      icon="home"
+      type="home"
     />
     
 
