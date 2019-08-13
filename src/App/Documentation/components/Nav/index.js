@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import PrismCode from "react-prism";
 
 import { ComponentPreview, DocContainer, Property, JavascriptDocs } from "#";
 import NavComponent from "@/Nav";
@@ -75,8 +74,7 @@ const Nav = () => {
     return (
         <DocContainer docToc>
             <p className="lead">
-                Use <PrismCode className="language-html">{"<nav>"}</PrismCode>s to create a basic navigational
-                element containing links.
+                Use navs to create a basic navigational element containing links.
             </p>
             <StandardNav />
             <WithIconsOnly />

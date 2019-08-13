@@ -150,14 +150,7 @@ exports[`Component: Nav renders 1`] = `
   <p
     className="lead"
   >
-    Use 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;nav&gt;
-    </PrismCode>
-    s to create a basic navigational element containing links.
+    Use navs to create a basic navigational element containing links.
   </p>
   <StandardNav />
   <WithIconsOnly />
