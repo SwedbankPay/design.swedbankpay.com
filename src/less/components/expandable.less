@@ -12,7 +12,13 @@
         margin-bottom: 0;
     }
 
-    &.expanding-test {
+    &.show {
+        .expandable-body {
+            display: block;
+        }
+    }
+
+    &.expandable-open {
         border-top: 1px solid transparent;
         background-color: @white;
         transition: background-color 0.3s ease;
@@ -105,32 +111,5 @@
         height: 0;
         overflow: hidden;
         transition: height 0.3s ease;
-    }
-
-    &.expandable-open {
-        // border-top: 1px solid transparent;
-        // background-color: @white;
-        // transition: background-color 0.3s ease;
-
-        .expandable-header {
-            // color: @medium-brown;
-            // background-color: @white;
-            position: relative;
-            // transition: background-color 0.3s ease;
-
-            &:before {
-                transform: rotate(180deg);
-            }
-
-            // &:after {
-            //     background-color: @brand-primary;
-            //     height: 4px;
-            //     transition: height 0.1s ease;
-            // }
-        }
-
-        .expandable-body {
-            display: block;
-        }
     }
 }

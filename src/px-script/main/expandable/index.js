@@ -115,7 +115,7 @@ class Expandable {
 
         this.isOpen = true;
         this.isExpanding = true;
-        this.elem.classList.add("expanding-test");
+        this.elem.classList.add("show");
         this.elem.classList.add("expandable-open");
         this.bodyHeight = this.body.clientHeight;
         this.body.classList.add("expanding");
@@ -144,7 +144,7 @@ class Expandable {
         }
 
         this.isOpen = false;
-        this.elem.classList.remove("expanding-test");
+        this.elem.classList.remove("expandable-open");
         this.isExpanding = true;
         this.body.style.height = `${this.body.clientHeight}px`;
 
@@ -156,7 +156,7 @@ class Expandable {
         setTimeout(() => {
             this.isExpanding = false;
             this.body.classList.remove("expanding");
-            this.elem.classList.remove("expandable-open");
+            this.elem.classList.remove("show");
         }, 300);
     }
 }

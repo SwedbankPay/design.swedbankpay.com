@@ -85,12 +85,16 @@ exports[`Component: Expandable returns a number of expandables matching the leng
     >
       
 
-      <span>
+      <span
+        className="expandable-headline"
+      >
         Foo
       </span>
       
 
-      <small />
+      <small
+        className="expandable-subtitle"
+      />
       
 
     </button>
@@ -114,12 +118,16 @@ exports[`Component: Expandable returns a number of expandables matching the leng
     >
       
 
-      <span>
+      <span
+        className="expandable-headline"
+      >
         Bar
       </span>
       
 
-      <small />
+      <small
+        className="expandable-subtitle"
+      />
       
 
     </button>
@@ -143,12 +151,16 @@ exports[`Component: Expandable returns a number of expandables matching the leng
     >
       
 
-      <span>
+      <span
+        className="expandable-headline"
+      >
         Baz
       </span>
       
 
-      <small />
+      <small
+        className="expandable-subtitle"
+      />
       
 
     </button>
