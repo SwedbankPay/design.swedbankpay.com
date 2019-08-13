@@ -16,9 +16,9 @@ const ExpandablePlaceholder = () => (
 const Expandable = ({ items }) => (
     items
         ? (Array.isArray(items)
-            ? items.map(({ title, subtitle, content }, i) => (
+            ? items.map(({ title, subtitle, content, id }, i) => (
                 <div key={i} className="expandable">{"\n"}
-                    <button type="button" className="expandable-header">{"\n"}
+                    <button type="button" className="expandable-header" aria-controls={id}>{"\n"}
                         <span className="expandable-headline">
                             {title}
                         </span>{"\n"}
@@ -26,7 +26,7 @@ const Expandable = ({ items }) => (
                             {subtitle}
                         </small>{"\n"}
                     </button>
-                    <div className="expandable-body">
+                    <div className="expandable-body" id={id}>
                         <p>{content}</p>
                     </div>
                 </div>
