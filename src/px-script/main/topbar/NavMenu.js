@@ -14,6 +14,7 @@ export default class NavMenu {
         this.linkContainer = this.navMenuElement.querySelector(".topbar-link-container");
         this.closeNavIcon = this.navMenuElement.querySelector(".close-topbar-nav");
         this.btnElement = topbarComponent.querySelector(SELECTORS.BTN);
+        this.resizeEvent;
 
         if (this.btnElement) {
             this.btnElement.addEventListener("click", e => {
@@ -49,10 +50,21 @@ export default class NavMenu {
             }));
     }
 
+    _resizeListener () { this.isOpen ? this._closeNoTransition() : null; }
+
+    _closeNoTransition () {
+        handleScrollbar();
+        this.isOpen = false;
+        window.removeEventListener("resize", this.resizeEvent, { passive: true });
+        this.navMenuElement.classList.remove("topbar-nav-open");
+        this.navMenuElement.classList.remove("d-block");
+    }
+
     open () {
         handleScrollbar();
         this.isOpen = true;
-
+        this.resizeEvent = this._resizeListener.bind(this);
+        window.addEventListener("resize", this.resizeEvent, { passive: true });
         this.navMenuElement.classList.add("topbar-nav-open");
         this.navMenuElement.classList.add("d-block");
     }
@@ -61,6 +73,7 @@ export default class NavMenu {
         handleScrollbar();
         this.isOpen = false;
 
+        window.removeEventListener("resize", this.resizeEvent, { passive: true });
         this.navMenuElement.classList.remove("topbar-nav-open");
         this.navMenuElement.classList.add("topbar-nav-closing");
         setTimeout(() => {
