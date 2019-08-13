@@ -18,7 +18,7 @@ const Expandable = ({ items }) => (
         ? (Array.isArray(items)
             ? items.map(({ title, subtitle, content, id }, i) => (
                 <div key={i} className="expandable">{"\n"}
-                    <button type="button" className="expandable-header" aria-controls={id}>{"\n"}
+                    <button type="button" className="expandable-header" aria-expanded="false" aria-controls={id}>{"\n"}
                         <span className="expandable-headline">
                             {title}
                         </span>{"\n"}

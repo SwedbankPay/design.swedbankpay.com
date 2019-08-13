@@ -80,6 +80,7 @@ exports[`Component: Expandable returns a number of expandables matching the leng
     
 
     <button
+      aria-expanded="false"
       className="expandable-header"
       type="button"
     >
@@ -113,6 +114,7 @@ exports[`Component: Expandable returns a number of expandables matching the leng
     
 
     <button
+      aria-expanded="false"
       className="expandable-header"
       type="button"
     >
@@ -146,6 +148,7 @@ exports[`Component: Expandable returns a number of expandables matching the leng
     
 
     <button
+      aria-expanded="false"
       className="expandable-header"
       type="button"
     >

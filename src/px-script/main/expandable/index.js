@@ -58,6 +58,8 @@ class ExpandableGroup {
             return null;
         }
 
+        expParam._setAriaExpanded();
+
         expParam.header.addEventListener("click", () => {
             if (this._containsExpanding()) {
                 console.warn("expandable-group: The expandable-group contains an expanding element");
@@ -82,34 +84,33 @@ class Expandable {
         this.body = this.elem.querySelector(".expandable-body");
         this.expGrpParent = this.elem.closest(".expandable-group");
 
-        if (!this.header) {
-            console.warn("expandable: no header found");
-
-            return null;
-        }
-
         if (!this.body) {
             console.warn("expandable: No expandable-body found");
 
             return null;
         }
 
-        this.ariaExp = this.header.getAttribute("aria-expanded");
-        this.header.setAttribute("aria-expanded", !!this.ariaExp); // Set it equal to the value boolean value to ensure that the aria-expanded value is set [AW]
         this.isOpen = this.elem.classList.contains("expandable-open");
         this.isExpanding = this.body.classList.contains("expanding");
         this.bodyHeight = this.body.clientHeight;
     }
 
     _initializeHeader () {
+        if (!this.header) {
+            console.warn("expandable: No .expandable-header found");
+
+            return null;
+        }
+
+        this._setAriaExpanded();
+
         this.header.addEventListener("click", () => {
             this.isOpen ? this._close() : this._open();
         });
     }
 
     _setAriaExpanded () {
-        this.ariaExp = !this.ariaExp;
-        this.header.setAttribute("aria-expanded", this.ariaExp);
+        this.header.setAttribute("aria-expanded", this.isOpen);
     }
 
     _open () {
@@ -120,9 +121,10 @@ class Expandable {
             return false;
         }
 
+        this.isOpen = true;
+
         this._setAriaExpanded();
 
-        this.isOpen = true;
         this.isExpanding = true;
         this.elem.classList.add("show");
         this.elem.classList.add("expandable-open");
@@ -152,9 +154,10 @@ class Expandable {
             return false;
         }
 
+        this.isOpen = false;
+
         this._setAriaExpanded();
 
-        this.isOpen = false;
         this.elem.classList.remove("expandable-open");
         this.isExpanding = true;
         this.body.style.height = `${this.body.clientHeight}px`;

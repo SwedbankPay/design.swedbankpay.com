@@ -4,10 +4,12 @@
 
 ### Added
 
-- Added .expandable-headline and .expandable-subtitle to .expandable.
 - Added .dialog-header and .dialog-footer to the dialog component.
 - Added tab lock to dialog making it so you can't tab out of the dialog until an option is clicked.
 - Added aria labels to dialog documentation to show an example of how to use dialog accessibly.
+- Added .expandable-headline and .expandable-subtitle to .expandable.
+- Added aria-expanded attribute to expandable script.
+- Added aria-controls to expandable example.
 
 ### Changed
 

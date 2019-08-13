@@ -139,7 +139,7 @@ describe("px-script: expandable", () => {
 
                 expandable.init("exp-no-header");
 
-                expect(console.warn).toHaveBeenCalledWith("expandable: No expandable-header found");
+                expect(console.warn).toHaveBeenCalledWith("expandable: No .expandable-header found");
             });
 
             it("prints a warning if an expandable-group contains expandables without expandable-header", () => {
