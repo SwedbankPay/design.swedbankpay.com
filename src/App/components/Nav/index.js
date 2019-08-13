@@ -29,7 +29,6 @@ class Nav extends Component {
         }
 
         this.setState({ active: id });
-
     }
 
     render () {

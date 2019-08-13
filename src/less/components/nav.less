@@ -9,6 +9,8 @@
         padding: 0;
         margin: 0;
         list-style: none;
+        margin-left: -0.75rem;
+        margin-top: -0.25rem;
 
         li {
             a {
@@ -62,7 +64,7 @@
                 li {
                     margin: 0;
 
-                    .submenu-icon-clickable {
+                    .submenu-toggle {
                         display: none;
                     }
 
@@ -157,13 +159,10 @@
             }
 
             .submenu {
-                .material-icons,
                 > a {
-                    :not(.submenu-icon-clickable) {
-                        display: none;
-                    }
+                    display: none;
 
-                    &.submenu-icon-clickable {
+                    &.submenu-toggle {
                         display: list-item;
                         cursor: pointer;
                     }
@@ -191,7 +190,7 @@
                             a {
                                 display: flex;
                                 font-size: @base-font-size;
-                                color: @dark-brown;
+                                color: @brown;
                                 padding: 0.5rem 1rem 0.5rem 0.75rem;
 
                                 span {
@@ -222,10 +221,6 @@
 
                 &.submenu-active-parent {
                     position: relative;
-
-                    i {
-                        color: @dark-brown;
-                    }
 
                     &:before {
                         content: "";
@@ -264,8 +259,6 @@
     }
 
     ul {
-        margin-left: -0.5rem;
-
         li {
             &:last-child {
                 .submenu {
@@ -307,15 +300,13 @@
                 padding: 0;
             }
 
-            div {
-                &.submenu {
-                    .material-icons {
-                        display: inline;
+            .submenu {
+                > a {
+                    display: flex;
+                }
 
-                        &.submenu-icon-clickable {
-                            display: none;
-                        }
-                    }
+                &.submenu-toggle {
+                    display: none;
                 }
             }
         }
@@ -325,6 +316,8 @@
 .nav-open {
     > ul {
         flex-direction: column;
+        margin: 0;
+        margin-left: -0.5rem;
 
         > :first-child {
             margin-top: 0;
@@ -347,6 +340,10 @@
                 background-color: transparent;
             }
 
+            a {
+                padding: 0.5rem;
+            }
+
             &.active:before {
                 content: none;
             }
@@ -362,13 +359,11 @@
                         margin-bottom: -0.5rem;
                     }
 
-                    .submenu-icon-clickable {
+                    .submenu-toggle {
                         display: none;
                     }
 
                     > ul {
-                        width: 100%;
-
                         a {
                             padding: 0.5rem;
                         }
@@ -379,10 +374,6 @@
 
                         &:before {
                             content: none;
-                        }
-
-                        i {
-                            color: @dark-brown;
                         }
                     }
                 }

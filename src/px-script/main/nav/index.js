@@ -45,19 +45,20 @@ class Nav {
 
         if (this.submenus) {
             this.submenus.forEach(submenu => {
-                const submenuIcon = submenu.querySelector("i.material-icons");
                 const submenuAnchor = submenu.querySelector("a");
 
-                if (!submenuIcon) {
+                if (!submenuAnchor) {
                     console.warn("nav.init(): No submenu icon found");
                 }
 
-                const submenuCopy = submenuIcon.cloneNode(true);
+                const submenuCopy = submenuAnchor.cloneNode(true);
 
-                submenuCopy.classList.add("submenu-icon-clickable");
+                submenuCopy.classList.add("submenu-toggle");
 
-                submenuAnchor.insertBefore(submenuCopy, submenuIcon);
-                submenuCopy.addEventListener("click", () => {
+                submenu.insertBefore(submenuCopy, submenuAnchor);
+                submenuCopy.addEventListener("click", e => {
+                    e.preventDefault();
+
                     if (submenu.classList.contains("submenu-open")) {
                         this._submenuCloseAll();
                     } else {

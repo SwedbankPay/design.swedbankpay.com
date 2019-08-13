@@ -1,68 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Nav IconsOnly renders 1`] = `
-<Fragment>
-  <h2
-    id="nav-tablet"
-  >
-    Icons only
-  </h2>
-  <p>
-    To display only icons use class 
-    <Property
-      value=".nav-{desired_size}-vertical"
-    />
-    . Like the first example, this determines when your 
-    <Property
-      value=".nav"
-    />
-     will switch from mobile to icons only. In this mode it is possible to display another level of items.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Nav
-      items={
-        Array [
-          Object {
-            "icon": "home",
-            "name": "Home",
-          },
-          Object {
-            "icon": "shopping_cart",
-            "name": "Transactions",
-            "subItems": Array [
-              "Purchase history",
-              "Invoice",
-            ],
-          },
-          Object {
-            "icon": "notification_important",
-            "name": "Notifications",
-          },
-          Object {
-            "icon": "language",
-            "name": "Language",
-          },
-          Object {
-            "icon": "account_balance",
-            "name": "Account",
-            "subItems": Array [
-              "Email",
-              "Information",
-              "Other things",
-            ],
-          },
-        ]
-      }
-      vertsize="md"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
 exports[`Component: Nav JavascriptMethods renders 1`] = `
 <Fragment>
   <h2
@@ -78,115 +15,6 @@ exports[`Component: Nav JavascriptMethods renders 1`] = `
 </Fragment>
 `;
 
-exports[`Component: Nav Mix renders 1`] = `
-<Fragment>
-  <h2
-    id="nav-mix"
-  >
-    Tablet and wide
-  </h2>
-  <p>
-    You can also use both icons only and wide together.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Nav
-      items={
-        Array [
-          Object {
-            "icon": "home",
-            "name": "Home",
-          },
-          Object {
-            "icon": "shopping_cart",
-            "name": "Transactions",
-            "subItems": Array [
-              "Purchase history",
-              "Invoice",
-            ],
-          },
-          Object {
-            "icon": "notification_important",
-            "name": "Notifications",
-          },
-          Object {
-            "icon": "language",
-            "name": "Language",
-          },
-          Object {
-            "icon": "account_balance",
-            "name": "Account",
-            "subItems": Array [
-              "Email",
-              "Information",
-              "Other things",
-            ],
-          },
-        ]
-      }
-      vertsize="md"
-      widesize="lg"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Component: Nav Mobile renders 1`] = `
-<Fragment>
-  <h2
-    id="nav-mobile"
-  >
-    Mobile nav
-  </h2>
-  <p>
-    To only display mobile view use class 
-    <Property
-      value=".nav"
-    />
-     alone.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Nav
-      items={
-        Array [
-          Object {
-            "icon": "home",
-            "name": "Home",
-          },
-          Object {
-            "icon": "shopping_cart",
-            "name": "Transactions",
-          },
-          Object {
-            "icon": "notification_important",
-            "name": "Notifications",
-          },
-          Object {
-            "icon": "language",
-            "name": "Language",
-          },
-          Object {
-            "icon": "account_balance",
-            "name": "Account",
-          },
-          Object {
-            "icon": "fingerprint",
-            "name": "Authentication",
-          },
-        ]
-      }
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
 exports[`Component: Nav StandardNav renders 1`] = `
 <Fragment>
   <h2
@@ -195,121 +23,22 @@ exports[`Component: Nav StandardNav renders 1`] = `
     Standard nav
   </h2>
   <p>
-    Add class 
+    To use our reccommended nav add 
     <Property
       value=".nav"
     />
      and 
     <Property
-      value=".nav-{desired_size}-vertical-wide"
+      value=".nav-<desired_size>-vertical-wide"
     />
-     to a nav containing an 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;ul&gt;
-    </PrismCode>
-     to get a standard nav. Add 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;i&gt;
-    </PrismCode>
-     and 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;span&gt;
-    </PrismCode>
-     with your desired 
-    <Link
-      to="/docs/core/icons"
-    >
-      icon
-    </Link>
-     and text. 
+    . This gives you a nav with a breakpoint at the size set in the class name. In the example we use 
     <Property
-      value=".nav-{desired_size}-vertical-wide"
+      value="lg"
     />
-     determines when your nav will switch from mobile view to vertical. If you have more than five icons then the first four icons will be the only visible ones in mobile view.
+    , resize this window to see it in action.
   </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Nav
-      items={
-        Array [
-          Object {
-            "icon": "home",
-            "name": "Home",
-          },
-          Object {
-            "icon": "shopping_cart",
-            "name": "Transactions",
-          },
-          Object {
-            "icon": "notification_important",
-            "name": "Notifications",
-          },
-          Object {
-            "icon": "language",
-            "name": "Language",
-          },
-          Object {
-            "icon": "account_balance",
-            "name": "Account",
-          },
-          Object {
-            "icon": "fingerprint",
-            "name": "Authentication",
-          },
-        ]
-      }
-      widesize="lg"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Component: Nav TwoLevels renders 1`] = `
-<Fragment>
-  <h2
-    id="nav-twolevels"
-  >
-    Two levels
-  </h2>
   <p>
-    You can also display another level of items in the standard nav. Just nest a 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;DocContainer&gt;
-    </PrismCode>
-     with class 
-    <Property
-      value=".submenu"
-    />
-     containing an icon and text like the standard nav and add a new 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;ul&gt;
-    </PrismCode>
-     with 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;li&gt;
-    </PrismCode>
-     items. This level does not use icons. List items containing another level are not visible in responsive mode, they will be displayed when the items are expanded.
+    When the nav is in mobile view it will hide menu elements if they total more than 5. Menu elements with a submenu will also be hidden and only viewable when the nav is expanded.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -342,14 +71,72 @@ exports[`Component: Nav TwoLevels renders 1`] = `
           Object {
             "icon": "account_balance",
             "name": "Account",
-            "subItems": Array [
-              "Email",
-              "Information",
-              "Other things",
-            ],
+          },
+          Object {
+            "icon": "fingerprint",
+            "name": "Authentication",
           },
         ]
       }
+      widesize="lg"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Component: Nav WithIconsOnly renders 1`] = `
+<Fragment>
+  <h2
+    id="icons-only"
+  >
+    Icons only
+  </h2>
+  <p>
+    If you want to show only icons at a certain breakpoint then include 
+    <Property
+      value=".nav-<desired_size>-vertical"
+    />
+     with your nav component.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Nav
+      items={
+        Array [
+          Object {
+            "icon": "home",
+            "name": "Home",
+          },
+          Object {
+            "icon": "shopping_cart",
+            "name": "Transactions",
+            "subItems": Array [
+              "Purchase history",
+              "Invoice",
+            ],
+          },
+          Object {
+            "icon": "notification_important",
+            "name": "Notifications",
+          },
+          Object {
+            "icon": "language",
+            "name": "Language",
+          },
+          Object {
+            "icon": "account_balance",
+            "name": "Account",
+          },
+          Object {
+            "icon": "fingerprint",
+            "name": "Authentication",
+          },
+        ]
+      }
+      vertsize="md"
       widesize="lg"
     />
   </ComponentPreview>
@@ -373,35 +160,7 @@ exports[`Component: Nav renders 1`] = `
     s to create a basic navigational element containing links.
   </p>
   <StandardNav />
-  <TwoLevels />
-  <IconsOnly />
-  <Mix />
-  <Mobile />
-  <JavascriptMethods />
-</DocContainer>
-`;
-
-exports[`Component: Nav runs init on rerender 1`] = `
-<DocContainer
-  docToc={true}
->
-  <p
-    className="lead"
-  >
-    Use 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;nav&gt;
-    </PrismCode>
-    s to create a basic navigational element containing links.
-  </p>
-  <StandardNav />
-  <TwoLevels />
-  <IconsOnly />
-  <Mix />
-  <Mobile />
+  <WithIconsOnly />
   <JavascriptMethods />
 </DocContainer>
 `;
