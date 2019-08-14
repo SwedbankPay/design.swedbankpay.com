@@ -30,8 +30,6 @@ export const handleScrollbar = () => {
     }
 };
 
-// export const warningMsg = (component, id) => ();
-
 export default {
     extendObj,
     isWithinBoundingBox,

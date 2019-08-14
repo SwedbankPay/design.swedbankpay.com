@@ -21,6 +21,9 @@ if (process.env.sentry) {
     init({ dsn: "https://a80375d3150043fa85964c8d5eb24e0b@sentry.io/1481099" });
 }
 
+document.body.addEventListener("mousedown", () => { document.body.classList.add("using-mouse"); });
+document.body.addEventListener("keydown", () => { document.body.classList.remove("using-mouse"); });
+
 const px = {
     actionList,
     alert,

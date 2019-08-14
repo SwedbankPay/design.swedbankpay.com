@@ -10,6 +10,7 @@
 - Added .expandable-headline and .expandable-subtitle to .expandable.
 - Added aria-expanded attribute to expandable script.
 - Added aria-controls to expandable example.
+- Added document listener adding .using-mouse to body. This disables outline when mouse is being used.
 
 ### Changed
 
