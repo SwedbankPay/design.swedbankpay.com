@@ -230,11 +230,20 @@ exports[`Component: Topbar -  props topbarContent menu links prevents default wh
         >
           
 
-          <i
-            className="material-icons close-topbar-nav"
+          <button
+            className="topbar-close"
+            type="button"
           >
-            close
-          </i>
+            
+
+            <i
+              className="material-icons"
+            >
+              close
+            </i>
+            
+
+          </button>
           
 
           <a
@@ -395,11 +404,20 @@ exports[`Component: Topbar -  props topbarContent renders a topbar menu without 
         >
           
 
-          <i
-            className="material-icons close-topbar-nav"
+          <button
+            className="topbar-close"
+            type="button"
           >
-            close
-          </i>
+            
+
+            <i
+              className="material-icons"
+            >
+              close
+            </i>
+            
+
+          </button>
           
 
           <a
@@ -551,11 +569,20 @@ exports[`Component: Topbar -  props topbarContent renders a topbar-menu-button w
         >
           
 
-          <i
-            className="material-icons close-topbar-nav"
+          <button
+            className="topbar-close"
+            type="button"
           >
-            close
-          </i>
+            
+
+            <i
+              className="material-icons"
+            >
+              close
+            </i>
+            
+
+          </button>
           
 
           <a
@@ -723,11 +750,20 @@ exports[`Component: Topbar -  props topbarContent renders topbar-link-container 
         >
           
 
-          <i
-            className="material-icons close-topbar-nav"
+          <button
+            className="topbar-close"
+            type="button"
           >
-            close
-          </i>
+            
+
+            <i
+              className="material-icons"
+            >
+              close
+            </i>
+            
+
+          </button>
           
 
           <a
@@ -918,11 +954,20 @@ exports[`Component: Topbar -  props topbarContent renders topbar-link-container 
         >
           
 
-          <i
-            className="material-icons close-topbar-nav"
+          <button
+            className="topbar-close"
+            type="button"
           >
-            close
-          </i>
+            
+
+            <i
+              className="material-icons"
+            >
+              close
+            </i>
+            
+
+          </button>
           
 
           <a

@@ -6,15 +6,23 @@ const SELECTORS = {
     OPEN: "topbar-nav-open"
 };
 
+const FOCUSELEMENTS = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex=\"0\"], [contenteditable]";
+
 export default class NavMenu {
     constructor (topbarComponent, navMenu) {
         this.id = topbarComponent.id;
         this.isOpen = navMenu.classList.contains(SELECTORS.OPEN);
         this.navMenuElement = navMenu;
         this.linkContainer = this.navMenuElement.querySelector(".topbar-link-container");
-        this.closeNavIcon = this.navMenuElement.querySelector(".close-topbar-nav");
+        this.closeNavIcon = this.navMenuElement.querySelector(".topbar-close");
         this.btnElement = topbarComponent.querySelector(SELECTORS.BTN);
         this.resizeEvent;
+
+        // Find focusable elements
+        this.focusedElemBeforeNav = null;
+        this.focusableElements = [...this.navMenuElement.querySelectorAll(FOCUSELEMENTS)];
+        this.firstTabStop = this.focusableElements[0];
+        this.lastTabStop = this.focusableElements[this.focusableElements.length - 1];
 
         if (this.btnElement) {
             this.btnElement.addEventListener("click", e => {
@@ -37,10 +45,27 @@ export default class NavMenu {
             }
         }
 
-        this._initAnchors();
+        this._initListeners();
     }
 
-    _initAnchors () {
+    _initListeners () {
+        this.navMenuElement.addEventListener("keydown", e => {
+            if (e.key === "Tab") {
+                // SHIFT + TAB
+                if (e.shiftKey) {
+                    if (document.activeElement === this.firstTabStop) {
+                        e.preventDefault();
+                        this.lastTabStop.focus();
+                    }
+
+                // TAB
+                } else if (document.activeElement === this.lastTabStop) {
+                    e.preventDefault();
+                    this.firstTabStop.focus();
+                }
+            }
+        });
+
         // Closing menu for clicking on links in SPA's.
         this.navMenuElement.querySelectorAll("a")
             .forEach(anchor => anchor.addEventListener("click", () => {

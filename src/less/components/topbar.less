@@ -60,6 +60,54 @@
         background: transparent;
         display: none;
 
+        .topbar-close {
+            top: 1rem;
+            right: 2rem;
+            display: inline-flex;
+            align-items: center;
+            position: absolute;
+            font-weight: normal;
+            font-family: @font-swedbank-headline;
+            text-align: center;
+            text-decoration: none;
+            touch-action: manipulation;
+            cursor: pointer;
+            line-height: 1rem;
+            border: 1px solid transparent;
+            white-space: nowrap;
+            user-select: none;
+            background-color: transparent;
+
+            /* padding-top-bottom, padding-left-right, font-size, line-height */
+            .button-size(0.5rem; 0.5rem; 1rem; 1rem; @btn-border-radius-base;);
+
+            margin-right: -0.5rem;
+
+            &:hover,
+            &:focus,
+            &.focus {
+                color: @dark-brown;
+                text-decoration: none;
+            }
+
+            &[active],
+            &:active,
+            &.active {
+                outline: 0;
+                background-image: none;
+                box-shadow: none;
+
+                &:focus,
+                &.focus {
+                    box-shadow: none;
+                }
+            }
+
+            .material-icons {
+                margin: 0;
+            }
+        }
+
         &.topbar-nav-open {
             animation: fade-in 0.5s forwards;
 
@@ -106,7 +154,7 @@
             padding: 3rem 2rem;
             transform: translateX(-100%);
 
-            > *:not(.material-icons) {
+            > a {
                 font-family: @font-swedbank-headline;
                 color: @dark-brown;
                 cursor: pointer;
