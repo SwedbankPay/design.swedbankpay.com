@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Nav, { StandardNav, TwoLevels, IconsOnly, Mix, Mobile, JavascriptMethods } from "./index";
+import Nav, { StandardNav, WithIconsOnly, JavascriptMethods } from "./index";
 
 describe("Component: Nav", () => {
     it("is defined", () => {
@@ -9,18 +9,7 @@ describe("Component: Nav", () => {
     });
 
     it("renders", () => {
-        console.warn = jest.fn();
-
         const wrapper = shallow(<Nav />);
-
-        expect(wrapper).toMatchSnapshot();
-        expect(console.warn).toHaveBeenCalled();
-    });
-
-    it("runs init on rerender", () => {
-        const wrapper = shallow(<Nav />);
-
-        wrapper.setState({ foo: "bar" });
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -37,49 +26,13 @@ describe("Component: Nav", () => {
         });
     });
 
-    describe("TwoLevels", () => {
+    describe("WithIconsOnly", () => {
         it("is defined", () => {
-            expect(TwoLevels).toBeDefined();
+            expect(WithIconsOnly).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<TwoLevels />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("IconsOnly", () => {
-        it("is defined", () => {
-            expect(IconsOnly).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<IconsOnly />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("Mix", () => {
-        it("is defined", () => {
-            expect(Mix).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<Mix />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("Mobile", () => {
-        it("is defined", () => {
-            expect(Mobile).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<Mobile />);
+            const wrapper = shallow(<WithIconsOnly />);
 
             expect(wrapper).toMatchSnapshot();
         });

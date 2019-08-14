@@ -1,6 +1,4 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import PrismCode from "react-prism";
+import React, { useEffect } from "react";
 
 import { ComponentPreview, DocContainer, Property, JavascriptDocs } from "#";
 import NavComponent from "@/Nav";
@@ -8,33 +6,6 @@ import NavComponent from "@/Nav";
 const { nav } = window.px;
 
 const navItems = [
-    {
-        name: "Home",
-        icon: "home"
-    },
-    {
-        name: "Transactions",
-        icon: "shopping_cart"
-    },
-    {
-        name: "Notifications",
-        icon: "notification_important"
-    },
-    {
-        name: "Language",
-        icon: "language"
-    },
-    {
-        name: "Account",
-        icon: "account_balance"
-    },
-    {
-        name: "Authentication",
-        icon: "fingerprint"
-    }
-];
-
-const navItemsTwoLevels = [
     {
         name: "Home",
         icon: "home"
@@ -54,8 +25,11 @@ const navItemsTwoLevels = [
     },
     {
         name: "Account",
-        icon: "account_balance",
-        subItems: ["Email", "Information", "Other things"]
+        icon: "account_balance"
+    },
+    {
+        name: "Authentication",
+        icon: "fingerprint"
     }
 ];
 
@@ -63,9 +37,11 @@ const StandardNav = () => (
     <>
         <h2 id="nav-standard">Standard nav</h2>
         <p>
-            Add class <Property value=".nav"/> and <Property value=".nav-{desired_size}-vertical-wide"/> to a nav containing an <PrismCode className="language-html">{"<ul>"}</PrismCode> to get a standard nav.
-            Add <PrismCode className="language-html">{"<i>"}</PrismCode> and <PrismCode className="language-html">{"<span>"}</PrismCode> with your desired <Link to="/docs/core/icons">icon</Link> and text. <Property value=".nav-{desired_size}-vertical-wide"/> determines
-            when your nav will switch from mobile view to vertical. If you have more than five icons then the first four icons will be the only visible ones in mobile view.
+            To use our reccommended nav add <Property value=".nav"/> and <Property value=".nav-<desired_size>-vertical-wide"/>. This gives you a nav with a breakpoint at the size set in the class name.
+            In the example we use <Property value="lg"/>, resize this window to see it in action.
+        </p>
+        <p>
+            When the nav is in mobile view it will hide menu elements if they total more than 5. Menu elements with a submenu will also be hidden and only viewable when the nav is expanded.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <NavComponent widesize="lg" items={navItems} />
@@ -73,52 +49,14 @@ const StandardNav = () => (
     </>
 );
 
-const TwoLevels = () => (
+const WithIconsOnly = () => (
     <>
-        <h2 id="nav-twolevels">Two levels</h2>
+        <h2 id="icons-only">Icons only</h2>
         <p>
-            You can also display another level of items in the standard nav. Just nest a <PrismCode className="language-html">{"<DocContainer>"}</PrismCode> with class <Property value=".submenu"/> containing an icon and text like the
-            standard nav and add a new <PrismCode className="language-html">{"<ul>"}</PrismCode> with <PrismCode className="language-html">{"<li>"}</PrismCode> items. This level does not use icons. List items containing another level are not visible in responsive mode, they will be displayed when the items are expanded.
+            If you want to show only icons at a certain breakpoint then include <Property value=".nav-<desired_size>-vertical" /> with your nav component.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <NavComponent widesize="lg" items={navItemsTwoLevels} />
-        </ComponentPreview>
-    </>
-);
-
-const IconsOnly = () => (
-    <>
-        <h2 id="nav-tablet">Icons only</h2>
-        <p>
-            To display only icons use class <Property value=".nav-{desired_size}-vertical"/>. Like the first example, this determines when your <Property value=".nav"/> will switch from mobile to icons only.
-            In this mode it is possible to display another level of items.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <NavComponent vertsize="md" items={navItemsTwoLevels} />
-        </ComponentPreview>
-    </>
-);
-
-const Mix = () => (
-    <>
-        <h2 id="nav-mix">Tablet and wide</h2>
-        <p>
-            You can also use both icons only and wide together.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <NavComponent vertsize="md" widesize="lg" items={navItemsTwoLevels} />
-        </ComponentPreview>
-    </>
-);
-
-const Mobile = () => (
-    <>
-        <h2 id="nav-mobile">Mobile nav</h2>
-        <p>
-            To only display mobile view use class <Property value=".nav"/> alone.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <NavComponent items={navItems} />
+            <NavComponent vertsize="md" widesize="lg" items={navItems} />
         </ComponentPreview>
     </>
 );
@@ -130,34 +68,22 @@ const JavascriptMethods = () => (
     </>
 );
 
-class Nav extends Component {
-    componentDidUpdate () {
-        nav.init();
-    }
+const Nav = () => {
+    useEffect(() => { nav.init(); });
 
-    componentDidMount () {
-        nav.init();
-    }
-
-    render () {
-        return (
-            <DocContainer docToc>
-                <p className="lead">
-                    Use <PrismCode className="language-html">{"<nav>"}</PrismCode>s to create a basic navigational
-                    element containing links.
-                </p>
-                <StandardNav />
-                <TwoLevels />
-                <IconsOnly />
-                <Mix />
-                <Mobile />
-                <JavascriptMethods />
-            </DocContainer>
-        );
-    }
-}
+    return (
+        <DocContainer docToc>
+            <p className="lead">
+                Use navs to create a basic navigational element containing links.
+            </p>
+            <StandardNav />
+            <WithIconsOnly />
+            <JavascriptMethods />
+        </DocContainer>
+    );
+};
 
 export default Nav;
 
 /* For testing */
-export { StandardNav, TwoLevels, IconsOnly, Mix, Mobile, JavascriptMethods };
+export { StandardNav, WithIconsOnly, JavascriptMethods };
