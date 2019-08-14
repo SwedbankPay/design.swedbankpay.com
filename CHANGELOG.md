@@ -8,6 +8,7 @@
 - Added tab lock to dialog making it so you can't tab out of the dialog until an option is clicked.
 - Added aria labels to dialog documentation to show an example of how to use dialog accessibly.
 - Added window resize listener for topbar so it is closed when the window size changes.
+- Added tab trapping and correct focus to the topbar nav.
 
 ### Changed
 

@@ -20,7 +20,7 @@ export default class NavMenu {
 
         // Find focusable elements
         this.focusedElemBeforeNav = null;
-        this.focusableElements = [...this.navMenuElement.querySelectorAll(FOCUSELEMENTS)];
+        this.focusableElements = [...this.linkContainer.querySelectorAll(FOCUSELEMENTS)];
         this.firstTabStop = this.focusableElements[0];
         this.lastTabStop = this.focusableElements[this.focusableElements.length - 1];
 
@@ -80,6 +80,9 @@ export default class NavMenu {
     _closeNoTransition () {
         handleScrollbar();
         this.isOpen = false;
+
+        this.focusedElementBeforeNav ? this.focusedElemBeforeNav.focus() : null;
+
         window.removeEventListener("resize", this.resizeEvent, { passive: true });
         this.navMenuElement.classList.remove("topbar-nav-open");
         this.navMenuElement.classList.remove("d-block");
@@ -88,10 +91,15 @@ export default class NavMenu {
     open () {
         handleScrollbar();
         this.isOpen = true;
+
+        this.focusedElemBeforeNav = document.activeElement;
+
         this.resizeEvent = this._resizeListener.bind(this);
         window.addEventListener("resize", this.resizeEvent, { passive: true });
         this.navMenuElement.classList.add("topbar-nav-open");
         this.navMenuElement.classList.add("d-block");
+
+        this.firstTabStop.focus();
     }
 
     close () {
@@ -102,6 +110,8 @@ export default class NavMenu {
         this.navMenuElement.classList.remove("topbar-nav-open");
         this.navMenuElement.classList.add("topbar-nav-closing");
         setTimeout(() => {
+            this.focusedElementBeforeNav ? this.focusedElemBeforeNav.focus() : null;
+
             this.navMenuElement.classList.remove("topbar-nav-closing");
             this.navMenuElement.classList.remove("d-block");
         }, 300);
