@@ -4,8 +4,10 @@
 
     &:focus,
     &.focus {
+        outline: 0;
         color: @color;
         background-color: darken(@background, 5%);
+        box-shadow: 0 0 0 0.2rem lighten(@background, 20%);
     }
 
     &:hover {
