@@ -18,6 +18,10 @@ export default class NavMenu {
         this.btnElement = topbarComponent.querySelector(SELECTORS.BTN);
         this.resizeEvent;
 
+        /*
+            NOTE: Firefox for mac emulates the system default for tab behaviour. Therefore tabbing does not work as intended for firefox on mac.
+            Read more here: https://stackoverflow.com/questions/11704828/how-to-allow-keyboard-focus-of-links-in-firefox#answer-11713537 [AW].
+        */
         // Find focusable elements
         this.focusedElemBeforeNav = null;
         this.focusableElements = [...this.linkContainer.querySelectorAll(FOCUSELEMENTS)];
