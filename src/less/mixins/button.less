@@ -1,4 +1,4 @@
-.button-variant(@color, @background, @disabled-color, @disabled-bg) {
+.button-variant(@color, @background, @disabled-color, @disabled-bg, @focus-shadow) {
     color: @color;
     background-color: @background;
 
@@ -7,7 +7,7 @@
         outline: 0;
         color: @color;
         background-color: darken(@background, 5%);
-        box-shadow: 0 0 0 0.2rem lighten(@background, 20%);
+        box-shadow: 0 0 0 0.2rem @focus-shadow;
     }
 
     &:hover {
@@ -144,4 +144,8 @@
             margin-right: 0;
         }
     }
+}
+
+@keyframes btnoutline {
+    from { box-shadow: 0 0 0 0 }
 }
