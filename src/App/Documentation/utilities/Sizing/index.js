@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ComponentPreview, Property, DocContainer } from "#";
+import { ComponentPreview, Property, DocContainer } from "@docutils";
 
 const Sizing = () => (
     <DocContainer>

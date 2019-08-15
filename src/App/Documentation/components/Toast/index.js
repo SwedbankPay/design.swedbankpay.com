@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocContainer, Attribute } from "#";
-import Alert from "@/Alert";
+import { ComponentPreview, DocContainer, Attribute } from "@docutils";
+import Alert from "@components/Alert";
 
 const Overview = () => (
     <>

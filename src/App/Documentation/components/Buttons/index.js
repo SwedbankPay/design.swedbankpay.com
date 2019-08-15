@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, Attribute, Property, DocContainer } from "#";
-import ButtonComponent from "@/Button";
-import Alert from "@/Alert";
+import { ComponentPreview, Attribute, Property, DocContainer } from "@docutils";
+import ButtonComponent from "@components/Button";
+import Alert from "@components/Alert";
 
 const Examples = () => (
     <>

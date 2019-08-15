@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { NavHashLink as NavLink } from "react-router-hash-link";
 
-import { ComponentPreview, Attribute, Property, DocContainer, JavascriptDocs } from "#";
-import { Datepicker as DatepickerComponent } from "@/FormComponents";
-import Alert from "@/Alert";
+import { ComponentPreview, Attribute, Property, DocContainer, JavascriptDocs } from "@docutils";
+import { Datepicker as DatepickerComponent } from "@components/FormComponents";
+import Alert from "@components/Alert";
 
 const { datepicker } = window.px;
 

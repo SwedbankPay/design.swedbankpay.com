@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
-import { ComponentPreview, DocContainer, Property } from "#";
-import ExpandableComponent from "@/Expandable";
+import { ComponentPreview, DocContainer, Property } from "@docutils";
+import ExpandableComponent from "@components/Expandable";
 
 const { expandable } = window.px;
 

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocContainer } from "#";
-import Chart from "@/Chart";
+import { ComponentPreview, DocContainer } from "@docutils";
+import Chart from "@components/Chart";
 
 const LineChart = () => (
         <>

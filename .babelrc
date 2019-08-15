@@ -12,20 +12,20 @@
                     "rootPathSuffix": "./"
                 },
                 {
-                    "rootPathPrefix": "$",
+                    "rootPathPrefix": "@src",
                     "rootPathSuffix": "./src"
                 },
                 {
-                    "rootPathPrefix": "@",
+                    "rootPathPrefix": "@components",
                     "rootPathSuffix": "./src/App/components"
                 },
                 {
-                    "rootPathPrefix": "#",
+                    "rootPathPrefix": "@docutils",
                     "rootPathSuffix": "./src/App/Documentation/utils"
 
                 },
                 {
-                    "rootPathPrefix": "+",
+                    "rootPathPrefix": "@constants",
                     "rootPathSuffix": "./src/constants"
                 }
             ]

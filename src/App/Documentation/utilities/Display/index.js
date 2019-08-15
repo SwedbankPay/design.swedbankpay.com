@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocContainer, Property } from "#";
+import { ComponentPreview, DocContainer, Property } from "@docutils";
 
 const HowItWorks = () => (
     <>

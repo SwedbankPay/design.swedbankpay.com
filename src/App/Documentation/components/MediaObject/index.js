@@ -1,7 +1,7 @@
 import React from "react";
 
-import { ComponentPreview, DocContainer, Property } from "#";
-import MediaObjectComponent from "@/MediaObject";
+import { ComponentPreview, DocContainer, Property } from "@docutils";
+import MediaObjectComponent from "@components/MediaObject";
 
 const Overview = () => (
     <>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocContainer, Property } from "#";
+import { ComponentPreview, DocContainer, Property } from "@docutils";
 
 const { validation } = window.px;
 

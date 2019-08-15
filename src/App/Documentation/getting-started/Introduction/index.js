@@ -1,7 +1,7 @@
 import React from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer } from "#";
+import { ComponentPreview, DocContainer } from "@docutils";
 
 const BASENAME = process.env.basename;
 const scriptUrl = `https://design.swedbankpay.com${BASENAME}scripts/px-script.js`;

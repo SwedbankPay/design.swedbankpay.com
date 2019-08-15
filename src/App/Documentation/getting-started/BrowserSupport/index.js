@@ -1,6 +1,6 @@
 import React from "react";
 
-import { DocContainer } from "#";
+import { DocContainer } from "@docutils";
 
 import Chrome from "./browser-icons/chrome.svg";
 import Firefox from "./browser-icons/firefox.svg";

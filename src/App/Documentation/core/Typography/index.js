@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer, Property } from "#";
+import { ComponentPreview, DocContainer, Property } from "@docutils";
 
 const Fonts = () => (
         <>
