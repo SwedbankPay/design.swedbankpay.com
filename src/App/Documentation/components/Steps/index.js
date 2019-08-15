@@ -1,8 +1,8 @@
 import React from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer, Property } from "#";
-import StepsComponent from "@/Steps";
+import { ComponentPreview, DocContainer, Property } from "@docutils";
+import StepsComponent from "@components/Steps";
 
 const BasicSteps = () => {
     const steps = [

@@ -1,8 +1,8 @@
 import React from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer, Attribute, Property } from "#";
-import Button from "@/Button";
+import { ComponentPreview, DocContainer, Attribute, Property } from "@docutils";
+import Button from "@components/Button";
 
 const BASENAME = process.env.basename;
 

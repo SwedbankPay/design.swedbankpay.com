@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Icon } from "#";
+import { Icon } from "@docutils";
 
 const Sheet = ({ id, requireAction, children }) => (
     <div className="sheet" id={id} data-require-action={requireAction ? true : null}>

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Loadable from "react-loadable";
 
-import { LoadingComponent } from "$/App/utils";
+import { LoadingComponent } from "@src/App/utils";
 
 const RenderRoutes = ({ path, redirect, routes }) => (
     <Switch>

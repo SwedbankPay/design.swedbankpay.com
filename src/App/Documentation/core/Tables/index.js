@@ -1,7 +1,7 @@
 import React from "react";
 import classnames from "classnames";
 
-import { ComponentPreview, DocContainer } from "#";
+import { ComponentPreview, DocContainer } from "@docutils";
 
 const DocTable = ({ striped, condensed, hover }) => {
     const tableClasses = classnames(

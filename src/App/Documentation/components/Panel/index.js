@@ -1,7 +1,7 @@
 import React from "react";
 
-import { ComponentPreview, DocContainer, Property } from "#";
-import PanelComponent from "@/Panel";
+import { ComponentPreview, DocContainer, Property } from "@docutils";
+import PanelComponent from "@components/Panel";
 
 const bodyContent = [
     "Your main panel content is put here.",

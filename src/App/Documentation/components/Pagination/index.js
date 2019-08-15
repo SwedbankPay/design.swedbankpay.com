@@ -1,8 +1,8 @@
 import React from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer, Property } from "#";
-import PaginationComponent from "@/Pagination";
+import { ComponentPreview, DocContainer, Property } from "@docutils";
+import PaginationComponent from "@components/Pagination";
 
 const paginationItems = [
     /* eslint-disable object-property-newline */

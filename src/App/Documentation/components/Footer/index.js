@@ -1,7 +1,7 @@
 import React from "react";
 
-import { ComponentPreview, DocContainer, Property } from "#";
-import FooterComponent from "@/Footer";
+import { ComponentPreview, DocContainer, Property } from "@docutils";
+import FooterComponent from "@components/Footer";
 
 const Overview = () => (
     <>
