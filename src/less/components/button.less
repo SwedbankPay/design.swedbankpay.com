@@ -115,7 +115,7 @@
 
     // Make a button look and behave like a link
     &.btn-link {
-        color: @blue;
+        color: @btn-link-color;
         font-weight: normal;
         background: transparent;
         text-decoration: none;
@@ -130,15 +130,18 @@
         }
 
         &:hover,
-        &:focus,
         &:active {
             box-shadow: none;
         }
 
+        &:focus {
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem @gray-bright;
+        }
+
         &:hover,
         &:focus {
-            color: darken(@blue, 10%);
-            text-decoration: none;
+            text-decoration: underline;
             background-color: transparent;
         }
 
