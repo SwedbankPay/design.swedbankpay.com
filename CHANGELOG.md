@@ -17,7 +17,7 @@
 - Changed the close button in dialog to be a button instead of an icon.
 - Updated nav styling to fit Swedbank Pay better.
 - Updated documentation to only show recommended usage of the nav component.
-- Increased hitbox for all variants to make the component more user friendly.
+- Increased hitbox for all nav variants to make the component more user friendly.
 - Changed the close icon in dialog to be a button.
 - Changed the close icon in the topbar to be a button.
 
