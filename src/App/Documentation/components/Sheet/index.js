@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocContainer, Property, JavascriptDocs } from "#";
-import SheetComponent from "@/Sheet";
+import { ComponentPreview, DocContainer, Property, JavascriptDocs } from "@docutils";
+import SheetComponent from "@components/Sheet";
 
 const { sheet } = window.px;
 

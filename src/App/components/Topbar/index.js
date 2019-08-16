@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import logo from "$/img/logo/spay_horizontal_pos.svg";
+import logo from "@src/img/logo/spay_horizontal_pos.svg";
 
 const isDev = process.env.version === "LOCAL_DEV";
 
@@ -17,7 +17,9 @@ const TopbarMenu = ({ menu, logout }) => {
     return (
         <nav className="topbar-nav">
             <div className="topbar-link-container">{"\n"}
-                <i className="material-icons close-topbar-nav">close</i>
+                <button type="button" className="topbar-close">{"\n"}
+                    <i className="material-icons">close</i>{"\n"}
+                </button>
                 {items.map((item, i) => (
                     <Fragment key={i}>
                         {"\n"}

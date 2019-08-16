@@ -3,7 +3,7 @@ import { Router, Switch, Route, withRouter } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import Loadable from "react-loadable";
 
-import Footer from "@/Footer";
+import Footer from "@components/Footer";
 import AppHeader from "./AppHeader";
 import { LoadingComponent } from "./utils";
 

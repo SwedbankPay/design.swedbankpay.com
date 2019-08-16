@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocContainer, Icon, Property } from "#";
+import { ComponentPreview, DocContainer, Icon, Property } from "@docutils";
 
 const { actionList } = window.px;
 

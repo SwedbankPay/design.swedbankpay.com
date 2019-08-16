@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocContainer, Attribute, Property, JavascriptDocs } from "#";
-import AlertComponent from "@/Alert";
-import DialogComponent from "@/Dialog";
+import { ComponentPreview, DocContainer, Attribute, Property, JavascriptDocs } from "@docutils";
+import AlertComponent from "@components/Alert";
+import DialogComponent from "@components/Dialog";
 
 const { dialog } = window.px;
 

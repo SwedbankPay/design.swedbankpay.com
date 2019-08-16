@@ -1,7 +1,7 @@
 import React from "react";
 
-import { ComponentPreview, DocContainer, Property, PxScript } from "#";
-import Alert from "@/Alert";
+import { ComponentPreview, DocContainer, Property, PxScript } from "@docutils";
+import Alert from "@components/Alert";
 
 const AboutInit = () => (
     <>

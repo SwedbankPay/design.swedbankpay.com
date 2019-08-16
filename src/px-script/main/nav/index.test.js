@@ -51,8 +51,10 @@ describe("px-script: nav", () => {
                 <li>
                     { subItems ?
                         <div className={subopen ? "submenu submenu-open" : "submenu"}>{"\n"}
-                            <i className="material-icons">language</i>{"\n"}
-                            <span>{name}</span>
+                            <a href="#">
+                                <i className="material-icons">language</i>{"\n"}
+                                <span>{name}</span>
+                            </a>
                             <ul>
                                 {subItems.map((itemsname, j) => (
                                     <li key={`nav-subItems-${itemsname}-${j}`}>
@@ -80,8 +82,10 @@ describe("px-script: nav", () => {
                 </li>
                 <li>{ subItems ?
                     <div className="submenu">{"\n"}
-                        <i className="material-icons">language</i>{"\n"}
-                        <span>{name}</span>
+                        <a href="#">
+                            <i className="material-icons">language</i>{"\n"}
+                            <span>{name}</span>
+                        </a>
                         <ul>
                             {subItems.map((itemsname, j) => (
                                 <li key={`nav-subItems-${itemsname}-${j}`}>
@@ -109,7 +113,6 @@ describe("px-script: nav", () => {
     describe("nav.init", () => {
         it("is defined", () => {
             expect(nav.init).toBeTruthy();
-            expect(nav.init).toBeInstanceOf(Function);
         });
 
         it("returns a single object when one ID is passed", () => {
@@ -238,17 +241,11 @@ describe("px-script: nav", () => {
     });
 
     it("closes nav on resize", () => {
-        ReactDOM.render(<Nav subItems = {submenuItems} />, div);
+        ReactDOM.render(<Nav id="nav-test" subItems = {submenuItems} />, div);
         nav.init();
+        nav.open("nav-test");
 
         const renderedNav = document.querySelector(".nav");
-        const sidebarMenubtn = renderedNav.querySelector(".nav-openbtn");
-
-        expect(renderedNav).toBeTruthy();
-        expect(sidebarMenubtn).toBeTruthy();
-        expect(renderedNav.classList).not.toContain("nav-open");
-
-        sidebarMenubtn.click();
 
         expect(renderedNav.classList).toContain("nav-open");
 
@@ -257,23 +254,11 @@ describe("px-script: nav", () => {
         expect(renderedNav.classList).not.toContain("nav-open");
     });
 
-    it("creates one copy of the submenu icon", () => {
+    it("creates a copy of the submenu anchor", () => {
         ReactDOM.render(<Nav subItems = {submenuItems} />, div);
         nav.init();
 
-        const renderedNav = document.querySelector(".nav");
-        const submenu = renderedNav.querySelector(".submenu");
-        const submenuicons = submenu.querySelectorAll("i");
-
-        expect(renderedNav).toBeTruthy();
-        expect(submenu).toBeTruthy();
-        expect(submenuicons).toBeTruthy();
-        expect([...submenuicons]).toHaveLength(2);
-
-        const submenuIcon = [...submenuicons][1];
-        const submenuIconCopy = [...submenuicons][0];
-
-        expect(submenuIconCopy).not.toEqual(submenuIcon);
+        expect(document.querySelector(".submenu-toggle")).toBeTruthy();
     });
 
     it("opens a submenu when a submenu icon is clicked", () => {
@@ -282,7 +267,7 @@ describe("px-script: nav", () => {
 
         const renderedNav = document.querySelector(".nav");
         const submenu = renderedNav.querySelector(".submenu");
-        const iconClickable = submenu.querySelector(".submenu-icon-clickable");
+        const iconClickable = submenu.querySelector(".submenu-toggle");
 
         expect(renderedNav).toBeTruthy();
         expect(submenu).toBeTruthy();
@@ -300,7 +285,7 @@ describe("px-script: nav", () => {
 
         const renderedNav = document.querySelector(".nav");
         const submenu = renderedNav.querySelector(".submenu");
-        const iconClickable = submenu.querySelector(".submenu-icon-clickable");
+        const iconClickable = submenu.querySelector(".submenu-toggle");
 
         expect(renderedNav).toBeTruthy();
         expect(submenu).toBeTruthy();
@@ -334,7 +319,7 @@ describe("px-script: nav", () => {
 
         const renderedNav = document.querySelector(".nav");
         const submenu = renderedNav.querySelector(".submenu");
-        const iconClickable = submenu.querySelector(".submenu-icon-clickable");
+        const iconClickable = submenu.querySelector(".submenu-toggle");
 
         expect(renderedNav).toBeTruthy();
         expect(submenu).toBeTruthy();

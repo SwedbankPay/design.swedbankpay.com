@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, Property, DocContainer } from "#";
-import CardComponent from "@/Card";
-import MediaObject from "@/MediaObject";
+import { ComponentPreview, Property, DocContainer } from "@docutils";
+import CardComponent from "@components/Card";
+import MediaObject from "@components/MediaObject";
 
 const textArr = ["This is a lot of text", "With some more text", "And then even some more", "Is it really possible to have this much text in one card?", "Yes!"];
 

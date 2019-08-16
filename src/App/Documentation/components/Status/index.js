@@ -1,7 +1,7 @@
 import React from "react";
 
-import { ComponentPreview, DocContainer, Property } from "#";
-import Alert from "@/Alert";
+import { ComponentPreview, DocContainer, Property } from "@docutils";
+import Alert from "@components/Alert";
 
 const Overview = () => (
     <>

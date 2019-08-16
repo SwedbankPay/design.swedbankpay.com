@@ -1,7 +1,7 @@
 import React from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer, Property } from "#";
+import { ComponentPreview, DocContainer, Property } from "@docutils";
 
 const CreatingYourComponent = () => (
     <>
@@ -38,8 +38,8 @@ const CreateADocumentationPage = () => (
             {`
 //example documentation component
 import React from "react";
-import { ComponentPreview, DocContainer } from "#";
-import MyExampleComponent from "@/MyExampleComponent";
+import { ComponentPreview, DocContainer } from "@docutils";
+import MyExampleComponent from "@components/MyExampleComponent";
 const MyExampleDocumentationComponent = () => (
     <DocContainer docToc>
         <p className="lead">This is the documentation for My Example Component.</p>
@@ -191,7 +191,7 @@ export { ... MyExampleComponent, ... }
 import React, { Component } from "react";
 ...
 // import your components script
-import { MyExampleComponent } from "$/px-script/main";
+import { MyExampleComponent } from "@src/px-script/main";
 ...
 ...
 // modify MyExampleDocumentationComponent

@@ -170,7 +170,7 @@ exports[`GettingStarted: Contributing Adding JavaScript renders 5`] = `
 import React, { Component } from "react";
 ...
 // import your components script
-import { MyExampleComponent } from "$/px-script/main";
+import { MyExampleComponent } from "@src/px-script/main";
 ...
 ...
 // modify MyExampleDocumentationComponent
@@ -362,8 +362,8 @@ exports[`GettingStarted: Contributing Create A Documentation Page renders 1`] = 
     
 //example documentation component
 import React from "react";
-import { ComponentPreview, DocContainer } from "#";
-import MyExampleComponent from "@/MyExampleComponent";
+import { ComponentPreview, DocContainer } from "@docutils";
+import MyExampleComponent from "@components/MyExampleComponent";
 const MyExampleDocumentationComponent = () =&gt; (
     &lt;DocContainer docToc&gt;
         &lt;p className="lead"&gt;This is the documentation for My Example Component.&lt;/p&gt;

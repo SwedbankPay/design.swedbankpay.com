@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer, Property, Icon } from "#";
-import IconPreview from "@/IconPreview";
+import { ComponentPreview, DocContainer, Property, Icon } from "@docutils";
+import IconPreview from "@components/IconPreview";
 
 const { actionList } = window.px;
 

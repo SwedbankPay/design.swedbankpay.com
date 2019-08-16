@@ -22,7 +22,11 @@ describe("px-script: topbar - NavMenu", () => {
                 <span className="topbar-btn-text">Menu</span>
             </button>
             <nav className={`topbar-nav${navOpen ? " topbar-nav-open" : ""}`}>
-                {noCloseIcon ? null : <i className="material-icons close-topbar-nav">close</i>}
+                {noCloseIcon ? null
+                    :
+                    <button type="button" className="topbar-close">
+                        <i className="material-icons">close</i>
+                    </button>}
                 <div className="topbar-link-container">
                     <a href="#">Link 1</a>
                     <a href="#">Link 2</a>

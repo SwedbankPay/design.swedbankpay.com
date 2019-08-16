@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer, Attribute, Property, PxScript, JavascriptDocs } from "#";
-import InputGroup from "@/InputGroup";
-import Button from "@/Button";
-import { Checkbox, FormControlText, Radio, Rangeslider, Togglebox } from "@/FormComponents";
+import { ComponentPreview, DocContainer, Attribute, Property, PxScript, JavascriptDocs } from "@docutils";
+import InputGroup from "@components/InputGroup";
+import Button from "@components/Button";
+import { Checkbox, FormControlText, Radio, Rangeslider, Togglebox } from "@components/FormComponents";
 
 const { rangeslider, validation } = window.px;
 

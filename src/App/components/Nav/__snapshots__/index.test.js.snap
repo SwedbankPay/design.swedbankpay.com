@@ -751,16 +751,23 @@ exports[`Component: Nav -  renders with an active sublistItem if state active ma
       >
         
 
-        <i
-          className="material-icons"
+        <a
+          href="#"
+          onClick={[Function]}
         >
-          shopping_cart
-        </i>
-        
+          <i
+            className="material-icons"
+          >
+            shopping_cart
+          </i>
+          
 
-        <span>
-          Transactions
-        </span>
+          <span>
+            Transactions
+          </span>
+          
+
+        </a>
         <ul>
           <li
             className="active"
@@ -770,7 +777,9 @@ exports[`Component: Nav -  renders with an active sublistItem if state active ma
               href="#"
               onClick={[Function]}
             >
-              Purchase history
+              <span>
+                Purchase history
+              </span>
             </a>
           </li>
           <li
@@ -781,7 +790,9 @@ exports[`Component: Nav -  renders with an active sublistItem if state active ma
               href="#"
               onClick={[Function]}
             >
-              Invoice
+              <span>
+                Invoice
+              </span>
             </a>
           </li>
         </ul>
@@ -855,16 +866,23 @@ exports[`Component: Nav -  renders with an active sublistItem if state active ma
       >
         
 
-        <i
-          className="material-icons"
+        <a
+          href="#"
+          onClick={[Function]}
         >
-          account_balance
-        </i>
-        
+          <i
+            className="material-icons"
+          >
+            account_balance
+          </i>
+          
 
-        <span>
-          Account
-        </span>
+          <span>
+            Account
+          </span>
+          
+
+        </a>
         <ul>
           <li
             className={null}
@@ -874,7 +892,9 @@ exports[`Component: Nav -  renders with an active sublistItem if state active ma
               href="#"
               onClick={[Function]}
             >
-              Email
+              <span>
+                Email
+              </span>
             </a>
           </li>
           <li
@@ -885,7 +905,9 @@ exports[`Component: Nav -  renders with an active sublistItem if state active ma
               href="#"
               onClick={[Function]}
             >
-              Information
+              <span>
+                Information
+              </span>
             </a>
           </li>
           <li
@@ -896,7 +918,9 @@ exports[`Component: Nav -  renders with an active sublistItem if state active ma
               href="#"
               onClick={[Function]}
             >
-              Other things
+              <span>
+                Other things
+              </span>
             </a>
           </li>
         </ul>
@@ -951,16 +975,23 @@ exports[`Component: Nav -  renders with two levels 1`] = `
       >
         
 
-        <i
-          className="material-icons"
+        <a
+          href="#"
+          onClick={[Function]}
         >
-          shopping_cart
-        </i>
-        
+          <i
+            className="material-icons"
+          >
+            shopping_cart
+          </i>
+          
 
-        <span>
-          Transactions
-        </span>
+          <span>
+            Transactions
+          </span>
+          
+
+        </a>
         <ul>
           <li
             className={null}
@@ -970,7 +1001,9 @@ exports[`Component: Nav -  renders with two levels 1`] = `
               href="#"
               onClick={[Function]}
             >
-              Purchase history
+              <span>
+                Purchase history
+              </span>
             </a>
           </li>
           <li
@@ -981,7 +1014,9 @@ exports[`Component: Nav -  renders with two levels 1`] = `
               href="#"
               onClick={[Function]}
             >
-              Invoice
+              <span>
+                Invoice
+              </span>
             </a>
           </li>
         </ul>
@@ -1055,16 +1090,23 @@ exports[`Component: Nav -  renders with two levels 1`] = `
       >
         
 
-        <i
-          className="material-icons"
+        <a
+          href="#"
+          onClick={[Function]}
         >
-          account_balance
-        </i>
-        
+          <i
+            className="material-icons"
+          >
+            account_balance
+          </i>
+          
 
-        <span>
-          Account
-        </span>
+          <span>
+            Account
+          </span>
+          
+
+        </a>
         <ul>
           <li
             className={null}
@@ -1074,7 +1116,9 @@ exports[`Component: Nav -  renders with two levels 1`] = `
               href="#"
               onClick={[Function]}
             >
-              Email
+              <span>
+                Email
+              </span>
             </a>
           </li>
           <li
@@ -1085,7 +1129,9 @@ exports[`Component: Nav -  renders with two levels 1`] = `
               href="#"
               onClick={[Function]}
             >
-              Information
+              <span>
+                Information
+              </span>
             </a>
           </li>
           <li
@@ -1096,7 +1142,9 @@ exports[`Component: Nav -  renders with two levels 1`] = `
               href="#"
               onClick={[Function]}
             >
-              Other things
+              <span>
+                Other things
+              </span>
             </a>
           </li>
         </ul>
