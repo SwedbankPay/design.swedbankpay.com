@@ -1,8 +1,8 @@
 import React from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, Property, DocContainer } from "#";
-import BreadcrumbComponent from "@/Breadcrumb";
+import { ComponentPreview, Property, DocContainer } from "@docutils";
+import BreadcrumbComponent from "@components/Breadcrumb";
 
 const BasicBreadCrumb = () => {
     const items = [

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
-import { ComponentPreview, DocContainer, Property, JavascriptDocs } from "#";
-import NavComponent from "@/Nav";
+import { ComponentPreview, DocContainer, Property, JavascriptDocs } from "@docutils";
+import NavComponent from "@components/Nav";
 
 const { nav } = window.px;
 

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Icon } from "#";
+import { Icon } from "@docutils";
 
 const Alert = ({ id, type, icon, close, text, children }) => (
     <div id={id} className={`alert alert-${type}`}>{icon ? "\n" : ""}

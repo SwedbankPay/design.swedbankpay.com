@@ -1,11 +1,13 @@
-.button-variant(@color, @background, @disabled-color, @disabled-bg) {
+.button-variant(@color, @background, @disabled-color, @disabled-bg, @focus-shadow) {
     color: @color;
     background-color: @background;
 
     &:focus,
     &.focus {
+        outline: 0;
         color: @color;
         background-color: darken(@background, 5%);
+        box-shadow: 0 0 0 0.2rem @focus-shadow;
     }
 
     &:hover {

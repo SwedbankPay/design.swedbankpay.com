@@ -51,8 +51,8 @@ When importing different components in the files you create, you can use shortcu
 
 - `~` - root of the project (example `import package from "~/package";`).
 - `$` - `~/src`-folder (example `import px from "$/px-script";`).
-- `@` - `~/src/App/components`-folder (example `import Alert from "@/Alert";`).
-- `#` - `~/src/App/Documentation/utils`-folder (example `import { DocToc } from "#";`).
+- `@` - `~/src/App/components`-folder (example `import Alert from "@components/Alert";`).
+- `#` - `~/src/App/Documentation/utils`-folder (example `import { DocToc } from "@docutils";`).
 
 The shortcuts are specified in the `~/.babelrc`-file. Specifying the prefix-shortcuts in the `~/jsconfig.json`-file enables path intellisense for the shortcuts (at least in VSCode).
 

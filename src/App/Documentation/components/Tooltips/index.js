@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ComponentPreview, DocContainer, Attribute } from "#";
+import { ComponentPreview, DocContainer, Attribute } from "@docutils";
 
 const Overview = () => (
     <>

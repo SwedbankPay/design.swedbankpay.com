@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { DocContainer } from "#";
+import { DocContainer } from "@docutils";
 import ColorPreview from "./ColorPreview";
 
 const mainText = [

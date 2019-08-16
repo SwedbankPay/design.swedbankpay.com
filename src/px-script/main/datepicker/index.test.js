@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import datepicker from "./index";
-import Datepicker from "@/FormComponents/Datepicker";
+import Datepicker from "@components/FormComponents/Datepicker";
 import formats from "./formats";
 
 // TODO: rewrite tests to mock flatpickr [AW]

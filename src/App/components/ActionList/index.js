@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 
-import { Icon } from "#";
+import { Icon } from "@docutils";
 
 const ActionList = ({ id, classNames, toggleBtn, items }) => (
     <>

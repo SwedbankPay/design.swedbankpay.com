@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, Attribute, Property, DocContainer, JavascriptDocs } from "#";
-import AlertComponent, { ComplexAlert } from "@/Alert";
+import { ComponentPreview, Attribute, Property, DocContainer, JavascriptDocs } from "@docutils";
+import AlertComponent, { ComplexAlert } from "@components/Alert";
 
 const { alert } = window.px;
 

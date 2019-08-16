@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer, Property, Attribute, JavascriptDocs } from "#";
-import TopbarComponent from "@/Topbar";
+import { ComponentPreview, DocContainer, Property, Attribute, JavascriptDocs } from "@docutils";
+import TopbarComponent from "@components/Topbar";
 
 const { topbar } = window.px;
 

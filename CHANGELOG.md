@@ -9,6 +9,7 @@
 - Added aria labels to dialog documentation to show an example of how to use dialog accessibly.
 - Added window resize listener for topbar so it is closed when the window size changes.
 - Added tab trapping and correct focus to the topbar nav.
+- Added new outline styling for buttons when focused.
 
 ### Changed
 

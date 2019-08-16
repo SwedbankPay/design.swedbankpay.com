@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import logo from "$/img/logo/spay_horizontal_pos.svg";
+import logo from "@src/img/logo/spay_horizontal_pos.svg";
 
 const isDev = process.env.version === "LOCAL_DEV";
 
