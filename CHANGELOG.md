@@ -1,6 +1,6 @@
 # Changelog
 
-## [3.X.X] - 2019-XX-XX
+## [3.5.0] - 2019-08-16
 
 ### Added
 
@@ -32,5 +32,3 @@
 
 - Fixed display issue with topbar for IE.
 - Fixed styling issue when resizing the window with an open topbar.
-
-### Removed
