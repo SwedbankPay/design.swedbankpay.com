@@ -1,8 +1,8 @@
 import React from "react";
 
-import { ComponentPreview, DocContainer, Property, Attribute } from "#";
+import { ComponentPreview, DocContainer, Property, Attribute } from "@docutils";
 import PrismCode from "react-prism";
-import InputGroupComponent from "@/InputGroup";
+import InputGroupComponent from "@components/InputGroup";
 
 const BasicExample = () => (
     <>

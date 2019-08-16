@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Addon } from "@/InputGroup";
+import { Addon } from "@components/InputGroup";
 
 const Datepicker = ({ format, time, min, max, months, value, label, prefixValue, prefixType, fulldate, mode, allowinput, required, id }) => {
     const attrs = {

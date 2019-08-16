@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import alert from "./index";
-import Alert from "@/Alert";
+import Alert from "@components/Alert";
 
 describe("px-script: alert", () => {
     const div = document.createElement("div");

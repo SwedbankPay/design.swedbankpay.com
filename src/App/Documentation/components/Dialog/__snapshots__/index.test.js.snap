@@ -17,69 +17,23 @@ exports[`Documentation: Dialog Example renders 1`] = `
       data-dialog-open="demo-dialog"
       type="button"
     >
+      
+
       Open dialog
+      
+
     </button>
-    <div
-      className="dialog"
-      id="demo-dialog"
+    <Dialog
+      diaHeader="Delete item 456?"
+      diaId="demo-dialog"
     >
-      <section>
-        <header>
-          <h4>
-            Delete item 456?
-          </h4>
-          
-
-          <a
-            className="dialog-close"
-            href="#"
-          >
-            
-				
-            <Icon
-              icon="close"
-            />
-            
-			
-          </a>
-          
-		
-        </header>
-        <div
-          className="dialog-body"
-        >
-          <p>
-            Are you sure you want to permanently delete the item 
-            <i>
-              German Swashbuckle (456)?
-            </i>
-          </p>
-        </div>
-        <footer>
-          
-
-          <button
-            className="btn btn-guiding"
-            data-dialog-close="demo-dialog"
-            type="button"
-          >
-            Cancel
-          </button>
-          
-
-          <button
-            className="btn btn-destructive"
-            type="button"
-          >
-            Delete
-          </button>
-          
-
-        </footer>
-      </section>
-    </div>
-    
-
+      <p>
+        Are you sure you want to permanently delete the item 
+        <i>
+          German Swashbuckle (456)?
+        </i>
+      </p>
+    </Dialog>
   </ComponentPreview>
 </Fragment>
 `;

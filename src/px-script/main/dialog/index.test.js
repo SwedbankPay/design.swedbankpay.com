@@ -13,24 +13,23 @@ describe("px-script: dialog", () => {
 
         return (
             <>
-                <div className={`dialog ${open ? " d-flex" : null}`} id={id}>
+                <button className="btn btn-executive" type="button" data-dialog-open={btnId}>
+                    Open dialog
+                </button>
+                <div className={`dialog ${open ? " d-flex" : null}`} id={id} role="dialog" aria-modal="true">
                     <section>
-                        <header>
-                            <h5>Delete item 456?</h5>
-                            <a href="#" className="dialog-close">
-                                <i className="material-icons">close</i>
-                            </a>
+                        <header className="dialog-header">
+                            <h4>Delete item 456?</h4><button type="button" className="dialog-close"><i className="material-icons">close</i></button>
                         </header>
                         <div className="dialog-body">
                             <p>Are you sure you want to permanently delete the item <i>German Swashbuckle (456)?</i></p>
                         </div>
-                        <footer>
-                            <button className="btn btn-secondary" type="button" data-dialog-close={id}>Cancel</button>
-                            <button className="btn btn-danger" type="button">Delete</button>
+                        <footer className="dialog-footer">
+                            <button className="btn btn-guiding" type="button" data-dialog-close>Cancel</button>
+                            <button className="btn btn-destructive" type="button">Delete</button>
                         </footer>
                     </section>
                 </div>
-                <button className="btn btn-primary" type="button" data-dialog-open={btnId}>Open dialog</button>
             </>
         );
     };
@@ -147,6 +146,50 @@ describe("px-script: dialog", () => {
 
         expect(renderedDialog.classList).not.toContain("d-flex");
         expect(document.body.classList).not.toContain("dialog-open");
+    });
+
+    it("sets focus on the last focusable element when dialog is opened", () => {
+        ReactDOM.render(<Dialog id="dia-id"/>, div);
+
+        const delBtn = document.querySelector(".btn-destructive");
+
+        dialog.init();
+        dialog.open("dia-id");
+
+        expect(document.activeElement).toEqual(delBtn);
+    });
+
+    // It is not possible to trigger a focus change with keyboardevents, this is due to some security issues with JS [AW].
+    it("changes focus from the last focusable element to the first focusable element when focus change is induced", () => {
+        ReactDOM.render(<Dialog id="dia-id"/>, div);
+
+        const dialogElem = document.querySelector(".dialog");
+        const ev = new KeyboardEvent("keydown", { key: "Tab" });
+
+        const diaObj = dialog.init()[0];
+
+        diaObj.open();
+        dialogElem.dispatchEvent(ev);
+
+        expect(document.activeElement).toEqual(diaObj.firstTabStop);
+    });
+
+    it("changes focus from the first focusable element to the last focusable element when focus change is induced", () => {
+        ReactDOM.render(<Dialog id="dia-id"/>, div);
+
+        const dialogElem = document.querySelector(".dialog");
+        const sEv = new KeyboardEvent("keydown", {
+            shiftKey: true,
+            key: "Tab"
+        });
+        const ev = new KeyboardEvent("keydown", { key: "Tab" });
+        const diaObj = dialog.init()[0];
+
+        diaObj.open();
+        dialogElem.dispatchEvent(ev);
+        dialogElem.dispatchEvent(sEv);
+
+        expect(document.activeElement).toEqual(diaObj.lastTabStop);
     });
 
     describe("dialog.open", () => {

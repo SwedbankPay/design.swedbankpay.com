@@ -4,7 +4,7 @@
 
 # Swedbank Pay DesignGuide
 
-[![Version](https://img.shields.io/badge/Version-3.4.2-blue.svg)](https://github.com/swedbankpay/design.swedbankpay.com/releases/tag/3.4.2)
+[![Version](https://img.shields.io/badge/Version-3.5.0-blue.svg)](https://github.com/swedbankpay/design.swedbankpay.com/releases/tag/3.5.0)
 [![Build status](https://ci.appveyor.com/api/projects/status/1dii19sqw1m7xtsn/branch/master?svg=true)](https://ci.appveyor.com/project/PayEx/design-swedbankpay-com/branch/master)
 [![codecov](https://codecov.io/gh/swedbankpay/design.swedbankpay.com/branch/develop/graph/badge.svg)](https://codecov.io/gh/swedbankpay/design.swedbankpay.com)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=SwedbankPay/design.swedbankpay.com)](https://dependabot.com)
@@ -51,8 +51,8 @@ When importing different components in the files you create, you can use shortcu
 
 - `~` - root of the project (example `import package from "~/package";`).
 - `$` - `~/src`-folder (example `import px from "$/px-script";`).
-- `@` - `~/src/App/components`-folder (example `import Alert from "@/Alert";`).
-- `#` - `~/src/App/Documentation/utils`-folder (example `import { DocToc } from "#";`).
+- `@` - `~/src/App/components`-folder (example `import Alert from "@components/Alert";`).
+- `#` - `~/src/App/Documentation/utils`-folder (example `import { DocToc } from "@docutils";`).
 
 The shortcuts are specified in the `~/.babelrc`-file. Specifying the prefix-shortcuts in the `~/jsconfig.json`-file enables path intellisense for the shortcuts (at least in VSCode).
 

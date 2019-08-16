@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer, Property, JavascriptDocs } from "#";
-import TabsComponent from "@/Tabs";
+import { ComponentPreview, DocContainer, Property, JavascriptDocs } from "@docutils";
+import TabsComponent from "@components/Tabs";
 
 const { tabs } = window.px;
 

@@ -1,5 +1,5 @@
 import { init } from "~/node_modules/@sentry/browser";
-import "$/polyfills";
+import "@src/polyfills";
 
 import actionList from "./action-list";
 import alert from "./alert";
@@ -20,6 +20,9 @@ import validation from "./validation";
 if (process.env.sentry) {
     init({ dsn: "https://a80375d3150043fa85964c8d5eb24e0b@sentry.io/1481099" });
 }
+
+document.addEventListener("mousedown", () => { document.body.classList.add("intent-mouse"); });
+document.addEventListener("keydown", () => { document.body.classList.remove("intent-mouse"); });
 
 const px = {
     actionList,

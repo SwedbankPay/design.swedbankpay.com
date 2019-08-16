@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { PxScript } from "#";
+import { PxScript } from "@docutils";
 
 const OpenDocs = ({ componentName }) => (
     <>

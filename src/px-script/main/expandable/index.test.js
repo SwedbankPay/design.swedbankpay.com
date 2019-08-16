@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 
 import expandable from "./index";
 
+jest.useFakeTimers();
+
 describe("px-script: expandable", () => {
     const div = document.createElement("div");
 
@@ -10,10 +12,10 @@ describe("px-script: expandable", () => {
 
     afterEach(() => ReactDOM.unmountComponentAtNode(div));
 
-    const AccordionComponent = ({ id, open }) => (
-        <div className="accordion" id={id} >
+    const ExpGrpComponent = ({ id, open, expId }) => (
+        <div className="expandable-group" id={id} >
+            <ExpandableComponent id={expId} />
             <ExpandableComponent open={open} />
-            <ExpandableComponent />
         </div>
     );
 
@@ -22,7 +24,7 @@ describe("px-script: expandable", () => {
             <div className="expandable-header">
                 <h5>Foo</h5>
             </div>
-            <div className="expandable-content">
+            <div className="expandable-body">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
         </div>
@@ -47,10 +49,10 @@ describe("px-script: expandable", () => {
             expect(typeof returnVal).toEqual("object");
         });
 
-        it("returns a single object when a accordion ID is passed", () => {
-            ReactDOM.render(<AccordionComponent id="accordion-test" />, div);
+        it("returns a single object when a expandable-group ID is passed", () => {
+            ReactDOM.render(<ExpGrpComponent id="expandable-group-test" />, div);
 
-            const returnVal = expandable.init("accordion-test");
+            const returnVal = expandable.init("expandable-group-test");
 
             expect(returnVal).not.toBeNull();
             expect(Array.isArray(returnVal)).toBeFalsy();
@@ -72,11 +74,11 @@ describe("px-script: expandable", () => {
             expect(returnVal.every(instance => instance.elem.classList.contains("expandable"))).toBeTruthy();
         });
 
-        it("returns an array of accordion objects when more than one accordion is initialized", () => {
+        it("returns an array of expandable-group objects when more than one expandable-group is initialized", () => {
             ReactDOM.render(
                 <>
-                    <AccordionComponent />
-                    <AccordionComponent />
+                    <ExpGrpComponent />
+                    <ExpGrpComponent />
                 </>
                 , div);
 
@@ -84,13 +86,13 @@ describe("px-script: expandable", () => {
 
             expect(Array.isArray(returnVal)).toBeTruthy();
             expect(returnVal.length).toEqual(2);
-            expect(returnVal.every(instance => instance.elem.classList.contains("accordion"))).toBeTruthy();
+            expect(returnVal.every(instance => instance.elem.classList.contains("expandable-group"))).toBeTruthy();
         });
 
-        it("returns an array of both accordion objects and expandable objects when more than one element is initialized", () => {
+        it("returns an array of both expandable-group objects and expandable objects when more than one element is initialized", () => {
             ReactDOM.render(
                 <>
-                    <AccordionComponent />
+                    <ExpGrpComponent />
                     <ExpandableComponent />
                 </>
                 , div);
@@ -99,14 +101,14 @@ describe("px-script: expandable", () => {
 
             expect(Array.isArray(returnVal)).toBeTruthy();
             expect(returnVal.length).toEqual(2);
-            expect(returnVal[0].elem.classList.contains("accordion")).toBeTruthy();
+            expect(returnVal[0].elem.classList.contains("expandable-group")).toBeTruthy();
             expect(returnVal[1].elem.classList.contains("expandable")).toBeTruthy();
         });
 
         describe("warning messages", () => {
             beforeEach(() => console.warn = jest.fn());
 
-            it("prints a warning message if no accordion or expandable exist", () => {
+            it("prints a warning message if no expandable-group or expandable exist", () => {
                 console.warn = jest.fn();
 
                 expandable.init();
@@ -122,13 +124,13 @@ describe("px-script: expandable", () => {
                 expect(console.warn).toHaveBeenCalled();
             });
 
-            it("prints a warning if an accordion without expandables is initialized", () => {
+            it("prints a warning if an expandable-group without expandables is initialized", () => {
                 console.warn = jest.fn();
-                ReactDOM.render(<div id="empty-accordion" className="accordion"/>, div);
+                ReactDOM.render(<div id="empty-expandable-group" className="expandable-group"/>, div);
 
-                expandable.init("empty-accordion");
+                expandable.init("empty-expandable-group");
 
-                expect(console.warn).toHaveBeenCalledWith("accordion: No expandable found");
+                expect(console.warn).toHaveBeenCalledWith("expandable-group: No expandable children found");
             });
 
             it("prints a warning when an expandable without .expandable-header is initialized", () => {
@@ -137,19 +139,19 @@ describe("px-script: expandable", () => {
 
                 expandable.init("exp-no-header");
 
-                expect(console.warn).toHaveBeenCalledWith("expandable: No expandable-header found");
+                expect(console.warn).toHaveBeenCalledWith("expandable: No .expandable-header found");
             });
 
-            it("prints a warning if an accordion containing expandables without and expandable-header", () => {
+            it("prints a warning if an expandable-group contains expandables without expandable-header", () => {
                 ReactDOM.render(
-                    <div id="acc-exp-no-header" className="accordion">
+                    <div id="expGrpNoHead" className="expandable-group">
                         <div className="expandable" />
                     </div>
                     , div);
 
-                expandable.init("acc-exp-no-header");
+                expandable.init("expGrpNoHead");
 
-                expect(console.warn).toHaveBeenCalledWith("accordion: No expandable-header found");
+                expect(console.warn).toHaveBeenCalledWith("expandable-group: An expandable is missing a header");
             });
         });
     });
@@ -182,56 +184,224 @@ describe("px-script: expandable", () => {
 
             expHeaderElem.dispatchEvent(new Event("click"));
 
+            jest.runAllTimers();
+
             expect(expElem.classList.contains("expandable-open")).toBeFalsy();
+        });
+
+        it("clicking in quick succession to open an expandable will print a warning", () => {
+            console.warn = jest.fn();
+
+            ReactDOM.render(<ExpandableComponent />, div);
+
+            const expObj = expandable.init()[0];
+
+            expObj.header.dispatchEvent(new Event("click"));
+            expObj.header.dispatchEvent(new Event("click"));
+
+            expect(console.warn).toHaveBeenCalledWith("expandable: The given expandable is expanding");
+        });
+
+        it("clicking in quick succession to close an expandable will print a warning", () => {
+            console.warn = jest.fn();
+
+            ReactDOM.render(<ExpandableComponent open />, div);
+
+            const expObj = expandable.init()[0];
+
+            expObj.header.dispatchEvent(new Event("click"));
+            expObj.header.dispatchEvent(new Event("click"));
+
+            expect(console.warn).toHaveBeenCalledWith("expandable: The given expandable is collapsing");
         });
     });
 
-    describe("class Accordion", () => {
-        it("click opens the accordion element", () => {
-            ReactDOM.render(<AccordionComponent />, div);
+    describe("class Expandable-Group", () => {
+        it("click opens an expandable", () => {
+            ReactDOM.render(<ExpGrpComponent />, div);
 
-            const expElems = document.querySelectorAll(".expandable");
-            const expElemsHeaders = [...expElems].map(expElem => expElem.querySelector(".expandable-header"));
+            const expGrpObj = expandable.init()[0];
 
-            expandable.init();
+            expect(expGrpObj.openExp).toBeFalsy();
 
-            expect(expElems[0].classList.contains("expandable-open")).toBeFalsy();
+            expGrpObj.expandables[0].header.dispatchEvent(new Event("click"));
 
-            expElemsHeaders[0].dispatchEvent(new Event("click"));
+            jest.runAllTimers();
 
-            expect(expElems[0].classList.contains("expandable-open")).toBeTruthy();
+            expect(expGrpObj.openExp).toBeTruthy();
         });
 
-        it("clicking an open accordion element closes it", () => {
-            ReactDOM.render(<AccordionComponent open />, div);
+        it("clicking an open expandable closes it", () => {
+            ReactDOM.render(<ExpGrpComponent open />, div);
 
-            const expElems = document.querySelectorAll(".expandable");
-            const expElemsHeaders = [...expElems].map(expElem => expElem.querySelector(".expandable-header"));
+            const expGrpObj = expandable.init()[0];
+            const openExp = expGrpObj.openExp;
 
-            expandable.init();
+            expect(openExp.elem.classList.contains("expandable-open")).toBeTruthy();
 
-            expect(expElems[0].classList.contains("expandable-open")).toBeTruthy();
+            openExp.header.dispatchEvent(new Event("click"));
 
-            expElemsHeaders[0].dispatchEvent(new Event("click"));
+            jest.runAllTimers();
 
-            expect(expElems[0].classList.contains("expandable-open")).toBeFalsy();
+            expect(openExp.elem.classList.contains("expandable-open")).toBeFalsy();
         });
 
         it("only one expandable can be open at the same time", () => {
-            ReactDOM.render(<AccordionComponent open />, div);
+            ReactDOM.render(<ExpGrpComponent open />, div);
 
-            const expElems = document.querySelectorAll(".expandable");
-            const expElemsHeaders = [...expElems].map(expElem => expElem.querySelector(".expandable-header"));
+            const expGrpObj = expandable.init()[0];
+            const openExp = expGrpObj.openExp.elem;
+            const closedExp = document.querySelector(".expandable:not(.expandable-open)");
 
-            expandable.init();
+            expect(openExp.classList.contains("expandable-open")).toBeTruthy();
+            expect(closedExp.classList.contains("expandable-open")).toBeFalsy();
 
-            expect(expElems[0].classList.contains("expandable-open")).toBeTruthy();
-            expect(expElems[1].classList.contains("expandable-open")).toBeFalsy();
+            closedExp.querySelector(".expandable-header").dispatchEvent(new Event("click"));
 
-            expElemsHeaders[1].dispatchEvent(new Event("click"));
+            jest.runAllTimers();
 
-            expect(expElems[0].classList.contains("expandable-open")).toBeFalsy();
-            expect(expElems[1].classList.contains("expandable-open")).toBeTruthy();
+            expect(openExp.classList.contains("expandable-open")).toBeFalsy();
+            expect(closedExp.classList.contains("expandable-open")).toBeTruthy();
+        });
+
+        it("clicking in quick succession to open an expandable wrapped by expandable-group will print a warning", () => {
+            console.warn = jest.fn();
+
+            ReactDOM.render(<ExpGrpComponent />, div);
+
+            const expGrp = expandable.init()[0];
+
+            expGrp.expandables[0].header.dispatchEvent(new Event("click"));
+            expGrp.expandables[0].header.dispatchEvent(new Event("click"));
+
+            expect(console.warn).toHaveBeenCalledWith("expandable-group: The expandable-group contains an expanding element");
+        });
+    });
+
+    describe("open", () => {
+        it("opens the expandable matching the passed ID and returns the expandable object", () => {
+            ReactDOM.render(<ExpandableComponent id="test-open" />, div);
+
+            const expObj = expandable.init()[0];
+
+            expect(expObj.elem.classList).not.toContain("expandable-open");
+
+            const returnVal = expandable.open("test-open");
+
+            expect(expObj.elem.classList).toContain("expandable-open");
+            expect(returnVal).toEqual(expObj);
+        });
+
+        it("opens the expandable matching the given ID in a expandable-group", () => {
+            ReactDOM.render(<ExpGrpComponent expId="exp-test" />, div);
+
+            const expGrpObj = expandable.init()[0];
+            const exp = document.getElementById("exp-test");
+
+            expect(expGrpObj.openExp).toBeFalsy();
+            expect(exp.classList).not.toContain("expandable-open");
+
+            const returnVal = expandable.open("exp-test");
+
+            jest.runAllTimers();
+
+            expect(expGrpObj.openExp).toBeTruthy();
+            expect(exp.classList).toContain("expandable-open");
+            expect(returnVal).toEqual(expGrpObj.openExp);
+        });
+
+        it("closes the open expandable in a expandable-group if open is called on another expandable", () => {
+            ReactDOM.render(<ExpGrpComponent open expId="exp-id" />, div);
+
+            const expGrpObj = expandable.init()[0];
+            const closedExp = document.getElementById("exp-id");
+
+            expect(expGrpObj.openExp).toBeTruthy();
+
+            expandable.open("exp-id");
+
+            jest.runAllTimers();
+
+            expect(expGrpObj.openExp.elem).toEqual(closedExp);
+            expect(document.querySelectorAll(".expandable-open").length).toEqual(1);
+        });
+
+        describe("warning messages", () => {
+            beforeEach(() => console.warn = jest.fn());
+
+            it("returns false and prints a warning if no expandable matching the ID was found", () => {
+                expandable.init();
+
+                const returnVal = expandable.open("test");
+
+                expect(console.warn).toHaveBeenCalledWith("expandable.open: expandable with id test was not found");
+                expect(returnVal).toBeFalsy();
+            });
+
+            it("returns false and prints a warning if the expandable is open", () => {
+                ReactDOM.render(<ExpandableComponent open id="is-open" />, div);
+                expandable.init();
+
+                const returnVal = expandable.open("is-open");
+
+                expect(console.warn).toHaveBeenCalledWith("expandable.open: expandable with id is-open is open");
+                expect(returnVal).toBeFalsy();
+            });
+        });
+    });
+
+    describe("close", () => {
+        it("closes the open expandable matching the passed ID and returns the expandable object", () => {
+            ReactDOM.render(<ExpandableComponent id="exp-close" open />, div);
+
+            const expObj = expandable.init()[0];
+
+            expect(expObj.isOpen).toBeTruthy();
+
+            const returnVal = expandable.close("exp-close");
+
+            expect(expObj.isOpen).toBeFalsy();
+            expect(returnVal).toBeTruthy();
+            expect(returnVal).toEqual(expObj);
+        });
+
+        it("closes the open expandable matching the passed ID in an expandable-group and returns the expandable object", () => {
+            ReactDOM.render(
+                <div className="expandable-group">
+                    <ExpandableComponent id="test-close" open/>
+                    <ExpandableComponent />
+                </div>
+                , div);
+
+            const expGrpObj = expandable.init()[0];
+
+            expect(expGrpObj.openExp).toBeTruthy();
+
+            const returnVal = expandable.close("test-close");
+
+            expect(expGrpObj.openExp).toBeFalsy();
+            expect(returnVal.elem).toEqual(document.getElementById("test-close"));
+        });
+
+        describe("warninge messages", () => {
+            beforeEach(() => console.warn = jest.fn());
+
+            it("prints a warning message and returns false if the passed ID doesn't match an existing expandable", () => {
+                const returnVal = expandable.close("testing");
+
+                expect(console.warn).toHaveBeenCalledWith("expandable.close: expandable with id testing was not found");
+                expect(returnVal).toBeFalsy();
+            });
+
+            it("prints a warning message and returns false if the expandable is closed", () => {
+                ReactDOM.render(<ExpGrpComponent expId="closed-exp" />, div);
+                expandable.init();
+
+                const returnVal = expandable.close("closed-exp");
+
+                expect(console.warn).toHaveBeenCalledWith("expandable.close: expandable with id closed-exp is closed");
+                expect(returnVal).toBeFalsy();
+            });
         });
     });
 });

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Property, ComponentPreview, DocContainer } from "#";
+import { Property, ComponentPreview, DocContainer } from "@docutils";
 
 const FullWidth = () => (
     <>

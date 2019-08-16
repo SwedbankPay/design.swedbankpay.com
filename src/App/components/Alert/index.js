@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Icon } from "#";
+import { Icon } from "@docutils";
 
 const Alert = ({ id, type, icon, close, text, children }) => (
     <div id={id} className={`alert alert-${type}`}>{icon ? "\n" : ""}
@@ -19,7 +19,7 @@ const ComplexAlert = ({ id, type, icon, close, headerText, children }) => (
         <header className="alert-header">
             {icon
                 ? <>
-                    {"\n"} <Icon classNames="alert-icon" icon={icon}/>
+                    {"\n"} <Icon classNames="alert-icon" type={icon}/>
                 </>
                 : null}
             {headerText
@@ -31,7 +31,7 @@ const ComplexAlert = ({ id, type, icon, close, headerText, children }) => (
                 : null}
             {close
                 ? <a href="#" data-alert-close="" onClick={e => e.preventDefault()}>{"\n\t\t"}
-                    <Icon icon={"close"}/>{"\n\t"}
+                    <Icon type={"close"}/>{"\n\t"}
                 </a>
                 : null}
             {"\n"}
