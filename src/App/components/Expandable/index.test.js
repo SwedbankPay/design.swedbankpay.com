@@ -6,15 +6,15 @@ import Expandable, { ExpandablePlaceholder } from "./index";
 const items = [
     {
         title: "Foo",
-        content: <p>My accordion content</p>
+        content: "My accordion content"
     },
     {
         title: "Bar",
-        content: <p>My accordion content</p>
+        content: "My accordion content"
     },
     {
         title: "Baz",
-        content: <p>My accordion content</p>
+        content: "My accordion content"
     }
 ];
 

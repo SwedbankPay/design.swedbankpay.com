@@ -1,34 +1,28 @@
 import React, { useEffect } from "react";
 
-import { ComponentPreview, DocContainer, Property } from "@docutils";
+import { ComponentPreview, DocContainer, Property, JavascriptDocs } from "@docutils";
 import ExpandableComponent from "@components/Expandable";
 
 const { expandable } = window.px;
 
 const items = [
     {
-        title: "Foo",
-        content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique scelerisque blandit. Vestibulum venenatis elit non nunc pulvinar, vitae tincidunt quam malesuada.
-            Etiam orci dui, ultricies consectetur venenatis sit amet, ullamcorper quis metus. Aliquam eget consequat erat. Praesent arcu tortor, eleifend ac lorem eu, ullamcorper tristique purus.
-            Phasellus felis mi, malesuada et egestas eget, efficitur at magna. Fusce euismod, elit tempor vulputate mollis, diam eros venenatis libero, eget ultricies diam velit at erat.
-            Morbi mattis scelerisque augue, ut volutpat lectus sodales iaculis.
-        </p>
+        id: "exp-1",
+        title: "My title",
+        subtitle: "My subtitle",
+        content: "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim."
     },
     {
-        title: "Bar",
-        content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique scelerisque blandit. Vestibulum venenatis elit non nunc pulvinar, vitae tincidunt quam malesuada.
-            Etiam orci dui, ultricies consectetur venenatis sit amet, ullamcorper quis metus. Aliquam eget consequat erat. Praesent arcu tortor, eleifend ac lorem eu, ullamcorper tristique purus.
-            Phasellus felis mi, malesuada et egestas eget, efficitur at magna. Fusce euismod, elit tempor vulputate mollis, diam eros venenatis libero, eget ultricies diam velit at erat.
-            Morbi mattis scelerisque augue, ut volutpat lectus sodales iaculis.
-        </p>
+        id: "exp-2",
+        title: "My title",
+        subtitle: "My subtitle",
+        content: "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim."
     },
     {
-        title: "Baz",
-        content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique scelerisque blandit. Vestibulum venenatis elit non nunc pulvinar, vitae tincidunt quam malesuada.
-            Etiam orci dui, ultricies consectetur venenatis sit amet, ullamcorper quis metus. Aliquam eget consequat erat. Praesent arcu tortor, eleifend ac lorem eu, ullamcorper tristique purus.
-            Phasellus felis mi, malesuada et egestas eget, efficitur at magna. Fusce euismod, elit tempor vulputate mollis, diam eros venenatis libero, eget ultricies diam velit at erat.
-            Morbi mattis scelerisque augue, ut volutpat lectus sodales iaculis.
-        </p>
+        id: "exp-3",
+        title: "My title",
+        subtitle: "My subtitle",
+        content: "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim."
     }
 ];
 
@@ -45,18 +39,25 @@ const Overview = () => (
     </>
 );
 
-const Accordion = () => (
+const ExpandableGroup = () => (
     <>
-        <h2 id="accordion">Accordion</h2>
+        <h2 id="expandable-group">Expandable Group</h2>
         <p>
-            If you use a wrapper with <Property value=".accordion"/> then only one expandable can be open at the
+            If you use a wrapper with <Property value=".expandable-group"/> then only one expandable can be open at the
             same time.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="accordion">
+            <div className="expandable-group">
                 <ExpandableComponent items={items} />
             </div>
         </ComponentPreview>
+    </>
+);
+
+const JavascriptMethods = () => (
+    <>
+        <h2 id="javascript-methods">JavaScript methods</h2>
+        <JavascriptDocs componentName="expandable" open close />
     </>
 );
 
@@ -66,10 +67,12 @@ const Expandable = () => {
     return (
         <DocContainer docToc>
             <p className="lead">
-                Accordion
+                Expandables toggle between hiding and showing content on click.
+                They can be opened and closed independently of eachother, but if you wish for them to work like an accordion then wrap your expandables in an expandable-group.
             </p>
             <Overview />
-            <Accordion />
+            <ExpandableGroup />
+            <JavascriptMethods />
         </DocContainer>
     );
 };
@@ -77,4 +80,4 @@ const Expandable = () => {
 export default Expandable;
 
 /* For testing */
-export { Overview, Accordion };
+export { Overview, ExpandableGroup };

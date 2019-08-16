@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components: Expandable Accordion renders 1`] = `
+exports[`Components: Expandable ExpandableGroup renders 1`] = `
 <Fragment>
   <h2
-    id="accordion"
+    id="expandable-group"
   >
-    Accordion
+    Expandable Group
   </h2>
   <p>
     If you use a wrapper with 
     <Property
-      value=".accordion"
+      value=".expandable-group"
     />
      then only one expandable can be open at the same time.
   </p>
@@ -20,28 +20,28 @@ exports[`Components: Expandable Accordion renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="accordion"
+      className="expandable-group"
     >
       <Expandable
         items={
           Array [
             Object {
-              "content": <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique scelerisque blandit. Vestibulum venenatis elit non nunc pulvinar, vitae tincidunt quam malesuada. Etiam orci dui, ultricies consectetur venenatis sit amet, ullamcorper quis metus. Aliquam eget consequat erat. Praesent arcu tortor, eleifend ac lorem eu, ullamcorper tristique purus. Phasellus felis mi, malesuada et egestas eget, efficitur at magna. Fusce euismod, elit tempor vulputate mollis, diam eros venenatis libero, eget ultricies diam velit at erat. Morbi mattis scelerisque augue, ut volutpat lectus sodales iaculis.
-              </p>,
-              "title": "Foo",
+              "content": "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.",
+              "id": "exp-1",
+              "subtitle": "My subtitle",
+              "title": "My title",
             },
             Object {
-              "content": <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique scelerisque blandit. Vestibulum venenatis elit non nunc pulvinar, vitae tincidunt quam malesuada. Etiam orci dui, ultricies consectetur venenatis sit amet, ullamcorper quis metus. Aliquam eget consequat erat. Praesent arcu tortor, eleifend ac lorem eu, ullamcorper tristique purus. Phasellus felis mi, malesuada et egestas eget, efficitur at magna. Fusce euismod, elit tempor vulputate mollis, diam eros venenatis libero, eget ultricies diam velit at erat. Morbi mattis scelerisque augue, ut volutpat lectus sodales iaculis.
-              </p>,
-              "title": "Bar",
+              "content": "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.",
+              "id": "exp-2",
+              "subtitle": "My subtitle",
+              "title": "My title",
             },
             Object {
-              "content": <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique scelerisque blandit. Vestibulum venenatis elit non nunc pulvinar, vitae tincidunt quam malesuada. Etiam orci dui, ultricies consectetur venenatis sit amet, ullamcorper quis metus. Aliquam eget consequat erat. Praesent arcu tortor, eleifend ac lorem eu, ullamcorper tristique purus. Phasellus felis mi, malesuada et egestas eget, efficitur at magna. Fusce euismod, elit tempor vulputate mollis, diam eros venenatis libero, eget ultricies diam velit at erat. Morbi mattis scelerisque augue, ut volutpat lectus sodales iaculis.
-              </p>,
-              "title": "Baz",
+              "content": "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.",
+              "id": "exp-3",
+              "subtitle": "My subtitle",
+              "title": "My title",
             },
           ]
         }
@@ -78,22 +78,22 @@ exports[`Components: Expandable Overview renders 1`] = `
       items={
         Array [
           Object {
-            "content": <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique scelerisque blandit. Vestibulum venenatis elit non nunc pulvinar, vitae tincidunt quam malesuada. Etiam orci dui, ultricies consectetur venenatis sit amet, ullamcorper quis metus. Aliquam eget consequat erat. Praesent arcu tortor, eleifend ac lorem eu, ullamcorper tristique purus. Phasellus felis mi, malesuada et egestas eget, efficitur at magna. Fusce euismod, elit tempor vulputate mollis, diam eros venenatis libero, eget ultricies diam velit at erat. Morbi mattis scelerisque augue, ut volutpat lectus sodales iaculis.
-            </p>,
-            "title": "Foo",
+            "content": "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.",
+            "id": "exp-1",
+            "subtitle": "My subtitle",
+            "title": "My title",
           },
           Object {
-            "content": <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique scelerisque blandit. Vestibulum venenatis elit non nunc pulvinar, vitae tincidunt quam malesuada. Etiam orci dui, ultricies consectetur venenatis sit amet, ullamcorper quis metus. Aliquam eget consequat erat. Praesent arcu tortor, eleifend ac lorem eu, ullamcorper tristique purus. Phasellus felis mi, malesuada et egestas eget, efficitur at magna. Fusce euismod, elit tempor vulputate mollis, diam eros venenatis libero, eget ultricies diam velit at erat. Morbi mattis scelerisque augue, ut volutpat lectus sodales iaculis.
-            </p>,
-            "title": "Bar",
+            "content": "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.",
+            "id": "exp-2",
+            "subtitle": "My subtitle",
+            "title": "My title",
           },
           Object {
-            "content": <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique scelerisque blandit. Vestibulum venenatis elit non nunc pulvinar, vitae tincidunt quam malesuada. Etiam orci dui, ultricies consectetur venenatis sit amet, ullamcorper quis metus. Aliquam eget consequat erat. Praesent arcu tortor, eleifend ac lorem eu, ullamcorper tristique purus. Phasellus felis mi, malesuada et egestas eget, efficitur at magna. Fusce euismod, elit tempor vulputate mollis, diam eros venenatis libero, eget ultricies diam velit at erat. Morbi mattis scelerisque augue, ut volutpat lectus sodales iaculis.
-            </p>,
-            "title": "Baz",
+            "content": "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.",
+            "id": "exp-3",
+            "subtitle": "My subtitle",
+            "title": "My title",
           },
         ]
       }
@@ -109,9 +109,10 @@ exports[`Components: Expandable renders 1`] = `
   <p
     className="lead"
   >
-    Accordion
+    Expandables toggle between hiding and showing content on click. They can be opened and closed independently of eachother, but if you wish for them to work like an accordion then wrap your expandables in an expandable-group.
   </p>
   <Overview />
-  <Accordion />
+  <ExpandableGroup />
+  <JavascriptMethods />
 </DocContainer>
 `;

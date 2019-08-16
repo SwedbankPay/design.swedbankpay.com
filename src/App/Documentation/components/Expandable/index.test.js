@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Expandable, { Overview, Accordion } from "./index";
+import Expandable, { Overview, ExpandableGroup } from "./index";
 
 describe("Components: Expandable", () => {
     it("is defined", () => {
@@ -26,13 +26,13 @@ describe("Components: Expandable", () => {
         });
     });
 
-    describe("Accordion", () => {
+    describe("ExpandableGroup", () => {
         it("is defined", () => {
-            expect(Accordion).toBeDefined();
+            expect(ExpandableGroup).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<Accordion />);
+            const wrapper = shallow(<ExpandableGroup />);
 
             expect(wrapper).toMatchSnapshot();
         });
