@@ -4,7 +4,7 @@ import { render } from "react-dom";
 import "prismjs";
 import "prismjs/themes/prism.css";
 
-import "./less/px.less";
+import "./less/swedbankpay.less";
 import "./less/themes/documentation.less";
 import "./less/designguide.less";
 import App from "./App";

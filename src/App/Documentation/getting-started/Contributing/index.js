@@ -93,11 +93,11 @@ const AddingStyles = () => {
     const ImportingTheStyles = () => (
         <>
             <h3>Importing the styles</h3>
-            <p>Import it in the appropriate root-file (<Property value="px.less" /> for the core styles, under <Property value="/themes" /> if the component is going to be part of a specific theme).</p>
+            <p>Import it in the appropriate root-file (<Property value="swedbankpay.less" /> for the core styles, under <Property value="/themes" /> if the component is going to be part of a specific theme).</p>
             <p>Assuming you are creating a core component the import would look like this:</p>
             <ComponentPreview language="css" codeFigure>
                 {`
-/* px.less */
+/* swedbankpay.less */
 ...
 /* Components */
 @import "components/my-example-component";

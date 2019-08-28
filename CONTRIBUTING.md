@@ -109,12 +109,12 @@ To add styling for your component create a new file in `./src/less/components/`,
 
 #### Importing the styles
 
-Import it in the appropriate root-file (`px.less` for the core styles, under `/themes` if the component is going to be part of a specific theme).
+Import it in the appropriate root-file (`swedbankpay.less` for the core styles, under `/themes` if the component is going to be part of a specific theme).
 
 Assuming you are creating a core component the import would look like this:
 
 ```scss
-// px.less
+// swedbankpay.less
 ...
 ...
 

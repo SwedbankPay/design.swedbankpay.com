@@ -29,7 +29,7 @@ exports[`GettingStarted: Introduction Css renders 1`] = `
     language="html"
   >
     <link
-      href="https://design.swedbankpay.com/TEST/styles/px.css"
+      href="https://design.swedbankpay.com/TEST/styles/swedbankpay.css"
       rel="stylesheet"
     />
   </ComponentPreview>

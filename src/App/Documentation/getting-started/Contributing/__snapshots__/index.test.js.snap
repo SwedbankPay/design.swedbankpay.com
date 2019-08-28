@@ -226,7 +226,7 @@ exports[`GettingStarted: Contributing Adding Styles renders 3`] = `
   <p>
     Import it in the appropriate root-file (
     <Property
-      value="px.less"
+      value="swedbankpay.less"
     />
      for the core styles, under 
     <Property
@@ -242,7 +242,7 @@ exports[`GettingStarted: Contributing Adding Styles renders 3`] = `
     language="css"
   >
     
-/* px.less */
+/* swedbankpay.less */
 ...
 /* Components */
 @import "components/my-example-component";

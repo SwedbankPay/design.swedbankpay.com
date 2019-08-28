@@ -59,36 +59,36 @@
 @white:                                     #ffffff;
 
 /* Brand */
-@orange-medium:                             #ff6100;
-@orange-light:                              #ff9900;
+// @orange-medium:                             #ff6100; // Not used
+// @orange-light:                              #ff9900; // Not used
 @orange-bright:                             #ffcc00;
-@green:                                     #82b236;
+// @green:                                     #82b236; // Not used
 @blue:                                      #00bcdf;
-@blue-light:                                #a2c9ce;
+// @blue-light:                                #a2c9ce; // Not used
 @blue-bright:                               #d7e6e9;
-@teal:                                      #4893a0;
-@blue-bright-alt:                           #a3c9cf;
-@red-medium:                                #dd3300;
+// @teal:                                      #4893a0; // Not used
+// @blue-bright-alt:                           #a3c9cf; // Not used
+// @red-medium:                                #dd3300; // Not used
 
 /* Alerts */
-@brand-success:                             #477d17;
-@brand-success-light:                       #f2f7eb;
-@brand-warning:                             #ff9900;
-@brand-warning-light:                       #fffae5;
-@brand-error-border:                        #f1bbb9;
-@brand-error:                               #b24843;
-@brand-error-light:                         #fceeed;
-@brand-info:                                #2c7a8f;
-@brand-info-light:                          #f0f9fb;
+// @brand-success:                             #477d17;
+// @brand-success-light:                       #f2f7eb;
+// @brand-warning:                             #ff9900;
+// @brand-warning-light:                       #fffae5;
+// @brand-error-border:                        #f1bbb9;
+// @brand-error:                               #b24843;
+// @brand-error-light:                         #fceeed;
+// @brand-info:                                #2c7a8f;
+// @brand-info-light:                          #f0f9fb;
 
 
 /* BRAND MANAGER COLORS (NOT SHOWCASED ACORN, BUT SOME ARE USED) */
 
 /* Main Colors */
-@orange-main:                               #ee7023;
-@orange-headline:                           #f35b1c; // WCAG
-@turquoise:                                 #31a3ae;
-@turquoise-links:                           #257886; // WCAG
+@orange-main:                               #ee7023; // Not used
+@orange-headline:                           #f35b1c; // WCAG // Not used
+// @turquoise:                                 #31a3ae;
+// @turquoise-links:                           #257886; // WCAG
 @yellow:                                    #fdc129;
 @lilac:                                     #c5569a;
 @blue:                                      #5b8ad6;
@@ -149,11 +149,11 @@
 
 
 /* Misc */
-@brand-primary:                             @yellow;
-@brand-primary-faded:                       fade(@brand-primary, 60%);
+// @brand-primary:                             @yellow;
+// @brand-primary-faded:                       fade(@brand-primary, 60%);
 @color-muted:                               fade(@text-color, 75%);
 @color-muted-hover:                         fade(@text-color, 85%);
-@link-color:                                @turquoise-links;
+@link-color:                                @brand-accent-links;
 @default-box-shadow:                        0 0 20px 0 rgba(81, 43, 43, 0.12);
 @small-color:                               @gray-light;
 @footer-small-color:                        @gray-bright-alt;
@@ -324,7 +324,7 @@
 
 /* Colors */
 @table-bg:                                  transparent;
-@table-header-color:                        @brown;
+@table-header-color:                        @brand-secondary;
 @table-text-color:                          @gray-light-alt;
 @table-border-color:                        @border-color;
 @table-stripe-color:                        @neargray;
@@ -380,7 +380,7 @@
 @line-height-computed:                      @base-font-size * @line-height-base;
 
 @headings-font-family:                      inherit;
-@headings-color:                            @brown;
+@headings-color:                            @brand-secondary;
 
 /* Paragraphs */
 @paragraph-margin-bottom:                   @base-margin;
@@ -446,12 +446,12 @@
 @btn-border-radius-small:                   @border-radius-base;
 
 @btn-executive-color:                       @white;
-@btn-executive-bg:                          @orange-main;
+@btn-executive-bg:                          @brand-secondary2;
 @btn-executive-disabled-color:              @white;
 @btn-executive-disabled-bg:                 @executive-disabled-bg;
 
 @btn-guiding-color:                         @white;
-@btn-guiding-bg:                            @turquoise;
+@btn-guiding-bg:                            @brand-accent;
 @btn-guiding-disabled-color:                @white;
 @btn-guiding-disabled-bg:                   @guiding-disabled-bg;
 
@@ -460,7 +460,7 @@
 @btn-destructive-disabled-color:            @destructive-disabled-color;
 @btn-destructive-disabled-bg:               @destructive-disabled-bg;
 
-@btn-link-color:                            @turquoise-links;
+@btn-link-color:                            @brand-accent-links;
 @btn-link-disabled-color:                   @gray-light-alt;
 
 /*
@@ -506,12 +506,12 @@
 @input-padding-x:                           0.75rem;
 @input-line-height:                         @line-height-base;
 
-@input-color:                               @brown;
+@input-color:                               @brand-secondary;
 @input-bg:                                  @white;
 @input-bg-disabled:                         @bg-gray;
 @input-checked-bg-disabled:                 @gray-light-alt;
 @input-border-color:                        @border-color;
-@input-addon-color:                         @brown;
+@input-addon-color:                         @brand-secondary;
 @input-addon-bg:                            @bg-gray;
 @input-border-focus:                        #66afe9;
 
@@ -519,7 +519,7 @@
 @input-border-radius:                       0;
 
 @legend-border-color:                       @border-color;
-@legend-color:                              @brown;
+@legend-color:                              @brand-secondary;
 @legend-bottom-margin:                      @base-margin * 1.25;
 
 @helpblock-margin:                          (@base-margin * 0.325) 0;
@@ -577,8 +577,8 @@
  * ==========================================================================
  */
 
-@pagination-active-color:                   @turquoise-links;
-@pagination-arrow-color:                    @turquoise-links;
+@pagination-active-color:                   @brand-accent-links;
+@pagination-arrow-color:                    @brand-accent-links;
 @pagination-default-color:                  @gray-bright-alt;
 
 @pagination-bullet-size:                    @status-size;

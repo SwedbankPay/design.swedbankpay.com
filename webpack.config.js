@@ -184,8 +184,8 @@ module.exports = (env, argv) => {
                         reuseExistingChunk: true
                     },
                     pxStyles: {
-                        name: "px",
-                        test: /(flatpickr\.css|px\.less)$/,
+                        name: "swedbankpay",
+                        test: /(flatpickr\.css|swedbankpay\.less)$/,
                         chunks: "all",
                         enforce: true
                     },
@@ -335,15 +335,15 @@ module.exports = (env, argv) => {
                                 destination: "./dist/temp/release/scripts"
                             },
                             {
-                                source: `./dist${basename}scripts/px.dashboard.js`,
+                                source: `./dist${basename}scripts/px-dashboard.js`,
                                 destination: "./dist/temp/release/scripts"
                             },
                             {
-                                source: `./dist${basename}scripts/px.dashboard.js.map`,
+                                source: `./dist${basename}scripts/px-dashboard.js.map`,
                                 destination: "./dist/temp/release/scripts"
                             },
                             {
-                                source: `./dist${basename}styles/px.css`,
+                                source: `./dist${basename}styles/swedbankpay.css`,
                                 destination: "./dist/temp/release/styles"
                             }
                         ],

@@ -29,7 +29,7 @@ exports[`Dashboard: Introduction Css renders 1`] = `
     language="html"
   >
     <link
-      href="https://design.swedbankpay.com/TEST/styles/px.css"
+      href="https://design.swedbankpay.com/TEST/styles/swedbankpay.css"
       rel="stylesheet"
     />
     <link
@@ -69,7 +69,7 @@ exports[`Dashboard: Introduction JavaScript renders 1`] = `
       src="https://design.swedbankpay.com/TEST/scripts/px-script.js"
     />
     <script
-      src="https://design.swedbankpay.com/TEST/scripts/px.dashboard.js"
+      src="https://design.swedbankpay.com/TEST/scripts/px-dashboard.js"
     />
   </ComponentPreview>
 </Fragment>

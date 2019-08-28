@@ -5,8 +5,8 @@ import { ComponentPreview, Property, DocContainer } from "@docutils";
 
 const BASENAME = process.env.basename;
 const scriptUrl = `https://design.swedbankpay.com${BASENAME}scripts/px-script.js`;
-const dashboardScriptUrl = `https://design.swedbankpay.com${BASENAME}scripts/px.dashboard.js`;
-const styleUrl = `https://design.swedbankpay.com${BASENAME}styles/px.css`;
+const dashboardScriptUrl = `https://design.swedbankpay.com${BASENAME}scripts/px-dashboard.js`;
+const styleUrl = `https://design.swedbankpay.com${BASENAME}styles/swedbankpay.css`;
 const dashboardStyleUrl = `https://design.swedbankpay.com${BASENAME}styles/px.dashboard.css`;
 
 const QuickStart = () => (
