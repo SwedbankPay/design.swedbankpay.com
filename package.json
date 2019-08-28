@@ -92,7 +92,7 @@
         "stylelint-declaration-block-no-ignored-properties": "^2.1.0",
         "terser-webpack-plugin": "^1.4.1",
         "testcafe": "^1.4.1",
-        "webpack": "^4.39.2",
+        "webpack": "^4.39.3",
         "webpack-bundle-analyzer": "^3.4.1",
         "webpack-cli": "^3.3.6",
         "webpack-dev-server": "^3.8.0"
