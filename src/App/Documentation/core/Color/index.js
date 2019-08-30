@@ -22,11 +22,11 @@ const mainText = [
         hex: "#8ACDC3"
     },
     {
-        name: "Info Pink",
+        name: "Info variant-3",
         hex: "#EFB7B6"
     },
     {
-        name: "Apricot",
+        name: "variant-1",
         hex: "#FBF2EA"
     },
     {

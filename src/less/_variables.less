@@ -61,7 +61,7 @@
 /* Brand */
 // @orange-medium:                             #ff6100; // Not used
 // @orange-light:                              #ff9900; // Not used
-@orange-bright:                             #ffcc00;
+// @orange-bright:                             #ffcc00; // Replaced by @brand-primary-bright
 // @green:                                     #82b236; // Not used
 @blue:                                      #00bcdf;
 // @blue-light:                                #a2c9ce; // Not used
@@ -85,26 +85,26 @@
 /* BRAND MANAGER COLORS (NOT SHOWCASED ACORN, BUT SOME ARE USED) */
 
 /* Main Colors */
-@orange-main:                               #ee7023; // Not used
-@orange-headline:                           #f35b1c; // WCAG // Not used
+// @orange-main:                               #ee7023; // Not used
+// @orange-headline:                           #f35b1c; // WCAG // Not used
 // @turquoise:                                 #31a3ae;
 // @turquoise-links:                           #257886; // WCAG
 @yellow:                                    #fdc129;
-@lilac:                                     #c5569a;
+// @lilac:                                     #c5569a; // Not used
 @blue:                                      #5b8ad6;
-@brown:                                     #512b2b; // WCAG
+// @brown:                                     #512b2b; // WCAG // Replaced by @brand-secondary
 
 /* Gradient */
-@gradient-orange:                           #fa7f25;
-@gradient-yellow:                           #fdbe13;
+// @gradient-orange:                           #fa7f25; // Not used
+// @gradient-yellow:                           #fdbe13; // Not used
 
 /* Background Colors */
-@bg-apricot:                                #fbf2ea;
-@bg-light-turquoise:                        #ebf8f2;
-@bg-pink:                                   #fbedf4;
-@bg-light-blue:                             #e9f7fb;
-@bg-gray:                                   #ebe7e2;
-@bg-white:                                  #ffffff;
+// @bg-apricot:                                #fbf2ea; // Moved to brand specific variables
+// @bg-light-turquoise:                        #ebf8f2; // Moved to brand specific variables
+// @bg-pink:                                   #fbedf4; // Moved to brand specific variables
+// @bg-light-blue:                             #e9f7fb; // Moved to brand specific variables
+// @bg-gray:                                   #ebe7e2; // Moved to brand specific variables
+// @bg-white:                                  #ffffff; // Moved to brand specific variables
 
 /* Alert Colors */
 @alert-red:                                 #c5131c;
@@ -149,8 +149,8 @@
 
 
 /* Misc */
-// @brand-primary:                             @yellow;
-// @brand-primary-faded:                       fade(@brand-primary, 60%);
+// @brand-primary:                             @yellow; // Replaced by brand specific variables
+// @brand-primary-faded:                       fade(@brand-primary, 60%); // Replaced by brand specific variables
 @color-muted:                               fade(@text-color, 75%);
 @color-muted-hover:                         fade(@text-color, 85%);
 @link-color:                                @brand-accent-links;
@@ -181,10 +181,10 @@
                                             neutral: @brand-info-light;
                                             warning: @brand-warning-light;
                                             danger: @brand-error-light;
-                                            apricot: @bg-apricot;
-                                            light-turquoise: @bg-light-turquoise;
-                                            pink: @bg-pink;
-                                            light-blue: @bg-light-blue;
+                                            variant-1: @bg-variant-1;
+                                            variant-2: @bg-variant-2;
+                                            variant-3: @bg-variant-3;
+                                            variant-4: @bg-variant-4;
                                             gray: @bg-gray;
 }
 /* stylelint-enable */
@@ -446,7 +446,7 @@
 @btn-border-radius-small:                   @border-radius-base;
 
 @btn-executive-color:                       @white;
-@btn-executive-bg:                          @brand-secondary2;
+@btn-executive-bg:                          @brand-tertiary;
 @btn-executive-disabled-color:              @white;
 @btn-executive-disabled-bg:                 @executive-disabled-bg;
 

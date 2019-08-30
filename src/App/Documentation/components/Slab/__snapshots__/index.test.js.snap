@@ -104,7 +104,7 @@ exports[`Components: Slab SlabArrow renders 1`] = `
       </p>
     </div>
     <div
-      className="slab slab-apricot slab-arrow"
+      className="slab slab-variant-1 slab-arrow"
     >
       <p>
         This slab has some connection to the content above.
@@ -122,7 +122,7 @@ exports[`Components: Slab SlabColors renders 1`] = `
     Slab colors
   </h2>
   <p>
-    Both white and apricot variants of slab exist.
+    Both white and variant-1 variants of slab exist.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -153,7 +153,7 @@ exports[`Components: Slab SlabColors renders 1`] = `
       </ul>
     </div>
     <div
-      className="slab slab-apricot"
+      className="slab slab-variant-1"
     >
       <h4>
         Here is some text and then a striped item list

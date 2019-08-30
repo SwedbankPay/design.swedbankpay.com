@@ -263,7 +263,7 @@ exports[`Core: Color MainColors renders 1`] = `
     >
       <ColorPreview
         hex="#EFB7B6"
-        name="Info Pink"
+        name="Info variant-3"
       />
     </li>
     <li
@@ -271,7 +271,7 @@ exports[`Core: Color MainColors renders 1`] = `
     >
       <ColorPreview
         hex="#FBF2EA"
-        name="Apricot"
+        name="variant-1"
       />
     </li>
     <li

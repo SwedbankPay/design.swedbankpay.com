@@ -66,7 +66,7 @@ const SlabArrow = () => (
                     This slab has some connection to the content above.
                 </p>
             </div>
-            <div className="slab slab-apricot slab-arrow">
+            <div className="slab slab-variant-1 slab-arrow">
                 <p>
                     This slab has some connection to the content above.
                 </p>
@@ -79,7 +79,7 @@ const SlabColors = () => (
     <>
         <h2 id="slab-colors">Slab colors</h2>
         <p>
-            Both white and apricot variants of slab exist.
+            Both white and variant-1 variants of slab exist.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="slab slab-white">
@@ -94,7 +94,7 @@ const SlabColors = () => (
                 </ul>
             </div>
 
-            <div className="slab slab-apricot">
+            <div className="slab slab-variant-1">
                 <h4>Here is some text and then a striped item list</h4>
                 <small>
                     Some text with a small listing of items underneath.
