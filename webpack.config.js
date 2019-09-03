@@ -154,7 +154,10 @@ module.exports = (env, argv) => {
                 },
                 {
                     test: /\.(png|jpe?g|gif|svg)$/i,
-                    exclude: `/(flags|${brand === "swedbankpay" ? "payex" : "swedbankpay"})$/`,
+                    // exclude: brand === "swedbankpay" ? /(flags|payex)$/ : /(flags|swedbankpay)$/,
+                    exclude: [
+                        path.resolve(__dirname, "src/img/swedbankpay")
+                    ],
                     // include: [
                     //     path.resolve(__dirname, "src/img")
                     // ],
@@ -192,7 +195,7 @@ module.exports = (env, argv) => {
                     },
                     pxStyles: {
                         name: brand,
-                        test: `/(flatpickr.css|${brand}.less)$/`,
+                        test: brand === "swedbankpay" ? /(flatpickr\.css|swedbankpay\.less)$/ : /(flatpickr\.css|payex\.less)$/,
                         chunks: "all",
                         enforce: true
                     },
