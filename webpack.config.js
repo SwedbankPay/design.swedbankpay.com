@@ -156,7 +156,7 @@ module.exports = (env, argv) => {
                     test: /\.(png|jpe?g|gif|svg)$/i,
                     // exclude: brand === "swedbankpay" ? /(flags|payex)$/ : /(flags|swedbankpay)$/,
                     exclude: [
-                        path.resolve(__dirname, "src/img/swedbankpay")
+                        path.resolve(__dirname, `src/img/${brand === "swedbankpay" ? "payex" : "swedbankpay"}`)
                     ],
                     // include: [
                     //     path.resolve(__dirname, "src/img")
