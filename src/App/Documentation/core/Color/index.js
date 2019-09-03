@@ -22,11 +22,11 @@ const mainText = [
         hex: "#8ACDC3"
     },
     {
-        name: "Info variant-3",
+        name: "Info pink",
         hex: "#EFB7B6"
     },
     {
-        name: "variant-1",
+        name: "Apricot",
         hex: "#FBF2EA"
     },
     {
@@ -186,7 +186,7 @@ const Grayscale = () => (
 
 const Color = () => (
     <DocContainer>
-        <p className="lead">The Swedbank Pay DesignGuide color palette</p>
+        <p className="lead">Color palette</p>
         <MainColors />
         <AlertColors />
         <Grayscale />

@@ -4,13 +4,14 @@ import PrismCode from "react-prism";
 import { ComponentPreview, DocContainer } from "@docutils";
 
 const BASENAME = process.env.basename;
-const scriptUrl = `https://design.swedbankpay.com${BASENAME}scripts/px-script.js`;
-const styleUrl = `https://design.swedbankpay.com${BASENAME}styles/swedbankpay.css`;
+const brand = process.env.brand;
+const scriptUrl = `https://design.${brand}.com${BASENAME}scripts/px-script.js`;
+const styleUrl = `https://design.${brand}.com${BASENAME}styles/${brand}.css`;
 
 const QuickStart = () => (
     <>
         <h2 id="quick-start">Quick start</h2>
-        <p>To quickly add the designguide to your project, include the snippets below in your project.</p>
+        <p>To quickly add this DesignGuide to your project, include the snippets below in your project.</p>
     </>
 );
 
@@ -36,7 +37,7 @@ const JavaScript = () => (
 
 const Introduction = () => (
     <DocContainer docToc>
-        <p className="lead">Get started with the Swedbank Pay DesignGuide.</p>
+        <p className="lead">Getting started with the DesignGuide.</p>
         <QuickStart />
         <Css />
         <JavaScript />

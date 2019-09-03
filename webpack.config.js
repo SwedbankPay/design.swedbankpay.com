@@ -14,6 +14,8 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const AppManifestWebpackPlugin = require("app-manifest-webpack-plugin");
 
 module.exports = (env, argv) => {
+
+    const brand = argv.brand || "swedbankpay";
     const isProd = argv.mode === "production";
     const isDevServer = !!argv.host;
     const version = env && env.semver ? env.semver : "LOCAL_DEV";
@@ -21,17 +23,19 @@ module.exports = (env, argv) => {
     const basename = env && env.basename ? `/${env.basename}/` : "/";
     const infoVersion = env && env.info_version ? env.info_version : "LOCAL_DEV";
 
+    console.log(`Building with ${brand} brand`);
+
     const config = {
         entry: {
             "px-script": ["@babel/polyfill", "./src/px-script/main/index.js"],
             "px-dashboard": "./src/px-script/dashboard/index.js",
-            app: ["@babel/polyfill/noConflict", "./src/index.js"]
+            app: ["@babel/polyfill/noConflict", `./src/${brand}.js`]
         },
         resolve: {
             extensions: [".js", ".jsx", ".json"]
         },
         output: {
-            library: "swedbankpay",
+            library: brand,
             path: path.resolve(__dirname, `dist${basename}`),
             filename: "scripts/[name].js?[hash]",
             chunkFilename: "scripts/[name].js?[hash]",
@@ -150,7 +154,10 @@ module.exports = (env, argv) => {
                 },
                 {
                     test: /\.(png|jpe?g|gif|svg)$/i,
-                    exclude: /flags/,
+                    exclude: `/(flags|${brand === "swedbankpay" ? "payex" : "swedbankpay"})$/`,
+                    // include: [
+                    //     path.resolve(__dirname, "src/img")
+                    // ],
                     use: [
                         {
                             loader: "file-loader",
@@ -184,8 +191,8 @@ module.exports = (env, argv) => {
                         reuseExistingChunk: true
                     },
                     pxStyles: {
-                        name: "swedbankpay",
-                        test: /(flatpickr\.css|swedbankpay\.less)$/,
+                        name: brand,
+                        test: `/(flatpickr.css|${brand}.less)$/`,
                         chunks: "all",
                         enforce: true
                     },
@@ -219,7 +226,7 @@ module.exports = (env, argv) => {
             new HtmlWebpackPlugin({
                 template: "./src/index.html",
                 hash: true,
-                title: "Swedbank Pay DesignGuide",
+                title: brand === "swedbankpay" ? "Swedbank Pay DesignGuide" : "PayEx DesignGuide",
                 meta: {
                     "informational-version": infoVersion
                 }
@@ -232,7 +239,8 @@ module.exports = (env, argv) => {
                     basename: JSON.stringify(basename),
                     version: JSON.stringify(version),
                     sentry: isRelease,
-                    google: isRelease
+                    google: isRelease,
+                    brand: JSON.stringify(brand)
                 }
             }),
             new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/) // Ignores moments locale folder which doubles the size of the package, moment is a dependency of chart.js [EH]
@@ -253,7 +261,7 @@ module.exports = (env, argv) => {
                 filename: `${rootPath}index.html`,
                 template: "./build/rootindex.html",
                 hash: true,
-                title: "Swedbank Pay DesignGuide",
+                title: brand === "swedbankpay" ? "Swedbank Pay DesignGuide" : "PayEx DesignGuide",
                 chunks: ["px"],
                 basename
             }),
@@ -262,7 +270,7 @@ module.exports = (env, argv) => {
                 template: "./build/root404.html",
                 hash: true,
                 chunks: ["px"],
-                title: "Swedbank Pay DesignGuide",
+                title: brand === "swedbankpay" ? "Swedbank Pay DesignGuide" : "PayEx DesignGuide",
                 basename
             }),
             new SentryCliPlugin({
@@ -290,12 +298,12 @@ module.exports = (env, argv) => {
 
         config.plugins.push(
             new AppManifestWebpackPlugin({
-                logo: "./src/img/favicon.png",
+                logo: `./src/img/${brand}/favicon.png`,
                 output: "/icons/",
                 config: {
-                    appName: "Swedbank Pay DesignGuide",
-                    developerName: "Swedbank Pay",
-                    developerURL: "https://payex.com",
+                    appName: brand === "swedbankpay" ? "Swedbank Pay DesignGuide" : "PayEx DesignGuide",
+                    developerName: brand === "swedbankpay" ? "Swedbank Pay" : "PayEx",
+                    developerURL: brand === "swedbankpay" ? "https://swedbankpay.com" : "https://payex.com",
                     background: "#000",
                     theme_color: "#2da944",
                     version,
@@ -343,7 +351,7 @@ module.exports = (env, argv) => {
                                 destination: "./dist/temp/release/scripts"
                             },
                             {
-                                source: `./dist${basename}styles/swedbankpay.css`,
+                                source: `./dist${basename}styles/${brand}.css`,
                                 destination: "./dist/temp/release/styles"
                             }
                         ],

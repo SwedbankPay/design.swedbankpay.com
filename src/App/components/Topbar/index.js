@@ -1,6 +1,20 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import logo from "@src/img/logo/spay_horizontal_pos.svg";
+// import swedbankpayLogo from "@src/img/swedbankpay/logo/spay_horizontal_pos.svg";
+// import payexLogo from "@src/img/payex/logo/spay_horizontal_pos.svg";
+
+// console.log("Do we have brand in process.env?", process.env.brand);
+const brand = process.env.brand;
+
+const getLogo = brand => {
+    switch (brand) {
+        case "swedbankpay": return require("@src/img/swedbankpay/logo/spay_horizontal_pos.svg");
+        case "payex": return require("@src/img/payex/logo/spay_horizontal_pos.svg");
+        default: return "";
+    }
+};
+
+const logotest = getLogo(brand);
 
 const isDev = process.env.version === "LOCAL_DEV";
 
@@ -16,6 +30,8 @@ const TopbarMenu = ({ menu, logout }) => {
 
     return (
         <nav className="topbar-nav">
+            {logotest}
+            <h1>Hello</h1>
             <div className="topbar-link-container">{"\n"}
                 <button type="button" className="topbar-close">{"\n"}
                     <i className="material-icons">close</i>{"\n"}
@@ -50,7 +66,7 @@ const TopbarLogout = () => (
 const TopbarLogo = () => (
     <>
         <a className="topbar-logo" href="/" onClick={e => e.preventDefault()}>{"\n"}
-            <img src={!isDev ? `${process.env.basename}img/spay_horizontal_pos.svg` : logo} alt="swedbankpay-logo"/>{"\n"}
+            <img src={!isDev ? `${process.env.basename}img/spay_horizontal_pos.svg` : logotest} alt={`${brand}-logo`}/>{"\n"}
         </a>{"\n"}
     </>
 );

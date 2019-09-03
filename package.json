@@ -5,9 +5,13 @@
     "main": "index.js",
     "scripts": {
         "start": "webpack-dev-server --hot --mode development",
+        "start:payex": "webpack-dev-server --hot --mode development --brand payex",
         "start:prod": "webpack-dev-server --hot --mode production",
+        "start:prod:payex": "webpack-dev-server --hot --mode production --brand payex",
         "build": "webpack --mode development",
+        "build:payex": "webpack --mode development --brand payex",
         "build:prod": "webpack --mode production",
+        "build:prod:payex": "webpack --mode production --brand payex",
         "test": "jest",
         "test:update": "jest --updateSnapshot",
         "test:codecov": "jest && codecov",

@@ -55,7 +55,6 @@ const ErrorPage404 = Loadable({
 class App extends Component {
     constructor () {
         super();
-        this.state = { brand: "swedbankpay" };
 
         if (process.env.google) {
             history.listen(location => {
@@ -73,15 +72,9 @@ class App extends Component {
         topbar.init();
     }
 
-    handleButtonClick () {
-        this.setState({ brand: this.state.brand === "swedbankpay" ? "payex" : "swedbankpay" });
-    }
-
     render () {
         return (
             <Router basename={BASENAME} history={history}>
-                {/* <link id="brand-stylesheet" rel="stylesheet" type="text/css" href={path.resolve(__dirname, `styles/${this.state.brand}.css`)} /> */}
-                <button className="btn btn-guiding btn-xs btn-outline d-flex ml-auto" type="button" onClick={this.handleButtonClick.bind(this)}>Switch to {this.state.brand === "swedbankpay" ? "PayEx" : "Swedbank Pay"} theme</button>
                 <ScrollToTopComponent>
                     <AppHeader />
                     <Switch>
