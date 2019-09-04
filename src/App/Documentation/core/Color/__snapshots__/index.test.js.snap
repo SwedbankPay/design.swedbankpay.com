@@ -263,7 +263,7 @@ exports[`Core: Color MainColors renders 1`] = `
     >
       <ColorPreview
         hex="#EFB7B6"
-        name="Info variant-3"
+        name="Info pink"
       />
     </li>
     <li
@@ -271,7 +271,7 @@ exports[`Core: Color MainColors renders 1`] = `
     >
       <ColorPreview
         hex="#FBF2EA"
-        name="variant-1"
+        name="Apricot"
       />
     </li>
     <li
@@ -307,7 +307,7 @@ exports[`Core: Color renders 1`] = `
   <p
     className="lead"
   >
-    The Swedbank Pay DesignGuide color palette
+    Color palette
   </p>
   <MainColors />
   <AlertColors />

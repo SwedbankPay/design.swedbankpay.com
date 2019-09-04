@@ -24,15 +24,6 @@ exports[`Main: App renders 1`] = `
     }
   }
 >
-  <button
-    className="btn btn-guiding btn-xs btn-outline d-flex ml-auto"
-    onClick={[Function]}
-    type="button"
-  >
-    Switch to 
-    PayEx
-     theme
-  </button>
   <withRouter(ScrollToTop)>
     <withRouter(AppHeader) />
     <Switch>
