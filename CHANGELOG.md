@@ -1,6 +1,6 @@
 # Changelog
 
-## [3.X.X] - 2019-XX-XX
+## [4.0.0] - 2019-09-04
 
 ### Added
 
@@ -15,7 +15,7 @@
     - Generic scripts
  - Main output filenames has been renamed to
     - `/styles/design.css"`
-    - `/scripts/design-script.js"`
+    - `/scripts/design.js"`
     - `/scripts/design-dashboard.js"`
  - `px` and all references to this object is now: `dg`
     - E.g. `dg.script.initAll(), dg.toast() etc...`
