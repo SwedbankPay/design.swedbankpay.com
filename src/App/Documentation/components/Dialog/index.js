@@ -5,7 +5,7 @@ import { ComponentPreview, DocContainer, Attribute, Property, JavascriptDocs } f
 import AlertComponent from "@components/Alert";
 import DialogComponent from "@components/Dialog";
 
-const { dialog } = window.px;
+const { dialog } = window.dg;
 
 const HowItWorks = () => (
     <>

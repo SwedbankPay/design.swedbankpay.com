@@ -300,7 +300,7 @@ exports[`Documentation: Forms JavascriptMethods renders 1`] = `
   />
   <p>
     The 
-    <PxScript
+    <DgScript
       component="validation"
       func="init"
     />

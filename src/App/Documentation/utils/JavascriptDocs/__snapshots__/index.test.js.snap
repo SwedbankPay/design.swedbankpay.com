@@ -27,13 +27,13 @@ exports[`Utilities: JavascriptDocs renders init and close methods 1`] = `
         <td
           scope="row"
         >
-          <PxScript
+          <DgScript
             component="test"
             func="init"
           >
             <code>
               <span>
-                px
+                dg
               </span>
               <span
                 className="token punctuation"
@@ -64,7 +64,7 @@ exports[`Utilities: JavascriptDocs renders init and close methods 1`] = `
                 );
               </span>
             </code>
-          </PxScript>
+          </DgScript>
         </td>
         <td>
           <Link
@@ -81,7 +81,7 @@ exports[`Utilities: JavascriptDocs renders init and close methods 1`] = `
           <td
             scope="row"
           >
-            <PxScript
+            <DgScript
               component="test"
               func="close"
               params={
@@ -92,7 +92,7 @@ exports[`Utilities: JavascriptDocs renders init and close methods 1`] = `
             >
               <code>
                 <span>
-                  px
+                  dg
                 </span>
                 <span
                   className="token punctuation"
@@ -129,7 +129,7 @@ exports[`Utilities: JavascriptDocs renders init and close methods 1`] = `
                   );
                 </span>
               </code>
-            </PxScript>
+            </DgScript>
           </td>
           <td>
             Closes the given 
@@ -169,13 +169,13 @@ exports[`Utilities: JavascriptDocs renders init and open methods 1`] = `
         <td
           scope="row"
         >
-          <PxScript
+          <DgScript
             component="test"
             func="init"
           >
             <code>
               <span>
-                px
+                dg
               </span>
               <span
                 className="token punctuation"
@@ -206,7 +206,7 @@ exports[`Utilities: JavascriptDocs renders init and open methods 1`] = `
                 );
               </span>
             </code>
-          </PxScript>
+          </DgScript>
         </td>
         <td>
           <Link
@@ -223,7 +223,7 @@ exports[`Utilities: JavascriptDocs renders init and open methods 1`] = `
           <td
             scope="row"
           >
-            <PxScript
+            <DgScript
               component="test"
               func="open"
               params={
@@ -234,7 +234,7 @@ exports[`Utilities: JavascriptDocs renders init and open methods 1`] = `
             >
               <code>
                 <span>
-                  px
+                  dg
                 </span>
                 <span
                   className="token punctuation"
@@ -271,7 +271,7 @@ exports[`Utilities: JavascriptDocs renders init and open methods 1`] = `
                   );
                 </span>
               </code>
-            </PxScript>
+            </DgScript>
           </td>
           <td>
             Opens the given 
@@ -312,13 +312,13 @@ exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
         <td
           scope="row"
         >
-          <PxScript
+          <DgScript
             component="test"
             func="init"
           >
             <code>
               <span>
-                px
+                dg
               </span>
               <span
                 className="token punctuation"
@@ -349,7 +349,7 @@ exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
                 );
               </span>
             </code>
-          </PxScript>
+          </DgScript>
         </td>
         <td>
           <Link
@@ -366,7 +366,7 @@ exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
           <td
             scope="row"
           >
-            <PxScript
+            <DgScript
               component="test"
               func="open"
               params={
@@ -377,7 +377,7 @@ exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
             >
               <code>
                 <span>
-                  px
+                  dg
                 </span>
                 <span
                   className="token punctuation"
@@ -414,7 +414,7 @@ exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
                   );
                 </span>
               </code>
-            </PxScript>
+            </DgScript>
           </td>
           <td>
             Opens the given 
@@ -429,7 +429,7 @@ exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
           <td
             scope="row"
           >
-            <PxScript
+            <DgScript
               component="test"
               func="close"
               params={
@@ -440,7 +440,7 @@ exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
             >
               <code>
                 <span>
-                  px
+                  dg
                 </span>
                 <span
                   className="token punctuation"
@@ -477,7 +477,7 @@ exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
                   );
                 </span>
               </code>
-            </PxScript>
+            </DgScript>
           </td>
           <td>
             Closes the given 
@@ -514,7 +514,7 @@ exports[`Utilities: JavascriptDocs renders only init method 1`] = `
         <td
           scope="row"
         >
-          <PxScript
+          <DgScript
             component="test"
             func="init"
           />

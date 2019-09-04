@@ -69,7 +69,7 @@ exports[`GettingStarted: Contributing Adding JavaScript renders 3`] = `
   <p>
     Create a new file under 
     <Property
-      value="./src/px-script/main/[MyExampleComponent]/"
+      value="./src/scripts/main/[MyExampleComponent]/"
     />
      for your component, name it 
     <Property
@@ -104,12 +104,12 @@ export default MyExampleComponent;
 exports[`GettingStarted: Contributing Adding JavaScript renders 4`] = `
 <div>
   <h3>
-    Add your components script to px-script
+    Add your components script to scripts
   </h3>
   <p>
     Open 
     <Property
-      value="./src/px-script/main/index.js"
+      value="./src/scripts/main/index.js"
     />
      and add your component:
   </p>
@@ -121,7 +121,7 @@ exports[`GettingStarted: Contributing Adding JavaScript renders 4`] = `
 ...
 import MyExampleComponent from "./MyExampleComponent";
 ...
-const px = {
+const dg = {
 ...
 MyExampleComponent,
 ...
@@ -141,7 +141,7 @@ exports[`GettingStarted: Contributing Adding JavaScript renders 5`] = `
   <p>
     Considering the documentation is built in react your documentation component will load after 
     <Property
-      value="px-script"
+      value="scripts"
     />
      runs it
     '
@@ -170,7 +170,7 @@ exports[`GettingStarted: Contributing Adding JavaScript renders 5`] = `
 import React, { Component } from "react";
 ...
 // import your components script
-import { MyExampleComponent } from "@src/px-script/main";
+import { MyExampleComponent } from "@src/scripts/main";
 ...
 ...
 // modify MyExampleDocumentationComponent
@@ -205,11 +205,11 @@ exports[`GettingStarted: Contributing Adding JavaScript renders 6`] = `
   <p>
     If your component needs javascript to run, you will need to add the javascript to the 
     <Property
-      value="px-script"
+      value="scripts"
     />
   </p>
   <CreateAScriptFile />
-  <AddScriptToPX />
+  <AddScriptToDG />
   <InitializingTheScript />
 </div>
 `;

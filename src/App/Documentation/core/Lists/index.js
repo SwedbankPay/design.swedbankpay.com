@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import { ComponentPreview, DocContainer, Icon, Property } from "@docutils";
 
-const { actionList } = window.px;
+const { actionList } = window.dg;
 
 const BasicList = () => (
     <>

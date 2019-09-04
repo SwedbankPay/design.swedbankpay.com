@@ -5,13 +5,14 @@ import { ComponentPreview, DocContainer } from "@docutils";
 
 const BASENAME = process.env.basename;
 const brand = process.env.brand;
-const scriptUrl = `https://design.${brand}.com${BASENAME}scripts/px-script.js`;
-const styleUrl = `https://design.${brand}.com${BASENAME}styles/${brand}.css`;
+const brandTitle = process.env.brandTitle;
+const scriptUrl = `https://design.${brand}.com${BASENAME}scripts/design-script.js`;
+const styleUrl = `https://design.${brand}.com${BASENAME}styles/design.css`;
 
 const QuickStart = () => (
     <>
         <h2 id="quick-start">Quick start</h2>
-        <p>To quickly add this DesignGuide to your project, include the snippets below in your project.</p>
+        <p>To quickly add the {brandTitle} DesignGuide to your project, include the snippets below in your project.</p>
     </>
 );
 
@@ -37,7 +38,7 @@ const JavaScript = () => (
 
 const Introduction = () => (
     <DocContainer docToc>
-        <p className="lead">Getting started with the DesignGuide.</p>
+        <p className="lead">Getting started with the {brandTitle} DesignGuide.</p>
         <QuickStart />
         <Css />
         <JavaScript />

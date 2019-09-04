@@ -4,10 +4,12 @@ import PrismCode from "react-prism";
 import { ComponentPreview, Property, DocContainer } from "@docutils";
 
 const BASENAME = process.env.basename;
-const scriptUrl = `https://design.swedbankpay.com${BASENAME}scripts/px-script.js`;
-const dashboardScriptUrl = `https://design.swedbankpay.com${BASENAME}scripts/px-dashboard.js`;
-const styleUrl = `https://design.swedbankpay.com${BASENAME}styles/swedbankpay.css`;
-const dashboardStyleUrl = `https://design.swedbankpay.com${BASENAME}styles/px.dashboard.css`;
+const brand = process.env.brand;
+const brandTitle = process.env.brandTitle;
+const scriptUrl = `https://design.${brand}.com${BASENAME}scripts/design-script.js`;
+const dashboardScriptUrl = `https://design.${brand}.com${BASENAME}scripts/design-dashboard.js`;
+const styleUrl = `https://design.${brand}.com${BASENAME}styles/design.css`;
+const dashboardStyleUrl = `https://design.${brand}.com${BASENAME}styles/design-dashboard.css`;
 
 const QuickStart = () => (
     <>
@@ -30,7 +32,7 @@ const Css = () => (
 const JavaScript = () => (
     <>
         <h2 id="javascript">JavaScript</h2>
-        <p>The dashboard theme requires a separate script to run properly. So add the dashboard script below the <Property value="px-script" /> at the bottom of your <PrismCode className="language-html">{"<body>"}</PrismCode> tag like this:</p>
+        <p>The dashboard theme requires a separate script to run properly. So add the dashboard script below the <Property value="scripts" /> at the bottom of your <PrismCode className="language-html">{"<body>"}</PrismCode> tag like this:</p>
         <ComponentPreview language="html" codeFigure>
             <script src={scriptUrl}></script>
             <script src={dashboardScriptUrl}></script>
@@ -40,7 +42,7 @@ const JavaScript = () => (
 
 const Introduction = () => (
     <DocContainer>
-        <p className="lead">Get started with the Swedbank Pay DesignGuide Dashboard theme.</p>
+        <p className="lead">Get started with the {brandTitle} DesignGuide Dashboard theme.</p>
         <QuickStart />
         {/* <Css /> */}
         <JavaScript />

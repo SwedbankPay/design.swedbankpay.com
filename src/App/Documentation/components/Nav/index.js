@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { ComponentPreview, DocContainer, Property, JavascriptDocs } from "@docutils";
 import NavComponent from "@components/Nav";
 
-const { nav } = window.px;
+const { nav } = window.dg;
 
 const navItems = [
     {

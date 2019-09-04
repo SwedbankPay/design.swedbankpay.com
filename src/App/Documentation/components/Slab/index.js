@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import { ComponentPreview, DocContainer, Property } from "@docutils";
 
-const { validation } = window.px;
+const { validation } = window.dg;
 
 const DefaultSlab = () => (
     <>

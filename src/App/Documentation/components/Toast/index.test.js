@@ -3,11 +3,11 @@ import { shallow } from "enzyme";
 
 import Toast, { Overview, PremadeToasts, Options, CustomHtml } from "./index";
 
-px.toast = jest.fn();
+dg.toast = jest.fn();
 
 describe("Components: Toast", () => {
     beforeEach(() => {
-        px.toast.mockClear();
+        dg.toast.mockClear();
     });
 
     it("is defined", () => {
@@ -38,7 +38,7 @@ describe("Components: Toast", () => {
             btn.simulate("click");
 
             expect(wrapper).toMatchSnapshot();
-            expect(px.toast).toHaveBeenCalled();
+            expect(dg.toast).toHaveBeenCalled();
         });
     });
 
@@ -72,7 +72,7 @@ describe("Components: Toast", () => {
             btns.forEach(btn => btn.simulate("click"));
 
             expect(wrapper).toMatchSnapshot();
-            expect(px.toast).toHaveBeenCalledTimes(btns.length);
+            expect(dg.toast).toHaveBeenCalledTimes(btns.length);
         });
     });
 
@@ -94,7 +94,7 @@ describe("Components: Toast", () => {
             btn.simulate("click");
 
             expect(wrapper).toMatchSnapshot();
-            expect(px.toast).toHaveBeenCalled();
+            expect(dg.toast).toHaveBeenCalled();
         });
     });
 });

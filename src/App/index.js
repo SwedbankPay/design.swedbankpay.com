@@ -7,7 +7,7 @@ import Footer from "@components/Footer";
 import AppHeader from "./AppHeader";
 import { LoadingComponent } from "./utils";
 
-const { topbar } = window.px;
+const { topbar } = window.dg;
 
 const BASENAME = process.env.basename || "/";
 

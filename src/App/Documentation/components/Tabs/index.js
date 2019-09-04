@@ -5,7 +5,7 @@ import PrismCode from "react-prism";
 import { ComponentPreview, DocContainer, Property, JavascriptDocs } from "@docutils";
 import TabsComponent from "@components/Tabs";
 
-const { tabs } = window.px;
+const { tabs } = window.dg;
 
 const tabItems = ["Card", "Discounts", "Transactions", "Invoice", "Settings", "Audit trail"];
 

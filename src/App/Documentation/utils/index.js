@@ -7,7 +7,7 @@ import DeprecatedComponentAlert from "./DeprecatedComponentAlert";
 import ExperimentalComponentAlert from "./ExperimentalComponentAlert";
 import Icon from "./Icon";
 import JavascriptDocs from "./JavascriptDocs";
-import PxScript from "./PxScript";
+import DgScript from "./DgScript";
 
 export {
     Attribute,
@@ -20,5 +20,5 @@ export {
     Icon,
     JavascriptDocs,
     Property,
-    PxScript
+    DgScript
 };

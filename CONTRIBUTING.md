@@ -152,11 +152,11 @@ When writing styles for your component, try to use `rem` (`1rem` = ~`16px`) and 
 
 ### Adding JavaScript
 
-If your component needs javascript to run, you will need to add the javascript to the `px-script`.
+If your component needs javascript to run, you will need to add the javascript to the `scripts`.
 
 #### Create a script file for your component
 
-Create a new file under `./src/px-script/main/[MyExampleComponent]/` for your component, name it `index.js`:
+Create a new file under `./src/scripts/main/[MyExampleComponent]/` for your component, name it `index.js`:
 
 ```javascript
     const init = () => {
@@ -172,9 +172,9 @@ Create a new file under `./src/px-script/main/[MyExampleComponent]/` for your co
 
 Note: All essential functionality for your component needs to be called within the `init` method.
 
-#### Add your components script to px-script
+#### Add your components script to scripts
 
-Open `./src/px-script/index.js` and add your component:
+Open `./src/scripts/index.js` and add your component:
 
 ```javascript
 //index.js
@@ -183,7 +183,7 @@ Open `./src/px-script/index.js` and add your component:
 import MyExampleComponent from "./MyExampleComponent";
 //...
 
-const px = {
+const dg = {
     //...
     MyExampleComponent,
     //...
@@ -195,7 +195,7 @@ export { ... MyExampleComponent, ... }
 
 #### Initializing the script in the documentation
 
-Considering the documentation is built in react your documentation component will load after `px-script` runs it's `initAll` method, you will need to run your component's init method when the component actually renders. You can do this by slightly modifying the `MyExampleDocumentationComponent`:
+Considering the documentation is built in react your documentation component will load after `scripts` runs it's `initAll` method, you will need to run your component's init method when the component actually renders. You can do this by slightly modifying the `MyExampleDocumentationComponent`:
 
 ```javascript
 //example documentation component
@@ -204,7 +204,7 @@ Considering the documentation is built in react your documentation component wil
 import React, { Component } from "react";
 ...
 // import your components script
-import { MyExampleComponent } from "$/px-script";
+import { MyExampleComponent } from "$/scripts";
 
 ...
 ...

@@ -9,13 +9,13 @@ const Overview = () => (
         <h2 id="overview">Overview</h2>
         <p>You want jam on that toast?</p>
         <ComponentPreview language="javascript" codeFigure>
-            {"px.toast({ html: \"I am a toast!\" });"}
+            {"dg.toast({ html: \"I am a toast!\" });"}
         </ComponentPreview>
         <ComponentPreview language="html" codeFigure dangerousHTML>
-            {"<button onclick=\"px.toast({ html: 'I am a toast!' })\" class=\"btn btn-executive\">Toast!</button>"}
+            {"<button onclick=\"dg.toast({ html: 'I am a toast!' })\" class=\"btn btn-executive\">Toast!</button>"}
         </ComponentPreview>
         <ComponentPreview language="html" showCasePanel>
-            <button className="btn btn-executive" type="button" onClick={() => px.toast({ html: "I am a toast!" })}>Click for toast!</button>
+            <button className="btn btn-executive" type="button" onClick={() => dg.toast({ html: "I am a toast!" })}>Click for toast!</button>
         </ComponentPreview>
         <Alert type="warning">
             <h5>Content restriction</h5>
@@ -94,16 +94,16 @@ const PremadeToasts = () => (
         <h2 id="premade-toasts">Premade toasts</h2>
         <p>There are four premade toast styles other than the default one; <Attribute value="neutral" />, <Attribute value="success" />, <Attribute value="warning" /> and <Attribute value="danger" />. Apply the desired one to the options object and be amazed!</p>
         <ComponentPreview language="html" codeFigure dangerousHTML>
-            {"<button type=\"button\" onclick=\"px.toast({ html: 'I am a neutral toast!', type: 'neutral' })\" class=\"btn btn-executive\">Neutral toast</button>"}
-            {"<button type=\"button\" onclick=\"px.toast({ html: 'I am a success toast!', type: 'success' })\" class=\"btn btn-executive\">Success toast</button>"}
-            {"<button type=\"button\" onclick=\"px.toast({ html: 'I am a warning toast!', type: 'warning' })\" class=\"btn btn-executive\">Warning toast</button>"}
-            {"<button type=\"button\" onclick=\"px.toast({ html: 'I am a danger toast!', type: 'danger' })\" class=\"btn btn-executive\">Danger toast</button>"}
+            {"<button type=\"button\" onclick=\"dg.toast({ html: 'I am a neutral toast!', type: 'neutral' })\" class=\"btn btn-executive\">Neutral toast</button>"}
+            {"<button type=\"button\" onclick=\"dg.toast({ html: 'I am a success toast!', type: 'success' })\" class=\"btn btn-executive\">Success toast</button>"}
+            {"<button type=\"button\" onclick=\"dg.toast({ html: 'I am a warning toast!', type: 'warning' })\" class=\"btn btn-executive\">Warning toast</button>"}
+            {"<button type=\"button\" onclick=\"dg.toast({ html: 'I am a danger toast!', type: 'danger' })\" class=\"btn btn-executive\">Danger toast</button>"}
         </ComponentPreview>
         <ComponentPreview language="html" showCasePanel>
             <button
                 className="btn btn-executive"
                 type="button"
-                onClick={() => px.toast({
+                onClick={() => dg.toast({
                     html: "I am a toast!",
                     type: "neutral"
                 })}
@@ -113,7 +113,7 @@ const PremadeToasts = () => (
             <button
                 className="btn btn-executive"
                 type="button"
-                onClick={() => px.toast({
+                onClick={() => dg.toast({
                     html: "I am a toast!",
                     type: "success"
                 })}
@@ -123,7 +123,7 @@ const PremadeToasts = () => (
             <button
                 className="btn btn-executive"
                 type="button"
-                onClick={() => px.toast({
+                onClick={() => dg.toast({
                     html: "I am a toast!",
                     type: "warning"
                 })}
@@ -133,7 +133,7 @@ const PremadeToasts = () => (
             <button
                 className="btn btn-executive"
                 type="button"
-                onClick={() => px.toast({
+                onClick={() => dg.toast({
                     html: "I am a toast!",
                     type: "danger"
                 })}
@@ -153,10 +153,10 @@ const CustomHtml = () => {
             <p>You can pass in an HTML String as the first argument as well. Take a look at the example below, where we pass in text as well as a flat button. If you call an external function instead of in-line JavaScript, you will not need to escape quotation marks.</p>
             <ComponentPreview language="javascript" codeFigure>
                 {"const toastHtml = \"<span><p>I am toast content.</p><p>You can put me on several lines.</p></span><button class='btn toast-action'>Undo</button>\";"}{"\n"}
-                {"px.toast({ html: toastHtml });"}
+                {"dg.toast({ html: toastHtml });"}
             </ComponentPreview>
             <ComponentPreview language="html" showCasePanel>
-                <button className="btn btn-executive" type="button" onClick={() => px.toast({ html: toastHtml })}>Toast with action</button>
+                <button className="btn btn-executive" type="button" onClick={() => dg.toast({ html: toastHtml })}>Toast with action</button>
             </ComponentPreview>
         </>
     );

@@ -50,7 +50,7 @@ DesignGuide requires [Node.js](https://nodejs.org/en/) (includes npm).
 When importing different components in the files you create, you can use shortcuts for common paths. The shortcuts are as following:
 
 - `~` - root of the project (example `import package from "~/package";`).
-- `$` - `~/src`-folder (example `import px from "$/px-script";`).
+- `$` - `~/src`-folder (example `import dg from "$/scripts";`).
 - `@` - `~/src/App/components`-folder (example `import Alert from "@components/Alert";`).
 - `#` - `~/src/App/Documentation/utils`-folder (example `import { DocToc } from "@docutils";`).
 

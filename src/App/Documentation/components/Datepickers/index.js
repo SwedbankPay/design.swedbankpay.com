@@ -5,7 +5,7 @@ import { ComponentPreview, Attribute, Property, DocContainer, JavascriptDocs } f
 import { Datepicker as DatepickerComponent } from "@components/FormComponents";
 import Alert from "@components/Alert";
 
-const { datepicker } = window.px;
+const { datepicker } = window.dg;
 
 const AboutDatepickers = () => (
     <>

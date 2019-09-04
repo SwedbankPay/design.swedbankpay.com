@@ -27,8 +27,8 @@ module.exports = (env, argv) => {
 
     const config = {
         entry: {
-            "px-script": ["@babel/polyfill", "./src/px-script/main/index.js"],
-            "px-dashboard": "./src/px-script/dashboard/index.js",
+            "design-script": ["@babel/polyfill", "./src/scripts/main/index.js"],
+            "design-dashboard": "./src/scripts/dashboard/index.js",
             app: ["@babel/polyfill/noConflict", `./src/${brand}.js`]
         },
         resolve: {
@@ -187,8 +187,8 @@ module.exports = (env, argv) => {
                         priority: -20,
                         reuseExistingChunk: true
                     },
-                    pxStyles: {
-                        name: brand,
+                    dgStyles: {
+                        name: "design",
                         test: brand === "swedbankpay" ? /(flatpickr\.css|swedbankpay\.less)$/ : /(flatpickr\.css|payex\.less)$/,
                         chunks: "all",
                         enforce: true
@@ -196,12 +196,6 @@ module.exports = (env, argv) => {
                     docStyles: {
                         name: "documentation",
                         test: /documentation\.less$/,
-                        chunks: "all",
-                        enforce: true
-                    },
-                    dgStyles: {
-                        name: "designguide",
-                        test: /designguide\.less$/,
                         chunks: "all",
                         enforce: true
                     }
@@ -237,7 +231,8 @@ module.exports = (env, argv) => {
                     version: JSON.stringify(version),
                     sentry: isRelease,
                     google: isRelease,
-                    brand: JSON.stringify(brand)
+                    brand: JSON.stringify(brand),
+                    brandTitle: JSON.stringify(brandTitle)
                 }
             }),
             new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/) // Ignores moments locale folder which doubles the size of the package, moment is a dependency of chart.js [EH]
@@ -259,14 +254,14 @@ module.exports = (env, argv) => {
                 template: "./build/rootindex.html",
                 hash: true,
                 title: `${brandTitle} DesignGuide`,
-                chunks: ["px"],
+                chunks: ["dg"],
                 basename
             }),
             new HtmlWebpackPlugin({
                 filename: `${rootPath}404.html`,
                 template: "./build/root404.html",
                 hash: true,
-                chunks: ["px"],
+                chunks: ["dg"],
                 title: `${brandTitle} DesignGuide`,
                 basename
             }),
@@ -332,23 +327,23 @@ module.exports = (env, argv) => {
                                 destination: "./dist/temp/icons/icons"
                             },
                             {
-                                source: `./dist${basename}scripts/px-script.js`,
+                                source: `./dist${basename}scripts/design-script.js`,
                                 destination: "./dist/temp/release/scripts"
                             },
                             {
-                                source: `./dist${basename}scripts/px-script.js.map`,
+                                source: `./dist${basename}scripts/design-script.js.map`,
                                 destination: "./dist/temp/release/scripts"
                             },
                             {
-                                source: `./dist${basename}scripts/px-dashboard.js`,
+                                source: `./dist${basename}scripts/design-dashboard.js`,
                                 destination: "./dist/temp/release/scripts"
                             },
                             {
-                                source: `./dist${basename}scripts/px-dashboard.js.map`,
+                                source: `./dist${basename}scripts/design-dashboard.js.map`,
                                 destination: "./dist/temp/release/scripts"
                             },
                             {
-                                source: `./dist${basename}styles/${brand}.css`,
+                                source: `./dist${basename}styles/design.css`,
                                 destination: "./dist/temp/release/styles"
                             }
                         ],

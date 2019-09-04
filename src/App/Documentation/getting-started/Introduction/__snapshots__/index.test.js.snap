@@ -29,7 +29,7 @@ exports[`GettingStarted: Introduction Css renders 1`] = `
     language="html"
   >
     <link
-      href="https://design.undefined.com/TEST/styles/undefined.css"
+      href="https://design.undefined.com/TEST/styles/design.css"
       rel="stylesheet"
     />
   </ComponentPreview>
@@ -65,7 +65,7 @@ exports[`GettingStarted: Introduction JavaScript renders 1`] = `
     language="html"
   >
     <script
-      src="https://design.undefined.com/TEST/scripts/px-script.js"
+      src="https://design.undefined.com/TEST/scripts/design-script.js"
     />
   </ComponentPreview>
 </Fragment>
@@ -79,7 +79,8 @@ exports[`GettingStarted: Introduction QuickStart renders 1`] = `
     Quick start
   </h2>
   <p>
-    To quickly add this DesignGuide to your project, include the snippets below in your project.
+    To quickly add the 
+     DesignGuide to your project, include the snippets below in your project.
   </p>
 </Fragment>
 `;
@@ -91,7 +92,8 @@ exports[`GettingStarted: Introduction renders 1`] = `
   <p
     className="lead"
   >
-    Getting started with the DesignGuide.
+    Getting started with the 
+     DesignGuide.
   </p>
   <QuickStart />
   <Css />

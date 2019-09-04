@@ -142,7 +142,7 @@ const AddingJavaScript = () => {
     const CreateAScriptFile = () => (
         <div>
             <h3>Create a script file for your component</h3>
-            <p>Create a new file under <Property value="./src/px-script/main/[MyExampleComponent]/" /> for your component, name it <Property value="index.js" />:</p>
+            <p>Create a new file under <Property value="./src/scripts/main/[MyExampleComponent]/" /> for your component, name it <Property value="index.js" />:</p>
             <ComponentPreview language="javascript" codeFigure>
                 {`
 const init = () => {
@@ -158,16 +158,16 @@ export default MyExampleComponent;
         </div>
     );
 
-    const AddScriptToPX = () => (
+    const AddScriptToDG = () => (
         <div>
-            <h3>Add your components script to px-script</h3>
-            <p>Open <Property value="./src/px-script/main/index.js" /> and add your component:</p>
+            <h3>Add your components script to scripts</h3>
+            <p>Open <Property value="./src/scripts/main/index.js" /> and add your component:</p>
             <ComponentPreview language="javascript" codeFigure>
                 {`
 ...
 import MyExampleComponent from "./MyExampleComponent";
 ...
-const px = {
+const dg = {
 ...
 MyExampleComponent,
 ...
@@ -182,7 +182,7 @@ export { ... MyExampleComponent, ... }
     const InitializingTheScript = () => (
         <div>
             <h2>Initializing the script in the documentation</h2>
-            <p>Considering the documentation is built in react your documentation component will load after <Property value="px-script" /> runs it{"'"}s <Property value="initAll" /> method, you will need to run your component{"'"}s init method when the component actually renders.</p>
+            <p>Considering the documentation is built in react your documentation component will load after <Property value="scripts" /> runs it{"'"}s <Property value="initAll" /> method, you will need to run your component{"'"}s init method when the component actually renders.</p>
             <p>You can do this by slightly modifying the <Property value="MyExampleDocumentationComponent" />:</p>
             <ComponentPreview language="javascript" codeFigure>
                 {`
@@ -191,7 +191,7 @@ export { ... MyExampleComponent, ... }
 import React, { Component } from "react";
 ...
 // import your components script
-import { MyExampleComponent } from "@src/px-script/main";
+import { MyExampleComponent } from "@src/scripts/main";
 ...
 ...
 // modify MyExampleDocumentationComponent
@@ -219,9 +219,9 @@ class MyExampleDocumentationComponent extends Component {
     return (
         <div>
             <h2 id="adding-javascript">Adding javascript</h2>
-            <p>If your component needs javascript to run, you will need to add the javascript to the <Property value="px-script" /></p>
+            <p>If your component needs javascript to run, you will need to add the javascript to the <Property value="scripts" /></p>
             <CreateAScriptFile />
-            <AddScriptToPX />
+            <AddScriptToDG />
             <InitializingTheScript />
         </div>
     );

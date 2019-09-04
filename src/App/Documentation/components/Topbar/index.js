@@ -4,7 +4,7 @@ import PrismCode from "react-prism";
 import { ComponentPreview, DocContainer, Property, Attribute, JavascriptDocs } from "@docutils";
 import TopbarComponent from "@components/Topbar";
 
-const { topbar } = window.px;
+const { topbar } = window.dg;
 
 const menu = {
     btn: {
