@@ -2,7 +2,7 @@
     "name": "design.swedbankpay.com",
     "version": "3.5.0",
     "description": "Swedbank Pay DesignGuide",
-    "main": "index.js",
+    "main": "swedbankpay.js",
     "scripts": {
         "start": "webpack-dev-server --hot --mode development",
         "start:payex": "webpack-dev-server --hot --mode development --brand payex",
