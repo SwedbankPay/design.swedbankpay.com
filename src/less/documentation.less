@@ -1,6 +1,160 @@
-@import "../_variables-swedbankpay.less";
-@import "../_variables.less";
-@import "../_mixins.less";
+@import "_variables-swedbankpay.less";
+@import "_variables.less";
+@import "_mixins.less";
+
+#designguide {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
+    .designguide-header {
+        .topbar-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            a {
+                margin-left: 5px;
+                color: @text-muted;
+                fill: @text-muted;
+                border: none;
+
+                svg {
+                    overflow: visible;
+                    width: 2rem;
+                    height: 2rem;
+                    display: inline-block;
+                    vertical-align: top;
+                }
+
+                &:hover {
+                    color: darken(@text-muted, 20%);
+                    fill: darken(@text-muted, 20%);
+                }
+            }
+        }
+    }
+
+    pre {
+        font-size: 87.5%;
+    }
+
+    .color-preview {
+        display: grid;
+        row-gap: 1rem;
+        column-gap: 2.5rem;
+        grid-template-columns: 1fr;
+
+        svg {
+            width: 100%;
+        }
+
+        figcaption {
+            line-height: 1.25rem;
+            margin-top: 0.25rem;
+        }
+    }
+
+    @media screen and (min-width: @screen-sm-min) {
+        .color-preview {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    .showcase-panel {
+        .sc-highlight {
+            background-color: rgba(86, 61, 124, 0.15);
+            border: 1px solid rgba(86, 61, 124, 0.15);
+        }
+
+        .showcase-grid {
+            .row {
+                > [class*="col"] {
+                    padding-top: 0.5rem;
+                    padding-bottom: 0.5rem;
+                    background: @gray-bright;
+                    border: 1px solid fade(@gray-bright-alt, 80%);
+                }
+
+                + .row {
+                    margin-top: 1rem;
+                }
+            }
+
+            &.showcase-vertical-space {
+                .row {
+                    background: @neargray;
+                    height: 10rem;
+                }
+            }
+        }
+    }
+
+    .browser-support-table {
+        th,
+        tr {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            display: inline-block;
+        }
+    }
+
+    // Override the prism toolbar button rules
+    figure {
+        .code-toolbar {
+            > .toolbar {
+                opacity: 1;
+
+                > .toolbar-item {
+                    a {
+                        background: transparent;
+                        padding: 0.25rem 0.5rem;
+                        border-radius: 0.25rem;
+                        border: 0;
+                        box-shadow: none;
+
+                        &:hover {
+                            color: @white;
+                            background: @brand-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #loading-component {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+
+        .loader {
+            margin-top: 10rem;
+        }
+    }
+
+    /* Only used for showing border-utility [AW] */
+    .demo-square {
+        height: 5rem;
+        width: 5rem;
+        background-color: @neargray;
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+
+    // NOTE: This is not used for anything but including the image in the build [EH]
+    // #mail_icon {
+    //     background: url("../img/swedbankpaymail.png");
+    // }
+}
 
 .documentation {
     .make-container();
@@ -286,3 +440,4 @@
         }
     }
 }
+

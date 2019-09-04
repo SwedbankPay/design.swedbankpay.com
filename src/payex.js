@@ -6,12 +6,11 @@ import "prismjs";
 import "prismjs/themes/prism.css";
 
 import "./less/payex.less";
-import "./less/themes/documentation.less";
-import "./less/designguide.less";
+import "./less/documentation.less";
 
 render(
     <App />,
-    document.getElementById("px-designguide")
+    document.getElementById("designguide")
 );
 
 if (module.hot) {
