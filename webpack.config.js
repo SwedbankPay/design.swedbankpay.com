@@ -16,14 +16,14 @@ const AppManifestWebpackPlugin = require("app-manifest-webpack-plugin");
 module.exports = (env, argv) => {
 
     const brand = argv.brand || "swedbankpay";
+    const brandTitle = brand === "swedbankpay" ? "Swedbank Pay" : "PayEx"; // <-- Used with the HTML plugin for titles etc...
+    const brandLink = brand === "swedbankpay" ? "https://swedbankpay.com" : "https://payex.com";
     const isProd = argv.mode === "production";
     const isDevServer = !!argv.host;
     const version = env && env.semver ? env.semver : "LOCAL_DEV";
     const isRelease = env && env.release === "true";
     const basename = env && env.basename ? `/${env.basename}/` : "/";
     const infoVersion = env && env.info_version ? env.info_version : "LOCAL_DEV";
-
-    console.log(`Building with ${brand} brand`);
 
     const config = {
         entry: {
@@ -154,13 +154,7 @@ module.exports = (env, argv) => {
                 },
                 {
                     test: /\.(png|jpe?g|gif|svg)$/i,
-                    // exclude: brand === "swedbankpay" ? /(flags|payex)$/ : /(flags|swedbankpay)$/,
-                    exclude: [
-                        path.resolve(__dirname, `src/img/${brand === "swedbankpay" ? "payex" : "swedbankpay"}`)
-                    ],
-                    // include: [
-                    //     path.resolve(__dirname, "src/img")
-                    // ],
+                    exclude: /flags/,
                     use: [
                         {
                             loader: "file-loader",
@@ -229,7 +223,7 @@ module.exports = (env, argv) => {
             new HtmlWebpackPlugin({
                 template: "./src/index.html",
                 hash: true,
-                title: brand === "swedbankpay" ? "Swedbank Pay DesignGuide" : "PayEx DesignGuide",
+                title: `${brandTitle} DesignGuide`,
                 meta: {
                     "informational-version": infoVersion
                 }
@@ -264,7 +258,7 @@ module.exports = (env, argv) => {
                 filename: `${rootPath}index.html`,
                 template: "./build/rootindex.html",
                 hash: true,
-                title: brand === "swedbankpay" ? "Swedbank Pay DesignGuide" : "PayEx DesignGuide",
+                title: `${brandTitle} DesignGuide`,
                 chunks: ["px"],
                 basename
             }),
@@ -273,7 +267,7 @@ module.exports = (env, argv) => {
                 template: "./build/root404.html",
                 hash: true,
                 chunks: ["px"],
-                title: brand === "swedbankpay" ? "Swedbank Pay DesignGuide" : "PayEx DesignGuide",
+                title: `${brandTitle} DesignGuide`,
                 basename
             }),
             new SentryCliPlugin({
@@ -295,7 +289,7 @@ module.exports = (env, argv) => {
         if (isRelease) {
             onEndArchive.push({
                 source: "./dist/temp/release",
-                destination: `./dist${basename}release/Swedbankpay.DesignGuide.v${version}.zip`
+                destination: `./dist${basename}release/${brand === "swedbankpay" ? "Swedbankpay" : "Payex"}.DesignGuide.v${version}.zip`
             });
         }
 
@@ -304,9 +298,9 @@ module.exports = (env, argv) => {
                 logo: `./src/img/${brand}/favicon.png`,
                 output: "/icons/",
                 config: {
-                    appName: brand === "swedbankpay" ? "Swedbank Pay DesignGuide" : "PayEx DesignGuide",
-                    developerName: brand === "swedbankpay" ? "Swedbank Pay" : "PayEx",
-                    developerURL: brand === "swedbankpay" ? "https://swedbankpay.com" : "https://payex.com",
+                    appName: `${brandTitle} DesignGuide`,
+                    developerName: brandTitle,
+                    developerURL: brandLink,
                     background: "#000",
                     theme_color: "#2da944",
                     version,
