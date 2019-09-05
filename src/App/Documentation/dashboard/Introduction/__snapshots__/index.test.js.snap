@@ -29,11 +29,11 @@ exports[`Dashboard: Introduction Css renders 1`] = `
     language="html"
   >
     <link
-      href="https://design.undefined.com/TEST/styles/design.css"
+      href="https://design.undefined.com/TEST/styles/dg-style.css"
       rel="stylesheet"
     />
     <link
-      href="https://design.undefined.com/TEST/styles/design-dashboard.css"
+      href="https://design.undefined.com/TEST/styles/dg-dashboard.css"
       rel="stylesheet"
     />
   </ComponentPreview>
@@ -66,10 +66,10 @@ exports[`Dashboard: Introduction JavaScript renders 1`] = `
     language="html"
   >
     <script
-      src="https://design.undefined.com/TEST/scripts/design-script.js"
+      src="https://design.undefined.com/TEST/scripts/dg.js"
     />
     <script
-      src="https://design.undefined.com/TEST/scripts/design-dashboard.js"
+      src="https://design.undefined.com/TEST/scripts/dg-dashboard.js"
     />
   </ComponentPreview>
 </Fragment>

@@ -21,16 +21,16 @@ const MS_THRESHOLDS = {
 };
 const URL_LIST = [
     {
-        name: "design-script",
-        path: "/scripts/design-script.js"
+        name: "dg",
+        path: "/scripts/dg.js"
     },
     {
-        name: "design-dashboard",
-        path: "/scripts/design-dashboard.js"
+        name: "dg-dashboard",
+        path: "/scripts/dg-dashboard.js"
     },
     {
-        name: "design.css",
-        path: "/styles/design.css"
+        name: "dg-style.css",
+        path: "/styles/dg-style.css"
     }
 ];
 

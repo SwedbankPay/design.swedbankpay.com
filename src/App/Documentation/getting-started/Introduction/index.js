@@ -6,8 +6,8 @@ import { ComponentPreview, DocContainer } from "@docutils";
 const BASENAME = process.env.basename;
 const brand = process.env.brand;
 const brandTitle = process.env.brandTitle;
-const scriptUrl = `https://design.${brand}.com${BASENAME}scripts/design-script.js`;
-const styleUrl = `https://design.${brand}.com${BASENAME}styles/design.css`;
+const scriptUrl = `https://design.${brand}.com${BASENAME}scripts/dg.js`;
+const styleUrl = `https://design.${brand}.com${BASENAME}styles/dg-style.css`;
 
 const QuickStart = () => (
     <>

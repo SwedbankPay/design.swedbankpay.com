@@ -27,8 +27,8 @@ module.exports = (env, argv) => {
 
     const config = {
         entry: {
-            "design-script": ["@babel/polyfill", "./src/scripts/main/index.js"],
-            "design-dashboard": "./src/scripts/dashboard/index.js",
+            dg: ["@babel/polyfill", "./src/scripts/main/index.js"],
+            "dg-dashboard": "./src/scripts/dashboard/index.js",
             app: ["@babel/polyfill/noConflict", `./src/${brand}.js`]
         },
         resolve: {
@@ -188,7 +188,7 @@ module.exports = (env, argv) => {
                         reuseExistingChunk: true
                     },
                     dgStyles: {
-                        name: "design",
+                        name: "dg-style",
                         test: brand === "swedbankpay" ? /(flatpickr\.css|swedbankpay\.less)$/ : /(flatpickr\.css|payex\.less)$/,
                         chunks: "all",
                         enforce: true
@@ -327,23 +327,23 @@ module.exports = (env, argv) => {
                                 destination: "./dist/temp/icons/icons"
                             },
                             {
-                                source: `./dist${basename}scripts/design-script.js`,
+                                source: `./dist${basename}scripts/dg.js`,
                                 destination: "./dist/temp/release/scripts"
                             },
                             {
-                                source: `./dist${basename}scripts/design-script.js.map`,
+                                source: `./dist${basename}scripts/dg.js.map`,
                                 destination: "./dist/temp/release/scripts"
                             },
                             {
-                                source: `./dist${basename}scripts/design-dashboard.js`,
+                                source: `./dist${basename}scripts/dg-dashboard.js`,
                                 destination: "./dist/temp/release/scripts"
                             },
                             {
-                                source: `./dist${basename}scripts/design-dashboard.js.map`,
+                                source: `./dist${basename}scripts/dg-dashboard.js.map`,
                                 destination: "./dist/temp/release/scripts"
                             },
                             {
-                                source: `./dist${basename}styles/design.css`,
+                                source: `./dist${basename}styles/dg-style.css`,
                                 destination: "./dist/temp/release/styles"
                             }
                         ],
