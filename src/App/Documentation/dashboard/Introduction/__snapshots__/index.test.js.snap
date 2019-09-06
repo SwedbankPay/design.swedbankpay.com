@@ -93,9 +93,7 @@ exports[`Dashboard: Introduction renders 1`] = `
   <p
     className="lead"
   >
-    Get started with the 
-    TESTBRAND
-     DesignGuide Dashboard theme.
+    Get started with the dashboard theme.
   </p>
   <QuickStart />
   <JavaScript />

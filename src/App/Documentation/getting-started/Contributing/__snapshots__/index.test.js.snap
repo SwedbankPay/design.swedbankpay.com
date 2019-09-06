@@ -221,40 +221,6 @@ exports[`GettingStarted: Contributing Adding Styles renders 2`] = `<p />`;
 exports[`GettingStarted: Contributing Adding Styles renders 3`] = `
 <Fragment>
   <h3>
-    Importing the styles
-  </h3>
-  <p>
-    Import it in the appropriate root-file (
-    <Property
-      value="swedbankpay.less"
-    />
-     for the core styles, under 
-    <Property
-      value="/themes"
-    />
-     if the component is going to be part of a specific theme).
-  </p>
-  <p>
-    Assuming you are creating a core component the import would look like this:
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="css"
-  >
-    
-/* swedbankpay.less */
-...
-/* Components */
-@import "components/my-example-component";
-...
-                
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`GettingStarted: Contributing Adding Styles renders 4`] = `
-<Fragment>
-  <h3>
     Creating variables
   </h3>
   <p>
@@ -284,11 +250,11 @@ exports[`GettingStarted: Contributing Adding Styles renders 4`] = `
 </Fragment>
 `;
 
+exports[`GettingStarted: Contributing Adding Styles renders 4`] = `<p />`;
+
 exports[`GettingStarted: Contributing Adding Styles renders 5`] = `<p />`;
 
-exports[`GettingStarted: Contributing Adding Styles renders 6`] = `<p />`;
-
-exports[`GettingStarted: Contributing Adding Styles renders 7`] = `
+exports[`GettingStarted: Contributing Adding Styles renders 6`] = `
 <div>
   <h2
     id="adding-styles"
@@ -306,7 +272,6 @@ exports[`GettingStarted: Contributing Adding Styles renders 7`] = `
     />
     .
   </p>
-  <ImportingTheStyles />
   <CreatingVariables />
   <p>
     Your the styles for 
@@ -474,7 +439,18 @@ exports[`GettingStarted: Contributing renders 1`] = `
   <p
     className="lead"
   >
-    To create a new component
+    When contributing, it is important to remember that this project supports two brands: 
+    <strong>
+      Swedbank Pay
+    </strong>
+     and 
+    <strong>
+      PayEx
+    </strong>
+    .
+  </p>
+  <p>
+    Both brands dependent on different theme variables, so it's vital to check that the component also works and looks good on the opposite brand of which you are working on.
   </p>
   <CreatingYourComponent />
   <CreateADocumentationPage />
