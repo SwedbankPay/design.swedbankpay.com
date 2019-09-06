@@ -26,6 +26,52 @@ const DefaultSlab = () => (
     </>
 );
 
+const SlabColors = () => (
+    <>
+        <h2 id="slab-colors">Slab colors</h2>
+        <p>
+        We offer three additional slab types; <Property value=".card-primary" />, <Property value=".card-secondary" /> and <Property value=".card-plain" />.
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <div className="slab slab-primary">
+                <h4>Here is some text and then a striped item list</h4>
+                <small>
+                    Some text with a small listing of items underneath.
+                </small>
+                <ul className="list item-list">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </div>
+
+            <div className="slab slab-secondary">
+                <h4>Here is some text and then a striped item list</h4>
+                <small>
+                    Some text with a small listing of items underneath.
+                </small>
+                <ul className="list item-list">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </div>
+
+            <div className="slab slab-plain">
+                <h4>Here is some text and then a striped item list</h4>
+                <small>
+                    Some text with a small listing of items underneath.
+                </small>
+                <ul className="list item-list">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </div>
+        </ComponentPreview>
+    </>
+);
+
 const SlabElevated = () => (
     <>
         <h2 id="elevated-slab">Elevated slab</h2>
@@ -52,8 +98,7 @@ const SlabArrow = () => (
     <>
         <h2 id="slab-arrow">Slab arrow</h2>
         <p>
-            <Property value=".slab-arrow" /> inherits the color from the slab it is appended to, and is given a border
-            if used with slab-white.
+            <Property value=".slab-arrow" /> inherits the color from the slab it is appended to.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="slab slab-arrow">
@@ -61,49 +106,20 @@ const SlabArrow = () => (
                     This slab has some connection to the content above.
                 </p>
             </div>
-            <div className="slab slab-white slab-arrow">
+            <div className="slab slab-primary slab-arrow">
                 <p>
                     This slab has some connection to the content above.
                 </p>
             </div>
-            <div className="slab slab-variant-1 slab-arrow">
+            <div className="slab slab-secondary slab-arrow">
                 <p>
                     This slab has some connection to the content above.
                 </p>
             </div>
-        </ComponentPreview>
-    </>
-);
-
-const SlabColors = () => (
-    <>
-        <h2 id="slab-colors">Slab colors</h2>
-        <p>
-            Both white and variant-1 variants of slab exist.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="slab slab-white">
-                <h4>Here is some text and then a striped item list</h4>
-                <small>
-                    Some text with a small listing of items underneath.
-                </small>
-                <ul className="list item-list">
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                </ul>
-            </div>
-
-            <div className="slab slab-variant-1">
-                <h4>Here is some text and then a striped item list</h4>
-                <small>
-                    Some text with a small listing of items underneath.
-                </small>
-                <ul className="list item-list">
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                </ul>
+            <div className="slab slab-plain slab-arrow">
+                <p>
+                    This slab has some connection to the content above.
+                </p>
             </div>
         </ComponentPreview>
     </>
@@ -150,10 +166,10 @@ class Slab extends Component {
                     Slabs are container components, therefore it works with whatever you want to put in it.
                 </p>
                 <DefaultSlab />
+                <SlabColors />
                 <SlabElevated />
                 <SlabWell />
                 <SlabArrow />
-                <SlabColors />
                 <SlabMuted />
                 <SlabSizes />
             </DocContainer>
