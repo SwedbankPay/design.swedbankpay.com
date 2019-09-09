@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: ActionLink prop type is marked as required 1`] = `
+<a
+  className="action-link"
+  href="#"
+>
+  
+
+  
+
+  
+
+</a>
+`;
+
+exports[`Component: ActionLink renders an actionlink with badge if badge is provided 1`] = `
+<a
+  className="action-link"
+  href="#"
+>
+  
+
+  <span
+    className="badge badge-yellow"
+  >
+    Badge
+  </span>
+  
+
+  Link text
+  
+
+</a>
+`;
+
+exports[`Component: ActionLink renders an actionlink with link text 1`] = `
+<a
+  className="action-link"
+  href="#"
+>
+  
+
+  
+
+  Link text
+  
+
+</a>
+`;
+
+exports[`Component: ActionLink renders an actionlink without badge if badge is not provided 1`] = `
+<a
+  className="action-link"
+  href="#"
+>
+  
+
+  
+
+  Link text
+  
+
+</a>
+`;

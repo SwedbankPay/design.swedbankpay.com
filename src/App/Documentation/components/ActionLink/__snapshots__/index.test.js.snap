@@ -15,25 +15,15 @@ exports[`Components: ActionLink ActionLinkBadge renders 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <a
-      className="action-link"
-      href="#"
-    >
-      
-
-      <span
-        className="badge badge-yellow"
-      >
-        40
-      </span>
-      
-
-      My link
-      
-
-    </a>
-    
-
+    <ActionLink
+      badge={
+        Object {
+          "text": 40,
+          "type": "badge-yellow",
+        }
+      }
+      linkText="My link"
+    />
   </ComponentPreview>
 </Fragment>
 `;
@@ -53,18 +43,9 @@ exports[`Components: ActionLink Overview renders 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <a
-      className="action-link"
-      href="#"
-    >
-      
-
-      My link
-      
-
-    </a>
-    
-
+    <ActionLink
+      linkText="My link"
+    />
   </ComponentPreview>
 </Fragment>
 `;
