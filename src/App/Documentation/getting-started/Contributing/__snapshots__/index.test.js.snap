@@ -450,7 +450,7 @@ exports[`GettingStarted: Contributing renders 1`] = `
     .
   </p>
   <p>
-    Both brands dependent on different theme variables, so it's vital to check that the component also works and looks good on the opposite brand of which you are working on.
+    Both brands depend on different theme variables, so it is vital to check that the component also works and looks good on the opposite brand of which you are working on.
   </p>
   <CreatingYourComponent />
   <CreateADocumentationPage />
