@@ -274,11 +274,11 @@ exports[`GettingStarted: Contributing Adding Styles renders 6`] = `
   </p>
   <CreatingVariables />
   <p>
-    Your the styles for 
+    The style for 
     <Property
       value="MyExampleComponent"
     />
-     should now be included properly, and you should see changes immediatly while running dev.
+     should now be included properly, and you should see changes immediately while running dev.
   </p>
   <p>
     When writing styles for your component, try to use 

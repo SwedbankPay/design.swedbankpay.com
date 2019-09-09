@@ -115,7 +115,7 @@ const AddingStyles = () => {
             <h2 id="adding-styles">Adding styles</h2>
             <p>To add styling for your component create a new file in <Property value="./src/less/components/" />, name it <Property value="my-example-component.less" />.</p>
             <CreatingVariables />
-            <p>Your the styles for <Property value="MyExampleComponent" /> should now be included properly, and you should see changes immediatly while running dev.</p>
+            <p>The style for <Property value="MyExampleComponent" /> should now be included properly, and you should see changes immediately while running dev.</p>
             <p>When writing styles for your component, try to use <Property value="rem" /> (<Property value="1rem" /> = ~<Property value="16px" />) and the predefined variables (only if it makes sense of course) as much as possible. And follow the linting rules set by <Property value="./.stylelintrc" />.</p>
         </div>
     );
@@ -213,7 +213,7 @@ class MyExampleDocumentationComponent extends Component {
 const Contributing = () => (
     <DocContainer docToc>
         <p className="lead">When contributing, it is important to remember that this project supports two brands: <strong>Swedbank Pay</strong> and <strong>PayEx</strong>.</p>
-        <p>Both brands dependent on different theme variables, so it's vital to check that the component also works and looks good on the opposite brand of which you are working on.</p>
+        <p>Both brands depend on different theme variables, so it is vital to check that the component also works and looks good on the opposite brand of which you are working on.</p>
         <CreatingYourComponent />
         <CreateADocumentationPage />
         <AddComponentToRoutes />

@@ -17,7 +17,7 @@ exports[`Component: Topbar -  logo prevents default when clicked 1`] = `
 
         <img
           alt="TESTBRAND-logo"
-          src="/TEST/img/spay_horizontal_pos.svg"
+          src="/TEST/img/TESTBRAND.svg"
         />
         
 
@@ -48,7 +48,7 @@ exports[`Component: Topbar -  props logout it prevents default when clicked 1`] 
 
         <img
           alt="TESTBRAND-logo"
-          src="/TEST/img/spay_horizontal_pos.svg"
+          src="/TEST/img/TESTBRAND.svg"
         />
         
 
@@ -103,7 +103,7 @@ exports[`Component: Topbar -  props logout renders logout link and adds topbar-l
 
         <img
           alt="TESTBRAND-logo"
-          src="/TEST/img/spay_horizontal_pos.svg"
+          src="/TEST/img/TESTBRAND.svg"
         />
         
 
@@ -193,7 +193,7 @@ exports[`Component: Topbar -  props topbarContent menu links prevents default wh
 
         <img
           alt="TESTBRAND-logo"
-          src="/TEST/img/spay_horizontal_pos.svg"
+          src="/TEST/img/TESTBRAND.svg"
         />
         
 
@@ -370,7 +370,7 @@ exports[`Component: Topbar -  props topbarContent renders a topbar menu without 
 
         <img
           alt="TESTBRAND-logo"
-          src="/TEST/img/spay_horizontal_pos.svg"
+          src="/TEST/img/TESTBRAND.svg"
         />
         
 
@@ -532,7 +532,7 @@ exports[`Component: Topbar -  props topbarContent renders a topbar-menu-button w
 
         <img
           alt="TESTBRAND-logo"
-          src="/TEST/img/spay_horizontal_pos.svg"
+          src="/TEST/img/TESTBRAND.svg"
         />
         
 
@@ -713,7 +713,7 @@ exports[`Component: Topbar -  props topbarContent renders topbar-link-container 
 
         <img
           alt="TESTBRAND-logo"
-          src="/TEST/img/spay_horizontal_pos.svg"
+          src="/TEST/img/TESTBRAND.svg"
         />
         
 
@@ -917,7 +917,7 @@ exports[`Component: Topbar -  props topbarContent renders topbar-link-container 
 
         <img
           alt="TESTBRAND-logo"
-          src="/TEST/img/spay_horizontal_pos.svg"
+          src="/TEST/img/TESTBRAND.svg"
         />
         
 
@@ -1062,7 +1062,7 @@ exports[`Component: Topbar -  props wide renders a topbar with the given breakpo
 
         <img
           alt="TESTBRAND-logo"
-          src="/TEST/img/spay_horizontal_pos.svg"
+          src="/TEST/img/TESTBRAND.svg"
         />
         
 
