@@ -18,7 +18,7 @@ exports[`Components: ActionLink ActionLinkBadge renders 1`] = `
     <ActionLink
       badge={
         Object {
-          "text": 40,
+          "text": "40",
           "type": "badge-yellow",
         }
       }

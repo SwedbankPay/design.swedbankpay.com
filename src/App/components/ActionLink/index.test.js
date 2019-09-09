@@ -8,7 +8,7 @@ describe("Component: ActionLink", () => {
         expect(ActionLink).toBeDefined();
     });
 
-    it("prop type is marked as required", () => {
+    it("prop linkText is marked as required", () => {
         console.error = jest.fn();
 
         const wrapper = shallow(<ActionLink />);

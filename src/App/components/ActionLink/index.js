@@ -8,7 +8,7 @@ const ActionLink = ({linkText, badge, smallText}) => (
     </a>
 );
 
-ActionLink.prototype = {
+ActionLink.propTypes = {
     linkText: PropTypes.string.isRequired,
     badge: PropTypes.shape({
         type: PropTypes.string.isRequired,

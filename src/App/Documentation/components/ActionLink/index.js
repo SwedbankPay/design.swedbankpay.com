@@ -15,7 +15,7 @@ const Overview = () => (
 
 const badge = {
     type: "badge-yellow",
-    text: 40
+    text: "40"
 };
 
 const ActionLinkBadge = () => (
