@@ -1,5 +1,6 @@
 <p align="center">
-    <img src="./src/img/logo/spay_vertical_pos.svg" width=300 />
+    <img src="./src/img/logo/swedbankpay.svg" width=300 />
+    <img src="./src/img/logo/payex.svg" width=300 />
 </p>
 
 # Swedbank Pay DesignGuide
