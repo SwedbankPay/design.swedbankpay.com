@@ -10,6 +10,9 @@ configure({ adapter: new Adapter() });
 
 // Set up static testing variables
 process.env.basename = "/TEST/";
+process.env.brand = "TESTBRAND";
+process.env.brandTitle = "TESTBRAND";
+process.env.brandLink = "TESTBRANDLINK";
 
 // Make Enzyme functions available in all test files without importing
 global.shallow = shallow;
