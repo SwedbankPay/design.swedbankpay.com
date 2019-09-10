@@ -12,6 +12,9 @@ module.exports = {
         "enzyme-to-json/serializer"
     ],
     testPathIgnorePatterns: [
-        "\\.spec\\.js"
+        "\\.spec\\.js",
+
+        // TODO: The following snapshot is 360k long and brakes AppVeyor... solution?
+        "./Documentation/utils/ComponentPreview/"
     ]
 };
