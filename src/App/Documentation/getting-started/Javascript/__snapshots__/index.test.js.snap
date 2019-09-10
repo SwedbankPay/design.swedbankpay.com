@@ -9,12 +9,12 @@ exports[`GettingStarted: JavascriptDocs AboutInit renders 1`] = `
   </h2>
   <p>
     Our script runs 
-    <PxScript
+    <DgScript
       component="script"
       func="initAll"
     />
      on DOMContentLoaded making it so you have to run 
-    <PxScript
+    <DgScript
       component="<component_name>"
       func="init"
     />
@@ -25,7 +25,7 @@ exports[`GettingStarted: JavascriptDocs AboutInit renders 1`] = `
   </h3>
   <p>
     To initialize components use 
-    <PxScript
+    <DgScript
       component="<component_name>"
       func="init"
     />
@@ -42,9 +42,9 @@ exports[`GettingStarted: JavascriptDocs AboutInit renders 1`] = `
     codeFigure={true}
     language="javascript"
   >
-    px.component.init();
+    dg.component.init();
 
-    px.component.init("demo-component-id");
+    dg.component.init("demo-component-id");
 
   </ComponentPreview>
   <Alert
@@ -63,7 +63,7 @@ exports[`GettingStarted: JavascriptDocs renders 1`] = `
     className="lead"
   >
     How to utilize our 
-    <PxScript
+    <DgScript
       component="<component_name>"
       func="init"
     />

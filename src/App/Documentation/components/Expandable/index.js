@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { ComponentPreview, DocContainer, Property, JavascriptDocs } from "@docutils";
 import ExpandableComponent from "@components/Expandable";
 
-const { expandable } = window.px;
+const { expandable } = window.dg;
 
 const items = [
     {

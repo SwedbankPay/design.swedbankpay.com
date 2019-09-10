@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import ActionListComponent from "@components/ActionList";
 import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 
-const { actionList } = window.px;
+const { actionList } = window.dg;
 
 const items = [
     {

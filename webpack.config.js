@@ -14,6 +14,10 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const AppManifestWebpackPlugin = require("app-manifest-webpack-plugin");
 
 module.exports = (env, argv) => {
+
+    const brand = argv.brand || "swedbankpay";
+    const brandTitle = brand === "swedbankpay" ? "Swedbank Pay" : "PayEx"; // <-- Used with the HTML plugin for titles etc...
+    const brandLink = brand === "swedbankpay" ? "https://swedbankpay.com" : "https://payex.com";
     const isProd = argv.mode === "production";
     const isDevServer = !!argv.host;
     const version = env && env.semver ? env.semver : "LOCAL_DEV";
@@ -23,15 +27,15 @@ module.exports = (env, argv) => {
 
     const config = {
         entry: {
-            "px-script": ["@babel/polyfill", "./src/px-script/main/index.js"],
-            "px-dashboard": "./src/px-script/dashboard/index.js",
-            app: ["@babel/polyfill/noConflict", "./src/index.js"]
+            dg: ["@babel/polyfill", "./src/scripts/main/index.js"],
+            "dg-dashboard": "./src/scripts/dashboard/index.js",
+            app: ["@babel/polyfill/noConflict", `./src/${brand}.js`]
         },
         resolve: {
             extensions: [".js", ".jsx", ".json"]
         },
         output: {
-            library: "swedbankpay",
+            library: brand,
             path: path.resolve(__dirname, `dist${basename}`),
             filename: "scripts/[name].js?[hash]",
             chunkFilename: "scripts/[name].js?[hash]",
@@ -183,21 +187,15 @@ module.exports = (env, argv) => {
                         priority: -20,
                         reuseExistingChunk: true
                     },
-                    pxStyles: {
-                        name: "px",
-                        test: /(flatpickr\.css|px\.less)$/,
+                    dgStyles: {
+                        name: "dg-style",
+                        test: brand === "swedbankpay" ? /(flatpickr\.css|swedbankpay\.less)$/ : /(flatpickr\.css|payex\.less)$/,
                         chunks: "all",
                         enforce: true
                     },
                     docStyles: {
                         name: "documentation",
                         test: /documentation\.less$/,
-                        chunks: "all",
-                        enforce: true
-                    },
-                    dgStyles: {
-                        name: "designguide",
-                        test: /designguide\.less$/,
                         chunks: "all",
                         enforce: true
                     }
@@ -219,7 +217,7 @@ module.exports = (env, argv) => {
             new HtmlWebpackPlugin({
                 template: "./src/index.html",
                 hash: true,
-                title: "Swedbank Pay DesignGuide",
+                title: `${brandTitle} DesignGuide`,
                 meta: {
                     "informational-version": infoVersion
                 }
@@ -232,7 +230,9 @@ module.exports = (env, argv) => {
                     basename: JSON.stringify(basename),
                     version: JSON.stringify(version),
                     sentry: isRelease,
-                    google: isRelease
+                    google: isRelease,
+                    brand: JSON.stringify(brand),
+                    brandTitle: JSON.stringify(brandTitle)
                 }
             }),
             new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/) // Ignores moments locale folder which doubles the size of the package, moment is a dependency of chart.js [EH]
@@ -253,16 +253,16 @@ module.exports = (env, argv) => {
                 filename: `${rootPath}index.html`,
                 template: "./build/rootindex.html",
                 hash: true,
-                title: "Swedbank Pay DesignGuide",
-                chunks: ["px"],
+                title: `${brandTitle} DesignGuide`,
+                chunks: ["dg"],
                 basename
             }),
             new HtmlWebpackPlugin({
                 filename: `${rootPath}404.html`,
                 template: "./build/root404.html",
                 hash: true,
-                chunks: ["px"],
-                title: "Swedbank Pay DesignGuide",
+                chunks: ["dg"],
+                title: `${brandTitle} DesignGuide`,
                 basename
             }),
             new SentryCliPlugin({
@@ -284,18 +284,18 @@ module.exports = (env, argv) => {
         if (isRelease) {
             onEndArchive.push({
                 source: "./dist/temp/release",
-                destination: `./dist${basename}release/Swedbankpay.DesignGuide.v${version}.zip`
+                destination: `./dist${basename}release/${brand === "swedbankpay" ? "Swedbankpay" : "Payex"}.DesignGuide.v${version}.zip`
             });
         }
 
         config.plugins.push(
             new AppManifestWebpackPlugin({
-                logo: "./src/img/favicon.png",
+                logo: `./src/img/${brand}/favicon.png`,
                 output: "/icons/",
                 config: {
-                    appName: "Swedbank Pay DesignGuide",
-                    developerName: "Swedbank Pay",
-                    developerURL: "https://payex.com",
+                    appName: `${brandTitle} DesignGuide`,
+                    developerName: brandTitle,
+                    developerURL: brandLink,
                     background: "#000",
                     theme_color: "#2da944",
                     version,
@@ -327,23 +327,23 @@ module.exports = (env, argv) => {
                                 destination: "./dist/temp/icons/icons"
                             },
                             {
-                                source: `./dist${basename}scripts/px-script.js`,
+                                source: `./dist${basename}scripts/dg.js`,
                                 destination: "./dist/temp/release/scripts"
                             },
                             {
-                                source: `./dist${basename}scripts/px-script.js.map`,
+                                source: `./dist${basename}scripts/dg.js.map`,
                                 destination: "./dist/temp/release/scripts"
                             },
                             {
-                                source: `./dist${basename}scripts/px.dashboard.js`,
+                                source: `./dist${basename}scripts/dg-dashboard.js`,
                                 destination: "./dist/temp/release/scripts"
                             },
                             {
-                                source: `./dist${basename}scripts/px.dashboard.js.map`,
+                                source: `./dist${basename}scripts/dg-dashboard.js.map`,
                                 destination: "./dist/temp/release/scripts"
                             },
                             {
-                                source: `./dist${basename}styles/px.css`,
+                                source: `./dist${basename}styles/dg-style.css`,
                                 destination: "./dist/temp/release/styles"
                             }
                         ],

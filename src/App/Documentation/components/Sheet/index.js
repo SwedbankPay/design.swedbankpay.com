@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { ComponentPreview, DocContainer, Property, JavascriptDocs } from "@docutils";
 import SheetComponent from "@components/Sheet";
 
-const { sheet } = window.px;
+const { sheet } = window.dg;
 
 const Example = () => (
     <>

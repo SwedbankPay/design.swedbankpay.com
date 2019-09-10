@@ -5,7 +5,7 @@ class Chart extends Component {
     componentDidMount () {
         const { id, options } = this.props;
 
-        px.chart(id, options);
+        dg.chart(id, options);
     }
 
     render () {

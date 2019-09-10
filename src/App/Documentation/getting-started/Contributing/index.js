@@ -90,22 +90,6 @@ const AddComponentToRoutes = () => (
 );
 
 const AddingStyles = () => {
-    const ImportingTheStyles = () => (
-        <>
-            <h3>Importing the styles</h3>
-            <p>Import it in the appropriate root-file (<Property value="px.less" /> for the core styles, under <Property value="/themes" /> if the component is going to be part of a specific theme).</p>
-            <p>Assuming you are creating a core component the import would look like this:</p>
-            <ComponentPreview language="css" codeFigure>
-                {`
-/* px.less */
-...
-/* Components */
-@import "components/my-example-component";
-...
-                `}
-            </ComponentPreview>
-        </>
-    );
 
     const CreatingVariables = () => (
         <>
@@ -130,9 +114,8 @@ const AddingStyles = () => {
         <div>
             <h2 id="adding-styles">Adding styles</h2>
             <p>To add styling for your component create a new file in <Property value="./src/less/components/" />, name it <Property value="my-example-component.less" />.</p>
-            <ImportingTheStyles />
             <CreatingVariables />
-            <p>Your the styles for <Property value="MyExampleComponent" /> should now be included properly, and you should see changes immediatly while running dev.</p>
+            <p>The style for <Property value="MyExampleComponent" /> should now be included properly, and you should see changes immediately while running dev.</p>
             <p>When writing styles for your component, try to use <Property value="rem" /> (<Property value="1rem" /> = ~<Property value="16px" />) and the predefined variables (only if it makes sense of course) as much as possible. And follow the linting rules set by <Property value="./.stylelintrc" />.</p>
         </div>
     );
@@ -142,7 +125,7 @@ const AddingJavaScript = () => {
     const CreateAScriptFile = () => (
         <div>
             <h3>Create a script file for your component</h3>
-            <p>Create a new file under <Property value="./src/px-script/main/[MyExampleComponent]/" /> for your component, name it <Property value="index.js" />:</p>
+            <p>Create a new file under <Property value="./src/scripts/main/[MyExampleComponent]/" /> for your component, name it <Property value="index.js" />:</p>
             <ComponentPreview language="javascript" codeFigure>
                 {`
 const init = () => {
@@ -158,16 +141,16 @@ export default MyExampleComponent;
         </div>
     );
 
-    const AddScriptToPX = () => (
+    const AddScriptToDG = () => (
         <div>
-            <h3>Add your components script to px-script</h3>
-            <p>Open <Property value="./src/px-script/main/index.js" /> and add your component:</p>
+            <h3>Add your components script to scripts</h3>
+            <p>Open <Property value="./src/scripts/main/index.js" /> and add your component:</p>
             <ComponentPreview language="javascript" codeFigure>
                 {`
 ...
 import MyExampleComponent from "./MyExampleComponent";
 ...
-const px = {
+const dg = {
 ...
 MyExampleComponent,
 ...
@@ -182,7 +165,7 @@ export { ... MyExampleComponent, ... }
     const InitializingTheScript = () => (
         <div>
             <h2>Initializing the script in the documentation</h2>
-            <p>Considering the documentation is built in react your documentation component will load after <Property value="px-script" /> runs it{"'"}s <Property value="initAll" /> method, you will need to run your component{"'"}s init method when the component actually renders.</p>
+            <p>Considering the documentation is built in react your documentation component will load after <Property value="scripts" /> runs it{"'"}s <Property value="initAll" /> method, you will need to run your component{"'"}s init method when the component actually renders.</p>
             <p>You can do this by slightly modifying the <Property value="MyExampleDocumentationComponent" />:</p>
             <ComponentPreview language="javascript" codeFigure>
                 {`
@@ -191,7 +174,7 @@ export { ... MyExampleComponent, ... }
 import React, { Component } from "react";
 ...
 // import your components script
-import { MyExampleComponent } from "@src/px-script/main";
+import { MyExampleComponent } from "@src/scripts/main";
 ...
 ...
 // modify MyExampleDocumentationComponent
@@ -219,9 +202,9 @@ class MyExampleDocumentationComponent extends Component {
     return (
         <div>
             <h2 id="adding-javascript">Adding javascript</h2>
-            <p>If your component needs javascript to run, you will need to add the javascript to the <Property value="px-script" /></p>
+            <p>If your component needs javascript to run, you will need to add the javascript to the <Property value="scripts" /></p>
             <CreateAScriptFile />
-            <AddScriptToPX />
+            <AddScriptToDG />
             <InitializingTheScript />
         </div>
     );
@@ -229,7 +212,8 @@ class MyExampleDocumentationComponent extends Component {
 
 const Contributing = () => (
     <DocContainer docToc>
-        <p className="lead">To create a new component</p>
+        <p className="lead">When contributing, it is important to remember that this project supports two brands: <strong>Swedbank Pay</strong> and <strong>PayEx</strong>.</p>
+        <p>Both brands depend on different theme variables, so it is vital to check that the component also works and looks good on the opposite brand of which you are working on.</p>
         <CreatingYourComponent />
         <CreateADocumentationPage />
         <AddComponentToRoutes />

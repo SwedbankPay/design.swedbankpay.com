@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer, Attribute, Property, PxScript, JavascriptDocs } from "@docutils";
+import { ComponentPreview, DocContainer, Attribute, Property, DgScript, JavascriptDocs } from "@docutils";
 import InputGroup from "@components/InputGroup";
 import Button from "@components/Button";
 import { Checkbox, FormControlText, Radio, Rangeslider, Togglebox } from "@components/FormComponents";
 
-const { rangeslider, validation } = window.px;
+const { rangeslider, validation } = window.dg;
 
 const Overview = () => (
     <>
@@ -306,7 +306,7 @@ const JavascriptMethods = () => (
         <h2 id="javascript-methods">JavaScript methods</h2>
         <JavascriptDocs componentName="validation" />
         <p>
-            The <PxScript component="validation" func="init" /> can be used on a form tag to initialize all fields
+            The <DgScript component="validation" func="init" /> can be used on a form tag to initialize all fields
             contained in the form, or you can pass a single field to initialize just that one.
         </p>
     </>

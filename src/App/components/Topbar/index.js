@@ -1,6 +1,11 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import logo from "@src/img/logo/spay_horizontal_pos.svg";
+import swedbankpayLogo from "@src/img/swedbankpay/logo/swedbankpay-logo.svg";
+import payexLogo from "@src/img/payex/logo/payex-logo.svg";
+
+const brand = process.env.brand;
+
+const devLogo = brand === "swedbankpay" ? swedbankpayLogo : payexLogo;
 
 const isDev = process.env.version === "LOCAL_DEV";
 
@@ -50,7 +55,7 @@ const TopbarLogout = () => (
 const TopbarLogo = () => (
     <>
         <a className="topbar-logo" href="/" onClick={e => e.preventDefault()}>{"\n"}
-            <img src={!isDev ? `${process.env.basename}img/spay_horizontal_pos.svg` : logo} alt="swedbankpay-logo"/>{"\n"}
+            <img src={isDev ? devLogo : `${process.env.basename}img/${brand}.svg`} alt={`${brand}-logo`}/>{"\n"}
         </a>{"\n"}
     </>
 );

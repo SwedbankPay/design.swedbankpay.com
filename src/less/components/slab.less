@@ -18,13 +18,16 @@
         box-shadow: inset 0 0 7px 0 rgba(0, 0, 0, 0.3);
     }
 
-    &.slab-white {
-        background-color: @white;
-        border-color: @gray-bright-alt;
+    &.slab-primary {
+        background-color: @bg-variant-1;
     }
 
-    &.slab-apricot {
-        background-color: @bg-apricot;
+    &.slab-secondary {
+        background-color: @bg-variant-2;
+    }
+
+    &.slab-plain {
+        background-color: @light-gray;
     }
 
     &.slab-lg {
@@ -47,13 +50,6 @@
             position: absolute;
             top: -9px;
             left: 1.5rem;
-        }
-
-        &.slab-white {
-            &:before {
-                border: solid @gray-bright-alt;
-                border-width: 1px 0 0 1px;
-            }
         }
     }
 

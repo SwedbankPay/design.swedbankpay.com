@@ -106,7 +106,7 @@
         .button-variant(@btn-destructive-color, @btn-destructive-bg, @btn-destructive-disabled-color, @btn-destructive-disabled-bg, lighten(@btn-destructive-bg, 10%));
 
         &.btn-outline {
-            .button-outline-variant(@dark-brown, @btn-destructive-bg, @btn-destructive-color);
+            .button-outline-variant(@brand-secondary-dark-2, @btn-destructive-bg, @btn-destructive-color);
         }
     }
 
@@ -243,7 +243,7 @@
             &.btn-outline {
                 &:after {
                     border-color: @blue-bright;
-                    border-left-color: @turquoise;
+                    border-left-color: @brand-accent;
                 }
 
                 &:hover {
@@ -258,7 +258,7 @@
         &.btn-destructive {
             &:after {
                 border-color: rgba(47, 36, 36, 0.4);
-                border-left-color: @dark-brown;
+                border-left-color: @brand-secondary-dark-2;
             }
 
             &[disabled] {
@@ -270,14 +270,14 @@
 
             &.btn-outline {
                 &:after {
-                    border-color: @info-brown;
-                    border-left-color: @dark-brown;
+                    border-color: @brand-secondary-light-4;
+                    border-left-color: @brand-secondary-dark-2;
                 }
 
                 &:hover {
                     &:after {
                         border-color: rgba(47, 36, 36, 0.4);
-                        border-left-color: @dark-brown;
+                        border-left-color: @brand-secondary-dark-2;
                     }
                 }
             }

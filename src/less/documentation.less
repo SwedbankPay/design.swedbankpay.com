@@ -1,0 +1,443 @@
+@import "_variables-swedbankpay.less";
+@import "_variables.less";
+@import "_mixins.less";
+
+#designguide {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
+    .designguide-header {
+        .topbar-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            a {
+                margin-left: 5px;
+                color: @text-muted;
+                fill: @text-muted;
+                border: none;
+
+                svg {
+                    overflow: visible;
+                    width: 2rem;
+                    height: 2rem;
+                    display: inline-block;
+                    vertical-align: top;
+                }
+
+                &:hover {
+                    color: darken(@text-muted, 20%);
+                    fill: darken(@text-muted, 20%);
+                }
+            }
+        }
+    }
+
+    pre {
+        font-size: 87.5%;
+    }
+
+    .color-preview {
+        display: grid;
+        row-gap: 1rem;
+        column-gap: 2.5rem;
+        grid-template-columns: 1fr;
+
+        svg {
+            width: 100%;
+        }
+
+        figcaption {
+            line-height: 1.25rem;
+            margin-top: 0.25rem;
+        }
+    }
+
+    @media screen and (min-width: @screen-sm-min) {
+        .color-preview {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    .showcase-panel {
+        .sc-highlight {
+            background-color: rgba(86, 61, 124, 0.15);
+            border: 1px solid rgba(86, 61, 124, 0.15);
+        }
+
+        .showcase-grid {
+            .row {
+                > [class*="col"] {
+                    padding-top: 0.5rem;
+                    padding-bottom: 0.5rem;
+                    background: @gray-bright;
+                    border: 1px solid fade(@gray-bright-alt, 80%);
+                }
+
+                + .row {
+                    margin-top: 1rem;
+                }
+            }
+
+            &.showcase-vertical-space {
+                .row {
+                    background: @neargray;
+                    height: 10rem;
+                }
+            }
+        }
+    }
+
+    .browser-support-table {
+        th,
+        tr {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            display: inline-block;
+        }
+    }
+
+    // Override the prism toolbar button rules
+    figure {
+        .code-toolbar {
+            > .toolbar {
+                opacity: 1;
+
+                > .toolbar-item {
+                    a {
+                        background: transparent;
+                        padding: 0.25rem 0.5rem;
+                        border-radius: 0.25rem;
+                        border: 0;
+                        box-shadow: none;
+
+                        &:hover {
+                            color: @white;
+                            background: @brand-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #loading-component {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+
+        .loader {
+            margin-top: 10rem;
+        }
+    }
+
+    /* Only used for showing border-utility [AW] */
+    .demo-square {
+        height: 5rem;
+        width: 5rem;
+        background-color: @neargray;
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+
+    // NOTE: This is not used for anything but including the image in the build [EH]
+    // #mail_icon {
+    //     background: url("../img/swedbankpaymail.png");
+    // }
+}
+
+.documentation {
+    .make-container();
+
+    flex-grow: 1;
+
+    .doc-container {
+        margin-right: auto;
+        margin-left: auto;
+        padding: 1rem 3rem;
+        width: 100%;
+
+        @media (max-width: @screen-md-max) {
+            padding-left: @base-padding;
+            padding-right: @base-padding;
+        }
+    }
+
+    .doc-card {
+        border-bottom: 2px solid @border-color;
+        border-radius: 2px;
+    }
+
+    .doc-circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        height: 150px;
+        width: $height;
+        background-color: @brand-primary;
+        border-radius: 50%;
+
+        .material-icons {
+            font-size: 6rem;
+        }
+    }
+
+    .doc-sidebar {
+        height: auto;
+        position: sticky;
+    }
+
+    .sidebar-heading {
+        background: darken(@brand-primary, 5%);
+        box-shadow: 1px 0 0 0 darken(@brand-primary, 5%);
+        padding-left: 1.25rem;
+        height: 80px;
+
+        h1 {
+            color: @text-color;
+            margin: 0;
+            font-weight: @font-weight-normal;
+            line-height: 80px;
+        }
+    }
+
+    .documentation-nav {
+        padding: @base-padding;
+        max-height: calc(100vh - 226px);
+        overflow-y: hidden;
+
+        &:hover {
+            overflow-y: auto;
+        }
+
+        .nav-group {
+            margin-bottom: @base-margin;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+
+            &:first-child {
+                padding-top: 1rem;
+                border-top: 1px solid rgba(0, 0, 0, 0.075);
+            }
+
+            a {
+                width: 100%;
+                padding: 0.25rem 0;
+                text-decoration: none;
+
+                &.active {
+                    font-weight: @font-weight-bold;
+                }
+            }
+
+            .nav-heading {
+                display: flex;
+                align-items: flex-end;
+
+                > i.material-icons {
+                    user-select: none;
+                }
+
+                > span {
+                    padding: 0;
+                    cursor: pointer;
+
+                    &:hover,
+                    &:focus {
+                        text-decoration: underline;
+                    }
+
+                    &:active,
+                    &:hover {
+                        outline: 0;
+                    }
+
+                    &:focus {
+                        .tab-focus();
+                    }
+                }
+
+                i {
+                    cursor: pointer;
+                    color: @text-muted;
+                    margin-right: 0.25rem;
+                    transition: transform 0.5s ease-in-out;
+                }
+            }
+
+            ul {
+                list-style: none;
+                padding: 0 2.25rem;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s;
+                font-size: 90%;
+
+                li {
+                    display: flex;
+                }
+            }
+
+            &.active {
+                .nav-heading {
+                    > span {
+                        font-weight: @font-weight-bold;
+                    }
+
+                    i {
+                        transform: rotate(90deg);
+                        transition: transform 0.2s;
+                    }
+                }
+
+                ul {
+                    max-height: 100vh;
+                    transition: max-height 1s ease-in-out;
+                }
+            }
+        }
+    }
+
+    .doc-view {
+        padding-left: 0;
+        padding-right: 0;
+        background: @bg-white;
+    }
+
+    .view-heading {
+        background: @brand-primary;
+        height: 80px;
+        border-left: 1px solid darken(@brand-primary, 5%);
+
+        h2 {
+            color: @text-color;
+            padding-left: @base-padding-xl;
+            margin: 0;
+            font-weight: @font-weight-normal;
+            line-height: 80px;
+        }
+    }
+
+    .doc-body {
+        padding-right: 3rem;
+
+        @media (max-width: @screen-sm-max) {
+            padding-right: 10px;
+        }
+    }
+
+    .doc-search {
+        padding: @base-padding 1rem;
+
+        .search-results {
+            position: absolute;
+            left: 0;
+            width: ~"calc(100% - 2rem)";
+            margin: 0 1rem 0;
+            padding: 0;
+            list-style: none;
+            border: 1px solid @input-border-color;
+            z-index: 2000;
+            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+            display: none;
+            background-color: @white;
+
+            .search-result a {
+                border: 0;
+                display: block;
+                padding: 0.25rem 0.5rem;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: @light-gray;
+                }
+            }
+        }
+    }
+
+    .doc-section-heading {
+        &:before {
+            content: "";
+            display: block;
+            height: 100px;
+            margin: -100px 0 0;
+        }
+    }
+
+    .doc-toc {
+        position: sticky;
+        top: 32px;
+        font-size: 0.8rem;
+        line-height: 1.2;
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+
+            li {
+                border-left: 1px solid rgba(0, 0, 0, 0.1);
+                padding: 0.5rem 0 0.5rem 1rem;
+
+                &.active {
+                    border-left: 2px solid @brand-primary;
+                    font-weight: @font-weight-bold;
+                    padding-left: calc(@base-padding - 1px);
+                }
+
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .showcase-panel {
+        position: relative;
+        background-color: @white;
+        padding: @base-padding-lg;
+        margin: @base-margin-sm 0 @base-margin 0;
+        border-radius: 2px;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+
+        &.showcasepanel-sm {
+            max-width: 20rem;
+        }
+    }
+
+    code {
+        padding: 0.1rem;
+        border-radius: 0.3rem;
+        white-space: normal;
+        background: @bg-variant-1;
+    }
+
+    .icon-preview {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: @screen-xs-max) {
+    .documentation {
+        .doc-circle {
+            height: 120px;
+            width: $height;
+
+            .material-icons {
+                font-size: 4rem;
+            }
+        }
+    }
+}
+

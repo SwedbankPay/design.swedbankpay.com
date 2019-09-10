@@ -69,7 +69,7 @@ exports[`GettingStarted: Contributing Adding JavaScript renders 3`] = `
   <p>
     Create a new file under 
     <Property
-      value="./src/px-script/main/[MyExampleComponent]/"
+      value="./src/scripts/main/[MyExampleComponent]/"
     />
      for your component, name it 
     <Property
@@ -104,12 +104,12 @@ export default MyExampleComponent;
 exports[`GettingStarted: Contributing Adding JavaScript renders 4`] = `
 <div>
   <h3>
-    Add your components script to px-script
+    Add your components script to scripts
   </h3>
   <p>
     Open 
     <Property
-      value="./src/px-script/main/index.js"
+      value="./src/scripts/main/index.js"
     />
      and add your component:
   </p>
@@ -121,7 +121,7 @@ exports[`GettingStarted: Contributing Adding JavaScript renders 4`] = `
 ...
 import MyExampleComponent from "./MyExampleComponent";
 ...
-const px = {
+const dg = {
 ...
 MyExampleComponent,
 ...
@@ -141,7 +141,7 @@ exports[`GettingStarted: Contributing Adding JavaScript renders 5`] = `
   <p>
     Considering the documentation is built in react your documentation component will load after 
     <Property
-      value="px-script"
+      value="scripts"
     />
      runs it
     '
@@ -170,7 +170,7 @@ exports[`GettingStarted: Contributing Adding JavaScript renders 5`] = `
 import React, { Component } from "react";
 ...
 // import your components script
-import { MyExampleComponent } from "@src/px-script/main";
+import { MyExampleComponent } from "@src/scripts/main";
 ...
 ...
 // modify MyExampleDocumentationComponent
@@ -205,11 +205,11 @@ exports[`GettingStarted: Contributing Adding JavaScript renders 6`] = `
   <p>
     If your component needs javascript to run, you will need to add the javascript to the 
     <Property
-      value="px-script"
+      value="scripts"
     />
   </p>
   <CreateAScriptFile />
-  <AddScriptToPX />
+  <AddScriptToDG />
   <InitializingTheScript />
 </div>
 `;
@@ -219,40 +219,6 @@ exports[`GettingStarted: Contributing Adding Styles renders 1`] = `<h2 />`;
 exports[`GettingStarted: Contributing Adding Styles renders 2`] = `<p />`;
 
 exports[`GettingStarted: Contributing Adding Styles renders 3`] = `
-<Fragment>
-  <h3>
-    Importing the styles
-  </h3>
-  <p>
-    Import it in the appropriate root-file (
-    <Property
-      value="px.less"
-    />
-     for the core styles, under 
-    <Property
-      value="/themes"
-    />
-     if the component is going to be part of a specific theme).
-  </p>
-  <p>
-    Assuming you are creating a core component the import would look like this:
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="css"
-  >
-    
-/* px.less */
-...
-/* Components */
-@import "components/my-example-component";
-...
-                
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`GettingStarted: Contributing Adding Styles renders 4`] = `
 <Fragment>
   <h3>
     Creating variables
@@ -284,11 +250,11 @@ exports[`GettingStarted: Contributing Adding Styles renders 4`] = `
 </Fragment>
 `;
 
+exports[`GettingStarted: Contributing Adding Styles renders 4`] = `<p />`;
+
 exports[`GettingStarted: Contributing Adding Styles renders 5`] = `<p />`;
 
-exports[`GettingStarted: Contributing Adding Styles renders 6`] = `<p />`;
-
-exports[`GettingStarted: Contributing Adding Styles renders 7`] = `
+exports[`GettingStarted: Contributing Adding Styles renders 6`] = `
 <div>
   <h2
     id="adding-styles"
@@ -306,14 +272,13 @@ exports[`GettingStarted: Contributing Adding Styles renders 7`] = `
     />
     .
   </p>
-  <ImportingTheStyles />
   <CreatingVariables />
   <p>
-    Your the styles for 
+    The style for 
     <Property
       value="MyExampleComponent"
     />
-     should now be included properly, and you should see changes immediatly while running dev.
+     should now be included properly, and you should see changes immediately while running dev.
   </p>
   <p>
     When writing styles for your component, try to use 
@@ -474,7 +439,18 @@ exports[`GettingStarted: Contributing renders 1`] = `
   <p
     className="lead"
   >
-    To create a new component
+    When contributing, it is important to remember that this project supports two brands: 
+    <strong>
+      Swedbank Pay
+    </strong>
+     and 
+    <strong>
+      PayEx
+    </strong>
+    .
+  </p>
+  <p>
+    Both brands depend on different theme variables, so it is vital to check that the component also works and looks good on the opposite brand of which you are working on.
   </p>
   <CreatingYourComponent />
   <CreateADocumentationPage />

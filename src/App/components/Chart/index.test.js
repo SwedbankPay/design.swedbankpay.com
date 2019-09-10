@@ -3,10 +3,10 @@ import { shallow } from "enzyme";
 
 import Chart from "./index";
 
-px.chart = jest.fn();
+dg.chart = jest.fn();
 
 describe("Component: Chart - ", () => {
-    beforeEach(() => px.chart.mockClear());
+    beforeEach(() => dg.chart.mockClear());
 
     it("is defined", () => {
         expect(Chart).toBeDefined();
@@ -41,6 +41,6 @@ describe("Component: Chart - ", () => {
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<canvas id="test" />)).toEqual(true);
-        expect(px.chart).toHaveBeenCalledWith("test", { test: "test" });
+        expect(dg.chart).toHaveBeenCalledWith("test", { test: "test" });
     });
 });

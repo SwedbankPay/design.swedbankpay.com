@@ -29,11 +29,11 @@ exports[`Dashboard: Introduction Css renders 1`] = `
     language="html"
   >
     <link
-      href="https://design.swedbankpay.com/TEST/styles/px.css"
+      href="https://design.TESTBRAND.com/TEST/styles/dg-style.css"
       rel="stylesheet"
     />
     <link
-      href="https://design.swedbankpay.com/TEST/styles/px.dashboard.css"
+      href="https://design.TESTBRAND.com/TEST/styles/dg-dashboard.css"
       rel="stylesheet"
     />
   </ComponentPreview>
@@ -50,7 +50,7 @@ exports[`Dashboard: Introduction JavaScript renders 1`] = `
   <p>
     The dashboard theme requires a separate script to run properly. So add the dashboard script below the 
     <Property
-      value="px-script"
+      value="scripts"
     />
      at the bottom of your 
     <PrismCode
@@ -66,10 +66,10 @@ exports[`Dashboard: Introduction JavaScript renders 1`] = `
     language="html"
   >
     <script
-      src="https://design.swedbankpay.com/TEST/scripts/px-script.js"
+      src="https://design.TESTBRAND.com/TEST/scripts/dg.js"
     />
     <script
-      src="https://design.swedbankpay.com/TEST/scripts/px.dashboard.js"
+      src="https://design.TESTBRAND.com/TEST/scripts/dg-dashboard.js"
     />
   </ComponentPreview>
 </Fragment>
@@ -93,7 +93,7 @@ exports[`Dashboard: Introduction renders 1`] = `
   <p
     className="lead"
   >
-    Get started with the Swedbank Pay DesignGuide Dashboard theme.
+    Get started with the dashboard theme.
   </p>
   <QuickStart />
   <JavaScript />
