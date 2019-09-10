@@ -30,7 +30,7 @@ const SlabColors = () => (
     <>
         <h2 id="slab-colors">Slab colors</h2>
         <p>
-        We offer three additional slab types; <Property value=".card-primary" />, <Property value=".card-secondary" /> and <Property value=".card-plain" />.
+        We offer three additional slab types; <Property value=".slab-primary" />, <Property value=".slab-secondary" /> and <Property value=".slab-plain" />.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="slab slab-primary">

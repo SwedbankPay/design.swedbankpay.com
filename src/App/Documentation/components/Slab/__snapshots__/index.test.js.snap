@@ -131,15 +131,15 @@ exports[`Components: Slab SlabColors renders 1`] = `
   <p>
     We offer three additional slab types; 
     <Property
-      value=".card-primary"
+      value=".slab-primary"
     />
     , 
     <Property
-      value=".card-secondary"
+      value=".slab-secondary"
     />
      and 
     <Property
-      value=".card-plain"
+      value=".slab-plain"
     />
     .
   </p>
