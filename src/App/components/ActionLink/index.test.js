@@ -28,7 +28,7 @@ describe("Component: ActionLink", () => {
         const mockBadge = {
             type: "badge-yellow",
             text: "Badge"
-        }
+        };
         const wrapper = shallow(<ActionLink linkText="Link text" badge={mockBadge} />);
 
         expect(wrapper).toMatchSnapshot();
