@@ -23,7 +23,7 @@ exports[`Core: Color AlertColors renders 1`] = `
       key="0"
     >
       <ColorPreview
-        hex="#477D17"
+        hex="#51971B"
         name="Brand success"
       />
     </li>
@@ -47,7 +47,7 @@ exports[`Core: Color AlertColors renders 1`] = `
       key="3"
     >
       <ColorPreview
-        hex="#FFFAE5"
+        hex="#FFF3D5"
         name="Brand warning light"
       />
     </li>
@@ -55,7 +55,7 @@ exports[`Core: Color AlertColors renders 1`] = `
       key="4"
     >
       <ColorPreview
-        hex="#B24843"
+        hex="#C5131C"
         name="Brand error"
       />
     </li>
@@ -63,7 +63,7 @@ exports[`Core: Color AlertColors renders 1`] = `
       key="5"
     >
       <ColorPreview
-        hex="#FCEEED"
+        hex="#F9DED3"
         name="Brand error light"
       />
     </li>
@@ -71,7 +71,7 @@ exports[`Core: Color AlertColors renders 1`] = `
       key="6"
     >
       <ColorPreview
-        hex="#2C7A8F"
+        hex="#4572C0"
         name="Brand info"
       />
     </li>
@@ -79,7 +79,7 @@ exports[`Core: Color AlertColors renders 1`] = `
       key="7"
     >
       <ColorPreview
-        hex="#F0F9FB"
+        hex="#E8EFF9"
         name="Brand info light"
       />
     </li>

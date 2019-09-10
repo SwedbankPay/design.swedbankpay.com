@@ -7,7 +7,7 @@ exports[`Component: Footer -  renders 1`] = `
   <p
     className="page-footer-rights"
   >
-    © Swedbank Pay (publ)
+    © Swedbank Pay
   </p>
 </footer>
 `;
