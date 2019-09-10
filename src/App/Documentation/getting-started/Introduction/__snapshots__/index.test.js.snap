@@ -29,7 +29,7 @@ exports[`GettingStarted: Introduction Css renders 1`] = `
     language="html"
   >
     <link
-      href="https://design.undefined.com/TEST/styles/dg-style.css"
+      href="https://design.TESTBRAND.com/TEST/styles/dg-style.css"
       rel="stylesheet"
     />
   </ComponentPreview>
@@ -65,7 +65,7 @@ exports[`GettingStarted: Introduction JavaScript renders 1`] = `
     language="html"
   >
     <script
-      src="https://design.undefined.com/TEST/scripts/dg.js"
+      src="https://design.TESTBRAND.com/TEST/scripts/dg.js"
     />
   </ComponentPreview>
 </Fragment>
@@ -80,6 +80,7 @@ exports[`GettingStarted: Introduction QuickStart renders 1`] = `
   </h2>
   <p>
     To quickly add the 
+    TESTBRAND
      DesignGuide to your project, include the snippets below in your project.
   </p>
 </Fragment>
@@ -93,6 +94,7 @@ exports[`GettingStarted: Introduction renders 1`] = `
     className="lead"
   >
     Getting started with the 
+    TESTBRAND
      DesignGuide.
   </p>
   <QuickStart />

@@ -5,7 +5,6 @@ import { ComponentPreview, Property, DocContainer } from "@docutils";
 
 const BASENAME = process.env.basename;
 const brand = process.env.brand;
-const brandTitle = process.env.brandTitle;
 const scriptUrl = `https://design.${brand}.com${BASENAME}scripts/dg.js`;
 const dashboardScriptUrl = `https://design.${brand}.com${BASENAME}scripts/dg-dashboard.js`;
 const styleUrl = `https://design.${brand}.com${BASENAME}styles/dg-style.css`;
@@ -42,7 +41,7 @@ const JavaScript = () => (
 
 const Introduction = () => (
     <DocContainer>
-        <p className="lead">Get started with the {brandTitle} DesignGuide Dashboard theme.</p>
+        <p className="lead">Get started with the dashboard theme.</p>
         <QuickStart />
         {/* <Css /> */}
         <JavaScript />

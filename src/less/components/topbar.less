@@ -13,7 +13,6 @@
 
     .topbar-logo {
         width: 130px;
-        // height: 100%; // <-- Messes up PayEx logo
         background-size: cover;
         border: none;
         display: flex;
@@ -115,6 +114,8 @@
                 animation: slide-in 0.5s ease forwards;
 
                 > a {
+                    color: @brand-secondary;
+
                     span {
                         margin-left: 2rem;
                     }
@@ -157,7 +158,7 @@
 
             > a {
                 font-family: @font-swedbank-headline;
-                color: @brand-secondary-dark-2;
+                color: @gray-dark;
                 cursor: pointer;
                 text-decoration: none;
                 display: flex;

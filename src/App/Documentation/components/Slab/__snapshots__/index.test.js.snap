@@ -82,7 +82,7 @@ exports[`Components: Slab SlabArrow renders 1`] = `
     <Property
       value=".slab-arrow"
     />
-     inherits the color from the slab it is appended to, and is given a border if used with slab-white.
+     inherits the color from the slab it is appended to.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -97,14 +97,21 @@ exports[`Components: Slab SlabArrow renders 1`] = `
       </p>
     </div>
     <div
-      className="slab slab-white slab-arrow"
+      className="slab slab-primary slab-arrow"
     >
       <p>
         This slab has some connection to the content above.
       </p>
     </div>
     <div
-      className="slab slab-variant-1 slab-arrow"
+      className="slab slab-secondary slab-arrow"
+    >
+      <p>
+        This slab has some connection to the content above.
+      </p>
+    </div>
+    <div
+      className="slab slab-plain slab-arrow"
     >
       <p>
         This slab has some connection to the content above.
@@ -122,7 +129,19 @@ exports[`Components: Slab SlabColors renders 1`] = `
     Slab colors
   </h2>
   <p>
-    Both white and variant-1 variants of slab exist.
+    We offer three additional slab types; 
+    <Property
+      value=".slab-primary"
+    />
+    , 
+    <Property
+      value=".slab-secondary"
+    />
+     and 
+    <Property
+      value=".slab-plain"
+    />
+    .
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -130,7 +149,7 @@ exports[`Components: Slab SlabColors renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="slab slab-white"
+      className="slab slab-primary"
     >
       <h4>
         Here is some text and then a striped item list
@@ -153,7 +172,30 @@ exports[`Components: Slab SlabColors renders 1`] = `
       </ul>
     </div>
     <div
-      className="slab slab-variant-1"
+      className="slab slab-secondary"
+    >
+      <h4>
+        Here is some text and then a striped item list
+      </h4>
+      <small>
+        Some text with a small listing of items underneath.
+      </small>
+      <ul
+        className="list item-list"
+      >
+        <li>
+          Item 1
+        </li>
+        <li>
+          Item 2
+        </li>
+        <li>
+          Item 3
+        </li>
+      </ul>
+    </div>
+    <div
+      className="slab slab-plain"
     >
       <h4>
         Here is some text and then a striped item list
@@ -294,10 +336,10 @@ exports[`Components: Slab renders 1`] = `
     Slabs are container components, therefore it works with whatever you want to put in it.
   </p>
   <DefaultSlab />
+  <SlabColors />
   <SlabElevated />
   <SlabWell />
   <SlabArrow />
-  <SlabColors />
   <SlabMuted />
   <SlabSizes />
 </DocContainer>

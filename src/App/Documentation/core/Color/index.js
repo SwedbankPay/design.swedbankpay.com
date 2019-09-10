@@ -46,7 +46,7 @@ const mainText = [
 const alertText = [
     {
         name: "Brand success",
-        hex: "#477D17"
+        hex: "#51971B"
     },
     {
         name: "Brand success light",
@@ -58,23 +58,23 @@ const alertText = [
     },
     {
         name: "Brand warning light",
-        hex: "#FFFAE5"
+        hex: "#FFF3D5"
     },
     {
         name: "Brand error",
-        hex: "#B24843"
+        hex: "#C5131C"
     },
     {
         name: "Brand error light",
-        hex: "#FCEEED"
+        hex: "#F9DED3"
     },
     {
         name: "Brand info",
-        hex: "#2C7A8F"
+        hex: "#4572C0"
     },
     {
         name: "Brand info light",
-        hex: "#F0F9FB"
+        hex: "#E8EFF9"
     }
 ];
 
