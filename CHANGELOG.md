@@ -20,6 +20,20 @@
         - Due to a bug in webpack where a cachegroup cannot have the same name as an entry file (`dg`), this filename is suffixed with `-style`
  - `px` and all references to this object are now: `dg`
     - E.g. `dg.script.initAll(), dg.toast() etc...`
+ - Alert colors updated
+ - Input fields
+    - No longer italic errors
+    - Font sizes updated
+    - Spacing updated
+    - Height updated
+ - Action links
+    - Arrow spacing updated
+ - Font colors
+    - New gray scale
+ - Expandable
+    - Color updated
+ - Badges
+    - A single digit results in a circled badge
 
 ### Fixed
 
