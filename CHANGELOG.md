@@ -32,8 +32,11 @@
     - New gray scale
  - Expandable
     - Color updated
- - Badges
+ - Badge
     - A single digit results in a circled badge
+ - Slab
+    - Uses the same system as cards
+      - New variants: `slab-primary` `slab-secondary` `slab-plain`
 
 ### Fixed
 
