@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import ColorDisplay from "./index";
 
-describe("Core: Color", () => {
+describe("Component: ColorDisplay", () => {
     it("is defined", () => {
         expect(ColorDisplay).toBeDefined();
     });
