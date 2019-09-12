@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import Topbar, { Overview, TopbarWide, JavascriptMethods } from "./index";
 
-const { topbar } = window.px;
+const { topbar } = window.dg;
 
 describe("Components: Topbar", () => {
     it("is defined", () => {
@@ -12,7 +12,7 @@ describe("Components: Topbar", () => {
 
     it("renders", () => {
         /*
-            The Topbar component calls px.topbar.init("demo-topbar") on componentDidMount. Mocking the topbarscript
+            The Topbar component calls dg.topbar.init("demo-topbar") on componentDidMount. Mocking the topbarscript
             to avoid a warning message. [AW]
         */
         topbar.init = jest.fn();

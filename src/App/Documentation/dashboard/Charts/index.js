@@ -25,7 +25,7 @@ const LineChart = () => (
             </ComponentPreview>
             <ComponentPreview language="javascript" codeFigure >
                 {`
-px.chart("simple-line-chart", {
+dg.chart("simple-line-chart", {
     type: "line",
     data: {
         labels: ["2013", "2014", "2015", "2016", "2017", "2018"],
@@ -63,7 +63,7 @@ px.chart("simple-line-chart", {
             </ComponentPreview>
             <ComponentPreview language="javascript" codeFigure >
                 {`
-px.chart("stepped-dashed-line-chart", {
+dg.chart("stepped-dashed-line-chart", {
     type: "line",
     data: {
         labels: ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021"],
@@ -120,7 +120,7 @@ px.chart("stepped-dashed-line-chart", {
             </ComponentPreview>
             <ComponentPreview language="javascript" codeFigure >
                 {`
-px.chart("advanced-line-chart", {
+dg.chart("advanced-line-chart", {
     type: "line",
     data: {
         labels: ["2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018"],
@@ -187,7 +187,7 @@ const BarChart = () => (
         </ComponentPreview>
         <ComponentPreview language="javascript" codeFigure >
             {`
-px.chart("simple-bar-chart", {
+dg.chart("simple-bar-chart", {
     type: "bar",
     data: {
         labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
@@ -246,7 +246,7 @@ px.chart("simple-bar-chart", {
         </ComponentPreview>
         <ComponentPreview language="javascript" codeFigure >
             {`
-px.chart("multi-bar-chart", {
+dg.chart("multi-bar-chart", {
     type: "bar",
     data: {
         labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
@@ -317,7 +317,7 @@ px.chart("multi-bar-chart", {
             </ComponentPreview>
             <ComponentPreview language="javascript" codeFigure >
                 {`
-px.chart("stacked-multi-bar-chart", {
+dg.chart("stacked-multi-bar-chart", {
     type: "bar",
     data: {
         labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
@@ -376,7 +376,7 @@ const DoughnutAndPieCharts = () => (
         </ComponentPreview>
         <ComponentPreview language="javascript" codeFigure >
             {`
-px.chart("simple-pie-chart", {
+dg.chart("simple-pie-chart", {
     type: "pie",
     data: {
         labels: ["Chrome", "Internet Explorer", "Firefox", "Edge", "Safari", "Opera", "Other"],
@@ -407,7 +407,7 @@ px.chart("simple-pie-chart", {
         </ComponentPreview>
         <ComponentPreview language="javascript" codeFigure >
             {`
-px.chart("doughnut-chart", {
+dg.chart("doughnut-chart", {
     type: "doughnut",
     data: {
         labels: ["Chrome", "Internet Explorer", "Firefox", "Edge", "Safari", "Opera", "Other"],
@@ -458,7 +458,7 @@ const MixingTypes = () => (
         </ComponentPreview>
         <ComponentPreview language="javascript" codeFigure >
             {`
-px.chart("mixed-chart", {
+dg.chart("mixed-chart", {
     type: "bar",
     data: {
         labels: ["2016", "2017", "2018", "2019", "2020", "2021"],

@@ -20,14 +20,14 @@
     }
 
     &.card-primary {
-        background-color: @bg-apricot;
+        background-color: @brand-bg-1;
 
         .card-header {
             position: relative;
-            border-top: 7px solid @orange-bright;
+            border-top: 7px solid @brand-primary-bright;
 
             * {
-                color: @brown;
+                color: @brand-secondary;
             }
 
             &:after {
@@ -37,7 +37,7 @@
                 left: 1.6rem;
                 width: 1.2rem;
                 height: 0.6rem;
-                background-color: @orange-bright;
+                background-color: @brand-primary-bright;
                 clip-path: polygon(100% 0, 0 0, 50% 100%);
             }
 
@@ -49,15 +49,15 @@
     }
 
     &.card-secondary {
-        background-color: @bg-light-turquoise;
+        background-color: @brand-bg-2;
         position: relative;
 
         .card-header {
             position: relative;
-            border-top: 7px solid @turquoise;
+            border-top: 7px solid @brand-accent;
 
             * {
-                color: @brown;
+                color: @brand-secondary;
             }
 
             &:after {
@@ -67,7 +67,7 @@
                 left: 1.6rem;
                 width: 1.2rem;
                 height: 0.6rem;
-                background-color: @turquoise;
+                background-color: @brand-accent;
                 clip-path: polygon(100% 0, 0 0, 50% 100%);
             }
         }
@@ -78,7 +78,7 @@
 
         .card-header {
             * {
-                color: @brown;
+                color: @brand-secondary;
             }
         }
     }
@@ -94,7 +94,7 @@
 
             & a {
                 text-decoration: none;
-                color: @brown;
+                color: @brand-secondary;
             }
         }
         /* stylelint-enable selector-list-comma-newline-after */

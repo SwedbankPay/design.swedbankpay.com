@@ -4,7 +4,7 @@ import PrismCode from "react-prism";
 import { ComponentPreview, DocContainer, Property, Icon } from "@docutils";
 import IconPreview from "@components/IconPreview";
 
-const { actionList } = window.px;
+const { actionList } = window.dg;
 
 const MaterialIcons = () => (
     <>

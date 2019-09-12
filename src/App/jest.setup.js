@@ -1,15 +1,18 @@
 import { configure, shallow, render, mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 
-import px from "../px-script/main";
+import dg from "../scripts/main";
 
-global.px = px;
+global.dg = dg;
 
 // React 16 Enzyme adapter
 configure({ adapter: new Adapter() });
 
 // Set up static testing variables
 process.env.basename = "/TEST/";
+process.env.brand = "TESTBRAND";
+process.env.brandTitle = "TESTBRAND";
+process.env.brandLink = "TESTBRANDLINK";
 
 // Make Enzyme functions available in all test files without importing
 global.shallow = shallow;

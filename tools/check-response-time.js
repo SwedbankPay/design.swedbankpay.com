@@ -1,6 +1,6 @@
 const fetch = require("node-fetch");
 
-const BASEURL = `https://design.swedbankpay.com/${process.env.basename}`;
+const BASEURL = `https://design.${process.env.brand}.com/${process.env.basename}`;
 const STATES = {
     SUCCESS: {
         COLOR: "#2da944",
@@ -21,16 +21,16 @@ const MS_THRESHOLDS = {
 };
 const URL_LIST = [
     {
-        name: "px-script",
-        path: "/scripts/px-script.js"
+        name: "dg",
+        path: "/scripts/dg.js"
     },
     {
-        name: "px.dashboard",
-        path: "/scripts/px.dashboard.js"
+        name: "dg-dashboard",
+        path: "/scripts/dg-dashboard.js"
     },
     {
-        name: "px.css",
-        path: "/styles/px.css"
+        name: "dg-style.css",
+        path: "/styles/dg-style.css"
     }
 ];
 

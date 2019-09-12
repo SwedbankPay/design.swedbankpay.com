@@ -1,10 +1,13 @@
 <p align="center">
-    <img src="./src/img/logo/spay_vertical_pos.svg" width=300 />
+    <img src="./src/img/swedbankpay/logo/swedbankpay-logo.svg" width=300 />
+</p>
+<p align="center">
+    <img src="./src/img/payex/logo/payex-logo.svg" width=140 />
 </p>
 
 # Swedbank Pay DesignGuide
 
-[![Version](https://img.shields.io/badge/Version-3.5.0-blue.svg)](https://github.com/swedbankpay/design.swedbankpay.com/releases/tag/3.5.0)
+[![Version](https://img.shields.io/badge/Version-4.0.0-blue.svg)](https://github.com/swedbankpay/design.swedbankpay.com/releases/tag/4.0.0)
 [![Build status](https://ci.appveyor.com/api/projects/status/1dii19sqw1m7xtsn/branch/master?svg=true)](https://ci.appveyor.com/project/PayEx/design-swedbankpay-com/branch/master)
 [![codecov](https://codecov.io/gh/swedbankpay/design.swedbankpay.com/branch/develop/graph/badge.svg)](https://codecov.io/gh/swedbankpay/design.swedbankpay.com)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=SwedbankPay/design.swedbankpay.com)](https://dependabot.com)
@@ -50,7 +53,7 @@ DesignGuide requires [Node.js](https://nodejs.org/en/) (includes npm).
 When importing different components in the files you create, you can use shortcuts for common paths. The shortcuts are as following:
 
 - `~` - root of the project (example `import package from "~/package";`).
-- `$` - `~/src`-folder (example `import px from "$/px-script";`).
+- `$` - `~/src`-folder (example `import dg from "$/scripts";`).
 - `@` - `~/src/App/components`-folder (example `import Alert from "@components/Alert";`).
 - `#` - `~/src/App/Documentation/utils`-folder (example `import { DocToc } from "@docutils";`).
 

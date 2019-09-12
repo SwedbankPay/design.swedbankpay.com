@@ -1,8 +1,8 @@
 .badge {
     color: @white;
-    padding: 0 0.5em; /* stylelint-disable-line */ /* Using em for variable padding based on font-size of badge [AW] */
+    padding: 0.08em 0.37em; /* stylelint-disable-line */ /* Using em for variable padding based on font-size of badge [AW] */
     border-radius: 2rem;
-    font-size: 85%;
+    font-size: 0.875rem;
     line-height: 1;
 
     each(@badge-list, .(@color, @name) {
@@ -18,6 +18,6 @@
     }
 
     &.badge-yellow {
-        color: @dark-brown;
+        color: @brand-secondary-dark-2;
     }
 }

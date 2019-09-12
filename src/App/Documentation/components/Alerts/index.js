@@ -5,7 +5,7 @@ import PrismCode from "react-prism";
 import { ComponentPreview, Attribute, Property, DocContainer, JavascriptDocs } from "@docutils";
 import AlertComponent, { ComplexAlert } from "@components/Alert";
 
-const { alert } = window.px;
+const { alert } = window.dg;
 
 const BasicUsage = () => (
     <>

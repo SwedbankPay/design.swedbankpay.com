@@ -1,34 +1,43 @@
 # Changelog
 
-## [3.5.0] - 2019-08-16
+## [4.0.0] - 2019-09-04
 
 ### Added
 
-- Added .dialog-header and .dialog-footer to the dialog component.
-- Added tab lock to dialog making it so you can't tab out of the dialog until an option is clicked.
-- Added aria labels to dialog documentation to show an example of how to use dialog accessibly.
-- Added .expandable-headline and .expandable-subtitle to .expandable.
-- Added aria-expanded attribute to expandable script.
-- Added aria-controls to expandable example.
-- Added document listener adding and removing .intent-mouse on the body tag. This class disables :focus styling.
-- Added window resize listener for topbar so it is closed when the window size changes.
-- Added tab trapping and correct focus to the topbar nav.
-- Added new outline styling for buttons when focused.
+- Build flagging
+        - E.g. `npm run start:payex` or `npm run build:payex`
+            - These scripts adds a PayEx brand flag which is used to fetch PayEx variables, images and icons to render DesignGuide with a PayEx theme.
 
 ### Changed
 
-- Made it so you don't have to include the ID on the close buttons inside Dialog.
-- Changed the close button in dialog to be a button instead of an icon.
-- Renamed .expandable-content to .expandable-body.
-- Changed animation for expandables making it smoother.
-- Changed expandable header to a button instead of a div.
-- Updated nav styling to fit Swedbank Pay better.
-- Updated documentation to only show recommended usage of the nav component.
-- Increased hitbox for all nav variants to make the component more user friendly.
-- Changed the close icon in dialog to be a button.
-- Changed the close icon in the topbar to be a button.
+ - Project infrastructure updated to support dual branding.
+    - Generic brand "less" variables
+    - Generic scripts
+ - Main output filenames have been renamed to
+    - `/scripts/dg.js`
+    - `/scripts/dg-dashboard.js`
+    - `/styles/dg-style.css`
+        - Due to a bug in webpack where a cachegroup cannot have the same name as an entry file (`dg`), this filename is suffixed with `-style`
+ - `px` and all references to this object are now: `dg`
+    - E.g. `dg.script.initAll(), dg.toast() etc...`
+ - Alert colors updated
+ - Input fields
+    - No longer italic errors
+    - Font sizes updated
+    - Spacing updated
+    - Height updated
+ - Action links
+    - Arrow spacing updated
+ - Font colors
+    - New gray scale
+ - Expandable
+    - Color updated
+ - Badge
+    - A single digit results in a circled badge
+ - Slab
+    - Uses the same system as cards
+      - New variants: `slab-primary` `slab-secondary` `slab-plain`
 
 ### Fixed
 
-- Fixed display issue with topbar for IE.
-- Fixed styling issue when resizing the window with an open topbar.
+### Removed

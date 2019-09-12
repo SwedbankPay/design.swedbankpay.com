@@ -15,7 +15,7 @@
         "jest/globals": true
     },
     "globals": { 
-        "px": true
+        "dg": true
     },
     "plugins": [
         "babel",

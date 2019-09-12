@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { PxScript } from "@docutils";
+import { DgScript } from "@docutils";
 
 const OpenDocs = ({ componentName }) => (
     <>
         <tr>
-            <td scope="row"><PxScript component={componentName} func="open" params={[`<${componentName.toLowerCase()}-id>`]} /></td>
+            <td scope="row"><DgScript component={componentName} func="open" params={[`<${componentName.toLowerCase()}-id>`]} /></td>
             <td>Opens the given {componentName.toLowerCase()}</td>
         </tr>
     </>
@@ -15,7 +15,7 @@ const OpenDocs = ({ componentName }) => (
 const CloseDocs = ({ componentName }) => (
     <>
         <tr>
-            <td scope="row"><PxScript component={componentName} func="close" params={[`<${componentName.toLowerCase()}-id>`]} /></td>
+            <td scope="row"><DgScript component={componentName} func="close" params={[`<${componentName.toLowerCase()}-id>`]} /></td>
             <td>Closes the given {componentName.toLowerCase()}</td>
         </tr>
     </>
@@ -32,7 +32,7 @@ const JavascriptDocs = ({ componentName, open, close }) => (
             </thead>
             <tbody>
                 <tr>
-                    <td scope="row"><PxScript component={componentName} func="init" /></td>
+                    <td scope="row"><DgScript component={componentName} func="init" /></td>
                     <td><Link to="/docs/getting-started/javascript">Initializes</Link> {componentName.toLowerCase()}</td>
                 </tr>
                 {open ? <OpenDocs componentName={componentName} /> : null}
