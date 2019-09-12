@@ -55,7 +55,7 @@ const TopbarLogout = () => (
 const TopbarLogo = () => (
     <>
         <a className="topbar-logo" href="/" onClick={e => e.preventDefault()}>{"\n"}
-            <img src={isDev ? devLogo : `${process.env.basename}img/${brand}.svg`} alt={`${brand}-logo`}/>{"\n"}
+            <img src={isDev ? devLogo : `${process.env.basename}img/${brand}-logo.svg`} alt={`${brand}-logo`}/>{"\n"}
         </a>{"\n"}
     </>
 );
