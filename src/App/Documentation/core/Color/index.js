@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 import { DocContainer } from "@docutils";
 import ColorDisplay from "@components/ColorDisplay";
-import { EMLINK } from "constants";
 import * as sbColors from "./swedbankpay-colors";
 import * as pxColors from "./payex-colors";
 
