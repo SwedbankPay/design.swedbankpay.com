@@ -1,10 +1,21 @@
 .slab {
     min-height: 1rem;
     padding: @base-padding;
-    background-color: @brand-bg-gray;
-    border: 1px solid transparent;
     margin-bottom: 1rem;
     border-radius: 2px;
+    background-color: @white;
+
+    &.slab-primary {
+        .slab-variant(@brand-bg-1);
+    }
+
+    &.slab-secondary {
+        .slab-variant(@brand-bg-2);
+    }
+
+    &.slab-plain {
+        .slab-variant(@light-gray);
+    }
 
     &:last-child {
         margin-bottom: 0;
@@ -16,18 +27,6 @@
 
     &.slab-well {
         box-shadow: inset 0 0 7px 0 rgba(0, 0, 0, 0.3);
-    }
-
-    &.slab-primary {
-        background-color: @brand-bg-1;
-    }
-
-    &.slab-secondary {
-        background-color: @brand-bg-2;
-    }
-
-    &.slab-plain {
-        background-color: @light-gray;
     }
 
     &.slab-lg {
@@ -42,6 +41,8 @@
         position: relative;
 
         &:before {
+            border: solid @light-brown;
+            border-width: 1px 0 0 1px;
             content: "";
             height: 1rem;
             width: 1rem;

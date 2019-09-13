@@ -101,7 +101,7 @@ const SlabArrow = () => (
             <Property value=".slab-arrow" /> inherits the color from the slab it is appended to.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="slab slab-arrow">
+            <div className="slab border slab-arrow">
                 <p>
                     This slab has some connection to the content above.
                 </p>
