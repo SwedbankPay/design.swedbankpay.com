@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Color from "./index";
+import Color, { MainColors, AlertColors, Grayscale } from "./index";
 
 describe("Core: Color", () => {
     it("is defined", () => {
@@ -14,4 +14,21 @@ describe("Core: Color", () => {
         expect(wrapper).toMatchSnapshot();
     });
 
+    it("MainColors renders", () => {
+        const wrapper = shallow(<MainColors />);
+
+        expect(wrapper).toMatchSnapshot();
+    });
+
+    it("AlertColors renders", () => {
+        const wrapper = shallow(<AlertColors />);
+
+        expect(wrapper).toMatchSnapshot();
+    });
+
+    it("Grayscale renders", () => {
+        const wrapper = shallow(<Grayscale />);
+
+        expect(wrapper).toMatchSnapshot();
+    });
 });

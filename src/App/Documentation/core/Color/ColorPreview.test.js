@@ -1,9 +1,9 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import ColorPreview from "./index";
+import ColorPreview from "./ColorPreview";
 
-describe("Component: ColorPreview", () => {
+describe("Core: Color", () => {
     it("is defined", () => {
         expect(ColorPreview).toBeDefined();
     });
