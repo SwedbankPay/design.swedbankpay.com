@@ -42,21 +42,12 @@
  */
 
 /* Grayscale */
-@black:                                     #000000;
-@nearblack:                                 #111111;
-@gray-dark:                                 #222222;
-@gray-medium-dark:                          #363636;
-@gray-medium:                               #404040;
-@gray-medium-light:                         #545454;
-@gray-light:                                #767676;
-@gray-light-alt:                            #999999;
-@gray-bright:                               #eaeaea;
-@gray-bright-alt:                           #bcbcbc;
-@neargray:                                  #f9f9f9;
+@black:                                     #222222;
+@text-gray:                                 #767676;
+@list-gray:                                 #999999;
 @light-gray:                                #F9F8F6;
-@offwhite:                                  #f4f4f4;
-@nearwhite:                                 #f0f0f0;
 @white:                                     #ffffff;
+
 
 /* Brand */
 // @orange-medium:                             #ff6100; // Not used
@@ -104,8 +95,8 @@
 /* END BRAND MANAGER COLORS */
 
 /* Border colors */
-@dialog-border:                             1px solid @gray-bright;
-@checkbox-border-color:                     @gray-light-alt;
+@dialog-border:                             1px solid @light-gray;
+@checkbox-border-color:                     @list-gray;
 
 /* Disabled button colors */
 @executive-disabled-bg:                     #f5b895;
@@ -117,8 +108,8 @@
 @color-muted-hover:                         fade(@text-color, 85%);
 @link-color:                                @brand-accent-links;
 @default-box-shadow:                        0 0 20px 0 rgba(81, 43, 43, 0.12);
-@small-color:                               @gray-light;
-@footer-small-color:                        @gray-bright-alt;
+@small-color:                               @text-gray;
+@footer-small-color:                        @list-gray;
 @mark-background:                           rgba(0, 0, 0, 0.1);
 @text-muted:                                fade(@text-color, 75%);
 
@@ -196,7 +187,7 @@
 
 /* Body */
 @body-bg:                                   @white;
-@text-color:                                @gray-dark;
+@text-color:                                @black;
 
 /* Cursor */
 @cursor-disabled:                           not-allowed;
@@ -287,10 +278,10 @@
 /* Colors */
 @table-bg:                                  transparent;
 @table-header-color:                        @brand-secondary;
-@table-text-color:                          @gray-light-alt;
+@table-text-color:                          @list-gray;
 @table-border-color:                        @border-color;
-@table-stripe-color:                        @neargray;
-@table-collapse-content-color:              @gray-bright-alt;
+@table-stripe-color:                        @light-gray;
+@table-collapse-content-color:              @list-gray;
 @table-collapse-border-color:               @border-color;
 
 /* Dimensions */
@@ -317,8 +308,8 @@
 
 @font-stack:                                "Arial", sans-serif;
 
-@blockquote-border-color:                   @gray-bright-alt;
-@blockquote-small-color:                    @gray-light-alt;
+@blockquote-border-color:                   @list-gray;
+@blockquote-small-color:                    @list-gray;
 
 /* Font Size */
 @base-font-size:                            1rem;
@@ -383,7 +374,7 @@
 
 /* stylelint-disable indentation */
 @badge-list: {
-                                            default: @gray-light-alt;
+                                            default: @list-gray;
                                             blue: @blue;
                                             yellow: @yellow;
                                             red: @red;
@@ -422,7 +413,7 @@
 @btn-destructive-disabled-bg:               @destructive-disabled-bg;
 
 @btn-link-color:                            @brand-accent-links;
-@btn-link-disabled-color:                   @gray-light-alt;
+@btn-link-disabled-color:                   @list-gray;
 
 /*
  * 9. Card
@@ -445,7 +436,7 @@
 @datepicker-highlight-background:           @brand-primary;
 @datepicker-highlight-color:                @white;
 @datepicker-weekday-color:                  @brand-primary;
-@datepicker-hover-color:                    @neargray;
+@datepicker-hover-color:                    @light-gray;
 
 @datepicker-rd-padding:                     round(@base-padding / 3, 1);
 
@@ -470,7 +461,7 @@
 @input-color:                               @brand-secondary;
 @input-bg:                                  @white;
 @input-bg-disabled:                         @brand-bg-gray;
-@input-checked-bg-disabled:                 @gray-light-alt;
+@input-checked-bg-disabled:                 @list-gray;
 @input-border-color:                        @border-color;
 @input-addon-color:                         @brand-secondary;
 @input-addon-bg:                            @brand-bg-gray;
@@ -524,7 +515,7 @@
 
 @nav-icon-lineheight:                       1.1;
 @nav-submenu-font-size:                     @base-font-size * 0.85;
-@nav-submenu-border:                        2px solid @gray-medium-light;
+@nav-submenu-border:                        2px solid @text-gray;
 
 @nav-submenu-before-width:                  1rem;
 @nav-submenu-before-height:                 1rem;
@@ -540,7 +531,7 @@
 
 @pagination-active-color:                   @brand-accent-links;
 @pagination-arrow-color:                    @brand-accent-links;
-@pagination-default-color:                  @gray-bright-alt;
+@pagination-default-color:                  @list-gray;
 
 @pagination-bullet-size:                    @status-size;
 
@@ -559,7 +550,7 @@
 @panel-default-text-color:                  @text-color;
 
 /* Contextual colors */
-@panel-default-color:                       @gray-bright-alt;
+@panel-default-color:                       @list-gray;
 @panel-brand-color:                         @brand-primary;
 
 @panel-border-radius:                       0;
