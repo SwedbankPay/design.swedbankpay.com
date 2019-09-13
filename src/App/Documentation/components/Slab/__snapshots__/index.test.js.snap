@@ -90,7 +90,7 @@ exports[`Components: Slab SlabArrow renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="slab slab-arrow"
+      className="slab border slab-arrow"
     >
       <p>
         This slab has some connection to the content above.
