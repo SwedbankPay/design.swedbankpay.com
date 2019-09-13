@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: ColorDisplay renders ColorDisplay 1`] = `
+<Fragment>
+  <h2
+    id="test"
+  >
+    Test Head
+  </h2>
+  <p>
+    This is a description
+  </p>
+  <ul
+    className="list color-preview"
+  >
+    <li
+      key="0"
+    >
+      <ColorPreview
+        hex="#FDC129"
+        name="Yellow"
+      />
+    </li>
+    <li
+      key="1"
+    >
+      <ColorPreview
+        hex="#FDC129"
+        name="Yellow"
+      />
+    </li>
+  </ul>
+</Fragment>
+`;
