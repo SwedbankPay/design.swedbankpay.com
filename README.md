@@ -16,7 +16,7 @@
 
 ## Installing / Getting started
 
-The installation guides in this file is for further development of the DesignGuide, and is not necessary if you plan to use the DesignGuide in your project.
+The following guides are for further development of the DesignGuide, and are not necessary if you only plan to use the DesignGuide in your project.
 
 ### Prerequisites
 
@@ -25,7 +25,7 @@ DesignGuide requires [Node.js](https://nodejs.org/en/) (includes npm).
 ### Installing
 
 1. Open a terminal and navigate to repo root
-2. `npm install`
+2. `npm ci`
 3. `npm start`
 4. Go to <http://localhost:3000>
 5. Works? If not, contact us on Slack ([#design-guide-general](https://payex.slack.com/messages/C0L3W8B2S/)).
@@ -37,6 +37,8 @@ DesignGuide requires [Node.js](https://nodejs.org/en/) (includes npm).
 - Run `git config core.hooksPath .githooks`
 
 ## Developing
+
+It is important to note that as a developer, this project supports two brands: **Swedbank Pay** _and_ **PayEx**. Webpack is configured to accept a brand flag which is used to collect different sets of theme variables. **Swedbank Pay** is default flag. E.g. `npm start` sets the theme to **Swedbank Pay**, while `npm run start:payex` sets the theme to... you guessed it, **PayEx**. Check out the `package.json` file for additional scripts.
 
 ### Built with
 
@@ -94,27 +96,23 @@ Before merging to master to create a release make sure you follow these steps:
 
 1. Make sure the linting (`npm run lint`) and unit tests pass (`npm test`).
 2. Update the version in `~/package.json`
-3. Make sure the changelog is correct (date and version) and only contains changes for the current release.
-4. Update the version in the url to the shield image at the top of this `README.md`.
-5. Commit the changes and push to `develop`.
-6. Change branch to `master`.
-7. Merge `develop` into `master` without fastforward (`--no-ff`).
-8. Create a tag with the new commit.
-9. Push the tagged commit to `master`.
+3. Make sure the changelog is correct (date and version) and only contains changes for the current release
+4. Update the version in the url to the shield image at the top of this `README.md`
+5. Commit the changes and create a pull request to `develop`
+6. When approved and merged, create a new pull request from `develop` to `master`
+7. When approved, rename the merge commit to `Release x.x.x` and merge
+8. Change branch to `master` 
+9. Create and push a new tag with the new release commit
 
 AppVeyor will now create and deploy a release on both github and [design.swedbankpay.com](https://design.swedbankpay.com).
 
-After pushing to master, complete the following steps:
+After pushing to master, create a pull request to `develop` that deletes the changelog content but keeps the headers.
 
-1. Change back to `develop`.
-2. Remove the content of changelog (leave the heading).
-3. Commit the file and push it.
-
-## Maintainers
+## Involved developers
 
 - [Erik Hallaraaker](https://github.com/erikhallaraaker)
 - [Håkon Mosvoll](https://github.com/hmosvoll)
-- [Aksel Wiig](https://github.com/Akswii)
+- [Thomas Lorntzen](https://github.com/VikingTristan)
 
 ## Contents of this project
 
