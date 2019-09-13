@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Core: Color renders 1`] = `
+exports[`Component: ColorPreview renders 1`] = `
 <figure>
   <svg
     className={null}

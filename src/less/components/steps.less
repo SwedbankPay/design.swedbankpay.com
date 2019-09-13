@@ -28,8 +28,8 @@
             .negative-margin(@list-item-padding);
 
             &:hover {
-                background-color: @nearwhite;
-                box-shadow: 1px 0 0 0 @gray-bright, -1px 0 0 0 @gray-bright, 0 1px 0 0 @nearwhite;
+                background-color: @light-gray;
+                box-shadow: 1px 0 0 0 @light-gray, -1px 0 0 0 @light-gray, 0 1px 0 0 @light-gray;
             }
         }
 
@@ -51,7 +51,7 @@
             box-sizing: border-box;
             z-index: @zindex-steps-circle;
             border-radius: 50%;
-            border: 3px solid @gray-bright-alt;
+            border: 3px solid @list-gray;
             background-color: @brand-bg-white;
         }
 
@@ -69,7 +69,7 @@
         &:after {
             content: "";
             position: absolute;
-            background-color: @gray-bright-alt;
+            background-color: @list-gray;
             z-index: @zindex-steps-line;
             height: @line-width;
 
@@ -112,7 +112,7 @@
         }
 
         &:after {
-            background: linear-gradient(to right, @brand-primary 50%, @gray-bright-alt 50%);
+            background: linear-gradient(to right, @brand-primary 50%, @list-gray 50%);
         }
 
         &:first-child,
@@ -124,15 +124,15 @@
     }
 
     .steps-selected {
-        background-color: @nearwhite;
-        box-shadow: 1px 0 0 0 @gray-bright, -1px 0 0 0 @gray-bright, 0 1px 0 0 @nearwhite;
+        background-color: @light-gray;
+        box-shadow: 1px 0 0 0 @light-gray, -1px 0 0 0 @light-gray, 0 1px 0 0 @light-gray;
     }
 
     .steps-sub-title {
         line-height: 1rem;
         margin-top: @base-margin-xs;
         font-size: @font-size-small;
-        color: @gray-light;
+        color: @text-gray;
     }
 }
 
@@ -140,10 +140,10 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    background: @nearwhite;
+    background: @light-gray;
     padding: @base-padding-xs @base-padding-sm;
-    border-top: 1px solid @gray-bright;
-    border-bottom: 1px solid @gray-bright;
+    border-top: 1px solid @light-gray;
+    border-bottom: 1px solid @light-gray;
     box-sizing: border-box;
     display: flex;
 }
@@ -205,7 +205,7 @@
             padding: @list-item-padding-desktop-vertical;
 
             &.steps-selected {
-                box-shadow: 0 1px 0 0 @gray-bright, 0 -1px 0 0 @gray-bright;
+                box-shadow: 0 1px 0 0 @light-gray, 0 -1px 0 0 @light-gray;
             }
 
             > a {
@@ -254,7 +254,7 @@
         }
 
         .steps-ongoing:after {
-            background: linear-gradient(@brand-primary 50%, @gray-bright-alt 50%);
+            background: linear-gradient(@brand-primary 50%, @list-gray 50%);
         }
     }
 }
