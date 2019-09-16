@@ -36,7 +36,7 @@ const ActionLinkSmallText = () => (
             <ActionLinkComponent linkText="My link" smallText="This link directs to my page" />
         </ComponentPreview>
     </>
-)
+);
 
 const ActionLink = () => (
     <DocContainer docToc>

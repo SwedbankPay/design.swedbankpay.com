@@ -28,6 +28,29 @@ exports[`Components: ActionLink ActionLinkBadge renders 1`] = `
 </Fragment>
 `;
 
+exports[`Components: ActionLink ActionLinkSmallText renders 1`] = `
+<Fragment>
+  <h2
+    id="action-link-badge"
+  >
+    Action Link with small text
+  </h2>
+  <p>
+    A small text can be displayed as a part of the Action Link.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ActionLink
+      linkText="My link"
+      smallText="This link directs to my page"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Components: ActionLink Overview renders 1`] = `
 <Fragment>
   <h2
@@ -61,5 +84,6 @@ exports[`Components: ActionLink renders 1`] = `
   </p>
   <Overview />
   <ActionLinkBadge />
+  <ActionLinkSmallText />
 </DocContainer>
 `;
