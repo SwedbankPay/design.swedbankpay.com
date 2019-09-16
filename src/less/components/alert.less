@@ -4,6 +4,7 @@
     margin-top: 0;
     margin-bottom: @base-margin;
     display: flex;
+    align-items: center;
 
     &.alert-default {
         .alert-variant(@text-gray, @light-gray);
@@ -29,12 +30,9 @@
         .alert-variant(@brand-error, @brand-error-light);
     }
 
-    &.alert-simple {
-        align-items: center;
-    }
 
     &.alert-complex {
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 
     > p {

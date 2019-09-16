@@ -2,7 +2,7 @@
 
 exports[`Component: Alert prop type is marked as required 1`] = `
 <div
-  className="alert alert-simple alert-undefined"
+  className="alert alert-undefined"
 >
   
 
@@ -11,7 +11,7 @@ exports[`Component: Alert prop type is marked as required 1`] = `
 
 exports[`Component: Alert renders an alert with a close-button 1`] = `
 <div
-  className="alert alert-simple alert-test"
+  className="alert alert-test"
 >
   
 
@@ -37,7 +37,7 @@ exports[`Component: Alert renders an alert with a close-button 1`] = `
 
 exports[`Component: Alert renders an alert with icon 1`] = `
 <div
-  className="alert alert-simple alert-test"
+  className="alert alert-test"
 >
   
 
@@ -53,7 +53,7 @@ exports[`Component: Alert renders an alert with icon 1`] = `
 
 exports[`Component: Alert renders an alert with text 1`] = `
 <div
-  className="alert alert-simple alert-test"
+  className="alert alert-test"
 >
   
 
@@ -67,7 +67,7 @@ exports[`Component: Alert renders an alert with text 1`] = `
 
 exports[`Component: Alert renders an alert with the correct type recieved from its props 1`] = `
 <div
-  className="alert alert-simple alert-test"
+  className="alert alert-test"
 >
   
 
@@ -76,7 +76,7 @@ exports[`Component: Alert renders an alert with the correct type recieved from i
 
 exports[`Component: Alert renders an alert without a close-button if no close prop is provided 1`] = `
 <div
-  className="alert alert-simple alert-test"
+  className="alert alert-test"
 >
   
 
@@ -85,7 +85,7 @@ exports[`Component: Alert renders an alert without a close-button if no close pr
 
 exports[`Component: Alert renders an alert without an icon if no icon prop is provided 1`] = `
 <div
-  className="alert alert-simple alert-test"
+  className="alert alert-test"
 >
   
 
@@ -94,7 +94,7 @@ exports[`Component: Alert renders an alert without an icon if no icon prop is pr
 
 exports[`Component: Alert renders an alert without text if no text prop is provided 1`] = `
 <div
-  className="alert alert-simple alert-test"
+  className="alert alert-test"
 >
   
 
@@ -103,7 +103,7 @@ exports[`Component: Alert renders an alert without text if no text prop is provi
 
 exports[`Component: Alert renders the children sent to the alert component and a alert-body 1`] = `
 <div
-  className="alert alert-simple alert-test"
+  className="alert alert-test"
 >
   
 
@@ -121,7 +121,7 @@ exports[`Component: Alert renders the children sent to the alert component and a
 
 exports[`Component: Alert the close-button prevents default 1`] = `
 <div
-  className="alert alert-simple alert-test"
+  className="alert alert-test"
 >
   
 
