@@ -50,7 +50,7 @@ exports[`Core: Color renders 1`] = `
     }
     description={
       <p>
-        Our main color pallete.
+        Our main color palette.
       </p>
     }
     head="Main colors"

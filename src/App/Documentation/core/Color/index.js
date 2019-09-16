@@ -12,7 +12,7 @@ const sbColorDisplayList = [
         id: "main-colors",
         colorList: sbColors.mainText,
         head: "Main colors",
-        description: <p>Our main color pallete.</p>
+        description: <p>Our main color palette.</p>
     },
     {
         id: "alert-colors",
@@ -39,7 +39,7 @@ const pxColorDisplayList = [
         id: "main-colors",
         colorList: pxColors.mainText,
         head: "Main colors",
-        description: <p>Our main color pallete.</p>
+        description: <p>Our main color palette.</p>
     }
 ];
 
