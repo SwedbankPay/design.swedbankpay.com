@@ -301,7 +301,8 @@
                 }
 
                 ul {
-                    max-height: 100vh;
+                    /* max-height must be defined for transition to work. It is set to 1500px as it is a high number that most likely will cover the usage scenario. */
+                    max-height: 1500px;
                     transition: max-height 1s ease-in-out;
                 }
             }
