@@ -13,7 +13,7 @@ exports[`Components: Slab DefaultSlab renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="slab"
+      className="slab slab-default"
     >
       <p>
         Do you want to sign up for the slab mailing list?
@@ -89,6 +89,13 @@ exports[`Components: Slab SlabArrow renders 1`] = `
     language="html"
     showCasePanel={true}
   >
+    <div
+      className="slab slab-default slab-arrow"
+    >
+      <p>
+        This slab has some connection to the content above.
+      </p>
+    </div>
     <div
       className="slab border slab-arrow"
     >
@@ -218,6 +225,42 @@ exports[`Components: Slab SlabColors renders 1`] = `
       </ul>
     </div>
   </ComponentPreview>
+  <p>
+    If no slab extension class is added, it is defaulted to white. In this example we use the utility class 
+    <Property
+      value=".border"
+    />
+     to make it easier for us to see the actual slab container.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="slab border"
+    >
+      <h4>
+        Here is some text and then a striped item list
+      </h4>
+      <small>
+        Some text with a small listing of items underneath.
+      </small>
+      <ul
+        className="list item-list"
+      >
+        <li>
+          Item 1
+        </li>
+        <li>
+          Item 2
+        </li>
+        <li>
+          Item 3
+        </li>
+      </ul>
+    </div>
+  </ComponentPreview>
 </Fragment>
 `;
 
@@ -234,7 +277,7 @@ exports[`Components: Slab SlabElevated renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="slab slab-elevated"
+      className="slab slab-default slab-elevated"
     >
       Look ma, im elevated!
     </div>
@@ -255,7 +298,7 @@ exports[`Components: Slab SlabMuted renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="slab slab-muted"
+      className="slab slab-default slab-muted"
     >
       <h4>
         This text will be gray.
@@ -286,7 +329,7 @@ exports[`Components: Slab SlabSizes renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="slab slab-sm"
+      className="slab slab-default slab-sm"
     >
       This is very snug.
     </div>
@@ -297,7 +340,7 @@ exports[`Components: Slab SlabSizes renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="slab slab-lg"
+      className="slab slab-default slab-lg"
     >
       This is so spacious I can hardly believe it!
     </div>
@@ -318,7 +361,7 @@ exports[`Components: Slab SlabWell renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="slab slab-well"
+      className="slab slab-default slab-well"
     >
       Look ma, im in a well!
     </div>
