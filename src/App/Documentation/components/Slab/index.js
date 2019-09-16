@@ -8,7 +8,7 @@ const DefaultSlab = () => (
     <>
         <h2 id="default-slab">Default slab</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="slab">
+            <div className="slab slab-default">
                 <p>Do you want to sign up for the slab mailing list?</p>
                 <form action="#" noValidate data-validate>
                     <div className="form-group">
@@ -69,6 +69,22 @@ const SlabColors = () => (
                 </ul>
             </div>
         </ComponentPreview>
+        <p>
+        If no slab extension class is added, it is defaulted to white. In this example we use the utility class <Property value=".border" /> to make it easier for us to see the actual slab container.
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <div className="slab border">
+                <h4>Here is some text and then a striped item list</h4>
+                <small>
+                    Some text with a small listing of items underneath.
+                </small>
+                <ul className="list item-list">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </div>
+        </ComponentPreview>
     </>
 );
 
@@ -76,7 +92,7 @@ const SlabElevated = () => (
     <>
         <h2 id="elevated-slab">Elevated slab</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="slab slab-elevated">
+            <div className="slab slab-default slab-elevated">
                 Look ma, im elevated!
             </div>
         </ComponentPreview>
@@ -87,7 +103,7 @@ const SlabWell = () => (
     <>
         <h2 id="slab-well">Slab well</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="slab slab-well">
+            <div className="slab slab-default slab-well">
                 Look ma, im in a well!
             </div>
         </ComponentPreview>
@@ -101,6 +117,11 @@ const SlabArrow = () => (
             <Property value=".slab-arrow" /> inherits the color from the slab it is appended to.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
+            <div className="slab slab-default slab-arrow">
+                <p>
+                    This slab has some connection to the content above.
+                </p>
+            </div>
             <div className="slab border slab-arrow">
                 <p>
                     This slab has some connection to the content above.
@@ -129,7 +150,7 @@ const SlabMuted = () => (
     <>
         <h2 id="slab-muted">Slab muted</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="slab slab-muted">
+            <div className="slab slab-default slab-muted">
                 <h4>This text will be gray.</h4>{"\n"}
                 <span>And this text will be gray.</span>{"\n"}
                 Even this text will be gray!
@@ -142,12 +163,12 @@ const SlabSizes = () => (
     <>
         <h2 id="slab-sizes">Slab sizes</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="slab slab-sm">
+            <div className="slab slab-default slab-sm">
                 This is very snug.
             </div>
         </ComponentPreview>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="slab slab-lg">
+            <div className="slab slab-default slab-lg">
                 This is so spacious I can hardly believe it!
             </div>
         </ComponentPreview>
