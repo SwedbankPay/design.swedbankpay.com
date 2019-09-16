@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { Icon } from "@docutils";
 
 const Alert = ({ id, type, icon, close, text, children }) => (
-    <div id={id} className={`alert alert-${type}`}>{icon ? "\n" : ""}
+    <div id={id} className={`alert alert-simple alert-${type}`}>{icon ? "\n" : ""}
         {icon ? <i className="material-icons alert-icon">{icon}</i> : null}{text ? "\n" : ""}
         {text ? <p>{text}</p> : null}{children ? "\n" : ""}
         {children ? <div className="alert-body">{children}</div> : null}{close ? "\n" : ""}
