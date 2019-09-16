@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const ActionLink = ({ linkText, badge }) => (
+const ActionLink = ({ linkText, badge, smallText }) => (
     <a className="action-link" href="#">{"\n"}
         {badge ? <span className={`badge ${badge.type}`}>{badge.text}</span> : null}{"\n"}
         {linkText}{"\n"}
+        {smallText ? <span className="small-text">{smallText}</span> : null }{"\n"}
     </a>
 );
 
@@ -13,7 +14,8 @@ ActionLink.propTypes = {
     badge: PropTypes.shape({
         type: PropTypes.string.isRequired,
         text: PropTypes.string.isRequired
-    })
+    }),
+    smallText: PropTypes.string
 };
 
 export default ActionLink;

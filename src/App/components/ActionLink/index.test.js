@@ -42,4 +42,18 @@ describe("Component: ActionLink", () => {
         expect(wrapper.contains(<span className="badge badge-yellow" >Badge</span>)).toEqual(false);
     });
 
+    it("renders an actionlink with smalltext when provided", () => {
+        const wrapper = shallow(<ActionLink linkText="Link text" smallText="Small text" />);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.contains(<span className="small-text">Small text</span>)).toEqual(true);
+    });
+
+    it("renders an actionlink without smalltext when not provided", () => {
+        const wrapper = shallow(<ActionLink linkText="Link text" />);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.contains(<span className="small-text">Small text</span>)).toEqual(false);
+    });
+
 });
