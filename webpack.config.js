@@ -195,7 +195,7 @@ module.exports = (env, argv) => {
                     },
                     docStyles: {
                         name: "documentation",
-                        test: /documentation\.less$/,
+                        test: brand === "swedbankpay" ? /documentation-swedbankpay\.less/ : /documentation-payex\.less/,
                         chunks: "all",
                         enforce: true
                     }
