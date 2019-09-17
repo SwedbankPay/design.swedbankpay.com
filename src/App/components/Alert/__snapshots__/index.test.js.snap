@@ -147,7 +147,7 @@ exports[`Component: Alert the close-button prevents default 1`] = `
 
 exports[`Component: ComplexAlert Proptypes renders with a close button when prop close is true 1`] = `
 <div
-  className="alert alert-undefined"
+  className="alert alert-complex alert-undefined"
 >
   <header
     className="alert-header"
@@ -173,7 +173,7 @@ exports[`Component: ComplexAlert Proptypes renders with a close button when prop
 
 exports[`Component: ComplexAlert Proptypes renders with an ID when prop id is provided 1`] = `
 <div
-  className="alert alert-undefined"
+  className="alert alert-complex alert-undefined"
   id="test-alert"
 >
   <header
@@ -187,7 +187,7 @@ exports[`Component: ComplexAlert Proptypes renders with an ID when prop id is pr
 
 exports[`Component: ComplexAlert Proptypes renders with an icon when prop icon is provided 1`] = `
 <div
-  className="alert alert-undefined"
+  className="alert alert-complex alert-undefined"
 >
   <header
     className="alert-header"
@@ -207,7 +207,7 @@ exports[`Component: ComplexAlert Proptypes renders with an icon when prop icon i
 
 exports[`Component: ComplexAlert Proptypes renders with the correct class when prop type is provided 1`] = `
 <div
-  className="alert alert-default"
+  className="alert alert-complex alert-default"
 >
   <header
     className="alert-header"
@@ -220,7 +220,7 @@ exports[`Component: ComplexAlert Proptypes renders with the correct class when p
 
 exports[`Component: ComplexAlert Proptypes renders with the passed children when prop children is provided 1`] = `
 <div
-  className="alert alert-undefined"
+  className="alert alert-complex alert-undefined"
 >
   <header
     className="alert-header"
@@ -242,7 +242,7 @@ exports[`Component: ComplexAlert Proptypes renders with the passed children when
 
 exports[`Component: ComplexAlert Proptypes renders with the passed header text when prop headerText is provided 1`] = `
 <div
-  className="alert alert-undefined"
+  className="alert alert-complex alert-undefined"
 >
   <header
     className="alert-header"
@@ -262,7 +262,7 @@ exports[`Component: ComplexAlert Proptypes renders with the passed header text w
 
 exports[`Component: ComplexAlert renders 1`] = `
 <div
-  className="alert alert-undefined"
+  className="alert alert-complex alert-undefined"
 >
   <header
     className="alert-header"
