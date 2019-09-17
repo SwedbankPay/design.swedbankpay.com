@@ -2,40 +2,28 @@
 
 export const mainText = [
     {
-        name: "Yellow",
-        hex: "#FDC129"
+        name: "Primary",
+        hex: "#2da944"
     },
     {
-        name: "Brown",
-        hex: "#512B2B"
+        name: "Secondary",
+        hex: "#3c3c3c"
     },
     {
-        name: "Orange Main",
-        hex: "#EE7023"
+        name: "Info",
+        hex: "#266c9a"
     },
     {
-        name: "Info Turquoise",
-        hex: "#8ACDC3"
+        name: "Success",
+        hex: "#2da944"
     },
     {
-        name: "Info pink",
-        hex: "#EFB7B6"
+        name: "Warning",
+        hex: "#ff9f00"
     },
     {
-        name: "Apricot",
-        hex: "#FBF2EA"
-    },
-    {
-        name: "Light Turquoise",
-        hex: "#EBF8F2"
-    },
-    {
-        name: "Turquoise",
-        hex: "#31A3AE"
-    },
-    {
-        name: "Turquoise Links",
-        hex: "#257886"
+        name: "Error",
+        hex: "#cd2e00"
     }
 ];
 
