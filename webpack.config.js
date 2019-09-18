@@ -281,12 +281,12 @@ module.exports = (env, argv) => {
             }
         ];
 
-        if (isRelease) {
-            onEndArchive.push({
-                source: "./dist/temp/release",
-                destination: `./dist${basename}release/${brand === "swedbankpay" ? "Swedbankpay" : "Payex"}.DesignGuide.v${version}.zip`
-            });
-        }
+        // if (isRelease) {
+        onEndArchive.push({
+            source: "./dist/temp/release",
+            destination: `./dist${basename}release/${brand === "swedbankpay" ? "Swedbankpay" : "Payex"}.DesignGuide.v${version}.zip`
+        });
+        // }
 
         config.plugins.push(
             new AppManifestWebpackPlugin({
