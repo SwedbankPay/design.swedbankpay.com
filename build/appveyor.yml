@@ -77,9 +77,9 @@ deploy:
   - provider: AzureBlob
     storage_account_name: designguideblob
     storage_access_key:
-      secure: 040nIL0TvRtcjRFa1n+H2SXFlHIAOEcA4J627bjvspulhFp2+MpoOSJAK5GKTHzLRJRXAU222CxP3xtJn5FIwA==
+      secure: 6s7nxCkWdIP+Xci0iZngfTre/vtPBbcG+ZPNOe1Hh0Du71ir9F/Oviiv/BHN5/aNyp+W/ZQ3nc0epCP5f8CCdqbwSoGER7Abr3PIymd4EQi0ncaRPELYnAZeCrTgMmLD
     container: $web
-    unzip: true
+    # unzip: true
     set_content_type: false
     #auth_token:
     #  secure: IGs25EMrhe0au+uVDbOck6akDzC9ykvJeR0zJjhrT6idNuYOr/JpyGdefQxSlWXk
@@ -87,7 +87,7 @@ deploy:
     #release: DesignGuide v$(GitVersion_SemVer)
     #tag: $(APPVEYOR_REPO_TAG_NAME)
     # description: $(changelog)
-    artifact: /SwedbankPay.DesignGuide.*\.zip/
+    # artifact: /SwedbankPay.DesignGuide.*\.zip/
     # draft: false
     # prerelease: false
     # on:
