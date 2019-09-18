@@ -1,6 +1,7 @@
 # Build directories
 dist
 temp
+artifacts
 
 # Local vs code settings
 .vscode/

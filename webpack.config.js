@@ -281,12 +281,18 @@ module.exports = (env, argv) => {
             }
         ];
 
-        // if (isRelease) {
+        if (isRelease) {
+            onEndArchive.push({
+                source: "./dist/temp/release",
+                destination: `./dist${basename}release/${brand === "swedbankpay" ? "Swedbankpay" : "Payex"}.DesignGuide.v${version}.zip`
+            });
+        }
+
+        // Create a zip file of the entire dist folder to add as an artifact for AppVeyor
         onEndArchive.push({
-            source: "./dist/temp/release",
-            destination: `./dist${basename}release/${brand === "swedbankpay" ? "Swedbankpay" : "Payex"}.DesignGuide.v${version}.zip`
+            source: "./dist/",
+            destination: `./artifacts/${brand === "swedbankpay" ? "Swedbankpay" : "Payex"}.DesignGuide.v${version}.zip`
         });
-        // }
 
         config.plugins.push(
             new AppManifestWebpackPlugin({
@@ -347,7 +353,7 @@ module.exports = (env, argv) => {
                                 destination: "./dist/temp/release/styles"
                             }
                         ],
-                        mkdir: [`./dist${basename}release`],
+                        mkdir: [`./dist${basename}release`, "./artifacts/"],
                         archive: onEndArchive,
                         delete: ["./dist/temp"]
                     },

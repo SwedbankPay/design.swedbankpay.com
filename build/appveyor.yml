@@ -49,6 +49,7 @@ before_build:
   - ps: ./build/prepare-build.ps1
 
 build_script:
+  - cmd: npm run build:prod:payex -- --env.release=%release% --env.basename=%basename% --env.semver=%GitVersion_FullSemVer% --env.info_version=%GitVersion_InformationalVersion%
   - cmd: npm run build:prod -- --env.release=%release% --env.basename=%basename% --env.semver=%GitVersion_FullSemVer% --env.info_version=%GitVersion_InformationalVersion%
 
 #---------------------------------#
@@ -67,7 +68,7 @@ test_script:
 
 # This is excplicitly set to 'after_test' instead of 'before_deploy' so it runs on all branches [EH]
 after_test:
-  - ps: ./build/acs-deploy.ps1
+  - ps: ./build/artifacts-setup.ps1
 
 deploy:
 
@@ -83,7 +84,7 @@ deploy:
     set_content_type: false
     #auth_token:
     #  secure: IGs25EMrhe0au+uVDbOck6akDzC9ykvJeR0zJjhrT6idNuYOr/JpyGdefQxSlWXk
-    folder: v$(GitVersion_SemVer) # We want people to be able to visit .../v/someversion/...
+    folder: $(GitVersion_BranchName) # We want people to be able to visit .../v/someversion/...
     #release: DesignGuide v$(GitVersion_SemVer)
     #tag: $(APPVEYOR_REPO_TAG_NAME)
     # description: $(changelog)
@@ -94,15 +95,15 @@ deploy:
       # appveyor_repo_tag: true
 
   # PayEx site
-  # - provider: AzureBlob
-  #   storage_account_name: designguidepxblob
-  #   storage_access_key:
-  #     secure: 6UZ3jF4+InkA+RCpJ7TVcWCbdC037dB3piiiCroRmvnMD6CpCgAMA4fBbcS2rZMbjxRpnN8pJaE1fIFtE02qmEl6+bhW2NAkb4BAV2EB2bNdSRlJbxJu65xmsLhCGZBl
-  #   container: $web
-  #   folder: v$(GitVersion_SemVer)
-  #   artifact: /Payex.DesignGuide.*\.zip/
-  #   unzip: true
-  #   set_content_type: false
+  - provider: AzureBlob
+    storage_account_name: designguidepxblob
+    storage_access_key:
+      secure: 6UZ3jF4+InkA+RCpJ7TVcWCbdC037dB3piiiCroRmvnMD6CpCgAMA4fBbcS2rZMbjxRpnN8pJaE1fIFtE02qmEl6+bhW2NAkb4BAV2EB2bNdSRlJbxJu65xmsLhCGZBl
+    container: $web
+    folder: $(GitVersion_BranchName)
+    artifact: /Payex.DesignGuide.*\.zip/
+    unzip: true
+    set_content_type: false
 
 #---------------------------------#
 #         notifications           #
