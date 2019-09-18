@@ -87,11 +87,22 @@ deploy:
     #release: DesignGuide v$(GitVersion_SemVer)
     #tag: $(APPVEYOR_REPO_TAG_NAME)
     # description: $(changelog)
-    # artifact: /SwedbankPay.DesignGuide.*\.zip/
+    artifact: /SwedbankPay.DesignGuide.*\.zip/
     # draft: false
     # prerelease: false
     # on:
       # appveyor_repo_tag: true
+
+  # PayEx site
+  # - provider: AzureBlob
+  #   storage_account_name: designguidepxblob
+  #   storage_access_key:
+  #     secure: 6UZ3jF4+InkA+RCpJ7TVcWCbdC037dB3piiiCroRmvnMD6CpCgAMA4fBbcS2rZMbjxRpnN8pJaE1fIFtE02qmEl6+bhW2NAkb4BAV2EB2bNdSRlJbxJu65xmsLhCGZBl
+  #   container: $web
+  #   folder: v$(GitVersion_SemVer)
+  #   artifact: /Payex.DesignGuide.*\.zip/
+  #   unzip: true
+  #   set_content_type: false
 
 #---------------------------------#
 #         notifications           #
