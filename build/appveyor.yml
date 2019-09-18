@@ -81,7 +81,7 @@ deploy:
       secure: 6s7nxCkWdIP+Xci0iZngfTre/vtPBbcG+ZPNOe1Hh0Du71ir9F/Oviiv/BHN5/aNyp+W/ZQ3nc0epCP5f8CCdqbwSoGER7Abr3PIymd4EQi0ncaRPELYnAZeCrTgMmLD
     container: $web
     unzip: true
-    set_content_type: false
+    set_content_type: true
     #auth_token:
     #  secure: IGs25EMrhe0au+uVDbOck6akDzC9ykvJeR0zJjhrT6idNuYOr/JpyGdefQxSlWXk
     folder: $(GitVersion_BranchName) # We want people to be able to visit .../v/someversion/...
@@ -103,7 +103,7 @@ deploy:
     folder: $(GitVersion_BranchName)
     artifact: /Payex.DesignGuide.*\.zip/
     unzip: true
-    set_content_type: false
+    set_content_type: true
 
 #---------------------------------#
 #         notifications           #
