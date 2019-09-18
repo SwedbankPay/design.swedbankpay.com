@@ -11,46 +11,34 @@ exports[`Core: Color renders 1`] = `
     colorList={
       Array [
         Object {
-          "hex": "#FDC129",
-          "name": "Yellow",
+          "hex": "#2da944",
+          "name": "Primary",
         },
         Object {
-          "hex": "#512B2B",
-          "name": "Brown",
+          "hex": "#3c3c3c",
+          "name": "Secondary",
         },
         Object {
-          "hex": "#EE7023",
-          "name": "Orange Main",
+          "hex": "#266c9a",
+          "name": "Info",
         },
         Object {
-          "hex": "#8ACDC3",
-          "name": "Info Turquoise",
+          "hex": "#2da944",
+          "name": "Success",
         },
         Object {
-          "hex": "#EFB7B6",
-          "name": "Info pink",
+          "hex": "#ff9f00",
+          "name": "Warning",
         },
         Object {
-          "hex": "#FBF2EA",
-          "name": "Apricot",
-        },
-        Object {
-          "hex": "#EBF8F2",
-          "name": "Light Turquoise",
-        },
-        Object {
-          "hex": "#31A3AE",
-          "name": "Turquoise",
-        },
-        Object {
-          "hex": "#257886",
-          "name": "Turquoise Links",
+          "hex": "#cd2e00",
+          "name": "Error",
         },
       ]
     }
     description={
       <p>
-        Our main color pallete.
+        Our main color palette.
       </p>
     }
     head="Main colors"

@@ -223,10 +223,14 @@ exports[`Documentation: Alerts Extended Usage renders 1`] = `
     Extended usage
   </h2>
   <p>
-    Alerts can also contain additional HTML elements like headings, paragraphs and dividers.
+    By adding the 
+    <Property
+      value=".alert-complex"
+    />
+     class, alerts can contain additional HTML elements like headings, paragraphs and dividers.
   </p>
   <p>
-    Just make sure to wrap the content in a container with the class 
+    Make sure to wrap the content in a container with the class 
     <Property
       value=".alert-body"
     />

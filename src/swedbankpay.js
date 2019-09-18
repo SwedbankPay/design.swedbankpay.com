@@ -6,7 +6,7 @@ import "prismjs";
 import "prismjs/themes/prism.css";
 
 import "./less/swedbankpay.less";
-import "./less/documentation.less";
+import "./less/documentation-swedbankpay.less";
 
 render(
     <App />,

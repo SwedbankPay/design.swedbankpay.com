@@ -61,8 +61,8 @@ const ClosingTheAlert = () => (
 const ExtendedUsage = () => (
     <>
         <h2 id="extended-usage">Extended usage</h2>
-        <p>Alerts can also contain additional HTML elements like headings, paragraphs and dividers.</p>
-        <p>Just make sure to wrap the content in a container with the class <Property value=".alert-body" />.</p>
+        <p>By adding the <Property value=".alert-complex" /> class, alerts can contain additional HTML elements like headings, paragraphs and dividers.</p>
+        <p>Make sure to wrap the content in a container with the class <Property value=".alert-body" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ComplexAlert type="success" icon="check_circle" headerText="Success!" close>
                 <p>PDF was successfully uploaded.

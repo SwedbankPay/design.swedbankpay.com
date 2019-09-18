@@ -1,54 +1,88 @@
 /* ==========================================================================
  *
- * This file contains SwedbankPay brand specific variables
+ * This file contains PayEx brand specific variables
  *
  */
+
+/* Grayscale */
+@black:                                     #222222;
+@text-gray:                                 #767676;
+@list-gray:                                 #999999;
+@light-gray:                                #F9F8F6;
+@white:                                     #ffffff;
 
 /* Main Brand Color Variants */
 @brand-primary:                             #2da944;
 @brand-primary-bright:                      #2da944;
 @brand-primary-faded:                         fade(@brand-primary, 60%);
-@brand-secondary-dark-1:                    #2da944;
-@brand-secondary-dark-2:                    #2da944;
+@brand-secondary-dark-1:                    #3c3c3c;
+@brand-secondary-dark-2:                    #3c3c3c;
 @brand-secondary:                           #2da944;
-@brand-secondary-light-1:                   #2da944;
-@brand-secondary-light-2:                   #2da944;
-@brand-secondary-light-3:                   #2da944;
-@brand-secondary-light-4:                   #2da944;
+@brand-secondary-light-1:                   #3c3c3c;
+@brand-secondary-light-2:                   #3c3c3c;
+@brand-secondary-light-3:                   #3c3c3c;
+@brand-secondary-light-4:                   #3c3c3c;
 
 @brand-tertiary:                            #2da944;
 @brand-accent:                              #2da944;
 @brand-accent-links:                        #2da944;
 
 /* Background Colors */
-@bg-variant-1:                              #fbf2ea;
-@bg-variant-2:                              #ebf8f2;
-@bg-variant-3:                              #fbedf4;
-@bg-variant-4:                              #e9f7fb;
-@bg-gray:                                   #ebe7e2;
-@bg-white:                                  #ffffff;
+@brand-bg-1:                                #efefef;
+@brand-bg-2:                                #ebf8f2;
+@brand-bg-3:                                #fbedf4;
+@brand-bg-4:                                #e9f7fb;
+@brand-bg-gray:                             #ebe7e2;
+@brand-bg-white:                            #ffffff;
 
 /* State colors */
-@state-default:                             #3c3c3c;
-@state-neutral:                             #266c9a;
-@state-neutral-light:                       #e8eff9;
-@state-success:                             #2da944;
-@state-success-light:                       #f2f7eb;
-@state-warning:                             #ff9f00;
-@state-warning-light:                       #fff3d5;
-@state-danger:                              #cd2e00;
-@state-danger-light:                        #f9ded3;
-
-/* More state colors? */
 @brand-success:                             #2da944;
 @brand-success-light:                       #f2f7eb;
 @brand-warning:                             #ff9f00;
-@brand-warning-light:                       #fffae5;
+@brand-warning-light:                       #fff3d5;
 @brand-error-border:                        #f1bbb9;
 @brand-error:                               #cd2e00;
-@brand-error-light:                         #fceeed;
+@brand-error-light:                         #f9ded3;
 @brand-info:                                #266c9a;
-@brand-info-light:                          #f0f9fb;
+@brand-info-light:                          #e8eff9;
 
 /* Brand fonts */
 @brand-headline:                            "Roboto", sans-serif;
+
+/* Button colors */
+@executive-disabled-bg:                     #f5b895;
+@guiding-disabled-bg:                       #98d0d6;
+@destructive-disabled-bg:                   @brand-secondary-light-4;
+@destructive-disabled-color:                #696969; // (DIMGRAY)
+
+@btn-executive-color:                       @white;
+@btn-executive-bg:                          @brand-tertiary;
+@btn-executive-disabled-color:              @white;
+@btn-executive-disabled-bg:                 #2da944c2;
+
+@btn-guiding-color:                         #231f20;
+@btn-guiding-bg:                            #c4c6c8;
+@btn-guiding-disabled-color:                @white;
+@btn-guiding-disabled-bg:                   #c4c6c8;
+
+@btn-destructive-color:                     @white;
+@btn-destructive-bg:                        @brand-error;
+@btn-destructive-disabled-color:            @white;
+@btn-destructive-disabled-bg:               #cd2e0091;
+
+@btn-link-color:                            #266c9a;
+@btn-link-disabled-color:                   @list-gray;
+
+
+/* OVERRIDES */
+.tabs > ul > li {
+    > a {
+        &:hover {
+            color: @white;
+        }
+    }
+
+    &.active > a {
+        color: @white;
+    }
+}
