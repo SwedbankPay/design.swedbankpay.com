@@ -17,6 +17,8 @@ class Toast {
 
         if (Toast._toasts.length === 0) {
             Toast._createContainer();
+            this._positionToastContainer();
+            window.addEventListener("scroll", this._positionToastContainer);
         }
 
         // Create new toast
@@ -60,6 +62,12 @@ class Toast {
 
         Toast._container.parentNode.removeChild(Toast._container);
         Toast._container = null;
+    }
+
+    _positionToastContainer () {
+        const topbarDiff = document.querySelector(".topbar").scrollHeight - window.scrollY;
+
+        topbarDiff > 0 ? Toast._container.setAttribute("style", `top: ${topbarDiff}px`) : Toast._container.setAttribute("style", "top: 1rem");
     }
 
     _createToast () {
@@ -175,6 +183,7 @@ class Toast {
 
         if (Toast._toasts.length === 0) {
             Toast._removeContainer();
+            window.removeEventListener("scroll", this._positionToastContainer);
         }
     }
 }
