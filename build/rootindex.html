@@ -30,7 +30,8 @@
     <script>
         (function () {
             var basename = "<%= htmlWebpackPlugin.options.basename %>";
-            window.location = "https://design.swedbankpay.com" + basename;
+            console.log("Redirecting: ", window.origin + basename);
+            window.location = window.origin + basename;
         })();
     </script>
 </body>
