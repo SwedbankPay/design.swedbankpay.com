@@ -67,22 +67,31 @@ test_script:
 
 # This is excplicitly set to 'after_test' instead of 'before_deploy' so it runs on all branches [EH]
 after_test:
-  - ps: ./build/prepare-deploy.ps1
+  - ps: ./build/acs-deploy.ps1
 
 deploy:
 
-  # Deploy to GitHub Releases
-  - provider: GitHub
-    auth_token:
-      secure: IGs25EMrhe0au+uVDbOck6akDzC9ykvJeR0zJjhrT6idNuYOr/JpyGdefQxSlWXk
-    release: DesignGuide v$(GitVersion_SemVer)
-    tag: $(APPVEYOR_REPO_TAG_NAME)
-    description: $(changelog)
+  # Deploy to Azure blob storage
+
+  # Swedbank Pay site
+  - provider: AzureBlob
+    storage_account_name: designguideblob
+    storage_access_key:
+      secure: 040nIL0TvRtcjRFa1n+H2SXFlHIAOEcA4J627bjvspulhFp2+MpoOSJAK5GKTHzLRJRXAU222CxP3xtJn5FIwA==
+    container: $web
+    unzip: true
+    set_content_type: false
+    #auth_token:
+    #  secure: IGs25EMrhe0au+uVDbOck6akDzC9ykvJeR0zJjhrT6idNuYOr/JpyGdefQxSlWXk
+    folder: v$(GitVersion_SemVer) # We want people to be able to visit .../v/someversion/...
+    #release: DesignGuide v$(GitVersion_SemVer)
+    #tag: $(APPVEYOR_REPO_TAG_NAME)
+    # description: $(changelog)
     artifact: /SwedbankPay.DesignGuide.*\.zip/
-    draft: false
-    prerelease: false
-    on:
-      appveyor_repo_tag: true
+    # draft: false
+    # prerelease: false
+    # on:
+      # appveyor_repo_tag: true
 
 #---------------------------------#
 #         notifications           #
