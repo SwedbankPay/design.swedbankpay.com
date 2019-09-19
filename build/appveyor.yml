@@ -68,7 +68,7 @@ test_script:
 
 # This is excplicitly set to 'after_test' instead of 'before_deploy' so it runs on all branches [EH]
 after_test:
-  - ps: ./build/artifacts-setup.ps1
+  - ps: ./build/prepare-deploy.ps1
 
 deploy:
 

@@ -276,14 +276,14 @@ module.exports = (env, argv) => {
     if (isProd && !isDevServer) {
         const onEndArchive = [
             {
-                source: "./dist/temp/icons",
+                source: "./dist/icons",
                 destination: `./dist${basename}release/icons.zip`
             }
         ];
 
         if (isRelease) {
             onEndArchive.push({
-                source: "./dist/temp/release",
+                source: "./dist/release",
                 destination: `./dist${basename}release/${brand === "swedbankpay" ? "Swedbankpay" : "Payex"}.DesignGuide.v${version}.zip`
             });
         }
@@ -327,35 +327,8 @@ module.exports = (env, argv) => {
                 ],
                 onEnd: [
                     {
-                        copy: [
-                            {
-                                source: `./dist${basename}icons`,
-                                destination: "./dist/temp/icons/icons"
-                            },
-                            {
-                                source: `./dist${basename}scripts/dg.js`,
-                                destination: "./dist/temp/release/scripts"
-                            },
-                            {
-                                source: `./dist${basename}scripts/dg.js.map`,
-                                destination: "./dist/temp/release/scripts"
-                            },
-                            {
-                                source: `./dist${basename}scripts/dg-dashboard.js`,
-                                destination: "./dist/temp/release/scripts"
-                            },
-                            {
-                                source: `./dist${basename}scripts/dg-dashboard.js.map`,
-                                destination: "./dist/temp/release/scripts"
-                            },
-                            {
-                                source: `./dist${basename}styles/dg-style.css`,
-                                destination: "./dist/temp/release/styles"
-                            }
-                        ],
                         mkdir: [`./dist${basename}release`, "./artifacts/"],
-                        archive: onEndArchive,
-                        delete: ["./dist/temp"]
+                        archive: onEndArchive
                     },
                     {
                         copy: appRoutes.map(route => ({
