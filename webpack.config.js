@@ -276,18 +276,18 @@ module.exports = (env, argv) => {
 
     if (isProd && !isDevServer) {
         const onEndArchive = [
-            {
-                source: "./dist/icons",
-                destination: `./dist${basename}release/icons.zip`
-            }
+            // {
+            //     source: "./dist/icons",
+            //     destination: `./dist${basename}release/icons.zip`
+            // }
         ];
 
-        if (isRelease) {
-            onEndArchive.push({
-                source: "./dist/release",
-                destination: `./dist${basename}release/${brand === "swedbankpay" ? "Swedbankpay" : "Payex"}.DesignGuide.v${version}.zip`
-            });
-        }
+        // if (isRelease) {
+        //     onEndArchive.push({
+        //         source: "./dist/release",
+        //         destination: `./dist${basename}release/${brand === "swedbankpay" ? "Swedbankpay" : "Payex"}.DesignGuide.v${version}.zip`
+        //     });
+        // }
 
         // Create a zip file of the entire dist folder to add as an artifact for AppVeyor
         onEndArchive.push({
@@ -331,12 +331,12 @@ module.exports = (env, argv) => {
                         mkdir: [`./dist${basename}release`, "./artifacts/"],
                         archive: onEndArchive
                     },
-                    {
-                        copy: appRoutes.map(route => ({
-                            source: `./dist${basename}index.html`,
-                            destination: `./dist${basename}${route}`
-                        }))
-                    }
+                    // {
+                    //     copy: appRoutes.map(route => ({
+                    //         source: `./dist${basename}index.html`,
+                    //         destination: `./dist${basename}${route}`
+                    //     }))
+                    // }
                 ]
             })
         );
