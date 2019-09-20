@@ -1,11 +1,11 @@
 /* eslint camelcase: 0, object-curly-newline: 0 */
 const path = require("path");
 const webpack = require("webpack");
-const appRoutes = require("./tools/generate-routes-copy-array");
+// const appRoutes = require("./tools/generate-routes-copy-array");
 const levelsToRoot = require("./tools/levels-to-root");
 const autoprefixer = require("autoprefixer");
 const TerserPlugin = require("terser-webpack-plugin");
-// const SentryCliPlugin = require("@sentry/webpack-plugin");
+const SentryCliPlugin = require("@sentry/webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FileManagerPlugin = require("filemanager-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -230,7 +230,7 @@ module.exports = (env, argv) => {
                 "process.env": {
                     basename: JSON.stringify(basename),
                     version: JSON.stringify(version),
-                    // sentry: isRelease,
+                    sentry: isRelease,
                     google: isRelease,
                     brand: JSON.stringify(brand),
                     brandTitle: JSON.stringify(brandTitle)
@@ -258,19 +258,19 @@ module.exports = (env, argv) => {
                 chunks: ["dg"],
                 basename
             }),
-            new HtmlWebpackPlugin({
-                filename: `${rootPath}404.html`,
-                template: "./build/root404.html",
-                hash: true,
-                chunks: ["dg"],
-                title: `${brandTitle} DesignGuide`,
-                basename
-            }),
-            // new SentryCliPlugin({
-            //     release: version,
-            //     include: ".",
-            //     ignore: ["node_modules", "webpack.config.js"]
-            // })
+            // new HtmlWebpackPlugin({
+            //     filename: `${rootPath}404.html`,
+            //     template: "./build/root404.html",
+            //     hash: true,
+            //     chunks: ["dg"],
+            //     title: `${brandTitle} DesignGuide`,
+            //     basename
+            // }),
+            new SentryCliPlugin({
+                release: version,
+                include: ".",
+                ignore: ["node_modules", "webpack.config.js"]
+            })
         );
     }
 
@@ -282,12 +282,12 @@ module.exports = (env, argv) => {
             // }
         ];
 
-        // if (isRelease) {
-        //     onEndArchive.push({
-        //         source: "./dist/release",
-        //         destination: `./dist${basename}release/${brand === "swedbankpay" ? "Swedbankpay" : "Payex"}.DesignGuide.v${version}.zip`
-        //     });
-        // }
+        if (isRelease) {
+            onEndArchive.push({
+                source: "./dist/release",
+                destination: `./dist${basename}release/${brand === "swedbankpay" ? "Swedbankpay" : "Payex"}.DesignGuide.v${version}.zip`
+            });
+        }
 
         // Create a zip file of the entire dist folder to add as an artifact for AppVeyor
         onEndArchive.push({

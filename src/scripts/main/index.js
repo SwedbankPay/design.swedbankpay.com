@@ -1,4 +1,4 @@
-// import { init } from "~/node_modules/@sentry/browser";
+import { init } from "~/node_modules/@sentry/browser";
 import "@src/polyfills";
 
 import actionList from "./action-list";
@@ -17,9 +17,9 @@ import utils from "./utils";
 import validation from "./validation";
 
 // Sentry reporter
-// if (process.env.sentry) {
-//     init({ dsn: "https://a80375d3150043fa85964c8d5eb24e0b@sentry.io/1481099" });
-// }
+if (process.env.sentry) {
+    init({ dsn: "https://a80375d3150043fa85964c8d5eb24e0b@sentry.io/1481099" });
+}
 
 document.addEventListener("mousedown", () => { document.body.classList.add("intent-mouse"); });
 document.addEventListener("keydown", () => { document.body.classList.remove("intent-mouse"); });
