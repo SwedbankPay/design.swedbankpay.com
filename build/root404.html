@@ -30,7 +30,6 @@
     <script>
         (function () {
             var basename = "<%= htmlWebpackPlugin.options.basename %>";
-            console.log("Redirecting: ", window.origin + basename);
             window.location = window.origin + basename + "404";
         })();
     </script>

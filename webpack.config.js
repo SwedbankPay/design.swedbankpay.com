@@ -21,7 +21,8 @@ module.exports = (env, argv) => {
     const isProd = argv.mode === "production";
     const isDevServer = !!argv.host;
     const version = env && env.semver ? env.semver : "LOCAL_DEV";
-    const isRelease = env && env.release === "true";
+    const isRelease = true;
+
     const basename = env && env.basename ? `/${env.basename}/` : "/";
     const infoVersion = env && env.info_version ? env.info_version : "LOCAL_DEV";
 
