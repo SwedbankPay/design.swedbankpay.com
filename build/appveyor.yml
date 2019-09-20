@@ -17,8 +17,8 @@ environment:
   github_email:
     secure: U3oByHGtWDiIy9psThpxwg==
   # Sentry
-  sentry_token:
-    secure: 2AHaYtkCYqF7pOJtBwTgGCl/0txH4ku0OWxAh3AwMHAKGZ6fpsE8918uuBLTG8ROmLLyHaqxK6JGyPxPWl9H3DsBkKuG7CVS4NYyxO4o5BU=
+  # sentry_token:
+    # secure: 2AHaYtkCYqF7pOJtBwTgGCl/0txH4ku0OWxAh3AwMHAKGZ6fpsE8918uuBLTG8ROmLLyHaqxK6JGyPxPWl9H3DsBkKuG7CVS4NYyxO4o5BU=
   # Slack hook for bot to #design-guide-dev
   slack_designguide_webhook:
     secure: gxWz5+nY3Ctg2JTqo5RQVwHA+UNxiB/H1u72IC71b3oBZj/dxqBLc1/EYZtxzWjiOCXPSOfKJ485+XhtyTt1kNjHon7JWRftucuOyhaozmw=
