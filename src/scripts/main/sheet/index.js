@@ -72,6 +72,9 @@ class Sheet {
         document.body.classList.add("sheet-open");
         this._el.classList.add("sheet-open");
 
+        const toastContainer = document.querySelector("#toast-container");
+
+        toastContainer ? toastContainer.setAttribute("style", `margin-right: ${this._el.querySelector("section").offsetWidth}px; transition: margin 0.3s ease-in-out;`) : null;
     }
 
     close () {
@@ -84,6 +87,10 @@ class Sheet {
             this._el.classList.remove("sheet-closing");
             this._el.classList.remove("d-block");
         }, 300);
+
+        const toastContainer = document.querySelector("#toast-container");
+
+        toastContainer ? toastContainer.setAttribute("style", "transition: margin 0.3s ease-in-out;") : null;
 
     }
 }
