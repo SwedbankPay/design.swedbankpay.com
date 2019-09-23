@@ -34,6 +34,7 @@ exports[`Component: Pagination -  renders arrows when prop arrows is provided 1`
       type="back"
     >
       <li
+        aria-label="back"
         className="arrow-back"
       >
         
@@ -49,6 +50,7 @@ exports[`Component: Pagination -  renders arrows when prop arrows is provided 1`
       type="forward"
     >
       <li
+        aria-label="forward"
         className="arrow-forward"
       >
         
@@ -110,6 +112,7 @@ exports[`Component: Pagination -  renders outermost arrows when prop farArrows i
       type="start"
     >
       <li
+        aria-label="start"
         className="arrow-start"
       >
         
@@ -125,6 +128,7 @@ exports[`Component: Pagination -  renders outermost arrows when prop farArrows i
       type="end"
     >
       <li
+        aria-label="end"
         className="arrow-end"
       >
         
