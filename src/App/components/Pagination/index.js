@@ -21,7 +21,7 @@ const Pagination = ({ type, items, text, arrows, farArrows }) => {
         }
 
         return (
-            <li className={`arrow-${type}`}>{"\n"}
+            <li className={`arrow-${type}`} aria-label={type} >{"\n"}
                 {disabled ? <span></span> : <a href="#"></a>}{"\n"}
             </li>
         );
