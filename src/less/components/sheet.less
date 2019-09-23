@@ -6,14 +6,22 @@
     height: 100%;
     z-index: @zindex-sheet-backdrop;
     background: transparent;
-    transition: background 0.3s ease-in-out;
     display: none;
 
     &.sheet-open {
-        background: @sheet-backdrop-bg;
+        animation: fade-in-sheet 0.5s forwards;
 
         > section {
             right: 0;
+            animation: slide-in-sheet 0.5s ease forwards;
+        }
+    }
+
+    &.sheet-closing {
+        animation: fade-out-sheet 0.3s forwards;
+
+        > section {
+            animation: slide-out-sheet 0.3s ease alternate;
         }
     }
 
@@ -23,9 +31,9 @@
         width: @sheet-width-xs;
         height: 100%;
         background: @sheet-section-bg;
-        transition: right 0.3s ease-in-out;
         padding: @sheet-section-padding;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
+        transform: translateX(100%);
 
         @media screen and (min-width: @screen-xs-min) and  (max-width: @screen-sm-max) {
             right: -@sheet-width-sm;
@@ -60,5 +68,42 @@ body.sheet-open {
 
     .flatpickr-calendar {
         z-index: 4000;
+    }
+}
+
+// Keyframe animations
+@keyframes slide-in-sheet {
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slide-out-sheet {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes fade-in-sheet {
+    0% {
+        background: transparent;
+    }
+
+    100% {
+        background: @sheet-backdrop-bg;
+    }
+}
+
+@keyframes fade-out-sheet {
+    0% {
+        background: @sheet-backdrop-bg;
+    }
+
+    100% {
+        background: transparent;
     }
 }
