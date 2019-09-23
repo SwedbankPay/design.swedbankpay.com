@@ -65,7 +65,7 @@ class Toast {
     }
 
     _positionToastContainer () {
-        const topbarDiff = document.querySelector(".topbar").scrollHeight - window.scrollY;
+        const topbarDiff = document.querySelector(".topbar") ? document.querySelector(".topbar").scrollHeight - window.scrollY : 0;
 
         topbarDiff > 0 ? Toast._container.setAttribute("style", `top: ${topbarDiff}px`) : Toast._container.setAttribute("style", "top: 1rem");
     }
