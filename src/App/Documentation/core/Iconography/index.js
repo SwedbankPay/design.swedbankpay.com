@@ -133,7 +133,7 @@ const PaymentIcons = () => (
                     <div className="d-flex align-items-center">{"\n"}
                         <IconPreview type="payment-icon" name="visa" className="mr-2" />{"\n"}
                         <span>4925*********007</span>{"\n"}
-                    </div>
+                    </div>{"\n"}
                     <span className="status status-success">Active</span>{"\n"}
                     <button type="button" className="btn btn-danger btn-xs"><i className="material-icons">delete</i></button>{"\n"}
                 </li>
