@@ -2,8 +2,6 @@
 
 ## [4.1.0] - 2019-09-24
 
-### Added
-
 ### Changed
 
  - New brown and gray scale added to components
@@ -17,7 +15,3 @@
  - Sheet animation updated
  - Action List more accessible
  - Pagination updated
-
-### Fixed
-
-### Removed
