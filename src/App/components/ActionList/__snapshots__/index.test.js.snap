@@ -7,12 +7,9 @@ exports[`Component: ActionList .action-menu prevents default when an item is cli
   >
     
 
-    <i
-      className="material-icons action-toggle"
-    >
-      more_vert
-    </i>
+    <ActionListToggle />
     <div
+      aria-labelledby="actionListToggle"
       className="action-menu"
     >
       
@@ -35,12 +32,28 @@ exports[`Component: ActionList prop types items prints an error if it does not c
   >
     
 
-    <i
-      className="material-icons action-toggle"
-    >
-      more_vert
-    </i>
+    <ActionListToggle>
+      <button
+        aria-haspopup="true"
+        className="action-toggle"
+        id="actionListToggle"
+        type="button"
+      >
+        
+
+        <i
+          className="material-icons"
+        >
+          more_vert
+        </i>
+        
+
+      </button>
+      
+
+    </ActionListToggle>
     <div
+      aria-labelledby="actionListToggle"
       className="action-menu"
     >
       
@@ -64,12 +77,28 @@ Array [
     >
       
 
-      <i
-        className="material-icons action-toggle"
-      >
-        more_vert
-      </i>
+      <ActionListToggle>
+        <button
+          aria-haspopup="true"
+          className="action-toggle"
+          id="actionListToggle"
+          type="button"
+        >
+          
+
+          <i
+            className="material-icons"
+          >
+            more_vert
+          </i>
+          
+
+        </button>
+        
+
+      </ActionListToggle>
       <div
+        aria-labelledby="actionListToggle"
         className="action-menu"
       >
         
@@ -104,12 +133,28 @@ Array [
     >
       
 
-      <i
-        className="material-icons action-toggle"
-      >
-        more_vert
-      </i>
+      <ActionListToggle>
+        <button
+          aria-haspopup="true"
+          className="action-toggle"
+          id="actionListToggle"
+          type="button"
+        >
+          
+
+          <i
+            className="material-icons"
+          >
+            more_vert
+          </i>
+          
+
+        </button>
+        
+
+      </ActionListToggle>
       <div
+        aria-labelledby="actionListToggle"
         className="action-menu"
       >
         
@@ -218,12 +263,28 @@ Array [
     >
       
 
-      <i
-        className="material-icons action-toggle"
-      >
-        more_vert
-      </i>
+      <ActionListToggle>
+        <button
+          aria-haspopup="true"
+          className="action-toggle"
+          id="actionListToggle"
+          type="button"
+        >
+          
+
+          <i
+            className="material-icons"
+          >
+            more_vert
+          </i>
+          
+
+        </button>
+        
+
+      </ActionListToggle>
       <div
+        aria-labelledby="actionListToggle"
         className="action-menu"
       >
         
@@ -327,12 +388,28 @@ Array [
     >
       
 
-      <i
-        className="material-icons action-toggle"
-      >
-        more_vert
-      </i>
+      <ActionListToggle>
+        <button
+          aria-haspopup="true"
+          className="action-toggle"
+          id="actionListToggle"
+          type="button"
+        >
+          
+
+          <i
+            className="material-icons"
+          >
+            more_vert
+          </i>
+          
+
+        </button>
+        
+
+      </ActionListToggle>
       <div
+        aria-labelledby="actionListToggle"
         className="action-menu"
       >
         
@@ -442,12 +519,28 @@ Array [
     >
       
 
-      <i
-        className="material-icons action-toggle"
-      >
-        more_vert
-      </i>
+      <ActionListToggle>
+        <button
+          aria-haspopup="true"
+          className="action-toggle"
+          id="actionListToggle"
+          type="button"
+        >
+          
+
+          <i
+            className="material-icons"
+          >
+            more_vert
+          </i>
+          
+
+        </button>
+        
+
+      </ActionListToggle>
       <div
+        aria-labelledby="actionListToggle"
         className="action-menu"
       >
         
@@ -552,12 +645,28 @@ Array [
     >
       
 
-      <i
-        className="material-icons action-toggle"
-      >
-        more_vert
-      </i>
+      <ActionListToggle>
+        <button
+          aria-haspopup="true"
+          className="action-toggle"
+          id="actionListToggle"
+          type="button"
+        >
+          
+
+          <i
+            className="material-icons"
+          >
+            more_vert
+          </i>
+          
+
+        </button>
+        
+
+      </ActionListToggle>
       <div
+        aria-labelledby="actionListToggle"
         className="action-menu"
       >
         
@@ -646,12 +755,28 @@ Array [
     >
       
 
-      <i
-        className="material-icons action-toggle"
-      >
-        more_vert
-      </i>
+      <ActionListToggle>
+        <button
+          aria-haspopup="true"
+          className="action-toggle"
+          id="actionListToggle"
+          type="button"
+        >
+          
+
+          <i
+            className="material-icons"
+          >
+            more_vert
+          </i>
+          
+
+        </button>
+        
+
+      </ActionListToggle>
       <div
+        aria-labelledby="actionListToggle"
         className="action-menu"
       >
         
@@ -686,12 +811,28 @@ Array [
     >
       
 
-      <i
-        className="material-icons action-toggle"
-      >
-        more_vert
-      </i>
+      <ActionListToggle>
+        <button
+          aria-haspopup="true"
+          className="action-toggle"
+          id="actionListToggle"
+          type="button"
+        >
+          
+
+          <i
+            className="material-icons"
+          >
+            more_vert
+          </i>
+          
+
+        </button>
+        
+
+      </ActionListToggle>
       <div
+        aria-labelledby="actionListToggle"
         className="action-menu"
       >
         
@@ -815,6 +956,7 @@ exports[`Component: ActionList renders with a custom .action-toggle if it is pro
     
 
     <div
+      aria-labelledby="actionListToggle"
       className="action-menu"
     >
       
