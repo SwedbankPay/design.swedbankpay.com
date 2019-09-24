@@ -10,7 +10,7 @@ const Home = () => {
 
     return (
         <div className="documentation container pt-3 pb-3">
-            <div className="alert alert-warning">
+            <div className="alert alert-complex alert-warning">
                 <header className="alert-header">
                     <i className="material-icons alert-icon">warning</i>
                     <h3>Site under development</h3>
