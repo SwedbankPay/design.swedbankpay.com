@@ -36,7 +36,7 @@ class Toast {
             type: "",
             icon: "",
             dismissable: true,
-            displayLength: 400000,
+            displayLength: 4000,
             inDuration: 300,
             outDuration: 375,
             classes: [],
