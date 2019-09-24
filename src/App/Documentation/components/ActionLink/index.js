@@ -30,7 +30,7 @@ const ActionLinkBadge = () => (
 
 const ActionLinkSmallText = () => (
     <>
-        <h2 id="action-link-badge">Action Link with small text</h2>
+        <h2 id="action-link-small-text">Action Link with small text</h2>
         <p>A small text can be displayed as a part of the Action Link. There are two types of Action Links with small text, one with the inline small text and one with the texts on different lines.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ActionLinkComponent linkText="My link" smallText="This link directs to my page"/>
@@ -44,7 +44,7 @@ const ActionLinkSmallText = () => (
 
 const ActionLinkBadgeSmallText = () => (
     <>
-        <h2 id="action-link-badge">Action Link with Badge and small text</h2>
+        <h2 id="action-link-badge-small-text">Action Link with Badge and small text</h2>
         <p>Action Links can contain both Badge and small text</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ActionLinkComponent linkText="My link" smallText="This link directs to my page" badge={badge}/>
