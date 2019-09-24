@@ -70,9 +70,7 @@ class Sheet {
         this.isOpen = true;
         this._el.classList.add("d-block");
         document.body.classList.add("sheet-open");
-        setTimeout(() => {
-            this._el.classList.add("sheet-open");
-        }, 10); // If set lower than 10, the initial open will be instant.
+        this._el.classList.add("sheet-open");
 
         const toastContainer = document.querySelector("#toast-container");
 
@@ -84,13 +82,16 @@ class Sheet {
         this.isOpen = false;
         this._el.classList.remove("sheet-open");
         document.body.classList.remove("sheet-open");
+        this._el.classList.add("sheet-closing");
         setTimeout(() => {
+            this._el.classList.remove("sheet-closing");
             this._el.classList.remove("d-block");
         }, 300);
 
         const toastContainer = document.querySelector("#toast-container");
 
         toastContainer ? toastContainer.setAttribute("style", "transition: margin 0.3s ease-in-out;") : null;
+
     }
 }
 
