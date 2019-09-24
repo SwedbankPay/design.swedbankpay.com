@@ -1,9 +1,12 @@
 .badge {
+    display: inline-block;
     color: @white;
-    padding: 0.08em 0.37em; /* stylelint-disable-line */ /* Using em for variable padding based on font-size of badge [AW] */
+    padding: 0 0.3em; /* stylelint-disable-line */ /* Using em for variable padding based on font-size of badge [AW] */
     border-radius: 2rem;
     font-size: 0.875rem;
-    line-height: 1;
+    min-width: 1.425rem;
+    font-family: @brand-headline;
+    text-align: center;
 
     each(@badge-list, .(@color, @name) {
         &.badge-@{name} {
