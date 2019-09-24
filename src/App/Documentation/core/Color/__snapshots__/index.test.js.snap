@@ -1,307 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Core: Color AlertColors renders 1`] = `
-<Fragment>
-  <h2
-    id="alert-colors"
-  >
-    Alert colors
-  </h2>
-  <p>
-    These colors are used to visualize state, see 
-    <Link
-      to="/docs/components/alerts/"
-    >
-      Alert
-    </Link>
-     for an example.
-  </p>
-  <ul
-    className="list color-preview"
-  >
-    <li
-      key="0"
-    >
-      <ColorPreview
-        hex="#51971B"
-        name="Brand success"
-      />
-    </li>
-    <li
-      key="1"
-    >
-      <ColorPreview
-        hex="#F2F7EB"
-        name="Brand success light"
-      />
-    </li>
-    <li
-      key="2"
-    >
-      <ColorPreview
-        hex="#FF9900"
-        name="Brand warning"
-      />
-    </li>
-    <li
-      key="3"
-    >
-      <ColorPreview
-        hex="#FFF3D5"
-        name="Brand warning light"
-      />
-    </li>
-    <li
-      key="4"
-    >
-      <ColorPreview
-        hex="#C5131C"
-        name="Brand error"
-      />
-    </li>
-    <li
-      key="5"
-    >
-      <ColorPreview
-        hex="#F9DED3"
-        name="Brand error light"
-      />
-    </li>
-    <li
-      key="6"
-    >
-      <ColorPreview
-        hex="#4572C0"
-        name="Brand info"
-      />
-    </li>
-    <li
-      key="7"
-    >
-      <ColorPreview
-        hex="#E8EFF9"
-        name="Brand info light"
-      />
-    </li>
-  </ul>
-</Fragment>
-`;
-
-exports[`Core: Color Grayscale renders 1`] = `
-<Fragment>
-  <h2
-    id="grayscale"
-  >
-    Grayscale
-  </h2>
-  <ul
-    className="list color-preview"
-  >
-    <li
-      key="0"
-    >
-      <ColorPreview
-        hex="#000000"
-        name="Black"
-      />
-    </li>
-    <li
-      key="1"
-    >
-      <ColorPreview
-        hex="#111111"
-        name="Near black"
-      />
-    </li>
-    <li
-      key="2"
-    >
-      <ColorPreview
-        hex="#262626"
-        name="Gray dark"
-      />
-    </li>
-    <li
-      key="3"
-    >
-      <ColorPreview
-        hex="#363636"
-        name="Gray medium dark"
-      />
-    </li>
-    <li
-      key="4"
-    >
-      <ColorPreview
-        hex="#404040"
-        name="Gray medium"
-      />
-    </li>
-    <li
-      key="5"
-    >
-      <ColorPreview
-        hex="#545454"
-        name="Gray medium light"
-      />
-    </li>
-    <li
-      key="6"
-    >
-      <ColorPreview
-        hex="#666666"
-        name="Gray light"
-      />
-    </li>
-    <li
-      key="7"
-    >
-      <ColorPreview
-        hex="#999999"
-        name="Gray light alt"
-      />
-    </li>
-    <li
-      key="8"
-    >
-      <ColorPreview
-        hex="#EAEAEA"
-        name="Gray bright"
-      />
-    </li>
-    <li
-      key="9"
-    >
-      <ColorPreview
-        hex="#BCBCBC"
-        name="Gray bright alt"
-      />
-    </li>
-    <li
-      key="10"
-    >
-      <ColorPreview
-        hex="#F9F9F9"
-        name="Near gray"
-      />
-    </li>
-    <li
-      key="11"
-    >
-      <ColorPreview
-        hex="#F4F4F4"
-        name="Off white"
-      />
-    </li>
-    <li
-      key="12"
-    >
-      <ColorPreview
-        hex="#F0F0F0"
-        name="Near white"
-      />
-    </li>
-    <li
-      key="13"
-    >
-      <ColorPreview
-        hex="#FFFFFF"
-        name="White"
-      />
-    </li>
-  </ul>
-</Fragment>
-`;
-
-exports[`Core: Color MainColors renders 1`] = `
-<Fragment>
-  <h2
-    id="main-colors"
-  >
-    Main colors
-  </h2>
-  <p>
-    Our main color pallete.
-  </p>
-  <ul
-    className="list color-preview"
-  >
-    <li
-      key="0"
-    >
-      <ColorPreview
-        hex="#FDC129"
-        name="Yellow"
-      />
-    </li>
-    <li
-      key="1"
-    >
-      <ColorPreview
-        hex="#512B2B"
-        name="Brown"
-      />
-    </li>
-    <li
-      key="2"
-    >
-      <ColorPreview
-        hex="#EE7023"
-        name="Orange Main"
-      />
-    </li>
-    <li
-      key="3"
-    >
-      <ColorPreview
-        hex="#8ACDC3"
-        name="Info Turquoise"
-      />
-    </li>
-    <li
-      key="4"
-    >
-      <ColorPreview
-        hex="#EFB7B6"
-        name="Info pink"
-      />
-    </li>
-    <li
-      key="5"
-    >
-      <ColorPreview
-        hex="#FBF2EA"
-        name="Apricot"
-      />
-    </li>
-    <li
-      key="6"
-    >
-      <ColorPreview
-        hex="#EBF8F2"
-        name="Light Turquoise"
-      />
-    </li>
-    <li
-      key="7"
-    >
-      <ColorPreview
-        hex="#31A3AE"
-        name="Turquoise"
-      />
-    </li>
-    <li
-      key="8"
-    >
-      <ColorPreview
-        hex="#257886"
-        name="Turquoise Links"
-      />
-    </li>
-  </ul>
-</Fragment>
-`;
-
 exports[`Core: Color renders 1`] = `
 <DocContainer>
   <p
@@ -309,8 +7,43 @@ exports[`Core: Color renders 1`] = `
   >
     Color palette
   </p>
-  <MainColors />
-  <AlertColors />
-  <Grayscale />
+  <ColorDisplay
+    colorList={
+      Array [
+        Object {
+          "hex": "#2da944",
+          "name": "Primary",
+        },
+        Object {
+          "hex": "#3c3c3c",
+          "name": "Secondary",
+        },
+        Object {
+          "hex": "#266c9a",
+          "name": "Info",
+        },
+        Object {
+          "hex": "#2da944",
+          "name": "Success",
+        },
+        Object {
+          "hex": "#ff9f00",
+          "name": "Warning",
+        },
+        Object {
+          "hex": "#cd2e00",
+          "name": "Error",
+        },
+      ]
+    }
+    description={
+      <p>
+        Our main color palette.
+      </p>
+    }
+    head="Main colors"
+    id="main-colors"
+    key="0"
+  />
 </DocContainer>
 `;

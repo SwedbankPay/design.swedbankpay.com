@@ -15,7 +15,7 @@ const Alert = ({ id, type, icon, close, text, children }) => (
 );
 
 const ComplexAlert = ({ id, type, icon, close, headerText, children }) => (
-    <div id={id} className={`alert alert-${type}`}>
+    <div id={id} className={`alert alert-complex alert-${type}`}>
         <header className="alert-header">
             {icon
                 ? <>

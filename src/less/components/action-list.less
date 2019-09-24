@@ -2,24 +2,6 @@
     position: relative;
     display: inline-flex;
 
-    .action-toggle {
-        position: relative;
-        line-height: 1.1;
-        user-select: none;
-        padding: 0.5rem;
-        border-radius: 2px;
-        color: @brand-secondary-dark-2;
-
-        &:not(.material-icons) {
-            padding: 0.7rem;
-        }
-
-        &:hover {
-            cursor: pointer;
-            background-color: @gray-bright;
-        }
-    }
-
     .action-menu {
         position: absolute;
         top: 2.7rem;
@@ -46,18 +28,40 @@
 
             &:hover {
                 text-decoration: none;
-                background-color: @gray-bright;
+                background-color: @light-gray;
             }
 
             &:not(:last-child) {
-                border-bottom: 1px solid @gray-bright;
+                border-bottom: 1px solid @light-gray;
             }
+        }
+    }
+
+    .action-toggle {
+        position: relative;
+        line-height: 1.1;
+        user-select: none;
+        border-radius: 2px;
+        background-color: inherit;
+        color: @brand-secondary-dark-2;
+        display: flex;
+        padding: 0;
+        border: 0;
+        outline: 0;
+
+        &:not(.material-icons) {
+            padding: 0.7rem;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: @light-gray;
         }
     }
 
     &.active {
         .action-toggle {
-            background-color: @gray-bright;
+            background-color: @light-gray;
         }
 
         .action-menu {

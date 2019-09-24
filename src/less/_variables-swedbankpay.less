@@ -4,16 +4,30 @@
  *
  */
 
+/* Grayscale */
+@black:                                     #222222;
+@text-gray:                                 #767676;
+@list-gray:                                 #999999;
+@light-gray:                                #F9F8F6;
+@white:                                     #ffffff;
+
+/* Brownscale */
+@solid-brown:                               #2f2424;
+@dark-brown:                                #493c3b;
+@medium-brown:                              #72695e;
+@soft-brown:                                #a38b80;
+@light-brown:                               #d4c4bc;
+
 /* Main Brand Color Variants */
 @brand-primary:                             #fdc129;
 @brand-primary-bright:                      #ffcc00;
 @brand-primary-faded:                         fade(@brand-primary, 60%);
-@brand-secondary-dark-1:                    #493c3b;
-@brand-secondary-dark-2:                    #2f2424;
+@brand-secondary-dark-1:                    @dark-brown;
+@brand-secondary-dark-2:                    @solid-brown;
 @brand-secondary:                           #512b2b;
 @brand-secondary-light-1:                   #72605e;
-@brand-secondary-light-2:                   #a38b80;
-@brand-secondary-light-3:                   #d4c4bc;
+@brand-secondary-light-2:                   @soft-brown;
+@brand-secondary-light-3:                   @light-brown;
 @brand-secondary-light-4:                   #d4b8a3;
 
 @brand-tertiary:                            #ee7023;
@@ -38,3 +52,30 @@
 @brand-error-light:                         #f9ded3;
 @brand-info:                                #4572c0;
 @brand-info-light:                          #e8eff9;
+
+/* Brand fonts */
+@brand-headline:                            "Swedbank Headline", "Arial", sans-serif;
+
+/* Button colors */
+@executive-disabled-bg:                     #f5b895;
+@guiding-disabled-bg:                       #98d0d6;
+@destructive-disabled-bg:                   @brand-secondary-light-4;
+@destructive-disabled-color:                #696969; // (DIMGRAY)
+
+@btn-executive-color:                       @white;
+@btn-executive-bg:                          @brand-tertiary;
+@btn-executive-disabled-color:              @white;
+@btn-executive-disabled-bg:                 @executive-disabled-bg;
+
+@btn-guiding-color:                         @white;
+@btn-guiding-bg:                            @brand-accent;
+@btn-guiding-disabled-color:                @white;
+@btn-guiding-disabled-bg:                   @guiding-disabled-bg;
+
+@btn-destructive-color:                     @brand-secondary-dark-1;
+@btn-destructive-bg:                        @brand-secondary-light-4;
+@btn-destructive-disabled-color:            @destructive-disabled-color;
+@btn-destructive-disabled-bg:               @destructive-disabled-bg;
+
+@btn-link-color:                            @brand-accent-links;
+@btn-link-disabled-color:                   @list-gray;

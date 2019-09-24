@@ -6,7 +6,7 @@ import "prismjs";
 import "prismjs/themes/prism.css";
 
 import "./less/payex.less";
-import "./less/documentation.less";
+import "./less/documentation-payex.less";
 
 render(
     <App />,

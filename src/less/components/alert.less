@@ -4,14 +4,13 @@
     margin-top: 0;
     margin-bottom: @base-margin;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
 
     &.alert-default {
-        .alert-variant(@gray-medium-light, @nearwhite);
+        .alert-variant(@text-gray, @light-gray);
 
         .alert-icon {
-            color: @gray-medium-light;
+            color: @text-gray;
         }
     }
 
@@ -29,6 +28,11 @@
 
     &.alert-danger {
         .alert-variant(@brand-error, @brand-error-light);
+    }
+
+
+    &.alert-complex {
+        flex-wrap: wrap;
     }
 
     > p {

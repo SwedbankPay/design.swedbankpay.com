@@ -20,7 +20,7 @@
         padding-left: 11px;
         padding-bottom: @base-padding-sm;
         background-color: @white;
-        // border-bottom: 1px solid @gray-bright-alt;
+        // border-bottom: 1px solid @list-gray;
 
         li {
             list-style: none;
@@ -51,7 +51,7 @@
 
             li {
                 display: block;
-                border-left: 1px solid @gray-bright-alt;
+                border-left: 1px solid @list-gray;
                 order: 2;
 
                 &:not(.active) {
@@ -115,8 +115,9 @@
             }
 
             a {
-                background-color: @gray-bright;
+                background-color: @brand-bg-gray;
                 padding: 0.5rem 1rem;
+                white-space: nowrap;
 
                 &:hover {
                     background-color: @brand-primary;
