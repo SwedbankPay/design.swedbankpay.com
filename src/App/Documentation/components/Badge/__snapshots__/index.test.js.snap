@@ -1,5 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Components: Badge BadgeNumber renders 1`] = `
+<Fragment>
+  <h2
+    id="badgenumber"
+  >
+    Badges with numbers
+  </h2>
+  <p>
+    Badges are often used with numbers. Use 
+    <Property
+      value=".badge-number"
+    />
+     when a badge suited for usage with numbers is desired.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <p>
+      Badge 
+      <span
+        className="badge badge-default badge-number"
+      >
+        1
+      </span>
+    </p>
+    <p>
+      Badge 
+      <span
+        className="badge badge-yellow badge-number"
+      >
+        8
+      </span>
+    </p>
+    <p>
+      Badge 
+      <span
+        className="badge badge-yellow badge-number"
+      >
+        42
+      </span>
+    </p>
+    <p>
+      Badge 
+      <span
+        className="badge badge-blue badge-number"
+      >
+        100
+      </span>
+    </p>
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Components: Badge Overview renders 1`] = `
 <Fragment>
   <h2
@@ -69,5 +124,6 @@ exports[`Components: Badge renders 1`] = `
     Badges are small rectangular boxes which can convey a message and or state with their text and color.
   </p>
   <Overview />
+  <BadgeNumber />
 </DocContainer>
 `;
