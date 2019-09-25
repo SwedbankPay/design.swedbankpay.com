@@ -5,7 +5,7 @@ const ActionLink = ({ linkText, badge, smallText, multiline }) => (
     <a className="action-link" href="#">{"\n"}
         {badge ? <span className={`badge ${badge.type}`}>{badge.text}</span> : null}{"\n"}
         {multiline ?
-            <span className={multiline ? "action-link-multiline" : null}>{"\n"}
+            <span className="action-link-multiline">{"\n"}
                 {linkText}{"\n"}
                 {smallText ? <span className="small-text">{smallText}</span> : null }{"\n"}
             </span>

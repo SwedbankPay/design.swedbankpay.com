@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import ActionLink, { Overview, ActionLinkBadge, ActionLinkSmallText } from "./index";
+import ActionLink, { Overview, ActionLinkBadge, ActionLinkSmallText, ActionLinkBadgeSmallText } from "./index";
 
 describe("Components: ActionLink", () => {
     it("is defined", () => {
@@ -45,6 +45,18 @@ describe("Components: ActionLink", () => {
 
         it("renders", () => {
             const wrapper = shallow(<ActionLinkSmallText />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("ActionLinkBadgeSmallText", () => {
+        it("is defined", () => {
+            expect(ActionLinkBadgeSmallText).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<ActionLinkBadgeSmallText />);
 
             expect(wrapper).toMatchSnapshot();
         });

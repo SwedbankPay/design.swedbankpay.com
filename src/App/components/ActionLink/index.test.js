@@ -56,4 +56,11 @@ describe("Component: ActionLink", () => {
         expect(wrapper.contains(<span className="small-text">Small text</span>)).toEqual(false);
     });
 
+    it("renders an actionlink with smalltext on multiline when multiline and smalltext is provided", () => {
+        const wrapper = shallow(<ActionLink linkText="Link text" smallText="Small text" multiline={true} />);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.html()).toContain("<span class=\"action-link-multiline\">");
+    });
+
 });

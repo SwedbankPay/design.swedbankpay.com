@@ -28,15 +28,61 @@ exports[`Components: ActionLink ActionLinkBadge renders 1`] = `
 </Fragment>
 `;
 
+exports[`Components: ActionLink ActionLinkBadgeSmallText renders 1`] = `
+<Fragment>
+  <h2
+    id="action-link-badge-small-text"
+  >
+    Action Link with Badge and small text
+  </h2>
+  <p>
+    Action Links can contain both Badge and small text
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ActionLink
+      badge={
+        Object {
+          "text": "40",
+          "type": "badge-yellow",
+        }
+      }
+      linkText="My link"
+      smallText="This link directs to my page"
+    />
+  </ComponentPreview>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ActionLink
+      badge={
+        Object {
+          "text": "40",
+          "type": "badge-yellow",
+        }
+      }
+      linkText="My link"
+      multiline={true}
+      smallText="This link directs to my page"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Components: ActionLink ActionLinkSmallText renders 1`] = `
 <Fragment>
   <h2
-    id="action-link-badge"
+    id="action-link-small-text"
   >
     Action Link with small text
   </h2>
   <p>
-    A small text can be displayed as a part of the Action Link.
+    A small text can be displayed as a part of the Action Link. There are two types of Action Links with small text, one with the inline small text and one with the texts on different lines.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -45,6 +91,24 @@ exports[`Components: ActionLink ActionLinkSmallText renders 1`] = `
   >
     <ActionLink
       linkText="My link"
+      smallText="This link directs to my page"
+    />
+  </ComponentPreview>
+  <p>
+    Use 
+    <Property
+      value=".action-link-multiline"
+    />
+     for the Action Link with the texts on different lines.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ActionLink
+      linkText="My link"
+      multiline={true}
       smallText="This link directs to my page"
     />
   </ComponentPreview>
@@ -85,5 +149,6 @@ exports[`Components: ActionLink renders 1`] = `
   <Overview />
   <ActionLinkBadge />
   <ActionLinkSmallText />
+  <ActionLinkBadgeSmallText />
 </DocContainer>
 `;
