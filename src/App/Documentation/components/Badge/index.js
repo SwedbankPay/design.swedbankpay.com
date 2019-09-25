@@ -18,7 +18,7 @@ const Overview = () => (
 const BadgeNumber = () => (
     <>
         <h2 id="badgenumber">Badges with numbers</h2>
-        <p>Badges are often used with numbers. Use <Property value=".badge-number" /> when a badge suited for usage with numbers is desired.</p>
+        <p>Badges are often used with numbers. Use <Property value=".badge-number" /> when a badge suited for use with numbers is desired.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <p>Badge <span className="badge badge-default badge-number">1</span></p>
             <p>Badge <span className="badge badge-yellow badge-number">8</span></p>

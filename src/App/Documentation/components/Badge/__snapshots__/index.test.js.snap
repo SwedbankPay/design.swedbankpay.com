@@ -12,7 +12,7 @@ exports[`Components: Badge BadgeNumber renders 1`] = `
     <Property
       value=".badge-number"
     />
-     when a badge suited for usage with numbers is desired.
+     when a badge suited for use with numbers is desired.
   </p>
   <ComponentPreview
     codeFigure={true}
