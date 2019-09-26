@@ -21,12 +21,12 @@ module.exports = [
     {
         title: "Resources",
         path: "/Resources/resources",
-        redirect: "/Resources/getting-started/introduction",
+        redirect: "/Resources/resources/logotype",
         routes: [
             {
-                title: "Logos",
-                path: "/Resources/resources/logos",
-                componentPath: "resources/logos"
+                title: "Logotype",
+                path: "/Resources/resources/logotype",
+                componentPath: "resources/logotype"
             }
         ]
     }
