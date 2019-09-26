@@ -5,13 +5,13 @@ import Loadable from "react-loadable";
 
 import { LoadingComponent } from "@src/App/utils";
 
-const RenderRoutes = ({ path, redirect, routes }) => (
+const RenderRoutes = ({ path, redirect, routes, appFolder }) => (
     <Switch>
         <Route exact path={path} render={() => <Redirect to={redirect} />}/>
         {routes.map(route => {
             const { path, componentPath } = route;
             const LoadableComponent = Loadable({
-                loader: () => import(/* webpackChunkName: "doc-route.chunk_" */ `../../${componentPath}/index.js`),
+                loader: () => import(/* webpackChunkName: "doc-route.chunk_" */ `../../${appFolder}/${componentPath}/index.js`),
                 loading: LoadingComponent
             });
 
@@ -24,7 +24,8 @@ const RenderRoutes = ({ path, redirect, routes }) => (
 RenderRoutes.propTypes = {
     path: PropTypes.string.isRequired,
     redirect: PropTypes.string.isRequired,
-    routes: PropTypes.array.isRequired
+    routes: PropTypes.array.isRequired,
+    appFolder: PropTypes.string.isRequired
 };
 
 export default RenderRoutes;

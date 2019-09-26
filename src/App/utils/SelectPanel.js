@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { NavLink, withRouter } from "react-router-dom";
 
 import SearchBox from "./SearchBox";
-import routes from "../routes/docs";
 
 class NavGroup extends Component {
     constructor (props) {
@@ -39,7 +38,7 @@ class NavGroup extends Component {
     }
 }
 
-const SelectPanel = () => (
+const SelectPanel = ({ routes }) => (
     <div className="doc-sidebar">
         <SearchBox routes={routes} />
         <nav className="documentation-nav">

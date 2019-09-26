@@ -47,6 +47,11 @@ const Templates = Loadable({
     loading: LoadingComponent
 });
 
+const Resources = Loadable({
+    loader: () => import(/* webpackChunkName: "templates.chunk" */ "./Resources/index.js"),
+    loading: LoadingComponent
+});
+
 const ErrorPage404 = Loadable({
     loader: () => import(/* webpackChunkName: "404.chunk" */ "./ErrorPage404/index.js"),
     loading: LoadingComponent
@@ -82,6 +87,7 @@ class App extends Component {
                         <Route path="/docs" component={Documentation} />
                         <Route path="/Examples" component={Examples} />
                         <Route path="/Templates" component={Templates} />
+                        <Route path="/Resources" component={Resources} />
                         <Route path="/404" component={ErrorPage404} />
                         <Route component={ErrorPage404} />
                     </Switch>
