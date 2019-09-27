@@ -1,8 +1,7 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 
-import SelectPanel from "../utils/SelectPanel";
-import RenderRoutes from "../utils/RenderRoutes";
+import { SelectPanel, RenderRoutes } from "../utils";
 import routes from "../routes/docs";
 
 const Documentation = () => (

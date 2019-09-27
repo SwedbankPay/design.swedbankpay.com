@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import SelectPanel, { SearchBox } from "./SelectPanel";
+import SelectPanel, { SearchBox } from "./index";
 
 describe("Documentation: SelectPanel", () => {
     it("is defined", () => {

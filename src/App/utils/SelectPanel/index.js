@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { NavLink, withRouter } from "react-router-dom";
+import PropTypes from "prop-types";
 
-import SearchBox from "./SearchBox";
+import SearchBox from "../SearchBox/index";
 
 class NavGroup extends Component {
     constructor (props) {
@@ -50,6 +51,19 @@ const SelectPanel = ({ routes }) => (
         </nav>
     </div>
 );
+
+SelectPanel.propTypes = {
+    routes: PropTypes.arrayOf(PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        path: PropTypes.string.isRequired,
+        redirect: PropTypes.string.isRequired,
+        route: PropTypes.shape({
+            title: PropTypes.string.isRequired,
+            path: PropTypes.string.isRequired,
+            componentPath: PropTypes.string.isRequired
+        }).isRequired
+    })).isRequired
+};
 
 export default withRouter(SelectPanel);
 

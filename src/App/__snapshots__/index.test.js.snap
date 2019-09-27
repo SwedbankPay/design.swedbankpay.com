@@ -46,6 +46,10 @@ exports[`Main: App renders 1`] = `
       />
       <Route
         component={[Function]}
+        path="/res"
+      />
+      <Route
+        component={[Function]}
         path="/404"
       />
       <Route

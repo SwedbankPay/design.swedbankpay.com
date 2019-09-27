@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import LoadingComponent from "./LoadingComponent";
+import LoadingComponent from "./index";
 
 describe("App utils: LoadingComponent", () => {
     it("is defined", () => {

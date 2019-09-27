@@ -52,7 +52,7 @@ const Home = () => {
                             </div>
                             <h2>Placeholder</h2>
                             <p>This paragraph contains some text.</p>
-                            <Link className="btn btn-guiding btn-outline btn-block mt-auto" to="/Resources/getting-started/introduction">Resources</Link>
+                            <Link className="btn btn-guiding btn-outline btn-block mt-auto" to="/res/getting-started/introduction">Resources</Link>
                         </div>
                     </div>
                 </div>

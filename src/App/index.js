@@ -87,7 +87,7 @@ class App extends Component {
                         <Route path="/docs" component={Documentation} />
                         <Route path="/Examples" component={Examples} />
                         <Route path="/Templates" component={Templates} />
-                        <Route path="/Resources" component={Resources} />
+                        <Route path="/res" component={Resources} />
                         <Route path="/404" component={ErrorPage404} />
                         <Route component={ErrorPage404} />
                     </Switch>

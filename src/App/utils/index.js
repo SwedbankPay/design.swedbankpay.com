@@ -1,4 +1,6 @@
-import LoadingComponent from "./LoadingComponent";
+import LoadingComponent from "./LoadingComponent/index";
+import RenderRoutes from "./RenderRoutes/index";
+import SelectPanel from "./SelectPanel/index";
 
 const setTitle = title => {
     document.title = `${title} | Swedbank Pay DesignGuide`;
@@ -6,5 +8,7 @@ const setTitle = title => {
 
 export {
     setTitle,
-    LoadingComponent
+    LoadingComponent,
+    RenderRoutes,
+    SelectPanel
 };

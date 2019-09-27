@@ -78,7 +78,7 @@ exports[`Home: index renders 1`] = `
             <i
               className="material-icons material-icons-large text-white"
             >
-              desktop_windows
+              list_alt
             </i>
           </div>
           <h2>
@@ -89,9 +89,9 @@ exports[`Home: index renders 1`] = `
           </p>
           <Link
             className="btn btn-guiding btn-outline btn-block mt-auto"
-            to="/docs/getting-started/introduction"
+            to="/Templates"
           >
-            Placeholder link
+            Templates
           </Link>
         </div>
       </div>
@@ -111,7 +111,7 @@ exports[`Home: index renders 1`] = `
             <i
               className="material-icons material-icons-large text-white"
             >
-              desktop_windows
+              folder_open
             </i>
           </div>
           <h2>
@@ -122,9 +122,9 @@ exports[`Home: index renders 1`] = `
           </p>
           <Link
             className="btn btn-guiding btn-outline btn-block mt-auto"
-            to="/docs/getting-started/introduction"
+            to="/res/getting-started/introduction"
           >
-            Placeholder link
+            Resources
           </Link>
         </div>
       </div>

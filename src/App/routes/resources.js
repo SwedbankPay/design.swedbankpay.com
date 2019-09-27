@@ -4,12 +4,12 @@ module.exports = [
      */
     {
         title: "Getting Started",
-        path: "/Resources/getting-started",
-        redirect: "/Resources/getting-started/introduction",
+        path: "/res/getting-started",
+        redirect: "/res/getting-started/introduction",
         routes: [
             {
                 title: "Introduction",
-                path: "/Resources/getting-started/introduction",
+                path: "/res/getting-started/introduction",
                 componentPath: "getting-started/Introduction"
             }
         ]
@@ -20,12 +20,12 @@ module.exports = [
      */
     {
         title: "Resources",
-        path: "/Resources/resources",
-        redirect: "/Resources/resources/logotype",
+        path: "/res/resources",
+        redirect: "/res/resources/logotype",
         routes: [
             {
                 title: "Logotype",
-                path: "/Resources/resources/logotype",
+                path: "/res/resources/logotype",
                 componentPath: "resources/logotype"
             }
         ]

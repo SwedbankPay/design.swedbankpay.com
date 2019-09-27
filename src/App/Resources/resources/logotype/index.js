@@ -48,7 +48,7 @@ const Guidelines = () => (
 
         <h3>Background</h3>
         <p>
-            The Swedbank Pay logotype can be placed on white, all our background colours and images. 
+            The Swedbank Pay logotype can be placed on white, all our background colours and images.
         </p>
         <p>
             When using images as background, the logotype may only be placed if the area has low level of detail and is naturally light or dark.
@@ -124,14 +124,14 @@ const Guidelines = () => (
             clear space should be 24 px. [64 × 0.3 = 19.2] → 24px).
         </p>
         <img src="https://www.swedbank.com/idc/groups/public/@i/@sbg/@gs/@com/@bm/documents/illustration/cid_2799483.png" className="img-fluid mb-4" />
-        
+
         <h3>Avoid</h3>
         <ul>
             <li>Do not alter the Swedbank Pay logotype in any way.</li>
             <li>Never separate the wordmark and the symbol.</li>
             <li>Do not use positive logotype (black wordmark) version on Yellow background.</li>
-            <li>Never create your own logotype by combining the symbol and typing the text "Pay"</li>
-            <li>When the logotype is not used, always write “Swedbank Pay” when referring to the brand. Never use shortened versions such as “Pay”, “S-Pay” or "Swed-Pay".</li>
+            <li>Never create your own logotype by combining the symbol and typing the text “Pay”</li>
+            <li>When the logotype is not used, always write “Swedbank Pay” when referring to the brand. Never use shortened versions such as “Pay”, “S-Pay” or “Swed-Pay”.</li>
         </ul>
     </>
 );
@@ -145,3 +145,6 @@ const Logotype = () => (
 );
 
 export default Logotype;
+
+/* For testing */
+export { Overview, Download, Guidelines };
