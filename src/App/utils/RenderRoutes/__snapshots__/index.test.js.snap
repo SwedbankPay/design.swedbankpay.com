@@ -34,6 +34,7 @@ exports[`Utilities: RenderRoutes renders a basic route structure 1`] = `
   }
 >
   <RenderRoutes
+    appFolder="test"
     path="test"
     redirect="test"
     routes={

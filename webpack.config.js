@@ -316,7 +316,57 @@ module.exports = (env, argv) => {
             new FileManagerPlugin({
                 onStart: [
                     {
-                        delete: ["./dist"]
+                        delete: ["./dist"],
+                        copy: [
+                            {
+                                source: `./src/img/${brand}/resources/typography/cid_2873206.png`,
+                                destination: "./dist/img"
+                            },
+                            {
+                                source: `./src/img/${brand}/resources/typography/cid_2873207.png`,
+                                destination: "./dist/img"
+                            },
+                            {
+                                source: `./src/img/${brand}/resources/logotype/cid_2799392.png`,
+                                destination: "./dist/img"
+                            },
+                            {
+                                source: `./src/img/${brand}/resources/logotype/cid_2799410.png`,
+                                destination: "./dist/img"
+                            },
+                            {
+                                source: `./src/img/${brand}/resources/logotype/cid_2799428.png`,
+                                destination: "./dist/img"
+                            },
+                            {
+                                source: `./src/img/${brand}/resources/logotype/cid_2799443.png`,
+                                destination: "./dist/img"
+                            },
+                            {
+                                source: `./src/img/${brand}/resources/logotype/cid_2799444.png`,
+                                destination: "./dist/img"
+                            },
+                            {
+                                source: `./src/img/${brand}/resources/logotype/cid_2799455.png`,
+                                destination: "./dist/img"
+                            },
+                            {
+                                source: `./src/img/${brand}/resources/logotype/cid_2799483.png`,
+                                destination: "./dist/img"
+                            },
+                            {
+                                source: "./src/assets/logos/cid_2799998.zip",
+                                destination: "./dist/release/cid_2799998.zip"
+                            },
+                            {
+                                source: "./src/assets/fonts/cid_2108538.zip",
+                                destination: "./dist/release/cid_2108538.zip"
+                            },
+                            {
+                                source: "./src/assets/fonts/cid_2686429.zip",
+                                destination: "./dist/release/cid_2686429.zip"
+                            }
+                        ]
                     }
                 ],
                 onEnd: [

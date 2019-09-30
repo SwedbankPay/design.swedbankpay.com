@@ -57,11 +57,11 @@ SelectPanel.propTypes = {
         title: PropTypes.string.isRequired,
         path: PropTypes.string.isRequired,
         redirect: PropTypes.string.isRequired,
-        route: PropTypes.shape({
+        routes: PropTypes.arrayOf(PropTypes.shape({
             title: PropTypes.string.isRequired,
             path: PropTypes.string.isRequired,
             componentPath: PropTypes.string.isRequired
-        }).isRequired
+        })).isRequired
     })).isRequired
 };
 

@@ -27,6 +27,11 @@ module.exports = [
                 title: "Logotype",
                 path: "/res/resources/logotype",
                 componentPath: "resources/logotype"
+            },
+            {
+                title: "Typography",
+                path: "/res/resources/typography",
+                componentPath: "resources/typography"
             }
         ]
     }

@@ -19,7 +19,8 @@ describe("Utilities: RenderRoutes", () => {
                     path: "test-2",
                     component: { default: "test-2" }
                 }
-            ]
+            ],
+            appFolder: "test"
         };
 
         const wrapper = shallow(
