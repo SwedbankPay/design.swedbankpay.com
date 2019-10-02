@@ -26,36 +26,89 @@ exports[`Main: App renders 1`] = `
 >
   <withRouter(ScrollToTop)>
     <withRouter(AppHeader) />
-    <Switch>
-      <Route
-        component={[Function]}
-        exact={true}
-        path="/"
-      />
-      <Route
-        component={[Function]}
-        path="/docs"
-      />
-      <Route
-        component={[Function]}
-        path="/Examples"
-      />
-      <Route
-        component={[Function]}
-        path="/Templates"
-      />
-      <Route
-        component={[Function]}
-        path="/res"
-      />
-      <Route
-        component={[Function]}
-        path="/404"
-      />
-      <Route
-        component={[Function]}
-      />
-    </Switch>
+    <Suspense
+      fallback={<LoadingComponent />}
+    >
+      <Switch>
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_ctor": [Function],
+              "_result": null,
+              "_status": -1,
+            }
+          }
+          exact={true}
+          path="/"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_ctor": [Function],
+              "_result": null,
+              "_status": -1,
+            }
+          }
+          path="/docs"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_ctor": [Function],
+              "_result": null,
+              "_status": -1,
+            }
+          }
+          path="/Examples"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_ctor": [Function],
+              "_result": null,
+              "_status": -1,
+            }
+          }
+          path="/Templates"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_ctor": [Function],
+              "_result": null,
+              "_status": -1,
+            }
+          }
+          path="/res"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_ctor": [Function],
+              "_result": null,
+              "_status": -1,
+            }
+          }
+          path="/404"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_ctor": [Function],
+              "_result": null,
+              "_status": -1,
+            }
+          }
+        />
+      </Switch>
+    </Suspense>
     <Footer />
   </withRouter(ScrollToTop)>
 </Router>

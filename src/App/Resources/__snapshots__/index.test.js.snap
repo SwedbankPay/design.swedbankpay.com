@@ -49,54 +49,58 @@ exports[`Resources: index renders 1`] = `
     <main
       className="doc-view col-xxl-10 col-md-9"
     >
-      <Switch>
-        <Route
-          exact={true}
-          path="/Resources"
-          render={[Function]}
-        />
-        <RenderRoutes
-          appFolder="Resources"
-          key="renderRoutes_Getting Started"
-          path="/res/getting-started"
-          redirect="/res/getting-started/introduction"
-          routes={
-            Array [
-              Object {
-                "componentPath": "getting-started/Introduction",
-                "path": "/res/getting-started/introduction",
-                "title": "Introduction",
-              },
-            ]
-          }
-          title="Getting Started"
-        />
-        <RenderRoutes
-          appFolder="Resources"
-          key="renderRoutes_Resources"
-          path="/res/resources"
-          redirect="/res/resources/logotype"
-          routes={
-            Array [
-              Object {
-                "componentPath": "resources/logotype",
-                "path": "/res/resources/logotype",
-                "title": "Logotype",
-              },
-              Object {
-                "componentPath": "resources/typography",
-                "path": "/res/resources/typography",
-                "title": "Typography",
-              },
-            ]
-          }
-          title="Resources"
-        />
-        <Redirect
-          from="/Resources/*"
-          to="/404"
-        />
-      </Switch>
+      <Suspense
+        fallback={<LoadingComponent />}
+      >
+        <Switch>
+          <Route
+            exact={true}
+            path="/Resources"
+            render={[Function]}
+          />
+          <RenderRoutes
+            appFolder="Resources"
+            key="renderRoutes_Getting Started"
+            path="/res/getting-started"
+            redirect="/res/getting-started/introduction"
+            routes={
+              Array [
+                Object {
+                  "componentPath": "getting-started/Introduction",
+                  "path": "/res/getting-started/introduction",
+                  "title": "Introduction",
+                },
+              ]
+            }
+            title="Getting Started"
+          />
+          <RenderRoutes
+            appFolder="Resources"
+            key="renderRoutes_Resources"
+            path="/res/resources"
+            redirect="/res/resources/logotype"
+            routes={
+              Array [
+                Object {
+                  "componentPath": "resources/logotype",
+                  "path": "/res/resources/logotype",
+                  "title": "Logotype",
+                },
+                Object {
+                  "componentPath": "resources/typography",
+                  "path": "/res/resources/typography",
+                  "title": "Typography",
+                },
+              ]
+            }
+            title="Resources"
+          />
+          <Redirect
+            from="/Resources/*"
+            to="/404"
+          />
+        </Switch>
+      </Suspense>
     </main>
   </div>
 </div>
