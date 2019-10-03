@@ -1,30 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: ActionLink prop linkText is marked as required 1`] = `
-<a
-  className="action-link"
-  href="#"
->
-  
-
-  
-
-  
-
-  
-
-  
-
-</a>
-`;
-
-exports[`Component: ActionLink renders an actionlink with badge if badge is provided 1`] = `
-<a
-  className="action-link"
-  href="#"
->
-  
-
+exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with badge if badge is provided 1`] = `
+<Fragment>
   <span
     className="badge badge-yellow"
   >
@@ -39,16 +16,28 @@ exports[`Component: ActionLink renders an actionlink with badge if badge is prov
 
   
 
-</a>
+</Fragment>
 `;
 
-exports[`Component: ActionLink renders an actionlink with link text 1`] = `
-<a
-  className="action-link"
-  href="#"
->
+exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with link text 1`] = `
+<Fragment>
+  Link text
   
 
+  
+
+  
+
+</Fragment>
+`;
+
+exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with new tab properties when newTab is true 1`] = `
+<Fragment>
+  <i
+    className="material-icons"
+  >
+    open_in_new
+  </i>
   
 
   Link text
@@ -58,18 +47,11 @@ exports[`Component: ActionLink renders an actionlink with link text 1`] = `
 
   
 
-</a>
+</Fragment>
 `;
 
-exports[`Component: ActionLink renders an actionlink with smalltext on multiline when multiline and smalltext is provided 1`] = `
-<a
-  className="action-link"
-  href="#"
->
-  
-
-  
-
+exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with smalltext on multiline when multiline and smalltext is provided 1`] = `
+<Fragment>
   <span
     className="action-link-multiline"
   >
@@ -88,18 +70,11 @@ exports[`Component: ActionLink renders an actionlink with smalltext on multiline
   </span>
   
 
-</a>
+</Fragment>
 `;
 
-exports[`Component: ActionLink renders an actionlink with smalltext when provided 1`] = `
-<a
-  className="action-link"
-  href="#"
->
-  
-
-  
-
+exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with smalltext when provided 1`] = `
+<Fragment>
   Link text
   
 
@@ -112,18 +87,11 @@ exports[`Component: ActionLink renders an actionlink with smalltext when provide
 
   
 
-</a>
+</Fragment>
 `;
 
-exports[`Component: ActionLink renders an actionlink without badge if badge is not provided 1`] = `
-<a
-  className="action-link"
-  href="#"
->
-  
-
-  
-
+exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent without badge if badge is not provided 1`] = `
+<Fragment>
   Link text
   
 
@@ -131,18 +99,11 @@ exports[`Component: ActionLink renders an actionlink without badge if badge is n
 
   
 
-</a>
+</Fragment>
 `;
 
-exports[`Component: ActionLink renders an actionlink without smalltext when not provided 1`] = `
-<a
-  className="action-link"
-  href="#"
->
-  
-
-  
-
+exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent without smalltext when not provided 1`] = `
+<Fragment>
   Link text
   
 
@@ -150,5 +111,50 @@ exports[`Component: ActionLink renders an actionlink without smalltext when not 
 
   
 
-</a>
+</Fragment>
+`;
+
+exports[`Component: ActionLink prop linkText is marked as required 1`] = `
+<Fragment>
+  <a
+    className="action-link"
+    href="#"
+  >
+    
+
+    <ActionLinkContent />
+  </a>
+</Fragment>
+`;
+
+exports[`Component: ActionLink renders ActionLink with .action-link class only when not newTab 1`] = `
+<Fragment>
+  <a
+    className="action-link"
+    href="#"
+  >
+    
+
+    <ActionLinkContent
+      linkText="Link text"
+    />
+  </a>
+</Fragment>
+`;
+
+exports[`Component: ActionLink renders ActionLink with .action-link-new-tab class when newTab is true 1`] = `
+<Fragment>
+  <a
+    className="action-link action-link-new-tab"
+    href="#"
+    target="_blank"
+  >
+    
+
+    <ActionLinkContent
+      linkText="Link text"
+      newTab={true}
+    />
+  </a>
+</Fragment>
 `;

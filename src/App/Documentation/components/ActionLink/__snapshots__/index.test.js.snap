@@ -74,6 +74,33 @@ exports[`Components: ActionLink ActionLinkBadgeSmallText renders 1`] = `
 </Fragment>
 `;
 
+exports[`Components: ActionLink ActionLinkNewTab renders 1`] = `
+<Fragment>
+  <h2
+    id="action-link-new-tab"
+  >
+    Action Link that opens a new tab
+  </h2>
+  <p>
+    An Action Link used in cases where a new tab is supposed to open is provided. Use 
+    <Property
+      value=".action-link-new-tab"
+    />
+     when it is known that the target will open in a new tab. 
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ActionLink
+      linkText="My link"
+      newTab={true}
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Components: ActionLink ActionLinkSmallText renders 1`] = `
 <Fragment>
   <h2
@@ -150,5 +177,6 @@ exports[`Components: ActionLink renders 1`] = `
   <ActionLinkBadge />
   <ActionLinkSmallText />
   <ActionLinkBadgeSmallText />
+  <ActionLinkNewTab />
 </DocContainer>
 `;

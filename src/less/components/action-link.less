@@ -7,7 +7,7 @@ a.action-link {
     border: 0;
     background-color: @brand-bg-1;
     text-decoration: none;
-    color: @brand-secondary;
+    color: @brand-accent-links;
 
     &:before {
         content: "";
@@ -28,6 +28,19 @@ a.action-link {
         margin: 0;
         color: @brand-primary;
         font-size: 32px;
+    }
+
+    &.action-link-new-tab {
+        background-color: @brand-bg-2;
+        height: 3rem;
+
+        &:before {
+            background-color: @brand-accent;
+        }
+
+        &:after {
+            color: @brand-accent;
+        }
     }
 
     .action-link-multiline {
