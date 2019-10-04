@@ -50,8 +50,8 @@ const Home = () => {
                             <div className="doc-circle">
                                 <i className="material-icons material-icons-large text-white">folder_open</i>
                             </div>
-                            <h2>Placeholder</h2>
-                            <p>This paragraph contains some text.</p>
+                            <h2>Resources</h2>
+                            <p>Guidelines and downloadables.</p>
                             <Link className="btn btn-guiding btn-outline btn-block mt-auto" to="/res/getting-started/introduction">Resources</Link>
                         </div>
                     </div>

@@ -23,6 +23,7 @@ const AppHeader = () => (
                 </button>
                 <NavLink exact to="/" activeClassName="active"><span>Home</span></NavLink>
                 <NavLink to="/docs" activeClassName="active"><span>Documentation</span></NavLink>
+                <NavLink to="/res" activeClassName="active"><span>Resources</span></NavLink>
                 <NavLink to="/examples" activeClassName="active"><span>Examples</span></NavLink>
                 <div className="topbar-info topbar-link-right">
                     <div className="topbar-info-contact">

@@ -13,9 +13,9 @@ const Resources = () => (
             <main className="doc-view col-xxl-10 col-md-9">
                 <Suspense fallback={<LoadingComponent />}>
                     <Switch>
-                        <Route exact path="/Resources" render={() => <Redirect to="/Resources/getting-started" />} />
+                        <Route exact path="/res" render={() => <Redirect to="/res/getting-started" />} />
                         {routes.map(route => <RenderRoutes key={`renderRoutes_${route.title}`} {...route} appFolder={"Resources"}/>)}
-                        <Redirect from="/Resources/*" to="/404" />
+                        <Redirect from="/res/*" to="/404" />
                     </Switch>
                 </Suspense>
             </main>

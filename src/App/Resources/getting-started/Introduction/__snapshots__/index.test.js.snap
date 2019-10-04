@@ -9,7 +9,7 @@ exports[`Resources: Introduction renders 1`] = `
   >
     Getting started with the 
     TESTBRAND
-     Resources.
+     Resources. Resources and guidelines on how to use the provided resources can be found here.
   </p>
 </DocContainer>
 `;

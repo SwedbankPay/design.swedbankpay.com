@@ -55,7 +55,7 @@ exports[`Resources: index renders 1`] = `
         <Switch>
           <Route
             exact={true}
-            path="/Resources"
+            path="/res"
             render={[Function]}
           />
           <RenderRoutes
@@ -96,7 +96,7 @@ exports[`Resources: index renders 1`] = `
             title="Resources"
           />
           <Redirect
-            from="/Resources/*"
+            from="/res/*"
             to="/404"
           />
         </Switch>

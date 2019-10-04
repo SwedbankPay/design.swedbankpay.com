@@ -115,10 +115,10 @@ exports[`Home: index renders 1`] = `
             </i>
           </div>
           <h2>
-            Placeholder
+            Resources
           </h2>
           <p>
-            This paragraph contains some text.
+            Guidelines and downloadables.
           </p>
           <Link
             className="btn btn-guiding btn-outline btn-block mt-auto"
