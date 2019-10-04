@@ -1,5 +1,4 @@
 import { extendObj } from "../utils";
-import { callbackify } from "util";
 
 const SELECTORS = {
     SHEET: {
