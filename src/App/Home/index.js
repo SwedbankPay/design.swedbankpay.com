@@ -36,11 +36,11 @@ const Home = () => {
                     <div className="doc-card card card-plain">
                         <div className="card-body text-center d-flex flex-column">
                             <div className="doc-circle">
-                                <i className="material-icons material-icons-large text-white">desktop_windows</i>
+                                <i className="material-icons material-icons-large text-white">list_alt</i>
                             </div>
                             <h2>Placeholder</h2>
                             <p>This paragraph contains some text.</p>
-                            <Link className="btn btn-guiding btn-outline btn-block mt-auto" to="/docs/getting-started/introduction">Placeholder link</Link>
+                            <Link className="btn btn-guiding btn-outline btn-block mt-auto" to="/Templates">Templates</Link>
                         </div>
                     </div>
                 </div>
@@ -48,11 +48,11 @@ const Home = () => {
                     <div className="doc-card card card-plain">
                         <div className="card-body text-center d-flex flex-column">
                             <div className="doc-circle">
-                                <i className="material-icons material-icons-large text-white">desktop_windows</i>
+                                <i className="material-icons material-icons-large text-white">folder_open</i>
                             </div>
-                            <h2>Placeholder</h2>
-                            <p>This paragraph contains some text.</p>
-                            <Link className="btn btn-guiding btn-outline btn-block mt-auto" to="/docs/getting-started/introduction">Placeholder link</Link>
+                            <h2>Resources</h2>
+                            <p>Guidelines and downloadables.</p>
+                            <Link className="btn btn-guiding btn-outline btn-block mt-auto" to="/res/getting-started/introduction">Resources</Link>
                         </div>
                     </div>
                 </div>
