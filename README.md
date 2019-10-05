@@ -1,10 +1,3 @@
-<p align="center">
-    <img src="./src/img/swedbankpay/logo/swedbankpay-logo.svg" width=300 />
-</p>
-<p align="center">
-    <img src="./src/img/payex/logo/payex-logo.svg" width=140 />
-</p>
-
 # Swedbank Pay DesignGuide
 
 [![Version](https://img.shields.io/badge/Version-4.1.0-blue.svg)](https://github.com/swedbankpay/design.swedbankpay.com/releases/tag/4.1.0)
@@ -13,6 +6,8 @@
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=SwedbankPay/design.swedbankpay.com)](https://dependabot.com)
 [![dependencies Status](https://david-dm.org/swedbankpay/design.swedbankpay.com/status.svg)](https://david-dm.org/swedbankpay/design.swedbankpay.com)
 [![devDependencies Status](https://david-dm.org/swedbankpay/design.swedbankpay.com/dev-status.svg)](https://david-dm.org/swedbankpay/design.swedbankpay.com?type=dev)
+
+[![Swedbank Pay Design Guide](https://repository-images.githubusercontent.com/191536903/a4653c80-e7ac-11e9-9d96-c5bf40f73d9c)](https://design.swedbankpay.com)
 
 ## Installing / Getting started
 
