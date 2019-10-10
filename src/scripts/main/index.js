@@ -18,7 +18,13 @@ import validation from "./validation";
 
 // Sentry reporter
 if (process.env.sentry) {
-    init({ dsn: "https://a80375d3150043fa85964c8d5eb24e0b@sentry.io/1481099" });
+    init({
+        dsn: "https://a80375d3150043fa85964c8d5eb24e0b@sentry.io/1481099",
+        whitelistUrls: [
+            "https://design.swedbankpay.com/",
+            "https://design.payex.com/"
+        ]
+    });
 }
 
 document.addEventListener("mousedown", () => { document.body.classList.add("intent-mouse"); });
