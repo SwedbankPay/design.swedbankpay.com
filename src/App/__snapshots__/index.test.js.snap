@@ -73,7 +73,7 @@ exports[`Main: App renders 1`] = `
               "_status": -1,
             }
           }
-          path="/Templates"
+          path="/tmpl"
         />
         <Route
           component={

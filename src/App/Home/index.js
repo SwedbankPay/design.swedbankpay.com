@@ -38,9 +38,9 @@ const Home = () => {
                             <div className="doc-circle">
                                 <i className="material-icons material-icons-large text-white">list_alt</i>
                             </div>
-                            <h2>Placeholder</h2>
-                            <p>This paragraph contains some text.</p>
-                            <Link className="btn btn-guiding btn-outline btn-block mt-auto" to="/Templates">Templates</Link>
+                            <h2>Templates</h2>
+                            <p>Templates, usage description and tips.</p>
+                            <Link className="btn btn-guiding btn-outline btn-block mt-auto" to="/tmpl">Templates</Link>
                         </div>
                     </div>
                 </div>

@@ -82,14 +82,14 @@ exports[`Home: index renders 1`] = `
             </i>
           </div>
           <h2>
-            Placeholder
+            Templates
           </h2>
           <p>
-            This paragraph contains some text.
+            Templates, usage description and tips.
           </p>
           <Link
             className="btn btn-guiding btn-outline btn-block mt-auto"
-            to="/Templates"
+            to="/tmpl"
           >
             Templates
           </Link>
