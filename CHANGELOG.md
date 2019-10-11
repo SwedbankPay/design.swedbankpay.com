@@ -15,3 +15,11 @@
  - Sheet animation updated
  - Action List more accessible
  - Pagination updated
+
+### Next release
+
+ - Documentation warning alert made complex
+ - Action Link with small text and Action Link for new tab added
+ - Added Resources section
+ - Update and improve readme
+ - Add whitelist urls to Sentry

@@ -19,13 +19,13 @@ export default class NavMenu {
         this.resizeEvent;
 
         /*
-            NOTE: Firefox for mac emulates the system default for tab behaviour. Therefore tabbing does not work as intended for firefox on mac.
-            Read more here: https://stackoverflow.com/questions/11704828/how-to-allow-keyboard-focus-of-links-in-firefox#answer-11713537 [AW].
+        NOTE: Firefox for mac emulates the system default for tab behaviour. Therefore tabbing does not work as intended for firefox on mac.
+        Read more here: https://stackoverflow.com/questions/11704828/how-to-allow-keyboard-focus-of-links-in-firefox#answer-11713537 [AW].
         */
         // Find focusable elements
         this.focusedElemBeforeNav = null;
         this.focusableElements = [...this.linkContainer.querySelectorAll(FOCUSELEMENTS)];
-        this.firstTabStop = this.focusableElements[0];
+        this._setFirstTabStop(1); // Initially set to 1 to ignore close button during tabbing, when topbar-nav is not open
         this.lastTabStop = this.focusableElements[this.focusableElements.length - 1];
 
         if (this.btnElement) {
@@ -92,6 +92,10 @@ export default class NavMenu {
         this.navMenuElement.classList.remove("d-block");
     }
 
+    _setFirstTabStop (index) {
+        this.firstTabStop = this.focusableElements[index];
+    }
+
     open () {
         handleScrollbar();
         this.isOpen = true;
@@ -103,6 +107,7 @@ export default class NavMenu {
         this.navMenuElement.classList.add("topbar-nav-open");
         this.navMenuElement.classList.add("d-block");
 
+        this._setFirstTabStop(0);
         this.firstTabStop.focus();
     }
 
@@ -119,6 +124,8 @@ export default class NavMenu {
             this.navMenuElement.classList.remove("topbar-nav-closing");
             this.navMenuElement.classList.remove("d-block");
         }, 300);
+
+        this._setFirstTabStop(1);
     }
 
     _containsPoint (x, y) {
