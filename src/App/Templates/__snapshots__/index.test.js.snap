@@ -1,9 +1,97 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Templates: index renders 1`] = `
-<Fragment>
-  <h1>
-    Here there might be templates
-  </h1>
-</Fragment>
+<div
+  className="documentation"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-xxl-2 col-md-3"
+    >
+      <withRouter(SelectPanel)
+        routes={
+          Array [
+            Object {
+              "path": "/tmpl/getting-started",
+              "redirect": "/tmpl/getting-started/introduction",
+              "routes": Array [
+                Object {
+                  "componentPath": "getting-started/Introduction",
+                  "path": "/tmpl/getting-started/introduction",
+                  "title": "Introduction",
+                },
+              ],
+              "title": "Getting Started",
+            },
+            Object {
+              "path": "/tmpl/templates",
+              "redirect": "/tmpl/templates/presentations",
+              "routes": Array [
+                Object {
+                  "componentPath": "templates/presentations",
+                  "path": "/tmpl/templates/presentations",
+                  "title": "Presentations",
+                },
+              ],
+              "title": "Templates",
+            },
+          ]
+        }
+      />
+    </div>
+    <main
+      className="doc-view col-xxl-10 col-md-9"
+    >
+      <Suspense
+        fallback={<LoadingComponent />}
+      >
+        <Switch>
+          <Route
+            exact={true}
+            path="/tmpl"
+            render={[Function]}
+          />
+          <RenderRoutes
+            appFolder="Templates"
+            key="renderRoutes_Getting Started"
+            path="/tmpl/getting-started"
+            redirect="/tmpl/getting-started/introduction"
+            routes={
+              Array [
+                Object {
+                  "componentPath": "getting-started/Introduction",
+                  "path": "/tmpl/getting-started/introduction",
+                  "title": "Introduction",
+                },
+              ]
+            }
+            title="Getting Started"
+          />
+          <RenderRoutes
+            appFolder="Templates"
+            key="renderRoutes_Templates"
+            path="/tmpl/templates"
+            redirect="/tmpl/templates/presentations"
+            routes={
+              Array [
+                Object {
+                  "componentPath": "templates/presentations",
+                  "path": "/tmpl/templates/presentations",
+                  "title": "Presentations",
+                },
+              ]
+            }
+            title="Templates"
+          />
+          <Redirect
+            from="/tmpl/*"
+            to="/404"
+          />
+        </Switch>
+      </Suspense>
+    </main>
+  </div>
+</div>
 `;

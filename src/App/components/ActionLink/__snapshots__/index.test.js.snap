@@ -147,6 +147,7 @@ exports[`Component: ActionLink renders ActionLink with .action-link-new-tab clas
   <a
     className="action-link action-link-new-tab"
     href="#"
+    rel="noopener noreferrer"
     target="_blank"
   >
     

@@ -1,19 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const ActionLink = props => (
-    <>
-        {props.newTab ?
-            <a className="action-link action-link-new-tab" href="#" target="_blank">{"\n"}
-                <ActionLinkContent {...props} />
-            </a>
-            :
-            <a className="action-link" href="#" >{"\n"}
-                <ActionLinkContent {...props} />
-            </a>
-        }
-    </>
-);
+const ActionLink = props => {
+    const { link, ...otherProps } = props;
+
+    return (
+        <>
+            {otherProps.newTab ?
+                <a className="action-link action-link-new-tab" href={link ? link : "#"} rel="noopener noreferrer" target="_blank">{"\n"}
+                    <ActionLinkContent {...otherProps} />
+                </a>
+                :
+                <a className="action-link" href="#" >{"\n"}
+                    <ActionLinkContent {...otherProps} />
+                </a>
+            }
+        </>
+    );
+};
 
 const ActionLinkContent = ({ linkText, badge, smallText, multiline, newTab }) => (
     <>
@@ -42,7 +46,8 @@ ActionLink.propTypes = {
         }),
         smallText: PropTypes.string,
         multiline: PropTypes.bool,
-        newTab: PropTypes.bool
+        newTab: PropTypes.bool,
+        link: PropTypes.string
     })
 };
 

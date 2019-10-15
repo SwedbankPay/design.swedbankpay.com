@@ -28,7 +28,7 @@ describe("Component: ActionLink", () => {
         const wrapper = shallow(<ActionLink linkText="Link text" newTab={true} />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("<a class=\"action-link action-link-new-tab\" href=\"#\" target=\"_blank\">");
+        expect(wrapper.html()).toContain("<a class=\"action-link action-link-new-tab\" href=\"#\" rel=\"noopener noreferrer\" target=\"_blank\">");
     });
 
     describe("ActionLinkContent", () => {
