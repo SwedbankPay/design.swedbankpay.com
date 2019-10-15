@@ -1,9 +1,47 @@
 import React from "react";
-import { DocContainer } from "@docutils";
+import { DocContainer, ComponentPreview } from "@docutils";
+import InputGroup from "@components/InputGroup";
+import ButtonComponent from "@components/Button";
+
+const LoginPanel = () => (
+    <div className="slab slab-secondary slab-elevated">
+        <div className="row align-items-center">
+            <div className="col-lg-7 d-none d-lg-block">
+                <img src="https://picsum.photos/1000/600?image=744" className="w-100 h-100" />
+            </div>
+            <div className="col-lg-5">
+                <h2>Login</h2>
+                <form action="#" data-validate="">
+                    <InputGroup
+                        required
+                        id="validation-username"
+                        type="username"
+                        label="Username"
+                        prefixType="icon"
+                        prefixValue="account_box"
+                    />
+                    <InputGroup
+                        required
+                        id="validation-password"
+                        type="password"
+                        label="Password"
+                        prefixType="icon"
+                        prefixValue="vpn_key"
+                        helpBlock
+                        errorMessage="Username or password is incorrect"
+                    />
+                    <ButtonComponent type="executive" label="Log in" icon="lock_open" btnType="submit" />
+                </form>
+            </div>
+        </div>
+    </div>
+);
 
 const Login = () => (
     <DocContainer>
-        Hallo
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <LoginPanel />
+        </ComponentPreview>
     </DocContainer>
 );
 

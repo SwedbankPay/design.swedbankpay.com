@@ -112,8 +112,8 @@ InputGroup.propTypes = {
         PropTypes.string,
         PropTypes.bool
     ]),
-    errorMessag: PropTypes.string,
-    successMessag: PropTypes.string
+    errorMessage: PropTypes.string,
+    successMessage: PropTypes.string
 };
 
 export default InputGroup;
