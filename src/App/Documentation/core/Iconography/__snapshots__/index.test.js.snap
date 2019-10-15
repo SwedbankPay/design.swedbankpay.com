@@ -966,6 +966,8 @@ exports[`Core: Iconography PaymentIcons onClick prevents default 1`] = `
           
 
         </div>
+        
+
         <span
           className="status status-success"
         >
@@ -974,7 +976,7 @@ exports[`Core: Iconography PaymentIcons onClick prevents default 1`] = `
         
 
         <button
-          className="btn btn-danger btn-xs"
+          className="btn btn-destructive btn-xs ml-2"
           type="button"
         >
           <i
@@ -1413,6 +1415,8 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
           
 
         </div>
+        
+
         <span
           className="status status-success"
         >
@@ -1421,7 +1425,7 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
         
 
         <button
-          className="btn btn-danger btn-xs"
+          className="btn btn-destructive btn-xs ml-2"
           type="button"
         >
           <i
