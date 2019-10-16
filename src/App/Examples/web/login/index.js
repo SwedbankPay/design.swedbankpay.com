@@ -1,9 +1,10 @@
 import React from "react";
 import { DocContainer, ComponentPreview } from "@docutils";
+
 import InputGroup from "@components/InputGroup";
 import ButtonComponent from "@components/Button";
 
-const LoginPanel = () => (
+const LoginContent = () => (
     <div className="slab slab-secondary slab-elevated">
         <div className="row align-items-center">
             <div className="col-lg-7 d-none d-lg-block">
@@ -11,11 +12,11 @@ const LoginPanel = () => (
             </div>
             <div className="col-lg-5">
                 <h2>Login</h2>
-                <form action="#" data-validate="">
+                <form action="#" noValidate data-validate="">
                     <InputGroup
                         required
                         id="validation-username"
-                        type="username"
+                        type="text"
                         label="Username"
                         prefixType="icon"
                         prefixValue="account_box"
@@ -40,7 +41,7 @@ const LoginPanel = () => (
 const Login = () => (
     <DocContainer>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <LoginPanel />
+            <LoginContent />
         </ComponentPreview>
     </DocContainer>
 );

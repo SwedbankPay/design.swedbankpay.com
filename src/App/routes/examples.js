@@ -29,9 +29,9 @@ module.exports = [
                 componentPath: "web/login"
             },
             {
-                title: "Signup",
-                path: "/examples/web/signup",
-                componentPath: "web/signup"
+                title: "Settings",
+                path: "/examples/web/settings",
+                componentPath: "web/settings"
             }
         ]
     },
