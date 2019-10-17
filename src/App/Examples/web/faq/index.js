@@ -3,8 +3,6 @@ import { DocContainer, ComponentPreview } from "@docutils";
 
 import ExpandableComponent from "@components/Expandable";
 import InputGroup from "@components/InputGroup";
-import CardComponent from "@components/Card";
-import MediaObject from "@components/MediaObject";
 import SheetComponent from "@components/Sheet";
 
 const { expandable, sheet, toast } = window.dg;
