@@ -67,10 +67,10 @@ const FAQTopPart = () => (
     </>
 );
 
-const sendQuestion = (sheetId) => {
+const sendQuestion = sheetId => {
     sheet.close(sheetId);
     toast({
-        html: "I am a success toast!",
+        html: "Question successfully sent",
         type: "success"
     });
 
@@ -79,12 +79,12 @@ const sendQuestion = (sheetId) => {
 const FAQSheet = () => (
     <SheetComponent id="demo-sheet" requireAction>
         <h2>Ask a question</h2>
-        <InputGroup
-            id="faq-question"
-            type="textarea"
-            prefixType="icon"
-            prefixValue="help"
-        />
+        <div className="form-group">
+            <div className="input-group">
+                <span className="input-group-addon"><i className="material-icons">help</i></span>
+                <textarea type="textarea" className="form-control h-25" id="settings-description"></textarea>
+            </div>
+        </div>
         <button type="button" className="btn btn-executive" onClick={() => sendQuestion("demo-sheet")}>
             Send
         </button>
