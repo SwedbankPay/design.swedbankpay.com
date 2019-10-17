@@ -18,8 +18,11 @@
 
 ### Next release
 
- - Documentation warning alert made complex
- - Action Link with small text and Action Link for new tab added
- - Added Resources section
- - Update and improve readme
- - Add whitelist urls to Sentry
+ - Action Link with small text added
+ - Action Link for new tab added
+ - Resources section added
+ - Templates section added
+ - Readme updated and improved
+ - Whitelist urls added to Sentry
+ - Topbar wide close button bug fixed
+ - Status not vertically centered bug fixed 
