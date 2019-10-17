@@ -1,7 +1,6 @@
-import React, { Component } from "react";
+import React, { Component, Suspense } from "react";
 import { Router, Switch, Route, withRouter } from "react-router-dom";
 import { createBrowserHistory } from "history";
-import Loadable from "react-loadable";
 
 import Footer from "@components/Footer";
 import AppHeader from "./AppHeader";
@@ -27,30 +26,17 @@ class ScrollToTop extends Component {
 
 const ScrollToTopComponent = withRouter(ScrollToTop);
 
-const Home = Loadable({
-    loader: () => import(/* webpackChunkName: "home.chunk" */ "./Home/index.js"),
-    loading: LoadingComponent
-});
+const Home = React.lazy(() => import(/* webpackChunkName: "home.chunk" */ "./Home/index.js"));
 
-const Documentation = Loadable({
-    loader: () => import(/* webpackChunkName: "documentation.chunk" */ "./Documentation/index.js"),
-    loading: LoadingComponent
-});
+const Documentation = React.lazy(() => import(/* webpackChunkName: "documentation.chunk" */ "./Documentation/index.js"));
 
-const Examples = Loadable({
-    loader: () => import(/* webpackChunkName: "examples.chunk" */ "./Examples/index.js"),
-    loading: LoadingComponent
-});
+const Examples = React.lazy(() => import(/* webpackChunkName: "examples.chunk" */ "./Examples/index.js"));
 
-const Templates = Loadable({
-    loader: () => import(/* webpackChunkName: "templates.chunk" */ "./Templates/index.js"),
-    loading: LoadingComponent
-});
+const Templates = React.lazy(() => import(/* webpackChunkName: "templates.chunk" */ "./Templates/index.js"));
 
-const ErrorPage404 = Loadable({
-    loader: () => import(/* webpackChunkName: "404.chunk" */ "./ErrorPage404/index.js"),
-    loading: LoadingComponent
-});
+const Resources = React.lazy(() => import(/* webpackChunkName: "templates.chunk" */ "./Resources/index.js"));
+
+const ErrorPage404 = React.lazy(() => import(/* webpackChunkName: "404.chunk" */ "./ErrorPage404/index.js"));
 
 class App extends Component {
     constructor () {
@@ -77,14 +63,17 @@ class App extends Component {
             <Router basename={BASENAME} history={history}>
                 <ScrollToTopComponent>
                     <AppHeader />
-                    <Switch>
-                        <Route exact path="/" component={Home} />
-                        <Route path="/docs" component={Documentation} />
-                        <Route path="/Examples" component={Examples} />
-                        <Route path="/Templates" component={Templates} />
-                        <Route path="/404" component={ErrorPage404} />
-                        <Route component={ErrorPage404} />
-                    </Switch>
+                    <Suspense fallback={<LoadingComponent />}>
+                        <Switch>
+                            <Route exact path="/" component={Home} />
+                            <Route path="/docs" component={Documentation} />
+                            <Route path="/Examples" component={Examples} />
+                            <Route path="/tmpl" component={Templates} />
+                            <Route path="/res" component={Resources} />
+                            <Route path="/404" component={ErrorPage404} />
+                            <Route component={ErrorPage404} />
+                        </Switch>
+                    </Suspense>
                     <Footer />
                 </ScrollToTopComponent>
             </Router>

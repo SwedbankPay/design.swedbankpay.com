@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Documentation: SelectPanel SearchBox renders 1`] = `
+<form
+  className="doc-search"
+>
+  <input
+    autoComplete="off"
+    className="form-control"
+    name="designguide-search"
+    onChange={[Function]}
+    onFocus={[Function]}
+    placeholder="Search..."
+    type="text"
+  />
+</form>
+`;

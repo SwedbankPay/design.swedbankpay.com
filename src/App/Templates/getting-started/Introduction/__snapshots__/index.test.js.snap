@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Templates: Introduction renders 1`] = `
+<DocContainer
+  docToc={true}
+>
+  <p
+    className="lead"
+  >
+    Getting started with the 
+    TESTBRAND
+     Templates. Templates, usage description as well as tips and tricks can be found here.
+  </p>
+</DocContainer>
+`;

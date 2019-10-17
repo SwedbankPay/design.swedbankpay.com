@@ -1,6 +1,6 @@
 {
     "name": "design.swedbankpay.com",
-    "version": "4.1.0",
+    "version": "4.2.0",
     "description": "Swedbank Pay DesignGuide",
     "main": "swedbankpay.js",
     "scripts": {
@@ -48,7 +48,6 @@
         "prismjs": "^1.17.1",
         "react": "^16.9.0",
         "react-dom": "^16.9.0",
-        "react-loadable": "^5.5.0",
         "react-prism": "^4.3.2",
         "react-router-dom": "^5.0.1",
         "react-router-hash-link": "^1.2.2"
