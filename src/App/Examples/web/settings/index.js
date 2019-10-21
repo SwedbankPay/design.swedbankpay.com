@@ -132,7 +132,7 @@ class Settings extends Component {
         this.state = {
             emailNotif: true
         };
-        rangeslider.init();
+
     }
 
     componentDidMount () {
@@ -153,7 +153,7 @@ class Settings extends Component {
 
     render () {
         return (
-            <DocContainer>
+            <DocContainer docToc>
                 <ComponentPreview language="html" showCasePanel codeFigure>
                     <section className="panel panel-brand">
                         <SettingsHeader />

@@ -37,6 +37,11 @@ module.exports = [
                 title: "FAQ",
                 path: "/examples/web/faq",
                 componentPath: "web/faq"
+            },
+            {
+                title: "Customers",
+                path: "/examples/web/customers",
+                componentPath: "web/customers"
             }
         ]
     },
