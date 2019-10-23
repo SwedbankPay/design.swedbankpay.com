@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from "react";
+import React, { Component } from "react";
 import { DocContainer, ComponentPreview } from "@docutils";
 
 import PaginationComponent from "@components/Pagination";
@@ -8,91 +8,17 @@ import { Datepicker as DatepickerComponent } from "@components/FormComponents";
 import StepsComponent from "@components/Steps";
 import ActionLinkComponent from "@components/ActionLink";
 
+import {
+    customersList,
+    statusText,
+    customerDetailedActionList,
+    customersDetailedOrders,
+    customersDetailedOrdersSteps,
+    customerDetailedInquiriesLatestInquiry,
+    customersDetailedInquiriesPreviousInquiries
+} from "./constants";
+
 const { actionList, datepicker, tabs } = window.dg;
-
-const customersList = [
-    {
-        id: "c1",
-        firstName: "Sven",
-        lastName: "Svensson",
-        email: "sven.svensson@email.com",
-        phone: "+47 *** ** ***",
-        location: "Visby",
-        status: "default"
-
-    },
-    {
-        id: "c2",
-        firstName: "Anna",
-        lastName: "Svensson",
-        email: "anna.svensson@email.com",
-        phone: "+47 *** ** ***",
-        location: "Stockholm",
-        status: "success"
-    },
-    {
-        id: "c3",
-        firstName: "Ola",
-        lastName: "Nordmann",
-        email: "ola.nordmann@email.com",
-        phone: "+47 *** ** ***",
-        location: "Oslo",
-        status: "success"
-    },
-    {
-        id: "c4",
-        firstName: "Kari",
-        lastName: "Nordmann",
-        email: "kari.nordmann@email.com",
-        phone: "+47 *** ** ***",
-        location: "Bergen",
-        status: "warning"
-    },
-    {
-        id: "c5",
-        firstName: "Holger",
-        lastName: "Danske",
-        email: "holger.danske@email.com",
-        phone: "+47 *** ** ***",
-        location: "Copenhagen",
-        status: "danger"
-    },
-    {
-        id: "c6",
-        firstName: "Matti",
-        lastName: "Meikäläinen",
-        email: "matti.meikalainen@email.com",
-        phone: "+47 *** ** ***",
-        location: "Lahti",
-        status: "success"
-    },
-    {
-        id: "c7",
-        firstName: "Helma",
-        lastName: "Egilsdóttir",
-        email: "helma.egilsdottir@email.com",
-        phone: "+47 *** ** ***",
-        location: "Reykjavík",
-        status: "default"
-    }
-];
-
-const statusText = {
-    default: "New",
-    success: "Delivered",
-    warning: "Late",
-    danger: "Missing"
-};
-
-const customersDetailedOrders = [...Array(15)].map(() => (Math.floor(Math.random() * 1000)) + 1000); // Generates 15 random orders with value between 1000 and 2000 to display
-// Generates 15 previous inquiries to display as an example
-const customersDetailedPreviousInquiries = [...Array(15).keys()].map(i => ({
-    id: `InquiryID#${i}`,
-    date: `${i + 10}.${Math.floor(10 - i * 0.4) < 10 ? "0" : ""}${Math.floor(10 - i * 0.4)}.20${19 - i < 10 ? "0" : ""}${19 - i}`, // Uses simple formulas to generate different dates, to get varied dates
-    numMessages: `${Math.floor(Math.random() * 20) + 3}`,
-    resolved: Math.random() > 0.1,
-    message: `This is the initial message of inquiry InquiryID#${i}. This message was sent ${i + 10}.0${Math.floor(10 - i * 0.4)}.20${19 - i}`
-}));
 
 class CustomersOverview extends Component {
     constructor (props) {
@@ -215,18 +141,9 @@ class CustomersDetailed extends Component {
     }
 
     render () {
-        const actionListCustomerDetailed = [
-            {
-                name: "Edit",
-                icon: "edit"
-            },
-            {
-                name: "Delete",
-                icon: "delete"
-            }
-        ];
 
-        const tabsCustomerDetailed = [
+        // customerDetailedTabs is kept here because of the component value
+        const customerDetailedTabs = [
             {
                 name: "Order history",
                 component: <CustomersDetailedOrders />
@@ -279,7 +196,7 @@ class CustomersDetailed extends Component {
                                             </div>
                                         </div>
                                         <div className="col-xs-auto">
-                                            <ActionListComponent classNames="anchor-top-right" items={actionListCustomerDetailed} />
+                                            <ActionListComponent classNames="anchor-top-right" items={customerDetailedActionList} />
                                         </div>
                                     </div>
                                     <div className="row d-block d-sm-none">
@@ -301,7 +218,7 @@ class CustomersDetailed extends Component {
                             <div className="tabs tabs-horizontal-lg">{"\n"}
                                 <i className="material-icons">keyboard_arrow_right</i>
                                 <ul>
-                                    {tabsCustomerDetailed.map((tab, i) => (
+                                    {customerDetailedTabs.map((tab, i) => (
                                         <li key={`tab-item-${tab.name}-${i}`} className={this.state.tabIndex === i ? "active" : null}>{"\n"}
                                             <a href="#" onClick={e => this.selectTab(e, i)}>{tab.name}</a>{"\n"}
                                         </li>
@@ -309,7 +226,7 @@ class CustomersDetailed extends Component {
                                 </ul>
                             </div>
 
-                            {tabsCustomerDetailed[this.state.tabIndex].component}
+                            {customerDetailedTabs[this.state.tabIndex].component}
                         </div>
                     </div>
                 </ComponentPreview>
@@ -346,24 +263,6 @@ const CustomersDetailedDatePickerGroup = () => (
 
 const CustomersDetailedOrders = () => {
 
-    const steps = [
-        {
-            title: "Step one",
-            completed: true
-        },
-        {
-            title: "Step two",
-            ongoing: true,
-            selected: true
-        },
-        {
-            title: "Step three"
-        },
-        {
-            title: "Step four"
-        }
-    ];
-
     return (
         <>
             <h3>Latest order</h3>
@@ -381,7 +280,7 @@ const CustomersDetailedOrders = () => {
                 </div>
                 <div className="col-md-6">
                     <h5>Detailed internal status:</h5>
-                    <StepsComponent steps={steps} vertical />
+                    <StepsComponent steps={customersDetailedOrdersSteps} vertical />
                 </div>
             </div>
 
@@ -460,35 +359,22 @@ const CustomersDetailedInquiryCard = ({ inquiry, size }) => (
     </div>
 );
 
-const CustomersDetailedInquiries = () => {
+const CustomersDetailedInquiries = () => (
+    <>
+        <h3>Latest inquiry</h3>
+        <CustomersDetailedInquiryCard inquiry={customerDetailedInquiriesLatestInquiry} size="lg" />
 
-    const latestInquiry = {
-        id: "InquiryID#456",
-        date: "24.10.2019",
-        numMessages: "8",
-        resolved: false,
-        message: "This is the initial message of the inquiry. The initial message is always sent by the customer. \
-        It starts an inquiry thread in which the support team can respond to and stay in contact with the customer. \
-        The inquiry is marked as unresolved until the support staff marks it as resolved."
-    };
-
-    return (
-        <>
-            <h3>Latest inquiry</h3>
-            <CustomersDetailedInquiryCard inquiry={latestInquiry} size="lg" />
-
-            <h3>Previous inquiries</h3>
-            <CustomersDetailedDatePickerGroup />
-            <div className="row">
-                {customersDetailedPreviousInquiries.map(inquiry => (
-                    <div key={inquiry.id} className="col-lg-6 d-flex">
-                        <CustomersDetailedInquiryCard inquiry={inquiry} size="sm" />
-                    </div>
-                ))}
-            </div>
-        </>
-    );
-};
+        <h3>Previous inquiries</h3>
+        <CustomersDetailedDatePickerGroup />
+        <div className="row">
+            {customersDetailedInquiriesPreviousInquiries.map(inquiry => (
+                <div key={inquiry.id} className="col-lg-6 d-flex">
+                    <CustomersDetailedInquiryCard inquiry={inquiry} size="sm" />
+                </div>
+            ))}
+        </div>
+    </>
+);
 
 class Customers extends Component {
     constructor (props) {
