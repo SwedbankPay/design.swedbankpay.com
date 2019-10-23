@@ -153,7 +153,7 @@ class Settings extends Component {
 
     render () {
         return (
-            <DocContainer docToc>
+            <DocContainer>
                 <ComponentPreview language="html" showCasePanel codeFigure>
                     <section className="panel panel-brand">
                         <SettingsHeader />
