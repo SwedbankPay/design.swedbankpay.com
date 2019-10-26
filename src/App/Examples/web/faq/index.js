@@ -42,7 +42,7 @@ const faqList = [
     }
 ];
 
-const FAQTopPart = () => (
+const FAQSearch = () => (
     <>
         <div className="row justify-content-center">
             <img src={`${basename}img/${brand}-logo.svg`} alt="logo" />
@@ -51,7 +51,7 @@ const FAQTopPart = () => (
             <h2>How can we help?</h2>
         </div>
         <div className="row justify-content-center">
-            <div className="col-lg-4">
+            <div className="col-lg-8">
                 <InputGroup
                     type="text"
                     prefixType="icon"
@@ -65,31 +65,43 @@ const FAQTopPart = () => (
     </>
 );
 
-const sendQuestion = sheetId => {
-    sheet.close(sheetId);
-    toast({
-        html: "Question successfully sent",
-        type: "success"
-    });
-
-};
-
-const FAQSheet = () => (
-    <SheetComponent id="demo-sheet" requireAction>
-        <h2>Ask a question</h2>
-        <div className="form-group">
-            <div className="input-group">
-                <span className="input-group-addon"><i className="material-icons">help</i></span>
-                <textarea type="textarea" className="form-control h-25" id="settings-description"></textarea>
+const FAQList = () => (
+    <div className="row justify-content-center">
+        <div className="col-lg-8">
+            <div className="expandable-group ">
+                <ExpandableComponent items={faqList} />
             </div>
         </div>
-        <button type="button" className="btn btn-executive" onClick={() => sendQuestion("demo-sheet")}>
-            Send
-        </button>
-    </SheetComponent>
+    </div>
 );
 
-const FAQBottomPart = () => (
+const FAQSheet = () => {
+
+    const sendQuestion = sheetId => {
+        sheet.close(sheetId);
+        toast({
+            html: "Question successfully sent",
+            type: "success"
+        });
+    };
+
+    return (
+        <SheetComponent id="faq-sheet" requireAction>
+            <h2>Ask a question</h2>
+            <div className="form-group">
+                <div className="input-group">
+                    <span className="input-group-addon"><i className="material-icons">help</i></span>
+                    <textarea type="textarea" className="form-control h-25" id="settings-description"></textarea>
+                </div>
+            </div>
+            <button type="button" className="btn btn-executive" onClick={() => sendQuestion("faq-sheet")}>
+                Send
+            </button>
+        </SheetComponent>
+    );
+};
+
+const FAQCard = () => (
     <div className="row justify-content-center mt-5">
         <div className="col-lg-5">
             <div className="card card-primary">
@@ -107,7 +119,7 @@ const FAQBottomPart = () => (
                         </div>
                     </div>
                     <p>Send in a question to get help from our support team</p>
-                    <button type="button" className="btn btn-executive btn-block mt-auto" data-sheet-open="demo-sheet">
+                    <button type="button" className="btn btn-executive btn-block mt-auto" data-sheet-open="faq-sheet">
                         Send in a question
                     </button>
                 </div>
@@ -126,19 +138,15 @@ const FAQ = () => {
     return (
         <DocContainer>
             <ComponentPreview language="html" showCasePanel codeFigure>
-                <FAQTopPart />
-                <div className="row justify-content-center">
-                    <div className="col-lg-8">
-                        <div className="expandable-group ">
-                            <ExpandableComponent items={faqList} />
-                        </div>
-                    </div>
-                </div>
+                <FAQSearch />
+                <FAQList />
                 <FAQSheet />
-                <FAQBottomPart />
+                <FAQCard />
             </ComponentPreview>
         </DocContainer>
     );
 };
 
 export default FAQ;
+
+export { FAQSearch, FAQList, FAQSheet, FAQCard };

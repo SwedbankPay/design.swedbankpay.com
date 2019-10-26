@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { DocContainer, ComponentPreview } from "@docutils";
 
 import PaginationComponent from "@components/Pagination";
@@ -14,7 +15,7 @@ import {
     customerDetailedActionList,
     customersDetailedOrders,
     customersDetailedOrdersSteps,
-    customerDetailedInquiriesLatestInquiry,
+    customersDetailedInquiriesLatestInquiry,
     customersDetailedInquiriesPreviousInquiries
 } from "./constants";
 
@@ -142,26 +143,6 @@ class CustomersDetailed extends Component {
 
     render () {
 
-        // customerDetailedTabs is kept here because of the component value
-        const customerDetailedTabs = [
-            {
-                name: "Order history",
-                component: <CustomersDetailedOrders />
-            },
-            {
-                name: "Customer inquiries",
-                component: <CustomersDetailedInquiries />
-            },
-            {
-                name: "Summary charts",
-                component: null
-            },
-            {
-                name: "Settings",
-                component: null
-            }
-        ];
-
         return (
             <>
                 <h2 id="customers-detailed">Customers detailed</h2>
@@ -177,12 +158,15 @@ class CustomersDetailed extends Component {
                                     <div className="row">
                                         <div className="col-xs-auto">
                                             <div className="d-none d-sm-block">
-                                                <MediaObjectComponent
-                                                    size="lg"
-                                                    icon="account_circle"
-                                                    heading={`${this.props.customer.firstName} ${this.props.customer.lastName}`}
-                                                    text={`${this.props.customer.email} ${this.props.customer.phone}`}
-                                                />
+                                                <div className="media media-sm">
+                                                    <div className="media-img">
+                                                        <i className="material-icons">account_circle</i>
+                                                    </div>
+                                                    <div className="media-body">
+                                                        <h4>{`${this.props.customer.firstName} ${this.props.customer.lastName}`}</h4>
+                                                        <p>{`${this.props.customer.email} ${this.props.customer.phone}`}</p>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div className="d-block d-sm-none">
                                                 <div className="media media-sm">
@@ -218,15 +202,15 @@ class CustomersDetailed extends Component {
                             <div className="tabs tabs-horizontal-lg">{"\n"}
                                 <i className="material-icons">keyboard_arrow_right</i>
                                 <ul>
-                                    {customerDetailedTabs.map((tab, i) => (
-                                        <li key={`tab-item-${tab.name}-${i}`} className={this.state.tabIndex === i ? "active" : null}>{"\n"}
+                                    {this.props.customersDetailedTabs.map((tab, i) => (
+                                        <li key={`tab-item-${i}`} className={this.state.tabIndex === i ? "active" : null}>{"\n"}
                                             <a href="#" onClick={e => this.selectTab(e, i)}>{tab.name}</a>{"\n"}
                                         </li>
                                     ))}
                                 </ul>
                             </div>
 
-                            {customerDetailedTabs[this.state.tabIndex].component}
+                            {this.props.customersDetailedTabs[this.state.tabIndex].component}
                         </div>
                     </div>
                 </ComponentPreview>
@@ -261,54 +245,51 @@ const CustomersDetailedDatePickerGroup = () => (
     </div>
 );
 
-const CustomersDetailedOrders = () => {
-
-    return (
-        <>
-            <h3>Latest order</h3>
-            <div className="row">
-                <div className="col-md-6">
-                    <div className="slab border slab-elevated">
-                        <h5>Order: OrderID#123456</h5>
-                        <p>Price: £ 1994</p>
-                        <p>Date: 22.10.2019</p>
-                        <p>Product ID: ProductID#321</p>
-                        <p>Product name: Product name ABC</p>
-                        <p>Addtional information: Description of the product and/or additional comments from the customer with regards to the order or product.</p>
-                        <ActionLinkComponent linkText="Edit order" smallText="OrderID#123456" multiline={true} />
-                    </div>
-                </div>
-                <div className="col-md-6">
-                    <h5>Detailed internal status:</h5>
-                    <StepsComponent steps={customersDetailedOrdersSteps} vertical />
+const CustomersDetailedOrders = ({ customersDetailedOrdersSteps, customersDetailedOrders }) => (
+    <>
+        <h3>Latest order</h3>
+        <div className="row">
+            <div className="col-md-6">
+                <div className="slab border slab-elevated">
+                    <h5>Order: OrderID#123456</h5>
+                    <p>Price: £ 1994</p>
+                    <p>Date: 22.10.2019</p>
+                    <p>Product ID: ProductID#321</p>
+                    <p>Product name: Product name ABC</p>
+                    <p>Addtional information: Description of the product and/or additional comments from the customer with regards to the order or product.</p>
+                    <ActionLinkComponent linkText="Edit order" smallText="OrderID#123456" multiline={true} />
                 </div>
             </div>
+            <div className="col-md-6">
+                <h5>Detailed internal status:</h5>
+                <StepsComponent steps={customersDetailedOrdersSteps} vertical />
+            </div>
+        </div>
 
-            <h3>Previous orders</h3>
-            <CustomersDetailedDatePickerGroup />
-            {customersDetailedOrders.map((order, i) => (
-                <div key={i} className="slab border slab-elevated">
-                    <div className="d-flex">
-                        <div className="flex-grow-1">
-                            <div className="flex-column">
-                                <p className="font-weight-bold">
-                                    {`OrderID#${i}: `}
-                                </p>
-                                <p>
-                                    {`ProductID#${i * 5} Product name XYZ${i}`}
-                                </p>
-                            </div>
-                        </div>
-                        <div>
-                            <p className="font-weight-bold text-nowrap">£ {order}</p>
+        <h3>Previous orders</h3>
+        <CustomersDetailedDatePickerGroup />
+        {customersDetailedOrders.map((order, i) => (
+            <div key={i} className="slab border slab-elevated">
+                <div className="d-flex">
+                    <div className="flex-grow-1">
+                        <div className="flex-column">
+                            <p className="font-weight-bold">
+                                {`OrderID#${i}: `}
+                            </p>
+                            <p>
+                                {`ProductID#${i * 5} Product name XYZ${i}`}
+                            </p>
                         </div>
                     </div>
-                    <ActionLinkComponent linkText="Edit order" smallText={`OrderID#${i}:`} multiline={true} />
+                    <div>
+                        <p className="font-weight-bold text-nowrap">£ {order}</p>
+                    </div>
                 </div>
-            ))}
-        </>
-    );
-};
+                <ActionLinkComponent linkText="Edit order" smallText={`OrderID#${i}:`} multiline={true} />
+            </div>
+        ))}
+    </>
+);
 
 const CustomersDetailedInquiryCard = ({ inquiry, size }) => (
     <div className="card card-secondary">
@@ -359,10 +340,10 @@ const CustomersDetailedInquiryCard = ({ inquiry, size }) => (
     </div>
 );
 
-const CustomersDetailedInquiries = () => (
+const CustomersDetailedInquiries = ({ customersDetailedInquiriesLatestInquiry, customersDetailedInquiriesPreviousInquiries }) => (
     <>
         <h3>Latest inquiry</h3>
-        <CustomersDetailedInquiryCard inquiry={customerDetailedInquiriesLatestInquiry} size="lg" />
+        <CustomersDetailedInquiryCard inquiry={customersDetailedInquiriesLatestInquiry} size="lg" />
 
         <h3>Previous inquiries</h3>
         <CustomersDetailedDatePickerGroup />
@@ -400,15 +381,88 @@ class Customers extends Component {
 
     render () {
 
+        // customersDetailedTabs is kept here because of the component value
+        const customersDetailedTabs = [
+            {
+                name: "Order history",
+                component: this.props.test ?
+                    <React.Fragment />
+                    :
+                    <CustomersDetailedOrders
+                        customersDetailedOrdersSteps={customersDetailedOrdersSteps}
+                        customersDetailedOrders={customersDetailedOrders}
+                    />
+            },
+            {
+                name: "Customer inquiries",
+                component: this.props.test ?
+                    <React.Fragment />
+                    :
+                    <CustomersDetailedInquiries
+                        customersDetailedInquiriesLatestInquiry={customersDetailedInquiriesLatestInquiry}
+                        customersDetailedInquiriesPreviousInquiries={customersDetailedInquiriesPreviousInquiries}
+                    />
+            },
+            {
+                name: "Summary charts",
+                component: <React.Fragment />
+            },
+            {
+                name: "Settings",
+                component: <React.Fragment />
+            }
+        ];
+
         return (
             <DocContainer>
                 <CustomersOverview setCustomerIndex={customerIndex => this.setCustomerIndex(customerIndex)}/>
-                <CustomersDetailed customer={customersList[this.state.customerIndex]} />
+                <CustomersDetailed customer={customersList[this.state.customerIndex]} customersDetailedTabs={customersDetailedTabs} />
             </DocContainer>
         );
     }
 }
 
+Customers.propTypes = {
+    test: PropTypes.bool
+};
+
+CustomersOverview.propTypes = {
+    setCustomerIndex: PropTypes.func.isRequired
+};
+
+CustomersDetailed.propTypes = {
+    customer: PropTypes.exact({
+        id: PropTypes.string.isRequired,
+        firstName: PropTypes.string.isRequired,
+        lastName: PropTypes.string.isRequired,
+        email: PropTypes.string.isRequired,
+        phone: PropTypes.string.isRequired,
+        location: PropTypes.string.isRequired,
+        status: PropTypes.string.isRequired
+    }).isRequired,
+    customersDetailedTabs: PropTypes.arrayOf(PropTypes.exact({
+        name: PropTypes.string.isRequired,
+        component: PropTypes.object.isRequired
+    })).isRequired
+};
+
+CustomersDetailedOrders.propTypes = {
+    customersDetailedOrdersSteps: PropTypes.arrayOf(PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        ongoing: PropTypes.bool,
+        completed: PropTypes.bool,
+        selected: PropTypes.bool
+    })).isRequired,
+    customersDetailedOrders: PropTypes.arrayOf(PropTypes.number).isRequired
+};
+
 export default Customers;
 
-export { CustomersOverview, CustomersDetailed };
+export {
+    CustomersOverview,
+    CustomersDetailed,
+    CustomersDetailedDatePickerGroup,
+    CustomersDetailedOrders,
+    CustomersDetailedInquiries,
+    CustomersDetailedInquiryCard
+};

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { DocContainer, ComponentPreview } from "@docutils";
 
 import InputGroup from "@components/InputGroup";
@@ -65,7 +66,7 @@ const SettingsBasic = () => (
     </>
 );
 
-const SettingsEmailNotif = ({ emailNotif, toggleEmailNotif }) => (
+const SettingsEmailNotification = ({ emailNotif, toggleEmailNotif }) => (
     <div className="row mt-5">
         <div className="col-lg-6">
             <div className="togglebox" >
@@ -160,7 +161,7 @@ class Settings extends Component {
                         <div className="panel-body">
                             <form>
                                 <SettingsBasic />
-                                <SettingsEmailNotif emailNotif={this.state.emailNotif} toggleEmailNotif={() => this.toggleEmailNotif()} />
+                                <SettingsEmailNotification emailNotif={this.state.emailNotif} toggleEmailNotif={() => this.toggleEmailNotif()} />
                                 <SettingsDescription />
                                 <ButtonComponent type="executive" label="Save changes" icon="save" btnType="submit" />
                             </form>
@@ -172,4 +173,11 @@ class Settings extends Component {
     }
 }
 
+SettingsEmailNotification.propTypes = {
+    emailNotif: PropTypes.bool.isRequired,
+    toggleEmailNotif: PropTypes.func.isRequired
+};
+
 export default Settings;
+
+export { SettingsHeader, SettingsBasic, SettingsEmailNotification, SettingsDescription };

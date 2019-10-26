@@ -1,0 +1,1079 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Examples: Customers CustomersDetailed renders 1`] = `
+<Fragment>
+  <h2
+    id="customers-detailed"
+  >
+    Customers detailed
+  </h2>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="panel panel-brand"
+    >
+      <header>
+        <ol
+          className="breadcrumb"
+        >
+          <li>
+            <a
+              href="#"
+            >
+              Customers
+            </a>
+          </li>
+          <li>
+            <span>
+              ctest
+            </span>
+          </li>
+        </ol>
+        <div
+          className="row"
+        >
+          <div
+            className="col-auto mr-auto"
+          >
+            <div
+              className="row"
+            >
+              <div
+                className="col-xs-auto"
+              >
+                <div
+                  className="d-none d-sm-block"
+                >
+                  <div
+                    className="media media-sm"
+                  >
+                    <div
+                      className="media-img"
+                    >
+                      <i
+                        className="material-icons"
+                      >
+                        account_circle
+                      </i>
+                    </div>
+                    <div
+                      className="media-body"
+                    >
+                      <h4>
+                        Sven Svensson
+                      </h4>
+                      <p>
+                        sven.svensson@email.com +47 *** ** ***
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="d-block d-sm-none"
+                >
+                  <div
+                    className="media media-sm"
+                  >
+                    <div
+                      className="media-img"
+                    >
+                      <i
+                        className="material-icons"
+                      >
+                        account_circle
+                      </i>
+                    </div>
+                    <div
+                      className="media-body"
+                    >
+                      <h4>
+                        Sven Svensson
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="col-xs-auto"
+              >
+                <ActionList
+                  classNames="anchor-top-right"
+                  items={
+                    Array [
+                      Object {
+                        "icon": "edit",
+                        "name": "Edit",
+                      },
+                      Object {
+                        "icon": "delete",
+                        "name": "Delete",
+                      },
+                    ]
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="row d-block d-sm-none"
+            >
+              <div
+                className="col-sm-auto pl-0"
+              >
+                <p
+                  className="mb-0 text-truncate"
+                >
+                  sven.svensson@email.com
+                </p>
+              </div>
+              <div
+                className="col-sm-auto pl-0"
+              >
+                <p>
+                  +47 *** ** ***
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-auto pl-0"
+          >
+            <h4>
+              Delivery status:
+            </h4>
+            <span
+              className="status status-default"
+            >
+              New
+            </span>
+          </div>
+        </div>
+      </header>
+      <div
+        className="panel-body"
+      >
+        <div
+          className="tabs tabs-horizontal-lg"
+        >
+          
+
+          <i
+            className="material-icons"
+          >
+            keyboard_arrow_right
+          </i>
+          <ul>
+            <li
+              className={null}
+              key="tab-item-0"
+            >
+              
+
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                tab1
+              </a>
+              
+
+            </li>
+            <li
+              className="active"
+              key="tab-item-1"
+            >
+              
+
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                tab2
+              </a>
+              
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Examples: Customers CustomersDetailedDatePickerGroup renders 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-sm-6"
+  >
+    <Datepicker
+      fulldate={true}
+      id="init-value-datepicker"
+      label="From:"
+      prefixType="icon"
+      prefixValue="event"
+      value="2000-01-01"
+    />
+  </div>
+  <div
+    className="col-sm-6"
+  >
+    <Datepicker
+      fulldate={true}
+      id="init-value-datepicker"
+      label="To:"
+      prefixType="icon"
+      prefixValue="event"
+      value="2020-01-01"
+    />
+  </div>
+</div>
+`;
+
+exports[`Examples: Customers CustomersDetailedInquiries renders 1`] = `
+<Fragment>
+  <h3>
+    Latest inquiry
+  </h3>
+  <CustomersDetailedInquiryCard
+    inquiry={
+      Object {
+        "date": "01.01.2019",
+        "id": "InquiryID#000",
+        "message": "This is the initial message of the inquiry.",
+        "numMessages": "10",
+        "resolved": false,
+      }
+    }
+    size="lg"
+  />
+  <h3>
+    Previous inquiries
+  </h3>
+  <CustomersDetailedDatePickerGroup />
+  <div
+    className="row"
+  >
+    <div
+      className="col-lg-6 d-flex"
+      key="InquiryID#001"
+    >
+      <CustomersDetailedInquiryCard
+        inquiry={
+          Object {
+            "date": "01.01.2018",
+            "id": "InquiryID#001",
+            "message": "This is the initial message of the inquiry.",
+            "numMessages": "10",
+            "resolved": true,
+          }
+        }
+        size="sm"
+      />
+    </div>
+    <div
+      className="col-lg-6 d-flex"
+      key="InquiryID#002"
+    >
+      <CustomersDetailedInquiryCard
+        inquiry={
+          Object {
+            "date": "01.01.2017",
+            "id": "InquiryID#002",
+            "message": "This is the initial message of the inquiry.",
+            "numMessages": "10",
+            "resolved": true,
+          }
+        }
+        size="sm"
+      />
+    </div>
+    <div
+      className="col-lg-6 d-flex"
+      key="InquiryID#003"
+    >
+      <CustomersDetailedInquiryCard
+        inquiry={
+          Object {
+            "date": "01.01.2016",
+            "id": "InquiryID#003",
+            "message": "This is the initial message of the inquiry.",
+            "numMessages": "10",
+            "resolved": true,
+          }
+        }
+        size="sm"
+      />
+    </div>
+    <div
+      className="col-lg-6 d-flex"
+      key="InquiryID#004"
+    >
+      <CustomersDetailedInquiryCard
+        inquiry={
+          Object {
+            "date": "01.01.2015",
+            "id": "InquiryID#004",
+            "message": "This is the initial message of the inquiry.",
+            "numMessages": "10",
+            "resolved": true,
+          }
+        }
+        size="sm"
+      />
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`Examples: Customers CustomersDetailedInquiryCard renders 1`] = `
+<div
+  className="card card-secondary"
+>
+  <header
+    className="card-header"
+  >
+    <h4>
+      Inquiry: InquiryID#000 | 01.01.2019
+    </h4>
+  </header>
+  <div
+    className="card-body"
+  >
+    <div
+      className="d-none d-sm-block"
+    >
+      <div
+        className="d-flex justify-content-around"
+      >
+        <MediaObject
+          heading="10"
+          icon="message"
+          size="lg"
+          text="messages"
+        />
+        <MediaObject
+          heading="Unresolved"
+          icon="feedback"
+          size="lg"
+        />
+      </div>
+    </div>
+    <div
+      className="d-sm-none"
+    >
+      <div
+        className="d-flex flex-column"
+      >
+        <MediaObject
+          heading="10"
+          icon="message"
+          size="sm"
+          text="messages"
+        />
+        <MediaObject
+          heading="Unresolved"
+          icon="feedback"
+          size="sm"
+        />
+      </div>
+    </div>
+    <h5>
+      Initial message:
+    </h5>
+    <p>
+      This is the initial message of the inquiry.
+    </p>
+  </div>
+  <div
+    className="card-footer"
+  >
+    <div
+      className="footer-link"
+    >
+      <a
+        href="#"
+      >
+        See inquiry thread
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Examples: Customers CustomersDetailedOrders renders 1`] = `
+<Fragment>
+  <h3>
+    Latest order
+  </h3>
+  <div
+    className="row"
+  >
+    <div
+      className="col-md-6"
+    >
+      <div
+        className="slab border slab-elevated"
+      >
+        <h5>
+          Order: OrderID#123456
+        </h5>
+        <p>
+          Price: £ 1994
+        </p>
+        <p>
+          Date: 22.10.2019
+        </p>
+        <p>
+          Product ID: ProductID#321
+        </p>
+        <p>
+          Product name: Product name ABC
+        </p>
+        <p>
+          Addtional information: Description of the product and/or additional comments from the customer with regards to the order or product.
+        </p>
+        <ActionLink
+          linkText="Edit order"
+          multiline={true}
+          smallText="OrderID#123456"
+        />
+      </div>
+    </div>
+    <div
+      className="col-md-6"
+    >
+      <h5>
+        Detailed internal status:
+      </h5>
+      <Steps
+        steps={
+          Array [
+            Object {
+              "completed": true,
+              "title": "Step one",
+            },
+            Object {
+              "ongoing": true,
+              "selected": true,
+              "title": "Step two",
+            },
+            Object {
+              "title": "Step three",
+            },
+          ]
+        }
+        vertical={true}
+      />
+    </div>
+  </div>
+  <h3>
+    Previous orders
+  </h3>
+  <CustomersDetailedDatePickerGroup />
+  <div
+    className="slab border slab-elevated"
+    key="0"
+  >
+    <div
+      className="d-flex"
+    >
+      <div
+        className="flex-grow-1"
+      >
+        <div
+          className="flex-column"
+        >
+          <p
+            className="font-weight-bold"
+          >
+            OrderID#0: 
+          </p>
+          <p>
+            ProductID#0 Product name XYZ0
+          </p>
+        </div>
+      </div>
+      <div>
+        <p
+          className="font-weight-bold text-nowrap"
+        >
+          £ 
+          1000
+        </p>
+      </div>
+    </div>
+    <ActionLink
+      linkText="Edit order"
+      multiline={true}
+      smallText="OrderID#0:"
+    />
+  </div>
+  <div
+    className="slab border slab-elevated"
+    key="1"
+  >
+    <div
+      className="d-flex"
+    >
+      <div
+        className="flex-grow-1"
+      >
+        <div
+          className="flex-column"
+        >
+          <p
+            className="font-weight-bold"
+          >
+            OrderID#1: 
+          </p>
+          <p>
+            ProductID#5 Product name XYZ1
+          </p>
+        </div>
+      </div>
+      <div>
+        <p
+          className="font-weight-bold text-nowrap"
+        >
+          £ 
+          1001
+        </p>
+      </div>
+    </div>
+    <ActionLink
+      linkText="Edit order"
+      multiline={true}
+      smallText="OrderID#1:"
+    />
+  </div>
+  <div
+    className="slab border slab-elevated"
+    key="2"
+  >
+    <div
+      className="d-flex"
+    >
+      <div
+        className="flex-grow-1"
+      >
+        <div
+          className="flex-column"
+        >
+          <p
+            className="font-weight-bold"
+          >
+            OrderID#2: 
+          </p>
+          <p>
+            ProductID#10 Product name XYZ2
+          </p>
+        </div>
+      </div>
+      <div>
+        <p
+          className="font-weight-bold text-nowrap"
+        >
+          £ 
+          1002
+        </p>
+      </div>
+    </div>
+    <ActionLink
+      linkText="Edit order"
+      multiline={true}
+      smallText="OrderID#2:"
+    />
+  </div>
+  <div
+    className="slab border slab-elevated"
+    key="3"
+  >
+    <div
+      className="d-flex"
+    >
+      <div
+        className="flex-grow-1"
+      >
+        <div
+          className="flex-column"
+        >
+          <p
+            className="font-weight-bold"
+          >
+            OrderID#3: 
+          </p>
+          <p>
+            ProductID#15 Product name XYZ3
+          </p>
+        </div>
+      </div>
+      <div>
+        <p
+          className="font-weight-bold text-nowrap"
+        >
+          £ 
+          1003
+        </p>
+      </div>
+    </div>
+    <ActionLink
+      linkText="Edit order"
+      multiline={true}
+      smallText="OrderID#3:"
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`Examples: Customers CustomersOverview renders 1`] = `
+<Fragment>
+  <h2
+    id="customers-overview"
+  >
+    Customers overview
+  </h2>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="panel panel-brand"
+    >
+      <header>
+        <div
+          className="row"
+        >
+          <div
+            className="col-lg-4"
+          >
+            <h2
+              className="panel-title"
+            >
+              Customers
+            </h2>
+          </div>
+          <div
+            className="col-lg-8"
+          >
+            <div
+              className="input-group"
+            >
+              
+
+              <span
+                className="input-group-addon"
+              >
+                
+
+                <i
+                  className="material-icons"
+                >
+                  search
+                </i>
+              </span>
+              
+
+              <input
+                className="form-control"
+                onChange={[Function]}
+                type="text"
+                value=""
+              />
+              
+
+              <button
+                className="btn btn-executive"
+                onClick={[Function]}
+                type="button"
+              >
+                
+
+                <i
+                  className="material-icons"
+                >
+                  close
+                </i>
+                
+
+              </button>
+              
+
+            </div>
+          </div>
+        </div>
+      </header>
+      <div
+        className="panel-table"
+      >
+        <table
+          className="table table-hover table-striped"
+        >
+          <thead>
+            <tr>
+              <th
+                scope="col"
+              >
+                ID
+              </th>
+              <th
+                className="d-none d-sm-table-cell"
+                scope="col"
+              >
+                First name
+              </th>
+              <th
+                className="d-none d-sm-table-cell"
+                scope="col"
+              >
+                Last name
+              </th>
+              <th
+                scope="col"
+              >
+                Location
+              </th>
+              <th
+                className="d-none d-lg-table-cell"
+                scope="col"
+              >
+                Delivery status
+              </th>
+              <th
+                className="d-lg-none"
+                scope="col"
+              />
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              key="c1"
+              onClick={[Function]}
+            >
+              <th
+                scope="row"
+              >
+                c1
+              </th>
+              <td
+                className="d-none d-sm-table-cell"
+              >
+                Sven
+              </td>
+              <td
+                className="d-none d-sm-table-cell"
+              >
+                Svensson
+              </td>
+              <td>
+                Visby
+              </td>
+              <td
+                className="d-none d-lg-table-cell"
+              >
+                <span
+                  className="status status-default"
+                >
+                  New
+                </span>
+              </td>
+              <td
+                className="d-lg-none"
+              >
+                <span
+                  className="status status-default pl-0"
+                />
+              </td>
+            </tr>
+            <tr
+              key="c2"
+              onClick={[Function]}
+            >
+              <th
+                scope="row"
+              >
+                c2
+              </th>
+              <td
+                className="d-none d-sm-table-cell"
+              >
+                Anna
+              </td>
+              <td
+                className="d-none d-sm-table-cell"
+              >
+                Svensson
+              </td>
+              <td>
+                Stockholm
+              </td>
+              <td
+                className="d-none d-lg-table-cell"
+              >
+                <span
+                  className="status status-success"
+                >
+                  Delivered
+                </span>
+              </td>
+              <td
+                className="d-lg-none"
+              >
+                <span
+                  className="status status-success pl-0"
+                />
+              </td>
+            </tr>
+            <tr
+              key="c3"
+              onClick={[Function]}
+            >
+              <th
+                scope="row"
+              >
+                c3
+              </th>
+              <td
+                className="d-none d-sm-table-cell"
+              >
+                Ola
+              </td>
+              <td
+                className="d-none d-sm-table-cell"
+              >
+                Nordmann
+              </td>
+              <td>
+                Oslo
+              </td>
+              <td
+                className="d-none d-lg-table-cell"
+              >
+                <span
+                  className="status status-success"
+                >
+                  Delivered
+                </span>
+              </td>
+              <td
+                className="d-lg-none"
+              >
+                <span
+                  className="status status-success pl-0"
+                />
+              </td>
+            </tr>
+            <tr
+              key="c4"
+              onClick={[Function]}
+            >
+              <th
+                scope="row"
+              >
+                c4
+              </th>
+              <td
+                className="d-none d-sm-table-cell"
+              >
+                Kari
+              </td>
+              <td
+                className="d-none d-sm-table-cell"
+              >
+                Nordmann
+              </td>
+              <td>
+                Bergen
+              </td>
+              <td
+                className="d-none d-lg-table-cell"
+              >
+                <span
+                  className="status status-warning"
+                >
+                  Late
+                </span>
+              </td>
+              <td
+                className="d-lg-none"
+              >
+                <span
+                  className="status status-warning pl-0"
+                />
+              </td>
+            </tr>
+            <tr
+              key="c5"
+              onClick={[Function]}
+            >
+              <th
+                scope="row"
+              >
+                c5
+              </th>
+              <td
+                className="d-none d-sm-table-cell"
+              >
+                Holger
+              </td>
+              <td
+                className="d-none d-sm-table-cell"
+              >
+                Danske
+              </td>
+              <td>
+                Copenhagen
+              </td>
+              <td
+                className="d-none d-lg-table-cell"
+              >
+                <span
+                  className="status status-danger"
+                >
+                  Missing
+                </span>
+              </td>
+              <td
+                className="d-lg-none"
+              >
+                <span
+                  className="status status-danger pl-0"
+                />
+              </td>
+            </tr>
+            <tr
+              key="c6"
+              onClick={[Function]}
+            >
+              <th
+                scope="row"
+              >
+                c6
+              </th>
+              <td
+                className="d-none d-sm-table-cell"
+              >
+                Matti
+              </td>
+              <td
+                className="d-none d-sm-table-cell"
+              >
+                Meikäläinen
+              </td>
+              <td>
+                Lahti
+              </td>
+              <td
+                className="d-none d-lg-table-cell"
+              >
+                <span
+                  className="status status-success"
+                >
+                  Delivered
+                </span>
+              </td>
+              <td
+                className="d-lg-none"
+              >
+                <span
+                  className="status status-success pl-0"
+                />
+              </td>
+            </tr>
+            <tr
+              key="c7"
+              onClick={[Function]}
+            >
+              <th
+                scope="row"
+              >
+                c7
+              </th>
+              <td
+                className="d-none d-sm-table-cell"
+              >
+                Helma
+              </td>
+              <td
+                className="d-none d-sm-table-cell"
+              >
+                Egilsdóttir
+              </td>
+              <td>
+                Reykjavík
+              </td>
+              <td
+                className="d-none d-lg-table-cell"
+              >
+                <span
+                  className="status status-default"
+                >
+                  New
+                </span>
+              </td>
+              <td
+                className="d-lg-none"
+              >
+                <span
+                  className="status status-default pl-0"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <Pagination
+        arrows={true}
+        farArrows={true}
+        text="1 of 123"
+      />
+    </div>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Examples: Customers renders 1`] = `
+<DocContainer>
+  <CustomersOverview
+    setCustomerIndex={[Function]}
+  />
+  <CustomersDetailed
+    customer={
+      Object {
+        "email": "sven.svensson@email.com",
+        "firstName": "Sven",
+        "id": "c1",
+        "lastName": "Svensson",
+        "location": "Visby",
+        "phone": "+47 *** ** ***",
+        "status": "default",
+      }
+    }
+    customersDetailedTabs={
+      Array [
+        Object {
+          "component": <React.Fragment />,
+          "name": "Order history",
+        },
+        Object {
+          "component": <React.Fragment />,
+          "name": "Customer inquiries",
+        },
+        Object {
+          "component": <React.Fragment />,
+          "name": "Summary charts",
+        },
+        Object {
+          "component": <React.Fragment />,
+          "name": "Settings",
+        },
+      ]
+    }
+  />
+</DocContainer>
+`;
