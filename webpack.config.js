@@ -335,7 +335,7 @@ module.exports = (env, argv) => {
                             },
                             {
                                 source: "./src/assets/logos/*.zip",
-                                destination: `./dist${basename}release/typography`
+                                destination: `./dist${basename}release/logos`
                             },
                             {
                                 source: "./src/assets/fonts/*.zip",
