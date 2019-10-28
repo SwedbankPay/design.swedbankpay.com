@@ -5,7 +5,7 @@ import { DocContainer, ComponentPreview } from "@docutils";
 import PaginationComponent from "@components/Pagination";
 import MediaObjectComponent from "@components/MediaObject";
 import ActionListComponent from "@components/ActionList";
-import { Datepicker as DatepickerComponent } from "@components/FormComponents";
+import { Datepicker as DatepickerComponent, Togglebox } from "@components/FormComponents";
 import StepsComponent from "@components/Steps";
 import ActionLinkComponent from "@components/ActionLink";
 
@@ -117,7 +117,7 @@ class CustomersDetailed extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            tabIndex: 1
+            tabIndex: 3
         };
     }
 
@@ -357,6 +357,20 @@ const CustomersDetailedInquiries = ({ customersDetailedInquiriesLatestInquiry, c
     </>
 );
 
+const CustomersDetailedSettings = () => (
+    <>
+        <h3>Notifications</h3>
+        <div className="row justify-content-around mt-3">
+            <div className="col-lg-auto">
+                <Togglebox id="customers-detailed-settings-toggle-1" label="Delivery status changes" />
+            </div>
+            <div className="col-lg-auto">
+                <Togglebox id="customers-detailed-settings-toggle-2" label="New inquiry messages" />
+            </div>
+        </div>
+    </>
+);
+
 class Customers extends Component {
     constructor (props) {
         super(props);
@@ -409,7 +423,10 @@ class Customers extends Component {
             },
             {
                 name: "Settings",
-                component: <React.Fragment />
+                component: this.props.test ? 
+                    <React.Fragment />
+                    :
+                    <CustomersDetailedSettings />
             }
         ];
 
