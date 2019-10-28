@@ -342,6 +342,10 @@ module.exports = (env, argv) => {
                                 destination: "./dist/release/fonts"
                             },
                             {
+                                source: "./src/assets/templates/*",
+                                destination: "./dist/templates"
+                            },
+                            {
                                 source: `./dist${basename}icons`,
                                 destination: "./dist/temp/icons/icons"
                             },
