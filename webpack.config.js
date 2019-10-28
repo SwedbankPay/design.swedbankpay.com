@@ -327,23 +327,23 @@ module.exports = (env, argv) => {
                         copy: [
                             {
                                 source: `./src/img/${brand}/resources/typography/*.png`,
-                                destination: "./dist/img/typography"
+                                destination: `./dist${basename}img/typography`
                             },
                             {
                                 source: `./src/img/${brand}/resources/logotype/*.png`,
-                                destination: "./dist/img/logotype/"
+                                destination: `./dist${basename}img/logotype`
                             },
                             {
                                 source: "./src/assets/logos/*.zip",
-                                destination: "./dist/release/logos"
+                                destination: `./dist${basename}release/typography`
                             },
                             {
                                 source: "./src/assets/fonts/*.zip",
-                                destination: "./dist/release/fonts"
+                                destination: `./dist${basename}release/fonts`
                             },
                             {
                                 source: "./src/assets/templates/*",
-                                destination: "./dist/templates"
+                                destination: `./dist${basename}templates`
                             },
                             {
                                 source: `./dist${basename}icons`,
