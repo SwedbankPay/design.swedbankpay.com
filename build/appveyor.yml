@@ -22,6 +22,7 @@ environment:
   # Slack hook for bot to #design-guide-dev
   slack_designguide_webhook:
     secure: gxWz5+nY3Ctg2JTqo5RQVwHA+UNxiB/H1u72IC71b3oBZj/dxqBLc1/EYZtxzWjiOCXPSOfKJ485+XhtyTt1kNjHon7JWRftucuOyhaozmw=
+  nodejs_version: "10"
 
 
 # cache:
