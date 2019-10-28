@@ -24,7 +24,7 @@ const Download = () => (
         <h2 id="download">Download</h2>
         <div className="slab slab-default slab-elevated">
             <p>The presentation template is provided as a <Property value=".potx" />-file.</p>
-            <Button type="executive" icon="file_download" href={`${basename}release/cid_2799998.zip`} label="Download" />
+            <Button type="executive" icon="file_download" href={`${basename}release/templates/cid_2799998.zip`} label="Download" />
         </div>
         <div className="slab slab-default slab-arrow">
             <i className="material-icons">wb_incandescent</i>

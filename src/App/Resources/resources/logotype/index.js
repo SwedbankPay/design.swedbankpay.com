@@ -10,14 +10,14 @@ const Download = () => (
         <h2 id="download">Download</h2>
         <div className="slab slab-default slab-elevated">
             <p>Before downloading any logotype files, make sure to read the Swedbank Pay logotype guidelines. The guidelines can be found below.</p>
-            <Button type="executive" icon="file_download" href={`${basename}release/cid_2799998.zip`} label="Download" />
+            <Button type="executive" icon="file_download" href={`${basename}release/logos/cid_2799998.zip`} label="Download" />
         </div>
     </>
 );
 
 const Overview = () => (
     <>
-        <img src={`${basename}img/cid_2799392.png`} className="img-fluid mb-4" />
+        <img src={`${basename}img/logotype/cid_2799392.png`} className="img-fluid mb-4" />
         <p>
             The Swedbank Pay logotype is designed to highlight and communicate our commerce offer. It should be used as a sender on any material or information regarding Swedbank Pay
             to both merchants and consumers.
@@ -44,7 +44,7 @@ const Guidelines = () => (
         <p>
             Note that the logotype is an image and does not need to comply with the WCAG contrast requirements even though legibility of course must be considered.
         </p>
-        <img src={`${basename}img/cid_2799410.png`} className="img-fluid mb-4" />
+        <img src={`${basename}img/logotype/cid_2799410.png`} className="img-fluid mb-4" />
 
         <h3>Background</h3>
         <p>
@@ -58,7 +58,7 @@ const Guidelines = () => (
             Swedbank Pay uses Yellow as an accent colour. When placing the Swedbank Pay logotype on Yellow background always use the negative version.
             Make sure to keep the logotype above the minimum size recommendation for legibility.
         </p>
-        <img src={`${basename}img/cid_2799428.png`} className="img-fluid mb-4" />
+        <img src={`${basename}img/logotype/cid_2799428.png`} className="img-fluid mb-4" />
 
         <h3>Size</h3>
         <p>
@@ -89,7 +89,7 @@ const Guidelines = () => (
             <li>Recommended symbol height: 64 px</li>
             <li>Minimum symbol height: 24 px</li>
         </ul>
-        <img src={`${basename}img/cid_2799443.png`} className="img-fluid mb-4" />
+        <img src={`${basename}img/logotype/cid_2799443.png`} className="img-fluid mb-4" />
 
         <h3>Placement</h3>
         <p>
@@ -105,14 +105,14 @@ const Guidelines = () => (
             The vertical Swedbank Pay logotype is placed at a consistent distance from the edge of the unit based on the height of the Symbol.
             Both the vertical and horizontal distance is 75% of the height of the Symbol, but when placed bottom right the vertical distance to the lower edge is 60% of the height of the Symbol.
         </p>
-        <img src={`${basename}img/cid_2799444.png`} className="img-fluid mb-4" />
+        <img src={`${basename}img/logotype/cid_2799444.png`} className="img-fluid mb-4" />
         <h4>Placement of the horizontal logotype</h4>
         <p>
             The horizontal Swedbank Pay logotype is placed at a consistent distance from the edge of the unit based on the height of the Symbol.
             In print both the vertical and horizontal distance is 75% of the height of the Symbol. In digital units the vertical and horizontal distance can vary depending on the space needed in the design,
             but the distance may never be smaller than 30% of the height of the Symbol. Round up to nearest 8pt-grid step.
         </p>
-        <img src={`${basename}img/cid_2799455.png`} className="img-fluid mb-4" />
+        <img src={`${basename}img/logotype/cid_2799455.png`} className="img-fluid mb-4" />
 
         <h3>Clear space</h3>
         <p>
@@ -123,7 +123,7 @@ const Guidelines = () => (
             For digital units round up the clear space to the nearest 8pt-grid step (e.g recommended symbol height for horizontal logotype is 64 px,
             clear space should be 24 px. [64 × 0.3 = 19.2] → 24px).
         </p>
-        <img src={`${basename}img/cid_2799483.png`} className="img-fluid mb-4" />
+        <img src={`${basename}img/logotype/cid_2799483.png`} className="img-fluid mb-4" />
 
         <h3>Avoid</h3>
         <ul>
