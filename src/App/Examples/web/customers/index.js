@@ -5,7 +5,7 @@ import { DocContainer, ComponentPreview } from "@docutils";
 import PaginationComponent from "@components/Pagination";
 import MediaObjectComponent from "@components/MediaObject";
 import ActionListComponent from "@components/ActionList";
-import { Datepicker as DatepickerComponent, Togglebox } from "@components/FormComponents";
+import { Datepicker as DatepickerComponent, Togglebox, Checkbox } from "@components/FormComponents";
 import StepsComponent from "@components/Steps";
 import ActionLinkComponent from "@components/ActionLink";
 
@@ -129,8 +129,8 @@ class CustomersDetailed extends Component {
     }
 
     componentDidMount () {
+        (this.state.tabIndex === 0 || this.state.tabIndex === 1) && datepicker.init();
         actionList.init();
-        datepicker.init();
         tabs.init();
     }
 
@@ -362,12 +362,23 @@ const CustomersDetailedSettings = () => (
         <h3>Notifications</h3>
         <div className="row justify-content-around mt-3">
             <div className="col-lg-auto">
-                <Togglebox id="customers-detailed-settings-toggle-1" label="Delivery status changes" />
+                <Togglebox id="customers-detailed-settings-toggle-1" checked label="Delivery status changes" />
             </div>
             <div className="col-lg-auto">
                 <Togglebox id="customers-detailed-settings-toggle-2" label="New inquiry messages" />
             </div>
         </div>
+        <h3>Newsletter and information</h3>
+        <div className="row">
+            {[...Array(7).keys()].map(item => (
+                <div key={item} className="col-lg-3 col-md-4 col-sm-6">
+                    <Checkbox id={`customers-detailed-settings-checkbox-${item}`} checked label={`Subscription #${item + 1}`} />
+                </div>
+            ))}
+        </div>
+
+        <h3></h3>
+
     </>
 );
 
