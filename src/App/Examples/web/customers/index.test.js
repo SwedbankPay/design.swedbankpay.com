@@ -1,8 +1,14 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Customers, 
-{ CustomersOverview, CustomersDetailed, CustomersDetailedDatePickerGroup, CustomersDetailedOrders, CustomersDetailedInquiries, CustomersDetailedInquiryCard } from "./index";
+import Customers,
+{ CustomersOverview,
+    CustomersDetailed,
+    CustomersDetailedDatePickerGroup,
+    CustomersDetailedOrders,
+    CustomersDetailedInquiries,
+    CustomersDetailedInquiryCard,
+    CustomersDetailedSettings } from "./index";
 
 describe("Examples: Customers", () => {
     it("is defined", () => {
@@ -204,6 +210,18 @@ describe("Examples: Customers", () => {
         it("renders", () => {
             const mockSize = "lg";
             const wrapper = shallow(<CustomersDetailedInquiryCard inquiry={mockInquiry} size={mockSize} />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("CustomerDetailedSettings", () => {
+        it("is defined", () => {
+            expect(CustomersDetailedSettings).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<CustomersDetailedSettings />);
 
             expect(wrapper).toMatchSnapshot();
         });
