@@ -316,10 +316,7 @@ module.exports = (env, argv) => {
             new FileManagerPlugin({
                 onStart: [
                     {
-                        delete: ["./dist"],
-                        copy: [
-                            
-                        ]
+                        delete: ["./dist"]
                     }
                 ],
                 onEnd: [

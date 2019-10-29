@@ -1,17 +1,9 @@
 # Changelog
 
-## [4.2.0] - 2019-10-17
-
-### Added
-
- - Resources section added
- - Templates section added
+## [4.2.1] - 2019-10-29
 
 ### Changed
-
- - Action Link with small text added
- - Action Link for new tab added
- - Readme updated and improved
- - Whitelist urls added to Sentry
- - Topbar wide close button bug fixed
- - Status not vertically centered bug fixed 
+ - H3 font size on mobile changed
+ - Checkbox beneath Togglebox visible on line break bug fixed
+ - Refresh bug on Resources and Templates sections fixed
+ - Image and download links in deployment fixed
