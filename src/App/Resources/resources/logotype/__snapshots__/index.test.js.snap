@@ -14,7 +14,7 @@ exports[`Resources: Logotype Download renders 1`] = `
       Before downloading any logotype files, make sure to read the Swedbank Pay logotype guidelines. The guidelines can be found below.
     </p>
     <Button
-      href="/TEST/release/cid_2799998.zip"
+      href="/TEST/release/logos/cid_2799998.zip"
       icon="file_download"
       label="Download"
       type="executive"
@@ -41,7 +41,7 @@ exports[`Resources: Logotype Guidelines renders 1`] = `
   </p>
   <img
     className="img-fluid mb-4"
-    src="/TEST/img/cid_2799410.png"
+    src="/TEST/img/logotype/cid_2799410.png"
   />
   <h3>
     Background
@@ -57,7 +57,7 @@ exports[`Resources: Logotype Guidelines renders 1`] = `
   </p>
   <img
     className="img-fluid mb-4"
-    src="/TEST/img/cid_2799428.png"
+    src="/TEST/img/logotype/cid_2799428.png"
   />
   <h3>
     Size
@@ -114,7 +114,7 @@ exports[`Resources: Logotype Guidelines renders 1`] = `
   </ul>
   <img
     className="img-fluid mb-4"
-    src="/TEST/img/cid_2799443.png"
+    src="/TEST/img/logotype/cid_2799443.png"
   />
   <h3>
     Placement
@@ -133,7 +133,7 @@ exports[`Resources: Logotype Guidelines renders 1`] = `
   </p>
   <img
     className="img-fluid mb-4"
-    src="/TEST/img/cid_2799444.png"
+    src="/TEST/img/logotype/cid_2799444.png"
   />
   <h4>
     Placement of the horizontal logotype
@@ -143,7 +143,7 @@ exports[`Resources: Logotype Guidelines renders 1`] = `
   </p>
   <img
     className="img-fluid mb-4"
-    src="/TEST/img/cid_2799455.png"
+    src="/TEST/img/logotype/cid_2799455.png"
   />
   <h3>
     Clear space
@@ -156,7 +156,7 @@ exports[`Resources: Logotype Guidelines renders 1`] = `
   </p>
   <img
     className="img-fluid mb-4"
-    src="/TEST/img/cid_2799483.png"
+    src="/TEST/img/logotype/cid_2799483.png"
   />
   <h3>
     Avoid
@@ -185,7 +185,7 @@ exports[`Resources: Logotype Overview renders 1`] = `
 <Fragment>
   <img
     className="img-fluid mb-4"
-    src="/TEST/img/cid_2799392.png"
+    src="/TEST/img/logotype/cid_2799392.png"
   />
   <p>
     The Swedbank Pay logotype is designed to highlight and communicate our commerce offer. It should be used as a sender on any material or information regarding Swedbank Pay to both merchants and consumers.
