@@ -18,7 +18,7 @@ exports[`Resources: Presentations Download renders 1`] = `
       -file.
     </p>
     <Button
-      href="/TEST/release/cid_2799998.zip"
+      href="/TEST/templates/SwedbankPay_ppt_template.potx"
       icon="file_download"
       label="Download"
       type="executive"
