@@ -39,35 +39,35 @@ export const mainText = [
 
 export const alertText = [
     {
-        name: "Brand success",
+        name: "Brand Success",
         hex: "#51971B"
     },
     {
-        name: "Brand success light",
+        name: "Brand Success Light",
         hex: "#F2F7EB"
     },
     {
-        name: "Brand warning",
+        name: "Brand Warning",
         hex: "#FF9900"
     },
     {
-        name: "Brand warning light",
+        name: "Brand Warning Light",
         hex: "#FFF3D5"
     },
     {
-        name: "Brand error",
+        name: "Brand Error",
         hex: "#C5131C"
     },
     {
-        name: "Brand error light",
+        name: "Brand Error Light",
         hex: "#F9DED3"
     },
     {
-        name: "Brand info",
+        name: "Brand Info",
         hex: "#4572C0"
     },
     {
-        name: "Brand info light",
+        name: "Brand Info Light",
         hex: "#E8EFF9"
     }
 ];
