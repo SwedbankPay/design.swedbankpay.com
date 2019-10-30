@@ -11,8 +11,8 @@ const initPieChart = (userOptions, colorPool) => {
         };
 
         dataset.data.forEach((d, i) => {
-            preparedDataset.backgroundColor.push(`rgba(${colorPool[i]}, 0.5)`);
-            preparedDataset.hoverBackgroundColor.push(`rgba(${colorPool[i]}, 0.7)`);
+            preparedDataset.backgroundColor.push(`rgba(${colorPool[i]}, 0.7)`);
+            preparedDataset.hoverBackgroundColor.push(`rgba(${colorPool[i]}, 0.9)`);
             preparedDataset.borderColor.push(`rgba(${colorPool[i]}, 0.9)`);
             preparedDataset.hoverBorderColor.push(`rgba(${colorPool[i]}, 1)`);
 

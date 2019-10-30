@@ -28,16 +28,16 @@ describe("scripts - dashboard: line chart", () => {
                 datasets: [
                     {
                         data: [1, 2, 3],
-                        backgroundColor: ["rgba(TEST, 0.2)", "rgba(TEST, 0.2)", "rgba(TEST, 0.2)"],
-                        borderColor: ["rgba(TEST, 0.7)", "rgba(TEST, 0.7)", "rgba(TEST, 0.7)"],
+                        backgroundColor: ["rgba(TEST, 0.1)", "rgba(TEST, 0.1)", "rgba(TEST, 0.1)"],
+                        borderColor: ["rgba(TEST, 0.8)", "rgba(TEST, 0.8)", "rgba(TEST, 0.8)"],
                         pointBackgroundColor: ["rgba(TEST, 0.9)", "rgba(TEST, 0.9)", "rgba(TEST, 0.9)"],
                         pointHoverBackgroundColor: ["rgba(TEST, 1)", "rgba(TEST, 1)", "rgba(TEST, 1)"],
                         pointHoverBorderColor: ["rgba(TEST, 1)", "rgba(TEST, 1)", "rgba(TEST, 1)"],
                         pointBorderColor: ["rgba(TEST, 0.9)", "rgba(TEST, 0.9)", "rgba(TEST, 0.9)"],
                         pointBorderWidth: 2,
                         borderWidth: 4,
-                        pointRadius: 4,
-                        pointHoverRadius: 6
+                        pointRadius: 2,
+                        pointHoverRadius: 5
                     }
                 ]
             },

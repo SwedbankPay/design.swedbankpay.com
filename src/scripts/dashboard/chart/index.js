@@ -5,16 +5,16 @@ import initPieChart from "./pie";
 import initLineChart from "./line";
 
 const _colorPool = [
-    "45, 169, 68", // brand
-    "38, 108, 154", // neutral
-    "125, 85, 170", // purple
-    "255, 159, 0", // warning
-    "205, 46, 0", // danger
-    "19, 70, 17", // up forest green (custom)
-    "0, 52, 89", // prussian blue (custom)
-    "106, 1, 54", // tyrian purple (custom)
-    "245, 184, 65", // maximum yellow (red) (custom)
-    "255, 34, 12" // red (ryb) (custom)
+    "253, 193, 41", // brand primary
+    "238, 112, 35", // brand tertiary
+    "69, 114, 192", // neutral/info
+    "49, 163, 174", // brand accent
+    "37, 120, 134", // brand accent link
+    "81, 43, 43", // brand secondary
+    "163, 139, 128", // brand secondary light 2
+    "114, 96, 94", // brand secondary light
+    "197, 19, 28", // danger
+    "81, 151, 27" // success
 ];
 
 // Shades of green
