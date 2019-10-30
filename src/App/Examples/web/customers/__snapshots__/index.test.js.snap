@@ -1,5 +1,143 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Examples: Customers CustomerDetailedSettings renders 1`] = `
+<Fragment>
+  <h3>
+    Notifications
+  </h3>
+  <div
+    className="row justify-content-around mt-3"
+  >
+    <div
+      className="col-lg-auto m-2"
+    >
+      <div
+        className="d-flex flex-column"
+      >
+        <Togglebox
+          checked={true}
+          id="customers-detailed-settings-toggle-1"
+          label="Delivery status changes"
+        />
+        <Togglebox
+          id="customers-detailed-settings-toggle-3"
+          label="Critical delivery messages"
+        />
+      </div>
+    </div>
+    <div
+      className="col-lg-auto m-2"
+    >
+      <Togglebox
+        id="customers-detailed-settings-toggle-2"
+        label="New inquiry messages"
+      />
+      <Togglebox
+        checked={true}
+        id="customers-detailed-settings-toggle-4"
+        label="Inquiry status changes"
+      />
+    </div>
+  </div>
+  <h3>
+    Newsletter and information
+  </h3>
+  <div
+    className="row mt-4"
+  >
+    <div
+      className="col-lg-3 col-md-4 col-sm-6"
+      key="0"
+    >
+      <Checkbox
+        checked={true}
+        id="customers-detailed-settings-checkbox-0"
+        label="Subscription #1"
+      />
+    </div>
+    <div
+      className="col-lg-3 col-md-4 col-sm-6"
+      key="1"
+    >
+      <Checkbox
+        checked={true}
+        id="customers-detailed-settings-checkbox-1"
+        label="Subscription #2"
+      />
+    </div>
+    <div
+      className="col-lg-3 col-md-4 col-sm-6"
+      key="2"
+    >
+      <Checkbox
+        checked={true}
+        id="customers-detailed-settings-checkbox-2"
+        label="Subscription #3"
+      />
+    </div>
+    <div
+      className="col-lg-3 col-md-4 col-sm-6"
+      key="3"
+    >
+      <Checkbox
+        checked={true}
+        id="customers-detailed-settings-checkbox-3"
+        label="Subscription #4"
+      />
+    </div>
+    <div
+      className="col-lg-3 col-md-4 col-sm-6"
+      key="4"
+    >
+      <Checkbox
+        checked={true}
+        id="customers-detailed-settings-checkbox-4"
+        label="Subscription #5"
+      />
+    </div>
+    <div
+      className="col-lg-3 col-md-4 col-sm-6"
+      key="5"
+    >
+      <Checkbox
+        checked={true}
+        id="customers-detailed-settings-checkbox-5"
+        label="Subscription #6"
+      />
+    </div>
+    <div
+      className="col-lg-3 col-md-4 col-sm-6"
+      key="6"
+    >
+      <Checkbox
+        checked={true}
+        id="customers-detailed-settings-checkbox-6"
+        label="Subscription #7"
+      />
+    </div>
+  </div>
+  <h3>
+    Customer type
+  </h3>
+  <InputGroup
+    prefixValue="Type"
+    selectOptions={
+      Array [
+        "Long-term contract",
+        "Short-term contract",
+        "One time purchase",
+      ]
+    }
+    type="select"
+  />
+  <button
+    className="btn btn-executive"
+  >
+    Save
+  </button>
+</Fragment>
+`;
+
 exports[`Examples: Customers CustomersDetailed renders 1`] = `
 <Fragment>
   <h2
@@ -166,7 +304,7 @@ exports[`Examples: Customers CustomersDetailed renders 1`] = `
           </i>
           <ul>
             <li
-              className={null}
+              className="active"
               key="tab-item-0"
             >
               
@@ -181,7 +319,7 @@ exports[`Examples: Customers CustomersDetailed renders 1`] = `
 
             </li>
             <li
-              className="active"
+              className={null}
               key="tab-item-1"
             >
               
@@ -200,6 +338,202 @@ exports[`Examples: Customers CustomersDetailed renders 1`] = `
       </div>
     </div>
   </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Examples: Customers CustomersDetailedCharts renders 1`] = `
+<Fragment>
+  <h3>
+    Orders
+  </h3>
+  <h4>
+    Historical purchase prices
+  </h4>
+  <Chart
+    id="customers-detailed-charts-1"
+    options={
+      Object {
+        "data": Object {
+          "datasets": Array [
+            Object {
+              "data": Array [
+                1000,
+                1001,
+                1002,
+                1003,
+              ],
+              "fill": false,
+              "label": "id1 Customer Name",
+            },
+            Object {
+              "data": Array [
+                2000,
+                2000,
+                2000,
+                2000,
+              ],
+              "fill": false,
+              "label": "Customers average",
+            },
+            Object {
+              "data": Array [
+                1850,
+                1850,
+                1850,
+                1850,
+              ],
+              "fill": false,
+              "label": "Estimated",
+            },
+          ],
+          "labels": Array [
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+          ],
+        },
+        "options": Object {
+          "scales": Object {
+            "yAxes": Array [
+              Object {
+                "scaleLabel": Object {
+                  "display": true,
+                  "labelString": "British Pound (£)",
+                },
+              },
+            ],
+          },
+        },
+        "type": "bar",
+      }
+    }
+  />
+  <h3>
+    Inquiries
+  </h3>
+  <h4>
+    Number of inquiry messages
+  </h4>
+  <Chart
+    id="customers-detailed-charts-2"
+    options={
+      Object {
+        "data": Object {
+          "datasets": Array [
+            Object {
+              "data": Array [
+                10,
+                10,
+                10,
+                10,
+              ],
+              "fill": false,
+              "label": "id1 Customer Name",
+            },
+            Object {
+              "data": Array [
+                23,
+                23,
+                23,
+                23,
+              ],
+              "fill": false,
+              "label": "Customers average",
+            },
+          ],
+          "labels": Array [
+            "01.01.2018",
+            "01.01.2017",
+            "01.01.2016",
+            "01.01.2015",
+          ],
+        },
+        "options": Object {
+          "scales": Object {
+            "yAxes": Array [
+              Object {
+                "ticks": Object {
+                  "beginAtZero": true,
+                },
+              },
+            ],
+          },
+        },
+        "type": "line",
+      }
+    }
+  />
+  <div
+    className="row"
+  >
+    <div
+      className="col-lg-6"
+    >
+      <h4>
+        Status distribution
+      </h4>
+      <Chart
+        id="customers-detailed-charts-3"
+        options={
+          Object {
+            "data": Object {
+              "datasets": Array [
+                Object {
+                  "data": Array [
+                    4,
+                    0,
+                    1,
+                  ],
+                },
+              ],
+              "labels": Array [
+                "Resolved",
+                "Unresolved",
+                "Unknown",
+              ],
+            },
+            "type": "pie",
+          }
+        }
+      />
+    </div>
+    <div
+      className="col-lg-6"
+    >
+      <h4>
+        Time before response
+      </h4>
+      <Chart
+        id="customers-detailed-charts-4"
+        options={
+          Object {
+            "data": Object {
+              "datasets": Array [
+                Object {
+                  "data": Array [
+                    16,
+                    12,
+                    6,
+                    4,
+                    2,
+                  ],
+                },
+              ],
+              "labels": Array [
+                "< 2 days",
+                "< 1 week",
+                "< 1 month",
+                "< 3 months",
+                "Other",
+              ],
+            },
+            "type": "pie",
+          }
+        }
+      />
+    </div>
+  </div>
 </Fragment>
 `;
 
@@ -245,7 +579,7 @@ exports[`Examples: Customers CustomersDetailedInquiries renders 1`] = `
         "date": "01.01.2019",
         "id": "InquiryID#000",
         "message": "This is the initial message of the inquiry.",
-        "numMessages": "10",
+        "numMessages": 10,
         "resolved": false,
       }
     }
@@ -268,7 +602,7 @@ exports[`Examples: Customers CustomersDetailedInquiries renders 1`] = `
             "date": "01.01.2018",
             "id": "InquiryID#001",
             "message": "This is the initial message of the inquiry.",
-            "numMessages": "10",
+            "numMessages": 10,
             "resolved": true,
           }
         }
@@ -285,7 +619,7 @@ exports[`Examples: Customers CustomersDetailedInquiries renders 1`] = `
             "date": "01.01.2017",
             "id": "InquiryID#002",
             "message": "This is the initial message of the inquiry.",
-            "numMessages": "10",
+            "numMessages": 10,
             "resolved": true,
           }
         }
@@ -302,7 +636,7 @@ exports[`Examples: Customers CustomersDetailedInquiries renders 1`] = `
             "date": "01.01.2016",
             "id": "InquiryID#003",
             "message": "This is the initial message of the inquiry.",
-            "numMessages": "10",
+            "numMessages": 10,
             "resolved": true,
           }
         }
@@ -319,7 +653,7 @@ exports[`Examples: Customers CustomersDetailedInquiries renders 1`] = `
             "date": "01.01.2015",
             "id": "InquiryID#004",
             "message": "This is the initial message of the inquiry.",
-            "numMessages": "10",
+            "numMessages": 10,
             "resolved": true,
           }
         }

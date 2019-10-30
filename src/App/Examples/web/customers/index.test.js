@@ -8,7 +8,8 @@ import Customers,
     CustomersDetailedOrders,
     CustomersDetailedInquiries,
     CustomersDetailedInquiryCard,
-    CustomersDetailedSettings } from "./index";
+    CustomersDetailedSettings,
+    CustomersDetailedCharts } from "./index";
 
 describe("Examples: Customers", () => {
     it("is defined", () => {
@@ -142,7 +143,7 @@ describe("Examples: Customers", () => {
         const mockLatestInquiry = {
             id: "InquiryID#000",
             date: "01.01.2019",
-            numMessages: "10",
+            numMessages: 10,
             resolved: false,
             message: "This is the initial message of the inquiry."
         };
@@ -150,28 +151,28 @@ describe("Examples: Customers", () => {
             {
                 id: "InquiryID#001",
                 date: "01.01.2018",
-                numMessages: "10",
+                numMessages: 10,
                 resolved: true,
                 message: "This is the initial message of the inquiry."
             },
             {
                 id: "InquiryID#002",
                 date: "01.01.2017",
-                numMessages: "10",
+                numMessages: 10,
                 resolved: true,
                 message: "This is the initial message of the inquiry."
             },
             {
                 id: "InquiryID#003",
                 date: "01.01.2016",
-                numMessages: "10",
+                numMessages: 10,
                 resolved: true,
                 message: "This is the initial message of the inquiry."
             },
             {
                 id: "InquiryID#004",
                 date: "01.01.2015",
-                numMessages: "10",
+                numMessages: 10,
                 resolved: true,
                 message: "This is the initial message of the inquiry."
             }
@@ -182,13 +183,13 @@ describe("Examples: Customers", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<CustomersDetailedInquiries customersDetailedInquiriesLatestInquiry={mockLatestInquiry} customersDetailedInquiriesPreviousInquiries={mockPreviousInquiries} />);
+            const wrapper = shallow(<CustomersDetailedInquiries customersDetailedLatestInquiry={mockLatestInquiry} customersDetailedPreviousInquiries={mockPreviousInquiries} />);
 
             expect(wrapper).toMatchSnapshot();
         });
 
         it("renders correct amount of inquiries", () => {
-            const wrapper = shallow(<CustomersDetailedInquiries customersDetailedInquiriesLatestInquiry={mockLatestInquiry} customersDetailedInquiriesPreviousInquiries={mockPreviousInquiries} />);
+            const wrapper = shallow(<CustomersDetailedInquiries customersDetailedLatestInquiry={mockLatestInquiry} customersDetailedPreviousInquiries={mockPreviousInquiries} />);
 
             expect(wrapper.find(CustomersDetailedInquiryCard).length).toBe(mockPreviousInquiries.length + 1); // Add one because of the presence of latest inquiry.
         });
@@ -222,6 +223,59 @@ describe("Examples: Customers", () => {
 
         it("renders", () => {
             const wrapper = shallow(<CustomersDetailedSettings />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("CustomersDetailedCharts", () => {
+        const mockCustomerIdName = "id1 Customer Name";
+        const mockCustomerOrders = [1000, 1001, 1002, 1003];
+        const mockCustomerInquiries = [
+            {
+                id: "InquiryID#001",
+                date: "01.01.2018",
+                numMessages: 10,
+                resolved: true,
+                message: "This is the initial message of the inquiry."
+            },
+            {
+                id: "InquiryID#002",
+                date: "01.01.2017",
+                numMessages: 10,
+                resolved: true,
+                message: "This is the initial message of the inquiry."
+            },
+            {
+                id: "InquiryID#003",
+                date: "01.01.2016",
+                numMessages: 10,
+                resolved: true,
+                message: "This is the initial message of the inquiry."
+            },
+            {
+                id: "InquiryID#004",
+                date: "01.01.2015",
+                numMessages: 10,
+                resolved: true,
+                message: "This is the initial message of the inquiry."
+            }
+        ];
+        const mockCreateNumArray = (length, baseNum, addNum) => (
+            [...Array(length)].map(() => baseNum + 5 * addNum)
+        );
+
+        it("is defined", () => {
+            expect(CustomersDetailedCharts).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<CustomersDetailedCharts
+                customerIdName={mockCustomerIdName}
+                customerOrders={mockCustomerOrders}
+                customerInquiries={mockCustomerInquiries}
+                createNumArray={mockCreateNumArray}
+            />);
 
             expect(wrapper).toMatchSnapshot();
         });

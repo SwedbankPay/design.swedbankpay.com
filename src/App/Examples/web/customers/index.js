@@ -23,6 +23,13 @@ import {
 
 const { actionList, datepicker, tabs } = window.dg;
 
+const createNumArray = (length, baseNum, addNum) => (
+    [...Array(length)].map(() => (
+        Math.floor(Math.random() * addNum) + Math.floor(Math.random() * addNum) + Math.floor(Math.random() * addNum) +
+        Math.floor(Math.random() * addNum) + Math.floor(Math.random() * addNum) + baseNum)
+    ) // The multiple Math.floor(Math.random) is there to achieve a lower variance
+);
+
 class CustomersOverview extends Component {
     constructor (props) {
         super(props);
@@ -119,7 +126,7 @@ class CustomersDetailed extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            tabIndex: 2
+            tabIndex: 0
         };
     }
 
@@ -303,7 +310,7 @@ const CustomersDetailedInquiryCard = ({ inquiry, size }) => (
                     <MediaObjectComponent
                         size={size}
                         icon="message"
-                        heading={inquiry.numMessages}
+                        heading={inquiry.numMessages.toString()}
                         text="messages"
                     />
 
@@ -320,7 +327,7 @@ const CustomersDetailedInquiryCard = ({ inquiry, size }) => (
                     <MediaObjectComponent
                         size="sm"
                         icon="message"
-                        heading={inquiry.numMessages}
+                        heading={inquiry.numMessages.toString()}
                         text="messages"
                     />
 
@@ -358,9 +365,9 @@ const CustomersDetailedInquiries = ({ customersDetailedLatestInquiry, customersD
     </>
 );
 
-const CustomersDetailedCharts = ({ customerIdName, customerData, allInquiries }) => {
-    const datasetDataLength = customerData.length;
-    const totalNumMessages = allInquiries.reduce((accumulator, inquiry) => accumulator + parseInt(inquiry.numMessages), 0);
+const CustomersDetailedCharts = ({ customerIdName, customerOrders, customerInquiries, createNumArray }) => {
+    const datasetDataLength = customerOrders.length;
+    const totalNumMessages = customerInquiries.reduce((accumulator, inquiry) => accumulator + inquiry.numMessages, 0);
 
     return (
         <>
@@ -375,23 +382,17 @@ const CustomersDetailedCharts = ({ customerIdName, customerData, allInquiries })
                         datasets: [
                             {
                                 label: customerIdName,
-                                data: customerData,
+                                data: customerOrders,
                                 fill: false
                             },
                             {
                                 label: "Customers average",
-                                data: [...Array(datasetDataLength)].map(() => (
-                                    Math.floor(Math.random() * 200) + Math.floor(Math.random() * 200) + Math.floor(Math.random() * 200) +
-                                    Math.floor(Math.random() * 200) + Math.floor(Math.random() * 200) + 1000)
-                                ), // The multiple Math.floor(Math.random) is there to achieve a less random looking distribution
+                                data: createNumArray(datasetDataLength, 1000, 200),
                                 fill: false
                             },
                             {
                                 label: "Estimated",
-                                data: [...Array(datasetDataLength)].map(() => (
-                                    Math.floor(Math.random() * 200) + Math.floor(Math.random() * 200) + Math.floor(Math.random() * 200) +
-                                    Math.floor(Math.random() * 200) + Math.floor(Math.random() * 200) + 850)
-                                ), // The multiple Math.floor(Math.random) is there to achieve a less random looking distribution
+                                data: createNumArray(datasetDataLength, 850, 200),
                                 fill: false
                             }
                         ]
@@ -416,19 +417,16 @@ const CustomersDetailedCharts = ({ customerIdName, customerData, allInquiries })
                 options={{
                     type: "line",
                     data: {
-                        labels: allInquiries.map(inquiry => inquiry.date),
+                        labels: customerInquiries.map(inquiry => inquiry.date),
                         datasets: [
                             {
                                 label: customerIdName,
-                                data: allInquiries.map(inquiry => inquiry.numMessages),
+                                data: customerInquiries.map(inquiry => inquiry.numMessages),
                                 fill: false
                             },
                             {
                                 label: "Customers average",
-                                data: [...Array(datasetDataLength)].map(() => (
-                                    Math.floor(Math.random() * 4) + Math.floor(Math.random() * 4) + Math.floor(Math.random() * 4) +
-                                    Math.floor(Math.random() * 4) + Math.floor(Math.random() * 4) + 3)
-                                ), // The multiple Math.floor(Math.random) is there to achieve a less random looking distribution
+                                data: createNumArray(customerInquiries.length, 3, 4), // The multiple Math.floor(Math.random) is there to achieve a less random looking distribution
                                 fill: false
                             }
                         ]
@@ -454,7 +452,7 @@ const CustomersDetailedCharts = ({ customerIdName, customerData, allInquiries })
                                 labels: ["Resolved", "Unresolved", "Unknown"],
                                 datasets: [
                                     {
-                                        data: [allInquiries.filter(inquiry => inquiry.resolved).length, allInquiries.filter(inquiry => !inquiry.resolved).length, 1]
+                                        data: [customerInquiries.filter(inquiry => inquiry.resolved).length, customerInquiries.filter(inquiry => !inquiry.resolved).length, 1]
                                     }
                                 ]
                             }
@@ -577,8 +575,9 @@ class Customers extends Component {
                     :
                     <CustomersDetailedCharts
                         customerIdName={`${customersList[this.state.customerIndex].id} ${customersList[this.state.customerIndex].firstName} ${customersList[this.state.customerIndex].lastName}`}
-                        customerData={[...customersDetailedOrders, 1994]}
-                        allInquiries={[...customersDetailedPreviousInquiries, customersDetailedLatestInquiry]}
+                        customerOrders={[...customersDetailedOrders, 1994]}
+                        customerInquiries={[...customersDetailedPreviousInquiries, customersDetailedLatestInquiry]}
+                        createNumArray={createNumArray}
                     />
             },
             {
@@ -633,6 +632,35 @@ CustomersDetailedOrders.propTypes = {
     customersDetailedOrders: PropTypes.arrayOf(PropTypes.number).isRequired
 };
 
+CustomersDetailedInquiries.propTypes = {
+    customersDetailedLatestInquiry: PropTypes.exact({
+        id: PropTypes.string.isRequired,
+        date: PropTypes.string.isRequired,
+        numMessages: PropTypes.number.isRequired,
+        resolved: PropTypes.bool.isRequired,
+        message: PropTypes.string.isRequired
+    }).isRequired,
+    customersDetailedPreviousInquiries: PropTypes.arrayOf(PropTypes.exact({
+        id: PropTypes.string.isRequired,
+        date: PropTypes.string.isRequired,
+        numMessages: PropTypes.number.isRequired,
+        resolved: PropTypes.bool.isRequired,
+        message: PropTypes.string.isRequired
+    })).isRequired
+};
+
+CustomersDetailedCharts.propTypes = {
+    customerIdName: PropTypes.string.isRequired,
+    customerOrders: PropTypes.arrayOf(PropTypes.number).isRequired,
+    customerInquiries: PropTypes.arrayOf(PropTypes.exact({
+        id: PropTypes.string.isRequired,
+        date: PropTypes.string.isRequired,
+        numMessages: PropTypes.number.isRequired,
+        resolved: PropTypes.bool.isRequired,
+        message: PropTypes.string.isRequired
+    })).isRequired
+};
+
 export default Customers;
 
 export {
@@ -642,5 +670,6 @@ export {
     CustomersDetailedOrders,
     CustomersDetailedInquiries,
     CustomersDetailedInquiryCard,
-    CustomersDetailedSettings
+    CustomersDetailedSettings,
+    CustomersDetailedCharts
 };

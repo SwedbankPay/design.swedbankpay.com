@@ -107,7 +107,7 @@ export const customersDetailedOrdersSteps = [
 export const customersDetailedLatestInquiry = {
     id: "InquiryID#456",
     date: "24.10.2019",
-    numMessages: "8",
+    numMessages: 8,
     resolved: false,
     message: "This is the initial message of the inquiry. The initial message is always sent by the customer. \
     It starts an inquiry thread in which the support team can respond to and stay in contact with the customer. \
@@ -118,7 +118,7 @@ export const customersDetailedLatestInquiry = {
 export const customersDetailedPreviousInquiries = [...Array(15).keys()].map(i => ({
     id: `InquiryID#${i}`,
     date: `${i + 10}.${Math.floor(10 - i * 0.4) < 10 ? "0" : ""}${Math.floor(10 - i * 0.4)}.20${19 - i < 10 ? "0" : ""}${19 - i}`, // Uses simple formulas to generate different dates, to get varied dates
-    numMessages: `${Math.floor(Math.random() * 20) + 3}`,
+    numMessages: Math.floor(Math.random() * 20) + 3,
     resolved: Math.random() > 0.1,
     message: `This is the initial message of inquiry InquiryID#${i}. This message was sent ${i + 10}.0${Math.floor(10 - i * 0.4)}.20${19 - i < 10 ? "0" : ""}${19 - i}`
 }));
