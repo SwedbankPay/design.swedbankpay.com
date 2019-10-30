@@ -73,7 +73,7 @@ export const statusText = {
     danger: "Missing"
 };
 
-export const customerDetailedActionList = [
+export const customersDetailedActionList = [
     {
         name: "Edit",
         icon: "edit"
@@ -104,7 +104,7 @@ export const customersDetailedOrdersSteps = [
     }
 ];
 
-export const customersDetailedInquiriesLatestInquiry = {
+export const customersDetailedLatestInquiry = {
     id: "InquiryID#456",
     date: "24.10.2019",
     numMessages: "8",
@@ -115,7 +115,7 @@ export const customersDetailedInquiriesLatestInquiry = {
 };
 
 // Generates 15 previous inquiries to display as an example
-export const customersDetailedInquiriesPreviousInquiries = [...Array(15).keys()].map(i => ({
+export const customersDetailedPreviousInquiries = [...Array(15).keys()].map(i => ({
     id: `InquiryID#${i}`,
     date: `${i + 10}.${Math.floor(10 - i * 0.4) < 10 ? "0" : ""}${Math.floor(10 - i * 0.4)}.20${19 - i < 10 ? "0" : ""}${19 - i}`, // Uses simple formulas to generate different dates, to get varied dates
     numMessages: `${Math.floor(Math.random() * 20) + 3}`,

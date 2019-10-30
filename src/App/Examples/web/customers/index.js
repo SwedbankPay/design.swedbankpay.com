@@ -9,15 +9,16 @@ import { Datepicker as DatepickerComponent, Togglebox, Checkbox } from "@compone
 import StepsComponent from "@components/Steps";
 import ActionLinkComponent from "@components/ActionLink";
 import InputGroup from "@components/InputGroup";
+import Chart from "@components/Chart";
 
 import {
     customersList,
     statusText,
-    customerDetailedActionList,
+    customersDetailedActionList,
     customersDetailedOrders,
     customersDetailedOrdersSteps,
-    customersDetailedInquiriesLatestInquiry,
-    customersDetailedInquiriesPreviousInquiries
+    customersDetailedLatestInquiry,
+    customersDetailedPreviousInquiries
 } from "./constants";
 
 const { actionList, datepicker, tabs } = window.dg;
@@ -118,7 +119,7 @@ class CustomersDetailed extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            tabIndex: 3
+            tabIndex: 2
         };
     }
 
@@ -143,7 +144,6 @@ class CustomersDetailed extends Component {
     }
 
     render () {
-
         return (
             <>
                 <h2 id="customers-detailed">Customers detailed</h2>
@@ -181,7 +181,7 @@ class CustomersDetailed extends Component {
                                             </div>
                                         </div>
                                         <div className="col-xs-auto">
-                                            <ActionListComponent classNames="anchor-top-right" items={customerDetailedActionList} />
+                                            <ActionListComponent classNames="anchor-top-right" items={customersDetailedActionList} />
                                         </div>
                                     </div>
                                     <div className="row d-block d-sm-none">
@@ -341,15 +341,15 @@ const CustomersDetailedInquiryCard = ({ inquiry, size }) => (
     </div>
 );
 
-const CustomersDetailedInquiries = ({ customersDetailedInquiriesLatestInquiry, customersDetailedInquiriesPreviousInquiries }) => (
+const CustomersDetailedInquiries = ({ customersDetailedLatestInquiry, customersDetailedPreviousInquiries }) => (
     <>
         <h3>Latest inquiry</h3>
-        <CustomersDetailedInquiryCard inquiry={customersDetailedInquiriesLatestInquiry} size="lg" />
+        <CustomersDetailedInquiryCard inquiry={customersDetailedLatestInquiry} size="lg" />
 
         <h3>Previous inquiries</h3>
         <CustomersDetailedDatePickerGroup />
         <div className="row">
-            {customersDetailedInquiriesPreviousInquiries.map(inquiry => (
+            {customersDetailedPreviousInquiries.map(inquiry => (
                 <div key={inquiry.id} className="col-lg-6 d-flex">
                     <CustomersDetailedInquiryCard inquiry={inquiry} size="sm" />
                 </div>
@@ -357,6 +357,137 @@ const CustomersDetailedInquiries = ({ customersDetailedInquiriesLatestInquiry, c
         </div>
     </>
 );
+
+const CustomersDetailedCharts = ({ customerIdName, customerData, allInquiries }) => {
+    const datasetDataLength = customerData.length;
+    const totalNumMessages = allInquiries.reduce((accumulator, inquiry) => accumulator + parseInt(inquiry.numMessages), 0);
+
+    return (
+        <>
+            <h3>Orders</h3>
+            <h4>Historical purchase prices</h4>
+            <Chart
+                id="customers-detailed-charts-1"
+                options={{
+                    type: "bar",
+                    data: {
+                        labels: [...Array(datasetDataLength).keys()].map(i => (2019 - (datasetDataLength - 1) + i).toString()),
+                        datasets: [
+                            {
+                                label: customerIdName,
+                                data: customerData,
+                                fill: false
+                            },
+                            {
+                                label: "Customers average",
+                                data: [...Array(datasetDataLength)].map(() => (
+                                    Math.floor(Math.random() * 200) + Math.floor(Math.random() * 200) + Math.floor(Math.random() * 200) +
+                                    Math.floor(Math.random() * 200) + Math.floor(Math.random() * 200) + 1000)
+                                ), // The multiple Math.floor(Math.random) is there to achieve a less random looking distribution
+                                fill: false
+                            },
+                            {
+                                label: "Estimated",
+                                data: [...Array(datasetDataLength)].map(() => (
+                                    Math.floor(Math.random() * 200) + Math.floor(Math.random() * 200) + Math.floor(Math.random() * 200) +
+                                    Math.floor(Math.random() * 200) + Math.floor(Math.random() * 200) + 850)
+                                ), // The multiple Math.floor(Math.random) is there to achieve a less random looking distribution
+                                fill: false
+                            }
+                        ]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                scaleLabel: {
+                                    display: true,
+                                    labelString: "British Pound (£)"
+                                }
+                            }]
+                        }
+                    }
+                }}
+            />
+
+            <h3>Inquiries</h3>
+            <h4>Number of inquiry messages</h4>
+            <Chart
+                id="customers-detailed-charts-2"
+                options={{
+                    type: "line",
+                    data: {
+                        labels: allInquiries.map(inquiry => inquiry.date),
+                        datasets: [
+                            {
+                                label: customerIdName,
+                                data: allInquiries.map(inquiry => inquiry.numMessages),
+                                fill: false
+                            },
+                            {
+                                label: "Customers average",
+                                data: [...Array(datasetDataLength)].map(() => (
+                                    Math.floor(Math.random() * 4) + Math.floor(Math.random() * 4) + Math.floor(Math.random() * 4) +
+                                    Math.floor(Math.random() * 4) + Math.floor(Math.random() * 4) + 3)
+                                ), // The multiple Math.floor(Math.random) is there to achieve a less random looking distribution
+                                fill: false
+                            }
+                        ]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                }}
+            />
+            <div className="row">
+                <div className="col-lg-6">
+                    <h4>Status distribution</h4>
+                    <Chart id="customers-detailed-charts-3"
+                        options={{
+                            type: "pie",
+                            data: {
+                                labels: ["Resolved", "Unresolved", "Unknown"],
+                                datasets: [
+                                    {
+                                        data: [allInquiries.filter(inquiry => inquiry.resolved).length, allInquiries.filter(inquiry => !inquiry.resolved).length, 1]
+                                    }
+                                ]
+                            }
+                        }}
+                    />
+                </div>
+                <div className="col-lg-6">
+                    <h4>Time before response</h4>
+                    <Chart id="customers-detailed-charts-4"
+                        options={{
+                            type: "pie",
+                            data: {
+                                labels: ["< 2 days", "< 1 week", "< 1 month", "< 3 months", "Other"],
+                                datasets: [
+                                    {
+                                        data: [
+                                            Math.floor(totalNumMessages * 0.4),
+                                            Math.floor(totalNumMessages * 0.3),
+                                            Math.floor(totalNumMessages * 0.15),
+                                            Math.floor(totalNumMessages * 0.1),
+                                            Math.floor(totalNumMessages * 0.05)
+                                        ]
+                                    }
+                                ]
+                            }
+                        }}
+                    />
+                </div>
+            </div>
+
+        </>
+    );
+};
 
 const CustomersDetailedSettings = () => (
     <>
@@ -435,13 +566,20 @@ class Customers extends Component {
                     <React.Fragment />
                     :
                     <CustomersDetailedInquiries
-                        customersDetailedInquiriesLatestInquiry={customersDetailedInquiriesLatestInquiry}
-                        customersDetailedInquiriesPreviousInquiries={customersDetailedInquiriesPreviousInquiries}
+                        customersDetailedLatestInquiry={customersDetailedLatestInquiry}
+                        customersDetailedPreviousInquiries={customersDetailedPreviousInquiries}
                     />
             },
             {
                 name: "Summary charts",
-                component: <React.Fragment />
+                component: this.props.test ?
+                    <React.Fragment />
+                    :
+                    <CustomersDetailedCharts
+                        customerIdName={`${customersList[this.state.customerIndex].id} ${customersList[this.state.customerIndex].firstName} ${customersList[this.state.customerIndex].lastName}`}
+                        customerData={[...customersDetailedOrders, 1994]}
+                        allInquiries={[...customersDetailedPreviousInquiries, customersDetailedLatestInquiry]}
+                    />
             },
             {
                 name: "Settings",
