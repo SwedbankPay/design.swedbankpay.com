@@ -21,7 +21,7 @@ import {
     customersDetailedPreviousInquiries
 } from "./constants";
 
-const { actionList, datepicker, tabs } = window.dg;
+const { actionList, datepicker } = window.dg;
 
 const createNumArray = (length, baseNum, addNum) => (
     [...Array(length)].map(() => (
