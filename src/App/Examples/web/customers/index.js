@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import PropTypes from "prop-types";
 import { DocContainer, ComponentPreview } from "@docutils";
 
@@ -131,16 +131,7 @@ class CustomersDetailed extends Component {
     }
 
     componentDidUpdate () {
-        (this.state.tabIndex === 0 || this.state.tabIndex === 1) && datepicker.init();
-
         actionList.init();
-        tabs.init();
-    }
-
-    componentDidMount () {
-        (this.state.tabIndex === 0 || this.state.tabIndex === 1) && datepicker.init();
-        actionList.init();
-        tabs.init();
     }
 
     selectTab (e, i) {
@@ -188,7 +179,11 @@ class CustomersDetailed extends Component {
                                             </div>
                                         </div>
                                         <div className="col-xs-auto">
-                                            <ActionListComponent classNames="anchor-top-right" items={customersDetailedActionList} />
+                                            <ActionListComponent
+                                                id="customer-detailed-action-list"
+                                                classNames="anchor-top-right"
+                                                items={this.props.customersDetailedActionList}
+                                            />
                                         </div>
                                     </div>
                                     <div className="row d-block d-sm-none">
@@ -228,30 +223,37 @@ class CustomersDetailed extends Component {
 
 }
 
-const CustomersDetailedDatePickerGroup = () => (
-    <div className="row">
-        <div className="col-sm-6">
-            <DatepickerComponent
-                value="2000-01-01"
-                label="From:"
-                prefixType="icon"
-                prefixValue="event"
-                fulldate
-                id="init-value-datepicker"
-            />
+const CustomersDetailedDatePickerGroup = () => {
+
+    useEffect(() => {
+        datepicker.init();
+    });
+
+    return (
+        <div className="row">
+            <div className="col-sm-6">
+                <DatepickerComponent
+                    value="2000-01-01"
+                    label="From:"
+                    prefixType="icon"
+                    prefixValue="event"
+                    fulldate
+                    id="init-value-datepicker"
+                />
+            </div>
+            <div className="col-sm-6">
+                <DatepickerComponent
+                    value="2020-01-01"
+                    label="To:"
+                    prefixType="icon"
+                    prefixValue="event"
+                    fulldate
+                    id="init-value-datepicker"
+                />
+            </div>
         </div>
-        <div className="col-sm-6">
-            <DatepickerComponent
-                value="2020-01-01"
-                label="To:"
-                prefixType="icon"
-                prefixValue="event"
-                fulldate
-                id="init-value-datepicker"
-            />
-        </div>
-    </div>
-);
+    );
+};
 
 const CustomersDetailedOrders = ({ customersDetailedOrdersSteps, customersDetailedOrders }) => (
     <>
@@ -544,6 +546,14 @@ class Customers extends Component {
         });
     }
 
+    componentDidUpdate () {
+        actionList.init();
+    }
+
+    componentDidMount () {
+        actionList.init();
+    }
+
     render () {
 
         // customersDetailedTabs is kept here because of the component value
@@ -592,7 +602,11 @@ class Customers extends Component {
         return (
             <DocContainer>
                 <CustomersOverview setCustomerIndex={customerIndex => this.setCustomerIndex(customerIndex)}/>
-                <CustomersDetailed customer={customersList[this.state.customerIndex]} customersDetailedTabs={customersDetailedTabs} />
+                <CustomersDetailed
+                    customer={customersList[this.state.customerIndex]}
+                    customersDetailedTabs={customersDetailedTabs}
+                    customersDetailedActionList={customersDetailedActionList}
+                />
             </DocContainer>
         );
     }

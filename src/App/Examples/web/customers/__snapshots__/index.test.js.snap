@@ -239,15 +239,16 @@ exports[`Examples: Customers CustomersDetailed renders 1`] = `
               >
                 <ActionList
                   classNames="anchor-top-right"
+                  id="customer-detailed-action-list"
                   items={
                     Array [
                       Object {
-                        "icon": "edit",
-                        "name": "Edit",
+                        "icon": "test",
+                        "name": "Item1",
                       },
                       Object {
-                        "icon": "delete",
-                        "name": "Delete",
+                        "icon": "test",
+                        "name": "Item2",
                       },
                     ]
                   }
@@ -1387,6 +1388,18 @@ exports[`Examples: Customers renders 1`] = `
         "phone": "+47 *** ** ***",
         "status": "default",
       }
+    }
+    customersDetailedActionList={
+      Array [
+        Object {
+          "icon": "edit",
+          "name": "Edit",
+        },
+        Object {
+          "icon": "delete",
+          "name": "Delete",
+        },
+      ]
     }
     customersDetailedTabs={
       Array [

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import PropTypes from "prop-types";
 import { DocContainer, ComponentPreview } from "@docutils";
 
@@ -66,21 +66,28 @@ const SettingsBasic = () => (
     </>
 );
 
-const SettingsEmailNotification = ({ emailNotif, toggleEmailNotif }) => (
-    <div className="row mt-5">
-        <div className="col-lg-6">
-            <div className="togglebox" >
-                <input type="checkbox" id="togglebox-settings-email" checked={emailNotif} onChange={toggleEmailNotif} />
-                <label htmlFor="togglebox-settings-email">Email notifications</label>
+const SettingsEmailNotification = ({ emailNotif, toggleEmailNotif }) => {
+
+    useEffect(() => {
+        rangeslider.init();
+    });
+
+    return (
+        <div className="row mt-5">
+            <div className="col-lg-6">
+                <div className="togglebox" >
+                    <input type="checkbox" id="togglebox-settings-email" checked={emailNotif} onChange={toggleEmailNotif} />
+                    <label htmlFor="togglebox-settings-email">Email notifications</label>
+                </div>
+            </div>
+            <div className="col-lg-6">
+                <label className="d-none d-lg-block">Email notification frequency</label>
+                <Rangeslider min={1} max={50} step={1} value={7} valueLabel valueLabelPrefix="Every" valueLabelPostfix="days" disabled={!emailNotif} />
             </div>
         </div>
-        <div className="col-lg-6">
-            <label className="d-none d-lg-block">Email notification frequency</label>
-            <Rangeslider min={1} max={50} step={1} value={7} valueLabel valueLabelPrefix="Every" valueLabelPostfix="days" disabled={!emailNotif} />
-        </div>
-    </div>
 
-);
+    );
+};
 
 const SettingsDescription = () => (
     <>
@@ -134,18 +141,6 @@ class Settings extends Component {
             emailNotif: true
         };
 
-    }
-
-    componentDidMount () {
-        if (this.state.emailNotif) {
-            rangeslider.init();
-        }
-    }
-
-    componentDidUpdate () {
-        if (this.state.emailNotif) {
-            rangeslider.init();
-        }
     }
 
     toggleEmailNotif () {

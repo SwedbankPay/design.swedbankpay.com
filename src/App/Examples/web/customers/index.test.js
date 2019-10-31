@@ -57,25 +57,36 @@ describe("Examples: Customers", () => {
             }
         ];
 
+        const mockActionList = [
+            {
+                name: "Item1",
+                icon: "test"
+            },
+            {
+                name: "Item2",
+                icon: "test"
+            }
+        ];
+
         it("is defined", () => {
             expect(CustomersDetailed).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<CustomersDetailed customer={mockCustomer} customersDetailedTabs={mockTabs} />);
+            const wrapper = shallow(<CustomersDetailed customer={mockCustomer} customersDetailedTabs={mockTabs} customersDetailedActionList={mockActionList} />);
 
             expect(wrapper).toMatchSnapshot();
         });
 
         it("contains breadcrumb with correct customer id", () => {
-            const wrapper = shallow(<CustomersDetailed customer={mockCustomer} customersDetailedTabs={mockTabs} />);
+            const wrapper = shallow(<CustomersDetailed customer={mockCustomer} customersDetailedTabs={mockTabs} customersDetailedActionList={mockActionList} />);
             const breadcrumb = wrapper.find(".breadcrumb");
 
             expect(breadcrumb.contains(<li><span>ctest</span></li>)).toEqual(true);
         });
 
         it("contains MediaObject with media-body with correct customer firstName, lastName, email and phone", () => {
-            const wrapper = shallow(<CustomersDetailed customer={mockCustomer} customersDetailedTabs={mockTabs} />);
+            const wrapper = shallow(<CustomersDetailed customer={mockCustomer} customersDetailedTabs={mockTabs} customersDetailedActionList={mockActionList} />);
             const mediaBodyLg = wrapper.find(".d-none.d-sm-block").find(".media-body");
             const mediaBodySm = wrapper.find(".d-block.d-sm-none").find(".media-body");
 
@@ -86,7 +97,7 @@ describe("Examples: Customers", () => {
         });
 
         it("contains status with correct status text and type", () => {
-            const wrapper = shallow(<CustomersDetailed customer={mockCustomer} customersDetailedTabs={mockTabs} />);
+            const wrapper = shallow(<CustomersDetailed customer={mockCustomer} customersDetailedTabs={mockTabs} customersDetailedActionList={mockActionList} />);
             const status = wrapper.find(".status");
 
             expect(status.contains(<span className="status status-default">New</span>)).toEqual(true);
