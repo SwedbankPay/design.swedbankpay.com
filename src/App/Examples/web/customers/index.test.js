@@ -9,7 +9,8 @@ import Customers,
     CustomersDetailedInquiries,
     CustomersDetailedInquiryCard,
     CustomersDetailedSettings,
-    CustomersDetailedCharts } from "./index";
+    CustomersDetailedCharts,
+    CustomersDetailedDialog } from "./index";
 
 describe("Examples: Customers", () => {
     it("is defined", () => {
@@ -287,6 +288,28 @@ describe("Examples: Customers", () => {
                 customerInquiries={mockCustomerInquiries}
                 createNumArray={mockCreateNumArray}
             />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("CustomersDetailedDialog", () => {
+        const mockCustomer = {
+            id: "ctest",
+            firstName: "Sven",
+            lastName: "Svensson",
+            email: "sven.svensson@email.com",
+            phone: "+47 *** ** ***",
+            location: "Visby",
+            status: "default"
+        };
+
+        it("is defined", () => {
+            expect(CustomersDetailedDialog).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<CustomersDetailedDialog customer={mockCustomer} />);
 
             expect(wrapper).toMatchSnapshot();
         });

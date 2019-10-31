@@ -52,23 +52,6 @@ exports[`Examples: index renders 1`] = `
               ],
               "title": "Web pages",
             },
-            Object {
-              "path": "/examples/templates",
-              "redirect": "/examples/templates/presentations",
-              "routes": Array [
-                Object {
-                  "componentPath": "templates/presentations",
-                  "path": "/examples/templates/presentations",
-                  "title": "Presentations",
-                },
-                Object {
-                  "componentPath": "templates/posters",
-                  "path": "/examples/templates/posters",
-                  "title": "Posters",
-                },
-              ],
-              "title": "Template usage",
-            },
           ]
         }
       />
@@ -131,27 +114,6 @@ exports[`Examples: index renders 1`] = `
               ]
             }
             title="Web pages"
-          />
-          <RenderRoutes
-            appFolder="Examples"
-            key="renderRoutes_Template usage"
-            path="/examples/templates"
-            redirect="/examples/templates/presentations"
-            routes={
-              Array [
-                Object {
-                  "componentPath": "templates/presentations",
-                  "path": "/examples/templates/presentations",
-                  "title": "Presentations",
-                },
-                Object {
-                  "componentPath": "templates/posters",
-                  "path": "/examples/templates/posters",
-                  "title": "Posters",
-                },
-              ]
-            }
-            title="Template usage"
           />
           <Redirect
             from="/examples/*"

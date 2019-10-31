@@ -4,7 +4,6 @@ import { DocContainer, ComponentPreview } from "@docutils";
 
 import PaginationComponent from "@components/Pagination";
 import MediaObjectComponent from "@components/MediaObject";
-import ActionListComponent from "@components/ActionList";
 import { Datepicker as DatepickerComponent, Togglebox, Checkbox } from "@components/FormComponents";
 import StepsComponent from "@components/Steps";
 import ActionLinkComponent from "@components/ActionLink";
@@ -21,7 +20,7 @@ import {
     customersDetailedPreviousInquiries
 } from "./constants";
 
-const { actionList, datepicker } = window.dg;
+const { actionList, datepicker, dialog } = window.dg;
 
 const createNumArray = (length, baseNum, addNum) => (
     [...Array(length)].map(() => (
@@ -132,6 +131,11 @@ class CustomersDetailed extends Component {
 
     componentDidUpdate () {
         actionList.init();
+        dialog.init();
+    }
+
+    componentDidMount () {
+        dialog.init();
     }
 
     selectTab (e, i) {
@@ -179,12 +183,17 @@ class CustomersDetailed extends Component {
                                             </div>
                                         </div>
                                         <div className="col-xs-auto">
-                                            <ActionListComponent
-                                                id="customer-detailed-action-list"
-                                                classNames="anchor-top-right"
-                                                items={this.props.customersDetailedActionList}
-                                            />
+                                            <div id="customer-detailed-action-list" className="action-list anchor-top-right">
+                                                <button id="actionListToggle" type="button" className="action-toggle" aria-haspopup="true">
+                                                    <i className="material-icons">more_vert</i>
+                                                </button>
+                                                <div className="action-menu" aria-labelledby="actionListToggle">
+                                                    <a href="#" onClick={e => e.preventDefault()}><i className="material-icons">edit</i>Edit</a>
+                                                    <a href="#" onClick={e => e.preventDefault()} data-dialog-open="customers-detailed-dialog"><i className="material-icons">delete</i>Delete</a>
+                                                </div>
+                                            </div>
                                         </div>
+                                        <CustomersDetailedDialog customer={this.props.customer} />
                                     </div>
                                     <div className="row d-block d-sm-none">
                                         <div className="col-sm-auto pl-0">
@@ -222,6 +231,26 @@ class CustomersDetailed extends Component {
     }
 
 }
+
+const CustomersDetailedDialog = ({ customer }) => (
+    <div className="dialog" id="customers-detailed-dialog" role="dialog" aria-modal="true" aria-labelledby="aria-label-dia" aria-describedby="aria-describe-dia">
+        <section>
+            <header className="dialog-header" id="aria-label-dia">
+                <h4>Delete customer {customer.id} {customer.firstName} {customer.lastName}?</h4>
+                <button type="button" className="dialog-close">
+                    <i className="material-icons">close</i>
+                </button>
+            </header>
+            <div className="dialog-body" id="aria-describe-dia">
+                <p>Are you sure you want to permanently delete the customer {customer.id} {customer.firstName} {customer.lastName}?</p>
+            </div>
+            <footer className="dialog-footer">
+                <button className="btn btn-guiding" type="button" data-dialog-close="true">Cancel</button>
+                <button className="btn btn-destructive" type="button">Delete</button>
+            </footer>
+        </section>
+    </div>
+);
 
 const CustomersDetailedDatePickerGroup = () => {
 
@@ -532,6 +561,14 @@ class Customers extends Component {
         };
     }
 
+    componentDidUpdate () {
+        actionList.init();
+    }
+
+    componentDidMount () {
+        actionList.init();
+    }
+
     setCustomerIndex (customerIndex) {
         this.setState({
             customerIndex
@@ -544,14 +581,6 @@ class Customers extends Component {
             left: 0,
             behavior: "instant"
         });
-    }
-
-    componentDidUpdate () {
-        actionList.init();
-    }
-
-    componentDidMount () {
-        actionList.init();
     }
 
     render () {
@@ -675,6 +704,18 @@ CustomersDetailedCharts.propTypes = {
     })).isRequired
 };
 
+CustomersDetailedDialog.propTypes = {
+    customer: PropTypes.exact({
+        id: PropTypes.string.isRequired,
+        firstName: PropTypes.string.isRequired,
+        lastName: PropTypes.string.isRequired,
+        email: PropTypes.string.isRequired,
+        phone: PropTypes.string.isRequired,
+        location: PropTypes.string.isRequired,
+        status: PropTypes.string.isRequired
+    }).isRequired
+};
+
 export default Customers;
 
 export {
@@ -685,5 +726,6 @@ export {
     CustomersDetailedInquiries,
     CustomersDetailedInquiryCard,
     CustomersDetailedSettings,
-    CustomersDetailedCharts
+    CustomersDetailedCharts,
+    CustomersDetailedDialog
 };

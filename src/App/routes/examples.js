@@ -44,26 +44,5 @@ module.exports = [
                 componentPath: "web/customers"
             }
         ]
-    },
-
-    /**
-     * Template usage
-     */
-    {
-        title: "Template usage",
-        path: "/examples/templates",
-        redirect: "/examples/templates/presentations",
-        routes: [
-            {
-                title: "Presentations",
-                path: "/examples/templates/presentations",
-                componentPath: "templates/presentations"
-            },
-            {
-                title: "Posters",
-                path: "/examples/templates/posters",
-                componentPath: "templates/posters"
-            }
-        ]
     }
 ];
