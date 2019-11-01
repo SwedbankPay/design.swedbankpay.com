@@ -9,4 +9,4 @@
  - Image and download links in deployment fixed
 
 ### Next release
- - Alert color names in core/colors updated
+ - Core/colors improved (All names use same style, main colors split into sublists)
