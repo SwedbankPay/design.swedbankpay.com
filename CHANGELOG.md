@@ -9,4 +9,4 @@
  - Image and download links in deployment fixed
 
  # Next release
-  - Chart colors and opacity changed
+  - Charts updated
