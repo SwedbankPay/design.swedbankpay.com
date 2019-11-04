@@ -28,9 +28,9 @@ describe("scripts - dashboard: pie chart", () => {
                 datasets: [
                     {
                         data: [1, 2, 3],
-                        backgroundColor: ["rgba(TEST, 0.7)", "rgba(TEST2, 0.7)", "rgba(TEST3, 0.7)"],
-                        borderColor: ["rgba(TEST, 0.9)", "rgba(TEST2, 0.9)", "rgba(TEST3, 0.9)"],
-                        hoverBackgroundColor: ["rgba(TEST, 0.9)", "rgba(TEST2, 0.9)", "rgba(TEST3, 0.9)"],
+                        backgroundColor: ["rgba(TEST, 1)", "rgba(TEST2, 1)", "rgba(TEST3, 1)"],
+                        borderColor: ["rgba(TEST, 1)", "rgba(TEST2, 1)", "rgba(TEST3, 1)"],
+                        hoverBackgroundColor: ["rgba(TEST, 1)", "rgba(TEST2, 1)", "rgba(TEST3, 1)"],
                         hoverBorderColor: ["rgba(TEST, 1)", "rgba(TEST2, 1)", "rgba(TEST3, 1)"],
                         borderWidth: 1,
                         hoverBorderWidth: 2

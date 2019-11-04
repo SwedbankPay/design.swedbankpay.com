@@ -1,5 +1,16 @@
 import Chart from "chart.js";
 
+// Set global defaults for Chart
+Chart.defaults.global.legend.labels.usePointStyle = true;
+Chart.defaults.global.defaultFontColor = "#512B2B"; // Brand secondary as font color
+Chart.plugins.register({
+    beforeDraw (chart) {
+        const xAxis = chart.scales["x-axis-0"];
+
+        xAxis && (xAxis.options.gridLines.display = false); // Check whether this type of chart have x-axis, if so, remove the x-axis gridline
+    }
+});
+
 import initBarChart from "./bar";
 import initPieChart from "./pie";
 import initLineChart from "./line";
@@ -36,24 +47,24 @@ const _colorPoolGreen = [
     // "71, 195, 94" // lightened 10%
 ];
 
-const _init = (ctx, userOptions) => {
+const _init = (ctx, userOptions, colorPool) => {
     let options;
 
     switch (userOptions.type) {
         case "bar":
         case "horizontalBar":
-            options = initBarChart(userOptions, _colorPool);
+            options = initBarChart(userOptions, colorPool);
 
             break;
 
         case "pie":
         case "doughnut":
-            options = initPieChart(userOptions, _colorPool);
+            options = initPieChart(userOptions, colorPool);
 
             break;
 
         case "line":
-            options = initLineChart(userOptions, _colorPool);
+            options = initLineChart(userOptions, colorPool);
 
             break;
         default:
@@ -65,7 +76,7 @@ const _init = (ctx, userOptions) => {
     }
 };
 
-const chart = (id, userOptions) => {
+const chart = (id, userOptions, colorPool) => {
     const element = document.getElementById(id);
 
     if (element && element.tagName === "CANVAS") {
@@ -74,7 +85,8 @@ const chart = (id, userOptions) => {
         } else if (!userOptions.data) {
             console.warn("Chart: You need to provide options.data.");
         } else {
-            _init(element.getContext("2d"), userOptions);
+            // ..._colorPool.slice(0, 3) is due to the three first colors always having to be included (because of branding)
+            _init(element.getContext("2d"), userOptions, colorPool ? [..._colorPool.slice(0, 3), ...colorPool] : _colorPool);
         }
 
     } else if (element) {

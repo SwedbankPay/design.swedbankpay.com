@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocContainer } from "@docutils";
+import { ComponentPreview, DocContainer, Property } from "@docutils";
 import Chart from "@components/Chart";
 
 const LineChart = () => (
@@ -490,6 +490,55 @@ dg.chart("mixed-chart", {
     </>
 );
 
+const CustomColors = () => (
+    <>
+        <h2 id="custom-colors">Custom colors</h2>
+        <p>Except for the three first colors, the rest of the colors are customizable. Call <Property value="dg.chart" /> with a last optional argument consisting of a list of RGB color codes.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure >
+            <Chart id="custom-color-pie"
+                options={{
+                    type: "pie",
+                    data: {
+                        labels: ["Chrome", "Internet Explorer", "Firefox", "Edge", "Safari", "Opera", "Other"],
+                        datasets: [
+                            {
+                                data: [63.14, 11.43, 10.23, 4.34, 3.83, 1.56, 4.19]
+                            }
+                        ]
+                    }
+                }}
+                colorPool={["81, 43, 43",
+                    "81, 151, 27",
+                    "163, 139, 128",
+                    "114, 96, 94",
+                    "197, 19, 28"
+                ]}
+            />
+        </ComponentPreview>
+        <ComponentPreview language="javascript" codeFigure >
+            {`
+dg.chart("custom-color-pie", {
+    type: "pie",
+    data: {
+        labels: ["Chrome", "Internet Explorer", "Firefox", "Edge", "Safari", "Opera", "Other"],
+        datasets: [
+            {
+                data: [63.14, 11.43, 10.23, 4.34, 3.83, 1.56, 4.19]
+            }
+        ]
+    }
+},
+["81, 43, 43",
+"81, 151, 27",
+"163, 139, 128",
+"114, 96, 94",
+"197, 19, 28"]);
+            `}
+        </ComponentPreview>
+
+    </>
+);
+
 class Charts extends Component {
     render () {
         return (
@@ -506,6 +555,7 @@ class Charts extends Component {
                 <BarChart />
                 <DoughnutAndPieCharts />
                 <MixingTypes />
+                <CustomColors />
             </DocContainer>
         );
     }
@@ -514,5 +564,5 @@ class Charts extends Component {
 export default Charts;
 
 /* For testing */
-export { LineChart, BarChart, DoughnutAndPieCharts, MixingTypes };
+export { LineChart, BarChart, DoughnutAndPieCharts, MixingTypes, CustomColors };
 

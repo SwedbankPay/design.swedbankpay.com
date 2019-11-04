@@ -27,16 +27,16 @@ const initBarChart = (userOptions, colorPool) => {
 
         data.forEach(() => {
             if (!type) {
-                preparedDataset.backgroundColor.push(`rgba(${colorPool[index]}, 0.7)`);
-                preparedDataset.borderColor.push(`rgba(${colorPool[index]}, 0.9)`);
-                preparedDataset.hoverBackgroundColor.push(`rgba(${colorPool[index]}, 0.9)`);
+                preparedDataset.backgroundColor.push(`rgba(${colorPool[index]}, 1)`);
+                preparedDataset.borderColor.push(`rgba(${colorPool[index]}, 1)`);
+                preparedDataset.hoverBackgroundColor.push(`rgba(${colorPool[index]}, 1)`);
                 preparedDataset.hoverBorderColor.push(`rgba(${colorPool[index]}, 1)`);
 
             } else if (type === "line") {
                 preparedDataset.backgroundColor.push(`rgba(${colorPool[index]}, 0.1)`);
-                preparedDataset.borderColor.push(`rgba(${colorPool[index]}, 0.8)`);
-                preparedDataset.pointBackgroundColor.push(`rgba(${colorPool[index]}, 0.9)`);
-                preparedDataset.pointBorderColor.push(`rgba(${colorPool[index]}, 0.9)`);
+                preparedDataset.borderColor.push(`rgba(${colorPool[index]}, 1)`);
+                preparedDataset.pointBackgroundColor.push(`rgba(${colorPool[index]}, 1)`);
+                preparedDataset.pointBorderColor.push(`rgba(${colorPool[index]}, 1)`);
                 preparedDataset.pointHoverBorderColor.push(`rgba(${colorPool[index]}, 1)`);
                 preparedDataset.pointHoverBackgroundColor.push(`rgba(${colorPool[index]}, 1)`);
             }

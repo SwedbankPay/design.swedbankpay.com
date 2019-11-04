@@ -16,11 +16,11 @@ const initLineChart = (userOptions, colorPool) => {
 
         dataset.data.forEach(() => {
             preparedDataset.backgroundColor.push(`rgba(${colorPool[index]}, 0.1)`);
-            preparedDataset.borderColor.push(`rgba(${colorPool[index]}, 0.8)`);
-            preparedDataset.pointBackgroundColor.push(`rgba(${colorPool[index]}, 0.9)`);
+            preparedDataset.borderColor.push(`rgba(${colorPool[index]}, 1)`);
+            preparedDataset.pointBackgroundColor.push(`rgba(${colorPool[index]}, 1)`);
             preparedDataset.pointHoverBackgroundColor.push(`rgba(${colorPool[index]}, 1)`);
             preparedDataset.pointHoverBorderColor.push(`rgba(${colorPool[index]}, 1)`);
-            preparedDataset.pointBorderColor.push(`rgba(${colorPool[index]}, 0.9)`);
+            preparedDataset.pointBorderColor.push(`rgba(${colorPool[index]}, 1)`);
         });
 
         return preparedDataset;

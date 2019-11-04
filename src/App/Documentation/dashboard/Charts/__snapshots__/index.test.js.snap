@@ -401,6 +401,93 @@ dg.chart("stacked-multi-bar-chart", {
 </Fragment>
 `;
 
+exports[`Dashboard: Charts CustomColors renders 1`] = `
+<Fragment>
+  <h2
+    id="custom-colors"
+  >
+    Custom colors
+  </h2>
+  <p>
+    Except for the three first colors, the rest of the colors are customizable. Call 
+    <Property
+      value="dg.chart"
+    />
+     with a last optional argument consisting of a list of RGB color codes.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Chart
+      colorPool={
+        Array [
+          "81, 43, 43",
+          "81, 151, 27",
+          "163, 139, 128",
+          "114, 96, 94",
+          "197, 19, 28",
+        ]
+      }
+      id="custom-color-pie"
+      options={
+        Object {
+          "data": Object {
+            "datasets": Array [
+              Object {
+                "data": Array [
+                  63.14,
+                  11.43,
+                  10.23,
+                  4.34,
+                  3.83,
+                  1.56,
+                  4.19,
+                ],
+              },
+            ],
+            "labels": Array [
+              "Chrome",
+              "Internet Explorer",
+              "Firefox",
+              "Edge",
+              "Safari",
+              "Opera",
+              "Other",
+            ],
+          },
+          "type": "pie",
+        }
+      }
+    />
+  </ComponentPreview>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    
+dg.chart("custom-color-pie", {
+    type: "pie",
+    data: {
+        labels: ["Chrome", "Internet Explorer", "Firefox", "Edge", "Safari", "Opera", "Other"],
+        datasets: [
+            {
+                data: [63.14, 11.43, 10.23, 4.34, 3.83, 1.56, 4.19]
+            }
+        ]
+    }
+},
+["81, 43, 43",
+"81, 151, 27",
+"163, 139, 128",
+"114, 96, 94",
+"197, 19, 28"]);
+            
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Dashboard: Charts DoughnutAndPieCharts renders 1`] = `
 <Fragment>
   <h2
@@ -1009,5 +1096,6 @@ exports[`Dashboard: Charts renders 1`] = `
   <BarChart />
   <DoughnutAndPieCharts />
   <MixingTypes />
+  <CustomColors />
 </DocContainer>
 `;
