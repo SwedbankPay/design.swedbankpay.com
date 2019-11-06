@@ -20,7 +20,7 @@ import {
     customersDetailedPreviousInquiries
 } from "./constants";
 
-const { actionList, datepicker, dialog } = window.dg;
+const { actionList, datepicker, dialog, tabs } = window.dg;
 
 const createNumArray = (length, baseNum, addNum) => (
     [...Array(length)].map(() => (
@@ -136,6 +136,7 @@ class CustomersDetailed extends Component {
 
     componentDidMount () {
         dialog.init();
+        tabs.init();
     }
 
     selectTab (e, i) {
