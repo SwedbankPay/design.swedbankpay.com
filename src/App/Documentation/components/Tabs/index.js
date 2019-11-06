@@ -12,19 +12,22 @@ const tabItems = ["Card", "Discounts", "Transactions", "Invoice", "Settings", "A
 const BasicUsage = () => (
     <>
         <h2 id="basic-usage">Basic usage</h2>
-        <p>Add class <Property value=".tabs" /> with a <Property value=".tabs-horizontal-desired_size" /> to a div containing an arrow icon along with <PrismCode className="language-html">{"<ul>"}</PrismCode> and nest <PrismCode className="language-html">{"<li>"}</PrismCode> as needed. The <Property value=".tabs-horizontal-desired_size" /> class determines when your tabs will switch from horizontal to collapsed. The available sizes can be found in our <Link to="/docs/core/breakpoints">breakpoints documentation</Link>.</p>
+        <p>Add class <Property value=".tabs" /> to a div containing <PrismCode className="language-html">{"<ul>"}</PrismCode>and nest <PrismCode className="language-html">{"<li>"}</PrismCode> as needed.
+        Make sure that the tabs will not overflow on screens of normal size.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <TabsComponent mode="sm" items={tabItems}/>
+            <TabsComponent items={tabItems}/>
         </ComponentPreview>
     </>
 );
 
-const Collapsed = () => (
+const TabsScroll = () => (
     <>
-        <h2 id="collapsed">Collapsed</h2>
-        <p>If no <Property value=".tabs-horizontal-desired_size" /> is provided then the tabs will always be in collapsed mode.</p>
+        <h2 id="tabs-scroll">Tabs with scroll</h2>
+        <p>To make tabs more mobile friendly, use classs <Property value=".tabs-scroll-{desired_size}" />.
+        The available sizes can be found in our <Link to="/docs/core/breakpoints">breakpoints documentation</Link>.
+        <Property value=".tabs-scroll-{desired_size}" /> will make the tabs scrollable in case of overflow.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <TabsComponent items={tabItems}/>
+            <TabsComponent items={tabItems} mode="md"/>
         </ComponentPreview>
     </>
 );
@@ -32,7 +35,7 @@ const Collapsed = () => (
 const JavascriptMethods = () => (
     <>
         <h2 id="javascript-methods">JavaScript methods</h2>
-        <JavascriptDocs componentName="tabs"open close />
+        <JavascriptDocs componentName="tabs" />
     </>
 );
 
@@ -48,7 +51,7 @@ class Tabs extends Component {
                     Use tabs to show which page or section that is active out of several options.
                 </p>
                 <BasicUsage />
-                <Collapsed />
+                <TabsScroll />
                 <JavascriptMethods />
             </DocContainer>
         );
@@ -58,4 +61,4 @@ class Tabs extends Component {
 export default Tabs;
 
 /* For testing */
-export { BasicUsage, Collapsed, JavascriptMethods };
+export { BasicUsage, TabsScroll, JavascriptMethods };

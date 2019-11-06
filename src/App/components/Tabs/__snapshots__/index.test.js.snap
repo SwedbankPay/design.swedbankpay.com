@@ -2,15 +2,10 @@
 
 exports[`Component: Tabs -  props mode is one of our breakpoints (xs, sm, md... ) 1`] = `
 <div
-  className="tabs tabs-horizontal-auto"
+  className="tabs tabs-scroll-auto"
 >
   
 
-  <i
-    className="material-icons"
-  >
-    keyboard_arrow_right
-  </i>
   <ul>
     <li
       className={null}
@@ -52,11 +47,6 @@ exports[`Component: Tabs -  renders 1`] = `
 >
   
 
-  <i
-    className="material-icons"
-  >
-    keyboard_arrow_right
-  </i>
   <ul>
     <li
       className={null}
@@ -98,11 +88,6 @@ exports[`Component: Tabs -  renders with class name tabs when prop mode is not s
 >
   
 
-  <i
-    className="material-icons"
-  >
-    keyboard_arrow_right
-  </i>
   <ul>
     <li
       className={null}

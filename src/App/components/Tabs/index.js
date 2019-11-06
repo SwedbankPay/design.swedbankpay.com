@@ -17,8 +17,7 @@ class Tabs extends Component {
         const { mode, items } = this.props;
 
         return (
-            <div className={`tabs${mode ? ` tabs-horizontal-${mode}` : ""}`}>{"\n"}
-                <i className="material-icons">keyboard_arrow_right</i>
+            <div className={`tabs${mode ? ` tabs-scroll-${mode}` : ""}`}>{"\n"}
                 <ul>
                     {items.map((name, i) => (
                         <li key={`tab-item-${name}-${i}`} className={this.state.active === i ? "active" : null}>{"\n"}
