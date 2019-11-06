@@ -10,12 +10,10 @@ class Tabs {
         this._el = el;
         this.id = el.id;
         this.classList = el.classList;
-        this.isOpen = el.classList.contains("tabs-open");
         this.hasActive = !!this._el.querySelector(SELECTORS.ACTIVE);
         this.openUl = this._el.querySelector("UL");
 
         this._el.addEventListener("click", e => {
-            this.flexDir = getComputedStyle(this.openUl).flexDirection;
 
             // Only move scrollbar when interacting with the tab elements
             if (e.target.tagName === "A") {

@@ -1,6 +1,11 @@
 .tabs {
     padding-left: 0;
     font-family: @brand-headline;
+    position: relative;
+    margin: @base-margin auto;
+    min-height: 25px;
+    display: flex;
+    z-index: @zindex-tabs;
 
     &.tabs-scroll {
         overflow: scroll;
@@ -18,6 +23,8 @@
         flex-direction: row;
         padding: 0;
         margin: 0;
+        display: flex;
+        width: 100%;
 
         li {
             display: block;
@@ -42,11 +49,10 @@
                 background-color: @brand-bg-gray;
                 padding: 0.5rem 1rem;
                 white-space: nowrap;
-                user-select: none;
-                -moz-user-select: none;
-                -webkit-user-drag: none;
-                -webkit-user-select: none;
-                -ms-user-select: none;
+                color: @brand-secondary;
+                display: block;
+                border-bottom: transparent;
+                text-decoration: none;
 
                 &:hover {
                     background-color: @brand-primary;
