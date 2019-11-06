@@ -23,7 +23,7 @@ const BasicUsage = () => (
 const TabsScroll = () => (
     <>
         <h2 id="tabs-scroll">Tabs with scroll</h2>
-        <p>To make tabs more mobile friendly, use classs <Property value=".tabs-scroll-{desired_size}" />.
+        <p>To make tabs more mobile friendly, use class <Property value=".tabs-scroll-{desired_size}" />.
         The available sizes can be found in our <Link to="/docs/core/breakpoints">breakpoints documentation</Link>.
         <Property value=".tabs-scroll-{desired_size}" /> will make the tabs scrollable in case of overflow.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>

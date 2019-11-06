@@ -70,7 +70,7 @@ exports[`Components: Tabs TabsScroll renders 1`] = `
     Tabs with scroll
   </h2>
   <p>
-    To make tabs more mobile friendly, use classs 
+    To make tabs more mobile friendly, use class 
     <Property
       value=".tabs-scroll-{desired_size}"
     />
