@@ -14,10 +14,10 @@ class Tabs extends Component {
     }
 
     render () {
-        const { mode, items } = this.props;
+        const { tabs, items } = this.props;
 
         return (
-            <div className={`tabs${mode ? ` tabs-scroll-${mode}` : ""}`}>{"\n"}
+            <div className={`tabs${tabs ? " tabs-scroll" : ""}`}>{"\n"}
                 <ul>
                     {items.map((name, i) => (
                         <li key={`tab-item-${name}-${i}`} className={this.state.active === i ? "active" : null}>{"\n"}
@@ -31,14 +31,8 @@ class Tabs extends Component {
 }
 
 Tabs.propTypes = {
-    mode: PropTypes.oneOf([
-        "xs",
-        "sm",
-        "md",
-        "lg",
-        "xl",
-        "xxl"]),
-    items: PropTypes.array.isRequired
+    items: PropTypes.array.isRequired,
+    tabs: PropTypes.bool
 };
 
 export default Tabs;

@@ -26,7 +26,7 @@ exports[`Components: Tabs BasicUsage renders 1`] = `
     >
       &lt;li&gt;
     </PrismCode>
-     as needed. Make sure that the tabs will not overflow on screens of normal size.
+     as needed. Make sure that the tabs will not overflow on screens of normal size. Consider revising the design or the decision to use tabs when more than 3 alternatives are present. If using tabs really is necessary, tabs with scroll might be a more suitable alternative.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -39,9 +39,6 @@ exports[`Components: Tabs BasicUsage renders 1`] = `
           "Card",
           "Discounts",
           "Transactions",
-          "Invoice",
-          "Settings",
-          "Audit trail",
         ]
       }
     />
@@ -72,19 +69,13 @@ exports[`Components: Tabs TabsScroll renders 1`] = `
   <p>
     To make tabs more mobile friendly, use class 
     <Property
-      value=".tabs-scroll-{desired_size}"
+      value=".tabs-scroll"
     />
-    . The available sizes can be found in our 
-    <Link
-      to="/docs/core/breakpoints"
-    >
-      breakpoints documentation
-    </Link>
     .
     <Property
-      value=".tabs-scroll-{desired_size}"
+      value=".tabs-scroll"
     />
-     will make the tabs scrollable in case of overflow.
+     will make the tabs scrollable in case of overflow. Note that the scrollable property is not optimized for desktop usage. Consider the usage when 4 or more tabs are present.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -100,9 +91,10 @@ exports[`Components: Tabs TabsScroll renders 1`] = `
           "Invoice",
           "Settings",
           "Audit trail",
+          "History",
         ]
       }
-      mode="md"
+      tabs={true}
     />
   </ComponentPreview>
 </Fragment>

@@ -7,15 +7,19 @@ import TabsComponent from "@components/Tabs";
 
 const { tabs } = window.dg;
 
-const tabItems = ["Card", "Discounts", "Transactions", "Invoice", "Settings", "Audit trail"];
+const tabItems = ["Card", "Discounts", "Transactions", "Invoice", "Settings", "Audit trail", "History"];
 
 const BasicUsage = () => (
     <>
         <h2 id="basic-usage">Basic usage</h2>
         <p>Add class <Property value=".tabs" /> to a div containing <PrismCode className="language-html">{"<ul>"}</PrismCode>and nest <PrismCode className="language-html">{"<li>"}</PrismCode> as needed.
-        Make sure that the tabs will not overflow on screens of normal size.</p>
+        Make sure that the tabs will not overflow on screens of normal size.
+        Consider revising the design or the decision to use tabs when more than 3
+        alternatives are present. If using tabs really is necessary, tabs with scroll might be
+        a more suitable alternative.  
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <TabsComponent items={tabItems}/>
+            <TabsComponent items={[...tabItems.slice(0,3)]}/>
         </ComponentPreview>
     </>
 );
@@ -23,11 +27,12 @@ const BasicUsage = () => (
 const TabsScroll = () => (
     <>
         <h2 id="tabs-scroll">Tabs with scroll</h2>
-        <p>To make tabs more mobile friendly, use class <Property value=".tabs-scroll-{desired_size}" />.
-        The available sizes can be found in our <Link to="/docs/core/breakpoints">breakpoints documentation</Link>.
-        <Property value=".tabs-scroll-{desired_size}" /> will make the tabs scrollable in case of overflow.</p>
+        <p>To make tabs more mobile friendly, use class <Property value=".tabs-scroll" />.
+        <Property value=".tabs-scroll" /> will make the tabs scrollable in case of overflow.
+        Note that the scrollable property is not optimized for desktop usage. Consider the usage
+        when 4 or more tabs are present.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <TabsComponent items={tabItems} mode="md"/>
+            <TabsComponent items={tabItems} tabs/>
         </ComponentPreview>
     </>
 );

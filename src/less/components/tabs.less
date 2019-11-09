@@ -55,7 +55,7 @@
                 text-decoration: none;
 
                 &:hover {
-                    background-color: @brand-primary;
+                    background-color: @yellow-faded;
                 }
             }
 
@@ -70,11 +70,3 @@
         }
     }
 }
-
-each(@grid-breakpoints, .(@max-width, @infix) {
-    .tabs-scroll-@{infix} {
-        @media screen and (max-width: @max-width) {
-            .tabs.tabs-scroll;
-        }
-    }
-});
