@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
 import { ComponentPreview, DocContainer, Property, JavascriptDocs } from "@docutils";
@@ -16,10 +15,9 @@ const BasicUsage = () => (
         Make sure that the tabs will not overflow on screens of normal size.
         Consider revising the design or the decision to use tabs when more than 3
         alternatives are present. If using tabs really is necessary, tabs with scroll might be
-        a more suitable alternative.  
-        </p>
+        a more suitable alternative.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <TabsComponent items={[...tabItems.slice(0,3)]}/>
+            <TabsComponent items={[...tabItems.slice(0, 3)]}/>
         </ComponentPreview>
     </>
 );
@@ -28,7 +26,7 @@ const TabsScroll = () => (
     <>
         <h2 id="tabs-scroll">Tabs with scroll</h2>
         <p>To make tabs more mobile friendly, use class <Property value=".tabs-scroll" />.
-        <Property value=".tabs-scroll" /> will make the tabs scrollable in case of overflow.
+            <Property value=".tabs-scroll" /> will make the tabs scrollable in case of overflow.
         Note that the scrollable property is not optimized for desktop usage. Consider the usage
         when 4 or more tabs are present.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
