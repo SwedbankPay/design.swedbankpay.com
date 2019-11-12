@@ -7,10 +7,9 @@ const Overview = () => (
         <h2 id="overview">Overview</h2>
         <p>Use class <Property value=".badge" /> along with <Property value=".badge-{color}" /> to display the badge of your choosing.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <p>Badge <span className="badge badge-default">default</span></p>
-            <p>Badge <span className="badge badge-yellow">yellow</span></p>
-            <p>Badge <span className="badge badge-blue">blue</span></p>
-            <p>Badge <span className="badge badge-red">red</span></p>
+            <p>Badge <span className="badge badge-default">Default</span></p>
+            <p>Badge <span className="badge badge-inactive">Inactive</span></p>
+            <p>Badge <span className="badge badge-warning">Warning</span></p>
         </ComponentPreview>
     </>
 );
@@ -21,9 +20,8 @@ const BadgeNumber = () => (
         <p>Badges are often used with numbers. Use <Property value=".badge-number" /> when a badge suited for use with numbers is desired.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <p>Badge <span className="badge badge-default badge-number">1</span></p>
-            <p>Badge <span className="badge badge-yellow badge-number">8</span></p>
-            <p>Badge <span className="badge badge-yellow badge-number">42</span></p>
-            <p>Badge <span className="badge badge-blue badge-number">100</span></p>
+            <p>Badge <span className="badge badge-inactive badge-number">8</span></p>
+            <p>Badge <span className="badge badge-warning badge-number">100</span></p>
         </ComponentPreview>
     </>
 );
