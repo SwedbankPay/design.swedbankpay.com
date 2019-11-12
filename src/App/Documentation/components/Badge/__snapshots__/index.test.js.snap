@@ -30,7 +30,7 @@ exports[`Components: Badge BadgeNumber renders 1`] = `
     <p>
       Badge 
       <span
-        className="badge badge-yellow badge-number"
+        className="badge badge-inactive badge-number"
       >
         8
       </span>
@@ -38,15 +38,7 @@ exports[`Components: Badge BadgeNumber renders 1`] = `
     <p>
       Badge 
       <span
-        className="badge badge-yellow badge-number"
-      >
-        42
-      </span>
-    </p>
-    <p>
-      Badge 
-      <span
-        className="badge badge-blue badge-number"
+        className="badge badge-warning badge-number"
       >
         100
       </span>
@@ -83,31 +75,23 @@ exports[`Components: Badge Overview renders 1`] = `
       <span
         className="badge badge-default"
       >
-        default
+        Default
       </span>
     </p>
     <p>
       Badge 
       <span
-        className="badge badge-yellow"
+        className="badge badge-inactive"
       >
-        yellow
+        Inactive
       </span>
     </p>
     <p>
       Badge 
       <span
-        className="badge badge-blue"
+        className="badge badge-warning"
       >
-        blue
-      </span>
-    </p>
-    <p>
-      Badge 
-      <span
-        className="badge badge-red"
-      >
-        red
+        Warning
       </span>
     </p>
   </ComponentPreview>
