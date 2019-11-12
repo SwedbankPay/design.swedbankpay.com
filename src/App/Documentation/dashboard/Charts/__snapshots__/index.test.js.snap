@@ -841,7 +841,6 @@ dg.chart("stepped-dashed-line-chart", {
                   24.78,
                   25.53,
                 ],
-                "fill": false,
                 "label": "DotA2 TI Prize Pool",
               },
               Object {
@@ -855,7 +854,6 @@ dg.chart("stepped-dashed-line-chart", {
                   4.94,
                   2.25,
                 ],
-                "fill": false,
                 "label": "LoL World Championship Prize Pool",
               },
             ],
@@ -902,13 +900,11 @@ dg.chart("advanced-line-chart", {
         datasets: [
             {
                 label: "DotA2 TI Prize Pool",
-                data: [1.6, 1.6, 2.87, 10.92, 18.42, 20.77, 24.78, 25.53],
-                fill: false
+                data: [1.6, 1.6, 2.87, 10.92, 18.42, 20.77, 24.78, 25.53]
             },
             {
                 label: "LoL World Championship Prize Pool",
-                data: [0.1, 2, 2.05, 2.13, 2.13, 5.07, 4.94, 2.25],
-                fill: false
+                data: [0.1, 2, 2.05, 2.13, 2.13, 5.07, 4.94, 2.25]
             }
         ]
     },
@@ -924,6 +920,67 @@ dg.chart("advanced-line-chart", {
                 }
             }]
         }
+    }
+});
+                
+  </ComponentPreview>
+  <h3>
+    With fill
+  </h3>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Chart
+      id="line-fill-chart"
+      options={
+        Object {
+          "data": Object {
+            "datasets": Array [
+              Object {
+                "data": Array [
+                  261,
+                  673,
+                  962,
+                  1067,
+                  1007,
+                  779,
+                ],
+                "fill": true,
+                "label": "Peak",
+              },
+            ],
+            "labels": Array [
+              "2013",
+              "2014",
+              "2015",
+              "2016",
+              "2017",
+              "2018",
+            ],
+          },
+          "type": "line-fill",
+        }
+      }
+    />
+  </ComponentPreview>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    
+dg.chart("line-fill-chart", {
+    type: "line-fill",
+    data: {
+        labels: ["2013", "2014", "2015", "2016", "2017", "2018"],
+        datasets: [
+            {
+                label: "Peak",
+                data: [261, 673, 962, 1067, 1007, 779],
+                fill: true
+            }
+        ]
     }
 });
                 
@@ -979,7 +1036,6 @@ exports[`Dashboard: Charts MixingTypes renders 1`] = `
                   40,
                   45,
                 ],
-                "fill": false,
                 "label": "Expected Growth",
                 "type": "line",
               },
@@ -1026,8 +1082,7 @@ dg.chart("mixed-chart", {
             {
                 label: "Expected Growth",
                 data: [20, 25, 30, 35, 40, 45],
-                type: "line", // Changes this dataset to become a line
-                fill: false
+                type: "line" // Changes this dataset to become a line
             }
         ]
     },

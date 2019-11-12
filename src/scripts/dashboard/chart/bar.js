@@ -33,7 +33,7 @@ const initBarChart = (userOptions, colorPool) => {
                 preparedDataset.hoverBorderColor.push(`rgba(${colorPool[index]}, 1)`);
 
             } else if (type === "line") {
-                preparedDataset.backgroundColor.push(`rgba(${colorPool[index]}, 0.1)`);
+                preparedDataset.backgroundColor.push(`rgba(${colorPool[index]}, 1)`);
                 preparedDataset.borderColor.push(`rgba(${colorPool[index]}, 1)`);
                 preparedDataset.pointBackgroundColor.push(`rgba(${colorPool[index]}, 1)`);
                 preparedDataset.pointBorderColor.push(`rgba(${colorPool[index]}, 1)`);

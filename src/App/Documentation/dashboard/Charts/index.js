@@ -93,13 +93,11 @@ dg.chart("stepped-dashed-line-chart", {
                         datasets: [
                             {
                                 label: "DotA2 TI Prize Pool",
-                                data: [1.6, 1.6, 2.87, 10.92, 18.42, 20.77, 24.78, 25.53],
-                                fill: false
+                                data: [1.6, 1.6, 2.87, 10.92, 18.42, 20.77, 24.78, 25.53]
                             },
                             {
                                 label: "LoL World Championship Prize Pool",
-                                data: [0.1, 2, 2.05, 2.13, 2.13, 5.07, 4.94, 2.25],
-                                fill: false
+                                data: [0.1, 2, 2.05, 2.13, 2.13, 5.07, 4.94, 2.25]
                             }
                         ]
                     },
@@ -127,13 +125,11 @@ dg.chart("advanced-line-chart", {
         datasets: [
             {
                 label: "DotA2 TI Prize Pool",
-                data: [1.6, 1.6, 2.87, 10.92, 18.42, 20.77, 24.78, 25.53],
-                fill: false
+                data: [1.6, 1.6, 2.87, 10.92, 18.42, 20.77, 24.78, 25.53]
             },
             {
                 label: "LoL World Championship Prize Pool",
-                data: [0.1, 2, 2.05, 2.13, 2.13, 5.07, 4.94, 2.25],
-                fill: false
+                data: [0.1, 2, 2.05, 2.13, 2.13, 5.07, 4.94, 2.25]
             }
         ]
     },
@@ -149,6 +145,40 @@ dg.chart("advanced-line-chart", {
                 }
             }]
         }
+    }
+});
+                `}
+            </ComponentPreview>
+
+            <h3>With fill</h3>
+            <ComponentPreview language="html" showCasePanel codeFigure >
+                <Chart id="line-fill-chart" options={{
+                    type: "line-fill",
+                    data: {
+                        labels: ["2013", "2014", "2015", "2016", "2017", "2018"],
+                        datasets: [
+                            {
+                                label: "Peak",
+                                data: [261, 673, 962, 1067, 1007, 779],
+                                fill: true
+                            }
+                        ]
+                    }
+                }} />
+            </ComponentPreview>
+            <ComponentPreview language="javascript" codeFigure >
+                {`
+dg.chart("line-fill-chart", {
+    type: "line-fill",
+    data: {
+        labels: ["2013", "2014", "2015", "2016", "2017", "2018"],
+        datasets: [
+            {
+                label: "Peak",
+                data: [261, 673, 962, 1067, 1007, 779],
+                fill: true
+            }
+        ]
     }
 });
                 `}
@@ -440,8 +470,7 @@ const MixingTypes = () => (
                         {
                             label: "Expected Growth",
                             data: [20, 25, 30, 35, 40, 45],
-                            type: "line",
-                            fill: false
+                            type: "line"
                         }
                     ]
                 },
@@ -470,8 +499,7 @@ dg.chart("mixed-chart", {
             {
                 label: "Expected Growth",
                 data: [20, 25, 30, 35, 40, 45],
-                type: "line", // Changes this dataset to become a line
-                fill: false
+                type: "line" // Changes this dataset to become a line
             }
         ]
     },

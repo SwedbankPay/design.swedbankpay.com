@@ -79,7 +79,7 @@ describe("scripts - dashboard: bar chart", () => {
                     {
                         type: "line",
                         data: [1, 2, 3],
-                        backgroundColor: ["rgba(TEST2, 0.1)", "rgba(TEST2, 0.1)", "rgba(TEST2, 0.1)"],
+                        backgroundColor: ["rgba(TEST2, 1)", "rgba(TEST2, 1)", "rgba(TEST2, 1)"],
                         borderColor: ["rgba(TEST2, 1)", "rgba(TEST2, 1)", "rgba(TEST2, 1)"],
                         pointBackgroundColor: ["rgba(TEST2, 1)", "rgba(TEST2, 1)", "rgba(TEST2, 1)"],
                         pointBorderColor: ["rgba(TEST2, 1)", "rgba(TEST2, 1)", "rgba(TEST2, 1)"],

@@ -28,7 +28,7 @@ describe("scripts - dashboard: line chart", () => {
                 datasets: [
                     {
                         data: [1, 2, 3],
-                        backgroundColor: ["rgba(TEST, 0.1)", "rgba(TEST, 0.1)", "rgba(TEST, 0.1)"],
+                        backgroundColor: ["rgba(TEST, 1)", "rgba(TEST, 1)", "rgba(TEST, 1)"],
                         borderColor: ["rgba(TEST, 1)", "rgba(TEST, 1)", "rgba(TEST, 1)"],
                         pointBackgroundColor: ["rgba(TEST, 1)", "rgba(TEST, 1)", "rgba(TEST, 1)"],
                         pointHoverBackgroundColor: ["rgba(TEST, 1)", "rgba(TEST, 1)", "rgba(TEST, 1)"],

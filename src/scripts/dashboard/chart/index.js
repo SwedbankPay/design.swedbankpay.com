@@ -3,6 +3,7 @@ import Chart from "chart.js";
 // Set global defaults for Chart
 Chart.defaults.global.legend.labels.usePointStyle = true;
 Chart.defaults.global.defaultFontColor = "#512B2B"; // Brand secondary as font color
+Chart.defaults.global.elements.line.fill = false;
 Chart.plugins.register({
     beforeDraw (chart) {
         const xAxis = chart.scales["x-axis-0"];
@@ -14,6 +15,7 @@ Chart.plugins.register({
 import initBarChart from "./bar";
 import initPieChart from "./pie";
 import initLineChart from "./line";
+import initLineFillChart from "./line-fill";
 
 const _colorPool = [
     "253, 193, 41", // brand primary
@@ -65,6 +67,15 @@ const _init = (ctx, userOptions, colorPool) => {
 
         case "line":
             options = initLineChart(userOptions, colorPool);
+
+            break;
+
+        case "line-fill":
+            options = initLineFillChart(userOptions, colorPool);
+            options = {
+                ...options,
+                type: "line"
+            };
 
             break;
         default:
