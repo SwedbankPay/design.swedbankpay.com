@@ -20,9 +20,11 @@ import initLineFillChart from "./line-fill";
 const _colorPool = [
     "253, 193, 41", // brand primary
     "238, 112, 35", // brand tertiary
-    "69, 114, 192", // neutral/info
+    "38, 205, 195", // info turquoise
+    "239, 183, 182", // info pink
     "49, 163, 174", // brand accent
     "37, 120, 134", // brand accent link
+    "69, 114, 192", // neutral/info
     "81, 43, 43", // brand secondary
     "163, 139, 128", // brand secondary light 2
     "114, 96, 94", // brand secondary light
