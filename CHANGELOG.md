@@ -9,5 +9,5 @@
  - Image and download links in deployment fixed
 
 ### Next release
- - Badge for number added
- - Badge types renamed
+ - Badge for numbers added
+ - Badge types renamed, colors updated
