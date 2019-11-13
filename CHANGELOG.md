@@ -7,3 +7,6 @@
  - Checkbox beneath Togglebox visible on line break bug fixed
  - Refresh bug on Resources and Templates sections fixed
  - Image and download links in deployment fixed
+
+### Next release
+ - Tabs with scroll added
