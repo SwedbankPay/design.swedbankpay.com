@@ -2,26 +2,17 @@ const initLineFillChart = (userOptions, colorPool) => {
     const prepareDataset = (dataset, index) => {
         const preparedDataset = {
             ...dataset,
-            backgroundColor: [],
-            borderColor: [],
-            pointBackgroundColor: [],
-            pointHoverBackgroundColor: [],
-            pointHoverBorderColor: [],
-            pointBorderColor: [],
+            backgroundColor: `rgba(${colorPool[index]}, 0.1)`,
+            borderColor: `rgba(${colorPool[index]}, 1)`,
+            pointBackgroundColor: `rgba(${colorPool[index]}, 1)`,
+            pointHoverBackgroundColor: `rgba(${colorPool[index]}, 1)`,
+            pointHoverBorderColor: `rgba(${colorPool[index]}, 1)`,
+            pointBorderColor: `rgba(${colorPool[index]}, 1)`,
             pointBorderWidth: 2,
             borderWidth: 4,
             pointRadius: 2,
             pointHoverRadius: 5
         };
-
-        dataset.data.forEach(() => {
-            preparedDataset.backgroundColor.push(`rgba(${colorPool[index]}, 0.1)`);
-            preparedDataset.borderColor.push(`rgba(${colorPool[index]}, 1)`);
-            preparedDataset.pointBackgroundColor.push(`rgba(${colorPool[index]}, 1)`);
-            preparedDataset.pointHoverBackgroundColor.push(`rgba(${colorPool[index]}, 1)`);
-            preparedDataset.pointHoverBorderColor.push(`rgba(${colorPool[index]}, 1)`);
-            preparedDataset.pointBorderColor.push(`rgba(${colorPool[index]}, 1)`);
-        });
 
         return preparedDataset;
     };

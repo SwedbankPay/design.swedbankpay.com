@@ -9,4 +9,4 @@
  - Image and download links in deployment fixed
 
  # Next release
-  - Charts updated (colors and opacity changed, no-fill set as default)
+  - Charts updated (colors and opacity changed, no-fill set as default, fixed color issues due to incorrect config)
