@@ -17,16 +17,23 @@ class Tabs {
 
             // Only move scrollbar when interacting with the tab elements
             if (e.target.tagName === "A") {
-                const scrollStart = this._el.scrollLeft;
-                const scrollTotalAmount = (e.target.offsetLeft - (this._el.offsetWidth / 2) + (e.target.offsetWidth / 2)) - scrollStart;
+                const scrollStart = this.openUl.scrollLeft;
+                const scrollTotalAmount = (e.target.offsetLeft - (this.openUl.offsetWidth / 2) + (e.target.offsetWidth / 2)) - scrollStart;
                 let scrolledCount = 0;
                 const smoothTabScroll = setInterval(() => {
-                    this._el.scrollLeft += scrollTotalAmount / 10;
+                    this.openUl.scrollLeft += scrollTotalAmount / 10;
                     scrolledCount = scrolledCount + 1;
                     (scrolledCount === 10) && window.clearInterval(smoothTabScroll);
                 }, 5);
             }
         });
+
+        if (this._el.classList.contains("tabs-scroll")) {
+            this.openUl.addEventListener("scroll", () => {
+                this._decideScrollFade();
+            });
+            this._decideScrollFade();
+        }
 
         if (!this.hasActive) {
             this._el.querySelector("li").classList.add("active");
@@ -43,6 +50,21 @@ class Tabs {
                 }
             });
         });
+    }
+
+    _decideScrollFade () {
+
+        if (this.openUl.scrollLeft !== 0) {
+            this._el.classList.add("tabs-fade-left");
+        } else {
+            this._el.classList.remove("tabs-fade-left");
+        }
+
+        if (this.openUl.scrollWidth - this.openUl.scrollLeft - this.openUl.clientWidth > 1) {
+            this._el.classList.add("tabs-fade-right");
+        } else {
+            this._el.classList.remove("tabs-fade-right");
+        }
     }
 }
 

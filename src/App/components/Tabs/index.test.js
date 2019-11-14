@@ -20,7 +20,7 @@ describe("Component: Tabs - ", () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    it("renders with class name tabs when prop tabs is not specified", () => {
+    it("renders with class name tabs when prop scroll is not specified", () => {
         const wrapper = shallow(<Tabs items={items} />);
         const hasScroll = wrapper.hasClass("tabs-scroll");
 
