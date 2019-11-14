@@ -32,6 +32,9 @@ class Tabs {
             this.openUl.addEventListener("scroll", () => {
                 this._decideScrollFade();
             });
+            this._el.addEventListener("resize", () => {
+                this._decideScrollFade();
+            });
             this._decideScrollFade();
         }
 
