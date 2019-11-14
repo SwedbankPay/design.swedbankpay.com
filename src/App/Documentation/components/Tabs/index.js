@@ -30,7 +30,7 @@ const TabsScroll = () => (
         Note that the scrollable property is not optimized for desktop usage. Consider the usage
         when 4 or more tabs are present.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <TabsComponent items={tabItems} tabs/>
+            <TabsComponent items={tabItems} scroll/>
         </ComponentPreview>
     </>
 );
