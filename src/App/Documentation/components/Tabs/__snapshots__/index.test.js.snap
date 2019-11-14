@@ -94,7 +94,7 @@ exports[`Components: Tabs TabsScroll renders 1`] = `
           "History",
         ]
       }
-      tabs={true}
+      scroll={true}
     />
   </ComponentPreview>
 </Fragment>
