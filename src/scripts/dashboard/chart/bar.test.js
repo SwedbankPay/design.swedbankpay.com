@@ -88,8 +88,8 @@ describe("scripts - dashboard: bar chart", () => {
                         borderWidth: 4,
                         hoverBorderWidth: 2,
                         pointBorderWidth: 2,
-                        pointRadius: 2,
-                        pointHoverRadius: 5
+                        pointRadius: 3,
+                        pointHoverRadius: 6
                     }
                 ]
             },

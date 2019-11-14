@@ -17,8 +17,8 @@ const initBarChart = (userOptions, colorPool) => {
             preparedDataset.pointHoverBackgroundColor = [];
             preparedDataset.borderWidth = 4;
             preparedDataset.pointBorderWidth = 2;
-            preparedDataset.pointRadius = 2;
-            preparedDataset.pointHoverRadius = 5;
+            preparedDataset.pointRadius = 3;
+            preparedDataset.pointHoverRadius = 6;
 
         } else {
             preparedDataset.hoverBackgroundColor = [];

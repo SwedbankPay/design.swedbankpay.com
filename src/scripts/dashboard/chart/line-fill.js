@@ -10,8 +10,8 @@ const initLineFillChart = (userOptions, colorPool) => {
             pointBorderColor: `rgba(${colorPool[index]}, 1)`,
             pointBorderWidth: 2,
             borderWidth: 4,
-            pointRadius: 2,
-            pointHoverRadius: 5
+            pointRadius: 3,
+            pointHoverRadius: 6
         };
 
         return preparedDataset;
