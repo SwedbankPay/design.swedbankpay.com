@@ -28,13 +28,11 @@ class Tabs {
             }
         });
 
+        // Add listeners in cases when the tabs is scrollable. Listeners are to decide if the tabs fades should be shown.
         if (this._el.classList.contains("tabs-scroll")) {
-            this.openUl.addEventListener("scroll", () => {
-                this._decideScrollFade();
-            });
-            this._el.addEventListener("resize", () => {
-                this._decideScrollFade();
-            });
+            this._decideScrollFade = this._decideScrollFade.bind(this);
+            this.openUl.addEventListener("scroll", this._decideScrollFade);
+            window.addEventListener("resize", this._decideScrollFade, { passive: true });
             this._decideScrollFade();
         }
 
