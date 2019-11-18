@@ -46,47 +46,6 @@ const Overview = () => (
         <ComponentPreview language="html" showCasePanel codeFigure>
             <TopbarComponent topbarContent={menu} logout id="demo-topbar" />
         </ComponentPreview>
-        <ComponentPreview language="html" showCasePanel codeFigure >
-            <div className="container-fluid">
-                <div className="row">
-                    <header className="topbar topbar-xl-wide" id="demo-topbar-1">
-                        <button type="button" className="topbar-btn">
-                            <i className="material-icons topbar-btn-icon">menu</i>
-                        </button>
-                        <a className="topbar-logo" href="/">
-                            <img src="/img/swedbankpay-logo.svg?8f76620b1e058f7a32c5f5b59e0adee5" alt="swedbankpay-logo" />
-                        </a>
-                        <nav className="topbar-nav">
-                            <div className="topbar-link-container">
-                                <button type="button" className="topbar-close">
-                                    <i className="material-icons">close</i>
-                                </button>
-                                <a href="#" className="active">
-                                    <i className="material-icons">home</i>
-                                    <span>Home</span>
-                                </a>
-                                <a href="#">
-                                    <i className="material-icons">shopping_cart</i>
-                                    <span>Purchase history</span>
-                                </a>
-                                <a href="#">
-                                    <i className="material-icons">settings</i>
-                                    <span>Settings</span>
-                                </a>
-                                <a className="topbar-link-right" href="#">
-                                    <i className="material-icons">exit_to_app</i>
-                                    <span>Log out</span>
-                                </a>
-                            </div>
-                        </nav>
-                    </header>
-                </div>
-                <div className="row">
-                    <div className="col-auto">Sidebar component...</div>
-                    <main className="col main-content border-left">Main content things...</main>
-                </div>
-            </div>
-        </ComponentPreview>
     </>
 );
 
