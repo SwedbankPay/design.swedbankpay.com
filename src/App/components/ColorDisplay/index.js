@@ -11,20 +11,32 @@ const ColorDisplay = ({ id, colorList, head, description, subListNames }) => (
             <div key={index}>
                 <h3>{subListName}</h3>
                 <ul className="list color-preview">
-                    {colorList.filter(elem => elem.inSubLists.includes(subListName)).map((elem, i) => (
-                        <li key={i} >
-                            <ColorPreview name={elem.name} hex={elem.hex} />
-                        </li>
-                    ))}
+                    {colorList.filter(elem => elem.inSubLists.includes(subListName)).map((elem, i) => {
+                        /* eslint-disable */
+                        const { inSubLists, ...elemProps } = elem; // Exclude property not needed by ColorPreview
+                        /* eslint-enable */
+
+                        return (
+                            <li key={i} >
+                                <ColorPreview {...elemProps} />
+                            </li>
+                        );
+                    })}
                 </ul>
             </div>))
             :
             <ul className="list color-preview">
-                {colorList.map((elem, i) => (
-                    <li key={i} >
-                        <ColorPreview name={elem.name} hex={elem.hex} />
-                    </li>
-                ))}
+                {colorList.map((elem, i) => {
+                    /* eslint-disable */
+                    const { inSubLists, ...elemProps } = elem; // Exclude property not needed by ColorPreview
+                    /* eslint-enable */
+
+                    return (
+                        <li key={i} >
+                            <ColorPreview {...elemProps} />
+                        </li>
+                    );
+                })}
             </ul>
         }
     </>

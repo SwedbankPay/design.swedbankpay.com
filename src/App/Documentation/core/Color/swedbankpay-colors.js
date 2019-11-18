@@ -2,41 +2,57 @@ export const mainText = [
     {
         name: "Yellow",
         hex: "#FDC129",
+        rgb: "253,193,41",
+        cmyk: "0/25/100/0",
         inSubLists: ["Communication color"]
     },
     {
         name: "Brown",
         hex: "#512B2B",
+        rgb: "81,43,43",
+        cmyk: "0/30/25/80",
         inSubLists: ["Text colors"]
     },
     {
         name: "Orange Main",
         hex: "#EE7023",
+        rgb: "238,112,35",
+        cmyk: "0/60/100/0",
         inSubLists: ["Text colors"]
     },
     {
         name: "Info Turquoise",
         hex: "#8ACDC3",
+        rgb: "138,205,195",
+        cmyk: "40/0/25/0",
         inSubLists: ["Secondary colors"]
     },
     {
         name: "Info Pink",
         hex: "#EFB7B6",
+        rgb: "239,183,182",
+        cmyk: "0/40/10/0",
         inSubLists: ["Secondary colors"]
     },
     {
         name: "Apricot",
         hex: "#FBF2EA",
+        rgb: "251,242,234",
+        cmyk: "0/7/9/0",
         inSubLists: ["Background colors"]
     },
     {
         name: "Light Turquoise",
         hex: "#EBF8F2",
+        rgb: "235,248,242",
+        cmyk: "9/0/7/0",
         inSubLists: ["Background colors"]
     },
     {
         name: "Turquoise",
         hex: "#31A3AE",
+        rgb: "49,163,174",
+        cmyk: "75/15/30/0",
         inSubLists: ["Links and buttons"]
 
     },
