@@ -107,29 +107,29 @@ const ItemList = () => (
             <ul className="item-list">
                 <li>
                     <div>
-                        <h5>Foo</h5>
+                        <h3>Foo</h3>
                         <small>Due date 2 days</small>
                     </div>
                     <div>
-                        <span className="h5 text-highlight">2120 kr</span>
+                        <span className="h3 text-highlight">2120 kr</span>
                     </div>
                 </li>
                 <li>
                     <div>
-                        <h5>Bar</h5>
+                        <h3>Bar</h3>
                         <small>Due date 1 day</small>
                     </div>
                     <div>
-                        <span className="h5 text-highlight">1100 kr</span>
+                        <span className="h3 text-highlight">1100 kr</span>
                     </div>
                 </li>
                 <li>
                     <div>
-                        <h5>Baz</h5>
+                        <h3>Baz</h3>
                         <small>Due date 5 days</small>
                     </div>
                     <div>
-                        <span className="h5 text-highlight">200 kr</span>
+                        <span className="h3 text-highlight">200 kr</span>
                     </div>
                 </li>
             </ul>
@@ -144,21 +144,21 @@ const ItemListLarge = () => (
             <ul className="item-list item-list-lg">
                 <li>
                     <div>
-                        <h5>Foo</h5>
+                        <h3>Foo</h3>
                         <small>Due date 2 days</small>
                     </div>
                     <div>
-                        <span className="h5 text-highlight">2120 kr</span>
+                        <span className="h3 text-highlight">2120 kr</span>
                     </div>
                     <footer><a href="#">Se faktura</a></footer>
                 </li>
                 <li>
                     <div>
-                        <h5>Bar</h5>
+                        <h3>Bar</h3>
                         <small>Due date 1 day</small>
                     </div>
                     <div>
-                        <span className="h5 text-highlight">1100 kr</span>
+                        <span className="h3 text-highlight">1100 kr</span>
                     </div>
                     <footer className="item-list-footer">
                         <a href="#">Se faktura</a>
@@ -166,11 +166,11 @@ const ItemListLarge = () => (
                 </li>
                 <li>
                     <div>
-                        <h5>Baz</h5>
+                        <h3>Baz</h3>
                         <small>Due date 5 days</small>
                     </div>
                     <div>
-                        <span className="h5 text-highlight">200 kr</span>
+                        <span className="h3 text-highlight">200 kr</span>
                     </div>
                     <footer className="item-list-footer">
                         <a href="#">Se faktura</a>
@@ -188,21 +188,21 @@ const ItemListBordered = () => (
             <ul className="item-list item-list-bordered">
                 <li>
                     <div>
-                        <h5>Foo</h5>
+                        <h3>Foo</h3>
                         <small>Due date 2 days</small>
                     </div>
                     <div>
-                        <span className="h5 text-highlight">2120 kr</span>
+                        <span className="h3 text-highlight">2120 kr</span>
                     </div>
                     <footer><a href="#">Se faktura</a></footer>
                 </li>
                 <li>
                     <div>
-                        <h5>Bar</h5>
+                        <h3>Bar</h3>
                         <small>Due date 1 day</small>
                     </div>
                     <div>
-                        <span className="h5 text-highlight">1100 kr</span>
+                        <span className="h3 text-highlight">1100 kr</span>
                     </div>
                     <footer className="item-list-footer">
                         <a href="#">Se faktura</a>
@@ -210,11 +210,11 @@ const ItemListBordered = () => (
                 </li>
                 <li>
                     <div>
-                        <h5>Baz</h5>
+                        <h3>Baz</h3>
                         <small>Due date 5 days</small>
                     </div>
                     <div>
-                        <span className="h5 text-highlight">200 kr</span>
+                        <span className="h3 text-highlight">200 kr</span>
                     </div>
                     <footer className="item-list-footer">
                         <a href="#">Se faktura</a>
