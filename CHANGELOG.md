@@ -7,3 +7,6 @@
  - Checkbox beneath Togglebox visible on line break bug fixed
  - Refresh bug on Resources and Templates sections fixed
  - Image and download links in deployment fixed
+
+### Next release
+ - Core/colors improved (All names use same style, main colors split into sublists)
