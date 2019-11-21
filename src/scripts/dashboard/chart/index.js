@@ -1,20 +1,35 @@
 import Chart from "chart.js";
 
+// Set global defaults for Chart
+Chart.defaults.global.legend.labels.usePointStyle = true;
+Chart.defaults.global.defaultFontColor = "#512B2B"; // Brand secondary as font color
+Chart.defaults.global.elements.line.fill = false;
+Chart.plugins.register({
+    beforeDraw (chart) {
+        const xAxis = chart.scales["x-axis-0"];
+
+        xAxis && (xAxis.options.gridLines.display = false); // Check whether this type of chart have x-axis, if so, remove the x-axis gridline
+    }
+});
+
 import initBarChart from "./bar";
 import initPieChart from "./pie";
 import initLineChart from "./line";
+import initLineFillChart from "./line-fill";
 
 const _colorPool = [
-    "45, 169, 68", // brand
-    "38, 108, 154", // neutral
-    "125, 85, 170", // purple
-    "255, 159, 0", // warning
-    "205, 46, 0", // danger
-    "19, 70, 17", // up forest green (custom)
-    "0, 52, 89", // prussian blue (custom)
-    "106, 1, 54", // tyrian purple (custom)
-    "245, 184, 65", // maximum yellow (red) (custom)
-    "255, 34, 12" // red (ryb) (custom)
+    "253, 193, 41", // brand primary
+    "238, 112, 35", // brand tertiary
+    "49, 163, 174", // brand accent
+    "138, 205, 195", // info turquoise
+    "239, 183, 182", // info pink
+    "37, 120, 134", // brand accent link
+    "69, 114, 192", // neutral/info
+    "81, 43, 43", // brand secondary
+    "163, 139, 128", // brand secondary light 2
+    "114, 96, 94", // brand secondary light
+    "197, 19, 28", // danger
+    "81, 151, 27" // success
 ];
 
 // Shades of green
@@ -36,24 +51,33 @@ const _colorPoolGreen = [
     // "71, 195, 94" // lightened 10%
 ];
 
-const _init = (ctx, userOptions) => {
+const _init = (ctx, userOptions, colorPool) => {
     let options;
 
     switch (userOptions.type) {
         case "bar":
         case "horizontalBar":
-            options = initBarChart(userOptions, _colorPool);
+            options = initBarChart(userOptions, colorPool);
 
             break;
 
         case "pie":
         case "doughnut":
-            options = initPieChart(userOptions, _colorPool);
+            options = initPieChart(userOptions, colorPool);
 
             break;
 
         case "line":
-            options = initLineChart(userOptions, _colorPool);
+            options = initLineChart(userOptions, colorPool);
+
+            break;
+
+        case "line-fill":
+            options = initLineFillChart(userOptions, colorPool);
+            options = {
+                ...options,
+                type: "line"
+            };
 
             break;
         default:
@@ -65,7 +89,7 @@ const _init = (ctx, userOptions) => {
     }
 };
 
-const chart = (id, userOptions) => {
+const chart = (id, userOptions, colorPool) => {
     const element = document.getElementById(id);
 
     if (element && element.tagName === "CANVAS") {
@@ -74,7 +98,8 @@ const chart = (id, userOptions) => {
         } else if (!userOptions.data) {
             console.warn("Chart: You need to provide options.data.");
         } else {
-            _init(element.getContext("2d"), userOptions);
+            // ..._colorPool.slice(0, 3) is due to the three first colors always having to be included (because of branding)
+            _init(element.getContext("2d"), userOptions, colorPool ? [..._colorPool.slice(0, 3), ...colorPool] : _colorPool);
         }
 
     } else if (element) {

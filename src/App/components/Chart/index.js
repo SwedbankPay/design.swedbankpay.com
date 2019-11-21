@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 
 class Chart extends Component {
     componentDidMount () {
-        const { id, options } = this.props;
+        const { id, options, colorPool } = this.props;
 
-        dg.chart(id, options);
+        dg.chart(id, options, colorPool);
     }
 
     render () {
@@ -17,7 +17,8 @@ class Chart extends Component {
 
 Chart.propTypes = {
     id: PropTypes.string.isRequired,
-    options: PropTypes.object.isRequired
+    options: PropTypes.object.isRequired,
+    colorPool: PropTypes.arrayOf(PropTypes.string)
 };
 
 export default Chart;

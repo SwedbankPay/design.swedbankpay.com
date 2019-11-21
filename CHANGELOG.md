@@ -9,4 +9,5 @@
  - Image and download links in deployment fixed
 
 ### Next release
+ - Charts updated (colors and opacity changed, no-fill set as default, fixed color issues due to incorrect config)
  - Core/colors improved (All names use same style, main colors split into sublists)
