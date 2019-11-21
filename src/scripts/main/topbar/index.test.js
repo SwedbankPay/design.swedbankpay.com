@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 import NavMenu from "./NavMenu";
 import topbar from "./index";
-import { handleScrollbar } from "../utils";
+import { handleScrollbar, openComponent, closeComponent } from "../utils";
 
 jest.mock("./NavMenu");
 jest.mock("../utils");
@@ -14,6 +14,8 @@ describe("scripts: topbar", () => {
     beforeEach(() => {
         NavMenu.mockClear();
         handleScrollbar.mockClear();
+        openComponent.mockClear();
+        closeComponent.mockClear();
         ReactDOM.unmountComponentAtNode(div);
     });
 
@@ -157,31 +159,22 @@ describe("scripts: topbar", () => {
     });
 
     describe("topbar.open", () => {
-        it("opens a topbar matching the passed ID", () => {
+        it("calls openComponent", () => {
             ReactDOM.render(<Topbar id="test-topbar" />, div);
 
             const topbarInstance = topbar.init("test-topbar");
 
-            // Have to set the ID manually due to NavMenu being mocked and thus not savint the ID [AW].
+            // Have to set the ID manually due to NavMenu being mocked and thus not saving the ID [AW].
             topbarInstance.id = "test-topbar";
 
             topbar.open("test-topbar");
 
-            // eslint-disable-next-line security/detect-non-literal-fs-filename
-            expect(topbarInstance.open).toHaveBeenCalled();
-        });
-
-        it("prints a warning message if the passed ID doesn't match any existing topbar", () => {
-            console.warn = jest.fn();
-
-            topbar.open("invalid-id");
-
-            expect(console.warn).toHaveBeenCalled();
+            expect(openComponent).toHaveBeenCalled();
         });
     });
 
     describe("topbar.close", () => {
-        it("closes an open topbar matching the passed ID", () => {
+        it("calls closeComponent", () => {
             ReactDOM.render(<Topbar id="test-topbar-2" />, div);
 
             const topbarInstance = topbar.init("test-topbar-2");
@@ -190,15 +183,7 @@ describe("scripts: topbar", () => {
 
             topbar.close("test-topbar-2");
 
-            expect(topbarInstance.close).toHaveBeenCalled();
-        });
-
-        it("prints a warning message if the passed ID doesn't match any existing topbar", () => {
-            console.warn = jest.fn();
-
-            topbar.close("invalid-id");
-
-            expect(console.warn).toHaveBeenCalled();
+            expect(closeComponent).toHaveBeenCalled();
         });
     });
 });

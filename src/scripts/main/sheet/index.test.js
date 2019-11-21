@@ -256,8 +256,6 @@ describe("scripts: sheet", () => {
 
             sheet.open("qwerty");
 
-            expect(console.warn).toHaveBeenCalledWith("sheet.open: No sheet with id \"qwerty\" found.");
-
             expect(renderedSheet.classList).not.toContain("d-block");
             expect(renderedSheet.classList).not.toContain("sheet-open");
             expect(document.body.classList).not.toContain("sheet-open");
@@ -276,7 +274,6 @@ describe("scripts: sheet", () => {
 
             sheet.open("demo-sheet");
 
-            expect(console.warn).toHaveBeenCalledWith("sheet.open: Sheet with id \"demo-sheet\" is open");
             expect(renderedSheet.classList).toContain("d-block");
             expect(renderedSheet.classList).toContain("sheet-open");
             expect(document.body.classList).toContain("sheet-open");
@@ -316,8 +313,6 @@ describe("scripts: sheet", () => {
             sheet.close("qwerty");
             jest.runAllTimers();
 
-            expect(console.warn).toHaveBeenCalledWith("sheet.close: No sheet with id \"qwerty\" found.");
-
             expect(renderedSheet.classList).toContain("d-block");
             expect(renderedSheet.classList).toContain("sheet-open");
             expect(document.body.classList).toContain("sheet-open");
@@ -336,7 +331,6 @@ describe("scripts: sheet", () => {
 
             sheet.close("demo-sheet");
 
-            expect(console.warn).toHaveBeenCalledWith("sheet.close: Sheet with id \"demo-sheet\" is not open");
             expect(renderedSheet.classList).not.toContain("d-block");
             expect(renderedSheet.classList).not.toContain("sheet-open");
             expect(document.body.classList).not.toContain("sheet-open");

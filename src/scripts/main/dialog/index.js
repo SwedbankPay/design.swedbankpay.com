@@ -1,4 +1,4 @@
-import { handleScrollbar } from "../utils";
+import { handleScrollbar, openComponent, closeComponent } from "../utils";
 
 const SELECTORS = {
     DIALOG: ".dialog",
@@ -130,37 +130,9 @@ const init = id => {
     }
 };
 
-const open = id => {
-    let dialog = null;
+const open = id => openComponent(id, "dialog", _dialogs);
 
-    _dialogs.forEach(d => d.id === id ? dialog = d : null);
-
-    try {
-        dialog.open();
-    } catch (e) {
-        console.warn(`dialog.open: No dialog with id "${id}" found.`);
-
-        return false;
-    }
-
-    return dialog;
-};
-
-const close = id => {
-    let dialog = null;
-
-    _dialogs.forEach(d => d.id === id ? dialog = d : null);
-
-    try {
-        dialog.close();
-    } catch (e) {
-        console.warn(`dialog.close: No dialog with id "${id}" found.`);
-
-        return false;
-    }
-
-    return dialog;
-};
+const close = id => closeComponent(id, "dialog", _dialogs);
 
 export default {
     init,
