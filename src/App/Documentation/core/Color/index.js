@@ -12,7 +12,8 @@ const sbColorDisplayList = [
         id: "main-colors",
         colorList: sbColors.mainText,
         head: "Main colors",
-        description: <p>Our main color palette.</p>
+        description: <p>Our main color palette.</p>,
+        subListNames: ["Communication color", "Text colors", "Secondary colors", "Background colors", "Links and buttons"]
     },
     {
         id: "alert-colors",

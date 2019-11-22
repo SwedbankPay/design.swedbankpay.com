@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Charts, { LineChart, BarChart, DoughnutAndPieCharts, MixingTypes } from "./index";
+import Charts, { LineChart, BarChart, DoughnutAndPieCharts, MixingTypes, CustomColors } from "./index";
 
 describe("Dashboard: Charts", () => {
     it("is defined", () => {
@@ -57,6 +57,18 @@ describe("Dashboard: Charts", () => {
 
         it("renders", () => {
             const wrapper = shallow(<MixingTypes />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("CustomColors", () => {
+        it("is defined", () => {
+            expect(CustomColors).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<CustomColors />);
 
             expect(wrapper).toMatchSnapshot();
         });
