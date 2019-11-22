@@ -212,8 +212,7 @@ class CustomersDetailed extends Component {
                             </div>
                         </header>
                         <div className="panel-body">
-                            <div className="tabs tabs-horizontal-lg">{"\n"}
-                                <i className="material-icons">keyboard_arrow_right</i>
+                            <div className="tabs tabs-scroll">{"\n"}
                                 <ul>
                                     {this.props.customersDetailedTabs.map((tab, i) => (
                                         <li key={`tab-item-${i}`} className={this.state.tabIndex === i ? "active" : null}>{"\n"}
