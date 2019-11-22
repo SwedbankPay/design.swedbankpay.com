@@ -1,8 +1,8 @@
-const initLineChart = (userOptions, colorPool) => {
+const initLineFillChart = (userOptions, colorPool) => {
     const prepareDataset = (dataset, index) => {
         const preparedDataset = {
             ...dataset,
-            backgroundColor: `rgba(${colorPool[index]}, 1)`,
+            backgroundColor: `rgba(${colorPool[index]}, 0.1)`,
             borderColor: `rgba(${colorPool[index]}, 1)`,
             pointBackgroundColor: `rgba(${colorPool[index]}, 1)`,
             pointHoverBackgroundColor: `rgba(${colorPool[index]}, 1)`,
@@ -29,4 +29,4 @@ const initLineChart = (userOptions, colorPool) => {
     };
 };
 
-export default initLineChart;
+export default initLineFillChart;

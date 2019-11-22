@@ -41,6 +41,14 @@ describe("Component: Chart - ", () => {
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<canvas id="test" />)).toEqual(true);
-        expect(dg.chart).toHaveBeenCalledWith("test", { test: "test" });
+        expect(dg.chart).toHaveBeenCalledWith("test", { test: "test" }, undefined);
+    });
+
+    it("renders a canvas with correct id and calls chart.js with that id, provided options and colors", () => {
+        const wrapper = shallow(<Chart id="test" options={{ test: "test" }} colorPool={["test", "test", "test"]} />);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.contains(<canvas id="test" />)).toEqual(true);
+        expect(dg.chart).toHaveBeenCalledWith("test", { test: "test" }, ["test", "test", "test"]);
     });
 });
