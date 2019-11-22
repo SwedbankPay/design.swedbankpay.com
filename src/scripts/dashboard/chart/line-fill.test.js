@@ -1,12 +1,12 @@
-import initLineChart from "./line";
+import initLineFillChart from "./line-fill";
 
 describe("scripts - dashboard: line chart", () => {
     it("initLineChart is defined", () => {
-        expect(initLineChart).toBeDefined();
+        expect(initLineFillChart).toBeDefined();
     });
 
     it("returns correct dataset", () => {
-        const dataset = initLineChart({
+        const dataset = initLineFillChart({
             type: "line",
             data: {
                 labels: ["Test#1", "Test#2", "Test#3"],
@@ -28,7 +28,7 @@ describe("scripts - dashboard: line chart", () => {
                 datasets: [
                     {
                         data: [1, 2, 3],
-                        backgroundColor: "rgba(TEST, 1)",
+                        backgroundColor: "rgba(TEST, 0.1)",
                         borderColor: "rgba(TEST, 1)",
                         pointBackgroundColor: "rgba(TEST, 1)",
                         pointHoverBackgroundColor: "rgba(TEST, 1)",

@@ -401,6 +401,93 @@ dg.chart("stacked-multi-bar-chart", {
 </Fragment>
 `;
 
+exports[`Dashboard: Charts CustomColors renders 1`] = `
+<Fragment>
+  <h2
+    id="custom-colors"
+  >
+    Custom colors
+  </h2>
+  <p>
+    Except for the three first colors, the rest of the colors are customizable. Call 
+    <Property
+      value="dg.chart"
+    />
+     with a last optional argument consisting of a list of RGB color codes.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Chart
+      colorPool={
+        Array [
+          "81, 43, 43",
+          "81, 151, 27",
+          "163, 139, 128",
+          "114, 96, 94",
+          "197, 19, 28",
+        ]
+      }
+      id="custom-color-pie"
+      options={
+        Object {
+          "data": Object {
+            "datasets": Array [
+              Object {
+                "data": Array [
+                  63.14,
+                  11.43,
+                  10.23,
+                  4.34,
+                  3.83,
+                  1.56,
+                  4.19,
+                ],
+              },
+            ],
+            "labels": Array [
+              "Chrome",
+              "Internet Explorer",
+              "Firefox",
+              "Edge",
+              "Safari",
+              "Opera",
+              "Other",
+            ],
+          },
+          "type": "pie",
+        }
+      }
+    />
+  </ComponentPreview>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    
+dg.chart("custom-color-pie", {
+    type: "pie",
+    data: {
+        labels: ["Chrome", "Internet Explorer", "Firefox", "Edge", "Safari", "Opera", "Other"],
+        datasets: [
+            {
+                data: [63.14, 11.43, 10.23, 4.34, 3.83, 1.56, 4.19]
+            }
+        ]
+    }
+},
+["81, 43, 43",
+"81, 151, 27",
+"163, 139, 128",
+"114, 96, 94",
+"197, 19, 28"]);
+            
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Dashboard: Charts DoughnutAndPieCharts renders 1`] = `
 <Fragment>
   <h2
@@ -754,7 +841,6 @@ dg.chart("stepped-dashed-line-chart", {
                   24.78,
                   25.53,
                 ],
-                "fill": false,
                 "label": "DotA2 TI Prize Pool",
               },
               Object {
@@ -768,7 +854,6 @@ dg.chart("stepped-dashed-line-chart", {
                   4.94,
                   2.25,
                 ],
-                "fill": false,
                 "label": "LoL World Championship Prize Pool",
               },
             ],
@@ -815,13 +900,11 @@ dg.chart("advanced-line-chart", {
         datasets: [
             {
                 label: "DotA2 TI Prize Pool",
-                data: [1.6, 1.6, 2.87, 10.92, 18.42, 20.77, 24.78, 25.53],
-                fill: false
+                data: [1.6, 1.6, 2.87, 10.92, 18.42, 20.77, 24.78, 25.53]
             },
             {
                 label: "LoL World Championship Prize Pool",
-                data: [0.1, 2, 2.05, 2.13, 2.13, 5.07, 4.94, 2.25],
-                fill: false
+                data: [0.1, 2, 2.05, 2.13, 2.13, 5.07, 4.94, 2.25]
             }
         ]
     },
@@ -837,6 +920,67 @@ dg.chart("advanced-line-chart", {
                 }
             }]
         }
+    }
+});
+                
+  </ComponentPreview>
+  <h3>
+    With fill
+  </h3>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Chart
+      id="line-fill-chart"
+      options={
+        Object {
+          "data": Object {
+            "datasets": Array [
+              Object {
+                "data": Array [
+                  261,
+                  673,
+                  962,
+                  1067,
+                  1007,
+                  779,
+                ],
+                "fill": true,
+                "label": "Peak",
+              },
+            ],
+            "labels": Array [
+              "2013",
+              "2014",
+              "2015",
+              "2016",
+              "2017",
+              "2018",
+            ],
+          },
+          "type": "line-fill",
+        }
+      }
+    />
+  </ComponentPreview>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    
+dg.chart("line-fill-chart", {
+    type: "line-fill",
+    data: {
+        labels: ["2013", "2014", "2015", "2016", "2017", "2018"],
+        datasets: [
+            {
+                label: "Peak",
+                data: [261, 673, 962, 1067, 1007, 779],
+                fill: true
+            }
+        ]
     }
 });
                 
@@ -892,7 +1036,6 @@ exports[`Dashboard: Charts MixingTypes renders 1`] = `
                   40,
                   45,
                 ],
-                "fill": false,
                 "label": "Expected Growth",
                 "type": "line",
               },
@@ -939,8 +1082,7 @@ dg.chart("mixed-chart", {
             {
                 label: "Expected Growth",
                 data: [20, 25, 30, 35, 40, 45],
-                type: "line", // Changes this dataset to become a line
-                fill: false
+                type: "line" // Changes this dataset to become a line
             }
         ]
     },
@@ -1009,5 +1151,6 @@ exports[`Dashboard: Charts renders 1`] = `
   <BarChart />
   <DoughnutAndPieCharts />
   <MixingTypes />
+  <CustomColors />
 </DocContainer>
 `;

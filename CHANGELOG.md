@@ -11,3 +11,5 @@
 ### Next release
  - Badge for numbers added
  - Badge types renamed, colors updated
+ - Charts updated (colors and opacity changed, no-fill set as default, fixed color issues due to incorrect config)
+ - Core/colors improved (All names use same style, main colors split into sublists)
