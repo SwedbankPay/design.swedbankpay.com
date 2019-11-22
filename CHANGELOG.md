@@ -15,3 +15,4 @@
  - Badge types renamed, colors updated
  - Tabs with scroll added
  - Bordered lists examples under core/lists updated
+ - Dialog, Topbar and Sheet open and close functions refactored
