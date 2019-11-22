@@ -1,4 +1,4 @@
-import { extendObj, isWithinBoundingBox, handleScrollbar } from "./index";
+import { extendObj, isWithinBoundingBox, handleScrollbar, openComponent, closeComponent } from "./index";
 
 describe("scripts: utils", () => {
     describe("- extendObj", () => {
@@ -63,6 +63,86 @@ describe("scripts: utils", () => {
             handleScrollbar();
 
             expect(document.body.classList).not.toContain("has-vscroll");
+        });
+    });
+
+    describe("- openComponent", () => {
+        const mockComponent = {
+            id: "test-component-id",
+            open: jest.fn(),
+            isOpen: false
+        };
+        const mockComponentList = [
+            mockComponent,
+            {
+                id: "test-isOpen",
+                open: jest.fn(),
+                isOpen: true
+            }
+        ];
+
+        it("opens the component with the provided ID", () => {
+            openComponent("test-component-id", "testComponent", mockComponentList);
+
+            // eslint-disable-next-line security/detect-non-literal-fs-filename
+            expect(mockComponent.open).toHaveBeenCalled();
+        });
+
+        it("prints warning message when component with provided ID does not exist", () => {
+            console.warn = jest.fn();
+
+            openComponent("invalid-id", "testComponent", mockComponentList);
+
+            expect(console.warn).toHaveBeenCalledWith("testComponent.open: No testComponent with id \"invalid-id\" found.");
+
+        });
+
+        it("prints a warning message when component with provided ID is already open", () => {
+            console.warn = jest.fn();
+
+            openComponent("test-isOpen", "testComponent", mockComponentList);
+
+            expect(console.warn).toHaveBeenCalledWith("testComponent.open: testComponent with id \"test-isOpen\" is open");
+        });
+    });
+
+    describe("- closeComponent", () => {
+        const mockComponent = {
+            id: "test-component-id",
+            close: jest.fn(),
+            isOpen: true
+        };
+        const mockComponentList = [
+            mockComponent,
+            {
+                id: "test-isNotOpen",
+                close: jest.fn(),
+                isOpen: false
+            }
+        ];
+
+        it("closes the component with the provided ID", () => {
+            closeComponent("test-component-id", "testComponent", mockComponentList);
+
+            // eslint-disable-next-line security/detect-non-literal-fs-filename
+            expect(mockComponent.close).toHaveBeenCalled();
+        });
+
+        it("prints warning message when component with provided ID does not exist", () => {
+            console.warn = jest.fn();
+
+            closeComponent("invalid-id", "testComponent", mockComponentList);
+
+            expect(console.warn).toHaveBeenCalledWith("testComponent.close: No testComponent with id \"invalid-id\" found.");
+
+        });
+
+        it("prints a warning message when component with provided ID is not open", () => {
+            console.warn = jest.fn();
+
+            closeComponent("test-isNotOpen", "testComponent", mockComponentList);
+
+            expect(console.warn).toHaveBeenCalledWith("testComponent.close: testComponent with id \"test-isNotOpen\" is not open");
         });
     });
 });

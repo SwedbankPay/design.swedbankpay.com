@@ -1,4 +1,4 @@
-import { handleScrollbar } from "../utils";
+import { handleScrollbar, openComponent, closeComponent } from "../utils";
 
 const SELECTORS = {
     SHEET: ".sheet",
@@ -144,49 +144,9 @@ const _addEscListener = () => {
     });
 };
 
-const close = id => {
-    let sheet = null;
+const close = id => closeComponent(id, "sheet", _sheets);
 
-    _sheets.forEach(d => d.id === id ? sheet = d : null);
-
-    try {
-        if (!sheet.isOpen) {
-            console.warn(`sheet.close: Sheet with id "${id}" is not open`);
-
-            return false;
-        }
-
-        sheet.close();
-    } catch (e) {
-        console.warn(`sheet.close: No sheet with id "${id}" found.`);
-
-        return false;
-    }
-
-    return sheet;
-};
-
-const open = id => {
-    let sheet = null;
-
-    _sheets.forEach(d => d.id === id ? sheet = d : null);
-
-    try {
-        if (sheet.isOpen) {
-            console.warn(`sheet.open: Sheet with id "${id}" is open`);
-
-            return false;
-        }
-
-        sheet.open();
-    } catch (e) {
-        console.warn(`sheet.open: No sheet with id "${id}" found.`);
-
-        return false;
-    }
-
-    return sheet;
-};
+const open = id => openComponent(id, "sheet", _sheets);
 
 export default {
     init,
