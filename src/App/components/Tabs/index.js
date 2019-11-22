@@ -14,11 +14,10 @@ class Tabs extends Component {
     }
 
     render () {
-        const { mode, items } = this.props;
+        const { scroll, items } = this.props;
 
         return (
-            <div className={`tabs${mode ? ` tabs-horizontal-${mode}` : ""}`}>{"\n"}
-                <i className="material-icons">keyboard_arrow_right</i>
+            <div className={`tabs${scroll ? " tabs-scroll" : ""}`}>{"\n"}
                 <ul>
                     {items.map((name, i) => (
                         <li key={`tab-item-${name}-${i}`} className={this.state.active === i ? "active" : null}>{"\n"}
@@ -32,14 +31,8 @@ class Tabs extends Component {
 }
 
 Tabs.propTypes = {
-    mode: PropTypes.oneOf([
-        "xs",
-        "sm",
-        "md",
-        "lg",
-        "xl",
-        "xxl"]),
-    items: PropTypes.array.isRequired
+    items: PropTypes.array.isRequired,
+    scroll: PropTypes.bool
 };
 
 export default Tabs;

@@ -5,7 +5,6 @@ import { shallow } from "enzyme";
 import Tabs from "./index";
 
 const items = ["test", "test 2"];
-const modeTypes = ["xs", "sm", "md", "lg", "xl", "xxl"];
 const div = document.createElement("div");
 
 document.body.appendChild(div);
@@ -15,27 +14,27 @@ describe("Component: Tabs - ", () => {
         expect(Tabs).toBeDefined();
     });
 
-    it("props mode is one of our breakpoints (xs, sm, md... )", () => {
-        console.error = jest.fn();
-
-        const wrapper = shallow(<Tabs mode="auto" items={items} />);
-
-        expect(console.error).toHaveBeenCalled();
-        expect(wrapper).toMatchSnapshot();
-    });
-
     it("renders", () => {
         const wrapper = shallow(<Tabs items={items} />);
 
         expect(wrapper).toMatchSnapshot();
     });
 
-    it("renders with class name tabs when prop mode is not specified", () => {
+    it("renders with class name tabs when prop scroll is not specified", () => {
         const wrapper = shallow(<Tabs items={items} />);
-        const hasHorizontal = modeTypes.some(mode => wrapper.hasClass(`tabs-horizontal-${mode}`));
+        const hasScroll = wrapper.hasClass("tabs-scroll");
 
         expect(wrapper.hasClass("tabs")).toBeTruthy();
-        expect(hasHorizontal).toBeFalsy();
+        expect(hasScroll).toBeFalsy();
+        expect(wrapper).toMatchSnapshot();
+    });
+
+    it("renders with class name .tabs.tabs-scroll when prop scroll is specified", () => {
+        const wrapper = shallow(<Tabs items={items} scroll/>);
+        const hasScroll = wrapper.hasClass("tabs-scroll");
+
+        expect(wrapper.hasClass("tabs")).toBeTruthy();
+        expect(hasScroll).toBeTruthy();
         expect(wrapper).toMatchSnapshot();
     });
 

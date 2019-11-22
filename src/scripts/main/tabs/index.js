@@ -10,17 +10,21 @@ class Tabs {
         this._el = el;
         this.id = el.id;
         this.classList = el.classList;
-        this.isOpen = el.classList.contains("tabs-open");
         this.hasActive = !!this._el.querySelector(SELECTORS.ACTIVE);
         this.openUl = this._el.querySelector("UL");
 
         this._el.addEventListener("click", e => {
-            this.flexDir = getComputedStyle(this.openUl).flexDirection;
 
-            if (!this.isOpen && this.flexDir === "column") {
-                this.open();
-            } else if (this.isOpen && this.flexDir === "column" && e.target !== this.openUl) {
-                this.close();
+            // Only move scrollbar when interacting with the tab elements
+            if (e.target.tagName === "A") {
+                const scrollStart = this._el.scrollLeft;
+                const scrollTotalAmount = (e.target.offsetLeft - (this._el.offsetWidth / 2) + (e.target.offsetWidth / 2)) - scrollStart;
+                let scrolledCount = 0;
+                const smoothTabScroll = setInterval(() => {
+                    this._el.scrollLeft += scrollTotalAmount / 10;
+                    scrolledCount = scrolledCount + 1;
+                    (scrolledCount === 10) && window.clearInterval(smoothTabScroll);
+                }, 5);
             }
         });
 
@@ -40,18 +44,6 @@ class Tabs {
             });
         });
     }
-
-    open () {
-        this.isOpen = true;
-        this._el.classList.add("tabs-open");
-        window.addEventListener("resize", () => this.close());
-    }
-
-    close () {
-        this.isOpen = false;
-        this._el.classList.remove("tabs-open");
-        window.removeEventListener("resize", this.close);
-    }
 }
 
 const _createTab = tabQuery => {
@@ -63,14 +55,6 @@ const _createTab = tabQuery => {
 };
 
 const init = id => {
-    document.addEventListener("click", e => {
-        _tabs.forEach(tab => {
-            if (!e.target.closest(SELECTORS.TABS) && tab.isOpen) {
-                tab.close();
-            }
-        });
-    });
-
     if (id) {
         const tab = document.getElementById(id);
 
@@ -94,42 +78,6 @@ const init = id => {
     }
 };
 
-const open = id => {
-    let tabs = null;
-
-    _tabs.forEach(t => t.id === id ? tabs = t : null);
-
-    try {
-        tabs.open();
-    } catch (e) {
-        console.error(`tabs.open: No tabs with id "${id}" found.`);
-
-        return false;
-    }
-
-    return tabs;
-
-};
-
-const close = id => {
-    let tabs = null;
-
-    _tabs.forEach(t => t.id === id ? tabs = t : null);
-
-    try {
-        tabs.close();
-    } catch (e) {
-        console.error(`tabs.close: No tabs with id "${id}" found.`);
-
-        return false;
-    }
-
-    return tabs;
-
-};
-
 export default {
-    init,
-    open,
-    close
+    init
 };
