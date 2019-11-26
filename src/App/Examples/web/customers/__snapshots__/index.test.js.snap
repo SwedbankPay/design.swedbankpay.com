@@ -336,15 +336,10 @@ exports[`Examples: Customers CustomersDetailed renders 1`] = `
         className="panel-body"
       >
         <div
-          className="tabs tabs-horizontal-lg"
+          className="tabs tabs-scroll"
         >
           
 
-          <i
-            className="material-icons"
-          >
-            keyboard_arrow_right
-          </i>
           <ul>
             <li
               className="active"
