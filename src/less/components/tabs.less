@@ -2,18 +2,46 @@
     font-family: @brand-headline;
     position: relative;
     margin: @base-margin auto;
-    min-height: 25px;
+    min-height: 40px;
     display: flex;
     z-index: @zindex-tabs;
 
     &.tabs-scroll {
-        overflow: scroll;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
+        ul {
+            overflow: scroll;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
 
-        &::-webkit-scrollbar {
-            width: 0;
-            background: transparent;
+            &::-webkit-scrollbar {
+                width: 0;
+                background: transparent;
+            }
+        }
+
+        &.tabs-fade-right {
+            &:after {
+                content: "";
+                width: @tabs-fade-width;
+                height: 100%;
+                position: absolute;
+                right: -1px;
+                background-image: linear-gradient(to right, transparent, rgb(255, 255, 255));
+                pointer-events: none;
+                z-index: @zindex-tabs;
+            }
+        }
+
+        &.tabs-fade-left {
+            &:before {
+                content: "";
+                width: @tabs-fade-width;
+                height: 100%;
+                position: absolute;
+                left: -1px;
+                background-image: linear-gradient(to left, transparent, rgb(255, 255, 255));
+                pointer-events: none;
+                z-index: @zindex-tabs;
+            }
         }
     }
 
@@ -23,7 +51,6 @@
         padding: 0;
         margin: 0;
         display: flex;
-        width: 100%;
 
         li {
             display: block;
