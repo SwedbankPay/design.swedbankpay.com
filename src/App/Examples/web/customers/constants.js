@@ -120,5 +120,5 @@ export const customersDetailedPreviousInquiries = [...Array(15).keys()].map(i =>
     date: `${i + 10}.${Math.floor(10 - i * 0.4) < 10 ? "0" : ""}${Math.floor(10 - i * 0.4)}.20${19 - i < 10 ? "0" : ""}${19 - i}`, // Uses simple formulas to generate different dates, to get varied dates
     numMessages: Math.floor(Math.random() * 20) + 3,
     resolved: Math.random() > 0.1,
-    message: `This is the initial message of inquiry InquiryID#${i}. This message was sent ${i + 10}.0${Math.floor(10 - i * 0.4)}.20${19 - i < 10 ? "0" : ""}${19 - i}`
+    message: `This is the initial message of inquiry InquiryID#${i}. This message was sent ${i + 10}.${Math.floor(10 - i * 0.4) < 10 ? "0" : ""}${Math.floor(10 - i * 0.4)}.20${19 - i < 10 ? "0" : ""}${19 - i}`
 }));
