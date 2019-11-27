@@ -25,8 +25,9 @@
  * 16. Sheet
  * 17. Status
  * 18. Steps
- * 19. Toast
- * 20. Topbar
+ * 19. Tabs
+ * 20. Toast
+ * 21. Topbar
  */
 
 /* ==========================================================================
@@ -358,12 +359,11 @@
  * ==========================================================================
  */
 
-/* stylelint-disable indentation */
+/* stylelint-disable */
 @badge-list: {
-                                            default: @list-gray;
-                                            blue: @blue;
-                                            yellow: @yellow;
-                                            red: @red;
+                                            default: @brand-primary;
+                                            inactive: @list-gray;
+                                            warning: @brand-error;
 }
 /* stylelint-enable */
 
@@ -571,7 +571,14 @@
 @line-width-desktop:                        5px;
 
 /*
- * 19. Toast
+ * 19. Tabs
+ * ==========================================================================
+ */
+
+@tabs-fade-width:                           50px;
+
+/*
+ * 20. Toast
  * ==========================================================================
  */
 
@@ -581,7 +588,7 @@
 @toast-action-color:                        @yellow;
 
 /*
- * 20. Topbar
+ * 21. Topbar
  * ==========================================================================
  */
 

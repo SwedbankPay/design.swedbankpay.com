@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Tabs, { BasicUsage, Collapsed, JavascriptMethods } from "./index";
+import Tabs, { BasicUsage, TabsScroll, JavascriptMethods } from "./index";
 
 describe("Components: Tabs", () => {
     it("is defined", () => {
@@ -29,13 +29,13 @@ describe("Components: Tabs", () => {
         });
     });
 
-    describe("Collapsed", () => {
+    describe("TabsScroll", () => {
         it("is defined", () => {
-            expect(Collapsed).toBeDefined();
+            expect(TabsScroll).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<Collapsed />);
+            const wrapper = shallow(<TabsScroll />);
 
             expect(wrapper).toMatchSnapshot();
         });
