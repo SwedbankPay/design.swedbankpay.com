@@ -14,5 +14,6 @@
  - Badge for numbers added
  - Badge types renamed, colors updated
  - Tabs with scroll added
+ - Tabs fades added
  - Bordered lists examples under core/lists updated
  - Dialog, Topbar and Sheet open and close functions refactored
