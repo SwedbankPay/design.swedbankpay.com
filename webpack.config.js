@@ -27,9 +27,9 @@ module.exports = (env, argv) => {
 
     const config = {
         entry: {
-            dg: ["@babel/polyfill", "./src/scripts/main/index.js"],
+            dg: ["./src/scripts/main/index.js"],
             "dg-dashboard": "./src/scripts/dashboard/index.js",
-            app: ["@babel/polyfill/noConflict", `./src/${brand}.js`]
+            app: [`./src/${brand}.js`]
         },
         resolve: {
             extensions: [".js", ".jsx", ".json"]
