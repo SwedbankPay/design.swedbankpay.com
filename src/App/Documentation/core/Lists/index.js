@@ -1,8 +1,27 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocContainer, Icon, Property } from "@docutils";
+import ActionListComponent from "@components/ActionList";
+import { ComponentPreview, DocContainer, Property } from "@docutils";
 
 const { actionList } = window.dg;
+const items = [
+    {
+        name: "Add bookmark",
+        icon: "bookmark"
+    },
+    {
+        name: "Add client",
+        icon: "business_center"
+    },
+    {
+        name: "Add document",
+        icon: "add_circle"
+    },
+    {
+        name: "Add user",
+        icon: "person_add"
+    }
+];
 
 const BasicList = () => (
     <>
@@ -260,15 +279,7 @@ const StripedItemList = () => (
             <ul className="item-list item-list-striped">
                 <li>
                     <span>4925*********004</span>
-                    <div className="action-list">{"\n"}
-                        <Icon type="more_vert" />{"\n"}
-                        <div className="action-menu">{"\n"}
-                            <a href="#" onClick={e => e.preventDefault()}><Icon type="bookmark"/>Add bookmark</a>{"\n"}
-                            <a href="#" onClick={e => e.preventDefault()}><Icon type="business_center"/>Add client</a>{"\n"}
-                            <a href="#" onClick={e => e.preventDefault()}><Icon type="add_circle"/>Add document</a>{"\n"}
-                            <a href="#" onClick={e => e.preventDefault()}><Icon type="person_add"/>Add user</a>{"\n"}
-                        </div>
-                    </div>
+                    <ActionListComponent items={items} />
                 </li>
                 <li>{"\n"}
                     <span>{"\n\t\t\t"}4925*********004{"\n\t\t\t"}
