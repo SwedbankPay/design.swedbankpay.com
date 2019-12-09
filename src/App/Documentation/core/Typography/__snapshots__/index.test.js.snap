@@ -244,6 +244,39 @@ exports[`Core: Typography Headings renders 1`] = `
 </Fragment>
 `;
 
+exports[`Core: Typography HeroTitle renders 1`] = `
+<Fragment>
+  <h2
+    id="hero-title"
+  >
+    Hero title
+  </h2>
+  <p>
+    The class 
+    <Property
+      value=".hero"
+    />
+     can be used to achieve the big and bold hero title styling.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <h1
+      className="hero"
+    >
+      Hero title
+    </h1>
+    <p
+      className="hero"
+    >
+      Hero title
+    </p>
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Core: Typography Inline renders 1`] = `
 <Fragment>
   <h2
@@ -429,6 +462,7 @@ exports[`Core: Typography renders 1`] = `
   </p>
   <Fonts />
   <Headings />
+  <HeroTitle />
   <Lead />
   <Inline />
   <TextUtilities />

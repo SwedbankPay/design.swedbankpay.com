@@ -35,6 +35,17 @@ const Headings = () => (
     </>
 );
 
+const HeroTitle = () => (
+    <>
+        <h2 id="hero-title">Hero title</h2>
+        <p>The class <Property value=".hero" /> can be used to achieve the big and bold hero title styling.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <h1 className="hero">Hero title</h1>
+            <p className="hero">Hero title</p>
+        </ComponentPreview>
+    </>
+);
+
 const Lead = () => (
     <>
         <h2 id="lead">Lead</h2>
@@ -131,6 +142,7 @@ const Typography = () => (
         <p className="lead">Documentation and examples for Swedbank Pay DesignGuide typography.</p>
         <Fonts />
         <Headings />
+        <HeroTitle />
         <Lead />
         <Inline />
         <TextUtilities />
@@ -142,4 +154,4 @@ const Typography = () => (
 export default Typography;
 
 /* For testing */
-export { Fonts, Headings, Lead, Inline, TextUtilities, Abbreviations, Blockquotes };
+export { Fonts, Headings, HeroTitle, Lead, Inline, TextUtilities, Abbreviations, Blockquotes };
