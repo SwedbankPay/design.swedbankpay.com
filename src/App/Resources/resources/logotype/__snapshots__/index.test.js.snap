@@ -16,7 +16,7 @@ exports[`Resources: Logotype Download renders 1`] = `
     <Button
       href="/TEST/release/logos/cid_2799998.zip"
       icon="file_download"
-      label="Download"
+      label="Swedbank Pay logotype"
       type="executive"
     />
   </div>

@@ -25,9 +25,13 @@ const Download = () => (
         <h2 id="download">Download</h2>
         <div className="slab slab-default slab-elevated">
             <p>Before downloading any typography files, make sure to read the Swedbank Pay typography guidelines. The guidelines can be found below.</p>
-            <div className="resources-typography-download">
-                <Button type="executive" icon="file_download" href={`${basename}release/fonts/cid_2108538.zip`} label="Download Swedbank Headline" />
-                <Button type="executive" icon="file_download" href={`${basename}release/fonts/cid_2686429.zip`} label="Download Swedbank Sans" />
+            <div className="row justify-content-right">
+                <div className="col-sm-auto mb-3 mb-sm-0">
+                    <Button type="executive" icon="file_download" href={`${basename}release/fonts/cid_2108538.zip`} label="Swedbank Headline" />
+                </div>
+                <div className="col-sm-auto">
+                    <Button type="executive" icon="file_download" href={`${basename}release/fonts/cid_2686429.zip`} label="Swedbank Sans" />
+                </div>
             </div>
         </div>
     </>
@@ -35,7 +39,7 @@ const Download = () => (
 
 const Guidelines = () => (
     <>
-        <h2 id="guidlines">Typography guidlines</h2>
+        <h2 id="guidelines">Typography guidlines</h2>
         <img src={`${basename}img/typography/cid_2873207.png`} className="img-fluid mb-4" />
 
         <h4>Use Swedbank Headline Bold in:</h4>

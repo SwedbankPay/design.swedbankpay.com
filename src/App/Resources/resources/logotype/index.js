@@ -10,7 +10,7 @@ const Download = () => (
         <h2 id="download">Download</h2>
         <div className="slab slab-default slab-elevated">
             <p>Before downloading any logotype files, make sure to read the Swedbank Pay logotype guidelines. The guidelines can be found below.</p>
-            <Button type="executive" icon="file_download" href={`${basename}release/logos/cid_2799998.zip`} label="Download" />
+            <Button type="executive" icon="file_download" href={`${basename}release/logos/cid_2799998.zip`} label="Swedbank Pay logotype" />
         </div>
     </>
 );
