@@ -432,6 +432,43 @@ exports[`Core: Typography Lead renders 1`] = `
 </Fragment>
 `;
 
+exports[`Core: Typography ResourcesTypography renders 1`] = `
+<div
+  className="expandable"
+>
+  <button
+    aria-controls="resources-typograpy-body"
+    aria-expanded="false"
+    className="expandable-header"
+    type="button"
+  >
+    <span
+      className="expandable-headline"
+    >
+      Typography guidelines
+    </span>
+    <small
+      className="expandable-subtitle"
+    >
+      From 
+      <Link
+        to="/res/resources/typography"
+      >
+        typography in Resources
+      </Link>
+    </small>
+  </button>
+  <div
+    className="expandable-body"
+    id="resources-typography-body"
+  >
+    <Overview />
+    <Download />
+    <Guidelines />
+  </div>
+</div>
+`;
+
 exports[`Core: Typography Text Utilities renders 1`] = `
 <Fragment>
   <h2
@@ -460,6 +497,7 @@ exports[`Core: Typography renders 1`] = `
   >
     Documentation and examples for Swedbank Pay DesignGuide typography.
   </p>
+  <ResourcesTypography />
   <Fonts />
   <Headings />
   <HeroTitle />
