@@ -23,3 +23,4 @@
  - Babel/polyfill replaced with corejs
  - Action list examples in core/lists and core/iconography updated
  - Download buttons in Resources section updated
+ - Download buttons in Templates section updated
