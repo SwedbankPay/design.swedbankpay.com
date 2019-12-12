@@ -22,3 +22,4 @@
  - Page layout using wrong topbar height fixed
  - Babel/polyfill replaced with corejs
  - Action list examples in core/lists and core/iconography updated
+ - Download buttons in Resources section updated
