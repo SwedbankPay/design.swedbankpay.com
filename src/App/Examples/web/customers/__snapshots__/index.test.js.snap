@@ -337,10 +337,13 @@ exports[`Examples: Customers CustomersDetailed renders 1`] = `
       >
         <div
           className="tabs tabs-scroll"
+          id="customers-detailed-tabs"
         >
           
 
-          <ul>
+          <ul
+            id="customers-detailed-tabs-ul"
+          >
             <li
               className="active"
               key="tab-item-0"

@@ -125,13 +125,16 @@ class CustomersDetailed extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            tabIndex: 0
+            tabIndex: 0,
+            tabScrollState: null
         };
     }
 
     componentDidUpdate () {
         actionList.init();
         dialog.init();
+        tabs.init();
+        tabs.setScrollState("customers-detailed-tabs", this.state.tabScrollState);
     }
 
     componentDidMount () {
@@ -141,8 +144,17 @@ class CustomersDetailed extends Component {
 
     selectTab (e, i) {
         e.preventDefault();
+
+        const tabScroll = document.getElementById("customers-detailed-tabs-ul");
+        const scrollStart = tabScroll.scrollLeft;
+        const scrollTotalAmount = (e.target.offsetLeft - (tabScroll.offsetWidth / 2) + (e.target.offsetWidth / 2)) - scrollStart;
+
         this.setState({
-            tabIndex: i
+            tabIndex: i,
+            tabScrollState: {
+                scrollTotalAmount,
+                scrollStart
+            }
         });
     }
 
@@ -212,8 +224,8 @@ class CustomersDetailed extends Component {
                             </div>
                         </header>
                         <div className="panel-body">
-                            <div className="tabs tabs-scroll">{"\n"}
-                                <ul>
+                            <div id="customers-detailed-tabs" className="tabs tabs-scroll">{"\n"}
+                                <ul id="customers-detailed-tabs-ul">
                                     {this.props.customersDetailedTabs.map((tab, i) => (
                                         <li key={`tab-item-${i}`} className={this.state.tabIndex === i ? "active" : null}>{"\n"}
                                             <a href="#" onClick={e => this.selectTab(e, i)}>{tab.name}</a>{"\n"}
