@@ -20,7 +20,7 @@ exports[`Resources: Presentations Download renders 1`] = `
     <Button
       href="/TEST/templates/SwedbankPay_ppt_template.potx"
       icon="file_download"
-      label="Download"
+      label="Presentation template"
       type="executive"
     />
   </div>
