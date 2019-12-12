@@ -21,3 +21,4 @@
  - Core/typography updated (defined h4-h6, added hero title, added expandable with resources/typography content)
  - Page layout using wrong topbar height fixed
  - Babel/polyfill replaced with corejs
+ - Action list examples in core/lists and core/iconography updated
