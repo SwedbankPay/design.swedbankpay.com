@@ -1,10 +1,29 @@
 import React, { Component } from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer, Property, Icon } from "@docutils";
+import { ComponentPreview, DocContainer, Property } from "@docutils";
 import IconPreview from "@components/IconPreview";
+import ActionListComponent from "@components/ActionList";
 
 const { actionList } = window.dg;
+const items = [
+    {
+        name: "Add bookmark",
+        icon: "bookmark"
+    },
+    {
+        name: "Add client",
+        icon: "business_center"
+    },
+    {
+        name: "Add document",
+        icon: "add_circle"
+    },
+    {
+        name: "Add user",
+        icon: "person_add"
+    }
+];
 
 const MaterialIcons = () => (
     <>
@@ -104,15 +123,7 @@ const PaymentIcons = () => (
                         <IconPreview type="payment-icon" name="visa" className="mr-2" />{"\n"}
                         <span>4925*********004</span>{"\n"}
                     </div>
-                    <div className="action-list">{"\n"}
-                        <Icon type="more_vert" />{"\n"}
-                        <div className="action-menu">{"\n"}
-                            <a href="#" onClick={e => e.preventDefault()}><Icon type="bookmark"/>Add bookmark</a>{"\n"}
-                            <a href="#" onClick={e => e.preventDefault()}><Icon type="business_center"/>Add client</a>{"\n"}
-                            <a href="#" onClick={e => e.preventDefault()}><Icon type="add_circle"/>Add document</a>{"\n"}
-                            <a href="#" onClick={e => e.preventDefault()}><Icon type="person_add"/>Add user</a>{"\n"}
-                        </div>
-                    </div>
+                    <ActionListComponent items={items} />
                 </li>
                 <li>
                     <div className="d-flex align-items-center">{"\n"}

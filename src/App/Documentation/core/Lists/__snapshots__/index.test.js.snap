@@ -601,67 +601,28 @@ exports[`Documentation: Lists StripedItemList prevents default on anchors 1`] = 
         <span>
           4925*********004
         </span>
-        <div
-          className="action-list"
-        >
-          
-
-          <Icon
-            type="more_vert"
-          />
-          
-
-          <div
-            className="action-menu"
-          >
-            
-
-            <a
-              href="#"
-              onClick={[Function]}
-            >
-              <Icon
-                type="bookmark"
-              />
-              Add bookmark
-            </a>
-            
-
-            <a
-              href="#"
-              onClick={[Function]}
-            >
-              <Icon
-                type="business_center"
-              />
-              Add client
-            </a>
-            
-
-            <a
-              href="#"
-              onClick={[Function]}
-            >
-              <Icon
-                type="add_circle"
-              />
-              Add document
-            </a>
-            
-
-            <a
-              href="#"
-              onClick={[Function]}
-            >
-              <Icon
-                type="person_add"
-              />
-              Add user
-            </a>
-            
-
-          </div>
-        </div>
+        <ActionList
+          items={
+            Array [
+              Object {
+                "icon": "bookmark",
+                "name": "Add bookmark",
+              },
+              Object {
+                "icon": "business_center",
+                "name": "Add client",
+              },
+              Object {
+                "icon": "add_circle",
+                "name": "Add document",
+              },
+              Object {
+                "icon": "person_add",
+                "name": "Add user",
+              },
+            ]
+          }
+        />
       </li>
       <li>
         
@@ -765,67 +726,28 @@ exports[`Documentation: Lists StripedItemList renders 1`] = `
         <span>
           4925*********004
         </span>
-        <div
-          className="action-list"
-        >
-          
-
-          <Icon
-            type="more_vert"
-          />
-          
-
-          <div
-            className="action-menu"
-          >
-            
-
-            <a
-              href="#"
-              onClick={[Function]}
-            >
-              <Icon
-                type="bookmark"
-              />
-              Add bookmark
-            </a>
-            
-
-            <a
-              href="#"
-              onClick={[Function]}
-            >
-              <Icon
-                type="business_center"
-              />
-              Add client
-            </a>
-            
-
-            <a
-              href="#"
-              onClick={[Function]}
-            >
-              <Icon
-                type="add_circle"
-              />
-              Add document
-            </a>
-            
-
-            <a
-              href="#"
-              onClick={[Function]}
-            >
-              <Icon
-                type="person_add"
-              />
-              Add user
-            </a>
-            
-
-          </div>
-        </div>
+        <ActionList
+          items={
+            Array [
+              Object {
+                "icon": "bookmark",
+                "name": "Add bookmark",
+              },
+              Object {
+                "icon": "business_center",
+                "name": "Add client",
+              },
+              Object {
+                "icon": "add_circle",
+                "name": "Add document",
+              },
+              Object {
+                "icon": "person_add",
+                "name": "Add user",
+              },
+            ]
+          }
+        />
       </li>
       <li>
         
