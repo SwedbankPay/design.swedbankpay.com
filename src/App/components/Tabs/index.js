@@ -14,11 +14,11 @@ class Tabs extends Component {
     }
 
     render () {
-        const { scroll, items } = this.props;
+        const { id, scroll, items, ulId } = this.props;
 
         return (
-            <div className={`tabs${scroll ? " tabs-scroll" : ""}`}>{"\n"}
-                <ul>
+            <div id={id} className={`tabs${scroll ? " tabs-scroll" : ""}`}>{"\n"}
+                <ul id={ulId}>
                     {items.map((name, i) => (
                         <li key={`tab-item-${name}-${i}`} className={this.state.active === i ? "active" : null}>{"\n"}
                             <a href="#" onClick={e => this.setActive(e, i)}>{name}</a>{"\n"}
@@ -31,8 +31,10 @@ class Tabs extends Component {
 }
 
 Tabs.propTypes = {
+    id: PropTypes.string,
     items: PropTypes.array.isRequired,
-    scroll: PropTypes.bool
+    scroll: PropTypes.bool,
+    ulId: PropTypes.string
 };
 
 export default Tabs;

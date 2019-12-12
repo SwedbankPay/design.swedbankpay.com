@@ -17,7 +17,7 @@ const BasicUsage = () => (
         alternatives are present. If using tabs really is necessary, tabs with scroll might be
         a more suitable alternative.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <TabsComponent items={[...tabItems.slice(0, 3)]}/>
+            <TabsComponent id="tabs-example" items={[...tabItems.slice(0, 3)]}/>
         </ComponentPreview>
     </>
 );
@@ -30,7 +30,7 @@ const TabsScroll = () => (
         Note that the scrollable property is not optimized for desktop usage. Consider the usage
         when 4 or more tabs are present.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <TabsComponent items={tabItems} scroll/>
+            <TabsComponent id="tabs-scroll-example" ulId="tabs-scroll-example-ul" items={tabItems} scroll/>
         </ComponentPreview>
     </>
 );
@@ -43,7 +43,7 @@ const SetScrollStateJavaScript = ({ componentName }) => (
                 Moves the scroll position of the {componentName} to the user specified position. The value to be passed to <Attribute name="scrollState" /> is
                 the object <Attribute name="{ scrollStart, scrollTotalAmount }" />. <Attribute name="scrollStart" /> is the current scroll
                 position, <Attribute name="scrollTotalAmount" /> is the amount to be scrolled from the current scroll position (negative values for left scroll,
-                positive values for right scroll).
+                positive values for right scroll). Note: <PrismCode className="language-html">{"<ul>"}</PrismCode> is the scrollable element.
             </td>
         </tr>
     </>
