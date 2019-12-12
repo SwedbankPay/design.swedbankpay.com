@@ -38,9 +38,9 @@
         "ie >= 11"
     ],
     "dependencies": {
-        "@babel/polyfill": "^7.4.4",
         "chart.js": "^2.8.0",
         "classnames": "^2.2.6",
+        "core-js": "^3.4.5",
         "flatpickr": "^4.6.2",
         "js-beautify": "^1.10.2",
         "normalize.css": "^8.0.1",
