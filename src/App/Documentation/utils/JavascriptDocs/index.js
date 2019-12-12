@@ -21,7 +21,7 @@ const CloseDocs = ({ componentName }) => (
     </>
 );
 
-const JavascriptDocs = ({ componentName, open, close }) => (
+const JavascriptDocs = ({ componentName, open, close, others }) => (
     <>
         <table className="table table-striped">
             <thead>
@@ -37,6 +37,7 @@ const JavascriptDocs = ({ componentName, open, close }) => (
                 </tr>
                 {open ? <OpenDocs componentName={componentName} /> : null}
                 {close ? <CloseDocs componentName={componentName} /> : null}
+                {others && others.map((DocComponent, i) => <DocComponent key={i} componentName={componentName} />)}
             </tbody>
         </table>
     </>

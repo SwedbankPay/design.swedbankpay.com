@@ -18,13 +18,9 @@ class Tabs {
             // Only move scrollbar when interacting with the tab elements
             if (e.target.tagName === "A") {
                 const scrollStart = this.openUl.scrollLeft;
-                const scrollTotalAmount = (e.target.offsetLeft - (this.openUl.offsetWidth / 2) + (e.target.offsetWidth / 2)) - scrollStart;
-                let scrolledCount = 0;
-                const smoothTabScroll = setInterval(() => {
-                    this.openUl.scrollLeft += scrollTotalAmount / 10;
-                    scrolledCount = scrolledCount + 1;
-                    (scrolledCount === 10) && window.clearInterval(smoothTabScroll);
-                }, 5);
+                const scrollTotalAmount = (e.target.offsetLeft - (this._el.offsetWidth / 2) + (e.target.offsetWidth / 2)) - scrollStart;
+
+                this.scrollTabs(scrollStart, scrollTotalAmount);
             }
         });
 
@@ -41,6 +37,17 @@ class Tabs {
         }
 
         this._addListener();
+    }
+
+    scrollTabs (scrollStart, scrollTotalAmount) {
+        this.openUl.scrollLeft = scrollStart;
+
+        let scrolledCount = 0;
+        const smoothTabScroll = setInterval(() => {
+            this.openUl.scrollLeft += scrollTotalAmount / 10;
+            scrolledCount = scrolledCount + 1;
+            (scrolledCount === 10) && window.clearInterval(smoothTabScroll);
+        }, 5);
     }
 
     _addListener () {
@@ -101,6 +108,24 @@ const init = id => {
     }
 };
 
+const setScrollState = (id, scrollState) => {
+
+    let tab = null;
+
+    _tabs.forEach(t => t.id === id && (tab = t));
+
+    try {
+        tab.scrollTabs(scrollState.scrollStart, scrollState.scrollTotalAmount);
+    } catch (e) {
+        console.warn(`tabs.setScrollState: No tabs with id ${id} found.`);
+
+        return false;
+    }
+
+    return tab;
+};
+
 export default {
-    init
+    init,
+    setScrollState
 };

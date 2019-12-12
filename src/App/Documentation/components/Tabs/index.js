@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer, Property, JavascriptDocs } from "@docutils";
+import { ComponentPreview, DocContainer, Property, JavascriptDocs, DgScript, Attribute } from "@docutils";
 import TabsComponent from "@components/Tabs";
 
 const { tabs } = window.dg;
@@ -35,10 +35,24 @@ const TabsScroll = () => (
     </>
 );
 
+const SetScrollStateJavaScript = ({ componentName }) => (
+    <>
+        <tr>
+            <td scope="row"><DgScript component={componentName} func="setScrollState" params={[`<${componentName.toLowerCase()}-id>`, "scrollState"]} /></td>
+            <td>
+                Moves the scroll position of the {componentName} to the user specified position. The value to be passed to <Attribute name="scrollState" /> is
+                the object <Attribute name="{ scrollStart, scrollTotalAmount }" />. <Attribute name="scrollStart" /> is the current scroll
+                position, <Attribute name="scrollTotalAmount" /> is the amount to be scrolled from the current scroll position (negative values for left scroll,
+                positive values for right scroll).
+            </td>
+        </tr>
+    </>
+);
+
 const JavascriptMethods = () => (
     <>
         <h2 id="javascript-methods">JavaScript methods</h2>
-        <JavascriptDocs componentName="tabs" />
+        <JavascriptDocs componentName="tabs" others={[SetScrollStateJavaScript]} />
     </>
 );
 

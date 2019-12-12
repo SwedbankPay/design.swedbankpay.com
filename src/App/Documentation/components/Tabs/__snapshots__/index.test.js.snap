@@ -55,6 +55,11 @@ exports[`Components: Tabs JavascriptMethods renders 1`] = `
   </h2>
   <JavascriptDocs
     componentName="tabs"
+    others={
+      Array [
+        [Function],
+      ]
+    }
   />
 </Fragment>
 `;
