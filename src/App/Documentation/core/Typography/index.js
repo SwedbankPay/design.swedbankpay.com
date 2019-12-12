@@ -1,8 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import PrismCode from "react-prism";
 
 import { ComponentPreview, DocContainer, Property } from "@docutils";
+import { Overview, Download, Guidelines } from "../../../Resources/resources/typography";
+
+const { expandable } = window.dg;
+
+const ResourcesTypography = () => (
+    <div className="expandable">
+        <button type="button" className="expandable-header" aria-expanded="false" aria-controls="resources-typograpy-body">
+            <span className="expandable-headline">Typography guidelines</span>
+            <small className="expandable-subtitle">From <Link to="/res/resources/typography">typography in Resources</Link></small>
+        </button>
+        <div className="expandable-body" id="resources-typography-body">
+            <Overview />
+            <Download />
+            <Guidelines />
+        </div>
+    </div>
+);
 
 const Fonts = () => (
         <>
@@ -19,12 +36,29 @@ const Headings = () => (
             <h1>Heading h1</h1>
             <h2>Heading h2</h2>
             <h3>Heading h3</h3>
+            <h4>Heading h4</h4>
+            <h5>Heading h5</h5>
+            <h6>Heading h6</h6>
         </ComponentPreview>
         <p>The classes <Property value=".h1" /> through <Property value=".h6" /> are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <p className="h1">.h1 heading</p>
             <p className="h2">.h2 heading</p>
             <p className="h3">.h3 heading</p>
+            <p className="h4">.h4 heading</p>
+            <p className="h5">.h5 heading</p>
+            <p className="h6">.h6 heading</p>
+        </ComponentPreview>
+    </>
+);
+
+const HeroTitle = () => (
+    <>
+        <h2 id="hero-title">Hero title</h2>
+        <p>The class <Property value=".hero" /> can be used to achieve the big and bold hero title styling.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <h1 className="hero">Hero title</h1>
+            <p className="hero">Hero title</p>
         </ComponentPreview>
     </>
 );
@@ -120,20 +154,27 @@ const Blockquotes = () => {
     );
 };
 
-const Typography = () => (
-    <DocContainer docToc>
-        <p className="lead">Documentation and examples for Swedbank Pay DesignGuide typography.</p>
-        <Fonts />
-        <Headings />
-        <Lead />
-        <Inline />
-        <TextUtilities />
-        <Abbreviations />
-        <Blockquotes />
-    </DocContainer>
-);
+const Typography = () => {
+
+    useEffect(() => { expandable.init(); });
+
+    return (
+        <DocContainer docToc>
+            <p className="lead">Documentation and examples for Swedbank Pay DesignGuide typography.</p>
+            <ResourcesTypography />
+            <Fonts />
+            <Headings />
+            <HeroTitle />
+            <Lead />
+            <Inline />
+            <TextUtilities />
+            <Abbreviations />
+            <Blockquotes />
+        </DocContainer>
+    );
+};
 
 export default Typography;
 
 /* For testing */
-export { Fonts, Headings, Lead, Inline, TextUtilities, Abbreviations, Blockquotes };
+export { ResourcesTypography, Fonts, Headings, HeroTitle, Lead, Inline, TextUtilities, Abbreviations, Blockquotes };
