@@ -13,7 +13,7 @@
  - Core/colors improved (All names use same style, main colors split into sublists)
  - Badge for numbers added
  - Badge types renamed, colors updated
- - Tabs with scroll added
+ - Tabs with scroll added, with scroll state control function
  - Tabs fades added
  - Bordered lists examples under core/lists updated
  - Dialog, Topbar and Sheet open and close functions refactored
