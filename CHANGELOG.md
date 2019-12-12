@@ -17,3 +17,4 @@
  - Tabs fades added
  - Bordered lists examples under core/lists updated
  - Dialog, Topbar and Sheet open and close functions refactored
+ - Body text color changed to #512b2b
