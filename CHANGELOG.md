@@ -19,3 +19,4 @@
  - Dialog, Topbar and Sheet open and close functions refactored
  - Body text color changed to #512b2b
  - Core/typography updated (defined h4-h6, added hero title, added expandable with resources/typography content)
+ - Page layout using wrong topbar height fixed
