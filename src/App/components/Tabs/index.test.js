@@ -38,6 +38,18 @@ describe("Component: Tabs - ", () => {
         expect(wrapper).toMatchSnapshot();
     });
 
+    it("renders with id when id is provided", () => {
+        const wrapper = shallow(<Tabs id="test" items={items} />);
+
+        expect(wrapper.html()).toContain("<div id=\"test\" class=\"tabs\">");
+    });
+
+    it("renders with ulId when ulId is provided", () => {
+        const wrapper = shallow(<Tabs ulId="test" items={items} />);
+
+        expect(wrapper.html()).toContain("<ul id=\"test\">");
+    });
+
     it("sets a tab to active", () => {
         ReactDOM.render(<Tabs items={items} />, div);
 
