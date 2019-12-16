@@ -25,7 +25,7 @@ const ComplexAlert = ({ id, type, icon, close, headerText, children }) => (
             {headerText
                 ? <>
                     {"\n"}
-                        <h3>{headerText}</h3>
+                        {icon ? <h3 className="ml-2">{headerText}</h3> : <h3>{headerText}</h3> }
                     {"\n"}
                 </>
                 : null}
@@ -39,7 +39,7 @@ const ComplexAlert = ({ id, type, icon, close, headerText, children }) => (
         {children
             ? <>
                 {"\n"}
-                <div className="alert-body">
+                <div className={icon ? "alert-body ml-5" : "alert-body"}>
                     {children}
                 </div>
                 {"\n"}
@@ -50,7 +50,7 @@ const ComplexAlert = ({ id, type, icon, close, headerText, children }) => (
 
 Alert.propTypes = {
     id: PropTypes.string,
-    type: PropTypes.oneOf(["success", "neutral", "warning", "danger", "default"]).isRequired,
+    type: PropTypes.oneOf(["success", "neutral", "warning", "danger", "default", "informative"]).isRequired,
     icon: PropTypes.string,
     close: PropTypes.bool,
     text: PropTypes.string
