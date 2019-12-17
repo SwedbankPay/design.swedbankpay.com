@@ -1,7 +1,18 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Lists, { BasicList, InlineList, DescriptionList, SettingsList, ItemList, ItemListBordered, ItemListLarge, HoverItemList, StripedItemList } from "./index";
+import Lists, {
+    BasicList,
+    InlineList,
+    BulletList,
+    DescriptionList,
+    SettingsList,
+    ItemList,
+    ItemListBordered,
+    ItemListLarge,
+    HoverItemList,
+    StripedItemList
+} from "./index";
 
 describe("Documentation: Lists", () => {
     it("is defined", () => {
@@ -36,6 +47,18 @@ describe("Documentation: Lists", () => {
 
         it("renders", () => {
             const wrapper = shallow(<InlineList />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("BulletList", () => {
+        it("is defined", () => {
+            expect(BulletList).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<BulletList />);
 
             expect(wrapper).toMatchSnapshot();
         });
