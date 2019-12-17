@@ -58,6 +58,35 @@ exports[`Core: Typography Abbreviations renders 1`] = `
 </Fragment>
 `;
 
+exports[`Core: Typography AkkuratMono renders 1`] = `
+<Fragment>
+  <h2
+    id="akkurat-mono"
+  >
+    Akkurat Mono
+  </h2>
+  <p>
+    The Akkurat Mono font should be used when code is to be presented, for instance with code tags.
+  </p>
+  <h3>
+    Download
+  </h3>
+  <div
+    className="slab slab-default slab-elevated"
+  >
+    <p>
+      Before downloading the Akkurat Mono font, make sure to understand the correct usages of Akkurat Mono.
+    </p>
+    <Button
+      href="/TEST/release/fonts/AkkuratMono.zip"
+      icon="file_download"
+      label="Akkurat Mono"
+      type="executive"
+    />
+  </div>
+</Fragment>
+`;
+
 exports[`Core: Typography Blockquotes renders 1`] = `
 <Fragment>
   <h2
@@ -506,5 +535,6 @@ exports[`Core: Typography renders 1`] = `
   <TextUtilities />
   <Abbreviations />
   <Blockquotes />
+  <AkkuratMono />
 </DocContainer>
 `;
