@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTagsComponent from "@components/CodeTags";
@@ -6,7 +7,7 @@ import CodeTagsComponent from "@components/CodeTags";
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
-        <p></p>
+        <p>Code tags use Akkurat Mono as the font. Akkurat Mono can be found in <Link to="/docs/core/typography">Typography</Link></p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <p>{"\n"}
                 This is an example of inline code <CodeTagsComponent type="primary" code="property.function()" /> that
