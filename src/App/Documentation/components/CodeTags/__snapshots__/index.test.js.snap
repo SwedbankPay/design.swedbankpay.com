@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Documentation: CodeTags Overview renders 1`] = `
+<Fragment>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <p />
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <p>
+      
+
+      This is an example of inline code 
+      <CodeTags
+        code="property.function()"
+        type="primary"
+      />
+       that is presented using code tags.
+      
+
+    </p>
+    <p>
+      
+
+      This is another example of inline code 
+      <CodeTags
+        code="property.function()"
+        type="secondary"
+      />
+       that is presented using code tags.
+      
+
+    </p>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: CodeTags renders 1`] = `
+<DocContainer
+  docToc={true}
+>
+  <p>
+    Code tags are used to present inline code.
+  </p>
+  <Overview />
+</DocContainer>
+`;
