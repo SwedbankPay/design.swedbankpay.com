@@ -23,10 +23,14 @@
 
 .list-bullet {
     li {
+        position: relative;
+        padding-left: 0.75rem;
+
         &:before {
+            position: absolute;
+            left: 0;
             content: "\2022";
             color: @brand-secondary;
-            display: inline-block;
             width: 0.875rem;
         }
     }
