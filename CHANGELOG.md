@@ -28,3 +28,4 @@
  - Alert body styling updated (changed margin)
  - Akkurat Mono font added
  - Bullet list added
+ - Code tags added
