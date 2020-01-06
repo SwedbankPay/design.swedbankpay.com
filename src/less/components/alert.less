@@ -5,6 +5,14 @@
     margin-bottom: @base-margin;
     display: flex;
     align-items: center;
+    color: @black;
+
+    /* stylelint-disable selector-list-comma-newline-after */
+    h1, h2, h3, h4, h5, h6,
+    .h1, .h2, .h3, .h4, .h5, .h6 {
+        color: @black;
+    }
+    /* stylelint-enable selector-list-comma-newline-after */
 
     &.alert-default {
         .alert-variant(@text-gray, @light-gray);
@@ -30,6 +38,10 @@
         .alert-variant(@brand-error, @brand-error-light);
     }
 
+    &.alert-informative {
+        .alert-variant(@brand-accent, @brand-bg-2);
+    }
+
 
     &.alert-complex {
         flex-wrap: wrap;
@@ -53,7 +65,7 @@
     }
 
     .alert-body {
-        margin: 0 2.5rem;
+        margin: 0;
 
         :last-child {
             margin-bottom: 0;

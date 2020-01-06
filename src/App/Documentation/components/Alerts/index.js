@@ -15,6 +15,7 @@ const BasicUsage = () => (
             <AlertComponent type="default" text="This is a default alert!" />{"\n\n"}
             <AlertComponent type="success" text="This is a success alert!" />{"\n\n"}
             <AlertComponent type="neutral" text="This is a neutral alert!" />{"\n\n"}
+            <AlertComponent type="informative" text="This is an informative alert!" />{"\n\n"}
             <AlertComponent type="warning" text="This is a warning alert!" />{"\n\n"}
             <AlertComponent type="danger" text="This is a danger alert!" />
         </ComponentPreview>
@@ -28,7 +29,8 @@ const AlertWithIcon = () => (
         <ComponentPreview language="html" showCasePanel codeFigure>
             <AlertComponent type="default" text="This is a default alert with an icon!" icon="info_outline" />{"\n\n"}
             <AlertComponent type="success" text="This is a success alert with an icon!" icon="check_circle" />{"\n\n"}
-            <AlertComponent type="neutral" text="This is a neutral alert with an icon!" icon="info" />{"\n\n"}
+            <AlertComponent type="neutral" text="This is a neutral alert with an icon!" icon="help" />{"\n\n"}
+            <AlertComponent type="informative" text="This is an informative alert with an icon!" icon="info" />{"\n\n"}
             <AlertComponent type="warning" text="This is a warning alert with an icon!" icon="warning" />{"\n\n"}
             <AlertComponent type="danger" text="This is a danger alert with an icon!" icon="error" />
         </ComponentPreview>
@@ -45,7 +47,8 @@ const ClosingTheAlert = () => (
         <ComponentPreview language="html" showCasePanel codeFigure>
             <AlertComponent type="default" text="This is a default alert with an icon!" close icon="info_outline" />{"\n\n"}
             <AlertComponent type="success" text="This is a success alert with an icon!" close icon="check_circle" />{"\n\n"}
-            <AlertComponent type="neutral" text="This is a neutral alert with an icon!" close icon="info" />{"\n\n"}
+            <AlertComponent type="neutral" text="This is a neutral alert with an icon!" close icon="help" />{"\n\n"}
+            <AlertComponent type="informative" text="This is an informative alert with an icon!" close icon="info" />{"\n\n"}
             <AlertComponent type="warning" text="This is a warning alert with an icon!" close icon="warning" />{"\n\n"}
             <AlertComponent type="danger" text="This is a danger alert with an icon!" close icon="error" />
         </ComponentPreview>
