@@ -45,20 +45,20 @@ describe("Component: ActionLink", () => {
 
         it("renders ActionLinkContent with badge if badge is provided", () => {
             const mockBadge = {
-                type: "badge-yellow",
+                type: "badge-default",
                 text: "Badge"
             };
             const wrapper = shallow(<ActionLinkContent linkText="Link text" badge={mockBadge} />);
 
             expect(wrapper).toMatchSnapshot();
-            expect(wrapper.contains(<span className="badge badge-yellow" >Badge</span>)).toEqual(true);
+            expect(wrapper.contains(<span className="badge badge-default" >Badge</span>)).toEqual(true);
         });
 
         it("renders ActionLinkContent without badge if badge is not provided", () => {
             const wrapper = shallow(<ActionLinkContent linkText="Link text" />);
 
             expect(wrapper).toMatchSnapshot();
-            expect(wrapper.contains(<span className="badge badge-yellow" >Badge</span>)).toEqual(false);
+            expect(wrapper.contains(<span className="badge badge-default" >Badge</span>)).toEqual(false);
         });
 
         it("renders ActionLinkContent with smalltext when provided", () => {
