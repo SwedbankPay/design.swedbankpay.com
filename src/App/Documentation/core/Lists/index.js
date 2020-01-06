@@ -44,7 +44,7 @@ const BasicList = () => (
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="list">
                 <li>Coffee</li>
-                <li>Tea
+                <li>Tea {"\n"}
                     <ul>
                         <li>Black tea</li>
                         <li>Green tea</li>
@@ -64,6 +64,22 @@ const InlineList = () => (
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="list list-inline">
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+            </ul>
+        </ComponentPreview>
+    </>
+);
+
+const BulletList = () => (
+    <>
+        <h2 id="bullet-list">Bullet list</h2>
+        <p>
+            Add <Property value=".list-bullet" /> on a list to make it a bullet list.
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <ul className="list list-bullet">
                 <li>Coffee</li>
                 <li>Tea</li>
                 <li>Milk</li>
@@ -314,6 +330,7 @@ class Lists extends Component {
                 </p>
                 <BasicList />
                 <InlineList />
+                <BulletList />
                 <DescriptionList />
                 <SettingsList />
                 <ItemList />
@@ -328,4 +345,15 @@ class Lists extends Component {
 
 export default Lists;
 
-export { BasicList, InlineList, DescriptionList, SettingsList, ItemList, ItemListBordered, ItemListLarge, HoverItemList, StripedItemList };
+export {
+    BasicList,
+    InlineList,
+    BulletList,
+    DescriptionList,
+    SettingsList,
+    ItemList,
+    ItemListBordered,
+    ItemListLarge,
+    HoverItemList,
+    StripedItemList
+};
