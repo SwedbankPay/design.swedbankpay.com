@@ -130,6 +130,11 @@ module.exports = [
                 componentPath: "components/Card"
             },
             {
+                title: "Code Tags",
+                path: "/docs/components/code-tags",
+                componentPath: "components/CodeTags"
+            },
+            {
                 title: "Datepickers",
                 path: "/docs/components/datepickers",
                 componentPath: "components/Datepickers"
