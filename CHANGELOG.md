@@ -15,12 +15,16 @@
  - Badge types renamed, colors updated
  - Tabs with scroll added, with scroll state control function
  - Tabs fades added
- - Bordered lists examples under core/lists updated
+ - Bordered lists examples under core/lists updated (changed h5 to h3)
  - Dialog, Topbar and Sheet open and close functions refactored
  - Body text color changed to #512b2b
  - Core/typography updated (defined h4-h6, added hero title, added expandable with resources/typography content)
  - Page layout using wrong topbar height fixed
- - Babel/polyfill replaced with corejs
- - Action list examples in core/lists and core/iconography updated
+ - Action list examples in core/lists and core/iconography updated (changed examples to use new implementation of action list)
  - Download buttons in Resources section updated
  - Download buttons in Templates section updated
+ - Lead text styling updated (change font, size, weight and line-height)
+ - Alert informative added (to be used as an informative alert, an alternative to alert neutral)
+ - Alert body styling updated (changed margin)
+ - Akkurat Mono font added
+ - Bullet list added
