@@ -2,7 +2,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Typography, { ResourcesTypography, Fonts, Headings, HeroTitle, Lead, Inline, TextUtilities, Abbreviations, Blockquotes } from "./index";
+import Typography, { ResourcesTypography, Fonts, Headings, HeroTitle, Lead, Inline, TextUtilities, Abbreviations, Blockquotes, AkkuratMono } from "./index";
 
 describe("Core: Typography", () => {
     it("is defined", () => {
@@ -126,6 +126,18 @@ describe("Core: Typography", () => {
                     expect(wrapper).toMatchSnapshot();
                 });
             }
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("AkkuratMono", () => {
+        it("is defined", () => {
+            expect(AkkuratMono).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<AkkuratMono />);
 
             expect(wrapper).toMatchSnapshot();
         });
