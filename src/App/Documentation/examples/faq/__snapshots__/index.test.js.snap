@@ -5,7 +5,7 @@ exports[`Examples: FAQ FAQCard renders 1`] = `
   className="row justify-content-center mt-5"
 >
   <div
-    className="col-lg-5"
+    className="col-lg-8"
   >
     <div
       className="card card-primary"
@@ -197,10 +197,14 @@ exports[`Examples: FAQ renders 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <FAQSearch />
-    <FAQList />
-    <FAQSheet />
-    <FAQCard />
+    <div
+      className="container"
+    >
+      <FAQSearch />
+      <FAQList />
+      <FAQSheet />
+      <FAQCard />
+    </div>
   </ComponentPreview>
 </DocContainer>
 `;

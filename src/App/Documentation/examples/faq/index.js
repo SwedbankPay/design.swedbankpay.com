@@ -103,7 +103,7 @@ const FAQSheet = () => {
 
 const FAQCard = () => (
     <div className="row justify-content-center mt-5">
-        <div className="col-lg-5">
+        <div className="col-lg-8">
             <div className="card card-primary">
                 <header className="card-header">
                     <h3>Further help</h3>
@@ -138,10 +138,12 @@ const FAQ = () => {
     return (
         <DocContainer>
             <ComponentPreview language="html" showCasePanel codeFigure>
-                <FAQSearch />
-                <FAQList />
-                <FAQSheet />
-                <FAQCard />
+                <div className="container">
+                    <FAQSearch />
+                    <FAQList />
+                    <FAQSheet />
+                    <FAQCard />
+                </div>
             </ComponentPreview>
         </DocContainer>
     );
