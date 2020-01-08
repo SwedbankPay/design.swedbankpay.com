@@ -119,7 +119,7 @@ const FAQCard = () => (
                         </div>
                     </div>
                     <p>Send in a question to get help from our support team</p>
-                    <button type="button" className="btn btn-executive btn-block mt-auto" data-sheet-open="faq-sheet">
+                    <button type="button" className="btn btn-executive btn-block" data-sheet-open="faq-sheet">
                         Send in a question
                     </button>
                 </div>

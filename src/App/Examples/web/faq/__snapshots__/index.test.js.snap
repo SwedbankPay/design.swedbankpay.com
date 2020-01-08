@@ -51,7 +51,7 @@ exports[`Examples: FAQ FAQCard renders 1`] = `
           Send in a question to get help from our support team
         </p>
         <button
-          className="btn btn-executive btn-block mt-auto"
+          className="btn btn-executive btn-block"
           data-sheet-open="faq-sheet"
           type="button"
         >
