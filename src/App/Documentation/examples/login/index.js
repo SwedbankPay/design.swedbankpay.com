@@ -7,12 +7,9 @@ import ButtonComponent from "@components/Button";
 const LoginContent = () => (
     <div className="slab slab-secondary slab-elevated">
         <div className="row align-items-center">
-            <div className="col-lg-7 d-none d-lg-block">
-                <img src="https://picsum.photos/1000/600?image=744" className="w-100 h-100" />
-            </div>
             <div className="col-lg-5">
                 <h2>Login</h2>
-                <form action="#" noValidate data-validate="">
+                <form action="#" noValidate>
                     <InputGroup
                         required
                         id="validation-username"
@@ -28,11 +25,12 @@ const LoginContent = () => (
                         label="Password"
                         prefixType="icon"
                         prefixValue="vpn_key"
-                        helpBlock
-                        errorMessage="Username or password is incorrect"
                     />
                     <ButtonComponent type="executive" label="Log in" icon="lock_open" btnType="submit" />
                 </form>
+            </div>
+            <div className="col-lg-7 d-none d-lg-block">
+                <img src="https://picsum.photos/1000/600?image=744" className="w-100 h-100" />
             </div>
         </div>
     </div>
