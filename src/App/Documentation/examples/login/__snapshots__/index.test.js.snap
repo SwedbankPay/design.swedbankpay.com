@@ -26,7 +26,6 @@ exports[`Example: Login LoginContent renders 1`] = `
           type="text"
         />
         <InputGroup
-          helpBlock={true}
           id="validation-password"
           label="Password"
           prefixType="icon"
