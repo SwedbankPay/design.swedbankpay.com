@@ -311,7 +311,7 @@ const CustomersDetailedOrders = ({ customersDetailedOrdersSteps, customersDetail
                     <ActionLinkComponent linkText="Edit order" smallText="OrderID#123456" multiline={true} />
                 </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 mt-3 mt-md-0">
                 <h5>Detailed internal status:</h5>
                 <StepsComponent steps={customersDetailedOrdersSteps} vertical />
             </div>

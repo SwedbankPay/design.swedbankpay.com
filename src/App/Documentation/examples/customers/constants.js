@@ -88,19 +88,19 @@ export const customersDetailedOrders = [...Array(15)].map(() => (Math.floor(Math
 
 export const customersDetailedOrdersSteps = [
     {
-        title: "Step one",
+        title: "Check status",
         completed: true
     },
     {
-        title: "Step two",
+        title: "Confirm status",
         ongoing: true,
         selected: true
     },
     {
-        title: "Step three"
+        title: "Handle status"
     },
     {
-        title: "Step four"
+        title: "Complete status"
     }
 ];
 
