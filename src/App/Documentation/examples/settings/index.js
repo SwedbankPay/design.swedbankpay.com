@@ -91,8 +91,8 @@ const SettingsEmailNotification = ({ emailNotif, toggleEmailNotif }) => {
 
 const SettingsDescription = () => (
     <>
-        <div className="row mt-5">
-            <div className="col-lg-12">
+        <div className="row mt-5 mb-2">
+            <div className="col-lg-7">
                 <InputGroup
                     id="settings-description"
                     type="textarea"
@@ -102,16 +102,17 @@ const SettingsDescription = () => (
                     prefixValue="format_quote"
                 />
             </div>
-        </div>
-        <div className="row mb-5">
-            <div className="col-lg-7">
+            <div className="col-lg-5">
                 <InputGroup
+                    label="User Status"
                     type="select"
                     selectOptions={["Available", "Away", "On break", "Not Available"]}
                     prefixValue="Status"
                 />
             </div>
-            <div className="col-lg-5">
+        </div>
+        <div className="row mb-5">
+            <div className="col-lg-6">
                 <label>Profile visibility</label>
                 <Radio label="Visible to all" id="settings-radio-1" name="settings-radio" checked />
                 <Radio label="Visible to accepted contacts only" id="settings-radio-2" name="settings-radio" />
@@ -154,12 +155,14 @@ class Settings extends Component {
                     <section className="panel panel-brand">
                         <SettingsHeader />
                         <div className="panel-body">
-                            <form>
-                                <SettingsBasic />
-                                <SettingsEmailNotification emailNotif={this.state.emailNotif} toggleEmailNotif={() => this.toggleEmailNotif()} />
-                                <SettingsDescription />
-                                <ButtonComponent type="executive" label="Save changes" icon="save" btnType="submit" />
-                            </form>
+                            <div className="container">
+                                <form>
+                                    <SettingsBasic />
+                                    <SettingsEmailNotification emailNotif={this.state.emailNotif} toggleEmailNotif={() => this.toggleEmailNotif()} />
+                                    <SettingsDescription />
+                                    <ButtonComponent type="executive" label="Save changes" icon="save" btnType="submit" />
+                                </form>
+                            </div>
                         </div>
                     </section>
                 </ComponentPreview>
