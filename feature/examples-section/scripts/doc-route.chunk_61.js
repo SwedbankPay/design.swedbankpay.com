@@ -1,2 +1,2 @@
 (window.webpackJsonpswedbankpay=window.webpackJsonpswedbankpay||[]).push([[64],{57:function(n,t,e){"use strict";e.r(t);var a=e(0),i=e.n(a),o=e(3);t.default=Object(o.k)(function(n){var t=n.location.pathname.split("/").filter(function(n){return n.length}).pop().split("-").map(function(n,t){return t>0?n:n.charAt(0).toUpperCase()+n.substr(1)}).join(" ");return document.title="".concat(t," | Swedbank Pay DesignGuide"),i.a.createElement("h1",null,t)})}}]);
-//# sourceMappingURL=doc-route.chunk_61.js.map?ee4a8a789b8d2c668f13
+//# sourceMappingURL=doc-route.chunk_61.js.map?1bc20042b5eb2a61d061
