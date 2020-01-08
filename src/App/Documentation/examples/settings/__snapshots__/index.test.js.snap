@@ -76,10 +76,10 @@ exports[`Examples: Settings SettingsBasic renders 1`] = `
 exports[`Examples: Settings SettingsDescription renders 1`] = `
 <Fragment>
   <div
-    className="row mt-5"
+    className="row mt-5 mb-2"
   >
     <div
-      className="col-lg-12"
+      className="col-lg-7"
     >
       <InputGroup
         id="settings-description"
@@ -90,14 +90,11 @@ exports[`Examples: Settings SettingsDescription renders 1`] = `
         type="textarea"
       />
     </div>
-  </div>
-  <div
-    className="row mb-5"
-  >
     <div
-      className="col-lg-7"
+      className="col-lg-5"
     >
       <InputGroup
+        label="User Status"
         prefixValue="Status"
         selectOptions={
           Array [
@@ -110,8 +107,12 @@ exports[`Examples: Settings SettingsDescription renders 1`] = `
         type="select"
       />
     </div>
+  </div>
+  <div
+    className="row mb-5"
+  >
     <div
-      className="col-lg-5"
+      className="col-lg-6"
     >
       <label>
         Profile visibility
@@ -224,20 +225,24 @@ exports[`Examples: Settings renders 1`] = `
       <div
         className="panel-body"
       >
-        <form>
-          <SettingsBasic />
-          <SettingsEmailNotification
-            emailNotif={true}
-            toggleEmailNotif={[Function]}
-          />
-          <SettingsDescription />
-          <Button
-            btnType="submit"
-            icon="save"
-            label="Save changes"
-            type="executive"
-          />
-        </form>
+        <div
+          className="container"
+        >
+          <form>
+            <SettingsBasic />
+            <SettingsEmailNotification
+              emailNotif={true}
+              toggleEmailNotif={[Function]}
+            />
+            <SettingsDescription />
+            <Button
+              btnType="submit"
+              icon="save"
+              label="Save changes"
+              type="executive"
+            />
+          </form>
+        </div>
       </div>
     </section>
   </ComponentPreview>
