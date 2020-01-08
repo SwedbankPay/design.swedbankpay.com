@@ -26,7 +26,7 @@ const Home = () => {
                             <div className="doc-circle">
                                 <i className="material-icons material-icons-large text-white">desktop_windows</i>
                             </div>
-                            <h2>Web</h2>
+                            <h2>Documentation</h2>
                             <p>User interface components for websites and web applications</p>
                             <Link className="btn btn-guiding btn-outline btn-block mt-auto" to="/docs/getting-started/introduction">Documentation</Link>
                         </div>
@@ -39,7 +39,7 @@ const Home = () => {
                                 <i className="material-icons material-icons-large text-white">list_alt</i>
                             </div>
                             <h2>Templates</h2>
-                            <p>Templates, usage description and tips.</p>
+                            <p>Document templates, usage description and tips.</p>
                             <Link className="btn btn-guiding btn-outline btn-block mt-auto" to="/tmpl">Templates</Link>
                         </div>
                     </div>
@@ -51,7 +51,7 @@ const Home = () => {
                                 <i className="material-icons material-icons-large text-white">folder_open</i>
                             </div>
                             <h2>Resources</h2>
-                            <p>Guidelines and downloadables.</p>
+                            <p>Downloadables and resource usage guidelines.</p>
                             <Link className="btn btn-guiding btn-outline btn-block mt-auto" to="/res/getting-started/introduction">Resources</Link>
                         </div>
                     </div>
