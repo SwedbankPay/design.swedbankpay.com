@@ -302,5 +302,36 @@ module.exports = [
                 componentPath: "utilities/Visibility"
             }
         ]
+    },
+
+    /**
+     * Examples
+     */
+    {
+        title: "Examples",
+        path: "/docs/examples",
+        redirect: "/docs/examples/login",
+        routes: [
+            {
+                title: "Login",
+                path: "/docs/examples/login",
+                componentPath: "examples/login"
+            },
+            {
+                title: "Settings",
+                path: "/docs/examples/settings",
+                componentPath: "examples/settings"
+            },
+            {
+                title: "FAQ",
+                path: "/docs/examples/faq",
+                componentPath: "examples/faq"
+            },
+            {
+                title: "Customers",
+                path: "/docs/examples/customers",
+                componentPath: "examples/customers"
+            }
+        ]
     }
 ];

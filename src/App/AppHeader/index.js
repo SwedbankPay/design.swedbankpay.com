@@ -25,7 +25,6 @@ const AppHeader = () => (
                 <NavLink to="/docs" activeClassName="active"><span>Documentation</span></NavLink>
                 <NavLink to="/tmpl" activeClassName="active"><span>Templates</span></NavLink>
                 <NavLink to="/res" activeClassName="active"><span>Resources</span></NavLink>
-                <NavLink to="/examples" activeClassName="active"><span>Examples</span></NavLink>
                 <div className="topbar-info topbar-link-right">
                     <div className="topbar-info-contact">
                         <a href={`https://github.com/${brand}/design.${brand}.com`} target="_blank" rel="noopener noreferrer">

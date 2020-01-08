@@ -62,17 +62,6 @@ exports[`Main: App renders 1`] = `
               "_status": -1,
             }
           }
-          path="/Examples"
-        />
-        <Route
-          component={
-            Object {
-              "$$typeof": Symbol(react.lazy),
-              "_ctor": [Function],
-              "_result": null,
-              "_status": -1,
-            }
-          }
           path="/tmpl"
         />
         <Route

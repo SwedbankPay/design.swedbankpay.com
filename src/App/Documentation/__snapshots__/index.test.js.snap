@@ -298,6 +298,33 @@ exports[`Documentation: index renders 1`] = `
               ],
               "title": "Utilities",
             },
+            Object {
+              "path": "/docs/examples",
+              "redirect": "/docs/examples/login",
+              "routes": Array [
+                Object {
+                  "componentPath": "examples/login",
+                  "path": "/docs/examples/login",
+                  "title": "Login",
+                },
+                Object {
+                  "componentPath": "examples/settings",
+                  "path": "/docs/examples/settings",
+                  "title": "Settings",
+                },
+                Object {
+                  "componentPath": "examples/faq",
+                  "path": "/docs/examples/faq",
+                  "title": "FAQ",
+                },
+                Object {
+                  "componentPath": "examples/customers",
+                  "path": "/docs/examples/customers",
+                  "title": "Customers",
+                },
+              ],
+              "title": "Examples",
+            },
           ]
         }
       />
@@ -618,6 +645,37 @@ exports[`Documentation: index renders 1`] = `
               ]
             }
             title="Utilities"
+          />
+          <RenderRoutes
+            appFolder="Documentation"
+            key="renderRoutes_Examples"
+            path="/docs/examples"
+            redirect="/docs/examples/login"
+            routes={
+              Array [
+                Object {
+                  "componentPath": "examples/login",
+                  "path": "/docs/examples/login",
+                  "title": "Login",
+                },
+                Object {
+                  "componentPath": "examples/settings",
+                  "path": "/docs/examples/settings",
+                  "title": "Settings",
+                },
+                Object {
+                  "componentPath": "examples/faq",
+                  "path": "/docs/examples/faq",
+                  "title": "FAQ",
+                },
+                Object {
+                  "componentPath": "examples/customers",
+                  "path": "/docs/examples/customers",
+                  "title": "Customers",
+                },
+              ]
+            }
+            title="Examples"
           />
           <Redirect
             from="/docs/*"

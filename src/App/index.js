@@ -30,8 +30,6 @@ const Home = React.lazy(() => import(/* webpackChunkName: "home.chunk" */ "./Hom
 
 const Documentation = React.lazy(() => import(/* webpackChunkName: "documentation.chunk" */ "./Documentation/index.js"));
 
-const Examples = React.lazy(() => import(/* webpackChunkName: "examples.chunk" */ "./Examples/index.js"));
-
 const Templates = React.lazy(() => import(/* webpackChunkName: "templates.chunk" */ "./Templates/index.js"));
 
 const Resources = React.lazy(() => import(/* webpackChunkName: "templates.chunk" */ "./Resources/index.js"));
@@ -67,7 +65,6 @@ class App extends Component {
                         <Switch>
                             <Route exact path="/" component={Home} />
                             <Route path="/docs" component={Documentation} />
-                            <Route path="/Examples" component={Examples} />
                             <Route path="/tmpl" component={Templates} />
                             <Route path="/res" component={Resources} />
                             <Route path="/404" component={ErrorPage404} />
