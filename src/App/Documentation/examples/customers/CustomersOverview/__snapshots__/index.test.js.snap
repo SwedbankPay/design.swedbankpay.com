@@ -58,7 +58,8 @@ exports[`Examples: CustomersOverview renders 1`] = `
               
 
               <button
-                className="btn btn-executive"
+                className="btn btn-executive btn-outline"
+                disabled={true}
                 onClick={[Function]}
                 type="button"
               >

@@ -45,7 +45,7 @@ class CustomersOverview extends Component {
                                             <i className="material-icons">search</i>
                                         </span>{"\n"}
                                         <input ref={input => this.customerFilterField = input} value={this.state.customerFilter} onChange={e => this.updateFilter(e)} type="text" className="form-control" />{"\n"}
-                                        <button type="button" onClick={() => this.resetFilter()} className="btn btn-executive">{"\n"}
+                                        <button type="button" onClick={() => this.resetFilter()} disabled={this.state.customerFilter.length === 0} className="btn btn-executive btn-outline">{"\n"}
                                             <i className="material-icons">close</i>{"\n"}
                                         </button>{"\n"}
                                     </div>

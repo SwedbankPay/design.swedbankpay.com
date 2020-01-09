@@ -37,7 +37,7 @@
     }
 }
 
-.button-outline-variant(@color, @background, @hover-color) {
+.button-outline-variant(@color, @background, @hover-color, @disabled-color, @disabled-bg) {
     background: transparent;
     color: @color;
     border-color: darken(@background, 5%);
@@ -76,9 +76,9 @@
         &[active],
         &:active,
         &.active {
-            background-color: @btn-guiding-disabled-bg;
-            color: @btn-guiding-disabled-color;
-            border-color: transparent;
+            background-color: @disabled-bg;
+            color: @disabled-color;
+            border-color: @disabled-color;
         }
     }
 }
