@@ -105,6 +105,94 @@ exports[`Components: Topbar Overview renders 1`] = `
 </Fragment>
 `;
 
+exports[`Components: Topbar TopbarPNG renders 1`] = `
+<Fragment>
+  <h2
+    id="topbar-png"
+  >
+    Topbar with PNG logo
+  </h2>
+  <p>
+    A PNG version of the logo can also be used. This is done by appending the class 
+    <Property
+      value=".topbar-logo-png"
+    />
+     to the anchor with class 
+    <Property
+      value=".topbar-logo"
+    />
+    . Only consider using the PNG version when there are issues with using the SVG version.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Topbar
+      id="demo-topbar-png"
+      logout={true}
+      png={true}
+      topbarContent={
+        Object {
+          "btn": Object {
+            "icon": "menu",
+            "name": "Menu",
+          },
+          "items": Array [
+            Object {
+              "icon": "home",
+              "name": "Home",
+            },
+            Object {
+              "icon": "shopping_cart",
+              "name": "Purchase history",
+            },
+            Object {
+              "icon": "settings",
+              "name": "Settings",
+            },
+          ],
+        }
+      }
+    />
+  </ComponentPreview>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Topbar
+      id="demo-topbar-1-png"
+      logout={true}
+      png={true}
+      topbarContent={
+        Object {
+          "btn": Object {
+            "icon": "menu",
+            "name": "Menu",
+          },
+          "items": Array [
+            Object {
+              "icon": "home",
+              "name": "Home",
+            },
+            Object {
+              "icon": "shopping_cart",
+              "name": "Purchase history",
+            },
+            Object {
+              "icon": "settings",
+              "name": "Settings",
+            },
+          ],
+        }
+      }
+      wide="xl"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Components: Topbar TopbarWide renders 1`] = `
 <Fragment>
   <h2
@@ -162,6 +250,7 @@ exports[`Components: Topbar renders 1`] = `
   </p>
   <Overview />
   <TopbarWide />
+  <TopbarPNG />
   <JavascriptMethods />
 </DocContainer>
 `;

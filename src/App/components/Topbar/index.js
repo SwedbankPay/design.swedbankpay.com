@@ -52,24 +52,28 @@ const TopbarLogout = () => (
     </>
 );
 
-const TopbarLogo = () => (
+const TopbarLogo = ({ png }) => (
     <>
-        <a className="topbar-logo" href="/" onClick={e => e.preventDefault()}>{"\n"}
-            <img src={isDev ? devLogo : `${process.env.basename}img/${brand}-logo.svg`} alt={`${brand}-logo`}/>{"\n"}
+        <a className={`topbar-logo${png ? " topbar-logo-png" : ""}`} href="/" onClick={e => e.preventDefault()}>{"\n"}
+            {(brand === "swedbankpay" && png) ?
+                <img src={`${process.env.basename}img/${brand}-logo.png`} alt={`${brand}-logo`}/>
+                :
+                <img src={isDev ? devLogo : `${process.env.basename}img/${brand}-logo.svg`} alt={`${brand}-logo`}/>
+            }{"\n"}
         </a>{"\n"}
     </>
 );
 
-const Topbar = ({ topbarContent, wide, logout, id }) => (
+const Topbar = ({ topbarContent, wide, logout, id, png }) => (
     <header className={`topbar${wide ? ` topbar-${wide}-wide` : ""}`} id={id}>{"\n"}
         {topbarContent ?
         <>
             <TopbarBtn />{"\n"}
-            <TopbarLogo />
+            <TopbarLogo png={png}/>
             <TopbarMenu menu={topbarContent} logout={!!logout} />
         </> :
         <>
-            <TopbarLogo />
+            <TopbarLogo png={png} />
             {logout ? <TopbarLogout /> : null}
         </>}
     </header>
@@ -78,7 +82,8 @@ const Topbar = ({ topbarContent, wide, logout, id }) => (
 Topbar.propTypes = {
     topbarContent: PropTypes.object,
     fixed: PropTypes.bool,
-    logout: PropTypes.bool
+    logout: PropTypes.bool,
+    png: PropTypes.bool
 };
 
 export default Topbar;

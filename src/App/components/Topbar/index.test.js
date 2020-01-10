@@ -146,6 +146,14 @@ describe("Component: Topbar - ", () => {
                 expect(eventHandler.preventDefault).toHaveBeenCalled();
             });
         });
+
+        describe("png", () => {
+            it("renders a topbar with anchor with class .topbar-logo-png", () => {
+                const wrapper = shallow(<Topbar png />);
+
+                expect(wrapper.html()).toContain("<a class=\"topbar-logo topbar-logo-png\" href=\"/\">");
+            });
+        });
     });
 
     it("logo prevents default when clicked", () => {
