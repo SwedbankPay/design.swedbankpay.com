@@ -33,62 +33,64 @@ class CustomersOverview extends Component {
             <>
                 <h2 id="customers-overview">Customers overview</h2>
                 <ComponentPreview language="html" showCasePanel codeFigure>
-                    <div className="panel panel-brand">
-                        <header>
-                            <div className="row">
-                                <div className="col-lg-4">
-                                    <h2 className="panel-title">Customers</h2>
-                                </div>
-                                <div className="col-lg-8">
-                                    <div className="input-group">{"\n"}
-                                        <span className="input-group-addon">{"\n"}
-                                            <i className="material-icons">search</i>
-                                        </span>{"\n"}
-                                        <input ref={input => this.customerFilterField = input} value={this.state.customerFilter} onChange={e => this.updateFilter(e)} type="text" className="form-control" />{"\n"}
-                                        <button type="button" onClick={() => this.resetFilter()} disabled={this.state.customerFilter.length === 0} className="btn btn-executive btn-outline">{"\n"}
-                                            <i className="material-icons">close</i>{"\n"}
-                                        </button>{"\n"}
+                    <div className="container">
+                        <div className="panel panel-brand">
+                            <header>
+                                <div className="row">
+                                    <div className="col-lg-4">
+                                        <h2 className="panel-title">Customers</h2>
+                                    </div>
+                                    <div className="col-lg-8">
+                                        <div className="input-group">{"\n"}
+                                            <span className="input-group-addon">{"\n"}
+                                                <i className="material-icons">search</i>
+                                            </span>{"\n"}
+                                            <input ref={input => this.customerFilterField = input} value={this.state.customerFilter} onChange={e => this.updateFilter(e)} type="text" className="form-control" />{"\n"}
+                                            <button type="button" onClick={() => this.resetFilter()} disabled={this.state.customerFilter.length === 0} className="btn btn-executive btn-outline">{"\n"}
+                                                <i className="material-icons">close</i>{"\n"}
+                                            </button>{"\n"}
+                                        </div>
                                     </div>
                                 </div>
+                            </header>
+                            <div className="panel-table">
+                                <table className="table table-hover table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col" className="d-none d-sm-table-cell">First name</th>
+                                            <th scope="col" className="d-none d-sm-table-cell">Last name</th>
+                                            <th scope="col">Location</th>
+                                            <th scope="col" className="d-none d-lg-table-cell">Delivery status</th>
+                                            <th scope="col" className="d-lg-none" />
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {this.props.customersList.filter(
+                                            customer => this.state.customerFilter === "" ||
+                                            customer.firstName.toLowerCase().includes(this.state.customerFilter) ||
+                                            customer.lastName.toLowerCase().includes(this.state.customerFilter) ||
+                                            customer.location.toLowerCase().includes(this.state.customerFilter)
+                                        )
+                                            .map((customer, index) => (
+                                                <tr key={customer.id} onClick={() => this.props.setCustomerIndex(index)}>
+                                                    <th scope="row">{customer.id}</th>
+                                                    <td className="d-none d-sm-table-cell">{customer.firstName}</td>
+                                                    <td className="d-none d-sm-table-cell">{customer.lastName}</td>
+                                                    <td>{customer.location}</td>
+                                                    <td className="d-none d-lg-table-cell">
+                                                        <span className={`status status-${customer.status}`}>{this.props.statusText[customer.status]}</span>
+                                                    </td>
+                                                    <td className="d-lg-none">
+                                                        <span className={`status status-${customer.status} pl-0`} />
+                                                    </td>
+                                                </tr>
+                                            ))}
+                                    </tbody>
+                                </table>
                             </div>
-                        </header>
-                        <div className="panel-table">
-                            <table className="table table-hover table-striped">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">ID</th>
-                                        <th scope="col" className="d-none d-sm-table-cell">First name</th>
-                                        <th scope="col" className="d-none d-sm-table-cell">Last name</th>
-                                        <th scope="col">Location</th>
-                                        <th scope="col" className="d-none d-lg-table-cell">Delivery status</th>
-                                        <th scope="col" className="d-lg-none" />
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {this.props.customersList.filter(
-                                        customer => this.state.customerFilter === "" ||
-                                        customer.firstName.toLowerCase().includes(this.state.customerFilter) ||
-                                        customer.lastName.toLowerCase().includes(this.state.customerFilter) ||
-                                        customer.location.toLowerCase().includes(this.state.customerFilter)
-                                    )
-                                        .map((customer, index) => (
-                                            <tr key={customer.id} onClick={() => this.props.setCustomerIndex(index)}>
-                                                <th scope="row">{customer.id}</th>
-                                                <td className="d-none d-sm-table-cell">{customer.firstName}</td>
-                                                <td className="d-none d-sm-table-cell">{customer.lastName}</td>
-                                                <td>{customer.location}</td>
-                                                <td className="d-none d-lg-table-cell">
-                                                    <span className={`status status-${customer.status}`}>{this.props.statusText[customer.status]}</span>
-                                                </td>
-                                                <td className="d-lg-none">
-                                                    <span className={`status status-${customer.status} pl-0`} />
-                                                </td>
-                                            </tr>
-                                        ))}
-                                </tbody>
-                            </table>
+                            <PaginationComponent text="1 of 123" arrows farArrows />
                         </div>
-                        <PaginationComponent text="1 of 123" arrows farArrows />
                     </div>
                 </ComponentPreview>
             </>

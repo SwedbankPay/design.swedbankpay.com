@@ -48,78 +48,80 @@ class CustomersDetailed extends Component {
             <>
                 <h2 id="customers-detailed">Customers detailed</h2>
                 <ComponentPreview language="html" showCasePanel codeFigure>
-                    <div className="panel panel-brand">
-                        <header>
-                            <ol className="breadcrumb">
-                                <li><a href="#">Customers</a></li>
-                                <li><span>{this.props.customer.id}</span></li>
-                            </ol>
-                            <div className="row">
-                                <div className="col-auto mr-auto">
-                                    <div className="row">
-                                        <div className="col-xs-auto">
-                                            <div className="d-none d-sm-block">
-                                                <div className="media media-sm">
-                                                    <div className="media-img">
-                                                        <i className="material-icons">account_circle</i>
+                    <div className="container">
+                        <div className="panel panel-brand">
+                            <header>
+                                <ol className="breadcrumb">
+                                    <li><a href="#">Customers</a></li>
+                                    <li><span>{this.props.customer.id}</span></li>
+                                </ol>
+                                <div className="row">
+                                    <div className="col-auto mr-auto">
+                                        <div className="row">
+                                            <div className="col-xs-auto">
+                                                <div className="d-none d-sm-block">
+                                                    <div className="media media-sm">
+                                                        <div className="media-img">
+                                                            <i className="material-icons">account_circle</i>
+                                                        </div>
+                                                        <div className="media-body">
+                                                            <h4>{`${this.props.customer.firstName} ${this.props.customer.lastName}`}</h4>
+                                                            <p>{`${this.props.customer.email} ${this.props.customer.phone}`}</p>
+                                                        </div>
                                                     </div>
-                                                    <div className="media-body">
-                                                        <h4>{`${this.props.customer.firstName} ${this.props.customer.lastName}`}</h4>
-                                                        <p>{`${this.props.customer.email} ${this.props.customer.phone}`}</p>
+                                                </div>
+                                                <div className="d-block d-sm-none">
+                                                    <div className="media media-sm">
+                                                        <div className="media-img">
+                                                            <i className="material-icons">account_circle</i>
+                                                        </div>
+                                                        <div className="media-body">
+                                                            <h4>{`${this.props.customer.firstName} ${this.props.customer.lastName}`}</h4>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="d-block d-sm-none">
-                                                <div className="media media-sm">
-                                                    <div className="media-img">
-                                                        <i className="material-icons">account_circle</i>
-                                                    </div>
-                                                    <div className="media-body">
-                                                        <h4>{`${this.props.customer.firstName} ${this.props.customer.lastName}`}</h4>
+                                            <div className="col-xs-auto">
+                                                <div id="customer-detailed-action-list" className="action-list anchor-top-right">
+                                                    <button id="actionListToggle" type="button" className="action-toggle" aria-haspopup="true">
+                                                        <i className="material-icons">more_vert</i>
+                                                    </button>
+                                                    <div className="action-menu" aria-labelledby="actionListToggle">
+                                                        <a href="#" onClick={e => e.preventDefault()}><i className="material-icons">edit</i>Edit</a>
+                                                        <a href="#" onClick={e => e.preventDefault()} data-dialog-open="customers-detailed-dialog"><i className="material-icons">delete</i>Delete</a>
                                                     </div>
                                                 </div>
+                                            </div>
+                                            <CustomersDetailedDialog customer={this.props.customer} />
+                                        </div>
+                                        <div className="row d-block d-sm-none">
+                                            <div className="col-sm-auto pl-0">
+                                                <p className="mb-0 text-truncate">{this.props.customer.email}</p>
+                                            </div>
+                                            <div className="col-sm-auto pl-0">
+                                                <p>{this.props.customer.phone}</p>
                                             </div>
                                         </div>
-                                        <div className="col-xs-auto">
-                                            <div id="customer-detailed-action-list" className="action-list anchor-top-right">
-                                                <button id="actionListToggle" type="button" className="action-toggle" aria-haspopup="true">
-                                                    <i className="material-icons">more_vert</i>
-                                                </button>
-                                                <div className="action-menu" aria-labelledby="actionListToggle">
-                                                    <a href="#" onClick={e => e.preventDefault()}><i className="material-icons">edit</i>Edit</a>
-                                                    <a href="#" onClick={e => e.preventDefault()} data-dialog-open="customers-detailed-dialog"><i className="material-icons">delete</i>Delete</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <CustomersDetailedDialog customer={this.props.customer} />
                                     </div>
-                                    <div className="row d-block d-sm-none">
-                                        <div className="col-sm-auto pl-0">
-                                            <p className="mb-0 text-truncate">{this.props.customer.email}</p>
-                                        </div>
-                                        <div className="col-sm-auto pl-0">
-                                            <p>{this.props.customer.phone}</p>
-                                        </div>
+                                    <div className="col-auto pl-0">
+                                        <h4>Delivery status:</h4>
+                                        <span className={`status status-${this.props.customer.status}`}>{this.props.statusText[this.props.customer.status]}</span>
                                     </div>
                                 </div>
-                                <div className="col-auto pl-0">
-                                    <h4>Delivery status:</h4>
-                                    <span className={`status status-${this.props.customer.status}`}>{this.props.statusText[this.props.customer.status]}</span>
+                            </header>
+                            <div className="panel-body">
+                                <div id="customers-detailed-tabs" className="tabs tabs-scroll">{"\n"}
+                                    <ul id="customers-detailed-tabs-ul">
+                                        {this.props.customersDetailedTabs.map((tab, i) => (
+                                            <li key={`tab-item-${i}`} className={this.state.tabIndex === i ? "active" : null}>{"\n"}
+                                                <a href="#" onClick={e => this.selectTab(e, i)}>{tab.name}</a>{"\n"}
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
-                            </div>
-                        </header>
-                        <div className="panel-body">
-                            <div id="customers-detailed-tabs" className="tabs tabs-scroll">{"\n"}
-                                <ul id="customers-detailed-tabs-ul">
-                                    {this.props.customersDetailedTabs.map((tab, i) => (
-                                        <li key={`tab-item-${i}`} className={this.state.tabIndex === i ? "active" : null}>{"\n"}
-                                            <a href="#" onClick={e => this.selectTab(e, i)}>{tab.name}</a>{"\n"}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
 
-                            {this.props.customersDetailedTabs[this.state.tabIndex].component}
+                                {this.props.customersDetailedTabs[this.state.tabIndex].component}
+                            </div>
                         </div>
                     </div>
                 </ComponentPreview>
