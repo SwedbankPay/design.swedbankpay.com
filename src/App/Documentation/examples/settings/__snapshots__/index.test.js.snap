@@ -93,27 +93,6 @@ exports[`Examples: Settings SettingsDescription renders 1`] = `
     <div
       className="col-lg-5"
     >
-      <InputGroup
-        label="User Status"
-        prefixValue="Status"
-        selectOptions={
-          Array [
-            "Available",
-            "Away",
-            "On break",
-            "Not Available",
-          ]
-        }
-        type="select"
-      />
-    </div>
-  </div>
-  <div
-    className="row mb-5"
-  >
-    <div
-      className="col-lg-6"
-    >
       <label>
         Profile visibility
       </label>
@@ -132,6 +111,27 @@ exports[`Examples: Settings SettingsDescription renders 1`] = `
         id="settings-radio-3"
         label="Hidden"
         name="settings-radio"
+      />
+    </div>
+  </div>
+  <div
+    className="row mb-2 mt-4"
+  >
+    <div
+      className="col-lg-5"
+    >
+      <InputGroup
+        label="User Status"
+        prefixValue="Status"
+        selectOptions={
+          Array [
+            "Available",
+            "Away",
+            "On break",
+            "Not Available",
+          ]
+        }
+        type="select"
       />
     </div>
   </div>

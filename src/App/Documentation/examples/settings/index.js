@@ -103,20 +103,20 @@ const SettingsDescription = () => (
                 />
             </div>
             <div className="col-lg-5">
+                <label>Profile visibility</label>
+                <Radio label="Visible to all" id="settings-radio-1" name="settings-radio" checked />
+                <Radio label="Visible to accepted contacts only" id="settings-radio-2" name="settings-radio" />
+                <Radio label="Hidden" id="settings-radio-3" name="settings-radio" />
+            </div>
+        </div>
+        <div className="row mb-2 mt-4">
+            <div className="col-lg-5">
                 <InputGroup
                     label="User Status"
                     type="select"
                     selectOptions={["Available", "Away", "On break", "Not Available"]}
                     prefixValue="Status"
                 />
-            </div>
-        </div>
-        <div className="row mb-5">
-            <div className="col-lg-6">
-                <label>Profile visibility</label>
-                <Radio label="Visible to all" id="settings-radio-1" name="settings-radio" checked />
-                <Radio label="Visible to accepted contacts only" id="settings-radio-2" name="settings-radio" />
-                <Radio label="Hidden" id="settings-radio-3" name="settings-radio" />
             </div>
         </div>
     </>
