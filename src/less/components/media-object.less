@@ -1,6 +1,7 @@
 .media {
     display: flex;
     margin-bottom: @base-margin;
+    align-items: center;
 
     .media-img {
         display: flex;
@@ -45,7 +46,6 @@
         padding: 0 @base-padding-sm;
         display: flex;
         flex-direction: column;
-        justify-content: center;
 
         /* stylelint-disable selector-list-comma-newline-after */
         h1, h2, h3, h4, h5, h6,
@@ -55,7 +55,7 @@
         /* stylelint-enable selector-list-comma-newline-after */
 
         p {
-            margin-top: -@base-margin-sm;
+            margin: -@base-margin-sm * 0.5 0 0;
         }
     }
 }

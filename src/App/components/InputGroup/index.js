@@ -67,7 +67,7 @@ const InputGroup = ({
             <div className={inputGrpClasses}>{"\n"}
                 {prefixValue ? <Addon type={prefixType} value={prefixValue} color={prefixBtnColor} disabled={disabled} /> : null }{prefixValue ? "\n" : null}
                 {type === "textarea" ?
-                    <textarea {...attrs} ></textarea>
+                    <textarea {...attrs}></textarea>
                     : type === "select" ?
                         <select className="form-control" disabled={disabled} readOnly={readOnly}>{"\n\t\t"}
                             {selectOptions.map((opt, i) => (
@@ -112,8 +112,8 @@ InputGroup.propTypes = {
         PropTypes.string,
         PropTypes.bool
     ]),
-    errorMessag: PropTypes.string,
-    successMessag: PropTypes.string
+    errorMessage: PropTypes.string,
+    successMessage: PropTypes.string
 };
 
 export default InputGroup;

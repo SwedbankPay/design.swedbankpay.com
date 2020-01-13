@@ -49,7 +49,7 @@ exports[`Home: index renders 1`] = `
             </i>
           </div>
           <h2>
-            Web
+            Documentation
           </h2>
           <p>
             User interface components for websites and web applications
@@ -85,7 +85,7 @@ exports[`Home: index renders 1`] = `
             Templates
           </h2>
           <p>
-            Templates, usage description and tips.
+            Document templates, usage description and tips.
           </p>
           <Link
             className="btn btn-guiding btn-outline btn-block mt-auto"
@@ -118,7 +118,7 @@ exports[`Home: index renders 1`] = `
             Resources
           </h2>
           <p>
-            Guidelines and downloadables.
+            Downloadables and resource usage guidelines.
           </p>
           <Link
             className="btn btn-guiding btn-outline btn-block mt-auto"
