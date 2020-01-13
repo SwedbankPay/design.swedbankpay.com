@@ -29,3 +29,4 @@
  - Akkurat Mono font added
  - Bullet list added
  - Code tags added
+ - Examples using DG components and utilities added
