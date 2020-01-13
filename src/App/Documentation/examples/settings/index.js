@@ -91,34 +91,27 @@ const SettingsEmailNotification = ({ emailNotif, toggleEmailNotif }) => {
 
 const SettingsDescription = () => (
     <>
-        <div className="row mt-5 mb-2">
-            <div className="col-lg-7">
-                <InputGroup
-                    id="settings-description"
-                    type="textarea"
-                    label="Profile description"
-                    placeholder="This profile description is an example to be followed"
-                    prefixType="icon"
-                    prefixValue="format_quote"
-                />
-            </div>
-            <div className="col-lg-5">
-                <label>Profile visibility</label>
-                <Radio label="Visible to all" id="settings-radio-1" name="settings-radio" checked />
-                <Radio label="Visible to accepted contacts only" id="settings-radio-2" name="settings-radio" />
-                <Radio label="Hidden" id="settings-radio-3" name="settings-radio" />
-            </div>
-        </div>
-        <div className="row mb-2 mt-4">
-            <div className="col-lg-5">
-                <InputGroup
-                    label="User Status"
-                    type="select"
-                    selectOptions={["Available", "Away", "On break", "Not Available"]}
-                    prefixValue="Status"
-                />
-            </div>
-        </div>
+        <fieldset className="mt-5 mb-5">
+            <legend>Public settings</legend>
+            <InputGroup
+                id="settings-description"
+                type="textarea"
+                label="Profile description"
+                placeholder="This profile description is an example to be followed"
+                prefixType="icon"
+                prefixValue="format_quote"
+            />
+            <InputGroup
+                label="User Status"
+                type="select"
+                selectOptions={["Available", "Away", "On break", "Not Available"]}
+                prefixValue="Status"
+            />
+            <label>Profile visibility</label>
+            <Radio label="Visible to all" id="settings-radio-1" name="settings-radio" checked />
+            <Radio label="Visible to accepted contacts only" id="settings-radio-2" name="settings-radio" />
+            <Radio label="Hidden" id="settings-radio-3" name="settings-radio" />
+        </fieldset>
     </>
 );
 

@@ -75,66 +75,53 @@ exports[`Examples: Settings SettingsBasic renders 1`] = `
 
 exports[`Examples: Settings SettingsDescription renders 1`] = `
 <Fragment>
-  <div
-    className="row mt-5 mb-2"
+  <fieldset
+    className="mt-5 mb-5"
   >
-    <div
-      className="col-lg-7"
-    >
-      <InputGroup
-        id="settings-description"
-        label="Profile description"
-        placeholder="This profile description is an example to be followed"
-        prefixType="icon"
-        prefixValue="format_quote"
-        type="textarea"
-      />
-    </div>
-    <div
-      className="col-lg-5"
-    >
-      <label>
-        Profile visibility
-      </label>
-      <Radio
-        checked={true}
-        id="settings-radio-1"
-        label="Visible to all"
-        name="settings-radio"
-      />
-      <Radio
-        id="settings-radio-2"
-        label="Visible to accepted contacts only"
-        name="settings-radio"
-      />
-      <Radio
-        id="settings-radio-3"
-        label="Hidden"
-        name="settings-radio"
-      />
-    </div>
-  </div>
-  <div
-    className="row mb-2 mt-4"
-  >
-    <div
-      className="col-lg-5"
-    >
-      <InputGroup
-        label="User Status"
-        prefixValue="Status"
-        selectOptions={
-          Array [
-            "Available",
-            "Away",
-            "On break",
-            "Not Available",
-          ]
-        }
-        type="select"
-      />
-    </div>
-  </div>
+    <legend>
+      Public settings
+    </legend>
+    <InputGroup
+      id="settings-description"
+      label="Profile description"
+      placeholder="This profile description is an example to be followed"
+      prefixType="icon"
+      prefixValue="format_quote"
+      type="textarea"
+    />
+    <InputGroup
+      label="User Status"
+      prefixValue="Status"
+      selectOptions={
+        Array [
+          "Available",
+          "Away",
+          "On break",
+          "Not Available",
+        ]
+      }
+      type="select"
+    />
+    <label>
+      Profile visibility
+    </label>
+    <Radio
+      checked={true}
+      id="settings-radio-1"
+      label="Visible to all"
+      name="settings-radio"
+    />
+    <Radio
+      id="settings-radio-2"
+      label="Visible to accepted contacts only"
+      name="settings-radio"
+    />
+    <Radio
+      id="settings-radio-3"
+      label="Hidden"
+      name="settings-radio"
+    />
+  </fieldset>
 </Fragment>
 `;
 
