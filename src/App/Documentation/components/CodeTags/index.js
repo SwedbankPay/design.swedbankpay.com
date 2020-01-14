@@ -23,7 +23,7 @@ const Overview = () => (
 
 const CodeTags = () => (
     <DocContainer docToc >
-        <p>Code tags are used to present inline code.</p>
+        <p className="lead">Code tags are used to present inline code.</p>
         <Overview />
     </DocContainer>
 );
