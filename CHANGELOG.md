@@ -3,48 +3,52 @@
 ## [4.3.0] - 2020-01-14
 
 ### Added
- - Badge for numbers added
-   - With Swedbank Headline instead of Arial
- - Tabs with scroll added
-   - With fades on the sides to signal more tabs
-   - With optional scroll state control function when control of the tabs scroll behaviour is needed
- - Alert informative added
-   - To be used as an informative alert, an alternative to alert neutral
- - Akkurat Mono font added
-   - To be used when presenting code
- - Code tags added
-   - To present inline code
- - Bullet list added
- - Examples using DG components and utilities added
- - PNG logo added
- - Examples of Topbar with PNG logo added
- - Hero title added
+ - PNG logo
+ - Badge
+   - For numbers, using Swedbank Headline instead of Arial
+ - Tabs
+   - With scroll, have fades on the sides to signal more tabs, and an optional scroll state control function when control of the tabs scroll behaviour is needed
+ - Code tags
+ - Topbar 
+   - With PNG logo
+ - Alert
+   - Alert informative with border-color #31a3ae and background-color #e8eff9
+ - Lists
+   - Bullet list
+ - Core/typography
+   - Akkurat Mono font
+   - H4-H6
+   - Hero title 
+   - Expandable with content from resources/typography
+ - Examples using Design Guide components and utilities
 
 ### Changed
- - Charts updated
+ - Charts
    - Colors and opacity changed
    - No-fill set as default
- - Core/colors improved
-   - Main colors split into sublists
-   - Typos and naming inconsistencies fixed 
- - Badge updated
+ - Badge
    - Renamed
    - Colors updated
- - Bordered lists examples under core/lists updated
-   - Changed h5 to h3
- - Dialog, Topbar and Sheet open and close functions refactored
- - Body text color changed
-   - To #512b2b
- - Core/typography updated (defined h4-h6, added hero title, added expandable with resources/typography content)
-   - H4-H6 defined
-   - Now has expandable with resources/typography content
- - Page layout using wrong topbar height fixed
- - Action list examples in core/lists and core/iconography updated
-   - Changed examples to use new implementation of action list
- - Download buttons in Resources section updated
- - Download buttons in Templates section updated
- - Lead text styling updated
-   - Changed font, size, weight and line-height
- - Alert body styling updated
-   - Changed margin
+ - Core/typography
+   - Lead text
+     - Changed font-family, font-size, font-weight and line-height
+ - Alert
+   - Changed alert-body margin
+ - Design Guide
+   - Changed body text color to #512b2b
+   - Dialog, Topbar and Sheet open and close functions refactored
+   - Download buttons text in Resources section changed
+   - Download buttons text in Templates section changed
+   - Bordered lists examples in core/lists
+     - Changed H5 to H3
+   - Action list examples in core/lists and core/iconography
+     - Changed examples to use new implementation of action list
+   - Core/colors
+     - Main colors split into sublists
+
+### Fixed
+ - Core/Page layout
+   - Had wrong topbar height
+ - Core/colors
+   - Typos and naming inconsistencies
 
