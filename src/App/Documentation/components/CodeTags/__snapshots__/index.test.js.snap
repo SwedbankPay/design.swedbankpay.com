@@ -52,7 +52,9 @@ exports[`Documentation: CodeTags renders 1`] = `
 <DocContainer
   docToc={true}
 >
-  <p>
+  <p
+    className="lead"
+  >
     Code tags are used to present inline code.
   </p>
   <Overview />
