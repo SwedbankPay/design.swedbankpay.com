@@ -1,15 +1,15 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Examples from "./index";
+import Customers from "./index";
 
-describe("Examples: index", () => {
+describe("Examples: Customers", () => {
     it("is defined", () => {
-        expect(Examples).toBeDefined();
+        expect(Customers).toBeDefined();
     });
 
     it("renders", () => {
-        const wrapper = shallow(<Examples />);
+        const wrapper = shallow(<Customers test />);
 
         expect(wrapper).toMatchSnapshot();
     });

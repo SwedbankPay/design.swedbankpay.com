@@ -12,35 +12,21 @@ exports[`Components: Tabs BasicUsage renders 1`] = `
     <Property
       value=".tabs"
     />
-     with a 
-    <Property
-      value=".tabs-horizontal-desired_size"
-    />
-     to a div containing an arrow icon along with 
+     to a div containing 
     <PrismCode
       className="language-html"
       component="code"
     >
       &lt;ul&gt;
     </PrismCode>
-     and nest 
+    and nest 
     <PrismCode
       className="language-html"
       component="code"
     >
       &lt;li&gt;
     </PrismCode>
-     as needed. The 
-    <Property
-      value=".tabs-horizontal-desired_size"
-    />
-     class determines when your tabs will switch from horizontal to collapsed. The available sizes can be found in our 
-    <Link
-      to="/docs/core/breakpoints"
-    >
-      breakpoints documentation
-    </Link>
-    .
+     as needed. Make sure that the tabs will not overflow on screens of normal size. Consider revising the design or the decision to use tabs when more than 3 alternatives are present. If using tabs really is necessary, tabs with scroll might be a more suitable alternative.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -48,50 +34,12 @@ exports[`Components: Tabs BasicUsage renders 1`] = `
     showCasePanel={true}
   >
     <Tabs
+      id="tabs-example"
       items={
         Array [
           "Card",
           "Discounts",
           "Transactions",
-          "Invoice",
-          "Settings",
-          "Audit trail",
-        ]
-      }
-      mode="sm"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Components: Tabs Collapsed renders 1`] = `
-<Fragment>
-  <h2
-    id="collapsed"
-  >
-    Collapsed
-  </h2>
-  <p>
-    If no 
-    <Property
-      value=".tabs-horizontal-desired_size"
-    />
-     is provided then the tabs will always be in collapsed mode.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Tabs
-      items={
-        Array [
-          "Card",
-          "Discounts",
-          "Transactions",
-          "Invoice",
-          "Settings",
-          "Audit trail",
         ]
       }
     />
@@ -107,10 +55,56 @@ exports[`Components: Tabs JavascriptMethods renders 1`] = `
     JavaScript methods
   </h2>
   <JavascriptDocs
-    close={true}
     componentName="tabs"
-    open={true}
+    others={
+      Array [
+        [Function],
+      ]
+    }
   />
+</Fragment>
+`;
+
+exports[`Components: Tabs TabsScroll renders 1`] = `
+<Fragment>
+  <h2
+    id="tabs-scroll"
+  >
+    Tabs with scroll
+  </h2>
+  <p>
+    To make tabs more mobile friendly, use class 
+    <Property
+      value=".tabs-scroll"
+    />
+    .
+    <Property
+      value=".tabs-scroll"
+    />
+     will make the tabs scrollable in case of overflow. Note that the scrollable property is not optimized for desktop usage. Consider the usage when 4 or more tabs are present.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Tabs
+      id="tabs-scroll-example"
+      items={
+        Array [
+          "Card",
+          "Discounts",
+          "Transactions",
+          "Invoice",
+          "Settings",
+          "Audit trail",
+          "History",
+        ]
+      }
+      scroll={true}
+      ulId="tabs-scroll-example-ul"
+    />
+  </ComponentPreview>
 </Fragment>
 `;
 
@@ -124,7 +118,7 @@ exports[`Components: Tabs renders 1`] = `
     Use tabs to show which page or section that is active out of several options.
   </p>
   <BasicUsage />
-  <Collapsed />
+  <TabsScroll />
   <JavascriptMethods />
 </DocContainer>
 `;

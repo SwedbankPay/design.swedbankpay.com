@@ -21,6 +21,21 @@
     }
 }
 
+.list-bullet {
+    li {
+        position: relative;
+        padding-left: 1rem;
+
+        &:before {
+            position: absolute;
+            left: 0;
+            content: "\2022";
+            color: @brand-secondary;
+            width: 0.875rem;
+        }
+    }
+}
+
 .description-list {
     dt {
         text-transform: uppercase;

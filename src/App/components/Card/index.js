@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Card = ({ type, titleTxt, titleMarkup, imgSrc, text, textSection, smallText, btn, btnClass, bodyClass, footerTxt, footerLink, footerLinkTxt, children }) => (
+const Card = ({ type, titleTxt, titleMarkup, imgSrc, text, textSection, smallText, btn, btnClass, btnText, bodyClass, footerTxt, footerLink, footerLinkTxt, children }) => (
     <div className={`card${type ? ` card-${type}` : ""}`}>
         {imgSrc ? <div className="card-img">{"\n"}
             <img src={imgSrc} alt=""/>{"\n"}
@@ -22,7 +22,7 @@ const Card = ({ type, titleTxt, titleMarkup, imgSrc, text, textSection, smallTex
                 textSection.map((secText, i) => <p key={`card-p-${i}`}>{secText}</p>)
                 : null
             }
-            {btn ? <button type="button" className={`btn btn-executive${btnClass ? ` ${btnClass}` : ""}`}>{"\n"}Button{"\n"}</button> : null}
+            {btn ? <button type="button" className={`btn btn-executive${btnClass ? ` ${btnClass}` : ""}`}>{"\n"}{btnText}{"\n"}</button> : null}
         </div>
         {footerTxt || footerLinkTxt
             ? <footer className="card-footer">
@@ -43,6 +43,7 @@ Card.propTypes = {
     smallText: PropTypes.string,
     textSection: PropTypes.array,
     btn: PropTypes.bool,
+    btnText: PropTypes.string,
     footerLink: PropTypes.string,
     footerLinkTxt: PropTypes.string
 };

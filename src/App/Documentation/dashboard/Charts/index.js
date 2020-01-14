@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocContainer } from "@docutils";
+import { ComponentPreview, DocContainer, Property } from "@docutils";
 import Chart from "@components/Chart";
 
 const LineChart = () => (
@@ -93,13 +93,11 @@ dg.chart("stepped-dashed-line-chart", {
                         datasets: [
                             {
                                 label: "DotA2 TI Prize Pool",
-                                data: [1.6, 1.6, 2.87, 10.92, 18.42, 20.77, 24.78, 25.53],
-                                fill: false
+                                data: [1.6, 1.6, 2.87, 10.92, 18.42, 20.77, 24.78, 25.53]
                             },
                             {
                                 label: "LoL World Championship Prize Pool",
-                                data: [0.1, 2, 2.05, 2.13, 2.13, 5.07, 4.94, 2.25],
-                                fill: false
+                                data: [0.1, 2, 2.05, 2.13, 2.13, 5.07, 4.94, 2.25]
                             }
                         ]
                     },
@@ -127,13 +125,11 @@ dg.chart("advanced-line-chart", {
         datasets: [
             {
                 label: "DotA2 TI Prize Pool",
-                data: [1.6, 1.6, 2.87, 10.92, 18.42, 20.77, 24.78, 25.53],
-                fill: false
+                data: [1.6, 1.6, 2.87, 10.92, 18.42, 20.77, 24.78, 25.53]
             },
             {
                 label: "LoL World Championship Prize Pool",
-                data: [0.1, 2, 2.05, 2.13, 2.13, 5.07, 4.94, 2.25],
-                fill: false
+                data: [0.1, 2, 2.05, 2.13, 2.13, 5.07, 4.94, 2.25]
             }
         ]
     },
@@ -149,6 +145,40 @@ dg.chart("advanced-line-chart", {
                 }
             }]
         }
+    }
+});
+                `}
+            </ComponentPreview>
+
+            <h3>With fill</h3>
+            <ComponentPreview language="html" showCasePanel codeFigure >
+                <Chart id="line-fill-chart" options={{
+                    type: "line-fill",
+                    data: {
+                        labels: ["2013", "2014", "2015", "2016", "2017", "2018"],
+                        datasets: [
+                            {
+                                label: "Peak",
+                                data: [261, 673, 962, 1067, 1007, 779],
+                                fill: true
+                            }
+                        ]
+                    }
+                }} />
+            </ComponentPreview>
+            <ComponentPreview language="javascript" codeFigure >
+                {`
+dg.chart("line-fill-chart", {
+    type: "line-fill",
+    data: {
+        labels: ["2013", "2014", "2015", "2016", "2017", "2018"],
+        datasets: [
+            {
+                label: "Peak",
+                data: [261, 673, 962, 1067, 1007, 779],
+                fill: true
+            }
+        ]
     }
 });
                 `}
@@ -440,8 +470,7 @@ const MixingTypes = () => (
                         {
                             label: "Expected Growth",
                             data: [20, 25, 30, 35, 40, 45],
-                            type: "line",
-                            fill: false
+                            type: "line"
                         }
                     ]
                 },
@@ -470,8 +499,7 @@ dg.chart("mixed-chart", {
             {
                 label: "Expected Growth",
                 data: [20, 25, 30, 35, 40, 45],
-                type: "line", // Changes this dataset to become a line
-                fill: false
+                type: "line" // Changes this dataset to become a line
             }
         ]
     },
@@ -487,6 +515,55 @@ dg.chart("mixed-chart", {
 });
         `}
         </ComponentPreview>
+    </>
+);
+
+const CustomColors = () => (
+    <>
+        <h2 id="custom-colors">Custom colors</h2>
+        <p>Except for the three first colors, the rest of the colors are customizable. Call <Property value="dg.chart" /> with a last optional argument consisting of a list of RGB color codes.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure >
+            <Chart id="custom-color-pie"
+                options={{
+                    type: "pie",
+                    data: {
+                        labels: ["Chrome", "Internet Explorer", "Firefox", "Edge", "Safari", "Opera", "Other"],
+                        datasets: [
+                            {
+                                data: [63.14, 11.43, 10.23, 4.34, 3.83, 1.56, 4.19]
+                            }
+                        ]
+                    }
+                }}
+                colorPool={["81, 43, 43",
+                    "81, 151, 27",
+                    "163, 139, 128",
+                    "114, 96, 94",
+                    "197, 19, 28"
+                ]}
+            />
+        </ComponentPreview>
+        <ComponentPreview language="javascript" codeFigure >
+            {`
+dg.chart("custom-color-pie", {
+    type: "pie",
+    data: {
+        labels: ["Chrome", "Internet Explorer", "Firefox", "Edge", "Safari", "Opera", "Other"],
+        datasets: [
+            {
+                data: [63.14, 11.43, 10.23, 4.34, 3.83, 1.56, 4.19]
+            }
+        ]
+    }
+},
+["81, 43, 43",
+"81, 151, 27",
+"163, 139, 128",
+"114, 96, 94",
+"197, 19, 28"]);
+            `}
+        </ComponentPreview>
+
     </>
 );
 
@@ -506,6 +583,7 @@ class Charts extends Component {
                 <BarChart />
                 <DoughnutAndPieCharts />
                 <MixingTypes />
+                <CustomColors />
             </DocContainer>
         );
     }
@@ -514,5 +592,5 @@ class Charts extends Component {
 export default Charts;
 
 /* For testing */
-export { LineChart, BarChart, DoughnutAndPieCharts, MixingTypes };
+export { LineChart, BarChart, DoughnutAndPieCharts, MixingTypes, CustomColors };
 

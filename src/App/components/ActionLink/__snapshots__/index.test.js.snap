@@ -3,7 +3,7 @@
 exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with badge if badge is provided 1`] = `
 <Fragment>
   <span
-    className="badge badge-yellow"
+    className="badge badge-default"
   >
     Badge
   </span>

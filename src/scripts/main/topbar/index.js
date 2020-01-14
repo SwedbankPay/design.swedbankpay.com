@@ -1,6 +1,6 @@
 import NavMenu from "./NavMenu";
 
-import { handleScrollbar } from "../utils";
+import { handleScrollbar, openComponent, closeComponent } from "../utils";
 
 const SELECTORS = {
     TOPBAR: ".topbar",
@@ -32,37 +32,9 @@ const _createTopbar = (topbar, navMenu) => {
     return navMenuObject;
 };
 
-const open = id => {
-    let navmenu = null;
+const open = id => openComponent(id, "topbar", _navMenus);
 
-    _navMenus.forEach(n => n.id === id ? navmenu = n : null);
-
-    try {
-        navmenu.open();
-    } catch (e) {
-        console.warn(`navmenu.open: No navmenu with id "${id}" found.`);
-
-        return false;
-    }
-
-    return navmenu;
-};
-
-const close = id => {
-    let navmenu = null;
-
-    _navMenus.forEach(n => n.id === id ? navmenu = n : null);
-
-    try {
-        navmenu.close();
-    } catch (e) {
-        console.warn(`navmenu.close: No navmenu with id "${id}" found.`);
-
-        return false;
-    }
-
-    return navmenu;
-};
+const close = id => closeComponent(id, "topbar", _navMenus);
 
 const init = id => {
     if (id) {

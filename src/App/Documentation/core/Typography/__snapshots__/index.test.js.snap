@@ -58,6 +58,35 @@ exports[`Core: Typography Abbreviations renders 1`] = `
 </Fragment>
 `;
 
+exports[`Core: Typography AkkuratMono renders 1`] = `
+<Fragment>
+  <h2
+    id="akkurat-mono"
+  >
+    Akkurat Mono
+  </h2>
+  <p>
+    The Akkurat Mono font should be used when code is to be presented, for instance with code tags.
+  </p>
+  <h3>
+    Download
+  </h3>
+  <div
+    className="slab slab-default slab-elevated"
+  >
+    <p>
+      Before downloading the Akkurat Mono font, make sure to understand the correct usages of Akkurat Mono.
+    </p>
+    <Button
+      href="/TEST/release/fonts/AkkuratMono.zip"
+      icon="file_download"
+      label="Akkurat Mono"
+      type="executive"
+    />
+  </div>
+</Fragment>
+`;
+
 exports[`Core: Typography Blockquotes renders 1`] = `
 <Fragment>
   <h2
@@ -184,6 +213,15 @@ exports[`Core: Typography Headings renders 1`] = `
     <h3>
       Heading h3
     </h3>
+    <h4>
+      Heading h4
+    </h4>
+    <h5>
+      Heading h5
+    </h5>
+    <h6>
+      Heading h6
+    </h6>
   </ComponentPreview>
   <p>
     The classes 
@@ -215,6 +253,54 @@ exports[`Core: Typography Headings renders 1`] = `
       className="h3"
     >
       .h3 heading
+    </p>
+    <p
+      className="h4"
+    >
+      .h4 heading
+    </p>
+    <p
+      className="h5"
+    >
+      .h5 heading
+    </p>
+    <p
+      className="h6"
+    >
+      .h6 heading
+    </p>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Core: Typography HeroTitle renders 1`] = `
+<Fragment>
+  <h2
+    id="hero-title"
+  >
+    Hero title
+  </h2>
+  <p>
+    The class 
+    <Property
+      value=".hero"
+    />
+     can be used to achieve the big and bold hero title styling.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <h1
+      className="hero"
+    >
+      Hero title
+    </h1>
+    <p
+      className="hero"
+    >
+      Hero title
     </p>
   </ComponentPreview>
 </Fragment>
@@ -375,6 +461,43 @@ exports[`Core: Typography Lead renders 1`] = `
 </Fragment>
 `;
 
+exports[`Core: Typography ResourcesTypography renders 1`] = `
+<div
+  className="expandable"
+>
+  <button
+    aria-controls="resources-typograpy-body"
+    aria-expanded="false"
+    className="expandable-header"
+    type="button"
+  >
+    <span
+      className="expandable-headline"
+    >
+      Typography guidelines
+    </span>
+    <small
+      className="expandable-subtitle"
+    >
+      From 
+      <Link
+        to="/res/resources/typography"
+      >
+        typography in Resources
+      </Link>
+    </small>
+  </button>
+  <div
+    className="expandable-body"
+    id="resources-typography-body"
+  >
+    <Overview />
+    <Download />
+    <Guidelines />
+  </div>
+</div>
+`;
+
 exports[`Core: Typography Text Utilities renders 1`] = `
 <Fragment>
   <h2
@@ -403,12 +526,15 @@ exports[`Core: Typography renders 1`] = `
   >
     Documentation and examples for Swedbank Pay DesignGuide typography.
   </p>
+  <ResourcesTypography />
   <Fonts />
   <Headings />
+  <HeroTitle />
   <Lead />
   <Inline />
   <TextUtilities />
   <Abbreviations />
   <Blockquotes />
+  <AkkuratMono />
 </DocContainer>
 `;

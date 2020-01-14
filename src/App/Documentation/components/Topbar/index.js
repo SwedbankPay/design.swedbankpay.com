@@ -61,6 +61,22 @@ const TopbarWide = () => (
     </>
 );
 
+const TopbarPNG = () => (
+    <>
+        <h2 id="topbar-png">Topbar with PNG logo</h2>
+        <p>
+            A PNG version of the logo can also be used. This is done by appending the class <Property value=".topbar-logo-png" /> to the
+            anchor with class <Property value=".topbar-logo" />. Only consider using the PNG version when there are issues with using the SVG version.
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <TopbarComponent topbarContent={menu} logout id="demo-topbar-png" png/>
+        </ComponentPreview>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <TopbarComponent id="demo-topbar-1-png" topbarContent={menu} wide="xl" logout png/>
+        </ComponentPreview>
+    </>
+);
+
 const JavascriptMethods = () => (
     <>
         <h2 id="javascript-methods">JavaScript Methods</h2>
@@ -72,6 +88,8 @@ class Topbar extends Component {
     componentDidMount () {
         topbar.init("demo-topbar");
         topbar.init("demo-topbar-1");
+        topbar.init("demo-topbar-png");
+        topbar.init("demo-topbar-1-png");
     }
 
     render () {
@@ -80,6 +98,7 @@ class Topbar extends Component {
                 <p className="lead">The topbar is used to give users an easily available navigational bar at the top of your web application.</p>
                 <Overview />
                 <TopbarWide />
+                <TopbarPNG />
                 <JavascriptMethods />
             </DocContainer>
         );
@@ -89,4 +108,4 @@ class Topbar extends Component {
 export default Topbar;
 
 /* For testing */
-export { Overview, TopbarWide, JavascriptMethods };
+export { Overview, TopbarWide, TopbarPNG, JavascriptMethods };

@@ -130,6 +130,11 @@ module.exports = [
                 componentPath: "components/Card"
             },
             {
+                title: "Code Tags",
+                path: "/docs/components/code-tags",
+                componentPath: "components/CodeTags"
+            },
+            {
                 title: "Datepickers",
                 path: "/docs/components/datepickers",
                 componentPath: "components/Datepickers"
@@ -300,6 +305,37 @@ module.exports = [
                 title: "Visibility",
                 path: "/docs/utilities/visibility",
                 componentPath: "utilities/Visibility"
+            }
+        ]
+    },
+
+    /**
+     * Examples
+     */
+    {
+        title: "Examples",
+        path: "/docs/examples",
+        redirect: "/docs/examples/login",
+        routes: [
+            {
+                title: "Login",
+                path: "/docs/examples/login",
+                componentPath: "examples/login"
+            },
+            {
+                title: "Settings",
+                path: "/docs/examples/settings",
+                componentPath: "examples/settings"
+            },
+            {
+                title: "FAQ",
+                path: "/docs/examples/faq",
+                componentPath: "examples/faq"
+            },
+            {
+                title: "Customers",
+                path: "/docs/examples/customers",
+                componentPath: "examples/customers"
             }
         ]
     }

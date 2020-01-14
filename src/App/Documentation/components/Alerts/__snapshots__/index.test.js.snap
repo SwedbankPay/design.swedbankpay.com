@@ -38,9 +38,17 @@ exports[`Documentation: Alerts Alert With Icon renders 1`] = `
 
 
     <Alert
-      icon="info"
+      icon="help"
       text="This is a neutral alert with an icon!"
       type="neutral"
+    />
+    
+
+
+    <Alert
+      icon="info"
+      text="This is an informative alert with an icon!"
+      type="informative"
     />
     
 
@@ -94,6 +102,13 @@ exports[`Documentation: Alerts Basic Usage renders 1`] = `
     <Alert
       text="This is a neutral alert!"
       type="neutral"
+    />
+    
+
+
+    <Alert
+      text="This is an informative alert!"
+      type="informative"
     />
     
 
@@ -155,9 +170,18 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
 
     <Alert
       close={true}
-      icon="info"
+      icon="help"
       text="This is a neutral alert with an icon!"
       type="neutral"
+    />
+    
+
+
+    <Alert
+      close={true}
+      icon="info"
+      text="This is an informative alert with an icon!"
+      type="informative"
     />
     
 

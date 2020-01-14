@@ -1,8 +1,27 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocContainer, Icon, Property } from "@docutils";
+import ActionListComponent from "@components/ActionList";
+import { ComponentPreview, DocContainer, Property } from "@docutils";
 
 const { actionList } = window.dg;
+const items = [
+    {
+        name: "Add bookmark",
+        icon: "bookmark"
+    },
+    {
+        name: "Add client",
+        icon: "business_center"
+    },
+    {
+        name: "Add document",
+        icon: "add_circle"
+    },
+    {
+        name: "Add user",
+        icon: "person_add"
+    }
+];
 
 const BasicList = () => (
     <>
@@ -25,7 +44,7 @@ const BasicList = () => (
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="list">
                 <li>Coffee</li>
-                <li>Tea
+                <li>Tea {"\n"}
                     <ul>
                         <li>Black tea</li>
                         <li>Green tea</li>
@@ -45,6 +64,22 @@ const InlineList = () => (
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="list list-inline">
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+            </ul>
+        </ComponentPreview>
+    </>
+);
+
+const BulletList = () => (
+    <>
+        <h2 id="bullet-list">Bullet list</h2>
+        <p>
+            Add <Property value=".list-bullet" /> on a list to make it a bullet list.
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <ul className="list list-bullet">
                 <li>Coffee</li>
                 <li>Tea</li>
                 <li>Milk</li>
@@ -107,29 +142,29 @@ const ItemList = () => (
             <ul className="item-list">
                 <li>
                     <div>
-                        <h5>Foo</h5>
+                        <h3>Foo</h3>
                         <small>Due date 2 days</small>
                     </div>
                     <div>
-                        <span className="h5 text-highlight">2120 kr</span>
+                        <span className="h3 text-highlight">2120 kr</span>
                     </div>
                 </li>
                 <li>
                     <div>
-                        <h5>Bar</h5>
+                        <h3>Bar</h3>
                         <small>Due date 1 day</small>
                     </div>
                     <div>
-                        <span className="h5 text-highlight">1100 kr</span>
+                        <span className="h3 text-highlight">1100 kr</span>
                     </div>
                 </li>
                 <li>
                     <div>
-                        <h5>Baz</h5>
+                        <h3>Baz</h3>
                         <small>Due date 5 days</small>
                     </div>
                     <div>
-                        <span className="h5 text-highlight">200 kr</span>
+                        <span className="h3 text-highlight">200 kr</span>
                     </div>
                 </li>
             </ul>
@@ -144,21 +179,21 @@ const ItemListLarge = () => (
             <ul className="item-list item-list-lg">
                 <li>
                     <div>
-                        <h5>Foo</h5>
+                        <h3>Foo</h3>
                         <small>Due date 2 days</small>
                     </div>
                     <div>
-                        <span className="h5 text-highlight">2120 kr</span>
+                        <span className="h3 text-highlight">2120 kr</span>
                     </div>
                     <footer><a href="#">Se faktura</a></footer>
                 </li>
                 <li>
                     <div>
-                        <h5>Bar</h5>
+                        <h3>Bar</h3>
                         <small>Due date 1 day</small>
                     </div>
                     <div>
-                        <span className="h5 text-highlight">1100 kr</span>
+                        <span className="h3 text-highlight">1100 kr</span>
                     </div>
                     <footer className="item-list-footer">
                         <a href="#">Se faktura</a>
@@ -166,11 +201,11 @@ const ItemListLarge = () => (
                 </li>
                 <li>
                     <div>
-                        <h5>Baz</h5>
+                        <h3>Baz</h3>
                         <small>Due date 5 days</small>
                     </div>
                     <div>
-                        <span className="h5 text-highlight">200 kr</span>
+                        <span className="h3 text-highlight">200 kr</span>
                     </div>
                     <footer className="item-list-footer">
                         <a href="#">Se faktura</a>
@@ -188,21 +223,21 @@ const ItemListBordered = () => (
             <ul className="item-list item-list-bordered">
                 <li>
                     <div>
-                        <h5>Foo</h5>
+                        <h3>Foo</h3>
                         <small>Due date 2 days</small>
                     </div>
                     <div>
-                        <span className="h5 text-highlight">2120 kr</span>
+                        <span className="h3 text-highlight">2120 kr</span>
                     </div>
                     <footer><a href="#">Se faktura</a></footer>
                 </li>
                 <li>
                     <div>
-                        <h5>Bar</h5>
+                        <h3>Bar</h3>
                         <small>Due date 1 day</small>
                     </div>
                     <div>
-                        <span className="h5 text-highlight">1100 kr</span>
+                        <span className="h3 text-highlight">1100 kr</span>
                     </div>
                     <footer className="item-list-footer">
                         <a href="#">Se faktura</a>
@@ -210,11 +245,11 @@ const ItemListBordered = () => (
                 </li>
                 <li>
                     <div>
-                        <h5>Baz</h5>
+                        <h3>Baz</h3>
                         <small>Due date 5 days</small>
                     </div>
                     <div>
-                        <span className="h5 text-highlight">200 kr</span>
+                        <span className="h3 text-highlight">200 kr</span>
                     </div>
                     <footer className="item-list-footer">
                         <a href="#">Se faktura</a>
@@ -260,15 +295,7 @@ const StripedItemList = () => (
             <ul className="item-list item-list-striped">
                 <li>
                     <span>4925*********004</span>
-                    <div className="action-list">{"\n"}
-                        <Icon type="more_vert" />{"\n"}
-                        <div className="action-menu">{"\n"}
-                            <a href="#" onClick={e => e.preventDefault()}><Icon type="bookmark"/>Add bookmark</a>{"\n"}
-                            <a href="#" onClick={e => e.preventDefault()}><Icon type="business_center"/>Add client</a>{"\n"}
-                            <a href="#" onClick={e => e.preventDefault()}><Icon type="add_circle"/>Add document</a>{"\n"}
-                            <a href="#" onClick={e => e.preventDefault()}><Icon type="person_add"/>Add user</a>{"\n"}
-                        </div>
-                    </div>
+                    <ActionListComponent items={items} />
                 </li>
                 <li>{"\n"}
                     <span>{"\n\t\t\t"}4925*********004{"\n\t\t\t"}
@@ -303,6 +330,7 @@ class Lists extends Component {
                 </p>
                 <BasicList />
                 <InlineList />
+                <BulletList />
                 <DescriptionList />
                 <SettingsList />
                 <ItemList />
@@ -317,4 +345,15 @@ class Lists extends Component {
 
 export default Lists;
 
-export { BasicList, InlineList, DescriptionList, SettingsList, ItemList, ItemListBordered, ItemListLarge, HoverItemList, StripedItemList };
+export {
+    BasicList,
+    InlineList,
+    BulletList,
+    DescriptionList,
+    SettingsList,
+    ItemList,
+    ItemListBordered,
+    ItemListLarge,
+    HoverItemList,
+    StripedItemList
+};

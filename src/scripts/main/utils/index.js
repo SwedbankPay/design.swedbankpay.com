@@ -30,8 +30,54 @@ export const handleScrollbar = () => {
     }
 };
 
+export const openComponent = (id, componentType, componentList) => {
+    let component = null;
+
+    componentList.forEach(c => c.id === id ? component = c : null);
+
+    try {
+        if (component.isOpen) {
+            console.warn(`${componentType}.open: ${componentType} with id "${id}" is open`);
+
+            return false;
+        }
+
+        component.open();
+    } catch (e) {
+        console.warn(`${componentType}.open: No ${componentType} with id "${id}" found.`);
+
+        return false;
+    }
+
+    return component;
+};
+
+export const closeComponent = (id, componentType, componentList) => {
+    let component = null;
+
+    componentList.forEach(c => c.id === id ? component = c : null);
+
+    try {
+        if (!component.isOpen) {
+            console.warn(`${componentType}.close: ${componentType} with id "${id}" is not open`);
+
+            return false;
+        }
+
+        component.close();
+    } catch (e) {
+        console.warn(`${componentType}.close: No ${componentType} with id "${id}" found.`);
+
+        return false;
+    }
+
+    return component;
+};
+
 export default {
     extendObj,
     isWithinBoundingBox,
-    handleScrollbar
+    handleScrollbar,
+    openComponent,
+    closeComponent
 };

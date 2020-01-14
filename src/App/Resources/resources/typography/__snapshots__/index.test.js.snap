@@ -14,20 +14,28 @@ exports[`Resources: Logotype Download renders 1`] = `
       Before downloading any typography files, make sure to read the Swedbank Pay typography guidelines. The guidelines can be found below.
     </p>
     <div
-      className="resources-typography-download"
+      className="row justify-content-right"
     >
-      <Button
-        href="/TEST/release/fonts/cid_2108538.zip"
-        icon="file_download"
-        label="Download Swedbank Headline"
-        type="executive"
-      />
-      <Button
-        href="/TEST/release/fonts/cid_2686429.zip"
-        icon="file_download"
-        label="Download Swedbank Sans"
-        type="executive"
-      />
+      <div
+        className="col-sm-auto mb-3 mb-sm-0"
+      >
+        <Button
+          href="/TEST/release/fonts/cid_2108538.zip"
+          icon="file_download"
+          label="Swedbank Headline"
+          type="executive"
+        />
+      </div>
+      <div
+        className="col-sm-auto"
+      >
+        <Button
+          href="/TEST/release/fonts/cid_2686429.zip"
+          icon="file_download"
+          label="Swedbank Sans"
+          type="executive"
+        />
+      </div>
     </div>
   </div>
 </Fragment>
@@ -36,7 +44,7 @@ exports[`Resources: Logotype Download renders 1`] = `
 exports[`Resources: Logotype Guidelines renders 1`] = `
 <Fragment>
   <h2
-    id="guidlines"
+    id="guidelines"
   >
     Typography guidlines
   </h2>

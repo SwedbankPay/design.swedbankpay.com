@@ -10,25 +10,44 @@ class Tabs {
         this._el = el;
         this.id = el.id;
         this.classList = el.classList;
-        this.isOpen = el.classList.contains("tabs-open");
         this.hasActive = !!this._el.querySelector(SELECTORS.ACTIVE);
         this.openUl = this._el.querySelector("UL");
 
         this._el.addEventListener("click", e => {
-            this.flexDir = getComputedStyle(this.openUl).flexDirection;
 
-            if (!this.isOpen && this.flexDir === "column") {
-                this.open();
-            } else if (this.isOpen && this.flexDir === "column" && e.target !== this.openUl) {
-                this.close();
+            // Only move scrollbar when interacting with the tab elements
+            if (e.target.tagName === "A") {
+                const scrollStart = this.openUl.scrollLeft;
+                const scrollTotalAmount = (e.target.offsetLeft - (this._el.offsetWidth / 2) + (e.target.offsetWidth / 2)) - scrollStart;
+
+                this.scrollTabs(scrollStart, scrollTotalAmount);
             }
         });
+
+        // Add listeners in cases when the tabs is scrollable. Listeners are to decide if the tabs fades should be shown.
+        if (this._el.classList.contains("tabs-scroll")) {
+            this._decideScrollFade = this._decideScrollFade.bind(this);
+            this.openUl.addEventListener("scroll", this._decideScrollFade);
+            window.addEventListener("resize", this._decideScrollFade, { passive: true });
+            this._decideScrollFade();
+        }
 
         if (!this.hasActive) {
             this._el.querySelector("li").classList.add("active");
         }
 
         this._addListener();
+    }
+
+    scrollTabs (scrollStart, scrollTotalAmount) {
+        this.openUl.scrollLeft = scrollStart;
+
+        let scrolledCount = 0;
+        const smoothTabScroll = setInterval(() => {
+            this.openUl.scrollLeft += scrollTotalAmount / 10;
+            scrolledCount = scrolledCount + 1;
+            (scrolledCount === 10) && window.clearInterval(smoothTabScroll);
+        }, 5);
     }
 
     _addListener () {
@@ -41,16 +60,19 @@ class Tabs {
         });
     }
 
-    open () {
-        this.isOpen = true;
-        this._el.classList.add("tabs-open");
-        window.addEventListener("resize", () => this.close());
-    }
+    _decideScrollFade () {
 
-    close () {
-        this.isOpen = false;
-        this._el.classList.remove("tabs-open");
-        window.removeEventListener("resize", this.close);
+        if (this.openUl.scrollLeft !== 0) {
+            this._el.classList.add("tabs-fade-left");
+        } else {
+            this._el.classList.remove("tabs-fade-left");
+        }
+
+        if (this.openUl.scrollWidth - this.openUl.scrollLeft - this.openUl.clientWidth > 1) {
+            this._el.classList.add("tabs-fade-right");
+        } else {
+            this._el.classList.remove("tabs-fade-right");
+        }
     }
 }
 
@@ -63,14 +85,6 @@ const _createTab = tabQuery => {
 };
 
 const init = id => {
-    document.addEventListener("click", e => {
-        _tabs.forEach(tab => {
-            if (!e.target.closest(SELECTORS.TABS) && tab.isOpen) {
-                tab.close();
-            }
-        });
-    });
-
     if (id) {
         const tab = document.getElementById(id);
 
@@ -94,42 +108,24 @@ const init = id => {
     }
 };
 
-const open = id => {
-    let tabs = null;
+const setScrollState = (id, scrollState) => {
 
-    _tabs.forEach(t => t.id === id ? tabs = t : null);
+    let tab = null;
+
+    _tabs.forEach(t => t.id === id && (tab = t));
 
     try {
-        tabs.open();
+        tab.scrollTabs(scrollState.scrollStart, scrollState.scrollTotalAmount);
     } catch (e) {
-        console.error(`tabs.open: No tabs with id "${id}" found.`);
+        console.warn(`tabs.setScrollState: No tabs with id ${id} found.`);
 
         return false;
     }
 
-    return tabs;
-
-};
-
-const close = id => {
-    let tabs = null;
-
-    _tabs.forEach(t => t.id === id ? tabs = t : null);
-
-    try {
-        tabs.close();
-    } catch (e) {
-        console.error(`tabs.close: No tabs with id "${id}" found.`);
-
-        return false;
-    }
-
-    return tabs;
-
+    return tab;
 };
 
 export default {
     init,
-    open,
-    close
+    setScrollState
 };

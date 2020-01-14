@@ -16,17 +16,19 @@
  *  7. Badge
  *  8. Button
  *  9. Card
- * 10. Datepicker
- * 11. Dialog
- * 12. Form
- * 13. Nav
- * 14. Pagination
- * 15. Panel
- * 16. Sheet
- * 17. Status
- * 18. Steps
- * 19. Toast
- * 20. Topbar
+ * 10. Code Tags
+ * 11. Datepicker
+ * 12. Dialog
+ * 13. Form
+ * 14. Nav
+ * 15. Pagination
+ * 16. Panel
+ * 17. Sheet
+ * 18. Status
+ * 19. Steps
+ * 20. Tabs
+ * 21. Toast
+ * 22. Topbar
  */
 
 /* ==========================================================================
@@ -358,12 +360,11 @@
  * ==========================================================================
  */
 
-/* stylelint-disable indentation */
+/* stylelint-disable */
 @badge-list: {
-                                            default: @list-gray;
-                                            blue: @blue;
-                                            yellow: @yellow;
-                                            red: @red;
+                                            default: @brand-primary;
+                                            inactive: @list-gray;
+                                            warning: @brand-error;
 }
 /* stylelint-enable */
 
@@ -395,7 +396,17 @@
 @card-margin-top:                           @base-margin-sm + @base-margin-xs;
 
 /*
- * 10. Datepicker
+ * 10. Code Tags
+ * ==========================================================================
+ */
+
+@code-tags-padding: 2px 6px;
+
+
+@code-tags-border-radius: 4px;
+
+/*
+ * 11. Datepicker
  * ==========================================================================
  */
 
@@ -409,7 +420,7 @@
 @datepicker-rd-padding:                     round(@base-padding / 3, 1);
 
 /*
- * 11. Dialog
+ * 12. Dialog
  * ==========================================================================
  */
 
@@ -419,7 +430,7 @@
 @dialog-backdrop-bg:                        fade(@black, 50%);
 
 /*
- * 12. Form
+ * 13. Form
  * ==========================================================================
  */
 @input-padding-y:                           0.375rem;
@@ -466,7 +477,7 @@
 @thumb-size:                                @checkbox-height;
 
 /*
- * 13. Nav
+ * 14. Nav
  * ==========================================================================
  */
 
@@ -493,7 +504,7 @@
 @nav-submenu-icon-fontsize-vertical:        @base-font-size * 2.25;
 
 /*
- * 14. Pagination
+ * 15. Pagination
  * ==========================================================================
  */
 
@@ -504,7 +515,7 @@
 @pagination-bullet-size:                    @status-size;
 
 /*
- * 15. Panel
+ * 16. Panel
  * ==========================================================================
  */
 
@@ -528,7 +539,7 @@
 @panel-footer-padding:                      2rem;
 
 /*
- * 16. Sheet
+ * 17. Sheet
  * ==========================================================================
  */
 
@@ -541,7 +552,7 @@
 @sheet-width:                               580px;
 
 /*
- * 17. Status
+ * 18. Status
  * ==========================================================================
  */
 
@@ -552,7 +563,7 @@
 @status-padding-head:                       8rem;
 
 /*
- * 18. Steps
+ * 19. Steps
  * ==========================================================================
  */
 
@@ -571,7 +582,14 @@
 @line-width-desktop:                        5px;
 
 /*
- * 19. Toast
+ * 20. Tabs
+ * ==========================================================================
+ */
+
+@tabs-fade-width:                           50px;
+
+/*
+ * 21. Toast
  * ==========================================================================
  */
 
@@ -581,11 +599,11 @@
 @toast-action-color:                        @yellow;
 
 /*
- * 20. Topbar
+ * 22. Topbar
  * ==========================================================================
  */
 
-@topbar-height:                             78px;
+@topbar-height:                             85px;
 @topbar-nav-width:                          300px;
 @topbar-nav-slide-width:                    240px;
 @topbar-back-btn-width:                     40px; /* This does not actually control the width of the button... [EH] */
