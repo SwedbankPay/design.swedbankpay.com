@@ -35,16 +35,16 @@
  - Alert
    - Changed alert-body margin
  - Design Guide
-   - Changed body text color to #512b2b
-   - Dialog, Topbar and Sheet open and close functions refactored
-   - Download buttons text in Resources section changed
-   - Download buttons text in Templates section changed
+   - Body text color to #512b2b
+   - Download buttons in Resources section
+   - Download buttons in Templates section
    - Bordered lists examples in core/lists
      - Changed H5 to H3
    - Action list examples in core/lists and core/iconography
-     - Changed examples to use new implementation of action list
+     - Examples use new implementation of action list
    - Core/colors
      - Main colors split into sublists
+   - Dialog, Topbar and Sheet open and close functions refactored
 
 ### Fixed
  - Core/Page layout
