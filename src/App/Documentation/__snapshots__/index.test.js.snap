@@ -197,6 +197,11 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Sheet",
                 },
                 Object {
+                  "componentPath": "components/Sidebar",
+                  "path": "/docs/components/sidebar",
+                  "title": "Sidebar",
+                },
+                Object {
                   "componentPath": "components/Slab",
                   "path": "/docs/components/slab",
                   "title": "Slab",
@@ -539,6 +544,11 @@ exports[`Documentation: index renders 1`] = `
                   "componentPath": "components/Sheet",
                   "path": "/docs/components/sheet",
                   "title": "Sheet",
+                },
+                Object {
+                  "componentPath": "components/Sidebar",
+                  "path": "/docs/components/sidebar",
+                  "title": "Sidebar",
                 },
                 Object {
                   "componentPath": "components/Slab",
