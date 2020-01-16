@@ -195,6 +195,11 @@ module.exports = [
                 componentPath: "components/Sheet"
             },
             {
+                title: "Sidebar",
+                path: "/docs/components/sidebar",
+                componentPath: "components/Sidebar"
+            },
+            {
                 title: "Slab",
                 path: "/docs/components/slab",
                 componentPath: "components/Slab"
