@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { ComponentPreview, DocContainer, Property, Attribute, JavascriptDocs } from "@docutils";
+import { ComponentPreview, DocContainer } from "@docutils";
 import SidebarComponent from "@components/Sidebar";
 import TopbarComponent from "@components/Topbar";
 
@@ -25,6 +25,7 @@ const Overview = () => (
 );
 
 const Sidebar = () => {
+    // eslint-disable-next-line
     useEffect(() => { console.log("init"); });
 
     return (
