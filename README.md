@@ -191,7 +191,7 @@ Inspired by [Bootstrap][bootstrap] and [Materialize][materialize].
   [dep-status]:         https://david-dm.org/swedbankpay/design.swedbankpay.com
   [devdep-badge]:       https://david-dm.org/swedbankpay/design.swedbankpay.com/dev-status.svg
   [devdep-status]:      https://david-dm.org/swedbankpay/design.swedbankpay.com?type=dev
-  [og-image]:           https://repository-images.githubusercontent.com/191536903/a4653c80-e7ac-11e9-9d96-c5bf40f73d9c
+  [og-image]:           https://repository-images.githubusercontent.com/191536903/603b0b00-3876-11ea-945e-a1e1353cc52a
   [swpdg]:              https://design.swedbankpay.com
   [nodejs]:             https://nodejs.org/en/
   [slack]:              https://payex.slack.com/messages/C0L3W8B2S/
