@@ -4,6 +4,8 @@ import { ComponentPreview, DocContainer } from "@docutils";
 import SidebarComponent from "@components/Sidebar";
 import TopbarComponent from "@components/Topbar";
 
+const { sidebar } = window.dg;
+
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
@@ -26,7 +28,7 @@ const Overview = () => (
 
 const Sidebar = () => {
     // eslint-disable-next-line
-    useEffect(() => { console.log("init"); });
+    useEffect(() => { sidebar.init(); });
 
     return (
         <DocContainer docToc>
