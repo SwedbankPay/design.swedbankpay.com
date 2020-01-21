@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const CodeTags = ({ type, code }) => (
-    <span className={`code-tags code-tags-${type}`}>{code}</span>
+    <code className={`code-tags code-tags-${type}`}>{code}</code>
 );
 
 CodeTags.propTypes = {
