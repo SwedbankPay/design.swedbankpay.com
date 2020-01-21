@@ -1,7 +1,7 @@
 .status {
     display: flex;
     position: relative;
-    padding-left: @status-padding-left;
+    padding-left: @status-size + @status-padding-left;
     align-items: center;
 
     &:before {
@@ -37,26 +37,26 @@
     }
 
     h1& {
-        .status-size(@status-size * 2.5, @status-padding);
+        .status-size(1.5rem, @status-padding-left);
     }
 
     h2& {
-        .status-size(@status-size * 2, @status-padding);
+        .status-size(1rem, @status-padding-left);
     }
 
     h3& {
-        .status-size(@status-size * 1.75, @status-padding-head);
+        .status-size(0.875rem, @status-padding-left);
     }
 
     h4& {
-        .status-size(@status-size * 1.5, @status-padding-head);
+        .status-size(0.75rem, @status-padding-left);
     }
 
     h5& {
-        .status-size(@status-size * 1.25, @status-padding-head);
+        .status-size(0.625rem, @status-padding-left);
     }
 
     h6& {
-        .status-size(@status-size, @base-padding);
+        .status-size(0.5rem, @status-padding-left);
     }
 }
