@@ -86,7 +86,7 @@ exports[`Component: IconPreview -  renders a preview wrapper around material-ico
     android
   </i>
   <code
-    className="token property p-0 mt-2"
+    className="code-tags code-tags-secondary mt-2"
   >
     large
   </code>
@@ -101,7 +101,7 @@ exports[`Component: IconPreview -  renders a preview wrapper around the <i> tag 
     className="payment-icon payment-icon-amex"
   />
   <code
-    className="token property p-0 mt-2"
+    className="code-tags code-tags-secondary mt-2"
   >
     amex
   </code>

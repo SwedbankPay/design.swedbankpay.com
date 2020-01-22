@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer, Property } from "@docutils";
+import { ComponentPreview, DocContainer } from "@docutils";
 import IconPreview from "@components/IconPreview";
 import ActionListComponent from "@components/ActionList";
+import CodeTags from "@components/CodeTags";
 
 const { actionList } = window.dg;
 const items = [
@@ -29,7 +30,7 @@ const MaterialIcons = () => (
     <>
         <h2 id="material-icons">Material Icons</h2>
         <p className="lead">DesignGuide includes Google{"'"}s material icons. For a full overview of the available icons please visit <a href="https://material.io/tools/icons/">this site</a>.</p>
-        <p>To use an icon, provide the following markup: <PrismCode className="language-html">{"<i class=\"material-icons\">{icon_name}</i>"}</PrismCode>.</p>
+        <p>To use an icon, provide the following markup: <CodeTags type="primary" code={"<i class=\"material-icons\">{icon_name}</i>"} />.</p>
         <ComponentPreview language="html" showCasePanel>
             <div className="row justify-content-evenly align-items-end">
                 <IconPreview preview type="material-icons" name="android" />
@@ -48,7 +49,8 @@ const MaterialIcons = () => (
         </ComponentPreview>
 
         <h3>Sizes</h3>
-        <p>You can modify the size of the material icons by adding one of the size classes: <Property value="material-icons-tiny" />, <Property value="material-icons-small" />, <Property value="material-icons-medium" /> or <Property value="material-icons-large" />.</p>
+        <p>You can modify the size of the material icons by adding one of the size
+            classes: <CodeTags type="secondary" code="material-icons-tiny" />, <CodeTags type="secondary" code="material-icons-small" />, <CodeTags type="secondary" code="material-icons-medium" /> or <CodeTags type="secondary" code="material-icons-large" />.</p>
         <ComponentPreview language="html" showCasePanel>
             <div className="row justify-content-evenly align-items-end">
                 <IconPreview previewSize type="material-icons" name="android" size="tiny" />
@@ -69,7 +71,7 @@ const MaterialIcons = () => (
 const PaymentIcons = () => (
     <>
         <h2 id="payment-icons">Payment Icons</h2>
-        <p>To use an icon, provide the following markup: <PrismCode className="language-html">{"<i class=\"payment-icon payment-icon-{icon_name}\"></i>"}</PrismCode>.</p>
+        <p>To use an icon, provide the following markup: <CodeTags type="primary" code={"<i class=\"payment-icon payment-icon-{icon_name}\"></i>"} />.</p>
         <ComponentPreview language="html" showCasePanel>
             <div className="row justify-content-evenly mb-2">
                 <IconPreview preview type="payment-icon" name="amex" size="large" />{"\n"}
@@ -97,7 +99,9 @@ const PaymentIcons = () => (
 
         <h3>Sizes</h3>
         <p>
-            Different sizes are available by adding <Property value=".payment-icon-small" />, <Property value=".payment-icon-medium" />, <Property value=".payment-icon-large" /> and <Property value=".payment-icon-huge" />. If no size is provided <Property value=".payment-icon-medium" /> is defaulted.
+            Different sizes are available by
+            adding <CodeTags type="secondary" code=".payment-icon-small" />, <CodeTags type="secondary" code=".payment-icon-medium" />, <CodeTags type="secondary" code=".payment-icon-large" /> and <CodeTags type="secondary" code=".payment-icon-huge" />.
+            If no size is provided <CodeTags type="secondary" code=".payment-icon-medium" /> is defaulted.
         </p>
         <ComponentPreview language="html" showCasePanel>
             <div className="row justify-content-evenly align-items-end">
@@ -115,7 +119,7 @@ const PaymentIcons = () => (
         </ComponentPreview>
 
         <h3>Usage</h3>
-        <p>Typical usage would be in for instance an <Property value=".item-list" />.</p>
+        <p>Typical usage would be in for instance an <CodeTags type="secondary" code=".item-list" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="item-list item-list-striped">
                 <li>
@@ -156,7 +160,8 @@ const PaymentIcons = () => (
 const Flags = () => (
     <>
         <h2 id="flags">Flags</h2>
-        <p>To use the flag icons add the classes <Property value=".flag-icon" /> and <Property value=".flag-icon-xx" /> (where xx is the <a href="https://www.iso.org/obp/ui/#search">ISO 3166-1-alpha-2 code</a> of a country) to an empty <PrismCode className="language-html">{"<i>"}</PrismCode>.</p>
+        <p>To use the flag icons add the classes <CodeTags type="secondary" code=".flag-icon" /> and <CodeTags type="secondary" code=".flag-icon-xx" /> (where
+        xx is the <a href="https://www.iso.org/obp/ui/#search">ISO 3166-1-alpha-2 code</a> of a country) to an empty <PrismCode className="language-html">{"<i>"}</PrismCode>.</p>
         <ComponentPreview language="html" showCasePanel>
             <div className="row justify-content-evenly align-items-end">
                 <IconPreview preview type="flag-icon" name="se" />
@@ -174,7 +179,7 @@ const Flags = () => (
             <i className="flag-icon flag-icon-eu"></i>{"\n"}
         </ComponentPreview>
         <h3>Squared</h3>
-        <p>To use a squared version of a flag add the class <Property value=".flag-icon-squared" />.</p>
+        <p>To use a squared version of a flag add the class <CodeTags type="secondary" code=".flag-icon-squared" />.</p>
         <ComponentPreview language="html" showCasePanel>
             <div className="row justify-content-evenly align-items-end">
                 <IconPreview preview type="flag-icon" squaredFlag name="se" />
@@ -192,7 +197,8 @@ const Flags = () => (
             <i className="flag-icon flag-icon-squared flag-icon-eu"></i>{"\n"}
         </ComponentPreview>
         <h3>Sizes</h3>
-        <p>Flags support sizes <Property value=".payment-icon-tiny" />, <Property value=".payment-icon-small" />, <Property value=".payment-icon-medium" />, <Property value=".payment-icon-large" /> and <Property value=".payment-icon-huge" />. If no size is provided <Property value=".payment-icon-tiny" /> is defaulted.</p>
+        <p>Flags support sizes <CodeTags type="secondary" code=".payment-icon-tiny" />, <CodeTags type="secondary" code=".payment-icon-small" />, <CodeTags type="secondary" code=".payment-icon-medium" />, <CodeTags type="secondary" code=".payment-icon-large" /> and <CodeTags type="secondary" code=".payment-icon-huge" />.
+        If no size is provided <CodeTags type="secondary" code=".payment-icon-tiny" /> is defaulted.</p>
         <ComponentPreview language="html" showCasePanel>
             <div className="row justify-content-evenly align-items-end">
                 <IconPreview previewSize type="flag-icon" name="se" size="tiny" />
