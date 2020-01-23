@@ -33,9 +33,6 @@ environment:
 install:
   - ps: Install-Product node $env:nodejs_version x64
   - cmd: >-
-      git fetch --unshallow
-      git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
-      git fetch origin
 
       choco install gitversion.portable -y
 
