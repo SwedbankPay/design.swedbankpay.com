@@ -9,33 +9,37 @@ exports[`Components: Tooltip Overview renders 1`] = `
   </h2>
   <p>
     Add the attribute 
-    <Attribute
-      data={true}
-      name="tooltip"
+    <CodeTags
+      code="tooltip"
+      type="secondary"
     />
      to the desired element and add your content in its value to create a tooltip.
   </p>
   <p>
     You can use the attribute 
-    <Attribute
-      data={true}
-      name="tooltip-position"
+    <CodeTags
+      code="tooltip-position"
+      type="secondary"
     />
      to position the tooltip relative to the containing element, use the values 
-    <Attribute
-      value="top"
+    <CodeTags
+      code="top"
+      type="secondary"
     />
     , 
-    <Attribute
-      value="right"
+    <CodeTags
+      code="right"
+      type="secondary"
     />
     , 
-    <Attribute
-      value="bottom"
+    <CodeTags
+      code="bottom"
+      type="secondary"
     />
      or 
-    <Attribute
-      value="left"
+    <CodeTags
+      code="left"
+      type="secondary"
     />
     . If the attribute is not provided, it will default to top.
   </p>

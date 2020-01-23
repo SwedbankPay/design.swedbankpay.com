@@ -9,23 +9,20 @@ exports[`Components: Tabs BasicUsage renders 1`] = `
   </h2>
   <p>
     Add class 
-    <Property
-      value=".tabs"
+    <CodeTags
+      code=".tabs"
+      type="secondary"
     />
      to a div containing 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;ul&gt;
-    </PrismCode>
+    <CodeTags
+      code="<ul>"
+      type="primary"
+    />
     and nest 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;li&gt;
-    </PrismCode>
+    <CodeTags
+      code="<li>"
+      type="primary"
+    />
      as needed. Make sure that the tabs will not overflow on screens of normal size. Consider revising the design or the decision to use tabs when more than 3 alternatives are present. If using tabs really is necessary, tabs with scroll might be a more suitable alternative.
   </p>
   <ComponentPreview
@@ -74,12 +71,14 @@ exports[`Components: Tabs TabsScroll renders 1`] = `
   </h2>
   <p>
     To make tabs more mobile friendly, use class 
-    <Property
-      value=".tabs-scroll"
+    <CodeTags
+      code=".tabs-scroll"
+      type="secondary"
     />
     .
-    <Property
-      value=".tabs-scroll"
+    <CodeTags
+      code=".tabs-scroll"
+      type="secondary"
     />
      will make the tabs scrollable in case of overflow. Note that the scrollable property is not optimized for desktop usage. Consider the usage when 4 or more tabs are present.
   </p>

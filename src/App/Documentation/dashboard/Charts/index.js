@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocContainer, Property } from "@docutils";
+import { ComponentPreview, DocContainer } from "@docutils";
 import Chart from "@components/Chart";
+import CodeTags from "@components/CodeTags";
 
 const LineChart = () => (
         <>
@@ -521,7 +522,7 @@ dg.chart("mixed-chart", {
 const CustomColors = () => (
     <>
         <h2 id="custom-colors">Custom colors</h2>
-        <p>Except for the three first colors, the rest of the colors are customizable. Call <Property value="dg.chart" /> with a last optional argument consisting of a list of RGB color codes.</p>
+        <p>Except for the three first colors, the rest of the colors are customizable. Call <CodeTags type="secondary" code="dg.chart" /> with a last optional argument consisting of a list of RGB color codes.</p>
         <ComponentPreview language="html" showCasePanel codeFigure >
             <Chart id="custom-color-pie"
                 options={{
@@ -575,9 +576,9 @@ class Charts extends Component {
                 <p>Most options and settings available in the chart.js documentation will be available.</p>
                 <p>For now, the following chart types are available:</p>
                 <ul>
-                    <li><code className="token string">{"\"line\""}</code></li>
-                    <li><code className="token string">{"\"bar\"/\"horizontalBar\""}</code></li>
-                    <li><code className="token string">{"\"pie\"/\"doughnut\""}</code></li>
+                    <li><CodeTags type="secondary" code={"\"line\""} /></li>
+                    <li><CodeTags type="secondary" code={"\"bar\"/\"horizontalBar\""} /></li>
+                    <li><CodeTags type="secondary" code={"\"pie\"/\"doughnut\""} /></li>
                 </ul>
                 <LineChart />
                 <BarChart />

@@ -38,16 +38,19 @@ exports[`Utilities: Spacing Examples renders 1`] = `
   </h3>
   <p>
     Additionally, DesignGuide also includes an 
-    <Property
-      value=".mx-auto"
+    <CodeTags
+      code=".mx-auto"
+      type="secondary"
     />
      class for horizontally centering fixed-width block level content—that is, content that has 
-    <Property
-      value="display: block"
+    <CodeTags
+      code="display: block"
+      type="secondary"
     />
      and a 
-    <Property
-      value="width"
+    <CodeTags
+      code="width"
+      type="secondary"
     />
      set—by setting the horizontal margins to auto.
   </p>
@@ -83,20 +86,24 @@ exports[`Utilities: Spacing HowItWorks renders 1`] = `
   </h2>
   <p>
     Assign responsive-friendly 
-    <Property
-      value="margin"
+    <CodeTags
+      code="margin"
+      type="secondary"
     />
      or 
-    <Property
-      value="padding"
+    <CodeTags
+      code="padding"
+      type="secondary"
     />
      values to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties. Classes are ranging from 
-    <Property
-      value="0.25rem"
+    <CodeTags
+      code="0.25rem"
+      type="secondary"
     />
      to 
-    <Property
-      value="3rem"
+    <CodeTags
+      code="3rem"
+      type="secondary"
     />
     .
   </p>
@@ -112,51 +119,62 @@ exports[`Utilities: Spacing Notation renders 1`] = `
   </h2>
   <p>
     Spacing utilities that apply to all breakpoints, from 
-    <Property
-      value="xs"
+    <CodeTags
+      code="xs"
+      type="secondary"
     />
      to 
-    <Property
-      value="xxl"
+    <CodeTags
+      code="xxl"
+      type="secondary"
     />
     , have no breakpoint abbreviation in them. This is because those classes are applied from 
-    <Property
-      value="min-width: 0"
+    <CodeTags
+      code="min-width: 0"
+      type="secondary"
     />
      and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
   </p>
   <p>
     The classes are named using the format 
-    <Property
-      value="{property}{sides}-{size}"
+    <CodeTags
+      code="{property}{sides}-{size}"
+      type="secondary"
     />
      for 
-    <Property
-      value="xs"
+    <CodeTags
+      code="xs"
+      type="secondary"
     />
      and 
-    <Property
-      value="{property}{sides}-{breakpoint}-{size}"
+    <CodeTags
+      code="{property}{sides}-{breakpoint}-{size}"
+      type="secondary"
     />
      for 
-    <Property
-      value="sm"
+    <CodeTags
+      code="sm"
+      type="secondary"
     />
     , 
-    <Property
-      value="md"
+    <CodeTags
+      code="md"
+      type="secondary"
     />
     , 
-    <Property
-      value="lg"
+    <CodeTags
+      code="lg"
+      type="secondary"
     />
     , 
-    <Property
-      value="xl"
+    <CodeTags
+      code="xl"
+      type="secondary"
     />
     , and 
-    <Property
-      value="xxl"
+    <CodeTags
+      code="xxl"
+      type="secondary"
     />
     .
   </p>
@@ -169,21 +187,25 @@ exports[`Utilities: Spacing Notation renders 1`] = `
   </p>
   <ul>
     <li>
-      <Property
-        value="m"
+      <CodeTags
+        code="m"
+        type="secondary"
       />
        - for classes that set 
-      <Property
-        value="margin"
+      <CodeTags
+        code="margin"
+        type="secondary"
       />
     </li>
     <li>
-      <Property
-        value="p"
+      <CodeTags
+        code="p"
+        type="secondary"
       />
        - for classes that set 
-      <Property
-        value="padding"
+      <CodeTags
+        code="padding"
+        type="secondary"
       />
     </li>
   </ul>
@@ -196,81 +218,99 @@ exports[`Utilities: Spacing Notation renders 1`] = `
   </p>
   <ul>
     <li>
-      <Property
-        value="t"
+      <CodeTags
+        code="t"
+        type="secondary"
       />
        - for classes that set 
-      <Property
-        value="margin-top"
+      <CodeTags
+        code="margin-top"
+        type="secondary"
       />
        or 
-      <Property
-        value="padding-top"
+      <CodeTags
+        code="padding-top"
+        type="secondary"
       />
     </li>
     <li>
-      <Property
-        value="b"
+      <CodeTags
+        code="b"
+        type="secondary"
       />
        - for classes that set 
-      <Property
-        value="margin-bottom"
+      <CodeTags
+        code="margin-bottom"
+        type="secondary"
       />
        or 
-      <Property
-        value="padding-bottom"
+      <CodeTags
+        code="padding-bottom"
+        type="secondary"
       />
     </li>
     <li>
-      <Property
-        value="l"
+      <CodeTags
+        code="l"
+        type="secondary"
       />
        - for classes that set 
-      <Property
-        value="margin-left"
+      <CodeTags
+        code="margin-left"
+        type="secondary"
       />
        or 
-      <Property
-        value="padding-left"
+      <CodeTags
+        code="padding-left"
+        type="secondary"
       />
     </li>
     <li>
-      <Property
-        value="r"
+      <CodeTags
+        code="r"
+        type="secondary"
       />
        - for classes that set 
-      <Property
-        value="margin-right"
+      <CodeTags
+        code="margin-right"
+        type="secondary"
       />
        or 
-      <Property
-        value="padding-right"
+      <CodeTags
+        code="padding-right"
+        type="secondary"
       />
     </li>
     <li>
-      <Property
-        value="x"
+      <CodeTags
+        code="x"
+        type="secondary"
       />
        - for classes that set both 
-      <Property
-        value="*-left"
+      <CodeTags
+        code="*-left"
+        type="secondary"
       />
        or 
-      <Property
-        value="*-right"
+      <CodeTags
+        code="*-right"
+        type="secondary"
       />
     </li>
     <li>
-      <Property
-        value="y"
+      <CodeTags
+        code="y"
+        type="secondary"
       />
        - for classes that set both 
-      <Property
-        value="*-top"
+      <CodeTags
+        code="*-top"
+        type="secondary"
       />
        or 
-      <Property
-        value="*-bottom"
+      <CodeTags
+        code="*-bottom"
+        type="secondary"
       />
     </li>
   </ul>
@@ -283,118 +323,145 @@ exports[`Utilities: Spacing Notation renders 1`] = `
   </p>
   <ul>
     <li>
-      <Property
-        value="0"
+      <CodeTags
+        code="0"
+        type="secondary"
       />
        - for classes that eliminate the 
-      <Property
-        value="margin"
+      <CodeTags
+        code="margin"
+        type="secondary"
       />
        or 
-      <Property
-        value="padding"
+      <CodeTags
+        code="padding"
+        type="secondary"
       />
        by setting it to 
-      <Property
-        value="0"
+      <CodeTags
+        code="0"
+        type="secondary"
       />
     </li>
     <li>
-      <Property
-        value="1"
+      <CodeTags
+        code="1"
+        type="secondary"
       />
        - for classes that set the 
-      <Property
-        value="margin"
+      <CodeTags
+        code="margin"
+        type="secondary"
       />
        or 
-      <Property
-        value="padding"
+      <CodeTags
+        code="padding"
+        type="secondary"
       />
        to 
-      <Property
-        value="@spacer * 0.25"
+      <CodeTags
+        code="@spacer * 0.25"
+        type="secondary"
       />
     </li>
     <li>
-      <Property
-        value="2"
+      <CodeTags
+        code="2"
+        type="secondary"
       />
        - for classes that set the 
-      <Property
-        value="margin"
+      <CodeTags
+        code="margin"
+        type="secondary"
       />
        or 
-      <Property
-        value="padding"
+      <CodeTags
+        code="padding"
+        type="secondary"
       />
        to 
-      <Property
-        value="@spacer * 0.5"
+      <CodeTags
+        code="@spacer * 0.5"
+        type="secondary"
       />
     </li>
     <li>
-      <Property
-        value="3"
+      <CodeTags
+        code="3"
+        type="secondary"
       />
        - for classes that set the 
-      <Property
-        value="margin"
+      <CodeTags
+        code="margin"
+        type="secondary"
       />
        or 
-      <Property
-        value="padding"
+      <CodeTags
+        code="padding"
+        type="secondary"
       />
        to 
-      <Property
-        value="@spacer"
+      <CodeTags
+        code="@spacer"
+        type="secondary"
       />
     </li>
     <li>
-      <Property
-        value="4"
+      <CodeTags
+        code="4"
+        type="secondary"
       />
        - for classes that set the 
-      <Property
-        value="margin"
+      <CodeTags
+        code="margin"
+        type="secondary"
       />
        or 
-      <Property
-        value="padding"
+      <CodeTags
+        code="padding"
+        type="secondary"
       />
        to 
-      <Property
-        value="@spacer * 1.5"
+      <CodeTags
+        code="@spacer * 1.5"
+        type="secondary"
       />
     </li>
     <li>
-      <Property
-        value="5"
+      <CodeTags
+        code="5"
+        type="secondary"
       />
        - for classes that set the 
-      <Property
-        value="margin"
+      <CodeTags
+        code="margin"
+        type="secondary"
       />
        or 
-      <Property
-        value="padding"
+      <CodeTags
+        code="padding"
+        type="secondary"
       />
        to 
-      <Property
-        value="@spacer * 3"
+      <CodeTags
+        code="@spacer * 3"
+        type="secondary"
       />
     </li>
     <li>
-      <Property
-        value="auto"
+      <CodeTags
+        code="auto"
+        type="secondary"
       />
        - for classes that set 
-      <Property
-        value="margin"
+      <CodeTags
+        code="margin"
+        type="secondary"
       />
        to 
-      <Property
-        value="auto"
+      <CodeTags
+        code="auto"
+        type="secondary"
       />
     </li>
   </ul>
@@ -404,86 +471,104 @@ exports[`Utilities: Spacing Notation renders 1`] = `
       size
     </i>
      (excluding 
-    <Property
-      value="0"
+    <CodeTags
+      code="0"
+      type="secondary"
     />
     ):
   </p>
   <ul>
     <li>
-      <Property
-        value="n1"
+      <CodeTags
+        code="n1"
+        type="secondary"
       />
        - for classes that set the 
-      <Property
-        value="margin"
+      <CodeTags
+        code="margin"
+        type="secondary"
       />
        to 
-      <Property
-        value="-@spacer * 0.25"
+      <CodeTags
+        code="-@spacer * 0.25"
+        type="secondary"
       />
     </li>
     <li>
-      <Property
-        value="n2"
+      <CodeTags
+        code="n2"
+        type="secondary"
       />
        - for classes that set the 
-      <Property
-        value="margin"
+      <CodeTags
+        code="margin"
+        type="secondary"
       />
        to 
-      <Property
-        value="-@spacer * 0.5"
+      <CodeTags
+        code="-@spacer * 0.5"
+        type="secondary"
       />
     </li>
     <li>
-      <Property
-        value="n3"
+      <CodeTags
+        code="n3"
+        type="secondary"
       />
        - for classes that set the 
-      <Property
-        value="margin"
+      <CodeTags
+        code="margin"
+        type="secondary"
       />
        to 
-      <Property
-        value="-@spacer"
+      <CodeTags
+        code="-@spacer"
+        type="secondary"
       />
     </li>
     <li>
-      <Property
-        value="n4"
+      <CodeTags
+        code="n4"
+        type="secondary"
       />
        - for classes that set the 
-      <Property
-        value="margin"
+      <CodeTags
+        code="margin"
+        type="secondary"
       />
        to 
-      <Property
-        value="-@spacer * 1.5"
+      <CodeTags
+        code="-@spacer * 1.5"
+        type="secondary"
       />
     </li>
     <li>
-      <Property
-        value="n5"
+      <CodeTags
+        code="n5"
+        type="secondary"
       />
        - for classes that set the 
-      <Property
-        value="margin"
+      <CodeTags
+        code="margin"
+        type="secondary"
       />
        to 
-      <Property
-        value="-@spacer * 3"
+      <CodeTags
+        code="-@spacer * 3"
+        type="secondary"
       />
     </li>
   </ul>
   <p>
     (
-    <Property
-      value="@spacer"
+    <CodeTags
+      code="@spacer"
+      type="secondary"
     />
      is set to 
-    <Property
-      value="1rem (16px)"
+    <CodeTags
+      code="1rem (16px)"
+      type="secondary"
     />
     )
   </p>

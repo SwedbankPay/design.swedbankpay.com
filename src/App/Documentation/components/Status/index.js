@@ -1,14 +1,15 @@
 import React from "react";
 
-import { ComponentPreview, DocContainer, Property } from "@docutils";
+import { ComponentPreview, DocContainer } from "@docutils";
 import Alert from "@components/Alert";
+import CodeTags from "@components/CodeTags";
 
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
         <p>
             Be aware of what color you use when deciding what message you want to convey. A completion status should not use a warning or danger status,
-            that is why <Property value=".status-success" /> exists.
+            that is why <CodeTags type="secondary" code=".status-success" /> exists.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure removeList>
             <ul className="list">

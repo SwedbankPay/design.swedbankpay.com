@@ -1,12 +1,13 @@
 import React from "react";
 
-import { ComponentPreview, DocContainer, Property } from "@docutils";
+import { ComponentPreview, DocContainer } from "@docutils";
 import MediaObjectComponent from "@components/MediaObject";
+import CodeTags from "@components/CodeTags";
 
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
-        <p>Use the <Property value=".media" /> class on an object to style it as a small container that feature a left- or right-aligned image/icon alongside textual content.</p>
+        <p>Use the <CodeTags type="secondary" code=".media" /> class on an object to style it as a small container that feature a left- or right-aligned image/icon alongside textual content.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <MediaObjectComponent imgUrl="https://via.placeholder.com/48x48" heading="Bob Corlsan" text="bob.corlsan@swedbankpay.com" />
             <MediaObjectComponent icon="account_circle" heading="Bob Corlsan" text="bob.corlsan@swedbankpay.com" />
@@ -18,7 +19,7 @@ const Sizes = () => (
     <>
         <h2 id="sizes">Sizes</h2>
         <p>
-            Use <Property value=".media-sm" /> or <Property value=".media-lg" /> to modify the size of your media objects.
+            Use <CodeTags type="secondary" code=".media-sm" /> or <CodeTags type="secondary" code=".media-lg" /> to modify the size of your media objects.
         </p>
         <h3>Small</h3>
         <ComponentPreview language="html" showCasePanel codeFigure>
@@ -36,7 +37,7 @@ const Sizes = () => (
 const MediaPosition = () => (
     <>
         <h2 id="media-position">Media position</h2>
-        <p>Use the <Property value=".media-right" /> class to align the media content to the right.</p>
+        <p>Use the <CodeTags type="secondary" code=".media-right" /> class to align the media content to the right.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <MediaObjectComponent mediaRight imgUrl="https://via.placeholder.com/48x48" heading="Bob Corlsan" text="bob.corlsan@swedbankpay.com" />
             <MediaObjectComponent mediaRight icon="account_circle" heading="Bob Corlsan" text="bob.corlsan@swedbankpay.com" />

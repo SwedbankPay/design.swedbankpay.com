@@ -12,8 +12,9 @@ exports[`Resources: Presentations Download renders 1`] = `
   >
     <p>
       The presentation template is provided as a 
-      <Property
-        value=".potx"
+      <CodeTags
+        code=".potx"
+        type="secondary"
       />
       -file.
     </p>

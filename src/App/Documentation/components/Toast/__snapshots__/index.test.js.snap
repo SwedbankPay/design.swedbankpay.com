@@ -103,8 +103,9 @@ exports[`Components: Toast Options renders 1`] = `
           String
         </td>
         <td>
-          <Attribute
-            value="\\"\\""
+          <CodeTags
+            code="\\"\\""
+            type="secondary"
           />
         </td>
         <td>
@@ -119,26 +120,31 @@ exports[`Components: Toast Options renders 1`] = `
           String
         </td>
         <td>
-          <Attribute
-            value="\\"\\""
+          <CodeTags
+            code="\\"\\""
+            type="secondary"
           />
         </td>
         <td>
           Premade alert types; 
-          <Attribute
-            value="success"
+          <CodeTags
+            code="success"
+            type="secondary"
           />
           , 
-          <Attribute
-            value="neutral"
+          <CodeTags
+            code="neutral"
+            type="secondary"
           />
           , 
-          <Attribute
-            value="warning"
+          <CodeTags
+            code="warning"
+            type="secondary"
           />
            and 
-          <Attribute
-            value="danger"
+          <CodeTags
+            code="danger"
+            type="secondary"
           />
            are available.
         </td>
@@ -151,8 +157,9 @@ exports[`Components: Toast Options renders 1`] = `
           Boolean
         </td>
         <td>
-          <Attribute
-            value="true"
+          <CodeTags
+            code="true"
+            type="secondary"
           />
         </td>
         <td>
@@ -167,8 +174,9 @@ exports[`Components: Toast Options renders 1`] = `
           String
         </td>
         <td>
-          <Attribute
-            value="\\"\\""
+          <CodeTags
+            code="\\"\\""
+            type="secondary"
           />
         </td>
         <td>
@@ -189,8 +197,9 @@ exports[`Components: Toast Options renders 1`] = `
           Number
         </td>
         <td>
-          <Attribute
-            value="4000"
+          <CodeTags
+            code="4000"
+            type="secondary"
           />
         </td>
         <td>
@@ -205,8 +214,9 @@ exports[`Components: Toast Options renders 1`] = `
           Array of strings
         </td>
         <td>
-          <Attribute
-            value="[]"
+          <CodeTags
+            code="[]"
+            type="secondary"
           />
         </td>
         <td>
@@ -221,8 +231,9 @@ exports[`Components: Toast Options renders 1`] = `
           Function
         </td>
         <td>
-          <Attribute
-            value="null"
+          <CodeTags
+            code="null"
+            type="secondary"
           />
         </td>
         <td>
@@ -363,20 +374,24 @@ exports[`Components: Toast PremadeToasts calls toast on click 1`] = `
   </h2>
   <p>
     There are four premade toast styles other than the default one; 
-    <Attribute
-      value="neutral"
+    <CodeTags
+      code="neutral"
+      type="secondary"
     />
     , 
-    <Attribute
-      value="success"
+    <CodeTags
+      code="success"
+      type="secondary"
     />
     , 
-    <Attribute
-      value="warning"
+    <CodeTags
+      code="warning"
+      type="secondary"
     />
      and 
-    <Attribute
-      value="danger"
+    <CodeTags
+      code="danger"
+      type="secondary"
     />
     . Apply the desired one to the options object and be amazed!
   </p>
@@ -441,20 +456,24 @@ exports[`Components: Toast PremadeToasts renders 1`] = `
   </h2>
   <p>
     There are four premade toast styles other than the default one; 
-    <Attribute
-      value="neutral"
+    <CodeTags
+      code="neutral"
+      type="secondary"
     />
     , 
-    <Attribute
-      value="success"
+    <CodeTags
+      code="success"
+      type="secondary"
     />
     , 
-    <Attribute
-      value="warning"
+    <CodeTags
+      code="warning"
+      type="secondary"
     />
      and 
-    <Attribute
-      value="danger"
+    <CodeTags
+      code="danger"
+      type="secondary"
     />
     . Apply the desired one to the options object and be amazed!
   </p>

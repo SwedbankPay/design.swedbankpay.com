@@ -54,27 +54,32 @@ exports[`Utilities: Display HidingElements renders 1`] = `
   </p>
   <p>
     To hide elements simply use the 
-    <Property
-      value=".d-none"
+    <CodeTags
+      code=".d-none"
+      type="secondary"
     />
      class or one of the 
-    <Property
-      value=".d-{sm,md,lg,xl}-none"
+    <CodeTags
+      code=".d-{sm,md,lg,xl}-none"
+      type="secondary"
     />
      classes for any responsive screen variation.
   </p>
   <p>
     To show an element only on a given interval of screen sizes you can combine one 
-    <Property
-      value=".d-*-none"
+    <CodeTags
+      code=".d-*-none"
+      type="secondary"
     />
      class with a 
-    <Property
-      value=".d-*-*"
+    <CodeTags
+      code=".d-*-*"
+      type="secondary"
     />
      class, for example 
-    <Property
-      value=".d-none .d-md-block .d-xl-none"
+    <CodeTags
+      code=".d-none .d-md-block .d-xl-none"
+      type="secondary"
     />
      will hide the element for all screen sizes except on medium and large devices.
   </p>
@@ -97,8 +102,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Hidden on all
         </td>
         <td>
-          <Property
-            value=".d-none"
+          <CodeTags
+            code=".d-none"
+            type="secondary"
           />
         </td>
       </tr>
@@ -107,8 +113,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Hidden only on xs
         </td>
         <td>
-          <Property
-            value=".d-none .d-sm-block"
+          <CodeTags
+            code=".d-none .d-sm-block"
+            type="secondary"
           />
         </td>
       </tr>
@@ -117,8 +124,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Hidden only on sm
         </td>
         <td>
-          <Property
-            value=".d-sm-none .d-md-block"
+          <CodeTags
+            code=".d-sm-none .d-md-block"
+            type="secondary"
           />
         </td>
       </tr>
@@ -127,8 +135,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Hidden only on md
         </td>
         <td>
-          <Property
-            value=".d-md-none .d-lg-block"
+          <CodeTags
+            code=".d-md-none .d-lg-block"
+            type="secondary"
           />
         </td>
       </tr>
@@ -137,8 +146,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Hidden only on lg
         </td>
         <td>
-          <Property
-            value=".d-lg-none .d-xl-block"
+          <CodeTags
+            code=".d-lg-none .d-xl-block"
+            type="secondary"
           />
         </td>
       </tr>
@@ -147,8 +157,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Hidden only on xl
         </td>
         <td>
-          <Property
-            value=".d-xl-none .d-xxl-block"
+          <CodeTags
+            code=".d-xl-none .d-xxl-block"
+            type="secondary"
           />
         </td>
       </tr>
@@ -157,8 +168,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Hidden only on xxl
         </td>
         <td>
-          <Property
-            value=".d-xxl-none"
+          <CodeTags
+            code=".d-xxl-none"
+            type="secondary"
           />
         </td>
       </tr>
@@ -167,8 +179,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Visible on all
         </td>
         <td>
-          <Property
-            value=".d-block"
+          <CodeTags
+            code=".d-block"
+            type="secondary"
           />
         </td>
       </tr>
@@ -177,8 +190,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Visible only on xs
         </td>
         <td>
-          <Property
-            value=".d-block .d-sm-none"
+          <CodeTags
+            code=".d-block .d-sm-none"
+            type="secondary"
           />
         </td>
       </tr>
@@ -187,8 +201,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Visible only on sm
         </td>
         <td>
-          <Property
-            value=".d-sm-block .d-md-none"
+          <CodeTags
+            code=".d-sm-block .d-md-none"
+            type="secondary"
           />
         </td>
       </tr>
@@ -197,8 +212,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Visible only on md
         </td>
         <td>
-          <Property
-            value=".d-md-block .d-lg-none"
+          <CodeTags
+            code=".d-md-block .d-lg-none"
+            type="secondary"
           />
         </td>
       </tr>
@@ -207,8 +223,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Visible only on lg
         </td>
         <td>
-          <Property
-            value=".d-lg-block .d-xl-none"
+          <CodeTags
+            code=".d-lg-block .d-xl-none"
+            type="secondary"
           />
         </td>
       </tr>
@@ -217,8 +234,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Visible only on xl
         </td>
         <td>
-          <Property
-            value=".d-xl-block .d-xxl-none"
+          <CodeTags
+            code=".d-xl-block .d-xxl-none"
+            type="secondary"
           />
         </td>
       </tr>
@@ -227,8 +245,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Visible only on xxl
         </td>
         <td>
-          <Property
-            value=".d-xxl-block"
+          <CodeTags
+            code=".d-xxl-block"
+            type="secondary"
           />
         </td>
       </tr>
@@ -268,8 +287,9 @@ exports[`Utilities: Display HowItWorks renders 1`] = `
       display property
     </a>
      with our responsive display utility classes. We purposely support only a subset of all possible values for 
-    <Property
-      value="display"
+    <CodeTags
+      code="display"
+      type="secondary"
     />
     . Classes can be combined for various effects as you need.
   </p>
@@ -291,16 +311,19 @@ exports[`Utilities: Display Notation renders 1`] = `
       breakpoints
     </Link>
     , from 
-    <Property
-      value="xs"
+    <CodeTags
+      code="xs"
+      type="secondary"
     />
      to 
-    <Property
-      value="xxl"
+    <CodeTags
+      code="xxl"
+      type="secondary"
     />
     , have no breakpoint abbreviation in them. This is because those classes are applied from 
-    <Property
-      value="min-width: 0;"
+    <CodeTags
+      code="min-width: 0;"
+      type="secondary"
     />
      and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
   </p>
@@ -309,37 +332,45 @@ exports[`Utilities: Display Notation renders 1`] = `
   </p>
   <ul>
     <li>
-      <Property
-        value=".d-{value}"
+      <CodeTags
+        code=".d-{value}"
+        type="secondary"
       />
        for 
-      <Property
-        value="xs"
+      <CodeTags
+        code="xs"
+        type="secondary"
       />
     </li>
     <li>
-      <Property
-        value=".d-{breakpoint}-{value}"
+      <CodeTags
+        code=".d-{breakpoint}-{value}"
+        type="secondary"
       />
        for 
-      <Property
-        value="sm"
+      <CodeTags
+        code="sm"
+        type="secondary"
       />
       , 
-      <Property
-        value="md"
+      <CodeTags
+        code="md"
+        type="secondary"
       />
       , 
-      <Property
-        value="lg"
+      <CodeTags
+        code="lg"
+        type="secondary"
       />
       , 
-      <Property
-        value="xl"
+      <CodeTags
+        code="xl"
+        type="secondary"
       />
        and 
-      <Property
-        value="xxl"
+      <CodeTags
+        code="xxl"
+        type="secondary"
       />
       .
     </li>
@@ -353,48 +384,57 @@ exports[`Utilities: Display Notation renders 1`] = `
   </p>
   <ul>
     <li>
-      <Property
-        value="none"
+      <CodeTags
+        code="none"
+        type="secondary"
       />
     </li>
     <li>
-      <Property
-        value="inline"
+      <CodeTags
+        code="inline"
+        type="secondary"
       />
     </li>
     <li>
-      <Property
-        value="inline-block"
+      <CodeTags
+        code="inline-block"
+        type="secondary"
       />
     </li>
     <li>
-      <Property
-        value="block"
+      <CodeTags
+        code="block"
+        type="secondary"
       />
     </li>
     <li>
-      <Property
-        value="table"
+      <CodeTags
+        code="table"
+        type="secondary"
       />
     </li>
     <li>
-      <Property
-        value="table-cell"
+      <CodeTags
+        code="table-cell"
+        type="secondary"
       />
     </li>
     <li>
-      <Property
-        value="table-row"
+      <CodeTags
+        code="table-row"
+        type="secondary"
       />
     </li>
     <li>
-      <Property
-        value="flex"
+      <CodeTags
+        code="flex"
+        type="secondary"
       />
     </li>
     <li>
-      <Property
-        value="inline-flex"
+      <CodeTags
+        code="inline-flex"
+        type="secondary"
       />
     </li>
   </ul>
@@ -404,20 +444,24 @@ exports[`Utilities: Display Notation renders 1`] = `
       or larger
     </i>
     . For example, 
-    <Property
-      value=".d-xl-none"
+    <CodeTags
+      code=".d-xl-none"
+      type="secondary"
     />
      sets 
-    <Property
-      value="display: none;"
+    <CodeTags
+      code="display: none;"
+      type="secondary"
     />
      on both 
-    <Property
-      value="xl"
+    <CodeTags
+      code="xl"
+      type="secondary"
     />
      and 
-    <Property
-      value="xxl"
+    <CodeTags
+      code="xxl"
+      type="secondary"
     />
      screens.
   </p>

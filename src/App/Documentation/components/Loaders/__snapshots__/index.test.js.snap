@@ -9,8 +9,9 @@ exports[`Documentation: Loaders Basic Usage renders 1`] = `
   </h2>
   <p>
     To use a default loader add 
-    <Property
-      value=".loader"
+    <CodeTags
+      code=".loader"
+      type="secondary"
     />
      to a div.
   </p>
@@ -35,8 +36,9 @@ exports[`Documentation: Loaders Muted Loader renders 1`] = `
   </h2>
   <p>
     Use class 
-    <Property
-      value=".loader-muted"
+    <CodeTags
+      code=".loader-muted"
+      type="secondary"
     />
      to make the loader muted.
   </p>
@@ -61,16 +63,19 @@ exports[`Documentation: Loaders Sizes renders 1`] = `
   </h2>
   <p>
     In addition to 
-    <Property
-      value=".loader"
+    <CodeTags
+      code=".loader"
+      type="secondary"
     />
      you can use 
-    <Property
-      value=".loader-sm"
+    <CodeTags
+      code=".loader-sm"
+      type="secondary"
     />
      and 
-    <Property
-      value=".loader-lg"
+    <CodeTags
+      code=".loader-lg"
+      type="secondary"
     />
      to decrease or increase the size of the loader.
   </p>

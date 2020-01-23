@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PrismCode from "react-prism";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import IconPreview from "@components/IconPreview";
@@ -161,7 +160,7 @@ const Flags = () => (
     <>
         <h2 id="flags">Flags</h2>
         <p>To use the flag icons add the classes <CodeTags type="secondary" code=".flag-icon" /> and <CodeTags type="secondary" code=".flag-icon-xx" /> (where
-        xx is the <a href="https://www.iso.org/obp/ui/#search">ISO 3166-1-alpha-2 code</a> of a country) to an empty <PrismCode className="language-html">{"<i>"}</PrismCode>.</p>
+        xx is the <a href="https://www.iso.org/obp/ui/#search">ISO 3166-1-alpha-2 code</a> of a country) to an empty <CodeTags type="primary" code={"<i>"} />.</p>
         <ComponentPreview language="html" showCasePanel>
             <div className="row justify-content-evenly align-items-end">
                 <IconPreview preview type="flag-icon" name="se" />

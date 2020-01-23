@@ -24,16 +24,19 @@ exports[`Component: Nav StandardNav renders 1`] = `
   </h2>
   <p>
     To use our reccommended nav add 
-    <Property
-      value=".nav"
+    <CodeTags
+      code=".nav"
+      type="secondary"
     />
      and 
-    <Property
-      value=".nav-<desired_size>-vertical-wide"
+    <CodeTags
+      code=".nav-<desired_size>-vertical-wide"
+      type="secondary"
     />
     . This gives you a nav with a breakpoint at the size set in the class name. In the example we use 
-    <Property
-      value="lg"
+    <CodeTags
+      code="lg"
+      type="secondary"
     />
     , resize this window to see it in action.
   </p>
@@ -93,8 +96,9 @@ exports[`Component: Nav WithIconsOnly renders 1`] = `
   </h2>
   <p>
     If you want to show only icons at a certain breakpoint then include 
-    <Property
-      value=".nav-<desired_size>-vertical"
+    <CodeTags
+      code=".nav-<desired_size>-vertical"
+      type="secondary"
     />
      with your nav component.
   </p>

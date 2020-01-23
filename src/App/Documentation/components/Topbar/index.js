@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer, Property, Attribute, JavascriptDocs } from "@docutils";
+import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import TopbarComponent from "@components/Topbar";
+import CodeTags from "@components/CodeTags";
 
 const { topbar } = window.dg;
 
@@ -34,13 +34,14 @@ const Overview = () => (
             To use a topbar the bare minimum markup required is:
         </p>
         <ul>
-            <li><Property value=".topbar" /> wrapper.</li>
-            <li>Anchor with class <Property value=".topbar-logo" /> to display the logo and make it clickable.</li>
+            <li><CodeTags type="secondary" code=".topbar" /> wrapper.</li>
+            <li>Anchor with class <CodeTags type="secondary" code=".topbar-logo" /> to display the logo and make it clickable.</li>
         </ul>
         <p>
             With this you get a topbar with the Swedbank Pay logo.
-            In the topbar you can add additional functionality like a menu containing links. To enable this add a <PrismCode className="language-html">{"<button>"}</PrismCode> and
-            a <PrismCode className="language-html">{"<nav>"}</PrismCode> containing anchors. Remember to include <Attribute data name="toggle-nav" value="{your_nav_id}"/> as a <PrismCode className="language-html">{"<button>"}</PrismCode> attribute
+            In the topbar you can add additional functionality like a menu containing links. To enable this add a <CodeTags type="primary" code={"<button>"} /> and
+            a <CodeTags type="primary" code={"<nav>"} /> containing anchors. Remember to include <CodeTags type="secondary" code={"toggle-nav=\"{your_nav_id}\""} /> as
+            a <CodeTags type="primary" code={"<button>"} /> attribute
             to get the menu to appear when the menu-button is clicked.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
@@ -65,8 +66,8 @@ const TopbarPNG = () => (
     <>
         <h2 id="topbar-png">Topbar with PNG logo</h2>
         <p>
-            A PNG version of the logo can also be used. This is done by appending the class <Property value=".topbar-logo-png" /> to the
-            anchor with class <Property value=".topbar-logo" />. Only consider using the PNG version when there are issues with using the SVG version.
+            A PNG version of the logo can also be used. This is done by appending the class <CodeTags type="secondary" code=".topbar-logo-png" /> to the
+            anchor with class <CodeTags type="secondary" code=".topbar-logo" />. Only consider using the PNG version when there are issues with using the SVG version.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <TopbarComponent topbarContent={menu} logout id="demo-topbar-png" png/>

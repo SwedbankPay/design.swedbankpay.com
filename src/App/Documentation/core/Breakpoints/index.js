@@ -1,12 +1,13 @@
 import React from "react";
 
-import { DocContainer, Property } from "@docutils";
+import { DocContainer } from "@docutils";
+import CodeTags from "@components/CodeTags";
 
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
-        <p>Like Bootstrap our breakpoints are ranged from <Property value="xs" /> to <Property value="xl" />. In addition, we have added yet another breakpoint for even bigger screens called <Property value="xxl" />.</p>
-        <p>Note that when targeting screensize <Property value="xs" />, it is optional to append the infix to the classname.</p>
+        <p>Like Bootstrap our breakpoints are ranged from <CodeTags type="secondary" code="xs" /> to <CodeTags type="secondary" code="xl" />. In addition, we have added yet another breakpoint for even bigger screens called <CodeTags type="secondary" code="xxl" />.</p>
+        <p>Note that when targeting screensize <CodeTags type="secondary" code="xs" />, it is optional to append the infix to the classname.</p>
         <table className="table table-striped">
             <thead>
                 <tr>
@@ -18,79 +19,79 @@ const Overview = () => (
             <tbody>
                 <tr>
                     <td>
-                        <Property value="xs" />
+                        <CodeTags type="secondary" code="xs" />
                     </td>
                     <td>
-                        <Property value="0px" />
+                        <CodeTags type="secondary" code="0px" />
                     </td>
                     <td>
                         <p>
-                            <Property value=".col-8" />, <Property value=".d-block" />
+                            <CodeTags type="secondary" code=".col-8" />, <CodeTags type="secondary" code=".d-block" />
                         </p>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <Property value="sm" />
+                        <CodeTags type="secondary" code="sm" />
                     </td>
                     <td>
-                        <Property value="576px" />
+                        <CodeTags type="secondary" code="576px" />
                     </td>
                     <td>
                         <p>
-                            <Property value=".col-sm-8" />, <Property value=".d-sm-block" />
+                            <CodeTags type="secondary" code=".col-sm-8" />, <CodeTags type="secondary" code=".d-sm-block" />
                         </p>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <Property value="md" />
+                        <CodeTags type="secondary" code="md" />
                     </td>
                     <td>
-                        <Property value="768px" />
+                        <CodeTags type="secondary" code="768px" />
                     </td>
                     <td>
                         <p>
-                            <Property value=".col-md-8" />, <Property value=".d-md-block" />
+                            <CodeTags type="secondary" code=".col-md-8" />, <CodeTags type="secondary" code=".d-md-block" />
                         </p>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <Property value="lg" />
+                        <CodeTags type="secondary" code="lg" />
                     </td>
                     <td>
-                        <Property value="992px" />
+                        <CodeTags type="secondary" code="992px" />
                     </td>
                     <td>
                         <p>
-                            <Property value=".col-lg-8" />, <Property value=".d-lg-block" />
+                            <CodeTags type="secondary" code=".col-lg-8" />, <CodeTags type="secondary" code=".d-lg-block" />
                         </p>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <Property value="xl" />
+                        <CodeTags type="secondary" code="xl" />
                     </td>
                     <td>
-                        <Property value="1200px" />
+                        <CodeTags type="secondary" code="1200px" />
                     </td>
                     <td>
                         <p>
-                            <Property value=".col-xl-8" />, <Property value=".d-xl-block" />
+                            <CodeTags type="secondary" code=".col-xl-8" />, <CodeTags type="secondary" code=".d-xl-block" />
                         </p>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <Property value="xxl" />
+                        <CodeTags type="secondary" code="xxl" />
                     </td>
                     <td>
-                        <Property value="1600px" />
+                        <CodeTags type="secondary" code="1600px" />
                     </td>
                     <td>
                         <p>
-                            <Property value=".col-xxl-8" />, <Property value=".d-xxl-block" />
+                            <CodeTags type="secondary" code=".col-xxl-8" />, <CodeTags type="secondary" code=".d-xxl-block" />
                         </p>
                     </td>
                 </tr>

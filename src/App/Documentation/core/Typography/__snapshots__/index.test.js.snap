@@ -9,18 +9,17 @@ exports[`Core: Typography Abbreviations renders 1`] = `
   </h2>
   <p>
     Stylized implementation of HTML’s 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;abbr&gt;
-    </PrismCode>
+    <CodeTags
+      code="<abbr>"
+      type="primary"
+    />
      element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.
   </p>
   <p>
     Add 
-    <Property
-      value=".initialism"
+    <CodeTags
+      code=".initialism"
+      type="secondary"
     />
      to an abbreviation for a slightly smaller font-size.
   </p>
@@ -96,15 +95,14 @@ exports[`Core: Typography Blockquotes renders 1`] = `
   </h2>
   <p>
     For quoting blocks of content from another source within your document. Wrap 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;blockquote&gt;
-    </PrismCode>
+    <CodeTags
+      code="<blockquote>"
+      type="primary"
+    />
      or 
-    <Property
-      value=".blockquote"
+    <CodeTags
+      code=".blockquote"
+      type="secondary"
     />
      around any HTML as the quote.
   </p>
@@ -131,19 +129,15 @@ exports[`Core: Typography Blockquotes renders 2`] = `
   </h3>
   <p>
     Add a 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;footer&gt;
-    </PrismCode>
+    <CodeTags
+      code="<footer>"
+      type="primary"
+    />
      for identifying the source. Wrap the name of the source work in 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;cite&gt;
-    </PrismCode>
+    <CodeTags
+      code="<cite>"
+      type="primary"
+    />
     .
   </p>
   <ComponentPreview
@@ -225,12 +219,14 @@ exports[`Core: Typography Headings renders 1`] = `
   </ComponentPreview>
   <p>
     The classes 
-    <Property
-      value=".h1"
+    <CodeTags
+      code=".h1"
+      type="secondary"
     />
      through 
-    <Property
-      value=".h6"
+    <CodeTags
+      code=".h6"
+      type="secondary"
     />
      are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.
   </p>
@@ -282,8 +278,9 @@ exports[`Core: Typography HeroTitle renders 1`] = `
   </h2>
   <p>
     The class 
-    <Property
-      value=".hero"
+    <CodeTags
+      code=".hero"
+      type="secondary"
     />
      can be used to achieve the big and bold hero title styling.
   </p>
@@ -376,58 +373,48 @@ exports[`Core: Typography Inline renders 1`] = `
   </ComponentPreview>
   <p>
     The 
-    <Property
-      value=".mark"
+    <CodeTags
+      code=".mark"
+      type="secondary"
     />
      and 
-    <Property
-      value=".small"
+    <CodeTags
+      code=".small"
+      type="secondary"
     />
      classes are also available to apply the same styles as 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;mark&gt;
-    </PrismCode>
+    <CodeTags
+      code="<mark>"
+      type="primary"
+    />
      and 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;small&gt;
-    </PrismCode>
+    <CodeTags
+      code="<small>"
+      type="primary"
+    />
      while avoiding any unwanted semantic implications that the tags would bring.
   </p>
   <p>
     While not shown above, feel free to use 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;b&gt;
-    </PrismCode>
+    <CodeTags
+      code="<b>"
+      type="primary"
+    />
      and 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;i&gt;
-    </PrismCode>
+    <CodeTags
+      code="<i>"
+      type="primary"
+    />
      in HTML5. 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;b&gt;
-    </PrismCode>
+    <CodeTags
+      code="<b>"
+      type="primary"
+    />
      is meant to highlight words or phrases without conveying additional importance while 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;i&gt;
-    </PrismCode>
+    <CodeTags
+      code="<i>"
+      type="primary"
+    />
      is mostly for voice, technical terms, etc.
   </p>
 </Fragment>
@@ -442,8 +429,9 @@ exports[`Core: Typography Lead renders 1`] = `
   </h2>
   <p>
     Make a paragraph stand out by using 
-    <Property
-      value=".lead"
+    <CodeTags
+      code=".lead"
+      type="secondary"
     />
     .
   </p>

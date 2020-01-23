@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 
 import ActionListComponent from "@components/ActionList";
-import { ComponentPreview, DocContainer, Property } from "@docutils";
+import { ComponentPreview, DocContainer } from "@docutils";
+import CodeTags from "@components/CodeTags";
 
 const { actionList } = window.dg;
 const items = [
@@ -27,7 +28,7 @@ const BasicList = () => (
     <>
         <h2 id="basic-list">Basic list</h2>
         <p>
-            Add <Property value=".list" /> to a list to display the basic list. Our lists do not use bullet points.
+            Add <CodeTags type="secondary" code=".list" /> to a list to display the basic list. Our lists do not use bullet points.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="list">
@@ -60,7 +61,7 @@ const InlineList = () => (
     <>
         <h2 id="inline-list">Inline list</h2>
         <p>
-            Use <Property value=".list-inline" /> on a list to make all items appear on the same line.
+            Use <CodeTags type="secondary" code=".list-inline" /> on a list to make all items appear on the same line.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="list list-inline">
@@ -76,7 +77,7 @@ const BulletList = () => (
     <>
         <h2 id="bullet-list">Bullet list</h2>
         <p>
-            Add <Property value=".list-bullet" /> on a list to make it a bullet list.
+            Add <CodeTags type="secondary" code=".list-bullet" /> on a list to make it a bullet list.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="list list-bullet">
@@ -92,7 +93,7 @@ const DescriptionList = () => (
     <>
         <h2 id="description-list">Description list</h2>
         <p>
-            The description list lets you provide each item with a more specific description of each item. Add <Property value=".description-list" /> to your dl.
+            The description list lets you provide each item with a more specific description of each item. Add <CodeTags type="secondary" code=".description-list" /> to your dl.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <dl className="description-list">{"\n"}
@@ -111,7 +112,7 @@ const SettingsList = () => (
     <>
         <h2 id="settings-list">Settings list</h2>
         <p>
-            Use <Property value=".settings-list" /> to visualize different settings in your web application.
+            Use <CodeTags type="secondary" code=".settings-list" /> to visualize different settings in your web application.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="settings-list">
@@ -136,7 +137,7 @@ const ItemList = () => (
     <>
         <h2 id="item-list">Item list </h2>
         <p>
-            <Property value=".item-list"/>s is a good way to offer more extensive information about each item. Each item has their own box which seperates the items more clearly than our other options.
+            <CodeTags type="secondary" code=".item-list"/>s is a good way to offer more extensive information about each item. Each item has their own box which seperates the items more clearly than our other options.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="item-list">
@@ -264,7 +265,7 @@ const HoverItemList = () => (
     <>
         <h2 id="hover-item-list">Hover item list </h2>
         <p>
-            Include <Property value=".item-list-hover" /> to give your items a hover effect. You can use this on any variation of <Property value=".item-list" />.
+            Include <CodeTags type="secondary" code=".item-list-hover" /> to give your items a hover effect. You can use this on any variation of <CodeTags type="secondary" code=".item-list" />.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="item-list item-list-hover">
@@ -289,7 +290,7 @@ const StripedItemList = () => (
     <>
         <h2 id="item-list-striped">Striped item list</h2>
         <p>
-            If you want more seperation between each item you can use <Property value=".item-list-striped" />.
+            If you want more seperation between each item you can use <CodeTags type="secondary" code=".item-list-striped" />.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="item-list item-list-striped">

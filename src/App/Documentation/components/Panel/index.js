@@ -1,7 +1,8 @@
 import React from "react";
 
-import { ComponentPreview, DocContainer, Property } from "@docutils";
+import { ComponentPreview, DocContainer } from "@docutils";
 import PanelComponent from "@components/Panel";
+import CodeTags from "@components/CodeTags";
 
 const bodyContent = [
     "Your main panel content is put here.",
@@ -77,7 +78,7 @@ const PanelHeaders = () => (
     <>
         <h2 id="panel-headers">Panel headers</h2>
         <p>
-            You can pick between two different panel headers, brand color with white text and white with green text. add <Property value=".panel-default" /> or <Property value=".panel-brand" /> to
+            You can pick between two different panel headers, brand color with white text and white with green text. add <CodeTags type="secondary" code=".panel-default" /> or <CodeTags type="secondary" code=".panel-brand" /> to
             the header to use one of them.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
@@ -91,8 +92,8 @@ const PanelTable = () => (
     <>
         <h2 id="panel-with-table">Displaying a full width table</h2>
         <p>
-            To display a full width table in a panel use <Property value=".panel-table" /> on a div wrapping the table.
-            Put <Property value=".panel-table" /> as a direct child of <Property value=".panel" />. Tables put in a panel are given a
+            To display a full width table in a panel use <CodeTags type="secondary" code=".panel-table" /> on a div wrapping the table.
+            Put <CodeTags type="secondary" code=".panel-table" /> as a direct child of <CodeTags type="secondary" code=".panel" />. Tables put in a panel are given a
             border bottom to seperate it from the following elements.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>

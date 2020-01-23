@@ -410,8 +410,9 @@ exports[`Dashboard: Charts CustomColors renders 1`] = `
   </h2>
   <p>
     Except for the three first colors, the rest of the colors are customizable. Call 
-    <Property
-      value="dg.chart"
+    <CodeTags
+      code="dg.chart"
+      type="secondary"
     />
      with a last optional argument consisting of a list of RGB color codes.
   </p>
@@ -1126,25 +1127,22 @@ exports[`Dashboard: Charts renders 1`] = `
   </p>
   <ul>
     <li>
-      <code
-        className="token string"
-      >
-        "line"
-      </code>
+      <CodeTags
+        code="\\"line\\""
+        type="secondary"
+      />
     </li>
     <li>
-      <code
-        className="token string"
-      >
-        "bar"/"horizontalBar"
-      </code>
+      <CodeTags
+        code="\\"bar\\"/\\"horizontalBar\\""
+        type="secondary"
+      />
     </li>
     <li>
-      <code
-        className="token string"
-      >
-        "pie"/"doughnut"
-      </code>
+      <CodeTags
+        code="\\"pie\\"/\\"doughnut\\""
+        type="secondary"
+      />
     </li>
   </ul>
   <LineChart />

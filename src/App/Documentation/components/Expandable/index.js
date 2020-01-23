@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 
-import { ComponentPreview, DocContainer, Property, JavascriptDocs } from "@docutils";
+import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import ExpandableComponent from "@components/Expandable";
+import CodeTags from "@components/CodeTags";
 
 const { expandable } = window.dg;
 
@@ -30,8 +31,8 @@ const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
         <p>
-            The expandable component shows only what is contained in the <Property value=".expandable-header" /> when it is
-            closed. <Property value=".expandable-content" /> will be visible in its open state.
+            The expandable component shows only what is contained in the <CodeTags type="secondary" code=".expandable-header" /> when it is
+            closed. <CodeTags type="secondary" code=".expandable-content" /> will be visible in its open state.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ExpandableComponent items={items} />
@@ -43,7 +44,7 @@ const ExpandableGroup = () => (
     <>
         <h2 id="expandable-group">Expandable Group</h2>
         <p>
-            If you use a wrapper with <Property value=".expandable-group"/> then only one expandable can be open at the
+            If you use a wrapper with <CodeTags type="secondary" code=".expandable-group"/> then only one expandable can be open at the
             same time.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>

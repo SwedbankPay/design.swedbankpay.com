@@ -1,16 +1,16 @@
 import React from "react";
 
-import { ComponentPreview, DocContainer, Property, Attribute } from "@docutils";
-import PrismCode from "react-prism";
+import { ComponentPreview, DocContainer } from "@docutils";
 import InputGroupComponent from "@components/InputGroup";
+import CodeTags from "@components/CodeTags";
 
 const BasicExample = () => (
     <>
         <h2 id="basic-example">Basic example</h2>
         <p>
-            Add a <PrismCode className="language-html">{"<span>"}</PrismCode> with class <Property value=".input-group-addon"/> to get a gray box on the left,
-            right or both sides of an <PrismCode className="language-html">{"<input>"}</PrismCode> element. The position of
-            your <Property value=".input-group-addon"/> depends on if you place it before or after the <PrismCode className="language-html">{"<input"}</PrismCode> element.
+            Add a <CodeTags type="primary" code={"<span>"} /> with class <CodeTags type="secondary" code=".input-group-addon"/> to get a gray box on the left,
+            right or both sides of an <CodeTags type="primary" code={"<input>"} /> element. The position of
+            your <CodeTags type="secondary" code=".input-group-addon"/> depends on if you place it before or after the <CodeTags type="primary" code={"<input"} /> element.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure >
             <InputGroupComponent
@@ -78,7 +78,7 @@ const ButtonAddons = () => (
     <>
         <h2 id="button-addons">Button addons</h2>
         <p>
-            If you want <PrismCode className="language-html">{"<button>"}</PrismCode>s included with your input elements you can just add a <PrismCode className="language-html">{"<button>"}</PrismCode> inside
+            If you want <CodeTags type="primary" code={"<button>"} />s included with your input elements you can just add a <CodeTags type="primary" code={"<button>"} /> inside
             a input-group like you would anywhere else.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
@@ -105,7 +105,7 @@ const WithSelect = () => (
     <>
         <h2 id="with-select">With select</h2>
         <p>
-            Inserting text next to a <PrismCode className="language-html">{"<select>"}</PrismCode> works just like any other input element.
+            Inserting text next to a <CodeTags type="primary" code={"<select>"} /> works just like any other input element.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <InputGroupComponent
@@ -137,7 +137,7 @@ const ValidationStates = () => (
     <>
         <h2 id="validation-states">Validation states</h2>
         <p>
-            You can also visualize validation on your input-groups. Just add <Property value=".has-success" /> or <Property value=".has-error" /> with a <Property value=".input-group" />.
+            You can also visualize validation on your input-groups. Just add <CodeTags type="secondary" code=".has-success" /> or <CodeTags type="secondary" code=".has-error" /> with a <CodeTags type="secondary" code=".input-group" />.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <InputGroupComponent
@@ -162,8 +162,8 @@ const Disabled = () => (
     <>
         <h2 id="disabled">Disabled</h2>
         <p>
-            Just like for forms you can add <Attribute name="disabled" /> to an input element to disable it.
-            If you are going to disable an element in a <Property value=".input-group" /> make sure to also add the <Attribute name="disabled"/> attribute to the buttons.
+            Just like for forms you can add <CodeTags type="secondary" code="disabled" /> to an input element to disable it.
+            If you are going to disable an element in a <CodeTags type="secondary" code=".input-group" /> make sure to also add the <CodeTags type="secondary" code="disabled"/> attribute to the buttons.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <InputGroupComponent
@@ -193,8 +193,8 @@ const Disabled = () => (
 const InputGroup = () => (
     <DocContainer docToc>
         <p className="lead">
-            You can include additional information to specific input elements by adding <PrismCode className="language-html">{"<span>"}</PrismCode>s
-            or <PrismCode className="language-html">{"<button>"}</PrismCode>s in a <Property value=".input-group" />.
+            You can include additional information to specific input elements by adding <CodeTags type="primary" code={"<span>"} />s
+            or <CodeTags type="primary" code={"<button>"} />s in a <CodeTags type="secondary" code=".input-group" />.
         </p>
         <BasicExample />
         <ButtonAddons />

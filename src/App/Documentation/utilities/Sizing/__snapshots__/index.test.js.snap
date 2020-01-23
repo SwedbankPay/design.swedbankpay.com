@@ -9,24 +9,29 @@ exports[`Utilities: Sizing renders 1`] = `
   </p>
   <p>
     Width and height utilities are generated with support for values; 
-    <Property
-      value="25%"
+    <CodeTags
+      code="25%"
+      type="secondary"
     />
     , 
-    <Property
-      value="50%"
+    <CodeTags
+      code="50%"
+      type="secondary"
     />
     , 
-    <Property
-      value="75%"
+    <CodeTags
+      code="75%"
+      type="secondary"
     />
     , 
-    <Property
-      value="100%"
+    <CodeTags
+      code="100%"
+      type="secondary"
     />
     , and 
-    <Property
-      value="auto"
+    <CodeTags
+      code="auto"
+      type="secondary"
     />
     .
   </p>
@@ -128,12 +133,14 @@ exports[`Utilities: Sizing renders 1`] = `
   </ComponentPreview>
   <p>
     You can also use 
-    <Property
-      value="max-width: 100%;"
+    <CodeTags
+      code="max-width: 100%;"
+      type="secondary"
     />
      and 
-    <Property
-      value="max-height: 100%;"
+    <CodeTags
+      code="max-height: 100%;"
+      type="secondary"
     />
      utilities as needed.
   </p>

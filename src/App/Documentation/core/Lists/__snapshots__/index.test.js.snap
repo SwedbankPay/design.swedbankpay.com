@@ -9,8 +9,9 @@ exports[`Documentation: Lists BasicList renders 1`] = `
   </h2>
   <p>
     Add 
-    <Property
-      value=".list"
+    <CodeTags
+      code=".list"
+      type="secondary"
     />
      to a list to display the basic list. Our lists do not use bullet points.
   </p>
@@ -86,8 +87,9 @@ exports[`Documentation: Lists BulletList renders 1`] = `
   </h2>
   <p>
     Add 
-    <Property
-      value=".list-bullet"
+    <CodeTags
+      code=".list-bullet"
+      type="secondary"
     />
      on a list to make it a bullet list.
   </p>
@@ -122,8 +124,9 @@ exports[`Documentation: Lists DescriptionList renders 1`] = `
   </h2>
   <p>
     The description list lets you provide each item with a more specific description of each item. Add 
-    <Property
-      value=".description-list"
+    <CodeTags
+      code=".description-list"
+      type="secondary"
     />
      to your dl.
   </p>
@@ -175,12 +178,14 @@ exports[`Documentation: Lists HoverItemList renders 1`] = `
   </h2>
   <p>
     Include 
-    <Property
-      value=".item-list-hover"
+    <CodeTags
+      code=".item-list-hover"
+      type="secondary"
     />
      to give your items a hover effect. You can use this on any variation of 
-    <Property
-      value=".item-list"
+    <CodeTags
+      code=".item-list"
+      type="secondary"
     />
     .
   </p>
@@ -254,8 +259,9 @@ exports[`Documentation: Lists InlineList renders 1`] = `
   </h2>
   <p>
     Use 
-    <Property
-      value=".list-inline"
+    <CodeTags
+      code=".list-inline"
+      type="secondary"
     />
      on a list to make all items appear on the same line.
   </p>
@@ -289,8 +295,9 @@ exports[`Documentation: Lists ItemList renders 1`] = `
     Item list 
   </h2>
   <p>
-    <Property
-      value=".item-list"
+    <CodeTags
+      code=".item-list"
+      type="secondary"
     />
     s is a good way to offer more extensive information about each item. Each item has their own box which seperates the items more clearly than our other options.
   </p>
@@ -559,8 +566,9 @@ exports[`Documentation: Lists SettingsList renders 1`] = `
   </h2>
   <p>
     Use 
-    <Property
-      value=".settings-list"
+    <CodeTags
+      code=".settings-list"
+      type="secondary"
     />
      to visualize different settings in your web application.
   </p>
@@ -622,8 +630,9 @@ exports[`Documentation: Lists StripedItemList prevents default on anchors 1`] = 
   </h2>
   <p>
     If you want more seperation between each item you can use 
-    <Property
-      value=".item-list-striped"
+    <CodeTags
+      code=".item-list-striped"
+      type="secondary"
     />
     .
   </p>
@@ -747,8 +756,9 @@ exports[`Documentation: Lists StripedItemList renders 1`] = `
   </h2>
   <p>
     If you want more seperation between each item you can use 
-    <Property
-      value=".item-list-striped"
+    <CodeTags
+      code=".item-list-striped"
+      type="secondary"
     />
     .
   </p>

@@ -25,12 +25,10 @@ exports[`Core: Iconography Flags renders 1`] = `
       ISO 3166-1-alpha-2 code
     </a>
      of a country) to an empty 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;i&gt;
-    </PrismCode>
+    <CodeTags
+      code="<i>"
+      type="primary"
+    />
     .
   </p>
   <ComponentPreview

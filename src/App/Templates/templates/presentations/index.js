@@ -1,8 +1,9 @@
 import React from "react";
 
-import { DocContainer, Property } from "@docutils";
+import { DocContainer } from "@docutils";
 import Button from "@components/Button";
 import ActionLinkComponent from "@components/ActionLink";
+import CodeTags from "@components/CodeTags";
 
 const basename = process.env.basename;
 
@@ -23,7 +24,7 @@ const Download = () => (
     <>
         <h2 id="download">Download</h2>
         <div className="slab slab-default slab-elevated">
-            <p>The presentation template is provided as a <Property value=".potx" />-file.</p>
+            <p>The presentation template is provided as a <CodeTags type="secondary" code=".potx" />-file.</p>
             <Button type="executive" icon="file_download" href={`${basename}templates/SwedbankPay_ppt_template.potx`} label="Presentation template" />
         </div>
         <div className="slab slab-default slab-arrow">

@@ -1,12 +1,12 @@
 import React from "react";
-import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer, Property } from "@docutils";
+import { ComponentPreview, DocContainer } from "@docutils";
+import CodeTags from "@components/CodeTags";
 
 const CreatingYourComponent = () => (
     <>
         <h2 id="creating-your-component">Creating your component</h2>
-        <p>Create a new file under <Property value="./src/App/components/[MyExampleComponent]/" /> for your component, name it <Property value="index.js" />:</p>
+        <p>Create a new file under <CodeTags type="secondary" code="./src/App/components/[MyExampleComponent]/" /> for your component, name it <CodeTags type="secondary" code="index.js" />:</p>
         <ComponentPreview language="javascript" codeFigure>
             {`
 //example component
@@ -33,7 +33,7 @@ export default MyExampleComponent;
 const CreateADocumentationPage = () => (
     <>
         <h2 id="create-a-documentation-page">Create a documentation page</h2>
-        <p>Create a new file under <Property value="./src/App/Documentation/Components/[MyExampleDocumentationComponent]/" /> for your component, call it <Property value="index.js" />:</p>
+        <p>Create a new file under <CodeTags type="secondary" code="./src/App/Documentation/Components/[MyExampleDocumentationComponent]/" /> for your component, call it <CodeTags type="secondary" code="index.js" />:</p>
         <ComponentPreview language="javascript" codeFigure>
             {`
 //example documentation component
@@ -52,15 +52,18 @@ const MyExampleDocumentationComponent = () => (
 export default MyExampleDocumentationComponent;
             `}
         </ComponentPreview>
-        <p>Use the custom <Property value="ComponentPreview" /> component to preview your component. It has several props, for this example we are going to be using <Property value="language" />, <Property value="showCasePanel" /> and <Property value="codeFigure" />.</p>
-        <p>We are also using the <Property value="DocContainer" /> component to sentralize the layout of the documentation, pass the <Property value="docToc" /> prop to add a dynamic table of contents to the documentation of your component. This component scans the provided component for <PrismCode className="language-html">{"<h2>"}</PrismCode>-tags and creates anchors for easier navigation. Just remember to add an id to the <PrismCode className="language-html">{"<h2>"}</PrismCode>-tag.</p>
+        <p>Use the custom <CodeTags type="secondary" code="ComponentPreview" /> component to preview your component. It has several props, for this example we are going to be using <CodeTags type="secondary" code="language" />, <CodeTags type="secondary" code="showCasePanel" /> and <CodeTags type="secondary" code="codeFigure" />.</p>
+        <p>We are also using the <CodeTags type="secondary" code="DocContainer" /> component to sentralize the layout of the documentation, pass
+        the <CodeTags type="secondary" code="docToc" /> prop to add a dynamic table of contents to the documentation of your component.
+        This component scans the provided component for <CodeTags type="primary" code={"<h2>"} />-tags and creates anchors for easier navigation. Just remember to add an id to
+        the <CodeTags type="primary" code={"<h2>"} />-tag.</p>
     </>
 );
 
 const AddComponentToRoutes = () => (
     <>
         <h2 id="add-component-to-routes">Add component to routes</h2>
-        <p>In <Property value="./src/App/routes/docs.js" /> under the components object add the following:</p>
+        <p>In <CodeTags type="secondary" code="./src/App/routes/docs.js" /> under the components object add the following:</p>
         <ComponentPreview language="javascript" codeFigure>
             {`
 /**
@@ -85,7 +88,7 @@ const AddComponentToRoutes = () => (
 },
             `}
         </ComponentPreview>
-        <p>You will now be able to go to the route you provided to preview your component. Run <Property value="npm start" /> if you haven{"'"}t already done so, and navigate to <Property value="localhost:3000/docs/components/my-example-documentation-component" /> to see your component in action.</p>
+        <p>You will now be able to go to the route you provided to preview your component. Run <CodeTags type="secondary" code="npm start" /> if you haven{"'"}t already done so, and navigate to <CodeTags type="secondary" code="localhost:3000/docs/components/my-example-documentation-component" /> to see your component in action.</p>
     </>
 );
 
@@ -94,7 +97,7 @@ const AddingStyles = () => {
     const CreatingVariables = () => (
         <>
             <h3>Creating variables</h3>
-            <p>To add custom variables to your component modify <Property value="./src/less/_variables.less" />, and add a section for your component. Add it alphabetically and update the table of contents.</p>
+            <p>To add custom variables to your component modify <CodeTags type="secondary" code="./src/less/_variables.less" />, and add a section for your component. Add it alphabetically and update the table of contents.</p>
             <p>Adding a section should look like this:</p>
             <ComponentPreview language="css" codeFigure>
                 {`
@@ -113,10 +116,10 @@ const AddingStyles = () => {
     return (
         <div>
             <h2 id="adding-styles">Adding styles</h2>
-            <p>To add styling for your component create a new file in <Property value="./src/less/components/" />, name it <Property value="my-example-component.less" />.</p>
+            <p>To add styling for your component create a new file in <CodeTags type="secondary" code="./src/less/components/" />, name it <CodeTags type="secondary" code="my-example-component.less" />.</p>
             <CreatingVariables />
-            <p>The style for <Property value="MyExampleComponent" /> should now be included properly, and you should see changes immediately while running dev.</p>
-            <p>When writing styles for your component, try to use <Property value="rem" /> (<Property value="1rem" /> = ~<Property value="16px" />) and the predefined variables (only if it makes sense of course) as much as possible. And follow the linting rules set by <Property value="./.stylelintrc" />.</p>
+            <p>The style for <CodeTags type="secondary" code="MyExampleComponent" /> should now be included properly, and you should see changes immediately while running dev.</p>
+            <p>When writing styles for your component, try to use <CodeTags type="secondary" code="rem" /> (<CodeTags type="secondary" code="1rem" /> = ~<CodeTags type="secondary" code="16px" />) and the predefined variables (only if it makes sense of course) as much as possible. And follow the linting rules set by <CodeTags type="secondary" code="./.stylelintrc" />.</p>
         </div>
     );
 };
@@ -125,7 +128,7 @@ const AddingJavaScript = () => {
     const CreateAScriptFile = () => (
         <div>
             <h3>Create a script file for your component</h3>
-            <p>Create a new file under <Property value="./src/scripts/main/[MyExampleComponent]/" /> for your component, name it <Property value="index.js" />:</p>
+            <p>Create a new file under <CodeTags type="secondary" code="./src/scripts/main/[MyExampleComponent]/" /> for your component, name it <CodeTags type="secondary" code="index.js" />:</p>
             <ComponentPreview language="javascript" codeFigure>
                 {`
 const init = () => {
@@ -137,14 +140,14 @@ const MyExampleComponent = {
 export default MyExampleComponent;
                 `}
             </ComponentPreview>
-            <p>Note: All essential functionality for your component needs to be called within the <Property value="init" /> method.</p>
+            <p>Note: All essential functionality for your component needs to be called within the <CodeTags type="secondary" code="init" /> method.</p>
         </div>
     );
 
     const AddScriptToDG = () => (
         <div>
             <h3>Add your components script to scripts</h3>
-            <p>Open <Property value="./src/scripts/main/index.js" /> and add your component:</p>
+            <p>Open <CodeTags type="secondary" code="./src/scripts/main/index.js" /> and add your component:</p>
             <ComponentPreview language="javascript" codeFigure>
                 {`
 ...
@@ -165,8 +168,8 @@ export { ... MyExampleComponent, ... }
     const InitializingTheScript = () => (
         <div>
             <h2>Initializing the script in the documentation</h2>
-            <p>Considering the documentation is built in react your documentation component will load after <Property value="scripts" /> runs it{"'"}s <Property value="initAll" /> method, you will need to run your component{"'"}s init method when the component actually renders.</p>
-            <p>You can do this by slightly modifying the <Property value="MyExampleDocumentationComponent" />:</p>
+            <p>Considering the documentation is built in react your documentation component will load after <CodeTags type="secondary" code="scripts" /> runs it{"'"}s <CodeTags type="secondary" code="initAll" /> method, you will need to run your component{"'"}s init method when the component actually renders.</p>
+            <p>You can do this by slightly modifying the <CodeTags type="secondary" code="MyExampleDocumentationComponent" />:</p>
             <ComponentPreview language="javascript" codeFigure>
                 {`
 //example documentation component
@@ -202,7 +205,7 @@ class MyExampleDocumentationComponent extends Component {
     return (
         <div>
             <h2 id="adding-javascript">Adding javascript</h2>
-            <p>If your component needs javascript to run, you will need to add the javascript to the <Property value="scripts" /></p>
+            <p>If your component needs javascript to run, you will need to add the javascript to the <CodeTags type="secondary" code="scripts" /></p>
             <CreateAScriptFile />
             <AddScriptToDG />
             <InitializingTheScript />

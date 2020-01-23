@@ -1,8 +1,8 @@
 import React from "react";
-import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer, Property } from "@docutils";
+import { ComponentPreview, DocContainer } from "@docutils";
 import StepsComponent from "@components/Steps";
+import CodeTags from "@components/CodeTags";
 
 const BasicSteps = () => {
     const steps = [
@@ -61,7 +61,7 @@ const VerticalSteps = () => {
         <>
             <h2 id="vertical-steps">Vertical steps</h2>
             <p>
-                If you wish to use steps vertically you can add <Property value=".steps-vertical" /> to the <PrismCode className="language-html">{"<div>"}</PrismCode> element.
+                If you wish to use steps vertically you can add <CodeTags type="secondary" code=".steps-vertical" /> to the <CodeTags type="primary" code={"<div>"} /> element.
             </p>
             <ComponentPreview language="html" showCasePanel codeFigure>
                 <StepsComponent steps={steps} vertical />
@@ -102,7 +102,7 @@ const ClickableSteps = () => {
         <>
             <h2 id="clickable-steps">Clickable steps</h2>
             <p>
-                Add an anchor element (<PrismCode className="language-html">{"<a>"}</PrismCode>) to the list item element ( <PrismCode className="language-html">{"<li>"}</PrismCode>).
+                Add an anchor element (<CodeTags type="primary" code={"<a>"} />) to the list item element ( <CodeTags type="primary" code={"<li>"} />).
                 Ensure that all content within the list element is also inside the anchor element.
             </p>
             <ComponentPreview language="html" showCasePanel codeFigure>
