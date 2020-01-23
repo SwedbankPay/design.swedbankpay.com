@@ -50,18 +50,18 @@ install:
 before_build:
   - ps: ./build/prepare-build.ps1
 
-# build_script:
-  # - cmd: npm run build:prod -- --env.release=%release% --env.basename=%basename% --env.semver=%GitVersion_FullSemVer% --env.info_version=%GitVersion_InformationalVersion%
+build_script:
+  - cmd: npm run build:prod -- --env.release=%release% --env.basename=%basename% --env.semver=%GitVersion_FullSemVer% --env.info_version=%GitVersion_InformationalVersion%
 
 #---------------------------------#
 #       tests configuration       #
 #---------------------------------#
 
-# test_script:
-#   - cmd: >-
-#       npm run lint
+test_script:
+  - cmd: >-
+      npm run lint
 
-#       npm run test:codecov
+      npm run test:codecov
 
 #---------------------------------#
 #     deployment configuration    #
