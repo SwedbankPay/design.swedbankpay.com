@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { DocContainer } from "@docutils";
+import { DocContainer, ComponentPreview } from "@docutils";
 
 import CustomersOverview from "./CustomersOverview";
 import CustomersDetailed from "./CustomersDetailed";
@@ -105,11 +105,14 @@ class Customers extends Component {
 
         return (
             <DocContainer>
-                <CustomersOverview
-                    setCustomerIndex={customerIndex => this.setCustomerIndex(customerIndex)}
-                    customersList={customersList}
-                    statusText={statusText}
-                />
+                <h2 id="customers-overview">Customers overview</h2>
+                <ComponentPreview language="html" showCasePanel codeFigure>
+                    <CustomersOverview
+                        setCustomerIndex={customerIndex => this.setCustomerIndex(customerIndex)}
+                        customersList={customersList}
+                        statusText={statusText}
+                    />
+                </ComponentPreview>
                 <CustomersDetailed
                     customer={customersList[this.state.customerIndex]}
                     customersDetailedTabs={customersDetailedTabs}

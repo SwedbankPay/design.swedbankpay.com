@@ -341,6 +341,11 @@ module.exports = [
                 title: "Customers",
                 path: "/docs/examples/customers",
                 componentPath: "examples/customers"
+            },
+            {
+                title: "Sidebar",
+                path: "/docs/examples/sidebar",
+                componentPath: "examples/sidebar"
             }
         ]
     }

@@ -50,6 +50,30 @@ const _setActiveStatus = (element, sidebar, selector) => {
 
 };
 
+const setActiveState = (group, subGroup, leaf) => {
+    const sidebar = document.querySelector(SELECTORS.SIDEBAR);
+
+    const activeGroup = sidebar.querySelectorAll(SELECTORS.NAVGROUP)[group];
+
+    _setActiveStatus(activeGroup, sidebar, SELECTORS.NAVGROUP);
+
+    let active = activeGroup;
+
+    if (subGroup !== null) {
+
+        const activeSubGroup = activeGroup.querySelectorAll(SELECTORS.NAVSUBGROUP)[subGroup];
+
+        _setActiveStatus(activeSubGroup, sidebar, SELECTORS.NAVSUBGROUP);
+
+        active = activeSubGroup;
+    }
+
+    active = active.querySelectorAll(SELECTORS.NAVLEAF)[leaf];
+
+    _setActiveStatus(active, sidebar, SELECTORS.NAVLEAF);
+
+};
+
 const init = () => {
     const sidebar = document.querySelector(SELECTORS.SIDEBAR);
 
@@ -66,5 +90,6 @@ const init = () => {
 };
 
 export default {
-    init
+    init,
+    setActiveState
 };

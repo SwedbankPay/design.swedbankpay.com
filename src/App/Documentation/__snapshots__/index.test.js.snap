@@ -332,6 +332,11 @@ exports[`Documentation: index renders 1`] = `
                   "path": "/docs/examples/customers",
                   "title": "Customers",
                 },
+                Object {
+                  "componentPath": "examples/sidebar",
+                  "path": "/docs/examples/sidebar",
+                  "title": "Sidebar",
+                },
               ],
               "title": "Examples",
             },
@@ -692,6 +697,11 @@ exports[`Documentation: index renders 1`] = `
                   "componentPath": "examples/customers",
                   "path": "/docs/examples/customers",
                   "title": "Customers",
+                },
+                Object {
+                  "componentPath": "examples/sidebar",
+                  "path": "/docs/examples/sidebar",
+                  "title": "Sidebar",
                 },
               ]
             }
