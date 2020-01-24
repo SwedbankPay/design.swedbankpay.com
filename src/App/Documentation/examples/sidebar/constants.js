@@ -5,11 +5,39 @@ export const SidebarNavList = [
         subList: [
             {
                 title: "Introduction",
-                page: "IntroPage"
+                page: "IntroPage",
+                pagePosition: "sidebar-intro"
             },
             {
                 title: "FAQ",
-                page: "IntroFAQ"
+                page: "IntroPage",
+                pagePosition: "sidebar-intro-faq"
+            }
+        ]
+    },
+    {
+        title: "Lorem Ipsum",
+        lastParent: true,
+        subList: [
+            {
+                title: "What",
+                page: "LoremIpsum",
+                pagePosition: "sidebar-lorem-what"
+            },
+            {
+                title: "Why",
+                page: "LoremIpsum",
+                pagePosition: "sidebar-lorem-why"
+            },
+            {
+                title: "Where",
+                page: "LoremIpsum",
+                pagePosition: "sidebar-lorem-where"
+            },
+            {
+                title: "Where more",
+                page: "LoremIpsum",
+                pagePosition: "sidebar-lorem-where2"
             }
         ]
     },
