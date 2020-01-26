@@ -70,19 +70,9 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Iconography",
                 },
                 Object {
-                  "componentPath": "core/Lists",
-                  "path": "/docs/core/lists",
-                  "title": "Lists",
-                },
-                Object {
                   "componentPath": "core/Page-layout",
                   "path": "/docs/core/page-layout",
                   "title": "Page layout",
-                },
-                Object {
-                  "componentPath": "core/Tables",
-                  "path": "/docs/core/tables",
-                  "title": "Tables",
                 },
                 Object {
                   "componentPath": "core/Typography",
@@ -132,6 +122,11 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Card",
                 },
                 Object {
+                  "componentPath": "components/Charts",
+                  "path": "/docs/components/charts",
+                  "title": "Charts",
+                },
+                Object {
                   "componentPath": "components/CodeTags",
                   "path": "/docs/components/code-tags",
                   "title": "Code Tags",
@@ -165,6 +160,11 @@ exports[`Documentation: index renders 1`] = `
                   "componentPath": "components/InputGroup",
                   "path": "/docs/components/input-group",
                   "title": "Input Group",
+                },
+                Object {
+                  "componentPath": "components/Lists",
+                  "path": "/docs/components/lists",
+                  "title": "Lists",
                 },
                 Object {
                   "componentPath": "components/Loaders",
@@ -212,6 +212,11 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Steps",
                 },
                 Object {
+                  "componentPath": "components/Tables",
+                  "path": "/docs/components/tables",
+                  "title": "Tables",
+                },
+                Object {
                   "componentPath": "components/Tabs",
                   "path": "/docs/components/tabs",
                   "title": "Tabs",
@@ -233,23 +238,6 @@ exports[`Documentation: index renders 1`] = `
                 },
               ],
               "title": "Components",
-            },
-            Object {
-              "path": "/docs/dashboard",
-              "redirect": "/docs/dashboard/introduction",
-              "routes": Array [
-                Object {
-                  "componentPath": "dashboard/Introduction",
-                  "path": "/docs/dashboard/introduction",
-                  "title": "Introduction",
-                },
-                Object {
-                  "componentPath": "dashboard/Charts",
-                  "path": "/docs/dashboard/charts",
-                  "title": "Charts",
-                },
-              ],
-              "title": "Dashboard",
             },
             Object {
               "path": "/docs/utilities",
@@ -410,19 +398,9 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Iconography",
                 },
                 Object {
-                  "componentPath": "core/Lists",
-                  "path": "/docs/core/lists",
-                  "title": "Lists",
-                },
-                Object {
                   "componentPath": "core/Page-layout",
                   "path": "/docs/core/page-layout",
                   "title": "Page layout",
-                },
-                Object {
-                  "componentPath": "core/Tables",
-                  "path": "/docs/core/tables",
-                  "title": "Tables",
                 },
                 Object {
                   "componentPath": "core/Typography",
@@ -476,6 +454,11 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Card",
                 },
                 Object {
+                  "componentPath": "components/Charts",
+                  "path": "/docs/components/charts",
+                  "title": "Charts",
+                },
+                Object {
                   "componentPath": "components/CodeTags",
                   "path": "/docs/components/code-tags",
                   "title": "Code Tags",
@@ -509,6 +492,11 @@ exports[`Documentation: index renders 1`] = `
                   "componentPath": "components/InputGroup",
                   "path": "/docs/components/input-group",
                   "title": "Input Group",
+                },
+                Object {
+                  "componentPath": "components/Lists",
+                  "path": "/docs/components/lists",
+                  "title": "Lists",
                 },
                 Object {
                   "componentPath": "components/Loaders",
@@ -556,6 +544,11 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Steps",
                 },
                 Object {
+                  "componentPath": "components/Tables",
+                  "path": "/docs/components/tables",
+                  "title": "Tables",
+                },
+                Object {
                   "componentPath": "components/Tabs",
                   "path": "/docs/components/tabs",
                   "title": "Tabs",
@@ -578,27 +571,6 @@ exports[`Documentation: index renders 1`] = `
               ]
             }
             title="Components"
-          />
-          <RenderRoutes
-            appFolder="Documentation"
-            key="renderRoutes_Dashboard"
-            path="/docs/dashboard"
-            redirect="/docs/dashboard/introduction"
-            routes={
-              Array [
-                Object {
-                  "componentPath": "dashboard/Introduction",
-                  "path": "/docs/dashboard/introduction",
-                  "title": "Introduction",
-                },
-                Object {
-                  "componentPath": "dashboard/Charts",
-                  "path": "/docs/dashboard/charts",
-                  "title": "Charts",
-                },
-              ]
-            }
-            title="Dashboard"
           />
           <RenderRoutes
             appFolder="Documentation"
