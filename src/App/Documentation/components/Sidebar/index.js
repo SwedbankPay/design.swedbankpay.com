@@ -27,7 +27,6 @@ const Overview = () => (
 );
 
 const Sidebar = () => {
-    // eslint-disable-next-line
     useEffect(() => { sidebar.init(); });
 
     return (
@@ -39,3 +38,6 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
+
+/* For testing */
+export { Overview };
