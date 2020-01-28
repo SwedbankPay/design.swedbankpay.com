@@ -10,4 +10,4 @@
   http://jedwatson.github.io/classnames
 */
 !function(){"use strict";var l={}.hasOwnProperty;function o(){for(var e=[],t=0;t<arguments.length;t++){var n=arguments[t];if(n){var a=r(n);if("string"===a||"number"===a)e.push(n);else if(Array.isArray(n)&&n.length){var c=o.apply(null,n);c&&e.push(c)}else if("object"===a)for(var i in n)l.call(n,i)&&n[i]&&e.push(i)}}return e.join(" ")}e.exports?(o.default=o,e.exports=o):"object"===r(n(472))&&n(472)?void 0===(a=function(){return o}.apply(t,[]))||(e.exports=a):window.classNames=o}()},479:function(e,t,n){e.exports=n.p+"img/swedbankpay-logo.svg?19b6f40ff24042e34940f290059f1199"},480:function(e,t,n){e.exports=n.p+"img/payex-logo.svg?467d541679b8f5b7ec3bcfdc39af22a5"}}]);
-//# sourceMappingURL=doc-route.chunk_21.js.map?ad68582a968fbb0482f3
+//# sourceMappingURL=doc-route.chunk_21.js.map?8d60b5c605563e6b8c66
