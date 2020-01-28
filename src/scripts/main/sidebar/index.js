@@ -68,7 +68,7 @@ const setActiveState = (group, subGroup, leaf) => {
         active = activeSubGroup;
     }
 
-    active = active.querySelectorAll(SELECTORS.NAVLEAF)[leaf];
+    leaf !== null && (active = active.querySelectorAll(SELECTORS.NAVLEAF)[leaf]);
 
     _setActiveStatus(active, sidebar, SELECTORS.NAVLEAF);
 
