@@ -33,7 +33,9 @@ exports[`Components: Sidebar Overview renders 1`] = `
         <div
           className="col-auto"
         >
-          <Sidebar />
+          <Sidebar
+            id="dg-sidebar"
+          />
         </div>
         <main
           className="col main-content border-left"
