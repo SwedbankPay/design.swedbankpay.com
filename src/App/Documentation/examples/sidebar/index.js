@@ -91,6 +91,32 @@ const LoremIpsum = () => (
     </>
 );
 
+const CustomersIntroduction = () => (
+    <>
+        <h2 id="customers-introduction">Introduction</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et mattis massa. Sed et gravida mi.
+            Aliquam lobortis ligula nulla, vel consequat ligula auctor et. Vivamus placerat, odio et varius efficitur,
+            neque leo condimentum mi, sed iaculis nisi arcu sit amet dui. Sed vehicula leo in purus lacinia, id auctor nulla scelerisque.
+            Sed egestas sapien non enim pharetra sodales. Quisque a erat accumsan ligula efficitur vulputate blandit sed lorem. Nullam condimentum ultricies metus,
+            et volutpat lacus tempor id. In tortor ante, interdum non convallis in, luctus non neque. Pellentesque in mauris enim.
+        </p>
+    </>
+);
+
+const CustomersAdditionalInformation = () => (
+    <>
+        <h2 id="customers-additional-information">Additional information</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et mattis massa. Sed et gravida mi.
+            Aliquam lobortis ligula nulla, vel consequat ligula auctor et. Vivamus placerat, odio et varius efficitur,
+            neque leo condimentum mi, sed iaculis nisi arcu sit amet dui. Sed vehicula leo in purus lacinia, id auctor nulla scelerisque.
+            Sed egestas sapien non enim pharetra sodales. Quisque a erat accumsan ligula efficitur vulputate blandit sed lorem. Nullam condimentum ultricies metus,
+            et volutpat lacus tempor id. In tortor ante, interdum non convallis in, luctus non neque. Pellentesque in mauris enim.
+        </p>
+    </>
+);
+
 class SidebarComponent extends Component {
     render () {
         return (
@@ -153,6 +179,57 @@ class SidebarComponent extends Component {
     }
 }
 
+const COOverview = () => (
+    <>
+        <CustomersIntroduction />
+        <h2 id="customers-overview">Customers overview</h2>
+        <CustomersOverview
+            setCustomerIndex={customerIndex => customerIndex}
+            customersList={customersList}
+            statusText={statusText}
+        />
+        <CustomersAdditionalInformation />
+    </>
+);
+
+const CDOrderHistory = () => (
+    <>
+        <CustomersIntroduction />
+        <h2 id="customers-order-history">Customers order history</h2>
+        <CustomersDetailedOrders
+            customersDetailedOrdersSteps={customersDetailedOrdersSteps}
+            customersDetailedOrders={customersDetailedOrders}
+        />
+        <CustomersAdditionalInformation />
+    </>
+);
+
+const CDInquiries = () => (
+    <>
+        <CustomersIntroduction />
+        <h2 id="customers-inquiries">Customers inquiries</h2>
+        <CustomersDetailedInquiries
+            customersDetailedLatestInquiry={customersDetailedLatestInquiry}
+            customersDetailedPreviousInquiries={customersDetailedPreviousInquiries}
+        />
+        <CustomersAdditionalInformation />
+    </>
+);
+
+const CDSummaryCharts = () => (
+    <>
+        <CustomersIntroduction />
+        <h2 id="customers-summary-charts">Customers summary charts</h2>
+        <CustomersDetailedCharts
+            customerIdName={`${customersList[0].id} ${customersList[0].firstName} ${customersList[0].lastName}`}
+            customerOrders={[...customersDetailedOrders, 1994]}
+            customerInquiries={[...customersDetailedPreviousInquiries, customersDetailedLatestInquiry]}
+            createNumArray={createNumArray}
+        />
+        <CustomersAdditionalInformation />
+    </>
+);
+
 class Sidebar extends PureComponent {
 
     constructor (props) {
@@ -163,8 +240,7 @@ class Sidebar extends PureComponent {
             activePagePosition: "",
             group: 0,
             subGroup: null,
-            leaf: 0,
-            customerIndex: 0
+            leaf: 0
         };
 
         this.setActive = this.setActive.bind(this);
@@ -196,7 +272,7 @@ class Sidebar extends PureComponent {
 
     componentDidUpdate () {
         sidebar.init("example-sidebar");
-        this.state.group !== 2 && sidebar.initScrollListener("example-sidebar", "sidebar-example-main", "h2");
+        sidebar.initScrollListener("example-sidebar", "sidebar-example-main", "h2");
         sidebar.setActiveState(this.state.group, this.state.subGroup, this.state.leaf);
 
         if (this.state.activePagePosition) {
@@ -215,30 +291,10 @@ class Sidebar extends PureComponent {
 
         const pages = {
             COSettings: <CustomersDetailedSettings />,
-            COOverview:
-            <CustomersOverview
-                setCustomerIndex={customerIndex => customerIndex}
-                customersList={customersList}
-                statusText={statusText}
-            />,
-            CDSettings: <CustomersDetailedSettings />,
-            CDOrderHistory:
-            <CustomersDetailedOrders
-                customersDetailedOrdersSteps={customersDetailedOrdersSteps}
-                customersDetailedOrders={customersDetailedOrders}
-            />,
-            CDInquiries:
-            <CustomersDetailedInquiries
-                customersDetailedLatestInquiry={customersDetailedLatestInquiry}
-                customersDetailedPreviousInquiries={customersDetailedPreviousInquiries}
-            />,
-            CDSummaryCharts:
-            <CustomersDetailedCharts
-                customerIdName={`${customersList[this.state.customerIndex].id} ${customersList[this.state.customerIndex].firstName} ${customersList[this.state.customerIndex].lastName}`}
-                customerOrders={[...customersDetailedOrders, 1994]}
-                customerInquiries={[...customersDetailedPreviousInquiries, customersDetailedLatestInquiry]}
-                createNumArray={createNumArray}
-            />,
+            COOverview: <COOverview />,
+            CDOrderHistory: <CDOrderHistory />,
+            CDInquiries: <CDInquiries />,
+            CDSummaryCharts: <CDSummaryCharts />,
             IntroPage: <IntroPage />,
             LoremIpsum: <LoremIpsum />
 

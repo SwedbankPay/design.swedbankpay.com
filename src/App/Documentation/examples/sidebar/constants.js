@@ -46,38 +46,86 @@ export const SidebarNavList = [
         lastParent: false,
         subList: [
             {
-                title: "Customers overview",
+                title: "Overview",
                 lastParent: true,
                 subList: [
                     {
-                        title: "Overview",
-                        page: "COOverview"
+                        title: "Introduction",
+                        page: "COOverview",
+                        pagePosition: "customers-introduction"
                     },
                     {
-                        title: "Settings",
-                        page: "COSettings"
+                        title: "Customers overview",
+                        page: "COOverview",
+                        pagePosition: "customers-overview"
+                    },
+                    {
+                        title: "Additonal information",
+                        page: "COOverview",
+                        pagePosition: "customers-additional-information"
                     }
                 ]
             },
             {
-                title: "Customers detailed",
+                title: "Order history",
                 lastParent: true,
                 subList: [
                     {
-                        title: "Order history",
-                        page: "CDOrderHistory"
+                        title: "Introduction",
+                        page: "CDOrderHistory",
+                        pagePosition: "customers-introduction"
                     },
                     {
-                        title: "Inquiries",
-                        page: "CDInquiries"
+                        title: "Customers order history",
+                        page: "CDOrderHistory",
+                        pagePosition: "customers-order-history"
                     },
                     {
-                        title: "Summary charts",
-                        page: "CDSummaryCharts"
+                        title: "Addtional information",
+                        page: "CDOrderHistory",
+                        pagePosition: "customers-additional-information"
+                    }
+                ]
+            },
+            {
+                title: "Inquiries",
+                lastParent: true,
+                subList: [
+                    {
+                        title: "Introduction",
+                        page: "CDInquiries",
+                        pagePosition: "customers-introduction"
                     },
                     {
-                        title: "Settings",
-                        page: "CDSettings"
+                        title: "Customers inquiries",
+                        page: "CDInquiries",
+                        pagePosition: "customers-inquiries"
+                    },
+                    {
+                        title: "Addtional information",
+                        page: "CDInquiries",
+                        pagePosition: "customers-additional-information"
+                    }
+                ]
+            },
+            {
+                title: "Summary charts",
+                lastParent: true,
+                subList: [
+                    {
+                        title: "Introduction",
+                        page: "CDSummaryCharts",
+                        pagePosition: "customers-introduction"
+                    },
+                    {
+                        title: "Customers summary charts",
+                        page: "CDSummaryCharts",
+                        pagePosition: "customers-inquiries"
+                    },
+                    {
+                        title: "Addtional information",
+                        page: "CDSummaryCharts",
+                        pagePosition: "customers-additional-information"
                     }
                 ]
             }
