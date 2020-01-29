@@ -6,12 +6,12 @@ export const SidebarNavList = [
             {
                 title: "Introduction",
                 page: "IntroPage",
-                pagePosition: "sidebar-intro"
+                pagePosition: "introduction"
             },
             {
                 title: "FAQ",
                 page: "IntroPage",
-                pagePosition: "sidebar-intro-faq"
+                pagePosition: "faq"
             }
         ]
     },
@@ -22,22 +22,22 @@ export const SidebarNavList = [
             {
                 title: "What",
                 page: "LoremIpsum",
-                pagePosition: "sidebar-lorem-what"
+                pagePosition: "what"
             },
             {
                 title: "Why",
                 page: "LoremIpsum",
-                pagePosition: "sidebar-lorem-why"
+                pagePosition: "why"
             },
             {
                 title: "Where",
                 page: "LoremIpsum",
-                pagePosition: "sidebar-lorem-where"
+                pagePosition: "where"
             },
             {
                 title: "Where more",
                 page: "LoremIpsum",
-                pagePosition: "sidebar-lorem-where2"
+                pagePosition: "where-more"
             }
         ]
     },

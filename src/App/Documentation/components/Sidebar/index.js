@@ -17,7 +17,7 @@ const Overview = () => (
                 </div>
                 <div className="row">
                     <div className="col-auto">
-                        <SidebarComponent />
+                        <SidebarComponent id="dg-sidebar" />
                     </div>
                     <main className="col main-content border-left">Main content things...</main>
                 </div>
@@ -27,7 +27,7 @@ const Overview = () => (
 );
 
 const Sidebar = () => {
-    useEffect(() => { sidebar.init(); });
+    useEffect(() => { sidebar.init("dg-sidebar"); });
 
     return (
         <DocContainer docToc>

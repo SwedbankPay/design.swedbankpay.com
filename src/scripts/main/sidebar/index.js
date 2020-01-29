@@ -8,7 +8,7 @@ const SELECTORS = {
     ACTIVE: ".active"
 };
 
-const _navGroups = _navGroups || [];
+const scrollBuffer = 20;
 
 const _closeElement = element => {
 
@@ -55,7 +55,31 @@ const setActiveState = (group, subGroup, leaf) => {
 
     const activeGroup = sidebar.querySelectorAll(SELECTORS.NAVGROUP)[group];
 
-    _setActiveStatus(activeGroup, sidebar, SELECTORS.NAVGROUP);
+    activeGroup.classList.add("active");
+
+    let active = activeGroup;
+
+    if (subGroup !== null && subGroup < activeGroup.querySelectorAll(SELECTORS.NAVSUBGROUP).length) {
+
+        const activeSubGroup = activeGroup.querySelectorAll(SELECTORS.NAVSUBGROUP)[subGroup];
+
+        activeSubGroup.classList.add("active");
+
+        active = activeSubGroup;
+    }
+
+    leaf !== null && leaf < active.querySelectorAll(SELECTORS.NAVLEAF).length && (active = active.querySelectorAll(SELECTORS.NAVLEAF)[leaf]);
+
+    active.classList.add("active");
+
+};
+
+const removeActiveState = (group, subGroup, leaf) => {
+    const sidebar = document.querySelector(SELECTORS.SIDEBAR);
+
+    const activeGroup = sidebar.querySelectorAll(SELECTORS.NAVGROUP)[group];
+
+    activeGroup.classList.remove("active");
 
     let active = activeGroup;
 
@@ -63,33 +87,80 @@ const setActiveState = (group, subGroup, leaf) => {
 
         const activeSubGroup = activeGroup.querySelectorAll(SELECTORS.NAVSUBGROUP)[subGroup];
 
-        _setActiveStatus(activeSubGroup, sidebar, SELECTORS.NAVSUBGROUP);
+        activeSubGroup.classList.remove("active");
 
         active = activeSubGroup;
     }
 
     leaf !== null && (active = active.querySelectorAll(SELECTORS.NAVLEAF)[leaf]);
 
-    _setActiveStatus(active, sidebar, SELECTORS.NAVLEAF);
+    active.classList.remove("active");
+};
+
+const _mainContentScrollListener = (id, mainContent, headers) => (
+    () => {
+        const scrollNumber = [...headers].filter(header => header.offsetTop <= mainContent.scrollTop + scrollBuffer).length - 1;
+        const sidebar = document.getElementById(id);
+        const activeLeaf = sidebar.querySelector(SELECTORS.NAVLEAF + SELECTORS.ACTIVE);
+        const leaves = activeLeaf.parentElement.querySelectorAll(SELECTORS.NAVLEAF);
+
+        if (scrollNumber === -1) {
+            _setActiveStatus(leaves[0], sidebar, SELECTORS.NAVLEAF);
+        } else {
+            _setActiveStatus(leaves[scrollNumber], sidebar, SELECTORS.NAVLEAF);
+        }
+
+        if (mainContent.scrollTop + scrollBuffer >= mainContent.scrollHeight - mainContent.clientHeight) {
+            _setActiveStatus(leaves[leaves.length - 1], sidebar, SELECTORS.NAVLEAF);
+        }
+
+    }
+);
+
+const initScrollListener = (id, mainContentId, headerType) => {
+    removeScrollListener(mainContent);
+
+    const mainContent = document.getElementById(mainContentId);
+
+    if (mainContent) {
+        const headers = mainContent.querySelectorAll(`${headerType}[id]`);
+
+        mainContent.addEventListener("scroll", _mainContentScrollListener(id, mainContent, headers));
+    } else {
+        console.warn(`sidebar.initScrollListener: Cannot find main content with id ${mainContentId}`);
+    }
 
 };
 
-const init = () => {
-    const sidebar = document.querySelector(SELECTORS.SIDEBAR);
+const removeScrollListener = mainContentId => {
+    const mainContent = document.getElementById(mainContentId);
 
-    const navGroups = sidebar.querySelectorAll(SELECTORS.NAVGROUP);
-    const navSubGroups = sidebar.querySelectorAll(SELECTORS.NAVSUBGROUP);
-    const navLeaves = sidebar.querySelectorAll(SELECTORS.NAVLEAF);
+    mainContent && mainContent.removeEventListener("scroll", _mainContentScrollListener);
+};
 
-    [...navGroups].map(navGroup => navGroup.querySelector(".nav-group-heading").addEventListener("click", () => _setActiveStatus(navGroup, sidebar, SELECTORS.NAVGROUP)));
-    [...navSubGroups].map(navSubGroup => navSubGroup.querySelector(".nav-subgroup-heading")
-        .addEventListener("click", () => _setActiveStatus(navSubGroup, sidebar, SELECTORS.NAVSUBGROUP)));
-    [...navLeaves].map(navLeaf => navLeaf.addEventListener("click", () => _setActiveStatus(navLeaf, sidebar, SELECTORS.NAVLEAF)));
+const init = id => {
+    if (id) {
+        const sidebar = document.querySelector(SELECTORS.SIDEBAR);
 
-    return sidebar;
+        const navGroups = sidebar.querySelectorAll(SELECTORS.NAVGROUP);
+        const navSubGroups = sidebar.querySelectorAll(SELECTORS.NAVSUBGROUP);
+        const navLeaves = sidebar.querySelectorAll(SELECTORS.NAVLEAF);
+
+        [...navGroups].map(navGroup => navGroup.querySelector(".nav-group-heading").addEventListener("click", () => _setActiveStatus(navGroup, sidebar, SELECTORS.NAVGROUP)));
+        [...navSubGroups].map(navSubGroup => navSubGroup.querySelector(".nav-subgroup-heading")
+            .addEventListener("click", () => _setActiveStatus(navSubGroup, sidebar, SELECTORS.NAVSUBGROUP)));
+        [...navLeaves].map(navLeaf => navLeaf.addEventListener("click", () => _setActiveStatus(navLeaf, sidebar, SELECTORS.NAVLEAF)));
+
+        return sidebar;
+    } else {
+        console.warn("sidebar.init: No id provided. The id of the sidebar must be provided");
+    }
 };
 
 export default {
     init,
-    setActiveState
+    setActiveState,
+    removeActiveState,
+    initScrollListener,
+    removeScrollListener
 };

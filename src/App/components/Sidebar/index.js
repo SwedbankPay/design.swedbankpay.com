@@ -74,8 +74,8 @@ const SidebarNavList = [
     }
 ];
 
-const Sidebar = () => (
-    <div className="sidebar">
+const Sidebar = ({ id }) => (
+    <div id={id} className="sidebar">
         <InputGroupComponent
             id="sidebar-search"
             type="text"
@@ -97,7 +97,7 @@ const Sidebar = () => (
                             <ul className="nav-ul">
                                 {group.subList.map((leaf, i) => (
                                     <li key={i} className="nav-leaf">
-                                        <a href="" onClick={e => e.preventDefault()}>
+                                        <a href="#" onClick={e => e.preventDefault()}>
                                             {leaf.title}
                                         </a>
                                     </li>
@@ -116,7 +116,7 @@ const Sidebar = () => (
                                         <ul className="nav-ul">
                                             {sub.subList.map((leaf, i) => (
                                                 <li key={i} className="nav-leaf">
-                                                    <a href="" onClick={e => e.preventDefault()}>
+                                                    <a href="#" onClick={e => e.preventDefault()}>
                                                         {leaf.title}
                                                     </a>
                                                 </li>
