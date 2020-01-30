@@ -120,7 +120,7 @@ export const SidebarNavList = [
                     {
                         title: "Customers summary charts",
                         page: "CDSummaryCharts",
-                        pagePosition: "customers-inquiries"
+                        pagePosition: "customers-summary-charts"
                     },
                     {
                         title: "Addtional information",
