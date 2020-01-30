@@ -69,6 +69,45 @@ const SidebarNavList = [
                         title: "Event 3"
                     }
                 ]
+            },
+            {
+                title: "Extras",
+                lastParent: false,
+                subList: [
+                    {
+                        title: "Events",
+                        lastParent: true,
+                        subList: [
+                            {
+                                title: "Event 1"
+                            },
+                            {
+                                title: "Event 2"
+                            },
+                            {
+                                title: "Event 3"
+                            }
+                        ]
+                    },
+                    {
+                        title: "Operations",
+                        lastParent: true,
+                        subList: [
+                            {
+                                title: "Operations"
+                            },
+                            {
+                                title: "Lorem ipsum"
+                            },
+                            {
+                                title: "Dolor sit amet consectetur"
+                            },
+                            {
+                                title: "Adipiscing elit"
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     }
@@ -92,20 +131,18 @@ const Sidebar = ({ id }) => (
                             {group.title}
                         </span>
                     </div>
-                    {
-                        group.lastParent ?
-                            <ul className="nav-ul">
-                                {group.subList.map((leaf, i) => (
+                    <ul className="nav-ul">
+                        {
+                            group.lastParent ?
+                                group.subList.map((leaf, i) => (
                                     <li key={i} className="nav-leaf">
                                         <a href="#" onClick={e => e.preventDefault()}>
                                             {leaf.title}
                                         </a>
                                     </li>
-                                ))}
-                            </ul>
-                            :
-                            <ul className="nav-ul">
-                                {group.subList.map((sub, i) => (
+                                ))
+                                :
+                                group.subList.map((sub, i) => (
                                     <li key={i} className="nav-subgroup">
                                         <div className="nav-subgroup-heading">
                                             <i className="material-icons">arrow_right</i>
@@ -114,18 +151,43 @@ const Sidebar = ({ id }) => (
                                             </span>
                                         </div>
                                         <ul className="nav-ul">
-                                            {sub.subList.map((leaf, i) => (
-                                                <li key={i} className="nav-leaf">
-                                                    <a href="#" onClick={e => e.preventDefault()}>
-                                                        {leaf.title}
-                                                    </a>
-                                                </li>
-                                            ))}
+                                            {
+                                                sub.lastParent ?
+                                                    sub.subList.map((leaf, i) => (
+                                                        <li key={i} className="nav-leaf">
+                                                            <a href="#" onClick={e => e.preventDefault()}>
+                                                                {leaf.title}
+                                                            </a>
+                                                        </li>
+                                                    ))
+                                                    :
+                                                    sub.subList.map((sub, i) => (
+                                                        <li key={i} className="nav-subgroup">
+                                                            <div className="nav-subgroup-heading">
+                                                                <i className="material-icons">arrow_right</i>
+                                                                <span>
+                                                                    {sub.title}
+                                                                </span>
+                                                            </div>
+                                                            <ul className="nav-ul">
+                                                                {
+                                                                    sub.subList.map((leaf, i) => (
+                                                                        <li key={i} className="nav-leaf">
+                                                                            <a href="#" onClick={e => e.preventDefault()}>
+                                                                                {leaf.title}
+                                                                            </a>
+                                                                        </li>
+                                                                    ))
+                                                                }
+                                                            </ul>
+                                                        </li>
+                                                    ))
+                                            }
                                         </ul>
                                     </li>
-                                ))}
-                            </ul>
-                    }
+                                ))
+                        }
+                    </ul>
                 </ div>
             ))}
         </nav>

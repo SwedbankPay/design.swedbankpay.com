@@ -23,78 +23,82 @@ const _setActiveStatus = (element, sidebar, selector) => {
 
     const activeElements = sidebar.querySelectorAll(selector + SELECTORS.ACTIVE);
 
-    activeElements.length < 1 && element.classList.add("active");
+    element.classList.add("active");
 
     [...activeElements].map(activeElement => {
 
-        // const activeLeafInElement = activeElement.querySelector(SELECTORS.NAVLEAF + SELECTORS.ACTIVE);
-
         if (selector !== SELECTORS.NAVLEAF) {
-            // !activeLeafInElement && _closeElement(activeElement);
-            _closeElement(activeElement);
+            activeElement === element && _closeElement(element);
         } else {
             activeElement !== element && activeElement.classList.remove("active");
-
         }
 
-        activeElement !== element && element.classList.add("active");
-
-        if (selector === SELECTORS.NAVLEAF) {
-            const activeGroups = sidebar.querySelectorAll(SELECTORS.NAVGROUP + SELECTORS.ACTIVE);
-            const activeSubGroups = sidebar.querySelectorAll(SELECTORS.NAVSUBGROUP + SELECTORS.ACTIVE);
-
-            [...activeGroups].map(activeGroup => !activeGroup.querySelector(SELECTORS.NAVLEAF + SELECTORS.ACTIVE) && _closeElement(activeGroup));
-            [...activeSubGroups].map(activeSubGroup => !activeSubGroup.querySelector(SELECTORS.NAVLEAF + SELECTORS.ACTIVE) && _closeElement(activeSubGroup));
-        }
     });
+
+    if (selector === SELECTORS.NAVLEAF) {
+        const activeGroups = sidebar.querySelectorAll(SELECTORS.NAVGROUP + SELECTORS.ACTIVE);
+        const activeSubGroups = sidebar.querySelectorAll(SELECTORS.NAVSUBGROUP + SELECTORS.ACTIVE);
+
+        [...activeGroups].filter(group => !group.querySelector(SELECTORS.NAVLEAF + SELECTORS.ACTIVE)).map(group => _closeElement(group));
+        [...activeSubGroups].filter(subGroup => !subGroup.querySelector(SELECTORS.NAVLEAF + SELECTORS.ACTIVE)).map(subGroup => _closeElement(subGroup));
+    }
 
 };
 
 const setActiveState = (group, subGroup, leaf) => {
-    const sidebar = document.querySelector(SELECTORS.SIDEBAR);
 
-    const activeGroup = sidebar.querySelectorAll(SELECTORS.NAVGROUP)[group];
+    if (group !== null) {
+        const sidebar = document.querySelector(SELECTORS.SIDEBAR);
 
-    activeGroup.classList.add("active");
+        const activeGroup = sidebar.querySelectorAll(SELECTORS.NAVGROUP)[group];
 
-    let active = activeGroup;
+        activeGroup.classList.add("active");
 
-    if (subGroup !== null && subGroup < activeGroup.querySelectorAll(SELECTORS.NAVSUBGROUP).length) {
+        let active = activeGroup;
 
-        const activeSubGroup = activeGroup.querySelectorAll(SELECTORS.NAVSUBGROUP)[subGroup];
+        if (subGroup !== null && subGroup < activeGroup.querySelectorAll(SELECTORS.NAVSUBGROUP).length) {
 
-        activeSubGroup.classList.add("active");
+            const activeSubGroup = activeGroup.querySelectorAll(SELECTORS.NAVSUBGROUP)[subGroup];
 
-        active = activeSubGroup;
+            activeSubGroup.classList.add("active");
+
+            active = activeSubGroup;
+        }
+
+        leaf !== null && leaf < active.querySelectorAll(SELECTORS.NAVLEAF).length && (active = active.querySelectorAll(SELECTORS.NAVLEAF)[leaf]);
+
+        active.classList.add("active");
+    } else {
+        console.warn("siderbar.setActiveState: The group parameter must be provided");
     }
-
-    leaf !== null && leaf < active.querySelectorAll(SELECTORS.NAVLEAF).length && (active = active.querySelectorAll(SELECTORS.NAVLEAF)[leaf]);
-
-    active.classList.add("active");
-
 };
 
 const removeActiveState = (group, subGroup, leaf) => {
-    const sidebar = document.querySelector(SELECTORS.SIDEBAR);
 
-    const activeGroup = sidebar.querySelectorAll(SELECTORS.NAVGROUP)[group];
+    if (group !== null) {
+        const sidebar = document.querySelector(SELECTORS.SIDEBAR);
 
-    activeGroup.classList.remove("active");
+        const activeGroup = sidebar.querySelectorAll(SELECTORS.NAVGROUP)[group];
 
-    let active = activeGroup;
+        activeGroup.classList.remove("active");
 
-    if (subGroup !== null) {
+        let active = activeGroup;
 
-        const activeSubGroup = activeGroup.querySelectorAll(SELECTORS.NAVSUBGROUP)[subGroup];
+        if (subGroup !== null) {
 
-        activeSubGroup.classList.remove("active");
+            const activeSubGroup = activeGroup.querySelectorAll(SELECTORS.NAVSUBGROUP)[subGroup];
 
-        active = activeSubGroup;
+            activeSubGroup.classList.remove("active");
+
+            active = activeSubGroup;
+        }
+
+        leaf !== null && (active = active.querySelectorAll(SELECTORS.NAVLEAF)[leaf]);
+
+        active.classList.remove("active");
+    } else {
+        console.warn("siderbar.setActiveState; The group parameter must be provided");
     }
-
-    leaf !== null && (active = active.querySelectorAll(SELECTORS.NAVLEAF)[leaf]);
-
-    active.classList.remove("active");
 };
 
 const _mainContentScrollListener = (id, mainContent, headers) => (
