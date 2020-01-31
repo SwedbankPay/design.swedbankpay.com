@@ -45,10 +45,10 @@ const _setActiveStatus = (element, sidebar, selector) => {
 
 };
 
-const setActiveState = (group, subGroup, leaf) => {
+const setActiveState = (id, group, subGroup, leaf) => {
 
     if (group !== null) {
-        const sidebar = document.querySelector(SELECTORS.SIDEBAR);
+        const sidebar = document.getElementById(id);
 
         const activeGroup = sidebar.querySelectorAll(SELECTORS.NAVGROUP)[group];
 
@@ -73,10 +73,10 @@ const setActiveState = (group, subGroup, leaf) => {
     }
 };
 
-const removeActiveState = (group, subGroup, leaf) => {
+const removeActiveState = (id, group, subGroup, leaf) => {
 
     if (group !== null) {
-        const sidebar = document.querySelector(SELECTORS.SIDEBAR);
+        const sidebar = document.getElementById(id);
 
         const activeGroup = sidebar.querySelectorAll(SELECTORS.NAVGROUP)[group];
 
@@ -144,7 +144,8 @@ const removeScrollListener = mainContentId => {
 
 const init = id => {
     if (id) {
-        const sidebar = document.querySelector(SELECTORS.SIDEBAR);
+
+        const sidebar = document.getElementById(id);
 
         const navGroups = sidebar.querySelectorAll(SELECTORS.NAVGROUP);
         const navSubGroups = sidebar.querySelectorAll(SELECTORS.NAVSUBGROUP);

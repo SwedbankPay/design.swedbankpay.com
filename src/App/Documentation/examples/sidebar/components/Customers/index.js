@@ -55,19 +55,26 @@ const COOverview = () => (
             setCustomerIndex={customerIndex => customerIndex}
             customersList={customersList}
             statusText={statusText}
+            test
         />
         <CustomersAdditionalInformation />
     </>
 );
 
-const CDOrderHistory = () => (
+const CDOrderHistory = ({ test }) => (
     <>
         <CustomersIntroduction />
         <h2 id="customers-order-history">Customers order history</h2>
-        <CustomersDetailedOrders
-            customersDetailedOrdersSteps={customersDetailedOrdersSteps}
-            customersDetailedOrders={customersDetailedOrders}
-        />
+        {
+            test ?
+                <React.Fragment />
+                :
+                <CustomersDetailedOrders
+                    customersDetailedOrdersSteps={customersDetailedOrdersSteps}
+                    customersDetailedOrders={customersDetailedOrders}
+                />
+
+        }
         <CustomersAdditionalInformation />
     </>
 );
@@ -76,10 +83,16 @@ const CDInquiries = () => (
     <>
         <CustomersIntroduction />
         <h2 id="customers-inquiries">Customers inquiries</h2>
-        <CustomersDetailedInquiries
-            customersDetailedLatestInquiry={customersDetailedLatestInquiry}
-            customersDetailedPreviousInquiries={customersDetailedPreviousInquiries}
-        />
+
+        {
+            test ?
+                <React.Fragment />
+                :
+                <CustomersDetailedInquiries
+                    customersDetailedLatestInquiry={customersDetailedLatestInquiry}
+                    customersDetailedPreviousInquiries={customersDetailedPreviousInquiries}
+                />
+        }
         <CustomersAdditionalInformation />
     </>
 );
@@ -88,12 +101,17 @@ const CDSummaryCharts = () => (
     <>
         <CustomersIntroduction />
         <h2 id="customers-summary-charts">Customers summary charts</h2>
-        <CustomersDetailedCharts
-            customerIdName={`${customersList[0].id} ${customersList[0].firstName} ${customersList[0].lastName}`}
-            customerOrders={[...customersDetailedOrders, 1994]}
-            customerInquiries={[...customersDetailedPreviousInquiries, customersDetailedLatestInquiry]}
-            createNumArray={createNumArray}
-        />
+        {
+            test ?
+                <React.Fragment />
+                :
+                <CustomersDetailedCharts
+                    customerIdName={`${customersList[0].id} ${customersList[0].firstName} ${customersList[0].lastName}`}
+                    customerOrders={[...customersDetailedOrders, 1994]}
+                    customerInquiries={[...customersDetailedPreviousInquiries, customersDetailedLatestInquiry]}
+                    createNumArray={createNumArray}
+                />
+        }
         <CustomersAdditionalInformation />
     </>
 );

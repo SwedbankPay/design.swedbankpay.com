@@ -52,13 +52,13 @@ class Sidebar extends PureComponent {
     componentDidMount () {
         sidebar.init("example-sidebar");
         sidebar.initScrollListener("example-sidebar", "sidebar-example-main", "h2");
-        sidebar.setActiveState(this.state.group, this.state.subGroup, this.state.leaf);
+        sidebar.setActiveState("example-sidebar", this.state.group, this.state.subGroup, this.state.leaf);
     }
 
     componentDidUpdate () {
         sidebar.init("example-sidebar");
         sidebar.initScrollListener("example-sidebar", "sidebar-example-main", "h2");
-        sidebar.setActiveState(this.state.group, this.state.subGroup, this.state.leaf);
+        sidebar.setActiveState("example-sidebar", this.state.group, this.state.subGroup, this.state.leaf);
 
         if (this.state.activePagePosition) {
             const mainElement = document.getElementById("sidebar-example-main");
