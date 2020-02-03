@@ -29,8 +29,7 @@
     </noscript>
     <script>
         (function () {
-            var basename = "<%= htmlWebpackPlugin.options.basename %>";
-            window.location = "https://design.swedbankpay.com" + basename + "404";
+            window.location = "<%= htmlWebpackPlugin.options.baseUrl %>" + "<%= htmlWebpackPlugin.options.basename %>" + "404";
         })();
     </script>
 </body>
