@@ -26,7 +26,7 @@ const _scrollToActiveLeaf = sidebar => {
     sidebarNav.scrollTop = activeLeaf.offsetTop - activeLeaf.clientHeight * 2;
 };
 
-const _setActiveStatus = (element, sidebar, selector) => {
+const _setActiveStatus = (element, sidebar, selector, isScroll) => {
 
     const activeElements = sidebar.querySelectorAll(selector + SELECTORS.ACTIVE);
 
@@ -42,7 +42,7 @@ const _setActiveStatus = (element, sidebar, selector) => {
 
     });
 
-    if (selector === SELECTORS.NAVLEAF) {
+    if (selector === SELECTORS.NAVLEAF && !isScroll) {
         const activeGroups = sidebar.querySelectorAll(SELECTORS.NAVGROUP + SELECTORS.ACTIVE);
         const activeSubGroups = sidebar.querySelectorAll(SELECTORS.NAVSUBGROUP + SELECTORS.ACTIVE);
 
@@ -111,45 +111,46 @@ const removeActiveState = (id, group, subGroup, leaf) => {
     }
 };
 
-const _mainContentScrollListener = (id, mainContent, headers) => (
+const _contentScrollListener = (id, content, headers) => (
     () => {
-        const scrollNumber = [...headers].filter(header => header.offsetTop <= mainContent.scrollTop + scrollBuffer).length - 1;
+        const scrollNumber = [...headers].filter(header => header.offsetTop <= content.scrollTop + scrollBuffer).length - 1;
         const sidebar = document.getElementById(id);
         const activeLeaf = sidebar.querySelector(SELECTORS.NAVLEAF + SELECTORS.ACTIVE);
         const leaves = activeLeaf.parentElement.querySelectorAll(SELECTORS.NAVLEAF);
 
         if (scrollNumber === -1) {
-            _setActiveStatus(leaves[0], sidebar, SELECTORS.NAVLEAF);
+            _setActiveStatus(leaves[0], sidebar, SELECTORS.NAVLEAF, true);
         } else {
-            _setActiveStatus(leaves[scrollNumber], sidebar, SELECTORS.NAVLEAF);
+            _setActiveStatus(leaves[scrollNumber], sidebar, SELECTORS.NAVLEAF, true);
         }
 
-        if (mainContent.scrollTop + scrollBuffer >= mainContent.scrollHeight - mainContent.clientHeight) {
-            _setActiveStatus(leaves[leaves.length - 1], sidebar, SELECTORS.NAVLEAF);
+        if (content.scrollTop + scrollBuffer >= content.scrollHeight - content.clientHeight) {
+            _setActiveStatus(leaves[leaves.length - 1], sidebar, SELECTORS.NAVLEAF, true);
         }
 
     }
 );
 
-const initScrollListener = (id, mainContentId, headerType) => {
-    removeScrollListener(mainContent);
+const initScrollListener = (id, contentId, headerType) => {
+    removeScrollListener(contentId);
 
-    const mainContent = document.getElementById(mainContentId);
+    const content = document.getElementById(contentId);
 
-    if (mainContent) {
-        const headers = mainContent.querySelectorAll(`${headerType}[id]`);
+    if (content) {
 
-        mainContent.addEventListener("scroll", _mainContentScrollListener(id, mainContent, headers));
+        const headers = content.querySelectorAll(`${headerType}[id]`);
+
+        content.addEventListener("scroll", _contentScrollListener(id, content, headers));
     } else {
-        console.warn(`sidebar.initScrollListener: Cannot find main content with id ${mainContentId}`);
+        console.warn(`sidebar.initScrollListener: Cannot find main content with id ${contentId}`);
     }
 
 };
 
-const removeScrollListener = mainContentId => {
-    const mainContent = document.getElementById(mainContentId);
+const removeScrollListener = contentId => {
+    const content = document.getElementById(contentId);
 
-    mainContent && mainContent.removeEventListener("scroll", _mainContentScrollListener);
+    content && content.removeEventListener("scroll", _contentScrollListener);
 };
 
 const init = id => {

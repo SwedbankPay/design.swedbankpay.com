@@ -46,22 +46,21 @@ class Sidebar extends PureComponent {
                 activePage: leafElement.page
             });
         }
-
     }
 
     componentDidMount () {
         sidebar.init("example-sidebar");
-        sidebar.initScrollListener("example-sidebar", "sidebar-example-main", "h2");
+        sidebar.initScrollListener("example-sidebar", "sidebar-example-content", "h2");
         sidebar.setActiveState("example-sidebar", this.state.group, this.state.subGroup, this.state.leaf);
     }
 
     componentDidUpdate () {
         sidebar.init("example-sidebar");
-        sidebar.initScrollListener("example-sidebar", "sidebar-example-main", "h2");
+        sidebar.initScrollListener("example-sidebar", "sidebar-example-content", "h2");
         sidebar.setActiveState("example-sidebar", this.state.group, this.state.subGroup, this.state.leaf);
 
         if (this.state.activePagePosition) {
-            const mainElement = document.getElementById("sidebar-example-main");
+            const mainElement = document.getElementById("sidebar-example-content");
             const scrollToElement = document.getElementById(this.state.activePagePosition);
 
             mainElement.scrollTo({
@@ -87,15 +86,15 @@ class Sidebar extends PureComponent {
         return (
             <DocContainer>
                 <ComponentPreview language="html" showCasePanel codeFigure>
-                    <div className="container-fluid">
+                    <div id="sidebar-example-content" className="container-fluid sidebar-example-content">
                         <div className="row">
                             <TopbarComponent wide="xl" logout id="demo-topbar" />
                         </div>
                         <div className="row">
-                            <div className="col-auto">
+                            <div className="col-md-3">
                                 <SidebarComponent setActive={this.setActive} sidebarNavList={SidebarNavList} />
                             </div>
-                            <main id="sidebar-example-main" className="col main-content border-left sidebar-example-main">
+                            <main id="sidebar-example-main" className="col-md-9 main-content border-left sidebar-example-main">
                                 {(this.state.activePage && !this.props.test) ? pages[this.state.activePage] : <React.Fragment />}
                             </main>
                         </div>

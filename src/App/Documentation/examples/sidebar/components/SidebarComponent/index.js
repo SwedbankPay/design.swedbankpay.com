@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 import InputGroupComponent from "@components/InputGroup";
 
@@ -68,5 +69,14 @@ class SidebarComponent extends Component {
         );
     }
 }
+
+SidebarComponent.propTypes = {
+    setActive: PropTypes.func.isRequired,
+    sidebarNavList: PropTypes.arrayOf(PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        lastParent: PropTypes.bool.isRequired,
+        subList: PropTypes.arrayOf(PropTypes.object).isRequired
+    })).isRequired
+};
 
 export default SidebarComponent;

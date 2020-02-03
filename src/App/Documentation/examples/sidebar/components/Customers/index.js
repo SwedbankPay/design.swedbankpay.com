@@ -79,7 +79,7 @@ const CDOrderHistory = ({ test }) => (
     </>
 );
 
-const CDInquiries = () => (
+const CDInquiries = ({ test }) => (
     <>
         <CustomersIntroduction />
         <h2 id="customers-inquiries">Customers inquiries</h2>
@@ -97,7 +97,7 @@ const CDInquiries = () => (
     </>
 );
 
-const CDSummaryCharts = () => (
+const CDSummaryCharts = ({ test }) => (
     <>
         <CustomersIntroduction />
         <h2 id="customers-summary-charts">Customers summary charts</h2>

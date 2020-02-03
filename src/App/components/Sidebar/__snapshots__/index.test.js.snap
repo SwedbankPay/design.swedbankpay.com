@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Siderbar -  renders 1`] = `
+exports[`Component: Sidebar -  renders 1`] = `
 <div
   className="sidebar"
   id="test"
@@ -163,7 +163,7 @@ exports[`Component: Siderbar -  renders 1`] = `
 </div>
 `;
 
-exports[`Component: Siderbar -  renders group with one level when one level is provided 1`] = `
+exports[`Component: Sidebar -  renders group with one level when one level is provided 1`] = `
 <div
   className="sidebar"
   id="test"
@@ -240,7 +240,7 @@ exports[`Component: Siderbar -  renders group with one level when one level is p
 </div>
 `;
 
-exports[`Component: Siderbar -  renders group with two levels when two levels is provided 1`] = `
+exports[`Component: Sidebar -  renders group with two levels when two levels is provided 1`] = `
 <div
   className="sidebar"
   id="test"

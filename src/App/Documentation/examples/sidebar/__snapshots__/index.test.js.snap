@@ -8,7 +8,8 @@ exports[`Examples: Sidebar renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="container-fluid"
+      className="container-fluid sidebar-example-content"
+      id="sidebar-example-content"
     >
       <div
         className="row"
@@ -23,7 +24,7 @@ exports[`Examples: Sidebar renders 1`] = `
         className="row"
       >
         <div
-          className="col-auto"
+          className="col-md-3"
         >
           <SidebarComponent
             setActive={[Function]}
@@ -166,7 +167,7 @@ exports[`Examples: Sidebar renders 1`] = `
           />
         </div>
         <main
-          className="col main-content border-left sidebar-example-main"
+          className="col-md-9 main-content border-left sidebar-example-main"
           id="sidebar-example-main"
         >
           <Introduction />

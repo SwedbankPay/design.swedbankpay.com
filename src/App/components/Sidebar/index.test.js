@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import Sidebar from "./index";
 
-describe("Component: Siderbar - ", () => {
+describe("Component: Sidebar - ", () => {
 
     it("is defined", () => {
         expect(Sidebar).toBeDefined();
