@@ -22,6 +22,8 @@ module.exports = (env, argv) => {
     const isDevServer = !!argv.host;
     const version = env && env.semver ? env.semver : "LOCAL_DEV";
     const isRelease = env && env.release === "true";
+    const isGitHubActions = env && env.github_actions === "true";
+    const baseUrl = env && env.baseUrl ? env.baseUrl : null;
     const basename = env && env.basename ? `/${env.basename}/` : "/";
     const infoVersion = env && env.info_version ? env.info_version : "LOCAL_DEV";
 
@@ -230,6 +232,7 @@ module.exports = (env, argv) => {
                     basename: JSON.stringify(basename),
                     version: JSON.stringify(version),
                     sentry: isRelease,
+                    isGitHubActions,
                     google: isRelease,
                     brand: JSON.stringify(brand),
                     brandTitle: JSON.stringify(brandTitle)
@@ -253,8 +256,9 @@ module.exports = (env, argv) => {
                 filename: `${rootPath}index.html`,
                 template: "./build/rootindex.html",
                 hash: true,
-                title: `${brandTitle} DesignGuide`,
+                title: `${brandTitle} Design Guide`,
                 chunks: ["dg"],
+                baseUrl,
                 basename
             }),
             new HtmlWebpackPlugin({
@@ -262,15 +266,22 @@ module.exports = (env, argv) => {
                 template: "./build/root404.html",
                 hash: true,
                 chunks: ["dg"],
-                title: `${brandTitle} DesignGuide`,
+                title: `${brandTitle} Design Guide`,
+                baseUrl,
                 basename
             }),
-            new SentryCliPlugin({
-                release: version,
-                include: ".",
-                ignore: ["node_modules", "webpack.config.js"]
-            })
         );
+
+        // Don't create new sentry release on GitHub Actions
+        if (!isGitHubActions) {
+            config.plugins.push(
+                new SentryCliPlugin({
+                    release: version,
+                    include: ".",
+                    ignore: ["node_modules", "webpack.config.js"]
+                })
+            );
+        }
     }
 
     if (isProd && !isDevServer) {
