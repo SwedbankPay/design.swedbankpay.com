@@ -19,6 +19,13 @@ const _closeElement = element => {
     activeSubGroups.length > 0 && [...activeSubGroups].map(activeSubGroup => activeSubGroup.classList.remove("active"));
 };
 
+const _scrollToActiveLeaf = sidebar => {
+    const sidebarNav = sidebar.querySelector(".sidebar-nav");
+    const activeLeaf = sidebar.querySelector(SELECTORS.NAVLEAF + SELECTORS.ACTIVE);
+
+    sidebarNav.scrollTop = activeLeaf.offsetTop - activeLeaf.clientHeight * 2;
+};
+
 const _setActiveStatus = (element, sidebar, selector) => {
 
     const activeElements = sidebar.querySelectorAll(selector + SELECTORS.ACTIVE);
@@ -41,8 +48,9 @@ const _setActiveStatus = (element, sidebar, selector) => {
 
         [...activeGroups].filter(group => !group.querySelector(SELECTORS.NAVLEAF + SELECTORS.ACTIVE)).map(group => _closeElement(group));
         [...activeSubGroups].filter(subGroup => !subGroup.querySelector(SELECTORS.NAVLEAF + SELECTORS.ACTIVE)).map(subGroup => _closeElement(subGroup));
-    }
 
+        _scrollToActiveLeaf(sidebar);
+    }
 };
 
 const setActiveState = (id, group, subGroup, leaf) => {
@@ -68,6 +76,8 @@ const setActiveState = (id, group, subGroup, leaf) => {
         leaf !== null && leaf < active.querySelectorAll(SELECTORS.NAVLEAF).length && (active = active.querySelectorAll(SELECTORS.NAVLEAF)[leaf]);
 
         active.classList.add("active");
+
+        leaf && _scrollToActiveLeaf(sidebar);
     } else {
         console.warn("siderbar.setActiveState: The group parameter must be provided");
     }
