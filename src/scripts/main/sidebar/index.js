@@ -1,12 +1,5 @@
 
-const SELECTORS = {
-    SIDEBAR: ".sidebar",
-    SIDEBARNAV: ".sidebar-nav",
-    NAVGROUP: ".nav-group",
-    NAVSUBGROUP: ".nav-subgroup",
-    NAVLEAF: ".nav-leaf",
-    ACTIVE: ".active"
-};
+import SELECTORS from "./selectors";
 
 const scrollBuffer = 20;
 
@@ -58,6 +51,12 @@ const setActiveState = (id, group, subGroup, leaf) => {
     if (group !== null) {
         const sidebar = document.getElementById(id);
 
+        if (!sidebar) {
+            console.warn(`sidebar.setActiveState: No sidebar with id ${id} found.`);
+
+            return null;
+        }
+
         const activeGroup = sidebar.querySelectorAll(SELECTORS.NAVGROUP)[group];
 
         activeGroup.classList.add("active");
@@ -78,8 +77,12 @@ const setActiveState = (id, group, subGroup, leaf) => {
         active.classList.add("active");
 
         leaf && _scrollToActiveLeaf(sidebar);
+
+        return active;
     } else {
-        console.warn("siderbar.setActiveState: The group parameter must be provided");
+        console.warn("sidebar.setActiveState: The group parameter must be provided");
+
+        return null;
     }
 };
 
@@ -88,17 +91,19 @@ const removeActiveState = (id, group, subGroup, leaf) => {
     if (group !== null) {
         const sidebar = document.getElementById(id);
 
-        const activeGroup = sidebar.querySelectorAll(SELECTORS.NAVGROUP)[group];
+        if (!sidebar) {
+            console.warn(`sidebar.removeActiveState: No sidebar with id ${id} found.`);
 
-        activeGroup.classList.remove("active");
+            return null;
+        }
+
+        const activeGroup = sidebar.querySelectorAll(SELECTORS.NAVGROUP)[group];
 
         let active = activeGroup;
 
         if (subGroup !== null) {
 
             const activeSubGroup = activeGroup.querySelectorAll(SELECTORS.NAVSUBGROUP)[subGroup];
-
-            activeSubGroup.classList.remove("active");
 
             active = activeSubGroup;
         }
@@ -107,7 +112,9 @@ const removeActiveState = (id, group, subGroup, leaf) => {
 
         active.classList.remove("active");
     } else {
-        console.warn("siderbar.setActiveState; The group parameter must be provided");
+        console.warn("sidebar.removeActiveState: The group parameter must be provided");
+
+        return null;
     }
 };
 
@@ -158,6 +165,12 @@ const init = id => {
 
         const sidebar = document.getElementById(id);
 
+        if (!sidebar) {
+            console.warn(`sidebar.init: No sidebar with id ${id} found`);
+
+            return null;
+        }
+
         const navGroups = sidebar.querySelectorAll(SELECTORS.NAVGROUP);
         const navSubGroups = sidebar.querySelectorAll(SELECTORS.NAVSUBGROUP);
         const navLeaves = sidebar.querySelectorAll(SELECTORS.NAVLEAF);
@@ -170,6 +183,8 @@ const init = id => {
         return sidebar;
     } else {
         console.warn("sidebar.init: No id provided. The id of the sidebar must be provided");
+
+        return null;
     }
 };
 
