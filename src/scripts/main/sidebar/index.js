@@ -182,9 +182,26 @@ const init = id => {
 
         return sidebar;
     } else {
-        console.warn("sidebar.init: No id provided. The id of the sidebar must be provided");
+        const sidebars = document.querySelectorAll(".sidebar");
 
-        return null;
+        if (!sidebars.length) {
+            console.warn("sidebar.init: No sidebars found");
+
+            return null;
+        }
+
+        const sidebarsWithListeners = [...sidebars].map(sidebar => {
+            const navGroups = sidebar.querySelectorAll(SELECTORS.NAVGROUP);
+            const navSubGroups = sidebar.querySelectorAll(SELECTORS.NAVSUBGROUP);
+            const navLeaves = sidebar.querySelectorAll(SELECTORS.NAVLEAF);
+
+            [...navGroups].map(navGroup => navGroup.querySelector(".nav-group-heading").addEventListener("click", () => _setActiveStatus(navGroup, sidebar, SELECTORS.NAVGROUP)));
+            [...navSubGroups].map(navSubGroup => navSubGroup.querySelector(".nav-subgroup-heading")
+                .addEventListener("click", () => _setActiveStatus(navSubGroup, sidebar, SELECTORS.NAVSUBGROUP)));
+            [...navLeaves].map(navLeaf => navLeaf.addEventListener("click", () => _setActiveStatus(navLeaf, sidebar, SELECTORS.NAVLEAF)));
+        });
+
+        return sidebarsWithListeners;
     }
 };
 

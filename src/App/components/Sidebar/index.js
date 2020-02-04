@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import InputGroupComponent from "@components/InputGroup";
 
@@ -82,5 +83,14 @@ const Sidebar = ({ id, sidebarNavList }) => (
         </nav>
     </div>
 );
+
+Sidebar.propTypes = {
+    id: PropTypes.string.isRequired,
+    sidebarNavList: PropTypes.arrayOf(PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        lastParent: PropTypes.bool.isRequired,
+        subList: PropTypes.arrayOf(PropTypes.object).isRequired
+    })).isRequired
+};
 
 export default Sidebar;

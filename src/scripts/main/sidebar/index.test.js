@@ -123,11 +123,24 @@ describe("scripts: sidebar", () => {
             expect(console.warn).toHaveBeenCalledWith(`sidebar.init: No sidebar with id ${id} found`);
         });
 
-        it("returns null and warns user if ID is not provided", () => {
+        it("returns array of sidebars when no id is provided", () => {
+
+            ReactDOM.render(
+                <>
+                    <Sidebar id="test-sidebar-2" />
+                    <Sidebar id="test-sidebar-3" />
+                </>,
+                div
+            );
+
+            expect(sidebar.init().length).toEqual(2);
+        });
+
+        it("returns null and warns user if no sidebar found", () => {
             console.warn = jest.fn();
 
             expect(sidebar.init()).toBeNull();
-            expect(console.warn).toHaveBeenCalledWith("sidebar.init: No id provided. The id of the sidebar must be provided");
+            expect(console.warn).toHaveBeenCalledWith("sidebar.init: No sidebars found");
         });
     });
 
