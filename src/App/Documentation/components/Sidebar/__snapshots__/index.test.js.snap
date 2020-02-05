@@ -311,18 +311,12 @@ exports[`Components: Sidebar RemoveScrollListener renders 1`] = `
       scope="row"
     >
       <CodeTags
-        code="dg.sidebar.initScrollListener(<sidebar-id>, content-id, header-type)"
+        code="dg.sidebar.removeScrollListener(content-id)"
         type="secondary"
       />
     </td>
     <td>
-      Removes scroll listener the 
-       with id 
-      <CodeTags
-        code="<sidebar-id>"
-        type="secondary"
-      />
-       has on the element with id 
+      Removes scroll listener on the element with id 
       <CodeTags
         code="content-id"
         type="secondary"

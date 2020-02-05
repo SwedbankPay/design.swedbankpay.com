@@ -194,12 +194,12 @@ const InitScrollListener = ({ componentName }) => (
     </>
 );
 
-const RemoveScrollListener = ({ componentName }) => (
+const RemoveScrollListener = () => (
     <>
         <tr>
-            <td scope="row"><CodeTags type="secondary" code="dg.sidebar.initScrollListener(<sidebar-id>, content-id, header-type)"/></td>
+            <td scope="row"><CodeTags type="secondary" code="dg.sidebar.removeScrollListener(content-id)"/></td>
             <td>
-                Removes scroll listener the {componentName} with id <CodeTags type="secondary" code="<sidebar-id>"/> has on the element
+                Removes scroll listener on the element
                 with id <CodeTags type="secondary" code="content-id"/>.
             </td>
         </tr>
