@@ -19,146 +19,150 @@ exports[`Component: Sidebar -  renders 1`] = `
   <nav
     className="sidebar-nav"
   >
-    <div
-      className="nav-group"
-      key="0"
+    <ul
+      className="main-nav-ul"
     >
       <div
-        className="nav-group-heading"
+        className="nav-group"
+        key="0"
       >
-        <i
-          className="material-icons"
+        <div
+          className="nav-group-heading"
         >
-          arrow_right
-        </i>
-        <span>
-          Introduction
-        </span>
+          <i
+            className="material-icons"
+          >
+            arrow_right
+          </i>
+          <span>
+            Introduction
+          </span>
+        </div>
+        <ul
+          className="nav-ul"
+        >
+          <li
+            className="nav-leaf"
+            key="0"
+          >
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              Introduction 1
+            </a>
+          </li>
+          <li
+            className="nav-leaf"
+            key="1"
+          >
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              Introduction 2
+            </a>
+          </li>
+          <li
+            className="nav-leaf"
+            key="2"
+          >
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              Introduction 3
+            </a>
+          </li>
+        </ul>
       </div>
-      <ul
-        className="nav-ul"
-      >
-        <li
-          className="nav-leaf"
-          key="0"
-        >
-          <a
-            href="#"
-            onClick={[Function]}
-          >
-            Introduction 1
-          </a>
-        </li>
-        <li
-          className="nav-leaf"
-          key="1"
-        >
-          <a
-            href="#"
-            onClick={[Function]}
-          >
-            Introduction 2
-          </a>
-        </li>
-        <li
-          className="nav-leaf"
-          key="2"
-        >
-          <a
-            href="#"
-            onClick={[Function]}
-          >
-            Introduction 3
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div
-      className="nav-group"
-      key="1"
-    >
       <div
-        className="nav-group-heading"
+        className="nav-group"
+        key="1"
       >
-        <i
-          className="material-icons"
+        <div
+          className="nav-group-heading"
         >
-          arrow_right
-        </i>
-        <span>
-          Other features
-        </span>
-      </div>
-      <ul
-        className="nav-ul"
-      >
-        <li
-          className="nav-subgroup"
-          key="0"
+          <i
+            className="material-icons"
+          >
+            arrow_right
+          </i>
+          <span>
+            Other features
+          </span>
+        </div>
+        <ul
+          className="nav-ul"
         >
-          <div
-            className="nav-subgroup-heading"
+          <li
+            className="nav-subgroup"
+            key="0"
           >
-            <i
-              className="material-icons"
+            <div
+              className="nav-subgroup-heading"
             >
-              arrow_right
-            </i>
-            <span>
-              Operations
-            </span>
-          </div>
-          <ul
-            className="nav-ul"
-          >
-            <li
-              className="nav-leaf"
-              key="0"
-            >
-              <a
-                href="#"
-                onClick={[Function]}
+              <i
+                className="material-icons"
               >
+                arrow_right
+              </i>
+              <span>
                 Operations
-              </a>
-            </li>
-            <li
-              className="nav-leaf"
-              key="1"
+              </span>
+            </div>
+            <ul
+              className="nav-ul"
             >
-              <a
-                href="#"
-                onClick={[Function]}
+              <li
+                className="nav-leaf"
+                key="0"
               >
-                Lorem ipsum
-              </a>
-            </li>
-            <li
-              className="nav-leaf"
-              key="2"
-            >
-              <a
-                href="#"
-                onClick={[Function]}
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Operations
+                </a>
+              </li>
+              <li
+                className="nav-leaf"
+                key="1"
               >
-                Dolor sit amet consectetur
-              </a>
-            </li>
-            <li
-              className="nav-leaf"
-              key="3"
-            >
-              <a
-                href="#"
-                onClick={[Function]}
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Lorem ipsum
+                </a>
+              </li>
+              <li
+                className="nav-leaf"
+                key="2"
               >
-                Adipiscing elit
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Dolor sit amet consectetur
+                </a>
+              </li>
+              <li
+                className="nav-leaf"
+                key="3"
+              >
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Adipiscing elit
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </ul>
   </nav>
 </div>
 `;
@@ -182,60 +186,64 @@ exports[`Component: Sidebar -  renders group with one level when one level is pr
   <nav
     className="sidebar-nav"
   >
-    <div
-      className="nav-group"
-      key="0"
+    <ul
+      className="main-nav-ul"
     >
       <div
-        className="nav-group-heading"
+        className="nav-group"
+        key="0"
       >
-        <i
-          className="material-icons"
+        <div
+          className="nav-group-heading"
         >
-          arrow_right
-        </i>
-        <span>
-          Introduction
-        </span>
+          <i
+            className="material-icons"
+          >
+            arrow_right
+          </i>
+          <span>
+            Introduction
+          </span>
+        </div>
+        <ul
+          className="nav-ul"
+        >
+          <li
+            className="nav-leaf"
+            key="0"
+          >
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              Introduction 1
+            </a>
+          </li>
+          <li
+            className="nav-leaf"
+            key="1"
+          >
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              Introduction 2
+            </a>
+          </li>
+          <li
+            className="nav-leaf"
+            key="2"
+          >
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              Introduction 3
+            </a>
+          </li>
+        </ul>
       </div>
-      <ul
-        className="nav-ul"
-      >
-        <li
-          className="nav-leaf"
-          key="0"
-        >
-          <a
-            href="#"
-            onClick={[Function]}
-          >
-            Introduction 1
-          </a>
-        </li>
-        <li
-          className="nav-leaf"
-          key="1"
-        >
-          <a
-            href="#"
-            onClick={[Function]}
-          >
-            Introduction 2
-          </a>
-        </li>
-        <li
-          className="nav-leaf"
-          key="2"
-        >
-          <a
-            href="#"
-            onClick={[Function]}
-          >
-            Introduction 3
-          </a>
-        </li>
-      </ul>
-    </div>
+    </ul>
   </nav>
 </div>
 `;
@@ -259,92 +267,96 @@ exports[`Component: Sidebar -  renders group with two levels when two levels is 
   <nav
     className="sidebar-nav"
   >
-    <div
-      className="nav-group"
-      key="0"
+    <ul
+      className="main-nav-ul"
     >
       <div
-        className="nav-group-heading"
+        className="nav-group"
+        key="0"
       >
-        <i
-          className="material-icons"
+        <div
+          className="nav-group-heading"
         >
-          arrow_right
-        </i>
-        <span>
-          Other features
-        </span>
-      </div>
-      <ul
-        className="nav-ul"
-      >
-        <li
-          className="nav-subgroup"
-          key="0"
+          <i
+            className="material-icons"
+          >
+            arrow_right
+          </i>
+          <span>
+            Other features
+          </span>
+        </div>
+        <ul
+          className="nav-ul"
         >
-          <div
-            className="nav-subgroup-heading"
+          <li
+            className="nav-subgroup"
+            key="0"
           >
-            <i
-              className="material-icons"
+            <div
+              className="nav-subgroup-heading"
             >
-              arrow_right
-            </i>
-            <span>
-              Operations
-            </span>
-          </div>
-          <ul
-            className="nav-ul"
-          >
-            <li
-              className="nav-leaf"
-              key="0"
-            >
-              <a
-                href="#"
-                onClick={[Function]}
+              <i
+                className="material-icons"
               >
+                arrow_right
+              </i>
+              <span>
                 Operations
-              </a>
-            </li>
-            <li
-              className="nav-leaf"
-              key="1"
+              </span>
+            </div>
+            <ul
+              className="nav-ul"
             >
-              <a
-                href="#"
-                onClick={[Function]}
+              <li
+                className="nav-leaf"
+                key="0"
               >
-                Lorem ipsum
-              </a>
-            </li>
-            <li
-              className="nav-leaf"
-              key="2"
-            >
-              <a
-                href="#"
-                onClick={[Function]}
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Operations
+                </a>
+              </li>
+              <li
+                className="nav-leaf"
+                key="1"
               >
-                Dolor sit amet consectetur
-              </a>
-            </li>
-            <li
-              className="nav-leaf"
-              key="3"
-            >
-              <a
-                href="#"
-                onClick={[Function]}
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Lorem ipsum
+                </a>
+              </li>
+              <li
+                className="nav-leaf"
+                key="2"
               >
-                Adipiscing elit
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Dolor sit amet consectetur
+                </a>
+              </li>
+              <li
+                className="nav-leaf"
+                key="3"
+              >
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Adipiscing elit
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </ul>
   </nav>
 </div>
 `;

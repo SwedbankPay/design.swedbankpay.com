@@ -33,7 +33,7 @@ class NavGroup extends Component {
         const { title, routes } = this.props.route;
 
         return (
-            <div className="nav-group">
+            <li className="nav-group">
                 <div className="nav-group-heading">
                     <i className="material-icons" onClick={() => this.toggleActive()}>arrow_right</i>
                     <span>{title}</span>
@@ -45,7 +45,7 @@ class NavGroup extends Component {
                         </li>
                     ))}
                 </ul>
-            </div>
+            </li>
         );
     }
 }
@@ -65,11 +65,13 @@ class SelectPanel extends Component {
             <div id="doc-sidebar" className="sidebar">
                 <SearchBox routes={this.props.routes} />
                 <nav className="sidebar-nav">
-                    {this.props.routes.map((route, i) => {
-                        const NavGroupWithRouter = withRouter(NavGroup);
+                    <ul className="main-nav-ul">
+                        {this.props.routes.map((route, i) => {
+                            const NavGroupWithRouter = withRouter(NavGroup);
 
-                        return <NavGroupWithRouter key={`nav_group_${i}`} route={route} index={i} />;
-                    })}
+                            return <NavGroupWithRouter key={`nav_group_${i}`} route={route} index={i} />;
+                        })}
+                    </ul>
                 </nav>
             </div>
         );

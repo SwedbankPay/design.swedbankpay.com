@@ -20,50 +20,52 @@ class SidebarComponent extends Component {
                     prefixValue="search"
                 /> {"\n\n"}
                 <nav className="sidebar-nav">
-                    {this.props.sidebarNavList.map((group, groupIndex) => (
-                        <div key={groupIndex} className="nav-group">
-                            <div className="nav-group-heading">
-                                <i className="material-icons">arrow_right</i>
-                                <span>
-                                    {group.title}
-                                </span>
-                            </div>
-                            {
-                                group.lastParent ?
-                                    <ul className="nav-ul">
-                                        {group.subList.map((leaf, leafIndex) => (
-                                            <li key={leafIndex} className="nav-leaf">
-                                                <a href="#" onClick={e => this.props.setActive(e, groupIndex, null, leafIndex, leaf)}>
-                                                    {leaf.title}
-                                                </a>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                    :
-                                    <ul className="nav-ul">
-                                        {group.subList.map((sub, subIndex) => (
-                                            <li key={subIndex} className="nav-subgroup">
-                                                <div className="nav-subgroup-heading">
-                                                    <i className="material-icons">arrow_right</i>
-                                                    <span>
-                                                        {sub.title}
-                                                    </span>
-                                                </div>
-                                                <ul className="nav-ul">
-                                                    {sub.subList.map((leaf, leafIndex) => (
-                                                        <li key={leafIndex} className="nav-leaf">
-                                                            <a href="#" onClick={e => this.props.setActive(e, groupIndex, subIndex, leafIndex, leaf)}>
-                                                                {leaf.title}
-                                                            </a>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </li>
-                                        ))}
-                                    </ul>
-                            }
-                        </ div>
-                    ))}
+                    <ul className="main-nav-ul">
+                        {this.props.sidebarNavList.map((group, groupIndex) => (
+                            <li key={groupIndex} className="nav-group">
+                                <div className="nav-group-heading">
+                                    <i className="material-icons">arrow_right</i>
+                                    <span>
+                                        {group.title}
+                                    </span>
+                                </div>
+                                {
+                                    group.lastParent ?
+                                        <ul className="nav-ul">
+                                            {group.subList.map((leaf, leafIndex) => (
+                                                <li key={leafIndex} className="nav-leaf">
+                                                    <a href="#" onClick={e => this.props.setActive(e, groupIndex, null, leafIndex, leaf)}>
+                                                        {leaf.title}
+                                                    </a>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                        :
+                                        <ul className="nav-ul">
+                                            {group.subList.map((sub, subIndex) => (
+                                                <li key={subIndex} className="nav-subgroup">
+                                                    <div className="nav-subgroup-heading">
+                                                        <i className="material-icons">arrow_right</i>
+                                                        <span>
+                                                            {sub.title}
+                                                        </span>
+                                                    </div>
+                                                    <ul className="nav-ul">
+                                                        {sub.subList.map((leaf, leafIndex) => (
+                                                            <li key={leafIndex} className="nav-leaf">
+                                                                <a href="#" onClick={e => this.props.setActive(e, groupIndex, subIndex, leafIndex, leaf)}>
+                                                                    {leaf.title}
+                                                                </a>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                }
+                            </ li>
+                        ))}
+                    </ul>
                 </nav>
             </div>
         );
