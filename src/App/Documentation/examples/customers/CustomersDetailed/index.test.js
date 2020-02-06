@@ -3,6 +3,8 @@ import { shallow } from "enzyme";
 
 import CustomersDetailed from "./index";
 
+const { dialog, tabs } = window.dg;
+
 describe("Examples: CustomersDetailed", () => {
     const mockCustomer = {
         id: "ctest",
@@ -41,6 +43,13 @@ describe("Examples: CustomersDetailed", () => {
         warning: "Late",
         danger: "Missing"
     };
+
+    /*
+        The Customers component calls dg.dialog.init() and dg.tabs.init(). Mocking the topbarscript
+        to avoid a warning message.
+    */
+    dialog.init = jest.fn();
+    tabs.init = jest.fn();
 
     it("is defined", () => {
         expect(CustomersDetailed).toBeDefined();
