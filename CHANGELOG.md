@@ -53,4 +53,5 @@
    - Typos and naming inconsistencies
 
 ### Next release
-
+ - Input group
+   - Removed has-success state. Input group does not show success state anymore, only failed state when necessary.
