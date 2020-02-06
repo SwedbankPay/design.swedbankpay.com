@@ -58,6 +58,8 @@
    - All input fields now have a height of 48px, even when outside of Input group
  - Alert
    - Removed default alert
+ - HR
+   - Changed color of HR
  - Design Guide
    - Alert
      - Changed icon used in informative alert examples 
