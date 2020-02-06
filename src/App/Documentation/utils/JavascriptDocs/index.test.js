@@ -2,11 +2,13 @@ import React from "react";
 // import { Link } from "react-router-dom";
 import { shallow, mount } from "enzyme";
 
-import JavascriptDocs from "./index";
+import JavascriptDocs, { OpenDocs, CloseDocs } from "./index";
 
 jest.mock("react-router-dom");
 
 describe("Utilities: JavascriptDocs", () => {
+    const componentName = "test";
+
     it("is defined", () => {
         expect(JavascriptDocs).toBeDefined();
     });
@@ -15,38 +17,62 @@ describe("Utilities: JavascriptDocs", () => {
         const wrapper = shallow(<JavascriptDocs componentName="test" />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains("open")).toBeFalsy();
-        expect(wrapper.contains("close")).toBeFalsy();
+        expect(wrapper.contains(<OpenDocs componentName={componentName} />)).toBeFalsy();
+        expect(wrapper.contains(<CloseDocs componentName={componentName} />)).toBeFalsy();
     });
 
     it("renders init and open methods", () => {
         const wrapper = mount(
-            <JavascriptDocs componentName="test" open />
+            <JavascriptDocs componentName={componentName} open />
         );
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains("open")).toBeTruthy();
-        expect(wrapper.contains("close")).toBeFalsy();
+        expect(wrapper.contains(<OpenDocs componentName={componentName} />)).toBeTruthy();
+        expect(wrapper.contains(<CloseDocs componentName={componentName} />)).toBeFalsy();
     });
 
     it("renders init and close methods", () => {
         const wrapper = mount(
-            <JavascriptDocs componentName="test" close />
+            <JavascriptDocs componentName={componentName} close />
         );
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains("open")).toBeFalsy();
-        expect(wrapper.contains("close")).toBeTruthy();
+        expect(wrapper.contains(<OpenDocs componentName={componentName} />)).toBeFalsy();
+        expect(wrapper.contains(<CloseDocs componentName={componentName} />)).toBeTruthy();
     });
 
     it("renders init, open and close methods", () => {
         const wrapper = mount(
-            <JavascriptDocs componentName="test" open close />
+            <JavascriptDocs componentName={componentName} open close />
         );
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains("open")).toBeTruthy();
-        expect(wrapper.contains("close")).toBeTruthy();
+        expect(wrapper.contains(<OpenDocs componentName={componentName} />)).toBeTruthy();
+        expect(wrapper.contains(<CloseDocs componentName={componentName} />)).toBeTruthy();
+    });
+
+    describe("OpenDocs", () => {
+        it("is defined", () => {
+            expect(OpenDocs).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<OpenDocs componentName={componentName} />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("CloseDocs", () => {
+        it("is defined", () => {
+            expect(CloseDocs).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<CloseDocs componentName={componentName} />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
     });
 });
 
