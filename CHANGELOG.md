@@ -60,6 +60,8 @@
    - Removed default alert
  - HR
    - Changed color of HR
+ - Status
+   - Changed padding of status, altering the distance between the status circle and status text
  - Design Guide
    - Alert
      - Changed icon used in informative alert examples 
