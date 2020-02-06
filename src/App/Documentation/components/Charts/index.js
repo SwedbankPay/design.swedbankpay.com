@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import { ComponentPreview, DocContainer, Property } from "@docutils";
 import Chart from "@components/Chart";
+import Introduction from "./Introduction";
 
 const LineChart = () => (
         <>
@@ -571,14 +572,7 @@ class Charts extends Component {
     render () {
         return (
             <DocContainer docToc>
-                <p className="lead">We are using <a href="https://www.chartjs.org/" target="_blank" rel="noopener noreferrer">chart.js</a> to generate the charts. Our script is mainly just a wrapper around that library to add the correct styling etc.</p>
-                <p>Most options and settings available in the chart.js documentation will be available.</p>
-                <p>For now, the following chart types are available:</p>
-                <ul>
-                    <li><code className="token string">{"\"line\""}</code></li>
-                    <li><code className="token string">{"\"bar\"/\"horizontalBar\""}</code></li>
-                    <li><code className="token string">{"\"pie\"/\"doughnut\""}</code></li>
-                </ul>
+                <Introduction />
                 <LineChart />
                 <BarChart />
                 <DoughnutAndPieCharts />
