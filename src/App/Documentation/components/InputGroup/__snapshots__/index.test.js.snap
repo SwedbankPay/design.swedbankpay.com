@@ -9,34 +9,30 @@ exports[`Documentation: InputGroup BasicExample renders 1`] = `
   </h2>
   <p>
     Add a 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;span&gt;
-    </PrismCode>
+    <CodeTags
+      code="<span>"
+      type="primary"
+    />
      with class 
-    <Property
-      value=".input-group-addon"
+    <CodeTags
+      code=".input-group-addon"
+      type="secondary"
     />
      to get a gray box on the left, right or both sides of an 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;input&gt;
-    </PrismCode>
+    <CodeTags
+      code="<input>"
+      type="primary"
+    />
      element. The position of your 
-    <Property
-      value=".input-group-addon"
+    <CodeTags
+      code=".input-group-addon"
+      type="secondary"
     />
      depends on if you place it before or after the 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;input
-    </PrismCode>
+    <CodeTags
+      code="<input"
+      type="primary"
+    />
      element.
   </p>
   <ComponentPreview
@@ -101,19 +97,15 @@ exports[`Documentation: InputGroup ButtonAddons renders 1`] = `
   </h2>
   <p>
     If you want 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;button&gt;
-    </PrismCode>
+    <CodeTags
+      code="<button>"
+      type="primary"
+    />
     s included with your input elements you can just add a 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;button&gt;
-    </PrismCode>
+    <CodeTags
+      code="<button>"
+      type="primary"
+    />
      inside a input-group like you would anywhere else.
   </p>
   <ComponentPreview
@@ -235,16 +227,19 @@ exports[`Documentation: InputGroup Disabled renders 1`] = `
   </h2>
   <p>
     Just like for forms you can add 
-    <Attribute
-      name="disabled"
+    <CodeTags
+      code="disabled"
+      type="secondary"
     />
      to an input element to disable it. If you are going to disable an element in a 
-    <Property
-      value=".input-group"
+    <CodeTags
+      code=".input-group"
+      type="secondary"
     />
      make sure to also add the 
-    <Attribute
-      name="disabled"
+    <CodeTags
+      code="disabled"
+      type="secondary"
     />
      attribute to the buttons.
   </p>
@@ -287,14 +282,21 @@ exports[`Documentation: InputGroup ValidationStates renders 1`] = `
   </h2>
   <p>
     You can also visualize validation on your input-groups. Just add 
-    <Property
-      value=".has-error"
+    <CodeTags
+      code=".has-success"
+      type="secondary"
+    />
+     or 
+    <CodeTags
+      code=".has-error"
+      type="secondary"
     />
      with a 
-    <Property
-      value=".input-group"
+    <CodeTags
+      code=".input-group"
+      type="secondary"
     />
-     when an error should be displayed.
+    .
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -347,12 +349,10 @@ exports[`Documentation: InputGroup WithSelect renders 1`] = `
   </h2>
   <p>
     Inserting text next to a 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;select&gt;
-    </PrismCode>
+    <CodeTags
+      code="<select>"
+      type="primary"
+    />
      works just like any other input element.
   </p>
   <ComponentPreview
@@ -384,22 +384,19 @@ exports[`Documentation: InputGroup renders 1`] = `
     className="lead"
   >
     You can include additional information to specific input elements by adding 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;span&gt;
-    </PrismCode>
+    <CodeTags
+      code="<span>"
+      type="primary"
+    />
     s or 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;button&gt;
-    </PrismCode>
+    <CodeTags
+      code="<button>"
+      type="primary"
+    />
     s in a 
-    <Property
-      value=".input-group"
+    <CodeTags
+      code=".input-group"
+      type="secondary"
     />
     .
   </p>

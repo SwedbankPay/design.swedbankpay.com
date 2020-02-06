@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer, Property } from "@docutils";
+import { ComponentPreview, DocContainer } from "@docutils";
 import { Overview, Download, Guidelines } from "../../../Resources/resources/typography";
 import Button from "@components/Button";
+import CodeTags from "@components/CodeTags";
 
 const basename = process.env.basename;
 const { expandable } = window.dg;
@@ -42,7 +42,7 @@ const Headings = () => (
             <h5>Heading h5</h5>
             <h6>Heading h6</h6>
         </ComponentPreview>
-        <p>The classes <Property value=".h1" /> through <Property value=".h6" /> are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.</p>
+        <p>The classes <CodeTags type="secondary" code=".h1" /> through <CodeTags type="secondary" code=".h6" /> are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <p className="h1">.h1 heading</p>
             <p className="h2">.h2 heading</p>
@@ -57,7 +57,7 @@ const Headings = () => (
 const HeroTitle = () => (
     <>
         <h2 id="hero-title">Hero title</h2>
-        <p>The class <Property value=".hero" /> can be used to achieve the big and bold hero title styling.</p>
+        <p>The class <CodeTags type="secondary" code=".hero" /> can be used to achieve the big and bold hero title styling.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <h1 className="hero">Hero title</h1>
             <p className="hero">Hero title</p>
@@ -68,7 +68,7 @@ const HeroTitle = () => (
 const Lead = () => (
     <>
         <h2 id="lead">Lead</h2>
-        <p>Make a paragraph stand out by using <Property value=".lead" />.</p>
+        <p>Make a paragraph stand out by using <CodeTags type="secondary" code=".lead" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <p className="lead">This is a leading paragraph which for instance can be used as an introduction.</p>
         </ComponentPreview>
@@ -92,10 +92,14 @@ const Inline = () => (
             <p><i>This is the last line, it too will render as italicized text.</i></p>
         </ComponentPreview>
         <p>
-            The <Property value=".mark" /> and <Property value=".small" /> classes are also available to apply the same styles as <PrismCode className="language-html">{"<mark>"}</PrismCode> and <PrismCode className="language-html">{"<small>"}</PrismCode> while avoiding any unwanted semantic implications that the tags would bring.
+            The <CodeTags type="secondary" code=".mark" /> and <CodeTags type="secondary" code=".small" /> classes are also available to apply the same styles
+            as <CodeTags type="primary" code={"<mark>"} /> and <CodeTags type="primary" code={"<small>"} /> while
+            avoiding any unwanted semantic implications that the tags would bring.
         </p>
         <p>
-        While not shown above, feel free to use <PrismCode className="language-html">{"<b>"}</PrismCode> and <PrismCode className="language-html">{"<i>"}</PrismCode> in HTML5. <PrismCode className="language-html">{"<b>"}</PrismCode> is meant to highlight words or phrases without conveying additional importance while <PrismCode className="language-html">{"<i>"}</PrismCode> is mostly for voice, technical terms, etc.
+        While not shown above, feel free to use <CodeTags type="primary" code={"<b>"} /> and <CodeTags type="primary" code={"<i>"} /> in
+        HTML5. <CodeTags type="primary" code={"<b>"} /> is meant to highlight words or phrases without conveying additional importance
+        while <CodeTags type="primary" code={"<i>"} /> is mostly for voice, technical terms, etc.
         </p>
     </>
 );
@@ -110,8 +114,8 @@ const TextUtilities = () => (
 const Abbreviations = () => (
     <>
         <h2 id="abbreviations">Abbreviations</h2>
-        <p>Stylized implementation of HTML’s <PrismCode className="language-html">{"<abbr>"}</PrismCode> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.</p>
-        <p>Add <Property value=".initialism" /> to an abbreviation for a slightly smaller font-size.</p>
+        <p>Stylized implementation of HTML’s <CodeTags type="primary" code={"<abbr>"} /> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.</p>
+        <p>Add <CodeTags type="secondary" code=".initialism" /> to an abbreviation for a slightly smaller font-size.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <p><abbr title="Laugh Out Loud">LOL</abbr></p>
             <p><abbr title="HyperText Markup Language" className="initialism">HTML</abbr></p>
@@ -124,7 +128,7 @@ const Blockquotes = () => {
     const BlockquotesText = () => (
         <>
             <h2 id="blockquotes">Blockquotes</h2>
-            <p>For quoting blocks of content from another source within your document. Wrap <PrismCode className="language-html">{"<blockquote>"}</PrismCode> or <Property value=".blockquote" /> around any HTML as the quote.</p>
+            <p>For quoting blocks of content from another source within your document. Wrap <CodeTags type="primary" code={"<blockquote>"} /> or <CodeTags type="secondary" code=".blockquote" /> around any HTML as the quote.</p>
             <ComponentPreview language="html" showCasePanel codeFigure>
                 <blockquote className="blockquote">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
@@ -136,7 +140,7 @@ const Blockquotes = () => {
     const BlockquoteWithSourceText = () => (
         <>
             <h3>Naming a source</h3>
-            <p>Add a <PrismCode className="language-html">{"<footer>"}</PrismCode> for identifying the source. Wrap the name of the source work in <PrismCode className="language-html">{"<cite>"}</PrismCode>.</p>
+            <p>Add a <CodeTags type="primary" code={"<footer>"} /> for identifying the source. Wrap the name of the source work in <CodeTags type="primary" code={"<cite>"} />.</p>
             <ComponentPreview language="html" showCasePanel codeFigure>
                 <blockquote className="blockquote">
                     <p>

@@ -410,8 +410,9 @@ exports[`Dashboard: Charts CustomColors renders 1`] = `
   </h2>
   <p>
     Except for the three first colors, the rest of the colors are customizable. Call 
-    <Property
-      value="dg.chart"
+    <CodeTags
+      code="dg.chart"
+      type="secondary"
     />
      with a last optional argument consisting of a list of RGB color codes.
   </p>

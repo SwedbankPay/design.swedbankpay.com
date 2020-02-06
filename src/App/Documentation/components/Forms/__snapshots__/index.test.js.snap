@@ -41,8 +41,9 @@ exports[`Documentation: Forms DisabledFormComponents renders 1`] = `
   </h2>
   <p>
     Disable whichever form component you want by adding 
-    <Attribute
-      name="disabled"
+    <CodeTags
+      code="disabled"
+      type="secondary"
     />
      to the desired input element
   </p>
@@ -85,8 +86,9 @@ exports[`Documentation: Forms DisabledFormComponents renders 1`] = `
   </h3>
   <p>
     Disable entire fieldsets by adding 
-    <Attribute
-      name="disabled"
+    <CodeTags
+      code="disabled"
+      type="secondary"
     />
      to the fieldset element
   </p>
@@ -145,8 +147,9 @@ exports[`Documentation: Forms FormGrid form prevents default 1`] = `
   </h2>
   <p>
     You can use the grid system to customize how forms are displayed. Just wrap your form elements in a row container to have two or more input elements next to eachother horizontally. Remember to add 
-    <Property
-      value=".col-{your_size}"
+    <CodeTags
+      code=".col-{your_size}"
+      type="secondary"
     />
      to the forms.
   </p>
@@ -221,8 +224,9 @@ exports[`Documentation: Forms FormGrid renders 1`] = `
   </h2>
   <p>
     You can use the grid system to customize how forms are displayed. Just wrap your form elements in a row container to have two or more input elements next to eachother horizontally. Remember to add 
-    <Property
-      value=".col-{your_size}"
+    <CodeTags
+      code=".col-{your_size}"
+      type="secondary"
     />
      to the forms.
   </p>
@@ -318,47 +322,35 @@ exports[`Documentation: Forms Overview form prevents default 1`] = `
   </h2>
   <p>
     Use 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;input&gt;
-    </PrismCode>
+    <CodeTags
+      code="<input>"
+      type="primary"
+    />
      in combination with 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;form-group&gt;
-    </PrismCode>
+    <CodeTags
+      code="<form-group>"
+      type="primary"
+    />
     s and/or 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;form&gt;
-    </PrismCode>
+    <CodeTags
+      code="<form>"
+      type="primary"
+    />
     s to show a collection of related inputs. 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;form-group&gt;
-    </PrismCode>
+    <CodeTags
+      code="<form-group>"
+      type="primary"
+    />
     s can contain more than just an input, like a 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;label&gt;
-    </PrismCode>
+    <CodeTags
+      code="<label>"
+      type="primary"
+    />
      or
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;help-block&gt;
-    </PrismCode>
+    <CodeTags
+      code="<help-block>"
+      type="primary"
+    />
     s.
   </p>
   <ComponentPreview
@@ -424,47 +416,35 @@ exports[`Documentation: Forms Overview renders 1`] = `
   </h2>
   <p>
     Use 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;input&gt;
-    </PrismCode>
+    <CodeTags
+      code="<input>"
+      type="primary"
+    />
      in combination with 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;form-group&gt;
-    </PrismCode>
+    <CodeTags
+      code="<form-group>"
+      type="primary"
+    />
     s and/or 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;form&gt;
-    </PrismCode>
+    <CodeTags
+      code="<form>"
+      type="primary"
+    />
     s to show a collection of related inputs. 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;form-group&gt;
-    </PrismCode>
+    <CodeTags
+      code="<form-group>"
+      type="primary"
+    />
     s can contain more than just an input, like a 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;label&gt;
-    </PrismCode>
+    <CodeTags
+      code="<label>"
+      type="primary"
+    />
      or
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;help-block&gt;
-    </PrismCode>
+    <CodeTags
+      code="<help-block>"
+      type="primary"
+    />
     s.
   </p>
   <ComponentPreview
@@ -570,31 +550,37 @@ exports[`Documentation: Forms RangeSlider renders 1`] = `
   </p>
   <p>
     Currently there are three different supported colors for the slider: 
-    <Property
-      value=".rangeslider-brand"
+    <CodeTags
+      code=".rangeslider-brand"
+      type="secondary"
     />
     , 
-    <Property
-      value=".rangeslider-default"
+    <CodeTags
+      code=".rangeslider-default"
+      type="secondary"
     />
      and 
-    <Property
-      value=".rangeslider-neutral"
+    <CodeTags
+      code=".rangeslider-neutral"
+      type="secondary"
     />
     .
   </p>
   <p>
     The Rangeslider currently supports two positions: 
-    <Property
-      value=".label-right"
+    <CodeTags
+      code=".label-right"
+      type="secondary"
     />
      and 
-    <Property
-      value=".label-top"
+    <CodeTags
+      code=".label-top"
+      type="secondary"
     />
     . If no position is given, 
-    <Property
-      value="right"
+    <CodeTags
+      code="right"
+      type="secondary"
     />
      is defaulted.
   </p>
@@ -642,12 +628,10 @@ exports[`Documentation: Forms StaticText renders 1`] = `
   </h2>
   <p>
     To just display static text in forms use a 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;span&gt;
-    </PrismCode>
+    <CodeTags
+      code="<span>"
+      type="primary"
+    />
      inside a form
   </p>
   <ComponentPreview
@@ -814,49 +798,47 @@ exports[`Documentation: Forms Validation renders 1`] = `
   </h2>
   <p>
     To use our validation, start by adding the attribute 
-    <Attribute
-      name="novalidate"
+    <CodeTags
+      code="novalidate"
+      type="secondary"
     />
      to your 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;form&gt;
-    </PrismCode>
+    <CodeTags
+      code="<form>"
+      type="primary"
+    />
      element. If you wish to validate your entire form, add the 
-    <Attribute
-      data={true}
-      name="validate"
+    <CodeTags
+      code="validate"
+      type="secondary"
     />
      attribute to the 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;form&gt;
-    </PrismCode>
+    <CodeTags
+      code="<form>"
+      type="primary"
+    />
      tag, if not add it to the desired 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;input&gt;
-    </PrismCode>
+    <CodeTags
+      code="<input>"
+      type="primary"
+    />
      tags.
   </p>
   <p>
     Validates against 
-    <Attribute
-      name="required"
+    <CodeTags
+      code="required"
+      type="secondary"
     />
      and 
-    <Attribute
-      name="pattern"
+    <CodeTags
+      code="pattern"
+      type="secondary"
     />
     . Using 
-    <Attribute
-      name="pattern"
+    <CodeTags
+      code="pattern"
+      type="secondary"
     />
      overrides default patterns.
   </p>
@@ -898,18 +880,19 @@ exports[`Documentation: Forms Validation renders 1`] = `
   </h3>
   <p>
     To give users validation feedback on each input insert the message in the attributes 
-    <Attribute
-      data={true}
-      name="success"
+    <CodeTags
+      code="success"
+      type="secondary"
     />
      and 
-    <Attribute
-      data={true}
-      name="error"
+    <CodeTags
+      code="error"
+      type="secondary"
     />
      in the 
-    <Attribute
-      value=".help-block"
+    <CodeTags
+      code=".help-block"
+      type="secondary"
     />
      element. To display an asterisk you have to include a label with your input element.
   </p>
@@ -950,17 +933,15 @@ exports[`Documentation: Forms Validation renders 1`] = `
   </h3>
   <p>
     You can also dynamically disable the submit button by adding 
-    <Attribute
-      data={true}
-      name="disable-invalid"
+    <CodeTags
+      code="disable-invalid"
+      type="secondary"
     />
      to the 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;button type="submit"&gt;
-    </PrismCode>
+    <CodeTags
+      code="<button type=\\"submit\\">"
+      type="primary"
+    />
      element.
   </p>
   <p>
@@ -968,17 +949,15 @@ exports[`Documentation: Forms Validation renders 1`] = `
       NOTE:
     </b>
      For this to work you also need the 
-    <Attribute
-      data={true}
-      name="validate"
+    <CodeTags
+      code="validate"
+      type="secondary"
     />
      attribute to be present in the 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;form&gt;
-    </PrismCode>
+    <CodeTags
+      code="<form>"
+      type="primary"
+    />
      tag.
   </p>
   <ComponentPreview

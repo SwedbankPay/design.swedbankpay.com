@@ -83,8 +83,9 @@ exports[`Components: ActionLink ActionLinkNewTab renders 1`] = `
   </h2>
   <p>
     An Action Link used in cases where a new tab is supposed to open is provided. Use 
-    <Property
-      value=".action-link-new-tab"
+    <CodeTags
+      code=".action-link-new-tab"
+      type="secondary"
     />
      when it is known that the target will open in a new tab. 
   </p>
@@ -123,8 +124,9 @@ exports[`Components: ActionLink ActionLinkSmallText renders 1`] = `
   </ComponentPreview>
   <p>
     Use 
-    <Property
-      value=".action-link-multiline"
+    <CodeTags
+      code=".action-link-multiline"
+      type="secondary"
     />
      for the Action Link with the texts on different lines.
   </p>

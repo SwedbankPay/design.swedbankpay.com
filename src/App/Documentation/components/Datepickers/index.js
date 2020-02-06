@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { NavHashLink as NavLink } from "react-router-hash-link";
 
-import { ComponentPreview, Attribute, Property, DocContainer, JavascriptDocs } from "@docutils";
+import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import { Datepicker as DatepickerComponent } from "@components/FormComponents";
 import Alert from "@components/Alert";
+import CodeTags from "@components/CodeTags";
 
 const { datepicker } = window.dg;
 
@@ -22,7 +23,7 @@ const SimpleDatepicker = () => (
     <>
         <h2 id="simple-datepicker">Simple datepicker</h2>
         <p>
-            A basic datepicker can be made by applying the attribute <Attribute data name="datepicker" /> to an input element inside a <Property value=".form-group" />.
+            A basic datepicker can be made by applying the attribute <CodeTags type="secondary" code="data-datepicker" /> to an input element inside a <CodeTags type="secondary" code=".form-group" />.
             The basic datepicker has a read-only input field.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
@@ -40,8 +41,8 @@ const AllowInput = () => (
     <>
         <h2 id="allow-input">Allow input</h2>
         <p>
-            By default datepickers do not allow input but you can use <Attribute data name="datepicker-allowinput" />. When
-            you allow input then the given date has to match the datepicker format (<Attribute value="iso8601"/> if you have not specified a format).
+            By default datepickers do not allow input but you can use <CodeTags type="secondary" code="data-datepicker-allowinput" />. When
+            you allow input then the given date has to match the datepicker format (<CodeTags type="secondary" code="iso8601"/> if you have not specified a format).
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent
@@ -58,7 +59,7 @@ const AllowInput = () => (
 const InitialValue = () => (
     <>
         <h2 id="initial-value">Initial value</h2>
-        <p>If you want to set an initial value for your datepicker use <Attribute data value="{your-date}" name="datepicker-value" />.</p>
+        <p>If you want to set an initial value for your datepicker use <CodeTags type="secondary" code={"data-datepicker-value=\"{your-date}\""} />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent
                 value="1972-12-28"
@@ -75,7 +76,7 @@ const HumanReadable = () => (
     <>
         <h2 id="human-readable">Human readable date</h2>
         <p>
-            If you wish to make the date more readable to humans you can add <Attribute data value="true" name="datepicker-fulldate" />
+            If you wish to make the date more readable to humans you can add <CodeTags type="secondary" code={"data-datepicker-fulldate=\"true\""} />
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent
@@ -94,8 +95,8 @@ const CustomFormat = () => (
     <>
         <h2 id="custom-format">Custom format</h2>
         <p>
-            To use a custom format include <Attribute data name="datepicker-format" value="[nb|sv|da|fi|en|iso8601(default)]" />. If no
-            format is provided then datepicker will default to <Attribute value="iso8601" />. Same behaviour applies if you try to set an invalid date.
+            To use a custom format include <CodeTags type="secondary" code={"data-datepicker-format=\"[nb|sv|da|fi|en|iso8601(default)]\""} />. If no
+            format is provided then datepicker will default to <CodeTags type="secondary" code="iso8601" />. Same behaviour applies if you try to set an invalid date.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent
@@ -154,8 +155,8 @@ const IncludeTime = () => (
     <>
         <h2 id="include-time">Include time</h2>
         <p>
-            Adding time to your datepicker is as easy as using <Attribute data name="datepicker-time" value="true" />. If you wish to set
-            a default time for the time picker just include it in the <Attribute data name="datepicker-value" /> attribute.
+            Adding time to your datepicker is as easy as using <CodeTags type="secondary" code={"data-datepicker-time=\"true\" "} />. If you wish to set
+            a default time for the time picker just include it in the <CodeTags type="secondary" code="data-datepicker-value" /> attribute.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent
@@ -174,7 +175,7 @@ const IncludeTime = () => (
 const ShowingMultipleMonths = () => (
     <>
         <h2 id="showing-multiple-months">Showing multiple months</h2>
-        <p>If you need to show more than one month in your date picker use the attribute <Attribute data name="datepicker-months" value="{number}" />.</p>
+        <p>If you need to show more than one month in your date picker use the attribute <CodeTags type="secondary" code={"data-datepicker-months=\"{number}\""} />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent
                 months="2"
@@ -191,7 +192,7 @@ const ValidDates = () => (
     <>
         <h2 id="valid-dates">Valid dates</h2>
         <p>
-            You can set a range of available dates to select from by using <Attribute data name="datepicker-min" /> and <Attribute data name="datepicker-max" />.
+            You can set a range of available dates to select from by using <CodeTags type="secondary" code="data-datepicker-min" /> and <CodeTags type="secondary" code="data-datepicker-max" />.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent
@@ -212,7 +213,7 @@ const DateRange = () => (
     <>
         <h2 id="date-range">Date range</h2>
         <p>
-            You can make it possible to select a range of dates with <Attribute data name="datepicker-mode" value="range" />.
+            You can make it possible to select a range of dates with <CodeTags type="secondary" code={"data-datepicker-mode=\"range\""} />.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent
@@ -232,7 +233,7 @@ const MultipleDates = () => (
     <>
         <h2 id="multiple-dates">Multiple dates</h2>
         <p>
-            Set mode to <Attribute value="multiple" /> for multiple date selection.
+            Set <CodeTags type="secondary" code="data-datepicker-mode" /> to <CodeTags type="secondary" code="multiple" /> for multiple date selection.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent
@@ -248,7 +249,7 @@ const MultipleDates = () => (
         <Alert type="warning">
             <h5>Max number of dates</h5>
             <p>
-                The <Attribute value="multiple" /> variation of datepicker does not have an upper limit of dates. Use <NavLink to="#date-range">range</NavLink> if
+                The <CodeTags type="secondary" code="multiple" /> variation of datepicker does not have an upper limit of dates. Use <NavLink to="#date-range">range</NavLink> if
                 you want to select a continuous range of dates.
             </p>
         </Alert>
@@ -258,7 +259,7 @@ const MultipleDates = () => (
 const Options = () => (
     <>
         <h2 id="available-options">Available options</h2>
-        <p>Options available through <Attribute data name="datepicker" />...</p> Keep in mind that setting any of these values will render them true, so setting an attribute to <Attribute value="false" /> will still render it true.
+        <p>Options available through <CodeTags type="secondary" code="data-datepicker" />...</p> Keep in mind that setting any of these values will render them true, so setting an attribute to <CodeTags type="secondary" code="false" /> will still render it true.
         <table className="table table-striped">
             <thead>
                 <tr>
@@ -270,10 +271,10 @@ const Options = () => (
             <tbody>
                 <tr>
                     <td>
-                        <Attribute data name="datepicker-value" />
+                        <CodeTags type="secondary" code="data-datepicker-value" />
                     </td>
                     <td>
-                        <Attribute value="null" />
+                        <CodeTags type="secondary" code="null" />
                     </td>
                     <td>
                         Value used to initialize calendar. Set this value with the same format currently set for the datepicker (including time if you have enabled that).
@@ -281,7 +282,7 @@ const Options = () => (
                 </tr>
                 <tr>
                     <td>
-                        <Attribute data name="datepicker-allowinput" />
+                        <CodeTags type="secondary" code="data-datepicker-allowinput" />
                     </td>
                     <td></td>
                     <td>
@@ -290,10 +291,10 @@ const Options = () => (
                 </tr>
                 <tr>
                     <td>
-                        <Attribute data name="datepicker-format" />
+                        <CodeTags type="secondary" code="data-datepicker-format" />
                     </td>
                     <td>
-                        <Attribute value="iso8601" />
+                        <CodeTags type="secondary" code="iso8601" />
                     </td>
                     <td>
                         <p>
@@ -303,21 +304,21 @@ const Options = () => (
                             The following options are available:
                         </p>
                         <ul className="list">
-                            <li className="mb-sm"><Attribute value="nb" />: DD.MM.YYYY</li>
-                            <li className="mb-sm"><Attribute value="sv" />: YYYY-MM-DD</li>
-                            <li className="mb-sm"><Attribute value="da" />: DD.MM.YYYY</li>
-                            <li className="mb-sm"><Attribute value="fi" />: DD.MM.YYYY</li>
-                            <li className="mb-sm"><Attribute value="en" />: DD/MM/YYYY</li>
-                            <li className="mb-sm"><Attribute value="iso8601" />: YYYY-MM-DD (default)</li>
+                            <li className="mb-sm"><CodeTags type="secondary" code="nb" />: DD.MM.YYYY</li>
+                            <li className="mb-sm"><CodeTags type="secondary" code="sv" />: YYYY-MM-DD</li>
+                            <li className="mb-sm"><CodeTags type="secondary" code="da" />: DD.MM.YYYY</li>
+                            <li className="mb-sm"><CodeTags type="secondary" code="fi" />: DD.MM.YYYY</li>
+                            <li className="mb-sm"><CodeTags type="secondary" code="en" />: DD/MM/YYYY</li>
+                            <li className="mb-sm"><CodeTags type="secondary" code="iso8601" />: YYYY-MM-DD (default)</li>
                         </ul>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <Attribute data name="datepicker-time" />
+                        <CodeTags type="secondary" code="data-datepicker-time" />
                     </td>
                     <td>
-                        <Attribute value="false" />
+                        <CodeTags type="secondary" code="false" />
                     </td>
                     <td>
                         If the calendar shows the current time and allows you to change it using a dropdown.
@@ -325,10 +326,10 @@ const Options = () => (
                 </tr>
                 <tr>
                     <td>
-                        <Attribute data name="datepicker-months" />
+                        <CodeTags type="secondary" code="data-datepicker-months" />
                     </td>
                     <td>
-                        <Attribute value="1" />
+                        <CodeTags type="secondary" code="1" />
                     </td>
                     <td>
                         Number of months to display in the datepicker.
@@ -336,10 +337,10 @@ const Options = () => (
                 </tr>
                 <tr>
                     <td>
-                        <Attribute data name="datepicker-min" />
+                        <CodeTags type="secondary" code="data-datepicker-min" />
                     </td>
                     <td>
-                        <Attribute value="null" />
+                        <CodeTags type="secondary" code="null" />
                     </td>
                     <td>
                         Disallow dates before min.
@@ -347,10 +348,10 @@ const Options = () => (
                 </tr>
                 <tr>
                     <td>
-                        <Attribute data name="datepicker-max" />
+                        <CodeTags type="secondary" code="data-datepicker-max" />
                     </td>
                     <td>
-                        <Attribute value="null" />
+                        <CodeTags type="secondary" code="null" />
                     </td>
                     <td>
                         Disallow dates past max.
@@ -358,7 +359,7 @@ const Options = () => (
                 </tr>
                 <tr>
                     <td>
-                        <Attribute data name="datepicker-altinput" />
+                        <CodeTags type="secondary" code="data-datepicker-altinput" />
                     </td>
                     <td></td>
                     <td>
@@ -367,17 +368,17 @@ const Options = () => (
                 </tr>
                 <tr>
                     <td>
-                        <Attribute data name="datepicker-mode" />
+                        <CodeTags type="secondary" code="data-datepicker-mode" />
                     </td>
                     <td>
-                        <Attribute value="single" />
+                        <CodeTags type="secondary" code="single" />
                     </td>
                     <td>
                         Different variations of date selection. Available options are:
                         <ul className="list">
-                            <li className="mb-sm"><Attribute value="single" />User can select one date</li>
-                            <li className="mb-sm"><Attribute value="multiple" />User can select multiple dates</li>
-                            <li className="mb-sm"><Attribute value="range" />User can select a range of continuous dates</li>
+                            <li className="mb-sm"><CodeTags type="secondary" code="single" />User can select one date</li>
+                            <li className="mb-sm"><CodeTags type="secondary" code="multiple" />User can select multiple dates</li>
+                            <li className="mb-sm"><CodeTags type="secondary" code="range" />User can select a range of continuous dates</li>
                         </ul>
                     </td>
                 </tr>

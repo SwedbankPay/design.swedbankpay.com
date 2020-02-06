@@ -31,37 +31,37 @@ exports[`Core: Favicons Usage renders 1`] = `
   </h2>
   <p>
     To use our favicons download the zip-file below and extract it to the root of your build-folder. Insert the code below in the 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;head&gt;
-    </PrismCode>
+    <CodeTags
+      code="<head>"
+      type="primary"
+    />
      tag of your html documents and you are ready to go.
   </p>
   <p>
     You should also rename the 
-    <Attribute
-      name="content"
+    <CodeTags
+      code="content"
+      type="secondary"
     />
      of the 
-    <Attribute
-      value="apple-mobile-web-app-title"
+    <CodeTags
+      code="apple-mobile-web-app-title"
+      type="secondary"
     />
      and 
-    <Attribute
-      value="application-name"
+    <CodeTags
+      code="application-name"
+      type="secondary"
     />
      
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;meta&gt;
-    </PrismCode>
+    <CodeTags
+      code="<meta>"
+      type="primary"
+    />
      tags to reflect the title of your project. Make sure to also do this in the 
-    <Property
-      value="manifest.json"
+    <CodeTags
+      code="manifest.json"
+      type="secondary"
     />
      file in the icons folder.
   </p>

@@ -9,30 +9,25 @@ exports[`Documentation: Pagination DefaultPagination renders 1`] = `
   </h2>
   <p>
     Default pagination shows the pages as numbers. Add 
-    <Property
-      value=".pagination"
+    <CodeTags
+      code=".pagination"
+      type="secondary"
     />
      to an 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;ul&gt;
-    </PrismCode>
+    <CodeTags
+      code="<ul>"
+      type="primary"
+    />
      containing
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;li&gt;
-    </PrismCode>
+    <CodeTags
+      code="<li>"
+      type="primary"
+    />
     . If you wish to present the user with navigational arrows you need to add those as 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;li&gt;
-    </PrismCode>
+    <CodeTags
+      code="<li>"
+      type="primary"
+    />
      elements.
   </p>
   <ComponentPreview
@@ -86,16 +81,15 @@ exports[`Documentation: Pagination PaginationBullets renders 1`] = `
   </h2>
   <p>
     If you want to show bullets instead of numbers you can add 
-    <Property
-      value=".pagination-bullets"
+    <CodeTags
+      code=".pagination-bullets"
+      type="secondary"
     />
      to your 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;ul&gt;
-    </PrismCode>
+    <CodeTags
+      code="<ul>"
+      type="primary"
+    />
     .
   </p>
   <ComponentPreview

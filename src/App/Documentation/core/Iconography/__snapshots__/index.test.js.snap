@@ -9,12 +9,14 @@ exports[`Core: Iconography Flags renders 1`] = `
   </h2>
   <p>
     To use the flag icons add the classes 
-    <Property
-      value=".flag-icon"
+    <CodeTags
+      code=".flag-icon"
+      type="secondary"
     />
      and 
-    <Property
-      value=".flag-icon-xx"
+    <CodeTags
+      code=".flag-icon-xx"
+      type="secondary"
     />
      (where xx is the 
     <a
@@ -23,12 +25,10 @@ exports[`Core: Iconography Flags renders 1`] = `
       ISO 3166-1-alpha-2 code
     </a>
      of a country) to an empty 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;i&gt;
-    </PrismCode>
+    <CodeTags
+      code="<i>"
+      type="primary"
+    />
     .
   </p>
   <ComponentPreview
@@ -100,8 +100,9 @@ exports[`Core: Iconography Flags renders 1`] = `
   </h3>
   <p>
     To use a squared version of a flag add the class 
-    <Property
-      value=".flag-icon-squared"
+    <CodeTags
+      code=".flag-icon-squared"
+      type="secondary"
     />
     .
   </p>
@@ -179,28 +180,34 @@ exports[`Core: Iconography Flags renders 1`] = `
   </h3>
   <p>
     Flags support sizes 
-    <Property
-      value=".payment-icon-tiny"
+    <CodeTags
+      code=".payment-icon-tiny"
+      type="secondary"
     />
     , 
-    <Property
-      value=".payment-icon-small"
+    <CodeTags
+      code=".payment-icon-small"
+      type="secondary"
     />
     , 
-    <Property
-      value=".payment-icon-medium"
+    <CodeTags
+      code=".payment-icon-medium"
+      type="secondary"
     />
     , 
-    <Property
-      value=".payment-icon-large"
+    <CodeTags
+      code=".payment-icon-large"
+      type="secondary"
     />
      and 
-    <Property
-      value=".payment-icon-huge"
+    <CodeTags
+      code=".payment-icon-huge"
+      type="secondary"
     />
     . If no size is provided 
-    <Property
-      value=".payment-icon-tiny"
+    <CodeTags
+      code=".payment-icon-tiny"
+      type="secondary"
     />
      is defaulted.
   </p>
@@ -375,12 +382,10 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
   </p>
   <p>
     To use an icon, provide the following markup: 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;i class="material-icons"&gt;{icon_name}&lt;/i&gt;
-    </PrismCode>
+    <CodeTags
+      code="<i class=\\"material-icons\\">{icon_name}</i>"
+      type="primary"
+    />
     .
   </p>
   <ComponentPreview
@@ -460,20 +465,24 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
   </h3>
   <p>
     You can modify the size of the material icons by adding one of the size classes: 
-    <Property
-      value="material-icons-tiny"
+    <CodeTags
+      code="material-icons-tiny"
+      type="secondary"
     />
     , 
-    <Property
-      value="material-icons-small"
+    <CodeTags
+      code="material-icons-small"
+      type="secondary"
     />
     , 
-    <Property
-      value="material-icons-medium"
+    <CodeTags
+      code="material-icons-medium"
+      type="secondary"
     />
      or 
-    <Property
-      value="material-icons-large"
+    <CodeTags
+      code="material-icons-large"
+      type="secondary"
     />
     .
   </p>
@@ -553,12 +562,10 @@ exports[`Core: Iconography PaymentIcons onClick prevents default 1`] = `
   </h2>
   <p>
     To use an icon, provide the following markup: 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;i class="payment-icon payment-icon-{icon_name}"&gt;&lt;/i&gt;
-    </PrismCode>
+    <CodeTags
+      code="<i class=\\"payment-icon payment-icon-{icon_name}\\"></i>"
+      type="primary"
+    />
     .
   </p>
   <ComponentPreview
@@ -692,24 +699,29 @@ exports[`Core: Iconography PaymentIcons onClick prevents default 1`] = `
   </h3>
   <p>
     Different sizes are available by adding 
-    <Property
-      value=".payment-icon-small"
+    <CodeTags
+      code=".payment-icon-small"
+      type="secondary"
     />
     , 
-    <Property
-      value=".payment-icon-medium"
+    <CodeTags
+      code=".payment-icon-medium"
+      type="secondary"
     />
     , 
-    <Property
-      value=".payment-icon-large"
+    <CodeTags
+      code=".payment-icon-large"
+      type="secondary"
     />
      and 
-    <Property
-      value=".payment-icon-huge"
+    <CodeTags
+      code=".payment-icon-huge"
+      type="secondary"
     />
     . If no size is provided 
-    <Property
-      value=".payment-icon-medium"
+    <CodeTags
+      code=".payment-icon-medium"
+      type="secondary"
     />
      is defaulted.
   </p>
@@ -790,8 +802,9 @@ exports[`Core: Iconography PaymentIcons onClick prevents default 1`] = `
   </h3>
   <p>
     Typical usage would be in for instance an 
-    <Property
-      value=".item-list"
+    <CodeTags
+      code=".item-list"
+      type="secondary"
     />
     .
   </p>
@@ -963,12 +976,10 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
   </h2>
   <p>
     To use an icon, provide the following markup: 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;i class="payment-icon payment-icon-{icon_name}"&gt;&lt;/i&gt;
-    </PrismCode>
+    <CodeTags
+      code="<i class=\\"payment-icon payment-icon-{icon_name}\\"></i>"
+      type="primary"
+    />
     .
   </p>
   <ComponentPreview
@@ -1102,24 +1113,29 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
   </h3>
   <p>
     Different sizes are available by adding 
-    <Property
-      value=".payment-icon-small"
+    <CodeTags
+      code=".payment-icon-small"
+      type="secondary"
     />
     , 
-    <Property
-      value=".payment-icon-medium"
+    <CodeTags
+      code=".payment-icon-medium"
+      type="secondary"
     />
     , 
-    <Property
-      value=".payment-icon-large"
+    <CodeTags
+      code=".payment-icon-large"
+      type="secondary"
     />
      and 
-    <Property
-      value=".payment-icon-huge"
+    <CodeTags
+      code=".payment-icon-huge"
+      type="secondary"
     />
     . If no size is provided 
-    <Property
-      value=".payment-icon-medium"
+    <CodeTags
+      code=".payment-icon-medium"
+      type="secondary"
     />
      is defaulted.
   </p>
@@ -1200,8 +1216,9 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
   </h3>
   <p>
     Typical usage would be in for instance an 
-    <Property
-      value=".item-list"
+    <CodeTags
+      code=".item-list"
+      type="secondary"
     />
     .
   </p>

@@ -9,8 +9,9 @@ exports[`Utilities: Colors BackgroundColors renders 1`] = `
   </h2>
   <p>
     To alter the background-color of an element, add the class 
-    <Property
-      value="background-{name}"
+    <CodeTags
+      code="background-{name}"
+      type="secondary"
     />
     .
   </p>
@@ -75,8 +76,9 @@ exports[`Utilities: Colors TextColors renders 1`] = `
   </h2>
   <p>
     To use a color simply prepend 
-    <Property
-      value=".text-{name}"
+    <CodeTags
+      code=".text-{name}"
+      type="secondary"
     />
     .
   </p>
@@ -133,21 +135,21 @@ exports[`Utilities: Colors TextColors renders 1`] = `
   </ComponentPreview>
   <h3>
     With 
-    <Property
-      value=".text-muted"
+    <CodeTags
+      code=".text-muted"
+      type="secondary"
     />
   </h3>
   <p>
     To get a muted effect on the color you are using, append a 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;span&gt;
-    </PrismCode>
+    <CodeTags
+      code="<span>"
+      type="primary"
+    />
     -element with the class 
-    <Property
-      value=".text-muted"
+    <CodeTags
+      code=".text-muted"
+      type="secondary"
     />
      to the desired element.
   </p>

@@ -1,7 +1,8 @@
 import React from "react";
 
-import { ComponentPreview, DocContainer, Property } from "@docutils";
+import { ComponentPreview, DocContainer } from "@docutils";
 import ActionLinkComponent from "@components/ActionLink";
+import CodeTags from "@components/CodeTags";
 
 const Overview = () => (
     <>
@@ -35,7 +36,7 @@ const ActionLinkSmallText = () => (
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ActionLinkComponent linkText="My link" smallText="This link directs to my page"/>
         </ComponentPreview>
-        <p>Use <Property value=".action-link-multiline"/> for the Action Link with the texts on different lines.</p>
+        <p>Use <CodeTags type="secondary" code=".action-link-multiline"/> for the Action Link with the texts on different lines.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ActionLinkComponent linkText="My link" smallText="This link directs to my page" multiline={true} />
         </ComponentPreview>
@@ -58,7 +59,7 @@ const ActionLinkBadgeSmallText = () => (
 const ActionLinkNewTab = () => (
     <>
         <h2 id="action-link-new-tab">Action Link that opens a new tab</h2>
-        <p>An Action Link used in cases where a new tab is supposed to open is provided. Use <Property value=".action-link-new-tab" /> when it is known that the target will open in a new tab. </p>
+        <p>An Action Link used in cases where a new tab is supposed to open is provided. Use <CodeTags type="secondary" code=".action-link-new-tab" /> when it is known that the target will open in a new tab. </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ActionLinkComponent linkText="My link" newTab={true} />
         </ComponentPreview>

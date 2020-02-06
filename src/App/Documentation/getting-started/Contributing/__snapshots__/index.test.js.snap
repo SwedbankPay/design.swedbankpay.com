@@ -9,8 +9,9 @@ exports[`GettingStarted: Contributing Add Component To Routes renders 1`] = `
   </h2>
   <p>
     In 
-    <Property
-      value="./src/App/routes/docs.js"
+    <CodeTags
+      code="./src/App/routes/docs.js"
+      type="secondary"
     />
      under the components object add the following:
   </p>
@@ -43,14 +44,16 @@ exports[`GettingStarted: Contributing Add Component To Routes renders 1`] = `
   </ComponentPreview>
   <p>
     You will now be able to go to the route you provided to preview your component. Run 
-    <Property
-      value="npm start"
+    <CodeTags
+      code="npm start"
+      type="secondary"
     />
      if you haven
     '
     t already done so, and navigate to 
-    <Property
-      value="localhost:3000/docs/components/my-example-documentation-component"
+    <CodeTags
+      code="localhost:3000/docs/components/my-example-documentation-component"
+      type="secondary"
     />
      to see your component in action.
   </p>
@@ -68,12 +71,14 @@ exports[`GettingStarted: Contributing Adding JavaScript renders 3`] = `
   </h3>
   <p>
     Create a new file under 
-    <Property
-      value="./src/scripts/main/[MyExampleComponent]/"
+    <CodeTags
+      code="./src/scripts/main/[MyExampleComponent]/"
+      type="secondary"
     />
      for your component, name it 
-    <Property
-      value="index.js"
+    <CodeTags
+      code="index.js"
+      type="secondary"
     />
     :
   </p>
@@ -93,8 +98,9 @@ export default MyExampleComponent;
   </ComponentPreview>
   <p>
     Note: All essential functionality for your component needs to be called within the 
-    <Property
-      value="init"
+    <CodeTags
+      code="init"
+      type="secondary"
     />
      method.
   </p>
@@ -108,8 +114,9 @@ exports[`GettingStarted: Contributing Adding JavaScript renders 4`] = `
   </h3>
   <p>
     Open 
-    <Property
-      value="./src/scripts/main/index.js"
+    <CodeTags
+      code="./src/scripts/main/index.js"
+      type="secondary"
     />
      and add your component:
   </p>
@@ -140,14 +147,16 @@ exports[`GettingStarted: Contributing Adding JavaScript renders 5`] = `
   </h2>
   <p>
     Considering the documentation is built in react your documentation component will load after 
-    <Property
-      value="scripts"
+    <CodeTags
+      code="scripts"
+      type="secondary"
     />
      runs it
     '
     s 
-    <Property
-      value="initAll"
+    <CodeTags
+      code="initAll"
+      type="secondary"
     />
      method, you will need to run your component
     '
@@ -155,8 +164,9 @@ exports[`GettingStarted: Contributing Adding JavaScript renders 5`] = `
   </p>
   <p>
     You can do this by slightly modifying the 
-    <Property
-      value="MyExampleDocumentationComponent"
+    <CodeTags
+      code="MyExampleDocumentationComponent"
+      type="secondary"
     />
     :
   </p>
@@ -204,8 +214,9 @@ exports[`GettingStarted: Contributing Adding JavaScript renders 6`] = `
   </h2>
   <p>
     If your component needs javascript to run, you will need to add the javascript to the 
-    <Property
-      value="scripts"
+    <CodeTags
+      code="scripts"
+      type="secondary"
     />
   </p>
   <CreateAScriptFile />
@@ -225,8 +236,9 @@ exports[`GettingStarted: Contributing Adding Styles renders 3`] = `
   </h3>
   <p>
     To add custom variables to your component modify 
-    <Property
-      value="./src/less/_variables.less"
+    <CodeTags
+      code="./src/less/_variables.less"
+      type="secondary"
     />
     , and add a section for your component. Add it alphabetically and update the table of contents.
   </p>
@@ -263,39 +275,46 @@ exports[`GettingStarted: Contributing Adding Styles renders 6`] = `
   </h2>
   <p>
     To add styling for your component create a new file in 
-    <Property
-      value="./src/less/components/"
+    <CodeTags
+      code="./src/less/components/"
+      type="secondary"
     />
     , name it 
-    <Property
-      value="my-example-component.less"
+    <CodeTags
+      code="my-example-component.less"
+      type="secondary"
     />
     .
   </p>
   <CreatingVariables />
   <p>
     The style for 
-    <Property
-      value="MyExampleComponent"
+    <CodeTags
+      code="MyExampleComponent"
+      type="secondary"
     />
      should now be included properly, and you should see changes immediately while running dev.
   </p>
   <p>
     When writing styles for your component, try to use 
-    <Property
-      value="rem"
+    <CodeTags
+      code="rem"
+      type="secondary"
     />
      (
-    <Property
-      value="1rem"
+    <CodeTags
+      code="1rem"
+      type="secondary"
     />
      = ~
-    <Property
-      value="16px"
+    <CodeTags
+      code="16px"
+      type="secondary"
     />
     ) and the predefined variables (only if it makes sense of course) as much as possible. And follow the linting rules set by 
-    <Property
-      value="./.stylelintrc"
+    <CodeTags
+      code="./.stylelintrc"
+      type="secondary"
     />
     .
   </p>
@@ -311,12 +330,14 @@ exports[`GettingStarted: Contributing Create A Documentation Page renders 1`] = 
   </h2>
   <p>
     Create a new file under 
-    <Property
-      value="./src/App/Documentation/Components/[MyExampleDocumentationComponent]/"
+    <CodeTags
+      code="./src/App/Documentation/Components/[MyExampleDocumentationComponent]/"
+      type="secondary"
     />
      for your component, call it 
-    <Property
-      value="index.js"
+    <CodeTags
+      code="index.js"
+      type="secondary"
     />
     :
   </p>
@@ -343,46 +364,48 @@ export default MyExampleDocumentationComponent;
   </ComponentPreview>
   <p>
     Use the custom 
-    <Property
-      value="ComponentPreview"
+    <CodeTags
+      code="ComponentPreview"
+      type="secondary"
     />
      component to preview your component. It has several props, for this example we are going to be using 
-    <Property
-      value="language"
+    <CodeTags
+      code="language"
+      type="secondary"
     />
     , 
-    <Property
-      value="showCasePanel"
+    <CodeTags
+      code="showCasePanel"
+      type="secondary"
     />
      and 
-    <Property
-      value="codeFigure"
+    <CodeTags
+      code="codeFigure"
+      type="secondary"
     />
     .
   </p>
   <p>
     We are also using the 
-    <Property
-      value="DocContainer"
+    <CodeTags
+      code="DocContainer"
+      type="secondary"
     />
      component to sentralize the layout of the documentation, pass the 
-    <Property
-      value="docToc"
+    <CodeTags
+      code="docToc"
+      type="secondary"
     />
      prop to add a dynamic table of contents to the documentation of your component. This component scans the provided component for 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;h2&gt;
-    </PrismCode>
+    <CodeTags
+      code="<h2>"
+      type="primary"
+    />
     -tags and creates anchors for easier navigation. Just remember to add an id to the 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;h2&gt;
-    </PrismCode>
+    <CodeTags
+      code="<h2>"
+      type="primary"
+    />
     -tag.
   </p>
 </Fragment>
@@ -397,12 +420,14 @@ exports[`GettingStarted: Contributing Creating Your Component renders 1`] = `
   </h2>
   <p>
     Create a new file under 
-    <Property
-      value="./src/App/components/[MyExampleComponent]/"
+    <CodeTags
+      code="./src/App/components/[MyExampleComponent]/"
+      type="secondary"
     />
      for your component, name it 
-    <Property
-      value="index.js"
+    <CodeTags
+      code="index.js"
+      type="secondary"
     />
     :
   </p>

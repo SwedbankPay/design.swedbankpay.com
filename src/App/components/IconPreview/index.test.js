@@ -101,7 +101,7 @@ describe("Component: IconPreview - ", () => {
         expect(wrapper.contains(
             <div className="icon-preview">
                 <i className="payment-icon payment-icon-amex"></i>
-                <code className="token property p-0 mt-2">amex</code>
+                <code className="code-tags code-tags-secondary mt-2">amex</code>
             </div>
         )).toEqual(true);
     });
@@ -113,7 +113,7 @@ describe("Component: IconPreview - ", () => {
         expect(wrapper.contains(
             <div className="icon-preview">
                 <i className="material-icons material-icons-large">android</i>
-                <code className="token property p-0 mt-2">large</code>
+                <code className="code-tags code-tags-secondary mt-2">large</code>
             </div>
         )).toEqual(true);
     });

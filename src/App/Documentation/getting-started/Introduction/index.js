@@ -1,7 +1,7 @@
 import React from "react";
-import PrismCode from "react-prism";
 
 import { ComponentPreview, DocContainer } from "@docutils";
+import CodeTags from "@components/CodeTags";
 
 const BASENAME = process.env.basename;
 const brand = process.env.brand;
@@ -19,7 +19,7 @@ const QuickStart = () => (
 const Css = () => (
     <>
         <h2 id="css">CSS</h2>
-        <p>Copy-paste the stylesheet <PrismCode className="language-html">{"<link>"}</PrismCode> into your <PrismCode className="language-html">{"<head>"}</PrismCode> before all other stylesheets to load our CSS.</p>
+        <p>Copy-paste the stylesheet <CodeTags type="primary" code={"<link>"} /> into your <CodeTags type="primary" code={"<head>"} /> before all other stylesheets to load our CSS.</p>
         <ComponentPreview language="html" codeFigure>
             <link rel="stylesheet" href={styleUrl} />
         </ComponentPreview>
@@ -29,7 +29,8 @@ const Css = () => (
 const JavaScript = () => (
     <>
         <h2 id="javascript">JavaScript</h2>
-        <p>Many of our components require the use of JavaScript to function. Place the following <PrismCode className="language-html">{"<script>"}</PrismCode> tag near the end of your pages, right before the closing <PrismCode className="language-html">{"</body>"}</PrismCode> tag, to enable them.</p>
+        <p>Many of our components require the use of JavaScript to function. Place the following <CodeTags type="primary" code={"<script>"} /> tag near the end of your pages, right before the
+        closing <CodeTags type="primary" code={"</body>"} /> tag, to enable them.</p>
         <ComponentPreview language="html" codeFigure>
             <script src={scriptUrl}></script>
         </ComponentPreview>

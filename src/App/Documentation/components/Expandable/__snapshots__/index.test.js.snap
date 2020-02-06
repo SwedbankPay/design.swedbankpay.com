@@ -9,8 +9,9 @@ exports[`Components: Expandable ExpandableGroup renders 1`] = `
   </h2>
   <p>
     If you use a wrapper with 
-    <Property
-      value=".expandable-group"
+    <CodeTags
+      code=".expandable-group"
+      type="secondary"
     />
      then only one expandable can be open at the same time.
   </p>
@@ -60,12 +61,14 @@ exports[`Components: Expandable Overview renders 1`] = `
   </h2>
   <p>
     The expandable component shows only what is contained in the 
-    <Property
-      value=".expandable-header"
+    <CodeTags
+      code=".expandable-header"
+      type="secondary"
     />
      when it is closed. 
-    <Property
-      value=".expandable-content"
+    <CodeTags
+      code=".expandable-content"
+      type="secondary"
     />
      will be visible in its open state.
   </p>

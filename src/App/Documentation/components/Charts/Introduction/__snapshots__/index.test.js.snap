@@ -2,26 +2,22 @@
 
 exports[`Dashboard: Introduction Css renders 1`] = `
 <Fragment>
-  <h3
+  <h2
     id="css"
   >
     CSS
-  </h3>
+  </h2>
   <p>
     Copy-paste the stylesheet 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;link&gt;
-    </PrismCode>
+    <CodeTags
+      code="<link>"
+      type="primary"
+    />
      into your 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;head&gt;
-    </PrismCode>
+    <CodeTags
+      code="<head>"
+      type="primary"
+    />
      before all other stylesheets to load our CSS.
   </p>
   <ComponentPreview
@@ -42,23 +38,22 @@ exports[`Dashboard: Introduction Css renders 1`] = `
 
 exports[`Dashboard: Introduction JavaScript renders 1`] = `
 <Fragment>
-  <h3
+  <h2
     id="javascript"
   >
     JavaScript
-  </h3>
+  </h2>
   <p>
     The dashboard theme requires a separate script to run properly. So add the dashboard script below the 
-    <Property
-      value="scripts"
+    <CodeTags
+      code="scripts"
+      type="secondary"
     />
      at the bottom of your 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;body&gt;
-    </PrismCode>
+    <CodeTags
+      code="<body>"
+      type="primary"
+    />
      tag like this:
   </p>
   <ComponentPreview
@@ -116,25 +111,22 @@ exports[`Dashboard: Introduction renders 1`] = `
   </p>
   <ul>
     <li>
-      <code
-        className="token string"
-      >
-        "line"
-      </code>
+      <CodeTags
+        code="\\"line\\""
+        type="secondary"
+      />
     </li>
     <li>
-      <code
-        className="token string"
-      >
-        "bar"/"horizontalBar"
-      </code>
+      <CodeTags
+        code="\\"bar\\"/\\"horizontalBar\\""
+        type="secondary"
+      />
     </li>
     <li>
-      <code
-        className="token string"
-      >
-        "pie"/"doughnut"
-      </code>
+      <CodeTags
+        code="\\"pie\\"/\\"doughnut\\""
+        type="secondary"
+      />
     </li>
   </ul>
   <QuickStart />

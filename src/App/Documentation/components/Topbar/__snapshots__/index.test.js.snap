@@ -27,47 +27,42 @@ exports[`Components: Topbar Overview renders 1`] = `
   </p>
   <ul>
     <li>
-      <Property
-        value=".topbar"
+      <CodeTags
+        code=".topbar"
+        type="secondary"
       />
        wrapper.
     </li>
     <li>
       Anchor with class 
-      <Property
-        value=".topbar-logo"
+      <CodeTags
+        code=".topbar-logo"
+        type="secondary"
       />
        to display the logo and make it clickable.
     </li>
   </ul>
   <p>
     With this you get a topbar with the Swedbank Pay logo. In the topbar you can add additional functionality like a menu containing links. To enable this add a 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;button&gt;
-    </PrismCode>
+    <CodeTags
+      code="<button>"
+      type="primary"
+    />
      and a 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;nav&gt;
-    </PrismCode>
+    <CodeTags
+      code="<nav>"
+      type="primary"
+    />
      containing anchors. Remember to include 
-    <Attribute
-      data={true}
-      name="toggle-nav"
-      value="{your_nav_id}"
+    <CodeTags
+      code="toggle-nav=\\"{your_nav_id}\\""
+      type="secondary"
     />
      as a 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;button&gt;
-    </PrismCode>
+    <CodeTags
+      code="<button>"
+      type="primary"
+    />
      attribute to get the menu to appear when the menu-button is clicked.
   </p>
   <ComponentPreview
@@ -114,12 +109,14 @@ exports[`Components: Topbar TopbarPNG renders 1`] = `
   </h2>
   <p>
     A PNG version of the logo can also be used. This is done by appending the class 
-    <Property
-      value=".topbar-logo-png"
+    <CodeTags
+      code=".topbar-logo-png"
+      type="secondary"
     />
      to the anchor with class 
-    <Property
-      value=".topbar-logo"
+    <CodeTags
+      code=".topbar-logo"
+      type="secondary"
     />
     . Only consider using the PNG version when there are issues with using the SVG version.
   </p>

@@ -1,12 +1,13 @@
 import React from "react";
 
-import { ComponentPreview, DocContainer, Property } from "@docutils";
+import { ComponentPreview, DocContainer } from "@docutils";
+import CodeTags from "@components/CodeTags";
 
 const BasicUsage = () => (
     <>
         <h2 id="basic-usage">Basic usage</h2>
         <p>
-            To use a default loader add <Property value=".loader" /> to a div.
+            To use a default loader add <CodeTags type="secondary" code=".loader" /> to a div.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="loader" />
@@ -17,7 +18,7 @@ const BasicUsage = () => (
 const Sizes = () => (
     <>
         <h2 id="sizes">Sizes</h2>
-        <p>In addition to <Property value=".loader" /> you can use <Property value=".loader-sm" /> and <Property value=".loader-lg" /> to decrease or increase the size of the loader.</p>
+        <p>In addition to <CodeTags type="secondary" code=".loader" /> you can use <CodeTags type="secondary" code=".loader-sm" /> and <CodeTags type="secondary" code=".loader-lg" /> to decrease or increase the size of the loader.</p>
         <h3>Small</h3>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="loader loader-sm" />
@@ -33,7 +34,7 @@ const MutedLoader = () => (
     <>
         <h2 id="muted-loader">Muted loader</h2>
         <p>
-            Use class <Property value=".loader-muted" /> to make the loader muted.
+            Use class <CodeTags type="secondary" code=".loader-muted" /> to make the loader muted.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="loader loader-muted" />

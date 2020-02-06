@@ -9,8 +9,9 @@ exports[`Utilities: PageLayout CenteredContent renders 1`] = `
   </h2>
   <p>
     For a centered layout use 
-    <Property
-      value=".container"
+    <CodeTags
+      code=".container"
+      type="secondary"
     />
     , it has built in breakpoints and will switch to full-width if the screen size is small enough (see 
     <Link
@@ -25,12 +26,14 @@ exports[`Utilities: PageLayout CenteredContent renders 1`] = `
       borders
     </Link>
      on the right and left side. To make your topbar fill the page horizontally you will have to wrap it in a 
-    <Property
-      value=".row"
+    <CodeTags
+      code=".row"
+      type="secondary"
     />
      and 
-    <Property
-      value=".container-fluid"
+    <CodeTags
+      code=".container-fluid"
+      type="secondary"
     />
     .
   </p>
@@ -80,16 +83,19 @@ exports[`Utilities: PageLayout FullWidth renders 1`] = `
   </h2>
   <p>
     To use a full width layout use a combination of grid and the 
-    <Property
-      value=".main-content"
+    <CodeTags
+      code=".main-content"
+      type="secondary"
     />
      class. 
-    <Property
-      value=".main-content"
+    <CodeTags
+      code=".main-content"
+      type="secondary"
     />
      has a white background and some padding. For a full width layout use 
-    <Property
-      value=".border-left"
+    <CodeTags
+      code=".border-left"
+      type="secondary"
     />
      to clearly seperate the sidebar and the main content. See 
     <Link
@@ -140,12 +146,14 @@ exports[`Utilities: PageLayout renders 1`] = `
     className="lead"
   >
     Use grid with our 
-    <Property
-      value=".main-content"
+    <CodeTags
+      code=".main-content"
+      type="secondary"
     />
      class to use a variety of page layouts. As we have a mobile first approach we only use 1rem as base padding for our 
-    <Property
-      value=".main-content"
+    <CodeTags
+      code=".main-content"
+      type="secondary"
     />
      class. Use the 
     <Link

@@ -15,11 +15,10 @@ exports[`Components: ActionList Anchorpoints renders 1`] = `
   </h3>
   <p>
     Use class 
-    <code
-      className="token property"
-    >
-      .anchor-top-left
-    </code>
+    <CodeTags
+      code=".anchor-top-left"
+      type="secondary"
+    />
      to anchor action-list button to the top left corner of the menu.
   </p>
   <ComponentPreview
@@ -56,11 +55,10 @@ exports[`Components: ActionList Anchorpoints renders 1`] = `
   </h3>
   <p>
     Use class 
-    <code
-      className="token property"
-    >
-      .anchor-bottom-right
-    </code>
+    <CodeTags
+      code=".anchor-bottom-right"
+      type="secondary"
+    />
      to anchor action-list button to the bottom right corner of the menu.
   </p>
   <ComponentPreview
@@ -97,11 +95,10 @@ exports[`Components: ActionList Anchorpoints renders 1`] = `
   </h3>
   <p>
     Use class 
-    <code
-      className="token property"
-    >
-      .anchor-bottom-left
-    </code>
+    <CodeTags
+      code=".anchor-bottom-left"
+      type="secondary"
+    />
      to anchor action-list button to the bottom left corner of the menu.
   </p>
   <ComponentPreview

@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocContainer, Property, JavascriptDocs } from "@docutils";
+import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import SheetComponent from "@components/Sheet";
+import CodeTags from "@components/CodeTags";
 
 const { sheet } = window.dg;
 
@@ -60,7 +61,7 @@ const RequireAction = () => (
     <>
         <h2 id="require-action">Require action</h2>
         <p>
-            To disable the listener responsible for closing the sheet when a user clicks outside, add <Property value="data-require-action" /> to your Sheet.
+            To disable the listener responsible for closing the sheet when a user clicks outside, add <CodeTags type="secondary" code="data-require-action" /> to your Sheet.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <SheetComponent id="demo-sheet-1" requireAction>

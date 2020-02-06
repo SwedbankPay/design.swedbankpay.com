@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocContainer, Attribute } from "@docutils";
+import { ComponentPreview, DocContainer } from "@docutils";
 import Alert from "@components/Alert";
+import CodeTags from "@components/CodeTags";
 
 const Overview = () => (
     <>
@@ -45,43 +46,43 @@ const Options = () => (
                 <tr>
                     <td>html</td>
                     <td>String</td>
-                    <td><Attribute value={"\"\""} /></td>
+                    <td><CodeTags type="secondary" code={"\"\""} /></td>
                     <td>The HTML content of the Toast.</td>
                 </tr>
                 <tr>
                     <td>type</td>
                     <td>String</td>
-                    <td><Attribute value={"\"\""} /></td>
-                    <td>Premade alert types; <Attribute value="success" />, <Attribute value="neutral" />, <Attribute value="warning" /> and <Attribute value="danger" /> are available.</td>
+                    <td><CodeTags type="secondary" code={"\"\""} /></td>
+                    <td>Premade alert types; <CodeTags type="secondary" code="success" />, <CodeTags type="secondary" code="neutral" />, <CodeTags type="secondary" code="warning" /> and <CodeTags type="secondary" code="danger" /> are available.</td>
                 </tr>
                 <tr>
                     <td>dismissable</td>
                     <td>Boolean</td>
-                    <td><Attribute value="true" /></td>
+                    <td><CodeTags type="secondary" code="true" /></td>
                     <td>Wether or not the alert should be dismissable by the user (close button).</td>
                 </tr>
                 <tr>
                     <td>icon</td>
                     <td>String</td>
-                    <td><Attribute value={"\"\""} /></td>
+                    <td><CodeTags type="secondary" code={"\"\""} /></td>
                     <td>Custom icon for the toast. See <Link to="/docs/core/icons">icons</Link> for more info.</td>
                 </tr>
                 <tr>
                     <td>displayLength</td>
                     <td>Number</td>
-                    <td><Attribute value="4000" /></td>
+                    <td><CodeTags type="secondary" code="4000" /></td>
                     <td>Length in ms the Toast stays before dismissal.</td>
                 </tr>
                 <tr>
                     <td>classes</td>
                     <td>Array of strings</td>
-                    <td><Attribute value="[]" /></td>
+                    <td><CodeTags type="secondary" code="[]" /></td>
                     <td>Classes to be added to the toast element.</td>
                 </tr>
                 <tr>
                     <td>completeCallback</td>
                     <td>Function</td>
-                    <td><Attribute value="null" /></td>
+                    <td><CodeTags type="secondary" code="null" /></td>
                     <td>Callback function called when toast is dismissed.</td>
                 </tr>
             </tbody>
@@ -92,7 +93,7 @@ const Options = () => (
 const PremadeToasts = () => (
     <>
         <h2 id="premade-toasts">Premade toasts</h2>
-        <p>There are four premade toast styles other than the default one; <Attribute value="neutral" />, <Attribute value="success" />, <Attribute value="warning" /> and <Attribute value="danger" />. Apply the desired one to the options object and be amazed!</p>
+        <p>There are four premade toast styles other than the default one; <CodeTags type="secondary" code="neutral" />, <CodeTags type="secondary" code="success" />, <CodeTags type="secondary" code="warning" /> and <CodeTags type="secondary" code="danger" />. Apply the desired one to the options object and be amazed!</p>
         <ComponentPreview language="html" codeFigure dangerousHTML>
             {"<button type=\"button\" onclick=\"dg.toast({ html: 'I am a neutral toast!', type: 'neutral' })\" class=\"btn btn-executive\">Neutral toast</button>"}
             {"<button type=\"button\" onclick=\"dg.toast({ html: 'I am a success toast!', type: 'success' })\" class=\"btn btn-executive\">Success toast</button>"}
