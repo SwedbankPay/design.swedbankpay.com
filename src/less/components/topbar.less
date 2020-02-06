@@ -179,19 +179,37 @@
                     user-select: none;
                 }
 
+                &:hover {
+                    > span {
+                        &:before {
+                            width: 100%;
+                            transition: width 0.4s;
+                        }
+                    }
+                }
+
                 &.active {
                     > span {
-                        position: relative;
-
                         &:before {
-                            content: "";
-                            position: absolute;
-                            background-color: @brand-primary;
-                            height: 4px;
-                            bottom: -4px;
-                            left: 0;
-                            right: 0;
+                            width: 100%;
                         }
+                    }
+                }
+
+                > span {
+                    position: relative;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        background-color: @brand-primary;
+                        height: 4px;
+                        bottom: -4px;
+                        left: 0;
+                        right: 0;
+                        margin-left: auto;
+                        margin-right: auto;
+                        width: 0;
                     }
                 }
             }
@@ -259,25 +277,38 @@
 
             > a:not(.close-topbar-nav) {
                 margin-top: 8px;
-            }
 
-            > *:not(.close-topbar-nav):not(.topbar-link-right) {
-                text-decoration: none;
-                padding: 0 0.5rem;
+                &:hover {
+                    > span {
+                        &:before {
+                            width: 100%;
+                            transition: width 0.4s;
+                        }
+                    }
+                }
 
                 &.active {
                     > span {
-                        position: relative;
-
                         &:before {
-                            content: "";
-                            position: absolute;
-                            background-color: @brand-primary;
-                            height: 4px;
-                            bottom: -4px;
-                            left: 0;
-                            right: 0;
+                            width: 100%;
                         }
+                    }
+                }
+
+                > span {
+                    position: relative;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        background-color: @brand-primary;
+                        height: 4px;
+                        bottom: -4px;
+                        left: 0;
+                        right: 0;
+                        margin-left: auto;
+                        margin-right: auto;
+                        width: 0;
                     }
                 }
 
@@ -287,6 +318,12 @@
                         display: none;
                     }
                 }
+            }
+
+            > *:not(.close-topbar-nav):not(.topbar-link-right) {
+                text-decoration: none;
+                margin-left: 1rem;
+                margin-right: 1rem;
             }
 
             .close-topbar-nav {
