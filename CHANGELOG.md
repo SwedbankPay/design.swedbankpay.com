@@ -58,6 +58,8 @@
    - All input fields now have a height of 48px, even when outside of Input group
  - Alert
    - Removed default alert
+ - Action list
+   - Fix action list not working on IE and Edge
  - Core/typography
    - Removed font-weight bold property from style sheet for H1-H3
  - HR
