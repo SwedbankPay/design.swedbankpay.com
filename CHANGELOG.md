@@ -64,4 +64,10 @@
    - Changed padding of status, altering the distance between the status circle and status text
  - Design Guide
    - Alert
-     - Changed icon used in informative alert examples 
+     - Changed icon used in informative alert examples
+   - Tables
+     - Moved to components section
+   - Lists
+     - Moved to components section
+   - Charts
+     - Moved to components section
