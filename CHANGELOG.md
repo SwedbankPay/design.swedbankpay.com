@@ -55,3 +55,4 @@
 ### Next release
  - Input group
    - Removed has-success state. Input group does not show success state anymore, only failed state when necessary.
+   - All input fields now have a height of 48px, even when outside of Input group
