@@ -83,3 +83,4 @@
    - Sidebar
      - Sidebar documentation added
      - Sidebar example added
+   - Design guide now uses code tags provided
