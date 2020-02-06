@@ -64,6 +64,8 @@
    - Removed font-weight bold property from style sheet for H1-H3
  - HR
    - Changed color of HR
+ - Sidebar
+   - Added sidebar component
  - Status
    - Changed padding of status, altering the distance between the status circle and status text
  - Topbar
@@ -78,3 +80,6 @@
      - Moved to components section
    - Charts
      - Moved to components section
+   - Sidebar
+     - Sidebar documentation added
+     - Sidebar example added
