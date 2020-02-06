@@ -1,2 +1,2 @@
-(window.webpackJsonpswedbankpay=window.webpackJsonpswedbankpay||[]).push([[115],{384:function(e,a,n){"use strict";n.r(a);var s=n(1),t=n.n(s),c=n(14),p=n.n(c),o=function(e){var a=e.type,n=e.code;return t.a.createElement("span",{className:"code-tags code-tags-".concat(a)},n)};o.propTypes={type:p.a.string.isRequired,code:p.a.string.isRequired},a.default=o}}]);
-//# sourceMappingURL=doc-route.chunk_98.js.map?34b9930e5e8bf61e66e3
+(window.webpackJsonpswedbankpay=window.webpackJsonpswedbankpay||[]).push([[114],{373:function(e,a,n){"use strict";n.r(a);var s=n(1),t=n.n(s),c=n(14),o=n.n(c),d=function(e){var a=e.type,n=e.code;return t.a.createElement("code",{className:"code-tags code-tags-".concat(a)},n)};d.propTypes={type:o.a.string.isRequired,code:o.a.string.isRequired},a.default=d}}]);
+//# sourceMappingURL=doc-route.chunk_98.js.map?dfb9fc705eff7e63ce82
