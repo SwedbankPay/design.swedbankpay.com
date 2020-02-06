@@ -1,0 +1,39 @@
+name: Pull request
+on: [pull_request]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        brand: ["payex", "swedbankpay"]
+    steps:
+      - uses: actions/checkout@v2
+
+      # Set brand specific variables
+      - name: Environment variables
+        run: |
+          chmod +x ./.github/scripts/variables.sh
+          ./.github/scripts/variables.sh
+        env:
+          BRAND: ${{ matrix.brand }}
+
+      - name: Set Node.js 12.x
+        uses: actions/setup-node@master
+        with:
+          node-version: 12.x
+
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install
+        run: npm ci
+
+      - name: Build
+        run: npm run $BRAND_BUILD_SCRIPT -- --env.basename=IAmHereToAvoidBundleAnalyzer
