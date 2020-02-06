@@ -58,6 +58,8 @@
    - All input fields now have a height of 48px, even when outside of Input group
  - Alert
    - Removed default alert
+ - Core/typography
+   - Removed font-weight bold property from style sheet for H1-H3
  - HR
    - Changed color of HR
  - Status
