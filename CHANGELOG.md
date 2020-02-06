@@ -62,6 +62,9 @@
    - Changed color of HR
  - Status
    - Changed padding of status, altering the distance between the status circle and status text
+ - Topbar
+   - Added hover state
+   - Added more space between elements
  - Design Guide
    - Alert
      - Changed icon used in informative alert examples
