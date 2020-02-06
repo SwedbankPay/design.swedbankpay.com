@@ -9,6 +9,7 @@ import expandable from "./expandable";
 import nav from "./nav";
 import rangeslider from "./rangeslider";
 import sheet from "./sheet";
+import sidebar from "./sidebar";
 import script from "./script";
 import tabs from "./tabs";
 import toast from "./toast";
@@ -41,6 +42,7 @@ const dg = {
     nav,
     rangeslider,
     sheet,
+    sidebar,
     script,
     tabs,
     toast,

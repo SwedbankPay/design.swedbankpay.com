@@ -197,6 +197,11 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Sheet",
                 },
                 Object {
+                  "componentPath": "components/Sidebar",
+                  "path": "/docs/components/sidebar",
+                  "title": "Sidebar",
+                },
+                Object {
                   "componentPath": "components/Slab",
                   "path": "/docs/components/slab",
                   "title": "Slab",
@@ -314,6 +319,11 @@ exports[`Documentation: index renders 1`] = `
                   "componentPath": "examples/customers",
                   "path": "/docs/examples/customers",
                   "title": "Customers",
+                },
+                Object {
+                  "componentPath": "examples/sidebar",
+                  "path": "/docs/examples/sidebar",
+                  "title": "Sidebar",
                 },
               ],
               "title": "Examples",
@@ -529,6 +539,11 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Sheet",
                 },
                 Object {
+                  "componentPath": "components/Sidebar",
+                  "path": "/docs/components/sidebar",
+                  "title": "Sidebar",
+                },
+                Object {
                   "componentPath": "components/Slab",
                   "path": "/docs/components/slab",
                   "title": "Slab",
@@ -654,6 +669,11 @@ exports[`Documentation: index renders 1`] = `
                   "componentPath": "examples/customers",
                   "path": "/docs/examples/customers",
                   "title": "Customers",
+                },
+                Object {
+                  "componentPath": "examples/sidebar",
+                  "path": "/docs/examples/sidebar",
+                  "title": "Sidebar",
                 },
               ]
             }
