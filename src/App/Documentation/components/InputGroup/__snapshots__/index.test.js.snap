@@ -288,17 +288,13 @@ exports[`Documentation: InputGroup ValidationStates renders 1`] = `
   <p>
     You can also visualize validation on your input-groups. Just add 
     <Property
-      value=".has-success"
-    />
-     or 
-    <Property
       value=".has-error"
     />
      with a 
     <Property
       value=".input-group"
     />
-    .
+     when an error should be displayed.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -306,17 +302,6 @@ exports[`Documentation: InputGroup ValidationStates renders 1`] = `
     removeOuterTag={true}
     showCasePanel={true}
   >
-    <InputGroup
-      defaultValue="Anderson"
-      placeholder="Name"
-      prefixValue="Mr."
-      type="text"
-      validationState="success"
-    />
-     
-    
-
-
     <InputGroup
       defaultValue="Smith"
       placeholder="Name"

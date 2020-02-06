@@ -137,16 +137,10 @@ const ValidationStates = () => (
     <>
         <h2 id="validation-states">Validation states</h2>
         <p>
-            You can also visualize validation on your input-groups. Just add <Property value=".has-success" /> or <Property value=".has-error" /> with a <Property value=".input-group" />.
+            You can also visualize validation on your input-groups. Just add <Property value=".has-error" /> with a <Property value=".input-group" /> when an error
+            should be displayed.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
-            <InputGroupComponent
-                type="text"
-                validationState="success"
-                placeholder="Name"
-                prefixValue="Mr."
-                defaultValue="Anderson"
-            /> {"\n\n"}
             <InputGroupComponent
                 type="text"
                 validationState="error"
