@@ -64,19 +64,9 @@ module.exports = [
                 componentPath: "core/Iconography"
             },
             {
-                title: "Lists",
-                path: "/docs/core/lists",
-                componentPath: "core/Lists"
-            },
-            {
                 title: "Page layout",
                 path: "/docs/core/page-layout",
                 componentPath: "core/Page-layout"
-            },
-            {
-                title: "Tables",
-                path: "/docs/core/tables",
-                componentPath: "core/Tables"
             },
             {
                 title: "Typography",
@@ -130,6 +120,11 @@ module.exports = [
                 componentPath: "components/Card"
             },
             {
+                title: "Charts",
+                path: "/docs/components/charts",
+                componentPath: "components/Charts"
+            },
+            {
                 title: "Code Tags",
                 path: "/docs/components/code-tags",
                 componentPath: "components/CodeTags"
@@ -163,6 +158,11 @@ module.exports = [
                 title: "Input Group",
                 path: "/docs/components/input-group",
                 componentPath: "components/InputGroup"
+            },
+            {
+                title: "Lists",
+                path: "/docs/components/lists",
+                componentPath: "components/Lists"
             },
             {
                 title: "Loaders",
@@ -210,6 +210,11 @@ module.exports = [
                 componentPath: "components/Steps"
             },
             {
+                title: "Tables",
+                path: "/docs/components/tables",
+                componentPath: "components/Tables"
+            },
+            {
                 title: "Tabs",
                 path: "/docs/components/tabs",
                 componentPath: "components/Tabs"
@@ -228,27 +233,6 @@ module.exports = [
                 title: "Topbar",
                 path: "/docs/components/topbar",
                 componentPath: "components/Topbar"
-            }
-        ]
-    },
-
-    /**
-     * Dashboard
-     */
-    {
-        title: "Dashboard",
-        path: "/docs/dashboard",
-        redirect: "/docs/dashboard/introduction",
-        routes: [
-            {
-                title: "Introduction",
-                path: "/docs/dashboard/introduction",
-                componentPath: "dashboard/Introduction"
-            },
-            {
-                title: "Charts",
-                path: "/docs/dashboard/charts",
-                componentPath: "dashboard/Charts"
             }
         ]
     },

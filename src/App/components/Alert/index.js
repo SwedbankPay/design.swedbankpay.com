@@ -50,7 +50,7 @@ const ComplexAlert = ({ id, type, icon, close, headerText, children }) => (
 
 Alert.propTypes = {
     id: PropTypes.string,
-    type: PropTypes.oneOf(["success", "neutral", "warning", "danger", "default", "informative"]).isRequired,
+    type: PropTypes.oneOf(["success", "neutral", "warning", "danger", "informative"]).isRequired,
     icon: PropTypes.string,
     close: PropTypes.bool,
     text: PropTypes.string

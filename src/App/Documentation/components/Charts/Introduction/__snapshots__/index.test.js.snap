@@ -72,11 +72,11 @@ exports[`Dashboard: Introduction JavaScript renders 1`] = `
 
 exports[`Dashboard: Introduction QuickStart renders 1`] = `
 <Fragment>
-  <h2
+  <h3
     id="quick-start"
   >
     Quick start
-  </h2>
+  </h3>
   <p>
     To quickly add the dashboard theme to your project, include the snippets below in your project.
   </p>
@@ -84,13 +84,52 @@ exports[`Dashboard: Introduction QuickStart renders 1`] = `
 `;
 
 exports[`Dashboard: Introduction renders 1`] = `
-<DocContainer>
+<Fragment>
+  <h2
+    id="introduction"
+  >
+    Introduction
+  </h2>
   <p
     className="lead"
   >
-    Get started with the dashboard theme.
+    We are using 
+    <a
+      href="https://www.chartjs.org/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      chart.js
+    </a>
+     to generate the charts. Our script is mainly just a wrapper around that library to add the correct styling etc.
   </p>
+  <p>
+    Most options and settings available in the chart.js documentation will be available.
+  </p>
+  <p>
+    For now, the following chart types are available:
+  </p>
+  <ul>
+    <li>
+      <CodeTags
+        code="\\"line\\""
+        type="secondary"
+      />
+    </li>
+    <li>
+      <CodeTags
+        code="\\"bar\\"/\\"horizontalBar\\""
+        type="secondary"
+      />
+    </li>
+    <li>
+      <CodeTags
+        code="\\"pie\\"/\\"doughnut\\""
+        type="secondary"
+      />
+    </li>
+  </ul>
   <QuickStart />
   <JavaScript />
-</DocContainer>
+</Fragment>
 `;

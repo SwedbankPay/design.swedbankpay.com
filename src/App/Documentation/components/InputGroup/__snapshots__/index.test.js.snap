@@ -305,17 +305,6 @@ exports[`Documentation: InputGroup ValidationStates renders 1`] = `
     showCasePanel={true}
   >
     <InputGroup
-      defaultValue="Anderson"
-      placeholder="Name"
-      prefixValue="Mr."
-      type="text"
-      validationState="success"
-    />
-     
-    
-
-
-    <InputGroup
       defaultValue="Smith"
       placeholder="Name"
       prefixValue="Agent"

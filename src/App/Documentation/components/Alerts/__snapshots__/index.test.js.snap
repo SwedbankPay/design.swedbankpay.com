@@ -22,14 +22,6 @@ exports[`Documentation: Alerts Alert With Icon renders 1`] = `
     showCasePanel={true}
   >
     <Alert
-      icon="info_outline"
-      text="This is a default alert with an icon!"
-      type="default"
-    />
-    
-
-
-    <Alert
       icon="check_circle"
       text="This is a success alert with an icon!"
       type="success"
@@ -38,7 +30,7 @@ exports[`Documentation: Alerts Alert With Icon renders 1`] = `
 
 
     <Alert
-      icon="help"
+      icon="info_outline"
       text="This is a neutral alert with an icon!"
       type="neutral"
     />
@@ -85,13 +77,6 @@ exports[`Documentation: Alerts Basic Usage renders 1`] = `
     language="html"
     showCasePanel={true}
   >
-    <Alert
-      text="This is a default alert!"
-      type="default"
-    />
-    
-
-
     <Alert
       text="This is a success alert!"
       type="success"
@@ -150,15 +135,6 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
   >
     <Alert
       close={true}
-      icon="info_outline"
-      text="This is a default alert with an icon!"
-      type="default"
-    />
-    
-
-
-    <Alert
-      close={true}
       icon="check_circle"
       text="This is a success alert with an icon!"
       type="success"
@@ -168,7 +144,7 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
 
     <Alert
       close={true}
-      icon="help"
+      icon="info_outline"
       text="This is a neutral alert with an icon!"
       type="neutral"
     />

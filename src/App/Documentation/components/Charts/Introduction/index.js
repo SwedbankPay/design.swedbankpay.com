@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ComponentPreview, DocContainer } from "@docutils";
+import { ComponentPreview } from "@docutils";
 import CodeTags from "@components/CodeTags";
 
 const BASENAME = process.env.basename;
@@ -12,7 +12,7 @@ const dashboardStyleUrl = `https://design.${brand}.com${BASENAME}styles/dg-dashb
 
 const QuickStart = () => (
     <>
-        <h2 id="quick-start">Quick start</h2>
+        <h3 id="quick-start">Quick start</h3>
         <p>To quickly add the dashboard theme to your project, include the snippets below in your project.</p>
     </>
 );
@@ -41,12 +41,23 @@ const JavaScript = () => (
 );
 
 const Introduction = () => (
-    <DocContainer>
-        <p className="lead">Get started with the dashboard theme.</p>
+    <>
+        <h2 id="introduction">Introduction</h2>
+        <p className="lead">
+            We are using <a href="https://www.chartjs.org/" target="_blank" rel="noopener noreferrer">chart.js</a> to generate the charts.
+            Our script is mainly just a wrapper around that library to add the correct styling etc.
+        </p>
+        <p>Most options and settings available in the chart.js documentation will be available.</p>
+        <p>For now, the following chart types are available:</p>
+        <ul>
+            <li><CodeTags type="secondary" code={"\"line\""} /></li>
+            <li><CodeTags type="secondary" code={"\"bar\"/\"horizontalBar\""} /></li>
+            <li><CodeTags type="secondary" code={"\"pie\"/\"doughnut\""} /></li>
+        </ul>
         <QuickStart />
         {/* <Css /> */}
         <JavaScript />
-    </DocContainer>
+    </>
 );
 
 export default Introduction;

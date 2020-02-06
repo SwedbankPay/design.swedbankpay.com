@@ -99,7 +99,7 @@ InputGroup.propTypes = {
     disabled: PropTypes.bool,
     readOnly: PropTypes.bool,
     label: PropTypes.string,
-    validationState: PropTypes.oneOf(["success", "error", ""]),
+    validationState: PropTypes.oneOf(["error", ""]),
     selectOptions: PropTypes.array,
     prefixValue: PropTypes.string,
     prefixType: PropTypes.oneOf(["button", "icon", ""]),

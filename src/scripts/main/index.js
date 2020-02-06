@@ -22,7 +22,9 @@ if (process.env.sentry) {
         dsn: "https://a80375d3150043fa85964c8d5eb24e0b@sentry.io/1481099",
         whitelistUrls: [
             "https://design.swedbankpay.com/",
-            "https://design.payex.com/"
+            "https://design.payex.com/",
+            "https://swedbankpaydesignguide.z16.web.core.windows.net/",
+            "https://payexdesignguide.z16.web.core.windows.net/"
         ]
     });
 }

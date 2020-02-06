@@ -1106,45 +1106,7 @@ exports[`Dashboard: Charts renders 1`] = `
 <DocContainer
   docToc={true}
 >
-  <p
-    className="lead"
-  >
-    We are using 
-    <a
-      href="https://www.chartjs.org/"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      chart.js
-    </a>
-     to generate the charts. Our script is mainly just a wrapper around that library to add the correct styling etc.
-  </p>
-  <p>
-    Most options and settings available in the chart.js documentation will be available.
-  </p>
-  <p>
-    For now, the following chart types are available:
-  </p>
-  <ul>
-    <li>
-      <CodeTags
-        code="\\"line\\""
-        type="secondary"
-      />
-    </li>
-    <li>
-      <CodeTags
-        code="\\"bar\\"/\\"horizontalBar\\""
-        type="secondary"
-      />
-    </li>
-    <li>
-      <CodeTags
-        code="\\"pie\\"/\\"doughnut\\""
-        type="secondary"
-      />
-    </li>
-  </ul>
+  <Introduction />
   <LineChart />
   <BarChart />
   <DoughnutAndPieCharts />
