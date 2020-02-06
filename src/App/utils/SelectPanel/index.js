@@ -63,7 +63,8 @@ class SelectPanel extends Component {
     render () {
         return (
             <div id="doc-sidebar" className="sidebar">
-                <SearchBox routes={this.props.routes} />
+                {/* A fully functional search box will be added later. */}
+                {/* <SearchBox routes={this.props.routes} /> */}
                 <nav className="sidebar-nav">
                     <ul className="main-nav-ul">
                         {this.props.routes.map((route, i) => {

@@ -1,17 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import InputGroupComponent from "@components/InputGroup";
-
 const Sidebar = ({ id, sidebarNavList }) => (
     <div id={id} className="sidebar">
-        <InputGroupComponent
-            id="sidebar-search"
-            type="text"
-            placeholder="Search..."
-            prefixType="icon"
-            prefixValue="search"
-        /> {"\n\n"}
         <nav className="sidebar-nav">
             <ul className="main-nav-ul">
                 {sidebarNavList.map((group, i) => (

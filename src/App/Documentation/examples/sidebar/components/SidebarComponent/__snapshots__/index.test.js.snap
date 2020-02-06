@@ -5,17 +5,6 @@ exports[`Examples: Sidebar - SidebarComponent renders 1`] = `
   className="sidebar"
   id="example-sidebar"
 >
-  <InputGroup
-    id="sidebar-search"
-    placeholder="Search..."
-    prefixType="icon"
-    prefixValue="search"
-    type="text"
-  />
-   
-  
-
-
   <nav
     className="sidebar-nav"
   >

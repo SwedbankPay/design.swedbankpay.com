@@ -5,17 +5,6 @@ exports[`Component: Sidebar -  renders 1`] = `
   className="sidebar"
   id="test"
 >
-  <InputGroup
-    id="sidebar-search"
-    placeholder="Search..."
-    prefixType="icon"
-    prefixValue="search"
-    type="text"
-  />
-   
-  
-
-
   <nav
     className="sidebar-nav"
   >
@@ -172,17 +161,6 @@ exports[`Component: Sidebar -  renders group with one level when one level is pr
   className="sidebar"
   id="test"
 >
-  <InputGroup
-    id="sidebar-search"
-    placeholder="Search..."
-    prefixType="icon"
-    prefixValue="search"
-    type="text"
-  />
-   
-  
-
-
   <nav
     className="sidebar-nav"
   >
@@ -253,17 +231,6 @@ exports[`Component: Sidebar -  renders group with two levels when two levels is 
   className="sidebar"
   id="test"
 >
-  <InputGroup
-    id="sidebar-search"
-    placeholder="Search..."
-    prefixType="icon"
-    prefixValue="search"
-    type="text"
-  />
-   
-  
-
-
   <nav
     className="sidebar-nav"
   >

@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import InputGroupComponent from "@components/InputGroup";
-
 class SidebarComponent extends Component {
 
     shouldComponentUpdate () {
@@ -12,13 +10,6 @@ class SidebarComponent extends Component {
     render () {
         return (
             <div id="example-sidebar" className="sidebar">
-                <InputGroupComponent
-                    id="sidebar-search"
-                    type="text"
-                    placeholder="Search..."
-                    prefixType="icon"
-                    prefixValue="search"
-                /> {"\n\n"}
                 <nav className="sidebar-nav">
                     <ul className="main-nav-ul">
                         {this.props.sidebarNavList.map((group, groupIndex) => (
