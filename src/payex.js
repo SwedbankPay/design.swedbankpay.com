@@ -8,6 +8,10 @@ import "prismjs/themes/prism.css";
 import "./less/payex.less";
 import "./less/documentation-payex.less";
 
+const importAll = r => r.keys().map(r);
+
+importAll(require.context("./img/payex/logo/", false, /\.(png|jpe?g|svg)$/));
+
 render(
     <App />,
     document.getElementById("designguide")

@@ -1,5 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Core: Favicons HorizontalLogo renders 1`] = `
+<Fragment>
+  <h2
+    id="horizontal-logo"
+  >
+    Horizontal logo
+  </h2>
+  <h3>
+    Positive horizontal logo
+  </h3>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <img
+      alt="Swedbank Pay horizontal logo"
+      src="/TEST/img/swedbankpay-logo.svg"
+    />
+  </ComponentPreview>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <img
+      alt="Swedbank Pay horizontal logo"
+      src="/TEST/img/swedbankpay-logo.png"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Core: Favicons OurFavicon renders 1`] = `
 <Fragment>
   <h2
@@ -19,16 +52,6 @@ exports[`Core: Favicons OurFavicon renders 1`] = `
       src="/TEST/icons/android-chrome-96x96.png"
     />
   </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Core: Favicons Usage renders 1`] = `
-<Fragment>
-  <h2
-    id="usage"
-  >
-    Usage
-  </h2>
   <p>
     To use our favicons download the zip-file below and extract it to the root of your build-folder. Insert the code below in the 
     <CodeTags
@@ -236,6 +259,127 @@ exports[`Core: Favicons Usage renders 1`] = `
 </Fragment>
 `;
 
+exports[`Core: Favicons OverviewLogos renders 1`] = `
+<Fragment>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <p>
+    All logo variations are provided as both 
+    <CodeTags
+      code=".svg"
+      type="secondary"
+    />
+     and 
+    <CodeTags
+      code=".png"
+      type="secondary"
+    />
+     files.
+  </p>
+</Fragment>
+`;
+
+exports[`Core: Favicons ResourcesLogotype renders 1`] = `
+<div
+  className="expandable"
+>
+  <button
+    aria-controls="resources-typograpy-body"
+    aria-expanded="false"
+    className="expandable-header"
+    type="button"
+  >
+    <span
+      className="expandable-headline"
+    >
+      Logotype guidelines
+    </span>
+    <small
+      className="expandable-subtitle"
+    >
+      From 
+      <Link
+        to="/res/resources/logotype"
+      >
+        logotype in Resources
+      </Link>
+    </small>
+  </button>
+  <div
+    className="expandable-body"
+    id="resources-typography-body"
+  >
+    <Overview />
+    <Download />
+    <Guidelines />
+  </div>
+</div>
+`;
+
+exports[`Core: Favicons VerticalLogo renders 1`] = `
+<Fragment>
+  <h2
+    id="vertical-logo"
+  >
+    Vertical logo
+  </h2>
+  <p>
+    The vertical logo is provided in both positive and negative versions
+  </p>
+  <h3>
+    Positive vertical logo
+  </h3>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <img
+      alt="Swedbank Pay vertical logo"
+      src="/TEST/img/swedbankpay-logo-v.svg"
+    />
+  </ComponentPreview>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <img
+      alt="Swedbank Pay vertical logo"
+      src="/TEST/img/swedbankpay-logo-v.png"
+    />
+  </ComponentPreview>
+  <h3>
+    Negative vertical logo
+  </h3>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    negative={true}
+    showCasePanel={true}
+  >
+    <img
+      alt="Swedbank Pay negative vertical logo"
+      src="/TEST/img/swedbankpay-logo-v-neg.svg"
+    />
+  </ComponentPreview>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    negative={true}
+    showCasePanel={true}
+  >
+    <img
+      alt="Swedbank Pay negative vertical logo"
+      src="/TEST/img/swedbankpay-logo-v-neg.png"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Core: Favicons renders 1`] = `
 <DocContainer
   docToc={true}
@@ -243,9 +387,11 @@ exports[`Core: Favicons renders 1`] = `
   <p
     className="lead"
   >
-    The Swedbank Pay favicon...
+    Swedbank Pay logo variations
   </p>
+  <ResourcesLogotype />
+  <OverviewLogos />
+  <HorizontalLogo />
   <OurFavicon />
-  <Usage />
 </DocContainer>
 `;

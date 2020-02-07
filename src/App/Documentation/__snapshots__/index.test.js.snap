@@ -55,9 +55,9 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Color",
                 },
                 Object {
-                  "componentPath": "core/Favicons",
-                  "path": "/docs/core/favicons",
-                  "title": "Favicons",
+                  "componentPath": "core/Logos",
+                  "path": "/docs/core/logos",
+                  "title": "Logos",
                 },
                 Object {
                   "componentPath": "core/Grid",
@@ -393,9 +393,9 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Color",
                 },
                 Object {
-                  "componentPath": "core/Favicons",
-                  "path": "/docs/core/favicons",
-                  "title": "Favicons",
+                  "componentPath": "core/Logos",
+                  "path": "/docs/core/logos",
+                  "title": "Logos",
                 },
                 Object {
                   "componentPath": "core/Grid",
