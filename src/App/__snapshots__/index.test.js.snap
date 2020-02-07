@@ -98,7 +98,6 @@ exports[`Main: App renders 1`] = `
         />
       </Switch>
     </Suspense>
-    <Footer />
   </withRouter(ScrollToTop)>
 </Router>
 `;
