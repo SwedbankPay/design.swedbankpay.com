@@ -334,7 +334,7 @@ module.exports = (env, argv) => {
                     {
                         copy: [
                             {
-                                source: `./src/img/${brand}/logo/swedbankpay-logo.png`,
+                                source: `./src/img/${brand}/logo/*.png`,
                                 destination: `./dist${basename}img`
                             },
                             {
