@@ -1,10 +1,85 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import Button from "@components/Button";
 import CodeTags from "@components/CodeTags";
+import { Overview, Download, Guidelines } from "../../../Resources/resources/logotype";
 
 const BASENAME = process.env.basename;
+const brand = process.env.brand;
+const { expandable } = window.dg;
+
+const ResourcesLogotype = () => (
+    <div className="expandable">
+        <button type="button" className="expandable-header" aria-expanded="false" aria-controls="resources-typograpy-body">
+            <span className="expandable-headline">Logotype guidelines</span>
+            <small className="expandable-subtitle">From <Link to="/res/resources/logotype">logotype in Resources</Link></small>
+        </button>
+        <div className="expandable-body" id="resources-typography-body">
+            <Overview />
+            <Download />
+            <Guidelines />
+        </div>
+    </div>
+);
+
+const OverviewLogos = () => (
+    <>
+        <h2 id="overview">Overview</h2>
+        <p>All logo variations are provided as both <CodeTags type="secondary" code=".svg" /> and <CodeTags type="secondary" code=".png" /> files.</p>
+    </>
+);
+
+const HorizontalLogo = () => (
+    <>
+        <h2 id="horizontal-logo">Horizontal logo</h2>
+        {brand === "swedbankpay" && <p>The horizontal logo is provided in both positive and negative versions</p>}
+
+        <h3>Positive horizontal logo</h3>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <img src={`${BASENAME}img/swedbankpay-logo.svg`} alt="Swedbank Pay horizontal logo"/>
+        </ComponentPreview>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <img src={`${BASENAME}img/swedbankpay-logo.png`} alt="Swedbank Pay horizontal logo"/>
+        </ComponentPreview>
+
+        {brand === "swedbankpay" &&
+            <>
+                <h3>Negative horizontal logo</h3>
+                <ComponentPreview language="html" showCasePanel codeFigure negative>
+                    <img src={`${BASENAME}img/swedbankpay-logo-neg.svg`} alt="Swedbank Pay negative horizontal logo"/>
+                </ComponentPreview>
+                <ComponentPreview language="html" showCasePanel codeFigure negative>
+                    <img src={`${BASENAME}img/swedbankpay-logo-neg.png`} alt="Swedbank Pay negative horizontal logo"/>
+                </ComponentPreview>
+            </>
+        }
+    </>
+);
+
+const VerticalLogo = () => (
+    <>
+        <h2 id="vertical-logo">Vertical logo</h2>
+        <p>The vertical logo is provided in both positive and negative versions</p>
+
+        <h3>Positive vertical logo</h3>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <img src={`${BASENAME}img/swedbankpay-logo-v.svg`} alt="Swedbank Pay vertical logo"/>
+        </ComponentPreview>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <img src={`${BASENAME}img/swedbankpay-logo-v.png`} alt="Swedbank Pay vertical logo"/>
+        </ComponentPreview>
+
+        <h3>Negative vertical logo</h3>
+        <ComponentPreview language="html" showCasePanel codeFigure negative>
+            <img src={`${BASENAME}img/swedbankpay-logo-v-neg.svg`} alt="Swedbank Pay negative vertical logo"/>
+        </ComponentPreview>
+        <ComponentPreview language="html" showCasePanel codeFigure negative>
+            <img src={`${BASENAME}img/swedbankpay-logo-v-neg.png`} alt="Swedbank Pay negative vertical logo"/>
+        </ComponentPreview>
+    </>
+);
 
 const OurFavicon = () => (
     <>
@@ -13,12 +88,6 @@ const OurFavicon = () => (
         <ComponentPreview language="html" showCasePanel>
             <img src={`${BASENAME}icons/android-chrome-96x96.png`} alt="Swedbank Pay favicon"/>
         </ComponentPreview>
-    </>
-);
-
-const Usage = () => (
-    <>
-        <h2 id="usage">Usage</h2>
         <p>To use our favicons download the zip-file below and extract it to the root of your build-folder. Insert the code below in the <CodeTags type="primary" code={"<head>"} /> tag of your html documents and you are ready to go.</p>
         <p>You should also rename the <CodeTags type="secondary" code="content" /> of
         the <CodeTags type="secondary" code="apple-mobile-web-app-title" /> and <CodeTags type="secondary" code="application-name" /> <CodeTags type="primary" code={"<meta>"} /> tags
@@ -62,15 +131,22 @@ const Usage = () => (
     </>
 );
 
-const Favicons = () => (
-    <DocContainer docToc>
-        <p className="lead">The Swedbank Pay favicon...</p>
-        <OurFavicon />
-        <Usage />
-    </DocContainer>
-);
+const Logos = () => {
+    useEffect(() => { expandable.init(); });
 
-export default Favicons;
+    return (
+        <DocContainer docToc>
+            <p className="lead">Swedbank Pay logo variations</p>
+            <ResourcesLogotype />
+            <OverviewLogos />
+            <HorizontalLogo />
+            {brand === "swedbankpay" && <VerticalLogo />}
+            <OurFavicon />
+        </DocContainer>
+    );
+};
+
+export default Logos;
 
 /* For testing */
-export { OurFavicon, Usage };
+export { OurFavicon, ResourcesLogotype, OverviewLogos, HorizontalLogo, VerticalLogo };

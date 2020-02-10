@@ -49,9 +49,9 @@ module.exports = [
                 componentPath: "core/Color"
             },
             {
-                title: "Favicons",
-                path: "/docs/core/favicons",
-                componentPath: "core/Favicons"
+                title: "Logos",
+                path: "/docs/core/logos",
+                componentPath: "core/Logos"
             },
             {
                 title: "Grid",
