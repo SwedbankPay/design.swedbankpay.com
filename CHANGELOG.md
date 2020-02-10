@@ -85,6 +85,7 @@
      - Sidebar example added
    - Design guide now uses code tags provided
    - Design guide uses list instead of table to display JavaScript documentation
+   - Design guide footer removed
  - Logos
    - Added section presenting the different logos available
  - Favicon
