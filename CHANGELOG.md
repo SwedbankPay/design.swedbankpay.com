@@ -1,71 +1,29 @@
 # Changelog
 
-## [4.3.0] - 2020-01-14
+## [4.4.0] - 2020-02-10
 
 ### Added
- - PNG logo
- - Badge
-   - For numbers, using Swedbank Headline instead of Arial
- - Tabs
-   - With scroll, have fades on the sides to signal more tabs, and an optional scroll state control function when control of the tabs scroll behaviour is needed
- - Code tags
- - Topbar 
-   - With PNG logo
- - Alert
-   - Alert informative with border-color #31a3ae and background-color #e8eff9
- - Lists
-   - Bullet list
- - Core/typography
-   - Akkurat Mono font
-   - H4-H6
-   - Hero title 
-   - Expandable with content from resources/typography
- - Examples using Design Guide components and utilities
+ - Logos
+   - Added section presenting the different logos available
+ - Sidebar
+   - Added sidebar component
+ - Design Guide
+   - Sidebar
+     - Sidebar documentation added
+     - Sidebar example added
 
 ### Changed
- - Charts
-   - Colors and opacity changed
-   - No-fill set as default
- - Badge
-   - Renamed
-   - Colors updated
- - Core/typography
-   - Lead text
-     - Changed font-family, font-size, font-weight and line-height
  - Alert
-   - Changed alert-body margin
- - Design Guide
-   - Body text color to #512b2b
-   - Download buttons in Resources section
-   - Download buttons in Templates section
-   - Bordered lists examples in core/lists
-     - Changed H5 to H3
-   - Action list examples in core/lists and core/iconography
-     - Examples use new implementation of action list
-   - Core/colors
-     - Main colors split into sublists
-   - Dialog, Topbar and Sheet open and close functions refactored
-
-### Fixed
- - Core/Page layout
-   - Had wrong topbar height
- - Core/colors
-   - Typos and naming inconsistencies
-
-### Next release
+   - Removed default alert
+ - Core/typography
+   - Removed font-weight bold property from style sheet for H1-H3
+ - Favicon
+   - Moved under Logos section
+ - HR
+   - Changed color of HR to #d4c4bc
  - Input group
    - Removed has-success state. Input group does not show success state anymore, only failed state when necessary.
    - All input fields now have a height of 48px, even when outside of Input group
- - Alert
-   - Removed default alert
- - Action list
-   - Fix action list not working on IE and Edge
- - Core/typography
-   - Removed font-weight bold property from style sheet for H1-H3
- - HR
-   - Changed color of HR
- - Sidebar
-   - Added sidebar component
  - Status
    - Changed padding of status, altering the distance between the status circle and status text
  - Topbar
@@ -80,13 +38,10 @@
      - Moved to components section
    - Charts
      - Moved to components section
-   - Sidebar
-     - Sidebar documentation added
-     - Sidebar example added
    - Design guide now uses code tags provided
    - Design guide uses list instead of table to display JavaScript documentation
    - Design guide footer removed
- - Logos
-   - Added section presenting the different logos available
- - Favicon
-   - Moved under Logos section
+
+### Fixed
+ - Action list
+   - Fix action list not working on IE and Edge
