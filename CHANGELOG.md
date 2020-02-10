@@ -84,3 +84,4 @@
      - Sidebar documentation added
      - Sidebar example added
    - Design guide now uses code tags provided
+   - Design guide uses list instead of table to display JavaScript documentation
