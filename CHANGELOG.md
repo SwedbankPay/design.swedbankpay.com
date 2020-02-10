@@ -21,7 +21,7 @@
    - Moved under Logos section
  - HR
    - Changed color of HR to #d4c4bc
- - Input group
+ - Input and form groups
    - Removed has-success state. Input group does not show success state anymore, only failed state when necessary.
    - All input fields now have a height of 48px, even when outside of Input group
  - Status
