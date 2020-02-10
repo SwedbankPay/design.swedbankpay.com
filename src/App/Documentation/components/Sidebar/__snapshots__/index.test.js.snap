@@ -2,40 +2,40 @@
 
 exports[`Components: Sidebar InitScrollListener renders 1`] = `
 <Fragment>
-  <tr>
-    <td
-      scope="row"
-    >
+  <JavascriptDocElement
+    code={
       <CodeTags
         code="dg.sidebar.initScrollListener(<sidebar-id>, content-id, header-type)"
         type="secondary"
       />
-    </td>
-    <td>
-      Makes the 
-       with id 
-      <CodeTags
-        code="<sidebar-id>"
-        type="secondary"
-      />
-       listen to scroll events on the element with id 
-      <CodeTags
-        code="content-id"
-        type="secondary"
-      />
-      , and matches a leaf with the corresponding header of 
-      <CodeTags
-        code="header-type"
-        type="secondary"
-      />
-       to visualize active leaf depending on scroll position of element with id 
-      <CodeTags
-        code="content-id"
-        type="secondary"
-      />
-      .
-    </td>
-  </tr>
+    }
+    description={
+      <React.Fragment>
+        Makes the 
+         with id 
+        <CodeTags
+          code="<sidebar-id>"
+          type="secondary"
+        />
+         listen to scroll events on the element with id 
+        <CodeTags
+          code="content-id"
+          type="secondary"
+        />
+        , and matches a leaf with the corresponding header of 
+        <CodeTags
+          code="header-type"
+          type="secondary"
+        />
+         to visualize active leaf depending on scroll position of element with id 
+        <CodeTags
+          code="content-id"
+          type="secondary"
+        />
+        .
+      </React.Fragment>
+    }
+  />
 </Fragment>
 `;
 
@@ -222,192 +222,192 @@ exports[`Components: Sidebar Overview renders 1`] = `
 
 exports[`Components: Sidebar RemoveActiveState renders 1`] = `
 <Fragment>
-  <tr>
-    <td
-      scope="row"
-    >
+  <JavascriptDocElement
+    code={
       <CodeTags
         code="dg.sidebar.removeActiveState(<sidebar-id>, group-index, subgroup-index, leaf-index)"
         type="secondary"
       />
-    </td>
-    <td>
-      Remove group, subgroup and leaf of the 
-       active state depending on the parameters passed. The paramater 
-      <CodeTags
-        code="group-index"
-        type="secondary"
-      />
-       is the index of the group to have the active state removed, the paramater 
-      <CodeTags
-        code="subgroup-index"
-        type="secondary"
-      />
-       is the index of the subgroup beneath the group selected by 
-      <CodeTags
-        code="group-index"
-        type="secondary"
-      />
-      , and the paramater 
-      <CodeTags
-        code="leaf-index"
-        type="secondary"
-      />
-       is the index of the leaf beneath both 
-      <CodeTags
-        code="group-index"
-        type="secondary"
-      />
-       and 
-      <CodeTags
-        code="subgroup-index"
-        type="secondary"
-      />
-      . If the group only has two levels, only 
-      <CodeTags
-        code="group-index"
-        type="secondary"
-      />
-       and 
-      <CodeTags
-        code="leaf-index"
-        type="secondary"
-      />
-       is needed. Since group always is present, 
-      <CodeTags
-        code="group-index"
-        type="secondary"
-      />
-       should always be provided. Pass 
-      <CodeTags
-        code="null"
-        type="secondary"
-      />
-       as a paramater in cases where the parameter needs to be empty, such as when 
-      <CodeTags
-        code="subgroup-index"
-        type="secondary"
-      />
-       is the only one needed, use 
-      <CodeTags
-        code="removeActiveState(<sidebar-id>, group-index, null, null)"
-        type="secondary"
-      />
-      . The paramater 
-      <CodeTags
-        code="<sidebar-id>"
-        type="secondary"
-      />
-       must always be a valid id.
-    </td>
-  </tr>
+    }
+    description={
+      <React.Fragment>
+        Remove group, subgroup and leaf of the 
+         active state depending on the parameters passed. The paramater 
+        <CodeTags
+          code="group-index"
+          type="secondary"
+        />
+         is the index of the group to have the active state removed, the paramater 
+        <CodeTags
+          code="subgroup-index"
+          type="secondary"
+        />
+         is the index of the subgroup beneath the group selected by 
+        <CodeTags
+          code="group-index"
+          type="secondary"
+        />
+        , and the paramater 
+        <CodeTags
+          code="leaf-index"
+          type="secondary"
+        />
+         is the index of the leaf beneath both 
+        <CodeTags
+          code="group-index"
+          type="secondary"
+        />
+         and 
+        <CodeTags
+          code="subgroup-index"
+          type="secondary"
+        />
+        . If the group only has two levels, only 
+        <CodeTags
+          code="group-index"
+          type="secondary"
+        />
+         and 
+        <CodeTags
+          code="leaf-index"
+          type="secondary"
+        />
+         is needed. Since group always is present, 
+        <CodeTags
+          code="group-index"
+          type="secondary"
+        />
+         should always be provided. Pass 
+        <CodeTags
+          code="null"
+          type="secondary"
+        />
+         as a paramater in cases where the parameter needs to be empty, such as when 
+        <CodeTags
+          code="subgroup-index"
+          type="secondary"
+        />
+         is the only one needed, use 
+        <CodeTags
+          code="removeActiveState(<sidebar-id>, group-index, null, null)"
+          type="secondary"
+        />
+        . The paramater 
+        <CodeTags
+          code="<sidebar-id>"
+          type="secondary"
+        />
+         must always be a valid id.
+      </React.Fragment>
+    }
+  />
 </Fragment>
 `;
 
 exports[`Components: Sidebar RemoveScrollListener renders 1`] = `
 <Fragment>
-  <tr>
-    <td
-      scope="row"
-    >
+  <JavascriptDocElement
+    code={
       <CodeTags
         code="dg.sidebar.removeScrollListener(content-id)"
         type="secondary"
       />
-    </td>
-    <td>
-      Removes scroll listener on the element with id 
-      <CodeTags
-        code="content-id"
-        type="secondary"
-      />
-      .
-    </td>
-  </tr>
+    }
+    description={
+      <React.Fragment>
+        Removes scroll listener on the element with id 
+        <CodeTags
+          code="content-id"
+          type="secondary"
+        />
+        .
+      </React.Fragment>
+    }
+  />
 </Fragment>
 `;
 
 exports[`Components: Sidebar SetActiveState renders 1`] = `
 <Fragment>
-  <tr>
-    <td
-      scope="row"
-    >
+  <JavascriptDocElement
+    code={
       <CodeTags
         code="dg.sidebar.setActiveState(<sidebar-id>, group-index, subgroup-index, leaf-index)"
         type="secondary"
       />
-    </td>
-    <td>
-      Sets group, subgroup and leaf of the 
-       to active depending on the parameters passed. The paramater 
-      <CodeTags
-        code="group-index"
-        type="secondary"
-      />
-       is the index of the group to be set active, the paramater 
-      <CodeTags
-        code="subgroup-index"
-        type="secondary"
-      />
-       is the index of the subgroup beneath the group selected by 
-      <CodeTags
-        code="group-index"
-        type="secondary"
-      />
-      , and the paramater 
-      <CodeTags
-        code="leaf-index"
-        type="secondary"
-      />
-       is the index of the leaf beneath both 
-      <CodeTags
-        code="group-index"
-        type="secondary"
-      />
-       and 
-      <CodeTags
-        code="subgroup-index"
-        type="secondary"
-      />
-      . If the group only has two levels, only 
-      <CodeTags
-        code="group-index"
-        type="secondary"
-      />
-       and 
-      <CodeTags
-        code="leaf-index"
-        type="secondary"
-      />
-       is needed. Since group always is present, 
-      <CodeTags
-        code="group-index"
-        type="secondary"
-      />
-       should always be provided. Pass 
-      <CodeTags
-        code="null"
-        type="secondary"
-      />
-       as a paramater in cases where the parameter needs to be empty, such as when 
-      <CodeTags
-        code="subgroup-index"
-        type="secondary"
-      />
-       is the only one needed, use 
-      <CodeTags
-        code="setActiveState(<sidebar-id>, group-index, null, null)"
-        type="secondary"
-      />
-      . The paramater 
-      <CodeTags
-        code="<sidebar-id>"
-        type="secondary"
-      />
-       must always be a valid id.
-    </td>
-  </tr>
+    }
+    description={
+      <React.Fragment>
+        Sets group, subgroup and leaf of the 
+         to active depending on the parameters passed. The paramater 
+        <CodeTags
+          code="group-index"
+          type="secondary"
+        />
+         is the index of the group to be set active, the paramater 
+        <CodeTags
+          code="subgroup-index"
+          type="secondary"
+        />
+         is the index of the subgroup beneath the group selected by 
+        <CodeTags
+          code="group-index"
+          type="secondary"
+        />
+        , and the paramater 
+        <CodeTags
+          code="leaf-index"
+          type="secondary"
+        />
+         is the index of the leaf beneath both 
+        <CodeTags
+          code="group-index"
+          type="secondary"
+        />
+         and 
+        <CodeTags
+          code="subgroup-index"
+          type="secondary"
+        />
+        . If the group only has two levels, only 
+        <CodeTags
+          code="group-index"
+          type="secondary"
+        />
+         and 
+        <CodeTags
+          code="leaf-index"
+          type="secondary"
+        />
+         is needed. Since group always is present, 
+        <CodeTags
+          code="group-index"
+          type="secondary"
+        />
+         should always be provided. Pass 
+        <CodeTags
+          code="null"
+          type="secondary"
+        />
+         as a paramater in cases where the parameter needs to be empty, such as when 
+        <CodeTags
+          code="subgroup-index"
+          type="secondary"
+        />
+         is the only one needed, use 
+        <CodeTags
+          code="setActiveState(<sidebar-id>, group-index, null, null)"
+          type="secondary"
+        />
+        . The paramater 
+        <CodeTags
+          code="<sidebar-id>"
+          type="secondary"
+        />
+         must always be a valid id.
+      </React.Fragment>
+    }
+  />
 </Fragment>
 `;
 

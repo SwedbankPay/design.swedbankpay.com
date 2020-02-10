@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocContainer, JavascriptDocs, DgScript } from "@docutils";
+import { ComponentPreview, DocContainer, JavascriptDocs, JavascriptDocElement } from "@docutils";
 import TabsComponent from "@components/Tabs";
 import CodeTags from "@components/CodeTags";
 
@@ -37,15 +37,17 @@ const TabsScroll = () => (
 
 const SetScrollStateJavaScript = ({ componentName }) => (
     <>
-        <tr>
-            <td scope="row"><DgScript component={componentName} func="setScrollState" params={[`<${componentName.toLowerCase()}-id>`, "scrollState"]} /></td>
-            <td>
-                Moves the scroll position of the {componentName} to the user specified position. The value to be passed to <CodeTags type="secondary" code="scrollState" /> is
-                the object <CodeTags type="secondary" code="{ scrollStart, scrollTotalAmount }" />. <CodeTags type="secondary" code="scrollStart" /> is the current scroll
-                position, <CodeTags type="secondary" code="scrollTotalAmount" /> is the amount to be scrolled from the current scroll position (negative values for left scroll,
-                positive values for right scroll). Note: <CodeTags type="primary" code={"<ul>"} /> is the scrollable element.
-            </td>
-        </tr>
+        <JavascriptDocElement
+            code={<CodeTags type="secondary" code={`dg.${componentName}.setScrollState(<${componentName.toLowerCase()}-id>, scrollState)`} />}
+            description={
+                <>
+                    Moves the scroll position of the {componentName} to the user specified position. The value to be passed to <CodeTags type="secondary" code="scrollState" /> is
+                    the object <CodeTags type="secondary" code="{ scrollStart, scrollTotalAmount }" />. <CodeTags type="secondary" code="scrollStart" /> is the current scroll
+                    position, <CodeTags type="secondary" code="scrollTotalAmount" /> is the amount to be scrolled from the current scroll position (negative values for left scroll,
+                    positive values for right scroll). Note: <CodeTags type="primary" code={"<ul>"} /> is the scrollable element.
+                </>
+            }
+        />
     </>
 );
 
