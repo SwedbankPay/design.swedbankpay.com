@@ -2,7 +2,6 @@ import React, { Component, Suspense } from "react";
 import { Router, Switch, Route, withRouter } from "react-router-dom";
 import { createBrowserHistory } from "history";
 
-import Footer from "@components/Footer";
 import AppHeader from "./AppHeader";
 import { LoadingComponent } from "./utils";
 
@@ -71,7 +70,6 @@ class App extends Component {
                             <Route component={ErrorPage404} />
                         </Switch>
                     </Suspense>
-                    <Footer />
                 </ScrollToTopComponent>
             </Router>
         );
