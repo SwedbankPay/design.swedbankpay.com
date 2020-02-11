@@ -218,7 +218,7 @@ const RemoveScrollListener = () => (
 const JavascriptMethods = () => (
     <>
         <h2 id="javascript-methods">JavaScript methods</h2>
-        <JavascriptDocs componentName="tabs" others={[SetActiveState, RemoveActiveState, InitScrollListener, RemoveScrollListener]} />
+        <JavascriptDocs componentName="sidebar" others={[SetActiveState, RemoveActiveState, InitScrollListener, RemoveScrollListener]} />
     </>
 );
 
