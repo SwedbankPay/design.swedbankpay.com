@@ -3,10 +3,10 @@ import classnames from "classnames";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 
-const DocTable = ({ striped, condensed, hover }) => {
+const DocTable = ({ plain, condensed, hover }) => {
     const tableClasses = classnames(
         "table",
-        striped ? "table-striped" : null,
+        plain ? "table-plain" : null,
         condensed ? "table-condensed" : null,
         hover ? "table-hover" : null
     );
@@ -67,12 +67,12 @@ const BasicTable = () => (
     </>
 );
 
-const StripedTable = () => (
+const PlainTable = () => (
     <>
-        <h2 id="striped-table">Striped table</h2>
-        <p>Striped tables info...</p>
+        <h2 id="plain-table">Plain table</h2>
+        <p>Plain tables info...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <DocTable striped />
+            <DocTable plain />
         </ComponentPreview>
     </>
 );
@@ -97,12 +97,12 @@ const HoverTable = () => (
     </>
 );
 
-const HoverStripedTable = () => (
+const HoverPlainTable = () => (
     <>
-        <h2 id="hover-striped-table">Hover striped table</h2>
-        <p>Hover striped tables info...</p>
+        <h2 id="hover-plain-table">Hover Plain table</h2>
+        <p>Hover plain tables info...</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <DocTable hover striped />
+            <DocTable hover plain />
         </ComponentPreview>
     </>
 );
@@ -142,10 +142,10 @@ const Tables = () => (
     <DocContainer docToc>
         <p className="lead">Lots of nice info about tables will be here...</p>
         <BasicTable />
-        <StripedTable />
+        <PlainTable />
         <CondensedTable />
         <HoverTable />
-        <HoverStripedTable />
+        <HoverPlainTable />
         <DescriptionTable />
     </DocContainer>
 );
@@ -153,4 +153,4 @@ const Tables = () => (
 export default Tables;
 
 /* For testing */
-export { DocTable, BasicTable, StripedTable, CondensedTable, HoverTable, HoverStripedTable, DescriptionTable };
+export { DocTable, BasicTable, PlainTable, CondensedTable, HoverTable, HoverPlainTable, DescriptionTable };

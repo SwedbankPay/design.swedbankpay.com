@@ -227,12 +227,12 @@ exports[`Documentation: Table DocTable renders table with given class name 1`] =
 exports[`Documentation: Table HoverStripedTable renders 1`] = `
 <Fragment>
   <h2
-    id="hover-striped-table"
+    id="hover-plain-table"
   >
-    Hover striped table
+    Hover Plain table
   </h2>
   <p>
-    Hover striped tables info...
+    Hover plain tables info...
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -241,7 +241,7 @@ exports[`Documentation: Table HoverStripedTable renders 1`] = `
   >
     <DocTable
       hover={true}
-      striped={true}
+      plain={true}
     />
   </ComponentPreview>
 </Fragment>
@@ -272,12 +272,12 @@ exports[`Documentation: Table HoverTable renders 1`] = `
 exports[`Documentation: Table StripedTable renders 1`] = `
 <Fragment>
   <h2
-    id="striped-table"
+    id="plain-table"
   >
-    Striped table
+    Plain table
   </h2>
   <p>
-    Striped tables info...
+    Plain tables info...
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -285,7 +285,7 @@ exports[`Documentation: Table StripedTable renders 1`] = `
     showCasePanel={true}
   >
     <DocTable
-      striped={true}
+      plain={true}
     />
   </ComponentPreview>
 </Fragment>
@@ -301,10 +301,10 @@ exports[`Documentation: Table renders 1`] = `
     Lots of nice info about tables will be here...
   </p>
   <BasicTable />
-  <StripedTable />
+  <PlainTable />
   <CondensedTable />
   <HoverTable />
-  <HoverStripedTable />
+  <HoverPlainTable />
   <DescriptionTable />
 </DocContainer>
 `;
