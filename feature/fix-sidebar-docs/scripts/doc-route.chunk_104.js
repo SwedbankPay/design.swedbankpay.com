@@ -1,2 +1,2 @@
 (window.webpackJsonpswedbankpay=window.webpackJsonpswedbankpay||[]).push([[22],{404:function(a,e,n){"use strict";n.r(e);var s=n(1),t=n.n(s),c=n(17),o=function(a){var e=a.className,n=a.children;return t.a.createElement("footer",{className:"page-footer".concat(e?" ".concat(e):"")},n||t.a.createElement("p",{className:"page-footer-rights"},"© Swedbank Pay"))};o.propTypes={className:n.n(c).a.string},e.default=o}}]);
-//# sourceMappingURL=doc-route.chunk_104.js.map?8f78284783de7b765c91
+//# sourceMappingURL=doc-route.chunk_104.js.map?d5f4d6688f8a7fec324d
