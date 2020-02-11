@@ -1,6 +1,7 @@
 import React from "react";
 
-import { ComponentPreview, DocContainer, Property } from "@docutils";
+import { ComponentPreview, DocContainer } from "@docutils";
+import CodeTags from "@components/CodeTags";
 
 const TextAlignment = () => (
     <>
@@ -31,14 +32,14 @@ const TextAlignment = () => (
 const TextWrappingAndOverflow = () => (
     <>
         <h2 id="text-wrapping-and-overflow">Text wrapping and overflow</h2>
-        <p>Prevent text from wrapping with a <Property value=".text-nowrap" /> class.</p>
+        <p>Prevent text from wrapping with a <CodeTags type="secondary" code=".text-nowrap" /> class.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="text-nowrap sc-highlight" style={{ width: "8rem" }}>{"\n"}
                 This text should overflow the parent.{"\n"}
             </div>
         </ComponentPreview>
 
-        <p>For longer content, you can add a <Property value=".text-truncate" /> class to truncate the text with an ellipsis. <b>Requires</b> display: <Property value="inline-block" /> <b>or</b> <Property value="display: block" />.</p>
+        <p>For longer content, you can add a <CodeTags type="secondary" code=".text-truncate" /> class to truncate the text with an ellipsis. <b>Requires</b> display: <CodeTags type="secondary" code="inline-block" /> <b>or</b> <CodeTags type="secondary" code="display: block" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="row">
                 <div className="col-3 text-truncate">
@@ -62,7 +63,7 @@ const TextTransform = () => (
             <p className="text-uppercase">Uppercased text.</p>
             <p className="text-capitalize">CapiTaliZed text.</p>
         </ComponentPreview>
-        <p>Note how <Property value=".text-capitalize" /> only changes the first letter of each word, leaving the case of any other letters unaffected.</p>
+        <p>Note how <CodeTags type="secondary" code=".text-capitalize" /> only changes the first letter of each word, leaving the case of any other letters unaffected.</p>
     </>
 );
 

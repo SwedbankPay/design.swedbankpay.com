@@ -9,37 +9,30 @@ exports[`Documentation: Breadcrumb Basic BreadCrumb renders 1`] = `
   </h2>
   <p>
     Add class 
-    <Property
-      value=".breadcrumb"
+    <CodeTags
+      code=".breadcrumb"
+      type="secondary"
     />
      to a containing 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;ol&gt;
-    </PrismCode>
+    <CodeTags
+      code="<ol>"
+      type="primary"
+    />
      element and nest a 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;a&gt;
-    </PrismCode>
+    <CodeTags
+      code="<a>"
+      type="primary"
+    />
      or 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;span&gt;
-    </PrismCode>
+    <CodeTags
+      code="<span>"
+      type="primary"
+    />
      element inside the 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;li&gt;
-    </PrismCode>
+    <CodeTags
+      code="<li>"
+      type="primary"
+    />
      elements.
   </p>
   <ComponentPreview
@@ -81,19 +74,15 @@ exports[`Documentation: Breadcrumb Disabled BreadCrumb renders 1`] = `
   </h2>
   <p>
     To disable a breadcrumb element, simply use a 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;span&gt;
-    </PrismCode>
+    <CodeTags
+      code="<span>"
+      type="primary"
+    />
      element within the 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;li&gt;
-    </PrismCode>
+    <CodeTags
+      code="<li>"
+      type="primary"
+    />
      element (will not work for last-child).
   </p>
   <ComponentPreview

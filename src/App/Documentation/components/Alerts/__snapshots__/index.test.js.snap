@@ -22,14 +22,6 @@ exports[`Documentation: Alerts Alert With Icon renders 1`] = `
     showCasePanel={true}
   >
     <Alert
-      icon="info_outline"
-      text="This is a default alert with an icon!"
-      type="default"
-    />
-    
-
-
-    <Alert
       icon="check_circle"
       text="This is a success alert with an icon!"
       type="success"
@@ -38,7 +30,7 @@ exports[`Documentation: Alerts Alert With Icon renders 1`] = `
 
 
     <Alert
-      icon="help"
+      icon="info_outline"
       text="This is a neutral alert with an icon!"
       type="neutral"
     />
@@ -86,13 +78,6 @@ exports[`Documentation: Alerts Basic Usage renders 1`] = `
     showCasePanel={true}
   >
     <Alert
-      text="This is a default alert!"
-      type="default"
-    />
-    
-
-
-    <Alert
       text="This is a success alert!"
       type="success"
     />
@@ -138,27 +123,16 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
   <p>
     To add a close-button, add the following code inside your alert-element:
     <br />
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;a href="#" data-alert-close&gt;&lt;i class="material-icons"&gt;close&lt;/i&gt;&lt;/a&gt;
-    </PrismCode>
+    <CodeTags
+      code="<a href=\\"#\\" data-alert-close><i class=\\"material-icons\\">close</i></a>"
+      type="primary"
+    />
   </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}
   >
-    <Alert
-      close={true}
-      icon="info_outline"
-      text="This is a default alert with an icon!"
-      type="default"
-    />
-    
-
-
     <Alert
       close={true}
       icon="check_circle"
@@ -170,7 +144,7 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
 
     <Alert
       close={true}
-      icon="help"
+      icon="info_outline"
       text="This is a neutral alert with an icon!"
       type="neutral"
     />
@@ -207,10 +181,9 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
   </h3>
   <p>
     To add an external close-button for your alert add the attribute 
-    <Attribute
-      data={true}
-      name="alert-close"
-      value="{id}"
+    <CodeTags
+      code="data-alert-close=\\"{id}\\""
+      type="secondary"
     />
      to the button element.
   </p>
@@ -248,15 +221,17 @@ exports[`Documentation: Alerts Extended Usage renders 1`] = `
   </h2>
   <p>
     By adding the 
-    <Property
-      value=".alert-complex"
+    <CodeTags
+      code=".alert-complex"
+      type="secondary"
     />
      class, alerts can contain additional HTML elements like headings, paragraphs and dividers.
   </p>
   <p>
     Make sure to wrap the content in a container with the class 
-    <Property
-      value=".alert-body"
+    <CodeTags
+      code=".alert-body"
+      type="secondary"
     />
     .
   </p>

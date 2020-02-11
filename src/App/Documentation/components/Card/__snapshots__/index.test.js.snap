@@ -15,8 +15,9 @@ exports[`Documentation: Card GridCard renders 1`] = `
       grid
     </Link>
      along with cards to control their size and how they are displayed on different screen resolutions. Make sure to add 
-    <Property
-      value=".d-flex"
+    <CodeTags
+      code=".d-flex"
+      type="secondary"
     />
      to the wrapper if you want the cards to be of equal height when next to each other.
   </p>

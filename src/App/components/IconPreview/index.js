@@ -15,7 +15,7 @@ const IconPreview = ({ name, squaredFlag, preview, previewSize, size, className,
     return preview || previewSize ? (
         <div className="icon-preview">
             <i className={iconClasses}>{iconClasses.includes("material-icons") ? name : null}</i>
-            <code className="token property p-0 mt-2">
+            <code className="code-tags code-tags-secondary mt-2">
                 {previewSize ? size : name}
             </code>
         </div>

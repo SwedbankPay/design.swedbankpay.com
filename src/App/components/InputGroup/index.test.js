@@ -32,7 +32,7 @@ describe("Component: InputGroup - ", () => {
 
             expect(wrapper).toMatchSnapshot();
         });
-        expect(console.error).toHaveBeenCalledTimes(2);
+        expect(console.error).toHaveBeenCalledTimes(3);
     });
 
     it("throws an error if prefixType prop has an invalid value", () => {

@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer, Attribute, Property, DgScript, JavascriptDocs } from "@docutils";
+import { ComponentPreview, DocContainer, DgScript, JavascriptDocs } from "@docutils";
 import InputGroup from "@components/InputGroup";
 import Button from "@components/Button";
 import { Checkbox, FormControlText, Radio, Rangeslider, Togglebox } from "@components/FormComponents";
+import CodeTags from "@components/CodeTags";
 
 const { rangeslider, validation } = window.dg;
 
@@ -12,9 +12,9 @@ const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
         <p>
-            Use <PrismCode className="language-html">{"<input>"}</PrismCode> in combination with <PrismCode className="language-html">{"<form-group>"}</PrismCode>s and/or <PrismCode className="language-html">{"<form>"}</PrismCode>s to
-            show a collection of related inputs. <PrismCode className="language-html">{"<form-group>"}</PrismCode>s can contain more than just an input, like a <PrismCode className="language-html">{"<label>"}</PrismCode> or
-            <PrismCode className="language-html">{"<help-block>"}</PrismCode>s.
+            Use <CodeTags type="primary" code={"<input>"} /> in combination with <CodeTags type="primary" code={"<form-group>"} />s and/or <CodeTags type="primary" code={"<form>"} />s to
+            show a collection of related inputs. <CodeTags type="primary" code={"<form-group>"} />s can contain more than just an input, like a <CodeTags type="primary" code={"<label>"} /> or
+            <CodeTags type="primary" code={"<help-block>"} />s.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <form onSubmit={e => e.preventDefault()}>
@@ -56,7 +56,7 @@ const FormGrid = () => (
         <h2 id="form-grid">Form grid</h2>
         <p>
             You can use the grid system to customize how forms are displayed. Just wrap your form elements in a row container to have two or more input elements next to eachother horizontally.
-            Remember to add <Property value=".col-{your_size}"/> to the forms.
+            Remember to add <CodeTags type="secondary" code=".col-{your_size}"/> to the forms.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <form onSubmit={e => e.preventDefault()}>
@@ -96,8 +96,10 @@ const FormGrid = () => (
 const Validation = () => (
     <>
         <h2 id="validation">Validation overview</h2>
-        <p>To use our validation, start by adding the attribute <Attribute name="novalidate" /> to your <PrismCode className="language-html">{"<form>"}</PrismCode> element. If you wish to validate your entire form, add the <Attribute data name="validate" /> attribute to the <PrismCode className="language-html">{"<form>"}</PrismCode> tag, if not add it to the desired <PrismCode className="language-html">{"<input>"}</PrismCode> tags.</p>
-        <p>Validates against <Attribute name="required" /> and <Attribute name="pattern" />. Using <Attribute name="pattern" /> overrides default patterns.</p>
+        <p>To use our validation, start by adding the attribute <CodeTags type="secondary" code="novalidate" /> to your <CodeTags type="primary" code={"<form>"} /> element.
+        If you wish to validate your entire form, add the <CodeTags type="secondary" code="validate" /> attribute to the <CodeTags type="primary" code={"<form>"}/> tag,
+        if not add it to the desired <CodeTags type="primary" code={"<input>"} /> tags.</p>
+        <p>Validates against <CodeTags type="secondary" code="required" /> and <CodeTags type="secondary" code="pattern" />. Using <CodeTags type="secondary" code="pattern" /> overrides default patterns.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <form noValidate data-validate="">
                 <InputGroup
@@ -120,8 +122,8 @@ const Validation = () => (
 
         <h3>Feedback</h3>
         <p>
-            To give users validation feedback on each input insert the message in the attributes <Attribute data name="success" /> and <Attribute data name="error" /> in
-            the <Attribute value=".help-block" /> element. To display an asterisk you have to include a label with your input element.
+            To give users validation feedback on each input insert the message in the attributes <CodeTags type="secondary" code="success" /> and <CodeTags type="secondary" code="error" /> in
+            the <CodeTags type="secondary" code=".help-block" /> element. To display an asterisk you have to include a label with your input element.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <form action="#" noValidate data-validate="">
@@ -142,8 +144,8 @@ const Validation = () => (
         </ComponentPreview>
 
         <h3>Dynamically disabled submit button</h3>
-        <p>You can also dynamically disable the submit button by adding <Attribute data name="disable-invalid" /> to the <PrismCode className="language-html">{"<button type=\"submit\">"}</PrismCode> element.</p>
-        <p><b>NOTE:</b> For this to work you also need the <Attribute data name="validate" /> attribute to be present in the <PrismCode className="language-html">{"<form>"}</PrismCode> tag.</p>
+        <p>You can also dynamically disable the submit button by adding <CodeTags type="secondary" code="disable-invalid" /> to the <CodeTags type="primary" code={"<button type=\"submit\">"} /> element.</p>
+        <p><b>NOTE:</b> For this to work you also need the <CodeTags type="secondary" code="validate" /> attribute to be present in the <CodeTags type="primary" code={"<form>"} /> tag.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <form action="#" noValidate data-validate="">
                 <InputGroup
@@ -197,7 +199,7 @@ const UsageWithFieldsets = () => (
 const StaticText = () => (
     <>
         <h2 id="static-text">Static text</h2>
-        <p>To just display static text in forms use a <PrismCode className="language-html">{"<span>"}</PrismCode> inside a form</p>
+        <p>To just display static text in forms use a <CodeTags type="primary" code={"<span>"} /> inside a form</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <FormControlText label="Company" text="Swedbank Pay" />
             <FormControlText label="Employee" text="Bob Corlsan" />
@@ -250,8 +252,8 @@ const RangeSlider = () => (
     <>
         <h2 id="rangeslider">Rangeslider</h2>
         <p>Asides from the default behavior of a range input, the Rangeslider{"'"}s colors and label positioning can be customized.</p>
-        <p>Currently there are three different supported colors for the slider: <Property value=".rangeslider-brand" />, <Property value=".rangeslider-default" /> and <Property value=".rangeslider-neutral" />.</p>
-        <p>The Rangeslider currently supports two positions: <Property value=".label-right" /> and <Property value=".label-top" />. If no position is given, <Property value="right" /> is defaulted.</p>
+        <p>Currently there are three different supported colors for the slider: <CodeTags type="secondary" code=".rangeslider-brand" />, <CodeTags type="secondary" code=".rangeslider-default" /> and <CodeTags type="secondary" code=".rangeslider-neutral" />.</p>
+        <p>The Rangeslider currently supports two positions: <CodeTags type="secondary" code=".label-right" /> and <CodeTags type="secondary" code=".label-top" />. If no position is given, <CodeTags type="secondary" code="right" /> is defaulted.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <Rangeslider min={0} max={200} step={1} value={100} valueLabel valueLabelPrefix="$" valueLabelPostfix="%" />
         </ComponentPreview>
@@ -265,7 +267,7 @@ const RangeSlider = () => (
 const DisabledFormComponents = () => (
     <>
         <h2 id="disabled-form-components">Disabled form components</h2>
-        <p>Disable whichever form component you want by adding <Attribute name="disabled" /> to the desired input element</p>
+        <p>Disable whichever form component you want by adding <CodeTags type="secondary" code="disabled" /> to the desired input element</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <Togglebox id="togglebox-disabled-example-1" label="Enable overdrive" disabled />
             <Radio label="Hamburgers" id="radio-disabled-example-1" name="radio-disabled-example" disabled />
@@ -274,7 +276,7 @@ const DisabledFormComponents = () => (
         </ComponentPreview>
 
         <h3>Disable a fieldset</h3>
-        <p>Disable entire fieldsets by adding <Attribute name="disabled" /> to the fieldset element</p>
+        <p>Disable entire fieldsets by adding <CodeTags type="secondary" code="disabled" /> to the fieldset element</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <form>
                 <fieldset disabled>

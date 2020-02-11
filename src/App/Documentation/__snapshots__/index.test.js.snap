@@ -55,9 +55,9 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Color",
                 },
                 Object {
-                  "componentPath": "core/Favicons",
-                  "path": "/docs/core/favicons",
-                  "title": "Favicons",
+                  "componentPath": "core/Logos",
+                  "path": "/docs/core/logos",
+                  "title": "Logos",
                 },
                 Object {
                   "componentPath": "core/Grid",
@@ -70,19 +70,9 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Iconography",
                 },
                 Object {
-                  "componentPath": "core/Lists",
-                  "path": "/docs/core/lists",
-                  "title": "Lists",
-                },
-                Object {
                   "componentPath": "core/Page-layout",
                   "path": "/docs/core/page-layout",
                   "title": "Page layout",
-                },
-                Object {
-                  "componentPath": "core/Tables",
-                  "path": "/docs/core/tables",
-                  "title": "Tables",
                 },
                 Object {
                   "componentPath": "core/Typography",
@@ -132,6 +122,11 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Card",
                 },
                 Object {
+                  "componentPath": "components/Charts",
+                  "path": "/docs/components/charts",
+                  "title": "Charts",
+                },
+                Object {
                   "componentPath": "components/CodeTags",
                   "path": "/docs/components/code-tags",
                   "title": "Code Tags",
@@ -167,6 +162,11 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Input Group",
                 },
                 Object {
+                  "componentPath": "components/Lists",
+                  "path": "/docs/components/lists",
+                  "title": "Lists",
+                },
+                Object {
                   "componentPath": "components/Loaders",
                   "path": "/docs/components/loaders",
                   "title": "Loaders",
@@ -197,6 +197,11 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Sheet",
                 },
                 Object {
+                  "componentPath": "components/Sidebar",
+                  "path": "/docs/components/sidebar",
+                  "title": "Sidebar",
+                },
+                Object {
                   "componentPath": "components/Slab",
                   "path": "/docs/components/slab",
                   "title": "Slab",
@@ -210,6 +215,11 @@ exports[`Documentation: index renders 1`] = `
                   "componentPath": "components/Steps",
                   "path": "/docs/components/steps",
                   "title": "Steps",
+                },
+                Object {
+                  "componentPath": "components/Tables",
+                  "path": "/docs/components/tables",
+                  "title": "Tables",
                 },
                 Object {
                   "componentPath": "components/Tabs",
@@ -233,23 +243,6 @@ exports[`Documentation: index renders 1`] = `
                 },
               ],
               "title": "Components",
-            },
-            Object {
-              "path": "/docs/dashboard",
-              "redirect": "/docs/dashboard/introduction",
-              "routes": Array [
-                Object {
-                  "componentPath": "dashboard/Introduction",
-                  "path": "/docs/dashboard/introduction",
-                  "title": "Introduction",
-                },
-                Object {
-                  "componentPath": "dashboard/Charts",
-                  "path": "/docs/dashboard/charts",
-                  "title": "Charts",
-                },
-              ],
-              "title": "Dashboard",
             },
             Object {
               "path": "/docs/utilities",
@@ -327,6 +320,11 @@ exports[`Documentation: index renders 1`] = `
                   "path": "/docs/examples/customers",
                   "title": "Customers",
                 },
+                Object {
+                  "componentPath": "examples/sidebar",
+                  "path": "/docs/examples/sidebar",
+                  "title": "Sidebar",
+                },
               ],
               "title": "Examples",
             },
@@ -395,9 +393,9 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Color",
                 },
                 Object {
-                  "componentPath": "core/Favicons",
-                  "path": "/docs/core/favicons",
-                  "title": "Favicons",
+                  "componentPath": "core/Logos",
+                  "path": "/docs/core/logos",
+                  "title": "Logos",
                 },
                 Object {
                   "componentPath": "core/Grid",
@@ -410,19 +408,9 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Iconography",
                 },
                 Object {
-                  "componentPath": "core/Lists",
-                  "path": "/docs/core/lists",
-                  "title": "Lists",
-                },
-                Object {
                   "componentPath": "core/Page-layout",
                   "path": "/docs/core/page-layout",
                   "title": "Page layout",
-                },
-                Object {
-                  "componentPath": "core/Tables",
-                  "path": "/docs/core/tables",
-                  "title": "Tables",
                 },
                 Object {
                   "componentPath": "core/Typography",
@@ -476,6 +464,11 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Card",
                 },
                 Object {
+                  "componentPath": "components/Charts",
+                  "path": "/docs/components/charts",
+                  "title": "Charts",
+                },
+                Object {
                   "componentPath": "components/CodeTags",
                   "path": "/docs/components/code-tags",
                   "title": "Code Tags",
@@ -511,6 +504,11 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Input Group",
                 },
                 Object {
+                  "componentPath": "components/Lists",
+                  "path": "/docs/components/lists",
+                  "title": "Lists",
+                },
+                Object {
                   "componentPath": "components/Loaders",
                   "path": "/docs/components/loaders",
                   "title": "Loaders",
@@ -541,6 +539,11 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Sheet",
                 },
                 Object {
+                  "componentPath": "components/Sidebar",
+                  "path": "/docs/components/sidebar",
+                  "title": "Sidebar",
+                },
+                Object {
                   "componentPath": "components/Slab",
                   "path": "/docs/components/slab",
                   "title": "Slab",
@@ -554,6 +557,11 @@ exports[`Documentation: index renders 1`] = `
                   "componentPath": "components/Steps",
                   "path": "/docs/components/steps",
                   "title": "Steps",
+                },
+                Object {
+                  "componentPath": "components/Tables",
+                  "path": "/docs/components/tables",
+                  "title": "Tables",
                 },
                 Object {
                   "componentPath": "components/Tabs",
@@ -578,27 +586,6 @@ exports[`Documentation: index renders 1`] = `
               ]
             }
             title="Components"
-          />
-          <RenderRoutes
-            appFolder="Documentation"
-            key="renderRoutes_Dashboard"
-            path="/docs/dashboard"
-            redirect="/docs/dashboard/introduction"
-            routes={
-              Array [
-                Object {
-                  "componentPath": "dashboard/Introduction",
-                  "path": "/docs/dashboard/introduction",
-                  "title": "Introduction",
-                },
-                Object {
-                  "componentPath": "dashboard/Charts",
-                  "path": "/docs/dashboard/charts",
-                  "title": "Charts",
-                },
-              ]
-            }
-            title="Dashboard"
           />
           <RenderRoutes
             appFolder="Documentation"
@@ -682,6 +669,11 @@ exports[`Documentation: index renders 1`] = `
                   "componentPath": "examples/customers",
                   "path": "/docs/examples/customers",
                   "title": "Customers",
+                },
+                Object {
+                  "componentPath": "examples/sidebar",
+                  "path": "/docs/examples/sidebar",
+                  "title": "Sidebar",
                 },
               ]
             }

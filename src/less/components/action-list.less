@@ -7,10 +7,10 @@
         top: 2.7rem;
         right: 0;
         z-index: @zindex-action-list;
-        height: 0;
         overflow: hidden;
         box-shadow: @action-list-shadow;
         background-color: @white;
+        display: none;
 
         > a {
             display: flex;
@@ -26,7 +26,8 @@
                 margin-right: @base-margin-sm;
             }
 
-            &:hover {
+            &:hover,
+            &:focus {
                 text-decoration: none;
                 background-color: @light-gray;
             }
@@ -53,7 +54,8 @@
             padding: 0.7rem;
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
             cursor: pointer;
             background-color: @light-gray;
         }
@@ -65,7 +67,7 @@
         }
 
         .action-menu {
-            height: fit-content;
+            display: table;
 
             > a {
                 visibility: visible;
@@ -75,21 +77,21 @@
 
     &.anchor-top-left {
         .action-menu {
-            right: initial;
+            left: 0;
         }
     }
 
     &.anchor-bottom-right {
         .action-menu {
-            top: initial;
+            top: auto;
             bottom: 2.7rem;
         }
     }
 
     &.anchor-bottom-left {
         .action-menu {
-            top: initial;
-            right: $top;
+            top: auto;
+            left: 0;
             bottom: 2.7rem;
         }
     }

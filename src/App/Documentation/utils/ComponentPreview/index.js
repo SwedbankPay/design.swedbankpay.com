@@ -6,7 +6,7 @@ import Highlight, { defaultProps } from "prism-react-renderer";
 
 // NOTE: dangerousHTML prop is used when wanting to show html in the codefigure without encoding.
 
-const ComponentPreview = ({ children, language, removeOuterTag, hideValue, removeList, showCasePanel, showCasePanelSm, codeFigure, dangerousHTML }) => {
+const ComponentPreview = ({ children, language, removeOuterTag, hideValue, removeList, showCasePanel, showCasePanelSm, codeFigure, dangerousHTML, negative }) => {
     const _removeOuterTag = element => {
         const div = document.createElement("div");
 
@@ -143,7 +143,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
     };
 
     const ShowCasePanel = () => (
-        <div className={`showcase-panel${showCasePanelSm ? " showcasepanel-sm" : ""}`}>
+        <div className={`showcase-panel${showCasePanelSm ? " showcasepanel-sm" : ""}${negative ? " showcase-panel-negative" : ""}`}>
             {children}
         </div>
     );

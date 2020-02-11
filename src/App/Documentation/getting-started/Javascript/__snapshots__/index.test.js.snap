@@ -30,8 +30,9 @@ exports[`GettingStarted: JavascriptDocs AboutInit renders 1`] = `
       func="init"
     />
     . If the function is called without arguments it will target all components with class 
-    <Property
-      value="<component_name>"
+    <CodeTags
+      code="<component_name>"
+      type="secondary"
     />
      on the page. Initializing only one component can be done by passing an ID, it must match an existing components ID and will print a warning message if the value is invalid.
   </p>

@@ -178,8 +178,8 @@ Code and documentation © Swedbank Pay and contributors, released under the [MIT
 
 Inspired by [Bootstrap][bootstrap] and [Materialize][materialize].
 
-  [version-badge]:      https://img.shields.io/badge/Version-4.3.0-blue.svg
-  [version-tag]:        https://github.com/swedbankpay/design.swedbankpay.com/releases/tag/4.3.0
+  [version-badge]:      https://img.shields.io/badge/Version-4.4.0-blue.svg
+  [version-tag]:        https://github.com/swedbankpay/design.swedbankpay.com/releases/tag/4.4.0
   [appveyor-badge]:     https://ci.appveyor.com/api/projects/status/1dii19sqw1m7xtsn/branch/master?svg=true
   [appveyor-status]:    https://ci.appveyor.com/project/PayEx/design-swedbankpay-com/branch/master
   [appveyor]:           https://www.appveyor.com/
@@ -191,7 +191,7 @@ Inspired by [Bootstrap][bootstrap] and [Materialize][materialize].
   [dep-status]:         https://david-dm.org/swedbankpay/design.swedbankpay.com
   [devdep-badge]:       https://david-dm.org/swedbankpay/design.swedbankpay.com/dev-status.svg
   [devdep-status]:      https://david-dm.org/swedbankpay/design.swedbankpay.com?type=dev
-  [og-image]:           https://repository-images.githubusercontent.com/191536903/a4653c80-e7ac-11e9-9d96-c5bf40f73d9c
+  [og-image]:           https://repository-images.githubusercontent.com/191536903/603b0b00-3876-11ea-945e-a1e1353cc52a
   [swpdg]:              https://design.swedbankpay.com
   [nodejs]:             https://nodejs.org/en/
   [slack]:              https://payex.slack.com/messages/C0L3W8B2S/

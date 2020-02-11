@@ -1,8 +1,8 @@
 import React from "react";
-import PrismCode from "react-prism";
 
-import { ComponentPreview, DocContainer, Property } from "@docutils";
+import { ComponentPreview, DocContainer } from "@docutils";
 import PaginationComponent from "@components/Pagination";
+import CodeTags from "@components/CodeTags";
 
 const paginationItems = [
     /* eslint-disable object-property-newline */
@@ -18,8 +18,8 @@ const DefaultPagination = () => (
         <>
             <h2 id="default-pagination">Default pagination</h2>
             <p>
-                Default pagination shows the pages as numbers. Add <Property value=".pagination" /> to an <PrismCode className="language-html">{"<ul>"}</PrismCode> containing
-                <PrismCode className="language-html">{"<li>"}</PrismCode>. If you wish to present the user with navigational arrows you need to add those as <PrismCode className="language-html">{"<li>"}</PrismCode> elements.
+                Default pagination shows the pages as numbers. Add <CodeTags type="secondary" code=".pagination" /> to an <CodeTags type="primary" code={"<ul>"} /> containing
+                <CodeTags type="primary" code={"<li>"} />. If you wish to present the user with navigational arrows you need to add those as <CodeTags type="primary" code={"<li>"} /> elements.
             </p>
             <ComponentPreview language="html" showCasePanel codeFigure>
                 <PaginationComponent items={paginationItems} arrows farArrows />
@@ -31,7 +31,7 @@ const PaginationBullets = () => (
         <>
             <h2 id="pagination-bullets">Pagination bullets</h2>
             <p>
-                If you want to show bullets instead of numbers you can add <Property value=".pagination-bullets" /> to your <PrismCode className="language-html">{"<ul>"}</PrismCode>.
+                If you want to show bullets instead of numbers you can add <CodeTags type="secondary" code=".pagination-bullets" /> to your <CodeTags type="primary" code={"<ul>"} />.
             </p>
             <ComponentPreview language="html" showCasePanel codeFigure>
                 <PaginationComponent type="bullets" items={paginationItems} arrows farArrows />

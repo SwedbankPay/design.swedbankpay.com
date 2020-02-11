@@ -8,25 +8,24 @@ exports[`Documentation: Buttons Active State renders 1`] = `
     Active state
   </h2>
   <p>
-    Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. 
+    Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active.
     <b>
       There’s no need to add a class to 
-      <PrismCode
-        className="language-html"
-        component="code"
-      >
-        &lt;button&gt;
-      </PrismCode>
+      <CodeTags
+        code="<button>"
+        type="primary"
+      />
       s as they use a pseudo-class.
     </b>
-     However, you can still force the same active appearance with 
-    <Property
-      value=".active"
+    However, you can still force the same active appearance with 
+    <CodeTags
+      code=".active"
+      type="secondary"
     />
      (and include the 
-    <Attribute
-      name="aria-pressed"
-      value="true"
+    <CodeTags
+      code="aria-pressed=\\"true\\""
+      type="secondary"
     />
      attribute) should you need to replicate the state programmatically.
   </p>
@@ -79,8 +78,9 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
   </h2>
   <p>
     Add class 
-    <Property
-      value=".loading"
+    <CodeTags
+      code=".loading"
+      type="secondary"
     />
      to display the loader.
   </p>
@@ -125,12 +125,14 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
     Disabled loader
   </h3>
   <p>
-    <Property
-      value=".loading"
+    <CodeTags
+      code=".loading"
+      type="secondary"
     />
      with 
-    <Attribute
-      name="disabled"
+    <CodeTags
+      code="disabled"
+      type="secondary"
     />
   </p>
   <ComponentPreview
@@ -177,12 +179,14 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
     Outline loader
   </h3>
   <p>
-    <Property
-      value=".loading"
+    <CodeTags
+      code=".loading"
+      type="secondary"
     />
      with 
-    <Property
-      value=".outline"
+    <CodeTags
+      code=".outline"
+      type="secondary"
     />
   </p>
   <ComponentPreview
@@ -237,8 +241,9 @@ exports[`Documentation: Buttons Button group renders 1`] = `
   </h2>
   <p>
     When you use buttons next to each other you have to wrap them in a 
-    <Property
-      value=".button-group"
+    <CodeTags
+      code=".button-group"
+      type="secondary"
     />
     .
   </p>
@@ -284,8 +289,9 @@ exports[`Documentation: Buttons ButtonGroup renders 1`] = `
   </h2>
   <p>
     When you use buttons next to each other you have to wrap them in a 
-    <Property
-      value=".button-group"
+    <CodeTags
+      code=".button-group"
+      type="secondary"
     />
     .
   </p>
@@ -331,16 +337,15 @@ exports[`Documentation: Buttons Disabled State renders 1`] = `
   </h2>
   <p>
     Make buttons look inactive by adding the 
-    <Attribute
-      name="disabled"
+    <CodeTags
+      code="disabled"
+      type="secondary"
     />
      boolean attribute to any 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;button&gt;
-    </PrismCode>
+    <CodeTags
+      code="<button>"
+      type="primary"
+    />
      element.
   </p>
   <ComponentPreview
@@ -379,44 +384,43 @@ exports[`Documentation: Buttons Disabled State renders 1`] = `
   </ComponentPreview>
   <p>
     Disabled buttons using the 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;a&gt;
-    </PrismCode>
+    <CodeTags
+      code="<a>"
+      type="primary"
+    />
      element behave a bit different:
   </p>
   <ul>
     <li>
-      <PrismCode
-        className="language-html"
-        component="code"
-      >
-        &lt;a&gt;
-      </PrismCode>
-      s do not support the 
-      <Attribute
-        name="disabled"
+      <CodeTags
+        code="<a>"
+        type="primary"
       />
-      attribute, so you must add the 
-      <Property
-        value=".disabled"
+      s do not support the 
+      <CodeTags
+        code="disabled"
+        type="secondary"
+      />
+       attribute, so you must add the 
+      <CodeTags
+        code=".disabled"
+        type="secondary"
       />
        class to make it visually appear disabled.
     </li>
     <li>
       Some future-friendly styles are included to disable all 
-      <Property
-        value="pointer-events"
+      <CodeTags
+        code="pointer-events"
+        type="secondary"
       />
        on anchor buttons. In browsers which support that property, you won’t see the disabled cursor at all.
     </li>
     <li>
       Disabled buttons should include the 
-      <Attribute
-        name="aria-disabled"
-        value="true"
+      <CodeTags
+        code="aria-disabled=\\"true\\""
+        type="secondary"
       />
        attribute to indicate the state of the element to assistive technologies.
     </li>
@@ -466,27 +470,29 @@ exports[`Documentation: Buttons Disabled State renders 1`] = `
     </h5>
     <p>
       The 
-      <Property
-        value=".disabled"
+      <CodeTags
+        code=".disabled"
+        type="secondary"
       />
        class uses 
-      <Property
-        value="pointer-events: none"
+      <CodeTags
+        code="pointer-events: none"
+        type="secondary"
       />
        to try to disable the link functionality of 
-      <PrismCode
-        className="language-html"
-        component="code"
-      >
-        &lt;a&gt;
-      </PrismCode>
+      <CodeTags
+        code="<a>"
+        type="primary"
+      />
       s, but that CSS property is not yet standardized. In addition, even in browsers that do support 
-      <Property
-        value="pointer-events: none"
+      <CodeTags
+        code="pointer-events: none"
+        type="secondary"
       />
       , keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a 
-      <Property
-        value="tabindex=\\"-1\\""
+      <CodeTags
+        code="tabindex=\\"-1\\""
+        type="secondary"
       />
        attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.
     </p>
@@ -553,8 +559,9 @@ exports[`Documentation: Buttons Outline Buttons renders 1`] = `
   </h2>
   <p>
     Replace the default modifier classes with the 
-    <Property
-      value=".btn-outline-{style}"
+    <CodeTags
+      code=".btn-outline-{style}"
+      type="secondary"
     />
      ones to get an outline of the button style.
   </p>
@@ -604,16 +611,19 @@ exports[`Documentation: Buttons Sizes renders 1`] = `
   </h2>
   <p>
     For a different sized button add 
-    <Property
-      value=".btn-lg"
+    <CodeTags
+      code=".btn-lg"
+      type="secondary"
     />
     , 
-    <Property
-      value=".btn-sm"
+    <CodeTags
+      code=".btn-sm"
+      type="secondary"
     />
      or 
-    <Property
-      value=".btn-xs"
+    <CodeTags
+      code=".btn-xs"
+      type="secondary"
     />
     .
   </p>
@@ -712,8 +722,9 @@ exports[`Documentation: Buttons Sizes renders 1`] = `
   </h3>
   <p>
     Create block level buttons—those that span the full width of a parent by adding 
-    <Property
-      value=".btn-block"
+    <CodeTags
+      code=".btn-block"
+      type="secondary"
     />
     .
   </p>
@@ -756,12 +767,10 @@ exports[`Documentation: Buttons Usage With Icons renders 1`] = `
   </h2>
   <p>
     To use a button with an icon simply put the icon markup inside the 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;button&gt;
-    </PrismCode>
+    <CodeTags
+      code="<button>"
+      type="primary"
+    />
     .
   </p>
   <p>
@@ -820,44 +829,37 @@ exports[`Documentation: Buttons Usage With Other Tags renders 1`] = `
   </h2>
   <p>
     The 
-    <Property
-      value=".btn"
+    <CodeTags
+      code=".btn"
+      type="secondary"
     />
      classes are designed to be used with the 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;button&gt;
-    </PrismCode>
+    <CodeTags
+      code="<button>"
+      type="primary"
+    />
      element. However, you can also use these classes on 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;a&gt;
-    </PrismCode>
+    <CodeTags
+      code="<a>"
+      type="primary"
+    />
      or 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;input&gt;
-    </PrismCode>
+    <CodeTags
+      code="<input>"
+      type="primary"
+    />
      elements (though some browsers may apply a slightly different rendering).
   </p>
   <p>
     When using button classes on 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;a&gt;
-    </PrismCode>
+    <CodeTags
+      code="<a>"
+      type="primary"
+    />
      elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a 
-    <Attribute
-      name="role"
-      value="button"
+    <CodeTags
+      code="role=\\"button\\""
+      type="secondary"
     />
      to appropriately convey their purpose to assistive technologies such as screen readers.
   </p>

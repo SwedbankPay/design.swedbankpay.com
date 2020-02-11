@@ -7,6 +7,7 @@ import DeprecatedComponentAlert from "./DeprecatedComponentAlert";
 import ExperimentalComponentAlert from "./ExperimentalComponentAlert";
 import Icon from "./Icon";
 import JavascriptDocs from "./JavascriptDocs";
+import JavascriptDocElement from "./JavascriptDocElement";
 import DgScript from "./DgScript";
 
 export {
@@ -19,6 +20,7 @@ export {
     ExperimentalComponentAlert,
     Icon,
     JavascriptDocs,
+    JavascriptDocElement,
     Property,
     DgScript
 };

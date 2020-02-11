@@ -49,9 +49,9 @@ module.exports = [
                 componentPath: "core/Color"
             },
             {
-                title: "Favicons",
-                path: "/docs/core/favicons",
-                componentPath: "core/Favicons"
+                title: "Logos",
+                path: "/docs/core/logos",
+                componentPath: "core/Logos"
             },
             {
                 title: "Grid",
@@ -64,19 +64,9 @@ module.exports = [
                 componentPath: "core/Iconography"
             },
             {
-                title: "Lists",
-                path: "/docs/core/lists",
-                componentPath: "core/Lists"
-            },
-            {
                 title: "Page layout",
                 path: "/docs/core/page-layout",
                 componentPath: "core/Page-layout"
-            },
-            {
-                title: "Tables",
-                path: "/docs/core/tables",
-                componentPath: "core/Tables"
             },
             {
                 title: "Typography",
@@ -130,6 +120,11 @@ module.exports = [
                 componentPath: "components/Card"
             },
             {
+                title: "Charts",
+                path: "/docs/components/charts",
+                componentPath: "components/Charts"
+            },
+            {
                 title: "Code Tags",
                 path: "/docs/components/code-tags",
                 componentPath: "components/CodeTags"
@@ -165,6 +160,11 @@ module.exports = [
                 componentPath: "components/InputGroup"
             },
             {
+                title: "Lists",
+                path: "/docs/components/lists",
+                componentPath: "components/Lists"
+            },
+            {
                 title: "Loaders",
                 path: "/docs/components/loaders",
                 componentPath: "components/Loaders"
@@ -195,6 +195,11 @@ module.exports = [
                 componentPath: "components/Sheet"
             },
             {
+                title: "Sidebar",
+                path: "/docs/components/sidebar",
+                componentPath: "components/Sidebar"
+            },
+            {
                 title: "Slab",
                 path: "/docs/components/slab",
                 componentPath: "components/Slab"
@@ -208,6 +213,11 @@ module.exports = [
                 title: "Steps",
                 path: "/docs/components/steps",
                 componentPath: "components/Steps"
+            },
+            {
+                title: "Tables",
+                path: "/docs/components/tables",
+                componentPath: "components/Tables"
             },
             {
                 title: "Tabs",
@@ -228,27 +238,6 @@ module.exports = [
                 title: "Topbar",
                 path: "/docs/components/topbar",
                 componentPath: "components/Topbar"
-            }
-        ]
-    },
-
-    /**
-     * Dashboard
-     */
-    {
-        title: "Dashboard",
-        path: "/docs/dashboard",
-        redirect: "/docs/dashboard/introduction",
-        routes: [
-            {
-                title: "Introduction",
-                path: "/docs/dashboard/introduction",
-                componentPath: "dashboard/Introduction"
-            },
-            {
-                title: "Charts",
-                path: "/docs/dashboard/charts",
-                componentPath: "dashboard/Charts"
             }
         ]
     },
@@ -336,6 +325,11 @@ module.exports = [
                 title: "Customers",
                 path: "/docs/examples/customers",
                 componentPath: "examples/customers"
+            },
+            {
+                title: "Sidebar",
+                path: "/docs/examples/sidebar",
+                componentPath: "examples/sidebar"
             }
         ]
     }

@@ -1,7 +1,8 @@
 import React from "react";
 
-import { ComponentPreview, DocContainer, Property, DgScript } from "@docutils";
+import { ComponentPreview, DocContainer, DgScript } from "@docutils";
 import Alert from "@components/Alert";
+import CodeTags from "@components/CodeTags";
 
 const AboutInit = () => (
     <>
@@ -13,7 +14,7 @@ const AboutInit = () => (
         <h3>Manual initializing</h3>
         <p>
             To initialize components use <DgScript component="<component_name>" func="init" />. If the function is called
-            without arguments it will target all components with class <Property value="<component_name>" /> on the page. Initializing only one component can be done
+            without arguments it will target all components with class <CodeTags type="secondary" code="<component_name>" /> on the page. Initializing only one component can be done
             by passing an ID, it must match an existing components ID and will print a warning message if the value is invalid.
         </p>
         <p>

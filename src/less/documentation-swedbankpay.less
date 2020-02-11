@@ -413,13 +413,16 @@
         &.showcasepanel-sm {
             max-width: 20rem;
         }
+
+        &.showcase-panel-negative {
+            background-color: @brand-secondary;
+        }
     }
 
     code {
-        padding: 0.1rem;
-        border-radius: 0.3rem;
-        white-space: normal;
-        background: @brand-bg-1;
+        padding: @code-tags-padding;
+        border-radius: @code-tags-border-radius;
+        background-color: @brand-bg-1;
     }
 
     .icon-preview {
@@ -432,6 +435,11 @@
         width: 20%;
         max-width: 200px;
         min-width: 120px;
+    }
+
+    .javascript-doc-element-description {
+        line-height: 1.75rem;
+        margin-top: 2rem;
     }
 }
 

@@ -4,23 +4,27 @@ exports[`Utilities: Visibility Intro renders 1`] = `
 <Fragment>
   <p>
     Set the 
-    <Property
-      value="visibility"
+    <CodeTags
+      code="visibility"
+      type="secondary"
     />
      of elements with our visibility utilities. These do not modify the 
-    <Property
-      value="display"
+    <CodeTags
+      code="display"
+      type="secondary"
     />
      value at all and are helpful for hiding content from most users, but still keeping them for screen readers.
   </p>
   <p>
     Apply 
-    <Property
-      value=".visible"
+    <CodeTags
+      code=".visible"
+      type="secondary"
     />
      or 
-    <Property
-      value=".invisible"
+    <CodeTags
+      code=".invisible"
+      type="secondary"
     />
      as needed.
   </p>
