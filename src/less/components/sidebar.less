@@ -2,6 +2,10 @@
     position: sticky;
     top: 0;
 
+    &.sidebar-topbar-sticky {
+        top: @topbar-height;
+    }
+
     .sidebar-nav {
         max-height: calc(100vh - @topbar-height * 2);
         overflow-y: auto;
