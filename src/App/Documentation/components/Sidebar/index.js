@@ -7,121 +7,15 @@ import CodeTags from "@components/CodeTags";
 
 const { sidebar } = window.dg;
 
-const SidebarNavList = [
-    {
-        title: "Introduction",
-        lastParent: true,
-        subList: [
-            {
-                title: "Introduction 1"
-            },
-            {
-                title: "Introduction 2"
-            },
-            {
-                title: "Introduction 3"
-            }
-        ]
-    },
-    {
-        title: "Summary",
-        lastParent: true,
-        subList: [
-            {
-                title: "Summary chapter 1"
-            },
-            {
-                title: "Summary chapter 2"
-            },
-            {
-                title: "Summary chapter 3"
-            }
-        ]
-    },
-    {
-        title: "Other features",
-        lastParent: false,
-        subList: [
-            {
-                title: "Operations",
-                lastParent: true,
-                subList: [
-                    {
-                        title: "Operations"
-                    },
-                    {
-                        title: "Lorem ipsum"
-                    },
-                    {
-                        title: "Dolor sit amet consectetur"
-                    },
-                    {
-                        title: "Adipiscing elit"
-                    }
-                ]
-            },
-            {
-                title: "Events",
-                lastParent: true,
-                subList: [
-                    {
-                        title: "Event 1"
-                    },
-                    {
-                        title: "Event 2"
-                    },
-                    {
-                        title: "Event 3"
-                    }
-                ]
-            },
-            {
-                title: "Extras",
-                lastParent: false,
-                subList: [
-                    {
-                        title: "Events",
-                        lastParent: true,
-                        subList: [
-                            {
-                                title: "Event 1"
-                            },
-                            {
-                                title: "Event 2"
-                            },
-                            {
-                                title: "Event 3"
-                            }
-                        ]
-                    },
-                    {
-                        title: "Operations",
-                        lastParent: true,
-                        subList: [
-                            {
-                                title: "Operations"
-                            },
-                            {
-                                title: "Lorem ipsum"
-                            },
-                            {
-                                title: "Dolor sit amet consectetur"
-                            },
-                            {
-                                title: "Adipiscing elit"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    }
-];
+import { SidebarNavList } from "./constants";
 
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
-        <p>The sidebar supports a depth of up to 3 levels.</p>
+        <p>
+            The sidebar supports a depth of up to 3 levels. Note that if used with a sticky topbar, the class <CodeTags type="secondary" code=".sidebar-topbar-sticky" /> should
+            be added to the outmost <CodeTags type="primary" code="<div>" /> of the sidebar.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="container-fluid">
                 <div className="row">

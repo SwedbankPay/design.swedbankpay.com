@@ -154,6 +154,14 @@ describe("Component: Topbar - ", () => {
                 expect(wrapper.html()).toContain("<a class=\"topbar-logo topbar-logo-png\" href=\"/\">");
             });
         });
+
+        describe("sticky", () => {
+            it("renders a topbar with class .topbar-sticky", () => {
+                const wrapper = shallow(<Topbar sticky />);
+
+                expect(wrapper.html()).toContain("topbar-sticky");
+            });
+        });
     });
 
     it("logo prevents default when clicked", () => {

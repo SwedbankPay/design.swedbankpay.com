@@ -1,8 +1,11 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import TopbarComponent from "@components/Topbar";
 import CodeTags from "@components/CodeTags";
+import SidebarComponent from "@components/Sidebar";
+import { SidebarNavList } from "../Sidebar/constants";
 
 const { topbar } = window.dg;
 
@@ -62,6 +65,28 @@ const TopbarWide = () => (
     </>
 );
 
+const TopbarSticky = () => (
+    <>
+        <h2 id="topbar-sticky">Sticky topbar</h2>
+        <p>
+            A sticky topbar is also available. Use <CodeTags type="secondary" code=".topbar-min-{breakpoint}-sticky" /> to specify the minimum width the topbar should be sticky,
+            or <CodeTags type="secondary" code=".topbar-max-{breakpoint}-sticky" /> to specify the maximum width the topbar should be sticky
+            (see <Link to="/docs/core/breakpoints">breakpoints</Link> for more information on breakpoints).
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <div className="container-fluid">
+                <TopbarComponent id="demo-topbar-sticky" topbarContent={menu} wide="xl" logout sticky />
+                <div className="row">
+                    <div className="col-auto">
+                        <SidebarComponent id="dg-sidebar" sidebarNavList={SidebarNavList} sticky />
+                    </div>
+                    <main className="col main-content border-left">Main content things...</main>
+                </div>
+            </div>
+        </ComponentPreview>
+    </>
+);
+
 const TopbarPNG = () => (
     <>
         <h2 id="topbar-png">Topbar with PNG logo</h2>
@@ -99,6 +124,7 @@ class Topbar extends Component {
                 <p className="lead">The topbar is used to give users an easily available navigational bar at the top of your web application.</p>
                 <Overview />
                 <TopbarWide />
+                <TopbarSticky />
                 <TopbarPNG />
                 <JavascriptMethods />
             </DocContainer>
@@ -109,4 +135,4 @@ class Topbar extends Component {
 export default Topbar;
 
 /* For testing */
-export { Overview, TopbarWide, TopbarPNG, JavascriptMethods };
+export { Overview, TopbarWide, TopbarSticky, TopbarPNG, JavascriptMethods };
