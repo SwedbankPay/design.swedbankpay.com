@@ -6,7 +6,7 @@ const Sidebar = ({ id, sidebarNavList }) => (
         <nav className="sidebar-nav">
             <ul className="main-nav-ul">
                 {sidebarNavList.map((group, i) => (
-                    <div key={i} className="nav-group">
+                    <li key={i} className="nav-group">
                         <div className="nav-group-heading">
                             <i className="material-icons">arrow_right</i>
                             <span>
@@ -70,7 +70,7 @@ const Sidebar = ({ id, sidebarNavList }) => (
                                     ))
                             }
                         </ul>
-                    </ div>
+                    </ li>
                 ))}
             </ul>
         </nav>

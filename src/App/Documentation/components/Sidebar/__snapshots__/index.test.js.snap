@@ -47,7 +47,7 @@ exports[`Components: Sidebar JavascriptMethods renders 1`] = `
     JavaScript methods
   </h2>
   <JavascriptDocs
-    componentName="tabs"
+    componentName="sidebar"
     others={
       Array [
         [Function],
