@@ -192,6 +192,20 @@ describe("scripts: dialog", () => {
         expect(document.activeElement).toEqual(diaObj.lastTabStop);
     });
 
+    it("closes the dialog when escape button is pressed", () => {
+        ReactDOM.render(<Dialog id="dialog-id" />, div);
+
+        const dialogElement = document.querySelector(".dialog");
+        const escapeEvent = new KeyboardEvent("keydown", { key: "Escape" });
+        const dialogObject = dialog.init()[0];
+
+        dialogObject.open();
+        dialogElement.dispatchEvent(escapeEvent);
+
+        expect(dialogElement.classList).not.toContain("d-flex");
+        expect(document.body.classList).not.toContain("dialog-open");
+    });
+
     describe("dialog.open", () => {
         it("opens dialog when calling dialog.open", () => {
             ReactDOM.render(<Dialog id="demo-dialog" />, div);
