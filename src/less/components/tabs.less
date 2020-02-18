@@ -6,6 +6,25 @@
     display: flex;
     z-index: @zindex-tabs;
 
+    &.tabs-wide {
+        ul {
+            width: 100%;
+
+            li {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    each(@grid-breakpoints, .(@max-width, @infix) {
+        &.tabs-@{infix}-wide {
+            @media screen and (max-width: @max-width) {
+                .tabs-wide();
+            }
+        }
+    });
+
     &.tabs-scroll {
         ul {
             overflow: scroll;

@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Tabs, { BasicUsage, TabsScroll, JavascriptMethods } from "./index";
+import Tabs, { BasicUsage, WideTabs, TabsScroll, JavascriptMethods } from "./index";
 
 describe("Components: Tabs", () => {
     it("is defined", () => {
@@ -24,6 +24,18 @@ describe("Components: Tabs", () => {
 
         it("renders", () => {
             const wrapper = shallow(<BasicUsage />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("WideTabs", () => {
+        it("is defined", () => {
+            expect(WideTabs).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<WideTabs />);
 
             expect(wrapper).toMatchSnapshot();
         });

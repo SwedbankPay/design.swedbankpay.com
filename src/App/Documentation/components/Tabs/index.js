@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer, JavascriptDocs, JavascriptDocElement } from "@docutils";
 import TabsComponent from "@components/Tabs";
@@ -22,12 +23,29 @@ const BasicUsage = () => (
     </>
 );
 
+const WideTabs = () => (
+    <>
+        <h2 id="wide-tabs">Wide tabs</h2>
+        <p>
+            To make tabs cover the whole width of the container, use class <CodeTags type="secondary" code=".tabs-wide" />.
+            Use <CodeTags type="secondary" code=".tabs-{breakpoint}-wide" /> to specify at which breakpoint the full width
+            property should stop (see <Link to="/docs/core/breakpoints">breakpoints</Link> for more information on breakpoints).
+            Make sure that the tabs will not overflow on screens of normal size.
+            Consider revising the design or the decision to use tabs when more than 3
+            alternatives are present. If using tabs really is necessary, tabs with scroll might be
+            a more suitable alternative.
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <TabsComponent id="tabs-example" items={[...tabItems.slice(0, 3)]} fullWidth />
+        </ComponentPreview>
+    </>
+);
+
 const TabsScroll = () => (
     <>
         <h2 id="tabs-scroll">Tabs with scroll</h2>
-        <p>To make tabs more mobile friendly, use class <CodeTags type="secondary" code=".tabs-scroll" />.
-            <CodeTags type="secondary" code=".tabs-scroll" /> will make the tabs scrollable in case of overflow.
-        Note that the scrollable property is not optimized for desktop usage. Consider the usage
+        <p>To make tabs more mobile friendly, use class <CodeTags type="secondary" code=".tabs-scroll" />. <CodeTags type="secondary" code=".tabs-scroll" /> will
+        make the tabs scrollable in case of overflow. Note that the scrollable property is not optimized for desktop usage. Consider the usage
         when 4 or more tabs are present.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <TabsComponent id="tabs-scroll-example" ulId="tabs-scroll-example-ul" items={tabItems} scroll/>
@@ -70,6 +88,7 @@ class Tabs extends Component {
                     Use tabs to show which page or section that is active out of several options.
                 </p>
                 <BasicUsage />
+                <WideTabs />
                 <TabsScroll />
                 <JavascriptMethods />
             </DocContainer>
@@ -80,4 +99,4 @@ class Tabs extends Component {
 export default Tabs;
 
 /* For testing */
-export { BasicUsage, TabsScroll, JavascriptMethods };
+export { BasicUsage, WideTabs, TabsScroll, JavascriptMethods };

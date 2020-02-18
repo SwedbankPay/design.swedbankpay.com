@@ -75,7 +75,7 @@ exports[`Components: Tabs TabsScroll renders 1`] = `
       code=".tabs-scroll"
       type="secondary"
     />
-    .
+    . 
     <CodeTags
       code=".tabs-scroll"
       type="secondary"
@@ -107,6 +107,52 @@ exports[`Components: Tabs TabsScroll renders 1`] = `
 </Fragment>
 `;
 
+exports[`Components: Tabs WideTabs renders 1`] = `
+<Fragment>
+  <h2
+    id="wide-tabs"
+  >
+    Wide tabs
+  </h2>
+  <p>
+    To make tabs cover the whole width of the container, use class 
+    <CodeTags
+      code=".tabs-wide"
+      type="secondary"
+    />
+    . Use 
+    <CodeTags
+      code=".tabs-{breakpoint}-wide"
+      type="secondary"
+    />
+     to specify at which breakpoint the full width property should stop (see 
+    <Link
+      to="/docs/core/breakpoints"
+    >
+      breakpoints
+    </Link>
+     for more information on breakpoints). Make sure that the tabs will not overflow on screens of normal size. Consider revising the design or the decision to use tabs when more than 3 alternatives are present. If using tabs really is necessary, tabs with scroll might be a more suitable alternative.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Tabs
+      fullWidth={true}
+      id="tabs-example"
+      items={
+        Array [
+          "Card",
+          "Discounts",
+          "Transactions",
+        ]
+      }
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Components: Tabs renders 1`] = `
 <DocContainer
   docToc={true}
@@ -117,6 +163,7 @@ exports[`Components: Tabs renders 1`] = `
     Use tabs to show which page or section that is active out of several options.
   </p>
   <BasicUsage />
+  <WideTabs />
   <TabsScroll />
   <JavascriptMethods />
 </DocContainer>
