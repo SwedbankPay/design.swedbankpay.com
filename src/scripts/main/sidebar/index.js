@@ -12,13 +12,6 @@ const _closeElement = element => {
     activeSubGroups.length > 0 && [...activeSubGroups].map(activeSubGroup => activeSubGroup.classList.remove("active"));
 };
 
-const _scrollToActiveLeaf = sidebar => {
-    const sidebarNav = sidebar.querySelector(".sidebar-nav");
-    const activeLeaf = sidebar.querySelector(SELECTORS.NAVLEAF + SELECTORS.ACTIVE);
-
-    sidebarNav.scrollTop = activeLeaf.offsetTop - activeLeaf.clientHeight * 2;
-};
-
 const _setActiveStatus = (element, sidebar, selector, isScroll) => {
 
     const activeElements = sidebar.querySelectorAll(selector + SELECTORS.ACTIVE);
@@ -27,10 +20,18 @@ const _setActiveStatus = (element, sidebar, selector, isScroll) => {
 
     [...activeElements].map(activeElement => {
 
+        if (selector !== SELECTORS.NAVSUBGROUP) {
+            activeElement !== element && activeElement.classList.remove("active");
+        } else {
+            (
+                activeElement !== element &&
+                [...activeElement.querySelectorAll(SELECTORS.NAVSUBGROUP)].filter(activeElementChild => activeElementChild === element).length === 0 &&
+                activeElement.classList.remove("active")
+            );
+        }
+
         if (selector !== SELECTORS.NAVLEAF) {
             activeElement === element && _closeElement(element);
-        } else {
-            activeElement !== element && activeElement.classList.remove("active");
         }
 
     });
@@ -41,8 +42,6 @@ const _setActiveStatus = (element, sidebar, selector, isScroll) => {
 
         [...activeGroups].filter(group => !group.querySelector(SELECTORS.NAVLEAF + SELECTORS.ACTIVE)).map(group => _closeElement(group));
         [...activeSubGroups].filter(subGroup => !subGroup.querySelector(SELECTORS.NAVLEAF + SELECTORS.ACTIVE)).map(subGroup => _closeElement(subGroup));
-
-        _scrollToActiveLeaf(sidebar);
     }
 };
 
@@ -75,8 +74,6 @@ const setActiveState = (id, group, subGroup, leaf) => {
         leaf !== null && leaf < active.querySelectorAll(SELECTORS.NAVLEAF).length && (active = active.querySelectorAll(SELECTORS.NAVLEAF)[leaf]);
 
         active.classList.add("active");
-
-        leaf && _scrollToActiveLeaf(sidebar);
 
         return active;
     } else {
