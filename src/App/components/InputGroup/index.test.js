@@ -91,6 +91,22 @@ describe("Component: InputGroup - ", () => {
         expect(wrapper.html()).toContain("this is a text in a label");
     });
 
+    it("renders div with class .input-group when prefixValue, postfixValue or feedbackIcon is provided", () => {
+        const wrapper1 = shallow(<InputGroup type="typetest" prefixType="button" prefixValue="button text" prefixBtnColor="executive" />);
+        const wrapper2 = shallow(<InputGroup type="typetest" feedbackIcon="testvalue" />);
+        const wrapper3 = shallow(<InputGroup type="typetest" postfixValue="testvalue" />);
+
+        expect(wrapper1.html()).toContain("input-group");
+        expect(wrapper2.html()).toContain("input-group");
+        expect(wrapper3.html()).toContain("input-group");
+    });
+
+    it("does not render div with class .input-group when prefixValue, postfixValue and feedbackIcon are not provided", () => {
+        const wrapper = shallow(<InputGroup type="typetest" label="this is a text in a label" />);
+
+        expect(wrapper.html()).not.toContain("input-group");
+    });
+
     it("renders a form-group with a prefix button if prop prefixValue is provided", () => {
         const wrapper = mount(<InputGroup type="typetest" prefixType="button" prefixValue="button text" prefixBtnColor="executive" />);
 
