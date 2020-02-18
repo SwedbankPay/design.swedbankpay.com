@@ -1,13 +1,14 @@
 .sidebar {
     position: sticky;
-    top: 0;
+    top: 0.5rem;
+    margin-top: 0.5rem;
 
     &.sidebar-topbar-sticky {
-        top: @topbar-height;
+        top: calc(@topbar-height + 0.5rem);
     }
 
     .sidebar-nav {
-        max-height: calc(100vh - @topbar-height - 0.5rem);
+        max-height: calc(100vh - @topbar-height);
         overflow-y: auto;
 
         .main-nav-ul {
