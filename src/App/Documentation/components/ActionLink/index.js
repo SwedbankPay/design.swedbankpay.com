@@ -15,7 +15,7 @@ const Overview = () => (
 );
 
 const badge = {
-    type: "badge-default",
+    type: "badge-default badge-number",
     text: "40"
 };
 
