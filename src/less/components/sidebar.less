@@ -25,10 +25,6 @@
                         transform: rotate(90deg);
                         transition: transform 0.3s;
                     }
-
-                    span {
-                        font-weight: @font-weight-bold;
-                    }
                 }
 
                 &.active {
@@ -71,6 +67,7 @@
                     span {
                         padding-left: 0.5rem;
                         font-family: @brand-headline;
+                        font-weight: @font-weight-normal;
                         font-size: 1rem;
                         line-height: 1.5rem;
                     }
@@ -91,6 +88,10 @@
 
                             > .nav-subgroup-heading {
                                 .nav-heading-active();
+
+                                span {
+                                    font-weight: @font-weight-bold;
+                                }
                             }
                         }
 
