@@ -15,7 +15,7 @@ const CustomersDetailedDialog = ({ customer }) => (
             </div>
             <footer className="dialog-footer">
                 <button className="btn btn-guiding" type="button" data-dialog-close="true">Cancel</button>
-                <button className="btn btn-destructive" type="button">Delete</button>
+                <button className="btn btn-executive" type="button">Delete</button>
             </footer>
         </section>
     </div>

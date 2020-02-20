@@ -14,7 +14,6 @@ const Examples = () => (
             <div className="button-group">{"\n"}
                 <ButtonComponent type="executive" label="Executive" />{"\n"}
                 <ButtonComponent type="guiding" label="Guiding" />{"\n"}
-                <ButtonComponent type="destructive" label="Destructive" />{"\n"}
                 <ButtonComponent type="link" label="Link" />{"\n"}
             </div>
         </ComponentPreview>
@@ -50,7 +49,6 @@ const OutlineButtons = () => (
             <div className="button-group">{"\n"}
                 <ButtonComponent outline type="executive" label="Executive" />{"\n"}
                 <ButtonComponent outline type="guiding" label="Guiding" />{"\n"}
-                <ButtonComponent outline type="destructive" label="Destructive" />{"\n"}
             </div>
         </ComponentPreview>
     </>
@@ -64,7 +62,6 @@ const ButtonGroup = () => (
             <div className="button-group">{"\n"}
                 <ButtonComponent type="executive" label="Activate" />{"\n"}
                 <ButtonComponent type="guiding" label="Disable" />{"\n"}
-                <ButtonComponent type="destructive" label="Delete" />{"\n"}
             </div>
         </ComponentPreview>
     </>
@@ -117,7 +114,6 @@ const ActiveState = () => (
             <div className="button-group">{"\n"}
                 <ButtonComponent href="#" active type="executive" label="Executive" />{"\n"}
                 <ButtonComponent href="#" active type="guiding" label="Guiding" />{"\n"}
-                <ButtonComponent href="#" active type="destructive" label="Destructive" />{"\n"}
             </div>
         </ComponentPreview>
     </>
@@ -131,7 +127,6 @@ const DisabledState = () => (
             <div className="button-group">{"\n"}
                 <ButtonComponent disabled type="executive" label="Executive" />{"\n"}
                 <ButtonComponent disabled type="guiding" label="Guiding" />{"\n"}
-                <ButtonComponent disabled type="destructive" label="Destructive" />{"\n"}
             </div>
         </ComponentPreview>
         <p>Disabled buttons using the <CodeTags type="primary" code={"<a>"} /> element behave a bit different:</p>
@@ -144,7 +139,6 @@ const DisabledState = () => (
             <div className="button-group">{"\n"}
                 <ButtonComponent href="#" disabled type="executive" label="Executive" />{"\n"}
                 <ButtonComponent href="#" disabled type="guiding" label="Guiding" />{"\n"}
-                <ButtonComponent href="#" disabled type="destructive" label="Destructive" />{"\n"}
             </div>
         </ComponentPreview>
         <Alert type="warning">
@@ -163,7 +157,6 @@ const UsageWithIcons = () => (
             <div className="button-group">{"\n"}
                 <ButtonComponent icon="cloud" type="executive" label="Executive" />{"\n\n"}
                 <ButtonComponent icon="cloud" type="guiding" label="Guiding" />{"\n"}
-                <ButtonComponent icon="cloud" type="destructive" label="Destructive" />{"\n"}
             </div>
         </ComponentPreview>
     </>
@@ -177,7 +170,6 @@ const ButtonLoader = () => (
             <div className="button-group">{"\n"}
                 <ButtonComponent type="executive" label="Executive" loader loading />{"\n"}
                 <ButtonComponent type="guiding" label="Guiding" loader loading />{"\n"}
-                <ButtonComponent type="destructive" label="Destructive" loader loading />{"\n"}
             </div>
         </ComponentPreview>
         <h3>Disabled loader</h3>
@@ -186,7 +178,6 @@ const ButtonLoader = () => (
             <div className="button-group">{"\n"}
                 <ButtonComponent disabled type="executive" label="Executive" loader loading />{"\n"}
                 <ButtonComponent disabled type="guiding" label="Guiding" loader loading />{"\n"}
-                <ButtonComponent disabled type="destructive" label="Destructive" loader loading />{"\n"}
             </div>
         </ComponentPreview>
         <h3>Outline loader</h3>
@@ -195,7 +186,6 @@ const ButtonLoader = () => (
             <div className="button-group">{"\n"}
                 <ButtonComponent outline type="executive" label="Executive" loader loading />{"\n"}
                 <ButtonComponent outline type="guiding" label="Guiding" loader loading />{"\n"}
-                <ButtonComponent outline type="destructive" label="Destructive" loader loading />{"\n"}
             </div>
         </ComponentPreview>
     </>

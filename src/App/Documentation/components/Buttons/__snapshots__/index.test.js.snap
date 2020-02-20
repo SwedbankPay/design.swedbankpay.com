@@ -56,14 +56,6 @@ exports[`Documentation: Buttons Active State renders 1`] = `
       />
       
 
-      <Button
-        active={true}
-        href="#"
-        label="Destructive"
-        type="destructive"
-      />
-      
-
     </div>
   </ComponentPreview>
 </Fragment>
@@ -108,14 +100,6 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
         loader={true}
         loading={true}
         type="guiding"
-      />
-      
-
-      <Button
-        label="Destructive"
-        loader={true}
-        loading={true}
-        type="destructive"
       />
       
 
@@ -164,15 +148,6 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
       />
       
 
-      <Button
-        disabled={true}
-        label="Destructive"
-        loader={true}
-        loading={true}
-        type="destructive"
-      />
-      
-
     </div>
   </ComponentPreview>
   <h3>
@@ -218,15 +193,6 @@ exports[`Documentation: Buttons Button Loader renders 1`] = `
       />
       
 
-      <Button
-        label="Destructive"
-        loader={true}
-        loading={true}
-        outline={true}
-        type="destructive"
-      />
-      
-
     </div>
   </ComponentPreview>
 </Fragment>
@@ -269,12 +235,6 @@ exports[`Documentation: Buttons Button group renders 1`] = `
       />
       
 
-      <Button
-        label="Delete"
-        type="destructive"
-      />
-      
-
     </div>
   </ComponentPreview>
 </Fragment>
@@ -314,12 +274,6 @@ exports[`Documentation: Buttons ButtonGroup renders 1`] = `
       <Button
         label="Disable"
         type="guiding"
-      />
-      
-
-      <Button
-        label="Delete"
-        type="destructive"
       />
       
 
@@ -370,13 +324,6 @@ exports[`Documentation: Buttons Disabled State renders 1`] = `
         disabled={true}
         label="Guiding"
         type="guiding"
-      />
-      
-
-      <Button
-        disabled={true}
-        label="Destructive"
-        type="destructive"
       />
       
 
@@ -449,14 +396,6 @@ exports[`Documentation: Buttons Disabled State renders 1`] = `
         href="#"
         label="Guiding"
         type="guiding"
-      />
-      
-
-      <Button
-        disabled={true}
-        href="#"
-        label="Destructive"
-        type="destructive"
       />
       
 
@@ -534,12 +473,6 @@ exports[`Documentation: Buttons Examples renders 1`] = `
       
 
       <Button
-        label="Destructive"
-        type="destructive"
-      />
-      
-
-      <Button
         label="Link"
         type="link"
       />
@@ -587,13 +520,6 @@ exports[`Documentation: Buttons Outline Buttons renders 1`] = `
         label="Guiding"
         outline={true}
         type="guiding"
-      />
-      
-
-      <Button
-        label="Destructive"
-        outline={true}
-        type="destructive"
       />
       
 
@@ -805,13 +731,6 @@ exports[`Documentation: Buttons Usage With Icons renders 1`] = `
         icon="cloud"
         label="Guiding"
         type="guiding"
-      />
-      
-
-      <Button
-        icon="cloud"
-        label="Destructive"
-        type="destructive"
       />
       
 
