@@ -95,7 +95,7 @@ const ButtonAddons = () => (
                 prefixBtnColor="guiding"
                 postfixType="button"
                 postfixValue="Button"
-                postfixBtnColor="destructive"
+                postfixBtnColor="executive"
             />
         </ComponentPreview>
     </>
@@ -179,7 +179,7 @@ const Disabled = () => (
                 prefixBtnColor="guiding"
                 postfixType="button"
                 postfixValue="Button"
-                postfixBtnColor="destructive"
+                postfixBtnColor="executive"
             />
         </ComponentPreview>
     </>

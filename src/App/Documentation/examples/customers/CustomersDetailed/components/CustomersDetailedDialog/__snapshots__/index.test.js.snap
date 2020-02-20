@@ -59,7 +59,7 @@ exports[`Examples: CustomersDetailedDialog renders 1`] = `
         Cancel
       </button>
       <button
-        className="btn btn-destructive"
+        className="btn btn-executive"
         type="button"
       >
         Delete

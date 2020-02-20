@@ -120,10 +120,10 @@ InputGroup.propTypes = {
     selectOptions: PropTypes.array,
     prefixValue: PropTypes.string,
     prefixType: PropTypes.oneOf(["button", "icon", ""]),
-    prefixBtnColor: PropTypes.oneOf(["executive", "guiding", "destructive"]),
+    prefixBtnColor: PropTypes.oneOf(["executive", "guiding"]),
     postfixValue: PropTypes.string,
     postfixType: PropTypes.oneOf(["button", "icon", ""]),
-    postfixBtnColor: PropTypes.oneOf(["executive", "guiding", "destructive"]),
+    postfixBtnColor: PropTypes.oneOf(["executive", "guiding"]),
     feedbackIcon: PropTypes.string,
     helpBlock: PropTypes.oneOfType([
         PropTypes.string,
