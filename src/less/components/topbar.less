@@ -25,7 +25,7 @@
         }
     });
 
-    each(@grid-breakpoints, .(@max-width, @infix) {
+    each(@grid-breakpoints-max, .(@max-width, @infix) {
         &.topbar-max-@{infix}-sticky {
             @media screen and (max-width: @max-width) {
                 .topbar-sticky();
