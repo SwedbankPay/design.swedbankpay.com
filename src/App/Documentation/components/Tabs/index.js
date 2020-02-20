@@ -12,31 +12,15 @@ const tabItems = ["Card", "Discounts", "Transactions", "Invoice", "Settings", "A
 const BasicUsage = () => (
     <>
         <h2 id="basic-usage">Basic usage</h2>
-        <p>Add class <CodeTags type="secondary" code=".tabs" /> to a div containing <CodeTags type="primary" code={"<ul>"} />and nest <CodeTags type="primary" code={"<li>"} /> as needed.
+        <p>Add class <CodeTags type="secondary" code=".tabs" /> to a div containing <CodeTags type="primary" code={"<ul>"} /> and nest <CodeTags type="primary" code={"<li>"} /> as
+        needed. The tabs component will by default cover the whole width of the container at breakpoint <CodeTags type="secondary" code="sm" />. To specify a larger breakpoint,
+        use <CodeTags type="secondary" code=".tabs-{breakpoint}" /> (see <Link to="/docs/core/breakpoints">breakpoints</Link> for more information on breakpoints).
         Make sure that the tabs will not overflow on screens of normal size.
         Consider revising the design or the decision to use tabs when more than 3
         alternatives are present. If using tabs really is necessary, tabs with scroll might be
         a more suitable alternative.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <TabsComponent id="tabs-example" items={[...tabItems.slice(0, 3)]}/>
-        </ComponentPreview>
-    </>
-);
-
-const WideTabs = () => (
-    <>
-        <h2 id="wide-tabs">Wide tabs</h2>
-        <p>
-            To make tabs cover the whole width of the container, use class <CodeTags type="secondary" code=".tabs-wide" />.
-            Use <CodeTags type="secondary" code=".tabs-{breakpoint}-wide" /> to specify at which breakpoint the full width
-            property should stop (see <Link to="/docs/core/breakpoints">breakpoints</Link> for more information on breakpoints).
-            Make sure that the tabs will not overflow on screens of normal size.
-            Consider revising the design or the decision to use tabs when more than 3
-            alternatives are present. If using tabs really is necessary, tabs with scroll might be
-            a more suitable alternative.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <TabsComponent id="tabs-example" items={[...tabItems.slice(0, 3)]} fullWidth />
         </ComponentPreview>
     </>
 );
@@ -88,7 +72,6 @@ class Tabs extends Component {
                     Use tabs to show which page or section that is active out of several options.
                 </p>
                 <BasicUsage />
-                <WideTabs />
                 <TabsScroll />
                 <JavascriptMethods />
             </DocContainer>
@@ -99,4 +82,4 @@ class Tabs extends Component {
 export default Tabs;
 
 /* For testing */
-export { BasicUsage, WideTabs, TabsScroll, JavascriptMethods };
+export { BasicUsage, TabsScroll, JavascriptMethods };

@@ -29,15 +29,6 @@ describe("Component: Tabs - ", () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    it("renders with class name .tabs.tabs-wide when prop fullWidth is specified", () => {
-        const wrapper = shallow(<Tabs items={items} fullWidth/>);
-        const hasWide = wrapper.hasClass("tabs-wide");
-
-        expect(wrapper.hasClass("tabs")).toBeTruthy();
-        expect(hasWide).toBeTruthy();
-        expect(wrapper).toMatchSnapshot();
-    });
-
     it("renders with class name .tabs.tabs-scroll when prop scroll is specified", () => {
         const wrapper = shallow(<Tabs items={items} scroll/>);
         const hasScroll = wrapper.hasClass("tabs-scroll");

@@ -82,47 +82,6 @@ exports[`Component: Tabs -  renders with class name .tabs.tabs-scroll when prop 
 </div>
 `;
 
-exports[`Component: Tabs -  renders with class name .tabs.tabs-wide when prop fullWidth is specified 1`] = `
-<div
-  className="tabs tabs-wide"
->
-  
-
-  <ul>
-    <li
-      className={null}
-      key="tab-item-test-0"
-    >
-      
-
-      <a
-        href="#"
-        onClick={[Function]}
-      >
-        test
-      </a>
-      
-
-    </li>
-    <li
-      className="active"
-      key="tab-item-test 2-1"
-    >
-      
-
-      <a
-        href="#"
-        onClick={[Function]}
-      >
-        test 2
-      </a>
-      
-
-    </li>
-  </ul>
-</div>
-`;
-
 exports[`Component: Tabs -  renders with class name tabs when prop scroll is not specified 1`] = `
 <div
   className="tabs"
