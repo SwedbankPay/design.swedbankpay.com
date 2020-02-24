@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer, JavascriptDocs, JavascriptDocElement } from "@docutils";
 import TabsComponent from "@components/Tabs";
@@ -11,7 +12,9 @@ const tabItems = ["Card", "Discounts", "Transactions", "Invoice", "Settings", "A
 const BasicUsage = () => (
     <>
         <h2 id="basic-usage">Basic usage</h2>
-        <p>Add class <CodeTags type="secondary" code=".tabs" /> to a div containing <CodeTags type="primary" code={"<ul>"} />and nest <CodeTags type="primary" code={"<li>"} /> as needed.
+        <p>Add class <CodeTags type="secondary" code=".tabs" /> to a div containing <CodeTags type="primary" code={"<ul>"} /> and nest <CodeTags type="primary" code={"<li>"} /> as
+        needed. The tabs component will by default cover the whole width of the container at breakpoint <CodeTags type="secondary" code="sm" />. To specify a larger breakpoint,
+        use <CodeTags type="secondary" code=".tabs-{breakpoint}" /> (see <Link to="/docs/core/breakpoints">breakpoints</Link> for more information on breakpoints).
         Make sure that the tabs will not overflow on screens of normal size.
         Consider revising the design or the decision to use tabs when more than 3
         alternatives are present. If using tabs really is necessary, tabs with scroll might be
@@ -25,9 +28,8 @@ const BasicUsage = () => (
 const TabsScroll = () => (
     <>
         <h2 id="tabs-scroll">Tabs with scroll</h2>
-        <p>To make tabs more mobile friendly, use class <CodeTags type="secondary" code=".tabs-scroll" />.
-            <CodeTags type="secondary" code=".tabs-scroll" /> will make the tabs scrollable in case of overflow.
-        Note that the scrollable property is not optimized for desktop usage. Consider the usage
+        <p>To make tabs more mobile friendly, use class <CodeTags type="secondary" code=".tabs-scroll" />. <CodeTags type="secondary" code=".tabs-scroll" /> will
+        make the tabs scrollable in case of overflow. Note that the scrollable property is not optimized for desktop usage. Consider the usage
         when 4 or more tabs are present.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <TabsComponent id="tabs-scroll-example" ulId="tabs-scroll-example-ul" items={tabItems} scroll/>

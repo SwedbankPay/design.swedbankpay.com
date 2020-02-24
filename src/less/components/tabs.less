@@ -7,6 +7,17 @@
     display: flex;
     z-index: @zindex-tabs;
 
+    @media screen and (max-width: @screen-sm-max) {
+        ul {
+            width: 100%;
+
+            li {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
     &.tabs-scroll {
         ul {
             overflow: scroll;
@@ -55,7 +66,6 @@
 
         li {
             display: block;
-            // margin-left: @base-margin-lg;
             border-right: 2px solid @white;
 
             &:last-child {
@@ -97,3 +107,19 @@
         }
     }
 }
+
+each(@grid-breakpoints-max, .(@max-width, @infix) {
+    .tabs-@{infix} {
+        .tabs();
+        @media screen and (max-width: @max-width) {
+            ul {
+                width: 100%;
+
+                li {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+});
