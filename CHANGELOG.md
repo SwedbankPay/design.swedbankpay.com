@@ -58,3 +58,6 @@
    - Escape button can now be used to close dialog
  - Lists
    - Changed bordered item list border color and style
+ - Design guide
+   - Forms
+     - Removed unnecessary input group from examples
