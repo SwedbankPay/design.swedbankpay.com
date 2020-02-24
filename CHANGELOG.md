@@ -45,3 +45,6 @@
 ### Fixed
  - Action list
    - Fix action list not working on IE and Edge
+
+
+### Next release
