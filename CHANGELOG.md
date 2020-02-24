@@ -61,3 +61,5 @@
  - Design guide
    - Forms
      - Removed unnecessary input group from examples
+ - Button
+   - Updated btn-link styling
