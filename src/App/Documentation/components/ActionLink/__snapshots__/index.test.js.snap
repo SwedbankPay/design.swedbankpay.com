@@ -19,7 +19,7 @@ exports[`Components: ActionLink ActionLinkBadge renders 1`] = `
       badge={
         Object {
           "text": "40",
-          "type": "badge-default",
+          "type": "badge-default badge-number",
         }
       }
       linkText="My link"
@@ -47,7 +47,7 @@ exports[`Components: ActionLink ActionLinkBadgeSmallText renders 1`] = `
       badge={
         Object {
           "text": "40",
-          "type": "badge-default",
+          "type": "badge-default badge-number",
         }
       }
       linkText="My link"
@@ -63,7 +63,7 @@ exports[`Components: ActionLink ActionLinkBadgeSmallText renders 1`] = `
       badge={
         Object {
           "text": "40",
-          "type": "badge-default",
+          "type": "badge-default badge-number",
         }
       }
       linkText="My link"
