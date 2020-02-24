@@ -63,3 +63,5 @@
      - Removed unnecessary input group from examples
  - Button
    - Updated btn-link styling
+ - Tabs
+   - Fixed tabs incorrectly showing fade on IE11 in certain scenarios
