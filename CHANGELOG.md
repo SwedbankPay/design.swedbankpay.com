@@ -54,3 +54,5 @@
    - Fix nav-leaf elements not properly aligned in IE11
  - Action list
    - Fix action list not having same background as parent element on IE11
+ - Dialog
+   - Escape button can now be used to close dialog
