@@ -48,3 +48,5 @@
 
 
 ### Next release
+ - Grid
+   - Change gutter width to 32px
