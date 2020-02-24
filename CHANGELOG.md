@@ -66,3 +66,5 @@
  - Tabs
    - Fixed tabs incorrectly showing fade on IE11 in certain scenarios
    - Changed tabs default behavior. Basic tabs now covers 100% width on chosen breakpoint
+ - Action link
+   - Fixed action link arrow not visible and misaligned in IE11
