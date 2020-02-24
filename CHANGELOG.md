@@ -50,3 +50,7 @@
 ### Next release
  - Grid
    - Change gutter width to 32px
+ - Sidebar
+   - Fix nav-leaf elements not properly aligned in IE11
+ - Action list
+   - Fix action list not having same background as parent element on IE11
