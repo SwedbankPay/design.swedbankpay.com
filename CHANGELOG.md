@@ -56,3 +56,5 @@
    - Fix action list not having same background as parent element on IE11
  - Dialog
    - Escape button can now be used to close dialog
+ - Lists
+   - Changed bordered item list border color and style
