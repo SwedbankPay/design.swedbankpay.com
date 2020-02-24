@@ -6,28 +6,19 @@ exports[`Component: InputGroup -  renders 1`] = `
 >
   
 
-  <div
-    className="input-group"
-  >
-    
-
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
-    
-
-     
-  </div>
+  <input
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    placeholder={null}
+    readOnly={null}
+    required={null}
+    type="typetest"
+  />
 </div>
 `;
 
@@ -96,28 +87,19 @@ exports[`Component: InputGroup -  renders a form-group with a help block if prop
   >
     
 
-    <div
-      className="input-group"
-    >
-      
-
-      <input
-        autoComplete={null}
-        className="form-control"
-        data-validate={null}
-        defaultValue=""
-        disabled={null}
-        id={null}
-        pattern={null}
-        placeholder={null}
-        readOnly={null}
-        required={null}
-        type="typetest"
-      />
-      
-
-       
-    </div>
+    <input
+      autoComplete={null}
+      className="form-control"
+      data-validate={null}
+      defaultValue=""
+      disabled={null}
+      id={null}
+      pattern={null}
+      placeholder={null}
+      readOnly={null}
+      required={null}
+      type="typetest"
+    />
     <div
       className="help-block"
       data-error={null}
@@ -141,28 +123,19 @@ exports[`Component: InputGroup -  renders a form-group with a help block with da
   >
     
 
-    <div
-      className="input-group"
-    >
-      
-
-      <input
-        autoComplete={null}
-        className="form-control"
-        data-validate={null}
-        defaultValue=""
-        disabled={null}
-        id={null}
-        pattern={null}
-        placeholder={null}
-        readOnly={null}
-        required={null}
-        type="typetest"
-      />
-      
-
-       
-    </div>
+    <input
+      autoComplete={null}
+      className="form-control"
+      data-validate={null}
+      defaultValue=""
+      disabled={null}
+      id={null}
+      pattern={null}
+      placeholder={null}
+      readOnly={null}
+      required={null}
+      type="typetest"
+    />
     <div
       className="help-block"
       data-error="error"
@@ -185,28 +158,19 @@ exports[`Component: InputGroup -  renders a form-group with a label if prop labe
   </label>
   
 
-  <div
-    className="input-group"
-  >
-    
-
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
-    
-
-     
-  </div>
+  <input
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    placeholder={null}
+    readOnly={null}
+    required={null}
+    type="typetest"
+  />
 </div>
 `;
 
@@ -425,36 +389,27 @@ exports[`Component: InputGroup -  renders a form-group with a select field with 
   >
     
 
-    <div
-      className="input-group"
+    <select
+      className="form-control"
     >
       
-
-      <select
-        className="form-control"
-      >
-        
 		
-        <option>
-          Bounty hunter
-        </option>
-        
-		
-        <option>
-          Smuggler
-        </option>
-        
-		
-        <option>
-          Jedi
-        </option>
-        
-	
-      </select>
+      <option>
+        Bounty hunter
+      </option>
       
-
-       
-    </div>
+		
+      <option>
+        Smuggler
+      </option>
+      
+		
+      <option>
+        Jedi
+      </option>
+      
+	
+    </select>
   </div>
 </InputGroup>
 `;
@@ -468,28 +423,19 @@ exports[`Component: InputGroup -  renders a form-group with a text-area if type 
   >
     
 
-    <div
-      className="input-group"
-    >
-      
-
-      <textarea
-        autoComplete={null}
-        className="form-control"
-        data-validate={null}
-        defaultValue=""
-        disabled={null}
-        id={null}
-        pattern={null}
-        placeholder={null}
-        readOnly={null}
-        required={null}
-        type="textarea"
-      />
-      
-
-       
-    </div>
+    <textarea
+      autoComplete={null}
+      className="form-control"
+      data-validate={null}
+      defaultValue=""
+      disabled={null}
+      id={null}
+      pattern={null}
+      placeholder={null}
+      readOnly={null}
+      required={null}
+      type="textarea"
+    />
   </div>
 </InputGroup>
 `;
@@ -500,28 +446,19 @@ exports[`Component: InputGroup -  throws an error if postfixBtnColor prop has an
 >
   
 
-  <div
-    className="input-group"
-  >
-    
-
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
-    
-
-     
-  </div>
+  <input
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    placeholder={null}
+    readOnly={null}
+    required={null}
+    type="typetest"
+  />
 </div>
 `;
 
@@ -531,28 +468,19 @@ exports[`Component: InputGroup -  throws an error if postfixBtnColor prop has an
 >
   
 
-  <div
-    className="input-group"
-  >
-    
-
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
-    
-
-     
-  </div>
+  <input
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    placeholder={null}
+    readOnly={null}
+    required={null}
+    type="typetest"
+  />
 </div>
 `;
 
@@ -562,28 +490,19 @@ exports[`Component: InputGroup -  throws an error if postfixBtnColor prop has an
 >
   
 
-  <div
-    className="input-group"
-  >
-    
-
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
-    
-
-     
-  </div>
+  <input
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    placeholder={null}
+    readOnly={null}
+    required={null}
+    type="typetest"
+  />
 </div>
 `;
 
@@ -593,28 +512,19 @@ exports[`Component: InputGroup -  throws an error if postfixBtnColor prop has an
 >
   
 
-  <div
-    className="input-group"
-  >
-    
-
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
-    
-
-     
-  </div>
+  <input
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    placeholder={null}
+    readOnly={null}
+    required={null}
+    type="typetest"
+  />
 </div>
 `;
 
@@ -624,28 +534,19 @@ exports[`Component: InputGroup -  throws an error if postfixBtnColor prop has an
 >
   
 
-  <div
-    className="input-group"
-  >
-    
-
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
-    
-
-     
-  </div>
+  <input
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    placeholder={null}
+    readOnly={null}
+    required={null}
+    type="typetest"
+  />
 </div>
 `;
 
@@ -655,28 +556,19 @@ exports[`Component: InputGroup -  throws an error if postfixType prop has an inv
 >
   
 
-  <div
-    className="input-group"
-  >
-    
-
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
-    
-
-     
-  </div>
+  <input
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    placeholder={null}
+    readOnly={null}
+    required={null}
+    type="typetest"
+  />
 </div>
 `;
 
@@ -686,28 +578,19 @@ exports[`Component: InputGroup -  throws an error if postfixType prop has an inv
 >
   
 
-  <div
-    className="input-group"
-  >
-    
-
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
-    
-
-     
-  </div>
+  <input
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    placeholder={null}
+    readOnly={null}
+    required={null}
+    type="typetest"
+  />
 </div>
 `;
 
@@ -717,28 +600,19 @@ exports[`Component: InputGroup -  throws an error if postfixType prop has an inv
 >
   
 
-  <div
-    className="input-group"
-  >
-    
-
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
-    
-
-     
-  </div>
+  <input
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    placeholder={null}
+    readOnly={null}
+    required={null}
+    type="typetest"
+  />
 </div>
 `;
 
@@ -748,28 +622,19 @@ exports[`Component: InputGroup -  throws an error if postfixType prop has an inv
 >
   
 
-  <div
-    className="input-group"
-  >
-    
-
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
-    
-
-     
-  </div>
+  <input
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    placeholder={null}
+    readOnly={null}
+    required={null}
+    type="typetest"
+  />
 </div>
 `;
 
@@ -779,28 +644,19 @@ exports[`Component: InputGroup -  throws an error if postfixType prop has an inv
 >
   
 
-  <div
-    className="input-group"
-  >
-    
-
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
-    
-
-     
-  </div>
+  <input
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    placeholder={null}
+    readOnly={null}
+    required={null}
+    type="typetest"
+  />
 </div>
 `;
 
@@ -810,28 +666,19 @@ exports[`Component: InputGroup -  throws an error if prefixBtnColor prop has an 
 >
   
 
-  <div
-    className="input-group"
-  >
-    
-
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
-    
-
-     
-  </div>
+  <input
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    placeholder={null}
+    readOnly={null}
+    required={null}
+    type="typetest"
+  />
 </div>
 `;
 
@@ -841,28 +688,19 @@ exports[`Component: InputGroup -  throws an error if prefixBtnColor prop has an 
 >
   
 
-  <div
-    className="input-group"
-  >
-    
-
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
-    
-
-     
-  </div>
+  <input
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    placeholder={null}
+    readOnly={null}
+    required={null}
+    type="typetest"
+  />
 </div>
 `;
 
@@ -872,28 +710,19 @@ exports[`Component: InputGroup -  throws an error if prefixBtnColor prop has an 
 >
   
 
-  <div
-    className="input-group"
-  >
-    
-
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
-    
-
-     
-  </div>
+  <input
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    placeholder={null}
+    readOnly={null}
+    required={null}
+    type="typetest"
+  />
 </div>
 `;
 
@@ -903,28 +732,19 @@ exports[`Component: InputGroup -  throws an error if prefixBtnColor prop has an 
 >
   
 
-  <div
-    className="input-group"
-  >
-    
-
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
-    
-
-     
-  </div>
+  <input
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    placeholder={null}
+    readOnly={null}
+    required={null}
+    type="typetest"
+  />
 </div>
 `;
 
@@ -934,28 +754,19 @@ exports[`Component: InputGroup -  throws an error if prefixBtnColor prop has an 
 >
   
 
-  <div
-    className="input-group"
-  >
-    
-
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
-    
-
-     
-  </div>
+  <input
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    placeholder={null}
+    readOnly={null}
+    required={null}
+    type="typetest"
+  />
 </div>
 `;
 
@@ -965,28 +776,19 @@ exports[`Component: InputGroup -  throws an error if prefixType prop has an inva
 >
   
 
-  <div
-    className="input-group"
-  >
-    
-
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
-    
-
-     
-  </div>
+  <input
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    placeholder={null}
+    readOnly={null}
+    required={null}
+    type="typetest"
+  />
 </div>
 `;
 
@@ -996,28 +798,19 @@ exports[`Component: InputGroup -  throws an error if prefixType prop has an inva
 >
   
 
-  <div
-    className="input-group"
-  >
-    
-
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
-    
-
-     
-  </div>
+  <input
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    placeholder={null}
+    readOnly={null}
+    required={null}
+    type="typetest"
+  />
 </div>
 `;
 
@@ -1027,28 +820,19 @@ exports[`Component: InputGroup -  throws an error if prefixType prop has an inva
 >
   
 
-  <div
-    className="input-group"
-  >
-    
-
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
-    
-
-     
-  </div>
+  <input
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    placeholder={null}
+    readOnly={null}
+    required={null}
+    type="typetest"
+  />
 </div>
 `;
 
@@ -1058,28 +842,19 @@ exports[`Component: InputGroup -  throws an error if prefixType prop has an inva
 >
   
 
-  <div
-    className="input-group"
-  >
-    
-
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
-    
-
-     
-  </div>
+  <input
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    placeholder={null}
+    readOnly={null}
+    required={null}
+    type="typetest"
+  />
 </div>
 `;
 
@@ -1089,28 +864,19 @@ exports[`Component: InputGroup -  throws an error if prefixType prop has an inva
 >
   
 
-  <div
-    className="input-group"
-  >
-    
-
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
-    
-
-     
-  </div>
+  <input
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    placeholder={null}
+    readOnly={null}
+    required={null}
+    type="typetest"
+  />
 </div>
 `;
 
@@ -1120,28 +886,19 @@ exports[`Component: InputGroup -  throws an error if type prop is not provided 1
 >
   
 
-  <div
-    className="input-group"
-  >
-    
-
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type={null}
-    />
-    
-
-     
-  </div>
+  <input
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    placeholder={null}
+    readOnly={null}
+    required={null}
+    type={null}
+  />
 </div>
 `;
 
@@ -1151,28 +908,19 @@ exports[`Component: InputGroup -  throws an error if validationState prop has an
 >
   
 
-  <div
-    className="input-group has-success"
-  >
-    
-
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
-    
-
-     
-  </div>
+  <input
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    placeholder={null}
+    readOnly={null}
+    required={null}
+    type="typetest"
+  />
 </div>
 `;
 
@@ -1182,28 +930,19 @@ exports[`Component: InputGroup -  throws an error if validationState prop has an
 >
   
 
-  <div
-    className="input-group has-error"
-  >
-    
-
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
-    
-
-     
-  </div>
+  <input
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    placeholder={null}
+    readOnly={null}
+    required={null}
+    type="typetest"
+  />
 </div>
 `;
 
@@ -1213,28 +952,19 @@ exports[`Component: InputGroup -  throws an error if validationState prop has an
 >
   
 
-  <div
-    className="input-group"
-  >
-    
-
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
-    
-
-     
-  </div>
+  <input
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    placeholder={null}
+    readOnly={null}
+    required={null}
+    type="typetest"
+  />
 </div>
 `;
 
@@ -1244,28 +974,19 @@ exports[`Component: InputGroup -  throws an error if validationState prop has an
 >
   
 
-  <div
-    className="input-group has-invalid"
-  >
-    
-
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
-    
-
-     
-  </div>
+  <input
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    placeholder={null}
+    readOnly={null}
+    required={null}
+    type="typetest"
+  />
 </div>
 `;
 
@@ -1275,27 +996,18 @@ exports[`Component: InputGroup -  throws an error if validationState prop has an
 >
   
 
-  <div
-    className="input-group has-test"
-  >
-    
-
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
-    
-
-     
-  </div>
+  <input
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    placeholder={null}
+    readOnly={null}
+    required={null}
+    type="typetest"
+  />
 </div>
 `;
