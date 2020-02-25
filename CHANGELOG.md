@@ -68,3 +68,6 @@
    - Changed tabs default behavior. Basic tabs now covers 100% width on chosen breakpoint
  - Action link
    - Fixed action link arrow not visible and misaligned in IE11
+ - Tables
+   - Changed default table to be striped
+   - Added plain table as an alternative
