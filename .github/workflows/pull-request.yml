@@ -13,6 +13,7 @@ jobs:
 
       # Set brand specific variables
       - name: Environment variables
+        id: variables
         run: |
           chmod +x ./.github/scripts/variables.sh
           ./.github/scripts/variables.sh
