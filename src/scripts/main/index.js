@@ -1,6 +1,7 @@
 import { init } from "~/node_modules/@sentry/browser";
 import "@src/polyfills";
 
+import accordion from "./accordion";
 import actionList from "./action-list";
 import alert from "./alert";
 import datepicker from "./datepicker";
@@ -34,6 +35,7 @@ document.addEventListener("mousedown", () => { document.body.classList.add("inte
 document.addEventListener("keydown", () => { document.body.classList.remove("intent-mouse"); });
 
 const dg = {
+    accordion,
     actionList,
     alert,
     datepicker,
