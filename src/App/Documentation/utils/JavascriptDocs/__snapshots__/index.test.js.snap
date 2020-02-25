@@ -5,7 +5,7 @@ exports[`Utilities: JavascriptDocs CloseDocs renders 1`] = `
   <JavascriptDocElement
     code={
       <CodeTags
-        code="dg.close(<test-id>)"
+        code="dg.test.close(<test-id>)"
         params={
           Array [
             "<test-id>",
@@ -29,7 +29,7 @@ exports[`Utilities: JavascriptDocs OpenDocs renders 1`] = `
   <JavascriptDocElement
     code={
       <CodeTags
-        code="dg.open(<test-id>)"
+        code="dg.test.open(<test-id>)"
         params={
           Array [
             "<test-id>",
@@ -109,7 +109,7 @@ exports[`Utilities: JavascriptDocs renders init and close methods 1`] = `
       <JavascriptDocElement
         code={
           <CodeTags
-            code="dg.close(<test-id>)"
+            code="dg.test.close(<test-id>)"
             params={
               Array [
                 "<test-id>",
@@ -131,7 +131,7 @@ exports[`Utilities: JavascriptDocs renders init and close methods 1`] = `
               scope="row"
             >
               <CodeTags
-                code="dg.close(<test-id>)"
+                code="dg.test.close(<test-id>)"
                 params={
                   Array [
                     "<test-id>",
@@ -142,7 +142,7 @@ exports[`Utilities: JavascriptDocs renders init and close methods 1`] = `
                 <code
                   className="code-tags code-tags-secondary"
                 >
-                  dg.close(&lt;test-id&gt;)
+                  dg.test.close(&lt;test-id&gt;)
                 </code>
               </CodeTags>
             </h3>
@@ -221,7 +221,7 @@ exports[`Utilities: JavascriptDocs renders init and open methods 1`] = `
       <JavascriptDocElement
         code={
           <CodeTags
-            code="dg.open(<test-id>)"
+            code="dg.test.open(<test-id>)"
             params={
               Array [
                 "<test-id>",
@@ -243,7 +243,7 @@ exports[`Utilities: JavascriptDocs renders init and open methods 1`] = `
               scope="row"
             >
               <CodeTags
-                code="dg.open(<test-id>)"
+                code="dg.test.open(<test-id>)"
                 params={
                   Array [
                     "<test-id>",
@@ -254,7 +254,7 @@ exports[`Utilities: JavascriptDocs renders init and open methods 1`] = `
                 <code
                   className="code-tags code-tags-secondary"
                 >
-                  dg.open(&lt;test-id&gt;)
+                  dg.test.open(&lt;test-id&gt;)
                 </code>
               </CodeTags>
             </h3>
@@ -334,7 +334,7 @@ exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
       <JavascriptDocElement
         code={
           <CodeTags
-            code="dg.open(<test-id>)"
+            code="dg.test.open(<test-id>)"
             params={
               Array [
                 "<test-id>",
@@ -356,7 +356,7 @@ exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
               scope="row"
             >
               <CodeTags
-                code="dg.open(<test-id>)"
+                code="dg.test.open(<test-id>)"
                 params={
                   Array [
                     "<test-id>",
@@ -367,7 +367,7 @@ exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
                 <code
                   className="code-tags code-tags-secondary"
                 >
-                  dg.open(&lt;test-id&gt;)
+                  dg.test.open(&lt;test-id&gt;)
                 </code>
               </CodeTags>
             </h3>
@@ -387,7 +387,7 @@ exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
       <JavascriptDocElement
         code={
           <CodeTags
-            code="dg.close(<test-id>)"
+            code="dg.test.close(<test-id>)"
             params={
               Array [
                 "<test-id>",
@@ -409,7 +409,7 @@ exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
               scope="row"
             >
               <CodeTags
-                code="dg.close(<test-id>)"
+                code="dg.test.close(<test-id>)"
                 params={
                   Array [
                     "<test-id>",
@@ -420,7 +420,7 @@ exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
                 <code
                   className="code-tags code-tags-secondary"
                 >
-                  dg.close(&lt;test-id&gt;)
+                  dg.test.close(&lt;test-id&gt;)
                 </code>
               </CodeTags>
             </h3>
