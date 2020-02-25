@@ -14,7 +14,9 @@ jobs:
       # Set brand specific variables
       - name: Environment variables
         id: variables
+        # "git config core.filemode false" is set to disregard local rwx changes in git [THN]
         run: |
+          git config core.filemode false
           chmod +x ./.github/scripts/variables.sh
           ./.github/scripts/variables.sh
         env:
