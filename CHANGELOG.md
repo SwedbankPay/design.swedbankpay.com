@@ -61,6 +61,8 @@
  - Design guide
    - Forms
      - Removed unnecessary input group from examples
+   - Code tags
+     - Made documentation more specific, with more and better examples
  - Button
    - Updated btn-link styling
  - Tabs
@@ -71,3 +73,5 @@
  - Tables
    - Changed default table to be striped
    - Added plain table as an alternative
+ - Code tags
+   - Added default code tags style when using html code tag
