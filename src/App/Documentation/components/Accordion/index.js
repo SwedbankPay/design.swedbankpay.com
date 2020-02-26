@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import AccordionComponent from "@components/Accordion";
+import CodeTags from "@components/CodeTags";
 
 const { accordion } = window.dg;
 
@@ -26,8 +27,26 @@ const items = [
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
+        <p>
+            The accordion component hides its content <CodeTags type="secondary" code=".accordion-body" />, showing only its
+            title <CodeTags type="secondary" code=".accordion-header" />, until it is opened.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <AccordionComponent items={items} />
+        </ComponentPreview>
+    </>
+);
+
+const AccordionGroup = () => (
+    <>
+        <h2 id="accordion-group">Accordion group</h2>
+        <p>
+            If the accordions are wrapped in a <CodeTags type="secondary" code=".accordion-group" />, only one will be open at a time.
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <div className="accordion-group">
+                <AccordionComponent items={items} />
+            </div>
         </ComponentPreview>
     </>
 );
@@ -38,6 +57,7 @@ const Accordion = () => {
     return (
         <DocContainer docToc>
             <Overview />
+            <AccordionGroup />
         </DocContainer>
     );
 };

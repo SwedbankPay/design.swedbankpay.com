@@ -35,7 +35,6 @@
     }
 
     .accordion-header {
-        font-weight: @font-weight-normal;
         text-decoration: none;
         touch-action: manipulation;
         cursor: pointer;
@@ -51,18 +50,8 @@
         padding: 0.75rem;
         text-align: start;
         transition: background-color 0.3s ease;
-
-        .accordion-headline {
-            font-weight: @font-weight-bold;
-            font-size: 1rem;
-            padding: 0;
-        }
-
-        .accordion-subtitle {
-            font-family: @font-stack;
-
-            .small();
-        }
+        font-weight: @font-weight-bold;
+        font-size: 1rem;
 
         &:before {
             .material-icons-styling(@margin: 0 0.5rem);

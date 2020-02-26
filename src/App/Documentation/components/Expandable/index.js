@@ -32,7 +32,7 @@ const Overview = () => (
         <h2 id="overview">Overview</h2>
         <p>
             The expandable component shows only what is contained in the <CodeTags type="secondary" code=".expandable-header" /> when it is
-            closed. <CodeTags type="secondary" code=".expandable-content" /> will be visible in its open state.
+            closed. <CodeTags type="secondary" code=".expandable-body" /> will be visible in its open state.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ExpandableComponent items={items} />
@@ -69,7 +69,6 @@ const Expandable = () => {
         <DocContainer docToc>
             <p className="lead">
                 Expandables toggle between hiding and showing content on click.
-                They can be opened and closed independently of eachother, but if you wish for them to work like an accordion then wrap your expandables in an expandable-group.
             </p>
             <Overview />
             <ExpandableGroup />

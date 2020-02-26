@@ -67,7 +67,7 @@ exports[`Components: Expandable Overview renders 1`] = `
     />
      when it is closed. 
     <CodeTags
-      code=".expandable-content"
+      code=".expandable-body"
       type="secondary"
     />
      will be visible in its open state.
@@ -112,7 +112,7 @@ exports[`Components: Expandable renders 1`] = `
   <p
     className="lead"
   >
-    Expandables toggle between hiding and showing content on click. They can be opened and closed independently of eachother, but if you wish for them to work like an accordion then wrap your expandables in an expandable-group.
+    Expandables toggle between hiding and showing content on click.
   </p>
   <Overview />
   <ExpandableGroup />
