@@ -17,9 +17,12 @@
     }
 
     &.accordion-open {
-        border-top: 1px solid  @brand-secondary-light-3;
         background-color: @white;
         transition: background-color 0.3s ease;
+
+        &:first-child {
+            border-top: 1px solid  @brand-secondary-light-3;
+        }
 
         .accordion-header {
             background-color: @white;
@@ -43,7 +46,7 @@
         flex-direction: column;
         align-items: flex-start;
         user-select: none;
-        color: @brand-secondary-dark-2;
+        color: @brand-secondary;
         background-color: @white;
         padding: 0.75rem;
         text-align: start;
