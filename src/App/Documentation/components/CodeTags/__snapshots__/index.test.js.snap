@@ -14,6 +14,12 @@ exports[`Documentation: CodeTags Overview renders 1`] = `
     >
       Typography
     </Link>
+    . Using 
+    <CodeTags
+      code="<code>"
+      type="primary"
+    />
+     without any specied styling will result in the primary styling being applied. Chose which option that is more suitable for your project, or combine them to differentiate between different coding languages or styles.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -23,12 +29,23 @@ exports[`Documentation: CodeTags Overview renders 1`] = `
     <p>
       
 
+      This is an example of inline code using 
+      <code>
+        default.styling
+      </code>
+       with default styling.
+      
+
+    </p>
+    <p>
+      
+
       This is an example of inline code 
       <CodeTags
-        code="property.function()"
+        code="<ComponentName />"
         type="primary"
       />
-       that is presented using code tags.
+       with specified class.
       
 
     </p>
@@ -40,7 +57,25 @@ exports[`Documentation: CodeTags Overview renders 1`] = `
         code="property.function()"
         type="secondary"
       />
-       that is presented using code tags.
+       with another class to differentiate.
+      
+
+    </p>
+    <p>
+      
+
+      <span
+        className="code-tags code-tags-primary"
+      >
+        &lt;span&gt;
+      </span>
+       can also be used to 
+      <span
+        className="code-tags code-tags-secondary"
+      >
+        presentCode()
+      </span>
+      .
       
 
     </p>
