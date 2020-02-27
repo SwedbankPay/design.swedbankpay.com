@@ -13,8 +13,10 @@ const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
         <p>
-            The sidebar supports a depth of up to 3 levels. Note that if used with a sticky topbar, the class <CodeTags type="secondary" code=".sidebar-topbar-sticky" /> should
-            be added to the outmost <CodeTags type="primary" code="<div>" /> of the sidebar.
+            The sidebar supports a depth of up to 3 levels. Note that if used with a sticky topbar, add
+            class <CodeTags type="secondary" code=".sidebar-topbar-sticky" />, <CodeTags type="secondary" code=".topbar-min-{breakpoint}-sticky" />, or <CodeTags type="secondary" code=".topbar-max-{breakpoint}-sticky" /> depending
+            on the class of the sticky topbar,
+            to the outmost <CodeTags type="primary" code="<div>" /> of the sidebar.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="container-fluid">

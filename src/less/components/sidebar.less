@@ -7,6 +7,22 @@
         top: calc(@topbar-height + 0.5rem);
     }
 
+    each(@grid-breakpoints, .(@min-width, @infix) {
+        &.sidebar-topbar-min-@{infix}-sticky {
+            @media screen and (min-width: @min-width) {
+                .sidebar-topbar-sticky();
+            }
+        }
+    });
+
+    each(@grid-breakpoints-max, .(@max-width, @infix) {
+        &.sidebar-topbar-max-@{infix}-sticky {
+            @media screen and (max-width: @max-width) {
+                .sidebar-topbar-sticky();
+            }
+        }
+    });
+
     .sidebar-nav {
         max-height: calc(100vh - 1rem);
         overflow-y: auto;
