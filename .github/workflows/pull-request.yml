@@ -13,7 +13,10 @@ jobs:
 
       # Set brand specific variables
       - name: Environment variables
+        id: variables
+        # "git config core.filemode false" is set to disregard local rwx changes in git [THN]
         run: |
+          git config core.filemode false
           chmod +x ./.github/scripts/variables.sh
           ./.github/scripts/variables.sh
         env:
@@ -32,8 +35,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Install
-        run: npm ci
-
-      - name: Build
-        run: npm run $BRAND_BUILD_SCRIPT -- --env.basename=IAmHereToAvoidBundleAnalyzer
+      - uses: preactjs/compressed-size-action@v1
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          # basename=PullRequest is added to avoid BundleAnalyzer from holding up the agent [THN]
+          build-script: "${{ steps.variables.outputs.BRAND_BUILD_SCRIPT }} -- --env.basename=PullRequest"
