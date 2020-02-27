@@ -192,10 +192,10 @@ const open = id => {
         return false;
     }
 
-    if (accordion.expGrpParent) {
-        const expGrpObj = _accordionGroups.find(eg => eg.elem === accordion.expGrpParent);
+    if (accordion.accGrpParent) {
+        const accGrpObj = _accordionGroups.find(eg => eg.elem === accordion.accGrpParent);
 
-        expGrpObj._open(accordion);
+        accGrpObj._open(accordion);
 
         return accordion;
     }
@@ -222,10 +222,10 @@ const close = id => {
         return false;
     }
 
-    if (accordion.expGrpParent) {
-        const expGrpObj = _accordionGroups.find(eg => eg.elem === accordion.expGrpParent);
+    if (accordion.accGrpParent) {
+        const accGrpObj = _accordionGroups.find(eg => eg.elem === accordion.accGrpParent);
 
-        expGrpObj._close(accordion);
+        accGrpObj._close(accordion);
 
         return accordion;
     }
@@ -246,22 +246,22 @@ const init = id => {
         }
 
         if (element.closest(".accordion-group")) {
-            const expGrpObj = new AccordionGroup(element);
+            const accGrpObj = new AccordionGroup(element);
 
-            _accordionGroups.push(expGrpObj);
+            _accordionGroups.push(accGrpObj);
 
-            return expGrpObj;
+            return accGrpObj;
         }
 
-        const expObj = new Accordion(element);
+        const accObj = new Accordion(element);
 
-        expObj._initializeHeader();
-        _accordions.push(expObj);
+        accObj._initializeHeader();
+        _accordions.push(accObj);
 
-        return expObj;
+        return accObj;
     } else {
         const accordionGroups = document.querySelectorAll(".accordion-group");
-        const accordions = [...document.querySelectorAll(".accordion")].filter(exp => !exp.closest(".accordion-group"));
+        const accordions = [...document.querySelectorAll(".accordion")].filter(acc => !acc.closest(".accordion-group"));
         const returnVal = [];
 
         if (!accordionGroups.length && !accordions.length) {
@@ -271,24 +271,24 @@ const init = id => {
         }
 
         if (accordionGroups.length) {
-            [...accordionGroups].forEach(expGrp => {
-                const expGrpObj = new AccordionGroup(expGrp);
+            [...accordionGroups].forEach(accGrp => {
+                const accGrpObj = new AccordionGroup(accGrp);
 
-                returnVal.push(expGrpObj);
+                returnVal.push(accGrpObj);
 
-                expGrpObj ? _accordionGroups.push(expGrpObj) : null;
+                accGrpObj ? _accordionGroups.push(accGrpObj) : null;
             });
         }
 
         if (accordions.length) {
-            [...accordions].forEach(exp => {
-                const expObj = new Accordion(exp);
+            [...accordions].forEach(acc => {
+                const accObj = new Accordion(acc);
 
-                expObj._initializeHeader();
+                accObj._initializeHeader();
 
-                returnVal.push(expObj);
+                returnVal.push(accObj);
 
-                expObj ? _accordions.push(expObj) : null;
+                accObj ? _accordions.push(accObj) : null;
             });
         }
 

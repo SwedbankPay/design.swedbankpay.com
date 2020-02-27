@@ -20,7 +20,7 @@ describe("scripts: accordion", () => {
     );
 
     const AccordionComponent = ({ id, open }) => (
-        <div className={`accordion${open ? " accordion-open" : ""}`} id={id} >
+        <div className={`accordion${open ? " show accordion-open" : ""}`} id={id} >
             <div className="accordion-header">
                 Foo
             </div>

@@ -20,7 +20,7 @@ describe("scripts: expandable", () => {
     );
 
     const ExpandableComponent = ({ id, open }) => (
-        <div className={`expandable${open ? " expandable-open" : ""}`} id={id} >
+        <div className={`expandable${open ? " show expandable-open" : ""}`} id={id} >
             <div className="expandable-header">
                 <h5>Foo</h5>
             </div>
