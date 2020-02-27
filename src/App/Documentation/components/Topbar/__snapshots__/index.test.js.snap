@@ -198,7 +198,12 @@ exports[`Components: Topbar TopbarSticky renders 1`] = `
     Sticky topbar
   </h2>
   <p>
-    A sticky topbar is also available. Use 
+    A sticky topbar is also available, with class 
+    <CodeTags
+      code=".topbar-sticky"
+      type="secondary"
+    />
+    . Use 
     <CodeTags
       code=".topbar-min-{breakpoint}-sticky"
       type="secondary"

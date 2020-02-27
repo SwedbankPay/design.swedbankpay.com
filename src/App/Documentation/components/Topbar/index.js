@@ -69,7 +69,8 @@ const TopbarSticky = () => (
     <>
         <h2 id="topbar-sticky">Sticky topbar</h2>
         <p>
-            A sticky topbar is also available. Use <CodeTags type="secondary" code=".topbar-min-{breakpoint}-sticky" /> to specify the minimum width the topbar should be sticky,
+            A sticky topbar is also available, with class <CodeTags type="secondary" code=".topbar-sticky" />.
+            Use <CodeTags type="secondary" code=".topbar-min-{breakpoint}-sticky" /> to specify the minimum width the topbar should be sticky,
             or <CodeTags type="secondary" code=".topbar-max-{breakpoint}-sticky" /> to specify the maximum width the topbar should be sticky
             (see <Link to="/docs/core/breakpoints">breakpoints</Link> for more information on breakpoints).
         </p>
