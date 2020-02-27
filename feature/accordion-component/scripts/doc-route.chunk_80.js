@@ -1,2 +1,2 @@
 (window.webpackJsonpswedbankpay=window.webpackJsonpswedbankpay||[]).push([[108],{376:function(a,e,n){"use strict";n.r(e);var s=n(1),t=n.n(s),c=n(17),p=function(a){var e=a.type,n=a.classNames;return t.a.createElement("i",{className:"material-icons".concat(n?" ".concat(n):"")},e)};p.propTypes={type:n.n(c).a.string.isRequired},e.default=p}}]);
-//# sourceMappingURL=doc-route.chunk_80.js.map?1d3af8158be5b2d64fa5
+//# sourceMappingURL=doc-route.chunk_80.js.map?1300bc17563b9be0aff9
