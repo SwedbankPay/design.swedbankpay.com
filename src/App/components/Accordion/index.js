@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Accordion = ({ items }) => (
     items.map(({ title, content, id }, i) => (
@@ -13,5 +14,15 @@ const Accordion = ({ items }) => (
         </div>
     ))
 );
+
+Accordion.propTypes = {
+    items: PropTypes.arrayOf(
+        PropTypes.exact({
+            id: PropTypes.string.isRequired,
+            title: PropTypes.string.isRequired,
+            content: PropTypes.string.isRequired
+        })
+    ).isRequired
+};
 
 export default Accordion;

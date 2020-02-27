@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Accordion renders with correct number of accordions 1`] = `
+Array [
+  <div
+    className="accordion"
+    key="0"
+  >
+    
+
+    <button
+      aria-controls="exp-1"
+      aria-expanded="false"
+      className="accordion-header"
+      type="button"
+    >
+      
+
+      My title
+      
+
+    </button>
+    <div
+      className="accordion-body"
+      id="exp-1"
+    >
+      <p>
+        Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.
+      </p>
+    </div>
+  </div>,
+  <div
+    className="accordion"
+    key="1"
+  >
+    
+
+    <button
+      aria-controls="exp-2"
+      aria-expanded="false"
+      className="accordion-header"
+      type="button"
+    >
+      
+
+      My title
+      
+
+    </button>
+    <div
+      className="accordion-body"
+      id="exp-2"
+    >
+      <p>
+        Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.
+      </p>
+    </div>
+  </div>,
+  <div
+    className="accordion"
+    key="2"
+  >
+    
+
+    <button
+      aria-controls="exp-3"
+      aria-expanded="false"
+      className="accordion-header"
+      type="button"
+    >
+      
+
+      My title
+      
+
+    </button>
+    <div
+      className="accordion-body"
+      id="exp-3"
+    >
+      <p>
+        Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.
+      </p>
+    </div>
+  </div>,
+]
+`;

@@ -63,3 +63,6 @@ const Accordion = () => {
 };
 
 export default Accordion;
+
+/* For testing */
+export { Overview, AccordionGroup };

@@ -11,68 +11,68 @@ class AccordionGroup {
         }
 
         this.accordions = [...this.accordions].map(accordion => {
-            const expObj = new Accordion(accordion);
+            const accObj = new Accordion(accordion);
 
-            this._initializeHeader(expObj);
-            _accordions.push(expObj);
+            this._initializeHeader(accObj);
+            _accordions.push(accObj);
 
-            return expObj;
+            return accObj;
         });
 
-        this.openExp = [...this.accordions].find(exp => exp.isOpen);
+        this.openAcc = [...this.accordions].find(acc => acc.isOpen);
     }
 
-    _toggle (expParam) {
-        if (this.openExp) {
-            this.openExp._close();
+    _toggle (accParam) {
+        if (this.openAcc) {
+            this.openAcc._close();
 
-            if (this.openExp === expParam) {
-                this.openExp = null;
+            if (this.openAcc === accParam) {
+                this.openAcc = null;
 
                 return;
             }
         }
 
-        expParam._open();
-        this.openExp = expParam;
+        accParam._open();
+        this.openAcc = accParam;
     }
 
-    _open (expParam) {
-        if (this.openExp) {
-            this.openExp._close();
+    _open (accParam) {
+        if (this.openAcc) {
+            this.openAcc._close();
         }
 
-        expParam._open();
-        this.openExp = expParam;
+        accParam._open();
+        this.openAcc = accParam;
     }
 
     _close () {
-        this.openExp._close();
-        this.openExp = null;
+        this.openAcc._close();
+        this.openAcc = null;
     }
 
-    _initializeHeader (expParam) {
-        if (!expParam.header) {
+    _initializeHeader (accParam) {
+        if (!accParam.header) {
             console.warn("accordion-group: An accordion is missing a header");
 
             return null;
         }
 
-        expParam._setAriaExpanded();
+        accParam._setAriaExpanded();
 
-        expParam.header.addEventListener("click", () => {
+        accParam.header.addEventListener("click", () => {
             if (this._containsExpanding()) {
                 console.warn("accordion-group: The accordion-group contains an expanding element");
 
                 return null;
             }
 
-            this._toggle(expParam);
+            this._toggle(accParam);
         });
     }
 
     _containsExpanding () {
-        return this.accordions.some(exp => exp.isExpanding);
+        return this.accordions.some(acc => acc.isExpanding);
     }
 }
 
@@ -82,7 +82,7 @@ class Accordion {
         this.elem = element;
         this.header = this.elem.querySelector(".accordion-header");
         this.body = this.elem.querySelector(".accordion-body");
-        this.expGrpParent = this.elem.closest(".accordion-group");
+        this.accGrpParent = this.elem.closest(".accordion-group");
 
         if (!this.body) {
             console.warn("accordion: No accordion-body found");
