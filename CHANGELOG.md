@@ -65,6 +65,7 @@
      - Made documentation more specific, with more and better examples
  - Button
    - Updated btn-link styling
+   - Removed destructive button
  - Tabs
    - Fixed tabs incorrectly showing fade on IE11 in certain scenarios
    - Changed tabs default behavior. Basic tabs now covers 100% width on chosen breakpoint
