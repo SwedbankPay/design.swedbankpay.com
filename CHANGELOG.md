@@ -52,6 +52,10 @@
    - Change gutter width to 32px
  - Sidebar
    - Fix nav-leaf elements not properly aligned in IE11
+   - Added more spacing from top
+   - Fixed sidebar covering more of the viewport
+   - Removed automatic scrolling when a nav-leaf is clicked
+   - Made only one element of each type open at a time
  - Action list
    - Fix action list not having same background as parent element on IE11
  - Dialog
@@ -80,3 +84,6 @@
  - Alert
    - Removed turquise informative alert
    - Changed neutral alert to informative alert
+ - Topbar
+   - Added sticky topbar
+   - Added brand line to topbar
