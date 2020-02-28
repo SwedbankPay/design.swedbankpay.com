@@ -56,6 +56,9 @@ const Accordion = () => {
 
     return (
         <DocContainer docToc>
+            <p className="lead">
+                Accordions are components that toggles between hiding and showing content
+            </p>
             <Overview />
             <AccordionGroup />
         </DocContainer>
