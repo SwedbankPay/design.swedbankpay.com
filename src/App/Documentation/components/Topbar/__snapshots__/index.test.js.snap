@@ -219,7 +219,7 @@ exports[`Components: Topbar TopbarSticky renders 1`] = `
     >
       breakpoints
     </Link>
-     for more information on breakpoints).
+     for more information on breakpoints). Note that the sticky topbar does not work in Internet Explorer 11.
   </p>
   <ComponentPreview
     codeFigure={true}

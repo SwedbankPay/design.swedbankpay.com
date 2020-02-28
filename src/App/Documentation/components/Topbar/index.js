@@ -72,7 +72,8 @@ const TopbarSticky = () => (
             A sticky topbar is also available, with class <CodeTags type="secondary" code=".topbar-sticky" />.
             Use <CodeTags type="secondary" code=".topbar-min-{breakpoint}-sticky" /> to specify the minimum width the topbar should be sticky,
             or <CodeTags type="secondary" code=".topbar-max-{breakpoint}-sticky" /> to specify the maximum width the topbar should be sticky
-            (see <Link to="/docs/core/breakpoints">breakpoints</Link> for more information on breakpoints).
+            (see <Link to="/docs/core/breakpoints">breakpoints</Link> for more information on breakpoints). Note that the sticky topbar does
+            not work in Internet Explorer 11.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="container-fluid">
