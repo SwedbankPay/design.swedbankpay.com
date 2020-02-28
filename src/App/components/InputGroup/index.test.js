@@ -48,7 +48,7 @@ describe("Component: InputGroup - ", () => {
     });
 
     it("throws an error if prefixBtnColor prop has an invalid value", () => {
-        const testValues = ["executive", "guiding", "destructive", "invalid", "test"];
+        const testValues = ["executive", "guiding", "invalid", "test"];
 
         console.error = jest.fn();
         testValues.forEach(testValue => {
@@ -72,7 +72,7 @@ describe("Component: InputGroup - ", () => {
     });
 
     it("throws an error if postfixBtnColor prop has an invalid value", () => {
-        const testValues = ["executive", "guiding", "destructive", "invalid", "test"];
+        const testValues = ["executive", "guiding", "invalid", "test"];
 
         console.error = jest.fn();
         testValues.forEach(testValue => {

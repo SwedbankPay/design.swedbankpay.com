@@ -125,7 +125,7 @@ exports[`Documentation: InputGroup ButtonAddons renders 1`] = `
 
 
     <InputGroup
-      postfixBtnColor="destructive"
+      postfixBtnColor="executive"
       postfixType="button"
       postfixValue="Button"
       prefixBtnColor="guiding"
@@ -261,7 +261,7 @@ exports[`Documentation: InputGroup Disabled renders 1`] = `
     />
     <InputGroup
       disabled={true}
-      postfixBtnColor="destructive"
+      postfixBtnColor="executive"
       postfixType="button"
       postfixValue="Button"
       prefixBtnColor="guiding"
