@@ -8,7 +8,7 @@ import DocElement from "@docutils/JavascriptDocElement";
 const OpenDocs = ({ componentName }) => (
     <>
         <DocElement
-            code={<CodeTags type="secondary" code={`dg.open(<${componentName.toLowerCase()}-id>)`} params={[`<${componentName.toLowerCase()}-id>`]} />}
+            code={<CodeTags type="secondary" code={`dg.${componentName.toLowerCase()}.open(<${componentName.toLowerCase()}-id>)`} params={[`<${componentName.toLowerCase()}-id>`]} />}
             description={
                 <>
                     Opens the given {componentName.toLowerCase()}
@@ -21,7 +21,7 @@ const OpenDocs = ({ componentName }) => (
 const CloseDocs = ({ componentName }) => (
     <>
         <DocElement
-            code={<CodeTags type="secondary" code={`dg.close(<${componentName.toLowerCase()}-id>)`} params={[`<${componentName.toLowerCase()}-id>`]} />}
+            code={<CodeTags type="secondary" code={`dg.${componentName.toLowerCase()}.close(<${componentName.toLowerCase()}-id>)`} params={[`<${componentName.toLowerCase()}-id>`]} />}
             description={
                 <>
                     Closes the given {componentName.toLowerCase()}
