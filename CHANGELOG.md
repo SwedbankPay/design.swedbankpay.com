@@ -87,3 +87,9 @@
  - Topbar
    - Added sticky topbar
    - Added brand line to topbar
+ - Accordion
+   - Added accordion component
+ - Expandable
+   - Changed text color to #512b2b
+   - Changed headline styling to be similar to H3
+   - Fixed the yellow top border not properly aligned
