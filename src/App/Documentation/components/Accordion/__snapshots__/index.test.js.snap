@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components: Expandable ExpandableGroup renders 1`] = `
+exports[`Components: Accordion AccordionGroup renders 1`] = `
 <Fragment>
   <h2
-    id="expandable-group"
+    id="accordion-group"
   >
-    Expandable Group
+    Accordion group
   </h2>
   <p>
-    If you use a wrapper with 
+    If the accordions are wrapped in a 
     <CodeTags
-      code=".expandable-group"
+      code=".accordion-group"
       type="secondary"
     />
-     then only one expandable can be open at the same time.
+    , only one will be open at a time.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -21,27 +21,24 @@ exports[`Components: Expandable ExpandableGroup renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="expandable-group"
+      className="accordion-group"
     >
-      <Expandable
+      <Accordion
         items={
           Array [
             Object {
               "content": "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.",
               "id": "exp-1",
-              "subtitle": "My subtitle",
               "title": "My title",
             },
             Object {
               "content": "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.",
               "id": "exp-2",
-              "subtitle": "My subtitle",
               "title": "My title",
             },
             Object {
               "content": "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.",
               "id": "exp-3",
-              "subtitle": "My subtitle",
               "title": "My title",
             },
           ]
@@ -52,7 +49,7 @@ exports[`Components: Expandable ExpandableGroup renders 1`] = `
 </Fragment>
 `;
 
-exports[`Components: Expandable Overview renders 1`] = `
+exports[`Components: Accordion Overview renders 1`] = `
 <Fragment>
   <h2
     id="overview"
@@ -60,42 +57,39 @@ exports[`Components: Expandable Overview renders 1`] = `
     Overview
   </h2>
   <p>
-    The expandable component shows only what is contained in the 
+    The accordion component hides its content 
     <CodeTags
-      code=".expandable-header"
+      code=".accordion-body"
       type="secondary"
     />
-     when it is closed. 
+    , showing only its title 
     <CodeTags
-      code=".expandable-body"
+      code=".accordion-header"
       type="secondary"
     />
-     will be visible in its open state.
+    , until it is opened.
   </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}
   >
-    <Expandable
+    <Accordion
       items={
         Array [
           Object {
             "content": "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.",
             "id": "exp-1",
-            "subtitle": "My subtitle",
             "title": "My title",
           },
           Object {
             "content": "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.",
             "id": "exp-2",
-            "subtitle": "My subtitle",
             "title": "My title",
           },
           Object {
             "content": "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.",
             "id": "exp-3",
-            "subtitle": "My subtitle",
             "title": "My title",
           },
         ]
@@ -105,17 +99,16 @@ exports[`Components: Expandable Overview renders 1`] = `
 </Fragment>
 `;
 
-exports[`Components: Expandable renders 1`] = `
+exports[`Components: Accordion renders 1`] = `
 <DocContainer
   docToc={true}
 >
   <p
     className="lead"
   >
-    Expandables toggle between hiding and showing content on click.
+    Accordions are components that toggles between hiding and showing content
   </p>
   <Overview />
-  <ExpandableGroup />
-  <JavascriptMethods />
+  <AccordionGroup />
 </DocContainer>
 `;

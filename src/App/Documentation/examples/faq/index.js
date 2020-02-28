@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { DocContainer, ComponentPreview } from "@docutils";
 
-import ExpandableComponent from "@components/Expandable";
+import AccordionComponent from "@components/Accordion";
 import InputGroup from "@components/InputGroup";
 import SheetComponent from "@components/Sheet";
 
-const { expandable, sheet, toast } = window.dg;
+const { accordion, sheet, toast } = window.dg;
 const basename = process.env.basename;
 const brand = process.env.brand;
 
@@ -68,9 +68,7 @@ const FAQSearch = () => (
 const FAQList = () => (
     <div className="row justify-content-center">
         <div className="col-lg-8">
-            <div className="expandable-group ">
-                <ExpandableComponent items={faqList} />
-            </div>
+            <AccordionComponent items={faqList} />
         </div>
     </div>
 );
@@ -131,7 +129,7 @@ const FAQCard = () => (
 const FAQ = () => {
 
     useEffect(() => {
-        expandable.init();
+        accordion.init();
         sheet.init();
     });
 
