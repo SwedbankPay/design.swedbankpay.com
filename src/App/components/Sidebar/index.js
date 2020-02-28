@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Sidebar = ({ id, sidebarNavList }) => (
-    <div id={id} className="sidebar">
+const Sidebar = ({ id, sidebarNavList, sticky }) => (
+    <div id={id} className={`sidebar${sticky ? " sidebar-topbar-sticky" : ""}`}>
         <nav className="sidebar-nav">
             <ul className="main-nav-ul">
                 {sidebarNavList.map((group, i) => (
@@ -83,7 +83,8 @@ Sidebar.propTypes = {
         title: PropTypes.string.isRequired,
         lastParent: PropTypes.bool.isRequired,
         subList: PropTypes.arrayOf(PropTypes.object).isRequired
-    })).isRequired
+    })).isRequired,
+    sticky: PropTypes.bool
 };
 
 export default Sidebar;

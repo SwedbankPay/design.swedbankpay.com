@@ -117,4 +117,51 @@ describe("Component: Sidebar - ", () => {
         expect(navGroup.find(".nav-leaf")).toHaveLength(4);
         expect(wrapper).toMatchSnapshot();
     });
+
+    it("renders with class .sidebar-topbar-sticky when sticky is provided", () => {
+        const SidebarNavList = [
+            {
+                title: "Introduction",
+                lastParent: true,
+                subList: [
+                    {
+                        title: "Introduction 1"
+                    },
+                    {
+                        title: "Introduction 2"
+                    },
+                    {
+                        title: "Introduction 3"
+                    }
+                ]
+            },
+            {
+                title: "Other features",
+                lastParent: false,
+                subList: [
+                    {
+                        title: "Operations",
+                        lastParent: true,
+                        subList: [
+                            {
+                                title: "Operations"
+                            },
+                            {
+                                title: "Lorem ipsum"
+                            },
+                            {
+                                title: "Dolor sit amet consectetur"
+                            },
+                            {
+                                title: "Adipiscing elit"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ];
+        const wrapper = shallow(<Sidebar id="test" sidebarNavList={SidebarNavList} sticky/>);
+
+        expect(wrapper.html()).toContain("sidebar-topbar-sticky");
+    });
 });

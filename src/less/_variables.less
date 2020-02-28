@@ -248,12 +248,12 @@
 /* stylelint-enable */
 
 /* Media queries breakpoints
- * The maximum value is calculated as the minimum of the next one less 0.02px
- * to work around the limitations of `min-` and `max-` prefixes and viewports with fractional widths.
- * See https://www.w3.org/TR/mediaqueries-4/#mq-min-max
- * Uses 0.02px rather than 0.01px to work around a current rounding bug in Safari.
- * See https://bugs.webkit.org/show_bug.cgi?id=178261
- */
+* The maximum value is calculated as the minimum of the next one less 0.02px
+* to work around the limitations of `min-` and `max-` prefixes and viewports with fractional widths.
+* See https://www.w3.org/TR/mediaqueries-4/#mq-min-max
+* Uses 0.02px rather than 0.01px to work around a current rounding bug in Safari.
+* See https://bugs.webkit.org/show_bug.cgi?id=178261
+*/
 
 @screen-xs-min:                             @grid-breakpoints[xs];
 @screen-sm-min:                             @grid-breakpoints[sm];
@@ -622,6 +622,7 @@
  */
 
 @topbar-height:                             85px;
+@topbar-border-top:                         0.5rem solid @brand-primary;
 @topbar-nav-width:                          300px;
 @topbar-nav-slide-width:                    240px;
 @topbar-back-btn-width:                     40px; /* This does not actually control the width of the button... [EH] */
