@@ -76,3 +76,6 @@
    - Added plain table as an alternative
  - Code tags
    - Added default code tags style when using html code tag
+ - Alert
+   - Removed turquise informative alert
+   - Changed neutral alert to informative alert
