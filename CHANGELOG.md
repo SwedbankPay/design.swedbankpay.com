@@ -63,6 +63,7 @@
      - Removed unnecessary input group from examples
    - Code tags
      - Made documentation more specific, with more and better examples
+   - Fixed Javascript methods missing component name on some methods
  - Button
    - Updated btn-link styling
    - Removed destructive button
