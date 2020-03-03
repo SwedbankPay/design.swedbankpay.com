@@ -26,7 +26,6 @@ html {
 }
 
 body {
-    border-top: 8px solid @brand-primary;
     font-family: @font-stack;
     font-size: @base-font-size;
     line-height: 1.5;
@@ -67,7 +66,7 @@ textarea {
     line-height: inherit;
 }
 
-input {
+input:not([type="button"]):not([type="submit"]):not([type="reset"]) {
     height: 3rem;
 }
 
@@ -202,4 +201,16 @@ select {
     background-position: right 0.5rem center;
     -moz-appearance: none;
     -webkit-appearance: none;
+}
+
+// Give code default styling
+code {
+    padding: @code-tags-padding;
+    border-radius: @code-tags-border-radius;
+    font-family: @brand-monofont;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    white-space: nowrap;
+    background-color: @brand-bg-2;
+    border: 1px solid @brand-accent;
 }

@@ -52,41 +52,36 @@
     }
 
     tbody {
+        > tr:nth-child(odd) {
+            background-color: @table-stripe-color;
+        }
+
         tr {
             th,
             td {
                 position: relative;
-                border-right: 1px solid @table-border-color;
                 font-weight: normal;
             }
 
-            td:last-child {
-                border-right: none;
-            }
-
             th {
-                background-color: @table-stripe-color;
                 font-weight: bold;
-            }
-
-            &:first-child {
-                td,
-                th {
-                    border-top: 1px solid #e6e7e8;
-                }
             }
         }
     }
 
-    // Striped table
-    &.table-striped {
-        tbody > tr:nth-child(odd) {
-            > td {
-                background-color: @table-stripe-color;
+    // Plain table
+    &.table-plain {
+        tbody {
+            > tr:not(:last-child) {
+                th,
+                td {
+                    border-bottom: 1px solid @table-border-color;
+                }
             }
 
-            > th {
-                background-color: darken(@table-stripe-color, 2%);
+            th,
+            td {
+                background-color: @white;
             }
         }
     }

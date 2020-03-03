@@ -2,7 +2,7 @@ a.action-link {
     position: relative;
     display: flex;
     align-items: center;
-    height: 3.5rem;
+    height: @action-link-height;
     padding-left: 1.5rem;
     border: 0;
     background-color: @brand-bg-1;
@@ -25,14 +25,15 @@ a.action-link {
 
         position: absolute;
         right: 5px;
+        top: calc(50% - @action-link-arrow-font-size / 2);
         margin: 0;
         color: @brand-primary;
-        font-size: 32px;
+        font-size: @action-link-arrow-font-size;
     }
 
     &.action-link-new-tab {
         background-color: @brand-bg-2;
-        height: 3rem;
+        height: @action-link-new-tab-height;
 
         &:before {
             background-color: @brand-accent;

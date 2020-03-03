@@ -82,8 +82,13 @@ module.exports = [
     {
         title: "Components",
         path: "/docs/components",
-        redirect: "/docs/components/action-list",
+        redirect: "/docs/components/accordion",
         routes: [
+            {
+                title: "Accordion",
+                path: "/docs/components/accordion",
+                componentPath: "components/Accordion"
+            },
             {
                 title: "Action Link",
                 path: "/docs/components/action-link",

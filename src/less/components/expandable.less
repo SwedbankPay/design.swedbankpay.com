@@ -3,13 +3,25 @@
     border-bottom: 2px solid @brand-secondary-light-3;
     border-radius: 2px;
     margin-bottom: 1rem;
-    background-color: @light-gray;
+    background-color: @white;
     display: flex;
+    position: relative;
     flex-direction: column;
-    transition: background-color 0.3s ease, height 0.3s ease;
+    transition: height 0.3s ease;
 
     &:last-child {
         margin-bottom: 0;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        background-color: transparent;
+        height: 4px;
+        left: -1px;
+        right: -1px;
+        top: -1px;
+        transition: background-color 0.3s ease-in-out;
     }
 
     &.show {
@@ -18,20 +30,17 @@
         }
     }
 
+
     &.expandable-open {
         border-top: 1px solid transparent;
-        background-color: @white;
-        transition: background-color 0.3s ease;
+
+        &:after {
+            background-color: @brand-primary;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+        }
 
         .expandable-header {
-            background-color: @white;
-            transition: background-color 0.3s ease;
-
-            &:after {
-                background-color: @brand-primary;
-                transition: background-color 0.15s ease;
-            }
-
             &:before {
                 transform: rotate(180deg);
             }
@@ -39,7 +48,7 @@
     }
 
     .expandable-header {
-        font-weight: normal;
+        font-weight: @font-weight-normal;
         font-family: @brand-headline;
         text-decoration: none;
         vertical-align: middle;
@@ -52,33 +61,21 @@
         flex-direction: column;
         align-items: flex-start;
         user-select: none;
-        color: @brand-secondary-dark-2;
+        color: @brand-secondary;
         background-color: @white;
         padding: 1rem;
         text-align: start;
-        transition: background-color 0.3s ease;
 
         .expandable-headline {
-            font-family: @brand-headline;
-            font-size: 1rem;
-            padding: 0;
+            .h3();
+
+            margin: 0;
         }
 
         .expandable-subtitle {
             font-family: @font-stack;
 
             .small();
-        }
-
-        &:after {
-            content: "";
-            position: absolute;
-            background-color: transparent;
-            height: 4px;
-            left: -1px;
-            right: -1px;
-            top: -1px;
-            transition: background-color 0.15s ease;
         }
 
         &:before {

@@ -65,6 +65,8 @@
 }
 
 .item-list {
+    display: flex;
+    flex-direction: column;
     list-style: none;
     padding-left: 0;
     line-height: 1;
@@ -101,16 +103,11 @@
 
     &.item-list-bordered {
         li {
-            box-shadow: @box-shadow-bottom;
-            border-top: @box-border;
-            border-left: @box-border;
-            border-right: @box-border;
-            padding: 1rem;
+            border: @box-border;
+            border-bottom: 2px solid @brand-secondary-light-3;
+            border-radius: 2px;
+            padding: 1rem 1rem;
             margin-bottom: 1rem;
-
-            &:last-child {
-                border-bottom: 1px solid @brand-bg-gray;
-            }
         }
     }
 

@@ -4,31 +4,31 @@
  *
  *  CORE
  * ===============
- *  1. Colors
- *  2. Global
- *  3. Grid
- *  4. Tables
- *  5. Typography
+ *  Colors
+ *  Global
+ *  Grid
+ *  Tables
+ *  Typography
  *
  *  COMPONENTS
  * ===============
- *  6. Action List
- *  7. Badge
- *  8. Button
- *  9. Card
- * 10. Code Tags
- * 11. Datepicker
- * 12. Dialog
- * 13. Form
- * 14. Nav
- * 15. Pagination
- * 16. Panel
- * 17. Sheet
- * 18. Status
- * 19. Steps
- * 20. Tabs
- * 21. Toast
- * 22. Topbar
+ *  Action List
+ *  Badge
+ *  Button
+ *  Card
+ *  Code Tags
+ *  Datepicker
+ *  Dialog
+ *  Form
+ *  Nav
+ *  Pagination
+ *  Panel
+ *  Sheet
+ *  Status
+ *  Steps
+ *  Tabs
+ *  Toast
+ *  Topbar
  */
 
 /* ==========================================================================
@@ -39,7 +39,7 @@
  */
 
 /*
- * 1. Colors
+ * Colors
  * ==========================================================================
  */
 
@@ -134,7 +134,7 @@
 @action-list-shadow:                        0 3px 5px 0 rgba(0, 0, 0, 0.25);
 
 /*
-* 2. Global
+* Global
 * ==========================================================================
 */
 
@@ -186,7 +186,7 @@
 
 @border-radius-base:                        2px;
 
-@box-border:                                1px solid @brand-bg-gray;
+@box-border:                                1px solid @brand-secondary-light-3;
 @box-shadow-bottom:                         0 3px 1px -1px @brand-bg-gray;
 
 
@@ -212,14 +212,14 @@
 @zindex-toast:                              10000;
 
 /*
- * 3. Grid
+ * Grid
  * ==========================================================================
  */
 
 @grid-columns:                              12;
 
 /* Padding between columns. Gets divided in half for the left and right. */
-@grid-gutter-width:                         30px;
+@grid-gutter-width:                         32px;
 
 
 /* stylelint-disable indentation */
@@ -232,6 +232,14 @@
                                             xxl: 1600px;
 }
 
+@grid-breakpoints-max: {
+                                            xs: (@grid-breakpoints[sm] - 0.02);
+                                            sm: (@grid-breakpoints[md] - 0.02);
+                                            md: (@grid-breakpoints[lg] - 0.02);
+                                            lg: (@grid-breakpoints[xl] - 0.02);
+                                            xl: (@grid-breakpoints[xxl] - 0.02);
+}
+
 @container-max-widths:                      540px,
                                             720px,
                                             960px,
@@ -240,26 +248,28 @@
 /* stylelint-enable */
 
 /* Media queries breakpoints
- * The maximum value is calculated as the minimum of the next one less 0.02px
- * to work around the limitations of `min-` and `max-` prefixes and viewports with fractional widths.
- * See https://www.w3.org/TR/mediaqueries-4/#mq-min-max
- * Uses 0.02px rather than 0.01px to work around a current rounding bug in Safari.
- * See https://bugs.webkit.org/show_bug.cgi?id=178261
- */
+* The maximum value is calculated as the minimum of the next one less 0.02px
+* to work around the limitations of `min-` and `max-` prefixes and viewports with fractional widths.
+* See https://www.w3.org/TR/mediaqueries-4/#mq-min-max
+* Uses 0.02px rather than 0.01px to work around a current rounding bug in Safari.
+* See https://bugs.webkit.org/show_bug.cgi?id=178261
+*/
 
-@screen-xs-min:                             @grid-breakpoints[sm];
-@screen-sm-min:                             @grid-breakpoints[md];
-@screen-md-min:                             @grid-breakpoints[lg];
-@screen-lg-min:                             @grid-breakpoints[xl];
-@screen-xl-min:                             @grid-breakpoints[xxl];
+@screen-xs-min:                             @grid-breakpoints[xs];
+@screen-sm-min:                             @grid-breakpoints[sm];
+@screen-md-min:                             @grid-breakpoints[md];
+@screen-lg-min:                             @grid-breakpoints[lg];
+@screen-xl-min:                             @grid-breakpoints[xl];
+@screen-xxl-min:                            @grid-breakpoints[xxl];
 
-@screen-xs-max:                             (@screen-sm-min - 0.02);
-@screen-sm-max:                             (@screen-md-min - 0.02);
-@screen-md-max:                             (@screen-lg-min - 0.02);
-@screen-lg-max:                             (@screen-xl-min - 0.02);
+@screen-xs-max:                             @grid-breakpoints-max[xs];
+@screen-sm-max:                             @grid-breakpoints-max[sm];
+@screen-md-max:                             @grid-breakpoints-max[md];
+@screen-lg-max:                             @grid-breakpoints-max[lg];
+@screen-xl-max:                             @grid-breakpoints-max[xl];
 
 /*
- * 4. Tables
+ * Tables
  * ==========================================================================
  */
 
@@ -268,12 +278,12 @@
 @table-header-color:                        @brand-secondary;
 @table-text-color:                          @list-gray;
 @table-border-color:                        @border-color;
-@table-stripe-color:                        @light-gray;
+@table-stripe-color:                        @brand-bg-1;
 @table-collapse-content-color:              @list-gray;
 @table-collapse-border-color:               @border-color;
 
 /* Dimensions */
-@table-cell-padding:                        1rem 1.2rem;
+@table-cell-padding:                        0.75rem 1em;
 @table-cell-condensed-padding:              0.5rem 0.6rem;
 @table-collapse-content-padding:            10px 20px 10px 20px;
 @table-button-padding:                      @base-padding-xs / 2 @base-padding-xs;
@@ -288,7 +298,7 @@
 @table-collapse-duration:                   0.25s;
 
 /*
- * 5. Typography
+ * Typography
  * ==========================================================================
  */
 
@@ -349,14 +359,24 @@
  */
 
 /*
- * 6. Action List
+ * Action Link
+ * ==========================================================================
+ */
+
+@action-link-height:                        3.5rem;
+@action-link-new-tab-height:                3rem;
+@action-link-arrow-font-size:               2rem;
+
+
+/*
+ * Action List
  * ==========================================================================
  */
 
 @action-menu-anchor-padding:                round(@base-padding / 3, 1);
 
 /*
- * 7. Badge
+ * Badge
  * ==========================================================================
  */
 
@@ -370,7 +390,7 @@
 
 
 /*
- * 8. Button
+ * Button
  * ==========================================================================
  */
 
@@ -385,7 +405,7 @@
 @btn-border-radius-small:                   @border-radius-base;
 
 /*
- * 9. Card
+ * Card
  * ==========================================================================
  */
 
@@ -396,7 +416,7 @@
 @card-margin-top:                           @base-margin-sm + @base-margin-xs;
 
 /*
- * 10. Code Tags
+ * Code Tags
  * ==========================================================================
  */
 
@@ -406,7 +426,7 @@
 @code-tags-border-radius: 4px;
 
 /*
- * 11. Datepicker
+ * Datepicker
  * ==========================================================================
  */
 
@@ -420,7 +440,7 @@
 @datepicker-rd-padding:                     round(@base-padding / 3, 1);
 
 /*
- * 12. Dialog
+ * Dialog
  * ==========================================================================
  */
 
@@ -430,7 +450,7 @@
 @dialog-backdrop-bg:                        fade(@black, 50%);
 
 /*
- * 13. Form
+ * Form
  * ==========================================================================
  */
 @input-padding-y:                           0.375rem;
@@ -477,7 +497,7 @@
 @thumb-size:                                @checkbox-height;
 
 /*
- * 14. Nav
+ * Nav
  * ==========================================================================
  */
 
@@ -504,7 +524,7 @@
 @nav-submenu-icon-fontsize-vertical:        @base-font-size * 2.25;
 
 /*
- * 15. Pagination
+ * Pagination
  * ==========================================================================
  */
 
@@ -515,7 +535,7 @@
 @pagination-bullet-size:                    @status-size;
 
 /*
- * 16. Panel
+ * Panel
  * ==========================================================================
  */
 
@@ -539,7 +559,7 @@
 @panel-footer-padding:                      2rem;
 
 /*
- * 17. Sheet
+ * Sheet
  * ==========================================================================
  */
 
@@ -552,7 +572,7 @@
 @sheet-width:                               580px;
 
 /*
- * 18. Status
+ * Status
  * ==========================================================================
  */
 
@@ -561,7 +581,7 @@
 @status-padding-left:                       0.5rem;
 
 /*
- * 19. Steps
+ * Steps
  * ==========================================================================
  */
 
@@ -580,14 +600,14 @@
 @line-width-desktop:                        5px;
 
 /*
- * 20. Tabs
+ * Tabs
  * ==========================================================================
  */
 
 @tabs-fade-width:                           50px;
 
 /*
- * 21. Toast
+ * Toast
  * ==========================================================================
  */
 
@@ -597,11 +617,12 @@
 @toast-action-color:                        @yellow;
 
 /*
- * 22. Topbar
+ * Topbar
  * ==========================================================================
  */
 
 @topbar-height:                             85px;
+@topbar-border-top:                         0.5rem solid @brand-primary;
 @topbar-nav-width:                          300px;
 @topbar-nav-slide-width:                    240px;
 @topbar-back-btn-width:                     40px; /* This does not actually control the width of the button... [EH] */

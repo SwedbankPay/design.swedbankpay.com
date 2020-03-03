@@ -84,8 +84,13 @@ exports[`Documentation: index renders 1`] = `
             },
             Object {
               "path": "/docs/components",
-              "redirect": "/docs/components/action-list",
+              "redirect": "/docs/components/accordion",
               "routes": Array [
+                Object {
+                  "componentPath": "components/Accordion",
+                  "path": "/docs/components/accordion",
+                  "title": "Accordion",
+                },
                 Object {
                   "componentPath": "components/ActionLink",
                   "path": "/docs/components/action-link",
@@ -425,9 +430,14 @@ exports[`Documentation: index renders 1`] = `
             appFolder="Documentation"
             key="renderRoutes_Components"
             path="/docs/components"
-            redirect="/docs/components/action-list"
+            redirect="/docs/components/accordion"
             routes={
               Array [
+                Object {
+                  "componentPath": "components/Accordion",
+                  "path": "/docs/components/accordion",
+                  "title": "Accordion",
+                },
                 Object {
                   "componentPath": "components/ActionLink",
                   "path": "/docs/components/action-link",

@@ -10,7 +10,7 @@
     display: inline-flex;
     align-items: center;
     position: relative;
-    font-weight: normal;
+    font-weight: @font-weight-normal;
     font-family: @brand-headline;
     text-align: center;
     text-decoration: none;
@@ -102,23 +102,16 @@
         }
     }
 
-    &.btn-destructive {
-        .button-variant(@btn-destructive-color, @btn-destructive-bg, @btn-destructive-disabled-color, @btn-destructive-disabled-bg, lighten(@btn-destructive-bg, 10%));
-
-        &.btn-outline {
-            .button-outline-variant(@brand-secondary-dark-2, @btn-destructive-bg, @btn-destructive-color, @btn-destructive-disabled-bg, @btn-destructive-disabled-color);
-        }
-    }
-
     // Link buttons
     // -------------------------
 
     // Make a button look and behave like a link
     &.btn-link {
         color: @btn-link-color;
+        font-family: @brand-default;
         font-weight: normal;
         background: transparent;
-        text-decoration: none;
+        text-decoration: underline;
 
         &[active],
         &:active,
@@ -141,7 +134,6 @@
 
         &:hover,
         &:focus {
-            text-decoration: underline;
             background-color: transparent;
         }
 
@@ -250,34 +242,6 @@
                     &:after {
                         border-color: hsla(0, 0%, 100%, 0.5);
                         border-left-color: @white;
-                    }
-                }
-            }
-        }
-
-        &.btn-destructive {
-            &:after {
-                border-color: rgba(47, 36, 36, 0.4);
-                border-left-color: @brand-secondary-dark-2;
-            }
-
-            &[disabled] {
-                &:after {
-                    border-color: rgba(47, 36, 36, 0.2);
-                    border-left-color: @destructive-disabled-color;
-                }
-            }
-
-            &.btn-outline {
-                &:after {
-                    border-color: @brand-secondary-light-4;
-                    border-left-color: @brand-secondary-dark-2;
-                }
-
-                &:hover {
-                    &:after {
-                        border-color: rgba(47, 36, 36, 0.4);
-                        border-left-color: @brand-secondary-dark-2;
                     }
                 }
             }

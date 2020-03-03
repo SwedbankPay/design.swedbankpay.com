@@ -30,14 +30,6 @@ exports[`Documentation: Alerts Alert With Icon renders 1`] = `
 
 
     <Alert
-      icon="info_outline"
-      text="This is a neutral alert with an icon!"
-      type="neutral"
-    />
-    
-
-
-    <Alert
       icon="info"
       text="This is an informative alert with an icon!"
       type="informative"
@@ -80,13 +72,6 @@ exports[`Documentation: Alerts Basic Usage renders 1`] = `
     <Alert
       text="This is a success alert!"
       type="success"
-    />
-    
-
-
-    <Alert
-      text="This is a neutral alert!"
-      type="neutral"
     />
     
 
@@ -138,15 +123,6 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
       icon="check_circle"
       text="This is a success alert with an icon!"
       type="success"
-    />
-    
-
-
-    <Alert
-      close={true}
-      icon="info_outline"
-      text="This is a neutral alert with an icon!"
-      type="neutral"
     />
     
 

@@ -26,7 +26,7 @@ describe("scripts: dialog", () => {
                         </div>
                         <footer className="dialog-footer">
                             <button className="btn btn-guiding" type="button" data-dialog-close>Cancel</button>
-                            <button className="btn btn-destructive" type="button">Delete</button>
+                            <button className="btn btn-executive" type="button">Delete</button>
                         </footer>
                     </section>
                 </div>
@@ -151,7 +151,7 @@ describe("scripts: dialog", () => {
     it("sets focus on the last focusable element when dialog is opened", () => {
         ReactDOM.render(<Dialog id="dia-id"/>, div);
 
-        const delBtn = document.querySelector(".btn-destructive");
+        const delBtn = document.querySelector(".dialog").querySelector(".btn-executive");
 
         dialog.init();
         dialog.open("dia-id");
@@ -190,6 +190,20 @@ describe("scripts: dialog", () => {
         dialogElem.dispatchEvent(sEv);
 
         expect(document.activeElement).toEqual(diaObj.lastTabStop);
+    });
+
+    it("closes the dialog when escape button is pressed", () => {
+        ReactDOM.render(<Dialog id="dialog-id" />, div);
+
+        const dialogElement = document.querySelector(".dialog");
+        const escapeEvent = new KeyboardEvent("keydown", { key: "Escape" });
+        const dialogObject = dialog.init()[0];
+
+        dialogObject.open();
+        dialogElement.dispatchEvent(escapeEvent);
+
+        expect(dialogElement.classList).not.toContain("d-flex");
+        expect(document.body.classList).not.toContain("dialog-open");
     });
 
     describe("dialog.open", () => {

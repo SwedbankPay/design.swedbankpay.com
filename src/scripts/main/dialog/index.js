@@ -59,6 +59,10 @@ class Dialog {
                     this.firstTabStop.focus();
                 }
             }
+
+            if (e.key === "Esc" || e.key === "Escape") {
+                this.close();
+            }
         });
 
         // Init open buttons

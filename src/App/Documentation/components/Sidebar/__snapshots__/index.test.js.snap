@@ -47,7 +47,7 @@ exports[`Components: Sidebar JavascriptMethods renders 1`] = `
     JavaScript methods
   </h2>
   <JavascriptDocs
-    componentName="tabs"
+    componentName="sidebar"
     others={
       Array [
         [Function],
@@ -68,7 +68,27 @@ exports[`Components: Sidebar Overview renders 1`] = `
     Overview
   </h2>
   <p>
-    The sidebar supports a depth of up to 3 levels.
+    The sidebar supports a depth of up to 3 levels. Note that if used with a sticky topbar, add class 
+    <CodeTags
+      code=".sidebar-topbar-sticky"
+      type="secondary"
+    />
+    , 
+    <CodeTags
+      code=".topbar-min-{breakpoint}-sticky"
+      type="secondary"
+    />
+    , or 
+    <CodeTags
+      code=".topbar-max-{breakpoint}-sticky"
+      type="secondary"
+    />
+     depending on the class of the sticky topbar, to the outmost 
+    <CodeTags
+      code="<div>"
+      type="primary"
+    />
+     of the sidebar.
   </p>
   <ComponentPreview
     codeFigure={true}

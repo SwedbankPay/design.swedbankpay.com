@@ -64,24 +64,41 @@ const InputGroup = ({
     return (
         <div className="form-group">{"\n"}
             {label ? <label htmlFor={id}>{label}</label> : null}{label ? "\n" : null}
-            <div className={inputGrpClasses}>{"\n"}
-                {prefixValue ? <Addon type={prefixType} value={prefixValue} color={prefixBtnColor} disabled={disabled} /> : null }{prefixValue ? "\n" : null}
-                {type === "textarea" ?
-                    <textarea {...attrs}></textarea>
-                    : type === "select" ?
-                        <select className="form-control" disabled={disabled} readOnly={readOnly}>{"\n\t\t"}
-                            {selectOptions.map((opt, i) => (
-                                <Fragment key={opt + i}>
-                                    <option>{opt}</option>{(i !== selectOptions.length - 1) ? "\n\t\t" : ""}
-                                </Fragment>
-                            ))}{"\n\t"}
-                        </select>
-                        :
-                        <input {...attrs} />}
-                {"\n"}
-                {feedbackIcon ? <Feedback icon={feedbackIcon} /> : null} {feedbackIcon ? "\n" : null}
-                {postfixValue ? <Addon type={postfixType} value={postfixValue} color={postfixBtnColor} disabled={disabled} /> : null }{postfixValue ? "\n" : null}
-            </div>
+            {prefixValue || postfixValue || feedbackIcon ?
+                <div className={inputGrpClasses}>{"\n"}
+                    {prefixValue ? <Addon type={prefixType} value={prefixValue} color={prefixBtnColor} disabled={disabled} /> : null }{prefixValue ? "\n" : null}
+                    {type === "textarea" ?
+                        <textarea {...attrs}></textarea>
+                        : type === "select" ?
+                            <select className="form-control" disabled={disabled} readOnly={readOnly}>{"\n\t\t"}
+                                {selectOptions.map((opt, i) => (
+                                    <Fragment key={opt + i}>
+                                        <option>{opt}</option>{(i !== selectOptions.length - 1) ? "\n\t\t" : ""}
+                                    </Fragment>
+                                ))}{"\n\t"}
+                            </select>
+                            :
+                            <input {...attrs} />}
+                    {"\n"}
+                    {feedbackIcon ? <Feedback icon={feedbackIcon} /> : null} {feedbackIcon ? "\n" : null}
+                    {postfixValue ? <Addon type={postfixType} value={postfixValue} color={postfixBtnColor} disabled={disabled} /> : null }{postfixValue ? "\n" : null}
+                </div>
+                :
+                <>
+                    {type === "textarea" ?
+                        <textarea {...attrs}></textarea>
+                        : type === "select" ?
+                            <select className="form-control" disabled={disabled} readOnly={readOnly}>{"\n\t\t"}
+                                {selectOptions.map((opt, i) => (
+                                    <Fragment key={opt + i}>
+                                        <option>{opt}</option>{(i !== selectOptions.length - 1) ? "\n\t\t" : ""}
+                                    </Fragment>
+                                ))}{"\n\t"}
+                            </select>
+                            :
+                            <input {...attrs} />}
+                </>
+            }
             {helpBlock ? <div className="help-block" data-success={successMessage || null} data-error={errorMessage || null}>{helpBlock}</div> : null}
         </div>
     );
@@ -103,10 +120,10 @@ InputGroup.propTypes = {
     selectOptions: PropTypes.array,
     prefixValue: PropTypes.string,
     prefixType: PropTypes.oneOf(["button", "icon", ""]),
-    prefixBtnColor: PropTypes.oneOf(["executive", "guiding", "destructive"]),
+    prefixBtnColor: PropTypes.oneOf(["executive", "guiding"]),
     postfixValue: PropTypes.string,
     postfixType: PropTypes.oneOf(["button", "icon", ""]),
-    postfixBtnColor: PropTypes.oneOf(["executive", "guiding", "destructive"]),
+    postfixBtnColor: PropTypes.oneOf(["executive", "guiding"]),
     feedbackIcon: PropTypes.string,
     helpBlock: PropTypes.oneOfType([
         PropTypes.string,

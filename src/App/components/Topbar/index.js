@@ -64,8 +64,8 @@ const TopbarLogo = ({ png }) => (
     </>
 );
 
-const Topbar = ({ topbarContent, wide, logout, id, png }) => (
-    <header className={`topbar${wide ? ` topbar-${wide}-wide` : ""}`} id={id}>{"\n"}
+const Topbar = ({ topbarContent, wide, logout, id, png, sticky }) => (
+    <header className={`topbar${wide ? ` topbar-${wide}-wide` : ""}${sticky ? " topbar-sticky" : ""}`} id={id}>{"\n"}
         {topbarContent ?
         <>
             <TopbarBtn />{"\n"}
@@ -83,7 +83,8 @@ Topbar.propTypes = {
     topbarContent: PropTypes.object,
     fixed: PropTypes.bool,
     logout: PropTypes.bool,
-    png: PropTypes.bool
+    png: PropTypes.bool,
+    sticky: PropTypes.bool
 };
 
 export default Topbar;

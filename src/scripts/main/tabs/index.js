@@ -62,7 +62,7 @@ class Tabs {
 
     _decideScrollFade () {
 
-        if (this.openUl.scrollLeft !== 0) {
+        if (this.openUl.scrollLeft > 1) {
             this._el.classList.add("tabs-fade-left");
         } else {
             this._el.classList.remove("tabs-fade-left");
