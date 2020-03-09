@@ -189,7 +189,7 @@
             > a {
                 font-family: @brand-headline;
                 font-weight: @font-weight-normal;
-                color: @black;
+                color: @text-gray;
                 cursor: pointer;
                 text-decoration: none;
                 display: flex;
@@ -212,6 +212,8 @@
                 }
 
                 &.active {
+                    color: @black;
+
                     > span {
                         &:before {
                             width: 100%;
@@ -239,6 +241,7 @@
 
             .topbar-link-right {
                 margin-left: auto;
+                color: @black;
 
                 .material-icons {
                     margin: 0;
