@@ -35,6 +35,11 @@ exports[`Resources: index renders 1`] = `
                   "title": "Logotype",
                 },
                 Object {
+                  "componentPath": "resources/presentations",
+                  "path": "/res/resources/presentations",
+                  "title": "Presentations",
+                },
+                Object {
                   "componentPath": "resources/typography",
                   "path": "/res/resources/typography",
                   "title": "Typography",
@@ -85,6 +90,11 @@ exports[`Resources: index renders 1`] = `
                   "componentPath": "resources/logotype",
                   "path": "/res/resources/logotype",
                   "title": "Logotype",
+                },
+                Object {
+                  "componentPath": "resources/presentations",
+                  "path": "/res/resources/presentations",
+                  "title": "Presentations",
                 },
                 Object {
                   "componentPath": "resources/typography",

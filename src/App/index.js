@@ -29,8 +29,6 @@ const Home = React.lazy(() => import(/* webpackChunkName: "home.chunk" */ "./Hom
 
 const Documentation = React.lazy(() => import(/* webpackChunkName: "documentation.chunk" */ "./Documentation/index.js"));
 
-const Templates = React.lazy(() => import(/* webpackChunkName: "templates.chunk" */ "./Templates/index.js"));
-
 const Resources = React.lazy(() => import(/* webpackChunkName: "templates.chunk" */ "./Resources/index.js"));
 
 const ErrorPage404 = React.lazy(() => import(/* webpackChunkName: "404.chunk" */ "./ErrorPage404/index.js"));
@@ -64,7 +62,6 @@ class App extends Component {
                         <Switch>
                             <Route exact path="/" component={Home} />
                             <Route path="/docs" component={Documentation} />
-                            <Route path="/tmpl" component={Templates} />
                             <Route path="/res" component={Resources} />
                             <Route path="/404" component={ErrorPage404} />
                             <Route component={ErrorPage404} />
