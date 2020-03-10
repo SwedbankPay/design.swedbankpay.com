@@ -30,6 +30,11 @@ exports[`Resources: index renders 1`] = `
               "redirect": "/res/resources/logotype",
               "routes": Array [
                 Object {
+                  "componentPath": "resources/images",
+                  "path": "/res/resources/images",
+                  "title": "Images",
+                },
+                Object {
                   "componentPath": "resources/logotype",
                   "path": "/res/resources/logotype",
                   "title": "Logotype",
@@ -86,6 +91,11 @@ exports[`Resources: index renders 1`] = `
             redirect="/res/resources/logotype"
             routes={
               Array [
+                Object {
+                  "componentPath": "resources/images",
+                  "path": "/res/resources/images",
+                  "title": "Images",
+                },
                 Object {
                   "componentPath": "resources/logotype",
                   "path": "/res/resources/logotype",
