@@ -92,11 +92,6 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Accordion",
                 },
                 Object {
-                  "componentPath": "components/ActionLink",
-                  "path": "/docs/components/action-link",
-                  "title": "Action Link",
-                },
-                Object {
                   "componentPath": "components/ActionList",
                   "path": "/docs/components/action-list",
                   "title": "Action List",
@@ -165,6 +160,11 @@ exports[`Documentation: index renders 1`] = `
                   "componentPath": "components/InputGroup",
                   "path": "/docs/components/input-group",
                   "title": "Input Group",
+                },
+                Object {
+                  "componentPath": "components/Links",
+                  "path": "/docs/components/links",
+                  "title": "Links",
                 },
                 Object {
                   "componentPath": "components/Lists",
@@ -439,11 +439,6 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Accordion",
                 },
                 Object {
-                  "componentPath": "components/ActionLink",
-                  "path": "/docs/components/action-link",
-                  "title": "Action Link",
-                },
-                Object {
                   "componentPath": "components/ActionList",
                   "path": "/docs/components/action-list",
                   "title": "Action List",
@@ -512,6 +507,11 @@ exports[`Documentation: index renders 1`] = `
                   "componentPath": "components/InputGroup",
                   "path": "/docs/components/input-group",
                   "title": "Input Group",
+                },
+                Object {
+                  "componentPath": "components/Links",
+                  "path": "/docs/components/links",
+                  "title": "Links",
                 },
                 Object {
                   "componentPath": "components/Lists",
