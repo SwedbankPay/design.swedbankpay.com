@@ -2,7 +2,6 @@ import React from "react";
 
 import { DocContainer } from "@docutils";
 import Button from "@components/Button";
-import ActionLinkComponent from "@components/ActionLink";
 import CodeTags from "@components/CodeTags";
 
 const basename = process.env.basename;
@@ -26,11 +25,6 @@ const Download = () => (
         <div className="slab slab-default slab-elevated">
             <p>The presentation template is provided as a <CodeTags type="secondary" code=".potx" />-file.</p>
             <Button type="executive" icon="file_download" href={`${basename}templates/SwedbankPay_ppt_template.potx`} label="Presentation template" />
-        </div>
-        <div className="slab slab-default slab-arrow">
-            <i className="material-icons">wb_incandescent</i>
-            <p>Want to include images in the presentation? Images can be found in the image archive. </p>
-            <ActionLinkComponent linkText="Open image archive" newTab={true} link="https://payex.pickit.com" />
         </div>
     </>
 );

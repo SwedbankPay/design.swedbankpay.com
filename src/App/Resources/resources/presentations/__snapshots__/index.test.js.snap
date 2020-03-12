@@ -25,23 +25,6 @@ exports[`Resources: Presentations Download renders 1`] = `
       type="executive"
     />
   </div>
-  <div
-    className="slab slab-default slab-arrow"
-  >
-    <i
-      className="material-icons"
-    >
-      wb_incandescent
-    </i>
-    <p>
-      Want to include images in the presentation? Images can be found in the image archive. 
-    </p>
-    <ActionLink
-      link="https://payex.pickit.com"
-      linkText="Open image archive"
-      newTab={true}
-    />
-  </div>
 </Fragment>
 `;
 
