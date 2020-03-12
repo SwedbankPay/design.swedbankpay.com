@@ -84,3 +84,7 @@
 ### Next release
  - Topbar
    - Made inactive elements text-gray to improve contrast between active element and inactive elements.
+ - Forms
+   - Fixed togglebox checkbox showing
+ - Input Group
+   - Changed select height to 3rem
