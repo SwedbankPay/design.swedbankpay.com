@@ -32,6 +32,17 @@ const TextLinks = () => (
     </>
 );
 
+const IconLinks = () => (
+    <>
+        <h2 id="icon-links">Links with icons</h2>
+        <p>Icon</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <LinkComponent linkText="exercitation" icon/>
+        </ComponentPreview>
+
+    </>
+);
+
 const ActionLink = () => (
     <>
         <h2 id="action-link">Action link</h2>
@@ -100,6 +111,7 @@ const Links = () => (
             Links
         </p>
         <TextLinks />
+        <IconLinks />
         <ActionLink />
         <ActionLinkBadge />
         <ActionLinkSmallText />
@@ -111,4 +123,4 @@ const Links = () => (
 export default Links;
 
 /* For testing */
-export { ActionLink, ActionLinkBadge, ActionLinkSmallText, ActionLinkBadgeSmallText, ActionLinkNewTab };
+export { TextLinks, IconLinks, ActionLink, ActionLinkBadge, ActionLinkSmallText, ActionLinkBadgeSmallText, ActionLinkNewTab };
