@@ -82,3 +82,5 @@
     -   Fixed Javascript methods missing component name on some methods
 
 ### Next release
+ - Topbar
+   - Made inactive elements text-gray to improve contrast between active element and inactive elements.
