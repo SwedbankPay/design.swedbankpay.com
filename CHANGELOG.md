@@ -80,3 +80,5 @@
 
 -   Design guide
     -   Fixed Javascript methods missing component name on some methods
+
+### Next release
