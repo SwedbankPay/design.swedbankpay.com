@@ -88,3 +88,5 @@
    - Fixed togglebox checkbox showing
  - Input Group
    - Changed select height to 3rem
+ - Design guide
+   - Fix PayEx brand missing accordion styling
