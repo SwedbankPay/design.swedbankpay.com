@@ -8,17 +8,13 @@ import CodeTags from "@components/CodeTags";
 
 const TextLinks = () => (
     <>
-        <h2 id="text-link">Text links</h2>
+        <h2 id="text-links">Text links</h2>
         <p>Text links are links used in paragraphs of text and together with other buttons.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <p>{"\n"}
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.{"\n"}
                 Ut enim ad minim veniam, quis nostrud <LinkComponent linkText="exercitation" /> ullamco laboris nisi ut aliquip ex ea commodo consequat.{"\n"}
             </p>
-        </ComponentPreview>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <ButtonComponent type="executive" label="Approve" />{"\n"}
-            <LinkComponent linkText="Cancel" withButton/>
         </ComponentPreview>
 
         <h3>Small link</h3>
@@ -32,14 +28,30 @@ const TextLinks = () => (
     </>
 );
 
+const ButtonLinks = () => (
+    <>
+        <h2 id="button-links">Links with buttons</h2>
+        <p>To use links with buttons use <CodeTags type="secondary" code=".btn.btn-link" /> in a <CodeTags type="primary" code="<button>" />.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <ButtonComponent type="executive" label="Approve" />{"\n"}
+            <ButtonComponent type="link" label="Cancel"/>
+        </ComponentPreview>
+    </>
+);
+
 const IconLinks = () => (
     <>
         <h2 id="icon-links">Links with icons</h2>
         <p>Icon</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <LinkComponent linkText="exercitation" icon/>
+            <LinkComponent linkText="My invoices" leftIcon="arrow_back_ios"/>
         </ComponentPreview>
-
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <LinkComponent linkText="My invoices" leftIcon="edit"/>
+        </ComponentPreview>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <LinkComponent linkText="My invoices" rightIcon="open_in_new"/>
+        </ComponentPreview>
     </>
 );
 
@@ -111,6 +123,7 @@ const Links = () => (
             Links
         </p>
         <TextLinks />
+        <ButtonLinks />
         <IconLinks />
         <ActionLink />
         <ActionLinkBadge />

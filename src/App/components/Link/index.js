@@ -1,18 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Link = ({ linkText, withButton, icon }) => (
-    <a href="" className={(withButton ? "ml-1" : null) || (icon ? "icon-link" : null)} onClick={e => e.preventDefault()}>
-        {icon && <i className="material-icons">keyboard_arrow_left</i>}
-        {linkText}
-        {icon && <i className="material-icons h-75">open_in_new</i>}
+const Link = ({ linkText, leftIcon, rightIcon }) => (
+    <a href="" className={(leftIcon || rightIcon) ? "icon-link" : null} onClick={e => e.preventDefault()}>
+        {leftIcon && <i className="material-icons">{leftIcon}</i>}
+        {leftIcon || rightIcon ? <span className={(leftIcon ? "ml-2" : null) || (rightIcon ? "mr-2" : null)}>{linkText}</span> : linkText}
+        {rightIcon && <i className="material-icons h-75">{rightIcon}</i>}
     </a>
 );
 
 Link.propTypes = {
     linkText: PropTypes.string.isRequired,
-    withButton: PropTypes.bool,
-    icon: PropTypes.bool
+    leftIcon: PropTypes.string,
+    rightIcon: PropTypes.string
 };
 
 export default Link;

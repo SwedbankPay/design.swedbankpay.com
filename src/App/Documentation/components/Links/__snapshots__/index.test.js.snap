@@ -176,6 +176,8 @@ exports[`Components: Links renders 1`] = `
     Links
   </p>
   <TextLinks />
+  <ButtonLinks />
+  <IconLinks />
   <ActionLink />
   <ActionLinkBadge />
   <ActionLinkSmallText />
