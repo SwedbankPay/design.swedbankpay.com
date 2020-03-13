@@ -42,13 +42,19 @@ const ButtonLinks = () => (
 const IconLinks = () => (
     <>
         <h2 id="icon-links">Links with icons</h2>
-        <p>Icon</p>
+        <p>
+            Use class <CodeTags type="secondary" code=".icon-link" /> on links with icons. Using icon with links can help further
+            convey the result of clicking on the link, as can be seen in the examples below.
+        </p>
+        <h4>Navigates to a previous page</h4>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <LinkComponent linkText="My invoices" leftIcon="arrow_back_ios"/>
         </ComponentPreview>
+        <h4>Enables editing</h4>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <LinkComponent linkText="My invoices" leftIcon="edit"/>
         </ComponentPreview>
+        <h4>Opens in a new tab</h4>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <LinkComponent linkText="My invoices" rightIcon="open_in_new"/>
         </ComponentPreview>
