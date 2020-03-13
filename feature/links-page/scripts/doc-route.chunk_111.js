@@ -1,2 +1,13 @@
-(window.webpackJsonpswedbankpay=window.webpackJsonpswedbankpay||[]).push([[31],{407:function(e,n,a){"use strict";a.r(n);var t=a(1),l=a.n(t),i=a(17),r=a.n(i),s=function(e){var n=e.linkText,a=e.leftIcon,t=e.rightIcon;return l.a.createElement("a",{href:"",className:a||t?"icon-link":null,onClick:function(e){return e.preventDefault()}},a&&l.a.createElement("i",{className:"material-icons"},a),a||t?l.a.createElement("span",{className:(a?"ml-2":null)||(t?"mr-2":null)},n):n,t&&l.a.createElement("i",{className:"material-icons h-75"},t))};s.propTypes={linkText:r.a.string.isRequired,leftIcon:r.a.string,rightIcon:r.a.string},n.default=s}}]);
-//# sourceMappingURL=doc-route.chunk_111.js.map?aaa913e3c0d962caae86
+(window.webpackJsonpswedbankpay=window.webpackJsonpswedbankpay||[]).push([[31],{386:function(e,t,a){"use strict";a.r(t);var n=a(1),l=a.n(n),r=a(17),i=a.n(r),o=a(491),s=a.n(o),c=function(e){var t=e.size,a=e.imgUrl,n=e.icon,r=e.heading,i=e.text,o=e.textSmall,c=e.mediaRight,m=e.muted,u=s()("media",c?"media-right":null,t?"media-".concat(t):null),p=s()("material-icons",m?"text-muted":null);return l.a.createElement("div",{className:u},a||n?l.a.createElement("div",{className:"media-img"},"\n",a?l.a.createElement(l.a.Fragment,null," ",l.a.createElement("img",{src:a})," ","\n"," "):null,n?l.a.createElement(l.a.Fragment,null," ",l.a.createElement("i",{className:p},n)," ","\n"," "):null):null,l.a.createElement("div",{className:"media-body"},function(){var e=s()(m?"text-muted":null);switch(t){case"sm":return l.a.createElement("h4",{className:e},r);case"lg":return l.a.createElement("h2",{className:e},r);default:return l.a.createElement("h3",{className:e},r)}}(),l.a.createElement("p",null,o?l.a.createElement("small",null,i):i)))};c.propTypes={size:i.a.oneOf(["sm","lg"]),imgUrl:i.a.string,icon:i.a.string,heading:i.a.string.isRequired,text:i.a.string,textSmall:i.a.bool,mediaRight:i.a.bool,muted:i.a.bool},t.default=c},490:function(e,t){(function(t){e.exports=t}).call(this,{})},491:function(e,t,a){var n;function l(e){return(l="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}
+/*!
+  Copyright (c) 2017 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+/*!
+  Copyright (c) 2017 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+!function(){"use strict";var r={}.hasOwnProperty;function i(){for(var e=[],t=0;t<arguments.length;t++){var a=arguments[t];if(a){var n=l(a);if("string"===n||"number"===n)e.push(a);else if(Array.isArray(a)&&a.length){var o=i.apply(null,a);o&&e.push(o)}else if("object"===n)for(var s in a)r.call(a,s)&&a[s]&&e.push(s)}}return e.join(" ")}e.exports?(i.default=i,e.exports=i):"object"===l(a(490))&&a(490)?void 0===(n=function(){return i}.apply(t,[]))||(e.exports=n):window.classNames=i}()}}]);
+//# sourceMappingURL=doc-route.chunk_111.js.map?32b2608b4f49fd540985
