@@ -142,4 +142,4 @@ const Links = () => (
 export default Links;
 
 /* For testing */
-export { TextLinks, IconLinks, ActionLink, ActionLinkBadge, ActionLinkSmallText, ActionLinkBadgeSmallText, ActionLinkNewTab };
+export { TextLinks, ButtonLinks, IconLinks, ActionLink, ActionLinkBadge, ActionLinkSmallText, ActionLinkBadgeSmallText, ActionLinkNewTab };

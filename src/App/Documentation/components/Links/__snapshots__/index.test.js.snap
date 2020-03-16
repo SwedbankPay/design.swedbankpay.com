@@ -1,5 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Components: Links ActionLink renders 1`] = `
+<Fragment>
+  <h2
+    id="action-link"
+  >
+    Action link
+  </h2>
+  <p>
+    Action links.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ActionLink
+      linkText="My link"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Components: Links ActionLinkBadge renders 1`] = `
 <Fragment>
   <h2
@@ -144,24 +166,157 @@ exports[`Components: Links ActionLinkSmallText renders 1`] = `
 </Fragment>
 `;
 
-exports[`Components: Links Overview renders 1`] = `
+exports[`Components: Links ButtonLinks renders 1`] = `
 <Fragment>
   <h2
-    id="action-link"
+    id="button-links"
   >
-    Action link
+    Links with buttons
   </h2>
   <p>
-    Action links.
+    To use links with buttons use 
+    <CodeTags
+      code=".btn.btn-link"
+      type="secondary"
+    />
+     in a 
+    <CodeTags
+      code="<button>"
+      type="primary"
+    />
+    .
   </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}
   >
-    <ActionLink
-      linkText="My link"
+    <Button
+      label="Approve"
+      type="executive"
     />
+    
+
+    <Button
+      label="Cancel"
+      type="link"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Components: Links IconLinks renders 1`] = `
+<Fragment>
+  <h2
+    id="icon-links"
+  >
+    Links with icons
+  </h2>
+  <p>
+    Use class 
+    <CodeTags
+      code=".icon-link"
+      type="secondary"
+    />
+     on links with icons. Using icon with links can help further convey the result of clicking on the link, as can be seen in the examples below.
+  </p>
+  <h4>
+    Navigates to a previous page
+  </h4>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Link
+      leftIcon="arrow_back_ios"
+      linkText="My invoices"
+    />
+  </ComponentPreview>
+  <h4>
+    Enables editing
+  </h4>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Link
+      leftIcon="edit"
+      linkText="My invoices"
+    />
+  </ComponentPreview>
+  <h4>
+    Opens in a new tab
+  </h4>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Link
+      linkText="My invoices"
+      rightIcon="open_in_new"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Components: Links TextLinks renders 1`] = `
+<Fragment>
+  <h2
+    id="text-links"
+  >
+    Text links
+  </h2>
+  <p>
+    Text links are links used in paragraphs of text and together with other buttons.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <p>
+      
+
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      
+
+      Ut enim ad minim veniam, quis nostrud 
+      <Link
+        linkText="exercitation"
+      />
+       ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      
+
+    </p>
+  </ComponentPreview>
+  <h3>
+    Small link
+  </h3>
+  <p>
+    Use links in small with legal texts, such as links to terms and contitions
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <small>
+      
+
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      
+
+      Ut enim ad minim veniam, quis nostrud 
+      <Link
+        linkText="exercitation"
+      />
+       ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      
+
+    </small>
   </ComponentPreview>
 </Fragment>
 `;

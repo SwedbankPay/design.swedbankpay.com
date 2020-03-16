@@ -1,7 +1,16 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Links, { ActionLink, ActionLinkBadge, ActionLinkSmallText, ActionLinkBadgeSmallText, ActionLinkNewTab } from "./index";
+import Links, {
+    TextLinks,
+    ButtonLinks,
+    IconLinks,
+    ActionLink,
+    ActionLinkBadge,
+    ActionLinkSmallText,
+    ActionLinkBadgeSmallText,
+    ActionLinkNewTab
+} from "./index";
 
 describe("Components: Links", () => {
     it("is defined", () => {
@@ -14,7 +23,43 @@ describe("Components: Links", () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    describe("Overview", () => {
+    describe("TextLinks", () => {
+        it("is defined", () => {
+            expect(TextLinks).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<TextLinks />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("ButtonLinks", () => {
+        it("is defined", () => {
+            expect(ButtonLinks).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<ButtonLinks />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("IconLinks", () => {
+        it("is defined", () => {
+            expect(IconLinks).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<IconLinks />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("ActionLink", () => {
         it("is defined", () => {
             expect(ActionLink).toBeDefined();
         });
