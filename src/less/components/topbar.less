@@ -189,7 +189,7 @@
             > a {
                 font-family: @brand-headline;
                 font-weight: @font-weight-normal;
-                color: @black;
+                color: @text-gray;
                 cursor: pointer;
                 text-decoration: none;
                 display: flex;
@@ -212,6 +212,8 @@
                 }
 
                 &.active {
+                    color: @black;
+
                     > span {
                         &:before {
                             width: 100%;
@@ -239,6 +241,7 @@
 
             .topbar-link-right {
                 margin-left: auto;
+                color: @black;
 
                 .material-icons {
                     margin: 0;
@@ -346,8 +349,8 @@
 
             > *:not(.close-topbar-nav):not(.topbar-link-right) {
                 text-decoration: none;
-                margin-left: 1rem;
-                margin-right: 1rem;
+                margin-left: 1.25rem;
+                margin-right: 1.25rem;
             }
 
             .close-topbar-nav {
