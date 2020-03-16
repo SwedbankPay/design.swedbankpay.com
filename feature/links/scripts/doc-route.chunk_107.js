@@ -1,0 +1,13 @@
+(window.webpackJsonpswedbankpay=window.webpackJsonpswedbankpay||[]).push([[27],{412:function(e,n,t){"use strict";t.r(n);var a=t(1),r=t.n(a),o=t(17),i=t.n(o),c=t(490),s=t.n(c);function l(e){return function(e){if(Array.isArray(e)){for(var n=0,t=new Array(e.length);n<e.length;n++)t[n]=e[n];return t}}(e)||function(e){if(Symbol.iterator in Object(e)||"[object Arguments]"===Object.prototype.toString.call(e))return Array.from(e)}(e)||function(){throw new TypeError("Invalid attempt to spread non-iterable instance")}()}var u=function(e){var n=e.name,t=e.squaredFlag,a=e.preview,o=e.previewSize,i=e.size,c=e.className,u=e.type,p=c?c.split(" "):[],f=s.a.apply(void 0,[u,i?"".concat(u,"-").concat(i):"","material-icons"===u?"":"".concat(u,"-").concat(n),t?"flag-icon-squared":""].concat(l(p)));return a||o?r.a.createElement("div",{className:"icon-preview"},r.a.createElement("i",{className:f},f.includes("material-icons")?n:null),r.a.createElement("code",{className:"code-tags code-tags-secondary mt-2"},o?i:n)):r.a.createElement("i",{className:f},f.includes("material-icons")?n:null)};u.propTypes={name:i.a.string.isRequired,type:i.a.oneOf(["material-icons","payment-icon","flag-icon"]),squaredFlag:i.a.bool,preview:i.a.bool,size:i.a.oneOf(["tiny","small","medium","large","huge"]),className:i.a.string},n.default=u},489:function(e,n){(function(n){e.exports=n}).call(this,{})},490:function(e,n,t){var a;function r(e){return(r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}
+/*!
+  Copyright (c) 2017 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+/*!
+  Copyright (c) 2017 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+!function(){"use strict";var o={}.hasOwnProperty;function i(){for(var e=[],n=0;n<arguments.length;n++){var t=arguments[n];if(t){var a=r(t);if("string"===a||"number"===a)e.push(t);else if(Array.isArray(t)&&t.length){var c=i.apply(null,t);c&&e.push(c)}else if("object"===a)for(var s in t)o.call(t,s)&&t[s]&&e.push(s)}}return e.join(" ")}e.exports?(i.default=i,e.exports=i):"object"===r(t(489))&&t(489)?void 0===(a=function(){return i}.apply(n,[]))||(e.exports=a):window.classNames=i}()}}]);
+//# sourceMappingURL=doc-route.chunk_107.js.map?72dbae10bf9cb77914dd
