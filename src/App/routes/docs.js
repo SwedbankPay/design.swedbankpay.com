@@ -90,11 +90,6 @@ module.exports = [
                 componentPath: "components/Accordion"
             },
             {
-                title: "Action Link",
-                path: "/docs/components/action-link",
-                componentPath: "components/ActionLink"
-            },
-            {
                 title: "Action List",
                 path: "/docs/components/action-list",
                 componentPath: "components/ActionList"
@@ -163,6 +158,11 @@ module.exports = [
                 title: "Input Group",
                 path: "/docs/components/input-group",
                 componentPath: "components/InputGroup"
+            },
+            {
+                title: "Links",
+                path: "/docs/components/links",
+                componentPath: "components/Links"
             },
             {
                 title: "Lists",

@@ -1,26 +1,71 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import ActionLink, { Overview, ActionLinkBadge, ActionLinkSmallText, ActionLinkBadgeSmallText, ActionLinkNewTab } from "./index";
+import Links, {
+    TextLinks,
+    ButtonLinks,
+    IconLinks,
+    ActionLink,
+    ActionLinkBadge,
+    ActionLinkSmallText,
+    ActionLinkBadgeSmallText,
+    ActionLinkNewTab
+} from "./index";
 
-describe("Components: ActionLink", () => {
+describe("Components: Links", () => {
     it("is defined", () => {
-        expect(ActionLink).toBeDefined();
+        expect(Links).toBeDefined();
     });
 
     it("renders", () => {
-        const wrapper = shallow(<ActionLink />);
+        const wrapper = shallow(<Links />);
 
         expect(wrapper).toMatchSnapshot();
     });
 
-    describe("Overview", () => {
+    describe("TextLinks", () => {
         it("is defined", () => {
-            expect(Overview).toBeDefined();
+            expect(TextLinks).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<Overview />);
+            const wrapper = shallow(<TextLinks />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("ButtonLinks", () => {
+        it("is defined", () => {
+            expect(ButtonLinks).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<ButtonLinks />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("IconLinks", () => {
+        it("is defined", () => {
+            expect(IconLinks).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<IconLinks />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("ActionLink", () => {
+        it("is defined", () => {
+            expect(ActionLink).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<ActionLink />);
 
             expect(wrapper).toMatchSnapshot();
         });
