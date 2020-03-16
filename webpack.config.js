@@ -37,7 +37,6 @@ module.exports = (env, argv) => {
             extensions: [".js", ".jsx", ".json"]
         },
         output: {
-            library: brand,
             path: path.resolve(__dirname, `dist${basename}`),
             filename: "scripts/[name].js?[hash]",
             chunkFilename: "scripts/[name].js?[hash]",
