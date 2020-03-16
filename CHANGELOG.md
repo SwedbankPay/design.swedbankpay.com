@@ -95,3 +95,7 @@
  - Design guide
    - Action list
      - Fixes javascript methods missing capitalization as in script
+ - Action link
+   - Moved to Links
+ - Links
+   - Added Links section
