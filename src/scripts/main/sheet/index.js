@@ -42,10 +42,9 @@ class Sheet {
 
         // Remove classes that prevent scrolling if user navigates away from page without closing a sheet
         window.addEventListener("popstate", () => {
-            const bodyElement = document.querySelector("body");
+            if (document.body.classList.value && document.body.classList.value.includes("sheet-open")) { document.body.classList.remove("sheet-open"); }
 
-            bodyElement.classList.value.includes("sheet-open") ? bodyElement.classList.remove("sheet-open") : null;
-            bodyElement.classList.value.includes("has-vscroll") ? bodyElement.classList.remove("has-vscroll") : null;
+            if (document.body.classList.value && document.body.classList.value.includes("has-vscroll")) { document.body.classList.remove("has-vscroll"); }
         });
 
         this._initializeButtons();
