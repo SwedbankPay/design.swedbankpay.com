@@ -8,7 +8,7 @@ import DocElement from "@docutils/JavascriptDocElement";
 const OpenDocs = ({ componentName }) => (
     <>
         <DocElement
-            code={<CodeTags type="secondary" code={`dg.${componentName.toLowerCase()}.open(<${componentName.toLowerCase()}-id>)`} params={[`<${componentName.toLowerCase()}-id>`]} />}
+            code={<CodeTags type="secondary" code={`dg.${componentName}.open(<${componentName}-id>)`} params={[`<${componentName}-id>`]} />}
             description={
                 <>
                     Opens the given {componentName.toLowerCase()}
@@ -21,10 +21,10 @@ const OpenDocs = ({ componentName }) => (
 const CloseDocs = ({ componentName }) => (
     <>
         <DocElement
-            code={<CodeTags type="secondary" code={`dg.${componentName.toLowerCase()}.close(<${componentName.toLowerCase()}-id>)`} params={[`<${componentName.toLowerCase()}-id>`]} />}
+            code={<CodeTags type="secondary" code={`dg.${componentName}.close(<${componentName}-id>)`} params={[`<${componentName}-id>`]} />}
             description={
                 <>
-                    Closes the given {componentName.toLowerCase()}
+                    Closes the given {componentName}
                 </>
             }
         />
@@ -35,10 +35,10 @@ const JavascriptDocs = ({ componentName, open, close, others }) => (
     <>
         <ul className="item-list">
             <DocElement
-                code={<CodeTags type="secondary" code={`dg.${componentName.toLowerCase()}.init()`} />}
+                code={<CodeTags type="secondary" code={`dg.${componentName}.init()`} />}
                 description={
                     <>
-                        <Link to="/docs/getting-started/javascript">Initializes</Link> {componentName.toLowerCase()}
+                        <Link to="/docs/getting-started/javascript">Initializes</Link> {componentName}
                     </>
                 }
             />
