@@ -90,3 +90,5 @@
    - Changed select height to 3rem
  - Design guide
    - Fix PayEx brand missing accordion styling
+ - Buttons
+   - Changed color of executive button
