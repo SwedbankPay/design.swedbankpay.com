@@ -92,3 +92,6 @@
    - Fix PayEx brand missing accordion styling
  - Buttons
    - Changed color of executive button
+ - Design guide
+   - Action list
+     - Fixes javascript methods missing capitalization as in script
