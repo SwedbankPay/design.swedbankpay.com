@@ -1,26 +1,8 @@
 # Changelog
 
-## [4.6.0] - 2020-03-16
-
-### Added
- - Links
-   - Added Links section
-
-
-### Changed
- - Action link
-   - Moved to Links
- - Buttons
-   - Changed color of executive button
- - Input Group
-   - Changed select height to 3rem
- - Topbar
-   - Made inactive elements gray to improve contrast between active element and inactive elements.
+## [4.6.1] - 2020-03-17
 
 ### Fixed
- - Forms
-   - Fixed togglebox checkbox showing
- - Design guide
-   - Action list
-     - Fixed javascript methods missing same capitalization as in script
-   - Fix PayEx brand missing accordion styling
+
+- Sheet
+  - Fixed a scroll bug whenever a user navigated away from a route without closing a sheet
