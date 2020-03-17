@@ -23,7 +23,7 @@
     user-select: none;
 
     /* padding-top-bottom, padding-left-right, font-size, line-height */
-    .button-size(0.5rem; 0.5rem; 1rem; 1rem; @btn-border-radius-base;);
+    .button-size(@base-padding-sm; 3rem; @font-size-large; @line-height-large; @btn-border-radius-large);
 
     .material-icons {
         font-size: 1.25rem;
@@ -153,16 +153,16 @@
 
     &.btn-lg {
         // line-height: ensure even-numbered height of button next to large input
-        .button-size(@base-padding-sm; @base-padding; @font-size-large; @line-height-large; @btn-border-radius-large);
+        .button-size(@base-padding-sm; 3rem; @font-size-large; @line-height-large; @btn-border-radius-large);
     }
 
     &.btn-sm {
         // line-height: ensure proper height of button next to small input
-        .button-size(@base-padding-xs; @base-padding-sm; @font-size-small; @line-height-small; @btn-border-radius-small);
+        .button-size(@base-padding-xs; 2.5rem; @font-size-small; @line-height-small; @btn-border-radius-small);
     }
 
     &.btn-xs {
-        .button-size(0.1rem; 0.25rem; @font-size-small; @line-height-small; @btn-border-radius-small);
+        .button-size(0.25rem; 2rem; @font-size-small; @line-height-small; @btn-border-radius-small);
     }
 
     // Block button
