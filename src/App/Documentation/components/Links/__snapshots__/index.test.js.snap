@@ -174,7 +174,7 @@ exports[`Components: Links ButtonLinks renders 1`] = `
     Links with buttons
   </h2>
   <p>
-    To use links with buttons use 
+    To use links with buttons, for instance as a cancel button, use 
     <CodeTags
       code=".btn.btn-link"
       type="secondary"
@@ -270,7 +270,7 @@ exports[`Components: Links TextLinks renders 1`] = `
     Text links
   </h2>
   <p>
-    Text links are links used in paragraphs of text and together with other buttons.
+    Text links are links used in paragraphs of text.
   </p>
   <ComponentPreview
     codeFigure={true}
