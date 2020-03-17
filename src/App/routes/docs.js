@@ -39,11 +39,6 @@ module.exports = [
         redirect: "/docs/core/breakpoints",
         routes: [
             {
-                title: "Breakpoints",
-                path: "/docs/core/breakpoints",
-                componentPath: "core/Breakpoints"
-            },
-            {
                 title: "Color",
                 path: "/docs/core/color",
                 componentPath: "core/Color"
@@ -259,6 +254,11 @@ module.exports = [
                 title: "Borders",
                 path: "/docs/utilities/borders",
                 componentPath: "utilities/Borders"
+            },
+            {
+                title: "Breakpoints",
+                path: "/docs/utilities/breakpoints",
+                componentPath: "utilities/Breakpoints"
             },
             {
                 title: "Colors",
