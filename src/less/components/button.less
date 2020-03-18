@@ -23,7 +23,7 @@
     user-select: none;
 
     /* padding-top-bottom, padding-left-right, font-size, line-height */
-    .button-size(@base-padding-sm; 3rem; @btn-font-size; @line-height-large; @btn-border-radius-large);
+    .button-size(@btn-padding-horizontal; @btn-default-height; @btn-font-size; @line-height-large; @btn-border-radius-large);
 
     .material-icons {
         font-size: 1.25rem;
@@ -153,7 +153,7 @@
 
     &.btn-lg {
         // line-height: ensure even-numbered height of button next to large input
-        .button-size(@base-padding-sm; 3rem; @btn-font-size; @line-height-large; @btn-border-radius-large);
+        .button-size(@btn-padding-horizontal; @btn-default-height; @btn-font-size; @line-height-large; @btn-border-radius-large);
     }
 
     &.btn-sm {
