@@ -186,12 +186,27 @@
                             }
                         }
 
+                        &.nav-subgroup-leaf {
+                            margin-left: 1.5rem;
+
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                width: 0.25rem;
+                            }
+
+                            a {
+                                font-size: 1rem;
+                                padding: 0.625rem 1.5rem;
+                            }
+                        }
+
                         a {
                             font-size: 0.875rem;
                             line-height: 1.25rem;
                             color: @brand-secondary;
                             text-decoration: none;
-                            padding: 0.625rem 1.75rem 0.625rem;
+                            padding: 0.625rem 1.75rem;
                             width: 100%;
                             height: 100%;
                         }

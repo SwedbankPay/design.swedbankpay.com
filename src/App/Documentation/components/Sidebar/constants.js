@@ -34,6 +34,9 @@ export const SidebarNavList = [
         lastParent: false,
         subList: [
             {
+                title: "Introduction"
+            },
+            {
                 title: "Operations",
                 lastParent: true,
                 subList: [
@@ -104,6 +107,9 @@ export const SidebarNavList = [
                         ]
                     }
                 ]
+            },
+            {
+                title: "Conclusion"
             }
         ]
     }

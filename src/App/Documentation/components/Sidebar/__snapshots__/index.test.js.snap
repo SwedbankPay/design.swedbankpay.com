@@ -151,6 +151,9 @@ exports[`Components: Sidebar Overview renders 1`] = `
                   "lastParent": false,
                   "subList": Array [
                     Object {
+                      "title": "Introduction",
+                    },
+                    Object {
                       "lastParent": true,
                       "subList": Array [
                         Object {
@@ -221,6 +224,9 @@ exports[`Components: Sidebar Overview renders 1`] = `
                         },
                       ],
                       "title": "Extras",
+                    },
+                    Object {
+                      "title": "Conclusion",
                     },
                   ],
                   "title": "Other features",
