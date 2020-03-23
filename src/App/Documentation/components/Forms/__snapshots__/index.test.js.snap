@@ -304,9 +304,9 @@ exports[`Documentation: Forms JavascriptMethods renders 1`] = `
   />
   <p>
     The 
-    <DgScript
-      component="validation"
-      func="init"
+    <CodeTags
+      code="dg.validation.init()"
+      type="secondary"
     />
      can be used on a form tag to initialize all fields contained in the form, or you can pass a single field to initialize just that one.
   </p>

@@ -308,7 +308,7 @@ const JavascriptMethods = () => (
         <h2 id="javascript-methods">JavaScript methods</h2>
         <JavascriptDocs componentName="validation" />
         <p>
-            The <DgScript component="validation" func="init" /> can be used on a form tag to initialize all fields
+            The <CodeTags type="secondary" code="dg.validation.init()" /> can be used on a form tag to initialize all fields
             contained in the form, or you can pass a single field to initialize just that one.
         </p>
     </>
