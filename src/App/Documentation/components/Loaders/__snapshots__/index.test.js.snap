@@ -13,7 +13,12 @@ exports[`Documentation: Loaders Basic Usage renders 1`] = `
       code=".loader"
       type="secondary"
     />
-     to a div.
+     to a 
+    <CodeTags
+      code="<div>"
+      type="primary"
+    />
+    .
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -24,6 +29,33 @@ exports[`Documentation: Loaders Basic Usage renders 1`] = `
       className="loader"
     />
   </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Loaders CenteredLoader renders 1`] = `
+<Fragment>
+  <h2
+    id="centered-loader"
+  >
+    Centered loader
+  </h2>
+  <p>
+    To center the loader add class 
+    <CodeTags
+      code=".loader-center"
+      type="secondary"
+    />
+    .
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+      showCasePanel={true}
+    >
+      <div
+        className="loader loader-center"
+      />
+    </ComponentPreview>
+  </p>
 </Fragment>
 `;
 
@@ -116,6 +148,7 @@ exports[`Documentation: Loaders renders 1`] = `
     Use loaders to indicate to the user that your web application is loading.
   </p>
   <BasicUsage />
+  <CenteredLoader />
   <Sizes />
   <MutedLoader />
 </DocContainer>
