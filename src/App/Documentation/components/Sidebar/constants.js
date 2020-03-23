@@ -69,45 +69,45 @@ export const SidebarNavList = [
                     }
                 ]
             },
-            {
-                title: "Extras",
-                lastParent: false,
-                subList: [
-                    {
-                        title: "Events",
-                        lastParent: true,
-                        subList: [
-                            {
-                                title: "Event 1"
-                            },
-                            {
-                                title: "Event 2"
-                            },
-                            {
-                                title: "Event 3"
-                            }
-                        ]
-                    },
-                    {
-                        title: "Operations",
-                        lastParent: true,
-                        subList: [
-                            {
-                                title: "Operations"
-                            },
-                            {
-                                title: "Lorem ipsum"
-                            },
-                            {
-                                title: "Dolor sit amet consectetur"
-                            },
-                            {
-                                title: "Adipiscing elit"
-                            }
-                        ]
-                    }
-                ]
-            },
+            // {
+            //     title: "Extras",
+            //     lastParent: false,
+            //     subList: [
+            //         {
+            //             title: "Events",
+            //             lastParent: true,
+            //             subList: [
+            //                 {
+            //                     title: "Event 1"
+            //                 },
+            //                 {
+            //                     title: "Event 2"
+            //                 },
+            //                 {
+            //                     title: "Event 3"
+            //                 }
+            //             ]
+            //         },
+            //         {
+            //             title: "Operations",
+            //             lastParent: true,
+            //             subList: [
+            //                 {
+            //                     title: "Operations"
+            //                 },
+            //                 {
+            //                     title: "Lorem ipsum"
+            //                 },
+            //                 {
+            //                     title: "Dolor sit amet consectetur"
+            //                 },
+            //                 {
+            //                     title: "Adipiscing elit"
+            //                 }
+            //             ]
+            //         }
+            //     ]
+            // },
             {
                 title: "Conclusion"
             }
