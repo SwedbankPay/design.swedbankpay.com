@@ -15,6 +15,7 @@
         line-height: 1rem;
         overflow: hidden;
         height: 0;
+        color: @text-gray;
 
         > a {
             display: block;
@@ -22,7 +23,7 @@
 
             /* Take full parent size, ignoring parents padding, and stil growing the parent with text from this element */
             padding: @list-item-padding;
-            color: @brand-primary;
+            color: @text-gray;
             border: 0;
             cursor: pointer;
             .negative-margin(@list-item-padding);
@@ -65,6 +66,16 @@
             font-size: 1.1rem;
         }
 
+        .steps-number {
+            .circle-base();
+
+            font-family: @brand-headline;
+            z-index: @zindex-steps-icon;
+            line-height: @circle-size;
+            text-align: center;
+            font-size: 1rem;
+        }
+
         /* Line */
         &:after {
             content: "";
@@ -96,6 +107,8 @@
     }
 
     .steps-completed {
+        color: @brand-secondary;
+
         &:before {
             border-color: @brand-primary;
             background-color: @brand-primary;
@@ -104,9 +117,15 @@
         &:after {
             background-color: @brand-primary;
         }
+
+        a {
+            color: @brand-secondary;
+        }
     }
 
     .steps-ongoing {
+        color: @brand-secondary;
+
         &:before {
             border-color: @brand-primary;
         }
@@ -121,11 +140,25 @@
                 background: linear-gradient(to right, @brand-primary 100%);
             }
         }
+
+        a {
+            color: @brand-secondary;
+        }
     }
 
     .steps-selected {
+        color: @brand-secondary;
+        font-weight: @font-weight-bold;
         background-color: @light-gray;
         box-shadow: 1px 0 0 0 @light-gray, -1px 0 0 0 @light-gray, 0 1px 0 0 @light-gray;
+
+        .steps-number {
+            color: @brand-secondary;
+        }
+
+        a {
+            color: @brand-secondary;
+        }
     }
 
     .steps-sub-title {
@@ -172,6 +205,7 @@
 
             /* Circle */
             .steps-icon,
+            .steps-number,
             &:before {
                 width: @circle-size-desktop;
                 height: @circle-size-desktop;
@@ -179,8 +213,16 @@
                 margin-left: -@circle-size-desktop / 2;
                 top: @list-item-padding-desktop-top / 2;
                 margin-top: -@circle-size-desktop / 2;
-                font-size: 24px;
                 border-width: 5px;
+            }
+
+            .steps-icon,
+            &:before {
+                font-size: 1.5rem;
+            }
+
+            .steps-number {
+                font-size: 1.25rem;
             }
 
             /* Line */
@@ -216,7 +258,8 @@
 
             /* Circle */
             &:before,
-            .steps-icon {
+            .steps-icon,
+            .steps-number {
                 margin-left: 0;
                 left: @vertical-left;
                 top: 50%;

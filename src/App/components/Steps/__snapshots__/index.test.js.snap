@@ -75,6 +75,7 @@ exports[`Component: Steps renders clickable steps 1`] = `
           <a>
             <StepContent
               completed={true}
+              index={0}
               title="Step one"
             >
               <div
@@ -101,8 +102,14 @@ exports[`Component: Steps renders clickable steps 1`] = `
            
           <a>
             <StepContent
+              index={1}
               title="Step two"
             >
+              <div
+                className="steps-number"
+              >
+                2
+              </div>
               Step two
             </StepContent>
           </a>
@@ -120,8 +127,14 @@ exports[`Component: Steps renders clickable steps 1`] = `
            
           <a>
             <StepContent
+              index={2}
               title="Step three"
             >
+              <div
+                className="steps-number"
+              >
+                3
+              </div>
               Step three
             </StepContent>
           </a>
@@ -135,8 +148,14 @@ exports[`Component: Steps renders clickable steps 1`] = `
           key="3"
         >
           <StepContent
+            index={3}
             title="Step four"
           >
+            <div
+              className="steps-number"
+            >
+              4
+            </div>
             Step four
           </StepContent>
         </li>
@@ -145,8 +164,14 @@ exports[`Component: Steps renders clickable steps 1`] = `
           key="4"
         >
           <StepContent
+            index={4}
             title="Step Five"
           >
+            <div
+              className="steps-number"
+            >
+              5
+            </div>
             Step Five
           </StepContent>
         </li>
@@ -155,8 +180,14 @@ exports[`Component: Steps renders clickable steps 1`] = `
           key="5"
         >
           <StepContent
+            index={5}
             title="Step Six"
           >
+            <div
+              className="steps-number"
+            >
+              6
+            </div>
             Step Six
           </StepContent>
         </li>
@@ -320,8 +351,14 @@ exports[`Component: Steps renders with given items if prop steps is given 1`] = 
           key="0"
         >
           <StepContent
+            index={0}
             title="one step"
           >
+            <div
+              className="steps-number"
+            >
+              1
+            </div>
             one step
           </StepContent>
         </li>
@@ -330,8 +367,14 @@ exports[`Component: Steps renders with given items if prop steps is given 1`] = 
           key="1"
         >
           <StepContent
+            index={1}
             title="two steps"
           >
+            <div
+              className="steps-number"
+            >
+              2
+            </div>
             two steps
           </StepContent>
         </li>
@@ -340,8 +383,14 @@ exports[`Component: Steps renders with given items if prop steps is given 1`] = 
           key="2"
         >
           <StepContent
+            index={2}
             title="three steps for testing"
           >
+            <div
+              className="steps-number"
+            >
+              3
+            </div>
             three steps for testing
           </StepContent>
         </li>
