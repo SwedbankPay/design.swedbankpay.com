@@ -132,6 +132,11 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Code Tags",
                 },
                 Object {
+                  "componentPath": "components/CodeView",
+                  "path": "/docs/components/code-view",
+                  "title": "Code View",
+                },
+                Object {
                   "componentPath": "components/Datepickers",
                   "path": "/docs/components/datepickers",
                   "title": "Datepickers",
@@ -477,6 +482,11 @@ exports[`Documentation: index renders 1`] = `
                   "componentPath": "components/CodeTags",
                   "path": "/docs/components/code-tags",
                   "title": "Code Tags",
+                },
+                Object {
+                  "componentPath": "components/CodeView",
+                  "path": "/docs/components/code-view",
+                  "title": "Code View",
                 },
                 Object {
                   "componentPath": "components/Datepickers",

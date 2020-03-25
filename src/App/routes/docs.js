@@ -130,6 +130,11 @@ module.exports = [
                 componentPath: "components/CodeTags"
             },
             {
+                title: "Code View",
+                path: "/docs/components/code-view",
+                componentPath: "components/CodeView"
+            },
+            {
                 title: "Datepickers",
                 path: "/docs/components/datepickers",
                 componentPath: "components/Datepickers"
