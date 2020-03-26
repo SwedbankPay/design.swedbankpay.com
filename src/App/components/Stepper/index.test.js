@@ -1,9 +1,9 @@
 import React from "react";
 import { shallow, mount } from "enzyme";
 
-import Steps from "./index";
+import Stepper from "./index";
 
-describe("Component: Steps", () => {
+describe("Component: Stepper", () => {
     const steps = [
         {
             title: "Step one",
@@ -44,34 +44,34 @@ describe("Component: Steps", () => {
     ];
 
     it("is defined", () => {
-        expect(Steps).toBeDefined();
+        expect(Stepper).toBeDefined();
     });
 
     it("renders with default items if no props are provided", () => {
-        const wrapper = shallow(<Steps />);
+        const wrapper = shallow(<Stepper />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("steps");
+        expect(wrapper.html()).toContain("stepper");
     });
 
-    it("renders with given items if prop steps is given", () => {
-        const wrapper = mount(<Steps steps={simpleSteps} />);
+    it("renders with given items if prop Stepper is given", () => {
+        const wrapper = mount(<Stepper steps={simpleSteps} />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("three steps for testing");
     });
 
     it("renders in vertical mode if prop vertical is provided", () => {
-        const wrapper = shallow(<Steps vertical />);
+        const wrapper = shallow(<Stepper vertical />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("steps-vertical");
+        expect(wrapper.html()).toContain("stepper-vertical");
     });
 
-    it("renders clickable steps", () => {
-        const wrapper = mount(<Steps steps={steps} />);
+    it("renders clickable Stepper", () => {
+        const wrapper = mount(<Stepper steps={steps} />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.find(".steps a").length).toBeGreaterThan(0);
+        expect(wrapper.find(".stepper a").length).toBeGreaterThan(0);
     });
 });

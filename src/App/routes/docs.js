@@ -215,9 +215,9 @@ module.exports = [
                 componentPath: "components/Status"
             },
             {
-                title: "Steps",
-                path: "/docs/components/steps",
-                componentPath: "components/Steps"
+                title: "Stepper",
+                path: "/docs/components/stepper",
+                componentPath: "components/Stepper"
             },
             {
                 title: "Tables",

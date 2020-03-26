@@ -1,4 +1,4 @@
-.steps ol {
+.stepper ol {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -50,27 +50,27 @@
 
             content: "";
             box-sizing: border-box;
-            z-index: @zindex-steps-circle;
+            z-index: @zindex-stepper-circle;
             border-radius: 50%;
-            border: 3px solid @list-gray;
+            border: 2px solid @list-gray;
             background-color: @brand-bg-white;
         }
 
-        .steps-icon {
+        .stepper-icon {
             .circle-base();
 
             color: @brand-bg-white;
-            z-index: @zindex-steps-icon;
+            z-index: @zindex-stepper-icon;
             line-height: @circle-size;
             text-align: center;
             font-size: 1.1rem;
         }
 
-        .steps-number {
+        .stepper-number {
             .circle-base();
 
             font-family: @brand-headline;
-            z-index: @zindex-steps-icon;
+            z-index: @zindex-stepper-icon;
             line-height: @circle-size;
             text-align: center;
             font-size: 1rem;
@@ -81,7 +81,7 @@
             content: "";
             position: absolute;
             background-color: @list-gray;
-            z-index: @zindex-steps-line;
+            z-index: @zindex-stepper-line;
             height: @line-width;
 
             /* Prevents small render gaps on certain resolutions */
@@ -106,7 +106,7 @@
         }
     }
 
-    .steps-completed {
+    .stepper-completed {
         color: @brand-secondary;
 
         &:before {
@@ -123,7 +123,7 @@
         }
     }
 
-    .steps-ongoing {
+    .stepper-ongoing {
         color: @brand-secondary;
 
         &:before {
@@ -146,13 +146,13 @@
         }
     }
 
-    .steps-selected {
+    .stepper-selected {
         color: @brand-secondary;
         font-weight: @font-weight-bold;
         background-color: @light-gray;
         box-shadow: 1px 0 0 0 @light-gray, -1px 0 0 0 @light-gray, 0 1px 0 0 @light-gray;
 
-        .steps-number {
+        .stepper-number {
             color: @brand-secondary;
         }
 
@@ -161,7 +161,7 @@
         }
     }
 
-    .steps-sub-title {
+    .stepper-sub-title {
         line-height: 1rem;
         margin-top: @base-margin-xs;
         font-size: @font-size-small;
@@ -169,7 +169,7 @@
     }
 }
 
-.steps-responsive {
+.stepper-responsive {
     width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -181,17 +181,17 @@
     display: flex;
 }
 
-.steps-responsive-text {
+.stepper-responsive-text {
     flex-grow: 1;
     text-align: center;
 }
 
 @media screen and (min-width: @screen-sm-min) {
-    .steps-responsive {
+    .stepper-responsive {
         display: none;
     }
 
-    .steps ol {
+    .stepper ol {
         font-size: 1.1rem;
 
         li {
@@ -204,8 +204,8 @@
             }
 
             /* Circle */
-            .steps-icon,
-            .steps-number,
+            .stepper-icon,
+            .stepper-number,
             &:before {
                 width: @circle-size-desktop;
                 height: @circle-size-desktop;
@@ -213,15 +213,15 @@
                 margin-left: -@circle-size-desktop / 2;
                 top: @list-item-padding-desktop-top / 2;
                 margin-top: -@circle-size-desktop / 2;
-                border-width: 5px;
+                border-width: 2px;
             }
 
-            .steps-icon,
+            .stepper-icon,
             &:before {
                 font-size: 1.5rem;
             }
 
-            .steps-number {
+            .stepper-number {
                 font-size: 1.25rem;
             }
 
@@ -233,12 +233,12 @@
             }
         }
 
-        .steps-sub-title {
+        .stepper-sub-title {
             margin-top: @base-margin-sm;
         }
     }
 
-    .steps-vertical ol {
+    .stepper-vertical ol {
         display: block;
 
         li {
@@ -246,7 +246,7 @@
             text-align: left;
             padding: @list-item-padding-desktop-vertical;
 
-            &.steps-selected {
+            &.stepper-selected {
                 box-shadow: 0 1px 0 0 @light-gray, 0 -1px 0 0 @light-gray;
             }
 
@@ -258,8 +258,8 @@
 
             /* Circle */
             &:before,
-            .steps-icon,
-            .steps-number {
+            .stepper-icon,
+            .stepper-number {
                 margin-left: 0;
                 left: @vertical-left;
                 top: 50%;
@@ -296,7 +296,7 @@
             }
         }
 
-        .steps-ongoing:after {
+        .stepper-ongoing:after {
             background: linear-gradient(@brand-primary 50%, @list-gray 50%);
         }
     }

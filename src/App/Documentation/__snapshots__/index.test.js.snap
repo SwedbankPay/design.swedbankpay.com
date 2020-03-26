@@ -217,9 +217,9 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Status",
                 },
                 Object {
-                  "componentPath": "components/Steps",
-                  "path": "/docs/components/steps",
-                  "title": "Steps",
+                  "componentPath": "components/Stepper",
+                  "path": "/docs/components/stepper",
+                  "title": "Stepper",
                 },
                 Object {
                   "componentPath": "components/Tables",
@@ -564,9 +564,9 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Status",
                 },
                 Object {
-                  "componentPath": "components/Steps",
-                  "path": "/docs/components/steps",
-                  "title": "Steps",
+                  "componentPath": "components/Stepper",
+                  "path": "/docs/components/stepper",
+                  "title": "Stepper",
                 },
                 Object {
                   "componentPath": "components/Tables",
