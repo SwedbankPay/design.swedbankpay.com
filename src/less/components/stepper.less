@@ -27,11 +27,6 @@
             border: 0;
             cursor: pointer;
             .negative-margin(@list-item-padding);
-
-            &:hover {
-                background-color: @light-gray;
-                box-shadow: 1px 0 0 0 @light-gray, -1px 0 0 0 @light-gray, 0 1px 0 0 @light-gray;
-            }
         }
 
         .circle-base() {
@@ -52,7 +47,7 @@
             box-sizing: border-box;
             z-index: @zindex-stepper-circle;
             border-radius: 50%;
-            border: 2px solid @list-gray;
+            border: 2px solid @brand-bg-gray;
             background-color: @brand-bg-white;
         }
 
@@ -80,7 +75,7 @@
         &:after {
             content: "";
             position: absolute;
-            background-color: @list-gray;
+            background-color: @brand-bg-gray;
             z-index: @zindex-stepper-line;
             height: @line-width;
 
@@ -131,7 +126,7 @@
         }
 
         &:after {
-            background: linear-gradient(to right, @brand-primary 50%, @list-gray 50%);
+            background: linear-gradient(to right, @brand-primary 50%, @brand-bg-gray 50%);
         }
 
         &:first-child,
@@ -149,8 +144,6 @@
     .stepper-selected {
         color: @brand-secondary;
         font-weight: @font-weight-bold;
-        background-color: @light-gray;
-        box-shadow: 1px 0 0 0 @light-gray, -1px 0 0 0 @light-gray, 0 1px 0 0 @light-gray;
 
         .stepper-number {
             color: @brand-secondary;
@@ -173,10 +166,7 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    background: @light-gray;
     padding: @base-padding-xs @base-padding-sm;
-    border-top: 1px solid @light-gray;
-    border-bottom: 1px solid @light-gray;
     box-sizing: border-box;
     display: flex;
 }
@@ -246,10 +236,6 @@
             text-align: left;
             padding: @list-item-padding-desktop-vertical;
 
-            &.stepper-selected {
-                box-shadow: 0 1px 0 0 @light-gray, 0 -1px 0 0 @light-gray;
-            }
-
             > a {
                 padding: @list-item-padding-desktop-vertical;
                 width: auto;
@@ -297,7 +283,7 @@
         }
 
         .stepper-ongoing:after {
-            background: linear-gradient(@brand-primary 50%, @list-gray 50%);
+            background: linear-gradient(@brand-primary 50%, @brand-bg-gray 50%);
         }
     }
 }
