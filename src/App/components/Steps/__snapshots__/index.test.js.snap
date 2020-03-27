@@ -234,7 +234,7 @@ exports[`Component: Steps renders clickable Steps 1`] = `
         <div
           className="steps-responsive-text"
         >
-          Step 3
+          Step 2
         </div>
         <div
           className="material-icons steps-nav-right"
@@ -417,7 +417,7 @@ exports[`Component: Steps renders with given items if prop Steps is given 1`] = 
         <div
           className="steps-responsive-text"
         >
-          Step 3
+          Step 2
         </div>
       </div>
     </RenderStepsNav>

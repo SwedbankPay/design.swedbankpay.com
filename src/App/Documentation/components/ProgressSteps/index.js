@@ -8,7 +8,7 @@ const BasicSteps = () => {
     const steps = [
         {
             title: "Step one",
-            subtitle: "24.12.17 12:10",
+            subtitle: "Authentication",
             completed: true
 
         },

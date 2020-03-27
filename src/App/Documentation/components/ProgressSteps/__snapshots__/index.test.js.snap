@@ -20,7 +20,7 @@ exports[`Documentation: Steps BasicSteps renders 1`] = `
         Array [
           Object {
             "completed": true,
-            "subtitle": "24.12.17 12:10",
+            "subtitle": "Authentication",
             "title": "Step one",
           },
           Object {
