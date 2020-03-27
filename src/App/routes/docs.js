@@ -195,6 +195,11 @@ module.exports = [
                 componentPath: "components/Panel"
             },
             {
+                title: "Progress Steps",
+                path: "/docs/components/progress-steps",
+                componentPath: "components/ProgressSteps"
+            },
+            {
                 title: "Sheet",
                 path: "/docs/components/sheet",
                 componentPath: "components/Sheet"
@@ -213,11 +218,6 @@ module.exports = [
                 title: "Status",
                 path: "/docs/components/status",
                 componentPath: "components/Status"
-            },
-            {
-                title: "Stepper",
-                path: "/docs/components/stepper",
-                componentPath: "components/Stepper"
             },
             {
                 title: "Tables",

@@ -45,7 +45,7 @@ exports[`Examples: CustomersDetailedOrders renders 1`] = `
       <h5>
         Detailed internal status:
       </h5>
-      <Stepper
+      <Steps
         steps={
           Array [
             Object {

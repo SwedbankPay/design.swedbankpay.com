@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import CustomersDetailedDatePickerGroup from "../CustomersDetailedDatePickerGroup";
-import StepsComponent from "@components/Stepper";
+import StepsComponent from "@components/Steps";
 import ActionLinkComponent from "@components/ActionLink";
 
 const CustomersDetailedOrders = ({ customersDetailedOrdersSteps, customersDetailedOrders }) => (

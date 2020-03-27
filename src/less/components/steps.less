@@ -1,4 +1,4 @@
-.stepper ol {
+.steps ol {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -45,27 +45,27 @@
 
             content: "";
             box-sizing: border-box;
-            z-index: @zindex-stepper-circle;
+            z-index: @zindex-steps-circle;
             border-radius: 50%;
             border: 2px solid @brand-bg-gray;
             background-color: @brand-bg-white;
         }
 
-        .stepper-icon {
+        .steps-icon {
             .circle-base();
 
             color: @brand-bg-white;
-            z-index: @zindex-stepper-icon;
+            z-index: @zindex-steps-icon;
             line-height: @circle-size;
             text-align: center;
             font-size: 1.1rem;
         }
 
-        .stepper-number {
+        .steps-number {
             .circle-base();
 
             font-family: @brand-headline;
-            z-index: @zindex-stepper-icon;
+            z-index: @zindex-steps-icon;
             line-height: @circle-size;
             text-align: center;
             font-size: 1rem;
@@ -76,7 +76,7 @@
             content: "";
             position: absolute;
             background-color: @brand-bg-gray;
-            z-index: @zindex-stepper-line;
+            z-index: @zindex-steps-line;
             height: @line-width;
 
             /* Prevents small render gaps on certain resolutions */
@@ -101,7 +101,7 @@
         }
     }
 
-    .stepper-completed {
+    .steps-completed {
         color: @brand-secondary;
 
         &:before {
@@ -118,7 +118,7 @@
         }
     }
 
-    .stepper-ongoing {
+    .steps-ongoing {
         color: @brand-secondary;
 
         &:before {
@@ -141,11 +141,11 @@
         }
     }
 
-    .stepper-selected {
+    .steps-selected {
         color: @brand-secondary;
         font-weight: @font-weight-bold;
 
-        .stepper-number {
+        .steps-number {
             color: @brand-secondary;
         }
 
@@ -154,7 +154,7 @@
         }
     }
 
-    .stepper-sub-title {
+    .steps-sub-title {
         line-height: 1rem;
         margin-top: @base-margin-xs;
         font-size: @font-size-small;
@@ -162,7 +162,7 @@
     }
 }
 
-.stepper-responsive {
+.steps-responsive {
     width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -171,17 +171,17 @@
     display: flex;
 }
 
-.stepper-responsive-text {
+.steps-responsive-text {
     flex-grow: 1;
     text-align: center;
 }
 
 @media screen and (min-width: @screen-sm-min) {
-    .stepper-responsive {
+    .steps-responsive {
         display: none;
     }
 
-    .stepper ol {
+    .steps ol {
         font-size: 1.1rem;
 
         li {
@@ -194,8 +194,8 @@
             }
 
             /* Circle */
-            .stepper-icon,
-            .stepper-number,
+            .steps-icon,
+            .steps-number,
             &:before {
                 width: @circle-size-desktop;
                 height: @circle-size-desktop;
@@ -206,12 +206,12 @@
                 border-width: 2px;
             }
 
-            .stepper-icon,
+            .steps-icon,
             &:before {
                 font-size: 1.5rem;
             }
 
-            .stepper-number {
+            .steps-number {
                 font-size: 1.25rem;
             }
 
@@ -223,12 +223,12 @@
             }
         }
 
-        .stepper-sub-title {
+        .steps-sub-title {
             margin-top: @base-margin-sm;
         }
     }
 
-    .stepper-vertical ol {
+    .steps-vertical ol {
         display: block;
 
         li {
@@ -244,8 +244,8 @@
 
             /* Circle */
             &:before,
-            .stepper-icon,
-            .stepper-number {
+            .steps-icon,
+            .steps-number {
                 margin-left: 0;
                 left: @vertical-left;
                 top: 50%;
@@ -282,7 +282,7 @@
             }
         }
 
-        .stepper-ongoing:after {
+        .steps-ongoing:after {
             background: linear-gradient(@brand-primary 50%, @brand-bg-gray 50%);
         }
     }

@@ -1,10 +1,10 @@
 import React from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
-import StepperComponent from "@components/Stepper";
+import StepsComponent from "@components/Steps";
 import CodeTags from "@components/CodeTags";
 
-const BasicStepper = () => {
+const BasicSteps = () => {
     const steps = [
         {
             title: "Step one",
@@ -32,13 +32,13 @@ const BasicStepper = () => {
                 The standard steps component will render horizontally and scale according to the size of its parent.
             </p>
             <ComponentPreview language="html" showCasePanel codeFigure>
-                <StepperComponent steps={steps} />
+                <StepsComponent steps={steps} />
             </ComponentPreview>
         </>
     );
 };
 
-const VerticalStepper = () => {
+const VerticalSteps = () => {
     const steps = [
         {
             title: "Step one",
@@ -61,16 +61,16 @@ const VerticalStepper = () => {
         <>
             <h2 id="vertical-steps">Vertical steps</h2>
             <p>
-                If you wish to use steps vertically you can add <CodeTags type="secondary" code=".stepper-vertical" /> to the <CodeTags type="primary" code={"<div>"} /> element.
+                If you wish to use steps vertically you can add <CodeTags type="secondary" code=".steps-vertical" /> to the <CodeTags type="primary" code={"<div>"} /> element.
             </p>
             <ComponentPreview language="html" showCasePanel codeFigure>
-                <StepperComponent steps={steps} vertical />
+                <StepsComponent steps={steps} vertical />
             </ComponentPreview>
         </>
     );
 };
 
-const ClickableStepper = () => {
+const ClickableSteps = () => {
     const steps = [
         {
             title: "Step one",
@@ -106,24 +106,24 @@ const ClickableStepper = () => {
                 Ensure that all content within the list element is also inside the anchor element.
             </p>
             <ComponentPreview language="html" showCasePanel codeFigure>
-                <StepperComponent steps={steps} />
+                <StepsComponent steps={steps} />
             </ComponentPreview>
         </>
     );
 };
 
-const Stepper = () => (
+const Steps = () => (
     <DocContainer docToc>
         <p className="lead">
             Use steps to visualize the users progress through a process.
         </p>
-        <BasicStepper />
-        <VerticalStepper />
-        <ClickableStepper />
+        <BasicSteps />
+        <VerticalSteps />
+        <ClickableSteps />
     </DocContainer>
 );
 
-export default Stepper;
+export default Steps;
 
 /* for testing */
-export { BasicStepper, VerticalStepper, ClickableStepper };
+export { BasicSteps, VerticalSteps, ClickableSteps };

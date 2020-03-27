@@ -1,15 +1,15 @@
 import React from "react";
 import { shallow } from "enzyme";
-import Stepper, { BasicStepper, VerticalStepper, ClickableStepper } from "./index";
+import Steps, { BasicSteps, VerticalSteps, ClickableSteps } from "./index";
 
-describe("Documentation: Stepper", () => {
+describe("Documentation: Steps", () => {
     it("is defined", () => {
-        expect(Stepper).toBeDefined();
+        expect(Steps).toBeDefined();
     });
 
     it("renders", () => {
         const wrapper = shallow(
-            <Stepper />
+            <Steps />
         );
 
         expect(wrapper).toMatchSnapshot();
@@ -17,11 +17,11 @@ describe("Documentation: Stepper", () => {
 
     describe("BasicSteps", () => {
         it("is defined", () => {
-            expect(BasicStepper).toBeDefined();
+            expect(BasicSteps).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<BasicStepper />);
+            const wrapper = shallow(<BasicSteps />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -29,11 +29,11 @@ describe("Documentation: Stepper", () => {
 
     describe("VerticalSteps", () => {
         it("is defined", () => {
-            expect(VerticalStepper).toBeDefined();
+            expect(VerticalSteps).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<VerticalStepper />);
+            const wrapper = shallow(<VerticalSteps />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -41,11 +41,11 @@ describe("Documentation: Stepper", () => {
 
     describe("ClickableSteps", () => {
         it("is defined", () => {
-            expect(ClickableStepper).toBeDefined();
+            expect(ClickableSteps).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<ClickableStepper />);
+            const wrapper = shallow(<ClickableSteps />);
 
             expect(wrapper).toMatchSnapshot();
         });

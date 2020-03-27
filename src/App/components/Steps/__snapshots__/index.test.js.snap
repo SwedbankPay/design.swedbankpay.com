@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Stepper renders clickable Stepper 1`] = `
-<Stepper
+exports[`Component: Steps renders clickable Steps 1`] = `
+<Steps
   steps={
     Array [
       Object {
@@ -32,7 +32,7 @@ exports[`Component: Stepper renders clickable Stepper 1`] = `
   }
 >
   <div
-    className="stepper"
+    className="steps"
   >
     <ol>
       <RenderSteps
@@ -66,27 +66,27 @@ exports[`Component: Stepper renders clickable Stepper 1`] = `
         }
       >
         <li
-          className="stepper-completed"
+          className="steps-completed"
           key="0"
         >
           
 
            
           <a>
-            <StepperContent
+            <StepsContent
               completed={true}
               index={0}
               title="Step one"
             >
               <div
-                className="material-icons stepper-icon"
+                className="material-icons steps-icon"
               >
                 check
               </div>
               
 
               Step one
-            </StepperContent>
+            </StepsContent>
           </a>
            
           
@@ -94,24 +94,24 @@ exports[`Component: Stepper renders clickable Stepper 1`] = `
            
         </li>
         <li
-          className="stepper-ongoing"
+          className="steps-ongoing"
           key="1"
         >
           
 
            
           <a>
-            <StepperContent
+            <StepsContent
               index={1}
               title="Step two"
             >
               <div
-                className="stepper-number"
+                className="steps-number"
               >
                 2
               </div>
               Step two
-            </StepperContent>
+            </StepsContent>
           </a>
            
           
@@ -126,17 +126,17 @@ exports[`Component: Stepper renders clickable Stepper 1`] = `
 
            
           <a>
-            <StepperContent
+            <StepsContent
               index={2}
               title="Step three"
             >
               <div
-                className="stepper-number"
+                className="steps-number"
               >
                 3
               </div>
               Step three
-            </StepperContent>
+            </StepsContent>
           </a>
            
           
@@ -144,56 +144,56 @@ exports[`Component: Stepper renders clickable Stepper 1`] = `
            
         </li>
         <li
-          className="stepper-selected"
+          className="steps-selected"
           key="3"
         >
-          <StepperContent
+          <StepsContent
             index={3}
             title="Step four"
           >
             <div
-              className="stepper-number"
+              className="steps-number"
             >
               4
             </div>
             Step four
-          </StepperContent>
+          </StepsContent>
         </li>
         <li
           className=""
           key="4"
         >
-          <StepperContent
+          <StepsContent
             index={4}
             title="Step Five"
           >
             <div
-              className="stepper-number"
+              className="steps-number"
             >
               5
             </div>
             Step Five
-          </StepperContent>
+          </StepsContent>
         </li>
         <li
           className=""
           key="5"
         >
-          <StepperContent
+          <StepsContent
             index={5}
             title="Step Six"
           >
             <div
-              className="stepper-number"
+              className="steps-number"
             >
               6
             </div>
             Step Six
-          </StepperContent>
+          </StepsContent>
         </li>
       </RenderSteps>
     </ol>
-    <RenderStepperNav
+    <RenderStepsNav
       steps={
         Array [
           Object {
@@ -224,32 +224,32 @@ exports[`Component: Stepper renders clickable Stepper 1`] = `
       }
     >
       <div
-        className="stepper-responsive"
+        className="steps-responsive"
       >
         <div
-          className="material-icons stepper-nav-left"
+          className="material-icons steps-nav-left"
         >
           keyboard_arrow_left
         </div>
         <div
-          className="stepper-responsive-text"
+          className="steps-responsive-text"
         >
           Step 3
         </div>
         <div
-          className="material-icons stepper-nav-right"
+          className="material-icons steps-nav-right"
         >
           keyboard_arrow_right
         </div>
       </div>
-    </RenderStepperNav>
+    </RenderStepsNav>
   </div>
-</Stepper>
+</Steps>
 `;
 
-exports[`Component: Stepper renders in vertical mode if prop vertical is provided 1`] = `
+exports[`Component: Steps renders in vertical mode if prop vertical is provided 1`] = `
 <div
-  className="stepper stepper-vertical"
+  className="steps steps-vertical"
 >
   <ol>
     <RenderSteps
@@ -275,13 +275,13 @@ exports[`Component: Stepper renders in vertical mode if prop vertical is provide
       }
     />
   </ol>
-  <RenderStepperNav />
+  <RenderStepsNav />
 </div>
 `;
 
-exports[`Component: Stepper renders with default items if no props are provided 1`] = `
+exports[`Component: Steps renders with default items if no props are provided 1`] = `
 <div
-  className="stepper"
+  className="steps"
 >
   <ol>
     <RenderSteps
@@ -307,12 +307,12 @@ exports[`Component: Stepper renders with default items if no props are provided 
       }
     />
   </ol>
-  <RenderStepperNav />
+  <RenderStepsNav />
 </div>
 `;
 
-exports[`Component: Stepper renders with given items if prop Stepper is given 1`] = `
-<Stepper
+exports[`Component: Steps renders with given items if prop Steps is given 1`] = `
+<Steps
   steps={
     Array [
       Object {
@@ -328,7 +328,7 @@ exports[`Component: Stepper renders with given items if prop Stepper is given 1`
   }
 >
   <div
-    className="stepper"
+    className="steps"
   >
     <ol>
       <RenderSteps
@@ -350,53 +350,53 @@ exports[`Component: Stepper renders with given items if prop Stepper is given 1`
           className=""
           key="0"
         >
-          <StepperContent
+          <StepsContent
             index={0}
             title="one step"
           >
             <div
-              className="stepper-number"
+              className="steps-number"
             >
               1
             </div>
             one step
-          </StepperContent>
+          </StepsContent>
         </li>
         <li
           className=""
           key="1"
         >
-          <StepperContent
+          <StepsContent
             index={1}
             title="two steps"
           >
             <div
-              className="stepper-number"
+              className="steps-number"
             >
               2
             </div>
             two steps
-          </StepperContent>
+          </StepsContent>
         </li>
         <li
           className=""
           key="2"
         >
-          <StepperContent
+          <StepsContent
             index={2}
             title="three steps for testing"
           >
             <div
-              className="stepper-number"
+              className="steps-number"
             >
               3
             </div>
             three steps for testing
-          </StepperContent>
+          </StepsContent>
         </li>
       </RenderSteps>
     </ol>
-    <RenderStepperNav
+    <RenderStepsNav
       steps={
         Array [
           Object {
@@ -412,15 +412,15 @@ exports[`Component: Stepper renders with given items if prop Stepper is given 1`
       }
     >
       <div
-        className="stepper-responsive"
+        className="steps-responsive"
       >
         <div
-          className="stepper-responsive-text"
+          className="steps-responsive-text"
         >
           Step 3
         </div>
       </div>
-    </RenderStepperNav>
+    </RenderStepsNav>
   </div>
-</Stepper>
+</Steps>
 `;
