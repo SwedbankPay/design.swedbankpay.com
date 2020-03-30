@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import swedbankpayLogo from "@src/img/swedbankpay/logo/swedbankpay-logo.svg";
 import payexLogo from "@src/img/payex/logo/payex-logo.svg";
 
-import SidebarComponent from "@components/Sidebar";
-
 const brand = process.env.brand;
 
 const devLogo = brand === "swedbankpay" ? swedbankpayLogo : payexLogo;
@@ -18,7 +16,7 @@ const TopbarBtn = () => (
     </button>
 );
 
-const TopbarMenu = ({ menu, logout, sidebar }) => {
+const TopbarMenu = ({ menu, logout }) => {
     const { items } = menu;
 
     return (
@@ -37,7 +35,6 @@ const TopbarMenu = ({ menu, logout, sidebar }) => {
                             <span>{item.name}</span>
                             {"\n"}
                         </a>
-                        {sidebar && i === 0 && <SidebarComponent id="topbar-sidebar" sidebarNavList={sidebar} />}
                     </Fragment>
                 ))}{"\n"}
                 {logout ? <TopbarLogout /> : null}
@@ -87,8 +84,7 @@ Topbar.propTypes = {
     fixed: PropTypes.bool,
     logout: PropTypes.bool,
     png: PropTypes.bool,
-    sticky: PropTypes.bool,
-    sidebar: PropTypes.arrayOf(PropTypes.object)
+    sticky: PropTypes.bool
 };
 
 export default Topbar;

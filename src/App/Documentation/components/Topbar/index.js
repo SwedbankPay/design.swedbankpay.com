@@ -48,7 +48,7 @@ const Overview = () => (
             to get the menu to appear when the menu-button is clicked.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <TopbarComponent topbarContent={menu} logout id="demo-topbar" sidebar={SidebarNavList} />
+            <TopbarComponent topbarContent={menu} logout id="demo-topbar" />
         </ComponentPreview>
     </>
 );
