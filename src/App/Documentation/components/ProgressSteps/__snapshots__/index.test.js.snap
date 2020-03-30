@@ -81,11 +81,11 @@ exports[`Documentation: Steps ClickableSteps renders 1`] = `
           },
           Object {
             "clickable": true,
+            "selected": true,
             "title": "Step three",
           },
           Object {
             "clickable": true,
-            "selected": true,
             "title": "Step four",
           },
           Object {

@@ -84,12 +84,12 @@ const ClickableSteps = () => {
         },
         {
             title: "Step three",
-            clickable: true
+            clickable: true,
+            selected: true
         },
         {
             title: "Step four",
-            clickable: true,
-            selected: true
+            clickable: true
         },
         {
             title: "Step Five"
