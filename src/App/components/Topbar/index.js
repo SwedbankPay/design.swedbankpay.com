@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import swedbankpayLogo from "@src/img/swedbankpay/logo/swedbankpay-logo.svg";
 import payexLogo from "@src/img/payex/logo/payex-logo.svg";
 
+import SidebarComponent from "@components/Sidebar";
+
 const brand = process.env.brand;
 
 const devLogo = brand === "swedbankpay" ? swedbankpayLogo : payexLogo;
@@ -16,7 +18,7 @@ const TopbarBtn = () => (
     </button>
 );
 
-const TopbarMenu = ({ menu, logout }) => {
+const TopbarMenu = ({ menu, logout, sidebar }) => {
     const { items } = menu;
 
     return (
@@ -35,6 +37,7 @@ const TopbarMenu = ({ menu, logout }) => {
                             <span>{item.name}</span>
                             {"\n"}
                         </a>
+                        {sidebar && i === 0 && <SidebarComponent id="topbar-sidebar" sidebarNavList={sidebar} />}
                     </Fragment>
                 ))}{"\n"}
                 {logout ? <TopbarLogout /> : null}
@@ -64,13 +67,13 @@ const TopbarLogo = ({ png }) => (
     </>
 );
 
-const Topbar = ({ topbarContent, wide, logout, id, png, sticky }) => (
+const Topbar = ({ topbarContent, wide, logout, id, png, sticky, sidebar }) => (
     <header className={`topbar${wide ? ` topbar-${wide}-wide` : ""}${sticky ? " topbar-sticky" : ""}`} id={id}>{"\n"}
         {topbarContent ?
         <>
             <TopbarBtn />{"\n"}
             <TopbarLogo png={png}/>
-            <TopbarMenu menu={topbarContent} logout={!!logout} />
+            <TopbarMenu menu={topbarContent} logout={!!logout} sidebar={sidebar} />
         </> :
         <>
             <TopbarLogo png={png} />
@@ -84,7 +87,8 @@ Topbar.propTypes = {
     fixed: PropTypes.bool,
     logout: PropTypes.bool,
     png: PropTypes.bool,
-    sticky: PropTypes.bool
+    sticky: PropTypes.bool,
+    sidebar: PropTypes.arrayOf(PropTypes.object)
 };
 
 export default Topbar;

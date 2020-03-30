@@ -7,7 +7,7 @@ import CodeTags from "@components/CodeTags";
 import SidebarComponent from "@components/Sidebar";
 import { SidebarNavList } from "../Sidebar/constants";
 
-const { topbar } = window.dg;
+const { topbar, sidebar } = window.dg;
 
 const menu = {
     btn: {
@@ -48,7 +48,7 @@ const Overview = () => (
             to get the menu to appear when the menu-button is clicked.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <TopbarComponent topbarContent={menu} logout id="demo-topbar" />
+            <TopbarComponent topbarContent={menu} logout id="demo-topbar" sidebar={SidebarNavList} />
         </ComponentPreview>
     </>
 );
@@ -118,6 +118,7 @@ class Topbar extends Component {
         topbar.init("demo-topbar-1");
         topbar.init("demo-topbar-png");
         topbar.init("demo-topbar-1-png");
+        sidebar.init();
     }
 
     render () {
