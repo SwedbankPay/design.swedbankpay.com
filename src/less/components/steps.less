@@ -23,10 +23,17 @@
 
             /* Take full parent size, ignoring parents padding, and stil growing the parent with text from this element */
             padding: @list-item-padding;
-            color: @text-gray;
+            color: @brand-secondary;
             border: 0;
             cursor: pointer;
             .negative-margin(@list-item-padding);
+
+            &:hover {
+                .steps-number {
+                    border-radius: 50%;
+                    background-color: @yellow-faded;
+                }
+            }
         }
 
         .circle-base() {

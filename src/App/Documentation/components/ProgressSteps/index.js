@@ -88,6 +88,7 @@ const ClickableSteps = () => {
         },
         {
             title: "Step four",
+            clickable: true,
             selected: true
         },
         {
