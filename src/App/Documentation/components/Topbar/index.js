@@ -7,7 +7,7 @@ import CodeTags from "@components/CodeTags";
 import SidebarComponent from "@components/Sidebar";
 import { SidebarNavList } from "../Sidebar/constants";
 
-const { topbar, sidebar } = window.dg;
+const { topbar } = window.dg;
 
 const menu = {
     btn: {
@@ -118,7 +118,6 @@ class Topbar extends Component {
         topbar.init("demo-topbar-1");
         topbar.init("demo-topbar-png");
         topbar.init("demo-topbar-1-png");
-        sidebar.init();
     }
 
     render () {
