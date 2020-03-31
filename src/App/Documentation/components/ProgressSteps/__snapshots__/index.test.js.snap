@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Documentation: Steps BasicSteps renders 1`] = `
+exports[`Documentation: Progress Steps BasicSteps renders 1`] = `
 <Fragment>
   <h2
     id="basic-usage"
@@ -41,7 +41,7 @@ exports[`Documentation: Steps BasicSteps renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Steps ClickableSteps renders 1`] = `
+exports[`Documentation: Progress Steps ClickableSteps renders 1`] = `
 <Fragment>
   <h2
     id="clickable-steps"
@@ -101,7 +101,7 @@ exports[`Documentation: Steps ClickableSteps renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Steps VerticalSteps renders 1`] = `
+exports[`Documentation: Progress Steps VerticalSteps renders 1`] = `
 <Fragment>
   <h2
     id="vertical-steps"
@@ -152,7 +152,7 @@ exports[`Documentation: Steps VerticalSteps renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Steps renders 1`] = `
+exports[`Documentation: Progress Steps renders 1`] = `
 <DocContainer
   docToc={true}
 >
