@@ -7,7 +7,7 @@ const CodeView = () => (
         <p className="lead">To present code</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <figure>
-                <div className="code-view container-fluid">
+                <div className="code-view">
                     <header className="code-view-header">
                         HTTP Request
                     </header>

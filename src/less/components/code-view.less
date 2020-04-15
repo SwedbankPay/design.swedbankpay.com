@@ -1,12 +1,20 @@
 .code-view {
     color: @brand-secondary-info-1;
+    font-family: @brand-monofont;
 
     .code-view-header {
         background-color: @brand-secondary-dark-1;
+        min-height: 1.5rem;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        padding: 0.5rem 1rem;
     }
 
     .code-view-display {
+        font-family: @brand-monofont;
         background-color: @brand-secondary-dark-2;
         margin-top: 0;
+        overflow-x: scroll;
+        padding: 1rem;
     }
 }
