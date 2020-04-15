@@ -12,8 +12,7 @@ const CodeView = () => (
                         HTTP Request
                     </header>
                     <pre className="code-view-display">
-                        {`
-{
+                        {(`{
     "token": "7e380fbb3196ea76cc45814c1d99d59b66db918ce2131b61f58564"
     "operations": [ 
         {
@@ -29,7 +28,7 @@ const CodeView = () => (
         } 
     ]
 }
-                        `}
+`).split("\n").map((line, i) => <><span key={i}>{line}</span>{"\n"}</>)}
                     </pre>
                 </div>
             </figure>

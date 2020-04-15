@@ -144,7 +144,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                         {language.toUpperCase()}
                     </header>
                     <pre className="code-view-display">
-                        {code}
+                        {code.split("\n").map((line, i) => <><span key={i}>{line}</span>{"\n"}</>)}
                     </pre>
                 </div>
             </figure>

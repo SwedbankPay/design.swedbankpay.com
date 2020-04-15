@@ -8,6 +8,8 @@
         font-size: 0.875rem;
         line-height: 1.25rem;
         padding: 0.5rem 1rem;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
     }
 
     .code-view-display {
@@ -16,5 +18,17 @@
         margin-top: 0;
         overflow-x: auto;
         padding: 1rem;
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+        counter-reset: line;
+
+        span {
+            &:before {
+                counter-increment: line;
+                content: counter(line, decimal-leading-zero);
+                margin-right: 1rem;
+                color: @brand-secondary-light-3;
+            }
+        }
     }
 }
