@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { renderToStaticMarkup } from "react-dom/server";
 import jsbeautifier from "js-beautify";
-import Highlight, { defaultProps } from "prism-react-renderer";
+import { defaultProps } from "prism-react-renderer";
 
 // NOTE: dangerousHTML prop is used when wanting to show html in the codefigure without encoding.
 
@@ -144,7 +144,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                         {language.toUpperCase()}
                     </header>
                     <pre className="code-view-display">
-                        {code.split("\n").map((line, i) => <><span key={i}>{line}</span>{"\n"}</>)}
+                        {code.split("\n").map((line, i) => <span key={i}>{line}{"\n"}</span>)}
                     </pre>
                 </div>
             </figure>
@@ -173,7 +173,8 @@ ComponentPreview.propTypes = {
     showCasePanel: PropTypes.bool,
     showCasePanelSm: PropTypes.bool,
     codeFigure: PropTypes.bool,
-    dangerousHTML: PropTypes.bool
+    dangerousHTML: PropTypes.bool,
+    negative: PropTypes.bool
 };
 
 export default ComponentPreview;

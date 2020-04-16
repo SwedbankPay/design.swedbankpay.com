@@ -2,6 +2,8 @@ import React from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 
+// This component is for testing and experimenting only. Since only DG and Developer Portal uses Code View, no doc page is needed.
+
 const CodeView = () => (
     <DocContainer>
         <p className="lead">To present code</p>
@@ -28,7 +30,7 @@ const CodeView = () => (
         } 
     ]
 }
-`).split("\n").map((line, i) => <><span key={i}>{line}</span>{"\n"}</>)}
+`).split("\n").map((line, i) => <span key={i}>{line}{"\n"}</span>)}
                     </pre>
                 </div>
             </figure>
