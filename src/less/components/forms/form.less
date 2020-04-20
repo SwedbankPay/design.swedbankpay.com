@@ -35,6 +35,10 @@ fieldset {
             resize: none;
         }
 
+        .form-group {
+            color: @brand-secondary-light-3;
+        }
+
         .checkbox input[type="checkbox"] {
             + label:before {
                 background-color: @input-bg-disabled;
@@ -185,7 +189,7 @@ legend {
 
     &::placeholder {
         color: @list-gray; /* Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526. */
-        font-weight: 300;
+        font-weight: @font-weight-normal;
         letter-spacing: -0.1px;
     }
 
@@ -197,8 +201,12 @@ legend {
     &[readonly],
     fieldset[disabled] & {
         &:not(.flatpickr-input) {
-            background-color: @input-bg-disabled !important; /* stylelint-disable-line declaration-no-important */
             opacity: 1; /* iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655 */
+            .placeholder(@brand-secondary-light-3);
+
+            &::placeholder {
+                color: @brand-secondary-light-3;
+            }
         }
     }
 
@@ -216,6 +224,10 @@ legend {
 
 .form-group {
     margin-bottom: @base-margin-lg;
+
+    &.disabled {
+        color: @brand-secondary-light-3;
+    }
 }
 
 .checkbox,

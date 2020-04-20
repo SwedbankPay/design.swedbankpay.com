@@ -135,6 +135,73 @@ exports[`Documentation: Forms DisabledFormComponents renders 1`] = `
 
     </form>
   </ComponentPreview>
+  <h3>
+    Disable a 
+    <CodeTags
+      code=".form-group"
+      type="secondary"
+    />
+  </h3>
+  <p>
+    Add disable styling to a 
+    <CodeTags
+      code=".form-group"
+      type="secondary"
+    />
+     by adding class 
+    <CodeTags
+      code=".disabled"
+      type="secondary"
+    />
+     to it. Note that the disabled form component should still have 
+    <CodeTags
+      code="disabled"
+      type="secondary"
+    />
+    .
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <form>
+      <fieldset>
+        <legend>
+          Log in
+        </legend>
+        <InputGroup
+          autoComplete="username"
+          id="form-group-disabled-username"
+          label="Username"
+          placeholder="Enter your username"
+          type="text"
+        />
+        <InputGroup
+          autoComplete="current-password"
+          disabled={true}
+          id="form-group-disabled-password"
+          label="Password"
+          placeholder="Enter your password"
+          type="password"
+        />
+        <Checkbox
+          id="form-group-disabled-checkbox"
+          label="Remember me"
+        />
+      </fieldset>
+      
+
+      <Button
+        btnType="submit"
+        disabled={true}
+        label="Log in"
+        type="executive"
+      />
+      
+
+    </form>
+  </ComponentPreview>
 </Fragment>
 `;
 
