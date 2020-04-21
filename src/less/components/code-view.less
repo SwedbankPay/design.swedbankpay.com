@@ -1,34 +1,63 @@
 .code-view {
     color: @brand-secondary-info-1;
     font-family: @brand-monofont;
+    margin: 0;
+
+    code {
+        padding: 0;
+        background-color: none;
+        border: none;
+        font-size: 1rem;
+    }
 
     .code-view-header {
-        background-color: @brand-secondary-dark-1;
-        min-height: 1.5rem;
-        font-size: 0.875rem;
-        line-height: 1.25rem;
-        padding: 0.5rem 1rem;
-        border-top-left-radius: 2px;
-        border-top-right-radius: 2px;
+        .code-view-header();
     }
 
-    .code-view-display {
-        font-family: @brand-monofont;
+    .code-view-table {
+        position: relative;
         background-color: @brand-secondary-dark-2;
-        margin-top: 0;
-        overflow-x: auto;
-        padding: 1rem;
+        font-family: @brand-monofont;
         border-bottom-left-radius: 2px;
         border-bottom-right-radius: 2px;
-        counter-reset: line;
+        width: 100%;
 
-        span {
-            &:before {
-                counter-increment: line;
-                content: counter(line, decimal-leading-zero);
-                margin-right: 1rem;
-                color: @brand-secondary-light-3;
-            }
+        &,
+        tbody,
+        tr {
+            display: block;
+        }
+
+        .code-view-numbers {
+            display: table-caption;
+            text-align: right;
+            padding: 0 0.5rem 0 0.75rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: @brand-secondary-light-3;
+            background-color: @brand-secondary-dark-2;
+        }
+
+        .code-view-code {
+            padding-left: 2.75rem;
+            padding-right: 1rem;
+            display: block;
+            overflow-x: auto;
+            max-width: 100%;
         }
     }
+}
+
+.code-view-header {
+    background-color: @brand-secondary-dark-1;
+    color: @brand-secondary-info-1;
+    font-family: @brand-monofont;
+    min-height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding: 0.5rem 1rem;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    margin: 0;
 }

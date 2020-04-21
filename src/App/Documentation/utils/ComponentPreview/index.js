@@ -143,9 +143,22 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                     <header className="code-view-header">
                         {language.toUpperCase()}
                     </header>
-                    <pre className="code-view-display">
-                        {code.split("\n").map((line, i) => <span key={i}>{line}{"\n"}</span>)}
-                    </pre>
+                    <table className="code-view-table">
+                        <tbody>
+                            <tr>
+                                <td className="code-view-numbers">
+                                    <pre>
+                                        {(code).split("\n").map((line, i) => <React.Fragment key={i}>{i + 1}{"\n"}</React.Fragment>)}
+                                    </pre>
+                                </td>
+                                <td className="code-view-code">
+                                    <pre>
+                                        {(code).split("\n").map((line, i) => <React.Fragment key={i}>{line}{"\n"}</React.Fragment>)}
+                                    </pre>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </figure>
         );
