@@ -28,7 +28,7 @@
             height: @checkbox-height;
             width: @checkbox-width;
             background-color: @white;
-            border: 2px solid @list-gray;
+            border: 2px solid @brand-secondary;
             border-radius: 2px;
         }
 
@@ -54,7 +54,7 @@
         &[disabled] {
             + label:before {
                 background-color: @input-bg-disabled;
-                border-color: @checkbox-border-color;
+                border-color: @input-checked-bg-disabled;
             }
 
             &:checked + label:before {

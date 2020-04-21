@@ -39,10 +39,14 @@ fieldset {
             color: @brand-secondary-light-3;
         }
 
+        input + label {
+            color: @brand-secondary-light-3;
+        }
+
         .checkbox input[type="checkbox"] {
             + label:before {
                 background-color: @input-bg-disabled;
-                border-color: @checkbox-border-color;
+                border-color: @input-checked-bg-disabled;
                 cursor: not-allowed;
             }
 
@@ -236,6 +240,10 @@ legend {
     label {
         cursor: pointer;
         text-transform: none;
+    }
+
+    input[disabled] + label {
+        color: @brand-secondary-light-3;
     }
 }
 
