@@ -7,11 +7,23 @@ const BasicUsage = () => (
     <>
         <h2 id="basic-usage">Basic usage</h2>
         <p>
-            To use a default loader add <CodeTags type="secondary" code=".loader" /> to a div.
+            To use a default loader add <CodeTags type="secondary" code=".loader" /> to a <CodeTags type="primary" code="<div>" />.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="loader" />
         </ComponentPreview>
+    </>
+);
+
+const CenteredLoader = () => (
+    <>
+        <h2 id="centered-loader">Centered loader</h2>
+        <p>
+            To center the loader add class <CodeTags type="secondary" code=".loader-center" />.
+            <ComponentPreview language="html" showCasePanel codeFigure>
+                <div className="loader loader-center" />
+            </ComponentPreview>
+        </p>
     </>
 );
 
@@ -48,6 +60,7 @@ const Loaders = () => (
             Use loaders to indicate to the user that your web application is loading.
         </p>
         <BasicUsage />
+        <CenteredLoader />
         <Sizes />
         <MutedLoader />
     </DocContainer>
@@ -56,4 +69,4 @@ const Loaders = () => (
 export default Loaders;
 
 /* For testing */
-export { BasicUsage, Sizes, MutedLoader };
+export { BasicUsage, CenteredLoader, Sizes, MutedLoader };
