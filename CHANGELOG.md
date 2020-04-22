@@ -26,3 +26,5 @@
   - Reversed icon of topbar-link-right
 - Forms
   - Moved height property of input to be under form-control
+- Loaders
+  - Added centered loader
