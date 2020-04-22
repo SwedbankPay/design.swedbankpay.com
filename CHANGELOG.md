@@ -19,3 +19,5 @@
     - Updated documentation
   - Button
     - Added .btn-link recommendation
+- Topbar
+  - Reversed icon of topbar-link-right
