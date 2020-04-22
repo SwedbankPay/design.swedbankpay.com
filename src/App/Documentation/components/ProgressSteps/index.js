@@ -8,7 +8,7 @@ const BasicSteps = () => {
     const steps = [
         {
             title: "Step one",
-            subtitle: "24.12.17 12:10",
+            subtitle: "Authentication",
             completed: true
 
         },
@@ -84,11 +84,12 @@ const ClickableSteps = () => {
         },
         {
             title: "Step three",
-            clickable: true
+            clickable: true,
+            selected: true
         },
         {
             title: "Step four",
-            selected: true
+            clickable: true
         },
         {
             title: "Step Five"

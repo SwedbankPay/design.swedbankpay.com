@@ -192,6 +192,11 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Panel",
                 },
                 Object {
+                  "componentPath": "components/ProgressSteps",
+                  "path": "/docs/components/progress-steps",
+                  "title": "Progress Steps",
+                },
+                Object {
                   "componentPath": "components/Sheet",
                   "path": "/docs/components/sheet",
                   "title": "Sheet",
@@ -210,11 +215,6 @@ exports[`Documentation: index renders 1`] = `
                   "componentPath": "components/Status",
                   "path": "/docs/components/status",
                   "title": "Status",
-                },
-                Object {
-                  "componentPath": "components/Steps",
-                  "path": "/docs/components/steps",
-                  "title": "Steps",
                 },
                 Object {
                   "componentPath": "components/Tables",
@@ -539,6 +539,11 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Panel",
                 },
                 Object {
+                  "componentPath": "components/ProgressSteps",
+                  "path": "/docs/components/progress-steps",
+                  "title": "Progress Steps",
+                },
+                Object {
                   "componentPath": "components/Sheet",
                   "path": "/docs/components/sheet",
                   "title": "Sheet",
@@ -557,11 +562,6 @@ exports[`Documentation: index renders 1`] = `
                   "componentPath": "components/Status",
                   "path": "/docs/components/status",
                   "title": "Status",
-                },
-                Object {
-                  "componentPath": "components/Steps",
-                  "path": "/docs/components/steps",
-                  "title": "Steps",
                 },
                 Object {
                   "componentPath": "components/Tables",

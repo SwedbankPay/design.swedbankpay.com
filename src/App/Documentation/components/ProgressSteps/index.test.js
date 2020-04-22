@@ -2,7 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 import Steps, { BasicSteps, VerticalSteps, ClickableSteps } from "./index";
 
-describe("Documentation: Steps", () => {
+describe("Documentation: Progress Steps", () => {
     it("is defined", () => {
         expect(Steps).toBeDefined();
     });

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Documentation: Steps BasicSteps renders 1`] = `
+exports[`Documentation: Progress Steps BasicSteps renders 1`] = `
 <Fragment>
   <h2
     id="basic-usage"
@@ -20,7 +20,7 @@ exports[`Documentation: Steps BasicSteps renders 1`] = `
         Array [
           Object {
             "completed": true,
-            "subtitle": "24.12.17 12:10",
+            "subtitle": "Authentication",
             "title": "Step one",
           },
           Object {
@@ -41,7 +41,7 @@ exports[`Documentation: Steps BasicSteps renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Steps ClickableSteps renders 1`] = `
+exports[`Documentation: Progress Steps ClickableSteps renders 1`] = `
 <Fragment>
   <h2
     id="clickable-steps"
@@ -81,10 +81,11 @@ exports[`Documentation: Steps ClickableSteps renders 1`] = `
           },
           Object {
             "clickable": true,
+            "selected": true,
             "title": "Step three",
           },
           Object {
-            "selected": true,
+            "clickable": true,
             "title": "Step four",
           },
           Object {
@@ -100,7 +101,7 @@ exports[`Documentation: Steps ClickableSteps renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Steps VerticalSteps renders 1`] = `
+exports[`Documentation: Progress Steps VerticalSteps renders 1`] = `
 <Fragment>
   <h2
     id="vertical-steps"
@@ -151,7 +152,7 @@ exports[`Documentation: Steps VerticalSteps renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Steps renders 1`] = `
+exports[`Documentation: Progress Steps renders 1`] = `
 <DocContainer
   docToc={true}
 >

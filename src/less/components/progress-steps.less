@@ -15,6 +15,7 @@
         line-height: 1rem;
         overflow: hidden;
         height: 0;
+        color: @text-gray;
 
         > a {
             display: block;
@@ -22,14 +23,26 @@
 
             /* Take full parent size, ignoring parents padding, and stil growing the parent with text from this element */
             padding: @list-item-padding;
-            color: @brand-primary;
+            color: @brand-secondary;
             border: 0;
             cursor: pointer;
             .negative-margin(@list-item-padding);
 
             &:hover {
-                background-color: @light-gray;
-                box-shadow: 1px 0 0 0 @light-gray, -1px 0 0 0 @light-gray, 0 1px 0 0 @light-gray;
+                .steps-number {
+                    border-radius: 50%;
+                    background-color: @brand-primary;
+                }
+            }
+
+            &:before {
+                .circle-base();
+
+                content: "";
+                box-sizing: border-box;
+                z-index: @zindex-steps-circle;
+                border-radius: 50%;
+                border: 2px solid @brand-primary;
             }
         }
 
@@ -51,7 +64,7 @@
             box-sizing: border-box;
             z-index: @zindex-steps-circle;
             border-radius: 50%;
-            border: 3px solid @list-gray;
+            border: 2px solid @brand-bg-gray;
             background-color: @brand-bg-white;
         }
 
@@ -65,11 +78,21 @@
             font-size: 1.1rem;
         }
 
+        .steps-number {
+            .circle-base();
+
+            font-family: @brand-headline;
+            z-index: @zindex-steps-icon;
+            line-height: @circle-size;
+            text-align: center;
+            font-size: 1rem;
+        }
+
         /* Line */
         &:after {
             content: "";
             position: absolute;
-            background-color: @list-gray;
+            background-color: @brand-bg-gray;
             z-index: @zindex-steps-line;
             height: @line-width;
 
@@ -96,6 +119,8 @@
     }
 
     .steps-completed {
+        color: @brand-secondary;
+
         &:before {
             border-color: @brand-primary;
             background-color: @brand-primary;
@@ -103,16 +128,22 @@
 
         &:after {
             background-color: @brand-primary;
+        }
+
+        a {
+            color: @brand-secondary;
         }
     }
 
     .steps-ongoing {
+        color: @brand-secondary;
+
         &:before {
             border-color: @brand-primary;
         }
 
         &:after {
-            background: linear-gradient(to right, @brand-primary 50%, @list-gray 50%);
+            background: linear-gradient(to right, @brand-primary 50%, @brand-bg-gray 50%);
         }
 
         &:first-child,
@@ -121,11 +152,23 @@
                 background: linear-gradient(to right, @brand-primary 100%);
             }
         }
+
+        a {
+            color: @brand-secondary;
+        }
     }
 
     .steps-selected {
-        background-color: @light-gray;
-        box-shadow: 1px 0 0 0 @light-gray, -1px 0 0 0 @light-gray, 0 1px 0 0 @light-gray;
+        color: @brand-secondary;
+        font-weight: @font-weight-bold;
+
+        .steps-number {
+            color: @brand-secondary;
+        }
+
+        a {
+            color: @brand-secondary;
+        }
     }
 
     .steps-sub-title {
@@ -140,10 +183,7 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    background: @light-gray;
     padding: @base-padding-xs @base-padding-sm;
-    border-top: 1px solid @light-gray;
-    border-bottom: 1px solid @light-gray;
     box-sizing: border-box;
     display: flex;
 }
@@ -168,10 +208,21 @@
             > a {
                 padding: @list-item-padding-desktop;
                 .negative-margin(@list-item-padding-desktop);
+
+                &:before {
+                    width: @circle-size-desktop;
+                    height: @circle-size-desktop;
+                    line-height: @circle-size-desktop;
+                    margin-left: -@circle-size-desktop / 2;
+                    top: @list-item-padding-desktop-top / 2;
+                    margin-top: -@circle-size-desktop / 2;
+                    border-width: 2px;
+                }
             }
 
             /* Circle */
             .steps-icon,
+            .steps-number,
             &:before {
                 width: @circle-size-desktop;
                 height: @circle-size-desktop;
@@ -179,8 +230,16 @@
                 margin-left: -@circle-size-desktop / 2;
                 top: @list-item-padding-desktop-top / 2;
                 margin-top: -@circle-size-desktop / 2;
-                font-size: 24px;
-                border-width: 5px;
+                border-width: 2px;
+            }
+
+            .steps-icon,
+            &:before {
+                font-size: 1.5rem;
+            }
+
+            .steps-number {
+                font-size: 1.25rem;
             }
 
             /* Line */
@@ -204,10 +263,6 @@
             text-align: left;
             padding: @list-item-padding-desktop-vertical;
 
-            &.steps-selected {
-                box-shadow: 0 1px 0 0 @light-gray, 0 -1px 0 0 @light-gray;
-            }
-
             > a {
                 padding: @list-item-padding-desktop-vertical;
                 width: auto;
@@ -216,7 +271,8 @@
 
             /* Circle */
             &:before,
-            .steps-icon {
+            .steps-icon,
+            .steps-number {
                 margin-left: 0;
                 left: @vertical-left;
                 top: 50%;
@@ -254,7 +310,7 @@
         }
 
         .steps-ongoing:after {
-            background: linear-gradient(@brand-primary 50%, @list-gray 50%);
+            background: linear-gradient(@brand-primary 50%, @brand-bg-gray 50%);
         }
     }
 }
