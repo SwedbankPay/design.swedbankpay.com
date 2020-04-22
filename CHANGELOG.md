@@ -33,3 +33,5 @@
   - Updated styling
 - Sidebar
   - Made it possible to have leaf and subgroups together
+- Input Group
+  - Removed color property from input-group>from-control
