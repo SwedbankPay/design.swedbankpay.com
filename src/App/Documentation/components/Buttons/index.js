@@ -9,7 +9,10 @@ import CodeTags from "@components/CodeTags";
 const Examples = () => (
     <>
         <h2 id="examples">Examples</h2>
-        <p>The DesignGuide includes a few predefined button styles, each serving its own semantic purpose.</p>
+        <p>
+            The DesignGuide includes a few predefined button styles, each serving its own semantic purpose.
+            Note: <CodeTags type="secondary" code=".btn-link" /> is recommended as the cancel button when paired with other buttons.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <ButtonComponent type="executive" label="Executive" />{"\n"}

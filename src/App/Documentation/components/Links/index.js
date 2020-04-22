@@ -9,7 +9,7 @@ import CodeTags from "@components/CodeTags";
 const TextLinks = () => (
     <>
         <h2 id="text-links">Text links</h2>
-        <p>Text links are links used in paragraphs of text and together with other buttons.</p>
+        <p>Text links are links used in paragraphs of text.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <p>{"\n"}
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.{"\n"}
@@ -31,7 +31,10 @@ const TextLinks = () => (
 const ButtonLinks = () => (
     <>
         <h2 id="button-links">Links with buttons</h2>
-        <p>To use links with buttons use <CodeTags type="secondary" code=".btn.btn-link" /> in a <CodeTags type="primary" code="<button>" />.</p>
+        <p>
+            To use links with buttons, for instance as a cancel button,
+            use <CodeTags type="secondary" code=".btn.btn-link" /> in a <CodeTags type="primary" code="<button>" />.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ButtonComponent type="executive" label="Approve" />{"\n"}
             <ButtonComponent type="link" label="Cancel"/>

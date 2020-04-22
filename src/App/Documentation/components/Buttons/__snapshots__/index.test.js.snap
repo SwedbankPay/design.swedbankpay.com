@@ -447,7 +447,12 @@ exports[`Documentation: Buttons Examples renders 1`] = `
     Examples
   </h2>
   <p>
-    The DesignGuide includes a few predefined button styles, each serving its own semantic purpose.
+    The DesignGuide includes a few predefined button styles, each serving its own semantic purpose. Note: 
+    <CodeTags
+      code=".btn-link"
+      type="secondary"
+    />
+     is recommended as the cancel button when paired with other buttons.
   </p>
   <ComponentPreview
     codeFigure={true}
