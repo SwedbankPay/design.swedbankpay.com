@@ -19,5 +19,6 @@
     - Updated documentation
   - Button
     - Added .btn-link recommendation
+  - Removed Template from home page
 - Topbar
   - Reversed icon of topbar-link-right
