@@ -11,6 +11,9 @@ exports[`Components: Sidebar InitScrollListener renders 1`] = `
     }
     description={
       <React.Fragment>
+        <p>
+          Note: This method is optional
+        </p>
         Makes the 
          with id 
         <CodeTags
@@ -151,6 +154,9 @@ exports[`Components: Sidebar Overview renders 1`] = `
                   "lastParent": false,
                   "subList": Array [
                     Object {
+                      "title": "Introduction",
+                    },
+                    Object {
                       "lastParent": true,
                       "subList": Array [
                         Object {
@@ -184,43 +190,7 @@ exports[`Components: Sidebar Overview renders 1`] = `
                       "title": "Events",
                     },
                     Object {
-                      "lastParent": false,
-                      "subList": Array [
-                        Object {
-                          "lastParent": true,
-                          "subList": Array [
-                            Object {
-                              "title": "Event 1",
-                            },
-                            Object {
-                              "title": "Event 2",
-                            },
-                            Object {
-                              "title": "Event 3",
-                            },
-                          ],
-                          "title": "Events",
-                        },
-                        Object {
-                          "lastParent": true,
-                          "subList": Array [
-                            Object {
-                              "title": "Operations",
-                            },
-                            Object {
-                              "title": "Lorem ipsum",
-                            },
-                            Object {
-                              "title": "Dolor sit amet consectetur",
-                            },
-                            Object {
-                              "title": "Adipiscing elit",
-                            },
-                          ],
-                          "title": "Operations",
-                        },
-                      ],
-                      "title": "Extras",
+                      "title": "Conclusion",
                     },
                   ],
                   "title": "Other features",
@@ -251,6 +221,9 @@ exports[`Components: Sidebar RemoveActiveState renders 1`] = `
     }
     description={
       <React.Fragment>
+        <p>
+          Note: This method is optional
+        </p>
         Remove group, subgroup and leaf of the 
          active state depending on the parameters passed. The paramater 
         <CodeTags
@@ -335,6 +308,9 @@ exports[`Components: Sidebar RemoveScrollListener renders 1`] = `
     }
     description={
       <React.Fragment>
+        <p>
+          Note: This method is optional
+        </p>
         Removes scroll listener on the element with id 
         <CodeTags
           code="content-id"
@@ -358,6 +334,9 @@ exports[`Components: Sidebar SetActiveState renders 1`] = `
     }
     description={
       <React.Fragment>
+        <p>
+          Note: This method is optional
+        </p>
         Sets group, subgroup and leaf of the 
          to active depending on the parameters passed. The paramater 
         <CodeTags

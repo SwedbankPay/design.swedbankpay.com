@@ -40,6 +40,10 @@ const SetActiveState = ({ componentName }) => (
             code={<CodeTags type="secondary" code="dg.sidebar.setActiveState(<sidebar-id>, group-index, subgroup-index, leaf-index)"/>}
             description={
                 <>
+                    <p>
+                        Note: This method is optional
+                    </p>
+
                     Sets group, subgroup and leaf of the {componentName} to active depending on the parameters
                     passed. The paramater <CodeTags type="secondary" code="group-index" /> is the index of the group to be set active,
                     the paramater <CodeTags type="secondary" code="subgroup-index" /> is the index of the subgroup beneath the group selected
@@ -64,6 +68,10 @@ const RemoveActiveState = ({ componentName }) => (
             code={<CodeTags type="secondary" code="dg.sidebar.removeActiveState(<sidebar-id>, group-index, subgroup-index, leaf-index)"/>}
             description={
                 <>
+                    <p>
+                        Note: This method is optional
+                    </p>
+
                     Remove group, subgroup and leaf of the {componentName} active state depending on the parameters
                     passed. The paramater <CodeTags type="secondary" code="group-index" /> is the index of the group to have the active state removed,
                     the paramater <CodeTags type="secondary" code="subgroup-index" /> is the index of the subgroup beneath the group selected
@@ -87,6 +95,10 @@ const InitScrollListener = ({ componentName }) => (
             code={<CodeTags type="secondary" code="dg.sidebar.initScrollListener(<sidebar-id>, content-id, header-type)"/>}
             description={
                 <>
+                    <p>
+                        Note: This method is optional
+                    </p>
+
                     Makes the {componentName} with id <CodeTags type="secondary" code="<sidebar-id>"/> listen to scroll events on the element
                     with id <CodeTags type="secondary" code="content-id"/>, and matches a leaf with the corresponding header
                     of <CodeTags type="secondary" code="header-type"/> to visualize active leaf depending on scroll position of element with
@@ -103,6 +115,10 @@ const RemoveScrollListener = () => (
             code={<CodeTags type="secondary" code="dg.sidebar.removeScrollListener(content-id)"/>}
             description={
                 <>
+                    <p>
+                        Note: This method is optional
+                    </p>
+
                     Removes scroll listener on the element
                     with id <CodeTags type="secondary" code="content-id"/>.
                 </>
