@@ -28,3 +28,6 @@
   - Moved height property of input to be under form-control
 - Loaders
   - Added centered loader
+- Steps
+  - Renamed steps in documentation
+  - Updated styling
