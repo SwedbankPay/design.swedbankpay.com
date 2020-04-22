@@ -42,7 +42,6 @@
 
         &:not(:checked):not([disabled]) {
             &:hover + label:before {
-                background-color: @brand-bg-1;
                 border-color: @brand-secondary-light-2;
             }
         }
@@ -59,6 +58,12 @@
 
             &:checked + label:before {
                 background-color: @input-checked-bg-disabled;
+            }
+
+            + label,
+            &:before,
+            &:checked + label:before {
+                cursor: not-allowed;
             }
         }
     }

@@ -54,6 +54,12 @@ fieldset {
                 background-color: @input-checked-bg-disabled;
             }
 
+            &:not(:checked) {
+                &:hover + label:before {
+                    border-color: @brand-secondary-light-3;
+                }
+            }
+
             + label,
             + label:before,
             &:after,
