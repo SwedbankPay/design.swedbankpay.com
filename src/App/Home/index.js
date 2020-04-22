@@ -20,7 +20,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="row">
-                <div className="col-12 col-md-4 pt-3 pt-md-0 d-flex">
+                <div className="col-12 col-md-6 pt-3 pt-md-0 d-flex">
                     <div className="doc-card card card-plain">
                         <div className="card-body text-center d-flex flex-column">
                             <div className="doc-circle">
@@ -32,19 +32,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-12 col-md-4 pt-3 pt-md-0 d-flex">
-                    <div className="doc-card card card-plain">
-                        <div className="card-body text-center d-flex flex-column">
-                            <div className="doc-circle">
-                                <i className="material-icons material-icons-large text-white">list_alt</i>
-                            </div>
-                            <h2>Templates</h2>
-                            <p>Document templates, usage description and tips.</p>
-                            <Link className="btn btn-guiding btn-outline btn-block mt-auto" to="/tmpl">Templates</Link>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-12 col-md-4 pt-3 pt-md-0 d-flex">
+                <div className="col-12 col-md-6 pt-3 pt-md-0 d-flex">
                     <div className="doc-card card card-plain">
                         <div className="card-body text-center d-flex flex-column">
                             <div className="doc-circle">
