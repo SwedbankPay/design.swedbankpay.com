@@ -10,3 +10,12 @@
 ### Next release
 - Breakpoints
   - Moved to Utilities
+- Buttons
+  - Updated button sizes
+- Links
+  - Updated Action Link for new tab color
+- Design Guide
+  - Links
+    - Updated documentation
+  - Button
+    - Added .btn-link recommendation
