@@ -45,11 +45,6 @@ exports[`Documentation: index renders 1`] = `
               "redirect": "/docs/core/breakpoints",
               "routes": Array [
                 Object {
-                  "componentPath": "core/Breakpoints",
-                  "path": "/docs/core/breakpoints",
-                  "title": "Breakpoints",
-                },
-                Object {
                   "componentPath": "core/Color",
                   "path": "/docs/core/color",
                   "title": "Color",
@@ -259,6 +254,11 @@ exports[`Documentation: index renders 1`] = `
                   "title": "Borders",
                 },
                 Object {
+                  "componentPath": "utilities/Breakpoints",
+                  "path": "/docs/utilities/breakpoints",
+                  "title": "Breakpoints",
+                },
+                Object {
                   "componentPath": "utilities/Colors",
                   "path": "/docs/utilities/colors",
                   "title": "Colors",
@@ -387,11 +387,6 @@ exports[`Documentation: index renders 1`] = `
             redirect="/docs/core/breakpoints"
             routes={
               Array [
-                Object {
-                  "componentPath": "core/Breakpoints",
-                  "path": "/docs/core/breakpoints",
-                  "title": "Breakpoints",
-                },
                 Object {
                   "componentPath": "core/Color",
                   "path": "/docs/core/color",
@@ -608,6 +603,11 @@ exports[`Documentation: index renders 1`] = `
                   "componentPath": "utilities/Borders",
                   "path": "/docs/utilities/borders",
                   "title": "Borders",
+                },
+                Object {
+                  "componentPath": "utilities/Breakpoints",
+                  "path": "/docs/utilities/breakpoints",
+                  "title": "Breakpoints",
                 },
                 Object {
                   "componentPath": "utilities/Colors",
