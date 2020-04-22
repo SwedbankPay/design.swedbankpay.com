@@ -31,3 +31,5 @@
 - Steps
   - Renamed steps in documentation
   - Updated styling
+- Sidebar
+  - Made it possible to have leaf and subgroups together
