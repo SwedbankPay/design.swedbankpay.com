@@ -1,5 +1,4 @@
 .code-view {
-    color: @brand-secondary-info-1;
     font-family: @brand-monofont;
     margin: 0;
 
@@ -46,13 +45,48 @@
             display: block;
             overflow-x: auto;
             max-width: 100%;
+            color: @white;
+
+            .kd,
+            .k,
+            .kc {
+                color: @blue-syntax-highlight;
+            }
+
+            .nb,
+            .mi {
+                color: @green-syntax-highlight;
+            }
+
+            .na {
+                color: @brand-secondary-info-2;
+            }
+
+            .s2 {
+                color: @white;
+            }
+
+            .s,
+            .s1,
+            .dl,
+            .nl {
+                color: @yellow-faded;
+            }
+
+            .nt {
+                color: @brand-secondary-info-1;
+            }
+
+            .cp {
+                color: @yellow-syntax-highlight;
+            }
         }
     }
 }
 
 .code-view-header {
     background-color: @brand-secondary-dark-1;
-    color: @brand-secondary-info-1;
+    color: @white;
     font-family: @brand-monofont;
     min-height: 1.5rem;
     font-size: 0.875rem;
