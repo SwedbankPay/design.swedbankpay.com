@@ -160,7 +160,7 @@ const init = id => {
     }
 };
 
-const _closeSheetEsc = e => {
+const _closeSheetEscHandler = e => {
     if (e.keyCode === 27 && document.body.classList.contains("sheet-open")) {
         _sheets.forEach(sheet => sheet.isOpen ? sheet.close() : null);
     }
@@ -169,7 +169,7 @@ const _closeSheetEsc = e => {
 const _addEscListener = () => {
     // Close sheet on esc
 
-    document.addEventListener("keydown", _closeSheetEsc);
+    document.addEventListener("keydown", _closeSheetEscHandler);
 };
 
 const close = id => closeComponent(id, "sheet", _sheets);
