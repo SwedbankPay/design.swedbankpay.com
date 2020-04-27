@@ -53,89 +53,6 @@ const Example = () => (
                 </form>
             </SheetComponent>{"\n"}
             <button className="btn btn-executive" type="button" data-sheet-open="demo-sheet">Open sheet</button>
-            {/* <SheetComponent id="demo-sheet-2">
-                <h2>Sheet component</h2>
-                <p>This is the sheet component. It can contain anything you want 2.</p>
-                <p>It can also contain lots of useless text, just like the text in this paragraph. Or it can contain useful info and cheats. For example if you have a math quiz coming up;</p>
-                <ul className="list">
-                    <li><code>3 + 8 = 11</code></li>
-                    <li><code>36 - 22 = 14</code></li>
-                    <li><code>256 + 113 = 369</code></li>
-                    <li><code>356 - 1 = 355</code></li>
-                </ul>
-                <hr/>
-                <form onSubmit={e => e.preventDefault()}>
-                    <div className="form-group">
-                        <label htmlFor="full-name">Full name</label>
-                        <div className="input-group">
-                            <input type="text" className="form-control" id="full-name" placeholder="Enter your full name" />
-                        </div>
-                        <div className="help-block">Your full name</div>
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="email-address">Email</label>
-                        <div className="input-group">
-                            <input type="text" className="form-control" id="email-address" placeholder="Enter your email" />
-                        </div>
-                        <div className="help-block">Email means electronic mail, not express mail</div>
-                    </div>
-                    <div className="form-group">
-                        <div className="checkbox">
-                            <input type="checkbox" id="subscribe-checkbox" />
-                            <label htmlFor="subscribe-checkbox">Sign up to our math newsletter</label>
-                        </div>
-                    </div>
-                    <button className="btn btn-executive" type="submit" onClick={e => e.preventDefault()}>Submit</button>
-                </form>
-            </SheetComponent>{"\n"}
-            <button className="btn btn-executive" type="button" data-sheet-open="demo-sheet-2">Open sheet</button>
-            <SheetComponent id="demo-sheet-3">
-                <h2>Sheet component</h2>
-                <p>This is the sheet component. It can contain anything you want 3.</p>
-                <p>It can also contain lots of useless text, just like the text in this paragraph. Or it can contain useful info and cheats. For example if you have a math quiz coming up;</p>
-                <ul className="list">
-                    <li><code>3 + 8 = 11</code></li>
-                    <li><code>36 - 22 = 14</code></li>
-                    <li><code>256 + 113 = 369</code></li>
-                    <li><code>356 - 1 = 355</code></li>
-                </ul>
-                <hr/>
-                <form onSubmit={e => e.preventDefault()}>
-                    <div className="form-group">
-                        <label htmlFor="full-name">Full name</label>
-                        <div className="input-group">
-                            <input type="text" className="form-control" id="full-name" placeholder="Enter your full name" />
-                        </div>
-                        <div className="help-block">Your full name</div>
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="email-address">Email</label>
-                        <div className="input-group">
-                            <input type="text" className="form-control" id="email-address" placeholder="Enter your email" />
-                        </div>
-                        <div className="help-block">Email means electronic mail, not express mail</div>
-                    </div>
-                    <div className="form-group">
-                        <div className="checkbox">
-                            <input type="checkbox" id="subscribe-checkbox" />
-                            <label htmlFor="subscribe-checkbox">Sign up to our math newsletter</label>
-                        </div>
-                    </div>
-                    <button className="btn btn-executive" type="submit" onClick={e => e.preventDefault()}>Submit</button>
-                </form>
-            </SheetComponent>{"\n"}
-            <button className="btn btn-executive" type="button" data-sheet-open="demo-sheet-3">Open sheet</button>
-            <div className="sheet" id="sheet">
-                <section>
-                    <a href="#" className="sheet-close">
-                        <i className="material-icons">close</i>
-                    </a>
-                    <h2>Sheet 1</h2>
-                    <p>Lorem ipsum</p>
-                </section>
-            </div>
-            <button className="btn btn-executive" type="button" id="sheet-init" onClick={() => sheet.init("sheet")}>Init sheet</button>
-            <button className="btn btn-executive" type="button" id="sheet-open" onClick={() => sheet.open("sheet")}>Open sheet</button> */}
         </ComponentPreview>
     </>
 );
@@ -166,19 +83,8 @@ const JavascriptMethods = () => (
 );
 
 class Sheet extends Component {
-    // constructor (props) {
-    //     super(props)
-
-    //     this.state = {
-    //         counter: 0
-    //     }
-    // }
 
     componentDidMount () {
-        sheet.init();
-    }
-
-    componentDidUpdate () {
         sheet.init();
     }
 
@@ -189,10 +95,6 @@ class Sheet extends Component {
                 <p className="lead">
                     Sheet is a container component that is anchored on the right side of the screen and can contain a number of different things.
                 </p>
-                {/* <button onClick={() => this.setState((state, props) => {
-                    return {counter: state.counter + 1}
-                })}>Button</button>
-                {this.state.counter} */}
                 <Example />
                 <RequireAction />
                 <JavascriptMethods />
