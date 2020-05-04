@@ -24,7 +24,6 @@ const _addEscListener = () => {
 const _addSidebarClickCloseHandler = e => {
     if (e.target.tagName === "A") {
         _closeOnNavMenus();
-        console.log(_navMenus);
     }
 };
 
@@ -37,6 +36,15 @@ const _addSidebarClickClose = topbar => {
 };
 
 const _createTopbar = (topbar, navMenu) => {
+
+    if (_navMenus.filter(navMenu => navMenu.id === topbar.id).length > 0) {
+        const updatedNavMenuObject = _navMenus.filter(navMenu => navMenu.id === topbar.id)[0];
+
+        updatedNavMenuObject.constructNavMenu(topbar, navMenu);
+
+        return updatedNavMenuObject;
+    }
+
     const navMenuObject = new NavMenu(topbar, navMenu);
 
     _navMenus.push(navMenuObject);
