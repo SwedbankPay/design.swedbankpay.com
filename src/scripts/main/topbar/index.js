@@ -1,6 +1,6 @@
 import NavMenu from "./NavMenu";
 
-import { handleScrollbar, openComponent, closeComponent } from "../utils";
+import { openComponent, closeComponent } from "../utils";
 
 const SELECTORS = {
     TOPBAR: ".topbar",
@@ -9,30 +9,30 @@ const SELECTORS = {
 
 const _navMenus = _navMenus || [];
 
-const _closeOnEsc = () => (_navMenus.some(menu => menu.isOpen ? menu.close() : false));
+const _closeOnNavMenus = () => (_navMenus.some(menu => menu.isOpen ? menu.close() : false));
+
+const _addEscListenerHandler = e => {
+    if (e.key === "Escape") {
+        _closeOnNavMenus();
+    }
+};
 
 const _addEscListener = () => {
-    document.addEventListener("keydown", e => {
-        if (e.key === "Escape") {
-            /* Only runs handleScrollbar if a navMenu was actually closed [AW] */
-            if (document.body.classList.contains("has-vscroll")) {
-                if (_closeOnEsc()) { handleScrollbar(); }
-            } else {
-                _closeOnEsc();
-            }
-        }
-    });
+    document.addEventListener("keydown", _addEscListenerHandler);
+};
+
+const _addSidebarClickCloseHandler = e => {
+    if (e.target.tagName === "A") {
+        _closeOnNavMenus();
+        console.log(_navMenus);
+    }
 };
 
 const _addSidebarClickClose = topbar => {
     const sidebar = topbar.querySelector(".sidebar");
 
     if (sidebar) {
-        sidebar.addEventListener("click", e => {
-            if (e.target.tagName === "A") {
-                close(topbar.id);
-            }
-        });
+        sidebar.addEventListener("click", _addSidebarClickCloseHandler);
     }
 };
 

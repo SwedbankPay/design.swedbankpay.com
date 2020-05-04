@@ -8,9 +8,10 @@ exports[`Resources: index renders 1`] = `
     className="row"
   >
     <div
-      className="col-xxl-2 col-md-3"
+      className="col-xxl-2 col-md-3 d-none d-md-block"
     >
       <withRouter(SelectPanel)
+        id="doc-sidebar"
         routes={
           Array [
             Object {

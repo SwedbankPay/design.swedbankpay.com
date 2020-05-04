@@ -1,4 +1,4 @@
-import { isWithinBoundingBox, handleScrollbar } from "../utils";
+import { isWithinBoundingBox } from "../utils";
 
 const SELECTORS = {
     BTN: ".topbar-btn",
@@ -28,11 +28,10 @@ export default class NavMenu {
         this._setFirstTabStop(1); // Initially set to 1 to ignore close button during tabbing, when topbar-nav is not open
         this.lastTabStop = this.focusableElements[this.focusableElements.length - 1];
 
+        this._btnElementOpenHandler = this._btnElementOpenHandler.bind(this);
+
         if (this.btnElement) {
-            this.btnElement.addEventListener("click", e => {
-                e.preventDefault();
-                this.open();
-            });
+            this.btnElement.addEventListener("click", this._btnElementOpenHandler);
         }
 
         if (this.navMenuElement) {
@@ -50,6 +49,11 @@ export default class NavMenu {
         }
 
         this._initListeners();
+    }
+
+    _btnElementOpenHandler (e) {
+        e.preventDefault();
+        this.open();
     }
 
     _initListeners () {
@@ -82,7 +86,6 @@ export default class NavMenu {
     _resizeListener () { this.isOpen ? this._closeNoTransition() : null; }
 
     _closeNoTransition () {
-        handleScrollbar();
         this.isOpen = false;
 
         this.focusedElementBeforeNav ? this.focusedElemBeforeNav.focus() : null;
@@ -97,7 +100,6 @@ export default class NavMenu {
     }
 
     open () {
-        handleScrollbar();
         this.isOpen = true;
 
         this.focusedElemBeforeNav = document.activeElement;
@@ -114,7 +116,6 @@ export default class NavMenu {
     }
 
     close () {
-        handleScrollbar();
         this.isOpen = false;
 
         window.removeEventListener("resize", this.resizeEvent, { passive: true });

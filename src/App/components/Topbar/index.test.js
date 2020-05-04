@@ -68,7 +68,7 @@ describe("Component: Topbar - ", () => {
                 const menuIcons = menuContainer.find("i.material-icons");
 
                 expect(wrapper).toMatchSnapshot();
-                expect(menuIcons.length).toEqual(1); // The close icon will always render [AW]
+                expect(menuIcons.length).toEqual(0);
             });
 
             it("renders topbar-link-container and populates it with given information without a logout link", () => {

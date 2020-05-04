@@ -180,6 +180,22 @@ exports[`Component: Topbar -  props topbarContent menu links prevents default wh
         
 		
       </button>
+      <button
+        className="topbar-close"
+        type="button"
+      >
+        
+
+        <i
+          className="material-icons topbar-btn-icon"
+        >
+          close
+        </i>
+        
+
+        
+		
+      </button>
     </TopbarBtn>
     
 
@@ -230,20 +246,6 @@ exports[`Component: Topbar -  props topbarContent menu links prevents default wh
         >
           
 
-          <button
-            className="topbar-close"
-            type="button"
-          >
-            
-
-            <i
-              className="material-icons"
-            >
-              close
-            </i>
-            
-
-          </button>
           
 
           <a
@@ -357,6 +359,22 @@ exports[`Component: Topbar -  props topbarContent renders a topbar menu without 
         
 		
       </button>
+      <button
+        className="topbar-close"
+        type="button"
+      >
+        
+
+        <i
+          className="material-icons topbar-btn-icon"
+        >
+          close
+        </i>
+        
+
+        
+		
+      </button>
     </TopbarBtn>
     
 
@@ -404,20 +422,6 @@ exports[`Component: Topbar -  props topbarContent renders a topbar menu without 
         >
           
 
-          <button
-            className="topbar-close"
-            type="button"
-          >
-            
-
-            <i
-              className="material-icons"
-            >
-              close
-            </i>
-            
-
-          </button>
           
 
           <a
@@ -519,6 +523,22 @@ exports[`Component: Topbar -  props topbarContent renders a topbar-menu-button w
         
 		
       </button>
+      <button
+        className="topbar-close"
+        type="button"
+      >
+        
+
+        <i
+          className="material-icons topbar-btn-icon"
+        >
+          close
+        </i>
+        
+
+        
+		
+      </button>
     </TopbarBtn>
     
 
@@ -569,20 +589,6 @@ exports[`Component: Topbar -  props topbarContent renders a topbar-menu-button w
         >
           
 
-          <button
-            className="topbar-close"
-            type="button"
-          >
-            
-
-            <i
-              className="material-icons"
-            >
-              close
-            </i>
-            
-
-          </button>
           
 
           <a
@@ -700,6 +706,22 @@ exports[`Component: Topbar -  props topbarContent renders topbar-link-container 
         
 		
       </button>
+      <button
+        className="topbar-close"
+        type="button"
+      >
+        
+
+        <i
+          className="material-icons topbar-btn-icon"
+        >
+          close
+        </i>
+        
+
+        
+		
+      </button>
     </TopbarBtn>
     
 
@@ -750,20 +772,6 @@ exports[`Component: Topbar -  props topbarContent renders topbar-link-container 
         >
           
 
-          <button
-            className="topbar-close"
-            type="button"
-          >
-            
-
-            <i
-              className="material-icons"
-            >
-              close
-            </i>
-            
-
-          </button>
           
 
           <a
@@ -904,6 +912,22 @@ exports[`Component: Topbar -  props topbarContent renders topbar-link-container 
         
 		
       </button>
+      <button
+        className="topbar-close"
+        type="button"
+      >
+        
+
+        <i
+          className="material-icons topbar-btn-icon"
+        >
+          close
+        </i>
+        
+
+        
+		
+      </button>
     </TopbarBtn>
     
 
@@ -954,20 +978,6 @@ exports[`Component: Topbar -  props topbarContent renders topbar-link-container 
         >
           
 
-          <button
-            className="topbar-close"
-            type="button"
-          >
-            
-
-            <i
-              className="material-icons"
-            >
-              close
-            </i>
-            
-
-          </button>
           
 
           <a

@@ -376,6 +376,7 @@ exports[`Components: Topbar TopbarWide renders 1`] = `
     <Topbar
       id="demo-topbar-1"
       logout={true}
+      sidebar={true}
       topbarContent={
         Object {
           "btn": Object {
