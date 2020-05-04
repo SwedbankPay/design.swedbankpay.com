@@ -24,6 +24,18 @@ const _addEscListener = () => {
     });
 };
 
+const _addSidebarClickClose = topbar => {
+    const sidebar = topbar.querySelector(".sidebar");
+
+    if (sidebar) {
+        sidebar.addEventListener("click", e => {
+            if (e.target.tagName === "A") {
+                close(topbar.id);
+            }
+        });
+    }
+};
+
 const _createTopbar = (topbar, navMenu) => {
     const navMenuObject = new NavMenu(topbar, navMenu);
 
@@ -49,6 +61,7 @@ const init = id => {
         const navMenuQuery = topbar.querySelector(SELECTORS.TOPBARNAV);
 
         _addEscListener();
+        _addSidebarClickClose(topbar);
 
         return navMenuQuery ? _createTopbar(topbar, navMenuQuery) : null;
     } else {
@@ -62,6 +75,8 @@ const init = id => {
 
         const navMenuObjects = [...topbars].map(topbar => {
             const navMenuQuery = topbar.querySelector(SELECTORS.TOPBARNAV);
+
+            _addSidebarClickClose(topbar);
 
             return navMenuQuery ? _createTopbar(topbar, navMenuQuery) : null;
         });

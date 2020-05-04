@@ -7,7 +7,7 @@ import CodeTags from "@components/CodeTags";
 import SidebarComponent from "@components/Sidebar";
 import { SidebarNavList } from "../Sidebar/constants";
 
-const { topbar } = window.dg;
+const { topbar, sidebar } = window.dg;
 
 const menu = {
     btn: {
@@ -60,7 +60,7 @@ const TopbarWide = () => (
             This is a wide topbar.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <TopbarComponent id="demo-topbar-1" topbarContent={menu} wide="xl" logout />
+            <TopbarComponent id="demo-topbar-1" topbarContent={menu} wide="xl" logout sidebar />
         </ComponentPreview>
     </>
 );
@@ -86,6 +86,13 @@ const TopbarSticky = () => (
                 </div>
             </div>
         </ComponentPreview>
+    </>
+);
+
+const TopbarWithSidebar = () => (
+    <>
+        <h2 id="topbar-with-sidebar">Topbar with sidebar content</h2>
+
     </>
 );
 
@@ -118,6 +125,7 @@ class Topbar extends Component {
         topbar.init("demo-topbar-1");
         topbar.init("demo-topbar-png");
         topbar.init("demo-topbar-1-png");
+        sidebar.init("topbar-sidebar");
     }
 
     render () {

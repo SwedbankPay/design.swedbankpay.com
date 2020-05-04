@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 import SearchBox from "../SearchBox/index";
 
-const { sidebar } = window.dg;
+const { sidebar, topbar } = window.dg;
 
 class NavGroup extends Component {
     constructor (props) {
@@ -18,7 +18,7 @@ class NavGroup extends Component {
         const activeLeaf = this.props.route.routes.map((childRoute, i) => ({ i,
             childRoute: childRoute.path })).filter(childRouteObject => this.props.location.pathname.includes(childRouteObject.childRoute));
 
-        this.state.isActive && activeLeaf[0] && sidebar.setActiveState("doc-sidebar", this.props.index, null, activeLeaf[0].i);
+        this.state.isActive && activeLeaf[0] && sidebar.setActiveState(this.props.sidebarId, this.props.index, null, activeLeaf[0].i);
     }
 
     toggleActive () {
@@ -53,16 +53,24 @@ class NavGroup extends Component {
 class SelectPanel extends Component {
 
     componentDidMount () {
-        sidebar.init("doc-sidebar");
+        sidebar.init(this.props.id);
+
+        if (this.props.topbarId) {
+            topbar.init(this.props.topbarId);
+        }
     }
 
     componentDidUpdate () {
-        sidebar.init("doc-sidebar");
+        sidebar.init(this.props.id);
+
+        if (this.props.topbarId) {
+            topbar.init(this.props.topbarId);
+        }
     }
 
     render () {
         return (
-            <div id="doc-sidebar" className="sidebar">
+            <div id={this.props.id} className="sidebar">
                 {/* A fully functional search box will be added later. */}
                 {/* <SearchBox routes={this.props.routes} /> */}
                 <nav className="sidebar-nav">
@@ -70,7 +78,7 @@ class SelectPanel extends Component {
                         {this.props.routes.map((route, i) => {
                             const NavGroupWithRouter = withRouter(NavGroup);
 
-                            return <NavGroupWithRouter key={`nav_group_${i}`} route={route} index={i} />;
+                            return <NavGroupWithRouter sidebarId={this.props.id} key={`nav_group_${i}`} route={route} index={i} />;
                         })}
                     </ul>
                 </nav>

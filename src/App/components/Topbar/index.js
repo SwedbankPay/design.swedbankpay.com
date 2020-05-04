@@ -3,6 +3,9 @@ import PropTypes from "prop-types";
 import swedbankpayLogo from "@src/img/swedbankpay/logo/swedbankpay-logo.svg";
 import payexLogo from "@src/img/payex/logo/payex-logo.svg";
 
+import SidebarComponent from "@components/Sidebar";
+import { SidebarNavList } from "../../Documentation/components/Sidebar/constants";
+
 const brand = process.env.brand;
 
 const devLogo = brand === "swedbankpay" ? swedbankpayLogo : payexLogo;
@@ -10,21 +13,24 @@ const devLogo = brand === "swedbankpay" ? swedbankpayLogo : payexLogo;
 const isDev = process.env.version === "LOCAL_DEV";
 
 const TopbarBtn = () => (
-    <button type="button" className="topbar-btn">{"\n\t\t"}
-        <i className="material-icons topbar-btn-icon">menu</i>
-        {"\n\t\t"}
-    </button>
+    <>
+        <button type="button" className="topbar-btn">{"\n\t\t"}
+            <i className="material-icons topbar-btn-icon">menu</i>
+            {"\n\t\t"}
+        </button>
+        <button type="button" className="topbar-close">{"\n"}
+            <i className="material-icons topbar-btn-icon">close</i>{"\n"}
+            {"\n\t\t"}
+        </button>
+    </>
 );
 
-const TopbarMenu = ({ menu, logout }) => {
+const TopbarMenu = ({ menu, logout, sidebar }) => {
     const { items } = menu;
 
     return (
         <nav className="topbar-nav">
             <div className="topbar-link-container">{"\n"}
-                <button type="button" className="topbar-close">{"\n"}
-                    <i className="material-icons">close</i>{"\n"}
-                </button>
                 {items.map((item, i) => (
                     <Fragment key={i}>
                         {"\n"}
@@ -35,6 +41,7 @@ const TopbarMenu = ({ menu, logout }) => {
                             <span>{item.name}</span>
                             {"\n"}
                         </a>
+                        {i === 0 && sidebar && <SidebarComponent id="topbar-sidebar" sidebarNavList={SidebarNavList} />}
                     </Fragment>
                 ))}{"\n"}
                 {logout ? <TopbarLogout /> : null}
@@ -84,7 +91,8 @@ Topbar.propTypes = {
     fixed: PropTypes.bool,
     logout: PropTypes.bool,
     png: PropTypes.bool,
-    sticky: PropTypes.bool
+    sticky: PropTypes.bool,
+    sidebar: PropTypes.bool
 };
 
 export default Topbar;

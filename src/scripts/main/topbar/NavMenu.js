@@ -14,7 +14,7 @@ export default class NavMenu {
         this.isOpen = navMenu.classList.contains(SELECTORS.OPEN);
         this.navMenuElement = navMenu;
         this.linkContainer = this.navMenuElement.querySelector(".topbar-link-container");
-        this.closeNavIcon = this.navMenuElement.querySelector(".topbar-close");
+        this.closeNavIcon = topbarComponent.querySelector(".topbar-close");
         this.btnElement = topbarComponent.querySelector(SELECTORS.BTN);
         this.resizeEvent;
 
@@ -106,6 +106,8 @@ export default class NavMenu {
         window.addEventListener("resize", this.resizeEvent, { passive: true });
         this.navMenuElement.classList.add("topbar-nav-open");
         this.navMenuElement.classList.add("d-block");
+        this.btnElement.classList.add("d-none");
+        this.closeNavIcon.classList.add("d-flex");
 
         this._setFirstTabStop(0);
         this.firstTabStop.focus();
@@ -123,6 +125,8 @@ export default class NavMenu {
 
             this.navMenuElement.classList.remove("topbar-nav-closing");
             this.navMenuElement.classList.remove("d-block");
+            this.btnElement.classList.remove("d-none");
+            this.closeNavIcon.classList.remove("d-flex");
         }, 300);
 
         this._setFirstTabStop(1);
