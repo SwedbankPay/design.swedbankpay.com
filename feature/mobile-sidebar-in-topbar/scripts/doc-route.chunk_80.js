@@ -1,2 +1,2 @@
 (window.webpackJsonp=window.webpackJsonp||[]).push([[108],{378:function(e,a,n){"use strict";n.r(a);var s=n(1),t=n.n(s),c=n(17),i=function(e){var a=e.type,n=e.classNames;return t.a.createElement("i",{className:"material-icons".concat(n?" ".concat(n):"")},a)};i.propTypes={type:n.n(c).a.string.isRequired},a.default=i}}]);
-//# sourceMappingURL=doc-route.chunk_80.js.map?f494e14df3dbab8ef0e4
+//# sourceMappingURL=doc-route.chunk_80.js.map?6a9514c6cb1b5e48ff1e
