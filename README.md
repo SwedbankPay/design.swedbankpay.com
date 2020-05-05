@@ -65,7 +65,7 @@ shortcuts for common paths. The shortcuts are as following:
 |   Shortcut    | Description                                                                            |
 | :-----------: | :------------------------------------------------------------------------------------- |
 |      `~`      | root of the project (example `import package from "~/package";`)                       |
-|    `$src`     | `~/src`-folder (example `import dg from "@src/scripts";`)                              |
+|    `@src`     | `~/src`-folder (example `import dg from "@src/scripts";`)                              |
 | `@components` | `~/src/App/components`-folder (example `import Alert from "@components/Alert";`)       |
 |  `@docutils`  | `~/src/App/Documentation/utils`-folder (example `import { DocToc } from "@docutils";`) |
 | `@constants`  | `~/src/constants`-folder                                                               |
