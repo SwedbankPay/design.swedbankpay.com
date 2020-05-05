@@ -15,6 +15,12 @@ export default class NavMenu {
         this._closeHandlerNavMenuElement = this._closeHandlerNavMenuElement.bind(this);
         this.close = this.close.bind(this);
 
+        window.addEventListener("popstate", () => {
+            if (document.body.className.includes("topbar-nav-open")) { document.body.classList.remove("topbar-nav-open"); }
+
+            if (document.body.className.includes("has-vscroll")) { document.body.classList.remove("has-vscroll"); }
+        });
+
         this.constructNavMenu(topbarComponent, navMenu);
     }
 
