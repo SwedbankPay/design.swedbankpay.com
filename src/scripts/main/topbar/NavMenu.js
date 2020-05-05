@@ -1,4 +1,4 @@
-import { isWithinBoundingBox } from "../utils";
+import { isWithinBoundingBox, handleScrollbar } from "../utils";
 
 const SELECTORS = {
     BTN: ".topbar-btn",
@@ -100,6 +100,7 @@ export default class NavMenu {
     _resizeListener () { this.isOpen ? this._closeNoTransition() : null; }
 
     _closeNoTransition () {
+        handleScrollbar();
         this.isOpen = false;
 
         this.focusedElementBeforeNav ? this.focusedElemBeforeNav.focus() : null;
@@ -116,6 +117,7 @@ export default class NavMenu {
     }
 
     open () {
+        handleScrollbar();
         this.isOpen = true;
 
         this.focusedElemBeforeNav = document.activeElement;
@@ -132,6 +134,7 @@ export default class NavMenu {
     }
 
     close () {
+        handleScrollbar();
         this.isOpen = false;
 
         window.removeEventListener("resize", this.resizeEvent, { passive: true });

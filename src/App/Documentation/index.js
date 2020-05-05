@@ -8,7 +8,7 @@ const Documentation = () => (
     <div className="documentation">
         <div className="row">
             <div className="col-xxl-2 col-md-3 d-none d-md-block">
-                <SelectPanel id="doc-siderbar" routes={routes} />
+                <SelectPanel id="doc-sidebar" routes={routes} />
             </div>
             <main className="doc-view col-xxl-10 col-md-9">
                 <Suspense fallback={<LoadingComponent />}>

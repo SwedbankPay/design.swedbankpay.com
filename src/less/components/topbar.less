@@ -118,10 +118,10 @@
 
     .topbar-nav {
         position: absolute;
-        top: calc((@topbar-height + @topbar-border-width) - 16px); // - 4px is due to the drop shadow of the sticky topbar
+        top: calc((@topbar-height + @topbar-border-width) - 16px); // - 16px is due to the drop shadow of the sticky topbar
         right: 0;
         width: 100%;
-        height: 100vh;
+        height: calc(100vh - (@topbar-height + @topbar-border-width - 8px));
         z-index: @zindex-sheet-backdrop;
         background: transparent;
         display: none;
@@ -130,9 +130,11 @@
             display: none;
             position: relative;
             padding-left: 2.5rem;
+            height: auto;
 
             .sidebar-nav {
-                max-height: 50vh;
+                max-height: none;
+                overflow-y: visible;
             }
         }
 
@@ -222,7 +224,7 @@
                     padding-left: 1rem;
 
                     span {
-                        margin-left: 2rem;
+                        margin-left: 1rem;
                     }
 
                     .material-icons + span {

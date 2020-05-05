@@ -121,6 +121,17 @@ describe("Component: Topbar - ", () => {
                 expect(wrapper).toMatchSnapshot();
                 expect(eventHandler.preventDefault).toHaveBeenCalled();
             });
+
+            it("renders a sidebar in topbar-link-container when sidebar prop is true", () => {
+                const wrapper = mount(<Topbar topbarContent={menu} sidebar />);
+
+                const renderedSidebar = wrapper.find(".topbar")
+                    .find(".topbar-nav")
+                    .find(".sidebar");
+
+                expect(wrapper).toMatchSnapshot();
+                expect(renderedSidebar).toBeTruthy();
+            });
         });
 
         describe("logout", () => {

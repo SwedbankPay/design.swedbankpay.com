@@ -47,6 +47,10 @@ const Overview = () => (
             a <CodeTags type="primary" code={"<button>"} /> attribute
             to get the menu to appear when the menu-button is clicked.
         </p>
+
+        <p>
+            Note that scrolling is locked when the menu is displayed.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <TopbarComponent topbarContent={menu} logout id="demo-topbar" />
         </ComponentPreview>
@@ -60,7 +64,7 @@ const TopbarWide = () => (
             This is a wide topbar.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <TopbarComponent id="demo-topbar-1" topbarContent={menu} wide="xl" logout sidebar />
+            <TopbarComponent id="demo-topbar-1" topbarContent={menu} wide="xl" logout />
         </ComponentPreview>
     </>
 );
@@ -92,7 +96,12 @@ const TopbarSticky = () => (
 const TopbarWithSidebar = () => (
     <>
         <h2 id="topbar-with-sidebar">Topbar with sidebar content</h2>
-
+        <p>
+            It is recommended to have the sidebar content in the topbar menu on smaller devices, such as phones and tablets (see more on sidebar <Link to="/docs/sidebar">here</Link>).
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <TopbarComponent topbarContent={menu} logout id="demo-topbar-sidebar" sidebar />
+        </ComponentPreview>
     </>
 );
 
@@ -121,6 +130,7 @@ const JavascriptMethods = () => (
 
 class Topbar extends Component {
     componentDidMount () {
+        topbar.init("demo-topbar-sidebar");
         topbar.init("demo-topbar");
         topbar.init("demo-topbar-1");
         topbar.init("demo-topbar-png");
@@ -135,6 +145,7 @@ class Topbar extends Component {
                 <Overview />
                 <TopbarWide />
                 <TopbarSticky />
+                <TopbarWithSidebar />
                 <TopbarPNG />
                 <JavascriptMethods />
             </DocContainer>
@@ -145,4 +156,4 @@ class Topbar extends Component {
 export default Topbar;
 
 /* For testing */
-export { Overview, TopbarWide, TopbarSticky, TopbarPNG, JavascriptMethods };
+export { Overview, TopbarWide, TopbarSticky, TopbarWithSidebar, TopbarPNG, JavascriptMethods };

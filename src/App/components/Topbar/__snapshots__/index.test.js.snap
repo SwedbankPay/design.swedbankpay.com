@@ -321,6 +321,556 @@ exports[`Component: Topbar -  props topbarContent menu links prevents default wh
 </Topbar>
 `;
 
+exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-link-container when sidebar prop is true 1`] = `
+<Topbar
+  sidebar={true}
+  topbarContent={
+    Object {
+      "items": Array [
+        Object {
+          "icon": "home",
+          "name": "Home",
+        },
+        Object {
+          "icon": "shopping_cart",
+          "name": "Purchase history",
+        },
+        Object {
+          "icon": "settings",
+          "name": "Settings",
+        },
+      ],
+    }
+  }
+>
+  <header
+    className="topbar"
+  >
+    
+
+    <TopbarBtn>
+      <button
+        className="topbar-btn"
+        type="button"
+      >
+        
+		
+        <i
+          className="material-icons topbar-btn-icon"
+        >
+          menu
+        </i>
+        
+		
+      </button>
+      <button
+        className="topbar-close"
+        type="button"
+      >
+        
+
+        <i
+          className="material-icons topbar-btn-icon"
+        >
+          close
+        </i>
+        
+
+        
+		
+      </button>
+    </TopbarBtn>
+    
+
+    <TopbarLogo>
+      <a
+        className="topbar-logo"
+        href="/"
+        onClick={[Function]}
+      >
+        
+
+        <img
+          alt="TESTBRAND-logo"
+          src="/TEST/img/TESTBRAND-logo.svg"
+        />
+        
+
+      </a>
+      
+
+    </TopbarLogo>
+    <TopbarMenu
+      logout={false}
+      menu={
+        Object {
+          "items": Array [
+            Object {
+              "icon": "home",
+              "name": "Home",
+            },
+            Object {
+              "icon": "shopping_cart",
+              "name": "Purchase history",
+            },
+            Object {
+              "icon": "settings",
+              "name": "Settings",
+            },
+          ],
+        }
+      }
+      sidebar={true}
+    >
+      <nav
+        className="topbar-nav"
+      >
+        <div
+          className="topbar-link-container"
+        >
+          
+
+          
+
+          <a
+            className="active"
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              className="material-icons"
+            >
+              home
+            </i>
+            
+
+            <span>
+              Home
+            </span>
+            
+
+          </a>
+          <Sidebar
+            id="topbar-sidebar"
+            sidebarNavList={
+              Array [
+                Object {
+                  "lastParent": true,
+                  "subList": Array [
+                    Object {
+                      "title": "Introduction 1",
+                    },
+                    Object {
+                      "title": "Introduction 2",
+                    },
+                    Object {
+                      "title": "Introduction 3",
+                    },
+                  ],
+                  "title": "Introduction",
+                },
+                Object {
+                  "lastParent": true,
+                  "subList": Array [
+                    Object {
+                      "title": "Summary chapter 1",
+                    },
+                    Object {
+                      "title": "Summary chapter 2",
+                    },
+                    Object {
+                      "title": "Summary chapter 3",
+                    },
+                  ],
+                  "title": "Summary",
+                },
+                Object {
+                  "lastParent": false,
+                  "subList": Array [
+                    Object {
+                      "title": "Introduction",
+                    },
+                    Object {
+                      "lastParent": true,
+                      "subList": Array [
+                        Object {
+                          "title": "Operations",
+                        },
+                        Object {
+                          "title": "Lorem ipsum",
+                        },
+                        Object {
+                          "title": "Dolor sit amet consectetur",
+                        },
+                        Object {
+                          "title": "Adipiscing elit",
+                        },
+                      ],
+                      "title": "Operations",
+                    },
+                    Object {
+                      "lastParent": true,
+                      "subList": Array [
+                        Object {
+                          "title": "Event 1",
+                        },
+                        Object {
+                          "title": "Event 2",
+                        },
+                        Object {
+                          "title": "Event 3",
+                        },
+                      ],
+                      "title": "Events",
+                    },
+                    Object {
+                      "title": "Conclusion",
+                    },
+                  ],
+                  "title": "Other features",
+                },
+              ]
+            }
+          >
+            <div
+              className="sidebar"
+              id="topbar-sidebar"
+            >
+              <nav
+                className="sidebar-nav"
+              >
+                <ul
+                  className="main-nav-ul"
+                >
+                  <li
+                    className="nav-group"
+                    key="0"
+                  >
+                    <div
+                      className="nav-group-heading"
+                    >
+                      <i
+                        className="material-icons"
+                      >
+                        arrow_right
+                      </i>
+                      <span>
+                        Introduction
+                      </span>
+                    </div>
+                    <ul
+                      className="nav-ul"
+                    >
+                      <li
+                        className="nav-leaf"
+                        key="0"
+                      >
+                        <a
+                          href="#"
+                          onClick={[Function]}
+                        >
+                          Introduction 1
+                        </a>
+                      </li>
+                      <li
+                        className="nav-leaf"
+                        key="1"
+                      >
+                        <a
+                          href="#"
+                          onClick={[Function]}
+                        >
+                          Introduction 2
+                        </a>
+                      </li>
+                      <li
+                        className="nav-leaf"
+                        key="2"
+                      >
+                        <a
+                          href="#"
+                          onClick={[Function]}
+                        >
+                          Introduction 3
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li
+                    className="nav-group"
+                    key="1"
+                  >
+                    <div
+                      className="nav-group-heading"
+                    >
+                      <i
+                        className="material-icons"
+                      >
+                        arrow_right
+                      </i>
+                      <span>
+                        Summary
+                      </span>
+                    </div>
+                    <ul
+                      className="nav-ul"
+                    >
+                      <li
+                        className="nav-leaf"
+                        key="0"
+                      >
+                        <a
+                          href="#"
+                          onClick={[Function]}
+                        >
+                          Summary chapter 1
+                        </a>
+                      </li>
+                      <li
+                        className="nav-leaf"
+                        key="1"
+                      >
+                        <a
+                          href="#"
+                          onClick={[Function]}
+                        >
+                          Summary chapter 2
+                        </a>
+                      </li>
+                      <li
+                        className="nav-leaf"
+                        key="2"
+                      >
+                        <a
+                          href="#"
+                          onClick={[Function]}
+                        >
+                          Summary chapter 3
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li
+                    className="nav-group"
+                    key="2"
+                  >
+                    <div
+                      className="nav-group-heading"
+                    >
+                      <i
+                        className="material-icons"
+                      >
+                        arrow_right
+                      </i>
+                      <span>
+                        Other features
+                      </span>
+                    </div>
+                    <ul
+                      className="nav-ul"
+                    >
+                      <li
+                        className="nav-leaf nav-subgroup-leaf"
+                        key="0"
+                      >
+                        <a
+                          href="#"
+                          onClick={[Function]}
+                        >
+                          Introduction
+                        </a>
+                      </li>
+                      <li
+                        className="nav-subgroup"
+                        key="1"
+                      >
+                        <div
+                          className="nav-subgroup-heading"
+                        >
+                          <i
+                            className="material-icons"
+                          >
+                            arrow_right
+                          </i>
+                          <span>
+                            Operations
+                          </span>
+                        </div>
+                        <ul
+                          className="nav-ul"
+                        >
+                          <li
+                            className="nav-leaf"
+                            key="0"
+                          >
+                            <a
+                              href="#"
+                              onClick={[Function]}
+                            >
+                              Operations
+                            </a>
+                          </li>
+                          <li
+                            className="nav-leaf"
+                            key="1"
+                          >
+                            <a
+                              href="#"
+                              onClick={[Function]}
+                            >
+                              Lorem ipsum
+                            </a>
+                          </li>
+                          <li
+                            className="nav-leaf"
+                            key="2"
+                          >
+                            <a
+                              href="#"
+                              onClick={[Function]}
+                            >
+                              Dolor sit amet consectetur
+                            </a>
+                          </li>
+                          <li
+                            className="nav-leaf"
+                            key="3"
+                          >
+                            <a
+                              href="#"
+                              onClick={[Function]}
+                            >
+                              Adipiscing elit
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li
+                        className="nav-subgroup"
+                        key="2"
+                      >
+                        <div
+                          className="nav-subgroup-heading"
+                        >
+                          <i
+                            className="material-icons"
+                          >
+                            arrow_right
+                          </i>
+                          <span>
+                            Events
+                          </span>
+                        </div>
+                        <ul
+                          className="nav-ul"
+                        >
+                          <li
+                            className="nav-leaf"
+                            key="0"
+                          >
+                            <a
+                              href="#"
+                              onClick={[Function]}
+                            >
+                              Event 1
+                            </a>
+                          </li>
+                          <li
+                            className="nav-leaf"
+                            key="1"
+                          >
+                            <a
+                              href="#"
+                              onClick={[Function]}
+                            >
+                              Event 2
+                            </a>
+                          </li>
+                          <li
+                            className="nav-leaf"
+                            key="2"
+                          >
+                            <a
+                              href="#"
+                              onClick={[Function]}
+                            >
+                              Event 3
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li
+                        className="nav-leaf nav-subgroup-leaf"
+                        key="3"
+                      >
+                        <a
+                          href="#"
+                          onClick={[Function]}
+                        >
+                          Conclusion
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </Sidebar>
+          
+
+          <a
+            className={null}
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              className="material-icons"
+            >
+              shopping_cart
+            </i>
+            
+
+            <span>
+              Purchase history
+            </span>
+            
+
+          </a>
+          
+
+          <a
+            className={null}
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              className="material-icons"
+            >
+              settings
+            </i>
+            
+
+            <span>
+              Settings
+            </span>
+            
+
+          </a>
+          
+
+        </div>
+      </nav>
+    </TopbarMenu>
+  </header>
+</Topbar>
+`;
+
 exports[`Component: Topbar -  props topbarContent renders a topbar menu without menu icons 1`] = `
 <Topbar
   topbarContent={

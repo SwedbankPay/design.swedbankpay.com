@@ -11,7 +11,7 @@ exports[`Documentation: index renders 1`] = `
       className="col-xxl-2 col-md-3 d-none d-md-block"
     >
       <withRouter(SelectPanel)
-        id="doc-siderbar"
+        id="doc-sidebar"
         routes={
           Array [
             Object {

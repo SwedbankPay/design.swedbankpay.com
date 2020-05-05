@@ -65,6 +65,9 @@ exports[`Components: Topbar Overview renders 1`] = `
     />
      attribute to get the menu to appear when the menu-button is clicked.
   </p>
+  <p>
+    Note that scrolling is locked when the menu is displayed.
+  </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
@@ -376,7 +379,6 @@ exports[`Components: Topbar TopbarWide renders 1`] = `
     <Topbar
       id="demo-topbar-1"
       logout={true}
-      sidebar={true}
       topbarContent={
         Object {
           "btn": Object {
@@ -405,6 +407,58 @@ exports[`Components: Topbar TopbarWide renders 1`] = `
 </Fragment>
 `;
 
+exports[`Components: Topbar TopbarWithSidebar renders 1`] = `
+<Fragment>
+  <h2
+    id="topbar-with-sidebar"
+  >
+    Topbar with sidebar content
+  </h2>
+  <p>
+    It is recommended to have the sidebar content in the topbar menu on smaller devices, such as phones and tablets (see more on sidebar 
+    <Link
+      to="/docs/sidebar"
+    >
+      here
+    </Link>
+    ).
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Topbar
+      id="demo-topbar-sidebar"
+      logout={true}
+      sidebar={true}
+      topbarContent={
+        Object {
+          "btn": Object {
+            "icon": "menu",
+            "name": "Menu",
+          },
+          "items": Array [
+            Object {
+              "icon": "home",
+              "name": "Home",
+            },
+            Object {
+              "icon": "shopping_cart",
+              "name": "Purchase history",
+            },
+            Object {
+              "icon": "settings",
+              "name": "Settings",
+            },
+          ],
+        }
+      }
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Components: Topbar renders 1`] = `
 <DocContainer
   docToc={true}
@@ -417,6 +471,7 @@ exports[`Components: Topbar renders 1`] = `
   <Overview />
   <TopbarWide />
   <TopbarSticky />
+  <TopbarWithSidebar />
   <TopbarPNG />
   <JavascriptMethods />
 </DocContainer>
