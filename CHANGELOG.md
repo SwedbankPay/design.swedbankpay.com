@@ -14,6 +14,7 @@
   - Updated button sizes
 - Links
   - Updated Action Link for new tab color
+  - Made icons top-align instead of center align verically
 - Design Guide
   - Links
     - Updated documentation
