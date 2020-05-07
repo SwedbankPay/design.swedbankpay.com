@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocContainer, DgScript, JavascriptDocs } from "@docutils";
+import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import InputGroup from "@components/InputGroup";
 import Button from "@components/Button";
 import { Checkbox, FormControlText, Radio, Rangeslider, Togglebox } from "@components/FormComponents";
