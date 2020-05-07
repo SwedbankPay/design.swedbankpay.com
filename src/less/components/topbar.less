@@ -251,7 +251,7 @@
         }
 
         .topbar-link-container {
-            width: 100%;
+            width: @topbar-link-container-width;
             position: absolute;
             top: 0;
             bottom: 0;
@@ -262,10 +262,6 @@
             padding: 0;
             align-items: center;
             transform: translateX(-100%);
-
-            @media screen and (min-width: @screen-sm-min) {
-                width: @topbar-link-container-width;
-            }
 
             > a {
                 font-family: @brand-headline;
