@@ -62,7 +62,7 @@ const InputGroup = ({
     );
 
     return (
-        <div className="form-group">{"\n"}
+        <div className={`form-group${disabled ? " disabled" : ""}`}>{"\n"}
             {label ? <label htmlFor={id}>{label}</label> : null}{label ? "\n" : null}
             {prefixValue || postfixValue || feedbackIcon ?
                 <div className={inputGrpClasses}>{"\n"}
