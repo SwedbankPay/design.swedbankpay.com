@@ -26,6 +26,8 @@
   - Reversed icon of topbar-link-right
 - Forms
   - Moved height property of input to be under form-control
+  - Changed styling of disabled form components
+  - Changed styling of checkboxes and radio buttons
 - Loaders
   - Added centered loader
 - Steps
