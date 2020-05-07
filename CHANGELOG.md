@@ -21,6 +21,10 @@
     - Added .btn-link recommendation
   - Forms
     - Changed to use correct code-tags component
+  - Loaders
+    - Removed invalid HTML in docs
+  - Sidebar
+    - Removed invalid HTML in docs
   - Removed Template from home page
 - Topbar
   - Reversed icon of topbar-link-right
