@@ -37,3 +37,6 @@
   - Made it possible to have leaf and subgroups together
 - Input Group
   - Removed color property from input-group>from-control
+- Sheet
+  - Fixed issues with sheet producing unnecessary EventListeners
+  - Fixed issues with having multiple sheets/creating duplcate objects of same instance
