@@ -8,7 +8,7 @@ const FullWidth = () => (
         <h2 id="full-width">Full width page</h2>
         <p>
             To use a full width layout use a combination of grid and the <CodeTags type="secondary" code=".main-content" /> class. <CodeTags type="secondary" code=".main-content" /> has a white background and some padding.
-            For a full width layout use <CodeTags type="secondary" code=".border-left" /> to clearly seperate the sidebar and the main content. See <Link to="/docs/utilities/borders">borders</Link> docs for more information.
+            For a full width layout use <CodeTags type="secondary" code=".border-left" /> to clearly separate the sidebar and the main content. See <Link to="/docs/utilities/borders">borders</Link> docs for more information.
         </p>
         <ComponentPreview language="html" codeFigure>
             <div className="container-fluid">
