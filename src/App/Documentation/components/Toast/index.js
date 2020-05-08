@@ -168,7 +168,7 @@ class Toast extends Component {
         return (
             <DocContainer>
                 <p className="lead">
-                    Toasts can be used as a way to give feedback to a user. Use it to display short messages that something has happened that will not be immediatley apparent on the website.
+                    Toasts can be used as a way to give feedback to a user. Use it to display short messages that something has happened that will not be immediately apparent on the website.
                     This can be everything from a server query to saving some user settings.
                 </p>
                 <Overview />
