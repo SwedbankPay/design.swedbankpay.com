@@ -12,15 +12,29 @@
 
         .topbar-info {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            padding-left: 2rem;
             align-items: flex-start;
-            margin-left: 1.5rem;
-            margin-top: 1rem;
+
+            @media screen and (max-width: @screen-md-max) {
+                margin-top: 1rem;
+            }
+
+            .topbar-info-version {
+                align-self: flex-end;
+            }
+
+            .topbar-info-contact {
+                margin-left: 0.5rem;
+
+                a {
+                    margin-left: 0.25rem;
+                }
+            }
 
             a {
-                margin-left: 5px;
-                color: @text-muted;
-                fill: @text-muted;
+                color: @text-gray;
+                fill: @text-gray;
                 border: none;
 
                 svg {
@@ -32,8 +46,8 @@
                 }
 
                 &:hover {
-                    color: darken(@text-muted, 20%);
-                    fill: darken(@text-muted, 20%);
+                    color: darken(@text-gray, 20%);
+                    fill: darken(@text-gray, 20%);
                 }
             }
         }
