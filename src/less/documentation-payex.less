@@ -17,8 +17,19 @@
             padding-left: 1.5rem;
             margin-top: 1rem;
 
+            @media screen and (max-width: @screen-md-max) {
+                margin: 1rem 0;
+            }
+
             .topbar-info-version {
                 align-self: flex-end;
+                margin-right: 0.75rem;
+            }
+
+            .topbar-info-contact {
+                a {
+                    margin-right: 0.25rem;
+                }
             }
 
             a {
