@@ -1,6 +1,33 @@
-.form-group,
+.form-group {
+    &.has-error {
+        .input-group {
+            .form-control-validation(@brand-error, "error");
+
+            &:after {
+                content: "warning";
+                .material-icons-styling();
+
+                position: absolute;
+                top: calc(@input-form-control-height / 2 - 1.25rem / 2);
+                right: 0.5rem;
+                color: @brand-error;
+            }
+        }
+    }
+}
+
 .input-group {
     &.has-error {
         .form-control-validation(@brand-error, "error");
+
+        &:after {
+            content: "warning";
+            .material-icons-styling();
+
+            position: absolute;
+            top: calc(@input-form-control-height / 2 - 1.25rem / 2);
+            right: 0.5rem;
+            color: @brand-error;
+        }
     }
 }
