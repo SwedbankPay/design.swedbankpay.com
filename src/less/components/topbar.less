@@ -125,6 +125,7 @@
         z-index: @zindex-sheet-backdrop;
         background: transparent;
         display: none;
+        border-top: solid 1px @brand-bg-gray;
 
         .sidebar {
             display: none;
@@ -135,6 +136,67 @@
             .sidebar-nav {
                 max-height: none;
                 overflow-y: visible;
+
+                .main-nav-ul {
+                    .nav-group {
+                        &.active {
+                            .nav-group-heading {
+                                color: @brand-secondary;
+                            }
+                        }
+
+                        .nav-group-heading {
+                            &:hover,
+                            &:focus {
+                                color: @brand-secondary;
+
+                                span {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+
+                        .nav-ul {
+                            .nav-subgroup {
+                                &.active {
+                                    > .nav-group-heading {
+                                        color: @brand-secondary;
+                                    }
+                                }
+
+                                .nav-subgroup-heading {
+                                    &:hover,
+                                    &:focus {
+                                        color: @brand-secondary;
+                                    }
+                                }
+                            }
+
+                            .nav-leaf {
+                                &.active {
+                                    &:before {
+                                        background-color: @brand-secondary;
+                                    }
+
+                                    a {
+                                        color: @brand-secondary;
+                                    }
+                                }
+
+                                &:active,
+                                &:hover {
+                                    &:before {
+                                        background-color: @brand-secondary;
+                                    }
+
+                                    a {
+                                        color: @brand-secondary;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
 
@@ -255,7 +317,7 @@
             position: absolute;
             top: 0;
             bottom: 0;
-            background-color: @brand-bg-1;
+            background-color: @white;
             overflow-x: hidden;
             overflow-y: auto;
             z-index: @zindex-topbar-nav;
@@ -283,9 +345,10 @@
                 &:hover {
                     > span {
                         &:before {
-                            width: 100%;
-                            transition: width 0.4s;
+                            display: none;
                         }
+
+                        text-decoration: underline;
                     }
                 }
 
@@ -293,26 +356,7 @@
                     color: @black;
 
                     > span {
-                        &:before {
-                            width: 100%;
-                        }
-                    }
-                }
-
-                > span {
-                    position: relative;
-
-                    &:before {
-                        content: "";
-                        position: absolute;
-                        background-color: @brand-primary;
-                        height: 4px;
-                        bottom: -4px;
-                        left: 0;
-                        right: 0;
-                        margin-left: auto;
-                        margin-right: auto;
-                        width: 0;
+                        text-decoration: underline;
                     }
                 }
             }
@@ -387,9 +431,12 @@
                 &:hover {
                     > span {
                         &:before {
+                            display: block;
                             width: 100%;
                             transition: width 0.4s;
                         }
+
+                        text-decoration: none;
                     }
                 }
 
@@ -398,6 +445,8 @@
                         &:before {
                             width: 100%;
                         }
+
+                        text-decoration: none;
                     }
                 }
 

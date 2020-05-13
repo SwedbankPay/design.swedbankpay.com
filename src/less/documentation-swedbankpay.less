@@ -12,12 +12,13 @@
 
         .topbar-info {
             display: flex;
+            justify-self: flex-end;
             flex-direction: row;
             padding-left: 2rem;
             align-items: flex-start;
             flex-wrap: wrap;
 
-            @media screen and (max-width: @screen-md-max) {
+            @media screen and (max-width: @screen-md-min) {
                 margin: 1rem 0;
             }
 
@@ -33,8 +34,8 @@
             }
 
             a {
-                color: @text-gray;
-                fill: @text-gray;
+                color: @brand-secondary;
+                fill: @brand-secondary;
                 border: none;
 
                 svg {
@@ -46,8 +47,8 @@
                 }
 
                 &:hover {
-                    color: darken(@text-gray, 20%);
-                    fill: darken(@text-gray, 20%);
+                    color: darken(@text-gray, 30%);
+                    fill: darken(@text-gray, 30%);
                 }
             }
         }
