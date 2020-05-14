@@ -4,7 +4,7 @@ import { RenderPage } from "../utils";
 import routes from "../routes/components";
 
 const ComponentsDocumentation = () => (
-    <RenderPage routes={routes} appFolder="ComponentsDocumentation" path="/components" initPath="/components/start" />
+    <RenderPage routes={routes} appFolder="ComponentsDocumentation" path="/components" initPath="/components/introduction" />
 );
 
 export default ComponentsDocumentation;

@@ -5,11 +5,11 @@ module.exports = [
     {
         title: "Components",
         path: "/components",
-        redirect: "/components/start/introduction",
+        redirect: "/components/introduction",
         routes: [
             {
                 title: "Introduction",
-                path: "/components/start/introduction",
+                path: "/components/introduction",
                 componentPath: "start/Introduction"
             },
             {
