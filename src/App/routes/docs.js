@@ -74,173 +74,173 @@ module.exports = [
     /**
      * Components
      */
-    {
-        title: "Components",
-        path: "/docs/components",
-        redirect: "/docs/components/accordion",
-        routes: [
-            {
-                title: "Accordion",
-                path: "/docs/components/accordion",
-                componentPath: "components/Accordion"
-            },
-            {
-                title: "Action List",
-                path: "/docs/components/action-list",
-                componentPath: "components/ActionList"
-            },
-            {
-                title: "Alerts",
-                path: "/docs/components/alerts",
-                componentPath: "components/Alerts"
-            },
-            {
-                title: "Badge",
-                path: "/docs/components/badge",
-                componentPath: "components/Badge"
-            },
-            {
-                title: "Breadcrumb",
-                path: "/docs/components/breadcrumb",
-                componentPath: "components/Breadcrumb"
-            },
-            {
-                title: "Buttons",
-                path: "/docs/components/buttons",
-                componentPath: "components/Buttons"
-            },
-            {
-                title: "Card",
-                path: "/docs/components/card",
-                componentPath: "components/Card"
-            },
-            {
-                title: "Charts",
-                path: "/docs/components/charts",
-                componentPath: "components/Charts"
-            },
-            {
-                title: "Code Tags",
-                path: "/docs/components/code-tags",
-                componentPath: "components/CodeTags"
-            },
-            {
-                title: "Datepickers",
-                path: "/docs/components/datepickers",
-                componentPath: "components/Datepickers"
-            },
-            {
-                title: "Dialog",
-                path: "/docs/components/dialog",
-                componentPath: "components/Dialog"
-            },
-            {
-                title: "Expandable",
-                path: "/docs/components/expandable",
-                componentPath: "components/Expandable"
-            },
-            {
-                title: "Forms",
-                path: "/docs/components/forms",
-                componentPath: "components/Forms"
-            },
-            {
-                title: "Footer",
-                path: "/docs/components/footer",
-                componentPath: "components/Footer"
-            },
-            {
-                title: "Input Group",
-                path: "/docs/components/input-group",
-                componentPath: "components/InputGroup"
-            },
-            {
-                title: "Links",
-                path: "/docs/components/links",
-                componentPath: "components/Links"
-            },
-            {
-                title: "Lists",
-                path: "/docs/components/lists",
-                componentPath: "components/Lists"
-            },
-            {
-                title: "Loaders",
-                path: "/docs/components/loaders",
-                componentPath: "components/Loaders"
-            },
-            {
-                title: "Media Object",
-                path: "/docs/components/media-object",
-                componentPath: "components/MediaObject"
-            },
-            {
-                title: "Nav",
-                path: "/docs/components/nav",
-                componentPath: "components/Nav"
-            },
-            {
-                title: "Pagination",
-                path: "/docs/components/pagination",
-                componentPath: "components/Pagination"
-            },
-            {
-                title: "Panel",
-                path: "/docs/components/panel",
-                componentPath: "components/Panel"
-            },
-            {
-                title: "Progress Steps",
-                path: "/docs/components/progress-steps",
-                componentPath: "components/ProgressSteps"
-            },
-            {
-                title: "Sheet",
-                path: "/docs/components/sheet",
-                componentPath: "components/Sheet"
-            },
-            {
-                title: "Sidebar",
-                path: "/docs/components/sidebar",
-                componentPath: "components/Sidebar"
-            },
-            {
-                title: "Slab",
-                path: "/docs/components/slab",
-                componentPath: "components/Slab"
-            },
-            {
-                title: "Status",
-                path: "/docs/components/status",
-                componentPath: "components/Status"
-            },
-            {
-                title: "Tables",
-                path: "/docs/components/tables",
-                componentPath: "components/Tables"
-            },
-            {
-                title: "Tabs",
-                path: "/docs/components/tabs",
-                componentPath: "components/Tabs"
-            },
-            {
-                title: "Toast",
-                path: "/docs/components/toast",
-                componentPath: "components/Toast"
-            },
-            {
-                title: "Tooltips",
-                path: "/docs/components/tooltips",
-                componentPath: "components/Tooltips"
-            },
-            {
-                title: "Topbar",
-                path: "/docs/components/topbar",
-                componentPath: "components/Topbar"
-            }
-        ]
-    },
+    // {
+    //     title: "Components",
+    //     path: "/docs/components",
+    //     redirect: "/docs/components/accordion",
+    //     routes: [
+    //         {
+    //             title: "Accordion",
+    //             path: "/docs/components/accordion",
+    //             componentPath: "components/Accordion"
+    //         },
+    //         {
+    //             title: "Action List",
+    //             path: "/docs/components/action-list",
+    //             componentPath: "components/ActionList"
+    //         },
+    //         {
+    //             title: "Alerts",
+    //             path: "/docs/components/alerts",
+    //             componentPath: "components/Alerts"
+    //         },
+    //         {
+    //             title: "Badge",
+    //             path: "/docs/components/badge",
+    //             componentPath: "components/Badge"
+    //         },
+    //         {
+    //             title: "Breadcrumb",
+    //             path: "/docs/components/breadcrumb",
+    //             componentPath: "components/Breadcrumb"
+    //         },
+    //         {
+    //             title: "Buttons",
+    //             path: "/docs/components/buttons",
+    //             componentPath: "components/Buttons"
+    //         },
+    //         {
+    //             title: "Card",
+    //             path: "/docs/components/card",
+    //             componentPath: "components/Card"
+    //         },
+    //         {
+    //             title: "Charts",
+    //             path: "/docs/components/charts",
+    //             componentPath: "components/Charts"
+    //         },
+    //         {
+    //             title: "Code Tags",
+    //             path: "/docs/components/code-tags",
+    //             componentPath: "components/CodeTags"
+    //         },
+    //         {
+    //             title: "Datepickers",
+    //             path: "/docs/components/datepickers",
+    //             componentPath: "components/Datepickers"
+    //         },
+    //         {
+    //             title: "Dialog",
+    //             path: "/docs/components/dialog",
+    //             componentPath: "components/Dialog"
+    //         },
+    //         {
+    //             title: "Expandable",
+    //             path: "/docs/components/expandable",
+    //             componentPath: "components/Expandable"
+    //         },
+    //         {
+    //             title: "Forms",
+    //             path: "/docs/components/forms",
+    //             componentPath: "components/Forms"
+    //         },
+    //         {
+    //             title: "Footer",
+    //             path: "/docs/components/footer",
+    //             componentPath: "components/Footer"
+    //         },
+    //         {
+    //             title: "Input Group",
+    //             path: "/docs/components/input-group",
+    //             componentPath: "components/InputGroup"
+    //         },
+    //         {
+    //             title: "Links",
+    //             path: "/docs/components/links",
+    //             componentPath: "components/Links"
+    //         },
+    //         {
+    //             title: "Lists",
+    //             path: "/docs/components/lists",
+    //             componentPath: "components/Lists"
+    //         },
+    //         {
+    //             title: "Loaders",
+    //             path: "/docs/components/loaders",
+    //             componentPath: "components/Loaders"
+    //         },
+    //         {
+    //             title: "Media Object",
+    //             path: "/docs/components/media-object",
+    //             componentPath: "components/MediaObject"
+    //         },
+    //         {
+    //             title: "Nav",
+    //             path: "/docs/components/nav",
+    //             componentPath: "components/Nav"
+    //         },
+    //         {
+    //             title: "Pagination",
+    //             path: "/docs/components/pagination",
+    //             componentPath: "components/Pagination"
+    //         },
+    //         {
+    //             title: "Panel",
+    //             path: "/docs/components/panel",
+    //             componentPath: "components/Panel"
+    //         },
+    //         {
+    //             title: "Progress Steps",
+    //             path: "/docs/components/progress-steps",
+    //             componentPath: "components/ProgressSteps"
+    //         },
+    //         {
+    //             title: "Sheet",
+    //             path: "/docs/components/sheet",
+    //             componentPath: "components/Sheet"
+    //         },
+    //         {
+    //             title: "Sidebar",
+    //             path: "/docs/components/sidebar",
+    //             componentPath: "components/Sidebar"
+    //         },
+    //         {
+    //             title: "Slab",
+    //             path: "/docs/components/slab",
+    //             componentPath: "components/Slab"
+    //         },
+    //         {
+    //             title: "Status",
+    //             path: "/docs/components/status",
+    //             componentPath: "components/Status"
+    //         },
+    //         {
+    //             title: "Tables",
+    //             path: "/docs/components/tables",
+    //             componentPath: "components/Tables"
+    //         },
+    //         {
+    //             title: "Tabs",
+    //             path: "/docs/components/tabs",
+    //             componentPath: "components/Tabs"
+    //         },
+    //         {
+    //             title: "Toast",
+    //             path: "/docs/components/toast",
+    //             componentPath: "components/Toast"
+    //         },
+    //         {
+    //             title: "Tooltips",
+    //             path: "/docs/components/tooltips",
+    //             componentPath: "components/Tooltips"
+    //         },
+    //         {
+    //             title: "Topbar",
+    //             path: "/docs/components/topbar",
+    //             componentPath: "components/Topbar"
+    //         }
+    //     ]
+    // },
 
     /**
      * Utilities

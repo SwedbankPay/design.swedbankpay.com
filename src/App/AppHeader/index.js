@@ -6,6 +6,7 @@ import { SelectPanel } from "../utils";
 
 import docRoutes from "../routes/docs";
 import resRoutes from "../routes/resources";
+import componentsRoutes from "../routes/components";
 
 import pkg from "~/package.json";
 
@@ -28,6 +29,8 @@ const AppHeader = () => (
                 <NavLink exact to="/" activeClassName="active"><span>Home</span></NavLink>
                 <NavLink to="/docs" activeClassName="active"><span>Documentation</span></NavLink>
                 {location.pathname.includes("/docs") && <SelectPanel id="doc-topbar-sidebar" topbarId="dg-topbar" routes={docRoutes} />}
+                <NavLink to="/components" activeClassName="active"><span>Components</span></NavLink>
+                {location.pathname.includes("/components") && <SelectPanel id="doc-topbar-sidebar" topbarId="dg-topbar" routes={componentsRoutes} />}
                 {/* <SelectPanel id="docs-topbar-sidebar" topbarId="dg-topbar" routes={docRoutes} /> */}
                 <NavLink to="/res" activeClassName="active"><span>Resources</span></NavLink>
                 {location.pathname.includes("/res") && <SelectPanel id="doc-topbar-sidebar" topbarId="dg-topbar" routes={resRoutes} />}

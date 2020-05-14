@@ -1,0 +1,267 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Documentation: Alerts Alert With Icon renders 1`] = `
+<Fragment>
+  <h2
+    id="icons"
+  >
+    Icons
+  </h2>
+  <p>
+    To use an alert with an icon... Read more about icon usage here 
+    <Link
+      to="/docs/core/icons"
+    >
+      here
+    </Link>
+    .
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Alert
+      icon="check_circle"
+      text="This is a success alert with an icon!"
+      type="success"
+    />
+    
+
+
+    <Alert
+      icon="info"
+      text="This is an informative alert with an icon!"
+      type="informative"
+    />
+    
+
+
+    <Alert
+      icon="warning"
+      text="This is a warning alert with an icon!"
+      type="warning"
+    />
+    
+
+
+    <Alert
+      icon="error"
+      text="This is a danger alert with an icon!"
+      type="danger"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Alerts Basic Usage renders 1`] = `
+<Fragment>
+  <h2
+    id="basic-usage"
+  >
+    Basic usage
+  </h2>
+  <p>
+    The default behavior of the alert present itself in a box with a border.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Alert
+      text="This is a success alert!"
+      type="success"
+    />
+    
+
+
+    <Alert
+      text="This is an informative alert!"
+      type="informative"
+    />
+    
+
+
+    <Alert
+      text="This is a warning alert!"
+      type="warning"
+    />
+    
+
+
+    <Alert
+      text="This is a danger alert!"
+      type="danger"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Alerts Closing The Alert renders 1`] = `
+<Fragment>
+  <h2
+    id="closing-the-alert"
+  >
+    Closing the alert
+  </h2>
+  <p>
+    To add a close-button, add the following code inside your alert-element:
+    <br />
+    <CodeTags
+      code="<a href=\\"#\\" data-alert-close><i class=\\"material-icons\\">close</i></a>"
+      type="primary"
+    />
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Alert
+      close={true}
+      icon="check_circle"
+      text="This is a success alert with an icon!"
+      type="success"
+    />
+    
+
+
+    <Alert
+      close={true}
+      icon="info"
+      text="This is an informative alert with an icon!"
+      type="informative"
+    />
+    
+
+
+    <Alert
+      close={true}
+      icon="warning"
+      text="This is a warning alert with an icon!"
+      type="warning"
+    />
+    
+
+
+    <Alert
+      close={true}
+      icon="error"
+      text="This is a danger alert with an icon!"
+      type="danger"
+    />
+  </ComponentPreview>
+  <h3>
+    External close button
+  </h3>
+  <p>
+    To add an external close-button for your alert add the attribute 
+    <CodeTags
+      code="data-alert-close=\\"{id}\\""
+      type="secondary"
+    />
+     to the button element.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Alert
+      icon="check_circle"
+      id="alert-success-1"
+      text="Press the button below to close me"
+      type="success"
+    />
+    
+
+
+    <button
+      className="btn btn-executive"
+      data-alert-close="alert-success-1"
+      type="button"
+    >
+      Close alert
+    </button>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Alerts Extended Usage renders 1`] = `
+<Fragment>
+  <h2
+    id="extended-usage"
+  >
+    Extended usage
+  </h2>
+  <p>
+    By adding the 
+    <CodeTags
+      code=".alert-complex"
+      type="secondary"
+    />
+     class, alerts can contain additional HTML elements like headings, paragraphs and dividers.
+  </p>
+  <p>
+    Make sure to wrap the content in a container with the class 
+    <CodeTags
+      code=".alert-body"
+      type="secondary"
+    />
+    .
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ComplexAlert
+      close={true}
+      headerText="Success!"
+      icon="check_circle"
+      type="success"
+    >
+      <p>
+        PDF was successfully uploaded.
+        <br />
+        Some additional information.
+      </p>
+      <hr />
+      <p>
+        By the way, great job!
+      </p>
+    </ComplexAlert>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Alerts JavascriptMethods renders 1`] = `
+<Fragment>
+  <h2
+    id="javascript-methods"
+  >
+    JavaScript methods
+  </h2>
+  <JavascriptDocs
+    componentName="alert"
+  />
+</Fragment>
+`;
+
+exports[`Documentation: Alerts renders 1`] = `
+<DocContainer
+  docToc={true}
+>
+  <p
+    className="lead"
+  >
+    Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
+  </p>
+  <BasicUsage />
+  <AlertWithIcon />
+  <ClosingTheAlert />
+  <ExtendedUsage />
+  <JavascriptMethods />
+</DocContainer>
+`;

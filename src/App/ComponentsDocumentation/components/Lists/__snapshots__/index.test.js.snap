@@ -1,0 +1,896 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Documentation: Lists BasicList renders 1`] = `
+<Fragment>
+  <h2
+    id="basic-list"
+  >
+    Basic list
+  </h2>
+  <p>
+    Add 
+    <CodeTags
+      code=".list"
+      type="secondary"
+    />
+     to a list to display the basic list. Our lists do not use bullet points.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ul
+      className="list"
+    >
+      <li>
+        Bread
+      </li>
+      <li>
+        Coffee beans
+      </li>
+      <li>
+        Milk
+      </li>
+      <li>
+        Butter
+      </li>
+    </ul>
+  </ComponentPreview>
+  <h3>
+    Nested list
+  </h3>
+  <p>
+    Use nesting with lists to signify that some items are children of another item.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ul
+      className="list"
+    >
+      <li>
+        Coffee
+      </li>
+      <li>
+        Tea 
+        
+
+        <ul>
+          <li>
+            Black tea
+          </li>
+          <li>
+            Green tea
+          </li>
+          <li>
+            Ice tea
+          </li>
+        </ul>
+      </li>
+      <li>
+        Milk
+      </li>
+    </ul>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Lists BulletList renders 1`] = `
+<Fragment>
+  <h2
+    id="bullet-list"
+  >
+    Bullet list
+  </h2>
+  <p>
+    Add 
+    <CodeTags
+      code=".list-bullet"
+      type="secondary"
+    />
+     on a list to make it a bullet list.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ul
+      className="list list-bullet"
+    >
+      <li>
+        Coffee
+      </li>
+      <li>
+        Tea
+      </li>
+      <li>
+        Milk
+      </li>
+    </ul>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Lists DescriptionList renders 1`] = `
+<Fragment>
+  <h2
+    id="description-list"
+  >
+    Description list
+  </h2>
+  <p>
+    The description list lets you provide each item with a more specific description of each item. Add 
+    <CodeTags
+      code=".description-list"
+      type="secondary"
+    />
+     to your dl.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <dl
+      className="description-list"
+    >
+      
+
+      <dt>
+        Frog
+      </dt>
+      <dd>
+        Wet green thing that croaks.
+      </dd>
+      
+
+      <dt>
+        Rabbit
+      </dt>
+      <dd>
+        Warm fluffy thing that jumps.
+      </dd>
+      
+
+      <dt>
+        Color
+      </dt>
+      <dd>
+        Any hue except white or black.
+      </dd>
+      
+
+    </dl>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Lists HoverItemList renders 1`] = `
+<Fragment>
+  <h2
+    id="hover-item-list"
+  >
+    Hover item list 
+  </h2>
+  <p>
+    Include 
+    <CodeTags
+      code=".item-list-hover"
+      type="secondary"
+    />
+     to give your items a hover effect. You can use this on any variation of 
+    <CodeTags
+      code=".item-list"
+      type="secondary"
+    />
+    .
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ul
+      className="item-list item-list-hover"
+    >
+      <li>
+        
+
+        <span>
+          4925*********004
+        </span>
+        
+
+        <span
+          className="status status-success"
+        >
+          Active
+        </span>
+        
+
+      </li>
+      <li>
+        
+
+        <span>
+          4925*********004
+        </span>
+        
+
+        <span
+          className="status status-warning"
+        >
+          Expires soon
+        </span>
+        
+
+      </li>
+      <li>
+        
+
+        <span>
+          4925*********004
+        </span>
+        
+
+        <span
+          className="status status-danger"
+        >
+          Expired
+        </span>
+        
+
+      </li>
+    </ul>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Lists InlineList renders 1`] = `
+<Fragment>
+  <h2
+    id="inline-list"
+  >
+    Inline list
+  </h2>
+  <p>
+    Use 
+    <CodeTags
+      code=".list-inline"
+      type="secondary"
+    />
+     on a list to make all items appear on the same line.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ul
+      className="list list-inline"
+    >
+      <li>
+        Coffee
+      </li>
+      <li>
+        Tea
+      </li>
+      <li>
+        Milk
+      </li>
+    </ul>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Lists ItemList renders 1`] = `
+<Fragment>
+  <h2
+    id="item-list"
+  >
+    Item list 
+  </h2>
+  <p>
+    <CodeTags
+      code=".item-list"
+      type="secondary"
+    />
+    s is a good way to offer more extensive information about each item. Each item has their own box which seperates the items more clearly than our other options.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ul
+      className="item-list"
+    >
+      <li>
+        <div>
+          <h3>
+            Foo
+          </h3>
+          <small>
+            Due date 2 days
+          </small>
+        </div>
+        <div>
+          <span
+            className="h3 text-highlight"
+          >
+            2120 kr
+          </span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>
+            Bar
+          </h3>
+          <small>
+            Due date 1 day
+          </small>
+        </div>
+        <div>
+          <span
+            className="h3 text-highlight"
+          >
+            1100 kr
+          </span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>
+            Baz
+          </h3>
+          <small>
+            Due date 5 days
+          </small>
+        </div>
+        <div>
+          <span
+            className="h3 text-highlight"
+          >
+            200 kr
+          </span>
+        </div>
+      </li>
+    </ul>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Lists ItemListBordered renders 1`] = `
+<Fragment>
+  <h2
+    id="item-list-bordered"
+  >
+    Bordered item list 
+  </h2>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ul
+      className="item-list item-list-bordered"
+    >
+      <li>
+        <div>
+          <h3>
+            Foo
+          </h3>
+          <small>
+            Due date 2 days
+          </small>
+        </div>
+        <div>
+          <span
+            className="h3 text-highlight"
+          >
+            2120 kr
+          </span>
+        </div>
+        <footer>
+          <a
+            href="#"
+          >
+            Se faktura
+          </a>
+        </footer>
+      </li>
+      <li>
+        <div>
+          <h3>
+            Bar
+          </h3>
+          <small>
+            Due date 1 day
+          </small>
+        </div>
+        <div>
+          <span
+            className="h3 text-highlight"
+          >
+            1100 kr
+          </span>
+        </div>
+        <footer
+          className="item-list-footer"
+        >
+          <a
+            href="#"
+          >
+            Se faktura
+          </a>
+        </footer>
+      </li>
+      <li>
+        <div>
+          <h3>
+            Baz
+          </h3>
+          <small>
+            Due date 5 days
+          </small>
+        </div>
+        <div>
+          <span
+            className="h3 text-highlight"
+          >
+            200 kr
+          </span>
+        </div>
+        <footer
+          className="item-list-footer"
+        >
+          <a
+            href="#"
+          >
+            Se faktura
+          </a>
+        </footer>
+      </li>
+    </ul>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Lists ItemListLarge renders 1`] = `
+<Fragment>
+  <h2
+    id="item-list-lg"
+  >
+    Large item list 
+  </h2>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ul
+      className="item-list item-list-lg"
+    >
+      <li>
+        <div>
+          <h3>
+            Foo
+          </h3>
+          <small>
+            Due date 2 days
+          </small>
+        </div>
+        <div>
+          <span
+            className="h3 text-highlight"
+          >
+            2120 kr
+          </span>
+        </div>
+        <footer>
+          <a
+            href="#"
+          >
+            Se faktura
+          </a>
+        </footer>
+      </li>
+      <li>
+        <div>
+          <h3>
+            Bar
+          </h3>
+          <small>
+            Due date 1 day
+          </small>
+        </div>
+        <div>
+          <span
+            className="h3 text-highlight"
+          >
+            1100 kr
+          </span>
+        </div>
+        <footer
+          className="item-list-footer"
+        >
+          <a
+            href="#"
+          >
+            Se faktura
+          </a>
+        </footer>
+      </li>
+      <li>
+        <div>
+          <h3>
+            Baz
+          </h3>
+          <small>
+            Due date 5 days
+          </small>
+        </div>
+        <div>
+          <span
+            className="h3 text-highlight"
+          >
+            200 kr
+          </span>
+        </div>
+        <footer
+          className="item-list-footer"
+        >
+          <a
+            href="#"
+          >
+            Se faktura
+          </a>
+        </footer>
+      </li>
+    </ul>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Lists SettingsList renders 1`] = `
+<Fragment>
+  <h2
+    id="settings-list"
+  >
+    Settings list
+  </h2>
+  <p>
+    Use 
+    <CodeTags
+      code=".settings-list"
+      type="secondary"
+    />
+     to visualize different settings in your web application.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ul
+      className="settings-list"
+    >
+      <li>
+        
+
+        <i
+          className="material-icons text-success"
+        >
+          check
+        </i>
+        Shovels and tapestry newsletter
+        
+
+      </li>
+      <li>
+        
+
+        <i
+          className="material-icons text-warning"
+        >
+          remove
+        </i>
+        Spoon collectors weekly newsletter
+        
+
+      </li>
+      <li>
+        
+
+        <i
+          className="material-icons text-danger"
+        >
+          clear
+        </i>
+        Energetic squirrels newsletter
+        
+
+      </li>
+    </ul>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Lists StripedItemList prevents default on anchors 1`] = `
+<Fragment>
+  <h2
+    id="item-list-striped"
+  >
+    Striped item list
+  </h2>
+  <p>
+    If you want more seperation between each item you can use 
+    <CodeTags
+      code=".item-list-striped"
+      type="secondary"
+    />
+    .
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ul
+      className="item-list item-list-striped"
+    >
+      <li>
+        <span>
+          4925*********004
+        </span>
+        <ActionList
+          items={
+            Array [
+              Object {
+                "icon": "bookmark",
+                "name": "Add bookmark",
+              },
+              Object {
+                "icon": "business_center",
+                "name": "Add client",
+              },
+              Object {
+                "icon": "add_circle",
+                "name": "Add document",
+              },
+              Object {
+                "icon": "person_add",
+                "name": "Add user",
+              },
+            ]
+          }
+        />
+      </li>
+      <li>
+        
+
+        <span>
+          
+			
+          4925*********004
+          
+			
+          <span
+            className="badge badge-blue"
+          >
+            new
+          </span>
+          
+
+        </span>
+        
+
+        <a
+          href="https://developer.payex.com"
+        >
+          developer.swedbankpay.com
+        </a>
+        
+
+      </li>
+      <li>
+        
+
+        <span>
+          4925*********004
+        </span>
+        
+
+        <i
+          className="material-icons"
+        >
+          star
+        </i>
+        
+
+      </li>
+      <li>
+        
+
+        <span>
+          4925*********004
+        </span>
+        
+
+        <span
+          className="status status-success"
+        >
+          Active
+        </span>
+        
+
+        <button
+          className="btn btn-danger btn-xs"
+          type="button"
+        >
+          <i
+            className="material-icons"
+          >
+            delete
+          </i>
+        </button>
+        
+
+      </li>
+    </ul>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Lists StripedItemList renders 1`] = `
+<Fragment>
+  <h2
+    id="item-list-striped"
+  >
+    Striped item list
+  </h2>
+  <p>
+    If you want more seperation between each item you can use 
+    <CodeTags
+      code=".item-list-striped"
+      type="secondary"
+    />
+    .
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <ul
+      className="item-list item-list-striped"
+    >
+      <li>
+        <span>
+          4925*********004
+        </span>
+        <ActionList
+          items={
+            Array [
+              Object {
+                "icon": "bookmark",
+                "name": "Add bookmark",
+              },
+              Object {
+                "icon": "business_center",
+                "name": "Add client",
+              },
+              Object {
+                "icon": "add_circle",
+                "name": "Add document",
+              },
+              Object {
+                "icon": "person_add",
+                "name": "Add user",
+              },
+            ]
+          }
+        />
+      </li>
+      <li>
+        
+
+        <span>
+          
+			
+          4925*********004
+          
+			
+          <span
+            className="badge badge-blue"
+          >
+            new
+          </span>
+          
+
+        </span>
+        
+
+        <a
+          href="https://developer.payex.com"
+        >
+          developer.swedbankpay.com
+        </a>
+        
+
+      </li>
+      <li>
+        
+
+        <span>
+          4925*********004
+        </span>
+        
+
+        <i
+          className="material-icons"
+        >
+          star
+        </i>
+        
+
+      </li>
+      <li>
+        
+
+        <span>
+          4925*********004
+        </span>
+        
+
+        <span
+          className="status status-success"
+        >
+          Active
+        </span>
+        
+
+        <button
+          className="btn btn-danger btn-xs"
+          type="button"
+        >
+          <i
+            className="material-icons"
+          >
+            delete
+          </i>
+        </button>
+        
+
+      </li>
+    </ul>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Lists renders 1`] = `
+<DocContainer
+  docToc={true}
+>
+  <p
+    className="lead"
+  >
+    Use lists to give a structured view of information.
+  </p>
+  <BasicList />
+  <InlineList />
+  <BulletList />
+  <DescriptionList />
+  <SettingsList />
+  <ItemList />
+  <ItemListLarge />
+  <ItemListBordered />
+  <HoverItemList />
+  <StripedItemList />
+</DocContainer>
+`;

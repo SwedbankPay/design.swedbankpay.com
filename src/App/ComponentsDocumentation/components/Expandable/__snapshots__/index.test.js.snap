@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components: Expandable ExpandableGroup renders 1`] = `
+<Fragment>
+  <h2
+    id="expandable-group"
+  >
+    Expandable Group
+  </h2>
+  <p>
+    If you use a wrapper with 
+    <CodeTags
+      code=".expandable-group"
+      type="secondary"
+    />
+     then only one expandable can be open at the same time.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="expandable-group"
+    >
+      <Expandable
+        items={
+          Array [
+            Object {
+              "content": "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.",
+              "id": "exp-1",
+              "subtitle": "My subtitle",
+              "title": "My title",
+            },
+            Object {
+              "content": "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.",
+              "id": "exp-2",
+              "subtitle": "My subtitle",
+              "title": "My title",
+            },
+            Object {
+              "content": "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.",
+              "id": "exp-3",
+              "subtitle": "My subtitle",
+              "title": "My title",
+            },
+          ]
+        }
+      />
+    </div>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Components: Expandable Overview renders 1`] = `
+<Fragment>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <p>
+    The expandable component shows only what is contained in the 
+    <CodeTags
+      code=".expandable-header"
+      type="secondary"
+    />
+     when it is closed. 
+    <CodeTags
+      code=".expandable-body"
+      type="secondary"
+    />
+     will be visible in its open state.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Expandable
+      items={
+        Array [
+          Object {
+            "content": "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.",
+            "id": "exp-1",
+            "subtitle": "My subtitle",
+            "title": "My title",
+          },
+          Object {
+            "content": "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.",
+            "id": "exp-2",
+            "subtitle": "My subtitle",
+            "title": "My title",
+          },
+          Object {
+            "content": "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.",
+            "id": "exp-3",
+            "subtitle": "My subtitle",
+            "title": "My title",
+          },
+        ]
+      }
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Components: Expandable renders 1`] = `
+<DocContainer
+  docToc={true}
+>
+  <p
+    className="lead"
+  >
+    Expandables toggle between hiding and showing content on click.
+  </p>
+  <Overview />
+  <ExpandableGroup />
+  <JavascriptMethods />
+</DocContainer>
+`;

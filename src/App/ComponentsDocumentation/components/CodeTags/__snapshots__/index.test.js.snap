@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Documentation: CodeTags Overview renders 1`] = `
+<Fragment>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <p>
+    Code tags use Akkurat Mono as the font. Akkurat Mono can be found in 
+    <Link
+      to="/docs/core/typography"
+    >
+      Typography
+    </Link>
+    . Using 
+    <CodeTags
+      code="<code>"
+      type="primary"
+    />
+     without any specied styling will result in the primary styling being applied. Chose which option that is more suitable for your project, or combine them to differentiate between different coding languages or styles.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <p>
+      
+
+      This is an example of inline code using 
+      <code>
+        default.styling
+      </code>
+       with default styling.
+      
+
+    </p>
+    <p>
+      
+
+      This is an example of inline code 
+      <CodeTags
+        code="<ComponentName />"
+        type="primary"
+      />
+       with specified class.
+      
+
+    </p>
+    <p>
+      
+
+      This is another example of inline code 
+      <CodeTags
+        code="property.function()"
+        type="secondary"
+      />
+       with another class to differentiate.
+      
+
+    </p>
+    <p>
+      
+
+      <span
+        className="code-tags code-tags-primary"
+      >
+        &lt;span&gt;
+      </span>
+       can also be used to 
+      <span
+        className="code-tags code-tags-secondary"
+      >
+        presentCode()
+      </span>
+      .
+      
+
+    </p>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: CodeTags renders 1`] = `
+<DocContainer
+  docToc={true}
+>
+  <p
+    className="lead"
+  >
+    Code tags are used to present inline code.
+  </p>
+  <Overview />
+</DocContainer>
+`;

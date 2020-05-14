@@ -1,0 +1,510 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Documentation: Sheet Example onClick prevents default 1`] = `
+<Fragment>
+  <h2
+    id="example"
+  >
+    Example
+  </h2>
+  <p>
+    A standard sheet should display content that complements the screen’s primary content. It will close when the user clicks outside of the sheet or exits out of it in another way.
+  </p>
+  <p>
+    Sheets can be used for a number of different things, but common use cases for a sheet are for example displaying a list of actions that affet the screen’s primary content such as filters, deletion or other ways to manipulate the main content. If you have a form then you could include an icon that opens said sheet to display more information about what the expected input is.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Sheet
+      id="demo-sheet"
+    >
+      <h2>
+        Sheet component
+      </h2>
+      <p>
+        This is the sheet component. It can contain anything you want.
+      </p>
+      <p>
+        It can also contain lots of useless text, just like the text in this paragraph. Or it can contain useful info and cheats. For example if you have a math quiz coming up;
+      </p>
+      <ul
+        className="list"
+      >
+        <li>
+          <code>
+            3 + 8 = 11
+          </code>
+        </li>
+        <li>
+          <code>
+            36 - 22 = 14
+          </code>
+        </li>
+        <li>
+          <code>
+            256 + 113 = 369
+          </code>
+        </li>
+        <li>
+          <code>
+            356 - 1 = 355
+          </code>
+        </li>
+      </ul>
+      <hr />
+      <form
+        onSubmit={[Function]}
+      >
+        <div
+          className="form-group"
+        >
+          <label
+            htmlFor="full-name"
+          >
+            Full name
+          </label>
+          <div
+            className="input-group"
+          >
+            <input
+              className="form-control"
+              id="full-name"
+              placeholder="Enter your full name"
+              type="text"
+            />
+          </div>
+          <div
+            className="help-block"
+          >
+            Your full name
+          </div>
+        </div>
+        <div
+          className="form-group"
+        >
+          <label
+            htmlFor="email-address"
+          >
+            Email
+          </label>
+          <div
+            className="input-group"
+          >
+            <input
+              className="form-control"
+              id="email-address"
+              placeholder="Enter your email"
+              type="text"
+            />
+          </div>
+          <div
+            className="help-block"
+          >
+            Email means electronic mail, not express mail
+          </div>
+        </div>
+        <div
+          className="form-group"
+        >
+          <div
+            className="checkbox"
+          >
+            <input
+              id="subscribe-checkbox"
+              type="checkbox"
+            />
+            <label
+              htmlFor="subscribe-checkbox"
+            >
+              Sign up to our math newsletter
+            </label>
+          </div>
+        </div>
+        <button
+          className="btn btn-executive"
+          onClick={[Function]}
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+    </Sheet>
+    
+
+    <button
+      className="btn btn-executive"
+      data-sheet-open="demo-sheet"
+      type="button"
+    >
+      Open sheet
+    </button>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Sheet Example onSubmit prevents default 1`] = `
+<Fragment>
+  <h2
+    id="example"
+  >
+    Example
+  </h2>
+  <p>
+    A standard sheet should display content that complements the screen’s primary content. It will close when the user clicks outside of the sheet or exits out of it in another way.
+  </p>
+  <p>
+    Sheets can be used for a number of different things, but common use cases for a sheet are for example displaying a list of actions that affet the screen’s primary content such as filters, deletion or other ways to manipulate the main content. If you have a form then you could include an icon that opens said sheet to display more information about what the expected input is.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Sheet
+      id="demo-sheet"
+    >
+      <h2>
+        Sheet component
+      </h2>
+      <p>
+        This is the sheet component. It can contain anything you want.
+      </p>
+      <p>
+        It can also contain lots of useless text, just like the text in this paragraph. Or it can contain useful info and cheats. For example if you have a math quiz coming up;
+      </p>
+      <ul
+        className="list"
+      >
+        <li>
+          <code>
+            3 + 8 = 11
+          </code>
+        </li>
+        <li>
+          <code>
+            36 - 22 = 14
+          </code>
+        </li>
+        <li>
+          <code>
+            256 + 113 = 369
+          </code>
+        </li>
+        <li>
+          <code>
+            356 - 1 = 355
+          </code>
+        </li>
+      </ul>
+      <hr />
+      <form
+        onSubmit={[Function]}
+      >
+        <div
+          className="form-group"
+        >
+          <label
+            htmlFor="full-name"
+          >
+            Full name
+          </label>
+          <div
+            className="input-group"
+          >
+            <input
+              className="form-control"
+              id="full-name"
+              placeholder="Enter your full name"
+              type="text"
+            />
+          </div>
+          <div
+            className="help-block"
+          >
+            Your full name
+          </div>
+        </div>
+        <div
+          className="form-group"
+        >
+          <label
+            htmlFor="email-address"
+          >
+            Email
+          </label>
+          <div
+            className="input-group"
+          >
+            <input
+              className="form-control"
+              id="email-address"
+              placeholder="Enter your email"
+              type="text"
+            />
+          </div>
+          <div
+            className="help-block"
+          >
+            Email means electronic mail, not express mail
+          </div>
+        </div>
+        <div
+          className="form-group"
+        >
+          <div
+            className="checkbox"
+          >
+            <input
+              id="subscribe-checkbox"
+              type="checkbox"
+            />
+            <label
+              htmlFor="subscribe-checkbox"
+            >
+              Sign up to our math newsletter
+            </label>
+          </div>
+        </div>
+        <button
+          className="btn btn-executive"
+          onClick={[Function]}
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+    </Sheet>
+    
+
+    <button
+      className="btn btn-executive"
+      data-sheet-open="demo-sheet"
+      type="button"
+    >
+      Open sheet
+    </button>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Sheet Example renders 1`] = `
+<Fragment>
+  <h2
+    id="example"
+  >
+    Example
+  </h2>
+  <p>
+    A standard sheet should display content that complements the screen’s primary content. It will close when the user clicks outside of the sheet or exits out of it in another way.
+  </p>
+  <p>
+    Sheets can be used for a number of different things, but common use cases for a sheet are for example displaying a list of actions that affet the screen’s primary content such as filters, deletion or other ways to manipulate the main content. If you have a form then you could include an icon that opens said sheet to display more information about what the expected input is.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Sheet
+      id="demo-sheet"
+    >
+      <h2>
+        Sheet component
+      </h2>
+      <p>
+        This is the sheet component. It can contain anything you want.
+      </p>
+      <p>
+        It can also contain lots of useless text, just like the text in this paragraph. Or it can contain useful info and cheats. For example if you have a math quiz coming up;
+      </p>
+      <ul
+        className="list"
+      >
+        <li>
+          <code>
+            3 + 8 = 11
+          </code>
+        </li>
+        <li>
+          <code>
+            36 - 22 = 14
+          </code>
+        </li>
+        <li>
+          <code>
+            256 + 113 = 369
+          </code>
+        </li>
+        <li>
+          <code>
+            356 - 1 = 355
+          </code>
+        </li>
+      </ul>
+      <hr />
+      <form
+        onSubmit={[Function]}
+      >
+        <div
+          className="form-group"
+        >
+          <label
+            htmlFor="full-name"
+          >
+            Full name
+          </label>
+          <div
+            className="input-group"
+          >
+            <input
+              className="form-control"
+              id="full-name"
+              placeholder="Enter your full name"
+              type="text"
+            />
+          </div>
+          <div
+            className="help-block"
+          >
+            Your full name
+          </div>
+        </div>
+        <div
+          className="form-group"
+        >
+          <label
+            htmlFor="email-address"
+          >
+            Email
+          </label>
+          <div
+            className="input-group"
+          >
+            <input
+              className="form-control"
+              id="email-address"
+              placeholder="Enter your email"
+              type="text"
+            />
+          </div>
+          <div
+            className="help-block"
+          >
+            Email means electronic mail, not express mail
+          </div>
+        </div>
+        <div
+          className="form-group"
+        >
+          <div
+            className="checkbox"
+          >
+            <input
+              id="subscribe-checkbox"
+              type="checkbox"
+            />
+            <label
+              htmlFor="subscribe-checkbox"
+            >
+              Sign up to our math newsletter
+            </label>
+          </div>
+        </div>
+        <button
+          className="btn btn-executive"
+          onClick={[Function]}
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+    </Sheet>
+    
+
+    <button
+      className="btn btn-executive"
+      data-sheet-open="demo-sheet"
+      type="button"
+    >
+      Open sheet
+    </button>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Sheet JavascriptMethods renders 1`] = `
+<Fragment>
+  <h2
+    id="javascript-methods"
+  >
+    JavaScript methods
+  </h2>
+  <JavascriptDocs
+    close={true}
+    componentName="sheet"
+    open={true}
+  />
+</Fragment>
+`;
+
+exports[`Documentation: Sheet RequireAction renders 1`] = `
+<Fragment>
+  <h2
+    id="require-action"
+  >
+    Require action
+  </h2>
+  <p>
+    To disable the listener responsible for closing the sheet when a user clicks outside, add 
+    <CodeTags
+      code="data-require-action"
+      type="secondary"
+    />
+     to your Sheet.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <Sheet
+      id="demo-sheet-1"
+      requireAction={true}
+    >
+      <h2>
+        Sheet component
+      </h2>
+      <p>
+        This sheet can not be closed by clicking outside its white area.
+      </p>
+    </Sheet>
+    
+
+    <button
+      className="btn btn-executive"
+      data-sheet-open="demo-sheet-1"
+      type="button"
+    >
+      Open sheet
+    </button>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Sheet renders 1`] = `
+<DocContainer
+  docToc={true}
+>
+  <p
+    className="lead"
+  >
+    Sheet is a container component that is anchored on the right side of the screen and can contain a number of different things.
+  </p>
+  <Example />
+  <RequireAction />
+  <JavascriptMethods />
+</DocContainer>
+`;

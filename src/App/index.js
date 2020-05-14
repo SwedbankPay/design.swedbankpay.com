@@ -27,6 +27,8 @@ const ScrollToTopComponent = withRouter(ScrollToTop);
 
 const Home = React.lazy(() => import(/* webpackChunkName: "home.chunk" */ "./Home/index.js"));
 
+const Components = React.lazy(() => import(/* webpackChunkName: "components.chunk" */ "./ComponentsDocumentation/index.js"));
+
 const Documentation = React.lazy(() => import(/* webpackChunkName: "documentation.chunk" */ "./Documentation/index.js"));
 
 const Resources = React.lazy(() => import(/* webpackChunkName: "templates.chunk" */ "./Resources/index.js"));
@@ -61,6 +63,7 @@ class App extends Component {
                     <Suspense fallback={<LoadingComponent />}>
                         <Switch>
                             <Route exact path="/" component={Home} />
+                            <Route path="/components" component={Components} />
                             <Route path="/docs" component={Documentation} />
                             <Route path="/res" component={Resources} />
                             <Route path="/404" component={ErrorPage404} />
