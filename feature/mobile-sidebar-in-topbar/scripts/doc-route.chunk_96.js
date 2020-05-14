@@ -1,2 +1,2 @@
 (window.webpackJsonp=window.webpackJsonp||[]).push([[13],{431:function(t,e,n){"use strict";n.r(e);var a=n(1),o=n.n(a),r=n(55),c=n(318),i=n.n(c);e.default=function(){return o.a.createElement(r.RenderPage,{routes:i.a,appFolder:"Documentation",path:"/docs",initPath:"/docs/getting-started"})}}}]);
-//# sourceMappingURL=doc-route.chunk_96.js.map?81399e3714a6fda0b831
+//# sourceMappingURL=doc-route.chunk_96.js.map?7130f84a760dc8fcbfd2
