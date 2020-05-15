@@ -3,44 +3,37 @@
 exports[`Resources: index renders 1`] = `
 <RenderPage
   appFolder="Resources"
-  initPath="/res/getting-started"
-  path="/res"
+  initPath="/resources/introduction"
+  path="/resources"
   routes={
     Array [
       Object {
-        "path": "/res/getting-started",
-        "redirect": "/res/getting-started/introduction",
+        "path": "/resources",
+        "redirect": "/resources/introduction",
         "routes": Array [
           Object {
-            "componentPath": "getting-started/Introduction",
-            "path": "/res/getting-started/introduction",
+            "componentPath": "Introduction",
+            "path": "/resources/introduction",
             "title": "Introduction",
           },
-        ],
-        "title": "Getting Started",
-      },
-      Object {
-        "path": "/res/resources",
-        "redirect": "/res/resources/logotype",
-        "routes": Array [
           Object {
             "componentPath": "resources/images",
-            "path": "/res/resources/images",
+            "path": "/resources/images",
             "title": "Images",
           },
           Object {
             "componentPath": "resources/logotype",
-            "path": "/res/resources/logotype",
+            "path": "/resources/logotype",
             "title": "Logotype",
           },
           Object {
             "componentPath": "resources/presentations",
-            "path": "/res/resources/presentations",
+            "path": "/resources/presentations",
             "title": "Presentations",
           },
           Object {
             "componentPath": "resources/typography",
-            "path": "/res/resources/typography",
+            "path": "/resources/typography",
             "title": "Typography",
           },
         ],

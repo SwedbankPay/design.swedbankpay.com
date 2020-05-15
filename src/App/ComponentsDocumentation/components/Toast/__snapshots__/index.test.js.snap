@@ -182,7 +182,7 @@ exports[`Components: Toast Options renders 1`] = `
         <td>
           Custom icon for the toast. See 
           <Link
-            to="/docs/core/icons"
+            to="/core/iconogrphy"
           >
             icons
           </Link>
@@ -289,13 +289,13 @@ exports[`Components: Toast Overview calls toast on click 1`] = `
     <p>
       Don’t put too much text in toasts as they are meant to be visible for only a short amount of time. Due to the time restriction you should also avoid putting vital information in them. A 
       <Link
-        to="/docs/components/sheet"
+        to="/components/sheet"
       >
         sheet
       </Link>
        or 
       <Link
-        to="/docs/components/dialog"
+        to="/components/dialog"
       >
         dialog
       </Link>
@@ -349,13 +349,13 @@ exports[`Components: Toast Overview renders 1`] = `
     <p>
       Don’t put too much text in toasts as they are meant to be visible for only a short amount of time. Due to the time restriction you should also avoid putting vital information in them. A 
       <Link
-        to="/docs/components/sheet"
+        to="/components/sheet"
       >
         sheet
       </Link>
        or 
       <Link
-        to="/docs/components/dialog"
+        to="/components/dialog"
       >
         dialog
       </Link>

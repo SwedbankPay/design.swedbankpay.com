@@ -102,7 +102,7 @@ exports[`Documentation: Dialog renders 1`] = `
   >
     Dialog is meant to be used to show a snippet of text like a confirmation box before you delete something. Use 
     <Link
-      to="/docs/components/sheet"
+      to="/components/sheet"
     >
       sheet
     </Link>

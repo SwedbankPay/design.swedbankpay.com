@@ -707,7 +707,7 @@ exports[`Documentation: Buttons Usage With Icons renders 1`] = `
   <p>
     Read more about icon usage here 
     <Link
-      to="/docs/core/icons"
+      to="/core/iconography"
     >
       here
     </Link>

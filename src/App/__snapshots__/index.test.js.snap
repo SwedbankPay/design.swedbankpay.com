@@ -51,6 +51,17 @@ exports[`Main: App renders 1`] = `
               "_status": -1,
             }
           }
+          path="/getting-started"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_ctor": [Function],
+              "_result": null,
+              "_status": -1,
+            }
+          }
           path="/components"
         />
         <Route
@@ -62,7 +73,7 @@ exports[`Main: App renders 1`] = `
               "_status": -1,
             }
           }
-          path="/docs"
+          path="/core"
         />
         <Route
           component={
@@ -73,7 +84,18 @@ exports[`Main: App renders 1`] = `
               "_status": -1,
             }
           }
-          path="/res"
+          path="/utilities"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_ctor": [Function],
+              "_result": null,
+              "_status": -1,
+            }
+          }
+          path="/resources"
         />
         <Route
           component={

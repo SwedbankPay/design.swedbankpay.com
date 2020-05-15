@@ -15,6 +15,6 @@ module.exports = {
         "\\.spec\\.js",
 
         // TODO: The following snapshot is 360k long and brakes AppVeyor... solution?
-        "./Documentation/utils/ComponentPreview/"
+        "./docutils/ComponentPreview/"
     ]
 };

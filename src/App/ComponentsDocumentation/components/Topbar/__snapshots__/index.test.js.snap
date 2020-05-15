@@ -218,7 +218,7 @@ exports[`Components: Topbar TopbarSticky renders 1`] = `
     />
      to specify the maximum width the topbar should be sticky (see 
     <Link
-      to="/docs/core/breakpoints"
+      to="/core/breakpoints"
     >
       breakpoints
     </Link>
@@ -417,7 +417,7 @@ exports[`Components: Topbar TopbarWithSidebar renders 1`] = `
   <p>
     It is recommended to have the sidebar content in the topbar menu on smaller devices, such as phones and tablets (see more on sidebar 
     <Link
-      to="/docs/sidebar"
+      to="/components/sidebar"
     >
       here
     </Link>

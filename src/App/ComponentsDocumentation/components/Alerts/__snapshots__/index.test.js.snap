@@ -10,7 +10,7 @@ exports[`Documentation: Alerts Alert With Icon renders 1`] = `
   <p>
     To use an alert with an icon... Read more about icon usage here 
     <Link
-      to="/docs/core/icons"
+      to="/core/iconography"
     >
       here
     </Link>

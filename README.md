@@ -67,7 +67,7 @@ shortcuts for common paths. The shortcuts are as following:
 |   `~`    | root of the project (example `import package from "~/package";`)
 |   `$`    | `~/src`-folder (example `import dg from "$/scripts";`)
 |   `@`    |  `~/src/App/components`-folder (example `import Alert from "@components/Alert";`)
-|   `#`    | `~/src/App/Documentation/utils`-folder (example `import { DocToc } from "@docutils";`)
+|   `#`    | `~/src/App/docutils`-folder (example `import { DocToc } from "@docutils";`)
 
 The shortcuts are specified in the `~/.babelrc`-file. Specifying the
 prefix-shortcuts in the `~/jsconfig.json`-file enables path intellisense for

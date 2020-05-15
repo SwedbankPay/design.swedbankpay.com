@@ -23,7 +23,7 @@ const BasicUsage = () => (
 const AlertWithIcon = () => (
     <>
         <h2 id="icons">Icons</h2>
-        <p>To use an alert with an icon... Read more about icon usage here <Link to="/docs/core/icons">here</Link>.</p>
+        <p>To use an alert with an icon... Read more about icon usage here <Link to="/core/iconography">here</Link>.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <AlertComponent type="success" text="This is a success alert with an icon!" icon="check_circle" />{"\n\n"}
             <AlertComponent type="informative" text="This is an informative alert with an icon!" icon="info" />{"\n\n"}

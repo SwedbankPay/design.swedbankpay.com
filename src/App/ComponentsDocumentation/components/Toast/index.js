@@ -23,7 +23,7 @@ const Overview = () => (
             <p>
                 Don’t put too much text in toasts as they are meant to be visible for only a short amount of time.
                 Due to the time restriction you should also avoid putting vital information in them.
-                A <Link to="/docs/components/sheet">sheet</Link> or <Link to="/docs/components/dialog">dialog</Link> is
+                A <Link to="/components/sheet">sheet</Link> or <Link to="/components/dialog">dialog</Link> is
                 recommended when recieving input or relaying large amounts of information.
             </p>
         </Alert>
@@ -65,7 +65,7 @@ const Options = () => (
                     <td>icon</td>
                     <td>String</td>
                     <td><CodeTags type="secondary" code={"\"\""} /></td>
-                    <td>Custom icon for the toast. See <Link to="/docs/core/icons">icons</Link> for more info.</td>
+                    <td>Custom icon for the toast. See <Link to="/core/iconogrphy">icons</Link> for more info.</td>
                 </tr>
                 <tr>
                     <td>displayLength</td>

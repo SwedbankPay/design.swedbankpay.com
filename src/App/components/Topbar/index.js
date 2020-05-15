@@ -4,7 +4,7 @@ import swedbankpayLogo from "@src/img/swedbankpay/logo/swedbankpay-logo.svg";
 import payexLogo from "@src/img/payex/logo/payex-logo.svg";
 
 import SidebarComponent from "@components/Sidebar";
-import { SidebarNavList } from "../../Documentation/components/Sidebar/constants";
+import { SidebarNavList } from "../../ComponentsDocumentation/components/Sidebar/constants";
 
 const brand = process.env.brand;
 

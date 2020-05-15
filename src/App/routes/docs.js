@@ -2,74 +2,74 @@ module.exports = [
     /**
      * Getting Started
      */
-    {
-        title: "Getting Started",
-        path: "/docs/getting-started",
-        redirect: "/docs/getting-started/introduction",
-        routes: [
-            {
-                title: "Introduction",
-                path: "/docs/getting-started/introduction",
-                componentPath: "getting-started/Introduction"
-            },
-            {
-                title: "Browser Support",
-                path: "/docs/getting-started/browser-support",
-                componentPath: "getting-started/BrowserSupport"
-            },
-            {
-                title: "Contributing",
-                path: "/docs/getting-started/contributing",
-                componentPath: "getting-started/Contributing"
-            },
-            {
-                title: "JavaScript",
-                path: "/docs/getting-started/javascript",
-                componentPath: "getting-started/Javascript"
-            }
-        ]
-    },
+    // {
+    //     title: "Getting Started",
+    //     path: "/docs/getting-started",
+    //     redirect: "/docs/getting-started/introduction",
+    //     routes: [
+    //         {
+    //             title: "Introduction",
+    //             path: "/docs/getting-started/introduction",
+    //             componentPath: "getting-started/Introduction"
+    //         },
+    //         {
+    //             title: "Browser Support",
+    //             path: "/docs/getting-started/browser-support",
+    //             componentPath: "getting-started/BrowserSupport"
+    //         },
+    //         {
+    //             title: "Contributing",
+    //             path: "/docs/getting-started/contributing",
+    //             componentPath: "getting-started/Contributing"
+    //         },
+    //         {
+    //             title: "JavaScript",
+    //             path: "/docs/getting-started/javascript",
+    //             componentPath: "getting-started/Javascript"
+    //         }
+    //     ]
+    // },
 
-    /**
-     * Core
-     */
-    {
-        title: "Core",
-        path: "/docs/core",
-        redirect: "/docs/core/breakpoints",
-        routes: [
-            {
-                title: "Color",
-                path: "/docs/core/color",
-                componentPath: "core/Color"
-            },
-            {
-                title: "Logos",
-                path: "/docs/core/logos",
-                componentPath: "core/Logos"
-            },
-            {
-                title: "Grid",
-                path: "/docs/core/grid",
-                componentPath: "core/Grid"
-            },
-            {
-                title: "Iconography",
-                path: "/docs/core/iconography",
-                componentPath: "core/Iconography"
-            },
-            {
-                title: "Page layout",
-                path: "/docs/core/page-layout",
-                componentPath: "core/Page-layout"
-            },
-            {
-                title: "Typography",
-                path: "/docs/core/typography",
-                componentPath: "core/Typography"
-            }
-        ]
-    },
+    // /**
+    //  * Core
+    //  */
+    // {
+    //     title: "Core",
+    //     path: "/docs/core",
+    //     redirect: "/docs/core/breakpoints",
+    //     routes: [
+    //         {
+    //             title: "Color",
+    //             path: "/docs/core/color",
+    //             componentPath: "core/Color"
+    //         },
+    //         {
+    //             title: "Logos",
+    //             path: "/docs/core/logos",
+    //             componentPath: "core/Logos"
+    //         },
+    //         {
+    //             title: "Grid",
+    //             path: "/docs/core/grid",
+    //             componentPath: "core/Grid"
+    //         },
+    //         {
+    //             title: "Iconography",
+    //             path: "/docs/core/iconography",
+    //             componentPath: "core/Iconography"
+    //         },
+    //         {
+    //             title: "Page layout",
+    //             path: "/docs/core/page-layout",
+    //             componentPath: "core/Page-layout"
+    //         },
+    //         {
+    //             title: "Typography",
+    //             path: "/docs/core/typography",
+    //             componentPath: "core/Typography"
+    //         }
+    //     ]
+    // },
 
     /**
      * Components
@@ -245,97 +245,97 @@ module.exports = [
     /**
      * Utilities
      */
-    {
-        title: "Utilities",
-        path: "/docs/utilities",
-        redirect: "/docs/utilities/colors",
-        routes: [
-            {
-                title: "Borders",
-                path: "/docs/utilities/borders",
-                componentPath: "utilities/Borders"
-            },
-            {
-                title: "Breakpoints",
-                path: "/docs/utilities/breakpoints",
-                componentPath: "utilities/Breakpoints"
-            },
-            {
-                title: "Colors",
-                path: "/docs/utilities/colors",
-                componentPath: "utilities/Colors"
-            },
-            {
-                title: "Display",
-                path: "/docs/utilities/display",
-                componentPath: "utilities/Display"
-            },
-            {
-                title: "Flex",
-                path: "/docs/utilities/flex",
-                componentPath: "utilities/Flex"
-            },
-            {
-                title: "Images",
-                path: "/docs/utilities/images",
-                componentPath: "utilities/Images"
-            },
-            {
-                title: "Sizing",
-                path: "/docs/utilities/sizing",
-                componentPath: "utilities/Sizing"
-            },
-            {
-                title: "Spacing",
-                path: "/docs/utilities/spacing",
-                componentPath: "utilities/Spacing"
-            },
-            {
-                title: "Text",
-                path: "/docs/utilities/text",
-                componentPath: "utilities/Text"
-            },
-            {
-                title: "Visibility",
-                path: "/docs/utilities/visibility",
-                componentPath: "utilities/Visibility"
-            }
-        ]
-    },
+    // {
+    //     title: "Utilities",
+    //     path: "/docs/utilities",
+    //     redirect: "/docs/utilities/colors",
+    //     routes: [
+    //         {
+    //             title: "Borders",
+    //             path: "/docs/utilities/borders",
+    //             componentPath: "utilities/Borders"
+    //         },
+    //         {
+    //             title: "Breakpoints",
+    //             path: "/docs/utilities/breakpoints",
+    //             componentPath: "utilities/Breakpoints"
+    //         },
+    //         {
+    //             title: "Colors",
+    //             path: "/docs/utilities/colors",
+    //             componentPath: "utilities/Colors"
+    //         },
+    //         {
+    //             title: "Display",
+    //             path: "/docs/utilities/display",
+    //             componentPath: "utilities/Display"
+    //         },
+    //         {
+    //             title: "Flex",
+    //             path: "/docs/utilities/flex",
+    //             componentPath: "utilities/Flex"
+    //         },
+    //         {
+    //             title: "Images",
+    //             path: "/docs/utilities/images",
+    //             componentPath: "utilities/Images"
+    //         },
+    //         {
+    //             title: "Sizing",
+    //             path: "/docs/utilities/sizing",
+    //             componentPath: "utilities/Sizing"
+    //         },
+    //         {
+    //             title: "Spacing",
+    //             path: "/docs/utilities/spacing",
+    //             componentPath: "utilities/Spacing"
+    //         },
+    //         {
+    //             title: "Text",
+    //             path: "/docs/utilities/text",
+    //             componentPath: "utilities/Text"
+    //         },
+    //         {
+    //             title: "Visibility",
+    //             path: "/docs/utilities/visibility",
+    //             componentPath: "utilities/Visibility"
+    //         }
+    //     ]
+    // }
 
-    /**
-     * Examples
-     */
-    {
-        title: "Examples",
-        path: "/docs/examples",
-        redirect: "/docs/examples/login",
-        routes: [
-            {
-                title: "Login",
-                path: "/docs/examples/login",
-                componentPath: "examples/login"
-            },
-            {
-                title: "Settings",
-                path: "/docs/examples/settings",
-                componentPath: "examples/settings"
-            },
-            {
-                title: "FAQ",
-                path: "/docs/examples/faq",
-                componentPath: "examples/faq"
-            },
-            {
-                title: "Customers",
-                path: "/docs/examples/customers",
-                componentPath: "examples/customers"
-            },
-            {
-                title: "Sidebar",
-                path: "/docs/examples/sidebar",
-                componentPath: "examples/sidebar"
-            }
-        ]
-    }
+    // /**
+    //  * Examples
+    //  */
+    // {
+    //     title: "Examples",
+    //     path: "/docs/examples",
+    //     redirect: "/docs/examples/login",
+    //     routes: [
+    //         {
+    //             title: "Login",
+    //             path: "/docs/examples/login",
+    //             componentPath: "examples/login"
+    //         },
+    //         {
+    //             title: "Settings",
+    //             path: "/docs/examples/settings",
+    //             componentPath: "examples/settings"
+    //         },
+    //         {
+    //             title: "FAQ",
+    //             path: "/docs/examples/faq",
+    //             componentPath: "examples/faq"
+    //         },
+    //         {
+    //             title: "Customers",
+    //             path: "/docs/examples/customers",
+    //             componentPath: "examples/customers"
+    //         },
+    //         {
+    //             title: "Sidebar",
+    //             path: "/docs/examples/sidebar",
+    //             componentPath: "examples/sidebar"
+    //         }
+    //     ]
+    // }
 ];

@@ -76,7 +76,7 @@ const TopbarSticky = () => (
             A sticky topbar is also available, with class <CodeTags type="secondary" code=".topbar-sticky" />.
             Use <CodeTags type="secondary" code=".topbar-min-{breakpoint}-sticky" /> to specify the minimum width the topbar should be sticky,
             or <CodeTags type="secondary" code=".topbar-max-{breakpoint}-sticky" /> to specify the maximum width the topbar should be sticky
-            (see <Link to="/docs/core/breakpoints">breakpoints</Link> for more information on breakpoints). Note that the sticky topbar does
+            (see <Link to="/core/breakpoints">breakpoints</Link> for more information on breakpoints). Note that the sticky topbar does
             not work in Internet Explorer 11.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
@@ -97,7 +97,7 @@ const TopbarWithSidebar = () => (
     <>
         <h2 id="topbar-with-sidebar">Topbar with sidebar content</h2>
         <p>
-            It is recommended to have the sidebar content in the topbar menu on smaller devices, such as phones and tablets (see more on sidebar <Link to="/docs/sidebar">here</Link>).
+            It is recommended to have the sidebar content in the topbar menu on smaller devices, such as phones and tablets (see more on sidebar <Link to="/components/sidebar">here</Link>).
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <TopbarComponent topbarContent={menu} logout id="demo-topbar-sidebar" sidebar />

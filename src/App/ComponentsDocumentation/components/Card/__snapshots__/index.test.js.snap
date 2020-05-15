@@ -10,7 +10,7 @@ exports[`Documentation: Card GridCard renders 1`] = `
   <p>
     Use our 
     <Link
-      to="/docs/core/grid"
+      to="/core/grid"
     >
       grid
     </Link>

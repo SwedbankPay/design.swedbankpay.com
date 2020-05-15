@@ -14,7 +14,7 @@ const BasicUsage = () => (
         <h2 id="basic-usage">Basic usage</h2>
         <p>Add class <CodeTags type="secondary" code=".tabs" /> to a div containing <CodeTags type="primary" code={"<ul>"} /> and nest <CodeTags type="primary" code={"<li>"} /> as
         needed. The tabs component will by default cover the whole width of the container at breakpoint <CodeTags type="secondary" code="sm" />. To specify a larger breakpoint,
-        use <CodeTags type="secondary" code=".tabs-{breakpoint}" /> (see <Link to="/docs/core/breakpoints">breakpoints</Link> for more information on breakpoints).
+        use <CodeTags type="secondary" code=".tabs-{breakpoint}" /> (see <Link to="/core/breakpoints">breakpoints</Link> for more information on breakpoints).
         Make sure that the tabs will not overflow on screens of normal size.
         Consider revising the design or the decision to use tabs when more than 3
         alternatives are present. If using tabs really is necessary, tabs with scroll might be

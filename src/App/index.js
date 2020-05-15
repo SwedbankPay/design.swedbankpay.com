@@ -27,11 +27,15 @@ const ScrollToTopComponent = withRouter(ScrollToTop);
 
 const Home = React.lazy(() => import(/* webpackChunkName: "home.chunk" */ "./Home/index.js"));
 
+const GettingStarted = React.lazy(() => import(/* webpackChunkName: "getting-started.chunk" */ "./GettingStarted/index.js"));
+
 const Components = React.lazy(() => import(/* webpackChunkName: "components.chunk" */ "./ComponentsDocumentation/index.js"));
 
-const Documentation = React.lazy(() => import(/* webpackChunkName: "documentation.chunk" */ "./Documentation/index.js"));
+const Core = React.lazy(() => import(/* webpackChunkName: "core.chunk" */ "./Core/index.js"));
 
-const Resources = React.lazy(() => import(/* webpackChunkName: "templates.chunk" */ "./Resources/index.js"));
+const Utilities = React.lazy(() => import(/* webpackChunkName: "utilities.chunk" */ "./Utilities/index.js"));
+
+const Resources = React.lazy(() => import(/* webpackChunkName: "resources.chunk" */ "./Resources/index.js"));
 
 const ErrorPage404 = React.lazy(() => import(/* webpackChunkName: "404.chunk" */ "./ErrorPage404/index.js"));
 
@@ -63,9 +67,11 @@ class App extends Component {
                     <Suspense fallback={<LoadingComponent />}>
                         <Switch>
                             <Route exact path="/" component={Home} />
+                            <Route path="/getting-started" component={GettingStarted} />
                             <Route path="/components" component={Components} />
-                            <Route path="/docs" component={Documentation} />
-                            <Route path="/res" component={Resources} />
+                            <Route path="/core" component={Core} />
+                            <Route path="/utilities" component={Utilities} />
+                            <Route path="/resources" component={Resources} />
                             <Route path="/404" component={ErrorPage404} />
                             <Route component={ErrorPage404} />
                         </Switch>

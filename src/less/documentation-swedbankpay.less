@@ -18,10 +18,6 @@
             align-items: flex-start;
             flex-wrap: wrap;
 
-            @media screen and (max-width: @screen-md-min) {
-                margin: 1rem 0;
-            }
-
             .topbar-info-version {
                 align-self: flex-end;
                 margin-right: 0.75rem;
@@ -34,8 +30,8 @@
             }
 
             a {
-                color: @brand-secondary;
-                fill: @brand-secondary;
+                color: @text-gray;
+                fill: @text-gray;
                 border: none;
 
                 svg {
@@ -47,8 +43,17 @@
                 }
 
                 &:hover {
-                    color: darken(@text-gray, 30%);
-                    fill: darken(@text-gray, 30%);
+                    color: darken(@text-gray, 20%);
+                    fill: darken(@text-gray, 20%);
+                }
+            }
+
+            @media screen and (max-width: @screen-md-min) {
+                margin: 1rem 0;
+
+                a {
+                    color: @brand-secondary;
+                    fill: @brand-secondary;
                 }
             }
         }

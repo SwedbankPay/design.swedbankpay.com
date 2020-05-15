@@ -155,7 +155,7 @@ const UsageWithIcons = () => (
     <>
         <h2 id="usage-with-icons">Usage with icons</h2>
         <p>To use a button with an icon simply put the icon markup inside the <CodeTags type="primary" code={"<button>"} />.</p>
-        <p>Read more about icon usage here <Link to="/docs/core/icons">here</Link>.</p>
+        <p>Read more about icon usage here <Link to="/core/iconography">here</Link>.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <ButtonComponent icon="cloud" type="executive" label="Executive" />{"\n\n"}
