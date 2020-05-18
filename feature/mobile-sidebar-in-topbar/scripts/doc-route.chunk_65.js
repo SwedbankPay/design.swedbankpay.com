@@ -1,2 +1,2 @@
 (window.webpackJsonp=window.webpackJsonp||[]).push([[9],{431:function(t,e,n){"use strict";n.r(e);var a=n(1),r=n.n(a),i=n(50),o=n(321),d=n.n(o);e.default=function(){return r.a.createElement(i.RenderPage,{routes:d.a,appFolder:"GettingStarted",path:"/getting-started",initPath:"/getting-started/introduction"})}}}]);
-//# sourceMappingURL=doc-route.chunk_65.js.map?344cf2897bed11ae8fe0
+//# sourceMappingURL=doc-route.chunk_65.js.map?c7507c28c011034309aa
