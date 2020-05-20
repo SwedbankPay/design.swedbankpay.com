@@ -6,6 +6,7 @@ module.exports = [
         title: "Core",
         path: "/core",
         redirect: "/core/color",
+        appFolder: "Core",
         routes: [
             {
                 title: "Color",

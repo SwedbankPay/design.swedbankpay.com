@@ -3,6 +3,7 @@ module.exports = [
         title: "Getting Started",
         path: "/getting-started",
         redirect: "/getting-started/introduction",
+        appFolder: "GettingStarted",
         routes: [
             {
                 title: "Introduction",

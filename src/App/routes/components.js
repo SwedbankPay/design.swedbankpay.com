@@ -1,48 +1,13 @@
 module.exports = [
 
     /**
-     * Examples
-     */
-    // {
-    //     title: "Examples",
-    //     path: "/components/examples",
-    //     redirect: "/components/examples/login",
-    //     routes: [
-    //         {
-    //             title: "Login",
-    //             path: "/components/examples/login",
-    //             componentPath: "examples/login"
-    //         },
-    //         {
-    //             title: "Settings",
-    //             path: "/components/examples/settings",
-    //             componentPath: "examples/settings"
-    //         },
-    //         {
-    //             title: "FAQ",
-    //             path: "/components/examples/faq",
-    //             componentPath: "examples/faq"
-    //         },
-    //         {
-    //             title: "Customers",
-    //             path: "/components/examples/customers",
-    //             componentPath: "examples/customers"
-    //         },
-    //         {
-    //             title: "Sidebar",
-    //             path: "/components/examples/sidebar",
-    //             componentPath: "examples/sidebar"
-    //         }
-    //     ]
-    // },
-
-    /**
      * Components
      */
     {
         title: "Components",
         path: "/components",
         redirect: "/components/introduction",
+        appFolder: "ComponentsDocumentation",
         routes: [
             {
                 title: "Introduction",

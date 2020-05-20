@@ -3,7 +3,7 @@ import React from "react";
 import { RenderPage } from "../utils";
 
 const ComponentsDocumentation = () => (
-    <RenderPage path="/components" initPath="/components/introduction" />
+    <RenderPage path="/examples" initPath="/examples/login" />
 );
 
 export default ComponentsDocumentation;

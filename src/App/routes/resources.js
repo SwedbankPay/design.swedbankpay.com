@@ -6,6 +6,7 @@ module.exports = [
         title: "Resources",
         path: "/resources",
         redirect: "/resources/introduction",
+        appFolder: "Resources",
         routes: [
             {
                 title: "Introduction",

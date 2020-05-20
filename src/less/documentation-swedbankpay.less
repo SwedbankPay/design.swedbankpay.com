@@ -7,6 +7,71 @@
     flex-direction: column;
     min-height: 100%;
 
+    .dg-sidebar {
+        border-right: 1px solid @brand-secondary-light-3;
+        min-height: 100vh;
+        margin-top: 0;
+        width: 100%;
+
+        .sidebar-nav {
+            max-height: 100vh;
+        }
+
+        .sidebar-logo {
+            img {
+                width: 130px;
+            }
+        }
+
+        .sidebar-version {
+            padding: 1rem 0;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid @brand-secondary-light-3;
+
+            a {
+                color: @brand-secondary;
+                fill: @brand-secondary;
+                margin-left: 0.5rem;
+                border: none;
+
+                &:hover {
+                    color: darken(@brand-secondary, 20%);
+                    fill: darken(@brand-secondary, 20%);
+                }
+            }
+        }
+
+        .sidebar-contact {
+            a {
+                color: @brand-secondary;
+                fill: @brand-secondary;
+                display: flex;
+                border: none;
+                text-decoration: none;
+                align-items: center;
+                margin-left: 0.25rem;
+                margin-bottom: 0.5rem;
+
+                svg {
+                    overflow: visible;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    display: inline-block;
+                    vertical-align: top;
+                }
+
+                span {
+                    padding-left: 0.75rem;
+                }
+
+                &:hover {
+                    color: darken(@brand-secondary, 20%);
+                    fill: darken(@brand-secondary, 20%);
+                }
+            }
+        }
+    }
+
     .designguide-header {
         z-index: calc(@zindex-topbar + 1);
 

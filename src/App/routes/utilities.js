@@ -3,6 +3,7 @@ module.exports = [
         title: "Utilities",
         path: "/utilities",
         redirect: "/utilities/colors",
+        appFolder: "Utilities",
         routes: [
             {
                 title: "Borders",

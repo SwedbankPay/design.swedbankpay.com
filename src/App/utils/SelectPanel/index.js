@@ -3,6 +3,12 @@ import { NavLink, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 
 import SearchBox from "../SearchBox/index";
+import { GithubLogo, SlackLogo } from "@src/App/AppHeader/HeaderIcons";
+
+import pkg from "~/package.json";
+
+const basename = process.env.basename;
+const brand = process.env.brand;
 
 const { sidebar, topbar } = window.dg;
 
@@ -70,10 +76,16 @@ class SelectPanel extends Component {
 
     render () {
         return (
-            <div id={this.props.id} className="sidebar">
+            <div id={this.props.id} className="sidebar dg-sidebar">
                 {/* A fully functional search box will be added later. */}
                 {/* <SearchBox routes={this.props.routes} /> */}
                 <nav className="sidebar-nav">
+                    <a href="/" className="sidebar-logo d-none d-md-block">{"\n"}
+                        <img src={`${basename}img/${brand}-logo.svg`} alt="logo" />{"\n"}
+                    </a>
+                    <div className="sidebar-version">
+                        <a href={`https://github.com/${brand}/design.${brand}.com/releases/tag/${pkg.version}`} target="_blank" rel="noopener noreferrer">v.{process.env.version || pkg.version}</a>
+                    </div>
                     <ul className="main-nav-ul">
                         {this.props.routes.map((route, i) => {
                             const NavGroupWithRouter = withRouter(NavGroup);
@@ -81,6 +93,20 @@ class SelectPanel extends Component {
                             return <NavGroupWithRouter sidebarId={this.props.id} key={`nav_group_${i}`} route={route} index={i} />;
                         })}
                     </ul>
+                    <div className="sidebar-contact">
+                        <a href={`https://github.com/${brand}/design.${brand}.com`} target="_blank" rel="noopener noreferrer">
+                            <GithubLogo />
+                            <span>
+                                Github repository
+                            </span>
+                        </a>
+                        <a href="https://payex.slack.com/messages/C0L3W8B2S/" target="_blank" rel="noopener noreferrer">
+                            <SlackLogo />
+                            <span>
+                                Give us feedback on Slack
+                            </span>
+                        </a>
+                    </div>
                 </nav>
             </div>
         );
