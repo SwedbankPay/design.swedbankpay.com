@@ -1,5 +1,6 @@
 import React, { Suspense } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
+import PropTypes from "prop-types";
 
 import { RenderRoutes, LoadingComponent } from "../";
 import routes from "@src/App/routes/all";
@@ -13,5 +14,10 @@ const RenderPage = ({ path, initPath }) => (
         </Switch>
     </Suspense>
 );
+
+RenderPage.propTypes = {
+    path: PropTypes.string.isRequired,
+    initPath: PropTypes.string.isRequired
+};
 
 export default RenderPage;
