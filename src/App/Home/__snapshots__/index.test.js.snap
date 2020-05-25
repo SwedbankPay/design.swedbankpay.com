@@ -2,7 +2,7 @@
 
 exports[`Home: index renders 1`] = `
 <div
-  className="container-fluid"
+  className="doc-container"
 >
   <div
     className="alert alert-complex alert-warning mt-2"

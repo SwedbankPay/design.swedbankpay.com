@@ -9,7 +9,7 @@ const Home = () => {
     });
 
     return (
-        <div className="container-fluid">
+        <div className="doc-container">
             <div className="alert alert-complex alert-warning mt-2">
                 <header className="alert-header">
                     <i className="material-icons alert-icon">warning</i>

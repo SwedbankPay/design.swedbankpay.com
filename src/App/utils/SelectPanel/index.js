@@ -80,12 +80,15 @@ class SelectPanel extends Component {
                 {/* A fully functional search box will be added later. */}
                 {/* <SearchBox routes={this.props.routes} /> */}
                 <nav className="sidebar-nav">
-                    <a href="/" className="sidebar-logo d-none d-md-block">{"\n"}
-                        <img src={`${basename}img/${brand}-logo.svg`} alt="logo" />{"\n"}
+                    <a href="/" className="sidebar-top">{"\n"}
+                        <img className="d-none d-lg-block" src={`${basename}img/${brand}-logo-v-small.svg`} alt="logo" />{"\n"}
+                        <div className="sidebar-version">
+                            <div>
+                                Design Guide
+                            </div>
+                            Version {process.env.version || pkg.version}
+                        </div>
                     </a>
-                    <div className="sidebar-version">
-                        <a href={`https://github.com/${brand}/design.${brand}.com/releases/tag/${pkg.version}`} target="_blank" rel="noopener noreferrer">v.{process.env.version || pkg.version}</a>
-                    </div>
                     <ul className="main-nav-ul">
                         {this.props.routes.map((route, i) => {
                             const NavGroupWithRouter = withRouter(NavGroup);
@@ -94,6 +97,12 @@ class SelectPanel extends Component {
                         })}
                     </ul>
                     <div className="sidebar-contact">
+                        <a href={`https://github.com/${brand}/design.${brand}.com/releases/tag/${pkg.version}`} target="_blank" rel="noopener noreferrer">
+                            <GithubLogo />
+                            <span>
+                                Changelog
+                            </span>
+                        </a>
                         <a href={`https://github.com/${brand}/design.${brand}.com`} target="_blank" rel="noopener noreferrer">
                             <GithubLogo />
                             <span>

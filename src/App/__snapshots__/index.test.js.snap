@@ -33,7 +33,7 @@ exports[`Main: App renders 1`] = `
         className="row"
       >
         <div
-          className="col-xxl-2 col-md-3 d-none d-md-block"
+          className="col-xxl-2 col-lg-3 d-none d-lg-block"
         >
           <withRouter(SelectPanel)
             id="doc-sidebar"
@@ -407,7 +407,7 @@ exports[`Main: App renders 1`] = `
           />
         </div>
         <main
-          className="doc-view col-xxl-10 col-md-9"
+          className="doc-view col-xxl-10 col-lg-9"
         >
           <Suspense
             fallback={<LoadingComponent />}
