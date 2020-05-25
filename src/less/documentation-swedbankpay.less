@@ -8,13 +8,17 @@
     min-height: 100%;
 
     .dg-sidebar {
-        border-right: 1px solid @brand-secondary-light-3;
-        min-height: 100vh;
+
+        @media screen and (min-width: @screen-lg-min) {
+            border-right: 1px solid @brand-secondary-light-3;
+            min-height: 100vh;
+        }
+
         margin-top: 0;
         width: 100%;
-        padding-right: 1rem;
 
         .sidebar-nav {
+            padding-right: 1rem;
             max-height: 100vh;
         }
 
@@ -127,7 +131,7 @@
                 }
             }
 
-            @media screen and (max-width: @screen-md-min) {
+            @media screen and (max-width: @screen-lg-min) {
                 margin: 1rem 0;
 
                 a {
