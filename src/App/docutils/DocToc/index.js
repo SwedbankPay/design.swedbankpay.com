@@ -64,7 +64,7 @@ class DocToc extends Component {
     scrollToElement (element) {
         // window.scroll(0, element.offsetTop + 100);
         window.scrollTo({
-            top: element.offsetTop + 100,
+            top: element.offsetTop + 50,
             left: 0,
             behavior: "instant"
         });
