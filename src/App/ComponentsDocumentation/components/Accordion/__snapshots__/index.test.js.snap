@@ -110,5 +110,6 @@ exports[`Components: Accordion renders 1`] = `
   </p>
   <Overview />
   <AccordionGroup />
+  <JavascriptMethods />
 </DocContainer>
 `;

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { ComponentPreview, DocContainer } from "@docutils";
+import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import AccordionComponent from "@components/Accordion";
 import CodeTags from "@components/CodeTags";
 
@@ -51,6 +51,13 @@ const AccordionGroup = () => (
     </>
 );
 
+const JavascriptMethods = () => (
+    <>
+        <h2 id="javascript-methods">JavaScript methods</h2>
+        <JavascriptDocs componentName="accordion" open close />
+    </>
+);
+
 const Accordion = () => {
     useEffect(() => { accordion.init(); }, []);
 
@@ -61,6 +68,7 @@ const Accordion = () => {
             </p>
             <Overview />
             <AccordionGroup />
+            <JavascriptMethods />
         </DocContainer>
     );
 };
