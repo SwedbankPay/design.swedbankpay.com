@@ -83,7 +83,7 @@ class SelectPanel extends Component {
                     <a href="/" className="sidebar-top">{"\n"}
                         <img className="d-none d-lg-block" src={`${basename}img/${brand}-logo-v-small.svg`} alt="logo" />{"\n"}
                         <div className="sidebar-version">
-                            <div>
+                            <div className="sidebar-version-header">
                                 Design Guide
                             </div>
                             Version {process.env.version || pkg.version}

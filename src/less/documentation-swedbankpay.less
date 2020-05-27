@@ -48,7 +48,7 @@
                 border: none;
                 font-size: 0.875rem;
 
-                div {
+                .sidebar-version-header {
                     font-family: @brand-headline;
                     font-weight: @font-weight-normal;
                     font-size: 1.125rem;
@@ -92,54 +92,6 @@
 
     .designguide-header {
         z-index: calc(@zindex-topbar + 1);
-
-        .topbar-info {
-            display: flex;
-            justify-self: flex-end;
-            flex-direction: row;
-            padding-left: 2rem;
-            align-items: flex-start;
-            flex-wrap: wrap;
-
-            .topbar-info-version {
-                align-self: flex-end;
-                margin-right: 0.75rem;
-            }
-
-            .topbar-info-contact {
-                a {
-                    margin-right: 0.25rem;
-                }
-            }
-
-            a {
-                color: @text-gray;
-                fill: @text-gray;
-                border: none;
-
-                svg {
-                    overflow: visible;
-                    width: 2rem;
-                    height: 2rem;
-                    display: inline-block;
-                    vertical-align: top;
-                }
-
-                &:hover {
-                    color: darken(@text-gray, 20%);
-                    fill: darken(@text-gray, 20%);
-                }
-            }
-
-            @media screen and (max-width: @screen-lg-min) {
-                margin: 1rem 0;
-
-                a {
-                    color: @brand-secondary;
-                    fill: @brand-secondary;
-                }
-            }
-        }
     }
 
     pre {
