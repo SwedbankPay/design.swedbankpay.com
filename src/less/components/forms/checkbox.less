@@ -28,7 +28,7 @@
             height: @checkbox-height;
             width: @checkbox-width;
             background-color: @white;
-            border: 2px solid @list-gray;
+            border: 2px solid @brand-secondary;
             border-radius: 2px;
         }
 
@@ -42,7 +42,6 @@
 
         &:not(:checked):not([disabled]) {
             &:hover + label:before {
-                background-color: @brand-bg-1;
                 border-color: @brand-secondary-light-2;
             }
         }
@@ -54,11 +53,17 @@
         &[disabled] {
             + label:before {
                 background-color: @input-bg-disabled;
-                border-color: @checkbox-border-color;
+                border-color: @input-checked-bg-disabled;
             }
 
             &:checked + label:before {
                 background-color: @input-checked-bg-disabled;
+            }
+
+            + label,
+            &:before,
+            &:checked + label:before {
+                cursor: not-allowed;
             }
         }
     }

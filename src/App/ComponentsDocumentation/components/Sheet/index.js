@@ -83,6 +83,7 @@ const JavascriptMethods = () => (
 );
 
 class Sheet extends Component {
+
     componentDidMount () {
         sheet.init();
     }
@@ -90,6 +91,7 @@ class Sheet extends Component {
     render () {
         return (
             <DocContainer docToc>
+
                 <p className="lead">
                     Sheet is a container component that is anchored on the right side of the screen and can contain a number of different things.
                 </p>

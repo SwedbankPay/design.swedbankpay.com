@@ -11,6 +11,13 @@ const _sheets = _sheets || [];
 
 class Sheet {
     constructor (el) {
+        this._closeHandler = this._closeHandler.bind(this);
+        this._openHandler = this._openHandler.bind(this);
+        this._closeOutsideClickHandler = this._closeOutsideClickHandler.bind(this);
+        this.constructSheet(el);
+    }
+
+    constructSheet (el) {
         this._el = el;
         this.requireAction = el.dataset.requireAction;
         this.id = el.id;
@@ -20,10 +27,7 @@ class Sheet {
         this.closeBtns = this.id ? document.querySelectorAll(`[data-sheet-close=${this.id}]`) : null;
 
         if (this.closeIcon) {
-            this.closeIcon.addEventListener("click", e => {
-                e.preventDefault();
-                this.close();
-            });
+            this.closeIcon.addEventListener("click", this._closeHandler, false);
         }
 
         if (this.isOpen) {
@@ -33,11 +37,7 @@ class Sheet {
 
         // Close the sheet when clicking outside
         if (!this.requireAction) {
-            this._el.addEventListener("click", e => {
-                if (e.target.classList.contains("sheet-open")) {
-                    this.close();
-                }
-            });
+            this._el.addEventListener("click", this._closeOutsideClickHandler);
         }
 
         // Remove classes that prevent scrolling if user navigates away from page without closing a sheet
@@ -50,24 +50,34 @@ class Sheet {
         this._initializeButtons();
     }
 
+    _closeHandler (e) {
+        e.preventDefault();
+        this.close();
+    }
+
+    _openHandler (e) {
+        e.preventDefault();
+        this.open();
+    }
+
+    _closeOutsideClickHandler (e) {
+        if (e.target.classList.contains("sheet-open")) {
+            this.close();
+        }
+    }
+
     _initializeButtons () {
         // Init open buttons
         if (this.openBtns) {
             this.openBtns.forEach(btn => {
-                btn.addEventListener("click", e => {
-                    e.preventDefault();
-                    this.open();
-                });
+                btn.addEventListener("click", this._openHandler);
             });
         }
 
         // Init close buttons
         if (this.closeBtns) {
             this.closeBtns.forEach(btn => {
-                btn.addEventListener("click", e => {
-                    e.preventDefault();
-                    this.close();
-                });
+                btn.addEventListener("click", this._closeHandler);
             });
         }
     }
@@ -98,11 +108,19 @@ class Sheet {
         const toastContainer = document.querySelector("#toast-container");
 
         toastContainer ? toastContainer.setAttribute("style", "transition: margin 0.3s ease-in-out;") : null;
-
     }
 }
 
 const _createSheet = sheetQuery => {
+
+    if (_sheets.filter(sheet => sheet.id === sheetQuery.id).length > 0) {
+        const updatedSheetObject = _sheets.filter(sheet => sheet.id === sheetQuery.id)[0];
+
+        updatedSheetObject.constructSheet(sheetQuery);
+
+        return updatedSheetObject;
+    }
+
     const sheetObject = new Sheet(sheetQuery);
 
     _sheets.push(sheetObject);
@@ -134,7 +152,7 @@ const init = id => {
             return null;
         }
 
-        const sheetObjects = [...sheets].map(actionList => _createSheet(actionList));
+        const sheetObjects = [...sheets].map(sheet => _createSheet(sheet));
 
         _addEscListener();
 
@@ -142,13 +160,16 @@ const init = id => {
     }
 };
 
+const _closeSheetEscHandler = e => {
+    if (e.keyCode === 27 && document.body.classList.contains("sheet-open")) {
+        _sheets.forEach(sheet => sheet.isOpen ? sheet.close() : null);
+    }
+};
+
 const _addEscListener = () => {
     // Close sheet on esc
-    document.addEventListener("keydown", e => {
-        if (e.keyCode === 27 && document.body.classList.contains("sheet-open")) {
-            _sheets.forEach(sheet => sheet.isOpen ? sheet.close() : null);
-        }
-    });
+
+    document.addEventListener("keydown", _closeSheetEscHandler);
 };
 
 const close = id => closeComponent(id, "sheet", _sheets);

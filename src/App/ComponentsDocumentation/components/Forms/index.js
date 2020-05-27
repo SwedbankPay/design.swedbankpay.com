@@ -300,6 +300,36 @@ const DisabledFormComponents = () => (
                 <Button type="executive" label="Log in" btnType="submit" disabled />{"\n"}
             </form>
         </ComponentPreview>
+
+        <h3>Disable a <CodeTags type="secondary" code=".form-group" /></h3>
+        <p>
+            Add disable styling to a <CodeTags type="secondary" code=".form-group" /> by adding class <CodeTags type="secondary" code=".disabled" /> to it.
+            Note that the disabled form component should still have <CodeTags type="secondary" code="disabled" />.
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <form>
+                <fieldset>
+                    <legend>Log in</legend>
+                    <InputGroup
+                        id="form-group-disabled-username"
+                        type="text"
+                        autoComplete="username"
+                        label="Username"
+                        placeholder="Enter your username"
+                    />
+                    <InputGroup
+                        id="form-group-disabled-password"
+                        type="password"
+                        label="Password"
+                        autoComplete="current-password"
+                        placeholder="Enter your password"
+                        disabled
+                    />
+                    <Checkbox label="Remember me" id="form-group-disabled-checkbox" />
+                </fieldset>{"\n"}
+                <Button type="executive" label="Log in" btnType="submit" disabled />{"\n"}
+            </form>
+        </ComponentPreview>
     </>
 );
 

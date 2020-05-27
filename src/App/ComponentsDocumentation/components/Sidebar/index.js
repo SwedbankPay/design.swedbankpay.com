@@ -41,8 +41,8 @@ const SetActiveState = ({ componentName }) => (
             description={
                 <>
                     Note: This method is optional
-                    <br />
-                    <br />
+                    <br/>
+                    <br/>
 
                     Sets group, subgroup and leaf of the {componentName} to active depending on the parameters
                     passed. The paramater <CodeTags type="secondary" code="group-index" /> is the index of the group to be set active,
@@ -69,8 +69,8 @@ const RemoveActiveState = ({ componentName }) => (
             description={
                 <>
                     Note: This method is optional
-                    <br />
-                    <br />
+                    <br/>
+                    <br/>
 
                     Remove group, subgroup and leaf of the {componentName} active state depending on the parameters
                     passed. The paramater <CodeTags type="secondary" code="group-index" /> is the index of the group to have the active state removed,
@@ -96,8 +96,8 @@ const InitScrollListener = ({ componentName }) => (
             description={
                 <>
                     Note: This method is optional
-                    <br />
-                    <br />
+                    <br/>
+                    <br/>
 
                     Makes the {componentName} with id <CodeTags type="secondary" code="<sidebar-id>"/> listen to scroll events on the element
                     with id <CodeTags type="secondary" code="content-id"/>, and matches a leaf with the corresponding header
