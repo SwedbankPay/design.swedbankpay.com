@@ -20,10 +20,10 @@ const CenteredLoader = () => (
         <h2 id="centered-loader">Centered loader</h2>
         <p>
             To center the loader add class <CodeTags type="secondary" code=".loader-center" />.
-            <ComponentPreview language="html" showCasePanel codeFigure>
-                <div className="loader loader-center" />
-            </ComponentPreview>
         </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <div className="loader loader-center" />
+        </ComponentPreview>
     </>
 );
 

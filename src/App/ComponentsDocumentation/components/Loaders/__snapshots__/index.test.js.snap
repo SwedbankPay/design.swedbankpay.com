@@ -46,16 +46,16 @@ exports[`Documentation: Loaders CenteredLoader renders 1`] = `
       type="secondary"
     />
     .
-    <ComponentPreview
-      codeFigure={true}
-      language="html"
-      showCasePanel={true}
-    >
-      <div
-        className="loader loader-center"
-      />
-    </ComponentPreview>
   </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="loader loader-center"
+    />
+  </ComponentPreview>
 </Fragment>
 `;
 
