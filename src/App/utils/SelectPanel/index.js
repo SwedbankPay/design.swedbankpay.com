@@ -86,7 +86,9 @@ class SelectPanel extends Component {
                             <div className="sidebar-version-header">
                                 Design Guide
                             </div>
-                            Version {process.env.version || pkg.version}
+                            <small>
+                                Version {process.env.version || pkg.version}
+                            </small>
                         </div>
                     </a>
                     <ul className="main-nav-ul">
