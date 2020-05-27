@@ -43,9 +43,7 @@ export default class NavMenu {
         }
 
         if (this.navMenuElement) {
-            this.navMenuElement.addEventListener("mousedown", e => {
-                if (this.isOpen && !this._containsPoint(e.clientX, e.clientY)) { this.close(); }
-            });
+            this.navMenuElement.addEventListener("mousedown", this._closeHandlerNavMenuElement);
 
             try {
                 this.closeNavIcon.addEventListener("click", this._closeHandler);

@@ -130,11 +130,7 @@ const JavascriptMethods = () => (
 
 class Topbar extends Component {
     componentDidMount () {
-        topbar.init("demo-topbar-sidebar");
-        topbar.init("demo-topbar");
-        topbar.init("demo-topbar-1");
-        topbar.init("demo-topbar-png");
-        topbar.init("demo-topbar-1-png");
+        topbar.init();
         sidebar.init("topbar-sidebar");
     }
 
