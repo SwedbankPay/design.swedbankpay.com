@@ -1,2 +1,2 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[110],{370:function(e,n,t){"use strict";t.r(n);var a=t(1),c=t.n(a),r=t(17),i=t.n(r),o=function(e){var n=e.code,t=e.description;return c.a.createElement(c.a.Fragment,null,c.a.createElement("li",null,c.a.createElement("div",null,c.a.createElement("h3",{scope:"row"},n),c.a.createElement("p",{className:"javascript-doc-element-description"},t))))};o.propTypes={code:i.a.object.isRequired,description:i.a.object.isRequired},n.default=o}}]);
-//# sourceMappingURL=doc-route.chunk_81.js.map?daf576687210d8907fec
+(window.webpackJsonp=window.webpackJsonp||[]).push([[110],{376:function(e,a,n){"use strict";n.r(a);var s=n(1),t=n.n(s),c=n(17),i=function(e){var a=e.type,n=e.classNames;return t.a.createElement("i",{className:"material-icons".concat(n?" ".concat(n):"")},a)};i.propTypes={type:n.n(c).a.string.isRequired},a.default=i}}]);
+//# sourceMappingURL=doc-route.chunk_81.js.map?0f801fa4d388d0656638
