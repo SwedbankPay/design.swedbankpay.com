@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { renderToStaticMarkup } from "react-dom/server";
 import jsbeautifier from "js-beautify";
-import Highlight, { defaultProps } from "prism-react-renderer";
+import { defaultProps } from "prism-react-renderer";
 
 // NOTE: dangerousHTML prop is used when wanting to show html in the codefigure without encoding.
 
@@ -123,7 +123,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
         return (
             <figure>
                 {/* keep theme as undefined to apply default prism theme */}
-                <Highlight {...defaultProps} theme={undefined} code={code} language={language}>
+                {/* <Highlight {...defaultProps} theme={undefined} code={code} language={language}>
                     {({ className, style, tokens, getLineProps, getTokenProps }) => (
                         <pre className={className} style={style}>
                             {tokens.map((line, i) => (
@@ -137,7 +137,29 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                             ))}
                         </pre>
                     )}
-                </Highlight>
+                </Highlight> */}
+
+                <div className="code-view">
+                    <header className="code-view-header">
+                        {language.toUpperCase()}
+                    </header>
+                    <table className="code-view-table">
+                        <tbody>
+                            <tr>
+                                <td className="code-view-numbers">
+                                    <pre>
+                                        {(code).split("\n").map((line, i) => <React.Fragment key={i}>{i + 1}{"\n"}</React.Fragment>)}
+                                    </pre>
+                                </td>
+                                <td className="code-view-code">
+                                    <pre>
+                                        {(code).split("\n").map((line, i) => <React.Fragment key={i}>{line}{"\n"}</React.Fragment>)}
+                                    </pre>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </figure>
         );
     };
@@ -164,7 +186,8 @@ ComponentPreview.propTypes = {
     showCasePanel: PropTypes.bool,
     showCasePanelSm: PropTypes.bool,
     codeFigure: PropTypes.bool,
-    dangerousHTML: PropTypes.bool
+    dangerousHTML: PropTypes.bool,
+    negative: PropTypes.bool
 };
 
 export default ComponentPreview;

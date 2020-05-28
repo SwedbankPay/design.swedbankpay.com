@@ -74,7 +74,7 @@ We are also using the `DocContainer` component to sentralize the layout of the d
 
 ### Add MyExampleDocumentationComponent to the routes
 
-In `./src/App/routes/docs.js` under the components object add the following:
+In `./src/App/routes/components.js` under the components object add the following:
 
 ```javascript
     /**
@@ -82,8 +82,8 @@ In `./src/App/routes/docs.js` under the components object add the following:
      */
     {
         title: "Components",
-        path: "/docs/components",
-        redirect: "/docs/components/alerts",
+        path: "/components",
+        redirect: "/components/introduction",
         routes: [
             ...
             ...
