@@ -112,7 +112,7 @@ const InitScrollListener = ({ componentName }) => (
 const RemoveScrollListener = () => (
     <>
         <JavascriptDocElement
-            code={<CodeTags type="secondary" code="dg.sidebar.removeScrollListener(content-id)"/>}
+            code={<CodeTags type="secondary" code="dg.sidebar.removeScrollListener(<sidebar-id>, content-id)"/>}
             description={
                 <>
                     Note: This method is optional
@@ -130,6 +130,7 @@ const RemoveScrollListener = () => (
 const JavascriptMethods = () => (
     <>
         <h2 id="javascript-methods">JavaScript methods</h2>
+        <p className="pl-3 mb-0">Note: The sidebar should be initialized with ID</p>
         <JavascriptDocs componentName="sidebar" others={[SetActiveState, RemoveActiveState, InitScrollListener, RemoveScrollListener]} />
     </>
 );

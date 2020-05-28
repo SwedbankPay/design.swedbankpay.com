@@ -267,7 +267,7 @@ exports[`Components: Topbar TopbarSticky renders 1`] = `
           className="col-auto"
         >
           <Sidebar
-            id="dg-sidebar"
+            id="topbar-sticky-sidebar"
             sidebarNavList={
               Array [
                 Object {

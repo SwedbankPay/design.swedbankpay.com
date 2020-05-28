@@ -84,7 +84,7 @@ const TopbarSticky = () => (
                 <TopbarComponent id="demo-topbar-sticky" topbarContent={menu} wide="xl" logout sticky />
                 <div className="row">
                     <div className="col-auto">
-                        <SidebarComponent id="dg-sidebar" sidebarNavList={SidebarNavList} sticky />
+                        <SidebarComponent id="topbar-sticky-sidebar" sidebarNavList={SidebarNavList} sticky />
                     </div>
                     <main className="col main-content border-left">Main content things...</main>
                 </div>
@@ -132,6 +132,7 @@ class Topbar extends Component {
     componentDidMount () {
         topbar.init();
         sidebar.init("topbar-sidebar");
+        sidebar.init("topbar-sticky-sidebar");
     }
 
     render () {

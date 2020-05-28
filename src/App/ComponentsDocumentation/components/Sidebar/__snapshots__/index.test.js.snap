@@ -49,6 +49,11 @@ exports[`Components: Sidebar JavascriptMethods renders 1`] = `
   >
     JavaScript methods
   </h2>
+  <p
+    className="pl-3 mb-0"
+  >
+    Note: The sidebar should be initialized with ID
+  </p>
   <JavascriptDocs
     componentName="sidebar"
     others={
@@ -302,7 +307,7 @@ exports[`Components: Sidebar RemoveScrollListener renders 1`] = `
   <JavascriptDocElement
     code={
       <CodeTags
-        code="dg.sidebar.removeScrollListener(content-id)"
+        code="dg.sidebar.removeScrollListener(<sidebar-id>, content-id)"
         type="secondary"
       />
     }

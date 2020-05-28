@@ -63,11 +63,7 @@ class Sidebar extends PureComponent {
             const mainElement = document.getElementById("sidebar-example-content");
             const scrollToElement = document.getElementById(this.state.activePagePosition);
 
-            mainElement.scrollTo({
-                top: scrollToElement.offsetTop,
-                left: 0,
-                behavior: "instant"
-            });
+            mainElement.scrollTop = scrollToElement.offsetTop;
         }
     }
 
