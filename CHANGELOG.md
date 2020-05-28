@@ -22,6 +22,7 @@
     - Added .btn-link recommendation
   - Forms
     - Changed to use correct code-tags component
+    - Updated docs to reflect changes on has-error
   - Loaders
     - Removed invalid HTML in docs
   - Sidebar
@@ -35,6 +36,7 @@
   - Moved height property of input to be under form-control
   - Changed styling of disabled form components
   - Changed styling of checkboxes and radio buttons
+  - Added icon to display error when form-control has-error
 - Loaders
   - Added centered loader
 - Steps
@@ -44,6 +46,7 @@
   - Made it possible to have leaf and subgroups together
 - Input Group
   - Removed color property from input-group>from-control
+  - Added icon to display error when input-group has-error
 - Sheet
   - Fixed issues with sheet producing unnecessary EventListeners
   - Fixed issues with having multiple sheets/creating duplcate objects of same instance
