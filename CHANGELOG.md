@@ -27,6 +27,8 @@
   - Sidebar
     - Removed invalid HTML in docs
   - Removed Template from home page
+  - Code View
+    - Changed styling of component to present code
 - Topbar
   - Reversed icon of topbar-link-right
 - Forms
@@ -45,3 +47,5 @@
 - Sheet
   - Fixed issues with sheet producing unnecessary EventListeners
   - Fixed issues with having multiple sheets/creating duplcate objects of same instance
+- Code View
+  - Added code-view styling
