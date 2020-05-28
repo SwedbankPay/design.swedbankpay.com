@@ -125,6 +125,10 @@ const Validation = () => (
             To give users validation feedback on each input insert the message in the attributes <CodeTags type="secondary" code="success" /> and <CodeTags type="secondary" code="error" /> in
             the <CodeTags type="secondary" code=".help-block" /> element. To display an asterisk you have to include a label with your input element.
         </p>
+        <p>
+            <b>NOTE:</b> To include the <CodeTags type="secondary" code="warning"/>-icon, the input must be wrapped in a <CodeTags type="secondary" code=".input-group" /> and cannot have
+            any trailing <CodeTags type="secondary" code=".input-group-addons" />.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <form action="#" noValidate data-validate="">
                 <InputGroup

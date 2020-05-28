@@ -963,6 +963,27 @@ exports[`Documentation: Forms Validation renders 1`] = `
     />
      element. To display an asterisk you have to include a label with your input element.
   </p>
+  <p>
+    <b>
+      NOTE:
+    </b>
+     To include the 
+    <CodeTags
+      code="warning"
+      type="secondary"
+    />
+    -icon, the input must be wrapped in a 
+    <CodeTags
+      code=".input-group"
+      type="secondary"
+    />
+     and cannot have any trailing 
+    <CodeTags
+      code=".input-group-addons"
+      type="secondary"
+    />
+    .
+  </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
