@@ -124,6 +124,12 @@ module.exports = [
                 path: "/docs/components/code-tags",
                 componentPath: "components/CodeTags"
             },
+            // Commented out as a Code View page is not needed, but might be useful when testing and developing it further
+            // {
+            //     title: "Code View",
+            //     path: "/docs/components/code-view",
+            //     componentPath: "components/CodeView"
+            // },
             {
                 title: "Datepickers",
                 path: "/docs/components/datepickers",
