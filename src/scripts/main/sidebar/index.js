@@ -36,7 +36,7 @@ class Sidebar {
         activeSubGroups.length > 0 && [...activeSubGroups].map(activeSubGroup => activeSubGroup.classList.remove("active"));
     }
 
-    _setActiveStatus (element, selector, isScroll) {
+    _setActiveStatus (element, selector) {
 
         const activeElements = this.el.querySelectorAll(selector + SELECTORS.ACTIVE);
 
@@ -59,14 +59,6 @@ class Sidebar {
             }
 
         });
-
-        if (selector === SELECTORS.NAVLEAF && !isScroll) {
-            const activeGroups = this.el.querySelectorAll(SELECTORS.NAVGROUP + SELECTORS.ACTIVE);
-            const activeSubGroups = this.el.querySelectorAll(SELECTORS.NAVSUBGROUP + SELECTORS.ACTIVE);
-
-            [...activeGroups].filter(group => !group.querySelector(SELECTORS.NAVLEAF + SELECTORS.ACTIVE)).map(group => this._closeElement(group));
-            [...activeSubGroups].filter(subGroup => !subGroup.querySelector(SELECTORS.NAVLEAF + SELECTORS.ACTIVE)).map(subGroup => this._closeElement(subGroup));
-        }
     }
 
     _contentScrollListener (id, content, headers) {
@@ -78,13 +70,13 @@ class Sidebar {
                 const leaves = activeLeaf.parentElement.querySelectorAll(SELECTORS.NAVLEAF);
 
                 if (scrollNumber === -1) {
-                    this._setActiveStatus(leaves[0], SELECTORS.NAVLEAF, true);
+                    this._setActiveStatus(leaves[0], SELECTORS.NAVLEAF);
                 } else {
-                    this._setActiveStatus(leaves[scrollNumber], SELECTORS.NAVLEAF, true);
+                    this._setActiveStatus(leaves[scrollNumber], SELECTORS.NAVLEAF);
                 }
 
                 if (content.scrollTop + scrollBuffer >= content.scrollHeight - content.clientHeight) {
-                    this._setActiveStatus(leaves[leaves.length - 1], SELECTORS.NAVLEAF, true);
+                    this._setActiveStatus(leaves[leaves.length - 1], SELECTORS.NAVLEAF);
                 }
 
             }
