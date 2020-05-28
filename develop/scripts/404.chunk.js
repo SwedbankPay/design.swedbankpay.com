@@ -1,2 +1,2 @@
 (window.webpackJsonp=window.webpackJsonp||[]).push([[4],{427:function(e,n,t){"use strict";t.r(n);var a=t(1),o=t.n(a);n.default=function(){return o.a.createElement(o.a.Fragment,null,o.a.createElement("h1",null,"This is not the page you are looking for."))}}}]);
-//# sourceMappingURL=404.chunk.js.map?0f801fa4d388d0656638
+//# sourceMappingURL=404.chunk.js.map?f562fe0b39360d8700c1
