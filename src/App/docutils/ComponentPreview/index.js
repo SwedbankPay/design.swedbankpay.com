@@ -122,23 +122,6 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
 
         return (
             <figure>
-                {/* keep theme as undefined to apply default prism theme */}
-                {/* <Highlight {...defaultProps} theme={undefined} code={code} language={language}>
-                    {({ className, style, tokens, getLineProps, getTokenProps }) => (
-                        <pre className={className} style={style}>
-                            {tokens.map((line, i) => (
-                                <div key={line + i} {...getLineProps({ line,
-                                    key: i })}>
-                                    {line.map((token, key) => (
-                                        <span key={key} {...getTokenProps({ token,
-                                            key })} />
-                                    ))}
-                                </div>
-                            ))}
-                        </pre>
-                    )}
-                </Highlight> */}
-
                 <div className="code-view">
                     <header className="code-view-header">
                         {language.toUpperCase()}

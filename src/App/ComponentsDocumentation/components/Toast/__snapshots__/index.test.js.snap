@@ -182,7 +182,7 @@ exports[`Components: Toast Options renders 1`] = `
         <td>
           Custom icon for the toast. See 
           <Link
-            to="/core/iconogrphy"
+            to="/core/iconography"
           >
             icons
           </Link>
