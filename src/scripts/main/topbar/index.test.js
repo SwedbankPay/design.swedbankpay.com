@@ -125,24 +125,12 @@ describe("scripts: topbar", () => {
 
             topbar.init();
             NavMenu.mock.instances[0].isOpen = true;
+            NavMenu.mock.instances[0].close.mockReturnValueOnce("true");
 
             document.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape" }));
 
             expect(NavMenu.mock.instances[0].close).toHaveBeenCalled();
         });
-
-        // it("Escape closes an open navMenu", () => {
-        //     ReactDOM.render(<Topbar navOpen />, div);
-        //     document.body.classList.add("has-vscroll");
-
-        //     topbar.init();
-        //     NavMenu.mock.instances[0].isOpen = true;
-        //     NavMenu.mock.instances[0].close.mockReturnValueOnce("true");
-
-        //     document.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape" }));
-
-        //     expect(NavMenu.mock.instances[0].close).toHaveBeenCalled();
-        // });
 
         it("does nothing if a key other than Escape is pressed", () => {
             ReactDOM.render(<Topbar navOpen />, div);

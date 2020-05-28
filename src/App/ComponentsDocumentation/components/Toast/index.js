@@ -65,7 +65,7 @@ const Options = () => (
                     <td>icon</td>
                     <td>String</td>
                     <td><CodeTags type="secondary" code={"\"\""} /></td>
-                    <td>Custom icon for the toast. See <Link to="/core/iconogrphy">icons</Link> for more info.</td>
+                    <td>Custom icon for the toast. See <Link to="/core/iconography">icons</Link> for more info.</td>
                 </tr>
                 <tr>
                     <td>displayLength</td>

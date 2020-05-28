@@ -191,11 +191,11 @@ const removeScrollListener = (id, contentId) => {
 const _createSidebar = sidebarQuery => {
 
     if (_sidebars.filter(sidebar => sidebar.id === sidebarQuery.id).length > 0) {
-        const updatedSheetObject = _sidebars.filter(sidebar => sidebar.id === sidebarQuery.id)[0];
+        const updatedSidebarObject = _sidebars.filter(sidebar => sidebar.id === sidebarQuery.id)[0];
 
-        updatedSheetObject.constructSidebar(sidebarQuery);
+        updatedSidebarObject.constructSidebar(sidebarQuery);
 
-        return updatedSheetObject;
+        return updatedSidebarObject;
     }
 
     const sidebarObject = new Sidebar(sidebarQuery);

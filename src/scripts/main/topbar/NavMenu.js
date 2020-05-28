@@ -35,7 +35,7 @@ export default class NavMenu {
         // Find focusable elements
         this.focusedElemBeforeNav = null;
         this.focusableElements = [...this.linkContainer.querySelectorAll(FOCUSELEMENTS)];
-        this._setFirstTabStop(0); // Initially set to 1 to ignore close button during tabbing, when topbar-nav is not open
+        this._setFirstTabStop(0);
         this.lastTabStop = this.focusableElements[this.focusableElements.length - 1];
 
         if (this.btnElement) {
@@ -73,22 +73,6 @@ export default class NavMenu {
     }
 
     _initListeners () {
-        // this.navMenuElement.addEventListener("keydown", e => {
-        //     if (e.key === "Tab") {
-        //         // SHIFT + TAB
-        //         if (e.shiftKey) {
-        //             if (document.activeElement === this.firstTabStop) {
-        //                 e.preventDefault();
-        //                 this.lastTabStop.focus();
-        //             }
-
-        //         // TAB
-        //         } else if (document.activeElement === this.lastTabStop) {
-        //             e.preventDefault();
-        //             this.firstTabStop.focus();
-        //         }
-        //     }
-        // });
 
         // Closing menu for clicking on links in SPA's.
         this.navMenuElement.querySelectorAll("a")
