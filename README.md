@@ -62,12 +62,13 @@ it, **PayEx**. Check out the `package.json` file for additional scripts.
 When importing different components in the files you create, you can use
 shortcuts for common paths. The shortcuts are as following:
 
-| Shortcut | Description |
-|:--------:|:------------|
-|   `~`    | root of the project (example `import package from "~/package";`)
-|   `$`    | `~/src`-folder (example `import dg from "$/scripts";`)
-|   `@`    |  `~/src/App/components`-folder (example `import Alert from "@components/Alert";`)
-|   `#`    | `~/src/App/Documentation/utils`-folder (example `import { DocToc } from "@docutils";`)
+|   Shortcut    | Description                                                                            |
+| :-----------: | :------------------------------------------------------------------------------------- |
+|      `~`      | root of the project (example `import package from "~/package";`)                       |
+|    `@src`     | `~/src`-folder (example `import dg from "@src/scripts";`)                              |
+| `@components` | `~/src/App/components`-folder (example `import Alert from "@components/Alert";`)       |
+|  `@docutils`  | `~/src/App/Documentation/utils`-folder (example `import { DocToc } from "@docutils";`) |
+| `@constants`  | `~/src/constants`-folder                                                               |
 
 The shortcuts are specified in the `~/.babelrc`-file. Specifying the
 prefix-shortcuts in the `~/jsconfig.json`-file enables path intellisense for
@@ -178,8 +179,8 @@ Code and documentation © Swedbank Pay and contributors, released under the [MIT
 
 Inspired by [Bootstrap][bootstrap] and [Materialize][materialize].
 
-  [version-badge]:      https://img.shields.io/badge/Version-4.6.1-blue.svg
-  [version-tag]:        https://github.com/swedbankpay/design.swedbankpay.com/releases/tag/4.6.1
+  [version-badge]:      https://img.shields.io/badge/Version-4.7.0-blue.svg
+  [version-tag]:        https://github.com/swedbankpay/design.swedbankpay.com/releases/tag/4.7.0
   [appveyor-badge]:     https://ci.appveyor.com/api/projects/status/1dii19sqw1m7xtsn/branch/master?svg=true
   [appveyor-status]:    https://ci.appveyor.com/project/PayEx/design-swedbankpay-com/branch/master
   [appveyor]:           https://www.appveyor.com/

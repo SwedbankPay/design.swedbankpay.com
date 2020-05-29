@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Documentation: Loaders Basic Usage renders 1`] = `
+<Fragment>
+  <h2
+    id="basic-usage"
+  >
+    Basic usage
+  </h2>
+  <p>
+    To use a default loader add 
+    <CodeTags
+      code=".loader"
+      type="secondary"
+    />
+     to a 
+    <CodeTags
+      code="<div>"
+      type="primary"
+    />
+    .
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="loader"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Loaders CenteredLoader renders 1`] = `
+<Fragment>
+  <h2
+    id="centered-loader"
+  >
+    Centered loader
+  </h2>
+  <p>
+    To center the loader add class 
+    <CodeTags
+      code=".loader-center"
+      type="secondary"
+    />
+    .
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="loader loader-center"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Loaders Muted Loader renders 1`] = `
+<Fragment>
+  <h2
+    id="muted-loader"
+  >
+    Muted loader
+  </h2>
+  <p>
+    Use class 
+    <CodeTags
+      code=".loader-muted"
+      type="secondary"
+    />
+     to make the loader muted.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="loader loader-muted"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Loaders Sizes renders 1`] = `
+<Fragment>
+  <h2
+    id="sizes"
+  >
+    Sizes
+  </h2>
+  <p>
+    In addition to 
+    <CodeTags
+      code=".loader"
+      type="secondary"
+    />
+     you can use 
+    <CodeTags
+      code=".loader-sm"
+      type="secondary"
+    />
+     and 
+    <CodeTags
+      code=".loader-lg"
+      type="secondary"
+    />
+     to decrease or increase the size of the loader.
+  </p>
+  <h3>
+    Small
+  </h3>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="loader loader-sm"
+    />
+  </ComponentPreview>
+  <h3>
+    Large
+  </h3>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="loader loader-lg"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Loaders renders 1`] = `
+<DocContainer
+  docToc={true}
+>
+  <p
+    className="lead"
+  >
+    Use loaders to indicate to the user that your web application is loading.
+  </p>
+  <BasicUsage />
+  <CenteredLoader />
+  <Sizes />
+  <MutedLoader />
+</DocContainer>
+`;

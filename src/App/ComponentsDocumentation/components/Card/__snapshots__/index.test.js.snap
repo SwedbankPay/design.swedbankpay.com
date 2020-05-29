@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Documentation: Card GridCard renders 1`] = `
+<Fragment>
+  <h2
+    id="card-with-grid"
+  >
+    Card with grid
+  </h2>
+  <p>
+    Use our 
+    <Link
+      to="/core/grid"
+    >
+      grid
+    </Link>
+     along with cards to control their size and how they are displayed on different screen resolutions. Make sure to add 
+    <CodeTags
+      code=".d-flex"
+      type="secondary"
+    />
+     to the wrapper if you want the cards to be of equal height when next to each other.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-12 col-lg-6 col-xl-4 d-flex"
+      >
+        <Card
+          bodyClass="d-flex flex-column"
+          btn={true}
+          btnClass="btn-block mt-auto"
+          smallText="Small card text"
+          text="Card text"
+          titleTxt="My grid card"
+          type="primary"
+        >
+          <MediaObject
+            heading="75%"
+            icon="verified_user"
+            muted={true}
+            size="sm"
+            text="Complete"
+            textSmall={true}
+          />
+        </Card>
+      </div>
+      <div
+        className="col-12 col-lg-6 col-xl-4 d-flex"
+      >
+        <Card
+          bodyClass="d-flex flex-column"
+          btn={true}
+          btnClass="btn-block mt-auto"
+          smallText="This is some small text"
+          textSection={
+            Array [
+              "This is a lot of text",
+              "With some more text",
+              "And then even some more",
+              "Is it really possible to have this much text in one card?",
+              "Yes!",
+            ]
+          }
+          titleTxt="My grid card"
+          type="primary"
+        />
+      </div>
+      <div
+        className="col-12 col-lg-6 col-xl-4 d-flex"
+      >
+        <Card
+          footerLinkTxt="Footer link"
+          imgSrc="https://picsum.photos/300/?random"
+          text="This is a card with an image and body"
+          titleTxt="My grid card"
+          type="primary"
+        />
+      </div>
+    </div>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Card Overview renders 1`] = `
+<Fragment>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <p>
+    Cards support a wide variety of content, including images, text, list groups, links, and more. Make sure to restrain the width of your card unless you wish for it to fill the wrapping component.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+    showCasePanelSm={true}
+  >
+    <Card
+      footerTxt="Footer text"
+      imgSrc="https://picsum.photos/300/?random"
+      text="This paragraph contains some text related to this card."
+      titleTxt="Card title"
+      type="primary"
+    />
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Card renders 1`] = `
+<DocContainer
+  docToc={true}
+>
+  <p
+    className="lead"
+  >
+    Card is a flexible colored box which fills the width of its parent element.
+  </p>
+  <Overview />
+  <GridCard />
+  <CardTypes />
+</DocContainer>
+`;

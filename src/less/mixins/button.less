@@ -111,11 +111,12 @@
 }
 
 // Button sizes
-.button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) {
-    padding: @padding-vertical @padding-horizontal;
+.button-size(@padding-horizontal; @height; @font-size; @line-height; @border-radius) {
+    padding: 0 @padding-horizontal;
     font-size: @font-size;
     line-height: @line-height;
     border-radius: @border-radius;
+    height: @height;
 }
 
 .btn-loader-variant(@max-height; @min-height; @width; @margin; @font-size; @btn-height) {

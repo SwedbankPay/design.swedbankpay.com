@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Utilities: index renders 1`] = `
+<RenderPage
+  initPath="/utilities/colors"
+  path="/utilities"
+/>
+`;

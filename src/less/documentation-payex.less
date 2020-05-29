@@ -7,32 +7,93 @@
     flex-direction: column;
     min-height: 100%;
 
-    .designguide-header {
-        .topbar-info {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
+    .dg-sidebar {
 
+        @media screen and (min-width: @screen-lg-min) {
+            border-right: 1px solid @brand-secondary-light-3;
+            min-height: 100vh;
+        }
+
+        margin-top: 0;
+        width: 100%;
+
+        .sidebar-nav {
+            padding-right: 1rem;
+            max-height: 100vh;
+        }
+
+        .main-nav-ul {
+            border-bottom: 1px solid @brand-secondary-light-3;
+            padding-bottom: 1rem;
+        }
+
+        .sidebar-top {
+            padding-bottom: 1rem;
+            margin: 1rem 0;
+            border-bottom: 1px solid @brand-secondary-light-3;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+
+            img {
+                margin-right: 1.5rem;
+                display: flex;
+                width: 30px;
+            }
+
+            .sidebar-version {
+                display: block;
+
+                .sidebar-version-header {
+                    font-family: @brand-headline;
+                    font-weight: @font-weight-normal;
+                    color: @brand-secondary;
+                    font-size: 1.125rem;
+                    line-height: 1.5rem;
+                }
+
+                .small,
+                small {
+                    color: @brand-secondary;
+                }
+            }
+        }
+
+
+        .sidebar-contact {
             a {
-                margin-left: 5px;
-                color: @text-muted;
-                fill: @text-muted;
+                color: @brand-secondary;
+                fill: @brand-secondary;
+                display: flex;
                 border: none;
+                text-decoration: none;
+                align-items: center;
+                margin: 0.5rem 0;
+                height: 40px;
 
                 svg {
                     overflow: visible;
-                    width: 2rem;
-                    height: 2rem;
+                    width: 1.5rem;
+                    height: 1.5rem;
                     display: inline-block;
                     vertical-align: top;
                 }
 
+                span {
+                    padding-left: 0.75rem;
+                }
+
                 &:hover {
-                    color: darken(@text-muted, 20%);
-                    fill: darken(@text-muted, 20%);
+                    color: darken(@brand-secondary, 20%);
+                    fill: darken(@brand-secondary, 20%);
+                    text-decoration: underline;
                 }
             }
         }
+    }
+
+    .designguide-header {
+        z-index: calc(@zindex-topbar + 1);
     }
 
     pre {

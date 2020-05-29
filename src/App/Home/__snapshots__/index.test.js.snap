@@ -2,10 +2,10 @@
 
 exports[`Home: index renders 1`] = `
 <div
-  className="documentation container pt-3 pb-3"
+  className="doc-container"
 >
   <div
-    className="alert alert-complex alert-warning"
+    className="alert alert-complex alert-warning mt-2"
   >
     <header
       className="alert-header"
@@ -45,20 +45,20 @@ exports[`Home: index renders 1`] = `
             <i
               className="material-icons material-icons-large text-white"
             >
-              desktop_windows
+              play_circle_outline
             </i>
           </div>
           <h2>
-            Documentation
+            Get started
           </h2>
           <p>
-            User interface components for websites and web applications
+            Information on how to get started.
           </p>
           <Link
             className="btn btn-guiding btn-outline btn-block mt-auto"
-            to="/docs/getting-started/introduction"
+            to="/getting-started"
           >
-            Documentation
+            Get started
           </Link>
         </div>
       </div>
@@ -78,20 +78,20 @@ exports[`Home: index renders 1`] = `
             <i
               className="material-icons material-icons-large text-white"
             >
-              list_alt
+              desktop_windows
             </i>
           </div>
           <h2>
-            Templates
+            Components
           </h2>
           <p>
-            Document templates, usage description and tips.
+            User interface components for websites and web applications
           </p>
           <Link
             className="btn btn-guiding btn-outline btn-block mt-auto"
-            to="/tmpl"
+            to="/components"
           >
-            Templates
+            Components
           </Link>
         </div>
       </div>
@@ -122,7 +122,7 @@ exports[`Home: index renders 1`] = `
           </p>
           <Link
             className="btn btn-guiding btn-outline btn-block mt-auto"
-            to="/res/getting-started/introduction"
+            to="/resources"
           >
             Resources
           </Link>

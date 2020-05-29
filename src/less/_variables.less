@@ -90,7 +90,7 @@
 
 /* Border colors */
 @dialog-border:                             1px solid @light-gray;
-@checkbox-border-color:                     @list-gray;
+@checkbox-border-color:                     @brand-secondary;
 
 @color-muted:                               fade(@text-color, 75%);
 @color-muted-hover:                         fade(@text-color, 85%);
@@ -210,6 +210,9 @@
 @zindex-sheet:                              3100;
 @zindex-tooltip:                            9001;
 @zindex-toast:                              10000;
+
+/* Material Icons */
+@material-icons-default-font-size:          1.25rem;
 
 /*
  * Grid
@@ -394,11 +397,14 @@
  * ==========================================================================
  */
 
-@btn-font-size:                             1.8rem;
+@btn-font-size:                             1.125rem;
 @btn-min-width:                             112px;
 
 @btn-font-size-sm:                          1.6rem;
 @btn-font-size-xs:                          1.2rem;
+
+@btn-padding-horizontal:                    1rem;
+@btn-default-height:                        3rem;
 
 @btn-border-radius-base:                    @border-radius-base;
 @btn-border-radius-large:                   @border-radius-base;
@@ -456,11 +462,12 @@
 @input-padding-y:                           0.375rem;
 @input-padding-x:                           0.75rem;
 @input-line-height:                         @line-height-base;
+@input-form-control-height:                 3rem;
 
 @input-color:                               @brand-secondary;
 @input-bg:                                  @white;
-@input-bg-disabled:                         @brand-bg-gray;
-@input-checked-bg-disabled:                 @list-gray;
+@input-bg-disabled:                         @white;
+@input-checked-bg-disabled:                 @brand-secondary-light-3;
 @input-border-color:                        @border-color;
 @input-addon-color:                         @brand-secondary;
 @input-addon-bg:                            @brand-bg-gray;
@@ -478,7 +485,7 @@
 @select-option-margin:                      (@base-margin * 0.187) (@base-margin * 0.375);
 
 /* Checkbox */
-@checkbox-checked-color:                    @brand-secondary-light-1;
+@checkbox-checked-color:                    @brand-secondary;
 
 @checkbox-height:                           1.375rem;
 @checkbox-width:                            @checkbox-height; /* This also controls radio and togglebox */
@@ -585,10 +592,10 @@
  * ==========================================================================
  */
 
-@list-item-padding:                         5.4rem 0 0 0;
-@list-item-padding-desktop-top:             6rem;
+@list-item-padding:                         4.25rem 0 0 0;
+@list-item-padding-desktop-top:             4.25rem;
 @list-item-padding-desktop:                 @list-item-padding-desktop-top 0 1.2rem 0;
-@list-item-padding-desktop-vertical:        2rem 1.5rem 2rem 7rem;
+@list-item-padding-desktop-vertical:        2rem 1.5rem 2rem 5.25rem;
 
 @circle-size:                               30px;
 @circle-size-desktop:                       40px;
@@ -596,8 +603,8 @@
 @vertical-left:                             1.7rem;
 @vertical-margin:                           (@circle-size-desktop / 2) - (@line-width-desktop / 2);
 
-@line-width:                                3px;
-@line-width-desktop:                        5px;
+@line-width:                                2px;
+@line-width-desktop:                        2px;
 
 /*
  * Tabs
@@ -621,14 +628,17 @@
  * ==========================================================================
  */
 
-@topbar-height:                             85px;
-@topbar-border-top:                         0.5rem solid @brand-primary;
+@topbar-height:                             80px;
+@topbar-border-width:                       0.5rem;
+@topbar-header-height:                      calc(@topbar-height + @topbar-border-width);
+@topbar-border-top:                         @topbar-border-width solid @brand-primary;
 @topbar-nav-width:                          300px;
 @topbar-nav-slide-width:                    240px;
 @topbar-back-btn-width:                     40px; /* This does not actually control the width of the button... [EH] */
 @topbar-slide-prev-pos:                     260px;
 @topbar-slide-transition:                   0.5s ease;
 @topbar-background-transition:              background-color 0.5s ease-in;
+@topbar-link-container-width:               288px;
 
 @topbar-margin:                             @base-margin + @base-margin-xs;
 @topbar-padding:                            @base-padding + @base-margin-xs;

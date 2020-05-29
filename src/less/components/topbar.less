@@ -35,6 +35,7 @@
 
     .topbar-logo {
         width: 130px;
+        min-width: 130px;
         background-size: cover;
         border: none;
         display: flex;
@@ -75,23 +76,150 @@
         }
     }
 
+    .topbar-close {
+        display: none;
+        user-select: none;
+        background: none;
+        font-weight: bold;
+        position: absolute;
+        left: 1.25rem;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+
+        &:hover,
+        &:focus,
+        &.focus {
+            color: @brand-secondary-dark-2;
+            text-decoration: none;
+        }
+
+        &[active],
+        &:active,
+        &.active {
+            outline: 0;
+            background-image: none;
+            box-shadow: none;
+
+            &:focus,
+            &.focus {
+                box-shadow: none;
+            }
+        }
+
+        .material-icons {
+            margin: 0;
+        }
+    }
+
     > .topbar-link-right {
         display: none;
     }
 
     .topbar-nav {
-        position: fixed;
-        top: 0;
+        position: absolute;
+        top: calc((@topbar-height + @topbar-border-width) - 16px); // - 16px is due to the drop shadow of the sticky topbar
         right: 0;
         width: 100%;
-        height: 100%;
+        height: calc(100vh - (@topbar-height + @topbar-border-width - 8px));
         z-index: @zindex-sheet-backdrop;
         background: transparent;
         display: none;
+        border-top: solid 1px @brand-bg-gray;
+
+        .sidebar {
+            display: none;
+            position: relative;
+            padding-left: 1rem;
+            margin-top: 0;
+            height: auto;
+
+            .sidebar-nav {
+                max-height: none;
+                overflow-y: visible;
+
+                .main-nav-ul {
+                    .nav-group {
+                        &.active {
+                            .nav-group-heading {
+                                color: @brand-secondary;
+                            }
+                        }
+
+                        .nav-group-heading {
+                            &:hover,
+                            &:focus {
+                                color: @brand-secondary;
+
+                                span {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+
+                        .nav-ul {
+                            .nav-subgroup {
+                                &.active {
+                                    > .nav-group-heading {
+                                        color: @brand-secondary;
+                                    }
+                                }
+
+                                .nav-subgroup-heading {
+                                    &:hover,
+                                    &:focus {
+                                        color: @brand-secondary;
+                                    }
+                                }
+                            }
+
+                            .nav-leaf {
+                                &.active {
+                                    &:before {
+                                        background-color: @brand-secondary;
+                                    }
+
+                                    a {
+                                        color: @brand-secondary;
+                                    }
+                                }
+
+                                &:active,
+                                &:hover {
+                                    &:before {
+                                        background-color: @brand-secondary;
+                                    }
+
+                                    a {
+                                        color: @brand-secondary;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .topbar-nav-header {
+            position: relative;
+            display: none;
+            height: @topbar-header-height;
+            justify-content: center;
+            align-items: center;
+            background-color: @white;
+
+            .topbar-close {
+                top: calc(@topbar-header-height / 2 - @font-size-large / 2);
+                left: 1rem;
+            }
+        }
 
         .topbar-close {
             top: 1rem;
             right: 2rem;
+            left: auto;
             display: inline-flex;
             align-items: center;
             position: absolute;
@@ -143,11 +271,24 @@
             .topbar-link-container {
                 animation: slide-in 0.5s ease forwards;
 
+                .sidebar {
+                    display: block;
+                }
+
+                .topbar-nav-header {
+                    display: flex;
+                }
+
+                > a:first-of-type {
+                    padding-top: 3rem;
+                }
+
                 > a {
                     color: @brand-secondary;
+                    padding-left: 1rem;
 
                     span {
-                        margin-left: 2rem;
+                        margin-left: 1rem;
                     }
 
                     .material-icons + span {
@@ -174,21 +315,26 @@
         }
 
         .topbar-link-container {
-            width: 300px;
-            position: fixed;
+            width: @topbar-link-container-width;
+            position: absolute;
             top: 0;
             bottom: 0;
-            background-color: @brand-bg-1;
+            background-color: @white;
             overflow-x: hidden;
             overflow-y: auto;
             z-index: @zindex-topbar-nav;
-            padding: 3rem 2rem;
+            padding: 0;
             align-items: center;
             transform: translateX(-100%);
+
+            .sidebar:not(:first-child) {
+                margin-left: 1.5rem;
+            }
 
             > a {
                 font-family: @brand-headline;
                 font-weight: @font-weight-normal;
+                font-size: 1.125rem;
                 color: @text-gray;
                 cursor: pointer;
                 text-decoration: none;
@@ -205,36 +351,16 @@
                 &:hover {
                     > span {
                         &:before {
-                            width: 100%;
-                            transition: width 0.4s;
+                            display: none;
                         }
+
+                        text-decoration: underline;
                     }
                 }
 
                 &.active {
-                    color: @black;
-
                     > span {
-                        &:before {
-                            width: 100%;
-                        }
-                    }
-                }
-
-                > span {
-                    position: relative;
-
-                    &:before {
-                        content: "";
-                        position: absolute;
-                        background-color: @brand-primary;
-                        height: 4px;
-                        bottom: -4px;
-                        left: 0;
-                        right: 0;
-                        margin-left: auto;
-                        margin-right: auto;
-                        width: 0;
+                        text-decoration: underline;
                     }
                 }
             }
@@ -273,9 +399,9 @@
 
     .topbar-link-right {
         margin-left: auto;
+        margin-right: 1rem;
         padding: 0;
         align-items: center;
-        flex-direction: row-reverse;
         font-family: @brand-headline;
         font-weight: @font-weight-normal;
         color: @brand-secondary-dark-2;
@@ -288,6 +414,7 @@
         display: flex;
         position: static;
         flex-grow: 1;
+        height: 100%;
 
         .topbar-close {
             display: none;
@@ -308,9 +435,12 @@
                 &:hover {
                     > span {
                         &:before {
+                            display: block;
                             width: 100%;
                             transition: width 0.4s;
                         }
+
+                        text-decoration: none;
                     }
                 }
 
@@ -319,6 +449,9 @@
                         &:before {
                             width: 100%;
                         }
+
+                        text-decoration: none;
+                        color: @black;
                     }
                 }
 
@@ -349,8 +482,8 @@
 
             > *:not(.close-topbar-nav):not(.topbar-link-right) {
                 text-decoration: none;
-                margin-left: 1.25rem;
-                margin-right: 1.25rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
             }
 
             .close-topbar-nav {

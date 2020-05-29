@@ -4,6 +4,9 @@ import { createBrowserHistory } from "history";
 
 import AppHeader from "./AppHeader";
 import { LoadingComponent } from "./utils";
+import SelectPanel from "./utils/SelectPanel";
+
+import routes from "./routes/all";
 
 const { topbar } = window.dg;
 
@@ -27,9 +30,17 @@ const ScrollToTopComponent = withRouter(ScrollToTop);
 
 const Home = React.lazy(() => import(/* webpackChunkName: "home.chunk" */ "./Home/index.js"));
 
-const Documentation = React.lazy(() => import(/* webpackChunkName: "documentation.chunk" */ "./Documentation/index.js"));
+const GettingStarted = React.lazy(() => import(/* webpackChunkName: "getting-started.chunk" */ "./GettingStarted/index.js"));
 
-const Resources = React.lazy(() => import(/* webpackChunkName: "templates.chunk" */ "./Resources/index.js"));
+const Components = React.lazy(() => import(/* webpackChunkName: "components.chunk" */ "./ComponentsDocumentation/index.js"));
+
+const Core = React.lazy(() => import(/* webpackChunkName: "core.chunk" */ "./Core/index.js"));
+
+const Examples = React.lazy(() => import(/* webpackChunkName: "examples.chunk" */ "./Examples/index.js"));
+
+const Utilities = React.lazy(() => import(/* webpackChunkName: "utilities.chunk" */ "./Utilities/index.js"));
+
+const Resources = React.lazy(() => import(/* webpackChunkName: "resources.chunk" */ "./Resources/index.js"));
 
 const ErrorPage404 = React.lazy(() => import(/* webpackChunkName: "404.chunk" */ "./ErrorPage404/index.js"));
 
@@ -58,15 +69,28 @@ class App extends Component {
             <Router basename={BASENAME} history={history}>
                 <ScrollToTopComponent>
                     <AppHeader />
-                    <Suspense fallback={<LoadingComponent />}>
-                        <Switch>
-                            <Route exact path="/" component={Home} />
-                            <Route path="/docs" component={Documentation} />
-                            <Route path="/res" component={Resources} />
-                            <Route path="/404" component={ErrorPage404} />
-                            <Route component={ErrorPage404} />
-                        </Switch>
-                    </Suspense>
+                    <div className="documentation">
+                        <div className="row">
+                            <div className="col-xxl-2 col-lg-3 d-none d-lg-block">
+                                <SelectPanel id="doc-sidebar" routes={routes} />
+                            </div>
+                            <main className="doc-view col-xxl-10 col-lg-9">
+                                <Suspense fallback={<LoadingComponent />}>
+                                    <Switch>
+                                        <Route exact path="/" component={Home} />
+                                        <Route path="/getting-started" component={GettingStarted} />
+                                        <Route path="/components" component={Components} />
+                                        <Route path="/core" component={Core} />
+                                        <Route path="/examples" component={Examples} />
+                                        <Route path="/utilities" component={Utilities} />
+                                        <Route path="/resources" component={Resources} />
+                                        <Route path="/404" component={ErrorPage404} />
+                                        <Route component={ErrorPage404} />
+                                    </Switch>
+                                </Suspense>
+                            </main>
+                        </div>
+                    </div>
                 </ScrollToTopComponent>
             </Router>
         );

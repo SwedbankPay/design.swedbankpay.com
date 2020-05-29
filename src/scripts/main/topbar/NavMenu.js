@@ -10,11 +10,21 @@ const FOCUSELEMENTS = "a[href], area[href], input:not([disabled]), select:not([d
 
 export default class NavMenu {
     constructor (topbarComponent, navMenu) {
+        this._openHandler = this._openHandler.bind(this);
+        this._closeHandler = this._closeHandler.bind(this);
+        this._closeHandlerNavMenuElement = this._closeHandlerNavMenuElement.bind(this);
+        this.close = this.close.bind(this);
+
+        this.constructNavMenu(topbarComponent, navMenu);
+    }
+
+    constructNavMenu (topbarComponent, navMenu) {
+
         this.id = topbarComponent.id;
         this.isOpen = navMenu.classList.contains(SELECTORS.OPEN);
         this.navMenuElement = navMenu;
         this.linkContainer = this.navMenuElement.querySelector(".topbar-link-container");
-        this.closeNavIcon = this.navMenuElement.querySelector(".topbar-close");
+        this.closeNavIcon = topbarComponent.querySelector(".topbar-close");
         this.btnElement = topbarComponent.querySelector(SELECTORS.BTN);
         this.resizeEvent;
 
@@ -25,25 +35,18 @@ export default class NavMenu {
         // Find focusable elements
         this.focusedElemBeforeNav = null;
         this.focusableElements = [...this.linkContainer.querySelectorAll(FOCUSELEMENTS)];
-        this._setFirstTabStop(1); // Initially set to 1 to ignore close button during tabbing, when topbar-nav is not open
+        this._setFirstTabStop(0);
         this.lastTabStop = this.focusableElements[this.focusableElements.length - 1];
 
         if (this.btnElement) {
-            this.btnElement.addEventListener("click", e => {
-                e.preventDefault();
-                this.open();
-            });
+            this.btnElement.addEventListener("click", this._openHandler);
         }
 
         if (this.navMenuElement) {
-            this.navMenuElement.addEventListener("mousedown", e => {
-                if (this.isOpen && !this._containsPoint(e.clientX, e.clientY)) { this.close(); }
-            });
+            this.navMenuElement.addEventListener("mousedown", this._closeHandlerNavMenuElement);
 
             try {
-                this.closeNavIcon.addEventListener("click", () => {
-                    this.close();
-                });
+                this.closeNavIcon.addEventListener("click", this._closeHandler);
             } catch (e) {
                 console.warn("Topbar is missing a close icon");
             }
@@ -52,31 +55,28 @@ export default class NavMenu {
         this._initListeners();
     }
 
-    _initListeners () {
-        this.navMenuElement.addEventListener("keydown", e => {
-            if (e.key === "Tab") {
-                // SHIFT + TAB
-                if (e.shiftKey) {
-                    if (document.activeElement === this.firstTabStop) {
-                        e.preventDefault();
-                        this.lastTabStop.focus();
-                    }
+    _openHandler (e) {
+        e.preventDefault();
+        this.open();
+    }
 
-                // TAB
-                } else if (document.activeElement === this.lastTabStop) {
-                    e.preventDefault();
-                    this.firstTabStop.focus();
-                }
-            }
-        });
+    _closeHandler () {
+        if (this.isOpen) {
+            this.close();
+        }
+    }
+
+    _closeHandlerNavMenuElement (e) {
+        if (this.isOpen && !this._containsPoint(e.clientX, e.clientY)) {
+            this.close();
+        }
+    }
+
+    _initListeners () {
 
         // Closing menu for clicking on links in SPA's.
         this.navMenuElement.querySelectorAll("a")
-            .forEach(anchor => anchor.addEventListener("click", () => {
-                if (this.isOpen) {
-                    this.close();
-                }
-            }));
+            .forEach(anchor => anchor.addEventListener("click", this._closeHandler));
     }
 
     _resizeListener () { this.isOpen ? this._closeNoTransition() : null; }
@@ -90,6 +90,8 @@ export default class NavMenu {
         window.removeEventListener("resize", this.resizeEvent, { passive: true });
         this.navMenuElement.classList.remove("topbar-nav-open");
         this.navMenuElement.classList.remove("d-block");
+        this.btnElement.classList.remove("d-none");
+        this.closeNavIcon.classList.remove("d-flex");
     }
 
     _setFirstTabStop (index) {
@@ -106,6 +108,8 @@ export default class NavMenu {
         window.addEventListener("resize", this.resizeEvent, { passive: true });
         this.navMenuElement.classList.add("topbar-nav-open");
         this.navMenuElement.classList.add("d-block");
+        this.btnElement.classList.add("d-none");
+        this.closeNavIcon.classList.add("d-flex");
 
         this._setFirstTabStop(0);
         this.firstTabStop.focus();
@@ -123,9 +127,11 @@ export default class NavMenu {
 
             this.navMenuElement.classList.remove("topbar-nav-closing");
             this.navMenuElement.classList.remove("d-block");
+            this.btnElement.classList.remove("d-none");
+            this.closeNavIcon.classList.remove("d-flex");
         }, 300);
 
-        this._setFirstTabStop(1);
+        this._setFirstTabStop(0);
     }
 
     _containsPoint (x, y) {

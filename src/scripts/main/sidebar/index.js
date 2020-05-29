@@ -3,47 +3,87 @@ import SELECTORS from "./selectors";
 
 const scrollBuffer = 20;
 
-const _closeElement = element => {
+const _sidebars = _sidebars || [];
 
-    element.classList.remove("active");
-
-    const activeSubGroups = element.querySelectorAll(SELECTORS.NAVSUBGROUP + SELECTORS.ACTIVE);
-
-    activeSubGroups.length > 0 && [...activeSubGroups].map(activeSubGroup => activeSubGroup.classList.remove("active"));
-};
-
-const _setActiveStatus = (element, sidebar, selector, isScroll) => {
-
-    const activeElements = sidebar.querySelectorAll(selector + SELECTORS.ACTIVE);
-
-    element.classList.add("active");
-
-    [...activeElements].map(activeElement => {
-
-        if (selector !== SELECTORS.NAVSUBGROUP) {
-            activeElement !== element && activeElement.classList.remove("active");
-        } else {
-            (
-                activeElement !== element &&
-                [...activeElement.querySelectorAll(SELECTORS.NAVSUBGROUP)].filter(activeElementChild => activeElementChild === element).length === 0 &&
-                activeElement.classList.remove("active")
-            );
-        }
-
-        if (selector !== SELECTORS.NAVLEAF) {
-            activeElement === element && _closeElement(element);
-        }
-
-    });
-
-    if (selector === SELECTORS.NAVLEAF && !isScroll) {
-        const activeGroups = sidebar.querySelectorAll(SELECTORS.NAVGROUP + SELECTORS.ACTIVE);
-        const activeSubGroups = sidebar.querySelectorAll(SELECTORS.NAVSUBGROUP + SELECTORS.ACTIVE);
-
-        [...activeGroups].filter(group => !group.querySelector(SELECTORS.NAVLEAF + SELECTORS.ACTIVE)).map(group => _closeElement(group));
-        [...activeSubGroups].filter(subGroup => !subGroup.querySelector(SELECTORS.NAVLEAF + SELECTORS.ACTIVE)).map(subGroup => _closeElement(subGroup));
+class Sidebar {
+    constructor (el) {
+        this.constructSidebar(el);
     }
-};
+
+    constructSidebar (el) {
+        this.el = el;
+        this.id = el.id;
+        this._initListeners();
+    }
+
+    _initListeners () {
+        const navGroups = this.el.querySelectorAll(SELECTORS.NAVGROUP);
+        const navSubGroups = this.el.querySelectorAll(SELECTORS.NAVSUBGROUP);
+        const navLeaves = this.el.querySelectorAll(SELECTORS.NAVLEAF);
+
+        [...navGroups].map(navGroup => navGroup.querySelector(".nav-group-heading").addEventListener("click", () => this._setActiveStatus(navGroup, SELECTORS.NAVGROUP)));
+        [...navSubGroups].map(navSubGroup => navSubGroup.querySelector(".nav-subgroup-heading")
+            .addEventListener("click", () => this._setActiveStatus(navSubGroup, SELECTORS.NAVSUBGROUP)));
+        [...navLeaves].map(navLeaf => navLeaf.addEventListener("click", () => this._setActiveStatus(navLeaf, SELECTORS.NAVLEAF)));
+    }
+
+    _closeElement (element) {
+
+        element.classList.remove("active");
+
+        const activeSubGroups = element.querySelectorAll(SELECTORS.NAVSUBGROUP + SELECTORS.ACTIVE);
+
+        activeSubGroups.length > 0 && [...activeSubGroups].map(activeSubGroup => activeSubGroup.classList.remove("active"));
+    }
+
+    _setActiveStatus (element, selector) {
+
+        const activeElements = this.el.querySelectorAll(selector + SELECTORS.ACTIVE);
+
+        element.classList.add("active");
+
+        [...activeElements].map(activeElement => {
+
+            if (selector !== SELECTORS.NAVSUBGROUP) {
+                activeElement !== element && activeElement.classList.remove("active");
+            } else {
+                (
+                    activeElement !== element &&
+                    [...activeElement.querySelectorAll(SELECTORS.NAVSUBGROUP)].filter(activeElementChild => activeElementChild === element).length === 0 &&
+                    activeElement.classList.remove("active")
+                );
+            }
+
+            if (selector !== SELECTORS.NAVLEAF) {
+                activeElement === element && this._closeElement(element);
+            }
+
+        });
+    }
+
+    _contentScrollListener (id, content, headers) {
+
+        return (
+            () => {
+                const scrollNumber = [...headers].filter(header => header.offsetTop <= content.scrollTop + scrollBuffer).length - 1;
+                const activeLeaf = this.el.querySelector(SELECTORS.NAVLEAF + SELECTORS.ACTIVE);
+                const leaves = activeLeaf.parentElement.querySelectorAll(SELECTORS.NAVLEAF);
+
+                if (scrollNumber === -1) {
+                    this._setActiveStatus(leaves[0], SELECTORS.NAVLEAF);
+                } else {
+                    this._setActiveStatus(leaves[scrollNumber], SELECTORS.NAVLEAF);
+                }
+
+                if (content.scrollTop + scrollBuffer >= content.scrollHeight - content.clientHeight) {
+                    this._setActiveStatus(leaves[leaves.length - 1], SELECTORS.NAVLEAF);
+                }
+
+            }
+        );
+    }
+
+}
 
 const setActiveState = (id, group, subGroup, leaf) => {
 
@@ -115,28 +155,10 @@ const removeActiveState = (id, group, subGroup, leaf) => {
     }
 };
 
-const _contentScrollListener = (id, content, headers) => (
-    () => {
-        const scrollNumber = [...headers].filter(header => header.offsetTop <= content.scrollTop + scrollBuffer).length - 1;
-        const sidebar = document.getElementById(id);
-        const activeLeaf = sidebar.querySelector(SELECTORS.NAVLEAF + SELECTORS.ACTIVE);
-        const leaves = activeLeaf.parentElement.querySelectorAll(SELECTORS.NAVLEAF);
-
-        if (scrollNumber === -1) {
-            _setActiveStatus(leaves[0], sidebar, SELECTORS.NAVLEAF, true);
-        } else {
-            _setActiveStatus(leaves[scrollNumber], sidebar, SELECTORS.NAVLEAF, true);
-        }
-
-        if (content.scrollTop + scrollBuffer >= content.scrollHeight - content.clientHeight) {
-            _setActiveStatus(leaves[leaves.length - 1], sidebar, SELECTORS.NAVLEAF, true);
-        }
-
-    }
-);
-
 const initScrollListener = (id, contentId, headerType) => {
-    removeScrollListener(contentId);
+    removeScrollListener(id, contentId);
+
+    const sidebar = _sidebars.filter(sidebar => sidebar.id === id)[0];
 
     const content = document.getElementById(contentId);
 
@@ -144,17 +166,35 @@ const initScrollListener = (id, contentId, headerType) => {
 
         const headers = content.querySelectorAll(`${headerType}[id]`);
 
-        content.addEventListener("scroll", _contentScrollListener(id, content, headers));
+        content.addEventListener("scroll", sidebar._contentScrollListener(id, content, headers));
     } else {
         console.warn(`sidebar.initScrollListener: Cannot find main content with id ${contentId}`);
     }
 
 };
 
-const removeScrollListener = contentId => {
+const removeScrollListener = (id, contentId) => {
     const content = document.getElementById(contentId);
+    const sidebar = _sidebars.filter(sidebar => sidebar.id === id)[0];
 
-    content && content.removeEventListener("scroll", _contentScrollListener);
+    content && content.removeEventListener("scroll", sidebar._contentScrollListener);
+};
+
+const _createSidebar = sidebarQuery => {
+
+    if (_sidebars.filter(sidebar => sidebar.id === sidebarQuery.id).length > 0) {
+        const updatedSidebarObject = _sidebars.filter(sidebar => sidebar.id === sidebarQuery.id)[0];
+
+        updatedSidebarObject.constructSidebar(sidebarQuery);
+
+        return updatedSidebarObject;
+    }
+
+    const sidebarObject = new Sidebar(sidebarQuery);
+
+    _sidebars.push(sidebarObject);
+
+    return sidebarObject;
 };
 
 const init = id => {
@@ -168,16 +208,9 @@ const init = id => {
             return null;
         }
 
-        const navGroups = sidebar.querySelectorAll(SELECTORS.NAVGROUP);
-        const navSubGroups = sidebar.querySelectorAll(SELECTORS.NAVSUBGROUP);
-        const navLeaves = sidebar.querySelectorAll(SELECTORS.NAVLEAF);
+        const sidebarObject = _createSidebar(sidebar);
 
-        [...navGroups].map(navGroup => navGroup.querySelector(".nav-group-heading").addEventListener("click", () => _setActiveStatus(navGroup, sidebar, SELECTORS.NAVGROUP)));
-        [...navSubGroups].map(navSubGroup => navSubGroup.querySelector(".nav-subgroup-heading")
-            .addEventListener("click", () => _setActiveStatus(navSubGroup, sidebar, SELECTORS.NAVSUBGROUP)));
-        [...navLeaves].map(navLeaf => navLeaf.addEventListener("click", () => _setActiveStatus(navLeaf, sidebar, SELECTORS.NAVLEAF)));
-
-        return sidebar;
+        return sidebarObject;
     } else {
         const sidebars = document.querySelectorAll(".sidebar");
 
@@ -187,18 +220,9 @@ const init = id => {
             return null;
         }
 
-        const sidebarsWithListeners = [...sidebars].map(sidebar => {
-            const navGroups = sidebar.querySelectorAll(SELECTORS.NAVGROUP);
-            const navSubGroups = sidebar.querySelectorAll(SELECTORS.NAVSUBGROUP);
-            const navLeaves = sidebar.querySelectorAll(SELECTORS.NAVLEAF);
+        const sidebarObjects = [...sidebars].map(sidebar => _createSidebar(sidebar));
 
-            [...navGroups].map(navGroup => navGroup.querySelector(".nav-group-heading").addEventListener("click", () => _setActiveStatus(navGroup, sidebar, SELECTORS.NAVGROUP)));
-            [...navSubGroups].map(navSubGroup => navSubGroup.querySelector(".nav-subgroup-heading")
-                .addEventListener("click", () => _setActiveStatus(navSubGroup, sidebar, SELECTORS.NAVSUBGROUP)));
-            [...navLeaves].map(navLeaf => navLeaf.addEventListener("click", () => _setActiveStatus(navLeaf, sidebar, SELECTORS.NAVLEAF)));
-        });
-
-        return sidebarsWithListeners;
+        return sidebarObjects;
     }
 };
 

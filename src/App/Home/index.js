@@ -9,8 +9,8 @@ const Home = () => {
     });
 
     return (
-        <div className="documentation container pt-3 pb-3">
-            <div className="alert alert-complex alert-warning">
+        <div className="doc-container">
+            <div className="alert alert-complex alert-warning mt-2">
                 <header className="alert-header">
                     <i className="material-icons alert-icon">warning</i>
                     <h3>Site under development</h3>
@@ -24,11 +24,11 @@ const Home = () => {
                     <div className="doc-card card card-plain">
                         <div className="card-body text-center d-flex flex-column">
                             <div className="doc-circle">
-                                <i className="material-icons material-icons-large text-white">desktop_windows</i>
+                                <i className="material-icons material-icons-large text-white">play_circle_outline</i>
                             </div>
-                            <h2>Documentation</h2>
-                            <p>User interface components for websites and web applications</p>
-                            <Link className="btn btn-guiding btn-outline btn-block mt-auto" to="/docs/getting-started/introduction">Documentation</Link>
+                            <h2>Get started</h2>
+                            <p>Information on how to get started.</p>
+                            <Link className="btn btn-guiding btn-outline btn-block mt-auto" to="/getting-started">Get started</Link>
                         </div>
                     </div>
                 </div>
@@ -36,11 +36,11 @@ const Home = () => {
                     <div className="doc-card card card-plain">
                         <div className="card-body text-center d-flex flex-column">
                             <div className="doc-circle">
-                                <i className="material-icons material-icons-large text-white">list_alt</i>
+                                <i className="material-icons material-icons-large text-white">desktop_windows</i>
                             </div>
-                            <h2>Templates</h2>
-                            <p>Document templates, usage description and tips.</p>
-                            <Link className="btn btn-guiding btn-outline btn-block mt-auto" to="/tmpl">Templates</Link>
+                            <h2>Components</h2>
+                            <p>User interface components for websites and web applications</p>
+                            <Link className="btn btn-guiding btn-outline btn-block mt-auto" to="/components">Components</Link>
                         </div>
                     </div>
                 </div>
@@ -52,7 +52,7 @@ const Home = () => {
                             </div>
                             <h2>Resources</h2>
                             <p>Downloadables and resource usage guidelines.</p>
-                            <Link className="btn btn-guiding btn-outline btn-block mt-auto" to="/res/getting-started/introduction">Resources</Link>
+                            <Link className="btn btn-guiding btn-outline btn-block mt-auto" to="/resources">Resources</Link>
                         </div>
                     </div>
                 </div>

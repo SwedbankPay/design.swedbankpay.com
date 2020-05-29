@@ -1,46 +1,36 @@
 module.exports = [
     /**
-     * Getting Started
-     */
-    {
-        title: "Getting Started",
-        path: "/res/getting-started",
-        redirect: "/res/getting-started/introduction",
-        routes: [
-            {
-                title: "Introduction",
-                path: "/res/getting-started/introduction",
-                componentPath: "getting-started/Introduction"
-            }
-        ]
-    },
-
-    /**
      * Resources
      */
     {
         title: "Resources",
-        path: "/res/resources",
-        redirect: "/res/resources/logotype",
+        path: "/resources",
+        redirect: "/resources/introduction",
+        appFolder: "Resources",
         routes: [
             {
+                title: "Introduction",
+                path: "/resources/introduction",
+                componentPath: "Introduction"
+            },
+            {
                 title: "Images",
-                path: "/res/resources/images",
+                path: "/resources/images",
                 componentPath: "resources/images"
             },
             {
                 title: "Logotype",
-                path: "/res/resources/logotype",
+                path: "/resources/logotype",
                 componentPath: "resources/logotype"
             },
             {
                 title: "Presentations",
-                path: "/res/resources/presentations",
+                path: "/resources/presentations",
                 componentPath: "resources/presentations"
             },
             {
                 title: "Typography",
-                path: "/res/resources/typography",
+                path: "/resources/typography",
                 componentPath: "resources/typography"
             }
         ]

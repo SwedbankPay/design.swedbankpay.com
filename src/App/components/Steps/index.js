@@ -21,9 +21,9 @@ const DefaultSteps = [
     }
 ];
 
-const StepContent = ({ completed, subtitle, title }) => (
+const StepsContent = ({ completed, subtitle, title, index }) => (
     <>
-        {completed ? <><div className="material-icons steps-icon" >check</div>{ "\n" }</> : null}
+        {completed ? <><div className="material-icons steps-icon" >check</div>{ "\n" }</> : <div className="steps-number">{index + 1}</div>}
         {title}
         {subtitle ? <>{ "\n" }<div className="steps-sub-title">{subtitle}</div></> : null}
     </>
@@ -36,9 +36,9 @@ const RenderSteps = ({ steps }) => (
                 ongoing ? "steps-ongoing" : null,
                 selected ? "steps-selected" : null)}>
                 { clickable ?
-                    <>{ "\n" } <a><StepContent completed={completed} subtitle={subtitle} title={title}/></a> { "\n" } </>
+                    <>{ "\n" } <a><StepsContent completed={completed} subtitle={subtitle} title={title} index={i}/></a> { "\n" } </>
                     :
-                    <StepContent completed={completed} subtitle={subtitle} title={title}/>
+                    <StepsContent completed={completed} subtitle={subtitle} title={title} index={i}/>
                 }
             </li>
         ))}
@@ -58,7 +58,7 @@ const RenderStepsNav = ({ steps }) => {
     return <>
         <div className="steps-responsive">
             { arrowLeft }
-            <div className="steps-responsive-text">Step 3</div>
+            <div className="steps-responsive-text">Step 2</div>
             { arrowRight }
         </div>
     </>;

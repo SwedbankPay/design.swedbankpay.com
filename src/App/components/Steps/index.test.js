@@ -54,7 +54,7 @@ describe("Component: Steps", () => {
         expect(wrapper.html()).toContain("steps");
     });
 
-    it("renders with given items if prop steps is given", () => {
+    it("renders with given items if prop Steps is given", () => {
         const wrapper = mount(<Steps steps={simpleSteps} />);
 
         expect(wrapper).toMatchSnapshot();
@@ -68,7 +68,7 @@ describe("Component: Steps", () => {
         expect(wrapper.html()).toContain("steps-vertical");
     });
 
-    it("renders clickable steps", () => {
+    it("renders clickable Steps", () => {
         const wrapper = mount(<Steps steps={steps} />);
 
         expect(wrapper).toMatchSnapshot();

@@ -68,7 +68,7 @@ describe("Component: Topbar - ", () => {
                 const menuIcons = menuContainer.find("i.material-icons");
 
                 expect(wrapper).toMatchSnapshot();
-                expect(menuIcons.length).toEqual(1); // The close icon will always render [AW]
+                expect(menuIcons.length).toEqual(0);
             });
 
             it("renders topbar-link-container and populates it with given information without a logout link", () => {
@@ -120,6 +120,17 @@ describe("Component: Topbar - ", () => {
 
                 expect(wrapper).toMatchSnapshot();
                 expect(eventHandler.preventDefault).toHaveBeenCalled();
+            });
+
+            it("renders a sidebar in topbar-link-container when sidebar prop is true", () => {
+                const wrapper = mount(<Topbar topbarContent={menu} sidebar />);
+
+                const renderedSidebar = wrapper.find(".topbar")
+                    .find(".topbar-nav")
+                    .find(".sidebar");
+
+                expect(wrapper).toMatchSnapshot();
+                expect(renderedSidebar).toBeTruthy();
             });
         });
 

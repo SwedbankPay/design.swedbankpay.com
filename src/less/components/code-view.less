@@ -1,0 +1,100 @@
+.code-view {
+    font-family: @brand-monofont;
+    margin: 0;
+
+    code {
+        padding: 0;
+        background-color: none;
+        border: none;
+        font-size: 1rem;
+    }
+
+    .code-view-header {
+        .code-view-header();
+    }
+
+    .code-view-table {
+        position: relative;
+        background-color: @brand-secondary-dark-2;
+        font-family: @brand-monofont;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        width: 100%;
+
+        &,
+        tbody,
+        tr {
+            display: block;
+        }
+
+        .code-view-numbers {
+            display: table-caption;
+            text-align: right;
+            padding: 0 1rem 0 1rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: @brand-secondary-light-3;
+            background-color: @brand-secondary-dark-2;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+            border-bottom-left-radius: 4px;
+        }
+
+        .code-view-code {
+            padding-left: 3.75rem;
+            padding-right: 1rem;
+            display: block;
+            overflow-x: auto;
+            max-width: 100%;
+            color: @white;
+
+            .kd,
+            .k,
+            .kc {
+                color: @blue-syntax-highlight;
+            }
+
+            .nb,
+            .mi {
+                color: @green-syntax-highlight;
+            }
+
+            .na {
+                color: @brand-secondary-info-2;
+            }
+
+            .s2 {
+                color: @white;
+            }
+
+            .s,
+            .s1,
+            .dl,
+            .nl {
+                color: @yellow-faded;
+            }
+
+            .nt {
+                color: @brand-secondary-info-1;
+            }
+
+            .cp {
+                color: @yellow-syntax-highlight;
+            }
+        }
+    }
+}
+
+.code-view-header {
+    background-color: @brand-secondary-dark-1;
+    color: @white;
+    font-family: @brand-monofont;
+    min-height: 1.5rem;
+    font-size: 0.875rem;
+    font-weight: @font-weight-normal;
+    line-height: 1.25rem;
+    padding: 0.5rem 1rem;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin: 0;
+}

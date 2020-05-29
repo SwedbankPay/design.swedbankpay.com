@@ -23,7 +23,7 @@ export const isWithinBoundingBox = (x, y, element) => {
 export const handleScrollbar = () => {
     const hasVScroll = (window.innerWidth - document.documentElement.clientWidth) > 0;
 
-    if (hasVScroll) {
+    if (hasVScroll && !document.body.classList.contains("has-vscroll")) {
         document.body.classList.add("has-vscroll");
     } else {
         document.body.classList.remove("has-vscroll");
