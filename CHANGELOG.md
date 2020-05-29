@@ -5,11 +5,8 @@
 ### Added
 - Code View
   - Added code-view styling
-- Forms
-  - Input Group
-    - Added icon to display error when form-control has-error
 - Input Group
-  - Added icon to display error when input-group has-error
+  - Added icon on error
 - Loaders
   - Added centered loader
 - Topbar
