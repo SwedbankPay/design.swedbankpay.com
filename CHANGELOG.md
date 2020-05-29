@@ -6,7 +6,8 @@
 - Code View
   - Added code-view styling
 - Forms
-  - Added icon to display error when form-control has-error
+  - Input Group
+    - Added icon to display error when form-control has-error
 - Input Group
   - Added icon to display error when input-group has-error
 - Loaders
