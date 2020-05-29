@@ -166,7 +166,7 @@ describe("scripts: sidebar", () => {
 
             ReactDOM.render(<Sidebar id={id} />, div);
 
-            const renderedSidebar = sidebar.init(id);
+            const renderedSidebar = sidebar.init(id).el;
 
             expect(renderedSidebar.querySelectorAll(SELECTORS.ACTIVE).length).toEqual(0);
 
@@ -187,7 +187,7 @@ describe("scripts: sidebar", () => {
             ReactDOM.render(<Sidebar id={id}/>, div);
             console.warn = jest.fn();
 
-            const renderedSidebar = sidebar.init(id);
+            const renderedSidebar = sidebar.init(id).el;
 
             const wrongId = "test-sidebar-3";
 
@@ -201,7 +201,7 @@ describe("scripts: sidebar", () => {
 
             ReactDOM.render(<Sidebar id={id} />, div);
 
-            const renderedSidebar = sidebar.init(id);
+            const renderedSidebar = sidebar.init(id).el;
 
             expect(renderedSidebar.querySelectorAll(SELECTORS.ACTIVE).length).toEqual(0);
 
@@ -223,7 +223,7 @@ describe("scripts: sidebar", () => {
 
             ReactDOM.render(<Sidebar id={id} />, div);
 
-            const renderedSidebar = sidebar.init(id);
+            const renderedSidebar = sidebar.init(id).el;
 
             expect(renderedSidebar.querySelectorAll(SELECTORS.ACTIVE).length).toEqual(0);
 
@@ -247,7 +247,7 @@ describe("scripts: sidebar", () => {
 
             ReactDOM.render(<Sidebar id={id} />, div);
 
-            const renderedSidebar = sidebar.init(id);
+            const renderedSidebar = sidebar.init(id).el;
 
             expect(renderedSidebar.querySelectorAll(SELECTORS.ACTIVE).length).toEqual(0);
 
@@ -281,7 +281,7 @@ describe("scripts: sidebar", () => {
 
             ReactDOM.render(<Sidebar id={id} />, div);
 
-            const renderedSidebar = sidebar.init(id);
+            const renderedSidebar = sidebar.init(id).el;
 
             expect(renderedSidebar.querySelectorAll(SELECTORS.ACTIVE).length).toEqual(0);
 
@@ -301,7 +301,7 @@ describe("scripts: sidebar", () => {
             ReactDOM.render(<Sidebar id={id}/>, div);
             console.warn = jest.fn();
 
-            const renderedSidebar = sidebar.init(id);
+            const renderedSidebar = sidebar.init(id).el;
 
             const wrongId = "test-sidebar-3";
 
@@ -315,7 +315,7 @@ describe("scripts: sidebar", () => {
 
             ReactDOM.render(<Sidebar id={id} />, div);
 
-            const renderedSidebar = sidebar.init(id);
+            const renderedSidebar = sidebar.init(id).el;
 
             expect(renderedSidebar.querySelectorAll(SELECTORS.ACTIVE).length).toEqual(0);
 
@@ -336,7 +336,7 @@ describe("scripts: sidebar", () => {
 
             ReactDOM.render(<Sidebar id={id} />, div);
 
-            const renderedSidebar = sidebar.init(id);
+            const renderedSidebar = sidebar.init(id).el;
 
             expect(renderedSidebar.querySelectorAll(SELECTORS.ACTIVE).length).toEqual(0);
 
@@ -360,7 +360,7 @@ describe("scripts: sidebar", () => {
 
             ReactDOM.render(<Sidebar id={id} />, div);
 
-            const renderedSidebar = sidebar.init(id);
+            const renderedSidebar = sidebar.init(id).el;
 
             expect(renderedSidebar.querySelectorAll(SELECTORS.ACTIVE).length).toEqual(0);
 

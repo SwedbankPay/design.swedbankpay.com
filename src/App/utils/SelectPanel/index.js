@@ -3,8 +3,14 @@ import { NavLink, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 
 import SearchBox from "../SearchBox/index";
+import { GithubLogo, SlackLogo } from "@src/App/AppHeader/HeaderIcons";
 
-const { sidebar } = window.dg;
+import pkg from "~/package.json";
+
+const basename = process.env.basename;
+const brand = process.env.brand;
+
+const { sidebar, topbar } = window.dg;
 
 class NavGroup extends Component {
     constructor (props) {
@@ -18,7 +24,7 @@ class NavGroup extends Component {
         const activeLeaf = this.props.route.routes.map((childRoute, i) => ({ i,
             childRoute: childRoute.path })).filter(childRouteObject => this.props.location.pathname.includes(childRouteObject.childRoute));
 
-        this.state.isActive && activeLeaf[0] && sidebar.setActiveState("doc-sidebar", this.props.index, null, activeLeaf[0].i);
+        this.state.isActive && activeLeaf[0] && sidebar.setActiveState(this.props.sidebarId, this.props.index, null, activeLeaf[0].i);
     }
 
     toggleActive () {
@@ -53,26 +59,65 @@ class NavGroup extends Component {
 class SelectPanel extends Component {
 
     componentDidMount () {
-        sidebar.init("doc-sidebar");
+        sidebar.init(this.props.id);
+
+        if (this.props.topbarId) {
+            topbar.init(this.props.topbarId);
+        }
     }
 
     componentDidUpdate () {
-        sidebar.init("doc-sidebar");
+        sidebar.init(this.props.id);
+
+        if (this.props.topbarId) {
+            topbar.init(this.props.topbarId);
+        }
     }
 
     render () {
         return (
-            <div id="doc-sidebar" className="sidebar">
+            <div id={this.props.id} className="sidebar dg-sidebar">
                 {/* A fully functional search box will be added later. */}
                 {/* <SearchBox routes={this.props.routes} /> */}
                 <nav className="sidebar-nav">
+                    <a href="/" className="sidebar-top">{"\n"}
+                        <img className="d-none d-lg-block" src={`${basename}img/${brand}-logo-v-small.svg`} alt="logo" />{"\n"}
+                        <div className="sidebar-version">
+                            <div className="sidebar-version-header">
+                                Design Guide
+                            </div>
+                            <small>
+                                Version {process.env.version || pkg.version}
+                            </small>
+                        </div>
+                    </a>
                     <ul className="main-nav-ul">
                         {this.props.routes.map((route, i) => {
                             const NavGroupWithRouter = withRouter(NavGroup);
 
-                            return <NavGroupWithRouter key={`nav_group_${i}`} route={route} index={i} />;
+                            return <NavGroupWithRouter sidebarId={this.props.id} key={`nav_group_${i}`} route={route} index={i} />;
                         })}
                     </ul>
+                    <div className="sidebar-contact">
+                        <a href={`https://github.com/${brand}/design.${brand}.com/releases/tag/${pkg.version}`} target="_blank" rel="noopener noreferrer">
+                            <GithubLogo />
+                            <span>
+                                Changelog
+                            </span>
+                        </a>
+                        <a href={`https://github.com/${brand}/design.${brand}.com`} target="_blank" rel="noopener noreferrer">
+                            <GithubLogo />
+                            <span>
+                                Github repository
+                            </span>
+                        </a>
+                        <a href="https://payex.slack.com/messages/C0L3W8B2S/" target="_blank" rel="noopener noreferrer">
+                            <SlackLogo />
+                            <span>
+                                Give us feedback on Slack
+                            </span>
+                        </a>
+                    </div>
                 </nav>
             </div>
         );

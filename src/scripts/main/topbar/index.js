@@ -1,6 +1,6 @@
 import NavMenu from "./NavMenu";
 
-import { handleScrollbar, openComponent, closeComponent } from "../utils";
+import { openComponent, closeComponent } from "../utils";
 
 const SELECTORS = {
     TOPBAR: ".topbar",
@@ -9,22 +9,42 @@ const SELECTORS = {
 
 const _navMenus = _navMenus || [];
 
-const _closeOnEsc = () => (_navMenus.some(menu => menu.isOpen ? menu.close() : false));
+const _closeOnNavMenus = () => (_navMenus.some(menu => menu.isOpen ? menu.close() : false));
+
+const _addEscListenerHandler = e => {
+    if (e.key === "Escape") {
+        _closeOnNavMenus();
+    }
+};
 
 const _addEscListener = () => {
-    document.addEventListener("keydown", e => {
-        if (e.key === "Escape") {
-            /* Only runs handleScrollbar if a navMenu was actually closed [AW] */
-            if (document.body.classList.contains("has-vscroll")) {
-                if (_closeOnEsc()) { handleScrollbar(); }
-            } else {
-                _closeOnEsc();
-            }
-        }
-    });
+    document.addEventListener("keydown", _addEscListenerHandler);
+};
+
+const _addSidebarClickCloseHandler = e => {
+    if (e.target.tagName === "A") {
+        _closeOnNavMenus();
+    }
+};
+
+const _addSidebarClickClose = topbar => {
+    const sidebar = topbar.querySelector(".sidebar");
+
+    if (sidebar) {
+        sidebar.addEventListener("click", _addSidebarClickCloseHandler);
+    }
 };
 
 const _createTopbar = (topbar, navMenu) => {
+
+    if (_navMenus.filter(navMenu => navMenu.id === topbar.id).length > 0) {
+        const updatedNavMenuObject = _navMenus.filter(navMenu => navMenu.id === topbar.id)[0];
+
+        updatedNavMenuObject.constructNavMenu(topbar, navMenu);
+
+        return updatedNavMenuObject;
+    }
+
     const navMenuObject = new NavMenu(topbar, navMenu);
 
     _navMenus.push(navMenuObject);
@@ -49,6 +69,7 @@ const init = id => {
         const navMenuQuery = topbar.querySelector(SELECTORS.TOPBARNAV);
 
         _addEscListener();
+        _addSidebarClickClose(topbar);
 
         return navMenuQuery ? _createTopbar(topbar, navMenuQuery) : null;
     } else {
@@ -62,6 +83,8 @@ const init = id => {
 
         const navMenuObjects = [...topbars].map(topbar => {
             const navMenuQuery = topbar.querySelector(SELECTORS.TOPBARNAV);
+
+            _addSidebarClickClose(topbar);
 
             return navMenuQuery ? _createTopbar(topbar, navMenuQuery) : null;
         });

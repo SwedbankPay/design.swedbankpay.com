@@ -1,7 +1,7 @@
 .sidebar {
     position: sticky;
-    top: 0.5rem;
-    margin-top: 0.5rem;
+    top: 0;
+    margin-top: 1rem;
 
     &.sidebar-topbar-sticky {
         top: calc(@topbar-height + 0.5rem);
@@ -59,8 +59,9 @@
                 .nav-group-heading {
                     cursor: pointer;
                     display: flex;
-                    align-items: center;
-                    height: 2.5rem;
+                    align-items: flex-start;
+                    min-height: 2.5rem;
+                    padding: 0.5rem 0;
 
                     &:hover,
                     &:focus {
@@ -119,8 +120,9 @@
                         .nav-subgroup-heading {
                             cursor: pointer;
                             display: flex;
-                            align-items: center;
-                            height: 2.5rem;
+                            align-items: flex-start;
+                            min-height: 2.5rem;
+                            padding: 0.5rem 0;
 
                             &:hover,
                             &:focus {

@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 import NavMenu from "./NavMenu";
 import topbar from "./index";
-import { handleScrollbar, openComponent, closeComponent } from "../utils";
+import { openComponent, closeComponent } from "../utils";
 
 jest.mock("./NavMenu");
 jest.mock("../utils");
@@ -13,7 +13,6 @@ describe("scripts: topbar", () => {
 
     beforeEach(() => {
         NavMenu.mockClear();
-        handleScrollbar.mockClear();
         openComponent.mockClear();
         closeComponent.mockClear();
         ReactDOM.unmountComponentAtNode(div);
@@ -126,24 +125,11 @@ describe("scripts: topbar", () => {
 
             topbar.init();
             NavMenu.mock.instances[0].isOpen = true;
-
-            document.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape" }));
-
-            expect(NavMenu.mock.instances[0].close).toHaveBeenCalled();
-        });
-
-        it("Escape closes an open navMenu and calls handleScrollbar if the current page has a vertical scrollbar", () => {
-            ReactDOM.render(<Topbar navOpen />, div);
-            document.body.classList.add("has-vscroll");
-
-            topbar.init();
-            NavMenu.mock.instances[0].isOpen = true;
             NavMenu.mock.instances[0].close.mockReturnValueOnce("true");
 
             document.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape" }));
 
             expect(NavMenu.mock.instances[0].close).toHaveBeenCalled();
-            expect(handleScrollbar).toHaveBeenCalled();
         });
 
         it("does nothing if a key other than Escape is pressed", () => {

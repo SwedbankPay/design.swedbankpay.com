@@ -1,0 +1,862 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Documentation: Buttons Active State renders 1`] = `
+<Fragment>
+  <h2
+    id="active-state"
+  >
+    Active state
+  </h2>
+  <p>
+    Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active.
+    <b>
+      There’s no need to add a class to 
+      <CodeTags
+        code="<button>"
+        type="primary"
+      />
+      s as they use a pseudo-class.
+    </b>
+    However, you can still force the same active appearance with 
+    <CodeTags
+      code=".active"
+      type="secondary"
+    />
+     (and include the 
+    <CodeTags
+      code="aria-pressed=\\"true\\""
+      type="secondary"
+    />
+     attribute) should you need to replicate the state programmatically.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        active={true}
+        href="#"
+        label="Executive"
+        type="executive"
+      />
+      
+
+      <Button
+        active={true}
+        href="#"
+        label="Guiding"
+        type="guiding"
+      />
+      
+
+    </div>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Buttons Button Loader renders 1`] = `
+<Fragment>
+  <h2
+    id="button-loader"
+  >
+    Button loader
+  </h2>
+  <p>
+    Add class 
+    <CodeTags
+      code=".loading"
+      type="secondary"
+    />
+     to display the loader.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        label="Executive"
+        loader={true}
+        loading={true}
+        type="executive"
+      />
+      
+
+      <Button
+        label="Guiding"
+        loader={true}
+        loading={true}
+        type="guiding"
+      />
+      
+
+    </div>
+  </ComponentPreview>
+  <h3>
+    Disabled loader
+  </h3>
+  <p>
+    <CodeTags
+      code=".loading"
+      type="secondary"
+    />
+     with 
+    <CodeTags
+      code="disabled"
+      type="secondary"
+    />
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        disabled={true}
+        label="Executive"
+        loader={true}
+        loading={true}
+        type="executive"
+      />
+      
+
+      <Button
+        disabled={true}
+        label="Guiding"
+        loader={true}
+        loading={true}
+        type="guiding"
+      />
+      
+
+    </div>
+  </ComponentPreview>
+  <h3>
+    Outline loader
+  </h3>
+  <p>
+    <CodeTags
+      code=".loading"
+      type="secondary"
+    />
+     with 
+    <CodeTags
+      code=".outline"
+      type="secondary"
+    />
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        label="Executive"
+        loader={true}
+        loading={true}
+        outline={true}
+        type="executive"
+      />
+      
+
+      <Button
+        label="Guiding"
+        loader={true}
+        loading={true}
+        outline={true}
+        type="guiding"
+      />
+      
+
+    </div>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Buttons Button group renders 1`] = `
+<Fragment>
+  <h2
+    id="button-group"
+  >
+    Using buttons together
+  </h2>
+  <p>
+    When you use buttons next to each other you have to wrap them in a 
+    <CodeTags
+      code=".button-group"
+      type="secondary"
+    />
+    .
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        label="Activate"
+        type="executive"
+      />
+      
+
+      <Button
+        label="Disable"
+        type="guiding"
+      />
+      
+
+    </div>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Buttons ButtonGroup renders 1`] = `
+<Fragment>
+  <h2
+    id="button-group"
+  >
+    Using buttons together
+  </h2>
+  <p>
+    When you use buttons next to each other you have to wrap them in a 
+    <CodeTags
+      code=".button-group"
+      type="secondary"
+    />
+    .
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        label="Activate"
+        type="executive"
+      />
+      
+
+      <Button
+        label="Disable"
+        type="guiding"
+      />
+      
+
+    </div>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Buttons Disabled State renders 1`] = `
+<Fragment>
+  <h2
+    id="disabled-state"
+  >
+    Disabled state
+  </h2>
+  <p>
+    Make buttons look inactive by adding the 
+    <CodeTags
+      code="disabled"
+      type="secondary"
+    />
+     boolean attribute to any 
+    <CodeTags
+      code="<button>"
+      type="primary"
+    />
+     element.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        disabled={true}
+        label="Executive"
+        type="executive"
+      />
+      
+
+      <Button
+        disabled={true}
+        label="Guiding"
+        type="guiding"
+      />
+      
+
+    </div>
+  </ComponentPreview>
+  <p>
+    Disabled buttons using the 
+    <CodeTags
+      code="<a>"
+      type="primary"
+    />
+     element behave a bit different:
+  </p>
+  <ul>
+    <li>
+      <CodeTags
+        code="<a>"
+        type="primary"
+      />
+      s do not support the 
+      <CodeTags
+        code="disabled"
+        type="secondary"
+      />
+       attribute, so you must add the 
+      <CodeTags
+        code=".disabled"
+        type="secondary"
+      />
+       class to make it visually appear disabled.
+    </li>
+    <li>
+      Some future-friendly styles are included to disable all 
+      <CodeTags
+        code="pointer-events"
+        type="secondary"
+      />
+       on anchor buttons. In browsers which support that property, you won’t see the disabled cursor at all.
+    </li>
+    <li>
+      Disabled buttons should include the 
+      <CodeTags
+        code="aria-disabled=\\"true\\""
+        type="secondary"
+      />
+       attribute to indicate the state of the element to assistive technologies.
+    </li>
+  </ul>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        disabled={true}
+        href="#"
+        label="Executive"
+        type="executive"
+      />
+      
+
+      <Button
+        disabled={true}
+        href="#"
+        label="Guiding"
+        type="guiding"
+      />
+      
+
+    </div>
+  </ComponentPreview>
+  <Alert
+    type="warning"
+  >
+    <h5>
+      Link functionality caveat
+    </h5>
+    <p>
+      The 
+      <CodeTags
+        code=".disabled"
+        type="secondary"
+      />
+       class uses 
+      <CodeTags
+        code="pointer-events: none"
+        type="secondary"
+      />
+       to try to disable the link functionality of 
+      <CodeTags
+        code="<a>"
+        type="primary"
+      />
+      s, but that CSS property is not yet standardized. In addition, even in browsers that do support 
+      <CodeTags
+        code="pointer-events: none"
+        type="secondary"
+      />
+      , keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a 
+      <CodeTags
+        code="tabindex=\\"-1\\""
+        type="secondary"
+      />
+       attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.
+    </p>
+  </Alert>
+</Fragment>
+`;
+
+exports[`Documentation: Buttons Examples renders 1`] = `
+<Fragment>
+  <h2
+    id="examples"
+  >
+    Examples
+  </h2>
+  <p>
+    The DesignGuide includes a few predefined button styles, each serving its own semantic purpose. Note: 
+    <CodeTags
+      code=".btn-link"
+      type="secondary"
+    />
+     is recommended as the cancel button when paired with other buttons.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        label="Executive"
+        type="executive"
+      />
+      
+
+      <Button
+        label="Guiding"
+        type="guiding"
+      />
+      
+
+      <Button
+        label="Link"
+        type="link"
+      />
+      
+
+    </div>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Buttons Outline Buttons renders 1`] = `
+<Fragment>
+  <h2
+    id="outline-buttons"
+  >
+    Outline buttons
+  </h2>
+  <p>
+    Replace the default modifier classes with the 
+    <CodeTags
+      code=".btn-outline-{style}"
+      type="secondary"
+    />
+     ones to get an outline of the button style.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        label="Executive"
+        outline={true}
+        type="executive"
+      />
+      
+
+      <Button
+        label="Guiding"
+        outline={true}
+        type="guiding"
+      />
+      
+
+    </div>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Buttons Sizes renders 1`] = `
+<Fragment>
+  <h2
+    id="sizes"
+  >
+    Sizes
+  </h2>
+  <p>
+    For a different sized button add 
+    <CodeTags
+      code=".btn-lg"
+      type="secondary"
+    />
+    , 
+    <CodeTags
+      code=".btn-sm"
+      type="secondary"
+    />
+     or 
+    <CodeTags
+      code=".btn-xs"
+      type="secondary"
+    />
+    .
+  </p>
+  <h3>
+    Large
+  </h3>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        label="Large button"
+        size="lg"
+        type="executive"
+      />
+      
+
+      <Button
+        label="Large button"
+        size="lg"
+        type="guiding"
+      />
+      
+
+    </div>
+  </ComponentPreview>
+  <h3>
+    Small
+  </h3>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        label="Small button"
+        size="sm"
+        type="executive"
+      />
+      
+
+      <Button
+        label="Small button"
+        size="sm"
+        type="guiding"
+      />
+      
+
+    </div>
+  </ComponentPreview>
+  <h3>
+    Extra small
+  </h3>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        label="Extra small button"
+        size="xs"
+        type="executive"
+      />
+      
+
+      <Button
+        label="Extra small button"
+        size="xs"
+        type="guiding"
+      />
+      
+
+    </div>
+  </ComponentPreview>
+  <h3>
+    Block level
+  </h3>
+  <p>
+    Create block level buttons—those that span the full width of a parent by adding 
+    <CodeTags
+      code=".btn-block"
+      type="secondary"
+    />
+    .
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        fullWidth={true}
+        label="Block level button"
+        type="executive"
+      />
+      
+
+      <Button
+        fullWidth={true}
+        label="Block level button"
+        type="guiding"
+      />
+      
+
+    </div>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Buttons Usage With Icons renders 1`] = `
+<Fragment>
+  <h2
+    id="usage-with-icons"
+  >
+    Usage with icons
+  </h2>
+  <p>
+    To use a button with an icon simply put the icon markup inside the 
+    <CodeTags
+      code="<button>"
+      type="primary"
+    />
+    .
+  </p>
+  <p>
+    Read more about icon usage here 
+    <Link
+      to="/core/iconography"
+    >
+      here
+    </Link>
+    .
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        icon="cloud"
+        label="Executive"
+        type="executive"
+      />
+      
+
+
+      <Button
+        icon="cloud"
+        label="Guiding"
+        type="guiding"
+      />
+      
+
+    </div>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Buttons Usage With Other Tags renders 1`] = `
+<Fragment>
+  <h2
+    id="usage-with-other-tags"
+  >
+    Usage with other tags
+  </h2>
+  <p>
+    The 
+    <CodeTags
+      code=".btn"
+      type="secondary"
+    />
+     classes are designed to be used with the 
+    <CodeTags
+      code="<button>"
+      type="primary"
+    />
+     element. However, you can also use these classes on 
+    <CodeTags
+      code="<a>"
+      type="primary"
+    />
+     or 
+    <CodeTags
+      code="<input>"
+      type="primary"
+    />
+     elements (though some browsers may apply a slightly different rendering).
+  </p>
+  <p>
+    When using button classes on 
+    <CodeTags
+      code="<a>"
+      type="primary"
+    />
+     elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a 
+    <CodeTags
+      code="role=\\"button\\""
+      type="secondary"
+    />
+     to appropriately convey their purpose to assistive technologies such as screen readers.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        href="#"
+        label="Anchor"
+        type="executive"
+      />
+      
+
+      <Button
+        label="Button"
+        type="executive"
+      />
+      
+
+      <Button
+        btnType="button"
+        input={true}
+        type="executive"
+        value="Input"
+      />
+      
+
+      <Button
+        btnType="submit"
+        input={true}
+        type="executive"
+        value="Submit"
+      />
+      
+
+      <Button
+        btnType="reset"
+        input={true}
+        type="executive"
+        value="Reset"
+      />
+      
+
+    </div>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Buttons renders 1`] = `
+<DocContainer
+  docToc={true}
+>
+  <p
+    className="lead"
+  >
+    Use our button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
+  </p>
+  <Examples />
+  <UsageWithOtherTags />
+  <OutlineButtons />
+  <ButtonGroup />
+  <Sizes />
+  <ActiveState />
+  <DisabledState />
+  <UsageWithIcons />
+  <ButtonLoader />
+</DocContainer>
+`;

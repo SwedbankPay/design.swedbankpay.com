@@ -26,67 +26,497 @@ exports[`Main: App renders 1`] = `
 >
   <withRouter(ScrollToTop)>
     <withRouter(AppHeader) />
-    <Suspense
-      fallback={<LoadingComponent />}
+    <div
+      className="documentation"
     >
-      <Switch>
-        <Route
-          component={
-            Object {
-              "$$typeof": Symbol(react.lazy),
-              "_ctor": [Function],
-              "_result": null,
-              "_status": -1,
+      <div
+        className="row"
+      >
+        <div
+          className="col-xxl-2 col-lg-3 d-none d-lg-block"
+        >
+          <withRouter(SelectPanel)
+            id="doc-sidebar"
+            routes={
+              Array [
+                Object {
+                  "appFolder": "GettingStarted",
+                  "path": "/getting-started",
+                  "redirect": "/getting-started/introduction",
+                  "routes": Array [
+                    Object {
+                      "componentPath": "getting-started/Introduction",
+                      "path": "/getting-started/introduction",
+                      "title": "Introduction",
+                    },
+                    Object {
+                      "componentPath": "getting-started/BrowserSupport",
+                      "path": "/getting-started/browser-support",
+                      "title": "Browser Support",
+                    },
+                    Object {
+                      "componentPath": "getting-started/Contributing",
+                      "path": "/getting-started/contributing",
+                      "title": "Contributing",
+                    },
+                    Object {
+                      "componentPath": "getting-started/Javascript",
+                      "path": "/getting-started/javascript",
+                      "title": "JavaScript",
+                    },
+                  ],
+                  "title": "Getting Started",
+                },
+                Object {
+                  "appFolder": "Core",
+                  "path": "/core",
+                  "redirect": "/core/color",
+                  "routes": Array [
+                    Object {
+                      "componentPath": "core/Color",
+                      "path": "/core/color",
+                      "title": "Color",
+                    },
+                    Object {
+                      "componentPath": "core/Logos",
+                      "path": "/core/logos",
+                      "title": "Logos",
+                    },
+                    Object {
+                      "componentPath": "core/Grid",
+                      "path": "/core/grid",
+                      "title": "Grid",
+                    },
+                    Object {
+                      "componentPath": "core/Iconography",
+                      "path": "/core/iconography",
+                      "title": "Iconography",
+                    },
+                    Object {
+                      "componentPath": "core/Page-layout",
+                      "path": "/core/page-layout",
+                      "title": "Page layout",
+                    },
+                    Object {
+                      "componentPath": "core/Typography",
+                      "path": "/core/typography",
+                      "title": "Typography",
+                    },
+                  ],
+                  "title": "Core",
+                },
+                Object {
+                  "appFolder": "ComponentsDocumentation",
+                  "path": "/components",
+                  "redirect": "/components/introduction",
+                  "routes": Array [
+                    Object {
+                      "componentPath": "Introduction",
+                      "path": "/components/introduction",
+                      "title": "Introduction",
+                    },
+                    Object {
+                      "componentPath": "components/Accordion",
+                      "path": "/components/accordion",
+                      "title": "Accordion",
+                    },
+                    Object {
+                      "componentPath": "components/ActionList",
+                      "path": "/components/action-list",
+                      "title": "Action List",
+                    },
+                    Object {
+                      "componentPath": "components/Alerts",
+                      "path": "/components/alerts",
+                      "title": "Alerts",
+                    },
+                    Object {
+                      "componentPath": "components/Badge",
+                      "path": "/components/badge",
+                      "title": "Badge",
+                    },
+                    Object {
+                      "componentPath": "components/Breadcrumb",
+                      "path": "/components/breadcrumb",
+                      "title": "Breadcrumb",
+                    },
+                    Object {
+                      "componentPath": "components/Buttons",
+                      "path": "/components/buttons",
+                      "title": "Buttons",
+                    },
+                    Object {
+                      "componentPath": "components/Card",
+                      "path": "/components/card",
+                      "title": "Card",
+                    },
+                    Object {
+                      "componentPath": "components/Charts",
+                      "path": "/components/charts",
+                      "title": "Charts",
+                    },
+                    Object {
+                      "componentPath": "components/CodeTags",
+                      "path": "/components/code-tags",
+                      "title": "Code Tags",
+                    },
+                    Object {
+                      "componentPath": "components/Datepickers",
+                      "path": "/components/datepickers",
+                      "title": "Datepickers",
+                    },
+                    Object {
+                      "componentPath": "components/Dialog",
+                      "path": "/components/dialog",
+                      "title": "Dialog",
+                    },
+                    Object {
+                      "componentPath": "components/Expandable",
+                      "path": "/components/expandable",
+                      "title": "Expandable",
+                    },
+                    Object {
+                      "componentPath": "components/Forms",
+                      "path": "/components/forms",
+                      "title": "Forms",
+                    },
+                    Object {
+                      "componentPath": "components/Footer",
+                      "path": "/components/footer",
+                      "title": "Footer",
+                    },
+                    Object {
+                      "componentPath": "components/InputGroup",
+                      "path": "/components/input-group",
+                      "title": "Input Group",
+                    },
+                    Object {
+                      "componentPath": "components/Links",
+                      "path": "/components/links",
+                      "title": "Links",
+                    },
+                    Object {
+                      "componentPath": "components/Lists",
+                      "path": "/components/lists",
+                      "title": "Lists",
+                    },
+                    Object {
+                      "componentPath": "components/Loaders",
+                      "path": "/components/loaders",
+                      "title": "Loaders",
+                    },
+                    Object {
+                      "componentPath": "components/MediaObject",
+                      "path": "/components/media-object",
+                      "title": "Media Object",
+                    },
+                    Object {
+                      "componentPath": "components/Nav",
+                      "path": "/components/nav",
+                      "title": "Nav",
+                    },
+                    Object {
+                      "componentPath": "components/Pagination",
+                      "path": "/components/pagination",
+                      "title": "Pagination",
+                    },
+                    Object {
+                      "componentPath": "components/Panel",
+                      "path": "/components/panel",
+                      "title": "Panel",
+                    },
+                    Object {
+                      "componentPath": "components/ProgressSteps",
+                      "path": "/components/progress-steps",
+                      "title": "Progress Steps",
+                    },
+                    Object {
+                      "componentPath": "components/Sheet",
+                      "path": "/components/sheet",
+                      "title": "Sheet",
+                    },
+                    Object {
+                      "componentPath": "components/Sidebar",
+                      "path": "/components/sidebar",
+                      "title": "Sidebar",
+                    },
+                    Object {
+                      "componentPath": "components/Slab",
+                      "path": "/components/slab",
+                      "title": "Slab",
+                    },
+                    Object {
+                      "componentPath": "components/Status",
+                      "path": "/components/status",
+                      "title": "Status",
+                    },
+                    Object {
+                      "componentPath": "components/Tables",
+                      "path": "/components/tables",
+                      "title": "Tables",
+                    },
+                    Object {
+                      "componentPath": "components/Tabs",
+                      "path": "/components/tabs",
+                      "title": "Tabs",
+                    },
+                    Object {
+                      "componentPath": "components/Toast",
+                      "path": "/components/toast",
+                      "title": "Toast",
+                    },
+                    Object {
+                      "componentPath": "components/Tooltips",
+                      "path": "/components/tooltips",
+                      "title": "Tooltips",
+                    },
+                    Object {
+                      "componentPath": "components/Topbar",
+                      "path": "/components/topbar",
+                      "title": "Topbar",
+                    },
+                  ],
+                  "title": "Components",
+                },
+                Object {
+                  "appFolder": "Utilities",
+                  "path": "/utilities",
+                  "redirect": "/utilities/colors",
+                  "routes": Array [
+                    Object {
+                      "componentPath": "utilities/Borders",
+                      "path": "/utilities/borders",
+                      "title": "Borders",
+                    },
+                    Object {
+                      "componentPath": "utilities/Breakpoints",
+                      "path": "/utilities/breakpoints",
+                      "title": "Breakpoints",
+                    },
+                    Object {
+                      "componentPath": "utilities/Colors",
+                      "path": "/utilities/colors",
+                      "title": "Colors",
+                    },
+                    Object {
+                      "componentPath": "utilities/Display",
+                      "path": "/utilities/display",
+                      "title": "Display",
+                    },
+                    Object {
+                      "componentPath": "utilities/Flex",
+                      "path": "/utilities/flex",
+                      "title": "Flex",
+                    },
+                    Object {
+                      "componentPath": "utilities/Images",
+                      "path": "/utilities/images",
+                      "title": "Images",
+                    },
+                    Object {
+                      "componentPath": "utilities/Sizing",
+                      "path": "/utilities/sizing",
+                      "title": "Sizing",
+                    },
+                    Object {
+                      "componentPath": "utilities/Spacing",
+                      "path": "/utilities/spacing",
+                      "title": "Spacing",
+                    },
+                    Object {
+                      "componentPath": "utilities/Text",
+                      "path": "/utilities/text",
+                      "title": "Text",
+                    },
+                    Object {
+                      "componentPath": "utilities/Visibility",
+                      "path": "/utilities/visibility",
+                      "title": "Visibility",
+                    },
+                  ],
+                  "title": "Utilities",
+                },
+                Object {
+                  "appFolder": "Resources",
+                  "path": "/resources",
+                  "redirect": "/resources/introduction",
+                  "routes": Array [
+                    Object {
+                      "componentPath": "Introduction",
+                      "path": "/resources/introduction",
+                      "title": "Introduction",
+                    },
+                    Object {
+                      "componentPath": "resources/images",
+                      "path": "/resources/images",
+                      "title": "Images",
+                    },
+                    Object {
+                      "componentPath": "resources/logotype",
+                      "path": "/resources/logotype",
+                      "title": "Logotype",
+                    },
+                    Object {
+                      "componentPath": "resources/presentations",
+                      "path": "/resources/presentations",
+                      "title": "Presentations",
+                    },
+                    Object {
+                      "componentPath": "resources/typography",
+                      "path": "/resources/typography",
+                      "title": "Typography",
+                    },
+                  ],
+                  "title": "Resources",
+                },
+                Object {
+                  "appFolder": "Examples",
+                  "path": "/examples",
+                  "redirect": "/examples/login",
+                  "routes": Array [
+                    Object {
+                      "componentPath": "examples/login",
+                      "path": "/examples/login",
+                      "title": "Login",
+                    },
+                    Object {
+                      "componentPath": "examples/settings",
+                      "path": "/examples/settings",
+                      "title": "Settings",
+                    },
+                    Object {
+                      "componentPath": "examples/faq",
+                      "path": "/examples/faq",
+                      "title": "FAQ",
+                    },
+                    Object {
+                      "componentPath": "examples/customers",
+                      "path": "/examples/customers",
+                      "title": "Customers",
+                    },
+                    Object {
+                      "componentPath": "examples/sidebar",
+                      "path": "/examples/sidebar",
+                      "title": "Sidebar",
+                    },
+                  ],
+                  "title": "Examples",
+                },
+              ]
             }
-          }
-          exact={true}
-          path="/"
-        />
-        <Route
-          component={
-            Object {
-              "$$typeof": Symbol(react.lazy),
-              "_ctor": [Function],
-              "_result": null,
-              "_status": -1,
-            }
-          }
-          path="/docs"
-        />
-        <Route
-          component={
-            Object {
-              "$$typeof": Symbol(react.lazy),
-              "_ctor": [Function],
-              "_result": null,
-              "_status": -1,
-            }
-          }
-          path="/res"
-        />
-        <Route
-          component={
-            Object {
-              "$$typeof": Symbol(react.lazy),
-              "_ctor": [Function],
-              "_result": null,
-              "_status": -1,
-            }
-          }
-          path="/404"
-        />
-        <Route
-          component={
-            Object {
-              "$$typeof": Symbol(react.lazy),
-              "_ctor": [Function],
-              "_result": null,
-              "_status": -1,
-            }
-          }
-        />
-      </Switch>
-    </Suspense>
+          />
+        </div>
+        <main
+          className="doc-view col-xxl-10 col-lg-9"
+        >
+          <Suspense
+            fallback={<LoadingComponent />}
+          >
+            <Switch>
+              <Route
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.lazy),
+                    "_ctor": [Function],
+                    "_result": null,
+                    "_status": -1,
+                  }
+                }
+                exact={true}
+                path="/"
+              />
+              <Route
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.lazy),
+                    "_ctor": [Function],
+                    "_result": null,
+                    "_status": -1,
+                  }
+                }
+                path="/getting-started"
+              />
+              <Route
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.lazy),
+                    "_ctor": [Function],
+                    "_result": null,
+                    "_status": -1,
+                  }
+                }
+                path="/components"
+              />
+              <Route
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.lazy),
+                    "_ctor": [Function],
+                    "_result": null,
+                    "_status": -1,
+                  }
+                }
+                path="/core"
+              />
+              <Route
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.lazy),
+                    "_ctor": [Function],
+                    "_result": null,
+                    "_status": -1,
+                  }
+                }
+                path="/examples"
+              />
+              <Route
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.lazy),
+                    "_ctor": [Function],
+                    "_result": null,
+                    "_status": -1,
+                  }
+                }
+                path="/utilities"
+              />
+              <Route
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.lazy),
+                    "_ctor": [Function],
+                    "_result": null,
+                    "_status": -1,
+                  }
+                }
+                path="/resources"
+              />
+              <Route
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.lazy),
+                    "_ctor": [Function],
+                    "_result": null,
+                    "_status": -1,
+                  }
+                }
+                path="/404"
+              />
+              <Route
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.lazy),
+                    "_ctor": [Function],
+                    "_result": null,
+                    "_status": -1,
+                  }
+                }
+              />
+            </Switch>
+          </Suspense>
+        </main>
+      </div>
+    </div>
   </withRouter(ScrollToTop)>
 </Router>
 `;

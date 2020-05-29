@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GettingStarted: index renders 1`] = `
+<RenderPage
+  initPath="/getting-started/introduction"
+  path="/getting-started"
+/>
+`;
