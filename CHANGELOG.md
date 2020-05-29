@@ -30,8 +30,12 @@
   - Removed Template from home page
   - Code View
     - Changed styling of component to present code
+  - Changed Design Guide navigation options (Sidebar and topbar)
+  - Changed Design Guide navigation structure
 - Topbar
   - Reversed icon of topbar-link-right
+  - Made Topbar able to have sidebar content, tweaked Sidebar styling when inside of Topbar
+  - Fixed issues with Topbar producing unnecessary EventListeners
 - Forms
   - Moved height property of input to be under form-control
   - Changed styling of disabled form components
@@ -48,7 +52,7 @@
   - Removed color property from input-group>from-control
   - Added icon to display error when input-group has-error
 - Sheet
-  - Fixed issues with sheet producing unnecessary EventListeners
-  - Fixed issues with having multiple sheets/creating duplcate objects of same instance
+  - Fixed issues with Sheet producing unnecessary EventListeners
+  - Fixed issues with Sheet creating duplicate objects of same instance
 - Code View
   - Added code-view styling
