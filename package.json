@@ -20,7 +20,7 @@
         "lint": "npm run eslint && npm run stylelint",
         "e2e:chrome": "testcafe chrome src/**/*.spec.js",
         "response-time": "node tools/check-response-time.js"
-    }, 
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/SwedbankPay/design.swedbankpay.com.git"
