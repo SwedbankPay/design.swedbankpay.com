@@ -1,10 +1,13 @@
 .sidebar {
     position: sticky;
     top: 0;
-    margin-top: 1rem;
 
     &.sidebar-topbar-sticky {
-        top: calc(@topbar-height + 0.5rem);
+        top: @topbar-height;
+
+        .sidebar-nav {
+            max-height: calc(100vh - @topbar-height);
+        }
     }
 
     each(@grid-breakpoints, .(@min-width, @infix) {
@@ -24,7 +27,7 @@
     });
 
     .sidebar-nav {
-        max-height: calc(100vh - 1rem);
+        max-height: 100vh;
         overflow-y: auto;
 
         .main-nav-ul {
