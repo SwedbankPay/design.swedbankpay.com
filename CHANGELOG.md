@@ -58,3 +58,7 @@
   - Fixed issues with Sheet creating duplicate objects of same instance
 - Topbar
   - Fixed issues with Topbar producing unnecessary EventListeners
+
+### Next release
+- Sidebar
+  - Fixed sidebar positioning making some of the content of sidebar not visible in some cases 
