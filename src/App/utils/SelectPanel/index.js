@@ -81,7 +81,7 @@ class SelectPanel extends Component {
                 {/* <SearchBox routes={this.props.routes} /> */}
                 <nav className="sidebar-nav">
                     <a href="/" className="sidebar-top">{"\n"}
-                        <img className="d-none d-lg-block" src={`${basename}img/${brand}-logo-v-small.svg`} alt="logo" />{"\n"}
+                        <img className="d-none d-lg-block" src={`${basename}img/${brand}-logo-v-small.svg`} alt={`${brand}-logo`} />{"\n"}
                         <div className="sidebar-version">
                             <div className="sidebar-version-header">
                                 Design Guide

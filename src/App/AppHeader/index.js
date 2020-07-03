@@ -17,7 +17,7 @@ const AppHeader = () => (
             <i className="material-icons topbar-btn-icon">close</i>
         </button>
         <a href="/" className="topbar-logo">{"\n"}
-            <img src={`${basename}img/${brand}-logo.svg`} alt="logo" />{"\n"}
+            <img src={`${basename}img/${brand}-logo.svg`} alt={`${brand}-logo`} />{"\n"}
         </a>
         <nav className="topbar-nav">
             <div className="topbar-link-container">
