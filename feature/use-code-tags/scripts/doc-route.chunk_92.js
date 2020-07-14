@@ -1,2 +1,0 @@
-(window.webpackJsonpswedbankpay=window.webpackJsonpswedbankpay||[]).push([[100],{373:function(e,a,n){"use strict";n.r(a);var s=n(1),t=n.n(s),c=n(14),o=n.n(c),d=function(e){var a=e.type,n=e.code;return t.a.createElement("code",{className:"code-tags code-tags-".concat(a)},n)};d.propTypes={type:o.a.string.isRequired,code:o.a.string.isRequired},a.default=d}}]);
-//# sourceMappingURL=doc-route.chunk_92.js.map?2e904445a2d69a6e82e3
