@@ -29,6 +29,16 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
+      - name: Install
+        run: |
+          npm ci
+          npm i -g codecov
+
+      - name: Tests and linting
+        run: |
+          npm run lint
+          npm run test:codecov
+
       - uses: preactjs/compressed-size-action@v1
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
