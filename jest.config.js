@@ -26,9 +26,13 @@ module.exports = {
     ],
     testPathIgnorePatterns: [
         "\\.spec\\.js",
+        // The snapshot generated from the following files simply destroyed agents, lets just skip the entire thing [THN]
         "<rootDir>/src/App/docutils/ComponentPreview/",
+        // TODO test fails now that jest has config on root level for some reason
         "<rootDir>/src/App/docutils/JavascriptDocs/",
+        // TODO test fails now that jest has config on root level for some reason
         "<rootDir>/src/scripts/main/datepicker/",
+        // TODO test fails now that jest has config on root level for some reason
         "<rootDir>/src/scripts/main/topbar/",
         "<rootDir>/dist/"
     ]
