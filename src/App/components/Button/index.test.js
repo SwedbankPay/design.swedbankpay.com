@@ -99,14 +99,14 @@ describe("Component: Button - ", () => {
             const wrapper = shallow(<Button type="executive" href="test" icon="test" />);
 
             expect(wrapper).toMatchSnapshot();
-            expect(wrapper.contains(<i className="material-icons">test</i>)).toEqual(true);
+            expect(wrapper.contains(<i className="material-icons" aria-hidden="true">test</i>)).toEqual(true);
         });
 
         it("renders a button with icon and label inside a span inside an anchor tag when prop href, label and icon is provided", () => {
             const wrapper = shallow(<Button type="executive" href="test" icon="test" label="test" />);
 
             expect(wrapper).toMatchSnapshot();
-            expect(wrapper.contains(<i className="material-icons">test</i>)).toEqual(true);
+            expect(wrapper.contains(<i className="material-icons" aria-hidden="true">test</i>)).toEqual(true);
             expect(wrapper.html()).toContain("<span>test</span>");
         });
     });
@@ -288,14 +288,14 @@ describe("Component: Button - ", () => {
             const wrapper = shallow(<Button type="executive" icon="test" />);
 
             expect(wrapper).toMatchSnapshot();
-            expect(wrapper.contains(<i className="material-icons">test</i>)).toEqual(true);
+            expect(wrapper.contains(<i className="material-icons" aria-hidden="true">test</i>)).toEqual(true);
         });
 
         it("renders a button with icon and label when prop icon and label is provided", () => {
             const wrapper = shallow(<Button type="executive" icon="icon" label="test" />);
 
             expect(wrapper).toMatchSnapshot();
-            expect(wrapper.contains(<i className="material-icons">icon</i>)).toEqual(true);
+            expect(wrapper.contains(<i className="material-icons" aria-hidden="true">icon</i>)).toEqual(true);
             expect(wrapper.contains("test")).toEqual(true);
         });
     });

@@ -41,7 +41,7 @@ class NavGroup extends Component {
         return (
             <li className="nav-group">
                 <div className="nav-group-heading">
-                    <i className="material-icons" onClick={() => this.toggleActive()}>arrow_right</i>
+                    <i className="material-icons" aria-hidden="true"onClick={() => this.toggleActive()}>arrow_right</i>
                     <span>{title}</span>
                 </div>
                 <ul className="nav-ul">

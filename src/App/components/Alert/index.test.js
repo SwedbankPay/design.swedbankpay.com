@@ -28,14 +28,14 @@ describe("Component: Alert", () => {
         const wrapper = shallow(<Alert type="test" icon="test" />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<i className="material-icons alert-icon">test</i>)).toEqual(true);
+        expect(wrapper.contains(<i className="material-icons alert-icon" aria-hidden="true">test</i>)).toEqual(true);
     });
 
     it("renders an alert without an icon if no icon prop is provided", () => {
         const wrapper = shallow(<Alert type="test" />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<i className="material-icons alert-icon">test</i>)).toEqual(false);
+        expect(wrapper.contains(<i className="material-icons alert-icon" aria-hidden="true">test</i>)).toEqual(false);
     });
 
     it("renders an alert with a close-button", () => {
@@ -61,7 +61,7 @@ describe("Component: Alert", () => {
         const wrapper = shallow(<Alert type="test" />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<i className="material-icons" data-alert-close="">close</i>)).toEqual(false);
+        expect(wrapper.contains(<i className="material-icons" data-alert-close="" aria-hidden="true">close</i>)).toEqual(false);
     });
 
     it("renders an alert with text", () => {
@@ -119,14 +119,14 @@ describe("Component: ComplexAlert", () => {
             const wrapper = shallow(<ComplexAlert icon="home" />);
 
             expect(wrapper).toMatchSnapshot();
-            expect(wrapper.html()).toContain("<i class=\"material-icons alert-icon\">home</i>");
+            expect(wrapper.html()).toContain("<i class=\"material-icons alert-icon\" aria-hidden=\"true\">home</i>");
         });
 
         it("renders with a close button when prop close is true", () => {
             const wrapper = shallow(<ComplexAlert close />);
 
             expect(wrapper).toMatchSnapshot();
-            expect(wrapper.html()).toContain("<i class=\"material-icons\">close</i>");
+            expect(wrapper.html()).toContain("<i class=\"material-icons\" aria-hidden=\"true\">close</i>");
         });
 
         it("renders with the passed header text when prop headerText is provided", () => {

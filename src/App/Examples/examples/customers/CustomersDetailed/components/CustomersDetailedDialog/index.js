@@ -7,7 +7,7 @@ const CustomersDetailedDialog = ({ customer }) => (
             <header className="dialog-header" id="aria-label-dia">
                 <h4>Delete customer {customer.id} {customer.firstName} {customer.lastName}?</h4>
                 <button type="button" className="dialog-close">
-                    <i className="material-icons">close</i>
+                    <i className="material-icons" aria-hidden="true">close</i>
                 </button>
             </header>
             <div className="dialog-body" id="aria-describe-dia">

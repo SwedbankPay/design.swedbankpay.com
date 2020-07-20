@@ -62,7 +62,7 @@ class CustomersDetailed extends Component {
                                                 <div className="d-none d-sm-block">
                                                     <div className="media media-sm">
                                                         <div className="media-img">
-                                                            <i className="material-icons">account_circle</i>
+                                                            <i className="material-icons" aria-hidden="true">account_circle</i>
                                                         </div>
                                                         <div className="media-body">
                                                             <h4>{`${this.props.customer.firstName} ${this.props.customer.lastName}`}</h4>
@@ -73,7 +73,7 @@ class CustomersDetailed extends Component {
                                                 <div className="d-block d-sm-none">
                                                     <div className="media media-sm">
                                                         <div className="media-img">
-                                                            <i className="material-icons">account_circle</i>
+                                                            <i className="material-icons" aria-hidden="true">account_circle</i>
                                                         </div>
                                                         <div className="media-body">
                                                             <h4>{`${this.props.customer.firstName} ${this.props.customer.lastName}`}</h4>
@@ -84,11 +84,11 @@ class CustomersDetailed extends Component {
                                             <div className="col-xs-auto">
                                                 <div id="customer-detailed-action-list" className="action-list anchor-top-right">
                                                     <button id="actionListToggle" type="button" className="action-toggle" aria-haspopup="true">
-                                                        <i className="material-icons">more_vert</i>
+                                                        <i className="material-icons" aria-hidden="true">more_vert</i>
                                                     </button>
                                                     <div className="action-menu" aria-labelledby="actionListToggle">
-                                                        <a href="#" onClick={e => e.preventDefault()}><i className="material-icons">edit</i>Edit</a>
-                                                        <a href="#" onClick={e => e.preventDefault()} data-dialog-open="customers-detailed-dialog"><i className="material-icons">delete</i>Delete</a>
+                                                        <a href="#" onClick={e => e.preventDefault()}><i className="material-icons" aria-hidden="true">edit</i>Edit</a>
+                                                        <a href="#" onClick={e => e.preventDefault()} data-dialog-open="customers-detailed-dialog"><i className="material-icons" aria-hidden="true">delete</i>Delete</a>
                                                     </div>
                                                 </div>
                                             </div>

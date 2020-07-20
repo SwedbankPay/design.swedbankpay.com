@@ -38,6 +38,7 @@ exports[`Components: Slab DefaultSlab renders 1`] = `
               className="input-group-addon"
             >
               <i
+                aria-hidden="true"
                 className="material-icons"
               >
                 email

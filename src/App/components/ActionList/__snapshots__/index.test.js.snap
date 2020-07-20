@@ -42,6 +42,7 @@ exports[`Component: ActionList prop types items prints an error if it does not c
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           more_vert
@@ -87,6 +88,7 @@ Array [
           
 
           <i
+            aria-hidden="true"
             className="material-icons"
           >
             more_vert
@@ -143,6 +145,7 @@ Array [
           
 
           <i
+            aria-hidden="true"
             className="material-icons"
           >
             more_vert
@@ -167,6 +170,7 @@ Array [
             type="bookmark"
           >
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               bookmark
@@ -184,6 +188,7 @@ Array [
             type="business_center"
           >
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               business_center
@@ -201,6 +206,7 @@ Array [
             type="add_circle"
           >
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               add_circle
@@ -218,6 +224,7 @@ Array [
             type="person_add"
           >
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               person_add
@@ -273,6 +280,7 @@ Array [
           
 
           <i
+            aria-hidden="true"
             className="material-icons"
           >
             more_vert
@@ -297,6 +305,7 @@ Array [
             type="bookmark"
           >
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               bookmark
@@ -314,6 +323,7 @@ Array [
             type="business_center"
           >
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               business_center
@@ -331,6 +341,7 @@ Array [
             type="add_circle"
           >
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               add_circle
@@ -348,6 +359,7 @@ Array [
             type="person_add"
           >
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               person_add
@@ -398,6 +410,7 @@ Array [
           
 
           <i
+            aria-hidden="true"
             className="material-icons"
           >
             more_vert
@@ -422,6 +435,7 @@ Array [
             type="bookmark"
           >
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               bookmark
@@ -439,6 +453,7 @@ Array [
             type="business_center"
           >
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               business_center
@@ -456,6 +471,7 @@ Array [
             type="add_circle"
           >
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               add_circle
@@ -473,6 +489,7 @@ Array [
             type="person_add"
           >
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               person_add
@@ -529,6 +546,7 @@ Array [
           
 
           <i
+            aria-hidden="true"
             className="material-icons"
           >
             more_vert
@@ -553,6 +571,7 @@ Array [
             type="bookmark"
           >
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               bookmark
@@ -570,6 +589,7 @@ Array [
             type="business_center"
           >
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               business_center
@@ -587,6 +607,7 @@ Array [
             type="add_circle"
           >
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               add_circle
@@ -604,6 +625,7 @@ Array [
             type="person_add"
           >
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               person_add
@@ -655,6 +677,7 @@ Array [
           
 
           <i
+            aria-hidden="true"
             className="material-icons"
           >
             more_vert
@@ -679,6 +702,7 @@ Array [
             type="bookmark"
           >
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               bookmark
@@ -696,6 +720,7 @@ Array [
             type="business_center"
           >
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               business_center
@@ -713,6 +738,7 @@ Array [
             type="add_circle"
           >
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               add_circle
@@ -730,6 +756,7 @@ Array [
             type="person_add"
           >
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               person_add
@@ -765,6 +792,7 @@ Array [
           
 
           <i
+            aria-hidden="true"
             className="material-icons"
           >
             more_vert
@@ -821,6 +849,7 @@ Array [
           
 
           <i
+            aria-hidden="true"
             className="material-icons"
           >
             more_vert
@@ -845,6 +874,7 @@ Array [
             type="bookmark"
           >
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               bookmark
@@ -862,6 +892,7 @@ Array [
             type="business_center"
           >
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               business_center
@@ -879,6 +910,7 @@ Array [
             type="add_circle"
           >
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               add_circle
@@ -896,6 +928,7 @@ Array [
             type="person_add"
           >
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               person_add
@@ -969,6 +1002,7 @@ exports[`Component: ActionList renders with a custom .action-toggle if it is pro
           type="bookmark"
         >
           <i
+            aria-hidden="true"
             className="material-icons"
           >
             bookmark
@@ -986,6 +1020,7 @@ exports[`Component: ActionList renders with a custom .action-toggle if it is pro
           type="business_center"
         >
           <i
+            aria-hidden="true"
             className="material-icons"
           >
             business_center
@@ -1003,6 +1038,7 @@ exports[`Component: ActionList renders with a custom .action-toggle if it is pro
           type="add_circle"
         >
           <i
+            aria-hidden="true"
             className="material-icons"
           >
             add_circle
@@ -1020,6 +1056,7 @@ exports[`Component: ActionList renders with a custom .action-toggle if it is pro
           type="person_add"
         >
           <i
+            aria-hidden="true"
             className="material-icons"
           >
             person_add

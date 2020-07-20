@@ -6,7 +6,7 @@ import { Icon } from "@docutils";
 const ActionListToggle = () => (
     <>
         <button id="actionListToggle" type="button" className="action-toggle" aria-haspopup="true">{"\n"}
-            <i className="material-icons">more_vert</i>{"\n"}
+            <i className="material-icons" aria-hidden="true">more_vert</i>{"\n"}
         </button>{"\n"}
     </>
 );

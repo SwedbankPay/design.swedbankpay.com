@@ -21,7 +21,7 @@ const ActionLink = props => {
 
 const ActionLinkContent = ({ linkText, badge, smallText, multiline, newTab }) => (
     <>
-        {newTab ? <><i className="material-icons">open_in_new</i>{"\n"}</> : null}
+        {newTab ? <><i className="material-icons" aria-hidden="true">open_in_new</i>{"\n"}</> : null}
         {badge ? <><span className={`badge ${badge.type}`}>{badge.text}</span>{"\n"}</> : null}
         {multiline ?
             <span className="action-link-multiline">{"\n"}

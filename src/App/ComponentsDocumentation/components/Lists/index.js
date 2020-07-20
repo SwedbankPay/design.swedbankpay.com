@@ -117,15 +117,15 @@ const SettingsList = () => (
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ul className="settings-list">
                 <li>{"\n"}
-                    <i className="material-icons text-success">check</i>
+                    <i className="material-icons text-success" aria-hidden="true">check</i>
                     Shovels and tapestry newsletter{"\n"}
                 </li>
                 <li>{"\n"}
-                    <i className="material-icons text-warning">remove</i>
+                    <i className="material-icons text-warning" aria-hidden="true">remove</i>
                     Spoon collectors weekly newsletter{"\n"}
                 </li>
                 <li>{"\n"}
-                    <i className="material-icons text-danger">clear</i>
+                    <i className="material-icons text-danger" aria-hidden="true">clear</i>
                     Energetic squirrels newsletter{"\n"}
                 </li>
             </ul>
@@ -306,7 +306,7 @@ const StripedItemList = () => (
                 </li>
                 <li>{"\n"}
                     <span>4925*********004</span>{"\n"}
-                    <i className="material-icons">star</i>{"\n"}
+                    <i className="material-icons" aria-hidden="true">star</i>{"\n"}
                 </li>
                 <li>{"\n"}
                     <span>4925*********004</span>{"\n"}

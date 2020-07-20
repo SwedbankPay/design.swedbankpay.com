@@ -29,11 +29,11 @@ describe("scripts: topbar", () => {
     const Topbar = ({ navOpen, id }) => (
         <header className="topbar" id={id}>
             <button type="button" className="topbar-btn" data-toggle-nav="#topbar-nav">
-                <i className="material-icons topbar-btn-icon">menu</i>
+                <i className="material-icons topbar-btn-icon" aria-hidden="true">menu</i>
                 <span className="topbar-btn-text">Menu</span>
             </button>
             <nav className={`topbar-nav${navOpen ? " topbar-nav-open" : ""}`}>
-                <i className="material-icons close-topbar-nav">close</i>
+                <i className="material-icons close-topbar-nav" aria-hidden="true">close</i>
                 <div className="topbar-link-container">
                     <a href="#">Link 1</a>
                     <a href="#">Link 2</a>

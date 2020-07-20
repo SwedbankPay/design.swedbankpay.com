@@ -5,6 +5,7 @@ exports[`Resources: Images ImagesLink renders 1`] = `
   className="slab slab-default"
 >
   <i
+    aria-hidden="true"
     className="material-icons"
   >
     wb_incandescent

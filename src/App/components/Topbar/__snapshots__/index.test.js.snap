@@ -65,6 +65,7 @@ exports[`Component: Topbar -  props logout it prevents default when clicked 1`] 
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           exit_to_app
@@ -120,6 +121,7 @@ exports[`Component: Topbar -  props logout renders logout link and adds topbar-l
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           exit_to_app
@@ -173,6 +175,7 @@ exports[`Component: Topbar -  props topbarContent menu links prevents default wh
         
 		
         <i
+          aria-hidden="true"
           className="material-icons topbar-btn-icon"
         >
           menu
@@ -187,6 +190,7 @@ exports[`Component: Topbar -  props topbarContent menu links prevents default wh
         
 
         <i
+          aria-hidden="true"
           className="material-icons topbar-btn-icon"
         >
           close
@@ -256,6 +260,7 @@ exports[`Component: Topbar -  props topbarContent menu links prevents default wh
             
 
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               home
@@ -278,6 +283,7 @@ exports[`Component: Topbar -  props topbarContent menu links prevents default wh
             
 
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               shopping_cart
@@ -300,6 +306,7 @@ exports[`Component: Topbar -  props topbarContent menu links prevents default wh
             
 
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               settings
@@ -356,6 +363,7 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
         
 		
         <i
+          aria-hidden="true"
           className="material-icons topbar-btn-icon"
         >
           menu
@@ -370,6 +378,7 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
         
 
         <i
+          aria-hidden="true"
           className="material-icons topbar-btn-icon"
         >
           close
@@ -440,6 +449,7 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
             
 
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               home
@@ -552,6 +562,7 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
                       className="nav-group-heading"
                     >
                       <i
+                        aria-hidden="true"
                         className="material-icons"
                       >
                         arrow_right
@@ -606,6 +617,7 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
                       className="nav-group-heading"
                     >
                       <i
+                        aria-hidden="true"
                         className="material-icons"
                       >
                         arrow_right
@@ -660,6 +672,7 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
                       className="nav-group-heading"
                     >
                       <i
+                        aria-hidden="true"
                         className="material-icons"
                       >
                         arrow_right
@@ -690,6 +703,7 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
                           className="nav-subgroup-heading"
                         >
                           <i
+                            aria-hidden="true"
                             className="material-icons"
                           >
                             arrow_right
@@ -755,6 +769,7 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
                           className="nav-subgroup-heading"
                         >
                           <i
+                            aria-hidden="true"
                             className="material-icons"
                           >
                             arrow_right
@@ -828,6 +843,7 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
             
 
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               shopping_cart
@@ -850,6 +866,7 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
             
 
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               settings
@@ -902,6 +919,7 @@ exports[`Component: Topbar -  props topbarContent renders a topbar menu without 
         
 		
         <i
+          aria-hidden="true"
           className="material-icons topbar-btn-icon"
         >
           menu
@@ -916,6 +934,7 @@ exports[`Component: Topbar -  props topbarContent renders a topbar menu without 
         
 
         <i
+          aria-hidden="true"
           className="material-icons topbar-btn-icon"
         >
           close
@@ -1066,6 +1085,7 @@ exports[`Component: Topbar -  props topbarContent renders a topbar-menu-button w
         
 		
         <i
+          aria-hidden="true"
           className="material-icons topbar-btn-icon"
         >
           menu
@@ -1080,6 +1100,7 @@ exports[`Component: Topbar -  props topbarContent renders a topbar-menu-button w
         
 
         <i
+          aria-hidden="true"
           className="material-icons topbar-btn-icon"
         >
           close
@@ -1149,6 +1170,7 @@ exports[`Component: Topbar -  props topbarContent renders a topbar-menu-button w
             
 
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               home
@@ -1171,6 +1193,7 @@ exports[`Component: Topbar -  props topbarContent renders a topbar-menu-button w
             
 
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               shopping_cart
@@ -1193,6 +1216,7 @@ exports[`Component: Topbar -  props topbarContent renders a topbar-menu-button w
             
 
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               settings
@@ -1249,6 +1273,7 @@ exports[`Component: Topbar -  props topbarContent renders topbar-link-container 
         
 		
         <i
+          aria-hidden="true"
           className="material-icons topbar-btn-icon"
         >
           menu
@@ -1263,6 +1288,7 @@ exports[`Component: Topbar -  props topbarContent renders topbar-link-container 
         
 
         <i
+          aria-hidden="true"
           className="material-icons topbar-btn-icon"
         >
           close
@@ -1332,6 +1358,7 @@ exports[`Component: Topbar -  props topbarContent renders topbar-link-container 
             
 
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               home
@@ -1354,6 +1381,7 @@ exports[`Component: Topbar -  props topbarContent renders topbar-link-container 
             
 
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               shopping_cart
@@ -1376,6 +1404,7 @@ exports[`Component: Topbar -  props topbarContent renders topbar-link-container 
             
 
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               settings
@@ -1399,6 +1428,7 @@ exports[`Component: Topbar -  props topbarContent renders topbar-link-container 
               
 
               <i
+                aria-hidden="true"
                 className="material-icons"
               >
                 exit_to_app
@@ -1455,6 +1485,7 @@ exports[`Component: Topbar -  props topbarContent renders topbar-link-container 
         
 		
         <i
+          aria-hidden="true"
           className="material-icons topbar-btn-icon"
         >
           menu
@@ -1469,6 +1500,7 @@ exports[`Component: Topbar -  props topbarContent renders topbar-link-container 
         
 
         <i
+          aria-hidden="true"
           className="material-icons topbar-btn-icon"
         >
           close
@@ -1538,6 +1570,7 @@ exports[`Component: Topbar -  props topbarContent renders topbar-link-container 
             
 
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               home
@@ -1560,6 +1593,7 @@ exports[`Component: Topbar -  props topbarContent renders topbar-link-container 
             
 
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               shopping_cart
@@ -1582,6 +1616,7 @@ exports[`Component: Topbar -  props topbarContent renders topbar-link-container 
             
 
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               settings

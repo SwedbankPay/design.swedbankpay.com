@@ -18,7 +18,7 @@ describe("scripts: sidebar", () => {
             <nav className="sidebar-nav">
                 <div className="nav-group">
                     <div className="nav-group-heading">
-                        <i className="material-icons">arrow_right</i>
+                        <i className="material-icons" aria-hidden="true">arrow_right</i>
                         <span>
                             Group 1
                         </span>
@@ -26,7 +26,7 @@ describe("scripts: sidebar", () => {
                     <ul className="nav-ul">
                         <li className="nav-subgroup">
                             <div className="nav-subgroup-heading">
-                                <i className="material-icons">arrow_right</i>
+                                <i className="material-icons" aria-hidden="true">arrow_right</i>
                                 <span>
                                     Subgroup 1
                                 </span>
@@ -46,7 +46,7 @@ describe("scripts: sidebar", () => {
                         </li>
                         <li className="nav-subgroup">
                             <div className="nav-subgroup-heading">
-                                <i className="material-icons">arrow_right</i>
+                                <i className="material-icons" aria-hidden="true">arrow_right</i>
                                 <span>
                                     Subgroup 2
                                 </span>
@@ -68,7 +68,7 @@ describe("scripts: sidebar", () => {
                 </div>
                 <div className="nav-group">
                     <div className="nav-group-heading">
-                        <i className="material-icons">arrow_right</i>
+                        <i className="material-icons" aria-hidden="true">arrow_right</i>
                         <span>
                             Group 1
                         </span>

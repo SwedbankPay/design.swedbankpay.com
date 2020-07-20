@@ -5,7 +5,7 @@ const extractElements = (origin, index, subgroupLeaf) => (
     origin.subList ?
         <li key={index} className="nav-subgroup">
             <div className="nav-subgroup-heading">
-                <i className="material-icons">arrow_right</i>
+                <i className="material-icons" aria-hidden="true">arrow_right</i>
                 <span>
                     {origin.title}
                 </span>
@@ -32,7 +32,7 @@ const Sidebar = ({ id, sidebarNavList, sticky }) => (
                     return (
                         <li key={i} className="nav-group">
                             <div className="nav-group-heading">
-                                <i className="material-icons">arrow_right</i>
+                                <i className="material-icons" aria-hidden="true">arrow_right</i>
                                 <span>
                                     {group.title}
                                 </span>

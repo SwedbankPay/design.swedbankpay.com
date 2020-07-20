@@ -2,6 +2,7 @@
 
 exports[`Component: IconPreview -  prop name is marked as required 1`] = `
 <i
+  aria-hidden="true"
   className="payment-icon payment-icon-undefined"
 />
 `;
@@ -38,6 +39,7 @@ exports[`Component: IconPreview -  prop size is an enum with specified allowed v
 
 exports[`Component: IconPreview -  prop size is an enum with specified allowed values 2`] = `
 <i
+  aria-hidden="true"
   className="payment-icon payment-icon-test payment-icon-amex"
 />
 `;
@@ -58,18 +60,21 @@ exports[`Component: IconPreview -  prop type has specific allowed values 1`] = `
 
 exports[`Component: IconPreview -  prop type has specific allowed values 2`] = `
 <i
+  aria-hidden="true"
   className="invalid_value invalid_value-undefined"
 />
 `;
 
 exports[`Component: IconPreview -  renders 1`] = `
 <i
+  aria-hidden="true"
   className="payment-icon payment-icon-amex"
 />
 `;
 
 exports[`Component: IconPreview -  renders a material icon when type is equal to material-icons 1`] = `
 <i
+  aria-hidden="true"
   className="material-icons"
 >
   android
@@ -81,6 +86,7 @@ exports[`Component: IconPreview -  renders a preview wrapper around material-ico
   className="icon-preview"
 >
   <i
+    aria-hidden="true"
     className="material-icons material-icons-large"
   >
     android
@@ -98,6 +104,7 @@ exports[`Component: IconPreview -  renders a preview wrapper around the <i> tag 
   className="icon-preview"
 >
   <i
+    aria-hidden="true"
     className="payment-icon payment-icon-amex"
   />
   <code
@@ -110,18 +117,21 @@ exports[`Component: IconPreview -  renders a preview wrapper around the <i> tag 
 
 exports[`Component: IconPreview -  renders correct icon when prop name is provided 1`] = `
 <i
+  aria-hidden="true"
   className="payment-icon payment-icon-amex"
 />
 `;
 
 exports[`Component: IconPreview -  renders correct size when prop size is provided 1`] = `
 <i
+  aria-hidden="true"
   className="payment-icon payment-icon-large payment-icon-amex"
 />
 `;
 
 exports[`Component: IconPreview -  renders icon with custom when prop className is provided 1`] = `
 <i
+  aria-hidden="true"
   className="payment-icon payment-icon-amex test test2 test-3"
 />
 `;

@@ -14,12 +14,12 @@ const IconPreview = ({ name, squaredFlag, preview, previewSize, size, className,
 
     return preview || previewSize ? (
         <div className="icon-preview">
-            <i className={iconClasses}>{iconClasses.includes("material-icons") ? name : null}</i>
+            <i className={iconClasses} aria-hidden="true">{iconClasses.includes("material-icons") ? name : null}</i>
             <code className="code-tags code-tags-secondary mt-2">
                 {previewSize ? size : name}
             </code>
         </div>
-    ) : <i className={iconClasses}>{iconClasses.includes("material-icons") ? name : null}</i>;
+    ) : <i className={iconClasses} aria-hidden="true">{iconClasses.includes("material-icons") ? name : null}</i>;
 };
 
 IconPreview.propTypes = {
