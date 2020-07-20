@@ -18,6 +18,7 @@ exports[`Component: Nav -  Throws an error when proptype for vertsize is wrong 1
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           home
@@ -46,6 +47,7 @@ exports[`Component: Nav -  Throws an error when proptype for vertsize is wrong 1
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           shopping_cart
@@ -74,6 +76,7 @@ exports[`Component: Nav -  Throws an error when proptype for vertsize is wrong 1
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           notification_important
@@ -102,6 +105,7 @@ exports[`Component: Nav -  Throws an error when proptype for vertsize is wrong 1
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           language
@@ -130,6 +134,7 @@ exports[`Component: Nav -  Throws an error when proptype for vertsize is wrong 1
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           account_balance
@@ -158,6 +163,7 @@ exports[`Component: Nav -  Throws an error when proptype for vertsize is wrong 1
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           fingerprint
@@ -195,6 +201,7 @@ exports[`Component: Nav -  Throws an error when proptype for widesize is wrong 1
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           home
@@ -223,6 +230,7 @@ exports[`Component: Nav -  Throws an error when proptype for widesize is wrong 1
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           shopping_cart
@@ -251,6 +259,7 @@ exports[`Component: Nav -  Throws an error when proptype for widesize is wrong 1
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           notification_important
@@ -279,6 +288,7 @@ exports[`Component: Nav -  Throws an error when proptype for widesize is wrong 1
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           language
@@ -307,6 +317,7 @@ exports[`Component: Nav -  Throws an error when proptype for widesize is wrong 1
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           account_balance
@@ -335,6 +346,7 @@ exports[`Component: Nav -  Throws an error when proptype for widesize is wrong 1
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           fingerprint
@@ -372,6 +384,7 @@ exports[`Component: Nav -  renders 1`] = `
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           home
@@ -400,6 +413,7 @@ exports[`Component: Nav -  renders 1`] = `
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           shopping_cart
@@ -428,6 +442,7 @@ exports[`Component: Nav -  renders 1`] = `
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           notification_important
@@ -456,6 +471,7 @@ exports[`Component: Nav -  renders 1`] = `
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           language
@@ -484,6 +500,7 @@ exports[`Component: Nav -  renders 1`] = `
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           account_balance
@@ -512,6 +529,7 @@ exports[`Component: Nav -  renders 1`] = `
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           fingerprint
@@ -549,6 +567,7 @@ exports[`Component: Nav -  renders with an active list if state active matches 1
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           home
@@ -577,6 +596,7 @@ exports[`Component: Nav -  renders with an active list if state active matches 1
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           shopping_cart
@@ -605,6 +625,7 @@ exports[`Component: Nav -  renders with an active list if state active matches 1
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           notification_important
@@ -633,6 +654,7 @@ exports[`Component: Nav -  renders with an active list if state active matches 1
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           language
@@ -661,6 +683,7 @@ exports[`Component: Nav -  renders with an active list if state active matches 1
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           account_balance
@@ -689,6 +712,7 @@ exports[`Component: Nav -  renders with an active list if state active matches 1
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           fingerprint
@@ -726,6 +750,7 @@ exports[`Component: Nav -  renders with an active sublistItem if state active ma
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           home
@@ -756,6 +781,7 @@ exports[`Component: Nav -  renders with an active sublistItem if state active ma
           onClick={[Function]}
         >
           <i
+            aria-hidden="true"
             className="material-icons"
           >
             shopping_cart
@@ -813,6 +839,7 @@ exports[`Component: Nav -  renders with an active sublistItem if state active ma
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           notification_important
@@ -841,6 +868,7 @@ exports[`Component: Nav -  renders with an active sublistItem if state active ma
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           language
@@ -871,6 +899,7 @@ exports[`Component: Nav -  renders with an active sublistItem if state active ma
           onClick={[Function]}
         >
           <i
+            aria-hidden="true"
             className="material-icons"
           >
             account_balance
@@ -950,6 +979,7 @@ exports[`Component: Nav -  renders with two levels 1`] = `
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           home
@@ -980,6 +1010,7 @@ exports[`Component: Nav -  renders with two levels 1`] = `
           onClick={[Function]}
         >
           <i
+            aria-hidden="true"
             className="material-icons"
           >
             shopping_cart
@@ -1037,6 +1068,7 @@ exports[`Component: Nav -  renders with two levels 1`] = `
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           notification_important
@@ -1065,6 +1097,7 @@ exports[`Component: Nav -  renders with two levels 1`] = `
         
 
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           language
@@ -1095,6 +1128,7 @@ exports[`Component: Nav -  renders with two levels 1`] = `
           onClick={[Function]}
         >
           <i
+            aria-hidden="true"
             className="material-icons"
           >
             account_balance

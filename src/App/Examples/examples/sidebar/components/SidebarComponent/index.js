@@ -15,7 +15,7 @@ class SidebarComponent extends Component {
                         {this.props.sidebarNavList.map((group, groupIndex) => (
                             <li key={groupIndex} className="nav-group">
                                 <div className="nav-group-heading">
-                                    <i className="material-icons">arrow_right</i>
+                                    <i className="material-icons" aria-hidden="true">arrow_right</i>
                                     <span>
                                         {group.title}
                                     </span>
@@ -36,7 +36,7 @@ class SidebarComponent extends Component {
                                             {group.subList.map((sub, subIndex) => (
                                                 <li key={subIndex} className="nav-subgroup">
                                                     <div className="nav-subgroup-heading">
-                                                        <i className="material-icons">arrow_right</i>
+                                                        <i className="material-icons" aria-hidden="true">arrow_right</i>
                                                         <span>
                                                             {sub.title}
                                                         </span>

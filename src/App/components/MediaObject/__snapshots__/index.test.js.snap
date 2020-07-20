@@ -45,6 +45,7 @@ exports[`Component: MediaObject -  renders MediaObject with class media-right 1`
 
      
     <i
+      aria-hidden="true"
       className="material-icons"
     >
       home
@@ -116,6 +117,7 @@ exports[`Component: MediaObject -  renders a muted MediaObject 1`] = `
 
      
     <i
+      aria-hidden="true"
       className="material-icons text-muted"
     >
       home
@@ -149,6 +151,7 @@ exports[`Component: MediaObject -  renders an icon 1`] = `
 
      
     <i
+      aria-hidden="true"
       className="material-icons"
     >
       home

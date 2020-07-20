@@ -2,6 +2,7 @@
 
 exports[`Utilities: Icon renders correct icon 1`] = `
 <i
+  aria-hidden="true"
   className="material-icons"
 >
   test

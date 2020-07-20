@@ -28,6 +28,7 @@ exports[`Examples: CustomersDetailedDialog renders 1`] = `
         type="button"
       >
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           close

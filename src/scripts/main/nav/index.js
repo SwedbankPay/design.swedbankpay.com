@@ -26,7 +26,7 @@ class Nav {
 
             menu.setAttribute("href", "#");
             menu.classList.add("nav-openbtn");
-            menu.innerHTML = "<i class='material-icons'>menu</i>";
+            menu.innerHTML = "<i class='material-icons' aria-hidden='true'>menu</i>";
 
             this._el.appendChild(menu);
 

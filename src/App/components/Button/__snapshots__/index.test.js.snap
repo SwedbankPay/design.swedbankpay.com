@@ -103,6 +103,7 @@ exports[`Component: Button -  Anchor tag: renders a button with icon and label i
   
 	
   <i
+    aria-hidden="true"
     className="material-icons"
   >
     test
@@ -128,6 +129,7 @@ exports[`Component: Button -  Anchor tag: renders a button with icon inside an a
   
 	
   <i
+    aria-hidden="true"
     className="material-icons"
   >
     test
@@ -232,6 +234,7 @@ exports[`Component: Button -  Button tag: renders a button with an icon when pro
   
 		
   <i
+    aria-hidden="true"
     className="material-icons"
   >
     test
@@ -280,6 +283,7 @@ exports[`Component: Button -  Button tag: renders a button with icon and label w
   
 		
   <i
+    aria-hidden="true"
     className="material-icons"
   >
     icon
