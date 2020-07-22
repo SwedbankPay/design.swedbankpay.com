@@ -160,7 +160,6 @@ const IncludeTime = () => (
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <DatepickerComponent
-                value="28.12.1972 12:00"
                 time
                 format="nb"
                 label="Date"
