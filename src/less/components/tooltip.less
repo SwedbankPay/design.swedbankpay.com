@@ -6,13 +6,13 @@
         content: "";
         position: absolute;
         font-family: @font-stack;
-        top: -6px;
+        top: -8px;
         left: 50%;
         transform: translateX(-50%);
-        border-width: 0.25rem 0.375rem 0 0.375rem;
+        border-width: 0.35rem 0.375rem 0 0.375rem;
         border-style: solid;
-        border-color: rgba(0, 0, 0, 0.85) transparent transparent transparent;
-        z-index: @zindex-tooltip;
+        border-color: rgba(255, 255, 255, 1) transparent transparent transparent;
+        z-index: calc(@zindex-tooltip + 1);
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
     }
@@ -20,21 +20,23 @@
     &:after {
         content: attr(data-tooltip);
         position: absolute;
+        display: table;
         font-family: @font-stack;
         left: 50%;
-        top: -6px;
+        top: -8px;
         transform: translateX(-50%) translateY(-100%);
-        background: rgba(0, 0, 0, 0.85);
-        text-align: center;
-        color: @white;
+        background: @white;
+        color: @brand-secondary;
+        text-align: left;
         font-size: 0.8rem;
-        min-width: 5rem;
+        white-space: normal;
         border-radius: 5px;
         pointer-events: none;
-        padding: @base-padding-xs @base-padding-sm;
+        padding: 0.75rem 1rem;
         z-index: @zindex-tooltip;
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
     }
 
     &[data-tooltip=""]:before {
@@ -48,15 +50,14 @@
     &[data-tooltip-position="left"]:before {
         left: 0%;
         top: 50%;
-        margin-left: -13px;
+        margin-left: -5px;
         transform: translateY(-50%) rotate(-90deg);
-        box-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0 0;
     }
 
     &[data-tooltip-position="left"]:after {
         left: 0%;
         top: 50%;
-        margin-left: -9px;
+        margin-left: -10px;
         transform: translateX(-100%) translateY(-50%);
     }
 
@@ -90,7 +91,7 @@
     &[data-tooltip-position="right"]:after {
         left: 100%;
         top: 50%;
-        margin-left: @base-margin-sm;
+        margin-left: 9px;
         transform: translateX(0%) translateY(-50%);
     }
 
