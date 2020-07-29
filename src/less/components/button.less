@@ -87,7 +87,7 @@
     // --------------------------------------------------
 
     &.btn-executive {
-        .button-variant(@btn-executive-color, @btn-executive-bg, @btn-executive-disabled-color, @btn-executive-disabled-bg, lighten(@btn-executive-bg, 20%));
+        .button-variant(@btn-executive-color, @btn-executive-bg, @btn-executive-hover, @btn-executive-disabled-color, @btn-executive-disabled-bg, @brand-secondary);
 
         &.btn-outline {
             .button-outline-variant(@btn-executive-bg, @btn-executive-bg, @btn-executive-color, @btn-executive-disabled-bg, @btn-executive-disabled-color);
@@ -95,10 +95,18 @@
     }
 
     &.btn-guiding {
-        .button-variant(@btn-guiding-color, @btn-guiding-bg, @btn-guiding-disabled-color, @btn-guiding-disabled-bg, lighten(@btn-guiding-bg, 20%));
+        .button-variant(@btn-guiding-color, @btn-guiding-bg, @btn-guiding-hover, @btn-guiding-disabled-color, @btn-guiding-disabled-bg, @brand-secondary);
 
         &.btn-outline {
             .button-outline-variant(@btn-guiding-bg, @btn-guiding-bg, @btn-guiding-color, @btn-guiding-disabled-bg, @btn-guiding-disabled-color);
+        }
+    }
+
+    &.btn-destructive {
+        .button-variant(@btn-destructive-color, @btn-destructive-bg, @btn-destructive-hover, @btn-destructive-disabled-color, @btn-destructive-disabled-bg, @brand-secondary);
+
+        &.btn-outline {
+            .button-outline-variant(@btn-destructive-bg, @btn-destructive-bg, @btn-destructive-color, @btn-destructive-disabled-bg, @btn-destructive-disabled-color);
         }
     }
 

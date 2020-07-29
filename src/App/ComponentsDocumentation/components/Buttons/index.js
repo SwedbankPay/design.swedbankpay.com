@@ -17,6 +17,7 @@ const Examples = () => (
             <div className="button-group">{"\n"}
                 <ButtonComponent type="executive" label="Executive" />{"\n"}
                 <ButtonComponent type="guiding" label="Guiding" />{"\n"}
+                <ButtonComponent type="destructive" label="Destructive" />{"\n"}
                 <ButtonComponent type="link" label="Link" />{"\n"}
             </div>
         </ComponentPreview>
@@ -52,6 +53,7 @@ const OutlineButtons = () => (
             <div className="button-group">{"\n"}
                 <ButtonComponent outline type="executive" label="Executive" />{"\n"}
                 <ButtonComponent outline type="guiding" label="Guiding" />{"\n"}
+                <ButtonComponent outline type="destructive" label="Destructive" />{"\n"}
             </div>
         </ComponentPreview>
     </>
