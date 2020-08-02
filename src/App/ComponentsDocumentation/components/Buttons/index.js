@@ -19,6 +19,8 @@ const Examples = () => (
                 <ButtonComponent type="guiding" label="Guiding" />{"\n"}
                 <ButtonComponent type="destructive" label="Destructive" />{"\n"}
                 <ButtonComponent type="link" label="Link" />{"\n"}
+                <ButtonComponent type="link-destructive" label="Link destructive" />{"\n"}
+
             </div>
         </ComponentPreview>
     </>

@@ -115,45 +115,11 @@
 
     // Make a button look and behave like a link
     &.btn-link {
-        color: @btn-link-color;
-        font-family: @brand-default;
-        font-weight: normal;
-        background: transparent;
-        text-decoration: underline;
+        .button-link-variant(@btn-link-color, @btn-link-disabled-color, @brand-secondary);
+    }
 
-        &[active],
-        &:active,
-        &.active,
-        &[disabled],
-        fieldset[disabled] & {
-            background-color: transparent;
-            box-shadow: none;
-        }
-
-        &:hover,
-        &:active {
-            box-shadow: none;
-        }
-
-        &:focus {
-            outline: 0;
-            box-shadow: 0 0 0 0.2rem @light-gray;
-        }
-
-        &:hover,
-        &:focus {
-            background-color: transparent;
-            text-decoration: none;
-        }
-
-        &[disabled],
-        fieldset[disabled] & {
-            &:hover,
-            &:focus {
-                color: @btn-link-disabled-color;
-                text-decoration: none;
-            }
-        }
+    &.btn-link-destructive {
+        .button-link-variant(@btn-destructive-bg, @btn-destructive-disabled-bg, @brand-secondary);
     }
 
     // Button Sizes

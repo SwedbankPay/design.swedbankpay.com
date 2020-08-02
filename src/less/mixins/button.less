@@ -81,6 +81,46 @@
     }
 }
 
+.button-link-variant(@color, @disabled-color, @focus-shadow) {
+    color: @color;
+    font-family: @brand-default;
+    font-weight: normal;
+    background: transparent;
+    text-decoration: underline;
+
+    &[active],
+    &:active,
+    &.active,
+    &[disabled],
+    fieldset[disabled] & {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    &:hover,
+    &:active {
+        box-shadow: none;
+        border-color: @color;
+    }
+
+    &:focus {
+        outline: 0;
+        box-shadow: 0 0 0 0.1rem @focus-shadow;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: transparent;
+    }
+
+    &[disabled],
+    fieldset[disabled] & {
+        color: @disabled-color;
+        text-decoration: none;
+        border-color: @disabled-color;
+    }
+}
+
 .button-ghost(@color) {
     color: @white;
     background: transparent;
