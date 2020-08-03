@@ -34,7 +34,7 @@ const Overview = () => (
                 <button
                     className="btn btn-primary"
                     type="button"
-                    data-tooltip="This is a tooltip!"
+                    data-tooltip="Payment capture is the process by which payments are secured once the payment has been authorized by the customer!"
                     data-tooltip-position="right"
                 >Tooltip to the right
                 </button>{"\n"}
