@@ -6,13 +6,25 @@ import ButtonComponent from "@components/Button";
 import Alert from "@components/Alert";
 import CodeTags from "@components/CodeTags";
 
-const Examples = () => (
+const Overview = () => (
     <>
-        <h2 id="examples">Examples</h2>
+        <h2 id="overview">Overview</h2>
         <p>
             The DesignGuide includes a few predefined button styles, each serving its own semantic purpose.
-            Note: <CodeTags type="secondary" code=".btn-link" /> is recommended as the cancel button when paired with other buttons.
         </p>
+        <ul>
+            <li><b>Executive:</b> Used in executive cases</li>
+            <li><b>Guiding:</b> Used in guiding cases</li>
+            <li><b>Destructive:</b> Used in destructive cases</li>
+            <li>
+                <b>Link:</b> Used when the functionality exhibit link behavior and to give a clear indication that it is different than the other buttons.
+                For instance, <CodeTags type="secondary" code=".btn-link" /> is recommended as the cancel button when paired with other buttons.
+            </li>
+            <li>
+                <b>Link destructive:</b> Similiar to <CodeTags type="secondary" code=".btn-link" />, used to indicate that the consequences are more severe.
+            </li>
+
+        </ul>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <ButtonComponent type="executive" label="Executive" />{"\n"}
@@ -23,6 +35,48 @@ const Examples = () => (
 
             </div>
         </ComponentPreview>
+
+        <h3>Active state</h3>
+        <p>Buttons will appear pressed (with inset shadow) when active.
+            <b>There’s no need to add a class to <CodeTags type="primary" code={"<button>"} />s as they use a pseudo-class.</b> However,
+            you can still force the same active appearance with <CodeTags type="secondary" code=".active" /> (and
+            include the <CodeTags type="secondary" code={"aria-pressed=\"true\""} /> attribute) should you need to replicate the state programmatically.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+            <div className="button-group">{"\n"}
+                <ButtonComponent href="#" active type="executive" label="Executive" />{"\n"}
+                <ButtonComponent href="#" active type="guiding" label="Guiding" />{"\n"}
+                <ButtonComponent active type="destructive" label="Destructive" />{"\n"}
+            </div>
+        </ComponentPreview>
+
+        <h3>Disabled state</h3>
+        <p>Make buttons look inactive by adding the <CodeTags type="secondary" code="disabled" /> boolean attribute to any <CodeTags type="primary" code={"<button>"} /> element.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+            <div className="button-group">{"\n"}
+                <ButtonComponent disabled type="executive" label="Executive" />{"\n"}
+                <ButtonComponent disabled type="guiding" label="Guiding" />{"\n"}
+                <ButtonComponent disabled type="destructive" label="Destructive" />{"\n"}
+                <ButtonComponent disabled type="link" label="Link" />{"\n"}
+                <ButtonComponent disabled type="link-destructive" label="Link destructive" />{"\n"}
+            </div>
+        </ComponentPreview>
+        <p>Disabled buttons using the <CodeTags type="primary" code={"<a>"} /> element behave a bit different:</p>
+        <ul>
+            <li><CodeTags type="primary" code={"<a>"} />s do not support the <CodeTags type="secondary" code="disabled" /> attribute, so you must add the <CodeTags type="secondary" code=".disabled" /> class to make it visually appear disabled.</li>
+            <li>Some future-friendly styles are included to disable all <CodeTags type="secondary" code="pointer-events" /> on anchor buttons. In browsers which support that property, you won’t see the disabled cursor at all.</li>
+            <li>Disabled buttons should include the <CodeTags type="secondary" code={"aria-disabled=\"true\""} /> attribute to indicate the state of the element to assistive technologies.</li>
+        </ul>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+            <div className="button-group">{"\n"}
+                <ButtonComponent href="#" disabled type="executive" label="Executive" />{"\n"}
+                <ButtonComponent href="#" disabled type="guiding" label="Guiding" />{"\n"}
+            </div>
+        </ComponentPreview>
+        <Alert type="warning">
+            <h5>Link functionality caveat</h5>
+            <p>The <CodeTags type="secondary" code=".disabled" /> class uses <CodeTags type="secondary" code="pointer-events: none" /> to try to disable the link functionality of <CodeTags type="primary" code={"<a>"} />s, but that CSS property is not yet standardized. In addition, even in browsers that do support <CodeTags type="secondary" code="pointer-events: none" />, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a <CodeTags type="secondary" code={"tabindex=\"-1\""} /> attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.</p>
+        </Alert>
+
     </>
 );
 
@@ -110,51 +164,6 @@ const Sizes = () => (
     </>
 );
 
-const ActiveState = () => (
-    <>
-        <h2 id="active-state">Active state</h2>
-        <p>Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active.
-            <b>There’s no need to add a class to <CodeTags type="primary" code={"<button>"} />s as they use a pseudo-class.</b>
-            However, you can still force the same active appearance with <CodeTags type="secondary" code=".active" /> (and
-            include the <CodeTags type="secondary" code={"aria-pressed=\"true\""} /> attribute) should you need to replicate the state programmatically.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
-            <div className="button-group">{"\n"}
-                <ButtonComponent href="#" active type="executive" label="Executive" />{"\n"}
-                <ButtonComponent href="#" active type="guiding" label="Guiding" />{"\n"}
-            </div>
-        </ComponentPreview>
-    </>
-);
-
-const DisabledState = () => (
-    <>
-        <h2 id="disabled-state">Disabled state</h2>
-        <p>Make buttons look inactive by adding the <CodeTags type="secondary" code="disabled" /> boolean attribute to any <CodeTags type="primary" code={"<button>"} /> element.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
-            <div className="button-group">{"\n"}
-                <ButtonComponent disabled type="executive" label="Executive" />{"\n"}
-                <ButtonComponent disabled type="guiding" label="Guiding" />{"\n"}
-            </div>
-        </ComponentPreview>
-        <p>Disabled buttons using the <CodeTags type="primary" code={"<a>"} /> element behave a bit different:</p>
-        <ul>
-            <li><CodeTags type="primary" code={"<a>"} />s do not support the <CodeTags type="secondary" code="disabled" /> attribute, so you must add the <CodeTags type="secondary" code=".disabled" /> class to make it visually appear disabled.</li>
-            <li>Some future-friendly styles are included to disable all <CodeTags type="secondary" code="pointer-events" /> on anchor buttons. In browsers which support that property, you won’t see the disabled cursor at all.</li>
-            <li>Disabled buttons should include the <CodeTags type="secondary" code={"aria-disabled=\"true\""} /> attribute to indicate the state of the element to assistive technologies.</li>
-        </ul>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
-            <div className="button-group">{"\n"}
-                <ButtonComponent href="#" disabled type="executive" label="Executive" />{"\n"}
-                <ButtonComponent href="#" disabled type="guiding" label="Guiding" />{"\n"}
-            </div>
-        </ComponentPreview>
-        <Alert type="warning">
-            <h5>Link functionality caveat</h5>
-            <p>The <CodeTags type="secondary" code=".disabled" /> class uses <CodeTags type="secondary" code="pointer-events: none" /> to try to disable the link functionality of <CodeTags type="primary" code={"<a>"} />s, but that CSS property is not yet standardized. In addition, even in browsers that do support <CodeTags type="secondary" code="pointer-events: none" />, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a <CodeTags type="secondary" code={"tabindex=\"-1\""} /> attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.</p>
-        </Alert>
-    </>
-);
-
 const UsageWithIcons = () => (
     <>
         <h2 id="usage-with-icons">Usage with icons</h2>
@@ -164,6 +173,7 @@ const UsageWithIcons = () => (
             <div className="button-group">{"\n"}
                 <ButtonComponent icon="cloud" type="executive" label="Executive" />{"\n\n"}
                 <ButtonComponent icon="cloud" type="guiding" label="Guiding" />{"\n"}
+                <ButtonComponent icon="close" type="destructive" label="Destructive" />{"\n"}
             </div>
         </ComponentPreview>
     </>
@@ -201,13 +211,11 @@ const ButtonLoader = () => (
 const Buttons = () => (
     <DocContainer docToc>
         <p className="lead">Use our button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
-        <Examples />
+        <Overview />
         <UsageWithOtherTags />
         <OutlineButtons />
         <ButtonGroup />
         <Sizes />
-        <ActiveState />
-        <DisabledState />
         <UsageWithIcons />
         <ButtonLoader />
     </DocContainer>
@@ -216,4 +224,4 @@ const Buttons = () => (
 export default Buttons;
 
 /* for testing */
-export { Examples, UsageWithOtherTags, OutlineButtons, ButtonGroup, Sizes, ActiveState, DisabledState, UsageWithIcons, ButtonLoader };
+export { Overview, UsageWithOtherTags, OutlineButtons, ButtonGroup, Sizes, UsageWithIcons, ButtonLoader };
