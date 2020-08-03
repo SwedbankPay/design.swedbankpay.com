@@ -1,66 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Documentation: Buttons Active State renders 1`] = `
-<Fragment>
-  <h2
-    id="active-state"
-  >
-    Active state
-  </h2>
-  <p>
-    Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active.
-    <b>
-      There’s no need to add a class to 
-      <CodeTags
-        code="<button>"
-        type="primary"
-      />
-      s as they use a pseudo-class.
-    </b>
-    However, you can still force the same active appearance with 
-    <CodeTags
-      code=".active"
-      type="secondary"
-    />
-     (and include the 
-    <CodeTags
-      code="aria-pressed=\\"true\\""
-      type="secondary"
-    />
-     attribute) should you need to replicate the state programmatically.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-  >
-    <div
-      className="button-group"
-    >
-      
-
-      <Button
-        active={true}
-        href="#"
-        label="Executive"
-        type="executive"
-      />
-      
-
-      <Button
-        active={true}
-        href="#"
-        label="Guiding"
-        type="guiding"
-      />
-      
-
-    </div>
-  </ComponentPreview>
-</Fragment>
-`;
-
 exports[`Documentation: Buttons Button Loader renders 1`] = `
 <Fragment>
   <h2
@@ -282,13 +221,217 @@ exports[`Documentation: Buttons ButtonGroup renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Buttons Disabled State renders 1`] = `
+exports[`Documentation: Buttons Outline Buttons renders 1`] = `
 <Fragment>
   <h2
-    id="disabled-state"
+    id="outline-buttons"
   >
-    Disabled state
+    Outline buttons
   </h2>
+  <p>
+    Replace the default modifier classes with the 
+    <CodeTags
+      code=".btn-outline-{style}"
+      type="secondary"
+    />
+     ones to get an outline of the button style.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        label="Executive"
+        outline={true}
+        type="executive"
+      />
+      
+
+      <Button
+        label="Guiding"
+        outline={true}
+        type="guiding"
+      />
+      
+
+      <Button
+        label="Destructive"
+        outline={true}
+        type="destructive"
+      />
+      
+
+    </div>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Buttons Overview renders 1`] = `
+<Fragment>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <p>
+    The DesignGuide includes a few predefined button styles, each serving its own semantic purpose.
+  </p>
+  <ul>
+    <li>
+      <b>
+        Executive:
+      </b>
+       Used in executive cases
+    </li>
+    <li>
+      <b>
+        Guiding:
+      </b>
+       Used in guiding cases
+    </li>
+    <li>
+      <b>
+        Destructive:
+      </b>
+       Used in destructive cases
+    </li>
+    <li>
+      <b>
+        Link:
+      </b>
+       Used when the functionality exhibit link behavior and to give a clear indication that it is different than the other buttons. For instance, 
+      <CodeTags
+        code=".btn-link"
+        type="secondary"
+      />
+       is recommended as the cancel button when paired with other buttons.
+    </li>
+    <li>
+      <b>
+        Link destructive:
+      </b>
+       Similiar to 
+      <CodeTags
+        code=".btn-link"
+        type="secondary"
+      />
+      , used to indicate that the consequences are more severe.
+    </li>
+  </ul>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        label="Executive"
+        type="executive"
+      />
+      
+
+      <Button
+        label="Guiding"
+        type="guiding"
+      />
+      
+
+      <Button
+        label="Destructive"
+        type="destructive"
+      />
+      
+
+      <Button
+        label="Link"
+        type="link"
+      />
+      
+
+      <Button
+        label="Link destructive"
+        type="link-destructive"
+      />
+      
+
+    </div>
+  </ComponentPreview>
+  <h3>
+    Active state
+  </h3>
+  <p>
+    Buttons will appear pressed (with inset shadow) when active.
+    <b>
+      There’s no need to add a class to 
+      <CodeTags
+        code="<button>"
+        type="primary"
+      />
+      s as they use a pseudo-class.
+    </b>
+     However, you can still force the same active appearance with 
+    <CodeTags
+      code=".active"
+      type="secondary"
+    />
+     (and include the 
+    <CodeTags
+      code="aria-pressed=\\"true\\""
+      type="secondary"
+    />
+     attribute) should you need to replicate the state programmatically.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        active={true}
+        href="#"
+        label="Executive"
+        type="executive"
+      />
+      
+
+      <Button
+        active={true}
+        href="#"
+        label="Guiding"
+        type="guiding"
+      />
+      
+
+      <Button
+        active={true}
+        label="Destructive"
+        type="destructive"
+      />
+      
+
+    </div>
+  </ComponentPreview>
+  <h3>
+    Disabled state
+  </h3>
   <p>
     Make buttons look inactive by adding the 
     <CodeTags
@@ -324,6 +467,27 @@ exports[`Documentation: Buttons Disabled State renders 1`] = `
         disabled={true}
         label="Guiding"
         type="guiding"
+      />
+      
+
+      <Button
+        disabled={true}
+        label="Destructive"
+        type="destructive"
+      />
+      
+
+      <Button
+        disabled={true}
+        label="Link"
+        type="link"
+      />
+      
+
+      <Button
+        disabled={true}
+        label="Link destructive"
+        type="link-destructive"
       />
       
 
@@ -436,100 +600,6 @@ exports[`Documentation: Buttons Disabled State renders 1`] = `
        attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.
     </p>
   </Alert>
-</Fragment>
-`;
-
-exports[`Documentation: Buttons Examples renders 1`] = `
-<Fragment>
-  <h2
-    id="examples"
-  >
-    Examples
-  </h2>
-  <p>
-    The DesignGuide includes a few predefined button styles, each serving its own semantic purpose. Note: 
-    <CodeTags
-      code=".btn-link"
-      type="secondary"
-    />
-     is recommended as the cancel button when paired with other buttons.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-  >
-    <div
-      className="button-group"
-    >
-      
-
-      <Button
-        label="Executive"
-        type="executive"
-      />
-      
-
-      <Button
-        label="Guiding"
-        type="guiding"
-      />
-      
-
-      <Button
-        label="Link"
-        type="link"
-      />
-      
-
-    </div>
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Documentation: Buttons Outline Buttons renders 1`] = `
-<Fragment>
-  <h2
-    id="outline-buttons"
-  >
-    Outline buttons
-  </h2>
-  <p>
-    Replace the default modifier classes with the 
-    <CodeTags
-      code=".btn-outline-{style}"
-      type="secondary"
-    />
-     ones to get an outline of the button style.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-  >
-    <div
-      className="button-group"
-    >
-      
-
-      <Button
-        label="Executive"
-        outline={true}
-        type="executive"
-      />
-      
-
-      <Button
-        label="Guiding"
-        outline={true}
-        type="guiding"
-      />
-      
-
-    </div>
-  </ComponentPreview>
 </Fragment>
 `;
 
@@ -739,6 +809,13 @@ exports[`Documentation: Buttons Usage With Icons renders 1`] = `
       />
       
 
+      <Button
+        icon="close"
+        label="Destructive"
+        type="destructive"
+      />
+      
+
     </div>
   </ComponentPreview>
 </Fragment>
@@ -849,13 +926,11 @@ exports[`Documentation: Buttons renders 1`] = `
   >
     Use our button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
   </p>
-  <Examples />
+  <Overview />
   <UsageWithOtherTags />
   <OutlineButtons />
   <ButtonGroup />
   <Sizes />
-  <ActiveState />
-  <DisabledState />
   <UsageWithIcons />
   <ButtonLoader />
 </DocContainer>

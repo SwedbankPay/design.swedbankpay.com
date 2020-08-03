@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Buttons, { Examples, UsageWithOtherTags, OutlineButtons, ButtonGroup, Sizes, ActiveState, DisabledState, UsageWithIcons, ButtonLoader } from "./index";
+import Buttons, { Overview, UsageWithOtherTags, OutlineButtons, ButtonGroup, Sizes, UsageWithIcons, ButtonLoader } from "./index";
 
 describe("Documentation: Buttons", () => {
     it("is defined", () => {
@@ -14,13 +14,13 @@ describe("Documentation: Buttons", () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    describe("Examples", () => {
+    describe("Overview", () => {
         it("is defined", () => {
-            expect(Examples).toBeDefined();
+            expect(Overview).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<Examples />);
+            const wrapper = shallow(<Overview />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -81,30 +81,6 @@ describe("Documentation: Buttons", () => {
 
         it("renders", () => {
             const wrapper = shallow(<ButtonGroup />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("Active State", () => {
-        it("is defined", () => {
-            expect(ActiveState).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<ActiveState />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("Disabled State", () => {
-        it("is defined", () => {
-            expect(DisabledState).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<DisabledState />);
 
             expect(wrapper).toMatchSnapshot();
         });
