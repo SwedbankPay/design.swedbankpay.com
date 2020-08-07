@@ -43,7 +43,7 @@ const ExampleUse = () => (
                         <th scope="col">Status</th>
                         <th scope="col">Invoice number</th>
                         <th scope="col">Due date</th>
-                        <th scope="col">Amount</th>
+                        <th className="text-right" scope="col">Amount</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -51,31 +51,31 @@ const ExampleUse = () => (
                         <td><span className="status status-neutral">Unpaid</span></td>
                         <td>123456</td>
                         <td>2020-08-19</td>
-                        <td>1079,00</td>
+                        <td className="text-right">1079,00</td>
                     </tr>
                     <tr>
                         <td><span className="status status-success">Paid</span></td>
                         <td>123455</td>
                         <td>2020-07-19</td>
-                        <td>1079,00</td>
+                        <td className="text-right">1079,00</td>
                     </tr>
                     <tr>
                         <td><span className="status status-warning">Overdue</span></td>
                         <td>123454</td>
                         <td>2020-06-19</td>
-                        <td>1079,00</td>
+                        <td className="text-right">1079,00</td>
                     </tr>
                     <tr>
                         <td><span className="status status-warning-2">Reminder</span></td>
                         <td>123453</td>
                         <td>2020-05-19</td>
-                        <td>1079,00</td>
+                        <td className="text-right">1079,00</td>
                     </tr>
                     <tr>
                         <td><span className="status status-danger">Sent to collection</span></td>
                         <td>123452</td>
                         <td>2020-04-19</td>
-                        <td>1079,00</td>
+                        <td className="text-right">1079,00</td>
                     </tr>
                 </tbody>
             </table>
