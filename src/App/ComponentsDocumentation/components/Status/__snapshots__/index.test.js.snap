@@ -32,6 +32,7 @@ exports[`Documentation: Status ExampleUse renders 1`] = `
             Due date
           </th>
           <th
+            className="text-right"
             scope="col"
           >
             Amount
@@ -53,7 +54,9 @@ exports[`Documentation: Status ExampleUse renders 1`] = `
           <td>
             2020-08-19
           </td>
-          <td>
+          <td
+            className="text-right"
+          >
             1079,00
           </td>
         </tr>
@@ -71,7 +74,9 @@ exports[`Documentation: Status ExampleUse renders 1`] = `
           <td>
             2020-07-19
           </td>
-          <td>
+          <td
+            className="text-right"
+          >
             1079,00
           </td>
         </tr>
@@ -89,7 +94,9 @@ exports[`Documentation: Status ExampleUse renders 1`] = `
           <td>
             2020-06-19
           </td>
-          <td>
+          <td
+            className="text-right"
+          >
             1079,00
           </td>
         </tr>
@@ -107,7 +114,9 @@ exports[`Documentation: Status ExampleUse renders 1`] = `
           <td>
             2020-05-19
           </td>
-          <td>
+          <td
+            className="text-right"
+          >
             1079,00
           </td>
         </tr>
@@ -125,7 +134,9 @@ exports[`Documentation: Status ExampleUse renders 1`] = `
           <td>
             2020-04-19
           </td>
-          <td>
+          <td
+            className="text-right"
+          >
             1079,00
           </td>
         </tr>
