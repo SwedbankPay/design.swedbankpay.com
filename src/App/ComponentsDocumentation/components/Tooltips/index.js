@@ -38,10 +38,28 @@ const Overview = () => (
                     data-tooltip-position="right"
                 >Tooltip to the right
                 </button>{"\n"}
-                <i className="material-icons"
-                    data-tooltip="Payment capture is the process by which payments are secured once the payment has been authorized by the customer."
-                    data-tooltip-position="bottom"
-                >help_outline</i>
+            </div>
+        </ComponentPreview>
+    </>
+);
+
+const WithIcons = () => (
+    <>
+        <h2 id="with-icons">With icons</h2>
+        <p>Tooltips can be used with icons to give further information, for instance to inform about CVC</p>
+
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <div className="form-group">{"\n"}
+                <label htmlFor="cvc">{"\n"}
+                    CVC{"\n"}
+                    <i className="material-icons"
+                        data-tooltip="Payment capture is the process by which payments are secured once the payment has been authorized by the customer."
+                        data-tooltip-position="top"
+                    >{"\n"}
+                        help_outline{"\n"}
+                    </i>{"\n"}
+                </label>{"\n"}
+                <input type="text" className="form-control" id="cvc" style={{ width: "250px" }} />{"\n"}
             </div>
         </ComponentPreview>
     </>
@@ -51,6 +69,7 @@ const Tooltip = () => (
     <DocContainer docToc>
         <p className="lead">Tooltips are small, interactive, textual hints for mainly graphical elements. When using icons for actions you can use a tooltip to give people clarification on its function.</p>
         <Overview />
+        <WithIcons />
     </DocContainer>
 );
 

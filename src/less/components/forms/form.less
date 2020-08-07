@@ -1,5 +1,6 @@
 label {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     max-width: 100%;
     margin-bottom: @base-margin-xs;
     font-weight: @font-weight-light;
@@ -16,6 +17,11 @@ label {
         .has-success & {
             color: @brand-success;
         }
+    }
+
+    .material-icons {
+        color: @list-gray;
+        margin-left: 0.5rem;
     }
 }
 
