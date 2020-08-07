@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
+
+const { tooltips } = window.dg;
 
 const Overview = () => (
     <>
@@ -65,13 +67,44 @@ const WithIcons = () => (
     </>
 );
 
-const Tooltip = () => (
-    <DocContainer docToc>
-        <p className="lead">Tooltips are small, interactive, textual hints for mainly graphical elements. When using icons for actions you can use a tooltip to give people clarification on its function.</p>
-        <Overview />
-        <WithIcons />
-    </DocContainer>
+const ExtendedUsage = () => (
+    <>
+        <h2 id="extended-usage">Extended usage</h2>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+            <i className="material-icons"
+                data-tooltip=""
+                data-tooltip-position="top"
+            >
+                help_outline
+                <span className="tooltip">Payment capture is the process by which payments are secured once the payment has been authorized by the customer.</span>
+            </i>{"\n"}
+            <button
+                className="btn btn-executive"
+                type="button"
+                data-tooltip=""
+                data-tooltip-position="top"
+            >
+                Tooltip on top
+                <span className="tooltip">Payment capture is the process by which payments are secured once the payment has been authorized by the customer.</span>
+            </button>{"\n"}
+
+        </ComponentPreview>
+
+    </>
 );
+
+const Tooltip = () => {
+    useEffect(() => { tooltips.init(); });
+
+    return (
+        <DocContainer docToc>
+            <p className="lead">Tooltips are small, interactive, textual hints for mainly graphical elements. When using icons for actions you can use a tooltip to give people clarification on its function.</p>
+            <Overview />
+            <WithIcons />
+            <ExtendedUsage />
+        </DocContainer>
+    );
+};
 
 export default Tooltip;
 

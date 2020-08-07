@@ -17,6 +17,7 @@
         transition: opacity 0.3s ease-in-out;
     }
 
+    .tooltip,
     &:after {
         content: attr(data-tooltip);
         position: absolute;
@@ -41,10 +42,6 @@
         box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
     }
 
-    &[data-tooltip=""]:before {
-        display: none;
-    }
-
     &[data-tooltip=""]:after {
         display: none;
     }
@@ -56,19 +53,26 @@
         transform: translateY(-50%) rotate(-90deg);
     }
 
-    &[data-tooltip-position="left"]:after {
-        left: 0%;
-        top: 50%;
-        margin-left: -10px;
-        transform: translateX(-100%) translateY(-50%);
+    &[data-tooltip-position="left"] {
+        .tooltip,
+        &:after {
+            left: 0%;
+            top: 50%;
+            margin-left: -10px;
+            transform: translateX(-100%) translateY(-50%);
+        }
     }
 
     &[data-tooltip-position="top"]:before {
         left: 50%;
     }
 
-    &[data-tooltip-position="top"]:after {
-        left: 50%;
+    &[data-tooltip-position="top"],
+    &[data-tooltip-position="top"] {
+        .tooltip,
+        &:after {
+            left: 50%;
+        }
     }
 
     &[data-tooltip-position="bottom"]:before {
@@ -77,11 +81,14 @@
         transform: translateX(-50%) translateY(-100%) rotate(-180deg);
     }
 
-    &[data-tooltip-position="bottom"]:after {
-        left: 50%;
-        top: 100%;
-        margin-top: @base-margin-sm;
-        transform: translateX(-50%) translateY(0%);
+    &[data-tooltip-position="bottom"] {
+        .tooltip,
+        &:after {
+            left: 50%;
+            top: 100%;
+            margin-top: @base-margin-sm;
+            transform: translateX(-50%) translateY(0%);
+        }
     }
 
     &[data-tooltip-position="right"]:before {
@@ -91,14 +98,18 @@
         transform: translateY(-50%) rotate(90deg);
     }
 
-    &[data-tooltip-position="right"]:after {
-        left: 100%;
-        top: 50%;
-        margin-left: 8px;
-        transform: translateX(0%) translateY(-50%);
+    &[data-tooltip-position="right"] {
+        .tooltip,
+        &:after {
+            left: 100%;
+            top: 50%;
+            margin-left: 8px;
+            transform: translateX(0%) translateY(-50%);
+        }
     }
 
     &:hover {
+        .tooltip,
         &:after,
         &:before {
             opacity: 1;
@@ -107,14 +118,20 @@
 
     &:focus {
         &:not(:hover) {
+            .tooltip,
             &:before,
             &:after {
-                width: 0;
-                height: 0;
-                padding: 0;
-                border: none;
+                opacity: 0;
                 content: "";
             }
+        }
+    }
+}
+
+@media screen and (max-width: @screen-sm-max) {
+    [data-tooltip] {
+        .tooltip {
+            max-width: calc(100vw - 4rem);
         }
     }
 }

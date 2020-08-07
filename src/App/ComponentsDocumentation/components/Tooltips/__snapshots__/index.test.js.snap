@@ -110,5 +110,6 @@ exports[`Components: Tooltip renders 1`] = `
   </p>
   <Overview />
   <WithIcons />
+  <ExtendedUsage />
 </DocContainer>
 `;
