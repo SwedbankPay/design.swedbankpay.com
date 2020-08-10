@@ -1,0 +1,120 @@
+name: Tag
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build:
+    name: Build and deploy release
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        brand: ["payex", "swedbankpay"]
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Fetch all history for all tags and branches
+        run: git fetch --prune --unshallow
+
+      # Set brand specific variables
+      - name: Environment variables
+        id: variables
+        run: ./.github/scripts/variables.sh
+        env:
+          BRAND: ${{ matrix.brand }}
+
+      # Add sentry token
+      - name: Sentry token
+        run: ./.github/scripts/sentry.sh
+        env:
+          TOKEN: ${{ secrets.SENTRY_TOKEN }}
+
+      - name: Install GitVersion
+        uses: gittools/actions/gitversion/setup@v0.6.1
+        with:
+          versionSpec: '5.1.x'
+
+      - name: Use GitVersion
+        id: gitversion
+        uses: gittools/actions/gitversion/execute@v0.6.1
+
+      - name: Set Node.js 12.x
+        uses: actions/setup-node@master
+        with:
+          node-version: 12.x
+
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install
+        run: |
+          npm ci
+          npm i -g codecov
+
+      - name: Tests and linting
+        run: |
+          npm run lint
+          npm run test:codecov
+
+      - name: Build
+        run: npm run ${{ steps.variables.outputs.BUILD_SCRIPT }} -- --env.release=true --env.baseUrl="${{ steps.variables.outputs.BRAND_URL }}" --env.basename="v/${{ steps.gitversion.outputs.majorMinorPatch }}" --env.semver=${{ steps.gitversion.outputs.semVer }} --env.info_version=${{ steps.gitversion.outputs.informationalVersion }} --env.github_actions=true
+
+      - name: Zip Release
+        id: zip
+        env:
+          BRAND: ${{ steps.variables.outputs.BRAND_NAME }}
+        run: | 
+          ZIPFILE=${BRAND}-DesignGuide.zip
+          echo "Zipping ${ZIPFILE}"
+          zip -r ${ZIPFILE} dist
+          echo ::set-output name=zipfile::${ZIPFILE}
+
+      - name: Upload zipfile artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: ${{ steps.zip.outputs.zipfile }}
+          path: ${{ steps.zip.outputs.zipfile }}
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Azure Deploy
+        uses: azure/CLI@v1
+        with:
+          inlineScript: |
+            az storage blob upload-batch -s dist -d \$web --account-name ${{ steps.variables.outputs.AZURE_ACCOUNT }}
+    
+      - name: Create Release
+        id: create_release
+        # Only create a release on one brand to avoid duplicate error
+        if: contains(matrix.brand, 'swedbankpay')
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Design Guide v${{ steps.gitversion.outputs.majorMinorPatch }}
+          body_path: RELEASE_NOTES.md
+          draft: false
+          prerelease: false
+
+      - name: Upload Release Assets
+        # Only upload assets on one brand to avoid duplicate error
+        if: contains(matrix.brand, 'swedbankpay')
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ${{ steps.zip.outputs.zipfile }}
+          asset_name: ${{ steps.zip.outputs.zipfile }}
+          asset_content_type: application/zip
+        
