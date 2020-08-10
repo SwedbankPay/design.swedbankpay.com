@@ -13,9 +13,8 @@ jobs:
         brand: ["payex", "swedbankpay"]
     steps:
       - uses: actions/checkout@v2
-
-      - name: Fetch all history for all tags and branches
-        run: git fetch --prune --unshallow
+        with:
+          fetch-depth: 0
 
       # Set brand specific variables
       - name: Environment variables
@@ -31,13 +30,13 @@ jobs:
           TOKEN: ${{ secrets.SENTRY_TOKEN }}
 
       - name: Install GitVersion
-        uses: gittools/actions/gitversion/setup@v0.6.1
+        uses: gittools/actions/gitversion/setup@v0.9.4
         with:
-          versionSpec: '5.1.x'
+          versionSpec: '5.3.x'
 
       - name: Use GitVersion
         id: gitversion
-        uses: gittools/actions/gitversion/execute@v0.6.1
+        uses: gittools/actions/gitversion/execute@v0.9.4
 
       - name: Set Node.js 12.x
         uses: actions/setup-node@master
@@ -49,18 +48,13 @@ jobs:
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          restore-keys: ${{ runner.os }}-node-
 
       - name: Install
-        run: |
-          npm ci
-          npm i -g codecov
+        run: npm ci && npm i -g codecov
 
       - name: Tests and linting
-        run: |
-          npm run lint
-          npm run test:codecov
+        run: npm run lint && npm run test:codecov
 
       - name: Build
         run: npm run ${{ steps.variables.outputs.BUILD_SCRIPT }} -- --env.release=true --env.baseUrl="${{ steps.variables.outputs.BRAND_URL }}" --env.basename="v/${{ steps.gitversion.outputs.majorMinorPatch }}" --env.semver=${{ steps.gitversion.outputs.semVer }} --env.info_version=${{ steps.gitversion.outputs.informationalVersion }} --env.github_actions=true
