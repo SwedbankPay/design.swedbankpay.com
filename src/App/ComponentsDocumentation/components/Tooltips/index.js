@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { ComponentPreview, DocContainer } from "@docutils";
+import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import CodeTags from "@components/CodeTags";
 
 const { tooltips } = window.dg;
@@ -70,26 +70,42 @@ const WithIcons = () => (
 const ExtendedUsage = () => (
     <>
         <h2 id="extended-usage">Extended usage</h2>
+        <p>
+            The extended usage tooltip is meant to give more control over the tooltip, such as automatic repositioning of the tooltip if its content falls
+            out from the viewport (using <CodeTags type="secondary" code="dg.tooltips.init()" />). Recommended to be used on mobile focused
+            applications. <b>NOTE:</b> Only <CodeTags type="secondary" code="data-tooltip-position" /> with
+            the values <CodeTags type="secondary" code="top" /> and <CodeTags type="secondary" code="bottom" /> are supported.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
-            <i className="material-icons"
-                data-tooltip=""
-                data-tooltip-position="top"
-            >
-                help_outline
-                <span className="tooltip">Payment capture is the process by which payments are secured once the payment has been authorized by the customer.</span>
-            </i>{"\n"}
-            <button
-                className="btn btn-executive"
-                type="button"
-                data-tooltip=""
-                data-tooltip-position="top"
-            >
-                Tooltip on top
-                <span className="tooltip">Payment capture is the process by which payments are secured once the payment has been authorized by the customer.</span>
-            </button>{"\n"}
-
+            <div className="d-flex align-items-center">
+                <i className="material-icons mr-3"
+                    data-tooltip=""
+                    data-tooltip-position="top"
+                >{"\n"}
+                    help_outline{"\n"}
+                    <span className="tooltip">{"\n"}
+                        Payment capture is the process by which payments are secured once the payment has been authorized by the customer.{"\n"}
+                    </span>{"\n"}
+                </i>{"\n"}
+                <button
+                    className="btn btn-executive"
+                    type="button"
+                    data-tooltip=""
+                    data-tooltip-position="bottom"
+                >{"\n"}
+                    Tooltip on bottom{"\n"}
+                    <span className="tooltip">Payment capture is the process by which payments are secured once the payment has been authorized by the customer.</span>{"\n"}
+                </button>{"\n"}
+            </div>
         </ComponentPreview>
 
+    </>
+);
+
+const JavascriptMethods = () => (
+    <>
+        <h2 id="javascript-methods">JavaScript methods</h2>
+        <JavascriptDocs componentName="tooltips" />
     </>
 );
 
@@ -102,6 +118,7 @@ const Tooltip = () => {
             <Overview />
             <WithIcons />
             <ExtendedUsage />
+            <JavascriptMethods />
         </DocContainer>
     );
 };
@@ -109,4 +126,4 @@ const Tooltip = () => {
 export default Tooltip;
 
 /* For testing */
-export { Overview };
+export { Overview, WithIcons, ExtendedUsage, JavascriptMethods };

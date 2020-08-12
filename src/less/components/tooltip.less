@@ -135,3 +135,15 @@
         }
     }
 }
+
+
+//IE11 fallback
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    [data-tooltip] {
+        .tooltip,
+        &:after {
+            display: table;
+            min-width: 150px;
+        }
+    }
+}

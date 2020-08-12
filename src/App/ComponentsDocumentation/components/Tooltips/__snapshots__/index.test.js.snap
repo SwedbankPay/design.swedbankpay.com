@@ -111,5 +111,6 @@ exports[`Components: Tooltip renders 1`] = `
   <Overview />
   <WithIcons />
   <ExtendedUsage />
+  <JavascriptMethods />
 </DocContainer>
 `;
