@@ -169,6 +169,7 @@ release notes content but keeps the headers.
 | `.sentryclirc`      | [Sentry][sentry] configuration used by Webpack to configure a new release on sentry. _(Do __not__ change the line `token = <token>`, as this placeholder is used by GitHub Actions to insert the sentry api key.)_
 | `.stylelintrc`      | [Stylelint][stylelint] configuration.
 | `CHANGELOG.md`      | Collection of changes made to the project. Insert your changes here.
+| `RELEASE-NOTES.md`  | Latest release notes of changes made to the project. Insert your changes here. This file is used by GitHub Actions to create a release body on GitHub.
 | `jest.config.js`    | [jest][jest] configuration.
 | `jest.setup.js`     | Script file that will run before jest executes the tests, this includes [enzyme][enzyme] setup, polyfills and other useful snippets.
 | `webpack.config.js` | [Webpack][webpack] configuration.
