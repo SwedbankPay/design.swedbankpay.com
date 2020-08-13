@@ -89,6 +89,37 @@ const SlabColors = () => (
     </>
 );
 
+const SlabBorderTop = () => (
+    <>
+        <h2 id="slab-border-top">Slab with top border</h2>
+        <p>Slab with top border can be used to display, for instance, pros and cons lists.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <div className="row">
+                <div className="col-6">
+                    <div className="slab slab-plain slab-border-success">
+                        <h3>Do</h3>
+                        <ul className="list list-bullet">
+                            <li>Do this</li>
+                            <li>Do that</li>
+                            <li>Do the other</li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="col-6">
+                    <div className="slab slab-plain slab-border-error">
+                        <h3>Don&apos;t</h3>
+                        <ul className="list list-bullet">
+                            <li>Don&apos;t do this</li>
+                            <li>Don&apos;t do that</li>
+                            <li>Don&apos;t to the other</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </ComponentPreview>
+    </>
+);
+
 const SlabElevated = () => (
     <>
         <h2 id="elevated-slab">Elevated slab</h2>
@@ -189,6 +220,7 @@ class Slab extends Component {
                 </p>
                 <DefaultSlab />
                 <SlabColors />
+                <SlabBorderTop />
                 <SlabElevated />
                 <SlabWell />
                 <SlabArrow />
@@ -202,4 +234,4 @@ class Slab extends Component {
 export default Slab;
 
 /* For testing */
-export { DefaultSlab, SlabElevated, SlabWell, SlabArrow, SlabColors, SlabSizes, SlabMuted };
+export { DefaultSlab, SlabElevated, SlabWell, SlabArrow, SlabColors, SlabSizes, SlabMuted, SlabBorderTop };
