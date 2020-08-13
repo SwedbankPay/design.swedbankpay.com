@@ -1,7 +1,7 @@
 # Swedbank Pay Design Guide
 
 [![Version][version-badge]][version-tag]
-![Tag](github-actions-badge)
+![Tag][github-actions-badge]
 [![Codecov][codecov-badge]][codecov-status]
 [![Dependabot Status][dependabot-badge]][dependabot]
 [![Dependencies Status][dep-badge]][dep-status]
