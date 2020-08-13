@@ -17,13 +17,24 @@
         margin-top: 0;
         width: 100%;
 
+        &.dg-only-style {
+            max-width: 18rem;
+
+            .sidebar-nav {
+                height: 100vh;
+
+                .main-nav-ul {
+                    margin-bottom: 100px;
+                }
+            }
+        }
+
         .sidebar-nav {
             padding-right: 1rem;
             max-height: 100vh;
         }
 
         .main-nav-ul {
-            border-bottom: 1px solid @brand-secondary-light-3;
             padding-bottom: 1rem;
         }
 
@@ -61,6 +72,9 @@
 
 
         .sidebar-contact {
+            margin-top: auto;
+            margin-bottom: 2rem;
+
             a {
                 color: @brand-secondary;
                 fill: @brand-secondary;
