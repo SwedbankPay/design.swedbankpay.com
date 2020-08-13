@@ -4,7 +4,7 @@ This document is meant to explain the steps to take when recovering from a disas
 
 ## Disaster Recovery
 
-The deploy procedure is set up to run with GitHub Actions. All workflows can be accessed in the `workflows` folder. 
+The deploy procedure is set up to run with GitHub Actions. All workflows can be accessed within this folder.
 
 * __GitHub repository__ needs to be specified (`SwedbankPay/design.swedbankpay.com`).
 * __Default branch__ needs to be set to `master`.
