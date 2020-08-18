@@ -4,6 +4,8 @@ This document is meant to explain the steps to take when recovering from a disas
 
 ## Disaster Recovery
 
+Design Guide is hosted on Azure Storage with Locally-redundant storage (LRS). This means that Design Guide is stored with multiple copies and is protected from planned and unplanned events, including transient hardware failures, network or power outages, and massive natural disasters. For more information on redundancy and disaster recovery, check out the [redundancy documentation](https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy "Redundancy Documentation") and the [storage disaster recovery documentation](https://docs.microsoft.com/en-us/azure/storage/common/storage-disaster-recovery-guidance "Disaster Recovery Documentation")
+
 The deploy procedure is set up to run with GitHub Actions. All workflows can be accessed within this folder.
 
 * __GitHub repository__ needs to be specified (`SwedbankPay/design.swedbankpay.com`).
