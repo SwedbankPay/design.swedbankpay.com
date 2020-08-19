@@ -807,7 +807,7 @@ exports[`Core: Grid GridOptions renders 1`] = `
         <td
           colSpan="6"
         >
-          30px (15px on each side of a column)
+          32px (16px on each side of a column)
         </td>
       </tr>
       <tr>

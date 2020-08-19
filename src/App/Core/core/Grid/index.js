@@ -134,7 +134,7 @@ const GridOptions = () => (
                 </tr>
                 <tr>
                     <th scope="row">Gutter width</th>
-                    <td colSpan="6">30px (15px on each side of a column)</td>
+                    <td colSpan="6">32px (16px on each side of a column)</td>
                 </tr>
                 <tr>
                     <th scope="row">Nestable</th>
