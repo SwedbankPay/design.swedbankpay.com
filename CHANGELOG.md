@@ -66,3 +66,5 @@
   - Fixed vertical clickable steps misplacement of visual elements
 - Design guide
   - Added better alt text to logos in Design Guide
+  - Grid
+    - Fixed grid gutter not being updated to 32px in documentation
