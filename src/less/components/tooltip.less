@@ -49,7 +49,7 @@
     &[data-tooltip-position="left"]:before {
         left: 0%;
         top: 50%;
-        margin-left: -14px;
+        margin-left: -13px;
         transform: translateY(-50%) rotate(-90deg);
     }
 
@@ -58,13 +58,14 @@
         &:after {
             left: 0%;
             top: 50%;
-            margin-left: -10px;
+            margin-left: -9px;
             transform: translateX(-100%) translateY(-50%);
         }
     }
 
     &[data-tooltip-position="top"]:before {
         left: 50%;
+        margin-top: -2px;
     }
 
     &[data-tooltip-position="top"],
@@ -72,12 +73,13 @@
         .tooltip,
         &:after {
             left: 50%;
+            margin-top: -2px;
         }
     }
 
     &[data-tooltip-position="bottom"]:before {
         top: 100%;
-        margin-top: @base-margin-sm;
+        margin-top: calc(@base-margin-sm + 2px);
         transform: translateX(-50%) translateY(-100%) rotate(-180deg);
     }
 
@@ -86,7 +88,7 @@
         &:after {
             left: 50%;
             top: 100%;
-            margin-top: @base-margin-sm;
+            margin-top: calc(@base-margin-sm + 2px);
             transform: translateX(-50%) translateY(0%);
         }
     }
@@ -94,7 +96,7 @@
     &[data-tooltip-position="right"]:before {
         left: 100%;
         top: 50%;
-        margin-left: 0;
+        margin-left: 2px;
         transform: translateY(-50%) rotate(90deg);
     }
 
@@ -103,7 +105,7 @@
         &:after {
             left: 100%;
             top: 50%;
-            margin-left: 8px;
+            margin-left: 10px;
             transform: translateX(0%) translateY(-50%);
         }
     }
