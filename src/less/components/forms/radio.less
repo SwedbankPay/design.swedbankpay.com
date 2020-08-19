@@ -4,7 +4,7 @@
     align-items: center;
 
     &:not(:last-child) {
-        margin-bottom: @base-margin-sm;
+        margin-bottom: @base-margin;
     }
 
     label {
@@ -12,6 +12,7 @@
         align-items: center;
         margin: 0;
         padding-left: @checkbox-label-padding;
+        min-height: 1.5rem;
     }
 
     input[type="radio"] {
@@ -39,8 +40,13 @@
         }
 
         &:focus + label:before {
-            .tab-focus();
+            box-shadow: 0 0 0 0.375rem @brand-secondary-light-1;
         }
+
+        &:hover + label:before {
+            box-shadow: 0 0 0 0.375rem @brand-secondary-light-2;
+        }
+
 
         &[disabled] {
             + label:before {
