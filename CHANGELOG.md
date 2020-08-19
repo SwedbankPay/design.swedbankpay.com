@@ -74,3 +74,5 @@
   - Removed default status
   - Changed color of success status
   - Added a second warning status
+- Typography
+  - Changed h1 font size to 40px
