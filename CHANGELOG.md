@@ -68,3 +68,9 @@
   - Added better alt text to logos in Design Guide
   - Grid
     - Fixed grid gutter not being updated to 32px in documentation
+  - Status
+    - Added example using status in Status documentation
+- Status
+  - Removed default status
+  - Changed color of success status
+  - Added a second warning status
