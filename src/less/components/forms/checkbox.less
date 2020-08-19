@@ -19,7 +19,7 @@
         margin-right: @base-margin;
         opacity: 0;
 
-        + label:before {
+        + label:after {
             content: "";
             display: block;
             position: absolute;
@@ -31,10 +31,9 @@
             background-color: @white;
             border: 2px solid @brand-secondary;
             border-radius: 2px;
-            z-index: 1;
         }
 
-        + label:after {
+        + label:before {
             content: "";
             display: block;
             position: absolute;
@@ -45,10 +44,9 @@
             width: @checkbox-width;
             background-color: @white;
             border-radius: 50%;
-            z-index: 0;
         }
 
-        &:checked + label:before {
+        &:checked + label:after {
             background-color: @checkbox-checked-color;
             border-color: @checkbox-checked-color;
             background-position: 50% 50%;
@@ -56,27 +54,27 @@
             background-image: url("../../../icons/shapes/check-mark.svg");
         }
 
-        &:focus + label:after {
+        &:focus + label:before {
             box-shadow: 0 0 0 0.5rem @brand-secondary-light-1;
         }
 
-        &:hover + label:after {
+        &:hover + label:before {
             box-shadow: 0 0 0 0.5rem @brand-secondary-light-2;
         }
 
         &[disabled] {
-            + label:before {
+            + label:after {
                 background-color: @input-bg-disabled;
                 border-color: @input-checked-bg-disabled;
             }
 
-            &:checked + label:before {
+            &:checked + label:after {
                 background-color: @input-checked-bg-disabled;
             }
 
             + label,
-            &:before,
-            &:checked + label:before {
+            &:after,
+            &:checked + label:after {
                 cursor: not-allowed;
             }
         }
