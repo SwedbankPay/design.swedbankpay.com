@@ -97,7 +97,7 @@ exports[`Utilities: PageLayout FullWidth renders 1`] = `
       code=".border-left"
       type="secondary"
     />
-     to clearly seperate the sidebar and the main content. See 
+     to clearly separate the sidebar and the main content. See 
     <Link
       to="/utilities/borders"
     >
