@@ -76,3 +76,5 @@
   - Added a second warning status
 - Typography
   - Changed h1 font size to 40px
+- Datepicker
+  - Fixed datepicker with time not showing time component immediately when default value is not provided 
