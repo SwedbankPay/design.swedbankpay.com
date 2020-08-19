@@ -64,3 +64,5 @@
   - Fixed sidebar positioning making some of the content of sidebar not visible in some cases
 - Steps
   - Fixed vertical clickable steps misplacement of visual elements
+- Design guide
+  - Added better alt text to logos in Design Guide
