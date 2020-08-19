@@ -79,3 +79,7 @@
   - Changed h1 font size to 40px
 - Datepicker
   - Fixed datepicker with time not showing time component immediately when default value is not provided 
+- Forms
+  - Radio buttons
+    - Added visual evident hover and focus styling
+    - Made using radio buttons without label content possible
