@@ -222,7 +222,6 @@ exports[`Documentation: Datepickers IncludeTime renders 1`] = `
       prefixType="icon"
       prefixValue="event"
       time={true}
-      value="28.12.1972 12:00"
     />
   </ComponentPreview>
 </Fragment>
