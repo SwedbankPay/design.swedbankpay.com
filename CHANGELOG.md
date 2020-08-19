@@ -66,6 +66,7 @@
   - Fixed vertical clickable steps misplacement of visual elements
 - Design guide
   - Added better alt text to logos in Design Guide
+  - Fixed margin right of documentation content container
   - Grid
     - Fixed grid gutter not being updated to 32px in documentation
   - Status
