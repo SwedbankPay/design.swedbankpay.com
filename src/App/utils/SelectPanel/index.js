@@ -79,18 +79,18 @@ class SelectPanel extends Component {
             <div id={this.props.id} className="sidebar dg-sidebar dg-only-style">
                 {/* A fully functional search box will be added later. */}
                 {/* <SearchBox routes={this.props.routes} /> */}
-                <a href="/" className="sidebar-top">{"\n"}
-                    <img className="d-none d-lg-block" src={`${basename}img/${brand}-logo-v-small.svg`} alt={`${brand}-logo`} />{"\n"}
-                    <div className="sidebar-version">
-                        <div className="sidebar-version-header">
-                            Design Guide
-                        </div>
-                        <small>
-                            Version {process.env.version || pkg.version}
-                        </small>
-                    </div>
-                </a>
                 <nav className="sidebar-nav">
+                    <a href="/" className="sidebar-top">{"\n"}
+                        <img className="d-none d-lg-block" src={`${basename}img/${brand}-logo-v-small.svg`} alt={`${brand}-logo`} />{"\n"}
+                        <div className="sidebar-version">
+                            <div className="sidebar-version-header">
+                                Design Guide
+                            </div>
+                            <small>
+                                Version {process.env.version || pkg.version}
+                            </small>
+                        </div>
+                    </a>
                     <ul className="main-nav-ul">
                         {this.props.routes.map((route, i) => {
                             const NavGroupWithRouter = withRouter(NavGroup);
