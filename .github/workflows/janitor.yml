@@ -1,0 +1,47 @@
+name: Janitor
+on:
+  push:
+    branches:
+      - "develop"
+
+jobs:
+  build:
+    name: Storage container cleanup
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        brand: ["payex", "swedbankpay"]
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+
+      - name: Dump GitHub context 
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}  
+        run: echo "$GITHUB_CONTEXT"
+
+      - name: Check if commit is merge commit
+        id: branch
+        run: ./.github/scripts/find-merge-source-branch.sh ${{ github.sha }}
+
+       # Set brand specific variables
+      - name: Environment variables
+        if: ${{ steps.branch.outputs.BRANCH_TO_DELETE }}
+        id: variables
+        run: ./.github/scripts/variables.sh
+        env:
+          BRAND: ${{ matrix.brand }}
+
+      - name: Azure Login
+        if: ${{ steps.branch.outputs.BRANCH_TO_DELETE }}
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+  
+      - name: Delete feature folders
+        if: ${{ steps.branch.outputs.BRANCH_TO_DELETE }}
+        uses: azure/CLI@v1
+        with:
+          inlineScript: |
+            az storage blob delete-batch -s "\$web" --pattern ${{ steps.branch.outputs.BRANCH_TO_DELETE }}/** --account-name ${{ steps.variables.outputs.AZURE_ACCOUNT }}
