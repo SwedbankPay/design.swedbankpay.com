@@ -20,14 +20,13 @@
     &.has-error {
         .form-control-validation(@brand-error, "error");
 
-        &:after {
-            content: "warning";
-            .material-icons-styling();
-
-            position: absolute;
-            top: calc(@input-form-control-height / 2 - 1.25rem / 2);
-            right: 0.5rem;
-            color: @brand-error;
+        input {
+            &:not(:focus) {
+                background-image: url("../../icons/warning-24px.svg");
+                background-size: 24px 24px;
+                background-repeat: no-repeat;
+                background-position: calc(100% - 0.5rem) 50%;
+            }
         }
     }
 }

@@ -148,6 +148,9 @@ const ValidationStates = () => (
                 placeholder="Name"
                 prefixValue="Agent"
                 defaultValue="Smith"
+                postfixType="button"
+                postfixValue="Button"
+                postfixBtnColor="executive"
             />
         </ComponentPreview>
     </>
