@@ -301,6 +301,7 @@ module.exports = (env, argv) => {
         config.plugins.push(
             new AppManifestWebpackPlugin({
                 logo: `./src/img/${brand}/favicon.png`,
+                prefix: basename,
                 output: "/icons/",
                 config: {
                     appName: `${brandTitle} DesignGuide`,
