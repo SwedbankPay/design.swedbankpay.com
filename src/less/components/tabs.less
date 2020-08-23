@@ -6,6 +6,7 @@
     min-height: 40px;
     display: flex;
     z-index: @zindex-tabs;
+    border-bottom: 1px solid @brand-secondary-light-3;
 
     @media screen and (max-width: @screen-sm-max) {
         ul {
@@ -19,6 +20,8 @@
     }
 
     &.tabs-scroll {
+        border-bottom: none;
+
         ul {
             overflow: scroll;
             scrollbar-width: none;
@@ -27,6 +30,12 @@
             &::-webkit-scrollbar {
                 width: 0;
                 background: transparent;
+            }
+
+            li {
+                a {
+                    border-bottom: 1px solid @brand-secondary-light-3;
+                }
             }
         }
 
@@ -72,7 +81,6 @@
                 white-space: nowrap;
                 color: @brand-secondary-light-2;
                 display: block;
-                border-bottom: 1px solid @brand-secondary-light-3;
                 text-decoration: none;
 
                 &:hover {
