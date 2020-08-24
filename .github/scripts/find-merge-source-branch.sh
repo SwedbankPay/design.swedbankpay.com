@@ -32,13 +32,13 @@ done
 git pull --ff-only --all
 
 # Get the parents. Will return 3 commit IDs, the first being the current
-shas=$(git rev-list --parents -n 1 $current_commit_id)
+shas=$(git rev-list --parents -n 1 "$current_commit_id")
 for sha in $shas 
 do
     # Skip the SHA equal to the current commit
     [[ $sha == "$current_commit_id" ]] && continue
 
-    branches=$(git branch --contains $sha)
+    branches=$(git branch --contains "$sha")
 
     echo "$branches" | while read branch ; do
         # branch=$line
@@ -50,10 +50,10 @@ do
         [[ $branch == *"master" ]] && continue
         
         echo "Branch folder we are looking to delete is $branch"
-        echo ::set-output name=BRANCH_TO_DELETE::$branch
+        echo "::set-output name=BRANCH_TO_DELETE::$branch"
 
         # Delete feature branch
-        git push origin --delete $branch
+        git push origin --delete "$branch"
 
     done
 done
