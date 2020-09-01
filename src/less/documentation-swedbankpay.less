@@ -17,19 +17,30 @@
         margin-top: 0;
         width: 100%;
 
+        &.dg-only-style {
+            max-width: 18rem;
+
+            .sidebar-nav {
+                height: 100vh;
+
+                .main-nav-ul {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
         .sidebar-nav {
             padding-right: 1rem;
             max-height: 100vh;
         }
 
         .main-nav-ul {
-            border-bottom: 1px solid @brand-secondary-light-3;
             padding-bottom: 1rem;
         }
 
         .sidebar-top {
-            padding-bottom: 1rem;
-            margin: 1rem 0;
+            padding: 1rem 0;
+            margin-bottom: 1rem;
             border-bottom: 1px solid @brand-secondary-light-3;
             display: flex;
             align-items: center;
@@ -61,6 +72,9 @@
 
 
         .sidebar-contact {
+            margin-top: auto;
+            margin-bottom: 1rem;
+
             a {
                 color: @brand-secondary;
                 fill: @brand-secondary;
