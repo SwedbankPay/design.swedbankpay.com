@@ -84,3 +84,6 @@
   - Radio buttons
     - Added visual evident hover and focus styling
     - Made using radio buttons without label content possible
+  - Checkboxes
+    - Added visual evident hover and focus styling
+    - Made using radio buttons without label content possible
