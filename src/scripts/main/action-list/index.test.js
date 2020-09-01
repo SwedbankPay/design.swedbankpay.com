@@ -10,10 +10,10 @@ describe("scripts: action-list", () => {
 
     const ActionList = ({ active, id, noToggle }) => (
         <div className={`action-list${active ? " active" : ""}`} id={id}>
-            {noToggle ? null : <i className="material-icons action-toggle">more_vert</i>}
+            {noToggle ? null : <i className="material-icons action-toggle" aria-hidden="true">more_vert</i>}
             <div className="action-menu">
-                <a href="#"><i className="material-icons">bookmark</i>Add bookmark</a>
-                <a href="#"><i className="material-icons">business_center</i>Add client</a>
+                <a href="#"><i className="material-icons" aria-hidden="true">bookmark</i>Add bookmark</a>
+                <a href="#"><i className="material-icons" aria-hidden="true">business_center</i>Add client</a>
             </div>
         </div>
     );

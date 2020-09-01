@@ -24,7 +24,7 @@ describe("scripts: sheet", () => {
             <div className="sheet sheet-open" id="demo-sheet">
                 <section>
                     <a href="#" className="sheet-close">
-                        <i className="material-icons">close</i>
+                        <i className="material-icons" aria-hidden="true">close</i>
                     </a>
                 </section>
             </div>

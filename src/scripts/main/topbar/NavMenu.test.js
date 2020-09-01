@@ -18,14 +18,14 @@ describe("scripts: topbar - NavMenu", () => {
     const Topbar = ({ id, navOpen, noBtnIcon, noCloseIcon }) => (
         <header className="topbar" id={id}>
             <button type="button" className="topbar-btn" data-toggle-nav="#topbar-nav">
-                {noBtnIcon ? null : <i className="material-icons topbar-btn-icon">menu</i>}
+                {noBtnIcon ? null : <i className="material-icons topbar-btn-icon" aria-hidden="true">menu</i>}
                 <span className="topbar-btn-text">Menu</span>
             </button>
             <nav className={`topbar-nav${navOpen ? " topbar-nav-open" : ""}`}>
                 {noCloseIcon ? null
                     :
                     <button type="button" className="topbar-close">
-                        <i className="material-icons">close</i>
+                        <i className="material-icons" aria-hidden="true">close</i>
                     </button>}
                 <div className="topbar-link-container">
                     <a href="#">Link 1</a>

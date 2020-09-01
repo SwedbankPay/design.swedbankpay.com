@@ -12,7 +12,7 @@ const Home = () => {
         <div className="doc-container">
             <div className="alert alert-complex alert-warning mt-2">
                 <header className="alert-header">
-                    <i className="material-icons alert-icon">warning</i>
+                    <i className="material-icons alert-icon" aria-hidden="true">warning</i>
                     <h3>Site under development</h3>
                 </header>
                 <div className="alert-body">
@@ -24,7 +24,7 @@ const Home = () => {
                     <div className="doc-card card card-plain">
                         <div className="card-body text-center d-flex flex-column">
                             <div className="doc-circle">
-                                <i className="material-icons material-icons-large text-white">play_circle_outline</i>
+                                <i className="material-icons material-icons-large text-white" aria-hidden="true">play_circle_outline</i>
                             </div>
                             <h2>Get started</h2>
                             <p>Information on how to get started.</p>
@@ -36,7 +36,7 @@ const Home = () => {
                     <div className="doc-card card card-plain">
                         <div className="card-body text-center d-flex flex-column">
                             <div className="doc-circle">
-                                <i className="material-icons material-icons-large text-white">desktop_windows</i>
+                                <i className="material-icons material-icons-large text-white" aria-hidden="true">desktop_windows</i>
                             </div>
                             <h2>Components</h2>
                             <p>User interface components for websites and web applications</p>
@@ -48,7 +48,7 @@ const Home = () => {
                     <div className="doc-card card card-plain">
                         <div className="card-body text-center d-flex flex-column">
                             <div className="doc-circle">
-                                <i className="material-icons material-icons-large text-white">folder_open</i>
+                                <i className="material-icons material-icons-large text-white" aria-hidden="true">folder_open</i>
                             </div>
                             <h2>Resources</h2>
                             <p>Downloadables and resource usage guidelines.</p>

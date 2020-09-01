@@ -47,7 +47,7 @@ class Nav extends Component {
                             { subItems ?
                                 <div className="submenu">{"\n"}
                                     <a href="#" onClick={e => this.setActive(e, `sub-${i}-0`)}>
-                                        <i className="material-icons">{icon}</i>{"\n"}
+                                        <i className="material-icons" aria-hidden="true">{icon}</i>{"\n"}
                                         <span>{name}</span>{"\n"}
                                     </a>
                                     <ul>
@@ -62,7 +62,7 @@ class Nav extends Component {
                                 </div>
                                 :
                                 <a href="#" onClick = {e => this.setActive(e, `main-${i}`)} className={this.state.active === `main-${i}` ? "active" : null}>{"\n"}
-                                    <i className="material-icons">{icon}</i>{"\n"}
+                                    <i className="material-icons" aria-hidden="true">{icon}</i>{"\n"}
                                     <span>{name}</span>{"\n"}
                                 </a>}{"\n"}
                         </li>

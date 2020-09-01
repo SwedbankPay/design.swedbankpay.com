@@ -15,7 +15,7 @@ const DefaultSlab = () => (
                     <div className="form-group">
                         <label htmlFor="validation-email-2">Email</label>
                         <div className="input-group">
-                            <span className="input-group-addon"><i className="material-icons">email</i></span>
+                            <span className="input-group-addon"><i className="material-icons" aria-hidden="true">email</i></span>
                             <input type="email" className="form-control" id="validation-email-2" placeholder="bob.corlsan@example.com" required />
                         </div>
                         <div className="help-block" data-success="Right!" data-error="Wrong!">This one might be a little tricky</div>

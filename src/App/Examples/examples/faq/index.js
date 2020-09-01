@@ -88,7 +88,7 @@ const FAQSheet = () => {
             <h2>Ask a question</h2>
             <div className="form-group">
                 <div className="input-group">
-                    <span className="input-group-addon"><i className="material-icons">help</i></span>
+                    <span className="input-group-addon"><i className="material-icons" aria-hidden="true">help</i></span>
                     <textarea type="textarea" className="form-control h-25" id="settings-description"></textarea>
                 </div>
             </div>
@@ -109,7 +109,7 @@ const FAQCard = () => (
                 <div className="card-body d-flex flex-column">
                     <div className="media media-sm">
                         <div className="media-img">
-                            <i className="material-icons text-muted">help</i>
+                            <i className="material-icons text-muted" aria-hidden="true">help</i>
                         </div>
                         <div className="media-body">
                             <h4 className="text-muted">Cannot find what you are looking for?</h4>

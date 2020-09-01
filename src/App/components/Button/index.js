@@ -32,7 +32,7 @@ const Button = ({ label, id, name, value, href, icon, loading, type, disabled, b
     if (href) {
         return (
             <a className={btnClasses} {...attrs}>{icon ? "\n\t" : null}
-                {icon ? <i className="material-icons">{icon}</i> : null}
+                {icon ? <i className="material-icons" aria-hidden="true">{icon}</i> : null}
                 {(icon && label) ? <span>{label}</span> : label}
             </a>
         );
@@ -44,7 +44,7 @@ const Button = ({ label, id, name, value, href, icon, loading, type, disabled, b
 
     return (
         <button className={btnClasses} {...attrs}>{icon ? "\n\t\t" : null}
-            {icon ? <><i className="material-icons">{icon}</i>{"\n\t\t"}</> : null}
+            {icon ? <><i className="material-icons" aria-hidden="true">{icon}</i>{"\n\t\t"}</> : null}
             {(icon && label) ? <span>{label}</span> : label}{icon ? "\n\t" : null}
         </button>
     );

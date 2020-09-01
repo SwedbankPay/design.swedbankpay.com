@@ -12,7 +12,7 @@ describe("Utilities: Icon", () => {
         const wrapper = shallow(<Icon type="test" />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<i className="material-icons">test</i>)).toEqual(true);
+        expect(wrapper.contains(<i className="material-icons" aria-hidden="true">test</i>)).toEqual(true);
     });
 });
 

@@ -34,6 +34,7 @@ exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with 
 exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with new tab properties when newTab is true 1`] = `
 <Fragment>
   <i
+    aria-hidden="true"
     className="material-icons"
   >
     open_in_new

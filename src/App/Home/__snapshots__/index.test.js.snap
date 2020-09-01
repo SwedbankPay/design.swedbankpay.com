@@ -11,6 +11,7 @@ exports[`Home: index renders 1`] = `
       className="alert-header"
     >
       <i
+        aria-hidden="true"
         className="material-icons alert-icon"
       >
         warning
@@ -43,6 +44,7 @@ exports[`Home: index renders 1`] = `
             className="doc-circle"
           >
             <i
+              aria-hidden="true"
               className="material-icons material-icons-large text-white"
             >
               play_circle_outline
@@ -76,6 +78,7 @@ exports[`Home: index renders 1`] = `
             className="doc-circle"
           >
             <i
+              aria-hidden="true"
               className="material-icons material-icons-large text-white"
             >
               desktop_windows
@@ -109,6 +112,7 @@ exports[`Home: index renders 1`] = `
             className="doc-circle"
           >
             <i
+              aria-hidden="true"
               className="material-icons material-icons-large text-white"
             >
               folder_open

@@ -19,7 +19,7 @@ describe("scripts: dialog", () => {
                 <div className={`dialog ${open ? " d-flex" : null}`} id={id} role="dialog" aria-modal="true">
                     <section>
                         <header className="dialog-header">
-                            <h4>Delete item 456?</h4><button type="button" className="dialog-close"><i className="material-icons">close</i></button>
+                            <h4>Delete item 456?</h4><button type="button" className="dialog-close"><i className="material-icons" aria-hidden="true">close</i></button>
                         </header>
                         <div className="dialog-body">
                             <p>Are you sure you want to permanently delete the item <i>German Swashbuckle (456)?</i></p>

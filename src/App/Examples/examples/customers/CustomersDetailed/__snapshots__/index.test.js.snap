@@ -57,6 +57,7 @@ exports[`Examples: CustomersDetailed renders 1`] = `
                         className="media-img"
                       >
                         <i
+                          aria-hidden="true"
                           className="material-icons"
                         >
                           account_circle
@@ -84,6 +85,7 @@ exports[`Examples: CustomersDetailed renders 1`] = `
                         className="media-img"
                       >
                         <i
+                          aria-hidden="true"
                           className="material-icons"
                         >
                           account_circle
@@ -113,6 +115,7 @@ exports[`Examples: CustomersDetailed renders 1`] = `
                       type="button"
                     >
                       <i
+                        aria-hidden="true"
                         className="material-icons"
                       >
                         more_vert
@@ -127,6 +130,7 @@ exports[`Examples: CustomersDetailed renders 1`] = `
                         onClick={[Function]}
                       >
                         <i
+                          aria-hidden="true"
                           className="material-icons"
                         >
                           edit
@@ -139,6 +143,7 @@ exports[`Examples: CustomersDetailed renders 1`] = `
                         onClick={[Function]}
                       >
                         <i
+                          aria-hidden="true"
                           className="material-icons"
                         >
                           delete

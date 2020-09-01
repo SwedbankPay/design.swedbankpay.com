@@ -14,31 +14,31 @@ describe("scripts: nav", () => {
             <ul>
                 <li>
                     <a href="#">
-                        <i className="material-icons">home</i>
+                        <i className="material-icons" aria-hidden="true">home</i>
                         <span>Home</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i className="material-icons">account_balance</i>
+                        <i className="material-icons" aria-hidden="true">account_balance</i>
                         <span>Account</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i className="material-icons">fingerprint</i>
+                        <i className="material-icons" aria-hidden="true">fingerprint</i>
                         <span>Authentication</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i className="material-icons">notification_important</i>
+                        <i className="material-icons" aria-hidden="true">notification_important</i>
                         <span>Notifications</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i className="material-icons">shopping_cart</i>
+                        <i className="material-icons" aria-hidden="true">shopping_cart</i>
                         <span>Transactions</span>
                     </a>
                 </li>
@@ -52,7 +52,7 @@ describe("scripts: nav", () => {
                     { subItems ?
                         <div className={subopen ? "submenu submenu-open" : "submenu"}>{"\n"}
                             <a href="#">
-                                <i className="material-icons">language</i>{"\n"}
+                                <i className="material-icons" aria-hidden="true">language</i>{"\n"}
                                 <span>{name}</span>
                             </a>
                             <ul>
@@ -65,7 +65,7 @@ describe("scripts: nav", () => {
                         </div>
                         :
                         <a href="#">
-                            <i className="material-icons">shopping_cart</i>
+                            <i className="material-icons" aria-hidden="true">shopping_cart</i>
                             <span>Shop</span>
                         </a>}
                 </li>
@@ -77,13 +77,13 @@ describe("scripts: nav", () => {
         <nav className="nav">
             <ul>
                 <li>
-                    <i className="material-icons">home</i>
+                    <i className="material-icons" aria-hidden="true">home</i>
                     <span>Home</span>
                 </li>
                 <li>{ subItems ?
                     <div className="submenu">{"\n"}
                         <a href="#">
-                            <i className="material-icons">language</i>{"\n"}
+                            <i className="material-icons" aria-hidden="true">language</i>{"\n"}
                             <span>{name}</span>
                         </a>
                         <ul>
@@ -96,7 +96,7 @@ describe("scripts: nav", () => {
                     </div>
                     :
                     <a href="#">
-                        <i className="material-icons">account_balance</i>
+                        <i className="material-icons" aria-hidden="true">account_balance</i>
                         <span>Account</span>
                     </a>}
                 </li>

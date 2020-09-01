@@ -70,26 +70,31 @@ exports[`Core: Iconography Flags renders 1`] = `
     language="html"
   >
     <i
+      aria-hidden="true"
       className="flag-icon flag-icon-no"
     />
     
 
     <i
+      aria-hidden="true"
       className="flag-icon flag-icon-sv"
     />
     
 
     <i
+      aria-hidden="true"
       className="flag-icon flag-icon-dk"
     />
     
 
     <i
+      aria-hidden="true"
       className="flag-icon flag-icon-fi"
     />
     
 
     <i
+      aria-hidden="true"
       className="flag-icon flag-icon-eu"
     />
     
@@ -150,26 +155,31 @@ exports[`Core: Iconography Flags renders 1`] = `
     language="html"
   >
     <i
+      aria-hidden="true"
       className="flag-icon flag-icon-squared flag-icon-no"
     />
     
 
     <i
+      aria-hidden="true"
       className="flag-icon flag-icon-squared flag-icon-sv"
     />
     
 
     <i
+      aria-hidden="true"
       className="flag-icon flag-icon-squared flag-icon-dk"
     />
     
 
     <i
+      aria-hidden="true"
       className="flag-icon flag-icon-squared flag-icon-fi"
     />
     
 
     <i
+      aria-hidden="true"
       className="flag-icon flag-icon-squared flag-icon-eu"
     />
     
@@ -255,26 +265,31 @@ exports[`Core: Iconography Flags renders 1`] = `
     language="html"
   >
     <i
+      aria-hidden="true"
       className="flag-icon flag-icon-no flag-icon-tiny"
     />
     
 
     <i
+      aria-hidden="true"
       className="flag-icon flag-icon-sv flag-icon-small"
     />
     
 
     <i
+      aria-hidden="true"
       className="flag-icon flag-icon-dk flag-icon-medium"
     />
     
 
     <i
+      aria-hidden="true"
       className="flag-icon flag-icon-fi flag-icon-large"
     />
     
 
     <i
+      aria-hidden="true"
       className="flag-icon flag-icon-eu flag-icon-huge"
     />
     
@@ -332,26 +347,31 @@ exports[`Core: Iconography Flags renders 1`] = `
     language="html"
   >
     <i
+      aria-hidden="true"
       className="flag-icon flag-icon-squared flag-icon-no flag-icon-tiny"
     />
     
 
     <i
+      aria-hidden="true"
       className="flag-icon flag-icon-squared flag-icon-sv flag-icon-small"
     />
     
 
     <i
+      aria-hidden="true"
       className="flag-icon flag-icon-squared flag-icon-dk flag-icon-medium"
     />
     
 
     <i
+      aria-hidden="true"
       className="flag-icon flag-icon-squared flag-icon-fi flag-icon-large"
     />
     
 
     <i
+      aria-hidden="true"
       className="flag-icon flag-icon-squared flag-icon-eu flag-icon-huge"
     />
     
@@ -383,7 +403,7 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
   <p>
     To use an icon, provide the following markup: 
     <CodeTags
-      code="<i class=\\"material-icons\\">{icon_name}</i>"
+      code="<i class=\\"material-icons\\" aria-hidden=\\"true\\">{icon_name}</i>"
       type="primary"
     />
     .
@@ -427,6 +447,7 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
     language="html"
   >
     <i
+      aria-hidden="true"
       className="material-icons"
     >
       android
@@ -434,6 +455,7 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
     
 
     <i
+      aria-hidden="true"
       className="material-icons"
     >
       contact_support
@@ -441,6 +463,7 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
     
 
     <i
+      aria-hidden="true"
       className="material-icons"
     >
       face
@@ -448,6 +471,7 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
     
 
     <i
+      aria-hidden="true"
       className="material-icons"
     >
       star
@@ -455,6 +479,7 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
     
 
     <i
+      aria-hidden="true"
       className="material-icons"
     >
       warning
@@ -524,6 +549,7 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
     language="html"
   >
     <i
+      aria-hidden="true"
       className="material-icons material-icons-tiny"
     >
       android
@@ -531,6 +557,7 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
     
 
     <i
+      aria-hidden="true"
       className="material-icons material-icons-small"
     >
       android
@@ -538,6 +565,7 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
     
 
     <i
+      aria-hidden="true"
       className="material-icons material-icons-medium"
     >
       android
@@ -545,6 +573,7 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
     
 
     <i
+      aria-hidden="true"
       className="material-icons material-icons-large"
     >
       android
@@ -563,7 +592,7 @@ exports[`Core: Iconography PaymentIcons onClick prevents default 1`] = `
   <p>
     To use an icon, provide the following markup: 
     <CodeTags
-      code="<i class=\\"payment-icon payment-icon-{icon_name}\\"></i>"
+      code="<i class=\\"payment-icon payment-icon-{icon_name}\\" aria-hidden=\\"true\\"></i>"
       type="primary"
     />
     .
@@ -914,6 +943,7 @@ exports[`Core: Iconography PaymentIcons onClick prevents default 1`] = `
 
         </div>
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           star
@@ -954,6 +984,7 @@ exports[`Core: Iconography PaymentIcons onClick prevents default 1`] = `
           type="button"
         >
           <i
+            aria-hidden="true"
             className="material-icons"
           >
             delete
@@ -977,7 +1008,7 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
   <p>
     To use an icon, provide the following markup: 
     <CodeTags
-      code="<i class=\\"payment-icon payment-icon-{icon_name}\\"></i>"
+      code="<i class=\\"payment-icon payment-icon-{icon_name}\\" aria-hidden=\\"true\\"></i>"
       type="primary"
     />
     .
@@ -1328,6 +1359,7 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
 
         </div>
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           star
@@ -1368,6 +1400,7 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
           type="button"
         >
           <i
+            aria-hidden="true"
             className="material-icons"
           >
             delete
