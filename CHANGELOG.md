@@ -89,3 +89,5 @@
     - Made using radio buttons without label content possible
 - Tabs
   - Changed styling of tabs
+- Slab
+  - Added slab with top border
