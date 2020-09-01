@@ -1,12 +1,14 @@
-import React from "react";
+import React, { Component, cloneElement } from "react";
 import PropTypes from "prop-types";
 import { renderToStaticMarkup } from "react-dom/server";
 import jsbeautifier from "js-beautify";
 import { defaultProps } from "prism-react-renderer";
 
+import { Radio } from "@components/FormComponents";
+
 // NOTE: dangerousHTML prop is used when wanting to show html in the codefigure without encoding.
 
-const ComponentPreview = ({ children, language, removeOuterTag, hideValue, removeList, showCasePanel, showCasePanelSm, codeFigure, dangerousHTML, negative }) => {
+const ComponentPreview = ({ children, language, removeOuterTag, hideValue, removeList, showCasePanel, showCasePanelAdvanced, showCasePanelSm, codeFigure, dangerousHTML, negative }) => {
     const _removeOuterTag = element => {
         const div = document.createElement("div");
 
@@ -57,7 +59,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
         return code;
     };
 
-    const CodeFigure = () => {
+    const CodeFigure = ({ children }) => {
         let code = "";
 
         if (language === "html" && dangerousHTML) {
@@ -153,10 +155,157 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
         </div>
     );
 
+    class ShowCasePanelAdvanced extends Component {
+        constructor (props) {
+            super(props);
+            this.state = {
+                activeTab: this.props.showCasePanelAdvanced.elements[0],
+                optionsOpen: false,
+                activeOptions: []
+            };
+        }
+
+        setActiveTab (e, i) {
+            const showcasePanel = document.getElementById(this.props.showCasePanelAdvanced.id);
+
+            e.preventDefault();
+
+            this.setState({
+                activeTab: this.props.showCasePanelAdvanced.elements[i],
+                activeOptions: []
+            });
+
+            showcasePanel.querySelectorAll("input[type=checkbox]").forEach(checkbox => checkbox.checked = false);
+            showcasePanel.querySelectorAll("select[id]").forEach(dropdown => dropdown.value = 0);
+            showcasePanel.querySelectorAll(".radio").forEach(radio => radio.querySelector("input").checked = (radio.querySelector("input").value === "0"));
+
+        }
+
+        setActiveOptions (id, value, checkbox) {
+            if (checkbox) {
+                if (this.state.activeOptions.filter(option => id === option.id).length > 0) {
+                    this.setState({ activeOptions: this.state.activeOptions.filter(option => id !== option.id) });
+                } else {
+                    this.setState({
+                        activeOptions: [...this.state.activeOptions,
+                            {
+                                id,
+                                value
+                            }
+                        ]
+                    });
+                }
+            } else {
+                this.setState({
+                    activeOptions: [...this.state.activeOptions,
+                        {
+                            id,
+                            value
+                        }
+                    ]
+                });
+            }
+        }
+
+        render () {
+            return (
+                <>
+                    <div id={this.props.showCasePanelAdvanced.id} className={`showcase-panel showcase-panel-advanced${this.state.optionsOpen ? " options-active" : ""}`}>
+                        <div className="d-flex">
+                            <div className="flex-column flex-fill">
+                                <div className="tabs d-flex justify-content-between align-items-center">
+                                    <ul id={this.props.showCasePanelAdvanced.tabsId}>
+                                        {this.props.showCasePanelAdvanced.elements.map((element, i) => <li key={i} className={this.state.activeTab.tab === element.tab ? "active" : null}>
+                                            <a href="#" onClick={e => this.setActiveTab(e, i)}>{element.tab}</a>
+                                        </li>
+                                        )}
+                                    </ul>
+                                    <i className={`material-icons options-open${this.state.optionsOpen ? " hidden" : ""}`} onClick={() => this.setState({ optionsOpen: true })}>menu_open</i>
+                                </div>
+                                <div className="component-preview">
+                                    {cloneElement(this.state.activeTab.component,
+                                        this.state.activeOptions.reduce((acc, currentOption) => ({
+                                            ...acc,
+                                            ...currentOption.value
+                                        }), {})
+                                    )}
+                                </div>
+                                <div className="component-description">
+                                    <h3>{this.state.activeTab.title}</h3>
+                                    {this.state.activeTab.description}
+                                </div>
+                            </div>
+                            {<div className={`options${this.state.optionsOpen ? " active" : ""}`}>
+                                <div className="options-header">
+                                    Options
+                                    <i className="material-icons options-close" onClick={() => this.setState({ optionsOpen: false })}>close</i>
+                                </div>
+                                {this.state.activeTab.options && <div className="options-body">
+                                    {this.state.activeTab.options.checkbox &&
+
+                                        <div className="mb-4">
+                                            {this.state.activeTab.options.checkbox.map((checkbox, i) => (
+                                                <div key={i} className="checkbox" onChange={() => this.setActiveOptions(checkbox.id, checkbox.value, true)}>
+                                                    <input type="checkbox" id={checkbox.id} />
+                                                    <label htmlFor={checkbox.id}>{checkbox.name}</label>
+                                                </div>
+                                            ))}
+                                        </div>
+
+                                    }
+                                    {this.state.activeTab.options.dropdown && this.state.activeTab.options.dropdown.map((dropdown, i) => (
+                                        <div key={i} className="mb-4">
+                                            <h4>{dropdown.title}</h4>
+                                            <select id={dropdown.id} className="form-control" onChange={e => this.setActiveOptions(
+                                                dropdown.id,
+                                                dropdown.values[e.target.value].value
+                                            )}>
+                                                {dropdown.values.map((val, j) => <option key={j} value={j}>{val.name}</option>)}
+                                            </select>
+                                        </div>
+                                    ))}
+                                    {this.state.activeTab.options.radio && this.state.activeTab.options.radio.map((radio, i) => (
+                                        <div key={i}>
+                                            <h4>{radio.title}</h4>
+                                            {radio.values.map((val, j) => (
+                                                <div key={j} className="radio" onChange={e => this.setActiveOptions(
+                                                    radio.id,
+                                                    radio.values[e.target.value].value
+                                                )}>
+                                                    <input
+                                                        type="radio"
+                                                        id={radio.id + val.name.replace(/\s/g, "")}
+                                                        name={radio.id + radio.title.replace(/\s/g, "")}
+                                                        value={j}
+                                                        defaultChecked={j === 0}
+                                                    />
+                                                    <label htmlFor={radio.id + val.name.replace(/\s/g, "")}>{val.name}</label>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    ))}
+                                </div>}
+                            </div>}
+                        </div>
+                    </div>
+                    <CodeFigure >
+                        {cloneElement(this.state.activeTab.component,
+                            this.state.activeOptions.reduce((acc, currentOption) => ({
+                                ...acc,
+                                ...currentOption.value
+                            }), {})
+                        )}
+                    </CodeFigure>
+                </>
+            );
+
+        }
+    }
+
     return (
         <>
-            {showCasePanel ? <ShowCasePanel /> : null}
-            {codeFigure ? <CodeFigure /> : null}
+            {showCasePanel ? (showCasePanelAdvanced ? <ShowCasePanelAdvanced showCasePanelAdvanced={showCasePanelAdvanced} /> : <ShowCasePanel />) : null}
+            {codeFigure && !showCasePanelAdvanced ? <CodeFigure>{children}</CodeFigure> : null}
         </>
     );
 };

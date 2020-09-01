@@ -6,36 +6,28 @@ import ButtonComponent from "@components/Button";
 import Alert from "@components/Alert";
 import CodeTags from "@components/CodeTags";
 
+import { overviewButtons, destructiveButtons } from "./constants";
+
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
         <p>
             The DesignGuide includes a few predefined button styles, each serving its own semantic purpose.
         </p>
-        <ul>
-            <li><b>Executive:</b> Used in executive cases</li>
-            <li><b>Guiding:</b> Used in guiding cases</li>
-            <li><b>Destructive:</b> Used in destructive cases</li>
-            <li>
-                <b>Link:</b> Used when the functionality exhibit link behavior and to give a clear indication that it is different than the other buttons.
-                For instance, <CodeTags type="secondary" code=".btn-link" /> is recommended as the cancel button when paired with other buttons.
-            </li>
-            <li>
-                <b>Link destructive:</b> Similiar to <CodeTags type="secondary" code=".btn-link" />, used to indicate that the consequences are more severe.
-            </li>
+        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewButtons} codeFigure />
+    </>
+);
 
-        </ul>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
-            <div className="button-group">{"\n"}
-                <ButtonComponent type="executive" label="Executive" />{"\n"}
-                <ButtonComponent type="guiding" label="Guiding" />{"\n"}
-                <ButtonComponent type="destructive" label="Destructive" />{"\n"}
-                <ButtonComponent type="link" label="Link" />{"\n"}
-                <ButtonComponent type="link-destructive" label="Link destructive" />{"\n"}
+const DestructiveButton = () => (
+    <>
+        <h2 id="destructive-button">Destructive button</h2>
+        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={destructiveButtons} codeFigure />
+    </>
+);
 
-            </div>
-        </ComponentPreview>
-
+const DeveloperDocumentation = () => (
+    <>
+        <h2 id="developer-documentation">Developer documentation</h2>
         <h3>Active state</h3>
         <p>Buttons will appear pressed (with inset shadow) when active.
             <b>There’s no need to add a class to <CodeTags type="primary" code={"<button>"} />s as they use a pseudo-class.</b> However,
@@ -77,12 +69,7 @@ const Overview = () => (
             <p>The <CodeTags type="secondary" code=".disabled" /> class uses <CodeTags type="secondary" code="pointer-events: none" /> to try to disable the link functionality of <CodeTags type="primary" code={"<a>"} />s, but that CSS property is not yet standardized. In addition, even in browsers that do support <CodeTags type="secondary" code="pointer-events: none" />, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a <CodeTags type="secondary" code={"tabindex=\"-1\""} /> attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.</p>
         </Alert>
 
-    </>
-);
-
-const UsageWithOtherTags = () => (
-    <>
-        <h2 id="usage-with-other-tags">Usage with other tags</h2>
+        <h3>Usage with other tags</h3>
         <p>The <CodeTags type="secondary" code=".btn" /> classes are designed to be used with the <CodeTags type="primary" code={"<button>"} /> element.
         However, you can also use these classes on <CodeTags type="primary" code={"<a>"} /> or <CodeTags type="primary" code={"<input>"} /> elements
         (though some browsers may apply a slightly different rendering).</p>
@@ -98,26 +85,8 @@ const UsageWithOtherTags = () => (
                 <ButtonComponent type="executive" input value="Reset" btnType="reset" />{"\n"}
             </div>
         </ComponentPreview>
-    </>
-);
 
-const OutlineButtons = () => (
-    <>
-        <h2 id="outline-buttons">Outline buttons</h2>
-        <p>Replace the default modifier classes with the <CodeTags type="secondary" code=".btn-outline-{style}" /> ones to get an outline of the button style.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
-            <div className="button-group">{"\n"}
-                <ButtonComponent outline type="executive" label="Executive" />{"\n"}
-                <ButtonComponent outline type="guiding" label="Guiding" />{"\n"}
-                <ButtonComponent outline type="destructive" label="Destructive" />{"\n"}
-            </div>
-        </ComponentPreview>
-    </>
-);
-
-const ButtonGroup = () => (
-    <>
-        <h2 id="button-group">Using buttons together</h2>
+        <h3>Using buttons together</h3>
         <p>When you use buttons next to each other you have to wrap them in a <CodeTags type="secondary" code=".button-group" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="button-group">{"\n"}
@@ -128,100 +97,16 @@ const ButtonGroup = () => (
     </>
 );
 
-const Sizes = () => (
-    <>
-        <h2 id="sizes">Sizes</h2>
-        <p>For a different sized button add <CodeTags type="secondary" code=".btn-lg" />, <CodeTags type="secondary" code=".btn-sm" /> or <CodeTags type="secondary" code=".btn-xs" />.</p>
-        <h3>Large</h3>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
-            <div className="button-group">{"\n"}
-                <ButtonComponent size="lg" type="executive" label="Large button" />{"\n"}
-                <ButtonComponent size="lg" type="guiding" label="Large button" />{"\n"}
-            </div>
-        </ComponentPreview>
-        <h3>Small</h3>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
-            <div className="button-group">{"\n"}
-                <ButtonComponent size="sm" type="executive" label="Small button" />{"\n"}
-                <ButtonComponent size="sm" type="guiding" label="Small button" />{"\n"}
-            </div>
-        </ComponentPreview>
-        <h3>Extra small</h3>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
-            <div className="button-group">{"\n"}
-                <ButtonComponent size="xs" type="executive" label="Extra small button" />{"\n"}
-                <ButtonComponent size="xs" type="guiding" label="Extra small button" />{"\n"}
-            </div>
-        </ComponentPreview>
-        <h3>Block level</h3>
-        <p>Create block level buttons—those that span the full width of a parent by adding <CodeTags type="secondary" code=".btn-block" />.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
-            <div className="button-group">{"\n"}
-                <ButtonComponent fullWidth type="executive" label="Block level button" />{"\n"}
-                <ButtonComponent fullWidth type="guiding" label="Block level button" />{"\n"}
-            </div>
-        </ComponentPreview>
-    </>
-);
-
-const UsageWithIcons = () => (
-    <>
-        <h2 id="usage-with-icons">Usage with icons</h2>
-        <p>To use a button with an icon simply put the icon markup inside the <CodeTags type="primary" code={"<button>"} />.</p>
-        <p>Read more about icon usage here <Link to="/core/iconography">here</Link>.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
-            <div className="button-group">{"\n"}
-                <ButtonComponent icon="cloud" type="executive" label="Executive" />{"\n\n"}
-                <ButtonComponent icon="cloud" type="guiding" label="Guiding" />{"\n"}
-                <ButtonComponent icon="close" type="destructive" label="Destructive" />{"\n"}
-            </div>
-        </ComponentPreview>
-    </>
-);
-
-const ButtonLoader = () => (
-    <>
-        <h2 id="button-loader">Button loader</h2>
-        <p>Add class <CodeTags type="secondary" code=".loading" /> to display the loader.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
-            <div className="button-group">{"\n"}
-                <ButtonComponent type="executive" label="Executive" loader loading />{"\n"}
-                <ButtonComponent type="guiding" label="Guiding" loader loading />{"\n"}
-            </div>
-        </ComponentPreview>
-        <h3>Disabled loader</h3>
-        <p><CodeTags type="secondary" code=".loading" /> with <CodeTags type="secondary" code="disabled" /></p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
-            <div className="button-group">{"\n"}
-                <ButtonComponent disabled type="executive" label="Executive" loader loading />{"\n"}
-                <ButtonComponent disabled type="guiding" label="Guiding" loader loading />{"\n"}
-            </div>
-        </ComponentPreview>
-        <h3>Outline loader</h3>
-        <p><CodeTags type="secondary" code=".loading" /> with <CodeTags type="secondary" code=".outline" /></p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
-            <div className="button-group">{"\n"}
-                <ButtonComponent outline type="executive" label="Executive" loader loading />{"\n"}
-                <ButtonComponent outline type="guiding" label="Guiding" loader loading />{"\n"}
-            </div>
-        </ComponentPreview>
-    </>
-);
-
 const Buttons = () => (
     <DocContainer docToc>
         <p className="lead">Use our button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
         <Overview />
-        <UsageWithOtherTags />
-        <OutlineButtons />
-        <ButtonGroup />
-        <Sizes />
-        <UsageWithIcons />
-        <ButtonLoader />
+        <DestructiveButton />
+        <DeveloperDocumentation />
     </DocContainer>
 );
 
 export default Buttons;
 
 /* for testing */
-export { Overview, UsageWithOtherTags, OutlineButtons, ButtonGroup, Sizes, UsageWithIcons, ButtonLoader };
+export { Overview, DestructiveButton, DeveloperDocumentation };

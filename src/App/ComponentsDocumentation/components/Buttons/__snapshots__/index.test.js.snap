@@ -1,373 +1,164 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Documentation: Buttons Button Loader renders 1`] = `
+exports[`Documentation: Buttons Destructive button renders 1`] = `
 <Fragment>
   <h2
-    id="button-loader"
+    id="destructive-button"
   >
-    Button loader
+    Destructive button
   </h2>
-  <p>
-    Add class 
-    <CodeTags
-      code=".loading"
-      type="secondary"
-    />
-     to display the loader.
-  </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
-  >
-    <div
-      className="button-group"
-    >
-      
-
-      <Button
-        label="Executive"
-        loader={true}
-        loading={true}
-        type="executive"
-      />
-      
-
-      <Button
-        label="Guiding"
-        loader={true}
-        loading={true}
-        type="guiding"
-      />
-      
-
-    </div>
-  </ComponentPreview>
-  <h3>
-    Disabled loader
-  </h3>
-  <p>
-    <CodeTags
-      code=".loading"
-      type="secondary"
-    />
-     with 
-    <CodeTags
-      code="disabled"
-      type="secondary"
-    />
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-  >
-    <div
-      className="button-group"
-    >
-      
-
-      <Button
-        disabled={true}
-        label="Executive"
-        loader={true}
-        loading={true}
-        type="executive"
-      />
-      
-
-      <Button
-        disabled={true}
-        label="Guiding"
-        loader={true}
-        loading={true}
-        type="guiding"
-      />
-      
-
-    </div>
-  </ComponentPreview>
-  <h3>
-    Outline loader
-  </h3>
-  <p>
-    <CodeTags
-      code=".loading"
-      type="secondary"
-    />
-     with 
-    <CodeTags
-      code=".outline"
-      type="secondary"
-    />
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-  >
-    <div
-      className="button-group"
-    >
-      
-
-      <Button
-        label="Executive"
-        loader={true}
-        loading={true}
-        outline={true}
-        type="executive"
-      />
-      
-
-      <Button
-        label="Guiding"
-        loader={true}
-        loading={true}
-        outline={true}
-        type="guiding"
-      />
-      
-
-    </div>
-  </ComponentPreview>
+    showCasePanelAdvanced={
+      Object {
+        "elements": Array [
+          Object {
+            "component": <Button
+              label="Type something"
+              outline={true}
+              type="destructive"
+            />,
+            "description": "Only use warning buttons for actions with serious destructive consequences that cannot be easily undone by a user. For example, permanently deleting an account. When letting users carry out an action like this, it’s a good idea to include an additional step which asks them to confirm it.",
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "id": "icon_check_destructive",
+                  "name": "Icon",
+                  "value": Object {
+                    "icon": "cloud",
+                  },
+                },
+                Object {
+                  "id": "loader_check_destructive",
+                  "name": "Loader",
+                  "value": Object {
+                    "loader": true,
+                    "loading": true,
+                  },
+                },
+              ],
+              "radio": Array [
+                Object {
+                  "id": "size_radio_destructive",
+                  "title": "Sizes",
+                  "values": Array [
+                    Object {
+                      "name": "Large",
+                      "value": Object {
+                        "size": "lg",
+                      },
+                    },
+                    Object {
+                      "name": "Small",
+                      "value": Object {
+                        "size": "sm",
+                      },
+                    },
+                    Object {
+                      "name": "Extra small",
+                      "value": Object {
+                        "size": "xs",
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "tab": "Guiding",
+            "title": "Destructive button",
+          },
+          Object {
+            "component": <Button
+              label="Type something"
+              type="link-destructive"
+            />,
+            "description": "Only use warning buttons for actions with serious destructive consequences that cannot be easily undone by a user. For example, permanently deleting an account. When letting users carry out an action like this, it’s a good idea to include an additional step which asks them to confirm it.",
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "id": "icon_check_destructive",
+                  "name": "Icon",
+                  "value": Object {
+                    "icon": "cloud",
+                  },
+                },
+              ],
+            },
+            "tab": "Text/Link",
+            "title": "Destructive button",
+          },
+          Object {
+            "component": <Button
+              label="Type something"
+              type="destructive"
+            />,
+            "description": "Use these only in confirming a destructive action. For example, use this button in a dialog confirming a deleting an account. Executive Destructive button takes a lot of attention from the user and should there be used with restraint.",
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "id": "icon_check_destructive",
+                  "name": "Icon",
+                  "value": Object {
+                    "icon": "close",
+                  },
+                },
+                Object {
+                  "id": "loader_check_destructive",
+                  "name": "Loader",
+                  "value": Object {
+                    "loader": true,
+                    "loading": true,
+                  },
+                },
+              ],
+              "radio": Array [
+                Object {
+                  "id": "size_radio_destructive",
+                  "title": "Sizes",
+                  "values": Array [
+                    Object {
+                      "name": "Large",
+                      "value": Object {
+                        "size": "lg",
+                      },
+                    },
+                    Object {
+                      "name": "Small",
+                      "value": Object {
+                        "size": "sm",
+                      },
+                    },
+                    Object {
+                      "name": "Extra small",
+                      "value": Object {
+                        "size": "xs",
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "tab": "Executive",
+            "title": "Executive destructive button",
+          },
+        ],
+        "id": "destructiveButtons",
+        "tabsId": "destructiveButtonsTabs",
+      }
+    }
+  />
 </Fragment>
 `;
 
-exports[`Documentation: Buttons Button group renders 1`] = `
+exports[`Documentation: Buttons Developer documentation renders 1`] = `
 <Fragment>
   <h2
-    id="button-group"
+    id="developer-documentation"
   >
-    Using buttons together
+    Developer documentation
   </h2>
-  <p>
-    When you use buttons next to each other you have to wrap them in a 
-    <CodeTags
-      code=".button-group"
-      type="secondary"
-    />
-    .
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <div
-      className="button-group"
-    >
-      
-
-      <Button
-        label="Activate"
-        type="executive"
-      />
-      
-
-      <Button
-        label="Disable"
-        type="guiding"
-      />
-      
-
-    </div>
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Documentation: Buttons ButtonGroup renders 1`] = `
-<Fragment>
-  <h2
-    id="button-group"
-  >
-    Using buttons together
-  </h2>
-  <p>
-    When you use buttons next to each other you have to wrap them in a 
-    <CodeTags
-      code=".button-group"
-      type="secondary"
-    />
-    .
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <div
-      className="button-group"
-    >
-      
-
-      <Button
-        label="Activate"
-        type="executive"
-      />
-      
-
-      <Button
-        label="Disable"
-        type="guiding"
-      />
-      
-
-    </div>
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Documentation: Buttons Outline Buttons renders 1`] = `
-<Fragment>
-  <h2
-    id="outline-buttons"
-  >
-    Outline buttons
-  </h2>
-  <p>
-    Replace the default modifier classes with the 
-    <CodeTags
-      code=".btn-outline-{style}"
-      type="secondary"
-    />
-     ones to get an outline of the button style.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-  >
-    <div
-      className="button-group"
-    >
-      
-
-      <Button
-        label="Executive"
-        outline={true}
-        type="executive"
-      />
-      
-
-      <Button
-        label="Guiding"
-        outline={true}
-        type="guiding"
-      />
-      
-
-      <Button
-        label="Destructive"
-        outline={true}
-        type="destructive"
-      />
-      
-
-    </div>
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Documentation: Buttons Overview renders 1`] = `
-<Fragment>
-  <h2
-    id="overview"
-  >
-    Overview
-  </h2>
-  <p>
-    The DesignGuide includes a few predefined button styles, each serving its own semantic purpose.
-  </p>
-  <ul>
-    <li>
-      <b>
-        Executive:
-      </b>
-       Used in executive cases
-    </li>
-    <li>
-      <b>
-        Guiding:
-      </b>
-       Used in guiding cases
-    </li>
-    <li>
-      <b>
-        Destructive:
-      </b>
-       Used in destructive cases
-    </li>
-    <li>
-      <b>
-        Link:
-      </b>
-       Used when the functionality exhibit link behavior and to give a clear indication that it is different than the other buttons. For instance, 
-      <CodeTags
-        code=".btn-link"
-        type="secondary"
-      />
-       is recommended as the cancel button when paired with other buttons.
-    </li>
-    <li>
-      <b>
-        Link destructive:
-      </b>
-       Similiar to 
-      <CodeTags
-        code=".btn-link"
-        type="secondary"
-      />
-      , used to indicate that the consequences are more severe.
-    </li>
-  </ul>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-  >
-    <div
-      className="button-group"
-    >
-      
-
-      <Button
-        label="Executive"
-        type="executive"
-      />
-      
-
-      <Button
-        label="Guiding"
-        type="guiding"
-      />
-      
-
-      <Button
-        label="Destructive"
-        type="destructive"
-      />
-      
-
-      <Button
-        label="Link"
-        type="link"
-      />
-      
-
-      <Button
-        label="Link destructive"
-        type="link-destructive"
-      />
-      
-
-    </div>
-  </ComponentPreview>
   <h3>
     Active state
   </h3>
@@ -600,234 +391,9 @@ exports[`Documentation: Buttons Overview renders 1`] = `
        attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.
     </p>
   </Alert>
-</Fragment>
-`;
-
-exports[`Documentation: Buttons Sizes renders 1`] = `
-<Fragment>
-  <h2
-    id="sizes"
-  >
-    Sizes
-  </h2>
-  <p>
-    For a different sized button add 
-    <CodeTags
-      code=".btn-lg"
-      type="secondary"
-    />
-    , 
-    <CodeTags
-      code=".btn-sm"
-      type="secondary"
-    />
-     or 
-    <CodeTags
-      code=".btn-xs"
-      type="secondary"
-    />
-    .
-  </p>
   <h3>
-    Large
-  </h3>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-  >
-    <div
-      className="button-group"
-    >
-      
-
-      <Button
-        label="Large button"
-        size="lg"
-        type="executive"
-      />
-      
-
-      <Button
-        label="Large button"
-        size="lg"
-        type="guiding"
-      />
-      
-
-    </div>
-  </ComponentPreview>
-  <h3>
-    Small
-  </h3>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-  >
-    <div
-      className="button-group"
-    >
-      
-
-      <Button
-        label="Small button"
-        size="sm"
-        type="executive"
-      />
-      
-
-      <Button
-        label="Small button"
-        size="sm"
-        type="guiding"
-      />
-      
-
-    </div>
-  </ComponentPreview>
-  <h3>
-    Extra small
-  </h3>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-  >
-    <div
-      className="button-group"
-    >
-      
-
-      <Button
-        label="Extra small button"
-        size="xs"
-        type="executive"
-      />
-      
-
-      <Button
-        label="Extra small button"
-        size="xs"
-        type="guiding"
-      />
-      
-
-    </div>
-  </ComponentPreview>
-  <h3>
-    Block level
-  </h3>
-  <p>
-    Create block level buttons—those that span the full width of a parent by adding 
-    <CodeTags
-      code=".btn-block"
-      type="secondary"
-    />
-    .
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-  >
-    <div
-      className="button-group"
-    >
-      
-
-      <Button
-        fullWidth={true}
-        label="Block level button"
-        type="executive"
-      />
-      
-
-      <Button
-        fullWidth={true}
-        label="Block level button"
-        type="guiding"
-      />
-      
-
-    </div>
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Documentation: Buttons Usage With Icons renders 1`] = `
-<Fragment>
-  <h2
-    id="usage-with-icons"
-  >
-    Usage with icons
-  </h2>
-  <p>
-    To use a button with an icon simply put the icon markup inside the 
-    <CodeTags
-      code="<button>"
-      type="primary"
-    />
-    .
-  </p>
-  <p>
-    Read more about icon usage here 
-    <Link
-      to="/core/iconography"
-    >
-      here
-    </Link>
-    .
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-  >
-    <div
-      className="button-group"
-    >
-      
-
-      <Button
-        icon="cloud"
-        label="Executive"
-        type="executive"
-      />
-      
-
-
-      <Button
-        icon="cloud"
-        label="Guiding"
-        type="guiding"
-      />
-      
-
-      <Button
-        icon="close"
-        label="Destructive"
-        type="destructive"
-      />
-      
-
-    </div>
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Documentation: Buttons Usage With Other Tags renders 1`] = `
-<Fragment>
-  <h2
-    id="usage-with-other-tags"
-  >
     Usage with other tags
-  </h2>
+  </h3>
   <p>
     The 
     <CodeTags
@@ -914,6 +480,196 @@ exports[`Documentation: Buttons Usage With Other Tags renders 1`] = `
 
     </div>
   </ComponentPreview>
+  <h3>
+    Using buttons together
+  </h3>
+  <p>
+    When you use buttons next to each other you have to wrap them in a 
+    <CodeTags
+      code=".button-group"
+      type="secondary"
+    />
+    .
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        label="Activate"
+        type="executive"
+      />
+      
+
+      <Button
+        label="Disable"
+        type="guiding"
+      />
+      
+
+    </div>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Buttons Overview renders 1`] = `
+<Fragment>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <p>
+    The DesignGuide includes a few predefined button styles, each serving its own semantic purpose.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+    showCasePanelAdvanced={
+      Object {
+        "elements": Array [
+          Object {
+            "component": <Button
+              label="Primary"
+              type="executive"
+            />,
+            "description": "Use a primary button as the main call to action on a page. Avoid using multiple default buttons on a single page. Having more than one main call to action reduces their impact, and makes it harder for users to know what to do next.",
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "id": "icon_check",
+                  "name": "Icon",
+                  "value": Object {
+                    "icon": "cloud",
+                  },
+                },
+                Object {
+                  "id": "loader_check",
+                  "name": "Loader",
+                  "value": Object {
+                    "loader": true,
+                    "loading": true,
+                  },
+                },
+              ],
+              "radio": Array [
+                Object {
+                  "id": "size_radio",
+                  "title": "Sizes",
+                  "values": Array [
+                    Object {
+                      "name": "Large",
+                      "value": Object {
+                        "size": "lg",
+                      },
+                    },
+                    Object {
+                      "name": "Small",
+                      "value": Object {
+                        "size": "sm",
+                      },
+                    },
+                    Object {
+                      "name": "Extra small",
+                      "value": Object {
+                        "size": "xs",
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "tab": "Primary",
+            "title": "Primary button",
+          },
+          Object {
+            "component": <Button
+              label="Secondary"
+              outline={true}
+              type="executive"
+            />,
+            "description": "Use a secondary button for secondary call to action on a page. Pages with too many calls to action make it hard for users to know what to do next. Before adding lots of secondary buttons, try to simplify the page or break the content down across multiple pages.",
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "id": "icon_check",
+                  "name": "Icon",
+                  "value": Object {
+                    "icon": "cloud",
+                  },
+                },
+                Object {
+                  "id": "loader_check",
+                  "name": "Loader",
+                  "value": Object {
+                    "loader": true,
+                    "loading": true,
+                  },
+                },
+              ],
+              "radio": Array [
+                Object {
+                  "id": "size_radio",
+                  "title": "Sizes",
+                  "values": Array [
+                    Object {
+                      "name": "Large",
+                      "value": Object {
+                        "size": "lg",
+                      },
+                    },
+                    Object {
+                      "name": "Small",
+                      "value": Object {
+                        "size": "sm",
+                      },
+                    },
+                    Object {
+                      "name": "Extra small",
+                      "value": Object {
+                        "size": "xs",
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "tab": "Secondary",
+            "title": "Secondary button",
+          },
+          Object {
+            "component": <Button
+              label="Link"
+              type="link"
+            />,
+            "description": "Should only be used in combination with a Primary or Secondary button. Use link for stand alone links see Links. Use for less important or less commonly used actions since they’re less prominent. Text buttons are often embedded in contained components like cards and dialogs. Since text buttons don’t have a container, they don’t distract from nearby content.",
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "id": "icon_check",
+                  "name": "Icon",
+                  "value": Object {
+                    "icon": "cloud",
+                  },
+                },
+              ],
+            },
+            "tab": "Link button",
+            "title": "Link button",
+          },
+        ],
+        "id": "overviewButtons",
+        "tabsId": "overviewButtonsTabs",
+      }
+    }
+  />
 </Fragment>
 `;
 
@@ -927,11 +683,7 @@ exports[`Documentation: Buttons renders 1`] = `
     Use our button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
   </p>
   <Overview />
-  <UsageWithOtherTags />
-  <OutlineButtons />
-  <ButtonGroup />
-  <Sizes />
-  <UsageWithIcons />
-  <ButtonLoader />
+  <DestructiveButton />
+  <DeveloperDocumentation />
 </DocContainer>
 `;

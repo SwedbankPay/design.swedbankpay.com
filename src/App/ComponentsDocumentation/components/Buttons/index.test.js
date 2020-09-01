@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Buttons, { Overview, UsageWithOtherTags, OutlineButtons, ButtonGroup, Sizes, UsageWithIcons, ButtonLoader } from "./index";
+import Buttons, { Overview, DestructiveButton,DeveloperDocumentation } from "./index";
 
 describe("Documentation: Buttons", () => {
     it("is defined", () => {
@@ -26,85 +26,25 @@ describe("Documentation: Buttons", () => {
         });
     });
 
-    describe("Usage With Other Tags", () => {
+    describe("Destructive button", () => {
         it("is defined", () => {
-            expect(UsageWithOtherTags).toBeDefined();
+            expect(DestructiveButton).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<UsageWithOtherTags />);
+            const wrapper = shallow(<DestructiveButton />);
 
             expect(wrapper).toMatchSnapshot();
         });
     });
 
-    describe("Outline Buttons", () => {
+    describe("Developer documentation", () => {
         it("is defined", () => {
-            expect(OutlineButtons).toBeDefined();
+            expect(DeveloperDocumentation).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<OutlineButtons />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("Button group", () => {
-        it("is defined", () => {
-            expect(ButtonGroup).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<ButtonGroup />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("Sizes", () => {
-        it("is defined", () => {
-            expect(Sizes).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<Sizes />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("ButtonGroup", () => {
-        it("is defined", () => {
-            expect(ButtonGroup).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<ButtonGroup />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("Usage With Icons", () => {
-        it("is defined", () => {
-            expect(UsageWithIcons).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<UsageWithIcons />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("Button Loader", () => {
-        it("is defined", () => {
-            expect(ButtonLoader).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<ButtonLoader />);
+            const wrapper = shallow(<DeveloperDocumentation />);
 
             expect(wrapper).toMatchSnapshot();
         });
