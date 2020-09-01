@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import ButtonComponent from "@components/Button";

@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Buttons, { Overview, DestructiveButton,DeveloperDocumentation } from "./index";
+import Buttons, { Overview, DestructiveButton, DeveloperDocumentation } from "./index";
 
 describe("Documentation: Buttons", () => {
     it("is defined", () => {

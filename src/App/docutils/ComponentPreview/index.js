@@ -4,8 +4,6 @@ import { renderToStaticMarkup } from "react-dom/server";
 import jsbeautifier from "js-beautify";
 import { defaultProps } from "prism-react-renderer";
 
-import { Radio } from "@components/FormComponents";
-
 // NOTE: dangerousHTML prop is used when wanting to show html in the codefigure without encoding.
 
 const ComponentPreview = ({ children, language, removeOuterTag, hideValue, removeList, showCasePanel, showCasePanelAdvanced, showCasePanelSm, codeFigure, dangerousHTML, negative }) => {
