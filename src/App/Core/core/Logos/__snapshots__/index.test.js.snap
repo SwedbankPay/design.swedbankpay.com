@@ -40,9 +40,6 @@ exports[`Core: Favicons OurFavicon renders 1`] = `
   >
     Our favicon
   </h2>
-  <p>
-    Our favicon...
-  </p>
   <ComponentPreview
     language="html"
     showCasePanel={true}
@@ -58,7 +55,7 @@ exports[`Core: Favicons OurFavicon renders 1`] = `
       code="<head>"
       type="primary"
     />
-     tag of your html documents and you are ready to go.
+     tag of your HTML documents and you are ready to go.
   </p>
   <p>
     You should also rename the 

@@ -94,7 +94,7 @@ const PanelTable = () => (
         <p>
             To display a full width table in a panel use <CodeTags type="secondary" code=".panel-table" /> on a div wrapping the table.
             Put <CodeTags type="secondary" code=".panel-table" /> as a direct child of <CodeTags type="secondary" code=".panel" />. Tables put in a panel are given a
-            border bottom to seperate it from the following elements.
+            border bottom to separate it from the following elements.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <PanelComponent

@@ -84,11 +84,10 @@ const VerticalLogo = () => (
 const OurFavicon = () => (
     <>
         <h2 id="our-favicon">Our favicon</h2>
-        <p>Our favicon...</p>
         <ComponentPreview language="html" showCasePanel>
             <img src={`${BASENAME}icons/android-chrome-96x96.png`} alt="Swedbank Pay favicon"/>
         </ComponentPreview>
-        <p>To use our favicons download the zip-file below and extract it to the root of your build-folder. Insert the code below in the <CodeTags type="primary" code={"<head>"} /> tag of your html documents and you are ready to go.</p>
+        <p>To use our favicons download the zip-file below and extract it to the root of your build-folder. Insert the code below in the <CodeTags type="primary" code={"<head>"} /> tag of your HTML documents and you are ready to go.</p>
         <p>You should also rename the <CodeTags type="secondary" code="content" /> of
         the <CodeTags type="secondary" code="apple-mobile-web-app-title" /> and <CodeTags type="secondary" code="application-name" /> <CodeTags type="primary" code={"<meta>"} /> tags
         to reflect the title of your project. Make sure to also do this in the <CodeTags type="secondary" code="manifest.json" /> file in the icons folder.</p>
