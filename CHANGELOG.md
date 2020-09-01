@@ -87,3 +87,5 @@
   - Checkboxes
     - Added visual evident hover and focus styling
     - Made using radio buttons without label content possible
+- Tabs
+  - Changed styling of tabs
