@@ -67,6 +67,7 @@
 - Design guide
   - Added better alt text to logos in Design Guide
   - Fixed margin right of documentation content container
+  - Changed styling of the sidebar, moved the contact part to the bottom
   - Grid
     - Fixed grid gutter not being updated to 32px in documentation
   - Status
