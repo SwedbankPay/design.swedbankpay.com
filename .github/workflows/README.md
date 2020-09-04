@@ -8,8 +8,8 @@ Design Guide is hosted on Azure Storage with Locally-redundant storage (LRS). Th
 
 The deploy procedure is set up to run with GitHub Actions. All workflows can be accessed within this folder.
 
-* __GitHub repository__ needs to be specified (`SwedbankPay/design.swedbankpay.com`).
-* __Default branch__ needs to be set to `master`.
+-   **GitHub repository** needs to be specified (`SwedbankPay/design.swedbankpay.com`).
+-   **Default branch** needs to be set to `master`.
 
 The current configuration is set to make sure a pushed tag will deploy the project.
 
@@ -17,8 +17,8 @@ The current configuration is set to make sure a pushed tag will deploy the proje
 
 Setting the following GitHub secrets variables:
 
-* `AZURE_CREDENTIALS` - Azure credentials used to authenticate with our azure containers.
-* `SENTRY_TOKEN` - API key to sentry. Used by the `sentry.sh` script during release workflow.
+-   `AZURE_CREDENTIALS` - Azure credentials used to authenticate with our azure containers.
+-   `SENTRY_TOKEN` - API key to sentry. Used by the `sentry.sh` script during release workflow.
 
 ## Workflows
 
