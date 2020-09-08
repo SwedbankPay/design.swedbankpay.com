@@ -93,12 +93,12 @@
             justify-content: center;
 
             span {
-                padding: 0 2rem;
+                padding: 0 0.5rem 0 2rem;
             }
 
             i.bank-id {
-                height: 1.25rem;
-                width: 1rem;
+                height: 1.5rem;
+                width: 1.5rem;
                 display: inline-flex;
                 background-size: contain;
                 background-repeat: no-repeat;
@@ -206,20 +206,6 @@
                 border-color: hsla(0, 0%, 100%, 0.5);
                 border-left-color: @white;
             }
-
-            &.btn-outline {
-                &:after {
-                    border-color: @blue-bright;
-                    border-left-color: @brand-accent;
-                }
-
-                &:hover {
-                    &:after {
-                        border-color: hsla(0, 0%, 100%, 0.5);
-                        border-left-color: @white;
-                    }
-                }
-            }
         }
 
         &.btn-secondary,
@@ -252,6 +238,11 @@
         }
 
         &.btn-bank-id {
+            &:after {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+
             i.bank-id {
                 display: none;
             }

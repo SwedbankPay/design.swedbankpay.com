@@ -7,7 +7,7 @@ export const overviewButtons = {
     elements: [
         {
             tab: "Primary",
-            component: <ButtonComponent type="primary" label="Primary" />,
+            component: <ButtonComponent type="primary" label="Do something" />,
             options: {
                 checkbox: [
                     {
@@ -58,7 +58,7 @@ export const overviewButtons = {
         },
         {
             tab: "BankID",
-            component: <ButtonComponent type="primary" bankId="se" label="BankID" />,
+            component: <ButtonComponent type="primary" bankId="se" label="Do something" />,
             options: {
                 checkbox: [
                     {
@@ -105,7 +105,7 @@ export const overviewButtons = {
         },
         {
             tab: "Secondary",
-            component: <ButtonComponent type="secondary" label="Secondary" />,
+            component: <ButtonComponent type="secondary" label="Do something" />,
             options: {
                 checkbox: [
                     {
@@ -161,7 +161,7 @@ export const overviewButtons = {
         },
         {
             tab: "Text/Link button",
-            component: <ButtonComponent type="link" label="Link" />,
+            component: <ButtonComponent type="link" label="Do something" />,
             title: "Link button",
             options: {
                 checkbox: [
@@ -185,7 +185,7 @@ export const destructiveButtons = {
     elements: [
         {
             tab: "Guiding",
-            component: <ButtonComponent type="guiding-destructive" label="Type something" />,
+            component: <ButtonComponent type="guiding-destructive" label="Do something" />,
             options: {
                 checkbox: [
                     {
@@ -245,7 +245,7 @@ export const destructiveButtons = {
         },
         {
             tab: "Text/Link",
-            component: <ButtonComponent type="link-destructive" label="Type something" />,
+            component: <ButtonComponent type="link-destructive" label="Do something" />,
             options: {
                 checkbox: [
                     {
@@ -262,7 +262,7 @@ export const destructiveButtons = {
         },
         {
             tab: "Executive",
-            component: <ButtonComponent type="executive-destructive" label="Type something" />,
+            component: <ButtonComponent type="executive-destructive" label="Do something" />,
             title: "Executive destructive button",
             options: {
                 checkbox: [
