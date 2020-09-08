@@ -9,10 +9,7 @@ import { overviewButtons, destructiveButtons } from "./constants";
 
 const Overview = () => (
     <>
-        <h2 id="overview">Overview</h2>
-        <p>
-            The DesignGuide includes a few predefined button styles, each serving its own semantic purpose.
-        </p>
+        <h2 id="overview">Which button to use?</h2>
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewButtons} codeFigure />
     </>
 );
@@ -34,9 +31,11 @@ const DeveloperDocumentation = () => (
             include the <CodeTags type="secondary" code={"aria-pressed=\"true\""} /> attribute) should you need to replicate the state programmatically.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
-                <ButtonComponent href="#" active type="executive" label="Executive" />{"\n"}
-                <ButtonComponent href="#" active type="guiding" label="Guiding" />{"\n"}
-                <ButtonComponent active type="destructive" label="Destructive" />{"\n"}
+                <ButtonComponent href="#" active type="primary" label="Primary" />{"\n"}
+                <ButtonComponent href="#" active type="secondary" label="Secondary" />{"\n"}
+                <ButtonComponent active type="guiding-destructive" label="Guiding destructive" />{"\n"}
+                <ButtonComponent active type="executive-destructive" label="Executive destructive" />{"\n"}
+
             </div>
         </ComponentPreview>
 
@@ -44,11 +43,13 @@ const DeveloperDocumentation = () => (
         <p>Make buttons look inactive by adding the <CodeTags type="secondary" code="disabled" /> boolean attribute to any <CodeTags type="primary" code={"<button>"} /> element.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
-                <ButtonComponent disabled type="executive" label="Executive" />{"\n"}
-                <ButtonComponent disabled type="guiding" label="Guiding" />{"\n"}
-                <ButtonComponent disabled type="destructive" label="Destructive" />{"\n"}
-                <ButtonComponent disabled type="link" label="Link" />{"\n"}
+                <ButtonComponent disabled type="primary" label="Primary" />{"\n"}
+                <ButtonComponent disabled type="secondary" label="Secondary" />{"\n"}
+                <ButtonComponent disabled type="link" label="Text/Link" />{"\n"}
+                <ButtonComponent disabled type="guiding-destructive" label="Guiding destructive" />{"\n"}
                 <ButtonComponent disabled type="link-destructive" label="Link destructive" />{"\n"}
+                <ButtonComponent disabled type="executive-destructive" label="Executive destructive" />{"\n"}
+
             </div>
         </ComponentPreview>
         <p>Disabled buttons using the <CodeTags type="primary" code={"<a>"} /> element behave a bit different:</p>
@@ -59,8 +60,8 @@ const DeveloperDocumentation = () => (
         </ul>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
-                <ButtonComponent href="#" disabled type="executive" label="Executive" />{"\n"}
-                <ButtonComponent href="#" disabled type="guiding" label="Guiding" />{"\n"}
+                <ButtonComponent href="#" disabled type="primary" label="Executive" />{"\n"}
+                <ButtonComponent href="#" disabled type="secondary" label="Guiding" />{"\n"}
             </div>
         </ComponentPreview>
         <Alert type="warning">
@@ -77,11 +78,11 @@ const DeveloperDocumentation = () => (
         a <CodeTags type="secondary" code={"role=\"button\""} /> to appropriately convey their purpose to assistive technologies such as screen readers.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
-                <ButtonComponent type="executive" label="Anchor" href="#" />{"\n"}
-                <ButtonComponent type="executive" label="Button" />{"\n"}
-                <ButtonComponent type="executive" input value="Input" btnType="button" />{"\n"}
-                <ButtonComponent type="executive" input value="Submit" btnType="submit" />{"\n"}
-                <ButtonComponent type="executive" input value="Reset" btnType="reset" />{"\n"}
+                <ButtonComponent type="primary" label="Anchor" href="#" />{"\n"}
+                <ButtonComponent type="primary" label="Button" />{"\n"}
+                <ButtonComponent type="primary" input value="Input" btnType="button" />{"\n"}
+                <ButtonComponent type="primary" input value="Submit" btnType="submit" />{"\n"}
+                <ButtonComponent type="primary" input value="Reset" btnType="reset" />{"\n"}
             </div>
         </ComponentPreview>
 
@@ -89,8 +90,8 @@ const DeveloperDocumentation = () => (
         <p>When you use buttons next to each other you have to wrap them in a <CodeTags type="secondary" code=".button-group" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="button-group">{"\n"}
-                <ButtonComponent type="executive" label="Activate" />{"\n"}
-                <ButtonComponent type="guiding" label="Disable" />{"\n"}
+                <ButtonComponent type="primary" label="Activate" />{"\n"}
+                <ButtonComponent type="secondary" label="Disable" />{"\n"}
             </div>
         </ComponentPreview>
     </>
@@ -98,7 +99,17 @@ const DeveloperDocumentation = () => (
 
 const Buttons = () => (
     <DocContainer docToc>
-        <p className="lead">Use our button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
+        <p>
+            Buttons communicate actions that users can take. The intention of a button should be clear and predictable.
+            Users should be able to anticipate what will happen when they click on a button. Buttons are typically placed throughout your UI, in places like:
+        </p>
+        <ul className="list list-bullet">
+            <li>Dialogs</li>
+            <li>Modals</li>
+            <li>Forms</li>
+            <li>Cards</li>
+            <li>Toolbars</li>
+        </ul>
         <Overview />
         <DestructiveButton />
         <DeveloperDocumentation />

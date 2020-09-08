@@ -315,6 +315,7 @@ ComponentPreview.propTypes = {
     removeList: PropTypes.bool,
     showCasePanel: PropTypes.bool,
     showCasePanelSm: PropTypes.bool,
+    showCasePanelAdvanced: PropTypes.object,
     codeFigure: PropTypes.bool,
     dangerousHTML: PropTypes.bool,
     negative: PropTypes.bool

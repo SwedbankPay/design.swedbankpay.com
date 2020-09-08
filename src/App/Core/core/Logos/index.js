@@ -91,7 +91,7 @@ const OurFavicon = () => (
         <p>You should also rename the <CodeTags type="secondary" code="content" /> of
         the <CodeTags type="secondary" code="apple-mobile-web-app-title" /> and <CodeTags type="secondary" code="application-name" /> <CodeTags type="primary" code={"<meta>"} /> tags
         to reflect the title of your project. Make sure to also do this in the <CodeTags type="secondary" code="manifest.json" /> file in the icons folder.</p>
-        <Button type="executive" icon="file_download" href={`${BASENAME}release/icons.zip`} label="Download Favicons" />
+        <Button type="primary" icon="file_download" href={`${BASENAME}release/icons.zip`} label="Download Favicons" />
         <ComponentPreview language="html" codeFigure>
             <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-touch-icon-114x114.png" />
             <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-touch-icon-120x120.png" />

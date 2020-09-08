@@ -149,7 +149,7 @@ const PaymentIcons = () => (
                         <span>4925*********007</span>{"\n"}
                     </div>{"\n"}
                     <span className="status status-success">Active</span>{"\n"}
-                    <button type="button" className="btn btn-executive btn-xs ml-2"><i className="material-icons" aria-hidden="true">delete</i></button>{"\n"}
+                    <button type="button" className="btn btn-primary btn-xs ml-2"><i className="material-icons" aria-hidden="true">delete</i></button>{"\n"}
                 </li>
             </ul>
         </ComponentPreview>

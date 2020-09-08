@@ -61,7 +61,7 @@ exports[`Components: Slab DefaultSlab renders 1`] = `
           </div>
         </div>
         <button
-          className="btn btn-executive"
+          className="btn btn-primary"
           type="submit"
         >
           Submit

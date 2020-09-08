@@ -23,7 +23,7 @@ exports[`Resources: Logotype Download renders 1`] = `
           href="/TEST/release/fonts/cid_2108538.zip"
           icon="file_download"
           label="Swedbank Headline"
-          type="executive"
+          type="primary"
         />
       </div>
       <div
@@ -33,7 +33,7 @@ exports[`Resources: Logotype Download renders 1`] = `
           href="/TEST/release/fonts/cid_2686429.zip"
           icon="file_download"
           label="Swedbank Sans"
-          type="executive"
+          type="primary"
         />
       </div>
     </div>

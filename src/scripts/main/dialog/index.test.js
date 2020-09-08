@@ -13,7 +13,7 @@ describe("scripts: dialog", () => {
 
         return (
             <>
-                <button className="btn btn-executive" type="button" data-dialog-open={btnId}>
+                <button className="btn btn-primary" type="button" data-dialog-open={btnId}>
                     Open dialog
                 </button>
                 <div className={`dialog ${open ? " d-flex" : null}`} id={id} role="dialog" aria-modal="true">
@@ -25,8 +25,8 @@ describe("scripts: dialog", () => {
                             <p>Are you sure you want to permanently delete the item <i>German Swashbuckle (456)?</i></p>
                         </div>
                         <footer className="dialog-footer">
-                            <button className="btn btn-guiding" type="button" data-dialog-close>Cancel</button>
-                            <button className="btn btn-executive" type="button">Delete</button>
+                            <button className="btn btn-secondary" type="button" data-dialog-close>Cancel</button>
+                            <button className="btn btn-primary" type="button">Delete</button>
                         </footer>
                     </section>
                 </div>
@@ -151,7 +151,7 @@ describe("scripts: dialog", () => {
     it("sets focus on the last focusable element when dialog is opened", () => {
         ReactDOM.render(<Dialog id="dia-id"/>, div);
 
-        const delBtn = document.querySelector(".dialog").querySelector(".btn-executive");
+        const delBtn = document.querySelector(".dialog").querySelector(".btn-primary");
 
         dialog.init();
         dialog.open("dia-id");

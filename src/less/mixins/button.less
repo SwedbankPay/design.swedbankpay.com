@@ -54,12 +54,12 @@
     &[active],
     &:active,
     &.active {
-        .button-active-state(@background, @color);
+        .button-active-state(@background, @hover-color);
 
         &:hover,
         &:focus,
         &.focus {
-            color: @color;
+            color: @hover-color;
             background-color: @background;
         }
     }

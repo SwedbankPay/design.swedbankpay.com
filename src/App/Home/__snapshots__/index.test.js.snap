@@ -57,7 +57,7 @@ exports[`Home: index renders 1`] = `
             Information on how to get started.
           </p>
           <Link
-            className="btn btn-guiding btn-outline btn-block mt-auto"
+            className="btn btn-secondary btn-outline btn-block mt-auto"
             to="/getting-started"
           >
             Get started
@@ -91,7 +91,7 @@ exports[`Home: index renders 1`] = `
             User interface components for websites and web applications
           </p>
           <Link
-            className="btn btn-guiding btn-outline btn-block mt-auto"
+            className="btn btn-secondary btn-outline btn-block mt-auto"
             to="/components"
           >
             Components
@@ -125,7 +125,7 @@ exports[`Home: index renders 1`] = `
             Downloadables and resource usage guidelines.
           </p>
           <Link
-            className="btn btn-guiding btn-outline btn-block mt-auto"
+            className="btn btn-secondary btn-outline btn-block mt-auto"
             to="/resources"
           >
             Resources

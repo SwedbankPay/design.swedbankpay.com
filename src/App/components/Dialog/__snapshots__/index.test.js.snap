@@ -40,7 +40,7 @@ exports[`Component: Dialog -  renders 1`] = `
         
 
         <button
-          className="btn btn-guiding"
+          className="btn btn-secondary"
           data-dialog-close={true}
           type="button"
         >
@@ -49,7 +49,7 @@ exports[`Component: Dialog -  renders 1`] = `
         
 
         <button
-          className="btn btn-executive"
+          className="btn btn-primary"
           type="button"
         >
           Delete
@@ -103,7 +103,7 @@ exports[`Component: Dialog -  renders with the passed ID 1`] = `
         
 
         <button
-          className="btn btn-guiding"
+          className="btn btn-secondary"
           data-dialog-close={true}
           type="button"
         >
@@ -112,7 +112,7 @@ exports[`Component: Dialog -  renders with the passed ID 1`] = `
         
 
         <button
-          className="btn btn-executive"
+          className="btn btn-primary"
           type="button"
         >
           Delete
@@ -169,7 +169,7 @@ exports[`Component: Dialog -  renders with the passed children 1`] = `
         
 
         <button
-          className="btn btn-guiding"
+          className="btn btn-secondary"
           data-dialog-close={true}
           type="button"
         >
@@ -178,7 +178,7 @@ exports[`Component: Dialog -  renders with the passed children 1`] = `
         
 
         <button
-          className="btn btn-executive"
+          className="btn btn-primary"
           type="button"
         >
           Delete
@@ -233,7 +233,7 @@ exports[`Component: Dialog -  renders with the passed header 1`] = `
         
 
         <button
-          className="btn btn-guiding"
+          className="btn btn-secondary"
           data-dialog-close={true}
           type="button"
         >
@@ -242,7 +242,7 @@ exports[`Component: Dialog -  renders with the passed header 1`] = `
         
 
         <button
-          className="btn btn-executive"
+          className="btn btn-primary"
           type="button"
         >
           Delete

@@ -70,6 +70,16 @@ describe("Utilities: ComponentPreview", () => {
         expect(wrapper.html()).not.toContain("showcase-panel");
     });
 
+    it("does not render showCasePanelAdvanced when showCasePanel or showCasePanelAdvanced is false/not provided", () => {
+        const wrapper = mount(<ComponentPreview language="html" codeFigure>
+            <TestComponentH1 />
+        </ComponentPreview>);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.html()).not.toContain("showcase-panel");
+        expect(wrapper.html()).not.toContain("showcase-panel-advanced");
+    });
+
     it("CodeFigure renders multiple html tags", () => {
         const wrapper = mount(
             <ComponentPreview language="html" codeFigure>

@@ -115,7 +115,7 @@ exports[`Documentation: InputGroup ButtonAddons renders 1`] = `
     showCasePanel={true}
   >
     <InputGroup
-      postfixBtnColor="executive"
+      postfixBtnColor="primary"
       postfixType="button"
       postfixValue="Button"
       type="text"
@@ -125,10 +125,10 @@ exports[`Documentation: InputGroup ButtonAddons renders 1`] = `
 
 
     <InputGroup
-      postfixBtnColor="executive"
+      postfixBtnColor="primary"
       postfixType="button"
       postfixValue="Button"
-      prefixBtnColor="guiding"
+      prefixBtnColor="secondary"
       prefixType="button"
       prefixValue="Button"
       type="text"
@@ -261,10 +261,10 @@ exports[`Documentation: InputGroup Disabled renders 1`] = `
     />
     <InputGroup
       disabled={true}
-      postfixBtnColor="executive"
+      postfixBtnColor="primary"
       postfixType="button"
       postfixValue="Button"
-      prefixBtnColor="guiding"
+      prefixBtnColor="secondary"
       prefixType="button"
       prefixValue="Button"
       type="text"

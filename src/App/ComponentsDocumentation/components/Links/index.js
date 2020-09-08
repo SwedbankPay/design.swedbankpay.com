@@ -36,7 +36,7 @@ const ButtonLinks = () => (
             use <CodeTags type="secondary" code=".btn.btn-link" /> in a <CodeTags type="primary" code="<button>" />.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <ButtonComponent type="executive" label="Approve" />{"\n"}
+            <ButtonComponent type="primary" label="Approve" />{"\n"}
             <ButtonComponent type="link" label="Cancel"/>
         </ComponentPreview>
     </>

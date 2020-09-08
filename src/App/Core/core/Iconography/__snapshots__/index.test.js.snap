@@ -980,7 +980,7 @@ exports[`Core: Iconography PaymentIcons onClick prevents default 1`] = `
         
 
         <button
-          className="btn btn-executive btn-xs ml-2"
+          className="btn btn-primary btn-xs ml-2"
           type="button"
         >
           <i
@@ -1396,7 +1396,7 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
         
 
         <button
-          className="btn btn-executive btn-xs ml-2"
+          className="btn btn-primary btn-xs ml-2"
           type="button"
         >
           <i

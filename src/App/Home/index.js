@@ -28,7 +28,7 @@ const Home = () => {
                             </div>
                             <h2>Get started</h2>
                             <p>Information on how to get started.</p>
-                            <Link className="btn btn-guiding btn-outline btn-block mt-auto" to="/getting-started">Get started</Link>
+                            <Link className="btn btn-secondary btn-outline btn-block mt-auto" to="/getting-started">Get started</Link>
                         </div>
                     </div>
                 </div>
@@ -40,7 +40,7 @@ const Home = () => {
                             </div>
                             <h2>Components</h2>
                             <p>User interface components for websites and web applications</p>
-                            <Link className="btn btn-guiding btn-outline btn-block mt-auto" to="/components">Components</Link>
+                            <Link className="btn btn-secondary btn-outline btn-block mt-auto" to="/components">Components</Link>
                         </div>
                     </div>
                 </div>
@@ -52,7 +52,7 @@ const Home = () => {
                             </div>
                             <h2>Resources</h2>
                             <p>Downloadables and resource usage guidelines.</p>
-                            <Link className="btn btn-guiding btn-outline btn-block mt-auto" to="/resources">Resources</Link>
+                            <Link className="btn btn-secondary btn-outline btn-block mt-auto" to="/resources">Resources</Link>
                         </div>
                     </div>
                 </div>

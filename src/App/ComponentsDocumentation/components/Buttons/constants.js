@@ -7,7 +7,7 @@ export const overviewButtons = {
     elements: [
         {
             tab: "Primary",
-            component: <ButtonComponent type="executive" label="Primary" />,
+            component: <ButtonComponent type="primary" label="Primary" />,
             options: {
                 checkbox: [
                     {
@@ -57,8 +57,55 @@ export const overviewButtons = {
             description: "Use a primary button as the main call to action on a page. Avoid using multiple default buttons on a single page. Having more than one main call to action reduces their impact, and makes it harder for users to know what to do next."
         },
         {
+            tab: "BankID",
+            component: <ButtonComponent type="primary" bankId="se" label="BankID" />,
+            options: {
+                checkbox: [
+                    {
+                        id: "loader_check",
+                        name: "Loader",
+                        value: {
+                            loader: true,
+                            loading: true
+                        }
+                    }
+                ],
+                radio: [
+                    {
+                        id: "country_radio",
+                        title: "Country",
+                        values: [
+                            {
+                                name: "Sweden",
+                                value: {
+                                    bankId: "se"
+                                }
+                            },
+                            {
+                                name: "Norway",
+                                value: {
+                                    bankId: "no"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            title: "BankID button",
+            description: <>
+                <p>
+                    Use BankID buttons as the main call to action on a page when the following action is signing or verifying something with BankID.
+                    Currently only available for Swedish and Norwegian BankID.
+                </p>
+                <p>
+                    Avoid using multiple BankID buttons on a single page. Having more than one main call to action reduces their impact,
+                    and makes it harder for users to know what to do next.
+                </p>
+            </>
+        },
+        {
             tab: "Secondary",
-            component: <ButtonComponent outline type="executive" label="Secondary" />,
+            component: <ButtonComponent type="secondary" label="Secondary" />,
             options: {
                 checkbox: [
                     {
@@ -105,10 +152,15 @@ export const overviewButtons = {
                 ]
             },
             title: "Secondary button",
-            description: "Use a secondary button for secondary call to action on a page. Pages with too many calls to action make it hard for users to know what to do next. Before adding lots of secondary buttons, try to simplify the page or break the content down across multiple pages."
+            description: <p>
+                Use secondary buttons for secondary call to actions on a page.
+                Pages with too many calls to action make it hard for users to know what to do next.
+                Before adding lots of secondary buttons, try to simplify the page or break the content down across multiple pages or
+                consider using <a href="/components/links">Action links</a>.
+            </p>
         },
         {
-            tab: "Link button",
+            tab: "Text/Link button",
             component: <ButtonComponent type="link" label="Link" />,
             title: "Link button",
             options: {
@@ -122,7 +174,7 @@ export const overviewButtons = {
                     }
                 ]
             },
-            description: "Should only be used in combination with a Primary or Secondary button. Use link for stand alone links see Links. Use for less important or less commonly used actions since they’re less prominent. Text buttons are often embedded in contained components like cards and dialogs. Since text buttons don’t have a container, they don’t distract from nearby content."
+            description: "Only use in combination with a primary or secondary button – for stand alone links see Links. Use for less important or less commonly used actions since they’re less prominent. Text buttons are often embedded in contained components like cards and dialogs. Since text buttons don’t have a container, they don’t distract from nearby content."
         }
     ]
 };
@@ -133,7 +185,7 @@ export const destructiveButtons = {
     elements: [
         {
             tab: "Guiding",
-            component: <ButtonComponent outline type="destructive" label="Type something" />,
+            component: <ButtonComponent type="guiding-destructive" label="Type something" />,
             options: {
                 checkbox: [
                     {
@@ -180,7 +232,16 @@ export const destructiveButtons = {
                 ]
             },
             title: "Destructive button",
-            description: "Only use warning buttons for actions with serious destructive consequences that cannot be easily undone by a user. For example, permanently deleting an account. When letting users carry out an action like this, it’s a good idea to include an additional step which asks them to confirm it."
+            description: <>
+                <p>
+                    Use a guiding destructive button to clearly show the user that the action is destructive. The button is designed to not take on too much visual
+                    attention from the user yet still clearly communicate a destructive action. It can therefor safely be used in most contexts.
+                </p>
+                <p>
+                    When letting users carry out an action like this, it’s a good idea to include an additional step which asks them to confirm it.
+                    The guiding destructive button will therefor often occur prior to the executive destructive button in a user flow.
+                </p>
+            </>
         },
         {
             tab: "Text/Link",
@@ -197,11 +258,11 @@ export const destructiveButtons = {
                 ]
             },
             title: "Destructive button",
-            description: "Only use warning buttons for actions with serious destructive consequences that cannot be easily undone by a user. For example, permanently deleting an account. When letting users carry out an action like this, it’s a good idea to include an additional step which asks them to confirm it."
+            description: "The text destructive button is used as an alternative for the guiding destructive button and can be used when there is limited space, within other components or various containers."
         },
         {
             tab: "Executive",
-            component: <ButtonComponent type="destructive" label="Type something" />,
+            component: <ButtonComponent type="executive-destructive" label="Type something" />,
             title: "Executive destructive button",
             options: {
                 checkbox: [
@@ -248,7 +309,7 @@ export const destructiveButtons = {
                     }
                 ]
             },
-            description: "Use these only in confirming a destructive action. For example, use this button in a dialog confirming a deleting an account. Executive Destructive button takes a lot of attention from the user and should there be used with restraint."
+            description: "The executive destructive button should be used sparingly and only in case of a final destructive call to action. The executive destructive button visually takes up a lot of the attention. To not distract the user from other content it is often used in simpler contexts such as dialogs, for example when confirming removal of certain information."
         }
     ]
 };

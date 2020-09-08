@@ -26,7 +26,7 @@ const LoginContent = () => (
                         prefixType="icon"
                         prefixValue="vpn_key"
                     />
-                    <ButtonComponent type="executive" label="Log in" icon="lock_open" btnType="submit" />
+                    <ButtonComponent type="primary" label="Log in" icon="lock_open" btnType="submit" />
                 </form>
             </div>
             <div className="col-lg-7 d-none d-lg-block">

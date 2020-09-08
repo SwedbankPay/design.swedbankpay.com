@@ -13,7 +13,7 @@ exports[`Documentation: Dialog Example renders 1`] = `
     showCasePanel={true}
   >
     <button
-      className="btn btn-executive"
+      className="btn btn-primary"
       data-dialog-open="demo-dialog"
       type="button"
     >
