@@ -168,10 +168,9 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
 
             e.preventDefault();
 
-            this.setState({
+            this.setState(prevState => ({ ...prevState,
                 activeTab: this.props.showCasePanelAdvanced.elements[i],
-                activeOptions: []
-            });
+                activeOptions: [] }));
 
             showcasePanel.querySelectorAll("input[type=checkbox]").forEach(checkbox => checkbox.checked = false);
             showcasePanel.querySelectorAll("select[id]").forEach(dropdown => dropdown.value = 0);
@@ -182,26 +181,25 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
         setActiveOptions (id, value, checkbox) {
             if (checkbox) {
                 if (this.state.activeOptions.filter(option => id === option.id).length > 0) {
-                    this.setState({ activeOptions: this.state.activeOptions.filter(option => id !== option.id) });
+                    this.setState(prevState => ({ ...prevState,
+                        activeOptions: this.state.activeOptions.filter(option => id !== option.id) }));
                 } else {
-                    this.setState({
+                    this.setState(prevState => ({ ...prevState,
                         activeOptions: [...this.state.activeOptions,
                             {
                                 id,
                                 value
                             }
-                        ]
-                    });
+                        ] }));
                 }
             } else {
-                this.setState({
+                this.setState(prevState => ({ ...prevState,
                     activeOptions: [...this.state.activeOptions,
                         {
                             id,
                             value
                         }
-                    ]
-                });
+                    ] }));
             }
         }
 
