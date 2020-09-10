@@ -4,6 +4,8 @@ import "prismjs";
 
 import ComponentPreview from "./index";
 
+const { tabs } = window.dg;
+
 // const htmlEncodeString = str => String(str)
 //     .replace(/&/g, "&amp;")
 //     .replace(/</g, "&lt;")
@@ -32,6 +34,8 @@ describe("Utilities: ComponentPreview", () => {
             <a href="#">This is a test-link</a>
         </div>
     );
+
+    tabs.init = jest.fn();
 
     it("is defined", () => {
         expect(ComponentPreview).toBeDefined();

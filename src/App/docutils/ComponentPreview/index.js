@@ -153,6 +153,8 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
         </div>
     );
 
+    const { tabs } = window.dg;
+
     class ShowCasePanelAdvanced extends Component {
         constructor (props) {
             super(props);
@@ -161,6 +163,10 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                 optionsOpen: false,
                 activeOptions: []
             };
+        }
+
+        componentDidMount () {
+            tabs.init(this.props.showCasePanelAdvanced.tabsId);
         }
 
         setActiveTab (e, i) {
@@ -207,17 +213,19 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
             return (
                 <>
                     <div id={this.props.showCasePanelAdvanced.id} className={`showcase-panel showcase-panel-advanced${this.state.optionsOpen ? " options-active" : ""}`}>
+                        <div id={this.props.showCasePanelAdvanced.tabsId} className="tabs tabs-scroll">
+                            <ul id={`${this.props.showCasePanelAdvanced.tabsId}-ul`}>
+                                {this.props.showCasePanelAdvanced.elements.map((element, i) => <li key={i} className={this.state.activeTab.tab === element.tab ? "active" : null}>
+                                    <a href="#" onClick={e => this.setActiveTab(e, i)}>{element.tab}</a>
+                                </li>
+                                )}
+                            </ul>
+                            <div className={`options-open${this.state.optionsOpen ? " hidden" : ""}`}>
+                                <i className="material-icons" onClick={() => this.setState({ optionsOpen: true })}>menu_open</i>
+                            </div>
+                        </div>
                         <div className="d-flex">
                             <div className="flex-column flex-fill">
-                                <div className="tabs d-flex justify-content-between align-items-center">
-                                    <ul id={this.props.showCasePanelAdvanced.tabsId}>
-                                        {this.props.showCasePanelAdvanced.elements.map((element, i) => <li key={i} className={this.state.activeTab.tab === element.tab ? "active" : null}>
-                                            <a href="#" onClick={e => this.setActiveTab(e, i)}>{element.tab}</a>
-                                        </li>
-                                        )}
-                                    </ul>
-                                    <i className={`material-icons options-open${this.state.optionsOpen ? " hidden" : ""}`} onClick={() => this.setState({ optionsOpen: true })}>menu_open</i>
-                                </div>
                                 <div className="component-preview">
                                     {cloneElement(this.state.activeTab.component,
                                         this.state.activeOptions.reduce((acc, currentOption) => ({

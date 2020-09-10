@@ -17,6 +17,10 @@ const Overview = () => (
 const DestructiveButton = () => (
     <>
         <h2 id="destructive-button">Destructive button</h2>
+        <p>
+            Only use warning buttons for actions with serious destructive consequences that cannot be easily recovered or undone by a user.
+            For example, permanently deleting an account.
+        </p>
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={destructiveButtons} codeFigure />
     </>
 );

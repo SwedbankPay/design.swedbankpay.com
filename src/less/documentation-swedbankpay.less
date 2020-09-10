@@ -501,6 +501,7 @@
 
         &.showcase-panel-advanced {
             padding: 0;
+            position: relative;
 
             @media screen and (max-width: @screen-sm-max) {
                 &.options-active {
@@ -519,10 +520,43 @@
 
             .tabs {
                 margin: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+
+                &.tabs-fade-right {
+                    &:after {
+                        right: 56px; // width of options-open icon
+                        height: 39px;
+                    }
+                }
+
+                &.tabs-fade-left {
+                    &:before {
+                        height: 39px;
+                    }
+                }
+
+                ul {
+                    position: relative;
+                    width: 100%;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 39px;
+                        width: 100%;
+                        border-bottom: 1px solid @brand-secondary-light-3;
+                    }
+                }
 
                 .options-open {
-                    margin: 0 1rem;
+                    display: flex;
+                    align-items: center;
                     cursor: pointer;
+                    height: 40px;
+                    border-bottom: 1px solid @brand-secondary-light-3;
+                    padding: 0 1rem;
 
                     &.hidden {
                         visibility: hidden;
@@ -534,7 +568,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                padding: 2rem;
+                padding: 4.5rem 2rem 2rem;
                 border-bottom: 1px solid @brand-secondary-light-3;
             }
 
@@ -549,14 +583,14 @@
                     position: absolute;
                     right: 0;
                     height: 100%;
-                    background-color: @white;
-                    z-index: calc(@zindex-tabs + 2);
                 }
 
+                background-color: @white;
                 display: none;
                 min-width: 0;
                 border-left: 1px solid @brand-secondary-light-3;
                 transition: min-width 1s ease-in-out;
+                z-index: calc(@zindex-tabs + 2);
 
                 &.active {
                     display: block;
