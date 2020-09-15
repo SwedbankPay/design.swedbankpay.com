@@ -1,0 +1,59 @@
+name: Prepare release
+on:
+  push:
+    branches:
+      - "release/**"
+
+jobs:
+  build:
+    name: Update changelog and create pull requests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Install GitVersion
+        uses: gittools/actions/gitversion/setup@v0.9.4
+        with:
+          versionSpec: '5.3.x'
+
+      - name: Use GitVersion
+        id: gitversion
+        uses: gittools/actions/gitversion/execute@v0.9.4
+
+      - name: Update changelog
+        id: changelog
+        run: ./.github/scripts/update-changelog.sh ${{ steps.gitversion.outputs.MajorMinorPatch }}
+
+      # Content must be escaped to preserve newlines (https://github.community/t/set-output-truncates-multiline-strings/16852/3)
+      - name: Get pull request body
+        id: pr-body
+        run: |
+          body=$(cat RELEASE-NOTES.md)
+          body="${body//'%'/'%25'}"
+          body="${body//$'\n'/'%0A'}"
+          body="${body//$'\r'/'%0D'}" 
+          echo ::set-output name=body::$body
+
+      - name: Create pull requests
+        uses: peter-evans/create-pull-request@v3
+        with:
+          base: master
+          body: ${{ steps.pr-body.outputs.body }}
+          branch: ${{ github.ref }}
+          title: Release ${{ steps.gitversion.outputs.MajorMinorPatch }}
+
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      # Can we automatically merge this branch into develop once it's merged to master without having to create two PRs? [THN]
+
+      - name: Create pull requests
+        uses: peter-evans/create-pull-request@v3
+        with:
+          base: develop
+          body: ${{ steps.pr-body.outputs.body }}
+          branch: ${{ github.ref }}
+          title: Release ${{ steps.gitversion.outputs.MajorMinorPatch }}
