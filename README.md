@@ -124,15 +124,14 @@ __*Make sure to follow the syntax rules enforced by ESLint & Stylelint.*__
 
 Before merging to master to create a release, make sure you follow these steps:
 
-1. Make sure the linting (`npm run lint`) and unit tests pass (`npm test`).
-2. Update the version in `~/package.json`.
-3. Make sure the changelog is correct (date and version) and only contains
-   changes for the current release.
-4. Update the version in the URL of the `version-badge` and `version-tag`
+1. Create a release branch `release/x.x.x`.
+2. Make sure the linting (`npm run lint`) and unit tests pass (`npm test`).
+3. Update the version in `~/package.json`.
+4. Make sure the `RELEASE-NOTES.md` is correct (date and version) and only contains
+   changes for the current release. (`CHANGELOG.md` will be updated automatically)
+5. Update the version in the URL of the `version-badge` and `version-tag`.
    at the bottom of this `README.md` file.
-5. Commit the changes and create a pull request from your branch to `develop`.
-6. When approved and merged, create a new pull request from `develop` to
-   `master`.
+6. Commit and push changes to your release branch. Two pull requests will be automatically created to `master` and `develop` branches.
 7. When approved, rename the merge commit to `Release x.x.x` and merge.
 8. Change branch to `master`.
 9. Create and push a new tag with the new release commit.
