@@ -54,7 +54,6 @@
             background-image: url("../../../icons/shapes/check-mark.svg");
         }
 
-        
         &:focus + label:before {
             box-shadow: 0 0 0 0.5rem @brand-secondary-light-3;
             border-color: @brand-secondary;
@@ -76,6 +75,10 @@
             + label:after {
                 background-color: @input-bg-disabled;
                 border-color: @input-checked-bg-disabled;
+            }
+
+            + label:before {
+                content: none;
             }
 
             &:checked + label:after {
