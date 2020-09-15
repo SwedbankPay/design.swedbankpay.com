@@ -45,9 +45,8 @@ do
 
         echo "Looping through branch $branch"
 
-        # Skip develop and master branches
-        [[ $branch == *"develop" ]] && continue
-        [[ $branch == *"master" ]] && continue
+        # Skip branches that are not feature branches
+        [[ $branch != *"feature/"* ]] && continue
         
         echo "Branch folder we are looking to delete is $branch"
         echo "::set-output name=BRANCH_TO_DELETE::$branch"
