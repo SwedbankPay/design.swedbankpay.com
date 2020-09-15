@@ -211,6 +211,22 @@ const StaticText = () => (
     </>
 );
 
+const Dropdown = () => (
+    <>
+        <h2 id="dropdown">Dropdown menu</h2>
+        <p>
+            Inserting text next to a <CodeTags type="primary" code={"<select>"} /> works just like any other input element.
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+            <InputGroup
+                label="Profession"
+                type="select"
+                selectOptions={["Bounty hunter", "Smuggler", "Jedi"]}
+            />
+        </ComponentPreview>
+    </>
+);
+
 const Checkboxes = () => (
     <>
         <h2 id="checkboxes">Checkboxes</h2>
@@ -299,6 +315,12 @@ const DisabledFormComponents = () => (
                         autoComplete="current-password"
                         placeholder="Enter your password"
                     />
+
+                    <InputGroup
+                        label="Profession"
+                        type="select"
+                        selectOptions={["Bounty hunter", "Smuggler", "Jedi"]}
+                    />
                     <Checkbox label="Remember me" id="fieldset-disabled-checkbox" />
                 </fieldset>{"\n"}
                 <Button type="executive" label="Log in" btnType="submit" disabled />{"\n"}
@@ -365,6 +387,7 @@ class Forms extends Component {
                 <Validation />
                 <UsageWithFieldsets />
                 <StaticText />
+                <Dropdown />
                 <Checkboxes />
                 <RadioButtons />
                 <Toggleboxes />
@@ -379,4 +402,4 @@ class Forms extends Component {
 export default Forms;
 
 /* For testing */
-export { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, Checkboxes, RadioButtons, Toggleboxes, RangeSlider, DisabledFormComponents, JavascriptMethods };
+export { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, Dropdown, Checkboxes, RadioButtons, Toggleboxes, RangeSlider, DisabledFormComponents, JavascriptMethods };

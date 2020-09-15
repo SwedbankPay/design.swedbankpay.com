@@ -118,6 +118,17 @@ exports[`Documentation: Forms DisabledFormComponents renders 1`] = `
           placeholder="Enter your password"
           type="password"
         />
+        <InputGroup
+          label="Profession"
+          selectOptions={
+            Array [
+              "Bounty hunter",
+              "Smuggler",
+              "Jedi",
+            ]
+          }
+          type="select"
+        />
         <Checkbox
           id="fieldset-disabled-checkbox"
           label="Remember me"
@@ -201,6 +212,42 @@ exports[`Documentation: Forms DisabledFormComponents renders 1`] = `
       
 
     </form>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Forms Dropdown renders 1`] = `
+<Fragment>
+  <h2
+    id="dropdown"
+  >
+    Dropdown menu
+  </h2>
+  <p>
+    Inserting text next to a 
+    <CodeTags
+      code="<select>"
+      type="primary"
+    />
+     works just like any other input element.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <InputGroup
+      label="Profession"
+      selectOptions={
+        Array [
+          "Bounty hunter",
+          "Smuggler",
+          "Jedi",
+        ]
+      }
+      type="select"
+    />
   </ComponentPreview>
 </Fragment>
 `;
@@ -1098,6 +1145,7 @@ exports[`Documentation: Forms renders 1`] = `
   <Validation />
   <UsageWithFieldsets />
   <StaticText />
+  <Dropdown />
   <Checkboxes />
   <RadioButtons />
   <Toggleboxes />
