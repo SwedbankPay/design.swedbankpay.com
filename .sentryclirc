@@ -3,5 +3,6 @@ project=spay-designguide-dev
 org=payex
 url=https://sentry.io/
 
+// _(Do __not__ change the line `token = <token>`, as this placeholder is used by GitHub Actions to insert the sentry api key.)_
 [auth]
 token=<token>
