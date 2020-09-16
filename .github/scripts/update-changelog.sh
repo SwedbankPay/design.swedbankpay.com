@@ -16,10 +16,8 @@ if [ -z "$version" ]; then
     exit 1
 fi
 
-echo "Updating changelog for release ${version}"
-
-release_notes=`cat RELEASE-NOTES.md`
-changelog=`sed "s/^# Changelog//" CHANGELOG.md`
+release_notes=$(cat RELEASE-NOTES.md)
+changelog=$(sed "s/^# Changelog//" CHANGELOG.md)
 
 begin_notes="<!--- Begin Release ${version} -->"
 end_notes="<!--- End Release ${version} -->"
@@ -28,7 +26,7 @@ if grep -F "Begin Release ${version}" CHANGELOG.md
 then
     echo "Rewriting release ${version} notes."
 
-    new_changelog=`sed '1,/'"${end_notes}"'/d' CHANGELOG.md`
+    new_changelog=$(sed "1,/${end_notes}/d" CHANGELOG.md)
 
     echo "# Changelog
 
