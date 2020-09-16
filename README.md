@@ -154,7 +154,7 @@ release notes content but keeps the headers.
 
 -   [Erik Hallaraaker][erikhallaraaker]
 -   [Håkon Mosvoll][hmosvoll]
--   [Thomas Lorntzen][VikingTristan]
+-   [Thomas Lorntzen][vikingtristan]
 
 ## Contents of this project
 
@@ -231,7 +231,7 @@ Inspired by [Bootstrap][bootstrap] and [Materialize][materialize].
 
 [hmosvoll]: https://github.com/hmosvoll
 
-[VikingTristan]: https://github.com/VikingTristan
+[vikingtristan]: https://github.com/VikingTristan
 
 [babel]: https://babeljs.io/
 
