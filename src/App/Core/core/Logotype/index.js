@@ -135,7 +135,10 @@ const Logos = () => {
 
     return (
         <DocContainer docToc>
-            <p className="lead">Swedbank Pay logo variations</p>
+            <h4>
+                The vertical version is used as the primary logotype. In situations where both the negative or positive version can be used,
+                the recommendation is to use the negative version as it gives a lighter and more friendly impression.
+            </h4>
             <ResourcesLogotype />
             <OverviewLogos />
             <HorizontalLogo />
