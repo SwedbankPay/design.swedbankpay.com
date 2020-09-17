@@ -4,30 +4,17 @@ import { Link } from "react-router-dom";
 import { ComponentPreview, DocContainer } from "@docutils";
 import Button from "@components/Button";
 import CodeTags from "@components/CodeTags";
-import { Overview, Download, Guidelines } from "../../../Resources/resources/logotype";
+import { logoBlack } from "./constants";
 
 const BASENAME = process.env.basename;
 const brand = process.env.brand;
 const { expandable } = window.dg;
 
-const ResourcesLogotype = () => (
-    <div className="expandable">
-        <button type="button" className="expandable-header" aria-expanded="false" aria-controls="resources-typograpy-body">
-            <span className="expandable-headline">Logotype guidelines</span>
-            <small className="expandable-subtitle">From <Link to="/res/resources/logotype">logotype in Resources</Link></small>
-        </button>
-        <div className="expandable-body" id="resources-typography-body">
-            <Overview />
-            <Download />
-            <Guidelines />
-        </div>
-    </div>
-);
-
-const OverviewLogos = () => (
+const LogoBlack = () => (
     <>
-        <h2 id="overview">Overview</h2>
-        <p>All logo variations are provided as both <CodeTags type="secondary" code=".svg" /> and <CodeTags type="secondary" code=".png" /> files.</p>
+        <h2 id="overview">Logo with black text</h2>
+        <p>Description here. When to use logo with black text.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure showCasePanelAdvanced={logoBlack} />
     </>
 );
 
@@ -139,8 +126,7 @@ const Logos = () => {
                 The vertical version is used as the primary logotype. In situations where both the negative or positive version can be used,
                 the recommendation is to use the negative version as it gives a lighter and more friendly impression.
             </h4>
-            <ResourcesLogotype />
-            <OverviewLogos />
+            <LogoBlack />
             <HorizontalLogo />
             {brand === "swedbankpay" && <VerticalLogo />}
             <OurFavicon />
@@ -151,4 +137,4 @@ const Logos = () => {
 export default Logos;
 
 /* For testing */
-export { OurFavicon, ResourcesLogotype, OverviewLogos, HorizontalLogo, VerticalLogo };
+export { OurFavicon, LogoBlack, HorizontalLogo, VerticalLogo };
