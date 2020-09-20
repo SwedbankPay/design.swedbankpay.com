@@ -10,9 +10,9 @@ const Attribute = ({ data, name, value }) => {
                 {data ? <span className="token attr-name">data-</span> : null}
                 <span className="token attr-name">{name}</span>
                 <span className="token attr-value">
-                    <span className="token punctuation">{"=\""}</span>
+                    <span>{"=\""}</span>
                     {value}
-                    <span className="token punctuation">{"\""}</span>
+                    <span>{"\""}</span>
                 </span>
             </code>
         );

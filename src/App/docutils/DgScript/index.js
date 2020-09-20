@@ -8,7 +8,7 @@ const DgScript = ({ component, subComponents, func, params }) => {
     if (subComponents) {
         renderedSubComponents = subComponents.map((component, i) => (
             <span key={i}>{component}
-                <span className="token punctuation">.</span>
+                <span>.</span>
             </span>
         ));
     }
@@ -16,7 +16,7 @@ const DgScript = ({ component, subComponents, func, params }) => {
     if (params) {
         renderedParams = params.map((param, i) => (
             <span key={i} className={param.includes("\"") ? "token string" : null}>{param}
-                {(i < params.length - 1) ? <span className="token punctuation">, </span> : null}
+                {(i < params.length - 1) ? <span>, </span> : null}
             </span>
         ));
     }
@@ -24,14 +24,14 @@ const DgScript = ({ component, subComponents, func, params }) => {
     return (
         <code>
             <span>dg</span>
-            <span className="token punctuation">.</span>
+            <span>.</span>
             <span>{component}</span>
-            <span className="token punctuation">.</span>
+            <span>.</span>
             {renderedSubComponents}
-            <span className="token function">{func}</span>
-            <span className="token punctuation">(</span>
+            <span>{func}</span>
+            <span>(</span>
             {renderedParams}
-            <span className="token punctuation">);</span>
+            <span>);</span>
         </code>
     );
 };
