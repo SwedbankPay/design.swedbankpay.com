@@ -158,10 +158,11 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
     class ShowCasePanelAdvanced extends Component {
         constructor (props) {
             super(props);
+
             this.state = {
                 activeTab: this.props.showCasePanelAdvanced.elements[0],
                 optionsOpen: false,
-                activeOptions: []
+                activeOptions: this.props.showCasePanelAdvanced.elements[0].activeOptions ? [...this.props.showCasePanelAdvanced.elements[0].activeOptions] : []
             };
         }
 
@@ -176,7 +177,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
 
             this.setState(prevState => ({ ...prevState,
                 activeTab: this.props.showCasePanelAdvanced.elements[i],
-                activeOptions: [] }));
+                activeOptions: this.props.showCasePanelAdvanced.elements[i].activeOptions ? [...this.props.showCasePanelAdvanced.elements[i].activeOptions] : [] }));
 
             showcasePanel.querySelectorAll("input[type=checkbox]").forEach(checkbox => checkbox.checked = false);
             showcasePanel.querySelectorAll("select[id]").forEach(dropdown => dropdown.value = 0);
@@ -184,7 +185,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
 
         }
 
-        setActiveOptions (id, value, checkbox) {
+        setActiveOptions (id, value, description, checkbox) {
             if (checkbox) {
                 if (this.state.activeOptions.filter(option => id === option.id).length > 0) {
                     this.setState(prevState => ({ ...prevState,
@@ -194,16 +195,18 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                         activeOptions: [...this.state.activeOptions,
                             {
                                 id,
-                                value
+                                value,
+                                description
                             }
                         ] }));
                 }
             } else {
                 this.setState(prevState => ({ ...prevState,
-                    activeOptions: [...this.state.activeOptions,
+                    activeOptions: [...this.state.activeOptions.filter(option => id !== option.id),
                         {
                             id,
-                            value
+                            value,
+                            description
                         }
                     ] }));
             }
@@ -237,6 +240,14 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                                 <div className="component-description">
                                     <h3>{this.state.activeTab.title}</h3>
                                     {this.state.activeTab.description}
+                                    {this.state.activeOptions
+                                        .filter(currentOption => currentOption.description)
+                                        .reduce((acc, currentOption) => ([
+                                            ...acc,
+                                            currentOption.description
+                                        ]), [])
+                                        .map((currentOptionDescription, i) => <React.Fragment key={i}>{currentOptionDescription}</React.Fragment>)
+                                    }
                                 </div>
                             </div>
                             {<div className={`options${this.state.optionsOpen ? " active" : ""}`}>
@@ -249,7 +260,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
 
                                         <div className="mb-4">
                                             {this.state.activeTab.options.checkbox.map((checkbox, i) => (
-                                                <div key={i} className="checkbox" onChange={() => this.setActiveOptions(checkbox.id, checkbox.value, true)}>
+                                                <div key={i} className="checkbox" onChange={() => this.setActiveOptions(checkbox.id, checkbox.value, checkbox.description, true)}>
                                                     <input type="checkbox" id={checkbox.id} />
                                                     <label htmlFor={checkbox.id}>{checkbox.name}</label>
                                                 </div>
@@ -262,7 +273,8 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                                             <h4>{dropdown.title}</h4>
                                             <select id={dropdown.id} className="form-control" onChange={e => this.setActiveOptions(
                                                 dropdown.id,
-                                                dropdown.values[e.target.value].value
+                                                dropdown.values[e.target.value].value,
+                                                dropdown.values[e.target.value].description
                                             )}>
                                                 {dropdown.values.map((val, j) => <option key={j} value={j}>{val.name}</option>)}
                                             </select>
@@ -274,7 +286,8 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                                             {radio.values.map((val, j) => (
                                                 <div key={j} className="radio" onChange={e => this.setActiveOptions(
                                                     radio.id,
-                                                    radio.values[e.target.value].value
+                                                    radio.values[e.target.value].value,
+                                                    radio.values[e.target.value].description
                                                 )}>
                                                     <input
                                                         type="radio"

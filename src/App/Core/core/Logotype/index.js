@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import Button from "@components/Button";
@@ -8,7 +7,6 @@ import { logoBlack } from "./constants";
 
 const BASENAME = process.env.basename;
 const brand = process.env.brand;
-const { expandable } = window.dg;
 
 const LogoBlack = () => (
     <>
@@ -117,15 +115,21 @@ const OurFavicon = () => (
     </>
 );
 
-const Logos = () => {
-    useEffect(() => { expandable.init(); });
-
+const Logotype = () => {
     return (
         <DocContainer docToc>
-            <h4>
-                The vertical version is used as the primary logotype. In situations where both the negative or positive version can be used,
-                the recommendation is to use the negative version as it gives a lighter and more friendly impression.
-            </h4>
+            <p className="h4">
+                The Swedbank Pay logotype exist in two versions – a black text logo and a white text logo.
+                They are used depending on what colour of the background the logo is placed on. In situations where both the black and white version can be used,
+                the recommendation is to use the white version as it gives a lighter and more friendly impression.
+            </p>
+            <p className="h4 mb-5">
+                Both logos have subversions; the vertical logo and the horizontal logo.
+                The vertical logo is primary – the one that will build recognition. Always consider the vertical (primary) logo first before using the horizontal (secondary) logo.
+            </p>
+            <p>
+                The logotype is vectorised. All versions are provided as both <CodeTags type="secondary" code=".svg" /> and <CodeTags type="secondary" code=".png" /> files.
+            </p>
             <LogoBlack />
             <HorizontalLogo />
             {brand === "swedbankpay" && <VerticalLogo />}
@@ -134,7 +138,7 @@ const Logos = () => {
     );
 };
 
-export default Logos;
+export default Logotype;
 
 /* For testing */
 export { OurFavicon, LogoBlack, HorizontalLogo, VerticalLogo };
