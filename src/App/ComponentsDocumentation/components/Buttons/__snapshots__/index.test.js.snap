@@ -1,5 +1,167 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Documentation: Buttons Combining buttons renders 1`] = `
+<Fragment>
+  <h2
+    id="combining-buttons"
+  >
+    Combining buttons
+  </h2>
+  <p>
+    When using buttons next to each other, always wrap them in a 
+    <CodeTags
+      code=".button-group"
+      type="secondary"
+    />
+     and make sure to use 8px spacing between the buttons, both in horizontally and vertically groupings. Strive not to use multiple buttons of the same kind – instead, use 
+    <Link
+      to="/components/links#action-link"
+    >
+      Action links
+    </Link>
+    .
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        label="Activate"
+        type="primary"
+      />
+      
+
+      <Button
+        label="Disable"
+        type="secondary"
+      />
+      
+
+    </div>
+  </ComponentPreview>
+  <h3>
+    Dos and don'ts
+  </h3>
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm-6"
+    >
+      <div
+        className="slab slab-plain slab-border-success"
+      >
+        <h4>
+          Dos
+        </h4>
+        <p>
+          Place buttons in a hierarchly correct order and combine different kinds of button
+        </p>
+        <img
+          className="w-100 mb-4"
+          src="/TEST/img/documentation/buttons/dos1.png"
+        />
+        <p>
+          Use the 
+          <b>
+            Text Button
+          </b>
+           as an discrete option to cancel
+        </p>
+        <img
+          className="w-100 mb-4"
+          src="/TEST/img/documentation/buttons/dos2.png"
+        />
+        <p>
+          Place buttons side by side in Desktop view
+        </p>
+        <img
+          className="w-100 mb-4"
+          src="/TEST/img/documentation/buttons/dos3.png"
+        />
+        <p>
+          Combine 
+          <b>
+            Executive Destructive Buttons
+          </b>
+           with normal 
+          <b>
+            Text/Link Buttons
+          </b>
+        </p>
+        <img
+          className="w-100 mb-4"
+          src="/TEST/img/documentation/buttons/dos4.png"
+        />
+      </div>
+    </div>
+    <div
+      className="col-sm-6"
+    >
+      <div
+        className="slab slab-plain slab-border-error"
+      >
+        <h4>
+          Don'ts
+        </h4>
+        <p>
+          Use the 
+          <b>
+            Secondary Button
+          </b>
+           (and/or the 
+          <b>
+            Text Button
+          </b>
+          ) above the 
+          <b>
+            Primary Button
+          </b>
+        </p>
+        <img
+          className="w-100 mb-4"
+          src="/TEST/img/documentation/buttons/donts1.png"
+        />
+        <p>
+          List primary actions and/or combine 
+          <b>
+            Primary Button
+          </b>
+           and 
+          <b>
+            BankID Button
+          </b>
+        </p>
+        <img
+          className="w-100 mb-4"
+          src="/TEST/img/documentation/buttons/donts2.png"
+        />
+        <p>
+          Use and combine destructive buttons the same way as normal buttons
+        </p>
+        <img
+          className="w-100 mb-4"
+          src="/TEST/img/documentation/buttons/donts3.png"
+        />
+        <p>
+          Combine normal buttons and destructive buttons
+        </p>
+        <img
+          className="w-100 mb-4"
+          src="/TEST/img/documentation/buttons/donts4.png"
+        />
+      </div>
+    </div>
+  </div>
+</Fragment>
+`;
+
 exports[`Documentation: Buttons Destructive button renders 1`] = `
 <Fragment>
   <h2
@@ -158,6 +320,129 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
       }
     }
   />
+  <h3>
+    Dos and don'ts
+  </h3>
+  <div
+    className="slab slab-plain slab-border-success mb-4"
+  >
+    <h4>
+      Dos
+    </h4>
+    <img
+      className="w-100"
+      src="/TEST/img/documentation/buttons/dos.png"
+    />
+    <div
+      className="d-flex justify-content-between mt-4"
+    >
+      <div
+        className="w-100"
+      >
+        <ul
+          className="list list-bullet"
+        >
+          <li>
+            Use the 
+            <b>
+              Guiding Destructive Buttons
+            </b>
+             in non-contained areas
+          </li>
+        </ul>
+      </div>
+      <div
+        className="w-100"
+        style={
+          Object {
+            "paddingLeft": "8%",
+          }
+        }
+      >
+        <ul
+          className="list list-bullet"
+        >
+          <li>
+            Use the 
+            <b>
+              Executive Destructive Buttons
+            </b>
+             a contained space as a final destructive call to action
+          </li>
+          <li>
+            Name the buttons differently to separate choices
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div
+    className="slab slab-plain slab-border-error"
+  >
+    <h4>
+      Don'ts
+    </h4>
+    <img
+      className="w-100"
+      src="/TEST/img/documentation/buttons/donts.png"
+    />
+    <div
+      className="d-flex justify-content-between mt-4"
+    >
+      <div
+        className="w-100"
+      >
+        <ul
+          className="list list-bullet"
+        >
+          <li>
+            Avoid using the 
+            <b>
+              Executive Destructive Buttons
+            </b>
+             in non-contained areas
+          </li>
+          <li>
+            Avoid using the 
+            <b>
+              Executive Destructive Buttons
+            </b>
+             in a guiding purpose
+          </li>
+          <li>
+            Avoid using multiple 
+            <b>
+              Executive Destructive Buttons
+            </b>
+             in the same userflow
+          </li>
+        </ul>
+      </div>
+      <div
+        className="w-100"
+        style={
+          Object {
+            "paddingLeft": "8%",
+          }
+        }
+      >
+        <ul
+          className="list list-bullet"
+        >
+          <li>
+            Avoid using multiple buttons with the same name – here "Cancel"
+          </li>
+          <li>
+            Avoid naming an 
+            <b>
+              Excecutive Destructive Button poorly
+            </b>
+             – the button cancels the payment of the invoice and not the invoice, which isn’t clear at al
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </Fragment>
 `;
 
@@ -503,41 +788,25 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
 
     </div>
   </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Buttons Naming buttons renders 1`] = `
+<Fragment>
+  <h2
+    id="naming-buttons"
+  >
+    Naming button labels
+  </h2>
+  <p>
+    Buttons should always lead with a strong verb that encourages action. Provide enough context for users by using the {verb} + {noun} content             formula instead of using “Yes”, “Confirm”, “Cancel” – except when it comes to the Text Button, which commonly uses “Cancel”.             To avoid buttons breaking in smaller interfaces due to long names, always check that the button looks OK in a mobile view. Generally,             try to keep the number of characters fairly low to provide more clarity.
+  </p>
   <h3>
-    Using buttons together
+    Unique naming
   </h3>
   <p>
-    When you use buttons next to each other you have to wrap them in a 
-    <CodeTags
-      code=".button-group"
-      type="secondary"
-    />
-    .
+    Avoid using the same name for multiple buttons in the same user flow. It’s particularly hard for users using a screen reader to tell four “Next” buttons one                after another apart.                 When combining an "Executive Destructive Button" with a "Text Button" be careful to not name both buttons “Cancel”.                Try to separate the text as much as you can to improve the user experience, providing the user from accidentally making the wrong choice.
   </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <div
-      className="button-group"
-    >
-      
-
-      <Button
-        label="Activate"
-        type="primary"
-      />
-      
-
-      <Button
-        label="Disable"
-        type="secondary"
-      />
-      
-
-    </div>
-  </ComponentPreview>
 </Fragment>
 `;
 
@@ -777,6 +1046,8 @@ exports[`Documentation: Buttons renders 1`] = `
   </ul>
   <Overview />
   <DestructiveButton />
+  <NamingButtons />
+  <CombiningButtons />
   <DeveloperDocumentation />
 </DocContainer>
 `;

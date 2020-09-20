@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Buttons, { Overview, DestructiveButton, DeveloperDocumentation } from "./index";
+import Buttons, { Overview, DestructiveButton, NamingButtons, CombiningButtons, DeveloperDocumentation } from "./index";
 
 describe("Documentation: Buttons", () => {
     it("is defined", () => {
@@ -33,6 +33,30 @@ describe("Documentation: Buttons", () => {
 
         it("renders", () => {
             const wrapper = shallow(<DestructiveButton />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("Naming buttons", () => {
+        it("is defined", () => {
+            expect(NamingButtons).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<NamingButtons />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("Combining buttons", () => {
+        it("is defined", () => {
+            expect(CombiningButtons).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<CombiningButtons />);
 
             expect(wrapper).toMatchSnapshot();
         });

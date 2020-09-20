@@ -6,6 +6,9 @@ import Alert from "@components/Alert";
 import CodeTags from "@components/CodeTags";
 
 import { overviewButtons, destructiveButtons } from "./constants";
+import { Link } from "react-router-dom";
+
+const basename = process.env.basename;
 
 const Overview = () => (
     <>
@@ -22,6 +25,131 @@ const DestructiveButton = () => (
             For example, permanently deleting an account.
         </p>
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={destructiveButtons} codeFigure />
+
+        <h3>Dos and don&apos;ts</h3>
+
+        <div className="slab slab-plain slab-border-success mb-4">
+            <h4>Dos</h4>
+            <img src={`${basename}img/documentation/buttons/dos.png`} className="w-100"/>
+            <div className="d-flex justify-content-between mt-4">
+                <div className="w-100" >
+                    <ul className="list list-bullet">
+                        <li>
+                            Use the <b>Guiding Destructive Buttons</b> in non-contained areas
+                        </li>
+                    </ul>
+                </div>
+                <div className="w-100" style={{ paddingLeft: "8%" }}>
+                    <ul className="list list-bullet">
+                        <li>
+                            Use the <b>Executive Destructive Buttons</b> a contained space as a final destructive call to action
+                        </li>
+                        <li>
+                            Name the buttons differently to separate choices
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div className="slab slab-plain slab-border-error">
+            <h4>{"Don'ts"}</h4>
+            <img src={`${basename}img/documentation/buttons/donts.png`} className="w-100"/>
+            <div className="d-flex justify-content-between mt-4">
+                <div className="w-100" >
+                    <ul className="list list-bullet">
+                        <li>
+                            Avoid using the <b>Executive Destructive Buttons</b> in non-contained areas
+                        </li>
+                        <li>
+                            Avoid using the <b>Executive Destructive Buttons</b> in a guiding purpose
+                        </li>
+                        <li>
+                            Avoid using multiple <b>Executive Destructive Buttons</b> in the same userflow
+                        </li>
+                    </ul>
+                </div>
+                <div className="w-100" style={{ paddingLeft: "8%" }}>
+                    <ul className="list list-bullet">
+                        <li>
+                            Avoid using multiple buttons with the same name – here &quot;Cancel&quot;
+                        </li>
+                        <li>
+                            Avoid naming an <b>Excecutive Destructive Button poorly</b> – the button cancels the payment of the invoice and not the invoice, which isn’t clear at al
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </>
+);
+
+const NamingButtons = () => (
+    <>
+        <h2 id="naming-buttons">Naming button labels</h2>
+        <p>
+            {"Buttons should always lead with a strong verb that encourages action. Provide enough context for users by using the {verb} + {noun} content \
+            formula instead of using “Yes”, “Confirm”, “Cancel” – except when it comes to the Text Button, which commonly uses “Cancel”. \
+            To avoid buttons breaking in smaller interfaces due to long names, always check that the button looks OK in a mobile view. Generally, \
+            try to keep the number of characters fairly low to provide more clarity."}
+        </p>
+
+        <h3>Unique naming</h3>
+        <p>
+            {
+                "Avoid using the same name for multiple buttons in the same user flow. It’s particularly hard for users using a screen reader to tell four “Next” buttons one\
+                after another apart. \
+                When combining an \"Executive Destructive Button\" with a \"Text Button\" be careful to not name both buttons “Cancel”.\
+                Try to separate the text as much as you can to improve the user experience, providing the user from accidentally making the wrong choice."
+            }
+        </p>
+    </>
+);
+
+const CombiningButtons = () => (
+    <>
+        <h2 id="combining-buttons">Combining buttons</h2>
+        <p>
+            When using buttons next to each other, always wrap them in a <CodeTags type="secondary" code=".button-group" /> and make sure to use 8px spacing
+            between the buttons, both in horizontally and vertically groupings. Strive not to use multiple buttons of the same kind –
+            instead, use <Link to="/components/links#action-link">Action links</Link>.
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <div className="button-group">{"\n"}
+                <ButtonComponent type="primary" label="Activate" />{"\n"}
+                <ButtonComponent type="secondary" label="Disable" />{"\n"}
+            </div>
+        </ComponentPreview>
+
+        <h3>{"Dos and don'ts"}</h3>
+        <div className="row">
+            <div className="col-sm-6">
+                <div className="slab slab-plain slab-border-success">
+                    <h4>Dos</h4>
+                    <p>Place buttons in a hierarchly correct order and combine different kinds of button</p>
+                    <img src={`${basename}img/documentation/buttons/dos1.png`} className="w-100 mb-4"/>
+                    <p>Use the <b>Text Button</b> as an discrete option to cancel</p>
+                    <img src={`${basename}img/documentation/buttons/dos2.png`} className="w-100 mb-4"/>
+                    <p>Place buttons side by side in Desktop view</p>
+                    <img src={`${basename}img/documentation/buttons/dos3.png`} className="w-100 mb-4"/>
+                    <p>Combine <b>Executive Destructive Buttons</b> with normal <b>Text/Link Buttons</b></p>
+                    <img src={`${basename}img/documentation/buttons/dos4.png`} className="w-100 mb-4"/>
+                </div>
+            </div>
+            <div className="col-sm-6">
+                <div className="slab slab-plain slab-border-error">
+                    <h4>{"Don'ts"}</h4>
+                    <p>Use the <b>Secondary Button</b> (and/or the <b>Text Button</b>) above the <b>Primary Button</b></p>
+                    <img src={`${basename}img/documentation/buttons/donts1.png`} className="w-100 mb-4"/>
+                    <p>List primary actions and/or combine <b>Primary Button</b> and <b>BankID Button</b></p>
+                    <img src={`${basename}img/documentation/buttons/donts2.png`} className="w-100 mb-4"/>
+                    <p>Use and combine destructive buttons the same way as normal buttons</p>
+                    <img src={`${basename}img/documentation/buttons/donts3.png`} className="w-100 mb-4"/>
+                    <p>Combine normal buttons and destructive buttons</p>
+                    <img src={`${basename}img/documentation/buttons/donts4.png`} className="w-100 mb-4"/>
+                </div>
+            </div>
+        </div>
     </>
 );
 
@@ -89,15 +217,6 @@ const DeveloperDocumentation = () => (
                 <ButtonComponent type="primary" input value="Reset" btnType="reset" />{"\n"}
             </div>
         </ComponentPreview>
-
-        <h3>Using buttons together</h3>
-        <p>When you use buttons next to each other you have to wrap them in a <CodeTags type="secondary" code=".button-group" />.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="button-group">{"\n"}
-                <ButtonComponent type="primary" label="Activate" />{"\n"}
-                <ButtonComponent type="secondary" label="Disable" />{"\n"}
-            </div>
-        </ComponentPreview>
     </>
 );
 
@@ -116,6 +235,8 @@ const Buttons = () => (
         </ul>
         <Overview />
         <DestructiveButton />
+        <NamingButtons />
+        <CombiningButtons />
         <DeveloperDocumentation />
     </DocContainer>
 );
@@ -123,4 +244,4 @@ const Buttons = () => (
 export default Buttons;
 
 /* for testing */
-export { Overview, DestructiveButton, DeveloperDocumentation };
+export { Overview, DestructiveButton, NamingButtons, CombiningButtons, DeveloperDocumentation };
