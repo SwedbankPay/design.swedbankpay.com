@@ -1,4 +1,3 @@
-import Attribute, { Property } from "./Attribute";
 import ComponentPreview from "./ComponentPreview";
 import DocContainer from "./DocContainer";
 import DocHeading from "./DocHeading";
@@ -8,10 +7,8 @@ import ExperimentalComponentAlert from "./ExperimentalComponentAlert";
 import Icon from "./Icon";
 import JavascriptDocs from "./JavascriptDocs";
 import JavascriptDocElement from "./JavascriptDocElement";
-import DgScript from "./DgScript";
 
 export {
-    Attribute,
     ComponentPreview,
     DocContainer,
     DocHeading,
@@ -20,7 +17,5 @@ export {
     ExperimentalComponentAlert,
     Icon,
     JavascriptDocs,
-    JavascriptDocElement,
-    Property,
-    DgScript
+    JavascriptDocElement
 };
