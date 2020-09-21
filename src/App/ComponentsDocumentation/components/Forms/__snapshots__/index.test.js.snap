@@ -114,7 +114,6 @@ exports[`Documentation: Forms DisabledFormComponents renders 1`] = `
               autoComplete="username"
               id="fieldset-disabled-username"
               label="Username"
-              placeholder="Enter your username"
               type="text"
             />
           </div>
@@ -129,7 +128,6 @@ exports[`Documentation: Forms DisabledFormComponents renders 1`] = `
               autoComplete="current-password"
               id="fieldset-disabled-password"
               label="Password"
-              placeholder="Enter your password"
               type="password"
             />
           </div>
@@ -215,7 +213,6 @@ exports[`Documentation: Forms DisabledFormComponents renders 1`] = `
               autoComplete="username"
               id="form-group-disabled-username"
               label="Username"
-              placeholder="Enter your username"
               type="text"
             />
           </div>
@@ -231,7 +228,6 @@ exports[`Documentation: Forms DisabledFormComponents renders 1`] = `
               disabled={true}
               id="form-group-disabled-password"
               label="Password"
-              placeholder="Enter your password"
               type="password"
             />
           </div>
@@ -323,10 +319,8 @@ exports[`Documentation: Forms FormGrid form prevents default 1`] = `
         >
           <InputGroup
             autoComplete="given-name"
-            helpBlock="Hope it is something cool"
             id="grid-first-name"
             label="First name"
-            placeholder="Enter your first name"
             type="text"
           />
         </div>
@@ -335,10 +329,8 @@ exports[`Documentation: Forms FormGrid form prevents default 1`] = `
         >
           <InputGroup
             autoComplete="family-name"
-            helpBlock="Most likely in your passport"
             id="grid-last-name"
             label="Last name"
-            placeholder="Enter your last name"
             type="text"
           />
         </div>
@@ -400,10 +392,8 @@ exports[`Documentation: Forms FormGrid renders 1`] = `
         >
           <InputGroup
             autoComplete="given-name"
-            helpBlock="Hope it is something cool"
             id="grid-first-name"
             label="First name"
-            placeholder="Enter your first name"
             type="text"
           />
         </div>
@@ -412,10 +402,8 @@ exports[`Documentation: Forms FormGrid renders 1`] = `
         >
           <InputGroup
             autoComplete="family-name"
-            helpBlock="Most likely in your passport"
             id="grid-last-name"
             label="Last name"
-            placeholder="Enter your last name"
             type="text"
           />
         </div>
@@ -560,7 +548,6 @@ exports[`Documentation: Forms Overview form prevents default 1`] = `
         >
           <InputGroup
             autoComplete="email"
-            helpBlock="The last part is probably @swedbankpay.com"
             id="email-address"
             label="Email"
             placeholder="name@mail.com"
@@ -697,7 +684,6 @@ exports[`Documentation: Forms Overview renders 1`] = `
         >
           <InputGroup
             autoComplete="email"
-            helpBlock="The last part is probably @swedbankpay.com"
             id="email-address"
             label="Email"
             placeholder="name@mail.com"
@@ -951,7 +937,6 @@ exports[`Documentation: Forms UsageWithFieldsets form prevents default 1`] = `
               autoComplete="username"
               id="fieldset-username"
               label="Username"
-              placeholder="Enter your username"
               type="text"
             />
           </div>
@@ -966,7 +951,6 @@ exports[`Documentation: Forms UsageWithFieldsets form prevents default 1`] = `
               autoComplete="current-password"
               id="fieldset-password"
               label="Password"
-              placeholder="Enter your password"
               type="password"
             />
           </div>
@@ -1022,7 +1006,6 @@ exports[`Documentation: Forms UsageWithFieldsets renders 1`] = `
               autoComplete="username"
               id="fieldset-username"
               label="Username"
-              placeholder="Enter your username"
               type="text"
             />
           </div>
@@ -1037,7 +1020,6 @@ exports[`Documentation: Forms UsageWithFieldsets renders 1`] = `
               autoComplete="current-password"
               id="fieldset-password"
               label="Password"
-              placeholder="Enter your password"
               type="password"
             />
           </div>
@@ -1124,17 +1106,14 @@ exports[`Documentation: Forms Validation renders 1`] = `
       noValidate={true}
     >
       <InputGroup
-        helpBlock="This one should be easy"
         id="validation-name-1"
         label="Name"
-        placeholder="Enter your name"
         type="text"
       />
       <InputGroup
-        helpBlock="This one should be pretty easy too"
         id="validation-email-1"
         label="Email"
-        placeholder="Enter your email"
+        placeholder="name@mail.com"
         type="email"
       />
       
@@ -1204,7 +1183,7 @@ exports[`Documentation: Forms Validation renders 1`] = `
         helpBlock={true}
         id="validation-email-2"
         label="Email"
-        placeholder="bob.corlsan@example.com"
+        placeholder="name@mail.com"
         prefixType="icon"
         prefixValue="email"
         required={true}
@@ -1265,10 +1244,9 @@ exports[`Documentation: Forms Validation renders 1`] = `
     >
       <InputGroup
         errorMessage="Wrong!"
-        helpBlock="Keep your eye on that submit button"
         id="validation-email-3"
         label="Email"
-        placeholder="bob.corlsan@example.com"
+        placeholder="name@mail.com"
         prefixType="icon"
         prefixValue="email"
         required={true}
