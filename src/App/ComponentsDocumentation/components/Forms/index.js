@@ -43,7 +43,6 @@ const Overview = () => (
                             label="Email"
                             autoComplete="email"
                             placeholder="name@mail.com"
-                            helpBlock="The last part is probably @swedbankpay.com"
                         />
                     </div>
                 </div>
@@ -82,8 +81,6 @@ const FormGrid = () => (
                             type="text"
                             autoComplete="given-name"
                             label="First name"
-                            placeholder="Enter your first name"
-                            helpBlock="Hope it is something cool"
                         />
                     </div>
                     <div className="col-5">
@@ -92,8 +89,6 @@ const FormGrid = () => (
                             type="text"
                             label="Last name"
                             autoComplete="family-name"
-                            placeholder="Enter your last name"
-                            helpBlock="Most likely in your passport"
                         />
                     </div>
                     <div className="col-2">
@@ -121,15 +116,12 @@ const Validation = () => (
                     id="validation-name-1"
                     type="text"
                     label="Name"
-                    placeholder="Enter your name"
-                    helpBlock="This one should be easy"
                 />
                 <InputGroup
                     id="validation-email-1"
                     type="email"
                     label="Email"
-                    placeholder="Enter your email"
-                    helpBlock="This one should be pretty easy too"
+                    placeholder="name@mail.com"
                 />{"\n"}
                 <button className="btn btn-primary" type="submit">Submit</button>
             </form>
@@ -151,7 +143,7 @@ const Validation = () => (
                     id="validation-email-2"
                     type="email"
                     label="Email"
-                    placeholder="bob.corlsan@example.com"
+                    placeholder="name@mail.com"
                     prefixType="icon"
                     prefixValue="email"
                     helpBlock
@@ -172,10 +164,9 @@ const Validation = () => (
                     id="validation-email-3"
                     type="email"
                     label="Email"
-                    placeholder="bob.corlsan@example.com"
+                    placeholder="name@mail.com"
                     prefixType="icon"
                     prefixValue="email"
-                    helpBlock="Keep your eye on that submit button"
                     successMessage="Right!"
                     errorMessage="Wrong!"
                 />{"\n"}
@@ -200,7 +191,6 @@ const UsageWithFieldsets = () => (
                                 type="text"
                                 autoComplete="username"
                                 label="Username"
-                                placeholder="Enter your username"
                             />
                         </div>
                     </div>
@@ -211,7 +201,6 @@ const UsageWithFieldsets = () => (
                                 type="password"
                                 label="Password"
                                 autoComplete="current-password"
-                                placeholder="Enter your password"
                             />
                         </div>
                     </div>
@@ -331,7 +320,6 @@ const DisabledFormComponents = () => (
                                 type="text"
                                 autoComplete="username"
                                 label="Username"
-                                placeholder="Enter your username"
                             />
                         </div>
                     </div>
@@ -342,7 +330,6 @@ const DisabledFormComponents = () => (
                                 type="password"
                                 label="Password"
                                 autoComplete="current-password"
-                                placeholder="Enter your password"
                             />
                         </div>
                     </div>
@@ -377,7 +364,6 @@ const DisabledFormComponents = () => (
                                 type="text"
                                 autoComplete="username"
                                 label="Username"
-                                placeholder="Enter your username"
                             />
                         </div>
                     </div>
@@ -388,7 +374,6 @@ const DisabledFormComponents = () => (
                                 type="password"
                                 label="Password"
                                 autoComplete="current-password"
-                                placeholder="Enter your password"
                                 disabled
                             />
                         </div>
