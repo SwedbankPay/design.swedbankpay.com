@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import InputGroup from "@components/InputGroup";
@@ -16,32 +17,48 @@ const Overview = () => (
             show a collection of related inputs. <CodeTags type="primary" code={"<form-group>"} />s can contain more than just an input, like a <CodeTags type="primary" code={"<label>"} /> or
             <CodeTags type="primary" code={"<help-block>"} />s.
         </p>
+        <p>
+            <b>Note:</b> On larger screens, <CodeTags type="primary" code={"<input>"} /> should not be wider than half the
+            page. <CodeTags type="primary" code={"<input>"} /> should take the available width on smaller screen sizes. <Link to="/core/grid">Grid</Link> can
+            be used to achieve this behavior.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <form onSubmit={e => e.preventDefault()}>
-                <InputGroup
-                    id="first-name"
-                    type="text"
-                    autoComplete="given-name"
-                    label="First name"
-                    placeholder="Enter your first name"
-                    helpBlock="The first word of your full name"
-                />
-                <InputGroup
-                    id="last-name"
-                    type="text"
-                    label="Last name"
-                    autoComplete="family-name"
-                    placeholder="Enter your last name"
-                    helpBlock="The very last collection of letters in your name"
-                />
-                <InputGroup
-                    id="email-address"
-                    type="text"
-                    label="Email"
-                    autoComplete="email"
-                    placeholder="Enter your email"
-                    helpBlock="The last part is probably @swedbankpay.com"
-                />
+                <div className="row">
+                    <div className="col-md-6">
+                        <InputGroup
+                            id="first-name"
+                            type="text"
+                            autoComplete="given-name"
+                            label="First name"
+                            placeholder="Enter your first name"
+                            helpBlock="The first word of your full name"
+                        />
+                    </div>
+                    <div className="col-md-6">
+                        <InputGroup
+                            id="last-name"
+                            type="text"
+                            label="Last name"
+                            autoComplete="family-name"
+                            placeholder="Enter your last name"
+                            helpBlock="The very last collection of letters in your name"
+                        />
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-md-6">
+                        <InputGroup
+                            id="email-address"
+                            type="text"
+                            label="Email"
+                            autoComplete="email"
+                            placeholder="Enter your email"
+                            helpBlock="The last part is probably @swedbankpay.com"
+                        />
+                    </div>
+                </div>
+
                 <div className="form-group">
                     <Checkbox label={"Subscribe to our Shovels and Tapestry catalogue"} id="subscribe-checkbox" />
                 </div>{"\n"}
@@ -178,20 +195,28 @@ const UsageWithFieldsets = () => (
             <form onSubmit={e => e.preventDefault()}>
                 <fieldset>
                     <legend>Log in</legend>
-                    <InputGroup
-                        id="fieldset-username"
-                        type="text"
-                        autoComplete="username"
-                        label="Username"
-                        placeholder="Enter your username"
-                    />
-                    <InputGroup
-                        id="fieldset-password"
-                        type="password"
-                        label="Password"
-                        autoComplete="current-password"
-                        placeholder="Enter your password"
-                    />
+                    <div className="row">
+                        <div className="col-md-6">
+                            <InputGroup
+                                id="fieldset-username"
+                                type="text"
+                                autoComplete="username"
+                                label="Username"
+                                placeholder="Enter your username"
+                            />
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-6">
+                            <InputGroup
+                                id="fieldset-password"
+                                type="password"
+                                label="Password"
+                                autoComplete="current-password"
+                                placeholder="Enter your password"
+                            />
+                        </div>
+                    </div>
                     <Checkbox label="Remember me" id="fieldset-checkbox" />
                 </fieldset>{"\n"}
                 <Button type="executive" label="Log in" btnType="submit" />{"\n"}
@@ -301,26 +326,37 @@ const DisabledFormComponents = () => (
             <form>
                 <fieldset disabled>
                     <legend>Log in</legend>
-                    <InputGroup
-                        id="fieldset-disabled-username"
-                        type="text"
-                        autoComplete="username"
-                        label="Username"
-                        placeholder="Enter your username"
-                    />
-                    <InputGroup
-                        id="fieldset-disabled-password"
-                        type="password"
-                        label="Password"
-                        autoComplete="current-password"
-                        placeholder="Enter your password"
-                    />
-
-                    <InputGroup
-                        label="Profession"
-                        type="select"
-                        selectOptions={["Bounty hunter", "Smuggler", "Jedi"]}
-                    />
+                    <div className="row">
+                        <div className="col-sm-6">
+                            <InputGroup
+                                id="fieldset-disabled-username"
+                                type="text"
+                                autoComplete="username"
+                                label="Username"
+                                placeholder="Enter your username"
+                            />
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-sm-6">
+                            <InputGroup
+                                id="fieldset-disabled-password"
+                                type="password"
+                                label="Password"
+                                autoComplete="current-password"
+                                placeholder="Enter your password"
+                            />
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-sm-6">
+                            <InputGroup
+                                label="Profession"
+                                type="select"
+                                selectOptions={["Bounty hunter", "Smuggler", "Jedi"]}
+                            />
+                        </div>
+                    </div>
                     <Checkbox label="Remember me" id="fieldset-disabled-checkbox" />
                 </fieldset>{"\n"}
                 <Button type="executive" label="Log in" btnType="submit" disabled />{"\n"}
@@ -336,21 +372,29 @@ const DisabledFormComponents = () => (
             <form>
                 <fieldset>
                     <legend>Log in</legend>
-                    <InputGroup
-                        id="form-group-disabled-username"
-                        type="text"
-                        autoComplete="username"
-                        label="Username"
-                        placeholder="Enter your username"
-                    />
-                    <InputGroup
-                        id="form-group-disabled-password"
-                        type="password"
-                        label="Password"
-                        autoComplete="current-password"
-                        placeholder="Enter your password"
-                        disabled
-                    />
+                    <div className="row">
+                        <div className="col-sm-6">
+                            <InputGroup
+                                id="form-group-disabled-username"
+                                type="text"
+                                autoComplete="username"
+                                label="Username"
+                                placeholder="Enter your username"
+                            />
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-sm-6">
+                            <InputGroup
+                                id="form-group-disabled-password"
+                                type="password"
+                                label="Password"
+                                autoComplete="current-password"
+                                placeholder="Enter your password"
+                                disabled
+                            />
+                        </div>
+                    </div>
                     <Checkbox label="Remember me" id="form-group-disabled-checkbox" />
                 </fieldset>{"\n"}
                 <Button type="executive" label="Log in" btnType="submit" disabled />{"\n"}
