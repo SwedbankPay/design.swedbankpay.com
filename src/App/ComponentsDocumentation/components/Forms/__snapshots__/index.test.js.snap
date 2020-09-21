@@ -544,23 +544,10 @@ exports[`Documentation: Forms Overview form prevents default 1`] = `
           className="col-md-6"
         >
           <InputGroup
-            autoComplete="given-name"
-            helpBlock="The first word of your full name"
-            id="first-name"
-            label="First name"
-            placeholder="Enter your first name"
-            type="text"
-          />
-        </div>
-        <div
-          className="col-md-6"
-        >
-          <InputGroup
-            autoComplete="family-name"
-            helpBlock="The very last collection of letters in your name"
-            id="last-name"
-            label="Last name"
-            placeholder="Enter your last name"
+            autoComplete="name"
+            helpBlock="Your first and last name"
+            id="your-name"
+            label="Your name"
             type="text"
           />
         </div>
@@ -576,7 +563,21 @@ exports[`Documentation: Forms Overview form prevents default 1`] = `
             helpBlock="The last part is probably @swedbankpay.com"
             id="email-address"
             label="Email"
-            placeholder="Enter your email"
+            placeholder="name@mail.com"
+            type="text"
+          />
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col-md-6"
+        >
+          <InputGroup
+            autoComplete="phone"
+            id="phone-number"
+            label="Your phone number"
             type="text"
           />
         </div>
@@ -680,23 +681,10 @@ exports[`Documentation: Forms Overview renders 1`] = `
           className="col-md-6"
         >
           <InputGroup
-            autoComplete="given-name"
-            helpBlock="The first word of your full name"
-            id="first-name"
-            label="First name"
-            placeholder="Enter your first name"
-            type="text"
-          />
-        </div>
-        <div
-          className="col-md-6"
-        >
-          <InputGroup
-            autoComplete="family-name"
-            helpBlock="The very last collection of letters in your name"
-            id="last-name"
-            label="Last name"
-            placeholder="Enter your last name"
+            autoComplete="name"
+            helpBlock="Your first and last name"
+            id="your-name"
+            label="Your name"
             type="text"
           />
         </div>
@@ -712,7 +700,21 @@ exports[`Documentation: Forms Overview renders 1`] = `
             helpBlock="The last part is probably @swedbankpay.com"
             id="email-address"
             label="Email"
-            placeholder="Enter your email"
+            placeholder="name@mail.com"
+            type="text"
+          />
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col-md-6"
+        >
+          <InputGroup
+            autoComplete="phone"
+            id="phone-number"
+            label="Your phone number"
             type="text"
           />
         </div>

@@ -27,22 +27,11 @@ const Overview = () => (
                 <div className="row">
                     <div className="col-md-6">
                         <InputGroup
-                            id="first-name"
+                            id="your-name"
                             type="text"
-                            autoComplete="given-name"
-                            label="First name"
-                            placeholder="Enter your first name"
-                            helpBlock="The first word of your full name"
-                        />
-                    </div>
-                    <div className="col-md-6">
-                        <InputGroup
-                            id="last-name"
-                            type="text"
-                            label="Last name"
-                            autoComplete="family-name"
-                            placeholder="Enter your last name"
-                            helpBlock="The very last collection of letters in your name"
+                            autoComplete="name"
+                            label="Your name"
+                            helpBlock="Your first and last name"
                         />
                     </div>
                 </div>
@@ -53,12 +42,21 @@ const Overview = () => (
                             type="text"
                             label="Email"
                             autoComplete="email"
-                            placeholder="Enter your email"
+                            placeholder="name@mail.com"
                             helpBlock="The last part is probably @swedbankpay.com"
                         />
                     </div>
                 </div>
-
+                <div className="row">
+                    <div className="col-md-6">
+                        <InputGroup
+                            id="phone-number"
+                            type="text"
+                            label="Your phone number"
+                            autoComplete="phone"
+                        />
+                    </div>
+                </div>
                 <div className="form-group">
                     <Checkbox label={"Subscribe to our Shovels and Tapestry catalogue"} id="subscribe-checkbox" />
                 </div>{"\n"}
