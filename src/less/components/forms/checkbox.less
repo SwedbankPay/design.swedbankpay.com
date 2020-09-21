@@ -29,7 +29,7 @@
             height: @checkbox-height;
             width: @checkbox-width;
             background-color: @white;
-            border: 2px solid @brand-secondary;
+            border: 2px solid @brand-secondary-light-2;
             border-radius: 2px;
         }
 
@@ -55,17 +55,30 @@
         }
 
         &:focus + label:before {
-            box-shadow: 0 0 0 0.5rem @brand-secondary-light-1;
+            box-shadow: 0 0 0 0.5rem @brand-secondary-light-3;
+            border-color: @brand-secondary;
+        }
+
+        &:focus + label:after {
+            border-color: @brand-secondary;
         }
 
         &:hover + label:before {
-            box-shadow: 0 0 0 0.5rem @brand-secondary-light-2;
+            box-shadow: 0 0 0 0.5rem @brand-secondary-light-3;
+        }
+
+        &:hover + label:after {
+            border-color: @brand-secondary;
         }
 
         &[disabled] {
             + label:after {
                 background-color: @input-bg-disabled;
                 border-color: @input-checked-bg-disabled;
+            }
+
+            + label:before {
+                content: none;
             }
 
             &:checked + label:after {
