@@ -18,6 +18,10 @@ const _repositionTooltip = e => {
 
 const _createTooltip = tooltip => {
     tooltip.addEventListener("mouseover", _repositionTooltip);
+
+    return {
+        container: tooltip
+    };
 };
 
 const init = id => {
@@ -40,7 +44,7 @@ const init = id => {
             return null;
         }
 
-        return [...tooltipParents].filter(tooltip => tooltip.querySelector(".tooltip")).map(tooltip => _createTooltip(tooltip));
+        return [...tooltipParents].filter(tooltipParent => tooltipParent.querySelector(".tooltip")).map(tooltip => _createTooltip(tooltip));
     }
 };
 
