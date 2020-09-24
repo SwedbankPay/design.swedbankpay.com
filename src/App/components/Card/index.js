@@ -1,51 +1,29 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Card = ({ type, titleTxt, titleMarkup, imgSrc, text, textSection, smallText, btn, btnClass, btnText, bodyClass, footerTxt, footerLink, footerLinkTxt, children }) => (
-    <div className={`card${type ? ` card-${type}` : ""}`}>
-        {imgSrc ? <div className="card-img">{"\n"}
-            <img src={imgSrc} alt=""/>{"\n"}
-        </div> : null}
-        {titleTxt
-            ? (<header className="card-header">
-                <h3>{titleTxt}</h3>
-            </header>)
-            : (titleMarkup
-                ? (<header className="card-header">
-                    {titleMarkup}
-                </header>)
-                : null)}
-        <div className={`card-body${bodyClass ? ` ${bodyClass}` : ""}`}>
-            {children ? children : null }
-            {text ? <p>{text}</p> : null}{"\n"}
-            {textSection ?
-                textSection.map((secText, i) => <p key={`card-p-${i}`}>{secText}</p>)
-                : null
-            }
-            {btn ? <button type="button" className={`btn btn-primary${btnClass ? ` ${btnClass}` : ""}`}>{"\n"}{btnText}{"\n"}</button> : null}
+const Card = ({ type, titleTxt, imgSrc, icon, text, children }) => (
+    <a href="#" className={`card${type ? ` card-${type}` : ""}`}>
+        {icon && <div className="card-icon">
+            {icon}
+        </div>}
+        {imgSrc && <img src={imgSrc} />}
+        <div className="card-content">
+            {titleTxt && <span className="h4">{titleTxt}</span>}
+            {text && <span>{text}</span>}{"\n"}
+            {children && children }
         </div>
-        {footerTxt || footerLinkTxt
-            ? <footer className="card-footer">
-                {smallText ? <small>{smallText}</small> : null}
-                {footerTxt ? footerTxt : null}
-                {footerLinkTxt ? <div className="footer-link"><a href={footerLink || "#"}>{footerLinkTxt}</a></div> : null}
-            </footer> : null}
-    </div>
+        <i className="material-icons">arrow_forward</i>
+    </a>
 );
 
 Card.propTypes = {
-    type: PropTypes.oneOf(["primary", "secondary", "plain"]),
+    type: PropTypes.oneOf(["primary", "secondary", "tertiary"]),
     imgSrc: PropTypes.string,
     titleTxt: PropTypes.string,
     titleMarkup: PropTypes.object,
-    icon: PropTypes.string,
+    icon: PropTypes.object,
     text: PropTypes.string,
-    smallText: PropTypes.string,
-    textSection: PropTypes.array,
-    btn: PropTypes.bool,
-    btnText: PropTypes.string,
-    footerLink: PropTypes.string,
-    footerLinkTxt: PropTypes.string
+    children: PropTypes.object
 };
 
 export default Card;
