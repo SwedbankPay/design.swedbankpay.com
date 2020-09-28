@@ -70,10 +70,13 @@
   - Changed styling of the sidebar, moved the contact part to the bottom
   - Added aria-hidden to all icons
   - Fixed typos
+  - Added new component to present DG components
   - Grid
     - Fixed grid gutter not being updated to 32px in documentation
   - Status
     - Added example using status in Status documentation
+  - Buttons
+    - Changed guidelines content and presentation
 - Status
   - Removed default status
   - Changed color of success status
@@ -95,3 +98,7 @@
   - Added slab with top border
 - Accordion
   - Changed padding
+- Buttons
+  - Added destructive button
+  - Changed color of buttons
+  - Renamed buttons
