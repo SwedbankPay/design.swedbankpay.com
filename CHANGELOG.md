@@ -93,3 +93,5 @@
   - Changed styling of tabs
 - Slab
   - Added slab with top border
+- Accordion
+  - Changed padding
