@@ -1,2 +1,2 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[95],{486:function(e,n,t){"use strict";t.r(n);var o=t(1),a=t.n(o),s=t(378);n.default=function(){return a.a.createElement(s.DocContainer,{docToc:!0},a.a.createElement("p",{className:"lead"},"Getting started with the ","Swedbank Pay"," Resources. Resources and guidelines on how to use the provided resources can be found here."))}}}]);
-//# sourceMappingURL=doc-route.chunk_69.js.map?f8d6f3e60a39322ebdbc
+(window.webpackJsonp=window.webpackJsonp||[]).push([[93],{484:function(e,n,t){"use strict";t.r(n);var o=t(1),a=t.n(o),s=t(378);n.default=function(){return a.a.createElement(s.DocContainer,{docToc:!0},a.a.createElement("p",{className:"lead"},"Getting started with the ","Swedbank Pay"," Resources. Resources and guidelines on how to use the provided resources can be found here."))}}}]);
+//# sourceMappingURL=doc-route.chunk_69.js.map?80747d3e77fece573031
