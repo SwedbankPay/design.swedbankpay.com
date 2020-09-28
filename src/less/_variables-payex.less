@@ -13,7 +13,7 @@
 
 /* Main Brand Color Variants */
 @brand-primary:                             #2da944;
-@brand-primary-bright:                      #2da944;
+@brand-primary-light:                      #2da944;
 @brand-primary-faded:                         fade(@brand-primary, 60%);
 @brand-secondary-dark-1:                    #3c3c3c;
 @brand-secondary-dark-2:                    #3c3c3c;
@@ -57,18 +57,27 @@
 @brand-monofont:                            monospace;
 
 /* Button colors */
-@executive-disabled-bg:                     #f5b895;
-@guiding-disabled-bg:                       #98d0d6;
+@primary-disabled-bg:                     #f5b895;
+@secondary-disabled-bg:                       #98d0d6;
+@destructive-disabled-bg:                   #f9ded3;
 
-@btn-executive-color:                       @white;
-@btn-executive-bg:                          @brand-tertiary;
-@btn-executive-disabled-color:              @white;
-@btn-executive-disabled-bg:                 #2da944c2;
+@btn-primary-color:                       @white;
+@btn-primary-bg:                          @brand-tertiary;
+@btn-primary-hover:                       @brand-primary-faded;
+@btn-primary-disabled-color:              @white;
+@btn-primary-disabled-bg:                 #2da944c2;
 
-@btn-guiding-color:                         #231f20;
-@btn-guiding-bg:                            #c4c6c8;
-@btn-guiding-disabled-color:                @white;
-@btn-guiding-disabled-bg:                   #c4c6c8;
+@btn-secondary-color:                         #231f20;
+@btn-secondary-bg:                            #c4c6c8;
+@btn-secondary-hover:                         @brand-primary-light;
+@btn-secondary-disabled-color:                @white;
+@btn-secondary-disabled-bg:                   #c4c6c8;
+
+@btn-destructive-color:                    @white;
+@btn-destructive-bg:                       @brand-error;
+@btn-destructive-hover:                    #e07088;
+@btn-destructive-disabled-color:           @white;
+@btn-destructive-disabled-bg:              @destructive-disabled-bg;
 
 @btn-link-color:                            #266c9a;
 @btn-link-disabled-color:                   @list-gray;

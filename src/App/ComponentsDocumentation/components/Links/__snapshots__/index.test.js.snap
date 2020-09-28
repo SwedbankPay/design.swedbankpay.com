@@ -193,7 +193,7 @@ exports[`Components: Links ButtonLinks renders 1`] = `
   >
     <Button
       label="Approve"
-      type="executive"
+      type="primary"
     />
     
 

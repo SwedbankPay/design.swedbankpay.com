@@ -48,7 +48,7 @@ describe("Component: InputGroup - ", () => {
     });
 
     it("throws an error if prefixBtnColor prop has an invalid value", () => {
-        const testValues = ["executive", "guiding", "invalid", "test"];
+        const testValues = ["primary", "secondary", "invalid", "test"];
 
         console.error = jest.fn();
         testValues.forEach(testValue => {
@@ -72,7 +72,7 @@ describe("Component: InputGroup - ", () => {
     });
 
     it("throws an error if postfixBtnColor prop has an invalid value", () => {
-        const testValues = ["executive", "guiding", "invalid", "test"];
+        const testValues = ["primary", "secondary", "invalid", "test"];
 
         console.error = jest.fn();
         testValues.forEach(testValue => {
@@ -92,7 +92,7 @@ describe("Component: InputGroup - ", () => {
     });
 
     it("renders div with class .input-group when prefixValue, postfixValue or feedbackIcon is provided", () => {
-        const wrapper1 = shallow(<InputGroup type="typetest" prefixType="button" prefixValue="button text" prefixBtnColor="executive" />);
+        const wrapper1 = shallow(<InputGroup type="typetest" prefixType="button" prefixValue="button text" prefixBtnColor="primary" />);
         const wrapper2 = shallow(<InputGroup type="typetest" feedbackIcon="testvalue" />);
         const wrapper3 = shallow(<InputGroup type="typetest" postfixValue="testvalue" />);
 
@@ -108,10 +108,10 @@ describe("Component: InputGroup - ", () => {
     });
 
     it("renders a form-group with a prefix button if prop prefixValue is provided", () => {
-        const wrapper = mount(<InputGroup type="typetest" prefixType="button" prefixValue="button text" prefixBtnColor="executive" />);
+        const wrapper = mount(<InputGroup type="typetest" prefixType="button" prefixValue="button text" prefixBtnColor="primary" />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("btn btn-executive");
+        expect(wrapper.html()).toContain("btn btn-primary");
     });
 
     it("renders a form-group with a prefix label if prop prefixValue is provided and no prefixType is given", () => {

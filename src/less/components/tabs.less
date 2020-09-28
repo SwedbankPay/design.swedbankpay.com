@@ -3,7 +3,7 @@
     font-weight: @font-weight-normal;
     position: relative;
     margin: @base-margin auto;
-    min-height: 40px;
+    height: 40px;
     display: flex;
     z-index: @zindex-tabs;
     border-bottom: 1px solid @brand-secondary-light-3;
@@ -21,6 +21,8 @@
 
     &.tabs-scroll {
         border-bottom: none;
+        min-height: 40px;
+        height: auto;
 
         ul {
             overflow: scroll;
@@ -34,6 +36,7 @@
 
             li {
                 a {
+                    height: 40px;
                     border-bottom: 1px solid @brand-secondary-light-3;
                 }
             }
@@ -45,7 +48,7 @@
                 width: @tabs-fade-width;
                 height: 100%;
                 position: absolute;
-                right: -1px;
+                right: 0;
                 background-image: linear-gradient(to right, transparent, rgb(255, 255, 255));
                 pointer-events: none;
                 z-index: @zindex-tabs;
@@ -58,7 +61,7 @@
                 width: @tabs-fade-width;
                 height: 100%;
                 position: absolute;
-                left: -1px;
+                left: 0;
                 background-image: linear-gradient(to left, transparent, rgb(255, 255, 255));
                 pointer-events: none;
                 z-index: @zindex-tabs;

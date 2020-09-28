@@ -27,10 +27,10 @@ const Download = () => (
             <p>Before downloading any typography files, make sure to read the Swedbank Pay typography guidelines. The guidelines can be found below.</p>
             <div className="row justify-content-right">
                 <div className="col-sm-auto mb-3 mb-sm-0">
-                    <Button type="executive" icon="file_download" href={`${basename}release/fonts/cid_2108538.zip`} label="Swedbank Headline" />
+                    <Button type="primary" icon="file_download" href={`${basename}release/fonts/cid_2108538.zip`} label="Swedbank Headline" />
                 </div>
                 <div className="col-sm-auto">
-                    <Button type="executive" icon="file_download" href={`${basename}release/fonts/cid_2686429.zip`} label="Swedbank Sans" />
+                    <Button type="primary" icon="file_download" href={`${basename}release/fonts/cid_2686429.zip`} label="Swedbank Sans" />
                 </div>
             </div>
         </div>

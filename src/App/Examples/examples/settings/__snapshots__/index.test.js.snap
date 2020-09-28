@@ -226,7 +226,7 @@ exports[`Examples: Settings renders 1`] = `
               btnType="submit"
               icon="save"
               label="Save changes"
-              type="executive"
+              type="primary"
             />
           </form>
         </div>

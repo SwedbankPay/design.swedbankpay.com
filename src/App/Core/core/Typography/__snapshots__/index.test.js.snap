@@ -80,7 +80,7 @@ exports[`Core: Typography AkkuratMono renders 1`] = `
       href="/TEST/release/fonts/AkkuratMono.zip"
       icon="file_download"
       label="Akkurat Mono"
-      type="executive"
+      type="primary"
     />
   </div>
 </Fragment>

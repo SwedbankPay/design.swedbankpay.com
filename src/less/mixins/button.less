@@ -1,24 +1,22 @@
-.button-variant(@color, @background, @disabled-color, @disabled-bg, @focus-shadow) {
+.button-variant(@color, @background, @hover, @disabled-color, @disabled-bg, @focus-shadow) {
     color: @color;
     background-color: @background;
 
     &:focus,
     &.focus {
         outline: 0;
-        color: @color;
-        background-color: darken(@background, 5%);
-        box-shadow: 0 0 0 0.2rem @focus-shadow;
+        box-shadow: 0 0 0 0.1rem @focus-shadow;
     }
 
     &:hover {
         color: @color;
-        background-color: darken(@background, 5%);
+        background-color: @hover;
     }
 
     &[active],
     &:active,
     &.active {
-        .button-active-state(darken(@background, 10%), @color);
+        .button-active-state(@background, @color);
     }
 
     &.disabled,
@@ -40,12 +38,12 @@
 .button-outline-variant(@color, @background, @hover-color, @disabled-color, @disabled-bg) {
     background: transparent;
     color: @color;
-    border-color: darken(@background, 5%);
+    border-color: @background;
 
     &:focus,
     &.focus {
         color: @hover-color;
-        background-color: darken(@background, 5%);
+        background-color: @background;
     }
 
     &:hover {
@@ -56,13 +54,13 @@
     &[active],
     &:active,
     &.active {
-        .button-active-state(darken(@background, 10%), @color);
+        .button-active-state(@background, @hover-color);
 
         &:hover,
         &:focus,
         &.focus {
-            color: @color;
-            background-color: darken(@background, 10%);
+            color: @hover-color;
+            background-color: @background;
         }
     }
 
@@ -80,6 +78,49 @@
             color: @disabled-color;
             border-color: @disabled-color;
         }
+    }
+}
+
+.button-link-variant(@color, @disabled-color, @focus-shadow) {
+    color: @color;
+    font-family: @brand-default;
+    font-weight: normal;
+    background: transparent;
+
+    &[active],
+    &:active,
+    &.active,
+    &[disabled],
+    fieldset[disabled] & {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    &:hover,
+    &:active {
+        box-shadow: none;
+        border-color: @color;
+    }
+
+    &:focus {
+        outline: 0;
+        box-shadow: 0 0 0 0.1rem @focus-shadow;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: transparent;
+    }
+
+    &[disabled],
+    fieldset[disabled] & {
+        color: @disabled-color;
+        text-decoration: none;
+        border-color: @disabled-color;
+    }
+
+    span {
+        text-decoration: underline;
     }
 }
 

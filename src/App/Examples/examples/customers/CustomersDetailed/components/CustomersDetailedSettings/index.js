@@ -34,7 +34,7 @@ const CustomersDetailedSettings = () => (
             prefixValue="Type"
         />
 
-        <button className="btn btn-executive">Save</button>
+        <button className="btn btn-primary">Save</button>
     </>
 );
 

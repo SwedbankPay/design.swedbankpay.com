@@ -20,7 +20,9 @@
 
 /* Main Brand Color Variants */
 @brand-primary:                             #fdc129;
-@brand-primary-bright:                      #ffcc00;
+@brand-primary-light:                       #ffcc00;
+@brand-primary-light-2:                     #ffdf88;
+@brand-primary-light-3:                     #fff3d5;
 @brand-primary-faded:                         fade(@brand-primary, 60%);
 @brand-secondary-dark-1:                    @dark-brown;
 @brand-secondary-dark-2:                    @solid-brown;
@@ -35,6 +37,7 @@
 @brand-tertiary:                            #ee7023;
 @brand-accent:                              #31a3ae;
 @brand-accent-links:                        #257886;
+@brand-accent-disabled:                     #98d0d6;
 
 
 /* Background Colors */
@@ -64,24 +67,33 @@
 @brand-default:                             "Arial", sans-serif;
 
 /* Button colors */
-@executive-disabled-bg:                     #98d0d6;
-@guiding-disabled-bg:                       #98d0d6;
+@primary-disabled-bg:                       @brand-primary-light-3;
+@secondary-disabled-bg:                     #e3d1c3;
+@destructive-disabled-bg:                   #f9ded3;
 
-@btn-executive-color:                       @white;
-@btn-executive-bg:                          @brand-accent;
-@btn-executive-disabled-color:              @white;
-@btn-executive-disabled-bg:                 @executive-disabled-bg;
+@btn-primary-color:                         @brand-secondary;
+@btn-primary-bg:                            @brand-primary;
+@btn-primary-hover:                         @brand-primary-light-2;
+@btn-primary-disabled-color:                @white;
+@btn-primary-disabled-bg:                   @primary-disabled-bg;
 
-@btn-guiding-color:                         @white;
-@btn-guiding-bg:                            @brand-accent;
-@btn-guiding-disabled-color:                @white;
-@btn-guiding-disabled-bg:                   @guiding-disabled-bg;
+@btn-secondary-color:                       @white;
+@btn-secondary-bg:                          @brand-secondary;
+@btn-secondary-hover:                       @brand-secondary-light-2;
+@btn-secondary-disabled-color:              @white;
+@btn-secondary-disabled-bg:                 @secondary-disabled-bg;
 
-@btn-link-color:                            @brand-accent-links;
-@btn-link-disabled-color:                   @list-gray;
+@btn-destructive-color:                     @white;
+@btn-destructive-bg:                        @brand-error;
+@btn-destructive-hover:                     #e07088;
+@btn-destructive-disabled-color:            @white;
+@btn-destructive-disabled-bg:               @destructive-disabled-bg;
+
+@btn-link-color:                            @brand-secondary;
+@btn-link-disabled-color:                   @brand-secondary-light-3;
 
 /* Other colors */
-@yellow-faded:                              #FBDD91;
-@green-syntax-highlight:                    #99CC66;
-@blue-syntax-highlight:                     #43D0DD;
-@yellow-syntax-highlight:                   #FFF3D5;
+@yellow-faded:                              #fbdd91;
+@green-syntax-highlight:                    #99cc66;
+@blue-syntax-highlight:                     #43d0dd;
+@yellow-syntax-highlight:                   @brand-primary-light-3;

@@ -14,8 +14,8 @@ const CustomersDetailedDialog = ({ customer }) => (
                 <p>Are you sure you want to permanently delete the customer {customer.id} {customer.firstName} {customer.lastName}?</p>
             </div>
             <footer className="dialog-footer">
-                <button className="btn btn-guiding" type="button" data-dialog-close="true">Cancel</button>
-                <button className="btn btn-executive" type="button">Delete</button>
+                <button className="btn btn-secondary" type="button" data-dialog-close="true">Cancel</button>
+                <button className="btn btn-primary" type="button">Delete</button>
             </footer>
         </section>
     </div>

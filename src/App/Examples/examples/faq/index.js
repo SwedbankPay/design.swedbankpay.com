@@ -58,7 +58,7 @@ const FAQSearch = () => (
                     prefixValue="search"
                     postfixType="button"
                     postfixValue="Find"
-                    postfixBtnColor="executive"
+                    postfixBtnColor="primary"
                 />
             </div>
         </div>
@@ -92,7 +92,7 @@ const FAQSheet = () => {
                     <textarea type="textarea" className="form-control h-25" id="settings-description"></textarea>
                 </div>
             </div>
-            <button type="button" className="btn btn-executive" onClick={() => sendQuestion("faq-sheet")}>
+            <button type="button" className="btn btn-primary" onClick={() => sendQuestion("faq-sheet")}>
                 Send
             </button>
         </SheetComponent>
@@ -117,7 +117,7 @@ const FAQCard = () => (
                         </div>
                     </div>
                     <p>Send in a question to get help from our support team</p>
-                    <button type="button" className="btn btn-executive btn-block" data-sheet-open="faq-sheet">
+                    <button type="button" className="btn btn-primary btn-block" data-sheet-open="faq-sheet">
                         Send in a question
                     </button>
                 </div>

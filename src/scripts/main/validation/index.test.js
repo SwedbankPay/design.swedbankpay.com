@@ -42,7 +42,7 @@ describe("scripts: validation", () => {
                     <input type="email" className="form-control" id="validation-email" placeholder="Enter your email" required/>
                 </div>
             </div>
-            {submitBtn ? <button className="btn btn-executive" type="submit" data-disable-invalid>Submit</button> : null}
+            {submitBtn ? <button className="btn btn-primary" type="submit" data-disable-invalid>Submit</button> : null}
         </form>
     );
 
