@@ -9,14 +9,14 @@ exports[`GettingStarted: JavascriptDocs AboutInit renders 1`] = `
   </h2>
   <p>
     Our script runs 
-    <DgScript
-      component="script"
-      func="initAll"
+    <CodeTags
+      code="dg.script.initAll();"
+      type="secondary"
     />
      on DOMContentLoaded making it so you have to run 
-    <DgScript
-      component="<component_name>"
-      func="init"
+    <CodeTags
+      code="dg.<component_name>.init();"
+      type="secondary"
     />
      manually when a component is rendered after the event has fired.
   </p>
@@ -25,9 +25,9 @@ exports[`GettingStarted: JavascriptDocs AboutInit renders 1`] = `
   </h3>
   <p>
     To initialize components use 
-    <DgScript
-      component="<component_name>"
-      func="init"
+    <CodeTags
+      code="dg.<component_name>.init();"
+      type="secondary"
     />
     . If the function is called without arguments it will target all components with class 
     <CodeTags
@@ -64,9 +64,9 @@ exports[`GettingStarted: JavascriptDocs renders 1`] = `
     className="lead"
   >
     How to utilize our 
-    <DgScript
-      component="<component_name>"
-      func="init"
+    <CodeTags
+      code="dg.<component_name>.init();"
+      type="secondary"
     />
      function.
   </p>
