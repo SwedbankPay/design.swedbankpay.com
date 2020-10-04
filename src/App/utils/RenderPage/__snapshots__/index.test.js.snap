@@ -125,11 +125,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             "title": "Buttons",
           },
           Object {
-            "componentPath": "components/Card",
-            "path": "/components/card",
-            "title": "Card",
-          },
-          Object {
             "componentPath": "components/Cards",
             "path": "/components/cards",
             "title": "Cards",

@@ -44,11 +44,11 @@ module.exports = [
                 path: "/components/buttons",
                 componentPath: "components/Buttons"
             },
-            {
-                title: "Card",
-                path: "/components/card",
-                componentPath: "components/Card"
-            },
+            // {
+            //     title: "Card",
+            //     path: "/components/card",
+            //     componentPath: "components/Card"
+            // },
             {
                 title: "Cards",
                 path: "/components/cards",
