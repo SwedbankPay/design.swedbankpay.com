@@ -26,7 +26,7 @@ const _createActionList = actionListQuery => {
     return actionListObject;
 };
 
-// This is the focus
+// ----------This is the focus---------------------
 const init = id => {
     if (id) {
         const actionList = document.getElementById(id);
