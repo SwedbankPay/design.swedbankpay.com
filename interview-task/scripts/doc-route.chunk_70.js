@@ -1,2 +1,2 @@
 (window.webpackJsonp=window.webpackJsonp||[]).push([[96],{485:function(e,n,t){"use strict";t.r(n);var o=t(1),a=t.n(o),s=t(378);n.default=function(){return a.a.createElement(s.DocContainer,{docToc:!0},a.a.createElement("p",{className:"lead"},"Getting started with the ","Swedbank Pay"," Resources. Resources and guidelines on how to use the provided resources can be found here."))}}}]);
-//# sourceMappingURL=doc-route.chunk_70.js.map?569ab0dddffd336fabc7
+//# sourceMappingURL=doc-route.chunk_70.js.map?d28f82d0f36037ff60ec
