@@ -1,0 +1,28 @@
+@cards-brown: #512b2b;
+@cards-white: #ffffff;
+@cards-yellow: #fdc129;
+
+
+.cards {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    position: relative;
+    padding: 2.25rem 1.5rem 0;
+    margin: 2rem 0 1rem;
+    border-radius: 4px;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+    color: @cards-brown;
+    background-color: @cards-white;
+    cursor: pointer;
+
+    .cards-content {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.25rem;
+
+        .h4 {
+            margin-top: 0;
+        }
+    }
+}

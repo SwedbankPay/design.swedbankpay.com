@@ -50,6 +50,11 @@ module.exports = [
                 componentPath: "components/Card"
             },
             {
+                title: "Cards",
+                path: "/components/cards",
+                componentPath: "components/Cards"
+            },
+            {
                 title: "Charts",
                 path: "/components/charts",
                 componentPath: "components/Charts"
