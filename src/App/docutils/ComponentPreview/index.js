@@ -170,18 +170,32 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
             tabs.init(this.props.showCasePanelAdvanced.tabsId);
         }
 
+        componentDidUpdate (prevProps, prevState) {
+            if (prevState.activeTab !== this.state.activeTab) {
+                const showcasePanel = document.getElementById(this.props.showCasePanelAdvanced.id);
+
+                showcasePanel.querySelectorAll("input[type=checkbox]").forEach(checkbox => checkbox.checked = false);
+                showcasePanel.querySelectorAll("select[id]").forEach(dropdown => dropdown.value = 0);
+                showcasePanel.querySelectorAll(".radio").forEach(radio => radio.querySelector("input").checked = false);
+
+                const defaultRadios = [...showcasePanel.querySelectorAll(".radio")].filter(radio => radio.querySelector("input").id.includes("default"));
+
+                if (defaultRadios.length > 0) {
+                    defaultRadios.map(radio => radio.querySelector("input").checked = true);
+                } else {
+                    showcasePanel.querySelectorAll(".radio").forEach(radio => radio.querySelector("input").checked = radio.querySelector("input").value === "0");
+                }
+
+            }
+        }
+
         setActiveTab (e, i) {
-            const showcasePanel = document.getElementById(this.props.showCasePanelAdvanced.id);
 
             e.preventDefault();
 
             this.setState(prevState => ({ ...prevState,
                 activeTab: this.props.showCasePanelAdvanced.elements[i],
                 activeOptions: this.props.showCasePanelAdvanced.elements[i].activeOptions ? [...this.props.showCasePanelAdvanced.elements[i].activeOptions] : [] }));
-
-            showcasePanel.querySelectorAll("input[type=checkbox]").forEach(checkbox => checkbox.checked = false);
-            showcasePanel.querySelectorAll("select[id]").forEach(dropdown => dropdown.value = 0);
-            showcasePanel.querySelectorAll(".radio").forEach(radio => radio.querySelector("input").checked = (radio.querySelector("input").value === "0"));
 
         }
 
@@ -230,15 +244,17 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                         <div className="d-flex">
                             <div className="flex-column flex-fill">
                                 <div className="component-preview">
-                                    {cloneElement(this.state.activeTab.component,
-                                        this.state.activeOptions.reduce((acc, currentOption) => ({
-                                            ...acc,
-                                            ...currentOption.value
-                                        }), {})
-                                    )}
+                                    <div className={`component-preview-content${this.state.activeTab.altBackground ? " component-preview-alt-background" : ""}`}>
+                                        {cloneElement(this.state.activeTab.component,
+                                            this.state.activeOptions.reduce((acc, currentOption) => ({
+                                                ...acc,
+                                                ...currentOption.value
+                                            }), {})
+                                        )}
+                                    </div>
                                 </div>
                                 <div className="component-description">
-                                    <h3>{this.state.activeTab.title}</h3>
+                                    {this.state.activeTab.title && <h3>{this.state.activeTab.title}</h3>}
                                     {this.state.activeTab.description}
                                     {this.state.activeOptions
                                         .filter(currentOption => currentOption.description)
@@ -291,12 +307,12 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                                                 )}>
                                                     <input
                                                         type="radio"
-                                                        id={radio.id + val.name.replace(/\s/g, "")}
+                                                        id={`${radio.id + val.name.replace(/\s/g, "")}${val.default ? "_default" : ""}`}
                                                         name={radio.id + radio.title.replace(/\s/g, "")}
                                                         value={j}
-                                                        defaultChecked={j === 0}
+                                                        defaultChecked={val.default}
                                                     />
-                                                    <label htmlFor={radio.id + val.name.replace(/\s/g, "")}>{val.name}</label>
+                                                    <label htmlFor={`${radio.id + val.name.replace(/\s/g, "")}${val.default ? "_default" : ""}`}>{val.name}</label>
                                                 </div>
                                             ))}
                                         </div>

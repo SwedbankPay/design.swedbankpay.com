@@ -1,5 +1,7 @@
 import React from "react";
 
+import LogotypeComponent from "@components/Logotype";
+
 const BASENAME = process.env.basename;
 
 export const logoBlack = {
@@ -8,7 +10,7 @@ export const logoBlack = {
     elements: [
         {
             tab: "Vertical",
-            component: <img src={`${BASENAME}img/swedbankpay-logo-v.svg`} alt="Swedbank Pay horizontal logo"/>,
+            component: <LogotypeComponent src={`${BASENAME}img/swedbankpay-logo-v.svg`} alt="Swedbank Pay vertical logo" type="vertical" />,
             options: {
                 radio: [
                     {
@@ -16,34 +18,33 @@ export const logoBlack = {
                         title: "Sizes",
                         values: [
                             {
-                                name: "Small (24px)",
+                                name: "Smallest",
+                                value: {
+                                    size: "xs"
+                                },
+                                description: <>
+                                    <h4>Important</h4>
+                                    <p>This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.</p>
+                                </>
+                            },
+                            {
+                                name: "Small",
+                                default: true,
                                 value: {
                                     size: "sm"
-                                },
-                                description: <>
-                                    <h4>Small</h4>
-                                    Hello
-                                </>
+                                }
                             },
                             {
-                                name: "Medium (32px)",
+                                name: "Medium",
                                 value: {
                                     size: "md"
-                                },
-                                description: <>
-                                    <h4>Medium</h4>
-                                    Hello
-                                </>
+                                }
                             },
                             {
-                                name: "Large (40px)",
+                                name: "Large",
                                 value: {
                                     size: "lg"
-                                },
-                                description: <>
-                                    <h4>Large</h4>
-                                    Hello
-                                </>
+                                }
                             }
                         ]
                     }
@@ -54,19 +55,15 @@ export const logoBlack = {
                     id: "size_radio",
                     value: {
                         size: "sm"
-                    },
-                    description: <>
-                        <h4>Small</h4>
-                        Hello
-                    </>
+                    }
                 }
             ],
             title: "Vertical logo",
-            description: "The vertical logo (with black text) is the primary logo is the primary logo and should always be considered before moving on to another version"
+            description: "The vertical logo (with black text) is the primary logo is the primary logo and should always be considered before moving on to another version."
         },
         {
             tab: "Horizontal",
-            component: <img src={`${BASENAME}img/swedbankpay-logo.svg`} alt="Swedbank Pay vertical logo"/>,
+            component: <LogotypeComponent src={`${BASENAME}img/swedbankpay-logo-h.svg`} alt="Swedbank Pay horizontal logo" type="horizontal" />,
             options: {
                 radio: [
                     {
@@ -74,19 +71,154 @@ export const logoBlack = {
                         title: "Sizes",
                         values: [
                             {
-                                name: "Small (24px)",
+                                name: "Smallest",
+                                value: {
+                                    size: "xs"
+                                },
+                                description: <>
+                                    <h4>Important</h4>
+                                    <p>This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.</p>
+                                </>
+                            },
+                            {
+                                name: "Small",
+                                default: true,
                                 value: {
                                     size: "sm"
                                 }
                             },
                             {
-                                name: "Medium (32px)",
+                                name: "Medium",
                                 value: {
                                     size: "md"
                                 }
                             },
                             {
-                                name: "Large (40px)",
+                                name: "Large",
+                                value: {
+                                    size: "lg"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            activeOptions: [
+                {
+                    id: "size_radio",
+                    value: {
+                        size: "sm"
+                    }
+                }
+            ],
+            title: "Horizontal logo",
+            description: <>
+                The horizontal logo (with black text) is only used if the vertical primary logotype can’t be used. Reasons for using the horizontal logo might be:
+                <ul className="list list-bullet">
+                    <li>The primary logo font is too similar in size to other fonts close by</li>
+                    <li>The primary logo is too small/wrong format compared to other logotypes in the same context</li>
+                </ul>
+            </>
+        }
+    ]
+};
+
+export const logoWhite = {
+    id: "logoWhite",
+    tabsId: "logoWhiteTabs",
+    elements: [
+        {
+            tab: "Vertical",
+            component: <LogotypeComponent src={`${BASENAME}img/swedbankpay-logo-v-neg.svg`} alt="Swedbank Pay vertical logo" type="vertical" />,
+            altBackground: true,
+            options: {
+                radio: [
+                    {
+                        id: "size_radio_white",
+                        title: "Sizes",
+                        values: [
+                            {
+                                name: "Smallest",
+                                value: {
+                                    size: "xs"
+                                },
+                                description: <>
+                                    <h4>Important</h4>
+                                    <p>This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.</p>
+                                </>
+                            },
+                            {
+                                name: "Small",
+                                default: true,
+                                value: {
+                                    size: "sm"
+                                }
+                            },
+                            {
+                                name: "Medium",
+                                value: {
+                                    size: "md"
+                                }
+                            },
+                            {
+                                name: "Large",
+                                value: {
+                                    size: "lg"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            activeOptions: [
+                {
+                    id: "size_radio_white",
+                    value: {
+                        size: "sm"
+                    }
+                }
+            ],
+            title: "Vertical logo",
+            description: <p>
+                Should only be used on Swedbank Pay’s primary color (Yellow) and on dark backgrounds.
+                The vertical logo (with black text) is the primary logo is the primary logo and should always be considered before moving on to another version.
+            </p>
+        },
+        {
+            tab: "Horizontal",
+            component: <LogotypeComponent src={`${BASENAME}img/swedbankpay-logo-h-neg.svg`} alt="Swedbank Pay horizontal logo" type="horizontal" />,
+            altBackground: true,
+            options: {
+                radio: [
+                    {
+                        id: "size_radio_white",
+                        title: "Sizes",
+                        values: [
+                            {
+                                name: "Smallest",
+                                value: {
+                                    size: "xs"
+                                },
+                                description: <>
+                                    <h4>Important</h4>
+                                    <p>This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.</p>
+                                </>
+                            },
+                            {
+                                name: "Small",
+                                default: true,
+                                value: {
+                                    size: "sm"
+                                }
+                            },
+                            {
+                                name: "Medium",
+                                value: {
+                                    size: "md"
+                                }
+                            },
+                            {
+                                name: "Large",
                                 value: {
                                     size: "lg"
                                 }
@@ -96,7 +228,10 @@ export const logoBlack = {
                 ]
             },
             title: "Horizontal logo",
-            description: "Use a primary button as the main call to action on a page. Avoid using multiple default buttons on a single page. Having more than one main call to action reduces their impact, and makes it harder for users to know what to do next."
+            description: <p>
+                Should only used on Swedbank Pay’s primary color (Yellow) and on dark backgrounds.
+                The vertical logo (with black text) is the primary logo is the primary logo and should always be considered before moving on to another version.
+            </p>
         }
     ]
 };

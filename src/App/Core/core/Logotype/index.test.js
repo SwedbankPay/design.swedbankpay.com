@@ -1,15 +1,15 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Logos, { OurFavicon, ResourcesLogotype, OverviewLogos, HorizontalLogo, VerticalLogo } from "./index";
+import Logotype, { OurFavicon, HorizontalLogo, Download, LogoBlack, LogoWhite, SpacingZone, MisuseLogo, LogotypeBackgrounds, Favicon } from "./index";
 
-describe("Core: Favicons", () => {
+describe("Core: Logotype", () => {
     it("is defined", () => {
-        expect(Logos).toBeDefined();
+        expect(Logotype).toBeDefined();
     });
 
     it("renders", () => {
-        const wrapper = shallow(<Logos />);
+        const wrapper = shallow(<Logotype />);
 
         expect(wrapper).toMatchSnapshot();
     });
@@ -21,30 +21,6 @@ describe("Core: Favicons", () => {
 
         it("renders", () => {
             const wrapper = shallow(<OurFavicon />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("ResourcesLogotype", () => {
-        it("is defined", () => {
-            expect(ResourcesLogotype).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<ResourcesLogotype />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("OverviewLogos", () => {
-        it("is defined", () => {
-            expect(OverviewLogos).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<OverviewLogos />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -62,13 +38,85 @@ describe("Core: Favicons", () => {
         });
     });
 
-    describe("VerticalLogo", () => {
+    describe("Download", () => {
         it("is defined", () => {
-            expect(VerticalLogo).toBeDefined();
+            expect(Download).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<VerticalLogo />);
+            const wrapper = shallow(<Download />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("LogoBlack", () => {
+        it("is defined", () => {
+            expect(LogoBlack).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<LogoBlack />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("LogoWhite", () => {
+        it("is defined", () => {
+            expect(LogoWhite).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<LogoWhite />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("SpacingZone", () => {
+        it("is defined", () => {
+            expect(SpacingZone).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<SpacingZone />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("MisuseLogo", () => {
+        it("is defined", () => {
+            expect(MisuseLogo).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<MisuseLogo />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("LogotypeBackgrounds", () => {
+        it("is defined", () => {
+            expect(LogotypeBackgrounds).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<LogotypeBackgrounds />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("Favicon", () => {
+        it("is defined", () => {
+            expect(Favicon).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<Favicon />);
 
             expect(wrapper).toMatchSnapshot();
         });

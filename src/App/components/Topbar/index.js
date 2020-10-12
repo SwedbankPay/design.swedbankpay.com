@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import swedbankpayLogo from "@src/img/swedbankpay/logo/swedbankpay-logo.svg";
+import swedbankpayLogo from "@src/img/swedbankpay/logo/swedbankpay-logo-h.svg";
 import payexLogo from "@src/img/payex/logo/payex-logo.svg";
 
 import SidebarComponent from "@components/Sidebar";
@@ -63,9 +63,9 @@ const TopbarLogo = ({ png }) => (
     <>
         <a className={`topbar-logo${png ? " topbar-logo-png" : ""}`} href="/" onClick={e => e.preventDefault()}>{"\n"}
             {(brand === "swedbankpay" && png) ?
-                <img src={`${process.env.basename}img/${brand}-logo.png`} alt={`${brand}-logo`}/>
+                <img src={`${process.env.basename}img/${brand}-logo.png`} alt={`${brand}-logo`} className="logotype-horizontal logotype-md"/>
                 :
-                <img src={isDev ? devLogo : `${process.env.basename}img/${brand}-logo.svg`} alt={`${brand}-logo`}/>
+                <img src={isDev ? devLogo : `${process.env.basename}img/${brand}-logo.svg`} alt={`${brand}-logo`} className="logotype-horizontal logotype-md"/>
             }{"\n"}
         </a>{"\n"}
     </>
