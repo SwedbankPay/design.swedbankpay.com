@@ -18,7 +18,7 @@ const Overview = () => (
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="row">
-                <div className="col-md-4 col-sm-6">
+                <div className="col-md-4 col-sm-6">{"\n"}
                     <CardsComponent
                         titleTxt="Card title"
                         type="primary"
@@ -26,7 +26,7 @@ const Overview = () => (
                         footerTxt="Footer text"
                     />
                 </div>
-                <div className="col-md-4 col-sm-6">
+                <div className="col-md-4 col-sm-6">{"\n"}
                     <CardsComponent
                         titleTxt="Card title"
                         type="secondary"
@@ -34,7 +34,7 @@ const Overview = () => (
                         footerTxt="Footer text"
                     />
                 </div>
-                <div className="col-md-4 col-sm-6">
+                <div className="col-md-4 col-sm-6">{"\n"}
                     <CardsComponent
                         titleTxt="Card title"
                         type="tertiary"
@@ -102,7 +102,7 @@ const Overview = () => (
                 text="This paragraph contains some text related to this card."
                 footerTxt="Footer text"
                 horizontal
-                icon="01"
+                icon={<>01</>}
             />
             <CardsComponent
                 titleTxt="Card title"
@@ -110,7 +110,7 @@ const Overview = () => (
                 text="This paragraph contains some text related to this card."
                 footerTxt="Footer text"
                 horizontal
-                icon="01"
+                icon={<>01</>}
             />
             <CardsComponent
                 titleTxt="Card title"
@@ -118,7 +118,7 @@ const Overview = () => (
                 text="This paragraph contains some text related to this card."
                 footerTxt="Footer text"
                 horizontal
-                icon="01"
+                icon={<>01</>}
             />
         </ComponentPreview>
 
