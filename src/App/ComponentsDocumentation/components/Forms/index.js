@@ -129,7 +129,7 @@ const Validation = () => (
                         />
                     </div>
                     <div className="col-md-2">
-                        <button className="btn btn-executive" type="submit">Submit</button>
+                        <button className="btn btn-primary" type="submit">Submit</button>
                     </div>
                 </div>
             </form>
@@ -162,7 +162,7 @@ const Validation = () => (
                         />
                     </div>
                     <div className="col-md-2">
-                        <button className="btn btn-executive mb-4" type="submit">Submit</button>
+                        <button className="btn btn-primary mb-4" type="submit">Submit</button>
                     </div>
                 </div>
             </form>
@@ -188,7 +188,7 @@ const Validation = () => (
                         />
                     </div>
                     <div className="col-md-2">
-                        <button className="btn btn-executive" type="submit" data-disable-invalid="">Submit</button>
+                        <button className="btn btn-primary" type="submit" data-disable-invalid="">Submit</button>
                     </div>
                 </div>
             </form>
