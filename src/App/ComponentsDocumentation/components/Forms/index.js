@@ -112,18 +112,26 @@ const Validation = () => (
         <p>Validates against <CodeTags type="secondary" code="required" /> and <CodeTags type="secondary" code="pattern" />. Using <CodeTags type="secondary" code="pattern" /> overrides default patterns.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <form noValidate data-validate="">
-                <InputGroup
-                    id="validation-name-1"
-                    type="text"
-                    label="Name"
-                />
-                <InputGroup
-                    id="validation-email-1"
-                    type="email"
-                    label="Email"
-                    placeholder="name@mail.com"
-                />{"\n"}
-                <button className="btn btn-primary" type="submit">Submit</button>
+                <div className="row d-flex align-items-center">
+                    <div className="col-md-5">
+                        <InputGroup
+                            id="validation-name-1"
+                            type="text"
+                            label="Name"
+                        />
+                    </div>
+                    <div className="col-md-5">
+                        <InputGroup
+                            id="validation-email-1"
+                            type="email"
+                            label="Email"
+                            placeholder="name@mail.com"
+                        />
+                    </div>
+                    <div className="col-md-2">
+                        <button className="btn btn-executive" type="submit">Submit</button>
+                    </div>
+                </div>
             </form>
         </ComponentPreview>
 
@@ -138,19 +146,25 @@ const Validation = () => (
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <form action="#" noValidate data-validate="">
-                <InputGroup
-                    required
-                    id="validation-email-2"
-                    type="email"
-                    label="Email"
-                    placeholder="name@mail.com"
-                    prefixType="icon"
-                    prefixValue="email"
-                    helpBlock
-                    successMessage="Right!"
-                    errorMessage="Wrong!"
-                />{"\n"}
-                <button className="btn btn-primary" type="submit">Submit</button>
+                <div className="row d-flex align-items-center">
+                    <div className="col-md-5">
+                        <InputGroup
+                            required
+                            id="validation-email-2"
+                            type="email"
+                            label="Email"
+                            placeholder="name@mail.com"
+                            prefixType="icon"
+                            prefixValue="email"
+                            helpBlock
+                            successMessage="Right!"
+                            errorMessage="Wrong!"
+                        />
+                    </div>
+                    <div className="col-md-2">
+                        <button className="btn btn-executive mb-4" type="submit">Submit</button>
+                    </div>
+                </div>
             </form>
         </ComponentPreview>
 
@@ -159,18 +173,24 @@ const Validation = () => (
         <p><b>NOTE:</b> For this to work you also need the <CodeTags type="secondary" code="validate" /> attribute to be present in the <CodeTags type="primary" code={"<form>"} /> tag.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <form action="#" noValidate data-validate="">
-                <InputGroup
-                    required
-                    id="validation-email-3"
-                    type="email"
-                    label="Email"
-                    placeholder="name@mail.com"
-                    prefixType="icon"
-                    prefixValue="email"
-                    successMessage="Right!"
-                    errorMessage="Wrong!"
-                />{"\n"}
-                <button className="btn btn-primary" type="submit" data-disable-invalid="">Submit</button>
+                <div className="row d-flex align-items-center">
+                    <div className="col-md-5">
+                        <InputGroup
+                            required
+                            id="validation-email-3"
+                            type="email"
+                            label="Email"
+                            placeholder="name@mail.com"
+                            prefixType="icon"
+                            prefixValue="email"
+                            successMessage="Right!"
+                            errorMessage="Wrong!"
+                        />
+                    </div>
+                    <div className="col-md-2">
+                        <button className="btn btn-executive" type="submit" data-disable-invalid="">Submit</button>
+                    </div>
+                </div>
             </form>
         </ComponentPreview>
     </>
