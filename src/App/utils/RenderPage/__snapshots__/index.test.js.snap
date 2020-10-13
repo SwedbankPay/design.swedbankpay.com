@@ -54,9 +54,9 @@ exports[`Utilities: RenderPage renders 1`] = `
             "title": "Color",
           },
           Object {
-            "componentPath": "core/Logos",
-            "path": "/core/logos",
-            "title": "Logos",
+            "componentPath": "core/Logotype",
+            "path": "/core/logotype",
+            "title": "Logotype",
           },
           Object {
             "componentPath": "core/Grid",

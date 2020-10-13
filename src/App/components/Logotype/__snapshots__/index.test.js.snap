@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Logotype renders image with class horizontal and md when size='md' and type='vertical' is provided 1`] = `
+<img
+  className="logotype-horizontal logotype-md"
+  src="/test/test.img"
+/>
+`;
+
+exports[`Component: Logotype renders image with class vertical and sm when no size is provided and type='vertical' is provided 1`] = `
+<img
+  className="logotype-vertical logotype-sm"
+  src="/test/test.img"
+/>
+`;
+
+exports[`Component: Logotype throws an error if src is not defined 1`] = `
+<img
+  className="logotype-vertical logotype-sm"
+/>
+`;
+
+exports[`Component: Logotype throws an error if type is not defined 1`] = `
+<img
+  className="logotype-undefined logotype-sm"
+  src="/test/test.img"
+/>
+`;

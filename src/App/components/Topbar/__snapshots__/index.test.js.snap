@@ -17,6 +17,7 @@ exports[`Component: Topbar -  logo prevents default when clicked 1`] = `
 
         <img
           alt="TESTBRAND-logo"
+          className="logotype-horizontal logotype-md"
           src="/TEST/img/TESTBRAND-logo.svg"
         />
         
@@ -48,6 +49,7 @@ exports[`Component: Topbar -  props logout it prevents default when clicked 1`] 
 
         <img
           alt="TESTBRAND-logo"
+          className="logotype-horizontal logotype-md"
           src="/TEST/img/TESTBRAND-logo.svg"
         />
         
@@ -104,6 +106,7 @@ exports[`Component: Topbar -  props logout renders logout link and adds topbar-l
 
         <img
           alt="TESTBRAND-logo"
+          className="logotype-horizontal logotype-md"
           src="/TEST/img/TESTBRAND-logo.svg"
         />
         
@@ -213,6 +216,7 @@ exports[`Component: Topbar -  props topbarContent menu links prevents default wh
 
         <img
           alt="TESTBRAND-logo"
+          className="logotype-horizontal logotype-md"
           src="/TEST/img/TESTBRAND-logo.svg"
         />
         
@@ -401,6 +405,7 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
 
         <img
           alt="TESTBRAND-logo"
+          className="logotype-horizontal logotype-md"
           src="/TEST/img/TESTBRAND-logo.svg"
         />
         
@@ -957,6 +962,7 @@ exports[`Component: Topbar -  props topbarContent renders a topbar menu without 
 
         <img
           alt="TESTBRAND-logo"
+          className="logotype-horizontal logotype-md"
           src="/TEST/img/TESTBRAND-logo.svg"
         />
         
@@ -1123,6 +1129,7 @@ exports[`Component: Topbar -  props topbarContent renders a topbar-menu-button w
 
         <img
           alt="TESTBRAND-logo"
+          className="logotype-horizontal logotype-md"
           src="/TEST/img/TESTBRAND-logo.svg"
         />
         
@@ -1311,6 +1318,7 @@ exports[`Component: Topbar -  props topbarContent renders topbar-link-container 
 
         <img
           alt="TESTBRAND-logo"
+          className="logotype-horizontal logotype-md"
           src="/TEST/img/TESTBRAND-logo.svg"
         />
         
@@ -1523,6 +1531,7 @@ exports[`Component: Topbar -  props topbarContent renders topbar-link-container 
 
         <img
           alt="TESTBRAND-logo"
+          className="logotype-horizontal logotype-md"
           src="/TEST/img/TESTBRAND-logo.svg"
         />
         
@@ -1657,6 +1666,7 @@ exports[`Component: Topbar -  props wide renders a topbar with the given breakpo
 
         <img
           alt="TESTBRAND-logo"
+          className="logotype-horizontal logotype-md"
           src="/TEST/img/TESTBRAND-logo.svg"
         />
         
