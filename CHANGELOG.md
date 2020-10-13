@@ -77,6 +77,8 @@
     - Added example using status in Status documentation
   - Buttons
     - Changed guidelines content and presentation
+  - Forms
+    - Updated documentation, moved dropdown menu to Forms
 - Status
   - Removed default status
   - Changed color of success status
@@ -92,6 +94,8 @@
   - Checkboxes
     - Added visual evident hover and focus styling
     - Made using radio buttons without label content possible
+  - Input/Text fields
+    - Fixed issue with error icon not meshing well with the text underneath
 - Tabs
   - Changed styling of tabs
 - Slab
