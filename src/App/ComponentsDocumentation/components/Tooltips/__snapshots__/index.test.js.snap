@@ -85,7 +85,7 @@ exports[`Components: Tooltip Overview renders 1`] = `
       
 
       <button
-        className="btn btn-executive"
+        className="btn btn-primary"
         data-tooltip="Payment capture is the process by which payments are secured once the payment has been authorized by the customer!"
         data-tooltip-position="right"
         type="button"

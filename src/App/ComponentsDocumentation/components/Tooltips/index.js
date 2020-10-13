@@ -88,7 +88,7 @@ const ExtendedUsage = () => (
                     </span>{"\n"}
                 </i>{"\n"}
                 <button
-                    className="btn btn-executive"
+                    className="btn btn-primary"
                     type="button"
                     data-tooltip=""
                     data-tooltip-position="bottom"

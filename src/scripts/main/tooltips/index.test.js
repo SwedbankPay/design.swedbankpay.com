@@ -8,7 +8,7 @@ describe("scripts: tooltips", () => {
 
     const tooltipComponent = id => (<button
         id={id}
-        className="btn btn-executive"
+        className="btn btn-primary"
         type="button"
         data-tooltip=""
         data-tooltip-position="bottom"
