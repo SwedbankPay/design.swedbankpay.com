@@ -106,3 +106,6 @@
   - Added destructive button
   - Changed color of buttons
   - Renamed buttons
+- Tooltips
+  - Changed tooltips styling
+  - Added extended tooltips that adjust when falling out of the viewport
