@@ -109,3 +109,6 @@
 - Tooltips
   - Changed tooltips styling
   - Added extended tooltips that adjust when falling out of the viewport
+- Logotype
+  - Merged Logos and Logotype into Logotype under Core
+  - Updated preview of Logotype examples and updated documentation
