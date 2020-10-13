@@ -45,8 +45,8 @@ module.exports = [
                 componentPath: "components/Buttons"
             },
             {
-                title: "Card",
-                path: "/components/card",
+                title: "Cards",
+                path: "/components/cards",
                 componentPath: "components/Card"
             },
             {

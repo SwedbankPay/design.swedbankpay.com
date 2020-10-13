@@ -185,6 +185,13 @@ const Overview = () => (
                 </div>
             </div>
         </ComponentPreview>
+
+        <h3>{"Dos and dont's"}</h3>
+        <div className="slab slab-plain slab-border-success">
+            <h4>Do</h4>
+            When presenting a group of cards, make sure their color match and have the same size and text length
+            
+        </div>
     </>
 );
 
