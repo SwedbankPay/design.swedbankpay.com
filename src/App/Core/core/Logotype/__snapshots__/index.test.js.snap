@@ -505,7 +505,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
           Resize
         </h4>
         <p>
-          Do not disort or wrap the logo in any way.
+          Do not distort or wrap the logo in any way.
         </p>
       </div>
       <div
@@ -673,7 +673,7 @@ exports[`Core: Logotype OurFavicon renders 1`] = `
     showCasePanel={true}
   >
     <img
-      alt="Swedbank Pay favicon"
+      alt="PayEx favicon"
       src="/TEST/icons/android-chrome-96x96.png"
     />
   </ComponentPreview>

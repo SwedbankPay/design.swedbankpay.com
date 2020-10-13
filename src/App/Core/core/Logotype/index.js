@@ -70,7 +70,7 @@ const MisuseLogo = () => (
                         <img src={`${BASENAME}img/documentation/logotype/resize_logo.png`} className="h-100"/>
                     </div>
                     <h4>Resize</h4>
-                    <p>Do not disort or wrap the logo in any way.</p>
+                    <p>Do not distort or wrap the logo in any way.</p>
                 </div>
                 <div className="logotype-misuse-donts">
                     <div className="logotype-misuse-donts-img">
@@ -212,7 +212,7 @@ const OurFavicon = () => (
     <>
         <h2 id="our-favicon">Our favicon</h2>
         <ComponentPreview language="html" showCasePanel>
-            <img src={`${BASENAME}icons/android-chrome-96x96.png`} alt="Swedbank Pay favicon"/>
+            <img src={`${BASENAME}icons/android-chrome-96x96.png`} alt="PayEx favicon"/>
         </ComponentPreview>
         <p>To use our favicons download the zip-file below and extract it to the root of your build-folder. Insert the code below in the <CodeTags type="primary" code={"<head>"} /> tag of your HTML documents and you are ready to go.</p>
         <p>You should also rename the <CodeTags type="secondary" code="content" /> of
@@ -288,7 +288,6 @@ const Logotype = () => (
             <DocContainer docToc>
                 <HorizontalLogo />
                 <OurFavicon />
-                <Download />
             </DocContainer>
         }
     </>
