@@ -25,7 +25,6 @@ module.exports = (env, argv) => {
     const isGitHubActions = env && env.github_actions === "true";
     const baseUrl = env && env.baseUrl ? env.baseUrl : null;
     const basename = env && env.basename ? `/${env.basename}/` : "/";
-    const infoVersion = env && env.info_version ? env.info_version : "LOCAL_DEV";
 
     const config = {
         entry: {
@@ -218,10 +217,7 @@ module.exports = (env, argv) => {
             new HtmlWebpackPlugin({
                 template: "./src/index.html",
                 hash: true,
-                title: `${brandTitle} DesignGuide`,
-                meta: {
-                    "informational-version": infoVersion
-                }
+                title: `${brandTitle} DesignGuide`
             }),
             new MiniCssExtractPlugin({
                 filename: "styles/[name].css"
