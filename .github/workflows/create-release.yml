@@ -13,30 +13,17 @@ jobs:
         brand: ["payex", "swedbankpay"]
     steps:
       - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
 
       # Set brand specific variables
       - name: Environment variables
         id: variables
-        run: ./.github/scripts/variables.sh
-        env:
-          BRAND: ${{ matrix.brand }}
+        run: ./.github/scripts/variables.sh --brand ${{ matrix.brand }} --ref ${{ github.ref }}
 
       # Add sentry token
       - name: Sentry token
         run: ./.github/scripts/sentry.sh
         env:
           TOKEN: ${{ secrets.SENTRY_TOKEN }}
-
-      - name: Install GitVersion
-        uses: gittools/actions/gitversion/setup@v0.9.4
-        with:
-          versionSpec: '5.3.x'
-
-      - name: Use GitVersion
-        id: gitversion
-        uses: gittools/actions/gitversion/execute@v0.9.4
 
       - name: Set Node.js 12.x
         uses: actions/setup-node@master
@@ -57,13 +44,13 @@ jobs:
         run: npm run lint && npm run test:codecov
 
       - name: Build
-        run: npm run ${{ steps.variables.outputs.BUILD_SCRIPT }} -- --env.release=true --env.baseUrl="${{ steps.variables.outputs.BRAND_URL }}" --env.basename="v/${{ steps.gitversion.outputs.majorMinorPatch }}" --env.semver=${{ steps.gitversion.outputs.semVer }} --env.info_version=${{ steps.gitversion.outputs.informationalVersion }} --env.github_actions=true
+        run: npm run ${{ steps.variables.outputs.BUILD_SCRIPT }} -- --env.release=true --env.baseUrl="${{ steps.variables.outputs.BRAND_URL }}" --env.basename="v/${{ steps.variables.outputs.VERSION }}" --env.semver=${{ steps.variables.outputs.VERSION }} --env.github_actions=true
 
       - name: Zip Release
         id: zip
         env:
           BRAND: ${{ steps.variables.outputs.BRAND_NAME }}
-        run: | 
+        run: |
           ZIPFILE=${BRAND}-DesignGuide.zip
           echo "Zipping ${ZIPFILE}"
           zip -r ${ZIPFILE} dist
@@ -85,7 +72,7 @@ jobs:
         with:
           inlineScript: |
             az storage blob upload-batch -s dist -d \$web --account-name ${{ steps.variables.outputs.AZURE_ACCOUNT }}
-    
+
       - name: Create Release
         id: create_release
         # Only create a release on one brand to avoid duplicate error
@@ -95,7 +82,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.ref }}
-          release_name: Design Guide v${{ steps.gitversion.outputs.majorMinorPatch }}
+          release_name: Design Guide v${{ steps.variables.outputs.VERSION }}
           body_path: RELEASE-NOTES.md
           draft: false
           prerelease: false
@@ -111,4 +98,4 @@ jobs:
           asset_path: ${{ steps.zip.outputs.zipfile }}
           asset_name: ${{ steps.zip.outputs.zipfile }}
           asset_content_type: application/zip
-        
+

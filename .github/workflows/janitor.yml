@@ -16,9 +16,9 @@ jobs:
         with:
           fetch-depth: 2
 
-      - name: Dump GitHub context 
+      - name: Dump GitHub context
         env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}  
+          GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
 
       - name: Check if commit is merge commit
@@ -29,16 +29,14 @@ jobs:
       - name: Environment variables
         if: ${{ steps.branch.outputs.BRANCH_TO_DELETE }}
         id: variables
-        run: ./.github/scripts/variables.sh
-        env:
-          BRAND: ${{ matrix.brand }}
+        run: ./.github/scripts/variables.sh --brand ${{ matrix.brand }} --ref ${{ github.ref }}
 
       - name: Azure Login
         if: ${{ steps.branch.outputs.BRANCH_TO_DELETE }}
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-  
+
       - name: Delete feature folders
         if: ${{ steps.branch.outputs.BRANCH_TO_DELETE }}
         uses: azure/CLI@v1
