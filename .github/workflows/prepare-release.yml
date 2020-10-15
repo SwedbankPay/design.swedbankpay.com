@@ -5,26 +5,30 @@ on:
       - "release/**"
 
 jobs:
-  build:
-    name: Update changelog and create pull requests
+  version:
     runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.variables.outputs.VERSION }}
+
     steps:
       - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
 
-      - name: Install GitVersion
-        uses: gittools/actions/gitversion/setup@v0.9.4
-        with:
-          versionSpec: '5.3.x'
+      # Set brand specific variables
+      - name: Environment variables
+        id: variables
+        run: ./.github/scripts/variables.sh --brand swedbankpay --ref ${{ github.ref }}
 
-      - name: Use GitVersion
-        id: gitversion
-        uses: gittools/actions/gitversion/execute@v0.9.4
+  changelog:
+    runs-on: ubuntu-latest
+    needs: version
+    outputs:
+      body: ${{ steps.pr-body.outputs.body }}
 
+    steps:
+      - uses: actions/checkout@v2
       - name: Update changelog
         id: changelog
-        run: ./.github/scripts/update-changelog.sh ${{ steps.gitversion.outputs.MajorMinorPatch }}
+        run: ./.github/scripts/update-changelog.sh ${{ needs.version.outputs.version }}
 
       # Content must be escaped to preserve newlines (https://github.community/t/set-output-truncates-multiline-strings/16852/3)
       - name: Get pull request body
@@ -33,27 +37,31 @@ jobs:
           body=$(cat RELEASE-NOTES.md)
           body="${body//'%'/'%25'}"
           body="${body//$'\n'/'%0A'}"
-          body="${body//$'\r'/'%0D'}" 
+          body="${body//$'\r'/'%0D'}"
           echo ::set-output name=body::$body
 
+  create-pr-master:
+    runs-on: ubuntu-latest
+    needs: [version, changelog]
+    steps:
+      - uses: actions/checkout@v2
       - name: Create pull requests
         uses: peter-evans/create-pull-request@v3
         with:
           base: master
-          body: ${{ steps.pr-body.outputs.body }}
+          body: ${{ needs.changelog.outputs.body }}
           branch: ${{ github.ref }}
-          title: Release ${{ steps.gitversion.outputs.MajorMinorPatch }}
+          title: Release ${{ needs.version.outputs.version }} (master)
 
+  create-pr-develop:
+    runs-on: ubuntu-latest
+    needs: [version, changelog]
+    steps:
       - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-
-      # Can we automatically merge this branch into develop once it's merged to master without having to create two PRs? [THN]
-
       - name: Create pull requests
         uses: peter-evans/create-pull-request@v3
         with:
           base: develop
-          body: ${{ steps.pr-body.outputs.body }}
+          body: ${{ needs.changelog.outputs.body }}
           branch: ${{ github.ref }}
-          title: Release ${{ steps.gitversion.outputs.MajorMinorPatch }}
+          title: Release ${{ needs.version.outputs.version }} (develop)
