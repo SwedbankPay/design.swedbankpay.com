@@ -8,6 +8,8 @@ import MediaObject from "@components/MediaObject";
 import CodeTags from "@components/CodeTags";
 
 const textArr = ["This is a lot of text", "With some more text", "And then even some more", "Is it really possible to have this much text in one card?", "Yes!"];
+const BASENAME = process.env.basename;
+const brand = process.env.brand;
 
 const Overview = () => (
     <>
@@ -48,21 +50,21 @@ const Overview = () => (
                 type="primary"
                 text="This paragraph contains some text related to this card."
                 footerTxt="Footer text"
-                horizontal
+                wide
             />
             <CardsComponent
                 titleTxt="Card title"
                 type="secondary"
                 text="This paragraph contains some text related to this card."
                 footerTxt="Footer text"
-                horizontal
+                wide
             />
             <CardsComponent
                 titleTxt="Card title"
                 type="tertiary"
                 text="This paragraph contains some text related to this card."
                 footerTxt="Footer text"
-                horizontal
+                wide
             />
         </ComponentPreview>
 
@@ -101,7 +103,7 @@ const Overview = () => (
                 type="primary"
                 text="This paragraph contains some text related to this card."
                 footerTxt="Footer text"
-                horizontal
+                wide
                 icon={<>01</>}
             />
             <CardsComponent
@@ -109,7 +111,7 @@ const Overview = () => (
                 type="secondary"
                 text="This paragraph contains some text related to this card."
                 footerTxt="Footer text"
-                horizontal
+                wide
                 icon={<>01</>}
             />
             <CardsComponent
@@ -117,41 +119,9 @@ const Overview = () => (
                 type="tertiary"
                 text="This paragraph contains some text related to this card."
                 footerTxt="Footer text"
-                horizontal
+                wide
                 icon={<>01</>}
             />
-        </ComponentPreview>
-
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
-            <div className="row">
-                <div className="col-md-4 col-sm-6">
-                    <CardsComponent
-                        titleTxt="Card title"
-                        type="primary"
-                        text="This paragraph contains some text related to this card."
-                        footerTxt="Footer text"
-                        imgSrc="https://picsum.photos/200/?random"
-                    />
-                </div>
-                <div className="col-md-4 col-sm-6">
-                    <CardsComponent
-                        titleTxt="Card title"
-                        type="secondary"
-                        text="This paragraph contains some text related to this card."
-                        footerTxt="Footer text"
-                        imgSrc="https://picsum.photos/200/?random"
-                    />
-                </div>
-                <div className="col-md-4 col-sm-6">
-                    <CardsComponent
-                        titleTxt="Card title"
-                        type="tertiary"
-                        text="This paragraph contains some text related to this card."
-                        footerTxt="Footer text"
-                        imgSrc="https://picsum.photos/200/?random"
-                    />
-                </div>
-            </div>
         </ComponentPreview>
 
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
@@ -187,10 +157,38 @@ const Overview = () => (
         </ComponentPreview>
 
         <h3>{"Dos and dont's"}</h3>
-        <div className="slab slab-plain slab-border-success">
-            <h4>Do</h4>
-            When presenting a group of cards, make sure their color match and have the same size and text length
-            
+        <div className="row">
+            <div className="col-xl-6 mb-4">
+                <div className="slab slab-plain slab-border-success h-100">
+                    <h4>Do</h4>
+                    When presenting a group of cards, make sure their color match and have the same size and text length
+                    <img src={`${BASENAME}img/documentation/cards/do-cards.png`} className="w-100 mt-4 mb-4"/>
+                </div>
+            </div>
+            <div className="col-xl-6 mb-4">
+                <div className="slab slab-plain slab-border-error h-100">
+                    <h4>{"Don't"}</h4>
+                    Avoid miss-match colors, different sizes and length on text in order to present a clean view
+                    <img src={`${BASENAME}img/documentation/cards/dont-cards.png`} className="w-100 mt-4 mb-4"/>
+                </div>
+            </div>
+        </div>
+        <div className="row">
+            <div className="col-xl-6 mb-4">
+                <div className="slab slab-plain slab-border-success h-100">
+                    <h4>Do</h4>
+                    When presenting a group of cards, make sure they match visually. Try keeping it the same text length and to one row when possible.
+                    <img src={`${BASENAME}img/documentation/cards/do-wide-cards.png`} className="w-100 mt-4 mb-4"/>
+                </div>
+            </div>
+            <div className="col-xl-6 mb-4">
+                <div className="slab slab-plain slab-border-error h-100">
+                    <h4>{"Don't"}</h4>
+                    Avoid miss-match colors, different sizes and length on text in order to present a clean view.
+                    When using numbers make sure the numbering is sequenced and follows the correct order.
+                    <img src={`${BASENAME}img/documentation/cards/dont-wide-cards.png`} className="w-100 mt-4 mb-4"/>
+                </div>
+            </div>
         </div>
     </>
 );
@@ -230,6 +228,7 @@ const GridCard = () => (
                         text="Card text"
                         smallText="Small card text"
                         btn
+                        btnText="Button"
                         btnClass="btn-block mt-auto"
                         bodyClass="d-flex flex-column"
                     >
@@ -244,6 +243,7 @@ const GridCard = () => (
                         textSection={textArr}
                         smallText="This is some small text"
                         btn
+                        btnText="Button"
                         btnClass="btn-block mt-auto"
                         bodyClass="d-flex flex-column"
                     />
@@ -317,7 +317,7 @@ class Card extends Component {
                 <p className="lead">
                     Card is a flexible colored box which fills the width of its parent element.
                 </p>
-                <Overview />
+                {brand === "swedbankpay" && <Overview />}
                 <OverviewDeprecated />
                 <GridCard />
                 <CardTypes />
@@ -329,4 +329,4 @@ class Card extends Component {
 export default Card;
 
 /* For testing */
-export { Overview };
+export { Overview, OverviewDeprecated, GridCard, CardTypes };

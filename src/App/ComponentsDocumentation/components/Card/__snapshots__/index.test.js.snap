@@ -1,5 +1,113 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Documentation: Card CardTypes renders 1`] = `
+<Fragment>
+  <h2
+    id="card-types"
+  >
+    Card Types
+  </h2>
+  <p>
+    We offer three different card types; 
+    <CodeTags
+      code=".card-primary"
+      type="secondary"
+    />
+    , 
+    <CodeTags
+      code=".card-secondary"
+      type="secondary"
+    />
+     and 
+    <CodeTags
+      code=".card-plain"
+      type="secondary"
+    />
+    .
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-12 col-lg-6 col-xl-4 d-flex"
+      >
+        <Card
+          imgSrc="https://picsum.photos/300/?random"
+          text="This paragraph contains some text about the person displayed above."
+          titleTxt="Card Primary"
+          type="primary"
+        >
+          <ul
+            className="list"
+          >
+            <li>
+              <span
+                className="font-weight-bold"
+              >
+                Card number:
+              </span>
+               4563 5648 5642
+            </li>
+            <li>
+              <span
+                className="font-weight-bold"
+              >
+                Balance:
+              </span>
+               2500,- 
+            </li>
+          </ul>
+        </Card>
+      </div>
+      <div
+        className="col-12 col-lg-6 col-xl-4 d-flex"
+      >
+        <Card
+          footerLinkTxt="Footer link"
+          text="Descriptive text to put inside the card, could contain a lot."
+          titleTxt="Card Secondary"
+          type="secondary"
+        >
+          <MediaObject
+            heading="725 NOK"
+            icon="account_balance"
+            muted={true}
+            size="sm"
+            text="Outstanding balance"
+            textSmall={true}
+          />
+        </Card>
+      </div>
+      <div
+        className="col-12 col-lg-6 col-xl-4 d-flex"
+      >
+        <Card
+          footerLinkTxt="Footer link"
+          imgSrc="https://picsum.photos/300/?random"
+          text="Descriptive text to put inside the card, could contain a lot."
+          titleTxt="Card Plain"
+          type="plain"
+        >
+          <MediaObject
+            heading="75%"
+            icon="verified_user"
+            muted={true}
+            size="sm"
+            text="Complete"
+            textSmall={true}
+          />
+        </Card>
+      </div>
+    </div>
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Documentation: Card GridCard renders 1`] = `
 <Fragment>
   <h2
@@ -36,6 +144,7 @@ exports[`Documentation: Card GridCard renders 1`] = `
           bodyClass="d-flex flex-column"
           btn={true}
           btnClass="btn-block mt-auto"
+          btnText="Button"
           smallText="Small card text"
           text="Card text"
           titleTxt="My grid card"
@@ -58,6 +167,7 @@ exports[`Documentation: Card GridCard renders 1`] = `
           bodyClass="d-flex flex-column"
           btn={true}
           btnClass="btn-block mt-auto"
+          btnText="Button"
           smallText="This is some small text"
           textSection={
             Array [
@@ -102,6 +212,302 @@ exports[`Documentation: Card Overview renders 1`] = `
     codeFigure={true}
     language="html"
     showCasePanel={true}
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-md-4 col-sm-6"
+      >
+        
+
+        <Cards
+          footerTxt="Footer text"
+          text="This paragraph contains some text related to this card."
+          titleTxt="Card title"
+          type="primary"
+        />
+      </div>
+      <div
+        className="col-md-4 col-sm-6"
+      >
+        
+
+        <Cards
+          footerTxt="Footer text"
+          text="This paragraph contains some text related to this card."
+          titleTxt="Card title"
+          type="secondary"
+        />
+      </div>
+      <div
+        className="col-md-4 col-sm-6"
+      >
+        
+
+        <Cards
+          footerTxt="Footer text"
+          text="This paragraph contains some text related to this card."
+          titleTxt="Card title"
+          type="tertiary"
+        />
+      </div>
+    </div>
+    <Cards
+      footerTxt="Footer text"
+      text="This paragraph contains some text related to this card."
+      titleTxt="Card title"
+      type="primary"
+      wide={true}
+    />
+    <Cards
+      footerTxt="Footer text"
+      text="This paragraph contains some text related to this card."
+      titleTxt="Card title"
+      type="secondary"
+      wide={true}
+    />
+    <Cards
+      footerTxt="Footer text"
+      text="This paragraph contains some text related to this card."
+      titleTxt="Card title"
+      type="tertiary"
+      wide={true}
+    />
+  </ComponentPreview>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-md-4 col-sm-6"
+      >
+        <Cards
+          footerTxt="Footer text"
+          icon={
+            <i
+              className="material-icons"
+            >
+              shopping_basket
+            </i>
+          }
+          text="This paragraph contains some text related to this card."
+          titleTxt="Card title"
+          type="primary"
+        />
+      </div>
+      <div
+        className="col-md-4 col-sm-6"
+      >
+        <Cards
+          footerTxt="Footer text"
+          icon={
+            <i
+              className="material-icons"
+            >
+              shopping_basket
+            </i>
+          }
+          text="This paragraph contains some text related to this card."
+          titleTxt="Card title"
+          type="secondary"
+        />
+      </div>
+      <div
+        className="col-md-4 col-sm-6"
+      >
+        <Cards
+          footerTxt="Footer text"
+          icon={
+            <i
+              className="material-icons"
+            >
+              shopping_basket
+            </i>
+          }
+          text="This paragraph contains some text related to this card."
+          titleTxt="Card title"
+          type="tertiary"
+        />
+      </div>
+    </div>
+    <Cards
+      footerTxt="Footer text"
+      icon={
+        <React.Fragment>
+          01
+        </React.Fragment>
+      }
+      text="This paragraph contains some text related to this card."
+      titleTxt="Card title"
+      type="primary"
+      wide={true}
+    />
+    <Cards
+      footerTxt="Footer text"
+      icon={
+        <React.Fragment>
+          01
+        </React.Fragment>
+      }
+      text="This paragraph contains some text related to this card."
+      titleTxt="Card title"
+      type="secondary"
+      wide={true}
+    />
+    <Cards
+      footerTxt="Footer text"
+      icon={
+        <React.Fragment>
+          01
+        </React.Fragment>
+      }
+      text="This paragraph contains some text related to this card."
+      titleTxt="Card title"
+      type="tertiary"
+      wide={true}
+    />
+  </ComponentPreview>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-md-4 col-sm-6"
+      >
+        <Cards
+          footerTxt="Footer text"
+          imgSrc="https://picsum.photos/200/?random"
+          text="This paragraph contains some text related to this card."
+          titleTxt="Card title"
+          type="primary"
+        />
+      </div>
+      <div
+        className="col-md-4 col-sm-6"
+      >
+        <Cards
+          footerTxt="Footer text"
+          imgSrc="https://picsum.photos/200/?random"
+          text="This paragraph contains some text related to this card."
+          titleTxt="Card title"
+          type="secondary"
+        />
+      </div>
+      <div
+        className="col-md-4 col-sm-6"
+      >
+        <Cards
+          footerTxt="Footer text"
+          imgSrc="https://picsum.photos/200/?random"
+          text="This paragraph contains some text related to this card."
+          titleTxt="Card title"
+          type="tertiary"
+        />
+      </div>
+    </div>
+  </ComponentPreview>
+  <h3>
+    Dos and dont's
+  </h3>
+  <div
+    className="row"
+  >
+    <div
+      className="col-xl-6 mb-4"
+    >
+      <div
+        className="slab slab-plain slab-border-success h-100"
+      >
+        <h4>
+          Do
+        </h4>
+        When presenting a group of cards, make sure their color match and have the same size and text length
+        <img
+          className="w-100 mt-4 mb-4"
+          src="/TEST/img/documentation/cards/do-cards.png"
+        />
+      </div>
+    </div>
+    <div
+      className="col-xl-6 mb-4"
+    >
+      <div
+        className="slab slab-plain slab-border-error h-100"
+      >
+        <h4>
+          Don't
+        </h4>
+        Avoid miss-match colors, different sizes and length on text in order to present a clean view
+        <img
+          className="w-100 mt-4 mb-4"
+          src="/TEST/img/documentation/cards/dont-cards.png"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col-xl-6 mb-4"
+    >
+      <div
+        className="slab slab-plain slab-border-success h-100"
+      >
+        <h4>
+          Do
+        </h4>
+        When presenting a group of cards, make sure they match visually. Try keeping it the same text length and to one row when possible.
+        <img
+          className="w-100 mt-4 mb-4"
+          src="/TEST/img/documentation/cards/do-wide-cards.png"
+        />
+      </div>
+    </div>
+    <div
+      className="col-xl-6 mb-4"
+    >
+      <div
+        className="slab slab-plain slab-border-error h-100"
+      >
+        <h4>
+          Don't
+        </h4>
+        Avoid miss-match colors, different sizes and length on text in order to present a clean view. When using numbers make sure the numbering is sequenced and follows the correct order.
+        <img
+          className="w-100 mt-4 mb-4"
+          src="/TEST/img/documentation/cards/dont-wide-cards.png"
+        />
+      </div>
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`Documentation: Card OverviewDeprecated renders 1`] = `
+<Fragment>
+  <h2
+    id="overview-deprecated"
+  >
+    Overview (deprecated)
+  </h2>
+  <p>
+    Cards support a wide variety of content, including images, text, list groups, links, and more. Make sure to restrain the width of your card unless you wish for it to fill the wrapping component.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
     showCasePanelSm={true}
   >
     <Card
@@ -124,7 +530,7 @@ exports[`Documentation: Card renders 1`] = `
   >
     Card is a flexible colored box which fills the width of its parent element.
   </p>
-  <Overview />
+  <OverviewDeprecated />
   <GridCard />
   <CardTypes />
 </DocContainer>

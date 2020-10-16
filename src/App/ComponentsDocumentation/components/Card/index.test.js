@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Card, { Overview, GridCard } from "./index";
+import Card, { Overview, OverviewDeprecated, GridCard, CardTypes } from "./index";
 
 describe("Documentation: Card", () => {
     it("is defined", () => {
@@ -26,6 +26,18 @@ describe("Documentation: Card", () => {
         });
     });
 
+    describe("OverviewDeprecated", () => {
+        it("is defined", () => {
+            expect(OverviewDeprecated).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<OverviewDeprecated />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
     describe("GridCard", () => {
         it("is defined", () => {
             expect(GridCard).toBeDefined();
@@ -33,6 +45,18 @@ describe("Documentation: Card", () => {
 
         it("renders", () => {
             const wrapper = shallow(<GridCard />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("CardTypes", () => {
+        it("is defined", () => {
+            expect(CardTypes).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<CardTypes />);
 
             expect(wrapper).toMatchSnapshot();
         });

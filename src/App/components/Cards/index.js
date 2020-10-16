@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Cards = ({ type, titleTxt, imgSrc, icon, text, children, horizontal }) => (
+const Cards = ({ type, titleTxt, imgSrc, icon, text, children, wide }) => (
     <>
-        <a href="#" className={`cards${type ? ` cards-${type}` : ""}${horizontal ? " cards-horizontal" : ""}`}>{"\n"}
+        <a href="#" className={`cards${type ? ` cards-${type}` : ""}${wide ? " cards-wide" : ""}`}>{"\n"}
             {icon && <div className="cards-icon">
                 {icon}
             </div>}
@@ -20,13 +20,12 @@ const Cards = ({ type, titleTxt, imgSrc, icon, text, children, horizontal }) => 
 
 Cards.propTypes = {
     type: PropTypes.oneOf(["primary", "secondary", "tertiary"]),
-    imgSrc: PropTypes.string,
     titleTxt: PropTypes.string,
-    titleMarkup: PropTypes.object,
+    imgSrc: PropTypes.string,
     icon: PropTypes.object,
     text: PropTypes.string,
     children: PropTypes.object,
-    horizontal: PropTypes.bool
+    wide: PropTypes.bool
 };
 
 export default Cards;
