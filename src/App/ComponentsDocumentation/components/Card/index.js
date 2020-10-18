@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import CardComponent from "@components/Card";
-import CardsComponent from "@components/Cards";
 import MediaObject from "@components/MediaObject";
 import CodeTags from "@components/CodeTags";
+import { overviewCards } from "./constants";
 
 const textArr = ["This is a lot of text", "With some more text", "And then even some more", "Is it really possible to have this much text in one card?", "Yes!"];
 const BASENAME = process.env.basename;
@@ -14,147 +14,7 @@ const brand = process.env.brand;
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
-        <p>
-            Cards support a wide variety of content, including images, text, list groups, links, and more.
-            Make sure to restrain the width of your card unless you wish for it to fill the wrapping component.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="row">
-                <div className="col-md-4 col-sm-6">{"\n"}
-                    <CardsComponent
-                        titleTxt="Card title"
-                        type="primary"
-                        text="This paragraph contains some text related to this card."
-                        footerTxt="Footer text"
-                    />
-                </div>
-                <div className="col-md-4 col-sm-6">{"\n"}
-                    <CardsComponent
-                        titleTxt="Card title"
-                        type="secondary"
-                        text="This paragraph contains some text related to this card."
-                        footerTxt="Footer text"
-                    />
-                </div>
-                <div className="col-md-4 col-sm-6">{"\n"}
-                    <CardsComponent
-                        titleTxt="Card title"
-                        type="tertiary"
-                        text="This paragraph contains some text related to this card."
-                        footerTxt="Footer text"
-                    />
-                </div>
-            </div>
-            <CardsComponent
-                titleTxt="Card title"
-                type="primary"
-                text="This paragraph contains some text related to this card."
-                footerTxt="Footer text"
-                wide
-            />
-            <CardsComponent
-                titleTxt="Card title"
-                type="secondary"
-                text="This paragraph contains some text related to this card."
-                footerTxt="Footer text"
-                wide
-            />
-            <CardsComponent
-                titleTxt="Card title"
-                type="tertiary"
-                text="This paragraph contains some text related to this card."
-                footerTxt="Footer text"
-                wide
-            />
-        </ComponentPreview>
-
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="row">
-                <div className="col-md-4 col-sm-6">
-                    <CardsComponent
-                        titleTxt="Card title"
-                        type="primary"
-                        text="This paragraph contains some text related to this card."
-                        footerTxt="Footer text"
-                        icon={<i className="material-icons">shopping_basket</i>}
-                    />
-                </div>
-                <div className="col-md-4 col-sm-6">
-                    <CardsComponent
-                        titleTxt="Card title"
-                        type="secondary"
-                        text="This paragraph contains some text related to this card."
-                        footerTxt="Footer text"
-                        icon={<i className="material-icons">shopping_basket</i>}
-                    />
-                </div>
-                <div className="col-md-4 col-sm-6">
-                    <CardsComponent
-                        titleTxt="Card title"
-                        type="tertiary"
-                        text="This paragraph contains some text related to this card."
-                        footerTxt="Footer text"
-                        icon={<i className="material-icons">shopping_basket</i>}
-                    />
-                </div>
-            </div>
-            <CardsComponent
-                titleTxt="Card title"
-                type="primary"
-                text="This paragraph contains some text related to this card."
-                footerTxt="Footer text"
-                wide
-                icon={<>01</>}
-            />
-            <CardsComponent
-                titleTxt="Card title"
-                type="secondary"
-                text="This paragraph contains some text related to this card."
-                footerTxt="Footer text"
-                wide
-                icon={<>01</>}
-            />
-            <CardsComponent
-                titleTxt="Card title"
-                type="tertiary"
-                text="This paragraph contains some text related to this card."
-                footerTxt="Footer text"
-                wide
-                icon={<>01</>}
-            />
-        </ComponentPreview>
-
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
-            <div className="row">
-                <div className="col-md-4 col-sm-6">
-                    <CardsComponent
-                        titleTxt="Card title"
-                        type="primary"
-                        text="This paragraph contains some text related to this card."
-                        footerTxt="Footer text"
-                        imgSrc="https://picsum.photos/200/?random"
-                    />
-                </div>
-                <div className="col-md-4 col-sm-6">
-                    <CardsComponent
-                        titleTxt="Card title"
-                        type="secondary"
-                        text="This paragraph contains some text related to this card."
-                        footerTxt="Footer text"
-                        imgSrc="https://picsum.photos/200/?random"
-                    />
-                </div>
-                <div className="col-md-4 col-sm-6">
-                    <CardsComponent
-                        titleTxt="Card title"
-                        type="tertiary"
-                        text="This paragraph contains some text related to this card."
-                        footerTxt="Footer text"
-                        imgSrc="https://picsum.photos/200/?random"
-                    />
-                </div>
-            </div>
-        </ComponentPreview>
+        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewCards} codeFigure />
 
         <h3>{"Dos and dont's"}</h3>
         <div className="row">
@@ -193,9 +53,9 @@ const Overview = () => (
     </>
 );
 
-const OverviewDeprecated = () => (
+const OldCard = () => (
     <>
-        <h2 id="overview-deprecated">Overview (deprecated)</h2>
+        <h2 id="old-card">Old card (Being removed)</h2>
         <p>
             Cards support a wide variety of content, including images, text, list groups, links, and more.
             Make sure to restrain the width of your card unless you wish for it to fill the wrapping component.
@@ -209,12 +69,7 @@ const OverviewDeprecated = () => (
                 footerTxt="Footer text"
             />
         </ComponentPreview>
-    </>
-);
-
-const GridCard = () => (
-    <>
-        <h2 id="card-with-grid">Card with grid</h2>
+        <h3>Card with grid</h3>
         <p>
             Use our <Link to="/core/grid">grid</Link> along with cards to control their size and how they are displayed on different screen resolutions.
             Make sure to add <CodeTags type="secondary" code=".d-flex" /> to the wrapper if you want the cards to be of equal height when next to each other.
@@ -260,12 +115,7 @@ const GridCard = () => (
                 </div>
             </div>
         </ComponentPreview>
-    </>
-);
-
-const CardTypes = () => (
-    <>
-        <h2 id="card-types">Card Types</h2>
+        <h3>Card Types</h3>
         <p>
             We offer three different card types; <CodeTags type="secondary" code=".card-primary" />, <CodeTags type="secondary" code=".card-secondary" /> and <CodeTags type="secondary" code=".card-plain" />.
         </p>
@@ -314,13 +164,14 @@ class Card extends Component {
     render () {
         return (
             <DocContainer docToc>
-                <p className="lead">
-                    Card is a flexible colored box which fills the width of its parent element.
+                <p>
+                    The card component is a flexible container that groups and informs about the content and action.
+                    The information presented should be concise, to the point and easy to understand. The card
+                    component should be used to direct to pages on our site and not to external sites, in that case
+                    use <Link to="/components/links">links</Link> instead.
                 </p>
                 {brand === "swedbankpay" && <Overview />}
-                <OverviewDeprecated />
-                <GridCard />
-                <CardTypes />
+                <OldCard />
             </DocContainer>
         );
     }
@@ -329,4 +180,4 @@ class Card extends Component {
 export default Card;
 
 /* For testing */
-export { Overview, OverviewDeprecated, GridCard, CardTypes };
+export { Overview, OldCard };

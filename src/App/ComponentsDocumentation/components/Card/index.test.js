@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Card, { Overview, OverviewDeprecated, GridCard, CardTypes } from "./index";
+import Card, { Overview, OldCard } from "./index";
 
 describe("Documentation: Card", () => {
     it("is defined", () => {
@@ -26,37 +26,13 @@ describe("Documentation: Card", () => {
         });
     });
 
-    describe("OverviewDeprecated", () => {
+    describe("OldCard", () => {
         it("is defined", () => {
-            expect(OverviewDeprecated).toBeDefined();
+            expect(OldCard).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<OverviewDeprecated />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("GridCard", () => {
-        it("is defined", () => {
-            expect(GridCard).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<GridCard />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("CardTypes", () => {
-        it("is defined", () => {
-            expect(CardTypes).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<CardTypes />);
+            const wrapper = shallow(<OldCard />);
 
             expect(wrapper).toMatchSnapshot();
         });
