@@ -30,7 +30,7 @@ const Overview = () => (
                             id="your-name"
                             type="text"
                             autoComplete="name"
-                            label="Your name"
+                            label="Name"
                             helpBlock="Your first and last name"
                         />
                     </div>
@@ -51,7 +51,7 @@ const Overview = () => (
                         <InputGroup
                             id="phone-number"
                             type="text"
-                            label="Your phone number"
+                            label="Phone number"
                             autoComplete="phone"
                         />
                     </div>
