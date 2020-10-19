@@ -162,7 +162,7 @@ const CombiningButtons = () => (
                 </div>
                 <div className="col-lg-6">
                     <img src={`${basename}img/documentation/buttons/donts4.png`} className="w-100 mb-4"/>
-                    <p>Combine normal buttons and destructive buttons</p>        
+                    <p>Combine normal buttons and destructive buttons</p>
                 </div>
             </div>
         </div>

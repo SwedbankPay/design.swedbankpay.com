@@ -535,7 +535,7 @@ exports[`Documentation: Forms Overview form prevents default 1`] = `
             autoComplete="name"
             helpBlock="Your first and last name"
             id="your-name"
-            label="Your name"
+            label="Name"
             type="text"
           />
         </div>
@@ -564,7 +564,7 @@ exports[`Documentation: Forms Overview form prevents default 1`] = `
           <InputGroup
             autoComplete="phone"
             id="phone-number"
-            label="Your phone number"
+            label="Phone number"
             type="text"
           />
         </div>
@@ -671,7 +671,7 @@ exports[`Documentation: Forms Overview renders 1`] = `
             autoComplete="name"
             helpBlock="Your first and last name"
             id="your-name"
-            label="Your name"
+            label="Name"
             type="text"
           />
         </div>
@@ -700,7 +700,7 @@ exports[`Documentation: Forms Overview renders 1`] = `
           <InputGroup
             autoComplete="phone"
             id="phone-number"
-            label="Your phone number"
+            label="Phone number"
             type="text"
           />
         </div>
