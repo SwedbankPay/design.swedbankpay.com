@@ -253,9 +253,9 @@ exports[`Documentation: Card Overview renders 1`] = `
                       },
                     },
                     Object {
-                      "name": "With picture",
+                      "name": "With image",
                       "value": Object {
-                        "imgSrc": "https://picsum.photos/200/?random",
+                        "imgSrc": "/TEST/img/documentation/cards/img-example.png",
                       },
                     },
                   ],

@@ -1,6 +1,8 @@
 import React from "react";
 import CardsComponent from "@components/Cards";
 
+const BASENAME = process.env.basename;
+
 export const overviewCards = {
     id: "overviewCards",
     tabsId: "overviewButtonsTabs",
@@ -29,9 +31,9 @@ export const overviewCards = {
                                 }
                             },
                             {
-                                name: "With picture",
+                                name: "With image",
                                 value: {
-                                    imgSrc: "https://picsum.photos/200/?random"
+                                    imgSrc: `${BASENAME}img/documentation/cards/img-example.png`
                                 }
                             }
                         ]

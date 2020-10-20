@@ -10,6 +10,7 @@ exports[`Component: Cards -  renders a child object 1`] = `
     <a
       className="cards cards-undefined"
       href="#"
+      onClick={[Function]}
     >
       
 
@@ -48,6 +49,7 @@ exports[`Component: Cards -  renders a text in card-body 1`] = `
     <a
       className="cards cards-secondary"
       href="#"
+      onClick={[Function]}
     >
       
 
@@ -88,6 +90,7 @@ exports[`Component: Cards -  renders a title 1`] = `
     <a
       className="cards cards-secondary"
       href="#"
+      onClick={[Function]}
     >
       
 
@@ -161,6 +164,7 @@ exports[`Component: Cards -  renders an icon when icon is provided 1`] = `
     <a
       className="cards cards-secondary"
       href="#"
+      onClick={[Function]}
     >
       
 
@@ -207,6 +211,7 @@ exports[`Component: Cards -  renders an image 1`] = `
     <a
       className="cards cards-secondary"
       href="#"
+      onClick={[Function]}
     >
       
 
@@ -247,6 +252,7 @@ exports[`Component: Cards -  renders with correct type 1`] = `
     <a
       className="cards cards-secondary"
       href="#"
+      onClick={[Function]}
     >
       
 
@@ -284,6 +290,7 @@ exports[`Component: Cards -  throws an error if type does not match proptypes 1`
     <a
       className="cards cards-error"
       href="#"
+      onClick={[Function]}
     >
       
 
