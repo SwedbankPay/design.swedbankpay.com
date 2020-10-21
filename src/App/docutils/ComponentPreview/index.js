@@ -176,7 +176,11 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
             const defaultRadios = [...showcasePanel.querySelectorAll(".radio")].filter(radio => radio.querySelector("input").id.includes("default"));
 
             if (defaultRadios.length > 0) {
+                const defaultRadiosGroups = defaultRadios.map(radio => radio.querySelector("input").name);
+
                 defaultRadios.map(radio => radio.querySelector("input").checked = true);
+                [...showcasePanel.querySelectorAll(".radio")].filter(radio => !defaultRadiosGroups.includes(radio.querySelector("input").name))
+                    .map(radio => radio.querySelector("input").checked = radio.querySelector("input").value === "0");
             } else {
                 showcasePanel.querySelectorAll(".radio").forEach(radio => radio.querySelector("input").checked = radio.querySelector("input").value === "0");
             }

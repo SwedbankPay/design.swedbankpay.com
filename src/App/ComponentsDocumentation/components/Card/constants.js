@@ -13,6 +13,7 @@ export const overviewCards = {
                 titleTxt="Title"
                 type="primary"
                 text="Write the supportive paragraph here."
+                icon={<i className="material-icons">shopping_basket</i>}
             />,
             options: {
                 radio: [
@@ -22,10 +23,13 @@ export const overviewCards = {
                         values: [
                             {
                                 name: "Plain",
-                                value: {}
+                                value: {
+                                    icon: null
+                                }
                             },
                             {
                                 name: "With icon",
+                                default: true,
                                 value: {
                                     icon: <i className="material-icons">shopping_basket</i>
                                 }
@@ -33,7 +37,8 @@ export const overviewCards = {
                             {
                                 name: "With image",
                                 value: {
-                                    imgSrc: `${BASENAME}img/documentation/cards/img-example.png`
+                                    imgSrc: `${BASENAME}img/documentation/cards/img-example.png`,
+                                    icon: null
                                 }
                             }
                         ]
@@ -74,6 +79,7 @@ export const overviewCards = {
                 type="primary"
                 text="Write the supportive paragraph here."
                 wide
+                icon={<>01</>}
             />,
             options: {
                 radio: [
@@ -83,10 +89,13 @@ export const overviewCards = {
                         values: [
                             {
                                 name: "Plain",
-                                value: {}
+                                value: {
+                                    icon: null
+                                }
                             },
                             {
                                 name: "With icon",
+                                default: true,
                                 value: {
                                     icon: <>01</>
                                 }

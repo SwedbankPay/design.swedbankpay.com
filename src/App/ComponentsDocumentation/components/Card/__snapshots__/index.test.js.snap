@@ -227,6 +227,13 @@ exports[`Documentation: Card Overview renders 1`] = `
         "elements": Array [
           Object {
             "component": <Cards
+              icon={
+                <i
+                  className="material-icons"
+                >
+                  shopping_basket
+                </i>
+              }
               text="Write the supportive paragraph here."
               titleTxt="Title"
               type="primary"
@@ -240,9 +247,12 @@ exports[`Documentation: Card Overview renders 1`] = `
                   "values": Array [
                     Object {
                       "name": "Plain",
-                      "value": Object {},
+                      "value": Object {
+                        "icon": null,
+                      },
                     },
                     Object {
+                      "default": true,
                       "name": "With icon",
                       "value": Object {
                         "icon": <i
@@ -255,6 +265,7 @@ exports[`Documentation: Card Overview renders 1`] = `
                     Object {
                       "name": "With image",
                       "value": Object {
+                        "icon": null,
                         "imgSrc": "/TEST/img/documentation/cards/img-example.png",
                       },
                     },
@@ -291,6 +302,11 @@ exports[`Documentation: Card Overview renders 1`] = `
           },
           Object {
             "component": <Cards
+              icon={
+                <React.Fragment>
+                  01
+                </React.Fragment>
+              }
               text="Write the supportive paragraph here."
               titleTxt="Title"
               type="primary"
@@ -305,9 +321,12 @@ exports[`Documentation: Card Overview renders 1`] = `
                   "values": Array [
                     Object {
                       "name": "Plain",
-                      "value": Object {},
+                      "value": Object {
+                        "icon": null,
+                      },
                     },
                     Object {
+                      "default": true,
                       "name": "With icon",
                       "value": Object {
                         "icon": <React.Fragment>

@@ -50,14 +50,6 @@ export const logoBlack = {
                     }
                 ]
             },
-            activeOptions: [
-                {
-                    id: "size_radio",
-                    value: {
-                        size: "sm"
-                    }
-                }
-            ],
             title: "Vertical logo",
             description: "The vertical logo (with black text) is the primary logo is the primary logo and should always be considered before moving on to another version."
         },
@@ -103,14 +95,6 @@ export const logoBlack = {
                     }
                 ]
             },
-            activeOptions: [
-                {
-                    id: "size_radio",
-                    value: {
-                        size: "sm"
-                    }
-                }
-            ],
             title: "Horizontal logo",
             description: <>
                 The horizontal logo (with black text) is only used if the vertical primary logotype can’t be used. Reasons for using the horizontal logo might be:
@@ -170,14 +154,6 @@ export const logoWhite = {
                     }
                 ]
             },
-            activeOptions: [
-                {
-                    id: "size_radio_white",
-                    value: {
-                        size: "sm"
-                    }
-                }
-            ],
             title: "Vertical logo",
             description: <p>
                 Should only be used on Swedbank Pay’s primary color (Yellow) and on dark backgrounds.
