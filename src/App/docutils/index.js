@@ -7,6 +7,7 @@ import ExperimentalComponentAlert from "./ExperimentalComponentAlert";
 import Icon from "./Icon";
 import JavascriptDocs from "./JavascriptDocs";
 import JavascriptDocElement from "./JavascriptDocElement";
+import StatusBadge from "./StatusBadge";
 
 export {
     ComponentPreview,
@@ -17,5 +18,6 @@ export {
     ExperimentalComponentAlert,
     Icon,
     JavascriptDocs,
-    JavascriptDocElement
+    JavascriptDocElement,
+    StatusBadge
 };
