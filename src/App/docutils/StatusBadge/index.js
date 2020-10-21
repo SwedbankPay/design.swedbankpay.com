@@ -22,7 +22,9 @@ const statusBadgeContent = {
 };
 
 const StatusBadge = ({ type }) => (
-    <span className={`status-badge status-badge-${type}`}>{statusBadgeContent[type].icon}{statusBadgeContent[type].text}</span>
+    <>
+        {type && <span className={`status-badge status-badge-${type}`}>{statusBadgeContent[type].icon}{statusBadgeContent[type].text}</span>}
+    </>
 );
 
 StatusBadge.propTypes = {
