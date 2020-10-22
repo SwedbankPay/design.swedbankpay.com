@@ -112,3 +112,5 @@
 - Logotype
   - Merged Logos and Logotype into Logotype under Core
   - Updated preview of Logotype examples and updated documentation
+- Cards
+  - Added new design of cards
