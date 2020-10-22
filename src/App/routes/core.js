@@ -16,7 +16,8 @@ module.exports = [
             {
                 title: "Logotype",
                 path: "/core/logotype",
-                componentPath: "core/Logotype"
+                componentPath: "core/Logotype",
+                statusBadges: ["updated"]
             },
             {
                 title: "Grid",

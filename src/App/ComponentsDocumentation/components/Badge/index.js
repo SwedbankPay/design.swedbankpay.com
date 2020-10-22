@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ComponentPreview, DocContainer, StatusBadge } from "@docutils";
+import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
 
 const Overview = () => (
@@ -29,12 +29,6 @@ const BadgeNumber = () => (
 
 const Badge = () => (
     <DocContainer docToc>
-        <div>
-            <StatusBadge type="new" />
-            <StatusBadge type="updated" />
-            <StatusBadge type="remove" />
-            <StatusBadge type="javascript" />
-        </div>
         <p className="lead">
             Badges are small rectangular boxes which can convey a message and or state with their text and color.
         </p>

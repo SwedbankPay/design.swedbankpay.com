@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocContainer } from "@docutils";
+import { ComponentPreview, DocContainer, StatusBadge } from "@docutils";
 import CardComponent from "@components/Card";
 import MediaObject from "@components/MediaObject";
 import CodeTags from "@components/CodeTags";
@@ -55,7 +55,8 @@ const Overview = () => (
 
 const OldCard = () => (
     <>
-        <h2 id="old-card">Old card (Being removed)</h2>
+        <h2 id="old-card">Old card</h2>
+        <StatusBadge type="remove" />
         <p>
             Cards support a wide variety of content, including images, text, list groups, links, and more.
             Make sure to restrain the width of your card unless you wish for it to fill the wrapping component.
