@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Utilities: StatusBadge prints error if type is not provided 1`] = `<Fragment />`;
+
+exports[`Utilities: StatusBadge renders javascript status badge when type is 'javascript' 1`] = `
+<Fragment>
+  <span
+    className="status-badge status-badge-javascript"
+  >
+    <i
+      className="javascript-icon"
+    />
+    Uses JavaScript
+  </span>
+</Fragment>
+`;
+
+exports[`Utilities: StatusBadge renders new status badge when type is 'new' 1`] = `
+<Fragment>
+  <span
+    className="status-badge status-badge-new"
+  >
+    <i
+      className="material-icons"
+    >
+      child_care
+    </i>
+    New component
+  </span>
+</Fragment>
+`;
+
+exports[`Utilities: StatusBadge renders remove status badge when type is 'remove' 1`] = `
+<Fragment>
+  <span
+    className="status-badge status-badge-remove"
+  >
+    <i
+      className="material-icons"
+    >
+      sentiment_very_dissatisfied
+    </i>
+    Being removed
+  </span>
+</Fragment>
+`;
+
+exports[`Utilities: StatusBadge renders updated status badge when type is 'updated' 1`] = `
+<Fragment>
+  <span
+    className="status-badge status-badge-updated"
+  >
+    <i
+      className="material-icons"
+    >
+      mood
+    </i>
+    Newly updated
+  </span>
+</Fragment>
+`;

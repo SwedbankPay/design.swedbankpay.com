@@ -105,6 +105,20 @@ exports[`Components: Badge renders 1`] = `
 <DocContainer
   docToc={true}
 >
+  <div>
+    <StatusBadge
+      type="new"
+    />
+    <StatusBadge
+      type="updated"
+    />
+    <StatusBadge
+      type="remove"
+    />
+    <StatusBadge
+      type="javascript"
+    />
+  </div>
   <p
     className="lead"
   >
