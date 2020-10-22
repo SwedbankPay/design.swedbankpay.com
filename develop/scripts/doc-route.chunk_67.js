@@ -1,2 +1,2 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{428:function(t,n,e){"use strict";e.r(n);var a=e(1),i=e.n(a),r=e(68);n.default=function(){return i.a.createElement(r.RenderPage,{path:"/getting-started",initPath:"/getting-started/introduction"})}}}]);
-//# sourceMappingURL=doc-route.chunk_67.js.map?6344996144c6f90eb06e
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{429:function(t,n,e){"use strict";e.r(n);var a=e(1),i=e.n(a),r=e(68);n.default=function(){return i.a.createElement(r.RenderPage,{path:"/getting-started",initPath:"/getting-started/introduction"})}}}]);
+//# sourceMappingURL=doc-route.chunk_67.js.map?0780b585b200625b9a1f
