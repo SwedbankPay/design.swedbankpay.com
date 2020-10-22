@@ -5,12 +5,57 @@ import { ComponentPreview, DocContainer } from "@docutils";
 import CardComponent from "@components/Card";
 import MediaObject from "@components/MediaObject";
 import CodeTags from "@components/CodeTags";
+import { overviewCards } from "./constants";
 
 const textArr = ["This is a lot of text", "With some more text", "And then even some more", "Is it really possible to have this much text in one card?", "Yes!"];
+const BASENAME = process.env.basename;
+const brand = process.env.brand;
 
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
+        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewCards} codeFigure />
+
+        <h3>{"Dos and dont's"}</h3>
+        <div className="row">
+            <div className="col-xl-6 mb-4">
+                <div className="slab slab-plain slab-border-success h-100">
+                    <h4>Do</h4>
+                    When presenting a group of cards, make sure their color match and have the same size and text length
+                    <img src={`${BASENAME}img/documentation/cards/do-cards.png`} className="w-100 mt-4 mb-4"/>
+                </div>
+            </div>
+            <div className="col-xl-6 mb-4">
+                <div className="slab slab-plain slab-border-error h-100">
+                    <h4>{"Don't"}</h4>
+                    Avoid miss-match colors, different sizes and length on text in order to present a clean view
+                    <img src={`${BASENAME}img/documentation/cards/dont-cards.png`} className="w-100 mt-4 mb-4"/>
+                </div>
+            </div>
+        </div>
+        <div className="row">
+            <div className="col-xl-6 mb-4">
+                <div className="slab slab-plain slab-border-success h-100">
+                    <h4>Do</h4>
+                    When presenting a group of cards, make sure they match visually. Try keeping it the same text length and to one row when possible.
+                    <img src={`${BASENAME}img/documentation/cards/do-wide-cards.png`} className="w-100 mt-4 mb-4"/>
+                </div>
+            </div>
+            <div className="col-xl-6 mb-4">
+                <div className="slab slab-plain slab-border-error h-100">
+                    <h4>{"Don't"}</h4>
+                    Avoid miss-match colors, different sizes and length on text in order to present a clean view.
+                    When using numbers make sure the numbering is sequenced and follows the correct order.
+                    <img src={`${BASENAME}img/documentation/cards/dont-wide-cards.png`} className="w-100 mt-4 mb-4"/>
+                </div>
+            </div>
+        </div>
+    </>
+);
+
+const OldCard = () => (
+    <>
+        <h2 id="old-card">Old card (Being removed)</h2>
         <p>
             Cards support a wide variety of content, including images, text, list groups, links, and more.
             Make sure to restrain the width of your card unless you wish for it to fill the wrapping component.
@@ -24,12 +69,7 @@ const Overview = () => (
                 footerTxt="Footer text"
             />
         </ComponentPreview>
-    </>
-);
-
-const GridCard = () => (
-    <>
-        <h2 id="card-with-grid">Card with grid</h2>
+        <h3>Card with grid</h3>
         <p>
             Use our <Link to="/core/grid">grid</Link> along with cards to control their size and how they are displayed on different screen resolutions.
             Make sure to add <CodeTags type="secondary" code=".d-flex" /> to the wrapper if you want the cards to be of equal height when next to each other.
@@ -43,6 +83,7 @@ const GridCard = () => (
                         text="Card text"
                         smallText="Small card text"
                         btn
+                        btnText="Button"
                         btnClass="btn-block mt-auto"
                         bodyClass="d-flex flex-column"
                     >
@@ -57,6 +98,7 @@ const GridCard = () => (
                         textSection={textArr}
                         smallText="This is some small text"
                         btn
+                        btnText="Button"
                         btnClass="btn-block mt-auto"
                         bodyClass="d-flex flex-column"
                     />
@@ -73,12 +115,7 @@ const GridCard = () => (
                 </div>
             </div>
         </ComponentPreview>
-    </>
-);
-
-const CardTypes = () => (
-    <>
-        <h2 id="card-types">Card Types</h2>
+        <h3>Card Types</h3>
         <p>
             We offer three different card types; <CodeTags type="secondary" code=".card-primary" />, <CodeTags type="secondary" code=".card-secondary" /> and <CodeTags type="secondary" code=".card-plain" />.
         </p>
@@ -127,12 +164,14 @@ class Card extends Component {
     render () {
         return (
             <DocContainer docToc>
-                <p className="lead">
-                    Card is a flexible colored box which fills the width of its parent element.
+                <p>
+                    The card component is a flexible container that groups and informs about the content and action.
+                    The information presented should be concise, to the point and easy to understand. The card
+                    component should be used to direct to pages on our site and not to external sites, in that case
+                    use <Link to="/components/links">links</Link> instead.
                 </p>
-                <Overview />
-                <GridCard />
-                <CardTypes />
+                {brand === "swedbankpay" && <Overview />}
+                <OldCard />
             </DocContainer>
         );
     }
@@ -141,4 +180,4 @@ class Card extends Component {
 export default Card;
 
 /* For testing */
-export { Overview, GridCard };
+export { Overview, OldCard };

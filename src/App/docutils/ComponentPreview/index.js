@@ -161,31 +161,43 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
 
             this.state = {
                 activeTab: this.props.showCasePanelAdvanced.elements[0],
-                optionsOpen: false,
+                optionsOpen: window.innerWidth > 1200, // XL grid breakpoint
                 activeOptions: this.props.showCasePanelAdvanced.elements[0].activeOptions ? [...this.props.showCasePanelAdvanced.elements[0].activeOptions] : []
             };
         }
 
+        _resetOptions () {
+            const showcasePanel = document.getElementById(this.props.showCasePanelAdvanced.id);
+
+            showcasePanel.querySelectorAll("input[type=checkbox]").forEach(checkbox => checkbox.checked = false);
+            showcasePanel.querySelectorAll("select[id]").forEach(dropdown => dropdown.value = 0);
+            showcasePanel.querySelectorAll(".radio").forEach(radio => radio.querySelector("input").checked = false);
+
+            const defaultRadios = [...showcasePanel.querySelectorAll(".radio")].filter(radio => radio.querySelector("input").id.includes("default"));
+
+            if (defaultRadios.length > 0) {
+                const defaultRadiosGroups = defaultRadios.map(radio => radio.querySelector("input").name);
+
+                defaultRadios.map(radio => radio.querySelector("input").checked = true);
+
+                // Reset radio groups that do not have default specified (set to top radio). Needs to be done when one or more radio button is specified as default
+                [...showcasePanel.querySelectorAll(".radio")].filter(radio => !defaultRadiosGroups.includes(radio.querySelector("input").name))
+                    .map(radio => radio.querySelector("input").checked = radio.querySelector("input").value === "0");
+            } else {
+                showcasePanel.querySelectorAll(".radio").forEach(radio => radio.querySelector("input").checked = radio.querySelector("input").value === "0");
+            }
+
+        }
+
         componentDidMount () {
             tabs.init(this.props.showCasePanelAdvanced.tabsId);
+
+            this._resetOptions();
         }
 
         componentDidUpdate (prevProps, prevState) {
             if (prevState.activeTab !== this.state.activeTab) {
-                const showcasePanel = document.getElementById(this.props.showCasePanelAdvanced.id);
-
-                showcasePanel.querySelectorAll("input[type=checkbox]").forEach(checkbox => checkbox.checked = false);
-                showcasePanel.querySelectorAll("select[id]").forEach(dropdown => dropdown.value = 0);
-                showcasePanel.querySelectorAll(".radio").forEach(radio => radio.querySelector("input").checked = false);
-
-                const defaultRadios = [...showcasePanel.querySelectorAll(".radio")].filter(radio => radio.querySelector("input").id.includes("default"));
-
-                if (defaultRadios.length > 0) {
-                    defaultRadios.map(radio => radio.querySelector("input").checked = true);
-                } else {
-                    showcasePanel.querySelectorAll(".radio").forEach(radio => radio.querySelector("input").checked = radio.querySelector("input").value === "0");
-                }
-
+                this._resetOptions();
             }
         }
 
@@ -297,7 +309,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                                         </div>
                                     ))}
                                     {this.state.activeTab.options.radio && this.state.activeTab.options.radio.map((radio, i) => (
-                                        <div key={i}>
+                                        <div className="mb-4" key={i}>
                                             <h4>{radio.title}</h4>
                                             {radio.values.map((val, j) => (
                                                 <div key={j} className="radio" onChange={e => this.setActiveOptions(
