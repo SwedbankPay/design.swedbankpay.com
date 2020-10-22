@@ -49,23 +49,42 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
     Dos and don'ts
   </h3>
   <div
-    className="row"
+    className="slab slab-plain slab-border-success mb-5"
   >
+    <h4>
+      Do
+    </h4>
     <div
-      className="col-sm-6"
+      className="row"
     >
       <div
-        className="slab slab-plain slab-border-success"
+        className="col-lg-6"
       >
-        <h4>
-          Dos
-        </h4>
-        <p>
-          Place buttons in a hierarchly correct order and combine different kinds of button
-        </p>
         <img
           className="w-100 mb-4"
           src="/TEST/img/documentation/buttons/dos1.png"
+        />
+        <p>
+          Place buttons in a hierarchly correct order and combine different kinds of button
+        </p>
+      </div>
+      <div
+        className="col-lg-6"
+      >
+        <img
+          className="w-100 mb-4"
+          src="/TEST/img/documentation/buttons/dos3.png"
+        />
+        <p>
+          Place buttons side by side in Desktop view
+        </p>
+      </div>
+      <div
+        className="col-lg-6"
+      >
+        <img
+          className="w-100 mb-4"
+          src="/TEST/img/documentation/buttons/dos2.png"
         />
         <p>
           Use the 
@@ -74,16 +93,13 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
           </b>
            as an discrete option to cancel
         </p>
+      </div>
+      <div
+        className="col-lg-6"
+      >
         <img
           className="w-100 mb-4"
-          src="/TEST/img/documentation/buttons/dos2.png"
-        />
-        <p>
-          Place buttons side by side in Desktop view
-        </p>
-        <img
-          className="w-100 mb-4"
-          src="/TEST/img/documentation/buttons/dos3.png"
+          src="/TEST/img/documentation/buttons/dos4.png"
         />
         <p>
           Combine 
@@ -95,21 +111,25 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
             Text/Link Buttons
           </b>
         </p>
-        <img
-          className="w-100 mb-4"
-          src="/TEST/img/documentation/buttons/dos4.png"
-        />
       </div>
     </div>
+  </div>
+  <div
+    className="slab slab-plain slab-border-error"
+  >
+    <h4>
+      Don't
+    </h4>
     <div
-      className="col-sm-6"
+      className="row"
     >
       <div
-        className="slab slab-plain slab-border-error"
+        className="col-lg-6"
       >
-        <h4>
-          Don'ts
-        </h4>
+        <img
+          className="w-100 mb-4"
+          src="/TEST/img/documentation/buttons/donts1.png"
+        />
         <p>
           Use the 
           <b>
@@ -124,9 +144,13 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
             Primary Button
           </b>
         </p>
+      </div>
+      <div
+        className="col-lg-6"
+      >
         <img
           className="w-100 mb-4"
-          src="/TEST/img/documentation/buttons/donts1.png"
+          src="/TEST/img/documentation/buttons/donts2.png"
         />
         <p>
           List primary actions and/or combine 
@@ -138,24 +162,28 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
             BankID Button
           </b>
         </p>
-        <img
-          className="w-100 mb-4"
-          src="/TEST/img/documentation/buttons/donts2.png"
-        />
-        <p>
-          Use and combine destructive buttons the same way as normal buttons
-        </p>
+      </div>
+      <div
+        className="col-lg-6"
+      >
         <img
           className="w-100 mb-4"
           src="/TEST/img/documentation/buttons/donts3.png"
         />
         <p>
-          Combine normal buttons and destructive buttons
+          Use and combine destructive buttons the same way as normal buttons
         </p>
+      </div>
+      <div
+        className="col-lg-6"
+      >
         <img
           className="w-100 mb-4"
           src="/TEST/img/documentation/buttons/donts4.png"
         />
+        <p>
+          Combine normal buttons and destructive buttons
+        </p>
       </div>
     </div>
   </div>
@@ -321,125 +349,83 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
     }
   />
   <h3>
-    Dos and don'ts
+    How to use destructive buttons
   </h3>
   <div
-    className="slab slab-plain slab-border-success mb-4"
+    className="row"
   >
-    <h4>
-      Dos
-    </h4>
-    <img
-      className="w-100"
-      src="/TEST/img/documentation/buttons/dos.png"
-    />
     <div
-      className="d-flex justify-content-between mt-4"
+      className="col-lg-6"
     >
       <div
-        className="w-100"
+        className="slab slab-plain slab-border-success pb-5 h-100"
       >
-        <ul
-          className="list list-bullet"
+        <h4>
+          Do
+        </h4>
+        <div
+          className="d-flex justify-content-center mt-4 mb-4"
         >
-          <li>
-            Use the 
-            <b>
-              Guiding Destructive Buttons
-            </b>
-             in non-contained areas
-          </li>
-        </ul>
-      </div>
-      <div
-        className="w-100"
-        style={
-          Object {
-            "paddingLeft": "8%",
-          }
-        }
-      >
-        <ul
-          className="list list-bullet"
+          <img
+            className="w-50"
+            src="/TEST/img/documentation/buttons/dos-guiding.png"
+          />
+        </div>
+        Use the 
+        <b>
+          Guiding Destructive Buttons
+        </b>
+         to initiate a destructive action
+        <div
+          className="d-flex justify-content-center mt-5 mb-4"
         >
-          <li>
-            Use the 
-            <b>
-              Executive Destructive Buttons
-            </b>
-             a contained space as a final destructive call to action
-          </li>
-          <li>
-            Name the buttons differently to separate choices
-          </li>
-        </ul>
+          <img
+            className="w-75"
+            src="/TEST/img/documentation/buttons/dos.png"
+          />
+        </div>
+        Use the 
+        <b>
+          Executive Destructive Buttons
+        </b>
+         a contained space as a final destructive call to action
       </div>
     </div>
-  </div>
-  <div
-    className="slab slab-plain slab-border-error"
-  >
-    <h4>
-      Don'ts
-    </h4>
-    <img
-      className="w-100"
-      src="/TEST/img/documentation/buttons/donts.png"
-    />
     <div
-      className="d-flex justify-content-between mt-4"
+      className="col-lg-6"
     >
       <div
-        className="w-100"
+        className="slab slab-plain slab-border-error pb-5 h-100"
       >
-        <ul
-          className="list list-bullet"
+        <h4>
+          Don't
+        </h4>
+        <div
+          className="d-flex justify-content-center mt-4 mb-4"
         >
-          <li>
-            Avoid using the 
-            <b>
-              Executive Destructive Buttons
-            </b>
-             in non-contained areas
-          </li>
-          <li>
-            Avoid using the 
-            <b>
-              Executive Destructive Buttons
-            </b>
-             in a guiding purpose
-          </li>
-          <li>
-            Avoid using multiple 
-            <b>
-              Executive Destructive Buttons
-            </b>
-             in the same userflow
-          </li>
-        </ul>
-      </div>
-      <div
-        className="w-100"
-        style={
-          Object {
-            "paddingLeft": "8%",
-          }
-        }
-      >
-        <ul
-          className="list list-bullet"
+          <img
+            className="w-50"
+            src="/TEST/img/documentation/buttons/donts-executive.png"
+          />
+        </div>
+        Avoid using the 
+        <b>
+          Executive Destructive Buttons
+        </b>
+         to initiate a destructive action
+        <div
+          className="d-flex justify-content-center mt-5 mb-4"
         >
-          <li>
-            Avoid using multiple buttons with the same name – here "Cancel"
-          </li>
-          <li>
-            Avoid naming an 
-            <b>
-              Excecutive Destructive Button poorly
-            </b>
-             – the button cancels the payment of the invoice and not the invoice, which isn’t clear at al
-          </li>
-        </ul>
+          <img
+            className="w-75"
+            src="/TEST/img/documentation/buttons/donts.png"
+          />
+        </div>
+        Avoid using multiple 
+        <b>
+          Executive Destructive Buttons
+        </b>
+         in the same userflow
       </div>
     </div>
   </div>
@@ -801,12 +787,63 @@ exports[`Documentation: Buttons Naming buttons renders 1`] = `
   <p>
     Buttons should always lead with a strong verb that encourages action. Provide enough context for users by using the {verb} + {noun} content             formula instead of using “Yes”, “Confirm”, “Cancel” – except when it comes to the Text Button, which commonly uses “Cancel”.             To avoid buttons breaking in smaller interfaces due to long names, always check that the button looks OK in a mobile view. Generally,             try to keep the number of characters fairly low to provide more clarity.
   </p>
-  <h3>
+  <h4>
     Unique naming
-  </h3>
+  </h4>
   <p>
     Avoid using the same name for multiple buttons in the same user flow. It’s particularly hard for users using a screen reader to tell four “Next” buttons one                after another apart.                 When combining an "Executive Destructive Button" with a "Text Button" be careful to not name both buttons “Cancel”.                Try to separate the text as much as you can to improve the user experience, providing the user from accidentally making the wrong choice.
   </p>
+  <h3>
+    How to name destructive buttons
+  </h3>
+  <div
+    className="row"
+  >
+    <div
+      className="col-lg-6"
+    >
+      <div
+        className="slab slab-plain slab-border-success pb-5 h-100"
+      >
+        <h4>
+          Do
+        </h4>
+        <div
+          className="d-flex justify-content-center mt-4 mb-4"
+        >
+          <img
+            className="w-75"
+            src="/TEST/img/documentation/buttons/dos-naming.png"
+          />
+        </div>
+        Make sure to differentiate the naming so that the user understands the difference between the actions the user can take.
+      </div>
+    </div>
+    <div
+      className="col-lg-6"
+    >
+      <div
+        className="slab slab-plain slab-border-error pb-5 h-100"
+      >
+        <h4>
+          Don't
+        </h4>
+        <div
+          className="d-flex justify-content-center mt-4 mb-4"
+        >
+          <img
+            className="w-75"
+            src="/TEST/img/documentation/buttons/donts-naming.png"
+          />
+        </div>
+        Avoid naming an 
+        <b>
+          Executive Destructive Button
+        </b>
+         poorly – the button cancels the payment of the invoice and not the invoice, which isn’t clear at all.
+      </div>
+    </div>
+  </div>
 </Fragment>
 `;
 

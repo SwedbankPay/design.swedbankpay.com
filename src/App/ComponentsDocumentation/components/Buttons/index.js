@@ -26,58 +26,35 @@ const DestructiveButton = () => (
         </p>
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={destructiveButtons} codeFigure />
 
-        <h3>Dos and don&apos;ts</h3>
+        <h3>How to use destructive buttons</h3>
 
-        <div className="slab slab-plain slab-border-success mb-4">
-            <h4>Dos</h4>
-            <img src={`${basename}img/documentation/buttons/dos.png`} className="w-100"/>
-            <div className="d-flex justify-content-between mt-4">
-                <div className="w-100" >
-                    <ul className="list list-bullet">
-                        <li>
-                            Use the <b>Guiding Destructive Buttons</b> in non-contained areas
-                        </li>
-                    </ul>
-                </div>
-                <div className="w-100" style={{ paddingLeft: "8%" }}>
-                    <ul className="list list-bullet">
-                        <li>
-                            Use the <b>Executive Destructive Buttons</b> a contained space as a final destructive call to action
-                        </li>
-                        <li>
-                            Name the buttons differently to separate choices
-                        </li>
-                    </ul>
+        <div className="row">
+            <div className="col-lg-6">
+                <div className="slab slab-plain slab-border-success pb-5 h-100">
+                    <h4>Do</h4>
+                    <div className="d-flex justify-content-center mt-4 mb-4">
+                        <img src={`${basename}img/documentation/buttons/dos-guiding.png`} className="w-50"/>
+                    </div>
+                    Use the <b>Guiding Destructive Buttons</b> to initiate a destructive action
+
+                    <div className="d-flex justify-content-center mt-5 mb-4">
+                        <img src={`${basename}img/documentation/buttons/dos.png`} className="w-75"/>
+                    </div>
+                    Use the <b>Executive Destructive Buttons</b> a contained space as a final destructive call to action
                 </div>
             </div>
-        </div>
+            <div className="col-lg-6">
+                <div className="slab slab-plain slab-border-error pb-5 h-100">
+                    <h4>{"Don't"}</h4>
+                    <div className="d-flex justify-content-center mt-4 mb-4">
+                        <img src={`${basename}img/documentation/buttons/donts-executive.png`} className="w-50"/>
+                    </div>
+                    Avoid using the <b>Executive Destructive Buttons</b> to initiate a destructive action
 
-        <div className="slab slab-plain slab-border-error">
-            <h4>{"Don'ts"}</h4>
-            <img src={`${basename}img/documentation/buttons/donts.png`} className="w-100"/>
-            <div className="d-flex justify-content-between mt-4">
-                <div className="w-100" >
-                    <ul className="list list-bullet">
-                        <li>
-                            Avoid using the <b>Executive Destructive Buttons</b> in non-contained areas
-                        </li>
-                        <li>
-                            Avoid using the <b>Executive Destructive Buttons</b> in a guiding purpose
-                        </li>
-                        <li>
-                            Avoid using multiple <b>Executive Destructive Buttons</b> in the same userflow
-                        </li>
-                    </ul>
-                </div>
-                <div className="w-100" style={{ paddingLeft: "8%" }}>
-                    <ul className="list list-bullet">
-                        <li>
-                            Avoid using multiple buttons with the same name – here &quot;Cancel&quot;
-                        </li>
-                        <li>
-                            Avoid naming an <b>Excecutive Destructive Button poorly</b> – the button cancels the payment of the invoice and not the invoice, which isn’t clear at al
-                        </li>
-                    </ul>
+                    <div className="d-flex justify-content-center mt-5 mb-4">
+                        <img src={`${basename}img/documentation/buttons/donts.png`} className="w-75"/>
+                    </div>
+                    Avoid using multiple <b>Executive Destructive Buttons</b> in the same userflow
                 </div>
             </div>
         </div>
@@ -94,7 +71,7 @@ const NamingButtons = () => (
             try to keep the number of characters fairly low to provide more clarity."}
         </p>
 
-        <h3>Unique naming</h3>
+        <h4>Unique naming</h4>
         <p>
             {
                 "Avoid using the same name for multiple buttons in the same user flow. It’s particularly hard for users using a screen reader to tell four “Next” buttons one\
@@ -103,6 +80,30 @@ const NamingButtons = () => (
                 Try to separate the text as much as you can to improve the user experience, providing the user from accidentally making the wrong choice."
             }
         </p>
+
+        <h3>How to name destructive buttons</h3>
+        <div className="row">
+            <div className="col-lg-6">
+                <div className="slab slab-plain slab-border-success pb-5 h-100">
+                    <h4>Do</h4>
+
+                    <div className="d-flex justify-content-center mt-4 mb-4">
+                        <img src={`${basename}img/documentation/buttons/dos-naming.png`} className="w-75"/>
+                    </div>
+                    Make sure to differentiate the naming so that the user understands the difference between the actions the user can take.
+                </div>
+            </div>
+            <div className="col-lg-6">
+                <div className="slab slab-plain slab-border-error pb-5 h-100">
+                    <h4>{"Don't"}</h4>
+
+                    <div className="d-flex justify-content-center mt-4 mb-4">
+                        <img src={`${basename}img/documentation/buttons/donts-naming.png`} className="w-75"/>
+                    </div>
+                    Avoid naming an <b>Executive Destructive Button</b> poorly – the button cancels the payment of the invoice and not the invoice, which isn’t clear at all.
+                </div>
+            </div>
+        </div>
     </>
 );
 
@@ -122,31 +123,46 @@ const CombiningButtons = () => (
         </ComponentPreview>
 
         <h3>{"Dos and don'ts"}</h3>
-        <div className="row">
-            <div className="col-sm-6">
-                <div className="slab slab-plain slab-border-success">
-                    <h4>Dos</h4>
-                    <p>Place buttons in a hierarchly correct order and combine different kinds of button</p>
+        <div className="slab slab-plain slab-border-success mb-5">
+            <h4>Do</h4>
+            <div className="row">
+                <div className="col-lg-6">
                     <img src={`${basename}img/documentation/buttons/dos1.png`} className="w-100 mb-4"/>
-                    <p>Use the <b>Text Button</b> as an discrete option to cancel</p>
-                    <img src={`${basename}img/documentation/buttons/dos2.png`} className="w-100 mb-4"/>
-                    <p>Place buttons side by side in Desktop view</p>
+                    <p>Place buttons in a hierarchly correct order and combine different kinds of button</p>
+                </div>
+                <div className="col-lg-6">
                     <img src={`${basename}img/documentation/buttons/dos3.png`} className="w-100 mb-4"/>
-                    <p>Combine <b>Executive Destructive Buttons</b> with normal <b>Text/Link Buttons</b></p>
+                    <p>Place buttons side by side in Desktop view</p>
+                </div>
+                <div className="col-lg-6">
+                    <img src={`${basename}img/documentation/buttons/dos2.png`} className="w-100 mb-4"/>
+                    <p>Use the <b>Text Button</b> as an discrete option to cancel</p>
+                </div>
+                <div className="col-lg-6">
                     <img src={`${basename}img/documentation/buttons/dos4.png`} className="w-100 mb-4"/>
+                    <p>Combine <b>Executive Destructive Buttons</b> with normal <b>Text/Link Buttons</b></p>
                 </div>
             </div>
-            <div className="col-sm-6">
-                <div className="slab slab-plain slab-border-error">
-                    <h4>{"Don'ts"}</h4>
-                    <p>Use the <b>Secondary Button</b> (and/or the <b>Text Button</b>) above the <b>Primary Button</b></p>
+        </div>
+
+        <div className="slab slab-plain slab-border-error">
+            <h4>{"Don't"}</h4>
+            <div className="row">
+                <div className="col-lg-6">
                     <img src={`${basename}img/documentation/buttons/donts1.png`} className="w-100 mb-4"/>
-                    <p>List primary actions and/or combine <b>Primary Button</b> and <b>BankID Button</b></p>
+                    <p>Use the <b>Secondary Button</b> (and/or the <b>Text Button</b>) above the <b>Primary Button</b></p>
+                </div>
+                <div className="col-lg-6">
                     <img src={`${basename}img/documentation/buttons/donts2.png`} className="w-100 mb-4"/>
-                    <p>Use and combine destructive buttons the same way as normal buttons</p>
+                    <p>List primary actions and/or combine <b>Primary Button</b> and <b>BankID Button</b></p>
+                </div>
+                <div className="col-lg-6">
                     <img src={`${basename}img/documentation/buttons/donts3.png`} className="w-100 mb-4"/>
-                    <p>Combine normal buttons and destructive buttons</p>
+                    <p>Use and combine destructive buttons the same way as normal buttons</p>
+                </div>
+                <div className="col-lg-6">
                     <img src={`${basename}img/documentation/buttons/donts4.png`} className="w-100 mb-4"/>
+                    <p>Combine normal buttons and destructive buttons</p>
                 </div>
             </div>
         </div>
