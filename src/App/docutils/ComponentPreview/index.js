@@ -179,6 +179,8 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                 const defaultRadiosGroups = defaultRadios.map(radio => radio.querySelector("input").name);
 
                 defaultRadios.map(radio => radio.querySelector("input").checked = true);
+
+                // Reset radio groups that do not have default specified (set to top radio). Needs to be done when one or more radio button is specified as default
                 [...showcasePanel.querySelectorAll(".radio")].filter(radio => !defaultRadiosGroups.includes(radio.querySelector("input").name))
                     .map(radio => radio.querySelector("input").checked = radio.querySelector("input").value === "0");
             } else {
@@ -191,7 +193,6 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
             tabs.init(this.props.showCasePanelAdvanced.tabsId);
 
             this._resetOptions();
-
         }
 
         componentDidUpdate (prevProps, prevState) {
