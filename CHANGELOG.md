@@ -79,6 +79,8 @@
     - Changed guidelines content and presentation
   - Forms
     - Updated documentation, moved dropdown menu to Forms
+  - Status Badges
+    - Added status badges that give information on component status
 - Status
   - Removed default status
   - Changed color of success status
