@@ -1,2 +1,2 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[17],{416:function(e,a,n){"use strict";n.r(a);var t=n(1),c=n.n(t),s=n(14),o=function(e){var a=e.className,n=e.children;return c.a.createElement("footer",{className:"page-footer".concat(a?" ".concat(a):"")},n||c.a.createElement("p",{className:"page-footer-rights"},"© Swedbank Pay"))};o.propTypes={className:n.n(s).a.string},a.default=o}}]);
-//# sourceMappingURL=doc-route.chunk_100.js.map?b099d62c30022b55d3f9
+(window.webpackJsonp=window.webpackJsonp||[]).push([[15],{425:function(e,a,n){"use strict";n.r(a);var t=n(0),c=n.n(t),s=n(7),o=function(e){var a=e.className,n=e.children;return c.a.createElement("footer",{className:"page-footer".concat(a?" ".concat(a):"")},n||c.a.createElement("p",{className:"page-footer-rights"},"© Swedbank Pay"))};o.propTypes={className:n.n(s).a.string},a.default=o}}]);
+//# sourceMappingURL=doc-route.chunk_100.js.map?d6cdbb35395a492cd5d7
