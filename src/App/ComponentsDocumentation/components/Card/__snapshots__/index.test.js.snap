@@ -5,8 +5,11 @@ exports[`Documentation: Card OldCard renders 1`] = `
   <h2
     id="old-card"
   >
-    Old card (Being removed)
+    Old card
   </h2>
+  <StatusBadge
+    type="remove"
+  />
   <p>
     Cards support a wide variety of content, including images, text, list groups, links, and more. Make sure to restrain the width of your card unless you wish for it to fill the wrapping component.
   </p>
