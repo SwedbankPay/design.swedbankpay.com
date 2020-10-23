@@ -13,7 +13,7 @@ const ResourcesTypography = () => (
     <div className="expandable">
         <button type="button" className="expandable-header" aria-expanded="false" aria-controls="resources-typograpy-body">
             <span className="expandable-headline">Typography guidelines</span>
-            <small className="expandable-subtitle">From <Link to="/res/resources/typography">typography in Resources</Link></small>
+            <small className="expandable-subtitle">From <Link to="/resources/typography">typography in Resources</Link></small>
         </button>
         <div className="expandable-body" id="resources-typography-body">
             <Overview />

@@ -32,11 +32,11 @@ exports[`Resources: Presentations Overview renders 1`] = `
 <Fragment>
   <p>
     This is the main template for both internal and external use. Make sure you have the correct fonts installed on your computer. The fonts can be found 
-    <a
-      href="/res/resources/typography"
+    <Link
+      to="/resources/typography"
     >
       here
-    </a>
+    </Link>
     . Please do not change the colour or the logo of this template.
   </p>
   <p>

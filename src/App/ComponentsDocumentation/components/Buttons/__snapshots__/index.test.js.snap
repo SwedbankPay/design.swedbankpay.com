@@ -971,11 +971,11 @@ exports[`Documentation: Buttons Overview renders 1`] = `
             />,
             "description": <p>
               Use secondary buttons for secondary call to actions on a page. Pages with too many calls to action make it hard for users to know what to do next. Before adding lots of secondary buttons, try to simplify the page or break the content down across multiple pages or consider using 
-              <a
-                href="/components/links"
+              <Link
+                to="/components/links#action-link"
               >
                 Action links
-              </a>
+              </Link>
               .
             </p>,
             "options": Object {

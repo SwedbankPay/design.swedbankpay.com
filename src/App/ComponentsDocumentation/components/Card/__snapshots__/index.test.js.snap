@@ -461,7 +461,7 @@ exports[`Documentation: Card renders 1`] = `
     <Link
       to="/components/links"
     >
-      links
+      Links
     </Link>
      instead.
   </p>

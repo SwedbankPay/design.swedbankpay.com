@@ -66,7 +66,7 @@ exports[`Utilities: JavascriptDocs renders init and close methods 1`] = `
       description={
         <React.Fragment>
           <Link
-            to="/docs/getting-started/javascript"
+            to="/getting-started/javascript"
           >
             Initializes
           </Link>
@@ -95,7 +95,7 @@ exports[`Utilities: JavascriptDocs renders init and close methods 1`] = `
             className="javascript-doc-element-description"
           >
             <Link
-              to="/docs/getting-started/javascript"
+              to="/getting-started/javascript"
             />
              
             test
@@ -178,7 +178,7 @@ exports[`Utilities: JavascriptDocs renders init and open methods 1`] = `
       description={
         <React.Fragment>
           <Link
-            to="/docs/getting-started/javascript"
+            to="/getting-started/javascript"
           >
             Initializes
           </Link>
@@ -207,7 +207,7 @@ exports[`Utilities: JavascriptDocs renders init and open methods 1`] = `
             className="javascript-doc-element-description"
           >
             <Link
-              to="/docs/getting-started/javascript"
+              to="/getting-started/javascript"
             />
              
             test
@@ -291,7 +291,7 @@ exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
       description={
         <React.Fragment>
           <Link
-            to="/docs/getting-started/javascript"
+            to="/getting-started/javascript"
           >
             Initializes
           </Link>
@@ -320,7 +320,7 @@ exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
             className="javascript-doc-element-description"
           >
             <Link
-              to="/docs/getting-started/javascript"
+              to="/getting-started/javascript"
             />
              
             test
@@ -453,7 +453,7 @@ exports[`Utilities: JavascriptDocs renders only init method 1`] = `
       description={
         <React.Fragment>
           <Link
-            to="/docs/getting-started/javascript"
+            to="/getting-started/javascript"
           >
             Initializes
           </Link>
