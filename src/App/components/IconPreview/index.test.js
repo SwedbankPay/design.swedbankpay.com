@@ -70,28 +70,28 @@ describe("Component: IconPreview - ", () => {
         const wrapper = shallow(<IconPreview name="android" type="material-icons" />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<i className="material-icons">android</i>)).toEqual(true);
+        expect(wrapper.contains(<i className="material-icons" aria-hidden="true">android</i>)).toEqual(true);
     });
 
     it("renders correct icon when prop name is provided", () => {
         const wrapper = shallow(<IconPreview name="amex" type="payment-icon" />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<i className="payment-icon payment-icon-amex"></i>)).toEqual(true);
+        expect(wrapper.contains(<i className="payment-icon payment-icon-amex" aria-hidden="true"></i>)).toEqual(true);
     });
 
     it("renders correct size when prop size is provided", () => {
         const wrapper = shallow(<IconPreview name="amex" size="large" type="payment-icon" />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<i className="payment-icon payment-icon-large payment-icon-amex"></i>)).toEqual(true);
+        expect(wrapper.contains(<i className="payment-icon payment-icon-large payment-icon-amex" aria-hidden="true"></i>)).toEqual(true);
     });
 
     it("renders icon with custom when prop className is provided", () => {
         const wrapper = shallow(<IconPreview name="amex" type="payment-icon" className="test test2 test-3" />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<i className="payment-icon payment-icon-amex test test2 test-3"></i>)).toEqual(true);
+        expect(wrapper.contains(<i className="payment-icon payment-icon-amex test test2 test-3" aria-hidden="true"></i>)).toEqual(true);
     });
 
     it("renders a preview wrapper around the <i> tag when prop preview is true", () => {
@@ -100,7 +100,7 @@ describe("Component: IconPreview - ", () => {
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(
             <div className="icon-preview">
-                <i className="payment-icon payment-icon-amex"></i>
+                <i className="payment-icon payment-icon-amex" aria-hidden="true"></i>
                 <code className="code-tags code-tags-secondary mt-2">amex</code>
             </div>
         )).toEqual(true);
@@ -112,7 +112,7 @@ describe("Component: IconPreview - ", () => {
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(
             <div className="icon-preview">
-                <i className="material-icons material-icons-large">android</i>
+                <i className="material-icons material-icons-large" aria-hidden="true">android</i>
                 <code className="code-tags code-tags-secondary mt-2">large</code>
             </div>
         )).toEqual(true);

@@ -8,12 +8,14 @@
 @black:                                     #222222;
 @text-gray:                                 #767676;
 @list-gray:                                 #999999;
-@light-gray:                                #F9F8F6;
+@light-gray:                                #f9f8f6;
 @white:                                     #ffffff;
 
 /* Main Brand Color Variants */
 @brand-primary:                             #2da944;
-@brand-primary-bright:                      #2da944;
+@brand-primary-light:                       #2da944;
+@brand-primary-light-2:                     #2da944;
+@brand-primary-light-3:                     #2da944;
 @brand-primary-faded:                         fade(@brand-primary, 60%);
 @brand-secondary-dark-1:                    #3c3c3c;
 @brand-secondary-dark-2:                    #3c3c3c;
@@ -41,8 +43,10 @@
 /* State colors */
 @brand-success:                             #2da944;
 @brand-success-light:                       #f2f7eb;
-@brand-warning:                             #ff9f00;
+@brand-success-light-2:                     #99cc66;
+@brand-warning:                             #f9ce22;
 @brand-warning-light:                       #fff3d5;
+@brand-warning-2:                           #ee7023;
 @brand-error-border:                        #f1bbb9;
 @brand-error:                               #cd2e00;
 @brand-error-light:                         #f9ded3;
@@ -55,18 +59,27 @@
 @brand-monofont:                            monospace;
 
 /* Button colors */
-@executive-disabled-bg:                     #f5b895;
-@guiding-disabled-bg:                       #98d0d6;
+@primary-disabled-bg:                     #f5b895;
+@secondary-disabled-bg:                       #98d0d6;
+@destructive-disabled-bg:                   #f9ded3;
 
-@btn-executive-color:                       @white;
-@btn-executive-bg:                          @brand-tertiary;
-@btn-executive-disabled-color:              @white;
-@btn-executive-disabled-bg:                 #2da944c2;
+@btn-primary-color:                       @white;
+@btn-primary-bg:                          @brand-tertiary;
+@btn-primary-hover:                       @brand-primary-faded;
+@btn-primary-disabled-color:              @white;
+@btn-primary-disabled-bg:                 #2da944c2;
 
-@btn-guiding-color:                         #231f20;
-@btn-guiding-bg:                            #c4c6c8;
-@btn-guiding-disabled-color:                @white;
-@btn-guiding-disabled-bg:                   #c4c6c8;
+@btn-secondary-color:                         #231f20;
+@btn-secondary-bg:                            #c4c6c8;
+@btn-secondary-hover:                         @brand-primary-light;
+@btn-secondary-disabled-color:                @white;
+@btn-secondary-disabled-bg:                   #c4c6c8;
+
+@btn-destructive-color:                    @white;
+@btn-destructive-bg:                       @brand-error;
+@btn-destructive-hover:                    #e07088;
+@btn-destructive-disabled-color:           @white;
+@btn-destructive-disabled-bg:              @destructive-disabled-bg;
 
 @btn-link-color:                            #266c9a;
 @btn-link-disabled-color:                   @list-gray;
@@ -90,3 +103,6 @@
 @green-syntax-highlight:                    #99CC66;
 @blue-syntax-highlight:                     #43D0DD;
 @yellow-syntax-highlight:                   #FFF3D5;
+@pink-cards-details:                        #c5569a;
+@blue-text-status-badge:                    #3e6ab6;
+@green-text-status-badge:                   #437e15;

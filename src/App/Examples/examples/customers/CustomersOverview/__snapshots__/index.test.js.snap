@@ -34,6 +34,7 @@ exports[`Examples: CustomersOverview renders 1`] = `
               
 
               <i
+                aria-hidden="true"
                 className="material-icons"
               >
                 search
@@ -50,7 +51,7 @@ exports[`Examples: CustomersOverview renders 1`] = `
             
 
             <button
-              className="btn btn-executive btn-outline"
+              className="btn btn-primary btn-outline"
               disabled={true}
               onClick={[Function]}
               type="button"
@@ -58,6 +59,7 @@ exports[`Examples: CustomersOverview renders 1`] = `
               
 
               <i
+                aria-hidden="true"
                 className="material-icons"
               >
                 close

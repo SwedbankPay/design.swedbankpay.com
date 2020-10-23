@@ -86,7 +86,7 @@ describe("Component: ActionLink", () => {
             const wrapper = shallow(<ActionLinkContent linkText="Link text" newTab={true} />);
 
             expect(wrapper).toMatchSnapshot();
-            expect(wrapper.contains(<i className="material-icons">open_in_new</i>)).toEqual(true);
+            expect(wrapper.contains(<i className="material-icons" aria-hidden="true">open_in_new</i>)).toEqual(true);
         });
     });
 

@@ -4,6 +4,8 @@ import "prismjs";
 
 import ComponentPreview from "./index";
 
+const { tabs } = window.dg;
+
 // const htmlEncodeString = str => String(str)
 //     .replace(/&/g, "&amp;")
 //     .replace(/</g, "&lt;")
@@ -32,6 +34,8 @@ describe("Utilities: ComponentPreview", () => {
             <a href="#">This is a test-link</a>
         </div>
     );
+
+    tabs.init = jest.fn();
 
     it("is defined", () => {
         expect(ComponentPreview).toBeDefined();
@@ -68,6 +72,16 @@ describe("Utilities: ComponentPreview", () => {
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).not.toContain("showcase-panel");
+    });
+
+    it("does not render showCasePanelAdvanced when showCasePanel or showCasePanelAdvanced is false/not provided", () => {
+        const wrapper = mount(<ComponentPreview language="html" codeFigure>
+            <TestComponentH1 />
+        </ComponentPreview>);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.html()).not.toContain("showcase-panel");
+        expect(wrapper.html()).not.toContain("showcase-panel-advanced");
     });
 
     it("CodeFigure renders multiple html tags", () => {

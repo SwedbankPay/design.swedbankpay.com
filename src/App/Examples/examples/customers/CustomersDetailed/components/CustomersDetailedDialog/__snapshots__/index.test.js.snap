@@ -28,6 +28,7 @@ exports[`Examples: CustomersDetailedDialog renders 1`] = `
         type="button"
       >
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           close
@@ -52,14 +53,14 @@ exports[`Examples: CustomersDetailedDialog renders 1`] = `
       className="dialog-footer"
     >
       <button
-        className="btn btn-guiding"
+        className="btn btn-secondary"
         data-dialog-close="true"
         type="button"
       >
         Cancel
       </button>
       <button
-        className="btn btn-executive"
+        className="btn btn-primary"
         type="button"
       >
         Delete

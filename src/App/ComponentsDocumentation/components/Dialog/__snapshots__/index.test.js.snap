@@ -13,7 +13,7 @@ exports[`Documentation: Dialog Example renders 1`] = `
     showCasePanel={true}
   >
     <button
-      className="btn btn-executive"
+      className="btn btn-primary"
       data-dialog-open="demo-dialog"
       type="button"
     >
@@ -48,6 +48,7 @@ exports[`Documentation: Dialog HowItWorks renders 1`] = `
   <p>
     A dialog remains hidden until it is triggered. Once it is open it overlays the website with a dark background and presents some options, usually confirming or cancelling an action. If you use a dialog it is assumed that you want to "force" the user to make a choice. Therefore the only way to close a dialog is to choose one of the presented actions or, if given, press the 
     <i
+      aria-hidden="true"
       className="material-icons d-inline-flex"
     >
       close

@@ -15,6 +15,7 @@ exports[`Component: Link renders with left icon when leftIcon is provided 1`] = 
   onClick={[Function]}
 >
   <i
+    aria-hidden="true"
     className="material-icons"
   >
     chevron_left
@@ -49,6 +50,7 @@ exports[`Component: Link renders with right icon when rightIcon is provided 1`] 
     Link
   </span>
   <i
+    aria-hidden="true"
     className="material-icons"
   >
     chevron_right

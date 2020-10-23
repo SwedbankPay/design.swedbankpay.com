@@ -17,17 +17,20 @@ module.exports = [
             {
                 title: "Accordion",
                 path: "/components/accordion",
-                componentPath: "components/Accordion"
+                componentPath: "components/Accordion",
+                statusBadges: ["javascript", "updated"]
             },
             {
                 title: "Action List",
                 path: "/components/action-list",
-                componentPath: "components/ActionList"
+                componentPath: "components/ActionList",
+                statusBadges: ["javascript"]
             },
             {
                 title: "Alerts",
                 path: "/components/alerts",
-                componentPath: "components/Alerts"
+                componentPath: "components/Alerts",
+                statusBadges: ["javascript"]
             },
             {
                 title: "Badge",
@@ -42,17 +45,20 @@ module.exports = [
             {
                 title: "Buttons",
                 path: "/components/buttons",
-                componentPath: "components/Buttons"
+                componentPath: "components/Buttons",
+                statusBadges: ["updated"]
             },
             {
-                title: "Card",
-                path: "/components/card",
-                componentPath: "components/Card"
+                title: "Cards",
+                path: "/components/cards",
+                componentPath: "components/Card",
+                statusBadges: ["updated"]
             },
             {
                 title: "Charts",
                 path: "/components/charts",
-                componentPath: "components/Charts"
+                componentPath: "components/Charts",
+                statusBadges: ["javascript"]
             },
             {
                 title: "Code Tags",
@@ -62,22 +68,26 @@ module.exports = [
             {
                 title: "Datepickers",
                 path: "/components/datepickers",
-                componentPath: "components/Datepickers"
+                componentPath: "components/Datepickers",
+                statusBadges: ["javascript", "updated"]
             },
             {
                 title: "Dialog",
                 path: "/components/dialog",
-                componentPath: "components/Dialog"
+                componentPath: "components/Dialog",
+                statusBadges: ["javascript"]
             },
             {
                 title: "Expandable",
                 path: "/components/expandable",
-                componentPath: "components/Expandable"
+                componentPath: "components/Expandable",
+                statusBadges: ["javascript"]
             },
             {
                 title: "Forms",
                 path: "/components/forms",
-                componentPath: "components/Forms"
+                componentPath: "components/Forms",
+                statusBadges: ["javascript", "updated"]
             },
             {
                 title: "Footer",
@@ -87,7 +97,8 @@ module.exports = [
             {
                 title: "Input Group",
                 path: "/components/input-group",
-                componentPath: "components/InputGroup"
+                componentPath: "components/InputGroup",
+                statusBadges: ["updated"]
             },
             {
                 title: "Links",
@@ -112,7 +123,8 @@ module.exports = [
             {
                 title: "Nav",
                 path: "/components/nav",
-                componentPath: "components/Nav"
+                componentPath: "components/Nav",
+                statusBadges: ["javascript"]
             },
             {
                 title: "Pagination",
@@ -127,27 +139,32 @@ module.exports = [
             {
                 title: "Progress Steps",
                 path: "/components/progress-steps",
-                componentPath: "components/ProgressSteps"
+                componentPath: "components/ProgressSteps",
+                statusBadges: ["updated"]
             },
             {
                 title: "Sheet",
                 path: "/components/sheet",
-                componentPath: "components/Sheet"
+                componentPath: "components/Sheet",
+                statusBadges: ["javascript"]
             },
             {
                 title: "Sidebar",
                 path: "/components/sidebar",
-                componentPath: "components/Sidebar"
+                componentPath: "components/Sidebar",
+                statusBadges: ["javascript", "updated"]
             },
             {
                 title: "Slab",
                 path: "/components/slab",
-                componentPath: "components/Slab"
+                componentPath: "components/Slab",
+                statusBadges: ["updated"]
             },
             {
                 title: "Status",
                 path: "/components/status",
-                componentPath: "components/Status"
+                componentPath: "components/Status",
+                statusBadges: ["updated"]
             },
             {
                 title: "Tables",
@@ -157,22 +174,26 @@ module.exports = [
             {
                 title: "Tabs",
                 path: "/components/tabs",
-                componentPath: "components/Tabs"
+                componentPath: "components/Tabs",
+                statusBadges: ["javascript", "updated"]
             },
             {
                 title: "Toast",
                 path: "/components/toast",
-                componentPath: "components/Toast"
+                componentPath: "components/Toast",
+                statusBadges: ["javascript"]
             },
             {
                 title: "Tooltips",
                 path: "/components/tooltips",
-                componentPath: "components/Tooltips"
+                componentPath: "components/Tooltips",
+                statusBadges: ["javascript", "updated"]
             },
             {
                 title: "Topbar",
                 path: "/components/topbar",
-                componentPath: "components/Topbar"
+                componentPath: "components/Topbar",
+                statusBadges: ["javascript"]
             }
         ]
     }

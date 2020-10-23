@@ -7,12 +7,12 @@ export const Addon = ({ type, value, color, disabled }) => (
         <button type="button" className={`btn btn-${color}`} disabled={disabled}>
             {value}
         </button>
-        : <span className="input-group-addon">{(type === "icon") ? <i className="material-icons">{value}</i> : value}</span>
+        : <span className="input-group-addon">{(type === "icon") ? <i className="material-icons" aria-hidden="true">{value}</i> : value}</span>
 );
 
 const Feedback = ({ icon }) => (
     <span className="form-control-feedback">{"\n\t\t"}
-        <i className="material-icons">{icon}</i>{"\n\t"}
+        <i className="material-icons" aria-hidden="true">{icon}</i>{"\n\t"}
     </span>
 );
 
@@ -120,10 +120,10 @@ InputGroup.propTypes = {
     selectOptions: PropTypes.array,
     prefixValue: PropTypes.string,
     prefixType: PropTypes.oneOf(["button", "icon", ""]),
-    prefixBtnColor: PropTypes.oneOf(["executive", "guiding"]),
+    prefixBtnColor: PropTypes.oneOf(["primary", "secondary"]),
     postfixValue: PropTypes.string,
     postfixType: PropTypes.oneOf(["button", "icon", ""]),
-    postfixBtnColor: PropTypes.oneOf(["executive", "guiding"]),
+    postfixBtnColor: PropTypes.oneOf(["primary", "secondary"]),
     feedbackIcon: PropTypes.string,
     helpBlock: PropTypes.oneOfType([
         PropTypes.string,

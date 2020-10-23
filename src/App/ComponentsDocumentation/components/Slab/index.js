@@ -15,12 +15,12 @@ const DefaultSlab = () => (
                     <div className="form-group">
                         <label htmlFor="validation-email-2">Email</label>
                         <div className="input-group">
-                            <span className="input-group-addon"><i className="material-icons">email</i></span>
+                            <span className="input-group-addon"><i className="material-icons" aria-hidden="true">email</i></span>
                             <input type="email" className="form-control" id="validation-email-2" placeholder="bob.corlsan@example.com" required />
                         </div>
                         <div className="help-block" data-success="Right!" data-error="Wrong!">This one might be a little tricky</div>
                     </div>
-                    <button className="btn btn-executive" type="submit">Submit</button>
+                    <button className="btn btn-primary" type="submit">Submit</button>
                 </form>
             </div>
         </ComponentPreview>
@@ -84,6 +84,37 @@ const SlabColors = () => (
                     <li>Item 2</li>
                     <li>Item 3</li>
                 </ul>
+            </div>
+        </ComponentPreview>
+    </>
+);
+
+const SlabBorderTop = () => (
+    <>
+        <h2 id="slab-border-top">Slab with top border</h2>
+        <p>Slab with top border can be used to display, for instance, pros and cons lists.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <div className="row">
+                <div className="col-6">
+                    <div className="slab slab-plain slab-border-success">
+                        <h3>Do</h3>
+                        <ul className="list list-bullet">
+                            <li>Do this</li>
+                            <li>Do that</li>
+                            <li>Do the other</li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="col-6">
+                    <div className="slab slab-plain slab-border-error">
+                        <h3>Don&apos;t</h3>
+                        <ul className="list list-bullet">
+                            <li>Don&apos;t do this</li>
+                            <li>Don&apos;t do that</li>
+                            <li>Don&apos;t to the other</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </ComponentPreview>
     </>
@@ -189,6 +220,7 @@ class Slab extends Component {
                 </p>
                 <DefaultSlab />
                 <SlabColors />
+                <SlabBorderTop />
                 <SlabElevated />
                 <SlabWell />
                 <SlabArrow />
@@ -202,4 +234,4 @@ class Slab extends Component {
 export default Slab;
 
 /* For testing */
-export { DefaultSlab, SlabElevated, SlabWell, SlabArrow, SlabColors, SlabSizes, SlabMuted };
+export { DefaultSlab, SlabElevated, SlabWell, SlabArrow, SlabColors, SlabSizes, SlabMuted, SlabBorderTop };

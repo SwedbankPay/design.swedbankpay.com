@@ -14,7 +14,7 @@ const HowItWorks = () => (
         <p>
             A dialog remains hidden until it is triggered. Once it is open it overlays the website with a dark background and presents some options, usually confirming or cancelling an action.
             If you use a dialog it is assumed that you want to &quot;force&quot; the user to make a choice. Therefore the only way to close a dialog is to choose one of the presented actions or, if given,
-            press the <i className="material-icons d-inline-flex">close</i> to close the dialog.
+            press the <i className="material-icons d-inline-flex" aria-hidden="true">close</i> to close the dialog.
         </p>
         <p>
             Dialog boxes consist of a header, a body and a footer. In these you can put whatever you want, but some basic functionality should be included in all dialogs.
@@ -34,7 +34,7 @@ const Example = () => (
     <>
         <h2 id="overview">Example</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <button className="btn btn-executive" type="button" data-dialog-open="demo-dialog">{"\n"}Open dialog{"\n"}</button>
+            <button className="btn btn-primary" type="button" data-dialog-open="demo-dialog">{"\n"}Open dialog{"\n"}</button>
             <DialogComponent diaHeader="Delete item 456?" diaId="demo-dialog">
                 <p>Are you sure you want to permanently delete the item <i>German Swashbuckle (456)?</i></p>
             </DialogComponent>

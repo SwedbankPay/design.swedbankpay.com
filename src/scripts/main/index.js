@@ -14,6 +14,7 @@ import sidebar from "./sidebar";
 import script from "./script";
 import tabs from "./tabs";
 import toast from "./toast";
+import tooltips from "./tooltips";
 import topbar from "./topbar";
 import utils from "./utils";
 import validation from "./validation";
@@ -52,6 +53,7 @@ const dg = {
     script,
     tabs,
     toast,
+    tooltips,
     topbar,
     utils,
     validation
@@ -79,6 +81,7 @@ export {
     script,
     tabs,
     toast,
+    tooltips,
     topbar,
     utils,
     validation

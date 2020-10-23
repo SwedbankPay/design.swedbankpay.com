@@ -15,7 +15,7 @@ describe("scripts: sheet", () => {
             <div className="sheet" id={id}>
                 <section></section>
             </div>
-            <button className="btn btn-executive" type="button" data-sheet-open="demo-sheet">Open sheet</button>
+            <button className="btn btn-primary" type="button" data-sheet-open="demo-sheet">Open sheet</button>
         </>
     );
 
@@ -24,11 +24,11 @@ describe("scripts: sheet", () => {
             <div className="sheet sheet-open" id="demo-sheet">
                 <section>
                     <a href="#" className="sheet-close">
-                        <i className="material-icons">close</i>
+                        <i className="material-icons" aria-hidden="true">close</i>
                     </a>
                 </section>
             </div>
-            <button className="btn btn-executive" type="button" data-sheet-close="demo-sheet">Close sheet</button>
+            <button className="btn btn-primary" type="button" data-sheet-close="demo-sheet">Close sheet</button>
         </>
     );
 

@@ -27,6 +27,7 @@ exports[`Examples: FAQ FAQCard renders 1`] = `
             className="media-img"
           >
             <i
+              aria-hidden="true"
               className="material-icons text-muted"
             >
               help
@@ -51,7 +52,7 @@ exports[`Examples: FAQ FAQCard renders 1`] = `
           Send in a question to get help from our support team
         </p>
         <button
-          className="btn btn-executive btn-block"
+          className="btn btn-primary btn-block"
           data-sheet-open="faq-sheet"
           type="button"
         >
@@ -135,7 +136,7 @@ exports[`Examples: FAQ FAQSearch renders 1`] = `
       className="col-lg-8"
     >
       <InputGroup
-        postfixBtnColor="executive"
+        postfixBtnColor="primary"
         postfixType="button"
         postfixValue="Find"
         prefixType="icon"
@@ -165,6 +166,7 @@ exports[`Examples: FAQ FAQSheet renders 1`] = `
         className="input-group-addon"
       >
         <i
+          aria-hidden="true"
           className="material-icons"
         >
           help
@@ -178,7 +180,7 @@ exports[`Examples: FAQ FAQSheet renders 1`] = `
     </div>
   </div>
   <button
-    className="btn btn-executive"
+    className="btn btn-primary"
     onClick={[Function]}
     type="button"
   >

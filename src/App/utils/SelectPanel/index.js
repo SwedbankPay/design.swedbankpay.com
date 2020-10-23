@@ -41,7 +41,7 @@ class NavGroup extends Component {
         return (
             <li className="nav-group">
                 <div className="nav-group-heading">
-                    <i className="material-icons" onClick={() => this.toggleActive()}>arrow_right</i>
+                    <i className="material-icons" aria-hidden="true"onClick={() => this.toggleActive()}>arrow_right</i>
                     <span>{title}</span>
                 </div>
                 <ul className="nav-ul">
@@ -76,12 +76,12 @@ class SelectPanel extends Component {
 
     render () {
         return (
-            <div id={this.props.id} className="sidebar dg-sidebar">
+            <div id={this.props.id} className="sidebar dg-sidebar dg-only-style">
                 {/* A fully functional search box will be added later. */}
                 {/* <SearchBox routes={this.props.routes} /> */}
                 <nav className="sidebar-nav">
                     <a href="/" className="sidebar-top">{"\n"}
-                        <img className="d-none d-lg-block" src={`${basename}img/${brand}-logo-v-small.svg`} alt="logo" />{"\n"}
+                        <img className="d-none d-lg-block logotype-vertical logotype-sm" src={`${basename}img/${brand}-logo-v.svg`} alt={`${brand}-logo`} />{"\n"}
                         <div className="sidebar-version">
                             <div className="sidebar-version-header">
                                 Design Guide

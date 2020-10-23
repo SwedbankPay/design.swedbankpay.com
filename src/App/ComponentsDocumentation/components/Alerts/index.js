@@ -38,7 +38,7 @@ const ClosingTheAlert = () => (
         <h2 id="closing-the-alert">Closing the alert</h2>
         <p>
             To add a close-button, add the following code inside your alert-element:<br/>
-            <CodeTags type="primary" code={"<a href=\"#\" data-alert-close><i class=\"material-icons\">close</i></a>"} />
+            <CodeTags type="primary" code={"<a href=\"#\" data-alert-close><i class=\"material-icons\" aria-hidden=\"true\">close</i></a>"} />
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <AlertComponent type="success" text="This is a success alert with an icon!" close icon="check_circle" />{"\n\n"}
@@ -50,7 +50,7 @@ const ClosingTheAlert = () => (
         <p>To add an external close-button for your alert add the attribute <CodeTags type="secondary" code={"data-alert-close=\"{id}\""} /> to the button element.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <AlertComponent id="alert-success-1" type="success" text="Press the button below to close me" icon="check_circle" />{"\n\n"}
-            <button type="button" className="btn btn-executive" data-alert-close="alert-success-1">Close alert</button>
+            <button type="button" className="btn btn-primary" data-alert-close="alert-success-1">Close alert</button>
         </ComponentPreview>
     </>
 );

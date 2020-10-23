@@ -22,7 +22,7 @@ describe("Component: Link", () => {
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains("Link")).toBeTruthy();
-        expect(wrapper.html()).not.toContain("<i class=\"material-icons\">");
+        expect(wrapper.html()).not.toContain("<i class=\"material-icons\" aria-hidden=\"true\">");
     });
 
     it("renders with left icon when leftIcon is provided", () => {
@@ -30,7 +30,7 @@ describe("Component: Link", () => {
         const wrapper = shallow(<Link linkText="Link" leftIcon={icon} />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain(`<i class="material-icons">${icon}</i>`);
+        expect(wrapper.html()).toContain(`<i class="material-icons" aria-hidden="true">${icon}</i>`);
         expect(wrapper.html()).toContain("ml-2");
     });
 
@@ -39,7 +39,7 @@ describe("Component: Link", () => {
         const wrapper = shallow(<Link linkText="Link" rightIcon={icon} />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain(`<i class="material-icons">${icon}</i>`);
+        expect(wrapper.html()).toContain(`<i class="material-icons" aria-hidden="true">${icon}</i>`);
         expect(wrapper.html()).toContain("mr-2");
     });
 });

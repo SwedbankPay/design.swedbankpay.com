@@ -32,7 +32,7 @@ const MediaObject = ({ size, imgUrl, icon, heading, text, textSmall, mediaRight,
             {(imgUrl || icon) ?
                 <div className="media-img">{"\n"}
                     {imgUrl ? <> <img src={imgUrl} /> {"\n"} </> : null}
-                    {icon ? <> <i className={iconClasses}>{icon}</i> {"\n"} </> : null}
+                    {icon ? <> <i className={iconClasses} aria-hidden="true">{icon}</i> {"\n"} </> : null}
                 </div>
                 : null}
             <div className="media-body">

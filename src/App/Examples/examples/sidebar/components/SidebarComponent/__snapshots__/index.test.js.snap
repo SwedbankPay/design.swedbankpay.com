@@ -19,6 +19,7 @@ exports[`Examples: Sidebar - SidebarComponent renders 1`] = `
           className="nav-group-heading"
         >
           <i
+            aria-hidden="true"
             className="material-icons"
           >
             arrow_right
@@ -73,6 +74,7 @@ exports[`Examples: Sidebar - SidebarComponent renders 1`] = `
           className="nav-group-heading"
         >
           <i
+            aria-hidden="true"
             className="material-icons"
           >
             arrow_right
@@ -92,6 +94,7 @@ exports[`Examples: Sidebar - SidebarComponent renders 1`] = `
               className="nav-subgroup-heading"
             >
               <i
+                aria-hidden="true"
                 className="material-icons"
               >
                 arrow_right

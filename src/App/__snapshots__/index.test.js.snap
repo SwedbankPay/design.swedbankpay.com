@@ -78,9 +78,12 @@ exports[`Main: App renders 1`] = `
                       "title": "Color",
                     },
                     Object {
-                      "componentPath": "core/Logos",
-                      "path": "/core/logos",
-                      "title": "Logos",
+                      "componentPath": "core/Logotype",
+                      "path": "/core/logotype",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
+                      "title": "Logotype",
                     },
                     Object {
                       "componentPath": "core/Grid",
@@ -118,16 +121,26 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "components/Accordion",
                       "path": "/components/accordion",
+                      "statusBadges": Array [
+                        "javascript",
+                        "updated",
+                      ],
                       "title": "Accordion",
                     },
                     Object {
                       "componentPath": "components/ActionList",
                       "path": "/components/action-list",
+                      "statusBadges": Array [
+                        "javascript",
+                      ],
                       "title": "Action List",
                     },
                     Object {
                       "componentPath": "components/Alerts",
                       "path": "/components/alerts",
+                      "statusBadges": Array [
+                        "javascript",
+                      ],
                       "title": "Alerts",
                     },
                     Object {
@@ -143,16 +156,25 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "components/Buttons",
                       "path": "/components/buttons",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
                       "title": "Buttons",
                     },
                     Object {
                       "componentPath": "components/Card",
-                      "path": "/components/card",
-                      "title": "Card",
+                      "path": "/components/cards",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
+                      "title": "Cards",
                     },
                     Object {
                       "componentPath": "components/Charts",
                       "path": "/components/charts",
+                      "statusBadges": Array [
+                        "javascript",
+                      ],
                       "title": "Charts",
                     },
                     Object {
@@ -163,21 +185,35 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "components/Datepickers",
                       "path": "/components/datepickers",
+                      "statusBadges": Array [
+                        "javascript",
+                        "updated",
+                      ],
                       "title": "Datepickers",
                     },
                     Object {
                       "componentPath": "components/Dialog",
                       "path": "/components/dialog",
+                      "statusBadges": Array [
+                        "javascript",
+                      ],
                       "title": "Dialog",
                     },
                     Object {
                       "componentPath": "components/Expandable",
                       "path": "/components/expandable",
+                      "statusBadges": Array [
+                        "javascript",
+                      ],
                       "title": "Expandable",
                     },
                     Object {
                       "componentPath": "components/Forms",
                       "path": "/components/forms",
+                      "statusBadges": Array [
+                        "javascript",
+                        "updated",
+                      ],
                       "title": "Forms",
                     },
                     Object {
@@ -188,6 +224,9 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "components/InputGroup",
                       "path": "/components/input-group",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
                       "title": "Input Group",
                     },
                     Object {
@@ -213,6 +252,9 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "components/Nav",
                       "path": "/components/nav",
+                      "statusBadges": Array [
+                        "javascript",
+                      ],
                       "title": "Nav",
                     },
                     Object {
@@ -228,26 +270,42 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "components/ProgressSteps",
                       "path": "/components/progress-steps",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
                       "title": "Progress Steps",
                     },
                     Object {
                       "componentPath": "components/Sheet",
                       "path": "/components/sheet",
+                      "statusBadges": Array [
+                        "javascript",
+                      ],
                       "title": "Sheet",
                     },
                     Object {
                       "componentPath": "components/Sidebar",
                       "path": "/components/sidebar",
+                      "statusBadges": Array [
+                        "javascript",
+                        "updated",
+                      ],
                       "title": "Sidebar",
                     },
                     Object {
                       "componentPath": "components/Slab",
                       "path": "/components/slab",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
                       "title": "Slab",
                     },
                     Object {
                       "componentPath": "components/Status",
                       "path": "/components/status",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
                       "title": "Status",
                     },
                     Object {
@@ -258,21 +316,35 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "components/Tabs",
                       "path": "/components/tabs",
+                      "statusBadges": Array [
+                        "javascript",
+                        "updated",
+                      ],
                       "title": "Tabs",
                     },
                     Object {
                       "componentPath": "components/Toast",
                       "path": "/components/toast",
+                      "statusBadges": Array [
+                        "javascript",
+                      ],
                       "title": "Toast",
                     },
                     Object {
                       "componentPath": "components/Tooltips",
                       "path": "/components/tooltips",
+                      "statusBadges": Array [
+                        "javascript",
+                        "updated",
+                      ],
                       "title": "Tooltips",
                     },
                     Object {
                       "componentPath": "components/Topbar",
                       "path": "/components/topbar",
+                      "statusBadges": Array [
+                        "javascript",
+                      ],
                       "title": "Topbar",
                     },
                   ],
@@ -368,39 +440,6 @@ exports[`Main: App renders 1`] = `
                     },
                   ],
                   "title": "Resources",
-                },
-                Object {
-                  "appFolder": "Examples",
-                  "path": "/examples",
-                  "redirect": "/examples/login",
-                  "routes": Array [
-                    Object {
-                      "componentPath": "examples/login",
-                      "path": "/examples/login",
-                      "title": "Login",
-                    },
-                    Object {
-                      "componentPath": "examples/settings",
-                      "path": "/examples/settings",
-                      "title": "Settings",
-                    },
-                    Object {
-                      "componentPath": "examples/faq",
-                      "path": "/examples/faq",
-                      "title": "FAQ",
-                    },
-                    Object {
-                      "componentPath": "examples/customers",
-                      "path": "/examples/customers",
-                      "title": "Customers",
-                    },
-                    Object {
-                      "componentPath": "examples/sidebar",
-                      "path": "/examples/sidebar",
-                      "title": "Sidebar",
-                    },
-                  ],
-                  "title": "Examples",
                 },
               ]
             }

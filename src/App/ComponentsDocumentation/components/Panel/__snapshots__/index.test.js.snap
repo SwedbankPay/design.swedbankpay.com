@@ -94,7 +94,7 @@ exports[`Documentation: Panel PanelTable renders 1`] = `
       code=".panel"
       type="secondary"
     />
-    . Tables put in a panel are given a border bottom to seperate it from the following elements.
+    . Tables put in a panel are given a border bottom to separate it from the following elements.
   </p>
   <ComponentPreview
     codeFigure={true}

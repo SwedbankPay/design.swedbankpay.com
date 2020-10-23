@@ -109,7 +109,7 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
     To add a close-button, add the following code inside your alert-element:
     <br />
     <CodeTags
-      code="<a href=\\"#\\" data-alert-close><i class=\\"material-icons\\">close</i></a>"
+      code="<a href=\\"#\\" data-alert-close><i class=\\"material-icons\\" aria-hidden=\\"true\\">close</i></a>"
       type="primary"
     />
   </p>
@@ -178,7 +178,7 @@ exports[`Documentation: Alerts Closing The Alert renders 1`] = `
 
 
     <button
-      className="btn btn-executive"
+      className="btn btn-primary"
       data-alert-close="alert-success-1"
       type="button"
     >

@@ -4,7 +4,7 @@
     align-items: center;
 
     &:not(:last-child) {
-        margin-bottom: @base-margin-sm;
+        margin-bottom: @base-margin;
     }
 
     label {
@@ -12,11 +12,26 @@
         align-items: center;
         margin: 0;
         padding-left: @checkbox-label-padding;
+        min-height: 1.5rem;
     }
 
     input[type="checkbox"] {
         margin-right: @base-margin;
         opacity: 0;
+
+        + label:after {
+            content: "";
+            display: block;
+            position: absolute;
+            visibility: visible;
+            left: -28px;
+            top: -1px;
+            height: @checkbox-height;
+            width: @checkbox-width;
+            background-color: @white;
+            border: 2px solid @brand-secondary-light-2;
+            border-radius: 2px;
+        }
 
         + label:before {
             content: "";
@@ -28,11 +43,10 @@
             height: @checkbox-height;
             width: @checkbox-width;
             background-color: @white;
-            border: 2px solid @brand-secondary;
-            border-radius: 2px;
+            border-radius: 50%;
         }
 
-        &:checked + label:before {
+        &:checked + label:after {
             background-color: @checkbox-checked-color;
             border-color: @checkbox-checked-color;
             background-position: 50% 50%;
@@ -40,29 +54,40 @@
             background-image: url("../../../icons/shapes/check-mark.svg");
         }
 
-        &:not(:checked):not([disabled]) {
-            &:hover + label:before {
-                border-color: @brand-secondary-light-2;
-            }
+        &:focus + label:before {
+            box-shadow: 0 0 0 0.5rem @brand-secondary-light-3;
+            border-color: @brand-secondary;
         }
 
-        &:focus + label:before {
-            .tab-focus();
+        &:focus + label:after {
+            border-color: @brand-secondary;
+        }
+
+        &:hover + label:before {
+            box-shadow: 0 0 0 0.5rem @brand-secondary-light-3;
+        }
+
+        &:hover + label:after {
+            border-color: @brand-secondary;
         }
 
         &[disabled] {
-            + label:before {
+            + label:after {
                 background-color: @input-bg-disabled;
                 border-color: @input-checked-bg-disabled;
             }
 
-            &:checked + label:before {
+            + label:before {
+                content: none;
+            }
+
+            &:checked + label:after {
                 background-color: @input-checked-bg-disabled;
             }
 
             + label,
-            &:before,
-            &:checked + label:before {
+            &:after,
+            &:checked + label:after {
                 cursor: not-allowed;
             }
         }

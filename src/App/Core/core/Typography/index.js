@@ -168,7 +168,7 @@ const AkkuratMono = () => (
         <h3>Download</h3>
         <div className="slab slab-default slab-elevated">
             <p>Before downloading the Akkurat Mono font, make sure to understand the correct usages of Akkurat Mono.</p>
-            <Button type="executive" icon="file_download" href={`${basename}release/fonts/AkkuratMono.zip`} label="Akkurat Mono" />
+            <Button type="primary" icon="file_download" href={`${basename}release/fonts/AkkuratMono.zip`} label="Akkurat Mono" />
         </div>
     </>
 );

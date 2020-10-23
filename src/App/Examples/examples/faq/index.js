@@ -45,7 +45,7 @@ const faqList = [
 const FAQSearch = () => (
     <>
         <div className="row justify-content-center">
-            <img className="examples-faq-logo" src={`${basename}img/${brand}-logo.svg`} alt="logo" />
+            <img className="examples-faq-logo" src={`${basename}img/${brand}-logo${brand === "swedbankpay" ? "-h" : ""}.svg`} alt="logo" />
         </div>
         <div className="row justify-content-center">
             <h2>How can we help?</h2>
@@ -58,7 +58,7 @@ const FAQSearch = () => (
                     prefixValue="search"
                     postfixType="button"
                     postfixValue="Find"
-                    postfixBtnColor="executive"
+                    postfixBtnColor="primary"
                 />
             </div>
         </div>
@@ -88,11 +88,11 @@ const FAQSheet = () => {
             <h2>Ask a question</h2>
             <div className="form-group">
                 <div className="input-group">
-                    <span className="input-group-addon"><i className="material-icons">help</i></span>
+                    <span className="input-group-addon"><i className="material-icons" aria-hidden="true">help</i></span>
                     <textarea type="textarea" className="form-control h-25" id="settings-description"></textarea>
                 </div>
             </div>
-            <button type="button" className="btn btn-executive" onClick={() => sendQuestion("faq-sheet")}>
+            <button type="button" className="btn btn-primary" onClick={() => sendQuestion("faq-sheet")}>
                 Send
             </button>
         </SheetComponent>
@@ -109,7 +109,7 @@ const FAQCard = () => (
                 <div className="card-body d-flex flex-column">
                     <div className="media media-sm">
                         <div className="media-img">
-                            <i className="material-icons text-muted">help</i>
+                            <i className="material-icons text-muted" aria-hidden="true">help</i>
                         </div>
                         <div className="media-body">
                             <h4 className="text-muted">Cannot find what you are looking for?</h4>
@@ -117,7 +117,7 @@ const FAQCard = () => (
                         </div>
                     </div>
                     <p>Send in a question to get help from our support team</p>
-                    <button type="button" className="btn btn-executive btn-block" data-sheet-open="faq-sheet">
+                    <button type="button" className="btn btn-primary btn-block" data-sheet-open="faq-sheet">
                         Send in a question
                     </button>
                 </div>

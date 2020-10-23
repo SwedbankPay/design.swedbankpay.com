@@ -17,6 +17,18 @@
         margin-top: 0;
         width: 100%;
 
+        &.dg-only-style {
+            max-width: 18rem;
+
+            .sidebar-nav {
+                height: 100vh;
+
+                .main-nav-ul {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
         .sidebar-nav {
             padding-right: 1rem;
             max-height: 100vh;
@@ -28,8 +40,8 @@
         }
 
         .sidebar-top {
-            padding-bottom: 1rem;
-            margin: 1rem 0;
+            padding: 1rem 0;
+            margin-bottom: 1rem;
             border-bottom: 1px solid @brand-secondary-light-3;
             display: flex;
             align-items: center;
@@ -61,6 +73,9 @@
 
 
         .sidebar-contact {
+            margin-top: auto;
+            margin-bottom: 1rem;
+
             a {
                 color: @brand-secondary;
                 fill: @brand-secondary;
@@ -390,10 +405,10 @@
     }
 
     .doc-body {
-        padding-right: 3rem;
+        padding-right: 2rem;
 
         @media (max-width: @screen-sm-max) {
-            padding-right: 10px;
+            padding-right: 1rem;
         }
     }
 
@@ -462,6 +477,12 @@
         }
     }
 
+    .status-list {
+        > li {
+            margin-bottom: 1rem;
+        }
+    }
+
     .showcase-panel {
         position: relative;
         background-color: @white;
@@ -472,6 +493,89 @@
 
         &.showcasepanel-sm {
             max-width: 20rem;
+        }
+
+        &.showcase-panel-advanced {
+            padding: 0;
+
+            @media screen and (max-width: @screen-sm-max) {
+                &.options-active {
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        left: 0;
+                        top: 0;
+                        background-color: @sheet-backdrop-bg;
+                        z-index: @zindex-tabs;
+                    }
+                }
+            }
+
+            .tabs {
+                margin: 0;
+
+                .options-open {
+                    margin: 0 1rem;
+                    cursor: pointer;
+
+                    &.hidden {
+                        visibility: hidden;
+                    }
+                }
+            }
+
+            .component-preview {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 2rem;
+                border-bottom: 1px solid @brand-secondary-light-3;
+            }
+
+            .component-description {
+                padding: 2rem;
+                min-height: 15rem;
+                max-width: 40.5rem;
+            }
+
+            .options {
+                @media screen and (max-width: @screen-sm-max) {
+                    position: absolute;
+                    right: 0;
+                    height: 100%;
+                    background-color: @white;
+                    z-index: calc(@zindex-tabs + 2);
+                }
+
+                display: none;
+                min-width: 0;
+                border-left: 1px solid @brand-secondary-light-3;
+                transition: min-width 1s ease-in-out;
+
+                &.active {
+                    display: block;
+                    min-width: 12.5rem;
+                }
+
+                .options-header {
+                    padding: 0 1rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 1px solid @brand-secondary-light-3;
+                    height: 2.5rem;
+
+                    .options-close {
+                        cursor: pointer;
+                    }
+                }
+
+                .options-body {
+                    padding: 1rem;
+                }
+            }
         }
     }
 

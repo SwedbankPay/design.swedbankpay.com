@@ -1,3 +1,198 @@
+.cards {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    position: relative;
+    padding: 2.25rem 1.5rem 1.5rem;
+    margin: 2rem 0 1rem;
+    border-radius: 4px;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+    color: @brand-secondary;
+    text-decoration: none;
+    background-color: @white;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.15);
+        color: @brand-secondary;
+
+        &:after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: "";
+            width: 100%;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 2px @brand-secondary;
+        outline: none;
+        color: @brand-secondary;
+
+        &:after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: "";
+            width: 100%;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+    }
+
+    &.cards-primary {
+        &:hover {
+            &:after {
+                border-bottom: 4px solid @brand-primary;
+            }
+        }
+
+        &:focus {
+            &:after {
+                border-bottom: 4px solid @brand-primary;
+            }
+        }
+
+        > i {
+            color: @brand-secondary;
+        }
+
+        .cards-icon {
+            color: @brand-secondary;
+            background-color: @brand-primary;
+
+            svg {
+                fill: @brand-secondary;
+            }
+        }
+    }
+
+    &.cards-secondary {
+        &:hover {
+            &:after {
+                border-bottom: 4px solid @brand-accent;
+            }
+        }
+
+        &:focus {
+            &:after {
+                border-bottom: 4px solid @brand-accent;
+            }
+        }
+
+        > i {
+            color: @brand-accent;
+        }
+
+        .cards-icon {
+            color: @white;
+            background-color: @brand-accent;
+
+            svg {
+                fill: @white;
+            }
+        }
+    }
+
+    &.cards-tertiary {
+        &:hover {
+            &:after {
+                border-bottom: 4px solid @pink-cards-details;
+            }
+        }
+
+        &:focus {
+            &:after {
+                border-bottom: 4px solid @pink-cards-details;
+            }
+        }
+
+        > i {
+            color: @pink-cards-details;
+        }
+
+        .cards-icon {
+            color: @white;
+            background-color: @pink-cards-details;
+
+            svg {
+                fill: @white;
+            }
+        }
+    }
+
+    &.cards-wide {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1.5rem;
+        margin-top: 2.25rem;
+
+        > i {
+            margin-top: initial;
+        }
+
+        .cards-icon {
+            font-family: @brand-monofont;
+            height: 2rem;
+            top: -1rem;
+        }
+
+        .cards-content {
+            margin-bottom: 0;
+            margin-top: 0.75rem;
+
+            .h3 {
+                margin-top: 0;
+                margin-bottom: 0.25rem;
+            }
+        }
+    }
+
+    > i {
+        margin-top: auto;
+    }
+
+    > img {
+        margin: -2.25rem -1.5rem 1rem;
+        object-fit: cover;
+        max-height: 130px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+
+    .cards-icon {
+        display: flex;
+        position: absolute;
+        top: -1.25rem;
+        left: 1.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 4px;
+        align-items: center;
+        justify-content: center;
+        color: @brand-secondary;
+        background-color: @brand-primary;
+
+        svg {
+            max-width: 24px;
+        }
+    }
+
+    .cards-content {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.25rem;
+
+        .h4 {
+            margin-top: 0;
+        }
+    }
+}
+
 .card {
     display: flex;
     flex-direction: column;
@@ -24,7 +219,7 @@
 
         .card-header {
             position: relative;
-            border-top: 7px solid @brand-primary-bright;
+            border-top: 7px solid @brand-primary-light;
 
             * {
                 color: @brand-secondary;
@@ -37,7 +232,7 @@
                 left: 1.6rem;
                 width: 1.2rem;
                 height: 0.6rem;
-                background-color: @brand-primary-bright;
+                background-color: @brand-primary-light;
                 clip-path: polygon(100% 0, 0 0, 50% 100%);
             }
 

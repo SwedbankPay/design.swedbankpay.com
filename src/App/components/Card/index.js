@@ -22,7 +22,7 @@ const Card = ({ type, titleTxt, titleMarkup, imgSrc, text, textSection, smallTex
                 textSection.map((secText, i) => <p key={`card-p-${i}`}>{secText}</p>)
                 : null
             }
-            {btn ? <button type="button" className={`btn btn-executive${btnClass ? ` ${btnClass}` : ""}`}>{"\n"}{btnText}{"\n"}</button> : null}
+            {btn ? <button type="button" className={`btn btn-primary${btnClass ? ` ${btnClass}` : ""}`}>{"\n"}{btnText}{"\n"}</button> : null}
         </div>
         {footerTxt || footerLinkTxt
             ? <footer className="card-footer">

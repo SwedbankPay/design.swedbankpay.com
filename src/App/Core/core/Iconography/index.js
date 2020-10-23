@@ -29,7 +29,7 @@ const MaterialIcons = () => (
     <>
         <h2 id="material-icons">Material Icons</h2>
         <p className="lead">DesignGuide includes Google{"'"}s material icons. For a full overview of the available icons please visit <a href="https://material.io/tools/icons/">this site</a>.</p>
-        <p>To use an icon, provide the following markup: <CodeTags type="primary" code={"<i class=\"material-icons\">{icon_name}</i>"} />.</p>
+        <p>To use an icon, provide the following markup: <CodeTags type="primary" code={"<i class=\"material-icons\" aria-hidden=\"true\">{icon_name}</i>"} />.</p>
         <ComponentPreview language="html" showCasePanel>
             <div className="row justify-content-evenly align-items-end">
                 <IconPreview preview type="material-icons" name="android" />
@@ -40,11 +40,11 @@ const MaterialIcons = () => (
             </div>
         </ComponentPreview>
         <ComponentPreview language="html" codeFigure>
-            <i className="material-icons">android</i>{"\n"}
-            <i className="material-icons">contact_support</i>{"\n"}
-            <i className="material-icons">face</i>{"\n"}
-            <i className="material-icons">star</i>{"\n"}
-            <i className="material-icons">warning</i>
+            <i className="material-icons" aria-hidden="true">android</i>{"\n"}
+            <i className="material-icons" aria-hidden="true">contact_support</i>{"\n"}
+            <i className="material-icons" aria-hidden="true">face</i>{"\n"}
+            <i className="material-icons" aria-hidden="true">star</i>{"\n"}
+            <i className="material-icons" aria-hidden="true">warning</i>
         </ComponentPreview>
 
         <h3>Sizes</h3>
@@ -59,10 +59,10 @@ const MaterialIcons = () => (
             </div>
         </ComponentPreview>
         <ComponentPreview language="html" codeFigure>
-            <i className="material-icons material-icons-tiny">android</i>{"\n"}
-            <i className="material-icons material-icons-small">android</i>{"\n"}
-            <i className="material-icons material-icons-medium">android</i>{"\n"}
-            <i className="material-icons material-icons-large">android</i>
+            <i className="material-icons material-icons-tiny" aria-hidden="true">android</i>{"\n"}
+            <i className="material-icons material-icons-small" aria-hidden="true">android</i>{"\n"}
+            <i className="material-icons material-icons-medium" aria-hidden="true">android</i>{"\n"}
+            <i className="material-icons material-icons-large" aria-hidden="true">android</i>
         </ComponentPreview>
     </>
 );
@@ -70,7 +70,7 @@ const MaterialIcons = () => (
 const PaymentIcons = () => (
     <>
         <h2 id="payment-icons">Payment Icons</h2>
-        <p>To use an icon, provide the following markup: <CodeTags type="primary" code={"<i class=\"payment-icon payment-icon-{icon_name}\"></i>"} />.</p>
+        <p>To use an icon, provide the following markup: <CodeTags type="primary" code={"<i class=\"payment-icon payment-icon-{icon_name}\" aria-hidden=\"true\"></i>"} />.</p>
         <ComponentPreview language="html" showCasePanel>
             <div className="row justify-content-evenly mb-2">
                 <IconPreview preview type="payment-icon" name="amex" size="large" />{"\n"}
@@ -141,7 +141,7 @@ const PaymentIcons = () => (
                         <IconPreview type="payment-icon" name="amex" className="mr-2" />{"\n"}
                         <span>3651*********701</span>{"\n"}
                     </div>
-                    <i className="material-icons">star</i>{"\n"}
+                    <i className="material-icons" aria-hidden="true">star</i>{"\n"}
                 </li>
                 <li>
                     <div className="d-flex align-items-center">{"\n"}
@@ -149,7 +149,7 @@ const PaymentIcons = () => (
                         <span>4925*********007</span>{"\n"}
                     </div>{"\n"}
                     <span className="status status-success">Active</span>{"\n"}
-                    <button type="button" className="btn btn-executive btn-xs ml-2"><i className="material-icons">delete</i></button>{"\n"}
+                    <button type="button" className="btn btn-primary btn-xs ml-2"><i className="material-icons" aria-hidden="true">delete</i></button>{"\n"}
                 </li>
             </ul>
         </ComponentPreview>
@@ -171,11 +171,11 @@ const Flags = () => (
             </div>
         </ComponentPreview>
         <ComponentPreview language="html" codeFigure>
-            <i className="flag-icon flag-icon-no"></i>{"\n"}
-            <i className="flag-icon flag-icon-sv"></i>{"\n"}
-            <i className="flag-icon flag-icon-dk"></i>{"\n"}
-            <i className="flag-icon flag-icon-fi"></i>{"\n"}
-            <i className="flag-icon flag-icon-eu"></i>{"\n"}
+            <i className="flag-icon flag-icon-no" aria-hidden="true"></i>{"\n"}
+            <i className="flag-icon flag-icon-sv" aria-hidden="true"></i>{"\n"}
+            <i className="flag-icon flag-icon-dk" aria-hidden="true"></i>{"\n"}
+            <i className="flag-icon flag-icon-fi" aria-hidden="true"></i>{"\n"}
+            <i className="flag-icon flag-icon-eu" aria-hidden="true"></i>{"\n"}
         </ComponentPreview>
         <h3>Squared</h3>
         <p>To use a squared version of a flag add the class <CodeTags type="secondary" code=".flag-icon-squared" />.</p>
@@ -189,11 +189,11 @@ const Flags = () => (
             </div>
         </ComponentPreview>
         <ComponentPreview language="html" codeFigure>
-            <i className="flag-icon flag-icon-squared flag-icon-no"></i>{"\n"}
-            <i className="flag-icon flag-icon-squared flag-icon-sv"></i>{"\n"}
-            <i className="flag-icon flag-icon-squared flag-icon-dk"></i>{"\n"}
-            <i className="flag-icon flag-icon-squared flag-icon-fi"></i>{"\n"}
-            <i className="flag-icon flag-icon-squared flag-icon-eu"></i>{"\n"}
+            <i className="flag-icon flag-icon-squared flag-icon-no" aria-hidden="true"></i>{"\n"}
+            <i className="flag-icon flag-icon-squared flag-icon-sv" aria-hidden="true"></i>{"\n"}
+            <i className="flag-icon flag-icon-squared flag-icon-dk" aria-hidden="true"></i>{"\n"}
+            <i className="flag-icon flag-icon-squared flag-icon-fi" aria-hidden="true"></i>{"\n"}
+            <i className="flag-icon flag-icon-squared flag-icon-eu" aria-hidden="true"></i>{"\n"}
         </ComponentPreview>
         <h3>Sizes</h3>
         <p>Flags support sizes <CodeTags type="secondary" code=".payment-icon-tiny" />, <CodeTags type="secondary" code=".payment-icon-small" />, <CodeTags type="secondary" code=".payment-icon-medium" />, <CodeTags type="secondary" code=".payment-icon-large" /> and <CodeTags type="secondary" code=".payment-icon-huge" />.
@@ -208,11 +208,11 @@ const Flags = () => (
             </div>
         </ComponentPreview>
         <ComponentPreview language="html" codeFigure>
-            <i className="flag-icon flag-icon-no flag-icon-tiny"></i>{"\n"}
-            <i className="flag-icon flag-icon-sv flag-icon-small"></i>{"\n"}
-            <i className="flag-icon flag-icon-dk flag-icon-medium"></i>{"\n"}
-            <i className="flag-icon flag-icon-fi flag-icon-large"></i>{"\n"}
-            <i className="flag-icon flag-icon-eu flag-icon-huge"></i>{"\n"}
+            <i className="flag-icon flag-icon-no flag-icon-tiny" aria-hidden="true"></i>{"\n"}
+            <i className="flag-icon flag-icon-sv flag-icon-small" aria-hidden="true"></i>{"\n"}
+            <i className="flag-icon flag-icon-dk flag-icon-medium" aria-hidden="true"></i>{"\n"}
+            <i className="flag-icon flag-icon-fi flag-icon-large" aria-hidden="true"></i>{"\n"}
+            <i className="flag-icon flag-icon-eu flag-icon-huge" aria-hidden="true"></i>{"\n"}
         </ComponentPreview>
         <h3>Squared Sizes</h3>
         <ComponentPreview language="html" showCasePanel>
@@ -225,11 +225,11 @@ const Flags = () => (
             </div>
         </ComponentPreview>
         <ComponentPreview language="html" codeFigure>
-            <i className="flag-icon flag-icon-squared flag-icon-no flag-icon-tiny"></i>{"\n"}
-            <i className="flag-icon flag-icon-squared flag-icon-sv flag-icon-small"></i>{"\n"}
-            <i className="flag-icon flag-icon-squared flag-icon-dk flag-icon-medium"></i>{"\n"}
-            <i className="flag-icon flag-icon-squared flag-icon-fi flag-icon-large"></i>{"\n"}
-            <i className="flag-icon flag-icon-squared flag-icon-eu flag-icon-huge"></i>{"\n"}
+            <i className="flag-icon flag-icon-squared flag-icon-no flag-icon-tiny" aria-hidden="true"></i>{"\n"}
+            <i className="flag-icon flag-icon-squared flag-icon-sv flag-icon-small" aria-hidden="true"></i>{"\n"}
+            <i className="flag-icon flag-icon-squared flag-icon-dk flag-icon-medium" aria-hidden="true"></i>{"\n"}
+            <i className="flag-icon flag-icon-squared flag-icon-fi flag-icon-large" aria-hidden="true"></i>{"\n"}
+            <i className="flag-icon flag-icon-squared flag-icon-eu flag-icon-huge" aria-hidden="true"></i>{"\n"}
         </ComponentPreview>
     </>
 );

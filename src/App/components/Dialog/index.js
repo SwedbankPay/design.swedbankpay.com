@@ -17,8 +17,8 @@ const Dialog = ({ diaId, diaHeader, children }) => (
                     {children}
                 </div>
                 <footer className="dialog-footer">{"\n"}
-                    <button className="btn btn-guiding" type="button" data-dialog-close>Cancel</button>{"\n"}
-                    <button className="btn btn-executive" type="button">Delete</button>{"\n"}
+                    <button className="btn btn-secondary" type="button" data-dialog-close>Cancel</button>{"\n"}
+                    <button className="btn btn-primary" type="button">Delete</button>{"\n"}
                 </footer>
             </section>
         </div>

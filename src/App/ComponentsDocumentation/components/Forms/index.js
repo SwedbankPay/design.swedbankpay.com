@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import InputGroup from "@components/InputGroup";
@@ -16,36 +17,49 @@ const Overview = () => (
             show a collection of related inputs. <CodeTags type="primary" code={"<form-group>"} />s can contain more than just an input, like a <CodeTags type="primary" code={"<label>"} /> or
             <CodeTags type="primary" code={"<help-block>"} />s.
         </p>
+        <p>
+            <b>Note:</b> On larger screens, <CodeTags type="primary" code={"<input>"} /> should not be wider than half the
+            page. <CodeTags type="primary" code={"<input>"} /> should take the available width on smaller screen sizes. <Link to="/core/grid">Grid</Link> can
+            be used to achieve this behavior.
+        </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <form onSubmit={e => e.preventDefault()}>
-                <InputGroup
-                    id="first-name"
-                    type="text"
-                    autoComplete="given-name"
-                    label="First name"
-                    placeholder="Enter your first name"
-                    helpBlock="The first word of your full name"
-                />
-                <InputGroup
-                    id="last-name"
-                    type="text"
-                    label="Last name"
-                    autoComplete="family-name"
-                    placeholder="Enter your last name"
-                    helpBlock="The very last collection of letters in your name"
-                />
-                <InputGroup
-                    id="email-address"
-                    type="text"
-                    label="Email"
-                    autoComplete="email"
-                    placeholder="Enter your email"
-                    helpBlock="The last part is probably @swedbankpay.com"
-                />
+                <div className="row">
+                    <div className="col-md-6">
+                        <InputGroup
+                            id="your-name"
+                            type="text"
+                            autoComplete="name"
+                            label="Name"
+                            helpBlock="Your first and last name"
+                        />
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-md-6">
+                        <InputGroup
+                            id="email-address"
+                            type="text"
+                            label="Email"
+                            autoComplete="email"
+                            placeholder="name@mail.com"
+                        />
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-md-6">
+                        <InputGroup
+                            id="phone-number"
+                            type="text"
+                            label="Phone number"
+                            autoComplete="phone"
+                        />
+                    </div>
+                </div>
                 <div className="form-group">
                     <Checkbox label={"Subscribe to our Shovels and Tapestry catalogue"} id="subscribe-checkbox" />
                 </div>{"\n"}
-                <Button type="executive" label="Submit" btnType="submit" />{"\n"}
+                <Button type="primary" label="Submit" btnType="submit" />{"\n"}
             </form>
         </ComponentPreview>
     </>
@@ -67,8 +81,6 @@ const FormGrid = () => (
                             type="text"
                             autoComplete="given-name"
                             label="First name"
-                            placeholder="Enter your first name"
-                            helpBlock="Hope it is something cool"
                         />
                     </div>
                     <div className="col-5">
@@ -77,14 +89,12 @@ const FormGrid = () => (
                             type="text"
                             label="Last name"
                             autoComplete="family-name"
-                            placeholder="Enter your last name"
-                            helpBlock="Most likely in your passport"
                         />
                     </div>
                     <div className="col-2">
                         <div className="form-group">{"\n"}
                             <br />{"\n"}
-                            <button type="submit" className="btn btn-executive">Search</button>{"\n"}
+                            <button type="submit" className="btn btn-primary">Search</button>{"\n"}
                         </div>
                     </div>
                 </div>
@@ -102,21 +112,26 @@ const Validation = () => (
         <p>Validates against <CodeTags type="secondary" code="required" /> and <CodeTags type="secondary" code="pattern" />. Using <CodeTags type="secondary" code="pattern" /> overrides default patterns.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <form noValidate data-validate="">
-                <InputGroup
-                    id="validation-name-1"
-                    type="text"
-                    label="Name"
-                    placeholder="Enter your name"
-                    helpBlock="This one should be easy"
-                />
-                <InputGroup
-                    id="validation-email-1"
-                    type="email"
-                    label="Email"
-                    placeholder="Enter your email"
-                    helpBlock="This one should be pretty easy too"
-                />{"\n"}
-                <button className="btn btn-executive" type="submit">Submit</button>
+                <div className="row d-flex align-items-center">
+                    <div className="col-md-5">
+                        <InputGroup
+                            id="validation-name-1"
+                            type="text"
+                            label="Name"
+                        />
+                    </div>
+                    <div className="col-md-5">
+                        <InputGroup
+                            id="validation-email-1"
+                            type="email"
+                            label="Email"
+                            placeholder="name@mail.com"
+                        />
+                    </div>
+                    <div className="col-md-2">
+                        <button className="btn btn-primary" type="submit">Submit</button>
+                    </div>
+                </div>
             </form>
         </ComponentPreview>
 
@@ -131,19 +146,25 @@ const Validation = () => (
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <form action="#" noValidate data-validate="">
-                <InputGroup
-                    required
-                    id="validation-email-2"
-                    type="email"
-                    label="Email"
-                    placeholder="bob.corlsan@example.com"
-                    prefixType="icon"
-                    prefixValue="email"
-                    helpBlock
-                    successMessage="Right!"
-                    errorMessage="Wrong!"
-                />{"\n"}
-                <button className="btn btn-executive" type="submit">Submit</button>
+                <div className="row d-flex align-items-center">
+                    <div className="col-md-5">
+                        <InputGroup
+                            required
+                            id="validation-email-2"
+                            type="email"
+                            label="Email"
+                            placeholder="name@mail.com"
+                            prefixType="icon"
+                            prefixValue="email"
+                            helpBlock
+                            successMessage="Right!"
+                            errorMessage="Wrong!"
+                        />
+                    </div>
+                    <div className="col-md-2">
+                        <button className="btn btn-primary mb-4" type="submit">Submit</button>
+                    </div>
+                </div>
             </form>
         </ComponentPreview>
 
@@ -152,19 +173,24 @@ const Validation = () => (
         <p><b>NOTE:</b> For this to work you also need the <CodeTags type="secondary" code="validate" /> attribute to be present in the <CodeTags type="primary" code={"<form>"} /> tag.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <form action="#" noValidate data-validate="">
-                <InputGroup
-                    required
-                    id="validation-email-3"
-                    type="email"
-                    label="Email"
-                    placeholder="bob.corlsan@example.com"
-                    prefixType="icon"
-                    prefixValue="email"
-                    helpBlock="Keep your eye on that submit button"
-                    successMessage="Right!"
-                    errorMessage="Wrong!"
-                />{"\n"}
-                <button className="btn btn-executive" type="submit" data-disable-invalid="">Submit</button>
+                <div className="row d-flex align-items-center">
+                    <div className="col-md-5">
+                        <InputGroup
+                            required
+                            id="validation-email-3"
+                            type="email"
+                            label="Email"
+                            placeholder="name@mail.com"
+                            prefixType="icon"
+                            prefixValue="email"
+                            successMessage="Right!"
+                            errorMessage="Wrong!"
+                        />
+                    </div>
+                    <div className="col-md-2">
+                        <button className="btn btn-primary" type="submit" data-disable-invalid="">Submit</button>
+                    </div>
+                </div>
             </form>
         </ComponentPreview>
     </>
@@ -178,23 +204,29 @@ const UsageWithFieldsets = () => (
             <form onSubmit={e => e.preventDefault()}>
                 <fieldset>
                     <legend>Log in</legend>
-                    <InputGroup
-                        id="fieldset-username"
-                        type="text"
-                        autoComplete="username"
-                        label="Username"
-                        placeholder="Enter your username"
-                    />
-                    <InputGroup
-                        id="fieldset-password"
-                        type="password"
-                        label="Password"
-                        autoComplete="current-password"
-                        placeholder="Enter your password"
-                    />
+                    <div className="row">
+                        <div className="col-md-6">
+                            <InputGroup
+                                id="fieldset-username"
+                                type="text"
+                                autoComplete="username"
+                                label="Username"
+                            />
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-6">
+                            <InputGroup
+                                id="fieldset-password"
+                                type="password"
+                                label="Password"
+                                autoComplete="current-password"
+                            />
+                        </div>
+                    </div>
                     <Checkbox label="Remember me" id="fieldset-checkbox" />
                 </fieldset>{"\n"}
-                <Button type="executive" label="Log in" btnType="submit" />{"\n"}
+                <Button type="primary" label="Log in" btnType="submit" />{"\n"}
             </form>
         </ComponentPreview>
     </>
@@ -207,6 +239,22 @@ const StaticText = () => (
         <ComponentPreview language="html" showCasePanel codeFigure>
             <FormControlText label="Company" text="Swedbank Pay" />
             <FormControlText label="Employee" text="Bob Corlsan" />
+        </ComponentPreview>
+    </>
+);
+
+const Dropdown = () => (
+    <>
+        <h2 id="dropdown">Dropdown menu</h2>
+        <p>
+            Inserting text next to a <CodeTags type="primary" code={"<select>"} /> works just like any other input element.
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+            <InputGroup
+                label="Profession"
+                type="select"
+                selectOptions={["Bounty hunter", "Smuggler", "Jedi"]}
+            />
         </ComponentPreview>
     </>
 );
@@ -285,23 +333,38 @@ const DisabledFormComponents = () => (
             <form>
                 <fieldset disabled>
                     <legend>Log in</legend>
-                    <InputGroup
-                        id="fieldset-disabled-username"
-                        type="text"
-                        autoComplete="username"
-                        label="Username"
-                        placeholder="Enter your username"
-                    />
-                    <InputGroup
-                        id="fieldset-disabled-password"
-                        type="password"
-                        label="Password"
-                        autoComplete="current-password"
-                        placeholder="Enter your password"
-                    />
+                    <div className="row">
+                        <div className="col-sm-6">
+                            <InputGroup
+                                id="fieldset-disabled-username"
+                                type="text"
+                                autoComplete="username"
+                                label="Username"
+                            />
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-sm-6">
+                            <InputGroup
+                                id="fieldset-disabled-password"
+                                type="password"
+                                label="Password"
+                                autoComplete="current-password"
+                            />
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-sm-6">
+                            <InputGroup
+                                label="Profession"
+                                type="select"
+                                selectOptions={["Bounty hunter", "Smuggler", "Jedi"]}
+                            />
+                        </div>
+                    </div>
                     <Checkbox label="Remember me" id="fieldset-disabled-checkbox" />
                 </fieldset>{"\n"}
-                <Button type="executive" label="Log in" btnType="submit" disabled />{"\n"}
+                <Button type="primary" label="Log in" btnType="submit" disabled />{"\n"}
             </form>
         </ComponentPreview>
 
@@ -314,24 +377,30 @@ const DisabledFormComponents = () => (
             <form>
                 <fieldset>
                     <legend>Log in</legend>
-                    <InputGroup
-                        id="form-group-disabled-username"
-                        type="text"
-                        autoComplete="username"
-                        label="Username"
-                        placeholder="Enter your username"
-                    />
-                    <InputGroup
-                        id="form-group-disabled-password"
-                        type="password"
-                        label="Password"
-                        autoComplete="current-password"
-                        placeholder="Enter your password"
-                        disabled
-                    />
+                    <div className="row">
+                        <div className="col-sm-6">
+                            <InputGroup
+                                id="form-group-disabled-username"
+                                type="text"
+                                autoComplete="username"
+                                label="Username"
+                            />
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-sm-6">
+                            <InputGroup
+                                id="form-group-disabled-password"
+                                type="password"
+                                label="Password"
+                                autoComplete="current-password"
+                                disabled
+                            />
+                        </div>
+                    </div>
                     <Checkbox label="Remember me" id="form-group-disabled-checkbox" />
                 </fieldset>{"\n"}
-                <Button type="executive" label="Log in" btnType="submit" disabled />{"\n"}
+                <Button type="primary" label="Log in" btnType="submit" disabled />{"\n"}
             </form>
         </ComponentPreview>
     </>
@@ -365,6 +434,7 @@ class Forms extends Component {
                 <Validation />
                 <UsageWithFieldsets />
                 <StaticText />
+                <Dropdown />
                 <Checkboxes />
                 <RadioButtons />
                 <Toggleboxes />
@@ -379,4 +449,4 @@ class Forms extends Component {
 export default Forms;
 
 /* For testing */
-export { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, Checkboxes, RadioButtons, Toggleboxes, RangeSlider, DisabledFormComponents, JavascriptMethods };
+export { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, Dropdown, Checkboxes, RadioButtons, Toggleboxes, RangeSlider, DisabledFormComponents, JavascriptMethods };

@@ -1,5 +1,6 @@
 label {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     max-width: 100%;
     margin-bottom: @base-margin-xs;
     font-weight: @font-weight-light;
@@ -16,6 +17,11 @@ label {
         .has-success & {
             color: @brand-success;
         }
+    }
+
+    .material-icons {
+        color: @brand-accent-links;
+        margin-left: 0.5rem;
     }
 }
 
@@ -35,6 +41,10 @@ fieldset {
             resize: none;
         }
 
+        select {
+            color: @brand-secondary-light-3;
+        }
+
         .form-group {
             color: @brand-secondary-light-3;
         }
@@ -44,18 +54,22 @@ fieldset {
         }
 
         .checkbox input[type="checkbox"] {
-            + label:before {
+            + label:after {
                 background-color: @input-bg-disabled;
                 border-color: @input-checked-bg-disabled;
                 cursor: not-allowed;
             }
 
-            &:checked + label:before {
+            + label:before {
+                content: none;
+            }
+
+            &:checked + label:after {
                 background-color: @input-checked-bg-disabled;
             }
 
             &:not(:checked) {
-                &:hover + label:before {
+                &:hover + label:after {
                     border-color: @brand-secondary-light-3;
                 }
             }
@@ -72,6 +86,7 @@ fieldset {
             + label:before {
                 background-color: @input-bg-disabled;
                 border-color: @input-checked-bg-disabled;
+                box-shadow: none;
             }
 
             &:checked + label:before {
@@ -191,14 +206,15 @@ legend {
     background-clip: padding-box;
     border: solid @input-border-color;
     border-width: @input-border-width;
+    border-bottom-color: @brand-secondary-light-2;
     border-radius: @input-border-radius;
     box-shadow: none;
     transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-    .form-control-focus();
-    .placeholder(@list-gray);
+    .form-control-focus(@brand-secondary);
+    .placeholder(@brand-secondary-light-2);
 
     &::placeholder {
-        color: @list-gray; /* Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526. */
+        color: @brand-secondary-light-2; /* Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526. */
         font-weight: @font-weight-normal;
         letter-spacing: -0.1px;
     }
@@ -217,6 +233,9 @@ legend {
             &::placeholder {
                 color: @brand-secondary-light-3;
             }
+
+            color: @brand-secondary-light-3;
+            border-bottom-color: @brand-secondary-light-3;
         }
     }
 
@@ -235,7 +254,8 @@ legend {
 .form-group {
     margin-bottom: @base-margin-lg;
 
-    &.disabled {
+    &.disabled,
+    [disabled] {
         color: @brand-secondary-light-3;
     }
 }
@@ -257,7 +277,7 @@ legend {
     position: relative;
     display: block;
     margin: @helpblock-margin;
-    color: lighten(@text-color, 25%);
+    color: @brand-secondary-light-2;
     font-size: @base-font-size;
     line-height: 1rem;
     min-height: 1rem;

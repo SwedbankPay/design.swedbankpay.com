@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import swedbankpayLogo from "@src/img/swedbankpay/logo/swedbankpay-logo.svg";
+import swedbankpayLogo from "@src/img/swedbankpay/logo/swedbankpay-logo-h.svg";
 import payexLogo from "@src/img/payex/logo/payex-logo.svg";
 
 import SidebarComponent from "@components/Sidebar";
@@ -15,11 +15,11 @@ const isDev = process.env.version === "LOCAL_DEV";
 const TopbarBtn = () => (
     <>
         <button type="button" className="topbar-btn">{"\n\t\t"}
-            <i className="material-icons topbar-btn-icon">menu</i>
+            <i className="material-icons topbar-btn-icon" aria-hidden="true">menu</i>
             {"\n\t\t"}
         </button>
         <button type="button" className="topbar-close">{"\n"}
-            <i className="material-icons topbar-btn-icon">close</i>{"\n"}
+            <i className="material-icons topbar-btn-icon" aria-hidden="true">close</i>{"\n"}
             {"\n\t\t"}
         </button>
     </>
@@ -36,7 +36,7 @@ const TopbarMenu = ({ menu, logout, sidebar }) => {
                         {"\n"}
                         <a href="#" className={item.name === "Home" ? "active" : null} onClick={e => e.preventDefault()}>
                             {"\n"}
-                            {item.icon ? <i className="material-icons">{item.icon}</i> : null}
+                            {item.icon ? <i className="material-icons" aria-hidden="true">{item.icon}</i> : null}
                             {"\n"}
                             <span>{item.name}</span>
                             {"\n"}
@@ -53,7 +53,7 @@ const TopbarMenu = ({ menu, logout, sidebar }) => {
 const TopbarLogout = () => (
     <>
         <a className="topbar-link-right" href="#" onClick={e => e.preventDefault()}>{"\n"}
-            <i className="material-icons">exit_to_app</i>{"\n"}
+            <i className="material-icons" aria-hidden="true">exit_to_app</i>{"\n"}
             <span>Log out</span>{"\n"}
         </a>{"\n"}
     </>
@@ -63,9 +63,9 @@ const TopbarLogo = ({ png }) => (
     <>
         <a className={`topbar-logo${png ? " topbar-logo-png" : ""}`} href="/" onClick={e => e.preventDefault()}>{"\n"}
             {(brand === "swedbankpay" && png) ?
-                <img src={`${process.env.basename}img/${brand}-logo.png`} alt={`${brand}-logo`}/>
+                <img src={`${process.env.basename}img/${brand}-logo${brand === "swedbankpay" ? "-h" : ""}.png`} alt={`${brand}-logo`} className="logotype-horizontal logotype-md"/>
                 :
-                <img src={isDev ? devLogo : `${process.env.basename}img/${brand}-logo.svg`} alt={`${brand}-logo`}/>
+                <img src={isDev ? devLogo : `${process.env.basename}img/${brand}-logo${brand === "swedbankpay" ? "-h" : ""}.svg`} alt={`${brand}-logo`} className="logotype-horizontal logotype-md"/>
             }{"\n"}
         </a>{"\n"}
     </>

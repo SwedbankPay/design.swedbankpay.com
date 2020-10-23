@@ -2,29 +2,19 @@
 
 exports[`Utilities: DocContainer renders 1`] = `
 <div
-  className="doc-container"
+  className="row"
 >
-  <withRouter(DocHeading) />
-  <div
-    className="row"
-  >
-    <DocContent />
-  </div>
+  <DocContent />
 </div>
 `;
 
 exports[`Utilities: DocContainer renders with a table of contents(doctoc) if prop docToc is given 1`] = `
 <div
-  className="doc-container"
+  className="row"
 >
-  <withRouter(DocHeading) />
-  <div
-    className="row"
-  >
-    <DocContent />
-    <DocToc
-      component={[Function]}
-    />
-  </div>
+  <DocContent />
+  <DocToc
+    component={[Function]}
+  />
 </div>
 `;

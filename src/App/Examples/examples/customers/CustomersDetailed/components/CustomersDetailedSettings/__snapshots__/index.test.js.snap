@@ -131,7 +131,7 @@ exports[`Examples: CustomerDetailedSettings renders 1`] = `
     type="select"
   />
   <button
-    className="btn btn-executive"
+    className="btn btn-primary"
   >
     Save
   </button>

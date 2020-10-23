@@ -124,7 +124,7 @@ exports[`Documentation: Sheet Example onClick prevents default 1`] = `
           </div>
         </div>
         <button
-          className="btn btn-executive"
+          className="btn btn-primary"
           onClick={[Function]}
           type="submit"
         >
@@ -135,7 +135,7 @@ exports[`Documentation: Sheet Example onClick prevents default 1`] = `
     
 
     <button
-      className="btn btn-executive"
+      className="btn btn-primary"
       data-sheet-open="demo-sheet"
       type="button"
     >
@@ -269,7 +269,7 @@ exports[`Documentation: Sheet Example onSubmit prevents default 1`] = `
           </div>
         </div>
         <button
-          className="btn btn-executive"
+          className="btn btn-primary"
           onClick={[Function]}
           type="submit"
         >
@@ -280,7 +280,7 @@ exports[`Documentation: Sheet Example onSubmit prevents default 1`] = `
     
 
     <button
-      className="btn btn-executive"
+      className="btn btn-primary"
       data-sheet-open="demo-sheet"
       type="button"
     >
@@ -414,7 +414,7 @@ exports[`Documentation: Sheet Example renders 1`] = `
           </div>
         </div>
         <button
-          className="btn btn-executive"
+          className="btn btn-primary"
           onClick={[Function]}
           type="submit"
         >
@@ -425,7 +425,7 @@ exports[`Documentation: Sheet Example renders 1`] = `
     
 
     <button
-      className="btn btn-executive"
+      className="btn btn-primary"
       data-sheet-open="demo-sheet"
       type="button"
     >
@@ -484,7 +484,7 @@ exports[`Documentation: Sheet RequireAction renders 1`] = `
     
 
     <button
-      className="btn btn-executive"
+      className="btn btn-primary"
       data-sheet-open="demo-sheet-1"
       type="button"
     >

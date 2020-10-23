@@ -10,7 +10,7 @@ describe("scripts: tabs", () => {
 
     const NoActiveTab = ({ id, tabsOpen }) => (
         <div className={`tabs ${tabsOpen ? "tabs-open" : null}`} id={id}>
-            <i className="material-icons">keyboard_arrow_right</i>
+            <i className="material-icons" aria-hidden="true">keyboard_arrow_right</i>
             <ul>
                 {items.map((name, i) => (
                     <li key={`tab-item-${name}-${i}`}>{"\n"}

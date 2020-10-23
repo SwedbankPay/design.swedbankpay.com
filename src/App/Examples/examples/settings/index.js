@@ -153,7 +153,7 @@ class Settings extends Component {
                                     <SettingsBasic />
                                     <SettingsEmailNotification emailNotif={this.state.emailNotif} toggleEmailNotif={() => this.toggleEmailNotif()} />
                                     <SettingsDescription />
-                                    <ButtonComponent type="executive" label="Save changes" icon="save" btnType="submit" />
+                                    <ButtonComponent type="primary" label="Save changes" icon="save" btnType="submit" />
                                 </form>
                             </div>
                         </div>

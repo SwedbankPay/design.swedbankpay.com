@@ -55,7 +55,7 @@ exports[`Components: Tooltip Overview renders 1`] = `
       
 
       <button
-        className="btn btn-executive"
+        className="btn btn-primary"
         data-tooltip="This is a tooltip!"
         data-tooltip-position="left"
         type="button"
@@ -65,8 +65,8 @@ exports[`Components: Tooltip Overview renders 1`] = `
       
 
       <button
-        className="btn btn-executive"
-        data-tooltip="This is a tooltip!"
+        className="btn btn-primary"
+        data-tooltip="Payment capture is the process by which payments are secured once the payment has been authorized by the customer."
         data-tooltip-position="top"
         type="button"
       >
@@ -75,7 +75,7 @@ exports[`Components: Tooltip Overview renders 1`] = `
       
 
       <button
-        className="btn btn-executive"
+        className="btn btn-primary"
         data-tooltip="This is a tooltip!"
         data-tooltip-position="bottom"
         type="button"
@@ -85,8 +85,8 @@ exports[`Components: Tooltip Overview renders 1`] = `
       
 
       <button
-        className="btn btn-executive"
-        data-tooltip="This is a tooltip!"
+        className="btn btn-primary"
+        data-tooltip="Payment capture is the process by which payments are secured once the payment has been authorized by the customer!"
         data-tooltip-position="right"
         type="button"
       >
@@ -109,5 +109,8 @@ exports[`Components: Tooltip renders 1`] = `
     Tooltips are small, interactive, textual hints for mainly graphical elements. When using icons for actions you can use a tooltip to give people clarification on its function.
   </p>
   <Overview />
+  <WithIcons />
+  <ExtendedUsage />
+  <JavascriptMethods />
 </DocContainer>
 `;

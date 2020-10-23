@@ -2,15 +2,13 @@
     &.has-error {
         .form-control-validation(@brand-error, "error");
 
-        .input-group {
-            &:after {
-                content: "warning";
-                .material-icons-styling();
-
-                position: absolute;
-                top: calc(@input-form-control-height / 2 - 1.25rem / 2);
-                right: 0.5rem;
-                color: @brand-error;
+        input {
+            &:not(:focus) {
+                padding-right: 2.5rem;
+                background-image: url("../../icons/shapes/warning.svg");
+                background-size: 24px 24px;
+                background-repeat: no-repeat;
+                background-position: calc(100% - 0.5rem) 50%;
             }
         }
     }
@@ -20,14 +18,14 @@
     &.has-error {
         .form-control-validation(@brand-error, "error");
 
-        &:after {
-            content: "warning";
-            .material-icons-styling();
-
-            position: absolute;
-            top: calc(@input-form-control-height / 2 - 1.25rem / 2);
-            right: 0.5rem;
-            color: @brand-error;
+        input {
+            &:not(:focus) {
+                padding-right: 2.5rem;
+                background-image: url("../../icons/shapes/warning.svg");
+                background-size: 24px 24px;
+                background-repeat: no-repeat;
+                background-position: calc(100% - 0.5rem) 50%;
+            }
         }
     }
 }

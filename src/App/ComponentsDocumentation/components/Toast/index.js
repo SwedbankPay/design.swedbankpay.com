@@ -13,10 +13,10 @@ const Overview = () => (
             {"dg.toast({ html: \"I am a toast!\" });"}
         </ComponentPreview>
         <ComponentPreview language="html" codeFigure dangerousHTML>
-            {"<button onclick=\"dg.toast({ html: 'I am a toast!' })\" class=\"btn btn-executive\">Toast!</button>"}
+            {"<button onclick=\"dg.toast({ html: 'I am a toast!' })\" class=\"btn btn-primary\">Toast!</button>"}
         </ComponentPreview>
         <ComponentPreview language="html" showCasePanel>
-            <button className="btn btn-executive" type="button" onClick={() => dg.toast({ html: "I am a toast!" })}>Click for toast!</button>
+            <button className="btn btn-primary" type="button" onClick={() => dg.toast({ html: "I am a toast!" })}>Click for toast!</button>
         </ComponentPreview>
         <Alert type="warning">
             <h5>Content restriction</h5>
@@ -95,14 +95,14 @@ const PremadeToasts = () => (
         <h2 id="premade-toasts">Premade toasts</h2>
         <p>There are four premade toast styles other than the default one; <CodeTags type="secondary" code="neutral" />, <CodeTags type="secondary" code="success" />, <CodeTags type="secondary" code="warning" /> and <CodeTags type="secondary" code="danger" />. Apply the desired one to the options object and be amazed!</p>
         <ComponentPreview language="html" codeFigure dangerousHTML>
-            {"<button type=\"button\" onclick=\"dg.toast({ html: 'I am a neutral toast!', type: 'neutral' })\" class=\"btn btn-executive\">Neutral toast</button>"}
-            {"<button type=\"button\" onclick=\"dg.toast({ html: 'I am a success toast!', type: 'success' })\" class=\"btn btn-executive\">Success toast</button>"}
-            {"<button type=\"button\" onclick=\"dg.toast({ html: 'I am a warning toast!', type: 'warning' })\" class=\"btn btn-executive\">Warning toast</button>"}
-            {"<button type=\"button\" onclick=\"dg.toast({ html: 'I am a danger toast!', type: 'danger' })\" class=\"btn btn-executive\">Danger toast</button>"}
+            {"<button type=\"button\" onclick=\"dg.toast({ html: 'I am a neutral toast!', type: 'neutral' })\" class=\"btn btn-primary\">Neutral toast</button>"}
+            {"<button type=\"button\" onclick=\"dg.toast({ html: 'I am a success toast!', type: 'success' })\" class=\"btn btn-primary\">Success toast</button>"}
+            {"<button type=\"button\" onclick=\"dg.toast({ html: 'I am a warning toast!', type: 'warning' })\" class=\"btn btn-primary\">Warning toast</button>"}
+            {"<button type=\"button\" onclick=\"dg.toast({ html: 'I am a danger toast!', type: 'danger' })\" class=\"btn btn-primary\">Danger toast</button>"}
         </ComponentPreview>
         <ComponentPreview language="html" showCasePanel>
             <button
-                className="btn btn-executive"
+                className="btn btn-primary"
                 type="button"
                 onClick={() => dg.toast({
                     html: "I am a toast!",
@@ -112,7 +112,7 @@ const PremadeToasts = () => (
                 Neutral toast
             </button>{"\n"}
             <button
-                className="btn btn-executive"
+                className="btn btn-primary"
                 type="button"
                 onClick={() => dg.toast({
                     html: "I am a toast!",
@@ -122,7 +122,7 @@ const PremadeToasts = () => (
                 Success toast
             </button>{"\n"}
             <button
-                className="btn btn-executive"
+                className="btn btn-primary"
                 type="button"
                 onClick={() => dg.toast({
                     html: "I am a toast!",
@@ -132,7 +132,7 @@ const PremadeToasts = () => (
                 Warning toast
             </button>{"\n"}
             <button
-                className="btn btn-executive"
+                className="btn btn-primary"
                 type="button"
                 onClick={() => dg.toast({
                     html: "I am a toast!",
@@ -157,7 +157,7 @@ const CustomHtml = () => {
                 {"dg.toast({ html: toastHtml });"}
             </ComponentPreview>
             <ComponentPreview language="html" showCasePanel>
-                <button className="btn btn-executive" type="button" onClick={() => dg.toast({ html: toastHtml })}>Toast with action</button>
+                <button className="btn btn-primary" type="button" onClick={() => dg.toast({ html: toastHtml })}>Toast with action</button>
             </ComponentPreview>
         </>
     );
@@ -168,7 +168,7 @@ class Toast extends Component {
         return (
             <DocContainer>
                 <p className="lead">
-                    Toasts can be used as a way to give feedback to a user. Use it to display short messages that something has happened that will not be immediatley apparent on the website.
+                    Toasts can be used as a way to give feedback to a user. Use it to display short messages that something has happened that will not be immediately apparent on the website.
                     This can be everything from a server query to saving some user settings.
                 </p>
                 <Overview />

@@ -18,7 +18,7 @@ describe("Component: Sheet - ", () => {
         const wrapper = shallow(<Sheet />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("<i class=\"material-icons\">close</i>");
+        expect(wrapper.html()).toContain("<i class=\"material-icons\" aria-hidden=\"true\">close</i>");
     });
 
     it("renders with an ID", () => {

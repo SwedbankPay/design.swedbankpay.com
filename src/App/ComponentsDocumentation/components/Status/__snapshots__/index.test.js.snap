@@ -1,5 +1,151 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Documentation: Status ExampleUse renders 1`] = `
+<Fragment>
+  <h2
+    id="example-use"
+  >
+    Example of use
+  </h2>
+  <ComponentPreview
+    language="html"
+    showCasePanel={true}
+  >
+    <table
+      className="table table-plain"
+    >
+      <thead>
+        <tr>
+          <th
+            scope="col"
+          >
+            Status
+          </th>
+          <th
+            scope="col"
+          >
+            Invoice number
+          </th>
+          <th
+            scope="col"
+          >
+            Due date
+          </th>
+          <th
+            className="text-right"
+            scope="col"
+          >
+            Amount
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <span
+              className="status status-neutral"
+            >
+              Unpaid
+            </span>
+          </td>
+          <td>
+            123456
+          </td>
+          <td>
+            2020-08-19
+          </td>
+          <td
+            className="text-right"
+          >
+            1079,00
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span
+              className="status status-success"
+            >
+              Paid
+            </span>
+          </td>
+          <td>
+            123455
+          </td>
+          <td>
+            2020-07-19
+          </td>
+          <td
+            className="text-right"
+          >
+            1079,00
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span
+              className="status status-warning"
+            >
+              Overdue
+            </span>
+          </td>
+          <td>
+            123454
+          </td>
+          <td>
+            2020-06-19
+          </td>
+          <td
+            className="text-right"
+          >
+            1079,00
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span
+              className="status status-warning-2"
+            >
+              Reminder
+            </span>
+          </td>
+          <td>
+            123453
+          </td>
+          <td>
+            2020-05-19
+          </td>
+          <td
+            className="text-right"
+          >
+            1079,00
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span
+              className="status status-danger"
+            >
+              Sent to collection
+            </span>
+          </td>
+          <td>
+            123452
+          </td>
+          <td>
+            2020-04-19
+          </td>
+          <td
+            className="text-right"
+          >
+            1079,00
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Documentation: Status ExtendedUsage renders 1`] = `
 <Fragment>
   <h2
@@ -16,22 +162,22 @@ exports[`Documentation: Status ExtendedUsage renders 1`] = `
     showCasePanel={true}
   >
     <h1
-      className="status status-default"
-    >
-      Default
-    </h1>
-    <h2
       className="status status-neutral"
     >
       Neutral
-    </h2>
-    <h3
+    </h1>
+    <h2
       className="status status-success"
     >
       Success
+    </h2>
+    <h3
+      className="status status-warning"
+    >
+      Mild Warning
     </h3>
     <h4
-      className="status status-warning"
+      className="status status-warning-2"
     >
       Warning
     </h4>
@@ -57,7 +203,11 @@ exports[`Documentation: Status Overview renders 1`] = `
       code=".status-success"
       type="secondary"
     />
-     exists.
+     exists. 
+    <b>
+      NOTE:
+    </b>
+     Be careful not to rely solely on the color of the status icon to convey your message.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -66,15 +216,8 @@ exports[`Documentation: Status Overview renders 1`] = `
     showCasePanel={true}
   >
     <ul
-      className="list"
+      className="list status-list"
     >
-      <li>
-        <span
-          className="status status-default"
-        >
-          Default
-        </span>
-      </li>
       <li>
         <span
           className="status status-neutral"
@@ -93,6 +236,13 @@ exports[`Documentation: Status Overview renders 1`] = `
         <span
           className="status status-warning"
         >
+          Mild Warning
+        </span>
+      </li>
+      <li>
+        <span
+          className="status status-warning-2"
+        >
           Warning
         </span>
       </li>
@@ -105,16 +255,6 @@ exports[`Documentation: Status Overview renders 1`] = `
       </li>
     </ul>
   </ComponentPreview>
-  <Alert
-    type="warning"
-  >
-    <h5>
-      Visual impairments and colors
-    </h5>
-    <p>
-      Be careful not to rely soley on the color of the status icon to convey your message.
-    </p>
-  </Alert>
 </Fragment>
 `;
 
@@ -128,6 +268,7 @@ exports[`Documentation: Status renders 1`] = `
     The status component is a good way to convey to the user the state of something.
   </p>
   <Overview />
+  <ExampleUse />
   <ExtendedUsage />
 </DocContainer>
 `;

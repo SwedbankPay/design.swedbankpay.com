@@ -104,20 +104,53 @@ exports[`Documentation: Forms DisabledFormComponents renders 1`] = `
         <legend>
           Log in
         </legend>
-        <InputGroup
-          autoComplete="username"
-          id="fieldset-disabled-username"
-          label="Username"
-          placeholder="Enter your username"
-          type="text"
-        />
-        <InputGroup
-          autoComplete="current-password"
-          id="fieldset-disabled-password"
-          label="Password"
-          placeholder="Enter your password"
-          type="password"
-        />
+        <div
+          className="row"
+        >
+          <div
+            className="col-sm-6"
+          >
+            <InputGroup
+              autoComplete="username"
+              id="fieldset-disabled-username"
+              label="Username"
+              type="text"
+            />
+          </div>
+        </div>
+        <div
+          className="row"
+        >
+          <div
+            className="col-sm-6"
+          >
+            <InputGroup
+              autoComplete="current-password"
+              id="fieldset-disabled-password"
+              label="Password"
+              type="password"
+            />
+          </div>
+        </div>
+        <div
+          className="row"
+        >
+          <div
+            className="col-sm-6"
+          >
+            <InputGroup
+              label="Profession"
+              selectOptions={
+                Array [
+                  "Bounty hunter",
+                  "Smuggler",
+                  "Jedi",
+                ]
+              }
+              type="select"
+            />
+          </div>
+        </div>
         <Checkbox
           id="fieldset-disabled-checkbox"
           label="Remember me"
@@ -129,7 +162,7 @@ exports[`Documentation: Forms DisabledFormComponents renders 1`] = `
         btnType="submit"
         disabled={true}
         label="Log in"
-        type="executive"
+        type="primary"
       />
       
 
@@ -170,21 +203,35 @@ exports[`Documentation: Forms DisabledFormComponents renders 1`] = `
         <legend>
           Log in
         </legend>
-        <InputGroup
-          autoComplete="username"
-          id="form-group-disabled-username"
-          label="Username"
-          placeholder="Enter your username"
-          type="text"
-        />
-        <InputGroup
-          autoComplete="current-password"
-          disabled={true}
-          id="form-group-disabled-password"
-          label="Password"
-          placeholder="Enter your password"
-          type="password"
-        />
+        <div
+          className="row"
+        >
+          <div
+            className="col-sm-6"
+          >
+            <InputGroup
+              autoComplete="username"
+              id="form-group-disabled-username"
+              label="Username"
+              type="text"
+            />
+          </div>
+        </div>
+        <div
+          className="row"
+        >
+          <div
+            className="col-sm-6"
+          >
+            <InputGroup
+              autoComplete="current-password"
+              disabled={true}
+              id="form-group-disabled-password"
+              label="Password"
+              type="password"
+            />
+          </div>
+        </div>
         <Checkbox
           id="form-group-disabled-checkbox"
           label="Remember me"
@@ -196,11 +243,47 @@ exports[`Documentation: Forms DisabledFormComponents renders 1`] = `
         btnType="submit"
         disabled={true}
         label="Log in"
-        type="executive"
+        type="primary"
       />
       
 
     </form>
+  </ComponentPreview>
+</Fragment>
+`;
+
+exports[`Documentation: Forms Dropdown renders 1`] = `
+<Fragment>
+  <h2
+    id="dropdown"
+  >
+    Dropdown menu
+  </h2>
+  <p>
+    Inserting text next to a 
+    <CodeTags
+      code="<select>"
+      type="primary"
+    />
+     works just like any other input element.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <InputGroup
+      label="Profession"
+      selectOptions={
+        Array [
+          "Bounty hunter",
+          "Smuggler",
+          "Jedi",
+        ]
+      }
+      type="select"
+    />
   </ComponentPreview>
 </Fragment>
 `;
@@ -236,10 +319,8 @@ exports[`Documentation: Forms FormGrid form prevents default 1`] = `
         >
           <InputGroup
             autoComplete="given-name"
-            helpBlock="Hope it is something cool"
             id="grid-first-name"
             label="First name"
-            placeholder="Enter your first name"
             type="text"
           />
         </div>
@@ -248,10 +329,8 @@ exports[`Documentation: Forms FormGrid form prevents default 1`] = `
         >
           <InputGroup
             autoComplete="family-name"
-            helpBlock="Most likely in your passport"
             id="grid-last-name"
             label="Last name"
-            placeholder="Enter your last name"
             type="text"
           />
         </div>
@@ -267,7 +346,7 @@ exports[`Documentation: Forms FormGrid form prevents default 1`] = `
             
 
             <button
-              className="btn btn-executive"
+              className="btn btn-primary"
               type="submit"
             >
               Search
@@ -313,10 +392,8 @@ exports[`Documentation: Forms FormGrid renders 1`] = `
         >
           <InputGroup
             autoComplete="given-name"
-            helpBlock="Hope it is something cool"
             id="grid-first-name"
             label="First name"
-            placeholder="Enter your first name"
             type="text"
           />
         </div>
@@ -325,10 +402,8 @@ exports[`Documentation: Forms FormGrid renders 1`] = `
         >
           <InputGroup
             autoComplete="family-name"
-            helpBlock="Most likely in your passport"
             id="grid-last-name"
             label="Last name"
-            placeholder="Enter your last name"
             type="text"
           />
         </div>
@@ -344,7 +419,7 @@ exports[`Documentation: Forms FormGrid renders 1`] = `
             
 
             <button
-              className="btn btn-executive"
+              className="btn btn-primary"
               type="submit"
             >
               Search
@@ -420,6 +495,28 @@ exports[`Documentation: Forms Overview form prevents default 1`] = `
     />
     s.
   </p>
+  <p>
+    <b>
+      Note:
+    </b>
+     On larger screens, 
+    <CodeTags
+      code="<input>"
+      type="primary"
+    />
+     should not be wider than half the page. 
+    <CodeTags
+      code="<input>"
+      type="primary"
+    />
+     should take the available width on smaller screen sizes. 
+    <Link
+      to="/core/grid"
+    >
+      Grid
+    </Link>
+     can be used to achieve this behavior.
+  </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
@@ -428,30 +525,50 @@ exports[`Documentation: Forms Overview form prevents default 1`] = `
     <form
       onSubmit={[Function]}
     >
-      <InputGroup
-        autoComplete="given-name"
-        helpBlock="The first word of your full name"
-        id="first-name"
-        label="First name"
-        placeholder="Enter your first name"
-        type="text"
-      />
-      <InputGroup
-        autoComplete="family-name"
-        helpBlock="The very last collection of letters in your name"
-        id="last-name"
-        label="Last name"
-        placeholder="Enter your last name"
-        type="text"
-      />
-      <InputGroup
-        autoComplete="email"
-        helpBlock="The last part is probably @swedbankpay.com"
-        id="email-address"
-        label="Email"
-        placeholder="Enter your email"
-        type="text"
-      />
+      <div
+        className="row"
+      >
+        <div
+          className="col-md-6"
+        >
+          <InputGroup
+            autoComplete="name"
+            helpBlock="Your first and last name"
+            id="your-name"
+            label="Name"
+            type="text"
+          />
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col-md-6"
+        >
+          <InputGroup
+            autoComplete="email"
+            id="email-address"
+            label="Email"
+            placeholder="name@mail.com"
+            type="text"
+          />
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col-md-6"
+        >
+          <InputGroup
+            autoComplete="phone"
+            id="phone-number"
+            label="Phone number"
+            type="text"
+          />
+        </div>
+      </div>
       <div
         className="form-group"
       >
@@ -465,7 +582,7 @@ exports[`Documentation: Forms Overview form prevents default 1`] = `
       <Button
         btnType="submit"
         label="Submit"
-        type="executive"
+        type="primary"
       />
       
 
@@ -514,6 +631,28 @@ exports[`Documentation: Forms Overview renders 1`] = `
     />
     s.
   </p>
+  <p>
+    <b>
+      Note:
+    </b>
+     On larger screens, 
+    <CodeTags
+      code="<input>"
+      type="primary"
+    />
+     should not be wider than half the page. 
+    <CodeTags
+      code="<input>"
+      type="primary"
+    />
+     should take the available width on smaller screen sizes. 
+    <Link
+      to="/core/grid"
+    >
+      Grid
+    </Link>
+     can be used to achieve this behavior.
+  </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
@@ -522,30 +661,50 @@ exports[`Documentation: Forms Overview renders 1`] = `
     <form
       onSubmit={[Function]}
     >
-      <InputGroup
-        autoComplete="given-name"
-        helpBlock="The first word of your full name"
-        id="first-name"
-        label="First name"
-        placeholder="Enter your first name"
-        type="text"
-      />
-      <InputGroup
-        autoComplete="family-name"
-        helpBlock="The very last collection of letters in your name"
-        id="last-name"
-        label="Last name"
-        placeholder="Enter your last name"
-        type="text"
-      />
-      <InputGroup
-        autoComplete="email"
-        helpBlock="The last part is probably @swedbankpay.com"
-        id="email-address"
-        label="Email"
-        placeholder="Enter your email"
-        type="text"
-      />
+      <div
+        className="row"
+      >
+        <div
+          className="col-md-6"
+        >
+          <InputGroup
+            autoComplete="name"
+            helpBlock="Your first and last name"
+            id="your-name"
+            label="Name"
+            type="text"
+          />
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col-md-6"
+        >
+          <InputGroup
+            autoComplete="email"
+            id="email-address"
+            label="Email"
+            placeholder="name@mail.com"
+            type="text"
+          />
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col-md-6"
+        >
+          <InputGroup
+            autoComplete="phone"
+            id="phone-number"
+            label="Phone number"
+            type="text"
+          />
+        </div>
+      </div>
       <div
         className="form-group"
       >
@@ -559,7 +718,7 @@ exports[`Documentation: Forms Overview renders 1`] = `
       <Button
         btnType="submit"
         label="Submit"
-        type="executive"
+        type="primary"
       />
       
 
@@ -768,20 +927,34 @@ exports[`Documentation: Forms UsageWithFieldsets form prevents default 1`] = `
         <legend>
           Log in
         </legend>
-        <InputGroup
-          autoComplete="username"
-          id="fieldset-username"
-          label="Username"
-          placeholder="Enter your username"
-          type="text"
-        />
-        <InputGroup
-          autoComplete="current-password"
-          id="fieldset-password"
-          label="Password"
-          placeholder="Enter your password"
-          type="password"
-        />
+        <div
+          className="row"
+        >
+          <div
+            className="col-md-6"
+          >
+            <InputGroup
+              autoComplete="username"
+              id="fieldset-username"
+              label="Username"
+              type="text"
+            />
+          </div>
+        </div>
+        <div
+          className="row"
+        >
+          <div
+            className="col-md-6"
+          >
+            <InputGroup
+              autoComplete="current-password"
+              id="fieldset-password"
+              label="Password"
+              type="password"
+            />
+          </div>
+        </div>
         <Checkbox
           id="fieldset-checkbox"
           label="Remember me"
@@ -792,7 +965,7 @@ exports[`Documentation: Forms UsageWithFieldsets form prevents default 1`] = `
       <Button
         btnType="submit"
         label="Log in"
-        type="executive"
+        type="primary"
       />
       
 
@@ -823,20 +996,34 @@ exports[`Documentation: Forms UsageWithFieldsets renders 1`] = `
         <legend>
           Log in
         </legend>
-        <InputGroup
-          autoComplete="username"
-          id="fieldset-username"
-          label="Username"
-          placeholder="Enter your username"
-          type="text"
-        />
-        <InputGroup
-          autoComplete="current-password"
-          id="fieldset-password"
-          label="Password"
-          placeholder="Enter your password"
-          type="password"
-        />
+        <div
+          className="row"
+        >
+          <div
+            className="col-md-6"
+          >
+            <InputGroup
+              autoComplete="username"
+              id="fieldset-username"
+              label="Username"
+              type="text"
+            />
+          </div>
+        </div>
+        <div
+          className="row"
+        >
+          <div
+            className="col-md-6"
+          >
+            <InputGroup
+              autoComplete="current-password"
+              id="fieldset-password"
+              label="Password"
+              type="password"
+            />
+          </div>
+        </div>
         <Checkbox
           id="fieldset-checkbox"
           label="Remember me"
@@ -847,7 +1034,7 @@ exports[`Documentation: Forms UsageWithFieldsets renders 1`] = `
       <Button
         btnType="submit"
         label="Log in"
-        type="executive"
+        type="primary"
       />
       
 
@@ -918,28 +1105,39 @@ exports[`Documentation: Forms Validation renders 1`] = `
       data-validate=""
       noValidate={true}
     >
-      <InputGroup
-        helpBlock="This one should be easy"
-        id="validation-name-1"
-        label="Name"
-        placeholder="Enter your name"
-        type="text"
-      />
-      <InputGroup
-        helpBlock="This one should be pretty easy too"
-        id="validation-email-1"
-        label="Email"
-        placeholder="Enter your email"
-        type="email"
-      />
-      
-
-      <button
-        className="btn btn-executive"
-        type="submit"
+      <div
+        className="row d-flex align-items-center"
       >
-        Submit
-      </button>
+        <div
+          className="col-md-5"
+        >
+          <InputGroup
+            id="validation-name-1"
+            label="Name"
+            type="text"
+          />
+        </div>
+        <div
+          className="col-md-5"
+        >
+          <InputGroup
+            id="validation-email-1"
+            label="Email"
+            placeholder="name@mail.com"
+            type="email"
+          />
+        </div>
+        <div
+          className="col-md-2"
+        >
+          <button
+            className="btn btn-primary"
+            type="submit"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
     </form>
   </ComponentPreview>
   <h3>
@@ -994,26 +1192,36 @@ exports[`Documentation: Forms Validation renders 1`] = `
       data-validate=""
       noValidate={true}
     >
-      <InputGroup
-        errorMessage="Wrong!"
-        helpBlock={true}
-        id="validation-email-2"
-        label="Email"
-        placeholder="bob.corlsan@example.com"
-        prefixType="icon"
-        prefixValue="email"
-        required={true}
-        successMessage="Right!"
-        type="email"
-      />
-      
-
-      <button
-        className="btn btn-executive"
-        type="submit"
+      <div
+        className="row d-flex align-items-center"
       >
-        Submit
-      </button>
+        <div
+          className="col-md-5"
+        >
+          <InputGroup
+            errorMessage="Wrong!"
+            helpBlock={true}
+            id="validation-email-2"
+            label="Email"
+            placeholder="name@mail.com"
+            prefixType="icon"
+            prefixValue="email"
+            required={true}
+            successMessage="Right!"
+            type="email"
+          />
+        </div>
+        <div
+          className="col-md-2"
+        >
+          <button
+            className="btn btn-primary mb-4"
+            type="submit"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
     </form>
   </ComponentPreview>
   <h3>
@@ -1058,27 +1266,36 @@ exports[`Documentation: Forms Validation renders 1`] = `
       data-validate=""
       noValidate={true}
     >
-      <InputGroup
-        errorMessage="Wrong!"
-        helpBlock="Keep your eye on that submit button"
-        id="validation-email-3"
-        label="Email"
-        placeholder="bob.corlsan@example.com"
-        prefixType="icon"
-        prefixValue="email"
-        required={true}
-        successMessage="Right!"
-        type="email"
-      />
-      
-
-      <button
-        className="btn btn-executive"
-        data-disable-invalid=""
-        type="submit"
+      <div
+        className="row d-flex align-items-center"
       >
-        Submit
-      </button>
+        <div
+          className="col-md-5"
+        >
+          <InputGroup
+            errorMessage="Wrong!"
+            id="validation-email-3"
+            label="Email"
+            placeholder="name@mail.com"
+            prefixType="icon"
+            prefixValue="email"
+            required={true}
+            successMessage="Right!"
+            type="email"
+          />
+        </div>
+        <div
+          className="col-md-2"
+        >
+          <button
+            className="btn btn-primary"
+            data-disable-invalid=""
+            type="submit"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
     </form>
   </ComponentPreview>
 </Fragment>
@@ -1098,6 +1315,7 @@ exports[`Documentation: Forms renders 1`] = `
   <Validation />
   <UsageWithFieldsets />
   <StaticText />
+  <Dropdown />
   <Checkboxes />
   <RadioButtons />
   <Toggleboxes />
