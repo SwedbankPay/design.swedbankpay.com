@@ -18,11 +18,11 @@ module.exports = [
                 path: "/resources/images",
                 componentPath: "resources/images"
             },
-            {
-                title: "Logotype",
-                path: "/resources/logotype",
-                componentPath: "resources/logotype"
-            },
+            // {
+            //     title: "Logotype",
+            //     path: "/resources/logotype",
+            //     componentPath: "resources/logotype"
+            // },
             {
                 title: "Presentations",
                 path: "/resources/presentations",
