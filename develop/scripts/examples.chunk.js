@@ -1,2 +1,2 @@
 (window.webpackJsonp=window.webpackJsonp||[]).push([[5],{444:function(e,n,a){"use strict";a.r(n);var t=a(0),i=a.n(t),p=a(70);n.default=function(){return i.a.createElement(p.RenderPage,{path:"/examples",initPath:"/examples/login"})}}}]);
-//# sourceMappingURL=examples.chunk.js.map?0d995c2e40f624f8c7f1
+//# sourceMappingURL=examples.chunk.js.map?fe86618cfb02a287d42e
