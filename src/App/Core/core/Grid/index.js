@@ -69,7 +69,7 @@ const HowItWorks = () => (
                 Columns have horizontal <CodeTags type="secondary" code="padding" /> to create the gutters between individual columns, however, you can remove the <CodeTags type="secondary" code="margin" /> from rows and <CodeTags type="secondary" code="padding" /> from columns with <CodeTags type="secondary" code=".no-gutters" /> on the <CodeTags type="secondary" code=".row" />.
             </li>
             <li>
-                To make the grid responsive, there are six grid breakpoints, one for each <Link to="/core/breakpoints">responsive breakpoint</Link>: all breakpoints (extra small), small, medium, large, extra large, and extra extra large.
+                To make the grid responsive, there are six grid breakpoints, one for each <Link to="/utilities/breakpoints">responsive breakpoint</Link>: all breakpoints (extra small), small, medium, large, extra large, and extra extra large.
             </li>
             <li>
                 Grid breakpoints are based on minimum width media queries, meaning they <b>apply to that one breakpoint and all those above it</b> (e.g., <CodeTags type="secondary" code=".col-sm-4" /> applies to small, medium, large, extra large and extra extra large devices, but not the first <CodeTags type="secondary" code="xs" /> breakpoint).

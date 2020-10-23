@@ -413,11 +413,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "title": "Images",
             },
             Object {
-              "componentPath": "resources/logotype",
-              "path": "/resources/logotype",
-              "title": "Logotype",
-            },
-            Object {
               "componentPath": "resources/presentations",
               "path": "/resources/presentations",
               "title": "Presentations",

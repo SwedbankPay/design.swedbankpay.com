@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { DocContainer } from "@docutils";
 import Button from "@components/Button";
@@ -10,7 +11,7 @@ const Overview = () => (
     <>
         <p>
             This is the main template for both internal and external use. Make sure you have the correct fonts installed on your computer.
-            The fonts can be found <a href="/res/resources/typography">here</a>.
+            The fonts can be found <Link to="/resources/typography">here</Link>.
             Please do not change the colour or the logo of this template.
         </p>
         <p>

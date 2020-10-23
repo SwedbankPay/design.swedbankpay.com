@@ -218,7 +218,7 @@ exports[`Components: Topbar TopbarSticky renders 1`] = `
     />
      to specify the maximum width the topbar should be sticky (see 
     <Link
-      to="/core/breakpoints"
+      to="/utilities/breakpoints"
     >
       breakpoints
     </Link>

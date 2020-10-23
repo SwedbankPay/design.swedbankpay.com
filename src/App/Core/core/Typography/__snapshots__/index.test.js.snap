@@ -469,7 +469,7 @@ exports[`Core: Typography ResourcesTypography renders 1`] = `
     >
       From 
       <Link
-        to="/res/resources/typography"
+        to="/resources/typography"
       >
         typography in Resources
       </Link>

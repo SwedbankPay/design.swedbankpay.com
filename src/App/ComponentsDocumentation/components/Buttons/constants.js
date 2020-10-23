@@ -1,5 +1,6 @@
 import React from "react";
 import ButtonComponent from "@components/Button";
+import { Link } from "react-router-dom";
 
 export const overviewButtons = {
     id: "overviewButtons",
@@ -156,7 +157,7 @@ export const overviewButtons = {
                 Use secondary buttons for secondary call to actions on a page.
                 Pages with too many calls to action make it hard for users to know what to do next.
                 Before adding lots of secondary buttons, try to simplify the page or break the content down across multiple pages or
-                consider using <a href="/components/links">Action links</a>.
+                consider using <Link to="/components/links#action-link">Action links</Link>.
             </p>
         },
         {

@@ -1018,7 +1018,7 @@ exports[`Core: Grid HowItWorks renders 1`] = `
     <li>
       To make the grid responsive, there are six grid breakpoints, one for each 
       <Link
-        to="/core/breakpoints"
+        to="/utilities/breakpoints"
       >
         responsive breakpoint
       </Link>
