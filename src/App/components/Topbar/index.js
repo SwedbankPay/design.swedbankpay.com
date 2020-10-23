@@ -63,9 +63,9 @@ const TopbarLogo = ({ png }) => (
     <>
         <a className={`topbar-logo${png ? " topbar-logo-png" : ""}`} href="/" onClick={e => e.preventDefault()}>{"\n"}
             {(brand === "swedbankpay" && png) ?
-                <img src={`${process.env.basename}img/${brand}-logo.png`} alt={`${brand}-logo`} className="logotype-horizontal logotype-md"/>
+                <img src={`${process.env.basename}img/${brand}-logo${brand === "swedbankpay" ? "-h" : ""}.png`} alt={`${brand}-logo`} className="logotype-horizontal logotype-md"/>
                 :
-                <img src={isDev ? devLogo : `${process.env.basename}img/${brand}-logo.svg`} alt={`${brand}-logo`} className="logotype-horizontal logotype-md"/>
+                <img src={isDev ? devLogo : `${process.env.basename}img/${brand}-logo${brand === "swedbankpay" ? "-h" : ""}.svg`} alt={`${brand}-logo`} className="logotype-horizontal logotype-md"/>
             }{"\n"}
         </a>{"\n"}
     </>

@@ -431,42 +431,6 @@ exports[`Utilities: RenderPage renders 1`] = `
         }
         title="Resources"
       />
-      <RenderRoutes
-        appFolder="Examples"
-        key="renderRoutes_Examples"
-        path="/examples"
-        redirect="/examples/login"
-        routes={
-          Array [
-            Object {
-              "componentPath": "examples/login",
-              "path": "/examples/login",
-              "title": "Login",
-            },
-            Object {
-              "componentPath": "examples/settings",
-              "path": "/examples/settings",
-              "title": "Settings",
-            },
-            Object {
-              "componentPath": "examples/faq",
-              "path": "/examples/faq",
-              "title": "FAQ",
-            },
-            Object {
-              "componentPath": "examples/customers",
-              "path": "/examples/customers",
-              "title": "Customers",
-            },
-            Object {
-              "componentPath": "examples/sidebar",
-              "path": "/examples/sidebar",
-              "title": "Sidebar",
-            },
-          ]
-        }
-        title="Examples"
-      />
       <Redirect
         from="/test/*"
         to="/404"
