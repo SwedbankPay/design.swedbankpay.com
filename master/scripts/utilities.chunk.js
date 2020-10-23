@@ -1,2 +1,2 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[15],{438:function(t,e,i){"use strict";i.r(e);var n=i(1),a=i.n(n),o=i(68);e.default=function(){return a.a.createElement(o.RenderPage,{path:"/utilities",initPath:"/utilities/colors"})}}}]);
-//# sourceMappingURL=utilities.chunk.js.map?96dabd508c1e6053fe78
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{445:function(t,e,i){"use strict";i.r(e);var n=i(0),a=i.n(n),o=i(70);e.default=function(){return a.a.createElement(o.RenderPage,{path:"/utilities",initPath:"/utilities/colors"})}}}]);
+//# sourceMappingURL=utilities.chunk.js.map?2e5d0cf42f8735da4e28

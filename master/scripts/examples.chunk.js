@@ -1,2 +1,2 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{437:function(e,n,a){"use strict";a.r(n);var t=a(1),i=a.n(t),p=a(68);n.default=function(){return i.a.createElement(p.RenderPage,{path:"/examples",initPath:"/examples/login"})}}}]);
-//# sourceMappingURL=examples.chunk.js.map?96dabd508c1e6053fe78
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{444:function(e,n,a){"use strict";a.r(n);var t=a(0),i=a.n(t),p=a(70);n.default=function(){return i.a.createElement(p.RenderPage,{path:"/examples",initPath:"/examples/login"})}}}]);
+//# sourceMappingURL=examples.chunk.js.map?2e5d0cf42f8735da4e28
