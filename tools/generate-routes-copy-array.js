@@ -1,5 +1,4 @@
-const ROOTROUTES = ["/components", "/core", "examples", "/utilities", "/getting-started", "/resources", "/404"];
-const resRoutes = require("../src/App/routes/resources");
+const ROOTROUTES = ["/components", "/core", "examples", "/utilities", "/getting-started", "/404"];
 const componentsRoutes = require("../src/App/routes/components");
 const coreRoutes = require("../src/App/routes/core");
 const gettingStartedRoutes = require("../src/App/routes/getting-started");
@@ -10,7 +9,6 @@ const getRoutes = () => {
     const ROUTES = [...ROOTROUTES];
 
     [
-        ...resRoutes,
         ...componentsRoutes,
         ...coreRoutes,
         ...gettingStartedRoutes,

@@ -30,6 +30,11 @@ module.exports = [
                 componentPath: "core/Iconography"
             },
             {
+                title: "Images",
+                path: "/core/images",
+                componentPath: "core/Images"
+            },
+            {
                 title: "Page layout",
                 path: "/core/page-layout",
                 componentPath: "core/Page-layout"
