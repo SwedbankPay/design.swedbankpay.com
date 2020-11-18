@@ -271,38 +271,66 @@ exports[`Components: Topbar TopbarSticky renders 1`] = `
             sidebarNavList={
               Array [
                 Object {
-                  "lastParent": true,
-                  "subList": Array [
-                    Object {
-                      "title": "Introduction 1",
-                    },
-                    Object {
-                      "title": "Introduction 2",
-                    },
-                    Object {
-                      "title": "Introduction 3",
-                    },
-                  ],
-                  "title": "Introduction",
+                  "icon": <i
+                    className="material-icons-outlined"
+                  >
+                    home
+                  </i>,
+                  "title": "Home Page",
                 },
                 Object {
-                  "lastParent": true,
-                  "subList": Array [
+                  "children": Array [
                     Object {
-                      "title": "Summary chapter 1",
+                      "title": "Overview",
                     },
                     Object {
-                      "title": "Summary chapter 2",
+                      "title": "Accessibility",
                     },
                     Object {
-                      "title": "Summary chapter 3",
+                      "children": Array [
+                        Object {
+                          "title": "Primary colors",
+                        },
+                        Object {
+                          "title": "Secondary colors",
+                        },
+                        Object {
+                          "title": "Tertiary colors",
+                        },
+                      ],
+                      "title": "Colors",
+                    },
+                    Object {
+                      "title": "Copywriting",
+                    },
+                    Object {
+                      "title": "Grid",
+                    },
+                    Object {
+                      "title": "Iconography",
+                    },
+                    Object {
+                      "title": "Imagery",
+                    },
+                    Object {
+                      "title": "Logotype",
+                    },
+                    Object {
+                      "title": "Spacing",
+                    },
+                    Object {
+                      "title": "Typography",
                     },
                   ],
-                  "title": "Summary",
+                  "icon": <i
+                    className="material-icons-outlined rotated"
+                  >
+                    wb_incandescent
+                  </i>,
+                  "title": "Get Started",
                 },
                 Object {
-                  "lastParent": false,
-                  "subList": Array [
+                  "children": Array [
                     Object {
                       "title": "Introduction",
                     },
@@ -343,7 +371,31 @@ exports[`Components: Topbar TopbarSticky renders 1`] = `
                       "title": "Conclusion",
                     },
                   ],
-                  "title": "Other features",
+                  "icon": <i
+                    className="material-icons-outlined"
+                  >
+                    palette
+                  </i>,
+                  "lastParent": false,
+                  "title": "Identity",
+                },
+                Object {
+                  "children": Array [],
+                  "icon": <i
+                    className="material-icons-outlined"
+                  >
+                    category
+                  </i>,
+                  "title": "Components",
+                },
+                Object {
+                  "children": Array [],
+                  "icon": <i
+                    className="material-icons-outlined"
+                  >
+                    build
+                  </i>,
+                  "title": "Utilities",
                 },
               ]
             }

@@ -85,6 +85,40 @@ class Sidebar {
 
 }
 
+class Sidebar2 {
+    constructor (el) {
+        this.constructSidebar(el);
+    }
+
+    constructSidebar (el) {
+        this.el = el;
+        this.id = el.id;
+        this._initListeners();
+    }
+
+    _initListeners () {
+        const mainNavLI = this.el.querySelectorAll(".main-nav-li");
+
+        [...mainNavLI].map(mainNavElement => mainNavElement.addEventListener("click", () => this._setActiveStatus(mainNavElement, ".main-nav-li")));
+    }
+
+    _setActiveStatus (element, selector) {
+        const activeElements = this.el.querySelectorAll(selector + SELECTORS.ACTIVE);
+
+        element.classList.add("active");
+
+        if (element.querySelector(".sidebar-secondary-nav")) {
+            this.el.classList.add("has-secondary-nav");
+        } else {
+            this.el.classList.remove("has-secondary-nav");
+        }
+
+        [...activeElements].map(activeElement => {
+            element !== activeElement && activeElement.classList.remove("active");
+        });
+    }
+}
+
 const setActiveState = (id, group, subGroup, leaf) => {
 
     if (group !== null) {
@@ -197,7 +231,24 @@ const _createSidebar = sidebarQuery => {
     return sidebarObject;
 };
 
-const init = id => {
+const _createSidebar2 = sidebarQuery => {
+
+    if (_sidebars.filter(sidebar => sidebar.id === sidebarQuery.id).length > 0) {
+        const updatedSidebarObject = _sidebars.filter(sidebar => sidebar.id === sidebarQuery.id)[0];
+
+        updatedSidebarObject.constructSidebar(sidebarQuery);
+
+        return updatedSidebarObject;
+    }
+
+    const sidebarObject = new Sidebar2(sidebarQuery);
+
+    _sidebars.push(sidebarObject);
+
+    return sidebarObject;
+};
+
+const init = (id, newSidebar) => {
     if (id) {
 
         const sidebar = document.getElementById(id);
@@ -208,7 +259,7 @@ const init = id => {
             return null;
         }
 
-        const sidebarObject = _createSidebar(sidebar);
+        const sidebarObject = newSidebar ? _createSidebar2(sidebar) : _createSidebar(sidebar);
 
         return sidebarObject;
     } else {

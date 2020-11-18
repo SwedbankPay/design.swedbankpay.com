@@ -1,38 +1,62 @@
+import React from "react";
+
 export const SidebarNavList = [
     {
-        title: "Introduction",
-        lastParent: true,
-        subList: [
+        title: "Home Page",
+        icon: <i className="material-icons-outlined">home</i>
+    },
+    {
+        title: "Get Started",
+        icon: <i className="material-icons-outlined rotated">wb_incandescent</i>,
+        children: [
             {
-                title: "Introduction 1"
+                title: "Overview"
             },
             {
-                title: "Introduction 2"
+                title: "Accessibility"
             },
             {
-                title: "Introduction 3"
+                title: "Colors",
+                children: [
+                    {
+                        title: "Primary colors"
+                    },
+                    {
+                        title: "Secondary colors"
+                    },
+                    {
+                        title: "Tertiary colors"
+                    }
+                ]
+            },
+            {
+                title: "Copywriting"
+            },
+            {
+                title: "Grid"
+            },
+            {
+                title: "Iconography"
+            },
+            {
+                title: "Imagery"
+            },
+            {
+                title: "Logotype"
+            },
+            {
+                title: "Spacing"
+            },
+            {
+                title: "Typography"
             }
         ]
     },
     {
-        title: "Summary",
-        lastParent: true,
-        subList: [
-            {
-                title: "Summary chapter 1"
-            },
-            {
-                title: "Summary chapter 2"
-            },
-            {
-                title: "Summary chapter 3"
-            }
-        ]
-    },
-    {
-        title: "Other features",
+        title: "Identity",
+        icon: <i className="material-icons-outlined">palette</i>,
         lastParent: false,
-        subList: [
+        children: [
             {
                 title: "Introduction"
             },
@@ -69,48 +93,19 @@ export const SidebarNavList = [
                     }
                 ]
             },
-            // {
-            //     title: "Extras",
-            //     lastParent: false,
-            //     subList: [
-            //         {
-            //             title: "Events",
-            //             lastParent: true,
-            //             subList: [
-            //                 {
-            //                     title: "Event 1"
-            //                 },
-            //                 {
-            //                     title: "Event 2"
-            //                 },
-            //                 {
-            //                     title: "Event 3"
-            //                 }
-            //             ]
-            //         },
-            //         {
-            //             title: "Operations",
-            //             lastParent: true,
-            //             subList: [
-            //                 {
-            //                     title: "Operations"
-            //                 },
-            //                 {
-            //                     title: "Lorem ipsum"
-            //                 },
-            //                 {
-            //                     title: "Dolor sit amet consectetur"
-            //                 },
-            //                 {
-            //                     title: "Adipiscing elit"
-            //                 }
-            //             ]
-            //         }
-            //     ]
-            // },
             {
                 title: "Conclusion"
             }
         ]
+    },
+    {
+        title: "Components",
+        icon: <i className="material-icons-outlined">category</i>,
+        children: []
+    },
+    {
+        title: "Utilities",
+        icon: <i className="material-icons-outlined">build</i>,
+        children: []
     }
 ];

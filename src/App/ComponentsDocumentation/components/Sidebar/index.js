@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 import { ComponentPreview, DocContainer, JavascriptDocs, JavascriptDocElement } from "@docutils";
 import SidebarComponent from "@components/Sidebar";
-import TopbarComponent from "@components/Topbar";
+// import TopbarComponent from "@components/Topbar";
 import CodeTags from "@components/CodeTags";
 
 const { sidebar } = window.dg;
@@ -21,13 +21,8 @@ const Overview = () => (
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="container-fluid">
                 <div className="row">
-                    <TopbarComponent wide="xl" logout id="demo-topbar" />
-                </div>
-                <div className="row">
-                    <div className="col-auto">
-                        <SidebarComponent id="dg-sidebar" sidebarNavList={SidebarNavList} />
-                    </div>
-                    <main className="col main-content border-left">Main content things...</main>
+                    <SidebarComponent id="dg-sidebar2" sidebarNavList={SidebarNavList} />
+                    <main className="col main-content">Main content things...</main>
                 </div>
             </div>
         </ComponentPreview>
@@ -136,7 +131,7 @@ const JavascriptMethods = () => (
 );
 
 const Sidebar = () => {
-    useEffect(() => { sidebar.init("dg-sidebar"); });
+    useEffect(() => { sidebar.init("dg-sidebar2", true); });
 
     return (
         <DocContainer docToc>

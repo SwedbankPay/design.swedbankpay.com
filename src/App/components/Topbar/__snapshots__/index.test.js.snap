@@ -472,38 +472,66 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
             sidebarNavList={
               Array [
                 Object {
-                  "lastParent": true,
-                  "subList": Array [
-                    Object {
-                      "title": "Introduction 1",
-                    },
-                    Object {
-                      "title": "Introduction 2",
-                    },
-                    Object {
-                      "title": "Introduction 3",
-                    },
-                  ],
-                  "title": "Introduction",
+                  "icon": <i
+                    className="material-icons-outlined"
+                  >
+                    home
+                  </i>,
+                  "title": "Home Page",
                 },
                 Object {
-                  "lastParent": true,
-                  "subList": Array [
+                  "children": Array [
                     Object {
-                      "title": "Summary chapter 1",
+                      "title": "Overview",
                     },
                     Object {
-                      "title": "Summary chapter 2",
+                      "title": "Accessibility",
                     },
                     Object {
-                      "title": "Summary chapter 3",
+                      "children": Array [
+                        Object {
+                          "title": "Primary colors",
+                        },
+                        Object {
+                          "title": "Secondary colors",
+                        },
+                        Object {
+                          "title": "Tertiary colors",
+                        },
+                      ],
+                      "title": "Colors",
+                    },
+                    Object {
+                      "title": "Copywriting",
+                    },
+                    Object {
+                      "title": "Grid",
+                    },
+                    Object {
+                      "title": "Iconography",
+                    },
+                    Object {
+                      "title": "Imagery",
+                    },
+                    Object {
+                      "title": "Logotype",
+                    },
+                    Object {
+                      "title": "Spacing",
+                    },
+                    Object {
+                      "title": "Typography",
                     },
                   ],
-                  "title": "Summary",
+                  "icon": <i
+                    className="material-icons-outlined rotated"
+                  >
+                    wb_incandescent
+                  </i>,
+                  "title": "Get Started",
                 },
                 Object {
-                  "lastParent": false,
-                  "subList": Array [
+                  "children": Array [
                     Object {
                       "title": "Introduction",
                     },
@@ -544,295 +572,381 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
                       "title": "Conclusion",
                     },
                   ],
-                  "title": "Other features",
+                  "icon": <i
+                    className="material-icons-outlined"
+                  >
+                    palette
+                  </i>,
+                  "lastParent": false,
+                  "title": "Identity",
+                },
+                Object {
+                  "children": Array [],
+                  "icon": <i
+                    className="material-icons-outlined"
+                  >
+                    category
+                  </i>,
+                  "title": "Components",
+                },
+                Object {
+                  "children": Array [],
+                  "icon": <i
+                    className="material-icons-outlined"
+                  >
+                    build
+                  </i>,
+                  "title": "Utilities",
                 },
               ]
             }
           >
             <div
-              className="sidebar"
+              className="sidebar-2"
               id="topbar-sidebar"
             >
               <nav
-                className="sidebar-nav"
+                className="sidebar-main-nav"
               >
+                <div
+                  className="sidebar-logo"
+                >
+                  <Logotype
+                    alt="Swedbank Pay vertical logo"
+                    size="md"
+                    src="/TEST/img/swedbankpay-logo-v.svg"
+                    type="vertical"
+                  >
+                    <img
+                      alt="Swedbank Pay vertical logo"
+                      className="logotype-vertical logotype-md"
+                      src="/TEST/img/swedbankpay-logo-v.svg"
+                    />
+                  </Logotype>
+                </div>
                 <ul
                   className="main-nav-ul"
                 >
                   <li
-                    className="nav-group"
-                    key="0"
+                    className="main-nav-li active"
+                    key="Home Page"
                   >
-                    <div
-                      className="nav-group-heading"
+                    <a
+                      href="#"
+                      onClick={[Function]}
                     >
                       <i
-                        aria-hidden="true"
-                        className="material-icons"
+                        className="material-icons-outlined"
                       >
-                        arrow_right
+                        home
                       </i>
-                      <span>
-                        Introduction
-                      </span>
-                    </div>
-                    <ul
-                      className="nav-ul"
-                    >
-                      <li
-                        className="nav-leaf"
-                        key="0"
-                      >
-                        <a
-                          href="#"
-                          onClick={[Function]}
-                        >
-                          Introduction 1
-                        </a>
-                      </li>
-                      <li
-                        className="nav-leaf"
-                        key="1"
-                      >
-                        <a
-                          href="#"
-                          onClick={[Function]}
-                        >
-                          Introduction 2
-                        </a>
-                      </li>
-                      <li
-                        className="nav-leaf"
-                        key="2"
-                      >
-                        <a
-                          href="#"
-                          onClick={[Function]}
-                        >
-                          Introduction 3
-                        </a>
-                      </li>
-                    </ul>
+                      Home Page
+                    </a>
                   </li>
                   <li
-                    className="nav-group"
-                    key="1"
+                    className="main-nav-li"
+                    key="Get Started"
                   >
-                    <div
-                      className="nav-group-heading"
+                    <a
+                      href="#"
+                      onClick={[Function]}
                     >
                       <i
-                        aria-hidden="true"
-                        className="material-icons"
+                        className="material-icons-outlined rotated"
                       >
-                        arrow_right
+                        wb_incandescent
                       </i>
-                      <span>
-                        Summary
-                      </span>
-                    </div>
-                    <ul
-                      className="nav-ul"
+                      Get Started
+                    </a>
+                    <nav
+                      className="sidebar-secondary-nav"
                     >
-                      <li
-                        className="nav-leaf"
-                        key="0"
+                      <header
+                        className="secondary-nav-header"
                       >
-                        <a
-                          href="#"
-                          onClick={[Function]}
+                        Get Started
+                      </header>
+                      <ul
+                        className="secondary-nav-ul"
+                      >
+                        <li
+                          className="secondary-nav-li leaf"
+                          key="Overview"
                         >
-                          Summary chapter 1
-                        </a>
-                      </li>
-                      <li
-                        className="nav-leaf"
-                        key="1"
-                      >
-                        <a
-                          href="#"
-                          onClick={[Function]}
-                        >
-                          Summary chapter 2
-                        </a>
-                      </li>
-                      <li
-                        className="nav-leaf"
-                        key="2"
-                      >
-                        <a
-                          href="#"
-                          onClick={[Function]}
-                        >
-                          Summary chapter 3
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li
-                    className="nav-group"
-                    key="2"
-                  >
-                    <div
-                      className="nav-group-heading"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="material-icons"
-                      >
-                        arrow_right
-                      </i>
-                      <span>
-                        Other features
-                      </span>
-                    </div>
-                    <ul
-                      className="nav-ul"
-                    >
-                      <li
-                        className="nav-leaf nav-subgroup-leaf"
-                        key="0"
-                      >
-                        <a
-                          href="#"
-                          onClick={[Function]}
-                        >
-                          Introduction
-                        </a>
-                      </li>
-                      <li
-                        className="nav-subgroup"
-                        key="1"
-                      >
-                        <div
-                          className="nav-subgroup-heading"
-                        >
-                          <i
-                            aria-hidden="true"
-                            className="material-icons"
+                          <a
+                            href="#"
+                            onClick={[Function]}
                           >
-                            arrow_right
-                          </i>
-                          <span>
+                            Overview
+                          </a>
+                        </li>
+                        <li
+                          className="secondary-nav-li leaf"
+                          key="Accessibility"
+                        >
+                          <a
+                            href="#"
+                            onClick={[Function]}
+                          >
+                            Accessibility
+                          </a>
+                        </li>
+                        <li
+                          className="secondary-nav-li group"
+                          key="Colors"
+                        >
+                          <a
+                            href="#"
+                            onClick={[Function]}
+                          >
+                            Colors
+                          </a>
+                          <ul
+                            className="secondary-nav-group"
+                          >
+                            <li
+                              className="nav-leaf"
+                              key="Primary colors"
+                            >
+                              <a
+                                href="#"
+                                onClick={[Function]}
+                              >
+                                Primary colors
+                              </a>
+                            </li>
+                            <li
+                              className="nav-leaf"
+                              key="Secondary colors"
+                            >
+                              <a
+                                href="#"
+                                onClick={[Function]}
+                              >
+                                Secondary colors
+                              </a>
+                            </li>
+                            <li
+                              className="nav-leaf"
+                              key="Tertiary colors"
+                            >
+                              <a
+                                href="#"
+                                onClick={[Function]}
+                              >
+                                Tertiary colors
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li
+                          className="secondary-nav-li leaf"
+                          key="Copywriting"
+                        >
+                          <a
+                            href="#"
+                            onClick={[Function]}
+                          >
+                            Copywriting
+                          </a>
+                        </li>
+                        <li
+                          className="secondary-nav-li leaf"
+                          key="Grid"
+                        >
+                          <a
+                            href="#"
+                            onClick={[Function]}
+                          >
+                            Grid
+                          </a>
+                        </li>
+                        <li
+                          className="secondary-nav-li leaf"
+                          key="Iconography"
+                        >
+                          <a
+                            href="#"
+                            onClick={[Function]}
+                          >
+                            Iconography
+                          </a>
+                        </li>
+                        <li
+                          className="secondary-nav-li leaf"
+                          key="Imagery"
+                        >
+                          <a
+                            href="#"
+                            onClick={[Function]}
+                          >
+                            Imagery
+                          </a>
+                        </li>
+                        <li
+                          className="secondary-nav-li leaf"
+                          key="Logotype"
+                        >
+                          <a
+                            href="#"
+                            onClick={[Function]}
+                          >
+                            Logotype
+                          </a>
+                        </li>
+                        <li
+                          className="secondary-nav-li leaf"
+                          key="Spacing"
+                        >
+                          <a
+                            href="#"
+                            onClick={[Function]}
+                          >
+                            Spacing
+                          </a>
+                        </li>
+                        <li
+                          className="secondary-nav-li leaf"
+                          key="Typography"
+                        >
+                          <a
+                            href="#"
+                            onClick={[Function]}
+                          >
+                            Typography
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </li>
+                  <li
+                    className="main-nav-li"
+                    key="Identity"
+                  >
+                    <a
+                      href="#"
+                      onClick={[Function]}
+                    >
+                      <i
+                        className="material-icons-outlined"
+                      >
+                        palette
+                      </i>
+                      Identity
+                    </a>
+                    <nav
+                      className="sidebar-secondary-nav"
+                    >
+                      <header
+                        className="secondary-nav-header"
+                      >
+                        Identity
+                      </header>
+                      <ul
+                        className="secondary-nav-ul"
+                      >
+                        <li
+                          className="secondary-nav-li leaf"
+                          key="Introduction"
+                        >
+                          <a
+                            href="#"
+                            onClick={[Function]}
+                          >
+                            Introduction
+                          </a>
+                        </li>
+                        <li
+                          className="secondary-nav-li leaf"
+                          key="Operations"
+                        >
+                          <a
+                            href="#"
+                            onClick={[Function]}
+                          >
                             Operations
-                          </span>
-                        </div>
-                        <ul
-                          className="nav-ul"
+                          </a>
+                        </li>
+                        <li
+                          className="secondary-nav-li leaf"
+                          key="Events"
                         >
-                          <li
-                            className="nav-leaf"
-                            key="0"
+                          <a
+                            href="#"
+                            onClick={[Function]}
                           >
-                            <a
-                              href="#"
-                              onClick={[Function]}
-                            >
-                              Operations
-                            </a>
-                          </li>
-                          <li
-                            className="nav-leaf"
-                            key="1"
-                          >
-                            <a
-                              href="#"
-                              onClick={[Function]}
-                            >
-                              Lorem ipsum
-                            </a>
-                          </li>
-                          <li
-                            className="nav-leaf"
-                            key="2"
-                          >
-                            <a
-                              href="#"
-                              onClick={[Function]}
-                            >
-                              Dolor sit amet consectetur
-                            </a>
-                          </li>
-                          <li
-                            className="nav-leaf"
-                            key="3"
-                          >
-                            <a
-                              href="#"
-                              onClick={[Function]}
-                            >
-                              Adipiscing elit
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li
-                        className="nav-subgroup"
-                        key="2"
-                      >
-                        <div
-                          className="nav-subgroup-heading"
-                        >
-                          <i
-                            aria-hidden="true"
-                            className="material-icons"
-                          >
-                            arrow_right
-                          </i>
-                          <span>
                             Events
-                          </span>
-                        </div>
-                        <ul
-                          className="nav-ul"
+                          </a>
+                        </li>
+                        <li
+                          className="secondary-nav-li leaf"
+                          key="Conclusion"
                         >
-                          <li
-                            className="nav-leaf"
-                            key="0"
+                          <a
+                            href="#"
+                            onClick={[Function]}
                           >
-                            <a
-                              href="#"
-                              onClick={[Function]}
-                            >
-                              Event 1
-                            </a>
-                          </li>
-                          <li
-                            className="nav-leaf"
-                            key="1"
-                          >
-                            <a
-                              href="#"
-                              onClick={[Function]}
-                            >
-                              Event 2
-                            </a>
-                          </li>
-                          <li
-                            className="nav-leaf"
-                            key="2"
-                          >
-                            <a
-                              href="#"
-                              onClick={[Function]}
-                            >
-                              Event 3
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li
-                        className="nav-leaf nav-subgroup-leaf"
-                        key="3"
+                            Conclusion
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </li>
+                  <li
+                    className="main-nav-li"
+                    key="Components"
+                  >
+                    <a
+                      href="#"
+                      onClick={[Function]}
+                    >
+                      <i
+                        className="material-icons-outlined"
                       >
-                        <a
-                          href="#"
-                          onClick={[Function]}
-                        >
-                          Conclusion
-                        </a>
-                      </li>
-                    </ul>
+                        category
+                      </i>
+                      Components
+                    </a>
+                    <nav
+                      className="sidebar-secondary-nav"
+                    >
+                      <header
+                        className="secondary-nav-header"
+                      >
+                        Components
+                      </header>
+                      <ul
+                        className="secondary-nav-ul"
+                      />
+                    </nav>
+                  </li>
+                  <li
+                    className="main-nav-li"
+                    key="Utilities"
+                  >
+                    <a
+                      href="#"
+                      onClick={[Function]}
+                    >
+                      <i
+                        className="material-icons-outlined"
+                      >
+                        build
+                      </i>
+                      Utilities
+                    </a>
+                    <nav
+                      className="sidebar-secondary-nav"
+                    >
+                      <header
+                        className="secondary-nav-header"
+                      >
+                        Utilities
+                      </header>
+                      <ul
+                        className="secondary-nav-ul"
+                      />
+                    </nav>
                   </li>
                 </ul>
               </nav>
