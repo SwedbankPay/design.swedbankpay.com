@@ -98,8 +98,12 @@ class Sidebar2 {
 
     _initListeners () {
         const mainNavLI = this.el.querySelectorAll(".main-nav-li");
+        const secondaryNavLI = this.el.querySelectorAll(".secondary-nav-li");
+        const navLeaves = this.el.querySelectorAll(".nav-leaf");
 
-        [...mainNavLI].map(mainNavElement => mainNavElement.addEventListener("click", () => this._setActiveStatus(mainNavElement, ".main-nav-li")));
+        [...mainNavLI].map(mainNavElement => mainNavElement.querySelector("a").addEventListener("click", () => this._setActiveStatus(mainNavElement, ".main-nav-li")));
+        [...secondaryNavLI].map(secondaryNavElement => secondaryNavElement.querySelector("a").addEventListener("click", () => this._setActiveStatus(secondaryNavElement, ".secondary-nav-li")));
+        [...navLeaves].map(navLeaf => navLeaf.addEventListener("click", () => this._setActiveStatus(navLeaf, SELECTORS.NAVLEAF)));
     }
 
     _setActiveStatus (element, selector) {
@@ -107,15 +111,22 @@ class Sidebar2 {
 
         element.classList.add("active");
 
-        if (element.querySelector(".sidebar-secondary-nav")) {
-            this.el.classList.add("has-secondary-nav");
-        } else {
-            this.el.classList.remove("has-secondary-nav");
+        if (selector === ".main-nav-li") {
+            if (element.querySelector(".sidebar-secondary-nav")) {
+                this.el.classList.add("has-secondary-nav");
+            } else {
+                this.el.classList.remove("has-secondary-nav");
+            }
         }
 
         [...activeElements].map(activeElement => {
             element !== activeElement && activeElement.classList.remove("active");
+
+            if (selector === ".secondary-nav-li") {
+                activeElement === element && activeElement.classList.remove("active");
+            }
         });
+
     }
 }
 

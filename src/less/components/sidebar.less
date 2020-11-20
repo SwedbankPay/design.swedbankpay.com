@@ -335,23 +335,6 @@
                         .secondary-nav-li {
                             margin: 0.5rem 0;
 
-                            &.active {
-                                &.group {
-                                    > a {
-                                        font-weight: @font-weight-bold;
-
-                                        &:hover {
-                                            &:after {
-                                                content: "expand_less";
-                                            }
-                                        }
-                                    }
-
-                                    .secondary-nav-group {
-                                        display: block;
-                                    }
-                                }
-                            }
 
                             &.leaf {
                                 > a {
@@ -373,6 +356,24 @@
 
                                             .material-icons-styling();
                                         }
+                                    }
+                                }
+                            }
+
+                            &.active {
+                                &.group {
+                                    > a {
+                                        font-weight: @font-weight-bold;
+
+                                        &:after {
+                                            content: "expand_less";
+
+                                            .material-icons-styling();
+                                        }
+                                    }
+
+                                    .secondary-nav-group {
+                                        display: block;
                                     }
                                 }
                             }
@@ -411,7 +412,7 @@
                                         background-color: @brand-bg-gray;
                                     }
 
-                                    &:active,
+                                    &.active,
                                     &:hover {
                                         &:before {
                                             background-color: @brand-secondary;
