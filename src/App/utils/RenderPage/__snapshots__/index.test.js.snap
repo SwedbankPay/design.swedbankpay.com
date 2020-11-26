@@ -3,6 +3,8 @@
 exports[`Utilities: RenderPage renders 1`] = `
 <Suspense
   fallback={<LoadingComponent />}
+  initPath="test/test"
+  path="/test"
 >
   <div
     className="doc-container"
