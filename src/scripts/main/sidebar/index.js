@@ -106,6 +106,16 @@ class Sidebar2 {
         [...navLeaves].map(navLeaf => navLeaf.addEventListener("click", () => this._setActiveStatus(navLeaf, SELECTORS.NAVLEAF)));
     }
 
+    _closeChildElements (element, closeElement) {
+        const activeChildElements = element.querySelectorAll(SELECTORS.ACTIVE);
+
+        [...activeChildElements].map(activeChildElement => {
+            activeChildElement.classList.remove("active");
+        });
+
+        closeElement && element.classList.remove("active");
+    }
+
     _setActiveStatus (element, selector) {
         const activeElements = this.el.querySelectorAll(selector + SELECTORS.ACTIVE);
 
@@ -120,10 +130,10 @@ class Sidebar2 {
         }
 
         [...activeElements].map(activeElement => {
-            element !== activeElement && activeElement.classList.remove("active");
+            element !== activeElement && this._closeChildElements(activeElement, true);
 
             if (selector === ".secondary-nav-li") {
-                activeElement === element && activeElement.classList.remove("active");
+                activeElement === element && !element.classList.contains("leaf") && this._closeChildElements(activeElement);
             }
         });
 
