@@ -14,33 +14,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Fetch all history for all tags and branches
-        run: git fetch --prune --unshallow
-
       # Set brand specific variables
       - name: Environment variables
-        run: |
-          chmod +x ./.github/scripts/variables.sh
-          ./.github/scripts/variables.sh
-        env:
-          BRAND: ${{ matrix.brand }}
+        id: variables
+        run: ./.github/scripts/variables.sh --brand ${{ matrix.brand }} --ref ${{ github.ref }}
 
       # Add sentry token
       - name: Sentry token
-        run: |
-          chmod +x ./.github/scripts/sentry.sh
-          ./.github/scripts/sentry.sh
+        run: ./.github/scripts/sentry.sh
         env:
           TOKEN: ${{ secrets.SENTRY_TOKEN }}
-
-      - name: Install GitVersion
-        uses: gittools/actions/gitversion/setup@v0.6.1
-        with:
-          versionSpec: '5.1.x'
-
-      - name: Use GitVersion
-        id: gitversion # step id used as reference for output values
-        uses: gittools/actions/gitversion/execute@v0.6.1
 
       - name: Set Node.js 12.x
         uses: actions/setup-node@master
@@ -59,7 +42,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run $BRAND_BUILD_SCRIPT -- --env.release=true --env.baseUrl="$BRAND_URL" --env.basename="v/${{ steps.gitversion.outputs.majorMinorPatch }}" --env.semver=${{ steps.gitversion.outputs.semVer }} --env.info_version=${{ steps.gitversion.outputs.informationalVersion }} --env.github_actions=true
+        run: npm run ${{ steps.variables.outputs.BUILD_SCRIPT }} -- --env.release=true --env.baseUrl="${{ steps.variables.outputs.BRAND_URL }}" --env.basename="v/${{ steps.variables.outputs.VERSION }}" --env.semver=${{ steps.variables.outputs.VERSION }} --env.info_version=${{ steps.variables.outputs.VERSION }} --env.github_actions=true
 
       - name: Azure Login
         uses: azure/login@v1
@@ -70,4 +53,4 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
-            az storage blob upload-batch -s dist -d \$web --account-name ${{ matrix.brand }}designguide
+            az storage blob upload-batch -s dist -d \$web --account-name ${{ steps.variables.outputs.AZURE_ACCOUNT }}
