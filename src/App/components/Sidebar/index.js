@@ -45,18 +45,43 @@ class Sidebar extends Component {
                                     <header className="secondary-nav-header">
                                         {mainElement.title}
                                     </header>
-                                    <ul className="secondary-nav-ul">
+                                    <ul className={`secondary-nav-ul ${this.props.extendedSidebar ? "extended-sidebar" : ""}`}>
                                         {mainElement.children.map(secondaryElement => <li key={secondaryElement.title}
                                             className={`secondary-nav-li${secondaryElement.children ? " group" : " leaf"}`}>
                                             <a href="#" onClick={e => e.preventDefault()}>
+                                                {secondaryElement.icon}
                                                 {secondaryElement.title}
                                             </a>
                                             {secondaryElement.children &&
-                                                <ul className="secondary-nav-group">
-                                                    {secondaryElement.children.map(secondaryElementChild => <li className="nav-leaf" key={secondaryElementChild.title}>
+                                                <ul className="tertiary-nav-ul">
+                                                    {this.props.extendedSidebar &&
+                                                        <>
+                                                            <a href="#" onClick={e => e.preventDefault()} className="icon-link text-decoration-none previous-nav">
+                                                                <i className="material-icons" aria-hidden="true">arrow_back_ios</i>
+                                                                <span className="ml-2">Back to {mainElement.title}</span>
+                                                            </a>
+                                                            <header className="tertiary-nav-header mt-2">
+                                                                {secondaryElement.icon}
+                                                                {secondaryElement.title}
+                                                            </header>
+                                                        </>
+                                                    }
+                                                    {secondaryElement.children.map(tertiaryElement => <li className={`${this.props.extendedSidebar
+                                                        ? "tertiary-nav-li"
+                                                        : "nav-leaf"} ${tertiaryElement.children ? "group" : "leaf"}`} key={tertiaryElement.title}>
                                                         <a href="#" onClick={e => e.preventDefault()}>
-                                                            {secondaryElementChild.title}
+                                                            {tertiaryElement.title}
                                                         </a>
+                                                        {tertiaryElement.children &&
+                                                            <ul className="quaternary-nav-ul">
+                                                                {tertiaryElement.children.map(quaternaryElement => <li className="quaternary-nav-li nav-leaf"
+                                                                    key={quaternaryElement.title}>
+                                                                    <a href="#" onClick={e => e.preventDefault()}>
+                                                                        {quaternaryElement.title}
+                                                                    </a>
+                                                                </li>)}
+                                                            </ul>
+                                                        }
                                                     </li>)}
                                                 </ul>
                                             }
@@ -80,7 +105,8 @@ Sidebar.propTypes = {
         lastParent: PropTypes.bool.isRequired,
         subList: PropTypes.arrayOf(PropTypes.object).isRequired
     })).isRequired,
-    sticky: PropTypes.bool
+    sticky: PropTypes.bool,
+    extendedSidebar: PropTypes.bool
 };
 
 export default Sidebar;

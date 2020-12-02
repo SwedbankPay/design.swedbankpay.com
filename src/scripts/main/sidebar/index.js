@@ -99,11 +99,15 @@ class Sidebar2 {
     _initListeners () {
         const mainNavLI = this.el.querySelectorAll(".main-nav-li");
         const secondaryNavLI = this.el.querySelectorAll(".secondary-nav-li");
+        const tertiaryNavLI = this.el.querySelectorAll(".tertiary-nav-li");
         const navLeaves = this.el.querySelectorAll(".nav-leaf");
+        const previousNavs = this.el.querySelectorAll(".previous-nav");
 
         [...mainNavLI].map(mainNavElement => mainNavElement.querySelector("a").addEventListener("click", () => this._setActiveStatus(mainNavElement, ".main-nav-li")));
         [...secondaryNavLI].map(secondaryNavElement => secondaryNavElement.querySelector("a").addEventListener("click", () => this._setActiveStatus(secondaryNavElement, ".secondary-nav-li")));
+        [...tertiaryNavLI].map(tertiaryNavElement => tertiaryNavElement.querySelector("a").addEventListener("click", () => this._setActiveStatus(tertiaryNavElement, ".tertiary-nav-li")));
         [...navLeaves].map(navLeaf => navLeaf.addEventListener("click", () => this._setActiveStatus(navLeaf, SELECTORS.NAVLEAF)));
+        [...previousNavs].map(previousNav => previousNav.addEventListener("click", () => this._setActiveStatus(previousNav, ".secondary-nav-li")));
     }
 
     _closeChildElements (element, closeElement) {

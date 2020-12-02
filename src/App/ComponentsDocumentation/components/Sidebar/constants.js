@@ -10,12 +10,11 @@ export const SidebarNavList = [
         icon: <i className="material-icons-outlined rotated">wb_incandescent</i>,
         children: [
             {
-                title: "Overview"
-            },
-            {
+                icon: <i className="material-icons-outlined rotated">accessibility</i>,
                 title: "Accessibility"
             },
             {
+                icon: <i className="material-icons-outlined rotated">palette</i>,
                 title: "Colors",
                 children: [
                     {
@@ -30,25 +29,12 @@ export const SidebarNavList = [
                 ]
             },
             {
-                title: "Copywriting"
-            },
-            {
+                icon: <i className="material-icons-outlined rotated">grid_on</i>,
                 title: "Grid"
             },
             {
-                title: "Iconography"
-            },
-            {
-                title: "Imagery"
-            },
-            {
-                title: "Logotype"
-            },
-            {
+                icon: <i className="material-icons-outlined rotated">space_bar</i>,
                 title: "Spacing"
-            },
-            {
-                title: "Typography"
             }
         ]
     },
@@ -61,27 +47,9 @@ export const SidebarNavList = [
                 title: "Introduction"
             },
             {
-                title: "Operations",
-                lastParent: true,
-                subList: [
-                    {
-                        title: "Operations"
-                    },
-                    {
-                        title: "Lorem ipsum"
-                    },
-                    {
-                        title: "Dolor sit amet consectetur"
-                    },
-                    {
-                        title: "Adipiscing elit"
-                    }
-                ]
-            },
-            {
                 title: "Events",
                 lastParent: true,
-                subList: [
+                children: [
                     {
                         title: "Event 1"
                     },
@@ -97,15 +65,84 @@ export const SidebarNavList = [
                 title: "Conclusion"
             }
         ]
+    }
+];
+
+export const SidebarNavListExtended = [
+    {
+        title: "Home Page",
+        icon: <i className="material-icons-outlined">home</i>
     },
     {
-        title: "Components",
-        icon: <i className="material-icons-outlined">category</i>,
-        children: []
+        title: "Get Started",
+        icon: <i className="material-icons-outlined rotated">wb_incandescent</i>,
+        children: [
+            {
+                icon: <i className="material-icons-outlined rotated">accessibility</i>,
+                title: "Accessibility"
+            },
+            {
+                icon: <i className="material-icons-outlined rotated">palette</i>,
+                title: "Colors",
+                children: [
+                    {
+                        title: "Primary colors"
+                    },
+                    {
+                        title: "Secondary colors"
+                    },
+                    {
+                        title: "Tertiary colors",
+                        children: [
+                            {
+                                title: "Children 1"
+                            },
+                            {
+                                title: "Children 2"
+                            },
+                            {
+                                title: "Children 3"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                icon: <i className="material-icons-outlined rotated">grid_on</i>,
+                title: "Grid"
+            },
+            {
+                icon: <i className="material-icons-outlined rotated">space_bar</i>,
+                title: "Spacing"
+            }
+        ]
     },
     {
-        title: "Utilities",
-        icon: <i className="material-icons-outlined">build</i>,
-        children: []
+        title: "Identity",
+        icon: <i className="material-icons-outlined">palette</i>,
+        lastParent: false,
+        children: [
+            {
+                title: "Introduction"
+            },
+            {
+                title: "Events",
+                lastParent: true,
+                children: [
+                    {
+                        title: "Event 1"
+                    },
+                    {
+                        title: "Event 2"
+                    },
+                    {
+                        title: "Event 3"
+                    }
+                ]
+            },
+            {
+                title: "Conclusion"
+            }
+        ]
     }
 ];

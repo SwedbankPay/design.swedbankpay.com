@@ -7,7 +7,7 @@ import CodeTags from "@components/CodeTags";
 
 const { sidebar } = window.dg;
 
-import { SidebarNavList } from "./constants";
+import { SidebarNavList, SidebarNavListExtended } from "./constants";
 
 const Overview = () => (
     <>
@@ -21,7 +21,23 @@ const Overview = () => (
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="container-fluid">
                 <div className="row">
-                    <SidebarComponent id="dg-sidebar2" sidebarNavList={SidebarNavList} />
+                    <SidebarComponent id="dg-sidebar1" sidebarNavList={SidebarNavList}/>
+                    <main className="col main-content">Main content things...</main>
+                </div>
+            </div>
+        </ComponentPreview>
+    </>
+);
+
+const ExtendedSidebar = () => (
+    <>
+        <h2 id="extended-sidebar">Extended sidebar</h2>
+        <p>This sidebar is an extended sidebar which supports a depth of up to 4 levels. To use the extended sidebar add class <CodeTags type="secondary" code=".extended-sidebar" /> to the second <CodeTags type="primary" code="<ul>"/> along with the <CodeTags type="secondary" code=".secondary-nav-ul" /> class.
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <div className="container-fluid">
+                <div className="row">
+                    <SidebarComponent id="dg-sidebar2" sidebarNavList={SidebarNavListExtended} extendedSidebar={true}/>
                     <main className="col main-content">Main content things...</main>
                 </div>
             </div>
@@ -131,12 +147,16 @@ const JavascriptMethods = () => (
 );
 
 const Sidebar = () => {
-    useEffect(() => { sidebar.init("dg-sidebar2", true); });
+    useEffect(() => {
+        sidebar.init("dg-sidebar1", true);
+        sidebar.init("dg-sidebar2", true);
+    });
 
     return (
         <DocContainer docToc>
             <p className="lead">The sidebar is used to give users an easily available navigational bar on the left side of your web application.</p>
             <Overview />
+            <ExtendedSidebar />
             <JavascriptMethods />
         </DocContainer>
     );

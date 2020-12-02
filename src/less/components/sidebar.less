@@ -334,8 +334,17 @@
                     top: 0;
                     left: 100%;
 
+                    .tertiary-nav-header {
+                        display: flex;
+                        align-items: center;
 
-                    .secondary-nav-header {
+                        > i {
+                            margin-right: 0.5rem;
+                        }
+                    }
+
+                    .secondary-nav-header,
+                    .tertiary-nav-header {
                         font-family: @brand-black;
                         font-size: 1.5rem;
                     }
@@ -344,9 +353,101 @@
                         list-style: none;
                         padding-inline-start: 0;
 
+                        &.extended-sidebar {
+                            .secondary-nav-li {
+                                margin: 0.5rem 0;
+
+                                &.active {
+                                    .tertiary-nav-ul {
+                                        right: 0;
+                                        margin-right: 0;
+                                        transition: right 0.3s !important;
+                                    }
+                                }
+
+                                &.group {
+                                    > a {
+                                        &:hover {
+                                            &:after {
+                                                content: "chevron_right";
+                                                .material-icons-styling();
+
+                                                margin-left: auto;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .tertiary-nav-ul {
+                                background-color: @white;
+                                position: absolute;
+                                top: 0;
+                                right: -220px;
+                                margin-right: 520px;
+                                height: 100%;
+                                width: 100%;
+                                padding: 2rem !important;
+                                transition: 0.3s linear !important;
+
+                                a {
+                                    color: @brand-secondary;
+                                }
+                            }
+
+                            .tertiary-nav-li {
+                                margin: 0.5rem 0;
+                                list-style: none;
+
+                                a {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    padding: 0.5rem 0;
+                                    text-decoration: none;
+                                    color: @brand-secondary;
+
+                                    &:hover {
+                                        font-weight: @font-weight-bold;
+                                    }
+                                }
+
+                                &.leaf {
+                                    > a {
+                                        &:hover {
+                                            &:after {
+                                                content: "chevron_right";
+                                                .material-icons-styling();
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &.group {
+                                    > a {
+                                        &:hover {
+                                            &:after {
+                                                content: "expand_more";
+                                                .material-icons-styling();
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &.active {
+                                    .quaternary-nav-ul {
+                                        max-height: 1500px;
+                                    }
+
+                                    > a {
+                                        font-weight: @font-weight-bold;
+                                    }
+                                }
+                            }
+                        }
+
                         .secondary-nav-li {
                             margin: 0.5rem 0;
-
 
                             &.leaf {
                                 > a {
@@ -354,6 +455,8 @@
                                         &:after {
                                             content: "chevron_right";
                                             .material-icons-styling();
+
+                                            margin-left: auto;
                                         }
                                     }
                                 }
@@ -364,8 +467,9 @@
                                     &:hover {
                                         &:after {
                                             content: "expand_more";
-
                                             .material-icons-styling();
+
+                                            margin-left: auto;
                                         }
                                     }
                                 }
@@ -376,8 +480,9 @@
                                     > a {
                                         &:after {
                                             content: "chevron_right";
-
                                             .material-icons-styling();
+
+                                            margin-left: auto;
                                         }
                                     }
                                 }
@@ -389,7 +494,7 @@
                                         }
                                     }
 
-                                    .secondary-nav-group {
+                                    .tertiary-nav-ul {
                                         max-height: 1500px;
                                     }
                                 }
@@ -402,7 +507,7 @@
                             > a {
                                 display: flex;
                                 align-items: center;
-                                justify-content: space-between;
+                                //justify-content: space-between;
                                 padding: 0.5rem 0;
                                 text-decoration: none;
                                 color: @brand-secondary;
@@ -410,9 +515,14 @@
                                 &:hover {
                                     font-weight: @font-weight-bold;
                                 }
+
+                                > i {
+                                    margin-right: 0.5rem;
+                                }
                             }
 
-                            .secondary-nav-group {
+                            .tertiary-nav-ul,
+                            .quaternary-nav-ul {
                                 max-height: 0;
                                 list-style: none;
                                 overflow: hidden;
