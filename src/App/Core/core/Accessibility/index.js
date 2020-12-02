@@ -1,7 +1,6 @@
 import React from "react";
 import impairments from "../../../../img/swedbankpay/identity/accessibility/img/impairments.svg";
 import wcag from "../../../../img/swedbankpay/identity/accessibility/img/wcag.svg";
-import "../../../../less/core/accessibility.less";
 
 const Intro = () => (
     <section id="intro">
