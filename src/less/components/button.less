@@ -73,6 +73,14 @@
         * {
             pointer-events: none;
         }
+
+        &.btn-primary {
+            &.btn-bank-id {
+                i.bank-id {
+                    background-color: @brand-secondary-light-2;
+                }
+            }
+        }
     }
 
     a& {
@@ -99,19 +107,18 @@
                 height: 1.5rem;
                 width: 1.5rem;
                 display: inline-flex;
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
+                background-image: none;
                 margin-left: 0.5rem;
+                background-color: @brand-secondary;
 
                 &-no,
                 &.no {
-                    background-image: url("../../icons/bank-id/bankid_no.svg");
+                    mask-image: url("../../icons/bank-id/bankid_no.svg");
                 }
 
                 &-se,
                 &.se {
-                    background-image: url("../../icons/bank-id/bankid_se.svg");
+                    mask-image: url("../../icons/bank-id/bankid_se.svg");
                 }
             }
         }
