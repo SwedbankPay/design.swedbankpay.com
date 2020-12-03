@@ -32,7 +32,7 @@ const Overview = () => (
 const ExtendedSidebar = () => (
     <>
         <h2 id="extended-sidebar">Extended sidebar</h2>
-        <p>This sidebar is an extended sidebar which supports a depth of up to 4 levels. To use the extended sidebar add class <CodeTags type="secondary" code=".extended-sidebar" /> to the second <CodeTags type="primary" code="<ul>"/> along with the <CodeTags type="secondary" code=".secondary-nav-ul" /> class.
+        <p>This sidebar is an extended sidebar which supports a depth of up to 4 levels. To use the extended sidebar, add class <CodeTags type="secondary" code=".extended-sidebar" /> to the second <CodeTags type="primary" code="<ul>"/> along with the <CodeTags type="secondary" code=".secondary-nav-ul" /> class.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="container-fluid">

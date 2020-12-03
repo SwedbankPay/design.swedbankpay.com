@@ -482,9 +482,11 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
                 Object {
                   "children": Array [
                     Object {
-                      "title": "Overview",
-                    },
-                    Object {
+                      "icon": <i
+                        className="material-icons-outlined rotated"
+                      >
+                        accessibility
+                      </i>,
                       "title": "Accessibility",
                     },
                     Object {
@@ -499,28 +501,28 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
                           "title": "Tertiary colors",
                         },
                       ],
+                      "icon": <i
+                        className="material-icons-outlined rotated"
+                      >
+                        palette
+                      </i>,
                       "title": "Colors",
                     },
                     Object {
-                      "title": "Copywriting",
-                    },
-                    Object {
+                      "icon": <i
+                        className="material-icons-outlined rotated"
+                      >
+                        grid_on
+                      </i>,
                       "title": "Grid",
                     },
                     Object {
-                      "title": "Iconography",
-                    },
-                    Object {
-                      "title": "Imagery",
-                    },
-                    Object {
-                      "title": "Logotype",
-                    },
-                    Object {
+                      "icon": <i
+                        className="material-icons-outlined rotated"
+                      >
+                        space_bar
+                      </i>,
                       "title": "Spacing",
-                    },
-                    Object {
-                      "title": "Typography",
                     },
                   ],
                   "icon": <i
@@ -536,26 +538,7 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
                       "title": "Introduction",
                     },
                     Object {
-                      "lastParent": true,
-                      "subList": Array [
-                        Object {
-                          "title": "Operations",
-                        },
-                        Object {
-                          "title": "Lorem ipsum",
-                        },
-                        Object {
-                          "title": "Dolor sit amet consectetur",
-                        },
-                        Object {
-                          "title": "Adipiscing elit",
-                        },
-                      ],
-                      "title": "Operations",
-                    },
-                    Object {
-                      "lastParent": true,
-                      "subList": Array [
+                      "children": Array [
                         Object {
                           "title": "Event 1",
                         },
@@ -566,6 +549,7 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
                           "title": "Event 3",
                         },
                       ],
+                      "lastParent": true,
                       "title": "Events",
                     },
                     Object {
@@ -579,24 +563,6 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
                   </i>,
                   "lastParent": false,
                   "title": "Identity",
-                },
-                Object {
-                  "children": Array [],
-                  "icon": <i
-                    className="material-icons-outlined"
-                  >
-                    category
-                  </i>,
-                  "title": "Components",
-                },
-                Object {
-                  "children": Array [],
-                  "icon": <i
-                    className="material-icons-outlined"
-                  >
-                    build
-                  </i>,
-                  "title": "Utilities",
                 },
               ]
             }
@@ -667,19 +633,8 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
                         Get Started
                       </header>
                       <ul
-                        className="secondary-nav-ul"
+                        className="secondary-nav-ul "
                       >
-                        <li
-                          className="secondary-nav-li leaf"
-                          key="Overview"
-                        >
-                          <a
-                            href="#"
-                            onClick={[Function]}
-                          >
-                            Overview
-                          </a>
-                        </li>
                         <li
                           className="secondary-nav-li leaf"
                           key="Accessibility"
@@ -688,6 +643,11 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
                             href="#"
                             onClick={[Function]}
                           >
+                            <i
+                              className="material-icons-outlined rotated"
+                            >
+                              accessibility
+                            </i>
                             Accessibility
                           </a>
                         </li>
@@ -699,13 +659,18 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
                             href="#"
                             onClick={[Function]}
                           >
+                            <i
+                              className="material-icons-outlined rotated"
+                            >
+                              palette
+                            </i>
                             Colors
                           </a>
                           <ul
-                            className="secondary-nav-group"
+                            className="tertiary-nav-ul"
                           >
                             <li
-                              className="nav-leaf"
+                              className="nav-leaf leaf"
                               key="Primary colors"
                             >
                               <a
@@ -716,7 +681,7 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
                               </a>
                             </li>
                             <li
-                              className="nav-leaf"
+                              className="nav-leaf leaf"
                               key="Secondary colors"
                             >
                               <a
@@ -727,7 +692,7 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
                               </a>
                             </li>
                             <li
-                              className="nav-leaf"
+                              className="nav-leaf leaf"
                               key="Tertiary colors"
                             >
                               <a
@@ -741,57 +706,18 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
                         </li>
                         <li
                           className="secondary-nav-li leaf"
-                          key="Copywriting"
-                        >
-                          <a
-                            href="#"
-                            onClick={[Function]}
-                          >
-                            Copywriting
-                          </a>
-                        </li>
-                        <li
-                          className="secondary-nav-li leaf"
                           key="Grid"
                         >
                           <a
                             href="#"
                             onClick={[Function]}
                           >
+                            <i
+                              className="material-icons-outlined rotated"
+                            >
+                              grid_on
+                            </i>
                             Grid
-                          </a>
-                        </li>
-                        <li
-                          className="secondary-nav-li leaf"
-                          key="Iconography"
-                        >
-                          <a
-                            href="#"
-                            onClick={[Function]}
-                          >
-                            Iconography
-                          </a>
-                        </li>
-                        <li
-                          className="secondary-nav-li leaf"
-                          key="Imagery"
-                        >
-                          <a
-                            href="#"
-                            onClick={[Function]}
-                          >
-                            Imagery
-                          </a>
-                        </li>
-                        <li
-                          className="secondary-nav-li leaf"
-                          key="Logotype"
-                        >
-                          <a
-                            href="#"
-                            onClick={[Function]}
-                          >
-                            Logotype
                           </a>
                         </li>
                         <li
@@ -802,18 +728,12 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
                             href="#"
                             onClick={[Function]}
                           >
+                            <i
+                              className="material-icons-outlined rotated"
+                            >
+                              space_bar
+                            </i>
                             Spacing
-                          </a>
-                        </li>
-                        <li
-                          className="secondary-nav-li leaf"
-                          key="Typography"
-                        >
-                          <a
-                            href="#"
-                            onClick={[Function]}
-                          >
-                            Typography
                           </a>
                         </li>
                       </ul>
@@ -843,7 +763,7 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
                         Identity
                       </header>
                       <ul
-                        className="secondary-nav-ul"
+                        className="secondary-nav-ul "
                       >
                         <li
                           className="secondary-nav-li leaf"
@@ -857,18 +777,7 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
                           </a>
                         </li>
                         <li
-                          className="secondary-nav-li leaf"
-                          key="Operations"
-                        >
-                          <a
-                            href="#"
-                            onClick={[Function]}
-                          >
-                            Operations
-                          </a>
-                        </li>
-                        <li
-                          className="secondary-nav-li leaf"
+                          className="secondary-nav-li group"
                           key="Events"
                         >
                           <a
@@ -877,6 +786,43 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
                           >
                             Events
                           </a>
+                          <ul
+                            className="tertiary-nav-ul"
+                          >
+                            <li
+                              className="nav-leaf leaf"
+                              key="Event 1"
+                            >
+                              <a
+                                href="#"
+                                onClick={[Function]}
+                              >
+                                Event 1
+                              </a>
+                            </li>
+                            <li
+                              className="nav-leaf leaf"
+                              key="Event 2"
+                            >
+                              <a
+                                href="#"
+                                onClick={[Function]}
+                              >
+                                Event 2
+                              </a>
+                            </li>
+                            <li
+                              className="nav-leaf leaf"
+                              key="Event 3"
+                            >
+                              <a
+                                href="#"
+                                onClick={[Function]}
+                              >
+                                Event 3
+                              </a>
+                            </li>
+                          </ul>
                         </li>
                         <li
                           className="secondary-nav-li leaf"
@@ -890,62 +836,6 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
                           </a>
                         </li>
                       </ul>
-                    </nav>
-                  </li>
-                  <li
-                    className="main-nav-li"
-                    key="Components"
-                  >
-                    <a
-                      href="#"
-                      onClick={[Function]}
-                    >
-                      <i
-                        className="material-icons-outlined"
-                      >
-                        category
-                      </i>
-                      Components
-                    </a>
-                    <nav
-                      className="sidebar-secondary-nav"
-                    >
-                      <header
-                        className="secondary-nav-header"
-                      >
-                        Components
-                      </header>
-                      <ul
-                        className="secondary-nav-ul"
-                      />
-                    </nav>
-                  </li>
-                  <li
-                    className="main-nav-li"
-                    key="Utilities"
-                  >
-                    <a
-                      href="#"
-                      onClick={[Function]}
-                    >
-                      <i
-                        className="material-icons-outlined"
-                      >
-                        build
-                      </i>
-                      Utilities
-                    </a>
-                    <nav
-                      className="sidebar-secondary-nav"
-                    >
-                      <header
-                        className="secondary-nav-header"
-                      >
-                        Utilities
-                      </header>
-                      <ul
-                        className="secondary-nav-ul"
-                      />
                     </nav>
                   </li>
                 </ul>

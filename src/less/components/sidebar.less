@@ -353,99 +353,6 @@
                         list-style: none;
                         padding-inline-start: 0;
 
-                        &.extended-sidebar {
-                            .secondary-nav-li {
-                                margin: 0.5rem 0;
-
-                                &.active {
-                                    .tertiary-nav-ul {
-                                        right: 0;
-                                        margin-right: 0;
-                                        transition: right 0.3s !important;
-                                    }
-                                }
-
-                                &.group {
-                                    > a {
-                                        &:hover {
-                                            &:after {
-                                                content: "chevron_right";
-                                                .material-icons-styling();
-
-                                                margin-left: auto;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-
-                            .tertiary-nav-ul {
-                                background-color: @white;
-                                position: absolute;
-                                top: 0;
-                                right: -220px;
-                                margin-right: 520px;
-                                height: 100%;
-                                width: 100%;
-                                padding: 2rem !important;
-                                transition: 0.3s linear !important;
-
-                                a {
-                                    color: @brand-secondary;
-                                }
-                            }
-
-                            .tertiary-nav-li {
-                                margin: 0.5rem 0;
-                                list-style: none;
-
-                                a {
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: space-between;
-                                    padding: 0.5rem 0;
-                                    text-decoration: none;
-                                    color: @brand-secondary;
-
-                                    &:hover {
-                                        font-weight: @font-weight-bold;
-                                    }
-                                }
-
-                                &.leaf {
-                                    > a {
-                                        &:hover {
-                                            &:after {
-                                                content: "chevron_right";
-                                                .material-icons-styling();
-                                            }
-                                        }
-                                    }
-                                }
-
-                                &.group {
-                                    > a {
-                                        &:hover {
-                                            &:after {
-                                                content: "expand_more";
-                                                .material-icons-styling();
-                                            }
-                                        }
-                                    }
-                                }
-
-                                &.active {
-                                    .quaternary-nav-ul {
-                                        max-height: 1500px;
-                                    }
-
-                                    > a {
-                                        font-weight: @font-weight-bold;
-                                    }
-                                }
-                            }
-                        }
-
                         .secondary-nav-li {
                             margin: 0.5rem 0;
 
@@ -562,6 +469,99 @@
                                         padding: 0.625rem 1.75rem;
                                         width: 100%;
                                         height: 100%;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.extended-sidebar {
+                            .secondary-nav-li {
+                                margin: 0.5rem 0;
+
+                                &.active {
+                                    .tertiary-nav-ul {
+                                        right: 0;
+                                        margin-right: 0;
+                                        transition: right 0.3s;
+                                    }
+                                }
+
+                                &.group {
+                                    > a {
+                                        &:hover {
+                                            &:after {
+                                                content: "chevron_right";
+                                                .material-icons-styling();
+
+                                                margin-left: auto;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .tertiary-nav-ul {
+                                background-color: @white;
+                                position: absolute;
+                                top: 0;
+                                right: -220px;
+                                margin-right: 520px;
+                                height: 100%;
+                                width: 100%;
+                                padding: 2rem;
+                                transition: 0.3s linear;
+
+                                a {
+                                    color: @brand-secondary;
+                                }
+                            }
+
+                            .tertiary-nav-li {
+                                margin: 0.5rem 0;
+                                list-style: none;
+
+                                a {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    padding: 0.5rem 0;
+                                    text-decoration: none;
+                                    color: @brand-secondary;
+
+                                    &:hover {
+                                        font-weight: @font-weight-bold;
+                                    }
+                                }
+
+                                &.leaf {
+                                    > a {
+                                        &:hover {
+                                            &:after {
+                                                content: "chevron_right";
+                                                .material-icons-styling();
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &.group {
+                                    > a {
+                                        &:hover {
+                                            &:after {
+                                                content: "expand_more";
+                                                .material-icons-styling();
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &.active {
+                                    .quaternary-nav-ul {
+                                        max-height: 1500px;
+                                    }
+
+                                    > a {
+                                        font-weight: @font-weight-bold;
                                     }
                                 }
                             }
