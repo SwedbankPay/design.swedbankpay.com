@@ -1,6 +1,6 @@
 import React from "react";
-import impairments from "../../../../img/swedbankpay/identity/accessibility/img/impairments.svg";
-import wcag from "../../../../img/swedbankpay/identity/accessibility/img/wcag.svg";
+
+const basename = process.env.basename;
 
 const Intro = () => (
     <section id="intro">
@@ -10,7 +10,7 @@ const Intro = () => (
         <p>What is accessibility? Microsoft defines it like this: <span>“Accessibility: 1. Thequalities that make an experience open to all. 2. A professional discipline aimed atachieving No. 1”</span> So what do we meen when we talk about disabilities andimpairments? Well, a disability is a limitation when interacting in society inaccordance to how society is built. It can be permanent, temporary or situational –permanent could be someone with only one arm, temporary someone with a broken arm, andsituational a new parent (often carrying the baby in one arm). So, when we design forpermanent impairment and disabilities we automatically include people with bothtemporary and situational impairments as well.</p>
 
         <div className="img-container pb-4">
-            <img src={impairments} alt="Illustration of impairments"/>
+            <img src={`${basename}img/documentation/accessibility/impairments.svg`} alt="Illustration of impairments"/>
             <span><span className="font-weight-bold">Figure 1.</span> An illustration visualising permanent, temporary and situational impairment.</span>
         </div>
 
@@ -32,7 +32,7 @@ const WcagStandard = () => (
         <p>The guidelines ties back to four core terms: A website should be perceivable,  operable, understandable and robust. In these four areas there are sets of criterias  that has to be met for a certain term to be considered achieved (see Figure 2). Each  criteria also has one or more sub-criterias which are graded on a scale from A to AAA where A is least acceptable and AAA is considered “very good”.</p>
 
         <div className="img-container pb-4">
-            <img src={wcag} className="mb-1" alt="WCAG 2.1 at a glance" />
+            <img src={`${basename}img/documentation/accessibility/wcag.svg`} className="mb-1" alt="WCAG 2.1 at a glance" />
             <span><span className="font-weight-bold">Figure 2.</span> This is the WCAG 2.1 at a glance from <a href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/ ">www.w3.org/WAI/standards-guidelines/wcag/glance/ </a></span>
         </div>
 

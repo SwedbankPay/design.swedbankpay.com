@@ -268,7 +268,7 @@ exports[`Core: Accessibility Intro renders 1`] = `
   >
     <img
       alt="Illustration of impairments"
-      src=""
+      src="/TEST/img/documentation/accessibility/impairments.svg"
     />
     <span>
       <span
@@ -312,7 +312,7 @@ exports[`Core: Accessibility WcagStandard renders 1`] = `
     <img
       alt="WCAG 2.1 at a glance"
       className="mb-1"
-      src=""
+      src="/TEST/img/documentation/accessibility/wcag.svg"
     />
     <span>
       <span
