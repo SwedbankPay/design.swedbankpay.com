@@ -2,10 +2,10 @@ import React from "react";
 
 const basename = process.env.basename;
 
-
 const Intro = () => (
     <section id="intro">
         <p className="ingress font-weight-bold">At Swedbank Pay we value accessibility. Ourproducts are ment to be used by people no matter of their abilities and therefor westrive to be WCAG (Web Content Accessibility Guidelines) complient. We’re currentlyworking on our accessibility awareness and meeting the terms of the  accessibilitylaws in Norway and Sweden. </p>
+        <h2 className="my-3">What is accessibility</h2>
         <p>Accessibility ties back to our values <span>simple</span> and <span>caring</span>.About 15 percent of the western world’s population is living with a disability of somekind. This translates to over 1 billion people, and includes visual, auditory,physical, speech, cognitive, and neurological disabilities. </p>
 
         <p>What is accessibility? Microsoft defines it like this: <span>“Accessibility: 1. Thequalities that make an experience open to all. 2. A professional discipline aimed atachieving No. 1”</span> So what do we meen when we talk about disabilities andimpairments? Well, a disability is a limitation when interacting in society inaccordance to how society is built. It can be permanent, temporary or situational –permanent could be someone with only one arm, temporary someone with a broken arm, andsituational a new parent (often carrying the baby in one arm). So, when we design forpermanent impairment and disabilities we automatically include people with bothtemporary and situational impairments as well.</p>
