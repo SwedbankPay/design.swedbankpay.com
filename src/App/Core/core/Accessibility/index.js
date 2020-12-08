@@ -39,7 +39,7 @@ const WcagStandard = () => (
 
         <h3 className="mt-0">More than a checklist</h3>
         <p>Important to remember is that WCAG and accessibility is more than a checklist! It  sure can start with a checklist (such as this one) but it is a practice and mindset   that must be present amongst all product employees. To meet the whole target group these terms are necessary to meet. </p>
-        <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" className="icon-link  d-block"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">What is WCAG?</span></a>
+        <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" className="icon-link d-flex"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">What is WCAG?</span></a>
 
         <a href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/" className="icon-link mb-5"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">W3C – WCAG 2.1    Recommendations </span></a>
     </section>
@@ -64,20 +64,20 @@ const DiveDeeper = () => (
     <section id="dive-deeper" className="mb-5">
         <h2>Dive deeper into accessibility</h2>
         <p>Accessibility can be an ocean and we know it can be hard to navigate it – that’s at least what we in the design team think. We can always improve the user experience, and thereby our products, by making them accessible for more people. Here are some links where you can read more about accessibility and practices to achieve inclusiveness for as many users as possible. </p>
-        <a href="https://material.io/design/usability/accessibility.html#understanding-accessibility" className="icon-link d-block"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Material.io – Understanding Accessibility </span></a>
-        <a href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/" className="icon-link d-block"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">W3C – WCAG 2.1 Recommendations</span></a>
+        <a href="https://material.io/design/usability/accessibility.html#understanding-accessibility" className="icon-link d-flex"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Material.io – Understanding Accessibility </span></a>
+        <a href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/" className="icon-link d-flex"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">W3C – WCAG 2.1 Recommendations</span></a>
 
         <h3 className="my-3">Website accessibility and the law</h3>
-        <a href="https://www.funka.com/design-for-alla/lagar-och-regler/" className="icon-link d-block"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Funka.com – Lagar och regler</span></a>
-        <a href="https://www.funka.com/en/design-for-all/accessibility/web-accessibility-directive-norway-is-facing-a-choice/" className="icon-link d-block"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2"> Funka.com – Web accessibility directive: Norway is facing a choice</span></a>
-        <a href="https://medium.com/confrere/its-illegal-to-have-an-inaccessible-website-in-norway-and-that-s-good-news-for-all-of-us-b59a9e929d54" className="icon-link d-block"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Medium.com – It’s illegal to have an inaccessible website in Norway and that’s good for all of us</span></a>
+        <a href="https://www.funka.com/design-for-alla/lagar-och-regler/" className="icon-link d-flex"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Funka.com – Lagar och regler</span></a>
+        <a href="https://www.funka.com/en/design-for-all/accessibility/web-accessibility-directive-norway-is-facing-a-choice/" className="icon-link d-flex"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2"> Funka.com – Web accessibility directive: Norway is facing a choice</span></a>
+        <a href="https://medium.com/confrere/its-illegal-to-have-an-inaccessible-website-in-norway-and-that-s-good-news-for-all-of-us-b59a9e929d54" className="icon-link d-flex"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Medium.com – It’s illegal to have an inaccessible website in Norway and that’s good for all of us</span></a>
 
         <h3 className="my-3">Others about accessibility</h3>
-        <a href="https://www.swedbank.com/sv/hallbarhet/ansvarsfulla-affarer/betala.html" className="icon-link d-block"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Swedbank – Ansvarsfulla affärer </span></a>
-        <a href="https://polaris.shopify.com/foundations/accessibility" className="icon-link d-block"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Shopify – Accessibility</span></a>
-        <a href="https://material.io/design/usability/accessibility.html" className="icon-link d-block"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Google Material – Accessibility</span></a>
-        <a href="http://www.lightningdesignsystem.com/accessibility/overview/" className="icon-link d-block"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Salesforce Lightning – Accessibility</span></a>
-        <a href="https://spotify.design/article/spotify-inclusive-design-global-accessibility-awareness-day-round-up" className="icon-link d-block"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Spotify – Inclusive design global accessibility awareness day round up </span></a>
+        <a href="https://www.swedbank.com/sv/hallbarhet/ansvarsfulla-affarer/betala.html" className="icon-link d-flex"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Swedbank – Ansvarsfulla affärer </span></a>
+        <a href="https://polaris.shopify.com/foundations/accessibility" className="icon-link d-flex"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Shopify – Accessibility</span></a>
+        <a href="https://material.io/design/usability/accessibility.html" className="icon-link d-flex"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Google Material – Accessibility</span></a>
+        <a href="http://www.lightningdesignsystem.com/accessibility/overview/" className="icon-link d-flex"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Salesforce Lightning – Accessibility</span></a>
+        <a href="https://spotify.design/article/spotify-inclusive-design-global-accessibility-awareness-day-round-up" className="icon-link d-flex"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Spotify – Inclusive design global accessibility awareness day round up </span></a>
     </section>
 );
 
