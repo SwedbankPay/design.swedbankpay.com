@@ -14,6 +14,11 @@ module.exports = [
                 componentPath: "core/Accessibility"
             },
             {
+                title: "Imagery",
+                path: "/core/imagery",
+                componentPath: "core/Imagery"
+            },
+            {
                 title: "Color",
                 path: "/core/color",
                 componentPath: "core/Color"

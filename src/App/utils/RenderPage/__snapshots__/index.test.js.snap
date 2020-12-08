@@ -3,6 +3,8 @@
 exports[`Utilities: RenderPage renders 1`] = `
 <Suspense
   fallback={<LoadingComponent />}
+  initPath="test/test"
+  path="/test"
 >
   <div
     className="doc-container"
@@ -61,6 +63,11 @@ exports[`Utilities: RenderPage renders 1`] = `
               "componentPath": "core/Accessibility",
               "path": "/core/accessibility",
               "title": "Accessibility",
+            },
+            Object {
+              "componentPath": "core/Imagery",
+              "path": "/core/imagery",
+              "title": "Imagery",
             },
             Object {
               "componentPath": "core/Color",
