@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Core: Imagery FocalPoints renders 1`] = `
-<section>
+<section
+  id="focal-points"
+>
   <h2>
     Focal points and angles
   </h2>
@@ -15,7 +17,7 @@ exports[`Core: Imagery FocalPoints renders 1`] = `
     className="img-container pb-4"
   >
     <img
-      alt="Illustration of impairments"
+      alt="A woman with headphones sitting on a bus looking out through the window to the right"
       src="/TEST/img/documentation/imagery/women-on-bus.svg"
     />
     <span>
@@ -34,14 +36,16 @@ exports[`Core: Imagery FocalPoints renders 1`] = `
     Using text on images is tricky from several point of views. First of all, the text has to be visible on the images. We recommend you to NOT use text on images if you feel the slightest insecure about if the text is readable or not. 
   </p>
   <img
-    alt="Illustration of impairments"
+    alt="Image describing what not to do"
     src="/TEST/img/documentation/imagery/donts-1.svg"
   />
 </section>
 `;
 
 exports[`Core: Imagery ImageLibrary renders 1`] = `
-<section>
+<section
+  id="image-library"
+>
   <h2>
     Image library
   </h2>
@@ -65,7 +69,7 @@ exports[`Core: Imagery ImageLibrary renders 1`] = `
     </span>
   </a>
   <img
-    alt="Illustration of impairments"
+    alt="collection of images"
     src="/TEST/img/documentation/imagery/image-group.svg"
   />
   <h3>
@@ -86,7 +90,9 @@ exports[`Core: Imagery ImageLibrary renders 1`] = `
 `;
 
 exports[`Core: Imagery ImageSizes renders 1`] = `
-<section>
+<section
+  id="image-sizes"
+>
   <h2>
     Image sizes
   </h2>
@@ -115,7 +121,9 @@ exports[`Core: Imagery Intro renders 1`] = `
 `;
 
 exports[`Core: Imagery UsingImagery renders 1`] = `
-<section>
+<section
+  id="using-imagery"
+>
   <h2>
     Using imagery in creative ways
   </h2>
@@ -123,7 +131,7 @@ exports[`Core: Imagery UsingImagery renders 1`] = `
     We use images in many different ways. An image can be used to brighten up interfaces, break up heavy text and also to tell a story of our company, values, and/or target audience. While it’s great to break up text with imagery, don’t over do it! We don’t want the page to read disjointed or the message to be diluted – it’s a fine balance.
   </p>
   <img
-    alt="Illustration of impairments"
+    alt="Image describing what not to do"
     src="/TEST/img/documentation/imagery/donts-2.svg"
   />
 </section>
