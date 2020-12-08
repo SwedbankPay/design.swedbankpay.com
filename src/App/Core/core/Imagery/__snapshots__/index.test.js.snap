@@ -49,8 +49,8 @@ exports[`Core: Imagery ImageLibrary renders 1`] = `
     All images displayed in a Swedbank Pay interface should be from the Swedbank Pay Image library. Note that the images only can be used in Swedbank Pay productions. If you need access to the library, contact current Head of Marketing. 
   </p>
   <a
-    className="icon-link d-block"
-    href="https://www.funka.com/design-for-alla/lagar-och-regler/"
+    className="icon-link d-block d-flex"
+    href="https://app.pickit.com/#/explore/community/users/124093/collection/21458-swedbank-pay"
   >
     <i
       aria-hidden="true"
