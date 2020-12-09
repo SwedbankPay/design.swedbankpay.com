@@ -242,8 +242,9 @@
         width: 100%;
         max-width: 48.375rem;
 
-        h1:first-child {
+        h1:first-of-type {
             margin-top: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         @media (max-width: @screen-md-max) {
@@ -678,6 +679,11 @@
             background-color: @white;
             padding: 2rem;
         }
+    }
+
+    .caption-text {
+        font-style: italic;
+        font-size: 0.875rem;
     }
 }
 
