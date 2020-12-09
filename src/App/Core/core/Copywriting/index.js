@@ -49,7 +49,7 @@ const Terminology = () => (
 
 const Tonality = () => (
     <>
-        <h2>Tonality</h>
+        <h2>Tonality</h2>
         <p>
             Our tonality is the verbal communication of our Brand. Our voice. The choice of words shows our personality,
             and everything we write should feel like one human being talking to another human being.
