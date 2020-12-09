@@ -19,6 +19,11 @@ module.exports = [
                 componentPath: "core/Color"
             },
             {
+                title: "Spacing",
+                path: "/core/spacing",
+                componentPath: "core/Spacing"
+            },
+            {
                 title: "Logotype",
                 path: "/core/logotype",
                 componentPath: "core/Logotype",
