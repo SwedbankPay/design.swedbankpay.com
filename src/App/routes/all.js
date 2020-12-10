@@ -1,4 +1,3 @@
-const resRoutes = require("./resources");
 const componentsRoutes = require("./components");
 const coreRoutes = require("./core");
 const gettingStartedRoutes = require("./getting-started");
@@ -9,7 +8,6 @@ module.exports = [
     ...gettingStartedRoutes,
     ...coreRoutes,
     ...componentsRoutes,
-    ...utilitiesRoutes,
-    ...resRoutes
+    ...utilitiesRoutes
     // ...examplesRoutes
 ];

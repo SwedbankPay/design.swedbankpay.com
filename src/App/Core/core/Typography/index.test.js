@@ -2,7 +2,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Typography, { ResourcesTypography, Fonts, Headings, HeroTitle, Lead, Inline, TextUtilities, Abbreviations, Blockquotes, AkkuratMono } from "./index";
+import Typography, { Fonts, Headings, HeroTitle, Lead, Inline, TextUtilities, Abbreviations, Blockquotes, AkkuratMono } from "./index";
 
 describe("Core: Typography", () => {
     it("is defined", () => {
@@ -13,18 +13,6 @@ describe("Core: Typography", () => {
         const wrapper = shallow(<Typography />);
 
         expect(wrapper).toMatchSnapshot();
-    });
-
-    describe("ResourcesTypography", () => {
-        it("is defined", () => {
-            expect(ResourcesTypography).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<ResourcesTypography />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
     });
 
     describe("Fonts", () => {

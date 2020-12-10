@@ -76,6 +76,11 @@ exports[`Utilities: RenderPage renders 1`] = `
               "title": "Iconography",
             },
             Object {
+              "componentPath": "core/Images",
+              "path": "/core/images",
+              "title": "Images",
+            },
+            Object {
               "componentPath": "core/Page-layout",
               "path": "/core/page-layout",
               "title": "Page layout",
@@ -394,37 +399,6 @@ exports[`Utilities: RenderPage renders 1`] = `
           ]
         }
         title="Utilities"
-      />
-      <RenderRoutes
-        appFolder="Resources"
-        key="renderRoutes_Resources"
-        path="/resources"
-        redirect="/resources/introduction"
-        routes={
-          Array [
-            Object {
-              "componentPath": "Introduction",
-              "path": "/resources/introduction",
-              "title": "Introduction",
-            },
-            Object {
-              "componentPath": "resources/images",
-              "path": "/resources/images",
-              "title": "Images",
-            },
-            Object {
-              "componentPath": "resources/presentations",
-              "path": "/resources/presentations",
-              "title": "Presentations",
-            },
-            Object {
-              "componentPath": "resources/typography",
-              "path": "/resources/typography",
-              "title": "Typography",
-            },
-          ]
-        }
-        title="Resources"
       />
       <Redirect
         from="/test/*"
