@@ -7,6 +7,11 @@ exports[`Utilities: RenderPage renders 1`] = `
   <div
     className="doc-container"
   >
+    <span
+      className="dg-current-version text-uppercase"
+    >
+      Design Guide – v. 5.0.0
+    </span>
     <withRouter(DocHeading) />
     <Switch>
       <Route
@@ -52,6 +57,11 @@ exports[`Utilities: RenderPage renders 1`] = `
         redirect="/core/color"
         routes={
           Array [
+            Object {
+              "componentPath": "core/Accessibility",
+              "path": "/core/accessibility",
+              "title": "Accessibility",
+            },
             Object {
               "componentPath": "core/Color",
               "path": "/core/color",

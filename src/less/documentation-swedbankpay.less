@@ -240,10 +240,19 @@
         margin-left: auto;
         padding: 2rem 2rem;
         width: 100%;
+        max-width: 48.375rem;
+
+        h1:first-child {
+            margin-top: 1rem;
+        }
 
         @media (max-width: @screen-md-max) {
             padding-left: @base-padding;
             padding-right: @base-padding;
+        }
+
+        .dg-current-version {
+            font-size: 0.75rem;
         }
     }
 
