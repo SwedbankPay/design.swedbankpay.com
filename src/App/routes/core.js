@@ -19,6 +19,11 @@ module.exports = [
                 componentPath: "core/Color"
             },
             {
+                title: "Copywriting",
+                path: "/core/copywriting",
+                componentPath: "core/Copywriting"
+            },
+            {
                 title: "Logotype",
                 path: "/core/logotype",
                 componentPath: "core/Logotype",
