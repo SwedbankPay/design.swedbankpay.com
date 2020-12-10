@@ -1,0 +1,566 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Sidebar renders 1`] = `
+<div
+  className="sidebar-2"
+  id="sidebar-1"
+>
+  <nav
+    className="sidebar-main-nav"
+  >
+    <div
+      className="sidebar-logo"
+    >
+      <Logotype
+        alt="Swedbank Pay vertical logo"
+        size="md"
+        src="/TEST/img/swedbankpay-logo-v.svg"
+        type="vertical"
+      />
+    </div>
+    <ul
+      className="main-nav-ul"
+    >
+      <li
+        className="main-nav-li active"
+        key="Home Page"
+      >
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            home
+          </i>
+          Home Page
+        </a>
+      </li>
+      <li
+        className="main-nav-li"
+        key="Get Started"
+      >
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined rotated"
+          >
+            wb_incandescent
+          </i>
+          Get Started
+        </a>
+        <nav
+          className="sidebar-secondary-nav"
+        >
+          <header
+            className="secondary-nav-header"
+          >
+            Get Started
+          </header>
+          <ul
+            className="secondary-nav-ul extended-sidebar"
+          >
+            <li
+              className="secondary-nav-li leaf"
+              key="Accessibility"
+            >
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                <i
+                  className="material-icons-outlined rotated"
+                >
+                  accessibility
+                </i>
+                Accessibility
+              </a>
+            </li>
+            <li
+              className="secondary-nav-li group"
+              key="Colors"
+            >
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                <i
+                  className="material-icons-outlined rotated"
+                >
+                  palette
+                </i>
+                Colors
+              </a>
+              <ul
+                className="tertiary-nav-ul"
+              >
+                <a
+                  className="icon-link text-decoration-none previous-nav"
+                  href="#"
+                  onClick={[Function]}
+                >
+                  <i
+                    aria-hidden="true"
+                    className="material-icons"
+                  >
+                    arrow_back_ios
+                  </i>
+                  <span
+                    className="ml-2"
+                  >
+                    Back to 
+                    Get Started
+                  </span>
+                </a>
+                <header
+                  className="tertiary-nav-header mt-2"
+                >
+                  <i
+                    className="material-icons-outlined rotated"
+                  >
+                    palette
+                  </i>
+                  Colors
+                </header>
+                <li
+                  className="tertiary-nav-li leaf"
+                  key="Primary colors"
+                >
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                  >
+                    Primary colors
+                  </a>
+                </li>
+                <li
+                  className="tertiary-nav-li group"
+                  key="Secondary colors"
+                >
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                  >
+                    Secondary colors
+                  </a>
+                  <ul
+                    className="quaternary-nav-ul"
+                  >
+                    <li
+                      className="nav-leaf"
+                      key="Children 1"
+                    >
+                      <a
+                        href="#"
+                        onClick={[Function]}
+                      >
+                        Children 1
+                      </a>
+                    </li>
+                    <li
+                      className="nav-leaf"
+                      key="Children 2"
+                    >
+                      <a
+                        href="#"
+                        onClick={[Function]}
+                      >
+                        Children 2
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
+
+exports[`Component: Sidebar renders four levels when four levels is provided 1`] = `
+<div
+  className="sidebar-2"
+  id="test"
+>
+  <nav
+    className="sidebar-main-nav"
+  >
+    <div
+      className="sidebar-logo"
+    >
+      <Logotype
+        alt="Swedbank Pay vertical logo"
+        size="md"
+        src="/TEST/img/swedbankpay-logo-v.svg"
+        type="vertical"
+      />
+    </div>
+    <ul
+      className="main-nav-ul"
+    >
+      <li
+        className="main-nav-li active"
+        key="Get Started"
+      >
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined rotated"
+          >
+            wb_incandescent
+          </i>
+          Get Started
+        </a>
+        <nav
+          className="sidebar-secondary-nav"
+        >
+          <header
+            className="secondary-nav-header"
+          >
+            Get Started
+          </header>
+          <ul
+            className="secondary-nav-ul extended-sidebar"
+          >
+            <li
+              className="secondary-nav-li group"
+              key="Accessibility"
+            >
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                <i
+                  className="material-icons-outlined rotated"
+                >
+                  accessibility
+                </i>
+                Accessibility
+              </a>
+              <ul
+                className="tertiary-nav-ul"
+              >
+                <a
+                  className="icon-link text-decoration-none previous-nav"
+                  href="#"
+                  onClick={[Function]}
+                >
+                  <i
+                    aria-hidden="true"
+                    className="material-icons"
+                  >
+                    arrow_back_ios
+                  </i>
+                  <span
+                    className="ml-2"
+                  >
+                    Back to 
+                    Get Started
+                  </span>
+                </a>
+                <header
+                  className="tertiary-nav-header mt-2"
+                >
+                  <i
+                    className="material-icons-outlined rotated"
+                  >
+                    accessibility
+                  </i>
+                  Accessibility
+                </header>
+                <li
+                  className="tertiary-nav-li group"
+                  key="Primary colors"
+                >
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                  >
+                    Primary colors
+                  </a>
+                  <ul
+                    className="quaternary-nav-ul"
+                  >
+                    <li
+                      className="nav-leaf"
+                      key="Children 1"
+                    >
+                      <a
+                        href="#"
+                        onClick={[Function]}
+                      >
+                        Children 1
+                      </a>
+                    </li>
+                    <li
+                      className="nav-leaf"
+                      key="Children 2"
+                    >
+                      <a
+                        href="#"
+                        onClick={[Function]}
+                      >
+                        Children 2
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
+
+exports[`Component: Sidebar renders one level when one level is provided 1`] = `
+<div
+  className="sidebar-2"
+  id="test"
+>
+  <nav
+    className="sidebar-main-nav"
+  >
+    <div
+      className="sidebar-logo"
+    >
+      <Logotype
+        alt="Swedbank Pay vertical logo"
+        size="md"
+        src="/TEST/img/swedbankpay-logo-v.svg"
+        type="vertical"
+      />
+    </div>
+    <ul
+      className="main-nav-ul"
+    >
+      <li
+        className="main-nav-li active"
+        key="Home Page"
+      >
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            home
+          </i>
+          Home Page
+        </a>
+      </li>
+      <li
+        className="main-nav-li"
+        key="Get Started"
+      >
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined rotated"
+          >
+            wb_incandescent
+          </i>
+          Get Started
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
+
+exports[`Component: Sidebar renders three levels when three levels is provided 1`] = `
+<div
+  className="sidebar-2"
+  id="test"
+>
+  <nav
+    className="sidebar-main-nav"
+  >
+    <div
+      className="sidebar-logo"
+    >
+      <Logotype
+        alt="Swedbank Pay vertical logo"
+        size="md"
+        src="/TEST/img/swedbankpay-logo-v.svg"
+        type="vertical"
+      />
+    </div>
+    <ul
+      className="main-nav-ul"
+    >
+      <li
+        className="main-nav-li active"
+        key="Get Started"
+      >
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined rotated"
+          >
+            wb_incandescent
+          </i>
+          Get Started
+        </a>
+        <nav
+          className="sidebar-secondary-nav"
+        >
+          <header
+            className="secondary-nav-header"
+          >
+            Get Started
+          </header>
+          <ul
+            className="secondary-nav-ul "
+          >
+            <li
+              className="secondary-nav-li group"
+              key="Accessibility"
+            >
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                <i
+                  className="material-icons-outlined rotated"
+                >
+                  accessibility
+                </i>
+                Accessibility
+              </a>
+              <ul
+                className="tertiary-nav-ul"
+              >
+                <li
+                  className="nav-leaf leaf"
+                  key="Primary colors"
+                >
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                  >
+                    Primary colors
+                  </a>
+                </li>
+                <li
+                  className="nav-leaf leaf"
+                  key="Secondary colors"
+                >
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                  >
+                    Secondary colors
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
+
+exports[`Component: Sidebar renders two levels when two levels is provided 1`] = `
+<div
+  className="sidebar-2"
+  id="test"
+>
+  <nav
+    className="sidebar-main-nav"
+  >
+    <div
+      className="sidebar-logo"
+    >
+      <Logotype
+        alt="Swedbank Pay vertical logo"
+        size="md"
+        src="/TEST/img/swedbankpay-logo-v.svg"
+        type="vertical"
+      />
+    </div>
+    <ul
+      className="main-nav-ul"
+    >
+      <li
+        className="main-nav-li active"
+        key="Get Started"
+      >
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined rotated"
+          >
+            wb_incandescent
+          </i>
+          Get Started
+        </a>
+        <nav
+          className="sidebar-secondary-nav"
+        >
+          <header
+            className="secondary-nav-header"
+          >
+            Get Started
+          </header>
+          <ul
+            className="secondary-nav-ul "
+          >
+            <li
+              className="secondary-nav-li leaf"
+              key="Accessibility"
+            >
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                <i
+                  className="material-icons-outlined rotated"
+                >
+                  accessibility
+                </i>
+                Accessibility
+              </a>
+            </li>
+            <li
+              className="secondary-nav-li leaf"
+              key="Colors"
+            >
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                <i
+                  className="material-icons-outlined rotated"
+                >
+                  palette
+                </i>
+                Colors
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;

@@ -165,4 +165,4 @@ const Sidebar = () => {
 export default Sidebar;
 
 /* For testing */
-export { Overview, JavascriptMethods, SetActiveState, RemoveActiveState, InitScrollListener, RemoveScrollListener };
+export { Overview, ExtendedSidebar, JavascriptMethods, SetActiveState, RemoveActiveState, InitScrollListener, RemoveScrollListener };

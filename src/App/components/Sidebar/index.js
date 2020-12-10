@@ -5,27 +5,6 @@ import LogotypeComponent from "@components/Logotype";
 
 const BASENAME = process.env.basename;
 
-// const extractElements = (origin, index, subgroupLeaf) => (
-//     origin.subList ?
-//         <li key={index} className="nav-subgroup">
-//             <div className="nav-subgroup-heading">
-//                 <i className="material-icons" aria-hidden="true">arrow_right</i>
-//                 <span>
-//                     {origin.title}
-//                 </span>
-//             </div>
-//             <ul className="nav-ul">
-//                 {origin.subList.map((sub, i) => (extractElements(sub, i)))}
-//             </ul>
-//         </li>
-//         :
-//         <li key={index} className={`nav-leaf${subgroupLeaf ? " nav-subgroup-leaf" : ""}`}>
-//             <a href="#" onClick={e => e.preventDefault()}>
-//                 {origin.title}
-//             </a>
-//         </li>
-// );
-
 class Sidebar extends Component {
     render () {
         return (
@@ -74,7 +53,7 @@ class Sidebar extends Component {
                                                         </a>
                                                         {tertiaryElement.children &&
                                                             <ul className="quaternary-nav-ul">
-                                                                {tertiaryElement.children.map(quaternaryElement => <li className="quaternary-nav-li nav-leaf"
+                                                                {tertiaryElement.children.map(quaternaryElement => <li className="nav-leaf"
                                                                     key={quaternaryElement.title}>
                                                                     <a href="#" onClick={e => e.preventDefault()}>
                                                                         {quaternaryElement.title}
@@ -101,9 +80,7 @@ class Sidebar extends Component {
 Sidebar.propTypes = {
     id: PropTypes.string.isRequired,
     sidebarNavList: PropTypes.arrayOf(PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        lastParent: PropTypes.bool.isRequired,
-        subList: PropTypes.arrayOf(PropTypes.object).isRequired
+        title: PropTypes.string.isRequired
     })).isRequired,
     sticky: PropTypes.bool,
     extendedSidebar: PropTypes.bool
