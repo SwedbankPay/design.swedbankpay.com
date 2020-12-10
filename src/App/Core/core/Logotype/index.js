@@ -39,101 +39,123 @@ const SpacingZone = () => (
         <p>X = spacing zone</p>
         <img src={`${BASENAME}img/documentation/logotype/icon-table.png`} className="logotype-icon-table"/>
 
-        <div className="d-flex mt-5">
+        <div className="d-md-flex mt-5">
             <img src={`${BASENAME}img/documentation/logotype/vertical-measure.png`} className="logotype-vertical-measure mr-5"/>
             <img src={`${BASENAME}img/documentation/logotype/horizontal-measure.png`} className="logotype-horizontal-measure mt-5"/>
         </div>
     </>
 );
 
-const MisuseLogo = () => (
-    <>
-        <h2 id="misuse-logo">Misuse of the logotype</h2>
-        <p>
-            The appearance of the logo should always remain consistent. It’s important that the logo isn’t misinterpreted, modified, or added to.
-            No attempt should be made to alter the logo in any way. The orientation,
-            colour and composition of the logo should remain as indicated in this designguide without exceptions.
-        </p>
+const MisuseLogo = () => {
+    const misusColClass = "col-lg-3 col-md-4 col-sm-6";
 
-        <div className="slab slab-plain slab-border-error">
-            <h4>{"Don't"}</h4>
-            <div className="d-flex mt-5">
-                <div className="logotype-misuse-donts">
-                    <div className="logotype-misuse-donts-img">
-                        <img src={`${BASENAME}img/documentation/logotype/old_logo.png`} className="h-100"/>
+    return (
+        <>
+            <h2 id="misuse-logo">Misuse of the logotype</h2>
+            <p>
+                The appearance of the logo should always remain consistent. It’s important that the logo isn’t misinterpreted, modified, or added to.
+                No attempt should be made to alter the logo in any way. The orientation,
+                colour and composition of the logo should remain as indicated in this designguide without exceptions.
+            </p>
+
+            <div className="slab slab-plain slab-border-error">
+                <h4>{"Don't"}</h4>
+                <div className="row">
+                    <div className={misusColClass}>
+                        <div className="logotype-misuse-donts">
+                            <div className="logotype-misuse-donts-img">
+                                <img src={`${BASENAME}img/documentation/logotype/old_logo.png`} className="h-100"/>
+                            </div>
+                            <h4>Use old version</h4>
+                            <p>Do not use the old version of the logo – darker and more detailed coin.</p>
+                        </div>
                     </div>
-                    <h4>Use old version</h4>
-                    <p>Do not use the old version of the logo – darker and more detailed coin.</p>
-                </div>
-                <div className="logotype-misuse-donts">
-                    <div className="logotype-misuse-donts-img">
-                        <img src={`${BASENAME}img/documentation/logotype/resize_logo.png`} className="h-100"/>
+                    <div className={misusColClass}>
+                        <div className="logotype-misuse-donts">
+                            <div className="logotype-misuse-donts-img">
+                                <img src={`${BASENAME}img/documentation/logotype/resize_logo.png`} className="h-100"/>
+                            </div>
+                            <h4>Resize</h4>
+                            <p>Do not distort or wrap the logo in any way.</p>
+                        </div>
                     </div>
-                    <h4>Resize</h4>
-                    <p>Do not distort or wrap the logo in any way.</p>
-                </div>
-                <div className="logotype-misuse-donts">
-                    <div className="logotype-misuse-donts-img">
-                        <img src={`${BASENAME}img/documentation/logotype/pay_text.png`} className="w-50"/>
+                    <div className={misusColClass}>
+                        <div className="logotype-misuse-donts">
+                            <div className="logotype-misuse-donts-img">
+                                <img src={`${BASENAME}img/documentation/logotype/pay_text.png`} className="h-50"/>
+                            </div>
+                            <h4>Demount</h4>
+                            <p>Do not use the wordmark without the icon (the coin).</p>
+                        </div>
                     </div>
-                    <h4>Demount</h4>
-                    <p>Do not use the wordmark without the icon (the coin).</p>
-                </div>
-                <div className="logotype-misuse-donts">
-                    <div className="logotype-misuse-donts-img">
-                        <img src={`${BASENAME}img/documentation/logotype/swedbank_logo.png`} className="w-100"/>
+                    <div className={misusColClass}>
+                        <div className="logotype-misuse-donts">
+                            <div className="logotype-misuse-donts-img">
+                                <img src={`${BASENAME}img/documentation/logotype/swedbank_logo.png`} className="h-75"/>
+                            </div>
+                            <h4>Use Swedbank logo</h4>
+                            <p>Do not use the Swedbank logo instead or in combination with the Swedbank Pay logo.</p>
+                        </div>
                     </div>
-                    <h4>Use Swedbank logo</h4>
-                    <p>Do not use the Swedbank logo instead or in combination with the Swedbank Pay logo.</p>
-                </div>
-                <div className="logotype-misuse-donts">
-                    <div className="logotype-misuse-donts-img">
-                        <img src={`${BASENAME}img/documentation/logotype/rotated_logo.png`} className="h-100"/>
+                    <div className={misusColClass}>
+                        <div className="logotype-misuse-donts">
+                            <div className="logotype-misuse-donts-img">
+                                <img src={`${BASENAME}img/documentation/logotype/rotated_logo.png`} className="h-100"/>
+                            </div>
+                            <h4>Rotate</h4>
+                            <p>Do not rotate the logo.</p>
+                        </div>
                     </div>
-                    <h4>Rotate</h4>
-                    <p>Do not rotate the logo.</p>
+                    <div className={misusColClass}>
+                        <div className="logotype-misuse-donts">
+                            <div className="logotype-misuse-donts-img">
+                                <img src={`${BASENAME}img/documentation/logotype/green_logo.png`} className="h-100"/>
+                            </div>
+                            <h4>Alter color</h4>
+                            <p>Do not change the logo colour or tone in any way.</p>
+                        </div>
+                    </div>
+                    <div className={misusColClass}>
+                        <div className="logotype-misuse-donts">
+                            <div className="logotype-misuse-donts-img">
+                                <img src={`${BASENAME}img/documentation/logotype/black_and_white_logo.png`} className="h-100"/>
+                            </div>
+                            <h4>Make B/W</h4>
+                            <p>Do not use a change the hue of the logo.</p>
+                        </div>
+                    </div>
+                    <div className={misusColClass}>
+                        <div className="logotype-misuse-donts">
+                            <div className="logotype-misuse-donts-img">
+                                <img src={`${BASENAME}img/documentation/logotype/shadowed_logo.png`} className="h-100"/>
+                            </div>
+                            <h4>Add effects</h4>
+                            <p>Do not add any shadows or other effects to the logo.</p>
+                        </div>
+                    </div>
+                    <div className={misusColClass}>
+                        <div className="logotype-misuse-donts">
+                            <div className="logotype-misuse-donts-img">
+                                <img src={`${BASENAME}img/documentation/logotype/changed_wordmark.png`} className="h-100"/>
+                            </div>
+                            <h4>Change wordmark</h4>
+                            <p>Do not manipulate or replace the wordmark.</p>
+                        </div>
+                    </div>
+                    <div className={misusColClass}>
+                        <div className="logotype-misuse-donts">
+                            <div className="logotype-misuse-donts-img">
+                                <img src={`${BASENAME}img/documentation/logotype/moved_wordmark.png`} className="h-50"/>
+                            </div>
+                            <h4>Move wordmark</h4>
+                            <p>Do not move the workmark from its original position.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div className="d-flex">
-                <div className="logotype-misuse-donts">
-                    <div className="logotype-misuse-donts-img">
-                        <img src={`${BASENAME}img/documentation/logotype/green_logo.png`} className="h-100"/>
-                    </div>
-                    <h4>Alter color</h4>
-                    <p>Do not change the logo colour or tone in any way.</p>
-                </div>
-                <div className="logotype-misuse-donts">
-                    <div className="logotype-misuse-donts-img">
-                        <img src={`${BASENAME}img/documentation/logotype/black_and_white_logo.png`} className="h-100"/>
-                    </div>
-                    <h4>Make B/W</h4>
-                    <p>Do not use a change the hue of the logo.</p>
-                </div>
-                <div className="logotype-misuse-donts">
-                    <div className="logotype-misuse-donts-img">
-                        <img src={`${BASENAME}img/documentation/logotype/shadowed_logo.png`} className="h-100"/>
-                    </div>
-                    <h4>Add effects</h4>
-                    <p>Do not add any shadows or other effects to the logo.</p>
-                </div>
-                <div className="logotype-misuse-donts">
-                    <div className="logotype-misuse-donts-img">
-                        <img src={`${BASENAME}img/documentation/logotype/changed_wordmark.png`} className="h-100"/>
-                    </div>
-                    <h4>Change wordmark</h4>
-                    <p>Do not manipulate or replace the wordmark.</p>
-                </div>
-                <div className="logotype-misuse-donts">
-                    <div className="logotype-misuse-donts-img">
-                        <img src={`${BASENAME}img/documentation/logotype/moved_wordmark.png`} className="w-100"/>
-                    </div>
-                    <h4>Move wordmark</h4>
-                    <p>Do not move the workmark from its original position.</p>
-                </div>
-            </div>
-        </div>
-    </>
-);
+        </>
+    );
+};
 
 const LogotypeBackgrounds = () => (
     <>
