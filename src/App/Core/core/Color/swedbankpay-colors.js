@@ -1,150 +1,191 @@
-export const mainText = [
+export const communicationColors = [
     {
-        name: "Yellow",
         hex: "#FDC129",
-        rgb: "253,193,41",
-        cmyk: "0/25/100/0",
-        inSubLists: ["Communication color"]
+        rgb: "253, 193, 41",
+        fontColor: "512B2B",
+        width: "w-50"
     },
     {
-        name: "Brown",
+        hex: "#FFFFFF",
+        rgb: "255, 255, 255",
+        fontColor: "512B2B",
+        width: "w-50"
+    }
+];
+
+export const textColors = [
+    {
         hex: "#512B2B",
         rgb: "81,43,43",
-        cmyk: "0/30/25/80",
-        inSubLists: ["Text colors"]
+        fontColor: "#FFFFFF"
     },
     {
-        name: "Orange Main",
-        hex: "#EE7023",
-        rgb: "238,112,35",
-        cmyk: "0/60/100/0",
-        inSubLists: ["Text colors"]
-    },
-    {
-        name: "Info Turquoise",
-        hex: "#8ACDC3",
-        rgb: "138,205,195",
-        cmyk: "40/0/25/0",
-        inSubLists: ["Secondary colors"]
-    },
-    {
-        name: "Info Pink",
-        hex: "#EFB7B6",
-        rgb: "239,183,182",
-        cmyk: "0/40/10/0",
-        inSubLists: ["Secondary colors"]
-    },
-    {
-        name: "Apricot",
-        hex: "#FBF2EA",
-        rgb: "251,242,234",
-        cmyk: "0/7/9/0",
-        inSubLists: ["Background colors"]
-    },
-    {
-        name: "Light Turquoise",
-        hex: "#EBF8F2",
-        rgb: "235,248,242",
-        cmyk: "9/0/7/0",
-        inSubLists: ["Background colors"]
-    },
-    {
-        name: "Turquoise",
-        hex: "#31A3AE",
-        rgb: "49,163,174",
-        cmyk: "75/15/30/0",
-        inSubLists: ["Links and buttons"]
-
-    },
-    {
-        name: "Turquoise Links",
         hex: "#257886",
-        inSubLists: ["Links and buttons"]
+        rgb: "37, 119, 134",
+        fontColor: "#FFFFFF"
     },
     {
-        name: "White",
         hex: "#FFFFFF",
-        inSubLists: ["Text colors", "Background colors"]
+        rgb: "255, 255, 255",
+        fontColor: "#512B2B"
+    },
+    {
+        hex: "#696969",
+        rgb: "105, 105, 105",
+        fontColor: "#FFFFFF"
     }
 ];
 
-export const alertText = [
+export const backgroundColors = [
     {
-        name: "Brand Success",
-        hex: "#51971B"
+        hex: "#FBF2EA",
+        rgb: "251, 241, 234",
+        fontColor: "#512B2B"
     },
     {
-        name: "Brand Success Light",
-        hex: "#F2F7EB"
+        hex: "#F9F8F6",
+        rgb: "249, 248, 246",
+        fontColor: "#512B2B"
     },
     {
-        name: "Brand Warning",
-        hex: "#FF9900"
-    },
-    {
-        name: "Brand Warning Light",
-        hex: "#FFF3D5"
-    },
-    {
-        name: "Brand Error",
-        hex: "#C5131C"
-    },
-    {
-        name: "Brand Error Light",
-        hex: "#F9DED3"
-    },
-    {
-        name: "Brand Info",
-        hex: "#4572C0"
-    },
-    {
-        name: "Brand Info Light",
-        hex: "#E8EFF9"
+        hex: "#EBF8F2",
+        rgb: "235, 248, 242",
+        fontColor: "#512B2B"
     }
 ];
 
-export const grayScaleText = [
+export const buttonColors = [
     {
-        name: "Black",
-        hex: "#222222"
+        hex: "#fdc129",
+        rgb: "253, 193, 41",
+        fontColor: "#512B2B"
     },
     {
-        name: "Text Gray",
-        hex: "#767676"
+        hex: "#512B2B",
+        rgb: "81, 43, 43",
+        fontColor: "#FFFFFF"
     },
     {
-        name: "List Gray",
-        hex: "#999999"
-    },
-    {
-        name: "Light Gray",
-        hex: "#F9F8F6"
-    },
-    {
-        name: "White",
-        hex: "#FFFFFF"
+        hex: "#FFFFFF",
+        rgb: "255, 255, 255",
+        fontColor: "#512B2B"
     }
 ];
 
-export const brownScaleText = [
+export const brownScaleColors = [
     {
-        name: "Solid Brown",
-        hex: "#2F2424"
+        hex: "#2F2424",
+        rgb: "47, 36, 36",
+        fontColor: "#FFFFFF"
     },
     {
-        name: "Dark Brown",
-        hex: "#493C3B"
+        hex: "#493C3B",
+        rgb: "73, 60, 59",
+        fontColor: "#FFFFFF"
     },
     {
-        name: "Medium Brown",
-        hex: "#72605E"
+        hex: "#72605E",
+        rgb: "114, 96, 94",
+        fontColor: "#FFFFFF"
     },
     {
-        name: "Soft Brown",
-        hex: "#A38B80"
+        hex: "#A38B80",
+        rgb: "163, 139, 128",
+        fontColor: "#222222"
     },
     {
-        name: "Light Brown",
-        hex: "#D4C4BC"
+        hex: "#D4C4BC",
+        rgb: "212, 196, 188",
+        fontColor: "#512B2B"
     }
 ];
+
+export const complementaryColors = [
+    {
+        hex: "#8ACDC3",
+        rgb: "138, 205, 195",
+        fontColor: "#512B2B"
+    },
+    {
+        hex: "#EFB7B6",
+        rgb: "239, 183, 182",
+        fontColor: "#512B2B"
+    }
+];
+
+export const systemColors = [
+    {
+        hex: "#C5131C",
+        rgb: "197, 19, 28",
+        fontColor: "#FFFFFF"
+    },
+    {
+        hex: "#E07088",
+        rgb: "224, 112, 136",
+        fontColor: "#FFFFFF"
+    },
+    {
+        hex: "#F9DED3",
+        rgb: "249, 222, 211",
+        fontColor: "#512B2B"
+    },
+    {
+        hex: "#4572C0",
+        rgb: "69, 114, 192",
+        fontColor: "#FFFFFF"
+    },
+    {
+        hex: "#E8EFF9",
+        rgb: "232, 239, 249",
+        fontColor: "#512B2B"
+    },
+    {
+        hex: "#51971B",
+        rgb: "81, 151, 27",
+        fontColor: "#FFFFFF"
+    },
+    {
+        hex: "#99CC66",
+        rgb: "153, 204, 102",
+        fontColor: "#512B2B"
+    },
+    {
+        hex: "#F2F7EB",
+        rgb: "242, 24, 235",
+        fontColor: "#512B2B"
+    },
+    {
+        hex: "#F9CE22",
+        rgb: "249, 206, 34",
+        fontColor: "#512B2B"
+    },
+    {
+        hex: "#FFF3D5",
+        rgb: "255, 243, 213",
+        fontColor: "#512B2B"
+    }
+];
+
+export const grayScaleColors = [
+    {
+        hex: "#222222",
+        rgb: "34, 34, 34",
+        fontColor: "#FFFFFF"
+    },
+    {
+        hex: "#999999",
+        rgb: "153, 153, 153",
+        fontColor: "#FFFFFF"
+    },
+    {
+        hex: "#F9F8F6",
+        rgb: "249, 248, 246",
+        fontColor: "#512B2B"
+    },
+    {
+        hex: "#FFFFFF",
+        rgb: "255, 255, 255",
+        fontColor: "#512B2B"
+    }
+];
+
