@@ -692,13 +692,35 @@
     }
 
     .color-group {
+        display: flex;
         gap: 1rem;
 
-        div {
+        > div {
+            display: flex;
+            position: relative;
             height: 7.15rem;
             width: 7.75rem;
-            border-radius: 0.25rem;
-            font-size: 0.75rem;
+
+            svg {
+                width: 100%;
+
+                rect {
+                    width: 100%;
+                    height: 100%;
+                    rx: 5;
+                }
+            }
+
+            div {
+                position: absolute;
+                font-size: 0.75rem;
+                bottom: 0;
+                font-weight: bold;
+
+                &.font-white {
+                    color: #ffffff;
+                }
+            }
         }
     }
 }

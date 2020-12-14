@@ -9,22 +9,19 @@ exports[`Core: Color BackgroundColors renders 1`] = `
     Apricot is our primary background color. Light gray and light turquoise are secondary. 
   </p>
   <div
-    className="color-group d-flex"
+    className="color-group"
   >
     <ColorDisplay
-      fontColor="#512B2B"
       hex="#FBF2EA"
       key="0"
       rgb="251, 241, 234"
     />
     <ColorDisplay
-      fontColor="#512B2B"
       hex="#F9F8F6"
       key="1"
       rgb="249, 248, 246"
     />
     <ColorDisplay
-      fontColor="#512B2B"
       hex="#EBF8F2"
       key="2"
       rgb="235, 248, 242"
@@ -42,22 +39,22 @@ exports[`Core: Color BrownScaleColors renders 1`] = `
     The brown scale colors are primarily used for borders and backgrounds. These colors cannot be used as text colors. 
   </p>
   <div
-    className="color-group d-flex"
+    className="color-group"
   >
     <ColorDisplay
-      fontColor="#FFFFFF"
+      fontColor="font-white"
       hex="#2F2424"
       key="0"
       rgb="47, 36, 36"
     />
     <ColorDisplay
-      fontColor="#FFFFFF"
+      fontColor="font-white"
       hex="#493C3B"
       key="1"
       rgb="73, 60, 59"
     />
     <ColorDisplay
-      fontColor="#FFFFFF"
+      fontColor="font-white"
       hex="#72605E"
       key="2"
       rgb="114, 96, 94"
@@ -69,7 +66,6 @@ exports[`Core: Color BrownScaleColors renders 1`] = `
       rgb="163, 139, 128"
     />
     <ColorDisplay
-      fontColor="#512B2B"
       hex="#D4C4BC"
       key="4"
       rgb="212, 196, 188"
@@ -87,22 +83,21 @@ exports[`Core: Color ButtonColors renders 1`] = `
     Our primary buttons are yellow and our secondary buttons are brown. Go to Buttons to see and interact with all buttons. 
   </p>
   <div
-    className="color-group d-flex"
+    className="color-group"
   >
     <ColorDisplay
-      fontColor="#512B2B"
-      hex="#fdc129"
+      hex="#FDC129"
       key="0"
       rgb="253, 193, 41"
     />
     <ColorDisplay
-      fontColor="#FFFFFF"
+      fontColor="font-white"
       hex="#512B2B"
       key="1"
       rgb="81, 43, 43"
     />
     <ColorDisplay
-      fontColor="#512B2B"
+      border="black"
       hex="#FFFFFF"
       key="2"
       rgb="255, 255, 255"
@@ -120,17 +115,16 @@ exports[`Core: Color CommunicationColors renders 1`] = `
     Yellow is used on backgrounds, in main graphical elements and on underlines for highlighting relevant parts of a message. When the yellow is used as a background choose the white text version of the logotype.
   </p>
   <div
-    className="color-group d-flex"
+    className="color-group"
   >
     <ColorDisplay
-      fontColor="512B2B"
       hex="#FDC129"
       key="0"
       rgb="253, 193, 41"
       width="w-50"
     />
     <ColorDisplay
-      fontColor="512B2B"
+      border="black"
       hex="#FFFFFF"
       key="1"
       rgb="255, 255, 255"
@@ -149,16 +143,14 @@ exports[`Core: Color ComplementaryColors renders 1`] = `
     Can be used for decorative elements in combination with corresponding background colors. These colors cannot be used as text colors. 
   </p>
   <div
-    className="color-group d-flex"
+    className="color-group"
   >
     <ColorDisplay
-      fontColor="#512B2B"
       hex="#8ACDC3"
       key="0"
       rgb="138, 205, 195"
     />
     <ColorDisplay
-      fontColor="#512B2B"
       hex="#EFB7B6"
       key="1"
       rgb="239, 183, 182"
@@ -173,28 +165,27 @@ exports[`Core: Color GrayScaleColors renders 1`] = `
     Gray scale colors
   </h2>
   <div
-    className="color-group d-flex"
+    className="color-group"
   >
     <ColorDisplay
-      fontColor="#FFFFFF"
+      fontColor="font-white"
       hex="#222222"
       key="0"
       rgb="34, 34, 34"
     />
     <ColorDisplay
-      fontColor="#FFFFFF"
+      fontColor="font-white"
       hex="#999999"
       key="1"
       rgb="153, 153, 153"
     />
     <ColorDisplay
-      fontColor="#512B2B"
       hex="#F9F8F6"
       key="2"
       rgb="249, 248, 246"
     />
     <ColorDisplay
-      fontColor="#512B2B"
+      border="black"
       hex="#FFFFFF"
       key="3"
       rgb="255, 255, 255"
@@ -241,7 +232,7 @@ exports[`Core: Color MainColors renders 1`] = `
     Our main color palette.
   </p>
   <div
-    className="color-group d-flex flex-wrap"
+    className="color-group flex-wrap"
   >
     <ColorDisplay
       hex="#2DA944"
@@ -293,64 +284,58 @@ exports[`Core: Color SystemColors renders 1`] = `
     We have four primary system colors (red, blue, green, and yellow) which all have a lighter complementary version as well. 
   </p>
   <div
-    className="color-group d-flex flex-wrap"
+    className="color-group flex-wrap"
   >
     <ColorDisplay
-      fontColor="#FFFFFF"
+      fontColor="font-white"
       hex="#C5131C"
       key="0"
       rgb="197, 19, 28"
     />
     <ColorDisplay
-      fontColor="#FFFFFF"
+      fontColor="font-white"
       hex="#E07088"
       key="1"
       rgb="224, 112, 136"
     />
     <ColorDisplay
-      fontColor="#512B2B"
       hex="#F9DED3"
       key="2"
       rgb="249, 222, 211"
     />
     <ColorDisplay
-      fontColor="#FFFFFF"
+      fontColor="font-white"
       hex="#4572C0"
       key="3"
       rgb="69, 114, 192"
     />
     <ColorDisplay
-      fontColor="#512B2B"
       hex="#E8EFF9"
       key="4"
       rgb="232, 239, 249"
     />
     <ColorDisplay
-      fontColor="#FFFFFF"
+      fontColor="font-white"
       hex="#51971B"
       key="5"
       rgb="81, 151, 27"
     />
     <ColorDisplay
-      fontColor="#512B2B"
       hex="#99CC66"
       key="6"
       rgb="153, 204, 102"
     />
     <ColorDisplay
-      fontColor="#512B2B"
       hex="#F2F7EB"
       key="7"
       rgb="242, 24, 235"
     />
     <ColorDisplay
-      fontColor="#512B2B"
       hex="#F9CE22"
       key="8"
       rgb="249, 206, 34"
     />
     <ColorDisplay
-      fontColor="#512B2B"
       hex="#FFF3D5"
       key="9"
       rgb="255, 243, 213"
@@ -368,28 +353,28 @@ exports[`Core: Color TextColors renders 1`] = `
     Brown is our primary text color that should be used for all text besides link and text on dark backgrounds and images. For links, use turquoise and for dark backgrounds/images use white. Gray is used for smaller text that has to be presented in the interface but we don’t want to be the primary focus. 
   </p>
   <div
-    className="color-group d-flex"
+    className="color-group"
   >
     <ColorDisplay
-      fontColor="#FFFFFF"
+      fontColor="font-white"
       hex="#512B2B"
       key="0"
       rgb="81,43,43"
     />
     <ColorDisplay
-      fontColor="#FFFFFF"
+      fontColor="font-white"
       hex="#257886"
       key="1"
       rgb="37, 119, 134"
     />
     <ColorDisplay
-      fontColor="#512B2B"
+      border="black"
       hex="#FFFFFF"
       key="2"
       rgb="255, 255, 255"
     />
     <ColorDisplay
-      fontColor="#FFFFFF"
+      fontColor="font-white"
       hex="#696969"
       key="3"
       rgb="105, 105, 105"
