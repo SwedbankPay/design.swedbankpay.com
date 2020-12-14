@@ -6,13 +6,300 @@ import Button from "@components/Button";
 import CodeTags from "@components/CodeTags";
 
 const basename = process.env.basename;
+const brand = process.env.brand;
 const { expandable } = window.dg;
 
-const Fonts = () => (
-        <>
-            <h2 id="font">Font</h2>
-            <p>The standard font Swedbank Pay DesignGuide uses is Arial. The included font weights you can use are: 400, 600 & 800. Both normal and italicized is available.</p>
-        </>
+const Typefaces = () => (
+    <section id="typefaces" className="typography-typefaces">
+        <h2>Typefaces</h2>
+        <div className="illustration mb-3">
+            <div className="swedbank-headline">
+                Ag
+                <span>Swedbank Headline</span>
+            </div>
+            <div className="arial">
+                Ag
+                <span>Arial</span>
+            </div>
+            <div className="akkurat-mono">
+                Ag
+                <span>Akkurat Mono</span>
+            </div>
+        </div>
+
+        <a href={`${basename}release/fonts/Fonts.zip`} className="icon-link">
+            <i className="material-icons" aria-hidden="true">download</i>
+            <span className="ml-2">Download all Swedbank Pay typefaces</span>
+        </a>
+
+        <h3>Area of usages</h3>
+        <ul className="list list-bullet">
+            <li><span className="swedbank-headline">Swedbank Headline</span> – used for headlines and lead texts</li>
+            <li><span className="arial font-weight-bold">Arial</span> – used for sub headlines and body texts</li>
+            <li><span className="akkurat-mono">Akkurat Mono</span> – used for code examples and snippets</li>
+        </ul>
+
+        <h3>Be respectful of content hierarchy</h3>
+        <p>
+            In order for us to create good and acessible structure in our products, it’s mandatory to include heading levels.
+            No more than one h1 should be present on the page and if you have used h2 and want to show hirarchy in content, h3 should be used next and so on.
+        </p>
+    </section>
+);
+
+const Desktop = () => (
+    <section id="desktop" className="typography-desktop">
+        <h2>Desktop text styles</h2>
+        <p>
+            Our desktop text styles are meant to be used in all desktop and tablet sizes. The text should break to mobile styles at viewport width 767 px.
+            See all the <Link to="/core/grid">breakpoints in the Grid section</Link>.
+        </p>
+
+        <table className="table table-plain typography-table">
+            <thead>
+                <tr>
+                    <th>Desktop text preview</th>
+                    <th>Typeface</th>
+                    <th>Size</th>
+                    <th>Line-height</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span className="hero">Hero</span></td>
+                    <td>Swedbank Headline Bold</td>
+                    <td>56 px</td>
+                    <td>72 px</td>
+                </tr>
+                <tr>
+                    <td><h1 className="m-0">Title 1</h1></td>
+                    <td>Swedbank Headline Bold</td>
+                    <td>40 px</td>
+                    <td>48 px</td>
+                </tr>
+                <tr>
+                    <td><h2>Title 2</h2></td>
+                    <td>Swedbank Headline Bold</td>
+                    <td>24 px</td>
+                    <td>32 px</td>
+                </tr>
+                <tr>
+                    <td><h3>Title 3</h3></td>
+                    <td>Swedbank Headline Bold</td>
+                    <td>20 px</td>
+                    <td>24 px</td>
+                </tr>
+                <tr>
+                    <td><h4>Title 4</h4></td>
+                    <td>Swedbank Headline Bold</td>
+                    <td>16 px</td>
+                    <td>20 px</td>
+                </tr>
+                <tr>
+                    <td><h5>Title 5</h5></td>
+                    <td>Arial bold</td>
+                    <td>14 px</td>
+                    <td>20 px</td>
+                </tr>
+                <tr>
+                    <td><h6>TITLE 6</h6></td>
+                    <td>Arial regular</td>
+                    <td>12 px</td>
+                    <td>16 px</td>
+                </tr>
+                <tr>
+                    <td><small>Small text</small></td>
+                    <td>Arial regular</td>
+                    <td>14 px</td>
+                    <td>20 px</td>
+                </tr>
+                <tr>
+                    <td><span className="extra-small">Extra small text</span></td>
+                    <td>Arial regular</td>
+                    <td>12 px</td>
+                    <td>16 px</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+);
+
+const Mobile = () => (
+    <section id="mobile">
+        <h2>Mobile text styles</h2>
+        <p>
+            Our mobile text styles are meant to be used in all mobile views.
+            The text should break to desktop styles at viewport width 768 px. See all the <Link to="/core/grid">breakpoints in the Grid section</Link>.
+        </p>
+
+        <table className="table table-plain typography-table mobile">
+            <thead>
+                <tr>
+                    <th>Mobile text preview</th>
+                    <th>Typeface</th>
+                    <th>Size</th>
+                    <th>Line-height</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span className="hero">Hero</span></td>
+                    <td>Swedbank Headline Bold</td>
+                    <td>40 px</td>
+                    <td>48 px</td>
+                </tr>
+                <tr>
+                    <td><h1 className="m-0">Title 1</h1></td>
+                    <td>Swedbank Headline Bold</td>
+                    <td>24 px</td>
+                    <td>32 px</td>
+                </tr>
+                <tr>
+                    <td><h2>Title 2</h2></td>
+                    <td>Swedbank Headline Bold</td>
+                    <td>20 px</td>
+                    <td>24 px</td>
+                </tr>
+                <tr>
+                    <td><h3>Title 3</h3></td>
+                    <td>Swedbank Headline Bold</td>
+                    <td>18 px</td>
+                    <td>24 px</td>
+                </tr>
+                <tr>
+                    <td><h4>Title 4</h4></td>
+                    <td>Swedbank Headline Bold</td>
+                    <td>16 px</td>
+                    <td>20 px</td>
+                </tr>
+                <tr>
+                    <td><h5>Title 5</h5></td>
+                    <td>Arial bold</td>
+                    <td>14 px</td>
+                    <td>20 px</td>
+                </tr>
+                <tr>
+                    <td><h6>TITLE 6</h6></td>
+                    <td>Arial regular</td>
+                    <td>12 px</td>
+                    <td>16 px</td>
+                </tr>
+                <tr>
+                    <td>Body</td>
+                    <td>Arial regular</td>
+                    <td>16 px</td>
+                    <td>24 px</td>
+                </tr>
+                <tr>
+                    <td><small>Small text</small></td>
+                    <td>Arial regular</td>
+                    <td>14 px</td>
+                    <td>20 px</td>
+                </tr>
+                <tr>
+                    <td><span className="extra-small">Extra small text</span></td>
+                    <td>Arial regular</td>
+                    <td>12 px</td>
+                    <td>16 px</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+);
+
+const Code = () => (
+    <section id="code">
+        <h2>How it works in code</h2>
+
+        <h3>Headings</h3>
+        <p>Swedbank Pay DesignGuide provides basic styling on all headings (h1-h6).</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <h1>Heading h1</h1>
+            <h2>Heading h2</h2>
+            <h3>Heading h3</h3>
+            <h4>Heading h4</h4>
+            <h5>Heading h5</h5>
+            <h6>Heading h6</h6>
+        </ComponentPreview>
+        <p>The classes <CodeTags type="secondary" code=".h1" /> through <CodeTags type="secondary" code=".h6" /> are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <p className="h1">.h1 heading</p>
+            <p className="h2">.h2 heading</p>
+            <p className="h3">.h3 heading</p>
+            <p className="h4">.h4 heading</p>
+            <p className="h5">.h5 heading</p>
+            <p className="h6">.h6 heading</p>
+        </ComponentPreview>
+
+        <h3>Hero title</h3>
+        <p>The class <CodeTags type="secondary" code=".hero" /> can be used to achieve the big and bold hero title styling.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <h1 className="hero">Hero title</h1>
+            <p className="hero">Hero title</p>
+        </ComponentPreview>
+
+        <h3>Lead</h3>
+        <p>Make a paragraph stand out by using <CodeTags type="secondary" code=".lead" />.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <p className="lead">This is a leading paragraph which for instance can be used as an introduction.</p>
+        </ComponentPreview>
+
+        <h3>Inline text elements</h3>
+        <p>Styling for common inline HTML5 elements.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+            <p><del>This line of text is meant to be treated as deleted text.</del></p>
+            <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+            <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+            <p><u>This line of text will render as underlined</u></p>
+            <p><small>This line of text is meant to be treated as fine print.</small></p>
+            <p><strong>This line rendered as bold text.</strong></p>
+            <p><b>This line really stands out.</b></p>
+            <p><em>This line rendered as italicized text.</em></p>
+            <p><i>This is the last line, it too will render as italicized text.</i></p>
+        </ComponentPreview>
+        <p>
+            The <CodeTags type="secondary" code=".mark" /> and <CodeTags type="secondary" code=".small" /> classes are also available to apply the same styles
+            as <CodeTags type="primary" code={"<mark>"} /> and <CodeTags type="primary" code={"<small>"} /> while
+            avoiding any unwanted semantic implications that the tags would bring.
+        </p>
+        <p>
+            While not shown above, feel free to use <CodeTags type="primary" code={"<b>"} /> and <CodeTags type="primary" code={"<i>"} /> in
+            HTML5. <CodeTags type="primary" code={"<b>"} /> is meant to highlight words or phrases without conveying additional importance
+            while <CodeTags type="primary" code={"<i>"} /> is mostly for voice, technical terms, etc.
+        </p>
+
+        <h3>Text utilities</h3>
+        <p>Change text color with our <Link to="/utilities/colors">color utilities</Link>.</p>
+
+        <h3>Abbreviations</h3>
+        <p>Stylized implementation of HTML’s <CodeTags type="primary" code={"<abbr>"} /> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.</p>
+        <p>Add <CodeTags type="secondary" code=".initialism" /> to an abbreviation for a slightly smaller font-size.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <p><abbr title="Laugh Out Loud">LOL</abbr></p>
+            <p><abbr title="HyperText Markup Language" className="initialism">HTML</abbr></p>
+        </ComponentPreview>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr" target="_blank" rel="noopener noreferrer">Read more</a> about abbreviations.</p>
+
+        <h3>Blockquotes</h3>
+        <p>For quoting blocks of content from another source within your document. Wrap <CodeTags type="primary" code={"<blockquote>"} /> or <CodeTags type="secondary" code=".blockquote" /> around any HTML as the quote.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <blockquote className="blockquote">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            </blockquote>
+        </ComponentPreview>
+
+        <h4>Naming a source</h4>
+        <p>Add a <CodeTags type="primary" code={"<footer>"} /> for identifying the source. Wrap the name of the source work in <CodeTags type="primary" code={"<cite>"} />.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <blockquote className="blockquote">
+                <p>
+                    Better learn balance. Balance is key. Balance good, karate good. Everything good. Balance bad, better pack up, go home. Understand?
+                </p>
+                <footer><cite title="The Karate Kid (1984)">Mr. Miyagi</cite></footer>
+            </blockquote>
+        </ComponentPreview>
+    </section>
 );
 
 const Headings = () => (
@@ -163,17 +450,32 @@ const Typography = () => {
     useEffect(() => { expandable.init(); });
 
     return (
-        <DocContainer docToc>
-            <p className="lead">Documentation and examples for Swedbank Pay DesignGuide typography.</p>
-            <Fonts />
-            <Headings />
-            <HeroTitle />
-            <Lead />
-            <Inline />
-            <TextUtilities />
-            <Abbreviations />
-            <Blockquotes />
-            <AkkuratMono />
+        <DocContainer>
+            {brand === "swedbankpay" ?
+                <>
+                    <section id="intro">
+                        <p className="lead">
+                            The main font for Swedbank Pay is Swedbank Headline Bold, a custom made typeface with an open, welcoming visual voice.
+                            In addition Arial is used for non-print body text.
+                        </p>
+                    </section>
+                    <Typefaces />
+                    <Desktop />
+                    <Mobile />
+                    <Code />
+                </>
+                :
+                <>
+                    <Headings />
+                    <HeroTitle />
+                    <Lead />
+                    <Inline />
+                    <TextUtilities />
+                    <Abbreviations />
+                    <Blockquotes />
+                    <AkkuratMono />
+                </>
+            }
         </DocContainer>
     );
 };
@@ -181,4 +483,4 @@ const Typography = () => {
 export default Typography;
 
 /* For testing */
-export { Fonts, Headings, HeroTitle, Lead, Inline, TextUtilities, Abbreviations, Blockquotes, AkkuratMono };
+export { Typefaces, Desktop, Mobile, Code, Headings, HeroTitle, Lead, Inline, TextUtilities, Abbreviations, Blockquotes, AkkuratMono };

@@ -2,7 +2,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Typography, { Fonts, Headings, HeroTitle, Lead, Inline, TextUtilities, Abbreviations, Blockquotes, AkkuratMono } from "./index";
+import Typography, { Typefaces, Desktop, Mobile, Code, Headings, HeroTitle, Lead, Inline, TextUtilities, Abbreviations, Blockquotes, AkkuratMono } from "./index";
 
 describe("Core: Typography", () => {
     it("is defined", () => {
@@ -15,13 +15,49 @@ describe("Core: Typography", () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    describe("Fonts", () => {
+    describe("Typefaces", () => {
         it("is defined", () => {
-            expect(Fonts).toBeDefined();
+            expect(Typefaces).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<Fonts />);
+            const wrapper = shallow(<Typefaces />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("Desktop", () => {
+        it("is defined", () => {
+            expect(Desktop).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<Desktop />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("Mobile", () => {
+        it("is defined", () => {
+            expect(Mobile).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<Mobile />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("Code", () => {
+        it("is defined", () => {
+            expect(Code).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<Code />);
 
             expect(wrapper).toMatchSnapshot();
         });
