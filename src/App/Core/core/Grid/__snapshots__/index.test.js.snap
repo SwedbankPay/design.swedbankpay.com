@@ -632,6 +632,95 @@ exports[`Core: Grid AutoLayoutColumns renders 1`] = `
 </Fragment>
 `;
 
+exports[`Core: Grid Breakpoints renders 1`] = `
+<section>
+  <h2>
+    Breakpoints
+  </h2>
+  <p>
+    As shown in previous examples our grid system has 12 columns in desktop view. As the width decreases to tablet and mobile breakpoints the amount of columns used changes as well. Within the tablet breakpoints we use 8 columns and within mobile breakpoints 4 columns.
+  </p>
+  <table
+    className="table table-plain"
+  >
+    <thead>
+      <tr>
+        <th>
+          Size
+        </th>
+        <th>
+          Breakpoint Range
+        </th>
+        <th>
+          Columns
+        </th>
+        <th>
+          Margins & Gutter
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Mobile
+        </td>
+        <td>
+          320-767 px
+        </td>
+        <td>
+          4
+        </td>
+        <td>
+          16 px
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Tablet
+        </td>
+        <td>
+          768-1023 px
+        </td>
+        <td>
+          8
+        </td>
+        <td>
+          24 px
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Small Desktop
+        </td>
+        <td>
+          1024-1439 px
+        </td>
+        <td>
+          12
+        </td>
+        <td>
+          24 px
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Large Desktop
+        </td>
+        <td>
+          ≥ 1440 px
+        </td>
+        <td>
+          12
+        </td>
+        <td>
+          24 px
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+`;
+
 exports[`Core: Grid GridOptions renders 1`] = `
 <Fragment>
   <h2
@@ -839,12 +928,128 @@ exports[`Core: Grid GridOptions renders 1`] = `
 </Fragment>
 `;
 
+exports[`Core: Grid GridSystem renders 1`] = `
+<section>
+  <h2>
+    Grid system
+  </h2>
+  <div>
+    <article>
+      <img
+        alt=""
+        src="/TEST/img/documentation/grid/columns.png"
+      />
+      <h3>
+        Columns
+      </h3>
+      <p>
+        We use a 
+        <span
+          className="font-weight-bold"
+        >
+          12 column
+        </span>
+         grid system where the width of the column changes depending on the size of the grid.
+      </p>
+    </article>
+    <article>
+      <img
+        alt=""
+        src="/TEST/img/documentation/grid/column-span.png"
+      />
+      <h3>
+        Column spans
+      </h3>
+      <p>
+        Within the 12 column grid system, there are also 
+        <span
+          className="font-weight-bold"
+        >
+          6 tiers
+        </span>
+         of responsive column spans. 
+      </p>
+    </article>
+    <article>
+      <img
+        alt=""
+        src="/TEST/img/documentation/grid/gutters.png"
+      />
+      <h3>
+        Gutters
+      </h3>
+      <p>
+        Gutters are the gap between columns, these values (16 px, 24 px etc.) are 
+        <span
+          className="font-weight-bold"
+        >
+          fixed
+        </span>
+         and depends on our breakpoints. 
+      </p>
+    </article>
+    <article>
+      <img
+        alt=""
+        src="/TEST/img/documentation/grid/margins.png"
+      />
+      <h3>
+        Margins
+      </h3>
+      <p>
+        Margins are the outer space between the columns and the edge of the grid. The values can be 
+        <span
+          className="font-weight-bold"
+        >
+          the same as gutters or larger
+        </span>
+        .
+      </p>
+    </article>
+  </div>
+</section>
+`;
+
+exports[`Core: Grid GridTypes renders 1`] = `
+<section>
+  <h2>
+    Grid types
+  </h2>
+  <div>
+    <article>
+      <img
+        alt=""
+        src="/TEST/img/documentation/grid/fluid.png"
+      />
+      <h3>
+        Fluid
+      </h3>
+      <p>
+        A fluid grid takes up 100% of the viewport and scales dynamically as the sizing of the grid changes.
+      </p>
+    </article>
+    <article>
+      <img
+        alt=""
+        src="/TEST/img/documentation/grid/fixed.png"
+      />
+      <h3>
+        Fixed
+      </h3>
+      <p>
+        A fixed grid has a fixed size on its maximum width, meaning the grid will not scale as the grid changes.
+      </p>
+    </article>
+  </div>
+</section>
+`;
+
 exports[`Core: Grid HowItWorks renders 1`] = `
 <Fragment>
   <h2
     id="how-it-works"
   >
-    How it works
+    How it works in code
   </h2>
   <p>
     The grid system uses a series of containers, rows, and columns to layout and align content. It’s built with flexbox and is fully responsive. Below is an example and an in-depth look at how the grid comes together.
@@ -1045,6 +1250,52 @@ exports[`Core: Grid HowItWorks renders 1`] = `
 </Fragment>
 `;
 
+exports[`Core: Grid Intro renders 1`] = `
+<section>
+  <p
+    className="lead"
+  >
+    Use our Bootstrap-inspired grid to build layouts of all shapes and sizes. Our twelve column system has six default responsive tiers, and dozens of predefined classes.
+  </p>
+  <p>
+    Our grid system is a modified version of the Bootstrap grid-system, learn more about how it works in the 
+    <a
+      className="icon-link m-0"
+      href="#"
+    >
+      <span
+        className="mr-2"
+      >
+        Bootstrap documentation.
+      </span>
+      <i
+        aria-hidden="true"
+        className="material-icons"
+      >
+        open_in_new
+      </i>
+    </a>
+    . If you are curious about how the grid is being used in design, head over to the 
+    <a
+      className="icon-link m-0"
+      href="#"
+    >
+      <span
+        className="mr-2"
+      >
+        Grid file in Figma.
+      </span>
+      <i
+        aria-hidden="true"
+        className="material-icons"
+      >
+        open_in_new
+      </i>
+    </a>
+  </p>
+</section>
+`;
+
 exports[`Core: Grid Nesting renders 1`] = `
 <Fragment>
   <h2
@@ -1109,6 +1360,39 @@ exports[`Core: Grid Nesting renders 1`] = `
     </div>
   </ComponentPreview>
 </Fragment>
+`;
+
+exports[`Core: Grid OffsettingGrid renders 1`] = `
+<section>
+  <h2>
+    Offsetting grid
+  </h2>
+  <p>
+    A standard 12 column grid typically fills 100% of the viewport. When there is a side menu present in the design we must offset the grid in order to align the elements. In this case, the width of the menu is removed from the calculation and the grid takes 100% of the remaining space.
+  </p>
+  <div>
+    <article>
+      <img
+        alt=""
+        className="mb-3"
+        src="/TEST/img/documentation/grid/grid-offset-left.png"
+      />
+      <p>
+        Grid offset with left side menu
+      </p>
+    </article>
+    <article>
+      <img
+        alt=""
+        className="mb-3"
+        src="/TEST/img/documentation/grid/grid-offset-both-sides.png"
+      />
+      <p>
+        Grid offset with menu on each side
+      </p>
+    </article>
+  </div>
+</section>
 `;
 
 exports[`Core: Grid Reordering renders 1`] = `
@@ -1687,26 +1971,13 @@ exports[`Core: Grid ResponsiveClasses renders 1`] = `
 
 exports[`Core: Grid renders 1`] = `
 <DocContainer
-  docToc={true}
+  doctoc={true}
 >
-  <p
-    className="lead"
-  >
-    Use our powerful mobile-first flexbox grid to build layouts of all shapes and sizes thanks to a twelve column system, six default responsive tiers, and dozens of predefined classes.
-  </p>
-  <p>
-    The grid system is heavily based on Bootstrap
-    '
-    s grid. Click 
-    <a
-      href="http://getbootstrap.com/docs/4.1/layout/grid/"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      here
-    </a>
-     to read more about it.
-  </p>
+  <Intro />
+  <GridSystem />
+  <GridTypes />
+  <OffsettingGrid />
+  <Breakpoints />
   <HowItWorks />
   <GridOptions />
   <AutoLayoutColumns />
