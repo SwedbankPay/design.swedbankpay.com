@@ -936,7 +936,7 @@ exports[`Core: Grid GridSystem renders 1`] = `
   <div>
     <article>
       <img
-        alt=""
+        alt="Illustration of Columns"
         src="/TEST/img/documentation/grid/columns.png"
       />
       <h3>
@@ -954,7 +954,7 @@ exports[`Core: Grid GridSystem renders 1`] = `
     </article>
     <article>
       <img
-        alt=""
+        alt="Illustration of column spans"
         src="/TEST/img/documentation/grid/column-span.png"
       />
       <h3>
@@ -972,7 +972,7 @@ exports[`Core: Grid GridSystem renders 1`] = `
     </article>
     <article>
       <img
-        alt=""
+        alt="Illustration of Gutters"
         src="/TEST/img/documentation/grid/gutters.png"
       />
       <h3>
@@ -990,7 +990,7 @@ exports[`Core: Grid GridSystem renders 1`] = `
     </article>
     <article>
       <img
-        alt=""
+        alt="Illustration of margins"
         src="/TEST/img/documentation/grid/margins.png"
       />
       <h3>
@@ -1018,7 +1018,7 @@ exports[`Core: Grid GridTypes renders 1`] = `
   <div>
     <article>
       <img
-        alt=""
+        alt="Illustration of fluid"
         src="/TEST/img/documentation/grid/fluid.png"
       />
       <h3>
@@ -1030,7 +1030,7 @@ exports[`Core: Grid GridTypes renders 1`] = `
     </article>
     <article>
       <img
-        alt=""
+        alt="Illustration of fixed"
         src="/TEST/img/documentation/grid/fixed.png"
       />
       <h3>
@@ -1373,7 +1373,7 @@ exports[`Core: Grid OffsettingGrid renders 1`] = `
   <div>
     <article>
       <img
-        alt=""
+        alt="Grid offset with left side menu"
         className="mb-3"
         src="/TEST/img/documentation/grid/grid-offset-left.png"
       />
@@ -1383,7 +1383,7 @@ exports[`Core: Grid OffsettingGrid renders 1`] = `
     </article>
     <article>
       <img
-        alt=""
+        alt="Grid offset with menu on each side"
         className="mb-3"
         src="/TEST/img/documentation/grid/grid-offset-both-sides.png"
       />
