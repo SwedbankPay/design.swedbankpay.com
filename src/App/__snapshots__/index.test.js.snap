@@ -371,6 +371,11 @@ exports[`Main: App renders 1`] = `
                   "redirect": "/utilities/colors",
                   "routes": Array [
                     Object {
+                      "componentPath": "utilities/Utilities",
+                      "path": "/utilities/utilities",
+                      "title": "Utilities",
+                    },
+                    Object {
                       "componentPath": "utilities/Borders",
                       "path": "/utilities/borders",
                       "title": "Borders",
