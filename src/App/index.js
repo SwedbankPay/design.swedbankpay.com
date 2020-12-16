@@ -70,11 +70,9 @@ class App extends Component {
                 <ScrollToTopComponent>
                     <AppHeader />
                     <div className="documentation">
-                        <div className="row">
-                            <div className="col-xxl-2 col-lg-3 d-none d-lg-block">
-                                <SelectPanel id="doc-sidebar" routes={routes} />
-                            </div>
-                            <main className="doc-view col-xxl-10 col-lg-9">
+                        <div className="d-md-flex">
+                            <SelectPanel id="doc-sidebar" routes={routes} />
+                            <main className="doc-view">
                                 <Suspense fallback={<LoadingComponent />}>
                                     <Switch>
                                         <Route exact path="/" component={Home} />

@@ -4,6 +4,9 @@ module.exports = [
      */
     {
         title: "Core",
+        icon: {
+            name: "palette"
+        },
         path: "/core",
         redirect: "/core/color",
         appFolder: "Core",

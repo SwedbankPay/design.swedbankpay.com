@@ -1,6 +1,10 @@
 module.exports = [
     {
         title: "Getting Started",
+        icon: {
+            name: "wb_incandescent",
+            rotated: true
+        },
         path: "/getting-started",
         redirect: "/getting-started/introduction",
         appFolder: "GettingStarted",

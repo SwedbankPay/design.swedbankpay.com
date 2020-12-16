@@ -5,6 +5,9 @@ module.exports = [
      */
     {
         title: "Components",
+        icon: {
+            name: "category"
+        },
         path: "/components",
         redirect: "/components/introduction",
         appFolder: "ComponentsDocumentation",

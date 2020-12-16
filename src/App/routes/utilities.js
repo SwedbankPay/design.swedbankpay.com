@@ -1,6 +1,9 @@
 module.exports = [
     {
         title: "Utilities",
+        icon: {
+            name: "build"
+        },
         path: "/utilities",
         redirect: "/utilities/colors",
         appFolder: "Utilities",

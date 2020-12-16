@@ -21,6 +21,12 @@ exports[`Utilities: RenderPage renders 1`] = `
       />
       <RenderRoutes
         appFolder="GettingStarted"
+        icon={
+          Object {
+            "name": "wb_incandescent",
+            "rotated": true,
+          }
+        }
         key="renderRoutes_Getting Started"
         path="/getting-started"
         redirect="/getting-started/introduction"
@@ -47,6 +53,11 @@ exports[`Utilities: RenderPage renders 1`] = `
       />
       <RenderRoutes
         appFolder="Core"
+        icon={
+          Object {
+            "name": "palette",
+          }
+        }
         key="renderRoutes_Core"
         path="/core"
         redirect="/core/color"
@@ -121,6 +132,11 @@ exports[`Utilities: RenderPage renders 1`] = `
       />
       <RenderRoutes
         appFolder="ComponentsDocumentation"
+        icon={
+          Object {
+            "name": "category",
+          }
+        }
         key="renderRoutes_Components"
         path="/components"
         redirect="/components/introduction"
@@ -371,6 +387,11 @@ exports[`Utilities: RenderPage renders 1`] = `
       />
       <RenderRoutes
         appFolder="Utilities"
+        icon={
+          Object {
+            "name": "build",
+          }
+        }
         key="renderRoutes_Utilities"
         path="/utilities"
         redirect="/utilities/colors"

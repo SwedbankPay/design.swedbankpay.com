@@ -172,16 +172,16 @@ describe("scripts: sidebar", () => {
             expect(sidebar.initScrollListener).toBeInstanceOf(Function);
         });
 
-        /* it("invokes removeScrollListener when initiated", () => {
-            const id = "sidebar-1";
-            const contentId = "contentId";
+        // it("invokes removeScrollListener when initiated", () => {
+        //     const id = "sidebar-1";
+        //     const contentId = "contentId";
 
-            sidebar.removeScrollListener = jest.fn();
+        //     sidebar.removeScrollListener = jest.fn();
 
-            sidebar.initScrollListener(id, contentId);
+        //     sidebar.initScrollListener(id, contentId);
 
-            expect(sidebar.removeScrollListener).toHaveBeenCalledWith(id, contentId);
-        }); */
+        //     expect(sidebar.removeScrollListener).toHaveBeenCalledWith(id, contentId);
+        // });
 
         it("warns user when no content with contentId is found", () => {
             const id = "sidebar-1";
