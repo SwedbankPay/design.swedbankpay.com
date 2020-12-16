@@ -255,6 +255,12 @@
         .dg-current-version {
             font-size: 0.75rem;
         }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
     }
 
     .doc-card {
@@ -685,6 +691,24 @@
         font-style: italic;
         font-size: 0.875rem;
     }
+
+    .brand-quote {
+        display: flex;
+
+        span {
+            color: @brand-primary;
+            font-family: @brand-headline;
+            font-size: 3.5rem;
+            margin-right: 1rem;
+        }
+
+        p {
+            align-self: flex-end;
+            font-size: 1.25rem;
+            max-width: 41.875rem;
+        }
+    }
+    
 }
 
 @media screen and (max-width: @screen-xs-max) {
