@@ -256,6 +256,7 @@
             font-size: 0.75rem;
         }
 
+<<<<<<< HEAD
         .component-overview {
             display: flex;
             flex-wrap: wrap;
@@ -275,6 +276,24 @@
 
         section {
             margin-bottom: 3rem;
+=======
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+
+            &.hide-arrow {
+                .cards {
+                    i:last-child {
+                        display: none;
+                    }
+
+                    &:hover i:last-child {
+                        display: block;
+                    }
+                }
+            }
+>>>>>>> f30123c2aa (implement components overview)
         }
     }
 
