@@ -41,7 +41,7 @@ const Home = () => {
                         </a>
                     </div>
                     <div className="col-12 col-sm-6 col-lg-3 d-flex">
-                        <a href="#" className="cards cards-primary">
+                        <Link to="/core/identity" className="cards cards-primary">
                             <div className="cards-icon">
                                 <i className="material-icons-outlined">palette</i>
                             </div>
@@ -50,10 +50,10 @@ const Home = () => {
                                 <span>Learn about our fundamental principles</span>
                             </div>
                             <i className="material-icons">arrow_forward</i>
-                        </a>
+                        </Link>
                     </div>
                     <div className="col-12 col-sm-6 col-lg-3 d-flex">
-                        <a href="#" className="cards cards-primary">
+                        <Link to="/components/introduction" className="cards cards-primary">
                             <div className="cards-icon">
                                 <i className="material-icons-outlined">category</i>
                             </div>
@@ -62,10 +62,10 @@ const Home = () => {
                                 <span>Find all currently available components here</span>
                             </div>
                             <i className="material-icons">arrow_forward</i>
-                        </a>
+                        </Link>
                     </div>
                     <div className="col-12 col-sm-6 col-lg-3 d-flex">
-                        <a href="#" className="cards cards-primary">
+                        <Link to="/utilities/utilities" className="cards cards-primary">
                             <div className="cards-icon">
                                 <i className="material-icons-outlined">build</i>
                             </div>
@@ -74,7 +74,7 @@ const Home = () => {
                                 <span>See all available CSS classes</span>
                             </div>
                             <i className="material-icons">arrow_forward</i>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -106,38 +106,38 @@ const Home = () => {
                 </div>
 
                 <div className="row border-bottom pb-2 mt-4">
-                    <div className="dg-version-title px-0 pb-2">V 1.11.0</div>
+                    <div className="dg-version-title px-0 pb-2">V 5.0.0</div>
                     <div className="dg-changelog-description px-0">
                         <span className="h4">Major overhaul of the Developer Portal’s design ♥️</span>
                         <p className="mt-2">
-                        We’re so proud to announce that after many months of hard work we have finally launched our first iteration of re-design of the Developer Portal. The focus of this big update has been focused on improving the user experience, visual presentation, navigation and page structure of the portal.
+                        Merry Christmas everyone! We have a brand new look for the Design Guide landing page, a new left side menu updated to suit the branding of Swedbank Pay. We have finally added both “Get started” and “Identity” and re-written all the related pages. 
                         </p>
                     </div>
                 </div>
                 <div className="row border-bottom pb-2 mt-4">
-                    <div className="dg-version-title px-0 pb-2">V 1.10.6</div>
+                    <div className="dg-version-title px-0 pb-2">V 4.8.1</div>
                     <div className="dg-changelog-description px-0">
-                        <span className="h4">New improvements to reducing 404 page sequence.</span>
+                        <span className="h4">Update the actual logotype and guidelines.</span>
                         <p className="mt-2">
-                        We corrected some page frequencies in 404 pages, so that you hopefully will face this issue less from now on!
+                        The journey has finally begun! We’re reconsidering the structure of the Design Guide, starting off with updating and moving ‘Logotype guidelines’ under ‘Resources’ to ‘Core’. We’ve also added the new logotype and guidelines on how to use it. 
                         </p>
                     </div>
                 </div>
                 <div className="row border-bottom pb-2 mt-4">
-                    <div className="dg-version-title px-0 pb-2">V 1.10.5</div>
+                    <div className="dg-version-title px-0 pb-2">V 4.8.0</div>
                     <div className="dg-changelog-description px-0">
-                        <span className="h4">Our Swift API and Android API is now live!</span>
+                        <span className="h4">Major component updates</span>
                         <p className="mt-2">
-                        We are thrilled to announce the long awaited release of our <a href="#">Swift</a> and <a href="#">Android</a> API document pages, now you can easily see how to integrate it into your desired systems.
+                        Is it Christmas already, you might wonder? No, we’ve just worked really hard and are excited to show you all new component updates. New Cards, Slabs, Status, Tooltips, destructive buttons for everyone. But we’ve also updated and fixed some stuff that was already there. Check out the repository for full overview!
                         </p>
                     </div>
                 </div>
                 <div className="row border-bottom pb-2 mt-4">
-                    <div className="dg-version-title px-0 pb-2">V 1.10.3</div>
+                    <div className="dg-version-title px-0 pb-2">V 4.7.0</div>
                     <div className="dg-changelog-description px-0">
-                        <span className="h4">Small bugfixes for the card components has been released.</span>
+                        <span className="h4">Introducing the the new codeview component</span>
                         <p className="mt-2">
-                        We are thrilled to announce the long awaited release of our <a href="#">Swift</a> and <a href="#">Android</a> API document pages, now you can easily see how to integrate it into your desired systems.
+                        We would like to introduce a new way to interact with our components in Design Guide through codeview. Developers can now dynamically adjust the component to fit their needs and generate code based on the adjustments. Besides that we have also fixed many bugs and made adjustment according to feedback!
                         </p>
                     </div>
                 </div>
