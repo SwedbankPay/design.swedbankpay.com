@@ -124,3 +124,5 @@ const Introduction = () => (
 );
 
 export default Introduction;
+
+export { GetStarted, WhatIsDG, UsingDG, OpenSimpleCaring };
