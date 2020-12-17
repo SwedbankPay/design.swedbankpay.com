@@ -61,13 +61,6 @@ const MenuOverview = () => (
             </div>
             <i className="material-icons material-icons-outlined">arrow_forward</i>
         </Link>
-        <Link to="/components/checkbox" className="cards cards-primary cards-wide m-0">
-            <div className="cards-content flex-row align-items-center m-0 ">
-                <i className="material-icons material-icons-outlined mr-3">check_box</i>
-                <span className="h3 m-0">Checkbox</span>
-            </div>
-            <i className="material-icons material-icons-outlined">arrow_forward</i>
-        </Link>
         <Link to="/components/code-tags" className="cards cards-primary cards-wide m-0">
             <div className="cards-content flex-row align-items-center m-0 ">
                 <i className="material-icons material-icons-outlined mr-3">code</i>
@@ -86,13 +79,6 @@ const MenuOverview = () => (
             <div className="cards-content flex-row align-items-center m-0 ">
                 <i className="material-icons material-icons-outlined mr-3">picture_in_picture</i>
                 <span className="h3 m-0">Dialog</span>
-            </div>
-            <i className="material-icons material-icons-outlined">arrow_forward</i>
-        </Link>
-        <Link to="/components/dropdown" className="cards cards-primary cards-wide m-0">
-            <div className="cards-content flex-row align-items-center m-0 ">
-                <i className="material-icons material-icons-outlined mr-3">arrow_drop_down_circle</i>
-                <span className="h3 m-0">Dropdown</span>
             </div>
             <i className="material-icons material-icons-outlined">arrow_forward</i>
         </Link>
@@ -145,10 +131,10 @@ const MenuOverview = () => (
             </div>
             <i className="material-icons material-icons-outlined">arrow_forward</i>
         </Link>
-        <Link to="/components/radiobutton" className="cards cards-primary cards-wide m-0">
+        <Link to="/components/forms" className="cards cards-primary cards-wide m-0">
             <div className="cards-content flex-row align-items-center m-0 ">
-                <i className="material-icons material-icons-outlined mr-3">radio_button_checked</i>
-                <span className="h3 m-0">Radio Button</span>
+                <i className="material-icons material-icons-outlined mr-3">text_snippet</i>
+                <span className="h3 m-0">Forms</span>
             </div>
             <i className="material-icons material-icons-outlined">arrow_forward</i>
         </Link>
@@ -173,13 +159,6 @@ const MenuOverview = () => (
             </div>
             <i className="material-icons material-icons-outlined">arrow_forward</i>
         </Link>
-        <Link to="/components/textfields" className="cards cards-primary cards-wide m-0">
-            <div className="cards-content flex-row align-items-center m-0 ">
-                <i className="material-icons material-icons-outlined mr-3">text_fields</i>
-                <span className="h3 m-0">Text Fields</span>
-            </div>
-            <i className="material-icons material-icons-outlined">arrow_forward</i>
-        </Link>
         <Link to="/components/tables" className="cards cards-primary cards-wide m-0">
             <div className="cards-content flex-row align-items-center m-0 ">
                 <i className="material-icons material-icons-outlined mr-3">view_list</i>
@@ -191,13 +170,6 @@ const MenuOverview = () => (
             <div className="cards-content flex-row align-items-center m-0 ">
                 <i className="material-icons material-icons-outlined mr-3">picture_in_picture</i>
                 <span className="h3 m-0">Toast</span>
-            </div>
-            <i className="material-icons material-icons-outlined">arrow_forward</i>
-        </Link>
-        <Link to="/components/toggle" className="cards cards-primary cards-wide m-0">
-            <div className="cards-content flex-row align-items-center m-0 ">
-                <i className="material-icons material-icons-outlined mr-3">toggle_off</i>
-                <span className="h3 m-0">Toggle</span>
             </div>
             <i className="material-icons material-icons-outlined">arrow_forward</i>
         </Link>
