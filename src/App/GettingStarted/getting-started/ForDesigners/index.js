@@ -87,7 +87,7 @@ const DiscoverMore = () => (
 
 const ForDevelopers = () => (
     <DocContainer>
-        <p className="lead">We are thrilled to have you onboard in the Swedbank Pay Design team. In order to get started designing with us we have prepared a get started guide to help you understand the way our design system and this Design Guide works. Enjoy!</p>
+        <p className="lead mb-5">We are thrilled to have you onboard in the Swedbank Pay Design team. In order to get started designing with us we have prepared a get started guide to help you understand the way our design system and this Design Guide works. Enjoy!</p>
         <NeedToHave />
         <NeedToKnow />
         <Contributing />

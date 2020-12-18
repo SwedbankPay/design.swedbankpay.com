@@ -9,29 +9,25 @@ const GetStarted = () => (
     <section>
         <p>Below we have compiled a list of things you need to have and know in order to get started with our design guide.</p>
 
-        <div className="d-sm-flex">
-            <div className="col-sm-6 col-12">
-                <Link to="/" className="cards cards-primary">
-                    <div className="cards-icon">
-                        <i className="material-icons">code</i>
-                    </div>
-                    <div className="cards-content">
-                        <span className="h4">For developers</span><span>Learn more about how to setup and use our system.</span>
-                    </div>
-                    <i className="material-icons">arrow_forward</i>
-                </Link>
-            </div>
-            <div className="col-sm-6 col-12">
-                <Link to="/" className="cards cards-primary">
-                    <div className="cards-icon">
-                        <i className="material-icons">brush</i>
-                    </div>
-                    <div className="cards-content">
-                        <span className="h4">For designers</span><span>Get ready to use the Design Guide when designing in Swedbank Pay.</span>
-                    </div>
-                    <i className="material-icons">arrow_forward</i>
-                </Link>
-            </div>
+        <div className="overview-grid">
+            <Link to="/" className="cards cards-primary">
+                <div className="cards-icon">
+                    <i className="material-icons">code</i>
+                </div>
+                <div className="cards-content">
+                    <span className="h4">For developers</span><span>Learn more about how to setup and use our system.</span>
+                </div>
+                <i className="material-icons">arrow_forward</i>
+            </Link>
+            <Link to="/" className="cards cards-primary">
+                <div className="cards-icon">
+                    <i className="material-icons">brush</i>
+                </div>
+                <div className="cards-content">
+                    <span className="h4">For designers</span><span>Get ready to use the Design Guide when designing in Swedbank Pay.</span>
+                </div>
+                <i className="material-icons">arrow_forward</i>
+            </Link>
         </div>
     </section>
 );
