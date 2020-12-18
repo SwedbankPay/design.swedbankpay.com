@@ -110,7 +110,7 @@ const Home = () => {
                     <div className="dg-changelog-description px-0">
                         <span className="h4">Major overhaul of the Developer Portal’s design ♥️</span>
                         <p className="mt-2">
-                        Merry Christmas everyone! We have a brand new look for the Design Guide landing page, a new left side menu updated to suit the branding of Swedbank Pay. We have finally added both “Get started” and “Identity” and re-written all the related pages. 
+                        Merry Christmas everyone! We have a brand new look for the Design Guide landing page, a new left side menu updated to suit the branding of Swedbank Pay. We have finally added both “Get started” and “Identity” and re-written all the related pages.
                         </p>
                     </div>
                 </div>
@@ -119,7 +119,7 @@ const Home = () => {
                     <div className="dg-changelog-description px-0">
                         <span className="h4">Update the actual logotype and guidelines.</span>
                         <p className="mt-2">
-                        The journey has finally begun! We’re reconsidering the structure of the Design Guide, starting off with updating and moving ‘Logotype guidelines’ under ‘Resources’ to ‘Core’. We’ve also added the new logotype and guidelines on how to use it. 
+                        The journey has finally begun! We’re reconsidering the structure of the Design Guide, starting off with updating and moving ‘Logotype guidelines’ under ‘Resources’ to ‘Core’. We’ve also added the new logotype and guidelines on how to use it.
                         </p>
                     </div>
                 </div>
