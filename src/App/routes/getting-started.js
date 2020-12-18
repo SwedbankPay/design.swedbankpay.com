@@ -19,21 +19,6 @@ module.exports = [
                 title: "For designers",
                 path: "/getting-started/for-designers",
                 componentPath: "getting-started/ForDesigners"
-            },
-            {
-                title: "Browser Support",
-                path: "/getting-started/browser-support",
-                componentPath: "getting-started/BrowserSupport"
-            },
-            {
-                title: "Contributing",
-                path: "/getting-started/contributing",
-                componentPath: "getting-started/Contributing"
-            },
-            {
-                title: "JavaScript",
-                path: "/getting-started/javascript",
-                componentPath: "getting-started/Javascript"
             }
         ]
     }
