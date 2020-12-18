@@ -1,37 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GettingStarted: Introduction Css renders 1`] = `
-<Fragment>
-  <h2
-    id="css"
-  >
-    CSS
-  </h2>
-  <p>
-    Copy-paste the stylesheet 
-    <CodeTags
-      code="<link>"
-      type="primary"
-    />
-     into your 
-    <CodeTags
-      code="<head>"
-      type="primary"
-    />
-     before all other stylesheets to load our CSS.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-  >
-    <link
-      href="https://design.TESTBRAND.com/TEST/styles/dg-style.css"
-      rel="stylesheet"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
 exports[`GettingStarted: Introduction GetStarted renders 1`] = `
 <section>
   <p>
@@ -114,37 +82,6 @@ exports[`GettingStarted: Introduction GetStarted renders 1`] = `
 </section>
 `;
 
-exports[`GettingStarted: Introduction JavaScript renders 1`] = `
-<Fragment>
-  <h2
-    id="javascript"
-  >
-    JavaScript
-  </h2>
-  <p>
-    Many of our components require the use of JavaScript to function. Place the following 
-    <CodeTags
-      code="<script>"
-      type="primary"
-    />
-     tag near the end of your pages, right before the closing 
-    <CodeTags
-      code="</body>"
-      type="primary"
-    />
-     tag, to enable them.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-  >
-    <script
-      src="https://design.TESTBRAND.com/TEST/scripts/dg.js"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
 exports[`GettingStarted: Introduction OpenSimpleCaring renders 1`] = `
 <section>
   <h2>
@@ -168,21 +105,6 @@ exports[`GettingStarted: Introduction OpenSimpleCaring renders 1`] = `
     src="/TEST/img/documentation/introduction/pyramid.png"
   />
 </section>
-`;
-
-exports[`GettingStarted: Introduction QuickStart renders 1`] = `
-<Fragment>
-  <h2
-    id="quick-start"
-  >
-    Quick start
-  </h2>
-  <p>
-    To quickly add the 
-    TESTBRAND
-     DesignGuide to your project, include the snippets below in your project.
-  </p>
-</Fragment>
 `;
 
 exports[`GettingStarted: Introduction UsingDG renders 1`] = `
@@ -360,18 +282,15 @@ exports[`GettingStarted: Introduction WhatIsDG renders 1`] = `
 `;
 
 exports[`GettingStarted: Introduction renders 1`] = `
-<DocContainer
-  docToc={true}
->
+<DocContainer>
   <p
     className="lead"
   >
-    Getting started with the 
-    TESTBRAND
-     DesignGuide.
+    We are so glad to see that you are interested in learning more about the Swedbank Pay Design Guide. We know that it can be daunting to start with something new and complex. But don’t worry, we have got what you need!
   </p>
-  <QuickStart />
-  <Css />
-  <JavaScript />
+  <GetStarted />
+  <WhatIsDG />
+  <UsingDG />
+  <OpenSimpleCaring />
 </DocContainer>
 `;

@@ -11,6 +11,11 @@ module.exports = [
                 componentPath: "getting-started/Introduction"
             },
             {
+                title: "For developers",
+                path: "/getting-started/for-developers",
+                componentPath: "getting-started/ForDevelopers"
+            },
+            {
                 title: "Browser Support",
                 path: "/getting-started/browser-support",
                 componentPath: "getting-started/BrowserSupport"
