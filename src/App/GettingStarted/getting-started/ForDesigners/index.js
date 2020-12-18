@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocContainer } from "@docutils";
-import CodeTags from "@components/CodeTags";
+import { DocContainer } from "@docutils";
 
 const basename = process.env.basename;
 
@@ -10,7 +9,7 @@ const NeedToHave = () => (
     <section>
         <h2>What you need to have</h2>
         <p>Here are some things you need to have access to in order to get up to speed – our Figma project and the Swedbank Pay fonts.</p>
-        
+
         <h3>Design tools</h3>
         <p>At Swedbank Pay Design we use Figma for all our design needs, it is an online design and prototyping tool but we recommend that you download the application for the full experience. Everything you need to know about how we work in Figma is documented in our project and can be accessed through the Onboarding file. Please contact one of our design guide team members if you need any help.</p>
         <p>If you need access to the project contact you manager or write in the Slack channel <strong>#design-guide-general.</strong></p>
@@ -22,7 +21,7 @@ const NeedToHave = () => (
             <i className="material-icons" aria-hidden="true">launch</i>
             <span className="ml-2">Read more about Figma</span>
         </a>
-        
+
         <h3>Typefaces & fonts</h3>
         <p>We use our own customized typefaces & fonts. To access the these, please, head over to the <Link to="/core/typography">Typography section</Link>. There you can also find guidelines on how to use all the different typefaces.  </p>
     </section>

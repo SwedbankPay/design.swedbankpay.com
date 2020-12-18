@@ -6,78 +6,70 @@ exports[`GettingStarted: Introduction GetStarted renders 1`] = `
     Below we have compiled a list of things you need to have and know in order to get started with our design guide.
   </p>
   <div
-    className="d-sm-flex"
+    className="overview-grid"
   >
-    <div
-      className="col-sm-6 col-12"
+    <Link
+      className="cards cards-primary"
+      to="/"
     >
-      <Link
-        className="cards cards-primary"
-        to="/"
+      <div
+        className="cards-icon"
       >
-        <div
-          className="cards-icon"
-        >
-          <i
-            className="material-icons"
-          >
-            code
-          </i>
-        </div>
-        <div
-          className="cards-content"
-        >
-          <span
-            className="h4"
-          >
-            For developers
-          </span>
-          <span>
-            Learn more about how to setup and use our system.
-          </span>
-        </div>
         <i
           className="material-icons"
         >
-          arrow_forward
+          code
         </i>
-      </Link>
-    </div>
-    <div
-      className="col-sm-6 col-12"
-    >
-      <Link
-        className="cards cards-primary"
-        to="/"
+      </div>
+      <div
+        className="cards-content"
       >
-        <div
-          className="cards-icon"
+        <span
+          className="h4"
         >
-          <i
-            className="material-icons"
-          >
-            brush
-          </i>
-        </div>
-        <div
-          className="cards-content"
-        >
-          <span
-            className="h4"
-          >
-            For designers
-          </span>
-          <span>
-            Get ready to use the Design Guide when designing in Swedbank Pay.
-          </span>
-        </div>
+          For developers
+        </span>
+        <span>
+          Learn more about how to setup and use our system.
+        </span>
+      </div>
+      <i
+        className="material-icons"
+      >
+        arrow_forward
+      </i>
+    </Link>
+    <Link
+      className="cards cards-primary"
+      to="/"
+    >
+      <div
+        className="cards-icon"
+      >
         <i
           className="material-icons"
         >
-          arrow_forward
+          brush
         </i>
-      </Link>
-    </div>
+      </div>
+      <div
+        className="cards-content"
+      >
+        <span
+          className="h4"
+        >
+          For designers
+        </span>
+        <span>
+          Get ready to use the Design Guide when designing in Swedbank Pay.
+        </span>
+      </div>
+      <i
+        className="material-icons"
+      >
+        arrow_forward
+      </i>
+    </Link>
   </div>
 </section>
 `;
