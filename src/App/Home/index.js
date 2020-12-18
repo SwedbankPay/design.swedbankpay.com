@@ -29,7 +29,7 @@ const Home = () => {
 
                 <div className="row dg-cards-container mt-4">
                     <div className="col-12 col-sm-6 col-lg-3 d-flex">
-                        <a href="#" className="cards cards-primary">
+                        <Link to="/getting-started/introduction" className="cards cards-primary">
                             <div className="cards-icon">
                                 <i className="material-icons-outlined" style={{ transform: "rotate(180deg)" }}>wb_incandescent</i>
                             </div>
@@ -38,7 +38,7 @@ const Home = () => {
                                 <span>Learn more about how to setup and use our system</span>
                             </div>
                             <i className="material-icons">arrow_forward</i>
-                        </a>
+                        </Link>
                     </div>
                     <div className="col-12 col-sm-6 col-lg-3 d-flex">
                         <Link to="/core/identity" className="cards cards-primary">
