@@ -37,6 +37,11 @@ exports[`Utilities: RenderPage renders 1`] = `
               "title": "For developers",
             },
             Object {
+              "componentPath": "getting-started/ForDesigners",
+              "path": "/getting-started/for-designers",
+              "title": "For designers",
+            },
+            Object {
               "componentPath": "getting-started/BrowserSupport",
               "path": "/getting-started/browser-support",
               "title": "Browser Support",
