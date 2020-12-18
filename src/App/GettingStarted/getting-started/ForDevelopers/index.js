@@ -147,7 +147,7 @@ const DiscoverMore = () => (
 
 const ForDevelopers = () => (
     <DocContainer>
-        <p className="lead">To get you up and running with the Swedbank Pay Design Guide as quickly as possible, we have prepared this section showing you how to install it and what you will need to know in order to contribute to the project!</p>
+        <p className="lead mb-5">To get you up and running with the Swedbank Pay Design Guide as quickly as possible, we have prepared this section showing you how to install it and what you will need to know in order to contribute to the project!</p>
         <Installation/>
         <GridAndBreakpoints />
         <Contributing />
