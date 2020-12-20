@@ -154,7 +154,7 @@ class Sidebar2 {
         );
     }
 
-    _contentScrollListener (content, headers) {
+    _contentScrollListener (headers) {
 
         return (
             () => {
@@ -163,7 +163,7 @@ class Sidebar2 {
                 const leaves = activeSecondaryNavLi.querySelectorAll(SELECTORS.NAVLEAF);
 
                 if (scrollNumber === -1) {
-                    this._setActiveStatus(leaves[0], SELECTORS.NAVLEAF);
+                    leaves[0] && this._setActiveStatus(leaves[0], SELECTORS.NAVLEAF);
                 } else {
                     this._setActiveStatus(leaves[scrollNumber], SELECTORS.NAVLEAF);
                 }
@@ -258,13 +258,13 @@ const initScrollListener = (id, contentId, headerType) => {
 
         const headers = content.querySelectorAll(`${headerType}[id]`);
 
-        window.addEventListener("scroll", sidebar._contentScrollListener(content, headers));
+        window.addEventListener("scroll", sidebar._contentScrollListener(headers));
 
         const sidebarElement = document.getElementById(id);
         const leaves = sidebarElement.querySelector(`.secondary-nav-li${SELECTORS.ACTIVE}`).querySelectorAll(SELECTORS.NAVLEAF);
 
         [...leaves].map((leaf, i) => leaf.addEventListener("click", sidebar._navLeafScrollListener(headers[i])));
-        sidebar._contentScrollListener(content, headers)();
+        sidebar._contentScrollListener(headers)();
     } else {
         console.warn(`sidebar.initScrollListener: Cannot find main content with id ${contentId}`);
     }

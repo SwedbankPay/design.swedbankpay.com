@@ -14,49 +14,49 @@ const basename = process.env.basename;
 
 const { sidebar, topbar } = window.dg;
 
-class NavGroup extends Component {
-    constructor (props) {
-        super(props);
-        this.state = {
-            isActive: props.location.pathname.includes(props.route.path)
-        };
-    }
+// class NavGroup extends Component {
+//     constructor (props) {
+//         super(props);
+//         this.state = {
+//             isActive: props.location.pathname.includes(props.route.path)
+//         };
+//     }
 
-    componentDidMount () {
-        const activeLeaf = this.props.route.routes.map((childRoute, i) => ({ i,
-            childRoute: childRoute.path })).filter(childRouteObject => this.props.location.pathname.includes(childRouteObject.childRoute));
+//     componentDidMount () {
+//         const activeLeaf = this.props.route.routes.map((childRoute, i) => ({ i,
+//             childRoute: childRoute.path })).filter(childRouteObject => this.props.location.pathname.includes(childRouteObject.childRoute));
 
-        this.state.isActive && activeLeaf[0] && sidebar.setActiveState(this.props.sidebarId, this.props.index, null, activeLeaf[0].i);
-    }
+//         this.state.isActive && activeLeaf[0] && sidebar.setActiveState(this.props.sidebarId, this.props.index, null, activeLeaf[0].i);
+//     }
 
-    toggleActive () {
-        this.setState({ isActive: !this.state.isActive });
-    }
+//     toggleActive () {
+//         this.setState({ isActive: !this.state.isActive });
+//     }
 
-    shouldComponentUpdate (nextProps, nextState) {
-        return this.state !== nextState;
-    }
+//     shouldComponentUpdate (nextProps, nextState) {
+//         return this.state !== nextState;
+//     }
 
-    render () {
-        const { title, routes } = this.props.route;
+//     render () {
+//         const { title, routes } = this.props.route;
 
-        return (
-            <li className="nav-group">
-                <div className="nav-group-heading">
-                    <i className="material-icons" aria-hidden="true"onClick={() => this.toggleActive()}>arrow_right</i>
-                    <span>{title}</span>
-                </div>
-                <ul className="nav-ul">
-                    {routes.map((childRoute, i) => (
-                        <li key={`nav_leaf_${i}`} className="nav-leaf">
-                            <NavLink activeClassName="active" to={childRoute.path}>{childRoute.title}</NavLink>
-                        </li>
-                    ))}
-                </ul>
-            </li>
-        );
-    }
-}
+//         return (
+//             <li className="nav-group">
+//                 <div className="nav-group-heading">
+//                     <i className="material-icons" aria-hidden="true"onClick={() => this.toggleActive()}>arrow_right</i>
+//                     <span>{title}</span>
+//                 </div>
+//                 <ul className="nav-ul">
+//                     {routes.map((childRoute, i) => (
+//                         <li key={`nav_leaf_${i}`} className="nav-leaf">
+//                             <NavLink activeClassName="active" to={childRoute.path}>{childRoute.title}</NavLink>
+//                         </li>
+//                     ))}
+//                 </ul>
+//             </li>
+//         );
+//     }
+// }
 
 class SelectPanel extends Component {
 
@@ -97,49 +97,6 @@ class SelectPanel extends Component {
     render () {
         return (
             <div id={this.props.id} className="sidebar-2">
-                {/* A fully functional search box will be added later. */}
-                {/* <SearchBox routes={this.props.routes} /> */}
-                {/* <nav className="sidebar-nav">
-                    <a href="/" className="sidebar-top">{"\n"}
-                        <img className="d-none d-lg-block logotype-vertical logotype-sm" src={`${basename}img/${brand}-logo-v.svg`} alt={`${brand}-logo`} />{"\n"}
-                        <div className="sidebar-version">
-                            <div className="sidebar-version-header">
-                                Design Guide
-                            </div>
-                            <small>
-                                Version {process.env.version || pkg.version}
-                            </small>
-                        </div>
-                    </a>
-                    <ul className="main-nav-ul">
-                        {this.props.routes.map((route, i) => {
-                            const NavGroupWithRouter = withRouter(NavGroup);
-
-                            return <NavGroupWithRouter sidebarId={this.props.id} key={`nav_group_${i}`} route={route} index={i} />;
-                        })}
-                    </ul>
-                    <div className="sidebar-contact">
-                        <a href={`https://github.com/${brand}/design.${brand}.com/releases/tag/${pkg.version}`} target="_blank" rel="noopener noreferrer">
-                            <GithubLogo />
-                            <span>
-                                Changelog
-                            </span>
-                        </a>
-                        <a href={`https://github.com/${brand}/design.${brand}.com`} target="_blank" rel="noopener noreferrer">
-                            <GithubLogo />
-                            <span>
-                                Github repository
-                            </span>
-                        </a>
-                        <a href="https://payex.slack.com/messages/C0L3W8B2S/" target="_blank" rel="noopener noreferrer">
-                            <SlackLogo />
-                            <span>
-                                Give us feedback on Slack
-                            </span>
-                        </a>
-                    </div>
-                </nav> */}
-
                 <nav className="sidebar-main-nav">
                     <div className="sidebar-logo">
                         <LogotypeComponent src={`${basename}img/swedbankpay-logo-v.svg`} size="md" alt="Swedbank Pay vertical logo" type="vertical" />
@@ -151,7 +108,7 @@ class SelectPanel extends Component {
                                 Welcome
                             </NavLink>
                         </li>
-                        {this.props.routes.map(route => <li key={route.name}
+                        {this.props.routes.map(route => <li key={route.title}
                             className={`main-nav-li${this._activeSecondaryNav(route.path) ? " active" : ""}`}>
                             <NavLink activeClassName="active" to={route.path}>
                                 <i className={`material-icons-outlined${route.icon.rotated ? " rotated" : ""}`}>{route.icon.name}</i>
