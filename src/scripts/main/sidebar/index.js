@@ -140,7 +140,40 @@ class Sidebar2 {
                 activeElement === element && !element.classList.contains("leaf") && this._closeChildElements(activeElement);
             }
         });
+    }
 
+    _navLeafScrollListener (header) {
+        return (
+            () => {
+                window.scrollTo({
+                    top: header.offsetTop,
+                    left: 0,
+                    behavior: "instant"
+                });
+            }
+        );
+    }
+
+    _contentScrollListener (content, headers) {
+
+        return (
+            () => {
+                const scrollNumber = [...headers].filter(header => header.offsetTop <= window.pageYOffset).length - 1;
+                const activeSecondaryNavLi = this.el.querySelector(`.secondary-nav-li${SELECTORS.ACTIVE}`);
+                const leaves = activeSecondaryNavLi.querySelectorAll(SELECTORS.NAVLEAF);
+
+                if (scrollNumber === -1) {
+                    this._setActiveStatus(leaves[0], SELECTORS.NAVLEAF);
+                } else {
+                    this._setActiveStatus(leaves[scrollNumber], SELECTORS.NAVLEAF);
+                }
+
+                if ((window.innerHeight + window.scrollY >= document.body.scrollHeight) && window.scrollY !== 0) {
+                    this._setActiveStatus(leaves[leaves.length - 1], SELECTORS.NAVLEAF);
+                }
+
+            }
+        );
     }
 }
 
@@ -225,7 +258,13 @@ const initScrollListener = (id, contentId, headerType) => {
 
         const headers = content.querySelectorAll(`${headerType}[id]`);
 
-        content.addEventListener("scroll", sidebar._contentScrollListener(id, content, headers));
+        window.addEventListener("scroll", sidebar._contentScrollListener(content, headers));
+
+        const sidebarElement = document.getElementById(id);
+        const leaves = sidebarElement.querySelector(`.secondary-nav-li${SELECTORS.ACTIVE}`).querySelectorAll(SELECTORS.NAVLEAF);
+
+        [...leaves].map((leaf, i) => leaf.addEventListener("click", sidebar._navLeafScrollListener(headers[i])));
+        sidebar._contentScrollListener(content, headers)();
     } else {
         console.warn(`sidebar.initScrollListener: Cannot find main content with id ${contentId}`);
     }
@@ -273,6 +312,26 @@ const _createSidebar2 = sidebarQuery => {
     return sidebarObject;
 };
 
+const populateSidebarTertiary = (id, leafList) => {
+    const sidebar = document.getElementById(id);
+
+    const activeTertiaryUl = sidebar.querySelector(".secondary-nav-li.active ul");
+
+    activeTertiaryUl.innerHTML = "";
+
+    [...leafList].map(leaf => {
+        const newLeaf = document.createElement("li");
+        const newLeafContent = document.createElement("a");
+
+        newLeafContent.textContent = leaf.textContent;
+        // newLeafContent.href = `#${leaf.id}`;
+        newLeaf.appendChild(newLeafContent);
+        newLeaf.classList.add("nav-leaf");
+
+        activeTertiaryUl.appendChild(newLeaf);
+    });
+};
+
 const init = (id, newSidebar) => {
     if (id) {
 
@@ -307,5 +366,6 @@ export default {
     setActiveState,
     removeActiveState,
     initScrollListener,
-    removeScrollListener
+    removeScrollListener,
+    populateSidebarTertiary
 };

@@ -14,58 +14,59 @@ const basename = process.env.basename;
 
 const { sidebar, topbar } = window.dg;
 
-// class NavGroup extends Component {
-//     constructor (props) {
-//         super(props);
-//         this.state = {
-//             isActive: props.location.pathname.includes(props.route.path)
-//         };
-//     }
+class NavGroup extends Component {
+    constructor (props) {
+        super(props);
+        this.state = {
+            isActive: props.location.pathname.includes(props.route.path)
+        };
+    }
 
-//     componentDidMount () {
-//         const activeLeaf = this.props.route.routes.map((childRoute, i) => ({ i,
-//             childRoute: childRoute.path })).filter(childRouteObject => this.props.location.pathname.includes(childRouteObject.childRoute));
+    componentDidMount () {
+        const activeLeaf = this.props.route.routes.map((childRoute, i) => ({ i,
+            childRoute: childRoute.path })).filter(childRouteObject => this.props.location.pathname.includes(childRouteObject.childRoute));
 
-//         this.state.isActive && activeLeaf[0] && sidebar.setActiveState(this.props.sidebarId, this.props.index, null, activeLeaf[0].i);
-//     }
+        this.state.isActive && activeLeaf[0] && sidebar.setActiveState(this.props.sidebarId, this.props.index, null, activeLeaf[0].i);
+    }
 
-//     toggleActive () {
-//         this.setState({ isActive: !this.state.isActive });
-//     }
+    toggleActive () {
+        this.setState({ isActive: !this.state.isActive });
+    }
 
-//     shouldComponentUpdate (nextProps, nextState) {
-//         return this.state !== nextState;
-//     }
+    shouldComponentUpdate (nextProps, nextState) {
+        return this.state !== nextState;
+    }
 
-//     render () {
-//         const { title, routes } = this.props.route;
+    render () {
+        const { title, routes } = this.props.route;
 
-//         return (
-//             <li className="nav-group">
-//                 <div className="nav-group-heading">
-//                     <i className="material-icons" aria-hidden="true"onClick={() => this.toggleActive()}>arrow_right</i>
-//                     <span>{title}</span>
-//                 </div>
-//                 <ul className="nav-ul">
-//                     {routes.map((childRoute, i) => (
-//                         <li key={`nav_leaf_${i}`} className="nav-leaf">
-//                             <NavLink activeClassName="active" to={childRoute.path}>{childRoute.title}</NavLink>
-//                         </li>
-//                     ))}
-//                 </ul>
-//             </li>
-//         );
-//     }
-// }
+        return (
+            <li className="nav-group">
+                <div className="nav-group-heading">
+                    <i className="material-icons" aria-hidden="true"onClick={() => this.toggleActive()}>arrow_right</i>
+                    <span>{title}</span>
+                </div>
+                <ul className="nav-ul">
+                    {routes.map((childRoute, i) => (
+                        <li key={`nav_leaf_${i}`} className="nav-leaf">
+                            <NavLink activeClassName="active" to={childRoute.path}>{childRoute.title}</NavLink>
+                        </li>
+                    ))}
+                </ul>
+            </li>
+        );
+    }
+}
 
 class SelectPanel extends Component {
 
     componentDidMount () {
         sidebar.init(this.props.id, true);
-        console.log(this.props.routes);
 
-        if (this.props.topbarId) {
-            topbar.init(this.props.topbarId);
+        if (this.props.location.pathname !== "/") {
+            const sidebarElement = document.getElementById(this.props.id);
+
+            sidebarElement && sidebarElement.classList.add("has-secondary-nav");
         }
     }
 
@@ -87,6 +88,10 @@ class SelectPanel extends Component {
         }
 
         return hasActiveSecondaryNav;
+    }
+
+    _activeSecondaryLi (secondaryRoute) {
+        return this.props.location.pathname.includes(secondaryRoute.path);
     }
 
     render () {
@@ -159,10 +164,13 @@ class SelectPanel extends Component {
                                         {route.title}
                                     </header>
                                     <ul className="secondary-nav-ul">
-                                        {route.routes.map(secondaryRoute => <li key={secondaryRoute.title} className="secondary-nav-li group">
+                                        {route.routes.map(secondaryRoute => <li key={secondaryRoute.title} className={`secondary-nav-li group${this._activeSecondaryLi(secondaryRoute) ? " active" : ""}`}>
                                             <NavLink activeClassName="active" to={secondaryRoute.path}>
                                                 {secondaryRoute.title}
                                             </NavLink>
+                                            <ul className="tertiary-nav-ul">
+
+                                            </ul>
                                         </li>)}
                                     </ul>
                                 </nav>

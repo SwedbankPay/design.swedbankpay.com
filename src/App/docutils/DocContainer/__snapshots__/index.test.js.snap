@@ -7,14 +7,3 @@ exports[`Utilities: DocContainer renders 1`] = `
   <DocContent />
 </div>
 `;
-
-exports[`Utilities: DocContainer renders with a table of contents(doctoc) if prop docToc is given 1`] = `
-<div
-  className="row"
->
-  <DocContent />
-  <DocToc
-    component={[Function]}
-  />
-</div>
-`;

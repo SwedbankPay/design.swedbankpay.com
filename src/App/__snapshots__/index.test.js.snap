@@ -1,0 +1,541 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main: App renders 1`] = `
+<Router
+  basename="/TEST/"
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <withRouter(ScrollToTop)>
+    <withRouter(AppHeader) />
+    <div
+      className="documentation"
+    >
+      <div
+        className="d-md-flex"
+      >
+        <withRouter(SelectPanel)
+          id="doc-sidebar"
+          routes={
+            Array [
+              Object {
+                "appFolder": "GettingStarted",
+                "icon": Object {
+                  "name": "wb_incandescent",
+                  "rotated": true,
+                },
+                "path": "/getting-started",
+                "redirect": "/getting-started/introduction",
+                "routes": Array [
+                  Object {
+                    "componentPath": "getting-started/Introduction",
+                    "path": "/getting-started/introduction",
+                    "title": "Introduction",
+                  },
+                  Object {
+                    "componentPath": "getting-started/BrowserSupport",
+                    "path": "/getting-started/browser-support",
+                    "title": "Browser Support",
+                  },
+                  Object {
+                    "componentPath": "getting-started/Contributing",
+                    "path": "/getting-started/contributing",
+                    "title": "Contributing",
+                  },
+                  Object {
+                    "componentPath": "getting-started/Javascript",
+                    "path": "/getting-started/javascript",
+                    "title": "JavaScript",
+                  },
+                ],
+                "title": "Getting Started",
+              },
+              Object {
+                "appFolder": "Core",
+                "icon": Object {
+                  "name": "palette",
+                },
+                "path": "/core",
+                "redirect": "/core/color",
+                "routes": Array [
+                  Object {
+                    "componentPath": "core/Accessibility",
+                    "path": "/core/accessibility",
+                    "title": "Accessibility",
+                  },
+                  Object {
+                    "componentPath": "core/Color",
+                    "path": "/core/color",
+                    "title": "Color",
+                  },
+                  Object {
+                    "componentPath": "core/Copywriting",
+                    "path": "/core/copywriting",
+                    "title": "Copywriting",
+                  },
+                  Object {
+                    "componentPath": "core/Logotype",
+                    "path": "/core/logotype",
+                    "statusBadges": Array [
+                      "updated",
+                    ],
+                    "title": "Logotype",
+                  },
+                  Object {
+                    "componentPath": "core/Grid",
+                    "path": "/core/grid",
+                    "title": "Grid",
+                  },
+                  Object {
+                    "componentPath": "core/Iconography",
+                    "path": "/core/iconography",
+                    "title": "Iconography",
+                  },
+                  Object {
+                    "componentPath": "core/Images",
+                    "path": "/core/images",
+                    "title": "Images",
+                  },
+                  Object {
+                    "componentPath": "core/Page-layout",
+                    "path": "/core/page-layout",
+                    "title": "Page layout",
+                  },
+                  Object {
+                    "componentPath": "core/Typography",
+                    "path": "/core/typography",
+                    "title": "Typography",
+                  },
+                ],
+                "title": "Core",
+              },
+              Object {
+                "appFolder": "ComponentsDocumentation",
+                "icon": Object {
+                  "name": "category",
+                },
+                "path": "/components",
+                "redirect": "/components/introduction",
+                "routes": Array [
+                  Object {
+                    "componentPath": "Introduction",
+                    "path": "/components/introduction",
+                    "title": "Introduction",
+                  },
+                  Object {
+                    "componentPath": "components/Accordion",
+                    "path": "/components/accordion",
+                    "statusBadges": Array [
+                      "javascript",
+                      "updated",
+                    ],
+                    "title": "Accordion",
+                  },
+                  Object {
+                    "componentPath": "components/ActionList",
+                    "path": "/components/action-list",
+                    "statusBadges": Array [
+                      "javascript",
+                    ],
+                    "title": "Action List",
+                  },
+                  Object {
+                    "componentPath": "components/Alerts",
+                    "path": "/components/alerts",
+                    "statusBadges": Array [
+                      "javascript",
+                    ],
+                    "title": "Alerts",
+                  },
+                  Object {
+                    "componentPath": "components/Badge",
+                    "path": "/components/badge",
+                    "title": "Badge",
+                  },
+                  Object {
+                    "componentPath": "components/Breadcrumb",
+                    "path": "/components/breadcrumb",
+                    "title": "Breadcrumb",
+                  },
+                  Object {
+                    "componentPath": "components/Buttons",
+                    "path": "/components/buttons",
+                    "statusBadges": Array [
+                      "updated",
+                    ],
+                    "title": "Buttons",
+                  },
+                  Object {
+                    "componentPath": "components/Card",
+                    "path": "/components/cards",
+                    "statusBadges": Array [
+                      "updated",
+                    ],
+                    "title": "Cards",
+                  },
+                  Object {
+                    "componentPath": "components/Charts",
+                    "path": "/components/charts",
+                    "statusBadges": Array [
+                      "javascript",
+                    ],
+                    "title": "Charts",
+                  },
+                  Object {
+                    "componentPath": "components/CodeTags",
+                    "path": "/components/code-tags",
+                    "title": "Code Tags",
+                  },
+                  Object {
+                    "componentPath": "components/Datepickers",
+                    "path": "/components/datepickers",
+                    "statusBadges": Array [
+                      "javascript",
+                      "updated",
+                    ],
+                    "title": "Datepickers",
+                  },
+                  Object {
+                    "componentPath": "components/Dialog",
+                    "path": "/components/dialog",
+                    "statusBadges": Array [
+                      "javascript",
+                    ],
+                    "title": "Dialog",
+                  },
+                  Object {
+                    "componentPath": "components/Expandable",
+                    "path": "/components/expandable",
+                    "statusBadges": Array [
+                      "javascript",
+                    ],
+                    "title": "Expandable",
+                  },
+                  Object {
+                    "componentPath": "components/Forms",
+                    "path": "/components/forms",
+                    "statusBadges": Array [
+                      "javascript",
+                      "updated",
+                    ],
+                    "title": "Forms",
+                  },
+                  Object {
+                    "componentPath": "components/Footer",
+                    "path": "/components/footer",
+                    "title": "Footer",
+                  },
+                  Object {
+                    "componentPath": "components/InputGroup",
+                    "path": "/components/input-group",
+                    "statusBadges": Array [
+                      "updated",
+                    ],
+                    "title": "Input Group",
+                  },
+                  Object {
+                    "componentPath": "components/Links",
+                    "path": "/components/links",
+                    "title": "Links",
+                  },
+                  Object {
+                    "componentPath": "components/Lists",
+                    "path": "/components/lists",
+                    "title": "Lists",
+                  },
+                  Object {
+                    "componentPath": "components/Loaders",
+                    "path": "/components/loaders",
+                    "title": "Loaders",
+                  },
+                  Object {
+                    "componentPath": "components/MediaObject",
+                    "path": "/components/media-object",
+                    "title": "Media Object",
+                  },
+                  Object {
+                    "componentPath": "components/Nav",
+                    "path": "/components/nav",
+                    "statusBadges": Array [
+                      "javascript",
+                    ],
+                    "title": "Nav",
+                  },
+                  Object {
+                    "componentPath": "components/Pagination",
+                    "path": "/components/pagination",
+                    "title": "Pagination",
+                  },
+                  Object {
+                    "componentPath": "components/Panel",
+                    "path": "/components/panel",
+                    "title": "Panel",
+                  },
+                  Object {
+                    "componentPath": "components/ProgressSteps",
+                    "path": "/components/progress-steps",
+                    "statusBadges": Array [
+                      "updated",
+                    ],
+                    "title": "Progress Steps",
+                  },
+                  Object {
+                    "componentPath": "components/Sheet",
+                    "path": "/components/sheet",
+                    "statusBadges": Array [
+                      "javascript",
+                    ],
+                    "title": "Sheet",
+                  },
+                  Object {
+                    "componentPath": "components/Sidebar",
+                    "path": "/components/sidebar",
+                    "statusBadges": Array [
+                      "javascript",
+                      "updated",
+                    ],
+                    "title": "Sidebar",
+                  },
+                  Object {
+                    "componentPath": "components/Slab",
+                    "path": "/components/slab",
+                    "statusBadges": Array [
+                      "updated",
+                    ],
+                    "title": "Slab",
+                  },
+                  Object {
+                    "componentPath": "components/Status",
+                    "path": "/components/status",
+                    "statusBadges": Array [
+                      "updated",
+                    ],
+                    "title": "Status",
+                  },
+                  Object {
+                    "componentPath": "components/Tables",
+                    "path": "/components/tables",
+                    "title": "Tables",
+                  },
+                  Object {
+                    "componentPath": "components/Tabs",
+                    "path": "/components/tabs",
+                    "statusBadges": Array [
+                      "javascript",
+                      "updated",
+                    ],
+                    "title": "Tabs",
+                  },
+                  Object {
+                    "componentPath": "components/Toast",
+                    "path": "/components/toast",
+                    "statusBadges": Array [
+                      "javascript",
+                    ],
+                    "title": "Toast",
+                  },
+                  Object {
+                    "componentPath": "components/Tooltips",
+                    "path": "/components/tooltips",
+                    "statusBadges": Array [
+                      "javascript",
+                      "updated",
+                    ],
+                    "title": "Tooltips",
+                  },
+                  Object {
+                    "componentPath": "components/Topbar",
+                    "path": "/components/topbar",
+                    "statusBadges": Array [
+                      "javascript",
+                    ],
+                    "title": "Topbar",
+                  },
+                ],
+                "title": "Components",
+              },
+              Object {
+                "appFolder": "Utilities",
+                "icon": Object {
+                  "name": "build",
+                },
+                "path": "/utilities",
+                "redirect": "/utilities/colors",
+                "routes": Array [
+                  Object {
+                    "componentPath": "utilities/Borders",
+                    "path": "/utilities/borders",
+                    "title": "Borders",
+                  },
+                  Object {
+                    "componentPath": "utilities/Breakpoints",
+                    "path": "/utilities/breakpoints",
+                    "title": "Breakpoints",
+                  },
+                  Object {
+                    "componentPath": "utilities/Colors",
+                    "path": "/utilities/colors",
+                    "title": "Colors",
+                  },
+                  Object {
+                    "componentPath": "utilities/Display",
+                    "path": "/utilities/display",
+                    "title": "Display",
+                  },
+                  Object {
+                    "componentPath": "utilities/Flex",
+                    "path": "/utilities/flex",
+                    "title": "Flex",
+                  },
+                  Object {
+                    "componentPath": "utilities/Images",
+                    "path": "/utilities/images",
+                    "title": "Images",
+                  },
+                  Object {
+                    "componentPath": "utilities/Sizing",
+                    "path": "/utilities/sizing",
+                    "title": "Sizing",
+                  },
+                  Object {
+                    "componentPath": "utilities/Spacing",
+                    "path": "/utilities/spacing",
+                    "title": "Spacing",
+                  },
+                  Object {
+                    "componentPath": "utilities/Text",
+                    "path": "/utilities/text",
+                    "title": "Text",
+                  },
+                  Object {
+                    "componentPath": "utilities/Visibility",
+                    "path": "/utilities/visibility",
+                    "title": "Visibility",
+                  },
+                ],
+                "title": "Utilities",
+              },
+            ]
+          }
+        />
+        <main
+          className="doc-view"
+        >
+          <Suspense
+            fallback={<LoadingComponent />}
+          >
+            <Switch>
+              <Route
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.lazy),
+                    "_ctor": [Function],
+                    "_result": null,
+                    "_status": -1,
+                  }
+                }
+                exact={true}
+                path="/"
+              />
+              <Route
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.lazy),
+                    "_ctor": [Function],
+                    "_result": null,
+                    "_status": -1,
+                  }
+                }
+                path="/getting-started"
+              />
+              <Route
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.lazy),
+                    "_ctor": [Function],
+                    "_result": null,
+                    "_status": -1,
+                  }
+                }
+                path="/components"
+              />
+              <Route
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.lazy),
+                    "_ctor": [Function],
+                    "_result": null,
+                    "_status": -1,
+                  }
+                }
+                path="/core"
+              />
+              <Route
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.lazy),
+                    "_ctor": [Function],
+                    "_result": null,
+                    "_status": -1,
+                  }
+                }
+                path="/examples"
+              />
+              <Route
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.lazy),
+                    "_ctor": [Function],
+                    "_result": null,
+                    "_status": -1,
+                  }
+                }
+                path="/utilities"
+              />
+              <Route
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.lazy),
+                    "_ctor": [Function],
+                    "_result": null,
+                    "_status": -1,
+                  }
+                }
+                path="/404"
+              />
+              <Route
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.lazy),
+                    "_ctor": [Function],
+                    "_result": null,
+                    "_status": -1,
+                  }
+                }
+              />
+            </Switch>
+          </Suspense>
+        </main>
+      </div>
+    </div>
+  </withRouter(ScrollToTop)>
+</Router>
+`;

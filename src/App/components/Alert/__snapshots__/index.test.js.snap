@@ -162,11 +162,12 @@ exports[`Component: ComplexAlert Proptypes renders with a close button when prop
     >
       
 		
-      <Icon
-        type="close"
-      />
-      
-	
+      <i
+        aria-hidden="true"
+        className="material-icons"
+      >
+        close
+      </i>
     </a>
     
 
@@ -198,10 +199,12 @@ exports[`Component: ComplexAlert Proptypes renders with an icon when prop icon i
     
 
      
-    <Icon
-      classNames="alert-icon"
-      type="home"
-    />
+    <i
+      aria-hidden="true"
+      className="material-icons alert-icon"
+    >
+      home
+    </i>
     
 
   </header>
