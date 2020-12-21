@@ -629,7 +629,7 @@ const Intro = () => (
 const GridSystem = () => (
     <section>
         <h2>Grid system</h2>
-        <div>
+        <div className="grid-guide">
             <article>
                 <img src={`${basename}img/documentation/grid/columns.png`} alt="Illustration of Columns" />
                 <h3>Columns</h3>
@@ -657,7 +657,7 @@ const GridSystem = () => (
 const GridTypes = () => (
     <section>
         <h2>Grid types</h2>
-        <div>
+        <div className="grid-guide">
             <article>
                 <img src={`${basename}img/documentation/grid/fluid.png`} alt="Illustration of fluid" />
                 <h3>Fluid</h3>
@@ -676,7 +676,7 @@ const OffsettingGrid = () => (
     <section>
         <h2>Offsetting grid</h2>
         <p>A standard 12 column grid typically fills 100% of the viewport. When there is a side menu present in the design we must offset the grid in order to align the elements. In this case, the width of the menu is removed from the calculation and the grid takes 100% of the remaining space.</p>
-        <div>
+        <div className="grid-guide">
             <article>
                 <img src={`${basename}img/documentation/grid/grid-offset-left.png`} className="mb-3" alt="Grid offset with left side menu" />
                 <p>Grid offset with left side menu</p>

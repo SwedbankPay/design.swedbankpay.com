@@ -933,7 +933,9 @@ exports[`Core: Grid GridSystem renders 1`] = `
   <h2>
     Grid system
   </h2>
-  <div>
+  <div
+    className="grid-guide"
+  >
     <article>
       <img
         alt="Illustration of Columns"
@@ -1015,7 +1017,9 @@ exports[`Core: Grid GridTypes renders 1`] = `
   <h2>
     Grid types
   </h2>
-  <div>
+  <div
+    className="grid-guide"
+  >
     <article>
       <img
         alt="Illustration of fluid"
@@ -1370,7 +1374,9 @@ exports[`Core: Grid OffsettingGrid renders 1`] = `
   <p>
     A standard 12 column grid typically fills 100% of the viewport. When there is a side menu present in the design we must offset the grid in order to align the elements. In this case, the width of the menu is removed from the calculation and the grid takes 100% of the remaining space.
   </p>
-  <div>
+  <div
+    className="grid-guide"
+  >
     <article>
       <img
         alt="Grid offset with left side menu"
