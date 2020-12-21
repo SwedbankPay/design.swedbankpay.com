@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const ColorDisplay = ({ hex, rgb, fontColor, width, border }) => (
     <div className={`${width ? width : ""}`}>
         <svg>
-            <rect fill={hex} stroke={border && border} />
+            <rect fill={hex} stroke={border} />
         </svg>
         <div className={`pl-3 ${fontColor ? fontColor : ""}`}>
             <p className="mb-0">{hex}</p>
@@ -14,8 +14,8 @@ const ColorDisplay = ({ hex, rgb, fontColor, width, border }) => (
 );
 
 ColorDisplay.propTypes = {
-    hex: PropTypes.string,
-    rgb: PropTypes.string,
+    hex: PropTypes.string.isRequired,
+    rgb: PropTypes.string.isRequired,
     fontColor: PropTypes.string,
     width: PropTypes.string,
     border: PropTypes.string
