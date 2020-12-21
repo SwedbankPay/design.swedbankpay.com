@@ -29,19 +29,25 @@ const AccessibleService = () => (
 const WcagStandard = () => (
     <section id="wcag-standard">
         <h2>WCAG standards and support material</h2>
-        <p>WCAG has almost become a buzzword, thrown around by designers, developers and  stakeholders on regular basis. But what does it mean? WCAG is short for Web Content   Accessibility Guidelines and is a collection of accessibility standards and support material developed and written by the W3C Web Accessibility Initiative (WAI). WCAG is    a work in progress with several different versions (see <a href="https://w3.org WAI">https://w3.org/WAI</a>).</p>
+        <p>WCAG has almost become a buzzword, thrown around by designers, developers and  stakeholders on regular basis. But what does it mean? WCAG is short for Web Content   Accessibility Guidelines and is a collection of accessibility standards and support material developed and written by the W3C Web Accessibility Initiative (WAI). WCAG is    a work in progress with several different versions (see <a href="https://www.w3.org/WAI/" target="_blank" rel="noopener noreferrer">https://w3.org/WAI</a>).</p>
         <p>The guidelines ties back to four core terms: A website should be perceivable,  operable, understandable and robust. In these four areas there are sets of criteria  that has to be met for a certain term to be considered achieved (see Figure 2). Each  criteria also has one or more sub-criteria which are graded on a scale from A to AAA where A is least acceptable and AAA is considered “very good”.</p>
 
         <div className="img-container pb-4">
             <img src={`${basename}img/documentation/accessibility/wcag.svg`} className="mb-1" alt="WCAG 2.1 at a glance" />
-            <span><span className="font-weight-bold">Figure 2.</span> This is the WCAG 2.1 at a glance from <a href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/ ">www.w3.org/WAI/standards-guidelines/wcag/glance/ </a></span>
+            <span><span className="font-weight-bold">Figure 2.</span> This is the WCAG 2.1 at a glance from <a href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/" target="_blank" rel="noopener noreferrer">www.w3.org/WAI/standards-guidelines/wcag/glance/ </a></span>
         </div>
 
         <h3 className="mt-0">More than a checklist</h3>
         <p>Important to remember is that WCAG and accessibility is more than a checklist! It  sure can start with a checklist (such as this one) but it is a practice and mindset   that must be present amongst all product employees. To meet the whole target group these terms are necessary to meet. </p>
-        <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" className="icon-link  d-block"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">What is WCAG?</span></a>
+        <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
+            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
+            <span className="mr-2">What is WCAG?</span>
+        </a>
 
-        <a href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/" className="icon-link mb-5"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">W3C – WCAG 2.1    Recommendations </span></a>
+        <a href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/" target="_blank" rel="noopener noreferrer" className="icon-link mb-5">
+            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
+            <span className="mr-2">W3C – WCAG 2.1    Recommendations </span>
+        </a>
     </section>
 );
 
@@ -64,20 +70,50 @@ const DiveDeeper = () => (
     <section id="dive-deeper" className="mb-5">
         <h2>Dive deeper into accessibility</h2>
         <p>Accessibility can be an ocean and we know it can be hard to navigate it – that’s at least what we in the design team think. We can always improve the user experience, and thereby our products, by making them accessible for more people. Here are some links where you can read more about accessibility and practices to achieve inclusiveness for as many users as possible. </p>
-        <a href="https://material.io/design/usability/accessibility.html#understanding-accessibility" className="icon-link d-block"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Material.io – Understanding Accessibility </span></a>
-        <a href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/" className="icon-link d-block"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">W3C – WCAG 2.1 Recommendations</span></a>
+        <a href="https://material.io/design/usability/accessibility.html#understanding-accessibility" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
+            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
+            <span className="mr-2">Material.io – Understanding Accessibility </span>
+        </a>
+        <a href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
+            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
+            <span className="mr-2">W3C – WCAG 2.1 Recommendations</span>
+        </a>
 
         <h3 className="my-3">Website accessibility and the law</h3>
-        <a href="https://www.funka.com/design-for-alla/lagar-och-regler/" className="icon-link d-block"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Funka.com – Lagar och regler</span></a>
-        <a href="https://www.funka.com/en/design-for-all/accessibility/web-accessibility-directive-norway-is-facing-a-choice/" className="icon-link d-block"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2"> Funka.com – Web accessibility directive: Norway is facing a choice</span></a>
-        <a href="https://medium.com/confrere/its-illegal-to-have-an-inaccessible-website-in-norway-and-that-s-good-news-for-all-of-us-b59a9e929d54" className="icon-link d-block"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Medium.com – It’s illegal to have an inaccessible website in Norway and that’s good for all of us</span></a>
+        <a href="https://www.funka.com/design-for-alla/lagar-och-regler/" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
+            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
+            <span className="mr-2">Funka.com – Lagar och regler</span>
+        </a>
+        <a href="https://www.funka.com/en/design-for-all/accessibility/web-accessibility-directive-norway-is-facing-a-choice/" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
+            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
+            <span className="mr-2"> Funka.com – Web accessibility directive: Norway is facing a choice</span>
+        </a>
+        <a href="https://medium.com/confrere/its-illegal-to-have-an-inaccessible-website-in-norway-and-that-s-good-news-for-all-of-us-b59a9e929d54" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
+            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
+            <span className="mr-2">Medium.com – It’s illegal to have an inaccessible website in Norway and that’s good for all of us</span>
+        </a>
 
         <h3 className="my-3">Others about accessibility</h3>
-        <a href="https://www.swedbank.com/sv/hallbarhet/ansvarsfulla-affarer/betala.html" className="icon-link d-block"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Swedbank – Ansvarsfulla affärer </span></a>
-        <a href="https://polaris.shopify.com/foundations/accessibility" className="icon-link d-block"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Shopify – Accessibility</span></a>
-        <a href="https://material.io/design/usability/accessibility.html" className="icon-link d-block"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Google Material – Accessibility</span></a>
-        <a href="http://www.lightningdesignsystem.com/accessibility/overview/" className="icon-link d-block"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Salesforce Lightning – Accessibility</span></a>
-        <a href="https://spotify.design/article/spotify-inclusive-design-global-accessibility-awareness-day-round-up" className="icon-link d-block"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Spotify – Inclusive design global accessibility awareness day round up </span></a>
+        <a href="https://www.swedbank.com/sv/hallbarhet/ansvarsfulla-affarer/betala.html" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
+            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
+            <span className="mr-2">Swedbank – Ansvarsfulla affärer </span>
+        </a>
+        <a href="https://polaris.shopify.com/foundations/accessibility" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
+            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
+            <span className="mr-2">Shopify – Accessibility</span>
+        </a>
+        <a href="https://material.io/design/usability/accessibility.html" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
+            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
+            <span className="mr-2">Google Material – Accessibility</span>
+        </a>
+        <a href="http://www.lightningdesignsystem.com/accessibility/overview/" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
+            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
+            <span className="mr-2">Salesforce Lightning – Accessibility</span>
+        </a>
+        <a href="https://spotify.design/article/spotify-inclusive-design-global-accessibility-awareness-day-round-up" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
+            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
+            <span className="mr-2">Spotify – Inclusive design global accessibility awareness day round up </span>
+        </a>
     </section>
 );
 
