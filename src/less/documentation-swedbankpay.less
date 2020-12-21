@@ -258,7 +258,6 @@
             .dg-front-page-container {
                 padding-top: 3rem;
                 max-width: 70rem;
-                //scroll-snap-align: start;
 
                 header {
                     line-height: 4rem;
@@ -295,7 +294,7 @@
 
                 .dg-cards-container {
                     max-width: 70rem;
-                    z-index: 10;
+                    z-index: 10; /* Makes content appear above background image */
                 }
             }
 
@@ -337,10 +336,8 @@
 
             /* Changelog */
             .dg-changelog-container {
-                //scroll-snap-align: start;
-
                 .dg-changelog-content {
-                    z-index: 10;
+                    z-index: 10; /* makes content appear above background images */
                     max-width: 70rem;
 
                     .dg-changlelog-title {
@@ -387,7 +384,7 @@
                 .dg-front-page-container,
                 .dg-changelog-container {
                     padding-top: 1rem;
-                    height: 91vh;
+                    height: 91vh; /* Eliminate whitespace when topbar is viewed */
 
                     header {
                         .dg-title-small {
