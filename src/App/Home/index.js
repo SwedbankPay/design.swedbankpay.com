@@ -25,7 +25,7 @@ const Home = () => {
                     <span className="dg-version-indicator-text p-2">Ver. 5.0.0</span>
                 </div>
 
-                <p className="front-page-ingress">Here you can find components and guidelines to help you  and your team work more efficiently and create a cohesive user experience through all     our products and touch points.</p>
+                <p className="front-page-ingress">Here you can find components and guidelines to help you  and your team work more efficiently and create a cohesive user experience through all our products and touch points.</p>
 
                 <div className="row dg-cards-container mt-4">
                     <div className="col-12 col-sm-6 col-lg-3 d-flex">
