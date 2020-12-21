@@ -2,26 +2,11 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer } from "@docutils";
-import { Overview, Download, Guidelines } from "../../../Resources/resources/typography";
 import Button from "@components/Button";
 import CodeTags from "@components/CodeTags";
 
 const basename = process.env.basename;
 const { expandable } = window.dg;
-
-const ResourcesTypography = () => (
-    <div className="expandable">
-        <button type="button" className="expandable-header" aria-expanded="false" aria-controls="resources-typograpy-body">
-            <span className="expandable-headline">Typography guidelines</span>
-            <small className="expandable-subtitle">From <Link to="/resources/typography">typography in Resources</Link></small>
-        </button>
-        <div className="expandable-body" id="resources-typography-body">
-            <Overview />
-            <Download />
-            <Guidelines />
-        </div>
-    </div>
-);
 
 const Fonts = () => (
         <>
@@ -180,7 +165,6 @@ const Typography = () => {
     return (
         <DocContainer docToc>
             <p className="lead">Documentation and examples for Swedbank Pay DesignGuide typography.</p>
-            <ResourcesTypography />
             <Fonts />
             <Headings />
             <HeroTitle />
@@ -197,4 +181,4 @@ const Typography = () => {
 export default Typography;
 
 /* For testing */
-export { ResourcesTypography, Fonts, Headings, HeroTitle, Lead, Inline, TextUtilities, Abbreviations, Blockquotes, AkkuratMono };
+export { Fonts, Headings, HeroTitle, Lead, Inline, TextUtilities, Abbreviations, Blockquotes, AkkuratMono };

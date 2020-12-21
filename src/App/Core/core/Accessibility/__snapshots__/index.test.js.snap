@@ -29,6 +29,8 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://material.io/design/usability/accessibility.html#understanding-accessibility"
+    rel="noopener noreferrer"
+    target="_blank"
   >
     <i
       aria-hidden="true"
@@ -45,6 +47,8 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/"
+    rel="noopener noreferrer"
+    target="_blank"
   >
     <i
       aria-hidden="true"
@@ -66,6 +70,8 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://www.funka.com/design-for-alla/lagar-och-regler/"
+    rel="noopener noreferrer"
+    target="_blank"
   >
     <i
       aria-hidden="true"
@@ -82,6 +88,8 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://www.funka.com/en/design-for-all/accessibility/web-accessibility-directive-norway-is-facing-a-choice/"
+    rel="noopener noreferrer"
+    target="_blank"
   >
     <i
       aria-hidden="true"
@@ -98,6 +106,8 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://medium.com/confrere/its-illegal-to-have-an-inaccessible-website-in-norway-and-that-s-good-news-for-all-of-us-b59a9e929d54"
+    rel="noopener noreferrer"
+    target="_blank"
   >
     <i
       aria-hidden="true"
@@ -119,6 +129,8 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://www.swedbank.com/sv/hallbarhet/ansvarsfulla-affarer/betala.html"
+    rel="noopener noreferrer"
+    target="_blank"
   >
     <i
       aria-hidden="true"
@@ -135,6 +147,8 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://polaris.shopify.com/foundations/accessibility"
+    rel="noopener noreferrer"
+    target="_blank"
   >
     <i
       aria-hidden="true"
@@ -151,6 +165,8 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://material.io/design/usability/accessibility.html"
+    rel="noopener noreferrer"
+    target="_blank"
   >
     <i
       aria-hidden="true"
@@ -167,6 +183,8 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="http://www.lightningdesignsystem.com/accessibility/overview/"
+    rel="noopener noreferrer"
+    target="_blank"
   >
     <i
       aria-hidden="true"
@@ -183,6 +201,8 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://spotify.design/article/spotify-inclusive-design-global-accessibility-awareness-day-round-up"
+    rel="noopener noreferrer"
+    target="_blank"
   >
     <i
       aria-hidden="true"
@@ -302,7 +322,9 @@ exports[`Core: Accessibility WcagStandard renders 1`] = `
   <p>
     WCAG has almost become a buzzword, thrown around by designers, developers and  stakeholders on regular basis. But what does it mean? WCAG is short for Web Content   Accessibility Guidelines and is a collection of accessibility standards and support material developed and written by the W3C Web Accessibility Initiative (WAI). WCAG is    a work in progress with several different versions (see 
     <a
-      href="https://w3.org WAI"
+      href="https://www.w3.org/WAI/"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       https://w3.org/WAI
     </a>
@@ -327,7 +349,9 @@ exports[`Core: Accessibility WcagStandard renders 1`] = `
       </span>
        This is the WCAG 2.1 at a glance from 
       <a
-        href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/ "
+        href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         www.w3.org/WAI/standards-guidelines/wcag/glance/ 
       </a>
@@ -344,6 +368,8 @@ exports[`Core: Accessibility WcagStandard renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://www.w3.org/WAI/standards-guidelines/wcag/"
+    rel="noopener noreferrer"
+    target="_blank"
   >
     <i
       aria-hidden="true"
@@ -360,6 +386,8 @@ exports[`Core: Accessibility WcagStandard renders 1`] = `
   <a
     className="icon-link mb-5"
     href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/"
+    rel="noopener noreferrer"
+    target="_blank"
   >
     <i
       aria-hidden="true"

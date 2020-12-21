@@ -24,6 +24,11 @@ module.exports = [
                 componentPath: "core/Spacing"
             },
             {
+                title: "Copywriting",
+                path: "/core/copywriting",
+                componentPath: "core/Copywriting"
+            },
+            {
                 title: "Logotype",
                 path: "/core/logotype",
                 componentPath: "core/Logotype",
@@ -38,6 +43,11 @@ module.exports = [
                 title: "Iconography",
                 path: "/core/iconography",
                 componentPath: "core/Iconography"
+            },
+            {
+                title: "Images",
+                path: "/core/images",
+                componentPath: "core/Images"
             },
             {
                 title: "Page layout",
