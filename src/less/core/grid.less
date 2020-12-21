@@ -36,20 +36,23 @@
     }
 }
 
-section {
+.grid-guide {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    article {
+        max-width: 21rem;
+
+        h3 {
+            margin-top: 1rem;
+        }
+    }
+}
+@media (max-width: @screen-sm-max) {
     .grid-guide {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-
         article {
-            h3 {
-                margin-top: 1rem;
-            }
-
-            img {
-                width: 100%;
-            }
+            max-width: 100%;
         }
     }
 }
