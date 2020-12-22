@@ -24,6 +24,11 @@ module.exports = [
                 componentPath: "core/Color"
             },
             {
+                title: "Spacing",
+                path: "/core/spacing",
+                componentPath: "core/Spacing"
+            },
+            {
                 title: "Copywriting",
                 path: "/core/copywriting",
                 componentPath: "core/Copywriting"
