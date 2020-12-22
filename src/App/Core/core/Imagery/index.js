@@ -4,7 +4,7 @@ const basename = process.env.basename;
 
 const Intro = () => (
     <section id="intro">
-        <p className="ingress font-weight-bold mb-4">
+        <p className="lead mb-4">
         Images are commercial and should be used as decoration to make the interface eye catching and the content feel easy and uncomplicated. In imagery we use clean and simple compositions with focus on one situation or action. This creates focus, calmness and simplicity.
         </p>
     </section>
