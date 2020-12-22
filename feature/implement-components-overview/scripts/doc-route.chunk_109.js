@@ -1,2 +1,2 @@
 (window.webpackJsonp=window.webpackJsonp||[]).push([[24],{431:function(e,t,s){"use strict";s.r(t);var a=s(0),n=s.n(a),r=s(7),i=s.n(r),c=function(e){var t=e.src,s=e.alt,a=e.type,r=e.size;return n.a.createElement("img",{src:t,alt:s,className:"logotype-".concat(a," logotype-").concat(r||"sm")})};c.propTypes={src:i.a.string.isRequired,type:i.a.string.isRequired,alt:i.a.string,size:i.a.string},t.default=c}}]);
-//# sourceMappingURL=doc-route.chunk_109.js.map?e842d49382c3be53ac2e
+//# sourceMappingURL=doc-route.chunk_109.js.map?ac356f4c09bc1b90a4ed
