@@ -34,7 +34,7 @@ const GetStarted = () => (
 
 const WhatIsDG = () => (
     <section>
-        <h2>What is the Design Guide?</h2>
+        <h2 id="what-is-dg">What is the Design Guide?</h2>
         <p>The Swedbank Pay design system consists of two parts; the Figma designs and the web Design Guide (where you are right now). The Design Guide is the ready-to-use part of the design system and the Figma design library is for designing and prototyping.</p>
         <p>The Design Guide consists of more than design. It contains all the parts of the design system that actually can be used and implemented by developers working with Swedbank Pay products.</p>
         <div className="quote">
@@ -46,7 +46,7 @@ const WhatIsDG = () => (
 
 const UsingDG = () => (
     <section>
-        <h2>Using the Design Guide</h2>
+        <h2 id="using-dg">Using the Design Guide</h2>
         <p>Let’s clarify the definition of using the Design Guide. Just because an interface looks right according to the Design Guide, our brand and the design system in general it still doesn’t mean that it per definition “uses the Design Guide”. The definition of using our Design Guide is the technical implementation. </p>
         <div className="quote">
             <span>“</span>
@@ -102,7 +102,7 @@ const UsingDG = () => (
 
 const OpenSimpleCaring = () => (
     <section>
-        <h2>Open, simple, caring</h2>
+        <h2 id="open-simple-caring">Open, simple, caring</h2>
         <p>Swedbank Pay is a sub-brand to Swedbank and a part of the “Coin family”. That means that Swedbank Pay is built on the same foundation as Swedbank and shares the same brand platform and overall guidelines. Swedbank Pay express its own identity through the logotype, yellow color, images and tonality.</p>
         <p>To build awareness we display Swedbank Pay’s name and logotype with impact. We express a distinguishing attitude through the logotype, yellow color, images and tonality – always as simple and uncomplicated as possible. Read more about the brand in the <Link to="/core/identity">Identity overview</Link>.</p>
         <img src={`${basename}img/documentation/introduction/pyramid.png`} className="img-fluid" alt="Illustration of our vision, values and purpose"/>

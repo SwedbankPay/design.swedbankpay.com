@@ -8,7 +8,7 @@ const basename = process.env.basename;
 
 const Installation = () => (
     <section>
-        <h2>Installation</h2>
+        <h2 id="installation">Installation</h2>
         <p>To quickly add the Swedbank Pay Design Guide to your project, include the snippets below in your project.</p>
         <h3>Include in the header</h3>
         <p>Copy-paste the following CSS code into <CodeTags type="secondary" code="<head>"/> before all the other stylesheets in order to load our CSS.</p>
@@ -35,27 +35,27 @@ const Installation = () => (
         <h3>Browser Support</h3>
         <div className="browser-support">
             <div>
-                <img src={`${basename}img/documentation/fordevelopers/chrome.svg`} alt="Image of Chrome"/>
+                <img src={`${basename}img/documentation/forDevelopers/chrome.svg`} alt="Image of Chrome"/>
                 <p>Yes</p>
             </div>
             <div>
-                <img src={`${basename}img/documentation/fordevelopers/edge.svg`} alt="Image of Edge"/>
+                <img src={`${basename}img/documentation/forDevelopers/edge.svg`} alt="Image of Edge"/>
                 <p>Yes</p>
             </div>
             <div>
-                <img src={`${basename}img/documentation/fordevelopers/internet-explorer.svg`} alt="Image of Internet explorer"/>
+                <img src={`${basename}img/documentation/forDevelopers/internet-explorer.svg`} alt="Image of Internet explorer"/>
                 <p>11</p>
             </div>
             <div>
-                <img src={`${basename}img/documentation/fordevelopers/firefox.svg`} alt="Image of Firefox"/>
+                <img src={`${basename}img/documentation/forDevelopers/firefox.svg`} alt="Image of Firefox"/>
                 <p>Yes</p>
             </div>
             <div>
-                <img src={`${basename}img/documentation/fordevelopers/opera.svg`} alt="Image of Opera"/>
+                <img src={`${basename}img/documentation/forDevelopers/opera.svg`} alt="Image of Opera"/>
                 <p>Yes</p>
             </div>
             <div>
-                <img src={`${basename}img/documentation/fordevelopers/safari.svg`} alt="Image of Safari"/>
+                <img src={`${basename}img/documentation/forDevelopers/safari.svg`} alt="Image of Safari"/>
                 <p>Yes</p>
             </div>
         </div>
@@ -63,7 +63,7 @@ const Installation = () => (
 );
 const GridAndBreakpoints = () => (
     <section>
-        <h2>Grid and breakpoints</h2>
+        <h2 id="grid-and-breakpoints">Grid and breakpoints</h2>
         <p>Our grid system is a customized version of the bootstrap grid and functions almost the same, with most of the Bootstrap grid system classes available. To learn more about how to use <Link to="/core/grid">our 12 column grid system.</Link></p>
         <table className="table table-plain">
             <thead>
@@ -108,20 +108,20 @@ const GridAndBreakpoints = () => (
 );
 const Contributing = () => (
     <section>
-        <h2>Contributing</h2>
+        <h2 id="contributing">Contributing</h2>
         <p>Our project is fully open source and we would love to have you contribute to make the design guide better! You can create a ticket directly in <a href="https://github.com/SwedbankPay/design.swedbankpay.com" className="icon-link m-0" target="_blank" rel="noopener noreferrer"><span className="mr-2">our Git Repository</span><i className="material-icons" aria-hidden="true">open_in_new</i></a> or create a feature request here.</p>
         <p>Please make sure to check out our <a href="https://github.com/SwedbankPay/design.swedbankpay.com#contributing" className="icon-link m-0" target="_blank" rel="noopener noreferrer"><span className="mr-2">Contribution Guide</span><i className="material-icons" aria-hidden="true">open_in_new</i></a>, it includes guidelines for how to contribute with new components and develop for the project.</p>
     </section>
 );
 const Feedback = () => (
     <section>
-        <h2>Feedback</h2>
+        <h2 id="feedback">Feedback</h2>
         <p>We want to do our best to provide top quality components for you to use, but this is only possible with the help from you! If you have any suggestions for how we could potentially improve a component, please don’t hesitate to reach out, you can find us in the <strong>#design-guide-feedback</strong> Slack channel.</p>
     </section>
 );
 const DiscoverMore = () => (
     <section>
-        <h2>Discover more</h2>
+        <h2 id="discover-more">Discover more</h2>
         <div className="overview-grid">
             <Link to="/components/components" className="cards cards-primary cards-wide">
                 <div className="cards-content">

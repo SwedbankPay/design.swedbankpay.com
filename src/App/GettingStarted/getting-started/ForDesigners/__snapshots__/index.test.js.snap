@@ -2,7 +2,9 @@
 
 exports[`GettingStarted: ForDesigners Contributing renders 1`] = `
 <section>
-  <h2>
+  <h2
+    id="contributing"
+  >
     Contributing
   </h2>
   <p>
@@ -33,7 +35,7 @@ exports[`GettingStarted: ForDesigners Contributing renders 1`] = `
     <img
       alt="Our modified Vanilla pattern design intake process (Click to view)"
       className="img-fluid"
-      src="/TEST/img/documentation/fordesigners/vanilla-pattern.png"
+      src="/TEST/img/documentation/forDesigners/vanilla-pattern.png"
     />
     <span
       className="caption-text"
@@ -51,7 +53,9 @@ exports[`GettingStarted: ForDesigners Contributing renders 1`] = `
 
 exports[`GettingStarted: ForDesigners DiscoverMore renders 1`] = `
 <section>
-  <h2>
+  <h2
+    id="discover-more"
+  >
     DiscoverMore
   </h2>
   <div
@@ -107,7 +111,9 @@ exports[`GettingStarted: ForDesigners DiscoverMore renders 1`] = `
 
 exports[`GettingStarted: ForDesigners Feedback renders 1`] = `
 <section>
-  <h2>
+  <h2
+    id="feedback"
+  >
     Feedback
   </h2>
   <p>
@@ -118,7 +124,9 @@ exports[`GettingStarted: ForDesigners Feedback renders 1`] = `
 
 exports[`GettingStarted: ForDesigners NeedToHave renders 1`] = `
 <section>
-  <h2>
+  <h2
+    id="need-to-have"
+  >
     What you need to have
   </h2>
   <p>
@@ -189,7 +197,9 @@ exports[`GettingStarted: ForDesigners NeedToHave renders 1`] = `
 
 exports[`GettingStarted: ForDesigners NeedToKnow renders 1`] = `
 <section>
-  <h2>
+  <h2
+    id="need-to-know"
+  >
     What you need to know
   </h2>
   <p>
