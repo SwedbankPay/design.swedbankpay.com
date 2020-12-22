@@ -3,27 +3,34 @@
 export const mainText = [
     {
         name: "Primary",
-        hex: "#2da944"
+        hex: "#2DA944",
+        rgb: "45, 169, 68"
     },
     {
         name: "Secondary",
-        hex: "#3c3c3c"
+        hex: "#3C3C3C",
+        rgb: "60, 60, 60",
+        fontColor: "#FFFFFF"
     },
     {
         name: "Info",
-        hex: "#266c9a"
+        hex: "#266C9A",
+        rgb: "38, 108, 154"
     },
     {
         name: "Success",
-        hex: "#2da944"
+        hex: "#2DA944",
+        rgb: "45, 169, 68"
     },
     {
         name: "Warning",
-        hex: "#ff9f00"
+        hex: "#FF9F00",
+        rgb: "255, 159, 0"
     },
     {
         name: "Error",
-        hex: "#cd2e00"
+        hex: "#CD2E00",
+        rgb: "205, 46, 0"
     }
 ];
 
