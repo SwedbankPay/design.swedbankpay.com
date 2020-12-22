@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Spacing, { Intro, EightPointSystem, VerticalSpacing, TouchTarget, BaseIncrementOfRem, DiveDeeper, HowItWorks, Notation, Examples } from "./index";
+import Spacing, { EightPointSystem, VerticalSpacing, TouchTarget, BaseIncrementOfRem, DiveDeeper, HowItWorks, Notation, Examples } from "./index";
 
 describe("Identity: Spacing", () => {
     it("is defined", () => {
@@ -12,18 +12,6 @@ describe("Identity: Spacing", () => {
         const wrapper = shallow(<Spacing />);
 
         expect(wrapper).toMatchSnapshot();
-    });
-
-    describe("Intro", () => {
-        it("is defined", () => {
-            expect(Intro).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<Intro />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
     });
 
     describe("EightPointSystem", () => {

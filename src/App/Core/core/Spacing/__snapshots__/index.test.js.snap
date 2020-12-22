@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Identity: Spacing BaseIncrementOfRem renders 1`] = `
-<section
-  id="base-increment-of-rem"
->
-  <h2>
+<section>
+  <h2
+    id="base-increment-of-rem"
+  >
     Base increment of rem
   </h2>
   <p>
@@ -96,10 +96,10 @@ exports[`Identity: Spacing BaseIncrementOfRem renders 1`] = `
 `;
 
 exports[`Identity: Spacing DiveDeeper renders 1`] = `
-<section
-  id="dive-deeper"
->
-  <h2>
+<section>
+  <h2
+    id="dive-deeper"
+  >
     Dive deeper into spacing
   </h2>
   <p>
@@ -108,6 +108,8 @@ exports[`Identity: Spacing DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://www.justinmind.com/blog/your-guide-to-space-and-layout-in-ui-design/"
+    rel="noopener noreferrer"
+    target="_blank"
   >
     <i
       aria-hidden="true"
@@ -124,6 +126,8 @@ exports[`Identity: Spacing DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://www.w3.org/TR/mobile-accessibility-mapping/#touch-target-size-and-spacing"
+    rel="noopener noreferrer"
+    target="_blank"
   >
     <i
       aria-hidden="true"
@@ -140,6 +144,8 @@ exports[`Identity: Spacing DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://lawsofux.com/law-of-proximity"
+    rel="noopener noreferrer"
+    target="_blank"
   >
     <i
       aria-hidden="true"
@@ -156,6 +162,8 @@ exports[`Identity: Spacing DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://uxplanet.org/white-space-in-ui-design-8647d4f685a7"
+    rel="noopener noreferrer"
+    target="_blank"
   >
     <i
       aria-hidden="true"
@@ -173,10 +181,10 @@ exports[`Identity: Spacing DiveDeeper renders 1`] = `
 `;
 
 exports[`Identity: Spacing EightPointSystem renders 1`] = `
-<section
-  id="eight-point-system"
->
-  <h2>
+<section>
+  <h2
+    id="eight-point-system"
+  >
     8-point spacing system
   </h2>
   <p>
@@ -202,12 +210,16 @@ exports[`Identity: Spacing EightPointSystem renders 1`] = `
     If you are interested in learning more about the 8-point spacing system, you can read more about it in this 
     <a
       href="https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       Introduction article
     </a>
     , which provides a brief explanation of the reasons why to use the 8-point spacing system. To dive even deeper into the nitty gritty, please refer to this 
     <a
       href="https://spec.fm/specifics/8-pt-grid"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       in-depth explanation
     </a>
@@ -235,10 +247,10 @@ exports[`Identity: Spacing EightPointSystem renders 1`] = `
 `;
 
 exports[`Identity: Spacing Examples renders 1`] = `
-<section
-  id="example"
->
-  <h2>
+<section>
+  <h2
+    id="example"
+  >
     Examples
   </h2>
   <p>
@@ -312,10 +324,10 @@ exports[`Identity: Spacing Examples renders 1`] = `
 `;
 
 exports[`Identity: Spacing HowItWorks renders 1`] = `
-<section
-  id="how-it-works"
->
-  <h2>
+<section>
+  <h2
+    id="how-it-works"
+  >
     How it works in Code
   </h2>
   <p>
@@ -324,23 +336,11 @@ exports[`Identity: Spacing HowItWorks renders 1`] = `
 </section>
 `;
 
-exports[`Identity: Spacing Intro renders 1`] = `
-<section
-  id="intro"
->
-  <p
-    className="ingress font-weight-bold mb-4"
-  >
-    Spacing helps us to align different components both vertically and horizontally. We follow a 8-point spacing system based on simple mathematical principles in order to create visual consistency and distinction between our elements.
-  </p>
-</section>
-`;
-
 exports[`Identity: Spacing Notation renders 1`] = `
-<section
-  id="notation"
->
-  <h2>
+<section>
+  <h2
+    id="notation"
+  >
     Notation
   </h2>
   <p>
@@ -802,10 +802,10 @@ exports[`Identity: Spacing Notation renders 1`] = `
 `;
 
 exports[`Identity: Spacing TouchTarget renders 1`] = `
-<section
-  id="touch-target"
->
-  <h2>
+<section>
+  <h2
+    id="touch-target"
+  >
     Touch target
   </h2>
   <p>
@@ -818,10 +818,10 @@ exports[`Identity: Spacing TouchTarget renders 1`] = `
 `;
 
 exports[`Identity: Spacing VerticalSpacing renders 1`] = `
-<section
-  id="vertical-spacing"
->
-  <h2>
+<section>
+  <h2
+    id="vertical-spacing"
+  >
     Vertical spacing
   </h2>
   <p>
@@ -850,7 +850,11 @@ exports[`Identity: Spacing renders 1`] = `
 <div
   className="doc-body spacing p-0"
 >
-  <Intro />
+  <p
+    className="lead"
+  >
+    Spacing helps us to align different components both vertically and horizontally. We follow a 8-point spacing system based on simple mathematical principles in order to create visual consistency and distinction between our elements.
+  </p>
   <EightPointSystem />
   <VerticalSpacing />
   <TouchTarget />

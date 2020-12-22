@@ -4,17 +4,9 @@ import CodeTags from "@components/CodeTags";
 
 const basename = process.env.basename;
 
-const Intro = () => (
-    <section id="intro">
-        <p className="ingress font-weight-bold mb-4">
-        Spacing helps us to align different components both vertically and horizontally. We follow a 8-point spacing system based on simple mathematical principles in order to create visual consistency and distinction between our elements.
-        </p>
-    </section>
-);
-
 const EightPointSystem = () => (
-    <section id="eight-point-system">
-        <h2>8-point spacing system</h2>
+    <section>
+        <h2 id="eight-point-system">8-point spacing system</h2>
         <p>We follow a 8-point spacing system – multiples of 8 to define the different dimensions, margins and paddings of our elements. The reason for this is to streamline the process, saving time by minimize the amount of choices and create consistent usage of space across all our product. </p>
 
         <div className="img-container pb-4">
@@ -22,7 +14,7 @@ const EightPointSystem = () => (
             <span><span className="font-weight-bold">Figure 1.</span> Example on multiples of 8px horizontal spacing between elements.</span>
         </div>
 
-        <p>If you are interested in learning more about the 8-point spacing system, you can read more about it in this <a href="https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632">Introduction article</a>, which provides a brief explanation of the reasons why to use the 8-point spacing system. To dive even deeper into the nitty gritty, please refer to this <a href="https://spec.fm/specifics/8-pt-grid">in-depth explanation</a> of the 8-point spacing system.</p>
+        <p>If you are interested in learning more about the 8-point spacing system, you can read more about it in this <a href="https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632" target="_blank" rel="noopener noreferrer">Introduction article</a>, which provides a brief explanation of the reasons why to use the 8-point spacing system. To dive even deeper into the nitty gritty, please refer to this <a href="https://spec.fm/specifics/8-pt-grid" target="_blank" rel="noopener noreferrer">in-depth explanation</a> of the 8-point spacing system.</p>
 
         <h3>What if I need something in between?</h3>
         <p>Even though we try to adhere to the 8-point spacing system as much as possible, we also know that sometimes you need to use something in between. Especially when it comes to building certain components which requires smaller space in between in order to show grouping and simply produces a better result visually. In those cases, it is allowed to use values from the multiples of 4, but this should be kept to <span className="font-weight-bold">4 px</span> and <span className="font-weight-bold">12 px</span> as we try to keep the larger increments for a consistent vertical spacing alignment between sections.</p>
@@ -30,8 +22,8 @@ const EightPointSystem = () => (
 );
 
 const VerticalSpacing = () => (
-    <section id="vertical-spacing">
-        <h2>Vertical spacing</h2>
+    <section>
+        <h2 id="vertical-spacing">Vertical spacing</h2>
         <p>Similar to horizontal spacing, we also use spacing vertically in order to create good vertical structure. While we don’t have strict usage definitions for each size, it is important to always evaluate what fits best in your context and what type of devices you are designing for. Make sure to group items relevant to each other close and separate sections with good amount of spacing to provide a clear separation.</p>
         <div className="img-container pb-4">
             <img src={`${basename}img/documentation/spacing/vertical-spacing-example.svg`} alt="Example on multiples of 8 px vertical spacing between elements"/>
@@ -41,16 +33,16 @@ const VerticalSpacing = () => (
 );
 
 const TouchTarget = () => (
-    <section id="touch-target">
-        <h2>Touch target</h2>
+    <section>
+        <h2 id="touch-target">Touch target</h2>
         <p>On mobile devices, we have to consider the size of the different components to make sure that there is enough space in between interactive components such as: Links, buttons and other input actions to avoid miss clicks and errors. </p>
         <p>A touch target area needs to be a certain size: 48*48 dp (distribution point) according to Android and 44 px minimum size according to iOS. Keep in mind this does not mean your component has to fill these area, even smaller components can work as long as the touch target area fulfills the size requirement.</p>
     </section>
 );
 
 const BaseIncrementOfRem = () => (
-    <section id="base-increment-of-rem">
-        <h2>Base increment of rem</h2>
+    <section>
+        <h2 id="base-increment-of-rem">Base increment of rem</h2>
         <p>In our system the base size of a  <CodeTags type="secondary" code="rem"/>  unit is <span className="font-weight-bold">16px</span>, this means you can easily use 0.5 rem increments to create layouts in code on a 8-point spacing system. See example below for reference: </p>
 
         <table className="table table-plain">
@@ -88,26 +80,26 @@ const BaseIncrementOfRem = () => (
 );
 
 const DiveDeeper = () => (
-    <section id="dive-deeper">
-        <h2>Dive deeper into spacing</h2>
+    <section>
+        <h2 id="dive-deeper">Dive deeper into spacing</h2>
         <p>There are a lot more to learn about best practices when it comes to spacing, it involves much more than just spacing in between elements. Even though, we can’t explain all these concepts here in our spacing section. We would like to provide you with links to learn more about what other factors should be considered when designing layouts and what to think about in order to create the best experience for our users.</p>
 
-        <a href="https://www.justinmind.com/blog/your-guide-to-space-and-layout-in-ui-design/" className="icon-link d-flex">
+        <a href="https://www.justinmind.com/blog/your-guide-to-space-and-layout-in-ui-design/" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
             <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
             <span className="mr-2">Just in mind – Your guide to space and layout in UI design</span>
         </a>
 
-        <a href="https://www.w3.org/TR/mobile-accessibility-mapping/#touch-target-size-and-spacing" className="icon-link d-flex">
+        <a href="https://www.w3.org/TR/mobile-accessibility-mapping/#touch-target-size-and-spacing" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
             <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
             <span className="mr-2">WCAG 2.0 – Touch Target Size and Spacing</span>
         </a>
 
-        <a href="https://lawsofux.com/law-of-proximity" className="icon-link d-flex">
+        <a href="https://lawsofux.com/law-of-proximity" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
             <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
             <span className="mr-2">Law of UX – Law of Proximity</span>
         </a>
 
-        <a href="https://uxplanet.org/white-space-in-ui-design-8647d4f685a7" className="icon-link d-flex">
+        <a href="https://uxplanet.org/white-space-in-ui-design-8647d4f685a7" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
             <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
             <span className="mr-2">UX Planet – White space in UI design </span>
         </a>
@@ -115,15 +107,15 @@ const DiveDeeper = () => (
 );
 
 const HowItWorks = () => (
-    <section id="how-it-works">
-        <h2>How it works in Code</h2>
+    <section>
+        <h2 id="how-it-works">How it works in Code</h2>
         <p>Assign responsive-friendly margin or padding values to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties. Classes are ranging from 0.25 rem to 3 rem.</p>
     </section>
 );
 
 const Notation = () => (
-    <section id="notation">
-        <h2>Notation</h2>
+    <section>
+        <h2 id="notation">Notation</h2>
         <p>
             Spacing utilities that apply to all breakpoints, from <CodeTags type="secondary" code="xs" /> to <CodeTags type="secondary" code="xxl" />, have no breakpoint abbreviation in them. This is because those classes are applied from <CodeTags type="secondary" code="min-width: 0" /> and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
         </p>
@@ -172,8 +164,8 @@ const Notation = () => (
 );
 
 const Examples = () => (
-    <section id="example">
-        <h2>Examples</h2>
+    <section>
+        <h2 id="example">Examples</h2>
         <p>Here are some representative examples of these classes:</p>
         <ComponentPreview language="css" codeFigure>
             {`
@@ -212,7 +204,9 @@ const Examples = () => (
 
 const Spacing = () => (
     <div className="doc-body spacing p-0">
-        <Intro />
+        <p className="lead">
+        Spacing helps us to align different components both vertically and horizontally. We follow a 8-point spacing system based on simple mathematical principles in order to create visual consistency and distinction between our elements.
+        </p>
         <EightPointSystem />
         <VerticalSpacing />
         <TouchTarget />
@@ -226,4 +220,4 @@ const Spacing = () => (
 
 export default Spacing;
 
-export { Intro, EightPointSystem, VerticalSpacing, TouchTarget, BaseIncrementOfRem, DiveDeeper, HowItWorks, Notation, Examples };
+export { EightPointSystem, VerticalSpacing, TouchTarget, BaseIncrementOfRem, DiveDeeper, HowItWorks, Notation, Examples };
