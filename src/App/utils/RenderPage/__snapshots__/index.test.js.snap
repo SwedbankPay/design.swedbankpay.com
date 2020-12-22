@@ -68,6 +68,11 @@ exports[`Utilities: RenderPage renders 1`] = `
               "title": "Color",
             },
             Object {
+              "componentPath": "core/Spacing",
+              "path": "/core/spacing",
+              "title": "Spacing",
+            },
+            Object {
               "componentPath": "core/Copywriting",
               "path": "/core/copywriting",
               "title": "Copywriting",
