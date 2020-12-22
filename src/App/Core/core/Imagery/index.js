@@ -2,17 +2,9 @@ import React from "react";
 
 const basename = process.env.basename;
 
-const Intro = () => (
-    <section id="intro">
-        <p className="lead mb-4">
-        Images are commercial and should be used as decoration to make the interface eye catching and the content feel easy and uncomplicated. In imagery we use clean and simple compositions with focus on one situation or action. This creates focus, calmness and simplicity.
-        </p>
-    </section>
-);
-
 const ImageLibrary = () => (
-    <section id="image-library">
-        <h2>Image library</h2>
+    <section>
+        <h2 id="image-library">Image library</h2>
         <p>All images displayed in a Swedbank Pay interface should be from the Swedbank Pay Image library. Note that the images only can be used in Swedbank Pay productions. If you need access to the library, contact current Head of Marketing. </p>
         <a href="https://app.pickit.com/#/explore/community/users/124093/collection/21458-swedbank-pay" className="icon-link d-block d-flex"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Visit the Swedbank Pay Image Library</span></a>
         <img src={`${basename}img/documentation/imagery/image-group.svg`} alt="collection of images"/>
@@ -23,8 +15,8 @@ const ImageLibrary = () => (
 );
 
 const ImageSizes = () => (
-    <section id="image-sizes">
-        <h2>Image sizes</h2>
+    <section>
+        <h2 id="image-sizes">Image sizes</h2>
         <p>Once you’ve found good imagery for your website, ask yourself “Are these images the right size for where I want them on my website?” Investigate what image sizes that is required for your interface, to ensure the pictures look of high quality and aren’t pixelated or stretched.</p>
         <p>Avoid using extremely small images in places where a larger image is needed, e.g. the main banner on a landing page, as this can cause them to look blurry, out of focus, and may cut off a large part of the image. Also be careful when using extremely large images. Only small images where a smaller image is required, e.g. your sector images, as this will drastically affect page loading speed. The optimum size for page loading time is less than 2 MB. </p>
         <p>Finally, don’t distort or wrap the images in any way.</p>
@@ -32,8 +24,8 @@ const ImageSizes = () => (
 );
 
 const FocalPoints = () => (
-    <section id="focal-points">
-        <h2>Focal points and angles</h2>
+    <section>
+        <h2 id="focal-points">Focal points and angles</h2>
         <p>As designers and developer we have the power and responsibility to influence users behaviour. In our products we want to use images not only in a decorative way but also to guide user, pointing them directly towards particular messaging or call-to-actions. And using lines and angles, we can guide the eyes of the user.</p>
         <p>Choose images with a strong focal point for the products main banner – this is the first part of your product users will see, so the imagery should be powerful and relevant to your site. The person looking to the right in this photo (see Figure 1) guides the eye towards to the content to the right of the image.</p>
 
@@ -49,8 +41,8 @@ const FocalPoints = () => (
 );
 
 const UsingImagery = () => (
-    <section id="using-imagery">
-        <h2>Using imagery in creative ways</h2>
+    <section>
+        <h2 id="using-imagery">Using imagery in creative ways</h2>
         <p>We use images in many different ways. An image can be used to brighten up interfaces, break up heavy text and also to tell a story of our company, values, and/or target audience. While it’s great to break up text with imagery, don’t over do it! We don’t want the page to read disjointed or the message to be diluted – it’s a fine balance.</p>
         <img src={`${basename}img/documentation/imagery/donts-2.svg`} alt="Image describing what not to do"/>
     </section>
@@ -58,7 +50,9 @@ const UsingImagery = () => (
 
 const Imagery = () => (
     <div className="doc-body imagery p-0">
-        <Intro />
+        <p className="lead">
+        Images are commercial and should be used as decoration to make the interface eye catching and the content feel easy and uncomplicated. In imagery we use clean and simple compositions with focus on one situation or action. This creates focus, calmness and simplicity.
+        </p>
         <ImageLibrary />
         <ImageSizes />
         <FocalPoints />
@@ -68,4 +62,4 @@ const Imagery = () => (
 
 export default Imagery;
 
-export { Intro, ImageLibrary, ImageSizes, FocalPoints, UsingImagery };
+export { ImageLibrary, ImageSizes, FocalPoints, UsingImagery };

@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Core: Imagery FocalPoints renders 1`] = `
-<section
-  id="focal-points"
->
-  <h2>
+<section>
+  <h2
+    id="focal-points"
+  >
     Focal points and angles
   </h2>
   <p>
@@ -43,10 +43,10 @@ exports[`Core: Imagery FocalPoints renders 1`] = `
 `;
 
 exports[`Core: Imagery ImageLibrary renders 1`] = `
-<section
-  id="image-library"
->
-  <h2>
+<section>
+  <h2
+    id="image-library"
+  >
     Image library
   </h2>
   <p>
@@ -90,10 +90,10 @@ exports[`Core: Imagery ImageLibrary renders 1`] = `
 `;
 
 exports[`Core: Imagery ImageSizes renders 1`] = `
-<section
-  id="image-sizes"
->
-  <h2>
+<section>
+  <h2
+    id="image-sizes"
+  >
     Image sizes
   </h2>
   <p>
@@ -108,23 +108,11 @@ exports[`Core: Imagery ImageSizes renders 1`] = `
 </section>
 `;
 
-exports[`Core: Imagery Intro renders 1`] = `
-<section
-  id="intro"
->
-  <p
-    className="lead mb-4"
-  >
-    Images are commercial and should be used as decoration to make the interface eye catching and the content feel easy and uncomplicated. In imagery we use clean and simple compositions with focus on one situation or action. This creates focus, calmness and simplicity.
-  </p>
-</section>
-`;
-
 exports[`Core: Imagery UsingImagery renders 1`] = `
-<section
-  id="using-imagery"
->
-  <h2>
+<section>
+  <h2
+    id="using-imagery"
+  >
     Using imagery in creative ways
   </h2>
   <p>
@@ -141,7 +129,11 @@ exports[`Core: Imagery renders 1`] = `
 <div
   className="doc-body imagery p-0"
 >
-  <Intro />
+  <p
+    className="lead"
+  >
+    Images are commercial and should be used as decoration to make the interface eye catching and the content feel easy and uncomplicated. In imagery we use clean and simple compositions with focus on one situation or action. This creates focus, calmness and simplicity.
+  </p>
   <ImageLibrary />
   <ImageSizes />
   <FocalPoints />
