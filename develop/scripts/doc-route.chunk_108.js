@@ -1,2 +1,2 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[23],{431:function(e,t,s){"use strict";s.r(t);var a=s(0),n=s.n(a),r=s(7),i=s.n(r),c=function(e){var t=e.src,s=e.alt,a=e.type,r=e.size;return n.a.createElement("img",{src:t,alt:s,className:"logotype-".concat(a," logotype-").concat(r||"sm")})};c.propTypes={src:i.a.string.isRequired,type:i.a.string.isRequired,alt:i.a.string,size:i.a.string},t.default=c}}]);
-//# sourceMappingURL=doc-route.chunk_108.js.map?40ec9d86e585547ab93d
+(window.webpackJsonp=window.webpackJsonp||[]).push([[23],{430:function(e,t,s){"use strict";s.r(t);var a=s(0),n=s.n(a),r=s(7),i=s.n(r),c=function(e){var t=e.src,s=e.alt,a=e.type,r=e.size;return n.a.createElement("img",{src:t,alt:s,className:"logotype-".concat(a," logotype-").concat(r||"sm")})};c.propTypes={src:i.a.string.isRequired,type:i.a.string.isRequired,alt:i.a.string,size:i.a.string},t.default=c}}]);
+//# sourceMappingURL=doc-route.chunk_108.js.map?d0f9c3b3d590bbdec812
