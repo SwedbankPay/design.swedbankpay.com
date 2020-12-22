@@ -63,6 +63,11 @@ exports[`Utilities: RenderPage renders 1`] = `
               "title": "Accessibility",
             },
             Object {
+              "componentPath": "core/Imagery",
+              "path": "/core/imagery",
+              "title": "Imagery",
+            },
+            Object {
               "componentPath": "core/Color",
               "path": "/core/color",
               "title": "Color",
