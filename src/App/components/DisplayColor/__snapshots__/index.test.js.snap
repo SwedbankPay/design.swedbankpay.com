@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DisplayColor renders with optional props 1`] = `
+<div
+  className="w-50"
+>
+  <svg>
+    <rect
+      fill="#FDC129"
+    />
+  </svg>
+  <div
+    className="pl-3 512B2B"
+  >
+    <p
+      className="mb-0"
+    >
+      #FDC129
+    </p>
+    <p>
+      253, 193, 41
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DisplayColor renders with required props 1`] = `
+<div
+  className=""
+>
+  <svg>
+    <rect
+      fill="#FDC129"
+    />
+  </svg>
+  <div
+    className="pl-3 "
+  >
+    <p
+      className="mb-0"
+    >
+      #FDC129
+    </p>
+    <p>
+      253, 193, 41
+    </p>
+  </div>
+</div>
+`;
