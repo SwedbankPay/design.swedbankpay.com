@@ -1,14 +1,12 @@
 export const communicationColors = [
     {
         hex: "#FDC129",
-        rgb: "253, 193, 41",
-        width: "w-50"
+        rgb: "253, 193, 41"
     },
     {
         hex: "#FFFFFF",
         rgb: "255, 255, 255",
-        border: "black",
-        width: "w-50"
+        border: "black"
     }
 ];
 

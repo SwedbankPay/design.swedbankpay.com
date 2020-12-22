@@ -20,9 +20,9 @@ const Lead = () => (
 
 const CommunicationColors = () => (
     <section>
-        <h2>Communication colors</h2>
+        <h2 id="communication-colors">Communication colors</h2>
         <p>Yellow is used on backgrounds, in main graphical elements and on underlines for highlighting relevant parts of a message. When the yellow is used as a background choose the white text version of the logotype.</p>
-        <div className="color-group">
+        <div className="color-group communication-colors justify-content-between">
             {sbColors.communicationColors.map((color, i) => (
                 <DisplayColor key={i} {...color}/>
             ))}
@@ -32,7 +32,7 @@ const CommunicationColors = () => (
 
 const TextColors = () => (
     <section>
-        <h2>Text colors</h2>
+        <h2 id="text-colors">Text colors</h2>
         <p>Brown is our primary text color that should be used for all text besides link and text on dark backgrounds and images. For links, use turquoise and for dark backgrounds/images use white. Gray is used for smaller text that has to be presented in the interface but we don’t want to be the primary focus. </p>
         <div className="color-group">
             {sbColors.textColors.map((color, i) => (
@@ -44,7 +44,7 @@ const TextColors = () => (
 
 const BackgroundColors = () => (
     <section>
-        <h2>Background colors</h2>
+        <h2 id="background-colors">Background colors</h2>
         <p>Apricot is our primary background color. Light gray and light turquoise are secondary. </p>
         <div className="color-group">
             {sbColors.backgroundColors.map((color, i) => (
@@ -56,7 +56,7 @@ const BackgroundColors = () => (
 
 const ButtonColors = () => (
     <section>
-        <h2>Button colors</h2>
+        <h2 id="buttons-colors">Button colors</h2>
         <p>Our primary buttons are yellow and our secondary buttons are brown. Go to Buttons to see and interact with all buttons. </p>
         <div className="color-group">
             {sbColors.buttonColors.map((color, i) => (
@@ -68,7 +68,7 @@ const ButtonColors = () => (
 
 const BrownScaleColors = () => (
     <section>
-        <h2>Brown scale colors</h2>
+        <h2 id="brown-scale-colors">Brown scale colors</h2>
         <p>The brown scale colors are primarily used for borders and backgrounds. These colors cannot be used as text colors. </p>
         <div className="color-group">
             {sbColors.brownScaleColors.map((color, i) => (
@@ -80,7 +80,7 @@ const BrownScaleColors = () => (
 
 const ComplementaryColors = () => (
     <section>
-        <h2>Complementary colors</h2>
+        <h2 id="complementary-colors">Complementary colors</h2>
         <p>Can be used for decorative elements in combination with corresponding background colors. These colors cannot be used as text colors. </p>
         <div className="color-group">
             {sbColors.complementaryColors.map((color, i) => (
@@ -92,9 +92,9 @@ const ComplementaryColors = () => (
 
 const SystemColors = () => (
     <section>
-        <h2>System colors</h2>
+        <h2 id="system-colors">System colors</h2>
         <p>We have four primary system colors (red, blue, green, and yellow) which all have a lighter complementary version as well. </p>
-        <div className="color-group flex-wrap">
+        <div className="color-group">
             {sbColors.systemColors.map((color, i) => (
                 <DisplayColor key={i} {...color}/>
             ))}
@@ -104,7 +104,7 @@ const SystemColors = () => (
 
 const GrayScaleColors = () => (
     <section>
-        <h2>Gray scale colors</h2>
+        <h2 id="gray-scale-colors">Gray scale colors</h2>
         <div className="color-group">
             {sbColors.grayScaleColors.map((color, i) => (
                 <DisplayColor key={i} {...color}/>
@@ -115,7 +115,7 @@ const GrayScaleColors = () => (
 
 const MainColors = () => (
     <section>
-        <h2>Main colors</h2>
+        <h2 id="main-colors">Main colors</h2>
         <p>Our main color palette.</p>
         <div className="color-group flex-wrap">
             {pxColors.mainText.map((color, i) => (

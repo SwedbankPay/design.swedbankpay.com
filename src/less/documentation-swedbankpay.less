@@ -693,6 +693,7 @@
 
     .color-group {
         display: flex;
+        flex-wrap: wrap;
 
         > div {
             display: flex;
@@ -721,6 +722,14 @@
                 &.font-white {
                     color: #ffffff;
                 }
+            }
+        }
+
+        &.communication-colors {
+            > div {
+                width: 100%;
+                max-width: 21rem;
+                margin: 0.875rem 0 0;
             }
         }
     }
