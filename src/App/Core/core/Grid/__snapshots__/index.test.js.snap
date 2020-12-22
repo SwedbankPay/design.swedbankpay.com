@@ -1277,7 +1277,9 @@ exports[`Core: Grid Intro renders 1`] = `
     Our grid system is a modified version of the Bootstrap grid-system, learn more about how it works in the 
     <a
       className="icon-link m-0"
-      href="#"
+      href="https://getbootstrap.com/docs/4.1/layout/grid/"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       <span
         className="mr-2"
@@ -1294,7 +1296,9 @@ exports[`Core: Grid Intro renders 1`] = `
     . If you are curious about how the grid is being used in design, head over to the 
     <a
       className="icon-link m-0"
-      href="#"
+      href="https://www.figma.com/file/GkRbjhReTaX3vr2wwKCsGx/?node-id=493%3A3"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       <span
         className="mr-2"
