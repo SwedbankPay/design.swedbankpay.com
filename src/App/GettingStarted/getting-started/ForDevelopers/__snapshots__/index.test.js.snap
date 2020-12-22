@@ -2,7 +2,9 @@
 
 exports[`GettingStarted: ForDevelopers Contributing renders 1`] = `
 <section>
-  <h2>
+  <h2
+    id="contributing"
+  >
     Contributing
   </h2>
   <p>
@@ -54,7 +56,9 @@ exports[`GettingStarted: ForDevelopers Contributing renders 1`] = `
 
 exports[`GettingStarted: ForDevelopers DiscoverMore renders 1`] = `
 <section>
-  <h2>
+  <h2
+    id="discover-more"
+  >
     Discover more
   </h2>
   <div
@@ -132,7 +136,9 @@ exports[`GettingStarted: ForDevelopers DiscoverMore renders 1`] = `
 
 exports[`GettingStarted: ForDevelopers Feedback renders 1`] = `
 <section>
-  <h2>
+  <h2
+    id="feedback"
+  >
     Feedback
   </h2>
   <p>
@@ -147,7 +153,9 @@ exports[`GettingStarted: ForDevelopers Feedback renders 1`] = `
 
 exports[`GettingStarted: ForDevelopers GridAndBreakpoints renders 1`] = `
 <section>
-  <h2>
+  <h2
+    id="grid-and-breakpoints"
+  >
     Grid and breakpoints
   </h2>
   <p>
@@ -253,7 +261,9 @@ exports[`GettingStarted: ForDevelopers GridAndBreakpoints renders 1`] = `
 
 exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
 <section>
-  <h2>
+  <h2
+    id="installation"
+  >
     Installation
   </h2>
   <p>
@@ -352,7 +362,7 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     <div>
       <img
         alt="Image of Chrome"
-        src="/TEST/img/documentation/fordevelopers/chrome.svg"
+        src="/TEST/img/documentation/forDevelopers/chrome.svg"
       />
       <p>
         Yes
@@ -361,7 +371,7 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     <div>
       <img
         alt="Image of Edge"
-        src="/TEST/img/documentation/fordevelopers/edge.svg"
+        src="/TEST/img/documentation/forDevelopers/edge.svg"
       />
       <p>
         Yes
@@ -370,7 +380,7 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     <div>
       <img
         alt="Image of Internet explorer"
-        src="/TEST/img/documentation/fordevelopers/internet-explorer.svg"
+        src="/TEST/img/documentation/forDevelopers/internet-explorer.svg"
       />
       <p>
         11
@@ -379,7 +389,7 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     <div>
       <img
         alt="Image of Firefox"
-        src="/TEST/img/documentation/fordevelopers/firefox.svg"
+        src="/TEST/img/documentation/forDevelopers/firefox.svg"
       />
       <p>
         Yes
@@ -388,7 +398,7 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     <div>
       <img
         alt="Image of Opera"
-        src="/TEST/img/documentation/fordevelopers/opera.svg"
+        src="/TEST/img/documentation/forDevelopers/opera.svg"
       />
       <p>
         Yes
@@ -397,7 +407,7 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     <div>
       <img
         alt="Image of Safari"
-        src="/TEST/img/documentation/fordevelopers/safari.svg"
+        src="/TEST/img/documentation/forDevelopers/safari.svg"
       />
       <p>
         Yes

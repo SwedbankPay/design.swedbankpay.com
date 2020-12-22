@@ -76,7 +76,9 @@ exports[`GettingStarted: Introduction GetStarted renders 1`] = `
 
 exports[`GettingStarted: Introduction OpenSimpleCaring renders 1`] = `
 <section>
-  <h2>
+  <h2
+    id="open-simple-caring"
+  >
     Open, simple, caring
   </h2>
   <p>
@@ -101,7 +103,9 @@ exports[`GettingStarted: Introduction OpenSimpleCaring renders 1`] = `
 
 exports[`GettingStarted: Introduction UsingDG renders 1`] = `
 <section>
-  <h2>
+  <h2
+    id="using-dg"
+  >
     Using the Design Guide
   </h2>
   <p>
@@ -251,7 +255,9 @@ exports[`GettingStarted: Introduction UsingDG renders 1`] = `
 
 exports[`GettingStarted: Introduction WhatIsDG renders 1`] = `
 <section>
-  <h2>
+  <h2
+    id="what-is-dg"
+  >
     What is the Design Guide?
   </h2>
   <p>
