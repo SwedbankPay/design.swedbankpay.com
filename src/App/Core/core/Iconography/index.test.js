@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Icons, { MaterialIcons, PaymentIcons, Flags } from "./index";
+import Icons, { MaterialIcons, CardIcons, PaymentIcons, Flags } from "./index";
 
 describe("Core: Iconography", () => {
     it("is defined", () => {
@@ -9,12 +9,9 @@ describe("Core: Iconography", () => {
     });
 
     it("renders", () => {
-        console.warn = jest.fn();
-
         const wrapper = shallow(<Icons />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(console.warn).toHaveBeenCalled();
     });
 
     describe("MaterialIcons", () => {
@@ -29,6 +26,18 @@ describe("Core: Iconography", () => {
         });
     });
 
+    describe("CardIcons", () => {
+        it("is defined", () => {
+            expect(CardIcons).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<CardIcons />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
     describe("PaymentIcons", () => {
         it("is defined", () => {
             expect(PaymentIcons).toBeDefined();
@@ -37,16 +46,6 @@ describe("Core: Iconography", () => {
         it("renders", () => {
             const wrapper = shallow(<PaymentIcons />);
 
-            expect(wrapper).toMatchSnapshot();
-        });
-
-        it("onClick prevents default", () => {
-            const wrapper = shallow(<PaymentIcons />);
-            const clickHandler = { preventDefault: jest.fn() };
-            const onclickAnchors = wrapper.find(".action-menu a");
-
-            onclickAnchors.forEach(anchor => anchor.simulate("click", clickHandler));
-            expect(clickHandler.preventDefault).toHaveBeenCalledTimes(onclickAnchors.length);
             expect(wrapper).toMatchSnapshot();
         });
     });

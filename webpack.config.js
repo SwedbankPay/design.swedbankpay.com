@@ -361,8 +361,16 @@ module.exports = (env, argv) => {
                                 destination: `./dist${basename}img/documentation/imagery`
                             },
                             {
+                                source: `./src/img/${brand}/documentation/spacing/*.svg`,
+                                destination: `./dist${basename}img/documentation/spacing`
+                            },
+                            {
                                 source: `./src/img/${brand}/documentation/copywriting/*.png`,
                                 destination: `./dist${basename}img/documentation/copywriting`
+                            },
+                            {
+                                source: `./src/img/${brand}/documentation/colors/*.png`,
+                                destination: `./dist${basename}img/documentation/colors`
                             },
                             {
                                 source: "./src/assets/logos/*.zip",
