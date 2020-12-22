@@ -2,14 +2,16 @@
 
 exports[`Identity: Identity MenuOverview renders 1`] = `
 <section>
-  <h2>
+  <h2
+    id="read-more"
+  >
     Read More
   </h2>
   <div
-    className="overview-grid"
+    className="component-overview"
   >
     <Link
-      className="cards cards-wide m-0"
+      className="cards cards-wide"
       to="/core/accessibility"
     >
       <div
@@ -31,7 +33,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
       </i>
     </Link>
     <Link
-      className="cards cards-wide m-0"
+      className="cards cards-wide"
       to="/core/color"
     >
       <div
@@ -53,7 +55,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
       </i>
     </Link>
     <Link
-      className="cards cards-wide m-0"
+      className="cards cards-wide"
       to="/core/copywriting"
     >
       <div
@@ -75,7 +77,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
       </i>
     </Link>
     <Link
-      className="cards cards-wide m-0"
+      className="cards cards-wide"
       to="/core/imagery"
     >
       <div
@@ -97,7 +99,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
       </i>
     </Link>
     <Link
-      className="cards cards-wide m-0"
+      className="cards cards-wide"
       to="/core/iconography"
     >
       <div
@@ -119,7 +121,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
       </i>
     </Link>
     <Link
-      className="cards cards-wide m-0"
+      className="cards cards-wide"
       to="/core/grid"
     >
       <div
@@ -141,7 +143,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
       </i>
     </Link>
     <Link
-      className="cards cards-wide m-0"
+      className="cards cards-wide"
       to="/core/logotype"
     >
       <div
@@ -163,7 +165,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
       </i>
     </Link>
     <Link
-      className="cards cards-wide m-0"
+      className="cards cards-wide"
       to="/core/spacing"
     >
       <div
@@ -185,7 +187,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
       </i>
     </Link>
     <Link
-      className="cards cards-wide m-0"
+      className="cards cards-wide"
       to="/core/typography"
     >
       <div
@@ -212,7 +214,9 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
 
 exports[`Identity: Identity OurBrand renders 1`] = `
 <section>
-  <h2>
+  <h2
+    id="our-brand"
+  >
     Our Brand
   </h2>
   <p>

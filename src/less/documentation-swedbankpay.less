@@ -256,10 +256,21 @@
             font-size: 0.75rem;
         }
 
-        .overview-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
+        .component-overview {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            a {
+                width: 100%;
+                margin: 1.5rem 0 0;
+            }
+
+            @media (min-width: @screen-md-min) {
+                a {
+                    max-width: 21rem;
+                }
+            }
         }
     }
 
