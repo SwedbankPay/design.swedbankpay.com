@@ -6,6 +6,11 @@ module.exports = [
         appFolder: "Utilities",
         routes: [
             {
+                title: "Utilities",
+                path: "/utilities/utilities",
+                componentPath: "utilities/Utilities"
+            },
+            {
                 title: "Borders",
                 path: "/utilities/borders",
                 componentPath: "utilities/Borders"

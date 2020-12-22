@@ -68,6 +68,11 @@ exports[`Utilities: RenderPage renders 1`] = `
               "title": "Color",
             },
             Object {
+              "componentPath": "core/Spacing",
+              "path": "/core/spacing",
+              "title": "Spacing",
+            },
+            Object {
               "componentPath": "core/Copywriting",
               "path": "/core/copywriting",
               "title": "Copywriting",
@@ -361,6 +366,11 @@ exports[`Utilities: RenderPage renders 1`] = `
         redirect="/utilities/colors"
         routes={
           Array [
+            Object {
+              "componentPath": "utilities/Utilities",
+              "path": "/utilities/utilities",
+              "title": "Utilities",
+            },
             Object {
               "componentPath": "utilities/Borders",
               "path": "/utilities/borders",

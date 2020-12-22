@@ -1,229 +1,259 @@
-import React, { Component } from "react";
+import React from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import IconPreview from "@components/IconPreview";
-import ActionListComponent from "@components/ActionList";
 import CodeTags from "@components/CodeTags";
 
-const { actionList } = window.dg;
-const items = [
-    {
-        name: "Add bookmark",
-        icon: "bookmark"
-    },
-    {
-        name: "Add client",
-        icon: "business_center"
-    },
-    {
-        name: "Add document",
-        icon: "add_circle"
-    },
-    {
-        name: "Add user",
-        icon: "person_add"
-    }
-];
-
 const MaterialIcons = () => (
-    <>
-        <h2 id="material-icons">Material Icons</h2>
-        <p className="lead">DesignGuide includes Google{"'"}s material icons. For a full overview of the available icons please visit <a href="https://material.io/tools/icons/">this site</a>.</p>
-        <p>To use an icon, provide the following markup: <CodeTags type="primary" code={"<i class=\"material-icons\" aria-hidden=\"true\">{icon_name}</i>"} />.</p>
-        <ComponentPreview language="html" showCasePanel>
-            <div className="row justify-content-evenly align-items-end">
-                <IconPreview preview type="material-icons" name="android" />
-                <IconPreview preview type="material-icons" name="contact_support" />
-                <IconPreview preview type="material-icons" name="face" />
-                <IconPreview preview type="material-icons" name="star" />
-                <IconPreview preview type="material-icons" name="warning" />
-            </div>
-        </ComponentPreview>
-        <ComponentPreview language="html" codeFigure>
-            <i className="material-icons" aria-hidden="true">android</i>{"\n"}
-            <i className="material-icons" aria-hidden="true">contact_support</i>{"\n"}
-            <i className="material-icons" aria-hidden="true">face</i>{"\n"}
-            <i className="material-icons" aria-hidden="true">star</i>{"\n"}
-            <i className="material-icons" aria-hidden="true">warning</i>
-        </ComponentPreview>
+    <section>
+        <h2>Material Rounded Icons</h2>
+        <p className="mb-0">We primarily use the version called Rounded in the Material icons. To aviod a to heavy look, we strive to look for outlined icons. If an icon isn’t available as outlined or filled we can search for it in the Outlined category aswell. For a full overview of the available icons, please, visit the Material.io. </p>
 
-        <h3>Sizes</h3>
-        <p>You can modify the size of the material icons by adding one of the size
-            classes: <CodeTags type="secondary" code="material-icons-tiny" />, <CodeTags type="secondary" code="material-icons-small" />, <CodeTags type="secondary" code="material-icons-medium" /> or <CodeTags type="secondary" code="material-icons-large" />.</p>
-        <ComponentPreview language="html" showCasePanel>
-            <div className="row justify-content-evenly align-items-end">
-                <IconPreview previewSize type="material-icons" name="android" size="tiny" />
-                <IconPreview previewSize type="material-icons" name="android" size="small" />
-                <IconPreview previewSize type="material-icons" name="android" size="medium" />
-                <IconPreview previewSize type="material-icons" name="android" size="large" />
-            </div>
-        </ComponentPreview>
+        <a href="https://material.io/resources/icons/?style=round" className="icon-link" target="_blank" rel="noopener noreferrer">
+            <i className="material-icons" aria-hidden="true">open_in_new</i>
+            <span className="ml-2">Material Icons Overview</span>
+        </a>
+
+        <h3>Example of how to implement icons</h3>
+        <p>To use an icon, provide the following markup: <CodeTags type="primary" code={"<i class=\"material-icons\" aria-hidden=\"true\">{icon_name}</i>"} /></p>
+        <div className="d-flex justify-content-between p-4">
+            <IconPreview preview type="material-icons" name="insert_invitation" />
+            <IconPreview preview type="material-icons" name="cake" />
+            <IconPreview preview type="material-icons" name="mood" />
+            <IconPreview preview type="material-icons" name="thumb_up_alt" />
+            <IconPreview preview type="material-icons" name="whatshot" />
+        </div>
         <ComponentPreview language="html" codeFigure>
-            <i className="material-icons material-icons-tiny" aria-hidden="true">android</i>{"\n"}
-            <i className="material-icons material-icons-small" aria-hidden="true">android</i>{"\n"}
-            <i className="material-icons material-icons-medium" aria-hidden="true">android</i>{"\n"}
-            <i className="material-icons material-icons-large" aria-hidden="true">android</i>
+            <i className="material-icons" aria-hidden="true">insert_invitation</i>{"\n"}
+            <i className="material-icons" aria-hidden="true">cake</i>{"\n"}
+            <i className="material-icons" aria-hidden="true">mood</i>{"\n"}
+            <i className="material-icons" aria-hidden="true">thumb_up_alt</i>{"\n"}
+            <i className="material-icons" aria-hidden="true">whatshot</i>
         </ComponentPreview>
-    </>
+    </section>
+);
+
+const CardIcons = () => (
+    <section>
+        <h2>Card Icons</h2>
+        <p>Card icons are typically used to show users which card providers that are available. The payment-card icon can be used as a placeholder and/or when the card is not recognized. </p>
+        <table className="table table-plain">
+            <thead>
+                <tr>
+                    <th>Icon</th>
+                    <th>Card type</th>
+                    <th>Code</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr className="justify-content-between">
+                    <td><IconPreview type="payment-icon" name="payment-card" /></td>
+                    <td>Payment card</td>
+                    <td><CodeTags type="secondary" code="payment-card"/></td>
+                </tr>
+                <tr>
+                    <td><IconPreview type="payment-icon" name="amex" /></td>
+                    <td>American Express</td>
+                    <td><CodeTags type="secondary" code="amex"/></td>
+                </tr>
+                <tr>
+                    <td><IconPreview type="payment-icon" name="bank-axept" /></td>
+                    <td>Bank Accept</td>
+                    <td><CodeTags type="secondary" code="bank-axept"/></td>
+                </tr>
+                <tr>
+                    <td><IconPreview type="payment-icon" name="coop" /></td>
+                    <td>Coop</td>
+                    <td><CodeTags type="secondary" code="coop"/></td>
+                </tr>
+                <tr>
+                    <td><IconPreview type="payment-icon" name="dankort" /></td>
+                    <td>Dankort</td>
+                    <td><CodeTags type="secondary" code="dankort"/></td>
+                </tr>
+                <tr>
+                    <td><IconPreview type="payment-icon" name="diners" /></td>
+                    <td>Diners Club</td>
+                    <td><CodeTags type="secondary" code="diners"/></td>
+                </tr>
+                <tr>
+                    <td><IconPreview type="payment-icon" name="finax" /></td>
+                    <td>Finax</td>
+                    <td><CodeTags type="secondary" code="finax"/></td>
+                </tr>
+                <tr>
+                    <td><IconPreview type="payment-icon" name="forbrugsforeningen" /></td>
+                    <td>Forbrugsforeningen</td>
+                    <td><CodeTags type="secondary" code="forbrugsforeningen"/></td>
+                </tr>
+                <tr>
+                    <td><IconPreview type="payment-icon" name="ica" /></td>
+                    <td>ICA</td>
+                    <td><CodeTags type="secondary" code="ica"/></td>
+                </tr>
+                <tr>
+                    <td><IconPreview type="payment-icon" name="ica-banken" /></td>
+                    <td>ICA Banken</td>
+                    <td><CodeTags type="secondary" code="ica-banken"/></td>
+                </tr>
+                <tr>
+                    <td><IconPreview type="payment-icon" name="ikano-bank" /></td>
+                    <td>Ikano Bank</td>
+                    <td><CodeTags type="secondary" code="ikano-bank"/></td>
+                </tr>
+                <tr>
+                    <td><IconPreview type="payment-icon" name="jcb" /></td>
+                    <td>JCB</td>
+                    <td><CodeTags type="secondary" code="jcb"/></td>
+                </tr>
+                <tr>
+                    <td><IconPreview type="payment-icon" name="lindex" /></td>
+                    <td>Lindex</td>
+                    <td><CodeTags type="secondary" code="lindex"/></td>
+                </tr>
+                <tr>
+                    <td><IconPreview type="payment-icon" name="maestro" /></td>
+                    <td>Maestro</td>
+                    <td><CodeTags type="secondary" code="maestro"/></td>
+                </tr>
+                <tr>
+                    <td><IconPreview type="payment-icon" name="mastercard" /></td>
+                    <td>Mastercard</td>
+                    <td><CodeTags type="secondary" code="mastercard"/></td>
+                </tr>
+                <tr>
+                    <td><IconPreview type="payment-icon" name="visa" /></td>
+                    <td>Visa</td>
+                    <td><CodeTags type="secondary" code="visa"/></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 );
 
 const PaymentIcons = () => (
-    <>
-        <h2 id="payment-icons">Payment Icons</h2>
-        <p>To use an icon, provide the following markup: <CodeTags type="primary" code={"<i class=\"payment-icon payment-icon-{icon_name}\" aria-hidden=\"true\"></i>"} />.</p>
-        <ComponentPreview language="html" showCasePanel>
-            <div className="row justify-content-evenly mb-2">
-                <IconPreview preview type="payment-icon" name="amex" size="large" />{"\n"}
-                <IconPreview preview type="payment-icon" name="diners" size="large" />{"\n"}
-                <IconPreview preview type="payment-icon" name="mastercard" size="large" />{"\n"}
-                <IconPreview preview type="payment-icon" name="visa" size="large" />
-            </div>
-            <div className="row justify-content-evenly">
-                <IconPreview preview type="payment-icon" name="mobilepay" size="large" />{"\n"}
-                <IconPreview preview type="payment-icon" name="paypal" size="large" />{"\n"}
-                <IconPreview preview type="payment-icon" name="swish" size="large" />{"\n"}
-                <IconPreview preview type="payment-icon" name="vipps" size="large" />{"\n"}
-            </div>
-        </ComponentPreview>
-        <ComponentPreview language="html" codeFigure>
-            <IconPreview type="payment-icon" name="amex" />{"\n"}
-            <IconPreview type="payment-icon" name="diners" />{"\n"}
-            <IconPreview type="payment-icon" name="mastercard" />{"\n"}
-            <IconPreview type="payment-icon" name="visa" />{"\n"}
-            <IconPreview type="payment-icon" name="mobilepay" />{"\n"}
-            <IconPreview type="payment-icon" name="paypal" />{"\n"}
-            <IconPreview type="payment-icon" name="swish" />{"\n"}
-            <IconPreview type="payment-icon" name="vipps" />
-        </ComponentPreview>
+    <section>
+        <h2>Payment Icons</h2>
+        <p>Below is a list of payment icons that we use in our products. Be mindful when using payment logotypes. Try to make the payment icon feel more secondary in combination with the Swedbank Pay logotype. We always want the Swedbank Pay logotype to be primary.</p>
 
-        <h3>Sizes</h3>
-        <p>
-            Different sizes are available by
-            adding <CodeTags type="secondary" code=".payment-icon-small" />, <CodeTags type="secondary" code=".payment-icon-medium" />, <CodeTags type="secondary" code=".payment-icon-large" /> and <CodeTags type="secondary" code=".payment-icon-huge" />.
-            If no size is provided <CodeTags type="secondary" code=".payment-icon-medium" /> is defaulted.
-        </p>
-        <ComponentPreview language="html" showCasePanel>
-            <div className="row justify-content-evenly align-items-end">
-                <IconPreview type="payment-icon" previewSize name="visa" size="small" />{"\n"}
-                <IconPreview type="payment-icon" previewSize name="visa" size="medium" />{"\n"}
-                <IconPreview type="payment-icon" previewSize name="visa" size="large" />{"\n"}
-                <IconPreview type="payment-icon" previewSize name="visa" size="huge" />
-            </div>
-        </ComponentPreview>
-        <ComponentPreview language="html" codeFigure>
-            <IconPreview type="payment-icon" name="visa" size="small" />{"\n"}
-            <IconPreview type="payment-icon" name="visa" size="medium" />{"\n"}
-            <IconPreview type="payment-icon" name="visa" size="large" />{"\n"}
-            <IconPreview type="payment-icon" name="visa" size="huge" />{"\n"}
-        </ComponentPreview>
-
-        <h3>Usage</h3>
-        <p>Typical usage would be in for instance an <CodeTags type="secondary" code=".item-list" />.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <ul className="item-list item-list-striped">
-                <li>
-                    <div className="d-flex align-items-center">{"\n"}
-                        <IconPreview type="payment-icon" name="visa" className="mr-2" />{"\n"}
-                        <span>4925*********004</span>{"\n"}
-                    </div>
-                    <ActionListComponent items={items} />
-                </li>
-                <li>
-                    <div className="d-flex align-items-center">{"\n"}
-                        <IconPreview type="payment-icon" name="mastercard" className="mr-2" />{"\n"}
-                        <span>5792*********138</span>{"\n"}
-                        <span className="badge badge-blue ml-2">new</span>{"\n"}
-                    </div>{"\n"}
-                    <a href="https://payex.com">www.payex.com</a>{"\n"}
-                </li>
-                <li>
-                    <div className="d-flex align-items-center">{"\n"}
-                        <IconPreview type="payment-icon" name="amex" className="mr-2" />{"\n"}
-                        <span>3651*********701</span>{"\n"}
-                    </div>
-                    <i className="material-icons" aria-hidden="true">star</i>{"\n"}
-                </li>
-                <li>
-                    <div className="d-flex align-items-center">{"\n"}
-                        <IconPreview type="payment-icon" name="visa" className="mr-2" />{"\n"}
-                        <span>4925*********007</span>{"\n"}
-                    </div>{"\n"}
-                    <span className="status status-success">Active</span>{"\n"}
-                    <button type="button" className="btn btn-primary btn-xs ml-2"><i className="material-icons" aria-hidden="true">delete</i></button>{"\n"}
-                </li>
-            </ul>
-        </ComponentPreview>
-    </>
+        <table className="table table-plain">
+            <thead>
+                <tr>
+                    <th>Icon</th>
+                    <th>Payment method</th>
+                    <th>Code</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><IconPreview type="payment-icon" name="viabill" size="large" /></td>
+                    <td>Viabill</td>
+                    <td><CodeTags type="secondary" code="viabill"/></td>
+                </tr>
+                <tr>
+                    <td><IconPreview type="payment-icon" name="vipps" size="large" /></td>
+                    <td>Vipps</td>
+                    <td><CodeTags type="secondary" code="vipps"/></td>
+                </tr>
+                <tr>
+                    <td><IconPreview type="payment-icon" name="swish" size="large" /></td>
+                    <td>Swish</td>
+                    <td><CodeTags type="secondary" code="swish"/></td>
+                </tr>
+                <tr>
+                    <td><IconPreview type="payment-icon" name="mobilpay" size="large" /></td>
+                    <td>MobilPay</td>
+                    <td><CodeTags type="secondary" code="mobilpay"/></td>
+                </tr>
+                <tr>
+                    <td><IconPreview type="payment-icon" name="carpay" size="large" /></td>
+                    <td>CarPay</td>
+                    <td><CodeTags type="secondary" code="carpay"/></td>
+                </tr>
+                <tr>
+                    <td><IconPreview type="payment-icon" name="trustly" size="large" /></td>
+                    <td>Trustly</td>
+                    <td><CodeTags type="secondary" code="trustly"/></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 );
 
 const Flags = () => (
-    <>
-        <h2 id="flags">Flags</h2>
-        <p>To use the flag icons add the classes <CodeTags type="secondary" code=".flag-icon" /> and <CodeTags type="secondary" code=".flag-icon-xx" /> (where
-        xx is the <a href="https://www.iso.org/obp/ui/#search">ISO 3166-1-alpha-2 code</a> of a country) to an empty <CodeTags type="primary" code={"<i>"} />.</p>
-        <ComponentPreview language="html" showCasePanel>
-            <div className="row justify-content-evenly align-items-end">
-                <IconPreview preview type="flag-icon" name="se" />
-                <IconPreview preview type="flag-icon" name="no" />
-                <IconPreview preview type="flag-icon" name="dk" />
-                <IconPreview preview type="flag-icon" name="fi" />
-                <IconPreview preview type="flag-icon" name="eu" />
-            </div>
-        </ComponentPreview>
-        <ComponentPreview language="html" codeFigure>
+    <section>
+        <h2>Flags</h2>
+        <p>Below is a list of flag icons that we use in our system, To use the flag icons add the classes <CodeTags type="secondary" code=".flag-icon"/> and  <CodeTags type="secondary" code=".flag-icon-xx"/>  (where xx is the ISO_3166-1-alpha-2-code of a country) to an empty <CodeTags type="secondary" code="<i>"/></p>
+        <table className="table table-plain">
+            <thead>
+                <tr>
+                    <th>Icon</th>
+                    <th>Country</th>
+                    <th>Code</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><IconPreview type="flag-icon" name="no" size="medium" /></td>
+                    <td>Norway</td>
+                    <td><CodeTags type="secondary" code="no"/></td>
+                </tr>
+                <tr>
+                    <td><IconPreview type="flag-icon" name="se" size="medium" /></td>
+                    <td>Sweden</td>
+                    <td><CodeTags type="secondary" code="se"/></td>
+                </tr>
+                <tr>
+                    <td><IconPreview type="flag-icon" name="dk" size="medium" /></td>
+                    <td>Denmark</td>
+                    <td><CodeTags type="secondary" code="dk"/></td>
+                </tr>
+                <tr>
+                    <td><IconPreview type="flag-icon" name="fi" size="medium" /></td>
+                    <td>Finland</td>
+                    <td><CodeTags type="secondary" code="fi"/></td>
+                </tr>
+                <tr>
+                    <td><IconPreview type="flag-icon" name="eu" size="medium" /></td>
+                    <td>EU</td>
+                    <td><CodeTags type="secondary" code="eu"/></td>
+                </tr>
+            </tbody>
+        </table>
+        <ComponentPreview language="html" codeFigure >
             <i className="flag-icon flag-icon-no" aria-hidden="true"></i>{"\n"}
-            <i className="flag-icon flag-icon-sv" aria-hidden="true"></i>{"\n"}
+            <i className="flag-icon flag-icon-se" aria-hidden="true"></i>{"\n"}
             <i className="flag-icon flag-icon-dk" aria-hidden="true"></i>{"\n"}
             <i className="flag-icon flag-icon-fi" aria-hidden="true"></i>{"\n"}
             <i className="flag-icon flag-icon-eu" aria-hidden="true"></i>{"\n"}
         </ComponentPreview>
-        <h3>Squared</h3>
-        <p>To use a squared version of a flag add the class <CodeTags type="secondary" code=".flag-icon-squared" />.</p>
-        <ComponentPreview language="html" showCasePanel>
-            <div className="row justify-content-evenly align-items-end">
-                <IconPreview preview type="flag-icon" squaredFlag name="se" />
-                <IconPreview preview type="flag-icon" squaredFlag name="no" />
-                <IconPreview preview type="flag-icon" squaredFlag name="dk" />
-                <IconPreview preview type="flag-icon" squaredFlag name="fi" />
-                <IconPreview preview type="flag-icon" squaredFlag name="eu" />
-            </div>
-        </ComponentPreview>
-        <ComponentPreview language="html" codeFigure>
-            <i className="flag-icon flag-icon-squared flag-icon-no" aria-hidden="true"></i>{"\n"}
-            <i className="flag-icon flag-icon-squared flag-icon-sv" aria-hidden="true"></i>{"\n"}
-            <i className="flag-icon flag-icon-squared flag-icon-dk" aria-hidden="true"></i>{"\n"}
-            <i className="flag-icon flag-icon-squared flag-icon-fi" aria-hidden="true"></i>{"\n"}
-            <i className="flag-icon flag-icon-squared flag-icon-eu" aria-hidden="true"></i>{"\n"}
-        </ComponentPreview>
+
         <h3>Sizes</h3>
-        <p>Flags support sizes <CodeTags type="secondary" code=".payment-icon-tiny" />, <CodeTags type="secondary" code=".payment-icon-small" />, <CodeTags type="secondary" code=".payment-icon-medium" />, <CodeTags type="secondary" code=".payment-icon-large" /> and <CodeTags type="secondary" code=".payment-icon-huge" />.
-        If no size is provided <CodeTags type="secondary" code=".payment-icon-tiny" /> is defaulted.</p>
-        <ComponentPreview language="html" showCasePanel>
-            <div className="row justify-content-evenly align-items-end">
-                <IconPreview previewSize type="flag-icon" name="se" size="tiny" />
-                <IconPreview previewSize type="flag-icon" name="no" size="small" />
-                <IconPreview previewSize type="flag-icon" name="dk" size="medium" />
-                <IconPreview previewSize type="flag-icon" name="fi" size="large" />
-                <IconPreview previewSize type="flag-icon" name="eu" size="huge" />
-            </div>
-        </ComponentPreview>
+        <p>All size available for the flags are pre-defined and are shown below. Tiny is the default size and for example is used input fields. </p>
+        <div className="d-flex justify-content-between align-items-end p-4">
+            <IconPreview previewSize type="flag-icon" name="se" size="tiny" />
+            <IconPreview previewSize type="flag-icon" name="no" size="small" />
+            <IconPreview previewSize type="flag-icon" name="dk" size="medium" />
+            <IconPreview previewSize type="flag-icon" name="fi" size="large" />
+            <IconPreview previewSize type="flag-icon" name="eu" size="huge" />
+        </div>
         <ComponentPreview language="html" codeFigure>
             <i className="flag-icon flag-icon-no flag-icon-tiny" aria-hidden="true"></i>{"\n"}
-            <i className="flag-icon flag-icon-sv flag-icon-small" aria-hidden="true"></i>{"\n"}
+            <i className="flag-icon flag-icon-se flag-icon-small" aria-hidden="true"></i>{"\n"}
             <i className="flag-icon flag-icon-dk flag-icon-medium" aria-hidden="true"></i>{"\n"}
             <i className="flag-icon flag-icon-fi flag-icon-large" aria-hidden="true"></i>{"\n"}
             <i className="flag-icon flag-icon-eu flag-icon-huge" aria-hidden="true"></i>{"\n"}
         </ComponentPreview>
-        <h3>Squared Sizes</h3>
-        <ComponentPreview language="html" showCasePanel>
-            <div className="row justify-content-evenly align-items-end">
-                <IconPreview previewSize type="flag-icon" squaredFlag name="se" size="tiny" />
-                <IconPreview previewSize type="flag-icon" squaredFlag name="no" size="small" />
-                <IconPreview previewSize type="flag-icon" squaredFlag name="dk" size="medium" />
-                <IconPreview previewSize type="flag-icon" squaredFlag name="fi" size="large" />
-                <IconPreview previewSize type="flag-icon" squaredFlag name="eu" size="huge" />
-            </div>
-        </ComponentPreview>
+
+        <h3>Squared</h3>
+        <p>All flags can be used in a square format. In the example we see squared flags in the size tiny. All predefined sizes are available in combination with <CodeTags type="secondary" code=".flag-icon-squared"/>. </p>
+        <div className="d-flex justify-content-between align-items-end p-4">
+            <IconPreview previewSize type="flag-icon" squaredFlag name="se" size="tiny" />
+            <IconPreview previewSize type="flag-icon" squaredFlag name="no" size="small" />
+            <IconPreview previewSize type="flag-icon" squaredFlag name="dk" size="medium" />
+            <IconPreview previewSize type="flag-icon" squaredFlag name="fi" size="large" />
+            <IconPreview previewSize type="flag-icon" squaredFlag name="eu" size="huge" />
+        </div>
         <ComponentPreview language="html" codeFigure>
             <i className="flag-icon flag-icon-squared flag-icon-no flag-icon-tiny" aria-hidden="true"></i>{"\n"}
             <i className="flag-icon flag-icon-squared flag-icon-sv flag-icon-small" aria-hidden="true"></i>{"\n"}
@@ -231,27 +261,21 @@ const Flags = () => (
             <i className="flag-icon flag-icon-squared flag-icon-fi flag-icon-large" aria-hidden="true"></i>{"\n"}
             <i className="flag-icon flag-icon-squared flag-icon-eu flag-icon-huge" aria-hidden="true"></i>{"\n"}
         </ComponentPreview>
-    </>
+    </section>
 );
 
-class Icons extends Component {
-    componentDidMount () {
-        actionList.init();
-    }
+const Iconography = () => (
+    <DocContainer>
+        <p className="lead">
+        At Swedbank Pay we use Material icons from Material Design, but we also include icons for well-known payment providers, and flags for most nations in the world. All icons are integraded and are available in HTML and CSS.
+        </p>
+        <MaterialIcons />
+        <CardIcons />
+        <PaymentIcons />
+        <Flags />
+    </DocContainer>
+);
 
-    render () {
-        return (
-            <DocContainer docToc>
-                <p className="lead">The Swedbank Pay DesignGuide includes a variety of icons. Mainly we use the material icons, but we also include icons for known payment providers, and flags for most nations in the world.</p>
-                <MaterialIcons />
-                <PaymentIcons />
-                <Flags />
-            </DocContainer>
-        );
-    }
-}
+export default Iconography;
 
-export default Icons;
-
-/* For testing */
-export { MaterialIcons, PaymentIcons, Flags };
+export { MaterialIcons, CardIcons, PaymentIcons, Flags };

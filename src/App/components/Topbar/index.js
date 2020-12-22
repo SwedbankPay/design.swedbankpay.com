@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import swedbankpayLogo from "@src/img/swedbankpay/logo/swedbankpay-logo-h.svg";
+import swedbankpayLogo from "@src/img/swedbankpay/logo/swedbankpay-logo-v.svg";
 import payexLogo from "@src/img/payex/logo/payex-logo.svg";
 
 import SidebarComponent from "@components/Sidebar";
@@ -62,10 +62,15 @@ const TopbarLogout = () => (
 const TopbarLogo = ({ png }) => (
     <>
         <a className={`topbar-logo${png ? " topbar-logo-png" : ""}`} href="/" onClick={e => e.preventDefault()}>{"\n"}
-            {(brand === "swedbankpay" && png) ?
-                <img src={`${process.env.basename}img/${brand}-logo${brand === "swedbankpay" ? "-h" : ""}.png`} alt={`${brand}-logo`} className="logotype-horizontal logotype-md"/>
-                :
-                <img src={isDev ? devLogo : `${process.env.basename}img/${brand}-logo${brand === "swedbankpay" ? "-h" : ""}.svg`} alt={`${brand}-logo`} className="logotype-horizontal logotype-md"/>
+            {(brand === "swedbankpay" && png)
+                ? <img src={`${process.env.basename}img/${brand}-logo${brand === "swedbankpay"
+                    ? "-v"
+                    : ""}.png`} alt={`${brand}-logo`} className="logotype-vertical logotype-md"/>
+                : <img src={isDev
+                    ? devLogo
+                    : `${process.env.basename}img/${brand}-logo${brand === "swedbankpay"
+                        ? "-v"
+                        : ""}.svg`} alt={`${brand}-logo`} className="logotype-vertical logotype-md"/>
             }{"\n"}
         </a>{"\n"}
     </>
