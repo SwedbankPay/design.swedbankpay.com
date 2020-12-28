@@ -36,6 +36,27 @@
     }
 }
 
+.grid-guide {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    article {
+        max-width: 21rem;
+
+        h3 {
+            margin-top: 1rem;
+        }
+    }
+}
+@media (max-width: @screen-sm-max) {
+    .grid-guide {
+        article {
+            max-width: 100%;
+        }
+    }
+}
+
 .row {
     .make-row();
 
