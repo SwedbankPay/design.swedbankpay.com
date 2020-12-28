@@ -54,7 +54,7 @@ const Contributing = () => (
 
         <div className="d-flex flex-column align-items-center">
             <img src={`${basename}img/documentation/forDesigners/vanilla-pattern.png`} className="img-fluid" alt="Our modified Vanilla pattern design intake process (Click to view)"/>
-            <span className="caption-text"><span className="font-weight-bold">Figure 1.</span> Our modified Vanilla pattern design intake process (Click to view)</span>
+            <span className="caption-text"><span className="font-weight-bold">Figure 1.</span> Our modified Vanilla pattern design intake process</span>
         </div>
     </section>
 );
