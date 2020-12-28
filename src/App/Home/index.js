@@ -1,14 +1,13 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { removeVscroll } from "../../../tools/remove-vscroll.js";
-import { setTitle } from "../utils";
+import { setTitle, RemoveVscroll } from "../utils";
 
 const BASENAME = process.env.basename;
 
 const Home = () => {
 
     useEffect(() => {
-        removeVscroll();
+        RemoveVscroll();
         setTitle("Home");
     });
 
@@ -110,7 +109,7 @@ const Home = () => {
                     <div className="dg-changelog-description px-0">
                         <span className="h4">Major overhaul of the Developer Portal’s design ♥️</span>
                         <p className="mt-2">
-                        Merry Christmas everyone! We have a brand new look for the Design Guide landing page, a new left side menu updated to suit the branding of Swedbank Pay. We have finally added both “Get started” and “Identity” and re-written all the related pages.
+                        Happy New Year everyone! We have a brand new look for the Design Guide landing page, a new left side menu updated to suit the branding of Swedbank Pay. We have finally added both “Get started” and “Identity” and re-written all the related pages.
                         </p>
                     </div>
                 </div>
@@ -142,7 +141,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="row">
-                    <a href="#" className="icon-link mt-4 px-0">
+                    <a href="https://github.com/SwedbankPay/design.swedbankpay.com" target="_blank" rel="noopener noreferrer"className="icon-link mt-4 px-0">
                         <span>See the Github repository</span>
                         <i className="material-icons" aria-hidden="true">open_in_new</i>
                     </a>
