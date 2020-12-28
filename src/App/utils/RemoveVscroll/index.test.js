@@ -1,4 +1,4 @@
-import RemoveVscroll from  "./index";
+import RemoveVscroll from "./index";
 
 describe("App utils: Remove Veritcal scroll", () => {
     it("is defined", () => {
