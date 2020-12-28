@@ -236,15 +236,232 @@
     flex-grow: 1;
 
     .doc-container {
+        width: 100%;
         margin-right: auto;
         margin-left: auto;
         padding: 2rem 2rem;
-        width: 100%;
         max-width: 48.375rem;
 
         h1:first-of-type {
             margin-top: 1rem;
             margin-bottom: 1.5rem;
+        }
+
+        &.dg-front-page {
+            position: relative;
+            max-width: 82rem;
+
+            section {
+                height: 100vh;
+            }
+
+            .dg-front-page-container {
+                padding-top: 3rem;
+                max-width: 70rem;
+
+                header {
+                    line-height: 4rem;
+
+                    .dg-title-small {
+                        font-size: 2.5rem;
+                        font-family: @brand-headline;
+                        font-weight: bold;
+                    }
+
+                    .dg-title-big {
+                        font-size: 3.5rem;
+                        font-family: "Swedbank Headline Black";
+                    }
+                }
+
+                .dg-version-indicator {
+                    margin-top: 0.5rem;
+                    margin-bottom: 1.5rem;
+
+                    .dg-version-indicator-text {
+                        background-color: #fff3d5;
+                        font-size: 1.25rem;
+                        font-family: @brand-headline;
+                    }
+                }
+
+                .front-page-ingress {
+                    max-width: 38.75rem;
+                    font-size: 1.25rem;
+                    font-family: @font-stack;
+                    line-height: 1.75rem;
+                }
+
+                .dg-cards-container {
+                    max-width: 70rem;
+                    z-index: 10; /* Makes content appear above background image */
+                }
+            }
+
+            .dg-next-page-content {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                color: inherit;
+                text-decoration: none;
+
+                .next-page-text {
+                    font-size: 0.75rem;
+                    padding-bottom: 2rem;
+                    cursor: pointer;
+                }
+
+                > i {
+                    position: absolute;
+                    cursor: pointer;
+                    animation: bounce 1.5s infinite;
+                }
+
+                &:hover {
+                    font-weight: bold;
+
+                    > i {
+                        font-weight: bold;
+                        animation-play-state: paused;
+                    }
+                }
+
+
+                @keyframes bounce {
+                    0% { bottom: 0.15rem; }
+                    50% { bottom: -0.15rem; }
+                    100% { bottom: 0.15rem; }
+                }
+            }
+
+            /* Changelog */
+            .dg-changelog-container {
+                .dg-changelog-content {
+                    z-index: 10; /* makes content appear above background images */
+                    max-width: 70rem;
+
+                    .dg-changlelog-title {
+                        font-size: 1.5rem;
+                        font-family: @brand-headline;
+
+                        .dg-changelog-divider {
+                            width: 3.75rem;
+                            height: 0.25rem;
+                            background-color: @brand-warning;
+                            border-radius: 1.6rem;
+                        }
+                    }
+
+                    .dg-version-title {
+                        max-width: 6rem;
+                    }
+
+                    .dg-changelog-description {
+                        max-width: 47.25rem;
+                    }
+                }
+            }
+
+            @media (min-width: @screen-xl-max) {
+                .dg-changelog-container {
+                    padding-bottom: 4rem;
+                }
+            }
+
+            @media (min-width: @screen-lg-max) {
+                .dg-changelog-description {
+                    margin-left: 2rem;
+                }
+
+                .dg-version-indicator {
+                    margin-top: 0.75rem;
+                }
+            }
+
+            @media (min-width: @screen-sm-min) and (max-width: @screen-md-max) {
+                padding: 0 5rem;
+
+                .dg-front-page-container,
+                .dg-changelog-container {
+                    padding-top: 1rem;
+                    height: 91vh; /* Eliminate whitespace when topbar is viewed */
+
+                    header {
+                        .dg-title-small {
+                            font-size: 2rem;
+                        }
+
+                        .dg-title-big {
+                            font-size: 2.5rem;
+                        }
+                    }
+                }
+            }
+
+            @media (max-width: @screen-xs-max) {
+                .dg-front-page-container {
+                    height: auto;
+                    padding: 2rem 0;
+
+                    header {
+                        line-height: 2rem;
+
+                        .dg-title-small {
+                            font-size: 1.25rem;
+                        }
+
+                        .dg-title-big {
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    .front-page-ingress {
+                        font-size: 1rem;
+                    }
+
+                    .dg-version-indicator {
+                        margin: 1rem 0;
+
+                        .dg-version-indicator-text {
+                            font-size: 0.875rem;
+                        }
+                    }
+                }
+
+                .dg-changelog-container {
+                    .dg-version-title {
+                        min-width: 6rem;
+                    }
+
+                    .dg-changelog-description {
+                        padding-bottom: 0.5rem;
+                    }
+                }
+            }
+
+            /* Background images */
+            .bg-img {
+                position: absolute;
+            }
+
+            .cluster-bubble {
+                left: 63.25rem;
+            }
+
+            .large-bubble {
+                top: 35%;
+                left: 73rem;
+            }
+
+            .two-bubbles {
+                bottom: 0;
+                right: 94%;
+            }
+
+            .single-bubble {
+                bottom: 3rem;
+                left: 94%;
+            }
         }
 
         @media (max-width: @screen-md-max) {
