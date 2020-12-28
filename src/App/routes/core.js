@@ -9,6 +9,11 @@ module.exports = [
         appFolder: "Core",
         routes: [
             {
+                title: "Identity",
+                path: "/core/identity",
+                componentPath: "core/Identity"
+            },
+            {
                 title: "Accessibility",
                 path: "/core/accessibility",
                 componentPath: "core/Accessibility"

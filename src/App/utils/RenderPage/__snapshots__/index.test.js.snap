@@ -58,6 +58,11 @@ exports[`Utilities: RenderPage renders 1`] = `
         routes={
           Array [
             Object {
+              "componentPath": "core/Identity",
+              "path": "/core/identity",
+              "title": "Identity",
+            },
+            Object {
               "componentPath": "core/Accessibility",
               "path": "/core/accessibility",
               "title": "Accessibility",
