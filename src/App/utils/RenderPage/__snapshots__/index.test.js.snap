@@ -132,6 +132,11 @@ exports[`Utilities: RenderPage renders 1`] = `
         routes={
           Array [
             Object {
+              "componentPath": "components/Components",
+              "path": "/components/components",
+              "title": "Components",
+            },
+            Object {
               "componentPath": "Introduction",
               "path": "/components/introduction",
               "title": "Introduction",

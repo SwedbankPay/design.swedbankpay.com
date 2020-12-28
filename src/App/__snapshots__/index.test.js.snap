@@ -144,6 +144,11 @@ exports[`Main: App renders 1`] = `
                   "redirect": "/components/introduction",
                   "routes": Array [
                     Object {
+                      "componentPath": "components/Components",
+                      "path": "/components/components",
+                      "title": "Components",
+                    },
+                    Object {
                       "componentPath": "Introduction",
                       "path": "/components/introduction",
                       "title": "Introduction",

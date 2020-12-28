@@ -10,6 +10,11 @@ module.exports = [
         appFolder: "ComponentsDocumentation",
         routes: [
             {
+                title: "Components",
+                path: "/components/components",
+                componentPath: "components/Components"
+            },
+            {
                 title: "Introduction",
                 path: "/components/introduction",
                 componentPath: "Introduction"
