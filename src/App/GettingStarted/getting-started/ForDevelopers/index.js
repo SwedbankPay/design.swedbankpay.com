@@ -35,27 +35,27 @@ const Installation = () => (
         <h3>Browser Support</h3>
         <div className="browser-support">
             <div>
-                <img src={`${basename}img/documentation/forDevelopers/chrome.svg`} alt="Image of Chrome"/>
+                <img src={`${basename}img/documentation/forDevelopers/chrome.png`} alt="Image of Chrome"/>
                 <p>Yes</p>
             </div>
             <div>
-                <img src={`${basename}img/documentation/forDevelopers/edge.svg`} alt="Image of Edge"/>
+                <img src={`${basename}img/documentation/forDevelopers/edge.png`} alt="Image of Edge"/>
                 <p>Yes</p>
             </div>
             <div>
-                <img src={`${basename}img/documentation/forDevelopers/internet-explorer.svg`} alt="Image of Internet explorer"/>
+                <img src={`${basename}img/documentation/forDevelopers/internet-explorer.png`} alt="Image of Internet explorer"/>
                 <p>11</p>
             </div>
             <div>
-                <img src={`${basename}img/documentation/forDevelopers/firefox.svg`} alt="Image of Firefox"/>
+                <img src={`${basename}img/documentation/forDevelopers/firefox.png`} alt="Image of Firefox"/>
                 <p>Yes</p>
             </div>
             <div>
-                <img src={`${basename}img/documentation/forDevelopers/opera.svg`} alt="Image of Opera"/>
+                <img src={`${basename}img/documentation/forDevelopers/opera.png`} alt="Image of Opera"/>
                 <p>Yes</p>
             </div>
             <div>
-                <img src={`${basename}img/documentation/forDevelopers/safari.svg`} alt="Image of Safari"/>
+                <img src={`${basename}img/documentation/forDevelopers/safari.png`} alt="Image of Safari"/>
                 <p>Yes</p>
             </div>
         </div>
