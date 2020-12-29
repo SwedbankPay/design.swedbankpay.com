@@ -11,19 +11,14 @@ module.exports = [
                 componentPath: "getting-started/Introduction"
             },
             {
-                title: "Browser Support",
-                path: "/getting-started/browser-support",
-                componentPath: "getting-started/BrowserSupport"
+                title: "For developers",
+                path: "/getting-started/for-developers",
+                componentPath: "getting-started/ForDevelopers"
             },
             {
-                title: "Contributing",
-                path: "/getting-started/contributing",
-                componentPath: "getting-started/Contributing"
-            },
-            {
-                title: "JavaScript",
-                path: "/getting-started/javascript",
-                componentPath: "getting-started/Javascript"
+                title: "For designers",
+                path: "/getting-started/for-designers",
+                componentPath: "getting-started/ForDesigners"
             }
         ]
     }
