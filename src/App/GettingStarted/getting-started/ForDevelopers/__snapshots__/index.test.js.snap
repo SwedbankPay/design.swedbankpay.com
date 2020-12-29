@@ -362,7 +362,7 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     <div>
       <img
         alt="Image of Chrome"
-        src="/TEST/img/documentation/forDevelopers/chrome.svg"
+        src="/TEST/img/documentation/forDevelopers/chrome.png"
       />
       <p>
         Yes
@@ -371,7 +371,7 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     <div>
       <img
         alt="Image of Edge"
-        src="/TEST/img/documentation/forDevelopers/edge.svg"
+        src="/TEST/img/documentation/forDevelopers/edge.png"
       />
       <p>
         Yes
@@ -380,7 +380,7 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     <div>
       <img
         alt="Image of Internet explorer"
-        src="/TEST/img/documentation/forDevelopers/internet-explorer.svg"
+        src="/TEST/img/documentation/forDevelopers/internet-explorer.png"
       />
       <p>
         11
@@ -389,7 +389,7 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     <div>
       <img
         alt="Image of Firefox"
-        src="/TEST/img/documentation/forDevelopers/firefox.svg"
+        src="/TEST/img/documentation/forDevelopers/firefox.png"
       />
       <p>
         Yes
@@ -398,7 +398,7 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     <div>
       <img
         alt="Image of Opera"
-        src="/TEST/img/documentation/forDevelopers/opera.svg"
+        src="/TEST/img/documentation/forDevelopers/opera.png"
       />
       <p>
         Yes
@@ -407,7 +407,7 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     <div>
       <img
         alt="Image of Safari"
-        src="/TEST/img/documentation/forDevelopers/safari.svg"
+        src="/TEST/img/documentation/forDevelopers/safari.png"
       />
       <p>
         Yes

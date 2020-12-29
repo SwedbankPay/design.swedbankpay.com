@@ -10,7 +10,7 @@ exports[`GettingStarted: Introduction GetStarted renders 1`] = `
   >
     <Link
       className="cards cards-primary"
-      to="/"
+      to="/getting-started/for-developers"
     >
       <div
         className="cards-icon"
@@ -41,7 +41,7 @@ exports[`GettingStarted: Introduction GetStarted renders 1`] = `
     </Link>
     <Link
       className="cards cards-primary"
-      to="/"
+      to="/getting-started/for-designers"
     >
       <div
         className="cards-icon"
