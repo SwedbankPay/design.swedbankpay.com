@@ -31,7 +31,7 @@ const Button = ({ label, id, name, value, href, icon, loading, type, disabled, b
 
     if (href) {
         return (
-            <a className={btnClasses} {...attrs}>{icon ? "\n\t" : null}
+            <a className={btnClasses} {...attrs} onClick={e => e.preventDefault()}>{icon ? "\n\t" : null}
                 {icon ? <i className="material-icons" aria-hidden="true">{icon}</i> : null}
                 {(icon && label) ? <span>{label}</span> : label}
             </a>
