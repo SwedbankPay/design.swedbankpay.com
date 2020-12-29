@@ -924,6 +924,70 @@
         font-size: 0.875rem;
     }
 
+    .typography-typefaces {
+        .illustration {
+            display: flex;
+            justify-content: center;
+            padding: 3.5rem 0;
+            background-color: @light-gray;
+            font-size: 3.5rem;
+
+            > div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 2rem;
+
+                > span {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .swedbank-headline {
+            font-family: @brand-headline;
+        }
+
+        .arial {
+            font-family: @brand-default;
+        }
+
+        .akkurat-mono {
+            font-family: @brand-monofont;
+        }
+    }
+
+    .typography-table {
+        &.mobile {
+            h1,
+            .h1 {
+                font-size: 1.5rem;
+                line-height: 2rem;
+            }
+
+            h2,
+            .h2 {
+                font-size: 1.25rem;
+                line-height: 1.5rem;
+            }
+
+            h3,
+            .h3 {
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+            }
+
+            .hero {
+                font-size: 2.5rem;
+                line-height: 3rem;
+            }
+        }
+
+        td {
+            height: 6.125rem;
+        }
+    }
+
     .brand-quote {
         display: flex;
 
