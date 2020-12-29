@@ -34,7 +34,7 @@ const GettingStarted = React.lazy(() => import(/* webpackChunkName: "getting-sta
 
 const Components = React.lazy(() => import(/* webpackChunkName: "components.chunk" */ "./ComponentsDocumentation/index.js"));
 
-const Core = React.lazy(() => import(/* webpackChunkName: "core.chunk" */ "./Core/index.js"));
+const Identity = React.lazy(() => import(/* webpackChunkName: "core.chunk" */ "./Identity/index.js"));
 
 const Examples = React.lazy(() => import(/* webpackChunkName: "examples.chunk" */ "./Examples/index.js"));
 
@@ -74,9 +74,9 @@ class App extends Component {
                                 <Suspense fallback={<LoadingComponent />}>
                                     <Switch>
                                         <Route exact path="/" component={Home} />
-                                        <Route path="/getting-started" component={GettingStarted} />
+                                        <Route path="/get-started" component={GettingStarted} />
                                         <Route path="/components" component={Components} />
-                                        <Route path="/core" component={Core} />
+                                        <Route path="/identity" component={Identity} />
                                         <Route path="/examples" component={Examples} />
                                         <Route path="/utilities" component={Utilities} />
                                         <Route path="/404" component={ErrorPage404} />

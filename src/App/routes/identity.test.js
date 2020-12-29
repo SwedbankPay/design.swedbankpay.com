@@ -1,18 +1,18 @@
-import coreRoutes from "./core";
+import identityRoutes from "./identity";
 
 describe("Routes: core", () => {
     const pathFormat = new RegExp("^(\\/[a-z]+([-a-z]+)?)+$");
 
     it("is defined", () => {
-        expect(coreRoutes).toBeDefined();
+        expect(identityRoutes).toBeDefined();
     });
 
     it("is an array", () => {
-        expect(coreRoutes).toBeInstanceOf(Array);
+        expect(identityRoutes).toBeInstanceOf(Array);
     });
 
     it("all top routes has a title, path redirect and routes of type array", () => {
-        coreRoutes.forEach(({ title, path, redirect, routes }) => {
+        identityRoutes.forEach(({ title, path, redirect, routes }) => {
 
             expect(title).toBeDefined();
             expect(path).toBeDefined();
@@ -22,14 +22,14 @@ describe("Routes: core", () => {
     });
 
     it("all top path and redirect routes is formatted correctly", () => {
-        coreRoutes.forEach(({ path, redirect }) => {
+        identityRoutes.forEach(({ path, redirect }) => {
             expect(path).toMatch(pathFormat);
             expect(redirect).toMatch(pathFormat);
         });
     });
 
     it("all child routes has a title, path and componentPath", () => {
-        coreRoutes.forEach(route => {
+        identityRoutes.forEach(route => {
             route.routes.forEach(({ title, path, componentPath }) => {
 
                 expect(title).toBeDefined();
@@ -40,7 +40,7 @@ describe("Routes: core", () => {
     });
 
     it("all child path routes is formatted correctly", () => {
-        coreRoutes.forEach(route => {
+        identityRoutes.forEach(route => {
             route.routes.forEach(({ path }) => {
                 expect(path).toMatch(pathFormat);
             });

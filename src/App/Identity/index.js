@@ -3,7 +3,7 @@ import React from "react";
 import { RenderPage } from "../utils";
 
 const Core = () => (
-    <RenderPage path="/core" initPath="/core/" />
+    <RenderPage path="/identity" initPath="/identity/identity" />
 );
 
 export default Core;

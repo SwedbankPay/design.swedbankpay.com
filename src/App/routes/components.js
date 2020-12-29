@@ -9,18 +9,13 @@ module.exports = [
             name: "category"
         },
         path: "/components",
-        redirect: "/components/introduction",
+        redirect: "/components/components",
         appFolder: "ComponentsDocumentation",
         routes: [
             {
                 title: "Components",
                 path: "/components/components",
                 componentPath: "components/Components"
-            },
-            {
-                title: "Introduction",
-                path: "/components/introduction",
-                componentPath: "Introduction"
             },
             {
                 title: "Accordion",
