@@ -69,7 +69,9 @@ class App extends Component {
                     <AppHeader />
                     <div className="documentation">
                         <div className="d-md-flex">
-                            <SelectPanel id="doc-sidebar" routes={routes} />
+                            <div className="d-none d-lg-block">
+                                <SelectPanel id="doc-sidebar" newSidebar={true} routes={routes} />
+                            </div>
                             <main className="doc-view">
                                 <Suspense fallback={<LoadingComponent />}>
                                     <Switch>
