@@ -8,7 +8,7 @@ module.exports = [
             name: "palette"
         },
         path: "/identity",
-        redirect: "/identity/Identity",
+        redirect: "/identity/identity",
         appFolder: "Identity",
         routes: [
             {

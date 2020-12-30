@@ -93,7 +93,17 @@ class Sidebar2 {
     constructSidebar (el) {
         this.el = el;
         this.id = el.id;
+        this.headers = [];
+        this._popStateListener = this._popStateListener.bind(this);
+        this._contentScrollListener = this._contentScrollListener.bind(this);
         this._initListeners();
+    }
+
+    _popStateListener () {
+        if (this.el && !this.el.querySelector(".main-nav-li.active")
+            .querySelector(".sidebar-secondary-nav")) {
+            this.el.classList.remove("has-secondary-nav");
+        }
     }
 
     _initListeners () {
@@ -102,6 +112,8 @@ class Sidebar2 {
         const tertiaryNavLI = this.el.querySelectorAll(".tertiary-nav-li");
         const navLeaves = this.el.querySelectorAll(".nav-leaf");
         const previousNavs = this.el.querySelectorAll(".previous-nav");
+
+        window.addEventListener("popstate", this._popStateListener);
 
         [...mainNavLI].map(mainNavElement => mainNavElement.querySelector("a").addEventListener("click", () => this._setActiveStatus(mainNavElement, ".main-nav-li")));
         [...secondaryNavLI].map(secondaryNavElement => secondaryNavElement.querySelector("a").addEventListener("click", () => this._setActiveStatus(secondaryNavElement, ".secondary-nav-li")));
@@ -142,6 +154,10 @@ class Sidebar2 {
         });
     }
 
+    _setHeaders (headers) {
+        this.headers = headers;
+    }
+
     _navLeafScrollListener (header) {
         return (
             () => {
@@ -154,26 +170,23 @@ class Sidebar2 {
         );
     }
 
-    _contentScrollListener (headers) {
+    _contentScrollListener () {
+        const scrollNumber = [...this.headers].filter(header => header.offsetTop <= window.pageYOffset).length - 1;
+        const activeSecondaryNavLi = this.el.querySelector(`.secondary-nav-li${SELECTORS.ACTIVE}`);
+        const leaves = activeSecondaryNavLi ? activeSecondaryNavLi.querySelectorAll(SELECTORS.NAVLEAF) : [];
 
-        return (
-            () => {
-                const scrollNumber = [...headers].filter(header => header.offsetTop <= window.pageYOffset).length - 1;
-                const activeSecondaryNavLi = this.el.querySelector(`.secondary-nav-li${SELECTORS.ACTIVE}`);
-                const leaves = activeSecondaryNavLi.querySelectorAll(SELECTORS.NAVLEAF);
-
-                if (scrollNumber === -1) {
-                    leaves[0] && this._setActiveStatus(leaves[0], SELECTORS.NAVLEAF);
-                } else {
-                    this._setActiveStatus(leaves[scrollNumber], SELECTORS.NAVLEAF);
-                }
-
-                if ((window.innerHeight + window.scrollY >= document.body.scrollHeight) && window.scrollY !== 0) {
-                    this._setActiveStatus(leaves[leaves.length - 1], SELECTORS.NAVLEAF);
-                }
-
+        if (leaves.length > 0) {
+            if (scrollNumber === -1) {
+                leaves[0] && this._setActiveStatus(leaves[0], SELECTORS.NAVLEAF);
+            } else {
+                this._setActiveStatus(leaves[scrollNumber], SELECTORS.NAVLEAF);
             }
-        );
+
+            if ((window.innerHeight + window.scrollY >= document.body.scrollHeight) && window.scrollY !== 0) {
+                this._setActiveStatus(leaves[leaves.length - 1], SELECTORS.NAVLEAF);
+            }
+        }
+
     }
 }
 
@@ -248,7 +261,7 @@ const removeActiveState = (id, group, subGroup, leaf) => {
 };
 
 const initScrollListener = (id, contentId, headerType) => {
-    removeScrollListener(id, contentId);
+    removeScrollListener(id);
 
     const sidebar = _sidebars.filter(sidebar => sidebar.id === id)[0];
 
@@ -258,24 +271,25 @@ const initScrollListener = (id, contentId, headerType) => {
 
         const headers = content.querySelectorAll(`${headerType}[id]`);
 
-        window.addEventListener("scroll", sidebar._contentScrollListener(headers));
+        sidebar._setHeaders(headers);
+
+        window.addEventListener("scroll", sidebar._contentScrollListener);
 
         const sidebarElement = document.getElementById(id);
         const leaves = sidebarElement.querySelector(`.secondary-nav-li${SELECTORS.ACTIVE}`).querySelectorAll(SELECTORS.NAVLEAF);
 
         [...leaves].map((leaf, i) => leaf.addEventListener("click", sidebar._navLeafScrollListener(headers[i])));
-        sidebar._contentScrollListener(headers)();
+        sidebar._contentScrollListener();
     } else {
         console.warn(`sidebar.initScrollListener: Cannot find main content with id ${contentId}`);
     }
 
 };
 
-const removeScrollListener = (id, contentId) => {
-    const content = document.getElementById(contentId);
+const removeScrollListener = id => {
     const sidebar = _sidebars.filter(sidebar => sidebar.id === id)[0];
 
-    content && content.removeEventListener("scroll", sidebar._contentScrollListener);
+    window.removeEventListener("scroll", sidebar._contentScrollListener);
 };
 
 const _createSidebar = sidebarQuery => {

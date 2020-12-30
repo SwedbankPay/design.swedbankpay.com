@@ -2,7 +2,7 @@
 
 exports[`Core: index renders 1`] = `
 <RenderPage
-  initPath="/core/"
-  path="/core"
+  initPath="/identity/identity"
+  path="/identity"
 />
 `;

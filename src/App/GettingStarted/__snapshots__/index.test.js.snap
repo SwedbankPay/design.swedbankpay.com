@@ -2,7 +2,7 @@
 
 exports[`GettingStarted: index renders 1`] = `
 <RenderPage
-  initPath="/getting-started/introduction"
-  path="/getting-started"
+  initPath="/get-started/introduction"
+  path="/get-started"
 />
 `;

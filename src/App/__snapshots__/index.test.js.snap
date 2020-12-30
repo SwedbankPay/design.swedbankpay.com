@@ -42,90 +42,100 @@ exports[`Main: App renders 1`] = `
                   "name": "wb_incandescent",
                   "rotated": true,
                 },
-                "path": "/getting-started",
-                "redirect": "/getting-started/introduction",
+                "path": "/get-started",
+                "redirect": "/get-started/introduction",
                 "routes": Array [
                   Object {
                     "componentPath": "getting-started/Introduction",
-                    "path": "/getting-started/introduction",
+                    "path": "/get-started/introduction",
                     "title": "Introduction",
                   },
                   Object {
-                    "componentPath": "getting-started/BrowserSupport",
-                    "path": "/getting-started/browser-support",
-                    "title": "Browser Support",
+                    "componentPath": "getting-started/ForDevelopers",
+                    "path": "/get-started/for-developers",
+                    "title": "For developers",
                   },
                   Object {
-                    "componentPath": "getting-started/Contributing",
-                    "path": "/getting-started/contributing",
-                    "title": "Contributing",
-                  },
-                  Object {
-                    "componentPath": "getting-started/Javascript",
-                    "path": "/getting-started/javascript",
-                    "title": "JavaScript",
+                    "componentPath": "getting-started/ForDesigners",
+                    "path": "/get-started/for-designers",
+                    "title": "For designers",
                   },
                 ],
-                "title": "Getting Started",
+                "title": "Get Started",
               },
               Object {
-                "appFolder": "Core",
+                "appFolder": "Identity",
                 "icon": Object {
                   "name": "palette",
                 },
-                "path": "/core",
-                "redirect": "/core/color",
+                "path": "/identity",
+                "redirect": "/identity/identity",
                 "routes": Array [
                   Object {
-                    "componentPath": "core/Accessibility",
-                    "path": "/core/accessibility",
+                    "componentPath": "identity/Identity",
+                    "path": "/identity/identity",
+                    "title": "Identity",
+                  },
+                  Object {
+                    "componentPath": "identity/Accessibility",
+                    "path": "/identity/accessibility",
                     "title": "Accessibility",
                   },
                   Object {
-                    "componentPath": "core/Color",
-                    "path": "/core/color",
+                    "componentPath": "identity/Imagery",
+                    "path": "/identity/imagery",
+                    "title": "Imagery",
+                  },
+                  Object {
+                    "componentPath": "identity/Color",
+                    "path": "/identity/color",
                     "title": "Color",
                   },
                   Object {
-                    "componentPath": "core/Copywriting",
-                    "path": "/core/copywriting",
+                    "componentPath": "identity/Spacing",
+                    "path": "/identity/spacing",
+                    "title": "Spacing",
+                  },
+                  Object {
+                    "componentPath": "identity/Copywriting",
+                    "path": "/identity/copywriting",
                     "title": "Copywriting",
                   },
                   Object {
-                    "componentPath": "core/Logotype",
-                    "path": "/core/logotype",
+                    "componentPath": "identity/Logotype",
+                    "path": "/identity/logotype",
                     "statusBadges": Array [
                       "updated",
                     ],
                     "title": "Logotype",
                   },
                   Object {
-                    "componentPath": "core/Grid",
-                    "path": "/core/grid",
+                    "componentPath": "identity/Grid",
+                    "path": "/identity/grid",
                     "title": "Grid",
                   },
                   Object {
-                    "componentPath": "core/Iconography",
-                    "path": "/core/iconography",
+                    "componentPath": "identity/Iconography",
+                    "path": "/identity/iconography",
                     "title": "Iconography",
                   },
                   Object {
-                    "componentPath": "core/Images",
-                    "path": "/core/images",
+                    "componentPath": "identity/Images",
+                    "path": "/identity/images",
                     "title": "Images",
                   },
                   Object {
-                    "componentPath": "core/Page-layout",
-                    "path": "/core/page-layout",
+                    "componentPath": "identity/Page-layout",
+                    "path": "/identity/page-layout",
                     "title": "Page layout",
                   },
                   Object {
-                    "componentPath": "core/Typography",
-                    "path": "/core/typography",
+                    "componentPath": "identity/Typography",
+                    "path": "/identity/typography",
                     "title": "Typography",
                   },
                 ],
-                "title": "Core",
+                "title": "Identity",
               },
               Object {
                 "appFolder": "ComponentsDocumentation",
@@ -133,12 +143,12 @@ exports[`Main: App renders 1`] = `
                   "name": "category",
                 },
                 "path": "/components",
-                "redirect": "/components/introduction",
+                "redirect": "/components/components",
                 "routes": Array [
                   Object {
-                    "componentPath": "Introduction",
-                    "path": "/components/introduction",
-                    "title": "Introduction",
+                    "componentPath": "components/Components",
+                    "path": "/components/components",
+                    "title": "Components",
                   },
                   Object {
                     "componentPath": "components/Accordion",
@@ -381,6 +391,11 @@ exports[`Main: App renders 1`] = `
                 "redirect": "/utilities/colors",
                 "routes": Array [
                   Object {
+                    "componentPath": "utilities/Utilities",
+                    "path": "/utilities/utilities",
+                    "title": "Utilities",
+                  },
+                  Object {
                     "componentPath": "utilities/Borders",
                     "path": "/utilities/borders",
                     "title": "Borders",
@@ -464,7 +479,7 @@ exports[`Main: App renders 1`] = `
                     "_status": -1,
                   }
                 }
-                path="/getting-started"
+                path="/get-started"
               />
               <Route
                 component={
@@ -486,7 +501,7 @@ exports[`Main: App renders 1`] = `
                     "_status": -1,
                   }
                 }
-                path="/core"
+                path="/identity"
               />
               <Route
                 component={

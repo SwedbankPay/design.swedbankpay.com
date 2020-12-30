@@ -102,7 +102,7 @@ class SelectPanel extends Component {
                         <LogotypeComponent src={`${basename}img/swedbankpay-logo-v.svg`} size="md" alt="Swedbank Pay vertical logo" type="vertical" />
                     </div>
                     <ul className="main-nav-ul">
-                        <li className="main-nav-li">
+                        <li className={`main-nav-li${this.props.location.pathname === "/" ? " active" : ""}`}>
                             <NavLink activeClassName="active" to={"/"}>
                                 <i className="material-icons-outlined">home</i>
                                 Welcome
