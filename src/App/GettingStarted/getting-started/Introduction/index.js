@@ -9,7 +9,7 @@ const GetStarted = () => (
     <section>
         <p>Below we have compiled a list of things you need to have and know in order to get started with our design guide.</p>
 
-        <div className="overview-grid">
+        <div className="component-overview">
             <Link to="/getting-started/for-developers" className="cards cards-primary">
                 <div className="cards-icon">
                     <i className="material-icons">code</i>
