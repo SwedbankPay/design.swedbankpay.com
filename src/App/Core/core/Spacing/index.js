@@ -1,5 +1,5 @@
 import React from "react";
-import { ComponentPreview } from "@docutils";
+import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
 
 const basename = process.env.basename;
@@ -9,9 +9,9 @@ const EightPointSystem = () => (
         <h2 id="eight-point-system">8-point spacing system</h2>
         <p>We follow a 8-point spacing system – multiples of 8 to define the different dimensions, margins and paddings of our elements. The reason for this is to streamline the process, saving time by minimize the amount of choices and create consistent usage of space across all our product. </p>
 
-        <div className="img-container pb-4">
-            <img src={`${basename}img/documentation/spacing/horizontal-spacing-example.svg`} alt="Example on multiples of 8px horizontal spacing between elements"/>
-            <span><span className="font-weight-bold">Figure 1.</span> Example on multiples of 8px horizontal spacing between elements.</span>
+        <div className="d-flex flex-column align-items-center mb-4">
+            <img src={`${basename}img/documentation/spacing/horizontal-spacing-example.svg`} className="w-100" alt="Example on multiples of 8px horizontal spacing between elements"/>
+            <span className="caption-text"><span className="font-weight-bold">Figure 1.</span> Example on multiples of 8px horizontal spacing between elements.</span>
         </div>
 
         <p>If you are interested in learning more about the 8-point spacing system, you can read more about it in this <a href="https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632" target="_blank" rel="noopener noreferrer">Introduction article</a>, which provides a brief explanation of the reasons why to use the 8-point spacing system. To dive even deeper into the nitty gritty, please refer to this <a href="https://spec.fm/specifics/8-pt-grid" target="_blank" rel="noopener noreferrer">in-depth explanation</a> of the 8-point spacing system.</p>
@@ -25,9 +25,9 @@ const VerticalSpacing = () => (
     <section>
         <h2 id="vertical-spacing">Vertical spacing</h2>
         <p>Similar to horizontal spacing, we also use spacing vertically in order to create good vertical structure. While we don’t have strict usage definitions for each size, it is important to always evaluate what fits best in your context and what type of devices you are designing for. Make sure to group items relevant to each other close and separate sections with good amount of spacing to provide a clear separation.</p>
-        <div className="img-container pb-4">
-            <img src={`${basename}img/documentation/spacing/vertical-spacing-example.svg`} alt="Example on multiples of 8 px vertical spacing between elements"/>
-            <span><span className="font-weight-bold">Figure 2.</span> Example on multiples of 8 px vertical spacing between elements</span>
+        <div className="d-flex flex-column align-items-center">
+            <img src={`${basename}img/documentation/spacing/vertical-spacing-example.svg`} className="w-100" alt="Example on multiples of 8 px vertical spacing between elements"/>
+            <span className="caption-text"><span className="font-weight-bold">Figure 2.</span> Example on multiples of 8 px vertical spacing between elements</span>
         </div>
     </section>
 );
@@ -45,7 +45,7 @@ const BaseIncrementOfRem = () => (
         <h2 id="base-increment-of-rem">Base increment of rem</h2>
         <p>In our system the base size of a  <CodeTags type="secondary" code="rem"/>  unit is <span className="font-weight-bold">16px</span>, this means you can easily use 0.5 rem increments to create layouts in code on a 8-point spacing system. See example below for reference: </p>
 
-        <table className="table table-plain">
+        <table className="table table-plain spacing-table">
             <thead>
                 <tr>
                     <th scope="col">Pixel</th>
@@ -203,7 +203,7 @@ const Examples = () => (
 );
 
 const Spacing = () => (
-    <div className="doc-body spacing p-0">
+    <DocContainer>
         <p className="lead">
         Spacing helps us to align different components both vertically and horizontally. We follow a 8-point spacing system based on simple mathematical principles in order to create visual consistency and distinction between our elements.
         </p>
@@ -215,7 +215,7 @@ const Spacing = () => (
         <HowItWorks />
         <Notation />
         <Examples />
-    </div>
+    </DocContainer>
 );
 
 export default Spacing;
