@@ -52,7 +52,7 @@ const Home = () => {
                         </Link>
                     </div>
                     <div className="col-12 col-sm-6 col-lg-3 d-flex">
-                        <Link to="/components/introduction" className="cards cards-primary">
+                        <Link to="/components/components" className="cards cards-primary">
                             <div className="cards-icon">
                                 <i className="material-icons-outlined">category</i>
                             </div>
