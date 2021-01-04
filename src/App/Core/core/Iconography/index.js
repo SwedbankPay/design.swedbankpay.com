@@ -46,7 +46,7 @@ const CardIcons = () => (
                 </tr>
             </thead>
             <tbody>
-                <tr className="justify-content-between">
+                <tr>
                     <td><IconPreview type="payment-icon" name="payment-card" /></td>
                     <td>Payment card</td>
                     <td><CodeTags type="secondary" code="payment-card"/></td>
