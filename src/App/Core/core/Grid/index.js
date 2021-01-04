@@ -6,6 +6,119 @@ import CodeTags from "@components/CodeTags";
 
 const basename = process.env.basename;
 
+const Intro = () => (
+    <section>
+        <p className="lead">Use our Bootstrap-inspired grid to build layouts of all shapes and sizes. Our twelve column system has six default responsive tiers, and dozens of predefined classes.</p>
+        <p>Our grid system is a modified version of the Bootstrap grid-system, learn more about how it works in the <a href="https://getbootstrap.com/docs/4.1/layout/grid/" target="_blank" rel="noopener noreferrer"className="icon-link m-0"><span className="mr-2">Bootstrap documentation.</span><i className="material-icons" aria-hidden="true">open_in_new</i></a>. If you are curious about how the grid is being used in design, head over to the <a href="https://www.figma.com/file/GkRbjhReTaX3vr2wwKCsGx/?node-id=493%3A3" target="_blank" rel="noopener noreferrer"className="icon-link m-0"><span className="mr-2">Grid file in Figma.</span><i className="material-icons" aria-hidden="true">open_in_new</i></a></p>
+    </section>
+);
+
+const GridSystem = () => (
+    <section>
+        <h2 id="grid-system">Grid system</h2>
+        <div className="grid-guide">
+            <article>
+                <img src={`${basename}img/documentation/grid/columns.png`} className="img-fluid" alt="Illustration of Columns" />
+                <h3>Columns</h3>
+                <p>We use a <span className="font-weight-bold">12 column</span> grid system where the width of the column changes depending on the size of the grid.</p>
+            </article>
+            <article>
+                <img src={`${basename}img/documentation/grid/column-span.png`} className="img-fluid" alt="Illustration of column spans" />
+                <h3>Column spans</h3>
+                <p>Within the 12 column grid system, there are also <span className="font-weight-bold">6 tiers</span> of responsive column spans. </p>
+            </article>
+            <article>
+                <img src={`${basename}img/documentation/grid/gutters.png`} className="img-fluid" alt="Illustration of Gutters" />
+                <h3>Gutters</h3>
+                <p>Gutters are the gap between columns, these values (16 px, 24 px etc.) are <span className="font-weight-bold">fixed</span> and depends on our breakpoints. </p>
+            </article>
+            <article>
+                <img src={`${basename}img/documentation/grid/margins.png`} className="img-fluid" alt="Illustration of margins" />
+                <h3>Margins</h3>
+                <p>Margins are the outer space between the columns and the edge of the grid. The values can be <span className="font-weight-bold">the same as gutters or larger</span>.</p>
+            </article>
+        </div>
+    </section>
+);
+
+const GridTypes = () => (
+    <section>
+        <h2 id="grid-types">Grid types</h2>
+        <div className="grid-guide">
+            <article>
+                <img src={`${basename}img/documentation/grid/fluid.png`} className="img-fluid" alt="Illustration of fluid" />
+                <h3>Fluid</h3>
+                <p>A fluid grid takes up 100% of the viewport and scales dynamically as the sizing of the grid changes.</p>
+            </article>
+            <article>
+                <img src={`${basename}img/documentation/grid/fixed.png`} className="img-fluid" alt="Illustration of fixed" />
+                <h3>Fixed</h3>
+                <p>A fixed grid has a fixed size on its maximum width, meaning the grid will not scale as the grid changes.</p>
+            </article>
+        </div>
+    </section>
+);
+
+const OffsettingGrid = () => (
+    <section>
+        <h2 id="offsetting-grid">Offsetting grid</h2>
+        <p>A standard 12 column grid typically fills 100% of the viewport. When there is a side menu present in the design we must offset the grid in order to align the elements. In this case, the width of the menu is removed from the calculation and the grid takes 100% of the remaining space.</p>
+        <div className="grid-guide">
+            <article>
+                <img src={`${basename}img/documentation/grid/grid-offset-left.png`} className="mb-3 img-fluid" alt="Grid offset with left side menu" />
+                <p>Grid offset with left side menu</p>
+            </article>
+            <article>
+                <img src={`${basename}img/documentation/grid/grid-offset-both-sides.png`} className="mb-3 img-fluid" alt="Grid offset with menu on each side" />
+                <p>Grid offset with menu on each side</p>
+            </article>
+        </div>
+    </section>
+);
+
+const Breakpoints = () => (
+    <section>
+        <h2 id="breakpoints">Breakpoints</h2>
+        <p>As shown in previous examples our grid system has 12 columns in desktop view. As the width decreases to tablet and mobile breakpoints the amount of columns used changes as well. Within the tablet breakpoints we use 8 columns and within mobile breakpoints 4 columns.</p>
+        <table className="table table-plain">
+            <thead>
+                <tr>
+                    <th>Size</th>
+                    <th>Breakpoint Range</th>
+                    <th>Columns</th>
+                    <th>Margins & Gutter</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mobile</td>
+                    <td>320-767 px</td>
+                    <td>4</td>
+                    <td>16 px</td>
+                </tr>
+                <tr>
+                    <td>Tablet</td>
+                    <td>768-1023 px</td>
+                    <td>8</td>
+                    <td>24 px</td>
+                </tr>
+                <tr>
+                    <td>Small Desktop</td>
+                    <td>1024-1439 px</td>
+                    <td>12</td>
+                    <td>24 px</td>
+                </tr>
+                <tr>
+                    <td>Large Desktop</td>
+                    <td>≥ 1440 px</td>
+                    <td>12</td>
+                    <td>24 px</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+);
+
 const HowItWorks = () => (
     <>
         <h2 id="how-it-works">How it works in code</h2>
@@ -617,119 +730,6 @@ const Nesting = () => (
             </div>
         </ComponentPreview>
     </>
-);
-
-const Intro = () => (
-    <section>
-        <p className="lead">Use our Bootstrap-inspired grid to build layouts of all shapes and sizes. Our twelve column system has six default responsive tiers, and dozens of predefined classes.</p>
-        <p>Our grid system is a modified version of the Bootstrap grid-system, learn more about how it works in the <a href="https://getbootstrap.com/docs/4.1/layout/grid/" target="_blank" rel="noopener noreferrer"className="icon-link m-0"><span className="mr-2">Bootstrap documentation.</span><i className="material-icons" aria-hidden="true">open_in_new</i></a>. If you are curious about how the grid is being used in design, head over to the <a href="https://www.figma.com/file/GkRbjhReTaX3vr2wwKCsGx/?node-id=493%3A3" target="_blank" rel="noopener noreferrer"className="icon-link m-0"><span className="mr-2">Grid file in Figma.</span><i className="material-icons" aria-hidden="true">open_in_new</i></a></p>
-    </section>
-);
-
-const GridSystem = () => (
-    <section>
-        <h2 id="grid-system">Grid system</h2>
-        <div className="grid-guide">
-            <article>
-                <img src={`${basename}img/documentation/grid/columns.png`} className="img-fluid" alt="Illustration of Columns" />
-                <h3>Columns</h3>
-                <p>We use a <span className="font-weight-bold">12 column</span> grid system where the width of the column changes depending on the size of the grid.</p>
-            </article>
-            <article>
-                <img src={`${basename}img/documentation/grid/column-span.png`} className="img-fluid" alt="Illustration of column spans" />
-                <h3>Column spans</h3>
-                <p>Within the 12 column grid system, there are also <span className="font-weight-bold">6 tiers</span> of responsive column spans. </p>
-            </article>
-            <article>
-                <img src={`${basename}img/documentation/grid/gutters.png`} className="img-fluid" alt="Illustration of Gutters" />
-                <h3>Gutters</h3>
-                <p>Gutters are the gap between columns, these values (16 px, 24 px etc.) are <span className="font-weight-bold">fixed</span> and depends on our breakpoints. </p>
-            </article>
-            <article>
-                <img src={`${basename}img/documentation/grid/margins.png`} className="img-fluid" alt="Illustration of margins" />
-                <h3>Margins</h3>
-                <p>Margins are the outer space between the columns and the edge of the grid. The values can be <span className="font-weight-bold">the same as gutters or larger</span>.</p>
-            </article>
-        </div>
-    </section>
-);
-
-const GridTypes = () => (
-    <section>
-        <h2 id="grid-types">Grid types</h2>
-        <div className="grid-guide">
-            <article>
-                <img src={`${basename}img/documentation/grid/fluid.png`} className="img-fluid" alt="Illustration of fluid" />
-                <h3>Fluid</h3>
-                <p>A fluid grid takes up 100% of the viewport and scales dynamically as the sizing of the grid changes.</p>
-            </article>
-            <article>
-                <img src={`${basename}img/documentation/grid/fixed.png`} className="img-fluid" alt="Illustration of fixed" />
-                <h3>Fixed</h3>
-                <p>A fixed grid has a fixed size on its maximum width, meaning the grid will not scale as the grid changes.</p>
-            </article>
-        </div>
-    </section>
-);
-
-const OffsettingGrid = () => (
-    <section>
-        <h2 id="offsetting-grid">Offsetting grid</h2>
-        <p>A standard 12 column grid typically fills 100% of the viewport. When there is a side menu present in the design we must offset the grid in order to align the elements. In this case, the width of the menu is removed from the calculation and the grid takes 100% of the remaining space.</p>
-        <div className="grid-guide">
-            <article>
-                <img src={`${basename}img/documentation/grid/grid-offset-left.png`} className="mb-3 img-fluid" alt="Grid offset with left side menu" />
-                <p>Grid offset with left side menu</p>
-            </article>
-            <article>
-                <img src={`${basename}img/documentation/grid/grid-offset-both-sides.png`} className="mb-3 img-fluid" alt="Grid offset with menu on each side" />
-                <p>Grid offset with menu on each side</p>
-            </article>
-        </div>
-    </section>
-);
-
-const Breakpoints = () => (
-    <section>
-        <h2 id="breakpoints">Breakpoints</h2>
-        <p>As shown in previous examples our grid system has 12 columns in desktop view. As the width decreases to tablet and mobile breakpoints the amount of columns used changes as well. Within the tablet breakpoints we use 8 columns and within mobile breakpoints 4 columns.</p>
-        <table className="table table-plain">
-            <thead>
-                <tr>
-                    <th>Size</th>
-                    <th>Breakpoint Range</th>
-                    <th>Columns</th>
-                    <th>Margins & Gutter</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Mobile</td>
-                    <td>320-767 px</td>
-                    <td>4</td>
-                    <td>16 px</td>
-                </tr>
-                <tr>
-                    <td>Tablet</td>
-                    <td>768-1023 px</td>
-                    <td>8</td>
-                    <td>24 px</td>
-                </tr>
-                <tr>
-                    <td>Small Desktop</td>
-                    <td>1024-1439 px</td>
-                    <td>12</td>
-                    <td>24 px</td>
-                </tr>
-                <tr>
-                    <td>Large Desktop</td>
-                    <td>≥ 1440 px</td>
-                    <td>12</td>
-                    <td>24 px</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
 );
 
 const Grid = () => (
