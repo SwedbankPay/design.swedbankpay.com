@@ -4,71 +4,71 @@ import { Link } from "react-router-dom";
 import { DocContainer } from "@docutils";
 
 const MenuOverview = () => (
-    <section className="overview-grid">
-        <Link to="/utilities/borders" className="cards cards-wide m-0">
+    <section className="component-overview">
+        <Link to="/utilities/borders" className="cards cards-primary cards-wide">
             <div className="cards-content m-0">
                 <span className="h3">Borders</span>
                 <span>Set borders that suit your needs</span>
             </div>
             <i className="material-icons">arrow_forward</i>
         </Link>
-        <Link to="/utilities/breakpoints" className="cards cards-wide m-0">
+        <Link to="/utilities/breakpoints" className="cards cards-primary cards-wide">
             <div className="cards-content m-0">
                 <span className="h3">Breakpoints</span>
                 <span>See our display breakpoints</span>
             </div>
             <i className="material-icons">arrow_forward</i>
         </Link>
-        <Link to="/utilities/colors" className="cards cards-wide m-0">
+        <Link to="/utilities/colors" className="cards cards-primary cards-wide">
             <div className="cards-content m-0">
                 <span className="h3">Colors</span>
                 <span>See our color utility classes</span>
             </div>
             <i className="material-icons">arrow_forward</i>
         </Link>
-        <Link to="/utilities/display" className="cards cards-wide m-0">
+        <Link to="/utilities/display" className="cards cards-primary cards-wide">
             <div className="cards-content m-0">
                 <span className="h3">Display</span>
                 <span>See our display properties</span>
             </div>
             <i className="material-icons">arrow_forward</i>
         </Link>
-        <Link to="/utilities/flex" className="cards cards-wide m-0">
+        <Link to="/utilities/flex" className="cards cards-primary cards-wide">
             <div className="cards-content m-0">
                 <span className="h3">Flex</span>
                 <span>Layout, alignment and grid</span>
             </div>
             <i className="material-icons">arrow_forward</i>
         </Link>
-        <Link to="/utilities/images" className="cards cards-wide m-0">
+        <Link to="/utilities/images" className="cards cards-primary cards-wide">
             <div className="cards-content m-0">
                 <span className="h3">Images</span>
                 <span>Modify how images are displayed</span>
             </div>
             <i className="material-icons">arrow_forward</i>
         </Link>
-        <Link to="/utilities/sizing" className="cards cards-wide m-0">
+        <Link to="/utilities/sizing" className="cards cards-primary cards-wide">
             <div className="cards-content m-0">
                 <span className="h3">Sizing</span>
                 <span>Size according to your needs</span>
             </div>
             <i className="material-icons">arrow_forward</i>
         </Link>
-        <Link to="/utilities/spacing" className="cards cards-wide m-0">
+        <Link to="/utilities/spacing" className="cards cards-primary cards-wide">
             <div className="cards-content m-0">
                 <span className="h3">Spacing</span>
                 <span>Responsive margin and padding</span>
             </div>
             <i className="material-icons">arrow_forward</i>
         </Link>
-        <Link to="/utilities/text" className="cards cards-wide m-0">
+        <Link to="/utilities/text" className="cards cards-primary cards-wide">
             <div className="cards-content m-0">
                 <span className="h3">Text</span>
                 <span>Control wrapping, weight and more</span>
             </div>
             <i className="material-icons">arrow_forward</i>
         </Link>
-        <Link to="/utilities/visibility" className="cards cards-wide m-0">
+        <Link to="/utilities/visibility" className="cards cards-primary cards-wide">
             <div className="cards-content m-0">
                 <span className="h3">Visibility</span>
                 <span>Control visibilities of display</span>
