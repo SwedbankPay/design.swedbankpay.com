@@ -30,7 +30,7 @@ const Home = () => {
                     <div className="col-12 col-sm-6 col-lg-3 d-flex">
                         <Link to="/getting-started/introduction" className="cards cards-primary">
                             <div className="cards-icon">
-                                <i className="material-icons-outlined" style={{ transform: "rotate(180deg)" }}>wb_incandescent</i>
+                                <i className="material-icons-outlined rotate-icon">wb_incandescent</i>
                             </div>
                             <div className="cards-content">
                                 <span className="h4">Get started</span>
