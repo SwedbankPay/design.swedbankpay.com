@@ -989,20 +989,22 @@
         }
     }
 
-    .brand-quote {
+    .big-quotation {
         display: flex;
+        margin-bottom: 0.75rem;
 
-        span {
+        &:before {
+            content: "“";
             color: @brand-primary;
             font-family: @brand-headline;
             font-size: 3.5rem;
-            margin-right: 1rem;
+            margin-right: 0.425rem;
         }
 
         p {
             align-self: flex-end;
             font-size: 1.25rem;
-            max-width: 41.875rem;
+            margin-bottom: 0.75rem;
         }
     }
 
@@ -1046,24 +1048,6 @@
                 max-width: 21rem;
                 margin: 0.875rem 0 0;
             }
-        }
-    }
-
-    .quote {
-        display: flex;
-        margin-bottom: 1rem;
-
-        span {
-            color: @brand-primary;
-            font-family: @brand-headline;
-            font-size: 3.5rem;
-            margin-right: 1rem;
-        }
-
-        p {
-            margin: 0;
-            align-self: center;
-            font-size: 1.25rem;
         }
     }
 
