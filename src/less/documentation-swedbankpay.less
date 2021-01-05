@@ -489,6 +489,21 @@
                     max-width: 21rem;
                 }
             }
+
+            &.hide-arrow-icon {
+                i:last-child {
+                    opacity: 0;
+                    transition: 0.5s;
+                }
+
+                a {
+                    &:hover {
+                        i {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
         }
 
         section {

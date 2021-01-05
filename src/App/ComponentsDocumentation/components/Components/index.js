@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { DocContainer } from "@docutils";
 
 const MenuOverview = () => (
-    <section className="component-overview hide-arrow">
+    <section className="component-overview hide-arrow-icon">
         <Link to="/components/accordion" className="cards cards-primary cards-wide">
             <div className="cards-content flex-row align-items-center m-0 ">
                 <i className="material-icons material-icons-outlined mr-3">calendar_view_day</i>
