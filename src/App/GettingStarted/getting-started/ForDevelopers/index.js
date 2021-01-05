@@ -69,7 +69,7 @@ const GridAndBreakpoints = () => (
             <thead>
                 <tr>
                     <th>Size</th>
-                    <th>Breakpint Range</th>
+                    <th>Breakpoint Range</th>
                     <th>Columns</th>
                     <th>Margins & Gutter</th>
                 </tr>
