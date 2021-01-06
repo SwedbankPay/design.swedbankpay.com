@@ -119,7 +119,7 @@ exports[`Core: Accessibility AccessibleService renders 1`] = `
             The merchant can choose to have the checkout replace their own collection of delivery address. The customer is given the opportunity to choose among previously used delivery addresses.
           </td>
           <td>
-            Our checkout recognises the customer.
+            Our checkout recognizes the customer.
           </td>
         </tr>
       </tbody>
@@ -341,7 +341,7 @@ exports[`Core: Accessibility WcagStandard renders 1`] = `
     <span
       className="ml-2"
     >
-      Swedbank Pay Definitions – Glossary and other resourses
+      Swedbank Pay Definitions – Glossary and other resources
     </span>
   </a>
   <p>

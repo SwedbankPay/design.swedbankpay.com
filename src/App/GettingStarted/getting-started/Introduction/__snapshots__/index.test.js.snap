@@ -6,7 +6,7 @@ exports[`GettingStarted: Introduction GetStarted renders 1`] = `
     Below we have compiled a list of things you need to have and know in order to get started with our design guide.
   </p>
   <div
-    className="overview-grid"
+    className="component-overview"
   >
     <Link
       className="cards cards-primary"
@@ -112,11 +112,8 @@ exports[`GettingStarted: Introduction UsingDG renders 1`] = `
     Let’s clarify the definition of using the Design Guide. Just because an interface looks right according to the Design Guide, our brand and the design system in general it still doesn’t mean that it per definition “uses the Design Guide”. The definition of using our Design Guide is the technical implementation. 
   </p>
   <div
-    className="quote"
+    className="big-quotation"
   >
-    <span>
-      “
-    </span>
     <p>
       The idea of the Design Guide is to have official place where general and/or major updates happens.
     </p>
@@ -267,11 +264,8 @@ exports[`GettingStarted: Introduction WhatIsDG renders 1`] = `
     The Design Guide consists of more than design. It contains all the parts of the design system that actually can be used and implemented by developers working with Swedbank Pay products.
   </p>
   <div
-    className="quote"
+    className="big-quotation"
   >
-    <span>
-      “
-    </span>
     <p>
       A design system is the single source of truth which groups all the elements that will allow the teams to design, realize and develop a product.
     </p>

@@ -14,13 +14,16 @@ exports[`Core: Imagery FocalPoints renders 1`] = `
     Choose images with a strong focal point for the products main banner – this is the first part of your product users will see, so the imagery should be powerful and relevant to your site. The person looking to the right in this photo (see Figure 1) guides the eye towards to the content to the right of the image.
   </p>
   <div
-    className="img-container pb-4"
+    className="d-flex flex-column align-items-center"
   >
     <img
       alt="A woman with headphones sitting on a bus looking out through the window to the right"
+      className="w-100"
       src="/TEST/img/documentation/imagery/women-on-bus.svg"
     />
-    <span>
+    <span
+      className="caption-text"
+    >
       <span
         className="font-weight-bold"
       >
@@ -37,6 +40,7 @@ exports[`Core: Imagery FocalPoints renders 1`] = `
   </p>
   <img
     alt="Image describing what not to do"
+    className="w-100"
     src="/TEST/img/documentation/imagery/donts-1.svg"
   />
 </section>
@@ -72,6 +76,7 @@ exports[`Core: Imagery ImageLibrary renders 1`] = `
   </a>
   <img
     alt="collection of images"
+    className="w-100"
     src="/TEST/img/documentation/imagery/image-group.svg"
   />
   <h3>
@@ -122,15 +127,14 @@ exports[`Core: Imagery UsingImagery renders 1`] = `
   </p>
   <img
     alt="Image describing what not to do"
+    className="w-100"
     src="/TEST/img/documentation/imagery/donts-2.svg"
   />
 </section>
 `;
 
 exports[`Core: Imagery renders 1`] = `
-<div
-  className="doc-body imagery p-0"
->
+<DocContainer>
   <p
     className="lead"
   >
@@ -140,5 +144,5 @@ exports[`Core: Imagery renders 1`] = `
   <ImageSizes />
   <FocalPoints />
   <UsingImagery />
-</div>
+</DocContainer>
 `;

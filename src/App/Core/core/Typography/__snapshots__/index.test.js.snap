@@ -1314,7 +1314,7 @@ exports[`Core: Typography Typefaces renders 1`] = `
     Be respectful of content hierarchy
   </h3>
   <p>
-    In order for us to create good and acessible structure in our products, it’s mandatory to include heading levels. No more than one h1 should be present on the page and if you have used h2 and want to show hirarchy in content, h3 should be used next and so on.
+    In order for us to create good and accessible structure in our products, it’s mandatory to include heading levels. No more than one h1 should be present on the page and if you have used h2 and want to show hierarchy in content, h3 should be used next and so on.
   </p>
 </section>
 `;

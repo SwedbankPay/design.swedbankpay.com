@@ -22,7 +22,7 @@ exports[`Identity: Spacing BaseIncrementOfRem renders 1`] = `
     , this means you can easily use 0.5 rem increments to create layouts in code on a 8-point spacing system. See example below for reference: 
   </p>
   <table
-    className="table table-plain"
+    className="table table-plain spacing-table"
   >
     <thead>
       <tr>
@@ -191,13 +191,16 @@ exports[`Identity: Spacing EightPointSystem renders 1`] = `
     We follow a 8-point spacing system – multiples of 8 to define the different dimensions, margins and paddings of our elements. The reason for this is to streamline the process, saving time by minimize the amount of choices and create consistent usage of space across all our product. 
   </p>
   <div
-    className="img-container pb-4"
+    className="d-flex flex-column align-items-center mb-4"
   >
     <img
       alt="Example on multiples of 8px horizontal spacing between elements"
+      className="w-100"
       src="/TEST/img/documentation/spacing/horizontal-spacing-example.svg"
     />
-    <span>
+    <span
+      className="caption-text"
+    >
       <span
         className="font-weight-bold"
       >
@@ -828,13 +831,16 @@ exports[`Identity: Spacing VerticalSpacing renders 1`] = `
     Similar to horizontal spacing, we also use spacing vertically in order to create good vertical structure. While we don’t have strict usage definitions for each size, it is important to always evaluate what fits best in your context and what type of devices you are designing for. Make sure to group items relevant to each other close and separate sections with good amount of spacing to provide a clear separation.
   </p>
   <div
-    className="img-container pb-4"
+    className="d-flex flex-column align-items-center"
   >
     <img
       alt="Example on multiples of 8 px vertical spacing between elements"
+      className="w-100"
       src="/TEST/img/documentation/spacing/vertical-spacing-example.svg"
     />
-    <span>
+    <span
+      className="caption-text"
+    >
       <span
         className="font-weight-bold"
       >
@@ -847,9 +853,7 @@ exports[`Identity: Spacing VerticalSpacing renders 1`] = `
 `;
 
 exports[`Identity: Spacing renders 1`] = `
-<div
-  className="doc-body spacing p-0"
->
+<DocContainer>
   <p
     className="lead"
   >
@@ -863,5 +867,5 @@ exports[`Identity: Spacing renders 1`] = `
   <HowItWorks />
   <Notation />
   <Examples />
-</div>
+</DocContainer>
 `;

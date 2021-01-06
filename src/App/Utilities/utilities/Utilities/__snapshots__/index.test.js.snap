@@ -2,10 +2,10 @@
 
 exports[`Utilities: Utilities MenuOverview renders 1`] = `
 <section
-  className="overview-grid"
+  className="component-overview"
 >
   <Link
-    className="cards cards-wide m-0"
+    className="cards cards-primary cards-wide"
     to="/utilities/borders"
   >
     <div
@@ -27,7 +27,7 @@ exports[`Utilities: Utilities MenuOverview renders 1`] = `
     </i>
   </Link>
   <Link
-    className="cards cards-wide m-0"
+    className="cards cards-primary cards-wide"
     to="/utilities/breakpoints"
   >
     <div
@@ -49,7 +49,7 @@ exports[`Utilities: Utilities MenuOverview renders 1`] = `
     </i>
   </Link>
   <Link
-    className="cards cards-wide m-0"
+    className="cards cards-primary cards-wide"
     to="/utilities/colors"
   >
     <div
@@ -71,7 +71,7 @@ exports[`Utilities: Utilities MenuOverview renders 1`] = `
     </i>
   </Link>
   <Link
-    className="cards cards-wide m-0"
+    className="cards cards-primary cards-wide"
     to="/utilities/display"
   >
     <div
@@ -93,7 +93,7 @@ exports[`Utilities: Utilities MenuOverview renders 1`] = `
     </i>
   </Link>
   <Link
-    className="cards cards-wide m-0"
+    className="cards cards-primary cards-wide"
     to="/utilities/flex"
   >
     <div
@@ -115,7 +115,7 @@ exports[`Utilities: Utilities MenuOverview renders 1`] = `
     </i>
   </Link>
   <Link
-    className="cards cards-wide m-0"
+    className="cards cards-primary cards-wide"
     to="/utilities/images"
   >
     <div
@@ -137,7 +137,7 @@ exports[`Utilities: Utilities MenuOverview renders 1`] = `
     </i>
   </Link>
   <Link
-    className="cards cards-wide m-0"
+    className="cards cards-primary cards-wide"
     to="/utilities/sizing"
   >
     <div
@@ -159,7 +159,7 @@ exports[`Utilities: Utilities MenuOverview renders 1`] = `
     </i>
   </Link>
   <Link
-    className="cards cards-wide m-0"
+    className="cards cards-primary cards-wide"
     to="/utilities/spacing"
   >
     <div
@@ -181,7 +181,7 @@ exports[`Utilities: Utilities MenuOverview renders 1`] = `
     </i>
   </Link>
   <Link
-    className="cards cards-wide m-0"
+    className="cards cards-primary cards-wide"
     to="/utilities/text"
   >
     <div
@@ -203,7 +203,7 @@ exports[`Utilities: Utilities MenuOverview renders 1`] = `
     </i>
   </Link>
   <Link
-    className="cards cards-wide m-0"
+    className="cards cards-primary cards-wide"
     to="/utilities/visibility"
   >
     <div

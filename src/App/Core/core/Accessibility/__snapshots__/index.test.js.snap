@@ -384,7 +384,7 @@ exports[`Core: Accessibility WcagStandard renders 1`] = `
     </span>
   </a>
   <a
-    className="icon-link mb-5"
+    className="icon-link"
     href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/"
     rel="noopener noreferrer"
     target="_blank"

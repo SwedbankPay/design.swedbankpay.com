@@ -25,9 +25,7 @@ exports[`Core: Iconography CardIcons renders 1`] = `
       </tr>
     </thead>
     <tbody>
-      <tr
-        className="justify-content-between"
-      >
+      <tr>
         <td>
           <IconPreview
             name="payment-card"
