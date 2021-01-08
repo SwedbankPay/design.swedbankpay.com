@@ -992,6 +992,45 @@
             }
         }
     }
+
+    .lightbox {
+        img {
+            cursor: zoom-in;
+            border: 1px solid transparent;
+
+            &:hover {
+                border: 1px solid @brand-secondary;
+            }
+        }
+
+        + img {
+            display: none;
+        }
+
+        &.active {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(58, 58, 58, 0.904);
+            z-index: 10;
+
+            img {
+                margin: 2rem;
+                width: 90%;
+                background-color: white;
+                cursor: zoom-out;
+            }
+
+            + img {
+                display: block;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: @screen-xs-max) {

@@ -104,6 +104,11 @@ module.exports = [
                 statusBadges: ["updated"]
             },
             {
+                title: "Lightbox",
+                path: "/components/lightbox",
+                componentPath: "components/Lightbox"
+            },
+            {
                 title: "Links",
                 path: "/components/links",
                 componentPath: "components/Links"
