@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { DocContainer } from "@docutils";
 
 const MenuOverview = () => (
-    <section className="component-overview hide-arrow">
+    <section className="component-overview hide-arrow-icon">
         <Link to="/components/accordion" className="cards cards-primary cards-wide">
             <div className="cards-content flex-row align-items-center m-0 ">
                 <i className="material-icons material-icons-outlined mr-3">calendar_view_day</i>
@@ -185,7 +185,7 @@ const MenuOverview = () => (
 
 const Components = () => (
     <DocContainer>
-        <p className="lead mb-5">
+        <p className="lead">
         This is the Swedbank Pay component library. Here we’ve listed all the components in the Swedbank Pay design system. Feel free to look around!
         </p>
         <MenuOverview />

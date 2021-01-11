@@ -5,6 +5,7 @@ import { setTitle, RemoveVscroll } from "../utils";
 const BASENAME = process.env.basename;
 
 const Home = () => {
+    const cardStyleClass = "col-12 col-sm-6 col-lg-3 d-flex";
 
     useEffect(() => {
         RemoveVscroll();
@@ -14,23 +15,23 @@ const Home = () => {
     const FrontPage = () => (
         <section className="dg-front-page-container m-auto d-flex flex-column">
             <div className="my-auto">
-                <img src={`${BASENAME}img/background/cluster-bubbles.svg`} className="bg-img cluster-bubble d-none d-xl-block mt-n5"/>
+                <img src={`${BASENAME}img/background/cluster-bubbles.svg`} className="background-img cluster-bubble d-none d-xl-block mt-n5"/>
                 <header>
                     <span className="dg-title-small d-block m-0">Welcome to the</span>
                     <span className="dg-title-big my-0">Swedbank Pay Design Guide</span>
                 </header>
 
                 <div className="dg-version-indicator">
-                    <span className="dg-version-indicator-text p-2">Ver. 5.0.0</span>
+                    <span>Ver. 5.0.0</span>
                 </div>
 
-                <p className="front-page-ingress">Here you can find components and guidelines to help you  and your team work more efficiently and create a cohesive user experience through all our products and touch points.</p>
+                <p className="front-page-lead">Here you can find components and guidelines to help you  and your team work more efficiently and create a cohesive user experience through all our products and touch points.</p>
 
                 <div className="row dg-cards-container mt-4">
-                    <div className="col-12 col-sm-6 col-lg-3 d-flex">
+                    <div className={cardStyleClass}>
                         <Link to="/getting-started/introduction" className="cards cards-primary">
                             <div className="cards-icon">
-                                <i className="material-icons-outlined" style={{ transform: "rotate(180deg)" }}>wb_incandescent</i>
+                                <i className="material-icons-outlined rotate-icon">wb_incandescent</i>
                             </div>
                             <div className="cards-content">
                                 <span className="h4">Get started</span>
@@ -39,7 +40,7 @@ const Home = () => {
                             <i className="material-icons">arrow_forward</i>
                         </Link>
                     </div>
-                    <div className="col-12 col-sm-6 col-lg-3 d-flex">
+                    <div className={cardStyleClass}>
                         <Link to="/core/identity" className="cards cards-primary">
                             <div className="cards-icon">
                                 <i className="material-icons-outlined">palette</i>
@@ -51,8 +52,8 @@ const Home = () => {
                             <i className="material-icons">arrow_forward</i>
                         </Link>
                     </div>
-                    <div className="col-12 col-sm-6 col-lg-3 d-flex">
-                        <Link to="/components/introduction" className="cards cards-primary">
+                    <div className={cardStyleClass}>
+                        <Link to="/components/components" className="cards cards-primary">
                             <div className="cards-icon">
                                 <i className="material-icons-outlined">category</i>
                             </div>
@@ -63,7 +64,7 @@ const Home = () => {
                             <i className="material-icons">arrow_forward</i>
                         </Link>
                     </div>
-                    <div className="col-12 col-sm-6 col-lg-3 d-flex">
+                    <div className={cardStyleClass}>
                         <Link to="/utilities/utilities" className="cards cards-primary">
                             <div className="cards-icon">
                                 <i className="material-icons-outlined">build</i>
@@ -80,11 +81,11 @@ const Home = () => {
             <div className="mt-auto d-none d-md-inline-flex mb-3">
                 <a className="dg-next-page-content mx-auto"
                     onClick={() => window.scrollTo(0, document.body.scrollHeight)}>
-                    <span className="next-page-text text-uppercase">Click here to see changelog</span>
+                    <span>Click here to see changelog</span>
                     <i className="material-icons">expand_more</i>
                 </a>
             </div>
-            <img src={`${BASENAME}img/background/large-bubble.svg`} className="bg-img large-bubble d-none d-xl-block"/>
+            <img src={`${BASENAME}img/background/large-bubble.svg`} className="background-img large-bubble d-none d-xl-block"/>
 
         </section>
     );
@@ -105,7 +106,7 @@ const Home = () => {
                 </div>
 
                 <div className="row border-bottom pb-2 mt-4">
-                    <div className="dg-version-title px-0 pb-2">V 5.0.0</div>
+                    <div className="px-0 pb-2">V 5.0.0</div>
                     <div className="dg-changelog-description px-0">
                         <span className="h4">Major overhaul of the Developer Portal’s design ♥️</span>
                         <p className="mt-2">
@@ -114,7 +115,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="row border-bottom pb-2 mt-4">
-                    <div className="dg-version-title px-0 pb-2">V 4.8.1</div>
+                    <div className="px-0 pb-2">V 4.8.1</div>
                     <div className="dg-changelog-description px-0">
                         <span className="h4">Update the actual logotype and guidelines.</span>
                         <p className="mt-2">
@@ -123,7 +124,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="row border-bottom pb-2 mt-4">
-                    <div className="dg-version-title px-0 pb-2">V 4.8.0</div>
+                    <div className="px-0 pb-2">V 4.8.0</div>
                     <div className="dg-changelog-description px-0">
                         <span className="h4">Major component updates</span>
                         <p className="mt-2">
@@ -132,7 +133,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="row border-bottom pb-2 mt-4">
-                    <div className="dg-version-title px-0 pb-2">V 4.7.0</div>
+                    <div className="px-0 pb-2">V 4.7.0</div>
                     <div className="dg-changelog-description px-0">
                         <span className="h4">Introducing the the new codeview component</span>
                         <p className="mt-2">
@@ -154,8 +155,8 @@ const Home = () => {
         <div className="doc-container dg-front-page py-0">
             <FrontPage />
             <Changelog />
-            <img src={`${BASENAME}img/background/two-bubbles.svg`} className="bg-img two-bubbles d-none d-xl-block"/>
-            <img src={`${BASENAME}img/background/single-bubble.svg`} className="bg-img single-bubble d-none d-xl-block"/>
+            <img src={`${BASENAME}img/background/two-bubbles.svg`} className="background-img two-bubbles d-none d-xl-block"/>
+            <img src={`${BASENAME}img/background/single-bubble.svg`} className="background-img single-bubble d-none d-xl-block"/>
         </div>
     );
 };

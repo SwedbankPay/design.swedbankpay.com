@@ -223,16 +223,9 @@ exports[`Identity: Identity OurBrand renders 1`] = `
     Open, simple and caring. These are our values that we always strive to come back to when we design both internal and external experiences. 
   </p>
   <div
-    className="brand-quote"
+    className="big-quotation"
   >
-    <span
-      className="big-quotation-mark"
-    >
-      “
-    </span>
-    <p
-      className="mb-3"
-    >
+    <p>
       We are warm and welcoming, we guide, we involve users, we ensure access for all, we are consistent and we design for trust.
     </p>
   </div>

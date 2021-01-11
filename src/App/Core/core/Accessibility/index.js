@@ -44,7 +44,7 @@ const WcagStandard = () => (
             <span className="mr-2">What is WCAG?</span>
         </a>
 
-        <a href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/" target="_blank" rel="noopener noreferrer" className="icon-link mb-5">
+        <a href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/" target="_blank" rel="noopener noreferrer" className="icon-link">
             <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
             <span className="mr-2">W3C – WCAG 2.1    Recommendations </span>
         </a>

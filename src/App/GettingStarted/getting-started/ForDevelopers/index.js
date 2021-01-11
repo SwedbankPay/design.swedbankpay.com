@@ -69,7 +69,7 @@ const GridAndBreakpoints = () => (
             <thead>
                 <tr>
                     <th>Size</th>
-                    <th>Breakpint Range</th>
+                    <th>Breakpoint Range</th>
                     <th>Columns</th>
                     <th>Margins & Gutter</th>
                 </tr>
@@ -122,7 +122,7 @@ const Feedback = () => (
 const DiscoverMore = () => (
     <section>
         <h2 id="discover-more">Discover more</h2>
-        <div className="overview-grid">
+        <div className="component-overview">
             <Link to="/components/components" className="cards cards-primary cards-wide">
                 <div className="cards-content">
                     <span className="h4">Components</span><span>See all available components</span>

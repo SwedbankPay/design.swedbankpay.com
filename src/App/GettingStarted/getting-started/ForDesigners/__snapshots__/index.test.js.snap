@@ -15,6 +15,8 @@ exports[`GettingStarted: ForDesigners Contributing renders 1`] = `
     <a
       className="icon-link"
       href="https://www.figma.com/file/sRWbYlMbR0c4T3vT8DBHIU/Snowflakes?node-id=1%3A4"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       <span
         className="mr-2"
@@ -59,7 +61,7 @@ exports[`GettingStarted: ForDesigners DiscoverMore renders 1`] = `
     DiscoverMore
   </h2>
   <div
-    className="overview-grid"
+    className="component-overview"
   >
     <Link
       className="cards cards-primary cards-wide"

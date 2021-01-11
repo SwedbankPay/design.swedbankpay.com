@@ -2,7 +2,7 @@
 
 exports[`Components: Components MenuOverview renders 1`] = `
 <section
-  className="component-overview hide-arrow"
+  className="component-overview hide-arrow-icon"
 >
   <Link
     className="cards cards-primary cards-wide"
@@ -610,7 +610,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
 exports[`Components: Components renders 1`] = `
 <DocContainer>
   <p
-    className="lead mb-5"
+    className="lead"
   >
     This is the Swedbank Pay component library. Here we’ve listed all the components in the Swedbank Pay design system. Feel free to look around!
   </p>

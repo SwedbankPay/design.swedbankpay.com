@@ -124,7 +124,7 @@ const Tonality = () => (
                             The merchant can choose to have the checkout replace their own collection of delivery address.
                             The customer is given the opportunity to choose among previously used delivery addresses.
                         </td>
-                        <td>Our checkout recognises the customer.</td>
+                        <td>Our checkout recognizes the customer.</td>
                     </tr>
                 </tbody>
             </table>
@@ -193,7 +193,7 @@ const GlossaryLinks = () => (
         </p>
         <a href="https://www.swedbank.com/about-swedbank/brand-manager/guidelines/swedbank-pay/tonality/index.htm" rel="noopener noreferrer" target="_blank" className="icon-link">
             <i className="material-icons" aria-hidden="true">open_in_new</i>
-            <span className="ml-2">Swedbank Pay Definitions – Glossary and other resourses</span>
+            <span className="ml-2">Swedbank Pay Definitions – Glossary and other resources</span>
         </a>
         <p>
             This set of guidelines leans heavily on material provided by Swedbank’s UX and Branding departments.

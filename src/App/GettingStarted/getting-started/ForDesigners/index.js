@@ -50,7 +50,7 @@ const Contributing = () => (
         <h2 id="contributing">Contributing</h2>
         <p>When working on the different products across our brand it is important for you as a designer to understand how you can contribute to the Design Guide. It is equally important to understand which types of components can be added to the design guide and which ones are designed specific for your product. In general, the best practice is to keep a close dialogue with the design guide team and its designers and they will guide you through the process.</p>
 
-        <p>As we all know, sometimes you face niche problems which requires specific solutions, this is normal and something that we have accounted for. This is where snowflake comes in and in order to learn about when you should create a snowflake and how, check out our guidelines here in the <a href="https://www.figma.com/file/sRWbYlMbR0c4T3vT8DBHIU/Snowflakes?node-id=1%3A4" className="icon-link"><span className="mr-2">Snowflake Figma file</span><i className="material-icons" aria-hidden="true">open_in_new</i></a></p>
+        <p>As we all know, sometimes you face niche problems which requires specific solutions, this is normal and something that we have accounted for. This is where snowflake comes in and in order to learn about when you should create a snowflake and how, check out our guidelines here in the <a href="https://www.figma.com/file/sRWbYlMbR0c4T3vT8DBHIU/Snowflakes?node-id=1%3A4" target="_blank" rel="noopener noreferrer" className="icon-link"><span className="mr-2">Snowflake Figma file</span><i className="material-icons" aria-hidden="true">open_in_new</i></a></p>
 
         <div className="d-flex flex-column align-items-center">
             <img src={`${basename}img/documentation/forDesigners/vanilla-pattern.png`} className="img-fluid" alt="Our modified Vanilla pattern design intake process (Click to view)"/>
@@ -67,7 +67,7 @@ const Feedback = () => (
 const DiscoverMore = () => (
     <section>
         <h2 id="discover-more">DiscoverMore</h2>
-        <div className="overview-grid">
+        <div className="component-overview">
             <Link to="/core/identity" className="cards cards-primary cards-wide">
                 <div className="cards-content">
                     <span className="h4">Identity</span><span>The philosophy behind our designs </span>

@@ -7,11 +7,11 @@ exports[`Home: index renders 1`] = `
   <FrontPage />
   <Changelog />
   <img
-    className="bg-img two-bubbles d-none d-xl-block"
+    className="background-img two-bubbles d-none d-xl-block"
     src="/TEST/img/background/two-bubbles.svg"
   />
   <img
-    className="bg-img single-bubble d-none d-xl-block"
+    className="background-img single-bubble d-none d-xl-block"
     src="/TEST/img/background/single-bubble.svg"
   />
 </div>

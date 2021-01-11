@@ -62,7 +62,7 @@ exports[`GettingStarted: ForDevelopers DiscoverMore renders 1`] = `
     Discover more
   </h2>
   <div
-    className="overview-grid"
+    className="component-overview"
   >
     <Link
       className="cards cards-primary cards-wide"
@@ -175,7 +175,7 @@ exports[`GettingStarted: ForDevelopers GridAndBreakpoints renders 1`] = `
           Size
         </th>
         <th>
-          Breakpint Range
+          Breakpoint Range
         </th>
         <th>
           Columns

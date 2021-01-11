@@ -255,6 +255,10 @@
                 height: 100vh;
             }
 
+            .rotate-icon {
+                transform: rotate(180deg);
+            }
+
             .dg-front-page-container {
                 padding-top: 3rem;
                 max-width: 70rem;
@@ -278,14 +282,15 @@
                     margin-top: 0.5rem;
                     margin-bottom: 1.5rem;
 
-                    .dg-version-indicator-text {
+                    span {
+                        padding: 0.5rem;
                         background-color: #fff3d5;
                         font-size: 1.25rem;
                         font-family: @brand-headline;
                     }
                 }
 
-                .front-page-ingress {
+                .front-page-lead {
                     max-width: 38.75rem;
                     font-size: 1.25rem;
                     font-family: @font-stack;
@@ -305,9 +310,10 @@
                 color: inherit;
                 text-decoration: none;
 
-                .next-page-text {
+                span {
                     font-size: 0.75rem;
                     padding-bottom: 2rem;
+                    text-transform: uppercase;
                     cursor: pointer;
                 }
 
@@ -325,7 +331,6 @@
                         animation-play-state: paused;
                     }
                 }
-
 
                 @keyframes bounce {
                     0% { bottom: 0.15rem; }
@@ -350,10 +355,6 @@
                             background-color: @brand-warning;
                             border-radius: 1.6rem;
                         }
-                    }
-
-                    .dg-version-title {
-                        max-width: 6rem;
                     }
 
                     .dg-changelog-description {
@@ -440,7 +441,7 @@
             }
 
             /* Background images */
-            .bg-img {
+            .background-img {
                 position: absolute;
             }
 
@@ -486,6 +487,21 @@
             @media (min-width: @screen-md-min) {
                 a {
                     max-width: 21rem;
+                }
+            }
+
+            &.hide-arrow-icon {
+                i:last-child {
+                    opacity: 0;
+                    transition: 0.5s;
+                }
+
+                a {
+                    &:hover {
+                        i {
+                            opacity: 1;
+                        }
+                    }
                 }
             }
         }
@@ -988,20 +1004,22 @@
         }
     }
 
-    .brand-quote {
+    .big-quotation {
         display: flex;
+        margin-bottom: 0.75rem;
 
-        span {
+        &:before {
+            content: "“";
             color: @brand-primary;
             font-family: @brand-headline;
             font-size: 3.5rem;
-            margin-right: 1rem;
+            margin-right: 0.425rem;
         }
 
         p {
             align-self: flex-end;
             font-size: 1.25rem;
-            max-width: 41.875rem;
+            margin-bottom: 0.75rem;
         }
     }
 
@@ -1048,24 +1066,6 @@
         }
     }
 
-    .quote {
-        display: flex;
-        margin-bottom: 1rem;
-
-        span {
-            color: @brand-primary;
-            font-family: @brand-headline;
-            font-size: 3.5rem;
-            margin-right: 1rem;
-        }
-
-        p {
-            margin: 0;
-            align-self: center;
-            font-size: 1.25rem;
-        }
-    }
-
     .browser-support {
         display: flex;
         justify-content: space-between;
@@ -1080,6 +1080,14 @@
 
             p {
                 margin: 0 0.5rem 0;
+            }
+        }
+    }
+
+    .spacing-table {
+        tbody {
+            th {
+                font-weight: normal;
             }
         }
     }
