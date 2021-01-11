@@ -134,6 +134,38 @@
                 max-height: none;
                 overflow-y: visible;
 
+                .sidebar-top {
+                    padding: 1rem 0;
+                    margin-bottom: 1rem;
+                    border-bottom: 1px solid @brand-secondary-light-3;
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+
+                    img {
+                        margin-right: 1.5rem;
+                        display: flex;
+                        width: 30px;
+                    }
+
+                    .sidebar-version {
+                        display: block;
+
+                        .sidebar-version-header {
+                            font-family: @brand-headline;
+                            font-weight: @font-weight-normal;
+                            color: @brand-secondary;
+                            font-size: 1.125rem;
+                            line-height: 1.5rem;
+                        }
+
+                        .small,
+                        small {
+                            color: @brand-secondary;
+                        }
+                    }
+                }
+
                 .main-nav-ul {
                     .nav-group {
                         &.active {
