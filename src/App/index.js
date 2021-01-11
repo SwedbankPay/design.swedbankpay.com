@@ -34,13 +34,11 @@ const GettingStarted = React.lazy(() => import(/* webpackChunkName: "getting-sta
 
 const Components = React.lazy(() => import(/* webpackChunkName: "components.chunk" */ "./ComponentsDocumentation/index.js"));
 
-const Core = React.lazy(() => import(/* webpackChunkName: "core.chunk" */ "./Core/index.js"));
+const Identity = React.lazy(() => import(/* webpackChunkName: "core.chunk" */ "./Identity/index.js"));
 
 const Examples = React.lazy(() => import(/* webpackChunkName: "examples.chunk" */ "./Examples/index.js"));
 
 const Utilities = React.lazy(() => import(/* webpackChunkName: "utilities.chunk" */ "./Utilities/index.js"));
-
-const Resources = React.lazy(() => import(/* webpackChunkName: "resources.chunk" */ "./Resources/index.js"));
 
 const ErrorPage404 = React.lazy(() => import(/* webpackChunkName: "404.chunk" */ "./ErrorPage404/index.js"));
 
@@ -70,20 +68,19 @@ class App extends Component {
                 <ScrollToTopComponent>
                     <AppHeader />
                     <div className="documentation">
-                        <div className="row">
-                            <div className="col-xxl-2 col-lg-3 d-none d-lg-block">
-                                <SelectPanel id="doc-sidebar" routes={routes} />
+                        <div className="d-md-flex">
+                            <div className="d-none d-lg-block">
+                                <SelectPanel id="doc-sidebar" newSidebar={true} routes={routes} />
                             </div>
-                            <main className="doc-view col-xxl-10 col-lg-9">
+                            <main className="doc-view">
                                 <Suspense fallback={<LoadingComponent />}>
                                     <Switch>
                                         <Route exact path="/" component={Home} />
-                                        <Route path="/getting-started" component={GettingStarted} />
+                                        <Route path="/get-started" component={GettingStarted} />
                                         <Route path="/components" component={Components} />
-                                        <Route path="/core" component={Core} />
+                                        <Route path="/identity" component={Identity} />
                                         <Route path="/examples" component={Examples} />
                                         <Route path="/utilities" component={Utilities} />
-                                        <Route path="/resources" component={Resources} />
                                         <Route path="/404" component={ErrorPage404} />
                                         <Route component={ErrorPage404} />
                                     </Switch>

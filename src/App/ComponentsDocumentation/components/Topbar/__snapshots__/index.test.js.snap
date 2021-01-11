@@ -271,62 +271,73 @@ exports[`Components: Topbar TopbarSticky renders 1`] = `
             sidebarNavList={
               Array [
                 Object {
-                  "lastParent": true,
-                  "subList": Array [
-                    Object {
-                      "title": "Introduction 1",
-                    },
-                    Object {
-                      "title": "Introduction 2",
-                    },
-                    Object {
-                      "title": "Introduction 3",
-                    },
-                  ],
-                  "title": "Introduction",
+                  "icon": <i
+                    className="material-icons-outlined"
+                  >
+                    home
+                  </i>,
+                  "title": "Home Page",
                 },
                 Object {
-                  "lastParent": true,
-                  "subList": Array [
+                  "children": Array [
                     Object {
-                      "title": "Summary chapter 1",
+                      "icon": <i
+                        className="material-icons-outlined rotated"
+                      >
+                        accessibility
+                      </i>,
+                      "title": "Accessibility",
                     },
                     Object {
-                      "title": "Summary chapter 2",
+                      "children": Array [
+                        Object {
+                          "title": "Primary colors",
+                        },
+                        Object {
+                          "title": "Secondary colors",
+                        },
+                        Object {
+                          "title": "Tertiary colors",
+                        },
+                      ],
+                      "icon": <i
+                        className="material-icons-outlined rotated"
+                      >
+                        palette
+                      </i>,
+                      "title": "Colors",
                     },
                     Object {
-                      "title": "Summary chapter 3",
+                      "icon": <i
+                        className="material-icons-outlined rotated"
+                      >
+                        grid_on
+                      </i>,
+                      "title": "Grid",
+                    },
+                    Object {
+                      "icon": <i
+                        className="material-icons-outlined rotated"
+                      >
+                        space_bar
+                      </i>,
+                      "title": "Spacing",
                     },
                   ],
-                  "title": "Summary",
+                  "icon": <i
+                    className="material-icons-outlined rotated"
+                  >
+                    wb_incandescent
+                  </i>,
+                  "title": "Get Started",
                 },
                 Object {
-                  "lastParent": false,
-                  "subList": Array [
+                  "children": Array [
                     Object {
                       "title": "Introduction",
                     },
                     Object {
-                      "lastParent": true,
-                      "subList": Array [
-                        Object {
-                          "title": "Operations",
-                        },
-                        Object {
-                          "title": "Lorem ipsum",
-                        },
-                        Object {
-                          "title": "Dolor sit amet consectetur",
-                        },
-                        Object {
-                          "title": "Adipiscing elit",
-                        },
-                      ],
-                      "title": "Operations",
-                    },
-                    Object {
-                      "lastParent": true,
-                      "subList": Array [
+                      "children": Array [
                         Object {
                           "title": "Event 1",
                         },
@@ -337,13 +348,20 @@ exports[`Components: Topbar TopbarSticky renders 1`] = `
                           "title": "Event 3",
                         },
                       ],
+                      "lastParent": true,
                       "title": "Events",
                     },
                     Object {
                       "title": "Conclusion",
                     },
                   ],
-                  "title": "Other features",
+                  "icon": <i
+                    className="material-icons-outlined"
+                  >
+                    palette
+                  </i>,
+                  "lastParent": false,
+                  "title": "Identity",
                 },
               ]
             }

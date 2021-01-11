@@ -7,104 +7,6 @@
     flex-direction: column;
     min-height: 100%;
 
-    .dg-sidebar {
-
-        @media screen and (min-width: @screen-lg-min) {
-            border-right: 1px solid @brand-secondary-light-3;
-            min-height: 100vh;
-        }
-
-        margin-top: 0;
-        width: 100%;
-
-        &.dg-only-style {
-            max-width: 18rem;
-
-            .sidebar-nav {
-                height: 100vh;
-
-                .main-nav-ul {
-                    margin-bottom: 1rem;
-                }
-            }
-        }
-
-        .sidebar-nav {
-            padding-right: 1rem;
-            max-height: 100vh;
-        }
-
-        .main-nav-ul {
-            padding-bottom: 1rem;
-        }
-
-        .sidebar-top {
-            padding: 1rem 0;
-            margin-bottom: 1rem;
-            border-bottom: 1px solid @brand-secondary-light-3;
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-
-            img {
-                margin-right: 1.5rem;
-                display: flex;
-            }
-
-            .sidebar-version {
-                display: block;
-
-                .sidebar-version-header {
-                    font-family: @brand-headline;
-                    font-weight: @font-weight-normal;
-                    color: @brand-secondary;
-                    font-size: 1.125rem;
-                    line-height: 1.5rem;
-                }
-
-                .small,
-                small {
-                    color: @brand-secondary;
-                }
-            }
-        }
-
-
-        .sidebar-contact {
-            margin-top: auto;
-            margin-bottom: 1rem;
-
-            a {
-                color: @brand-secondary;
-                fill: @brand-secondary;
-                display: flex;
-                border: none;
-                text-decoration: none;
-                align-items: center;
-                margin: 0.5rem 0;
-                height: 40px;
-
-                svg {
-                    overflow: visible;
-                    width: 1.5rem;
-                    height: 1.5rem;
-                    display: inline-block;
-                    vertical-align: top;
-                }
-
-                span {
-                    padding-left: 0.75rem;
-                }
-
-                &:hover {
-                    color: darken(@brand-secondary, 20%);
-                    fill: darken(@brand-secondary, 20%);
-                    text-decoration: underline;
-                }
-            }
-        }
-    }
-
     .designguide-header {
         z-index: calc(@zindex-topbar + 1);
     }
@@ -231,9 +133,7 @@
 }
 
 .documentation {
-    .make-container();
-
-    flex-grow: 1;
+    width: 100%;
 
     .doc-container {
         width: 100%;
@@ -648,6 +548,7 @@
     }
 
     .doc-view {
+        flex-grow: 1;
         padding-left: 0;
         padding-right: 0;
         background: @brand-bg-white;

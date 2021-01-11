@@ -30,123 +30,129 @@ exports[`Main: App renders 1`] = `
       className="documentation"
     >
       <div
-        className="row"
+        className="d-md-flex"
       >
         <div
-          className="col-xxl-2 col-lg-3 d-none d-lg-block"
+          className="d-none d-lg-block"
         >
           <withRouter(SelectPanel)
             id="doc-sidebar"
+            newSidebar={true}
             routes={
               Array [
                 Object {
                   "appFolder": "GettingStarted",
-                  "path": "/getting-started",
-                  "redirect": "/getting-started/introduction",
+                  "icon": Object {
+                    "name": "wb_incandescent",
+                    "rotated": true,
+                  },
+                  "path": "/get-started",
+                  "redirect": "/get-started/introduction",
                   "routes": Array [
                     Object {
                       "componentPath": "getting-started/Introduction",
-                      "path": "/getting-started/introduction",
+                      "path": "/get-started/introduction",
                       "title": "Introduction",
                     },
                     Object {
                       "componentPath": "getting-started/ForDevelopers",
-                      "path": "/getting-started/for-developers",
+                      "path": "/get-started/for-developers",
                       "title": "For developers",
                     },
                     Object {
                       "componentPath": "getting-started/ForDesigners",
-                      "path": "/getting-started/for-designers",
+                      "path": "/get-started/for-designers",
                       "title": "For designers",
                     },
                   ],
-                  "title": "Getting Started",
+                  "title": "Get Started",
                 },
                 Object {
-                  "appFolder": "Core",
-                  "path": "/core",
-                  "redirect": "/core/color",
+                  "appFolder": "Identity",
+                  "icon": Object {
+                    "name": "palette",
+                  },
+                  "path": "/identity",
+                  "redirect": "/identity/identity",
                   "routes": Array [
                     Object {
-                      "componentPath": "core/Identity",
-                      "path": "/core/identity",
+                      "componentPath": "identity/Identity",
+                      "path": "/identity/identity",
                       "title": "Identity",
                     },
                     Object {
-                      "componentPath": "core/Accessibility",
-                      "path": "/core/accessibility",
+                      "componentPath": "identity/Accessibility",
+                      "path": "/identity/accessibility",
                       "title": "Accessibility",
                     },
                     Object {
-                      "componentPath": "core/Imagery",
-                      "path": "/core/imagery",
+                      "componentPath": "identity/Imagery",
+                      "path": "/identity/imagery",
                       "title": "Imagery",
                     },
                     Object {
-                      "componentPath": "core/Color",
-                      "path": "/core/color",
+                      "componentPath": "identity/Color",
+                      "path": "/identity/color",
                       "title": "Color",
                     },
                     Object {
-                      "componentPath": "core/Spacing",
-                      "path": "/core/spacing",
+                      "componentPath": "identity/Spacing",
+                      "path": "/identity/spacing",
                       "title": "Spacing",
                     },
                     Object {
-                      "componentPath": "core/Copywriting",
-                      "path": "/core/copywriting",
+                      "componentPath": "identity/Copywriting",
+                      "path": "/identity/copywriting",
                       "title": "Copywriting",
                     },
                     Object {
-                      "componentPath": "core/Logotype",
-                      "path": "/core/logotype",
+                      "componentPath": "identity/Logotype",
+                      "path": "/identity/logotype",
                       "statusBadges": Array [
                         "updated",
                       ],
                       "title": "Logotype",
                     },
                     Object {
-                      "componentPath": "core/Grid",
-                      "path": "/core/grid",
+                      "componentPath": "identity/Grid",
+                      "path": "/identity/grid",
                       "title": "Grid",
                     },
                     Object {
-                      "componentPath": "core/Iconography",
-                      "path": "/core/iconography",
+                      "componentPath": "identity/Iconography",
+                      "path": "/identity/iconography",
                       "title": "Iconography",
                     },
                     Object {
-                      "componentPath": "core/Images",
-                      "path": "/core/images",
+                      "componentPath": "identity/Images",
+                      "path": "/identity/images",
                       "title": "Images",
                     },
                     Object {
-                      "componentPath": "core/Page-layout",
-                      "path": "/core/page-layout",
+                      "componentPath": "identity/Page-layout",
+                      "path": "/identity/page-layout",
                       "title": "Page layout",
                     },
                     Object {
-                      "componentPath": "core/Typography",
-                      "path": "/core/typography",
+                      "componentPath": "identity/Typography",
+                      "path": "/identity/typography",
                       "title": "Typography",
                     },
                   ],
-                  "title": "Core",
+                  "title": "Identity",
                 },
                 Object {
                   "appFolder": "ComponentsDocumentation",
+                  "icon": Object {
+                    "name": "category",
+                  },
                   "path": "/components",
-                  "redirect": "/components/introduction",
+                  "redirect": "/components/components",
                   "routes": Array [
                     Object {
                       "componentPath": "components/Components",
                       "path": "/components/components",
                       "title": "Components",
-                    },
-                    Object {
-                      "componentPath": "Introduction",
-                      "path": "/components/introduction",
-                      "title": "Introduction",
                     },
                     Object {
                       "componentPath": "components/Accordion",
@@ -382,6 +388,9 @@ exports[`Main: App renders 1`] = `
                 },
                 Object {
                   "appFolder": "Utilities",
+                  "icon": Object {
+                    "name": "build",
+                  },
                   "path": "/utilities",
                   "redirect": "/utilities/colors",
                   "routes": Array [
@@ -448,7 +457,7 @@ exports[`Main: App renders 1`] = `
           />
         </div>
         <main
-          className="doc-view col-xxl-10 col-lg-9"
+          className="doc-view"
         >
           <Suspense
             fallback={<LoadingComponent />}
@@ -475,7 +484,7 @@ exports[`Main: App renders 1`] = `
                     "_status": -1,
                   }
                 }
-                path="/getting-started"
+                path="/get-started"
               />
               <Route
                 component={
@@ -497,7 +506,7 @@ exports[`Main: App renders 1`] = `
                     "_status": -1,
                   }
                 }
-                path="/core"
+                path="/identity"
               />
               <Route
                 component={
@@ -520,17 +529,6 @@ exports[`Main: App renders 1`] = `
                   }
                 }
                 path="/utilities"
-              />
-              <Route
-                component={
-                  Object {
-                    "$$typeof": Symbol(react.lazy),
-                    "_ctor": [Function],
-                    "_result": null,
-                    "_status": -1,
-                  }
-                }
-                path="/resources"
               />
               <Route
                 component={

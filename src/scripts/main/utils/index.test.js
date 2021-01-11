@@ -1,4 +1,4 @@
-import { extendObj, isWithinBoundingBox, handleScrollbar, openComponent, closeComponent } from "./index";
+import { extendObj, /* isWithinBoundingBox, */ handleScrollbar, openComponent, closeComponent } from "./index";
 
 describe("scripts: utils", () => {
     describe("- extendObj", () => {
