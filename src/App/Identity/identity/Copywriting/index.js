@@ -4,8 +4,8 @@ import { DocContainer } from "@docutils";
 const basename = process.env.basename;
 
 const Terminology = () => (
-    <>
-        <h2>Terminology</h2>
+    <section>
+        <h2 id="terminology">Terminology</h2>
         <p>You have probably heard a few different words being used in relation to written content. Here is a breakdown of the main ones.</p>
 
         <h3>Copy</h3>
@@ -44,12 +44,12 @@ const Terminology = () => (
             As you can see, there is some overlap between the various terms and people can at times use them interchangeably.
             However, keeping track of the differences is helpful to accurately define project needs.
         </p>
-    </>
+    </section>
 );
 
 const Tonality = () => (
-    <>
-        <h2>Tonality</h2>
+    <section>
+        <h2 id="tonality">Tonality</h2>
         <p>
             Our tonality is the verbal communication of our Brand. Our voice. The choice of words shows our personality,
             and everything we write should feel like one human being talking to another human being.
@@ -181,12 +181,12 @@ const Tonality = () => (
             </table>
             <span className="caption-text"><span className="font-weight-bold">Table 2.</span> Eight examples on common general interface with Swedbank Pay tonality translations.</span>
         </div>
-    </>
+    </section>
 );
 
 const GlossaryLinks = () => (
-    <>
-        <h2>Glossary and other links</h2>
+    <section>
+        <h2 id="glossary-and-other-links">Glossary and other links</h2>
         <p>
             In addition to the guidelines, this glossary of a few common words and expressions for Swedbank Pay can help you get the tonality right and consistent
             across platforms and user experiences.
@@ -214,7 +214,7 @@ const GlossaryLinks = () => (
             <strong>Note:</strong> Most of the Brand Manager content is in English, but some is in Swedish.
             In the UX Design Guidelines most is in Swedish, though the Writing section is available in English as well.
         </p>
-    </>
+    </section>
 );
 
 const Copywriting = () => (
