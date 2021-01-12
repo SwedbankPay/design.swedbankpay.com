@@ -5,11 +5,11 @@ module.exports = [
             name: "build"
         },
         path: "/utilities",
-        redirect: "/utilities/colors",
+        redirect: "/utilities",
         appFolder: "Utilities",
         routes: [
             {
-                title: "Utilities",
+                title: "Overview",
                 path: "/utilities/utilities",
                 componentPath: "utilities/Utilities"
             },

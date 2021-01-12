@@ -12,7 +12,7 @@ module.exports = [
         appFolder: "Identity",
         routes: [
             {
-                title: "Identity",
+                title: "Overview",
                 path: "/identity/identity",
                 componentPath: "identity/Identity"
             },
