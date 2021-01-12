@@ -29,7 +29,7 @@ const Home = () => {
 
                 <div className="row dg-cards-container mt-4">
                     <div className={cardStyleClass}>
-                        <Link to="/getting-started/introduction" className="cards cards-primary">
+                        <Link to="/get-started/introduction" className="cards cards-primary">
                             <div className="cards-icon">
                                 <i className="material-icons-outlined rotate-icon">wb_incandescent</i>
                             </div>
@@ -41,7 +41,7 @@ const Home = () => {
                         </Link>
                     </div>
                     <div className={cardStyleClass}>
-                        <Link to="/core/identity" className="cards cards-primary">
+                        <Link to="/identity" className="cards cards-primary">
                             <div className="cards-icon">
                                 <i className="material-icons-outlined">palette</i>
                             </div>
@@ -53,7 +53,7 @@ const Home = () => {
                         </Link>
                     </div>
                     <div className={cardStyleClass}>
-                        <Link to="/components/components" className="cards cards-primary">
+                        <Link to="/components" className="cards cards-primary">
                             <div className="cards-icon">
                                 <i className="material-icons-outlined">category</i>
                             </div>
@@ -65,7 +65,7 @@ const Home = () => {
                         </Link>
                     </div>
                     <div className={cardStyleClass}>
-                        <Link to="/utilities/utilities" className="cards cards-primary">
+                        <Link to="/utilities" className="cards cards-primary">
                             <div className="cards-icon">
                                 <i className="material-icons-outlined">build</i>
                             </div>
