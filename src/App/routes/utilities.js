@@ -5,7 +5,7 @@ module.exports = [
             name: "build"
         },
         path: "/utilities",
-        redirect: "/utilities",
+        redirect: "/utilities/utilities",
         appFolder: "Utilities",
         routes: [
             {
