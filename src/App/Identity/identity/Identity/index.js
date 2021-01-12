@@ -94,7 +94,7 @@ const MenuOverview = () => (
 
 const Identity = () => (
     <DocContainer>
-        <p className="lead mb-3">Our identity influences all aspects of the design guide, both in terms of how we approach the design and what we follow in order to create the best possible user experience.</p>
+        <p className="lead">Our identity influences all aspects of the design guide, both in terms of how we approach the design and what we follow in order to create the best possible user experience.</p>
         <OurBrand />
         <MenuOverview />
     </DocContainer>
