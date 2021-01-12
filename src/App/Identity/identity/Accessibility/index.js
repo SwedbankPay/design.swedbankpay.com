@@ -58,7 +58,7 @@ const Inclusions = () => (
         <h2 id="inclusions">Creating inclusion</h2>
         <p>Today we’re working with awareness. All designers and developers at Swedbank Pay should be aware of accessibility, what it is, how it’s implemented and, what precautions we have to take to actually follow the law in the countries we’re in. As mentioned, accessibility may start with design but the main part is making our service compatible with accessibility helping tools, and that part happens in the technical implementation. </p>
         <p>Accessibility and WCAG can seem overwhelming and just as with everything else we need to take it step by step. This is a list from a Funka webinar held 2020-11-06:</p>
-        <ul className="pl-3">
+        <ul className="list list-bullet">
             <li>Make sure that we know the current status of our products. Are we accessible enough?</li>
             <li>Planning and prioritizing what we need to do to get where we need to be.</li>
             <li>Set up requirements and take control. Make sure that all employees knows what being accessible means. </li>
