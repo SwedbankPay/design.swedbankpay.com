@@ -7,7 +7,7 @@ const ImageLibrary = () => (
     <section>
         <h2 id="image-library">Image library</h2>
         <p>All images displayed in a Swedbank Pay interface should be from the Swedbank Pay Image library. Note that the images only can be used in Swedbank Pay productions. If you need access to the library, contact current Head of Marketing. </p>
-        <a href="https://app.pickit.com/#/explore/community/users/124093/collection/21458-swedbank-pay" target="_blank" rel="noopener noreferrer" className="icon-link d-block d-flex"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Visit the Swedbank Pay Image Library</span></a>
+        <a href="https://payex.pickit.com/" target="_blank" rel="noopener noreferrer" className="icon-link d-block d-flex"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Visit the Swedbank Pay Image Library</span></a>
         <img src={`${basename}img/documentation/imagery/image-group.svg`} className="w-100" alt="collection of images"/>
         <h3>Finding the right images</h3>
         <p>There are several images to choose from when working with Swedbank Pay products. Because Swedbank Pay is a payment service for all, it’s extra important to think about diversity when picking images for a product. To choose a great image, reflect over the context you’re bringing the image into and check if and where the image is used in other Swedbank Pay products. If an images is strongly associated with a certain page or feature, consider using another. We strive to use a variation of the library images while also giving the image a purpose. </p>
