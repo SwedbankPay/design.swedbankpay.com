@@ -11,7 +11,9 @@ class Sidebar extends Component {
             <div id={this.props.id} className={`sidebar-2${this.props.sticky ? " sidebar-topbar-sticky" : ""}`}>
                 <nav className="sidebar-main-nav">
                     <div className="sidebar-logo">
-                        <LogotypeComponent src={`${BASENAME}img/swedbankpay-logo-v.svg`} size="md" alt="Swedbank Pay vertical logo" type="vertical" />
+                        <a href="#">
+                            <LogotypeComponent src={`${BASENAME}img/swedbankpay-logo-v.svg`} size="md" alt="Swedbank Pay vertical logo" type="vertical" />
+                        </a>
                     </div>
                     <ul className="main-nav-ul">
                         {this.props.sidebarNavList.map((mainElement, i) => <li key={mainElement.title} className={`main-nav-li${i === 0 ? " active" : ""}`}>
