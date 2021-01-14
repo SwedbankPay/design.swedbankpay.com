@@ -65,7 +65,7 @@ exports[`Main: App renders 1`] = `
                       "title": "For designers",
                     },
                   ],
-                  "title": "Get Started",
+                  "title": "Get started",
                 },
                 Object {
                   "appFolder": "Identity",

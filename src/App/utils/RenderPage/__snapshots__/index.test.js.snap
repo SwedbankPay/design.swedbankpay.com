@@ -27,7 +27,7 @@ exports[`Utilities: RenderPage renders 1`] = `
             "rotated": true,
           }
         }
-        key="renderRoutes_Get Started"
+        key="renderRoutes_Get started"
         path="/get-started"
         redirect="/get-started/introduction"
         routes={
@@ -49,7 +49,7 @@ exports[`Utilities: RenderPage renders 1`] = `
             },
           ]
         }
-        title="Get Started"
+        title="Get started"
       />
       <RenderRoutes
         appFolder="Identity"

@@ -557,7 +557,7 @@ exports[`Core: Typography Desktop renders 1`] = `
   <p>
     Our desktop text styles are meant to be used in all desktop and tablet sizes. The text should break to mobile styles at viewport width 767 px. See all the 
     <Link
-      to="/core/grid"
+      to="/identity/grid"
     >
       breakpoints in the Grid section
     </Link>
@@ -1014,7 +1014,7 @@ exports[`Core: Typography Mobile renders 1`] = `
   <p>
     Our mobile text styles are meant to be used in all mobile views. The text should break to desktop styles at viewport width 768 px. See all the 
     <Link
-      to="/core/grid"
+      to="/identity/grid"
     >
       breakpoints in the Grid section
     </Link>

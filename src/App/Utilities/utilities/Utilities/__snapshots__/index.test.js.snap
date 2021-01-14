@@ -2,7 +2,7 @@
 
 exports[`Utilities: Utilities MenuOverview renders 1`] = `
 <section
-  className="component-overview"
+  className="component-overview hide-arrow-icon"
 >
   <Link
     className="cards cards-primary cards-wide"
