@@ -266,11 +266,6 @@ exports[`Main: App renders 1`] = `
                       "title": "Input Group",
                     },
                     Object {
-                      "componentPath": "components/Lightbox",
-                      "path": "/components/lightbox",
-                      "title": "Lightbox",
-                    },
-                    Object {
                       "componentPath": "components/Links",
                       "path": "/components/links",
                       "title": "Links",

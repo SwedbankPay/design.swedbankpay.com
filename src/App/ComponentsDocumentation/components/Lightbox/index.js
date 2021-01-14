@@ -2,7 +2,6 @@ import React from "react";
 import ToggleLightbox from "@components/Lightbox";
 import img from "@src/img/swedbankpay/documentation/forDesigners/vanilla-pattern.png";
 import img1 from "@src/img/swedbankpay/documentation/introduction/pyramid.png";
-import img2 from "@src/img/swedbankpay/documentation/copywriting/terminology-copy.png";
 
 const Lightbox = () => (
     <div>
