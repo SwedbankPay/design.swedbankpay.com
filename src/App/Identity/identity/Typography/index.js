@@ -10,8 +10,8 @@ const brand = process.env.brand;
 const { expandable } = window.dg;
 
 const Typefaces = () => (
-    <section id="typefaces" className="typography-typefaces">
-        <h2>Typefaces</h2>
+    <section className="typography-typefaces">
+        <h2 id="typefaces">Typefaces</h2>
         <div className="illustration mb-3">
             <div className="swedbank-headline">
                 Ag
@@ -48,8 +48,8 @@ const Typefaces = () => (
 );
 
 const Desktop = () => (
-    <section id="desktop" className="typography-desktop">
-        <h2>Desktop text styles</h2>
+    <section className="typography-desktop">
+        <h2 id="desktop-text-styles">Desktop text styles</h2>
         <p>
             Our desktop text styles are meant to be used in all desktop and tablet sizes. The text should break to mobile styles at viewport width 767 px.
             See all the <Link to="/core/grid">breakpoints in the Grid section</Link>.
@@ -125,8 +125,8 @@ const Desktop = () => (
 );
 
 const Mobile = () => (
-    <section id="mobile">
-        <h2>Mobile text styles</h2>
+    <section>
+        <h2 id="mobile-text-styles">Mobile text styles</h2>
         <p>
             Our mobile text styles are meant to be used in all mobile views.
             The text should break to desktop styles at viewport width 768 px. See all the <Link to="/core/grid">breakpoints in the Grid section</Link>.
@@ -208,8 +208,8 @@ const Mobile = () => (
 );
 
 const Code = () => (
-    <section id="code">
-        <h2>How it works in code</h2>
+    <section>
+        <h2 id="how-it-works-in-code">How it works in code</h2>
 
         <h3>Headings</h3>
         <p>Swedbank Pay DesignGuide provides basic styling on all headings (h1-h6).</p>

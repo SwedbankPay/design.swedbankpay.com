@@ -171,10 +171,10 @@ exports[`Core: Typography Blockquotes renders 3`] = `
 `;
 
 exports[`Core: Typography Code renders 1`] = `
-<section
-  id="code"
->
-  <h2>
+<section>
+  <h2
+    id="how-it-works-in-code"
+  >
     How it works in code
   </h2>
   <h3>
@@ -548,9 +548,10 @@ exports[`Core: Typography Code renders 1`] = `
 exports[`Core: Typography Desktop renders 1`] = `
 <section
   className="typography-desktop"
-  id="desktop"
 >
-  <h2>
+  <h2
+    id="desktop-text-styles"
+  >
     Desktop text styles
   </h2>
   <p>
@@ -1004,10 +1005,10 @@ exports[`Core: Typography Lead renders 1`] = `
 `;
 
 exports[`Core: Typography Mobile renders 1`] = `
-<section
-  id="mobile"
->
-  <h2>
+<section>
+  <h2
+    id="mobile-text-styles"
+  >
     Mobile text styles
   </h2>
   <p>
@@ -1230,9 +1231,10 @@ exports[`Core: Typography Text Utilities renders 1`] = `
 exports[`Core: Typography Typefaces renders 1`] = `
 <section
   className="typography-typefaces"
-  id="typefaces"
 >
-  <h2>
+  <h2
+    id="typefaces"
+  >
     Typefaces
   </h2>
   <div
