@@ -9,7 +9,7 @@ const basename = process.env.basename;
 const Intro = () => (
     <section>
         <p className="lead">Use our Bootstrap-inspired grid to build layouts of all shapes and sizes. Our twelve column system has six default responsive tiers, and dozens of predefined classes.</p>
-        <p>Our grid system is a modified version of the Bootstrap grid-system, learn more about how it works in the <a href="https://getbootstrap.com/docs/4.1/layout/grid/" target="_blank" rel="noopener noreferrer"className="icon-link m-0"><span className="mr-2">Bootstrap documentation</span><i className="material-icons" aria-hidden="true">open_in_new</i></a>. If you are curious about how the grid is being used in design, head over to the <a href="https://www.figma.com/file/GkRbjhReTaX3vr2wwKCsGx/?node-id=493%3A3" target="_blank" rel="noopener noreferrer"className="icon-link m-0"><span className="mr-2">Grid file in Figma</span><i className="material-icons" aria-hidden="true">open_in_new</i></a>.</p>
+        <p>Our grid system is a modified version of the Bootstrap grid-system, learn more about how it works in the <a href="https://getbootstrap.com/docs/4.1/layout/grid/" target="_blank" rel="noopener noreferrer"className="icon-link m-0"><span className="mr-2">Bootstrap documentation.</span><i className="material-icons" aria-hidden="true">open_in_new</i></a>. If you are curious about how the grid is being used in design, head over to the <a href="https://www.figma.com/file/GkRbjhReTaX3vr2wwKCsGx/?node-id=493%3A3" target="_blank" rel="noopener noreferrer"className="icon-link m-0"><span className="mr-2">Grid file in Figma.</span><i className="material-icons" aria-hidden="true">open_in_new</i></a></p>
     </section>
 );
 
