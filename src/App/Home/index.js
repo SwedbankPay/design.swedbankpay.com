@@ -91,14 +91,14 @@ const Home = () => {
     );
 
     const Changelog = () => (
-        <section className="dg-changelog-container d-flex flex-column">
+        <section className="dg-changelog-container d-flex flex-column mb-0">
 
-            <a className="dg-next-page-content mt-5 d-none d-lg-flex"
+            {/* <a className="dg-next-page-content mt-5 d-none d-lg-flex"
                 onClick={() => window.scrollTo(0, 0)}>
                 <i className="material-icons ">expand_less</i>
-            </a>
+            </a> */}
 
-            <div className="container dg-changelog-content my-auto pb-5">
+            <div className="container dg-changelog-content my-auto">
                 <div className="row mt-3">
                     <span className="dg-changlelog-title">What’s new in the design guide
                         <div className="dg-changelog-divider my-2"></div>
