@@ -65,7 +65,7 @@ exports[`GettingStarted: ForDesigners DiscoverMore renders 1`] = `
   >
     <Link
       className="cards cards-primary cards-wide"
-      to="/core/identity"
+      to="/identity/identity"
     >
       <div
         className="cards-content"
