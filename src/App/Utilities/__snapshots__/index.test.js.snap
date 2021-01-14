@@ -2,7 +2,7 @@
 
 exports[`Utilities: index renders 1`] = `
 <RenderPage
-  initPath="/utilities/colors"
+  initPath="/utilities/utilities"
   path="/utilities"
 />
 `;

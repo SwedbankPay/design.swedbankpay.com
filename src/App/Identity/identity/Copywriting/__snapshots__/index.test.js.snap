@@ -1,8 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Core: Accessibility AccessibleService renders 1`] = `
-<Fragment>
-  <h2>
+<section>
+  <h2
+    id="tonality"
+  >
     Tonality
   </h2>
   <p>
@@ -239,12 +241,14 @@ exports[`Core: Accessibility AccessibleService renders 1`] = `
        Eight examples on common general interface with Swedbank Pay tonality translations.
     </span>
   </div>
-</Fragment>
+</section>
 `;
 
 exports[`Core: Accessibility Intro renders 1`] = `
-<Fragment>
-  <h2>
+<section>
+  <h2
+    id="terminology"
+  >
     Terminology
   </h2>
   <p>
@@ -315,12 +319,14 @@ exports[`Core: Accessibility Intro renders 1`] = `
   <p>
     As you can see, there is some overlap between the various terms and people can at times use them interchangeably. However, keeping track of the differences is helpful to accurately define project needs.
   </p>
-</Fragment>
+</section>
 `;
 
 exports[`Core: Accessibility WcagStandard renders 1`] = `
-<Fragment>
-  <h2>
+<section>
+  <h2
+    id="glossary-and-other-links"
+  >
     Glossary and other links
   </h2>
   <p>
@@ -393,7 +399,7 @@ exports[`Core: Accessibility WcagStandard renders 1`] = `
     </strong>
      Most of the Brand Manager content is in English, but some is in Swedish. In the UX Design Guidelines most is in Swedish, though the Writing section is available in English as well.
   </p>
-</Fragment>
+</section>
 `;
 
 exports[`Core: Accessibility renders 1`] = `
