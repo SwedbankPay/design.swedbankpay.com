@@ -135,7 +135,7 @@ const DiscoverMore = () => (
                 </div>
                 <i className="material-icons">arrow_forward</i>
             </Link>
-            <Link to="/core/iconography" className="cards cards-primary cards-wide">
+            <Link to="/identity/iconography" className="cards cards-primary cards-wide">
                 <div className="cards-content">
                     <span className="h4">Iconography</span><span>Our icon library and how to use it</span>
                 </div>

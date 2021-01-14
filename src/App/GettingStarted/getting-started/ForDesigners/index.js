@@ -68,7 +68,7 @@ const DiscoverMore = () => (
     <section>
         <h2 id="discover-more">DiscoverMore</h2>
         <div className="component-overview">
-            <Link to="/core/identity" className="cards cards-primary cards-wide">
+            <Link to="/identity/identity" className="cards cards-primary cards-wide">
                 <div className="cards-content">
                     <span className="h4">Identity</span><span>The philosophy behind our designs </span>
                 </div>
