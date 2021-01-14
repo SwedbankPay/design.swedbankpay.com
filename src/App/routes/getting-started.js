@@ -1,6 +1,6 @@
 module.exports = [
     {
-        title: "Get Started",
+        title: "Get started",
         icon: {
             name: "wb_incandescent",
             rotated: true
