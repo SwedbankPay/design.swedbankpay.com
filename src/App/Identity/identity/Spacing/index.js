@@ -14,7 +14,7 @@ const EightPointSystem = () => (
             <span className="caption-text"><span className="font-weight-bold">Figure 1.</span> Example on multiples of 8px horizontal spacing between elements.</span>
         </div>
 
-        <p>If you are interested in learning more about the 8-point spacing system, you can read more about it in this <a href="https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632" target="_blank" rel="noopener noreferrer">Introduction article</a>, which provides a brief explanation of the reasons why to use the 8-point spacing system. To dive even deeper into the nitty gritty, please refer to this <a href="https://spec.fm/specifics/8-pt-grid" target="_blank" rel="noopener noreferrer">in-depth explanation</a> of the 8-point spacing system.</p>
+        <p>If you are interested in learning more about the 8-point spacing system, you can read more about it in this <a href="https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632" target="_blank" rel="noopener noreferrer"className="icon-link m-0"><span className="mr-2">Introduction article</span><i className="material-icons" aria-hidden="true">open_in_new</i></a>, which provides a brief explanation of the reasons why to use the 8-point spacing system. To dive even deeper into the nitty gritty, please refer to this <a href="https://spec.fm/specifics/8-pt-grid" target="_blank" rel="noopener noreferrer"className="icon-link m-0"><span className="mr-2">in-depth explanation</span><i className="material-icons" aria-hidden="true">open_in_new</i></a> of the 8-point spacing system.</p>
 
         <h3>What if I need something in between?</h3>
         <p>Even though we try to adhere to the 8-point spacing system as much as possible, we also know that sometimes you need to use something in between. Especially when it comes to building certain components which requires smaller space in between in order to show grouping and simply produces a better result visually. In those cases, it is allowed to use values from the multiples of 4, but this should be kept to <span className="font-weight-bold">4 px</span> and <span className="font-weight-bold">12 px</span> as we try to keep the larger increments for a consistent vertical spacing alignment between sections.</p>
@@ -108,7 +108,7 @@ const DiveDeeper = () => (
 
 const HowItWorks = () => (
     <section>
-        <h2 id="how-it-works">How it works in Code</h2>
+        <h2 id="how-it-works">How it works in code</h2>
         <p>Assign responsive-friendly margin or padding values to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties. Classes are ranging from 0.25 rem to 3 rem.</p>
     </section>
 );
