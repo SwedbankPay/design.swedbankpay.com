@@ -103,11 +103,11 @@ module.exports = [
                 componentPath: "components/InputGroup",
                 statusBadges: ["updated"]
             },
-            {
+            /* {
                 title: "Lightbox",
                 path: "/components/lightbox",
                 componentPath: "components/Lightbox"
-            },
+            }, */
             {
                 title: "Links",
                 path: "/components/links",
