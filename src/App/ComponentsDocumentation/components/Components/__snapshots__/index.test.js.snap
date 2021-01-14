@@ -115,7 +115,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       <span
         className="h3 m-0"
       >
-        BreadCrumb
+        Breadcrumb
       </span>
     </div>
     <i

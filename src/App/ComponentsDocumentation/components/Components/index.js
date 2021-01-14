@@ -36,7 +36,7 @@ const MenuOverview = () => (
         <Link to="/components/breadcrumb" className="cards cards-primary cards-wide">
             <div className="cards-content flex-row align-items-center m-0 ">
                 <i className="material-icons material-icons-outlined mr-3">last_page</i>
-                <span className="h3 m-0">BreadCrumb</span>
+                <span className="h3 m-0">Breadcrumb</span>
             </div>
             <i className="material-icons material-icons-outlined">arrow_forward</i>
         </Link>
