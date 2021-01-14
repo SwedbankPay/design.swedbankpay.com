@@ -64,7 +64,7 @@ const Installation = () => (
 const GridAndBreakpoints = () => (
     <section>
         <h2 id="grid-and-breakpoints">Grid and breakpoints</h2>
-        <p>Our grid system is a customized version of the bootstrap grid and functions almost the same, with most of the Bootstrap grid system classes available. To learn more about how to use <Link to="/core/grid">our 12 column grid system.</Link></p>
+        <p>Our grid system is a customized version of the bootstrap grid and functions almost the same, with most of the Bootstrap grid system classes available. To learn more about how to use <Link to="/identity/grid">our 12 column grid system.</Link></p>
         <table className="table table-plain">
             <thead>
                 <tr>
@@ -103,7 +103,7 @@ const GridAndBreakpoints = () => (
         </table>
 
         <h3>8-point spacing system</h3>
-        <p>In addition to the Grid, we also use a 8-point spacing system for spacing between different UI elements. In practice this means we use multiples of 8 in order to define dimensions, padding and margins between the elements. Read more about how it is used in our <Link to="/core/spacing">Spacing section</Link>.</p>
+        <p>In addition to the Grid, we also use a 8-point spacing system for spacing between different UI elements. In practice this means we use multiples of 8 in order to define dimensions, padding and margins between the elements. Read more about how it is used in our <Link to="/identity/spacing">Spacing section</Link>.</p>
     </section>
 );
 const Contributing = () => (
@@ -122,22 +122,22 @@ const Feedback = () => (
 const DiscoverMore = () => (
     <section>
         <h2 id="discover-more">Discover more</h2>
-        <div className="component-overview">
+        <div className="component-overview hide-arrow-icon">
             <Link to="/components/components" className="cards cards-primary cards-wide">
-                <div className="cards-content">
-                    <span className="h4">Components</span><span>See all available components</span>
+                <div className="cards-content m-0">
+                    <span className="h3">Components</span><span>See all available components</span>
                 </div>
                 <i className="material-icons">arrow_forward</i>
             </Link>
             <Link to="/utilities/utilities" className="cards cards-primary cards-wide">
-                <div className="cards-content">
-                    <span className="h4">Utilities</span><span>See all available components</span>
+                <div className="cards-content m-0">
+                    <span className="h3">Utilities</span><span>See all available components</span>
                 </div>
                 <i className="material-icons">arrow_forward</i>
             </Link>
             <Link to="/identity/iconography" className="cards cards-primary cards-wide">
-                <div className="cards-content">
-                    <span className="h4">Iconography</span><span>Our icon library and how to use it</span>
+                <div className="cards-content m-0">
+                    <span className="h3">Iconography</span><span>Our icon library and how to use it</span>
                 </div>
                 <i className="material-icons">arrow_forward</i>
             </Link>

@@ -17,7 +17,7 @@ const Notation = () => (
     <>
         <h2 id="notation">Notation</h2>
         <p>
-            Display utility classes that apply to all <Link to="/core/breakpoints">breakpoints</Link>, from <CodeTags type="secondary" code="xs" /> to <CodeTags type="secondary" code="xxl" />, have no breakpoint abbreviation in them. This is because those classes are applied from <CodeTags type="secondary" code="min-width: 0;" /> and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
+            Display utility classes that apply to all <Link to="/identity/breakpoints">breakpoints</Link>, from <CodeTags type="secondary" code="xs" /> to <CodeTags type="secondary" code="xxl" />, have no breakpoint abbreviation in them. This is because those classes are applied from <CodeTags type="secondary" code="min-width: 0;" /> and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
         </p>
         <p>As such, the classes are named using the format:</p>
         <ul>

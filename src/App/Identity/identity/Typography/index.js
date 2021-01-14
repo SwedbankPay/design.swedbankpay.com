@@ -52,7 +52,7 @@ const Desktop = () => (
         <h2 id="desktop-text-styles">Desktop text styles</h2>
         <p>
             Our desktop text styles are meant to be used in all desktop and tablet sizes. The text should break to mobile styles at viewport width 767 px.
-            See all the <Link to="/core/grid">breakpoints in the Grid section</Link>.
+            See all the <Link to="/identity/grid">breakpoints in the Grid section</Link>.
         </p>
 
         <table className="table table-plain typography-table">
@@ -129,7 +129,7 @@ const Mobile = () => (
         <h2 id="mobile-text-styles">Mobile text styles</h2>
         <p>
             Our mobile text styles are meant to be used in all mobile views.
-            The text should break to desktop styles at viewport width 768 px. See all the <Link to="/core/grid">breakpoints in the Grid section</Link>.
+            The text should break to desktop styles at viewport width 768 px. See all the <Link to="/identity/grid">breakpoints in the Grid section</Link>.
         </p>
 
         <table className="table table-plain typography-table mobile">
