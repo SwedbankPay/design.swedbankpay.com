@@ -11,7 +11,8 @@ module.exports = [
             {
                 title: "Overview",
                 path: "/utilities/utilities",
-                componentPath: "utilities/Utilities"
+                componentPath: "utilities/Utilities",
+                statusBadges: ["new"]
             },
             {
                 title: "Borders",

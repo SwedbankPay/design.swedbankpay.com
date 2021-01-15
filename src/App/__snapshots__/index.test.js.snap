@@ -87,6 +87,9 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "identity/Identity",
                       "path": "/identity/identity",
+                      "statusBadges": Array [
+                        "new",
+                      ],
                       "title": "Overview",
                     },
                     Object {
@@ -180,6 +183,9 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "components/Components",
                       "path": "/components/components",
+                      "statusBadges": Array [
+                        "new",
+                      ],
                       "title": "Overview",
                     },
                     Object {
@@ -410,6 +416,9 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "utilities/Utilities",
                       "path": "/utilities/utilities",
+                      "statusBadges": Array [
+                        "new",
+                      ],
                       "title": "Overview",
                     },
                     Object {

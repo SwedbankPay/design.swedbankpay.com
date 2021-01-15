@@ -15,7 +15,8 @@ module.exports = [
             {
                 title: "Overview",
                 path: "/components/components",
-                componentPath: "components/Components"
+                componentPath: "components/Components",
+                statusBadges: ["new"]
             },
             {
                 title: "Accordion",

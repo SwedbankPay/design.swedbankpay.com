@@ -14,7 +14,8 @@ module.exports = [
             {
                 title: "Overview",
                 path: "/identity/identity",
-                componentPath: "identity/Identity"
+                componentPath: "identity/Identity",
+                statusBadges: ["new"]
             },
             {
                 title: "Accessibility",
