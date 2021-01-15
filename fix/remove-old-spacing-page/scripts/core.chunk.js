@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{443:function(t,n,e){"use strict";e.r(n);var i=e(0),a=e.n(i),d=e(69);n.default=function(){return a.a.createElement(d.RenderPage,{path:"/identity",initPath:"/identity/identity"})}}}]);
+//# sourceMappingURL=core.chunk.js.map?b5400122088d986aa630
