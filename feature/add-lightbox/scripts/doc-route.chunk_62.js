@@ -1,2 +1,2 @@
 (window.webpackJsonp=window.webpackJsonp||[]).push([[4],{441:function(t,e,n){"use strict";n.r(e);var a=n(0),r=n.n(a),i=n(69);e.default=function(){return r.a.createElement(i.RenderPage,{path:"/get-started",initPath:"/get-started/introduction"})}}}]);
-//# sourceMappingURL=doc-route.chunk_62.js.map?6e1af3cce84247b0ed19
+//# sourceMappingURL=doc-route.chunk_62.js.map?06ef5a1febfe9894f5fe
