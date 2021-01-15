@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import Lightbox from "@components/Lightbox";
+
 import { DocContainer } from "@docutils";
 
 const basename = process.env.basename;
@@ -53,8 +55,9 @@ const Contributing = () => (
         <p>As we all know, sometimes you face niche problems which requires specific solutions, this is normal and something that we have accounted for. This is where snowflake comes in and in order to learn about when you should create a snowflake and how, check out our guidelines here in the <a href="https://www.figma.com/file/sRWbYlMbR0c4T3vT8DBHIU/Snowflakes?node-id=1%3A4" target="_blank" rel="noopener noreferrer" className="icon-link"><span className="mr-2">Snowflake Figma file</span><i className="material-icons" aria-hidden="true">open_in_new</i></a></p>
 
         <div className="d-flex flex-column align-items-center">
-            <img src={`${basename}img/documentation/forDesigners/vanilla-pattern.png`} className="img-fluid" alt="Our modified Vanilla pattern design intake process (Click to view)"/>
-            <span className="caption-text"><span className="font-weight-bold">Figure 1.</span> Our modified Vanilla pattern design intake process</span>
+            <Lightbox imgSrc={`${basename}img/documentation/forDesigners/vanilla-pattern.png`} alt="Our modified Vanilla pattern design intake process"/>
+            {/* <img src={`${basename}img/documentation/forDesigners/vanilla-pattern.png`} className="img-fluid" alt="Our modified Vanilla pattern design intake process"/> */}
+            <span className="caption-text"><span className="font-weight-bold">Figure 1.</span> Our modified Vanilla pattern design intake process(Click to view)</span>
         </div>
     </section>
 );
