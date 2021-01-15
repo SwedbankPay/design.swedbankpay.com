@@ -49,11 +49,6 @@ module.exports = [
                 componentPath: "utilities/Sizing"
             },
             {
-                title: "Spacing",
-                path: "/utilities/spacing",
-                componentPath: "utilities/Spacing"
-            },
-            {
                 title: "Text",
                 path: "/utilities/text",
                 componentPath: "utilities/Text"
