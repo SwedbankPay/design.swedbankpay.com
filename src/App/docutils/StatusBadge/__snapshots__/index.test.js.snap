@@ -25,7 +25,7 @@ exports[`Utilities: StatusBadge renders new status badge when type is 'new' 1`] 
     >
       child_care
     </i>
-    New component
+    New
   </span>
 </Fragment>
 `;

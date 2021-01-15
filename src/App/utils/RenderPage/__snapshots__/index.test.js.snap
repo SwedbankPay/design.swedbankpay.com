@@ -35,16 +35,25 @@ exports[`Utilities: RenderPage renders 1`] = `
             Object {
               "componentPath": "getting-started/Introduction",
               "path": "/get-started/introduction",
+              "statusBadges": Array [
+                "updated",
+              ],
               "title": "Introduction",
             },
             Object {
               "componentPath": "getting-started/ForDevelopers",
               "path": "/get-started/for-developers",
+              "statusBadges": Array [
+                "new",
+              ],
               "title": "For developers",
             },
             Object {
               "componentPath": "getting-started/ForDesigners",
               "path": "/get-started/for-designers",
+              "statusBadges": Array [
+                "new",
+              ],
               "title": "For designers",
             },
           ]
@@ -66,36 +75,57 @@ exports[`Utilities: RenderPage renders 1`] = `
             Object {
               "componentPath": "identity/Identity",
               "path": "/identity/identity",
+              "statusBadges": Array [
+                "new",
+              ],
               "title": "Overview",
             },
             Object {
               "componentPath": "identity/Accessibility",
               "path": "/identity/accessibility",
+              "statusBadges": Array [
+                "new",
+              ],
               "title": "Accessibility",
             },
             Object {
               "componentPath": "identity/Color",
               "path": "/identity/color",
+              "statusBadges": Array [
+                "updated",
+              ],
               "title": "Color",
             },
             Object {
               "componentPath": "identity/Copywriting",
               "path": "/identity/copywriting",
+              "statusBadges": Array [
+                "new",
+              ],
               "title": "Copywriting",
             },
             Object {
               "componentPath": "identity/Grid",
               "path": "/identity/grid",
+              "statusBadges": Array [
+                "new",
+              ],
               "title": "Grid",
             },
             Object {
               "componentPath": "identity/Iconography",
               "path": "/identity/iconography",
+              "statusBadges": Array [
+                "updated",
+              ],
               "title": "Iconography",
             },
             Object {
               "componentPath": "identity/Imagery",
               "path": "/identity/imagery",
+              "statusBadges": Array [
+                "new",
+              ],
               "title": "Imagery",
             },
             Object {
@@ -114,11 +144,17 @@ exports[`Utilities: RenderPage renders 1`] = `
             Object {
               "componentPath": "identity/Spacing",
               "path": "/identity/spacing",
+              "statusBadges": Array [
+                "new",
+              ],
               "title": "Spacing",
             },
             Object {
               "componentPath": "identity/Typography",
               "path": "/identity/typography",
+              "statusBadges": Array [
+                "updated",
+              ],
               "title": "Typography",
             },
           ]
@@ -140,6 +176,9 @@ exports[`Utilities: RenderPage renders 1`] = `
             Object {
               "componentPath": "components/Components",
               "path": "/components/components",
+              "statusBadges": Array [
+                "new",
+              ],
               "title": "Overview",
             },
             Object {
@@ -147,7 +186,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/accordion",
               "statusBadges": Array [
                 "javascript",
-                "updated",
               ],
               "title": "Accordion",
             },
@@ -211,7 +249,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/datepickers",
               "statusBadges": Array [
                 "javascript",
-                "updated",
               ],
               "title": "Datepickers",
             },
@@ -236,7 +273,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/forms",
               "statusBadges": Array [
                 "javascript",
-                "updated",
               ],
               "title": "Forms",
             },
@@ -248,9 +284,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             Object {
               "componentPath": "components/InputGroup",
               "path": "/components/input-group",
-              "statusBadges": Array [
-                "updated",
-              ],
               "title": "Input Group",
             },
             Object {
@@ -294,9 +327,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             Object {
               "componentPath": "components/ProgressSteps",
               "path": "/components/progress-steps",
-              "statusBadges": Array [
-                "updated",
-              ],
               "title": "Progress Steps",
             },
             Object {
@@ -319,17 +349,11 @@ exports[`Utilities: RenderPage renders 1`] = `
             Object {
               "componentPath": "components/Slab",
               "path": "/components/slab",
-              "statusBadges": Array [
-                "updated",
-              ],
               "title": "Slab",
             },
             Object {
               "componentPath": "components/Status",
               "path": "/components/status",
-              "statusBadges": Array [
-                "updated",
-              ],
               "title": "Status",
             },
             Object {
@@ -342,7 +366,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/tabs",
               "statusBadges": Array [
                 "javascript",
-                "updated",
               ],
               "title": "Tabs",
             },
@@ -351,6 +374,7 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/toast",
               "statusBadges": Array [
                 "javascript",
+                "updated",
               ],
               "title": "Toast",
             },
@@ -359,7 +383,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/tooltips",
               "statusBadges": Array [
                 "javascript",
-                "updated",
               ],
               "title": "Tooltips",
             },
@@ -368,6 +391,7 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/topbar",
               "statusBadges": Array [
                 "javascript",
+                "updated",
               ],
               "title": "Topbar",
             },
@@ -390,6 +414,9 @@ exports[`Utilities: RenderPage renders 1`] = `
             Object {
               "componentPath": "utilities/Utilities",
               "path": "/utilities/utilities",
+              "statusBadges": Array [
+                "new",
+              ],
               "title": "Overview",
             },
             Object {

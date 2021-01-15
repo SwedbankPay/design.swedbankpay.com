@@ -14,37 +14,44 @@ module.exports = [
             {
                 title: "Overview",
                 path: "/identity/identity",
-                componentPath: "identity/Identity"
+                componentPath: "identity/Identity",
+                statusBadges: ["new"]
             },
             {
                 title: "Accessibility",
                 path: "/identity/accessibility",
-                componentPath: "identity/Accessibility"
+                componentPath: "identity/Accessibility",
+                statusBadges: ["new"]
             },
             {
                 title: "Color",
                 path: "/identity/color",
-                componentPath: "identity/Color"
+                componentPath: "identity/Color",
+                statusBadges: ["updated"]
             },
             {
                 title: "Copywriting",
                 path: "/identity/copywriting",
-                componentPath: "identity/Copywriting"
+                componentPath: "identity/Copywriting",
+                statusBadges: ["new"]
             },
             {
                 title: "Grid",
                 path: "/identity/grid",
-                componentPath: "identity/Grid"
+                componentPath: "identity/Grid",
+                statusBadges: ["new"]
             },
             {
                 title: "Iconography",
                 path: "/identity/iconography",
-                componentPath: "identity/Iconography"
+                componentPath: "identity/Iconography",
+                statusBadges: ["updated"]
             },
             {
                 title: "Imagery",
                 path: "/identity/imagery",
-                componentPath: "identity/Imagery"
+                componentPath: "identity/Imagery",
+                statusBadges: ["new"]
             },
             {
                 title: "Logotype",
@@ -60,12 +67,14 @@ module.exports = [
             {
                 title: "Spacing",
                 path: "/identity/spacing",
-                componentPath: "identity/Spacing"
+                componentPath: "identity/Spacing",
+                statusBadges: ["new"]
             },
             {
                 title: "Typography",
                 path: "/identity/typography",
-                componentPath: "identity/Typography"
+                componentPath: "identity/Typography",
+                statusBadges: ["updated"]
             }
         ]
     }

@@ -12,17 +12,20 @@ module.exports = [
             {
                 title: "Introduction",
                 path: "/get-started/introduction",
-                componentPath: "getting-started/Introduction"
+                componentPath: "getting-started/Introduction",
+                statusBadges: ["updated"]
             },
             {
                 title: "For developers",
                 path: "/get-started/for-developers",
-                componentPath: "getting-started/ForDevelopers"
+                componentPath: "getting-started/ForDevelopers",
+                statusBadges: ["new"]
             },
             {
                 title: "For designers",
                 path: "/get-started/for-designers",
-                componentPath: "getting-started/ForDesigners"
+                componentPath: "getting-started/ForDesigners",
+                statusBadges: ["new"]
             }
         ]
     }

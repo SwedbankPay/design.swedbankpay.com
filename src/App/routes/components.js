@@ -15,13 +15,14 @@ module.exports = [
             {
                 title: "Overview",
                 path: "/components/components",
-                componentPath: "components/Components"
+                componentPath: "components/Components",
+                statusBadges: ["new"]
             },
             {
                 title: "Accordion",
                 path: "/components/accordion",
                 componentPath: "components/Accordion",
-                statusBadges: ["javascript", "updated"]
+                statusBadges: ["javascript"]
             },
             {
                 title: "Action List",
@@ -72,7 +73,7 @@ module.exports = [
                 title: "Datepickers",
                 path: "/components/datepickers",
                 componentPath: "components/Datepickers",
-                statusBadges: ["javascript", "updated"]
+                statusBadges: ["javascript"]
             },
             {
                 title: "Dialog",
@@ -90,7 +91,7 @@ module.exports = [
                 title: "Forms",
                 path: "/components/forms",
                 componentPath: "components/Forms",
-                statusBadges: ["javascript", "updated"]
+                statusBadges: ["javascript"]
             },
             {
                 title: "Footer",
@@ -100,8 +101,7 @@ module.exports = [
             {
                 title: "Input Group",
                 path: "/components/input-group",
-                componentPath: "components/InputGroup",
-                statusBadges: ["updated"]
+                componentPath: "components/InputGroup"
             },
             /* {
                 title: "Lightbox",
@@ -147,8 +147,7 @@ module.exports = [
             {
                 title: "Progress Steps",
                 path: "/components/progress-steps",
-                componentPath: "components/ProgressSteps",
-                statusBadges: ["updated"]
+                componentPath: "components/ProgressSteps"
             },
             {
                 title: "Sheet",
@@ -165,14 +164,12 @@ module.exports = [
             {
                 title: "Slab",
                 path: "/components/slab",
-                componentPath: "components/Slab",
-                statusBadges: ["updated"]
+                componentPath: "components/Slab"
             },
             {
                 title: "Status",
                 path: "/components/status",
-                componentPath: "components/Status",
-                statusBadges: ["updated"]
+                componentPath: "components/Status"
             },
             {
                 title: "Tables",
@@ -183,25 +180,25 @@ module.exports = [
                 title: "Tabs",
                 path: "/components/tabs",
                 componentPath: "components/Tabs",
-                statusBadges: ["javascript", "updated"]
+                statusBadges: ["javascript"]
             },
             {
                 title: "Toast",
                 path: "/components/toast",
                 componentPath: "components/Toast",
-                statusBadges: ["javascript"]
+                statusBadges: ["javascript", "updated"]
             },
             {
                 title: "Tooltips",
                 path: "/components/tooltips",
                 componentPath: "components/Tooltips",
-                statusBadges: ["javascript", "updated"]
+                statusBadges: ["javascript"]
             },
             {
                 title: "Topbar",
                 path: "/components/topbar",
                 componentPath: "components/Topbar",
-                statusBadges: ["javascript"]
+                statusBadges: ["javascript", "updated"]
             }
         ]
     }

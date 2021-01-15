@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const statusBadgeContent = {
     new: {
         icon: <i className="material-icons">child_care</i>,
-        text: "New component"
+        text: "New"
     },
     updated: {
         icon: <i className="material-icons">mood</i>,
