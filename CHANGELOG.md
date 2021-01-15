@@ -8,7 +8,7 @@
 
 ## Added
 - Accessibility
-  - Added a page on accessbility in Identity section
+  - Added a page on accessability in Identity section
 - Color
   - Added color guidelines in Color in Identity section
 - Copywriting
@@ -47,7 +47,7 @@
   - Logotype
     - Changed Logotype documentation to be more optimized on mobile
   - Changed the color of the JavaScript icon color in status badges
-  - Major design ovehaul
+  - Major design overhaul
   - Changed front page to a more modern version
   - Changed to the new sidebar
 
@@ -56,7 +56,8 @@
   - Removed resources section 
     - Image moved to Imagery and in Identity section
     - Typography merged with Typography in Identity section
-    - Presentations can be found on the intranet 
+    - Presentations can be found on the intranet
+    - Removed Spacing from Utilities (moved to Spacing in identity)
 
 ## Fixed
 - Buttons
