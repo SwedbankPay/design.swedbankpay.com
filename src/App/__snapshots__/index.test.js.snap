@@ -457,11 +457,6 @@ exports[`Main: App renders 1`] = `
                       "title": "Sizing",
                     },
                     Object {
-                      "componentPath": "utilities/Spacing",
-                      "path": "/utilities/spacing",
-                      "title": "Spacing",
-                    },
-                    Object {
                       "componentPath": "utilities/Text",
                       "path": "/utilities/text",
                       "title": "Text",
