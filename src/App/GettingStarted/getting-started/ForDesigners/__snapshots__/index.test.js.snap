@@ -34,10 +34,9 @@ exports[`GettingStarted: ForDesigners Contributing renders 1`] = `
   <div
     className="d-flex flex-column align-items-center"
   >
-    <img
-      alt="Our modified Vanilla pattern design intake process (Click to view)"
-      className="img-fluid"
-      src="/TEST/img/documentation/forDesigners/vanilla-pattern.png"
+    <Lightbox
+      alt="Our modified Vanilla pattern design intake process"
+      imgSrc="/TEST/img/documentation/forDesigners/vanilla-pattern.png"
     />
     <span
       className="caption-text"
@@ -47,7 +46,7 @@ exports[`GettingStarted: ForDesigners Contributing renders 1`] = `
       >
         Figure 1.
       </span>
-       Our modified Vanilla pattern design intake process
+       Our modified Vanilla pattern design intake process(Click to view)
     </span>
   </div>
 </section>
