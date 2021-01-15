@@ -58,7 +58,7 @@ exports[`Core: Imagery ImageLibrary renders 1`] = `
   </p>
   <a
     className="icon-link d-block d-flex"
-    href="https://app.pickit.com/#/explore/community/users/124093/collection/21458-swedbank-pay"
+    href="https://payex.pickit.com/"
     rel="noopener noreferrer"
     target="_blank"
   >

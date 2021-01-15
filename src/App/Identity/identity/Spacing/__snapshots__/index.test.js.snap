@@ -212,19 +212,41 @@ exports[`Identity: Spacing EightPointSystem renders 1`] = `
   <p>
     If you are interested in learning more about the 8-point spacing system, you can read more about it in this 
     <a
+      className="icon-link m-0"
       href="https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632"
       rel="noopener noreferrer"
       target="_blank"
     >
-      Introduction article
+      <span
+        className="mr-2"
+      >
+        Introduction article
+      </span>
+      <i
+        aria-hidden="true"
+        className="material-icons"
+      >
+        open_in_new
+      </i>
     </a>
     , which provides a brief explanation of the reasons why to use the 8-point spacing system. To dive even deeper into the nitty gritty, please refer to this 
     <a
+      className="icon-link m-0"
       href="https://spec.fm/specifics/8-pt-grid"
       rel="noopener noreferrer"
       target="_blank"
     >
-      in-depth explanation
+      <span
+        className="mr-2"
+      >
+        in-depth explanation
+      </span>
+      <i
+        aria-hidden="true"
+        className="material-icons"
+      >
+        open_in_new
+      </i>
     </a>
      of the 8-point spacing system.
   </p>
@@ -331,7 +353,7 @@ exports[`Identity: Spacing HowItWorks renders 1`] = `
   <h2
     id="how-it-works"
   >
-    How it works in Code
+    How it works in code
   </h2>
   <p>
     Assign responsive-friendly margin or padding values to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties. Classes are ranging from 0.25 rem to 3 rem.

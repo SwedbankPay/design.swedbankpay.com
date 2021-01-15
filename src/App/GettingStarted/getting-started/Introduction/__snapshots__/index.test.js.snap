@@ -10,7 +10,7 @@ exports[`GettingStarted: Introduction GetStarted renders 1`] = `
   >
     <Link
       className="cards cards-primary"
-      to="/getting-started/for-developers"
+      to="/get-started/for-developers"
     >
       <div
         className="cards-icon"
@@ -41,7 +41,7 @@ exports[`GettingStarted: Introduction GetStarted renders 1`] = `
     </Link>
     <Link
       className="cards cards-primary"
-      to="/getting-started/for-designers"
+      to="/get-started/for-designers"
     >
       <div
         className="cards-icon"
@@ -87,7 +87,7 @@ exports[`GettingStarted: Introduction OpenSimpleCaring renders 1`] = `
   <p>
     To build awareness we display Swedbank Pay’s name and logotype with impact. We express a distinguishing attitude through the logotype, yellow color, images and tonality – always as simple and uncomplicated as possible. Read more about the brand in the 
     <Link
-      to="/core/identity"
+      to="/identity/identity"
     >
       Identity overview
     </Link>

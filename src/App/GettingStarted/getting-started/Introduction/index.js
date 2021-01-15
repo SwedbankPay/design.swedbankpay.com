@@ -10,7 +10,7 @@ const GetStarted = () => (
         <p>Below we have compiled a list of things you need to have and know in order to get started with our design guide.</p>
 
         <div className="component-overview">
-            <Link to="/getting-started/for-developers" className="cards cards-primary">
+            <Link to="/get-started/for-developers" className="cards cards-primary">
                 <div className="cards-icon">
                     <i className="material-icons">code</i>
                 </div>
@@ -19,7 +19,7 @@ const GetStarted = () => (
                 </div>
                 <i className="material-icons">arrow_forward</i>
             </Link>
-            <Link to="/getting-started/for-designers" className="cards cards-primary">
+            <Link to="/get-started/for-designers" className="cards cards-primary">
                 <div className="cards-icon">
                     <i className="material-icons">brush</i>
                 </div>
@@ -102,7 +102,7 @@ const OpenSimpleCaring = () => (
     <section>
         <h2 id="open-simple-caring">Open, simple, caring</h2>
         <p>Swedbank Pay is a sub-brand to Swedbank and a part of the “Coin family”. That means that Swedbank Pay is built on the same foundation as Swedbank and shares the same brand platform and overall guidelines. Swedbank Pay express its own identity through the logotype, yellow color, images and tonality.</p>
-        <p>To build awareness we display Swedbank Pay’s name and logotype with impact. We express a distinguishing attitude through the logotype, yellow color, images and tonality – always as simple and uncomplicated as possible. Read more about the brand in the <Link to="/core/identity">Identity overview</Link>.</p>
+        <p>To build awareness we display Swedbank Pay’s name and logotype with impact. We express a distinguishing attitude through the logotype, yellow color, images and tonality – always as simple and uncomplicated as possible. Read more about the brand in the <Link to="/identity/identity">Identity overview</Link>.</p>
         <img src={`${basename}img/documentation/introduction/pyramid.png`} className="img-fluid" alt="Illustration of our vision, values and purpose"/>
     </section>
 );

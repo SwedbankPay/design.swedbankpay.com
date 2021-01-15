@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { DocContainer } from "@docutils";
 
 const MenuOverview = () => (
-    <section className="component-overview">
+    <section className="component-overview hide-arrow-icon">
         <Link to="/utilities/borders" className="cards cards-primary cards-wide">
             <div className="cards-content m-0">
                 <span className="h3">Borders</span>

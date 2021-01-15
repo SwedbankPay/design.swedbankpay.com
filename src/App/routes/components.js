@@ -13,7 +13,7 @@ module.exports = [
         appFolder: "ComponentsDocumentation",
         routes: [
             {
-                title: "Components",
+                title: "Overview",
                 path: "/components/components",
                 componentPath: "components/Components"
             },

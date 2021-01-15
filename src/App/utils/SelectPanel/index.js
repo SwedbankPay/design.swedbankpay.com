@@ -125,7 +125,9 @@ class SelectPanel extends Component {
                     <div id={this.props.id} className="sidebar-2">
                         <nav className="sidebar-main-nav">
                             <div className="sidebar-logo">
-                                <LogotypeComponent src={`${basename}img/swedbankpay-logo-v.svg`} size="md" alt="Swedbank Pay vertical logo" type="vertical" />
+                                <a href="/">
+                                    <LogotypeComponent src={`${basename}img/swedbankpay-logo-v.svg`} size="md" alt="Swedbank Pay vertical logo" type="vertical" />
+                                </a>
                             </div>
                             <ul className="main-nav-ul">
                                 <li className={`main-nav-li${this.props.location.pathname === "/" ? " active" : ""}`}>

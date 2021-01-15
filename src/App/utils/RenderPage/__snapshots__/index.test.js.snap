@@ -27,7 +27,7 @@ exports[`Utilities: RenderPage renders 1`] = `
             "rotated": true,
           }
         }
-        key="renderRoutes_Get Started"
+        key="renderRoutes_Get started"
         path="/get-started"
         redirect="/get-started/introduction"
         routes={
@@ -49,7 +49,7 @@ exports[`Utilities: RenderPage renders 1`] = `
             },
           ]
         }
-        title="Get Started"
+        title="Get started"
       />
       <RenderRoutes
         appFolder="Identity"
@@ -66,7 +66,7 @@ exports[`Utilities: RenderPage renders 1`] = `
             Object {
               "componentPath": "identity/Identity",
               "path": "/identity/identity",
-              "title": "Identity",
+              "title": "Overview",
             },
             Object {
               "componentPath": "identity/Accessibility",
@@ -74,32 +74,14 @@ exports[`Utilities: RenderPage renders 1`] = `
               "title": "Accessibility",
             },
             Object {
-              "componentPath": "identity/Imagery",
-              "path": "/identity/imagery",
-              "title": "Imagery",
-            },
-            Object {
               "componentPath": "identity/Color",
               "path": "/identity/color",
               "title": "Color",
             },
             Object {
-              "componentPath": "identity/Spacing",
-              "path": "/identity/spacing",
-              "title": "Spacing",
-            },
-            Object {
               "componentPath": "identity/Copywriting",
               "path": "/identity/copywriting",
               "title": "Copywriting",
-            },
-            Object {
-              "componentPath": "identity/Logotype",
-              "path": "/identity/logotype",
-              "statusBadges": Array [
-                "updated",
-              ],
-              "title": "Logotype",
             },
             Object {
               "componentPath": "identity/Grid",
@@ -112,14 +94,27 @@ exports[`Utilities: RenderPage renders 1`] = `
               "title": "Iconography",
             },
             Object {
-              "componentPath": "identity/Images",
-              "path": "/identity/images",
-              "title": "Images",
+              "componentPath": "identity/Imagery",
+              "path": "/identity/imagery",
+              "title": "Imagery",
+            },
+            Object {
+              "componentPath": "identity/Logotype",
+              "path": "/identity/logotype",
+              "statusBadges": Array [
+                "updated",
+              ],
+              "title": "Logotype",
             },
             Object {
               "componentPath": "identity/Page-layout",
               "path": "/identity/page-layout",
               "title": "Page layout",
+            },
+            Object {
+              "componentPath": "identity/Spacing",
+              "path": "/identity/spacing",
+              "title": "Spacing",
             },
             Object {
               "componentPath": "identity/Typography",
@@ -145,7 +140,7 @@ exports[`Utilities: RenderPage renders 1`] = `
             Object {
               "componentPath": "components/Components",
               "path": "/components/components",
-              "title": "Components",
+              "title": "Overview",
             },
             Object {
               "componentPath": "components/Accordion",
@@ -389,13 +384,13 @@ exports[`Utilities: RenderPage renders 1`] = `
         }
         key="renderRoutes_Utilities"
         path="/utilities"
-        redirect="/utilities/colors"
+        redirect="/utilities/utilities"
         routes={
           Array [
             Object {
               "componentPath": "utilities/Utilities",
               "path": "/utilities/utilities",
-              "title": "Utilities",
+              "title": "Overview",
             },
             Object {
               "componentPath": "utilities/Borders",

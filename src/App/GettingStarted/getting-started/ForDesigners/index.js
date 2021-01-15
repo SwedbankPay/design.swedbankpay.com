@@ -23,7 +23,7 @@ const NeedToHave = () => (
         </a>
 
         <h3>Typefaces & fonts</h3>
-        <p>We use our own customized typefaces & fonts. To access the these, please, head over to the <Link to="/core/typography">Typography section</Link>. There you can also find guidelines on how to use all the different typefaces.  </p>
+        <p>We use our own customized typefaces & fonts. To access the these, please, head over to the <Link to="/identity/typography">Typography section</Link>. There you can also find guidelines on how to use all the different typefaces.  </p>
     </section>
 );
 const NeedToKnow = () => (
@@ -32,17 +32,17 @@ const NeedToKnow = () => (
         <p>When you have the right tools to get started there are some things that define the Swedbank Pay Design that are good to be familiar with. We try our best to always design with our brand and identity in the back of our heads. </p>
 
         <h3>Brand and identity</h3>
-        <p>Open, simple and caring. These are our values that we always strive to come back to when we design both internal and external experiences. All information about our core values and things that make us who we are can be found in <Link to="/core/identity">Identity</Link>. </p>
+        <p>Open, simple and caring. These are our values that we always strive to come back to when we design both internal and external experiences. All information about our core values and things that make us who we are can be found in <Link to="/identity/identity">Identity</Link>. </p>
         <a href="https://brand-manager.swedbank.com/start/guidelines/swedbank-pay.html" className="icon-link" target="_blank" rel="noopener noreferrer">
             <i className="material-icons" aria-hidden="true">launch</i>
             <span className="ml-2">Read more about the Swedbank Pay Brand (Swedbank Brand Manager) </span>
         </a>
 
         <h3>Grid and breakpoints</h3>
-        <p>In order to align design and development as close as possible with each other we have pre-defined grids in Figma using the same size and breakpoints as in development. These grids are available in Figma and you can read more about how it is setup in the <Link to="/core/grid">Grid section</Link>.</p>
+        <p>In order to align design and development as close as possible with each other we have pre-defined grids in Figma using the same size and breakpoints as in development. These grids are available in Figma and you can read more about how it is setup in the <Link to="/identity/grid">Grid section</Link>.</p>
 
         <h3>8-point spacing system</h3>
-        <p>Additionally, while designing we also incorporates a flexible 8-point spacing system for spacing between our components and layouts. A flexible 8-point spacing system means we use multiples of 8 most of the times. This not only creates consistency across all our digital products but also makes it easier for developers to know what values they should use. You can learn more about how it works under the <Link to="/core/spacing">Spacing section</Link>. </p>
+        <p>Additionally, while designing we also incorporates a flexible 8-point spacing system for spacing between our components and layouts. A flexible 8-point spacing system means we use multiples of 8 most of the times. This not only creates consistency across all our digital products but also makes it easier for developers to know what values they should use. You can learn more about how it works under the <Link to="/identity/spacing">Spacing section</Link>. </p>
     </section>
 );
 const Contributing = () => (
@@ -66,17 +66,17 @@ const Feedback = () => (
 );
 const DiscoverMore = () => (
     <section>
-        <h2 id="discover-more">DiscoverMore</h2>
-        <div className="component-overview">
-            <Link to="/core/identity" className="cards cards-primary cards-wide">
-                <div className="cards-content">
-                    <span className="h4">Identity</span><span>The philosophy behind our designs </span>
+        <h2 id="discover-more">Discover more</h2>
+        <div className="component-overview hide-arrow-icon">
+            <Link to="/identity/identity" className="cards cards-primary cards-wide">
+                <div className="cards-content m-0">
+                    <span className="h3">Identity</span><span>The philosophy behind our designs </span>
                 </div>
                 <i className="material-icons">arrow_forward</i>
             </Link>
             <Link to="/components/components" className="cards cards-primary cards-wide">
-                <div className="cards-content">
-                    <span className="h4">Component</span><span>See all available components</span>
+                <div className="cards-content m-0">
+                    <span className="h3">Component</span><span>See all available components</span>
                 </div>
                 <i className="material-icons">arrow_forward</i>
             </Link>

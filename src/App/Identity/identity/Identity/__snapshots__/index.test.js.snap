@@ -5,14 +5,14 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
   <h2
     id="read-more"
   >
-    Read More
+    Read more
   </h2>
   <div
     className="component-overview"
   >
     <Link
       className="cards cards-wide"
-      to="/core/accessibility"
+      to="/identity/accessibility"
     >
       <div
         className="cards-content m-0"
@@ -34,7 +34,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
     </Link>
     <Link
       className="cards cards-wide"
-      to="/core/color"
+      to="/identity/color"
     >
       <div
         className="cards-content m-0"
@@ -56,7 +56,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
     </Link>
     <Link
       className="cards cards-wide"
-      to="/core/copywriting"
+      to="/identity/copywriting"
     >
       <div
         className="cards-content m-0"
@@ -78,7 +78,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
     </Link>
     <Link
       className="cards cards-wide"
-      to="/core/imagery"
+      to="/identity/imagery"
     >
       <div
         className="cards-content m-0"
@@ -100,7 +100,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
     </Link>
     <Link
       className="cards cards-wide"
-      to="/core/iconography"
+      to="/identity/iconography"
     >
       <div
         className="cards-content m-0"
@@ -122,7 +122,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
     </Link>
     <Link
       className="cards cards-wide"
-      to="/core/grid"
+      to="/identity/grid"
     >
       <div
         className="cards-content m-0"
@@ -144,7 +144,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
     </Link>
     <Link
       className="cards cards-wide"
-      to="/core/logotype"
+      to="/identity/logotype"
     >
       <div
         className="cards-content m-0"
@@ -166,7 +166,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
     </Link>
     <Link
       className="cards cards-wide"
-      to="/core/spacing"
+      to="/identity/spacing"
     >
       <div
         className="cards-content m-0"
@@ -188,7 +188,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
     </Link>
     <Link
       className="cards cards-wide"
-      to="/core/typography"
+      to="/identity/typography"
     >
       <div
         className="cards-content m-0"
@@ -217,7 +217,7 @@ exports[`Identity: Identity OurBrand renders 1`] = `
   <h2
     id="our-brand"
   >
-    Our Brand
+    Our brand
   </h2>
   <p>
     Open, simple and caring. These are our values that we always strive to come back to when we design both internal and external experiences. 
@@ -261,7 +261,7 @@ exports[`Identity: Identity OurBrand renders 1`] = `
 exports[`Identity: Identity renders 1`] = `
 <DocContainer>
   <p
-    className="lead mb-3"
+    className="lead"
   >
     Our identity influences all aspects of the design guide, both in terms of how we approach the design and what we follow in order to create the best possible user experience.
   </p>
