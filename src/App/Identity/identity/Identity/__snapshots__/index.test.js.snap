@@ -8,10 +8,11 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
     Read more
   </h2>
   <div
-    className="component-overview"
+    className="component-overview hide-arrow-icon"
   >
     <Link
-      className="cards cards-wide"
+      className="cards cards-primary cards-wide"
+      key="Accessibility"
       to="/identity/accessibility"
     >
       <div
@@ -33,7 +34,8 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
       </i>
     </Link>
     <Link
-      className="cards cards-wide"
+      className="cards cards-primary cards-wide"
+      key="Colors"
       to="/identity/color"
     >
       <div
@@ -55,7 +57,8 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
       </i>
     </Link>
     <Link
-      className="cards cards-wide"
+      className="cards cards-primary cards-wide"
+      key="Copywriting"
       to="/identity/copywriting"
     >
       <div
@@ -77,7 +80,8 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
       </i>
     </Link>
     <Link
-      className="cards cards-wide"
+      className="cards cards-primary cards-wide"
+      key="Imagery"
       to="/identity/imagery"
     >
       <div
@@ -99,7 +103,8 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
       </i>
     </Link>
     <Link
-      className="cards cards-wide"
+      className="cards cards-primary cards-wide"
+      key="Iconography"
       to="/identity/iconography"
     >
       <div
@@ -121,7 +126,8 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
       </i>
     </Link>
     <Link
-      className="cards cards-wide"
+      className="cards cards-primary cards-wide"
+      key="Grid"
       to="/identity/grid"
     >
       <div
@@ -143,7 +149,8 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
       </i>
     </Link>
     <Link
-      className="cards cards-wide"
+      className="cards cards-primary cards-wide"
+      key="Logotype"
       to="/identity/logotype"
     >
       <div
@@ -165,7 +172,8 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
       </i>
     </Link>
     <Link
-      className="cards cards-wide"
+      className="cards cards-primary cards-wide"
+      key="Spacing"
       to="/identity/spacing"
     >
       <div
@@ -187,7 +195,8 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
       </i>
     </Link>
     <Link
-      className="cards cards-wide"
+      className="cards cards-primary cards-wide"
+      key="Typography"
       to="/identity/typography"
     >
       <div
