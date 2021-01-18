@@ -35,11 +35,6 @@ const overviewList = [
         text: "Size according to your needs"
     },
     {
-        path: "/utilities/spacing",
-        title: "Spacing",
-        text: "Responsive margin and padding"
-    },
-    {
         path: "/utilities/text",
         title: "Text",
         text: "Control wrapping, weight and more"

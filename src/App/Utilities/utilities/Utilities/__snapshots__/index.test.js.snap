@@ -167,29 +167,6 @@ exports[`Utilities: Utilities MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
-    key="Spacing"
-    to="/utilities/spacing"
-  >
-    <div
-      className="cards-content m-0"
-    >
-      <span
-        className="h3"
-      >
-        Spacing
-      </span>
-      <span>
-        Responsive margin and padding
-      </span>
-    </div>
-    <i
-      className="material-icons"
-    >
-      arrow_forward
-    </i>
-  </Link>
-  <Link
-    className="cards cards-primary cards-wide"
     key="Text"
     to="/utilities/text"
   >
