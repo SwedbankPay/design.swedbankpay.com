@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import overviewList from "./overview-list";
+import overviewList from "@src/app/routes/components";
 
 import { DocContainer } from "@docutils";
 
 const MenuOverview = () => (
     <section className="component-overview hide-arrow-icon">
-        {overviewList.map(card => (
+        {overviewList[0].routes.slice(1).map(card => (
+            card.icon &&
             <Link key={card.title} to={card.path} className="cards cards-primary cards-wide">
                 <div className="cards-content flex-row align-items-center m-0 ">
                     <i className={`material-icons ${card.outlined && "material-icons-outlined"} mr-3`}>{card.icon}</i>
