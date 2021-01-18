@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import overviewList from "@src/app/routes/identity";
+import overviewList from "@src/App/routes/identity";
 import { DocContainer } from "@docutils";
 
 const OurBrand = () => (
