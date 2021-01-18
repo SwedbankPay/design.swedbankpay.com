@@ -6,7 +6,6 @@ module.exports = [
     {
         title: "Components",
         icon: {
-            outlined: true,
             name: "category"
         },
         path: "/components",
@@ -44,7 +43,7 @@ module.exports = [
                 statusBadges: ["javascript"]
             },
             {
-                title: "Badge",
+                title: "Badges",
                 path: "/components/badge",
                 componentPath: "components/Badge",
                 icon: "more",
