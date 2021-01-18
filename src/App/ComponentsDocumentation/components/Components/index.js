@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import overviewList from "@src/app/routes/components";
+import overviewList from "@src/App/routes/components";
 
 import { DocContainer } from "@docutils";
 
