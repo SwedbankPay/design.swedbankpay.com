@@ -6,6 +6,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
 >
   <Link
     className="cards cards-primary cards-wide"
+    key="Accordion"
     to="/components/accordion"
   >
     <div
@@ -30,20 +31,21 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Action list"
     to="/components/action-list"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
-        className="material-icons mr-3"
+        className="material-icons false mr-3"
       >
         list
       </i>
       <span
         className="h3 m-0"
       >
-        Action List
+        Action list
       </span>
     </div>
     <i
@@ -54,6 +56,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Alerts"
     to="/components/alerts"
   >
     <div
@@ -78,6 +81,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Badges"
     to="/components/badge"
   >
     <div
@@ -102,6 +106,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Breadcrumb"
     to="/components/breadcrumb"
   >
     <div
@@ -126,6 +131,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Buttons"
     to="/components/buttons"
   >
     <div
@@ -150,6 +156,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Cards"
     to="/components/cards"
   >
     <div
@@ -174,6 +181,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Charts"
     to="/components/charts"
   >
     <div
@@ -198,6 +206,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Code tags"
     to="/components/code-tags"
   >
     <div
@@ -211,7 +220,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       <span
         className="h3 m-0"
       >
-        Code Tags
+        Code tags
       </span>
     </div>
     <i
@@ -222,6 +231,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Datepicker"
     to="/components/datepickers"
   >
     <div
@@ -246,6 +256,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Dialog"
     to="/components/dialog"
   >
     <div
@@ -270,6 +281,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Footer"
     to="/components/footer"
   >
     <div
@@ -294,6 +306,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="List"
     to="/components/lists"
   >
     <div
@@ -318,6 +331,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Loader"
     to="/components/loaders"
   >
     <div
@@ -342,6 +356,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Links"
     to="/components/links"
   >
     <div
@@ -366,6 +381,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Navigation"
     to="/components/nav"
   >
     <div
@@ -390,6 +406,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Pagination"
     to="/components/pagination"
   >
     <div
@@ -414,6 +431,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Progress steps"
     to="/components/progress-steps"
   >
     <div
@@ -427,7 +445,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       <span
         className="h3 m-0"
       >
-        Progress Steps
+        Progress steps
       </span>
     </div>
     <i
@@ -438,6 +456,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Forms"
     to="/components/forms"
   >
     <div
@@ -462,6 +481,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Sheet"
     to="/components/sheet"
   >
     <div
@@ -486,6 +506,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Status"
     to="/components/status"
   >
     <div
@@ -510,6 +531,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Tabs"
     to="/components/tabs"
   >
     <div
@@ -534,6 +556,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Tables"
     to="/components/tables"
   >
     <div
@@ -558,6 +581,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Toast"
     to="/components/toast"
   >
     <div
@@ -582,6 +606,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Tooltips"
     to="/components/tooltips"
   >
     <div
