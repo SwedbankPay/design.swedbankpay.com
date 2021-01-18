@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import overviewList from "./overview-list";
+import overviewList from "@src/app/routes/identity";
 import { DocContainer } from "@docutils";
 
 const OurBrand = () => (
@@ -25,7 +25,7 @@ const MenuOverview = () => (
     <section>
         <h2 id="read-more">Read more</h2>
         <div className="component-overview hide-arrow-icon">
-            {overviewList.map(card => (
+            {overviewList[0].routes.slice(1).map((card, i) => (
                 <Link key={card.title} to={card.path} className="cards cards-primary cards-wide">
                     <div className="cards-content m-0">
                         <span className="h3">{card.title}</span>

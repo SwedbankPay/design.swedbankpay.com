@@ -35,7 +35,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
     </Link>
     <Link
       className="cards cards-primary cards-wide"
-      key="Colors"
+      key="Color"
       to="/identity/color"
     >
       <div
@@ -44,7 +44,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
         <span
           className="h3"
         >
-          Colors
+          Color
         </span>
         <span>
           Our color palette with HEX codes
@@ -81,8 +81,8 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
     </Link>
     <Link
       className="cards cards-primary cards-wide"
-      key="Imagery"
-      to="/identity/imagery"
+      key="Grid"
+      to="/identity/grid"
     >
       <div
         className="cards-content m-0"
@@ -90,10 +90,10 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
         <span
           className="h3"
         >
-          Imagery
+          Grid
         </span>
         <span>
-          Guidelines and image library
+          Our grid and best practices
         </span>
       </div>
       <i
@@ -127,8 +127,8 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
     </Link>
     <Link
       className="cards cards-primary cards-wide"
-      key="Grid"
-      to="/identity/grid"
+      key="Imagery"
+      to="/identity/imagery"
     >
       <div
         className="cards-content m-0"
@@ -136,10 +136,10 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
         <span
           className="h3"
         >
-          Grid
+          Imagery
         </span>
         <span>
-          Our grid and best practices
+          Guidelines and image library
         </span>
       </div>
       <i
@@ -163,6 +163,29 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
         </span>
         <span>
           The Swedbank Pay logotype
+        </span>
+      </div>
+      <i
+        className="material-icons"
+      >
+        arrow_forward
+      </i>
+    </Link>
+    <Link
+      className="cards cards-primary cards-wide"
+      key="Page layout"
+      to="/identity/page-layout"
+    >
+      <div
+        className="cards-content m-0"
+      >
+        <span
+          className="h3"
+        >
+          Page layout
+        </span>
+        <span>
+          See our layout structure
         </span>
       </div>
       <i
