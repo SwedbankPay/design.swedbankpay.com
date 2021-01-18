@@ -54,7 +54,7 @@ module.exports = [
                 path: "/components/breadcrumb",
                 componentPath: "components/Breadcrumb",
                 icon: "last_page",
-                outlined: true,
+                outlined: true
             },
             {
                 title: "Buttons",
