@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Introduction, { QuickStart, Css, JavaScript } from "./index";
+import Introduction, { GetStarted, WhatIsDG, UsingDG, OpenSimpleCaring } from "./index";
 
 describe("GettingStarted: Introduction", () => {
     it("is defined", () => {
@@ -14,37 +14,49 @@ describe("GettingStarted: Introduction", () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    describe("QuickStart", () => {
+    describe("GetStarted", () => {
         it("is defined", () => {
-            expect(QuickStart).toBeDefined();
+            expect(GetStarted).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<QuickStart />);
+            const wrapper = shallow(<GetStarted />);
 
             expect(wrapper).toMatchSnapshot();
         });
     });
 
-    describe("Css", () => {
+    describe("WhatIsDG", () => {
         it("is defined", () => {
-            expect(Css).toBeDefined();
+            expect(WhatIsDG).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<Css />);
+            const wrapper = shallow(<WhatIsDG />);
 
             expect(wrapper).toMatchSnapshot();
         });
     });
 
-    describe("JavaScript", () => {
+    describe("UsingDG", () => {
         it("is defined", () => {
-            expect(JavaScript).toBeDefined();
+            expect(UsingDG).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<JavaScript />);
+            const wrapper = shallow(<UsingDG />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("OpenSimpleCaring", () => {
+        it("is defined", () => {
+            expect(OpenSimpleCaring).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<OpenSimpleCaring />);
 
             expect(wrapper).toMatchSnapshot();
         });

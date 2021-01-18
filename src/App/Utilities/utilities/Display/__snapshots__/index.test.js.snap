@@ -306,7 +306,7 @@ exports[`Utilities: Display Notation renders 1`] = `
   <p>
     Display utility classes that apply to all 
     <Link
-      to="/core/breakpoints"
+      to="/identity/breakpoints"
     >
       breakpoints
     </Link>

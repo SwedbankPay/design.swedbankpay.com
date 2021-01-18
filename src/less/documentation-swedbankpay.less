@@ -7,104 +7,6 @@
     flex-direction: column;
     min-height: 100%;
 
-    .dg-sidebar {
-
-        @media screen and (min-width: @screen-lg-min) {
-            border-right: 1px solid @brand-secondary-light-3;
-            min-height: 100vh;
-        }
-
-        margin-top: 0;
-        width: 100%;
-
-        &.dg-only-style {
-            max-width: 18rem;
-
-            .sidebar-nav {
-                height: 100vh;
-
-                .main-nav-ul {
-                    margin-bottom: 1rem;
-                }
-            }
-        }
-
-        .sidebar-nav {
-            padding-right: 1rem;
-            max-height: 100vh;
-        }
-
-        .main-nav-ul {
-            padding-bottom: 1rem;
-        }
-
-        .sidebar-top {
-            padding: 1rem 0;
-            margin-bottom: 1rem;
-            border-bottom: 1px solid @brand-secondary-light-3;
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-
-            img {
-                margin-right: 1.5rem;
-                display: flex;
-            }
-
-            .sidebar-version {
-                display: block;
-
-                .sidebar-version-header {
-                    font-family: @brand-headline;
-                    font-weight: @font-weight-normal;
-                    color: @brand-secondary;
-                    font-size: 1.125rem;
-                    line-height: 1.5rem;
-                }
-
-                .small,
-                small {
-                    color: @brand-secondary;
-                }
-            }
-        }
-
-
-        .sidebar-contact {
-            margin-top: auto;
-            margin-bottom: 1rem;
-
-            a {
-                color: @brand-secondary;
-                fill: @brand-secondary;
-                display: flex;
-                border: none;
-                text-decoration: none;
-                align-items: center;
-                margin: 0.5rem 0;
-                height: 40px;
-
-                svg {
-                    overflow: visible;
-                    width: 1.5rem;
-                    height: 1.5rem;
-                    display: inline-block;
-                    vertical-align: top;
-                }
-
-                span {
-                    padding-left: 0.75rem;
-                }
-
-                &:hover {
-                    color: darken(@brand-secondary, 20%);
-                    fill: darken(@brand-secondary, 20%);
-                    text-decoration: underline;
-                }
-            }
-        }
-    }
-
     .designguide-header {
         z-index: calc(@zindex-topbar + 1);
     }
@@ -231,19 +133,276 @@
 }
 
 .documentation {
-    .make-container();
-
-    flex-grow: 1;
+    width: 100%;
 
     .doc-container {
+        width: 100%;
         margin-right: auto;
         margin-left: auto;
         padding: 2rem 2rem;
-        width: 100%;
+        max-width: 48.375rem;
+
+        h1:first-of-type {
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+            font-family: @brand-black;
+        }
+
+        &.dg-front-page {
+            position: relative;
+            max-width: 82rem;
+
+            section {
+                height: 100vh;
+            }
+
+            .rotate-icon {
+                transform: rotate(180deg);
+            }
+
+            .dg-front-page-container {
+                padding-top: 3rem;
+                max-width: 70rem;
+
+                header {
+                    line-height: 4rem;
+
+                    .dg-title-small {
+                        font-size: 2.5rem;
+                        font-family: @brand-headline;
+                        font-weight: bold;
+                    }
+
+                    .dg-title-big {
+                        font-size: 3.5rem;
+                        font-family: "Swedbank Headline Black";
+                    }
+                }
+
+                .dg-version-indicator {
+                    margin-top: 0.5rem;
+                    margin-bottom: 1.5rem;
+
+                    span {
+                        padding: 0.5rem;
+                        background-color: #fff3d5;
+                        font-size: 1.25rem;
+                        font-family: @brand-headline;
+                    }
+                }
+
+                .front-page-lead {
+                    max-width: 38.75rem;
+                    font-size: 1.25rem;
+                    font-family: @font-stack;
+                    line-height: 1.75rem;
+                }
+
+                .dg-cards-container {
+                    max-width: 70rem;
+                    z-index: 10; /* Makes content appear above background image */
+                }
+            }
+
+            .dg-next-page-content {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                color: inherit;
+                text-decoration: none;
+
+                span {
+                    font-size: 0.75rem;
+                    padding-bottom: 2rem;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                }
+
+                > i {
+                    position: absolute;
+                    cursor: pointer;
+                    animation: bounce 1.5s infinite;
+                }
+
+                &:hover {
+                    font-weight: bold;
+
+                    > i {
+                        font-weight: bold;
+                        animation-play-state: paused;
+                    }
+                }
+
+                @keyframes bounce {
+                    0% { bottom: 0.15rem; }
+                    50% { bottom: -0.15rem; }
+                    100% { bottom: 0.15rem; }
+                }
+            }
+
+            /* Changelog */
+            .dg-changelog-container {
+                .dg-changelog-content {
+                    z-index: 10; /* makes content appear above background images */
+                    max-width: 70rem;
+
+                    .dg-changlelog-title {
+                        font-size: 1.5rem;
+                        font-family: @brand-headline;
+
+                        .dg-changelog-divider {
+                            width: 3.75rem;
+                            height: 0.25rem;
+                            background-color: @brand-warning;
+                            border-radius: 1.6rem;
+                        }
+                    }
+
+                    .dg-changelog-description {
+                        max-width: 47.25rem;
+                    }
+                }
+            }
+
+            @media (min-width: @screen-lg-max) {
+                .dg-changelog-description {
+                    margin-left: 2rem;
+                }
+
+                .dg-version-indicator {
+                    margin-top: 0.75rem;
+                }
+            }
+
+            @media (min-width: @screen-sm-min) and (max-width: @screen-md-max) {
+                padding: 0 5rem;
+
+                .dg-front-page-container,
+                .dg-changelog-container {
+                    padding-top: 1rem;
+                    height: 91vh; /* Eliminate whitespace when topbar is viewed */
+
+                    header {
+                        .dg-title-small {
+                            font-size: 2rem;
+                        }
+
+                        .dg-title-big {
+                            font-size: 2.5rem;
+                        }
+                    }
+                }
+            }
+
+            @media (max-width: @screen-xs-max) {
+                .dg-front-page-container {
+                    height: auto;
+                    padding: 2rem 0;
+
+                    header {
+                        line-height: 2rem;
+
+                        .dg-title-small {
+                            font-size: 1.25rem;
+                        }
+
+                        .dg-title-big {
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    .front-page-ingress {
+                        font-size: 1rem;
+                    }
+
+                    .dg-version-indicator {
+                        margin: 1rem 0;
+
+                        .dg-version-indicator-text {
+                            font-size: 0.875rem;
+                        }
+                    }
+                }
+
+                .dg-changelog-container {
+                    .dg-version-title {
+                        min-width: 6rem;
+                    }
+
+                    .dg-changelog-description {
+                        padding-bottom: 0.5rem;
+                    }
+                }
+            }
+
+            /* Background images */
+            .background-img {
+                position: absolute;
+            }
+
+            .cluster-bubble {
+                left: 63.25rem;
+            }
+
+            .large-bubble {
+                top: 35%;
+                left: 73rem;
+            }
+
+            .two-bubbles {
+                bottom: 0;
+                right: 94%;
+            }
+
+            .single-bubble {
+                bottom: 3rem;
+                left: 94%;
+            }
+        }
 
         @media (max-width: @screen-md-max) {
             padding-left: @base-padding;
             padding-right: @base-padding;
+        }
+
+        .dg-current-version {
+            font-size: 0.75rem;
+        }
+
+        .component-overview {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            a {
+                width: 100%;
+                margin: 1.5rem 0 0;
+            }
+
+            @media (min-width: @screen-md-min) {
+                a {
+                    max-width: 21rem;
+                }
+            }
+
+            &.hide-arrow-icon {
+                i:last-child {
+                    opacity: 0;
+                    transition: 0.5s;
+                }
+
+                a {
+                    &:hover {
+                        i {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        section {
+            margin-bottom: 3rem;
         }
     }
 
@@ -384,6 +543,7 @@
     }
 
     .doc-view {
+        flex-grow: 1;
         padding-left: 0;
         padding-right: 0;
         background: @brand-bg-white;
@@ -656,9 +816,8 @@
     .logotype-misuse-donts {
         display: flex;
         flex-direction: column;
-        width: 20%;
+        width: 100%;
         height: 100%;
-        padding: 0 1.25rem;
 
         .logotype-misuse-donts-img {
             display: flex;
@@ -668,6 +827,203 @@
             height: 9.75rem;
             background-color: @white;
             padding: 2rem;
+        }
+    }
+
+    .caption-text {
+        margin-top: 1rem;
+        font-style: italic;
+        font-size: 0.875rem;
+    }
+
+    .typography-typefaces {
+        .illustration {
+            display: flex;
+            justify-content: center;
+            padding: 3.5rem 0;
+            background-color: @light-gray;
+            font-size: 3.5rem;
+
+            > div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 2rem;
+
+                > span {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .swedbank-headline {
+            font-family: @brand-headline;
+        }
+
+        .arial {
+            font-family: @brand-default;
+        }
+
+        .akkurat-mono {
+            font-family: @brand-monofont;
+        }
+    }
+
+    .typography-table {
+        &.mobile {
+            h1,
+            .h1 {
+                font-size: 1.5rem;
+                line-height: 2rem;
+            }
+
+            h2,
+            .h2 {
+                font-size: 1.25rem;
+                line-height: 1.5rem;
+            }
+
+            h3,
+            .h3 {
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+            }
+
+            .hero {
+                font-size: 2.5rem;
+                line-height: 3rem;
+            }
+        }
+
+        td {
+            height: 6.125rem;
+        }
+    }
+
+    .big-quotation {
+        display: flex;
+        margin-bottom: 0.75rem;
+
+        &:before {
+            content: "“";
+            color: @brand-primary;
+            font-family: @brand-headline;
+            font-size: 3.5rem;
+            margin-right: 0.425rem;
+        }
+
+        p {
+            align-self: flex-end;
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+    }
+
+    .color-group {
+        display: flex;
+        flex-wrap: wrap;
+
+        > div {
+            display: flex;
+            position: relative;
+            height: 7.15rem;
+            width: 7.75rem;
+            margin-right: 0.875rem;
+            margin-bottom: 0.875rem;
+
+            svg {
+                width: 100%;
+
+                rect {
+                    width: 100%;
+                    height: 100%;
+                    rx: 5;
+                }
+            }
+
+            div {
+                position: absolute;
+                font-size: 0.75rem;
+                bottom: 0;
+                font-weight: bold;
+
+                &.font-white {
+                    color: #ffffff;
+                }
+            }
+        }
+
+        &.communication-colors {
+            > div {
+                width: 100%;
+                max-width: 21rem;
+                margin: 0.875rem 0 0;
+            }
+        }
+    }
+
+    .browser-support {
+        display: flex;
+        justify-content: space-between;
+
+        div {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 2rem;
+            }
+
+            p {
+                margin: 0 0.5rem 0;
+            }
+        }
+    }
+
+    .spacing-table {
+        tbody {
+            th {
+                font-weight: normal;
+            }
+        }
+    }
+
+    .lightbox {
+        img {
+            cursor: zoom-in;
+            border: 1px solid transparent;
+
+            &:hover {
+                border: 1px solid @brand-secondary;
+            }
+        }
+
+        + img {
+            display: none;
+        }
+
+        &.active {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(58, 58, 58, 0.904);
+            z-index: 10;
+
+            img {
+                margin: 2rem;
+                width: 90%;
+                background-color: #ffffff;
+                cursor: zoom-out;
+            }
+
+            + img {
+                display: block;
+            }
         }
     }
 }

@@ -1,10 +1,19 @@
 module.exports = [
     {
         title: "Utilities",
+        icon: {
+            name: "build"
+        },
         path: "/utilities",
-        redirect: "/utilities/colors",
+        redirect: "/utilities/utilities",
         appFolder: "Utilities",
         routes: [
+            {
+                title: "Overview",
+                path: "/utilities/utilities",
+                componentPath: "utilities/Utilities",
+                statusBadges: ["new"]
+            },
             {
                 title: "Borders",
                 path: "/utilities/borders",
@@ -39,11 +48,6 @@ module.exports = [
                 title: "Sizing",
                 path: "/utilities/sizing",
                 componentPath: "utilities/Sizing"
-            },
-            {
-                title: "Spacing",
-                path: "/utilities/spacing",
-                componentPath: "utilities/Spacing"
             },
             {
                 title: "Text",

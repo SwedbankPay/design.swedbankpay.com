@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Sidebar, { Overview, JavascriptMethods, SetActiveState, RemoveActiveState, InitScrollListener, RemoveScrollListener } from "./index";
+import Sidebar, { Overview, ExtendedSidebar, JavascriptMethods, SetActiveState, RemoveActiveState, InitScrollListener, RemoveScrollListener } from "./index";
 
 describe("Components: Sidebar", () => {
     it("is defined", () => {
@@ -21,6 +21,18 @@ describe("Components: Sidebar", () => {
 
         it("renders", () => {
             const wrapper = shallow(<Overview />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("ExtendedSidebar", () => {
+        it("is defined", () => {
+            expect(ExtendedSidebar).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<ExtendedSidebar />);
 
             expect(wrapper).toMatchSnapshot();
         });

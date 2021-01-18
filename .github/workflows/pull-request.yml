@@ -14,13 +14,7 @@ jobs:
       # Set brand specific variables
       - name: Environment variables
         id: variables
-        # "git config core.filemode false" is set to disregard local rwx changes in git [THN]
-        run: |
-          git config core.filemode false
-          chmod +x ./.github/scripts/variables.sh
-          ./.github/scripts/variables.sh
-        env:
-          BRAND: ${{ matrix.brand }}
+        run: ./.github/scripts/variables.sh --brand ${{ matrix.brand }} --ref ${{ github.ref }}
 
       - name: Set Node.js 12.x
         uses: actions/setup-node@master
@@ -39,6 +33,6 @@ jobs:
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           # basename=PullRequest is added to avoid BundleAnalyzer from holding up the agent [THN]
-          build-script: "${{ steps.variables.outputs.BRAND_BUILD_SCRIPT }} -- --env.basename=PullRequest"
+          build-script: "${{ steps.variables.outputs.BUILD_SCRIPT }} -- --env.basename=PullRequest"
           exclude: "{**/*.map,**/node_modules/**,**/*chunk*.*}"
           pattern: "{dist/**/*.js,dist/**/*.css}"

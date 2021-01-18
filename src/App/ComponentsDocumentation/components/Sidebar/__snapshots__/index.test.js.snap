@@ -1,5 +1,164 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Components: Sidebar ExtendedSidebar renders 1`] = `
+<Fragment>
+  <h2
+    id="extended-sidebar"
+  >
+    Extended sidebar
+  </h2>
+  <p>
+    This sidebar is an extended sidebar which supports a depth of up to 4 levels. To use the extended sidebar, add class 
+    <CodeTags
+      code=".extended-sidebar"
+      type="secondary"
+    />
+     to the second 
+    <CodeTags
+      code="<ul>"
+      type="primary"
+    />
+     along with the 
+    <CodeTags
+      code=".secondary-nav-ul"
+      type="secondary"
+    />
+     class.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <div
+      className="container-fluid"
+    >
+      <div
+        className="row"
+      >
+        <Sidebar
+          extendedSidebar={true}
+          id="dg-sidebar2"
+          sidebarNavList={
+            Array [
+              Object {
+                "icon": <i
+                  className="material-icons-outlined"
+                >
+                  home
+                </i>,
+                "title": "Home Page",
+              },
+              Object {
+                "children": Array [
+                  Object {
+                    "icon": <i
+                      className="material-icons-outlined rotated"
+                    >
+                      accessibility
+                    </i>,
+                    "title": "Accessibility",
+                  },
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "Primary colors",
+                      },
+                      Object {
+                        "title": "Secondary colors",
+                      },
+                      Object {
+                        "children": Array [
+                          Object {
+                            "title": "Children 1",
+                          },
+                          Object {
+                            "title": "Children 2",
+                          },
+                          Object {
+                            "title": "Children 3",
+                          },
+                        ],
+                        "title": "Tertiary colors",
+                      },
+                    ],
+                    "icon": <i
+                      className="material-icons-outlined rotated"
+                    >
+                      palette
+                    </i>,
+                    "title": "Colors",
+                  },
+                  Object {
+                    "icon": <i
+                      className="material-icons-outlined rotated"
+                    >
+                      grid_on
+                    </i>,
+                    "title": "Grid",
+                  },
+                  Object {
+                    "icon": <i
+                      className="material-icons-outlined rotated"
+                    >
+                      space_bar
+                    </i>,
+                    "title": "Spacing",
+                  },
+                ],
+                "icon": <i
+                  className="material-icons-outlined rotated"
+                >
+                  wb_incandescent
+                </i>,
+                "title": "Get Started",
+              },
+              Object {
+                "children": Array [
+                  Object {
+                    "title": "Introduction",
+                  },
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "Event 1",
+                      },
+                      Object {
+                        "title": "Event 2",
+                      },
+                      Object {
+                        "title": "Event 3",
+                      },
+                    ],
+                    "lastParent": true,
+                    "title": "Events",
+                  },
+                  Object {
+                    "title": "Conclusion",
+                  },
+                ],
+                "icon": <i
+                  className="material-icons-outlined"
+                >
+                  palette
+                </i>,
+                "lastParent": false,
+                "title": "Identity",
+              },
+            ]
+          }
+        />
+        <main
+          className="col main-content"
+        >
+          Main content things...
+        </main>
+      </div>
+    </div>
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Components: Sidebar InitScrollListener renders 1`] = `
 <Fragment>
   <JavascriptDocElement
@@ -109,103 +268,108 @@ exports[`Components: Sidebar Overview renders 1`] = `
       <div
         className="row"
       >
-        <Topbar
-          id="demo-topbar"
-          logout={true}
-          wide="xl"
+        <Sidebar
+          id="dg-sidebar1"
+          sidebarNavList={
+            Array [
+              Object {
+                "icon": <i
+                  className="material-icons-outlined"
+                >
+                  home
+                </i>,
+                "title": "Home Page",
+              },
+              Object {
+                "children": Array [
+                  Object {
+                    "icon": <i
+                      className="material-icons-outlined rotated"
+                    >
+                      accessibility
+                    </i>,
+                    "title": "Accessibility",
+                  },
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "Primary colors",
+                      },
+                      Object {
+                        "title": "Secondary colors",
+                      },
+                      Object {
+                        "title": "Tertiary colors",
+                      },
+                    ],
+                    "icon": <i
+                      className="material-icons-outlined rotated"
+                    >
+                      palette
+                    </i>,
+                    "title": "Colors",
+                  },
+                  Object {
+                    "icon": <i
+                      className="material-icons-outlined rotated"
+                    >
+                      grid_on
+                    </i>,
+                    "title": "Grid",
+                  },
+                  Object {
+                    "icon": <i
+                      className="material-icons-outlined rotated"
+                    >
+                      space_bar
+                    </i>,
+                    "title": "Spacing",
+                  },
+                ],
+                "icon": <i
+                  className="material-icons-outlined rotated"
+                >
+                  wb_incandescent
+                </i>,
+                "title": "Get Started",
+              },
+              Object {
+                "children": Array [
+                  Object {
+                    "title": "Introduction",
+                  },
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "Event 1",
+                      },
+                      Object {
+                        "title": "Event 2",
+                      },
+                      Object {
+                        "title": "Event 3",
+                      },
+                    ],
+                    "lastParent": true,
+                    "title": "Events",
+                  },
+                  Object {
+                    "title": "Conclusion",
+                  },
+                ],
+                "icon": <i
+                  className="material-icons-outlined"
+                >
+                  palette
+                </i>,
+                "lastParent": false,
+                "title": "Identity",
+              },
+            ]
+          }
         />
-      </div>
-      <div
-        className="row"
-      >
-        <div
-          className="col-auto"
-        >
-          <Sidebar
-            id="dg-sidebar"
-            sidebarNavList={
-              Array [
-                Object {
-                  "lastParent": true,
-                  "subList": Array [
-                    Object {
-                      "title": "Introduction 1",
-                    },
-                    Object {
-                      "title": "Introduction 2",
-                    },
-                    Object {
-                      "title": "Introduction 3",
-                    },
-                  ],
-                  "title": "Introduction",
-                },
-                Object {
-                  "lastParent": true,
-                  "subList": Array [
-                    Object {
-                      "title": "Summary chapter 1",
-                    },
-                    Object {
-                      "title": "Summary chapter 2",
-                    },
-                    Object {
-                      "title": "Summary chapter 3",
-                    },
-                  ],
-                  "title": "Summary",
-                },
-                Object {
-                  "lastParent": false,
-                  "subList": Array [
-                    Object {
-                      "title": "Introduction",
-                    },
-                    Object {
-                      "lastParent": true,
-                      "subList": Array [
-                        Object {
-                          "title": "Operations",
-                        },
-                        Object {
-                          "title": "Lorem ipsum",
-                        },
-                        Object {
-                          "title": "Dolor sit amet consectetur",
-                        },
-                        Object {
-                          "title": "Adipiscing elit",
-                        },
-                      ],
-                      "title": "Operations",
-                    },
-                    Object {
-                      "lastParent": true,
-                      "subList": Array [
-                        Object {
-                          "title": "Event 1",
-                        },
-                        Object {
-                          "title": "Event 2",
-                        },
-                        Object {
-                          "title": "Event 3",
-                        },
-                      ],
-                      "title": "Events",
-                    },
-                    Object {
-                      "title": "Conclusion",
-                    },
-                  ],
-                  "title": "Other features",
-                },
-              ]
-            }
-          />
-        </div>
         <main
-          className="col main-content border-left"
+          className="col main-content"
         >
           Main content things...
         </main>
@@ -425,6 +589,7 @@ exports[`Components: Sidebar renders 1`] = `
     The sidebar is used to give users an easily available navigational bar on the left side of your web application.
   </p>
   <Overview />
+  <ExtendedSidebar />
   <JavascriptMethods />
 </DocContainer>
 `;

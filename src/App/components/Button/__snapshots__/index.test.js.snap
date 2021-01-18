@@ -8,6 +8,7 @@ exports[`Component: Button -  Anchor tag: renders a button inside an anchor tag 
   className="btn btn-primary"
   disabled={null}
   href="test"
+  onClick={[Function]}
   role="button"
   tabIndex={null}
   type={null}
@@ -22,6 +23,7 @@ exports[`Component: Button -  Anchor tag: renders a button inside an anchor tag 
   className="btn btn-primary active"
   disabled={null}
   href="test"
+  onClick={[Function]}
   role="button"
   tabIndex={null}
   type={null}
@@ -36,6 +38,7 @@ exports[`Component: Button -  Anchor tag: renders a button inside an anchor tag 
   className="btn btn-primary pull-right"
   disabled={null}
   href="test"
+  onClick={[Function]}
   role="button"
   tabIndex={null}
   type={null}
@@ -51,6 +54,7 @@ exports[`Component: Button -  Anchor tag: renders a button inside an anchor tag 
   disabled={null}
   href="test"
   id="test"
+  onClick={[Function]}
   role="button"
   tabIndex={null}
   type={null}
@@ -65,6 +69,7 @@ exports[`Component: Button -  Anchor tag: renders a button inside an anchor tag 
   className="btn btn-primary"
   disabled={null}
   href="test"
+  onClick={[Function]}
   role="button"
   tabIndex={null}
   type={null}
@@ -82,6 +87,7 @@ exports[`Component: Button -  Anchor tag: renders a button inside an anchor tag 
   disabled={null}
   href="test"
   name="test"
+  onClick={[Function]}
   role="button"
   tabIndex={null}
   type={null}
@@ -96,6 +102,7 @@ exports[`Component: Button -  Anchor tag: renders a button with icon and label i
   className="btn btn-primary"
   disabled={null}
   href="test"
+  onClick={[Function]}
   role="button"
   tabIndex={null}
   type={null}
@@ -122,6 +129,7 @@ exports[`Component: Button -  Anchor tag: renders a button with icon inside an a
   className="btn btn-primary"
   disabled={null}
   href="test"
+  onClick={[Function]}
   role="button"
   tabIndex={null}
   type={null}
@@ -145,6 +153,7 @@ exports[`Component: Button -  Anchor tag: renders a button with specified size i
   className="btn btn-primary btn-size-test"
   disabled={null}
   href="test"
+  onClick={[Function]}
   role="button"
   tabIndex={null}
   type={null}
@@ -159,6 +168,7 @@ exports[`Component: Button -  Anchor tag: renders a disabled button inside an an
   className="btn btn-primary disabled"
   disabled={null}
   href="test"
+  onClick={[Function]}
   role="button"
   tabIndex="-1"
   type={null}
@@ -173,6 +183,7 @@ exports[`Component: Button -  Anchor tag: renders a full width button inside an 
   className="btn btn-primary btn-block"
   disabled={null}
   href="test"
+  onClick={[Function]}
   role="button"
   tabIndex={null}
   type={null}
@@ -187,6 +198,7 @@ exports[`Component: Button -  Anchor tag: renders a loading button inside an anc
   className="btn btn-primary loading"
   disabled={null}
   href="test"
+  onClick={[Function]}
   role="button"
   tabIndex={null}
   type={null}

@@ -1,29 +1,31 @@
 module.exports = [
     {
-        title: "Getting Started",
-        path: "/getting-started",
-        redirect: "/getting-started/introduction",
+        title: "Get started",
+        icon: {
+            name: "wb_incandescent",
+            rotated: true
+        },
+        path: "/get-started",
+        redirect: "/get-started/introduction",
         appFolder: "GettingStarted",
         routes: [
             {
                 title: "Introduction",
-                path: "/getting-started/introduction",
-                componentPath: "getting-started/Introduction"
+                path: "/get-started/introduction",
+                componentPath: "getting-started/Introduction",
+                statusBadges: ["updated"]
             },
             {
-                title: "Browser Support",
-                path: "/getting-started/browser-support",
-                componentPath: "getting-started/BrowserSupport"
+                title: "For developers",
+                path: "/get-started/for-developers",
+                componentPath: "getting-started/ForDevelopers",
+                statusBadges: ["new"]
             },
             {
-                title: "Contributing",
-                path: "/getting-started/contributing",
-                componentPath: "getting-started/Contributing"
-            },
-            {
-                title: "JavaScript",
-                path: "/getting-started/javascript",
-                componentPath: "getting-started/Javascript"
+                title: "For designers",
+                path: "/get-started/for-designers",
+                componentPath: "getting-started/ForDesigners",
+                statusBadges: ["new"]
             }
         ]
     }

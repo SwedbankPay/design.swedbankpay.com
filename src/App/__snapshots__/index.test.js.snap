@@ -30,100 +30,169 @@ exports[`Main: App renders 1`] = `
       className="documentation"
     >
       <div
-        className="row"
+        className="d-md-flex"
       >
         <div
-          className="col-xxl-2 col-lg-3 d-none d-lg-block"
+          className="d-none d-lg-block"
         >
           <withRouter(SelectPanel)
             id="doc-sidebar"
+            newSidebar={true}
             routes={
               Array [
                 Object {
                   "appFolder": "GettingStarted",
-                  "path": "/getting-started",
-                  "redirect": "/getting-started/introduction",
+                  "icon": Object {
+                    "name": "wb_incandescent",
+                    "rotated": true,
+                  },
+                  "path": "/get-started",
+                  "redirect": "/get-started/introduction",
                   "routes": Array [
                     Object {
                       "componentPath": "getting-started/Introduction",
-                      "path": "/getting-started/introduction",
+                      "path": "/get-started/introduction",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
                       "title": "Introduction",
                     },
                     Object {
-                      "componentPath": "getting-started/BrowserSupport",
-                      "path": "/getting-started/browser-support",
-                      "title": "Browser Support",
+                      "componentPath": "getting-started/ForDevelopers",
+                      "path": "/get-started/for-developers",
+                      "statusBadges": Array [
+                        "new",
+                      ],
+                      "title": "For developers",
                     },
                     Object {
-                      "componentPath": "getting-started/Contributing",
-                      "path": "/getting-started/contributing",
-                      "title": "Contributing",
-                    },
-                    Object {
-                      "componentPath": "getting-started/Javascript",
-                      "path": "/getting-started/javascript",
-                      "title": "JavaScript",
+                      "componentPath": "getting-started/ForDesigners",
+                      "path": "/get-started/for-designers",
+                      "statusBadges": Array [
+                        "new",
+                      ],
+                      "title": "For designers",
                     },
                   ],
-                  "title": "Getting Started",
+                  "title": "Get started",
                 },
                 Object {
-                  "appFolder": "Core",
-                  "path": "/core",
-                  "redirect": "/core/color",
+                  "appFolder": "Identity",
+                  "icon": Object {
+                    "name": "palette",
+                  },
+                  "path": "/identity",
+                  "redirect": "/identity/identity",
                   "routes": Array [
                     Object {
-                      "componentPath": "core/Color",
-                      "path": "/core/color",
+                      "componentPath": "identity/Identity",
+                      "path": "/identity/identity",
+                      "statusBadges": Array [
+                        "new",
+                      ],
+                      "title": "Overview",
+                    },
+                    Object {
+                      "componentPath": "identity/Accessibility",
+                      "path": "/identity/accessibility",
+                      "statusBadges": Array [
+                        "new",
+                      ],
+                      "title": "Accessibility",
+                    },
+                    Object {
+                      "componentPath": "identity/Color",
+                      "path": "/identity/color",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
                       "title": "Color",
                     },
                     Object {
-                      "componentPath": "core/Logotype",
-                      "path": "/core/logotype",
+                      "componentPath": "identity/Copywriting",
+                      "path": "/identity/copywriting",
+                      "statusBadges": Array [
+                        "new",
+                      ],
+                      "title": "Copywriting",
+                    },
+                    Object {
+                      "componentPath": "identity/Grid",
+                      "path": "/identity/grid",
+                      "statusBadges": Array [
+                        "new",
+                      ],
+                      "title": "Grid",
+                    },
+                    Object {
+                      "componentPath": "identity/Iconography",
+                      "path": "/identity/iconography",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
+                      "title": "Iconography",
+                    },
+                    Object {
+                      "componentPath": "identity/Imagery",
+                      "path": "/identity/imagery",
+                      "statusBadges": Array [
+                        "new",
+                      ],
+                      "title": "Imagery",
+                    },
+                    Object {
+                      "componentPath": "identity/Logotype",
+                      "path": "/identity/logotype",
                       "statusBadges": Array [
                         "updated",
                       ],
                       "title": "Logotype",
                     },
                     Object {
-                      "componentPath": "core/Grid",
-                      "path": "/core/grid",
-                      "title": "Grid",
-                    },
-                    Object {
-                      "componentPath": "core/Iconography",
-                      "path": "/core/iconography",
-                      "title": "Iconography",
-                    },
-                    Object {
-                      "componentPath": "core/Page-layout",
-                      "path": "/core/page-layout",
+                      "componentPath": "identity/Page-layout",
+                      "path": "/identity/page-layout",
                       "title": "Page layout",
                     },
                     Object {
-                      "componentPath": "core/Typography",
-                      "path": "/core/typography",
+                      "componentPath": "identity/Spacing",
+                      "path": "/identity/spacing",
+                      "statusBadges": Array [
+                        "new",
+                      ],
+                      "title": "Spacing",
+                    },
+                    Object {
+                      "componentPath": "identity/Typography",
+                      "path": "/identity/typography",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
                       "title": "Typography",
                     },
                   ],
-                  "title": "Core",
+                  "title": "Identity",
                 },
                 Object {
                   "appFolder": "ComponentsDocumentation",
+                  "icon": Object {
+                    "name": "category",
+                  },
                   "path": "/components",
-                  "redirect": "/components/introduction",
+                  "redirect": "/components/components",
                   "routes": Array [
                     Object {
-                      "componentPath": "Introduction",
-                      "path": "/components/introduction",
-                      "title": "Introduction",
+                      "componentPath": "components/Components",
+                      "path": "/components/components",
+                      "statusBadges": Array [
+                        "new",
+                      ],
+                      "title": "Overview",
                     },
                     Object {
                       "componentPath": "components/Accordion",
                       "path": "/components/accordion",
                       "statusBadges": Array [
                         "javascript",
-                        "updated",
                       ],
                       "title": "Accordion",
                     },
@@ -187,7 +256,6 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/datepickers",
                       "statusBadges": Array [
                         "javascript",
-                        "updated",
                       ],
                       "title": "Datepickers",
                     },
@@ -212,7 +280,6 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/forms",
                       "statusBadges": Array [
                         "javascript",
-                        "updated",
                       ],
                       "title": "Forms",
                     },
@@ -224,9 +291,6 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "components/InputGroup",
                       "path": "/components/input-group",
-                      "statusBadges": Array [
-                        "updated",
-                      ],
                       "title": "Input Group",
                     },
                     Object {
@@ -270,9 +334,6 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "components/ProgressSteps",
                       "path": "/components/progress-steps",
-                      "statusBadges": Array [
-                        "updated",
-                      ],
                       "title": "Progress Steps",
                     },
                     Object {
@@ -295,17 +356,11 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "components/Slab",
                       "path": "/components/slab",
-                      "statusBadges": Array [
-                        "updated",
-                      ],
                       "title": "Slab",
                     },
                     Object {
                       "componentPath": "components/Status",
                       "path": "/components/status",
-                      "statusBadges": Array [
-                        "updated",
-                      ],
                       "title": "Status",
                     },
                     Object {
@@ -318,7 +373,6 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/tabs",
                       "statusBadges": Array [
                         "javascript",
-                        "updated",
                       ],
                       "title": "Tabs",
                     },
@@ -327,6 +381,7 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/toast",
                       "statusBadges": Array [
                         "javascript",
+                        "updated",
                       ],
                       "title": "Toast",
                     },
@@ -335,7 +390,6 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/tooltips",
                       "statusBadges": Array [
                         "javascript",
-                        "updated",
                       ],
                       "title": "Tooltips",
                     },
@@ -344,6 +398,7 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/topbar",
                       "statusBadges": Array [
                         "javascript",
+                        "updated",
                       ],
                       "title": "Topbar",
                     },
@@ -352,9 +407,20 @@ exports[`Main: App renders 1`] = `
                 },
                 Object {
                   "appFolder": "Utilities",
+                  "icon": Object {
+                    "name": "build",
+                  },
                   "path": "/utilities",
-                  "redirect": "/utilities/colors",
+                  "redirect": "/utilities/utilities",
                   "routes": Array [
+                    Object {
+                      "componentPath": "utilities/Utilities",
+                      "path": "/utilities/utilities",
+                      "statusBadges": Array [
+                        "new",
+                      ],
+                      "title": "Overview",
+                    },
                     Object {
                       "componentPath": "utilities/Borders",
                       "path": "/utilities/borders",
@@ -391,11 +457,6 @@ exports[`Main: App renders 1`] = `
                       "title": "Sizing",
                     },
                     Object {
-                      "componentPath": "utilities/Spacing",
-                      "path": "/utilities/spacing",
-                      "title": "Spacing",
-                    },
-                    Object {
                       "componentPath": "utilities/Text",
                       "path": "/utilities/text",
                       "title": "Text",
@@ -408,40 +469,12 @@ exports[`Main: App renders 1`] = `
                   ],
                   "title": "Utilities",
                 },
-                Object {
-                  "appFolder": "Resources",
-                  "path": "/resources",
-                  "redirect": "/resources/introduction",
-                  "routes": Array [
-                    Object {
-                      "componentPath": "Introduction",
-                      "path": "/resources/introduction",
-                      "title": "Introduction",
-                    },
-                    Object {
-                      "componentPath": "resources/images",
-                      "path": "/resources/images",
-                      "title": "Images",
-                    },
-                    Object {
-                      "componentPath": "resources/presentations",
-                      "path": "/resources/presentations",
-                      "title": "Presentations",
-                    },
-                    Object {
-                      "componentPath": "resources/typography",
-                      "path": "/resources/typography",
-                      "title": "Typography",
-                    },
-                  ],
-                  "title": "Resources",
-                },
               ]
             }
           />
         </div>
         <main
-          className="doc-view col-xxl-10 col-lg-9"
+          className="doc-view"
         >
           <Suspense
             fallback={<LoadingComponent />}
@@ -468,7 +501,7 @@ exports[`Main: App renders 1`] = `
                     "_status": -1,
                   }
                 }
-                path="/getting-started"
+                path="/get-started"
               />
               <Route
                 component={
@@ -490,7 +523,7 @@ exports[`Main: App renders 1`] = `
                     "_status": -1,
                   }
                 }
-                path="/core"
+                path="/identity"
               />
               <Route
                 component={
@@ -513,17 +546,6 @@ exports[`Main: App renders 1`] = `
                   }
                 }
                 path="/utilities"
-              />
-              <Route
-                component={
-                  Object {
-                    "$$typeof": Symbol(react.lazy),
-                    "_ctor": [Function],
-                    "_result": null,
-                    "_status": -1,
-                  }
-                }
-                path="/resources"
               />
               <Route
                 component={

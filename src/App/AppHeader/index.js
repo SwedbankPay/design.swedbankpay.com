@@ -21,7 +21,7 @@ const AppHeader = () => (
         </a>
         <nav className="topbar-nav">
             <div className="topbar-link-container">
-                <SelectPanel id="doc-topbar-sidebar" topbarId="dg-topbar" routes={routes} />
+                <SelectPanel id="doc-topbar-sidebar" topbarId="dg-topbar" newSidebar={false} routes={routes} />
             </div>
         </nav>
     </header>

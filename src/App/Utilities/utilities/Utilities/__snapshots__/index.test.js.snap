@@ -1,0 +1,239 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Utilities: Utilities MenuOverview renders 1`] = `
+<section
+  className="component-overview hide-arrow-icon"
+>
+  <Link
+    className="cards cards-primary cards-wide"
+    to="/utilities/borders"
+  >
+    <div
+      className="cards-content m-0"
+    >
+      <span
+        className="h3"
+      >
+        Borders
+      </span>
+      <span>
+        Set borders that suit your needs
+      </span>
+    </div>
+    <i
+      className="material-icons"
+    >
+      arrow_forward
+    </i>
+  </Link>
+  <Link
+    className="cards cards-primary cards-wide"
+    to="/utilities/breakpoints"
+  >
+    <div
+      className="cards-content m-0"
+    >
+      <span
+        className="h3"
+      >
+        Breakpoints
+      </span>
+      <span>
+        See our display breakpoints
+      </span>
+    </div>
+    <i
+      className="material-icons"
+    >
+      arrow_forward
+    </i>
+  </Link>
+  <Link
+    className="cards cards-primary cards-wide"
+    to="/utilities/colors"
+  >
+    <div
+      className="cards-content m-0"
+    >
+      <span
+        className="h3"
+      >
+        Colors
+      </span>
+      <span>
+        See our color utility classes
+      </span>
+    </div>
+    <i
+      className="material-icons"
+    >
+      arrow_forward
+    </i>
+  </Link>
+  <Link
+    className="cards cards-primary cards-wide"
+    to="/utilities/display"
+  >
+    <div
+      className="cards-content m-0"
+    >
+      <span
+        className="h3"
+      >
+        Display
+      </span>
+      <span>
+        See our display properties
+      </span>
+    </div>
+    <i
+      className="material-icons"
+    >
+      arrow_forward
+    </i>
+  </Link>
+  <Link
+    className="cards cards-primary cards-wide"
+    to="/utilities/flex"
+  >
+    <div
+      className="cards-content m-0"
+    >
+      <span
+        className="h3"
+      >
+        Flex
+      </span>
+      <span>
+        Layout, alignment and grid
+      </span>
+    </div>
+    <i
+      className="material-icons"
+    >
+      arrow_forward
+    </i>
+  </Link>
+  <Link
+    className="cards cards-primary cards-wide"
+    to="/utilities/images"
+  >
+    <div
+      className="cards-content m-0"
+    >
+      <span
+        className="h3"
+      >
+        Images
+      </span>
+      <span>
+        Modify how images are displayed
+      </span>
+    </div>
+    <i
+      className="material-icons"
+    >
+      arrow_forward
+    </i>
+  </Link>
+  <Link
+    className="cards cards-primary cards-wide"
+    to="/utilities/sizing"
+  >
+    <div
+      className="cards-content m-0"
+    >
+      <span
+        className="h3"
+      >
+        Sizing
+      </span>
+      <span>
+        Size according to your needs
+      </span>
+    </div>
+    <i
+      className="material-icons"
+    >
+      arrow_forward
+    </i>
+  </Link>
+  <Link
+    className="cards cards-primary cards-wide"
+    to="/utilities/spacing"
+  >
+    <div
+      className="cards-content m-0"
+    >
+      <span
+        className="h3"
+      >
+        Spacing
+      </span>
+      <span>
+        Responsive margin and padding
+      </span>
+    </div>
+    <i
+      className="material-icons"
+    >
+      arrow_forward
+    </i>
+  </Link>
+  <Link
+    className="cards cards-primary cards-wide"
+    to="/utilities/text"
+  >
+    <div
+      className="cards-content m-0"
+    >
+      <span
+        className="h3"
+      >
+        Text
+      </span>
+      <span>
+        Control wrapping, weight and more
+      </span>
+    </div>
+    <i
+      className="material-icons"
+    >
+      arrow_forward
+    </i>
+  </Link>
+  <Link
+    className="cards cards-primary cards-wide"
+    to="/utilities/visibility"
+  >
+    <div
+      className="cards-content m-0"
+    >
+      <span
+        className="h3"
+      >
+        Visibility
+      </span>
+      <span>
+        Control visibilities of display
+      </span>
+    </div>
+    <i
+      className="material-icons"
+    >
+      arrow_forward
+    </i>
+  </Link>
+</section>
+`;
+
+exports[`Utilities: Utilities renders 1`] = `
+<DocContainer>
+  <p
+    className="lead"
+  >
+    Utilities are simple CSS classes that can be used to streamline the process of applying general styling and to override a style already defined in the component CSS.
+  </p>
+  <MenuOverview />
+</DocContainer>
+`;

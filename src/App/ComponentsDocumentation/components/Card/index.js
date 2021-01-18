@@ -72,7 +72,7 @@ const OldCard = () => (
         </ComponentPreview>
         <h3>Card with grid</h3>
         <p>
-            Use our <Link to="/core/grid">grid</Link> along with cards to control their size and how they are displayed on different screen resolutions.
+            Use our grid along with cards to control their size and how they are displayed on different screen resolutions.
             Make sure to add <CodeTags type="secondary" code=".d-flex" /> to the wrapper if you want the cards to be of equal height when next to each other.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>

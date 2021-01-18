@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Resources: index renders 1`] = `
-<RenderPage
-  initPath="/resources/introduction"
-  path="/resources"
-/>
-`;

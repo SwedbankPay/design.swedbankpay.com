@@ -15,25 +15,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Fetch all history for all tags and branches
-        run: git fetch --prune --unshallow
-
       # Set brand specific variables
       - name: Environment variables
-        run: |
-          chmod +x ./.github/scripts/variables.sh
-          ./.github/scripts/variables.sh
-        env:
-          BRAND: ${{ matrix.brand }}
-
-      - name: Install GitVersion
-        uses: gittools/actions/gitversion/setup@v0.6.1
-        with:
-          versionSpec: '5.1.x'
-
-      - name: Use GitVersion
-        id: gitversion
-        uses: gittools/actions/gitversion/execute@v0.6.1
+        id: variables
+        run: ./.github/scripts/variables.sh --brand ${{ matrix.brand }} --ref ${{ github.ref }}
 
       - name: Set Node.js 12.x
         uses: actions/setup-node@master
@@ -52,7 +37,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run $BRAND_BUILD_SCRIPT -- --env.baseUrl="$BRAND_URL" --env.basename=${{ steps.gitversion.outputs.branchName }} --env.semver=${{ steps.gitversion.outputs.semVer }} --env.info_version=${{ steps.gitversion.outputs.informationalVersion }} --env.github_actions=true
+        run: npm run ${{ steps.variables.outputs.BUILD_SCRIPT }} -- --env.baseUrl="${{ steps.variables.outputs.BRAND_URL }}" --env.basename=${{ steps.variables.outputs.BRANCH }} --env.semver=${{ steps.variables.outputs.BRANCH }} --env.info_version=${{ steps.variables.outputs.VERSION }} --env.github_actions=true
 
       - name: Azure Login
         uses: azure/login@v1
@@ -63,4 +48,4 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
-            az storage blob upload-batch -s dist -d \$web --account-name ${{ matrix.brand }}designguide
+            az storage blob upload-batch -s dist -d \$web --account-name ${{ steps.variables.outputs.AZURE_ACCOUNT }}

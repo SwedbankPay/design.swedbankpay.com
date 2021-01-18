@@ -2,7 +2,7 @@
 
 exports[`ComponentsDocumentation: index renders 1`] = `
 <RenderPage
-  initPath="/components/introduction"
+  initPath="/components/components"
   path="/components"
 />
 `;

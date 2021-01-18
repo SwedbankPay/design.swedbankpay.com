@@ -31,13 +31,7 @@ exports[`Documentation: Card OldCard renders 1`] = `
     Card with grid
   </h3>
   <p>
-    Use our 
-    <Link
-      to="/core/grid"
-    >
-      grid
-    </Link>
-     along with cards to control their size and how they are displayed on different screen resolutions. Make sure to add 
+    Use our grid along with cards to control their size and how they are displayed on different screen resolutions. Make sure to add 
     <CodeTags
       code=".d-flex"
       type="secondary"

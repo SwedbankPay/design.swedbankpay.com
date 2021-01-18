@@ -219,3 +219,370 @@
         }
     }
 }
+
+.sidebar-2 {
+    display: flex;
+    height: 100vh;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    background-color: @white;
+
+    &.has-secondary-nav {
+        padding-right: 18.375rem;
+
+        .sidebar-main-nav {
+            box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+
+            &:before {
+                display: block;
+            }
+        }
+    }
+
+    .sidebar-main-nav {
+        border-top: 0.375rem solid @brand-primary;
+        position: relative;
+        padding: 2rem 1rem 0;
+        z-index: 1;
+
+        &:before {
+            content: "";
+            display: none;
+            height: 0.375rem;
+            width: 18.375rem;
+            position: absolute;
+            top: -0.375rem;
+            left: 100%;
+            background-color: @brand-primary;
+        }
+
+        .sidebar-logo {
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-nav-ul {
+            list-style: none;
+            padding: 3rem 0 0;
+
+            .main-nav-li {
+                > a {
+                    font-weight: @font-weight-bold;
+                    font-size: 0.625rem;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin: 1.5rem 0;
+                    cursor: pointer;
+                    text-decoration: none;
+                    color: @brand-secondary;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        height: 100%;
+                        left: -1rem;
+                        top: 0;
+                        width: 0;
+                        background-color: @brand-secondary-light-1;
+                        border-top-right-radius: 0.5rem;
+                        border-bottom-right-radius: 0.5rem;
+                        transition: width 0.2s ease-in-out;
+                    }
+
+                    &:hover {
+                        &:before {
+                            width: 0.25rem;
+                        }
+                    }
+
+                    .material-icons-outlined {
+                        font-size: 2rem;
+
+                        &.rotated {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+
+                &.active {
+                    > a {
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            height: 100%;
+                            left: -1rem;
+                            top: 0;
+                            width: 0.25rem;
+                            background-color: @brand-secondary;
+                            border-top-right-radius: 0.5rem;
+                            border-bottom-right-radius: 0.5rem;
+                        }
+                    }
+
+                    .sidebar-secondary-nav {
+                        display: block;
+                    }
+                }
+
+                .sidebar-secondary-nav {
+                    display: none;
+                    padding: 2rem;
+                    height: 100%;
+                    width: 18.375rem;
+                    overflow-y: auto;
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+
+                    &::-webkit-scrollbar {
+                        width: 0.25rem;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        border-radius: 0.5rem;
+                        background-color: @brand-secondary-light-1;
+                    }
+
+                    .tertiary-nav-header {
+                        display: flex;
+                        align-items: center;
+
+                        > i {
+                            margin-right: 0.5rem;
+                        }
+                    }
+
+                    .secondary-nav-header,
+                    .tertiary-nav-header {
+                        font-family: @brand-black;
+                        font-size: 1.5rem;
+                    }
+
+                    .secondary-nav-ul {
+                        list-style: none;
+                        padding-inline-start: 0;
+
+                        .secondary-nav-li {
+                            margin: 0.5rem 0;
+
+                            &.leaf {
+                                > a {
+                                    &:hover {
+                                        &:after {
+                                            content: "chevron_right";
+                                            .material-icons-styling();
+
+                                            margin-left: auto;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.group {
+                                > a {
+                                    &:hover {
+                                        &:after {
+                                            content: "expand_more";
+                                            .material-icons-styling();
+
+                                            margin-left: auto;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.active {
+                                &.leaf {
+                                    > a {
+                                        &:after {
+                                            content: "chevron_right";
+                                            .material-icons-styling();
+
+                                            margin-left: auto;
+                                        }
+                                    }
+                                }
+
+                                &.group {
+                                    > a {
+                                        &:after {
+                                            content: none;
+                                        }
+                                    }
+
+                                    .tertiary-nav-ul {
+                                        max-height: 1500px;
+                                    }
+                                }
+
+                                > a {
+                                    font-weight: @font-weight-bold;
+                                }
+                            }
+
+                            > a {
+                                display: flex;
+                                align-items: center;
+                                //justify-content: space-between;
+                                padding: 0.5rem 0;
+                                text-decoration: none;
+                                color: @brand-secondary;
+
+                                &:hover {
+                                    font-weight: @font-weight-bold;
+                                }
+
+                                > i {
+                                    margin-right: 0.5rem;
+                                }
+                            }
+
+                            .tertiary-nav-ul,
+                            .quaternary-nav-ul {
+                                max-height: 0;
+                                list-style: none;
+                                overflow: hidden;
+                                padding-inline-start: 0;
+                                transition: max-height 0.5s ease-in-out;
+
+                                .nav-leaf {
+                                    position: relative;
+                                    display: flex;
+                                    align-items: center;
+                                    min-height: 2.5rem;
+
+                                    &:before {
+                                        content: "";
+                                        position: absolute;
+                                        height: 100%;
+                                        width: 0.125rem;
+                                        left: 0;
+                                        top: 0;
+                                        background-color: @brand-bg-gray;
+                                    }
+
+                                    &.active,
+                                    &:hover {
+                                        &:before {
+                                            background-color: @brand-secondary;
+                                        }
+
+                                        a {
+                                            font-weight: @font-weight-bold;
+                                        }
+                                    }
+
+                                    a {
+                                        color: @brand-secondary;
+                                        text-decoration: none;
+                                        padding: 0.625rem 0 0.625rem 1.75rem;
+                                        width: 100%;
+                                        height: 100%;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.extended-sidebar {
+                            .secondary-nav-li {
+                                margin: 0.5rem 0;
+
+                                &.active {
+                                    .tertiary-nav-ul {
+                                        right: 0;
+                                        margin-right: 0;
+                                        transition: right 0.3s;
+                                    }
+                                }
+
+                                &.group {
+                                    > a {
+                                        &:hover {
+                                            &:after {
+                                                content: "chevron_right";
+                                                .material-icons-styling();
+
+                                                margin-left: auto;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .tertiary-nav-ul {
+                                background-color: @white;
+                                position: absolute;
+                                top: 0;
+                                right: -220px;
+                                margin-right: 520px;
+                                height: 100%;
+                                width: 100%;
+                                padding: 2rem;
+                                transition: 0.3s linear;
+
+                                a {
+                                    color: @brand-secondary;
+                                }
+                            }
+
+                            .tertiary-nav-li {
+                                margin: 0.5rem 0;
+                                list-style: none;
+
+                                a {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    padding: 0.5rem 0;
+                                    text-decoration: none;
+                                    color: @brand-secondary;
+
+                                    &:hover {
+                                        font-weight: @font-weight-bold;
+                                    }
+                                }
+
+                                &.leaf {
+                                    > a {
+                                        &:hover {
+                                            &:after {
+                                                content: "chevron_right";
+                                                .material-icons-styling();
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &.group {
+                                    > a {
+                                        &:hover {
+                                            &:after {
+                                                content: "expand_more";
+                                                .material-icons-styling();
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &.active {
+                                    .quaternary-nav-ul {
+                                        max-height: 1500px;
+                                    }
+
+                                    > a {
+                                        font-weight: @font-weight-bold;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

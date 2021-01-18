@@ -1,0 +1,402 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Core: Color BackgroundColors renders 1`] = `
+<section>
+  <h2
+    id="background-colors"
+  >
+    Background colors
+  </h2>
+  <p>
+    Apricot is our primary background color. Light gray and light turquoise are secondary. 
+  </p>
+  <div
+    className="color-group"
+  >
+    <ColorDisplay
+      hex="#FBF2EA"
+      key="0"
+      rgb="251, 241, 234"
+    />
+    <ColorDisplay
+      hex="#F9F8F6"
+      key="1"
+      rgb="249, 248, 246"
+    />
+    <ColorDisplay
+      hex="#EBF8F2"
+      key="2"
+      rgb="235, 248, 242"
+    />
+  </div>
+</section>
+`;
+
+exports[`Core: Color BrownScaleColors renders 1`] = `
+<section>
+  <h2
+    id="brown-scale-colors"
+  >
+    Brown scale colors
+  </h2>
+  <p>
+    The brown scale colors are primarily used for borders and backgrounds. These colors cannot be used as text colors. 
+  </p>
+  <div
+    className="color-group"
+  >
+    <ColorDisplay
+      fontColor="font-white"
+      hex="#2F2424"
+      key="0"
+      rgb="47, 36, 36"
+    />
+    <ColorDisplay
+      fontColor="font-white"
+      hex="#493C3B"
+      key="1"
+      rgb="73, 60, 59"
+    />
+    <ColorDisplay
+      fontColor="font-white"
+      hex="#72605E"
+      key="2"
+      rgb="114, 96, 94"
+    />
+    <ColorDisplay
+      fontColor="#222222"
+      hex="#A38B80"
+      key="3"
+      rgb="163, 139, 128"
+    />
+    <ColorDisplay
+      hex="#D4C4BC"
+      key="4"
+      rgb="212, 196, 188"
+    />
+  </div>
+</section>
+`;
+
+exports[`Core: Color ButtonColors renders 1`] = `
+<section>
+  <h2
+    id="buttons-colors"
+  >
+    Button colors
+  </h2>
+  <p>
+    Our primary buttons are yellow and our secondary buttons are brown. Go to Buttons to see and interact with all buttons. 
+  </p>
+  <div
+    className="color-group"
+  >
+    <ColorDisplay
+      hex="#FDC129"
+      key="0"
+      rgb="253, 193, 41"
+    />
+    <ColorDisplay
+      fontColor="font-white"
+      hex="#512B2B"
+      key="1"
+      rgb="81, 43, 43"
+    />
+    <ColorDisplay
+      border="black"
+      hex="#FFFFFF"
+      key="2"
+      rgb="255, 255, 255"
+    />
+  </div>
+</section>
+`;
+
+exports[`Core: Color CommunicationColors renders 1`] = `
+<section>
+  <h2
+    id="communication-colors"
+  >
+    Communication colors
+  </h2>
+  <p>
+    Yellow is used on backgrounds, in main graphical elements and on underlines for highlighting relevant parts of a message. When the yellow is used as a background choose the white text version of the logotype.
+  </p>
+  <div
+    className="color-group communication-colors justify-content-between"
+  >
+    <ColorDisplay
+      hex="#FDC129"
+      key="0"
+      rgb="253, 193, 41"
+    />
+    <ColorDisplay
+      border="black"
+      hex="#FFFFFF"
+      key="1"
+      rgb="255, 255, 255"
+    />
+  </div>
+</section>
+`;
+
+exports[`Core: Color ComplementaryColors renders 1`] = `
+<section>
+  <h2
+    id="complementary-colors"
+  >
+    Complementary colors
+  </h2>
+  <p>
+    Can be used for decorative elements in combination with corresponding background colors. These colors cannot be used as text colors. 
+  </p>
+  <div
+    className="color-group"
+  >
+    <ColorDisplay
+      hex="#8ACDC3"
+      key="0"
+      rgb="138, 205, 195"
+    />
+    <ColorDisplay
+      hex="#EFB7B6"
+      key="1"
+      rgb="239, 183, 182"
+    />
+  </div>
+</section>
+`;
+
+exports[`Core: Color GrayScaleColors renders 1`] = `
+<section>
+  <h2
+    id="gray-scale-colors"
+  >
+    Gray scale colors
+  </h2>
+  <div
+    className="color-group"
+  >
+    <ColorDisplay
+      fontColor="font-white"
+      hex="#222222"
+      key="0"
+      rgb="34, 34, 34"
+    />
+    <ColorDisplay
+      fontColor="font-white"
+      hex="#999999"
+      key="1"
+      rgb="153, 153, 153"
+    />
+    <ColorDisplay
+      hex="#F9F8F6"
+      key="2"
+      rgb="249, 248, 246"
+    />
+    <ColorDisplay
+      border="black"
+      hex="#FFFFFF"
+      key="3"
+      rgb="255, 255, 255"
+    />
+  </div>
+</section>
+`;
+
+exports[`Core: Color Lead renders 1`] = `
+<section>
+  <p
+    className="lead"
+  >
+    To give a unified appearance and effectively create visual recognition, the communication color of Swedbank Pay is yellow. Yellow is an energetic and vibrant color that matches the brand of Swedbank Pay. In complement to this, Swedbank Pay uses a selection of colors from Swedbank’s color palette.
+  </p>
+  <div
+    className="d-flex flex-column align-items-center mt-5"
+  >
+    <img
+      alt="The Swedbank Pay color palette"
+      className="w-100"
+      src="/TEST/img/documentation/colors/color-palette.png"
+    />
+    <span
+      className="caption-text"
+    >
+      <span
+        className="font-weight-bold"
+      >
+        Figure 1.
+      </span>
+       The Swedbank Pay color palette
+    </span>
+  </div>
+</section>
+`;
+
+exports[`Core: Color MainColors renders 1`] = `
+<section>
+  <h2
+    id="main-colors"
+  >
+    Main colors
+  </h2>
+  <p>
+    Our main color palette.
+  </p>
+  <div
+    className="color-group flex-wrap"
+  >
+    <ColorDisplay
+      hex="#2DA944"
+      key="0"
+      name="Primary"
+      rgb="45, 169, 68"
+    />
+    <ColorDisplay
+      fontColor="#FFFFFF"
+      hex="#3C3C3C"
+      key="1"
+      name="Secondary"
+      rgb="60, 60, 60"
+    />
+    <ColorDisplay
+      hex="#266C9A"
+      key="2"
+      name="Info"
+      rgb="38, 108, 154"
+    />
+    <ColorDisplay
+      hex="#2DA944"
+      key="3"
+      name="Success"
+      rgb="45, 169, 68"
+    />
+    <ColorDisplay
+      hex="#FF9F00"
+      key="4"
+      name="Warning"
+      rgb="255, 159, 0"
+    />
+    <ColorDisplay
+      hex="#CD2E00"
+      key="5"
+      name="Error"
+      rgb="205, 46, 0"
+    />
+  </div>
+</section>
+`;
+
+exports[`Core: Color SystemColors renders 1`] = `
+<section>
+  <h2
+    id="system-colors"
+  >
+    System colors
+  </h2>
+  <p>
+    We have four primary system colors (red, blue, green, and yellow) which all have a lighter complementary version as well. 
+  </p>
+  <div
+    className="color-group"
+  >
+    <ColorDisplay
+      fontColor="font-white"
+      hex="#C5131C"
+      key="0"
+      rgb="197, 19, 28"
+    />
+    <ColorDisplay
+      fontColor="font-white"
+      hex="#E07088"
+      key="1"
+      rgb="224, 112, 136"
+    />
+    <ColorDisplay
+      hex="#F9DED3"
+      key="2"
+      rgb="249, 222, 211"
+    />
+    <ColorDisplay
+      fontColor="font-white"
+      hex="#4572C0"
+      key="3"
+      rgb="69, 114, 192"
+    />
+    <ColorDisplay
+      hex="#E8EFF9"
+      key="4"
+      rgb="232, 239, 249"
+    />
+    <ColorDisplay
+      fontColor="font-white"
+      hex="#51971B"
+      key="5"
+      rgb="81, 151, 27"
+    />
+    <ColorDisplay
+      hex="#99CC66"
+      key="6"
+      rgb="153, 204, 102"
+    />
+    <ColorDisplay
+      hex="#F2F7EB"
+      key="7"
+      rgb="242, 24, 235"
+    />
+    <ColorDisplay
+      hex="#F9CE22"
+      key="8"
+      rgb="249, 206, 34"
+    />
+    <ColorDisplay
+      hex="#FFF3D5"
+      key="9"
+      rgb="255, 243, 213"
+    />
+  </div>
+</section>
+`;
+
+exports[`Core: Color TextColors renders 1`] = `
+<section>
+  <h2
+    id="text-colors"
+  >
+    Text colors
+  </h2>
+  <p>
+    Brown is our primary text color that should be used for all text besides link and text on dark backgrounds and images. For links, use turquoise and for dark backgrounds/images use white. Gray is used for smaller text that has to be presented in the interface but we don’t want to be the primary focus. 
+  </p>
+  <div
+    className="color-group"
+  >
+    <ColorDisplay
+      fontColor="font-white"
+      hex="#512B2B"
+      key="0"
+      rgb="81,43,43"
+    />
+    <ColorDisplay
+      fontColor="font-white"
+      hex="#257886"
+      key="1"
+      rgb="37, 119, 134"
+    />
+    <ColorDisplay
+      border="black"
+      hex="#FFFFFF"
+      key="2"
+      rgb="255, 255, 255"
+    />
+    <ColorDisplay
+      fontColor="font-white"
+      hex="#696969"
+      key="3"
+      rgb="105, 105, 105"
+    />
+  </div>
+</section>
+`;
+
+exports[`Core: Color renders 1`] = `<Fragment />`;

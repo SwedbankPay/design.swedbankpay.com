@@ -353,6 +353,46 @@ module.exports = (env, argv) => {
                                 destination: `./dist${basename}img/documentation/cards`
                             },
                             {
+                                source: `./src/img/${brand}/documentation/accessibility/*.svg`,
+                                destination: `./dist${basename}img/documentation/accessibility`
+                            },
+                            {
+                                source: `./src/img/${brand}/documentation/imagery/*.svg`,
+                                destination: `./dist${basename}img/documentation/imagery`
+                            },
+                            {
+                                source: `./src/img/${brand}/documentation/spacing/*.svg`,
+                                destination: `./dist${basename}img/documentation/spacing`
+                            },
+                            {
+                                source: `./src/img/${brand}/documentation/copywriting/*.png`,
+                                destination: `./dist${basename}img/documentation/copywriting`
+                            },
+                            {
+                                source: `./src/img/${brand}/documentation/grid/*.png`,
+                                destination: `./dist${basename}img/documentation/grid`
+                            },
+                            {
+                                source: `./src/img/${brand}/documentation/colors/*.png`,
+                                destination: `./dist${basename}img/documentation/colors`
+                            },
+                            {
+                                source: `./src/img/${brand}/documentation/introduction/*.png`,
+                                destination: `./dist${basename}img/documentation/introduction`
+                            },
+                            {
+                                source: `./src/img/${brand}/documentation/forDevelopers/*.png`,
+                                destination: `./dist${basename}img/documentation/forDevelopers`
+                            },
+                            {
+                                source: `./src/img/${brand}/documentation/forDesigners/*.png`,
+                                destination: `./dist${basename}img/documentation/forDesigners`
+                            },
+                            {
+                                source: "./src/img/background/*.svg",
+                                destination: `./dist${basename}img/background`
+                            },
+                            {
                                 source: "./src/assets/logos/*.zip",
                                 destination: `./dist${basename}release/logos`
                             },
