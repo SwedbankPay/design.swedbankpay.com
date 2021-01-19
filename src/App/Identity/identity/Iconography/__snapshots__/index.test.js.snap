@@ -2,7 +2,9 @@
 
 exports[`Core: Iconography CardIcons renders 1`] = `
 <section>
-  <h2>
+  <h2
+    id="card-icons"
+  >
     Card icons
   </h2>
   <p>
@@ -25,7 +27,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr
+        key="payment-card"
+      >
         <td>
           <IconPreview
             name="payment-card"
@@ -42,7 +46,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="amex"
+      >
         <td>
           <IconPreview
             name="amex"
@@ -50,7 +56,7 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
         <td>
-          American Express
+          American Expres
         </td>
         <td>
           <CodeTags
@@ -59,7 +65,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="bank-axept"
+      >
         <td>
           <IconPreview
             name="bank-axept"
@@ -76,7 +84,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="coop"
+      >
         <td>
           <IconPreview
             name="coop"
@@ -93,7 +103,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="dankort"
+      >
         <td>
           <IconPreview
             name="dankort"
@@ -110,7 +122,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="diners"
+      >
         <td>
           <IconPreview
             name="diners"
@@ -127,24 +141,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
-        <td>
-          <IconPreview
-            name="finax"
-            type="payment-icon"
-          />
-        </td>
-        <td>
-          Finax
-        </td>
-        <td>
-          <CodeTags
-            code="finax"
-            type="secondary"
-          />
-        </td>
-      </tr>
-      <tr>
+      <tr
+        key="forbrugsforeningen"
+      >
         <td>
           <IconPreview
             name="forbrugsforeningen"
@@ -161,7 +160,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="ica"
+      >
         <td>
           <IconPreview
             name="ica"
@@ -178,7 +179,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="ica-banken"
+      >
         <td>
           <IconPreview
             name="ica-banken"
@@ -195,7 +198,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="ikano-bank"
+      >
         <td>
           <IconPreview
             name="ikano-bank"
@@ -212,7 +217,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="jcb"
+      >
         <td>
           <IconPreview
             name="jcb"
@@ -229,7 +236,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="lindex"
+      >
         <td>
           <IconPreview
             name="lindex"
@@ -246,7 +255,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="maestro"
+      >
         <td>
           <IconPreview
             name="maestro"
@@ -263,7 +274,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="mastercard"
+      >
         <td>
           <IconPreview
             name="mastercard"
@@ -280,7 +293,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="visa"
+      >
         <td>
           <IconPreview
             name="visa"
@@ -304,7 +319,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
 
 exports[`Core: Iconography Flags renders 1`] = `
 <section>
-  <h2>
+  <h2
+    id="flags"
+  >
     Flags
   </h2>
   <p>
@@ -341,7 +358,9 @@ exports[`Core: Iconography Flags renders 1`] = `
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr
+        key="no"
+      >
         <td>
           <IconPreview
             name="no"
@@ -359,7 +378,9 @@ exports[`Core: Iconography Flags renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="se"
+      >
         <td>
           <IconPreview
             name="se"
@@ -377,7 +398,9 @@ exports[`Core: Iconography Flags renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="dk"
+      >
         <td>
           <IconPreview
             name="dk"
@@ -395,7 +418,9 @@ exports[`Core: Iconography Flags renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="fi"
+      >
         <td>
           <IconPreview
             name="fi"
@@ -413,7 +438,9 @@ exports[`Core: Iconography Flags renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="eu"
+      >
         <td>
           <IconPreview
             name="eu"
@@ -633,7 +660,9 @@ exports[`Core: Iconography Flags renders 1`] = `
 
 exports[`Core: Iconography MaterialIcons renders 1`] = `
 <section>
-  <h2>
+  <h2
+    id="material-rounded-icons"
+  >
     Material Rounded Icons
   </h2>
   <p
@@ -746,7 +775,9 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
 
 exports[`Core: Iconography PaymentIcons renders 1`] = `
 <section>
-  <h2>
+  <h2
+    id="payment-icons"
+  >
     Payment icons
   </h2>
   <p>
@@ -769,7 +800,9 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr
+        key="viabill"
+      >
         <td>
           <IconPreview
             name="viabill"
@@ -787,7 +820,9 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="vipps"
+      >
         <td>
           <IconPreview
             name="vipps"
@@ -805,7 +840,9 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="swish"
+      >
         <td>
           <IconPreview
             name="swish"
@@ -823,7 +860,9 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="mobilpay"
+      >
         <td>
           <IconPreview
             name="mobilpay"
@@ -841,7 +880,9 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="carpay"
+      >
         <td>
           <IconPreview
             name="carpay"
@@ -859,7 +900,9 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="trustly"
+      >
         <td>
           <IconPreview
             name="trustly"

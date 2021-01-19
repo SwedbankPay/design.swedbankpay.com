@@ -85,7 +85,7 @@ export const paymentIcons = [
     {
         title: "Trustly",
         code: "trustly"
-    },
+    }
 ];
 
 export const flags = [

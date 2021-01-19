@@ -65,6 +65,7 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://www.funka.com/design-for-alla/lagar-och-regler/"
+    key="https://www.funka.com/design-for-alla/lagar-och-regler/"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -83,6 +84,7 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://www.funka.com/en/design-for-all/accessibility/web-accessibility-directive-norway-is-facing-a-choice/"
+    key="https://www.funka.com/en/design-for-all/accessibility/web-accessibility-directive-norway-is-facing-a-choice/"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -95,12 +97,13 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
     <span
       className="mr-2"
     >
-       Funka.com – Web accessibility directive: Norway is facing a choice
+      Funka.com – Web accessibility directive: Norway is facing a choice
     </span>
   </a>
   <a
     className="icon-link d-flex"
     href="https://medium.com/confrere/its-illegal-to-have-an-inaccessible-website-in-norway-and-that-s-good-news-for-all-of-us-b59a9e929d54"
+    key="https://medium.com/confrere/its-illegal-to-have-an-inaccessible-website-in-norway-and-that-s-good-news-for-all-of-us-b59a9e929d54"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -122,6 +125,7 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://www.swedbank.com/sv/hallbarhet/ansvarsfulla-affarer/betala.html"
+    key="https://www.swedbank.com/sv/hallbarhet/ansvarsfulla-affarer/betala.html"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -134,12 +138,13 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
     <span
       className="mr-2"
     >
-      Swedbank – Ansvarsfulla affärer 
+      Swedbank – Ansvarsfulla affärer
     </span>
   </a>
   <a
     className="icon-link d-flex"
     href="https://polaris.shopify.com/foundations/accessibility"
+    key="https://polaris.shopify.com/foundations/accessibility"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -158,6 +163,7 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://material.io/design/usability/accessibility.html"
+    key="https://material.io/design/usability/accessibility.html"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -176,6 +182,7 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="http://www.lightningdesignsystem.com/accessibility/overview/"
+    key="http://www.lightningdesignsystem.com/accessibility/overview/"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -194,6 +201,7 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://spotify.design/article/spotify-inclusive-design-global-accessibility-awareness-day-round-up"
+    key="https://spotify.design/article/spotify-inclusive-design-global-accessibility-awareness-day-round-up"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -206,7 +214,7 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
     <span
       className="mr-2"
     >
-      Spotify – Inclusive design global accessibility awareness day round up 
+      Spotify – Inclusive design global accessibility awareness day round up
     </span>
   </a>
 </section>
