@@ -1,4 +1,5 @@
 import React from "react";
+import * as tableData from "./table-list";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import IconPreview from "@components/IconPreview";
@@ -6,7 +7,7 @@ import CodeTags from "@components/CodeTags";
 
 const MaterialIcons = () => (
     <section>
-        <h2>Material Rounded Icons</h2>
+        <h2 id="material-rounded-icons">Material Rounded Icons</h2>
         <p className="mb-0">We primarily use the version called Rounded in the Material icons. To aviod a to heavy look, we strive to look for outlined icons. If an icon isn’t available as outlined or filled we can search for it in the Outlined category aswell. For a full overview of the available icons, please, visit the Material.io. </p>
 
         <a href="https://material.io/resources/icons/?style=round" className="icon-link" target="_blank" rel="noopener noreferrer">
@@ -35,7 +36,7 @@ const MaterialIcons = () => (
 
 const CardIcons = () => (
     <section>
-        <h2>Card icons</h2>
+        <h2 id="card-icons">Card icons</h2>
         <p>Card icons are typically used to show users which card providers that are available. The payment-card icon can be used as a placeholder and/or when the card is not recognized. </p>
         <table className="table table-plain">
             <thead>
@@ -46,86 +47,13 @@ const CardIcons = () => (
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td><IconPreview type="payment-icon" name="payment-card" /></td>
-                    <td>Payment card</td>
-                    <td><CodeTags type="secondary" code="payment-card"/></td>
-                </tr>
-                <tr>
-                    <td><IconPreview type="payment-icon" name="amex" /></td>
-                    <td>American Express</td>
-                    <td><CodeTags type="secondary" code="amex"/></td>
-                </tr>
-                <tr>
-                    <td><IconPreview type="payment-icon" name="bank-axept" /></td>
-                    <td>Bank Accept</td>
-                    <td><CodeTags type="secondary" code="bank-axept"/></td>
-                </tr>
-                <tr>
-                    <td><IconPreview type="payment-icon" name="coop" /></td>
-                    <td>Coop</td>
-                    <td><CodeTags type="secondary" code="coop"/></td>
-                </tr>
-                <tr>
-                    <td><IconPreview type="payment-icon" name="dankort" /></td>
-                    <td>Dankort</td>
-                    <td><CodeTags type="secondary" code="dankort"/></td>
-                </tr>
-                <tr>
-                    <td><IconPreview type="payment-icon" name="diners" /></td>
-                    <td>Diners Club</td>
-                    <td><CodeTags type="secondary" code="diners"/></td>
-                </tr>
-                <tr>
-                    <td><IconPreview type="payment-icon" name="finax" /></td>
-                    <td>Finax</td>
-                    <td><CodeTags type="secondary" code="finax"/></td>
-                </tr>
-                <tr>
-                    <td><IconPreview type="payment-icon" name="forbrugsforeningen" /></td>
-                    <td>Forbrugsforeningen</td>
-                    <td><CodeTags type="secondary" code="forbrugsforeningen"/></td>
-                </tr>
-                <tr>
-                    <td><IconPreview type="payment-icon" name="ica" /></td>
-                    <td>ICA</td>
-                    <td><CodeTags type="secondary" code="ica"/></td>
-                </tr>
-                <tr>
-                    <td><IconPreview type="payment-icon" name="ica-banken" /></td>
-                    <td>ICA Banken</td>
-                    <td><CodeTags type="secondary" code="ica-banken"/></td>
-                </tr>
-                <tr>
-                    <td><IconPreview type="payment-icon" name="ikano-bank" /></td>
-                    <td>Ikano Bank</td>
-                    <td><CodeTags type="secondary" code="ikano-bank"/></td>
-                </tr>
-                <tr>
-                    <td><IconPreview type="payment-icon" name="jcb" /></td>
-                    <td>JCB</td>
-                    <td><CodeTags type="secondary" code="jcb"/></td>
-                </tr>
-                <tr>
-                    <td><IconPreview type="payment-icon" name="lindex" /></td>
-                    <td>Lindex</td>
-                    <td><CodeTags type="secondary" code="lindex"/></td>
-                </tr>
-                <tr>
-                    <td><IconPreview type="payment-icon" name="maestro" /></td>
-                    <td>Maestro</td>
-                    <td><CodeTags type="secondary" code="maestro"/></td>
-                </tr>
-                <tr>
-                    <td><IconPreview type="payment-icon" name="mastercard" /></td>
-                    <td>Mastercard</td>
-                    <td><CodeTags type="secondary" code="mastercard"/></td>
-                </tr>
-                <tr>
-                    <td><IconPreview type="payment-icon" name="visa" /></td>
-                    <td>Visa</td>
-                    <td><CodeTags type="secondary" code="visa"/></td>
-                </tr>
+                {tableData.cardIcons.map(icon => (
+                    <tr key={icon.code}>
+                        <td><IconPreview type="payment-icon" name={icon.code} /></td>
+                        <td>{icon.title}</td>
+                        <td><CodeTags type="secondary" code={icon.code}/></td>
+                    </tr>
+                ))}
             </tbody>
         </table>
     </section>
@@ -133,7 +61,7 @@ const CardIcons = () => (
 
 const PaymentIcons = () => (
     <section>
-        <h2>Payment icons</h2>
+        <h2 id="payment-icons">Payment icons</h2>
         <p>Below is a list of payment icons that we use in our products. Be mindful when using payment logotypes. Try to make the payment icon feel more secondary in combination with the Swedbank Pay logotype. We always want the Swedbank Pay logotype to be primary.</p>
 
         <table className="table table-plain">
@@ -145,36 +73,13 @@ const PaymentIcons = () => (
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td><IconPreview type="payment-icon" name="viabill" size="large" /></td>
-                    <td>Viabill</td>
-                    <td><CodeTags type="secondary" code="viabill"/></td>
-                </tr>
-                <tr>
-                    <td><IconPreview type="payment-icon" name="vipps" size="large" /></td>
-                    <td>Vipps</td>
-                    <td><CodeTags type="secondary" code="vipps"/></td>
-                </tr>
-                <tr>
-                    <td><IconPreview type="payment-icon" name="swish" size="large" /></td>
-                    <td>Swish</td>
-                    <td><CodeTags type="secondary" code="swish"/></td>
-                </tr>
-                <tr>
-                    <td><IconPreview type="payment-icon" name="mobilpay" size="large" /></td>
-                    <td>MobilPay</td>
-                    <td><CodeTags type="secondary" code="mobilpay"/></td>
-                </tr>
-                <tr>
-                    <td><IconPreview type="payment-icon" name="carpay" size="large" /></td>
-                    <td>CarPay</td>
-                    <td><CodeTags type="secondary" code="carpay"/></td>
-                </tr>
-                <tr>
-                    <td><IconPreview type="payment-icon" name="trustly" size="large" /></td>
-                    <td>Trustly</td>
-                    <td><CodeTags type="secondary" code="trustly"/></td>
-                </tr>
+                {tableData.paymentIcons.map(icon => (
+                    <tr key={icon.code}>
+                        <td><IconPreview type="payment-icon" name={icon.code} size="large"/></td>
+                        <td>{icon.title}</td>
+                        <td><CodeTags type="secondary" code={icon.code}/></td>
+                    </tr>
+                ))}
             </tbody>
         </table>
     </section>
@@ -182,7 +87,7 @@ const PaymentIcons = () => (
 
 const Flags = () => (
     <section>
-        <h2>Flags</h2>
+        <h2 id="flags">Flags</h2>
         <p>Below is a list of flag icons that we use in our system, To use the flag icons add the classes <CodeTags type="secondary" code=".flag-icon"/> and  <CodeTags type="secondary" code=".flag-icon-xx"/>  (where xx is the ISO_3166-1-alpha-2-code of a country) to an empty <CodeTags type="secondary" code="<i>"/></p>
         <table className="table table-plain">
             <thead>
@@ -193,31 +98,13 @@ const Flags = () => (
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td><IconPreview type="flag-icon" name="no" size="medium" /></td>
-                    <td>Norway</td>
-                    <td><CodeTags type="secondary" code="no"/></td>
-                </tr>
-                <tr>
-                    <td><IconPreview type="flag-icon" name="se" size="medium" /></td>
-                    <td>Sweden</td>
-                    <td><CodeTags type="secondary" code="se"/></td>
-                </tr>
-                <tr>
-                    <td><IconPreview type="flag-icon" name="dk" size="medium" /></td>
-                    <td>Denmark</td>
-                    <td><CodeTags type="secondary" code="dk"/></td>
-                </tr>
-                <tr>
-                    <td><IconPreview type="flag-icon" name="fi" size="medium" /></td>
-                    <td>Finland</td>
-                    <td><CodeTags type="secondary" code="fi"/></td>
-                </tr>
-                <tr>
-                    <td><IconPreview type="flag-icon" name="eu" size="medium" /></td>
-                    <td>EU</td>
-                    <td><CodeTags type="secondary" code="eu"/></td>
-                </tr>
+                {tableData.flags.map(icon => (
+                    <tr key={icon.code}>
+                        <td><IconPreview type="flag-icon" name={icon.code} size="medium"/></td>
+                        <td>{icon.title}</td>
+                        <td><CodeTags type="secondary" code={icon.code}/></td>
+                    </tr>
+                ))}
             </tbody>
         </table>
         <ComponentPreview language="html" codeFigure >
