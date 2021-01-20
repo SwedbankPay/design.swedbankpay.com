@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { browsers, gridAndBreakpoints, discoverMore } from "./data-list";
+import { browsers, gridAndBreakpoints, discoverMore } from "./constants";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";

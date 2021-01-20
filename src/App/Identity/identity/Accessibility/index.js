@@ -1,5 +1,5 @@
 import React from "react";
-import * as externalLinks from "./external-links";
+import * as externalLinks from "./constants";
 
 import { DocContainer } from "@docutils";
 

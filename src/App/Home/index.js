@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { entryCards, changeLogs } from "./data-list";
+import { entryCards, changeLogs } from "./constants";
 import { setTitle, RemoveVscroll } from "../utils";
 
 const BASENAME = process.env.basename;

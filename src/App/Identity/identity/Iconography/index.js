@@ -1,5 +1,5 @@
 import React from "react";
-import * as tableData from "./table-list";
+import * as tableData from "./constants";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import IconPreview from "@components/IconPreview";
