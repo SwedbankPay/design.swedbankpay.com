@@ -333,18 +333,22 @@
                     padding: 2rem;
                     height: 100%;
                     width: 18.375rem;
-                    overflow-y: auto;
+                    overflow-y: hidden;
                     position: absolute;
                     top: 0;
                     left: 100%;
 
-                    &::-webkit-scrollbar {
-                        width: 0.25rem;
-                    }
+                    &:hover {
+                        overflow-y: auto;
 
-                    &::-webkit-scrollbar-thumb {
-                        border-radius: 0.5rem;
-                        background-color: @brand-secondary-light-1;
+                        &::-webkit-scrollbar {
+                            width: 0.25rem;
+                        }
+
+                        &::-webkit-scrollbar-thumb {
+                            border-radius: 0.5rem;
+                            background-color: @brand-secondary-light-1;
+                        }
                     }
 
                     .tertiary-nav-header {
