@@ -280,7 +280,8 @@ exports[`Core: Accessibility Intro renders 1`] = `
   >
     <img
       alt="Illustration of impairments"
-      src="/TEST/img/documentation/accessibility/impairments.svg"
+      className="w-100"
+      src="/TEST/img/documentation/accessibility/impairments.png"
     />
     <span
       className="caption-text"
@@ -325,8 +326,8 @@ exports[`Core: Accessibility WcagStandard renders 1`] = `
   >
     <img
       alt="WCAG 2.1 at a glance"
-      className="mb-1"
-      src="/TEST/img/documentation/accessibility/wcag.svg"
+      className="mb-1 w-100"
+      src="/TEST/img/documentation/accessibility/wcag.png"
     />
     <span
       className="caption-text"
