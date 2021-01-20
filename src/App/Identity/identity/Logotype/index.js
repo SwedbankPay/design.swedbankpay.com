@@ -11,6 +11,10 @@ const brand = process.env.brand;
 const LogoBlack = () => (
     <>
         <h2 id="logo-black">Black text logotype</h2>
+        <p className="lead">
+            The vertical logo is primary – the one that will build recognition.
+            Always consider the vertical (primary) logo first before using the horizontal (secondary) logo.
+        </p>
         <p>For good visibility the black text logo should be used on all light/fair backgrounds.</p>
         <ComponentPreview language="html" showCasePanel codeFigure showCasePanelAdvanced={logoBlack} />
     </>
@@ -284,17 +288,13 @@ const Logotype = () => (
         {brand === "swedbankpay" &&
             <DocContainer docToc>
                 <p className="lead">
-                    The vertical logo is primary – the one that will build recognition.
-                    Always consider the vertical (primary) logo first before using the horizontal (secondary) logo.
-                </p>
-                <p className="lead">
                     The Swedbank Pay logotype exist in two versions – a black text logo and a white text logo.
                     They are used depending on what colour of the background the logo is placed on. In situations where both the black and white version can be used,
                     the recommendation is to use the white version as it gives a lighter and more friendly impression.
                 </p>
                 <p>
-                    The logotype is vectorised and all versions are provided as both <CodeTags type="secondary" code=".svg" /> and <CodeTags type="secondary" code=".eps" /> files.
-                    The sizes below are recomended sizes and if there is a need to scale the logotype larger,
+                    The logotype is vectorized and all versions are provided as both <CodeTags type="secondary" code=".svg" /> and <CodeTags type="secondary" code=".eps" /> files.
+                    The sizes below are recommended sizes and if there is a need to scale the logotype larger,
                     make sure the coin diameter is no smaller than at least 24 px and a multiple of 8.
                 </p>
                 <LogoBlack />
