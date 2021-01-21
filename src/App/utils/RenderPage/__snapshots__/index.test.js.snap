@@ -10,7 +10,8 @@ exports[`Utilities: RenderPage renders 1`] = `
     <span
       className="dg-current-version text-uppercase"
     >
-      Design Guide – v. 5.0.0
+      Design Guide – v. 
+      5.0.0
     </span>
     <withRouter(DocHeading) />
     <Switch>
