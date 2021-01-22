@@ -24,7 +24,7 @@ describe("DisplayColor", () => {
         const colors =
             {
                 fontColor: "512B2B",
-                width: "w-50"
+                border: "has-border"
             };
 
         console.error = jest.fn();
@@ -40,7 +40,7 @@ describe("DisplayColor", () => {
                 hex: "#FDC129",
                 rgb: "253, 193, 41",
                 fontColor: "512B2B",
-                width: "w-50"
+                border: "has-border"
             };
 
         const wrapper = shallow(<DisplayColor {...colors}/>);
