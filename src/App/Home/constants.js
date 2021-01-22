@@ -1,30 +1,3 @@
-export const entryCards = [
-    {
-        title: "Get started",
-        text: "Learn more about how to setup and use our system",
-        icon: "wb_incandescent",
-        url: "/get-started/introduction"
-    },
-    {
-        title: "Identity",
-        text: "Learn about our fundamental principles",
-        icon: "palette",
-        url: "/identity"
-    },
-    {
-        title: "Components",
-        text: "Find all currently available components here",
-        icon: "category",
-        url: "/components"
-    },
-    {
-        title: "Utility",
-        text: "See all available CSS classes",
-        icon: "build",
-        url: "/utilities"
-    }
-];
-
 export const changeLogs = [
     {
         version: "5.0.0",
@@ -43,7 +16,7 @@ export const changeLogs = [
     },
     {
         version: "4.7.0",
-        title: "Introducing the the new codeview component",
+        title: "Introducing the new codeview component",
         text: "We would like to introduce a new way to interact with our components in Design Guide through codeview. Developers can now dynamically adjust the component to fit their needs and generate code based on the adjustments. Besides that we have also fixed many bugs and made adjustment according to feedback!"
     }
 ];

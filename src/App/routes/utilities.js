@@ -4,6 +4,7 @@ module.exports = [
         icon: {
             name: "build"
         },
+        entryCardText: "See all available CSS classes",
         path: "/utilities",
         redirect: "/utilities/utilities",
         appFolder: "Utilities",

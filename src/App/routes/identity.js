@@ -8,6 +8,7 @@ module.exports = [
             name: "palette"
         },
         path: "/identity",
+        entryCardText: "Learn about our fundamental principles",
         redirect: "/identity/identity",
         appFolder: "Identity",
         routes: [

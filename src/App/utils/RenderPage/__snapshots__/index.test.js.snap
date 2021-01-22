@@ -21,10 +21,11 @@ exports[`Utilities: RenderPage renders 1`] = `
       />
       <RenderRoutes
         appFolder="GettingStarted"
+        entryCardText="Learn more about how to setup and use our system"
         icon={
           Object {
             "name": "wb_incandescent",
-            "rotated": true,
+            "rotate": true,
           }
         }
         key="renderRoutes_Get started"
@@ -62,6 +63,7 @@ exports[`Utilities: RenderPage renders 1`] = `
       />
       <RenderRoutes
         appFolder="Identity"
+        entryCardText="Learn about our fundamental principles"
         icon={
           Object {
             "name": "palette",
@@ -163,6 +165,7 @@ exports[`Utilities: RenderPage renders 1`] = `
       />
       <RenderRoutes
         appFolder="ComponentsDocumentation"
+        entryCardText="Find all currently available components here"
         icon={
           Object {
             "name": "category",
@@ -401,6 +404,7 @@ exports[`Utilities: RenderPage renders 1`] = `
       />
       <RenderRoutes
         appFolder="Utilities"
+        entryCardText="See all available CSS classes"
         icon={
           Object {
             "name": "build",

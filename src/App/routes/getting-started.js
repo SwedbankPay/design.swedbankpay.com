@@ -3,9 +3,10 @@ module.exports = [
         title: "Get started",
         icon: {
             name: "wb_incandescent",
-            rotated: true
+            rotate: true
         },
         path: "/get-started",
+        entryCardText: "Learn more about how to setup and use our system",
         redirect: "/get-started/introduction",
         appFolder: "GettingStarted",
         routes: [

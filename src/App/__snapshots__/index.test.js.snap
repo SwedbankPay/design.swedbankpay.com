@@ -42,9 +42,10 @@ exports[`Main: App renders 1`] = `
               Array [
                 Object {
                   "appFolder": "GettingStarted",
+                  "entryCardText": "Learn more about how to setup and use our system",
                   "icon": Object {
                     "name": "wb_incandescent",
-                    "rotated": true,
+                    "rotate": true,
                   },
                   "path": "/get-started",
                   "redirect": "/get-started/introduction",
@@ -78,6 +79,7 @@ exports[`Main: App renders 1`] = `
                 },
                 Object {
                   "appFolder": "Identity",
+                  "entryCardText": "Learn about our fundamental principles",
                   "icon": Object {
                     "name": "palette",
                   },
@@ -174,6 +176,7 @@ exports[`Main: App renders 1`] = `
                 },
                 Object {
                   "appFolder": "ComponentsDocumentation",
+                  "entryCardText": "Find all currently available components here",
                   "icon": Object {
                     "name": "category",
                   },
@@ -407,6 +410,7 @@ exports[`Main: App renders 1`] = `
                 },
                 Object {
                   "appFolder": "Utilities",
+                  "entryCardText": "See all available CSS classes",
                   "icon": Object {
                     "name": "build",
                   },

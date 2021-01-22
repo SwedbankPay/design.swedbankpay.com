@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { entryCards, changeLogs } from "./constants";
+import { changeLogs } from "./constants";
 import { setTitle, RemoveVscroll } from "../utils";
+import routes from "@src/App/routes/all";
 
 const BASENAME = process.env.basename;
 
@@ -27,15 +28,15 @@ const Home = () => {
                 <p className="front-page-lead">Here you can find components and guidelines to help you  and your team work more efficiently and create a cohesive user experience through all our products and touch points.</p>
 
                 <div className="row dg-cards-container mt-4">
-                    {entryCards.map(card => (
-                        <div key={card.title} className="col-12 col-sm-6 col-lg-3 d-flex">
-                            <Link to={card.url} className="cards cards-primary">
+                    {routes.map(route => (
+                        <div key={route.title} className="col-12 col-sm-6 col-lg-3 d-flex">
+                            <Link to={route.path} className="cards cards-primary">
                                 <div className="cards-icon">
-                                    <i className="material-icons-outlined">{card.icon}</i>
+                                    <i className={`material-icons-outlined ${route.icon.rotate && "rotate-icon"}`}>{route.icon.name}</i>
                                 </div>
                                 <div className="cards-content">
-                                    <span className="h4">{card.title}</span>
-                                    <span>{card.text}</span>
+                                    <span className="h4">{route.title === "Utilities" ? "Utility" : route.title }</span>
+                                    <span>{route.entryCardText}</span>
                                 </div>
                                 <i className="material-icons">arrow_forward</i>
                             </Link>
