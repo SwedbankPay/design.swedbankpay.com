@@ -2,9 +2,7 @@
 
 exports[`Component: Cards -  renders a child object 1`] = `
 <Fragment>
-  <div
-    className="col-xl-5 col-sm-6"
-  >
+  <div>
     
 
     <a
@@ -41,9 +39,7 @@ exports[`Component: Cards -  renders a child object 1`] = `
 
 exports[`Component: Cards -  renders a text in card-body 1`] = `
 <Fragment>
-  <div
-    className="col-xl-5 col-sm-6"
-  >
+  <div>
     
 
     <a
@@ -82,9 +78,7 @@ exports[`Component: Cards -  renders a text in card-body 1`] = `
 
 exports[`Component: Cards -  renders a title 1`] = `
 <Fragment>
-  <div
-    className="col-xl-5 col-sm-6"
-  >
+  <div>
     
 
     <a
@@ -156,9 +150,7 @@ exports[`Component: Cards -  renders a wide card when wide is true 1`] = `
 
 exports[`Component: Cards -  renders an icon when icon is provided 1`] = `
 <Fragment>
-  <div
-    className="col-xl-5 col-sm-6"
-  >
+  <div>
     
 
     <a
@@ -203,9 +195,7 @@ exports[`Component: Cards -  renders an icon when icon is provided 1`] = `
 
 exports[`Component: Cards -  renders an image 1`] = `
 <Fragment>
-  <div
-    className="col-xl-5 col-sm-6"
-  >
+  <div>
     
 
     <a
@@ -244,9 +234,7 @@ exports[`Component: Cards -  renders an image 1`] = `
 
 exports[`Component: Cards -  renders with correct type 1`] = `
 <Fragment>
-  <div
-    className="col-xl-5 col-sm-6"
-  >
+  <div>
     
 
     <a
@@ -282,9 +270,7 @@ exports[`Component: Cards -  renders with correct type 1`] = `
 
 exports[`Component: Cards -  throws an error if type does not match proptypes 1`] = `
 <Fragment>
-  <div
-    className="col-xl-5 col-sm-6"
-  >
+  <div>
     
 
     <a
