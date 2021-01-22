@@ -296,7 +296,7 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     language="html"
   >
     <link
-      href="/TEST/styles"
+      href="https://design.TESTBRAND.com/TEST/styles"
       rel="stylesheet"
     />
   </ComponentPreview>
@@ -321,9 +321,9 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     language="html"
   >
     <script
+  </ComponentPreview>
   <h3>
   </h3>
-  <p>
     Our script runs 
     <CodeTags
       code="dg.script.initAll();"
