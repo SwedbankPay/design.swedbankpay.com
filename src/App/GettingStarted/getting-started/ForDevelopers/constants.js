@@ -1,3 +1,8 @@
+import routes from "@src/App/routes/all";
+
+const [, identity, components, utilities] = routes;
+const iconography = identity.routes.find(component => component.title === "Iconography");
+
 export const browsers = [
     {
         url: "img/documentation/forDevelopers/chrome.png",
@@ -60,18 +65,18 @@ export const gridAndBreakpoints = [
 
 export const discoverMore = [
     {
-        title: "Components",
-        url: "/components/components",
+        title: components.title,
+        url: components.path,
         text: "See all available components"
     },
     {
-        title: "Utilities",
-        url: "/utilities/utilities",
+        title: utilities.title,
+        url: utilities.path,
         text: "See all available components"
     },
     {
-        title: "Iconography",
-        url: "/identity/iconography",
+        title: iconography.title,
+        url: iconography.path,
         text: "Our icon library and how to use it"
     }
 ];
