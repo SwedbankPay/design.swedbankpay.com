@@ -296,7 +296,7 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     language="html"
   >
     <link
-      href="https://design.swedbankpay.com/v/5.0.0/styles/dg-style.css"
+      href="/TEST/styles"
       rel="stylesheet"
     />
   </ComponentPreview>
@@ -321,11 +321,7 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     language="html"
   >
     <script
-      src="https://design.swedbankpay.com/v/5.0.0/scripts/dg.js"
-    />
-  </ComponentPreview>
   <h3>
-    How to initialize our JavaScript components
   </h3>
   <p>
     Our script runs 

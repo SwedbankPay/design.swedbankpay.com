@@ -4,7 +4,6 @@ import { browsers, gridAndBreakpoints, discoverMore } from "./constants";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
-import packageJson from "~/package.json";
 
 const basename = process.env.basename;
 
@@ -15,13 +14,13 @@ const Installation = () => (
         <h3>Include in the header</h3>
         <p>Copy-paste the following CSS code into <CodeTags type="secondary" code="<head>"/> before all the other stylesheets in order to load our CSS.</p>
         <ComponentPreview language="html" codeFigure>
-            <link rel="stylesheet" href={`https://design.swedbankpay.com/v/${packageJson.version}/styles/dg-style.css`} />
+            <link rel="stylesheet" href={`${basename}styles`} />
         </ComponentPreview>
 
         <h3>Include at the bottom</h3>
         <p>Many of our components requires the use of JavaScript in order to function. Place the following <CodeTags type="secondary" code="<Script>"/> tag near the end of your pages, right before the closing <CodeTags type="secondary" code="</body>"/> tag to enable them.</p>
         <ComponentPreview language="html" codeFigure>
-            <script src={`https://design.swedbankpay.com/v/${packageJson.version}/scripts/dg.js`}></script>
+            <script src={`${basename}scripts/dg.js`}></script>
         </ComponentPreview>
         <h3>How to initialize our JavaScript components</h3>
         <p>Our script runs <CodeTags type="secondary" code="dg.script.initAll();"/> on DOMContentLoaded making it so you have to run <CodeTags type="secondary" code="dg.<component_name>.init();"/> manually when a component is rendered after the event has fired.</p>
