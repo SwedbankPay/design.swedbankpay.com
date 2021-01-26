@@ -10,6 +10,16 @@ exports[`Core: Iconography CardIcons renders 1`] = `
   <p>
     Card icons are typically used to show users which card providers that are available. The payment-card icon can be used as a placeholder and/or when the card is not recognized. 
   </p>
+  <h3>
+    Example of how to implement card icons
+  </h3>
+  <p>
+    To use an icon, provide the following markup: 
+    <CodeTags
+      code="<i class=\\"payment-icon payment-icon-{icon-name}\\" aria-hidden=\\"true\\" /i>"
+      type="primary"
+    />
+  </p>
   <table
     className="table table-plain"
   >
@@ -314,6 +324,101 @@ exports[`Core: Iconography CardIcons renders 1`] = `
       </tr>
     </tbody>
   </table>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+  >
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-payment-card"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-amex"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-bank-axept"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-coop"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-dankort"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-diners"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-forbrugsforeningen"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-ica"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-ica-banken"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-ikano-bank"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-jcb"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-lindex"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-maestro"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-mastercard"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-visa"
+    />
+    
+
+  </ComponentPreview>
 </section>
 `;
 
@@ -505,35 +610,45 @@ exports[`Core: Iconography Flags renders 1`] = `
     className="d-flex justify-content-between align-items-end p-4"
   >
     <IconPreview
-      name="se"
+      name="no"
       previewSize={true}
       size="tiny"
       type="flag-icon"
     />
+    
+
     <IconPreview
-      name="no"
+      name="se"
       previewSize={true}
       size="small"
       type="flag-icon"
     />
+    
+
     <IconPreview
       name="dk"
       previewSize={true}
       size="medium"
       type="flag-icon"
     />
+    
+
     <IconPreview
       name="fi"
       previewSize={true}
       size="large"
       type="flag-icon"
     />
+    
+
     <IconPreview
       name="eu"
       previewSize={true}
       size="huge"
       type="flag-icon"
     />
+    
+
   </div>
   <ComponentPreview
     codeFigure={true}
@@ -585,14 +700,14 @@ exports[`Core: Iconography Flags renders 1`] = `
     className="d-flex justify-content-between align-items-end p-4"
   >
     <IconPreview
-      name="se"
+      name="no"
       previewSize={true}
       size="tiny"
       squaredFlag={true}
       type="flag-icon"
     />
     <IconPreview
-      name="no"
+      name="se"
       previewSize={true}
       size="small"
       squaredFlag={true}
@@ -632,7 +747,7 @@ exports[`Core: Iconography Flags renders 1`] = `
 
     <i
       aria-hidden="true"
-      className="flag-icon flag-icon-squared flag-icon-sv flag-icon-small"
+      className="flag-icon flag-icon-squared flag-icon-se flag-icon-small"
     />
     
 
@@ -702,26 +817,31 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
     className="d-flex justify-content-between p-4"
   >
     <IconPreview
+      key="insert_invitation"
       name="insert_invitation"
       preview={true}
       type="material-icons"
     />
     <IconPreview
+      key="cake"
       name="cake"
       preview={true}
       type="material-icons"
     />
     <IconPreview
+      key="mood"
       name="mood"
       preview={true}
       type="material-icons"
     />
     <IconPreview
+      key="thumb_up_alt"
       name="thumb_up_alt"
       preview={true}
       type="material-icons"
     />
     <IconPreview
+      key="whatshot"
       name="whatshot"
       preview={true}
       type="material-icons"
@@ -769,6 +889,8 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
     >
       whatshot
     </i>
+    
+
   </ComponentPreview>
 </section>
 `;
@@ -782,6 +904,16 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
   </h2>
   <p>
     Below is a list of payment icons that we use in our products. Be mindful when using payment logotypes. Try to make the payment icon feel more secondary in combination with the Swedbank Pay logotype. We always want the Swedbank Pay logotype to be primary.
+  </p>
+  <h3>
+    Example of how to implement payment icons
+  </h3>
+  <p>
+    To use an icon, provide the following markup: 
+    <CodeTags
+      code="<i class=\\"payment-icon payment-icon-{icon-name}\\" aria-hidden=\\"true\\" /i>"
+      type="primary"
+    />
   </p>
   <table
     className="table table-plain"
@@ -922,6 +1054,47 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
       </tr>
     </tbody>
   </table>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+  >
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-viabill"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-vipps"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-swish"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-mobilpay"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-carpay"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-trustly"
+    />
+    
+
+  </ComponentPreview>
 </section>
 `;
 

@@ -18,18 +18,16 @@ const MaterialIcons = () => (
         <h3>Example of how to implement icons</h3>
         <p>To use an icon, provide the following markup: <CodeTags type="primary" code={"<i class=\"material-icons\" aria-hidden=\"true\">{icon_name}</i>"} /></p>
         <div className="d-flex justify-content-between p-4">
-            <IconPreview preview type="material-icons" name="insert_invitation" />
-            <IconPreview preview type="material-icons" name="cake" />
-            <IconPreview preview type="material-icons" name="mood" />
-            <IconPreview preview type="material-icons" name="thumb_up_alt" />
-            <IconPreview preview type="material-icons" name="whatshot" />
+            {tableData.materialIcons.map(icon => (
+                <IconPreview key={icon} preview type="material-icons" name={icon} />
+            ))}
         </div>
         <ComponentPreview language="html" codeFigure>
-            <i className="material-icons" aria-hidden="true">insert_invitation</i>{"\n"}
-            <i className="material-icons" aria-hidden="true">cake</i>{"\n"}
-            <i className="material-icons" aria-hidden="true">mood</i>{"\n"}
-            <i className="material-icons" aria-hidden="true">thumb_up_alt</i>{"\n"}
-            <i className="material-icons" aria-hidden="true">whatshot</i>
+            {tableData.materialIcons.map(icon => (
+                <React.Fragment key={icon}>
+                    <i className="material-icons" aria-hidden="true">{icon}</i>{"\n"}
+                </React.Fragment>
+            ))}
         </ComponentPreview>
     </section>
 );
@@ -56,6 +54,13 @@ const CardIcons = () => (
                 ))}
             </tbody>
         </table>
+        <ComponentPreview language="html" codeFigure>
+            {tableData.cardIcons.map(icon => (
+                <React.Fragment key={icon.code}>
+                    <i className={`payment-icon payment-icon-${icon.code}`} aria-hidden="true" />{"\n"}
+                </React.Fragment>
+            ))}
+        </ComponentPreview>
     </section>
 );
 
@@ -82,6 +87,13 @@ const PaymentIcons = () => (
                 ))}
             </tbody>
         </table>
+        <ComponentPreview language="html" codeFigure>
+            {tableData.paymentIcons.map(icon => (
+                <React.Fragment key={icon.code}>
+                    <i className={`payment-icon payment-icon-${icon.code}`} aria-hidden="true" />{"\n"}
+                </React.Fragment>
+            ))}
+        </ComponentPreview>
     </section>
 );
 
@@ -108,45 +120,45 @@ const Flags = () => (
             </tbody>
         </table>
         <ComponentPreview language="html" codeFigure >
-            <i className="flag-icon flag-icon-no" aria-hidden="true"></i>{"\n"}
-            <i className="flag-icon flag-icon-se" aria-hidden="true"></i>{"\n"}
-            <i className="flag-icon flag-icon-dk" aria-hidden="true"></i>{"\n"}
-            <i className="flag-icon flag-icon-fi" aria-hidden="true"></i>{"\n"}
-            <i className="flag-icon flag-icon-eu" aria-hidden="true"></i>{"\n"}
+            {tableData.flags.map(flag => (
+                <React.Fragment key={flag.code}>
+                    <i className={`flag-icon flag-icon-${flag.code}`} aria-hidden="true" />{"\n"}
+                </React.Fragment>
+            ))}
         </ComponentPreview>
 
         <h3>Sizes</h3>
         <p>All size available for the flags are pre-defined and are shown below. Tiny is the default size and for example is used input fields. </p>
         <div className="d-flex justify-content-between align-items-end p-4">
-            <IconPreview previewSize type="flag-icon" name="se" size="tiny" />
-            <IconPreview previewSize type="flag-icon" name="no" size="small" />
-            <IconPreview previewSize type="flag-icon" name="dk" size="medium" />
-            <IconPreview previewSize type="flag-icon" name="fi" size="large" />
-            <IconPreview previewSize type="flag-icon" name="eu" size="huge" />
+            {tableData.flags.map((flag, i) => (
+                <React.Fragment key={flag.code}>
+                    <IconPreview previewSize type="flag-icon" name={flag.code} size={tableData.flagSizes[i]} />{"\n"}
+                </React.Fragment>
+            ))}
         </div>
         <ComponentPreview language="html" codeFigure>
-            <i className="flag-icon flag-icon-no flag-icon-tiny" aria-hidden="true"></i>{"\n"}
-            <i className="flag-icon flag-icon-se flag-icon-small" aria-hidden="true"></i>{"\n"}
-            <i className="flag-icon flag-icon-dk flag-icon-medium" aria-hidden="true"></i>{"\n"}
-            <i className="flag-icon flag-icon-fi flag-icon-large" aria-hidden="true"></i>{"\n"}
-            <i className="flag-icon flag-icon-eu flag-icon-huge" aria-hidden="true"></i>{"\n"}
+            {tableData.flags.map((flag, i) => (
+                <React.Fragment key={flag.code}>
+                    <i className={`flag-icon flag-icon-${flag.code} flag-icon-${tableData.flagSizes[i]}`} aria-hidden="true" />{"\n"}
+                </React.Fragment>
+            ))}
         </ComponentPreview>
 
         <h3>Squared</h3>
         <p>All flags can be used in a square format. In the example we see squared flags in the size tiny. All predefined sizes are available in combination with <CodeTags type="secondary" code=".flag-icon-squared"/>. </p>
         <div className="d-flex justify-content-between align-items-end p-4">
-            <IconPreview previewSize type="flag-icon" squaredFlag name="se" size="tiny" />
-            <IconPreview previewSize type="flag-icon" squaredFlag name="no" size="small" />
-            <IconPreview previewSize type="flag-icon" squaredFlag name="dk" size="medium" />
-            <IconPreview previewSize type="flag-icon" squaredFlag name="fi" size="large" />
-            <IconPreview previewSize type="flag-icon" squaredFlag name="eu" size="huge" />
+            {tableData.flags.map((flag, i) => (
+                <React.Fragment key={flag.code}>
+                    <IconPreview previewSize type="flag-icon" squaredFlag name={flag.code} size={tableData.flagSizes[i]} />
+                </React.Fragment>
+            ))}
         </div>
         <ComponentPreview language="html" codeFigure>
-            <i className="flag-icon flag-icon-squared flag-icon-no flag-icon-tiny" aria-hidden="true"></i>{"\n"}
-            <i className="flag-icon flag-icon-squared flag-icon-sv flag-icon-small" aria-hidden="true"></i>{"\n"}
-            <i className="flag-icon flag-icon-squared flag-icon-dk flag-icon-medium" aria-hidden="true"></i>{"\n"}
-            <i className="flag-icon flag-icon-squared flag-icon-fi flag-icon-large" aria-hidden="true"></i>{"\n"}
-            <i className="flag-icon flag-icon-squared flag-icon-eu flag-icon-huge" aria-hidden="true"></i>{"\n"}
+            {tableData.flags.map((flag, i) => (
+                <React.Fragment key={flag.code}>
+                    <i className={`flag-icon flag-icon-squared flag-icon-${flag.code} flag-icon-${tableData.flagSizes[i]}`} aria-hidden="true" />{"\n"}
+                </React.Fragment>
+            ))}
         </ComponentPreview>
     </section>
 );
@@ -154,7 +166,7 @@ const Flags = () => (
 const Iconography = () => (
     <DocContainer>
         <p className="lead">
-        At Swedbank Pay we use Material icons from Material Design, but we also include icons for well-known payment providers, and flags for most nations in the world. All icons are integraded and are available in HTML and CSS.
+        At Swedbank Pay we use Material icons from Material Design, but we also include icons for well-known payment providers, and flags for most nations in the world. All icons are integrated and are available in HTML and CSS.
         </p>
         <MaterialIcons />
         <CardIcons />

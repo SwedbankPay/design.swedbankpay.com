@@ -1,3 +1,5 @@
+export const materialIcons = ["insert_invitation", "cake", "mood", "thumb_up_alt", "whatshot"];
+
 export const cardIcons = [
     {
         title: "Payment card",
@@ -110,3 +112,5 @@ export const flags = [
         code: "eu"
     }
 ];
+
+export const flagSizes = ["tiny", "small", "medium", "large", "huge"];
