@@ -141,7 +141,9 @@ exports[`GettingStarted: Introduction UsingDG renders 1`] = `
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr
+        key="Checkout"
+      >
         <td>
           Checkout
         </td>
@@ -151,10 +153,12 @@ exports[`GettingStarted: Introduction UsingDG renders 1`] = `
           >
             close
           </i>
-           No, but are following the design guide
+          No, but are following the Design Guide
         </td>
       </tr>
-      <tr>
+      <tr
+        key="Swedbankpay.se"
+      >
         <td>
           Swedbankpay.se
         </td>
@@ -164,10 +168,12 @@ exports[`GettingStarted: Introduction UsingDG renders 1`] = `
           >
             close
           </i>
-           No
+          No
         </td>
       </tr>
-      <tr>
+      <tr
+        key="Consumer Portal"
+      >
         <td>
           Consumer Portal
         </td>
@@ -177,10 +183,12 @@ exports[`GettingStarted: Introduction UsingDG renders 1`] = `
           >
             check
           </i>
-           Yes
+          Yes
         </td>
       </tr>
-      <tr>
+      <tr
+        key="Developer Portal"
+      >
         <td>
           Developer Portal
         </td>
@@ -190,10 +198,12 @@ exports[`GettingStarted: Introduction UsingDG renders 1`] = `
           >
             check
           </i>
-           Yes
+          Yes
         </td>
       </tr>
-      <tr>
+      <tr
+        key="Card terminals"
+      >
         <td>
           Card terminals
         </td>
@@ -203,10 +213,12 @@ exports[`GettingStarted: Introduction UsingDG renders 1`] = `
           >
             close
           </i>
-           No, but are following the design guide
+          No, but are following the Design Guide
         </td>
       </tr>
-      <tr>
+      <tr
+        key="Ecom Merchant Admin"
+      >
         <td>
           Ecom Merchant Admin
         </td>
@@ -216,10 +228,12 @@ exports[`GettingStarted: Introduction UsingDG renders 1`] = `
           >
             check
           </i>
-           Yes
+          Yes
         </td>
       </tr>
-      <tr>
+      <tr
+        key="Ecom Owner Admin"
+      >
         <td>
           Ecom Owner Admin
         </td>
@@ -229,10 +243,12 @@ exports[`GettingStarted: Introduction UsingDG renders 1`] = `
           >
             check
           </i>
-           Yes
+          Yes
         </td>
       </tr>
-      <tr>
+      <tr
+        key="Onboarding Signup"
+      >
         <td>
           Onboarding Signup
         </td>
@@ -242,7 +258,7 @@ exports[`GettingStarted: Introduction UsingDG renders 1`] = `
           >
             check
           </i>
-           Yes, is currently implementing the Design Guide
+          Yes, is currently implemented the Design Guide
         </td>
       </tr>
     </tbody>

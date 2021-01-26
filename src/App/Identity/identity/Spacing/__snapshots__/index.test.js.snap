@@ -108,6 +108,7 @@ exports[`Identity: Spacing DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://www.justinmind.com/blog/your-guide-to-space-and-layout-in-ui-design/"
+    key="https://www.justinmind.com/blog/your-guide-to-space-and-layout-in-ui-design/"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -126,6 +127,7 @@ exports[`Identity: Spacing DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://www.w3.org/TR/mobile-accessibility-mapping/#touch-target-size-and-spacing"
+    key="https://www.w3.org/TR/mobile-accessibility-mapping/#touch-target-size-and-spacing"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -143,7 +145,8 @@ exports[`Identity: Spacing DiveDeeper renders 1`] = `
   </a>
   <a
     className="icon-link d-flex"
-    href="https://lawsofux.com/law-of-proximity"
+    href="https://lawsofux.com/laws/law-of-proximity/"
+    key="https://lawsofux.com/laws/law-of-proximity/"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -162,6 +165,7 @@ exports[`Identity: Spacing DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://uxplanet.org/white-space-in-ui-design-8647d4f685a7"
+    key="https://uxplanet.org/white-space-in-ui-design-8647d4f685a7"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -174,7 +178,7 @@ exports[`Identity: Spacing DiveDeeper renders 1`] = `
     <span
       className="mr-2"
     >
-      UX Planet – White space in UI design 
+      UX Planet – White space in UI design
     </span>
   </a>
 </section>
