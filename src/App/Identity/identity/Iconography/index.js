@@ -37,6 +37,10 @@ const CardIcons = () => (
     <section>
         <h2>Card icons</h2>
         <p>Card icons are typically used to show users which card providers that are available. The payment-card icon can be used as a placeholder and/or when the card is not recognized. </p>
+
+        <h3>Example of how to implement card icons</h3>
+        <p>To use an icon, provide the following markup: <CodeTags type="primary" code={"<i class=\"payment-icon payment-icon-{icon-name}\" aria-hidden=\"true\" /i>"} /></p>
+
         <table className="table table-plain">
             <thead>
                 <tr>
@@ -135,6 +139,9 @@ const PaymentIcons = () => (
     <section>
         <h2>Payment icons</h2>
         <p>Below is a list of payment icons that we use in our products. Be mindful when using payment logotypes. Try to make the payment icon feel more secondary in combination with the Swedbank Pay logotype. We always want the Swedbank Pay logotype to be primary.</p>
+
+        <h3>Example of how to implement payment icons</h3>
+        <p>To use an icon, provide the following markup: <CodeTags type="primary" code={"<i class=\"payment-icon payment-icon-{icon-name}\" aria-hidden=\"true\" /i>"} /></p>
 
         <table className="table table-plain">
             <thead>
