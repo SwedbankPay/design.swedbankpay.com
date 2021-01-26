@@ -635,7 +635,7 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       <Button
         disabled={true}
         href="#"
-        label="Executive"
+        label="Primary"
         type="primary"
       />
       
@@ -643,7 +643,7 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       <Button
         disabled={true}
         href="#"
-        label="Guiding"
+        label="Secondary"
         type="secondary"
       />
       

@@ -285,7 +285,7 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     language="html"
   >
     <link
-      href="https://design.swedbankpay.com/v/4.7.0/styles"
+      href="https://design.swedbankpay.com/v/5.0.0/styles"
       rel="stylesheet"
     />
   </ComponentPreview>
@@ -310,7 +310,7 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     language="html"
   >
     <script
-      src="https://design.swedbankpay.com/v/4.7.0/scripts/dg.js"
+      src="https://design.swedbankpay.com/v/5.0.0/scripts/dg.js"
     />
   </ComponentPreview>
   <h3>

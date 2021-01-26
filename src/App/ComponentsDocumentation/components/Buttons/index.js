@@ -208,8 +208,8 @@ const DeveloperDocumentation = () => (
         </ul>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
-                <ButtonComponent href="#" disabled type="primary" label="Executive" />{"\n"}
-                <ButtonComponent href="#" disabled type="secondary" label="Guiding" />{"\n"}
+                <ButtonComponent href="#" disabled type="primary" label="Primary" />{"\n"}
+                <ButtonComponent href="#" disabled type="secondary" label="Secondary" />{"\n"}
             </div>
         </ComponentPreview>
         <Alert type="warning">
