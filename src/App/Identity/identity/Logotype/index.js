@@ -11,7 +11,7 @@ const brand = process.env.brand;
 const LogoBlack = () => (
     <>
         <h2 id="logo-black">Black text logotype</h2>
-        <p className="lead">
+        <p>
             The vertical logo is primary – the one that will build recognition.
             Always consider the vertical (primary) logo first before using the horizontal (secondary) logo.
         </p>
