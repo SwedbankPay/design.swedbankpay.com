@@ -50,7 +50,7 @@ const UsingDG = () => (
         <div className="big-quotation">
             <p>The Design guide enables a cohesive and unified design across the organization which saves time for everyone involved. </p>
         </div>
-        <p>By doing so, when an adjustment or change occurs with one of the Design Guide components, all the projects which uses the said component will have the changes applied to their product automatically. This way the Design guide enables a cohesive and unified design across the organization which saves time for everyone involved.  </p>
+        <p>By doing so, when an adjustment or change occurs with one of the Design Guide components, all the projects which uses the said component will have the changes applied to their product automatically. This way the Design Guide enables a cohesive and unified design across the organization which saves time for everyone involved.  </p>
         <h3>Products using the Design Guide</h3>
         <p>Because there’s a difference of following the design guidelines and using the Design Guide, not all Swedbank Pay products per definition uses the Design Guide. </p>
         <table className="table table-plain">
