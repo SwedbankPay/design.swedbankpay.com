@@ -48,7 +48,7 @@ const UsingDG = () => (
         <h2 id="using-dg">Using the Design Guide</h2>
         <p>Let’s clarify the definition of using the Design Guide. Just because an interface looks right according to the Design Guide, our brand and the design system in general it still doesn’t mean that it per definition “uses the Design Guide”. The definition of using our Design Guide is the technical implementation and using the components taken straight from the design guide. </p>
         <div className="big-quotation">
-            <p>The Design guide enables a cohesive and unified design across the organization which saves time for everyone involved. </p>
+            <p>The Design Guide enables a cohesive and unified design across the organization which saves time for everyone involved. </p>
         </div>
         <p>By doing so, when an adjustment or change occurs with one of the Design Guide components, all the projects which uses the said component will have the changes applied to their product automatically. This way the Design Guide enables a cohesive and unified design across the organization which saves time for everyone involved.  </p>
         <h3>Products using the Design Guide</h3>
