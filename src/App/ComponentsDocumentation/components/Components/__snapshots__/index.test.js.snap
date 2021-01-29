@@ -6,6 +6,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
 >
   <Link
     className="cards cards-primary cards-wide"
+    key="Accordion"
     to="/components/accordion"
   >
     <div
@@ -30,20 +31,21 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Action list"
     to="/components/action-list"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
-        className="material-icons mr-3"
+        className="material-icons false mr-3"
       >
         list
       </i>
       <span
         className="h3 m-0"
       >
-        Action List
+        Action list
       </span>
     </div>
     <i
@@ -54,6 +56,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Alerts"
     to="/components/alerts"
   >
     <div
@@ -78,6 +81,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Badges"
     to="/components/badge"
   >
     <div
@@ -102,6 +106,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Breadcrumb"
     to="/components/breadcrumb"
   >
     <div
@@ -126,6 +131,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Buttons"
     to="/components/buttons"
   >
     <div
@@ -150,6 +156,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Cards"
     to="/components/cards"
   >
     <div
@@ -174,6 +181,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Charts"
     to="/components/charts"
   >
     <div
@@ -198,6 +206,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Code tags"
     to="/components/code-tags"
   >
     <div
@@ -211,7 +220,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       <span
         className="h3 m-0"
       >
-        Code Tags
+        Code tags
       </span>
     </div>
     <i
@@ -222,6 +231,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Datepickers"
     to="/components/datepickers"
   >
     <div
@@ -235,7 +245,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       <span
         className="h3 m-0"
       >
-        Datepicker
+        Datepickers
       </span>
     </div>
     <i
@@ -246,6 +256,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Dialog"
     to="/components/dialog"
   >
     <div
@@ -270,174 +281,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
-    to="/components/footer"
-  >
-    <div
-      className="cards-content flex-row align-items-center m-0 "
-    >
-      <i
-        className="material-icons material-icons-outlined mr-3"
-      >
-        call_to_action
-      </i>
-      <span
-        className="h3 m-0"
-      >
-        Footer
-      </span>
-    </div>
-    <i
-      className="material-icons material-icons-outlined"
-    >
-      arrow_forward
-    </i>
-  </Link>
-  <Link
-    className="cards cards-primary cards-wide"
-    to="/components/lists"
-  >
-    <div
-      className="cards-content flex-row align-items-center m-0 "
-    >
-      <i
-        className="material-icons material-icons-outlined mr-3"
-      >
-        sort
-      </i>
-      <span
-        className="h3 m-0"
-      >
-        List
-      </span>
-    </div>
-    <i
-      className="material-icons material-icons-outlined"
-    >
-      arrow_forward
-    </i>
-  </Link>
-  <Link
-    className="cards cards-primary cards-wide"
-    to="/components/loaders"
-  >
-    <div
-      className="cards-content flex-row align-items-center m-0 "
-    >
-      <i
-        className="material-icons material-icons-outlined mr-3"
-      >
-        loop
-      </i>
-      <span
-        className="h3 m-0"
-      >
-        Loader
-      </span>
-    </div>
-    <i
-      className="material-icons material-icons-outlined"
-    >
-      arrow_forward
-    </i>
-  </Link>
-  <Link
-    className="cards cards-primary cards-wide"
-    to="/components/links"
-  >
-    <div
-      className="cards-content flex-row align-items-center m-0 "
-    >
-      <i
-        className="material-icons material-icons-outlined mr-3"
-      >
-        link
-      </i>
-      <span
-        className="h3 m-0"
-      >
-        Links
-      </span>
-    </div>
-    <i
-      className="material-icons material-icons-outlined"
-    >
-      arrow_forward
-    </i>
-  </Link>
-  <Link
-    className="cards cards-primary cards-wide"
-    to="/components/nav"
-  >
-    <div
-      className="cards-content flex-row align-items-center m-0 "
-    >
-      <i
-        className="material-icons material-icons-outlined mr-3"
-      >
-        explore
-      </i>
-      <span
-        className="h3 m-0"
-      >
-        Navigation
-      </span>
-    </div>
-    <i
-      className="material-icons material-icons-outlined"
-    >
-      arrow_forward
-    </i>
-  </Link>
-  <Link
-    className="cards cards-primary cards-wide"
-    to="/components/pagination"
-  >
-    <div
-      className="cards-content flex-row align-items-center m-0 "
-    >
-      <i
-        className="material-icons material-icons-outlined mr-3"
-      >
-        power_input
-      </i>
-      <span
-        className="h3 m-0"
-      >
-        Pagination
-      </span>
-    </div>
-    <i
-      className="material-icons material-icons-outlined"
-    >
-      arrow_forward
-    </i>
-  </Link>
-  <Link
-    className="cards cards-primary cards-wide"
-    to="/components/progress-steps"
-  >
-    <div
-      className="cards-content flex-row align-items-center m-0 "
-    >
-      <i
-        className="material-icons material-icons-outlined mr-3"
-      >
-        hdr_strong
-      </i>
-      <span
-        className="h3 m-0"
-      >
-        Progress Steps
-      </span>
-    </div>
-    <i
-      className="material-icons material-icons-outlined"
-    >
-      arrow_forward
-    </i>
-  </Link>
-  <Link
-    className="cards cards-primary cards-wide"
+    key="Forms"
     to="/components/forms"
   >
     <div
@@ -462,6 +306,182 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Footer"
+    to="/components/footer"
+  >
+    <div
+      className="cards-content flex-row align-items-center m-0 "
+    >
+      <i
+        className="material-icons material-icons-outlined mr-3"
+      >
+        call_to_action
+      </i>
+      <span
+        className="h3 m-0"
+      >
+        Footer
+      </span>
+    </div>
+    <i
+      className="material-icons material-icons-outlined"
+    >
+      arrow_forward
+    </i>
+  </Link>
+  <Link
+    className="cards cards-primary cards-wide"
+    key="Links"
+    to="/components/links"
+  >
+    <div
+      className="cards-content flex-row align-items-center m-0 "
+    >
+      <i
+        className="material-icons material-icons-outlined mr-3"
+      >
+        link
+      </i>
+      <span
+        className="h3 m-0"
+      >
+        Links
+      </span>
+    </div>
+    <i
+      className="material-icons material-icons-outlined"
+    >
+      arrow_forward
+    </i>
+  </Link>
+  <Link
+    className="cards cards-primary cards-wide"
+    key="Lists"
+    to="/components/lists"
+  >
+    <div
+      className="cards-content flex-row align-items-center m-0 "
+    >
+      <i
+        className="material-icons material-icons-outlined mr-3"
+      >
+        sort
+      </i>
+      <span
+        className="h3 m-0"
+      >
+        Lists
+      </span>
+    </div>
+    <i
+      className="material-icons material-icons-outlined"
+    >
+      arrow_forward
+    </i>
+  </Link>
+  <Link
+    className="cards cards-primary cards-wide"
+    key="Loaders"
+    to="/components/loaders"
+  >
+    <div
+      className="cards-content flex-row align-items-center m-0 "
+    >
+      <i
+        className="material-icons material-icons-outlined mr-3"
+      >
+        loop
+      </i>
+      <span
+        className="h3 m-0"
+      >
+        Loaders
+      </span>
+    </div>
+    <i
+      className="material-icons material-icons-outlined"
+    >
+      arrow_forward
+    </i>
+  </Link>
+  <Link
+    className="cards cards-primary cards-wide"
+    key="Navigation"
+    to="/components/nav"
+  >
+    <div
+      className="cards-content flex-row align-items-center m-0 "
+    >
+      <i
+        className="material-icons material-icons-outlined mr-3"
+      >
+        explore
+      </i>
+      <span
+        className="h3 m-0"
+      >
+        Navigation
+      </span>
+    </div>
+    <i
+      className="material-icons material-icons-outlined"
+    >
+      arrow_forward
+    </i>
+  </Link>
+  <Link
+    className="cards cards-primary cards-wide"
+    key="Pagination"
+    to="/components/pagination"
+  >
+    <div
+      className="cards-content flex-row align-items-center m-0 "
+    >
+      <i
+        className="material-icons material-icons-outlined mr-3"
+      >
+        power_input
+      </i>
+      <span
+        className="h3 m-0"
+      >
+        Pagination
+      </span>
+    </div>
+    <i
+      className="material-icons material-icons-outlined"
+    >
+      arrow_forward
+    </i>
+  </Link>
+  <Link
+    className="cards cards-primary cards-wide"
+    key="Progress steps"
+    to="/components/progress-steps"
+  >
+    <div
+      className="cards-content flex-row align-items-center m-0 "
+    >
+      <i
+        className="material-icons material-icons-outlined mr-3"
+      >
+        hdr_strong
+      </i>
+      <span
+        className="h3 m-0"
+      >
+        Progress steps
+      </span>
+    </div>
+    <i
+      className="material-icons material-icons-outlined"
+    >
+      arrow_forward
+    </i>
+  </Link>
+  <Link
+    className="cards cards-primary cards-wide"
+    key="Sheet"
     to="/components/sheet"
   >
     <div
@@ -486,6 +506,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Status"
     to="/components/status"
   >
     <div
@@ -510,30 +531,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
-    to="/components/tabs"
-  >
-    <div
-      className="cards-content flex-row align-items-center m-0 "
-    >
-      <i
-        className="material-icons material-icons-outlined mr-3"
-      >
-        folder
-      </i>
-      <span
-        className="h3 m-0"
-      >
-        Tabs
-      </span>
-    </div>
-    <i
-      className="material-icons material-icons-outlined"
-    >
-      arrow_forward
-    </i>
-  </Link>
-  <Link
-    className="cards cards-primary cards-wide"
+    key="Tables"
     to="/components/tables"
   >
     <div
@@ -558,6 +556,32 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Tabs"
+    to="/components/tabs"
+  >
+    <div
+      className="cards-content flex-row align-items-center m-0 "
+    >
+      <i
+        className="material-icons material-icons-outlined mr-3"
+      >
+        folder
+      </i>
+      <span
+        className="h3 m-0"
+      >
+        Tabs
+      </span>
+    </div>
+    <i
+      className="material-icons material-icons-outlined"
+    >
+      arrow_forward
+    </i>
+  </Link>
+  <Link
+    className="cards cards-primary cards-wide"
+    key="Toast"
     to="/components/toast"
   >
     <div
@@ -582,6 +606,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Tooltips"
     to="/components/tooltips"
   >
     <div
