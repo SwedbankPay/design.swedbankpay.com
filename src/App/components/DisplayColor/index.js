@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const ColorDisplay = ({ hex, rgb, fontColor, border }) => (
-    <div className={`${border && border}`}>
+    <div className={`${border ? border : ""}`}>
         <svg>
             <rect fill={hex} />
         </svg>
