@@ -115,11 +115,11 @@ exports[`GettingStarted: Introduction UsingDG renders 1`] = `
     className="big-quotation"
   >
     <p>
-      The Design guide enables a cohesive and unified design across the organization which saves time for everyone involved. 
+      The Design Guide enables a cohesive and unified design across the organization which saves time for everyone involved. 
     </p>
   </div>
   <p>
-    By doing so, when an adjustment or change occurs with one of the Design Guide components, all the projects which uses the said component will have the changes applied to their product automatically. This way the Design guide enables a cohesive and unified design across the organization which saves time for everyone involved.  
+    By doing so, when an adjustment or change occurs with one of the Design Guide components, all the projects which uses the said component will have the changes applied to their product automatically. This way the Design Guide enables a cohesive and unified design across the organization which saves time for everyone involved.  
   </p>
   <h3>
     Products using the Design Guide
