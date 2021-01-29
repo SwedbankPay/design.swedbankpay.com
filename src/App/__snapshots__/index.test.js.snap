@@ -98,6 +98,7 @@ exports[`Main: App renders 1`] = `
                       "statusBadges": Array [
                         "new",
                       ],
+                      "text": "Principles & WCAG 2.1 guidelines",
                       "title": "Accessibility",
                     },
                     Object {
@@ -106,6 +107,7 @@ exports[`Main: App renders 1`] = `
                       "statusBadges": Array [
                         "updated",
                       ],
+                      "text": "Our color palette with HEX codes",
                       "title": "Color",
                     },
                     Object {
@@ -114,6 +116,7 @@ exports[`Main: App renders 1`] = `
                       "statusBadges": Array [
                         "new",
                       ],
+                      "text": "Tonality & UX copy in our products",
                       "title": "Copywriting",
                     },
                     Object {
@@ -122,6 +125,7 @@ exports[`Main: App renders 1`] = `
                       "statusBadges": Array [
                         "new",
                       ],
+                      "text": "Our grid and best practices",
                       "title": "Grid",
                     },
                     Object {
@@ -130,6 +134,7 @@ exports[`Main: App renders 1`] = `
                       "statusBadges": Array [
                         "updated",
                       ],
+                      "text": "Guidelines and icon library",
                       "title": "Iconography",
                     },
                     Object {
@@ -138,6 +143,7 @@ exports[`Main: App renders 1`] = `
                       "statusBadges": Array [
                         "new",
                       ],
+                      "text": "Guidelines and image library",
                       "title": "Imagery",
                     },
                     Object {
@@ -146,11 +152,13 @@ exports[`Main: App renders 1`] = `
                       "statusBadges": Array [
                         "updated",
                       ],
+                      "text": "The Swedbank Pay logotype",
                       "title": "Logotype",
                     },
                     Object {
                       "componentPath": "identity/Page-layout",
                       "path": "/identity/page-layout",
+                      "text": "See our layout structure",
                       "title": "Page layout",
                     },
                     Object {
@@ -159,6 +167,7 @@ exports[`Main: App renders 1`] = `
                       "statusBadges": Array [
                         "new",
                       ],
+                      "text": "8-point spacing system",
                       "title": "Spacing",
                     },
                     Object {
@@ -167,6 +176,7 @@ exports[`Main: App renders 1`] = `
                       "statusBadges": Array [
                         "updated",
                       ],
+                      "text": "See our fronts and sizing",
                       "title": "Typography",
                     },
                   ],
