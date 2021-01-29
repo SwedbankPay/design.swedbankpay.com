@@ -285,7 +285,7 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     language="html"
   >
     <link
-      href="https://design.swedbankpay.com/v/5.0.0/styles"
+      href="https://design.swedbankpay.com/v/5.0.0/styles/dg-style.css"
       rel="stylesheet"
     />
   </ComponentPreview>
