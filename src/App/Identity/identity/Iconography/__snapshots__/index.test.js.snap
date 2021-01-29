@@ -993,21 +993,21 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
         </td>
       </tr>
       <tr
-        key="mobilpay"
+        key="mobilepay"
       >
         <td>
           <IconPreview
-            name="mobilpay"
+            name="mobilepay"
             size="large"
             type="payment-icon"
           />
         </td>
         <td>
-          MobilPay
+          MobilePay
         </td>
         <td>
           <CodeTags
-            code="mobilpay"
+            code="mobilepay"
             type="secondary"
           />
         </td>
@@ -1078,7 +1078,7 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
 
     <i
       aria-hidden="true"
-      className="payment-icon payment-icon-mobilpay"
+      className="payment-icon payment-icon-mobilepay"
     />
     
 

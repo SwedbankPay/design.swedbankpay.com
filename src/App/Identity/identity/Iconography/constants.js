@@ -77,8 +77,8 @@ export const paymentIcons = [
         code: "swish"
     },
     {
-        title: "MobilPay",
-        code: "mobilpay"
+        title: "MobilePay",
+        code: "mobilepay"
     },
     {
         title: "CarPay",
