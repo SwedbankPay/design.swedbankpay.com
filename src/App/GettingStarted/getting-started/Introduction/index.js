@@ -47,11 +47,11 @@ const WhatIsDG = () => (
 const UsingDG = () => (
     <section>
         <h2 id="using-dg">Using the Design Guide</h2>
-        <p>Let’s clarify the definition of using the Design Guide. Just because an interface looks right according to the Design Guide, our brand and the design system in general it still doesn’t mean that it per definition “uses the Design Guide”. The definition of using our Design Guide is the technical implementation. </p>
+        <p>Let’s clarify the definition of using the Design Guide. Just because an interface looks right according to the Design Guide, our brand and the design system in general it still doesn’t mean that it per definition “uses the Design Guide”. The definition of using our Design Guide is the technical implementation and using the components taken straight from the Design Guide. </p>
         <div className="big-quotation">
-            <p>The idea of the Design Guide is to have official place where general and/or major updates happens.</p>
+            <p>The Design Guide enables a cohesive and unified design across the organization which saves time for everyone involved. </p>
         </div>
-        <p>From a branding perspective we could easily settle with making everything look and feel cohesive. That is the ultimate goal! But what happens when we want to change and/or update a component, logotype, typeface e.t.c? The idea of the Design Guide is to have official place where general and/or major updates happens. If it just looks the same, the product won’t be updated when the Design Guide release new updates. </p>
+        <p>By doing so, when an adjustment or change occurs with one of the Design Guide components, all the projects which uses the said component will have the changes applied to their product automatically. This way the Design Guide enables a cohesive and unified design across the organization which saves time for everyone involved.  </p>
         <h3>Products using the Design Guide</h3>
         <p>Because there’s a difference of following the design guidelines and using the Design Guide, not all Swedbank Pay products per definition uses the Design Guide. </p>
         <table className="table table-plain">
