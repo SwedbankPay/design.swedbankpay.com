@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Switch, Route, Redirect } from "react-router-dom";
 
-import { StatusBadge } from "@docutils";
+import { DocHeading, StatusBadge } from "@docutils";
 
 const RenderRoutes = ({ path, redirect, routes, appFolder }) => (
     <Switch>
@@ -13,7 +13,10 @@ const RenderRoutes = ({ path, redirect, routes, appFolder }) => (
             const RouteRenderComponent = React.lazy(() => import(/* webpackChunkName: "doc-route.chunk_" */ `../../${appFolder}/${componentPath}/index.js`));
 
             return <Route key={`doc_route_${path}`} exact path={path} render={() => <>
-                {route.statusBadges && route.statusBadges.map((statusBadge, i) => <StatusBadge key={i} type={statusBadge} />)}
+                <div className="d-flex align-items-center ">
+                    <DocHeading />
+                    {route.statusBadges && route.statusBadges.map((statusBadge, i) => <StatusBadge key={i} type={statusBadge} />)}
+                </div>
                 <RouteRenderComponent />
             </>} />;
         })}

@@ -76,9 +76,9 @@ const Home = () => {
                 ))}
 
                 <div className="row">
-                    <a href="https://github.com/SwedbankPay/design.swedbankpay.com" target="_blank" rel="noopener noreferrer"className="icon-link mt-4 px-0">
-                        <span>See the Github repository</span>
-                        <i className="material-icons" aria-hidden="true">open_in_new</i>
+                    <a href="https://github.com/SwedbankPay/design.swedbankpay.com/releases" target="_blank" rel="noopener noreferrer"className="icon-link mt-4 px-0">
+                        <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
+                        <span>Github - Detailed changelog</span>
                     </a>
                 </div>
             </div>

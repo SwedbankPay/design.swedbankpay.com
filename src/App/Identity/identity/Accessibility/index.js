@@ -14,7 +14,7 @@ const Intro = () => (
         <p>Microsoft defines it like this: <span>“Accessibility: 1. The qualities that make an experience open to all. 2. A professional discipline aimed at achieving No. 1”</span> So what do we mean when we talk about disabilities and impairments? Well, a disability is a limitation when interacting in society in accordance to how society is built. It can be permanent, temporary or situational –permanent could be someone with only one arm, temporary someone with a broken arm, and situational a new parent (often carrying the baby in one arm). So, when we design for permanent impairment and disabilities we automatically include people with both temporary and situational impairments as well.</p>
 
         <div className="d-flex flex-column align-items-center mb-4">
-            <img src={`${basename}img/documentation/accessibility/impairments.svg`} alt="Illustration of impairments"/>
+            <img src={`${basename}img/documentation/accessibility/impairments.png`} className="w-100" alt="Illustration of impairments"/>
             <span className="caption-text"><span className="font-weight-bold">Figure 1.</span> An illustration visualizing permanent, beneath temporary and situational impairment.</span>
         </div>
 
@@ -36,7 +36,7 @@ const WcagStandard = () => (
         <p>The guidelines ties back to four core terms: A website should be perceivable,  operable, understandable and robust. In these four areas there are sets of criteria  that has to be met for a certain term to be considered achieved (see Figure 2). Each  criteria also has one or more sub-criteria which are graded on a scale from A to AAA where A is least acceptable and AAA is considered “very good”.</p>
 
         <div className="d-flex flex-column align-items-center">
-            <img src={`${basename}img/documentation/accessibility/wcag.svg`} className="mb-1" alt="WCAG 2.1 at a glance" />
+            <img src={`${basename}img/documentation/accessibility/wcag.png`} className="mb-1 w-100" alt="WCAG 2.1 at a glance" />
             <span className="caption-text"><span className="font-weight-bold">Figure 1</span> This is the WCAG 2.1 at a glance from <a href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/" target="_blank" rel="noopener noreferrer">www.w3.org/WAI/standards-guidelines/wcag/glance/ </a></span>
         </div>
 

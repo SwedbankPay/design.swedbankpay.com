@@ -2,7 +2,7 @@
 
 exports[`DisplayColor renders with optional props 1`] = `
 <div
-  className="w-50"
+  className="has-border"
 >
   <svg>
     <rect

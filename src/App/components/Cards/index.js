@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const Cards = ({ type, titleTxt, imgSrc, icon, text, children, wide }) => (
     <>
         {!wide ?
-            <div className="col-xl-5 col-sm-6">{"\n"}
+            <div>{"\n"}
                 <a href="#" onClick={e => e.preventDefault()} className={`cards cards-${type}`}>{"\n"}
                     {icon && <div className="cards-icon">{"\n"}
                         {icon}{"\n"}
