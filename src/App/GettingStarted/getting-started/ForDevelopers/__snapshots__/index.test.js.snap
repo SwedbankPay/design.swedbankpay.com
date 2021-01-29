@@ -66,7 +66,8 @@ exports[`GettingStarted: ForDevelopers DiscoverMore renders 1`] = `
   >
     <Link
       className="cards cards-primary cards-wide"
-      to="/components/components"
+      key="/components"
+      to="/components"
     >
       <div
         className="cards-content m-0"
@@ -88,7 +89,8 @@ exports[`GettingStarted: ForDevelopers DiscoverMore renders 1`] = `
     </Link>
     <Link
       className="cards cards-primary cards-wide"
-      to="/utilities/utilities"
+      key="/utilities"
+      to="/utilities"
     >
       <div
         className="cards-content m-0"
@@ -110,6 +112,7 @@ exports[`GettingStarted: ForDevelopers DiscoverMore renders 1`] = `
     </Link>
     <Link
       className="cards cards-primary cards-wide"
+      key="/identity/iconography"
       to="/identity/iconography"
     >
       <div
@@ -186,7 +189,9 @@ exports[`GettingStarted: ForDevelopers GridAndBreakpoints renders 1`] = `
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr
+        key="Mobile"
+      >
         <td>
           Mobile
         </td>
@@ -200,7 +205,9 @@ exports[`GettingStarted: ForDevelopers GridAndBreakpoints renders 1`] = `
           16 px
         </td>
       </tr>
-      <tr>
+      <tr
+        key="Tablet"
+      >
         <td>
           Tablet
         </td>
@@ -214,9 +221,11 @@ exports[`GettingStarted: ForDevelopers GridAndBreakpoints renders 1`] = `
           24 px
         </td>
       </tr>
-      <tr>
+      <tr
+        key="Small desktop"
+      >
         <td>
-          Small Desktop
+          Small desktop
         </td>
         <td>
           1024-1439 px
@@ -228,9 +237,11 @@ exports[`GettingStarted: ForDevelopers GridAndBreakpoints renders 1`] = `
           24 px
         </td>
       </tr>
-      <tr>
+      <tr
+        key="Large desktop"
+      >
         <td>
-          Large Desktop
+          Large desktop
         </td>
         <td>
           ≥ 1440 px
@@ -359,16 +370,20 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
   <div
     className="browser-support"
   >
-    <div>
+    <div
+      key="img/documentation/forDevelopers/chrome.png"
+    >
       <img
-        alt="Image of Chrome"
+        alt="Image of chrome"
         src="/TEST/img/documentation/forDevelopers/chrome.png"
       />
       <p>
         Yes
       </p>
     </div>
-    <div>
+    <div
+      key="img/documentation/forDevelopers/edge.png"
+    >
       <img
         alt="Image of Edge"
         src="/TEST/img/documentation/forDevelopers/edge.png"
@@ -377,7 +392,9 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
         Yes
       </p>
     </div>
-    <div>
+    <div
+      key="img/documentation/forDevelopers/internet-explorer.png"
+    >
       <img
         alt="Image of Internet explorer"
         src="/TEST/img/documentation/forDevelopers/internet-explorer.png"
@@ -386,7 +403,9 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
         11
       </p>
     </div>
-    <div>
+    <div
+      key="img/documentation/forDevelopers/firefox.png"
+    >
       <img
         alt="Image of Firefox"
         src="/TEST/img/documentation/forDevelopers/firefox.png"
@@ -395,7 +414,9 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
         Yes
       </p>
     </div>
-    <div>
+    <div
+      key="img/documentation/forDevelopers/opera.png"
+    >
       <img
         alt="Image of Opera"
         src="/TEST/img/documentation/forDevelopers/opera.png"
@@ -404,7 +425,9 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
         Yes
       </p>
     </div>
-    <div>
+    <div
+      key="img/documentation/forDevelopers/safari.png"
+    >
       <img
         alt="Image of Safari"
         src="/TEST/img/documentation/forDevelopers/safari.png"

@@ -1,4 +1,5 @@
 import React from "react";
+import * as externalLinks from "./constants";
 
 import { DocContainer } from "@docutils";
 
@@ -82,40 +83,20 @@ const DiveDeeper = () => (
         </a>
 
         <h3>Website accessibility and the law</h3>
-        <a href="https://www.funka.com/design-for-alla/lagar-och-regler/" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
-            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
-            <span className="mr-2">Funka.com – Lagar och regler</span>
-        </a>
-        <a href="https://www.funka.com/en/design-for-all/accessibility/web-accessibility-directive-norway-is-facing-a-choice/" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
-            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
-            <span className="mr-2"> Funka.com – Web accessibility directive: Norway is facing a choice</span>
-        </a>
-        <a href="https://medium.com/confrere/its-illegal-to-have-an-inaccessible-website-in-norway-and-that-s-good-news-for-all-of-us-b59a9e929d54" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
-            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
-            <span className="mr-2">Medium.com – It’s illegal to have an inaccessible website in Norway and that’s good for all of us</span>
-        </a>
+        {externalLinks.accessibilityAndLaw.map(links => (
+            <a key={links.url} href={links.url} target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
+                <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
+                <span className="mr-2">{links.text}</span>
+            </a>
+        ))}
 
         <h3>Others about accessibility</h3>
-        <a href="https://www.swedbank.com/sv/hallbarhet/ansvarsfulla-affarer/betala.html" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
-            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
-            <span className="mr-2">Swedbank – Ansvarsfulla affärer </span>
-        </a>
-        <a href="https://polaris.shopify.com/foundations/accessibility" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
-            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
-            <span className="mr-2">Shopify – Accessibility</span>
-        </a>
-        <a href="https://material.io/design/usability/accessibility.html" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
-            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
-            <span className="mr-2">Google Material – Accessibility</span>
-        </a>
-        <a href="http://www.lightningdesignsystem.com/accessibility/overview/" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
-            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
-            <span className="mr-2">Salesforce Lightning – Accessibility</span>
-        </a>
-        <a href="https://spotify.design/article/spotify-inclusive-design-global-accessibility-awareness-day-round-up" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
-            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
-            <span className="mr-2">Spotify – Inclusive design global accessibility awareness day round up </span>
-        </a>
+        {externalLinks.othersAboutAccessibility.map(links => (
+            <a key={links.url} href={links.url} target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
+                <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
+                <span className="mr-2">{links.text}</span>
+            </a>
+        ))}
     </section>
 );
 

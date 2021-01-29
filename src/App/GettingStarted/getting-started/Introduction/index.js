@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { designGuideUsers } from "./constants";
 
 import { DocContainer } from "@docutils";
 
@@ -61,38 +62,12 @@ const UsingDG = () => (
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Checkout</td>
-                    <td><i className="material-icons mr-3">close</i> No, but are following the design guide</td>
-                </tr>
-                <tr>
-                    <td>Swedbankpay.se</td>
-                    <td><i className="material-icons mr-3">close</i> No</td>
-                </tr>
-                <tr>
-                    <td>Consumer Portal</td>
-                    <td><i className="material-icons mr-3">check</i> Yes</td>
-                </tr>
-                <tr>
-                    <td>Developer Portal</td>
-                    <td><i className="material-icons mr-3">check</i> Yes</td>
-                </tr>
-                <tr>
-                    <td>Card terminals</td>
-                    <td><i className="material-icons mr-3">close</i> No, but are following the design guide</td>
-                </tr>
-                <tr>
-                    <td>Ecom Merchant Admin</td>
-                    <td><i className="material-icons mr-3">check</i> Yes</td>
-                </tr>
-                <tr>
-                    <td>Ecom Owner Admin</td>
-                    <td><i className="material-icons mr-3">check</i> Yes</td>
-                </tr>
-                <tr>
-                    <td>Onboarding Signup</td>
-                    <td><i className="material-icons mr-3">check</i> Yes, is currently implementing the Design Guide</td>
-                </tr>
+                {designGuideUsers.map(product => (
+                    <tr key={product.name}>
+                        <td>{product.name}</td>
+                        <td><i className="material-icons mr-3">{product.icon}</i>{product.text}</td>
+                    </tr>
+                ))}
             </tbody>
         </table>
     </section>

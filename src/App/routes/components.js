@@ -8,6 +8,7 @@ module.exports = [
         icon: {
             name: "category"
         },
+        entryCardText: "Find all currently available components here",
         path: "/components",
         redirect: "/components/components",
         appFolder: "ComponentsDocumentation",
