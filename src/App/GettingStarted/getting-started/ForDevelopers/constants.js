@@ -1,7 +1,8 @@
-import routes from "@src/App/routes/all";
+import identityRoute from "@src/App/routes/identity";
+import componentRoute from "@src/App/routes/components";
+import utilitiesRoute from "@src/App/routes/utilities";
 
-const [, identity, components, utilities] = routes;
-const iconography = identity.routes.find(component => component.title === "Iconography");
+const iconography = identityRoute[0].routes.find(component => component.title === "Iconography");
 
 export const browsers = [
     {
@@ -65,13 +66,13 @@ export const gridAndBreakpoints = [
 
 export const discoverMore = [
     {
-        title: components.title,
-        url: components.path,
+        title: componentRoute[0].title,
+        url: componentRoute[0].path,
         text: "See all available components"
     },
     {
-        title: utilities.title,
-        url: utilities.path,
+        title: utilitiesRoute[0].title,
+        url: utilitiesRoute[0].path,
         text: "See all available components"
     },
     {
