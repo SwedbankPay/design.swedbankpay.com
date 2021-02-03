@@ -44,7 +44,7 @@ jobs:
         run: npm run lint && npm run test:codecov
 
       - name: Build
-        run: npm run ${{ steps.variables.outputs.BUILD_SCRIPT }} -- --env.release=true --env.baseUrl="${{ steps.variables.outputs.BRAND_URL }}" --env.basename="v/${{ steps.variables.outputs.VERSION }}" --env.semver=${{ steps.variables.outputs.VERSION }} --env.github_actions=true
+        run: npm run ${{ steps.variables.outputs.BUILD_SCRIPT }} -- --env.release=true --env.baseUrl="${{ steps.variables.outputs.BRAND_URL_PROD }}" --env.basename="v/${{ steps.variables.outputs.VERSION }}" --env.semver=${{ steps.variables.outputs.VERSION }} --env.github_actions=true
 
       - name: Zip Release
         id: zip
@@ -71,7 +71,7 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
-            az storage blob upload-batch -s dist -d \$web --account-name ${{ steps.variables.outputs.AZURE_ACCOUNT }}
+            az storage blob upload-batch -s dist -d \$web --account-name ${{ steps.variables.outputs.AZURE_ACCOUNT_PROD }}
 
       - name: Create Release
         id: create_release
