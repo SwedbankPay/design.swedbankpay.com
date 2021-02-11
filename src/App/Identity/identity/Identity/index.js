@@ -8,9 +8,9 @@ const OurBrand = () => (
         <h2 id="our-brand">Our brand</h2>
         <p>Open, simple and caring. These are our values that we always strive to come back to when we design both internal and external experiences. </p>
 
-        <div className="big-quotation">
+        <blockquote className="blockquote">
             <p>We are warm and welcoming, we guide, we involve users, we ensure access for all, we are consistent and we design for trust.</p>
-        </div>
+        </blockquote>
 
         <h3>Swedbank Pay design principles</h3>
         <p className="m-0">We let our design principles reflect our brand values. When designing, we try to be warm and welcoming in our tonality. By being consistent with our interactions, involving our users, and ensuring access for all, we strive to create trust and guide our users to complete their tasks successfully.</p>
