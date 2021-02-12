@@ -1,67 +1,44 @@
 # Changelog
 
+## [5.0.2] - 2021-02-15 
+
 ## [5.0.0] - 2021-01-15
 
 ## Summary
-- Major overhaul of the Developer Portal’s design ♥️
-    - Happy New Year everyone! We have a brand new look for the Design Guide landing page, a new left side menu updated to suit the branding of Swedbank Pay. We have finally added both “Get started” and “Identity” and re-written all the related pages.
+- Bug fixes and improvements of codes from 5.0.0 release
 
 ## Added
-- Accessibility
-  - Added a page on accessability in Identity section
-- Color
-  - Added color guidelines in Color in Identity section
-- Copywriting
-  - Added a page on copywriting in Identity section
-- Grid
-  - Added a page with grid guidelines in Identity section
-- Iconography
-  - Added more payment icon options  
-- Imagery
-  - Added a page on imagery in Identity section
-- Spacing
-  - Added a page on spacing in Identity section
-- Typography
-  - Added typography guidelines in Typography in Identity section
-- Design Guide
-  - Added an overview page for Component section
-  - Added an overview page for Identity section
-  - Added an overview page for Utilities section
-  - Added get started pages for designers and developers
+- Scrollbar on sidemenu
+  - Should only appear during hover, and disappear when not
 
 # Changed
-- Buttons
-  - Changed button active state
-- Core section
-  - Renamed to Identity section
-- Cards
-  - Changed Cards hover effect to have a more smooth transition
-  - Changed Cards title font
-- Iconography
-  - Changed iconography guidelines
-- Sidebar
-  - Changed to a new design of sidebar
-- Toast
-  - Changed text color of toast action button
-- Design Guide
-  - Logotype
-    - Changed Logotype documentation to be more optimized on mobile
-  - Changed the color of the JavaScript icon color in status badges
-  - Major design overhaul
-  - Changed front page to a more modern version
-  - Changed to the new sidebar
+- Status badges 
+  - Moved status badges from under, to the right side of H1 
+- Favicon
+  - Updated to a new version
+- Spacing between elements
+  - Changed space between sections, h2 and h3
+- Logotype
+  - Moved first paragraph of ingress to underneath "The black text logotype"
+- Accessibility - Figure 1
+  - Switched background to light brown
+- Introduction - What is design
+  - Update explanation paragraph to further explain the benefit of DG's
+- Grid illustrations
+  - Updated to a lighter color scheme to match overall design
+- Changelog page
+  - Changed title for 5.0.0 update
+  - Replaced "V" with "Version"
+  - Added proper URL to Github link
 
 ### Deleted
-- Resources
-  - Removed resources section 
-    - Image moved to Imagery and in Identity section
-    - Typography merged with Typography in Identity section
-    - Presentations can be found on the intranet
-    - Removed Spacing from Utilities (moved to Spacing in identity)
 
 ## Fixed
-- Buttons
-  - Fixed disabled buttons having wrong text color
-- Design Guide
-  - Topbar
-    - Fixed wrong logo in documentation examples
+- Identity - cards got wrong styling
+  - Fixed cards to have the right CSS styling
+- Edge browser icon is to small
+  - Enlarged Edge browser icon
+- Standard card to squeezed
+  - Fixed so card takes more space
+- Colors - black border bug 
+  - Changed css class
