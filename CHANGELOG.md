@@ -9,7 +9,7 @@
 - Sidebar
   - Scrollbar on sidebar Should only appear during hover, and disappear when not
 
-# Changed
+## Changed
 - Colors
   - Updated success and info colors
 - Typography
@@ -33,8 +33,6 @@
   - Status badges 
     - Moved status badges from under, to the right side of H1
   - Changed quotation styling
-
-### Deleted
 
 ## Fixed
 - Design Guide
