@@ -296,7 +296,7 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     language="html"
   >
     <link
-      href="https://design.TESTBRAND.com/TEST/styles"
+      href="https://design.TESTBRAND.com/TEST/styles/dg-style.css"
       rel="stylesheet"
     />
   </ComponentPreview>
