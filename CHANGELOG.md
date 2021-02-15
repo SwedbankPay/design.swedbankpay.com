@@ -2,8 +2,6 @@
 
 ## [5.0.2] - 2021-02-15 
 
-## [5.0.0] - 2021-01-15
-
 ## Summary
 - Our first bugfix after last weeks major patch is now live! We made some small tweaks and patched a few minor problems that we found. No need to worry, everything is better again!
 
