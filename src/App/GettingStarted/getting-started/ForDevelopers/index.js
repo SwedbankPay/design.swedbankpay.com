@@ -15,7 +15,7 @@ const Installation = () => (
         <h3>Include in the header</h3>
         <p>Copy-paste the following CSS code into <CodeTags type="secondary" code="<head>"/> before all the other stylesheets in order to load our CSS.</p>
         <ComponentPreview language="html" codeFigure>
-            <link rel="stylesheet" href={`https://design.${brand}.com${basename}styles`} />
+            <link rel="stylesheet" href={`https://design.${brand}.com${basename}styles/dg-style.css`} />
         </ComponentPreview>
 
         <h3>Include at the bottom</h3>
