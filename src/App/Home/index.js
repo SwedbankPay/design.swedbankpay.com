@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { changeLogs } from "./constants";
 import { setTitle, RemoveVscroll } from "../utils";
 import routes from "@src/App/routes/all";
+import packageJson from "~/package";
 
 const BASENAME = process.env.basename;
 
@@ -22,7 +23,7 @@ const Home = () => {
                 </header>
 
                 <div className="dg-version-indicator">
-                    <span>Ver. 5.0.0</span>
+                    <span>Ver. {packageJson.version}</span>
                 </div>
 
                 <p className="front-page-lead">Here you can find components and guidelines to help you  and your team work more efficiently and create a cohesive user experience through all our products and touch points.</p>
