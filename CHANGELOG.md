@@ -14,10 +14,9 @@
 # Changed
 - Colors
   - Updated success and info colors
-- Spacing between elements
-  - Changed space between sections, h2 and h3
 - Typography
-  - Changed color of blockquote element line
+  - Changed color of blockquote element line, and made left padding smaller
+  - Changed space between sections, h2 and h3
 - Design Guide
   - Accessibility - Figure 1
   - Changelog page
@@ -40,13 +39,10 @@
 ### Deleted
 
 ## Fixed
-- Identity - cards got wrong styling
-  - Fixed cards to have the right CSS styling
-- Standard card to squeezed
-  - Fixed so card takes more space
 - Design Guide
-  - Colors - black border bug 
-    - Changed css class
+  - Fixed cards in Identity oveview to have the right CSS styling
+  - Fixed so card examples to take more space
+  - Fixed black border bug in Colors 
   - Edge browser icon is to small
-    - Enlarged Edge browser icon
+  - Enlarged Edge browser icon in For developers
   - Fixed documentation referring to an older version of design guide 
