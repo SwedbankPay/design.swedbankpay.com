@@ -319,9 +319,9 @@ exports[`Core: Color SystemColors renders 1`] = `
     />
     <ColorDisplay
       fontColor="font-white"
-      hex="#4572C0"
+      hex="#3E6AB6"
       key="3"
-      rgb="69, 114, 192"
+      rgb="62, 106, 182"
     />
     <ColorDisplay
       hex="#E8EFF9"
@@ -330,9 +330,9 @@ exports[`Core: Color SystemColors renders 1`] = `
     />
     <ColorDisplay
       fontColor="font-white"
-      hex="#51971B"
+      hex="#437E15"
       key="5"
-      rgb="81, 151, 27"
+      rgb="67, 126, 21"
     />
     <ColorDisplay
       hex="#99CC66"
