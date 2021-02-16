@@ -1,4 +1,5 @@
 import React from "react";
+import * as externalLinks from "./constants";
 
 import { DocContainer } from "@docutils";
 
@@ -13,7 +14,7 @@ const Intro = () => (
         <p>Microsoft defines it like this: <span>“Accessibility: 1. The qualities that make an experience open to all. 2. A professional discipline aimed at achieving No. 1”</span> So what do we mean when we talk about disabilities and impairments? Well, a disability is a limitation when interacting in society in accordance to how society is built. It can be permanent, temporary or situational –permanent could be someone with only one arm, temporary someone with a broken arm, and situational a new parent (often carrying the baby in one arm). So, when we design for permanent impairment and disabilities we automatically include people with both temporary and situational impairments as well.</p>
 
         <div className="d-flex flex-column align-items-center mb-4">
-            <img src={`${basename}img/documentation/accessibility/impairments.svg`} alt="Illustration of impairments"/>
+            <img src={`${basename}img/documentation/accessibility/impairments.png`} className="w-100" alt="Illustration of impairments"/>
             <span className="caption-text"><span className="font-weight-bold">Figure 1.</span> An illustration visualizing permanent, beneath temporary and situational impairment.</span>
         </div>
 
@@ -35,7 +36,7 @@ const WcagStandard = () => (
         <p>The guidelines ties back to four core terms: A website should be perceivable,  operable, understandable and robust. In these four areas there are sets of criteria  that has to be met for a certain term to be considered achieved (see Figure 2). Each  criteria also has one or more sub-criteria which are graded on a scale from A to AAA where A is least acceptable and AAA is considered “very good”.</p>
 
         <div className="d-flex flex-column align-items-center">
-            <img src={`${basename}img/documentation/accessibility/wcag.svg`} className="mb-1" alt="WCAG 2.1 at a glance" />
+            <img src={`${basename}img/documentation/accessibility/wcag.png`} className="mb-1 w-100" alt="WCAG 2.1 at a glance" />
             <span className="caption-text"><span className="font-weight-bold">Figure 1</span> This is the WCAG 2.1 at a glance from <a href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/" target="_blank" rel="noopener noreferrer">www.w3.org/WAI/standards-guidelines/wcag/glance/ </a></span>
         </div>
 
@@ -82,40 +83,20 @@ const DiveDeeper = () => (
         </a>
 
         <h3>Website accessibility and the law</h3>
-        <a href="https://www.funka.com/design-for-alla/lagar-och-regler/" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
-            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
-            <span className="mr-2">Funka.com – Lagar och regler</span>
-        </a>
-        <a href="https://www.funka.com/en/design-for-all/accessibility/web-accessibility-directive-norway-is-facing-a-choice/" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
-            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
-            <span className="mr-2"> Funka.com – Web accessibility directive: Norway is facing a choice</span>
-        </a>
-        <a href="https://medium.com/confrere/its-illegal-to-have-an-inaccessible-website-in-norway-and-that-s-good-news-for-all-of-us-b59a9e929d54" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
-            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
-            <span className="mr-2">Medium.com – It’s illegal to have an inaccessible website in Norway and that’s good for all of us</span>
-        </a>
+        {externalLinks.accessibilityAndLaw.map(links => (
+            <a key={links.url} href={links.url} target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
+                <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
+                <span className="mr-2">{links.text}</span>
+            </a>
+        ))}
 
         <h3>Others about accessibility</h3>
-        <a href="https://www.swedbank.com/sv/hallbarhet/ansvarsfulla-affarer/betala.html" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
-            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
-            <span className="mr-2">Swedbank – Ansvarsfulla affärer </span>
-        </a>
-        <a href="https://polaris.shopify.com/foundations/accessibility" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
-            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
-            <span className="mr-2">Shopify – Accessibility</span>
-        </a>
-        <a href="https://material.io/design/usability/accessibility.html" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
-            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
-            <span className="mr-2">Google Material – Accessibility</span>
-        </a>
-        <a href="http://www.lightningdesignsystem.com/accessibility/overview/" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
-            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
-            <span className="mr-2">Salesforce Lightning – Accessibility</span>
-        </a>
-        <a href="https://spotify.design/article/spotify-inclusive-design-global-accessibility-awareness-day-round-up" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
-            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
-            <span className="mr-2">Spotify – Inclusive design global accessibility awareness day round up </span>
-        </a>
+        {externalLinks.othersAboutAccessibility.map(links => (
+            <a key={links.url} href={links.url} target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
+                <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
+                <span className="mr-2">{links.text}</span>
+            </a>
+        ))}
     </section>
 );
 

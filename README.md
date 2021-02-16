@@ -108,7 +108,7 @@ released, a new version of the JavaScript will be as well.
 
 ## Code style
 
-Coding style rules are set in `~/.eslintrc` & `~/.stylelintrc`. 
+Coding style rules are set in `~/.eslintrc` & `~/.stylelintrc`.
 
 __*Make sure to follow the syntax rules enforced by ESLint & Stylelint.*__
 
@@ -179,8 +179,8 @@ Code and documentation © Swedbank Pay and contributors, released under the [MIT
 
 Inspired by [Bootstrap][bootstrap] and [Materialize][materialize].
 
-  [version-badge]:      https://img.shields.io/badge/Version-5.0.0-blue.svg
-  [version-tag]:        https://github.com/swedbankpay/design.swedbankpay.com/releases/tag/5.0.0
+  [version-badge]:      https://img.shields.io/badge/Version-5.0.2-blue.svg
+  [version-tag]:        https://github.com/swedbankpay/design.swedbankpay.com/releases/tag/5.0.2
   [appveyor-badge]:     https://ci.appveyor.com/api/projects/status/1dii19sqw1m7xtsn/branch/master?svg=true
   [appveyor-status]:    https://ci.appveyor.com/project/PayEx/design-swedbankpay-com/branch/master
   [appveyor]:           https://www.appveyor.com/

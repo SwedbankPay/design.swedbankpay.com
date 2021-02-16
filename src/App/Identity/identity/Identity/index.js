@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import overviewList from "@src/App/routes/identity";
 import { DocContainer } from "@docutils";
 
 const OurBrand = () => (
@@ -8,9 +8,9 @@ const OurBrand = () => (
         <h2 id="our-brand">Our brand</h2>
         <p>Open, simple and caring. These are our values that we always strive to come back to when we design both internal and external experiences. </p>
 
-        <div className="big-quotation">
+        <blockquote className="blockquote">
             <p>We are warm and welcoming, we guide, we involve users, we ensure access for all, we are consistent and we design for trust.</p>
-        </div>
+        </blockquote>
 
         <h3>Swedbank Pay design principles</h3>
         <p className="m-0">We let our design principles reflect our brand values. When designing, we try to be warm and welcoming in our tonality. By being consistent with our interactions, involving our users, and ensuring access for all, we strive to create trust and guide our users to complete their tasks successfully.</p>
@@ -24,70 +24,16 @@ const OurBrand = () => (
 const MenuOverview = () => (
     <section>
         <h2 id="read-more">Read more</h2>
-        <div className="component-overview">
-            <Link to="/identity/accessibility" className="cards cards-wide">
-                <div className="cards-content m-0">
-                    <span className="h3">Accessibility</span>
-                    <span>Principles & WCAG 2.1 guidelines</span>
-                </div>
-                <i className="material-icons">arrow_forward</i>
-            </Link>
-            <Link to="/identity/color" className="cards cards-wide">
-                <div className="cards-content m-0">
-                    <span className="h3">Colors</span>
-                    <span>Our color palette with HEX codes</span>
-                </div>
-                <i className="material-icons">arrow_forward</i>
-            </Link>
-            <Link to="/identity/copywriting" className="cards cards-wide">
-                <div className="cards-content m-0">
-                    <span className="h3">Copywriting</span>
-                    <span>Tonality & UX copy in our products</span>
-                </div>
-                <i className="material-icons">arrow_forward</i>
-            </Link>
-            <Link to="/identity/imagery" className="cards cards-wide">
-                <div className="cards-content m-0">
-                    <span className="h3">Imagery</span>
-                    <span>Guidelines and image library</span>
-                </div>
-                <i className="material-icons">arrow_forward</i>
-            </Link>
-            <Link to="/identity/iconography" className="cards cards-wide">
-                <div className="cards-content m-0">
-                    <span className="h3">Iconography</span>
-                    <span>Guidelines and icon library</span>
-                </div>
-                <i className="material-icons">arrow_forward</i>
-            </Link>
-            <Link to="/identity/grid" className="cards cards-wide">
-                <div className="cards-content m-0">
-                    <span className="h3">Grid</span>
-                    <span>Our grid and best practices</span>
-                </div>
-                <i className="material-icons">arrow_forward</i>
-            </Link>
-            <Link to="/identity/logotype" className="cards cards-wide">
-                <div className="cards-content m-0">
-                    <span className="h3">Logotype</span>
-                    <span>The Swedbank Pay logotype</span>
-                </div>
-                <i className="material-icons">arrow_forward</i>
-            </Link>
-            <Link to="/identity/spacing" className="cards cards-wide">
-                <div className="cards-content m-0">
-                    <span className="h3">Spacing</span>
-                    <span>8-point spacing system</span>
-                </div>
-                <i className="material-icons">arrow_forward</i>
-            </Link>
-            <Link to="/identity/typography" className="cards cards-wide">
-                <div className="cards-content m-0">
-                    <span className="h3">Typography</span>
-                    <span>See our fronts and sizing</span>
-                </div>
-                <i className="material-icons">arrow_forward</i>
-            </Link>
+        <div className="component-overview hide-arrow-icon">
+            {overviewList[0].routes.slice(1).map((card, i) => (
+                <Link key={card.title} to={card.path} className="cards cards-primary cards-wide">
+                    <div className="cards-content m-0">
+                        <span className="h3">{card.title}</span>
+                        <span>{card.text}</span>
+                    </div>
+                    <i className="material-icons">arrow_forward</i>
+                </Link>
+            ))}
         </div>
     </section>
 );

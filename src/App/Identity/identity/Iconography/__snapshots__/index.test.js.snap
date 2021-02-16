@@ -2,11 +2,23 @@
 
 exports[`Core: Iconography CardIcons renders 1`] = `
 <section>
-  <h2>
+  <h2
+    id="card-icons"
+  >
     Card icons
   </h2>
   <p>
     Card icons are typically used to show users which card providers that are available. The payment-card icon can be used as a placeholder and/or when the card is not recognized. 
+  </p>
+  <h3>
+    Example of how to implement card icons
+  </h3>
+  <p>
+    To use an icon, provide the following markup: 
+    <CodeTags
+      code="<i class=\\"payment-icon payment-icon-{icon-name}\\" aria-hidden=\\"true\\" /i>"
+      type="primary"
+    />
   </p>
   <table
     className="table table-plain"
@@ -25,7 +37,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr
+        key="payment-card"
+      >
         <td>
           <IconPreview
             name="payment-card"
@@ -42,7 +56,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="amex"
+      >
         <td>
           <IconPreview
             name="amex"
@@ -50,7 +66,7 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
         <td>
-          American Express
+          American Expres
         </td>
         <td>
           <CodeTags
@@ -59,7 +75,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="bank-axept"
+      >
         <td>
           <IconPreview
             name="bank-axept"
@@ -76,7 +94,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="coop"
+      >
         <td>
           <IconPreview
             name="coop"
@@ -93,7 +113,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="dankort"
+      >
         <td>
           <IconPreview
             name="dankort"
@@ -110,7 +132,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="diners"
+      >
         <td>
           <IconPreview
             name="diners"
@@ -127,24 +151,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
-        <td>
-          <IconPreview
-            name="finax"
-            type="payment-icon"
-          />
-        </td>
-        <td>
-          Finax
-        </td>
-        <td>
-          <CodeTags
-            code="finax"
-            type="secondary"
-          />
-        </td>
-      </tr>
-      <tr>
+      <tr
+        key="forbrugsforeningen"
+      >
         <td>
           <IconPreview
             name="forbrugsforeningen"
@@ -161,7 +170,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="ica"
+      >
         <td>
           <IconPreview
             name="ica"
@@ -178,7 +189,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="ica-banken"
+      >
         <td>
           <IconPreview
             name="ica-banken"
@@ -195,7 +208,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="ikano-bank"
+      >
         <td>
           <IconPreview
             name="ikano-bank"
@@ -212,7 +227,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="jcb"
+      >
         <td>
           <IconPreview
             name="jcb"
@@ -229,7 +246,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="lindex"
+      >
         <td>
           <IconPreview
             name="lindex"
@@ -246,7 +265,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="maestro"
+      >
         <td>
           <IconPreview
             name="maestro"
@@ -263,7 +284,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="mastercard"
+      >
         <td>
           <IconPreview
             name="mastercard"
@@ -280,7 +303,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="visa"
+      >
         <td>
           <IconPreview
             name="visa"
@@ -299,12 +324,109 @@ exports[`Core: Iconography CardIcons renders 1`] = `
       </tr>
     </tbody>
   </table>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+  >
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-payment-card"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-amex"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-bank-axept"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-coop"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-dankort"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-diners"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-forbrugsforeningen"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-ica"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-ica-banken"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-ikano-bank"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-jcb"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-lindex"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-maestro"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-mastercard"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-visa"
+    />
+    
+
+  </ComponentPreview>
 </section>
 `;
 
 exports[`Core: Iconography Flags renders 1`] = `
 <section>
-  <h2>
+  <h2
+    id="flags"
+  >
     Flags
   </h2>
   <p>
@@ -341,7 +463,9 @@ exports[`Core: Iconography Flags renders 1`] = `
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr
+        key="no"
+      >
         <td>
           <IconPreview
             name="no"
@@ -359,7 +483,9 @@ exports[`Core: Iconography Flags renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="se"
+      >
         <td>
           <IconPreview
             name="se"
@@ -377,7 +503,9 @@ exports[`Core: Iconography Flags renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="dk"
+      >
         <td>
           <IconPreview
             name="dk"
@@ -395,7 +523,9 @@ exports[`Core: Iconography Flags renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="fi"
+      >
         <td>
           <IconPreview
             name="fi"
@@ -413,7 +543,9 @@ exports[`Core: Iconography Flags renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="eu"
+      >
         <td>
           <IconPreview
             name="eu"
@@ -478,35 +610,45 @@ exports[`Core: Iconography Flags renders 1`] = `
     className="d-flex justify-content-between align-items-end p-4"
   >
     <IconPreview
-      name="se"
+      name="no"
       previewSize={true}
       size="tiny"
       type="flag-icon"
     />
+    
+
     <IconPreview
-      name="no"
+      name="se"
       previewSize={true}
       size="small"
       type="flag-icon"
     />
+    
+
     <IconPreview
       name="dk"
       previewSize={true}
       size="medium"
       type="flag-icon"
     />
+    
+
     <IconPreview
       name="fi"
       previewSize={true}
       size="large"
       type="flag-icon"
     />
+    
+
     <IconPreview
       name="eu"
       previewSize={true}
       size="huge"
       type="flag-icon"
     />
+    
+
   </div>
   <ComponentPreview
     codeFigure={true}
@@ -558,14 +700,14 @@ exports[`Core: Iconography Flags renders 1`] = `
     className="d-flex justify-content-between align-items-end p-4"
   >
     <IconPreview
-      name="se"
+      name="no"
       previewSize={true}
       size="tiny"
       squaredFlag={true}
       type="flag-icon"
     />
     <IconPreview
-      name="no"
+      name="se"
       previewSize={true}
       size="small"
       squaredFlag={true}
@@ -605,7 +747,7 @@ exports[`Core: Iconography Flags renders 1`] = `
 
     <i
       aria-hidden="true"
-      className="flag-icon flag-icon-squared flag-icon-sv flag-icon-small"
+      className="flag-icon flag-icon-squared flag-icon-se flag-icon-small"
     />
     
 
@@ -633,7 +775,9 @@ exports[`Core: Iconography Flags renders 1`] = `
 
 exports[`Core: Iconography MaterialIcons renders 1`] = `
 <section>
-  <h2>
+  <h2
+    id="material-rounded-icons"
+  >
     Material Rounded Icons
   </h2>
   <p
@@ -673,26 +817,31 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
     className="d-flex justify-content-between p-4"
   >
     <IconPreview
+      key="insert_invitation"
       name="insert_invitation"
       preview={true}
       type="material-icons"
     />
     <IconPreview
+      key="cake"
       name="cake"
       preview={true}
       type="material-icons"
     />
     <IconPreview
+      key="mood"
       name="mood"
       preview={true}
       type="material-icons"
     />
     <IconPreview
+      key="thumb_up_alt"
       name="thumb_up_alt"
       preview={true}
       type="material-icons"
     />
     <IconPreview
+      key="whatshot"
       name="whatshot"
       preview={true}
       type="material-icons"
@@ -740,17 +889,31 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
     >
       whatshot
     </i>
+    
+
   </ComponentPreview>
 </section>
 `;
 
 exports[`Core: Iconography PaymentIcons renders 1`] = `
 <section>
-  <h2>
+  <h2
+    id="payment-icons"
+  >
     Payment icons
   </h2>
   <p>
     Below is a list of payment icons that we use in our products. Be mindful when using payment logotypes. Try to make the payment icon feel more secondary in combination with the Swedbank Pay logotype. We always want the Swedbank Pay logotype to be primary.
+  </p>
+  <h3>
+    Example of how to implement payment icons
+  </h3>
+  <p>
+    To use an icon, provide the following markup: 
+    <CodeTags
+      code="<i class=\\"payment-icon payment-icon-{icon-name}\\" aria-hidden=\\"true\\" /i>"
+      type="primary"
+    />
   </p>
   <table
     className="table table-plain"
@@ -769,7 +932,9 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr
+        key="viabill"
+      >
         <td>
           <IconPreview
             name="viabill"
@@ -787,7 +952,9 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="vipps"
+      >
         <td>
           <IconPreview
             name="vipps"
@@ -805,7 +972,9 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="swish"
+      >
         <td>
           <IconPreview
             name="swish"
@@ -823,25 +992,29 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="mobilepay"
+      >
         <td>
           <IconPreview
-            name="mobilpay"
+            name="mobilepay"
             size="large"
             type="payment-icon"
           />
         </td>
         <td>
-          MobilPay
+          MobilePay
         </td>
         <td>
           <CodeTags
-            code="mobilpay"
+            code="mobilepay"
             type="secondary"
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="carpay"
+      >
         <td>
           <IconPreview
             name="carpay"
@@ -859,7 +1032,9 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
           />
         </td>
       </tr>
-      <tr>
+      <tr
+        key="trustly"
+      >
         <td>
           <IconPreview
             name="trustly"
@@ -879,6 +1054,47 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
       </tr>
     </tbody>
   </table>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+  >
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-viabill"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-vipps"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-swish"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-mobilepay"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-carpay"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-trustly"
+    />
+    
+
+  </ComponentPreview>
 </section>
 `;
 
@@ -887,7 +1103,7 @@ exports[`Core: Iconography renders 1`] = `
   <p
     className="lead"
   >
-    At Swedbank Pay we use Material icons from Material Design, but we also include icons for well-known payment providers, and flags for most nations in the world. All icons are integraded and are available in HTML and CSS.
+    At Swedbank Pay we use Material icons from Material Design, but we also include icons for well-known payment providers, and flags for most nations in the world. All icons are integrated and are available in HTML and CSS.
   </p>
   <MaterialIcons />
   <CardIcons />

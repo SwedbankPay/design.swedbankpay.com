@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 
 import { ComponentPreview, DocContainer, JavascriptDocs, JavascriptDocElement } from "@docutils";
 import SidebarComponent from "@components/Sidebar";
-// import TopbarComponent from "@components/Topbar";
 import CodeTags from "@components/CodeTags";
 
 const { sidebar } = window.dg;

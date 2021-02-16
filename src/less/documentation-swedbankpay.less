@@ -144,7 +144,7 @@
 
         h1:first-of-type {
             margin-top: 1rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             font-family: @brand-black;
         }
 
@@ -402,7 +402,7 @@
         }
 
         section {
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
     }
 
@@ -900,25 +900,6 @@
         }
     }
 
-    .big-quotation {
-        display: flex;
-        margin-bottom: 0.75rem;
-
-        &:before {
-            content: "“";
-            color: @brand-primary;
-            font-family: @brand-headline;
-            font-size: 3.5rem;
-            margin-right: 0.425rem;
-        }
-
-        p {
-            align-self: flex-end;
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-        }
-    }
-
     .color-group {
         display: flex;
         flex-wrap: wrap;
@@ -939,6 +920,11 @@
                     height: 100%;
                     rx: 5;
                 }
+            }
+
+            &.has-border {
+                border: 1px solid @black;
+                border-radius: 5px;
             }
 
             div {

@@ -6,7 +6,7 @@ export const communicationColors = [
     {
         hex: "#FFFFFF",
         rgb: "255, 255, 255",
-        border: "black"
+        border: "has-border"
     }
 ];
 
@@ -24,7 +24,7 @@ export const textColors = [
     {
         hex: "#FFFFFF",
         rgb: "255, 255, 255",
-        border: "black"
+        border: "has-border"
     },
     {
         hex: "#696969",
@@ -61,7 +61,7 @@ export const buttonColors = [
     {
         hex: "#FFFFFF",
         rgb: "255, 255, 255",
-        border: "black"
+        border: "has-border"
     }
 ];
 
@@ -119,8 +119,8 @@ export const systemColors = [
         rgb: "249, 222, 211"
     },
     {
-        hex: "#4572C0",
-        rgb: "69, 114, 192",
+        hex: "#3E6AB6",
+        rgb: "62, 106, 182",
         fontColor: "font-white"
     },
     {
@@ -128,8 +128,8 @@ export const systemColors = [
         rgb: "232, 239, 249"
     },
     {
-        hex: "#51971B",
-        rgb: "81, 151, 27",
+        hex: "#437E15",
+        rgb: "67, 126, 21",
         fontColor: "font-white"
     },
     {
@@ -168,7 +168,7 @@ export const grayScaleColors = [
     {
         hex: "#FFFFFF",
         rgb: "255, 255, 255",
-        border: "black"
+        border: "has-border"
     }
 ];
 

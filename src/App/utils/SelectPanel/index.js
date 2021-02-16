@@ -139,7 +139,7 @@ class SelectPanel extends Component {
                                 {this.props.routes.map(route => <li key={route.title}
                                     className={`main-nav-li${this._activeSecondaryNav(route.path) ? " active" : ""}`}>
                                     <NavLink activeClassName="active" to={route.path}>
-                                        <i className={`material-icons-outlined${route.icon.rotated ? " rotated" : ""}`}>{route.icon.name}</i>
+                                        <i className={`material-icons-outlined${route.icon.rotate ? " rotated" : ""}`}>{route.icon.name}</i>
                                         {route.title}
                                     </NavLink>
 

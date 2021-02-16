@@ -1,5 +1,7 @@
 import React from "react";
 import { ComponentPreview, DocContainer } from "@docutils";
+import { diveDeeper } from "./constants";
+
 import CodeTags from "@components/CodeTags";
 
 const basename = process.env.basename;
@@ -84,25 +86,12 @@ const DiveDeeper = () => (
         <h2 id="dive-deeper">Dive deeper into spacing</h2>
         <p>There are a lot more to learn about best practices when it comes to spacing, it involves much more than just spacing in between elements. Even though, we can’t explain all these concepts here in our spacing section. We would like to provide you with links to learn more about what other factors should be considered when designing layouts and what to think about in order to create the best experience for our users.</p>
 
-        <a href="https://www.justinmind.com/blog/your-guide-to-space-and-layout-in-ui-design/" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
-            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
-            <span className="mr-2">Just in mind – Your guide to space and layout in UI design</span>
-        </a>
-
-        <a href="https://www.w3.org/TR/mobile-accessibility-mapping/#touch-target-size-and-spacing" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
-            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
-            <span className="mr-2">WCAG 2.0 – Touch Target Size and Spacing</span>
-        </a>
-
-        <a href="https://lawsofux.com/law-of-proximity" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
-            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
-            <span className="mr-2">Law of UX – Law of Proximity</span>
-        </a>
-
-        <a href="https://uxplanet.org/white-space-in-ui-design-8647d4f685a7" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
-            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
-            <span className="mr-2">UX Planet – White space in UI design </span>
-        </a>
+        { diveDeeper.map(link => (
+            <a key={link.path} href={link.path} target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
+                <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
+                <span className="mr-2">{link.text}</span>
+            </a>
+        )) }
     </section>
 );
 

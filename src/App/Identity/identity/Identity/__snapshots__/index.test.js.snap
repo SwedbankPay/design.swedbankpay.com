@@ -8,10 +8,11 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
     Read more
   </h2>
   <div
-    className="component-overview"
+    className="component-overview hide-arrow-icon"
   >
     <Link
-      className="cards cards-wide"
+      className="cards cards-primary cards-wide"
+      key="Accessibility"
       to="/identity/accessibility"
     >
       <div
@@ -33,7 +34,8 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
       </i>
     </Link>
     <Link
-      className="cards cards-wide"
+      className="cards cards-primary cards-wide"
+      key="Color"
       to="/identity/color"
     >
       <div
@@ -42,7 +44,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
         <span
           className="h3"
         >
-          Colors
+          Color
         </span>
         <span>
           Our color palette with HEX codes
@@ -55,7 +57,8 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
       </i>
     </Link>
     <Link
-      className="cards cards-wide"
+      className="cards cards-primary cards-wide"
+      key="Copywriting"
       to="/identity/copywriting"
     >
       <div
@@ -77,51 +80,8 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
       </i>
     </Link>
     <Link
-      className="cards cards-wide"
-      to="/identity/imagery"
-    >
-      <div
-        className="cards-content m-0"
-      >
-        <span
-          className="h3"
-        >
-          Imagery
-        </span>
-        <span>
-          Guidelines and image library
-        </span>
-      </div>
-      <i
-        className="material-icons"
-      >
-        arrow_forward
-      </i>
-    </Link>
-    <Link
-      className="cards cards-wide"
-      to="/identity/iconography"
-    >
-      <div
-        className="cards-content m-0"
-      >
-        <span
-          className="h3"
-        >
-          Iconography
-        </span>
-        <span>
-          Guidelines and icon library
-        </span>
-      </div>
-      <i
-        className="material-icons"
-      >
-        arrow_forward
-      </i>
-    </Link>
-    <Link
-      className="cards cards-wide"
+      className="cards cards-primary cards-wide"
+      key="Grid"
       to="/identity/grid"
     >
       <div
@@ -143,7 +103,54 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
       </i>
     </Link>
     <Link
-      className="cards cards-wide"
+      className="cards cards-primary cards-wide"
+      key="Iconography"
+      to="/identity/iconography"
+    >
+      <div
+        className="cards-content m-0"
+      >
+        <span
+          className="h3"
+        >
+          Iconography
+        </span>
+        <span>
+          Guidelines and icon library
+        </span>
+      </div>
+      <i
+        className="material-icons"
+      >
+        arrow_forward
+      </i>
+    </Link>
+    <Link
+      className="cards cards-primary cards-wide"
+      key="Imagery"
+      to="/identity/imagery"
+    >
+      <div
+        className="cards-content m-0"
+      >
+        <span
+          className="h3"
+        >
+          Imagery
+        </span>
+        <span>
+          Guidelines and image library
+        </span>
+      </div>
+      <i
+        className="material-icons"
+      >
+        arrow_forward
+      </i>
+    </Link>
+    <Link
+      className="cards cards-primary cards-wide"
+      key="Logotype"
       to="/identity/logotype"
     >
       <div
@@ -165,7 +172,31 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
       </i>
     </Link>
     <Link
-      className="cards cards-wide"
+      className="cards cards-primary cards-wide"
+      key="Page layout"
+      to="/identity/page-layout"
+    >
+      <div
+        className="cards-content m-0"
+      >
+        <span
+          className="h3"
+        >
+          Page layout
+        </span>
+        <span>
+          See our layout structure
+        </span>
+      </div>
+      <i
+        className="material-icons"
+      >
+        arrow_forward
+      </i>
+    </Link>
+    <Link
+      className="cards cards-primary cards-wide"
+      key="Spacing"
       to="/identity/spacing"
     >
       <div
@@ -187,7 +218,8 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
       </i>
     </Link>
     <Link
-      className="cards cards-wide"
+      className="cards cards-primary cards-wide"
+      key="Typography"
       to="/identity/typography"
     >
       <div
@@ -222,13 +254,13 @@ exports[`Identity: Identity OurBrand renders 1`] = `
   <p>
     Open, simple and caring. These are our values that we always strive to come back to when we design both internal and external experiences. 
   </p>
-  <div
-    className="big-quotation"
+  <blockquote
+    className="blockquote"
   >
     <p>
       We are warm and welcoming, we guide, we involve users, we ensure access for all, we are consistent and we design for trust.
     </p>
-  </div>
+  </blockquote>
   <h3>
     Swedbank Pay design principles
   </h3>

@@ -112,6 +112,9 @@ exports[`Core: Logotype LogoBlack renders 1`] = `
     Black text logotype
   </h2>
   <p>
+    The vertical logo is primary – the one that will build recognition. Always consider the vertical (primary) logo first before using the horizontal (secondary) logo.
+  </p>
+  <p>
     For good visibility the black text logo should be used on all light/fair backgrounds.
   </p>
   <ComponentPreview

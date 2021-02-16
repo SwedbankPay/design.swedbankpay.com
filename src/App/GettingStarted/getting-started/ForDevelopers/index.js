@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { browsers, gridAndBreakpoints, discoverMore } from "./constants";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
 
 const basename = process.env.basename;
+const brand = process.env.brand;
 
 const Installation = () => (
     <section>
@@ -13,13 +15,13 @@ const Installation = () => (
         <h3>Include in the header</h3>
         <p>Copy-paste the following CSS code into <CodeTags type="secondary" code="<head>"/> before all the other stylesheets in order to load our CSS.</p>
         <ComponentPreview language="html" codeFigure>
-            <link rel="stylesheet" href="https://design.swedbankpay.com/v/4.7.0/styles" />
+            <link rel="stylesheet" href={`https://design.${brand}.com${basename}styles/dg-style.css`} />
         </ComponentPreview>
 
         <h3>Include at the bottom</h3>
         <p>Many of our components requires the use of JavaScript in order to function. Place the following <CodeTags type="secondary" code="<Script>"/> tag near the end of your pages, right before the closing <CodeTags type="secondary" code="</body>"/> tag to enable them.</p>
         <ComponentPreview language="html" codeFigure>
-            <script src="https://design.swedbankpay.com/v/4.7.0/scripts/dg.js"></script>
+            <script src={`https://design.${brand}.com${basename}scripts/dg.js`}></script>
         </ComponentPreview>
         <h3>How to initialize our JavaScript components</h3>
         <p>Our script runs <CodeTags type="secondary" code="dg.script.initAll();"/> on DOMContentLoaded making it so you have to run <CodeTags type="secondary" code="dg.<component_name>.init();"/> manually when a component is rendered after the event has fired.</p>
@@ -34,30 +36,12 @@ const Installation = () => (
 
         <h3>Browser Support</h3>
         <div className="browser-support">
-            <div>
-                <img src={`${basename}img/documentation/forDevelopers/chrome.png`} alt="Image of Chrome"/>
-                <p>Yes</p>
-            </div>
-            <div>
-                <img src={`${basename}img/documentation/forDevelopers/edge.png`} alt="Image of Edge"/>
-                <p>Yes</p>
-            </div>
-            <div>
-                <img src={`${basename}img/documentation/forDevelopers/internet-explorer.png`} alt="Image of Internet explorer"/>
-                <p>11</p>
-            </div>
-            <div>
-                <img src={`${basename}img/documentation/forDevelopers/firefox.png`} alt="Image of Firefox"/>
-                <p>Yes</p>
-            </div>
-            <div>
-                <img src={`${basename}img/documentation/forDevelopers/opera.png`} alt="Image of Opera"/>
-                <p>Yes</p>
-            </div>
-            <div>
-                <img src={`${basename}img/documentation/forDevelopers/safari.png`} alt="Image of Safari"/>
-                <p>Yes</p>
-            </div>
+            {browsers.map(browser => (
+                <div key={browser.url}>
+                    <img src={basename + browser.url} alt={browser.alt}/>
+                    <p>{browser.text}</p>
+                </div>
+            ))}
         </div>
     </section>
 );
@@ -75,30 +59,14 @@ const GridAndBreakpoints = () => (
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Mobile</td>
-                    <td>320-767 px</td>
-                    <td>4</td>
-                    <td>16 px</td>
-                </tr>
-                <tr>
-                    <td>Tablet</td>
-                    <td>767-1023 px</td>
-                    <td>8</td>
-                    <td>24 px</td>
-                </tr>
-                <tr>
-                    <td>Small Desktop</td>
-                    <td>1024-1439 px</td>
-                    <td>12</td>
-                    <td>24 px</td>
-                </tr>
-                <tr>
-                    <td>Large Desktop</td>
-                    <td>≥ 1440 px</td>
-                    <td>12</td>
-                    <td>24 px</td>
-                </tr>
+                {gridAndBreakpoints.map(element => (
+                    <tr key={element.size}>
+                        <td>{element.size}</td>
+                        <td>{element.breakpoints}</td>
+                        <td>{element.columns}</td>
+                        <td>{element.margins}</td>
+                    </tr>
+                ))}
             </tbody>
         </table>
 
@@ -123,24 +91,14 @@ const DiscoverMore = () => (
     <section>
         <h2 id="discover-more">Discover more</h2>
         <div className="component-overview hide-arrow-icon">
-            <Link to="/components/components" className="cards cards-primary cards-wide">
-                <div className="cards-content m-0">
-                    <span className="h3">Components</span><span>See all available components</span>
-                </div>
-                <i className="material-icons">arrow_forward</i>
-            </Link>
-            <Link to="/utilities/utilities" className="cards cards-primary cards-wide">
-                <div className="cards-content m-0">
-                    <span className="h3">Utilities</span><span>See all available components</span>
-                </div>
-                <i className="material-icons">arrow_forward</i>
-            </Link>
-            <Link to="/identity/iconography" className="cards cards-primary cards-wide">
-                <div className="cards-content m-0">
-                    <span className="h3">Iconography</span><span>Our icon library and how to use it</span>
-                </div>
-                <i className="material-icons">arrow_forward</i>
-            </Link>
+            {discoverMore.map(card => (
+                <Link key={card.url} to={card.url} className="cards cards-primary cards-wide">
+                    <div className="cards-content m-0">
+                        <span className="h3">{card.title}</span><span>{card.text}</span>
+                    </div>
+                    <i className="material-icons">arrow_forward</i>
+                </Link>
+            ))}
         </div>
     </section>
 );

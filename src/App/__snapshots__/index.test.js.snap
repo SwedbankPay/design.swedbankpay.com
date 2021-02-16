@@ -42,9 +42,10 @@ exports[`Main: App renders 1`] = `
               Array [
                 Object {
                   "appFolder": "GettingStarted",
+                  "entryCardText": "Learn more about how to setup and use our system",
                   "icon": Object {
                     "name": "wb_incandescent",
-                    "rotated": true,
+                    "rotate": true,
                   },
                   "path": "/get-started",
                   "redirect": "/get-started/introduction",
@@ -78,6 +79,7 @@ exports[`Main: App renders 1`] = `
                 },
                 Object {
                   "appFolder": "Identity",
+                  "entryCardText": "Learn about our fundamental principles",
                   "icon": Object {
                     "name": "palette",
                   },
@@ -98,6 +100,7 @@ exports[`Main: App renders 1`] = `
                       "statusBadges": Array [
                         "new",
                       ],
+                      "text": "Principles & WCAG 2.1 guidelines",
                       "title": "Accessibility",
                     },
                     Object {
@@ -106,6 +109,7 @@ exports[`Main: App renders 1`] = `
                       "statusBadges": Array [
                         "updated",
                       ],
+                      "text": "Our color palette with HEX codes",
                       "title": "Color",
                     },
                     Object {
@@ -114,6 +118,7 @@ exports[`Main: App renders 1`] = `
                       "statusBadges": Array [
                         "new",
                       ],
+                      "text": "Tonality & UX copy in our products",
                       "title": "Copywriting",
                     },
                     Object {
@@ -122,6 +127,7 @@ exports[`Main: App renders 1`] = `
                       "statusBadges": Array [
                         "new",
                       ],
+                      "text": "Our grid and best practices",
                       "title": "Grid",
                     },
                     Object {
@@ -130,6 +136,7 @@ exports[`Main: App renders 1`] = `
                       "statusBadges": Array [
                         "updated",
                       ],
+                      "text": "Guidelines and icon library",
                       "title": "Iconography",
                     },
                     Object {
@@ -138,6 +145,7 @@ exports[`Main: App renders 1`] = `
                       "statusBadges": Array [
                         "new",
                       ],
+                      "text": "Guidelines and image library",
                       "title": "Imagery",
                     },
                     Object {
@@ -146,11 +154,13 @@ exports[`Main: App renders 1`] = `
                       "statusBadges": Array [
                         "updated",
                       ],
+                      "text": "The Swedbank Pay logotype",
                       "title": "Logotype",
                     },
                     Object {
                       "componentPath": "identity/Page-layout",
                       "path": "/identity/page-layout",
+                      "text": "See our layout structure",
                       "title": "Page layout",
                     },
                     Object {
@@ -159,6 +169,7 @@ exports[`Main: App renders 1`] = `
                       "statusBadges": Array [
                         "new",
                       ],
+                      "text": "8-point spacing system",
                       "title": "Spacing",
                     },
                     Object {
@@ -167,6 +178,7 @@ exports[`Main: App renders 1`] = `
                       "statusBadges": Array [
                         "updated",
                       ],
+                      "text": "See our fronts and sizing",
                       "title": "Typography",
                     },
                   ],
@@ -174,6 +186,7 @@ exports[`Main: App renders 1`] = `
                 },
                 Object {
                   "appFolder": "ComponentsDocumentation",
+                  "entryCardText": "Find all currently available components here",
                   "icon": Object {
                     "name": "category",
                   },
@@ -190,6 +203,8 @@ exports[`Main: App renders 1`] = `
                     },
                     Object {
                       "componentPath": "components/Accordion",
+                      "icon": "calendar_view_day",
+                      "outlined": true,
                       "path": "/components/accordion",
                       "statusBadges": Array [
                         "javascript",
@@ -198,14 +213,18 @@ exports[`Main: App renders 1`] = `
                     },
                     Object {
                       "componentPath": "components/ActionList",
+                      "icon": "list",
+                      "outlined": false,
                       "path": "/components/action-list",
                       "statusBadges": Array [
                         "javascript",
                       ],
-                      "title": "Action List",
+                      "title": "Action list",
                     },
                     Object {
                       "componentPath": "components/Alerts",
+                      "icon": "error",
+                      "outlined": true,
                       "path": "/components/alerts",
                       "statusBadges": Array [
                         "javascript",
@@ -214,16 +233,22 @@ exports[`Main: App renders 1`] = `
                     },
                     Object {
                       "componentPath": "components/Badge",
+                      "icon": "more",
+                      "outlined": true,
                       "path": "/components/badge",
-                      "title": "Badge",
+                      "title": "Badges",
                     },
                     Object {
                       "componentPath": "components/Breadcrumb",
+                      "icon": "last_page",
+                      "outlined": true,
                       "path": "/components/breadcrumb",
                       "title": "Breadcrumb",
                     },
                     Object {
                       "componentPath": "components/Buttons",
+                      "icon": "touch_app",
+                      "outlined": true,
                       "path": "/components/buttons",
                       "statusBadges": Array [
                         "updated",
@@ -232,6 +257,8 @@ exports[`Main: App renders 1`] = `
                     },
                     Object {
                       "componentPath": "components/Card",
+                      "icon": "view_agenda",
+                      "outlined": true,
                       "path": "/components/cards",
                       "statusBadges": Array [
                         "updated",
@@ -240,6 +267,8 @@ exports[`Main: App renders 1`] = `
                     },
                     Object {
                       "componentPath": "components/Charts",
+                      "icon": "bar_chart",
+                      "outlined": true,
                       "path": "/components/charts",
                       "statusBadges": Array [
                         "javascript",
@@ -248,11 +277,15 @@ exports[`Main: App renders 1`] = `
                     },
                     Object {
                       "componentPath": "components/CodeTags",
+                      "icon": "code",
+                      "outlined": true,
                       "path": "/components/code-tags",
-                      "title": "Code Tags",
+                      "title": "Code tags",
                     },
                     Object {
                       "componentPath": "components/Datepickers",
+                      "icon": "event",
+                      "outlined": true,
                       "path": "/components/datepickers",
                       "statusBadges": Array [
                         "javascript",
@@ -261,6 +294,8 @@ exports[`Main: App renders 1`] = `
                     },
                     Object {
                       "componentPath": "components/Dialog",
+                      "icon": "picture_in_picture",
+                      "outlined": true,
                       "path": "/components/dialog",
                       "statusBadges": Array [
                         "javascript",
@@ -277,6 +312,8 @@ exports[`Main: App renders 1`] = `
                     },
                     Object {
                       "componentPath": "components/Forms",
+                      "icon": "text_snippet",
+                      "outlined": true,
                       "path": "/components/forms",
                       "statusBadges": Array [
                         "javascript",
@@ -285,6 +322,8 @@ exports[`Main: App renders 1`] = `
                     },
                     Object {
                       "componentPath": "components/Footer",
+                      "icon": "call_to_action",
+                      "outlined": true,
                       "path": "/components/footer",
                       "title": "Footer",
                     },
@@ -295,16 +334,22 @@ exports[`Main: App renders 1`] = `
                     },
                     Object {
                       "componentPath": "components/Links",
+                      "icon": "link",
+                      "outlined": true,
                       "path": "/components/links",
                       "title": "Links",
                     },
                     Object {
                       "componentPath": "components/Lists",
+                      "icon": "sort",
+                      "outlined": true,
                       "path": "/components/lists",
                       "title": "Lists",
                     },
                     Object {
                       "componentPath": "components/Loaders",
+                      "icon": "loop",
+                      "outlined": true,
                       "path": "/components/loaders",
                       "title": "Loaders",
                     },
@@ -315,14 +360,18 @@ exports[`Main: App renders 1`] = `
                     },
                     Object {
                       "componentPath": "components/Nav",
+                      "icon": "explore",
+                      "outlined": true,
                       "path": "/components/nav",
                       "statusBadges": Array [
                         "javascript",
                       ],
-                      "title": "Nav",
+                      "title": "Navigation",
                     },
                     Object {
                       "componentPath": "components/Pagination",
+                      "icon": "power_input",
+                      "outlined": true,
                       "path": "/components/pagination",
                       "title": "Pagination",
                     },
@@ -333,11 +382,15 @@ exports[`Main: App renders 1`] = `
                     },
                     Object {
                       "componentPath": "components/ProgressSteps",
+                      "icon": "hdr_strong",
+                      "outlined": true,
                       "path": "/components/progress-steps",
-                      "title": "Progress Steps",
+                      "title": "Progress steps",
                     },
                     Object {
                       "componentPath": "components/Sheet",
+                      "icon": "vertical_split",
+                      "outlined": true,
                       "path": "/components/sheet",
                       "statusBadges": Array [
                         "javascript",
@@ -360,16 +413,22 @@ exports[`Main: App renders 1`] = `
                     },
                     Object {
                       "componentPath": "components/Status",
+                      "icon": "check_circle",
+                      "outlined": true,
                       "path": "/components/status",
                       "title": "Status",
                     },
                     Object {
                       "componentPath": "components/Tables",
+                      "icon": "view_list",
+                      "outlined": true,
                       "path": "/components/tables",
                       "title": "Tables",
                     },
                     Object {
                       "componentPath": "components/Tabs",
+                      "icon": "folder",
+                      "outlined": true,
                       "path": "/components/tabs",
                       "statusBadges": Array [
                         "javascript",
@@ -378,6 +437,8 @@ exports[`Main: App renders 1`] = `
                     },
                     Object {
                       "componentPath": "components/Toast",
+                      "icon": "picture_in_picture",
+                      "outlined": true,
                       "path": "/components/toast",
                       "statusBadges": Array [
                         "javascript",
@@ -387,6 +448,8 @@ exports[`Main: App renders 1`] = `
                     },
                     Object {
                       "componentPath": "components/Tooltips",
+                      "icon": "filter_frames",
+                      "outlined": true,
                       "path": "/components/tooltips",
                       "statusBadges": Array [
                         "javascript",
@@ -407,6 +470,7 @@ exports[`Main: App renders 1`] = `
                 },
                 Object {
                   "appFolder": "Utilities",
+                  "entryCardText": "See all available CSS classes",
                   "icon": Object {
                     "name": "build",
                   },
@@ -424,46 +488,55 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "utilities/Borders",
                       "path": "/utilities/borders",
+                      "text": "Set borders that suit your needs",
                       "title": "Borders",
                     },
                     Object {
                       "componentPath": "utilities/Breakpoints",
                       "path": "/utilities/breakpoints",
+                      "text": "See our display breakpoints",
                       "title": "Breakpoints",
                     },
                     Object {
                       "componentPath": "utilities/Colors",
                       "path": "/utilities/colors",
+                      "text": "See our color utility classes",
                       "title": "Colors",
                     },
                     Object {
                       "componentPath": "utilities/Display",
                       "path": "/utilities/display",
+                      "text": "See our display properties",
                       "title": "Display",
                     },
                     Object {
                       "componentPath": "utilities/Flex",
                       "path": "/utilities/flex",
+                      "text": "Layout, alignment and grid",
                       "title": "Flex",
                     },
                     Object {
                       "componentPath": "utilities/Images",
                       "path": "/utilities/images",
+                      "text": "Modify how images are displayed",
                       "title": "Images",
                     },
                     Object {
                       "componentPath": "utilities/Sizing",
                       "path": "/utilities/sizing",
+                      "text": "Size according to your needs",
                       "title": "Sizing",
                     },
                     Object {
                       "componentPath": "utilities/Text",
                       "path": "/utilities/text",
+                      "text": "Control wrapping, weight and more",
                       "title": "Text",
                     },
                     Object {
                       "componentPath": "utilities/Visibility",
                       "path": "/utilities/visibility",
+                      "text": "Control visibilities of display",
                       "title": "Visibility",
                     },
                   ],

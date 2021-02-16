@@ -109,17 +109,17 @@ exports[`GettingStarted: Introduction UsingDG renders 1`] = `
     Using the Design Guide
   </h2>
   <p>
-    Let’s clarify the definition of using the Design Guide. Just because an interface looks right according to the Design Guide, our brand and the design system in general it still doesn’t mean that it per definition “uses the Design Guide”. The definition of using our Design Guide is the technical implementation. 
+    Let’s clarify the definition of using the Design Guide. Just because an interface looks right according to the Design Guide, our brand and the design system in general it still doesn’t mean that it per definition “uses the Design Guide”. The definition of using our Design Guide is the technical implementation and using the components taken straight from the Design Guide. 
   </p>
-  <div
-    className="big-quotation"
+  <blockquote
+    className="blockquote"
   >
     <p>
-      The idea of the Design Guide is to have official place where general and/or major updates happens.
+      The Design Guide enables a cohesive and unified design across the organization which saves time for everyone involved. 
     </p>
-  </div>
+  </blockquote>
   <p>
-    From a branding perspective we could easily settle with making everything look and feel cohesive. That is the ultimate goal! But what happens when we want to change and/or update a component, logotype, typeface e.t.c? The idea of the Design Guide is to have official place where general and/or major updates happens. If it just looks the same, the product won’t be updated when the Design Guide release new updates. 
+    By doing so, when an adjustment or change occurs with one of the Design Guide components, all the projects which uses the said component will have the changes applied to their product automatically. This way the Design Guide enables a cohesive and unified design across the organization which saves time for everyone involved.  
   </p>
   <h3>
     Products using the Design Guide
@@ -141,7 +141,9 @@ exports[`GettingStarted: Introduction UsingDG renders 1`] = `
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr
+        key="Checkout"
+      >
         <td>
           Checkout
         </td>
@@ -151,10 +153,12 @@ exports[`GettingStarted: Introduction UsingDG renders 1`] = `
           >
             close
           </i>
-           No, but are following the design guide
+          No, but are following the Design Guide
         </td>
       </tr>
-      <tr>
+      <tr
+        key="Swedbankpay.se"
+      >
         <td>
           Swedbankpay.se
         </td>
@@ -164,10 +168,12 @@ exports[`GettingStarted: Introduction UsingDG renders 1`] = `
           >
             close
           </i>
-           No
+          No
         </td>
       </tr>
-      <tr>
+      <tr
+        key="Consumer Portal"
+      >
         <td>
           Consumer Portal
         </td>
@@ -177,10 +183,12 @@ exports[`GettingStarted: Introduction UsingDG renders 1`] = `
           >
             check
           </i>
-           Yes
+          Yes
         </td>
       </tr>
-      <tr>
+      <tr
+        key="Developer Portal"
+      >
         <td>
           Developer Portal
         </td>
@@ -190,10 +198,12 @@ exports[`GettingStarted: Introduction UsingDG renders 1`] = `
           >
             check
           </i>
-           Yes
+          Yes
         </td>
       </tr>
-      <tr>
+      <tr
+        key="Card terminals"
+      >
         <td>
           Card terminals
         </td>
@@ -203,10 +213,12 @@ exports[`GettingStarted: Introduction UsingDG renders 1`] = `
           >
             close
           </i>
-           No, but are following the design guide
+          No, but are following the Design Guide
         </td>
       </tr>
-      <tr>
+      <tr
+        key="Ecom Merchant Admin"
+      >
         <td>
           Ecom Merchant Admin
         </td>
@@ -216,10 +228,12 @@ exports[`GettingStarted: Introduction UsingDG renders 1`] = `
           >
             check
           </i>
-           Yes
+          Yes
         </td>
       </tr>
-      <tr>
+      <tr
+        key="Ecom Owner Admin"
+      >
         <td>
           Ecom Owner Admin
         </td>
@@ -229,10 +243,12 @@ exports[`GettingStarted: Introduction UsingDG renders 1`] = `
           >
             check
           </i>
-           Yes
+          Yes
         </td>
       </tr>
-      <tr>
+      <tr
+        key="Onboarding Signup"
+      >
         <td>
           Onboarding Signup
         </td>
@@ -242,7 +258,7 @@ exports[`GettingStarted: Introduction UsingDG renders 1`] = `
           >
             check
           </i>
-           Yes, is currently implementing the Design Guide
+          Yes, is currently implemented the Design Guide
         </td>
       </tr>
     </tbody>
@@ -263,13 +279,13 @@ exports[`GettingStarted: Introduction WhatIsDG renders 1`] = `
   <p>
     The Design Guide consists of more than design. It contains all the parts of the design system that actually can be used and implemented by developers working with Swedbank Pay products.
   </p>
-  <div
-    className="big-quotation"
+  <blockquote
+    className="blockquote"
   >
     <p>
       A design system is the single source of truth which groups all the elements that will allow the teams to design, realize and develop a product.
     </p>
-  </div>
+  </blockquote>
 </section>
 `;
 

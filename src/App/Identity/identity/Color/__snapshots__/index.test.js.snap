@@ -103,7 +103,7 @@ exports[`Core: Color ButtonColors renders 1`] = `
       rgb="81, 43, 43"
     />
     <ColorDisplay
-      border="black"
+      border="has-border"
       hex="#FFFFFF"
       key="2"
       rgb="255, 255, 255"
@@ -131,7 +131,7 @@ exports[`Core: Color CommunicationColors renders 1`] = `
       rgb="253, 193, 41"
     />
     <ColorDisplay
-      border="black"
+      border="has-border"
       hex="#FFFFFF"
       key="1"
       rgb="255, 255, 255"
@@ -195,7 +195,7 @@ exports[`Core: Color GrayScaleColors renders 1`] = `
       rgb="249, 248, 246"
     />
     <ColorDisplay
-      border="black"
+      border="has-border"
       hex="#FFFFFF"
       key="3"
       rgb="255, 255, 255"
@@ -319,9 +319,9 @@ exports[`Core: Color SystemColors renders 1`] = `
     />
     <ColorDisplay
       fontColor="font-white"
-      hex="#4572C0"
+      hex="#3E6AB6"
       key="3"
-      rgb="69, 114, 192"
+      rgb="62, 106, 182"
     />
     <ColorDisplay
       hex="#E8EFF9"
@@ -330,9 +330,9 @@ exports[`Core: Color SystemColors renders 1`] = `
     />
     <ColorDisplay
       fontColor="font-white"
-      hex="#51971B"
+      hex="#437E15"
       key="5"
-      rgb="81, 151, 27"
+      rgb="67, 126, 21"
     />
     <ColorDisplay
       hex="#99CC66"
@@ -384,7 +384,7 @@ exports[`Core: Color TextColors renders 1`] = `
       rgb="37, 119, 134"
     />
     <ColorDisplay
-      border="black"
+      border="has-border"
       hex="#FFFFFF"
       key="2"
       rgb="255, 255, 255"

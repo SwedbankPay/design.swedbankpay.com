@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { designGuideUsers } from "./constants";
 
 import { DocContainer } from "@docutils";
 
@@ -37,20 +38,20 @@ const WhatIsDG = () => (
         <h2 id="what-is-dg">What is the Design Guide?</h2>
         <p>The Swedbank Pay design system consists of two parts; the Figma designs and the web Design Guide (where you are right now). The Design Guide is the ready-to-use part of the design system and the Figma design library is for designing and prototyping.</p>
         <p>The Design Guide consists of more than design. It contains all the parts of the design system that actually can be used and implemented by developers working with Swedbank Pay products.</p>
-        <div className="big-quotation">
+        <blockquote className="blockquote">
             <p>A design system is the single source of truth which groups all the elements that will allow the teams to design, realize and develop a product.</p>
-        </div>
+        </blockquote>
     </section>
 );
 
 const UsingDG = () => (
     <section>
         <h2 id="using-dg">Using the Design Guide</h2>
-        <p>Let’s clarify the definition of using the Design Guide. Just because an interface looks right according to the Design Guide, our brand and the design system in general it still doesn’t mean that it per definition “uses the Design Guide”. The definition of using our Design Guide is the technical implementation. </p>
-        <div className="big-quotation">
-            <p>The idea of the Design Guide is to have official place where general and/or major updates happens.</p>
-        </div>
-        <p>From a branding perspective we could easily settle with making everything look and feel cohesive. That is the ultimate goal! But what happens when we want to change and/or update a component, logotype, typeface e.t.c? The idea of the Design Guide is to have official place where general and/or major updates happens. If it just looks the same, the product won’t be updated when the Design Guide release new updates. </p>
+        <p>Let’s clarify the definition of using the Design Guide. Just because an interface looks right according to the Design Guide, our brand and the design system in general it still doesn’t mean that it per definition “uses the Design Guide”. The definition of using our Design Guide is the technical implementation and using the components taken straight from the Design Guide. </p>
+        <blockquote className="blockquote">
+            <p>The Design Guide enables a cohesive and unified design across the organization which saves time for everyone involved. </p>
+        </blockquote>
+        <p>By doing so, when an adjustment or change occurs with one of the Design Guide components, all the projects which uses the said component will have the changes applied to their product automatically. This way the Design Guide enables a cohesive and unified design across the organization which saves time for everyone involved.  </p>
         <h3>Products using the Design Guide</h3>
         <p>Because there’s a difference of following the design guidelines and using the Design Guide, not all Swedbank Pay products per definition uses the Design Guide. </p>
         <table className="table table-plain">
@@ -61,38 +62,12 @@ const UsingDG = () => (
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Checkout</td>
-                    <td><i className="material-icons mr-3">close</i> No, but are following the design guide</td>
-                </tr>
-                <tr>
-                    <td>Swedbankpay.se</td>
-                    <td><i className="material-icons mr-3">close</i> No</td>
-                </tr>
-                <tr>
-                    <td>Consumer Portal</td>
-                    <td><i className="material-icons mr-3">check</i> Yes</td>
-                </tr>
-                <tr>
-                    <td>Developer Portal</td>
-                    <td><i className="material-icons mr-3">check</i> Yes</td>
-                </tr>
-                <tr>
-                    <td>Card terminals</td>
-                    <td><i className="material-icons mr-3">close</i> No, but are following the design guide</td>
-                </tr>
-                <tr>
-                    <td>Ecom Merchant Admin</td>
-                    <td><i className="material-icons mr-3">check</i> Yes</td>
-                </tr>
-                <tr>
-                    <td>Ecom Owner Admin</td>
-                    <td><i className="material-icons mr-3">check</i> Yes</td>
-                </tr>
-                <tr>
-                    <td>Onboarding Signup</td>
-                    <td><i className="material-icons mr-3">check</i> Yes, is currently implementing the Design Guide</td>
-                </tr>
+                {designGuideUsers.map(product => (
+                    <tr key={product.name}>
+                        <td>{product.name}</td>
+                        <td><i className="material-icons mr-3">{product.icon}</i>{product.text}</td>
+                    </tr>
+                ))}
             </tbody>
         </table>
     </section>
