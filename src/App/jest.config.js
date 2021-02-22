@@ -11,6 +11,9 @@ module.exports = {
     snapshotSerializers: [
         "enzyme-to-json/serializer"
     ],
+    testMatch: [
+        "<rootDir>/components/MediaObject/*.test.js"
+    ],
     testPathIgnorePatterns: [
         "\\.spec\\.js",
 
