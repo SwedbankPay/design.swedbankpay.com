@@ -46,7 +46,7 @@
         "js-beautify": "^1.10.2",
         "normalize.css": "^8.0.1",
         "prism-react-renderer": "0.1.6",
-        "prismjs": "^1.17.1",
+        "prismjs": "^1.23.0",
         "react": "^16.9.0",
         "react-dom": "^16.9.0",
         "react-prism": "^4.3.2",
