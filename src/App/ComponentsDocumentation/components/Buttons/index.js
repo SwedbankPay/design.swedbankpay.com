@@ -12,7 +12,8 @@ const basename = process.env.basename;
 
 const Overview = () => (
     <>
-        <h2 id="overview">Which button to use?</h2>
+        <h2 id="overview">Button variants</h2>
+        <p>Our button variants can be customized with additional features such as icons and loaders. There are also three different sizes of buttons to choose from: small, medium and large. </p>
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewButtons} codeFigure />
     </>
 );
@@ -217,6 +218,20 @@ const DeveloperDocumentation = () => (
             <p>The <CodeTags type="secondary" code=".disabled" /> class uses <CodeTags type="secondary" code="pointer-events: none" /> to try to disable the link functionality of <CodeTags type="primary" code={"<a>"} />s, but that CSS property is not yet standardized. In addition, even in browsers that do support <CodeTags type="secondary" code="pointer-events: none" />, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a <CodeTags type="secondary" code={"tabindex=\"-1\""} /> attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.</p>
         </Alert>
 
+        <h2>Loading state</h2>
+        <p>Use the loading state to show users their action is processing by adding the .loading class to the <CodeTags type="primary" code={"<button>"} /> element.</p>
+
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+            <div className="button-group">{"\n"}
+                <ButtonComponent disabled loading type="primary" label="Type something" />{"\n"}
+                <ButtonComponent disabled loading type="secondary" label="Type something" />{"\n"}
+                <ButtonComponent disabled loading type="link" label="Type something" />{"\n"}
+                <ButtonComponent disabled loading type="guiding-destructive" label="Type something" />{"\n"}
+                <ButtonComponent disabled loading type="executive-destructive" label="Type something" />{"\n"}
+                <ButtonComponent disabled loading type="link-destructive" label="Type something" />{"\n"}
+            </div>
+        </ComponentPreview>
+
         <h3>Usage with other tags</h3>
         <p>The <CodeTags type="secondary" code=".btn" /> classes are designed to be used with the <CodeTags type="primary" code={"<button>"} /> element.
         However, you can also use these classes on <CodeTags type="primary" code={"<a>"} /> or <CodeTags type="primary" code={"<input>"} /> elements
@@ -238,17 +253,9 @@ const DeveloperDocumentation = () => (
 
 const Buttons = () => (
     <DocContainer docToc>
-        <p>
-            Buttons communicate actions that users can take. The intention of a button should be clear and predictable.
-            Users should be able to anticipate what will happen when they click on a button. Buttons are typically placed throughout your UI, in places like:
+        <p className="lead">
+            Buttons communicate actions that users can take. The intention of a button should be clear and predictable. Users should be able to anticipate what will happen when they click on a button. Buttons are typically placed throughout your UI, in places like: Dialogs, Modals, Forms, Cards and Toolbars.
         </p>
-        <ul className="list list-bullet">
-            <li>Dialogs</li>
-            <li>Modals</li>
-            <li>Forms</li>
-            <li>Cards</li>
-            <li>Toolbars</li>
-        </ul>
         <Overview />
         <DestructiveButton />
         <NamingButtons />

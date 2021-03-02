@@ -209,7 +209,7 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
         "elements": Array [
           Object {
             "component": <Button
-              label="Do something"
+              label="Type something"
               type="guiding-destructive"
             />,
             "description": <React.Fragment>
@@ -227,14 +227,6 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
                   "name": "Icon",
                   "value": Object {
                     "icon": "cloud",
-                  },
-                },
-                Object {
-                  "id": "loader_check_destructive",
-                  "name": "Loader",
-                  "value": Object {
-                    "loader": true,
-                    "loading": true,
                   },
                 },
               ],
@@ -270,27 +262,7 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
           },
           Object {
             "component": <Button
-              label="Do something"
-              type="link-destructive"
-            />,
-            "description": "The text destructive button is used as an alternative for the guiding destructive button and can be used when there is limited space, within other components or various containers.",
-            "options": Object {
-              "checkbox": Array [
-                Object {
-                  "id": "icon_check_destructive",
-                  "name": "Icon",
-                  "value": Object {
-                    "icon": "cloud",
-                  },
-                },
-              ],
-            },
-            "tab": "Text/Link",
-            "title": "Destructive button",
-          },
-          Object {
-            "component": <Button
-              label="Do something"
+              label="Type something"
               type="executive-destructive"
             />,
             "description": "The executive destructive button should be used sparingly and only in case of a final destructive call to action. The executive destructive button visually takes up a lot of the attention. To not distract the user from other content it is often used in simpler contexts such as dialogs, for example when confirming removal of certain information.",
@@ -301,14 +273,6 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
                   "name": "Icon",
                   "value": Object {
                     "icon": "close",
-                  },
-                },
-                Object {
-                  "id": "loader_check_destructive",
-                  "name": "Loader",
-                  "value": Object {
-                    "loader": true,
-                    "loading": true,
                   },
                 },
               ],
@@ -341,6 +305,52 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
             },
             "tab": "Executive",
             "title": "Executive destructive button",
+          },
+          Object {
+            "component": <Button
+              label="Type something"
+              type="link-destructive"
+            />,
+            "description": "The text destructive button is used as an alternative for the guiding destructive button and can be used when there is limited space, within other components or various containers.",
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "id": "icon_check_destructive",
+                  "name": "Icon",
+                  "value": Object {
+                    "icon": "cloud",
+                  },
+                },
+              ],
+              "radio": Array [
+                Object {
+                  "id": "size_radio",
+                  "title": "Sizes",
+                  "values": Array [
+                    Object {
+                      "name": "Large",
+                      "value": Object {
+                        "size": "lg",
+                      },
+                    },
+                    Object {
+                      "name": "Small",
+                      "value": Object {
+                        "size": "sm",
+                      },
+                    },
+                    Object {
+                      "name": "Extra small",
+                      "value": Object {
+                        "size": "xs",
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "tab": "Link",
+            "title": "Destructive button",
           },
         ],
         "id": "destructiveButtons",
@@ -685,6 +695,78 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
        attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.
     </p>
   </Alert>
+  <h2>
+    Loading state
+  </h2>
+  <p>
+    Use the loading state to show users their action is processing by adding the .loading class to the 
+    <CodeTags
+      code="<button>"
+      type="primary"
+    />
+     element.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        disabled={true}
+        label="Type something"
+        loading={true}
+        type="primary"
+      />
+      
+
+      <Button
+        disabled={true}
+        label="Type something"
+        loading={true}
+        type="secondary"
+      />
+      
+
+      <Button
+        disabled={true}
+        label="Type something"
+        loading={true}
+        type="link"
+      />
+      
+
+      <Button
+        disabled={true}
+        label="Type something"
+        loading={true}
+        type="guiding-destructive"
+      />
+      
+
+      <Button
+        disabled={true}
+        label="Type something"
+        loading={true}
+        type="executive-destructive"
+      />
+      
+
+      <Button
+        disabled={true}
+        label="Type something"
+        loading={true}
+        type="link-destructive"
+      />
+      
+
+    </div>
+  </ComponentPreview>
   <h3>
     Usage with other tags
   </h3>
@@ -852,8 +934,11 @@ exports[`Documentation: Buttons Overview renders 1`] = `
   <h2
     id="overview"
   >
-    Which button to use?
+    Button variants
   </h2>
+  <p>
+    Our button variants can be customized with additional features such as icons and loaders. There are also three different sizes of buttons to choose from: small, medium and large. 
+  </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
@@ -863,7 +948,7 @@ exports[`Documentation: Buttons Overview renders 1`] = `
         "elements": Array [
           Object {
             "component": <Button
-              label="Do something"
+              label="Type something"
               type="primary"
             />,
             "description": "Use a primary button as the main call to action on a page. Avoid using multiple default buttons on a single page. Having more than one main call to action reduces their impact, and makes it harder for users to know what to do next.",
@@ -874,14 +959,6 @@ exports[`Documentation: Buttons Overview renders 1`] = `
                   "name": "Icon",
                   "value": Object {
                     "icon": "cloud",
-                  },
-                },
-                Object {
-                  "id": "loader_check",
-                  "name": "Loader",
-                  "value": Object {
-                    "loader": true,
-                    "loading": true,
                   },
                 },
               ],
@@ -918,7 +995,7 @@ exports[`Documentation: Buttons Overview renders 1`] = `
           Object {
             "component": <Button
               bankId="se"
-              label="Do something"
+              label="Type something"
               type="primary"
             />,
             "description": <React.Fragment>
@@ -930,16 +1007,6 @@ exports[`Documentation: Buttons Overview renders 1`] = `
               </p>
             </React.Fragment>,
             "options": Object {
-              "checkbox": Array [
-                Object {
-                  "id": "loader_check",
-                  "name": "Loader",
-                  "value": Object {
-                    "loader": true,
-                    "loading": true,
-                  },
-                },
-              ],
               "radio": Array [
                 Object {
                   "id": "country_radio",
@@ -966,7 +1033,7 @@ exports[`Documentation: Buttons Overview renders 1`] = `
           },
           Object {
             "component": <Button
-              label="Do something"
+              label="Type something"
               type="secondary"
             />,
             "description": <p>
@@ -985,14 +1052,6 @@ exports[`Documentation: Buttons Overview renders 1`] = `
                   "name": "Icon",
                   "value": Object {
                     "icon": "cloud",
-                  },
-                },
-                Object {
-                  "id": "loader_check",
-                  "name": "Loader",
-                  "value": Object {
-                    "loader": true,
-                    "loading": true,
                   },
                 },
               ],
@@ -1028,7 +1087,7 @@ exports[`Documentation: Buttons Overview renders 1`] = `
           },
           Object {
             "component": <Button
-              label="Do something"
+              label="Type something"
               type="link"
             />,
             "description": "Only use in combination with a primary or secondary button – for stand alone links see Links. Use for less important or less commonly used actions since they’re less prominent. Text buttons are often embedded in contained components like cards and dialogs. Since text buttons don’t have a container, they don’t distract from nearby content.",
@@ -1042,8 +1101,34 @@ exports[`Documentation: Buttons Overview renders 1`] = `
                   },
                 },
               ],
+              "radio": Array [
+                Object {
+                  "id": "size_radio",
+                  "title": "Sizes",
+                  "values": Array [
+                    Object {
+                      "name": "Large",
+                      "value": Object {
+                        "size": "lg",
+                      },
+                    },
+                    Object {
+                      "name": "Small",
+                      "value": Object {
+                        "size": "sm",
+                      },
+                    },
+                    Object {
+                      "name": "Extra small",
+                      "value": Object {
+                        "size": "xs",
+                      },
+                    },
+                  ],
+                },
+              ],
             },
-            "tab": "Text/Link button",
+            "tab": "Link",
             "title": "Link button",
           },
         ],
@@ -1059,28 +1144,11 @@ exports[`Documentation: Buttons renders 1`] = `
 <DocContainer
   docToc={true}
 >
-  <p>
-    Buttons communicate actions that users can take. The intention of a button should be clear and predictable. Users should be able to anticipate what will happen when they click on a button. Buttons are typically placed throughout your UI, in places like:
-  </p>
-  <ul
-    className="list list-bullet"
+  <p
+    className="lead"
   >
-    <li>
-      Dialogs
-    </li>
-    <li>
-      Modals
-    </li>
-    <li>
-      Forms
-    </li>
-    <li>
-      Cards
-    </li>
-    <li>
-      Toolbars
-    </li>
-  </ul>
+    Buttons communicate actions that users can take. The intention of a button should be clear and predictable. Users should be able to anticipate what will happen when they click on a button. Buttons are typically placed throughout your UI, in places like: Dialogs, Modals, Forms, Cards and Toolbars.
+  </p>
   <Overview />
   <DestructiveButton />
   <NamingButtons />
