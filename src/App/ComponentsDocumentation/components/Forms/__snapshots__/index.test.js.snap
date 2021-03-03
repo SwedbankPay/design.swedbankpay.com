@@ -57,6 +57,12 @@ exports[`Documentation: Forms DisabledFormComponents renders 1`] = `
       id="togglebox-disabled-example-1"
       label="Enable overdrive"
     />
+    <Togglebox
+      checked={true}
+      disabled={true}
+      id="togglebox-disabled-checked-example-1"
+      label="Enable overdrive"
+    />
     <Radio
       disabled={true}
       id="radio-disabled-example-1"
