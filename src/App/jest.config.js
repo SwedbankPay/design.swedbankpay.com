@@ -11,6 +11,9 @@ module.exports = {
     snapshotSerializers: [
         "enzyme-to-json/serializer"
     ],
+    testMatch: [
+        "**/JavascriptDocs/?(*.)+(spec|test).[jt]s?(x)"
+    ],
     testPathIgnorePatterns: [
         "\\.spec\\.js",
 
@@ -18,3 +21,4 @@ module.exports = {
         "./docutils/ComponentPreview/"
     ]
 };
+

@@ -20,7 +20,7 @@ describe("Utilities: JavascriptDocs", () => {
         expect(wrapper.contains(<OpenDocs componentName={componentName} />)).toBeFalsy();
         expect(wrapper.contains(<CloseDocs componentName={componentName} />)).toBeFalsy();
     });
-
+/*
     it("renders init and open methods", () => {
         const wrapper = mount(
             <JavascriptDocs componentName={componentName} open />
@@ -73,6 +73,6 @@ describe("Utilities: JavascriptDocs", () => {
 
             expect(wrapper).toMatchSnapshot();
         });
-    });
+    }); */
 });
 
