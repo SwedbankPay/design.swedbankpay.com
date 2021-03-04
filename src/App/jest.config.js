@@ -12,7 +12,8 @@ module.exports = {
         "enzyme-to-json/serializer"
     ],
     testMatch: [
-        "**/JavascriptDocs/?(*.)+(spec|test).[jt]s?(x)"
+        // "**/JavascriptDocs/?(*.)+(spec|test).[jt]s?(x)",
+        "**/JavascriptDocElement/?(*.)+(spec|test).[jt]s?(x)"
     ],
     testPathIgnorePatterns: [
         "\\.spec\\.js",

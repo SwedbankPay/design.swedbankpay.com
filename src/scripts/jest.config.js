@@ -10,5 +10,9 @@ module.exports = {
     ],
     testPathIgnorePatterns: [
         "\\.spec\\.js"
+    ],
+    testMatch: [
+        // "**/main/?(*.)+(spec|test).[jt]s?(x)"
+        "**/main/?(*.)+(spec|test).[jt]s?(x)"
     ]
 };
