@@ -2,8 +2,9 @@ import { configure, shallow, render, mount } from "enzyme";
 import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
 
 global.stopDg = true;
+process.env.jest = true;
 
-import dg from "../scripts/main";
+import dg from "./src/scripts/main";
 
 global.dg = dg;
 // React 16 Enzyme adapter
