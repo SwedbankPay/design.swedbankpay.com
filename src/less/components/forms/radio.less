@@ -33,23 +33,17 @@
         }
 
         &:checked + label:before {
-            background-position: 50% 50%;
             background-color: @white;
             background-repeat: no-repeat;
             background-image: url("../../../icons/shapes/circle.svg");
             border-color: @brand-secondary;
         }
 
-        &:focus + label:before {
-            box-shadow: 0 0 0 0.375rem @brand-secondary-light-3;
-            border-color: @brand-secondary;
-        }
-
+        &:focus + label:before,
         &:hover + label:before {
             box-shadow: 0 0 0 0.375rem @brand-secondary-light-3;
             border-color: @brand-secondary;
         }
-
 
         &[disabled] {
             + label:before {
