@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[36],{401:function(e,a,n){"use strict";n.r(a);var t=n(1),s=n.n(t),c=n(14),i=function(e){var a=e.type,n=e.classNames;return s.a.createElement("i",{className:"material-icons".concat(n?" ".concat(n):""),"aria-hidden":"true"},a)};i.propTypes={type:n.n(c).a.string.isRequired},a.default=i}}]);
-//# sourceMappingURL=doc-route.chunk_120.js.map?dc1c2aa63b799144bb6b
