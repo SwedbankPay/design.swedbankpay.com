@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Rangeslider = ({ name, min, max, step, color, value, disabled, valueLabel, valueLabelPrefix, valueLabelPostfix, valueLabelPosition }) => {
+const Rangeslider = ({ name, min, max, step, value, disabled, valueLabel, valueLabelPrefix, valueLabelPostfix }) => {
     const attrs = {
         type: "range",
         name,
@@ -23,9 +23,15 @@ const Rangeslider = ({ name, min, max, step, color, value, disabled, valueLabel,
     );
 
     return (
-        <div className={`rangeslider rangeslider-${color ? color : "brand"} label-${valueLabelPosition ? valueLabelPosition : "right"}`}>{"\n"}
-            <input {...attrs}/>{valueLabel ? "\n" : null}
-            {valueLabel ? <ValueLabel /> : null}{valueLabel ? "\n" : null}
+        <div>
+            <div className="rangeslider">{"\n"}
+                <input {...attrs}/>{valueLabel ? "\n" : null}
+                {valueLabel ? <ValueLabel /> : null}{valueLabel ? "\n" : null}
+            </div>
+            <div className={`value-range ${disabled ? "disabled" : ""}`}>
+                <small>{min}</small>
+                <small>{max}</small>
+            </div>
         </div>
     );
 };

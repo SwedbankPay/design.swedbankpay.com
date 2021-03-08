@@ -309,10 +309,6 @@ const RangeSlider = () => (
         <ComponentPreview language="html" showCasePanel codeFigure>
             <Rangeslider min={0} max={200} step={1} value={100} valueLabel valueLabelPrefix="$" valueLabelPostfix="%" />
         </ComponentPreview>
-
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <Rangeslider min={0} max={200} step={1} value={100} color="neutral" valueLabel valueLabelPrefix="$" valueLabelPostfix="%" valueLabelPosition="top" />
-        </ComponentPreview>
     </>
 );
 
