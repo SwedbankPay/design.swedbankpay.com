@@ -11,6 +11,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
         const div = document.createElement("div");
 
         div.innerHTML = renderToStaticMarkup(element);
+        console.log(div.innerHTML);
 
         if (div.firstElementChild) {
             return div.firstElementChild.innerHTML;
