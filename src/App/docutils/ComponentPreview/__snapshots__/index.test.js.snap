@@ -739,3 +739,75 @@ exports[`Utilities: ComponentPreview does not render showCasePanelAdvanced when 
   </CodeFigure>
 </ComponentPreview>
 `;
+
+exports[`Utilities: ComponentPreview prop language other than javascript, css or html returns warning message 1`] = `
+<ComponentPreview
+  codeFigure={true}
+  language="test"
+>
+  <CodeFigure>
+    update switchcase!
+  </CodeFigure>
+</ComponentPreview>
+`;
+
+exports[`Utilities: ComponentPreview renders 1`] = `
+<ComponentPreview
+  codeFigure={true}
+  language="html"
+  showCasePanel={true}
+>
+  <ShowCasePanel>
+    <div
+      className="showcase-panel"
+    >
+      <TestComponentH1>
+        <h1
+          className="h1-class"
+        >
+          test1
+        </h1>
+      </TestComponentH1>
+    </div>
+  </ShowCasePanel>
+  <CodeFigure>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;h1 class="h1-class"&gt;test1&lt;/h1&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+  </CodeFigure>
+</ComponentPreview>
+`;
