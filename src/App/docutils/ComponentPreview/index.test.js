@@ -100,18 +100,17 @@ describe("Utilities: ComponentPreview", () => {
     //     // expect(wrapper.html("<h2>test2</h2>")).toEqual(true);
     // });
 
-    // it("CodeFigure removes outer tag from markup", () => {
-    //     const wrapper = mount(
-    //         <ComponentPreview language="html" codeFigure removeOuterTag>
-    //             <TestComponentH1WithOuterTags />
-    //         </ComponentPreview>
-    //     );
+    it("CodeFigure removes outer tag from markup", () => {
+        const wrapper = mount(
+            <ComponentPreview language="html" codeFigure removeOuterTag>
+                <TestComponentH1WithOuterTags />
+            </ComponentPreview>
+        );
 
-    //     console.log(wrapper);
-    //     // expect(wrapper).toMatchSnapshot();
-    //     expect(wrapper.contains("div-class")).toEqual(false);
-    //     expect(wrapper.contains("h1-class")).toEqual(true);
-    // });
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.html()).not.toContain("div-class");
+        expect(wrapper.html()).toContain("h1-class");
+    });
 
     it("CodeFigure removes outer tag from multiple html tags", () => {
         const wrapper = mount(
@@ -123,10 +122,10 @@ describe("Utilities: ComponentPreview", () => {
         );
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains("div-class")).toEqual(false);
-        expect(wrapper.contains("h1-class")).toEqual(true);
+        expect(wrapper.html()).not.toContain("div-class");
+        expect(wrapper.html()).toContain("h1-class");
     });
-/* 
+
     it("CodeFigure removes outer tag from markup even if no child element exists", () => {
         const wrapper = mount(
             <ComponentPreview language="html" codeFigure removeOuterTag>
@@ -137,7 +136,7 @@ describe("Utilities: ComponentPreview", () => {
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("test text with no wrapping element");
         // TODO: Update expects [AW]
-    }); */
+    });
 
     // it("CodeFigure renders markup without renderToStaticMarkup", () => {
     //     const wrapper = mount(
