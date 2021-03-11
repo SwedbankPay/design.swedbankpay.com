@@ -40,5 +40,6 @@ module.exports = {
     ],
     globals: {
         stopDg: true
-    }
+    },
+    bail: 1
 };

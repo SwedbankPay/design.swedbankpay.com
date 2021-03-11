@@ -138,15 +138,17 @@ describe("Utilities: ComponentPreview", () => {
         // TODO: Update expects [AW]
     });
 
-    // it("CodeFigure renders markup without renderToStaticMarkup", () => {
-    //     const wrapper = mount(
-    //         <ComponentPreview language="html" codeFigure dangerousHTML>
-    //             <TestComponentH1WithOuterTags />
-    //         </ComponentPreview>
-    //     );
+    it("CodeFigure renders markup without renderToStaticMarkup", () => {
+        const wrapper = mount(
+            <ComponentPreview language="html" codeFigure dangerousHTML>
+                <TestComponentH1WithOuterTags />
+            </ComponentPreview>
+        );
 
-    //     expect(wrapper).toMatchSnapshot();
-    // });
+        console.log(wrapper.debug());
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.html()).toContain("<h1 className='h1-class'>test1</h1>");
+    });
 
     it("CodeFigure removes value property", () => {
         const wrapper = mount(

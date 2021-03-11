@@ -13,7 +13,7 @@ const Overview = () => (
             {"dg.toast({ html: \"I am a toast!\" });"}
         </ComponentPreview>
         <ComponentPreview language="html" codeFigure dangerousHTML>
-            {"<button onclick=\"dg.toast({ html: 'I am a toast!' })\" class=\"btn btn-primary\">Toast!</button>"}
+            {"<script>alert('Hello');</script><button onclick=\"dg.toast({ html: 'I am a toast!' })\" class=\"btn btn-primary\">Toast!</button>"}
         </ComponentPreview>
         <ComponentPreview language="html" showCasePanel>
             <button className="btn btn-primary" type="button" onClick={() => dg.toast({ html: "I am a toast!" })}>Click for toast!</button>
