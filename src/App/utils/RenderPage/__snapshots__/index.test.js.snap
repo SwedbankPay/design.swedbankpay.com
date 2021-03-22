@@ -270,6 +270,8 @@ exports[`Utilities: RenderPage renders 1`] = `
             },
             Object {
               "componentPath": "components/Checkbox",
+              "icon": "check_box",
+              "outlined": true,
               "path": "/components/checkbox",
               "title": "Checkbox",
             },

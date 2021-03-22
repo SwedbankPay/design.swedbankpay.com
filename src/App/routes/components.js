@@ -84,9 +84,9 @@ module.exports = [
             {
                 title: "Checkbox",
                 path: "/components/checkbox",
-                componentPath: "components/Checkbox"
-                // icon: "Coming soon",
-                // outlined: true
+                componentPath: "components/Checkbox",
+                icon: "check_box",
+                outlined: true
             },
             {
                 title: "Code tags",
