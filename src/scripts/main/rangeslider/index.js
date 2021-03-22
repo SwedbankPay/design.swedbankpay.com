@@ -22,6 +22,7 @@ const writeStyle = obj => {
 
 const _createRangeSlider = (rangeContainer, inlineStyle, inlineStyleContent, isBrowserChrome, i) => {
     const input = rangeContainer.querySelector("input[type=range]");
+
     const valueSpan = rangeContainer.querySelector("span[data-rs-value]");
 
     /* Changing value of span */
@@ -41,7 +42,9 @@ const _createRangeSlider = (rangeContainer, inlineStyle, inlineStyleContent, isB
         const updateStyle = () => {
             const max = input.attributes.max ? Number(input.attributes.max.value) : 100;
             const min = input.attributes.min ? Number(input.attributes.min.value) : 0;
+
             const value = Number(input.value);
+
             const rangePercent = (value + Math.abs(min)) / (max - min) * 100;
 
             writeStyle({
