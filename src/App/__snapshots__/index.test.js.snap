@@ -389,6 +389,8 @@ exports[`Main: App renders 1`] = `
                     },
                     Object {
                       "componentPath": "components/RadioButton",
+                      "icon": "radio_button_checked",
+                      "outlined": true,
                       "path": "/components/radio-button",
                       "title": "Radio button",
                     },
