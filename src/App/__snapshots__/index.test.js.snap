@@ -276,6 +276,11 @@ exports[`Main: App renders 1`] = `
                       "title": "Charts",
                     },
                     Object {
+                      "componentPath": "components/Checkbox",
+                      "path": "/components/checkbox",
+                      "title": "Checkbox",
+                    },
+                    Object {
                       "componentPath": "components/CodeTags",
                       "icon": "code",
                       "outlined": true,
