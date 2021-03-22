@@ -82,6 +82,13 @@ module.exports = [
                 statusBadges: ["javascript"]
             },
             {
+                title: "Checkbox",
+                path: "/components/checkbox",
+                componentPath: "components/Checkbox"
+                // icon: "Coming soon",
+                // outlined: true
+            },
+            {
                 title: "Code tags",
                 path: "/components/code-tags",
                 componentPath: "components/CodeTags",
