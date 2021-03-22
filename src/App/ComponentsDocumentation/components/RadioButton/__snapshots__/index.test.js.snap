@@ -28,10 +28,10 @@ exports[`Component: RadioButton ContentGuidelines renders 1`] = `
 </Fragment>
 `;
 
-exports[`Component: RadioButton DoAndDonts renders 1`] = `
+exports[`Component: RadioButton HowTo renders 1`] = `
 <Fragment>
   <h3>
-    Do & dont's
+    How to setup radio button group
   </h3>
   <div
     className="row"
@@ -157,13 +157,15 @@ exports[`Component: RadioButton Overview renders 1`] = `
   >
     <li>
       When you want to present multiple choices where the user can select one or more choice at the same time, the 
-      <Link>
+      <Link
+        to="/components/checkbox"
+      >
         checkbox
       </Link>
        component should be used instead of radio buttons.
     </li>
   </ul>
-  <DoAndDonts />
+  <HowTo />
 </Fragment>
 `;
 

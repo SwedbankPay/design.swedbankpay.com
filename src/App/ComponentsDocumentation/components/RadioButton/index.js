@@ -12,9 +12,9 @@ const ButtonExamples = () => (
     </div>
 );
 
-const DoAndDonts = () => (
+const HowTo = () => (
     <>
-        <h3>Do & dont's</h3>
+        <h3>How to setup radio button group</h3>
         <div className="row">
             <div className="col-6">
                 <div className="slab slab-plain slab-border-success h-100">
@@ -64,11 +64,11 @@ const Overview = () => (
         <h3>When to consider something else</h3>
         <ul className="list list-bullet">
             <li>
-                When you want to present multiple choices where the user can select one or more choice at the same time, the <Link>checkbox</Link> component should be used instead of radio buttons.
+                When you want to present multiple choices where the user can select one or more choice at the same time, the <Link to="/components/checkbox">checkbox</Link> component should be used instead of radio buttons.
             </li>
         </ul>
 
-        <DoAndDonts />
+        <HowTo />
     </>
 );
 
@@ -93,4 +93,4 @@ const RadioButton = () => (
 export default RadioButton;
 
 /* for testing */
-export { Overview, ContentGuidelines, DoAndDonts };
+export { Overview, ContentGuidelines, HowTo };
