@@ -1,6 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
-import { shallow, mount } from "enzyme";
+import { shallow } from "enzyme";
 
 import JavascriptDocs, { OpenDocs, CloseDocs } from "./index";
 
@@ -14,7 +13,7 @@ describe("Utilities: JavascriptDocs", () => {
     });
 
     it("renders only init method", () => {
-        const wrapper = shallow(<JavascriptDocs componentName="test" />);
+        const wrapper = shallow(<JavascriptDocs componentName={componentName} />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<OpenDocs componentName={componentName} />)).toBeFalsy();
@@ -22,9 +21,7 @@ describe("Utilities: JavascriptDocs", () => {
     });
 
     it("renders init and open methods", () => {
-        const wrapper = mount(
-            <JavascriptDocs componentName={componentName} open />
-        );
+        const wrapper = shallow(<JavascriptDocs componentName={componentName} open />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<OpenDocs componentName={componentName} />)).toBeTruthy();
@@ -32,7 +29,7 @@ describe("Utilities: JavascriptDocs", () => {
     });
 
     it("renders init and close methods", () => {
-        const wrapper = mount(
+        const wrapper = shallow(
             <JavascriptDocs componentName={componentName} close />
         );
 
@@ -42,7 +39,7 @@ describe("Utilities: JavascriptDocs", () => {
     });
 
     it("renders init, open and close methods", () => {
-        const wrapper = mount(
+        const wrapper = shallow(
             <JavascriptDocs componentName={componentName} open close />
         );
 

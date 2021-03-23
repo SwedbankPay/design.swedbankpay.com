@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import MediaObject from "./index";
 
-describe("Component: MediaObject - ", () => {
+describe("Component: MediaObject -", () => {
     it("is defined", () => {
         expect(MediaObject).toBeDefined();
     });
@@ -40,7 +40,7 @@ describe("Component: MediaObject - ", () => {
     it("renders MediaObject with class media-right", () => {
         const wrapper = shallow(<MediaObject heading="render-test" icon="home" mediaRight />);
 
-        expect(wrapper).toMatchSnapshot(1);
+        expect(wrapper).toMatchSnapshot();
         expect(wrapper.hasClass("media-right")).toEqual(true);
     });
 
