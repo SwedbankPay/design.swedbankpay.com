@@ -15,28 +15,28 @@ const paginationItems = [
 ];
 
 const DefaultPagination = () => (
-        <>
-            <h2 id="default-pagination">Default pagination</h2>
-            <p>
+    <>
+        <h2 id="default-pagination">Default pagination</h2>
+        <p>
                 Default pagination shows the pages as numbers. Add <CodeTags type="secondary" code=".pagination" /> to an <CodeTags type="primary" code={"<ul>"} /> containing
-                <CodeTags type="primary" code={"<li>"} />. If you wish to present the user with navigational arrows you need to add those as <CodeTags type="primary" code={"<li>"} /> elements.
-            </p>
-            <ComponentPreview language="html" showCasePanel codeFigure>
-                <PaginationComponent items={paginationItems} arrows farArrows />
-            </ComponentPreview>
-        </>
+            <CodeTags type="primary" code={"<li>"} />. If you wish to present the user with navigational arrows you need to add those as <CodeTags type="primary" code={"<li>"} /> elements.
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <PaginationComponent items={paginationItems} arrows farArrows />
+        </ComponentPreview>
+    </>
 );
 
 const PaginationBullets = () => (
-        <>
-            <h2 id="pagination-bullets">Pagination bullets</h2>
-            <p>
+    <>
+        <h2 id="pagination-bullets">Pagination bullets</h2>
+        <p>
                 If you want to show bullets instead of numbers you can add <CodeTags type="secondary" code=".pagination-bullets" /> to your <CodeTags type="primary" code={"<ul>"} />.
-            </p>
-            <ComponentPreview language="html" showCasePanel codeFigure>
-                <PaginationComponent type="bullets" items={paginationItems} arrows farArrows />
-            </ComponentPreview>
-        </>
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <PaginationComponent type="bullets" items={paginationItems} arrows farArrows />
+        </ComponentPreview>
+    </>
 );
 
 const SimplePagination = () => (

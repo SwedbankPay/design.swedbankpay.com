@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: InputGroup -  renders 1`] = `
+exports[`Component: InputGroup - renders 1`] = `
 <div
   className="form-group"
 >
@@ -22,7 +22,7 @@ exports[`Component: InputGroup -  renders 1`] = `
 </div>
 `;
 
-exports[`Component: InputGroup -  renders a form-group with a feedback icon if prop feedbackIcon is provided 1`] = `
+exports[`Component: InputGroup - renders a form-group with a feedback icon if prop feedbackIcon is provided 1`] = `
 <InputGroup
   feedbackIcon="testvalue"
   type="typetest"
@@ -78,7 +78,7 @@ exports[`Component: InputGroup -  renders a form-group with a feedback icon if p
 </InputGroup>
 `;
 
-exports[`Component: InputGroup -  renders a form-group with a help block if prop helpBlock is provided 1`] = `
+exports[`Component: InputGroup - renders a form-group with a help block if prop helpBlock is provided 1`] = `
 <InputGroup
   helpBlock="testvalue"
   type="typetest"
@@ -112,7 +112,7 @@ exports[`Component: InputGroup -  renders a form-group with a help block if prop
 </InputGroup>
 `;
 
-exports[`Component: InputGroup -  renders a form-group with a help block with data-success and data-error attributes 1`] = `
+exports[`Component: InputGroup - renders a form-group with a help block with data-success and data-error attributes 1`] = `
 <InputGroup
   errorMessage="error"
   helpBlock="testvalue"
@@ -148,7 +148,7 @@ exports[`Component: InputGroup -  renders a form-group with a help block with da
 </InputGroup>
 `;
 
-exports[`Component: InputGroup -  renders a form-group with a label if prop label is provided 1`] = `
+exports[`Component: InputGroup - renders a form-group with a label if prop label is provided 1`] = `
 <div
   className="form-group"
 >
@@ -175,7 +175,7 @@ exports[`Component: InputGroup -  renders a form-group with a label if prop labe
 </div>
 `;
 
-exports[`Component: InputGroup -  renders a form-group with a postfix if prop postfixValue is provided 1`] = `
+exports[`Component: InputGroup - renders a form-group with a postfix if prop postfixValue is provided 1`] = `
 <InputGroup
   postfixValue="testvalue"
   type="typetest"
@@ -222,7 +222,7 @@ exports[`Component: InputGroup -  renders a form-group with a postfix if prop po
 </InputGroup>
 `;
 
-exports[`Component: InputGroup -  renders a form-group with a prefix button if prop prefixValue is provided 1`] = `
+exports[`Component: InputGroup - renders a form-group with a prefix button if prop prefixValue is provided 1`] = `
 <InputGroup
   prefixBtnColor="primary"
   prefixType="button"
@@ -274,7 +274,7 @@ exports[`Component: InputGroup -  renders a form-group with a prefix button if p
 </InputGroup>
 `;
 
-exports[`Component: InputGroup -  renders a form-group with a prefix icon if prop prefixValue equals icon 1`] = `
+exports[`Component: InputGroup - renders a form-group with a prefix icon if prop prefixValue equals icon 1`] = `
 <InputGroup
   prefixType="icon"
   prefixValue="home"
@@ -328,7 +328,7 @@ exports[`Component: InputGroup -  renders a form-group with a prefix icon if pro
 </InputGroup>
 `;
 
-exports[`Component: InputGroup -  renders a form-group with a prefix label if prop prefixValue is provided and no prefixType is given 1`] = `
+exports[`Component: InputGroup - renders a form-group with a prefix label if prop prefixValue is provided and no prefixType is given 1`] = `
 <InputGroup
   prefixValue="label text"
   type="typetest"
@@ -375,7 +375,7 @@ exports[`Component: InputGroup -  renders a form-group with a prefix label if pr
 </InputGroup>
 `;
 
-exports[`Component: InputGroup -  renders a form-group with a select field with given values if type equals select 1`] = `
+exports[`Component: InputGroup - renders a form-group with a select field with given values if type equals select 1`] = `
 <InputGroup
   selectOptions={
     Array [
@@ -416,7 +416,7 @@ exports[`Component: InputGroup -  renders a form-group with a select field with 
 </InputGroup>
 `;
 
-exports[`Component: InputGroup -  renders a form-group with a text-area if type equals textarea 1`] = `
+exports[`Component: InputGroup - renders a form-group with a text-area if type equals textarea 1`] = `
 <InputGroup
   type="textarea"
 >
@@ -442,7 +442,7 @@ exports[`Component: InputGroup -  renders a form-group with a text-area if type 
 </InputGroup>
 `;
 
-exports[`Component: InputGroup -  throws an error if postfixBtnColor prop has an invalid value 1`] = `
+exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an invalid value 1`] = `
 <div
   className="form-group"
 >
@@ -464,7 +464,7 @@ exports[`Component: InputGroup -  throws an error if postfixBtnColor prop has an
 </div>
 `;
 
-exports[`Component: InputGroup -  throws an error if postfixBtnColor prop has an invalid value 2`] = `
+exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an invalid value 2`] = `
 <div
   className="form-group"
 >
@@ -486,7 +486,7 @@ exports[`Component: InputGroup -  throws an error if postfixBtnColor prop has an
 </div>
 `;
 
-exports[`Component: InputGroup -  throws an error if postfixBtnColor prop has an invalid value 3`] = `
+exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an invalid value 3`] = `
 <div
   className="form-group"
 >
@@ -508,7 +508,7 @@ exports[`Component: InputGroup -  throws an error if postfixBtnColor prop has an
 </div>
 `;
 
-exports[`Component: InputGroup -  throws an error if postfixBtnColor prop has an invalid value 4`] = `
+exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an invalid value 4`] = `
 <div
   className="form-group"
 >
@@ -530,7 +530,7 @@ exports[`Component: InputGroup -  throws an error if postfixBtnColor prop has an
 </div>
 `;
 
-exports[`Component: InputGroup -  throws an error if postfixType prop has an invalid value 1`] = `
+exports[`Component: InputGroup - throws an error if postfixType prop has an invalid value 1`] = `
 <div
   className="form-group"
 >
@@ -552,7 +552,7 @@ exports[`Component: InputGroup -  throws an error if postfixType prop has an inv
 </div>
 `;
 
-exports[`Component: InputGroup -  throws an error if postfixType prop has an invalid value 2`] = `
+exports[`Component: InputGroup - throws an error if postfixType prop has an invalid value 2`] = `
 <div
   className="form-group"
 >
@@ -574,7 +574,7 @@ exports[`Component: InputGroup -  throws an error if postfixType prop has an inv
 </div>
 `;
 
-exports[`Component: InputGroup -  throws an error if postfixType prop has an invalid value 3`] = `
+exports[`Component: InputGroup - throws an error if postfixType prop has an invalid value 3`] = `
 <div
   className="form-group"
 >
@@ -596,7 +596,7 @@ exports[`Component: InputGroup -  throws an error if postfixType prop has an inv
 </div>
 `;
 
-exports[`Component: InputGroup -  throws an error if postfixType prop has an invalid value 4`] = `
+exports[`Component: InputGroup - throws an error if postfixType prop has an invalid value 4`] = `
 <div
   className="form-group"
 >
@@ -618,7 +618,7 @@ exports[`Component: InputGroup -  throws an error if postfixType prop has an inv
 </div>
 `;
 
-exports[`Component: InputGroup -  throws an error if postfixType prop has an invalid value 5`] = `
+exports[`Component: InputGroup - throws an error if postfixType prop has an invalid value 5`] = `
 <div
   className="form-group"
 >
@@ -640,7 +640,7 @@ exports[`Component: InputGroup -  throws an error if postfixType prop has an inv
 </div>
 `;
 
-exports[`Component: InputGroup -  throws an error if prefixBtnColor prop has an invalid value 1`] = `
+exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an invalid value 1`] = `
 <div
   className="form-group"
 >
@@ -662,7 +662,7 @@ exports[`Component: InputGroup -  throws an error if prefixBtnColor prop has an 
 </div>
 `;
 
-exports[`Component: InputGroup -  throws an error if prefixBtnColor prop has an invalid value 2`] = `
+exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an invalid value 2`] = `
 <div
   className="form-group"
 >
@@ -684,7 +684,7 @@ exports[`Component: InputGroup -  throws an error if prefixBtnColor prop has an 
 </div>
 `;
 
-exports[`Component: InputGroup -  throws an error if prefixBtnColor prop has an invalid value 3`] = `
+exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an invalid value 3`] = `
 <div
   className="form-group"
 >
@@ -706,7 +706,7 @@ exports[`Component: InputGroup -  throws an error if prefixBtnColor prop has an 
 </div>
 `;
 
-exports[`Component: InputGroup -  throws an error if prefixBtnColor prop has an invalid value 4`] = `
+exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an invalid value 4`] = `
 <div
   className="form-group"
 >
@@ -728,7 +728,7 @@ exports[`Component: InputGroup -  throws an error if prefixBtnColor prop has an 
 </div>
 `;
 
-exports[`Component: InputGroup -  throws an error if prefixType prop has an invalid value 1`] = `
+exports[`Component: InputGroup - throws an error if prefixType prop has an invalid value 1`] = `
 <div
   className="form-group"
 >
@@ -750,7 +750,7 @@ exports[`Component: InputGroup -  throws an error if prefixType prop has an inva
 </div>
 `;
 
-exports[`Component: InputGroup -  throws an error if prefixType prop has an invalid value 2`] = `
+exports[`Component: InputGroup - throws an error if prefixType prop has an invalid value 2`] = `
 <div
   className="form-group"
 >
@@ -772,7 +772,7 @@ exports[`Component: InputGroup -  throws an error if prefixType prop has an inva
 </div>
 `;
 
-exports[`Component: InputGroup -  throws an error if prefixType prop has an invalid value 3`] = `
+exports[`Component: InputGroup - throws an error if prefixType prop has an invalid value 3`] = `
 <div
   className="form-group"
 >
@@ -794,7 +794,7 @@ exports[`Component: InputGroup -  throws an error if prefixType prop has an inva
 </div>
 `;
 
-exports[`Component: InputGroup -  throws an error if prefixType prop has an invalid value 4`] = `
+exports[`Component: InputGroup - throws an error if prefixType prop has an invalid value 4`] = `
 <div
   className="form-group"
 >
@@ -816,7 +816,7 @@ exports[`Component: InputGroup -  throws an error if prefixType prop has an inva
 </div>
 `;
 
-exports[`Component: InputGroup -  throws an error if prefixType prop has an invalid value 5`] = `
+exports[`Component: InputGroup - throws an error if prefixType prop has an invalid value 5`] = `
 <div
   className="form-group"
 >
@@ -838,7 +838,7 @@ exports[`Component: InputGroup -  throws an error if prefixType prop has an inva
 </div>
 `;
 
-exports[`Component: InputGroup -  throws an error if type prop is not provided 1`] = `
+exports[`Component: InputGroup - throws an error if type prop is not provided 1`] = `
 <div
   className="form-group"
 >
@@ -860,7 +860,7 @@ exports[`Component: InputGroup -  throws an error if type prop is not provided 1
 </div>
 `;
 
-exports[`Component: InputGroup -  throws an error if validationState prop has an invalid value 1`] = `
+exports[`Component: InputGroup - throws an error if validationState prop has an invalid value 1`] = `
 <div
   className="form-group"
 >
@@ -882,7 +882,7 @@ exports[`Component: InputGroup -  throws an error if validationState prop has an
 </div>
 `;
 
-exports[`Component: InputGroup -  throws an error if validationState prop has an invalid value 2`] = `
+exports[`Component: InputGroup - throws an error if validationState prop has an invalid value 2`] = `
 <div
   className="form-group"
 >
@@ -904,7 +904,7 @@ exports[`Component: InputGroup -  throws an error if validationState prop has an
 </div>
 `;
 
-exports[`Component: InputGroup -  throws an error if validationState prop has an invalid value 3`] = `
+exports[`Component: InputGroup - throws an error if validationState prop has an invalid value 3`] = `
 <div
   className="form-group"
 >
@@ -926,7 +926,7 @@ exports[`Component: InputGroup -  throws an error if validationState prop has an
 </div>
 `;
 
-exports[`Component: InputGroup -  throws an error if validationState prop has an invalid value 4`] = `
+exports[`Component: InputGroup - throws an error if validationState prop has an invalid value 4`] = `
 <div
   className="form-group"
 >
@@ -948,7 +948,7 @@ exports[`Component: InputGroup -  throws an error if validationState prop has an
 </div>
 `;
 
-exports[`Component: InputGroup -  throws an error if validationState prop has an invalid value 5`] = `
+exports[`Component: InputGroup - throws an error if validationState prop has an invalid value 5`] = `
 <div
   className="form-group"
 >

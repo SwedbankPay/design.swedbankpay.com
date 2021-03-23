@@ -452,11 +452,11 @@ exports[`Utilities: JavascriptDocs renders only init method 1`] = `
       }
       description={
         <React.Fragment>
-          <Link
+          <ForwardRef(Link)
             to="/getting-started/javascript"
           >
             Initializes
-          </Link>
+          </ForwardRef(Link)>
            
           test
         </React.Fragment>

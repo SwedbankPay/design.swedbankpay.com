@@ -564,9 +564,11 @@ exports[`Main: App renders 1`] = `
                 component={
                   Object {
                     "$$typeof": Symbol(react.lazy),
-                    "_ctor": [Function],
-                    "_result": null,
-                    "_status": -1,
+                    "_init": [Function],
+                    "_payload": Object {
+                      "_result": [Function],
+                      "_status": -1,
+                    },
                   }
                 }
                 exact={true}
@@ -576,9 +578,11 @@ exports[`Main: App renders 1`] = `
                 component={
                   Object {
                     "$$typeof": Symbol(react.lazy),
-                    "_ctor": [Function],
-                    "_result": null,
-                    "_status": -1,
+                    "_init": [Function],
+                    "_payload": Object {
+                      "_result": [Function],
+                      "_status": -1,
+                    },
                   }
                 }
                 path="/get-started"
@@ -587,9 +591,11 @@ exports[`Main: App renders 1`] = `
                 component={
                   Object {
                     "$$typeof": Symbol(react.lazy),
-                    "_ctor": [Function],
-                    "_result": null,
-                    "_status": -1,
+                    "_init": [Function],
+                    "_payload": Object {
+                      "_result": [Function],
+                      "_status": -1,
+                    },
                   }
                 }
                 path="/components"
@@ -598,9 +604,11 @@ exports[`Main: App renders 1`] = `
                 component={
                   Object {
                     "$$typeof": Symbol(react.lazy),
-                    "_ctor": [Function],
-                    "_result": null,
-                    "_status": -1,
+                    "_init": [Function],
+                    "_payload": Object {
+                      "_result": [Function],
+                      "_status": -1,
+                    },
                   }
                 }
                 path="/identity"
@@ -609,9 +617,11 @@ exports[`Main: App renders 1`] = `
                 component={
                   Object {
                     "$$typeof": Symbol(react.lazy),
-                    "_ctor": [Function],
-                    "_result": null,
-                    "_status": -1,
+                    "_init": [Function],
+                    "_payload": Object {
+                      "_result": [Function],
+                      "_status": -1,
+                    },
                   }
                 }
                 path="/examples"
@@ -620,9 +630,11 @@ exports[`Main: App renders 1`] = `
                 component={
                   Object {
                     "$$typeof": Symbol(react.lazy),
-                    "_ctor": [Function],
-                    "_result": null,
-                    "_status": -1,
+                    "_init": [Function],
+                    "_payload": Object {
+                      "_result": [Function],
+                      "_status": -1,
+                    },
                   }
                 }
                 path="/utilities"
@@ -631,9 +643,11 @@ exports[`Main: App renders 1`] = `
                 component={
                   Object {
                     "$$typeof": Symbol(react.lazy),
-                    "_ctor": [Function],
-                    "_result": null,
-                    "_status": -1,
+                    "_init": [Function],
+                    "_payload": Object {
+                      "_result": [Function],
+                      "_status": -1,
+                    },
                   }
                 }
                 path="/404"
@@ -642,9 +656,11 @@ exports[`Main: App renders 1`] = `
                 component={
                   Object {
                     "$$typeof": Symbol(react.lazy),
-                    "_ctor": [Function],
-                    "_result": null,
-                    "_status": -1,
+                    "_init": [Function],
+                    "_payload": Object {
+                      "_result": [Function],
+                      "_status": -1,
+                    },
                   }
                 }
               />

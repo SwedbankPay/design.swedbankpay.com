@@ -23,7 +23,7 @@ const ComplexAlert = ({ id, type, icon, close, headerText, children }) => (
             {headerText
                 ? <>
                     {"\n"}
-                        {icon ? <h3 className="ml-2">{headerText}</h3> : <h3>{headerText}</h3> }
+                    {icon ? <h3 className="ml-2">{headerText}</h3> : <h3>{headerText}</h3> }
                     {"\n"}
                 </>
                 : null}
