@@ -3,7 +3,6 @@ const path = require("path");
 const webpack = require("webpack");
 const appRoutes = require("./tools/generate-routes-copy-array");
 const levelsToRoot = require("./tools/levels-to-root");
-const autoprefixer = require("autoprefixer");
 const TerserPlugin = require("terser-webpack-plugin");
 const SentryCliPlugin = require("@sentry/webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -27,6 +26,7 @@ module.exports = (env, argv) => {
     const infoVersion = env && env.info_version ? env.info_version : "LOCAL_DEV";
 
     const config = {
+        mode: argv.mode || "development",
         entry: {
             dg: ["@babel/polyfill", "./src/scripts/main/index.js"],
             "dg-dashboard": "./src/scripts/dashboard/index.js",
@@ -37,12 +37,12 @@ module.exports = (env, argv) => {
         },
         output: {
             path: path.resolve(__dirname, `dist${basename}`),
-            filename: "scripts/[name].js?[hash]",
-            chunkFilename: "scripts/[name].js?[hash]",
+            filename: "scripts/[name].js?[contenthash]",
+            chunkFilename: "scripts/[name].js?[contenthash]",
             publicPath: basename
         },
         // target: "async-node",
-        devtool: "source-map",
+        // devtool: "source-map",
         devServer: {
             contentBase: path.resolve(__dirname, `dist${basename}`),
             publicPath: basename,
@@ -76,22 +76,19 @@ module.exports = (env, argv) => {
                         {
                             loader: isProd ? MiniCssExtractPlugin.loader : "style-loader"
                         },
-                        {
-                            loader: "css-loader"
-                        },
-                        {
-                            loader: "postcss-loader",
-                            options: {
-                                plugins: () => autoprefixer({
-                                    grid: true
-                                })
-                            }
-                        },
+                        "css-loader",
+                        "postcss-loader",
                         {
                             loader: "less-loader",
                             options: {
-                                javascriptEnabled: true
+                                lessOptions: {
+                                    // strictMath: false,
+                                    javascriptEnabled: true
+                                }
                             }
+                            // options: {
+                            //     javascriptEnabled: true
+                            // }
                         }
                     ]
                 },
@@ -102,12 +99,7 @@ module.exports = (env, argv) => {
                             loader: isProd ? MiniCssExtractPlugin.loader : "style-loader"
                         },
                         "css-loader",
-                        {
-                            loader: "postcss-loader",
-                            options: {
-                                plugins: () => autoprefixer()
-                            }
-                        }
+                        "postcss-loader"
                     ]
                 },
                 {
@@ -132,7 +124,7 @@ module.exports = (env, argv) => {
                             loader: "file-loader",
                             options: {
                                 outputPath: "img/flags/1x1/",
-                                name: "[name].[ext]?[hash]"
+                                name: "[name].[ext]?[contenthash]"
                             }
                         }
                     ]
@@ -147,7 +139,7 @@ module.exports = (env, argv) => {
                             loader: "file-loader",
                             options: {
                                 outputPath: "img/flags/4x3/",
-                                name: "[name].[ext]?[hash]"
+                                name: "[name].[ext]?[contenthash]"
                             }
                         }
                     ]
@@ -160,7 +152,7 @@ module.exports = (env, argv) => {
                             loader: "file-loader",
                             options: {
                                 outputPath: "img/",
-                                name: "[name].[ext]?[hash]"
+                                name: "[name].[ext]?[contenthash]"
                             }
                         }
                     ]
@@ -169,16 +161,16 @@ module.exports = (env, argv) => {
         },
         optimization: {
             splitChunks: {
-                chunks: "async",
-                minSize: 30000,
-                maxSize: 0,
-                minChunks: 1,
-                maxAsyncRequests: 5,
-                maxInitialRequests: 3,
-                automaticNameDelimiter: "~",
-                name: true,
+                chunks: "all",
+                // minSize: 30000,
+                // maxSize: 0,
+                // minChunks: 1,
+                // maxAsyncRequests: 5,
+                // maxInitialRequests: 3,
+                // automaticNameDelimiter: "~",
+                // chunkIds: "named",
                 cacheGroups: {
-                    vendors: {
+                    defaultVendors: {
                         test: /[\\/]node_modules[\\/]/,
                         priority: -10
                     },
@@ -204,7 +196,7 @@ module.exports = (env, argv) => {
             minimize: isProd,
             minimizer: [
                 new TerserPlugin({
-                    sourceMap: true,
+                    // sourceMap: true, <-- TODO no longer supported?
                     terserOptions: {
                         compress: { drop_console: true }
                     }
@@ -217,7 +209,7 @@ module.exports = (env, argv) => {
             new HtmlWebpackPlugin({
                 template: "./src/index.html",
                 hash: true,
-                title: `${brandTitle} DesignGuide`,
+                title: `${brandTitle} Design Guide`,
                 meta: {
                     "informational-version": infoVersion
                 }
@@ -236,7 +228,7 @@ module.exports = (env, argv) => {
                     brandTitle: JSON.stringify(brandTitle)
                 }
             }),
-            new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/) // Ignores moments locale folder which doubles the size of the package, moment is a dependency of chart.js [EH]
+            // new webpack.IgnorePlugin({ resourceRegExp: [/^\.\/locale$/, /moment$/] }) // Ignores moments locale folder which doubles the size of the package, moment is a dependency of chart.js [EH]
         ]
     };
 
