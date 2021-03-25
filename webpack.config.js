@@ -7,10 +7,10 @@ const TerserPlugin = require("terser-webpack-plugin");
 const SentryCliPlugin = require("@sentry/webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FileManagerPlugin = require("filemanager-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const AppManifestWebpackPlugin = require("app-manifest-webpack-plugin");
+// const AppManifestWebpackPlugin = require("app-manifest-webpack-plugin");
 
 module.exports = (env, argv) => {
 
@@ -26,7 +26,7 @@ module.exports = (env, argv) => {
     const infoVersion = env && env.info_version ? env.info_version : "LOCAL_DEV";
 
     const config = {
-        mode: argv.mode || "development",
+        mode: argv.mode || "production",
         entry: {
             dg: ["@babel/polyfill", "./src/scripts/main/index.js"],
             "dg-dashboard": "./src/scripts/dashboard/index.js",
@@ -160,40 +160,40 @@ module.exports = (env, argv) => {
             ]
         },
         optimization: {
-            splitChunks: {
-                chunks: "async",
-                // minSize: 30000,
-                // maxSize: 0,
-                // minChunks: 1,
-                // maxAsyncRequests: 5,
-                // maxInitialRequests: 3,
-                // automaticNameDelimiter: "~",
-                // chunkIds: "named",
-                cacheGroups: {
-                    defaultVendors: {
-                        test: /[\\/]node_modules[\\/]/,
-                        priority: -10
-                    },
-                    default: {
-                        minChunks: 2,
-                        priority: -20,
-                        reuseExistingChunk: true
-                    },
-                    dgStyles: {
-                        name: "dg-style",
-                        test: brand === "swedbankpay" ? /(flatpickr\.css|swedbankpay\.less)$/ : /(flatpickr\.css|payex\.less)$/,
-                        chunks: "all",
-                        enforce: true
-                    },
-                    docStyles: {
-                        name: "documentation",
-                        test: brand === "swedbankpay" ? /documentation-swedbankpay\.less/ : /documentation-payex\.less/,
-                        chunks: "all",
-                        enforce: true
-                    }
-                }
-            },
-            minimize: isProd,
+        //     splitChunks: {
+        //         // chunks: "async",
+        //         // minSize: 30000,
+        //         // maxSize: 0,
+        //         // minChunks: 1,
+        //         // maxAsyncRequests: 5,
+        //         // maxInitialRequests: 3,
+        //         // automaticNameDelimiter: "~",
+        //         // chunkIds: "named",
+        //         cacheGroups: {
+        //             defaultVendors: {
+        //                 test: /[\\/]node_modules[\\/]/,
+        //                 priority: -10
+        //             },
+        //             // default: {
+        //             //     minChunks: 2,
+        //             //     priority: -20,
+        //             //     reuseExistingChunk: true
+        //             // },
+        //             dgStyles: {
+        //                 name: "dg-style",
+        //                 test: brand === "swedbankpay" ? /(flatpickr\.css|swedbankpay\.less)$/ : /(flatpickr\.css|payex\.less)$/,
+        //                 chunks: "all",
+        //                 enforce: true
+        //             },
+        //             docStyles: {
+        //                 name: "documentation",
+        //                 test: brand === "swedbankpay" ? /documentation-swedbankpay\.less/ : /documentation-payex\.less/,
+        //                 chunks: "all",
+        //                 enforce: true
+        //             }
+        //         }
+        //     },
+        //     minimize: isProd,
             minimizer: [
                 new TerserPlugin({
                     // sourceMap: true, <-- TODO no longer supported?
@@ -201,9 +201,9 @@ module.exports = (env, argv) => {
                         compress: { drop_console: true }
                     }
                 }),
-                new OptimizeCSSAssetsPlugin()
-            ],
-            mergeDuplicateChunks: isProd
+                new CssMinimizerPlugin()
+            ]
+        //     mergeDuplicateChunks: isProd
         },
         plugins: [
             new HtmlWebpackPlugin({
@@ -227,7 +227,7 @@ module.exports = (env, argv) => {
                     brand: JSON.stringify(brand),
                     brandTitle: JSON.stringify(brandTitle)
                 }
-            }),
+            })
             // new webpack.IgnorePlugin({ resourceRegExp: [/^\.\/locale$/, /moment$/] }) // Ignores moments locale folder which doubles the size of the package, moment is a dependency of chart.js [EH]
         ]
     };
@@ -260,7 +260,7 @@ module.exports = (env, argv) => {
             }),
         );
 
-        // Don't create new sentry release on GitHub Actions
+        // Don't create new sentry release on GitHub Actions while we're using AppVeyor [THN]
         if (!isGitHubActions) {
             config.plugins.push(
                 new SentryCliPlugin({
@@ -288,148 +288,151 @@ module.exports = (env, argv) => {
         }
 
         config.plugins.push(
-            new AppManifestWebpackPlugin({
-                logo: `./src/img/${brand}/favicon.png`,
-                output: "/icons/",
-                config: {
-                    appName: `${brandTitle} DesignGuide`,
-                    developerName: brandTitle,
-                    developerURL: brandLink,
-                    background: "#000",
-                    theme_color: "#2da944",
-                    version,
-                    icons: {
-                        android: true,
-                        appleIcon: true,
-                        appleStartup: true,
-                        coast: true,
-                        favicons: true,
-                        firefox: false,
-                        opengraph: true,
-                        twitter: true,
-                        yandex: false,
-                        windows: true
-                    }
-                }
-            }),
-            new FileManagerPlugin({
-                onStart: [
-                    {
-                        delete: ["./dist"]
-                    }
-                ],
-                onEnd: [
-                    {
-                        copy: [
-                            {
-                                source: `./src/img/${brand}/resources/typography/*.png`,
-                                destination: `./dist${basename}img/typography`
-                            },
-                            {
-                                source: `./src/img/${brand}/resources/logotype/*.png`,
-                                destination: `./dist${basename}img/logotype`
-                            },
-                            {
-                                source: `./src/img/${brand}/documentation/buttons/*.png`,
-                                destination: `./dist${basename}img/documentation/buttons`
-                            },
-                            {
-                                source: `./src/img/${brand}/documentation/logotype/*.png`,
-                                destination: `./dist${basename}img/documentation/logotype`
-                            },
-                            {
-                                source: `./src/img/${brand}/documentation/cards/*.png`,
-                                destination: `./dist${basename}img/documentation/cards`
-                            },
-                            {
-                                source: `./src/img/${brand}/documentation/accessibility/*.png`,
-                                destination: `./dist${basename}img/documentation/accessibility`
-                            },
-                            {
-                                source: `./src/img/${brand}/documentation/imagery/*.svg`,
-                                destination: `./dist${basename}img/documentation/imagery`
-                            },
-                            {
-                                source: `./src/img/${brand}/documentation/spacing/*.svg`,
-                                destination: `./dist${basename}img/documentation/spacing`
-                            },
-                            {
-                                source: `./src/img/${brand}/documentation/copywriting/*.png`,
-                                destination: `./dist${basename}img/documentation/copywriting`
-                            },
-                            {
-                                source: `./src/img/${brand}/documentation/grid/*.png`,
-                                destination: `./dist${basename}img/documentation/grid`
-                            },
-                            {
-                                source: `./src/img/${brand}/documentation/colors/*.png`,
-                                destination: `./dist${basename}img/documentation/colors`
-                            },
-                            {
-                                source: `./src/img/${brand}/documentation/introduction/*.png`,
-                                destination: `./dist${basename}img/documentation/introduction`
-                            },
-                            {
-                                source: `./src/img/${brand}/documentation/forDevelopers/*.png`,
-                                destination: `./dist${basename}img/documentation/forDevelopers`
-                            },
-                            {
-                                source: `./src/img/${brand}/documentation/forDesigners/*.png`,
-                                destination: `./dist${basename}img/documentation/forDesigners`
-                            },
-                            {
-                                source: "./src/img/background/*.svg",
-                                destination: `./dist${basename}img/background`
-                            },
-                            {
-                                source: "./src/assets/logos/*.zip",
-                                destination: `./dist${basename}release/logos`
-                            },
-                            {
-                                source: "./src/assets/fonts/*.zip",
-                                destination: `./dist${basename}release/fonts`
-                            },
-                            {
-                                source: "./src/assets/templates/*",
-                                destination: `./dist${basename}templates`
-                            },
-                            {
-                                source: `./dist${basename}icons`,
-                                destination: "./dist/temp/icons/icons"
-                            },
-                            {
-                                source: `./dist${basename}scripts/dg.js`,
-                                destination: "./dist/temp/release/scripts"
-                            },
-                            {
-                                source: `./dist${basename}scripts/dg.js.map`,
-                                destination: "./dist/temp/release/scripts"
-                            },
-                            {
-                                source: `./dist${basename}scripts/dg-dashboard.js`,
-                                destination: "./dist/temp/release/scripts"
-                            },
-                            {
-                                source: `./dist${basename}scripts/dg-dashboard.js.map`,
-                                destination: "./dist/temp/release/scripts"
-                            },
-                            {
-                                source: `./dist${basename}styles/dg-style.css`,
-                                destination: "./dist/temp/release/styles"
-                            }
-                        ],
-                        mkdir: [`./dist${basename}release`],
-                        archive: onEndArchive,
-                        delete: ["./dist/temp"]
-                    },
-                    {
-                        copy: appRoutes.map(route => ({
-                            source: `./dist${basename}index.html`,
-                            destination: `./dist${basename}${route}`
-                        }))
-                    }
-                ]
-            })
+            // new AppManifestWebpackPlugin({
+            //     logo: `./src/img/${brand}/favicon.png`,
+            //     output: "/icons/",
+            //     config: {
+            //         appName: `${brandTitle} Design Guide`,
+            //         developerName: brandTitle,
+            //         developerURL: brandLink,
+            //         background: "#000",
+            //         theme_color: "#2da944",
+            //         version,
+            //         icons: {
+            //             android: true,
+            //             appleIcon: true,
+            //             appleStartup: true,
+            //             coast: true,
+            //             favicons: true,
+            //             firefox: false,
+            //             opengraph: true,
+            //             twitter: true,
+            //             yandex: false,
+            //             windows: true
+            //         }
+            //     }
+            // }),
+            // new FileManagerPlugin({
+            //     events: {
+            //         onStart: [
+            //             {
+            //                 delete: ["./dist"]
+            //             }
+            //         ],
+            //         onEnd: [
+            //             {
+            //                 copy: [
+            //                     {
+            //                         source: `./src/img/${brand}/resources/typography/*.png`,
+            //                         destination: `./dist${basename}img/typography`
+            //                     },
+            //                     {
+            //                         source: `./src/img/${brand}/resources/logotype/*.png`,
+            //                         destination: `./dist${basename}img/logotype`
+            //                     },
+            //                     {
+            //                         source: `./src/img/${brand}/documentation/buttons/*.png`,
+            //                         destination: `./dist${basename}img/documentation/buttons`
+            //                     },
+            //                     {
+            //                         source: `./src/img/${brand}/documentation/logotype/*.png`,
+            //                         destination: `./dist${basename}img/documentation/logotype`
+            //                     },
+            //                     {
+            //                         source: `./src/img/${brand}/documentation/cards/*.png`,
+            //                         destination: `./dist${basename}img/documentation/cards`
+            //                     },
+            //                     {
+            //                         source: `./src/img/${brand}/documentation/accessibility/*.png`,
+            //                         destination: `./dist${basename}img/documentation/accessibility`
+            //                     },
+            //                     {
+            //                         source: `./src/img/${brand}/documentation/imagery/*.svg`,
+            //                         destination: `./dist${basename}img/documentation/imagery`
+            //                     },
+            //                     {
+            //                         source: `./src/img/${brand}/documentation/spacing/*.svg`,
+            //                         destination: `./dist${basename}img/documentation/spacing`
+            //                     },
+            //                     {
+            //                         source: `./src/img/${brand}/documentation/copywriting/*.png`,
+            //                         destination: `./dist${basename}img/documentation/copywriting`
+            //                     },
+            //                     {
+            //                         source: `./src/img/${brand}/documentation/grid/*.png`,
+            //                         destination: `./dist${basename}img/documentation/grid`
+            //                     },
+            //                     {
+            //                         source: `./src/img/${brand}/documentation/colors/*.png`,
+            //                         destination: `./dist${basename}img/documentation/colors`
+            //                     },
+            //                     {
+            //                         source: `./src/img/${brand}/documentation/introduction/*.png`,
+            //                         destination: `./dist${basename}img/documentation/introduction`
+            //                     },
+            //                     {
+            //                         source: `./src/img/${brand}/documentation/forDevelopers/*.png`,
+            //                         destination: `./dist${basename}img/documentation/forDevelopers`
+            //                     },
+            //                     {
+            //                         source: `./src/img/${brand}/documentation/forDesigners/*.png`,
+            //                         destination: `./dist${basename}img/documentation/forDesigners`
+            //                     },
+            //                     {
+            //                         source: "./src/img/background/*.svg",
+            //                         destination: `./dist${basename}img/background`
+            //                     },
+            //                     {
+            //                         source: "./src/assets/logos/*.zip",
+            //                         destination: `./dist${basename}release/logos`
+            //                     },
+            //                     {
+            //                         source: "./src/assets/fonts/*.zip",
+            //                         destination: `./dist${basename}release/fonts`
+            //                     },
+            //                     {
+            //                         source: "./src/assets/templates/*",
+            //                         destination: `./dist${basename}templates`
+            //                     },
+            //                     {
+            //                         source: `./dist${basename}icons`,
+            //                         destination: "./dist/temp/icons/icons"
+            //                     },
+            //                     {
+            //                         source: `./dist${basename}scripts/dg.js`,
+            //                         destination: "./dist/temp/release/scripts"
+            //                     },
+            //                     {
+            //                         source: `./dist${basename}scripts/dg.js.map`,
+            //                         destination: "./dist/temp/release/scripts"
+            //                     },
+            //                     {
+            //                         source: `./dist${basename}scripts/dg-dashboard.js`,
+            //                         destination: "./dist/temp/release/scripts"
+            //                     },
+            //                     {
+            //                         source: `./dist${basename}scripts/dg-dashboard.js.map`,
+            //                         destination: "./dist/temp/release/scripts"
+            //                     },
+            //                     {
+            //                         source: `./dist${basename}styles/dg-style.css`,
+            //                         destination: "./dist/temp/release/styles"
+            //                     }
+            //                 ],
+            //                 mkdir: [`./dist${basename}release`],
+            //                 archive: onEndArchive,
+            //                 delete: ["./dist/temp"]
+            //             },
+            //             {
+            //                 copy: appRoutes.map(route => ({
+            //                     source: `./dist${basename}index.html`,
+            //                     destination: `./dist${basename}${route}`
+            //                 }))
+            //             }
+            //         ]
+            //     }
+
+            // })
         );
     }
 
