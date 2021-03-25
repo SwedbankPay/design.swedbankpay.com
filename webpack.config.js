@@ -161,7 +161,7 @@ module.exports = (env, argv) => {
         },
         optimization: {
             splitChunks: {
-                chunks: "all",
+                chunks: "async",
                 // minSize: 30000,
                 // maxSize: 0,
                 // minChunks: 1,
