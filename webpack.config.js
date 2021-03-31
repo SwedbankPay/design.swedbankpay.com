@@ -30,8 +30,6 @@ module.exports = (env, argv) => {
     const config = {
         entry: {
             dg: ["@babel/polyfill", "./src/scripts/main/index.js"],
-            "dg-light": ["@babel/polyfill", "./src/scripts/main/dg-light.js"],
-            "dg-light-style": "./src/less/swedbankpay-light.less",
             "dg-dashboard": "./src/scripts/dashboard/index.js",
             app: ["@babel/polyfill/noConflict", `./src/${brand}.js`]
         },
