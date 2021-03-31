@@ -194,12 +194,6 @@ module.exports = (env, argv) => {
                         chunks: "all",
                         enforce: true
                     },
-                    dgLightStyles: {
-                        name: "dg-light-style",
-                        test: brand === "swedbankpay" ? /(swedbankpay-light\.less)$/ : /(payex-light\.less)$/,
-                        chunks: "all",
-                        enforce: true
-                    },
                     docStyles: {
                         name: "documentation",
                         test: brand === "swedbankpay" ? /documentation-swedbankpay\.less/ : /documentation-payex\.less/,
