@@ -19,7 +19,9 @@
         "stylelint": "stylelint src/**/*.less",
         "lint": "npm run eslint && npm run stylelint",
         "e2e:chrome": "testcafe chrome src/**/*.spec.js",
-        "response-time": "node tools/check-response-time.js"
+        "response-time": "node tools/check-response-time.js",
+        "build:test:feature": "webpack --mode production --env brand=swedbankpay --env basename=foo/bar --env semver=foo/bar",
+        "build:test:release": "webpack --mode production --env brand=swedbankpay --env basename=v/1.2.3 --env semver=1.2.3 --env release=true"
     },
     "repository": {
         "type": "git",
@@ -79,6 +81,8 @@
         "eslint-plugin-react": "7.23.0",
         "eslint-plugin-security": "^1.4.0",
         "eslint-plugin-testcafe": "^0.2.1",
+        "favicons": "^6.2.1",
+        "favicons-webpack-plugin": "^5.0.2",
         "file-loader": "^6.2.0",
         "filemanager-webpack-plugin": "^4.0.0",
         "html-webpack-plugin": "^5.3.1",
