@@ -318,6 +318,7 @@ const DisabledFormComponents = () => (
         <p>Disable whichever form component you want by adding <CodeTags type="secondary" code="disabled" /> to the desired input element</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <Togglebox id="togglebox-disabled-example-1" label="Enable overdrive" disabled />
+            <Togglebox id="togglebox-disabled-checked-example-1" label="Enable overdrive" disabled checked/>
             <Radio label="Hamburgers" id="radio-disabled-example-1" name="radio-disabled-example" disabled />
             <Checkbox label="Milk" id="checkbox-disabled-example-3" disabled checked />
             <Rangeslider className="mb-2" min={0} max={200} step={1} value={100} valueLabel valueLabelPrefix="$" valueLabelPostfix="%" disabled/>
