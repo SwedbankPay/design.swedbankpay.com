@@ -3,7 +3,7 @@ import { mount } from "enzyme";
 
 import Rangeslider from "./Rangeslider";
 
-describe("Component: Rangeslider - ", () => {
+describe("Component: Rangeslider -", () => {
     it("is defined", () => {
         expect(Rangeslider).toBeDefined();
     });

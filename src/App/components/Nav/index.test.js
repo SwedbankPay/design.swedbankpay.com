@@ -60,7 +60,7 @@ const div = document.createElement("div");
 
 document.body.appendChild(div);
 
-describe("Component: Nav - ", () => {
+describe("Component: Nav -", () => {
     it("is defined", () => {
         expect(Nav).toBeDefined();
     });

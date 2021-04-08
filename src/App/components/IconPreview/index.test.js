@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import IconPreview from "./index";
 
-describe("Component: IconPreview - ", () => {
+describe("Component: IconPreview -", () => {
     it("is defined", () => {
         expect(IconPreview).toBeDefined();
     });

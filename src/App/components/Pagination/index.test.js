@@ -3,7 +3,7 @@ import { shallow, mount } from "enzyme";
 
 import Pagination from "./index";
 
-describe("Component: Pagination - ", () => {
+describe("Component: Pagination -", () => {
     it("is defined", () => {
         expect(Pagination).toBeDefined();
     });

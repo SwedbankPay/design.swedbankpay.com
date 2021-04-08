@@ -10,7 +10,10 @@ const RenderRoutes = ({ path, redirect, routes, appFolder }) => (
         {routes.map(route => {
             const { path, componentPath } = route;
 
-            const RouteRenderComponent = React.lazy(() => import(/* webpackChunkName: "doc-route.chunk_" */ `../../${appFolder}/${componentPath}/index.js`));
+            console.log("What?", route);
+
+            const dynamicRoute = `../../${appFolder}/${componentPath}/index.js`;
+            const RouteRenderComponent = React.lazy(() => import(dynamicRoute));
 
             return <Route key={`doc_route_${path}`} exact path={path} render={() => <>
                 <div className="d-flex align-items-center ">

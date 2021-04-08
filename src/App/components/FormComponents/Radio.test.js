@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import Radio from "./Radio";
 
-describe("Component: Radio - ", () => {
+describe("Component: Radio -", () => {
     it("is defined", () => {
         expect(Radio).toBeDefined();
     });

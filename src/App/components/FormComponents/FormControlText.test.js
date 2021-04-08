@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import FormControlText from "./FormControlText";
 
-describe("Component: FormControlText - ", () => {
+describe("Component: FormControlText -", () => {
     it("is defined", () => {
         expect(FormControlText).toBeDefined();
     });

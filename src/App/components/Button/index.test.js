@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import Button from "./index";
 
-describe("Component: Button - ", () => {
+describe("Component: Button -", () => {
     it("is defined", () => {
         expect(Button).toBeDefined();
     });

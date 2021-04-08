@@ -19,9 +19,7 @@
         "stylelint": "stylelint src/**/*.less",
         "lint": "npm run eslint && npm run stylelint",
         "e2e:chrome": "testcafe chrome src/**/*.spec.js",
-        "response-time": "node tools/check-response-time.js",
-        "build:test:feature": "webpack --mode production --env brand=swedbankpay --env basename=foo/bar --env semver=foo/bar",
-        "build:test:release": "webpack --mode production --env brand=swedbankpay --env basename=v/1.2.3 --env semver=1.2.3 --env release=true"
+        "response-time": "node tools/check-response-time.js"
     },
     "repository": {
         "type": "git",

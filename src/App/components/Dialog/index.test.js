@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import Dialog from "./index";
 
-describe("Component: Dialog - ", () => {
+describe("Component: Dialog -", () => {
     it("is defined", () => {
         expect(Dialog).toBeDefined();
     });
