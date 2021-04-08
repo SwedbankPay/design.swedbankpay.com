@@ -15,10 +15,26 @@
         height: @checkbox-height;
         width: @checkbox-width * 2;
 
+        &:focus {
+            outline: none;
+
+            &:before {
+                content: "";
+                position: absolute;
+                bottom: 0.5px;
+                left: -2px;
+                height: @checkbox-height + 0.2;
+                width: @checkbox-width * 2.2;
+                border: 1px solid @checkbox-border-color;
+                border-radius: 1rem;
+            }
+        }
+
         + label:before {
-            background: linear-gradient(to left, @white 50%, @brand-primary 50%);
+            background: linear-gradient(to left, @white 50%, @dark-brown 50%);
             background-size: 200% 100%;
             background-position: right bottom;
+            background-color: @white;
             transition: all 0.2s ease;
             content: "";
             position: absolute;
@@ -26,9 +42,8 @@
             left: 0;
             height: @checkbox-height;
             width: @checkbox-width * 2;
-            background-color: @white;
             border: 1px solid @checkbox-border-color;
-            border-radius: @range-height;
+            border-radius: 1rem;
             color: @white;
             cursor: pointer;
         }
@@ -42,7 +57,6 @@
             left: 0;
             height: @checkbox-height;
             width: @checkbox-width;
-            background-color: @white;
             border: 1px solid @checkbox-border-color;
             border-radius: 50%;
             color: @white;
@@ -50,14 +64,15 @@
         }
 
         &:checked + label:before {
+            background: @dark-brown;
             background-position: left bottom;
             border-color: @checkbox-checked-color;
-            background-color: @checkbox-checked-color;
         }
 
         &:checked + label:after {
             border-color: @checkbox-checked-color;
             left: @checkbox-width;
+            background-color: @white;
         }
 
         &[disabled] {
@@ -68,7 +83,7 @@
             }
 
             &:checked + label:before {
-                background-color: @input-checked-bg-disabled;
+                background: @light-brown;
             }
 
             + label,
