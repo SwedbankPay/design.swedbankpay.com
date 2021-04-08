@@ -118,3 +118,122 @@ exports[`Component: Panel -  renders without panel-body when prop bodyContent is
   className="panel panel-default"
 />
 `;
+
+exports[`Component: Panel - prop type is an enum with set values 1`] = `
+<section
+  className="panel panel-test"
+/>
+`;
+
+exports[`Component: Panel - renders 1`] = `
+<section
+  className="panel panel-default"
+/>
+`;
+
+exports[`Component: Panel - renders with a footer when prop footerText is provided 1`] = `
+<section
+  className="panel panel-default"
+>
+  <footer>
+    <p>
+      test
+    </p>
+  </footer>
+</section>
+`;
+
+exports[`Component: Panel - renders with a header and subtitle when prop title and subTitle is provided 1`] = `
+<section
+  className="panel panel-default"
+>
+  <header>
+    <h2
+      className="panel-title"
+    >
+      test
+    </h2>
+    <p
+      className="panel-sub-title"
+    >
+      test
+    </p>
+  </header>
+</section>
+`;
+
+exports[`Component: Panel - renders with a header without subtitle when prop title is provided and prop subTitle is missing 1`] = `
+<section
+  className="panel panel-default"
+>
+  <header>
+    <h2
+      className="panel-title"
+    >
+      test
+    </h2>
+  </header>
+</section>
+`;
+
+exports[`Component: Panel - renders with class 'panel-bottomless when prop removeBottomPadding is true 1`] = `
+<section
+  className="panel panel-default panel-bottomless"
+/>
+`;
+
+exports[`Component: Panel - renders with class 'panel-half-padding' when prop halfPadding is true 1`] = `
+<section
+  className="panel panel-default panel-half-padding"
+/>
+`;
+
+exports[`Component: Panel - renders with class 'panel-no-padding' when prop removeAllPadding  is true 1`] = `
+<section
+  className="panel panel-default panel-no-padding"
+/>
+`;
+
+exports[`Component: Panel - renders with panel-body when prop bodyContent is provided 1`] = `
+<section
+  className="panel panel-default"
+>
+  <div
+    className="panel-body"
+  >
+    <p
+      key="0"
+    >
+      Your main panel content is put here.
+    </p>
+    <p
+      key="1"
+    >
+      Some more content over here.
+    </p>
+    <p
+      key="2"
+    >
+      And one more line, just to be safe.
+    </p>
+  </div>
+</section>
+`;
+
+exports[`Component: Panel - renders without a footer when prop footerText is not provided 1`] = `
+<section
+  className="panel panel-default"
+/>
+`;
+
+exports[`Component: Panel - renders without header when prop title is missing 1`] = `
+<section
+  className="panel panel-default"
+/>
+`;
+
+exports[`Component: Panel - renders without panel-body when prop bodyContent is not provided 1`] = `
+<section
+  className="panel panel-default"
+/>
+`;

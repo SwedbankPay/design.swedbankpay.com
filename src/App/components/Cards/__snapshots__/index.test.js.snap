@@ -303,3 +303,307 @@ exports[`Component: Cards -  throws an error if type does not match proptypes 1`
   </div>
 </Fragment>
 `;
+
+exports[`Component: Cards - renders a child object 1`] = `
+<Fragment>
+  <div>
+    
+
+    <a
+      className="cards cards-undefined"
+      href="#"
+      onClick={[Function]}
+    >
+      
+
+      <div
+        className="cards-content"
+      >
+        
+
+        
+
+        This is child text
+      </div>
+      
+
+      <i
+        className="material-icons"
+      >
+        arrow_forward
+      </i>
+      
+
+    </a>
+    
+
+  </div>
+</Fragment>
+`;
+
+exports[`Component: Cards - renders a text in card-body 1`] = `
+<Fragment>
+  <div>
+    
+
+    <a
+      className="cards cards-secondary"
+      href="#"
+      onClick={[Function]}
+    >
+      
+
+      <div
+        className="cards-content"
+      >
+        
+
+        <span>
+          Text that goes in card body
+        </span>
+        
+
+      </div>
+      
+
+      <i
+        className="material-icons"
+      >
+        arrow_forward
+      </i>
+      
+
+    </a>
+    
+
+  </div>
+</Fragment>
+`;
+
+exports[`Component: Cards - renders a title 1`] = `
+<Fragment>
+  <div>
+    
+
+    <a
+      className="cards cards-secondary"
+      href="#"
+      onClick={[Function]}
+    >
+      
+
+      <div
+        className="cards-content"
+      >
+        
+
+        <span
+          className="h4"
+        >
+          Card title goes here
+        </span>
+        
+
+      </div>
+      
+
+      <i
+        className="material-icons"
+      >
+        arrow_forward
+      </i>
+      
+
+    </a>
+    
+
+  </div>
+</Fragment>
+`;
+
+exports[`Component: Cards - renders a wide card when wide is true 1`] = `
+<Fragment>
+  <a
+    className="cards cards-secondary cards-wide"
+    href="#"
+  >
+    
+
+    <div
+      className="cards-content"
+    >
+      
+
+      
+
+    </div>
+    
+
+    <i
+      className="material-icons"
+    >
+      arrow_forward
+    </i>
+    
+
+  </a>
+  
+
+</Fragment>
+`;
+
+exports[`Component: Cards - renders an icon when icon is provided 1`] = `
+<Fragment>
+  <div>
+    
+
+    <a
+      className="cards cards-secondary"
+      href="#"
+      onClick={[Function]}
+    >
+      
+
+      <div
+        className="cards-icon"
+      >
+        
+
+        01
+        
+
+      </div>
+      <div
+        className="cards-content"
+      >
+        
+
+        
+
+      </div>
+      
+
+      <i
+        className="material-icons"
+      >
+        arrow_forward
+      </i>
+      
+
+    </a>
+    
+
+  </div>
+</Fragment>
+`;
+
+exports[`Component: Cards - renders an image 1`] = `
+<Fragment>
+  <div>
+    
+
+    <a
+      className="cards cards-secondary"
+      href="#"
+      onClick={[Function]}
+    >
+      
+
+      <img
+        src="url.address"
+      />
+      <div
+        className="cards-content"
+      >
+        
+
+        
+
+      </div>
+      
+
+      <i
+        className="material-icons"
+      >
+        arrow_forward
+      </i>
+      
+
+    </a>
+    
+
+  </div>
+</Fragment>
+`;
+
+exports[`Component: Cards - renders with correct type 1`] = `
+<Fragment>
+  <div>
+    
+
+    <a
+      className="cards cards-secondary"
+      href="#"
+      onClick={[Function]}
+    >
+      
+
+      <div
+        className="cards-content"
+      >
+        
+
+        
+
+      </div>
+      
+
+      <i
+        className="material-icons"
+      >
+        arrow_forward
+      </i>
+      
+
+    </a>
+    
+
+  </div>
+</Fragment>
+`;
+
+exports[`Component: Cards - throws an error if type does not match proptypes 1`] = `
+<Fragment>
+  <div>
+    
+
+    <a
+      className="cards cards-error"
+      href="#"
+      onClick={[Function]}
+    >
+      
+
+      <div
+        className="cards-content"
+      >
+        
+
+        
+
+      </div>
+      
+
+      <i
+        className="material-icons"
+      >
+        arrow_forward
+      </i>
+      
+
+    </a>
+    
+
+  </div>
+</Fragment>
+`;

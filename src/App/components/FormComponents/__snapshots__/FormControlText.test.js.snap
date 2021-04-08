@@ -50,3 +50,54 @@ exports[`Component: FormControlText -  renders without label 1`] = `
 
 </div>
 `;
+
+exports[`Component: FormControlText - prop text is required 1`] = `
+<div
+  className="form-group"
+>
+  
+
+  <span
+    className="form-control-text"
+  />
+  
+
+</div>
+`;
+
+exports[`Component: FormControlText - renders with label 1`] = `
+<div
+  className="form-group"
+>
+  
+
+  <label>
+    test
+  </label>
+  
+
+  <span
+    className="form-control-text"
+  >
+    test
+  </span>
+  
+
+</div>
+`;
+
+exports[`Component: FormControlText - renders without label 1`] = `
+<div
+  className="form-group"
+>
+  
+
+  <span
+    className="form-control-text"
+  >
+    test
+  </span>
+  
+
+</div>
+`;

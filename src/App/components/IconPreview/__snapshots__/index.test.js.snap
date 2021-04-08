@@ -135,3 +135,139 @@ exports[`Component: IconPreview -  renders icon with custom when prop className 
   className="payment-icon payment-icon-amex test test2 test-3"
 />
 `;
+
+exports[`Component: IconPreview - prop name is marked as required 1`] = `
+<i
+  aria-hidden="true"
+  className="payment-icon payment-icon-undefined"
+/>
+`;
+
+exports[`Component: IconPreview - prop size is an enum with specified allowed values 1`] = `
+<div>
+  <IconPreview
+    name="visa"
+    size="tiny"
+    type="material-icons"
+  />
+  <IconPreview
+    name="amex"
+    size="small"
+    type="payment-icon"
+  />
+  <IconPreview
+    name="diners"
+    size="medium"
+    type="payment-icon"
+  />
+  <IconPreview
+    name="mastercard"
+    size="large"
+    type="payment-icon"
+  />
+  <IconPreview
+    name="mobilepay"
+    size="huge"
+    type="payment-icon"
+  />
+</div>
+`;
+
+exports[`Component: IconPreview - prop size is an enum with specified allowed values 2`] = `
+<i
+  aria-hidden="true"
+  className="payment-icon payment-icon-test payment-icon-amex"
+/>
+`;
+
+exports[`Component: IconPreview - prop type has specific allowed values 1`] = `
+<div>
+  <IconPreview
+    type="material-icons"
+  />
+  <IconPreview
+    type="payment-icon"
+  />
+  <IconPreview
+    type="flag-icon"
+  />
+</div>
+`;
+
+exports[`Component: IconPreview - prop type has specific allowed values 2`] = `
+<i
+  aria-hidden="true"
+  className="invalid_value invalid_value-undefined"
+/>
+`;
+
+exports[`Component: IconPreview - renders 1`] = `
+<i
+  aria-hidden="true"
+  className="payment-icon payment-icon-amex"
+/>
+`;
+
+exports[`Component: IconPreview - renders a material icon when type is equal to material-icons 1`] = `
+<i
+  aria-hidden="true"
+  className="material-icons"
+>
+  android
+</i>
+`;
+
+exports[`Component: IconPreview - renders a preview wrapper around material-icon when prop previewSize is true 1`] = `
+<div
+  className="icon-preview"
+>
+  <i
+    aria-hidden="true"
+    className="material-icons material-icons-large"
+  >
+    android
+  </i>
+  <code
+    className="code-tags code-tags-secondary mt-2"
+  >
+    large
+  </code>
+</div>
+`;
+
+exports[`Component: IconPreview - renders a preview wrapper around the <i> tag when prop preview is true 1`] = `
+<div
+  className="icon-preview"
+>
+  <i
+    aria-hidden="true"
+    className="payment-icon payment-icon-amex"
+  />
+  <code
+    className="code-tags code-tags-secondary mt-2"
+  >
+    amex
+  </code>
+</div>
+`;
+
+exports[`Component: IconPreview - renders correct icon when prop name is provided 1`] = `
+<i
+  aria-hidden="true"
+  className="payment-icon payment-icon-amex"
+/>
+`;
+
+exports[`Component: IconPreview - renders correct size when prop size is provided 1`] = `
+<i
+  aria-hidden="true"
+  className="payment-icon payment-icon-large payment-icon-amex"
+/>
+`;
+
+exports[`Component: IconPreview - renders icon with custom when prop className is provided 1`] = `
+<i
+  aria-hidden="true"
+  className="payment-icon payment-icon-amex test test2 test-3"
+/>
+`;

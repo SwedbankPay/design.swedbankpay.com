@@ -254,3 +254,258 @@ exports[`Component: Dialog -  renders with the passed header 1`] = `
   </div>
 </Fragment>
 `;
+
+exports[`Component: Dialog - renders 1`] = `
+<Fragment>
+  <div
+    aria-describedby="aria-describe-dia"
+    aria-labelledby="aria-label-dia"
+    aria-modal="true"
+    className="dialog"
+    role="dialog"
+  >
+    <section>
+      <header
+        className="dialog-header"
+        id="aria-label-dia"
+      >
+        <h4 />
+        
+
+        <button
+          className="dialog-close"
+          type="button"
+        >
+          
+
+          <Icon
+            type="close"
+          />
+          
+
+        </button>
+      </header>
+      <div
+        className="dialog-body"
+        id="aria-describe-dia"
+      />
+      <footer
+        className="dialog-footer"
+      >
+        
+
+        <button
+          className="btn btn-secondary"
+          data-dialog-close={true}
+          type="button"
+        >
+          Cancel
+        </button>
+        
+
+        <button
+          className="btn btn-primary"
+          type="button"
+        >
+          Delete
+        </button>
+        
+
+      </footer>
+    </section>
+  </div>
+</Fragment>
+`;
+
+exports[`Component: Dialog - renders with the passed ID 1`] = `
+<Fragment>
+  <div
+    aria-describedby="aria-describe-dia"
+    aria-labelledby="aria-label-dia"
+    aria-modal="true"
+    className="dialog"
+    id="my-id"
+    role="dialog"
+  >
+    <section>
+      <header
+        className="dialog-header"
+        id="aria-label-dia"
+      >
+        <h4 />
+        
+
+        <button
+          className="dialog-close"
+          type="button"
+        >
+          
+
+          <Icon
+            type="close"
+          />
+          
+
+        </button>
+      </header>
+      <div
+        className="dialog-body"
+        id="aria-describe-dia"
+      />
+      <footer
+        className="dialog-footer"
+      >
+        
+
+        <button
+          className="btn btn-secondary"
+          data-dialog-close={true}
+          type="button"
+        >
+          Cancel
+        </button>
+        
+
+        <button
+          className="btn btn-primary"
+          type="button"
+        >
+          Delete
+        </button>
+        
+
+      </footer>
+    </section>
+  </div>
+</Fragment>
+`;
+
+exports[`Component: Dialog - renders with the passed children 1`] = `
+<Fragment>
+  <div
+    aria-describedby="aria-describe-dia"
+    aria-labelledby="aria-label-dia"
+    aria-modal="true"
+    className="dialog"
+    role="dialog"
+  >
+    <section>
+      <header
+        className="dialog-header"
+        id="aria-label-dia"
+      >
+        <h4 />
+        
+
+        <button
+          className="dialog-close"
+          type="button"
+        >
+          
+
+          <Icon
+            type="close"
+          />
+          
+
+        </button>
+      </header>
+      <div
+        className="dialog-body"
+        id="aria-describe-dia"
+      >
+        <p>
+          My paragraph
+        </p>
+      </div>
+      <footer
+        className="dialog-footer"
+      >
+        
+
+        <button
+          className="btn btn-secondary"
+          data-dialog-close={true}
+          type="button"
+        >
+          Cancel
+        </button>
+        
+
+        <button
+          className="btn btn-primary"
+          type="button"
+        >
+          Delete
+        </button>
+        
+
+      </footer>
+    </section>
+  </div>
+</Fragment>
+`;
+
+exports[`Component: Dialog - renders with the passed header 1`] = `
+<Fragment>
+  <div
+    aria-describedby="aria-describe-dia"
+    aria-labelledby="aria-label-dia"
+    aria-modal="true"
+    className="dialog"
+    role="dialog"
+  >
+    <section>
+      <header
+        className="dialog-header"
+        id="aria-label-dia"
+      >
+        <h4>
+          My heading
+        </h4>
+        
+
+        <button
+          className="dialog-close"
+          type="button"
+        >
+          
+
+          <Icon
+            type="close"
+          />
+          
+
+        </button>
+      </header>
+      <div
+        className="dialog-body"
+        id="aria-describe-dia"
+      />
+      <footer
+        className="dialog-footer"
+      >
+        
+
+        <button
+          className="btn btn-secondary"
+          data-dialog-close={true}
+          type="button"
+        >
+          Cancel
+        </button>
+        
+
+        <button
+          className="btn btn-primary"
+          type="button"
+        >
+          Delete
+        </button>
+        
+
+      </footer>
+    </section>
+  </div>
+</Fragment>
+`;

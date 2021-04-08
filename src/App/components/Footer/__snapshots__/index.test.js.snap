@@ -11,3 +11,15 @@ exports[`Component: Footer -  renders 1`] = `
   </p>
 </footer>
 `;
+
+exports[`Component: Footer - renders 1`] = `
+<footer
+  className="page-footer"
+>
+  <p
+    className="page-footer-rights"
+  >
+    © Swedbank Pay
+  </p>
+</footer>
+`;

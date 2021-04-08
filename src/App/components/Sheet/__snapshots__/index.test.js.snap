@@ -145,3 +145,149 @@ exports[`Component: Sheet -  renders with the data-require-action attribute 1`] 
   </section>
 </div>
 `;
+
+exports[`Component: Sheet - does not render with data-require-action if it is set to false 1`] = `
+<div
+  className="sheet"
+  data-require-action={null}
+>
+  <section>
+    
+
+    <a
+      className="sheet-close"
+      href="#"
+    >
+      
+			
+      <Icon
+        type="close"
+      />
+      
+		
+    </a>
+  </section>
+</div>
+`;
+
+exports[`Component: Sheet - renders 1`] = `
+<div
+  className="sheet"
+  data-require-action={null}
+>
+  <section>
+    
+
+    <a
+      className="sheet-close"
+      href="#"
+    >
+      
+			
+      <Icon
+        type="close"
+      />
+      
+		
+    </a>
+  </section>
+</div>
+`;
+
+exports[`Component: Sheet - renders with a close icon 1`] = `
+<div
+  className="sheet"
+  data-require-action={null}
+>
+  <section>
+    
+
+    <a
+      className="sheet-close"
+      href="#"
+    >
+      
+			
+      <Icon
+        type="close"
+      />
+      
+		
+    </a>
+  </section>
+</div>
+`;
+
+exports[`Component: Sheet - renders with an ID 1`] = `
+<div
+  className="sheet"
+  data-require-action={null}
+  id="demo-sheet"
+>
+  <section>
+    
+
+    <a
+      className="sheet-close"
+      href="#"
+    >
+      
+			
+      <Icon
+        type="close"
+      />
+      
+		
+    </a>
+  </section>
+</div>
+`;
+
+exports[`Component: Sheet - renders with children 1`] = `
+<div
+  className="sheet"
+  data-require-action={null}
+>
+  <section>
+    
+
+    <a
+      className="sheet-close"
+      href="#"
+    >
+      
+			
+      <Icon
+        type="close"
+      />
+      
+		
+    </a>
+    Test
+  </section>
+</div>
+`;
+
+exports[`Component: Sheet - renders with the data-require-action attribute 1`] = `
+<div
+  className="sheet"
+  data-require-action={true}
+>
+  <section>
+    
+
+    <a
+      className="sheet-close"
+      href="#"
+    >
+      
+			
+      <Icon
+        type="close"
+      />
+      
+		
+    </a>
+  </section>
+</div>
+`;

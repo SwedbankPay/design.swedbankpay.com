@@ -174,3 +174,146 @@ exports[`Component: Rangeslider -  renders without label 1`] = `
   </div>
 </Rangeslider>
 `;
+
+exports[`Component: Rangeslider - renders with a value label 1`] = `
+<Rangeslider
+  valueLabel={true}
+>
+  <div
+    className="rangeslider rangeslider-brand label-right"
+  >
+    
+
+    <input
+      type="range"
+    />
+    
+
+    <ValueLabel>
+      <output
+        className="value-label"
+      >
+        
+		
+        <p>
+          
+			
+          <span
+            data-rs-value={true}
+          />
+          
+			
+        </p>
+        
+	
+      </output>
+    </ValueLabel>
+    
+
+  </div>
+</Rangeslider>
+`;
+
+exports[`Component: Rangeslider - renders with a value label and a value label postfix 1`] = `
+<Rangeslider
+  valueLabel={true}
+  valueLabelPostfix="test"
+>
+  <div
+    className="rangeslider rangeslider-brand label-right"
+  >
+    
+
+    <input
+      type="range"
+    />
+    
+
+    <ValueLabel>
+      <output
+        className="value-label"
+      >
+        
+		
+        <p>
+          
+			
+          <span
+            data-rs-value={true}
+          />
+          
+			
+          <span>
+            test
+          </span>
+          
+		
+        </p>
+        
+	
+      </output>
+    </ValueLabel>
+    
+
+  </div>
+</Rangeslider>
+`;
+
+exports[`Component: Rangeslider - renders with a value label and a value label prefix 1`] = `
+<Rangeslider
+  valueLabel={true}
+  valueLabelPrefix="test"
+>
+  <div
+    className="rangeslider rangeslider-brand label-right"
+  >
+    
+
+    <input
+      type="range"
+    />
+    
+
+    <ValueLabel>
+      <output
+        className="value-label"
+      >
+        
+		
+        <p>
+          
+			
+          <span>
+            test
+          </span>
+          
+			
+          <span
+            data-rs-value={true}
+          />
+          
+			
+        </p>
+        
+	
+      </output>
+    </ValueLabel>
+    
+
+  </div>
+</Rangeslider>
+`;
+
+exports[`Component: Rangeslider - renders without label 1`] = `
+<Rangeslider>
+  <div
+    className="rangeslider rangeslider-brand label-right"
+  >
+    
+
+    <input
+      type="range"
+    />
+  </div>
+</Rangeslider>
+`;

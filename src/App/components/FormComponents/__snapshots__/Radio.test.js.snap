@@ -96,3 +96,100 @@ exports[`Component: Radio -  renders without label 1`] = `
 
 </div>
 `;
+
+exports[`Component: Radio - renders checked 1`] = `
+<div
+  className="radio"
+>
+  
+
+  <input
+    defaultChecked={true}
+    disabled={null}
+    id={null}
+    name={null}
+    type="radio"
+  />
+  
+
+</div>
+`;
+
+exports[`Component: Radio - renders disabled 1`] = `
+<div
+  className="radio"
+>
+  
+
+  <input
+    defaultChecked={null}
+    disabled={true}
+    id={null}
+    name={null}
+    type="radio"
+  />
+  
+
+</div>
+`;
+
+exports[`Component: Radio - renders with id and label 1`] = `
+<div
+  className="radio"
+>
+  
+
+  <input
+    defaultChecked={null}
+    disabled={null}
+    id="test"
+    name={null}
+    type="radio"
+  />
+  
+
+  <label
+    htmlFor="test"
+  >
+    test
+  </label>
+  
+
+</div>
+`;
+
+exports[`Component: Radio - renders with name 1`] = `
+<div
+  className="radio"
+>
+  
+
+  <input
+    defaultChecked={null}
+    disabled={null}
+    id={null}
+    name="test"
+    type="radio"
+  />
+  
+
+</div>
+`;
+
+exports[`Component: Radio - renders without label 1`] = `
+<div
+  className="radio"
+>
+  
+
+  <input
+    defaultChecked={null}
+    disabled={null}
+    id={null}
+    name={null}
+    type="radio"
+  />
+  
+
+</div>
+`;
