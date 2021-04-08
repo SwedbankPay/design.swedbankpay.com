@@ -31,9 +31,9 @@
 }
 
 .make-col-offset(@size, @columns: @grid-columns) {
-    @num: @size / @columns;
+    @num: (@size / @columns);
 
-    margin-left: percentage((@num));
+    margin-left: percentage(@num);
 }
 
 .infix-ruleset(@size, @abbr, @ruleset) {
