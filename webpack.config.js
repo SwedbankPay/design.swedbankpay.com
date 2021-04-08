@@ -42,7 +42,7 @@ module.exports = (env, argv) => {
             chunkFilename: "scripts/[name].[contenthash].js",
             publicPath: basename
         },
-        // devtool: "source-map",
+        devtool: "source-map",
         devServer: {
             contentBase: path.resolve(__dirname, `dist${basename}`),
             publicPath: basename,
@@ -158,13 +158,19 @@ module.exports = (env, argv) => {
         optimization: {
             moduleIds: "deterministic",
             runtimeChunk: "single",
+            // runtimeChunk: true,
             splitChunks: {
-                chunks: "async",
+                chunks: "all",
                 cacheGroups: {
-                    vendor: {
+                    defaultVendors: {
                         test: /[\\/]node_modules[\\/]/,
-                        name: "vendors",
-                        chunks: "all"
+                        priority: -10,
+                        reuseExistingChunk: true
+                    },
+                    default: {
+                        minChunks: 2,
+                        priority: -20,
+                        reuseExistingChunk: true
                     },
                     dgStyles: {
                         name: "dg-style",
@@ -184,7 +190,8 @@ module.exports = (env, argv) => {
             minimizer: [
                 new TerserPlugin({
                     terserOptions: {
-                        compress: { drop_console: true }
+                        compress: { drop_console: true },
+                        sourceMap: true // Must be set to true if using source-maps in production
                     }
                 }),
                 new CssMinimizerPlugin()
