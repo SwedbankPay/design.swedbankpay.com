@@ -74,7 +74,7 @@ const BaseIncrementOfRem = () => (
                 <tr>
                     <th>32px</th>
                     <th>2 rem</th>
-                    <th>@spacer * 2.5</th>
+                    <th>@spacer * 2</th>
                 </tr>
             </tbody>
         </table>
