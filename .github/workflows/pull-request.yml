@@ -33,6 +33,6 @@ jobs:
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           # basename=PullRequest is added to avoid BundleAnalyzer from holding up the agent [THN]
-          build-script: "${{ steps.variables.outputs.BUILD_SCRIPT }} -- --env.basename=PullRequest"
+          build-script: "${{ steps.variables.outputs.BUILD_SCRIPT }} -- --env basename=PullRequest"
           exclude: "{**/*.map,**/node_modules/**,**/*chunk*.*}"
           pattern: "{dist/**/*.js,dist/**/*.css}"

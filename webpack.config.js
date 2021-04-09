@@ -16,7 +16,7 @@ module.exports = (env, argv) => {
 
     console.log({ argv });
 
-    const brand = argv.brand || "swedbankpay";
+    const brand = argv.env.brand || "swedbankpay";
     const brandTitle = brand === "swedbankpay" ? "Swedbank Pay" : "PayEx"; // <-- Used with the HTML plugin for titles etc...
     const isProd = argv.mode === "production";
     const isDevServer = !!argv.env.WEBPACK_SERVE;
