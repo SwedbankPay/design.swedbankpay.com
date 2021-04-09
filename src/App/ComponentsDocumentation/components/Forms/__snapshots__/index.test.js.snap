@@ -831,23 +831,6 @@ exports[`Documentation: Forms RangeSlider renders 1`] = `
       valueLabelPrefix="$"
     />
   </ComponentPreview>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Rangeslider
-      color="neutral"
-      max={200}
-      min={0}
-      step={1}
-      value={100}
-      valueLabel={true}
-      valueLabelPosition="top"
-      valueLabelPostfix="%"
-      valueLabelPrefix="$"
-    />
-  </ComponentPreview>
 </Fragment>
 `;
 
