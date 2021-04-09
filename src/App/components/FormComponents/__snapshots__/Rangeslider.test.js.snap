@@ -4,37 +4,45 @@ exports[`Component: Rangeslider - renders with a value label 1`] = `
 <Rangeslider
   valueLabel={true}
 >
-  <div
-    className="rangeslider rangeslider-brand label-right"
-  >
-    
+  <div>
+    <div
+      className="rangeslider"
+    >
+      
 
-    <input
-      type="range"
-    />
-    
+      <input
+        type="range"
+      />
+      
 
-    <ValueLabel>
-      <output
-        className="value-label"
-      >
-        
+      <ValueLabel>
+        <output
+          className="value-label"
+        >
+          
 		
-        <p>
-          
+          <p>
+            
 			
-          <span
-            data-rs-value={true}
-          />
-          
+            <span
+              data-rs-value={true}
+            />
+            
 			
-        </p>
-        
+          </p>
+          
 	
-      </output>
-    </ValueLabel>
-    
+        </output>
+      </ValueLabel>
+      
 
+    </div>
+    <div
+      className="value-range "
+    >
+      <small />
+      <small />
+    </div>
   </div>
 </Rangeslider>
 `;
@@ -44,42 +52,50 @@ exports[`Component: Rangeslider - renders with a value label and a value label p
   valueLabel={true}
   valueLabelPostfix="test"
 >
-  <div
-    className="rangeslider rangeslider-brand label-right"
-  >
-    
+  <div>
+    <div
+      className="rangeslider"
+    >
+      
 
-    <input
-      type="range"
-    />
-    
+      <input
+        type="range"
+      />
+      
 
-    <ValueLabel>
-      <output
-        className="value-label"
-      >
-        
-		
-        <p>
-          
-			
-          <span
-            data-rs-value={true}
-          />
-          
-			
-          <span>
-            test
-          </span>
+      <ValueLabel>
+        <output
+          className="value-label"
+        >
           
 		
-        </p>
-        
+          <p>
+            
+			
+            <span
+              data-rs-value={true}
+            />
+            
+			
+            <span>
+              test
+            </span>
+            
+		
+          </p>
+          
 	
-      </output>
-    </ValueLabel>
-    
+        </output>
+      </ValueLabel>
+      
 
+    </div>
+    <div
+      className="value-range "
+    >
+      <small />
+      <small />
+    </div>
   </div>
 </Rangeslider>
 `;
@@ -89,56 +105,72 @@ exports[`Component: Rangeslider - renders with a value label and a value label p
   valueLabel={true}
   valueLabelPrefix="test"
 >
-  <div
-    className="rangeslider rangeslider-brand label-right"
-  >
-    
+  <div>
+    <div
+      className="rangeslider"
+    >
+      
 
-    <input
-      type="range"
-    />
-    
+      <input
+        type="range"
+      />
+      
 
-    <ValueLabel>
-      <output
-        className="value-label"
-      >
-        
+      <ValueLabel>
+        <output
+          className="value-label"
+        >
+          
 		
-        <p>
-          
+          <p>
+            
 			
-          <span>
-            test
-          </span>
-          
+            <span>
+              test
+            </span>
+            
 			
-          <span
-            data-rs-value={true}
-          />
-          
+            <span
+              data-rs-value={true}
+            />
+            
 			
-        </p>
-        
+          </p>
+          
 	
-      </output>
-    </ValueLabel>
-    
+        </output>
+      </ValueLabel>
+      
 
+    </div>
+    <div
+      className="value-range "
+    >
+      <small />
+      <small />
+    </div>
   </div>
 </Rangeslider>
 `;
 
 exports[`Component: Rangeslider - renders without label 1`] = `
 <Rangeslider>
-  <div
-    className="rangeslider rangeslider-brand label-right"
-  >
-    
+  <div>
+    <div
+      className="rangeslider"
+    >
+      
 
-    <input
-      type="range"
-    />
+      <input
+        type="range"
+      />
+    </div>
+    <div
+      className="value-range "
+    >
+      <small />
+      <small />
+    </div>
   </div>
 </Rangeslider>
 `;
