@@ -51,7 +51,7 @@ before_build:
   - ps: ./build/prepare-build.ps1
 
 build_script:
-  - cmd: npm run build:prod -- --env.release=%release% --env.basename=%basename% --env.baseUrl="https://design.swedbankpay.com" --env.semver=%GitVersion_FullSemVer% --env.info_version=%GitVersion_InformationalVersion%
+  - cmd: npm run build:prod -- --env.release=%release% --env.basename=%basename% --env.semver=%GitVersion_FullSemVer% --env.info_version=%GitVersion_InformationalVersion%
 
 #---------------------------------#
 #       tests configuration       #
