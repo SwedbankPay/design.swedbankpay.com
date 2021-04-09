@@ -14,8 +14,6 @@ const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 
 module.exports = (env, argv) => {
 
-    console.log({ argv });
-
     const brand = argv.env.brand || "swedbankpay";
     const brandTitle = brand === "swedbankpay" ? "Swedbank Pay" : "PayEx"; // <-- Used with the HTML plugin for titles etc...
     const isProd = argv.mode === "production";
@@ -158,7 +156,6 @@ module.exports = (env, argv) => {
         optimization: {
             moduleIds: "deterministic",
             runtimeChunk: "single",
-            // runtimeChunk: true,
             splitChunks: {
                 chunks: "all",
                 cacheGroups: {
@@ -258,15 +255,15 @@ module.exports = (env, argv) => {
         );
 
         // Don't create new sentry release on GitHub Actions while we're using AppVeyor [THN]
-        // if (!isGitHubActions) {
-        //     config.plugins.push(
-        //         new SentryCliPlugin({
-        //             release: version,
-        //             include: ".",
-        //             ignore: ["node_modules", "webpack.config.js"]
-        //         })
-        //     );
-        // }
+        if (!isGitHubActions) {
+            config.plugins.push(
+                new SentryCliPlugin({
+                    release: version,
+                    include: ".",
+                    ignore: ["node_modules", "webpack.config.js"]
+                })
+            );
+        }
     }
 
     if (isProd && !isDevServer) {
