@@ -6,9 +6,9 @@ import Radio from "@components/FormComponents/Radio";
 
 const ButtonExamples = () => (
     <div>
-        <Radio id="radio-example-1" label="Phở" name="radio-example"/>
-        <Radio id="radio-example-2" label="Flied lice" name="radio-example"/>
-        <Radio id="radio-example-3" label="Dumplings" name="radio-example"/>
+        <Radio id="radio-example-1" label="Radio button label 1" name="radio-example"/>
+        <Radio id="radio-example-2" label="Radio button label 2" name="radio-example"/>
+        <Radio id="radio-example-3" label="Radio button label 3" name="radio-example"/>
     </div>
 );
 

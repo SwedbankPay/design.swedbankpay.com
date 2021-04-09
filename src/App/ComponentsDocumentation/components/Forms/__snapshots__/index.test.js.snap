@@ -727,41 +727,6 @@ exports[`Documentation: Forms Overview renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Forms RadioButtons renders 1`] = `
-<Fragment>
-  <h2
-    id="radio-buttons"
-  >
-    Radio buttons
-  </h2>
-  <p>
-    Use radio buttons when you wish to limit your user to one choice out of several possible.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Radio
-      id="radio-example-1"
-      label="Hamburgers"
-      name="radio-example"
-    />
-    <Radio
-      id="radio-example-2"
-      label="Not the one above because I'm not really fond of hamburgers. What I would really like, however, is a nice piece of steak. Perhaps that could be the second option. These thoughts are written here simply to show you how radio buttons align themselves when label text is fairly long."
-      name="radio-example"
-    />
-    <Radio
-      checked={true}
-      id="radio-example-3"
-      label="Pizza"
-      name="radio-example"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
 exports[`Documentation: Forms RangeSlider renders 1`] = `
 <Fragment>
   <h2
@@ -1317,7 +1282,6 @@ exports[`Documentation: Forms renders 1`] = `
   <StaticText />
   <Dropdown />
   <Checkboxes />
-  <RadioButtons />
   <Toggleboxes />
   <RangeSlider />
   <DisabledFormComponents />

@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Forms, { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, Dropdown, Checkboxes, RadioButtons, Toggleboxes, RangeSlider, DisabledFormComponents, JavascriptMethods } from "./index";
+import Forms, { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, Dropdown, Checkboxes, Toggleboxes, RangeSlider, DisabledFormComponents, JavascriptMethods } from "./index";
 
 describe("Documentation: Forms", () => {
     it("is defined", () => {
@@ -124,18 +124,6 @@ describe("Documentation: Forms", () => {
 
         it("renders", () => {
             const wrapper = shallow(<Checkboxes />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("RadioButtons", () => {
-        it("is defined", () => {
-            expect(RadioButtons).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<RadioButtons />);
 
             expect(wrapper).toMatchSnapshot();
         });

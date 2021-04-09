@@ -273,20 +273,6 @@ const Checkboxes = () => (
     </>
 );
 
-const RadioButtons = () => (
-    <>
-        <h2 id="radio-buttons">Radio buttons</h2>
-        <p>
-            Use radio buttons when you wish to limit your user to one choice out of several possible.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <Radio label="Hamburgers" id="radio-example-1" name="radio-example" />
-            <Radio label="Not the one above because I'm not really fond of hamburgers. What I would really like, however, is a nice piece of steak. Perhaps that could be the second option. These thoughts are written here simply to show you how radio buttons align themselves when label text is fairly long." id="radio-example-2" name="radio-example" />
-            <Radio label="Pizza" id="radio-example-3" name="radio-example" checked />
-        </ComponentPreview>
-    </>
-);
-
 const Toggleboxes = () => (
     <>
         <h2 id="toggleboxes">Toggleboxes</h2>
@@ -436,7 +422,6 @@ class Forms extends Component {
                 <StaticText />
                 <Dropdown />
                 <Checkboxes />
-                <RadioButtons />
                 <Toggleboxes />
                 <RangeSlider />
                 <DisabledFormComponents />
@@ -449,4 +434,4 @@ class Forms extends Component {
 export default Forms;
 
 /* For testing */
-export { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, Dropdown, Checkboxes, RadioButtons, Toggleboxes, RangeSlider, DisabledFormComponents, JavascriptMethods };
+export { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, Dropdown, Checkboxes, Toggleboxes, RangeSlider, DisabledFormComponents, JavascriptMethods };
