@@ -1,17 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Footer -  renders 1`] = `
-<footer
-  className="page-footer"
->
-  <p
-    className="page-footer-rights"
-  >
-    © Swedbank Pay
-  </p>
-</footer>
-`;
-
 exports[`Component: Footer - renders 1`] = `
 <footer
   className="page-footer"

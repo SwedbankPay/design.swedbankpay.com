@@ -1,31 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Chart -  prop id is marked as required 1`] = `<canvas />`;
-
-exports[`Component: Chart -  prop options is marked as required 1`] = `
-<canvas
-  id="test"
-/>
-`;
-
-exports[`Component: Chart -  renders 1`] = `
-<canvas
-  id="test"
-/>
-`;
-
-exports[`Component: Chart -  renders a canvas with correct id and calls chart.js with that id and provided options 1`] = `
-<canvas
-  id="test"
-/>
-`;
-
-exports[`Component: Chart -  renders a canvas with correct id and calls chart.js with that id, provided options and colors 1`] = `
-<canvas
-  id="test"
-/>
-`;
-
 exports[`Component: Chart - prop id is marked as required 1`] = `<canvas />`;
 
 exports[`Component: Chart - prop options is marked as required 1`] = `
