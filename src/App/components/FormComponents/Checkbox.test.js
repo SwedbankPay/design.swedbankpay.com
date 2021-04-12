@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import Checkbox from "./Checkbox";
 
-describe("Component: Checkbox - ", () => {
+describe("Component: Checkbox -", () => {
     it("is defined", () => {
         expect(Checkbox).toBeDefined();
     });

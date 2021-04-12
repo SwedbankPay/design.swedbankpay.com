@@ -1,4 +1,5 @@
 module.exports = {
+    displayName: "Design Guide Documentation",
     collectCoverageFrom: [
         "**/*.{js,jsx}"
     ],
@@ -16,5 +17,8 @@ module.exports = {
 
         // TODO: The following snapshot is 360k long and brakes AppVeyor... solution?
         "./docutils/ComponentPreview/"
-    ]
+    ],
+    globals: {
+        stopDg: true
+    }
 };

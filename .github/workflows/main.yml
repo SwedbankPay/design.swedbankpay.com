@@ -37,7 +37,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run ${{ steps.variables.outputs.BUILD_SCRIPT }} -- --env.basename=${{ steps.variables.outputs.BRANCH }} --env.semver=${{ steps.variables.outputs.BRANCH }} --env.info_version=${{ steps.variables.outputs.VERSION }} --env.github_actions=true
+        run: npm run ${{ steps.variables.outputs.BUILD_SCRIPT }} -- --env basename=${{ steps.variables.outputs.BRANCH }} --env semver=${{ steps.variables.outputs.BRANCH }} --env info_version=${{ steps.variables.outputs.VERSION }} --env github_actions=true
 
       - name: Azure Login
         uses: azure/login@v1

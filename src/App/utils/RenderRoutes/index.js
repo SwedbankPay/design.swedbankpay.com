@@ -10,7 +10,10 @@ const RenderRoutes = ({ path, redirect, routes, appFolder }) => (
         {routes.map(route => {
             const { path, componentPath } = route;
 
-            const RouteRenderComponent = React.lazy(() => import(/* webpackChunkName: "doc-route.chunk_" */ `../../${appFolder}/${componentPath}/index.js`));
+            // The following is ignored because of issues with template literals and dynamic imports (https://github.com/babel/babel-eslint/issues/681) [THN]
+            // eslint-disable-next-line
+            const RouteRenderComponent = React.lazy(() => import(/* webpackChunkName: "doc-route.chunk_" */"../../" + appFolder + "/" + componentPath + "/index.js"));
+            // const RouteRenderComponent = React.lazy(() => import(/* webpackChunkName: "doc-route.chunk_" */`../../${appFolder}/${componentPath}/index.js`));
 
             return <Route key={`doc_route_${path}`} exact path={path} render={() => <>
                 <div className="d-flex align-items-center ">

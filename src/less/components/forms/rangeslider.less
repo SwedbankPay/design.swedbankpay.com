@@ -20,9 +20,9 @@
 
 .slider-thumb-hover() {
     &:hover {
-        width: @thumb-size * 1.2;
-        height: @thumb-size * 1.2;
-        bottom: @range-height * 1.2;
+        width: (@thumb-size * 1.2);
+        height: (@thumb-size * 1.2);
+        bottom: (@range-height * 1.2);
         transition: 0.3s;
     }
 }
@@ -246,7 +246,7 @@
         }
 
         &::-ms-thumb {
-            margin-top: @thumb-size / 2; /* Offset for Edge */
+            margin-top: (@thumb-size / 2); /* Offset for Edge */
 
             /* Reset offset for correct placement in IE */
             @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {

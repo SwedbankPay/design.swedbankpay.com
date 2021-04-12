@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Datepicker -  renders 1`] = `
+exports[`Component: Datepicker - renders 1`] = `
 <input
   className="form-control"
   data-datepicker=""
@@ -18,7 +18,7 @@ exports[`Component: Datepicker -  renders 1`] = `
 />
 `;
 
-exports[`Component: Datepicker -  renders with the form-group and label 1`] = `
+exports[`Component: Datepicker - renders with the form-group and label 1`] = `
 <div
   className="form-group"
 >

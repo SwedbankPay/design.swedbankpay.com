@@ -1,7 +1,7 @@
 .status {
     display: flex;
     position: relative;
-    padding-left: @status-size + @status-padding-left;
+    padding-left: (@status-size + @status-padding-left);
     align-items: center;
 
     &:before {
@@ -37,7 +37,7 @@
     }
 
     h1& {
-        .status-size(1.5rem, 2 * @status-padding-left);
+        .status-size(1.5rem, (2 * @status-padding-left));
     }
 
     h2& {

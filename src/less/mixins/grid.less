@@ -26,12 +26,12 @@
 // .make-col-ready() {}
 
 .make-col(@size, @columns: @grid-columns) {
-    flex: 0 0 percentage(@size / @columns);
-    max-width: percentage(@size / @columns);
+    flex: 0 0 percentage((@size / @columns));
+    max-width: percentage((@size / @columns));
 }
 
 .make-col-offset(@size, @columns: @grid-columns) {
-    @num: @size / @columns;
+    @num: (@size / @columns);
 
     margin-left: percentage(@num);
 }

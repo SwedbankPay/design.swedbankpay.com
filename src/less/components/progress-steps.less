@@ -51,9 +51,9 @@
             width: @circle-size;
             height: @circle-size;
             top: 50%;
-            margin-top: -@circle-size / 2;
+            margin-top: (-@circle-size / 2);
             left: 50%;
-            margin-left: -@circle-size / 2;
+            margin-left: (-@circle-size / 2);
         }
 
         /* Circle */
@@ -100,7 +100,7 @@
             width: 102%;
             left: 0;
             top: 50%;
-            margin-top: -@line-width / 2;
+            margin-top: (-@line-width / 2);
         }
 
         &:first-child {
@@ -213,9 +213,9 @@
                     width: @circle-size-desktop;
                     height: @circle-size-desktop;
                     line-height: @circle-size-desktop;
-                    margin-left: -@circle-size-desktop / 2;
-                    top: @list-item-padding-desktop-top / 2;
-                    margin-top: -@circle-size-desktop / 2;
+                    margin-left: (-@circle-size-desktop / 2);
+                    top: (@list-item-padding-desktop-top / 2);
+                    margin-top: (-@circle-size-desktop / 2);
                     border-width: 2px;
                 }
             }
@@ -227,9 +227,9 @@
                 width: @circle-size-desktop;
                 height: @circle-size-desktop;
                 line-height: @circle-size-desktop;
-                margin-left: -@circle-size-desktop / 2;
-                top: @list-item-padding-desktop-top / 2;
-                margin-top: -@circle-size-desktop / 2;
+                margin-left: (-@circle-size-desktop / 2);
+                top: (@list-item-padding-desktop-top / 2);
+                margin-top: (-@circle-size-desktop / 2);
                 border-width: 2px;
             }
 
@@ -244,8 +244,8 @@
 
             /* Line */
             &:after {
-                top: @list-item-padding-desktop-top / 2;
-                margin-top: -@line-width-desktop / 2;
+                top: (@list-item-padding-desktop-top / 2);
+                margin-top: (-@line-width-desktop / 2);
                 height: @line-width-desktop;
             }
         }

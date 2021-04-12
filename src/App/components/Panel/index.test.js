@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import Panel from "./index";
 
-describe("Component: Panel - ", () => {
+describe("Component: Panel -", () => {
     it("is defined", () => {
         expect(Panel).toBeDefined();
     });

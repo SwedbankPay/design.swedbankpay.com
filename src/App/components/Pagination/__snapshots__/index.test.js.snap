@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Pagination -  prop type is enum and requires 'bullets' or 'simple' and does not produce an error when either is provided 1`] = `
+exports[`Component: Pagination - prop type is enum and requires 'bullets' or 'simple' and does not produce an error when either is provided 1`] = `
 <div>
   <Pagination
     type="bullets"
@@ -11,19 +11,19 @@ exports[`Component: Pagination -  prop type is enum and requires 'bullets' or 's
 </div>
 `;
 
-exports[`Component: Pagination -  prop type is enum and requires 'bullets' or 'simple' and produces an error when neither is provided 1`] = `
+exports[`Component: Pagination - prop type is enum and requires 'bullets' or 'simple' and produces an error when neither is provided 1`] = `
 <ul
   className="pagination pagination-test"
 />
 `;
 
-exports[`Component: Pagination -  renders 1`] = `
+exports[`Component: Pagination - renders 1`] = `
 <ul
   className="pagination"
 />
 `;
 
-exports[`Component: Pagination -  renders arrows when prop arrows is provided 1`] = `
+exports[`Component: Pagination - renders arrows when prop arrows is provided 1`] = `
 <Pagination
   arrows={true}
 >
@@ -66,7 +66,7 @@ exports[`Component: Pagination -  renders arrows when prop arrows is provided 1`
 </Pagination>
 `;
 
-exports[`Component: Pagination -  renders list items when prop items is provided 1`] = `
+exports[`Component: Pagination - renders list items when prop items is provided 1`] = `
 <ul
   className="pagination"
 >
@@ -101,7 +101,7 @@ exports[`Component: Pagination -  renders list items when prop items is provided
 </ul>
 `;
 
-exports[`Component: Pagination -  renders outermost arrows when prop farArrows is provided 1`] = `
+exports[`Component: Pagination - renders outermost arrows when prop farArrows is provided 1`] = `
 <Pagination
   farArrows={true}
 >
@@ -144,7 +144,7 @@ exports[`Component: Pagination -  renders outermost arrows when prop farArrows i
 </Pagination>
 `;
 
-exports[`Component: Pagination -  renders text element when prop text is provided 1`] = `
+exports[`Component: Pagination - renders text element when prop text is provided 1`] = `
 <Pagination
   text="test"
 >

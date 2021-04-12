@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Topbar -  logo prevents default when clicked 1`] = `
+exports[`Component: Topbar - logo prevents default when clicked 1`] = `
 <Topbar>
   <header
     className="topbar"
@@ -30,7 +30,7 @@ exports[`Component: Topbar -  logo prevents default when clicked 1`] = `
 </Topbar>
 `;
 
-exports[`Component: Topbar -  props logout it prevents default when clicked 1`] = `
+exports[`Component: Topbar - props logout prevents default when clicked 1`] = `
 <Topbar
   logout={true}
 >
@@ -87,7 +87,7 @@ exports[`Component: Topbar -  props logout it prevents default when clicked 1`] 
 </Topbar>
 `;
 
-exports[`Component: Topbar -  props logout renders logout link and adds topbar-link-right to the logout 1`] = `
+exports[`Component: Topbar - props logout renders logout link and adds topbar-link-right to the logout 1`] = `
 <Topbar
   logout={true}
 >
@@ -144,7 +144,7 @@ exports[`Component: Topbar -  props logout renders logout link and adds topbar-l
 </Topbar>
 `;
 
-exports[`Component: Topbar -  props topbarContent menu links prevents default when clicked 1`] = `
+exports[`Component: Topbar - props topbarContent menu links prevents default when clicked 1`] = `
 <Topbar
   topbarContent={
     Object {
@@ -332,7 +332,7 @@ exports[`Component: Topbar -  props topbarContent menu links prevents default wh
 </Topbar>
 `;
 
-exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-link-container when sidebar prop is true 1`] = `
+exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-link-container when sidebar prop is true 1`] = `
 <Topbar
   sidebar={true}
   topbarContent={
@@ -897,7 +897,7 @@ exports[`Component: Topbar -  props topbarContent renders a sidebar in topbar-li
 </Topbar>
 `;
 
-exports[`Component: Topbar -  props topbarContent renders a topbar menu without menu icons 1`] = `
+exports[`Component: Topbar - props topbarContent renders a topbar menu without menu icons 1`] = `
 <Topbar
   topbarContent={
     Object {
@@ -1061,7 +1061,7 @@ exports[`Component: Topbar -  props topbarContent renders a topbar menu without 
 </Topbar>
 `;
 
-exports[`Component: Topbar -  props topbarContent renders a topbar-menu-button when content is provided 1`] = `
+exports[`Component: Topbar - props topbarContent renders a topbar-menu-button when content is provided 1`] = `
 <Topbar
   topbarContent={
     Object {
@@ -1249,7 +1249,7 @@ exports[`Component: Topbar -  props topbarContent renders a topbar-menu-button w
 </Topbar>
 `;
 
-exports[`Component: Topbar -  props topbarContent renders topbar-link-container and a logout link 1`] = `
+exports[`Component: Topbar - props topbarContent renders topbar-link-container and a logout link 1`] = `
 <Topbar
   logout={true}
   topbarContent={
@@ -1463,7 +1463,7 @@ exports[`Component: Topbar -  props topbarContent renders topbar-link-container 
 </Topbar>
 `;
 
-exports[`Component: Topbar -  props topbarContent renders topbar-link-container and populates it with given information without a logout link 1`] = `
+exports[`Component: Topbar - props topbarContent renders topbar-link-container and populates it with given information without a logout link 1`] = `
 <Topbar
   topbarContent={
     Object {
@@ -1651,7 +1651,7 @@ exports[`Component: Topbar -  props topbarContent renders topbar-link-container 
 </Topbar>
 `;
 
-exports[`Component: Topbar -  props wide renders a topbar with the given breakpoint 1`] = `
+exports[`Component: Topbar - props wide renders a topbar with the given breakpoint 1`] = `
 <Topbar
   wide="lg"
 >
@@ -1683,7 +1683,7 @@ exports[`Component: Topbar -  props wide renders a topbar with the given breakpo
 </Topbar>
 `;
 
-exports[`Component: Topbar -  renders a topbar with only a clickable logo 1`] = `
+exports[`Component: Topbar - renders a topbar with only a clickable logo 1`] = `
 <header
   className="topbar"
 >

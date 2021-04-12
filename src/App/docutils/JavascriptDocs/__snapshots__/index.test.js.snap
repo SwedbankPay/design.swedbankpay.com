@@ -49,10 +49,7 @@ exports[`Utilities: JavascriptDocs OpenDocs renders 1`] = `
 `;
 
 exports[`Utilities: JavascriptDocs renders init and close methods 1`] = `
-<JavascriptDocs
-  close={true}
-  componentName="test"
->
+<Fragment>
   <ul
     className="item-list"
   >
@@ -65,106 +62,25 @@ exports[`Utilities: JavascriptDocs renders init and close methods 1`] = `
       }
       description={
         <React.Fragment>
-          <Link
+          <ForwardRef(Link)
             to="/getting-started/javascript"
           >
             Initializes
-          </Link>
+          </ForwardRef(Link)>
            
           test
         </React.Fragment>
       }
-    >
-      <li>
-        <div>
-          <h3
-            scope="row"
-          >
-            <CodeTags
-              code="dg.test.init()"
-              type="secondary"
-            >
-              <code
-                className="code-tags code-tags-secondary"
-              >
-                dg.test.init()
-              </code>
-            </CodeTags>
-          </h3>
-          <p
-            className="javascript-doc-element-description"
-          >
-            <Link
-              to="/getting-started/javascript"
-            />
-             
-            test
-          </p>
-        </div>
-      </li>
-    </JavascriptDocElement>
+    />
     <CloseDocs
       componentName="test"
-    >
-      <JavascriptDocElement
-        code={
-          <CodeTags
-            code="dg.test.close(<test-id>)"
-            params={
-              Array [
-                "<test-id>",
-              ]
-            }
-            type="secondary"
-          />
-        }
-        description={
-          <React.Fragment>
-            Closes the given 
-            test
-          </React.Fragment>
-        }
-      >
-        <li>
-          <div>
-            <h3
-              scope="row"
-            >
-              <CodeTags
-                code="dg.test.close(<test-id>)"
-                params={
-                  Array [
-                    "<test-id>",
-                  ]
-                }
-                type="secondary"
-              >
-                <code
-                  className="code-tags code-tags-secondary"
-                >
-                  dg.test.close(&lt;test-id&gt;)
-                </code>
-              </CodeTags>
-            </h3>
-            <p
-              className="javascript-doc-element-description"
-            >
-              Closes the given 
-              test
-            </p>
-          </div>
-        </li>
-      </JavascriptDocElement>
-    </CloseDocs>
+    />
   </ul>
-</JavascriptDocs>
+</Fragment>
 `;
 
 exports[`Utilities: JavascriptDocs renders init and open methods 1`] = `
-<JavascriptDocs
-  componentName="test"
-  open={true}
->
+<Fragment>
   <ul
     className="item-list"
   >
@@ -177,107 +93,25 @@ exports[`Utilities: JavascriptDocs renders init and open methods 1`] = `
       }
       description={
         <React.Fragment>
-          <Link
+          <ForwardRef(Link)
             to="/getting-started/javascript"
           >
             Initializes
-          </Link>
+          </ForwardRef(Link)>
            
           test
         </React.Fragment>
       }
-    >
-      <li>
-        <div>
-          <h3
-            scope="row"
-          >
-            <CodeTags
-              code="dg.test.init()"
-              type="secondary"
-            >
-              <code
-                className="code-tags code-tags-secondary"
-              >
-                dg.test.init()
-              </code>
-            </CodeTags>
-          </h3>
-          <p
-            className="javascript-doc-element-description"
-          >
-            <Link
-              to="/getting-started/javascript"
-            />
-             
-            test
-          </p>
-        </div>
-      </li>
-    </JavascriptDocElement>
+    />
     <OpenDocs
       componentName="test"
-    >
-      <JavascriptDocElement
-        code={
-          <CodeTags
-            code="dg.test.open(<test-id>)"
-            params={
-              Array [
-                "<test-id>",
-              ]
-            }
-            type="secondary"
-          />
-        }
-        description={
-          <React.Fragment>
-            Opens the given 
-            test
-          </React.Fragment>
-        }
-      >
-        <li>
-          <div>
-            <h3
-              scope="row"
-            >
-              <CodeTags
-                code="dg.test.open(<test-id>)"
-                params={
-                  Array [
-                    "<test-id>",
-                  ]
-                }
-                type="secondary"
-              >
-                <code
-                  className="code-tags code-tags-secondary"
-                >
-                  dg.test.open(&lt;test-id&gt;)
-                </code>
-              </CodeTags>
-            </h3>
-            <p
-              className="javascript-doc-element-description"
-            >
-              Opens the given 
-              test
-            </p>
-          </div>
-        </li>
-      </JavascriptDocElement>
-    </OpenDocs>
+    />
   </ul>
-</JavascriptDocs>
+</Fragment>
 `;
 
 exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
-<JavascriptDocs
-  close={true}
-  componentName="test"
-  open={true}
->
+<Fragment>
   <ul
     className="item-list"
   >
@@ -290,152 +124,24 @@ exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
       }
       description={
         <React.Fragment>
-          <Link
+          <ForwardRef(Link)
             to="/getting-started/javascript"
           >
             Initializes
-          </Link>
+          </ForwardRef(Link)>
            
           test
         </React.Fragment>
       }
-    >
-      <li>
-        <div>
-          <h3
-            scope="row"
-          >
-            <CodeTags
-              code="dg.test.init()"
-              type="secondary"
-            >
-              <code
-                className="code-tags code-tags-secondary"
-              >
-                dg.test.init()
-              </code>
-            </CodeTags>
-          </h3>
-          <p
-            className="javascript-doc-element-description"
-          >
-            <Link
-              to="/getting-started/javascript"
-            />
-             
-            test
-          </p>
-        </div>
-      </li>
-    </JavascriptDocElement>
+    />
     <OpenDocs
       componentName="test"
-    >
-      <JavascriptDocElement
-        code={
-          <CodeTags
-            code="dg.test.open(<test-id>)"
-            params={
-              Array [
-                "<test-id>",
-              ]
-            }
-            type="secondary"
-          />
-        }
-        description={
-          <React.Fragment>
-            Opens the given 
-            test
-          </React.Fragment>
-        }
-      >
-        <li>
-          <div>
-            <h3
-              scope="row"
-            >
-              <CodeTags
-                code="dg.test.open(<test-id>)"
-                params={
-                  Array [
-                    "<test-id>",
-                  ]
-                }
-                type="secondary"
-              >
-                <code
-                  className="code-tags code-tags-secondary"
-                >
-                  dg.test.open(&lt;test-id&gt;)
-                </code>
-              </CodeTags>
-            </h3>
-            <p
-              className="javascript-doc-element-description"
-            >
-              Opens the given 
-              test
-            </p>
-          </div>
-        </li>
-      </JavascriptDocElement>
-    </OpenDocs>
+    />
     <CloseDocs
       componentName="test"
-    >
-      <JavascriptDocElement
-        code={
-          <CodeTags
-            code="dg.test.close(<test-id>)"
-            params={
-              Array [
-                "<test-id>",
-              ]
-            }
-            type="secondary"
-          />
-        }
-        description={
-          <React.Fragment>
-            Closes the given 
-            test
-          </React.Fragment>
-        }
-      >
-        <li>
-          <div>
-            <h3
-              scope="row"
-            >
-              <CodeTags
-                code="dg.test.close(<test-id>)"
-                params={
-                  Array [
-                    "<test-id>",
-                  ]
-                }
-                type="secondary"
-              >
-                <code
-                  className="code-tags code-tags-secondary"
-                >
-                  dg.test.close(&lt;test-id&gt;)
-                </code>
-              </CodeTags>
-            </h3>
-            <p
-              className="javascript-doc-element-description"
-            >
-              Closes the given 
-              test
-            </p>
-          </div>
-        </li>
-      </JavascriptDocElement>
-    </CloseDocs>
+    />
   </ul>
-</JavascriptDocs>
+</Fragment>
 `;
 
 exports[`Utilities: JavascriptDocs renders only init method 1`] = `
@@ -452,11 +158,11 @@ exports[`Utilities: JavascriptDocs renders only init method 1`] = `
       }
       description={
         <React.Fragment>
-          <Link
+          <ForwardRef(Link)
             to="/getting-started/javascript"
           >
             Initializes
-          </Link>
+          </ForwardRef(Link)>
            
           test
         </React.Fragment>

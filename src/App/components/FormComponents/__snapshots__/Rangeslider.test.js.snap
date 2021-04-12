@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Rangeslider -  renders with a value label 1`] = `
+exports[`Component: Rangeslider - renders with a value label 1`] = `
 <Rangeslider
   valueLabel={true}
 >
@@ -47,7 +47,7 @@ exports[`Component: Rangeslider -  renders with a value label 1`] = `
 </Rangeslider>
 `;
 
-exports[`Component: Rangeslider -  renders with a value label and a value label postfix 1`] = `
+exports[`Component: Rangeslider - renders with a value label and a value label postfix 1`] = `
 <Rangeslider
   valueLabel={true}
   valueLabelPostfix="test"
@@ -100,7 +100,7 @@ exports[`Component: Rangeslider -  renders with a value label and a value label 
 </Rangeslider>
 `;
 
-exports[`Component: Rangeslider -  renders with a value label and a value label prefix 1`] = `
+exports[`Component: Rangeslider - renders with a value label and a value label prefix 1`] = `
 <Rangeslider
   valueLabel={true}
   valueLabelPrefix="test"
@@ -153,7 +153,7 @@ exports[`Component: Rangeslider -  renders with a value label and a value label 
 </Rangeslider>
 `;
 
-exports[`Component: Rangeslider -  renders without label 1`] = `
+exports[`Component: Rangeslider - renders without label 1`] = `
 <Rangeslider>
   <div>
     <div

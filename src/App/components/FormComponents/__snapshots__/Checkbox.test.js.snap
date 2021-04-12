@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Checkbox -  renders 1`] = `
+exports[`Component: Checkbox - renders 1`] = `
 <div
   className="checkbox"
 >
@@ -17,7 +17,7 @@ exports[`Component: Checkbox -  renders 1`] = `
 </div>
 `;
 
-exports[`Component: Checkbox -  renders with the checked attribute 1`] = `
+exports[`Component: Checkbox - renders with the checked attribute 1`] = `
 <div
   className="checkbox"
 >
@@ -34,7 +34,7 @@ exports[`Component: Checkbox -  renders with the checked attribute 1`] = `
 </div>
 `;
 
-exports[`Component: Checkbox -  renders with the disabled attribute 1`] = `
+exports[`Component: Checkbox - renders with the disabled attribute 1`] = `
 <div
   className="checkbox"
 >
@@ -51,7 +51,7 @@ exports[`Component: Checkbox -  renders with the disabled attribute 1`] = `
 </div>
 `;
 
-exports[`Component: Checkbox -  renders with the specified id and label 1`] = `
+exports[`Component: Checkbox - renders with the specified id and label 1`] = `
 <div
   className="checkbox"
 >
@@ -75,7 +75,7 @@ exports[`Component: Checkbox -  renders with the specified id and label 1`] = `
 </div>
 `;
 
-exports[`Component: Checkbox -  renders with the specified id but without label 1`] = `
+exports[`Component: Checkbox - renders with the specified id but without label 1`] = `
 <div
   className="checkbox"
 >

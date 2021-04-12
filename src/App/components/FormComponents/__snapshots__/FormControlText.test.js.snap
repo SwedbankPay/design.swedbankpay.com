@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: FormControlText -  prop text is required 1`] = `
+exports[`Component: FormControlText - prop text is required 1`] = `
 <div
   className="form-group"
 >
@@ -14,7 +14,7 @@ exports[`Component: FormControlText -  prop text is required 1`] = `
 </div>
 `;
 
-exports[`Component: FormControlText -  renders with label 1`] = `
+exports[`Component: FormControlText - renders with label 1`] = `
 <div
   className="form-group"
 >
@@ -35,7 +35,7 @@ exports[`Component: FormControlText -  renders with label 1`] = `
 </div>
 `;
 
-exports[`Component: FormControlText -  renders without label 1`] = `
+exports[`Component: FormControlText - renders without label 1`] = `
 <div
   className="form-group"
 >

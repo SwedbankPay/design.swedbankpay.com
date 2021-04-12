@@ -19,7 +19,7 @@ describe("scripts: rangeslider", () => {
 
     const TestSliderNoLabel = () => (
         <div className="rangeslider rangeslider-brand label-right">
-            <input type="range" step="1" />
+            <input type="range" step="1" max="100" min="0" />
         </div>
     );
 
@@ -34,7 +34,7 @@ describe("scripts: rangeslider", () => {
     });
 
     describe("rangeslider.init", () => {
-        it("it is defined", () => {
+        it("is defined", () => {
             expect(rangeslider.init).toBeDefined();
             expect(rangeslider.init).toBeInstanceOf(Function);
         });
@@ -178,12 +178,19 @@ describe("scripts: rangeslider", () => {
         });
         rangeslider.init();
 
-        const rangeSlider = document.querySelector(".rangeslider");
+        const rangesliderContainer = document.querySelector(".rangeslider");
+        const rangesliderElement = rangesliderContainer.querySelector("input");
         const chromeStyle = document.querySelector("style");
 
-        expect(rangeSlider).toBeTruthy();
+        expect(rangesliderElement).toBeTruthy();
         expect(chromeStyle).toBeTruthy();
-        expect(chromeStyle.innerHTML).toContain("background-size: 0% 100%");
+
+        const min = rangesliderElement.getAttribute("min");
+        const max = rangesliderElement.getAttribute("max");
+
+        expect(min).toBe("0");
+        expect(max).toBe("100");
+        expect(chromeStyle.innerHTML).toContain("background-size: 50% 100%");
 
         Object.defineProperty(window.navigator, "userAgent", { value: defaultUseragent });
     });

@@ -5,7 +5,7 @@ import Chart from "./index";
 
 dg.chart = jest.fn();
 
-describe("Component: Chart - ", () => {
+describe("Component: Chart -", () => {
     beforeEach(() => dg.chart.mockClear());
 
     it("is defined", () => {

@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Panel -  prop type is an enum with set values 1`] = `
+exports[`Component: Panel - prop type is an enum with set values 1`] = `
 <section
   className="panel panel-test"
 />
 `;
 
-exports[`Component: Panel -  renders 1`] = `
+exports[`Component: Panel - renders 1`] = `
 <section
   className="panel panel-default"
 />
 `;
 
-exports[`Component: Panel -  renders with a footer when prop footerText is provided 1`] = `
+exports[`Component: Panel - renders with a footer when prop footerText is provided 1`] = `
 <section
   className="panel panel-default"
 >
@@ -24,7 +24,7 @@ exports[`Component: Panel -  renders with a footer when prop footerText is provi
 </section>
 `;
 
-exports[`Component: Panel -  renders with a header and subtitle when prop title and subTitle is provided 1`] = `
+exports[`Component: Panel - renders with a header and subtitle when prop title and subTitle is provided 1`] = `
 <section
   className="panel panel-default"
 >
@@ -43,7 +43,7 @@ exports[`Component: Panel -  renders with a header and subtitle when prop title 
 </section>
 `;
 
-exports[`Component: Panel -  renders with a header without subtitle when prop title is provided and prop subTitle is missing 1`] = `
+exports[`Component: Panel - renders with a header without subtitle when prop title is provided and prop subTitle is missing 1`] = `
 <section
   className="panel panel-default"
 >
@@ -57,25 +57,25 @@ exports[`Component: Panel -  renders with a header without subtitle when prop ti
 </section>
 `;
 
-exports[`Component: Panel -  renders with class 'panel-bottomless when prop removeBottomPadding is true 1`] = `
+exports[`Component: Panel - renders with class 'panel-bottomless when prop removeBottomPadding is true 1`] = `
 <section
   className="panel panel-default panel-bottomless"
 />
 `;
 
-exports[`Component: Panel -  renders with class 'panel-half-padding' when prop halfPadding is true 1`] = `
+exports[`Component: Panel - renders with class 'panel-half-padding' when prop halfPadding is true 1`] = `
 <section
   className="panel panel-default panel-half-padding"
 />
 `;
 
-exports[`Component: Panel -  renders with class 'panel-no-padding' when prop removeAllPadding  is true 1`] = `
+exports[`Component: Panel - renders with class 'panel-no-padding' when prop removeAllPadding  is true 1`] = `
 <section
   className="panel panel-default panel-no-padding"
 />
 `;
 
-exports[`Component: Panel -  renders with panel-body when prop bodyContent is provided 1`] = `
+exports[`Component: Panel - renders with panel-body when prop bodyContent is provided 1`] = `
 <section
   className="panel panel-default"
 >
@@ -101,19 +101,19 @@ exports[`Component: Panel -  renders with panel-body when prop bodyContent is pr
 </section>
 `;
 
-exports[`Component: Panel -  renders without a footer when prop footerText is not provided 1`] = `
+exports[`Component: Panel - renders without a footer when prop footerText is not provided 1`] = `
 <section
   className="panel panel-default"
 />
 `;
 
-exports[`Component: Panel -  renders without header when prop title is missing 1`] = `
+exports[`Component: Panel - renders without header when prop title is missing 1`] = `
 <section
   className="panel panel-default"
 />
 `;
 
-exports[`Component: Panel -  renders without panel-body when prop bodyContent is not provided 1`] = `
+exports[`Component: Panel - renders without panel-body when prop bodyContent is not provided 1`] = `
 <section
   className="panel panel-default"
 />

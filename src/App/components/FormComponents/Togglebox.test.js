@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import Togglebox from "./Togglebox";
 
-describe("Component: Togglebox - ", () => {
+describe("Component: Togglebox -", () => {
     it("is defined", () => {
         expect(Togglebox).toBeDefined();
     });

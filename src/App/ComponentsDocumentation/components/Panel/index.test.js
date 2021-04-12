@@ -50,7 +50,7 @@ describe("Documentation: Panel", () => {
         });
     });
 
-    describe("TableContent ", () => {
+    describe("TableContent", () => {
         it("is defined", () => {
             expect(TableContent).toBeDefined();
         });

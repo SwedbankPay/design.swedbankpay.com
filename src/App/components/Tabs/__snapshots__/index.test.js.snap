@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Tabs -  renders 1`] = `
+exports[`Component: Tabs - renders 1`] = `
 <div
   className="tabs"
 >
@@ -41,7 +41,7 @@ exports[`Component: Tabs -  renders 1`] = `
 </div>
 `;
 
-exports[`Component: Tabs -  renders with class name .tabs.tabs-scroll when prop scroll is specified 1`] = `
+exports[`Component: Tabs - renders with class name .tabs.tabs-scroll when prop scroll is specified 1`] = `
 <div
   className="tabs tabs-scroll"
 >
@@ -82,7 +82,7 @@ exports[`Component: Tabs -  renders with class name .tabs.tabs-scroll when prop 
 </div>
 `;
 
-exports[`Component: Tabs -  renders with class name tabs when prop scroll is not specified 1`] = `
+exports[`Component: Tabs - renders with class name tabs when prop scroll is not specified 1`] = `
 <div
   className="tabs"
 >

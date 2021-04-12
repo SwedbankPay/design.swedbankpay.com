@@ -1,11 +1,13 @@
 import { configure, shallow, render, mount } from "enzyme";
-import Adapter from "enzyme-adapter-react-16";
+import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
+// Update to official adapter when available [THN]
+// import Adapter from "enzyme-adapter-react-17";
 
 import dg from "../scripts/main";
 
 global.dg = dg;
 
-// React 16 Enzyme adapter
+// React 17 Enzyme adapter
 configure({ adapter: new Adapter() });
 
 // Set up static testing variables

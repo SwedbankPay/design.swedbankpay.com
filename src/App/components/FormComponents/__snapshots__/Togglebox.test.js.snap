@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Togglebox -  renders checked 1`] = `
+exports[`Component: Togglebox - renders checked 1`] = `
 <div
   className="togglebox"
 >
@@ -17,7 +17,7 @@ exports[`Component: Togglebox -  renders checked 1`] = `
 </div>
 `;
 
-exports[`Component: Togglebox -  renders disabled 1`] = `
+exports[`Component: Togglebox - renders disabled 1`] = `
 <div
   className="togglebox"
 >
@@ -34,7 +34,7 @@ exports[`Component: Togglebox -  renders disabled 1`] = `
 </div>
 `;
 
-exports[`Component: Togglebox -  renders with id and label 1`] = `
+exports[`Component: Togglebox - renders with id and label 1`] = `
 <div
   className="togglebox"
 >
@@ -58,7 +58,7 @@ exports[`Component: Togglebox -  renders with id and label 1`] = `
 </div>
 `;
 
-exports[`Component: Togglebox -  renders without label 1`] = `
+exports[`Component: Togglebox - renders without label 1`] = `
 <div
   className="togglebox"
 >

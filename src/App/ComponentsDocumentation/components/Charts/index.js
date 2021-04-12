@@ -6,27 +6,27 @@ import CodeTags from "@components/CodeTags";
 import Introduction from "./Introduction";
 
 const LineChart = () => (
-        <>
-            <h2 id="line-chart">Line chart</h2>
-            <p className="lead">If Johnny Cash could, then you too should be able to...</p>
-            <p>A line chart is a way of plotting data points on a line. Often, it is used to show trend data, or the comparison of two data sets.</p>
-            <p>See <a href="https://www.chartjs.org/docs/latest/charts/line.html" target="_blank" rel="noopener noreferrer">chart.js</a> for more information on line charts.</p>
-            <ComponentPreview language="html" showCasePanel codeFigure >
-                <Chart id="simple-line-chart" options={{
-                    type: "line",
-                    data: {
-                        labels: ["2013", "2014", "2015", "2016", "2017", "2018"],
-                        datasets: [
-                            {
-                                label: "Peak",
-                                data: [261, 673, 962, 1067, 1007, 779]
-                            }
-                        ]
-                    }
-                }} />
-            </ComponentPreview>
-            <ComponentPreview language="javascript" codeFigure >
-                {`
+    <>
+        <h2 id="line-chart">Line chart</h2>
+        <p className="lead">If Johnny Cash could, then you too should be able to...</p>
+        <p>A line chart is a way of plotting data points on a line. Often, it is used to show trend data, or the comparison of two data sets.</p>
+        <p>See <a href="https://www.chartjs.org/docs/latest/charts/line.html" target="_blank" rel="noopener noreferrer">chart.js</a> for more information on line charts.</p>
+        <ComponentPreview language="html" showCasePanel codeFigure >
+            <Chart id="simple-line-chart" options={{
+                type: "line",
+                data: {
+                    labels: ["2013", "2014", "2015", "2016", "2017", "2018"],
+                    datasets: [
+                        {
+                            label: "Peak",
+                            data: [261, 673, 962, 1067, 1007, 779]
+                        }
+                    ]
+                }
+            }} />
+        </ComponentPreview>
+        <ComponentPreview language="javascript" codeFigure >
+            {`
 dg.chart("simple-line-chart", {
     type: "line",
     data: {
@@ -40,31 +40,31 @@ dg.chart("simple-line-chart", {
     }
 });
                 `}
-            </ComponentPreview>
+        </ComponentPreview>
 
-            <h3>Stepped and dashed line</h3>
-            <ComponentPreview language="html" showCasePanel codeFigure >
-                <Chart id="stepped-dashed-line-chart" options={{
-                    type: "line",
-                    data: {
-                        labels: ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021"],
-                        datasets: [
-                            {
-                                label: "Active users",
-                                data: [1815, 1958, 2080, 2210, 2341, 2471, 2600, 2725],
-                                steppedLine: true
-                            },
-                            {
-                                label: "Registered users",
-                                data: [2196, 2327, 2421, 2573, 2644, 2767, 2913, 3004],
-                                borderDash: [15, 5]
-                            }
-                        ]
-                    }
-                }} />
-            </ComponentPreview>
-            <ComponentPreview language="javascript" codeFigure >
-                {`
+        <h3>Stepped and dashed line</h3>
+        <ComponentPreview language="html" showCasePanel codeFigure >
+            <Chart id="stepped-dashed-line-chart" options={{
+                type: "line",
+                data: {
+                    labels: ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021"],
+                    datasets: [
+                        {
+                            label: "Active users",
+                            data: [1815, 1958, 2080, 2210, 2341, 2471, 2600, 2725],
+                            steppedLine: true
+                        },
+                        {
+                            label: "Registered users",
+                            data: [2196, 2327, 2421, 2573, 2644, 2767, 2913, 3004],
+                            borderDash: [15, 5]
+                        }
+                    ]
+                }
+            }} />
+        </ComponentPreview>
+        <ComponentPreview language="javascript" codeFigure >
+            {`
 dg.chart("stepped-dashed-line-chart", {
     type: "line",
     data: {
@@ -84,42 +84,42 @@ dg.chart("stepped-dashed-line-chart", {
     }
 });
                 `}
-            </ComponentPreview>
+        </ComponentPreview>
 
-            <h3>Advanced options</h3>
-            <ComponentPreview language="html" showCasePanel codeFigure >
-                <Chart id="advanced-line-chart" options={{
-                    type: "line",
-                    data: {
-                        labels: ["2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018"],
-                        datasets: [
-                            {
-                                label: "DotA2 TI Prize Pool",
-                                data: [1.6, 1.6, 2.87, 10.92, 18.42, 20.77, 24.78, 25.53]
-                            },
-                            {
-                                label: "LoL World Championship Prize Pool",
-                                data: [0.1, 2, 2.05, 2.13, 2.13, 5.07, 4.94, 2.25]
-                            }
-                        ]
-                    },
-                    options: {
-                        scales: {
-                            yAxes: [{
-                                scaleLabel: {
-                                    display: true,
-                                    labelString: "In millions"
-                                },
-                                ticks: {
-                                    callback: value => `$${value}`
-                                }
-                            }]
+        <h3>Advanced options</h3>
+        <ComponentPreview language="html" showCasePanel codeFigure >
+            <Chart id="advanced-line-chart" options={{
+                type: "line",
+                data: {
+                    labels: ["2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018"],
+                    datasets: [
+                        {
+                            label: "DotA2 TI Prize Pool",
+                            data: [1.6, 1.6, 2.87, 10.92, 18.42, 20.77, 24.78, 25.53]
+                        },
+                        {
+                            label: "LoL World Championship Prize Pool",
+                            data: [0.1, 2, 2.05, 2.13, 2.13, 5.07, 4.94, 2.25]
                         }
+                    ]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: "In millions"
+                            },
+                            ticks: {
+                                callback: value => `$${value}`
+                            }
+                        }]
                     }
-                }} />
-            </ComponentPreview>
-            <ComponentPreview language="javascript" codeFigure >
-                {`
+                }
+            }} />
+        </ComponentPreview>
+        <ComponentPreview language="javascript" codeFigure >
+            {`
 dg.chart("advanced-line-chart", {
     type: "line",
     data: {
@@ -150,26 +150,26 @@ dg.chart("advanced-line-chart", {
     }
 });
                 `}
-            </ComponentPreview>
+        </ComponentPreview>
 
-            <h3>With fill</h3>
-            <ComponentPreview language="html" showCasePanel codeFigure >
-                <Chart id="line-fill-chart" options={{
-                    type: "line-fill",
-                    data: {
-                        labels: ["2013", "2014", "2015", "2016", "2017", "2018"],
-                        datasets: [
-                            {
-                                label: "Peak",
-                                data: [261, 673, 962, 1067, 1007, 779],
-                                fill: true
-                            }
-                        ]
-                    }
-                }} />
-            </ComponentPreview>
-            <ComponentPreview language="javascript" codeFigure >
-                {`
+        <h3>With fill</h3>
+        <ComponentPreview language="html" showCasePanel codeFigure >
+            <Chart id="line-fill-chart" options={{
+                type: "line-fill",
+                data: {
+                    labels: ["2013", "2014", "2015", "2016", "2017", "2018"],
+                    datasets: [
+                        {
+                            label: "Peak",
+                            data: [261, 673, 962, 1067, 1007, 779],
+                            fill: true
+                        }
+                    ]
+                }
+            }} />
+        </ComponentPreview>
+        <ComponentPreview language="javascript" codeFigure >
+            {`
 dg.chart("line-fill-chart", {
     type: "line-fill",
     data: {
@@ -184,8 +184,8 @@ dg.chart("line-fill-chart", {
     }
 });
                 `}
-            </ComponentPreview>
-        </>
+        </ComponentPreview>
+    </>
 );
 
 const BarChart = () => (
@@ -311,44 +311,44 @@ dg.chart("multi-bar-chart", {
         </ComponentPreview>
 
         <h3>Stacked bar</h3>
-            <p className="lead">You can stack, because a stacked bar is almost as good as a stocked one</p>
-            <ComponentPreview language="html" showCasePanel codeFigure >
-                <Chart id="stacked-multi-bar-chart" options={{
-                    type: "bar",
-                    data: {
-                        labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-                        datasets: [
-                            {
-                                label: "Paid with cash",
-                                data: [19, 23, 29, 24, 28, 33, 21, 24, 20, 17, 23, 24]
-                            },
-                            {
-                                label: "Paid with credit card",
-                                data: [31, 29, 32, 17, 25, 32, 28, 30, 24, 22, 20, 37]
-                            },
-                            {
-                                label: "Paid with Vipps",
-                                data: [11, 9, 7, 12, 4, 13, 8, 10, 4, 1, 13, 16]
-                            }
-                        ]
-                    },
-                    options: {
-                        scales: {
-                            yAxes: [{
-                                stacked: true,
-                                ticks: {
-                                    beginAtZero: true
-                                }
-                            }],
-                            xAxes: [{
-                                stacked: true
-                            }]
+        <p className="lead">You can stack, because a stacked bar is almost as good as a stocked one</p>
+        <ComponentPreview language="html" showCasePanel codeFigure >
+            <Chart id="stacked-multi-bar-chart" options={{
+                type: "bar",
+                data: {
+                    labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                    datasets: [
+                        {
+                            label: "Paid with cash",
+                            data: [19, 23, 29, 24, 28, 33, 21, 24, 20, 17, 23, 24]
+                        },
+                        {
+                            label: "Paid with credit card",
+                            data: [31, 29, 32, 17, 25, 32, 28, 30, 24, 22, 20, 37]
+                        },
+                        {
+                            label: "Paid with Vipps",
+                            data: [11, 9, 7, 12, 4, 13, 8, 10, 4, 1, 13, 16]
                         }
+                    ]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            stacked: true,
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }],
+                        xAxes: [{
+                            stacked: true
+                        }]
                     }
-                }} />
-            </ComponentPreview>
-            <ComponentPreview language="javascript" codeFigure >
-                {`
+                }
+            }} />
+        </ComponentPreview>
+        <ComponentPreview language="javascript" codeFigure >
+            {`
 dg.chart("stacked-multi-bar-chart", {
     type: "bar",
     data: {
@@ -383,7 +383,7 @@ dg.chart("stacked-multi-bar-chart", {
     }
 });
                 `}
-            </ComponentPreview>
+        </ComponentPreview>
     </>
 );
 
