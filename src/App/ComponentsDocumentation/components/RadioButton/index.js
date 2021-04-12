@@ -1,0 +1,96 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
+import { ComponentPreview, DocContainer } from "@docutils";
+import Radio from "@components/FormComponents/Radio";
+
+const ButtonExamples = () => (
+    <div>
+        <Radio id="radio-example-1" label="Radio button label 1" name="radio-example"/>
+        <Radio id="radio-example-2" label="Radio button label 2" name="radio-example"/>
+        <Radio id="radio-example-3" label="Radio button label 3" name="radio-example"/>
+    </div>
+);
+
+const HowTo = () => (
+    <>
+        <h3>How to setup radio button group</h3>
+        <div className="row">
+            <div className="col-6">
+                <div className="slab slab-plain slab-border-success h-100">
+                    <h3>Do</h3>
+                    <div className="d-flex flex-column align-items-center">
+                        <div className="pt-3 pb-5">
+                            <h4>Card type</h4>
+                            <Radio id="radio-do-example-1" label="Debit card" name="radio-do-example" checked />
+                            <Radio id="radio-do-example-2" label="Credit card" name="radio-do-example"/>
+                            <Radio id="radio-do-example-3" label="Gift card" name="radio-do-example"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="col-6">
+                <div className="slab slab-plain slab-border-error">
+                    <h3>Don&#x27;t</h3>
+                    <div className="d-flex flex-column align-items-center">
+                        <div className="pt-3 pb-5 w-50">
+                            <h4>Delivery options</h4>
+                            <Radio id="radio-dont-example-1" label={`Choose a later${"\n"} date for delivery` }name="radio-dont-example"/>
+                            <Radio id="radio-dont-example-2" label="Instant delivery" name="radio-dont-example"/>
+                            <Radio id="radio-dont-example-3" label="4-7 days delivery" name="radio-dont-example"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </>
+);
+
+const Overview = () => (
+    <>
+        <h2 id="overview">Overview</h2>
+        <div className="showcase-panel d-flex flex-column align-items-center">
+            <h4>Group heading</h4>
+            <ButtonExamples />
+        </div>
+        <div className="p-4 border-right border-left">
+            <h3>Radio button group</h3>
+            <p className="m-0">The default setup of the radio button group always has a label on top which describes the checkbox group and each individual radio button is then followed by a label which clearly describes what the options and what selecting an option entails. In a radio button group one choice is always selected by default</p>
+        </div>
+        <ComponentPreview language="html" codeFigure>
+            <ButtonExamples />
+        </ComponentPreview>
+
+        <h3>When to consider something else</h3>
+        <ul className="list list-bullet">
+            <li>
+                When you want to present multiple choices where the user can select one or more choice at the same time, the <Link to="/components/checkbox">checkbox</Link> component should be used instead of radio buttons.
+            </li>
+        </ul>
+
+        <HowTo />
+    </>
+);
+
+const ContentGuidelines = () => (
+    <>
+        <h2 id="content-guidelines">Content guidelines</h2>
+        <ul className="list list-bullet">
+            <li>The <b>Group heading</b> for the radio button group should be descriptive, explaining the context and what actions the user is choosing from. </li>
+            <li>The <b>radio button label</b> should be short, to the point and clearly explain the option. It is also preferred to have fewer than three words per label as longer words could extend a label to multiple rows which could disrupt the reading experience.</li>
+        </ul>
+    </>
+);
+
+const RadioButton = () => (
+    <DocContainer>
+        <p className="lead">The radio button component should be used when the user are presented with a list of options where only one choice can be selected.</p>
+        <Overview />
+        <ContentGuidelines />
+    </DocContainer>
+);
+
+export default RadioButton;
+
+/* for testing */
+export { Overview, ContentGuidelines, HowTo };

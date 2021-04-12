@@ -196,6 +196,13 @@ module.exports = [
                 outlined: true
             },
             {
+                title: "Radio button",
+                path: "/components/radio-button",
+                componentPath: "components/RadioButton",
+                icon: "radio_button_checked",
+                outlined: true
+            },
+            {
                 title: "Sheet",
                 path: "/components/sheet",
                 componentPath: "components/Sheet",

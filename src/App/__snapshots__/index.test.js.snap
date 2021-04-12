@@ -395,6 +395,13 @@ exports[`Main: App renders 1`] = `
                       "title": "Progress steps",
                     },
                     Object {
+                      "componentPath": "components/RadioButton",
+                      "icon": "radio_button_checked",
+                      "outlined": true,
+                      "path": "/components/radio-button",
+                      "title": "Radio button",
+                    },
+                    Object {
                       "componentPath": "components/Sheet",
                       "icon": "vertical_split",
                       "outlined": true,
