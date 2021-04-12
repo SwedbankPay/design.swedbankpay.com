@@ -6,16 +6,16 @@
 @nav-margin:                                @base-margin @base-margin-xl @base-margin @base-margin-sm;
 @nav-margin-responsive:                     @base-margin @base-margin @base-margin @base-margin-sm;
 @nav-margin-tablet:                         @base-margin 0;
-@nav-submenu-margin-left:                   @base-margin * 0.3;
-@nav-submenu-list-margin-left:              @base-margin-xl + 0.75;
+@nav-submenu-margin-left:                   (@base-margin * 0.3);
+@nav-submenu-list-margin-left:              (@base-margin-xl + 0.75);
 
-@nav-submenu-padding:                       @base-padding * 0.34;
-@nav-submenu-p-first-child:                 calc(@nav-submenu-padding + 2px);
-@nav-submenu-p-icon-left:                   calc(@base-padding-sm + 2px);
-@nav-submenu-p-icon-open:                   calc(@base-padding-sm - 2px);
+@nav-submenu-padding:                       (@base-padding * 0.34);
+@nav-submenu-p-first-child:                 calc((@nav-submenu-padding + 2px));
+@nav-submenu-p-icon-left:                   calc((@base-padding-sm + 2px));
+@nav-submenu-p-icon-open:                   calc((@base-padding-sm - 2px));
 
 @nav-icon-lineheight:                       1.1;
-@nav-submenu-font-size:                     @base-font-size * 0.85;
+@nav-submenu-font-size:                     (@base-font-size * 0.85);
 @nav-submenu-border:                        2px solid @text-gray;
 
 @nav-submenu-before-width:                  1rem;
@@ -23,4 +23,4 @@
 @nav-submenu-before-left:                   -10px;
 @nav-submenu-before-top:                    13px;
 
-@nav-submenu-icon-fontsize-vertical:        @base-font-size * 2.25;
+@nav-submenu-icon-fontsize-vertical:        (@base-font-size * 2.25);

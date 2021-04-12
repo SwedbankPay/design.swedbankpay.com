@@ -13,7 +13,7 @@
     input[type="checkbox"] {
         margin-right: @base-margin-sm;
         height: @checkbox-height;
-        width: @checkbox-width * 2;
+        width: (@checkbox-width * 2);
 
         &:focus {
             outline: none;
@@ -23,8 +23,8 @@
                 position: absolute;
                 bottom: 0.5px;
                 left: -2px;
-                height: @checkbox-height + 0.2;
-                width: @checkbox-width * 2.2;
+                height: (@checkbox-height + 0.2);
+                width: (@checkbox-width * 2.2);
                 border: 1px solid @checkbox-border-color;
                 border-radius: 1rem;
             }
@@ -41,7 +41,7 @@
             top: 0;
             left: 0;
             height: @checkbox-height;
-            width: @checkbox-width * 2;
+            width: (@checkbox-width * 2);
             border: 1px solid @checkbox-border-color;
             border-radius: 1rem;
             color: @white;
