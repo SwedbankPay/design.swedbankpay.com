@@ -55,7 +55,8 @@ do
         echo "::set-output name=BRANCH_TO_DELETE::$branch"
 
         # Delete feature branch
-        git push origin --delete "$branch"
+        # TODO: Use this line once we're sure it works [THN]
+        # git push origin --delete "$branch"
 
     done
 done
