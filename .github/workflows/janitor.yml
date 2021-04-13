@@ -31,6 +31,9 @@ jobs:
       matrix:
         brand: ["payex", "swedbankpay"]
     steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
        # Set brand specific variables
       - name: Environment variables
         if: ${{ needs.branch.outputs.branchname }}
