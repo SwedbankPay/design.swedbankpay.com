@@ -22,7 +22,7 @@ jobs:
           node-version: 12.x
 
       - name: Cache dependencies
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -32,7 +32,7 @@ jobs:
         run: npm ci
 
       - name: Tests and linting
-        run: npm run lint && npm run test
+        run: npm run lint && npm run test:app
 
       - uses: preactjs/compressed-size-action@v1
         with:
