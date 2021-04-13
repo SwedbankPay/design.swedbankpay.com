@@ -1,8 +1,8 @@
 module.exports = {
     rootDir: process.cwd(),
     projects: [
-        "./src/app",
-        "./src/scripts"
+        "<rootDir>/src/app",
+        "<rootDir>/src/scripts"
     ],
     collectCoverage: true,
     coverageDirectory: "coverage",
