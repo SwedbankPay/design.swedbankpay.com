@@ -1,5 +1,5 @@
 module.exports = {
-    rootDir: ".",
+    rootDir: process.cwd(),
     projects: [
         "<rootDir>/src/app",
         "<rootDir>/src/scripts"
