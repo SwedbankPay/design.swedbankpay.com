@@ -29,10 +29,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
+      - name: Tests and linting
+        run: npm run lint && npm run test
+
       - uses: preactjs/compressed-size-action@v1
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
-          # basename=PullRequest is added to avoid BundleAnalyzer from holding up the agent [THN]
-          build-script: "${{ steps.variables.outputs.BUILD_SCRIPT }} -- --env basename=PullRequest"
+          build-script: "${{ steps.variables.outputs.BUILD_SCRIPT }}"
           exclude: "{**/*.map,**/node_modules/**,**/*chunk*.*}"
           pattern: "{dist/**/*.js,dist/**/*.css}"

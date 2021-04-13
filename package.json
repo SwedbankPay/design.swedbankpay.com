@@ -9,6 +9,7 @@
         "start:prod": "webpack serve --hot --mode production",
         "start:prod:payex": "webpack serve --hot --mode production --env brand=payex",
         "build": "webpack --mode development",
+        "build:analyze": "webpack --mode production --env analyze=true",
         "build:payex": "webpack --mode development --env brand=payex",
         "build:prod": "webpack --mode production",
         "build:prod:payex": "webpack --mode production --env brand=payex",
