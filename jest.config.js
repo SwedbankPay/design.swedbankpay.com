@@ -4,6 +4,10 @@ module.exports = {
         "<rootDir>/src/app",
         "<rootDir>/src/scripts"
     ],
+    roots: [
+        "<rootDir>/src/app",
+        "<rootDir>/src/scripts"
+    ],
     collectCoverage: true,
     coverageDirectory: "coverage",
     coverageReporters: [
