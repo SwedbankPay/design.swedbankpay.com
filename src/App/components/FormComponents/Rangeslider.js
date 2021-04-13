@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Rangeslider = ({ name, min, max, step, value, disabled, valueLabel, valueLabelPrefix, valueLabelPostfix }) => {
+const Rangeslider = ({ label, name, min, max, step, value, disabled, valueLabelPrefix, valueLabelPostfix }) => {
     const attrs = {
         type: "range",
         name,
@@ -23,31 +23,30 @@ const Rangeslider = ({ name, min, max, step, value, disabled, valueLabel, valueL
     );
 
     return (
-        <div>
-            <div className="rangeslider">{"\n"}
-                <input {...attrs}/>{valueLabel ? "\n" : null}
-                {valueLabel ? <ValueLabel /> : null}{valueLabel ? "\n" : null}
+        <>
+            <div className={`rangeslider ${disabled ? "disabled" : ""}`}>{"\n"}
+                <p className="rangeslider-label">{label}</p>{"\n"}
+                <input {...attrs}/>{"\n"}
+                <ValueLabel />
+                <div className="value-range">{"\n"}
+                    <small>{min}</small>{"\n"}
+                    <small>{max}</small>{"\n"}
+                </div>
             </div>
-            <div className={`value-range ${disabled ? "disabled" : ""}`}>
-                <small>{min}</small>
-                <small>{max}</small>
-            </div>
-        </div>
+        </>
     );
 };
 
 Rangeslider.propTypes = {
     name: PropTypes.string,
+    label: PropTypes.string,
     min: PropTypes.number,
     max: PropTypes.number,
     step: PropTypes.number,
-    color: PropTypes.oneOf(["brand", "neutral", "default"]),
     value: PropTypes.number,
     disabled: PropTypes.bool,
-    valueLabel: PropTypes.bool,
     valueLabelPrefix: PropTypes.string,
-    valueLabelPostfix: PropTypes.string,
-    valueLabelPosition: PropTypes.string
+    valueLabelPostfix: PropTypes.string
 };
 
 export default Rangeslider;

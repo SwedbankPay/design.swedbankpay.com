@@ -161,22 +161,37 @@
     position: relative;
     width: 100%;
     display: flex;
+    display: block;
     height: @thumb-size;
     box-sizing: border-box;
     background: transparent;
-    margin-top: @base-margin-xl;
+    margin: 3rem 0;
+    padding-top: 1rem;
     .slider-color(@brand-secondary);
+
+    &.disabled {
+        .value-range,
+        .rangeslider-label {
+            color: @light-brown;
+        }
+    }
+
+    .rangeslider-label {
+        position: absolute;
+        bottom: 100%;
+    }
 
     .value-label {
         position: absolute;
         display: flex;
-        top: -40px;
+        top: -20px;
         left: 0; /* <- to please ie */
         right: 0; /* <- to please ie */
         justify-content: center;
         margin: 0 auto;
         padding: 0.2rem 0.4rem;
         color: @white;
+        font-family: @brand-headline;
         font-size: @small-font-size;
         text-align: center;
         white-space: nowrap;
@@ -201,6 +216,12 @@
                 margin: 0 1.5px;
             }
         }
+    }
+
+    .value-range {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0.25rem;
     }
 
     input[type="range"] {
@@ -268,11 +289,3 @@
     }
 }
 
-.value-range {
-    display: flex;
-    justify-content: space-between;
-
-    &.disabled {
-        color: @light-brown;
-    }
-}
