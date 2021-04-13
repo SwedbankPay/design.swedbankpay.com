@@ -824,9 +824,9 @@ exports[`Documentation: Forms RangeSlider renders 1`] = `
     <Rangeslider
       max={200}
       min={0}
+      rangesliderLabel="Label"
       step={1}
       value={100}
-      valueLabel={true}
       valueLabelPostfix="%"
       valueLabelPrefix="$"
     />
