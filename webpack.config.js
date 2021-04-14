@@ -40,7 +40,7 @@ module.exports = (env, argv) => {
             chunkFilename: "scripts/[name].[contenthash].js",
             publicPath: basename
         },
-        devtool: "source-map",
+        devtool: isProd ? "source-map" : "eval",
         devServer: {
             contentBase: path.resolve(__dirname, `dist${basename}`),
             publicPath: basename,
