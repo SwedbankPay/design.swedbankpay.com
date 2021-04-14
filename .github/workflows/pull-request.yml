@@ -32,8 +32,12 @@ jobs:
         run: npm ci
 
       - name: Tests and linting
-        # run: npm run lint && npm run test:documentation && npm run test:scripts
-        run: npm run lint && npm t
+        run: npm run lint && npm run test:coverage
+
+      - uses: codecov/codecov-action@v1
+        # with:
+        #   files: ./coverage/lcov.info
+          # fail_ci_if_error: true
 
       - uses: preactjs/compressed-size-action@v1
         with:
