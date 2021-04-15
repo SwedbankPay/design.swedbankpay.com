@@ -293,7 +293,7 @@ const RangeSlider = () => (
         <p>Currently there are three different supported colors for the slider: <CodeTags type="secondary" code=".rangeslider-brand" />, <CodeTags type="secondary" code=".rangeslider-default" /> and <CodeTags type="secondary" code=".rangeslider-neutral" />.</p>
         <p>The Rangeslider currently supports two positions: <CodeTags type="secondary" code=".label-right" /> and <CodeTags type="secondary" code=".label-top" />. If no position is given, <CodeTags type="secondary" code="right" /> is defaulted.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <Rangeslider min={0} max={200} step={1} value={100} valueLabel valueLabelPrefix="$" valueLabelPostfix="%" />
+            <Rangeslider rangesliderLabel="Label" min={0} max={200} step={1} value={100} valueLabelPrefix="$" valueLabelPostfix="%" />
         </ComponentPreview>
     </>
 );

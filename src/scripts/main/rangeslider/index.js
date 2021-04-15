@@ -2,72 +2,17 @@ const SELECTORS = {
     RANGESLIDER: ".rangeslider"
 };
 
-const writeStyle = obj => {
-    const { inlineStyleContent, inlineStyle } = obj;
-    const index = inlineStyleContent.map(({ id }) => id).indexOf(obj.id);
-    let styleText = "";
-
-    (index === -1) ? inlineStyleContent.push(obj) : inlineStyleContent[index] = obj;
-
-    inlineStyleContent.forEach(({ id, percent }) => {
-        styleText +=
-        `.rangeslider input[type="range"][data-rs-id="${id}"]::-webkit-slider-runnable-track,
-        .rangeslider input[type="range"][disabled][data-rs-id="${id}"]::-webkit-slider-runnable-track {
-            background-size: ${percent}% 100%
-        }`;
-    });
-
-    inlineStyle.textContent = styleText;
-};
-
-const _createRangeSlider = (rangeContainer, inlineStyle, inlineStyleContent, isBrowserChrome, i) => {
+const _createRangeSlider = rangeContainer => {
     const input = rangeContainer.querySelector("input[type=range]");
-
     const valueSpan = rangeContainer.querySelector("span[data-rs-value]");
 
-    /* Changing value of span */
-    if (valueSpan) {
-        input.addEventListener("change", () => {
-            valueSpan.innerHTML = input.value;
-        });
-        input.addEventListener("input", () => {
-            valueSpan.innerHTML = input.value;
-        });
-    }
-
-    /* Filling slider background for chrome */
-    if (isBrowserChrome) {
-        input.dataset.rsId = rangeContainer.id ? `dg-rs-${rangeContainer.id}` : `dg-rs-${i}`;
-
-        const updateStyle = () => {
-            const max = input.attributes.max ? Number(input.attributes.max.value) : 100;
-            const min = input.attributes.min ? Number(input.attributes.min.value) : 0;
-
-            const value = Number(input.value);
-
-            const rangePercent = (value + Math.abs(min)) / (max - min) * 100;
-
-            writeStyle({
-                id: input.dataset.rsId,
-                percent: rangePercent,
-                inlineStyleContent,
-                inlineStyle
-            });
-        };
-
-        input.addEventListener("change", updateStyle);
-        input.addEventListener("input", updateStyle);
-        updateStyle();
-    }
+    input.addEventListener("change", () => valueSpan.innerHTML = input.value);
+    input.addEventListener("input", () => valueSpan.innerHTML = input.value);
 
     return { container: rangeContainer };
 };
 
 const init = id => {
-    const isBrowserChrome = navigator.userAgent.indexOf("Chrome") > -1;
-    const inlineStyle = document.createElement("style");
-    const inlineStyleContent = [];
-
     if (id) {
         const rangeSlider = document.getElementById(id);
 
@@ -77,11 +22,7 @@ const init = id => {
             return null;
         }
 
-        if (isBrowserChrome) {
-            document.body.appendChild(inlineStyle);
-        }
-
-        return _createRangeSlider(rangeSlider, inlineStyle, inlineStyleContent, isBrowserChrome);
+        return _createRangeSlider(rangeSlider);
     } else {
         const rangeSliders = document.querySelectorAll(SELECTORS.RANGESLIDER);
 
@@ -91,14 +32,8 @@ const init = id => {
             return null;
         }
 
-        if (isBrowserChrome) {
-            document.body.appendChild(inlineStyle);
-        }
-
-        return [...rangeSliders].map((rangeSlider, i) => _createRangeSlider(rangeSlider, inlineStyle, inlineStyleContent, isBrowserChrome, i));
+        return [...rangeSliders].map(rangeSlider => _createRangeSlider(rangeSlider));
     }
 };
 
-export default {
-    init
-};
+export default { init };

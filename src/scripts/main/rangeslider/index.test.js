@@ -17,12 +17,6 @@ describe("scripts: rangeslider", () => {
         </div>
     );
 
-    const TestSliderNoLabel = () => (
-        <div className="rangeslider rangeslider-brand label-right">
-            <input type="range" step="1" max="100" min="0" />
-        </div>
-    );
-
     const div = document.createElement("div");
 
     document.body.appendChild(div);
@@ -86,116 +80,6 @@ describe("scripts: rangeslider", () => {
         });
     });
 
-    // Start of Chrome specific tests [AW]
-    it("generates special styling to fill slider background for chrome", () => {
-        ReactDOM.render(<TestSlider />, div);
-
-        const defaultUseragent = window.navigator.userAgent;
-
-        Object.defineProperty(window.navigator, "userAgent", {
-            value: "Chrome",
-            writable: true
-        });
-        rangeslider.init();
-
-        const rangeSlider = document.querySelector(".rangeslider");
-        const chromeStyle = document.querySelector("style");
-
-        expect(rangeSlider).toBeTruthy();
-        expect(chromeStyle).toBeTruthy();
-
-        Object.defineProperty(window.navigator, "userAgent", { value: defaultUseragent });
-        document.body.removeChild(chromeStyle);
-    });
-
-    it("creates a unique styling for each rangeslider in one style tag for chrome", () => {
-        ReactDOM.render(
-            <>
-                <TestSlider />
-                <TestSlider />
-            </>
-            , div);
-
-        const defaultUseragent = window.navigator.userAgent;
-
-        Object.defineProperty(window.navigator, "userAgent", {
-            value: "Chrome",
-            writable: true
-        });
-        rangeslider.init();
-
-        const rangeSlider = document.querySelector(".rangeslider");
-        const chromeStyle = document.querySelector("style");
-
-        expect(rangeSlider).toBeTruthy();
-        expect(chromeStyle).toBeTruthy();
-        expect(document.querySelectorAll("style")).toHaveLength(1);
-        expect(chromeStyle.innerHTML.includes("dg-rs-0")).toEqual(true);
-        expect(chromeStyle.innerHTML.includes("dg-rs-1")).toEqual(true);
-
-        Object.defineProperty(window.navigator, "userAgent", { value: defaultUseragent });
-        document.body.removeChild(chromeStyle);
-    });
-
-    it("does not create duplicate styling when onchange occurs", () => {
-        ReactDOM.render(<TestSlider />, div);
-
-        const defaultUseragent = window.navigator.userAgent;
-
-        Object.defineProperty(window.navigator, "userAgent", {
-            value: "Chrome",
-            writable: true
-        });
-        rangeslider.init();
-
-        const rangeSlider = document.querySelector(".rangeslider");
-        const input = rangeSlider.querySelector("input[type=range]");
-        const chromeStyle = document.querySelector("style");
-
-        expect(rangeSlider).toBeTruthy();
-        expect(input).toBeTruthy();
-        expect(chromeStyle).toBeTruthy();
-        expect(chromeStyle.innerHTML.match(/dg-rs-0/gm)).toHaveLength(2);
-
-        input.value = 50;
-        input.dispatchEvent(new Event("change"));
-
-        expect(document.querySelectorAll("style")).toHaveLength(1);
-        expect(chromeStyle.innerHTML.match(/dg-rs-0/g)).toHaveLength(2);
-
-        Object.defineProperty(window.navigator, "userAgent", { value: defaultUseragent });
-        document.body.removeChild(chromeStyle);
-    });
-
-    it("sets max and min values to 0 and 100 for rangesliders if none are provided", () => {
-        ReactDOM.render(<TestSliderNoLabel />, div);
-
-        const defaultUseragent = window.navigator.userAgent;
-
-        Object.defineProperty(window.navigator, "userAgent", {
-            value: "Chrome",
-            writable: true
-        });
-        rangeslider.init();
-
-        const rangesliderContainer = document.querySelector(".rangeslider");
-        const rangesliderElement = rangesliderContainer.querySelector("input");
-        const chromeStyle = document.querySelector("style");
-
-        expect(rangesliderElement).toBeTruthy();
-        expect(chromeStyle).toBeTruthy();
-
-        const min = rangesliderElement.getAttribute("min");
-        const max = rangesliderElement.getAttribute("max");
-
-        expect(min).toBe("0");
-        expect(max).toBe("100");
-        expect(chromeStyle.innerHTML).toContain("background-size: 50% 100%");
-
-        Object.defineProperty(window.navigator, "userAgent", { value: defaultUseragent });
-    });
-    // End of Chrome specific tests [AW]
-
     it("updates displayed value span on change in rangeslider", () => {
         ReactDOM.render(<TestSlider />, div);
         rangeslider.init();
@@ -231,18 +115,6 @@ describe("scripts: rangeslider", () => {
         input.dispatchEvent(new Event("input"));
 
         expect(valueSpan.innerHTML).toEqual(input.value);
-
-    });
-
-    it("does not do value-label updates if value-label is not defined", () => {
-        ReactDOM.render(<TestSliderNoLabel />, div);
-        rangeslider.init();
-
-        const rangeSlider = document.querySelector(".rangeslider");
-        const valueSpan = rangeSlider.querySelector("span[data-rs-value]");
-
-        expect(rangeSlider).toBeTruthy();
-        expect(valueSpan).toBeFalsy();
 
     });
 });
