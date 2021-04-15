@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Rangeslider -  renders with a value label 1`] = `
+exports[`Component: Rangeslider - renders with a value label 1`] = `
 <Rangeslider>
   <div
     className="rangeslider "
