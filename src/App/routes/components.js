@@ -211,11 +211,6 @@ module.exports = [
                 statusBadges: ["javascript"]
             },
             {
-                title: "Rangeslider",
-                path: "/components/rangeslider",
-                componentPath: "components/Rangeslider"
-            },
-            {
                 title: "Sidebar",
                 path: "/components/sidebar",
                 componentPath: "components/Sidebar",
