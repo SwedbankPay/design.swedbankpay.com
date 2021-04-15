@@ -29,10 +29,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - uses: preactjs/compressed-size-action@v1
+      - uses: preactjs/compressed-size-action@v2
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           # basename=PullRequest is added to avoid BundleAnalyzer from holding up the agent [THN]
           build-script: "${{ steps.variables.outputs.BUILD_SCRIPT }} -- --env basename=PullRequest"
           exclude: "{**/*.map,**/node_modules/**,**/*chunk*.*}"
           pattern: "{dist/**/*.js,dist/**/*.css}"
+          # a file with a delta of less than 100 bytes will be reported as unchanged. [THN]
+          minimum-change-threshold: 100
