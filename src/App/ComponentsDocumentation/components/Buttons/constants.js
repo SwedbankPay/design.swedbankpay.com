@@ -12,19 +12,23 @@ export const overviewButtons = {
             options: {
                 checkbox: [
                     {
-                        id: "icon_check",
-                        name: "Icon",
-                        value: {
-                            icon: "cloud"
-                        }
-                    },
-                    {
-                        id: "loader_check",
-                        name: "Loader",
-                        value: {
-                            loader: true,
-                            loading: true
-                        }
+                        inputs: [
+                            {
+                                id: "icon_check",
+                                name: "Icon",
+                                value: {
+                                    icon: "cloud"
+                                }
+                            },
+                            {
+                                id: "loader_check",
+                                name: "Loader",
+                                value: {
+                                    loader: true,
+                                    loading: true
+                                }
+                            }
+                        ]
                     }
                 ],
                 radio: [
@@ -63,12 +67,16 @@ export const overviewButtons = {
             options: {
                 checkbox: [
                     {
-                        id: "loader_check",
-                        name: "Loader",
-                        value: {
-                            loader: true,
-                            loading: true
-                        }
+                        inputs: [
+                            {
+                                id: "loader_check",
+                                name: "Loader",
+                                value: {
+                                    loader: true,
+                                    loading: true
+                                }
+                            }
+                        ]
                     }
                 ],
                 radio: [
@@ -110,19 +118,23 @@ export const overviewButtons = {
             options: {
                 checkbox: [
                     {
-                        id: "icon_check",
-                        name: "Icon",
-                        value: {
-                            icon: "cloud"
-                        }
-                    },
-                    {
-                        id: "loader_check",
-                        name: "Loader",
-                        value: {
-                            loader: true,
-                            loading: true
-                        }
+                        inputs: [
+                            {
+                                id: "icon_check",
+                                name: "Icon",
+                                value: {
+                                    icon: "cloud"
+                                }
+                            },
+                            {
+                                id: "loader_check",
+                                name: "Loader",
+                                value: {
+                                    loader: true,
+                                    loading: true
+                                }
+                            }
+                        ]
                     }
                 ],
                 radio: [
@@ -167,11 +179,15 @@ export const overviewButtons = {
             options: {
                 checkbox: [
                     {
-                        id: "icon_check",
-                        name: "Icon",
-                        value: {
-                            icon: "cloud"
-                        }
+                        inputs: [
+                            {
+                                id: "icon_check",
+                                name: "Icon",
+                                value: {
+                                    icon: "cloud"
+                                }
+                            }
+                        ]
                     }
                 ]
             },
@@ -190,19 +206,24 @@ export const destructiveButtons = {
             options: {
                 checkbox: [
                     {
-                        id: "icon_check_destructive",
-                        name: "Icon",
-                        value: {
-                            icon: "cloud"
-                        }
-                    },
-                    {
-                        id: "loader_check_destructive",
-                        name: "Loader",
-                        value: {
-                            loader: true,
-                            loading: true
-                        }
+                        inputs: [
+
+                            {
+                                id: "icon_check_destructive",
+                                name: "Icon",
+                                value: {
+                                    icon: "cloud"
+                                }
+                            },
+                            {
+                                id: "loader_check_destructive",
+                                name: "Loader",
+                                value: {
+                                    loader: true,
+                                    loading: true
+                                }
+                            }
+                        ]
                     }
                 ],
                 radio: [
@@ -250,11 +271,16 @@ export const destructiveButtons = {
             options: {
                 checkbox: [
                     {
-                        id: "icon_check_destructive",
-                        name: "Icon",
-                        value: {
-                            icon: "cloud"
-                        }
+                        inputs: [
+
+                            {
+                                id: "icon_check_destructive",
+                                name: "Icon",
+                                value: {
+                                    icon: "cloud"
+                                }
+                            }
+                        ]
                     }
                 ]
             },
@@ -268,19 +294,23 @@ export const destructiveButtons = {
             options: {
                 checkbox: [
                     {
-                        id: "icon_check_destructive",
-                        name: "Icon",
-                        value: {
-                            icon: "close"
-                        }
-                    },
-                    {
-                        id: "loader_check_destructive",
-                        name: "Loader",
-                        value: {
-                            loader: true,
-                            loading: true
-                        }
+                        inputs: [
+                            {
+                                id: "icon_check_destructive",
+                                name: "Icon",
+                                value: {
+                                    icon: "close"
+                                }
+                            },
+                            {
+                                id: "loader_check_destructive",
+                                name: "Loader",
+                                value: {
+                                    loader: true,
+                                    loading: true
+                                }
+                            }
+                        ]
                     }
                 ],
                 radio: [
