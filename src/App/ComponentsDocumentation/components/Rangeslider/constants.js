@@ -55,7 +55,9 @@ export const sliderShowCase = {
                             {
                                 id: "help_icon",
                                 name: "With help icon",
-                                value: {}
+                                value: {
+                                    tooltip: true
+                                }
                             }
                         ]
                     }
