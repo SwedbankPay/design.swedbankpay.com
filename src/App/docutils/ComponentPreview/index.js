@@ -292,12 +292,10 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                                                     <h4>{checkbox.title}</h4>
                                                 )}
                                                 {checkbox.inputs.map((input, i) => (
-                                                    <>
-                                                        <div key={i} className="checkbox" onChange={() => this.setActiveOptions(input.id, input.value, input.description, true)}>
-                                                            <input type="checkbox" id={input.id} />
-                                                            <label htmlFor={input.id}>{input.name}</label>
-                                                        </div>
-                                                    </>
+                                                    <div key={i} className="checkbox" onChange={() => this.setActiveOptions(input.id, input.value, input.description, true)}>
+                                                        <input type="checkbox" id={input.id} />
+                                                        <label htmlFor={input.id}>{input.name}</label>
+                                                    </div>
                                                 ))}
                                             </div>
                                         )
