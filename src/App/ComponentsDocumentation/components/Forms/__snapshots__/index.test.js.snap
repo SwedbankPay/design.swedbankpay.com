@@ -734,72 +734,6 @@ exports[`Documentation: Forms Overview renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Forms RangeSlider renders 1`] = `
-<Fragment>
-  <h2
-    id="rangeslider"
-  >
-    Rangeslider
-  </h2>
-  <p>
-    Asides from the default behavior of a range input, the Rangeslider
-    '
-    s colors and label positioning can be customized.
-  </p>
-  <p>
-    Currently there are three different supported colors for the slider: 
-    <CodeTags
-      code=".rangeslider-brand"
-      type="secondary"
-    />
-    , 
-    <CodeTags
-      code=".rangeslider-default"
-      type="secondary"
-    />
-     and 
-    <CodeTags
-      code=".rangeslider-neutral"
-      type="secondary"
-    />
-    .
-  </p>
-  <p>
-    The Rangeslider currently supports two positions: 
-    <CodeTags
-      code=".label-right"
-      type="secondary"
-    />
-     and 
-    <CodeTags
-      code=".label-top"
-      type="secondary"
-    />
-    . If no position is given, 
-    <CodeTags
-      code="right"
-      type="secondary"
-    />
-     is defaulted.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Rangeslider
-      id="example-slider"
-      label="Label"
-      max={200}
-      min={0}
-      step={1}
-      value={100}
-      valueLabelPostfix="%"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
 exports[`Documentation: Forms StaticText renders 1`] = `
 <Fragment>
   <h2
@@ -1273,7 +1207,6 @@ exports[`Documentation: Forms renders 1`] = `
   <Dropdown />
   <Checkboxes />
   <Toggleboxes />
-  <RangeSlider />
   <DisabledFormComponents />
   <JavascriptMethods />
 </DocContainer>
