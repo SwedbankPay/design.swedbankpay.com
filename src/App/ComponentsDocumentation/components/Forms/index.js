@@ -7,7 +7,7 @@ import Button from "@components/Button";
 import { Checkbox, FormControlText, Radio, Rangeslider, Togglebox } from "@components/FormComponents";
 import CodeTags from "@components/CodeTags";
 
-const { rangeslider, validation } = window.dg;
+const { validation } = window.dg;
 
 const Overview = () => (
     <>
@@ -286,18 +286,6 @@ const Toggleboxes = () => (
     </>
 );
 
-const RangeSlider = () => (
-    <>
-        <h2 id="rangeslider">Rangeslider</h2>
-        <p>Asides from the default behavior of a range input, the Rangeslider{"'"}s colors and label positioning can be customized.</p>
-        <p>Currently there are three different supported colors for the slider: <CodeTags type="secondary" code=".rangeslider-brand" />, <CodeTags type="secondary" code=".rangeslider-default" /> and <CodeTags type="secondary" code=".rangeslider-neutral" />.</p>
-        <p>The Rangeslider currently supports two positions: <CodeTags type="secondary" code=".label-right" /> and <CodeTags type="secondary" code=".label-top" />. If no position is given, <CodeTags type="secondary" code="right" /> is defaulted.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <Rangeslider rangesliderLabel="Label" min={0} max={200} step={1} value={100} valueLabelPrefix="$" valueLabelPostfix="%" />
-        </ComponentPreview>
-    </>
-);
-
 const DisabledFormComponents = () => (
     <>
         <h2 id="disabled-form-components">Disabled form components</h2>
@@ -402,7 +390,6 @@ const JavascriptMethods = () => (
 
 class Forms extends Component {
     componentDidMount () {
-        rangeslider.init();
         validation.init();
     }
 
@@ -420,7 +407,6 @@ class Forms extends Component {
                 <Dropdown />
                 <Checkboxes />
                 <Toggleboxes />
-                <RangeSlider />
                 <DisabledFormComponents />
                 <JavascriptMethods />
             </DocContainer>
@@ -431,4 +417,4 @@ class Forms extends Component {
 export default Forms;
 
 /* For testing */
-export { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, Dropdown, Checkboxes, Toggleboxes, RangeSlider, DisabledFormComponents, JavascriptMethods };
+export { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, Dropdown, Checkboxes, Toggleboxes, DisabledFormComponents, JavascriptMethods };
