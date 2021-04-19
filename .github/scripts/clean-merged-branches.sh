@@ -5,18 +5,19 @@
 
 set -o errexit # Abort if any command fails
 
-branches=$(git branch -r --merged develop)
-for branch in $branches
+merged_branches=$(git branch -r --merged develop)
+for merged_branch in $merged_branches
 do
     # Skip branches that are not feature branches as they are not deployed to Azure
-    [[ $branch != *"feature/"* ]] && continue
-
+    [[ $merged_branch != *"feature/"* ]] && continue
     # Remove prefixes from branchname
-    branch=${branch#"origin/"}
-
-    echo "::set-output name=BRANCH_TO_DELETE::$branch"
-    echo "Deleting branch $branch"
-
-    # TODO: Use the following command once we're sure the script has been tested for a little bit
-    # git push origin --delete "$branch"
+    branch_to_delete=${merged_branch#"origin/"}
 done
+
+if [ -z ${branch_to_delete+x} ]; then
+  echo "No feature branch to clean up."
+else
+  echo "::set-output name=BRANCH_TO_DELETE::$branch_to_delete"
+  echo "Deleting branch $branch_to_delete"
+  git push origin --delete "$branch_to_delete"
+fi
