@@ -13,19 +13,20 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 2
+          fetch-depth: 0
 
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
 
-      - name: Check if commit is merge commit
+      - name: Get branch name and delete merged feature branches
         id: branch
         run: ./.github/scripts/clean-merged-branches.sh
   build:
     needs: branch
     name: Storage container cleanup
+    if: ${{ needs.branch.outputs.branchname }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -36,18 +37,15 @@ jobs:
           fetch-depth: 2
        # Set brand specific variables
       - name: Environment variables
-        if: ${{ needs.branch.outputs.branchname }}
         id: variables
         run: ./.github/scripts/variables.sh --brand ${{ matrix.brand }} --ref ${{ github.ref }}
 
       - name: Azure Login
-        if: ${{ needs.branch.outputs.branchname }}
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS_STAGE }}
 
       - name: Delete feature folders
-        if: ${{ needs.branch.outputs.branchname }}
         uses: azure/CLI@v1
         with:
           inlineScript: |
