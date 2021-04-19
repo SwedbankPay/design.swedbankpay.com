@@ -22,7 +22,7 @@ jobs:
 
       - name: Check if commit is merge commit
         id: branch
-        run: ./.github/scripts/find-merge-source-branch.sh ${{ github.sha }}
+        run: ./.github/scripts/clean-merged-branches.sh
   build:
     needs: branch
     name: Storage container cleanup
