@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Rangeslider = ({ id, label, name, min, max, step, value, disabled, valueLabelPrefix, valueLabelPostfix }) => {
+const Rangeslider = ({ label, name, min, max, step, value, disabled, valueLabelPrefix, valueLabelPostfix, tooltip }) => {
     const attrs = {
         type: "range",
         name,
@@ -23,19 +23,24 @@ const Rangeslider = ({ id, label, name, min, max, step, value, disabled, valueLa
     );
 
     return (
-        <>
-            <div id={id} className="rangeslider">{"\n"}
-                <input {...attrs}/>{"\n"}
-                <div className="d-flex justify-content-between">
-                    <p className="rangeslider-label">{label}</p>{"\n"}
-                    <ValueLabel />
-                </div>
-                <div className="value-range">{"\n"}
-                    <small>{min}{valueLabelPostfix ? valueLabelPostfix : null}</small>{"\n"}
-                    <small>{max}{valueLabelPostfix ? valueLabelPostfix : null}</small>{"\n"}
-                </div>
+        <div className={`rangeslider ${disabled ? "disabled" : ""}`}>{"\n"}
+            <label htmlFor="rangeslider" className="rangeslider-label">{"\n"}
+                {label}{"\n"}
+                {tooltip &&
+                <>
+                    <i className="material-icons" data-tooltip="Some informational text" data-tooltip-position="top">{"\n"}
+                        help_outline{"\n"}
+                    </i>{"\n"}
+                </>}
+            </label>{"\n"}
+            <input {...attrs}/>{"\n"}
+
+            <ValueLabel />
+            <div className="value-range">{"\n"}
+                <small>{min}{valueLabelPostfix ? valueLabelPostfix : null}</small>{"\n"}
+                <small>{max}{valueLabelPostfix ? valueLabelPostfix : null}</small>{"\n"}
             </div>
-        </>
+        </div>
     );
 };
 
