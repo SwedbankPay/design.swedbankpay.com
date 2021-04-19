@@ -7,9 +7,15 @@ exports[`Component: Rangeslider - renders with a value label 1`] = `
   >
     
 
-    <p
+    <label
       className="rangeslider-label"
-    />
+      htmlFor="rangeslider"
+    >
+      
+
+      
+
+    </label>
     
 
     <input
@@ -61,9 +67,15 @@ exports[`Component: Rangeslider - renders with a value label and a value label p
   >
     
 
-    <p
+    <label
       className="rangeslider-label"
-    />
+      htmlFor="rangeslider"
+    >
+      
+
+      
+
+    </label>
     
 
     <input
@@ -100,10 +112,14 @@ exports[`Component: Rangeslider - renders with a value label and a value label p
     >
       
 
-      <small />
+      <small>
+        test
+      </small>
       
 
-      <small />
+      <small>
+        test
+      </small>
       
 
     </div>
@@ -120,9 +136,15 @@ exports[`Component: Rangeslider - renders with a value label and a value label p
   >
     
 
-    <p
+    <label
       className="rangeslider-label"
-    />
+      htmlFor="rangeslider"
+    >
+      
+
+      
+
+    </label>
     
 
     <input

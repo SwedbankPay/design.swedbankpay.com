@@ -407,6 +407,11 @@ exports[`Utilities: RenderPage renders 1`] = `
               "title": "Sheet",
             },
             Object {
+              "componentPath": "components/Rangeslider",
+              "path": "/components/rangeslider",
+              "title": "Rangeslider",
+            },
+            Object {
               "componentPath": "components/Sidebar",
               "path": "/components/sidebar",
               "statusBadges": Array [
