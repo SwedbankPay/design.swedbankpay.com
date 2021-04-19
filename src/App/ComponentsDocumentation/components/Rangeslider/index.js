@@ -87,4 +87,4 @@ const Rangeslider = () => {
 
 export default Rangeslider;
 
-/* for testing */
+export { Overview, ContentGuidelines, JavascriptMethods };
