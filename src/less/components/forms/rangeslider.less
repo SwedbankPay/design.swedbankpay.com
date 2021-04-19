@@ -115,6 +115,21 @@
     margin: 1rem 0;
     .slider-color(@brand-secondary);
 
+    i {
+        &[data-tooltip] {
+            color: @soft-brown;
+            margin-bottom: .25rem;
+            margin-left: .25rem;
+        }
+    }
+
+    &.disabled {
+        .value-range,
+        .rangeslider-label {
+            color: @light-brown;
+        }
+    }
+
     .rangeslider-label {
         margin-bottom: 0;
     }
