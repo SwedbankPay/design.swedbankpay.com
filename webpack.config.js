@@ -18,6 +18,7 @@ module.exports = (env, argv) => {
     const brandTitle = brand === "swedbankpay" ? "Swedbank Pay" : "PayEx"; // <-- Used with the HTML plugin for titles etc...
     const isProd = argv.mode === "production";
     const isDevServer = !!argv.env.WEBPACK_SERVE;
+    const isAnalyze = !!argv.env.analyze;
     const version = env && env.semver ? env.semver : "LOCAL_DEV";
     const isRelease = env && env.release === "true";
     const isGitHubActions = env && env.github_actions === "true";
@@ -226,7 +227,7 @@ module.exports = (env, argv) => {
         ]
     };
 
-    if (!env && !isDevServer) {
+    if (isAnalyze) {
         config.plugins.push(
             new BundleAnalyzerPlugin()
         );
