@@ -3,13 +3,8 @@
 exports[`Component: Rangeslider - renders with a value label 1`] = `
 <Rangeslider>
   <div
-    className="rangeslider "
+    className="rangeslider"
   >
-    
-
-    <p
-      className="rangeslider-label"
-    />
     
 
     <input
@@ -17,25 +12,32 @@ exports[`Component: Rangeslider - renders with a value label 1`] = `
     />
     
 
-    <ValueLabel>
-      <output
-        className="value-label"
-      >
-        
+    <div
+      className="d-flex justify-content-between"
+    >
+      <p
+        className="rangeslider-label"
+      />
+      
+
+      <ValueLabel>
+        <output
+          className="value-label"
+        >
+          
 		
-        <p>
-          
+          <p>
+            
 			
-          <span
-            data-rs-value={true}
-          />
-          
+            <span
+              data-rs-value={true}
+            />
+            
 			
-        </p>
-        
-	
-      </output>
-    </ValueLabel>
+          </p>
+        </output>
+      </ValueLabel>
+    </div>
     <div
       className="value-range"
     >
@@ -57,13 +59,8 @@ exports[`Component: Rangeslider - renders with a value label and a value label p
   valueLabelPostfix="test"
 >
   <div
-    className="rangeslider "
+    className="rangeslider"
   >
-    
-
-    <p
-      className="rangeslider-label"
-    />
     
 
     <input
@@ -71,39 +68,50 @@ exports[`Component: Rangeslider - renders with a value label and a value label p
     />
     
 
-    <ValueLabel>
-      <output
-        className="value-label"
-      >
-        
-		
-        <p>
-          
-			
-          <span
-            data-rs-value={true}
-          />
-          
-			
-          <span>
-            test
-          </span>
+    <div
+      className="d-flex justify-content-between"
+    >
+      <p
+        className="rangeslider-label"
+      />
+      
+
+      <ValueLabel>
+        <output
+          className="value-label"
+        >
           
 		
-        </p>
-        
-	
-      </output>
-    </ValueLabel>
+          <p>
+            
+			
+            <span
+              data-rs-value={true}
+            />
+            
+			
+            <span>
+              test
+            </span>
+            
+		
+          </p>
+        </output>
+      </ValueLabel>
+    </div>
     <div
       className="value-range"
     >
       
 
-      <small />
+      <small>
+        test
+      </small>
       
 
-      <small />
+      <small>
+        test
+      </small>
       
 
     </div>
@@ -116,13 +124,8 @@ exports[`Component: Rangeslider - renders with a value label and a value label p
   valueLabelPrefix="test"
 >
   <div
-    className="rangeslider "
+    className="rangeslider"
   >
-    
-
-    <p
-      className="rangeslider-label"
-    />
     
 
     <input
@@ -130,30 +133,37 @@ exports[`Component: Rangeslider - renders with a value label and a value label p
     />
     
 
-    <ValueLabel>
-      <output
-        className="value-label"
-      >
-        
+    <div
+      className="d-flex justify-content-between"
+    >
+      <p
+        className="rangeslider-label"
+      />
+      
+
+      <ValueLabel>
+        <output
+          className="value-label"
+        >
+          
 		
-        <p>
-          
+          <p>
+            
 			
-          <span>
-            test
-          </span>
-          
+            <span>
+              test
+            </span>
+            
 			
-          <span
-            data-rs-value={true}
-          />
-          
+            <span
+              data-rs-value={true}
+            />
+            
 			
-        </p>
-        
-	
-      </output>
-    </ValueLabel>
+          </p>
+        </output>
+      </ValueLabel>
+    </div>
     <div
       className="value-range"
     >

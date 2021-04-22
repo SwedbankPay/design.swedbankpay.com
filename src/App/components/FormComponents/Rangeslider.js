@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Rangeslider = ({ label, name, min, max, step, value, disabled, valueLabelPrefix, valueLabelPostfix }) => {
+const Rangeslider = ({ id, label, name, min, max, step, value, disabled, valueLabelPrefix, valueLabelPostfix }) => {
     const attrs = {
         type: "range",
         name,
@@ -18,19 +18,21 @@ const Rangeslider = ({ label, name, min, max, step, value, disabled, valueLabelP
                 {valueLabelPrefix ? <span>{valueLabelPrefix}</span> : null}{valueLabelPrefix ? "\n\t\t\t" : null}
                 <span data-rs-value>{value}</span>{"\n\t\t\t"}
                 {valueLabelPostfix ? <span>{valueLabelPostfix}</span> : null}{valueLabelPostfix ? "\n\t\t" : null}
-            </p>{"\n\t"}
+            </p>
         </output>
     );
 
     return (
         <>
-            <div className={`rangeslider ${disabled ? "disabled" : ""}`}>{"\n"}
-                <p className="rangeslider-label">{label}</p>{"\n"}
+            <div id={id} className="rangeslider">{"\n"}
                 <input {...attrs}/>{"\n"}
-                <ValueLabel />
+                <div className="d-flex justify-content-between">
+                    <p className="rangeslider-label">{label}</p>{"\n"}
+                    <ValueLabel />
+                </div>
                 <div className="value-range">{"\n"}
-                    <small>{min}</small>{"\n"}
-                    <small>{max}</small>{"\n"}
+                    <small>{min}{valueLabelPostfix && valueLabelPostfix}</small>{"\n"}
+                    <small>{max}{valueLabelPostfix && valueLabelPostfix}</small>{"\n"}
                 </div>
             </div>
         </>
@@ -38,6 +40,7 @@ const Rangeslider = ({ label, name, min, max, step, value, disabled, valueLabelP
 };
 
 Rangeslider.propTypes = {
+    id: PropTypes.string,
     name: PropTypes.string,
     label: PropTypes.string,
     min: PropTypes.number,
