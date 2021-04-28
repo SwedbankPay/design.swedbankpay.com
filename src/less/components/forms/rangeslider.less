@@ -34,14 +34,6 @@
 .slider-color(@color) {
     .value-label {
         background: @color;
-
-        &:before {
-            border-right-color: @color !important; /* stylelint-disable-line declaration-no-important */
-        }
-
-        &:after {
-            border-top: 10px solid @color;
-        }
     }
 
     input[type="range"] {
@@ -61,6 +53,8 @@
         }
 
         &:focus {
+            outline: none;
+
             &::-webkit-slider-thumb {
                 .slider-thumb-focus();
             }
@@ -107,14 +101,6 @@
             &::-ms-thumb {
                 .slider-thumb(@input-checked-bg-disabled, @input-bg-disabled);
             }
-
-            + .value-label {
-                background: @input-checked-bg-disabled;
-
-                &:after {
-                    border-top-color: @input-checked-bg-disabled !important; /* stylelint-disable-line declaration-no-important */
-                }
-            }
         }
     }
 }
@@ -123,36 +109,22 @@
     position: relative;
     width: 100%;
     display: flex;
-    display: block;
-    height: @thumb-size;
+    flex-direction: column;
     box-sizing: border-box;
     background: transparent;
-    margin: 3rem 0;
-    padding-top: 1rem;
+    margin: 1rem 0;
     .slider-color(@brand-secondary);
 
-    &.disabled {
-        .value-range,
-        .rangeslider-label {
-            color: @light-brown;
-        }
-    }
-
     .rangeslider-label {
-        position: absolute;
-        bottom: 100%;
+        margin-bottom: 0;
     }
 
     .value-label {
-        position: absolute;
         display: flex;
-        top: -20px;
-        width: -moz-fit-content;
-        left: 0; /* <- to please ie */
-        right: 0; /* <- to please ie */
+        max-height: 1.5rem;
+        min-width: 3rem;
+        padding: 0.125rem;
         justify-content: center;
-        margin: 0 auto;
-        padding: 0.3rem 0.4rem 0.2rem;
         color: @white;
         font-family: @brand-headline;
         font-size: @small-font-size;
@@ -160,23 +132,11 @@
         white-space: nowrap;
         border-radius: 0.1875rem;
 
-        &:after {
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-left: 8px solid transparent;
-            border-right: 8px solid transparent;
-            top: 80%;
-        }
-
         p {
-            display: flex;
-            margin: 0;
-            align-items: center;
+            margin: 0.125rem;
 
             span {
-                margin: 0 1.5px;
+                align-items: center;
             }
         }
     }
@@ -184,12 +144,14 @@
     .value-range {
         display: flex;
         justify-content: space-between;
-        margin-top: 0.25rem;
+        order: 3;
     }
 
     input[type="range"] {
         -webkit-appearance: none;
         width: 100%;
+        margin: 0.5rem 0;
+        order: 2;
         box-sizing: border-box;
         display: table-cell;
         height: @thumb-size;
@@ -199,6 +161,16 @@
         cursor: grab;
         cursor: -webkit-grab;
         cursor: -moz-grab;
+
+        &[disabled] {
+            ~ div {
+                color: @input-checked-bg-disabled;
+
+                .value-label {
+                    background: @input-checked-bg-disabled;
+                }
+            }
+        }
 
         &:active {
             cursor: grabbing;

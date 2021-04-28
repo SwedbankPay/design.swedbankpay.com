@@ -293,7 +293,7 @@ const RangeSlider = () => (
         <p>Currently there are three different supported colors for the slider: <CodeTags type="secondary" code=".rangeslider-brand" />, <CodeTags type="secondary" code=".rangeslider-default" /> and <CodeTags type="secondary" code=".rangeslider-neutral" />.</p>
         <p>The Rangeslider currently supports two positions: <CodeTags type="secondary" code=".label-right" /> and <CodeTags type="secondary" code=".label-top" />. If no position is given, <CodeTags type="secondary" code="right" /> is defaulted.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <Rangeslider rangesliderLabel="Label" min={0} max={200} step={1} value={100} valueLabelPrefix="$" valueLabelPostfix="%" />
+            <Rangeslider id="example-slider" label="Label" min={0} max={200} step={1} value={100} valueLabelPostfix="%" />
         </ComponentPreview>
     </>
 );
@@ -307,7 +307,7 @@ const DisabledFormComponents = () => (
             <Togglebox id="togglebox-disabled-checked-example-1" label="Enable overdrive" disabled checked/>
             <Radio label="Hamburgers" id="radio-disabled-example-1" name="radio-disabled-example" disabled />
             <Checkbox label="Milk" id="checkbox-disabled-example-3" disabled checked />
-            <Rangeslider className="mb-2" min={0} max={200} step={1} value={100} valueLabel valueLabelPrefix="$" valueLabelPostfix="%" disabled/>
+            <Rangeslider label="Label" className="mb-2" min={0} max={200} step={1} value={100} valueLabel valueLabelPrefix="$" valueLabelPostfix="%" disabled/>
         </ComponentPreview>
 
         <h3>Disable a fieldset</h3>
