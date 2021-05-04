@@ -40,13 +40,15 @@ const ContentGuidelines = () => (
         <div className="slab slab-plain h-100">
             <div className="d-flex flex-column align-items-center">
                 <div className="py-3 col-8">
-                    <div>{/* add label */}
+                    <div>
                         <div className="rangeslider">
-                            <p className="rangeslider-label">Label</p>
                             <input type="range"/>
-                            <output className="value-label">
-                                Selected Value
-                            </output>
+                            <div className="d-flex justify-content-between">
+                                <p className="rangeslider-label">Label</p>
+                                <output className="value-label px-2 align-items-center">
+                                    Selected Value
+                                </output>
+                            </div>
                             <div className="value-range">
                                 <small>Minimum Value</small>
                                 <small>Maximum Value</small>

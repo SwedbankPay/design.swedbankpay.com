@@ -27,11 +27,13 @@ export const howToUse = [
         component:
             <div>
                 <div className="rangeslider">
-                    <p className="rangeslider-label">Label</p>
                     <input type="range"/>
-                    <output className="value-label">
-                    Average
-                    </output>
+                    <div className="d-flex justify-content-between">
+                        <p className="rangeslider-label">Label</p>
+                        <output className="value-label px-2 align-items-center">
+                            Average
+                        </output>
+                    </div>
                     <div className="value-range">
                         <small>Poor</small>
                         <small>Great</small>
