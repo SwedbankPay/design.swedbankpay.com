@@ -20,19 +20,23 @@ exports[`Component: Rangeslider ContentGuidelines renders 1`] = `
           <div
             className="rangeslider"
           >
-            <p
-              className="rangeslider-label"
-            >
-              Label
-            </p>
             <input
               type="range"
             />
-            <output
-              className="value-label"
+            <div
+              className="d-flex justify-content-between"
             >
-              Selected Value
-            </output>
+              <p
+                className="rangeslider-label"
+              >
+                Label
+              </p>
+              <output
+                className="value-label px-2 align-items-center"
+              >
+                Selected Value
+              </output>
+            </div>
             <div
               className="value-range"
             >
@@ -76,19 +80,29 @@ exports[`Component: Rangeslider JavascriptMethods renders 1`] = `
   >
     Javascript method
   </h2>
-  <CodeTags
-    code="dg.rangeslider.init()"
-    type="secondary"
-  />
   <p
     className="my-3"
   >
+    Use 
+    <CodeTags
+      code="dg.rangeslider.init()"
+      type="secondary"
+    />
+     to 
     <a
       href="/get-started/for-developers"
     >
-      Initalizes
+      initalizes
     </a>
-     rangeslider
+     all rangesliders.
+  </p>
+  <p>
+    Or 
+    <CodeTags
+      code="dg.rangeslider.init(\\"component-id\\")"
+      type="secondary"
+    />
+     to initialize one specific component.
   </p>
 </section>
 `;
@@ -310,19 +324,23 @@ exports[`Component: Rangeslider Overview renders 1`] = `
           <div
             className="rangeslider"
           >
-            <p
-              className="rangeslider-label"
-            >
-              Label
-            </p>
             <input
               type="range"
             />
-            <output
-              className="value-label"
+            <div
+              className="d-flex justify-content-between"
             >
-              Average
-            </output>
+              <p
+                className="rangeslider-label"
+              >
+                Label
+              </p>
+              <output
+                className="value-label px-2 align-items-center"
+              >
+                Average
+              </output>
+            </div>
             <div
               className="value-range"
             >
