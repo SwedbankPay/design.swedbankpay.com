@@ -69,8 +69,9 @@ const ContentGuidelines = () => (
 const JavascriptMethods = () => (
     <section>
         <h2 id="javascript-method mb-3">Javascript method</h2>
-        <CodeTags type="secondary" code="dg.rangeslider.init()"/>
-        <p className="my-3"><a href="/get-started/for-developers" >Initalizes</a> rangeslider</p>
+        
+        <p className="my-3">Use <CodeTags type="secondary" code="dg.rangeslider.init()"/> to <a href="/get-started/for-developers" >initalizes</a> all rangesliders.</p>
+        <p>Or <CodeTags type="secondary" code='dg.rangeslider.init("component-id")'/> to initialize one specific component.</p>
     </section>
 );
 
@@ -79,12 +80,14 @@ const Rangeslider = () => {
         window.dg.rangeslider.init();
     });
 
-    return (<DocContainer>
-        <p className="lead">The slider component lets the user increase and decrease the value by moving the slider along a horizontal line and lets the user choose an approximate value</p>
-        <Overview />
-        <ContentGuidelines />
-        <JavascriptMethods />
-    </DocContainer>);
+    return (
+        <DocContainer>
+            <p className="lead">The slider component lets the user increase and decrease the value by moving the slider along a horizontal line and lets the user choose an approximate value</p>
+            <Overview />
+            <ContentGuidelines />
+            <JavascriptMethods />
+        </DocContainer>
+    );
 };
 
 export default Rangeslider;
