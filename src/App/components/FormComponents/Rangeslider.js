@@ -12,16 +12,6 @@ const Rangeslider = ({ label, name, min, max, step, value, disabled, valueLabelP
         disabled
     };
 
-    const ValueLabel = () => (
-        <output className="value-label" >{"\n\t\t"}
-            <p>{"\n\t\t\t"}
-                {valueLabelPrefix ? <span>{valueLabelPrefix}</span> : null}{valueLabelPrefix ? "\n\t\t\t" : null}
-                <span data-rs-value>{value}</span>{"\n\t\t\t"}
-                {valueLabelPostfix ? <span>{valueLabelPostfix}</span> : null}{valueLabelPostfix ? "\n\t\t" : null}
-            </p>
-        </output>
-    );
-
     return (
         <div className={`rangeslider ${disabled ? "disabled" : ""}`}>{"\n"}
             <input {...attrs}/>{"\n"}
@@ -35,7 +25,13 @@ const Rangeslider = ({ label, name, min, max, step, value, disabled, valueLabelP
                             </i>{"\n"}
                         </>}
                 </label>{"\n"}
-                <ValueLabel />
+                <output className="value-label" >{"\n\t\t"}
+                    <p>{"\n\t\t\t"}
+                        {valueLabelPrefix ? <span>{valueLabelPrefix}</span> : null}{valueLabelPrefix ? "\n\t\t\t" : null}
+                        <span data-rs-value>{value}</span>{"\n\t\t\t"}
+                        {valueLabelPostfix ? <span>{valueLabelPostfix}</span> : null}{valueLabelPostfix ? "\n\t\t" : null}
+                    </p>
+                </output>
             </div>
             <div className="value-range">{"\n"}
                 <small>{min}{valueLabelPostfix ? valueLabelPostfix : null}</small>{"\n"}
