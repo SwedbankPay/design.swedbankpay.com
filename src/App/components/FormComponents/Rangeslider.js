@@ -15,7 +15,7 @@ const Rangeslider = ({ label, name, min, max, step, value, disabled, valueLabelP
     return (
         <div className={`rangeslider ${disabled ? "disabled" : ""}`}>{"\n"}
             <input {...attrs}/>{"\n"}
-            <div className="d-flex justify-content-between">
+            <div className="d-flex justify-content-between">{"\n"}
                 <label htmlFor="rangeslider" className="rangeslider-label">{"\n"}
                     {label}{"\n"}
                     {tooltip &&
