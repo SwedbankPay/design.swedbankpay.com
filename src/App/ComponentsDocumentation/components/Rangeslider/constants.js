@@ -1,5 +1,5 @@
 import React from "react";
-import Rangeslider from "@components/FormComponents/Rangeslider";
+import Rangeslider from "@components/Rangeslider";
 
 export const howToUse = [
     {

@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import InputGroup from "@components/InputGroup";
 import Button from "@components/Button";
-import { Checkbox, FormControlText, Radio, Rangeslider, Togglebox } from "@components/FormComponents";
+import { Checkbox, FormControlText, Radio, Togglebox } from "@components/FormComponents";
+import Rangeslider from "@components/Rangeslider";
 import CodeTags from "@components/CodeTags";
 
 const { validation } = window.dg;
