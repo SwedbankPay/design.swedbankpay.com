@@ -15,6 +15,8 @@ exports[`Component: Rangeslider - renders with a value label 1`] = `
     <div
       className="d-flex justify-content-between"
     >
+      
+
       <label
         className="rangeslider-label"
         htmlFor="rangeslider"
@@ -75,6 +77,8 @@ exports[`Component: Rangeslider - renders with a value label and a value label p
     <div
       className="d-flex justify-content-between"
     >
+      
+
       <label
         className="rangeslider-label"
         htmlFor="rangeslider"
@@ -144,6 +148,8 @@ exports[`Component: Rangeslider - renders with a value label and a value label p
     <div
       className="d-flex justify-content-between"
     >
+      
+
       <label
         className="rangeslider-label"
         htmlFor="rangeslider"
