@@ -75,18 +75,6 @@ exports[`Documentation: Forms DisabledFormComponents renders 1`] = `
       id="checkbox-disabled-example-3"
       label="Milk"
     />
-    <Rangeslider
-      className="mb-2"
-      disabled={true}
-      label="Label"
-      max={200}
-      min={0}
-      step={1}
-      value={100}
-      valueLabel={true}
-      valueLabelPostfix="%"
-      valueLabelPrefix="$"
-    />
   </ComponentPreview>
   <h3>
     Disable a fieldset

@@ -3,7 +3,7 @@
 exports[`Component: Rangeslider - renders with a value label 1`] = `
 <Rangeslider>
   <div
-    className="rangeslider "
+    className="rangeslider"
   >
     
 
@@ -65,7 +65,7 @@ exports[`Component: Rangeslider - renders with a value label and a value label p
   valueLabelPostfix="test"
 >
   <div
-    className="rangeslider "
+    className="rangeslider"
   >
     
 
@@ -136,7 +136,7 @@ exports[`Component: Rangeslider - renders with a value label and a value label p
   valueLabelPrefix="test"
 >
   <div
-    className="rangeslider "
+    className="rangeslider"
   >
     
 

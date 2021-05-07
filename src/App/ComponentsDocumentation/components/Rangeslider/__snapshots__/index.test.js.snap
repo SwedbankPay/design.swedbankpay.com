@@ -8,7 +8,7 @@ exports[`Component: Rangeslider ContentGuidelines renders 1`] = `
     Content guidelines
   </h2>
   <div
-    className="slab slab-plain h-100"
+    className="slab slab-plain h-100 mb-2"
   >
     <div
       className="d-flex flex-column align-items-center"
@@ -73,12 +73,12 @@ exports[`Component: Rangeslider ContentGuidelines renders 1`] = `
 </section>
 `;
 
-exports[`Component: Rangeslider JavascriptMethods renders 1`] = `
+exports[`Component: Rangeslider DeveloperDocumentation renders 1`] = `
 <section>
   <h2
-    id="javascript-method mb-3"
+    id="developer-documentation mb-3"
   >
-    Javascript method
+    Developer documentation
   </h2>
   <p
     className="my-3"
@@ -92,7 +92,7 @@ exports[`Component: Rangeslider JavascriptMethods renders 1`] = `
     <a
       href="/get-started/for-developers"
     >
-      initalizes
+      initialize
     </a>
      all rangesliders.
   </p>
@@ -104,6 +104,7 @@ exports[`Component: Rangeslider JavascriptMethods renders 1`] = `
     />
      to initialize one specific component.
   </p>
+  <DisableState />
 </section>
 `;
 
@@ -170,6 +171,24 @@ exports[`Component: Rangeslider Overview renders 1`] = `
                     },
                   ],
                 },
+                Object {
+                  "id": "state_radio",
+                  "title": "State modifiers",
+                  "values": Array [
+                    Object {
+                      "name": "Enabled",
+                      "value": Object {
+                        "disabled": false,
+                      },
+                    },
+                    Object {
+                      "name": "Disabled",
+                      "value": Object {
+                        "disabled": true,
+                      },
+                    },
+                  ],
+                },
               ],
             },
             "title": "Slider",
@@ -193,7 +212,7 @@ exports[`Component: Rangeslider Overview renders 1`] = `
     How to use sliders
   </h3>
   <div
-    className="slab slab-plain slab-border-success h-100"
+    className="slab slab-plain slab-border-success h-100 mb-2"
   >
     <h3
       className="mt-0"
@@ -223,7 +242,7 @@ exports[`Component: Rangeslider Overview renders 1`] = `
      for content with numeric values.
   </p>
   <div
-    className="slab slab-plain slab-border-success h-100"
+    className="slab slab-plain slab-border-success h-100 mb-2"
   >
     <h3
       className="mt-0"
@@ -254,7 +273,7 @@ exports[`Component: Rangeslider Overview renders 1`] = `
      component also have a post label for special symbols to help the user easier understand the slider value. It could be shown as above with the percentage symbol.
   </p>
   <div
-    className="slab slab-plain slab-border-success h-100"
+    className="slab slab-plain slab-border-success h-100 mb-2"
   >
     <h3
       className="mt-0"
@@ -281,7 +300,7 @@ exports[`Component: Rangeslider Overview renders 1`] = `
     It also have a pre label for other symbols such as currency e.g. €, $ and £.
   </p>
   <div
-    className="slab slab-plain slab-border-error h-100"
+    className="slab slab-plain slab-border-error h-100 mb-2"
   >
     <h3
       className="mt-0"
@@ -306,7 +325,7 @@ exports[`Component: Rangeslider Overview renders 1`] = `
     Don’t modify and remove label and maximum/minimum indicators as this makes it harder for user to grasp the content and context of use.
   </p>
   <div
-    className="slab slab-plain slab-border-error h-100"
+    className="slab slab-plain slab-border-error h-100 mb-2"
   >
     <h3
       className="mt-0"
@@ -371,6 +390,6 @@ exports[`Component: Rangeslider renders 1`] = `
   </p>
   <Overview />
   <ContentGuidelines />
-  <JavascriptMethods />
+  <DeveloperDocumentation />
 </DocContainer>
 `;
