@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Rangeslider, { Overview, ContentGuidelines, JavascriptMethods } from "./index";
+import Rangeslider, { Overview, ContentGuidelines, DeveloperDocumentation } from "./index";
 
 describe("Component: Rangeslider", () => {
     it("is defined", () => {
@@ -38,13 +38,13 @@ describe("Component: Rangeslider", () => {
         });
     });
 
-    describe("JavascriptMethods", () => {
+    describe("DeveloperDocumentation", () => {
         it("is defined", () => {
-            expect(JavascriptMethods).toBeDefined();
+            expect(DeveloperDocumentation).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<JavascriptMethods />);
+            const wrapper = shallow(<DeveloperDocumentation />);
 
             expect(wrapper).toMatchSnapshot();
         });

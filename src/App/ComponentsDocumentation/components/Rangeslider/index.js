@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ComponentPreview, DocContainer } from "@docutils";
 import { howToUse, sliderShowCase } from "./constants";
 import CodeTags from "@components/CodeTags";
+import RangesliderComponent from "~/src/App/components/Rangeslider";
 
 const Overview = () => (
     <section>
@@ -66,14 +67,25 @@ const ContentGuidelines = () => (
     </section>
 );
 
-const JavascriptMethods = () => (
+const DeveloperDocumentation = () => (
     <section>
-        <h2 id="javascript-method mb-3">Javascript method</h2>
+        <h2 id="developer-documentation mb-3">Developer documentation</h2>
 
-        <p className="my-3">Use <CodeTags type="secondary" code="dg.rangeslider.init()"/> to <a href="/get-started/for-developers" >initalizes</a> all rangesliders.</p>
+        <p className="my-3">Use <CodeTags type="secondary" code="dg.rangeslider.init()"/> to <a href="/get-started/for-developers" >initialize</a> all rangesliders.</p>
         <p>Or <CodeTags type="secondary" code='dg.rangeslider.init("component-id")'/> to initialize one specific component.</p>
+        <DisableState />
     </section>
 );
+
+const DisableState = () => (
+    <>
+        <h3>Disabled state</h3>
+        <p>Disable a slider by adding <CodeTags type="primary" code="disabled"/> attribute to the desired slider. You can also disable the <CodeTags type="primary" code="form-group"/> or <CodeTags type="primary" code="fieldset"/> in which the slider is located, refer to <Link>forms</Link> for more info</p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <RangesliderComponent label="Label" min={0} max={100} value={50} disabled/>
+        </ComponentPreview>
+    </>
+)
 
 const Rangeslider = () => {
     useEffect(() => {
@@ -85,11 +97,11 @@ const Rangeslider = () => {
             <p className="lead">The slider component lets the user increase and decrease the value by moving the slider along a horizontal line and lets the user choose an approximate value</p>
             <Overview />
             <ContentGuidelines />
-            <JavascriptMethods />
+            <DeveloperDocumentation />
         </DocContainer>
     );
 };
 
 export default Rangeslider;
 
-export { Overview, ContentGuidelines, JavascriptMethods };
+export { Overview, ContentGuidelines, DeveloperDocumentation };
