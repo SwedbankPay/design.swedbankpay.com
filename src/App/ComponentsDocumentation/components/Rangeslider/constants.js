@@ -89,6 +89,24 @@ export const sliderShowCase = {
                                 }
                             }
                         ]
+                    },
+                    {
+                        id: "state_radio",
+                        title: "State modifiers",
+                        values: [
+                            {
+                                name: "Enabled",
+                                value: {
+                                    disabled: false
+                                }
+                            },
+                            {
+                                name: "Disabled",
+                                value: {
+                                    disabled: true
+                                }
+                            }
+                        ]
                     }
                 ]
             },
