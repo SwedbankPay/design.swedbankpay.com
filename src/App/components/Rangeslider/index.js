@@ -13,7 +13,7 @@ const Rangeslider = ({ label, name, min, max, step, value, disabled, valueLabelP
     };
 
     return (
-        <div className={`rangeslider ${disabled ? "disabled" : ""}`}>{"\n"}
+        <div className="rangeslider">{"\n"}
             <input {...attrs}/>{"\n"}
             <div className="d-flex justify-content-between">{"\n"}
                 <label htmlFor="rangeslider" className="rangeslider-label">{"\n"}
@@ -42,7 +42,6 @@ const Rangeslider = ({ label, name, min, max, step, value, disabled, valueLabelP
 };
 
 Rangeslider.propTypes = {
-    id: PropTypes.string,
     name: PropTypes.string,
     label: PropTypes.string,
     min: PropTypes.number,
