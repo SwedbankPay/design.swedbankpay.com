@@ -5,7 +5,6 @@ import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import InputGroup from "@components/InputGroup";
 import Button from "@components/Button";
 import { Checkbox, FormControlText, Radio, Togglebox } from "@components/FormComponents";
-import Rangeslider from "@components/Rangeslider";
 import CodeTags from "@components/CodeTags";
 
 const { validation } = window.dg;
@@ -296,7 +295,6 @@ const DisabledFormComponents = () => (
             <Togglebox id="togglebox-disabled-checked-example-1" label="Enable overdrive" disabled checked/>
             <Radio label="Hamburgers" id="radio-disabled-example-1" name="radio-disabled-example" disabled />
             <Checkbox label="Milk" id="checkbox-disabled-example-3" disabled checked />
-            <Rangeslider label="Label" className="mb-2" min={0} max={200} step={1} value={100} valueLabel valueLabelPrefix="$" valueLabelPostfix="%" disabled/>
         </ComponentPreview>
 
         <h3>Disable a fieldset</h3>
