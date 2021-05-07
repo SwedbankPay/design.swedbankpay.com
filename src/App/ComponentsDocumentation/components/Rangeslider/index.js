@@ -20,7 +20,7 @@ const Overview = () => (
 
         {howToUse.map(({ type, component, text }, i) => (
             <React.Fragment key={i}>
-                <div className={`slab slab-plain slab-border-${type} h-100`}>
+                <div className={`slab slab-plain slab-border-${type} h-100 mb-2`}>
                     <h3 className="mt-0">Do{type === "error" && "n’t"}</h3>
                     <div className="d-flex flex-column align-items-center">
                         <div className="py-3 col-8">
@@ -38,7 +38,7 @@ const ContentGuidelines = () => (
     <section>
         <h2 id="content-guidelines">Content guidelines</h2>
 
-        <div className="slab slab-plain h-100">
+        <div className="slab slab-plain h-100 mb-2">
             <div className="d-flex flex-column align-items-center">
                 <div className="py-3 col-8">
                     <div>
@@ -80,12 +80,12 @@ const DeveloperDocumentation = () => (
 const DisableState = () => (
     <>
         <h3>Disabled state</h3>
-        <p>Disable a slider by adding <CodeTags type="primary" code="disabled"/> attribute to the desired slider. You can also disable the <CodeTags type="primary" code="form-group"/> or <CodeTags type="primary" code="fieldset"/> in which the slider is located, refer to <Link>forms</Link> for more info</p>
+        <p>Disable a slider by adding <CodeTags type="primary" code="disabled"/> attribute to the desired slider. You can also disable the <CodeTags type="primary" code="form-group"/> or <CodeTags type="primary" code="fieldset"/> in which the slider is located, refer to <Link to="/components/forms">forms</Link> for more info</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <RangesliderComponent label="Label" min={0} max={100} value={50} disabled/>
         </ComponentPreview>
     </>
-)
+);
 
 const Rangeslider = () => {
     useEffect(() => {
