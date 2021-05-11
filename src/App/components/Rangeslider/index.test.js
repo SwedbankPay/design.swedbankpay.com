@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 
-import Rangeslider from "./Rangeslider";
+import Rangeslider from ".";
 
 describe("Component: Rangeslider -", () => {
     it("is defined", () => {

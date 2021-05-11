@@ -223,19 +223,23 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
             "options": Object {
               "checkbox": Array [
                 Object {
-                  "id": "icon_check_destructive",
-                  "name": "Icon",
-                  "value": Object {
-                    "icon": "cloud",
-                  },
-                },
-                Object {
-                  "id": "loader_check_destructive",
-                  "name": "Loader",
-                  "value": Object {
-                    "loader": true,
-                    "loading": true,
-                  },
+                  "inputs": Array [
+                    Object {
+                      "id": "icon_check_destructive",
+                      "name": "Icon",
+                      "value": Object {
+                        "icon": "cloud",
+                      },
+                    },
+                    Object {
+                      "id": "loader_check_destructive",
+                      "name": "Loader",
+                      "value": Object {
+                        "loader": true,
+                        "loading": true,
+                      },
+                    },
+                  ],
                 },
               ],
               "radio": Array [
@@ -277,11 +281,15 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
             "options": Object {
               "checkbox": Array [
                 Object {
-                  "id": "icon_check_destructive",
-                  "name": "Icon",
-                  "value": Object {
-                    "icon": "cloud",
-                  },
+                  "inputs": Array [
+                    Object {
+                      "id": "icon_check_destructive",
+                      "name": "Icon",
+                      "value": Object {
+                        "icon": "cloud",
+                      },
+                    },
+                  ],
                 },
               ],
             },
@@ -297,19 +305,23 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
             "options": Object {
               "checkbox": Array [
                 Object {
-                  "id": "icon_check_destructive",
-                  "name": "Icon",
-                  "value": Object {
-                    "icon": "close",
-                  },
-                },
-                Object {
-                  "id": "loader_check_destructive",
-                  "name": "Loader",
-                  "value": Object {
-                    "loader": true,
-                    "loading": true,
-                  },
+                  "inputs": Array [
+                    Object {
+                      "id": "icon_check_destructive",
+                      "name": "Icon",
+                      "value": Object {
+                        "icon": "close",
+                      },
+                    },
+                    Object {
+                      "id": "loader_check_destructive",
+                      "name": "Loader",
+                      "value": Object {
+                        "loader": true,
+                        "loading": true,
+                      },
+                    },
+                  ],
                 },
               ],
               "radio": Array [
@@ -870,19 +882,23 @@ exports[`Documentation: Buttons Overview renders 1`] = `
             "options": Object {
               "checkbox": Array [
                 Object {
-                  "id": "icon_check",
-                  "name": "Icon",
-                  "value": Object {
-                    "icon": "cloud",
-                  },
-                },
-                Object {
-                  "id": "loader_check",
-                  "name": "Loader",
-                  "value": Object {
-                    "loader": true,
-                    "loading": true,
-                  },
+                  "inputs": Array [
+                    Object {
+                      "id": "icon_check",
+                      "name": "Icon",
+                      "value": Object {
+                        "icon": "cloud",
+                      },
+                    },
+                    Object {
+                      "id": "loader_check",
+                      "name": "Loader",
+                      "value": Object {
+                        "loader": true,
+                        "loading": true,
+                      },
+                    },
+                  ],
                 },
               ],
               "radio": Array [
@@ -932,12 +948,16 @@ exports[`Documentation: Buttons Overview renders 1`] = `
             "options": Object {
               "checkbox": Array [
                 Object {
-                  "id": "loader_check",
-                  "name": "Loader",
-                  "value": Object {
-                    "loader": true,
-                    "loading": true,
-                  },
+                  "inputs": Array [
+                    Object {
+                      "id": "loader_check",
+                      "name": "Loader",
+                      "value": Object {
+                        "loader": true,
+                        "loading": true,
+                      },
+                    },
+                  ],
                 },
               ],
               "radio": Array [
@@ -981,19 +1001,23 @@ exports[`Documentation: Buttons Overview renders 1`] = `
             "options": Object {
               "checkbox": Array [
                 Object {
-                  "id": "icon_check",
-                  "name": "Icon",
-                  "value": Object {
-                    "icon": "cloud",
-                  },
-                },
-                Object {
-                  "id": "loader_check",
-                  "name": "Loader",
-                  "value": Object {
-                    "loader": true,
-                    "loading": true,
-                  },
+                  "inputs": Array [
+                    Object {
+                      "id": "icon_check",
+                      "name": "Icon",
+                      "value": Object {
+                        "icon": "cloud",
+                      },
+                    },
+                    Object {
+                      "id": "loader_check",
+                      "name": "Loader",
+                      "value": Object {
+                        "loader": true,
+                        "loading": true,
+                      },
+                    },
+                  ],
                 },
               ],
               "radio": Array [
@@ -1035,11 +1059,15 @@ exports[`Documentation: Buttons Overview renders 1`] = `
             "options": Object {
               "checkbox": Array [
                 Object {
-                  "id": "icon_check",
-                  "name": "Icon",
-                  "value": Object {
-                    "icon": "cloud",
-                  },
+                  "inputs": Array [
+                    Object {
+                      "id": "icon_check",
+                      "name": "Icon",
+                      "value": Object {
+                        "icon": "cloud",
+                      },
+                    },
+                  ],
                 },
               ],
             },

@@ -115,6 +115,14 @@
     margin: 1rem 0;
     .slider-color(@brand-secondary);
 
+    i {
+        &[data-tooltip] {
+            color: @soft-brown;
+            margin-bottom: 0.25rem;
+            margin-left: 0.25rem;
+        }
+    }
+
     .rangeslider-label {
         margin-bottom: 0;
     }
@@ -165,6 +173,11 @@
         &[disabled] {
             ~ div {
                 color: @input-checked-bg-disabled;
+
+                i {
+                    pointer-events: none;
+                    color: @input-checked-bg-disabled;
+                }
 
                 .value-label {
                     background: @input-checked-bg-disabled;

@@ -284,17 +284,22 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                                     <i className="material-icons options-close" onClick={() => this.setState({ optionsOpen: false })}>close</i>
                                 </div>
                                 {this.state.activeTab.options && <div className="options-body">
+
                                     {this.state.activeTab.options.checkbox &&
-
-                                        <div className="mb-4">
-                                            {this.state.activeTab.options.checkbox.map((checkbox, i) => (
-                                                <div key={i} className="checkbox" onChange={() => this.setActiveOptions(checkbox.id, checkbox.value, checkbox.description, true)}>
-                                                    <input type="checkbox" id={checkbox.id} />
-                                                    <label htmlFor={checkbox.id}>{checkbox.name}</label>
-                                                </div>
-                                            ))}
-                                        </div>
-
+                                        this.state.activeTab.options.checkbox.map((checkbox, i) => (
+                                            <div className="mb-4" key={i}>
+                                                {checkbox.title && (
+                                                    <h4>{checkbox.title}</h4>
+                                                )}
+                                                {checkbox.inputs.map((input, i) => (
+                                                    <div key={i} className="checkbox" onChange={() => this.setActiveOptions(input.id, input.value, input.description, true)}>
+                                                        <input type="checkbox" id={input.id} />
+                                                        <label htmlFor={input.id}>{input.name}</label>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        )
+                                        )
                                     }
                                     {this.state.activeTab.options.dropdown && this.state.activeTab.options.dropdown.map((dropdown, i) => (
                                         <div key={i} className="mb-4">
