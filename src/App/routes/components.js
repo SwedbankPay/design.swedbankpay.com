@@ -203,6 +203,11 @@ module.exports = [
                 outlined: true
             },
             {
+                title: "Select list",
+                path: "/components/select-list",
+                componentPath: "components/SelectList"
+            },
+            {
                 title: "Sheet",
                 path: "/components/sheet",
                 componentPath: "components/Sheet",
