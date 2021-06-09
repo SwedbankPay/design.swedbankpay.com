@@ -351,6 +351,9 @@ exports[`Utilities: RenderPage renders 1`] = `
             Object {
               "componentPath": "components/MediaObject",
               "path": "/components/media-object",
+              "statusBadges": Array [
+                "remove",
+              ],
               "title": "Media Object",
             },
             Object {

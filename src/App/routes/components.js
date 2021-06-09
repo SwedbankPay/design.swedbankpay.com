@@ -166,7 +166,8 @@ module.exports = [
             {
                 title: "Media Object",
                 path: "/components/media-object",
-                componentPath: "components/MediaObject"
+                componentPath: "components/MediaObject",
+                statusBadges: ["remove"]
             },
             {
                 title: "Navigation",
