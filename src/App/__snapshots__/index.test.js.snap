@@ -328,13 +328,6 @@ exports[`Main: App renders 1`] = `
                       "title": "Forms",
                     },
                     Object {
-                      "componentPath": "components/Footer",
-                      "icon": "call_to_action",
-                      "outlined": true,
-                      "path": "/components/footer",
-                      "title": "Footer",
-                    },
-                    Object {
                       "componentPath": "components/InputGroup",
                       "path": "/components/input-group",
                       "title": "Input Group",

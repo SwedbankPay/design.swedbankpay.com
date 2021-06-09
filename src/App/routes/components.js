@@ -125,13 +125,13 @@ module.exports = [
                 outlined: true,
                 statusBadges: ["javascript"]
             },
-            {
+            /* {
                 title: "Footer",
                 path: "/components/footer",
                 componentPath: "components/Footer",
                 icon: "call_to_action",
                 outlined: true
-            },
+            }, */
             {
                 title: "Input Group",
                 path: "/components/input-group",
