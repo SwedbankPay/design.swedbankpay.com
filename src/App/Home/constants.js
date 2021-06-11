@@ -1,5 +1,10 @@
 export const changeLogs = [
     {
+        version: "5.0.3",
+        title: "Icon patch",
+        text: "Trustly icon patched."
+    },
+    {
         version: "5.0.2",
         title: "Bugfixes for the revamped Design Guide",
         text: "Our first bugfix after last weeks major patch is now live! We made some small tweaks and patched a few minor problems that we found. No need to worry, everything is better again!"
