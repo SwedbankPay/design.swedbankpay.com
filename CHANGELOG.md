@@ -4,4 +4,4 @@
 
 ## Changed
 - Trustly
-  - Logo updated
+  - Icon updated
