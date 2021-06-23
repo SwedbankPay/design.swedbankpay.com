@@ -2,9 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Addon } from "@components/InputGroup";
 
-const Datepicker = ({ format, time, min, max, months, value, label, prefixValue, prefixType, fulldate, mode, allowinput, required, id }) => {
+const Datepicker = ({ format, time, min, max, months, value, label, prefixValue, prefixType, fulldate, mode, allowinput, required, placeholder, id }) => {
     const attrs = {
         id,
+        placeholder,
         className: "form-control",
         type: "text",
         "data-datepicker": "",
