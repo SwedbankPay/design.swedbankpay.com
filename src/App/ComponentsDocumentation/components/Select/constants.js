@@ -4,7 +4,7 @@ import Radio from "@components/FormComponents/Radio";
 import { Datepicker } from "@components/FormComponents";
 import { Link } from "react-router-dom";
 
-export const selectLists = {
+export const selectOverview = {
     id: "no-tabs",
     elements: [
         {
@@ -38,12 +38,12 @@ export const selectLists = {
     ]
 };
 
-export const howToUse = {
+export const whenToUse = {
     lead: "The select component should be used sparsely, often times there are better and more intuitive ways to present choices for the user.",
     content: [
         {
             correct:
-                <div className="m-auto">
+                <div className="m-auto pb-3">
                     <p>Background color</p>
                     <Radio id="radio-example-1" label="Blue" name="radio-example" checked/>
                     <Radio id="radio-example-2" label="Red" name="radio-example"/>
