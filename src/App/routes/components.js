@@ -203,9 +203,9 @@ module.exports = [
                 outlined: true
             },
             {
-                title: "Select list",
-                path: "/components/select-list",
-                componentPath: "components/SelectList"
+                title: "Rangeslider",
+                path: "/components/rangeslider",
+                componentPath: "components/Rangeslider"
             },
             {
                 title: "Sheet",
@@ -216,9 +216,9 @@ module.exports = [
                 statusBadges: ["javascript"]
             },
             {
-                title: "Rangeslider",
-                path: "/components/rangeslider",
-                componentPath: "components/Rangeslider"
+                title: "Select",
+                path: "/components/select",
+                componentPath: "components/Select"
             },
             {
                 title: "Sidebar",
