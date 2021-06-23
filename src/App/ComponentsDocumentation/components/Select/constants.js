@@ -49,18 +49,21 @@ export const whenToUse = {
                     <Radio id="radio-example-2" label="Red" name="radio-example"/>
                 </div>,
             selectOptions: ["Blue", "Red"],
+            placeholder: "Select option",
             label: "Background color",
             text: <p>In the example above, when there are very few choices, they should not be hidden inside a select list as this makes it harder for user to get an overview. Use <Link to="/components/radio-button">radio buttons</Link> instead.</p>
         },
         {
             correct: <Datepicker label="Birthday" prefixType="icon" prefixValue="event" placeholder="DD/MM/YYY" />,
             selectOptions: [...Array(32).keys()].slice(1),
+            placeholder: "Select day",
             label: "Day",
             text: <p>Instead of using a dropdown input for selecting a day of the month. It is better to use a <Link to="/components/datepickers">datepicker</Link> to let user select the right date faster.</p>
         },
         {
             correct: <InputGroup type="text" label="Number of drinks" placeholder="4"/>,
-            selectOptions: ["Select number", 1, 2, 3, 4],
+            selectOptions: [1, 2, 3, 4],
+            placeholder: "Select number",
             label: "Number of drinks",
             text: <p>Instead of using a dropdown input that will force the user to choose from a set of predefined options it is sometimes better to use an <Link to="/components/forms">input field</Link> where the user can type their answer .</p>
         }

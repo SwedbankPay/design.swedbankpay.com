@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const WhenToUse = () => (
     <section>
         <p>{whenToUse.lead}</p>
-        {whenToUse.content.map(({ correct, selectOptions, label, text }, i) => (
+        {whenToUse.content.map(({ correct, placeholder, selectOptions, label, text }, i) => (
             <React.Fragment key={i}>
                 <div className="row wrong mb-3">
                     <div className="col-6">
@@ -22,7 +22,7 @@ const WhenToUse = () => (
                         <div className="px-4 slab slab-plain slab-border-error h-100">
                             <h4 className="mt-0 mb-3">Don&#x27;t</h4>
                             <div >
-                                <InputGroup type="select" label={label} selectOptions={selectOptions} />
+                                <InputGroup type="select" label={label} placeholder={placeholder} selectOptions={selectOptions} />
                             </div>
                         </div>
                     </div>
@@ -106,4 +106,4 @@ const Select = () => (
 
 export default Select;
 
-export { Overview };
+export { Overview, ContentGuidelines, DeveloperDocumentation };
