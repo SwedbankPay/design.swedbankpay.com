@@ -1,0 +1,263 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Select ContentGuidelines renders 1`] = `
+<section>
+  <h2
+    id="content-guidelines"
+  >
+    Content guidelines
+  </h2>
+  <div
+    className="d-flex justify-content-center slab slab-plain px-5 pt-5 pb-4 no-pointer-events"
+  >
+    <InputGroup
+      errorMessage="Descriptive helpful error message."
+      helpBlock={true}
+      label="Label"
+      placeholder="Placeholder text"
+      selectOptions={Array []}
+      type="select"
+    />
+  </div>
+  <ul
+    className="pl-3"
+  >
+    <li>
+      The 
+      <b>
+        Label
+      </b>
+       should be short, concise and to the point describing the functionality 
+    </li>
+    <li>
+      The 
+      <b>
+        Placeholder text
+      </b>
+       for select list should give example of what type of content is available inside the listbox. 
+    </li>
+  </ul>
+</section>
+`;
+
+exports[`Component: Select DeveloperDocumentation renders 1`] = `
+<section>
+  <h2
+    id="developer-documentation"
+  >
+    Developer unnecessary  documentation
+  </h2>
+  <h4
+    className="mt-3"
+  >
+    Error state
+  </h4>
+  <p>
+    If the user don’t select any option in a select that is required to be filled, an error message should be displayed. Add the 
+    <CodeTags
+      code=".has-error"
+      type="secondary"
+    />
+     class to the 
+    <CodeTags
+      code="form-group"
+      type="primary"
+    />
+     element, and insert the error message in the attribute 
+    <CodeTags
+      code="data-error"
+      type="primary"
+    />
+     in the 
+    <CodeTags
+      code="help-block"
+      type="primary"
+    />
+     element. 
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <form
+      className="no-pointer-events"
+    >
+      <div
+        className="form-group has-error"
+      >
+        
+
+        <label>
+          
+
+          Label
+          
+
+        </label>
+        
+
+        <select
+          className="form-control"
+          required={true}
+        >
+          
+
+          <option
+            disabled={true}
+            hidden={true}
+            selected={true}
+          >
+            Select option
+          </option>
+          
+
+        </select>
+        <div
+          className="help-block"
+          data-error="Descriptive helpful error message."
+        />
+      </div>
+    </form>
+  </ComponentPreview>
+  <h4>
+    Disabled state
+  </h4>
+  <p>
+    Disable a select by adding the  
+    <CodeTags
+      code="disabled"
+      type="primary"
+    />
+      attribute to the desired select. You can also disable a 
+    <CodeTags
+      code="form-group"
+      type="primary"
+    />
+     or 
+    <CodeTags
+      code="fieldset"
+      type="primary"
+    />
+    , refer to 
+    <Link
+      to="/components/forms"
+    >
+      forms
+    </Link>
+     for more info.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <InputGroup
+      disabled={true}
+      label="Label"
+      placeholder="Select option"
+      selectOptions={Array []}
+      type="select"
+    />
+  </ComponentPreview>
+</section>
+`;
+
+exports[`Component: Select Overview renders 1`] = `
+<section>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+    showCasePanelAdvanced={
+      Object {
+        "elements": Array [
+          Object {
+            "component": <InputGroup
+              label="Label"
+              placeholder="Select option"
+              selectOptions={
+                Array [
+                  "Blueberry",
+                  "Blackberry",
+                  "Berryberry",
+                ]
+              }
+              type="select"
+            />,
+            "description": "The select component looks simillar to an input field in terms of structure, both with a label and placeholder text. But it does function differently and when activated expands and displays a list of options.",
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "inputs": Array [
+                    Object {
+                      "id": "help_icon",
+                      "name": "Help icon",
+                      "value": Object {
+                        "tooltip": true,
+                      },
+                    },
+                    Object {
+                      "id": "optional",
+                      "name": "Is optional",
+                      "value": Object {
+                        "optional": true,
+                      },
+                    },
+                  ],
+                  "title": "Label add on",
+                },
+              ],
+            },
+            "title": "Select",
+          },
+        ],
+        "id": "no-tabs",
+      }
+    }
+  />
+  <h3>
+    When to consider something else
+  </h3>
+  <ul
+    className="pl-3"
+  >
+    <li>
+      To present a list of possible navigation options or actions that for example effects the filtering of the page, use the 
+      <Link
+        to="/components/dropdown-menu"
+      >
+        Dropdown menu
+      </Link>
+       component instead of a Select. 
+    </li>
+  </ul>
+  <h3>
+    When to use Select
+  </h3>
+  <WhenToUse />
+</section>
+`;
+
+exports[`Component: Select renders 1`] = `
+<DocContainer>
+  <section
+    id="select-doc"
+  >
+    <p
+      className="lead"
+    >
+      The select component is used in forms and allows the user to select a desired value. When activated the component expands and presents a scrollable list of pre-defined options which user can choose from.
+    </p>
+    <Overview />
+    <ContentGuidelines />
+    <DeveloperDocumentation />
+  </section>
+</DocContainer>
+`;
