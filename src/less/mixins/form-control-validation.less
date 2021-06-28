@@ -32,9 +32,7 @@
 
     // Set validation states also for addons
     .input-group-addon {
-        color: @color;
         border-color: @color;
-        background-color: lighten(@color, 50%);
     }
 
     // Optional feedback icon
@@ -42,10 +40,14 @@
         color: @color;
     }
 
-    .help-block:after {
-        color: @color;
+    + .help-block,
+    .help-block {
+        &:after {
+            color: @color;
+        }
     }
 
+    + .help-block,
     @{help-block-selector} {
         color: transparent;
         user-select: none;
