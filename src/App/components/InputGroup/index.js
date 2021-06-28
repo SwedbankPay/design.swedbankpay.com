@@ -7,7 +7,7 @@ export const Addon = ({ type, value, color, disabled }) => (
         <button type="button" className={`btn btn-${color}`} disabled={disabled}>
             {value}
         </button>
-        : <span className="input-group-addon">{(type === "icon") ? <i className="material-icons" aria-hidden="true">{value}</i> : value}</span>
+        : <span className="input-group-addon">{(type === "icon") ? <i className="material-icons material-icons-outlined" aria-hidden="true">{value}</i> : value}</span>
 );
 
 const Feedback = ({ icon }) => (
