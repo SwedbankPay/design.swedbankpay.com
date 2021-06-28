@@ -323,6 +323,11 @@ exports[`Utilities: RenderPage renders 1`] = `
               "title": "Forms",
             },
             Object {
+              "componentPath": "components/InputField",
+              "path": "/components/input-field",
+              "title": "Input field",
+            },
+            Object {
               "componentPath": "components/InputGroup",
               "path": "/components/input-group",
               "title": "Input Group",

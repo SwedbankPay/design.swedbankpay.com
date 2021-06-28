@@ -1,0 +1,555 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: InputField ContentGuidelines renders 1`] = `
+<section>
+  <h2
+    id="content-guidelines"
+  >
+    Content guidelines
+  </h2>
+  <div
+    className="slab slab-plain h-100 mb-2"
+  >
+    <div
+      className="d-flex flex-column align-items-center"
+    >
+      <div
+        className="py-3"
+      >
+        <InputGroup
+          defaultValue="Input text"
+          errorMessage="Error message"
+          helpBlock={true}
+          label="Input label"
+          tooltip={true}
+          type="text"
+          validationState="error"
+        />
+        <InputGroup
+          label="Input label"
+          optional={true}
+          placeholder="Placeholder text"
+          type="textarea"
+        />
+      </div>
+    </div>
+  </div>
+  <h3>
+    Input label
+  </h3>
+  <p>
+    A input field must have a label that clearly describes the type of input a field requires. 
+  </p>
+  <ul
+    className="list list-bullet"
+  >
+    <li>
+      Use a label that is meaningful, clear, and concise.
+    </li>
+    <li>
+      When a text field is not required to be filled by the user, label it as “optional”.
+    </li>
+    <li>
+      If there is a need for a more detailed description, a help icon which triggers a Popover on click can be added after the label. 
+    </li>
+  </ul>
+  <h3>
+    Placeholder text
+  </h3>
+  <p>
+    A placeholder text may be used inside of the input field to serve as an example of what the user can enter, consider to start with “e.g.” or similar abbreviation in corresponding language. 
+  </p>
+  <div
+    className="row placeholder-guideline"
+  >
+    <div
+      className="col-6"
+    >
+      <div
+        className="slab slab-plain slab-border-success pb-4"
+      >
+        <h3
+          className="mb-3 mt-0"
+        >
+          Do
+        </h3>
+        <InputGroup
+          label="Personal authentication number"
+          placeholder="YYYYMMDDNNNN"
+          type="text"
+        />
+      </div>
+      <p>
+        Use the placeholder text as an example of what to enter.
+      </p>
+    </div>
+    <div
+      className="col-6"
+    >
+      <div
+        className="slab slab-plain slab-border-error pb-4"
+      >
+        <h3
+          className="mb-3 mt-0"
+        >
+          Don't
+        </h3>
+        <InputGroup
+          label="Personal authentication number"
+          placeholder="Enter with 10 digits"
+          type="text"
+        />
+      </div>
+      <p>
+        Don’t use the placeholder text as an instruction of what to enter.
+      </p>
+    </div>
+  </div>
+  <h3>
+    Error message
+  </h3>
+  <p>
+    When input isn’t accepted, input fields should display an error message. 
+  </p>
+  <ul
+    className="list list-bullet"
+  >
+    <li>
+      Clearly explain what went wrong and how to fix it.
+    </li>
+    <li>
+      Be short and concise, no more than a single sentence.
+    </li>
+  </ul>
+</section>
+`;
+
+exports[`Component: InputField DeveloperDocumentation renders 1`] = `
+<section>
+  <h2
+    id="developer-documentation mb-3"
+  >
+    Developer documentation
+  </h2>
+  <h3
+    className="mt-3"
+  >
+    Autocomplete
+  </h3>
+  <p>
+    Add 
+    <CodeTags
+      code="autocomplete"
+      type="primary"
+    />
+     attributes to input fields when it is possible to make a form easier for users to fill. 
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <InputGroup
+      autoComplete="on"
+      label="Name"
+      type="text"
+    />
+  </ComponentPreview>
+  <h3>
+    Validation
+  </h3>
+  <p>
+    To use our validation, start by adding the attribute 
+    <CodeTags
+      code="novalidate"
+      type="primary"
+    />
+     to your desired input field. If you wish to validate an entire form, add the validate attribute to the 
+    <CodeTags
+      code="form"
+      type="primary"
+    />
+     tag.
+  </p>
+  <h3>
+    Error message
+  </h3>
+  <p>
+    Insert the error message in the attribute 
+    <CodeTags
+      code="data-error"
+      type="primary"
+    />
+     in the 
+    <CodeTags
+      code=".help-block"
+      type="primary"
+    />
+     element. 
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <InputGroup
+      defaultValue="Input text"
+      errorMessage="Descriptive helpful error message."
+      helpBlock={true}
+      label="Input label"
+      type="text"
+      validationState="error"
+    />
+  </ComponentPreview>
+  <h3>
+    Disabled state
+  </h3>
+  <p>
+    Disable a input field by adding 
+    <CodeTags
+      code="disabled"
+      type="primary"
+    />
+     attribute to the desired input field. You can also disable the 
+    <CodeTags
+      code="form-group"
+      type="primary"
+    />
+     or 
+    <CodeTags
+      code="fieldset"
+      type="primary"
+    />
+     in which the input field is located, refer to 
+    <Link
+      to="/components/forms"
+    >
+      forms
+    </Link>
+     for more info.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <InputGroup
+      disabled={true}
+      label="Input label"
+      placeholder="Placeholder text"
+      type="text"
+    />
+  </ComponentPreview>
+  <h3>
+    Javascript methods
+  </h3>
+  <p>
+    <CodeTags
+      code="dg.validation.init()"
+      type="primary"
+    />
+     can be used on a form tag to initialize all fields contained in the form, or you can pass a single field to initialize just that one.
+  </p>
+</section>
+`;
+
+exports[`Component: InputField Overview renders 1`] = `
+<section
+  id="input-field-overview"
+>
+  <h2
+    id="input-field"
+  >
+    Input field
+  </h2>
+  <p>
+    Use a Input field when the expected user input is a single line of text. A Input field must always have a Input label that clearly describes the type of input a field requires and it may also have a Placeholder example text, refer to 
+    <a
+      href="#content-guidelines"
+    >
+      content guidelines
+    </a>
+     for more information.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+    showCasePanelAdvanced={
+      Object {
+        "elements": Array [
+          Object {
+            "component": <InputGroup
+              label="Input label"
+              placeholder="Placeholder text"
+              type="text"
+            />,
+            "description": <React.Fragment>
+              <p>
+                Inputs fields have a few different states which includes the default state, focus state, disabled state and error state.
+              </p>
+              <p>
+                The default input type is text but it can also be specified as for example Email which will make it automatically validated when submitted or Password which will mask the characters submitted.
+              </p>
+              <div
+                className="alert alert-informative mt-3"
+              >
+                <i
+                  aria-hidden="true"
+                  className="material-icons alert-icon align-self-start"
+                >
+                  info
+                </i>
+                <p>
+                  <b>
+                    Usage with icon.
+                  </b>
+                   Remember to wrap your inputfield within an 
+                  <CodeTags
+                    code=".input-group"
+                    type="secondary"
+                  />
+                </p>
+              </div>
+            </React.Fragment>,
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "inputs": Array [
+                    Object {
+                      "id": "input_icon",
+                      "name": "With icon",
+                      "value": Object {
+                        "prefixType": "icon",
+                        "prefixValue": "email",
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "inputs": Array [
+                    Object {
+                      "id": "help_icon",
+                      "name": "With help icon",
+                      "value": Object {
+                        "tooltip": true,
+                      },
+                    },
+                    Object {
+                      "id": "optional",
+                      "name": "Is optional",
+                      "value": Object {
+                        "optional": true,
+                      },
+                    },
+                  ],
+                  "title": "Label add on",
+                },
+              ],
+              "radio": Array [
+                Object {
+                  "id": "unit_radio",
+                  "title": "Input type examples",
+                  "values": Array [
+                    Object {
+                      "name": "Text",
+                      "value": Object {
+                        "type": "text",
+                      },
+                    },
+                    Object {
+                      "name": "E-mail",
+                      "value": Object {
+                        "type": "email",
+                      },
+                    },
+                    Object {
+                      "name": "Tel",
+                      "value": Object {
+                        "type": "tel",
+                      },
+                    },
+                    Object {
+                      "name": "Password",
+                      "value": Object {
+                        "type": "password",
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "state_radio",
+                  "title": "State modifiers",
+                  "values": Array [
+                    Object {
+                      "name": "Default",
+                      "value": Object {
+                        "disabled": false,
+                      },
+                    },
+                    Object {
+                      "name": "Error",
+                      "value": Object {
+                        "errorMessage": "Descriptive helpful error message.",
+                        "helpBlock": true,
+                        "validationState": "error",
+                      },
+                    },
+                    Object {
+                      "name": "Disabled",
+                      "value": Object {
+                        "disabled": true,
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "title": "Input field",
+          },
+        ],
+        "id": "no-tabs",
+      }
+    }
+  />
+  <h3>
+    When to consider something else
+  </h3>
+  <ul
+    className="pl-3 list list-bullet"
+  >
+    <li>
+      Use a 
+      <b>
+        Textarea
+      </b>
+       when the expected user input is more than one sentence
+    </li>
+  </ul>
+</section>
+`;
+
+exports[`Component: InputField Textarea renders 1`] = `
+<section
+  id="textarea-overview"
+>
+  <h2
+    id="textarea"
+  >
+    Textarea
+  </h2>
+  <p>
+    Use a Textarea when the expected user input is more than one sentence. Textareas must always have a Input label that clearly describes the type of input a field requires and it may also have a Placeholder example text, refer to 
+    <a
+      href="#content-guidelines"
+    >
+      content guidelines
+    </a>
+     for more information. 
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+    showCasePanelAdvanced={
+      Object {
+        "elements": Array [
+          Object {
+            "component": <InputGroup
+              label="Input label"
+              placeholder="Placeholdet text"
+              type="textarea"
+            />,
+            "description": "Textareas have a few different sates which includes the default state, focus state, disabled state and error state. ",
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "inputs": Array [
+                    Object {
+                      "id": "help_icon_textarea",
+                      "name": "With help icon",
+                      "value": Object {
+                        "tooltip": true,
+                      },
+                    },
+                    Object {
+                      "id": "optional_textarea",
+                      "name": "Is optional",
+                      "value": Object {
+                        "optional": true,
+                      },
+                    },
+                  ],
+                  "title": "Label add on",
+                },
+              ],
+              "radio": Array [
+                Object {
+                  "id": "state_radio_textarea",
+                  "title": "State modifiers",
+                  "values": Array [
+                    Object {
+                      "name": "Default",
+                      "value": Object {
+                        "disabled": false,
+                      },
+                    },
+                    Object {
+                      "name": "Error",
+                      "value": Object {
+                        "errorMessage": "Descriptive helpful error message.",
+                        "helpBlock": true,
+                        "validationState": "error",
+                      },
+                    },
+                    Object {
+                      "name": "Disabled",
+                      "value": Object {
+                        "disabled": true,
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "title": "Textarea",
+          },
+        ],
+        "id": "no-tabs",
+      }
+    }
+  />
+  <h3>
+    When to consider something else
+  </h3>
+  <ul
+    className="pl-3 list list-bullet"
+  >
+    <li>
+      Use a 
+      <b>
+        Input field
+      </b>
+       when the expected user input is a short text
+    </li>
+  </ul>
+</section>
+`;
+
+exports[`Component: InputField renders 1`] = `
+<DocContainer>
+  <section
+    id="input-field-doc"
+  >
+    <p
+      className="lead"
+    >
+      Input fields typically reside in forms and enable the user to interact with and input words, characters or numbers. Depending on the expected length of the user input use either a Input field for shorter input or a Textarea for longer input.
+    </p>
+    <Overview />
+    <Textarea />
+    <ContentGuidelines />
+    <DeveloperDocumentation />
+  </section>
+</DocContainer>
+`;
