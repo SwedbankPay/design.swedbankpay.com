@@ -133,6 +133,11 @@ module.exports = [
                 outlined: true
             }, */
             {
+                title: "Input field",
+                path: "/components/input-field",
+                componentPath: "components/InputField"
+            },
+            {
                 title: "Input Group",
                 path: "/components/input-group",
                 componentPath: "components/InputGroup"
