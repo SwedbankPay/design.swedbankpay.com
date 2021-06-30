@@ -109,18 +109,60 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
     Error message
   </h3>
   <p>
-    When input isn’t accepted, input fields should display an error message. 
+    When input isn’t accepted, input fields should display a short and concise error message, it should be no more than a single sentence
   </p>
-  <ul
-    className="list list-bullet"
+  <div
+    className="row placeholder-guideline"
   >
-    <li>
-      Clearly explain what went wrong and how to fix it.
-    </li>
-    <li>
-      Be short and concise, no more than a single sentence.
-    </li>
-  </ul>
+    <div
+      className="col-6"
+    >
+      <div
+        className="slab slab-plain slab-border-success pb-4"
+      >
+        <h3
+          className="mb-3 mt-0"
+        >
+          Do
+        </h3>
+        <InputGroup
+          defaultValue="Name.com"
+          errorMessage="The email adress must include \\"@\\""
+          helpBlock={true}
+          label="Email adress"
+          type="text"
+          validationState="error"
+        />
+      </div>
+      <p>
+        Do explain what went wrong and how to fix it.
+      </p>
+    </div>
+    <div
+      className="col-6"
+    >
+      <div
+        className="slab slab-plain slab-border-error pb-4"
+      >
+        <h3
+          className="mb-3 mt-0"
+        >
+          Don't
+        </h3>
+        <InputGroup
+          defaultValue="Name.com"
+          errorMessage="Invalid input"
+          helpBlock={true}
+          label="Email adress"
+          type="text"
+          validationState="error"
+        />
+      </div>
+      <p>
+        Don't use technical jargong 
+      </p>
+    </div>
+  </div>
 </section>
 `;
 
