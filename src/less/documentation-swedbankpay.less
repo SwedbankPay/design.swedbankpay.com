@@ -684,15 +684,13 @@
             //Hides the top bar when there is only one tab
             &#no-tabs {
                 #undefined-ul {
+                    border-bottom: 1px solid @light-brown;
+
                     .active {
                         a {
                             display: none;
                         }
                     }
-                }
-
-                .component-preview {
-                    padding-top: 0;
                 }
             }
 
@@ -971,9 +969,24 @@
     }
 
     #input-field-doc {
+        #input-field-overview {
+            .form-group {
+                margin-top: 1rem;
+                margin-bottom: 2rem;
+            }
+        }
+
         .form-group {
             width: 21.25rem;
             margin: auto;
+        }
+
+        .component-description {
+            min-height: auto;
+
+            h3 {
+                margin-top: 0;
+            }
         }
 
         textarea {
@@ -983,13 +996,6 @@
         .placeholder-guideline {
             .form-group {
                 width: 100%;
-            }
-        }
-
-        #input-field-overview {
-            .form-group {
-                margin-top: 2rem;
-                margin-bottom: 2rem;
             }
         }
     }
