@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer } from "@docutils";
@@ -77,11 +77,24 @@ const ContentGuidelines = () => (
         </div>
 
         <h3>Error message</h3>
-        <p>When input isn’t accepted, input fields should display an error message. </p>
-        <ul className="list list-bullet">
-            <li>Clearly explain what went wrong and how to fix it.</li>
-            <li>Be short and concise, no more than a single sentence.</li>
-        </ul>
+        <p>When input isn’t accepted, input fields should display a short and concise error message, it should be no more than a single sentence</p>
+
+        <div className="row placeholder-guideline">
+            <div className="col-6">
+                <div className="slab slab-plain slab-border-success pb-4">
+                    <h3 className="mb-3 mt-0">Do</h3>
+                    <InputGroup type="text" validationState="error" helpBlock errorMessage='The email adress must include "@"' label="Email adress" defaultValue="Name.com"/>
+                </div>
+                <p>Do explain what went wrong and how to fix it.</p>
+            </div>
+            <div className="col-6">
+                <div className="slab slab-plain slab-border-error pb-4">
+                    <h3 className="mb-3 mt-0">Don&#x27;t</h3>
+                    <InputGroup type="text" validationState="error" helpBlock errorMessage="Invalid input" label="Email adress" defaultValue="Name.com"/>
+                </div>
+                <p>Don&#x27;t use technical jargong </p>
+            </div>
+        </div>
     </section>
 );
 
