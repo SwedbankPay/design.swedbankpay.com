@@ -2,49 +2,6 @@ import React from "react";
 import InputGroup from "@components/InputGroup";
 import CodeTags from "@components/CodeTags";
 
-export const howToUse = [
-    {
-        type: "success",
-        component: "",
-        text: <p>Do use <b>sliders</b> for content with numeric values.</p>
-    },
-    {
-        type: "success",
-        component: "",
-        text: <p>The <b>sliders</b> component also have a post label for special symbols to help the user easier understand the slider value. It could be shown as above with the percentage symbol.</p>
-    },
-    {
-        type: "success",
-        component: "",
-        text: <p>It also have a pre label for other symbols such as currency e.g. €, $ and £.</p>
-    },
-    {
-        type: "error",
-        component: "",
-        text: <p>Don’t modify and remove label and maximum/minimum indicators as this makes it harder for user to grasp the content and context of use.</p>
-    },
-    {
-        type: "error",
-        component:
-            <div>
-                <div className="rangeslider">
-                    <input type="range"/>
-                    <div className="d-flex justify-content-between">
-                        <p className="rangeslider-label">Label</p>
-                        <output className="value-label px-2 align-items-center">
-                            Average
-                        </output>
-                    </div>
-                    <div className="value-range">
-                        <small>Poor</small>
-                        <small>Great</small>
-                    </div>
-                </div>
-            </div>,
-        text: <p>Don’t use sliders for content without numeric values.</p>
-    }
-];
-
 export const inputShowCase = {
     id: "no-tabs",
     elements: [
