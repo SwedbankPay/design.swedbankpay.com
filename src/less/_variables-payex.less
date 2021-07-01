@@ -7,53 +7,54 @@
 /* OVERRIDES */
 
 /* Grayscale */
-@black:                                     #222222;
-@text-gray:                                 #767676;
+@black:                                     #000000;
+@text-gray:                                 @brand-secondary;
 @list-gray:                                 #999999;
-@light-gray:                                #f9f8f6;
+@light-gray:                                #F4F4F4;
 @white:                                     #ffffff;
 
 /* Main Brand Color Variants */
-@brand-primary:                             #2da944;
-@brand-primary-light:                       #2da944;
-@brand-primary-light-2:                     #2da944;
-@brand-primary-light-3:                     #2da944;
+@brand-primary:                             #2A9D3F;
+@brand-primary-light:                       @brand-primary;
+@brand-primary-light-2:                     @brand-primary;
+@brand-primary-light-3:                     @brand-primary;
 @brand-primary-faded:                         fade(@brand-primary, 60%);
-@brand-secondary-dark-1:                    #3c3c3c;
-@brand-secondary-dark-2:                    #3c3c3c;
-@brand-secondary:                           #2da944;
-@brand-secondary-light-1:                   #3c3c3c;
-@brand-secondary-light-2:                   #3c3c3c;
-@brand-secondary-light-3:                   #3c3c3c;
-@brand-secondary-light-4:                   #3c3c3c;
-@brand-secondary-info-1:                    #8acdc3;
+
+@brand-secondary:                           #3c3c3c; //krockar med text i designGuiden och checkbox + progress steps, radio?
+@brand-secondary-dark-1:                    @brand-secondary;
+@brand-secondary-dark-2:                    @brand-secondary; //actionlist, badge, breadcrumbs, code-views, dialog, nav, topbar, material-icons-styling
+@brand-secondary-light-1:                   @brand-secondary;
+@brand-secondary-light-2:                   #C8C8C8;
+@brand-secondary-light-3:                   @brand-secondary;
+@brand-secondary-light-4:                   @brand-secondary;
+@brand-secondary-info-1:                    @brand-secondary-light-3;
 @brand-secondary-info-2:                    #efb7b6;
 
-@brand-tertiary:                            #2da944;
-@brand-accent:                              #2da944;
-@brand-accent-links:                        #2da944;
-
+@brand-tertiary:                            @brand-primary;
+@brand-accent:                              @brand-secondary; //loader
+@blue-bright:                               @brand-secondary-light-2; // loaders
+@brand-accent-links:                        @brand-secondary;
 
 /* Background Colors */
-@brand-bg-1:                                #efefef;
-@brand-bg-2:                                #ebf8f2;
+@brand-bg-1:                                #E8F3E6; //card, code-tags, links, slab, tables.
+@brand-bg-2:                                #E8F3E6;
 @brand-bg-3:                                #fbedf4;
-@brand-bg-4:                                #e9f7fb;
-@brand-bg-gray:                             #ebe7e2;
+@brand-bg-4:                                #EAF8FC;
+@brand-bg-gray:                             @brand-secondary-light-2; //progress step, topbar, tabs, lists, rangeslider krockar ev.
 @brand-bg-white:                            #ffffff;
 
 /* State colors */
-@brand-success:                             #2da944;
-@brand-success-light:                       #f2f7eb;
-@brand-success-light-2:                     #99cc66;
+@brand-success:                             #207931;
+@brand-success-light:                       #E8F3E6;
+@brand-success-light-2:                     @brand-success;
 @brand-warning:                             #f9ce22;
-@brand-warning-light:                       #fff3d5;
-@brand-warning-2:                           #ee7023;
+@brand-warning-light:                       #FFECD5;
+@brand-warning-2:                           #F35B1C;
 @brand-error-border:                        #f1bbb9;
-@brand-error:                               #cd2e00;
-@brand-error-light:                         #f9ded3;
-@brand-info:                                #266c9a;
-@brand-info-light:                          #e8eff9;
+@brand-error:                               #C5131C;
+@brand-error-light:                         #FFEBE3;
+@brand-info:                                #3E6AB6;
+@brand-info-light:                          #E8EFF9;
 
 /* Brand fonts */
 @brand-headline:                            "Roboto", sans-serif;
@@ -62,44 +63,31 @@
 @brand-monofont:                            monospace;
 
 /* Button colors */
-@primary-disabled-bg:                     #f5b895;
-@secondary-disabled-bg:                       #98d0d6;
+@primary-disabled-bg:                       #f5b895;
+@secondary-disabled-bg:                     #98d0d6;
 @destructive-disabled-bg:                   #f9ded3;
 
-@btn-primary-color:                       @white;
-@btn-primary-bg:                          @brand-tertiary;
-@btn-primary-hover:                       @brand-primary-faded;
-@btn-primary-disabled-color:              @white;
-@btn-primary-disabled-bg:                 #2da944c2;
+@btn-primary-color:                         @white;
+@btn-primary-bg:                            @brand-tertiary;
+@btn-primary-hover:                         @brand-success;
+@btn-primary-disabled-color:                @white;
+@btn-primary-disabled-bg:                   @brand-secondary-light-2;
 
-@btn-secondary-color:                         #231f20;
-@btn-secondary-bg:                            #c4c6c8;
-@btn-secondary-hover:                         @brand-primary-light;
-@btn-secondary-disabled-color:                @white;
-@btn-secondary-disabled-bg:                   #c4c6c8;
+@btn-secondary-color:                       @white;
+@btn-secondary-bg:                          @brand-secondary;
+@btn-secondary-hover:                       @brand-primary;
+@btn-secondary-disabled-color:              @white;
+@btn-secondary-disabled-bg:                 @brand-secondary-light-2;
 
-@btn-destructive-color:                    @white;
-@btn-destructive-bg:                       @brand-error;
-@btn-destructive-hover:                    #e07088;
-@btn-destructive-disabled-color:           @white;
-@btn-destructive-disabled-bg:              @destructive-disabled-bg;
+@btn-destructive-color:                     @white;
+@btn-destructive-bg:                        @brand-error;
+@btn-destructive-hover:                     #EE4E56;
+@btn-destructive-disabled-color:            @white;
+@btn-destructive-disabled-bg:               @destructive-disabled-bg;
 
-@btn-link-color:                            #266c9a;
+@btn-link-color:                            @brand-secondary;
 @btn-link-disabled-color:                   @list-gray;
-
-
-/* OVERRIDES */
-.tabs > ul > li {
-    > a {
-        &:hover {
-            color: @white;
-        }
-    }
-
-    &.active > a {
-        color: @white;
-    }
-}
+@link-hover-color:                          @brand-primary;
 
 /* Other colors */
 @yellow-faded:                              #FBDD91;
@@ -107,5 +95,192 @@
 @blue-syntax-highlight:                     #43D0DD;
 @yellow-syntax-highlight:                   #FFF3D5;
 @pink-cards-details:                        #c5569a;
-@dark-brown:                                #493c3b;
-@light-brown:                               #d4c4bc;
+@dark-brown:                                @brand-secondary; //toggleboxes
+@light-brown:                               @brand-secondary-light-3;
+@help-block-text:                           #707070;
+@tab-link:                                  @help-block-text;
+
+
+/* ==========================================================================
+ *
+ * This section overrides styling for classes/elements with the PayEx brand theme
+ *
+ */
+
+/* tabs */
+.tabs > ul > li {
+    > a {
+        color: @tab-link;
+
+        &:hover {
+            color: @brand-secondary;
+            background-color: transparent;
+        }
+    }
+
+    &.active > a {
+        color: @brand-secondary;
+    }
+}
+
+/* Buttons */
+.btn.btn-primary.btn-bank-id i.bank-id {
+    background-color: @white;
+}
+
+.btn.btn-primary {
+    &:active {
+        border: @brand-primary;
+        box-shadow: none;
+    }
+}
+
+.btn.btn-secondary {
+    &:focus {
+        border: 2px solid @brand-primary;
+        box-shadow: none;
+    }
+
+    &:active {
+        border: 1px solid @brand-secondary-info-1;
+    }
+}
+
+.btn {
+    &.btn-guiding-destructive:active {
+        border: 2px solid @btn-destructive-hover;
+        box-shadow: none;
+    }
+
+    &.btn-executive-destructive:active {
+        border: 2px solid @btn-destructive-hover;
+        box-shadow: none;
+    }
+
+    &.loading {
+        &.btn-primary,
+        &.btn-secondary {
+            &:after {
+                border-color: @brand-secondary-light-2;
+                border-left-color: @brand-secondary;
+            }
+        }
+    }
+}
+
+/* Material Icons */
+.material-icons {
+    font-family: "Material Icons Outlined";
+}
+
+.help-block {
+    color: @help-block-text;
+}
+
+/* Forms */
+.form-control {
+    border-color: @brand-secondary-light-2;
+    border-bottom-color: @brand-secondary;
+}
+
+/* Checkbox */
+.checkbox {
+    border: @brand-secondary;
+
+    input[type="checkbox"] {
+        + label:after {
+            border: 2px solid @brand-secondary;
+        }
+
+        + label:hover {
+            border-color: @brand-secondary;
+        }
+
+        &:hover + label:before {
+            top: 2px;
+            box-shadow: 0 0 0 0.5rem @brand-secondary-light-2;
+        }
+    }
+}
+
+/* Links */
+a {
+    color: @brand-success;
+
+    &:hover,
+    &:focus {
+        color: @link-hover-color;
+    }
+}
+
+a.icon-link {
+    > span {
+        color: @brand-success;
+    }
+
+    &:hover {
+        color: @link-hover-color;
+    }
+}
+
+a.action-link {
+    &:after {
+        color: @brand-secondary;
+    }
+
+    &:hover {
+        color: @brand-secondary;
+        text-decoration: none;
+    }
+}
+
+
+/* Badge */
+.badge.badge-default {
+    color: @white;
+}
+
+/* Toast */
+#toast-container .toast {
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    &.toast-neutral,
+    &.toast-success,
+    &.toast-warning,
+    &.toast-danger {
+        border: none;
+    }
+}
+
+/* Alert */
+.alert {
+    &.alert-success,
+    &.alert-warning,
+    &.alert-danger,
+    &.alert-informative {
+        border: none;
+    }
+
+    [data-alert-close] {
+        color: @brand-secondary;
+    }
+}
+
+/* Table */
+.table > tbody > tr:nth-child(odd) {
+    background-color: @light-gray;
+}
+
+/* Tooltip */
+[data-tooltip] {
+    &:before {
+        border-color: @brand-secondary transparent transparent transparent;
+    }
+
+    .tooltip,
+    &:after {
+        background-color: @brand-secondary;
+        color: @white;
+    }
+}
