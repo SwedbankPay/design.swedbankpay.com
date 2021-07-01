@@ -1,7 +1,7 @@
 .checkbox {
     position: relative;
     display: flex;
-    align-items: center;
+    flex-direction: column;
 
     &:not(:last-child) {
         margin-bottom: @base-margin;
@@ -11,11 +11,13 @@
         position: relative;
         align-items: center;
         margin: 0;
+        margin-left: 2rem;
         padding-left: @checkbox-label-padding;
         min-height: 1.5rem;
     }
 
     input[type="checkbox"] {
+        position: absolute;
         margin-right: @base-margin;
         opacity: 0;
 
@@ -90,6 +92,54 @@
             &:after,
             &:checked + label:after {
                 cursor: not-allowed;
+            }
+        }
+    }
+
+    &.has-error {
+        + .help-block[data-error]{
+            color: @brand-error;
+
+            &:after {
+                content: attr(data-error)
+            }
+        }
+        
+        input[type="checkbox"] {
+            + label:after {
+                border-color: @brand-error;
+            }
+        }
+    }
+}
+
+fieldset {
+    &.checkbox-group {
+        legend {
+            margin-bottom: 0;
+            border: none;
+            font-weight: bold;
+        }
+    }
+
+    &[disabled] {
+        legend {
+            color: @light-brown;
+        }
+    }
+
+    &.has-error {
+        .help-block[data-error]{
+            color: @brand-error;
+
+            &:after {
+                content: attr(data-error)
+            }
+        }
+        
+        input[type="checkbox"] {
+            + label:after {
+                border-color: @brand-error;
             }
         }
     }
