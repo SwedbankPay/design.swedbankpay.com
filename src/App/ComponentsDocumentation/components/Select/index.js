@@ -14,13 +14,13 @@ const WhenToUse = () => (
                 <div className="row wrong mb-3">
                     <div className="col-6">
                         <div className="px-4 slab slab-plain slab-border-success d-flex flex-column">
-                            <h4 className="mt-0 mb-3">Do</h4>
+                            <span className="h4 mt-0 mb-3">Do</span>
                             {correct}
                         </div>
                     </div>
                     <div className="col-6">
                         <div className="px-4 slab slab-plain slab-border-error h-100">
-                            <h4 className="mt-0 mb-3">Don&#x27;t</h4>
+                            <span className="h4 mt-0 mb-3">Don&#x27;t</span>
                             <div >
                                 <InputGroup type="select" label={label} placeholder={placeholder} selectOptions={selectOptions} />
                             </div>
@@ -37,11 +37,11 @@ const WhenToUse = () => (
 const Overview = () => (
     <section>
         <h2 id="overview">Overview</h2>
-        <ComponentPreview language="html" codeFigure showCasePanel removeOuterTag showCasePanelAdvanced={selectOverview} />
-        <h3>When to consider something else</h3>
+        <ComponentPreview language="html" codeFigure showCasePanel showCasePanelAdvanced={selectOverview} />
+        {/* <h3>When to consider something else</h3>
         <ul className="pl-3">
             <li>To present a list of possible navigation options or actions that for example effects the filtering of the page, use the <Link to="/components/dropdown-menu">Dropdown menu</Link> component instead of a Select. </li>
-        </ul>
+        </ul> */}
 
         <h3>When to use Select</h3>
 
@@ -66,8 +66,9 @@ const ContentGuidelines = () => (
 
 const DeveloperDocumentation = () => (
     <section>
-        <h2 id="developer-documentation">Developer unnecessary  documentation</h2>
-        <h4 className="mt-3">Error state</h4>
+        <h2 id="developer-documentation">Developer documentation</h2>
+        <span className="h4 mt-3">Error state</span>
+
         <p>If the user don’t select any option in a select that is required to be filled, an error message should be displayed. Add the <CodeTags type="secondary" code=".has-error"/> class to the <CodeTags type="primary" code="form-group"/> element, and insert the error message in the attribute <CodeTags type="primary" code="data-error"/> in the <CodeTags type="primary" code="help-block"/> element. </p>
 
         <ComponentPreview language="html" codeFigure showCasePanel>
@@ -76,15 +77,15 @@ const DeveloperDocumentation = () => (
                     <label>{"\n"}
                             Label{"\n"}
                     </label>{"\n"}
-                    <select className="form-control" required>{"\n"}
-                        <option selected disabled hidden>Select option</option>{"\n"}
+                    <select className="form-control" defaultValue="placeholder" required>{"\n"}
+                        <option value="placeholder" disabled hidden>Select option</option>{"\n"}
                     </select>
                     <div className="help-block" data-error="Descriptive helpful error message."></div>
                 </div>
             </form>
         </ComponentPreview>
 
-        <h4>Disabled state</h4>
+        <span className="h4">Disabled state</span>
         <p>Disable a select by adding the  <CodeTags type="primary" code="disabled"/>  attribute to the desired select. You can also disable a <CodeTags type="primary" code="form-group"/> or <CodeTags type="primary" code="fieldset"/>, refer to <Link to="/components/forms">forms</Link> for more info.</p>
 
         <ComponentPreview language="html" codeFigure showCasePanel>
