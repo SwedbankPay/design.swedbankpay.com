@@ -45,13 +45,13 @@ exports[`Component: Select DeveloperDocumentation renders 1`] = `
   <h2
     id="developer-documentation"
   >
-    Developer unnecessary  documentation
+    Developer documentation
   </h2>
-  <h4
-    className="mt-3"
+  <span
+    className="h4 mt-3"
   >
     Error state
-  </h4>
+  </span>
   <p>
     If the user don’t select any option in a select that is required to be filled, an error message should be displayed. Add the 
     <CodeTags
@@ -99,6 +99,7 @@ exports[`Component: Select DeveloperDocumentation renders 1`] = `
 
         <select
           className="form-control"
+          defaultValue="placeholder"
           required={true}
         >
           
@@ -106,7 +107,7 @@ exports[`Component: Select DeveloperDocumentation renders 1`] = `
           <option
             disabled={true}
             hidden={true}
-            selected={true}
+            value="placeholder"
           >
             Select option
           </option>
@@ -120,9 +121,11 @@ exports[`Component: Select DeveloperDocumentation renders 1`] = `
       </div>
     </form>
   </ComponentPreview>
-  <h4>
+  <span
+    className="h4"
+  >
     Disabled state
-  </h4>
+  </span>
   <p>
     Disable a select by adding the  
     <CodeTags
@@ -173,7 +176,6 @@ exports[`Component: Select Overview renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
     showCasePanelAdvanced={
       Object {
@@ -214,6 +216,35 @@ exports[`Component: Select Overview renders 1`] = `
                   "title": "Label add on",
                 },
               ],
+              "radio": Array [
+                Object {
+                  "id": "state_radio",
+                  "title": "State modifiers",
+                  "values": Array [
+                    Object {
+                      "name": "Default",
+                      "value": Object {
+                        "disabled": false,
+                      },
+                    },
+                    Object {
+                      "name": "Error",
+                      "value": Object {
+                        "errorMessage": "Descriptive helpful error message.",
+                        "helpBlock": true,
+                        "required": true,
+                        "validationState": "error",
+                      },
+                    },
+                    Object {
+                      "name": "Disabled",
+                      "value": Object {
+                        "disabled": true,
+                      },
+                    },
+                  ],
+                },
+              ],
             },
             "title": "Select",
           },
@@ -222,22 +253,6 @@ exports[`Component: Select Overview renders 1`] = `
       }
     }
   />
-  <h3>
-    When to consider something else
-  </h3>
-  <ul
-    className="pl-3"
-  >
-    <li>
-      To present a list of possible navigation options or actions that for example effects the filtering of the page, use the 
-      <Link
-        to="/components/dropdown-menu"
-      >
-        Dropdown menu
-      </Link>
-       component instead of a Select. 
-    </li>
-  </ul>
   <h3>
     When to use Select
   </h3>
