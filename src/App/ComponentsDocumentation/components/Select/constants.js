@@ -30,6 +30,35 @@ export const selectOverview = {
                             }
                         ]
                     }
+                ],
+                radio: [
+                    {
+                        id: "state_radio",
+                        title: "State modifiers",
+                        values: [
+                            {
+                                name: "Default",
+                                value: {
+                                    disabled: false
+                                }
+                            },
+                            {
+                                name: "Error",
+                                value: {
+                                    errorMessage: "Descriptive helpful error message.",
+                                    validationState: "error",
+                                    helpBlock: true,
+                                    required: true
+                                }
+                            },
+                            {
+                                name: "Disabled",
+                                value: {
+                                    disabled: true
+                                }
+                            }
+                        ]
+                    }
                 ]
             },
             title: "Select",
