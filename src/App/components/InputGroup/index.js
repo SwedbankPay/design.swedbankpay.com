@@ -64,7 +64,7 @@ const InputGroup = ({
     );
 
     return (
-        <div className={`form-group${disabled ? " disabled" : ""}`}>{"\n"}
+        <div className={`form-group${disabled ? " disabled" : ""}${type === "select" ? errorMessage ? " has-error" : "" : ""}`}>{"\n"}
             {label ? <label htmlFor={id}>{"\n"}{label} {optional && "(optional)"}{tooltip && "\n"}
                 {tooltip &&
                     <i className="material-icons help-icon" data-tooltip="Some informative text" data-tooltip-position="top">{"\n"}
@@ -94,11 +94,11 @@ const InputGroup = ({
                     {type === "textarea" ?
                         <textarea {...attrs}></textarea>
                         : type === "select" ?
-                            <select className="form-control" disabled={disabled} readOnly={readOnly}>{"\n\t\t"}
-                                {placeholder && <option value="" selected disabled hidden >{placeholder}</option> }
+                            <select className="form-control" defaultValue="placeholder" disabled={disabled} readOnly={readOnly} required={required}>{"\n\t\t"}
+                                {placeholder && <option value="placeholder" disabled hidden>{placeholder}</option> }
                                 {selectOptions.map((opt, i) => (
                                     <Fragment key={opt + i}>
-                                        <option>{opt}</option>{(i !== selectOptions.length - 1) ? "\n\t\t" : ""}
+                                        <option value={opt}>{opt}</option>{(i !== selectOptions.length - 1) ? "\n\t\t" : ""}
                                     </Fragment>
                                 ))}{"\n\t"}
                             </select>
