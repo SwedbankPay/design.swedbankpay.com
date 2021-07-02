@@ -15,7 +15,7 @@ const HowTo = () => (
                     <span className="h3">Do</span>
                     <div className="d-flex flex-column align-items-center">
                         <div className="pt-3 pb-5">
-                            <CheckboxComponent label="Button size" name="radio-guidelines" options={doOptions} group />
+                            <CheckboxComponent groupTitle="Button size" name="radio-guidelines" options={doOptions} group />
                         </div>
                         <p>Short and concise, similar length on the text is always preferred when setting up a checkbox group. Try to sort the options in a logical order.</p>
                     </div>
@@ -26,7 +26,7 @@ const HowTo = () => (
                     <span className="h3">Don&#x27;t</span>
                     <div className="d-flex flex-column align-items-center">
                         <div className="pt-3 pb-5 w-50">
-                            <CheckboxComponent label="Button size" name="radio-guidelines" options={dontOptions} group />
+                            <CheckboxComponent groupTitle="Button size" name="radio-guidelines" options={dontOptions} group />
                         </div>
                         <p>Avoid having labels longer than the rest when possible and displaying options without order.</p>
                     </div>
@@ -58,7 +58,7 @@ const ContentGuidelines = () => (
         <h2 id="content-guidelines">Content guidelines</h2>
         <div className="slab slab-plain">
             <div className="d-flex flex-column align-items-center py-5">
-                <CheckboxComponent label="Group heading" name="radio-guidelines" options={guidelineOptions} group />
+                <CheckboxComponent groupTitle="Group heading" name="radio-guidelines" options={guidelineOptions} group />
             </div>
         </div>
         <ul className="list list-bullet">
@@ -84,7 +84,7 @@ const DeveloperDocumentation = () => (
         <p>Insert the error message in the attribute <CodeTags type="primary" code={"data-error"} /> in the <CodeTags type="secondary" code={".help-block"} /> element. </p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="w-50 m-auto pl-5">
-                <CheckboxComponent label="Group heading" name="checkbox-group-example" options={developerDocOptions} group errorMessage="Descriptive helpful error message." />
+                <CheckboxComponent groupTitle="Group heading" name="checkbox-group-example" options={developerDocOptions} group errorMessage="Descriptive helpful error message." />
             </div>
         </ComponentPreview>
     </section>
@@ -102,4 +102,4 @@ const Checkbox = () => (
 export default Checkbox;
 
 /* for testing */
-export { Overview, ContentGuidelines, HowTo };
+export { Overview, ContentGuidelines, DeveloperDocumentation, HowTo };
