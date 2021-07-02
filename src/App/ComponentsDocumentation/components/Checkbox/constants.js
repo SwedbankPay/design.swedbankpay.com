@@ -4,15 +4,15 @@ import Checkbox from "@components/formComponents/Checkbox";
 const options = [
     {
         id: "radio-example-1",
-        option: "Checkbox label"
+        label: "Checkbox label"
     },
     {
         id: "radio-example-2",
-        option: "Checkbox label"
+        label: "Checkbox label"
     },
     {
         id: "radio-example-3",
-        option: "Checkbox label"
+        label: "Checkbox label"
     }
 ];
 
@@ -20,7 +20,7 @@ export const checkboxShowCase = {
     id: "no-tabs",
     elements: [
         {
-            component: <Checkbox label="Group heading" name="checkbox-group-example" options={options} group />,
+            component: <Checkbox groupTitle="Group heading" name="checkbox-group-example" options={options} group />,
             options: {
                 radio: [
                     {
@@ -58,59 +58,59 @@ export const checkboxShowCase = {
 export const guidelineOptions = [
     {
         id: "radio-guidelines-example-1",
-        option: "Checkbox label"
+        label: "Checkbox label"
     },
     {
         id: "radio-guidelines-example-2",
-        option: "Checkbox label"
+        label: "Checkbox label"
     },
     {
         id: "radio-guidelines-example-3",
-        option: "Checkbox label"
+        label: "Checkbox label"
     }
 ];
 
 export const developerDocOptions = [
     {
         id: "error-example-1",
-        option: "Checkbox label"
+        label: "Checkbox label"
     },
     {
         id: "error-example-2",
-        option: "Checkbox label"
+        label: "Checkbox label"
     },
     {
         id: "error-example-3",
-        option: "Checkbox label"
+        label: "Checkbox label"
     }
 ];
 
 export const doOptions = [
     {
         id: "radio-do-example-1",
-        option: "Small"
+        label: "Small"
     },
     {
         id: "radio-do-example-2",
-        option: "Medium"
+        label: "Medium"
     },
     {
         id: "radio-do-example-3",
-        option: "Large"
+        label: "Large"
     }
 ];
 
 export const dontOptions = [
     {
         id: "radio-dont-example-1",
-        option: "Super duper tiny small"
+        label: "Super duper tiny small"
     },
     {
         id: "radio-dont-example-2",
-        option: "Large"
+        label: "Large"
     },
     {
         id: "radio-dont-example-3",
-        option: "Small"
+        label: "Small"
     }
 ];
