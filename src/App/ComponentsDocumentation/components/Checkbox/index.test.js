@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Checkbox, { Overview, ContentGuidelines, HowTo } from "./index";
+import Checkbox, { Overview, ContentGuidelines, DeveloperDocumentation, HowTo } from "./index";
 
 describe("Component: Checkbox", () => {
     it("is defined", () => {
@@ -37,6 +37,19 @@ describe("Component: Checkbox", () => {
             expect(wrapper).toMatchSnapshot();
         });
     });
+
+    describe("DeveloperDocumentation", () => {
+        it("is defined", () => {
+            expect(DeveloperDocumentation).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<DeveloperDocumentation />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
     describe("HowTo", () => {
         it("is defined", () => {
             expect(HowTo).toBeDefined();
