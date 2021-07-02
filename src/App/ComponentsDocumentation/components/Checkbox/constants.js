@@ -1,5 +1,5 @@
 import React from "react";
-import Checkbox from "@components/formComponents/Checkbox";
+import Checkbox from "@components/FormComponents/Checkbox";
 
 const options = [
     {
