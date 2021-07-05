@@ -168,12 +168,13 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
 
         _resetOptions () {
             const showcasePanel = document.getElementById(this.props.showCasePanelAdvanced.id);
+            const optionsPanel = showcasePanel.querySelector(".options");
 
             showcasePanel.querySelectorAll("input[type=checkbox]").forEach(checkbox => checkbox.checked = false);
             showcasePanel.querySelectorAll("select[id]").forEach(dropdown => dropdown.value = 0);
-            showcasePanel.querySelectorAll(".radio").forEach(radio => radio.querySelector("input").checked = false);
+            optionsPanel.querySelectorAll(".radio").forEach(radio => radio.querySelector("input").checked = false);
 
-            const defaultRadios = [...showcasePanel.querySelectorAll(".radio")].filter(radio => radio.querySelector("input").id.includes("default"));
+            const defaultRadios = [...optionsPanel.querySelectorAll(".radio")].filter(radio => radio.querySelector("input").id.includes("default"));
 
             if (defaultRadios.length > 0) {
                 const defaultRadiosGroups = defaultRadios.map(radio => radio.querySelector("input").name);
@@ -181,10 +182,10 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                 defaultRadios.map(radio => radio.querySelector("input").checked = true);
 
                 // Reset radio groups that do not have default specified (set to top radio). Needs to be done when one or more radio button is specified as default
-                [...showcasePanel.querySelectorAll(".radio")].filter(radio => !defaultRadiosGroups.includes(radio.querySelector("input").name))
+                [...optionsPanel.querySelectorAll(".radio")].filter(radio => !defaultRadiosGroups.includes(radio.querySelector("input").name))
                     .map(radio => radio.querySelector("input").checked = radio.querySelector("input").value === "0");
             } else {
-                showcasePanel.querySelectorAll(".radio").forEach(radio => radio.querySelector("input").checked = radio.querySelector("input").value === "0");
+                optionsPanel.querySelectorAll(".radio").forEach(radio => radio.querySelector("input").checked = radio.querySelector("input").value === "0");
             }
 
         }
