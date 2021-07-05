@@ -87,4 +87,4 @@ const RadioButton = () => (
 export default RadioButton;
 
 /* for testing */
-export { Overview, ContentGuidelines, HowTo };
+export { Overview, ContentGuidelines, DeveloperDocumentation, HowTo };
