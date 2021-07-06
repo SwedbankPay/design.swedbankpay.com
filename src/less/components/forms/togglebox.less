@@ -53,10 +53,11 @@
             content: "";
             position: absolute;
             visibility: visible;
+            margin: 2px;
             top: 0;
             left: 0;
-            height: @checkbox-height;
-            width: @checkbox-width;
+            height: 1.15rem;
+            width: 1.15rem;
             border: 1px solid @checkbox-border-color;
             border-radius: 50%;
             color: @white;
@@ -64,13 +65,13 @@
         }
 
         &:checked + label:before {
-            background: @dark-brown;
+            background: @brand-secondary;
             background-position: left bottom;
             border-color: @checkbox-checked-color;
         }
 
         &:checked + label:after {
-            border-color: @checkbox-checked-color;
+            border-color: @white;
             left: @checkbox-width;
             background-color: @white;
         }
