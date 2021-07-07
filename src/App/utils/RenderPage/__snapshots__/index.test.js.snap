@@ -462,6 +462,11 @@ exports[`Utilities: RenderPage renders 1`] = `
               "title": "Toast",
             },
             Object {
+              "componentPath": "components/Togglebox",
+              "path": "/components/togglebox",
+              "title": "Togglebox",
+            },
+            Object {
               "componentPath": "components/Tooltips",
               "icon": "filter_frames",
               "outlined": true,
