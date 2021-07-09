@@ -7,7 +7,7 @@ import CodeTags from "@components/CodeTags";
 import { Link } from "react-router-dom";
 
 const WhenToUse = () => (
-    <section>
+    <>
         <p>{whenToUse.lead}</p>
         {whenToUse.content.map(({ correct, placeholder, selectOptions, label, text }, i) => (
             <React.Fragment key={i}>
@@ -31,7 +31,7 @@ const WhenToUse = () => (
             </React.Fragment>
         ))}
 
-    </section>
+    </>
 );
 
 const Overview = () => (
@@ -107,4 +107,4 @@ const Select = () => (
 
 export default Select;
 
-export { Overview, ContentGuidelines, DeveloperDocumentation };
+export { Overview, WhenToUse, ContentGuidelines, DeveloperDocumentation };

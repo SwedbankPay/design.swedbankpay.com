@@ -260,6 +260,230 @@ exports[`Component: Select Overview renders 1`] = `
 </section>
 `;
 
+exports[`Component: Select When to use renders 1`] = `
+<Fragment>
+  <p>
+    The select component should be used sparsely, often times there are better and more intuitive ways to present choices for the user.
+  </p>
+  <div
+    className="row wrong mb-3"
+  >
+    <div
+      className="col-6"
+    >
+      <div
+        className="px-4 slab slab-plain slab-border-success d-flex flex-column"
+      >
+        <span
+          className="h4 mt-0 mb-3"
+        >
+          Do
+        </span>
+        <div
+          className="m-auto pb-3"
+        >
+          <p>
+            Background color
+          </p>
+          <Radio
+            checked={true}
+            id="radio-example-1"
+            label="Blue"
+            name="radio-example"
+          />
+          <Radio
+            id="radio-example-2"
+            label="Red"
+            name="radio-example"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-6"
+    >
+      <div
+        className="px-4 slab slab-plain slab-border-error h-100"
+      >
+        <span
+          className="h4 mt-0 mb-3"
+        >
+          Don't
+        </span>
+        <div>
+          <InputGroup
+            label="Background color"
+            placeholder="Select option"
+            selectOptions={
+              Array [
+                "Blue",
+                "Red",
+              ]
+            }
+            type="select"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>
+    In the example above, when there are very few choices, they should not be hidden inside a select list as this makes it harder for user to get an overview. Use 
+    <Link
+      to="/components/radio-button"
+    >
+      radio buttons
+    </Link>
+     instead.
+  </p>
+  <div
+    className="row wrong mb-3"
+  >
+    <div
+      className="col-6"
+    >
+      <div
+        className="px-4 slab slab-plain slab-border-success d-flex flex-column"
+      >
+        <span
+          className="h4 mt-0 mb-3"
+        >
+          Do
+        </span>
+        <Datepicker
+          label="Birthday"
+          placeholder="DD/MM/YYY"
+          prefixType="icon"
+          prefixValue="event"
+        />
+      </div>
+    </div>
+    <div
+      className="col-6"
+    >
+      <div
+        className="px-4 slab slab-plain slab-border-error h-100"
+      >
+        <span
+          className="h4 mt-0 mb-3"
+        >
+          Don't
+        </span>
+        <div>
+          <InputGroup
+            label="Day"
+            placeholder="Select day"
+            selectOptions={
+              Array [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+              ]
+            }
+            type="select"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>
+    Instead of using a dropdown input for selecting a day of the month. It is better to use a 
+    <Link
+      to="/components/datepickers"
+    >
+      datepicker
+    </Link>
+     to let user select the right date faster.
+  </p>
+  <div
+    className="row wrong mb-3"
+  >
+    <div
+      className="col-6"
+    >
+      <div
+        className="px-4 slab slab-plain slab-border-success d-flex flex-column"
+      >
+        <span
+          className="h4 mt-0 mb-3"
+        >
+          Do
+        </span>
+        <InputGroup
+          label="Number of drinks"
+          placeholder="4"
+          type="text"
+        />
+      </div>
+    </div>
+    <div
+      className="col-6"
+    >
+      <div
+        className="px-4 slab slab-plain slab-border-error h-100"
+      >
+        <span
+          className="h4 mt-0 mb-3"
+        >
+          Don't
+        </span>
+        <div>
+          <InputGroup
+            label="Number of drinks"
+            placeholder="Select number"
+            selectOptions={
+              Array [
+                1,
+                2,
+                3,
+                4,
+              ]
+            }
+            type="select"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>
+    Instead of using a dropdown input that will force the user to choose from a set of predefined options it is sometimes better to use an 
+    <Link
+      to="/components/forms"
+    >
+      input field
+    </Link>
+     where the user can type their answer .
+  </p>
+</Fragment>
+`;
+
 exports[`Component: Select renders 1`] = `
 <DocContainer>
   <section

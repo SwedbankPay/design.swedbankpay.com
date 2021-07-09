@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Select, { Overview, ContentGuidelines, DeveloperDocumentation } from "./index";
+import Select, { Overview, WhenToUse, ContentGuidelines, DeveloperDocumentation } from "./index";
 
 describe("Component: Select", () => {
     it("is defined", () => {
@@ -21,6 +21,18 @@ describe("Component: Select", () => {
 
         it("renders", () => {
             const wrapper = shallow(<Overview />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("When to use", () => {
+        it("is defined", () => {
+            expect(WhenToUse).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<WhenToUse />);
 
             expect(wrapper).toMatchSnapshot();
         });
