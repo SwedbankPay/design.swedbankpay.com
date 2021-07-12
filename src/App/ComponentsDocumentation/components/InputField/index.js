@@ -83,14 +83,14 @@ const ContentGuidelines = () => (
             <div className="col-6">
                 <div className="slab slab-plain slab-border-success pb-4">
                     <h3 className="mb-3 mt-0">Do</h3>
-                    <InputGroup type="text" validationState="error" helpBlock errorMessage='The email adress must include "@"' label="Email adress" defaultValue="Name.com"/>
+                    <InputGroup type="text" validationState="error" helpBlock errorMessage='The email address must include "@"' label="Email address" defaultValue="Name.com"/>
                 </div>
                 <p>Do explain what went wrong and how to fix it.</p>
             </div>
             <div className="col-6">
                 <div className="slab slab-plain slab-border-error pb-4">
                     <h3 className="mb-3 mt-0">Don&#x27;t</h3>
-                    <InputGroup type="text" validationState="error" helpBlock errorMessage="Invalid input" label="Email adress" defaultValue="Name.com"/>
+                    <InputGroup type="text" validationState="error" helpBlock errorMessage="Invalid input" label="Email address" defaultValue="Name.com"/>
                 </div>
                 <p>Don&#x27;t use technical jargong </p>
             </div>
@@ -104,7 +104,7 @@ const DeveloperDocumentation = () => (
         <h3 className="mt-3">Autocomplete</h3>
         <p>Add <CodeTags type="primary" code="autocomplete"/> attributes to input fields when it is possible to make a form easier for users to fill. </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <InputGroup type="text" label="Name" autoComplete="on" />
+            <InputGroup type="text" label="Name" autocomplete="on" />
         </ComponentPreview>
 
         <h3>Validation</h3>
