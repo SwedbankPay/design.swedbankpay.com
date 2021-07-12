@@ -2,7 +2,6 @@ import React, { Component, cloneElement } from "react";
 import PropTypes from "prop-types";
 import { renderToStaticMarkup } from "react-dom/server";
 import jsbeautifier from "js-beautify";
-import { defaultProps } from "prism-react-renderer";
 
 // NOTE: dangerousHTML prop is used when wanting to show html in the codefigure without encoding.
 
@@ -117,8 +116,6 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
             default:
                 return "update switchcase!";
         }
-
-        defaultProps.style = "";
 
         return (
             <figure>
