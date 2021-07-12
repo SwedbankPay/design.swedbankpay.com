@@ -65,7 +65,7 @@ const DeveloperDocumentation = () => (
     <section>
         <h2>Developer documentation</h2>
         <span className="h3 d-inline-block mt-3">Disabled state</span>
-        <p>Disable a radiobutton by adding <CodeTags type="primary" code="disabled"/> attribute to the desired radiobutton. You can also disable the <CodeTags type="secondary" code=".form-group"/> or <CodeTags type="primary" code="fieldset"/> in which the slider is located, refer to <Link to="/components/forms">forms</Link> for more info.</p>
+        <p>Disable a radio button by adding <CodeTags type="primary" code="disabled"/> attribute to the desired radio button. You can also disable the <CodeTags type="secondary" code=".form-group"/> or <CodeTags type="primary" code="fieldset"/> in which the radio button is located, refer to <Link to="/components/forms">forms</Link> for more info.</p>
 
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="d-flex justify-content-center">
