@@ -34,8 +34,8 @@ const Rangeslider = ({ label, name, min, max, step, value, disabled, valueLabelP
                 </output>
             </div>
             <div className="value-range">{"\n"}
-                <small>{min}{valueLabelPostfix ? valueLabelPostfix : null}</small>{"\n"}
-                <small>{max}{valueLabelPostfix ? valueLabelPostfix : null}</small>{"\n"}
+                <small>{valueLabelPrefix ? valueLabelPrefix : null}{min}{valueLabelPostfix ? valueLabelPostfix : null}</small>{"\n"}
+                <small>{valueLabelPrefix ? valueLabelPrefix : null}{max}{valueLabelPostfix ? valueLabelPostfix : null}</small>{"\n"}
             </div>
         </div>
     );
