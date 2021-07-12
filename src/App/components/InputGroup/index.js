@@ -39,7 +39,9 @@ const InputGroup = ({
     feedbackIcon,
     helpBlock,
     errorMessage,
-    successMessage
+    successMessage,
+    tooltip,
+    optional
 }) => {
     const attrs = {
         type: type || null,
@@ -62,8 +64,12 @@ const InputGroup = ({
     );
 
     return (
-        <div className={`form-group${disabled ? " disabled" : ""}`}>{"\n"}
-            {label ? <label htmlFor={id}>{label}</label> : null}{label ? "\n" : null}
+        <div className={`form-group${disabled ? " disabled" : ""}${type === "select" ? errorMessage ? " has-error" : "" : ""}`}>{"\n"}
+            {label ? <label htmlFor={id}>{"\n"}{label} {optional && "(optional)"}{tooltip && "\n"}
+                {tooltip &&
+                    <i className="material-icons help-icon" data-tooltip="Some informative text" data-tooltip-position="top">{"\n"}
+                        help_outline{"\n"}</i>}{"\n"}
+            </label> : null}{label ? "\n" : null}
             {prefixValue || postfixValue || feedbackIcon ?
                 <div className={inputGrpClasses}>{"\n"}
                     {prefixValue ? <Addon type={prefixType} value={prefixValue} color={prefixBtnColor} disabled={disabled} /> : null }{prefixValue ? "\n" : null}
@@ -88,10 +94,11 @@ const InputGroup = ({
                     {type === "textarea" ?
                         <textarea {...attrs}></textarea>
                         : type === "select" ?
-                            <select className="form-control" disabled={disabled} readOnly={readOnly}>{"\n\t\t"}
+                            <select className="form-control" defaultValue="placeholder" disabled={disabled} readOnly={readOnly} required={required}>{"\n\t\t"}
+                                {placeholder && <option value="placeholder" disabled hidden>{placeholder}</option> }
                                 {selectOptions.map((opt, i) => (
                                     <Fragment key={opt + i}>
-                                        <option>{opt}</option>{(i !== selectOptions.length - 1) ? "\n\t\t" : ""}
+                                        <option value={opt}>{opt}</option>{(i !== selectOptions.length - 1) ? "\n\t\t" : ""}
                                     </Fragment>
                                 ))}{"\n\t"}
                             </select>

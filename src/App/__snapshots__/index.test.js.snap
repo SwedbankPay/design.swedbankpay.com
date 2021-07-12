@@ -398,6 +398,11 @@ exports[`Main: App renders 1`] = `
                       "title": "Radio button",
                     },
                     Object {
+                      "componentPath": "components/Rangeslider",
+                      "path": "/components/rangeslider",
+                      "title": "Rangeslider",
+                    },
+                    Object {
                       "componentPath": "components/Sheet",
                       "icon": "vertical_split",
                       "outlined": true,
@@ -408,9 +413,9 @@ exports[`Main: App renders 1`] = `
                       "title": "Sheet",
                     },
                     Object {
-                      "componentPath": "components/Rangeslider",
-                      "path": "/components/rangeslider",
-                      "title": "Rangeslider",
+                      "componentPath": "components/Select",
+                      "path": "/components/select",
+                      "title": "Select",
                     },
                     Object {
                       "componentPath": "components/Sidebar",

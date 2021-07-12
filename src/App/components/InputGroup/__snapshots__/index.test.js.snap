@@ -155,7 +155,12 @@ exports[`Component: InputGroup - renders a form-group with a label if prop label
   
 
   <label>
+    
+
     this is a text in a label
+     
+    
+
   </label>
   
 
@@ -393,20 +398,27 @@ exports[`Component: InputGroup - renders a form-group with a select field with g
 
     <select
       className="form-control"
+      defaultValue="placeholder"
     >
       
 		
-      <option>
+      <option
+        value="Bounty hunter"
+      >
         Bounty hunter
       </option>
       
 		
-      <option>
+      <option
+        value="Smuggler"
+      >
         Smuggler
       </option>
       
 		
-      <option>
+      <option
+        value="Jedi"
+      >
         Jedi
       </option>
       

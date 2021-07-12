@@ -760,8 +760,11 @@
 
             .component-description {
                 padding: 2rem;
-                min-height: 15rem;
                 max-width: 40.5rem;
+
+                h3 {
+                    margin-top: 0;
+                }
             }
 
             .options {
@@ -1030,6 +1033,37 @@
                 display: block;
             }
         }
+    }
+
+    i {
+        &.help-icon {
+            margin-bottom: 0.375rem;
+            width: 1.25rem;
+            height: 1.25rem;
+            color: @soft-brown;
+        }
+    }
+
+    #select-doc {
+        .form-group {
+            width: 21.25rem;
+        }
+
+        .wrong {
+            .form-group {
+                width: 100%;
+            }
+        }
+
+        .showcase-panel {
+            .form-group {
+                margin: auto;
+            }
+        }
+    }
+
+    .no-pointer-events {
+        pointer-events: none;
     }
 }
 
