@@ -127,9 +127,9 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
         </h3>
         <InputGroup
           defaultValue="Name.com"
-          errorMessage="The email adress must include \\"@\\""
+          errorMessage="The email address must include \\"@\\""
           helpBlock={true}
-          label="Email adress"
+          label="Email address"
           type="text"
           validationState="error"
         />
@@ -153,7 +153,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
           defaultValue="Name.com"
           errorMessage="Invalid input"
           helpBlock={true}
-          label="Email adress"
+          label="Email address"
           type="text"
           validationState="error"
         />
@@ -192,7 +192,7 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
     showCasePanel={true}
   >
     <InputGroup
-      autoComplete="on"
+      autocomplete="on"
       label="Name"
       type="text"
     />
