@@ -243,49 +243,6 @@ const StaticText = () => (
     </>
 );
 
-const Dropdown = () => (
-    <>
-        <h2 id="dropdown">Dropdown menu</h2>
-        <p>
-            Inserting text next to a <CodeTags type="primary" code={"<select>"} /> works just like any other input element.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
-            <InputGroup
-                label="Profession"
-                type="select"
-                selectOptions={["Bounty hunter", "Smuggler", "Jedi"]}
-            />
-        </ComponentPreview>
-    </>
-);
-
-const Checkboxes = () => (
-    <>
-        <h2 id="checkboxes">Checkboxes</h2>
-        <p>
-            Use checkboxes to make it so a user can select several options. If you need to restrict the number of possible selections to one, see radio buttons.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <Checkbox label="Bread" id="checkbox-example-1" />
-            <Checkbox label="Not bread. I'm not really fond of it. What I would really like, however, is one single piece of cracker with some nutella on it. Perhaps this could be the second checkbox. These thoughts are written here simply to show you how the checkboxes align themselves when label text is fairly long." id="checkbox-example-2" />
-            <Checkbox label="Milk" id="checkbox-example-3" checked />
-        </ComponentPreview>
-    </>
-);
-
-const Toggleboxes = () => (
-    <>
-        <h2 id="toggleboxes">Toggleboxes</h2>
-        <p>
-            Use toggleboxes if you wish present the user with an either-or option.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <Togglebox id="togglebox-example-1" label="Enable overdrive" />
-            <Togglebox id="togglebox-example-2" label="Enable superpowers" checked />
-        </ComponentPreview>
-    </>
-);
-
 const DisabledFormComponents = () => (
     <>
         <h2 id="disabled-form-components">Disabled form components</h2>
@@ -403,9 +360,6 @@ class Forms extends Component {
                 <Validation />
                 <UsageWithFieldsets />
                 <StaticText />
-                <Dropdown />
-                <Checkboxes />
-                <Toggleboxes />
                 <DisabledFormComponents />
                 <JavascriptMethods />
             </DocContainer>
@@ -416,4 +370,4 @@ class Forms extends Component {
 export default Forms;
 
 /* For testing */
-export { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, Dropdown, Checkboxes, Toggleboxes, DisabledFormComponents, JavascriptMethods };
+export { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, DisabledFormComponents, JavascriptMethods };
