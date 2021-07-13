@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import RadioButton, { Overview, ContentGuidelines, HowTo } from "./index";
+import RadioButton, { Overview, ContentGuidelines, DeveloperDocumentation, HowTo } from "./index";
 
 describe("Component: RadioButton", () => {
     it("is defined", () => {
@@ -37,6 +37,19 @@ describe("Component: RadioButton", () => {
             expect(wrapper).toMatchSnapshot();
         });
     });
+
+    describe("DeveloperDocumentation", () => {
+        it("is defined", () => {
+            expect(DeveloperDocumentation).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<DeveloperDocumentation />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
     describe("HowTo", () => {
         it("is defined", () => {
             expect(HowTo).toBeDefined();
