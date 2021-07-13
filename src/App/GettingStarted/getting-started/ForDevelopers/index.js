@@ -29,9 +29,9 @@ const Installation = () => (
         <p>To initialize components use <CodeTags type="secondary" code="dg.<component_name>.init();"/>. If the function is called without arguments it will target all components with class <CodeTags type="secondary" code="<component_name>"/> on the page. Initializing only one component can be done by passing an ID, it must match an existing components ID and will print a warning message if the value is invalid.</p>
 
         <p>If only one component is initialized then the init function will return one object. If several components are initialized it will return an array of objects.</p>
-        <ComponentPreview language="html" codeFigure>
-            {"dg.component.init();\n"}
-            {"dg.component.init(\"demo-component-id\");"}
+        <ComponentPreview language="html" codeFigure removeOuterTag>
+                dg.component.init();{"\n"}
+                dg.component.init(&quot;demo-component-id&quot;);
         </ComponentPreview>
 
         <h3>Browser Support</h3>
