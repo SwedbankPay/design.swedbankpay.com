@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Forms, { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, Dropdown, Checkboxes, Toggleboxes, DisabledFormComponents, JavascriptMethods } from "./index";
+import Forms, { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, DisabledFormComponents, JavascriptMethods } from "./index";
 
 describe("Documentation: Forms", () => {
     it("is defined", () => {
@@ -100,42 +100,6 @@ describe("Documentation: Forms", () => {
 
         it("renders", () => {
             const wrapper = shallow(<StaticText />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("Dropdown", () => {
-        it("is defined", () => {
-            expect(Dropdown).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<Dropdown />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("Checkboxes", () => {
-        it("is defined", () => {
-            expect(Checkboxes).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<Checkboxes />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("Toggleboxes", () => {
-        it("is defined", () => {
-            expect(Toggleboxes).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<Toggleboxes />);
 
             expect(wrapper).toMatchSnapshot();
         });

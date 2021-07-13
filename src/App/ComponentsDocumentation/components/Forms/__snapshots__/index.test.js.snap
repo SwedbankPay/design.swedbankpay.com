@@ -1,37 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Documentation: Forms Checkboxes renders 1`] = `
-<Fragment>
-  <h2
-    id="checkboxes"
-  >
-    Checkboxes
-  </h2>
-  <p>
-    Use checkboxes to make it so a user can select several options. If you need to restrict the number of possible selections to one, see radio buttons.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Checkbox
-      id="checkbox-example-1"
-      label="Bread"
-    />
-    <Checkbox
-      id="checkbox-example-2"
-      label="Not bread. I'm not really fond of it. What I would really like, however, is one single piece of cracker with some nutella on it. Perhaps this could be the second checkbox. These thoughts are written here simply to show you how the checkboxes align themselves when label text is fairly long."
-    />
-    <Checkbox
-      checked={true}
-      id="checkbox-example-3"
-      label="Milk"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
 exports[`Documentation: Forms DisabledFormComponents renders 1`] = `
 <Fragment>
   <h2
@@ -243,42 +211,6 @@ exports[`Documentation: Forms DisabledFormComponents renders 1`] = `
       
 
     </form>
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Documentation: Forms Dropdown renders 1`] = `
-<Fragment>
-  <h2
-    id="dropdown"
-  >
-    Dropdown menu
-  </h2>
-  <p>
-    Inserting text next to a 
-    <CodeTags
-      code="<select>"
-      type="primary"
-    />
-     works just like any other input element.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-  >
-    <InputGroup
-      label="Profession"
-      selectOptions={
-        Array [
-          "Bounty hunter",
-          "Smuggler",
-          "Jedi",
-        ]
-      }
-      type="select"
-    />
   </ComponentPreview>
 </Fragment>
 `;
@@ -754,34 +686,6 @@ exports[`Documentation: Forms StaticText renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Forms Toggleboxes renders 1`] = `
-<Fragment>
-  <h2
-    id="toggleboxes"
-  >
-    Toggleboxes
-  </h2>
-  <p>
-    Use toggleboxes if you wish present the user with an either-or option.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Togglebox
-      id="togglebox-example-1"
-      label="Enable overdrive"
-    />
-    <Togglebox
-      checked={true}
-      id="togglebox-example-2"
-      label="Enable superpowers"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
 exports[`Documentation: Forms UsageWithFieldsets form prevents default 1`] = `
 <Fragment>
   <h2
@@ -1192,9 +1096,6 @@ exports[`Documentation: Forms renders 1`] = `
   <Validation />
   <UsageWithFieldsets />
   <StaticText />
-  <Dropdown />
-  <Checkboxes />
-  <Toggleboxes />
   <DisabledFormComponents />
   <JavascriptMethods />
 </DocContainer>
