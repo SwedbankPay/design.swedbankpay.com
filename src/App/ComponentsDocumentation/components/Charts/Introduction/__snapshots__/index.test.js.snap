@@ -25,11 +25,11 @@ exports[`Dashboard: Introduction Css renders 1`] = `
     language="html"
   >
     <link
-      href="https://design.TESTBRAND.com/TEST/styles/dg-style.css"
+      href="http://localhost/TEST/styles/dg-style.css"
       rel="stylesheet"
     />
     <link
-      href="https://design.TESTBRAND.com/TEST/styles/dg-dashboard.css"
+      href="http://localhost/TEST/styles/dg-dashboard.css"
       rel="stylesheet"
     />
   </ComponentPreview>
@@ -61,10 +61,10 @@ exports[`Dashboard: Introduction JavaScript renders 1`] = `
     language="html"
   >
     <script
-      src="https://design.TESTBRAND.com/TEST/scripts/dg.js"
+      src="http://localhost/TEST/scripts/dg.js"
     />
     <script
-      src="https://design.TESTBRAND.com/TEST/scripts/dg-dashboard.js"
+      src="http://localhost/TEST/scripts/dg-dashboard.js"
     />
   </ComponentPreview>
 </Fragment>
