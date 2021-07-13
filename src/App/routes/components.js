@@ -268,6 +268,11 @@ module.exports = [
                 statusBadges: ["javascript", "updated"]
             },
             {
+                title: "Togglebox",
+                path: "/components/togglebox",
+                componentPath: "components/Togglebox"
+            },
+            {
                 title: "Tooltips",
                 path: "/components/tooltips",
                 componentPath: "components/Tooltips",
