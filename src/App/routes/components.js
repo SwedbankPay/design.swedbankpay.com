@@ -137,11 +137,6 @@ module.exports = [
                 path: "/components/input-field",
                 componentPath: "components/InputField"
             },
-            {
-                title: "Input Group",
-                path: "/components/input-group",
-                componentPath: "components/InputGroup"
-            },
             /* {
                 title: "Lightbox",
                 path: "/components/lightbox",
