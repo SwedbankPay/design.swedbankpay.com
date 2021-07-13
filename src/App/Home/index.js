@@ -5,7 +5,7 @@ import { setTitle, RemoveVscroll } from "../utils";
 import routes from "@src/App/routes/all";
 import packageJson from "~/package";
 
-const BASENAME = process.env.basename;
+const basename = process.env.basename;
 
 const Home = () => {
     useEffect(() => {
@@ -16,7 +16,7 @@ const Home = () => {
     const FrontPage = () => (
         <section className="dg-front-page-container m-auto d-flex flex-column">
             <div className="my-auto">
-                <img src={`${BASENAME}img/background/cluster-bubbles.svg`} className="background-img cluster-bubble d-none d-xl-block mt-n5"/>
+                <img src={`${basename}img/background/cluster-bubbles.svg`} className="background-img cluster-bubble d-none d-xl-block mt-n5"/>
                 <header>
                     <span className="dg-title-small d-block m-0">Welcome to the</span>
                     <span className="dg-title-big my-0">Swedbank Pay Design Guide</span>
@@ -52,7 +52,7 @@ const Home = () => {
                     <i className="material-icons">expand_more</i>
                 </a>
             </div>
-            <img src={`${BASENAME}img/background/large-bubble.svg`} className="background-img large-bubble d-none d-xl-block"/>
+            <img src={`${basename}img/background/large-bubble.svg`} className="background-img large-bubble d-none d-xl-block"/>
 
         </section>
     );
@@ -90,8 +90,8 @@ const Home = () => {
         <div className="doc-container dg-front-page py-0">
             <FrontPage />
             <Changelog />
-            <img src={`${BASENAME}img/background/two-bubbles.svg`} className="background-img two-bubbles d-none d-xl-block"/>
-            <img src={`${BASENAME}img/background/single-bubble.svg`} className="background-img single-bubble d-none d-xl-block"/>
+            <img src={`${basename}img/background/two-bubbles.svg`} className="background-img two-bubbles d-none d-xl-block"/>
+            <img src={`${basename}img/background/single-bubble.svg`} className="background-img single-bubble d-none d-xl-block"/>
         </div>
     );
 };

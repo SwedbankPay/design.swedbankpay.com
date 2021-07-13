@@ -1,7 +1,7 @@
 import React from "react";
 import CardsComponent from "@components/Cards";
 
-const BASENAME = process.env.basename;
+const basename = process.env.basename;
 
 export const overviewCards = {
     id: "overviewCards",
@@ -37,7 +37,7 @@ export const overviewCards = {
                             {
                                 name: "With image",
                                 value: {
-                                    imgSrc: `${BASENAME}img/documentation/cards/img-example.png`,
+                                    imgSrc: `${basename}img/documentation/cards/img-example.png`,
                                     icon: null
                                 }
                             }
