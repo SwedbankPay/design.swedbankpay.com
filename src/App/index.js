@@ -10,9 +10,9 @@ import routes from "./routes/all";
 
 const { topbar } = window.dg;
 
-const BASENAME = process.env.basename || "/";
+const basename = process.env.basename || "/";
 
-const history = createBrowserHistory({ basename: BASENAME });
+const history = createBrowserHistory({ basename });
 
 class ScrollToTop extends Component {
     componentDidUpdate (prevProps) {
@@ -64,7 +64,7 @@ class App extends Component {
 
     render () {
         return (
-            <Router basename={BASENAME} history={history}>
+            <Router basename={basename} history={history}>
                 <ScrollToTopComponent>
                     <AppHeader />
                     <div className="documentation">
