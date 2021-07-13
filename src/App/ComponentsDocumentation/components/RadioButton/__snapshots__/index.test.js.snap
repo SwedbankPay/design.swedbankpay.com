@@ -39,12 +39,12 @@ exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
     Disabled state
   </span>
   <p>
-    Disable a radiobutton by adding 
+    Disable a radio button by adding 
     <CodeTags
       code="disabled"
       type="primary"
     />
-     attribute to the desired radiobutton. You can also disable the 
+     attribute to the desired radio button. You can also disable the 
     <CodeTags
       code=".form-group"
       type="secondary"
@@ -54,7 +54,7 @@ exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
       code="fieldset"
       type="primary"
     />
-     in which the slider is located, refer to 
+     in which the radio button is located, refer to 
     <Link
       to="/components/forms"
     >
