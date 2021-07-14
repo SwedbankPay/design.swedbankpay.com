@@ -103,6 +103,13 @@
                     border: none;
                 }
             }
+
+            + label {
+                i[data-tooltip] {
+                    color: @brand-secondary-light-3;
+                    pointer-events: none;
+                }
+            }
         }
     }
 
@@ -135,5 +142,9 @@
                 }
             }
         }
+    }
+
+    i[data-tooltip] {
+        margin-bottom: 0;
     }
 }

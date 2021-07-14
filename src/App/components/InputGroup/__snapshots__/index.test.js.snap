@@ -124,19 +124,28 @@ exports[`Component: InputGroup - renders a form-group with a help block with dat
   >
     
 
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
+    <div
+      className="input-group"
+    >
+      
+
+      <input
+        autoComplete={null}
+        className="form-control"
+        data-validate={null}
+        defaultValue=""
+        disabled={null}
+        id={null}
+        pattern={null}
+        placeholder={null}
+        readOnly={null}
+        required={null}
+        type="typetest"
+      />
+      
+
+       
+    </div>
     <div
       className="help-block"
       data-error="error"

@@ -20,7 +20,7 @@ const Rangeslider = ({ label, name, min, max, step, value, disabled, valueLabelP
                     {label}{"\n"}
                     {tooltip &&
                         <>
-                            <i className="material-icons" data-tooltip="Some informational text" data-tooltip-position="top">{"\n"}
+                            <i className="material-icons help-icon" data-tooltip="Some informational text" data-tooltip-position="top">{"\n"}
                                 help_outline{"\n"}
                             </i>{"\n"}
                         </>}

@@ -12,11 +12,11 @@ const Togglebox = ({ id, checked, disabled, label, tooltip, labelTop }) => {
     return (
         <div className={`togglebox${labelTop ? " label-top" : ""}`}>{"\n"}
             <input {...attrs} />{"\n"}
-            {label ? <label htmlFor={id}>
-                {label}
+            {label ? <label htmlFor={id}>{"\n"}
+                {label}{"\n"}
                 {tooltip &&
                     <>
-                        <i className="material-icons" data-tooltip="Some informational text" data-tooltip-position="top">{"\n"}
+                        <i className="material-icons help-icon" data-tooltip="Some informational text" data-tooltip-position="top">{"\n"}
                                 help_outline{"\n"}
                         </i>{"\n"}
                     </>}

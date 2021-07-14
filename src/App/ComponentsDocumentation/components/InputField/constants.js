@@ -114,10 +114,10 @@ export const inputShowCase = {
 };
 
 export const textareaShowCase = {
-    id: "no-tabs",
+    id: "no-tabs-2",
     elements: [
         {
-            component: <InputGroup type="textarea" label="Input label" placeholder="Placeholdet text" />,
+            component: <InputGroup type="textarea" label="Input label" placeholder="Placeholder text" />,
             options: {
                 checkbox: [
                     {
