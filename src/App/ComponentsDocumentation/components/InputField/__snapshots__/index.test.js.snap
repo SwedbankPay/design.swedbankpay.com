@@ -499,7 +499,7 @@ exports[`Component: InputField Textarea renders 1`] = `
           Object {
             "component": <InputGroup
               label="Input label"
-              placeholder="Placeholdet text"
+              placeholder="Placeholder text"
               type="textarea"
             />,
             "description": "Textareas have a few different sates which includes the default state, focus state, disabled state and error state. ",
@@ -557,7 +557,7 @@ exports[`Component: InputField Textarea renders 1`] = `
             "title": "Textarea",
           },
         ],
-        "id": "no-tabs",
+        "id": "no-tabs-2",
       }
     }
   />

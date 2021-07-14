@@ -359,8 +359,10 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    removeOuterTag={true}
   >
     dg.component.init();
+    
 
     dg.component.init("demo-component-id");
   </ComponentPreview>

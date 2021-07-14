@@ -328,11 +328,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "title": "Input field",
             },
             Object {
-              "componentPath": "components/InputGroup",
-              "path": "/components/input-group",
-              "title": "Input Group",
-            },
-            Object {
               "componentPath": "components/Links",
               "icon": "link",
               "outlined": true,
