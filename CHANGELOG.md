@@ -21,11 +21,18 @@
   - Split up forms documentation into separate pages (radio, togglebox etc.)
 
 ## Fixed
-- Many minor css fixes
-- Architectural fixes
-- Package updates
-- Dead links updated
+- Dead links
+- Documentation content
 
 ## Removed
 - Input group
   - Removed documentation (check input fields instead)
+
+### Other updates
+- All node packages
+- Css architecture and other css fixes
+- Dependabot
+- Codecov
+- CI flow (GitHub Actions, AppVeyor, Azure etc.)
+- Jest configurations
+- Webpack reworked and updated
