@@ -4,6 +4,7 @@ on:
     branches:
       - "feature/**"
       - "develop"
+      - "release/**"
 
 jobs:
   build:
