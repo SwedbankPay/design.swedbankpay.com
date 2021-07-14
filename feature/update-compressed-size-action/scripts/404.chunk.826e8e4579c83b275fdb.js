@@ -1,2 +1,0 @@
-(self.webpackChunkdesign_swedbankpay_com=self.webpackChunkdesign_swedbankpay_com||[]).push([[4529],{41685:function(e,n,a){"use strict";a.r(n);var t=a(78709);n.default=function(){return t.createElement(t.Fragment,null,t.createElement("h1",null,"This is not the page you are looking for."))}}}]);
-//# sourceMappingURL=404.chunk.826e8e4579c83b275fdb.js.map
