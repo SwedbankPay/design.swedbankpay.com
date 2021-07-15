@@ -145,8 +145,7 @@ changelog content but keeps the headers.
 
 ## Core development team
 
-- [Erik Hallaraaker][erikhallaraaker]
-- [Håkon Mosvoll][hmosvoll]
+- [Phung Nguyen][PhungNg]
 - [Thomas Lorntzen][VikingTristan]
 
 ## Contents of this project
@@ -201,8 +200,7 @@ Inspired by [Bootstrap][bootstrap] and [Materialize][materialize].
   [webpack]:            https://webpack.js.org/
   [semver]:             http://semver.org/
   [issues]:             https://github.com/swedbankpay/design.swedbankpay.com/issues
-  [erikhallaraaker]:    https://github.com/erikhallaraaker
-  [hmosvoll]:           https://github.com/hmosvoll
+  [PhungNg]:            https://github.com/PhungNg
   [VikingTristan]:      https://github.com/VikingTristan
   [babel]:              https://babeljs.io/
   [eslint]:             https://eslint.org/
