@@ -157,15 +157,15 @@ module.exports = (env, argv) => {
         optimization: {
             splitChunks: {
                 cacheGroups: {
-                    dgStyles: {
-                        name: "dg-style",
-                        test: brand === "swedbankpay" ? /(flatpickr\.css|swedbankpay\.less)$/ : /(flatpickr\.css|payex\.less)$/,
-                        chunks: "all",
-                        enforce: true
-                    },
                     docStyles: {
                         name: "documentation",
                         test: brand === "swedbankpay" ? /documentation-swedbankpay\.less/ : /documentation-payex\.less/,
+                        chunks: "all",
+                        enforce: true
+                    },
+                    dgStyles: {
+                        name: "dg-style",
+                        test: brand === "swedbankpay" ? /(flatpickr\.css|swedbankpay\.less)$/ : /(flatpickr\.css|payex\.less)$/,
                         chunks: "all",
                         enforce: true
                     }
