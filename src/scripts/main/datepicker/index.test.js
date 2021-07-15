@@ -5,8 +5,6 @@ import datepicker from "./index";
 import Datepicker from "@components/FormComponents/Datepicker";
 import formats from "./formats";
 
-// TODO: rewrite tests to mock flatpickr [AW]
-
 /*
     NB: datepicker.init() resets the _datepickers array and destroys flatpickr instances only when at least one valid datepicker is found [AW]
 */
@@ -39,11 +37,12 @@ describe("scripts: datepicker", () => {
         });
 
         it("inits the datepicker matching the passed ID", () => {
-            ReactDOM.render(<Datepicker id="test-datepicker" />, div);
 
-            const returnVal = datepicker.init("test-datepicker");
+            ReactDOM.render(<Datepicker id="foo" />, div);
 
-            expect(returnVal.input.id).toEqual("test-datepicker");
+            const returnVal = datepicker.init("foo");
+
+            expect(returnVal.input.id).toEqual("foo");
         });
 
         it("returns an array of objects if more than one datepicker is initialized", () => {
@@ -86,8 +85,8 @@ describe("scripts: datepicker", () => {
         it("destroys existing flatpickr instances on init(ID) if the given ID is already initialized", () => {
             ReactDOM.render(
                 <>
-                    <Datepicker id="test-1" />
-                    <Datepicker id="test-2" />
+                    <Datepicker id="foo" />
+                    <Datepicker id="bar" />
                 </>, div
             );
 
@@ -95,7 +94,7 @@ describe("scripts: datepicker", () => {
 
             expect(document.querySelectorAll(".flatpickr-calendar").length).toEqual(2);
 
-            datepicker.init("test-2");
+            datepicker.init("bar");
 
             expect(document.querySelectorAll(".flatpickr-calendar").length).toEqual(2);
         });

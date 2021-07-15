@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: MediaObject -  renders 1`] = `
+exports[`Component: MediaObject - renders 1`] = `
 <div
   className="media"
 >
@@ -17,7 +17,7 @@ exports[`Component: MediaObject -  renders 1`] = `
 </div>
 `;
 
-exports[`Component: MediaObject -  renders MediaObject with class media-lg 1`] = `
+exports[`Component: MediaObject - renders MediaObject with class media-lg 1`] = `
 <div
   className="media media-lg"
 >
@@ -34,7 +34,7 @@ exports[`Component: MediaObject -  renders MediaObject with class media-lg 1`] =
 </div>
 `;
 
-exports[`Component: MediaObject -  renders MediaObject with class media-right 1`] = `
+exports[`Component: MediaObject - renders MediaObject with class media-right 1`] = `
 <div
   className="media media-right"
 >
@@ -68,7 +68,7 @@ exports[`Component: MediaObject -  renders MediaObject with class media-right 1`
 </div>
 `;
 
-exports[`Component: MediaObject -  renders MediaObject with class media-sm 1`] = `
+exports[`Component: MediaObject - renders MediaObject with class media-sm 1`] = `
 <div
   className="media media-sm"
 >
@@ -85,7 +85,7 @@ exports[`Component: MediaObject -  renders MediaObject with class media-sm 1`] =
 </div>
 `;
 
-exports[`Component: MediaObject -  renders a <small> text 1`] = `
+exports[`Component: MediaObject - renders a <small> text 1`] = `
 <div
   className="media"
 >
@@ -106,7 +106,7 @@ exports[`Component: MediaObject -  renders a <small> text 1`] = `
 </div>
 `;
 
-exports[`Component: MediaObject -  renders a muted MediaObject 1`] = `
+exports[`Component: MediaObject - renders a muted MediaObject 1`] = `
 <div
   className="media"
 >
@@ -140,7 +140,7 @@ exports[`Component: MediaObject -  renders a muted MediaObject 1`] = `
 </div>
 `;
 
-exports[`Component: MediaObject -  renders an icon 1`] = `
+exports[`Component: MediaObject - renders an icon 1`] = `
 <div
   className="media"
 >
@@ -174,7 +174,7 @@ exports[`Component: MediaObject -  renders an icon 1`] = `
 </div>
 `;
 
-exports[`Component: MediaObject -  renders an image 1`] = `
+exports[`Component: MediaObject - renders an image 1`] = `
 <div
   className="media"
 >
@@ -205,7 +205,7 @@ exports[`Component: MediaObject -  renders an image 1`] = `
 </div>
 `;
 
-exports[`Component: MediaObject -  throws an error if heading is not defined 1`] = `
+exports[`Component: MediaObject - throws an error if heading is not defined 1`] = `
 <div
   className="media"
 >

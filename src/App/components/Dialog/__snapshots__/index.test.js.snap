@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Dialog -  renders 1`] = `
+exports[`Component: Dialog - renders 1`] = `
 <Fragment>
   <div
     aria-describedby="aria-describe-dia"
@@ -62,7 +62,7 @@ exports[`Component: Dialog -  renders 1`] = `
 </Fragment>
 `;
 
-exports[`Component: Dialog -  renders with the passed ID 1`] = `
+exports[`Component: Dialog - renders with the passed ID 1`] = `
 <Fragment>
   <div
     aria-describedby="aria-describe-dia"
@@ -125,7 +125,7 @@ exports[`Component: Dialog -  renders with the passed ID 1`] = `
 </Fragment>
 `;
 
-exports[`Component: Dialog -  renders with the passed children 1`] = `
+exports[`Component: Dialog - renders with the passed children 1`] = `
 <Fragment>
   <div
     aria-describedby="aria-describe-dia"
@@ -191,7 +191,7 @@ exports[`Component: Dialog -  renders with the passed children 1`] = `
 </Fragment>
 `;
 
-exports[`Component: Dialog -  renders with the passed header 1`] = `
+exports[`Component: Dialog - renders with the passed header 1`] = `
 <Fragment>
   <div
     aria-describedby="aria-describe-dia"

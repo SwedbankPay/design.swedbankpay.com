@@ -3,6 +3,8 @@
 exports[`Utilities: RenderPage renders 1`] = `
 <Suspense
   fallback={<LoadingComponent />}
+  initPath="test/test"
+  path="/test"
 >
   <div
     className="doc-container"
@@ -11,7 +13,7 @@ exports[`Utilities: RenderPage renders 1`] = `
       className="dg-current-version text-uppercase"
     >
       Design Guide – v. 
-      5.0.3
+      6.0.0
     </span>
     <Switch>
       <Route
@@ -269,6 +271,13 @@ exports[`Utilities: RenderPage renders 1`] = `
               "title": "Charts",
             },
             Object {
+              "componentPath": "components/Checkbox",
+              "icon": "check_box",
+              "outlined": true,
+              "path": "/components/checkbox",
+              "title": "Checkbox",
+            },
+            Object {
               "componentPath": "components/CodeTags",
               "icon": "code",
               "outlined": true,
@@ -314,16 +323,9 @@ exports[`Utilities: RenderPage renders 1`] = `
               "title": "Forms",
             },
             Object {
-              "componentPath": "components/Footer",
-              "icon": "call_to_action",
-              "outlined": true,
-              "path": "/components/footer",
-              "title": "Footer",
-            },
-            Object {
-              "componentPath": "components/InputGroup",
-              "path": "/components/input-group",
-              "title": "Input Group",
+              "componentPath": "components/InputField",
+              "path": "/components/input-field",
+              "title": "Input field",
             },
             Object {
               "componentPath": "components/Links",
@@ -349,6 +351,9 @@ exports[`Utilities: RenderPage renders 1`] = `
             Object {
               "componentPath": "components/MediaObject",
               "path": "/components/media-object",
+              "statusBadges": Array [
+                "remove",
+              ],
               "title": "Media Object",
             },
             Object {
@@ -381,6 +386,18 @@ exports[`Utilities: RenderPage renders 1`] = `
               "title": "Progress steps",
             },
             Object {
+              "componentPath": "components/RadioButton",
+              "icon": "radio_button_checked",
+              "outlined": true,
+              "path": "/components/radio-button",
+              "title": "Radio button",
+            },
+            Object {
+              "componentPath": "components/Rangeslider",
+              "path": "/components/rangeslider",
+              "title": "Rangeslider",
+            },
+            Object {
               "componentPath": "components/Sheet",
               "icon": "vertical_split",
               "outlined": true,
@@ -389,6 +406,11 @@ exports[`Utilities: RenderPage renders 1`] = `
                 "javascript",
               ],
               "title": "Sheet",
+            },
+            Object {
+              "componentPath": "components/Select",
+              "path": "/components/select",
+              "title": "Select",
             },
             Object {
               "componentPath": "components/Sidebar",
@@ -438,6 +460,11 @@ exports[`Utilities: RenderPage renders 1`] = `
                 "updated",
               ],
               "title": "Toast",
+            },
+            Object {
+              "componentPath": "components/Togglebox",
+              "path": "/components/togglebox",
+              "title": "Togglebox",
             },
             Object {
               "componentPath": "components/Tooltips",

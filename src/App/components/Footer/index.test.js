@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import Footer from "./index";
 
-describe("Component: Footer - ", () => {
+describe("Component: Footer -", () => {
     it("is defined", () => {
         expect(Footer).toBeDefined();
     });

@@ -3,47 +3,45 @@ const path = require("path");
 const webpack = require("webpack");
 const appRoutes = require("./tools/generate-routes-copy-array");
 const levelsToRoot = require("./tools/levels-to-root");
-const autoprefixer = require("autoprefixer");
 const TerserPlugin = require("terser-webpack-plugin");
 const SentryCliPlugin = require("@sentry/webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FileManagerPlugin = require("filemanager-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const AppManifestWebpackPlugin = require("app-manifest-webpack-plugin");
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 
 module.exports = (env, argv) => {
 
-    const brand = argv.brand || "swedbankpay";
+    const brand = argv.env.brand || "swedbankpay";
     const brandTitle = brand === "swedbankpay" ? "Swedbank Pay" : "PayEx"; // <-- Used with the HTML plugin for titles etc...
-    const brandLink = brand === "swedbankpay" ? "https://swedbankpay.com" : "https://payex.com";
     const isProd = argv.mode === "production";
-    const isDevServer = !!argv.host;
+    const isDevServer = !!argv.env.WEBPACK_SERVE;
+    const isAnalyze = !!argv.env.analyze;
     const version = env && env.semver ? env.semver : "LOCAL_DEV";
     const isRelease = env && env.release === "true";
     const isGitHubActions = env && env.github_actions === "true";
-    const baseUrl = env && env.baseUrl ? env.baseUrl : null;
     const basename = env && env.basename ? `/${env.basename}/` : "/";
     const infoVersion = env && env.info_version ? env.info_version : "LOCAL_DEV";
 
     const config = {
+        mode: argv.mode || "production",
         entry: {
-            dg: ["@babel/polyfill", "./src/scripts/main/index.js"],
+            dg: "./src/scripts/main/index.js",
             "dg-dashboard": "./src/scripts/dashboard/index.js",
-            app: ["@babel/polyfill/noConflict", `./src/${brand}.js`]
+            app: `./src/${brand}.js`
         },
         resolve: {
             extensions: [".js", ".jsx", ".json"]
         },
         output: {
             path: path.resolve(__dirname, `dist${basename}`),
-            filename: "scripts/[name].js?[hash]",
-            chunkFilename: "scripts/[name].js?[hash]",
+            filename: "scripts/[name].js",
+            chunkFilename: "scripts/[name].[contenthash].js",
             publicPath: basename
         },
-        // target: "async-node",
-        devtool: "source-map",
+        devtool: isProd ? "source-map" : "eval",
         devServer: {
             contentBase: path.resolve(__dirname, `dist${basename}`),
             publicPath: basename,
@@ -77,21 +75,14 @@ module.exports = (env, argv) => {
                         {
                             loader: isProd ? MiniCssExtractPlugin.loader : "style-loader"
                         },
-                        {
-                            loader: "css-loader"
-                        },
-                        {
-                            loader: "postcss-loader",
-                            options: {
-                                plugins: () => autoprefixer({
-                                    grid: true
-                                })
-                            }
-                        },
+                        "css-loader",
+                        "postcss-loader",
                         {
                             loader: "less-loader",
                             options: {
-                                javascriptEnabled: true
+                                lessOptions: {
+                                    javascriptEnabled: true
+                                }
                             }
                         }
                     ]
@@ -103,12 +94,7 @@ module.exports = (env, argv) => {
                             loader: isProd ? MiniCssExtractPlugin.loader : "style-loader"
                         },
                         "css-loader",
-                        {
-                            loader: "postcss-loader",
-                            options: {
-                                plugins: () => autoprefixer()
-                            }
-                        }
+                        "postcss-loader"
                     ]
                 },
                 {
@@ -133,7 +119,7 @@ module.exports = (env, argv) => {
                             loader: "file-loader",
                             options: {
                                 outputPath: "img/flags/1x1/",
-                                name: "[name].[ext]?[hash]"
+                                name: "[name].[ext]?[contenthash]"
                             }
                         }
                     ]
@@ -148,7 +134,7 @@ module.exports = (env, argv) => {
                             loader: "file-loader",
                             options: {
                                 outputPath: "img/flags/4x3/",
-                                name: "[name].[ext]?[hash]"
+                                name: "[name].[ext]?[contenthash]"
                             }
                         }
                     ]
@@ -161,7 +147,7 @@ module.exports = (env, argv) => {
                             loader: "file-loader",
                             options: {
                                 outputPath: "img/",
-                                name: "[name].[ext]?[hash]"
+                                name: "[name].[ext]?[contenthash]"
                             }
                         }
                     ]
@@ -170,24 +156,7 @@ module.exports = (env, argv) => {
         },
         optimization: {
             splitChunks: {
-                chunks: "async",
-                minSize: 30000,
-                maxSize: 0,
-                minChunks: 1,
-                maxAsyncRequests: 5,
-                maxInitialRequests: 3,
-                automaticNameDelimiter: "~",
-                name: true,
                 cacheGroups: {
-                    vendors: {
-                        test: /[\\/]node_modules[\\/]/,
-                        priority: -10
-                    },
-                    default: {
-                        minChunks: 2,
-                        priority: -20,
-                        reuseExistingChunk: true
-                    },
                     dgStyles: {
                         name: "dg-style",
                         test: brand === "swedbankpay" ? /(flatpickr\.css|swedbankpay\.less)$/ : /(flatpickr\.css|payex\.less)$/,
@@ -205,12 +174,12 @@ module.exports = (env, argv) => {
             minimize: isProd,
             minimizer: [
                 new TerserPlugin({
-                    sourceMap: true,
                     terserOptions: {
-                        compress: { drop_console: true }
+                        compress: { drop_console: true },
+                        sourceMap: true // Must be set to true if using source-maps in production
                     }
                 }),
-                new OptimizeCSSAssetsPlugin()
+                new CssMinimizerPlugin()
             ],
             mergeDuplicateChunks: isProd
         },
@@ -218,7 +187,7 @@ module.exports = (env, argv) => {
             new HtmlWebpackPlugin({
                 template: "./src/index.html",
                 hash: true,
-                title: `${brandTitle} DesignGuide`,
+                title: `${brandTitle} Design Guide`,
                 meta: {
                     "informational-version": infoVersion
                 }
@@ -237,11 +206,15 @@ module.exports = (env, argv) => {
                     brandTitle: JSON.stringify(brandTitle)
                 }
             }),
-            new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/) // Ignores moments locale folder which doubles the size of the package, moment is a dependency of chart.js [EH]
+            // Ignores moments locale folder which doubles the size of the package, moment is a dependency of chart.js [EH]
+            new webpack.IgnorePlugin({
+                resourceRegExp: /^\.\/locale$/,
+                contextRegExp: /moment$/
+            })
         ]
     };
 
-    if (!env && !isDevServer) {
+    if (isAnalyze) {
         config.plugins.push(
             new BundleAnalyzerPlugin()
         );
@@ -257,7 +230,6 @@ module.exports = (env, argv) => {
                 hash: true,
                 title: `${brandTitle} Design Guide`,
                 chunks: ["dg"],
-                baseUrl,
                 basename
             }),
             new HtmlWebpackPlugin({
@@ -266,12 +238,11 @@ module.exports = (env, argv) => {
                 hash: true,
                 chunks: ["dg"],
                 title: `${brandTitle} Design Guide`,
-                baseUrl,
                 basename
             }),
         );
 
-        // Don't create new sentry release on GitHub Actions
+        // Don't create new sentry release on GitHub Actions while we're using AppVeyor [THN]
         if (!isGitHubActions) {
             config.plugins.push(
                 new SentryCliPlugin({
@@ -299,147 +270,140 @@ module.exports = (env, argv) => {
         }
 
         config.plugins.push(
-            new AppManifestWebpackPlugin({
+            new FaviconsWebpackPlugin({
                 logo: `./src/img/${brand}/favicon.png`,
-                output: "/icons/",
-                config: {
-                    appName: `${brandTitle} DesignGuide`,
+                cache: true,
+                prefix: "icons/",
+                inject: true,
+                favicons: {
+                    appName: `${brandTitle} Design Guide`,
                     developerName: brandTitle,
-                    developerURL: brandLink,
-                    background: "#000",
-                    theme_color: "#2da944",
-                    version,
+                    developerURL: null, // prevent retrieving from the nearest package.json
                     icons: {
-                        android: true,
-                        appleIcon: true,
-                        appleStartup: true,
-                        coast: true,
-                        favicons: true,
-                        firefox: false,
-                        opengraph: true,
-                        twitter: true,
-                        yandex: false,
-                        windows: true
+                        coast: false,
+                        yandex: false
                     }
                 }
             }),
             new FileManagerPlugin({
-                onStart: [
-                    {
-                        delete: ["./dist"]
-                    }
-                ],
-                onEnd: [
-                    {
-                        copy: [
-                            {
-                                source: `./src/img/${brand}/resources/typography/*.png`,
-                                destination: `./dist${basename}img/typography`
-                            },
-                            {
-                                source: `./src/img/${brand}/resources/logotype/*.png`,
-                                destination: `./dist${basename}img/logotype`
-                            },
-                            {
-                                source: `./src/img/${brand}/documentation/buttons/*.png`,
-                                destination: `./dist${basename}img/documentation/buttons`
-                            },
-                            {
-                                source: `./src/img/${brand}/documentation/logotype/*.png`,
-                                destination: `./dist${basename}img/documentation/logotype`
-                            },
-                            {
-                                source: `./src/img/${brand}/documentation/cards/*.png`,
-                                destination: `./dist${basename}img/documentation/cards`
-                            },
-                            {
-                                source: `./src/img/${brand}/documentation/accessibility/*.png`,
-                                destination: `./dist${basename}img/documentation/accessibility`
-                            },
-                            {
-                                source: `./src/img/${brand}/documentation/imagery/*.svg`,
-                                destination: `./dist${basename}img/documentation/imagery`
-                            },
-                            {
-                                source: `./src/img/${brand}/documentation/spacing/*.svg`,
-                                destination: `./dist${basename}img/documentation/spacing`
-                            },
-                            {
-                                source: `./src/img/${brand}/documentation/copywriting/*.png`,
-                                destination: `./dist${basename}img/documentation/copywriting`
-                            },
-                            {
-                                source: `./src/img/${brand}/documentation/grid/*.png`,
-                                destination: `./dist${basename}img/documentation/grid`
-                            },
-                            {
-                                source: `./src/img/${brand}/documentation/colors/*.png`,
-                                destination: `./dist${basename}img/documentation/colors`
-                            },
-                            {
-                                source: `./src/img/${brand}/documentation/introduction/*.png`,
-                                destination: `./dist${basename}img/documentation/introduction`
-                            },
-                            {
-                                source: `./src/img/${brand}/documentation/forDevelopers/*.png`,
-                                destination: `./dist${basename}img/documentation/forDevelopers`
-                            },
-                            {
-                                source: `./src/img/${brand}/documentation/forDesigners/*.png`,
-                                destination: `./dist${basename}img/documentation/forDesigners`
-                            },
-                            {
-                                source: "./src/img/background/*.svg",
-                                destination: `./dist${basename}img/background`
-                            },
-                            {
-                                source: "./src/assets/logos/*.zip",
-                                destination: `./dist${basename}release/logos`
-                            },
-                            {
-                                source: "./src/assets/fonts/*.zip",
-                                destination: `./dist${basename}release/fonts`
-                            },
-                            {
-                                source: "./src/assets/templates/*",
-                                destination: `./dist${basename}templates`
-                            },
-                            {
-                                source: `./dist${basename}icons`,
-                                destination: "./dist/temp/icons/icons"
-                            },
-                            {
-                                source: `./dist${basename}scripts/dg.js`,
-                                destination: "./dist/temp/release/scripts"
-                            },
-                            {
-                                source: `./dist${basename}scripts/dg.js.map`,
-                                destination: "./dist/temp/release/scripts"
-                            },
-                            {
-                                source: `./dist${basename}scripts/dg-dashboard.js`,
-                                destination: "./dist/temp/release/scripts"
-                            },
-                            {
-                                source: `./dist${basename}scripts/dg-dashboard.js.map`,
-                                destination: "./dist/temp/release/scripts"
-                            },
-                            {
-                                source: `./dist${basename}styles/dg-style.css`,
-                                destination: "./dist/temp/release/styles"
-                            }
-                        ],
-                        mkdir: [`./dist${basename}release`],
-                        archive: onEndArchive,
-                        delete: ["./dist/temp"]
-                    },
-                    {
-                        copy: appRoutes.map(route => ({
-                            source: `./dist${basename}index.html`,
-                            destination: `./dist${basename}${route}`
-                        }))
-                    }
-                ]
+                events: {
+                    onStart: [
+                        {
+                            delete: ["./dist"]
+                        }
+                    ],
+                    onEnd: [
+                        {
+                            copy: [
+                                {
+                                    source: `./src/img/${brand}/resources/typography/*.png`,
+                                    destination: `./dist${basename}img/typography`
+                                },
+                                {
+                                    source: `./src/img/${brand}/resources/logotype/*.png`,
+                                    destination: `./dist${basename}img/logotype`
+                                },
+                                {
+                                    source: `./src/img/${brand}/documentation/buttons/*.png`,
+                                    destination: `./dist${basename}img/documentation/buttons`
+                                },
+                                {
+                                    source: `./src/img/${brand}/documentation/logotype/*.png`,
+                                    destination: `./dist${basename}img/documentation/logotype`
+                                },
+                                {
+                                    source: `./src/img/${brand}/documentation/cards/*.png`,
+                                    destination: `./dist${basename}img/documentation/cards`
+                                },
+                                {
+                                    source: `./src/img/${brand}/documentation/accessibility/*.png`,
+                                    destination: `./dist${basename}img/documentation/accessibility`
+                                },
+                                {
+                                    source: `./src/img/${brand}/documentation/imagery/*.svg`,
+                                    destination: `./dist${basename}img/documentation/imagery`
+                                },
+                                {
+                                    source: `./src/img/${brand}/documentation/spacing/*.svg`,
+                                    destination: `./dist${basename}img/documentation/spacing`
+                                },
+                                {
+                                    source: `./src/img/${brand}/documentation/copywriting/*.png`,
+                                    destination: `./dist${basename}img/documentation/copywriting`
+                                },
+                                {
+                                    source: `./src/img/${brand}/documentation/grid/*.png`,
+                                    destination: `./dist${basename}img/documentation/grid`
+                                },
+                                {
+                                    source: `./src/img/${brand}/documentation/colors/*.png`,
+                                    destination: `./dist${basename}img/documentation/colors`
+                                },
+                                {
+                                    source: `./src/img/${brand}/documentation/introduction/*.png`,
+                                    destination: `./dist${basename}img/documentation/introduction`
+                                },
+                                {
+                                    source: `./src/img/${brand}/documentation/forDevelopers/*.png`,
+                                    destination: `./dist${basename}img/documentation/forDevelopers`
+                                },
+                                {
+                                    source: `./src/img/${brand}/documentation/forDesigners/*.png`,
+                                    destination: `./dist${basename}img/documentation/forDesigners`
+                                },
+                                {
+                                    source: "./src/img/background/*.svg",
+                                    destination: `./dist${basename}img/background`
+                                },
+                                {
+                                    source: "./src/assets/logos/*.zip",
+                                    destination: `./dist${basename}release/logos`
+                                },
+                                {
+                                    source: "./src/assets/fonts/*.zip",
+                                    destination: `./dist${basename}release/fonts`
+                                },
+                                {
+                                    source: "./src/assets/templates/*",
+                                    destination: `./dist${basename}templates`
+                                },
+                                {
+                                    source: `./dist${basename}icons`,
+                                    destination: "./dist/temp/icons/icons"
+                                },
+                                {
+                                    source: `./dist${basename}scripts/dg.js`,
+                                    destination: "./dist/temp/release/scripts"
+                                },
+                                {
+                                    source: `./dist${basename}scripts/dg.js.map`,
+                                    destination: "./dist/temp/release/scripts"
+                                },
+                                {
+                                    source: `./dist${basename}scripts/dg-dashboard.js`,
+                                    destination: "./dist/temp/release/scripts"
+                                },
+                                {
+                                    source: `./dist${basename}scripts/dg-dashboard.js.map`,
+                                    destination: "./dist/temp/release/scripts"
+                                },
+                                {
+                                    source: `./dist${basename}styles/dg-style.css`,
+                                    destination: "./dist/temp/release/styles"
+                                }
+                            ],
+                            mkdir: [`./dist${basename}release`],
+                            archive: onEndArchive,
+                            delete: ["./dist/temp"]
+                        },
+                        {
+                            copy: appRoutes.map(route => ({
+                                source: `./dist${basename}index.html`,
+                                destination: `./dist${basename}${route}/`
+                            }))
+                        }
+                    ]
+                }
             })
         );
     }

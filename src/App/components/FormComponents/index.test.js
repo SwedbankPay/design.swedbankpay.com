@@ -1,6 +1,6 @@
-import formComponents, { Checkbox, FormControlText, Radio, Rangeslider, Togglebox } from "./index";
+import formComponents, { Checkbox, FormControlText, Radio, Togglebox } from "./index";
 
-describe("formComponents - ", () => {
+describe("formComponents -", () => {
     it("is defined", () => {
         expect(formComponents).toBeDefined();
     });
@@ -15,10 +15,6 @@ describe("formComponents - ", () => {
 
     it("Radio is defined", () => {
         expect(Radio).toBeDefined();
-    });
-
-    it("Rangeslider is defined", () => {
-        expect(Rangeslider).toBeDefined();
     });
 
     it("Togglebox is defined", () => {

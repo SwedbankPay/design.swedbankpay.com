@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Card -  renders a child object 1`] = `
+exports[`Component: Card - renders a child object 1`] = `
 <div
   className="card"
 >
@@ -14,7 +14,7 @@ exports[`Component: Card -  renders a child object 1`] = `
 </div>
 `;
 
-exports[`Component: Card -  renders a text in card-body 1`] = `
+exports[`Component: Card - renders a text in card-body 1`] = `
 <div
   className="card"
 >
@@ -30,7 +30,7 @@ exports[`Component: Card -  renders a text in card-body 1`] = `
 </div>
 `;
 
-exports[`Component: Card -  renders a title 1`] = `
+exports[`Component: Card - renders a title 1`] = `
 <div
   className="card"
 >
@@ -50,7 +50,7 @@ exports[`Component: Card -  renders a title 1`] = `
 </div>
 `;
 
-exports[`Component: Card -  renders an image 1`] = `
+exports[`Component: Card - renders an image 1`] = `
 <div
   className="card"
 >
@@ -75,7 +75,7 @@ exports[`Component: Card -  renders an image 1`] = `
 </div>
 `;
 
-exports[`Component: Card -  renders footer link text 1`] = `
+exports[`Component: Card - renders footer link text 1`] = `
 <div
   className="card"
 >
@@ -101,7 +101,7 @@ exports[`Component: Card -  renders footer link text 1`] = `
 </div>
 `;
 
-exports[`Component: Card -  renders footer text 1`] = `
+exports[`Component: Card - renders footer text 1`] = `
 <div
   className="card"
 >
@@ -119,7 +119,7 @@ exports[`Component: Card -  renders footer text 1`] = `
 </div>
 `;
 
-exports[`Component: Card -  renders with a button 1`] = `
+exports[`Component: Card - renders with a button 1`] = `
 <div
   className="card"
 >
@@ -141,7 +141,7 @@ exports[`Component: Card -  renders with a button 1`] = `
 </div>
 `;
 
-exports[`Component: Card -  renders with class name card 1`] = `
+exports[`Component: Card - renders with class name card 1`] = `
 <div
   className="card"
 >
@@ -154,7 +154,7 @@ exports[`Component: Card -  renders with class name card 1`] = `
 </div>
 `;
 
-exports[`Component: Card -  renders with correct class name 1`] = `
+exports[`Component: Card - renders with correct class name 1`] = `
 <div
   className="card card-brand"
 >
@@ -167,12 +167,12 @@ exports[`Component: Card -  renders with correct class name 1`] = `
 </div>
 `;
 
-exports[`Component: Card -  renders with only body when no props are passed 1`] = `
+exports[`Component: Card - renders with only body when no props are passed 1`] = `
 "<div class=\\"card\\"><div class=\\"card-body\\">
 </div></div>"
 `;
 
-exports[`Component: Card -  throws an error if type does not match proptypes 1`] = `
+exports[`Component: Card - throws an error if type does not match proptypes 1`] = `
 <div
   className="card card-error"
 >

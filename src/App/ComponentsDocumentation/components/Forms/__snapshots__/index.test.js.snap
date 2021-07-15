@@ -1,37 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Documentation: Forms Checkboxes renders 1`] = `
-<Fragment>
-  <h2
-    id="checkboxes"
-  >
-    Checkboxes
-  </h2>
-  <p>
-    Use checkboxes to make it so a user can select several options. If you need to restrict the number of possible selections to one, see radio buttons.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Checkbox
-      id="checkbox-example-1"
-      label="Bread"
-    />
-    <Checkbox
-      id="checkbox-example-2"
-      label="Not bread. I'm not really fond of it. What I would really like, however, is one single piece of cracker with some nutella on it. Perhaps this could be the second checkbox. These thoughts are written here simply to show you how the checkboxes align themselves when label text is fairly long."
-    />
-    <Checkbox
-      checked={true}
-      id="checkbox-example-3"
-      label="Milk"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
 exports[`Documentation: Forms DisabledFormComponents renders 1`] = `
 <Fragment>
   <h2
@@ -57,6 +25,12 @@ exports[`Documentation: Forms DisabledFormComponents renders 1`] = `
       id="togglebox-disabled-example-1"
       label="Enable overdrive"
     />
+    <Togglebox
+      checked={true}
+      disabled={true}
+      id="togglebox-disabled-checked-example-1"
+      label="Enable overdrive"
+    />
     <Radio
       disabled={true}
       id="radio-disabled-example-1"
@@ -68,17 +42,6 @@ exports[`Documentation: Forms DisabledFormComponents renders 1`] = `
       disabled={true}
       id="checkbox-disabled-example-3"
       label="Milk"
-    />
-    <Rangeslider
-      className="mb-2"
-      disabled={true}
-      max={200}
-      min={0}
-      step={1}
-      value={100}
-      valueLabel={true}
-      valueLabelPostfix="%"
-      valueLabelPrefix="$"
     />
   </ComponentPreview>
   <h3>
@@ -248,42 +211,6 @@ exports[`Documentation: Forms DisabledFormComponents renders 1`] = `
       
 
     </form>
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Documentation: Forms Dropdown renders 1`] = `
-<Fragment>
-  <h2
-    id="dropdown"
-  >
-    Dropdown menu
-  </h2>
-  <p>
-    Inserting text next to a 
-    <CodeTags
-      code="<select>"
-      type="primary"
-    />
-     works just like any other input element.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-  >
-    <InputGroup
-      label="Profession"
-      selectOptions={
-        Array [
-          "Bounty hunter",
-          "Smuggler",
-          "Jedi",
-        ]
-      }
-      type="select"
-    />
   </ComponentPreview>
 </Fragment>
 `;
@@ -727,124 +654,6 @@ exports[`Documentation: Forms Overview renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Forms RadioButtons renders 1`] = `
-<Fragment>
-  <h2
-    id="radio-buttons"
-  >
-    Radio buttons
-  </h2>
-  <p>
-    Use radio buttons when you wish to limit your user to one choice out of several possible.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Radio
-      id="radio-example-1"
-      label="Hamburgers"
-      name="radio-example"
-    />
-    <Radio
-      id="radio-example-2"
-      label="Not the one above because I'm not really fond of hamburgers. What I would really like, however, is a nice piece of steak. Perhaps that could be the second option. These thoughts are written here simply to show you how radio buttons align themselves when label text is fairly long."
-      name="radio-example"
-    />
-    <Radio
-      checked={true}
-      id="radio-example-3"
-      label="Pizza"
-      name="radio-example"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Documentation: Forms RangeSlider renders 1`] = `
-<Fragment>
-  <h2
-    id="rangeslider"
-  >
-    Rangeslider
-  </h2>
-  <p>
-    Asides from the default behavior of a range input, the Rangeslider
-    '
-    s colors and label positioning can be customized.
-  </p>
-  <p>
-    Currently there are three different supported colors for the slider: 
-    <CodeTags
-      code=".rangeslider-brand"
-      type="secondary"
-    />
-    , 
-    <CodeTags
-      code=".rangeslider-default"
-      type="secondary"
-    />
-     and 
-    <CodeTags
-      code=".rangeslider-neutral"
-      type="secondary"
-    />
-    .
-  </p>
-  <p>
-    The Rangeslider currently supports two positions: 
-    <CodeTags
-      code=".label-right"
-      type="secondary"
-    />
-     and 
-    <CodeTags
-      code=".label-top"
-      type="secondary"
-    />
-    . If no position is given, 
-    <CodeTags
-      code="right"
-      type="secondary"
-    />
-     is defaulted.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Rangeslider
-      max={200}
-      min={0}
-      step={1}
-      value={100}
-      valueLabel={true}
-      valueLabelPostfix="%"
-      valueLabelPrefix="$"
-    />
-  </ComponentPreview>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Rangeslider
-      color="neutral"
-      max={200}
-      min={0}
-      step={1}
-      value={100}
-      valueLabel={true}
-      valueLabelPosition="top"
-      valueLabelPostfix="%"
-      valueLabelPrefix="$"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
 exports[`Documentation: Forms StaticText renders 1`] = `
 <Fragment>
   <h2
@@ -872,34 +681,6 @@ exports[`Documentation: Forms StaticText renders 1`] = `
     <FormControlText
       label="Employee"
       text="Bob Corlsan"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Documentation: Forms Toggleboxes renders 1`] = `
-<Fragment>
-  <h2
-    id="toggleboxes"
-  >
-    Toggleboxes
-  </h2>
-  <p>
-    Use toggleboxes if you wish present the user with an either-or option.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Togglebox
-      id="togglebox-example-1"
-      label="Enable overdrive"
-    />
-    <Togglebox
-      checked={true}
-      id="togglebox-example-2"
-      label="Enable superpowers"
     />
   </ComponentPreview>
 </Fragment>
@@ -1315,11 +1096,6 @@ exports[`Documentation: Forms renders 1`] = `
   <Validation />
   <UsageWithFieldsets />
   <StaticText />
-  <Dropdown />
-  <Checkboxes />
-  <RadioButtons />
-  <Toggleboxes />
-  <RangeSlider />
   <DisabledFormComponents />
   <JavascriptMethods />
 </DocContainer>

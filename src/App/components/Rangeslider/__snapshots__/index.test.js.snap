@@ -1,0 +1,203 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Rangeslider - renders with a value label 1`] = `
+<Rangeslider>
+  <div
+    className="rangeslider"
+  >
+    
+
+    <input
+      type="range"
+    />
+    
+
+    <div
+      className="d-flex justify-content-between"
+    >
+      
+
+      <label
+        className="rangeslider-label"
+        htmlFor="rangeslider"
+      >
+        
+
+        
+
+      </label>
+      
+
+      <output
+        className="value-label"
+      >
+        
+		
+        <p>
+          
+			
+          <span
+            data-rs-value={true}
+          />
+          
+			
+        </p>
+      </output>
+    </div>
+    <div
+      className="value-range"
+    >
+      
+
+      <small />
+      
+
+      <small />
+      
+
+    </div>
+  </div>
+</Rangeslider>
+`;
+
+exports[`Component: Rangeslider - renders with a value label and a value label postfix 1`] = `
+<Rangeslider
+  valueLabelPostfix="test"
+>
+  <div
+    className="rangeslider"
+  >
+    
+
+    <input
+      type="range"
+    />
+    
+
+    <div
+      className="d-flex justify-content-between"
+    >
+      
+
+      <label
+        className="rangeslider-label"
+        htmlFor="rangeslider"
+      >
+        
+
+        
+
+      </label>
+      
+
+      <output
+        className="value-label"
+      >
+        
+		
+        <p>
+          
+			
+          <span
+            data-rs-value={true}
+          />
+          
+			
+          <span>
+            test
+          </span>
+          
+		
+        </p>
+      </output>
+    </div>
+    <div
+      className="value-range"
+    >
+      
+
+      <small>
+        test
+      </small>
+      
+
+      <small>
+        test
+      </small>
+      
+
+    </div>
+  </div>
+</Rangeslider>
+`;
+
+exports[`Component: Rangeslider - renders with a value label and a value label prefix 1`] = `
+<Rangeslider
+  valueLabelPrefix="test"
+>
+  <div
+    className="rangeslider"
+  >
+    
+
+    <input
+      type="range"
+    />
+    
+
+    <div
+      className="d-flex justify-content-between"
+    >
+      
+
+      <label
+        className="rangeslider-label"
+        htmlFor="rangeslider"
+      >
+        
+
+        
+
+      </label>
+      
+
+      <output
+        className="value-label"
+      >
+        
+		
+        <p>
+          
+			
+          <span>
+            test
+          </span>
+          
+			
+          <span
+            data-rs-value={true}
+          />
+          
+			
+        </p>
+      </output>
+    </div>
+    <div
+      className="value-range"
+    >
+      
+
+      <small>
+        test
+      </small>
+      
+
+      <small>
+        test
+      </small>
+      
+
+    </div>
+  </div>
+</Rangeslider>
+`;

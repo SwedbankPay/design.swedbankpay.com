@@ -1,9 +1,10 @@
 name: Main
-on: 
+on:
   push:
     branches:
       - "feature/**"
       - "develop"
+      - "release/**"
 
 jobs:
   build:
@@ -13,7 +14,7 @@ jobs:
       matrix:
         brand: ["payex", "swedbankpay"]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
 
       # Set brand specific variables
       - name: Environment variables
@@ -26,26 +27,25 @@ jobs:
           node-version: 12.x
 
       - name: Cache dependencies
-        uses: actions/cache@v1
+        uses: actions/cache@v2.1.6
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          restore-keys: ${{ runner.os }}-node-
 
       - name: Install
         run: npm ci
 
       - name: Build
-        run: npm run ${{ steps.variables.outputs.BUILD_SCRIPT }} -- --env.baseUrl="${{ steps.variables.outputs.BRAND_URL }}" --env.basename=${{ steps.variables.outputs.BRANCH }} --env.semver=${{ steps.variables.outputs.BRANCH }} --env.info_version=${{ steps.variables.outputs.VERSION }} --env.github_actions=true
+        run: npm run ${{ steps.variables.outputs.BUILD_SCRIPT }} -- --env basename=${{ steps.variables.outputs.BRANCH }} --env semver=${{ steps.variables.outputs.BRANCH }} --env info_version=${{ steps.variables.outputs.VERSION }} --env github_actions=true
 
       - name: Azure Login
-        uses: azure/login@v1
+        uses: azure/login@v1.3.0
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          creds: ${{ secrets.AZURE_CREDENTIALS_STAGE }}
 
       - name: Azure Deploy
-        uses: azure/CLI@v1
+        uses: azure/CLI@1.0.4
         with:
           inlineScript: |
-            az storage blob upload-batch -s dist -d \$web --account-name ${{ steps.variables.outputs.AZURE_ACCOUNT }}
+            az storage blob upload-batch -s dist -d \$web --account-name ${{ steps.variables.outputs.AZURE_ACCOUNT_STAGE }}

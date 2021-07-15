@@ -2,7 +2,7 @@ import React from "react";
 
 import LogotypeComponent from "@components/Logotype";
 
-const BASENAME = process.env.basename;
+const basename = process.env.basename;
 
 export const logoBlack = {
     id: "logoBlack",
@@ -10,7 +10,7 @@ export const logoBlack = {
     elements: [
         {
             tab: "Vertical",
-            component: <LogotypeComponent src={`${BASENAME}img/swedbankpay-logo-v.svg`} alt="Swedbank Pay vertical logo" type="vertical" />,
+            component: <LogotypeComponent src={`${basename}img/swedbankpay-logo-v.svg`} alt="Swedbank Pay vertical logo" type="vertical" />,
             options: {
                 radio: [
                     {
@@ -55,7 +55,7 @@ export const logoBlack = {
         },
         {
             tab: "Horizontal",
-            component: <LogotypeComponent src={`${BASENAME}img/swedbankpay-logo-h.svg`} alt="Swedbank Pay horizontal logo" type="horizontal" />,
+            component: <LogotypeComponent src={`${basename}img/swedbankpay-logo-h.svg`} alt="Swedbank Pay horizontal logo" type="horizontal" />,
             options: {
                 radio: [
                     {
@@ -113,7 +113,7 @@ export const logoWhite = {
     elements: [
         {
             tab: "Vertical",
-            component: <LogotypeComponent src={`${BASENAME}img/swedbankpay-logo-v-neg.svg`} alt="Swedbank Pay vertical logo" type="vertical" />,
+            component: <LogotypeComponent src={`${basename}img/swedbankpay-logo-v-neg.svg`} alt="Swedbank Pay vertical logo" type="vertical" />,
             altBackground: true,
             options: {
                 radio: [
@@ -162,7 +162,7 @@ export const logoWhite = {
         },
         {
             tab: "Horizontal",
-            component: <LogotypeComponent src={`${BASENAME}img/swedbankpay-logo-h-neg.svg`} alt="Swedbank Pay horizontal logo" type="horizontal" />,
+            component: <LogotypeComponent src={`${basename}img/swedbankpay-logo-h-neg.svg`} alt="Swedbank Pay horizontal logo" type="horizontal" />,
             altBackground: true,
             options: {
                 radio: [

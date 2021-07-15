@@ -4,7 +4,8 @@ import { DocContainer, ComponentPreview } from "@docutils";
 
 import InputGroup from "@components/InputGroup";
 import ButtonComponent from "@components/Button";
-import { Rangeslider, Radio } from "@components/FormComponents";
+import { Radio } from "@components/FormComponents";
+import Rangeslider from "@components/Rangeslider";
 import MediaObjectComponent from "@components/MediaObject";
 
 const { rangeslider } = window.dg;

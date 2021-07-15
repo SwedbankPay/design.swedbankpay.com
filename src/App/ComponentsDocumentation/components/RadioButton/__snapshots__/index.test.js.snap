@@ -1,0 +1,281 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: RadioButton ContentGuidelines renders 1`] = `
+<Fragment>
+  <h2
+    id="content-guidelines"
+  >
+    Content guidelines
+  </h2>
+  <ul
+    className="list list-bullet"
+  >
+    <li>
+      The 
+      <b>
+        Group heading
+      </b>
+       for the radio button group should be descriptive, explaining the context and what actions the user is choosing from. 
+    </li>
+    <li>
+      The 
+      <b>
+        radio button label
+      </b>
+       should be short, to the point and clearly explain the option. It is also preferred to have fewer than three words per label as longer words could extend a label to multiple rows which could disrupt the reading experience.
+    </li>
+  </ul>
+</Fragment>
+`;
+
+exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
+<section>
+  <h2>
+    Developer documentation
+  </h2>
+  <span
+    className="h3 d-inline-block mt-3"
+  >
+    Disabled state
+  </span>
+  <p>
+    Disable a radio button by adding 
+    <CodeTags
+      code="disabled"
+      type="primary"
+    />
+     attribute to the desired radio button. You can also disable the 
+    <CodeTags
+      code=".form-group"
+      type="secondary"
+    />
+     or 
+    <CodeTags
+      code="fieldset"
+      type="primary"
+    />
+     in which the radio button is located, refer to 
+    <Link
+      to="/components/forms"
+    >
+      forms
+    </Link>
+     for more info.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="d-flex justify-content-center"
+    >
+      <Radio
+        checked={true}
+        disabled={true}
+        id="radio-example-10"
+        label="Radio button label"
+        name="radio-example"
+      />
+    </div>
+  </ComponentPreview>
+</section>
+`;
+
+exports[`Component: RadioButton HowTo renders 1`] = `
+<section>
+  <h3>
+    How to setup radio button group
+  </h3>
+  <div
+    className="row"
+  >
+    <div
+      className="col-6"
+    >
+      <div
+        className="slab slab-plain slab-border-success"
+      >
+        <span
+          className="h3"
+        >
+          Do
+        </span>
+        <div
+          className="d-flex flex-column align-items-center"
+        >
+          <div
+            className="pt-3 pb-5"
+          >
+            <Radio
+              group={true}
+              groupTitle="Card type"
+              name="radio-do-example"
+              options={
+                Array [
+                  Object {
+                    "checked": true,
+                    "id": "radio-do-example-1",
+                    "label": "Debit card",
+                  },
+                  Object {
+                    "id": "radio-do-example-2",
+                    "label": "Credit card",
+                  },
+                  Object {
+                    "id": "radio-do-example-3",
+                    "label": "Gift card",
+                  },
+                ]
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-6"
+    >
+      <div
+        className="slab slab-plain slab-border-error h-100"
+      >
+        <span
+          className="h3"
+        >
+          Don't
+        </span>
+        <div
+          className="d-flex flex-column align-items-center"
+        >
+          <div
+            className="pt-3 w-50"
+          >
+            <Radio
+              group={true}
+              groupTitle="Card type"
+              name="radio-dont-example"
+              options={
+                Array [
+                  Object {
+                    "id": "radio-dont-example-1",
+                    "label": "Choose a later date for delivery",
+                  },
+                  Object {
+                    "id": "radio-dont-example-2",
+                    "label": "Instant delivery",
+                  },
+                  Object {
+                    "id": "radio-dont-example-3",
+                    "label": "4-7days delivery",
+                  },
+                ]
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`Component: RadioButton Overview renders 1`] = `
+<Fragment>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+    showCasePanelAdvanced={
+      Object {
+        "elements": Array [
+          Object {
+            "component": <Radio
+              group={true}
+              groupTitle="Group heading"
+              name="radio-group-example"
+              options={
+                Array [
+                  Object {
+                    "checked": true,
+                    "id": "radio-example-1",
+                    "label": "Radio button label",
+                  },
+                  Object {
+                    "id": "radio-example-2",
+                    "label": "Radio button label",
+                  },
+                  Object {
+                    "id": "radio-example-3",
+                    "label": "Radio button label",
+                  },
+                ]
+              }
+            />,
+            "description": "The default setup of the radio button group always has a label on top which describes the checkbox group and each individual radio button is then followed by a label which clearly describes what the options and what selecting an option entails. In a radio button group one choice is always selected by default",
+            "options": Object {
+              "radio": Array [
+                Object {
+                  "id": "state_radio",
+                  "title": "State modifiers",
+                  "values": Array [
+                    Object {
+                      "name": "Enabled",
+                      "value": Object {
+                        "disabled": false,
+                      },
+                    },
+                    Object {
+                      "name": "Disabled",
+                      "value": Object {
+                        "disabled": true,
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "title": "Radio button group",
+          },
+        ],
+        "id": "no-tabs",
+      }
+    }
+  />
+  <h3>
+    When to consider something else
+  </h3>
+  <ul
+    className="list list-bullet"
+  >
+    <li>
+      When you want to present multiple choices where the user can select one or more choice at the same time, the 
+      <Link
+        to="/components/checkbox"
+      >
+        checkbox
+      </Link>
+       component should be used instead of radio buttons.
+    </li>
+  </ul>
+  <HowTo />
+</Fragment>
+`;
+
+exports[`Component: RadioButton renders 1`] = `
+<DocContainer>
+  <p
+    className="lead"
+  >
+    The radio button component should be used when the user are presented with a list of options where only one choice can be selected.
+  </p>
+  <Overview />
+  <ContentGuidelines />
+  <DeveloperDocumentation />
+</DocContainer>
+`;

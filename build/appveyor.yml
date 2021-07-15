@@ -24,7 +24,6 @@ environment:
     secure: gxWz5+nY3Ctg2JTqo5RQVwHA+UNxiB/H1u72IC71b3oBZj/dxqBLc1/EYZtxzWjiOCXPSOfKJ485+XhtyTt1kNjHon7JWRftucuOyhaozmw=
   nodejs_version: "10"
 
-
 # cache:
 #   - node_modules
 
@@ -40,9 +39,6 @@ install:
 
       npm ci
 
-      npm install -g codecov
-
-
 #---------------------------------#
 #       build configuration       #
 #---------------------------------#
@@ -51,17 +47,7 @@ before_build:
   - ps: ./build/prepare-build.ps1
 
 build_script:
-  - cmd: npm run build:prod -- --env.release=%release% --env.basename=%basename% --env.baseUrl="https://design.swedbankpay.com" --env.semver=%GitVersion_FullSemVer% --env.info_version=%GitVersion_InformationalVersion%
-
-#---------------------------------#
-#       tests configuration       #
-#---------------------------------#
-
-test_script:
-  - cmd: >-
-      npm run lint
-
-      npm run test:codecov
+  - cmd: npm run build:prod -- --env release=%release% --env basename=%basename% --env semver=%GitVersion_FullSemVer% --env info_version=%GitVersion_InformationalVersion%
 
 #---------------------------------#
 #     deployment configuration    #

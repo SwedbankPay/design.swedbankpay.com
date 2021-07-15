@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import InputGroup from "@components/InputGroup";
 import Button from "@components/Button";
-import { Checkbox, FormControlText, Radio, Rangeslider, Togglebox } from "@components/FormComponents";
+import { Checkbox, FormControlText, Radio, Togglebox } from "@components/FormComponents";
 import CodeTags from "@components/CodeTags";
 
-const { rangeslider, validation } = window.dg;
+const { validation } = window.dg;
 
 const Overview = () => (
     <>
@@ -243,88 +243,15 @@ const StaticText = () => (
     </>
 );
 
-const Dropdown = () => (
-    <>
-        <h2 id="dropdown">Dropdown menu</h2>
-        <p>
-            Inserting text next to a <CodeTags type="primary" code={"<select>"} /> works just like any other input element.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
-            <InputGroup
-                label="Profession"
-                type="select"
-                selectOptions={["Bounty hunter", "Smuggler", "Jedi"]}
-            />
-        </ComponentPreview>
-    </>
-);
-
-const Checkboxes = () => (
-    <>
-        <h2 id="checkboxes">Checkboxes</h2>
-        <p>
-            Use checkboxes to make it so a user can select several options. If you need to restrict the number of possible selections to one, see radio buttons.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <Checkbox label="Bread" id="checkbox-example-1" />
-            <Checkbox label="Not bread. I'm not really fond of it. What I would really like, however, is one single piece of cracker with some nutella on it. Perhaps this could be the second checkbox. These thoughts are written here simply to show you how the checkboxes align themselves when label text is fairly long." id="checkbox-example-2" />
-            <Checkbox label="Milk" id="checkbox-example-3" checked />
-        </ComponentPreview>
-    </>
-);
-
-const RadioButtons = () => (
-    <>
-        <h2 id="radio-buttons">Radio buttons</h2>
-        <p>
-            Use radio buttons when you wish to limit your user to one choice out of several possible.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <Radio label="Hamburgers" id="radio-example-1" name="radio-example" />
-            <Radio label="Not the one above because I'm not really fond of hamburgers. What I would really like, however, is a nice piece of steak. Perhaps that could be the second option. These thoughts are written here simply to show you how radio buttons align themselves when label text is fairly long." id="radio-example-2" name="radio-example" />
-            <Radio label="Pizza" id="radio-example-3" name="radio-example" checked />
-        </ComponentPreview>
-    </>
-);
-
-const Toggleboxes = () => (
-    <>
-        <h2 id="toggleboxes">Toggleboxes</h2>
-        <p>
-            Use toggleboxes if you wish present the user with an either-or option.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <Togglebox id="togglebox-example-1" label="Enable overdrive" />
-            <Togglebox id="togglebox-example-2" label="Enable superpowers" checked />
-        </ComponentPreview>
-    </>
-);
-
-const RangeSlider = () => (
-    <>
-        <h2 id="rangeslider">Rangeslider</h2>
-        <p>Asides from the default behavior of a range input, the Rangeslider{"'"}s colors and label positioning can be customized.</p>
-        <p>Currently there are three different supported colors for the slider: <CodeTags type="secondary" code=".rangeslider-brand" />, <CodeTags type="secondary" code=".rangeslider-default" /> and <CodeTags type="secondary" code=".rangeslider-neutral" />.</p>
-        <p>The Rangeslider currently supports two positions: <CodeTags type="secondary" code=".label-right" /> and <CodeTags type="secondary" code=".label-top" />. If no position is given, <CodeTags type="secondary" code="right" /> is defaulted.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <Rangeslider min={0} max={200} step={1} value={100} valueLabel valueLabelPrefix="$" valueLabelPostfix="%" />
-        </ComponentPreview>
-
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <Rangeslider min={0} max={200} step={1} value={100} color="neutral" valueLabel valueLabelPrefix="$" valueLabelPostfix="%" valueLabelPosition="top" />
-        </ComponentPreview>
-    </>
-);
-
 const DisabledFormComponents = () => (
     <>
         <h2 id="disabled-form-components">Disabled form components</h2>
         <p>Disable whichever form component you want by adding <CodeTags type="secondary" code="disabled" /> to the desired input element</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <Togglebox id="togglebox-disabled-example-1" label="Enable overdrive" disabled />
+            <Togglebox id="togglebox-disabled-checked-example-1" label="Enable overdrive" disabled checked/>
             <Radio label="Hamburgers" id="radio-disabled-example-1" name="radio-disabled-example" disabled />
             <Checkbox label="Milk" id="checkbox-disabled-example-3" disabled checked />
-            <Rangeslider className="mb-2" min={0} max={200} step={1} value={100} valueLabel valueLabelPrefix="$" valueLabelPostfix="%" disabled/>
         </ComponentPreview>
 
         <h3>Disable a fieldset</h3>
@@ -419,7 +346,6 @@ const JavascriptMethods = () => (
 
 class Forms extends Component {
     componentDidMount () {
-        rangeslider.init();
         validation.init();
     }
 
@@ -434,11 +360,6 @@ class Forms extends Component {
                 <Validation />
                 <UsageWithFieldsets />
                 <StaticText />
-                <Dropdown />
-                <Checkboxes />
-                <RadioButtons />
-                <Toggleboxes />
-                <RangeSlider />
                 <DisabledFormComponents />
                 <JavascriptMethods />
             </DocContainer>
@@ -449,4 +370,4 @@ class Forms extends Component {
 export default Forms;
 
 /* For testing */
-export { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, Dropdown, Checkboxes, RadioButtons, Toggleboxes, RangeSlider, DisabledFormComponents, JavascriptMethods };
+export { Overview, FormGrid, Validation, UsageWithFieldsets, StaticText, DisabledFormComponents, JavascriptMethods };

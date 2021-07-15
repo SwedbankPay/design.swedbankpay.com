@@ -87,7 +87,7 @@ exports[`Identity: Spacing BaseIncrementOfRem renders 1`] = `
           2 rem
         </th>
         <th>
-          @spacer * 2.5
+          @spacer * 2
         </th>
       </tr>
     </tbody>

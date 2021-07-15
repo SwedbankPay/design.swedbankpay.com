@@ -1,0 +1,395 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Rangeslider ContentGuidelines renders 1`] = `
+<section>
+  <h2
+    id="content-guidelines"
+  >
+    Content guidelines
+  </h2>
+  <div
+    className="slab slab-plain h-100 mb-2"
+  >
+    <div
+      className="d-flex flex-column align-items-center"
+    >
+      <div
+        className="py-3 col-8"
+      >
+        <div>
+          <div
+            className="rangeslider"
+          >
+            <input
+              type="range"
+            />
+            <div
+              className="d-flex justify-content-between"
+            >
+              <p
+                className="rangeslider-label"
+              >
+                Label
+              </p>
+              <output
+                className="value-label px-2 align-items-center"
+              >
+                Selected Value
+              </output>
+            </div>
+            <div
+              className="value-range"
+            >
+              <small>
+                Minimum Value
+              </small>
+              <small>
+                Maximum Value
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ul
+    className="list list-bullet"
+  >
+    <li>
+      The 
+      <b>
+        label
+      </b>
+       should clearly explain the context of the slider
+    </li>
+    <li>
+      Make sure to align the 
+      <b>
+        values
+      </b>
+       so that they all follow the same structure and not mixed values or symbols
+    </li>
+  </ul>
+</section>
+`;
+
+exports[`Component: Rangeslider DeveloperDocumentation renders 1`] = `
+<section>
+  <h2
+    id="developer-documentation mb-3"
+  >
+    Developer documentation
+  </h2>
+  <p
+    className="my-3"
+  >
+    Use 
+    <CodeTags
+      code="dg.rangeslider.init()"
+      type="secondary"
+    />
+     to 
+    <a
+      href="/get-started/for-developers"
+    >
+      initialize
+    </a>
+     all rangesliders.
+  </p>
+  <p>
+    Or 
+    <CodeTags
+      code="dg.rangeslider.init(\\"component-id\\")"
+      type="secondary"
+    />
+     to initialize one specific component.
+  </p>
+  <DisableState />
+</section>
+`;
+
+exports[`Component: Rangeslider Overview renders 1`] = `
+<section>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+    showCasePanelAdvanced={
+      Object {
+        "elements": Array [
+          Object {
+            "component": <Rangeslider
+              label="Label"
+              max={100}
+              min={0}
+              value={50}
+            />,
+            "description": "The slider component has a label which decribes the intent of the slider. It also has a minimum and maximum range which displays the range which user can pick inbetween. By holding and draging the circle indicator along the line, the user can see the value change and update in real time.",
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "inputs": Array [
+                    Object {
+                      "id": "help_icon",
+                      "name": "With help icon",
+                      "value": Object {
+                        "tooltip": true,
+                      },
+                    },
+                  ],
+                  "title": "Label add on",
+                },
+              ],
+              "radio": Array [
+                Object {
+                  "id": "unit_radio",
+                  "title": "Unit value",
+                  "values": Array [
+                    Object {
+                      "name": "Default",
+                      "value": Object {
+                        "valueLabelPostfix": "",
+                        "valueLabelPrefix": "",
+                      },
+                    },
+                    Object {
+                      "name": "Currency",
+                      "value": Object {
+                        "valueLabelPrefix": "$",
+                      },
+                    },
+                    Object {
+                      "name": "Percent",
+                      "value": Object {
+                        "valueLabelPostfix": "%",
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "state_radio",
+                  "title": "State modifiers",
+                  "values": Array [
+                    Object {
+                      "name": "Enabled",
+                      "value": Object {
+                        "disabled": false,
+                      },
+                    },
+                    Object {
+                      "name": "Disabled",
+                      "value": Object {
+                        "disabled": true,
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "title": "Slider",
+          },
+        ],
+        "id": "no-tabs",
+      }
+    }
+  />
+  <h3>
+    When to consider something else
+  </h3>
+  <ul
+    className="list list-bullet"
+  >
+    <li>
+      Use a text input instead when the user needs to select specific number.
+    </li>
+  </ul>
+  <h3>
+    How to use sliders
+  </h3>
+  <div
+    className="slab slab-plain slab-border-success h-100 mb-2"
+  >
+    <h3
+      className="mt-0"
+    >
+      Do
+    </h3>
+    <div
+      className="d-flex flex-column align-items-center"
+    >
+      <div
+        className="py-3 col-8"
+      >
+        <Rangeslider
+          label="Label"
+          max={200}
+          min={0}
+          value={100}
+        />
+      </div>
+    </div>
+  </div>
+  <p>
+    Do use 
+    <b>
+      sliders
+    </b>
+     for content with numeric values.
+  </p>
+  <div
+    className="slab slab-plain slab-border-success h-100 mb-2"
+  >
+    <h3
+      className="mt-0"
+    >
+      Do
+    </h3>
+    <div
+      className="d-flex flex-column align-items-center"
+    >
+      <div
+        className="py-3 col-8"
+      >
+        <Rangeslider
+          label="Label"
+          max={100}
+          min={0}
+          value={50}
+          valueLabelPostfix="%"
+        />
+      </div>
+    </div>
+  </div>
+  <p>
+    The 
+    <b>
+      sliders
+    </b>
+     component also have a post label for special symbols to help the user easier understand the slider value. It could be shown as above with the percentage symbol.
+  </p>
+  <div
+    className="slab slab-plain slab-border-success h-100 mb-2"
+  >
+    <h3
+      className="mt-0"
+    >
+      Do
+    </h3>
+    <div
+      className="d-flex flex-column align-items-center"
+    >
+      <div
+        className="py-3 col-8"
+      >
+        <Rangeslider
+          label="Label"
+          max={200}
+          min={0}
+          value={100}
+          valueLabelPrefix="$"
+        />
+      </div>
+    </div>
+  </div>
+  <p>
+    It also have a pre label for other symbols such as currency e.g. €, $ and £.
+  </p>
+  <div
+    className="slab slab-plain slab-border-error h-100 mb-2"
+  >
+    <h3
+      className="mt-0"
+    >
+      Do
+      n’t
+    </h3>
+    <div
+      className="d-flex flex-column align-items-center"
+    >
+      <div
+        className="py-3 col-8"
+      >
+        <Rangeslider
+          label="Label"
+          value={50}
+        />
+      </div>
+    </div>
+  </div>
+  <p>
+    Don’t modify and remove label and maximum/minimum indicators as this makes it harder for user to grasp the content and context of use.
+  </p>
+  <div
+    className="slab slab-plain slab-border-error h-100 mb-2"
+  >
+    <h3
+      className="mt-0"
+    >
+      Do
+      n’t
+    </h3>
+    <div
+      className="d-flex flex-column align-items-center"
+    >
+      <div
+        className="py-3 col-8"
+      >
+        <div>
+          <div
+            className="rangeslider"
+          >
+            <input
+              type="range"
+            />
+            <div
+              className="d-flex justify-content-between"
+            >
+              <p
+                className="rangeslider-label"
+              >
+                Label
+              </p>
+              <output
+                className="value-label px-2 align-items-center"
+              >
+                Average
+              </output>
+            </div>
+            <div
+              className="value-range"
+            >
+              <small>
+                Poor
+              </small>
+              <small>
+                Great
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>
+    Don’t use sliders for content without numeric values.
+  </p>
+</section>
+`;
+
+exports[`Component: Rangeslider renders 1`] = `
+<DocContainer>
+  <p
+    className="lead"
+  >
+    The slider component lets the user increase and decrease the value by moving the slider along a horizontal line and lets the user choose an approximate value
+  </p>
+  <Overview />
+  <ContentGuidelines />
+  <DeveloperDocumentation />
+</DocContainer>
+`;

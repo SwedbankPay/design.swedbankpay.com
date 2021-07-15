@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import Cards from "./index";
 
-describe("Component: Cards - ", () => {
+describe("Component: Cards -", () => {
     it("is defined", () => {
         expect(Cards).toBeDefined();
     });

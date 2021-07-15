@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import Radio from "./Radio";
 
-describe("Component: Radio - ", () => {
+describe("Component: Radio -", () => {
     it("is defined", () => {
         expect(Radio).toBeDefined();
     });
@@ -48,5 +48,59 @@ describe("Component: Radio - ", () => {
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("radio");
         expect(wrapper.html()).toContain("checked");
+    });
+
+    it("renders radio group", () => {
+        const options = [
+            {
+                id: "radio-example-1",
+                label: "Radio label"
+            },
+            {
+                id: "radio-example-2",
+                label: "Radio label"
+            }
+        ];
+        const wrapper = shallow(<Radio group options={options}/>);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.html()).toContain("radio");
+        expect(wrapper.html()).toContain("radio-group");
+    });
+
+    it("renders checkbox group with groupTitle", () => {
+        const options = [
+            {
+                id: "radio-example-1",
+                label: "Radio label"
+            },
+            {
+                id: "radio-example-2",
+                label: "Radio label"
+            }
+        ];
+
+        const wrapper = shallow(<Radio group groupTitle="Group title" options={options} />);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.html()).toContain("legend");
+    });
+
+    it("renders checkbox group with disabled state", () => {
+        const options = [
+            {
+                id: "radio-example-1",
+                label: "Radio label"
+            },
+            {
+                id: "radio-example-2",
+                label: "Radio label"
+            }
+        ];
+
+        const wrapper = shallow(<Radio group disabled options={options} />);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.html()).toContain("disabled");
     });
 });

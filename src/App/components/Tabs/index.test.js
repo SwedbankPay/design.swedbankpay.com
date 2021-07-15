@@ -9,7 +9,7 @@ const div = document.createElement("div");
 
 document.body.appendChild(div);
 
-describe("Component: Tabs - ", () => {
+describe("Component: Tabs -", () => {
     it("is defined", () => {
         expect(Tabs).toBeDefined();
     });

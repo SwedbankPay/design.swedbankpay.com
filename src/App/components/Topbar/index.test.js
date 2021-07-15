@@ -3,7 +3,7 @@ import { shallow, mount } from "enzyme";
 
 import Topbar from "./index";
 
-describe("Component: Topbar - ", () => {
+describe("Component: Topbar -", () => {
     const div = document.createElement("div");
 
     document.body.appendChild(div);
@@ -144,7 +144,7 @@ describe("Component: Topbar - ", () => {
                 expect(wrapper.find(".topbar-link-right").html()).toContain("Log out");
             });
 
-            it("it prevents default when clicked", () => {
+            it("prevents default when clicked", () => {
                 const eventHandler = { preventDefault: jest.fn() };
 
                 const wrapper = mount(<Topbar logout />);

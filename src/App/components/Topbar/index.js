@@ -79,15 +79,15 @@ const TopbarLogo = ({ png }) => (
 const Topbar = ({ topbarContent, wide, logout, id, png, sticky, sidebar }) => (
     <header className={`topbar${wide ? ` topbar-${wide}-wide` : ""}${sticky ? " topbar-sticky" : ""}`} id={id}>{"\n"}
         {topbarContent ?
-        <>
-            <TopbarBtn />{"\n"}
-            <TopbarLogo png={png}/>
-            <TopbarMenu menu={topbarContent} logout={!!logout} sidebar={sidebar} />
-        </> :
-        <>
-            <TopbarLogo png={png} />
-            {logout ? <TopbarLogout /> : null}
-        </>}
+            <>
+                <TopbarBtn />{"\n"}
+                <TopbarLogo png={png}/>
+                <TopbarMenu menu={topbarContent} logout={!!logout} sidebar={sidebar} />
+            </> :
+            <>
+                <TopbarLogo png={png} />
+                {logout ? <TopbarLogout /> : null}
+            </>}
     </header>
 );
 

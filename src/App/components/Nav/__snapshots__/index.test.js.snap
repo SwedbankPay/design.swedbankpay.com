@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Nav -  Throws an error when proptype for vertsize is wrong 1`] = `
+exports[`Component: Nav - Throws an error when proptype for vertsize is wrong 1`] = `
 <nav
   className="nav nav-xxxl-vertical"
 >
@@ -183,7 +183,7 @@ exports[`Component: Nav -  Throws an error when proptype for vertsize is wrong 1
 </nav>
 `;
 
-exports[`Component: Nav -  Throws an error when proptype for widesize is wrong 1`] = `
+exports[`Component: Nav - Throws an error when proptype for widesize is wrong 1`] = `
 <nav
   className="nav nav-xxxl-vertical-wide"
 >
@@ -366,7 +366,7 @@ exports[`Component: Nav -  Throws an error when proptype for widesize is wrong 1
 </nav>
 `;
 
-exports[`Component: Nav -  renders 1`] = `
+exports[`Component: Nav - renders 1`] = `
 <nav
   className="nav"
 >
@@ -549,7 +549,7 @@ exports[`Component: Nav -  renders 1`] = `
 </nav>
 `;
 
-exports[`Component: Nav -  renders with an active list if state active matches 1`] = `
+exports[`Component: Nav - renders with an active list if state active matches 1`] = `
 <nav
   className="nav"
 >
@@ -732,7 +732,7 @@ exports[`Component: Nav -  renders with an active list if state active matches 1
 </nav>
 `;
 
-exports[`Component: Nav -  renders with an active sublistItem if state active matches 1`] = `
+exports[`Component: Nav - renders with an active sublistItem if state active matches 1`] = `
 <nav
   className="nav"
 >
@@ -961,7 +961,7 @@ exports[`Component: Nav -  renders with an active sublistItem if state active ma
 </nav>
 `;
 
-exports[`Component: Nav -  renders with two levels 1`] = `
+exports[`Component: Nav - renders with two levels 1`] = `
 <nav
   className="nav"
 >

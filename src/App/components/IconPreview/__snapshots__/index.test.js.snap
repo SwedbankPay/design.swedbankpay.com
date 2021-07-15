@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: IconPreview -  prop name is marked as required 1`] = `
+exports[`Component: IconPreview - prop name is marked as required 1`] = `
 <i
   aria-hidden="true"
   className="payment-icon payment-icon-undefined"
 />
 `;
 
-exports[`Component: IconPreview -  prop size is an enum with specified allowed values 1`] = `
+exports[`Component: IconPreview - prop size is an enum with specified allowed values 1`] = `
 <div>
   <IconPreview
     name="visa"
@@ -37,14 +37,14 @@ exports[`Component: IconPreview -  prop size is an enum with specified allowed v
 </div>
 `;
 
-exports[`Component: IconPreview -  prop size is an enum with specified allowed values 2`] = `
+exports[`Component: IconPreview - prop size is an enum with specified allowed values 2`] = `
 <i
   aria-hidden="true"
   className="payment-icon payment-icon-test payment-icon-amex"
 />
 `;
 
-exports[`Component: IconPreview -  prop type has specific allowed values 1`] = `
+exports[`Component: IconPreview - prop type has specific allowed values 1`] = `
 <div>
   <IconPreview
     type="material-icons"
@@ -58,21 +58,21 @@ exports[`Component: IconPreview -  prop type has specific allowed values 1`] = `
 </div>
 `;
 
-exports[`Component: IconPreview -  prop type has specific allowed values 2`] = `
+exports[`Component: IconPreview - prop type has specific allowed values 2`] = `
 <i
   aria-hidden="true"
   className="invalid_value invalid_value-undefined"
 />
 `;
 
-exports[`Component: IconPreview -  renders 1`] = `
+exports[`Component: IconPreview - renders 1`] = `
 <i
   aria-hidden="true"
   className="payment-icon payment-icon-amex"
 />
 `;
 
-exports[`Component: IconPreview -  renders a material icon when type is equal to material-icons 1`] = `
+exports[`Component: IconPreview - renders a material icon when type is equal to material-icons 1`] = `
 <i
   aria-hidden="true"
   className="material-icons"
@@ -81,7 +81,7 @@ exports[`Component: IconPreview -  renders a material icon when type is equal to
 </i>
 `;
 
-exports[`Component: IconPreview -  renders a preview wrapper around material-icon when prop previewSize is true 1`] = `
+exports[`Component: IconPreview - renders a preview wrapper around material-icon when prop previewSize is true 1`] = `
 <div
   className="icon-preview"
 >
@@ -99,7 +99,7 @@ exports[`Component: IconPreview -  renders a preview wrapper around material-ico
 </div>
 `;
 
-exports[`Component: IconPreview -  renders a preview wrapper around the <i> tag when prop preview is true 1`] = `
+exports[`Component: IconPreview - renders a preview wrapper around the <i> tag when prop preview is true 1`] = `
 <div
   className="icon-preview"
 >
@@ -115,21 +115,21 @@ exports[`Component: IconPreview -  renders a preview wrapper around the <i> tag 
 </div>
 `;
 
-exports[`Component: IconPreview -  renders correct icon when prop name is provided 1`] = `
+exports[`Component: IconPreview - renders correct icon when prop name is provided 1`] = `
 <i
   aria-hidden="true"
   className="payment-icon payment-icon-amex"
 />
 `;
 
-exports[`Component: IconPreview -  renders correct size when prop size is provided 1`] = `
+exports[`Component: IconPreview - renders correct size when prop size is provided 1`] = `
 <i
   aria-hidden="true"
   className="payment-icon payment-icon-large payment-icon-amex"
 />
 `;
 
-exports[`Component: IconPreview -  renders icon with custom when prop className is provided 1`] = `
+exports[`Component: IconPreview - renders icon with custom when prop className is provided 1`] = `
 <i
   aria-hidden="true"
   className="payment-icon payment-icon-amex test test2 test-3"

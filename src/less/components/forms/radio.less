@@ -24,8 +24,8 @@
             position: absolute;
             visibility: visible;
             left: -28px;
-            height: @checkbox-height;
-            width: @checkbox-width;
+            height: @radio-height;
+            width: @radio-width;
             background-color: @white;
             border: 2px solid @brand-secondary-light-2;
             cursor: pointer;
@@ -33,23 +33,17 @@
         }
 
         &:checked + label:before {
-            background-position: 50% 50%;
             background-color: @white;
             background-repeat: no-repeat;
             background-image: url("../../../icons/shapes/circle.svg");
             border-color: @brand-secondary;
         }
 
-        &:focus + label:before {
-            box-shadow: 0 0 0 0.375rem @brand-secondary-light-3;
-            border-color: @brand-secondary;
-        }
-
+        &:focus + label:before,
         &:hover + label:before {
             box-shadow: 0 0 0 0.375rem @brand-secondary-light-3;
             border-color: @brand-secondary;
         }
-
 
         &[disabled] {
             + label:before {
@@ -68,6 +62,22 @@
             &:checked + label:before {
                 cursor: not-allowed;
             }
+        }
+    }
+}
+
+fieldset {
+    &.radio-group {
+        legend {
+            margin-bottom: 0;
+            border: none;
+            font-weight: bold;
+        }
+    }
+
+    &[disabled] {
+        legend {
+            color: @light-brown;
         }
     }
 }

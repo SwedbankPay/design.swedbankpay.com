@@ -3,7 +3,7 @@ import { shallow, mount } from "enzyme";
 
 import InputGroup from "./index";
 
-describe("Component: InputGroup - ", () => {
+describe("Component: InputGroup -", () => {
     it("is defined", () => {
         expect(InputGroup).toBeDefined();
     });

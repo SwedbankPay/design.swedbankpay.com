@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import Checkbox from "./Checkbox";
 
-describe("Component: Checkbox - ", () => {
+describe("Component: Checkbox -", () => {
     it("is defined", () => {
         expect(Checkbox).toBeDefined();
     });
@@ -15,13 +15,12 @@ describe("Component: Checkbox - ", () => {
         expect(wrapper.html()).toContain("checkbox");
     });
 
-    it("renders with the specified id but without label", () => {
+    it("renders with the specified id", () => {
         const wrapper = shallow(<Checkbox id="test" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("checkbox");
         expect(wrapper.html()).toContain("id=\"test\"");
-        expect(wrapper.html()).not.toContain("label");
     });
 
     it("renders with the specified id and label", () => {
@@ -48,5 +47,93 @@ describe("Component: Checkbox - ", () => {
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("checkbox");
         expect(wrapper.html()).toContain("checked");
+    });
+
+    it("renders checkbox group", () => {
+        const options = [
+            {
+                id: "radio-example-1",
+                label: "Checkbox label"
+            },
+            {
+                id: "radio-example-2",
+                label: "Checkbox label"
+            },
+            {
+                id: "radio-example-3",
+                label: "Checkbox label"
+            }
+        ];
+
+        const wrapper = shallow(<Checkbox group options={options} />);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.html()).toContain("checkbox-group");
+    });
+
+    it("renders checkbox group with groupTitle", () => {
+        const options = [
+            {
+                id: "radio-example-1",
+                label: "Checkbox label"
+            },
+            {
+                id: "radio-example-2",
+                label: "Checkbox label"
+            },
+            {
+                id: "radio-example-3",
+                label: "Checkbox label"
+            }
+        ];
+
+        const wrapper = shallow(<Checkbox group groupTitle="Group title" options={options} />);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.html()).toContain("legend");
+    });
+
+    it("renders checkbox group with error", () => {
+        const options = [
+            {
+                id: "radio-example-1",
+                label: "Checkbox label"
+            },
+            {
+                id: "radio-example-2",
+                label: "Checkbox label"
+            },
+            {
+                id: "radio-example-3",
+                label: "Checkbox label"
+            }
+        ];
+
+        const wrapper = shallow(<Checkbox group errorMessage="error" options={options} />);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.html()).toContain("help-block");
+    });
+
+    it("renders checkbox group with disabled state", () => {
+        const options = [
+            {
+                id: "radio-example-1",
+                label: "Checkbox label"
+            },
+            {
+                id: "radio-example-2",
+                label: "Checkbox label"
+            },
+            {
+                id: "radio-example-3",
+                label: "Checkbox label"
+            }
+        ];
+
+        const wrapper = shallow(<Checkbox group disabled options={options} />);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.html()).toContain("disabled");
     });
 });

@@ -147,6 +147,7 @@ describe("Core: Typography", () => {
                 Blockquotes().props.children.map(Child => {
                     const wrapper = shallow(<Child.type />);
 
+                    //  eslint-disable-next-line jest/no-conditional-expect
                     expect(wrapper).toMatchSnapshot();
                 });
             }

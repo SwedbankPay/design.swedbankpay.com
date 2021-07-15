@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import Datepicker from "./Datepicker";
 
-describe("Component: Datepicker - ", () => {
+describe("Component: Datepicker -", () => {
     it("is defined", () => {
         expect(Datepicker).toBeDefined();
     });

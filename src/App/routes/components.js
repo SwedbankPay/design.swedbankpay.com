@@ -82,6 +82,13 @@ module.exports = [
                 statusBadges: ["javascript"]
             },
             {
+                title: "Checkbox",
+                path: "/components/checkbox",
+                componentPath: "components/Checkbox",
+                icon: "check_box",
+                outlined: true
+            },
+            {
                 title: "Code tags",
                 path: "/components/code-tags",
                 componentPath: "components/CodeTags",
@@ -118,17 +125,17 @@ module.exports = [
                 outlined: true,
                 statusBadges: ["javascript"]
             },
-            {
+            /* {
                 title: "Footer",
                 path: "/components/footer",
                 componentPath: "components/Footer",
                 icon: "call_to_action",
                 outlined: true
-            },
+            }, */
             {
-                title: "Input Group",
-                path: "/components/input-group",
-                componentPath: "components/InputGroup"
+                title: "Input field",
+                path: "/components/input-field",
+                componentPath: "components/InputField"
             },
             /* {
                 title: "Lightbox",
@@ -159,7 +166,8 @@ module.exports = [
             {
                 title: "Media Object",
                 path: "/components/media-object",
-                componentPath: "components/MediaObject"
+                componentPath: "components/MediaObject",
+                statusBadges: ["remove"]
             },
             {
                 title: "Navigation",
@@ -189,12 +197,29 @@ module.exports = [
                 outlined: true
             },
             {
+                title: "Radio button",
+                path: "/components/radio-button",
+                componentPath: "components/RadioButton",
+                icon: "radio_button_checked",
+                outlined: true
+            },
+            {
+                title: "Rangeslider",
+                path: "/components/rangeslider",
+                componentPath: "components/Rangeslider"
+            },
+            {
                 title: "Sheet",
                 path: "/components/sheet",
                 componentPath: "components/Sheet",
                 icon: "vertical_split",
                 outlined: true,
                 statusBadges: ["javascript"]
+            },
+            {
+                title: "Select",
+                path: "/components/select",
+                componentPath: "components/Select"
             },
             {
                 title: "Sidebar",
@@ -236,6 +261,11 @@ module.exports = [
                 icon: "picture_in_picture",
                 outlined: true,
                 statusBadges: ["javascript", "updated"]
+            },
+            {
+                title: "Togglebox",
+                path: "/components/togglebox",
+                componentPath: "components/Togglebox"
             },
             {
                 title: "Tooltips",

@@ -1,10 +1,8 @@
-if (($Env:APPVEYOR_REPO_TAG -eq "true") -and ($Env:GitVersion_BranchName -eq "master")) {
-    # Store content of CHANGELOG.md in env variable
-    $Env:changelog = [IO.File]::ReadAllText("C:\projects\design-swedbankpay-com\CHANGELOG.md")
+# Store content of CHANGELOG.md in env variable
+$Env:changelog = [IO.File]::ReadAllText("C:\projects\design-swedbankpay-com\CHANGELOG.md")
 
-    # Push artifact to appveyor
-    Push-AppveyorArtifact "dist/$Env:basename/release/SwedbankPay.DesignGuide.v$($Env:GitVersion_FullSemVer).zip"
-}
+# Push artifact to appveyor
+Push-AppveyorArtifact "dist/$Env:basename/release/SwedbankPay.DesignGuide.v$($Env:GitVersion_FullSemVer).zip"
 
 # Deploy to gh-pages
 Write-Host "Starting deploy to gh-pages"

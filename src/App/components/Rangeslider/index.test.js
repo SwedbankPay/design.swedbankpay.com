@@ -1,24 +1,15 @@
 import React from "react";
 import { mount } from "enzyme";
 
-import Rangeslider from "./Rangeslider";
+import Rangeslider from ".";
 
-describe("Component: Rangeslider - ", () => {
+describe("Component: Rangeslider -", () => {
     it("is defined", () => {
         expect(Rangeslider).toBeDefined();
     });
 
-    it("renders without label", () => {
-        const wrapper = mount(<Rangeslider />);
-
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<input type="range" />)).toEqual(true);
-        expect(wrapper.html()).not.toContain("value-label");
-        expect(wrapper.html()).not.toContain("data-rs-value");
-    });
-
     it("renders with a value label", () => {
-        const wrapper = mount(<Rangeslider valueLabel />);
+        const wrapper = mount(<Rangeslider />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<input type="range" />)).toEqual(true);
@@ -27,7 +18,7 @@ describe("Component: Rangeslider - ", () => {
     });
 
     it("renders with a value label and a value label prefix", () => {
-        const wrapper = mount(<Rangeslider valueLabel valueLabelPrefix="test" />);
+        const wrapper = mount(<Rangeslider valueLabelPrefix="test" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<input type="range" />)).toEqual(true);
@@ -36,7 +27,7 @@ describe("Component: Rangeslider - ", () => {
     });
 
     it("renders with a value label and a value label postfix", () => {
-        const wrapper = mount(<Rangeslider valueLabel valueLabelPostfix="test" />);
+        const wrapper = mount(<Rangeslider valueLabelPostfix="test" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<input type="range" />)).toEqual(true);
