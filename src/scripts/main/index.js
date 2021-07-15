@@ -1,6 +1,4 @@
 import { init } from "~/node_modules/@sentry/browser";
-import "core-js/stable";
-import "regenerator-runtime/runtime";
 import "@src/polyfills";
 
 import accordion from "./accordion";
