@@ -28,7 +28,7 @@ module.exports = (env, argv) => {
     const config = {
         mode: argv.mode || "production",
         entry: {
-            dg: "./src/scripts/main/index.js",
+            dg: ["@babel/polyfill", "./src/scripts/main/index.js"],
             "dg-dashboard": "./src/scripts/dashboard/index.js",
             app: `./src/${brand}.js`
         },
