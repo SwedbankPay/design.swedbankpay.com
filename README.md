@@ -127,8 +127,9 @@ Before merging to master to create a release, make sure you follow these steps:
 - Be in the `develop` branch. 
 - Create a release branch where the name is the new tag. (`release/x.x.x`) 
 - Update the version in `~/package.json`.
-- Make sure the changelog is correct (date and version) and only contains- changes for the current release.
+- Make sure the `CHANGELOG.md` is correct (date and version) and only contains- changes for the current release.
 - Update the version in the URL of the `version-badge` and `version-tag`- at the bottom of this `README.md` file.
+- Update the changelog constants on the Home page. 
 - Commit the changes and create a pull request from your branch to `master`.
 - When approved, rename the merge commit to `Release x.x.x` and merge.
 - Change branch to `master`.
