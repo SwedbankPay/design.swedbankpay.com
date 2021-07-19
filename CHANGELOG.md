@@ -1,38 +1,13 @@
 # Changelog
 
-## [6.0.0] - 14.07.2021
-
-## Added
-- Radio
-  - New documentation page
-- Togglebox
-  - New documentation page
-- Select
-  - New documentation page
-- Checkbox
-  - New documentation page
-- Rangeslider
-  - New documentation page
-- Input fields
-  - New documentation page
+## [6.0.1] - 19.07.2021
 
 ## Changed
-- Forms
-  - Split up forms documentation into separate pages (radio, togglebox etc.)
+- Split up documentation css into own files
+- Update readme
 
 ## Fixed
-- Dead links
-- Documentation content
-
-## Removed
-- Input group
-  - Removed documentation (check input fields instead)
-
-### Other updates
-- All node packages
-- Css architecture and other css fixes
-- Dependabot
-- Codecov
-- CI flow (GitHub Actions, AppVeyor, Azure etc.)
-- Jest configurations
-- Webpack reworked and updated
+- Select for IE
+- Polyfill dg script for IE
+- Security package 
+- Azure deployment 

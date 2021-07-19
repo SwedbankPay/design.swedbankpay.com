@@ -28,7 +28,7 @@ module.exports = (env, argv) => {
     const config = {
         mode: argv.mode || "production",
         entry: {
-            dg: "./src/scripts/main/index.js",
+            dg: ["@babel/polyfill", "./src/scripts/main/index.js"],
             "dg-dashboard": "./src/scripts/dashboard/index.js",
             app: `./src/${brand}.js`
         },
@@ -157,15 +157,15 @@ module.exports = (env, argv) => {
         optimization: {
             splitChunks: {
                 cacheGroups: {
-                    dgStyles: {
-                        name: "dg-style",
-                        test: brand === "swedbankpay" ? /(flatpickr\.css|swedbankpay\.less)$/ : /(flatpickr\.css|payex\.less)$/,
-                        chunks: "all",
-                        enforce: true
-                    },
                     docStyles: {
                         name: "documentation",
                         test: brand === "swedbankpay" ? /documentation-swedbankpay\.less/ : /documentation-payex\.less/,
+                        chunks: "all",
+                        enforce: true
+                    },
+                    dgStyles: {
+                        name: "dg-style",
+                        test: brand === "swedbankpay" ? /(flatpickr\.css|swedbankpay\.less)$/ : /(flatpickr\.css|payex\.less)$/,
                         chunks: "all",
                         enforce: true
                     }

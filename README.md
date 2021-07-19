@@ -124,29 +124,22 @@ __*Make sure to follow the syntax rules enforced by ESLint & Stylelint.*__
 
 Before merging to master to create a release, make sure you follow these steps:
 
-1. Make sure the linting (`npm run lint`) and unit tests pass (`npm test`).
-2. Update the version in `~/package.json`.
-3. Make sure the changelog is correct (date and version) and only contains
-   changes for the current release.
-4. Update the version in the URL of the `version-badge` and `version-tag`
-   at the bottom of this `README.md` file.
-5. Commit the changes and create a pull request from your branch to `develop`.
-6. When approved and merged, create a new pull request from `develop` to
-   `master`.
-7. When approved, rename the merge commit to `Release x.x.x` and merge.
-8. Change branch to `master`.
-9. Create and push a new tag with the new release commit.
+- Be in the `develop` branch. 
+- Create a release branch where the name is the new tag. (`release/x.x.x`) 
+- Update the version in `~/package.json`.
+- Make sure the changelog is correct (date and version) and only contains- changes for the current release.
+- Update the version in the URL of the `version-badge` and `version-tag`- at the bottom of this `README.md` file.
+- Commit the changes and create a pull request from your branch to `master`.
+- When approved, rename the merge commit to `Release x.x.x` and merge.
+- Change branch to `master`.
+- Create and push a new tag with the new release commit.
 
 AppVeyor will now create and deploy a release on both github and
 [`design.swedbankpay.com`][swpdg].
 
-After pushing to master, create a pull request to `develop` that deletes the
-changelog content but keeps the headers.
-
 ## Core development team
 
-- [Erik Hallaraaker][erikhallaraaker]
-- [Håkon Mosvoll][hmosvoll]
+- [Phung Nguyen][PhungNg]
 - [Thomas Lorntzen][VikingTristan]
 
 ## Contents of this project
@@ -179,8 +172,8 @@ Code and documentation © Swedbank Pay and contributors, released under the [MIT
 
 Inspired by [Bootstrap][bootstrap] and [Materialize][materialize].
 
-  [version-badge]:      https://img.shields.io/badge/Version-6.0.0-blue.svg
-  [version-tag]:        https://github.com/swedbankpay/design.swedbankpay.com/releases/tag/6.0.0
+  [version-badge]:      https://img.shields.io/badge/Version-6.0.1-blue.svg
+  [version-tag]:        https://github.com/swedbankpay/design.swedbankpay.com/releases/tag/6.0.1
   [appveyor-badge]:     https://ci.appveyor.com/api/projects/status/1dii19sqw1m7xtsn/branch/master?svg=true
   [appveyor-status]:    https://ci.appveyor.com/project/PayEx/design-swedbankpay-com/branch/master
   [appveyor]:           https://www.appveyor.com/
@@ -201,8 +194,7 @@ Inspired by [Bootstrap][bootstrap] and [Materialize][materialize].
   [webpack]:            https://webpack.js.org/
   [semver]:             http://semver.org/
   [issues]:             https://github.com/swedbankpay/design.swedbankpay.com/issues
-  [erikhallaraaker]:    https://github.com/erikhallaraaker
-  [hmosvoll]:           https://github.com/hmosvoll
+  [PhungNg]:            https://github.com/PhungNg
   [VikingTristan]:      https://github.com/VikingTristan
   [babel]:              https://babeljs.io/
   [eslint]:             https://eslint.org/
