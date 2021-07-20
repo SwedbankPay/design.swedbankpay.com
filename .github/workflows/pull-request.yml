@@ -34,7 +34,7 @@ jobs:
       - name: Tests and linting
         run: npm run lint && npm run test:coverage
 
-      - uses: codecov/codecov-action@v1.5.2
+      - uses: codecov/codecov-action@v2.0.1
         # with:
         #   files: ./coverage/lcov.info
           # fail_ci_if_error: true
