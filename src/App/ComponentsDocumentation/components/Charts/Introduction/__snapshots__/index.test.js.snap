@@ -25,7 +25,7 @@ exports[`Dashboard: Introduction Css renders 1`] = `
     language="html"
   >
     <link
-      href="http://localhost/TEST/styles/dg-style.css"
+      href="http://localhost/TEST/styles/TESTBRAND.css"
       rel="stylesheet"
     />
     <link
