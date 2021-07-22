@@ -1,0 +1,34 @@
+name: Create node package
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 16
+
+      - name: Cache dependencies
+        uses: actions/cache@v2.1.6
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install
+        run: npm ci
+
+      - name: Build
+        run: npm run build:prod -- --env github_actions=true
+
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          access: "public"
