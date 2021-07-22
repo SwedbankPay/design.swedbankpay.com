@@ -113,6 +113,8 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                 // This is not needed, and for some reason crashes after a prod build [EH]
                 // code = jsbeautifier(code);
                 break;
+            case "terminal":
+                break;
             default:
                 return "update switchcase!";
         }
@@ -359,7 +361,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
 };
 
 ComponentPreview.propTypes = {
-    language: PropTypes.oneOf(["html", "javascript", "css"]).isRequired,
+    language: PropTypes.oneOf(["html", "javascript", "css", "terminal"]).isRequired,
     removeOuterTag: PropTypes.bool,
     hideValue: PropTypes.bool,
     removeList: PropTypes.bool,
