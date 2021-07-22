@@ -11,6 +11,38 @@
 
 ## Installing / Getting started
 
+```sh
+npm i @swedbankpay/design.swedbankpay.com
+```
+
+### Usage
+
+#### Javascript
+
+You can import the entire javascript library
+```javascript
+import dg from "@swedbankpay/design.swedbankpay.com"
+dg.script.initAll();
+```
+or only the components you need
+```javascript
+import { sheet } from "@swedbankpay/design.swedbankpay.com"
+sheet.init();
+```
+
+#### CSS
+```css
+@import url("@swedbankpay/design.swedbankpay.com/dist/designguide/styles/swedbankpay.css");
+```
+
+#### Assets
+When using the node package you also need to host assets such as fonts and icons. Copy the files at `@swedbankpay/design.swedbankpay.com/dist/designguide` to your static files.
+
+E.g. fonts should be available at `yourdomain.com/designguide/fonts` 
+
+Check out the documentation for more information.
+## Getting started as a developer
+
 The following guides are for further development of the Design Guide, and are
 not necessary if you only plan to use the Design Guide in your project.
 
