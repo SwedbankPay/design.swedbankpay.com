@@ -20,5 +20,6 @@ module.exports = {
     ],
     globals: {
         stopDg: true
-    }
+    },
+    testEnvironment: "jsdom"
 };
