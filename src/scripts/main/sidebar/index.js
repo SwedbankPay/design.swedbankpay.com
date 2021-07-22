@@ -3,7 +3,7 @@ import SELECTORS from "./selectors";
 
 const scrollBuffer = 20;
 
-const _sidebars = _sidebars || [];
+const _sidebars = [];
 
 class Sidebar {
     constructor (el) {

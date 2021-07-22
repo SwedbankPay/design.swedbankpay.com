@@ -4,7 +4,7 @@ const SELECTORS = {
     TOGGLE: ".action-toggle"
 };
 
-const _actionLists = _actionLists || [];
+const _actionLists = [];
 
 class ActionList {
     constructor (element) {
