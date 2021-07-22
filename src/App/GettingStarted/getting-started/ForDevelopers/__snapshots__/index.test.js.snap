@@ -275,7 +275,7 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
   <h2
     id="installation"
   >
-    Installation
+    Installation with CDN
   </h2>
   <p>
     To quickly add the Swedbank Pay Design Guide to your project, include the snippets below in your project.
@@ -323,6 +323,107 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     <script
       src="http://localhost/TEST/scripts/dg.js"
     />
+  </ComponentPreview>
+  <h2
+    id="installation-npm"
+  >
+    Installation with NPM
+  </h2>
+  <p>
+    If you want to host the Design Guide files in your own app, run the following command.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="terminal"
+  >
+    npm i @swedbankpay/design.swedbankpay.com
+  </ComponentPreview>
+  <h3>
+    Usage with NPM
+  </h3>
+  <p>
+    When importing the Design Guide javascript, you can choose to either import the whole thing or only the components you want to use.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    import dg from "@swedbankpay/design.swedbankpay.com"; 
+    
+
+    dg.script.initAll();
+  </ComponentPreview>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    import { sheet } from "@swedbankpay/design.swedbankpay.com";  
+    
+
+    sheet.init();
+  </ComponentPreview>
+  <p>
+    For CSS you can choose to import it from a 
+    <CodeTags
+      code="css/less/scss"
+      type="secondary"
+    />
+     file, from a 
+    <CodeTags
+      code="js"
+      type="secondary"
+    />
+     file if your bundler supports it, or point to the file directly from your bundler.
+  </p>
+  <p>
+    Example from a 
+    <CodeTags
+      code=".less"
+      type="secondary"
+    />
+     file
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="css"
+  >
+    @import url("@swedbankpay/design.swedbankpay.com/dist/designguide/styles/
+    TESTBRAND
+    .css");
+  </ComponentPreview>
+  <h3>
+    Assets
+  </h3>
+  <p>
+    When using the node package you also need to host certain assets such as fonts and icons. Copy the 
+    <CodeTags
+      code="designguide"
+      type="secondary"
+    />
+     folder from the Design Guide package located in 
+    <CodeTags
+      code="node_modules/@swedbankpay/dist"
+      type="secondary"
+    />
+     over to your static file folder. 
+  </p>
+  <p>
+    It might be a good idea to do this programmatically through webpack/angular/vue/react configurations.
+  </p>
+  <p>
+    Purely an example with webpack.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    new CopyWebpackPlugin([ 
+    
+
+      { from: "./node_modules/@swedbankpay/dist/designguide", to: "./static/designguide" } 
+    
+
+    ]),
   </ComponentPreview>
   <h3>
     How to initialize our JavaScript components
