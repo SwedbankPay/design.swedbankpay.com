@@ -45,7 +45,7 @@ const faqList = [
 const FAQSearch = () => (
     <>
         <div className="row justify-content-center">
-            <img className="examples-faq-logo" src={`${basename}img/${brand}-logo${brand === "swedbankpay" ? "-h" : ""}.svg`} alt="logo" />
+            <img className="examples-faq-logo" src={`${basename}designguide/assets/${brand}-logo${brand === "swedbankpay" ? "-h" : ""}.svg`} alt="logo" />
         </div>
         <div className="row justify-content-center">
             <h2>How can we help?</h2>
