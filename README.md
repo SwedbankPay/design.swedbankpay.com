@@ -12,7 +12,7 @@
 ## Installing / Getting started
 
 ```sh
-npm install @swedbankpay/design.swedbankpay.com
+npm install @swedbankpay/design-guide
 ```
 
 ### Usage
@@ -22,26 +22,26 @@ npm install @swedbankpay/design.swedbankpay.com
 You can import the entire javascript library:
 
 ```javascript
-import dg from "@swedbankpay/design.swedbankpay.com"
+import dg from "@swedbankpay/design-guide"
 dg.script.initAll();
 ```
 
 or only the components you need:
 
 ```javascript
-import { sheet } from "@swedbankpay/design.swedbankpay.com"
+import { sheet } from "@swedbankpay/design-guide"
 sheet.init();
 ```
 
 #### CSS
 
 ```css
-@import url("@swedbankpay/design.swedbankpay.com/dist/designguide/styles/swedbankpay.css");
+@import url("@swedbankpay/design-guide/dist/designguide/styles/swedbankpay.css");
 ```
 
 #### Assets
 
-When using the node package you also need to host assets such as fonts and icons. Copy the files at `@swedbankpay/design.swedbankpay.com/dist/designguide` to your static files.
+When using the node package you also need to host assets such as fonts and icons. Copy the files at `@swedbankpay/design-guide/dist/designguide` to your static files.
 
 E.g. fonts should be available at `yourdomain.com/designguide/fonts` 
 
