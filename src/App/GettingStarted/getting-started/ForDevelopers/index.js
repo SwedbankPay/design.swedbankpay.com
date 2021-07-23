@@ -26,28 +26,36 @@ const Installation = () => (
         <h2 id="installation-npm">Installation with NPM</h2>
         <p>If you want to host the Design Guide files in your own app, run the following command.</p>
         <ComponentPreview language="terminal" codeFigure>
-            npm i @swedbankpay/design.swedbankpay.com
+            npm i @swedbankpay/design-guide
         </ComponentPreview>
         <h3>Usage with NPM</h3>
         <p>When importing the Design Guide javascript, you can choose to either import the whole thing or only the components you want to use.</p>
         <ComponentPreview language="javascript" codeFigure>
-            import dg from &quot;@swedbankpay/design.swedbankpay.com&quot;; {"\n"}
+            import dg from &quot;@swedbankpay/design-guide&quot;; {"\n"}
             dg.script.initAll();
         </ComponentPreview>
         <ComponentPreview language="javascript" codeFigure>
-            import &#123; sheet &#125; from &quot;@swedbankpay/design.swedbankpay.com&quot;;  {"\n"}
+            import &#123; sheet &#125; from &quot;@swedbankpay/design-guide&quot;;  {"\n"}
             sheet.init();
         </ComponentPreview>
         <p>For CSS you can choose to import it from a <CodeTags type="secondary" code="css/less/scss"/> file, from a <CodeTags type="secondary" code="js"/> file if your bundler supports it, or point to the file directly from your bundler.</p>
         <p>Example from a <CodeTags type="secondary" code=".less"/> file</p>
         <ComponentPreview language="css" codeFigure>
-            @import url(&quot;@swedbankpay/design.swedbankpay.com/dist/designguide/styles/{brand}.css&quot;);
+            @import url(&quot;@swedbankpay/design-guide/dist/designguide/styles/{brand}.css&quot;);
         </ComponentPreview>
         <h3>Assets</h3>
         <p>When using the node package you also need to host certain assets such as fonts and icons. Copy the <CodeTags type="secondary" code="designguide"/> folder from the Design Guide package located in <CodeTags type="secondary" code="node_modules/@swedbankpay/dist"/> over to your static file folder. </p>
-        <p>It might be a good idea to do this programmatically through webpack/angular/vue/react configurations.</p>
+        <p>It might be a good idea to do this programmatically either through NPM{"\n"}s postinstall or webpack/angular/vue/react configurations.</p>
         <p>
-            Purely an example with webpack.
+            Example with <CodeTags type="secondary" code="package.json"/> postinstall
+        </p>
+        <ComponentPreview language="javascript" codeFigure>
+        &quot;scripts&quot;: &#123; {"\n"}
+        &quot;postinstall&quot;: &quot;node ./post-install.js&quot; {"\n"}
+        &#125;
+        </ComponentPreview>
+        <p>
+            Example with webpack.
         </p>
         <ComponentPreview language="javascript" codeFigure>
             new CopyWebpackPlugin([ {"\n"}
