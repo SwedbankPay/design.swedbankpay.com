@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import { init } from "@sentry/browser";
-import "./designguide";
+import "./scripts/main";
 import App from "./App";
 
 import "./less/payex.less";
