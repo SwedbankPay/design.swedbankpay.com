@@ -25,6 +25,18 @@ window.addEventListener("popstate", () => {
     if (document.body.className.includes("has-vscroll")) { document.body.classList.remove("has-vscroll"); }
 });
 
+const currentScript = document.currentScript;
+
+if (currentScript) {
+    if (currentScript.getAttribute("global")) { window.dg = window.dg ? Object.assign(dg, window.dg) : dg; }
+
+    if (currentScript.getAttribute("autoLoad")) {
+        document.addEventListener("DOMContentLoaded", () => {
+            dg.script.initAll();
+        });
+    }
+}
+
 const dg = {
     accordion,
     actionList,
