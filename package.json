@@ -20,7 +20,8 @@
     "stylelint": "stylelint src/**/*.less",
     "lint": "npm run eslint && npm run stylelint",
     "e2e:chrome": "testcafe chrome src/**/*.spec.js",
-    "response-time": "node tools/check-response-time.js"
+    "response-time": "node tools/check-response-time.js",
+    "postinstall": "node ./post-install.js"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
   ],
   "dependencies": {
     "@sentry/browser": "^6.9.0",
+    "chalk": "^4.1.1",
     "chart.js": "^2.9.4",
     "classnames": "^2.3.1",
     "core-js": "^3.15.2",
