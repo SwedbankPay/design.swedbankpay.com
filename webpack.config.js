@@ -26,10 +26,20 @@ module.exports = (env, argv) => {
     const infoVersion = env && env.info_version ? env.info_version : "LOCAL_DEV";
 
     const config = {
+        experiments: {
+            outputModule: true
+        },
         mode: argv.mode || "production",
         entry: {
-            designguide: ["@babel/polyfill", "./src/designguide.js"],
-            "designguide-dashboard": "./src/scripts/dashboard/index.js",
+            // @babel/polyfill is here to support IE (it actually DOUBLES the dg.js size).
+            // Looking forward to removing this when we don't support IE anymore [THN]
+            dg: {
+                import: ["@babel/polyfill", "./src/scripts/main/index.js"],
+                library: {
+                    type: "module"
+                }
+            },
+            "dg-dashboard": "./src/scripts/dashboard/index.js",
             swedbankpay: "./src/swedbankpay.js",
             payex: "./src/payex.js"
         },
@@ -39,7 +49,7 @@ module.exports = (env, argv) => {
         output: {
             clean: true, // Cleans dist folder for each build
             path: path.resolve(__dirname, `dist${basename}`),
-            filename: "scripts/[name].bundle.js",
+            filename: "scripts/[name].js",
             chunkFilename: "scripts/[name].js",
             publicPath: basename
         },
@@ -180,7 +190,7 @@ module.exports = (env, argv) => {
                 meta: {
                     "informational-version": infoVersion
                 },
-                chunks: ["designguide", "designguide-dashboard", brand]
+                chunks: ["dg", "dg-dashboard", brand]
             }),
             new MiniCssExtractPlugin({
                 filename: "styles/[name].css"
@@ -220,7 +230,7 @@ module.exports = (env, argv) => {
                 hash: true,
                 title: `${brandTitle} Design Guide`,
                 basename,
-                chunks: ["designguide", "designguide-dashboard", brand]
+                chunks: ["dg", "dg-dashboard", brand]
             }),
             new HtmlWebpackPlugin({
                 filename: `${rootPath}404.html`,
@@ -228,7 +238,7 @@ module.exports = (env, argv) => {
                 hash: true,
                 title: `${brandTitle} Design Guide`,
                 basename,
-                chunks: ["designguide", "designguide-dashboard", brand]
+                chunks: ["dg", "dg-dashboard", brand]
             }),
         );
 
@@ -358,7 +368,7 @@ module.exports = (env, argv) => {
                                     destination: "./dist/temp/icons/icons/"
                                 },
                                 {
-                                    source: `./dist${basename}scripts/designguide*.*`,
+                                    source: `./dist${basename}scripts/dg*.*`,
                                     destination: "./dist/temp/release/scripts/"
                                 },
                                 {
@@ -374,7 +384,7 @@ module.exports = (env, argv) => {
                                  * Files for node package
                                  */
                                 {
-                                    source: `./dist${basename}scripts/designguide*.*`,
+                                    source: `./dist${basename}scripts/dg*.*`,
                                     destination: "./dist/designguide/scripts/"
                                 },
                                 {
