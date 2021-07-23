@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
-const { sidebar } = window.dg;
+import { sidebar } from "@src/scripts/main";
 
 const DocContainer = ({ children }) => {
     const DocContent = () => <div id="doc-body" className="doc-body col-12">{children}</div>;

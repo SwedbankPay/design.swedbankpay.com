@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import Sidebar from "./index";
 
-const { sidebar } = window.dg;
+import { sidebar } from "@src/scripts/main";
 
 describe("Examples: Sidebar", () => {
     it("is defined", () => {

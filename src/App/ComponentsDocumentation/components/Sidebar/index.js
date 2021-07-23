@@ -4,7 +4,7 @@ import { ComponentPreview, DocContainer, JavascriptDocs, JavascriptDocElement } 
 import SidebarComponent from "@components/Sidebar";
 import CodeTags from "@components/CodeTags";
 
-const { sidebar } = window.dg;
+import { sidebar } from "@src/scripts/main";
 
 import { SidebarNavList, SidebarNavListExtended } from "./constants";
 

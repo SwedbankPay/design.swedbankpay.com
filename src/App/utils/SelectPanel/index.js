@@ -11,7 +11,7 @@ import LogotypeComponent from "@components/Logotype";
 const basename = process.env.basename;
 const brand = process.env.brand;
 
-const { sidebar, topbar } = window.dg;
+import { sidebar, topbar } from "@src/scripts/main";
 
 class NavGroup extends Component {
     constructor (props) {
