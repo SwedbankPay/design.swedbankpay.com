@@ -12,6 +12,8 @@ class Nav {
     constructor (el) {
         this.id = el.id;
         this._el = el;
+        this.navVerticalSize;
+        this.navVerticalWideSize;
         this.navOpen = el.classList.contains("nav-open");
         this.submenus = this._el.querySelectorAll(SELECTORS.SUB);
         this.listItems = [...this._el.querySelectorAll("li")];
@@ -71,6 +73,8 @@ class Nav {
                 });
             });
         }
+
+        this._getBreakpoints();
     }
 
     /* Closes all open submenus */
@@ -104,6 +108,70 @@ class Nav {
                 items.classList.add("responsive-hidden");
             });
         }
+    }
+
+    _getBreakpoints () {
+        const breakpoints = [
+            { "nav-xs-vertical": 0 },
+            { "nav-sm-vertical": 576 },
+            { "nav-md-vertical": 768 },
+            { "nav-lg-vertical": 992 },
+            { "nav-xl-vertical": 1200 },
+            { "nav-xxl-vertical": 1600 }
+        ];
+
+        breakpoints.forEach(breakpoint => {
+            if (this._el.classList.contains(Object.keys(breakpoint)[0])) {
+                this.navVerticalSize = Number(Object.values(breakpoint));
+
+                [...this._el.classList].forEach(classname => {
+                    breakpoints.forEach(breakpoint => {
+                        if (`${Object.keys(breakpoint)[0]}-wide` === classname) {
+                            this.navVerticalWideSize = Object.values(breakpoint)[0];
+                        }
+                    });
+                });
+
+                this._setAttributes();
+                this._addEventListener();
+            }
+        });
+    }
+
+    _setAttributes () {
+        const icons = this._el.querySelectorAll("ul .material-icons");
+
+        if (window.innerWidth > this.navVerticalSize && window.innerWidth < this.navVerticalWideSize) {
+            [...icons].map(icon => {
+                icon.removeAttribute("aria-hidden");
+                icon.setAttribute("aria-label", icon.nextElementSibling.innerText);
+            });
+        } else {
+            [...icons].map(icon => {
+                if (icon.hasAttribute("aria-label")) {
+                    icon.removeAttribute("aria-label");
+                    icon.setAttribute("aria-hidden", true);
+                }
+            });
+        }
+    }
+
+    _addEventListener () {
+        window.addEventListener("resize", () => {
+            const icon = this._el.querySelector("li .material-icons");
+
+            if (icon.hasAttribute("aria-hidden")
+                && window.innerWidth > this.navVerticalSize
+                    && window.innerWidth < this.navVerticalWideSize) {
+                this._setAttributes();
+            }
+
+            if (icon.hasAttribute("aria-label")
+                && window.innerWidth > this.navVerticalWideSize
+                    || window.innerWidth < this.navVerticalSize) {
+                this._setAttributes();
+            }
+        });
     }
 
     /* Operations to run when the window is resized */
