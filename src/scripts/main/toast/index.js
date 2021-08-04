@@ -79,6 +79,7 @@ class Toast {
 
             icon.classList.add("material-icons");
             icon.innerHTML = iconType;
+            icon.setAttribute("aria-label", "Close");
 
             if (dismiss) {
                 icon.addEventListener("click", () => {
