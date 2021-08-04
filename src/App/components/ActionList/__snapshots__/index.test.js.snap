@@ -42,7 +42,7 @@ exports[`Component: ActionList prop types items prints an error if it does not c
         
 
         <i
-          aria-hidden="true"
+          aria-label="Open"
           className="material-icons"
         >
           more_vert
@@ -88,7 +88,7 @@ Array [
           
 
           <i
-            aria-hidden="true"
+            aria-label="Open"
             className="material-icons"
           >
             more_vert
@@ -145,7 +145,7 @@ Array [
           
 
           <i
-            aria-hidden="true"
+            aria-label="Open"
             className="material-icons"
           >
             more_vert
@@ -280,7 +280,7 @@ Array [
           
 
           <i
-            aria-hidden="true"
+            aria-label="Open"
             className="material-icons"
           >
             more_vert
@@ -410,7 +410,7 @@ Array [
           
 
           <i
-            aria-hidden="true"
+            aria-label="Open"
             className="material-icons"
           >
             more_vert
@@ -546,7 +546,7 @@ Array [
           
 
           <i
-            aria-hidden="true"
+            aria-label="Open"
             className="material-icons"
           >
             more_vert
@@ -677,7 +677,7 @@ Array [
           
 
           <i
-            aria-hidden="true"
+            aria-label="Open"
             className="material-icons"
           >
             more_vert
@@ -792,7 +792,7 @@ Array [
           
 
           <i
-            aria-hidden="true"
+            aria-label="Open"
             className="material-icons"
           >
             more_vert
@@ -849,7 +849,7 @@ Array [
           
 
           <i
-            aria-hidden="true"
+            aria-label="Open"
             className="material-icons"
           >
             more_vert
