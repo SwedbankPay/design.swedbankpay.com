@@ -14,9 +14,12 @@ exports[`Component: Sheet - does not render with data-require-action if it is se
     >
       
 			
-      <Icon
-        type="close"
-      />
+      <i
+        aria-label="Close"
+        className="material-icons"
+      >
+        close
+      </i>
       
 		
     </a>
@@ -38,9 +41,12 @@ exports[`Component: Sheet - renders 1`] = `
     >
       
 			
-      <Icon
-        type="close"
-      />
+      <i
+        aria-label="Close"
+        className="material-icons"
+      >
+        close
+      </i>
       
 		
     </a>
@@ -62,9 +68,12 @@ exports[`Component: Sheet - renders with a close icon 1`] = `
     >
       
 			
-      <Icon
-        type="close"
-      />
+      <i
+        aria-label="Close"
+        className="material-icons"
+      >
+        close
+      </i>
       
 		
     </a>
@@ -87,9 +96,12 @@ exports[`Component: Sheet - renders with an ID 1`] = `
     >
       
 			
-      <Icon
-        type="close"
-      />
+      <i
+        aria-label="Close"
+        className="material-icons"
+      >
+        close
+      </i>
       
 		
     </a>
@@ -111,9 +123,12 @@ exports[`Component: Sheet - renders with children 1`] = `
     >
       
 			
-      <Icon
-        type="close"
-      />
+      <i
+        aria-label="Close"
+        className="material-icons"
+      >
+        close
+      </i>
       
 		
     </a>
@@ -136,9 +151,12 @@ exports[`Component: Sheet - renders with the data-require-action attribute 1`] =
     >
       
 			
-      <Icon
-        type="close"
-      />
+      <i
+        aria-label="Close"
+        className="material-icons"
+      >
+        close
+      </i>
       
 		
     </a>

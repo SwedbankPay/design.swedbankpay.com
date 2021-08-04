@@ -7,7 +7,7 @@ const Sheet = ({ id, requireAction, children }) => (
     <div className="sheet" id={id} data-require-action={requireAction ? true : null}>
         <section>{"\n"}
             <a href="#" className="sheet-close">{"\n\t\t\t"}
-                <Icon type="close" />{"\n\t\t"}
+                <i className="material-icons" aria-label="Close">close</i>{"\n\t\t"}
             </a>
             {children}
         </section>
