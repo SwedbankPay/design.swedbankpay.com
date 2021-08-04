@@ -10,7 +10,7 @@ const Dialog = ({ diaId, diaHeader, children }) => (
                 <header className="dialog-header" id="aria-label-dia">
                     <h4>{diaHeader}</h4>{"\n"}
                     <button type="button" className="dialog-close">{"\n"}
-                        <Icon type="close" />{"\n"}
+                        <i className="material-icons" aria-label="Close">close</i>
                     </button>
                 </header>
                 <div className="dialog-body" id="aria-describe-dia">
