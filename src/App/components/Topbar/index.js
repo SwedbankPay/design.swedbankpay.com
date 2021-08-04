@@ -15,11 +15,11 @@ const isDev = process.env.version === "LOCAL_DEV";
 const TopbarBtn = () => (
     <>
         <button type="button" className="topbar-btn">{"\n\t\t"}
-            <i className="material-icons topbar-btn-icon" aria-hidden="true">menu</i>
+            <i className="material-icons topbar-btn-icon" aria-label="Open menu">menu</i>
             {"\n\t\t"}
         </button>
         <button type="button" className="topbar-close">{"\n"}
-            <i className="material-icons topbar-btn-icon" aria-hidden="true">close</i>{"\n"}
+            <i className="material-icons topbar-btn-icon" aria-label="Close">close</i>{"\n"}
             {"\n\t\t"}
         </button>
     </>
