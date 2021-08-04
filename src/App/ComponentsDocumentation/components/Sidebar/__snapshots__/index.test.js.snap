@@ -43,6 +43,7 @@ exports[`Components: Sidebar ExtendedSidebar renders 1`] = `
             Array [
               Object {
                 "icon": <i
+                  aria-hidden="true"
                   className="material-icons-outlined"
                 >
                   home
@@ -53,6 +54,7 @@ exports[`Components: Sidebar ExtendedSidebar renders 1`] = `
                 "children": Array [
                   Object {
                     "icon": <i
+                      aria-hidden="true"
                       className="material-icons-outlined rotated"
                     >
                       accessibility
@@ -83,6 +85,7 @@ exports[`Components: Sidebar ExtendedSidebar renders 1`] = `
                       },
                     ],
                     "icon": <i
+                      aria-hidden="true"
                       className="material-icons-outlined rotated"
                     >
                       palette
@@ -91,6 +94,7 @@ exports[`Components: Sidebar ExtendedSidebar renders 1`] = `
                   },
                   Object {
                     "icon": <i
+                      aria-hidden="true"
                       className="material-icons-outlined rotated"
                     >
                       grid_on
@@ -99,6 +103,7 @@ exports[`Components: Sidebar ExtendedSidebar renders 1`] = `
                   },
                   Object {
                     "icon": <i
+                      aria-hidden="true"
                       className="material-icons-outlined rotated"
                     >
                       space_bar
@@ -107,6 +112,7 @@ exports[`Components: Sidebar ExtendedSidebar renders 1`] = `
                   },
                 ],
                 "icon": <i
+                  aria-hidden="true"
                   className="material-icons-outlined rotated"
                 >
                   wb_incandescent
@@ -138,6 +144,7 @@ exports[`Components: Sidebar ExtendedSidebar renders 1`] = `
                   },
                 ],
                 "icon": <i
+                  aria-hidden="true"
                   className="material-icons-outlined"
                 >
                   palette
@@ -274,6 +281,7 @@ exports[`Components: Sidebar Overview renders 1`] = `
             Array [
               Object {
                 "icon": <i
+                  aria-hidden="true"
                   className="material-icons-outlined"
                 >
                   home
@@ -284,6 +292,7 @@ exports[`Components: Sidebar Overview renders 1`] = `
                 "children": Array [
                   Object {
                     "icon": <i
+                      aria-hidden="true"
                       className="material-icons-outlined rotated"
                     >
                       accessibility
@@ -303,6 +312,7 @@ exports[`Components: Sidebar Overview renders 1`] = `
                       },
                     ],
                     "icon": <i
+                      aria-hidden="true"
                       className="material-icons-outlined rotated"
                     >
                       palette
@@ -311,6 +321,7 @@ exports[`Components: Sidebar Overview renders 1`] = `
                   },
                   Object {
                     "icon": <i
+                      aria-hidden="true"
                       className="material-icons-outlined rotated"
                     >
                       grid_on
@@ -319,6 +330,7 @@ exports[`Components: Sidebar Overview renders 1`] = `
                   },
                   Object {
                     "icon": <i
+                      aria-hidden="true"
                       className="material-icons-outlined rotated"
                     >
                       space_bar
@@ -327,6 +339,7 @@ exports[`Components: Sidebar Overview renders 1`] = `
                   },
                 ],
                 "icon": <i
+                  aria-hidden="true"
                   className="material-icons-outlined rotated"
                 >
                   wb_incandescent
@@ -358,6 +371,7 @@ exports[`Components: Sidebar Overview renders 1`] = `
                   },
                 ],
                 "icon": <i
+                  aria-hidden="true"
                   className="material-icons-outlined"
                 >
                   palette
