@@ -1,10 +1,11 @@
 .loader {
     display: inline-block;
-    border: 0.2rem solid @blue-bright;
-    border-left-color: @brand-accent;
-    border-radius: 50%;
     width: 2.5rem;
     height: 2.5rem;
+    margin-left: 0.5rem;
+    border: 0.2rem solid @soft-brown;
+    border-left-color: @brand-secondary;
+    border-radius: 50%;
     animation: loader-spin 0.8s linear infinite;
 
     &.loader-center {
@@ -27,6 +28,10 @@
     &.loader-muted {
         border-color: @light-gray;
         border-left-color: @text-gray;
+    }
+
+    &.loader-light {
+        border-left-color: @white;
     }
 }
 
