@@ -157,9 +157,9 @@ module.exports = [
                 outlined: true
             },
             {
-                title: "Loaders",
-                path: "/components/loaders",
-                componentPath: "components/Loaders",
+                title: "Loader",
+                path: "/components/loader",
+                componentPath: "components/Loader",
                 icon: "loop",
                 outlined: true
             },
