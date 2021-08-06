@@ -743,6 +743,8 @@
                 border-bottom: 1px solid @brand-secondary-light-3;
 
                 .component-preview-content {
+                    position: relative;
+                    height: 100%;
                     padding: 2rem;
                     display: flex;
                     align-items: center;
@@ -751,7 +753,18 @@
                     &.component-preview-alt-background {
                         background-color: @brand-primary;
                     }
+
+                    .loader-preview-container {
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+
+                        &.dark {
+                            background-color: @brand-secondary;
+                        }
+                    }
                 }
+
             }
 
             .component-description {
@@ -1111,6 +1124,22 @@
         .checked-example-container {
             width: 50px;
         }
+    }
+
+    #loader-page-overview {
+        .component-preview {
+
+        }
+    }
+
+    #loaders-how-to-use {
+        .slab {
+            height: 15.375rem;
+        }
+    }
+
+    .text-align-center {
+        text-align: center;
     }
 }
 
