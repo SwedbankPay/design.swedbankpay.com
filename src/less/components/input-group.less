@@ -6,6 +6,18 @@
     width: 100%;
     min-height: ~"calc(2.25rem + 2px)";
 
+    &:focus-within {
+        outline: auto @brand-secondary;
+
+        .input-group-addon,
+        .form-control {
+            outline: none;
+            border-width: 1px 1px 2px;
+            border-color: transparent;
+            transition: none;
+        }
+    }
+
     > .btn {
         border-radius: 0;
 
@@ -52,12 +64,20 @@
         font-weight: @font-weight-normal;
         line-height: @input-line-height;
         color: @input-addon-color;
-        background-color: @input-addon-bg;
+        background-color: @white;
         text-align: center;
         white-space: nowrap;
         border: solid @input-border-color;
         border-width: @input-border-width;
         border-bottom-color: @brand-secondary-light-2;
+        border-radius: 2px 2px 0 0;
+        border-top-right-radius: 0;
+        border-right: none;
+
+        + input {
+            border-top-left-radius: 0;
+            border-left: none;
+        }
 
         &:first-child {
             margin-right: -1px;

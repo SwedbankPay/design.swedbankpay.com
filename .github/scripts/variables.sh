@@ -39,9 +39,9 @@ generate_variables() {
     if [[ "$ref" == refs/tags/* ]]; then
         version="${ref#refs/tags/}"
         echo "::set-output name=VERSION::$version"
-    elif [[ "$ref" == refs/heads/release/* ]]; then
-        version="${ref#refs/heads/release/}"
-        echo "::set-output name=VERSION::$version"
+    # elif [[ "$ref" == refs/heads/release/* ]]; then
+    #     version="${ref#refs/heads/release/}"
+    #     echo "::set-output name=VERSION::$version"
     elif [[ "$ref" == refs/heads/* ]]; then
         branch="${ref#refs/heads/}"
         echo "::set-output name=BRANCH::$branch"

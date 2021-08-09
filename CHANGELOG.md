@@ -1,7 +1,13 @@
 # Changelog
 
-## [5.0.3] - 2021-06-11 
+## [6.0.1] - 19.07.2021
 
 ## Changed
-- Trustly
-  - Icon updated
+- Split up documentation css into own files
+- Update readme
+
+## Fixed
+- Select for IE
+- Polyfill dg script for IE
+- Security package 
+- Azure deployment 

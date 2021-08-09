@@ -682,17 +682,13 @@
             }
 
             //Hides the top bar when there is only one tab
-            &#no-tabs {
-                #undefined-ul {
-                    .active {
-                        a {
-                            display: none;
-                        }
-                    }
-                }
+            #undefined-ul {
+                border-bottom: 1px solid @light-brown;
 
-                .component-preview {
-                    padding-top: 0;
+                .active {
+                    a {
+                        display: none;
+                    }
                 }
             }
 
@@ -760,8 +756,11 @@
 
             .component-description {
                 padding: 2rem;
-                min-height: 15rem;
                 max-width: 40.5rem;
+
+                h3 {
+                    margin-top: 0;
+                }
             }
 
             .options {
@@ -967,6 +966,38 @@
         }
     }
 
+    #input-field-doc {
+        #input-field-overview {
+            .form-group {
+                margin-top: 1rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .form-group {
+            width: 21.25rem;
+            margin: auto;
+        }
+
+        .component-description {
+            min-height: auto;
+
+            h3 {
+                margin-top: 0;
+            }
+        }
+
+        textarea {
+            height: 8.125rem;
+        }
+
+        .placeholder-guideline {
+            .form-group {
+                width: 100%;
+            }
+        }
+    }
+
     .browser-support {
         display: flex;
         justify-content: space-between;
@@ -1029,6 +1060,56 @@
             + img {
                 display: block;
             }
+        }
+    }
+
+    i {
+        &.help-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            color: @soft-brown;
+        }
+    }
+
+    #select-doc {
+        .form-group {
+            width: 21.25rem;
+        }
+
+        .wrong {
+            .form-group {
+                width: 100%;
+            }
+        }
+
+        .showcase-panel {
+            .form-group {
+                margin: auto;
+            }
+        }
+    }
+
+    .no-pointer-events {
+        pointer-events: none;
+    }
+
+    #togglebox-doc {
+        .slab {
+            min-height: 12.875rem;
+
+            .slab-content {
+                margin: 0.125rem;
+                background-color: @white;
+                min-height: 8.5rem;
+
+                button {
+                    margin-left: 0.25rem;
+                }
+            }
+        }
+
+        .checked-example-container {
+            width: 50px;
         }
     }
 }

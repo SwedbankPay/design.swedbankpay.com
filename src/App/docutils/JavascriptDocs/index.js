@@ -38,7 +38,7 @@ const JavascriptDocs = ({ componentName, open, close, others }) => (
                 code={<CodeTags type="secondary" code={`dg.${componentName}.init(${componentName === "sidebar" ? "<sidebar-id>" : ""})`} />}
                 description={
                     <>
-                        <Link to="/getting-started/javascript">Initializes</Link> {componentName}
+                        <Link to="/get-started/for-developers">Initializes</Link> {componentName}
                     </>
                 }
             />

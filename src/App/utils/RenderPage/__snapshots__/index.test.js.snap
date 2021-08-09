@@ -13,7 +13,7 @@ exports[`Utilities: RenderPage renders 1`] = `
       className="dg-current-version text-uppercase"
     >
       Design Guide – v. 
-      5.0.3
+      6.0.1
     </span>
     <Switch>
       <Route
@@ -323,9 +323,9 @@ exports[`Utilities: RenderPage renders 1`] = `
               "title": "Forms",
             },
             Object {
-              "componentPath": "components/InputGroup",
-              "path": "/components/input-group",
-              "title": "Input Group",
+              "componentPath": "components/InputField",
+              "path": "/components/input-field",
+              "title": "Input field",
             },
             Object {
               "componentPath": "components/Links",
@@ -393,6 +393,11 @@ exports[`Utilities: RenderPage renders 1`] = `
               "title": "Radio button",
             },
             Object {
+              "componentPath": "components/Rangeslider",
+              "path": "/components/rangeslider",
+              "title": "Rangeslider",
+            },
+            Object {
               "componentPath": "components/Sheet",
               "icon": "vertical_split",
               "outlined": true,
@@ -403,9 +408,9 @@ exports[`Utilities: RenderPage renders 1`] = `
               "title": "Sheet",
             },
             Object {
-              "componentPath": "components/Rangeslider",
-              "path": "/components/rangeslider",
-              "title": "Rangeslider",
+              "componentPath": "components/Select",
+              "path": "/components/select",
+              "title": "Select",
             },
             Object {
               "componentPath": "components/Sidebar",
@@ -455,6 +460,11 @@ exports[`Utilities: RenderPage renders 1`] = `
                 "updated",
               ],
               "title": "Toast",
+            },
+            Object {
+              "componentPath": "components/Togglebox",
+              "path": "/components/togglebox",
+              "title": "Togglebox",
             },
             Object {
               "componentPath": "components/Tooltips",

@@ -24,8 +24,8 @@
             position: absolute;
             visibility: visible;
             left: -28px;
-            height: @checkbox-height;
-            width: @checkbox-width;
+            height: @radio-height;
+            width: @radio-width;
             background-color: @white;
             border: 2px solid @brand-secondary-light-2;
             cursor: pointer;
@@ -62,6 +62,22 @@
             &:checked + label:before {
                 cursor: not-allowed;
             }
+        }
+    }
+}
+
+fieldset {
+    &.radio-group {
+        legend {
+            margin-bottom: 0;
+            border: none;
+            font-weight: bold;
+        }
+    }
+
+    &[disabled] {
+        legend {
+            color: @light-brown;
         }
     }
 }

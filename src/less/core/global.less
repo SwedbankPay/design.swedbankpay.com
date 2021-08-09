@@ -212,6 +212,11 @@ select {
     -webkit-appearance: none;
 }
 
+// Fix issue with IE
+select::-ms-expand {
+    display: none;
+}
+
 // Give code default styling
 code {
     padding: @code-tags-padding;

@@ -6,7 +6,6 @@ import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
 
 const basename = process.env.basename;
-const brand = process.env.brand;
 
 const Installation = () => (
     <section>
@@ -15,13 +14,13 @@ const Installation = () => (
         <h3>Include in the header</h3>
         <p>Copy-paste the following CSS code into <CodeTags type="secondary" code="<head>"/> before all the other stylesheets in order to load our CSS.</p>
         <ComponentPreview language="html" codeFigure>
-            <link rel="stylesheet" href={`https://design.${brand}.com${basename}styles/dg-style.css`} />
+            <link rel="stylesheet" href={`${window.location.origin + basename}styles/dg-style.css`} />
         </ComponentPreview>
 
         <h3>Include at the bottom</h3>
         <p>Many of our components requires the use of JavaScript in order to function. Place the following <CodeTags type="secondary" code="<Script>"/> tag near the end of your pages, right before the closing <CodeTags type="secondary" code="</body>"/> tag to enable them.</p>
         <ComponentPreview language="html" codeFigure>
-            <script src={`https://design.${brand}.com${basename}scripts/dg.js`}></script>
+            <script src={`${window.location.origin + basename}scripts/dg.js`}></script>
         </ComponentPreview>
         <h3>How to initialize our JavaScript components</h3>
         <p>Our script runs <CodeTags type="secondary" code="dg.script.initAll();"/> on DOMContentLoaded making it so you have to run <CodeTags type="secondary" code="dg.<component_name>.init();"/> manually when a component is rendered after the event has fired.</p>
@@ -29,9 +28,9 @@ const Installation = () => (
         <p>To initialize components use <CodeTags type="secondary" code="dg.<component_name>.init();"/>. If the function is called without arguments it will target all components with class <CodeTags type="secondary" code="<component_name>"/> on the page. Initializing only one component can be done by passing an ID, it must match an existing components ID and will print a warning message if the value is invalid.</p>
 
         <p>If only one component is initialized then the init function will return one object. If several components are initialized it will return an array of objects.</p>
-        <ComponentPreview language="html" codeFigure>
-            {"dg.component.init();\n"}
-            {"dg.component.init(\"demo-component-id\");"}
+        <ComponentPreview language="html" codeFigure removeOuterTag>
+                dg.component.init();{"\n"}
+                dg.component.init(&quot;demo-component-id&quot;);
         </ComponentPreview>
 
         <h3>Browser Support</h3>

@@ -5,7 +5,7 @@ import Button from "@components/Button";
 import CodeTags from "@components/CodeTags";
 import { logoBlack, logoWhite } from "./constants";
 
-const BASENAME = process.env.basename;
+const basename = process.env.basename;
 const brand = process.env.brand;
 
 const LogoBlack = () => (
@@ -41,11 +41,11 @@ const SpacingZone = () => (
         </p>
         <h3>Measurement example (vertical logotype)</h3>
         <p>X = spacing zone</p>
-        <img src={`${BASENAME}img/documentation/logotype/icon-table.png`} className="logotype-icon-table"/>
+        <img src={`${basename}img/documentation/logotype/icon-table.png`} className="logotype-icon-table"/>
 
         <div className="d-md-flex mt-5">
-            <img src={`${BASENAME}img/documentation/logotype/vertical-measure.png`} className="logotype-vertical-measure mr-5"/>
-            <img src={`${BASENAME}img/documentation/logotype/horizontal-measure.png`} className="logotype-horizontal-measure mt-5"/>
+            <img src={`${basename}img/documentation/logotype/vertical-measure.png`} className="logotype-vertical-measure mr-5"/>
+            <img src={`${basename}img/documentation/logotype/horizontal-measure.png`} className="logotype-horizontal-measure mt-5"/>
         </div>
     </>
 );
@@ -68,7 +68,7 @@ const MisuseLogo = () => {
                     <div className={misusColClass}>
                         <div className="logotype-misuse-donts">
                             <div className="logotype-misuse-donts-img">
-                                <img src={`${BASENAME}img/documentation/logotype/old_logo.png`} className="h-100"/>
+                                <img src={`${basename}img/documentation/logotype/old_logo.png`} className="h-100"/>
                             </div>
                             <h4>Use old version</h4>
                             <p>Do not use the old version of the logo – darker and more detailed coin.</p>
@@ -77,7 +77,7 @@ const MisuseLogo = () => {
                     <div className={misusColClass}>
                         <div className="logotype-misuse-donts">
                             <div className="logotype-misuse-donts-img">
-                                <img src={`${BASENAME}img/documentation/logotype/resize_logo.png`} className="h-100"/>
+                                <img src={`${basename}img/documentation/logotype/resize_logo.png`} className="h-100"/>
                             </div>
                             <h4>Resize</h4>
                             <p>Do not distort or wrap the logo in any way.</p>
@@ -86,7 +86,7 @@ const MisuseLogo = () => {
                     <div className={misusColClass}>
                         <div className="logotype-misuse-donts">
                             <div className="logotype-misuse-donts-img">
-                                <img src={`${BASENAME}img/documentation/logotype/pay_text.png`} className="h-50"/>
+                                <img src={`${basename}img/documentation/logotype/pay_text.png`} className="h-50"/>
                             </div>
                             <h4>Demount</h4>
                             <p>Do not use the wordmark without the icon (the coin).</p>
@@ -95,7 +95,7 @@ const MisuseLogo = () => {
                     <div className={misusColClass}>
                         <div className="logotype-misuse-donts">
                             <div className="logotype-misuse-donts-img">
-                                <img src={`${BASENAME}img/documentation/logotype/swedbank_logo.png`} className="h-75"/>
+                                <img src={`${basename}img/documentation/logotype/swedbank_logo.png`} className="h-75"/>
                             </div>
                             <h4>Use Swedbank logo</h4>
                             <p>Do not use the Swedbank logo instead or in combination with the Swedbank Pay logo.</p>
@@ -104,7 +104,7 @@ const MisuseLogo = () => {
                     <div className={misusColClass}>
                         <div className="logotype-misuse-donts">
                             <div className="logotype-misuse-donts-img">
-                                <img src={`${BASENAME}img/documentation/logotype/rotated_logo.png`} className="h-100"/>
+                                <img src={`${basename}img/documentation/logotype/rotated_logo.png`} className="h-100"/>
                             </div>
                             <h4>Rotate</h4>
                             <p>Do not rotate the logo.</p>
@@ -113,7 +113,7 @@ const MisuseLogo = () => {
                     <div className={misusColClass}>
                         <div className="logotype-misuse-donts">
                             <div className="logotype-misuse-donts-img">
-                                <img src={`${BASENAME}img/documentation/logotype/green_logo.png`} className="h-100"/>
+                                <img src={`${basename}img/documentation/logotype/green_logo.png`} className="h-100"/>
                             </div>
                             <h4>Alter color</h4>
                             <p>Do not change the logo colour or tone in any way.</p>
@@ -122,7 +122,7 @@ const MisuseLogo = () => {
                     <div className={misusColClass}>
                         <div className="logotype-misuse-donts">
                             <div className="logotype-misuse-donts-img">
-                                <img src={`${BASENAME}img/documentation/logotype/black_and_white_logo.png`} className="h-100"/>
+                                <img src={`${basename}img/documentation/logotype/black_and_white_logo.png`} className="h-100"/>
                             </div>
                             <h4>Make B/W</h4>
                             <p>Do not use a change the hue of the logo.</p>
@@ -131,7 +131,7 @@ const MisuseLogo = () => {
                     <div className={misusColClass}>
                         <div className="logotype-misuse-donts">
                             <div className="logotype-misuse-donts-img">
-                                <img src={`${BASENAME}img/documentation/logotype/shadowed_logo.png`} className="h-100"/>
+                                <img src={`${basename}img/documentation/logotype/shadowed_logo.png`} className="h-100"/>
                             </div>
                             <h4>Add effects</h4>
                             <p>Do not add any shadows or other effects to the logo.</p>
@@ -140,7 +140,7 @@ const MisuseLogo = () => {
                     <div className={misusColClass}>
                         <div className="logotype-misuse-donts">
                             <div className="logotype-misuse-donts-img">
-                                <img src={`${BASENAME}img/documentation/logotype/changed_wordmark.png`} className="h-100"/>
+                                <img src={`${basename}img/documentation/logotype/changed_wordmark.png`} className="h-100"/>
                             </div>
                             <h4>Change wordmark</h4>
                             <p>Do not manipulate or replace the wordmark.</p>
@@ -149,7 +149,7 @@ const MisuseLogo = () => {
                     <div className={misusColClass}>
                         <div className="logotype-misuse-donts">
                             <div className="logotype-misuse-donts-img">
-                                <img src={`${BASENAME}img/documentation/logotype/moved_wordmark.png`} className="h-50"/>
+                                <img src={`${basename}img/documentation/logotype/moved_wordmark.png`} className="h-50"/>
                             </div>
                             <h4>Move wordmark</h4>
                             <p>Do not move the workmark from its original position.</p>
@@ -179,10 +179,10 @@ const LogotypeBackgrounds = () => (
         </p>
 
         <div className="flex">
-            <img src={`${BASENAME}img/documentation/logotype/bg-apricot.png`} className="w-25 p-3"/>
-            <img src={`${BASENAME}img/documentation/logotype/bg-dark-img.png`} className="w-25 p-3"/>
-            <img src={`${BASENAME}img/documentation/logotype/bg-light-img.png`} className="w-25 p-3"/>
-            <img src={`${BASENAME}img/documentation/logotype/bg-yellow.png`} className="w-25 p-3"/>
+            <img src={`${basename}img/documentation/logotype/bg-apricot.png`} className="w-25 p-3"/>
+            <img src={`${basename}img/documentation/logotype/bg-dark-img.png`} className="w-25 p-3"/>
+            <img src={`${basename}img/documentation/logotype/bg-light-img.png`} className="w-25 p-3"/>
+            <img src={`${basename}img/documentation/logotype/bg-yellow.png`} className="w-25 p-3"/>
         </div>
     </>
 );
@@ -202,7 +202,7 @@ const Favicon = () => (
                 </ul>
             </span>
             <div className="w-25 d-flex flex-column justify-content-center align-items-center">
-                <img src={`${BASENAME}img/documentation/logotype/favicon_example.png`} className="w-25 mb-2"/>
+                <img src={`${basename}img/documentation/logotype/favicon_example.png`} className="w-25 mb-2"/>
                 <p>Swedbank Pay favicon.</p>
             </div>
         </div>
@@ -214,7 +214,7 @@ const Download = () => (
         <h2 id="download" className="invisible">Download</h2>
         <div className="slab slab-primary p-5 d-flex flex-column justify-content-center align-items-center">
             <h1 className="mb-4">Download all logotypes</h1>
-            <Button type="primary" icon="arrow_downward" href={`${BASENAME}release/logos/Swedbank_Pay_Vector.zip`}
+            <Button type="primary" icon="arrow_downward" href={`${basename}release/logos/Swedbank_Pay_Vector.zip`}
                 label="Download"
             />
         </div>
@@ -226,10 +226,10 @@ const HorizontalLogo = () => (
         <h2 id="horizontal-logo">Horizontal logo</h2>
         <p></p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <img src={`${BASENAME}img/payex-logo.svg`} alt="PayEx horizontal logo"/>
+            <img src={`${basename}img/payex-logo.svg`} alt="PayEx horizontal logo"/>
         </ComponentPreview>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <img src={`${BASENAME}img/payex-logo.png`} alt="PayEx horizontal logo"/>
+            <img src={`${basename}img/payex-logo.png`} alt="PayEx horizontal logo"/>
         </ComponentPreview>
     </>
 );
@@ -238,46 +238,46 @@ const OurFavicon = () => (
     <>
         <h2 id="our-favicon">Our favicon</h2>
         <ComponentPreview language="html" showCasePanel>
-            <img src={`${BASENAME}icons/android-chrome-96x96.png`} alt="PayEx favicon"/>
+            <img src={`${basename}icons/android-chrome-96x96.png`} alt="PayEx favicon"/>
         </ComponentPreview>
         <p>To use our favicons download the zip-file below and extract it to the root of your build-folder. Insert the code below in the <CodeTags type="primary" code={"<head>"} /> tag of your HTML documents and you are ready to go.</p>
         <p>You should also rename the <CodeTags type="secondary" code="content" /> of
         the <CodeTags type="secondary" code="apple-mobile-web-app-title" /> and <CodeTags type="secondary" code="application-name" /> <CodeTags type="primary" code={"<meta>"} /> tags
         to reflect the title of your project. Make sure to also do this in the <CodeTags type="secondary" code="manifest.json" /> file in the icons folder.</p>
-        <Button type="primary" icon="file_download" href={`${BASENAME}release/icons.zip`} label="Download Favicons" />
+        <Button type="primary" icon="file_download" href={`${basename}release/icons.zip`} label="Download Favicons" />
         <ComponentPreview language="html" codeFigure>
-            <link rel="apple-touch-icon" sizes="114x114" href={`${BASENAME}/icons/apple-touch-icon-114x114.png`} />
-            <link rel="apple-touch-icon" sizes="120x120" href={`${BASENAME}/icons/apple-touch-icon-120x120.png`} />
-            <link rel="apple-touch-icon" sizes="144x144" href={`${BASENAME}/icons/apple-touch-icon-144x144.png`} />
-            <link rel="apple-touch-icon" sizes="152x152" href={`${BASENAME}/icons/apple-touch-icon-152x152.png`} />
-            <link rel="apple-touch-icon" sizes="180x180" href={`${BASENAME}/icons/apple-touch-icon-180x180.png`} />
-            <link rel="apple-touch-icon" sizes="57x57" href={`${BASENAME}/icons/apple-touch-icon-57x57.png`} />
-            <link rel="apple-touch-icon" sizes="60x60" href={`${BASENAME}/icons/apple-touch-icon-60x60.png`} />
-            <link rel="apple-touch-icon" sizes="72x72" href={`${BASENAME}/icons/apple-touch-icon-72x72.png`} />
-            <link rel="apple-touch-icon" sizes="76x76" href={`${BASENAME}/icons/apple-touch-icon-76x76.png`} />
-            <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href={`${BASENAME}/icons/apple-touch-startup-image-320x460.png`} />
-            <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href={`${BASENAME}/icons/apple-touch-startup-image-640x920.png`} />
-            <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href={`${BASENAME}/icons/apple-touch-startup-image-640x1096.png`} />
-            <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href={`${BASENAME}/icons/apple-touch-startup-image-750x1294.png`} />
-            <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href={`${BASENAME}/icons/apple-touch-startup-image-1182x2208.png`} />
-            <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href={`${BASENAME}/icons/apple-touch-startup-image-1242x2148.png`} />
-            <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href={`${BASENAME}/icons/apple-touch-startup-image-748x1024.png`} />
-            <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href={`${BASENAME}/icons/apple-touch-startup-image-1496x2048.png`} />
-            <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href={`${BASENAME}/icons/apple-touch-startup-image-768x1004.png`} />
-            <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href={`${BASENAME}/icons/apple-touch-startup-image-1536x2008.png`} />
-            <link rel="icon" type="image/png" sizes="16x16" href={`${BASENAME}/icons/favicon-16x16.png`} />
-            <link rel="icon" type="image/png" sizes="228x228" href={`${BASENAME}/icons/coast-228x228.png`} />
-            <link rel="icon" type="image/png" sizes="32x32" href={`${BASENAME}/icons/favicon-32x32.png`} />
-            <link rel="manifest" href={`${BASENAME}/icons/manifest.json`} />
-            <link rel="shortcut icon" href={`${BASENAME}/icons/favicon.ico`} />
+            <link rel="apple-touch-icon" sizes="114x114" href={`${basename}/icons/apple-touch-icon-114x114.png`} />
+            <link rel="apple-touch-icon" sizes="120x120" href={`${basename}/icons/apple-touch-icon-120x120.png`} />
+            <link rel="apple-touch-icon" sizes="144x144" href={`${basename}/icons/apple-touch-icon-144x144.png`} />
+            <link rel="apple-touch-icon" sizes="152x152" href={`${basename}/icons/apple-touch-icon-152x152.png`} />
+            <link rel="apple-touch-icon" sizes="180x180" href={`${basename}/icons/apple-touch-icon-180x180.png`} />
+            <link rel="apple-touch-icon" sizes="57x57" href={`${basename}/icons/apple-touch-icon-57x57.png`} />
+            <link rel="apple-touch-icon" sizes="60x60" href={`${basename}/icons/apple-touch-icon-60x60.png`} />
+            <link rel="apple-touch-icon" sizes="72x72" href={`${basename}/icons/apple-touch-icon-72x72.png`} />
+            <link rel="apple-touch-icon" sizes="76x76" href={`${basename}/icons/apple-touch-icon-76x76.png`} />
+            <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href={`${basename}/icons/apple-touch-startup-image-320x460.png`} />
+            <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href={`${basename}/icons/apple-touch-startup-image-640x920.png`} />
+            <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href={`${basename}/icons/apple-touch-startup-image-640x1096.png`} />
+            <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href={`${basename}/icons/apple-touch-startup-image-750x1294.png`} />
+            <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href={`${basename}/icons/apple-touch-startup-image-1182x2208.png`} />
+            <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href={`${basename}/icons/apple-touch-startup-image-1242x2148.png`} />
+            <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href={`${basename}/icons/apple-touch-startup-image-748x1024.png`} />
+            <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href={`${basename}/icons/apple-touch-startup-image-1496x2048.png`} />
+            <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href={`${basename}/icons/apple-touch-startup-image-768x1004.png`} />
+            <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href={`${basename}/icons/apple-touch-startup-image-1536x2008.png`} />
+            <link rel="icon" type="image/png" sizes="16x16" href={`${basename}/icons/favicon-16x16.png`} />
+            <link rel="icon" type="image/png" sizes="228x228" href={`${basename}/icons/coast-228x228.png`} />
+            <link rel="icon" type="image/png" sizes="32x32" href={`${basename}/icons/favicon-32x32.png`} />
+            <link rel="manifest" href={`${basename}/icons/manifest.json`} />
+            <link rel="shortcut icon" href={`${basename}/icons/favicon.ico`} />
             <meta name="apple-mobile-web-app-capable" content="yes" />
             <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
             <meta name="apple-mobile-web-app-title" content="Swedbank Pay App" />
             <meta name="application-name" content="Swedbank Pay App" />
             <meta name="mobile-web-app-capable" content="yes" />
             <meta name="msapplication-TileColor" content="#000" />
-            <meta name="msapplication-TileImage" content={`${BASENAME}/icons/mstile-144x144.png`} />
-            <meta name="msapplication-config" content={`${BASENAME}/icons/browserconfig.xml`} />
+            <meta name="msapplication-TileImage" content={`${basename}/icons/mstile-144x144.png`} />
+            <meta name="msapplication-config" content={`${basename}/icons/browserconfig.xml`} />
             <meta name="theme-color" content="#000" />
         </ComponentPreview>
     </>

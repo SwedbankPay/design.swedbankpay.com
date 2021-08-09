@@ -3,12 +3,11 @@ import React from "react";
 import { ComponentPreview } from "@docutils";
 import CodeTags from "@components/CodeTags";
 
-const BASENAME = process.env.basename;
-const brand = process.env.brand;
-const scriptUrl = `https://design.${brand}.com${BASENAME}scripts/dg.js`;
-const dashboardScriptUrl = `https://design.${brand}.com${BASENAME}scripts/dg-dashboard.js`;
-const styleUrl = `https://design.${brand}.com${BASENAME}styles/dg-style.css`;
-const dashboardStyleUrl = `https://design.${brand}.com${BASENAME}styles/dg-dashboard.css`;
+const basename = process.env.basename;
+const scriptUrl = `${window.location.origin + basename}scripts/dg.js`;
+const dashboardScriptUrl = `${window.location.origin + basename}scripts/dg-dashboard.js`;
+const styleUrl = `${window.location.origin + basename}styles/dg-style.css`;
+const dashboardStyleUrl = `${window.location.origin + basename}styles/dg-dashboard.css`;
 
 const QuickStart = () => (
     <>

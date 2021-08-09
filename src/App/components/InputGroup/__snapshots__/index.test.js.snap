@@ -124,19 +124,28 @@ exports[`Component: InputGroup - renders a form-group with a help block with dat
   >
     
 
-    <input
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      placeholder={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
+    <div
+      className="input-group"
+    >
+      
+
+      <input
+        autoComplete={null}
+        className="form-control"
+        data-validate={null}
+        defaultValue=""
+        disabled={null}
+        id={null}
+        pattern={null}
+        placeholder={null}
+        readOnly={null}
+        required={null}
+        type="typetest"
+      />
+      
+
+       
+    </div>
     <div
       className="help-block"
       data-error="error"
@@ -155,7 +164,12 @@ exports[`Component: InputGroup - renders a form-group with a label if prop label
   
 
   <label>
+    
+
     this is a text in a label
+     
+    
+
   </label>
   
 
@@ -299,7 +313,7 @@ exports[`Component: InputGroup - renders a form-group with a prefix icon if prop
         >
           <i
             aria-hidden="true"
-            className="material-icons"
+            className="material-icons material-icons-outlined"
           >
             home
           </i>
@@ -393,20 +407,27 @@ exports[`Component: InputGroup - renders a form-group with a select field with g
 
     <select
       className="form-control"
+      defaultValue="placeholder"
     >
       
 		
-      <option>
+      <option
+        value="Bounty hunter"
+      >
         Bounty hunter
       </option>
       
 		
-      <option>
+      <option
+        value="Smuggler"
+      >
         Smuggler
       </option>
       
 		
-      <option>
+      <option
+        value="Jedi"
+      >
         Jedi
       </option>
       

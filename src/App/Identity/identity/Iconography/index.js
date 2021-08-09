@@ -7,10 +7,10 @@ import CodeTags from "@components/CodeTags";
 
 const MaterialIcons = () => (
     <section>
-        <h2 id="material-rounded-icons">Material Rounded Icons</h2>
-        <p className="mb-0">We primarily use the version called Rounded in the Material icons. To aviod a to heavy look, we strive to look for outlined icons. If an icon isn’t available as outlined or filled we can search for it in the Outlined category aswell. For a full overview of the available icons, please, visit the Material.io. </p>
+        <h2 id="material-rounded-icons">Material Outlined Icons</h2>
+        <p className="mb-0">We primarily use the version called Outlined in the Material icons to avoid a to heavy look. For a full overview of the available icons, please, visit the Material.io. </p>
 
-        <a href="https://material.io/resources/icons/?style=round" className="icon-link" target="_blank" rel="noopener noreferrer">
+        <a href="https://fonts.google.com/icons?selected=Material+Icons+Outlined" className="icon-link" target="_blank" rel="noopener noreferrer">
             <i className="material-icons" aria-hidden="true">open_in_new</i>
             <span className="ml-2">Material Icons Overview</span>
         </a>
@@ -107,7 +107,7 @@ const PaymentIcons = () => (
 const Flags = () => (
     <section>
         <h2 id="flags">Flags</h2>
-        <p>Below is a list of flag icons that we use in our system, To use the flag icons add the classes <CodeTags type="secondary" code=".flag-icon"/> and  <CodeTags type="secondary" code=".flag-icon-xx"/>  (where xx is the ISO_3166-1-alpha-2-code of a country) to an empty <CodeTags type="secondary" code="<i>"/></p>
+        <p>Below is a list of flag icons that we use in our system, To use the flag icons add the classes <CodeTags type="secondary" code=".flag-icon"/> and  <CodeTags type="secondary" code=".flag-icon-xx"/>  (where xx is the <a href="https://www.iso.org/obp/ui/#search">ISO_3166-1-alpha-2-code</a> of a country) to an empty <CodeTags type="secondary" code="<i>"/></p>
         <table className="table table-plain">
             <thead>
                 <tr>

@@ -30,7 +30,7 @@ module.exports = (env, argv) => {
         entry: {
             dg: ["@babel/polyfill", "./src/scripts/main/index.js"],
             "dg-dashboard": "./src/scripts/dashboard/index.js",
-            app: ["@babel/polyfill/noConflict", `./src/${brand}.js`]
+            app: `./src/${brand}.js`
         },
         resolve: {
             extensions: [".js", ".jsx", ".json"]
@@ -155,30 +155,17 @@ module.exports = (env, argv) => {
             ]
         },
         optimization: {
-            moduleIds: "deterministic",
-            runtimeChunk: "single",
             splitChunks: {
-                chunks: "all",
                 cacheGroups: {
-                    defaultVendors: {
-                        test: /[\\/]node_modules[\\/]/,
-                        priority: -10,
-                        reuseExistingChunk: true
-                    },
-                    default: {
-                        minChunks: 2,
-                        priority: -20,
-                        reuseExistingChunk: true
+                    docStyles: {
+                        name: "documentation",
+                        test: brand === "swedbankpay" ? /documentation-swedbankpay\.less/ : /documentation-payex\.less/,
+                        chunks: "all",
+                        enforce: true
                     },
                     dgStyles: {
                         name: "dg-style",
                         test: brand === "swedbankpay" ? /(flatpickr\.css|swedbankpay\.less)$/ : /(flatpickr\.css|payex\.less)$/,
-                        chunks: "all",
-                        enforce: true
-                    },
-                    docStyles: {
-                        name: "documentation",
-                        test: brand === "swedbankpay" ? /documentation-swedbankpay\.less/ : /documentation-payex\.less/,
                         chunks: "all",
                         enforce: true
                     }

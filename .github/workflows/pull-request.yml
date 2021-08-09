@@ -34,12 +34,12 @@ jobs:
       - name: Tests and linting
         run: npm run lint && npm run test:coverage
 
-      - uses: codecov/codecov-action@v1.5.2
+      - uses: codecov/codecov-action@v2.0.2
         # with:
         #   files: ./coverage/lcov.info
           # fail_ci_if_error: true
 
-      - uses: preactjs/compressed-size-action@2.1.0
+      - uses: preactjs/compressed-size-action@2.3.0
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           build-script: "${{ steps.variables.outputs.BUILD_SCRIPT }}"

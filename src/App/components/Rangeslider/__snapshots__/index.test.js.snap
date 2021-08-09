@@ -187,10 +187,14 @@ exports[`Component: Rangeslider - renders with a value label and a value label p
     >
       
 
-      <small />
+      <small>
+        test
+      </small>
       
 
-      <small />
+      <small>
+        test
+      </small>
       
 
     </div>

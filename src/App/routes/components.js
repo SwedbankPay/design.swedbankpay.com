@@ -133,9 +133,9 @@ module.exports = [
                 outlined: true
             }, */
             {
-                title: "Input Group",
-                path: "/components/input-group",
-                componentPath: "components/InputGroup"
+                title: "Input field",
+                path: "/components/input-field",
+                componentPath: "components/InputField"
             },
             /* {
                 title: "Lightbox",
@@ -204,6 +204,11 @@ module.exports = [
                 outlined: true
             },
             {
+                title: "Rangeslider",
+                path: "/components/rangeslider",
+                componentPath: "components/Rangeslider"
+            },
+            {
                 title: "Sheet",
                 path: "/components/sheet",
                 componentPath: "components/Sheet",
@@ -212,9 +217,9 @@ module.exports = [
                 statusBadges: ["javascript"]
             },
             {
-                title: "Rangeslider",
-                path: "/components/rangeslider",
-                componentPath: "components/Rangeslider"
+                title: "Select",
+                path: "/components/select",
+                componentPath: "components/Select"
             },
             {
                 title: "Sidebar",
@@ -256,6 +261,11 @@ module.exports = [
                 icon: "picture_in_picture",
                 outlined: true,
                 statusBadges: ["javascript", "updated"]
+            },
+            {
+                title: "Togglebox",
+                path: "/components/togglebox",
+                componentPath: "components/Togglebox"
             },
             {
                 title: "Tooltips",

@@ -89,10 +89,6 @@ fieldset {
                 box-shadow: none;
             }
 
-            &:checked + label:before {
-                background-color: @input-checked-bg-disabled;
-            }
-
             + label,
             + label:before,
             &:checked + label:before {
@@ -179,9 +175,8 @@ legend {
     border: solid @input-border-color;
     border-width: @input-border-width;
     border-bottom-color: @brand-secondary-light-2;
-    border-radius: @input-border-radius;
+    border-radius: 2px 2px 0 0;
     box-shadow: none;
-    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
     .form-control-focus(@brand-secondary);
     .placeholder(@brand-secondary-light-2);
 
@@ -226,9 +221,29 @@ legend {
 .form-group {
     margin-bottom: @base-margin-lg;
 
+    &:focus-within {
+        .form-control {
+            outline: 2px auto @brand-secondary;
+            border-color: transparent;
+        }
+    }
+
     &.disabled,
     [disabled] {
         color: @brand-secondary-light-3;
+
+        .input-group-addon {
+            border-color: @brand-secondary-light-3;
+
+            i {
+                color: @brand-secondary-light-3;
+            }
+        }
+
+        i[data-tooltip] {
+            color: @brand-secondary-light-3;
+            pointer-events: none;
+        }
     }
 }
 
@@ -250,7 +265,7 @@ legend {
     display: block;
     margin: @helpblock-margin;
     color: @brand-secondary-light-2;
-    font-size: @base-font-size;
+    font-size: 0.875rem;
     line-height: 1rem;
     min-height: 1rem;
 

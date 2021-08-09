@@ -63,7 +63,7 @@ exports[`Utilities: JavascriptDocs renders init and close methods 1`] = `
       description={
         <React.Fragment>
           <ForwardRef(Link)
-            to="/getting-started/javascript"
+            to="/get-started/for-developers"
           >
             Initializes
           </ForwardRef(Link)>
@@ -94,7 +94,7 @@ exports[`Utilities: JavascriptDocs renders init and open methods 1`] = `
       description={
         <React.Fragment>
           <ForwardRef(Link)
-            to="/getting-started/javascript"
+            to="/get-started/for-developers"
           >
             Initializes
           </ForwardRef(Link)>
@@ -125,7 +125,7 @@ exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
       description={
         <React.Fragment>
           <ForwardRef(Link)
-            to="/getting-started/javascript"
+            to="/get-started/for-developers"
           >
             Initializes
           </ForwardRef(Link)>
@@ -159,7 +159,7 @@ exports[`Utilities: JavascriptDocs renders only init method 1`] = `
       description={
         <React.Fragment>
           <ForwardRef(Link)
-            to="/getting-started/javascript"
+            to="/get-started/for-developers"
           >
             Initializes
           </ForwardRef(Link)>
