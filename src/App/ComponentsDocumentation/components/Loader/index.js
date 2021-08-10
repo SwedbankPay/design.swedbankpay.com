@@ -5,6 +5,7 @@ import CodeTags from "@components/CodeTags";
 import { Link } from "react-router-dom";
 import { loaderShowCase, howToUse } from "./constants";
 
+// TODO:Check with designer for precise size and color on loader
 const Overview = () => (
     <section id="loader-page-overview">
         <h2 id="overview">Overview</h2>
@@ -53,7 +54,7 @@ const DeveloperDocumentation = () => (
     </>
 );
 
-const Loaders = () => (
+const Loader = () => (
     <DocContainer docToc>
         <p className="lead">
             The loader component should be used when the site or application is performing computation, notifying   the user that their action is being processed.
@@ -63,7 +64,7 @@ const Loaders = () => (
     </DocContainer>
 );
 
-export default Loaders;
+export default Loader;
 
 /* For testing */
 export { Overview, DeveloperDocumentation };
