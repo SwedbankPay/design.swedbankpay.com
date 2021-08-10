@@ -764,7 +764,6 @@
                         }
                     }
                 }
-
             }
 
             .component-description {
@@ -1127,8 +1126,12 @@
     }
 
     #loader-page-overview {
-        .component-preview {
-
+        .component-preview-content {
+            .loader-preview-container {
+                &.dark {
+                    background-color: @brand-secondary;
+                }
+            }
         }
     }
 
