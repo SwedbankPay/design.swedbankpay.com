@@ -1,72 +1,64 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components: Tabs BasicUsage renders 1`] = `
-<Fragment>
+exports[`Components: Tabs ContentGuidelines renders 1`] = `
+<section>
   <h2
-    id="basic-usage"
+    id="content-guidelines"
   >
-    Basic usage
+    Content guidelines
   </h2>
-  <p>
-    Add class 
-    <CodeTags
-      code=".tabs"
-      type="secondary"
-    />
-     to a div containing 
-    <CodeTags
-      code="<ul>"
-      type="primary"
-    />
-     and nest 
-    <CodeTags
-      code="<li>"
-      type="primary"
-    />
-     as needed. The tabs component will by default cover the whole width of the container at breakpoint 
-    <CodeTags
-      code="sm"
-      type="secondary"
-    />
-    . To specify a larger breakpoint, use 
-    <CodeTags
-      code=".tabs-{breakpoint}"
-      type="secondary"
-    />
-     (see 
-    <Link
-      to="/core/breakpoints"
-    >
-      breakpoints
-    </Link>
-     for more information on breakpoints). Make sure that the tabs will not overflow on screens of normal size. Consider revising the design or the decision to use tabs when more than 3 alternatives are present. If using tabs really is necessary, tabs with scroll might be a more suitable alternative.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  <div
+    className="slab slab-plain px-5"
   >
-    <Tabs
-      id="tabs-example"
-      items={
-        Array [
-          "Card",
-          "Discounts",
-          "Transactions",
-        ]
-      }
-    />
-  </ComponentPreview>
-</Fragment>
+    <div
+      className="w-75 m-auto"
+    >
+      <Tabs
+        id="tabs-scroll-example"
+        items={
+          Array [
+            "Selected Label",
+            "Unselected Label",
+            "Unselected Label",
+          ]
+        }
+        ulId="tabs-scroll-example-ul"
+      />
+    </div>
+  </div>
+  <ul
+    className="list list-bullet"
+  >
+    <li>
+      The 
+      <b>
+        Label
+      </b>
+       for tabs should state the name of the category and division. This should be short and to the point making is as easy as possible for the user to find their desired category.
+    </li>
+    <li>
+      The 
+      <b>
+        order of labels
+      </b>
+       should always be arranged according the content, sorted after relevance. However, in cases where there is not a preferred order, the tabs should be arrange the tabs in alphabetical order instead.
+    </li>
+  </ul>
+</section>
 `;
 
-exports[`Components: Tabs JavascriptMethods renders 1`] = `
+exports[`Components: Tabs DeveloperDocumentation renders 1`] = `
 <Fragment>
   <h2
-    id="javascript-methods"
+    id="developer-documentation"
   >
-    JavaScript methods
+    Developer documentation
   </h2>
+  <span
+    className="h3"
+  >
+    Javascript methods
+  </span>
   <JavascriptDocs
     componentName="tabs"
     others={
@@ -78,49 +70,169 @@ exports[`Components: Tabs JavascriptMethods renders 1`] = `
 </Fragment>
 `;
 
-exports[`Components: Tabs TabsScroll renders 1`] = `
-<Fragment>
+exports[`Components: Tabs Overview renders 1`] = `
+<section>
   <h2
-    id="tabs-scroll"
+    id="overview"
   >
-    Tabs with scroll
+    Overview
   </h2>
-  <p>
-    To make tabs more mobile friendly, use class 
-    <CodeTags
-      code=".tabs-scroll"
-      type="secondary"
-    />
-    . 
-    <CodeTags
-      code=".tabs-scroll"
-      type="secondary"
-    />
-     will make the tabs scrollable in case of overflow. Note that the scrollable property is not optimized for desktop usage. Consider the usage when 4 or more tabs are present.
-  </p>
+  <div
+    className="showcase-panel p-5"
+  >
+    <div
+      className="w-75 m-auto"
+    >
+      <Tabs
+        id="tabs-example"
+        items={
+          Array [
+            "Selected",
+            "Unselected",
+            "Unselected",
+          ]
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="component-description border-left border-right p-4 pb-2"
+  >
+    <span
+      className="h3 d-inline-block mb-2"
+    >
+      Tabs
+    </span>
+    <p
+      className="mb-0"
+    >
+      The tabs component has three different states, the selected state for the category currently displayed. Unselected state for all the other categories not currently selected and lastly there the hover state when the user hover over an unselected state.
+    </p>
+  </div>
   <ComponentPreview
     codeFigure={true}
     language="html"
-    showCasePanel={true}
   >
     <Tabs
-      id="tabs-scroll-example"
+      id="tabs-example"
       items={
         Array [
-          "Card",
-          "Discounts",
-          "Transactions",
-          "Invoice",
-          "Settings",
-          "Audit trail",
-          "History",
+          "Selected",
+          "Unselected",
+          "Unselected",
         ]
       }
-      scroll={true}
-      ulId="tabs-scroll-example-ul"
     />
   </ComponentPreview>
-</Fragment>
+  <section>
+    <h3>
+      When to consider something else
+    </h3>
+    <ul
+      className="list list-bullet"
+    >
+      <li>
+        It is important to consider whether or not dividing the content into sub-categories is helpful for the user. Using Tabs isn’t always the best solution and can create more fragmented experience and leading to issues where the user might miss out on content. Similarly, this is also not idea if the user needs to compare the content. In those cases it is better to present the content on a page with proper headlines and structure.
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h3>
+      Scrollable tabs
+    </h3>
+    <div
+      className="slab slab-plain"
+    >
+      <div
+        className="w-75 m-auto"
+      >
+        <Tabs
+          id="tabs-scroll-example"
+          items={
+            Array [
+              "Selected",
+              "Unselected",
+              "Unselected",
+              "Unselected",
+              "Unselected",
+              "Unselected",
+            ]
+          }
+          scroll={true}
+          ulId="tabs-scroll-example-ul"
+        />
+      </div>
+    </div>
+    <p>
+      The tab component also includes scrollable behaviour with the addition of a clickable chevron arrow when the size of the viewport no longer can display all the tab categories at once. The user can navigate inside the tabs menu.
+    </p>
+  </section>
+  <section
+    id="how-to-use-tabs"
+  >
+    <h3>
+      How to use tabs
+    </h3>
+    <div
+      className="slab slab-plain slab-border-success"
+    >
+      <span
+        className="h3"
+      >
+        Do
+      </span>
+      <div
+        className="px-5 py-3"
+      >
+        <Tabs
+          id="tabs-scroll-example"
+          items={
+            Array [
+              "Selected",
+              "Unselected",
+              "Unselected",
+            ]
+          }
+          ulId="tabs-scroll-example-ul"
+        />
+        <div
+          className="slab slab-default p-5"
+        />
+      </div>
+    </div>
+    <div
+      className="slab slab-plain slab-border-error"
+    >
+      <span
+        className="h3"
+      >
+        Don't
+      </span>
+      <div
+        className="px-5 py-3"
+      >
+        <Tabs
+          id="tabs-scroll-example"
+          items={
+            Array [
+              "Selected",
+              "Unselected",
+              "Unselected",
+            ]
+          }
+          scroll={true}
+          ulId="tabs-scroll-example-ul"
+        />
+        <div
+          className="slab slab-default p-5"
+        />
+      </div>
+    </div>
+    <p>
+      The tab component should always fill the full container of the content it governs. As seen on the examples above, the length of the underline for tab isn’t determined by the amount of tabs/length of the text. But should instead indicate the content that it anchors to and contains.
+    </p>
+  </section>
+</section>
 `;
 
 exports[`Components: Tabs renders 1`] = `
@@ -130,10 +242,10 @@ exports[`Components: Tabs renders 1`] = `
   <p
     className="lead"
   >
-    Use tabs to show which page or section that is active out of several options.
+    Tabs component separates content into groups within a single content, it lets the user navigate and quickly switch between section within the same content.
   </p>
-  <BasicUsage />
-  <TabsScroll />
-  <JavascriptMethods />
+  <Overview />
+  <ContentGuidelines />
+  <DeveloperDocumentation />
 </DocContainer>
 `;

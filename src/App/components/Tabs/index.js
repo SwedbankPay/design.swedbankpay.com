@@ -5,7 +5,7 @@ class Tabs extends Component {
     constructor (props) {
         super(props);
 
-        this.state = { active: 1 };
+        this.state = { active: 0 };
     }
 
     setActive (e, i) {
