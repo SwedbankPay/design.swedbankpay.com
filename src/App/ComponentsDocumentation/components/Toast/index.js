@@ -4,91 +4,52 @@ import { Link } from "react-router-dom";
 import { ComponentPreview, DocContainer } from "@docutils";
 import Alert from "@components/Alert";
 import CodeTags from "@components/CodeTags";
-import { toast } from "@src/scripts/main";
+import { toastShowCase } from "./constants";
 
 const Overview = () => (
-    <>
+    <section>
         <h2 id="overview">Overview</h2>
-        <p>You want jam on that toast?</p>
-        <ComponentPreview language="javascript" codeFigure>
-            {"toast({ html: \"I am a toast!\" });"}
-        </ComponentPreview>
-        <ComponentPreview language="html" codeFigure dangerousHTML>
-            {"<button onclick=\"toast({ html: 'I am a toast!' })\" class=\"btn btn-primary\">Toast!</button>"}
-        </ComponentPreview>
-        <ComponentPreview language="html" showCasePanel>
-            <button className="btn btn-primary" type="button" onClick={() => toast({ html: "I am a toast!" })}>Click for toast!</button>
-        </ComponentPreview>
-        <Alert type="warning">
-            <h5>Content restriction</h5>
-            <p>
-                Don’t put too much text in toasts as they are meant to be visible for only a short amount of time.
-                Due to the time restriction you should also avoid putting vital information in them.
-                A <Link to="/components/sheet">sheet</Link> or <Link to="/components/dialog">dialog</Link> is
-                recommended when recieving input or relaying large amounts of information.
-            </p>
-        </Alert>
-    </>
-);
+        <ComponentPreview language="html" codeFigure showCasePanel showCasePanelAdvanced={toastShowCase}/>
 
-const Options = () => (
-    <>
-        <h2 id="options">Options</h2>
-        <table className="table table-striped">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Type</th>
-                    <th>Default</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>html</td>
-                    <td>String</td>
-                    <td><CodeTags type="secondary" code={"\"\""} /></td>
-                    <td>The HTML content of the Toast.</td>
-                </tr>
-                <tr>
-                    <td>type</td>
-                    <td>String</td>
-                    <td><CodeTags type="secondary" code={"\"\""} /></td>
-                    <td>Premade alert types; <CodeTags type="secondary" code="success" />, <CodeTags type="secondary" code="neutral" />, <CodeTags type="secondary" code="warning" /> and <CodeTags type="secondary" code="danger" /> are available.</td>
-                </tr>
-                <tr>
-                    <td>dismissable</td>
-                    <td>Boolean</td>
-                    <td><CodeTags type="secondary" code="true" /></td>
-                    <td>Wether or not the alert should be dismissable by the user (close button).</td>
-                </tr>
-                <tr>
-                    <td>icon</td>
-                    <td>String</td>
-                    <td><CodeTags type="secondary" code={"\"\""} /></td>
-                    <td>Custom icon for the toast. See <Link to="/core/iconography">icons</Link> for more info.</td>
-                </tr>
-                <tr>
-                    <td>displayLength</td>
-                    <td>Number</td>
-                    <td><CodeTags type="secondary" code="4000" /></td>
-                    <td>Length in ms the Toast stays before dismissal.</td>
-                </tr>
-                <tr>
-                    <td>classes</td>
-                    <td>Array of strings</td>
-                    <td><CodeTags type="secondary" code="[]" /></td>
-                    <td>Classes to be added to the toast element.</td>
-                </tr>
-                <tr>
-                    <td>completeCallback</td>
-                    <td>Function</td>
-                    <td><CodeTags type="secondary" code="null" /></td>
-                    <td>Callback function called when toast is dismissed.</td>
-                </tr>
-            </tbody>
-        </table>
-    </>
+        <section>
+            <h3>When to consider something else</h3>
+            <ul className="list list-bullet">
+                <li>Toasts are temporary notifications, therefore in cases where you want to display a more permanent message to the user, use the <Link to="/components/alerts">alert</Link> component instead which stays permanently on the screen.</li>
+                <li>Similarly, if you require action from the user before continuing to the next page, use a <Link to="/components/dialog">dialog</Link> component instead.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>How to use toast</h3>
+            <div className="slab slab-plain slab-border-success">
+                <span className="h3">Do</span>
+                <div className="toast-example-container">
+                    <div id="toast-container" className="ml-auto mr-3 mt-3">
+                        <div className="toast toast-neutral">
+                            <i className="material-icons">info</i>
+                            <div className="toast-content">Information message</div>
+                            <i className="material-icons">close</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>The positioning of the toast component should always be at the top left corner of the page on web and top center on mobile devices.</p>
+
+            <div className="slab slab-plain slab-border-error">
+                <span className="h3">Don&apos;t</span>
+                <div className="toast-example-container m-5">
+                    <div id="toast-container" className="m-auto">
+                        <div className="toast toast-neutral">
+                            <i className="material-icons">info</i>
+                            <div className="toast-content">Information message</div>
+                            <i className="material-icons">close</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>Since the toast component provides updates on user actions and never critical information, it should not disturb/abrupt the user flow. As seen on the example above, it should not pop up in the middle of the screen interrupting the user. </p>
+        </section>
+    </section>
 );
 
 const PremadeToasts = () => (
@@ -164,18 +125,39 @@ const CustomHtml = () => {
     );
 };
 
+const ContentGuidelines = () => (
+    <section>
+        <h3>Content guidelines</h3>
+        <div className="slab slab-plain">
+            <div className="toast-example-container">
+                <div id="toast-container" className="m-auto">
+                    <div className="toast toast-neutral">
+                        <i className="material-icons">info</i>
+                        <div className="toast-content">Messsage</div>
+                        <i className="material-icons">close</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul className="list list-bullet">
+            <li>The <b>message</b> for toast should reflect the type of the toast, if it is informative it should explain and link the user further. If it is an error toast, it should clearly explain what the issue is and explain how the user can solve the problem.</li>
+        </ul>
+    </section>
+);
+
 class Toast extends Component {
     render () {
         return (
             <DocContainer>
-                <p className="lead">
-                    Toasts can be used as a way to give feedback to a user. Use it to display short messages that something has happened that will not be immediately apparent on the website.
-                    This can be everything from a server query to saving some user settings.
-                </p>
-                <Overview />
-                <Options />
-                <PremadeToasts />
-                <CustomHtml />
+                <section id="toast-doc">
+                    <p className="lead">
+                        The toast component is only displayed when the user has performed an action. The components informs the user of the status of their request, warning and potential errors.
+                    </p>
+                    <Overview />
+                    <PremadeToasts />
+                    <CustomHtml />
+                    <ContentGuidelines />
+                </section>
             </DocContainer>
         );
     }
@@ -184,4 +166,4 @@ class Toast extends Component {
 export default Toast;
 
 /* For testing */
-export { Overview, Options, PremadeToasts, CustomHtml };
+export { Overview, PremadeToasts, CustomHtml };
