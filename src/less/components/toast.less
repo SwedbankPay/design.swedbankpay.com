@@ -2,7 +2,7 @@
     display: block;
     position: fixed;
     z-index: @zindex-toast;
-    min-width: 100%;
+    width: 21.4rem;
     bottom: 5%;
 
     @media screen and (min-width: @screen-sm-min) {
@@ -10,31 +10,37 @@
         bottom: initial;
         top: 1rem;
         right: 1%;
-        max-width: 86%;
     }
 
     .toast {
         position: relative;
-        width: auto;
-        height: auto;
-        max-width: 100%;
+        display: flex;
+        align-items: center;
         min-height: @toast-height;
-        line-height: 1.5;
-        color: @toast-text-color;
-        background-color: @toast-color;
         padding: @base-padding-sm @base-padding-lg;
+        background-color: @toast-color;
+        color: @toast-text-color;
+        border: 1px solid @list-gray;
         font-size: 1.1rem;
         font-weight: 300;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        line-height: 1.5;
         cursor: default;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.15);
         opacity: 0.95;
-        border: 1px solid @list-gray;
+        animation: slideInTopRight 0.5s forwards;
+
+        @keyframes slideInTopRight {
+            from { right: -1000px; }
+            to { right: 0; }
+        }
 
         &:hover {
             opacity: 1;
+        }
+
+        &.fade {
+            opacity: 0;
+            transition: opacity 0.3s linear;
         }
 
         &:not(:first-child) {
@@ -42,31 +48,25 @@
         }
 
         &.toast-success {
-            border-left: 3px solid @brand-success;
-
             .material-icons {
                 color: @brand-success;
             }
         }
 
         &.toast-neutral {
-            border-left: 3px solid @brand-info;
-
             .material-icons {
                 color: @brand-info;
             }
         }
 
         &.toast-warning {
-            border-left: 3px solid @brand-warning;
-
             .material-icons {
-                color: @brand-warning;
+                color: #f35b1c;
             }
         }
 
         &.toast-danger {
-            border-left: 3px solid @brand-error;
+            color: @brand-error;
 
             .material-icons {
                 color: @brand-error;
@@ -77,13 +77,13 @@
             user-select: none;
 
             &:first-child {
-                margin-right: @base-margin-sm;
+                margin-right: (@base-margin-sm * 2);
                 margin-left: (-@base-margin-sm);
             }
 
             &:last-child {
                 cursor: pointer;
-                margin-left: @base-margin-sm;
+                margin-left: auto;
                 margin-right: (-@base-margin-sm);
                 color: lighten(@text-color, 20%);
 
