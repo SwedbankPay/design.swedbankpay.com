@@ -21,12 +21,13 @@ const Installation = () => (
         <h3>Include at the bottom</h3>
         <p>Many of our components requires the use of JavaScript in order to function. Place the following <CodeTags type="secondary" code="<Script>"/> tag near the end of your pages, right before the closing <CodeTags type="secondary" code="</body>"/> tag to enable them.</p>
         <ComponentPreview language="html" codeFigure>
-            <script src={`${window.location.origin + basename}scripts/dg.js`}></script>
+            <script src={`${window.location.origin + basename}scripts/dg.js`} global="true" autoload="true"></script>
         </ComponentPreview>
+        <p>The <CodeTags type="secondary" code="global"/> attribute adds the script to the global scope. The <CodeTags type="secondary" code="autoload"/> attribute automatically initiates all components when loaded. Great for plug and play.</p>
         <h2 id="installation-npm">Installation with NPM</h2>
         <p>If you want to host the Design Guide files in your own app, run the following command.</p>
         <ComponentPreview language="terminal" codeFigure>
-            npm i @swedbankpay/design-guide
+            npm install @swedbankpay/design-guide
         </ComponentPreview>
         <h3>Usage with NPM</h3>
         <p>When importing the Design Guide javascript, you can choose to either import the whole thing or only the components you want to use.</p>

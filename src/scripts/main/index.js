@@ -30,7 +30,7 @@ const currentScript = document.currentScript;
 if (currentScript) {
     if (currentScript.getAttribute("global")) { window.dg = window.dg ? Object.assign(dg, window.dg) : dg; }
 
-    if (currentScript.getAttribute("autoLoad")) {
+    if (currentScript.getAttribute("autoload")) {
         document.addEventListener("DOMContentLoaded", () => {
             dg.script.initAll();
         });

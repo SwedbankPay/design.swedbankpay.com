@@ -321,9 +321,24 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     language="html"
   >
     <script
+      autoload="true"
+      global="true"
       src="http://localhost/TEST/scripts/dg.js"
     />
   </ComponentPreview>
+  <p>
+    The 
+    <CodeTags
+      code="global"
+      type="secondary"
+    />
+     attribute adds the script to the global scope. The 
+    <CodeTags
+      code="autoload"
+      type="secondary"
+    />
+     attribute automatically initiates all components when loaded. Great for plug and play.
+  </p>
   <h2
     id="installation-npm"
   >
@@ -336,7 +351,7 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     codeFigure={true}
     language="terminal"
   >
-    npm i @swedbankpay/design-guide
+    npm install @swedbankpay/design-guide
   </ComponentPreview>
   <h3>
     Usage with NPM
