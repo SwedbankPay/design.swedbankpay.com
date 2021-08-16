@@ -336,7 +336,7 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     codeFigure={true}
     language="terminal"
   >
-    npm i @swedbankpay/design.swedbankpay.com
+    npm i @swedbankpay/design-guide
   </ComponentPreview>
   <h3>
     Usage with NPM
@@ -348,7 +348,7 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     codeFigure={true}
     language="javascript"
   >
-    import dg from "@swedbankpay/design.swedbankpay.com"; 
+    import dg from "@swedbankpay/design-guide"; 
     
 
     dg.script.initAll();
@@ -357,7 +357,7 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     codeFigure={true}
     language="javascript"
   >
-    import { sheet } from "@swedbankpay/design.swedbankpay.com";  
+    import { sheet } from "@swedbankpay/design-guide";  
     
 
     sheet.init();
@@ -387,7 +387,7 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     codeFigure={true}
     language="css"
   >
-    @import url("@swedbankpay/design.swedbankpay.com/dist/designguide/styles/
+    @import url("@swedbankpay/design-guide/dist/designguide/styles/
     TESTBRAND
     .css");
   </ComponentPreview>
@@ -408,10 +408,33 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
      over to your static file folder. 
   </p>
   <p>
-    It might be a good idea to do this programmatically through webpack/angular/vue/react configurations.
+    It might be a good idea to do this programmatically either through NPM
+    
+
+    s postinstall or webpack/angular/vue/react configurations.
   </p>
   <p>
-    Purely an example with webpack.
+    Example with 
+    <CodeTags
+      code="package.json"
+      type="secondary"
+    />
+     postinstall
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    "scripts": { 
+    
+
+    "postinstall": "node ./post-install.js" 
+    
+
+    }
+  </ComponentPreview>
+  <p>
+    Example with webpack.
   </p>
   <ComponentPreview
     codeFigure={true}
