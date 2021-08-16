@@ -105,6 +105,7 @@
     "dist/designguide/",
     "src/polyfills/",
     "src/scripts/dashboard/",
-    "src/scripts/main/"
+    "src/scripts/main/",
+    "post-install.js"
   ]
 }
