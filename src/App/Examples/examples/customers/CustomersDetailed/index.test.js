@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import CustomersDetailed from "./index";
 
-const { dialog, tabs } = window.dg;
+import { dialog, tabs } from "@src/scripts/main";
 
 describe("Examples: CustomersDetailed", () => {
     const mockCustomer = {

@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
 
-const { validation } = window.dg;
+import { validation } from "@src/scripts/main";
 
 const DefaultSlab = () => (
     <>

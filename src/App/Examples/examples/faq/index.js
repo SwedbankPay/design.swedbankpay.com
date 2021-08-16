@@ -5,7 +5,8 @@ import AccordionComponent from "@components/Accordion";
 import InputGroup from "@components/InputGroup";
 import SheetComponent from "@components/Sheet";
 
-const { accordion, sheet, toast } = window.dg;
+import { accordion, sheet, toast } from "@src/scripts/main";
+
 const basename = process.env.basename;
 const brand = process.env.brand;
 

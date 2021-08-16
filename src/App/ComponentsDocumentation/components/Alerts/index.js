@@ -5,7 +5,7 @@ import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import AlertComponent, { ComplexAlert } from "@components/Alert";
 import CodeTags from "@components/CodeTags";
 
-const { alert } = window.dg;
+import { alert } from "@src/scripts/main";
 
 const BasicUsage = () => (
     <>

@@ -3,7 +3,7 @@ import { mount } from "enzyme";
 
 import ComponentPreview from "./index";
 
-const { tabs } = window.dg;
+import { tabs } from "@src/scripts/main";
 
 describe("Utilities: ComponentPreview", () => {
     const TestComponentH1 = () => <h1 className="h1-class">test1</h1>;

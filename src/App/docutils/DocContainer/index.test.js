@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import DocContainer from "./index";
 
-const { sidebar } = window.dg;
+import { sidebar } from "@src/scripts/main";
 
 describe("Utilities: DocContainer", () => {
     sidebar.populateSidebarTertiary = jest.fn();
