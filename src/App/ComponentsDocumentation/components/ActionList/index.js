@@ -4,7 +4,7 @@ import ActionListComponent from "@components/ActionList";
 import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import CodeTags from "@components/CodeTags";
 
-const { actionList } = window.dg;
+import { actionList } from "@src/scripts/main";
 
 const items = [
     {

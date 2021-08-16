@@ -1,5 +1,5 @@
-const _accordions = _accordions || [];
-const _accordionGroups = _accordionGroups || [];
+const _accordions = [];
+const _accordionGroups = [];
 
 class AccordionGroup {
     constructor (element) {

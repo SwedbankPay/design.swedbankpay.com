@@ -5,5 +5,6 @@ module.exports = {
     ],
     testPathIgnorePatterns: [
         "\\.spec\\.js"
-    ]
+    ],
+    testEnvironment: "jsdom"
 };

@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import Topbar, { Overview, TopbarWide, TopbarSticky, TopbarWithSidebar, TopbarPNG, JavascriptMethods } from "./index";
 
-const { topbar } = window.dg;
+import { topbar } from "@src/scripts/main";
 
 describe("Components: Topbar", () => {
     it("is defined", () => {

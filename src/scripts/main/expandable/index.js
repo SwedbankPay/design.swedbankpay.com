@@ -1,5 +1,5 @@
-const _expandables = _expandables || [];
-const _expandableGroups = _expandableGroups || [];
+const _expandables = [];
+const _expandableGroups = [];
 
 class ExpandableGroup {
     constructor (element) {

@@ -5,7 +5,7 @@ import { ComponentPreview, DocContainer, JavascriptDocs, JavascriptDocElement } 
 import TabsComponent from "@components/Tabs";
 import CodeTags from "@components/CodeTags";
 
-const { tabs } = window.dg;
+import { tabs } from "@src/scripts/main";
 
 const tabItems = ["Card", "Discounts", "Transactions", "Invoice", "Settings", "Audit trail", "History"];
 

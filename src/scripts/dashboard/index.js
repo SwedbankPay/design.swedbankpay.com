@@ -1,12 +1,18 @@
 import chart from "./chart";
 
-const dg = window.dg || {};
+const currentScript = document.currentScript;
 
-dg.chart = chart;
+if (currentScript) {
+    if (currentScript.getAttribute("global")) {
+        const dg = window.dg || {};
 
-window.dg = dg;
+        dg.chart = chart;
 
-export default dg;
+        window.dg = dg;
+    }
+}
+
+export default { chart };
 
 export {
     chart

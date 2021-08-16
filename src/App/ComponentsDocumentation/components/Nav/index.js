@@ -4,7 +4,7 @@ import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import NavComponent from "@components/Nav";
 import CodeTags from "@components/CodeTags";
 
-const { nav } = window.dg;
+import { nav } from "@src/scripts/main";
 
 const navItems = [
     {

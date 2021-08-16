@@ -6,6 +6,8 @@ import { howToUse, sliderShowCase } from "./constants";
 import CodeTags from "@components/CodeTags";
 import RangesliderComponent from "~/src/App/components/Rangeslider";
 
+import { rangeslider } from "@src/scripts/main";
+
 const Overview = () => (
     <section>
         <h2 id="overview">Overview</h2>
@@ -89,7 +91,7 @@ const DisableState = () => (
 
 const Rangeslider = () => {
     useEffect(() => {
-        window.dg.rangeslider.init();
+        rangeslider.init();
     });
 
     return (

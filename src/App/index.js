@@ -8,7 +8,7 @@ import SelectPanel from "./utils/SelectPanel";
 
 import routes from "./routes/all";
 
-const { topbar } = window.dg;
+import { topbar } from "@src/scripts/main";
 
 const basename = process.env.basename || "/";
 

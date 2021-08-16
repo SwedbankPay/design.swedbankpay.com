@@ -11,7 +11,7 @@ import LogotypeComponent from "@components/Logotype";
 const basename = process.env.basename;
 const brand = process.env.brand;
 
-const { sidebar, topbar } = window.dg;
+import { sidebar, topbar } from "@src/scripts/main";
 
 class NavGroup extends Component {
     constructor (props) {
@@ -102,7 +102,7 @@ class SelectPanel extends Component {
                         {/* <SearchBox routes={this.props.routes} /> */}
                         <nav className="sidebar-nav">
                             <a href="/" className="sidebar-top">{"\n"}
-                                <img className="d-none d-lg-block logotype-vertical logotype-sm" src={`${basename}img/${brand}-logo-v.svg`} alt={`${brand}-logo`} />{"\n"}
+                                <img className="d-none d-lg-block logotype-vertical logotype-sm" src={`${basename}designguide/assets/${brand}-logo-v.svg`} alt={`${brand}-logo`} />{"\n"}
                                 <div className="sidebar-version">
                                     <div className="sidebar-version-header">
                                         Design Guide
@@ -126,7 +126,7 @@ class SelectPanel extends Component {
                         <nav className="sidebar-main-nav">
                             <div className="sidebar-logo">
                                 <a href="/">
-                                    <LogotypeComponent src={`${basename}img/swedbankpay-logo-v.svg`} size="md" alt="Swedbank Pay vertical logo" type="vertical" />
+                                    <LogotypeComponent src={`${basename}designguide/assets/swedbankpay-logo-v.svg`} size="md" alt="Swedbank Pay vertical logo" type="vertical" />
                                 </a>
                             </div>
                             <ul className="main-nav-ul">

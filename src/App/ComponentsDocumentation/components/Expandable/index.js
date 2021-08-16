@@ -4,7 +4,7 @@ import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import ExpandableComponent from "@components/Expandable";
 import CodeTags from "@components/CodeTags";
 
-const { expandable } = window.dg;
+import { expandable } from "@src/scripts/main";
 
 const items = [
     {

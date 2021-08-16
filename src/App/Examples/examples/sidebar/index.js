@@ -13,7 +13,7 @@ import {
     CDSummaryCharts
 } from "./components/Customers";
 
-const { sidebar } = window.dg;
+import { sidebar } from "@src/scripts/main";
 
 class Sidebar extends PureComponent {
 

@@ -4,7 +4,7 @@ import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import AccordionComponent from "@components/Accordion";
 import CodeTags from "@components/CodeTags";
 
-const { accordion } = window.dg;
+import { accordion } from "@src/scripts/main";
 
 const items = [
     {

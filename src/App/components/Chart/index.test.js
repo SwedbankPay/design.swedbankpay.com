@@ -2,11 +2,13 @@ import React from "react";
 import { shallow } from "enzyme";
 
 import Chart from "./index";
+import { chart } from "@src/scripts/dashboard";
 
-dg.chart = jest.fn();
+// Can't use aliases in jest mock it seems, but this automocks the chart import [THN]
+jest.mock("../../../scripts/dashboard");
 
 describe("Component: Chart -", () => {
-    beforeEach(() => dg.chart.mockClear());
+    beforeEach(() => chart.mockClear());
 
     it("is defined", () => {
         expect(Chart).toBeDefined();
@@ -15,6 +17,7 @@ describe("Component: Chart -", () => {
     it("renders", () => {
         const wrapper = shallow(<Chart id="test" options={{}} />);
 
+        expect(wrapper.contains(<canvas id="test" />)).toEqual(true);
         expect(wrapper).toMatchSnapshot();
     });
 
@@ -41,7 +44,7 @@ describe("Component: Chart -", () => {
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<canvas id="test" />)).toEqual(true);
-        expect(dg.chart).toHaveBeenCalledWith("test", { test: "test" }, undefined);
+        expect(chart).toHaveBeenCalledWith("test", { test: "test" }, undefined);
     });
 
     it("renders a canvas with correct id and calls chart.js with that id, provided options and colors", () => {
@@ -49,6 +52,6 @@ describe("Component: Chart -", () => {
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(<canvas id="test" />)).toEqual(true);
-        expect(dg.chart).toHaveBeenCalledWith("test", { test: "test" }, ["test", "test", "test"]);
+        expect(chart).toHaveBeenCalledWith("test", { test: "test" }, ["test", "test", "test"]);
     });
 });

@@ -3,13 +3,7 @@ import { mount } from "enzyme";
 
 import ComponentPreview from "./index";
 
-const { tabs } = window.dg;
-
-// const htmlEncodeString = str => String(str)
-//     .replace(/&/g, "&amp;")
-//     .replace(/</g, "&lt;")
-//     .replace(/>/g, "&gt;")
-//     .replace(/"/g, "&quot;");
+import { tabs } from "@src/scripts/main";
 
 describe("Utilities: ComponentPreview", () => {
     const TestComponentH1 = () => <h1 className="h1-class">test1</h1>;
@@ -39,19 +33,6 @@ describe("Utilities: ComponentPreview", () => {
     it("is defined", () => {
         expect(ComponentPreview).toBeDefined();
     });
-
-    // it("renders", () => {
-    //     const wrapper = mount(
-    //         <ComponentPreview language="html" showCasePanel codeFigure>
-    //             <TestComponentH1 />
-    //         </ComponentPreview>
-    //     );
-
-    //     expect(wrapper).toMatchSnapshot();
-    //     expect(wrapper.contains(<h1>test1</h1>)).toEqual(true);
-    //     expect(wrapper.html()).toContain("<figure>");
-    //     expect(wrapper.html()).toContain("showcase-panel");
-    // });
 
     it("does not render codeFigure when prop is false/not provided", () => {
         const wrapper = mount(
@@ -92,11 +73,6 @@ describe("Utilities: ComponentPreview", () => {
         );
 
         expect(wrapper).toMatchSnapshot();
-        // TODO: Update expects [EH]
-
-        // expect(wrapper.html()).toContain(htmlEncodeString("<h1>test1</h1>"));
-        // expect(wrapper.html()).toContain(htmlEncodeString("<h2>test2</h2>"));
-        // expect(wrapper.html("<h2>test2</h2>")).toEqual(true);
     });
 
     it("CodeFigure removes outer tag from markup", () => {
@@ -107,8 +83,8 @@ describe("Utilities: ComponentPreview", () => {
         );
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains("div-class")).toEqual(false);
-        expect(wrapper.contains("h1-class")).toEqual(true);
+        expect(wrapper.html()).not.toContain("div-class");
+        expect(wrapper.html()).toContain("h1-class");
     });
 
     it("CodeFigure removes outer tag from multiple html tags", () => {
@@ -121,8 +97,8 @@ describe("Utilities: ComponentPreview", () => {
         );
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains("div-class")).toEqual(false);
-        expect(wrapper.contains("h1-class")).toEqual(true);
+        expect(wrapper.html()).not.toContain("div-class");
+        expect(wrapper.html()).toContain("h1-class");
     });
 
     it("CodeFigure removes outer tag from markup even if no child element exists", () => {
@@ -134,18 +110,7 @@ describe("Utilities: ComponentPreview", () => {
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("test text with no wrapping element");
-        // TODO: Update expects [AW]
     });
-
-    // it("CodeFigure renders markup without renderToStaticMarkup", () => {
-    //     const wrapper = mount(
-    //         <ComponentPreview language="html" codeFigure dangerousHTML>
-    //             <TestComponentH1WithOuterTags />
-    //         </ComponentPreview>
-    //     );
-
-    //     expect(wrapper).toMatchSnapshot();
-    // });
 
     it("CodeFigure removes value property", () => {
         const wrapper = mount(
@@ -213,7 +178,6 @@ describe("Utilities: ComponentPreview", () => {
             </ComponentPreview>
         );
 
-        // TODO: Update expects [EH]
         expect(wrapper).toMatchSnapshot();
     });
 
@@ -226,19 +190,6 @@ describe("Utilities: ComponentPreview", () => {
             </ComponentPreview>
         );
 
-        // TODO: Update expects [EH]
         expect(wrapper).toMatchSnapshot();
     });
-
-    // it("prop language other than javascript, css or html returns warning message", () => {
-    //     const wrapper = mount(
-    //         <ComponentPreview language="test" codeFigure>
-    //             {"test"}
-    //         </ComponentPreview>
-    //     );
-
-    //     // TODO: Update expects [EH]
-    //     expect(wrapper).toMatchSnapshot();
-    //     expect(wrapper.html()).toContain("update switchcase!");
-    // });
 });

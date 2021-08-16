@@ -18,7 +18,7 @@ exports[`Component: Topbar - logo prevents default when clicked 1`] = `
         <img
           alt="TESTBRAND-logo"
           className="logotype-vertical logotype-md"
-          src="/TEST/img/TESTBRAND-logo.svg"
+          src="/TEST/designguide/assets/TESTBRAND-logo.svg"
         />
         
 
@@ -50,7 +50,7 @@ exports[`Component: Topbar - props logout prevents default when clicked 1`] = `
         <img
           alt="TESTBRAND-logo"
           className="logotype-vertical logotype-md"
-          src="/TEST/img/TESTBRAND-logo.svg"
+          src="/TEST/designguide/assets/TESTBRAND-logo.svg"
         />
         
 
@@ -107,7 +107,7 @@ exports[`Component: Topbar - props logout renders logout link and adds topbar-li
         <img
           alt="TESTBRAND-logo"
           className="logotype-vertical logotype-md"
-          src="/TEST/img/TESTBRAND-logo.svg"
+          src="/TEST/designguide/assets/TESTBRAND-logo.svg"
         />
         
 
@@ -217,7 +217,7 @@ exports[`Component: Topbar - props topbarContent menu links prevents default whe
         <img
           alt="TESTBRAND-logo"
           className="logotype-vertical logotype-md"
-          src="/TEST/img/TESTBRAND-logo.svg"
+          src="/TEST/designguide/assets/TESTBRAND-logo.svg"
         />
         
 
@@ -406,7 +406,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
         <img
           alt="TESTBRAND-logo"
           className="logotype-vertical logotype-md"
-          src="/TEST/img/TESTBRAND-logo.svg"
+          src="/TEST/designguide/assets/TESTBRAND-logo.svg"
         />
         
 
@@ -580,13 +580,13 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                   <Logotype
                     alt="Swedbank Pay vertical logo"
                     size="md"
-                    src="/TEST/img/swedbankpay-logo-v.svg"
+                    src="/TEST/designguide/assets/swedbankpay-logo-v.svg"
                     type="vertical"
                   >
                     <img
                       alt="Swedbank Pay vertical logo"
                       className="logotype-vertical logotype-md"
-                      src="/TEST/img/swedbankpay-logo-v.svg"
+                      src="/TEST/designguide/assets/swedbankpay-logo-v.svg"
                     />
                   </Logotype>
                 </div>
@@ -967,7 +967,7 @@ exports[`Component: Topbar - props topbarContent renders a topbar menu without m
         <img
           alt="TESTBRAND-logo"
           className="logotype-vertical logotype-md"
-          src="/TEST/img/TESTBRAND-logo.svg"
+          src="/TEST/designguide/assets/TESTBRAND-logo.svg"
         />
         
 
@@ -1134,7 +1134,7 @@ exports[`Component: Topbar - props topbarContent renders a topbar-menu-button wh
         <img
           alt="TESTBRAND-logo"
           className="logotype-vertical logotype-md"
-          src="/TEST/img/TESTBRAND-logo.svg"
+          src="/TEST/designguide/assets/TESTBRAND-logo.svg"
         />
         
 
@@ -1323,7 +1323,7 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
         <img
           alt="TESTBRAND-logo"
           className="logotype-vertical logotype-md"
-          src="/TEST/img/TESTBRAND-logo.svg"
+          src="/TEST/designguide/assets/TESTBRAND-logo.svg"
         />
         
 
@@ -1536,7 +1536,7 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
         <img
           alt="TESTBRAND-logo"
           className="logotype-vertical logotype-md"
-          src="/TEST/img/TESTBRAND-logo.svg"
+          src="/TEST/designguide/assets/TESTBRAND-logo.svg"
         />
         
 
@@ -1671,7 +1671,7 @@ exports[`Component: Topbar - props wide renders a topbar with the given breakpoi
         <img
           alt="TESTBRAND-logo"
           className="logotype-vertical logotype-md"
-          src="/TEST/img/TESTBRAND-logo.svg"
+          src="/TEST/designguide/assets/TESTBRAND-logo.svg"
         />
         
 

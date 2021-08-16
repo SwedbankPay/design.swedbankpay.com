@@ -6,7 +6,7 @@ import AlertComponent from "@components/Alert";
 import DialogComponent from "@components/Dialog";
 import CodeTags from "@components/CodeTags";
 
-const { dialog } = window.dg;
+import { dialog } from "@src/scripts/main";
 
 const HowItWorks = () => (
     <>
