@@ -7,7 +7,8 @@ import CodeTags from "@components/CodeTags";
 
 const basename = process.env.basename;
 const brand = process.env.brand;
-const { expandable } = window.dg;
+
+import { expandable } from "@src/scripts/main";
 
 const Typefaces = () => (
     <section className="typography-typefaces">

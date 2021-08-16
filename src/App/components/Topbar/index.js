@@ -63,12 +63,12 @@ const TopbarLogo = ({ png }) => (
     <>
         <a className={`topbar-logo${png ? " topbar-logo-png" : ""}`} href="/" onClick={e => e.preventDefault()}>{"\n"}
             {(brand === "swedbankpay" && png)
-                ? <img src={`${process.env.basename}img/${brand}-logo${brand === "swedbankpay"
+                ? <img src={`${process.env.basename}designguide/assets/${brand}-logo${brand === "swedbankpay"
                     ? "-v"
                     : ""}.png`} alt={`${brand}-logo`} className="logotype-vertical logotype-md"/>
                 : <img src={isDev
                     ? devLogo
-                    : `${process.env.basename}img/${brand}-logo${brand === "swedbankpay"
+                    : `${process.env.basename}designguide/assets/${brand}-logo${brand === "swedbankpay"
                         ? "-v"
                         : ""}.svg`} alt={`${brand}-logo`} className="logotype-vertical logotype-md"/>
             }{"\n"}

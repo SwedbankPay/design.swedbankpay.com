@@ -8,7 +8,7 @@ import { Radio } from "@components/FormComponents";
 import Rangeslider from "@components/Rangeslider";
 import MediaObjectComponent from "@components/MediaObject";
 
-const { rangeslider } = window.dg;
+import { rangeslider } from "@src/scripts/main";
 
 const SettingsBasic = () => (
     <>

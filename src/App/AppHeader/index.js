@@ -17,7 +17,7 @@ const AppHeader = () => (
             <i className="material-icons topbar-btn-icon" aria-hidden="true">close</i>
         </button>
         <a href="/" className="topbar-logo">{"\n"}
-            <img src={`${basename}img/${brand}-logo-h.svg`} alt={`${brand}-logo`} className="logotype-horizontal logotype-md"/> {"\n"}
+            <img src={`${basename}designguide/assets/${brand}-logo-h.svg`} alt={`${brand}-logo`} className="logotype-horizontal logotype-md"/> {"\n"}
         </a>
         <nav className="topbar-nav">
             <div className="topbar-link-container">

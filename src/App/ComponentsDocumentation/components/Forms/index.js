@@ -7,7 +7,7 @@ import Button from "@components/Button";
 import { Checkbox, FormControlText, Radio, Togglebox } from "@components/FormComponents";
 import CodeTags from "@components/CodeTags";
 
-const { validation } = window.dg;
+import { validation } from "@src/scripts/main";
 
 const Overview = () => (
     <>

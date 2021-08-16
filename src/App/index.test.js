@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import App from "./index";
 
-const { topbar } = window.dg;
+import { topbar } from "@src/scripts/main";
 
 describe("Main: App", () => {
     it("is defined", () => {

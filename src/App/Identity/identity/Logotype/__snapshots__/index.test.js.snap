@@ -127,7 +127,7 @@ exports[`Core: Logotype LogoBlack renders 1`] = `
           Object {
             "component": <Logotype
               alt="Swedbank Pay vertical logo"
-              src="/TEST/img/swedbankpay-logo-v.svg"
+              src="/TEST/designguide/assets/swedbankpay-logo-v.svg"
               type="vertical"
             />,
             "description": "The vertical logo (with black text) is the primary logo is the primary logo and should always be considered before moving on to another version.",
@@ -180,7 +180,7 @@ exports[`Core: Logotype LogoBlack renders 1`] = `
           Object {
             "component": <Logotype
               alt="Swedbank Pay horizontal logo"
-              src="/TEST/img/swedbankpay-logo-h.svg"
+              src="/TEST/designguide/assets/swedbankpay-logo-h.svg"
               type="horizontal"
             />,
             "description": <React.Fragment>
@@ -274,7 +274,7 @@ exports[`Core: Logotype LogoWhite renders 1`] = `
             "altBackground": true,
             "component": <Logotype
               alt="Swedbank Pay vertical logo"
-              src="/TEST/img/swedbankpay-logo-v-neg.svg"
+              src="/TEST/designguide/assets/swedbankpay-logo-v-neg.svg"
               type="vertical"
             />,
             "description": <p>
@@ -330,7 +330,7 @@ exports[`Core: Logotype LogoWhite renders 1`] = `
             "altBackground": true,
             "component": <Logotype
               alt="Swedbank Pay horizontal logo"
-              src="/TEST/img/swedbankpay-logo-h-neg.svg"
+              src="/TEST/designguide/assets/swedbankpay-logo-h-neg.svg"
               type="horizontal"
             />,
             "description": <p>

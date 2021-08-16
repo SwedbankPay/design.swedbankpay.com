@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import CodeTags from "@components/CodeTags";
 
-const { tooltips } = window.dg;
+import { tooltips } from "@src/scripts/main";
 
 const Overview = () => (
     <>

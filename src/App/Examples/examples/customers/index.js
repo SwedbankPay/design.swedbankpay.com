@@ -19,7 +19,7 @@ import {
     customersDetailedPreviousInquiries
 } from "./constants";
 
-const { actionList } = window.dg;
+import { actionList } from "@src/scripts/main";
 
 const createNumArray = (length, baseNum, addNum) => (
     [...Array(length)].map(() => (

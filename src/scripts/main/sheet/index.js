@@ -7,7 +7,7 @@ const SELECTORS = {
     CLOSEICON: ".sheet-close"
 };
 
-const _sheets = _sheets || [];
+const _sheets = [];
 
 class Sheet {
     constructor (el) {

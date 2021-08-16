@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 import { Datepicker as DatepickerComponent } from "@components/FormComponents";
 
-const { datepicker } = window.dg;
+import { datepicker } from "@src/scripts/main";
 
 const CustomersDetailedDatePickerGroup = () => {
 

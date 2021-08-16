@@ -3,7 +3,7 @@ const SELECTORS = {
     ACTIVE: ".active"
 };
 
-const _tabs = _tabs || [];
+const _tabs = [];
 
 class Tabs {
     constructor (el) {

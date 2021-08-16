@@ -29,8 +29,8 @@ const URL_LIST = [
         path: "/scripts/dg-dashboard.js"
     },
     {
-        name: "dg-style.css",
-        path: "/styles/dg-style.css"
+        name: "swedbankpay.css",
+        path: "/styles/swedbankpay.css"
     }
 ];
 

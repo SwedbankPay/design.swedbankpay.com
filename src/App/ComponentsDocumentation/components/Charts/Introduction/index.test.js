@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Introduction, { QuickStart, Css, JavaScript } from "./index";
+import Introduction, { QuickStart, JavaScript } from "./index";
 
 describe("Dashboard: Introduction", () => {
     it("is defined", () => {
@@ -21,18 +21,6 @@ describe("Dashboard: Introduction", () => {
 
         it("renders", () => {
             const wrapper = shallow(<QuickStart />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("Css", () => {
-        it("is defined", () => {
-            expect(Css).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<Css />);
 
             expect(wrapper).toMatchSnapshot();
         });

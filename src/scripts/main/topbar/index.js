@@ -7,7 +7,7 @@ const SELECTORS = {
     TOPBARNAV: ".topbar-nav"
 };
 
-const _navMenus = _navMenus || [];
+const _navMenus = [];
 
 const _closeOnNavMenus = () => (_navMenus.some(menu => menu.isOpen ? menu.close() : false));
 

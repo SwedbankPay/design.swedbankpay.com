@@ -1,6 +1,7 @@
+import * as dg from "../index";
+
 const script = (() => {
     const initAll = () => {
-        const { dg } = window;
 
         for (const key in dg) {
             if (typeof dg[key].init === "function") {

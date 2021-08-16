@@ -4,7 +4,7 @@ import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import SheetComponent from "@components/Sheet";
 import CodeTags from "@components/CodeTags";
 
-const { sheet } = window.dg;
+import { sheet } from "@src/scripts/main";
 
 const Example = () => (
     <>
