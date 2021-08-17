@@ -6,7 +6,7 @@ import { Datepicker as DatepickerComponent } from "@components/FormComponents";
 import Alert from "@components/Alert";
 import CodeTags from "@components/CodeTags";
 
-const { datepicker } = window.dg;
+import { datepicker } from "@src/scripts/main";
 
 const AboutDatepickers = () => (
     <>

@@ -6,7 +6,7 @@ const SELECTORS = {
     }
 };
 
-const _navs = _navs || [];
+const _navs = [];
 
 class Nav {
     constructor (el) {

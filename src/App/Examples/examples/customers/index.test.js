@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import Customers from "./index";
 
-const { actionList } = window.dg;
+import { actionList } from "@src/scripts/main";
 
 describe("Examples: Customers", () => {
     it("is defined", () => {

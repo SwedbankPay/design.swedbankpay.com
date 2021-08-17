@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import { renderToStaticMarkup } from "react-dom/server";
 import jsbeautifier from "js-beautify";
 
+import { tabs } from "@src/scripts/main";
+
 // NOTE: dangerousHTML prop is used when wanting to show html in the codefigure without encoding.
 
 const ComponentPreview = ({ children, language, removeOuterTag, hideValue, removeList, showCasePanel, showCasePanelAdvanced, showCasePanelSm, codeFigure, dangerousHTML, negative }) => {
@@ -113,6 +115,8 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                 // This is not needed, and for some reason crashes after a prod build [EH]
                 // code = jsbeautifier(code);
                 break;
+            case "terminal":
+                break;
             default:
                 return "update switchcase!";
         }
@@ -149,8 +153,6 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
             {children}
         </div>
     );
-
-    const { tabs } = window.dg;
 
     class ShowCasePanelAdvanced extends Component {
         constructor (props) {
@@ -359,7 +361,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
 };
 
 ComponentPreview.propTypes = {
-    language: PropTypes.oneOf(["html", "javascript", "css"]).isRequired,
+    language: PropTypes.oneOf(["html", "javascript", "css", "terminal"]).isRequired,
     removeOuterTag: PropTypes.bool,
     hideValue: PropTypes.bool,
     removeList: PropTypes.bool,

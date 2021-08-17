@@ -5,7 +5,7 @@ const SELECTORS = {
     DATEPICKER: "[data-datepicker]"
 };
 
-let _datepickers = _datepickers || [];
+let _datepickers = [];
 
 // 080989◢◤200418
 const _createDatepicker = datepicker => {

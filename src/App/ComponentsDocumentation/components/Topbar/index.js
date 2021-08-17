@@ -7,7 +7,7 @@ import CodeTags from "@components/CodeTags";
 import SidebarComponent from "@components/Sidebar";
 import { SidebarNavList } from "../Sidebar/constants";
 
-const { topbar, sidebar } = window.dg;
+import { topbar, sidebar } from "@src/scripts/main";
 
 const menu = {
     btn: {

@@ -1,41 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Dashboard: Introduction Css renders 1`] = `
-<Fragment>
-  <h2
-    id="css"
-  >
-    CSS
-  </h2>
-  <p>
-    Copy-paste the stylesheet 
-    <CodeTags
-      code="<link>"
-      type="primary"
-    />
-     into your 
-    <CodeTags
-      code="<head>"
-      type="primary"
-    />
-     before all other stylesheets to load our CSS.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-  >
-    <link
-      href="http://localhost/TEST/styles/dg-style.css"
-      rel="stylesheet"
-    />
-    <link
-      href="http://localhost/TEST/styles/dg-dashboard.css"
-      rel="stylesheet"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
 exports[`Dashboard: Introduction JavaScript renders 1`] = `
 <Fragment>
   <h2

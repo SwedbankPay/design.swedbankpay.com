@@ -4,7 +4,7 @@ import { ComponentPreview } from "@docutils";
 
 import CustomersDetailedDialog from "./components/CustomersDetailedDialog/";
 
-const { actionList, dialog, tabs } = window.dg;
+import { actionList, dialog, tabs } from "@src/scripts/main";
 
 class CustomersDetailed extends Component {
     constructor (props) {

@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
+import { chart } from "@src/scripts/dashboard";
+
 class Chart extends Component {
     componentDidMount () {
         const { id, options, colorPool } = this.props;
 
-        dg.chart(id, options, colorPool);
+        chart(id, options, colorPool);
     }
 
     render () {

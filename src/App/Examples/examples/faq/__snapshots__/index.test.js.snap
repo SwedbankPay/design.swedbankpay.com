@@ -119,7 +119,7 @@ exports[`Examples: FAQ FAQSearch renders 1`] = `
     <img
       alt="logo"
       className="examples-faq-logo"
-      src="/TEST/img/TESTBRAND-logo.svg"
+      src="/TEST/designguide/assets/TESTBRAND-logo.svg"
     />
   </div>
   <div

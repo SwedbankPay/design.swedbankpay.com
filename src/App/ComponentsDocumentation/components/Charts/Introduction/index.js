@@ -6,24 +6,11 @@ import CodeTags from "@components/CodeTags";
 const basename = process.env.basename;
 const scriptUrl = `${window.location.origin + basename}scripts/dg.js`;
 const dashboardScriptUrl = `${window.location.origin + basename}scripts/dg-dashboard.js`;
-const styleUrl = `${window.location.origin + basename}styles/dg-style.css`;
-const dashboardStyleUrl = `${window.location.origin + basename}styles/dg-dashboard.css`;
 
 const QuickStart = () => (
     <>
         <h3 id="quick-start">Quick start</h3>
         <p>To quickly add the dashboard theme to your project, include the snippets below in your project.</p>
-    </>
-);
-
-const Css = () => (
-    <>
-        <h2 id="css">CSS</h2>
-        <p>Copy-paste the stylesheet <CodeTags type="primary" code={"<link>"} /> into your <CodeTags type="primary" code={"<head>"} /> before all other stylesheets to load our CSS.</p>
-        <ComponentPreview language="html" codeFigure>
-            <link rel="stylesheet" href={styleUrl} />
-            <link rel="stylesheet" href={dashboardStyleUrl} />
-        </ComponentPreview>
     </>
 );
 
@@ -54,7 +41,6 @@ const Introduction = () => (
             <li><CodeTags type="secondary" code={"\"pie\"/\"doughnut\""} /></li>
         </ul>
         <QuickStart />
-        {/* <Css /> */}
         <JavaScript />
     </>
 );
@@ -62,4 +48,4 @@ const Introduction = () => (
 export default Introduction;
 
 /* For testing */
-export { QuickStart, Css, JavaScript };
+export { QuickStart, JavaScript };
