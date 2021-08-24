@@ -21,9 +21,9 @@
 @brand-primary-light-3:                     @brand-primary;
 @brand-primary-faded:                         fade(@brand-primary, 60%);
 
-@brand-secondary:                           #3c3c3c; //krockar med text i designGuiden och checkbox + progress steps, radio?
+@brand-secondary:                           #3c3c3c;
 @brand-secondary-dark-1:                    @brand-secondary;
-@brand-secondary-dark-2:                    @brand-secondary; //actionlist, badge, breadcrumbs, code-views, dialog, nav, topbar, material-icons-styling
+@brand-secondary-dark-2:                    @brand-secondary;
 @brand-secondary-light-1:                   @brand-secondary;
 @brand-secondary-light-2:                   #C8C8C8;
 @brand-secondary-light-3:                   @brand-secondary-light-2;
@@ -32,16 +32,16 @@
 @brand-secondary-info-2:                    #efb7b6;
 
 @brand-tertiary:                            @brand-primary;
-@brand-accent:                              @brand-secondary; //loader
-@blue-bright:                               @brand-secondary-light-2; // loaders
+@brand-accent:                              @brand-secondary;
+@blue-bright:                               @brand-secondary-light-2;
 @brand-accent-links:                        @brand-secondary;
 
 /* Background Colors */
-@brand-bg-1:                                #E8F3E6; //card, code-tags, links, slab, tables.
+@brand-bg-1:                                #E8F3E6;
 @brand-bg-2:                                #E8F3E6;
 @brand-bg-3:                                #fbedf4;
 @brand-bg-4:                                #EAF8FC;
-@brand-bg-gray:                             @brand-secondary-light-2; //progress step, topbar, tabs, lists, rangeslider krockar ev.
+@brand-bg-gray:                             @brand-secondary-light-2;
 @brand-bg-white:                            #ffffff;
 
 /* State colors */
@@ -59,9 +59,11 @@
 
 /* Brand fonts */
 @brand-headline:                            "Futura PT W08 Demi", sans-serif;
-@brand-black:                               "Futura PT W08 Demi", sans-serif;
+@brand-black:                               "Futura PT W08 Medium", sans-serif;
 @brand-default:                             "Futura PT W08 Book", sans-serif;
 @brand-monofont:                            monospace;
+
+@payex-material-icons:                      "Material Icons Sharp";
 
 /* Button colors */
 @primary-disabled-bg:                       #f5b895;
@@ -96,23 +98,45 @@
 @blue-syntax-highlight:                     #43D0DD;
 @yellow-syntax-highlight:                   #FFF3D5;
 @pink-cards-details:                        #c5569a;
-@dark-brown:                                @brand-secondary; //toggleboxes
+@dark-brown:                                @brand-secondary;
 @light-brown:                               @brand-secondary-light-3;
 @help-block-text:                           #707070;
 @tab-link:                                  @help-block-text;
 @radiobutton-border:                        @help-block-text;
 @checkbox-checked-color:                    @brand-secondary-light-2;
 
+body {
+    font-family: @brand-default;
+
+    p.lead {
+        font-family: @brand-black;
+        font-weight: 500;
+    }
+}
+
+.documentation {
+    .doc-container {
+        &.dg-front-page {
+            .dg-front-page-container {
+                header {
+                    .dg-title-big.my-0 {
+                        font-family: @brand-headline;
+                    }
+                }
+
+                p.front-page-lead {
+                    font-family: @brand-default;
+                }
+            }
+        }
+    }
+}
+
 /* This section overrides styling for classes/elements with the PayEx brand theme
  * ==========================================================================
  *
  * Tabs
  */
-
- body {
-     font-family: @brand-default;
- }
- 
 .tabs > ul > li {
     > a {
         color: @tab-link;
@@ -162,6 +186,8 @@ button.btn.btn-primary {
 }
 
 .btn {
+    font-family: @brand-default;
+
     &.btn-guiding-destructive {
         &:active {
             border: 2px solid @btn-destructive-hover;
@@ -258,10 +284,47 @@ button.btn.btn-primary {
 
 /* ==========================================================================
  *
+ * Logo
+ *
+ */
+.topbar-xl-wide {
+    &.topbar-sticky {
+        img.logotype-md {
+            margin-top: 15%;
+            margin-left: 15%;
+        }
+    }
+
+    a.topbar-logo {
+        img.logotype-md {
+            margin-top: 15%;
+        }
+    }
+}
+
+.logotype-vertical {
+    &.logotype-xs {
+        width: 2.5rem;
+    }
+
+    &.logotype-sm {
+        width: 3rem;
+    }
+
+    &.logotype-md {
+        width: 4.5rem;
+    }
+
+    &.logotype-lg {
+        width: 3rem;
+    }
+}
+
+/* ==========================================================================
+ *
  * Sidebar
  *
  */
-
 .sidebar-2 {
     .sidebar-main-nav {
         .main-nav-ul {
@@ -292,10 +355,10 @@ button.btn.btn-primary {
  *
  */
 .material-icons {
-    font-family: "Material Icons Outlined";
+    font-family: @payex-material-icons;
 
     &.alert-icon {
-        font-family: "Material Icons";
+        font-family: @payex-material-icons;
     }
 }
 
@@ -423,6 +486,7 @@ a.action-link {
     &:after {
         color: @brand-secondary;
         content: "arrow_forward";
+        font-family: @payex-material-icons;
         font-size: 1.5rem;
         top: calc(50% - 1.5rem / 2);
     }
@@ -444,6 +508,11 @@ a.action-link.action-link-new-tab {
  *
  */
 .badge.badge-default {
+    font-family: @brand-default;
+    color: @white;
+}
+
+span.status-badge.status-badge-javascript {
     color: @white;
 }
 
