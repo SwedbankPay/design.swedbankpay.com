@@ -58,9 +58,9 @@
 @brand-info-light:                          #E8EFF9;
 
 /* Brand fonts */
-@brand-headline:                            "Roboto", sans-serif;
-@brand-black:                               "Roboto", sans-serif;
-@brand-default:                             "Roboto", sans-serif;
+@brand-headline:                            "Futura PT W08 Demi", sans-serif;
+@brand-black:                               "Futura PT W08 Demi", sans-serif;
+@brand-default:                             "Futura PT W08 Book", sans-serif;
 @brand-monofont:                            monospace;
 
 /* Button colors */
@@ -105,9 +105,14 @@
 
 /* This section overrides styling for classes/elements with the PayEx brand theme
  * ==========================================================================
- * 
+ *
  * Tabs
  */
+
+ body {
+     font-family: @brand-default;
+ }
+ 
 .tabs > ul > li {
     > a {
         color: @tab-link;
@@ -124,9 +129,9 @@
 }
 
 /* ==========================================================================
- * 
+ *
  * Buttons
- * 
+ *
  */
 .btn.btn-primary.btn-bank-id i.bank-id {
     background-color: @white;
@@ -162,6 +167,7 @@ button.btn.btn-primary {
             border: 2px solid @btn-destructive-hover;
             box-shadow: none;
         }
+
         &:focus {
             border: 2px solid @brand-secondary;
         }
@@ -170,9 +176,11 @@ button.btn.btn-primary {
     &.btn-link-destructive {
         border: none;
         border-bottom: none;
+
         &:hover {
             border: 1px solid @btn-destructive-hover;
         }
+
         &:focus {
             border: 1px solid @btn-destructive-hover;
             box-shadow: 0 0 0 0.1rem @btn-destructive-hover;
@@ -200,25 +208,23 @@ button.btn.btn-primary {
 }
 
 /* ==========================================================================
- * 
+ *
  * Datepickers
- * 
+ *
  */
- .flatpickr-calendar {
-
+.flatpickr-calendar {
     .flatpickr-day.selected:hover {
         background: @brand-success-light;
         border: @brand-success-light;
-     }
+    }
 }
 
 /* ==========================================================================
- * 
+ *
  * Progress steps
- * 
+ *
  */
- .steps ol {
-
+.steps ol {
     li > a {
         .steps-number:hover {
             color: @white;
@@ -226,28 +232,24 @@ button.btn.btn-primary {
     }
 
     li.steps-completed {
-
         .material-icons.steps-icon {
             color: @white;
         }
     }
 
     li.steps-ongoing.steps-selected {
-
         .steps-number:hover {
             color: @brand-secondary;
         }
     }
 
     li.steps-selected {
-
         .steps-number:hover {
             color: @white;
         }
     }
 
     li.steps-ongoing {
-
         .steps-number:hover {
             color: @white;
         }
@@ -255,15 +257,13 @@ button.btn.btn-primary {
 }
 
 /* ==========================================================================
- * 
+ *
  * Sidebar
- * 
+ *
  */
 
- .sidebar-2 {
-
+.sidebar-2 {
     .sidebar-main-nav {
-
         .main-nav-ul {
             .main-nav-li {
                 > a {
@@ -277,24 +277,24 @@ button.btn.btn-primary {
                     > a {
                         &:before {
                             border-top-right-radius: 0;
-                            border-bottom-right-radius: 0;  
+                            border-bottom-right-radius: 0;
                         }
                     }
                 }
             }
         }
     }
- }
+}
 
 /* ==========================================================================
- * 
+ *
  * Material Icons
- * 
+ *
  */
 .material-icons {
     font-family: "Material Icons Outlined";
 
-    &.alert-icon{
+    &.alert-icon {
         font-family: "Material Icons";
     }
 }
@@ -304,9 +304,9 @@ button.btn.btn-primary {
 }
 
 /* ==========================================================================
- * 
+ *
  * Forms
- * 
+ *
  */
 .form-control {
     border-color: @brand-secondary-light-2;
@@ -314,21 +314,21 @@ button.btn.btn-primary {
 }
 
 /* ==========================================================================
- * 
+ *
  *Input group
- * 
+ *
  */
-.input-group-addon{
+.input-group-addon {
     &:first-child {
-    border-color: @brand-secondary-light-2;
+        border-color: @brand-secondary-light-2;
         border-bottom-color: @brand-secondary;
     }
 }
 
 /* ==========================================================================
- * 
+ *
  * Checkbox
- * 
+ *
  */
 .checkbox {
     border: @brand-secondary;
@@ -350,7 +350,6 @@ button.btn.btn-primary {
         &:focus + label:before {
             box-shadow: 0 0 0 0.5rem @brand-secondary-light-2;
             border: 2px solid @brand-secondary;
-
         }
 
         &:focus + label:after {
@@ -370,25 +369,24 @@ button.btn.btn-primary {
 }
 
 /* ==========================================================================
- * 
+ *
  * Radiobuttons
- * 
+ *
  */
- .radio {
+.radio {
     border: @brand-secondary;
 
     input[type="radio"] {
-
         + label:before {
             border: 2px solid @radiobutton-border;
         }
     }
- }
+}
 
 /* ==========================================================================
- * 
+ *
  * Links
- * 
+ *
  */
 a {
     color: @brand-success;
@@ -396,6 +394,7 @@ a {
     &:hover {
         color: @link-hover-color;
     }
+
     &:focus {
         color: @brand-success;
     }
@@ -406,10 +405,12 @@ a.icon-link {
 
     &:hover {
         color: @brand-primary;
+
         span {
             text-decoration: none;
         }
     }
+
     :focus {
         span {
             color: @link-hover-color;
@@ -428,7 +429,7 @@ a.action-link {
 
     &:hover {
         color: @brand-secondary;
-    }  
+    }
 }
 
 a.action-link.action-link-new-tab {
@@ -438,27 +439,27 @@ a.action-link.action-link-new-tab {
 }
 
 /* ==========================================================================
- * 
+ *
  * Badge
- * 
+ *
  */
 .badge.badge-default {
     color: @white;
 }
 
 /* ==========================================================================
- * 
+ *
  * Loaders
- * 
+ *
  */
 .loader.loader-muted {
     border-left-color: @brand-secondary-light-2;
-} 
+}
 
 /* ==========================================================================
- * 
+ *
  * Toast
- * 
+ *
  */
 #toast-container .toast {
     box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.15);
@@ -473,9 +474,9 @@ a.action-link.action-link-new-tab {
 }
 
 /* ==========================================================================
- * 
+ *
  * Alert
- * 
+ *
  */
 .alert {
     &.alert-success,
@@ -491,18 +492,18 @@ a.action-link.action-link-new-tab {
 }
 
 /* ==========================================================================
- * 
+ *
  * Table
- * 
+ *
  */
 .table > tbody > tr:nth-child(odd) {
     background-color: @light-gray;
 }
 
 /* ==========================================================================
- * 
+ *
  * Tooltip
- * 
+ *
  */
 [data-tooltip] {
     &:before {
