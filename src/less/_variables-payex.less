@@ -302,7 +302,13 @@ button.btn.btn-primary {
     }
 }
 
-.logotype-vertical {
+.logotype-horizontal {
+    &.logotype-md {
+        height: 5.5rem;
+    }
+}
+
+img.logotype-vertical {
     &.logotype-xs {
         width: 2.5rem;
     }
@@ -320,6 +326,16 @@ button.btn.btn-primary {
     }
 }
 
+@media (max-width: 575.98px) {
+    .topbar {
+        .topbar-logo {
+            .logotype-vertical {
+                width: 5rem;
+            }
+        }
+    }
+}
+
 /* ==========================================================================
  *
  * Sidebar
@@ -327,6 +343,12 @@ button.btn.btn-primary {
  */
 .sidebar-2 {
     .sidebar-main-nav {
+        .sidebar-logo {
+            content: url(/src/img/payex/logo/payex-logo-v.svg);
+            height: 100px;
+            width: 68.13px;
+        }
+
         .main-nav-ul {
             .main-nav-li {
                 > a {
