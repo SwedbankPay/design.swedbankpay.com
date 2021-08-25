@@ -27,7 +27,7 @@ const Overview = () => (
                     <div id="toast-container" className="ml-auto mr-3 mt-3">
                         <div className="toast toast-neutral">
                             <i className="material-icons">info</i>
-                            <div className="toast-content">Information message</div>
+                            <div className="toast-content"><b>Short information message</b></div>
                             <i className="material-icons">close</i>
                         </div>
                     </div>
@@ -41,7 +41,7 @@ const Overview = () => (
                     <div id="toast-container" className="m-auto">
                         <div className="toast toast-neutral">
                             <i className="material-icons">info</i>
-                            <div className="toast-content">Information message</div>
+                            <div className="toast-content"><b>Short information message</b></div>
                             <i className="material-icons">close</i>
                         </div>
                     </div>
@@ -133,7 +133,7 @@ const ContentGuidelines = () => (
                 <div id="toast-container" className="m-auto">
                     <div className="toast toast-neutral">
                         <i className="material-icons">info</i>
-                        <div className="toast-content">Messsage</div>
+                        <div className="toast-content"><b>Message</b></div>
                         <i className="material-icons">close</i>
                     </div>
                 </div>
@@ -142,6 +142,50 @@ const ContentGuidelines = () => (
         <ul className="list list-bullet">
             <li>The <b>message</b> for toast should reflect the type of the toast, if it is informative it should explain and link the user further. If it is an error toast, it should clearly explain what the issue is and explain how the user can solve the problem.</li>
         </ul>
+    </section>
+);
+
+const DeveloperDocumentation = () => (
+    <section id="developer-documentation">
+        <h2>Developer documentation</h2>
+        <p>To use the Toast, call the toast function on an element.</p>
+        <h3>Options</h3>
+        <table className="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>html</td>
+                    <td>String</td>
+                    <td><CodeTags type="secondary" code='""'/></td>
+                    <td>The HTML content of the Toast.</td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>String</td>
+                    <td><CodeTags type="secondary" code='""'/></td>
+                    <td>Alert types: <CodeTags type="secondary" code="success"/>, <CodeTags type="secondary" code="neutral"/>, <CodeTags type="secondary" code="warning"/>, <CodeTags type="secondary" code="danger"/></td>
+                </tr>
+                <tr>
+                    <td>classes</td>
+                    <td>Array of strings</td>
+                    <td><CodeTags type="secondary" code="[]"/></td>
+                    <td>Classes to be added to the toast element.</td>
+                </tr>
+                <tr>
+                    <td>completeCallback</td>
+                    <td>Function</td>
+                    <td><CodeTags type="secondary" code="null"/></td>
+                    <td>Callback function called when toast is dismissed.</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 );
 
@@ -154,9 +198,8 @@ class Toast extends Component {
                         The toast component is only displayed when the user has performed an action. The components informs the user of the status of their request, warning and potential errors.
                     </p>
                     <Overview />
-                    <PremadeToasts />
-                    <CustomHtml />
                     <ContentGuidelines />
+                    <DeveloperDocumentation />
                 </section>
             </DocContainer>
         );
