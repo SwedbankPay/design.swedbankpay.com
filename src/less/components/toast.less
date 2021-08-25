@@ -21,21 +21,16 @@
         background-color: @toast-color;
         color: @toast-text-color;
         border: 1px solid @list-gray;
-        font-size: 1.1rem;
         font-weight: 300;
         line-height: 1.5;
         cursor: default;
         box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.15);
-        opacity: 0.95;
+        opacity: 1;
         animation: slideInTopRight 0.5s forwards;
 
         @keyframes slideInTopRight {
             from { right: -1000px; }
             to { right: 0; }
-        }
-
-        &:hover {
-            opacity: 1;
         }
 
         &.fade {
@@ -97,7 +92,7 @@
         h1, h2, h3, h4, h5, h6,
         .h1, .h2, .h3, .h4, .h5, .h6,
         p, .material-icons {
-            color: @toast-text-color;
+            color: @brand-secondary;
             margin-bottom: 0;
         }
         /* stylelint-enable selector-list-comma-newline-after */
