@@ -1,0 +1,26 @@
+.cards {
+    &.cards-primary {
+        .cards-icon {
+            color: @white;
+        }
+    }
+
+    &.cards-tertiary {
+        &:after {
+            border-bottom: 4px solid @brand-primary;
+        }
+
+        > i {
+            color: @brand-primary;
+        }
+
+        .cards-icon {
+            color: @white;
+            background-color: @brand-primary;
+
+            svg {
+                fill: @white;
+            }
+        }
+    }
+}
