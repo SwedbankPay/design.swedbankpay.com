@@ -2,8 +2,10 @@
     ol {
         li {
             a {
-                .steps-number:hover {
-                    color: @white;
+                .steps-number {
+                    &:hover {
+                        color: @white;
+                    }
                 }
             }
 
@@ -16,20 +18,26 @@
             }
 
             &.steps-ongoing {
-                .steps-number:hover {
-                    color: @white;
+                .steps-number {
+                    &:hover {
+                        color: @white;
+                    }
                 }
 
                 &.steps-selected {
-                    .steps-number:hover {
-                        color: @brand-secondary;
+                    .steps-number {
+                        &:hover {
+                            color: @brand-secondary;
+                        }
                     }
                 }
             }
 
             &.steps-selected {
-                .steps-number:hover {
-                    color: @white;
+                .steps-number {
+                    &:hover {
+                        color: @white;
+                    }
                 }
             }
         }

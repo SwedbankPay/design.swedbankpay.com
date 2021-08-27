@@ -1,37 +1,18 @@
 .checkbox {
-    border: @brand-secondary;
-
     input[type="checkbox"] {
-        + label:after {
-            border: 2px solid @brand-secondary;
+        + label {
+            &:after {
+                border: 2px solid @brand-secondary;
+            }
         }
 
-        + label:hover {
-            border-color: @brand-secondary;
-        }
-
-        + label:focus {
-            border-color: @brand-secondary-light-2;
-            border: 2px solid @brand-secondary;
-        }
-
-        &:focus + label:before {
-            box-shadow: 0 0 0 0.5rem @brand-secondary-light-2;
-            border: 2px solid @brand-secondary;
-        }
-
-        &:focus + label:after {
-            border: 2px solid @brand-secondary;
-            border-color: @brand-secondary;
-        }
-
-        &:hover + label:before {
-            box-shadow: 0 0 0 0.5rem @brand-secondary-light-2;
-        }
-
-        &:checked + label:after {
-            background-color: @brand-secondary;
-            border-color: @brand-secondary;
+        &:checked {
+            + label {
+                &:after {
+                    background-color: @brand-secondary;
+                    border-color: @brand-secondary;
+                }
+            }
         }
     }
 }

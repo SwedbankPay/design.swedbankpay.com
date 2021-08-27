@@ -5,21 +5,25 @@
 body {
     font-family: @brand-default;
 
-    p.lead {
-        font-family: @brand-black;
-        font-weight: 500;
+    p {
+        &.lead {
+            font-family: @brand-black;
+            font-weight: 500;
+        }
     }
 }
 
 .documentation {
     .doc-container {
         &.dg-front-page {
-            img.background-img {
-                &.cluster-bubble,
-                &.single-bubble,
-                &.two-bubbles,
-                &.large-bubble {
-                    visibility: hidden;
+            img {
+                &.background-img {
+                    &.cluster-bubble,
+                    &.single-bubble,
+                    &.two-bubbles,
+                    &.large-bubble {
+                        visibility: hidden;
+                    }
                 }
             }
 
@@ -31,13 +35,23 @@ body {
                 }
 
                 header {
-                    .dg-title-big.my-0 {
-                        font-family: @brand-headline;
+                    .dg-title-big {
+                        &.my-0 {
+                            font-family: @brand-headline;
+                        }
                     }
                 }
 
-                p.front-page-lead {
-                    font-family: @brand-default;
+                p {
+                    &.front-page-lead {
+                        font-family: @brand-default;
+                    }
+                }
+            }
+
+            i {
+                &.material-icons-outlined {
+                    font-family: @payex-material-icons;
                 }
             }
         }
