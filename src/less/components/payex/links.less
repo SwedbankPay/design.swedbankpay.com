@@ -8,43 +8,43 @@ a {
     &:focus {
         color: @brand-success;
     }
-}
 
-a.icon-link {
-    color: @brand-success;
+    &.icon-link {
+        color: @brand-success;
 
-    &:hover {
-        color: @brand-primary;
+        &:hover {
+            color: @brand-primary;
 
-        span {
-            text-decoration: none;
+            span {
+                text-decoration: none;
+            }
+        }
+
+        :focus {
+            span {
+                color: @link-hover-color;
+                text-decoration: none;
+            }
         }
     }
 
-    :focus {
-        span {
-            color: @link-hover-color;
-            text-decoration: none;
+    &.action-link {
+        &:after {
+            color: @brand-secondary;
+            content: "arrow_forward";
+            font-family: @payex-material-icons;
+            font-size: 1.5rem;
+            top: calc(50% - 1.5rem / 2);
         }
-    }
-}
 
-a.action-link {
-    &:after {
-        color: @brand-secondary;
-        content: "arrow_forward";
-        font-family: @payex-material-icons;
-        font-size: 1.5rem;
-        top: calc(50% - 1.5rem / 2);
-    }
+        &:hover {
+            color: @brand-secondary;
+        }
 
-    &:hover {
-        color: @brand-secondary;
-    }
-}
-
-a.action-link.action-link-new-tab {
-    &:before {
-        background-color: @brand-primary;
+        &.action-link-new-tab {
+            &:before {
+                background-color: @brand-primary;
+            }
+        }
     }
 }

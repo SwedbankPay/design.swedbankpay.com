@@ -1,10 +1,4 @@
-button.btn.btn-primary {
-    &.loading:after {
-        border-left-color: @white;
-    }
-}
-
-.btn {
+&.btn {
     font-family: @brand-default;
 
     &.btn-primary {
@@ -17,6 +11,10 @@ button.btn.btn-primary {
             & i.bank-id {
                 background-color: @white;
             }
+        }
+
+        &.loading:after {
+            border-left-color: @white;
         }
     }
 
@@ -56,22 +54,14 @@ button.btn.btn-primary {
         }
     }
 
-    &.btn-executive-destructive:active {
-        border: 2px solid @btn-destructive-hover;
-        box-shadow: none;
-    }
+    &.btn-executive-destructive {
+        &:active {
+            border: 2px solid @btn-destructive-hover;
+            box-shadow: none;
+        }
 
-    &.btn-executive-destructive:focus {
-        background-color: @btn-destructive-hover;
-    }
-
-    &.loading {
-        &.btn-primary,
-        &.btn-secondary {
-            &:after {
-                border-color: @brand-secondary-light-2;
-                border-left-color: @brand-secondary;
-            }
+        &:focus {
+            background-color: @btn-destructive-hover;
         }
     }
 }

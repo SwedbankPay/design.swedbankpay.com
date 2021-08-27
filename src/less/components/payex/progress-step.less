@@ -1,31 +1,37 @@
-.steps ol {
-    li > a {
-        .steps-number:hover {
-            color: @white;
-        }
-    }
+.steps {
+    ol {
+        li {
+            a {
+                .steps-number:hover {
+                    color: @white;
+                }
+            }
 
-    li.steps-completed {
-        .material-icons.steps-icon {
-            color: @white;
-        }
-    }
+            &.steps-completed {
+                .material-icons {
+                    &.steps-icon {
+                        color: @white;
+                    }
+                }
+            }
 
-    li.steps-ongoing.steps-selected {
-        .steps-number:hover {
-            color: @brand-secondary;
-        }
-    }
+            &.steps-ongoing {
+                .steps-number:hover {
+                    color: @white;
+                }
 
-    li.steps-selected {
-        .steps-number:hover {
-            color: @white;
-        }
-    }
+                &.steps-selected {
+                    .steps-number:hover {
+                        color: @brand-secondary;
+                    }
+                }
+            }
 
-    li.steps-ongoing {
-        .steps-number:hover {
-            color: @white;
+            &.steps-selected {
+                .steps-number:hover {
+                    color: @white;
+                }
+            }
         }
     }
 }
