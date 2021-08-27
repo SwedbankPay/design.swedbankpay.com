@@ -347,11 +347,11 @@ exports[`Main: App renders 1`] = `
                       "title": "Lists",
                     },
                     Object {
-                      "componentPath": "components/Loaders",
+                      "componentPath": "components/Loader",
                       "icon": "loop",
                       "outlined": true,
-                      "path": "/components/loaders",
-                      "title": "Loaders",
+                      "path": "/components/loader",
+                      "title": "Loader",
                     },
                     Object {
                       "componentPath": "components/MediaObject",

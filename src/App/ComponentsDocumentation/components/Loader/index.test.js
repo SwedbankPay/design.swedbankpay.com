@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Loaders, { BasicUsage, CenteredLoader, Sizes, MutedLoader } from "./index";
+import Loaders, { Overview} from "./index";
 
 describe("Documentation: Loaders", () => {
     it("is defined", () => {
@@ -14,49 +14,13 @@ describe("Documentation: Loaders", () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    describe("Basic Usage", () => {
+    describe("Overview", () => {
         it("is defined", () => {
-            expect(BasicUsage).toBeDefined();
+            expect(Overview).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<BasicUsage />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("CenteredLoader", () => {
-        it("is defined", () => {
-            expect(CenteredLoader).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<CenteredLoader />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("Sizes", () => {
-        it("is defined", () => {
-            expect(Sizes).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<Sizes />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("Muted Loader", () => {
-        it("is defined", () => {
-            expect(MutedLoader).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<MutedLoader />);
+            const wrapper = shallow(<Overview />);
 
             expect(wrapper).toMatchSnapshot();
         });
