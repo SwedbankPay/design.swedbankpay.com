@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Loader = ({ light, size, backgroundDark }) => (
+const Loader = ({ inverted, size, backgroundDark }) => (
     <div className={`loader-preview-container${backgroundDark ? " dark" : ""} d-flex justify-content-center align-items-center`}>
-        <div className={`loader${light ? " loader-light" : ""}${size ? ` ${size}` : ""}`}></div>
+        <div className={`loader${inverted ? " inverted" : ""}${size ? ` ${size}` : ""}`}></div>
     </div>
 );
 
@@ -10,7 +11,7 @@ export const loaderShowCase = {
     id: "no-tabs",
     elements: [
         {
-            component: <Loader size="loader-sm"/>,
+            component: <Loader />,
             options: {
                 radio: [
                     {
@@ -18,15 +19,12 @@ export const loaderShowCase = {
                         title: "Color",
                         values: [
                             {
-                                name: "Dark", // default?
-                                value: {
-                                    light: false
-                                }
+                                name: "Default"
                             },
                             {
-                                name: "Light",
+                                name: "Inverted",
                                 value: {
-                                    light: true,
+                                    inverted: true,
                                     backgroundDark: true
                                 }
                             }
@@ -37,21 +35,15 @@ export const loaderShowCase = {
                         title: "Size",
                         values: [
                             {
-                                name: "Small",
-                                value: {
-                                    size: "loader-sm"
-                                }
-                            },
-                            {
-                                name: "Medium",
+                                name: "Default",
                                 value: {
                                     size: ""
                                 }
                             },
                             {
-                                name: "Large",
+                                name: "Small",
                                 value: {
-                                    size: "loader-lg"
+                                    size: "loader-sm"
                                 }
                             }
                         ]
@@ -59,12 +51,26 @@ export const loaderShowCase = {
                 ]
             },
             title: "Loader",
-            description: "Loading spinners should be used when the wait time is anticipated extend over three seconds."
+            description: "Loading spinners should be used when the wait time is anticipated to extend over one second."
         }
     ]
 };
 
 export const howToUse = [
+    {
+        contents: [
+            {
+                type: "success",
+                maxWidth: true,
+                content:
+                <div className="d-flex flex-column align-items-center col-5">
+                    <p className="text-align-center"><b>Opening BankID app on your mobile device, please don&apos;t close this window</b></p>
+                    <div className="loader"></div>
+                </div>
+            }
+        ],
+        description: "If the anticipated waiting time is long, it’s recommended to show a text explaining what is happening to the user."
+    },
     {
         contents: [
             {
@@ -78,28 +84,14 @@ export const howToUse = [
                 type: "error",
                 content:
                     <div className="d-flex">
-                        <button className="btn btn-primary">ID authentication</button>
-                        <div className="loader"></div>
+                        <button disabled className="btn btn-primary btn-bank-id">
+                            ID authentication
+                            <i className="bank-id bank-id-se"></i>
+                        </button>
+                        <div className="loader loader-sm align-self-center"></div>
                     </div>
             }
         ],
-        description: "The loader component should always be contextual and scaled down when needed to provide a clear indication of element being loaded"
-    },
-    {
-        contents: [
-            {
-                type: "success",
-                content:
-                <div className="d-flex flex-column align-items-center">
-                    <p className="text-align-center"><b>Opening BankID app on your mobile device, please don&apos;t close this window</b></p>
-                    <div className="loader loader-sm"></div>
-                </div>
-            },
-            {
-                type: "error",
-                content: <div className="loader loader-center"></div>
-            }
-        ],
-        description: "Make sure to provide sufficient context whenever the loader component is being displayed in a separate page or on its own in a longer duration. It is not enough to only showcase loader, rather it is always better explaining what is happening in order to keep the user aware of the situation."
+        description: <>If the loading is contextual to a certain button on the page, the <Link to="/components/buttons">button</Link> loading state can be used instead of the loader component.</>
     }
 ];
