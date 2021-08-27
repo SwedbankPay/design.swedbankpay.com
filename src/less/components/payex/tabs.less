@@ -1,0 +1,14 @@
+.tabs > ul > li {
+    > a {
+        color: @tab-link;
+
+        &:hover {
+            color: @brand-secondary;
+            background-color: transparent;
+        }
+    }
+
+    &.active > a {
+        color: @brand-secondary;
+    }
+}

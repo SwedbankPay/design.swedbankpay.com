@@ -1,0 +1,77 @@
+button.btn.btn-primary {
+    &.loading:after {
+        border-left-color: @white;
+    }
+}
+
+.btn {
+    font-family: @brand-default;
+
+    &.btn-primary {
+        &:active {
+            border: @brand-primary;
+            box-shadow: none;
+        }
+
+        &.btn-bank-id {
+            & i.bank-id {
+                background-color: @white;
+            }
+        }
+    }
+
+    &.btn-secondary {
+        &:focus {
+            border: 2px solid @brand-primary;
+            box-shadow: none;
+        }
+
+        &:active {
+            border: 1px solid @brand-secondary-info-1;
+        }
+    }
+
+    &.btn-guiding-destructive {
+        &:active {
+            border: 2px solid @btn-destructive-hover;
+            box-shadow: none;
+        }
+
+        &:focus {
+            border: 2px solid @brand-secondary;
+        }
+    }
+
+    &.btn-link-destructive {
+        border: none;
+        border-bottom: none;
+
+        &:hover {
+            border: 1px solid @btn-destructive-hover;
+        }
+
+        &:focus {
+            border: 1px solid @btn-destructive-hover;
+            box-shadow: 0 0 0 0.1rem @btn-destructive-hover;
+        }
+    }
+
+    &.btn-executive-destructive:active {
+        border: 2px solid @btn-destructive-hover;
+        box-shadow: none;
+    }
+
+    &.btn-executive-destructive:focus {
+        background-color: @btn-destructive-hover;
+    }
+
+    &.loading {
+        &.btn-primary,
+        &.btn-secondary {
+            &:after {
+                border-color: @brand-secondary-light-2;
+                border-left-color: @brand-secondary;
+            }
+        }
+    }
+}
