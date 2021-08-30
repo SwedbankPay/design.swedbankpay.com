@@ -3,11 +3,14 @@ import { shallow } from "enzyme";
 
 import Toast, { Overview, PremadeToasts, Options, CustomHtml } from "./index";
 
-dg.toast = jest.fn();
+import { toast } from "@src/scripts/main";
+
+// Can't use aliases in jest mock it seems, but this automocks the toast import [THN]
+jest.mock("../../../../scripts/main");
 
 describe("Components: Toast", () => {
     beforeEach(() => {
-        dg.toast.mockClear();
+        toast.mockClear();
     });
 
     it("is defined", () => {
@@ -38,7 +41,7 @@ describe("Components: Toast", () => {
             btn.simulate("click");
 
             expect(wrapper).toMatchSnapshot();
-            expect(dg.toast).toHaveBeenCalled();
+            expect(toast).toHaveBeenCalled();
         });
     });
 
@@ -72,7 +75,7 @@ describe("Components: Toast", () => {
             btns.forEach(btn => btn.simulate("click"));
 
             expect(wrapper).toMatchSnapshot();
-            expect(dg.toast).toHaveBeenCalledTimes(btns.length);
+            expect(toast).toHaveBeenCalledTimes(btns.length);
         });
     });
 
@@ -94,7 +97,7 @@ describe("Components: Toast", () => {
             btn.simulate("click");
 
             expect(wrapper).toMatchSnapshot();
-            expect(dg.toast).toHaveBeenCalled();
+            expect(toast).toHaveBeenCalled();
         });
     });
 });
