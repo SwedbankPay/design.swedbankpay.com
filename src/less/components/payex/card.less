@@ -5,22 +5,33 @@
         }
     }
 
-    &.cards-tertiary {
+    &.cards-secondary {
         &:after {
-            border-bottom: 4px solid @brand-primary;
+            border-bottom: 4px solid @payex-light-blue;
         }
 
         > i {
-            color: @brand-primary;
+            color: @payex-light-blue;
         }
 
         .cards-icon {
             color: @white;
-            background-color: @brand-primary;
+            background-color: @payex-light-blue;
+        }
+    }
 
-            svg {
-                fill: @white;
-            }
+    &.cards-tertiary {
+        &:after {
+            border-bottom: 4px solid @payex-dark-blue;
+        }
+
+        > i {
+            color: @payex-dark-blue;
+        }
+
+        .cards-icon {
+            color: @white;
+            background-color: @payex-dark-blue;
         }
     }
 }
