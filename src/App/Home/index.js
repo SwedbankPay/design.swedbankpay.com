@@ -6,6 +6,7 @@ import routes from "@src/App/routes/all";
 import packageJson from "~/package";
 
 const basename = process.env.basename;
+const brandTitle = process.env.brandTitle;
 
 const Home = () => {
     useEffect(() => {
@@ -19,7 +20,7 @@ const Home = () => {
                 <img src={`${basename}img/background/cluster-bubbles.svg`} className="background-img cluster-bubble d-none d-xl-block mt-n5"/>
                 <header>
                     <span className="dg-title-small d-block m-0">Welcome to the</span>
-                    <span className="dg-title-big my-0">Swedbank Pay Design Guide</span>
+                    <span className="dg-title-big my-0">{brandTitle} Design Guide</span>
                 </header>
 
                 <div className="dg-version-indicator">

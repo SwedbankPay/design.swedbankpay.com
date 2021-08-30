@@ -1,3 +1,61 @@
 @import "_variables-swedbankpay.less";
 @import "_variables-payex.less";
 @import "documentation-swedbankpay.less";
+
+body {
+    font-family: @brand-default;
+
+    p {
+        &.lead {
+            font-family: @brand-black;
+            font-weight: 500;
+        }
+    }
+}
+
+.documentation {
+    font-family: @brand-default;
+
+    .doc-container {
+        &.dg-front-page {
+            img {
+                &.background-img {
+                    &.cluster-bubble,
+                    &.single-bubble,
+                    &.two-bubbles,
+                    &.large-bubble {
+                        visibility: hidden;
+                    }
+                }
+            }
+
+            .dg-front-page-container {
+                .dg-version-indicator {
+                    span {
+                        background-color: @brand-bg-1;
+                    }
+                }
+
+                header {
+                    .dg-title-big {
+                        &.my-0 {
+                            font-family: @brand-headline;
+                        }
+                    }
+                }
+
+                p {
+                    &.front-page-lead {
+                        font-family: @brand-default;
+                    }
+                }
+            }
+
+            i {
+                &.material-icons-outlined {
+                    font-family: @payex-material-icons;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.sidebar-2 {
+    .sidebar-main-nav {
+        .main-nav-ul {
+            .main-nav-li {
+                a {
+                    i {
+                        &.material-icons-outlined {
+                            font-family: @payex-material-icons;
+                        }
+                    }
+
+                    &:before {
+                        border-top-right-radius: 0;
+                        border-bottom-right-radius: 0;
+                    }
+                }
+
+                &.active {
+                    a {
+                        &:before {
+                            border-top-right-radius: 0;
+                            border-bottom-right-radius: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

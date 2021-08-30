@@ -459,6 +459,7 @@ exports[`Documentation: Card renders 1`] = `
     </Link>
      instead.
   </p>
+  <Overview />
   <OldCard />
 </DocContainer>
 `;

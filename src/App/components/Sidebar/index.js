@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import LogotypeComponent from "@components/Logotype";
 
 const basename = process.env.basename;
+const brand = process.env.brand;
 
 class Sidebar extends Component {
     render () {
@@ -11,7 +12,9 @@ class Sidebar extends Component {
             <div id={this.props.id} className={`sidebar-2${this.props.sticky ? " sidebar-topbar-sticky" : ""}`}>
                 <nav className="sidebar-main-nav">
                     <div className="sidebar-logo">
-                        <LogotypeComponent src={`${basename}designguide/assets/swedbankpay-logo-v.svg`} size="md" alt="Swedbank Pay vertical logo" type="vertical" />
+                        <a href="/">
+                            <LogotypeComponent src={`${basename}designguide/assets/${brand}-logo-v.svg`} size="md" alt="Swedbank Pay vertical logo" type="vertical" />
+                        </a>
                     </div>
                     <ul className="main-nav-ul">
                         {this.props.sidebarNavList.map((mainElement, i) => <li key={mainElement.title} className={`main-nav-li${i === 0 ? " active" : ""}`}>
