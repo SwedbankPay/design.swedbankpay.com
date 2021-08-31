@@ -129,12 +129,13 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
             e.target.dataset.tooltip = "Copied!";
         };
 
-        const tooltipContent = async e => {
+        const tooltipContent = e => {
             const code = e.target.parentElement.parentElement.querySelector(".code-view-code pre").innerText;
 
-            const copied = await navigator.clipboard.readText();
+            navigator.clipboard.readText().then(copied => {
+                e.target.dataset.tooltip = copied === code ? "Copied!" : "Copy to clipboard";
+            });
 
-            e.target.dataset.tooltip = copied === code ? "Copied!" : "Copy to clipboard";
         };
 
         return (
