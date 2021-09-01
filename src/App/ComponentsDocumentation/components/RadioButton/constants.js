@@ -59,7 +59,7 @@ export const radiobuttonShowCase = {
                 ]
             },
             title: "Radio button group",
-            description: "The default setup of the radio button group always has a label on top which describes the checkbox group and each individual radio button is then followed by a label which clearly describes what the options and what selecting an option entails. In a radio button group one choice is always selected by default"
+            description: "The default setup of the radio button group has a label on top which describes the radio button group and each individual radio button is then followed by a label which clearly describes the options and what selecting an option entails. In a radio button group one choice is always selected by default."
         }
     ]
 };
