@@ -64,8 +64,9 @@ const ContentGuidelines = () => (
             </div>
         </div>
         <ul className="list list-bullet">
-            <li>The <b>Group heading</b> for the radio button group should be descriptive, explaining the context and what actions the user is choosing from. </li>
-            <li>The <b>radio button label</b> should be short, to the point and clearly explain the option. It is also preferred to have fewer than three words per label as longer words could extend a label to multiple rows which could disrupt the reading experience.</li>
+            <li>The <b>Group heading</b> should descriptive, explaining the context of the options to choose from. </li>
+            The checkbox labels 
+            <li>The <b>checkbox labels</b> should be short, to the point and clearly explain the option. It is also preferred to have fewer than three words per label as longer words could extend a label to multiple rows which could disrupt the reading experience.</li>
         </ul>
     </section>
 );
@@ -74,7 +75,7 @@ const DeveloperDocumentation = () => (
     <section>
         <h2 id="developer-documentation">Developer documentation</h2>
         <span className="h3 d-inline-block mt-3">Disabled state</span>
-        <p>Disable a checkbox by adding <CodeTags type="primary" code={"disabled"} /> attribute to the desired Checkbox. You can also disable the <CodeTags type="secondary" code={".form-group"} /> or <CodeTags type="primary" code={"fieldset"} /> in which the checkbox is located, refer to <Link to="/components/forms">forms</Link> for more info.</p>
+        <p>Disable a checkbox by adding <CodeTags type="primary" code={"disabled"} /> attribute to the desired Checkbox.</p>
 
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="d-flex justify-content-center">
@@ -85,7 +86,7 @@ const DeveloperDocumentation = () => (
         <span className="h3 d-inline-block mt-3">Error state</span>
         <p>Insert the error message in the attribute <CodeTags type="primary" code={"data-error"} /> in the <CodeTags type="secondary" code={".help-block"} /> element. </p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
-            <div className="w-50 m-auto pl-5">
+            <div className="m-auto pl-5 col-sm-12 error-state-container">
                 <CheckboxComponent groupTitle="Group heading" name="checkbox-group-example" options={developerDocOptions} group errorMessage="Descriptive helpful error message." />
             </div>
         </ComponentPreview>

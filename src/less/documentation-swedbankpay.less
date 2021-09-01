@@ -1117,6 +1117,17 @@
         .slab-border-success {
             min-height: 19rem;
         }
+
+        .error-state-container{
+            .checkbox-group{
+                &.has-error{
+                    @media screen and (min-width: @screen-sm-max){
+                        width: 50%;
+                        margin: auto;
+                    }
+                }
+            }
+        }
     }
 }
 
