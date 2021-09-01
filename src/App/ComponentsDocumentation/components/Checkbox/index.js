@@ -11,26 +11,28 @@ const HowTo = () => (
         <h3>How to setup checkbox groups</h3>
         <div className="row">
             <div className="col-6">
-                <div className="slab slab-plain slab-border-success h-100">
+                <div className="slab slab-plain slab-border-success">
                     <span className="h3">Do</span>
                     <div className="d-flex flex-column align-items-center">
-                        <div className="pt-3 pb-5">
+                        <div className="pt-3 pb-4">
                             <CheckboxComponent groupTitle="Button size" name="radio-guidelines" options={doOptions} group />
                         </div>
-                        <p>Short and concise, similar length on the text is always preferred when setting up a checkbox group. Try to sort the options in a logical order.</p>
+                        
                     </div>
-                </div>
+                </div> 
+                <p>Do use short labels of similar length and sort the options either in a logical or alphabetical order.</p>
             </div>
             <div className="col-6">
                 <div className="slab slab-plain slab-border-error">
                     <span className="h3">Don&#x27;t</span>
                     <div className="d-flex flex-column align-items-center">
-                        <div className="pt-3 pb-5 w-50">
+                        <div className="pt-3 pb-3 w-50">
                             <CheckboxComponent groupTitle="Button size" name="radio-guidelines" options={dontOptions} group />
                         </div>
-                        <p>Avoid having labels longer than the rest when possible and displaying options without order.</p>
+                        
                     </div>
                 </div>
+                <p>Avoid long lables sorted in an illogical order.</p>
             </div>
         </div>
     </section>
@@ -45,7 +47,7 @@ const Overview = () => (
         <h3>When to consider something else</h3>
         <ul className="list list-bullet">
             <li>
-            When you want to present multiple choices where the user can only select one specific choice, the <Link to="/components/radiobutton">radio button</Link> component should be used instead of checkboxes.
+            When you want to present multiple choices where the user can only select one specific option, the <Link to="/components/radiobutton">radio button</Link> component should be used instead of checkboxes.
             </li>
         </ul>
 
@@ -92,10 +94,12 @@ const DeveloperDocumentation = () => (
 
 const Checkbox = () => (
     <DocContainer>
+        <section id="checkbox-doc">
         <p className="lead">The checkbox component should be used when the user are presented with a list of options where one or multiple options can be selected by the user.</p>
         <Overview />
         <ContentGuidelines />
         <DeveloperDocumentation />
+        </section>
     </DocContainer>
 );
 
