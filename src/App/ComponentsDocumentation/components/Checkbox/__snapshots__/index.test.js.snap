@@ -243,7 +243,7 @@ exports[`Component: Checkbox HowTo renders 1`] = `
         </div>
       </div>
       <p>
-        Avoid long lables sorted in an illogical order.
+        Avoid long labels sorted in an illogical order.
       </p>
     </div>
   </div>
