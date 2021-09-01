@@ -17,9 +17,8 @@ const HowTo = () => (
                         <div className="pt-3 pb-4">
                             <CheckboxComponent groupTitle="Button size" name="radio-guidelines" options={doOptions} group />
                         </div>
-                        
                     </div>
-                </div> 
+                </div>
                 <p>Do use short labels of similar length and sort the options either in a logical or alphabetical order.</p>
             </div>
             <div className="col-6">
@@ -29,10 +28,9 @@ const HowTo = () => (
                         <div className="pt-3 pb-3 w-50">
                             <CheckboxComponent groupTitle="Button size" name="radio-guidelines" options={dontOptions} group />
                         </div>
-                        
                     </div>
                 </div>
-                <p>Avoid long lables sorted in an illogical order.</p>
+                <p>Avoid long labels sorted in an illogical order.</p>
             </div>
         </div>
     </section>
@@ -65,7 +63,7 @@ const ContentGuidelines = () => (
         </div>
         <ul className="list list-bullet">
             <li>The <b>Group heading</b> should descriptive, explaining the context of the options to choose from. </li>
-            The checkbox labels 
+            The checkbox labels
             <li>The <b>checkbox labels</b> should be short, to the point and clearly explain the option. It is also preferred to have fewer than three words per label as longer words could extend a label to multiple rows which could disrupt the reading experience.</li>
         </ul>
     </section>
@@ -96,10 +94,10 @@ const DeveloperDocumentation = () => (
 const Checkbox = () => (
     <DocContainer>
         <section id="checkbox-doc">
-        <p className="lead">The checkbox component should be used when the user are presented with a list of options where one or multiple options can be selected by the user.</p>
-        <Overview />
-        <ContentGuidelines />
-        <DeveloperDocumentation />
+            <p className="lead">The checkbox component should be used when the user are presented with a list of options where one or multiple options can be selected by the user.</p>
+            <Overview />
+            <ContentGuidelines />
+            <DeveloperDocumentation />
         </section>
     </DocContainer>
 );

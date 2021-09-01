@@ -17,11 +17,11 @@ const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage
                 <fieldset className={`checkbox-group${errorMessage ? " has-error" : ""}`} disabled={disabled}>
                     <legend className = "d-flex align-items-center">
                         {groupTitle} {optional && <span className = "ml-1">(optional)</span>}
-                    {tooltip &&
+                        {tooltip &&
                         <i className="material-icons help-icon" data-tooltip="Some informative text" data-tooltip-position="top">{"\n"}
                             help_outline{"\n"}</i>}{"\n"}
                     </legend>
-                    {options.map(({label, id}, i) => <div className="checkbox" key={i}>{"\n"}
+                    {options.map(({ label, id }, i) => <div className="checkbox" key={i}>{"\n"}
                         <input {...attrs} id={id} />{"\n"}
                         <label htmlFor={id}>{label}
 
@@ -53,10 +53,8 @@ Checkbox.propTypes = {
     group: PropTypes.bool,
     groupTitle: PropTypes.string,
     options: PropTypes.array,
-    tooltip: PropTypes.bool
+    tooltip: PropTypes.bool,
+    optional: PropTypes.bool
 };
 
 export default Checkbox;
-
-
-
