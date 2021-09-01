@@ -23,6 +23,20 @@ export const radiobuttonShowCase = {
         {
             component: <Radio groupTitle="Group heading" name="radio-group-example" options={options} group/>,
             options: {
+                checkbox: [
+                    {
+                        title: "Label add on",
+                        inputs: [
+                            {
+                                id: "with_help_icon",
+                                name: "With help icon",
+                                value: {
+                                    tooltip: true
+                                }
+                            }
+                        ]
+                    }
+                ],
                 radio: [
                     {
                         id: "state_radio",
