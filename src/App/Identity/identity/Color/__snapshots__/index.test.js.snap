@@ -238,50 +238,46 @@ exports[`Core: Color MainColors renders 1`] = `
   <h2
     id="main-colors"
   >
-    Main colors
+    Primary and secondary colors
   </h2>
   <p>
-    Our main color palette.
+    The primary color in our palette is green. The green color is a strong carrier of identity and a means of creating immediate recognition.
   </p>
   <div
     className="color-group flex-wrap"
   >
     <ColorDisplay
-      hex="#2DA944"
+      hex="#2A9D3F"
       key="0"
       name="Primary"
       rgb="45, 169, 68"
     />
     <ColorDisplay
-      fontColor="#FFFFFF"
+      fontColor="font-white"
       hex="#3C3C3C"
       key="1"
-      name="Secondary"
+      name="Secondary Dark"
       rgb="60, 60, 60"
     />
     <ColorDisplay
-      hex="#266C9A"
+      hex="#C8C8C8"
       key="2"
-      name="Info"
-      rgb="38, 108, 154"
+      name="Light Grey"
+      rgb="200, 200, 200"
     />
     <ColorDisplay
-      hex="#2DA944"
+      fontColor="font-white"
+      hex="#000000"
       key="3"
-      name="Success"
-      rgb="45, 169, 68"
+      name="Black"
+      rgb="0, 0, 0"
     />
     <ColorDisplay
-      hex="#FF9F00"
+      border="has-border"
+      hex="#FFFFFF"
       key="4"
-      name="Warning"
-      rgb="255, 159, 0"
-    />
-    <ColorDisplay
-      hex="#CD2E00"
-      key="5"
-      name="Error"
-      rgb="205, 46, 0"
+      name="White"
+      rgb="255, 255, 255"
     />
   </div>
 </section>

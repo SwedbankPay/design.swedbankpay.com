@@ -3,114 +3,136 @@
 export const mainText = [
     {
         name: "Primary",
-        hex: "#2DA944",
+        hex: "#2A9D3F",
         rgb: "45, 169, 68"
     },
     {
-        name: "Secondary",
+        name: "Secondary Dark",
         hex: "#3C3C3C",
         rgb: "60, 60, 60",
-        fontColor: "#FFFFFF"
+        fontColor: "font-white"
     },
     {
-        name: "Info",
-        hex: "#266C9A",
-        rgb: "38, 108, 154"
+        name: "Light Grey",
+        hex: "#C8C8C8",
+        rgb: "200, 200, 200"
     },
-    {
-        name: "Success",
-        hex: "#2DA944",
-        rgb: "45, 169, 68"
-    },
-    {
-        name: "Warning",
-        hex: "#FF9F00",
-        rgb: "255, 159, 0"
-    },
-    {
-        name: "Error",
-        hex: "#CD2E00",
-        rgb: "205, 46, 0"
-    }
-];
-
-export const alertText = [
-    {
-        name: "Brand success",
-        hex: "#51971B"
-    },
-    {
-        name: "Brand success light",
-        hex: "#F2F7EB"
-    },
-    {
-        name: "Brand warning",
-        hex: "#FF9900"
-    },
-    {
-        name: "Brand warning light",
-        hex: "#FFF3D5"
-    },
-    {
-        name: "Brand error",
-        hex: "#C5131C"
-    },
-    {
-        name: "Brand error light",
-        hex: "#F9DED3"
-    },
-    {
-        name: "Brand info",
-        hex: "#4572C0"
-    },
-    {
-        name: "Brand info light",
-        hex: "#E8EFF9"
-    }
-];
-
-export const grayScaleText = [
     {
         name: "Black",
-        hex: "#222222"
-    },
-    {
-        name: "Text Gray",
-        hex: "#767676"
-    },
-    {
-        name: "List Gray",
-        hex: "#999999"
-    },
-    {
-        name: "Light Gray",
-        hex: "#F9F8F6"
+        hex: "#000000",
+        rgb: "0, 0, 0",
+        fontColor: "font-white"
     },
     {
         name: "White",
-        hex: "#FFFFFF"
+        hex: "#FFFFFF",
+        rgb: "255, 255, 255",
+        border: "has-border"
     }
 ];
 
-export const brownScaleText = [
+export const systemColors = [
     {
-        name: "Solid Brown",
-        hex: "#2F2424"
+        name: "Red",
+        hex: "#C5131C",
+        rgb: "197, 19, 28"
     },
     {
-        name: "Dark Brown",
-        hex: "#493C3B"
+        name: "Light Red",
+        hex: "#FFEBE3",
+        rgb: "255, 235, 227"
     },
     {
-        name: "Medium Brown",
-        hex: "#72605E"
+        name: "Blue",
+        hex: "#3E6AB6",
+        rgb: "62, 106, 182"
     },
     {
-        name: "Soft Brown",
-        hex: "#A38B80"
+        name: "Light Blue",
+        hex: "#E8EFF9",
+        rgb: "232, 239, 249"
     },
     {
-        name: "Light Brown",
-        hex: "#D4C4BC"
+        name: "Green",
+        hex: "#238635",
+        rgb: "35, 134, 53"
+    },
+    {
+        name: "Light Green",
+        hex: "#E8F3E6",
+        rgb: "232, 243, 230"
+    },
+    {
+        name: "Orange",
+        hex: "#F35B1C",
+        rgb: "243, 91, 28"
+    },
+    {
+        name: "Light Orange",
+        hex: "#FFECD5",
+        rgb: "255, 243, 213"
+    }
+];
+
+export const backgroundColors = [
+    {
+        name: "Light Green",
+        hex: "#E8F3E6",
+        rgb: "232, 243, 230"
+    },
+    {
+        name: "Light Grey",
+        hex: "#F4F4F4",
+        rgb: "244, 244, 244"
+    },
+    {
+        name: "Light Blue",
+        hex: "#EAF8FC",
+        rgb: "234, 248, 252"
+    }
+];
+
+export const complementaryColors = [
+    {
+        hex: "#1E3A6E",
+        rgb: "30, 58, 110",
+        fontColor: "font-white"
+    },
+    {
+        hex: "#32B2DD",
+        rgb: "50, 178, 221"
+    },
+    {
+        hex: "#EF5434",
+        rgb: "239, 84, 52"
+    }
+];
+
+export const buttonColors = [
+    {
+        name: "Primary",
+        hex: "#2A9D3F",
+        rgb: "45, 169, 68"
+    },
+    {
+        name: "Hover Green",
+        hex: "#238635",
+        rgb: "35, 134, 53"
+    },
+    {
+        name: "Button Disabled",
+        hex: "#C8C8C8",
+        rgb: "200, 200, 200"
+    },
+    {
+        name: "Button Secondary",
+        hex: "#3C3C3C",
+        rgb: "60, 60, 60",
+        fontColor: "font-white"
+    },
+    {
+        name: "Destructive Hover",
+        hex: "#EE4E56",
+        rgb: "235, 78, 86"
     }
 ];

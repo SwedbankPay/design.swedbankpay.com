@@ -115,10 +115,58 @@ const GrayScaleColors = () => (
 
 const MainColors = () => (
     <section>
-        <h2 id="main-colors">Main colors</h2>
-        <p>Our main color palette.</p>
+        <h2 id="main-colors">Primary and secondary colors</h2>
+        <p>The primary color in our palette is green. The green color is a strong carrier of identity and a means of creating immediate recognition.</p>
         <div className="color-group flex-wrap">
             {pxColors.mainText.map((color, i) => (
+                <DisplayColor key={i} {...color}/>
+            ))}
+        </div>
+    </section>
+);
+
+const PayexComplementaryColors = () => (
+    <section>
+        <h2 id="complementary-colors">Complementary colors</h2>
+        <p>As a complement to our primary and secondary colors, we have three more colors. You can use them when you need to accentuate something eg., splashes, diagrams and tables. They should be used very sparingly and should never take over the overall impression.</p>
+        <div className="color-group">
+            {pxColors.complementaryColors.map((color, i) => (
+                <DisplayColor key={i} {...color}/>
+            ))}
+        </div>
+    </section>
+);
+
+const PayexButtonColors = () => (
+    <section>
+        <h2 id="buttons-colors">Button colors</h2>
+        <p>Our primary buttons are green and our secondary buttons are dark grey. Go to Buttons to see and interact with all buttons. </p>
+        <div className="color-group">
+            {pxColors.buttonColors.map((color, i) => (
+                <DisplayColor key={i} {...color}/>
+            ))}
+        </div>
+    </section>
+);
+
+const PayexBackgroundColors = () => (
+    <section>
+        <h2 id="background-colors">Background colors</h2>
+        <p>Used primarily as background when we communicate the PayEx Ledger & Factoring brand. When the light green color is to be printed with PMS color, use 12% hue of PayEx green (PMS 354 U / C)</p>
+        <div className="color-group">
+            {pxColors.backgroundColors.map((color, i) => (
+                <DisplayColor key={i} {...color}/>
+            ))}
+        </div>
+    </section>
+);
+
+const PayexSystemColors = () => (
+    <section>
+        <h2 id="system-colors">System Colors</h2>
+        <p>We have four primary system colors (red, blue, green, and orange) which all have a lighter complementary version as well. </p>
+        <div className="color-group">
+            {pxColors.systemColors.map((color, i) => (
                 <DisplayColor key={i} {...color}/>
             ))}
         </div>
@@ -143,6 +191,10 @@ const Color = () => (
         {brand === "payex" &&
             <DocContainer>
                 <MainColors />
+                <PayexComplementaryColors />
+                <PayexButtonColors />
+                <PayexBackgroundColors />
+                <PayexSystemColors />
             </DocContainer>
         }
     </>

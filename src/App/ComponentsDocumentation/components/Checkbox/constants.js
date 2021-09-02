@@ -22,6 +22,27 @@ export const checkboxShowCase = {
         {
             component: <Checkbox groupTitle="Group heading" name="checkbox-group-example" options={options} group />,
             options: {
+                checkbox: [
+                    {
+                        title: "Label add on",
+                        inputs: [
+                            {
+                                id: "checkbox_labels",
+                                name: "Optional",
+                                value: {
+                                    optional: true
+                                }
+                            },
+                            {
+                                id: "with_help_icon",
+                                name: "With help icon",
+                                value: {
+                                    tooltip: true
+                                }
+                            }
+                        ]
+                    }
+                ],
                 radio: [
                     {
                         id: "state_radio",

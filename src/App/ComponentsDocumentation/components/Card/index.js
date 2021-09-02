@@ -9,7 +9,6 @@ import { overviewCards } from "./constants";
 
 const textArr = ["This is a lot of text", "With some more text", "And then even some more", "Is it really possible to have this much text in one card?", "Yes!"];
 const basename = process.env.basename;
-const brand = process.env.brand;
 
 const Overview = () => (
     <>
@@ -171,7 +170,7 @@ class Card extends Component {
                     component should be used to direct to pages on our site and not to external sites, in that case
                     use <Link to="/components/links">Links</Link> instead.
                 </p>
-                {brand === "swedbankpay" && <Overview />}
+                <Overview />
                 <OldCard />
             </DocContainer>
         );

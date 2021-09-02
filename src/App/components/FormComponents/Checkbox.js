@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage, required, group, options }) => {
+const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage, tooltip, optional, required, group, options }) => {
     const attrs = {
         type: "checkbox",
         id: id || null,
@@ -15,10 +15,17 @@ const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage
         <>
             {group ? <form>
                 <fieldset className={`checkbox-group${errorMessage ? " has-error" : ""}`} disabled={disabled}>
-                    <legend>{groupTitle}</legend>
-                    {options.map(({label, id}, i) => <div className="checkbox" key={i}>{"\n"}
+                    <legend className = "d-flex align-items-center">
+                        {groupTitle} {optional && <span className = "ml-1">(optional)</span>}
+                        {tooltip &&
+                        <i className="material-icons help-icon" data-tooltip="Some informative text" data-tooltip-position="top">{"\n"}
+                            help_outline{"\n"}</i>}{"\n"}
+                    </legend>
+                    {options.map(({ label, id }, i) => <div className="checkbox" key={i}>{"\n"}
                         <input {...attrs} id={id} />{"\n"}
-                        <label htmlFor={id}>{label}</label>{"\n"}
+                        <label htmlFor={id}>{label}
+
+                        </label>{"\n"}
                     </div>)}
                     {errorMessage ? <div className="help-block" data-error={errorMessage || null}></div> : null}
                 </fieldset>
@@ -45,7 +52,9 @@ Checkbox.propTypes = {
     require: PropTypes.bool,
     group: PropTypes.bool,
     groupTitle: PropTypes.string,
-    options: PropTypes.array
+    options: PropTypes.array,
+    tooltip: PropTypes.bool,
+    optional: PropTypes.bool
 };
 
 export default Checkbox;
