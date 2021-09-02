@@ -121,11 +121,25 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                 return "update switchcase!";
         }
 
+        const copyToClipboard = e => {
+            navigator.clipboard.writeText(code);
+
+            e.target.dataset.tooltip = "Copied!";
+        };
+
+        const tooltipContent = e => {
+            navigator.clipboard.readText().then(copied => {
+                e.target.dataset.tooltip = copied === code ? "Copied!" : "Copy to clipboard";
+            });
+
+        };
+
         return (
             <figure>
                 <div className="code-view">
                     <header className="code-view-header">
                         {language.toUpperCase()}
+                        <i className="material-icons material-icons-outlined" data-tooltip onMouseEnter={e => tooltipContent(e)} onClick={e => copyToClipboard(e)}>content_copy</i>
                     </header>
                     <table className="code-view-table">
                         <tbody>
