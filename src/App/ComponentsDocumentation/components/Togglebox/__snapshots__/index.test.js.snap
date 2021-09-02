@@ -7,6 +7,17 @@ exports[`Component: Togglebox ContentGuidelines renders 1`] = `
   >
     Content guidelines
   </h2>
+  <div
+    className="slab slab-plain d-flex justify-content-center align-items-center"
+  >
+    <div>
+      <Togglebox
+        id="toggle-disable-example"
+        label="Label"
+        labelTop={true}
+      />
+    </div>
+  </div>
   <ul
     className="list list-bullet"
   >
@@ -95,29 +106,6 @@ exports[`Component: Togglebox DeveloperDocumentation renders 1`] = `
       />
     </div>
   </ComponentPreview>
-  <span
-    className="h3 d-inline-block mt-3"
-  >
-    Form groups
-  </span>
-  <p>
-    <CodeTags
-      code=".form-group"
-      type="secondary"
-    />
-     s and/or 
-    <CodeTags
-      code="form"
-      type="primary"
-    />
-     allow you to gather user input components like input fields, radio buttons, checkboxes and toggleboxes in various ways. For more information on how this works refer to the 
-    <Link
-      to="/components/forms"
-    >
-      Forms
-    </Link>
-     section.
-  </p>
 </Fragment>
 `;
 
@@ -239,10 +227,10 @@ exports[`Component: Togglebox Overview renders 1`] = `
   </span>
   <div
     className="row"
+    key="0"
   >
     <div
-      className="col-6 px-3"
-      key="0"
+      className="col-6"
     >
       <div
         className="slab slab-plain slab-border-success"
@@ -251,7 +239,7 @@ exports[`Component: Togglebox Overview renders 1`] = `
           Do
         </h3>
         <div
-          className="slab-content p-3"
+          className="slab-content"
         >
           <span
             className="h4 d-inline-block mb-3"
@@ -273,49 +261,51 @@ exports[`Component: Togglebox Overview renders 1`] = `
           />
         </div>
       </div>
-      <p>
-        Use 
-        <b>
-          radiobuttons
-        </b>
-         for yes/no questions
-      </p>
     </div>
     <div
-      className="col-6 px-3"
-      key="1"
+      className="col-6"
     >
       <div
         className="slab slab-plain slab-border-error"
       >
         <h3>
-          Don’t
+          Do
         </h3>
         <div
-          className="slab-content p-3"
+          className="slab-content"
         >
-          <span
-            className="h5"
-          >
-            Do you have any credit cards
-          </span>
+          <p>
+            <b>
+              Do you have any credit cards
+            </b>
+          </p>
           <Togglebox
             id="ex2"
             label="Yes"
           />
         </div>
       </div>
-      <p>
-        Don’t use a 
-        <b>
-          togglebox
-        </b>
-         for yes/no questions
-      </p>
     </div>
+    <p
+      className="pl-3"
+    >
+      <p>
+        Instead of using a togglebox for answering yes/no questions it is better to use 
+        <Link
+          to="/components/radio-button"
+        >
+          radio buttons
+        </Link>
+        .
+      </p>
+    </p>
+  </div>
+  <div
+    className="row"
+    key="1"
+  >
     <div
-      className="col-6 px-3"
-      key="2"
+      className="col-6"
     >
       <div
         className="slab slab-plain slab-border-success"
@@ -324,7 +314,7 @@ exports[`Component: Togglebox Overview renders 1`] = `
           Do
         </h3>
         <div
-          className="slab-content p-3"
+          className="slab-content"
         >
           <Checkbox
             id="example-3"
@@ -335,35 +325,29 @@ exports[`Component: Togglebox Overview renders 1`] = `
           >
             <Button
               label="Cancel"
+              size="sm"
               type="link"
             />
             <Button
               label="Submit"
+              size="sm"
               type="primary"
             />
           </div>
         </div>
       </div>
-      <p>
-        Use a 
-        <b>
-          checkbox
-        </b>
-         for actions that won’t happen immediately.
-      </p>
     </div>
     <div
-      className="col-6 px-3"
-      key="3"
+      className="col-6"
     >
       <div
         className="slab slab-plain slab-border-error"
       >
         <h3>
-          Don’t
+          Do
         </h3>
         <div
-          className="slab-content p-3"
+          className="slab-content"
         >
           <Togglebox
             id="example-4"
@@ -374,26 +358,38 @@ exports[`Component: Togglebox Overview renders 1`] = `
           >
             <Button
               label="Cancel"
+              size="sm"
               type="link"
             />
             <Button
               label="Submit"
+              size="sm"
               type="primary"
             />
           </div>
         </div>
       </div>
-      <p>
-        Don’t use 
-        <b>
-          togglebox
-        </b>
-         for actions that won’t happen immediately.
-      </p>
     </div>
+    <p
+      className="pl-3"
+    >
+      <p>
+        Instead of using a togglebox for actions that won’t happen until a submit button is pressed it is better to use a 
+        <Link
+          to="/components/checkbox"
+        >
+          checkbox
+        </Link>
+        .
+      </p>
+    </p>
+  </div>
+  <div
+    className="row"
+    key="2"
+  >
     <div
-      className="col-6 px-3"
-      key="4"
+      className="col-6"
     >
       <div
         className="slab slab-plain slab-border-success"
@@ -402,7 +398,7 @@ exports[`Component: Togglebox Overview renders 1`] = `
           Do
         </h3>
         <div
-          className="slab-content p-3"
+          className="slab-content"
         >
           <span
             className="h4 d-inline-block mb-2"
@@ -420,26 +416,18 @@ exports[`Component: Togglebox Overview renders 1`] = `
           />
         </div>
       </div>
-      <p>
-        Use 
-        <b>
-          togglebox
-        </b>
-         for preferences of features or behaviour
-      </p>
     </div>
     <div
-      className="col-6 px-3"
-      key="5"
+      className="col-6"
     >
       <div
         className="slab slab-plain slab-border-error"
       >
         <h3>
-          Don’t
+          Do
         </h3>
         <div
-          className="slab-content p-3"
+          className="slab-content"
         >
           <span
             className="h4 d-inline-block mb-2"
@@ -457,14 +445,14 @@ exports[`Component: Togglebox Overview renders 1`] = `
           />
         </div>
       </div>
-      <p>
-        Don’t use a 
-        <b>
-          checkbox
-        </b>
-         for preferences of features or behaviour
-      </p>
     </div>
+    <p
+      className="pl-3"
+    >
+      <p>
+        Do use toggleboxes for on/off preferences of features or behaviour, don’t use checkboxes.
+      </p>
+    </p>
   </div>
 </Fragment>
 `;
