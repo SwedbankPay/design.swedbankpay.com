@@ -17,8 +17,8 @@ const Radio = ({ id, checked, disabled, label, group, groupTitle, options, name,
                 <fieldset className="radio-group" disabled={disabled}>
                     <legend className="d-flex align-items-center">{groupTitle}
                         {tooltip &&
-                        <i className="material-icons help-icon" data-tooltip="Some informative text" data-tooltip-position="top">{"\n"}
-                            help_outline{"\n"}</i>}{"\n"}
+                        <>{"\n"}<i className="material-icons help-icon" data-tooltip="Some informative text" data-tooltip-position="top">{"\n"}
+                            help_outline{"\n"}</i></>}{"\n"}
                     </legend>
                     {options.map(({ label, id, checked }, i) => <div className="radio" key={i}>{"\n"}
                         <input {...attrs} id={id} defaultChecked={checked}/>{"\n"}
