@@ -122,16 +122,12 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
         }
 
         const copyToClipboard = e => {
-            const code = e.target.parentElement.parentElement.querySelector(".code-view-code pre").innerText;
-
             navigator.clipboard.writeText(code);
 
             e.target.dataset.tooltip = "Copied!";
         };
 
         const tooltipContent = e => {
-            const code = e.target.parentElement.parentElement.querySelector(".code-view-code pre").innerText;
-
             navigator.clipboard.readText().then(copied => {
                 e.target.dataset.tooltip = copied === code ? "Copied!" : "Copy to clipboard";
             });
