@@ -174,6 +174,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
 
             this.state = {
                 activeTab: this.props.showCasePanelAdvanced.elements[0],
+                hideOptions: this.props.showCasePanelAdvanced.hideOptions,
                 optionsOpen: window.innerWidth > 1200, // XL grid breakpoint
                 activeOptions: this.props.showCasePanelAdvanced.elements[0].activeOptions ? [...this.props.showCasePanelAdvanced.elements[0].activeOptions] : []
             };
@@ -255,7 +256,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
         render () {
             return (
                 <>
-                    <div id={this.props.showCasePanelAdvanced.id} className={`showcase-panel showcase-panel-advanced${this.state.optionsOpen ? " options-active" : ""}`}>
+                    <div id={this.props.showCasePanelAdvanced.id} className={`showcase-panel showcase-panel-advanced${this.state.optionsOpen ? " options-active" : ""}${this.state.hideOptions ? " hide-options" : ""}`}>
                         <div id={this.props.showCasePanelAdvanced.tabsId} className="tabs tabs-scroll">
                             <ul id={`${this.props.showCasePanelAdvanced.tabsId}-ul`}>
                                 {this.props.showCasePanelAdvanced.elements.map((element, i) => <li key={i} className={this.state.activeTab.tab === element.tab ? "active" : null}>
