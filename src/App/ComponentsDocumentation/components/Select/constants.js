@@ -62,7 +62,7 @@ export const selectOverview = {
                 ]
             },
             title: "Select",
-            description: "The select component looks simillar to an input field in terms of structure, both with a label and placeholder text. But it does function differently and when activated expands and displays a list of options."
+            description: "The select component looks similar to an input field in terms of structure, both with a label and placeholder text. But it does function differently and when activated expands and displays a list of options."
         }
     ]
 };
