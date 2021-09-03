@@ -10,9 +10,7 @@ const Overview = () => (
     <section id="input-field-overview">
         <h2 id="input-field">Input field</h2>
         <p>Use a Input field when the expected user input is a single line of text. A Input field must always have a Input label that clearly describes the type of input a field requires and it may also have a Placeholder example text, refer to <a href="#content-guidelines">content guidelines</a> for more information.</p>
-
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={inputShowCase} codeFigure />
-
         <h3>When to consider something else</h3>
         <ul className="pl-3 list list-bullet">
             <li>Use a <b>Textarea</b> when the expected user input is more than one sentence</li>
@@ -23,7 +21,7 @@ const Overview = () => (
 const Textarea = () => (
     <section id="textarea-overview">
         <h2 id="textarea">Textarea</h2>
-        <p>Use a Textarea when the expected user input is more than one sentence. Textareas must always have a Input label that clearly describes the type of input a field requires and it may also have a Placeholder example text, refer to <a href="#content-guidelines">content guidelines</a> for more information. </p>
+        <p>Use a Textarea when the expected user input is more than one sentence. Text areas must always have a Input label that clearly describes the type of input a field requires and it may also have a Placeholder example text, refer to <a href="#content-guidelines">content guidelines</a> for more information. </p>
 
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={textareaShowCase} codeFigure />
 
@@ -59,7 +57,7 @@ const ContentGuidelines = () => (
         <p>A placeholder text may be used inside of the input field to serve as an example of what the user can enter, consider to start with “e.g.” or similar abbreviation in corresponding language. </p>
 
         <div className="row placeholder-guideline">
-            <div className="col-6">
+            <div className="col-lg-6 col-sm-12 ">
                 <div className="slab slab-plain slab-border-success pb-4">
                     {/* <span className="h3 mb-3">Do</span> */}
                     <h3 className="mb-3 mt-0">Do</h3>
@@ -67,7 +65,7 @@ const ContentGuidelines = () => (
                 </div>
                 <p>Use the placeholder text as an example of what to enter.</p>
             </div>
-            <div className="col-6">
+            <div className="col-lg-6 col-sm-12">
                 <div className="slab slab-plain slab-border-error pb-4">
                     <h3 className="mb-3 mt-0">Don&#x27;t</h3>
                     <InputGroup type="text" label="Personal authentication number" placeholder="Enter with 10 digits"/>
@@ -80,14 +78,14 @@ const ContentGuidelines = () => (
         <p>When input isn’t accepted, input fields should display a short and concise error message, it should be no more than a single sentence</p>
 
         <div className="row placeholder-guideline">
-            <div className="col-6">
+            <div className="col-lg-6 col-sm-12">
                 <div className="slab slab-plain slab-border-success pb-4">
                     <h3 className="mb-3 mt-0">Do</h3>
                     <InputGroup type="text" validationState="error" helpBlock errorMessage='The email address must include "@"' label="Email address" defaultValue="Name.com"/>
                 </div>
                 <p>Do explain what went wrong and how to fix it.</p>
             </div>
-            <div className="col-6">
+            <div className="col-lg-6 col-sm-12">
                 <div className="slab slab-plain slab-border-error pb-4">
                     <h3 className="mb-3 mt-0">Don&#x27;t</h3>
                     <InputGroup type="text" validationState="error" helpBlock errorMessage="Invalid input" label="Email address" defaultValue="Name.com"/>
@@ -99,7 +97,7 @@ const ContentGuidelines = () => (
 );
 
 const DeveloperDocumentation = () => (
-    <section>
+    <section id="developer-documentation-container">
         <h2 id="developer-documentation mb-3">Developer documentation</h2>
         <h3 className="mt-3">Autocomplete</h3>
         <p>Add <CodeTags type="primary" code="autocomplete"/> attributes to input fields when it is possible to make a form easier for users to fill. </p>

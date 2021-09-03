@@ -975,8 +975,11 @@
         }
 
         .form-group {
-            width: 21.25rem;
-            margin: auto;
+            //display: flex;
+            //align-items: center;
+            //flex-direction: column;
+            min-width: 17.3rem;
+            max-width: 21.25rem;
         }
 
         .component-description {
@@ -994,6 +997,13 @@
         .placeholder-guideline {
             .form-group {
                 width: 100%;
+                min-width: none;
+            }
+        }
+
+        #developer-documentation-container{
+            .form-group{
+                margin: auto;
             }
         }
     }
