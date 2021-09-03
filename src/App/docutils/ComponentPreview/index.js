@@ -268,8 +268,8 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                             </div>
                         </div>
                         <div className="d-flex">
-                            <div className="flex-column flex-fill">
-                                <div className="component-preview">
+                            <div className="d-flex flex-column flex-fill">
+                                <div className="component-preview flex-fill">
                                     <div className={`component-preview-content${this.state.activeTab.altBackground ? " component-preview-alt-background" : ""}`}>
                                         {cloneElement(this.state.activeTab.component,
                                             this.state.activeOptions.reduce((acc, currentOption) => ({

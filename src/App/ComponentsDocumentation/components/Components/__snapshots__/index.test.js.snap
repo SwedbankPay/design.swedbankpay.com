@@ -406,8 +406,8 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
-    key="Loaders"
-    to="/components/loaders"
+    key="Loader"
+    to="/components/loader"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -420,7 +420,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       <span
         className="h3 m-0"
       >
-        Loaders
+        Loader
       </span>
     </div>
     <i
