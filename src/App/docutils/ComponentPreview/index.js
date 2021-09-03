@@ -256,7 +256,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
         render () {
             return (
                 <>
-                    <div id={this.props.showCasePanelAdvanced.id} className={`showcase-panel showcase-panel-advanced${this.state.optionsOpen ? " options-active" : ""}${this.state.hideOptions ? " hide-options" : ""}`}>
+                    <div id={this.props.showCasePanelAdvanced.id} className={`showcase-panel showcase-panel-advanced${this.state.optionsOpen ? " options-active" : ""}`}>
                         <div id={this.props.showCasePanelAdvanced.tabsId} className="tabs tabs-scroll">
                             <ul id={`${this.props.showCasePanelAdvanced.tabsId}-ul`}>
                                 {this.props.showCasePanelAdvanced.elements.map((element, i) => <li key={i} className={this.state.activeTab.tab === element.tab ? "active" : null}>
@@ -264,7 +264,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                                 </li>
                                 )}
                             </ul>
-                            <div className={`options-open${this.state.optionsOpen ? " hidden" : ""}`}>
+                            <div className={`options-open${this.state.optionsOpen ? " hidden" : ""}${this.state.hideOptions ? " d-none" : ""}`}>
                                 <i className="material-icons" onClick={() => this.setState({ optionsOpen: true })}>menu_open</i>
                             </div>
                         </div>
@@ -293,7 +293,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                                     }
                                 </div>
                             </div>
-                            {<div className={`options${this.state.optionsOpen ? " active" : ""}`}>
+                            {<div className={`options${this.state.optionsOpen ? " active" : ""}${this.state.hideOptions ? " d-none" : ""}`}>
                                 <div className="options-header">
                                     Options
                                     <i className="material-icons options-close" onClick={() => this.setState({ optionsOpen: false })}>close</i>
