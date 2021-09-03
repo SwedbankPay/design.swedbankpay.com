@@ -86,8 +86,7 @@ const DeveloperDocumentation = () => (
         </ComponentPreview>
 
         <span className="h4">Disabled state</span>
-        <p>Disable a select by adding the  <CodeTags type="primary" code="disabled"/>  attribute to the desired select. You can also disable a <CodeTags type="primary" code="form-group"/> or <CodeTags type="primary" code="fieldset"/>, refer to <Link to="/components/forms">forms</Link> for more info.</p>
-
+        <p>Disable a select by adding the <CodeTags type="primary" code="disabled"/> attribute to the desired select and the <CodeTags type="primary" code="form-group"/> where the select resides.</p>
         <ComponentPreview language="html" codeFigure showCasePanel>
             <InputGroup type="select" label="Label" placeholder="Select option" selectOptions={[]} disabled />
         </ComponentPreview>
