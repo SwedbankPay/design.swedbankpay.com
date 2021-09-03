@@ -72,7 +72,7 @@ export const whenToUse = {
     content: [
         {
             correct:
-                <div className="m-auto pb-3">
+                <div className="pb-3">
                     <p>Background color</p>
                     <Radio id="radio-example-1" label="Blue" name="radio-example" checked/>
                     <Radio id="radio-example-2" label="Red" name="radio-example"/>
