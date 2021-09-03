@@ -11,7 +11,6 @@ exports[`Component: Select ContentGuidelines renders 1`] = `
     className="d-flex justify-content-center slab slab-plain px-5 pt-5 pb-4 no-pointer-events"
   >
     <InputGroup
-      errorMessage="Descriptive helpful error message."
       helpBlock={true}
       label="Label"
       placeholder="Placeholder text"
@@ -127,28 +126,17 @@ exports[`Component: Select DeveloperDocumentation renders 1`] = `
     Disabled state
   </span>
   <p>
-    Disable a select by adding the  
+    Disable a select by adding the 
     <CodeTags
       code="disabled"
       type="primary"
     />
-      attribute to the desired select. You can also disable a 
+     attribute to the desired select and the 
     <CodeTags
       code="form-group"
       type="primary"
     />
-     or 
-    <CodeTags
-      code="fieldset"
-      type="primary"
-    />
-    , refer to 
-    <Link
-      to="/components/forms"
-    >
-      forms
-    </Link>
-     for more info.
+     where the select resides.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -193,7 +181,7 @@ exports[`Component: Select Overview renders 1`] = `
               }
               type="select"
             />,
-            "description": "The select component looks simillar to an input field in terms of structure, both with a label and placeholder text. But it does function differently and when activated expands and displays a list of options.",
+            "description": "The select component looks similar to an input field in terms of structure, both with a label and placeholder text. But it does function differently and when activated expands and displays a list of options.",
             "options": Object {
               "checkbox": Array [
                 Object {
@@ -254,6 +242,22 @@ exports[`Component: Select Overview renders 1`] = `
     }
   />
   <h3>
+    When to consider something else
+  </h3>
+  <ul
+    className="pl-3"
+  >
+    <li>
+      To present a list of possible navigation options or actions that for example effects the filtering of the page, use the 
+      <Link
+        to="/components/dropdown-menu"
+      >
+        Dropdown menu
+      </Link>
+       component instead of a Select. 
+    </li>
+  </ul>
+  <h3>
     When to use Select
   </h3>
   <WhenToUse />
@@ -280,7 +284,7 @@ exports[`Component: Select When to use renders 1`] = `
           Do
         </span>
         <div
-          className="m-auto pb-3"
+          className="pb-3"
         >
           <p>
             Background color
