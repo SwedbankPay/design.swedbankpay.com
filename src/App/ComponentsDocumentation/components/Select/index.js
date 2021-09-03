@@ -38,10 +38,10 @@ const Overview = () => (
     <section>
         <h2 id="overview">Overview</h2>
         <ComponentPreview language="html" codeFigure showCasePanel showCasePanelAdvanced={selectOverview} />
-        {/* <h3>When to consider something else</h3>
+        <h3>When to consider something else</h3>
         <ul className="pl-3">
             <li>To present a list of possible navigation options or actions that for example effects the filtering of the page, use the <Link to="/components/dropdown-menu">Dropdown menu</Link> component instead of a Select. </li>
-        </ul> */}
+        </ul>
 
         <h3>When to use Select</h3>
 
