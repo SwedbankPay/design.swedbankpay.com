@@ -38,7 +38,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
-        className="material-icons false mr-3"
+        className="material-icons mr-3"
       >
         list
       </i>
@@ -63,9 +63,9 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
-        className="material-icons material-icons-outlined mr-3"
+        className="material-icons mr-3"
       >
-        error
+        error_outlined
       </i>
       <span
         className="h3 m-0"
@@ -331,6 +331,31 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Input field"
+    to="/components/input-field"
+  >
+    <div
+      className="cards-content flex-row align-items-center m-0 "
+    >
+      <i
+        className="material-icons mr-3"
+      >
+        text_fields
+      </i>
+      <span
+        className="h3 m-0"
+      >
+        Input field
+      </span>
+    </div>
+    <i
+      className="material-icons material-icons-outlined"
+    >
+      arrow_forward
+    </i>
+  </Link>
+  <Link
+    className="cards cards-primary cards-wide"
     key="Links"
     to="/components/links"
   >
@@ -406,6 +431,31 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Media Object"
+    to="/components/media-object"
+  >
+    <div
+      className="cards-content flex-row align-items-center m-0 "
+    >
+      <i
+        className="material-icons material-icons-outlined mr-3"
+      >
+        account_circle
+      </i>
+      <span
+        className="h3 m-0"
+      >
+        Media Object
+      </span>
+    </div>
+    <i
+      className="material-icons material-icons-outlined"
+    >
+      arrow_forward
+    </i>
+  </Link>
+  <Link
+    className="cards cards-primary cards-wide"
     key="Navigation"
     to="/components/nav"
   >
@@ -456,6 +506,31 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Panel"
+    to="/components/panel"
+  >
+    <div
+      className="cards-content flex-row align-items-center m-0 "
+    >
+      <i
+        className="material-icons material-icons-outlined mr-3"
+      >
+        table_rows
+      </i>
+      <span
+        className="h3 m-0"
+      >
+        Panel
+      </span>
+    </div>
+    <i
+      className="material-icons material-icons-outlined"
+    >
+      arrow_forward
+    </i>
+  </Link>
+  <Link
+    className="cards cards-primary cards-wide"
     key="Progress steps"
     to="/components/progress-steps"
   >
@@ -463,7 +538,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
-        className="material-icons material-icons-outlined mr-3"
+        className="material-icons mr-3"
       >
         hdr_strong
       </i>
@@ -488,7 +563,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
-        className="material-icons material-icons-outlined mr-3"
+        className="material-icons mr-3"
       >
         radio_button_checked
       </i>
@@ -496,6 +571,31 @@ exports[`Components: Components MenuOverview renders 1`] = `
         className="h3 m-0"
       >
         Radio button
+      </span>
+    </div>
+    <i
+      className="material-icons material-icons-outlined"
+    >
+      arrow_forward
+    </i>
+  </Link>
+  <Link
+    className="cards cards-primary cards-wide"
+    key="Rangeslider"
+    to="/components/rangeslider"
+  >
+    <div
+      className="cards-content flex-row align-items-center m-0 "
+    >
+      <i
+        className="material-icons material-icons-outlined mr-3"
+      >
+        tune
+      </i>
+      <span
+        className="h3 m-0"
+      >
+        Rangeslider
       </span>
     </div>
     <i
@@ -521,6 +621,81 @@ exports[`Components: Components MenuOverview renders 1`] = `
         className="h3 m-0"
       >
         Sheet
+      </span>
+    </div>
+    <i
+      className="material-icons material-icons-outlined"
+    >
+      arrow_forward
+    </i>
+  </Link>
+  <Link
+    className="cards cards-primary cards-wide"
+    key="Select"
+    to="/components/select"
+  >
+    <div
+      className="cards-content flex-row align-items-center m-0 "
+    >
+      <i
+        className="material-icons material-icons-outlined mr-3"
+      >
+        arrow_drop_down_circle
+      </i>
+      <span
+        className="h3 m-0"
+      >
+        Select
+      </span>
+    </div>
+    <i
+      className="material-icons material-icons-outlined"
+    >
+      arrow_forward
+    </i>
+  </Link>
+  <Link
+    className="cards cards-primary cards-wide"
+    key="Sidebar"
+    to="/components/sidebar"
+  >
+    <div
+      className="cards-content flex-row align-items-center m-0 "
+    >
+      <i
+        className="material-icons material-icons-outlined mr-3"
+      >
+        view_sidebar
+      </i>
+      <span
+        className="h3 m-0"
+      >
+        Sidebar
+      </span>
+    </div>
+    <i
+      className="material-icons material-icons-outlined"
+    >
+      arrow_forward
+    </i>
+  </Link>
+  <Link
+    className="cards cards-primary cards-wide"
+    key="Slab"
+    to="/components/slab"
+  >
+    <div
+      className="cards-content flex-row align-items-center m-0 "
+    >
+      <i
+        className="material-icons material-icons-outlined mr-3"
+      >
+        crop_landscape
+      </i>
+      <span
+        className="h3 m-0"
+      >
+        Slab
       </span>
     </div>
     <i
@@ -631,6 +806,31 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Togglebox"
+    to="/components/togglebox"
+  >
+    <div
+      className="cards-content flex-row align-items-center m-0 "
+    >
+      <i
+        className="material-icons material-icons-outlined mr-3"
+      >
+        toggle_off
+      </i>
+      <span
+        className="h3 m-0"
+      >
+        Togglebox
+      </span>
+    </div>
+    <i
+      className="material-icons material-icons-outlined"
+    >
+      arrow_forward
+    </i>
+  </Link>
+  <Link
+    className="cards cards-primary cards-wide"
     key="Tooltips"
     to="/components/tooltips"
   >
@@ -646,6 +846,31 @@ exports[`Components: Components MenuOverview renders 1`] = `
         className="h3 m-0"
       >
         Tooltips
+      </span>
+    </div>
+    <i
+      className="material-icons material-icons-outlined"
+    >
+      arrow_forward
+    </i>
+  </Link>
+  <Link
+    className="cards cards-primary cards-wide"
+    key="Topbar"
+    to="/components/topbar"
+  >
+    <div
+      className="cards-content flex-row align-items-center m-0 "
+    >
+      <i
+        className="material-icons material-icons-outlined v-flip mr-3"
+      >
+        call_to_action
+      </i>
+      <span
+        className="h3 m-0"
+      >
+        Topbar
       </span>
     </div>
     <i
