@@ -15,7 +15,7 @@ const Overview = () => (
 
         <h3>When to consider something else</h3>
         <ul className="list list-bullet">
-            <li>Use a text input instead when the user needs to select specific number.</li>
+            <li>Use a <Link to="/component/input-field">text input</Link> instead when the user needs to select specific number.</li>
         </ul>{/* Link to text-input */}
 
         <h3>How to use sliders</h3>
@@ -25,7 +25,7 @@ const Overview = () => (
                 <div className={`slab slab-plain slab-border-${type} h-100 mb-2`}>
                     <h3 className="mt-0">Do{type === "error" && "n’t"}</h3>
                     <div className="d-flex flex-column align-items-center">
-                        <div className="py-3 col-8">
+                        <div className="py-3 col-12 col-lg-8">
                             {component}
                         </div>
                     </div>
@@ -96,7 +96,7 @@ const Rangeslider = () => {
 
     return (
         <DocContainer>
-            <p className="lead">The slider component lets the user increase and decrease the value by moving the slider along a horizontal line and lets the user choose an approximate value</p>
+            <p className="lead">The slider component lets the user increase and decrease the value by moving the slider along a horizontal line and lets the user choose a value</p>
             <Overview />
             <ContentGuidelines />
             <DeveloperDocumentation />
