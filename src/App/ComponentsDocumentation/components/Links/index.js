@@ -18,7 +18,7 @@ const TextLinks = () => (
         </ComponentPreview>
 
         <h3>Small link</h3>
-        <p>Use links in small with legal texts, such as links to terms and contitions</p>
+        <p>Use links in small with legal texts, such as links to terms and conditions</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <small>{"\n"}
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.{"\n"}
