@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { ComponentPreview, DocContainer } from "@docutils";
 import Togglebox from "@components/FormComponents/Togglebox";
 import CodeTags from "~/src/App/components/CodeTags";
-import Radio from "@components/FormComponents/Radio";
 import { toggleboxShowCase, howToUse } from "./constants";
 
 const Overview = () => (
@@ -24,21 +23,6 @@ const Overview = () => (
         </ul>
 
         <span className="h3 d-inline-block mb-3">How to use Toggleboxes</span>
-        {/*         {<div className="row">
-            {howToUse.map(({ component, error, text, heading }, i) => (
-                <div className="col-6 px-3" key={i}>
-                    <div className={`slab slab-plain slab-border-${error ? "error" : "success"}}`}>
-                        <h3>{error ? "Don’t" : "Do"}</h3>
-                        <div className="slab-content p-3">
-                            {heading && <span className="h5">{heading}</span>}
-                            {component}
-                        </div>
-                    </div>
-                    <p id="how-to-text">{text}</p>
-                </div>
-            ))}
-        </div> */}
-
         {howToUse.map(({ success, error, text }, i) => (
             <div className="row" key={i}>
                 <div className="col-6">
