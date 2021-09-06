@@ -50,7 +50,7 @@ const ContentGuidelines = () => (
         <ul className="list list-bullet">
             <li>Use a label that is meaningful, clear, and concise.</li>
             <li>When a text field is not required to be filled by the user, label it as “optional”.</li>
-            <li>If there is a need for a more detailed description, a help icon which triggers a Popover on click can be added after the label. </li>
+            <li>If there is a need for a more detailed description, a help icon can be added after the label. </li>
         </ul>
 
         <h3>Placeholder text</h3>
@@ -105,9 +105,6 @@ const DeveloperDocumentation = () => (
             <InputGroup type="text" label="Name" autocomplete="on" />
         </ComponentPreview>
 
-        <h3>Validation</h3>
-        <p>To use our validation, start by adding the attribute <CodeTags type="primary" code="novalidate"/> to your desired input field. If you wish to validate an entire form, add the validate attribute to the <CodeTags type="primary" code="form"/> tag.</p>
-
         <h3>Error message</h3>
         <p>Insert the error message in the attribute <CodeTags type="primary" code="data-error"/> in the <CodeTags type="primary" code=".help-block"/> element. </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
@@ -115,7 +112,7 @@ const DeveloperDocumentation = () => (
         </ComponentPreview>
 
         <h3>Disabled state</h3>
-        <p>Disable a input field by adding <CodeTags type="primary" code="disabled"/> attribute to the desired input field. You can also disable the <CodeTags type="primary" code="form-group"/> or <CodeTags type="primary" code="fieldset"/> in which the input field is located, refer to <Link to="/components/forms">forms</Link> for more info.</p>
+        <p>Disable a input field by adding the <CodeTags type="primary" code="disabled"/> attribute to the desired input field and the <CodeTags type="primary" code="form-group"/> where the input field resides.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <InputGroup type="text" label="Input label" placeholder="Placeholder text" disabled />
         </ComponentPreview>
