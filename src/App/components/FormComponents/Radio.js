@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Radio = ({ id, checked, disabled, label, group, groupTitle, options, name, required }) => {
+const Radio = ({ id, checked, disabled, label, group, groupTitle, options, name, tooltip, required }) => {
     const attrs = {
         type: "radio",
         id: id || null,
@@ -15,7 +15,12 @@ const Radio = ({ id, checked, disabled, label, group, groupTitle, options, name,
         <>
             {group ? <form>
                 <fieldset className="radio-group" disabled={disabled}>
-                    <legend>{groupTitle}</legend>
+                    <legend className="d-flex align-items-center">{groupTitle}
+                        {tooltip &&
+                            <>{"\n"}<i className="material-icons help-icon" data-tooltip="Some informative text" data-tooltip-position="top">{"\n"}
+                                help_outline{"\n"}</i>
+                            </>}{"\n"}
+                    </legend>
                     {options.map(({ label, id, checked }, i) => <div className="radio" key={i}>{"\n"}
                         <input {...attrs} id={id} defaultChecked={checked}/>{"\n"}
                         <label htmlFor={id}>{label}</label>{"\n"}
@@ -42,7 +47,8 @@ Radio.propTypes = {
     group: PropTypes.bool,
     groupTitle: PropTypes.string,
     options: PropTypes.array,
-    require: PropTypes.bool
+    require: PropTypes.bool,
+    tooltip: PropTypes.bool
 };
 
 export default Radio;
