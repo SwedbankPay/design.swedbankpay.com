@@ -25,7 +25,7 @@ const Overview = () => (
         <span className="h3 d-inline-block mb-3">How to use Toggleboxes</span>
         {howToUse.map(({ success, error, text }, i) => (
             <div className="row" key={i}>
-                <div className="col-6">
+                <div className="col-sm-6 col-xs-12">
                     <div className="slab slab-plain slab-border-success">
                         <h3>Do</h3>
                         <div className="slab-content">
@@ -33,7 +33,7 @@ const Overview = () => (
                         </div>
                     </div>
                 </div>
-                <div className="col-6">
+                <div className="col-sm-6 col-xs-12">
                     <div className="slab slab-plain slab-border-error">
                         <h3>Do</h3>
                         <div className="slab-content">
