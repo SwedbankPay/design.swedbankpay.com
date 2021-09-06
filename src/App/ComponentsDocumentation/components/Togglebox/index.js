@@ -1,10 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import { ComponentPreview, DocContainer } from "@docutils";
 import Togglebox from "@components/FormComponents/Togglebox";
 import CodeTags from "~/src/App/components/CodeTags";
-
 import { toggleboxShowCase, howToUse } from "./constants";
 
 const Overview = () => (
@@ -25,26 +23,38 @@ const Overview = () => (
         </ul>
 
         <span className="h3 d-inline-block mb-3">How to use Toggleboxes</span>
-        <div className="row">
-            {howToUse.map(({ type, component, text, heading }, i) => (
-                <div className="col-6 px-3" key={i}>
-                    <div className={`slab slab-plain slab-border-${type}`}>
-                        <h3>{type === "error" ? "Don’t" : "Do"}</h3>
+        {howToUse.map(({ success, error, text }, i) => (
+            <div className="row" key={i}>
+                <div className="col-sm-6 col-12">
+                    <div className="slab slab-plain slab-border-success mb-2">
+                        <h3>Do</h3>
                         <div className="slab-content p-3">
-                            {heading && <span className="h5">{heading}</span>}
-                            {component}
+                            {success}
                         </div>
                     </div>
-                    {text}
                 </div>
-            ))}
-        </div>
+                <div className="col-sm-6 col-12">
+                    <div className="slab slab-plain slab-border-error mb-2">
+                        <h3>Don't</h3>
+                        <div className="slab-content p-3">
+                            {error}
+                        </div>
+                    </div>
+                </div>
+                <p className="pl-3">{text}</p>
+            </div>
+        ))}
+
     </>
+
 );
 
 const ContentGuidelines = () => (
     <>
         <h2 id="content-guidelines">Content guidelines</h2>
+        <div className="slab slab-plain d-flex justify-content-center align-items-center" >
+            <div><Togglebox label="Label" labelTop id="toggle-disable-example"/></div>
+        </div>
         <ul className="list list-bullet">
             <li>The label should be short and concise, preferably three words or less.</li>
             <li>Label should be written as to describe the on state of the toggle.</li>
@@ -72,9 +82,6 @@ const DeveloperDocumentation = () => (
                 <Togglebox label="Label" id="toggle-disabled-example-2" disabled />
             </div>
         </ComponentPreview>
-
-        <span className="h3 d-inline-block mt-3">Form groups</span>
-        <p><CodeTags type="secondary" code=".form-group" /> s and/or <CodeTags type="primary" code="form" /> allow you to gather user input components like input fields, radio buttons, checkboxes and toggleboxes in various ways. For more information on how this works refer to the <Link to="/components/forms">Forms</Link> section.</p>
     </>
 );
 
