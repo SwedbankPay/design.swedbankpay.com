@@ -55,19 +55,28 @@ export const inputShowCase = {
                             {
                                 name: "E-mail",
                                 value: {
-                                    type: "email"
+                                    type: "email",
+                                    prefixType: "icon",
+                                    prefixValue: "email",
+                                    placeholder: "name@mail.com"
                                 }
                             },
                             {
                                 name: "Tel",
                                 value: {
-                                    type: "tel"
+                                    type: "tel",
+                                    prefixType: "icon",
+                                    prefixValue: "phone",
+                                    placeholder: "+46 701234567"
                                 }
                             },
                             {
                                 name: "Password",
                                 value: {
-                                    type: "password"
+                                    type: "password",
+                                    prefixType: "icon",
+                                    prefixValue: "lock",
+                                    placeholder: ""
                                 }
                             }
                         ]
