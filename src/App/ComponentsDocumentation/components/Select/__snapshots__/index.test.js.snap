@@ -273,13 +273,13 @@ exports[`Component: Select When to use renders 1`] = `
     className="row wrong mb-3"
   >
     <div
-      className="col-6"
+      className="col-12 col-sm-6 mb-2"
     >
       <div
-        className="px-4 slab slab-plain slab-border-success d-flex flex-column"
+        className="px-4 slab slab-plain slab-border-success h-100 d-flex flex-column mb-2"
       >
         <span
-          className="h4 mt-0 mb-3"
+          className="h4"
         >
           Do
         </span>
@@ -304,13 +304,13 @@ exports[`Component: Select When to use renders 1`] = `
       </div>
     </div>
     <div
-      className="col-6"
+      className="col-12 col-sm-6"
     >
       <div
-        className="px-4 slab slab-plain slab-border-error h-100"
+        className="px-4 slab slab-plain slab-border-error h-100 mb-2 d-flex flex-column"
       >
         <span
-          className="h4 mt-0 mb-3"
+          className="h4"
         >
           Don't
         </span>
@@ -343,13 +343,13 @@ exports[`Component: Select When to use renders 1`] = `
     className="row wrong mb-3"
   >
     <div
-      className="col-6"
+      className="col-12 col-sm-6 mb-2"
     >
       <div
-        className="px-4 slab slab-plain slab-border-success d-flex flex-column"
+        className="px-4 slab slab-plain slab-border-success h-100 d-flex flex-column mb-2"
       >
         <span
-          className="h4 mt-0 mb-3"
+          className="h4"
         >
           Do
         </span>
@@ -362,13 +362,13 @@ exports[`Component: Select When to use renders 1`] = `
       </div>
     </div>
     <div
-      className="col-6"
+      className="col-12 col-sm-6"
     >
       <div
-        className="px-4 slab slab-plain slab-border-error h-100"
+        className="px-4 slab slab-plain slab-border-error h-100 mb-2 d-flex flex-column"
       >
         <span
-          className="h4 mt-0 mb-3"
+          className="h4"
         >
           Don't
         </span>
@@ -430,13 +430,13 @@ exports[`Component: Select When to use renders 1`] = `
     className="row wrong mb-3"
   >
     <div
-      className="col-6"
+      className="col-12 col-sm-6 mb-2"
     >
       <div
-        className="px-4 slab slab-plain slab-border-success d-flex flex-column"
+        className="px-4 slab slab-plain slab-border-success h-100 d-flex flex-column mb-2"
       >
         <span
-          className="h4 mt-0 mb-3"
+          className="h4"
         >
           Do
         </span>
@@ -448,13 +448,13 @@ exports[`Component: Select When to use renders 1`] = `
       </div>
     </div>
     <div
-      className="col-6"
+      className="col-12 col-sm-6"
     >
       <div
-        className="px-4 slab slab-plain slab-border-error h-100"
+        className="px-4 slab slab-plain slab-border-error h-100 mb-2 d-flex flex-column"
       >
         <span
-          className="h4 mt-0 mb-3"
+          className="h4"
         >
           Don't
         </span>
