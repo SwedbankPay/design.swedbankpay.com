@@ -10,7 +10,7 @@ const MenuOverview = () => (
             card.icon &&
             <Link key={card.title} to={card.path} className="cards cards-primary cards-wide">
                 <div className="cards-content flex-row align-items-center m-0 ">
-                    <i className={`material-icons ${card.outlined && "material-icons-outlined"} mr-3`}>{card.icon}</i>
+                    <i className={`material-icons${card.outlined ? " material-icons-outlined" : ""}${card.icon === "call_to_action" ? " v-flip" : ""} mr-3`}>{card.icon}</i>
                     <span className="h3 m-0">{card.title}</span>
                 </div>
                 <i className="material-icons material-icons-outlined">arrow_forward</i>

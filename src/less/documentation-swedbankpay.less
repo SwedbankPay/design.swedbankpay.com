@@ -743,6 +743,8 @@
                 border-bottom: 1px solid @brand-secondary-light-3;
 
                 .component-preview-content {
+                    position: relative;
+                    height: 100%;
                     padding: 2rem;
                     display: flex;
                     align-items: center;
@@ -750,6 +752,16 @@
 
                     &.component-preview-alt-background {
                         background-color: @brand-primary;
+                    }
+
+                    .loader-preview-container {
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+
+                        &.dark {
+                            background-color: @brand-secondary;
+                        }
                     }
                 }
             }
@@ -1113,6 +1125,10 @@
         }
     }
 
+    .v-flip {
+        transform: scaleY(-1);
+    }
+
     #checkbox-doc {
         .slab-border-error,
         .slab-border-success {
@@ -1131,12 +1147,36 @@
         }
     }
 
+ feature/update-radio-button-page
     #radio-button-doc {
         #how-to-container {
             .slab {
                 min-height: 18rem;
             }
         }
+    }
+
+    #loader-page-overview {
+        .component-preview-content {
+            padding: 7.5rem;
+
+            .loader-preview-container {
+                &.dark {
+                    background-color: @dark-brown;
+                }
+            }
+        }
+
+        #loaders-how-to-use {
+            .slab {
+                height: 15.375rem;
+            }
+        }
+    }
+
+
+    .text-align-center {
+        text-align: center;
     }
 }
 

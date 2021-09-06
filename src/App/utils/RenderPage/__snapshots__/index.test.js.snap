@@ -209,7 +209,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             Object {
               "componentPath": "components/ActionList",
               "icon": "list",
-              "outlined": false,
               "path": "/components/action-list",
               "statusBadges": Array [
                 "javascript",
@@ -218,8 +217,7 @@ exports[`Utilities: RenderPage renders 1`] = `
             },
             Object {
               "componentPath": "components/Alerts",
-              "icon": "error",
-              "outlined": true,
+              "icon": "error_outlined",
               "path": "/components/alerts",
               "statusBadges": Array [
                 "javascript",
@@ -324,6 +322,7 @@ exports[`Utilities: RenderPage renders 1`] = `
             },
             Object {
               "componentPath": "components/InputField",
+              "icon": "text_fields",
               "path": "/components/input-field",
               "title": "Input field",
             },
@@ -342,14 +341,16 @@ exports[`Utilities: RenderPage renders 1`] = `
               "title": "Lists",
             },
             Object {
-              "componentPath": "components/Loaders",
+              "componentPath": "components/Loader",
               "icon": "loop",
               "outlined": true,
-              "path": "/components/loaders",
-              "title": "Loaders",
+              "path": "/components/loader",
+              "title": "Loader",
             },
             Object {
               "componentPath": "components/MediaObject",
+              "icon": "account_circle",
+              "outlined": true,
               "path": "/components/media-object",
               "statusBadges": Array [
                 "remove",
@@ -375,25 +376,27 @@ exports[`Utilities: RenderPage renders 1`] = `
             },
             Object {
               "componentPath": "components/Panel",
+              "icon": "table_rows",
+              "outlined": true,
               "path": "/components/panel",
               "title": "Panel",
             },
             Object {
               "componentPath": "components/ProgressSteps",
               "icon": "hdr_strong",
-              "outlined": true,
               "path": "/components/progress-steps",
               "title": "Progress steps",
             },
             Object {
               "componentPath": "components/RadioButton",
               "icon": "radio_button_checked",
-              "outlined": true,
               "path": "/components/radio-button",
               "title": "Radio button",
             },
             Object {
               "componentPath": "components/Rangeslider",
+              "icon": "tune",
+              "outlined": true,
               "path": "/components/rangeslider",
               "title": "Rangeslider",
             },
@@ -409,11 +412,15 @@ exports[`Utilities: RenderPage renders 1`] = `
             },
             Object {
               "componentPath": "components/Select",
+              "icon": "arrow_drop_down_circle",
+              "outlined": true,
               "path": "/components/select",
               "title": "Select",
             },
             Object {
               "componentPath": "components/Sidebar",
+              "icon": "view_sidebar",
+              "outlined": true,
               "path": "/components/sidebar",
               "statusBadges": Array [
                 "javascript",
@@ -423,6 +430,8 @@ exports[`Utilities: RenderPage renders 1`] = `
             },
             Object {
               "componentPath": "components/Slab",
+              "icon": "crop_landscape",
+              "outlined": true,
               "path": "/components/slab",
               "title": "Slab",
             },
@@ -463,6 +472,8 @@ exports[`Utilities: RenderPage renders 1`] = `
             },
             Object {
               "componentPath": "components/Togglebox",
+              "icon": "toggle_off",
+              "outlined": true,
               "path": "/components/togglebox",
               "title": "Togglebox",
             },
@@ -478,6 +489,8 @@ exports[`Utilities: RenderPage renders 1`] = `
             },
             Object {
               "componentPath": "components/Topbar",
+              "icon": "call_to_action",
+              "outlined": true,
               "path": "/components/topbar",
               "statusBadges": Array [
                 "javascript",

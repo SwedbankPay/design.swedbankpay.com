@@ -121,11 +121,25 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                 return "update switchcase!";
         }
 
+        const copyToClipboard = e => {
+            navigator.clipboard.writeText(code);
+
+            e.target.dataset.tooltip = "Copied!";
+        };
+
+        const tooltipContent = e => {
+            navigator.clipboard.readText().then(copied => {
+                e.target.dataset.tooltip = copied === code ? "Copied!" : "Copy to clipboard";
+            });
+
+        };
+
         return (
             <figure>
                 <div className="code-view">
                     <header className="code-view-header">
                         {language.toUpperCase()}
+                        <i className="material-icons material-icons-outlined" data-tooltip onMouseEnter={e => tooltipContent(e)} onClick={e => copyToClipboard(e)}>content_copy</i>
                     </header>
                     <table className="code-view-table">
                         <tbody>
@@ -254,8 +268,8 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                             </div>
                         </div>
                         <div className="d-flex">
-                            <div className="flex-column flex-fill">
-                                <div className="component-preview">
+                            <div className="d-flex flex-column flex-fill">
+                                <div className="component-preview flex-fill">
                                     <div className={`component-preview-content${this.state.activeTab.altBackground ? " component-preview-alt-background" : ""}`}>
                                         {cloneElement(this.state.activeTab.component,
                                             this.state.activeOptions.reduce((acc, currentOption) => ({

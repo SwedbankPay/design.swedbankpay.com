@@ -32,15 +32,13 @@ module.exports = [
                 path: "/components/action-list",
                 componentPath: "components/ActionList",
                 icon: "list",
-                outlined: false,
                 statusBadges: ["javascript"]
             },
             {
                 title: "Alerts",
                 path: "/components/alerts",
                 componentPath: "components/Alerts",
-                icon: "error",
-                outlined: true,
+                icon: "error_outlined",
                 statusBadges: ["javascript"]
             },
             {
@@ -135,7 +133,8 @@ module.exports = [
             {
                 title: "Input field",
                 path: "/components/input-field",
-                componentPath: "components/InputField"
+                componentPath: "components/InputField",
+                icon: "text_fields"
             },
             /* {
                 title: "Lightbox",
@@ -157,9 +156,9 @@ module.exports = [
                 outlined: true
             },
             {
-                title: "Loaders",
-                path: "/components/loaders",
-                componentPath: "components/Loaders",
+                title: "Loader",
+                path: "/components/loader",
+                componentPath: "components/Loader",
                 icon: "loop",
                 outlined: true
             },
@@ -167,6 +166,8 @@ module.exports = [
                 title: "Media Object",
                 path: "/components/media-object",
                 componentPath: "components/MediaObject",
+                icon: "account_circle",
+                outlined: true,
                 statusBadges: ["remove"]
             },
             {
@@ -187,26 +188,28 @@ module.exports = [
             {
                 title: "Panel",
                 path: "/components/panel",
-                componentPath: "components/Panel"
+                componentPath: "components/Panel",
+                icon: "table_rows",
+                outlined: true
             },
             {
                 title: "Progress steps",
                 path: "/components/progress-steps",
                 componentPath: "components/ProgressSteps",
-                icon: "hdr_strong",
-                outlined: true
+                icon: "hdr_strong"
             },
             {
                 title: "Radio button",
                 path: "/components/radio-button",
                 componentPath: "components/RadioButton",
-                icon: "radio_button_checked",
-                outlined: true
+                icon: "radio_button_checked"
             },
             {
                 title: "Rangeslider",
                 path: "/components/rangeslider",
-                componentPath: "components/Rangeslider"
+                componentPath: "components/Rangeslider",
+                icon: "tune",
+                outlined: true
             },
             {
                 title: "Sheet",
@@ -219,18 +222,24 @@ module.exports = [
             {
                 title: "Select",
                 path: "/components/select",
-                componentPath: "components/Select"
+                componentPath: "components/Select",
+                icon: "arrow_drop_down_circle",
+                outlined: true
             },
             {
                 title: "Sidebar",
                 path: "/components/sidebar",
                 componentPath: "components/Sidebar",
+                icon: "view_sidebar",
+                outlined: true,
                 statusBadges: ["javascript", "updated"]
             },
             {
                 title: "Slab",
                 path: "/components/slab",
-                componentPath: "components/Slab"
+                componentPath: "components/Slab",
+                icon: "crop_landscape",
+                outlined: true
             },
             {
                 title: "Status",
@@ -265,7 +274,9 @@ module.exports = [
             {
                 title: "Togglebox",
                 path: "/components/togglebox",
-                componentPath: "components/Togglebox"
+                componentPath: "components/Togglebox",
+                icon: "toggle_off",
+                outlined: true
             },
             {
                 title: "Tooltips",
@@ -279,6 +290,8 @@ module.exports = [
                 title: "Topbar",
                 path: "/components/topbar",
                 componentPath: "components/Topbar",
+                icon: "call_to_action",
+                outlined: true,
                 statusBadges: ["javascript", "updated"]
             }
         ]
