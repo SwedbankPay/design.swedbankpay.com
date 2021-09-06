@@ -50,7 +50,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
       When a text field is not required to be filled by the user, label it as “optional”.
     </li>
     <li>
-      If there is a need for a more detailed description, a help icon which triggers a Popover on click can be added after the label. 
+      If there is a need for a more detailed description, a help icon can be added after the label. 
     </li>
   </ul>
   <h3>
@@ -63,7 +63,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
     className="row placeholder-guideline"
   >
     <div
-      className="col-6"
+      className="col-lg-6 col-sm-12 "
     >
       <div
         className="slab slab-plain slab-border-success pb-4"
@@ -84,7 +84,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
       </p>
     </div>
     <div
-      className="col-6"
+      className="col-lg-6 col-sm-12"
     >
       <div
         className="slab slab-plain slab-border-error pb-4"
@@ -115,7 +115,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
     className="row placeholder-guideline"
   >
     <div
-      className="col-6"
+      className="col-lg-6 col-sm-12"
     >
       <div
         className="slab slab-plain slab-border-success pb-4"
@@ -139,7 +139,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
       </p>
     </div>
     <div
-      className="col-6"
+      className="col-lg-6 col-sm-12"
     >
       <div
         className="slab slab-plain slab-border-error pb-4"
@@ -167,7 +167,9 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
 `;
 
 exports[`Component: InputField DeveloperDocumentation renders 1`] = `
-<section>
+<section
+  id="developer-documentation-container"
+>
   <h2
     id="developer-documentation mb-3"
   >
@@ -197,22 +199,6 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
       type="text"
     />
   </ComponentPreview>
-  <h3>
-    Validation
-  </h3>
-  <p>
-    To use our validation, start by adding the attribute 
-    <CodeTags
-      code="novalidate"
-      type="primary"
-    />
-     to your desired input field. If you wish to validate an entire form, add the validate attribute to the 
-    <CodeTags
-      code="form"
-      type="primary"
-    />
-     tag.
-  </p>
   <h3>
     Error message
   </h3>
@@ -247,28 +233,17 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
     Disabled state
   </h3>
   <p>
-    Disable a input field by adding 
+    Disable a input field by adding the 
     <CodeTags
       code="disabled"
       type="primary"
     />
-     attribute to the desired input field. You can also disable the 
+     attribute to the desired input field and the 
     <CodeTags
       code="form-group"
       type="primary"
     />
-     or 
-    <CodeTags
-      code="fieldset"
-      type="primary"
-    />
-     in which the input field is located, refer to 
-    <Link
-      to="/components/forms"
-    >
-      forms
-    </Link>
-     for more info.
+     where the input field resides.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -402,18 +377,27 @@ exports[`Component: InputField Overview renders 1`] = `
                     Object {
                       "name": "E-mail",
                       "value": Object {
+                        "placeholder": "name@mail.com",
+                        "prefixType": "icon",
+                        "prefixValue": "email",
                         "type": "email",
                       },
                     },
                     Object {
                       "name": "Tel",
                       "value": Object {
+                        "placeholder": "+46 701234567",
+                        "prefixType": "icon",
+                        "prefixValue": "phone",
                         "type": "tel",
                       },
                     },
                     Object {
                       "name": "Password",
                       "value": Object {
+                        "placeholder": "",
+                        "prefixType": "icon",
+                        "prefixValue": "lock",
                         "type": "password",
                       },
                     },
@@ -481,7 +465,7 @@ exports[`Component: InputField Textarea renders 1`] = `
     Textarea
   </h2>
   <p>
-    Use a Textarea when the expected user input is more than one sentence. Textareas must always have a Input label that clearly describes the type of input a field requires and it may also have a Placeholder example text, refer to 
+    Use a Textarea when the expected user input is more than one sentence. Text areas must always have a Input label that clearly describes the type of input a field requires and it may also have a Placeholder example text, refer to 
     <a
       href="#content-guidelines"
     >
