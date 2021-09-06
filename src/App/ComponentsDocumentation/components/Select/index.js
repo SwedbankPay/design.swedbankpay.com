@@ -12,7 +12,7 @@ const WhenToUse = () => (
         {whenToUse.content.map(({ correct, placeholder, selectOptions, label, text }, i) => (
             <React.Fragment key={i}>
                 <div className="row wrong mb-3">
-                    <div className="col-12 col-sm-6">
+                    <div className="col-12 col-sm-6 mb-2">
                         <div className="px-4 slab slab-plain slab-border-success h-100 d-flex flex-column mb-2">
                             <span className="h4">Do</span>
                             {correct}
