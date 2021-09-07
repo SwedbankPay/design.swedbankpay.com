@@ -1,5 +1,16 @@
 import React from "react";
-import Link  from "@components/Link";
+import Link from "@components/Link";
+
+const ShowcaseComponent = ({ rightIcon, leftIcon, linkText, smallFont, backgroundDark, bright }) => (
+    <div className={`loader-preview-container${backgroundDark ? " dark" : ""} d-flex justify-content-center align-items-center`}>
+        <p className= {backgroundDark ? "text-white" : ""}>Paragraph text with a <Link rightIcon={rightIcon} leftIcon={leftIcon} linkText={linkText} smallFont={smallFont} bright={bright}/></p>
+    </div>
+);
+const ShowcaseComponentStandalone = ({ rightIcon, leftIcon, linkText, smallFont, backgroundDark, bright }) => (
+    <div className={`loader-preview-container${backgroundDark ? " dark" : ""} d-flex justify-content-center align-items-center`}>
+        <Link rightIcon={rightIcon} leftIcon={leftIcon} linkText={linkText} smallFont={smallFont} bright={bright}/>
+    </div>
+);
 
 export const overviewLinks = {
     id: "overviewLinks",
@@ -7,8 +18,7 @@ export const overviewLinks = {
     elements: [
         {
             tab: "Inline",
-            component: <>
-                <p>Paragraph text with a <Link linkText="Inline link"/></p></>,
+            component: <ShowcaseComponent linkText="Inline link"/>,
             options: {
                 checkbox: [
                     {
@@ -18,14 +28,15 @@ export const overviewLinks = {
                                 id: "external_link",
                                 name: "External link",
                                 value: {
-                                    rightIcon: "cloud"
+                                    rightIcon: "launch"
                                 }
                             },
                             {
                                 id: "dark_theme_color",
                                 name: "Dark theme",
                                 value: {
-                                    value: "false"
+                                    backgroundDark: true,
+                                    bright: true
                                 }
                             }
                         ]
@@ -39,13 +50,13 @@ export const overviewLinks = {
                             {
                                 name: "Normal",
                                 value: {
-                                    size: "lg"
+                                    smallFont: false
                                 }
                             },
                             {
                                 name: "Small",
                                 value: {
-                                    size: "sm"
+                                    smallFont: true
                                 }
                             }
                         ]
@@ -57,7 +68,7 @@ export const overviewLinks = {
         },
         {
             tab: "Standalone",
-            component: <Link linkText="Standalone link"/>,
+            component: <ShowcaseComponentStandalone linkText="Standalone link"/>,
             options: {
                 checkbox: [
                     {
@@ -66,14 +77,15 @@ export const overviewLinks = {
                                 id: "icon_check",
                                 name: "With icon",
                                 value: {
-                                    icon: "cloud"
+                                    leftIcon: "arrow"
                                 }
                             },
                             {
                                 id: "dark_theme_color",
                                 name: "Dark theme",
                                 value: {
-                                    value: "false"
+                                    backgroundDark: true,
+                                    bright: true
                                 }
                             }
                         ]
@@ -87,13 +99,13 @@ export const overviewLinks = {
                             {
                                 name: "Normal",
                                 value: {
-                                    size: "lg"
+                                    smallFont: false
                                 }
                             },
                             {
                                 name: "Small",
                                 value: {
-                                    size: "sm"
+                                    smallFont: true
                                 }
                             }
                         ]
