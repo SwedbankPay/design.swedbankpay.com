@@ -17,10 +17,10 @@ const Overview = () => (
         <span className="h3 d-inline-block mt-3">When to consider something else</span>
         <ul className="list list-bullet">
             <li>
-                Use a <Link to="/components/button">button</Link> instead of a link for actions. As a general rule, if the user is making changes to the back or front-end of the site when clicking, you should use a button. If the user is being directed to a different page, you can use link.
+                Use a <Link to="/components/buttons">button</Link> instead of a link for actions. As a general rule, if the user is making changes to the back or front-end of the site when clicking, you should use a button. If the user is being directed to a different page, you can use link.
             </li>
             <li>
-                If you have a collection of links and want to highlight and make them appear more as call to ations consider using <Link to="/components/action-link">action links</Link>.
+                If you have a collection of links and want to highlight and make them appear more as call to actions consider using <a href="#action-link">action links</a>
             </li>
         </ul>
     </>

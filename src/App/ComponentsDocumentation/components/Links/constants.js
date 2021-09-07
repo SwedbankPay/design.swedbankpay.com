@@ -12,12 +12,20 @@ export const overviewLinks = {
             options: {
                 checkbox: [
                     {
+                        title: "Alternatives",
                         inputs: [
                             {
                                 id: "external_link",
                                 name: "External link",
                                 value: {
-                                    value: "<p><p/>//TODO"
+                                    rightIcon: "cloud"
+                                }
+                            },
+                            {
+                                id: "dark_theme_color",
+                                name: "Dark theme",
+                                value: {
+                                    value: "false"
                                 }
                             }
                         ]
@@ -59,6 +67,13 @@ export const overviewLinks = {
                                 name: "With icon",
                                 value: {
                                     icon: "cloud"
+                                }
+                            },
+                            {
+                                id: "dark_theme_color",
+                                name: "Dark theme",
+                                value: {
+                                    value: "false"
                                 }
                             }
                         ]
