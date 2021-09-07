@@ -8,10 +8,6 @@ a {
         outline-color: @brand-secondary;
     }
 
-    &.link-small {
-        font-size: 14px;
-    }
-
     &.disabled {
         color: @light-brown;
         text-decoration: none;
@@ -21,7 +17,7 @@ a {
     &.icon-link {
         text-decoration: none;
         display: inline-flex;
-        align-items: flex-start;
+        align-items: center;
 
         &:hover,
         :focus {
@@ -33,6 +29,12 @@ a {
         i {
             font-size: 1rem;
             line-height: 1.5;
+        }
+
+        &.small {
+            i {
+                font-size: 0.875rem;
+            }
         }
     }
 

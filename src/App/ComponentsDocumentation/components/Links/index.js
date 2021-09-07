@@ -12,7 +12,7 @@ const Overview = () => (
     <>
         <h2 id="preview">Links</h2>
         <p>Links should be used when you want to direct a user to a new section, page or website. They can be used on their own or inline within paragraphs.</p>
-        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewLinks} codeFigure />
+        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewLinks} codeFigure removeOuterTag/>
 
         <span className="h3 d-inline-block mt-3">When to consider something else</span>
         <ul className="list list-bullet">

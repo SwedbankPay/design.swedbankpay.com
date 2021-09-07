@@ -5,7 +5,7 @@ import classnames from "classnames";
 const Link = ({ linkText, leftIcon, rightIcon, smallFont, bright }) => {
     const linkClasses = classnames(
         leftIcon || rightIcon ? "icon-link" : null,
-        smallFont ? "link-small" : null,
+        smallFont ? "small" : null,
         bright ? "bright" : null
     );
 

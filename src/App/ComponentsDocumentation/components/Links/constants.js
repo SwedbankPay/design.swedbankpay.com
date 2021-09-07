@@ -1,14 +1,10 @@
 import React from "react";
 import Link from "@components/Link";
 
-const ShowcaseComponent = ({ rightIcon, leftIcon, linkText, smallFont, backgroundDark, bright }) => (
+const ShowcaseComponent = ({ rightIcon, leftIcon, linkText, smallFont, backgroundDark, bright, standalone }) => (
     <div className={`loader-preview-container${backgroundDark ? " dark" : ""} d-flex justify-content-center align-items-center`}>
-        <p className= {backgroundDark ? "text-white" : ""}>Paragraph text with a <Link rightIcon={rightIcon} leftIcon={leftIcon} linkText={linkText} smallFont={smallFont} bright={bright}/></p>
-    </div>
-);
-const ShowcaseComponentStandalone = ({ rightIcon, leftIcon, linkText, smallFont, backgroundDark, bright }) => (
-    <div className={`loader-preview-container${backgroundDark ? " dark" : ""} d-flex justify-content-center align-items-center`}>
-        <Link rightIcon={rightIcon} leftIcon={leftIcon} linkText={linkText} smallFont={smallFont} bright={bright}/>
+        {standalone ? <Link rightIcon={rightIcon} leftIcon={leftIcon} linkText={linkText} smallFont={smallFont} bright={bright}/> :
+            <p className={`mt-3 ${backgroundDark ? "text-white" : ""}`}>Paragraph text with a <Link rightIcon={rightIcon} leftIcon={leftIcon} linkText={linkText} smallFont={smallFont} bright={bright}/></p>}
     </div>
 );
 
@@ -68,16 +64,17 @@ export const overviewLinks = {
         },
         {
             tab: "Standalone",
-            component: <ShowcaseComponentStandalone linkText="Standalone link"/>,
+            component: <ShowcaseComponent linkText="Standalone link" standalone/>,
             options: {
                 checkbox: [
                     {
+                        title: "Alternatives",
                         inputs: [
                             {
                                 id: "icon_check",
                                 name: "With icon",
                                 value: {
-                                    leftIcon: "arrow"
+                                    leftIcon: "arrow_back_ios"
                                 }
                             },
                             {
