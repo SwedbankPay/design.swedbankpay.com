@@ -909,7 +909,11 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
     Payment icons
   </h2>
   <p>
-    Below is a list of payment icons that we use in our products. Be mindful when using payment logotypes. Try to make the payment icon feel more secondary in combination with the Swedbank Pay logotype. We always want the Swedbank Pay logotype to be primary.
+    Below is a list of payment icons that we use in our products. Be mindful when using payment logotypes. Try to make the payment icon feel more secondary in combination with the 
+    TESTBRAND
+     logotype. We always want the 
+    TESTBRAND
+     logotype to be primary.
   </p>
   <h3>
     Example of how to implement payment icons
@@ -1109,7 +1113,9 @@ exports[`Core: Iconography renders 1`] = `
   <p
     className="lead"
   >
-    At Swedbank Pay we use Material icons from Material Design, but we also include icons for well-known payment providers, and flags for most nations in the world. All icons are integrated and are available in HTML and CSS.
+    At 
+    TESTBRAND
+     we use Material icons from Material Design, but we also include icons for well-known payment providers, and flags for most nations in the world. All icons are integrated and are available in HTML and CSS.
   </p>
   <MaterialIcons />
   <CardIcons />

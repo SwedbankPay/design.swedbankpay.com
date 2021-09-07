@@ -15,7 +15,7 @@ exports[`Component: Sidebar renders 1`] = `
         href="/"
       >
         <Logotype
-          alt="Swedbank Pay vertical logo"
+          alt="TESTBRAND vertical logo"
           size="md"
           src="/TEST/designguide/assets/TESTBRAND-logo-v.svg"
           type="vertical"
@@ -202,7 +202,7 @@ exports[`Component: Sidebar renders four levels when four levels is provided 1`]
         href="/"
       >
         <Logotype
-          alt="Swedbank Pay vertical logo"
+          alt="TESTBRAND vertical logo"
           size="md"
           src="/TEST/designguide/assets/TESTBRAND-logo-v.svg"
           type="vertical"
@@ -346,7 +346,7 @@ exports[`Component: Sidebar renders one level when one level is provided 1`] = `
         href="/"
       >
         <Logotype
-          alt="Swedbank Pay vertical logo"
+          alt="TESTBRAND vertical logo"
           size="md"
           src="/TEST/designguide/assets/TESTBRAND-logo-v.svg"
           type="vertical"
@@ -408,7 +408,7 @@ exports[`Component: Sidebar renders three levels when three levels is provided 1
         href="/"
       >
         <Logotype
-          alt="Swedbank Pay vertical logo"
+          alt="TESTBRAND vertical logo"
           size="md"
           src="/TEST/designguide/assets/TESTBRAND-logo-v.svg"
           type="vertical"
@@ -509,7 +509,7 @@ exports[`Component: Sidebar renders two levels when two levels is provided 1`] =
         href="/"
       >
         <Logotype
-          alt="Swedbank Pay vertical logo"
+          alt="TESTBRAND vertical logo"
           size="md"
           src="/TEST/designguide/assets/TESTBRAND-logo-v.svg"
           type="vertical"

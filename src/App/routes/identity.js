@@ -65,7 +65,7 @@ module.exports = [
                 path: "/identity/logotype",
                 componentPath: "identity/Logotype",
                 statusBadges: ["updated"],
-                text: "The Swedbank Pay logotype"
+                text: `The ${process.env.brandTitle} logotype`
             },
             {
                 title: "Page layout",

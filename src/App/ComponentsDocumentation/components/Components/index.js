@@ -22,7 +22,7 @@ const MenuOverview = () => (
 const Components = () => (
     <DocContainer>
         <p className="lead">
-        This is the Swedbank Pay component library. Here we’ve listed all the components in the Swedbank Pay design system. Feel free to look around!
+        This is our component library where we have listed all the components in our design system. Feel free to look around!
         </p>
         <MenuOverview />
     </DocContainer>

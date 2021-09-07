@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import overviewList from "@src/App/routes/identity";
 import { DocContainer } from "@docutils";
 
+const brandTitle = process.env.brandTitle;
+
 const OurBrand = () => (
     <section>
         <h2 id="our-brand">Our brand</h2>
@@ -12,12 +14,12 @@ const OurBrand = () => (
             <p>We are warm and welcoming, we guide, we involve users, we ensure access for all, we are consistent and we design for trust.</p>
         </blockquote>
 
-        <h3>Swedbank Pay design principles</h3>
+        <h3>{brandTitle} design principles</h3>
         <p className="m-0">We let our design principles reflect our brand values. When designing, we try to be warm and welcoming in our tonality. By being consistent with our interactions, involving our users, and ensuring access for all, we strive to create trust and guide our users to complete their tasks successfully.</p>
-        <a href="https://brand-manager.swedbank.com/start/guidelines/swedbank-pay.html" target="_blank" rel="noopener noreferrer"className="icon-link">
+        {brandTitle === "Swedbank pay" && <a href="https://brand-manager.swedbank.com/start/guidelines/swedbank-pay.html" target="_blank" rel="noopener noreferrer"className="icon-link">
             <i className="material-icons" aria-hidden="true">open_in_new</i>
             <span className="ml-2">Swedbank Brand Manager – read more about our brand</span>
-        </a>
+        </a>}
     </section>
 );
 

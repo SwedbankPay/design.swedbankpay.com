@@ -43,7 +43,9 @@ exports[`Components: Topbar Overview renders 1`] = `
     </li>
   </ul>
   <p>
-    With this you get a topbar with the Swedbank Pay logo. In the topbar you can add additional functionality like a menu containing links. To enable this add a 
+    With this you get a topbar with the 
+    TESTBRAND
+     logo. In the topbar you can add additional functionality like a menu containing links. To enable this add a 
     <CodeTags
       code="<button>"
       type="primary"

@@ -131,13 +131,17 @@ exports[`GettingStarted: ForDesigners NeedToHave renders 1`] = `
     What you need to have
   </h2>
   <p>
-    Here are some things you need to have access to in order to get up to speed – our Figma project and the Swedbank Pay fonts.
+    Here are some things you need to have access to in order to get up to speed – our Figma project and the 
+    TESTBRAND
+     fonts.
   </p>
   <h3>
     Design tools
   </h3>
   <p>
-    At Swedbank Pay Design we use Figma for all our design needs, it is an online design and prototyping tool but we recommend that you download the application for the full experience. Everything you need to know about how we work in Figma is documented in our project and can be accessed through the Onboarding file. Please contact one of our design guide team members if you need any help.
+    At 
+    TESTBRAND
+     Design we use Figma for all our design needs, it is an online design and prototyping tool but we recommend that you download the application for the full experience. Everything you need to know about how we work in Figma is documented in our project and can be accessed through the Onboarding file. Please contact one of our design guide team members if you need any help.
   </p>
   <p>
     If you need access to the project contact you manager or write in the Slack channel 
@@ -204,7 +208,9 @@ exports[`GettingStarted: ForDesigners NeedToKnow renders 1`] = `
     What you need to know
   </h2>
   <p>
-    When you have the right tools to get started there are some things that define the Swedbank Pay Design that are good to be familiar with. We try our best to always design with our brand and identity in the back of our heads. 
+    When you have the right tools to get started there are some things that define the 
+    TESTBRAND
+     Design that are good to be familiar with. We try our best to always design with our brand and identity in the back of our heads. 
   </p>
   <h3>
     Brand and identity
@@ -218,24 +224,6 @@ exports[`GettingStarted: ForDesigners NeedToKnow renders 1`] = `
     </Link>
     . 
   </p>
-  <a
-    className="icon-link"
-    href="https://brand-manager.swedbank.com/start/guidelines/swedbank-pay.html"
-    rel="noopener noreferrer"
-    target="_blank"
-  >
-    <i
-      aria-hidden="true"
-      className="material-icons"
-    >
-      launch
-    </i>
-    <span
-      className="ml-2"
-    >
-      Read more about the Swedbank Pay Brand (Swedbank Brand Manager) 
-    </span>
-  </a>
   <h3>
     Grid and breakpoints
   </h3>
@@ -268,7 +256,9 @@ exports[`GettingStarted: ForDesigners renders 1`] = `
   <p
     className="lead mb-5"
   >
-    We are thrilled to have you onboard in the Swedbank Pay Design team. In order to get started designing with us we have prepared a get started guide to help you understand the way our design system and this Design Guide works. Enjoy!
+    We are thrilled to have you onboard in the 
+    TESTBRAND
+     Design team. In order to get started designing with us we have prepared a get started guide to help you understand the way our design system and this Design Guide works. Enjoy!
   </p>
   <NeedToHave />
   <NeedToKnow />

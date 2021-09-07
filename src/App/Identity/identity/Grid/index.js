@@ -196,7 +196,7 @@ const HowItWorks = () => (
 const GridOptions = () => (
     <>
         <h2 id="grid-options">Grid options</h2>
-        <p>Most sizes in the Swedbank Pay DesignGuide is defined using <CodeTags type="secondary" code="rem" />s, <CodeTags type="secondary" code="px" />s are used for grid breakpoints and container widths. This is because the viewport width is in pixels and does not change with the font size.</p>
+        <p>Most sizes in the {process.env.brandTitle} DesignGuide is defined using <CodeTags type="secondary" code="rem" />s, <CodeTags type="secondary" code="px" />s are used for grid breakpoints and container widths. This is because the viewport width is in pixels and does not change with the font size.</p>
         <p>Use this table to see how aspects of the grid system work across multiple devices.</p>
         <table className="table table-striped">
             <thead>

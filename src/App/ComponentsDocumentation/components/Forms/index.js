@@ -237,7 +237,7 @@ const StaticText = () => (
         <h2 id="static-text">Static text</h2>
         <p>To just display static text in forms use a <CodeTags type="primary" code={"<span>"} /> inside a form</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <FormControlText label="Company" text="Swedbank Pay" />
+            <FormControlText label="Company" text={process.env.brandTitle} />
             <FormControlText label="Employee" text="Bob Corlsan" />
         </ComponentPreview>
     </>
