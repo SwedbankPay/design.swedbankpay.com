@@ -6,6 +6,15 @@ import LinkComponent from "@components/Link";
 import ButtonComponent from "@components/Button";
 import CodeTags from "@components/CodeTags";
 
+import { overviewLinks } from "./constants";
+
+const Overview = () => (
+    <>
+        <h2 id="preview">Links</h2>
+        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewLinks} codeFigure />
+    </>
+);
+
 const TextLinks = () => (
     <>
         <h2 id="text-links">Text links</h2>
@@ -131,6 +140,7 @@ const Links = () => (
         <p className="lead">
             Links
         </p>
+        <Overview/>
         <TextLinks />
         <ButtonLinks />
         <IconLinks />
