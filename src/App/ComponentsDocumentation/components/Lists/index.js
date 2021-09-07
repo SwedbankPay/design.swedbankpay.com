@@ -303,7 +303,7 @@ const StripedItemList = () => (
                     <span>{"\n\t\t\t"}4925*********004{"\n\t\t\t"}
                         <span className="badge badge-blue">new</span>{"\n"}
                     </span>{"\n"}
-                    <a href="https://developer.payex.com">developer.swedbankpay.com</a>{"\n"}
+                    <a href="https://developer.payex.com">developer.{process.env.brand}.com</a>{"\n"}
                 </li>
                 <li>{"\n"}
                     <span>4925*********004</span>{"\n"}

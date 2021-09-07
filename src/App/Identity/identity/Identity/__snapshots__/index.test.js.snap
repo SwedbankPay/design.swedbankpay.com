@@ -162,7 +162,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
           Logotype
         </span>
         <span>
-          The Swedbank Pay logotype
+          The TESTBRAND logotype
         </span>
       </div>
       <i
@@ -262,31 +262,14 @@ exports[`Identity: Identity OurBrand renders 1`] = `
     </p>
   </blockquote>
   <h3>
-    Swedbank Pay design principles
+    TESTBRAND
+     design principles
   </h3>
   <p
     className="m-0"
   >
     We let our design principles reflect our brand values. When designing, we try to be warm and welcoming in our tonality. By being consistent with our interactions, involving our users, and ensuring access for all, we strive to create trust and guide our users to complete their tasks successfully.
   </p>
-  <a
-    className="icon-link"
-    href="https://brand-manager.swedbank.com/start/guidelines/swedbank-pay.html"
-    rel="noopener noreferrer"
-    target="_blank"
-  >
-    <i
-      aria-hidden="true"
-      className="material-icons"
-    >
-      open_in_new
-    </i>
-    <span
-      className="ml-2"
-    >
-      Swedbank Brand Manager – read more about our brand
-    </span>
-  </a>
 </section>
 `;
 

@@ -696,7 +696,9 @@ exports[`Documentation: Lists StripedItemList prevents default on anchors 1`] = 
         <a
           href="https://developer.payex.com"
         >
-          developer.swedbankpay.com
+          developer.
+          TESTBRAND
+          .com
         </a>
         
 
@@ -823,7 +825,9 @@ exports[`Documentation: Lists StripedItemList renders 1`] = `
         <a
           href="https://developer.payex.com"
         >
-          developer.swedbankpay.com
+          developer.
+          TESTBRAND
+          .com
         </a>
         
 

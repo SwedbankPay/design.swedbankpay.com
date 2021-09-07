@@ -5,6 +5,8 @@ import { ComponentPreview, DocContainer } from "@docutils";
 import IconPreview from "@components/IconPreview";
 import CodeTags from "@components/CodeTags";
 
+const brandTitle = process.env.brandTitle;
+
 const MaterialIcons = () => (
     <section>
         <h2 id="material-rounded-icons">Material Outlined Icons</h2>
@@ -71,7 +73,7 @@ const CardIcons = () => (
 const PaymentIcons = () => (
     <section>
         <h2 id="payment-icons">Payment icons</h2>
-        <p>Below is a list of payment icons that we use in our products. Be mindful when using payment logotypes. Try to make the payment icon feel more secondary in combination with the Swedbank Pay logotype. We always want the Swedbank Pay logotype to be primary.</p>
+        <p>Below is a list of payment icons that we use in our products. Be mindful when using payment logotypes. Try to make the payment icon feel more secondary in combination with the {brandTitle} logotype. We always want the {brandTitle} logotype to be primary.</p>
 
         <h3>Example of how to implement payment icons</h3>
         <p>To use an icon, provide the following markup: <CodeTags type="primary" code={"<i class=\"payment-icon payment-icon-{icon-name}\" aria-hidden=\"true\" /i>"} /></p>
@@ -173,7 +175,7 @@ const Flags = () => (
 const Iconography = () => (
     <DocContainer>
         <p className="lead">
-        At Swedbank Pay we use Material icons from Material Design, but we also include icons for well-known payment providers, and flags for most nations in the world. All icons are integrated and are available in HTML and CSS.
+        At {brandTitle} we use Material icons from Material Design, but we also include icons for well-known payment providers, and flags for most nations in the world. All icons are integrated and are available in HTML and CSS.
         </p>
         <MaterialIcons />
         <CardIcons />

@@ -581,13 +581,13 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                     href="/"
                   >
                     <Logotype
-                      alt="Swedbank Pay vertical logo"
+                      alt="TESTBRAND vertical logo"
                       size="md"
                       src="/TEST/designguide/assets/TESTBRAND-logo-v.svg"
                       type="vertical"
                     >
                       <img
-                        alt="Swedbank Pay vertical logo"
+                        alt="TESTBRAND vertical logo"
                         className="logotype-vertical logotype-md"
                         src="/TEST/designguide/assets/TESTBRAND-logo-v.svg"
                       />

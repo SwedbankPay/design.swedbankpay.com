@@ -6,14 +6,15 @@ import Lightbox from "@components/Lightbox";
 import { DocContainer } from "@docutils";
 
 const basename = process.env.basename;
+const brandTitle = process.env.brandTitle;
 
 const NeedToHave = () => (
     <section>
         <h2 id="need-to-have">What you need to have</h2>
-        <p>Here are some things you need to have access to in order to get up to speed – our Figma project and the Swedbank Pay fonts.</p>
+        <p>Here are some things you need to have access to in order to get up to speed – our Figma project and the {brandTitle} fonts.</p>
 
         <h3>Design tools</h3>
-        <p>At Swedbank Pay Design we use Figma for all our design needs, it is an online design and prototyping tool but we recommend that you download the application for the full experience. Everything you need to know about how we work in Figma is documented in our project and can be accessed through the Onboarding file. Please contact one of our design guide team members if you need any help.</p>
+        <p>At {brandTitle} Design we use Figma for all our design needs, it is an online design and prototyping tool but we recommend that you download the application for the full experience. Everything you need to know about how we work in Figma is documented in our project and can be accessed through the Onboarding file. Please contact one of our design guide team members if you need any help.</p>
         <p>If you need access to the project contact you manager or write in the Slack channel <strong>#design-guide-general.</strong></p>
         <a href="https://www.figma.com/downloads/" className="icon-link d-block" target="_blank" rel="noopener noreferrer">
             <i className="material-icons" aria-hidden="true">launch</i>
@@ -31,14 +32,14 @@ const NeedToHave = () => (
 const NeedToKnow = () => (
     <section>
         <h2 id="need-to-know">What you need to know</h2>
-        <p>When you have the right tools to get started there are some things that define the Swedbank Pay Design that are good to be familiar with. We try our best to always design with our brand and identity in the back of our heads. </p>
+        <p>When you have the right tools to get started there are some things that define the {brandTitle} Design that are good to be familiar with. We try our best to always design with our brand and identity in the back of our heads. </p>
 
         <h3>Brand and identity</h3>
         <p>Open, simple and caring. These are our values that we always strive to come back to when we design both internal and external experiences. All information about our core values and things that make us who we are can be found in <Link to="/identity/identity">Identity</Link>. </p>
-        <a href="https://brand-manager.swedbank.com/start/guidelines/swedbank-pay.html" className="icon-link" target="_blank" rel="noopener noreferrer">
+        {brandTitle === "Swedbank Pay" && <a href="https://brand-manager.swedbank.com/start/guidelines/swedbank-pay.html" className="icon-link" target="_blank" rel="noopener noreferrer">
             <i className="material-icons" aria-hidden="true">launch</i>
             <span className="ml-2">Read more about the Swedbank Pay Brand (Swedbank Brand Manager) </span>
-        </a>
+        </a>}
 
         <h3>Grid and breakpoints</h3>
         <p>In order to align design and development as close as possible with each other we have pre-defined grids in Figma using the same size and breakpoints as in development. These grids are available in Figma and you can read more about how it is setup in the <Link to="/identity/grid">Grid section</Link>.</p>
@@ -88,7 +89,7 @@ const DiscoverMore = () => (
 
 const ForDevelopers = () => (
     <DocContainer>
-        <p className="lead mb-5">We are thrilled to have you onboard in the Swedbank Pay Design team. In order to get started designing with us we have prepared a get started guide to help you understand the way our design system and this Design Guide works. Enjoy!</p>
+        <p className="lead mb-5">We are thrilled to have you onboard in the {brandTitle} Design team. In order to get started designing with us we have prepared a get started guide to help you understand the way our design system and this Design Guide works. Enjoy!</p>
         <NeedToHave />
         <NeedToKnow />
         <Contributing />

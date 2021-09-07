@@ -2,15 +2,20 @@ import React from "react";
 import { DocContainer } from "@docutils";
 
 const basename = process.env.basename;
+const brandTitle = process.env.brandTitle;
 
 const ImageLibrary = () => (
     <section>
         <h2 id="image-library">Image library</h2>
-        <p>All images displayed in a Swedbank Pay interface should be from the Swedbank Pay Image library. Note that the images only can be used in Swedbank Pay productions. If you need access to the library, contact current Head of Marketing. </p>
-        <a href="https://payex.pickit.com/" target="_blank" rel="noopener noreferrer" className="icon-link d-block d-flex"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Visit the Swedbank Pay Image Library</span></a>
+        <p>All images displayed in a {brandTitle} interface should be from the {brandTitle} Image library. Note that the images only can be used in {brandTitle} productions. If you need access to the library, contact current Head of Marketing. </p>
+
+        {brandTitle === "Swedbank Pay" &&
+            <a href="https://payex.pickit.com/" target="_blank" rel="noopener noreferrer" className="icon-link d-block d-flex"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Visit the Swedbank Pay Image Library</span></a>
+        }
         <img src={`${basename}img/documentation/imagery/image-group.svg`} className="w-100" alt="collection of images"/>
+
         <h3>Finding the right images</h3>
-        <p>There are several images to choose from when working with Swedbank Pay products. Because Swedbank Pay is a payment service for all, it’s extra important to think about diversity when picking images for a product. To choose a great image, reflect over the context you’re bringing the image into and check if and where the image is used in other Swedbank Pay products. If an images is strongly associated with a certain page or feature, consider using another. We strive to use a variation of the library images while also giving the image a purpose. </p>
+        <p>There are several images to choose from when working with {brandTitle} products. Because {brandTitle} is a payment service for all, it’s extra important to think about diversity when picking images for a product. To choose a great image, reflect over the context you’re bringing the image into and check if and where the image is used in other {brandTitle} products. If an images is strongly associated with a certain page or feature, consider using another. We strive to use a variation of the library images while also giving the image a purpose. </p>
         <p><span className="font-weight-bold">TIP</span>: Once you’ve found a picture you think might work, try it in Figma – if it doesn’t work, keep looking and try again!</p>
     </section>
 );

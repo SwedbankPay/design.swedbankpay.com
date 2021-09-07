@@ -731,7 +731,9 @@ exports[`Core: Grid GridOptions renders 1`] = `
     Grid options
   </h2>
   <p>
-    Most sizes in the Swedbank Pay DesignGuide is defined using 
+    Most sizes in the 
+    TESTBRAND
+     DesignGuide is defined using 
     <CodeTags
       code="rem"
       type="secondary"
