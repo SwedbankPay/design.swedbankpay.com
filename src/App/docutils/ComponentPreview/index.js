@@ -258,7 +258,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
         render () {
             return (
                 <>
-                    <div id={this.props.showCasePanelAdvanced.id} className={`showcase-panel showcase-panel-advanced${this.state.optionsOpen ? " options-active" : ""}`}>
+                    <div id={this.props.showCasePanelAdvanced.id} className={`showcase-panel showcase-panel-advanced${this.state.optionsOpen ? " options-active" : ""}${this.state.hideOptions ? " hide-options" : ""}`}>
                         <div id={this.props.showCasePanelAdvanced.tabsId} className="tabs tabs-scroll">
                             <ul id={`${this.props.showCasePanelAdvanced.tabsId}-ul`}>
                                 {this.props.showCasePanelAdvanced.elements.map((element, i) => <li key={i} className={this.state.activeTab.tab === element.tab ? "active" : null}>
