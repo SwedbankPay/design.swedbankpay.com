@@ -1,10 +1,17 @@
 import React from "react";
 import Link from "@components/Link";
+import ActionLink from "~/src/App/components/ActionLink";
 
 const ShowcaseComponent = ({ rightIcon, leftIcon, linkText, smallFont, backgroundDark, bright, standalone }) => (
     <div className={`loader-preview-container${backgroundDark ? " dark" : ""} d-flex justify-content-center align-items-center`}>
         {standalone ? <Link rightIcon={rightIcon} leftIcon={leftIcon} linkText={linkText} smallFont={smallFont} bright={bright}/> :
             <p className={`mt-3 ${backgroundDark ? "text-white" : ""}`}>Paragraph text with a <Link rightIcon={rightIcon} leftIcon={leftIcon} linkText={linkText} smallFont={smallFont} bright={bright}/></p>}
+    </div>
+);
+
+const ShowcaseActionComponent = ({ linkText, badge, smallText, multiline, newTab }) => (
+    <div>
+        <ActionLink linkText={linkText} badge={badge} smallText={smallText} multiline={multiline} newTab={newTab}/>
     </div>
 );
 
@@ -111,6 +118,45 @@ export const overviewLinks = {
             },
             title: "Standalone links",
             description: "Standalone links are separate to paragraph content and appear on there own. They can be user with a leading icon to further convey the result of clicking the link. Links with icons are not underlined."
+        }
+    ]
+};
+
+export const overviewActionLinks = {
+    id: "no-tabs",
+    elements: [
+        {
+            component: <ShowcaseActionComponent linkText="Pay now"/>,
+            options: {
+                checkbox: [
+                    {
+                        title: "Modifiers",
+                        inputs: [
+                            {
+                                id: "infoText",
+                                name: "Info text",
+                                value: {
+                                    smallText: "Pay your invoices in your tempo"
+                                }
+                            },
+                            {
+                                id: "badge",
+                                name: "With Badge",
+                                value: {
+                                    badge: "40"
+                                }
+                            },
+                            {
+                                id: "externalLink",
+                                name: "External link",
+                                value: {
+                                    newTab: true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     ]
 };

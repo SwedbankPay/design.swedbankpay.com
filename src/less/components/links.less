@@ -17,7 +17,7 @@ a {
     &.icon-link {
         text-decoration: none;
         display: inline-flex;
-        align-items: center;
+        align-items: baseline;
 
         &:hover,
         :focus {
@@ -29,6 +29,7 @@ a {
         i {
             font-size: 1rem;
             line-height: 1.5;
+            align-self: flex-end;
         }
 
         &.small {
@@ -101,10 +102,5 @@ a {
         font-size: 0.75rem;
         color: @text-gray;
         padding-left: 0.5rem;
-    }
-
-    // Temporary solution until DG-323 (https://payexjira.atlassian.net/secure/RapidBoard.jspa?rapidView=80&projectKey=DG&modal=detail&selectedIssue=DG-323) is solved [AW].
-    > * {
-        margin-right: 0.5rem;
     }
 }

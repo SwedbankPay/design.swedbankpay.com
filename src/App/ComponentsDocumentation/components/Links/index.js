@@ -6,7 +6,7 @@ import LinkComponent from "@components/Link";
 import ButtonComponent from "@components/Button";
 import CodeTags from "@components/CodeTags";
 import { Link } from "react-router-dom";
-import { overviewLinks } from "./constants";
+import { overviewLinks, overviewActionLinks } from "./constants";
 
 const Overview = () => (
     <>
@@ -66,7 +66,9 @@ const Overview = () => (
 
 const ActionLink = () => (
     <>
-    Hello
+        <h2 id="preview">Action links</h2>
+        <p>Although links are to be used for navigation and not actions we sometimes have a need to highlight links and make them appear more as call to actions. In this case Action links, that will redirect the user to perform an action on another page, can be used. Actions links are normally used in a collection consisting of a few different action links with equally important actions to be made.</p>
+        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewActionLinks} codeFigure removeOuterTag/>
     </>
 )
 
@@ -127,16 +129,6 @@ const IconLinks = () => (
         </ComponentPreview>
     </>
 );
-
-/*const ActionLink = () => (
-    <>
-        <h2 id="action-link">Action link</h2>
-        <p>Action links.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <ActionLinkComponent linkText="My link"/>
-        </ComponentPreview>
-    </>
-);*/
 
 const badge = {
     type: "badge-default badge-number",
