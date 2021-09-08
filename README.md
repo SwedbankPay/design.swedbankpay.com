@@ -180,7 +180,7 @@ AppVeyor will now create and deploy a release on both github and
 
 - [Phung Nguyen][PhungNg]
 - [Thomas Lorntzen][VikingTristan]
-- [Eskil Hognestad][Eskilsen]
+- [Eskil Hognestad][eskilsen]
 
 ## Contents of this project
 
@@ -236,7 +236,7 @@ Inspired by [Bootstrap][bootstrap] and [Materialize][materialize].
   [issues]:             https://github.com/swedbankpay/design.swedbankpay.com/issues
   [PhungNg]:            https://github.com/PhungNg
   [VikingTristan]:      https://github.com/VikingTristan
-  [Eskilsen]:           https://github.com/Eskilsen
+  [eskilsen]:           https://github.com/eskilsen
   [babel]:              https://babeljs.io/
   [eslint]:             https://eslint.org/
   [sentry]:             https://sentry.io
