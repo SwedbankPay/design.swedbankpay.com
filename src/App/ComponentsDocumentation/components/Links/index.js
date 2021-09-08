@@ -23,8 +23,52 @@ const Overview = () => (
                 If you have a collection of links and want to highlight and make them appear more as call to actions consider using <a href="#action-link">action links</a>
             </li>
         </ul>
+        <h3>How to use links</h3>
+
+        <div className="row">
+            <div className="col-12">
+                <div className="slab slab-plain slab-border-error pb-5 h100" >
+                    <h4>{"Don't"}</h4>
+                    <div className="loader-preview-container d-flex justify-content-center align-items-center mt-3 pt-3">
+                        <p>Paragraph text with a <LinkComponent linkText="Inline link" leftIcon="edit"/>.</p>
+                    </div>
+                </div>
+                <p>{"Don't"} use a leading icon or strip the underline from an inline link. </p>
+            </div>
+            <div className="col-12">
+                <div className="d-flex">
+                    <div className="col-lg-6">
+                        <div className="slab slab-plain slab-border-success pb-5 h100" >
+                            <h4>Do</h4>
+                            <div className="d-flex justify-content-center mt-4 mb-4">
+                                <div className="link-dark-background py-5 px-5">
+                                    <LinkComponent linkText="Standalone link" bright/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-6">
+                        <div className="slab slab-plain slab-border-error pb-5 h100">
+                            <h4>{"Don't"}</h4>
+                            <div className="d-flex justify-content-center mt-4 mb-4">
+                                <div className="link-dark-background p-5">
+                                    <LinkComponent linkText="Standalone link"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>If the background is too dark for the regular link color we recommend using a brighter font color with an underline.</p>
+            </div>
+        </div>
     </>
 );
+
+const ActionLink = () => (
+    <>
+    Hello
+    </>
+)
 
 const TextLinks = () => (
     <>
@@ -84,7 +128,7 @@ const IconLinks = () => (
     </>
 );
 
-const ActionLink = () => (
+/*const ActionLink = () => (
     <>
         <h2 id="action-link">Action link</h2>
         <p>Action links.</p>
@@ -92,7 +136,7 @@ const ActionLink = () => (
             <ActionLinkComponent linkText="My link"/>
         </ComponentPreview>
     </>
-);
+);*/
 
 const badge = {
     type: "badge-default badge-number",
@@ -148,18 +192,20 @@ const ActionLinkNewTab = () => (
 
 const Links = () => (
     <DocContainer docToc>
-        <p className="lead">
-            Links are used as navigational elements and can be used on their own or inline within paragraphs of text.
-        </p>
-        <Overview/>
-        <TextLinks />
-        <ButtonLinks />
-        <IconLinks />
-        <ActionLink />
-        <ActionLinkBadge />
-        <ActionLinkSmallText />
-        <ActionLinkBadgeSmallText />
-        <ActionLinkNewTab />
+        <section id="link-doc">
+            <p className="lead">
+                Links are used as navigational elements and can be used on their own or inline within paragraphs of text.
+            </p>
+            <Overview/>
+            <TextLinks />
+            <ButtonLinks />
+            <IconLinks />
+            <ActionLink />
+            <ActionLinkBadge />
+            <ActionLinkSmallText />
+            <ActionLinkBadgeSmallText />
+            <ActionLinkNewTab />
+        </section>
     </DocContainer>
 );
 
