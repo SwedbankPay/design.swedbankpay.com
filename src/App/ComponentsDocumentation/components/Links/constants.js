@@ -11,7 +11,9 @@ const ShowcaseComponent = ({ rightIcon, leftIcon, linkText, smallFont, backgroun
 
 const ShowcaseActionComponent = ({ linkText, badge, smallText, multiline, newTab }) => (
     <div className="action-link-buttons-container">
-        <ActionLink className={`action-link ${badge ? "badge badge-default badge-number": null}`} linkText={linkText} badge={badge} smallText={smallText} multiline={multiline} newTab={newTab}/>
+        <ActionLink linkText="Pay now" className={`action-link ${badge ? "badge badge-default badge-number": null}`}  badge={badge} smallText={smallText} multiline={multiline} newTab={newTab}/>
+        <ActionLink linkText="Pay on the settlement date" className={`action-link ${badge ? "badge badge-default badge-number": null}`}  badge={badge} smallText={smallText} multiline={multiline} newTab={newTab}/>
+        <ActionLink linkText="Add to my credit" className={`action-link ${badge ? "badge badge-default badge-number": null}`}  badge={badge} smallText={smallText} multiline={multiline} newTab={newTab}/>
     </div>
 );
 
