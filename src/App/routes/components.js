@@ -16,8 +16,7 @@ module.exports = [
             {
                 title: "Overview",
                 path: "/components/components",
-                componentPath: "components/Components",
-                statusBadges: ["new"]
+                componentPath: "components/Components"
             },
             {
                 title: "Accordion",
@@ -60,8 +59,7 @@ module.exports = [
                 path: "/components/buttons",
                 componentPath: "components/Buttons",
                 icon: "touch_app",
-                outlined: true,
-                statusBadges: ["updated"]
+                outlined: true
             },
             {
                 title: "Cards",
@@ -167,8 +165,7 @@ module.exports = [
                 path: "/components/media-object",
                 componentPath: "components/MediaObject",
                 icon: "account_circle",
-                outlined: true,
-                statusBadges: ["remove"]
+                outlined: true
             },
             {
                 title: "Navigation",
@@ -232,7 +229,7 @@ module.exports = [
                 componentPath: "components/Sidebar",
                 icon: "view_sidebar",
                 outlined: true,
-                statusBadges: ["javascript", "updated"]
+                statusBadges: "javascript"
             },
             {
                 title: "Slab",
@@ -292,7 +289,7 @@ module.exports = [
                 componentPath: "components/Topbar",
                 icon: "call_to_action",
                 outlined: true,
-                statusBadges: ["javascript", "updated"]
+                statusBadges: "javascript"
             }
         ]
     }
