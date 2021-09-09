@@ -171,7 +171,6 @@ class Card extends Component {
                     use <Link to="/components/links">Links</Link> instead.
                 </p>
                 <Overview />
-                <OldCard />
             </DocContainer>
         );
     }
