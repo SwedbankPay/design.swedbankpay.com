@@ -11,7 +11,7 @@ const ActionLink = props => {
                     <ActionLinkContent {...otherProps} />
                 </a>
                 :
-                <a className="action-link" href="#" >{"\n"}
+                <a className={`action-link ${otherProps.multiline ? "multiline" : ""}`} href="#" >{"\n"}
                     <ActionLinkContent {...otherProps} />
                 </a>
             }
@@ -21,19 +21,28 @@ const ActionLink = props => {
 
 const ActionLinkContent = ({ linkText, badge, smallText, multiline, newTab }) => (
     <>
-        {newTab ? <><i className="material-icons" aria-hidden="true">open_in_new</i>{"\n"}</> : null}
-        {badge ? <><span className={`badge ${badge.type}`}>{badge.text}</span>{"\n"}</> : null}
         {multiline ?
             <span className="action-link-multiline">{"\n"}
-                {linkText}{"\n"}
-                {smallText ? <span className="small-text">{smallText}</span> : null }{"\n"}
+                <div>
+                    <div className="d-flex flex-row">
+                        <h4 className="mb-0 mr-1">{linkText}</h4>{"\n"}
+                        {badge ? <><span className={`badge ${badge.type}`}>{badge.text}</span>{"\n"}</> : null}
+                    </div>
+                    <div>
+                        {smallText ? <span className="small-text">{smallText}</span> : null }{"\n"}
+                    </div>
+                </div>
             </span>
             :
             <>
-                {linkText}{"\n"}
-                {smallText ? <span className="small-text">{smallText}</span> : null }{"\n"}
+                <h4 className="mb-0 mr-1">{linkText}</h4>{"\n"}
+                {badge ? <><span className={`badge ${badge.type}`}>{badge.text}</span>{"\n"}</> : null}
+                <div>
+                    {smallText ? <span className="small-text">{smallText}</span> : null }{"\n"}
+                </div>
             </>
         }{"\n"}
+        {newTab ? <><i className="material-icons" aria-hidden="true">open_in_new</i>{"\n"}</> : null}
     </>
 );
 
