@@ -28,39 +28,37 @@ const Overview = () => (
         <div className="row">
             <div className="col-12">
                 <div className="slab slab-plain slab-border-error pb-5 h100" >
-                    <h4>{"Don't"}</h4>
+                    <h4>Don&apos;t</h4>
                     <div className="loader-preview-container d-flex justify-content-center align-items-center mt-3 pt-3">
                         <p>Paragraph text with a <LinkComponent linkText="Inline link" leftIcon="edit"/>.</p>
                     </div>
                 </div>
-                <p>{"Don't"} use a leading icon or strip the underline from an inline link. </p>
+                <p>Don&apos;t use a leading icon or strip the underline from an inline link. </p>
             </div>
-            <div className="col-12">
-                <div className="d-flex">
-                    <div className="col-lg-6">
-                        <div className="slab slab-plain slab-border-success pb-5 h100" >
-                            <h4>Do</h4>
-                            <div className="d-flex justify-content-center mt-4 mb-4">
-                                <div className="link-dark-background py-5 px-5">
-                                    <LinkComponent linkText="Standalone link" bright/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-6">
-                        <div className="slab slab-plain slab-border-error pb-5 h100">
-                            <h4>{"Don't"}</h4>
-                            <div className="d-flex justify-content-center mt-4 mb-4">
-                                <div className="link-dark-background p-5">
-                                    <LinkComponent linkText="Standalone link"/>
-                                </div>
-                            </div>
+        </div>
+        <div className="row">
+            <div className="col-lg-6">
+                <div className="slab slab-plain slab-border-success pb-5 h100" >
+                    <h4>Do</h4>
+                    <div className="d-flex justify-content-center mt-4 mb-4">
+                        <div className="link-dark-background py-5 px-5">
+                            <LinkComponent linkText="Standalone link" bright/>
                         </div>
                     </div>
                 </div>
-                <p>If the background is too dark for the regular link color we recommend using a brighter font color with an underline.</p>
+            </div>
+            <div className="col-lg-6">
+                <div className="slab slab-plain slab-border-error pb-5 h100">
+                    <h4>{"Don't"}</h4>
+                    <div className="d-flex justify-content-center mt-4 mb-4">
+                        <div className="link-dark-background p-5">
+                            <LinkComponent linkText="Standalone link"/>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <p className="mt-3">If the background is too dark for the regular link color we recommend using a brighter font color with an underline.</p>
     </>
 );
 
@@ -69,7 +67,15 @@ const ActionLink = () => (
         <h2 id="preview">Action links</h2>
         <p>Although links are to be used for navigation and not actions we sometimes have a need to highlight links and make them appear more as call to actions. In this case Action links, that will redirect the user to perform an action on another page, can be used. Actions links are normally used in a collection consisting of a few different action links with equally important actions to be made.</p>
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewActionLinks} codeFigure removeOuterTag/>
-
+        <span className="h3 d-inline-block mt-3">When to consider something else</span>
+        <ul className="list list-bullet">
+            <li>
+                Use a <Link to="/components/buttons">button</Link> instead of a link an action. As a general rule, if the user is making changes to the back or front-end of the site when clicking, you should use a button. If the user is being directed to a different page, you can use link.
+            </li>
+            <li>
+                Use a standalone <Link to="/components/links">link</Link> instead of a action link if you don&apos;t need to highlight and make the links appear more as call to actions.
+            </li>
+        </ul>
     </>
 );
 
@@ -190,14 +196,7 @@ const Links = () => (
                 Links are used as navigational elements and can be used on their own or inline within paragraphs of text.
             </p>
             <Overview/>
-            <TextLinks />
-            <ButtonLinks />
-            <IconLinks />
             <ActionLink />
-            <ActionLinkBadge />
-            <ActionLinkSmallText />
-            <ActionLinkBadgeSmallText />
-            <ActionLinkNewTab />
         </section>
     </DocContainer>
 );

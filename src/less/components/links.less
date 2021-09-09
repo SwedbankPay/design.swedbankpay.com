@@ -52,9 +52,33 @@ a {
         margin-bottom: 1rem;
         border-radius: 4px;
 
-        h4:hover,
-        :focus {
-            text-decoration: underline;
+        &.disabled {
+            background-color: @light-gray;
+
+            h4,
+            .small-text,
+            &:after {
+                color: @light-brown;
+            }
+        
+            &:before,
+            .badge {
+                background-color: @light-brown;
+                border-color: @light-brown;
+                color: @white;
+            }
+
+        }
+
+        &:focus,
+        &:hover {
+            h4 {
+                text-decoration: underline;
+            }
+        }
+
+        &:focus {
+            border: 1px solid @brand-secondary;
         }
 
         h4 {
@@ -67,10 +91,6 @@ a {
 
         &.multiline {
             height: 4rem;
-
-            h4 {
-                text-decoration: underline;
-            }
 
             .small-text {
                 text-decoration: none;
@@ -95,14 +115,15 @@ a {
             right: 5px;
             top: calc(50% - @action-link-arrow-font-size / 2);
             margin: 0;
-            color: @brand-secondary;
             font-size: @action-link-arrow-font-size;
+            color: @brand-secondary;
         }
 
-        /*
         &.action-link-new-tab {
-            height: @action-link-new-tab-height;
-        } */
+            &:after {
+                content: "launch";
+            }
+        }
     }
 
     .action-link-multiline {

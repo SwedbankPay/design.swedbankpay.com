@@ -7,11 +7,11 @@ const ActionLink = props => {
     return (
         <>
             {otherProps.newTab ?
-                <a className="action-link action-link-new-tab" href={link ? link : "#"} rel="noopener noreferrer" target="_blank">{"\n"}
+                <a className={`action-link ${otherProps.multiline ? "multiline" : ""} action-link-new-tab ${otherProps.disabled ? "disabled" : ""}`} href={link ? link : "#"} rel="noopener noreferrer" target="_blank">{"\n"}
                     <ActionLinkContent {...otherProps} />
                 </a>
                 :
-                <a className={`action-link ${otherProps.multiline ? "multiline" : ""}`} href="#" >{"\n"}
+                <a className={`action-link ${otherProps.multiline ? "multiline" : ""} ${otherProps.disabled ? "disabled" : ""}`} href="#" >{"\n"}
                     <ActionLinkContent {...otherProps} />
                 </a>
             }
@@ -19,7 +19,7 @@ const ActionLink = props => {
     );
 };
 
-const ActionLinkContent = ({ linkText, badge, smallText, multiline, newTab }) => (
+const ActionLinkContent = ({ linkText, badge, smallText, multiline }) => (
     <>
         {multiline ?
             <span className="action-link-multiline">{"\n"}
@@ -42,7 +42,6 @@ const ActionLinkContent = ({ linkText, badge, smallText, multiline, newTab }) =>
                 </div>
             </>
         }{"\n"}
-        {newTab ? <><i className="material-icons" aria-hidden="true">open_in_new</i>{"\n"}</> : null}
     </>
 );
 
