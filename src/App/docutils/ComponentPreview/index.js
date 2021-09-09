@@ -213,6 +213,10 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
             if (prevState.activeTab !== this.state.activeTab) {
                 this._resetOptions();
             }
+
+            if (this.state.activeTab.component.props.id === "tabs-showcase-example") {
+                tabs.init("tabs-showcase-example");
+            }
         }
 
         setActiveTab (e, i) {
@@ -222,7 +226,6 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
             this.setState(prevState => ({ ...prevState,
                 activeTab: this.props.showCasePanelAdvanced.elements[i],
                 activeOptions: this.props.showCasePanelAdvanced.elements[i].activeOptions ? [...this.props.showCasePanelAdvanced.elements[i].activeOptions] : [] }));
-
         }
 
         setActiveOptions (id, value, description, checkbox) {
