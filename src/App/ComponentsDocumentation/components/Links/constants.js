@@ -10,8 +10,8 @@ const ShowcaseComponent = ({ rightIcon, leftIcon, linkText, smallFont, backgroun
 );
 
 const ShowcaseActionComponent = ({ linkText, badge, smallText, multiline, newTab }) => (
-    <div>
-        <ActionLink linkText={linkText} badge={badge} smallText={smallText} multiline={multiline} newTab={newTab}/>
+    <div className="action-link-buttons-container">
+        <ActionLink className={`action-link ${badge ? "badge badge-default badge-number": null}`} linkText={linkText} badge={badge} smallText={smallText} multiline={multiline} newTab={newTab}/>
     </div>
 );
 
@@ -122,11 +122,21 @@ export const overviewLinks = {
     ]
 };
 
+/*
+            <>
+                <div className="action-link-buttons-container">
+                    <ShowcaseActionComponent linkText="Pay now"/>
+                    <ShowcaseActionComponent linkText="Pay on the settlement date"/>
+                    <ShowcaseActionComponent linkText="Add to my credit"/>
+                </div>
+            </>*/ 
+
 export const overviewActionLinks = {
     id: "no-tabs",
     elements: [
         {
-            component: <ShowcaseActionComponent linkText="Pay now"/>,
+            component: 
+            <ShowcaseActionComponent linkText="Pay now"/>,
             options: {
                 checkbox: [
                     {
@@ -143,7 +153,12 @@ export const overviewActionLinks = {
                                 id: "badge",
                                 name: "With Badge",
                                 value: {
-                                    badge: "40"
+                                    badge: 
+                                        {
+                                            type: "badge-default",
+                                            text: "40"
+                                        }
+                                    
                                 }
                             },
                             {

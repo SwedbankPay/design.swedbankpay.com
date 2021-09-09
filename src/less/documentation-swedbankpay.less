@@ -751,6 +751,16 @@
                     align-items: center;
                     justify-content: center;
 
+                    .action-link-buttons-container {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+
+                        .action-link {
+                            margin-top: 1rem;
+                        }
+                    }
+
                     &.component-preview-alt-background {
                         background-color: @brand-primary;
                     }
@@ -1185,7 +1195,6 @@
             border-radius: 8px;
         }
     }
-
 }
 
 
