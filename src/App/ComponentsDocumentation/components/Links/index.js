@@ -5,75 +5,6 @@ import ActionLinkComponent from "@components/ActionLink";
 import LinkComponent from "@components/Link";
 import ButtonComponent from "@components/Button";
 import CodeTags from "@components/CodeTags";
-<<<<<<< Updated upstream
-=======
-import { Link } from "react-router-dom";
-import { overviewLinks, overviewActionLinks } from "./constants";
-
-const Overview = () => (
-    <>
-        <h2 id="preview">Links</h2>
-        <p>Links should be used when you want to direct a user to a new section, page or website. They can be used on their own or inline within paragraphs.</p>
-        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewLinks} codeFigure removeOuterTag/>
-
-        <span className="h3 d-inline-block mt-3">When to consider something else</span>
-        <ul className="list list-bullet">
-            <li>
-                Use a <Link to="/components/buttons">button</Link> instead of a link for actions. As a general rule, if the user is making changes to the back or front-end of the site when clicking, you should use a button. If the user is being directed to a different page, you can use link.
-            </li>
-            <li>
-                If you have a collection of links and want to highlight and make them appear more as call to actions consider using <a href="#action-link">action links</a>
-            </li>
-        </ul>
-        <h3>How to use links</h3>
-
-        <div className="row">
-            <div className="col-12">
-                <div className="slab slab-plain slab-border-error pb-5 h100" >
-                    <h4>{"Don't"}</h4>
-                    <div className="loader-preview-container d-flex justify-content-center align-items-center mt-3 pt-3">
-                        <p>Paragraph text with a <LinkComponent linkText="Inline link" leftIcon="edit"/>.</p>
-                    </div>
-                </div>
-                <p>{"Don't"} use a leading icon or strip the underline from an inline link. </p>
-            </div>
-            <div className="col-12">
-                <div className="d-flex">
-                    <div className="col-lg-6">
-                        <div className="slab slab-plain slab-border-success pb-5 h100" >
-                            <h4>Do</h4>
-                            <div className="d-flex justify-content-center mt-4 mb-4">
-                                <div className="link-dark-background py-5 px-5">
-                                    <LinkComponent linkText="Standalone link" bright/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-6">
-                        <div className="slab slab-plain slab-border-error pb-5 h100">
-                            <h4>{"Don't"}</h4>
-                            <div className="d-flex justify-content-center mt-4 mb-4">
-                                <div className="link-dark-background p-5">
-                                    <LinkComponent linkText="Standalone link"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <p>If the background is too dark for the regular link color we recommend using a brighter font color with an underline.</p>
-            </div>
-        </div>
-    </>
-);
-
-const ActionLink = () => (
-    <>
-        <h2 id="preview">Action links</h2>
-        <p>Although links are to be used for navigation and not actions we sometimes have a need to highlight links and make them appear more as call to actions. In this case Action links, that will redirect the user to perform an action on another page, can be used. Actions links are normally used in a collection consisting of a few different action links with equally important actions to be made.</p>
-        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewActionLinks} codeFigure removeOuterTag/>
-    </>
-);
->>>>>>> Stashed changes
 
 const TextLinks = () => (
     <>
@@ -196,7 +127,6 @@ const ActionLinkNewTab = () => (
 );
 
 const Links = () => (
-<<<<<<< Updated upstream
     <DocContainer docToc>
         <p className="lead">
             Links
@@ -209,23 +139,6 @@ const Links = () => (
         <ActionLinkSmallText />
         <ActionLinkBadgeSmallText />
         <ActionLinkNewTab />
-=======
-    <DocContainer>
-        <section id="link-doc">
-            <p className="lead">
-                Links are used as navigational elements and can be used on their own or inline within paragraphs of text.
-            </p>
-            <Overview/>
-            <TextLinks />
-            <ButtonLinks />
-            <IconLinks />
-            <ActionLink />
-            <ActionLinkBadge />
-            <ActionLinkSmallText />
-            <ActionLinkBadgeSmallText />
-            <ActionLinkNewTab />
-        </section>
->>>>>>> Stashed changes
     </DocContainer>
 );
 

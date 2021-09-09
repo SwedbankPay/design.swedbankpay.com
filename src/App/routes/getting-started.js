@@ -19,7 +19,7 @@ module.exports = [
                 title: "For developers",
                 path: "/get-started/for-developers",
                 componentPath: "getting-started/ForDevelopers",
-                statusBadges: ["new"]
+                statusBadges: ["updated"]
             },
             {
                 title: "For designers",
