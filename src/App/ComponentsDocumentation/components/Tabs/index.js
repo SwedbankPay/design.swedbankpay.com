@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 
-import { ComponentPreview, DocContainer, JavascriptDocs, JavascriptDocElement } from "@docutils";
+import { ComponentPreview, DocContainer } from "@docutils";
 import TabsComponent from "@components/Tabs";
+import { Link } from "react-router-dom";
 import CodeTags from "@components/CodeTags";
 
 import { tabs } from "@src/scripts/main";
@@ -14,12 +15,13 @@ const Overview = () => (
         <div className="showcase-panel p-5">
             <div className="w-75 m-auto">
                 <TabsComponent id="tabs-example" items={[...tabItems.slice(0, 3)]}/>
+                <p>Content of the selected tab</p>
             </div>
         </div>
         <div className="component-description border-left border-right p-4 pb-2">
             <span className="h3 d-inline-block mb-2">Tabs</span>
             <p className="mb-0">
-                The tabs component has three different states, the selected state for the category currently displayed. Unselected state for all the other categories not currently selected and lastly there the hover state when the user hover over an unselected state.
+                Tabs appear in a single row, above their content. Only one tab can be selected at a time and the selected tab decides which content that is shown in the container beneath. The width of each tab is dependent on its label and the width of the row of tabs is dependent on the container, if the container can’t display all the tabs at once the tabs will become scrollable.
             </p>
         </div>
         <ComponentPreview language="html" codeFigure>
@@ -29,18 +31,18 @@ const Overview = () => (
         <section>
             <h3>When to consider something else</h3>
             <ul className="list list-bullet">
-                <li>It is important to consider whether or not dividing the content into sub-categories is helpful for the user. Using Tabs isn’t always the best solution and can create more fragmented experience and leading to issues where the user might miss out on content. Similarly, this is also not idea if the user needs to compare the content. In those cases it is better to present the content on a page with proper headlines and structure.</li>
+                <li>It is important to consider whether or not dividing the content into sub-views is helpful for the user. Using Tabs is not always the best solution and can create more fragmented experience and leading to issues where the user might miss out on content. Consider presenting the content on a page with proper headlines and structure.</li>
             </ul>
         </section>
 
         <section>
             <h3>Scrollable tabs</h3>
-            <div className="slab slab-plain">
+            <div className="slab slab-plain p-5">
                 <div className="w-75 m-auto">
                     <TabsComponent id="tabs-scroll-example" ulId="tabs-scroll-example-ul" items={tabItems} scroll/>
                 </div>
             </div>
-            <p>The tab component also includes scrollable behaviour with the addition of a clickable chevron arrow when the size of the viewport no longer can display all the tab categories at once. The user can navigate inside the tabs menu.</p>
+            <p>The tab component also includes scrollable behaviour with the addition of chevron arrows when the size of the viewport no longer can display all the tab categories at once. The user can navigate inside the tabs menu. Use class <CodeTags code=".tabs-scroll" type="secondary" /> to make it scrollable</p>
         </section>
 
         <section id="how-to-use-tabs">
@@ -73,54 +75,50 @@ const ContentGuidelines = () => (
             </div>
         </div>
         <ul className="list list-bullet">
-            <li>The <b>Label</b> for tabs should state the name of the category and division. This should be short and to the point making is as easy as possible for the user to find their desired category.</li>
-            <li>The <b>order of labels</b> should always be arranged according the content, sorted after relevance. However, in cases where there is not a preferred order, the tabs should be arrange the tabs in alphabetical order instead.</li>
+            <li>The <b>Label</b> should be short and descriptive making is for the user to understand where to find their desired content.</li>
+            <li>The <b>order of labels</b> should be arranged according to relevance. However, in cases where there is not a preferred order, the tabs should be arranged in alphabetical order.</li>
         </ul>
     </section>
-);
-
-const SetScrollStateJavaScript = ({ componentName }) => (
-    <>
-        <JavascriptDocElement
-            code={<CodeTags type="secondary" code={`dg.${componentName}.setScrollState(<${componentName.toLowerCase()}-id>, scrollState)`} />}
-            description={
-                <>
-                    Moves the scroll position of the {componentName} to the user specified position. The value to be passed to <CodeTags type="secondary" code="scrollState" /> is
-                    the object <CodeTags type="secondary" code="{ scrollStart, scrollTotalAmount }" />. <CodeTags type="secondary" code="scrollStart" /> is the current scroll
-                    position, <CodeTags type="secondary" code="scrollTotalAmount" /> is the amount to be scrolled from the current scroll position (negative values for left scroll,
-                    positive values for right scroll). Note: <CodeTags type="primary" code={"<ul>"} /> is the scrollable element.
-                </>
-            }
-        />
-    </>
 );
 
 const DeveloperDocumentation = () => (
     <>
         <h2 id="developer-documentation">Developer documentation</h2>
         <span className="h3">Javascript methods</span>
-        <JavascriptDocs componentName="tabs" others={[SetScrollStateJavaScript]} />
+        <p className="my-3">Use <CodeTags type="secondary" code="dg.tabs.init()"/> to <a href="/get-started/for-developers" >initialize</a> all rangesliders.</p>
+        <p>Or <CodeTags type="secondary" code='dg.tabs.init("component-id")'/> to initialize one specific component.</p>
+        <h4>Move scroll position</h4>
+        <p>
+            Moves the scroll position of the tabs to the user specified position. The value to be passed to <CodeTags type="secondary" code="scrollState" /> is the object <CodeTags type="secondary" code="{ scrollStart, scrollTotalAmount }" />. <CodeTags type="secondary" code="scrollStart" /> is the current scroll position, <CodeTags type="secondary" code="scrollTotalAmount" /> is the amount to be scrolled from the current scroll position (negative values for left scroll, positive values for right scroll). Note: <CodeTags type="primary" code={"<ul>"} /> is the scrollable element.
+        </p>
+
+        <section>
+            <h3>Usage with NPM</h3>
+            <p><Link to="/get-started/for-developers/">Usage with NPM</Link> will require you to import it from <CodeTags type="primary" code="@swedbankpay/design-guide" /> before calling it on an element.</p>
+            <ComponentPreview language="javascript" codeFigure dangerousHTML>
+                import &#123; tabs &#125; from &quot;@swedbankpay/design-guide&quot;; {"\n"}
+                tabs.init()
+            </ComponentPreview>
+        </section>
     </>
 );
 
-class Tabs extends Component {
-    componentDidMount () {
+const Tabs = () => {
+    useEffect(() => {
         tabs.init();
-    }
+    });
 
-    render () {
-        return (
-            <DocContainer docToc>
-                <p className="lead">
-                Tabs component separates content into groups within a single content, it lets the user navigate and quickly switch between section within the same content.
-                </p>
-                <Overview />
-                <ContentGuidelines />
-                <DeveloperDocumentation />
-            </DocContainer>
-        );
-    }
-}
+    return (
+        <DocContainer>
+            <p className="lead">
+                    Tabs are a local navigation component that separates content into views and lets the user navigate easily between views within the same context.
+            </p>
+            <Overview />
+            <ContentGuidelines />
+            <DeveloperDocumentation />
+        </DocContainer>
+    );
+};
 
 export default Tabs;
 
