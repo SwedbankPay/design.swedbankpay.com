@@ -129,7 +129,7 @@ exports[`Components: Tabs DeveloperDocumentation renders 1`] = `
         code="@swedbankpay/design-guide"
         type="primary"
       />
-       before calling it on an element.
+      .
     </p>
     <ComponentPreview
       codeFigure={true}

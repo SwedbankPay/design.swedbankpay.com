@@ -67,7 +67,7 @@ const DeveloperDocumentation = () => (
 
         <section>
             <h3>Usage with NPM</h3>
-            <p><Link to="/get-started/for-developers/">Usage with NPM</Link> will require you to import it from <CodeTags type="primary" code="@swedbankpay/design-guide" /> before calling it on an element.</p>
+            <p><Link to="/get-started/for-developers/">Usage with NPM</Link> will require you to import it from <CodeTags type="primary" code="@swedbankpay/design-guide" />.</p>
             <ComponentPreview language="javascript" codeFigure dangerousHTML>
                 import &#123; tabs &#125; from &quot;@swedbankpay/design-guide&quot;; {"\n"}
                 tabs.init()
