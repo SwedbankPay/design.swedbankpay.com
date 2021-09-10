@@ -461,7 +461,6 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/toast",
                       "statusBadges": Array [
                         "javascript",
-                        "updated",
                       ],
                       "title": "Toast",
                     },

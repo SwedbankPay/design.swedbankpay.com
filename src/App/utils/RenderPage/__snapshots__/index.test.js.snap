@@ -456,7 +456,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/toast",
               "statusBadges": Array [
                 "javascript",
-                "updated",
               ],
               "title": "Toast",
             },
