@@ -15,8 +15,8 @@ const Overview = () => (
 
         <h3>When to consider something else</h3>
         <ul className="list list-bullet">
-            <li>Use a <Link to="/component/input-field">text input</Link> instead when the user needs to select specific number.</li>
-        </ul>{/* Link to text-input */}
+            <li>Use a <Link to="/components/input-field">text input</Link> instead when the user needs to select specific number.</li>
+        </ul>
 
         <h3>How to use sliders</h3>
 
