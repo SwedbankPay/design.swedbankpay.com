@@ -2,14 +2,9 @@ import React from "react";
 import { shallow } from "enzyme";
 
 import Links, {
-    TextLinks,
-    ButtonLinks,
-    IconLinks,
+    Overview,
     ActionLink,
-    ActionLinkBadge,
-    ActionLinkSmallText,
-    ActionLinkBadgeSmallText,
-    ActionLinkNewTab
+    ContentGuidelines
 } from "./index";
 
 describe("Components: Links", () => {
@@ -21,42 +16,6 @@ describe("Components: Links", () => {
         const wrapper = shallow(<Links />);
 
         expect(wrapper).toMatchSnapshot();
-    });
-
-    describe("TextLinks", () => {
-        it("is defined", () => {
-            expect(TextLinks).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<TextLinks />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("ButtonLinks", () => {
-        it("is defined", () => {
-            expect(ButtonLinks).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<ButtonLinks />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("IconLinks", () => {
-        it("is defined", () => {
-            expect(IconLinks).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<IconLinks />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
     });
 
     describe("ActionLink", () => {
@@ -71,52 +30,27 @@ describe("Components: Links", () => {
         });
     });
 
-    describe("ActionLinkBadge", () => {
+    describe("ContentGuidelines", () => {
         it("is defined", () => {
-            expect(ActionLinkBadge).toBeDefined();
+            expect(ContentGuidelines).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<ActionLinkBadge />);
+            const wrapper = shallow(<ContentGuidelines />);
 
             expect(wrapper).toMatchSnapshot();
         });
     });
 
-    describe("ActionLinkSmallText", () => {
+    describe("Overview", () => {
         it("is defined", () => {
-            expect(ActionLinkSmallText).toBeDefined();
+            expect(Overview).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<ActionLinkSmallText />);
+            const wrapper = shallow(<Overview />);
 
             expect(wrapper).toMatchSnapshot();
         });
     });
-
-    describe("ActionLinkBadgeSmallText", () => {
-        it("is defined", () => {
-            expect(ActionLinkBadgeSmallText).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<ActionLinkBadgeSmallText />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("ActionLinkNewTab", () => {
-        it("is defined", () => {
-            expect(ActionLinkNewTab).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<ActionLinkNewTab />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
 });

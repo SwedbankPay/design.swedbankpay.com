@@ -7,11 +7,11 @@ const ActionLink = props => {
     return (
         <>
             {otherProps.newTab ?
-                <a className={`action-link ${otherProps.multiline ? "multiline" : ""} action-link-new-tab ${otherProps.disabled ? "disabled" : ""}`} href={link ? link : "#"} rel="noopener noreferrer" target="_blank">{"\n"}
+                <a className={`action-link${otherProps.multiline ? " multiline" : ""} action-link-new-tab${otherProps.disabled ? " disabled" : ""}`} href={link ? link : "#"} rel="noopener noreferrer" target="_blank">{"\n"}
                     <ActionLinkContent {...otherProps} />
                 </a>
                 :
-                <a className={`action-link ${otherProps.multiline ? "multiline" : ""} ${otherProps.disabled ? "disabled" : ""}`} href="#" >{"\n"}
+                <a className={`action-link${otherProps.multiline ? " multiline" : ""}${otherProps.disabled ? " disabled" : ""}`} href="#" >{"\n"}
                     <ActionLinkContent {...otherProps} />
                 </a>
             }

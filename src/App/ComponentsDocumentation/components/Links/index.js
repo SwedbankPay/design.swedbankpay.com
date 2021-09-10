@@ -186,3 +186,5 @@ const Links = () => (
 
 export default Links;
 
+/* for testing */
+export { Links, Overview, ActionLink, ContentGuidelines };

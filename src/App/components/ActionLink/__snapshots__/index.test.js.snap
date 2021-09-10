@@ -2,6 +2,13 @@
 
 exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with badge if badge is provided 1`] = `
 <Fragment>
+  <h4
+    className="mb-0 mr-1"
+  >
+    Link text
+  </h4>
+  
+
   <span
     className="badge badge-default"
   >
@@ -9,11 +16,10 @@ exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with 
   </span>
   
 
-  Link text
-  
+  <div>
+    
 
-  
-
+  </div>
   
 
 </Fragment>
@@ -21,31 +27,17 @@ exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with 
 
 exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with link text 1`] = `
 <Fragment>
-  Link text
-  
-
-  
-
-  
-
-</Fragment>
-`;
-
-exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with new tab properties when newTab is true 1`] = `
-<Fragment>
-  <i
-    aria-hidden="true"
-    className="material-icons"
+  <h4
+    className="mb-0 mr-1"
   >
-    open_in_new
-  </i>
+    Link text
+  </h4>
   
 
-  Link text
-  
+  <div>
+    
 
-  
-
+  </div>
   
 
 </Fragment>
@@ -58,16 +50,28 @@ exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with 
   >
     
 
-    Link text
-    
+    <div>
+      <div
+        className="d-flex flex-row"
+      >
+        <h4
+          className="mb-0 mr-1"
+        >
+          Link text
+        </h4>
+        
 
-    <span
-      className="small-text"
-    >
-      Small text
-    </span>
-    
+      </div>
+      <div>
+        <span
+          className="small-text"
+        >
+          Small text
+        </span>
+        
 
+      </div>
+    </div>
   </span>
   
 
@@ -76,16 +80,22 @@ exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with 
 
 exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with smalltext when provided 1`] = `
 <Fragment>
-  Link text
-  
-
-  <span
-    className="small-text"
+  <h4
+    className="mb-0 mr-1"
   >
-    Small text
-  </span>
+    Link text
+  </h4>
   
 
+  <div>
+    <span
+      className="small-text"
+    >
+      Small text
+    </span>
+    
+
+  </div>
   
 
 </Fragment>
@@ -93,11 +103,17 @@ exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with 
 
 exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent without badge if badge is not provided 1`] = `
 <Fragment>
-  Link text
+  <h4
+    className="mb-0 mr-1"
+  >
+    Link text
+  </h4>
   
 
-  
+  <div>
+    
 
+  </div>
   
 
 </Fragment>
@@ -105,11 +121,17 @@ exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent witho
 
 exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent without smalltext when not provided 1`] = `
 <Fragment>
-  Link text
+  <h4
+    className="mb-0 mr-1"
+  >
+    Link text
+  </h4>
   
 
-  
+  <div>
+    
 
+  </div>
   
 
 </Fragment>
