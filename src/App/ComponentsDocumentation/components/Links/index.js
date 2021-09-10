@@ -123,8 +123,8 @@ const ContentGuidelines = () => (
             <div className="col-lg-6">
                 <div className="slab slab-plain slab-border-error h-100 pb-5">
                     <h4>Don&apos;t</h4>
-                    <div className="d-flex h-100 mb-2 align-items-center">
-                        <p className="d-flex mb-0 justify-content-center"><LinkComponent linkText="Click here "/> to read our term and conditions.</p>
+                    <div className="d-flex justify-content-center mb-2  h-100 align-items-center">
+                        <p className=" mb-0 justify-content-center"><LinkComponent linkText="Click here" /> to read our term and conditions.</p>
                     </div>
                 </div>
             </div>
@@ -134,7 +134,7 @@ const ContentGuidelines = () => (
             <div className="col-lg-6">
                 <div className="slab slab-plain slab-border-success h-100 pb-5" >
                     <h4>Do</h4>
-                    <div className="d-inline justify-content-center mb-2">
+                    <div className="d-flex justify-content-center mb-2  h-100 align-items-center">
                         <LinkComponent linkText="View our opening hours"/>
                     </div>
                 </div>
@@ -142,7 +142,7 @@ const ContentGuidelines = () => (
             <div className="col-lg-6">
                 <div className="slab slab-plain slab-border-error h-100 pb-5">
                     <h4>Don&apos;t</h4>
-                    <div className="d-inline justify-content-center mb-2">
+                    <div className="d-flex justify-content-center mb-2  h-100 align-items-center">
                         <LinkComponent linkText="View more"/>
                     </div>
                 </div>
@@ -153,16 +153,16 @@ const ContentGuidelines = () => (
             <div className="col-lg-6">
                 <div className="slab slab-plain slab-border-success h-100 pb-5" >
                     <h4>Do</h4>
-                    <div className="justify-content-center mt-4 mb-2 d-inline">
-                        Here you can <LinkComponent linkText="read about the browsers we recommend"/>.
+                    <div className="d-flex justify-content-center mb-2  h-100 align-items-center">
+                        <p>Here you can <LinkComponent linkText="read about the browsers we recommend"/>.</p>
                     </div>
                 </div>
             </div>
             <div className="col-lg-6">
                 <div className="slab slab-plain slab-border-error h-100 pb-5">
                     <h4>Don&apos;t</h4>
-                    <div className="d-flex justify-content-center mb-2">
-                        <LinkComponent linkText="Here you can read about the browsers we recommend."/>
+                    <div className="d-flex justify-content-center mb-2  h-100 align-items-center">
+                        <LinkComponent linkText="Here you can read about the browsers we recommend"/>
                     </div>
                 </div>
             </div>
