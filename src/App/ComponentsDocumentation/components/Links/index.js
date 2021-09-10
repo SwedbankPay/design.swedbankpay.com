@@ -154,7 +154,7 @@ const ContentGuidelines = () => (
                 <div className="slab slab-plain slab-border-success h-100 pb-5" >
                     <h4>Do</h4>
                     <div className="d-flex justify-content-center mb-2  h-100 align-items-center">
-                        <p>Here you can <LinkComponent linkText="read about the browsers we recommend"/>.</p>
+                        <p className="mb-0 justify-content-center">Here you can <LinkComponent linkText="read about the browsers we recommend"/>.</p>
                     </div>
                 </div>
             </div>
