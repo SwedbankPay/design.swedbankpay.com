@@ -16,12 +16,20 @@ exports[`Core: Logotype Download renders 1`] = `
     >
       Download all logotypes
     </h1>
-    <Button
+    <a
+      className="btn btn-primary"
       href="/TEST/release/logos/Swedbank_Pay_Vector.zip"
-      icon="arrow_downward"
-      label="Download"
-      type="primary"
-    />
+    >
+      <i
+        aria-hidden="true"
+        className="material-icons"
+      >
+        arrow_downward
+      </i>
+      <span>
+        Download
+      </span>
+    </a>
   </div>
 </Fragment>
 `;
@@ -29,47 +37,232 @@ exports[`Core: Logotype Download renders 1`] = `
 exports[`Core: Logotype Favicon renders 1`] = `
 <Fragment>
   <h2
-    id="favicon"
+    id="our-favicon"
   >
     Favicon
   </h2>
   <div
-    className="d-flex justify-content-between"
+    className="slab slab-plain pb-0 pt-4 d-flex justify-content-center"
   >
-    <span>
-      The favicon should ONLY be used in following contexts:
-      <ul
-        className="list list-bullet"
-      >
-        <li>
-          Shortcut icon
-        </li>
-        <li>
-          Website icon
-        </li>
-        <li>
-          Tab icon
-        </li>
-        <li>
-          URL icon
-        </li>
-        <li>
-          Bookmark icon
-        </li>
-      </ul>
-    </span>
-    <div
-      className="w-25 d-flex flex-column justify-content-center align-items-center"
-    >
-      <img
-        className="w-25 mb-2"
-        src="/TEST/img/documentation/logotype/favicon_example.png"
-      />
-      <p>
-        Swedbank Pay favicon.
-      </p>
-    </div>
+    <img
+      alt="Favicon example"
+      src="/TEST/icons/favicon-slab-example.png"
+    />
   </div>
+  <p>
+    To use our favicons download the zip-file below and extract it to the root of your build-folder. Insert the code below in the 
+    <CodeTags
+      code="<head>"
+      type="primary"
+    />
+     tag of your HTML documents and you are ready to go.
+  </p>
+  <p>
+    You should also rename the 
+    <CodeTags
+      code="content"
+      type="secondary"
+    />
+     of the 
+    <CodeTags
+      code="apple-mobile-web-app-title"
+      type="secondary"
+    />
+     and 
+    <CodeTags
+      code="application-name"
+      type="secondary"
+    />
+     
+    <CodeTags
+      code="<meta>"
+      type="primary"
+    />
+     tags to reflect the title of your project. Make sure to also do this in the 
+    <CodeTags
+      code="manifest.json"
+      type="secondary"
+    />
+     file in the icons folder.
+  </p>
+  <a
+    className="icon-link"
+    href="/TEST/release/icons.zip"
+  >
+    <i
+      aria-hidden="true"
+      className="material-icons"
+    >
+      download
+    </i>
+    <span
+      className="ml-2"
+    >
+      Download Swedbank Pay favicon assets
+    </span>
+  </a>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+  >
+    <link
+      href="/TEST//icons/apple-touch-icon-114x114.png"
+      rel="apple-touch-icon"
+      sizes="114x114"
+    />
+    <link
+      href="/TEST//icons/apple-touch-icon-120x120.png"
+      rel="apple-touch-icon"
+      sizes="120x120"
+    />
+    <link
+      href="/TEST//icons/apple-touch-icon-144x144.png"
+      rel="apple-touch-icon"
+      sizes="144x144"
+    />
+    <link
+      href="/TEST//icons/apple-touch-icon-152x152.png"
+      rel="apple-touch-icon"
+      sizes="152x152"
+    />
+    <link
+      href="/TEST//icons/apple-touch-icon-180x180.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
+    />
+    <link
+      href="/TEST//icons/apple-touch-icon-57x57.png"
+      rel="apple-touch-icon"
+      sizes="57x57"
+    />
+    <link
+      href="/TEST//icons/apple-touch-icon-60x60.png"
+      rel="apple-touch-icon"
+      sizes="60x60"
+    />
+    <link
+      href="/TEST//icons/apple-touch-icon-72x72.png"
+      rel="apple-touch-icon"
+      sizes="72x72"
+    />
+    <link
+      href="/TEST//icons/apple-touch-icon-76x76.png"
+      rel="apple-touch-icon"
+      sizes="76x76"
+    />
+    <link
+      href="/TEST//icons/apple-touch-startup-image-320x460.png"
+      media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="/TEST//icons/apple-touch-startup-image-640x920.png"
+      media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="/TEST//icons/apple-touch-startup-image-640x1096.png"
+      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="/TEST//icons/apple-touch-startup-image-750x1294.png"
+      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="/TEST//icons/apple-touch-startup-image-1182x2208.png"
+      media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="/TEST//icons/apple-touch-startup-image-1242x2148.png"
+      media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="/TEST//icons/apple-touch-startup-image-748x1024.png"
+      media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="/TEST//icons/apple-touch-startup-image-1496x2048.png"
+      media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="/TEST//icons/apple-touch-startup-image-768x1004.png"
+      media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="/TEST//icons/apple-touch-startup-image-1536x2008.png"
+      media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="/TEST//icons/favicon-16x16.png"
+      rel="icon"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link
+      href="/TEST//icons/coast-228x228.png"
+      rel="icon"
+      sizes="228x228"
+      type="image/png"
+    />
+    <link
+      href="/TEST//icons/favicon-32x32.png"
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      href="/TEST//icons/manifest.json"
+      rel="manifest"
+    />
+    <link
+      href="/TEST//icons/favicon.ico"
+      rel="shortcut icon"
+    />
+    <meta
+      content="yes"
+      name="apple-mobile-web-app-capable"
+    />
+    <meta
+      content="black-translucent"
+      name="apple-mobile-web-app-status-bar-style"
+    />
+    <meta
+      content="Swedbank Pay App"
+      name="apple-mobile-web-app-title"
+    />
+    <meta
+      content="Swedbank Pay App"
+      name="application-name"
+    />
+    <meta
+      content="yes"
+      name="mobile-web-app-capable"
+    />
+    <meta
+      content="#000"
+      name="msapplication-TileColor"
+    />
+    <meta
+      content="/TEST//icons/mstile-144x144.png"
+      name="msapplication-TileImage"
+    />
+    <meta
+      content="/TEST//icons/browserconfig.xml"
+      name="msapplication-config"
+    />
+    <meta
+      content="#000"
+      name="theme-color"
+    />
+  </ComponentPreview>
 </Fragment>
 `;
 
@@ -673,229 +866,6 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
       </div>
     </div>
   </div>
-</Fragment>
-`;
-
-exports[`Core: Logotype OurFavicon renders 1`] = `
-<Fragment>
-  <h2
-    id="our-favicon"
-  >
-    Our favicon
-  </h2>
-  <ComponentPreview
-    language="html"
-    showCasePanel={true}
-  >
-    <img
-      alt="PayEx favicon"
-      src="/TEST/icons/android-chrome-96x96.png"
-    />
-  </ComponentPreview>
-  <p>
-    To use our favicons download the zip-file below and extract it to the root of your build-folder. Insert the code below in the 
-    <CodeTags
-      code="<head>"
-      type="primary"
-    />
-     tag of your HTML documents and you are ready to go.
-  </p>
-  <p>
-    You should also rename the 
-    <CodeTags
-      code="content"
-      type="secondary"
-    />
-     of the 
-    <CodeTags
-      code="apple-mobile-web-app-title"
-      type="secondary"
-    />
-     and 
-    <CodeTags
-      code="application-name"
-      type="secondary"
-    />
-     
-    <CodeTags
-      code="<meta>"
-      type="primary"
-    />
-     tags to reflect the title of your project. Make sure to also do this in the 
-    <CodeTags
-      code="manifest.json"
-      type="secondary"
-    />
-     file in the icons folder.
-  </p>
-  <Button
-    href="/TEST/release/icons.zip"
-    icon="file_download"
-    label="Download Favicons"
-    type="primary"
-  />
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-  >
-    <link
-      href="/TEST//icons/apple-touch-icon-114x114.png"
-      rel="apple-touch-icon"
-      sizes="114x114"
-    />
-    <link
-      href="/TEST//icons/apple-touch-icon-120x120.png"
-      rel="apple-touch-icon"
-      sizes="120x120"
-    />
-    <link
-      href="/TEST//icons/apple-touch-icon-144x144.png"
-      rel="apple-touch-icon"
-      sizes="144x144"
-    />
-    <link
-      href="/TEST//icons/apple-touch-icon-152x152.png"
-      rel="apple-touch-icon"
-      sizes="152x152"
-    />
-    <link
-      href="/TEST//icons/apple-touch-icon-180x180.png"
-      rel="apple-touch-icon"
-      sizes="180x180"
-    />
-    <link
-      href="/TEST//icons/apple-touch-icon-57x57.png"
-      rel="apple-touch-icon"
-      sizes="57x57"
-    />
-    <link
-      href="/TEST//icons/apple-touch-icon-60x60.png"
-      rel="apple-touch-icon"
-      sizes="60x60"
-    />
-    <link
-      href="/TEST//icons/apple-touch-icon-72x72.png"
-      rel="apple-touch-icon"
-      sizes="72x72"
-    />
-    <link
-      href="/TEST//icons/apple-touch-icon-76x76.png"
-      rel="apple-touch-icon"
-      sizes="76x76"
-    />
-    <link
-      href="/TEST//icons/apple-touch-startup-image-320x460.png"
-      media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/TEST//icons/apple-touch-startup-image-640x920.png"
-      media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/TEST//icons/apple-touch-startup-image-640x1096.png"
-      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/TEST//icons/apple-touch-startup-image-750x1294.png"
-      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/TEST//icons/apple-touch-startup-image-1182x2208.png"
-      media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/TEST//icons/apple-touch-startup-image-1242x2148.png"
-      media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/TEST//icons/apple-touch-startup-image-748x1024.png"
-      media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/TEST//icons/apple-touch-startup-image-1496x2048.png"
-      media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/TEST//icons/apple-touch-startup-image-768x1004.png"
-      media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/TEST//icons/apple-touch-startup-image-1536x2008.png"
-      media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/TEST//icons/favicon-16x16.png"
-      rel="icon"
-      sizes="16x16"
-      type="image/png"
-    />
-    <link
-      href="/TEST//icons/coast-228x228.png"
-      rel="icon"
-      sizes="228x228"
-      type="image/png"
-    />
-    <link
-      href="/TEST//icons/favicon-32x32.png"
-      rel="icon"
-      sizes="32x32"
-      type="image/png"
-    />
-    <link
-      href="/TEST//icons/manifest.json"
-      rel="manifest"
-    />
-    <link
-      href="/TEST//icons/favicon.ico"
-      rel="shortcut icon"
-    />
-    <meta
-      content="yes"
-      name="apple-mobile-web-app-capable"
-    />
-    <meta
-      content="black-translucent"
-      name="apple-mobile-web-app-status-bar-style"
-    />
-    <meta
-      content="Swedbank Pay App"
-      name="apple-mobile-web-app-title"
-    />
-    <meta
-      content="Swedbank Pay App"
-      name="application-name"
-    />
-    <meta
-      content="yes"
-      name="mobile-web-app-capable"
-    />
-    <meta
-      content="#000"
-      name="msapplication-TileColor"
-    />
-    <meta
-      content="/TEST//icons/mstile-144x144.png"
-      name="msapplication-TileImage"
-    />
-    <meta
-      content="/TEST//icons/browserconfig.xml"
-      name="msapplication-config"
-    />
-    <meta
-      content="#000"
-      name="theme-color"
-    />
-  </ComponentPreview>
 </Fragment>
 `;
 
