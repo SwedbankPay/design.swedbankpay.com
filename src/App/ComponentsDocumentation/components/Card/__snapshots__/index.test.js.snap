@@ -460,6 +460,5 @@ exports[`Documentation: Card renders 1`] = `
      instead.
   </p>
   <Overview />
-  <OldCard />
 </DocContainer>
 `;
