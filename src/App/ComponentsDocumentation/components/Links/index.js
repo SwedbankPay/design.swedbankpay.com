@@ -4,6 +4,8 @@ import { ComponentPreview, DocContainer } from "@docutils";
 import ActionLinkComponent from "@components/ActionLink";
 import LinkComponent from "@components/Link";
 import ButtonComponent from "@components/Button";
+import InputComponent from "@components/InputGroup";
+import CheckboxComponent from "@components/FormComponents/Checkbox";
 import CodeTags from "@components/CodeTags";
 import { Link } from "react-router-dom";
 import { overviewLinks, overviewActionLinks } from "./constants";
@@ -76,6 +78,29 @@ const ActionLink = () => (
                 Use a standalone <Link to="/components/links">link</Link> instead of a action link if you don&apos;t need to highlight and make the links appear more as call to actions.
             </li>
         </ul>
+        <h3>How to use action links</h3>
+        <div className="row">
+            <div className="col-lg-6">
+                <div className="slab slab-plain slab-border-success pb-5 h100" >
+                    <h4>Do</h4>
+                    <div className="d-flex justify-content-center mt-4 mb-4 flex-column">
+                        <InputComponent type="text" label="Name"/>
+                        <InputComponent type="text" label="Email" placeholder="name@email.com"/>
+                        <div className="d-flex flex-row"><CheckboxComponent/><p>I agree to terms of use</p></div>
+                        <ButtonComponent type="primary" label="Submit" fullWidth/>
+                    </div>
+                </div>
+            </div>
+            <div className="col-lg-6">
+                <div className="slab slab-plain slab-border-error pb-5 h100">
+                    <div className="d-flex justify-content-center mt-4 mb-4">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p className="mt-3">Use a <Link to="/components/buttons">button</Link> instead of an action link for an action like for instance submitting a form.</p>
+
     </>
 );
 
