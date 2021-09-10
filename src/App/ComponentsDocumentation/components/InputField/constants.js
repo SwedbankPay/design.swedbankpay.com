@@ -6,7 +6,7 @@ export const inputShowCase = {
     id: "no-tabs",
     elements: [
         {
-            component: <InputGroup type="text" label="Input label" placeholder="Placeholder text" />,
+            component: <InputGroup type="text" label="Input label" id="input-showcase-example" placeholder="Placeholder text" />,
             options: {
                 checkbox: [
                     {

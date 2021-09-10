@@ -39,7 +39,7 @@ const ContentGuidelines = () => (
         <div className="slab slab-plain h-100 mb-2">
             <div className="d-flex flex-column align-items-center">
                 <div className="py-3">
-                    <InputGroup type="text" label="Input label" defaultValue="Input text" validationState="error" errorMessage="Error message" helpBlock tooltip/>
+                    <InputGroup type="text" label="Input label" defaultValue="Input text" validationState="error" errorMessage="Error message" helpBlock tooltip id="input-guidelines-example"/>
                     <InputGroup type="textarea" label="Input label" optional placeholder="Placeholder text"/>
                 </div>
             </div>
@@ -81,14 +81,14 @@ const ContentGuidelines = () => (
             <div className="col-lg-6 col-sm-12">
                 <div className="slab slab-plain slab-border-success pb-4">
                     <h3 className="mb-3 mt-0">Do</h3>
-                    <InputGroup type="text" validationState="error" helpBlock errorMessage='The email address must include "@"' label="Email address" defaultValue="Name.com"/>
+                    <InputGroup type="text" validationState="error" helpBlock errorMessage='The email address must include "@"' label="Email address" defaultValue="Name.com" id="input-error-example"/>
                 </div>
                 <p>Do explain what went wrong and how to fix it.</p>
             </div>
             <div className="col-lg-6 col-sm-12">
                 <div className="slab slab-plain slab-border-error pb-4">
                     <h3 className="mb-3 mt-0">Don&#x27;t</h3>
-                    <InputGroup type="text" validationState="error" helpBlock errorMessage="Invalid input" label="Email address" defaultValue="Name.com"/>
+                    <InputGroup type="text" validationState="error" helpBlock errorMessage="Invalid input" label="Email address" defaultValue="Name.com" id="another-input-error-example"/>
                 </div>
                 <p>Don&#x27;t use technical jargong </p>
             </div>
@@ -102,13 +102,13 @@ const DeveloperDocumentation = () => (
         <h3 className="mt-3">Autocomplete</h3>
         <p>Add <CodeTags type="primary" code="autocomplete"/> attributes to input fields when it is possible to make a form easier for users to fill. </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <InputGroup type="text" label="Name" autocomplete="on" />
+            <InputGroup type="text" label="Name" autocomplete="on" id="developer-documentation-example" />
         </ComponentPreview>
 
         <h3>Error message</h3>
         <p>Insert the error message in the attribute <CodeTags type="primary" code="data-error"/> in the <CodeTags type="primary" code=".help-block"/> element. </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <InputGroup type="text" label="Input label" defaultValue="Input text" validationState="error" errorMessage="Descriptive helpful error message." helpBlock />
+            <InputGroup type="text" label="Input label" defaultValue="Input text" validationState="error" errorMessage="Descriptive helpful error message." helpBlock id="developer-documentation-error-example"/>
         </ComponentPreview>
 
         <h3>Disabled state</h3>
