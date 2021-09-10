@@ -115,7 +115,7 @@ const ContentGuidelines = () => (
             <div className="col-lg-6">
                 <div className="slab slab-plain slab-border-success h-100 pb-5" >
                     <h4>Do</h4>
-                    <div className="d-flex justify-content-center mb-2">
+                    <div className="d-flex justify-content-center mb-2  h-100 align-items-center">
                         <LinkComponent linkText="Read our terms and conditions"/>
                     </div>
                 </div>
@@ -123,8 +123,8 @@ const ContentGuidelines = () => (
             <div className="col-lg-6">
                 <div className="slab slab-plain slab-border-error h-100 pb-5">
                     <h4>Don&apos;t</h4>
-                    <div className="d-flex justify-content-center mb-2 align-items-center">
-                        <p><LinkComponent linkText="Click here"/> to read our term and conditions.</p>
+                    <div className="d-flex h-100 mb-2 align-items-center">
+                        <p className="d-flex mb-0 justify-content-center"><LinkComponent linkText="Click here "/> to read our term and conditions.</p>
                     </div>
                 </div>
             </div>
