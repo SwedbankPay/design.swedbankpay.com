@@ -13,7 +13,7 @@ export const alertsShowCase = {
             options: {
                 checkbox: [
                     {
-                        title: "Add",
+                        title: "Options",
                         inputs: [
                             {
                                 id: "close_button",
