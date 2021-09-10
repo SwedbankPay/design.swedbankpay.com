@@ -13,7 +13,7 @@ export const overviewCards = {
                 titleTxt="Title"
                 type="primary"
                 text="Write the supportive paragraph here."
-                icon={<i className="material-icons">shopping_basket</i>}
+                icon={<i className="material-icons material-icons-outlined">shopping_basket</i>}
             />,
             options: {
                 radio: [
@@ -31,7 +31,7 @@ export const overviewCards = {
                                 name: "With icon",
                                 default: true,
                                 value: {
-                                    icon: <i className="material-icons">shopping_basket</i>
+                                    icon: <i className="material-icons material-icons-outlined">shopping_basket</i>
                                 }
                             },
                             {
@@ -48,19 +48,19 @@ export const overviewCards = {
                         title: "Accent color",
                         values: [
                             {
-                                name: "Yellow brown",
+                                name: "Primary",
                                 value: {
                                     type: "primary"
                                 }
                             },
                             {
-                                name: "Turquoise",
+                                name: "Complementary 1",
                                 value: {
                                     type: "secondary"
                                 }
                             },
                             {
-                                name: "Purple",
+                                name: "Complementary 2",
                                 value: {
                                     type: "tertiary"
                                 }
@@ -107,19 +107,19 @@ export const overviewCards = {
                         title: "Accent color",
                         values: [
                             {
-                                name: "Yellow brown",
+                                name: "Primary",
                                 value: {
                                     type: "primary"
                                 }
                             },
                             {
-                                name: "Turquoise",
+                                name: "Complementary 1",
                                 value: {
                                     type: "secondary"
                                 }
                             },
                             {
-                                name: "Purple",
+                                name: "Complementary 2",
                                 value: {
                                     type: "tertiary"
                                 }
