@@ -4,7 +4,7 @@ import ActionLink from "~/src/App/components/ActionLink";
 
 const ShowcaseComponent = ({ rightIcon, leftIcon, linkText, smallFont, backgroundDark, bright, standalone, disabled }) => (
     <div className={`loader-preview-container${backgroundDark ? " dark" : ""} d-flex justify-content-center align-items-center`}>
-        {standalone ? <Link rightIcon={rightIcon} leftIcon={leftIcon} linkText={linkText} smallFont={smallFont} bright={bright}/> :
+        {standalone ? <Link rightIcon={rightIcon} leftIcon={leftIcon} linkText={linkText} smallFont={smallFont} bright={bright} disabled={disabled}/> :
             <p className={`mt-3 ${backgroundDark ? "text-white" : ""}`}>Paragraph text with a <Link rightIcon={rightIcon} leftIcon={leftIcon} linkText={linkText} smallFont={smallFont} bright={bright} disabled={disabled}/></p>}
     </div>
 );
@@ -104,6 +104,18 @@ export const overviewLinks = {
                                 value: {
                                     backgroundDark: true,
                                     bright: true
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        title: "State modifier",
+                        inputs: [
+                            {
+                                id: "state_modifier",
+                                name: "Disabled",
+                                value: {
+                                    disabled: true
                                 }
                             }
                         ]
