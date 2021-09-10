@@ -20,6 +20,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
           defaultValue="Input text"
           errorMessage="Error message"
           helpBlock={true}
+          id="input-guidelines-example"
           label="Input label"
           tooltip={true}
           type="text"
@@ -129,6 +130,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
           defaultValue="Name.com"
           errorMessage="The email address must include \\"@\\""
           helpBlock={true}
+          id="input-error-example"
           label="Email address"
           type="text"
           validationState="error"
@@ -153,6 +155,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
           defaultValue="Name.com"
           errorMessage="Invalid input"
           helpBlock={true}
+          id="another-input-error-example"
           label="Email address"
           type="text"
           validationState="error"
@@ -195,6 +198,7 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
   >
     <InputGroup
       autocomplete="on"
+      id="developer-documentation-example"
       label="Name"
       type="text"
     />
@@ -224,6 +228,7 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
       defaultValue="Input text"
       errorMessage="Descriptive helpful error message."
       helpBlock={true}
+      id="developer-documentation-error-example"
       label="Input label"
       type="text"
       validationState="error"
@@ -297,6 +302,7 @@ exports[`Component: InputField Overview renders 1`] = `
         "elements": Array [
           Object {
             "component": <InputGroup
+              id="input-showcase-example"
               label="Input label"
               placeholder="Placeholder text"
               type="text"
