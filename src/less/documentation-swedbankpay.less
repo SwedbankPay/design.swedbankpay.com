@@ -404,7 +404,7 @@
         section {
             margin-bottom: 2.5rem;
 
-            h3 {
+            > h3 {
                 margin-top: 2rem;
             }
         }
@@ -693,47 +693,49 @@
             }
 
             .tabs {
-                margin: 0;
-                position: absolute;
-                top: 0;
-                width: 100%;
-
-                &.tabs-fade-right {
-                    &:after {
-                        right: 56px; // width of options-open icon
-                        height: 39px;
-                    }
-                }
-
-                &.tabs-fade-left {
-                    &:before {
-                        height: 39px;
-                    }
-                }
-
-                ul {
-                    position: relative;
+                &:not(#tabs-showcase-example) {
+                    margin: 0;
+                    position: absolute;
+                    top: 0;
                     width: 100%;
 
-                    &:before {
-                        content: "";
-                        position: absolute;
-                        top: 39px;
-                        width: 100%;
-                        border-bottom: 1px solid @brand-secondary-light-3;
+                    &.tabs-fade-right {
+                        &:after {
+                            right: 56px; // width of options-open icon
+                            height: 39px;
+                        }
                     }
-                }
 
-                .options-open {
-                    display: flex;
-                    align-items: center;
-                    cursor: pointer;
-                    height: 40px;
-                    border-bottom: 1px solid @brand-secondary-light-3;
-                    padding: 0 1rem;
+                    &.tabs-fade-left {
+                        &:before {
+                            height: 39px;
+                        }
+                    }
 
-                    &.hidden {
-                        visibility: hidden;
+                    ul {
+                        position: relative;
+                        width: 100%;
+
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            top: 39px;
+                            width: 100%;
+                            border-bottom: 1px solid @brand-secondary-light-3;
+                        }
+                    }
+
+                    .options-open {
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+                        height: 40px;
+                        border-bottom: 1px solid @brand-secondary-light-3;
+                        padding: 0 1rem;
+
+                        &.hidden {
+                            visibility: hidden;
+                        }
                     }
                 }
             }
@@ -745,6 +747,7 @@
                 .component-preview-content {
                     position: relative;
                     height: 100%;
+                    max-width: 30.75rem;
                     padding: 2rem;
                     display: flex;
                     align-items: center;
@@ -1182,7 +1185,6 @@
             }
         }
     }
-
 
     .text-align-center {
         text-align: center;

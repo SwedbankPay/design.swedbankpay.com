@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Tabs, { BasicUsage, TabsScroll, JavascriptMethods } from "./index";
+import Tabs, { Overview, ContentGuidelines, DeveloperDocumentation } from "./index";
 
 describe("Components: Tabs", () => {
     it("is defined", () => {
@@ -9,45 +9,42 @@ describe("Components: Tabs", () => {
     });
 
     it("renders", () => {
-        console.warn = jest.fn();
-
         const wrapper = shallow(<Tabs />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(console.warn).toHaveBeenCalled();
     });
 
-    describe("BasicUsage", () => {
+    describe("Overview", () => {
         it("is defined", () => {
-            expect(BasicUsage).toBeDefined();
+            expect(Overview).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<BasicUsage />);
+            const wrapper = shallow(<Overview />);
 
             expect(wrapper).toMatchSnapshot();
         });
     });
 
-    describe("TabsScroll", () => {
+    describe("ContentGuidelines", () => {
         it("is defined", () => {
-            expect(TabsScroll).toBeDefined();
+            expect(ContentGuidelines).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<TabsScroll />);
+            const wrapper = shallow(<ContentGuidelines />);
 
             expect(wrapper).toMatchSnapshot();
         });
     });
 
-    describe("JavascriptMethods", () => {
+    describe("DeveloperDocumentation", () => {
         it("is defined", () => {
-            expect(JavascriptMethods).toBeDefined();
+            expect(DeveloperDocumentation).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<JavascriptMethods />);
+            const wrapper = shallow(<DeveloperDocumentation />);
 
             expect(wrapper).toMatchSnapshot();
         });
