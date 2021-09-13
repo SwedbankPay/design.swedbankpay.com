@@ -25,7 +25,7 @@ const ActionLinkContent = ({ linkText, badge, smallText, multiline }) => (
             <span className="action-link-multiline">{"\n"}
                 <div>
                     <div className="d-flex flex-row">
-                        <h4 className="mb-0 mr-1">{linkText}</h4>{"\n"}
+                        <span className="action-link-label">{linkText}</span>{"\n"}
                         {badge ? <><span className={`badge ${badge.type}`}>{badge.text}</span>{"\n"}</> : null}
                     </div>
                     <div>
@@ -35,7 +35,7 @@ const ActionLinkContent = ({ linkText, badge, smallText, multiline }) => (
             </span>
             :
             <>
-                <h4 className="mb-0 mr-1">{linkText}</h4>{"\n"}
+                <span className="mb-0 mr-1 action-link-label">{linkText}</span>{"\n"}
                 {badge ? <><span className={`badge ${badge.type}`}>{badge.text}</span>{"\n"}</> : null}
                 <div>
                     {smallText ? <span className="small-text">{smallText}</span> : null }{"\n"}
