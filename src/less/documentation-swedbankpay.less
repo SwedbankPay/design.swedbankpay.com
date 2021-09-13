@@ -746,6 +746,7 @@
 
                 .component-preview-content {
                     position: relative;
+                    min-height: 9.5rem;
                     height: 100%;
                     max-width: 30.75rem;
                     padding: 2rem;
@@ -1189,7 +1190,23 @@
     .text-align-center {
         text-align: center;
     }
+
+    #link-doc {
+        .link-dark-background {
+            background-color: @brand-secondary;
+            border-radius: 8px;
+        }
+
+        #action-link-container {
+            .slab-border-error {
+                .action-link {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
 }
+
 
 @media screen and (max-width: @screen-xs-max) {
     .documentation {

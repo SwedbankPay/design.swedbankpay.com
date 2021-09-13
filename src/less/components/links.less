@@ -1,66 +1,143 @@
-a.icon-link {
-    text-decoration: none;
-    margin: 0.5rem 0;
-    display: inline-flex;
-    align-items: flex-start;
+a {
+    padding: 0.125rem;
+    border: 1px solid transparent;
 
-    &:hover,
-    :focus {
-        span {
-            text-decoration: underline;
+    &.bright {
+        color: @blue-syntax-highlight;
+
+        &.disabled {
+            color: @medium-brown;
         }
     }
 
-    i {
-        font-size: 1rem;
-        line-height: 1.5;
-    }
-}
-
-a.action-link {
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: @action-link-height;
-    padding-left: 1.5rem;
-    border: 0;
-    background-color: @brand-bg-1;
-    text-decoration: none;
-    color: @brand-secondary;
-
-    &:before {
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 0.5rem;
-        left: 0;
-        top: 0;
-        background-color: @brand-primary;
+    &:focus {
+        border-color: @brand-secondary;
+        outline: none;
+        border-radius: 0.25rem;
     }
 
-    &:after {
-        content: "arrow_right";
-        .material-icons-styling();
-
-        position: absolute;
-        right: 5px;
-        top: calc(50% - @action-link-arrow-font-size / 2);
-        margin: 0;
-        color: @brand-secondary-light-2;
-        font-size: @action-link-arrow-font-size;
+    &.disabled {
+        color: @light-brown;
+        text-decoration: none;
+        pointer-events: none;
     }
 
-    &.action-link-new-tab {
-        background-color: @brand-bg-2;
-        height: @action-link-new-tab-height;
-        color: @brand-accent-links;
+    &.icon-link {
+        text-decoration: none;
+        display: inline-flex;
+        align-items: baseline;
+
+        &:hover,
+        :focus {
+            span {
+                text-decoration: underline;
+            }
+        }
+
+        i {
+            font-size: 1rem;
+            line-height: 1.5;
+            align-self: flex-end;
+        }
+
+        &.small {
+            i {
+                font-size: 0.875rem;
+            }
+        }
+    }
+
+    &.action-link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: @action-link-height;
+        padding-left: 1.5rem;
+        border: 0;
+        text-decoration: none;
+        background-color: @brand-bg-1;
+        color: @brand-secondary;
+        margin-bottom: 1rem;
+        border-radius: 4px;
+
+        .action-link-label {
+            font-size: 1.125rem;
+            font-weight: bold;
+        }
+
+        &.disabled {
+            background-color: @light-gray;
+            color: @light-brown;
+
+            .small-text,
+            &:after {
+                color: @light-brown;
+            }
+
+            &:before,
+            .badge {
+                background-color: @light-brown;
+                border-color: @light-brown;
+                color: @white;
+                outline: none;
+            }
+        }
+
+        &:focus,
+        &:hover {
+            h4 {
+                text-decoration: underline;
+            }
+        }
+
+        &:focus {
+            border: 1px solid @brand-secondary;
+            outline: none;
+        }
+
+        h4 {
+            font-family: @brand-headline;
+        }
+
+        &.badge {
+            margin-right: 0;
+        }
+
+        &.multiline {
+            height: 4rem;
+
+            .small-text {
+                text-decoration: none;
+            }
+        }
 
         &:before {
-            background-color: @brand-accent;
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 0.25rem;
+            left: 0;
+            top: 0;
+            background-color: @brand-primary;
+            border-radius: 0.25rem 0 0 0.25rem;
         }
 
         &:after {
-            color: @brand-accent;
+            content: "arrow_forward";
+            .material-icons-styling();
+
+            position: absolute;
+            right: 5px;
+            top: calc(50% - @action-link-arrow-font-size / 2);
+            margin: 0;
+            font-size: @action-link-arrow-font-size;
+            color: @brand-secondary;
+        }
+
+        &.action-link-new-tab {
+            &:after {
+                content: "launch";
+            }
         }
     }
 
@@ -69,6 +146,7 @@ a.action-link {
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
+        height: 4rem;
 
         .small-text {
             padding-left: 0;
@@ -79,10 +157,5 @@ a.action-link {
         font-size: 0.75rem;
         color: @text-gray;
         padding-left: 0.5rem;
-    }
-
-    // Temporary solution until DG-323 (https://payexjira.atlassian.net/secure/RapidBoard.jspa?rapidView=80&projectKey=DG&modal=detail&selectedIssue=DG-323) is solved [AW].
-    > * {
-        margin-right: 0.5rem;
     }
 }

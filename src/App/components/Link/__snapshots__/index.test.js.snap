@@ -1,59 +1,79 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Link calls console.error when linkText is not provided 1`] = `
-<a
-  className={null}
-  href=""
-  onClick={[Function]}
-/>
+<Fragment>
+  <a
+    className=""
+    href=""
+    onClick={[Function]}
+  />
+</Fragment>
 `;
 
 exports[`Component: Link renders with left icon when leftIcon is provided 1`] = `
-<a
-  className="icon-link"
-  href=""
-  onClick={[Function]}
->
-  <i
-    aria-hidden="true"
-    className="material-icons"
+<Fragment>
+  <a
+    className="icon-link"
+    href=""
+    onClick={[Function]}
   >
-    chevron_left
-  </i>
-  <span
-    className="ml-2"
-  >
-    Link
-  </span>
-</a>
+    
+
+    <i
+      aria-hidden="true"
+      className="material-icons"
+    >
+      chevron_left
+    </i>
+    
+
+    <span
+      className="ml-2"
+    >
+      Link
+    </span>
+    
+
+  </a>
+</Fragment>
 `;
 
 exports[`Component: Link renders with provided linkText and no icons when only linkText is provided 1`] = `
-<a
-  className={null}
-  href=""
-  onClick={[Function]}
->
-  Link
-</a>
+<Fragment>
+  <a
+    className=""
+    href=""
+    onClick={[Function]}
+  >
+    Link
+  </a>
+</Fragment>
 `;
 
 exports[`Component: Link renders with right icon when rightIcon is provided 1`] = `
-<a
-  className="icon-link"
-  href=""
-  onClick={[Function]}
->
-  <span
-    className="mr-2"
+<Fragment>
+  <a
+    className="icon-link"
+    href=""
+    onClick={[Function]}
   >
-    Link
-  </span>
-  <i
-    aria-hidden="true"
-    className="material-icons"
-  >
-    chevron_right
-  </i>
-</a>
+    
+
+    <span
+      className="mr-2"
+    >
+      Link
+    </span>
+    
+
+    <i
+      aria-hidden="true"
+      className="material-icons"
+    >
+      chevron_right
+    </i>
+    
+
+  </a>
+</Fragment>
 `;

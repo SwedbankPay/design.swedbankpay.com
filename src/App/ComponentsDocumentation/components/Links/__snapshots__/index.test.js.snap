@@ -1,342 +1,719 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Components: Links ActionLink renders 1`] = `
-<Fragment>
+<section
+  id="action-link-container"
+>
   <h2
-    id="action-link"
+    id="action-links"
   >
-    Action link
+    Action links
   </h2>
   <p>
-    Action links.
+    Although links are to be used for navigation and not actions we sometimes have a need to highlight links and make them appear more as call to actions. In this case Action links, that will redirect the user to perform an action on another page, can be used. Actions links are normally used in a collection consisting of a few different action links with equally important actions to be made.
   </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
+    removeOuterTag={true}
     showCasePanel={true}
-  >
-    <ActionLink
-      linkText="My link"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Components: Links ActionLinkBadge renders 1`] = `
-<Fragment>
-  <h2
-    id="action-link-badge"
-  >
-    Action link with Badge
-  </h2>
-  <p>
-    Action links.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <ActionLink
-      badge={
-        Object {
-          "text": "40",
-          "type": "badge-default badge-number",
-        }
+    showCasePanelAdvanced={
+      Object {
+        "elements": Array [
+          Object {
+            "component": <ShowcaseActionComponent
+              linkText="Pay now"
+            />,
+            "description": <React.Fragment>
+              <p>
+                Actions links can be customized in a few different ways to fit different contexts. Default styling contains a heading and an arrow icon. It can be modified be adding an info text that will give more information or with a number badge. If a the link is directing the user to an external web page or opens up a new tab, this should be indicated using an new tab icon instead of the arrow.  
+              </p>
+            </React.Fragment>,
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "inputs": Array [
+                    Object {
+                      "id": "infoText",
+                      "name": "Info text",
+                      "value": Object {
+                        "multiline": true,
+                        "smallText": "Pay your invoices in your tempo",
+                      },
+                    },
+                    Object {
+                      "id": "badge",
+                      "name": "With Badge",
+                      "value": Object {
+                        "badge": Object {
+                          "text": "40",
+                          "type": "badge-default",
+                        },
+                      },
+                    },
+                    Object {
+                      "id": "externalLink",
+                      "name": "External link",
+                      "value": Object {
+                        "newTab": true,
+                      },
+                    },
+                  ],
+                  "title": "Modifiers",
+                },
+                Object {
+                  "inputs": Array [
+                    Object {
+                      "id": "state_modifiers",
+                      "name": "Disabled",
+                      "value": Object {
+                        "disabled": true,
+                      },
+                    },
+                  ],
+                  "title": "State modifier",
+                },
+              ],
+            },
+            "title": "Action links",
+          },
+        ],
+        "id": "no-tabs",
       }
-      linkText="My link"
-    />
-  </ComponentPreview>
-</Fragment>
+    }
+  />
+  <span
+    className="h3 d-inline-block mt-3"
+  >
+    When to consider something else
+  </span>
+  <ul
+    className="list list-bullet"
+  >
+    <li>
+      Use a 
+      <Link
+        to="/components/buttons"
+      >
+        button
+      </Link>
+       instead of a link an action. As a general rule, if the user is making changes to the back or front-end of the site when clicking, you should use a button. If the user is being directed to a different page, you can use link.
+    </li>
+    <li>
+      Use a standalone 
+      <Link
+        to="/components/links"
+      >
+        link
+      </Link>
+       instead of a action link if you don't need to highlight and make the links appear more as call to actions.
+    </li>
+  </ul>
+  <h3>
+    How to use action links
+  </h3>
+  <div
+    className="row"
+  >
+    <div
+      className="col-lg-6"
+    >
+      <div
+        className="slab slab-plain slab-border-success"
+      >
+        <h4>
+          Do
+        </h4>
+        <div
+          className="d-flex justify-content-center mt-4 mb-2 flex-column"
+        >
+          <InputGroup
+            label="Name"
+            type="text"
+          />
+          <InputGroup
+            label="Email"
+            placeholder="name@email.com"
+            type="text"
+          />
+          <Checkbox
+            id="terms-success-example"
+            label="I agree to terms of use"
+          />
+          <Button
+            fullWidth={true}
+            label="Submit"
+            type="primary"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-lg-6"
+    >
+      <div
+        className="slab slab-plain slab-border-error"
+      >
+        <h4>
+          Don't
+        </h4>
+        <div
+          className="d-flex justify-content-center mt-4 mb-2 flex-column"
+        >
+          <InputGroup
+            label="Name"
+            type="text"
+          />
+          <InputGroup
+            label="Email"
+            placeholder="name@email.com"
+            type="text"
+          />
+          <Checkbox
+            id="terms-error-example"
+            label="I agree to terms of use"
+          />
+          <ActionLink
+            linkText="Submit"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <p
+    className="mt-3"
+  >
+    Use a 
+    <Link
+      to="/components/buttons"
+    >
+      button
+    </Link>
+     instead of an action link for an action like for instance submitting a form.
+  </p>
+</section>
 `;
 
-exports[`Components: Links ActionLinkBadgeSmallText renders 1`] = `
-<Fragment>
+exports[`Components: Links ContentGuidelines renders 1`] = `
+<section
+  id="link-content-guidelines-container"
+>
   <h2
-    id="action-link-badge-small-text"
+    id="content-guidelines"
   >
-    Action link with Badge and small text
+    Content guidelines
+  </h2>
+  <div
+    className="row"
+    key="0"
+  >
+    <div
+      className="col-lg-6"
+      key="[object Object]"
+    >
+      <div
+        className="slab slab-plain slab-border-success h-100 pb-5"
+      >
+        <h4>
+          Do
+        </h4>
+        <div
+          className="d-flex justify-content-center mb-2  h-100 align-items-center"
+        >
+          <Link
+            linkText="Read our terms and conditions"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-lg-6"
+      key="[object Object]"
+    >
+      <div
+        className="slab slab-plain slab-border-error h-100 pb-5"
+      >
+        <h4>
+          Don't
+        </h4>
+        <div
+          className="d-flex justify-content-center mb-2  h-100 align-items-center"
+        >
+          <p
+            className=" mb-0 justify-content-center"
+          >
+            <Link
+              linkText="Click here"
+            />
+             to read our term and conditions.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-12 pb-4 pt-2"
+    >
+      Avoid using "click here", links should not need supporting copy to make sense.
+    </div>
+  </div>
+  <div
+    className="row"
+    key="1"
+  >
+    <div
+      className="col-lg-6"
+      key="[object Object]"
+    >
+      <div
+        className="slab slab-plain slab-border-success h-100 pb-5"
+      >
+        <h4>
+          Do
+        </h4>
+        <div
+          className="d-flex justify-content-center mb-2  h-100 align-items-center"
+        >
+          <Link
+            linkText="View our opening hours"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-lg-6"
+      key="[object Object]"
+    >
+      <div
+        className="slab slab-plain slab-border-error h-100 pb-5"
+      >
+        <h4>
+          Don't
+        </h4>
+        <div
+          className="d-flex justify-content-center mb-2  h-100 align-items-center"
+        >
+          <Link
+            linkText="View more"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-12 pb-4 pt-2"
+    >
+      Make sure the link makes it clear what content the link goes to.
+    </div>
+  </div>
+  <div
+    className="row"
+    key="2"
+  >
+    <div
+      className="col-lg-6"
+      key="[object Object]"
+    >
+      <div
+        className="slab slab-plain slab-border-success h-100 pb-5"
+      >
+        <h4>
+          Do
+        </h4>
+        <div
+          className="d-flex justify-content-center mb-2  h-100 align-items-center"
+        >
+          <Link
+            linkText="View our opening hours"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-lg-6"
+      key="[object Object]"
+    >
+      <div
+        className="slab slab-plain slab-border-error h-100 pb-5"
+      >
+        <h4>
+          Don't
+        </h4>
+        <div
+          className="d-flex justify-content-center mb-2  h-100 align-items-center"
+        >
+          <Link
+            linkText="View more"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-12 pb-4 pt-2"
+    >
+      Make sure the link makes it clear what content the link goes to.
+    </div>
+  </div>
+  <div
+    className="row"
+    key="3"
+  >
+    <div
+      className="col-lg-6"
+      key="[object Object]"
+    >
+      <div
+        className="slab slab-plain slab-border-success h-100 pb-5"
+      >
+        <h4>
+          Do
+        </h4>
+        <div
+          className="d-flex justify-content-center mb-2  h-100 align-items-center"
+        >
+          <p
+            className="mb-0 justify-content-center"
+          >
+            Here you can 
+            <Link
+              linkText="read about the browsers we recommend"
+            />
+            .
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-lg-6"
+      key="[object Object]"
+    >
+      <div
+        className="slab slab-plain slab-border-error h-100 pb-5"
+      >
+        <h4>
+          Don't
+        </h4>
+        <div
+          className="d-flex justify-content-center mb-2  h-100 align-items-center"
+        >
+          <Link
+            linkText="Here you can read about the browsers we recommend"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-12 pb-4 pt-2"
+    >
+      Make links as short as possible whilst still making them clear. Don't include several sentences or preceding articles or punctuation marks.
+    </div>
+  </div>
+</section>
+`;
+
+exports[`Components: Links Overview renders 1`] = `
+<section>
+  <h2
+    id="links"
+  >
+    Links
   </h2>
   <p>
-    Action Links can contain both Badge and small text
+    Links should be used when you want to direct a user to a new section, page or website. They can be used on their own or inline within paragraphs.
   </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
+    removeOuterTag={true}
     showCasePanel={true}
-  >
-    <ActionLink
-      badge={
-        Object {
-          "text": "40",
-          "type": "badge-default badge-number",
-        }
+    showCasePanelAdvanced={
+      Object {
+        "elements": Array [
+          Object {
+            "component": <ShowcaseComponent
+              linkText="Inline link"
+            />,
+            "description": "Inline links appear within paragraphs or sentences. They’re used to direct users to content that’s not directly related to the journey they’re on. If a link is directing the user to an external web page, this should be indicated using an icon and the page should open in a new window. The font size should match the font size of the text it is inline with.",
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "inputs": Array [
+                    Object {
+                      "id": "external_link",
+                      "name": "External link",
+                      "value": Object {
+                        "rightIcon": "launch",
+                      },
+                    },
+                    Object {
+                      "id": "dark_theme_color",
+                      "name": "Dark theme",
+                      "value": Object {
+                        "backgroundDark": true,
+                        "bright": true,
+                      },
+                    },
+                  ],
+                  "title": "Alternatives",
+                },
+                Object {
+                  "inputs": Array [
+                    Object {
+                      "id": "state_modifier",
+                      "name": "Disabled",
+                      "value": Object {
+                        "disabled": true,
+                      },
+                    },
+                  ],
+                  "title": "State modifier",
+                },
+              ],
+              "radio": Array [
+                Object {
+                  "id": "font_size_radio",
+                  "title": "Font size",
+                  "values": Array [
+                    Object {
+                      "name": "Normal",
+                      "value": Object {
+                        "smallFont": false,
+                      },
+                    },
+                    Object {
+                      "name": "Small",
+                      "value": Object {
+                        "smallFont": true,
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "tab": "Inline",
+            "title": "Inline links",
+          },
+          Object {
+            "component": <ShowcaseComponent
+              linkText="Standalone link"
+              standalone={true}
+            />,
+            "description": "Standalone links are separate to paragraph content and appear on there own. They can be user with a leading icon to further convey the result of clicking the link. Links with icons are not underlined.",
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "inputs": Array [
+                    Object {
+                      "id": "dark_theme_color",
+                      "name": "Dark theme",
+                      "value": Object {
+                        "backgroundDark": true,
+                        "bright": true,
+                      },
+                    },
+                  ],
+                  "title": "Alternatives",
+                },
+                Object {
+                  "inputs": Array [
+                    Object {
+                      "id": "state_modifier",
+                      "name": "Disabled",
+                      "value": Object {
+                        "disabled": true,
+                      },
+                    },
+                  ],
+                  "title": "State modifier",
+                },
+              ],
+              "radio": Array [
+                Object {
+                  "id": "font_size_radio",
+                  "title": "Font size",
+                  "values": Array [
+                    Object {
+                      "name": "Normal",
+                      "value": Object {
+                        "smallFont": false,
+                      },
+                    },
+                    Object {
+                      "name": "Small",
+                      "value": Object {
+                        "smallFont": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "radio_badge_choice",
+                  "title": "With icon",
+                  "values": Array [
+                    Object {
+                      "name": "None",
+                      "value": Object {
+                        "leftIcon": null,
+                      },
+                    },
+                    Object {
+                      "name": "New tab",
+                      "value": Object {
+                        "leftIcon": "launch",
+                      },
+                    },
+                    Object {
+                      "name": "Back",
+                      "value": Object {
+                        "leftIcon": "arrow_back_ios",
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "tab": "Standalone",
+            "title": "Standalone links",
+          },
+        ],
+        "id": "overviewLinks",
+        "tabsId": "overviewLinksTabs",
       }
-      linkText="My link"
-      smallText="This link directs to my page"
-    />
-  </ComponentPreview>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+    }
+  />
+  <span
+    className="h3 d-inline-block mt-3"
   >
-    <ActionLink
-      badge={
-        Object {
-          "text": "40",
-          "type": "badge-default badge-number",
-        }
-      }
-      linkText="My link"
-      multiline={true}
-      smallText="This link directs to my page"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Components: Links ActionLinkNewTab renders 1`] = `
-<Fragment>
-  <h2
-    id="action-link-new-tab"
+    When to consider something else
+  </span>
+  <ul
+    className="list list-bullet"
   >
-    Action link that opens a new tab
-  </h2>
-  <p>
-    An Action Link used in cases where a new tab is supposed to open is provided. Use 
+    <li>
+      Use a 
+      <Link
+        to="/components/buttons"
+      >
+        button
+      </Link>
+       instead of a link for actions. As a general rule, if the user is making changes to the back or front-end of the site when clicking, you should use a button. If the user is being directed to a different page, you can use link.
+    </li>
+    <li>
+      If you have a collection of links and want to highlight and make them appear more as call to actions consider using 
+      <a
+        href="#action-link"
+      >
+        action links
+      </a>
+    </li>
+  </ul>
+  <h3>
+    How to use links
+  </h3>
+  <div
+    className="row"
+  >
+    <div
+      className="col-12"
+    >
+      <div
+        className="slab slab-plain slab-border-error pb-5 h100"
+      >
+        <h4>
+          Don't
+        </h4>
+        <div
+          className="loader-preview-container d-flex justify-content-center align-items-center mt-3 pt-3"
+        >
+          <p>
+            Paragraph text with a 
+            <Link
+              leftIcon="edit"
+              linkText="Inline link"
+            />
+            .
+          </p>
+        </div>
+      </div>
+      <p>
+        Don't use a leading icon or strip the underline from an inline link. 
+      </p>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col-lg-6"
+    >
+      <div
+        className="slab slab-plain slab-border-success pb-5 h100"
+      >
+        <h4>
+          Do
+        </h4>
+        <div
+          className="d-flex justify-content-center mt-4 mb-4"
+        >
+          <div
+            className="link-dark-background py-5 px-5"
+          >
+            <Link
+              bright={true}
+              linkText="Standalone link"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-lg-6"
+    >
+      <div
+        className="slab slab-plain slab-border-error pb-5 h100"
+      >
+        <h4>
+          Don't
+        </h4>
+        <div
+          className="d-flex justify-content-center mt-4 mb-4"
+        >
+          <div
+            className="link-dark-background p-5"
+          >
+            <Link
+              linkText="Standalone link"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p
+    className="mt-3"
+  >
+    If the background is too dark for the regular link color add 
     <CodeTags
-      code=".action-link-new-tab"
-      type="secondary"
-    />
-     when it is known that the target will open in a new tab. 
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <ActionLink
-      linkText="My link"
-      newTab={true}
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Components: Links ActionLinkSmallText renders 1`] = `
-<Fragment>
-  <h2
-    id="action-link-small-text"
-  >
-    Action link with small text
-  </h2>
-  <p>
-    A small text can be displayed as a part of the Action Link. There are two types of Action Links with small text, one with the inline small text and one with the texts on different lines.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <ActionLink
-      linkText="My link"
-      smallText="This link directs to my page"
-    />
-  </ComponentPreview>
-  <p>
-    Use 
-    <CodeTags
-      code=".action-link-multiline"
-      type="secondary"
-    />
-     for the Action Link with the texts on different lines.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <ActionLink
-      linkText="My link"
-      multiline={true}
-      smallText="This link directs to my page"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Components: Links ButtonLinks renders 1`] = `
-<Fragment>
-  <h2
-    id="button-links"
-  >
-    Links with buttons
-  </h2>
-  <p>
-    To use links with buttons, for instance as a cancel button, use 
-    <CodeTags
-      code=".btn.btn-link"
-      type="secondary"
-    />
-     in a 
-    <CodeTags
-      code="<button>"
-      type="primary"
+      code=".bright"
     />
     .
   </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Button
-      label="Approve"
-      type="primary"
-    />
-    
-
-    <Button
-      label="Cancel"
-      type="link"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Components: Links IconLinks renders 1`] = `
-<Fragment>
-  <h2
-    id="icon-links"
-  >
-    Links with icons
-  </h2>
-  <p>
-    Use class 
-    <CodeTags
-      code=".icon-link"
-      type="secondary"
-    />
-     on links with icons. Using icon with links can help further convey the result of clicking on the link, as can be seen in the examples below.
-  </p>
-  <h4>
-    Navigates to a previous page
-  </h4>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Link
-      leftIcon="arrow_back_ios"
-      linkText="My invoices"
-    />
-  </ComponentPreview>
-  <h4>
-    Enables editing
-  </h4>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Link
-      leftIcon="edit"
-      linkText="My invoices"
-    />
-  </ComponentPreview>
-  <h4>
-    Opens in a new tab
-  </h4>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Link
-      linkText="My invoices"
-      rightIcon="open_in_new"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Components: Links TextLinks renders 1`] = `
-<Fragment>
-  <h2
-    id="text-links"
-  >
-    Text links
-  </h2>
-  <p>
-    Text links are links used in paragraphs of text.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <p>
-      
-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      
-
-      Ut enim ad minim veniam, quis nostrud 
-      <Link
-        linkText="exercitation"
-      />
-       ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      
-
-    </p>
-  </ComponentPreview>
-  <h3>
-    Small link
-  </h3>
-  <p>
-    Use links in small with legal texts, such as links to terms and contitions
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <small>
-      
-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      
-
-      Ut enim ad minim veniam, quis nostrud 
-      <Link
-        linkText="exercitation"
-      />
-       ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      
-
-    </small>
-  </ComponentPreview>
-</Fragment>
+</section>
 `;
 
 exports[`Components: Links renders 1`] = `
 <DocContainer
   docToc={true}
 >
-  <p
-    className="lead"
+  <section
+    id="link-doc"
   >
-    Links
-  </p>
-  <TextLinks />
-  <ButtonLinks />
-  <IconLinks />
-  <ActionLink />
-  <ActionLinkBadge />
-  <ActionLinkSmallText />
-  <ActionLinkBadgeSmallText />
-  <ActionLinkNewTab />
+    <p
+      className="lead"
+    >
+      Links are used as navigational elements and can be used on their own or inline within paragraphs of text.
+    </p>
+    <Overview />
+    <ActionLink />
+    <ContentGuidelines />
+  </section>
 </DocContainer>
 `;
