@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Logotype, { OurFavicon, HorizontalLogo, Download, LogoBlack, LogoWhite, SpacingZone, MisuseLogo, LogotypeBackgrounds, Favicon } from "./index";
+import Logotype, { HorizontalLogo, Download, LogoBlack, LogoWhite, SpacingZone, MisuseLogo, LogotypeBackgrounds, Favicon } from "./index";
 
 describe("Core: Logotype", () => {
     it("is defined", () => {
@@ -12,18 +12,6 @@ describe("Core: Logotype", () => {
         const wrapper = shallow(<Logotype />);
 
         expect(wrapper).toMatchSnapshot();
-    });
-
-    describe("OurFavicon", () => {
-        it("is defined", () => {
-            expect(OurFavicon).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<OurFavicon />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
     });
 
     describe("HorizontalLogo", () => {
