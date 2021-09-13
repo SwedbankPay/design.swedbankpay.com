@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Alerts, { BasicUsage, AlertWithIcon, ClosingTheAlert, ExtendedUsage, JavascriptMethods } from "./index";
+import Alerts, { Overview, ContentGuidelines, DeveloperDocumentation } from "./index";
 
 describe("Documentation: Alerts", () => {
     it("is defined", () => {
@@ -9,69 +9,42 @@ describe("Documentation: Alerts", () => {
     });
 
     it("renders", () => {
-        console.warn = jest.fn();
-
         const wrapper = shallow(<Alerts />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(console.warn).toHaveBeenCalled();
     });
 
-    describe("Basic Usage", () => {
+    describe("Overview", () => {
         it("is defined", () => {
-            expect(BasicUsage).toBeDefined();
+            expect(Overview).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<BasicUsage />);
+            const wrapper = shallow(<Overview />);
 
             expect(wrapper).toMatchSnapshot();
         });
     });
 
-    describe("Alert With Icon", () => {
+    describe("Content guidelines", () => {
         it("is defined", () => {
-            expect(AlertWithIcon).toBeDefined();
+            expect(ContentGuidelines).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<AlertWithIcon />);
+            const wrapper = shallow(<ContentGuidelines />);
 
             expect(wrapper).toMatchSnapshot();
         });
     });
 
-    describe("Closing The Alert", () => {
+    describe("Developer documentation", () => {
         it("is defined", () => {
-            expect(ClosingTheAlert).toBeDefined();
+            expect(DeveloperDocumentation).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<ClosingTheAlert />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("Extended Usage", () => {
-        it("is defined", () => {
-            expect(ExtendedUsage).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<ExtendedUsage />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("JavascriptMethods", () => {
-        it("is defined", () => {
-            expect(JavascriptMethods).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<JavascriptMethods />);
+            const wrapper = shallow(<DeveloperDocumentation />);
 
             expect(wrapper).toMatchSnapshot();
         });

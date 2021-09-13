@@ -1,267 +1,297 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Documentation: Alerts Alert With Icon renders 1`] = `
-<Fragment>
+exports[`Documentation: Alerts Content guidelines renders 1`] = `
+<section>
   <h2
-    id="icons"
+    className="content-guidelines"
   >
-    Icons
+    Content guidelines
   </h2>
   <p>
-    To use an alert with an icon... Read more about icon usage here 
-    <Link
-      to="/core/iconography"
-    >
-      here
-    </Link>
-    .
+    Alerts provide limited space for content, and therefore it must be short and concise. A user should be able to scan the notification, be apprised of the situation, and know what to do next.
   </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  <ul
+    className="list list-bullet"
   >
-    <Alert
-      icon="check_circle"
-      text="This is a success alert with an icon!"
-      type="success"
-    />
-    
-
-
-    <Alert
-      icon="info"
-      text="This is an informative alert with an icon!"
-      type="informative"
-    />
-    
-
-
-    <Alert
-      icon="warning"
-      text="This is a warning alert with an icon!"
-      type="warning"
-    />
-    
-
-
-    <Alert
-      icon="error"
-      text="This is a danger alert with an icon!"
-      type="danger"
-    />
-  </ComponentPreview>
-</Fragment>
+    <li>
+      The 
+      <b>
+        title
+      </b>
+       should be short and descriptive, explaining the most important piece of information.
+    </li>
+    <li>
+      The 
+      <b>
+        content
+      </b>
+       should be limited to one or two short sentences.
+    </li>
+    <li>
+      If possible, include a 
+      <b>
+        link
+      </b>
+       within the content that redirects the user to next step or if needed gives more information.
+    </li>
+  </ul>
+</section>
 `;
 
-exports[`Documentation: Alerts Basic Usage renders 1`] = `
-<Fragment>
+exports[`Documentation: Alerts Developer documentation renders 1`] = `
+<section>
   <h2
-    id="basic-usage"
+    className="developer-documentation"
   >
-    Basic usage
+    Developer documentation
   </h2>
-  <p>
-    The default behavior of the alert present itself in a box with a border.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  <span
+    className="h3"
   >
-    <Alert
-      text="This is a success alert!"
-      type="success"
-    />
-    
-
-
-    <Alert
-      text="This is an informative alert!"
-      type="informative"
-    />
-    
-
-
-    <Alert
-      text="This is a warning alert!"
-      type="warning"
-    />
-    
-
-
-    <Alert
-      text="This is a danger alert!"
-      type="danger"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Documentation: Alerts Closing The Alert renders 1`] = `
-<Fragment>
-  <h2
-    id="closing-the-alert"
+    Javascript methods
+  </span>
+  <p
+    className="mt-2"
   >
-    Closing the alert
-  </h2>
-  <p>
-    To add a close-button, add the following code inside your alert-element:
-    <br />
+    Use 
     <CodeTags
-      code="<a href=\\"#\\" data-alert-close><i class=\\"material-icons\\" aria-hidden=\\"true\\">close</i></a>"
-      type="primary"
-    />
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Alert
-      close={true}
-      icon="check_circle"
-      text="This is a success alert with an icon!"
-      type="success"
-    />
-    
-
-
-    <Alert
-      close={true}
-      icon="info"
-      text="This is an informative alert with an icon!"
-      type="informative"
-    />
-    
-
-
-    <Alert
-      close={true}
-      icon="warning"
-      text="This is a warning alert with an icon!"
-      type="warning"
-    />
-    
-
-
-    <Alert
-      close={true}
-      icon="error"
-      text="This is a danger alert with an icon!"
-      type="danger"
-    />
-  </ComponentPreview>
-  <h3>
-    External close button
-  </h3>
-  <p>
-    To add an external close-button for your alert add the attribute 
-    <CodeTags
-      code="data-alert-close=\\"{id}\\""
+      code="dg.alert.init()"
       type="secondary"
     />
-     to the button element.
+     to initialize all alerts.
+  </p>
+  <p>
+    Use 
+    <CodeTags
+      code="dg.alert.init(\\"component-id\\")"
+      type="secondary"
+    />
+     to initialize one specific component.
+  </p>
+  <section>
+    <h3>
+      Usage with NPM
+    </h3>
+    <p>
+      <Link
+        to="/get-started/for-developers/"
+      >
+        Usage with NPM
+      </Link>
+       will require you to import it from 
+      <CodeTags
+        code="@swedbankpay/design-guide"
+        type="primary"
+      />
+      .
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      dangerousHTML={true}
+      language="javascript"
+    >
+      import { alert } from "@swedbankpay/design-guide"; 
+      
+
+      alert.init()
+    </ComponentPreview>
+  </section>
+</section>
+`;
+
+exports[`Documentation: Alerts Overview renders 1`] = `
+<section>
+  <h2
+    id="local-alerts"
+  >
+    Local alerts
+  </h2>
+  <p>
+    Alerts are inserted within the content area near related items to notify users about potential problems or to communicate information. There are four different sub-types of alerts: error, warning, info, and success.
   </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}
-  >
-    <Alert
-      icon="check_circle"
-      id="alert-success-1"
-      text="Press the button below to close me"
-      type="success"
-    />
-    
-
-
-    <button
-      className="btn btn-primary"
-      data-alert-close="alert-success-1"
-      type="button"
-    >
-      Close alert
-    </button>
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Documentation: Alerts Extended Usage renders 1`] = `
-<Fragment>
-  <h2
-    id="extended-usage"
-  >
-    Extended usage
-  </h2>
-  <p>
-    By adding the 
-    <CodeTags
-      code=".alert-complex"
-      type="secondary"
-    />
-     class, alerts can contain additional HTML elements like headings, paragraphs and dividers.
-  </p>
-  <p>
-    Make sure to wrap the content in a container with the class 
-    <CodeTags
-      code=".alert-body"
-      type="secondary"
-    />
-    .
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <ComplexAlert
-      close={true}
-      headerText="Success!"
-      icon="check_circle"
-      type="success"
-    >
-      <p>
-        PDF was successfully uploaded.
-        <br />
-        Some additional information.
-      </p>
-      <hr />
-      <p>
-        By the way, great job!
-      </p>
-    </ComplexAlert>
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Documentation: Alerts JavascriptMethods renders 1`] = `
-<Fragment>
-  <h2
-    id="javascript-methods"
-  >
-    JavaScript methods
-  </h2>
-  <JavascriptDocs
-    componentName="alert"
+    showCasePanelAdvanced={
+      Object {
+        "elements": Array [
+          Object {
+            "component": <Alert
+              icon="cancel"
+              text={
+                <p>
+                  <b>
+                    Error title:
+                  </b>
+                   Input informative alert message here, provide link to solution or more info when 
+                  <a
+                    href="#"
+                  >
+                    possible
+                  </a>
+                </p>
+              }
+              type="danger"
+            />,
+            "description": "Use this alert to let the user know that something went wrong. The message should clearly state the problem and if possible provide information on how to fix it.",
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "inputs": Array [
+                    Object {
+                      "id": "close_button",
+                      "name": "Close button",
+                      "value": Object {
+                        "close": true,
+                      },
+                    },
+                  ],
+                  "title": "Options",
+                },
+              ],
+            },
+            "tab": "Error",
+            "title": "Error alert",
+          },
+          Object {
+            "component": <Alert
+              icon="warning"
+              text={
+                <p>
+                  <b>
+                    Error title:
+                  </b>
+                   Input informative alert message here, provide link to solution or more info when 
+                  <a
+                    href="#"
+                  >
+                    possible
+                  </a>
+                </p>
+              }
+              type="warning"
+            />,
+            "description": "Use this alert to help users avoid errors and warn against decisions that might have unexpected results",
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "inputs": Array [
+                    Object {
+                      "id": "close_button",
+                      "name": "Close button",
+                      "value": Object {
+                        "close": true,
+                      },
+                    },
+                  ],
+                  "title": "Options",
+                },
+              ],
+            },
+            "tab": "Warning",
+            "title": "Warning error",
+          },
+          Object {
+            "component": <Alert
+              icon="info"
+              text={
+                <p>
+                  <b>
+                    Error title:
+                  </b>
+                   Input informative alert message here, provide link to solution or more info when 
+                  <a
+                    href="#"
+                  >
+                    possible
+                  </a>
+                </p>
+              }
+              type="informative"
+            />,
+            "description": "Use this alert to communicate additional information to the user that may not be tied to their current action or task.	",
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "inputs": Array [
+                    Object {
+                      "id": "close_button",
+                      "name": "Close button",
+                      "value": Object {
+                        "close": true,
+                      },
+                    },
+                  ],
+                  "title": "Options",
+                },
+              ],
+            },
+            "tab": "Informative",
+            "title": "Informative alert",
+          },
+          Object {
+            "component": <Alert
+              icon="check_circle"
+              text={
+                <p>
+                  <b>
+                    Error title:
+                  </b>
+                   Input informative alert message here, provide link to solution or more info when 
+                  <a
+                    href="#"
+                  >
+                    possible
+                  </a>
+                </p>
+              }
+              type="success"
+            />,
+            "description": "Use this alert to let the user know that an action or event has happened successfully. Success alerts are not a common use case for alert messages.",
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "inputs": Array [
+                    Object {
+                      "id": "close_button",
+                      "name": "Close button",
+                      "value": Object {
+                        "close": true,
+                      },
+                    },
+                  ],
+                  "title": "Options",
+                },
+              ],
+            },
+            "tab": "Success",
+            "title": "Success alert",
+          },
+        ],
+        "id": "overviewAlert",
+        "tabsId": "overviewAlertTabs",
+      }
+    }
   />
-</Fragment>
+  <WhenToConsider />
+  <HowTo />
+</section>
 `;
 
 exports[`Documentation: Alerts renders 1`] = `
-<DocContainer
-  docToc={true}
->
-  <p
-    className="lead"
+<DocContainer>
+  <section
+    id="alerts-doc"
   >
-    Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
-  </p>
-  <BasicUsage />
-  <AlertWithIcon />
-  <ClosingTheAlert />
-  <ExtendedUsage />
-  <JavascriptMethods />
+    <p
+      className="lead"
+    >
+      Alerts are short messages used to inform and give feedback to the user about an action or state. Icons and color indicate the type and urgency of the information within the message. 
+    </p>
+    <Overview />
+    <ContentGuidelines />
+    <DeveloperDocumentation />
+  </section>
 </DocContainer>
 `;
