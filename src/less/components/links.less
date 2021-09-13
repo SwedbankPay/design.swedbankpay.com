@@ -1,19 +1,19 @@
 a {
+    padding: 0.125rem;
+    border: 1px solid transparent;
+
     &.bright {
         color: @blue-syntax-highlight;
 
         &.disabled {
             color: @medium-brown;
         }
-
-        &:focus {
-
-        }
     }
 
     &:focus {
-        outline-offset: 2px;
-        outline-color: @brand-secondary;
+        border-color: @brand-secondary;
+        outline: none;
+        border-radius: 0.25rem;
     }
 
     &.disabled {
