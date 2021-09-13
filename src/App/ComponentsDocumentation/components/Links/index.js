@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import { overviewLinks, overviewActionLinks } from "./constants";
 
 const Overview = () => (
-    <>
+    <section>
         <h2 id="links">Links</h2>
         <p>Links should be used when you want to direct a user to a new section, page or website. They can be used on their own or inline within paragraphs.</p>
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewLinks} codeFigure removeOuterTag/>
@@ -59,7 +59,7 @@ const Overview = () => (
             </div>
         </div>
         <p className="mt-3">If the background is too dark for the regular link color we recommend using a brighter font color with an underline.</p>
-    </>
+    </section>
 );
 
 const ActionLink = () => (
@@ -84,7 +84,7 @@ const ActionLink = () => (
                     <div className="d-flex justify-content-center mt-4 mb-2 flex-column">
                         <InputComponent type="text" label="Name"/>
                         <InputComponent type="text" label="Email" placeholder="name@email.com"/>
-                        <div className="d-flex flex-row"><CheckboxComponent/><p>I agree to terms of use</p></div>
+                        <CheckboxComponent label="I agree to terms of use" id="terms-success-example"/>
                         <ButtonComponent type="primary" label="Submit" fullWidth/>
                     </div>
                 </div>
@@ -95,14 +95,13 @@ const ActionLink = () => (
                     <div className="d-flex justify-content-center mt-4 mb-2 flex-column">
                         <InputComponent type="text" label="Name"/>
                         <InputComponent type="text" label="Email" placeholder="name@email.com"/>
-                        <div className="d-flex flex-row"><CheckboxComponent/><p>I agree to terms of use</p></div>
+                        <CheckboxComponent label="I agree to terms of use" id="terms-error-example"/>
                         <ActionLinkComponent linkText="Submit"/>
                     </div>
                 </div>
             </div>
         </div>
         <p className="mt-3">Use a <Link to="/components/buttons">button</Link> instead of an action link for an action like for instance submitting a form.</p>
-
     </section>
 );
 
