@@ -148,13 +148,6 @@ export const overviewLinks = {
                         title: "Alternatives",
                         inputs: [
                             {
-                                id: "icon_check",
-                                name: "With icon",
-                                value: {
-                                    leftIcon: "arrow_back_ios"
-                                }
-                            },
-                            {
                                 id: "dark_theme_color",
                                 name: "Dark theme",
                                 value: {
@@ -195,8 +188,32 @@ export const overviewLinks = {
                                 }
                             }
                         ]
-                    } //Her
-                    
+                    },
+                    {
+                        id: "radio_badge_choice",
+                        title: "With icon",
+                        values: [
+                            {
+                                name: "None",
+                                value: {
+                                    leftIcon: null
+                                }
+                            },
+                            {
+                                name: "New tab",
+                                value: {
+                                    leftIcon: "launch"
+                                }
+                            },
+                            {
+                                name: "Back",
+                                value: {
+                                    leftIcon: "arrow_back_ios"
+                                }
+                            }
+
+                        ]
+                    }
                 ]
             },
             title: "Standalone links",

@@ -125,8 +125,6 @@ const ContentGuidelines = () => (
                 </div>
             </div>
         ))}
-
-
     </section>
 );
 
