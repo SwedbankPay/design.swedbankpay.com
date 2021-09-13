@@ -246,7 +246,7 @@ exports[`Component: Select Overview renders 1`] = `
     }
   />
   <h3>
-    When to use Select
+    When to consider something else
   </h3>
   <WhenToUse />
 </section>
