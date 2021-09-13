@@ -6,7 +6,7 @@ import ButtonComponent from "@components/Button";
 import InputComponent from "@components/InputGroup";
 import CheckboxComponent from "@components/FormComponents/Checkbox";
 import { Link } from "react-router-dom";
-import { overviewLinks, overviewActionLinks } from "./constants";
+import { overviewLinks, overviewActionLinks, guidelinesContent } from "./constants";
 
 const Overview = () => (
     <section>
@@ -108,63 +108,25 @@ const ActionLink = () => (
 const ContentGuidelines = () => (
     <section id="link-content-guidelines-container">
         <h2 id="content-guidelines">Content guidelines</h2>
-        <div className="row">
-            <div className="col-lg-6">
-                <div className="slab slab-plain slab-border-success h-100 pb-5" >
-                    <h4>Do</h4>
-                    <div className="d-flex justify-content-center mb-2  h-100 align-items-center">
-                        <LinkComponent linkText="Read our terms and conditions"/>
+        {guidelinesContent.map(({ slabs, text }, i) => (
+            <div className="row" key={i}>
+                {slabs.map(({ content, type }) => (
+                    <div className="col-lg-6" key={content}>
+                        <div className={`slab slab-plain slab-border-${type} h-100 pb-5`} >
+                            <h4>{type === "success" ? "Do" : "Don't"}</h4>
+                            <div className="d-flex justify-content-center mb-2  h-100 align-items-center">
+                                {content}
+                            </div>
+                        </div>
                     </div>
+                ))}
+                <div className="col-12 pb-4 pt-2">
+                    {text}
                 </div>
             </div>
-            <div className="col-lg-6">
-                <div className="slab slab-plain slab-border-error h-100 pb-5">
-                    <h4>Don&apos;t</h4>
-                    <div className="d-flex justify-content-center mb-2  h-100 align-items-center">
-                        <p className=" mb-0 justify-content-center"><LinkComponent linkText="Click here" /> to read our term and conditions.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <p className="mt-3">Avoid using &quot;click here&quot;, links should not need supporting copy to make sense</p>
-        <div className="row">
-            <div className="col-lg-6">
-                <div className="slab slab-plain slab-border-success h-100 pb-5" >
-                    <h4>Do</h4>
-                    <div className="d-flex justify-content-center mb-2  h-100 align-items-center">
-                        <LinkComponent linkText="View our opening hours"/>
-                    </div>
-                </div>
-            </div>
-            <div className="col-lg-6">
-                <div className="slab slab-plain slab-border-error h-100 pb-5">
-                    <h4>Don&apos;t</h4>
-                    <div className="d-flex justify-content-center mb-2  h-100 align-items-center">
-                        <LinkComponent linkText="View more"/>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <p className="mt-3">Make sure the link makes it clear what content the link goes to.</p>
-        <div className="row">
-            <div className="col-lg-6">
-                <div className="slab slab-plain slab-border-success h-100 pb-5" >
-                    <h4>Do</h4>
-                    <div className="d-flex justify-content-center mb-2  h-100 align-items-center">
-                        <p className="mb-0 justify-content-center">Here you can <LinkComponent linkText="read about the browsers we recommend"/>.</p>
-                    </div>
-                </div>
-            </div>
-            <div className="col-lg-6">
-                <div className="slab slab-plain slab-border-error h-100 pb-5">
-                    <h4>Don&apos;t</h4>
-                    <div className="d-flex justify-content-center mb-2  h-100 align-items-center">
-                        <LinkComponent linkText="Here you can read about the browsers we recommend"/>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <p className="mt-3">Make links as short as possible whilst still making them clear. Don&apost; include several sentences or preceding articles or punctuation marks.</p>
+        ))}
+
+
     </section>
 );
 

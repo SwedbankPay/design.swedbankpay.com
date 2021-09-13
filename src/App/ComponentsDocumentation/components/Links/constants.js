@@ -18,6 +18,61 @@ const ShowcaseActionComponent = ({ badge, smallText, multiline, newTab, disabled
     </div>
 );
 
+export const guidelinesContent = [
+    {
+        slabs: [
+            {
+                type: "success",
+                content: <Link linkText="Read our terms and conditions"/>
+            },
+            {
+                type: "error",
+                content: <p className=" mb-0 justify-content-center"><Link linkText="Click here" /> to read our term and conditions.</p>
+            },
+        ],
+        text: "Avoid using \"click here\", links should not need supporting copy to make sense."
+    },
+    {
+        slabs: [
+            {
+                type: "success",
+                content: <Link linkText="View our opening hours"/>
+            },
+            {
+                type: "error",
+                content: <Link linkText="View more"/>
+            }
+        ],
+        text: "Make sure the link makes it clear what content the link goes to."
+    },
+    {
+        slabs: [
+            {
+                type: "success",
+                content: <Link linkText="View our opening hours"/>
+            },
+            {
+                type: "error",
+                content: <Link linkText="View more"/>
+            }
+        ],
+        text: "Make sure the link makes it clear what content the link goes to."
+    },
+    {
+        slabs: [
+            {
+                type: "success",
+                content: <p className="mb-0 justify-content-center">Here you can <Link linkText="read about the browsers we recommend"/>.</p>
+            },
+            {
+                type: "error",
+                content: <Link linkText="Here you can read about the browsers we recommend"/>
+            }
+        ],
+        text: "Make links as short as possible whilst still making them clear. Don't include several sentences or preceding articles or punctuation marks."
+    }
+];
+
 export const overviewLinks = {
     id: "overviewLinks",
     tabsId: "overviewLinksTabs",
