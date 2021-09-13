@@ -24,6 +24,11 @@ exports[`Components: Links ActionLink renders 1`] = `
             "component": <ShowcaseActionComponent
               linkText="Pay now"
             />,
+            "description": <React.Fragment>
+              <p>
+                Actions links can be customized in a few different ways to fit different contexts. Default styling contains a heading and an arrow icon. It can be modified be adding an info text that will give more information or with a number badge. If a the link is directing the user to an external web page or opens up a new tab, this should be indicated using an new tab icon instead of the arrow.  
+              </p>
+            </React.Fragment>,
             "options": Object {
               "checkbox": Array [
                 Object {
@@ -70,6 +75,7 @@ exports[`Components: Links ActionLink renders 1`] = `
                 },
               ],
             },
+            "title": "Action links",
           },
         ],
         "id": "no-tabs",
@@ -130,14 +136,10 @@ exports[`Components: Links ActionLink renders 1`] = `
             placeholder="name@email.com"
             type="text"
           />
-          <div
-            className="d-flex flex-row"
-          >
-            <Checkbox />
-            <p>
-              I agree to terms of use
-            </p>
-          </div>
+          <Checkbox
+            id="terms-success-example"
+            label="I agree to terms of use"
+          />
           <Button
             fullWidth={true}
             label="Submit"
@@ -167,14 +169,10 @@ exports[`Components: Links ActionLink renders 1`] = `
             placeholder="name@email.com"
             type="text"
           />
-          <div
-            className="d-flex flex-row"
-          >
-            <Checkbox />
-            <p>
-              I agree to terms of use
-            </p>
-          </div>
+          <Checkbox
+            id="terms-error-example"
+            label="I agree to terms of use"
+          />
           <ActionLink
             linkText="Submit"
           />
@@ -355,7 +353,7 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
 `;
 
 exports[`Components: Links Overview renders 1`] = `
-<Fragment>
+<section>
   <h2
     id="links"
   >
@@ -620,7 +618,7 @@ exports[`Components: Links Overview renders 1`] = `
   >
     If the background is too dark for the regular link color we recommend using a brighter font color with an underline.
   </p>
-</Fragment>
+</section>
 `;
 
 exports[`Components: Links renders 1`] = `

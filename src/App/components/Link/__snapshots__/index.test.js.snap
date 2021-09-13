@@ -2,8 +2,6 @@
 
 exports[`Component: Link calls console.error when linkText is not provided 1`] = `
 <Fragment>
-  
-
   <a
     className=""
     href=""
@@ -14,8 +12,6 @@ exports[`Component: Link calls console.error when linkText is not provided 1`] =
 
 exports[`Component: Link renders with left icon when leftIcon is provided 1`] = `
 <Fragment>
-  
-
   <a
     className="icon-link"
     href=""
@@ -44,8 +40,6 @@ exports[`Component: Link renders with left icon when leftIcon is provided 1`] = 
 
 exports[`Component: Link renders with provided linkText and no icons when only linkText is provided 1`] = `
 <Fragment>
-  
-
   <a
     className=""
     href=""
@@ -58,8 +52,6 @@ exports[`Component: Link renders with provided linkText and no icons when only l
 
 exports[`Component: Link renders with right icon when rightIcon is provided 1`] = `
 <Fragment>
-  
-
   <a
     className="icon-link"
     href=""
