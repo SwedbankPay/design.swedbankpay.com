@@ -142,6 +142,8 @@ exports[`Component: ActionLink prop linkText is marked as required 1`] = `
   <a
     className="action-link"
     href="#"
+    rel={null}
+    target={null}
   >
     
 
@@ -155,6 +157,8 @@ exports[`Component: ActionLink renders ActionLink with .action-link class only w
   <a
     className="action-link"
     href="#"
+    rel={null}
+    target={null}
   >
     
 

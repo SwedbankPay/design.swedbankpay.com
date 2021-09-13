@@ -12,9 +12,9 @@ const ActionLink = props => {
     );
 
     const attrs = {
+        href: link ? link : "#",
         rel: otherProps.newTab ? "noopener noreferrer" : null,
-        target: otherProps.newTab ? "_blank" : null,
-        href: link ? link : "#"
+        target: otherProps.newTab ? "_blank" : null
     };
 
     return (
