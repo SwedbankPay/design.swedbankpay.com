@@ -4,16 +4,17 @@ import ActionLink from "~/src/App/components/ActionLink";
 
 const ShowcaseComponent = ({ rightIcon, leftIcon, linkText, smallFont, backgroundDark, bright, standalone, disabled }) => (
     <div className={`loader-preview-container${backgroundDark ? " dark" : ""} d-flex justify-content-center align-items-center`}>
-        {standalone ? <Link rightIcon={rightIcon} leftIcon={leftIcon} linkText={linkText} smallFont={smallFont} bright={bright} disabled={disabled}/> :
-            <p className={`mt-3 ${backgroundDark ? "text-white" : ""}`}>Paragraph text with a <Link rightIcon={rightIcon} leftIcon={leftIcon} linkText={linkText} smallFont={smallFont} bright={bright} disabled={disabled}/></p>}
+        {standalone ? <>
+            <Link rightIcon={rightIcon} leftIcon={leftIcon} linkText={linkText} smallFont={smallFont} bright={bright} disabled={disabled}/>{"\n"}</> :
+            <><p className={`mt-3 ${backgroundDark ? "text-white" : ""}`}>Paragraph text with a <Link rightIcon={rightIcon} leftIcon={leftIcon} linkText={linkText} smallFont={smallFont} bright={bright} disabled={disabled}/> </p> {"\n"}</>}
     </div>
 );
 
 const ShowcaseActionComponent = ({ badge, smallText, multiline, newTab, disabled }) => (
     <div className="d-flex flex-column w-100">
-        <ActionLink linkText="Pay now" className={` ${badge ? "badge badge-default badge-number" : null}`} badge={badge} smallText={smallText} multiline={multiline} newTab={newTab} disabled={disabled}/>
-        <ActionLink linkText="Pay on the settlement date" className={`${badge ? "badge badge-default badge-number" : null}`} badge={badge} smallText={smallText} multiline={multiline} newTab={newTab} disabled={disabled}/>
-        <ActionLink linkText="Add to my credit" className={`${badge ? "badge badge-default badge-number" : null}`} badge={badge} smallText={smallText} multiline={multiline} newTab={newTab} disabled={disabled}/>
+        <ActionLink linkText="Pay now" className={` ${badge ? "badge badge-default badge-number" : null}`} badge={badge} smallText={smallText} multiline={multiline} newTab={newTab} disabled={disabled}/>{"\n"}
+        <ActionLink linkText="Pay on the settlement date" className={`${badge ? "badge badge-default badge-number" : null}`} badge={badge} smallText={smallText} multiline={multiline} newTab={newTab} disabled={disabled}/>{"\n"}
+        <ActionLink linkText="Add to my credit" className={`${badge ? "badge badge-default badge-number" : null}`} badge={badge} smallText={smallText} multiline={multiline} newTab={newTab} disabled={disabled}/>{"\n"}
     </div>
 );
 
