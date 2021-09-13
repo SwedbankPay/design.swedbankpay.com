@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Loader = ({ inverted, size, backgroundDark }) => (
     <div className={`loader-preview-container${backgroundDark ? " dark" : ""} d-flex justify-content-center align-items-center`}>
-        <div className={`loader${inverted ? " inverted" : ""}${size ? ` ${size}` : ""}`}></div>
+        <div className={`loader${inverted ? " loader-inverted" : ""}${size ? ` ${size}` : ""}`}></div>
     </div>
 );
 
