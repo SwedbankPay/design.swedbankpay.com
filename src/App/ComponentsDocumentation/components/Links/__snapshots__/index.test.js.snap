@@ -205,9 +205,11 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
   </h2>
   <div
     className="row"
+    key="0"
   >
     <div
       className="col-lg-6"
+      key="[object Object]"
     >
       <div
         className="slab slab-plain slab-border-success h-100 pb-5"
@@ -226,6 +228,7 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
     </div>
     <div
       className="col-lg-6"
+      key="[object Object]"
     >
       <div
         className="slab slab-plain slab-border-error h-100 pb-5"
@@ -247,17 +250,19 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
         </div>
       </div>
     </div>
+    <div
+      className="col-12 pb-4 pt-2"
+    >
+      Avoid using "click here", links should not need supporting copy to make sense.
+    </div>
   </div>
-  <p
-    className="mt-3"
-  >
-    Avoid using "click here", links should not need supporting copy to make sense
-  </p>
   <div
     className="row"
+    key="1"
   >
     <div
       className="col-lg-6"
+      key="[object Object]"
     >
       <div
         className="slab slab-plain slab-border-success h-100 pb-5"
@@ -276,6 +281,7 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
     </div>
     <div
       className="col-lg-6"
+      key="[object Object]"
     >
       <div
         className="slab slab-plain slab-border-error h-100 pb-5"
@@ -292,17 +298,67 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
         </div>
       </div>
     </div>
+    <div
+      className="col-12 pb-4 pt-2"
+    >
+      Make sure the link makes it clear what content the link goes to.
+    </div>
   </div>
-  <p
-    className="mt-3"
-  >
-    Make sure the link makes it clear what content the link goes to.
-  </p>
   <div
     className="row"
+    key="2"
   >
     <div
       className="col-lg-6"
+      key="[object Object]"
+    >
+      <div
+        className="slab slab-plain slab-border-success h-100 pb-5"
+      >
+        <h4>
+          Do
+        </h4>
+        <div
+          className="d-flex justify-content-center mb-2  h-100 align-items-center"
+        >
+          <Link
+            linkText="View our opening hours"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-lg-6"
+      key="[object Object]"
+    >
+      <div
+        className="slab slab-plain slab-border-error h-100 pb-5"
+      >
+        <h4>
+          Don't
+        </h4>
+        <div
+          className="d-flex justify-content-center mb-2  h-100 align-items-center"
+        >
+          <Link
+            linkText="View more"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-12 pb-4 pt-2"
+    >
+      Make sure the link makes it clear what content the link goes to.
+    </div>
+  </div>
+  <div
+    className="row"
+    key="3"
+  >
+    <div
+      className="col-lg-6"
+      key="[object Object]"
     >
       <div
         className="slab slab-plain slab-border-success h-100 pb-5"
@@ -327,6 +383,7 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
     </div>
     <div
       className="col-lg-6"
+      key="[object Object]"
     >
       <div
         className="slab slab-plain slab-border-error h-100 pb-5"
@@ -343,12 +400,12 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
         </div>
       </div>
     </div>
+    <div
+      className="col-12 pb-4 pt-2"
+    >
+      Make links as short as possible whilst still making them clear. Don't include several sentences or preceding articles or punctuation marks.
+    </div>
   </div>
-  <p
-    className="mt-3"
-  >
-    Make links as short as possible whilst still making them clear. Don&apost; include several sentences or preceding articles or punctuation marks.
-  </p>
 </section>
 `;
 
@@ -445,13 +502,6 @@ exports[`Components: Links Overview renders 1`] = `
                 Object {
                   "inputs": Array [
                     Object {
-                      "id": "icon_check",
-                      "name": "With icon",
-                      "value": Object {
-                        "leftIcon": "arrow_back_ios",
-                      },
-                    },
-                    Object {
                       "id": "dark_theme_color",
                       "name": "Dark theme",
                       "value": Object {
@@ -490,6 +540,30 @@ exports[`Components: Links Overview renders 1`] = `
                       "name": "Small",
                       "value": Object {
                         "smallFont": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "radio_badge_choice",
+                  "title": "With icon",
+                  "values": Array [
+                    Object {
+                      "name": "None",
+                      "value": Object {
+                        "leftIcon": null,
+                      },
+                    },
+                    Object {
+                      "name": "New tab",
+                      "value": Object {
+                        "leftIcon": "launch",
+                      },
+                    },
+                    Object {
+                      "name": "Back",
+                      "value": Object {
+                        "leftIcon": "arrow_back_ios",
                       },
                     },
                   ],

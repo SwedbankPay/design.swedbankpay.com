@@ -2,11 +2,11 @@
 
 exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with badge if badge is provided 1`] = `
 <Fragment>
-  <h4
-    className="mb-0 mr-1"
+  <span
+    className="mb-0 mr-1 action-link-label"
   >
     Link text
-  </h4>
+  </span>
   
 
   <span
@@ -27,11 +27,11 @@ exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with 
 
 exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with link text 1`] = `
 <Fragment>
-  <h4
-    className="mb-0 mr-1"
+  <span
+    className="mb-0 mr-1 action-link-label"
   >
     Link text
-  </h4>
+  </span>
   
 
   <div>
@@ -54,11 +54,11 @@ exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with 
       <div
         className="d-flex flex-row"
       >
-        <h4
-          className="mb-0 mr-1"
+        <span
+          className="action-link-label"
         >
           Link text
-        </h4>
+        </span>
         
 
       </div>
@@ -80,11 +80,11 @@ exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with 
 
 exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with smalltext when provided 1`] = `
 <Fragment>
-  <h4
-    className="mb-0 mr-1"
+  <span
+    className="mb-0 mr-1 action-link-label"
   >
     Link text
-  </h4>
+  </span>
   
 
   <div>
@@ -103,11 +103,11 @@ exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with 
 
 exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent without badge if badge is not provided 1`] = `
 <Fragment>
-  <h4
-    className="mb-0 mr-1"
+  <span
+    className="mb-0 mr-1 action-link-label"
   >
     Link text
-  </h4>
+  </span>
   
 
   <div>
@@ -121,11 +121,11 @@ exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent witho
 
 exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent without smalltext when not provided 1`] = `
 <Fragment>
-  <h4
-    className="mb-0 mr-1"
+  <span
+    className="mb-0 mr-1 action-link-label"
   >
     Link text
-  </h4>
+  </span>
   
 
   <div>

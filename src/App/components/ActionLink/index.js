@@ -1,20 +1,27 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classnames from "classnames";
 
 const ActionLink = props => {
     const { link, ...otherProps } = props;
+    const actionLinkClasses = classnames(
+        "action-link",
+        otherProps.newTab ? "action-link-new-tab" : null,
+        otherProps.multiline ? "multiline" : null,
+        otherProps.disabled ? "disabled" : null
+    );
+
+    const attrs = {
+        rel: otherProps.newTab ? "noopener noreferrer" : null,
+        target: otherProps.newTab ? "_blank" : null,
+        href: link ? link : "#"
+    };
 
     return (
         <>
-            {otherProps.newTab ?
-                <a className={`action-link${otherProps.multiline ? " multiline" : ""} action-link-new-tab${otherProps.disabled ? " disabled" : ""}`} href={link ? link : "#"} rel="noopener noreferrer" target="_blank">{"\n"}
-                    <ActionLinkContent {...otherProps} />
-                </a>
-                :
-                <a className={`action-link${otherProps.multiline ? " multiline" : ""}${otherProps.disabled ? " disabled" : ""}`} href="#" >{"\n"}
-                    <ActionLinkContent {...otherProps} />
-                </a>
-            }
+            <a className={actionLinkClasses} {...attrs}>{"\n"}
+                <ActionLinkContent {...otherProps}/>
+            </a>
         </>
     );
 };
