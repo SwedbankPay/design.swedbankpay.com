@@ -200,7 +200,11 @@ export const overviewActionLinks = {
                         ]
                     }
                 ]
-            }
+            },
+            title: "Action links",
+            description: <>
+                <p>Actions links can be customized in a few different ways to fit different contexts. Default styling contains a heading and an arrow icon. It can be modified be adding an info text that will give more information or with a number badge. If a the link is directing the user to an external web page or opens up a new tab, this should be indicated using an new tab icon instead of the arrow.  </p>
+            </>
         }
     ]
 };
