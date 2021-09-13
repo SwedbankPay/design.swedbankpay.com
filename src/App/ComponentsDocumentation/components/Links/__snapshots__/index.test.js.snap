@@ -690,7 +690,11 @@ exports[`Components: Links Overview renders 1`] = `
   <p
     className="mt-3"
   >
-    If the background is too dark for the regular link color we recommend using a brighter font color with an underline.
+    If the background is too dark for the regular link color add 
+    <CodeTags
+      code=".bright"
+    />
+    .
   </p>
 </section>
 `;
