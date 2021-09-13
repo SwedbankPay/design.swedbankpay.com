@@ -7,6 +7,7 @@ import InputComponent from "@components/InputGroup";
 import CheckboxComponent from "@components/FormComponents/Checkbox";
 import { Link } from "react-router-dom";
 import { overviewLinks, overviewActionLinks, guidelinesContent } from "./constants";
+import CodeTags from "~/src/App/components/CodeTags";
 
 const Overview = () => (
     <section>
@@ -58,7 +59,7 @@ const Overview = () => (
                 </div>
             </div>
         </div>
-        <p className="mt-3">If the background is too dark for the regular link color we recommend using a brighter font color with an underline.</p>
+        <p className="mt-3">If the background is too dark for the regular link color add <CodeTags code=".bright"/>.</p>
     </section>
 );
 
