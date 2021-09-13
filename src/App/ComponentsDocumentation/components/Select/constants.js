@@ -78,7 +78,7 @@ export const whenToUse = {
                     <Radio id="radio-example-2" label="Red" name="radio-example"/>
                 </div>,
             selectOptions: ["Blue", "Red"],
-            placeholder: "Select option",
+            placeholder: "Select color",
             label: "Background color",
             text: <p>In the example above, when there are very few choices, they should not be hidden inside a select list as this makes it harder for user to get an overview. Use <Link to="/components/radio-button">radio buttons</Link> instead.</p>
         },

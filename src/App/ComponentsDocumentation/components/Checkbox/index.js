@@ -63,7 +63,6 @@ const ContentGuidelines = () => (
         </div>
         <ul className="list list-bullet">
             <li>The <b>Group heading</b> should descriptive, explaining the context of the options to choose from. </li>
-            The checkbox labels
             <li>The <b>checkbox labels</b> should be short, to the point and clearly explain the option. It is also preferred to have fewer than three words per label as longer words could extend a label to multiple rows which could disrupt the reading experience.</li>
         </ul>
     </section>

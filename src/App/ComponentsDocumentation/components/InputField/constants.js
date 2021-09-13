@@ -1,6 +1,7 @@
 import React from "react";
 import InputGroup from "@components/InputGroup";
 import CodeTags from "@components/CodeTags";
+import Alert from "@components/Alert";
 
 export const inputShowCase = {
     id: "no-tabs",
@@ -57,7 +58,6 @@ export const inputShowCase = {
                                 value: {
                                     type: "email",
                                     prefixType: "icon",
-                                    prefixValue: "email",
                                     placeholder: "name@mail.com"
                                 }
                             },
@@ -66,7 +66,6 @@ export const inputShowCase = {
                                 value: {
                                     type: "tel",
                                     prefixType: "icon",
-                                    prefixValue: "phone",
                                     placeholder: "+46 701234567"
                                 }
                             },
@@ -75,7 +74,6 @@ export const inputShowCase = {
                                 value: {
                                     type: "password",
                                     prefixType: "icon",
-                                    prefixValue: "lock",
                                     placeholder: ""
                                 }
                             }
@@ -113,10 +111,7 @@ export const inputShowCase = {
             description: <>
                 <p>Inputs fields have a few different states which includes the default state, focus state, disabled state and error state.</p>
                 <p>The default input type is text but it can also be specified as for example Email which will make it automatically validated when submitted or Password which will mask the characters submitted.</p>
-                <div className="alert alert-informative mt-3">
-                    <i className="material-icons alert-icon align-self-start" aria-hidden="true">info</i>
-                    <p><b>Usage with icon.</b> Remember to wrap your inputfield within an <CodeTags type="secondary" code=".input-group"/></p>
-                </div>
+                <Alert id="input-field-alert" type="informative" icon={"info"} text={<p><b>Usage with icon.</b> Remember to wrap your inputfield within an <CodeTags type="secondary" code=".input-group" /></p>}/>
             </>
         }
     ]

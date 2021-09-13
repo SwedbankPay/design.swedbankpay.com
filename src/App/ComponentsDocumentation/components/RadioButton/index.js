@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import Radio from "@components/FormComponents/Radio";
-import { radiobuttonShowCase, doOptions, dontOptions } from "./constants";
+import { radiobuttonShowCase, doOptions, dontOptions, ContentGuidelinesOptions } from "./constants";
 import CodeTags from "@components/CodeTags";
 
 const HowTo = () => (
@@ -66,6 +66,13 @@ const ContentGuidelines = () => (
 const DeveloperDocumentation = () => (
     <section>
         <h2>Developer documentation</h2>
+        <div className="slab slab-plain">
+            <div className="d-flex flex-column align-items-center">
+                <div>
+                    <Radio groupTitle="Group heading" name="radio-dont-example" options={ContentGuidelinesOptions} group/>
+                </div>
+            </div>
+        </div>
         <span className="h3 d-inline-block mt-3">Disabled state</span>
         <p>Disable a radio button by adding <CodeTags type="primary" code="disabled"/> attribute to the desired radio button.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>

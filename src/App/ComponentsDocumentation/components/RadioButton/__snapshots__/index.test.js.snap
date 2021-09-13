@@ -33,6 +33,38 @@ exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
   <h2>
     Developer documentation
   </h2>
+  <div
+    className="slab slab-plain"
+  >
+    <div
+      className="d-flex flex-column align-items-center"
+    >
+      <div>
+        <Radio
+          group={true}
+          groupTitle="Group heading"
+          name="radio-dont-example"
+          options={
+            Array [
+              Object {
+                "checked": true,
+                "id": "radio-guidelines-example-1",
+                "label": "Radio button label",
+              },
+              Object {
+                "id": "radio-guidelines-example-2",
+                "label": "Radio button label",
+              },
+              Object {
+                "id": "radio-guidelines-example-3",
+                "label": "Radio button label",
+              },
+            ]
+          }
+        />
+      </div>
+    </div>
+  </div>
   <span
     className="h3 d-inline-block mt-3"
   >

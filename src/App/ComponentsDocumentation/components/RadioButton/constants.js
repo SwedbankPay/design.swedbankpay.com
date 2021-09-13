@@ -94,3 +94,19 @@ export const dontOptions = [
         label: "4-7days delivery"
     }
 ];
+
+export const ContentGuidelinesOptions = [
+    {
+        id: "radio-guidelines-example-1",
+        label: "Radio button label",
+        checked: true
+    },
+    {
+        id: "radio-guidelines-example-2",
+        label: "Radio button label"
+    },
+    {
+        id: "radio-guidelines-example-3",
+        label: "Radio button label"
+    }
+];

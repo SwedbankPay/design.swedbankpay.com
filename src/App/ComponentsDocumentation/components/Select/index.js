@@ -38,12 +38,16 @@ const Overview = () => (
     <section>
         <h2 id="overview">Overview</h2>
         <ComponentPreview language="html" codeFigure showCasePanel showCasePanelAdvanced={selectOverview} />
+
+        {/*
+            Will be back in a later release
+
         <h3>When to consider something else</h3>
         <ul className="pl-3">
             <li>To present a list of possible navigation options or actions that for example effects the filtering of the page, use the <Link to="/components/dropdown-menu">Dropdown menu</Link> component instead of a Select. </li>
-        </ul>
+        </ul> */}
 
-        <h3>When to use Select</h3>
+        <h3>When to consider something else</h3>
 
         <WhenToUse />
 
@@ -59,7 +63,7 @@ const ContentGuidelines = () => (
         </div>
         <ul className="pl-3">
             <li>The <b>Label</b> should be short, concise and to the point describing the functionality </li>
-            <li>The <b>Placeholder text</b> for select list should give example of what type of content is available inside the listbox. </li>
+            <li>The <b>Placeholder text</b> should begin with the verb {"\""}Select..{"\""} preferably followed by what type of options the user is choosing from.</li>
         </ul>
     </section>
 );

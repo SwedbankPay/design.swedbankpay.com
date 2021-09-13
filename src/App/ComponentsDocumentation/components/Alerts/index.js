@@ -9,7 +9,7 @@ import { alert } from "@src/scripts/main";
 
 const Overview = () => (
     <section>
-        <h2 id="local-alerts">Local alerts</h2>
+        <h2 id="local-alerts">Overview</h2>
         <p>Alerts are inserted within the content area near related items to notify users about potential problems or to communicate information. There are four different sub-types of alerts: error, warning, info, and success.</p>
 
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={alertsShowCase} codeFigure/>
@@ -69,6 +69,12 @@ const HowTo = () => (
 const ContentGuidelines = () => (
     <section>
         <h2 className="content-guidelines">Content guidelines</h2>
+        <div className="slab slab-plain py-4">
+            <div className="d-flex justify-content-center align-items-center pt-3">
+                <AlertComponent type="danger" icon="info" text={<p><b>Error title:</b> Content text <a href="" >link</a></p>} />
+            </div>
+        </div>
+
         <p>Alerts provide limited space for content, and therefore it must be short and concise. A user should be able to scan the notification, be apprised of the situation, and know what to do next.</p>
 
         <ul className="list list-bullet">

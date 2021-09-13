@@ -7,6 +7,31 @@ exports[`Documentation: Alerts Content guidelines renders 1`] = `
   >
     Content guidelines
   </h2>
+  <div
+    className="slab slab-plain py-4"
+  >
+    <div
+      className="d-flex justify-content-center align-items-center pt-3"
+    >
+      <Alert
+        icon="info"
+        text={
+          <p>
+            <b>
+              Error title:
+            </b>
+             Content text 
+            <a
+              href=""
+            >
+              link
+            </a>
+          </p>
+        }
+        type="danger"
+      />
+    </div>
+  </div>
   <p>
     Alerts provide limited space for content, and therefore it must be short and concise. A user should be able to scan the notification, be apprised of the situation, and know what to do next.
   </p>
@@ -104,7 +129,7 @@ exports[`Documentation: Alerts Overview renders 1`] = `
   <h2
     id="local-alerts"
   >
-    Local alerts
+    Overview
   </h2>
   <p>
     Alerts are inserted within the content area near related items to notify users about potential problems or to communicate information. There are four different sub-types of alerts: error, warning, info, and success.

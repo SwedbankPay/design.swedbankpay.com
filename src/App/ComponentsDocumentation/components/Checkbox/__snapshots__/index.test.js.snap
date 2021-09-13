@@ -46,7 +46,6 @@ exports[`Component: Checkbox ContentGuidelines renders 1`] = `
       </b>
        should descriptive, explaining the context of the options to choose from. 
     </li>
-    The checkbox labels
     <li>
       The 
       <b>

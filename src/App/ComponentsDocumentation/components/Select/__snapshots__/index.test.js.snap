@@ -33,7 +33,11 @@ exports[`Component: Select ContentGuidelines renders 1`] = `
       <b>
         Placeholder text
       </b>
-       for select list should give example of what type of content is available inside the listbox. 
+       should begin with the verb 
+      "
+      Select..
+      "
+       preferably followed by what type of options the user is choosing from.
     </li>
   </ul>
 </section>
@@ -244,22 +248,6 @@ exports[`Component: Select Overview renders 1`] = `
   <h3>
     When to consider something else
   </h3>
-  <ul
-    className="pl-3"
-  >
-    <li>
-      To present a list of possible navigation options or actions that for example effects the filtering of the page, use the 
-      <Link
-        to="/components/dropdown-menu"
-      >
-        Dropdown menu
-      </Link>
-       component instead of a Select. 
-    </li>
-  </ul>
-  <h3>
-    When to use Select
-  </h3>
   <WhenToUse />
 </section>
 `;
@@ -317,7 +305,7 @@ exports[`Component: Select When to use renders 1`] = `
         <div>
           <InputGroup
             label="Background color"
-            placeholder="Select option"
+            placeholder="Select color"
             selectOptions={
               Array [
                 "Blue",

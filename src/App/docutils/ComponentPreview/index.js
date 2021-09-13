@@ -128,10 +128,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
         };
 
         const tooltipContent = e => {
-            navigator.clipboard.readText().then(copied => {
-                e.target.dataset.tooltip = copied === code ? "Copied!" : "Copy to clipboard";
-            });
-
+            e.target.dataset.tooltip = "Copy to clipboard";
         };
 
         return (
@@ -139,7 +136,9 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                 <div className="code-view">
                     <header className="code-view-header">
                         {language.toUpperCase()}
-                        <i className="material-icons material-icons-outlined" data-tooltip onMouseEnter={e => tooltipContent(e)} onClick={e => copyToClipboard(e)}>content_copy</i>
+                        <button className="copy-btn d-flex p-0">
+                            <i className="material-icons material-icons-outlined" data-tooltip onMouseEnter={e => tooltipContent(e)} onClick={e => copyToClipboard(e)}>content_copy</i>
+                        </button>
                     </header>
                     <table className="code-view-table">
                         <tbody>
