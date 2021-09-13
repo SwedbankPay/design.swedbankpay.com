@@ -9,7 +9,7 @@ import { alert } from "@src/scripts/main";
 
 const Overview = () => (
     <section>
-        <h2 id="local-alerts">Local alerts</h2>
+        <h2 id="local-alerts">Alerts</h2>
         <p>Alerts are inserted within the content area near related items to notify users about potential problems or to communicate information. There are four different sub-types of alerts: error, warning, info, and success.</p>
 
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={alertsShowCase} codeFigure/>
