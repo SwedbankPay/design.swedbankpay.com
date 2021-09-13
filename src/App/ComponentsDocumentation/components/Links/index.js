@@ -1,12 +1,10 @@
 import React from "react";
-
 import { ComponentPreview, DocContainer } from "@docutils";
 import ActionLinkComponent from "@components/ActionLink";
 import LinkComponent from "@components/Link";
 import ButtonComponent from "@components/Button";
 import InputComponent from "@components/InputGroup";
 import CheckboxComponent from "@components/FormComponents/Checkbox";
-import CodeTags from "@components/CodeTags";
 import { Link } from "react-router-dom";
 import { overviewLinks, overviewActionLinks } from "./constants";
 
