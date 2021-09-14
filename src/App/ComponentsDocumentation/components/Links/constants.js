@@ -49,19 +49,6 @@ export const guidelinesContent = [
         slabs: [
             {
                 type: "success",
-                content: <Link linkText="View our opening hours"/>
-            },
-            {
-                type: "error",
-                content: <Link linkText="View more"/>
-            }
-        ],
-        text: "Make sure the link makes it clear what content the link goes to."
-    },
-    {
-        slabs: [
-            {
-                type: "success",
                 content: <p className="mb-0 justify-content-center">Here you can <Link linkText="read about the browsers we recommend"/>.</p>
             },
             {
