@@ -162,19 +162,23 @@ __*Make sure to follow the syntax rules enforced by ESLint & Stylelint.*__
 
 Before merging to master to create a release, make sure you follow these steps:
 
-- Be in the `develop` branch. 
+- Be in the `develop` branch.
+- Pull latest changes.
 - Create a release branch where the name is the new tag. (`release/x.x.x`) 
 - Update the version in `~/package.json`.
 - Make sure the `CHANGELOG.md` is correct (date and version) and only contains- changes for the current release.
-- Update the version in the URL of the `version-badge` and `version-tag`- at the bottom of this `README.md` file.
 - Update the changelog constants on the Home page. 
-- Commit the changes and create a pull request from your branch to `master`.
+- Commit the changes and create a pull request from `release/x.x.x` branch to `master` and `develop`.
 - When approved, rename the merge commit to `Release x.x.x` and merge.
 - Change branch to `master`.
+- Pull latest changes.
 - Create and push a new tag with the new release commit.
+- Remember to change branch back to `develop`.
 
 AppVeyor will now create and deploy a release on both github and
 [`design.swedbankpay.com`][swpdg].
+
+GitHub Actions will also create and deploy a release on Azure for the PayEx brand, and create a new NPM package.
 
 ## Core development team
 
