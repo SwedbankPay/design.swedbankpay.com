@@ -119,7 +119,7 @@ exports[`Components: Links ActionLink renders 1`] = `
       className="col-lg-6"
     >
       <div
-        className="slab slab-plain slab-border-success"
+        className="slab slab-plain slab-border-success h-100"
       >
         <h4>
           Do
@@ -152,7 +152,7 @@ exports[`Components: Links ActionLink renders 1`] = `
       className="col-lg-6"
     >
       <div
-        className="slab slab-plain slab-border-error"
+        className="slab slab-plain slab-border-error h-100"
       >
         <h4>
           Don't

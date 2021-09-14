@@ -221,7 +221,7 @@ const Favicon = () => (
                 <img src={`${basename}icons/android-chrome-96x96.png`} alt="PayEx favicon"/>
             </ComponentPreview>
             : <div className="slab slab-plain pb-0 pt-4 d-flex justify-content-center">
-                <img src={`${basename}icons/favicon-slab-example.png`} alt="Favicon example"/>
+                <img src={`${basename}img/documentation/logotype/favicon-slab-example.png`} alt="Favicon example"/>
             </div>
         }
 
@@ -230,7 +230,7 @@ const Favicon = () => (
         the <CodeTags type="secondary" code="apple-mobile-web-app-title" /> and <CodeTags type="secondary" code="application-name" /> <CodeTags type="primary" code={"<meta>"} /> tags
         to reflect the title of your project. Make sure to also do this in the <CodeTags type="secondary" code="manifest.json" /> file in the icons folder.</p>
 
-        {brand === "Payex"
+        {brand === "payex"
             ? <Button type="primary" icon="file_download" href={`${basename}release/icons.zip`} label="Download Favicons" />
             : <a href={`${basename}release/icons.zip`} className="icon-link">
                 <i className="material-icons" aria-hidden="true">download</i>

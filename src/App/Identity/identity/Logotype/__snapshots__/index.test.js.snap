@@ -46,7 +46,7 @@ exports[`Core: Logotype Favicon renders 1`] = `
   >
     <img
       alt="Favicon example"
-      src="/TEST/icons/favicon-slab-example.png"
+      src="/TEST/img/documentation/logotype/favicon-slab-example.png"
     />
   </div>
   <p>
