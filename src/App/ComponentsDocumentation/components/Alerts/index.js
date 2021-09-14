@@ -68,7 +68,7 @@ const HowTo = () => (
 
 const ContentGuidelines = () => (
     <section>
-        <h2 className="content-guidelines">Content guidelines</h2>
+        <h2 id="content-guidelines">Content guidelines</h2>
         <div className="slab slab-plain py-4">
             <div className="d-flex justify-content-center align-items-center pt-3">
                 <AlertComponent type="danger" icon="info" text={<p><b>Error title:</b> Content text <a href="" >link</a></p>} />
@@ -87,7 +87,7 @@ const ContentGuidelines = () => (
 
 const DeveloperDocumentation = () => (
     <section>
-        <h2 className="developer-documentation">Developer documentation</h2>
+        <h2 id="developer-documentation">Developer documentation</h2>
         <span className="h3">Javascript methods</span>
         <p className="mt-2">Use <CodeTags type="secondary" code="dg.alert.init()"/> to initialize all alerts.</p>
         <p>Use <CodeTags type="secondary" code='dg.alert.init("component-id")'/> to initialize one specific component.</p>
