@@ -29,26 +29,19 @@ const ActionLink = props => {
 const ActionLinkContent = ({ linkText, badge, smallText, multiline }) => (
     <>
         {multiline ?
-            <span className="action-link-multiline">{"\n"}
-                <div>
-                    <div className="d-flex flex-row">
-                        <span className="action-link-label">{linkText}</span>{"\n"}
-                        {badge ? <><span className={`badge ${badge.type}`}>{badge.text}</span>{"\n"}</> : null}
-                    </div>
-                    <div>
-                        {smallText ? <span className="small-text">{smallText}</span> : null }{"\n"}
-                    </div>
-                </div>
-            </span>
-            :
             <>
-                <span className="mb-0 mr-1 action-link-label">{linkText}</span>{"\n"}
-                {badge ? <><span className={`badge ${badge.type}`}>{badge.text}</span>{"\n"}</> : null}
-                <div>
-                    {smallText ? <span className="small-text">{smallText}</span> : null }{"\n"}
+                <div className="d-flex flex-column"> {"\n"}
+                    <span className="action-link-multiline"> {"\n"}
+                        <span>{"\n"}<span className="action-link-label">{linkText}</span>{"\n"} {badge ? <span className={`badge ${badge.type}`}>{badge.text}</span> : <></>}{"\n"}</span>
+                        <span className="small-text">{smallText}</span>{"\n"}
+                    </span>
                 </div>
             </>
-        }{"\n"}
+            :
+            <div className="d-flex flex-column">
+                <span className="action-link-content"><span className={`action-link-label ${badge ? "" : "no-badge"}`}>{linkText}</span> {badge ? <span className={`badge ${badge.type}`}>{badge.text}</span> : <></>}</span>
+            </div>
+        }
     </>
 );
 
