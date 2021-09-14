@@ -59,7 +59,7 @@ const Overview = () => (
                 </div>
             </div>
         </div>
-        <p className="mt-3">If the background is too dark for the regular link color add <CodeTags code=".bright"/>.</p>
+        <p className="mt-3">If the background is too dark for the regular link color add <CodeTags type="secondary" code=".bright"/>.</p>
     </section>
 );
 

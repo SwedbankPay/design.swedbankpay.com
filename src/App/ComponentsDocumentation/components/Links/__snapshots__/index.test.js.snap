@@ -645,6 +645,7 @@ exports[`Components: Links Overview renders 1`] = `
     If the background is too dark for the regular link color add 
     <CodeTags
       code=".bright"
+      type="secondary"
     />
     .
   </p>
