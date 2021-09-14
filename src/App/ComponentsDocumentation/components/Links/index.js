@@ -80,7 +80,7 @@ const ActionLink = () => (
         <h3>How to use action links</h3>
         <div className="row">
             <div className="col-lg-6">
-                <div className="slab slab-plain slab-border-success" >
+                <div className="slab slab-plain slab-border-success h-100" >
                     <h4>Do</h4>
                     <div className="d-flex justify-content-center mt-4 mb-2 flex-column">
                         <InputComponent type="text" label="Name"/>
@@ -91,7 +91,7 @@ const ActionLink = () => (
                 </div>
             </div>
             <div className="col-lg-6">
-                <div className="slab slab-plain slab-border-error">
+                <div className="slab slab-plain slab-border-error h-100">
                     <h4>Don&apos;t</h4>
                     <div className="d-flex justify-content-center mt-4 mb-2 flex-column">
                         <InputComponent type="text" label="Name"/>
