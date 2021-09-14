@@ -105,8 +105,8 @@ describe("scripts: tabs", () => {
         expect(activeTab).toBeTruthy();
         expect(firstTab).toBeTruthy();
         expect(activeTab.classList).toContain("active");
-        expect(firstTab.classList).not.toContain("active");
-        expect(activeTab).not.toEqual(firstTab);
+        expect(firstTab.classList).toContain("active");
+        expect(activeTab).toEqual(firstTab);
     });
 
     it("prevents default if you click an active tab", () => {

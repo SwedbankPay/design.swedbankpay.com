@@ -187,36 +187,15 @@ const LogotypeBackgrounds = () => (
     </>
 );
 
-const Favicon = () => (
-    <>
-        <h2 id="favicon">Favicon</h2>
-        <div className="d-flex justify-content-between">
-            <span>
-                The favicon should ONLY be used in following contexts:
-                <ul className="list list-bullet">
-                    <li>Shortcut icon</li>
-                    <li>Website icon</li>
-                    <li>Tab icon</li>
-                    <li>URL icon</li>
-                    <li>Bookmark icon</li>
-                </ul>
-            </span>
-            <div className="w-25 d-flex flex-column justify-content-center align-items-center">
-                <img src={`${basename}img/documentation/logotype/favicon_example.png`} className="w-25 mb-2"/>
-                <p>Swedbank Pay favicon.</p>
-            </div>
-        </div>
-    </>
-);
-
 const Download = () => (
     <>
         <h2 id="download" className="invisible">Download</h2>
         <div className="slab slab-primary p-5 d-flex flex-column justify-content-center align-items-center">
             <h1 className="mb-4">Download all logotypes</h1>
-            <Button type="primary" icon="arrow_downward" href={`${basename}release/logos/Swedbank_Pay_Vector.zip`}
-                label="Download"
-            />
+            <a className="btn btn-primary" href={`${basename}release/logos/Swedbank_Pay_Vector.zip`}>
+                <i className="material-icons" aria-hidden="true">arrow_downward</i>
+                <span>Download</span>
+            </a>
         </div>
     </>
 );
@@ -234,17 +213,33 @@ const HorizontalLogo = () => (
     </>
 );
 
-const OurFavicon = () => (
+const Favicon = () => (
     <>
-        <h2 id="our-favicon">Our favicon</h2>
-        <ComponentPreview language="html" showCasePanel>
-            <img src={`${basename}icons/android-chrome-96x96.png`} alt="PayEx favicon"/>
-        </ComponentPreview>
+        <h2 id="our-favicon">Favicon</h2>
+        {brand === "payex"
+            ? <ComponentPreview language="html" showCasePanel>
+                <img src={`${basename}icons/android-chrome-96x96.png`} alt="PayEx favicon"/>
+            </ComponentPreview>
+            : <div className="slab slab-plain pb-0 pt-4 d-flex justify-content-center">
+                <img src={`${basename}img/documentation/logotype/favicon-slab-example.png`} alt="Favicon example"/>
+            </div>
+        }
+
         <p>To use our favicons download the zip-file below and extract it to the root of your build-folder. Insert the code below in the <CodeTags type="primary" code={"<head>"} /> tag of your HTML documents and you are ready to go.</p>
         <p>You should also rename the <CodeTags type="secondary" code="content" /> of
         the <CodeTags type="secondary" code="apple-mobile-web-app-title" /> and <CodeTags type="secondary" code="application-name" /> <CodeTags type="primary" code={"<meta>"} /> tags
         to reflect the title of your project. Make sure to also do this in the <CodeTags type="secondary" code="manifest.json" /> file in the icons folder.</p>
-        <Button type="primary" icon="file_download" href={`${basename}release/icons.zip`} label="Download Favicons" />
+
+        {brand === "payex"
+            ? <a className="btn btn-primary" href={`${basename}release/icons.zip`}>
+                <i className="material-icons" aria-hidden="true">file_download</i>
+                <span>Download Favicons</span>
+            </a>
+            : <a href={`${basename}release/icons.zip`} className="icon-link">
+                <i className="material-icons" aria-hidden="true">download</i>
+                <span className="ml-2">Download Swedbank Pay favicon assets</span>
+            </a>
+        }
         <ComponentPreview language="html" codeFigure>
             <link rel="apple-touch-icon" sizes="114x114" href={`${basename}/icons/apple-touch-icon-114x114.png`} />
             <link rel="apple-touch-icon" sizes="120x120" href={`${basename}/icons/apple-touch-icon-120x120.png`} />
@@ -302,14 +297,14 @@ const Logotype = () => (
                 <SpacingZone />
                 <MisuseLogo />
                 <LogotypeBackgrounds />
-                {/* <Favicon /> */}
                 <Download />
+                <Favicon />
             </DocContainer>
         }
         {brand === "payex" &&
             <DocContainer docToc>
                 <HorizontalLogo />
-                <OurFavicon />
+                <Favicon />
             </DocContainer>
         }
     </>
@@ -318,4 +313,4 @@ const Logotype = () => (
 export default Logotype;
 
 /* For testing */
-export { OurFavicon, HorizontalLogo, Download, LogoBlack, LogoWhite, SpacingZone, MisuseLogo, LogotypeBackgrounds, Favicon };
+export { HorizontalLogo, Download, LogoBlack, LogoWhite, SpacingZone, MisuseLogo, LogotypeBackgrounds, Favicon };

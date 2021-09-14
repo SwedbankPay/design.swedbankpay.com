@@ -1,103 +1,126 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
-import AlertComponent, { ComplexAlert } from "@components/Alert";
+import { ComponentPreview, DocContainer } from "@docutils";
+import AlertComponent from "@components/Alert";
 import CodeTags from "@components/CodeTags";
-
+import { alertsShowCase } from "./constants";
 import { alert } from "@src/scripts/main";
 
-const BasicUsage = () => (
-    <>
-        <h2 id="basic-usage">Basic usage</h2>
-        <p>The default behavior of the alert present itself in a box with a border.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <AlertComponent type="success" text="This is a success alert!" />{"\n\n"}
-            <AlertComponent type="informative" text="This is an informative alert!" />{"\n\n"}
-            <AlertComponent type="warning" text="This is a warning alert!" />{"\n\n"}
-            <AlertComponent type="danger" text="This is a danger alert!" />
-        </ComponentPreview>
-    </>
+const Overview = () => (
+    <section>
+        <h2 id="local-alerts">Overview</h2>
+        <p>Alerts are inserted within the content area near related items to notify users about potential problems or to communicate information. There are four different sub-types of alerts: error, warning, info, and success.</p>
+
+        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={alertsShowCase} codeFigure/>
+
+        <WhenToConsider />
+        <HowTo />
+    </section>
 );
 
-const AlertWithIcon = () => (
-    <>
-        <h2 id="icons">Icons</h2>
-        <p>To use an alert with an icon... Read more about icon usage here <Link to="/core/iconography">here</Link>.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <AlertComponent type="success" text="This is a success alert with an icon!" icon="check_circle" />{"\n\n"}
-            <AlertComponent type="informative" text="This is an informative alert with an icon!" icon="info" />{"\n\n"}
-            <AlertComponent type="warning" text="This is a warning alert with an icon!" icon="warning" />{"\n\n"}
-            <AlertComponent type="danger" text="This is a danger alert with an icon!" icon="error" />
-        </ComponentPreview>
-    </>
+const WhenToConsider = () => (
+    <section>
+        <h3>When to consider something else</h3>
+        <ul className="list list-bullet">
+            <li>If an action will destroy the users work consider a more intrusive pattern such as a <Link to="/components/dialog">Dialog</Link> to confirm the action.</li>
+            <li>Always use field-level error messages in forms to indicate inaccurate input. Error alerts can be used to supplement these messages.</li>
+            <li>Consider using a <Link to="/components/dialog">Toast</Link> to confirm the system response to an user action that do not correspond to a specific section of the page.</li>
+        </ul>
+    </section>
 );
 
-const ClosingTheAlert = () => (
-    <>
-        <h2 id="closing-the-alert">Closing the alert</h2>
-        <p>
-            To add a close-button, add the following code inside your alert-element:<br/>
-            <CodeTags type="primary" code={"<a href=\"#\" data-alert-close><i class=\"material-icons\" aria-hidden=\"true\">close</i></a>"} />
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <AlertComponent type="success" text="This is a success alert with an icon!" close icon="check_circle" />{"\n\n"}
-            <AlertComponent type="informative" text="This is an informative alert with an icon!" close icon="info" />{"\n\n"}
-            <AlertComponent type="warning" text="This is a warning alert with an icon!" close icon="warning" />{"\n\n"}
-            <AlertComponent type="danger" text="This is a danger alert with an icon!" close icon="error" />
-        </ComponentPreview>
-        <h3>External close button</h3>
-        <p>To add an external close-button for your alert add the attribute <CodeTags type="secondary" code={"data-alert-close=\"{id}\""} /> to the button element.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <AlertComponent id="alert-success-1" type="success" text="Press the button below to close me" icon="check_circle" />{"\n\n"}
-            <button type="button" className="btn btn-primary" data-alert-close="alert-success-1">Close alert</button>
-        </ComponentPreview>
-    </>
+const HowTo = () => (
+    <section>
+        <h3>How to align local alerts</h3>
+        <div className="slab slab-plain slab-border-success">
+            <span className="h3">Do</span>
+            <AlertComponent type="informative" icon="info" text={<p><b>Best practices:</b> To minimize the risk for a challenge request, it’s recommended that you add as much data as possible to the risk indicator object in the request below.</p>} />
+            <AlertComponent type="warning" icon="warning" text={<p><b>GDPR sensitive data:</b> If it is necessary to use GDPR sensitive data, it must be hashed and then the hash can be used in requests towards Swedbank Pay.</p>} />
+        </div>
+        <p>If multiple alerts are displayed subsequently they should be arranged vertically in consideration to readability.</p>
+
+        <div className="slab slab-plain slab-border-error">
+            <span className="h3">Don&apos;t</span>
+            <div className="d-flex">
+                <div className="flex-fill mr-1">
+                    <AlertComponent type="informative" icon="info" text={<p><b>Best practices:</b> To minimize the risk for a challenge request, it’s recommended that you add as much data as possible to the risk indicator object in the request below.</p>} />
+                </div>
+                <div className="flex-fill ml-1">
+                    <AlertComponent type="warning" icon="warning" text={<p><b>GDPR sensitive data:</b> If it is necessary to use GDPR sensitive data, it must be hashed and then the hash can be used in requests towards Swedbank Pay.</p>} />
+                </div>
+            </div>
+        </div>
+
+        <p>Avoid arranging subsequent alerts horizontally.</p>
+    </section>
 );
 
-const ExtendedUsage = () => (
-    <>
-        <h2 id="extended-usage">Extended usage</h2>
-        <p>By adding the <CodeTags type="secondary" code=".alert-complex" /> class, alerts can contain additional HTML elements like headings, paragraphs and dividers.</p>
-        <p>Make sure to wrap the content in a container with the class <CodeTags type="secondary" code=".alert-body" />.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <ComplexAlert type="success" icon="check_circle" headerText="Success!" close>
-                <p>PDF was successfully uploaded.
-                    <br />Some additional information.</p>
-                <hr/>
-                <p>By the way, great job!</p>
-            </ComplexAlert>
-        </ComponentPreview>
-    </>
+// Will be restored at a later stage
+
+// const GlobalAlerts = () => (
+//     <section id="global-alerts-container">
+//         <h2 id="global-alerts">Global alerts</h2>
+//         <p>Global alerts are used in the global context of an application and communicate a state that affects the entire system. This component should only be used when it’s necessary to broadcast a static message across the system. There are two different sub-types of global alerts: warning and info. They are full-width and placed at the very top of the page above content and navigation. </p>
+//         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={alertsGlobalShowCase} codeFigure/>
+//     </section>
+// );
+
+const ContentGuidelines = () => (
+    <section>
+        <h2 id="content-guidelines">Content guidelines</h2>
+        <div className="slab slab-plain py-4">
+            <div className="d-flex justify-content-center align-items-center pt-3">
+                <AlertComponent type="danger" icon="info" text={<p><b>Error title:</b> Content text <a href="" >link</a></p>} />
+            </div>
+        </div>
+
+        <p>Alerts provide limited space for content, and therefore it must be short and concise. A user should be able to scan the notification, be apprised of the situation, and know what to do next.</p>
+
+        <ul className="list list-bullet">
+            <li>The <b>title</b> should be short and descriptive, explaining the most important piece of information.</li>
+            <li>The <b>content</b> should be limited to one or two short sentences.</li>
+            <li>If possible, include a <b>link</b> within the content that redirects the user to next step or if needed gives more information.</li>
+        </ul>
+    </section>
 );
 
-const JavascriptMethods = () => (
-    <>
-        <h2 id="javascript-methods">JavaScript methods</h2>
-        <JavascriptDocs componentName="alert" />
-    </>
+const DeveloperDocumentation = () => (
+    <section>
+        <h2 id="developer-documentation">Developer documentation</h2>
+        <span className="h3">Javascript methods</span>
+        <p className="mt-2">Use <CodeTags type="secondary" code="dg.alert.init()"/> to initialize all alerts.</p>
+        <p>Use <CodeTags type="secondary" code='dg.alert.init("component-id")'/> to initialize one specific component.</p>
+
+        <section>
+            <h3>Usage with NPM</h3>
+            <p><Link to="/get-started/for-developers/">Usage with NPM</Link> will require you to import it from <CodeTags type="primary" code="@swedbankpay/design-guide" />.</p>
+            <ComponentPreview language="javascript" codeFigure dangerousHTML>
+                import &#123; alert &#125; from &quot;@swedbankpay/design-guide&quot;; {"\n"}
+                alert.init()
+            </ComponentPreview>
+        </section>
+    </section>
 );
 
-class Alerts extends Component {
-    componentDidMount () {
+const Alerts = () => {
+    useEffect(() => {
         alert.init();
-    }
+    });
 
-    render () {
-        return (
-            <DocContainer docToc>
-                <p className="lead">Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.</p>
-                <BasicUsage />
-                <AlertWithIcon />
-                <ClosingTheAlert />
-                <ExtendedUsage />
-                <JavascriptMethods />
-            </DocContainer>
-        );
-    }
-}
+    return (
+        <DocContainer>
+            <section id="alerts-doc">
+                <p className="lead">Alerts are short messages used to inform and give feedback to the user about an action or state. Icons and color indicate the type and urgency of the information within the message. </p>
+                <Overview />
+                <ContentGuidelines />
+                <DeveloperDocumentation />
+            </section>
+        </DocContainer>
+    );
+};
 
 export default Alerts;
 
 /* For testing */
-export { BasicUsage, AlertWithIcon, ClosingTheAlert, ExtendedUsage, JavascriptMethods };
+export { Overview, ContentGuidelines, DeveloperDocumentation };

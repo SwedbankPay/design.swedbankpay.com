@@ -2,6 +2,8 @@ import React from "react";
 import { DocContainer } from "@docutils";
 
 const basename = process.env.basename;
+const brandTitle = process.env.brandTitle;
+const brand = process.env.brand;
 
 const Terminology = () => (
     <section>
@@ -11,12 +13,12 @@ const Terminology = () => (
         <h3>Copy</h3>
         <p>
             Copy is defined as written content that aims to increase brand awareness and ultimately persuade a person or group to take a particular action.
-            Quite a lot falls under this umbrella but in the context of Swedbank Pay,
+            Quite a lot falls under this umbrella but in the context of {brandTitle},
             an example of “pure” copy is the short texts you see on the website aiming to explain and “sell” the brand/product (see Figure 1).
         </p>
         <div className="d-flex flex-column align-items-center">
             <img src={`${basename}img/documentation/copywriting/terminology-copy.png`} className="mb-1 w-100" alt="Copy text" />
-            <span className="caption-text"><span className="font-weight-bold">Figure 1.</span> This is an example of “pure” copy text from swedbankpay.se</span>
+            <span className="caption-text"><span className="font-weight-bold">Figure 1.</span> This is an example of “pure” copy text from {brand}.se</span>
         </div>
 
         <h3>Microcopy</h3>
@@ -62,7 +64,7 @@ const Tonality = () => (
         <h3>Brand tonality in UX writing</h3>
         <p>
             The brand tonality goes hand in hand with the UX Writing principles. By following the principles for UX Writing we also stay on brand. And vice versa. They are very similar.
-            Open, simple and caring is the basis for Swedbank Pay’s communication.
+            Open, simple and caring is the basis for {brandTitle}’s communication.
         </p>
         <p className="mb-0">
             We apply this by:
@@ -107,7 +109,7 @@ const Tonality = () => (
                 <thead>
                     <tr>
                         <th className="w-50">General tonality</th>
-                        <th className="w-50">Swedbank Pay tonality</th>
+                        <th className="w-50">{brandTitle} tonality</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -128,7 +130,7 @@ const Tonality = () => (
                     </tr>
                 </tbody>
             </table>
-            <span className="caption-text"><span className="font-weight-bold">Table 1.</span> Three examples of tonality – general vs. Swedbank Pay tonality.</span>
+            <span className="caption-text"><span className="font-weight-bold">Table 1.</span> Three examples of tonality – general vs. {brandTitle} tonality.</span>
         </div>
 
         <h3>Importance of interface writing</h3>
@@ -141,13 +143,13 @@ const Tonality = () => (
                 <thead>
                     <tr>
                         <th className="w-50">General interface writing</th>
-                        <th className="w-50">Swedbank Pay interface writing</th>
+                        <th className="w-50">{brandTitle} interface writing</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{"By completing the purchase, I confirm that I have read and approve of Swedbank Pay's terms and conditions."}</td>
-                        <td>By paying, you also confirm the Swedbank Pay terms and conditions.</td>
+                        <td>{"By completing the purchase, I confirm that I have read and approve of {brandTitle}'s terms and conditions."}</td>
+                        <td>By paying, you also confirm the {brandTitle} terms and conditions.</td>
                     </tr>
                     <tr>
                         <td>Purchase history</td>
@@ -179,7 +181,7 @@ const Tonality = () => (
                     </tr>
                 </tbody>
             </table>
-            <span className="caption-text"><span className="font-weight-bold">Table 2.</span> Eight examples on common general interface with Swedbank Pay tonality translations.</span>
+            <span className="caption-text"><span className="font-weight-bold">Table 2.</span> Eight examples on common general interface with {brandTitle} tonality translations.</span>
         </div>
     </section>
 );
@@ -220,13 +222,13 @@ const GlossaryLinks = () => (
 const Copywriting = () => (
     <DocContainer>
         <p className="lead">
-            At Swedbank Pay we care about how we’re interpreted by our customers and merchants.
-            In this section you will find an overview of the different kinds of written content relevant for Swedbank Pay,
+            At {brandTitle} we care about how we’re interpreted by our customers and merchants.
+            In this section you will find an overview of the different kinds of written content relevant for {brandTitle},
             tonality principles, a glossary, and links to further information.
         </p>
         <Terminology />
         <Tonality />
-        <GlossaryLinks />
+        {brandTitle === "Swedbank Pay" && <GlossaryLinks />}
     </DocContainer>
 );
 

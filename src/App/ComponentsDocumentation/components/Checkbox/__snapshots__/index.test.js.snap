@@ -44,12 +44,12 @@ exports[`Component: Checkbox ContentGuidelines renders 1`] = `
       <b>
         Group heading
       </b>
-       for the radio button group should be descriptive, explaining the context and what actions the user is choosing from. 
+       should descriptive, explaining the context of the options to choose from. 
     </li>
     <li>
       The 
       <b>
-        radio button label
+        checkbox labels
       </b>
        should be short, to the point and clearly explain the option. It is also preferred to have fewer than three words per label as longer words could extend a label to multiple rows which could disrupt the reading experience.
     </li>
@@ -75,23 +75,7 @@ exports[`Component: Checkbox DeveloperDocumentation renders 1`] = `
       code="disabled"
       type="primary"
     />
-     attribute to the desired Checkbox. You can also disable the 
-    <CodeTags
-      code=".form-group"
-      type="secondary"
-    />
-     or 
-    <CodeTags
-      code="fieldset"
-      type="primary"
-    />
-     in which the checkbox is located, refer to 
-    <Link
-      to="/components/forms"
-    >
-      forms
-    </Link>
-     for more info.
+     attribute to the desired Checkbox.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -134,7 +118,7 @@ exports[`Component: Checkbox DeveloperDocumentation renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="w-50 m-auto pl-5"
+      className="m-auto pl-5 col-sm-12 error-state-container"
     >
       <Checkbox
         errorMessage="Descriptive helpful error message."
@@ -175,7 +159,7 @@ exports[`Component: Checkbox HowTo renders 1`] = `
       className="col-6"
     >
       <div
-        className="slab slab-plain slab-border-success h-100"
+        className="slab slab-plain slab-border-success"
       >
         <span
           className="h3"
@@ -186,7 +170,7 @@ exports[`Component: Checkbox HowTo renders 1`] = `
           className="d-flex flex-column align-items-center"
         >
           <div
-            className="pt-3 pb-5"
+            className="pt-3 pb-4"
           >
             <Checkbox
               group={true}
@@ -210,11 +194,11 @@ exports[`Component: Checkbox HowTo renders 1`] = `
               }
             />
           </div>
-          <p>
-            Short and concise, similar length on the text is always preferred when setting up a checkbox group. Try to sort the options in a logical order.
-          </p>
         </div>
       </div>
+      <p>
+        Do use short labels of similar length and sort the options either in a logical or alphabetical order.
+      </p>
     </div>
     <div
       className="col-6"
@@ -231,7 +215,7 @@ exports[`Component: Checkbox HowTo renders 1`] = `
           className="d-flex flex-column align-items-center"
         >
           <div
-            className="pt-3 pb-5 w-50"
+            className="pt-3 pb-3 w-50"
           >
             <Checkbox
               group={true}
@@ -255,11 +239,11 @@ exports[`Component: Checkbox HowTo renders 1`] = `
               }
             />
           </div>
-          <p>
-            Avoid having labels longer than the rest when possible and displaying options without order.
-          </p>
         </div>
       </div>
+      <p>
+        Avoid long labels sorted in an illogical order.
+      </p>
     </div>
   </div>
 </section>
@@ -302,6 +286,27 @@ exports[`Component: Checkbox Overview renders 1`] = `
             />,
             "description": "The default setup of the checkbox group always has a label on top which describes the checkbox group and each individual checkbox is then followed by a label which clearly describes what the options and what checking the box represents",
             "options": Object {
+              "checkbox": Array [
+                Object {
+                  "inputs": Array [
+                    Object {
+                      "id": "checkbox_labels",
+                      "name": "Optional",
+                      "value": Object {
+                        "optional": true,
+                      },
+                    },
+                    Object {
+                      "id": "with_help_icon",
+                      "name": "With help icon",
+                      "value": Object {
+                        "tooltip": true,
+                      },
+                    },
+                  ],
+                  "title": "Label add on",
+                },
+              ],
               "radio": Array [
                 Object {
                   "id": "state_radio",
@@ -343,7 +348,7 @@ exports[`Component: Checkbox Overview renders 1`] = `
     className="list list-bullet"
   >
     <li>
-      When you want to present multiple choices where the user can only select one specific choice, the 
+      When you want to present multiple choices where the user can only select one specific option, the 
       <Link
         to="/components/radiobutton"
       >
@@ -358,13 +363,17 @@ exports[`Component: Checkbox Overview renders 1`] = `
 
 exports[`Component: Checkbox renders 1`] = `
 <DocContainer>
-  <p
-    className="lead"
+  <section
+    id="checkbox-doc"
   >
-    The checkbox component should be used when the user are presented with a list of options where one or multiple options can be selected by the user.
-  </p>
-  <Overview />
-  <ContentGuidelines />
-  <DeveloperDocumentation />
+    <p
+      className="lead"
+    >
+      The checkbox component should be used when the user are presented with a list of options where one or multiple options can be selected by the user.
+    </p>
+    <Overview />
+    <ContentGuidelines />
+    <DeveloperDocumentation />
+  </section>
 </DocContainer>
 `;

@@ -15,6 +15,18 @@ exports[`Utilities: ComponentPreview CodeFigure removes outer tag from markup 1`
           className="code-view-header"
         >
           HTML
+          <button
+            className="copy-btn d-flex p-0"
+          >
+            <i
+              className="material-icons material-icons-outlined"
+              data-tooltip={true}
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              content_copy
+            </i>
+          </button>
         </header>
         <table
           className="code-view-table"
@@ -63,6 +75,18 @@ exports[`Utilities: ComponentPreview CodeFigure removes outer tag from markup ev
           className="code-view-header"
         >
           HTML
+          <button
+            className="copy-btn d-flex p-0"
+          >
+            <i
+              className="material-icons material-icons-outlined"
+              data-tooltip={true}
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              content_copy
+            </i>
+          </button>
         </header>
         <table
           className="code-view-table"
@@ -111,6 +135,18 @@ exports[`Utilities: ComponentPreview CodeFigure removes outer tag from multiple 
           className="code-view-header"
         >
           HTML
+          <button
+            className="copy-btn d-flex p-0"
+          >
+            <i
+              className="material-icons material-icons-outlined"
+              data-tooltip={true}
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              content_copy
+            </i>
+          </button>
         </header>
         <table
           className="code-view-table"
@@ -171,6 +207,18 @@ exports[`Utilities: ComponentPreview CodeFigure removes value property 1`] = `
           className="code-view-header"
         >
           HTML
+          <button
+            className="copy-btn d-flex p-0"
+          >
+            <i
+              className="material-icons material-icons-outlined"
+              data-tooltip={true}
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              content_copy
+            </i>
+          </button>
         </header>
         <table
           className="code-view-table"
@@ -218,6 +266,18 @@ exports[`Utilities: ComponentPreview CodeFigure renders css string 1`] = `
           className="code-view-header"
         >
           CSS
+          <button
+            className="copy-btn d-flex p-0"
+          >
+            <i
+              className="material-icons material-icons-outlined"
+              data-tooltip={true}
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              content_copy
+            </i>
+          </button>
         </header>
         <table
           className="code-view-table"
@@ -265,6 +325,18 @@ exports[`Utilities: ComponentPreview CodeFigure renders multiple html tags 1`] =
           className="code-view-header"
         >
           HTML
+          <button
+            className="copy-btn d-flex p-0"
+          >
+            <i
+              className="material-icons material-icons-outlined"
+              data-tooltip={true}
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              content_copy
+            </i>
+          </button>
         </header>
         <table
           className="code-view-table"
@@ -318,6 +390,18 @@ exports[`Utilities: ComponentPreview CodeFigure renders multiple javascript stri
           className="code-view-header"
         >
           JAVASCRIPT
+          <button
+            className="copy-btn d-flex p-0"
+          >
+            <i
+              className="material-icons material-icons-outlined"
+              data-tooltip={true}
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              content_copy
+            </i>
+          </button>
         </header>
         <table
           className="code-view-table"
@@ -366,6 +450,18 @@ exports[`Utilities: ComponentPreview CodeFigure returns a message if no child is
           className="code-view-header"
         >
           HTML
+          <button
+            className="copy-btn d-flex p-0"
+          >
+            <i
+              className="material-icons material-icons-outlined"
+              data-tooltip={true}
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              content_copy
+            </i>
+          </button>
         </header>
         <table
           className="code-view-table"
@@ -413,6 +509,18 @@ exports[`Utilities: ComponentPreview CodeFigure warns about unhandled children 1
           className="code-view-header"
         >
           CSS
+          <button
+            className="copy-btn d-flex p-0"
+          >
+            <i
+              className="material-icons material-icons-outlined"
+              data-tooltip={true}
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              content_copy
+            </i>
+          </button>
         </header>
         <table
           className="code-view-table"
@@ -460,6 +568,18 @@ exports[`Utilities: ComponentPreview Codefigure removes list tags 1`] = `
           className="code-view-header"
         >
           HTML
+          <button
+            className="copy-btn d-flex p-0"
+          >
+            <i
+              className="material-icons material-icons-outlined"
+              data-tooltip={true}
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              content_copy
+            </i>
+          </button>
         </header>
         <table
           className="code-view-table"
@@ -526,6 +646,18 @@ exports[`Utilities: ComponentPreview Codefigure removes list tags from multiple 
           className="code-view-header"
         >
           HTML
+          <button
+            className="copy-btn d-flex p-0"
+          >
+            <i
+              className="material-icons material-icons-outlined"
+              data-tooltip={true}
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              content_copy
+            </i>
+          </button>
         </header>
         <table
           className="code-view-table"
@@ -660,6 +792,18 @@ exports[`Utilities: ComponentPreview does not render showCasePanel when prop is 
           className="code-view-header"
         >
           HTML
+          <button
+            className="copy-btn d-flex p-0"
+          >
+            <i
+              className="material-icons material-icons-outlined"
+              data-tooltip={true}
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              content_copy
+            </i>
+          </button>
         </header>
         <table
           className="code-view-table"
@@ -707,6 +851,18 @@ exports[`Utilities: ComponentPreview does not render showCasePanelAdvanced when 
           className="code-view-header"
         >
           HTML
+          <button
+            className="copy-btn d-flex p-0"
+          >
+            <i
+              className="material-icons material-icons-outlined"
+              data-tooltip={true}
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              content_copy
+            </i>
+          </button>
         </header>
         <table
           className="code-view-table"

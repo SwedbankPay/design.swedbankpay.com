@@ -23,6 +23,20 @@ export const radiobuttonShowCase = {
         {
             component: <Radio groupTitle="Group heading" name="radio-group-example" options={options} group/>,
             options: {
+                checkbox: [
+                    {
+                        title: "Label add on",
+                        inputs: [
+                            {
+                                id: "with_help_icon",
+                                name: "With help icon",
+                                value: {
+                                    tooltip: true
+                                }
+                            }
+                        ]
+                    }
+                ],
                 radio: [
                     {
                         id: "state_radio",
@@ -45,7 +59,7 @@ export const radiobuttonShowCase = {
                 ]
             },
             title: "Radio button group",
-            description: "The default setup of the radio button group always has a label on top which describes the checkbox group and each individual radio button is then followed by a label which clearly describes what the options and what selecting an option entails. In a radio button group one choice is always selected by default"
+            description: "The default setup of the radio button group has a label on top which describes the radio button group and each individual radio button is then followed by a label which clearly describes the options and what selecting an option entails. In a radio button group one choice is always selected by default."
         }
     ]
 };
@@ -78,5 +92,21 @@ export const dontOptions = [
     {
         id: "radio-dont-example-3",
         label: "4-7days delivery"
+    }
+];
+
+export const ContentGuidelinesOptions = [
+    {
+        id: "radio-guidelines-example-1",
+        label: "Radio button label",
+        checked: true
+    },
+    {
+        id: "radio-guidelines-example-2",
+        label: "Radio button label"
+    },
+    {
+        id: "radio-guidelines-example-3",
+        label: "Radio button label"
     }
 ];

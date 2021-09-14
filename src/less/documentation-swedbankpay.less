@@ -404,7 +404,7 @@
         section {
             margin-bottom: 2.5rem;
 
-            h3 {
+            > h3 {
                 margin-top: 2rem;
             }
         }
@@ -693,47 +693,49 @@
             }
 
             .tabs {
-                margin: 0;
-                position: absolute;
-                top: 0;
-                width: 100%;
-
-                &.tabs-fade-right {
-                    &:after {
-                        right: 56px; // width of options-open icon
-                        height: 39px;
-                    }
-                }
-
-                &.tabs-fade-left {
-                    &:before {
-                        height: 39px;
-                    }
-                }
-
-                ul {
-                    position: relative;
+                &:not(#tabs-showcase-example) {
+                    margin: 0;
+                    position: absolute;
+                    top: 0;
                     width: 100%;
 
-                    &:before {
-                        content: "";
-                        position: absolute;
-                        top: 39px;
-                        width: 100%;
-                        border-bottom: 1px solid @brand-secondary-light-3;
+                    &.tabs-fade-right {
+                        &:after {
+                            right: 56px; // width of options-open icon
+                            height: 39px;
+                        }
                     }
-                }
 
-                .options-open {
-                    display: flex;
-                    align-items: center;
-                    cursor: pointer;
-                    height: 40px;
-                    border-bottom: 1px solid @brand-secondary-light-3;
-                    padding: 0 1rem;
+                    &.tabs-fade-left {
+                        &:before {
+                            height: 39px;
+                        }
+                    }
 
-                    &.hidden {
-                        visibility: hidden;
+                    ul {
+                        position: relative;
+                        width: 100%;
+
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            top: 39px;
+                            width: 100%;
+                            border-bottom: 1px solid @brand-secondary-light-3;
+                        }
+                    }
+
+                    .options-open {
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+                        height: 40px;
+                        border-bottom: 1px solid @brand-secondary-light-3;
+                        padding: 0 1rem;
+
+                        &.hidden {
+                            visibility: hidden;
+                        }
                     }
                 }
             }
@@ -743,6 +745,10 @@
                 border-bottom: 1px solid @brand-secondary-light-3;
 
                 .component-preview-content {
+                    position: relative;
+                    min-height: 9.5rem;
+                    height: 100%;
+                    max-width: 30.75rem;
                     padding: 2rem;
                     display: flex;
                     align-items: center;
@@ -750,6 +756,16 @@
 
                     &.component-preview-alt-background {
                         background-color: @brand-primary;
+                    }
+
+                    .loader-preview-container {
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+
+                        &.dark {
+                            background-color: @brand-secondary;
+                        }
                     }
                 }
             }
@@ -975,8 +991,8 @@
         }
 
         .form-group {
-            width: 21.25rem;
-            margin: auto;
+            min-width: 17.3rem;
+            max-width: 21.25rem;
         }
 
         .component-description {
@@ -994,6 +1010,13 @@
         .placeholder-guideline {
             .form-group {
                 width: 100%;
+                min-width: none;
+            }
+        }
+
+        #developer-documentation-container {
+            .form-group {
+                margin: auto;
             }
         }
     }
@@ -1074,6 +1097,9 @@
     #select-doc {
         .form-group {
             width: 21.25rem;
+            @media screen and (max-width: @screen-xs-max) {
+                max-width: 17.25rem;
+            }
         }
 
         .wrong {
@@ -1112,7 +1138,79 @@
             width: 50px;
         }
     }
+
+    .v-flip {
+        transform: scaleY(-1);
+    }
+
+    #checkbox-doc {
+        .slab-border-error,
+        .slab-border-success {
+            min-height: 19rem;
+        }
+
+        .error-state-container {
+            .checkbox-group {
+                &.has-error {
+                    @media screen and (min-width: @screen-sm-max) {
+                        width: 50%;
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    #radio-button-doc {
+        #how-to-container {
+            .slab {
+                min-height: 18rem;
+            }
+        }
+    }
+
+    .small-text {
+        font-size: 0.875rem;
+    }
+
+    #loader-page-overview {
+        .component-preview-content {
+            padding: 7.5rem;
+
+            .loader-preview-container {
+                &.dark {
+                    background-color: @dark-brown;
+                }
+            }
+        }
+
+        #loaders-how-to-use {
+            .slab {
+                height: 15.375rem;
+            }
+        }
+    }
+
+    .text-align-center {
+        text-align: center;
+    }
+
+    #link-doc {
+        .link-dark-background {
+            background-color: @brand-secondary;
+            border-radius: 8px;
+        }
+
+        #action-link-container {
+            .slab-border-error {
+                .action-link {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
 }
+
 
 @media screen and (max-width: @screen-xs-max) {
     .documentation {

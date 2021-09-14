@@ -15,8 +15,8 @@ const Overview = () => (
 
         <h3>When to consider something else</h3>
         <ul className="list list-bullet">
-            <li>Use a text input instead when the user needs to select specific number.</li>
-        </ul>{/* Link to text-input */}
+            <li>Use a <Link to="/components/input-field">text input</Link> instead when the user needs to select specific number.</li>
+        </ul>
 
         <h3>How to use sliders</h3>
 
@@ -25,7 +25,7 @@ const Overview = () => (
                 <div className={`slab slab-plain slab-border-${type} h-100 mb-2`}>
                     <h3 className="mt-0">Do{type === "error" && "n’t"}</h3>
                     <div className="d-flex flex-column align-items-center">
-                        <div className="py-3 col-8">
+                        <div className="py-3 col-12 col-lg-8">
                             {component}
                         </div>
                     </div>
@@ -42,7 +42,7 @@ const ContentGuidelines = () => (
 
         <div className="slab slab-plain h-100 mb-2">
             <div className="d-flex flex-column align-items-center">
-                <div className="py-3 col-8">
+                <div className="py-3 col-12 col-lg-8">
                     <div>
                         <div className="rangeslider">
                             <input type="range"/>
@@ -72,7 +72,7 @@ const ContentGuidelines = () => (
 const DeveloperDocumentation = () => (
     <section>
         <h2 id="developer-documentation mb-3">Developer documentation</h2>
-
+        <h3>Javascript methods</h3>
         <p className="my-3">Use <CodeTags type="secondary" code="dg.rangeslider.init()"/> to <a href="/get-started/for-developers" >initialize</a> all rangesliders.</p>
         <p>Or <CodeTags type="secondary" code='dg.rangeslider.init("component-id")'/> to initialize one specific component.</p>
         <DisableState />
@@ -82,9 +82,13 @@ const DeveloperDocumentation = () => (
 const DisableState = () => (
     <>
         <h3>Disabled state</h3>
-        <p>Disable a slider by adding <CodeTags type="primary" code="disabled"/> attribute to the desired slider. You can also disable the <CodeTags type="primary" code="form-group"/> or <CodeTags type="primary" code="fieldset"/> in which the slider is located, refer to <Link to="/components/forms">forms</Link> for more info</p>
+        <p>Disable a slider by adding <CodeTags type="primary" code="disabled"/> attribute to the desired slider. </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <RangesliderComponent label="Label" min={0} max={100} value={50} disabled/>
+            <div className = "d-flex flex-column align-items-center">
+                <div className="py-3 col-12 col-lg-8">
+                    <RangesliderComponent label="Label" min={0} max={100} value={50} disabled/>
+                </div>
+            </div>
         </ComponentPreview>
     </>
 );
@@ -96,7 +100,7 @@ const Rangeslider = () => {
 
     return (
         <DocContainer>
-            <p className="lead">The slider component lets the user increase and decrease the value by moving the slider along a horizontal line and lets the user choose an approximate value</p>
+            <p className="lead">The slider component lets the user increase and decrease the value by moving the slider along a horizontal line and lets the user choose a value</p>
             <Overview />
             <ContentGuidelines />
             <DeveloperDocumentation />

@@ -1,39 +1,47 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classnames from "classnames";
 
 const ActionLink = props => {
     const { link, ...otherProps } = props;
+    const actionLinkClasses = classnames(
+        "action-link",
+        otherProps.newTab ? "action-link-new-tab" : null,
+        otherProps.multiline ? "multiline" : null,
+        otherProps.disabled ? "disabled" : null
+    );
+
+    const attrs = {
+        href: link ? link : "#",
+        rel: otherProps.newTab ? "noopener noreferrer" : null,
+        target: otherProps.newTab ? "_blank" : null
+    };
 
     return (
         <>
-            {otherProps.newTab ?
-                <a className="action-link action-link-new-tab" href={link ? link : "#"} rel="noopener noreferrer" target="_blank">{"\n"}
-                    <ActionLinkContent {...otherProps} />
-                </a>
-                :
-                <a className="action-link" href="#" >{"\n"}
-                    <ActionLinkContent {...otherProps} />
-                </a>
-            }
+            <a className={actionLinkClasses} {...attrs}>{"\n"}
+                <ActionLinkContent {...otherProps}/>
+            </a>
         </>
     );
 };
 
-const ActionLinkContent = ({ linkText, badge, smallText, multiline, newTab }) => (
+const ActionLinkContent = ({ linkText, badge, smallText, multiline }) => (
     <>
-        {newTab ? <><i className="material-icons" aria-hidden="true">open_in_new</i>{"\n"}</> : null}
-        {badge ? <><span className={`badge ${badge.type}`}>{badge.text}</span>{"\n"}</> : null}
         {multiline ?
-            <span className="action-link-multiline">{"\n"}
-                {linkText}{"\n"}
-                {smallText ? <span className="small-text">{smallText}</span> : null }{"\n"}
-            </span>
-            :
             <>
-                {linkText}{"\n"}
-                {smallText ? <span className="small-text">{smallText}</span> : null }{"\n"}
+                <div className="d-flex flex-column"> {"\n"}
+                    <span className="action-link-multiline"> {"\n"}
+                        <span>{"\n"}<span className="action-link-label">{linkText}</span>{"\n"} {badge ? <span className={`badge ${badge.type}`}>{badge.text}</span> : <></>}{"\n"}</span>
+                        <span className="small-text">{smallText}</span>{"\n"}
+                    </span>
+                </div>
             </>
-        }{"\n"}
+            :
+            <div className="d-flex flex-column">
+                <span className="action-link-content"><span className={`action-link-label ${badge ? "" : "no-badge"}`}>{linkText}</span> {badge ? <span className={`badge ${badge.type}`}>{badge.text}</span> : <></>}</span>
+            </div>
+        }
     </>
 );
 

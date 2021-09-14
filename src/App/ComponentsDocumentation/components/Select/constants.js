@@ -62,7 +62,7 @@ export const selectOverview = {
                 ]
             },
             title: "Select",
-            description: "The select component looks simillar to an input field in terms of structure, both with a label and placeholder text. But it does function differently and when activated expands and displays a list of options."
+            description: "The select component looks similar to an input field in terms of structure, both with a label and placeholder text. But it does function differently and when activated expands and displays a list of options."
         }
     ]
 };
@@ -72,13 +72,13 @@ export const whenToUse = {
     content: [
         {
             correct:
-                <div className="m-auto pb-3">
+                <div className="pb-3">
                     <p>Background color</p>
                     <Radio id="radio-example-1" label="Blue" name="radio-example" checked/>
                     <Radio id="radio-example-2" label="Red" name="radio-example"/>
                 </div>,
             selectOptions: ["Blue", "Red"],
-            placeholder: "Select option",
+            placeholder: "Select color",
             label: "Background color",
             text: <p>In the example above, when there are very few choices, they should not be hidden inside a select list as this makes it harder for user to get an overview. Use <Link to="/components/radio-button">radio buttons</Link> instead.</p>
         },

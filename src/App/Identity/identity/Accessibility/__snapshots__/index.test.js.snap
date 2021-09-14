@@ -124,25 +124,6 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   </h3>
   <a
     className="icon-link d-flex"
-    href="https://www.swedbank.com/sv/hallbarhet/ansvarsfulla-affarer/betala.html"
-    key="https://www.swedbank.com/sv/hallbarhet/ansvarsfulla-affarer/betala.html"
-    rel="noopener noreferrer"
-    target="_blank"
-  >
-    <i
-      aria-hidden="true"
-      className="material-icons mr-2"
-    >
-      open_in_new
-    </i>
-    <span
-      className="mr-2"
-    >
-      Swedbank – Ansvarsfulla affärer
-    </span>
-  </a>
-  <a
-    className="icon-link d-flex"
     href="https://polaris.shopify.com/foundations/accessibility"
     key="https://polaris.shopify.com/foundations/accessibility"
     rel="noopener noreferrer"
@@ -228,7 +209,9 @@ exports[`Core: Accessibility Inclusions renders 1`] = `
     Creating inclusion
   </h2>
   <p>
-    Today we’re working with awareness. All designers and developers at Swedbank Pay should be aware of accessibility, what it is, how it’s implemented and, what precautions we have to take to actually follow the law in the countries we’re in. As mentioned, accessibility may start with design but the main part is making our service compatible with accessibility helping tools, and that part happens in the technical implementation. 
+    Today we’re working with awareness. All designers and developers at 
+    TESTBRAND
+     should be aware of accessibility, what it is, how it’s implemented and, what precautions we have to take to actually follow the law in the countries we’re in. As mentioned, accessibility may start with design but the main part is making our service compatible with accessibility helping tools, and that part happens in the technical implementation. 
   </p>
   <p>
     Accessibility and WCAG can seem overwhelming and just as with everything else we need to take it step by step. This is a list from a Funka webinar held 2020-11-06:
@@ -260,7 +243,9 @@ exports[`Core: Accessibility Intro renders 1`] = `
   <p
     className="lead"
   >
-    At Swedbank Pay we value accessibility. Our products are meant to be used by people no matter of their abilities and therefor we strive to be WCAG (Web Content Accessibility Guidelines) compliant. We’re currently working on our accessibility awareness and meeting the terms of the  accessibility laws in Norway and Sweden. 
+    At 
+    TESTBRAND
+     we value accessibility. Our products are meant to be used by people no matter of their abilities and therefor we strive to be WCAG (Web Content Accessibility Guidelines) compliant. We’re currently working on our accessibility awareness and meeting the terms of the  accessibility laws in Norway and Sweden. 
   </p>
   <h2>
     What is accessibility
@@ -303,7 +288,9 @@ exports[`Core: Accessibility Intro renders 1`] = `
     </span>
   </div>
   <p>
-    At Swedbank Pay we strive to give all customers with disabilities and impairments (permanent, temporary and/or situational) a better chance of using our services on the same terms as others. 
+    At 
+    TESTBRAND
+     we strive to give all customers with disabilities and impairments (permanent, temporary and/or situational) a better chance of using our services on the same terms as others. 
   </p>
 </section>
 `;

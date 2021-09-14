@@ -1,6 +1,6 @@
 {
   "name": "@swedbankpay/design-guide",
-  "version": "6.1.0",
+  "version": "7.0.0",
   "description": "Swedbank Pay Design Guide",
   "main": "dist/designguide/scripts/dg.js",
   "scripts": {

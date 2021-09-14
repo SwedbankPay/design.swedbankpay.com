@@ -61,13 +61,6 @@ describe("Component: ActionLink", () => {
             expect(wrapper.contains(<span className="badge badge-default" >Badge</span>)).toEqual(false);
         });
 
-        it("renders ActionLinkContent with smalltext when provided", () => {
-            const wrapper = shallow(<ActionLinkContent linkText="Link text" smallText="Small text" />);
-
-            expect(wrapper).toMatchSnapshot();
-            expect(wrapper.contains(<span className="small-text">Small text</span>)).toEqual(true);
-        });
-
         it("renders ActionLinkContent without smalltext when not provided", () => {
             const wrapper = shallow(<ActionLinkContent linkText="Link text" />);
 
@@ -81,13 +74,5 @@ describe("Component: ActionLink", () => {
             expect(wrapper).toMatchSnapshot();
             expect(wrapper.html()).toContain("<span class=\"action-link-multiline\">");
         });
-
-        it("renders ActionLinkContent with new tab properties when newTab is true", () => {
-            const wrapper = shallow(<ActionLinkContent linkText="Link text" newTab={true} />);
-
-            expect(wrapper).toMatchSnapshot();
-            expect(wrapper.contains(<i className="material-icons" aria-hidden="true">open_in_new</i>)).toEqual(true);
-        });
     });
-
 });

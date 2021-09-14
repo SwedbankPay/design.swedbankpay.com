@@ -41,7 +41,7 @@ const Overview = () => (
             <li>Anchor with class <CodeTags type="secondary" code=".topbar-logo" /> to display the logo and make it clickable.</li>
         </ul>
         <p>
-            With this you get a topbar with the Swedbank Pay logo.
+            With this you get a topbar with the {process.env.brandTitle} logo.
             In the topbar you can add additional functionality like a menu containing links. To enable this add a <CodeTags type="primary" code={"<button>"} /> and
             a <CodeTags type="primary" code={"<nav>"} /> containing anchors. Remember to include <CodeTags type="secondary" code={"toggle-nav=\"{your_nav_id}\""} /> as
             a <CodeTags type="primary" code={"<button>"} /> attribute

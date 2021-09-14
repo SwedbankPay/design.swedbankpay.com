@@ -12,15 +12,15 @@ const WhenToUse = () => (
         {whenToUse.content.map(({ correct, placeholder, selectOptions, label, text }, i) => (
             <React.Fragment key={i}>
                 <div className="row wrong mb-3">
-                    <div className="col-6">
-                        <div className="px-4 slab slab-plain slab-border-success d-flex flex-column">
-                            <span className="h4 mt-0 mb-3">Do</span>
+                    <div className="col-12 col-sm-6 mb-2">
+                        <div className="px-4 slab slab-plain slab-border-success h-100 d-flex flex-column mb-2">
+                            <span className="h4">Do</span>
                             {correct}
                         </div>
                     </div>
-                    <div className="col-6">
-                        <div className="px-4 slab slab-plain slab-border-error h-100">
-                            <span className="h4 mt-0 mb-3">Don&#x27;t</span>
+                    <div className="col-12 col-sm-6">
+                        <div className="px-4 slab slab-plain slab-border-error h-100 mb-2 d-flex flex-column">
+                            <span className="h4">Don&#x27;t</span>
                             <div >
                                 <InputGroup type="select" label={label} placeholder={placeholder} selectOptions={selectOptions} />
                             </div>
@@ -38,12 +38,16 @@ const Overview = () => (
     <section>
         <h2 id="overview">Overview</h2>
         <ComponentPreview language="html" codeFigure showCasePanel showCasePanelAdvanced={selectOverview} />
-        {/* <h3>When to consider something else</h3>
+
+        {/*
+            Will be back in a later release
+
+        <h3>When to consider something else</h3>
         <ul className="pl-3">
             <li>To present a list of possible navigation options or actions that for example effects the filtering of the page, use the <Link to="/components/dropdown-menu">Dropdown menu</Link> component instead of a Select. </li>
         </ul> */}
 
-        <h3>When to use Select</h3>
+        <h3>When to consider something else</h3>
 
         <WhenToUse />
 
@@ -55,11 +59,11 @@ const ContentGuidelines = () => (
         <h2 id="content-guidelines">Content guidelines</h2>
 
         <div className="d-flex justify-content-center slab slab-plain px-5 pt-5 pb-4 no-pointer-events">
-            <InputGroup type="select" label="Label" placeholder="Placeholder text" selectOptions={[]} helpBlock errorMessage="Descriptive helpful error message."/>
+            <InputGroup type="select" label="Label" placeholder="Placeholder text" selectOptions={[]} helpBlock/>
         </div>
         <ul className="pl-3">
             <li>The <b>Label</b> should be short, concise and to the point describing the functionality </li>
-            <li>The <b>Placeholder text</b> for select list should give example of what type of content is available inside the listbox. </li>
+            <li>The <b>Placeholder text</b> should begin with the verb {"\""}Select..{"\""} preferably followed by what type of options the user is choosing from.</li>
         </ul>
     </section>
 );
@@ -86,8 +90,7 @@ const DeveloperDocumentation = () => (
         </ComponentPreview>
 
         <span className="h4">Disabled state</span>
-        <p>Disable a select by adding the  <CodeTags type="primary" code="disabled"/>  attribute to the desired select. You can also disable a <CodeTags type="primary" code="form-group"/> or <CodeTags type="primary" code="fieldset"/>, refer to <Link to="/components/forms">forms</Link> for more info.</p>
-
+        <p>Disable a select by adding the <CodeTags type="primary" code="disabled"/> attribute to the desired select and the <CodeTags type="primary" code="form-group"/> where the select resides.</p>
         <ComponentPreview language="html" codeFigure showCasePanel>
             <InputGroup type="select" label="Label" placeholder="Select option" selectOptions={[]} disabled />
         </ComponentPreview>

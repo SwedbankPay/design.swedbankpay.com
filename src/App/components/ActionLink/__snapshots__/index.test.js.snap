@@ -2,116 +2,122 @@
 
 exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with badge if badge is provided 1`] = `
 <Fragment>
-  <span
-    className="badge badge-default"
+  <div
+    className="d-flex flex-column"
   >
-    Badge
-  </span>
-  
-
-  Link text
-  
-
-  
-
-  
-
+    <span
+      className="action-link-content"
+    >
+      <span
+        className="action-link-label "
+      >
+        Link text
+      </span>
+       
+      <span
+        className="badge badge-default"
+      >
+        Badge
+      </span>
+    </span>
+  </div>
 </Fragment>
 `;
 
 exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with link text 1`] = `
 <Fragment>
-  Link text
-  
-
-  
-
-  
-
-</Fragment>
-`;
-
-exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with new tab properties when newTab is true 1`] = `
-<Fragment>
-  <i
-    aria-hidden="true"
-    className="material-icons"
+  <div
+    className="d-flex flex-column"
   >
-    open_in_new
-  </i>
-  
-
-  Link text
-  
-
-  
-
-  
-
+    <span
+      className="action-link-content"
+    >
+      <span
+        className="action-link-label no-badge"
+      >
+        Link text
+      </span>
+       
+    </span>
+  </div>
 </Fragment>
 `;
 
 exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with smalltext on multiline when multiline and smalltext is provided 1`] = `
 <Fragment>
-  <span
-    className="action-link-multiline"
+  <div
+    className="d-flex flex-column"
   >
-    
-
-    Link text
+     
     
 
     <span
-      className="small-text"
+      className="action-link-multiline"
     >
-      Small text
+       
+      
+
+      <span>
+        
+
+        <span
+          className="action-link-label"
+        >
+          Link text
+        </span>
+        
+
+         
+        
+
+      </span>
+      <span
+        className="small-text"
+      >
+        Small text
+      </span>
+      
+
     </span>
-    
-
-  </span>
-  
-
-</Fragment>
-`;
-
-exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with smalltext when provided 1`] = `
-<Fragment>
-  Link text
-  
-
-  <span
-    className="small-text"
-  >
-    Small text
-  </span>
-  
-
-  
-
+  </div>
 </Fragment>
 `;
 
 exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent without badge if badge is not provided 1`] = `
 <Fragment>
-  Link text
-  
-
-  
-
-  
-
+  <div
+    className="d-flex flex-column"
+  >
+    <span
+      className="action-link-content"
+    >
+      <span
+        className="action-link-label no-badge"
+      >
+        Link text
+      </span>
+       
+    </span>
+  </div>
 </Fragment>
 `;
 
 exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent without smalltext when not provided 1`] = `
 <Fragment>
-  Link text
-  
-
-  
-
-  
-
+  <div
+    className="d-flex flex-column"
+  >
+    <span
+      className="action-link-content"
+    >
+      <span
+        className="action-link-label no-badge"
+      >
+        Link text
+      </span>
+       
+    </span>
+  </div>
 </Fragment>
 `;
 
@@ -120,6 +126,8 @@ exports[`Component: ActionLink prop linkText is marked as required 1`] = `
   <a
     className="action-link"
     href="#"
+    rel={null}
+    target={null}
   >
     
 
@@ -133,6 +141,8 @@ exports[`Component: ActionLink renders ActionLink with .action-link class only w
   <a
     className="action-link"
     href="#"
+    rel={null}
+    target={null}
   >
     
 

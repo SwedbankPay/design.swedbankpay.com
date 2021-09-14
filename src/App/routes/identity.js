@@ -15,14 +15,12 @@ module.exports = [
             {
                 title: "Overview",
                 path: "/identity/identity",
-                componentPath: "identity/Identity",
-                statusBadges: ["new"]
+                componentPath: "identity/Identity"
             },
             {
                 title: "Accessibility",
                 path: "/identity/accessibility",
                 componentPath: "identity/Accessibility",
-                statusBadges: ["new"],
                 text: "Principles & WCAG 2.1 guidelines"
             },
             {
@@ -36,14 +34,12 @@ module.exports = [
                 title: "Copywriting",
                 path: "/identity/copywriting",
                 componentPath: "identity/Copywriting",
-                statusBadges: ["new"],
                 text: "Tonality & UX copy in our products"
             },
             {
                 title: "Grid",
                 path: "/identity/grid",
                 componentPath: "identity/Grid",
-                statusBadges: ["new"],
                 text: "Our grid and best practices"
             },
             {
@@ -57,7 +53,6 @@ module.exports = [
                 title: "Imagery",
                 path: "/identity/imagery",
                 componentPath: "identity/Imagery",
-                statusBadges: ["new"],
                 text: "Guidelines and image library"
             },
             {
@@ -65,7 +60,7 @@ module.exports = [
                 path: "/identity/logotype",
                 componentPath: "identity/Logotype",
                 statusBadges: ["updated"],
-                text: "The Swedbank Pay logotype"
+                text: `The ${process.env.brandTitle} logotype`
             },
             {
                 title: "Page layout",
@@ -77,7 +72,6 @@ module.exports = [
                 title: "Spacing",
                 path: "/identity/spacing",
                 componentPath: "identity/Spacing",
-                statusBadges: ["new"],
                 text: "8-point spacing system"
             },
             {

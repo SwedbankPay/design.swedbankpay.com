@@ -1,0 +1,204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Documentation: Loaders Overview renders 1`] = `
+<section
+  id="loader-page-overview"
+>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+    showCasePanelAdvanced={
+      Object {
+        "elements": Array [
+          Object {
+            "component": <Loader />,
+            "description": "Loading spinners should be used when the wait time is anticipated to extend over one second.",
+            "options": Object {
+              "radio": Array [
+                Object {
+                  "id": "color_radio",
+                  "title": "Color",
+                  "values": Array [
+                    Object {
+                      "name": "Default",
+                    },
+                    Object {
+                      "name": "Inverted",
+                      "value": Object {
+                        "backgroundDark": true,
+                        "inverted": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "size_radio",
+                  "title": "Size",
+                  "values": Array [
+                    Object {
+                      "name": "Default",
+                      "value": Object {
+                        "size": "",
+                      },
+                    },
+                    Object {
+                      "name": "Small",
+                      "value": Object {
+                        "size": "loader-sm",
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "title": "Loader",
+          },
+        ],
+        "id": "no-tabs",
+      }
+    }
+  />
+  <section
+    id="loaders-how-to-use"
+  >
+    <h3>
+      How to use loader in context
+    </h3>
+    <div
+      className="row"
+    >
+      <div
+        className="col-12"
+        key="0"
+      >
+        <div
+          className="slab slab-plain slab-border-success"
+          key="0"
+        >
+          <span
+            className="h3"
+          >
+            Do
+          </span>
+          <div
+            className="d-flex justify-content-center px-3 h-100 align-items-center pb-5"
+          >
+            <div
+              className="d-flex flex-column align-items-center col-5"
+            >
+              <p
+                className="text-align-center"
+              >
+                <b>
+                  Opening BankID app on your mobile device, please don't close this window
+                </b>
+              </p>
+              <div
+                className="loader"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <p
+        className="m-3"
+      >
+        If the anticipated waiting time is long, it’s recommended to show a text explaining what is happening to the user.
+      </p>
+      <div
+        className="col-6"
+        key="0"
+      >
+        <div
+          className="slab slab-plain slab-border-success"
+          key="0"
+        >
+          <span
+            className="h3"
+          >
+            Do
+          </span>
+          <div
+            className="d-flex justify-content-center px-3 h-100 align-items-center pb-5"
+          >
+            <button
+              className="btn btn-primary disabled"
+            >
+              ID authentication
+              <div
+                className="loader loader-sm"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        className="col-6"
+        key="1"
+      >
+        <div
+          className="slab slab-plain slab-border-error"
+          key="1"
+        >
+          <span
+            className="h3"
+          >
+            Don't
+          </span>
+          <div
+            className="d-flex justify-content-center px-3 h-100 align-items-center pb-5"
+          >
+            <div
+              className="d-flex"
+            >
+              <button
+                className="btn btn-primary btn-bank-id"
+                disabled={true}
+              >
+                ID authentication
+                <i
+                  className="bank-id bank-id-se"
+                />
+              </button>
+              <div
+                className="loader loader-sm align-self-center"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <p
+        className="m-3"
+      >
+        If the loading is contextual to a certain button on the page, the 
+        <Link
+          to="/components/buttons"
+        >
+          button
+        </Link>
+         loading state can be used instead of the loader component.
+      </p>
+    </div>
+  </section>
+</section>
+`;
+
+exports[`Documentation: Loaders renders 1`] = `
+<DocContainer
+  docToc={true}
+>
+  <p
+    className="lead"
+  >
+    The loader component should be used when the site or application is performing computation, notifying   the user that their action is being processed.
+  </p>
+  <Overview />
+</DocContainer>
+`;

@@ -7,7 +7,12 @@ exports[`Component: Radio - renders checkbox group with disabled state 1`] = `
       className="radio-group"
       disabled={true}
     >
-      <legend />
+      <legend
+        className="d-flex align-items-center"
+      >
+        
+
+      </legend>
       <div
         className="radio"
         key="0"
@@ -63,8 +68,12 @@ exports[`Component: Radio - renders checkbox group with groupTitle 1`] = `
     <fieldset
       className="radio-group"
     >
-      <legend>
+      <legend
+        className="d-flex align-items-center"
+      >
         Group title
+        
+
       </legend>
       <div
         className="radio"
@@ -161,7 +170,12 @@ exports[`Component: Radio - renders radio group 1`] = `
     <fieldset
       className="radio-group"
     >
-      <legend />
+      <legend
+        className="d-flex align-items-center"
+      >
+        
+
+      </legend>
       <div
         className="radio"
         key="0"

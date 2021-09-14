@@ -226,7 +226,7 @@ exports[`Documentation: Card Overview renders 1`] = `
             "component": <Cards
               icon={
                 <i
-                  className="material-icons"
+                  className="material-icons material-icons-outlined"
                 >
                   shopping_basket
                 </i>
@@ -253,7 +253,7 @@ exports[`Documentation: Card Overview renders 1`] = `
                       "name": "With icon",
                       "value": Object {
                         "icon": <i
-                          className="material-icons"
+                          className="material-icons material-icons-outlined"
                         >
                           shopping_basket
                         </i>,
@@ -273,19 +273,19 @@ exports[`Documentation: Card Overview renders 1`] = `
                   "title": "Accent color",
                   "values": Array [
                     Object {
-                      "name": "Yellow brown",
+                      "name": "Primary",
                       "value": Object {
                         "type": "primary",
                       },
                     },
                     Object {
-                      "name": "Turquoise",
+                      "name": "Complementary 1",
                       "value": Object {
                         "type": "secondary",
                       },
                     },
                     Object {
-                      "name": "Purple",
+                      "name": "Complementary 2",
                       "value": Object {
                         "type": "tertiary",
                       },
@@ -338,19 +338,19 @@ exports[`Documentation: Card Overview renders 1`] = `
                   "title": "Accent color",
                   "values": Array [
                     Object {
-                      "name": "Yellow brown",
+                      "name": "Primary",
                       "value": Object {
                         "type": "primary",
                       },
                     },
                     Object {
-                      "name": "Turquoise",
+                      "name": "Complementary 1",
                       "value": Object {
                         "type": "secondary",
                       },
                     },
                     Object {
-                      "name": "Purple",
+                      "name": "Complementary 2",
                       "value": Object {
                         "type": "tertiary",
                       },
@@ -459,6 +459,6 @@ exports[`Documentation: Card renders 1`] = `
     </Link>
      instead.
   </p>
-  <OldCard />
+  <Overview />
 </DocContainer>
 `;

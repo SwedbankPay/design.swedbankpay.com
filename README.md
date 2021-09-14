@@ -180,6 +180,7 @@ AppVeyor will now create and deploy a release on both github and
 
 - [Phung Nguyen][PhungNg]
 - [Thomas Lorntzen][VikingTristan]
+- [Eskil Hognestad][eskilsen]
 
 ## Contents of this project
 
@@ -224,7 +225,7 @@ Inspired by [Bootstrap][bootstrap] and [Materialize][materialize].
   [dep-status]:         https://david-dm.org/swedbankpay/design.swedbankpay.com
   [devdep-badge]:       https://david-dm.org/swedbankpay/design.swedbankpay.com/dev-status.svg
   [devdep-status]:      https://david-dm.org/swedbankpay/design.swedbankpay.com?type=dev
-  [og-image]:           https://repository-images.githubusercontent.com/191536903/4ef09b80-53ec-11ea-9f50-8fa24f706dfb
+  [og-image]:           https://user-images.githubusercontent.com/21359433/132852104-9e2988db-f249-4a0f-9902-440846f0d669.png
   [swpdg]:              https://design.swedbankpay.com
   [nodejs]:             https://nodejs.org/en/
   [slack]:              https://payex.slack.com/messages/C0L3W8B2S/
@@ -235,6 +236,7 @@ Inspired by [Bootstrap][bootstrap] and [Materialize][materialize].
   [issues]:             https://github.com/swedbankpay/design.swedbankpay.com/issues
   [PhungNg]:            https://github.com/PhungNg
   [VikingTristan]:      https://github.com/VikingTristan
+  [eskilsen]:           https://github.com/eskilsen
   [babel]:              https://babeljs.io/
   [eslint]:             https://eslint.org/
   [sentry]:             https://sentry.io

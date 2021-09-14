@@ -7,11 +7,12 @@ import CodeTags from "@components/CodeTags";
 
 const basename = process.env.basename;
 const brand = process.env.brand;
+const brandTitle = process.env.brandTitle;
 
 const Installation = () => (
     <section>
         <h2 id="installation">Installation with CDN</h2>
-        <p>To quickly add the Swedbank Pay Design Guide to your project, include the snippets below in your project.</p>
+        <p>To quickly add the {brandTitle} Design Guide to your project, include the snippets below in your project.</p>
         <h3>Include in the header</h3>
         <p>Copy-paste the following CSS code into <CodeTags type="secondary" code="<head>"/> before all the other stylesheets in order to load our CSS.</p>
         <ComponentPreview language="html" codeFigure>
@@ -145,7 +146,7 @@ const DiscoverMore = () => (
 
 const ForDevelopers = () => (
     <DocContainer>
-        <p className="lead mb-5">To get you up and running with the Swedbank Pay Design Guide as quickly as possible, we have prepared this section showing you how to install it and what you will need to know in order to contribute to the project!</p>
+        <p className="lead mb-5">To get you up and running with the {brandTitle} Design Guide as quickly as possible, we have prepared this section showing you how to install it and what you will need to know in order to contribute to the project!</p>
         <Installation/>
         <GridAndBreakpoints />
         <Contributing />

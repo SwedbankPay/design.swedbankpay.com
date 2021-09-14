@@ -306,7 +306,7 @@ const Code = () => (
 const Headings = () => (
     <>
         <h2 id="headings">Headings</h2>
-        <p>Swedbank Pay DesignGuide provides basic styling on all headings (h1-h6).</p>
+        <p>{process.env.brandTitle} Design Guide provides basic styling on all headings (h1-h6).</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <h1>Heading h1</h1>
             <h2>Heading h2</h2>

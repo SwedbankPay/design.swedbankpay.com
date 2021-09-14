@@ -6,6 +6,12 @@ exports[`Component: Alert prop type is marked as required 1`] = `
 >
   
 
+  <i
+    aria-hidden="true"
+    className="material-icons alert-icon mr-3"
+  />
+  
+
 </div>
 `;
 
@@ -13,6 +19,12 @@ exports[`Component: Alert renders an alert with a close-button 1`] = `
 <div
   className="alert alert-test"
 >
+  
+
+  <i
+    aria-hidden="true"
+    className="material-icons alert-icon mr-3"
+  />
   
 
   <a
@@ -24,7 +36,7 @@ exports[`Component: Alert renders an alert with a close-button 1`] = `
 		
     <i
       aria-hidden="true"
-      className="material-icons"
+      className="material-icons ml-3"
     >
       close
     </i>
@@ -44,7 +56,7 @@ exports[`Component: Alert renders an alert with icon 1`] = `
 
   <i
     aria-hidden="true"
-    className="material-icons alert-icon"
+    className="material-icons alert-icon mr-3"
   >
     test
   </i>
@@ -59,6 +71,10 @@ exports[`Component: Alert renders an alert with text 1`] = `
 >
   
 
+  <i
+    aria-hidden="true"
+    className="material-icons alert-icon mr-3"
+  />
   <p>
     test
   </p>
@@ -73,6 +89,12 @@ exports[`Component: Alert renders an alert with the correct type recieved from i
 >
   
 
+  <i
+    aria-hidden="true"
+    className="material-icons alert-icon mr-3"
+  />
+  
+
 </div>
 `;
 
@@ -80,6 +102,12 @@ exports[`Component: Alert renders an alert without a close-button if no close pr
 <div
   className="alert alert-test"
 >
+  
+
+  <i
+    aria-hidden="true"
+    className="material-icons alert-icon mr-3"
+  />
   
 
 </div>
@@ -91,6 +119,12 @@ exports[`Component: Alert renders an alert without an icon if no icon prop is pr
 >
   
 
+  <i
+    aria-hidden="true"
+    className="material-icons alert-icon mr-3"
+  />
+  
+
 </div>
 `;
 
@@ -100,22 +134,10 @@ exports[`Component: Alert renders an alert without text if no text prop is provi
 >
   
 
-</div>
-`;
-
-exports[`Component: Alert renders the children sent to the alert component and a alert-body 1`] = `
-<div
-  className="alert alert-test"
->
-  
-
-  <div
-    className="alert-body"
-  >
-    <p>
-      Alert text
-    </p>
-  </div>
+  <i
+    aria-hidden="true"
+    className="material-icons alert-icon mr-3"
+  />
   
 
 </div>
@@ -127,6 +149,12 @@ exports[`Component: Alert the close-button prevents default 1`] = `
 >
   
 
+  <i
+    aria-hidden="true"
+    className="material-icons alert-icon mr-3"
+  />
+  
+
   <a
     data-alert-close=""
     href="#"
@@ -136,7 +164,7 @@ exports[`Component: Alert the close-button prevents default 1`] = `
 		
     <i
       aria-hidden="true"
-      className="material-icons"
+      className="material-icons ml-3"
     >
       close
     </i>
@@ -145,136 +173,5 @@ exports[`Component: Alert the close-button prevents default 1`] = `
   </a>
   
 
-</div>
-`;
-
-exports[`Component: ComplexAlert Proptypes renders with a close button when prop close is true 1`] = `
-<div
-  className="alert alert-complex alert-undefined"
->
-  <header
-    className="alert-header"
-  >
-    <a
-      data-alert-close=""
-      href="#"
-      onClick={[Function]}
-    >
-      
-		
-      <i
-        aria-hidden="true"
-        className="material-icons"
-      >
-        close
-      </i>
-    </a>
-    
-
-  </header>
-</div>
-`;
-
-exports[`Component: ComplexAlert Proptypes renders with an ID when prop id is provided 1`] = `
-<div
-  className="alert alert-complex alert-undefined"
-  id="test-alert"
->
-  <header
-    className="alert-header"
-  >
-    
-
-  </header>
-</div>
-`;
-
-exports[`Component: ComplexAlert Proptypes renders with an icon when prop icon is provided 1`] = `
-<div
-  className="alert alert-complex alert-undefined"
->
-  <header
-    className="alert-header"
-  >
-    
-
-     
-    <i
-      aria-hidden="true"
-      className="material-icons alert-icon"
-    >
-      home
-    </i>
-    
-
-  </header>
-</div>
-`;
-
-exports[`Component: ComplexAlert Proptypes renders with the correct class when prop type is provided 1`] = `
-<div
-  className="alert alert-complex alert-default"
->
-  <header
-    className="alert-header"
-  >
-    
-
-  </header>
-</div>
-`;
-
-exports[`Component: ComplexAlert Proptypes renders with the passed children when prop children is provided 1`] = `
-<div
-  className="alert alert-complex alert-undefined"
->
-  <header
-    className="alert-header"
-  >
-    
-
-  </header>
-  
-
-  <div
-    className="alert-body"
-  >
-    Complex children...
-  </div>
-  
-
-</div>
-`;
-
-exports[`Component: ComplexAlert Proptypes renders with the passed header text when prop headerText is provided 1`] = `
-<div
-  className="alert alert-complex alert-undefined"
->
-  <header
-    className="alert-header"
-  >
-    
-
-    <h3>
-      My custom header text
-    </h3>
-    
-
-    
-
-  </header>
-</div>
-`;
-
-exports[`Component: ComplexAlert renders 1`] = `
-<div
-  className="alert alert-complex alert-undefined"
->
-  <header
-    className="alert-header"
-  >
-    
-
-  </header>
 </div>
 `;

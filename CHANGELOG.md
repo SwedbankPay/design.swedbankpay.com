@@ -1,18 +1,33 @@
 # Changelog
 
-## [6.1.0] - 16.08.2021
+## [7.0.0] - 13.09.2021
 
 ## Added
-- Node package
-  - Automatic workflow added so that a new node package is released whenever there is a new tag
-
+- Favicon section under Logotypes
+- Copy to clipboard
+- "For" attribute for Input fields
 ## Changed
-- Webpack updated and reworked
-- "CDN" version of the Design Guide will no longer add a global or autoload components
-  - This behavior can be added by providing the "global" or "autoload" attribute to the script tag
-- Sentry reporting is no longer a part of the Design Guide library itself but rather a part of the documentation website
+- Tabs
+  - Changed styling on component
+  - Content on documentation page
+- Change styling and documentation page on
+  - Alert
+  - Loader
+  - Tabs
+  - Links
+- Changed content on
+  - Checkbox
+  - Radiobutton
+  - Togglebox
+  - Rangeslider
+  - Select
+  - Input field
+- Changed options labels on Cards page
+- Updated badges on pages
 
 ## Fixed
-- All node packages updated except chart.js
-- All tests now directly import design guide components
-- Various code and tests fixed
+- Payex design guide
+- Broken link in imagery
+
+## Removed
+- alert-complex class

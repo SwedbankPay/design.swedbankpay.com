@@ -17,7 +17,7 @@ exports[`Components: Toast CustomHtml calls toast on click 1`] = `
     const toastHtml = "&lt;span&gt;&lt;p&gt;I am toast content.&lt;/p&gt;&lt;p&gt;You can put me on several lines.&lt;/p&gt;&lt;/span&gt;&lt;button class='btn toast-action'&gt;Undo&lt;/button&gt;";
     
 
-    dg.toast({ html: toastHtml });
+    toast({ html: toastHtml });
   </ComponentPreview>
   <ComponentPreview
     language="html"
@@ -51,7 +51,7 @@ exports[`Components: Toast CustomHtml renders 1`] = `
     const toastHtml = "&lt;span&gt;&lt;p&gt;I am toast content.&lt;/p&gt;&lt;p&gt;You can put me on several lines.&lt;/p&gt;&lt;/span&gt;&lt;button class='btn toast-action'&gt;Undo&lt;/button&gt;";
     
 
-    dg.toast({ html: toastHtml });
+    toast({ html: toastHtml });
   </ComponentPreview>
   <ComponentPreview
     language="html"
@@ -259,14 +259,14 @@ exports[`Components: Toast Overview calls toast on click 1`] = `
     codeFigure={true}
     language="javascript"
   >
-    dg.toast({ html: "I am a toast!" });
+    toast({ html: "I am a toast!" });
   </ComponentPreview>
   <ComponentPreview
     codeFigure={true}
     dangerousHTML={true}
     language="html"
   >
-    &lt;button onclick="dg.toast({ html: 'I am a toast!' })" class="btn btn-primary"&gt;Toast!&lt;/button&gt;
+    &lt;button onclick="toast({ html: 'I am a toast!' })" class="btn btn-primary"&gt;Toast!&lt;/button&gt;
   </ComponentPreview>
   <ComponentPreview
     language="html"
@@ -319,14 +319,14 @@ exports[`Components: Toast Overview renders 1`] = `
     codeFigure={true}
     language="javascript"
   >
-    dg.toast({ html: "I am a toast!" });
+    toast({ html: "I am a toast!" });
   </ComponentPreview>
   <ComponentPreview
     codeFigure={true}
     dangerousHTML={true}
     language="html"
   >
-    &lt;button onclick="dg.toast({ html: 'I am a toast!' })" class="btn btn-primary"&gt;Toast!&lt;/button&gt;
+    &lt;button onclick="toast({ html: 'I am a toast!' })" class="btn btn-primary"&gt;Toast!&lt;/button&gt;
   </ComponentPreview>
   <ComponentPreview
     language="html"
@@ -400,10 +400,10 @@ exports[`Components: Toast PremadeToasts calls toast on click 1`] = `
     dangerousHTML={true}
     language="html"
   >
-    &lt;button type="button" onclick="dg.toast({ html: 'I am a neutral toast!', type: 'neutral' })" class="btn btn-primary"&gt;Neutral toast&lt;/button&gt;
-    &lt;button type="button" onclick="dg.toast({ html: 'I am a success toast!', type: 'success' })" class="btn btn-primary"&gt;Success toast&lt;/button&gt;
-    &lt;button type="button" onclick="dg.toast({ html: 'I am a warning toast!', type: 'warning' })" class="btn btn-primary"&gt;Warning toast&lt;/button&gt;
-    &lt;button type="button" onclick="dg.toast({ html: 'I am a danger toast!', type: 'danger' })" class="btn btn-primary"&gt;Danger toast&lt;/button&gt;
+    &lt;button type="button" onclick="toast({ html: 'I am a neutral toast!', type: 'neutral' })" class="btn btn-primary"&gt;Neutral toast&lt;/button&gt;
+    &lt;button type="button" onclick="toast({ html: 'I am a success toast!', type: 'success' })" class="btn btn-primary"&gt;Success toast&lt;/button&gt;
+    &lt;button type="button" onclick="toast({ html: 'I am a warning toast!', type: 'warning' })" class="btn btn-primary"&gt;Warning toast&lt;/button&gt;
+    &lt;button type="button" onclick="toast({ html: 'I am a danger toast!', type: 'danger' })" class="btn btn-primary"&gt;Danger toast&lt;/button&gt;
   </ComponentPreview>
   <ComponentPreview
     language="html"
@@ -482,10 +482,10 @@ exports[`Components: Toast PremadeToasts renders 1`] = `
     dangerousHTML={true}
     language="html"
   >
-    &lt;button type="button" onclick="dg.toast({ html: 'I am a neutral toast!', type: 'neutral' })" class="btn btn-primary"&gt;Neutral toast&lt;/button&gt;
-    &lt;button type="button" onclick="dg.toast({ html: 'I am a success toast!', type: 'success' })" class="btn btn-primary"&gt;Success toast&lt;/button&gt;
-    &lt;button type="button" onclick="dg.toast({ html: 'I am a warning toast!', type: 'warning' })" class="btn btn-primary"&gt;Warning toast&lt;/button&gt;
-    &lt;button type="button" onclick="dg.toast({ html: 'I am a danger toast!', type: 'danger' })" class="btn btn-primary"&gt;Danger toast&lt;/button&gt;
+    &lt;button type="button" onclick="toast({ html: 'I am a neutral toast!', type: 'neutral' })" class="btn btn-primary"&gt;Neutral toast&lt;/button&gt;
+    &lt;button type="button" onclick="toast({ html: 'I am a success toast!', type: 'success' })" class="btn btn-primary"&gt;Success toast&lt;/button&gt;
+    &lt;button type="button" onclick="toast({ html: 'I am a warning toast!', type: 'warning' })" class="btn btn-primary"&gt;Warning toast&lt;/button&gt;
+    &lt;button type="button" onclick="toast({ html: 'I am a danger toast!', type: 'danger' })" class="btn btn-primary"&gt;Danger toast&lt;/button&gt;
   </ComponentPreview>
   <ComponentPreview
     language="html"

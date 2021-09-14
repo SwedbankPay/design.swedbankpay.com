@@ -121,11 +121,24 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                 return "update switchcase!";
         }
 
+        const copyToClipboard = e => {
+            navigator.clipboard.writeText(code);
+
+            e.target.dataset.tooltip = "Copied!";
+        };
+
+        const tooltipContent = e => {
+            e.target.dataset.tooltip = "Copy to clipboard";
+        };
+
         return (
             <figure>
                 <div className="code-view">
                     <header className="code-view-header">
                         {language.toUpperCase()}
+                        <button className="copy-btn d-flex p-0">
+                            <i className="material-icons material-icons-outlined" data-tooltip onMouseEnter={e => tooltipContent(e)} onClick={e => copyToClipboard(e)}>content_copy</i>
+                        </button>
                     </header>
                     <table className="code-view-table">
                         <tbody>
@@ -199,6 +212,10 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
             if (prevState.activeTab !== this.state.activeTab) {
                 this._resetOptions();
             }
+
+            if (this.state.activeTab.component.props.id === "tabs-showcase-example") {
+                tabs.init("tabs-showcase-example");
+            }
         }
 
         setActiveTab (e, i) {
@@ -208,7 +225,6 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
             this.setState(prevState => ({ ...prevState,
                 activeTab: this.props.showCasePanelAdvanced.elements[i],
                 activeOptions: this.props.showCasePanelAdvanced.elements[i].activeOptions ? [...this.props.showCasePanelAdvanced.elements[i].activeOptions] : [] }));
-
         }
 
         setActiveOptions (id, value, description, checkbox) {
@@ -254,8 +270,8 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                             </div>
                         </div>
                         <div className="d-flex">
-                            <div className="flex-column flex-fill">
-                                <div className="component-preview">
+                            <div className="d-flex flex-column flex-fill">
+                                <div className="component-preview flex-fill">
                                     <div className={`component-preview-content${this.state.activeTab.altBackground ? " component-preview-alt-background" : ""}`}>
                                         {cloneElement(this.state.activeTab.component,
                                             this.state.activeOptions.reduce((acc, currentOption) => ({

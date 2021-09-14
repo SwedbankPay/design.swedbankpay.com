@@ -4,10 +4,13 @@ import * as externalLinks from "./constants";
 import { DocContainer } from "@docutils";
 
 const basename = process.env.basename;
+const brandTitle = process.env.brandTitle;
+
+const otherLinks = brandTitle === "Swedbank Pay" ? externalLinks.othersAboutAccessibility : externalLinks.othersAboutAccessibility.slice(1);
 
 const Intro = () => (
     <section>
-        <p className="lead">At Swedbank Pay we value accessibility. Our products are meant to be used by people no matter of their abilities and therefor we strive to be WCAG (Web Content Accessibility Guidelines) compliant. We’re currently working on our accessibility awareness and meeting the terms of the  accessibility laws in Norway and Sweden. </p>
+        <p className="lead">At {brandTitle} we value accessibility. Our products are meant to be used by people no matter of their abilities and therefor we strive to be WCAG (Web Content Accessibility Guidelines) compliant. We’re currently working on our accessibility awareness and meeting the terms of the  accessibility laws in Norway and Sweden. </p>
         <h2>What is accessibility</h2>
         <p>Accessibility ties back to our values <span>simple</span> and <span>caring</span>.About 15 percent of the western world’s population is living with a disability of some kind. This translates to over 1 billion people, and includes visual, auditory, physical, speech, cognitive, and neurological disabilities. </p>
 
@@ -18,7 +21,7 @@ const Intro = () => (
             <span className="caption-text"><span className="font-weight-bold">Figure 1.</span> An illustration visualizing permanent, beneath temporary and situational impairment.</span>
         </div>
 
-        <p>At Swedbank Pay we strive to give all customers with disabilities and impairments (permanent, temporary and/or situational) a better chance of using our services on the same terms as others. </p>
+        <p>At {brandTitle} we strive to give all customers with disabilities and impairments (permanent, temporary and/or situational) a better chance of using our services on the same terms as others. </p>
     </section>
 );
 
@@ -57,7 +60,7 @@ const WcagStandard = () => (
 const Inclusions = () => (
     <section>
         <h2 id="inclusions">Creating inclusion</h2>
-        <p>Today we’re working with awareness. All designers and developers at Swedbank Pay should be aware of accessibility, what it is, how it’s implemented and, what precautions we have to take to actually follow the law in the countries we’re in. As mentioned, accessibility may start with design but the main part is making our service compatible with accessibility helping tools, and that part happens in the technical implementation. </p>
+        <p>Today we’re working with awareness. All designers and developers at {brandTitle} should be aware of accessibility, what it is, how it’s implemented and, what precautions we have to take to actually follow the law in the countries we’re in. As mentioned, accessibility may start with design but the main part is making our service compatible with accessibility helping tools, and that part happens in the technical implementation. </p>
         <p>Accessibility and WCAG can seem overwhelming and just as with everything else we need to take it step by step. This is a list from a Funka webinar held 2020-11-06:</p>
         <ul className="list list-bullet">
             <li>Make sure that we know the current status of our products. Are we accessible enough?</li>
@@ -91,7 +94,7 @@ const DiveDeeper = () => (
         ))}
 
         <h3>Others about accessibility</h3>
-        {externalLinks.othersAboutAccessibility.map(links => (
+        {otherLinks.map(links => (
             <a key={links.url} href={links.url} target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
                 <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
                 <span className="mr-2">{links.text}</span>

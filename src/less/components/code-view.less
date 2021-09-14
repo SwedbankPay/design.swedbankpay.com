@@ -12,6 +12,11 @@
 
     .code-view-header {
         .code-view-header();
+
+        .copy-btn {
+            background: none;
+            border: none;
+        }
     }
 
     .code-view-table {
@@ -87,6 +92,8 @@
 }
 
 .code-view-header {
+    display: flex;
+    justify-content: space-between;
     background-color: @brand-secondary-dark-1;
     color: @white;
     font-family: @brand-monofont;
@@ -98,4 +105,15 @@
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     margin: 0;
+
+    i {
+        cursor: pointer;
+        color: @white;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+            transition: color 0.3s ease-in-out;
+            color: @light-brown;
+        }
+    }
 }

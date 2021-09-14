@@ -1,0 +1,56 @@
+.topbar-xl-wide {
+    &.topbar-sticky {
+        img {
+            &.logotype-md {
+                margin-top: 15%;
+                margin-left: 15%;
+            }
+        }
+    }
+
+    a {
+        &.topbar-logo {
+            img {
+                &.logotype-md {
+                    margin-top: 15%;
+                }
+            }
+        }
+    }
+}
+
+img {
+    &.logotype-vertical {
+        &.logotype-xs {
+            width: 2.5rem;
+        }
+
+        &.logotype-sm {
+            width: 3rem;
+        }
+
+        &.logotype-md {
+            width: 4.5rem;
+        }
+
+        &.logotype-lg {
+            width: 3rem;
+        }
+    }
+
+    &.logotype-horizontal {
+        &.logotype-md {
+            height: 5.5rem;
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .topbar {
+        .topbar-logo {
+            .logotype-vertical {
+                width: 5rem;
+            }
+        }
+    }
+}

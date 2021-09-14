@@ -53,25 +53,19 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "getting-started/Introduction",
                       "path": "/get-started/introduction",
-                      "statusBadges": Array [
-                        "updated",
-                      ],
                       "title": "Introduction",
                     },
                     Object {
                       "componentPath": "getting-started/ForDevelopers",
                       "path": "/get-started/for-developers",
                       "statusBadges": Array [
-                        "new",
+                        "updated",
                       ],
                       "title": "For developers",
                     },
                     Object {
                       "componentPath": "getting-started/ForDesigners",
                       "path": "/get-started/for-designers",
-                      "statusBadges": Array [
-                        "new",
-                      ],
                       "title": "For designers",
                     },
                   ],
@@ -89,17 +83,11 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "identity/Identity",
                       "path": "/identity/identity",
-                      "statusBadges": Array [
-                        "new",
-                      ],
                       "title": "Overview",
                     },
                     Object {
                       "componentPath": "identity/Accessibility",
                       "path": "/identity/accessibility",
-                      "statusBadges": Array [
-                        "new",
-                      ],
                       "text": "Principles & WCAG 2.1 guidelines",
                       "title": "Accessibility",
                     },
@@ -115,18 +103,12 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "identity/Copywriting",
                       "path": "/identity/copywriting",
-                      "statusBadges": Array [
-                        "new",
-                      ],
                       "text": "Tonality & UX copy in our products",
                       "title": "Copywriting",
                     },
                     Object {
                       "componentPath": "identity/Grid",
                       "path": "/identity/grid",
-                      "statusBadges": Array [
-                        "new",
-                      ],
                       "text": "Our grid and best practices",
                       "title": "Grid",
                     },
@@ -142,9 +124,6 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "identity/Imagery",
                       "path": "/identity/imagery",
-                      "statusBadges": Array [
-                        "new",
-                      ],
                       "text": "Guidelines and image library",
                       "title": "Imagery",
                     },
@@ -154,7 +133,7 @@ exports[`Main: App renders 1`] = `
                       "statusBadges": Array [
                         "updated",
                       ],
-                      "text": "The Swedbank Pay logotype",
+                      "text": "The TESTBRAND logotype",
                       "title": "Logotype",
                     },
                     Object {
@@ -166,9 +145,6 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "identity/Spacing",
                       "path": "/identity/spacing",
-                      "statusBadges": Array [
-                        "new",
-                      ],
                       "text": "8-point spacing system",
                       "title": "Spacing",
                     },
@@ -196,9 +172,6 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "components/Components",
                       "path": "/components/components",
-                      "statusBadges": Array [
-                        "new",
-                      ],
                       "title": "Overview",
                     },
                     Object {
@@ -214,7 +187,6 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "components/ActionList",
                       "icon": "list",
-                      "outlined": false,
                       "path": "/components/action-list",
                       "statusBadges": Array [
                         "javascript",
@@ -223,11 +195,11 @@ exports[`Main: App renders 1`] = `
                     },
                     Object {
                       "componentPath": "components/Alerts",
-                      "icon": "error",
-                      "outlined": true,
+                      "icon": "error_outlined",
                       "path": "/components/alerts",
                       "statusBadges": Array [
                         "javascript",
+                        "updated",
                       ],
                       "title": "Alerts",
                     },
@@ -250,9 +222,6 @@ exports[`Main: App renders 1`] = `
                       "icon": "touch_app",
                       "outlined": true,
                       "path": "/components/buttons",
-                      "statusBadges": Array [
-                        "updated",
-                      ],
                       "title": "Buttons",
                     },
                     Object {
@@ -280,6 +249,9 @@ exports[`Main: App renders 1`] = `
                       "icon": "check_box",
                       "outlined": true,
                       "path": "/components/checkbox",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
                       "title": "Checkbox",
                     },
                     Object {
@@ -329,7 +301,11 @@ exports[`Main: App renders 1`] = `
                     },
                     Object {
                       "componentPath": "components/InputField",
+                      "icon": "text_fields",
                       "path": "/components/input-field",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
                       "title": "Input field",
                     },
                     Object {
@@ -337,6 +313,9 @@ exports[`Main: App renders 1`] = `
                       "icon": "link",
                       "outlined": true,
                       "path": "/components/links",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
                       "title": "Links",
                     },
                     Object {
@@ -347,18 +326,20 @@ exports[`Main: App renders 1`] = `
                       "title": "Lists",
                     },
                     Object {
-                      "componentPath": "components/Loaders",
+                      "componentPath": "components/Loader",
                       "icon": "loop",
                       "outlined": true,
-                      "path": "/components/loaders",
-                      "title": "Loaders",
+                      "path": "/components/loader",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
+                      "title": "Loader",
                     },
                     Object {
                       "componentPath": "components/MediaObject",
+                      "icon": "account_circle",
+                      "outlined": true,
                       "path": "/components/media-object",
-                      "statusBadges": Array [
-                        "remove",
-                      ],
                       "title": "Media Object",
                     },
                     Object {
@@ -380,26 +361,35 @@ exports[`Main: App renders 1`] = `
                     },
                     Object {
                       "componentPath": "components/Panel",
+                      "icon": "table_rows",
+                      "outlined": true,
                       "path": "/components/panel",
                       "title": "Panel",
                     },
                     Object {
                       "componentPath": "components/ProgressSteps",
                       "icon": "hdr_strong",
-                      "outlined": true,
                       "path": "/components/progress-steps",
                       "title": "Progress steps",
                     },
                     Object {
                       "componentPath": "components/RadioButton",
                       "icon": "radio_button_checked",
-                      "outlined": true,
                       "path": "/components/radio-button",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
                       "title": "Radio button",
                     },
                     Object {
                       "componentPath": "components/Rangeslider",
+                      "icon": "tune",
+                      "outlined": true,
                       "path": "/components/rangeslider",
+                      "statusBadges": Array [
+                        "javascript",
+                        "updated",
+                      ],
                       "title": "Rangeslider",
                     },
                     Object {
@@ -414,20 +404,28 @@ exports[`Main: App renders 1`] = `
                     },
                     Object {
                       "componentPath": "components/Select",
+                      "icon": "arrow_drop_down_circle",
+                      "outlined": true,
                       "path": "/components/select",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
                       "title": "Select",
                     },
                     Object {
                       "componentPath": "components/Sidebar",
+                      "icon": "view_sidebar",
+                      "outlined": true,
                       "path": "/components/sidebar",
                       "statusBadges": Array [
                         "javascript",
-                        "updated",
                       ],
                       "title": "Sidebar",
                     },
                     Object {
                       "componentPath": "components/Slab",
+                      "icon": "crop_landscape",
+                      "outlined": true,
                       "path": "/components/slab",
                       "title": "Slab",
                     },
@@ -452,6 +450,7 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/tabs",
                       "statusBadges": Array [
                         "javascript",
+                        "updated",
                       ],
                       "title": "Tabs",
                     },
@@ -462,13 +461,17 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/toast",
                       "statusBadges": Array [
                         "javascript",
-                        "updated",
                       ],
                       "title": "Toast",
                     },
                     Object {
                       "componentPath": "components/Togglebox",
+                      "icon": "toggle_off",
+                      "outlined": true,
                       "path": "/components/togglebox",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
                       "title": "Togglebox",
                     },
                     Object {
@@ -478,15 +481,17 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/tooltips",
                       "statusBadges": Array [
                         "javascript",
+                        "updated",
                       ],
                       "title": "Tooltips",
                     },
                     Object {
                       "componentPath": "components/Topbar",
+                      "icon": "call_to_action",
+                      "outlined": true,
                       "path": "/components/topbar",
                       "statusBadges": Array [
                         "javascript",
-                        "updated",
                       ],
                       "title": "Topbar",
                     },
@@ -505,9 +510,6 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "utilities/Utilities",
                       "path": "/utilities/utilities",
-                      "statusBadges": Array [
-                        "new",
-                      ],
                       "title": "Overview",
                     },
                     Object {

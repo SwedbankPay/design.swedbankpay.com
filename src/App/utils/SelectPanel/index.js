@@ -126,7 +126,7 @@ class SelectPanel extends Component {
                         <nav className="sidebar-main-nav">
                             <div className="sidebar-logo">
                                 <a href="/">
-                                    <LogotypeComponent src={`${basename}designguide/assets/swedbankpay-logo-v.svg`} size="md" alt="Swedbank Pay vertical logo" type="vertical" />
+                                    <LogotypeComponent src={`${basename}designguide/assets/${brand}-logo-v.svg`} size="md" alt="Swedbank Pay vertical logo" type="vertical" />
                                 </a>
                             </div>
                             <ul className="main-nav-ul">

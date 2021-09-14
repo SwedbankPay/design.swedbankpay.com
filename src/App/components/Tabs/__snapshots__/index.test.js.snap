@@ -8,7 +8,7 @@ exports[`Component: Tabs - renders 1`] = `
 
   <ul>
     <li
-      className={null}
+      className="active"
       key="tab-item-test-0"
     >
       
@@ -23,7 +23,7 @@ exports[`Component: Tabs - renders 1`] = `
 
     </li>
     <li
-      className="active"
+      className={null}
       key="tab-item-test 2-1"
     >
       
@@ -49,7 +49,7 @@ exports[`Component: Tabs - renders with class name .tabs.tabs-scroll when prop s
 
   <ul>
     <li
-      className={null}
+      className="active"
       key="tab-item-test-0"
     >
       
@@ -64,7 +64,7 @@ exports[`Component: Tabs - renders with class name .tabs.tabs-scroll when prop s
 
     </li>
     <li
-      className="active"
+      className={null}
       key="tab-item-test 2-1"
     >
       
@@ -90,7 +90,7 @@ exports[`Component: Tabs - renders with class name tabs when prop scroll is not 
 
   <ul>
     <li
-      className={null}
+      className="active"
       key="tab-item-test-0"
     >
       
@@ -105,7 +105,7 @@ exports[`Component: Tabs - renders with class name tabs when prop scroll is not 
 
     </li>
     <li
-      className="active"
+      className={null}
       key="tab-item-test 2-1"
     >
       
