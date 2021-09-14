@@ -3,7 +3,7 @@
 exports[`Documentation: Alerts Content guidelines renders 1`] = `
 <section>
   <h2
-    className="content-guidelines"
+    id="content-guidelines"
   >
     Content guidelines
   </h2>
@@ -66,7 +66,7 @@ exports[`Documentation: Alerts Content guidelines renders 1`] = `
 exports[`Documentation: Alerts Developer documentation renders 1`] = `
 <section>
   <h2
-    className="developer-documentation"
+    id="developer-documentation"
   >
     Developer documentation
   </h2>

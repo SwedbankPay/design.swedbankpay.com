@@ -6,7 +6,7 @@ const ShowcaseComponent = ({ rightIcon, leftIcon, linkText, smallFont, backgroun
     <div className={`loader-preview-container${backgroundDark ? " dark" : ""} d-flex justify-content-center align-items-center`}>
         {standalone ? <>
             <Link rightIcon={rightIcon} leftIcon={leftIcon} linkText={linkText} smallFont={smallFont} bright={bright} disabled={disabled}/>{"\n"}</> :
-            <><p className={`mt-3 ${backgroundDark ? "text-white" : ""}`}>Paragraph text with a <Link rightIcon={rightIcon} leftIcon={leftIcon} linkText={linkText} smallFont={smallFont} bright={bright} disabled={disabled}/> </p> {"\n"}</>}
+            <><p className={`mt-3 ${backgroundDark ? "text-white" : ""} ${smallFont ? "small-text" : ""}`}>Paragraph text with a <Link rightIcon={rightIcon} leftIcon={leftIcon} linkText={linkText} smallFont={smallFont} bright={bright} disabled={disabled}/> </p> {"\n"}</>}
     </div>
 );
 
@@ -31,19 +31,6 @@ export const guidelinesContent = [
             },
         ],
         text: "Avoid using \"click here\", links should not need supporting copy to make sense."
-    },
-    {
-        slabs: [
-            {
-                type: "success",
-                content: <Link linkText="View our opening hours"/>
-            },
-            {
-                type: "error",
-                content: <Link linkText="View more"/>
-            }
-        ],
-        text: "Make sure the link makes it clear what content the link goes to."
     },
     {
         slabs: [

@@ -21,7 +21,7 @@ const Overview = () => (
 const Textarea = () => (
     <section id="textarea-overview">
         <h2 id="textarea">Textarea</h2>
-        <p>Use a Textarea when the expected user input is more than one sentence. Text areas must always have a Input label that clearly describes the type of input a field requires and it may also have a Placeholder example text, refer to <a href="#content-guidelines">content guidelines</a> for more information. </p>
+        <p>Use a Textarea when the expected user input is more than one sentence. Textareas must always have a Input label that clearly describes the type of input a field requires and it may also have a Placeholder example text, refer to <a href="#content-guidelines">content guidelines</a> for more information. </p>
 
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={textareaShowCase} codeFigure />
 
