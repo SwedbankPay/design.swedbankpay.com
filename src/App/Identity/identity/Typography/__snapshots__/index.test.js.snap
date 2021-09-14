@@ -747,7 +747,7 @@ exports[`Core: Typography Headings renders 1`] = `
   </h2>
   <p>
     TESTBRAND
-     DesignGuide provides basic styling on all headings (h1-h6).
+     Design Guide provides basic styling on all headings (h1-h6).
   </p>
   <ComponentPreview
     codeFigure={true}

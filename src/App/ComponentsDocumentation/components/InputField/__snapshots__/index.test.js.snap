@@ -465,7 +465,7 @@ exports[`Component: InputField Textarea renders 1`] = `
     Textarea
   </h2>
   <p>
-    Use a Textarea when the expected user input is more than one sentence. Text areas must always have a Input label that clearly describes the type of input a field requires and it may also have a Placeholder example text, refer to 
+    Use a Textarea when the expected user input is more than one sentence. Textareas must always have a Input label that clearly describes the type of input a field requires and it may also have a Placeholder example text, refer to 
     <a
       href="#content-guidelines"
     >
