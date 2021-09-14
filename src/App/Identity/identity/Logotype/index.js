@@ -231,7 +231,10 @@ const Favicon = () => (
         to reflect the title of your project. Make sure to also do this in the <CodeTags type="secondary" code="manifest.json" /> file in the icons folder.</p>
 
         {brand === "payex"
-            ? <Button type="primary" icon="file_download" href={`${basename}release/icons.zip`} label="Download Favicons" />
+            ? <a className="btn btn-primary" href={`${basename}release/icons.zip`}>
+                <i className="material-icons" aria-hidden="true">file_download</i>
+                <span>Download Favicons</span>
+            </a>
             : <a href={`${basename}release/icons.zip`} className="icon-link">
                 <i className="material-icons" aria-hidden="true">download</i>
                 <span className="ml-2">Download Swedbank Pay favicon assets</span>
