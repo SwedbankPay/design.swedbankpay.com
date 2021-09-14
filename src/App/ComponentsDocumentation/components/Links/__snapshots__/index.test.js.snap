@@ -321,54 +321,6 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
         <div
           className="d-flex justify-content-center mb-2  h-100 align-items-center"
         >
-          <Link
-            linkText="View our opening hours"
-          />
-        </div>
-      </div>
-    </div>
-    <div
-      className="col-lg-6"
-      key="[object Object]"
-    >
-      <div
-        className="slab slab-plain slab-border-error h-100 pb-5"
-      >
-        <h4>
-          Don't
-        </h4>
-        <div
-          className="d-flex justify-content-center mb-2  h-100 align-items-center"
-        >
-          <Link
-            linkText="View more"
-          />
-        </div>
-      </div>
-    </div>
-    <div
-      className="col-12 pb-4 pt-2"
-    >
-      Make sure the link makes it clear what content the link goes to.
-    </div>
-  </div>
-  <div
-    className="row"
-    key="3"
-  >
-    <div
-      className="col-lg-6"
-      key="[object Object]"
-    >
-      <div
-        className="slab slab-plain slab-border-success h-100 pb-5"
-      >
-        <h4>
-          Do
-        </h4>
-        <div
-          className="d-flex justify-content-center mb-2  h-100 align-items-center"
-        >
           <p
             className="mb-0 justify-content-center"
           >
