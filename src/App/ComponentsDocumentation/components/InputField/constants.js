@@ -111,7 +111,7 @@ export const inputShowCase = {
             description: <>
                 <p>Inputs fields have a few different states which includes the default state, focus state, disabled state and error state.</p>
                 <p>The default input type is text but it can also be specified as for example Email which will make it automatically validated when submitted or Password which will mask the characters submitted.</p>
-                <Alert id="input-field-alert" type="informative" icon={"info"} text={<p><b>Usage with icon.</b> Remember to wrap your inputfield within an <CodeTags type="secondary" code=".input-group" /></p>}/>
+                <Alert id="input-field-alert" type="informative" icon={"info"} text={<p><b>Usage with icon.</b> Remember to wrap your input field within an <CodeTags type="secondary" code=".input-group" /></p>}/>
             </>
         }
     ]
@@ -174,7 +174,7 @@ export const textareaShowCase = {
                 ]
             },
             title: "Textarea",
-            description: "Textareas have a few different sates which includes the default state, focus state, disabled state and error state. "
+            description: "Text areas have a few different sates which includes the default state, focus state, disabled state and error state. "
         }
     ]
 };

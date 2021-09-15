@@ -8,7 +8,7 @@ const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
         <p>
-            Code tags use Akkurat Mono as the font. Akkurat Mono can be found in <Link to="/core/typography">Typography</Link>. Using <CodeTagsComponent type="primary" code="<code>" /> without
+            Code tags use Akkurat Mono as the font. Akkurat Mono can be found in <Link to="/identity/typography">Typography</Link>. Using <CodeTagsComponent type="primary" code="<code>" /> without
             any specied styling will result in the primary styling being applied. Chose which option that is more suitable for your project, or combine them to differentiate between different
             coding languages or styles.
         </p>

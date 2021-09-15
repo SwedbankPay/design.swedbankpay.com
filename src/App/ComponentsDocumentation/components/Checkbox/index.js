@@ -45,7 +45,7 @@ const Overview = () => (
         <h3>When to consider something else</h3>
         <ul className="list list-bullet">
             <li>
-            When you want to present multiple choices where the user can only select one specific option, the <Link to="/components/radiobutton">radio button</Link> component should be used instead of checkboxes.
+            When you want to present multiple choices where the user can only select one specific option, the <Link to="/components/radio-button">radio button</Link> component should be used instead of checkboxes.
             </li>
         </ul>
 

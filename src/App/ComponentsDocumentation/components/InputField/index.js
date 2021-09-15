@@ -1,6 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
 import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
 import InputGroup from "@components/InputGroup";
@@ -59,7 +57,6 @@ const ContentGuidelines = () => (
         <div className="row placeholder-guideline">
             <div className="col-lg-6 col-sm-12 ">
                 <div className="slab slab-plain slab-border-success pb-4">
-                    {/* <span className="h3 mb-3">Do</span> */}
                     <h3 className="mb-3 mt-0">Do</h3>
                     <InputGroup type="text" label="Personal authentication number" placeholder="YYYYMMDDNNNN"/>
                 </div>
