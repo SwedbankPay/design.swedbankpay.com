@@ -322,7 +322,7 @@ exports[`Component: InputField Overview renders 1`] = `
                     <b>
                       Usage with icon.
                     </b>
-                     Remember to wrap your inputfield within an 
+                     Remember to wrap your input field within an 
                     <CodeTags
                       code=".input-group"
                       type="secondary"
@@ -486,7 +486,7 @@ exports[`Component: InputField Textarea renders 1`] = `
               placeholder="Placeholder text"
               type="textarea"
             />,
-            "description": "Textareas have a few different sates which includes the default state, focus state, disabled state and error state. ",
+            "description": "Text areas have a few different sates which includes the default state, focus state, disabled state and error state. ",
             "options": Object {
               "checkbox": Array [
                 Object {

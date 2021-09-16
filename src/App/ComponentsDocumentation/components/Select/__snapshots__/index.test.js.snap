@@ -467,7 +467,7 @@ exports[`Component: Select When to use renders 1`] = `
   <p>
     Instead of using a dropdown input that will force the user to choose from a set of predefined options it is sometimes better to use an 
     <Link
-      to="/components/forms"
+      to="/components/input-field"
     >
       input field
     </Link>
