@@ -51,11 +51,17 @@
             display: none;
             background-image: url(../../icons/shapes/arrow-forward.svg), linear-gradient(to right, rgba(255, 255, 255, 0.35), @white 68%, rgba(255, 255, 255, 0.8));
             background-repeat: no-repeat;
-            background-position: right;
+            background-position: 100%;
             background-size: auto 1rem;
             pointer-events: none;
-            z-index: @zindex-tabs;
+            z-index: @zindex-tabs; 
+
+            @-moz-document url-prefix() {
+                background-position: bottom right;
+            }
         }
+
+
 
         &.tabs-fade-right {
             &:after {
@@ -72,6 +78,7 @@
             }
         }
     }
+
 
     ul {
         position: initial;
