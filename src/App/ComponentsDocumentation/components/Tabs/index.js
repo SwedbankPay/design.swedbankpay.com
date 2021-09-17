@@ -11,7 +11,7 @@ import { tabs } from "@src/scripts/main";
 const tabItems = ["Selected", "Unselected", "Unselected", "Unselected", "Unselected", "Unselected"];
 
 const Overview = () => (
-    <section>
+    <section id="tabs-overview">
         <h2 id="overview">Overview</h2>
         <ComponentPreview language="html" codeFigure showCasePanel showCasePanelAdvanced={tabsShowCasePanel} removeOuterTag/>
 
