@@ -136,7 +136,7 @@ export const overviewLinks = {
                         inputs: [
                             {
                                 id: "dark_theme_color",
-                                name: "Dark theme",
+                                name: "Bright color",
                                 value: {
                                     backgroundDark: true,
                                     bright: true
@@ -145,7 +145,7 @@ export const overviewLinks = {
                         ]
                     },
                     {
-                        title: "State modifier",
+                        title: "State modifiers",
                         inputs: [
                             {
                                 id: "state_modifier",
@@ -157,7 +157,38 @@ export const overviewLinks = {
                         ]
                     }
                 ],
+
                 radio: [
+                    {
+                        id: "with_icon_choice",
+                        title: "With icon",
+                        values: [
+                            {
+                                name: "None",
+                                value: {
+                                    leftIcon: null
+                                }
+                            },
+                            {
+                                name: "External link",
+                                value: {
+                                    leftIcon: "launch"
+                                }
+                            },
+                            {
+                                name: "Back",
+                                value: {
+                                    leftIcon: "arrow_back_ios"
+                                }
+                            },
+                            {
+                                name: "Other type",
+                                value: {
+                                    leftIcon: "edit"
+                                }
+                            }
+                        ]
+                    },
                     {
                         id: "font_size_radio",
                         title: "Font size",
@@ -174,31 +205,6 @@ export const overviewLinks = {
                                     smallFont: true
                                 }
                             }
-                        ]
-                    },
-                    {
-                        id: "radio_badge_choice",
-                        title: "With icon",
-                        values: [
-                            {
-                                name: "None",
-                                value: {
-                                    leftIcon: null
-                                }
-                            },
-                            {
-                                name: "New tab",
-                                value: {
-                                    leftIcon: "launch"
-                                }
-                            },
-                            {
-                                name: "Back",
-                                value: {
-                                    leftIcon: "arrow_back_ios"
-                                }
-                            }
-
                         ]
                     }
                 ]
