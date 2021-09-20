@@ -235,11 +235,11 @@ exports[`Core: Logotype Favicon renders 1`] = `
       name="apple-mobile-web-app-status-bar-style"
     />
     <meta
-      content="Swedbank Pay App"
+      content="TESTBRAND App"
       name="apple-mobile-web-app-title"
     />
     <meta
-      content="Swedbank Pay App"
+      content="TESTBRAND App"
       name="application-name"
     />
     <meta
