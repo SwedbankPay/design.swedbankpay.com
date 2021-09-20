@@ -455,7 +455,7 @@ exports[`Components: Links Overview renders 1`] = `
                   "inputs": Array [
                     Object {
                       "id": "dark_theme_color",
-                      "name": "Dark theme",
+                      "name": "Bright color",
                       "value": Object {
                         "backgroundDark": true,
                         "bright": true,
@@ -474,10 +474,40 @@ exports[`Components: Links Overview renders 1`] = `
                       },
                     },
                   ],
-                  "title": "State modifier",
+                  "title": "State modifiers",
                 },
               ],
               "radio": Array [
+                Object {
+                  "id": "with_icon_choice",
+                  "title": "With icon",
+                  "values": Array [
+                    Object {
+                      "name": "None",
+                      "value": Object {
+                        "leftIcon": null,
+                      },
+                    },
+                    Object {
+                      "name": "External link",
+                      "value": Object {
+                        "leftIcon": "launch",
+                      },
+                    },
+                    Object {
+                      "name": "Back",
+                      "value": Object {
+                        "leftIcon": "arrow_back_ios",
+                      },
+                    },
+                    Object {
+                      "name": "Other type",
+                      "value": Object {
+                        "leftIcon": "edit",
+                      },
+                    },
+                  ],
+                },
                 Object {
                   "id": "font_size_radio",
                   "title": "Font size",
@@ -492,30 +522,6 @@ exports[`Components: Links Overview renders 1`] = `
                       "name": "Small",
                       "value": Object {
                         "smallFont": true,
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "radio_badge_choice",
-                  "title": "With icon",
-                  "values": Array [
-                    Object {
-                      "name": "None",
-                      "value": Object {
-                        "leftIcon": null,
-                      },
-                    },
-                    Object {
-                      "name": "New tab",
-                      "value": Object {
-                        "leftIcon": "launch",
-                      },
-                    },
-                    Object {
-                      "name": "Back",
-                      "value": Object {
-                        "leftIcon": "arrow_back_ios",
                       },
                     },
                   ],
