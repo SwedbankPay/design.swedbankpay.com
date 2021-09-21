@@ -16,13 +16,15 @@ const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage
             {group ? <form>
                 <fieldset className={`checkbox-group${errorMessage ? " has-error" : ""}`} disabled={disabled}>
                     <legend>
-                        {groupTitle}{optional && <>{"\n"}<span>(optional)</span></>}
+                        {groupTitle}
+                        {optional && <>{"\n"}
+                            <span>(optional)</span>
+                        </>}
                         {tooltip && <>{"\n"}
                             <i className="material-icons help-icon" data-tooltip="Some informative text" data-tooltip-position="top">{"\n"}
                                     help_outline{"\n"}
                             </i>
-                        </>
-                        }
+                        </>}
                     </legend>
                     {options.map(({ label, id }, i) => <div className="checkbox" key={i}>{"\n"}
                         <input {...attrs} id={id} />{"\n"}

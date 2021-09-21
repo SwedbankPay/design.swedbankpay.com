@@ -69,9 +69,16 @@
 fieldset {
     &.radio-group {
         legend {
+            position: relative;
             border: none;
             font-weight: bold;
             margin-bottom: 0;
+
+            .help-icon {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
         }
     }
 
