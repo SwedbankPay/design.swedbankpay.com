@@ -116,9 +116,17 @@
 fieldset {
     &.checkbox-group {
         legend {
+            position: relative;
             font-weight: bold;
             border: none;
             margin-bottom: 0;
+
+            .help-icon {
+                position: absolute;
+                top: 50%;
+                left: 100%;
+                transform: translateY(-50%);
+            }
         }
 
         span {
