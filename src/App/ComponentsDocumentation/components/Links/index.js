@@ -79,7 +79,7 @@ const ActionLink = forwardRef((props, ref) => <section id="action-link-container
     <h3>How to use action links</h3>
     <div className="row">
         <div className="col-lg-6">
-            <div className="slab slab-plain slab-border-success h-100" >
+            <div className="slab slab-plain slab-border-success pb-5 h-100" >
                 <h4>Do</h4>
                 <div className="d-flex justify-content-center mt-4 mb-2 flex-column">
                     <InputComponent type="text" label="Name"/>
@@ -90,7 +90,7 @@ const ActionLink = forwardRef((props, ref) => <section id="action-link-container
             </div>
         </div>
         <div className="col-lg-6">
-            <div className="slab slab-plain slab-border-error h-100">
+            <div className="slab slab-plain slab-border-error pb-5 h-100">
                 <h4>Don&apos;t</h4>
                 <div className="d-flex justify-content-center mt-4 mb-2 flex-column">
                     <InputComponent type="text" label="Name"/>
@@ -110,11 +110,11 @@ const ContentGuidelines = () => (
         <h2 id="content-guidelines">Content guidelines</h2>
         {guidelinesContent.map(({ slabs, text }, i) => (
             <div className="row" key={i}>
-                {slabs.map(({ content, type }) => (
-                    <div className="col-lg-6" key={content}>
+                {slabs.map(({ content, type }, i) => (
+                    <div className="col-lg-6" key={i}>
                         <div className={`slab slab-plain slab-border-${type} h-100 pb-5`} >
                             <h4>{type === "success" ? "Do" : "Don't"}</h4>
-                            <div className="d-flex justify-content-center mb-2  h-100 align-items-center">
+                            <div className="d-flex mb-2  h-100 align-items-center">
                                 {content}
                             </div>
                         </div>

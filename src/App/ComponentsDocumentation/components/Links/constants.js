@@ -4,9 +4,14 @@ import ActionLink from "~/src/App/components/ActionLink";
 
 const ShowcaseComponent = ({ rightIcon, leftIcon, linkText, smallFont, backgroundDark, bright, standalone, disabled }) => (
     <div className={`loader-preview-container${backgroundDark ? " dark" : ""} d-flex justify-content-center align-items-center`}>
-        {standalone ? <>
-            <Link rightIcon={rightIcon} leftIcon={leftIcon} linkText={linkText} smallFont={smallFont} bright={bright} disabled={disabled}/>{"\n"}</> :
-            <><p className={`mt-3 ${backgroundDark ? "text-white" : ""} ${smallFont ? "small-text" : ""}`}>Paragraph text with a <Link rightIcon={rightIcon} leftIcon={leftIcon} linkText={linkText} smallFont={smallFont} bright={bright} disabled={disabled}/> </p> {"\n"}</>}
+        {standalone
+            ? <>
+                <Link rightIcon={rightIcon} leftIcon={leftIcon} linkText={linkText} smallFont={smallFont} bright={bright} disabled={disabled}/>{"\n"}
+            </>
+            : <>
+                <p className={`mt-3${backgroundDark ? " text-white" : ""}${smallFont ? " small-text" : ""}`}>{"\n"}Paragraph text with a <Link rightIcon={rightIcon} leftIcon={leftIcon} linkText={linkText} smallFont={smallFont} bright={bright} disabled={disabled}/>{"\n"}
+                </p>
+            </>}
     </div>
 );
 
@@ -80,8 +85,8 @@ export const overviewLinks = {
                                 }
                             },
                             {
-                                id: "dark_theme_color",
-                                name: "Dark theme",
+                                id: "bright_color",
+                                name: "Bright color",
                                 value: {
                                     backgroundDark: true,
                                     bright: true
