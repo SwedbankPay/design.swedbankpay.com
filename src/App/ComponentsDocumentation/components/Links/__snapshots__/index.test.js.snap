@@ -557,7 +557,8 @@ exports[`Components: Links Overview renders 1`] = `
     <li>
       If you have a collection of links and want to highlight and make them appear more as call to actions consider using 
       <a
-        href="#action-link"
+        href="javascript:;"
+        onClick={[Function]}
       >
         action links
       </a>
@@ -670,8 +671,10 @@ exports[`Components: Links renders 1`] = `
     >
       Links are used as navigational elements and can be used on their own or inline within paragraphs of text.
     </p>
-    <Overview />
-    <ActionLink />
+    <Overview
+      scrollToRef={[Function]}
+    />
+    <Action link />
     <ContentGuidelines />
   </section>
 </DocContainer>
