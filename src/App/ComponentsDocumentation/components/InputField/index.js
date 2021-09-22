@@ -95,15 +95,9 @@ const DeveloperDocumentation = () => (
     <section id="developer-documentation-container">
         <h2 id="developer-documentation mb-3">Developer documentation</h2>
         <h3 className="mt-3">Autocomplete</h3>
-        <p>Add <CodeTags type="primary" code="autoComplete"/> attributes to input fields when it is possible to make a form easier for users to fill. </p>
-        <ComponentPreview language="html" showCasePanel>
+        <p>Add <CodeTags type="primary" code="autocomplete"/> attributes to input fields when it is possible to make a form easier for users to fill. </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
             <InputGroup type="text" label="Name" autocomplete="on" id="developer-documentation-example" />
-        </ComponentPreview>
-        <ComponentPreview language="html" codeFigure>
-            <div className="form-group">{"\n"}
-                <label htmlFor="developer-documentation-example">Name</label>{"\n"}
-                <input type="text" autoComplete="on" className="form-control" id="developer-documentation-example" />{"\n"}
-            </div>
         </ComponentPreview>
 
         <h3>Error message</h3>
