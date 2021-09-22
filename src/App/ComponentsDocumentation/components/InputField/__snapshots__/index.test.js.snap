@@ -186,13 +186,12 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
   <p>
     Add 
     <CodeTags
-      code="autocomplete"
+      code="autoComplete"
       type="primary"
     />
      attributes to input fields when it is possible to make a form easier for users to fill. 
   </p>
   <ComponentPreview
-    codeFigure={true}
     language="html"
     showCasePanel={true}
   >
@@ -202,6 +201,32 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
       label="Name"
       type="text"
     />
+  </ComponentPreview>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+  >
+    <div
+      className="form-group"
+    >
+      
+
+      <label
+        htmlFor="developer-documentation-example"
+      >
+        Name
+      </label>
+      
+
+      <input
+        autoComplete="on"
+        className="form-control"
+        id="developer-documentation-example"
+        type="text"
+      />
+      
+
+    </div>
   </ComponentPreview>
   <h3>
     Error message
