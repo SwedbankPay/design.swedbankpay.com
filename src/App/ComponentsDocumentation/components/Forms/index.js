@@ -19,7 +19,7 @@ const Overview = () => (
         </p>
         <p>
             <b>Note:</b> On larger screens, <CodeTags type="primary" code={"<input>"} /> should not be wider than half the
-            page. <CodeTags type="primary" code={"<input>"} /> should take the available width on smaller screen sizes. <Link to="/core/grid">Grid</Link> can
+            page. <CodeTags type="primary" code={"<input>"} /> should take the available width on smaller screen sizes. <Link to="/identity/grid">Grid</Link> can
             be used to achieve this behavior.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>

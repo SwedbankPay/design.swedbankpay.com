@@ -287,7 +287,8 @@ exports[`Component: InputField Overview renders 1`] = `
   <p>
     Use a Input field when the expected user input is a single line of text. A Input field must always have a Input label that clearly describes the type of input a field requires and it may also have a Placeholder example text, refer to 
     <a
-      href="#content-guidelines"
+      href="javascript:;"
+      onClick={[Function]}
     >
       content guidelines
     </a>
@@ -322,7 +323,7 @@ exports[`Component: InputField Overview renders 1`] = `
                     <b>
                       Usage with icon.
                     </b>
-                     Remember to wrap your inputfield within an 
+                     Remember to wrap your input field within an 
                     <CodeTags
                       code=".input-group"
                       type="secondary"
@@ -467,7 +468,8 @@ exports[`Component: InputField Textarea renders 1`] = `
   <p>
     Use a Textarea when the expected user input is more than one sentence. Textareas must always have a Input label that clearly describes the type of input a field requires and it may also have a Placeholder example text, refer to 
     <a
-      href="#content-guidelines"
+      href="javascript:;"
+      onClick={[Function]}
     >
       content guidelines
     </a>
@@ -486,7 +488,7 @@ exports[`Component: InputField Textarea renders 1`] = `
               placeholder="Placeholder text"
               type="textarea"
             />,
-            "description": "Textareas have a few different sates which includes the default state, focus state, disabled state and error state. ",
+            "description": "Text areas have a few different sates which includes the default state, focus state, disabled state and error state. ",
             "options": Object {
               "checkbox": Array [
                 Object {
@@ -572,8 +574,12 @@ exports[`Component: InputField renders 1`] = `
     >
       Input fields typically reside in forms and enable the user to interact with and input words, characters or numbers. Depending on the expected length of the user input use either a Input field for shorter input or a Textarea for longer input.
     </p>
-    <Overview />
-    <Textarea />
+    <Overview
+      scrollToRef={[Function]}
+    />
+    <Textarea
+      scrollToRef={[Function]}
+    />
     <ContentGuidelines />
     <DeveloperDocumentation />
   </section>

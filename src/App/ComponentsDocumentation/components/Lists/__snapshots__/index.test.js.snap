@@ -399,6 +399,7 @@ exports[`Documentation: Lists ItemListBordered renders 1`] = `
         <footer>
           <a
             href="#"
+            onClick={[Function]}
           >
             Se faktura
           </a>
@@ -425,6 +426,7 @@ exports[`Documentation: Lists ItemListBordered renders 1`] = `
         >
           <a
             href="#"
+            onClick={[Function]}
           >
             Se faktura
           </a>
@@ -451,6 +453,7 @@ exports[`Documentation: Lists ItemListBordered renders 1`] = `
         >
           <a
             href="#"
+            onClick={[Function]}
           >
             Se faktura
           </a>

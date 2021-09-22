@@ -350,7 +350,7 @@ exports[`Component: Checkbox Overview renders 1`] = `
     <li>
       When you want to present multiple choices where the user can only select one specific option, the 
       <Link
-        to="/components/radiobutton"
+        to="/components/radio-button"
       >
         radio button
       </Link>

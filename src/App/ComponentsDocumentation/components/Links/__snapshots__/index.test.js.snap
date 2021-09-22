@@ -119,7 +119,7 @@ exports[`Components: Links ActionLink renders 1`] = `
       className="col-lg-6"
     >
       <div
-        className="slab slab-plain slab-border-success h-100"
+        className="slab slab-plain slab-border-success pb-5 h-100"
       >
         <h4>
           Do
@@ -152,7 +152,7 @@ exports[`Components: Links ActionLink renders 1`] = `
       className="col-lg-6"
     >
       <div
-        className="slab slab-plain slab-border-error h-100"
+        className="slab slab-plain slab-border-error pb-5 h-100"
       >
         <h4>
           Don't
@@ -209,7 +209,7 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
   >
     <div
       className="col-lg-6"
-      key="[object Object]"
+      key="0"
     >
       <div
         className="slab slab-plain slab-border-success h-100 pb-5"
@@ -218,7 +218,7 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
           Do
         </h4>
         <div
-          className="d-flex justify-content-center mb-2  h-100 align-items-center"
+          className="d-flex mb-2  h-100 align-items-center"
         >
           <Link
             linkText="Read our terms and conditions"
@@ -228,7 +228,7 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
     </div>
     <div
       className="col-lg-6"
-      key="[object Object]"
+      key="1"
     >
       <div
         className="slab slab-plain slab-border-error h-100 pb-5"
@@ -237,7 +237,7 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
           Don't
         </h4>
         <div
-          className="d-flex justify-content-center mb-2  h-100 align-items-center"
+          className="d-flex mb-2  h-100 align-items-center"
         >
           <p
             className=" mb-0 justify-content-center"
@@ -262,7 +262,7 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
   >
     <div
       className="col-lg-6"
-      key="[object Object]"
+      key="0"
     >
       <div
         className="slab slab-plain slab-border-success h-100 pb-5"
@@ -271,7 +271,7 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
           Do
         </h4>
         <div
-          className="d-flex justify-content-center mb-2  h-100 align-items-center"
+          className="d-flex mb-2  h-100 align-items-center"
         >
           <Link
             linkText="View our opening hours"
@@ -281,7 +281,7 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
     </div>
     <div
       className="col-lg-6"
-      key="[object Object]"
+      key="1"
     >
       <div
         className="slab slab-plain slab-border-error h-100 pb-5"
@@ -290,7 +290,7 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
           Don't
         </h4>
         <div
-          className="d-flex justify-content-center mb-2  h-100 align-items-center"
+          className="d-flex mb-2  h-100 align-items-center"
         >
           <Link
             linkText="View more"
@@ -310,7 +310,7 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
   >
     <div
       className="col-lg-6"
-      key="[object Object]"
+      key="0"
     >
       <div
         className="slab slab-plain slab-border-success h-100 pb-5"
@@ -319,7 +319,7 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
           Do
         </h4>
         <div
-          className="d-flex justify-content-center mb-2  h-100 align-items-center"
+          className="d-flex mb-2  h-100 align-items-center"
         >
           <p
             className="mb-0 justify-content-center"
@@ -335,7 +335,7 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
     </div>
     <div
       className="col-lg-6"
-      key="[object Object]"
+      key="1"
     >
       <div
         className="slab slab-plain slab-border-error h-100 pb-5"
@@ -344,7 +344,7 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
           Don't
         </h4>
         <div
-          className="d-flex justify-content-center mb-2  h-100 align-items-center"
+          className="d-flex mb-2  h-100 align-items-center"
         >
           <Link
             linkText="Here you can read about the browsers we recommend"
@@ -396,8 +396,8 @@ exports[`Components: Links Overview renders 1`] = `
                       },
                     },
                     Object {
-                      "id": "dark_theme_color",
-                      "name": "Dark theme",
+                      "id": "bright_color",
+                      "name": "Bright color",
                       "value": Object {
                         "backgroundDark": true,
                         "bright": true,
@@ -455,7 +455,7 @@ exports[`Components: Links Overview renders 1`] = `
                   "inputs": Array [
                     Object {
                       "id": "dark_theme_color",
-                      "name": "Dark theme",
+                      "name": "Bright color",
                       "value": Object {
                         "backgroundDark": true,
                         "bright": true,
@@ -474,10 +474,40 @@ exports[`Components: Links Overview renders 1`] = `
                       },
                     },
                   ],
-                  "title": "State modifier",
+                  "title": "State modifiers",
                 },
               ],
               "radio": Array [
+                Object {
+                  "id": "with_icon_choice",
+                  "title": "With icon",
+                  "values": Array [
+                    Object {
+                      "name": "None",
+                      "value": Object {
+                        "leftIcon": null,
+                      },
+                    },
+                    Object {
+                      "name": "External link",
+                      "value": Object {
+                        "leftIcon": "launch",
+                      },
+                    },
+                    Object {
+                      "name": "Back",
+                      "value": Object {
+                        "leftIcon": "arrow_back_ios",
+                      },
+                    },
+                    Object {
+                      "name": "Other type",
+                      "value": Object {
+                        "leftIcon": "edit",
+                      },
+                    },
+                  ],
+                },
                 Object {
                   "id": "font_size_radio",
                   "title": "Font size",
@@ -492,30 +522,6 @@ exports[`Components: Links Overview renders 1`] = `
                       "name": "Small",
                       "value": Object {
                         "smallFont": true,
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "radio_badge_choice",
-                  "title": "With icon",
-                  "values": Array [
-                    Object {
-                      "name": "None",
-                      "value": Object {
-                        "leftIcon": null,
-                      },
-                    },
-                    Object {
-                      "name": "New tab",
-                      "value": Object {
-                        "leftIcon": "launch",
-                      },
-                    },
-                    Object {
-                      "name": "Back",
-                      "value": Object {
-                        "leftIcon": "arrow_back_ios",
                       },
                     },
                   ],
@@ -551,7 +557,8 @@ exports[`Components: Links Overview renders 1`] = `
     <li>
       If you have a collection of links and want to highlight and make them appear more as call to actions consider using 
       <a
-        href="#action-link"
+        href="javascript:;"
+        onClick={[Function]}
       >
         action links
       </a>
@@ -664,8 +671,10 @@ exports[`Components: Links renders 1`] = `
     >
       Links are used as navigational elements and can be used on their own or inline within paragraphs of text.
     </p>
-    <Overview />
-    <ActionLink />
+    <Overview
+      scrollToRef={[Function]}
+    />
+    <Action link />
     <ContentGuidelines />
   </section>
 </DocContainer>
